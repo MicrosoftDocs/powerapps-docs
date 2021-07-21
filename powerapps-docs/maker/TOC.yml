@@ -2298,6 +2298,8 @@
                   href: ../teams/extend-issue-rename-work-order.md
                 - name: Remove the Planner dependency for task creation
                   href: ../teams/extend-issue-remove-planner.md
+                - name: Add the ability to be notified when an issue is resolved
+                  href: ../teams/extend-issue-sign-up-notification.md
         - name: Milestones
           items:
              - name: Milestones
