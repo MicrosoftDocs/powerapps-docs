@@ -79,131 +79,6 @@ When Back function is called in a custom page, it will close the current page an
 Back( )
 ```
 
-## Navigating from a model page to a custom page
-
-### Finding the logical page name
-
-Each of the following Client API examples take the logical name of the custom page as an argument.  The logical name is the **Name** value for the page in solution explorer. 
-
-> [!div class="mx-imgBorder"]
-> ![Find page logical name](media/navigate-page-examples/find-page-logical-name.png "Find page logical name")
-
-### Open as an inline full page without context
-
-Within a model-driven app Client API event, call the following code and update the **name** parameter to be the logical page name.
-
-```javascript
-// Inline Page
-var pageInput = {
-    pageType: "custom",
-    name: "<logical custom page name>",
-};
-var navigationOptions = {
-    target: 1
-};
-Xrm.Navigation.navigateTo(pageInput, navigationOptions)
-    .then(
-        function () {
-            // Called when page opens
-        }
-    ).catch(
-        function (error) {
-            // Handle error
-        }
-    );
-```
-
-### Open as an inline full page with a record context
-
-This example uses the recordId parameter within the NavigateTo function to provide the custom page with the record to use.  Within the custom page, the Param function retrieves the value and uses Lookup function to retrieve the record.
-
-```javascript
-// Inline Page
-var pageInput = {
-    pageType: "custom",
-    name: "<logical custom page name>",
-    entityName: "<logical table name>",
-    recordId: "<record id>",
-};
-var navigationOptions = {
-    target: 1
-};
-Xrm.Navigation.navigateTo(pageInput, navigationOptions)
-    .then(
-        function () {
-            // Called when page opens
-        }
-    ).catch(
-        function (error) {
-            // Handle error
-        }
-    );
-```
-
-### Open as a centered dialog
-
-Within a model-driven app Client API event, call the following code and update the **name** parameter to be the logical custom page name.  This mode supports the sizing parameters similar to the [Main Form Dialogs](../../developer/model-driven-apps/customize-entity-forms.md#open-main-form-in-a-dialog-using-client-api).
-
-```javascript
-// Centered Dialog
-var pageInput = {
-    pageType: "custom",
-    name: "<logical custom page name>",
-};
-var navigationOptions = {
-    target: 2, 
-    position: 1,
-    width: {value: 50, unit:"%"},
-    title: "<dialog title>"
-};
-Xrm.Navigation.navigateTo(pageInput, navigationOptions)
-    .then(
-        function () {
-            // Called when the dialog closes
-        }
-    ).catch(
-        function (error) {
-            // Handle error
-        }
-    );
-```
-
-### Open as a side dialog
-
-Within a model-driven app Client API event, call the following code and update the **name** parameter to be the logical custom page name.
-
-```javascript
-// Side Dialog
-var pageInput = {
-    pageType: "custom",
-    name: "<logical page name>",
-};
-var navigationOptions = {
-    target: 2, 
-    position: 2,
-    width: {value: 500, unit: "px"},
-    title: "<dialog title>"
-};
-Xrm.Navigation.navigateTo(pageInput, navigationOptions)
-    .then(
-        function () {
-            // Called when the dialog closes
-        }
-    ).catch(
-        function (error) {
-            // Handle error
-        }
-    );
-```
-
-### Known issues
-
-- Navigate function does not have support for opening a model or custom page to a dialog. All navigates from a custom page open inline
-- Navigate function does not support opening
-    - Dashboard collection or specific dashboard
-    - Specific model form 
-- Custom page can only open into the current session’s current app tab in a multi-session model-driven app
-
 
 ## Related topics
 
@@ -211,7 +86,7 @@ Xrm.Navigation.navigateTo(pageInput, navigationOptions)
 
 [Add a custom page to your model-driven app](add-page-to-model-app.md)
 
-[Navigation advanced examples for custom page](navigate-page-advanced-examples.md)
+[Navigating to and from a custom page using client API](../../developer/model-driven-apps/clientapi/navigate-to-custom-page-examples.md)
 
 [navigateTo (Client API reference)](../../developer/model-driven-apps/clientapi/reference/xrm-navigation/navigateto.md)
 
