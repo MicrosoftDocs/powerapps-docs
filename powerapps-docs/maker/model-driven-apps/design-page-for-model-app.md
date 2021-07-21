@@ -52,7 +52,7 @@ Custom page authoring currently supports a subset of controls and interaction wi
   |Code components|Custom| [Add code components to a custom page](page-code-components.md)|
   |Canvas components|Custom| [Add canvas components to a custom page](page-canvas-components.md)|
   
-<sup>1</sup> - Control is a new modern control. The control was introduced for [canvas apps in Teams]( ../../../../2020wave1/microsoft-powerapps/build-apps-teams-modern-controls). The control is based on [Fluent UI library](https://developer.microsoft.com/en-us/fluentui#/controls/web) wrapped with [Power Apps Component Framework](../../developer/component-framework/overview.md).
+<sup>1</sup> - Control is a new modern control. The control was introduced for [canvas apps in Teams]( /power-platform-release-plan/2020wave1/microsoft-powerapps/build-apps-teams-modern-controls). The control is based on [Fluent UI library](https://developer.microsoft.com/fluentui#/controls/web) wrapped with  [Power Apps Component Framework](../../developer/component-framework/overview.md).
 
 
 ## Custom components support for custom page
