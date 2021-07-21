@@ -2,12 +2,11 @@
 title: "Using PowerFx in custom page for your model-driven app (preview)" 
 description: ""
 ms.custom: ""
-ms.date: 06/06/2021
+ms.date: 07/06/2021
 ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
 author: "aorth"
-ms.assetid: b4098c96-bce1-4f57-804f-8694e6254e81
 ms.author: "matp"
 manager: "kvivek"
 search.audienceType: 
@@ -16,11 +15,11 @@ search.app:
   - "PowerApps"
   - D365CE
 ---
-# Using PowerFx in custom page for your model-driven app (preview)
+# Using PowerFx in a custom page for your model-driven app (preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-This topic outlines how the common Power Fx functions work within a custom page.  They can be different than Power Fx in a standalone canvas app because the custom page is a component with the model-driven app.
+This article outlines how the common Power Fx functions work within a custom page. Power Fx formulas in a custom page can be different than Power Fx in a standalone canvas app. This is because custom pages are a component within the model-driven app.
 
   > [!IMPORTANT]
   > - This is a preview feature, and isn't available in all regions.
@@ -28,7 +27,7 @@ This topic outlines how the common Power Fx functions work within a custom page.
 
 ## Add custom page notifications
 
-A custom page notification can be shown to the user by calling the [Notify function](../canvas-apps/functions/function-showerror.md) to make a page message bar appear.  When the notify messages appear, they're docked above the page default to stay visible until disabled.  Unless a timeout interval is provided, the message will disappear after the timeout interval.  Avoid using a timeout interval of 10, it is currently treated as no timeout.
+A custom page notification can be shown to the user by calling the [Notify function](../canvas-apps/functions/function-showerror.md) to make a page message bar appear.  When the notify messages appear, they're docked above the page default to stay visible until disabled. Unless a timeout interval is provided, the message will disappear after the timeout interval. Avoid using a timeout interval of 10, it is currently treated as no timeout.
 
 ```powerappsfl
 Notify( "Custom page notification message" )
@@ -48,7 +47,7 @@ Notify( "Custom page notify warning message", NotificationType.Warning )
 
 A custom page navigation uses the Navigate and Back functions.
 
-## Related topics
+### See also
 
 [Model-driven app custom page overview](model-app-page-overview.md)
 
