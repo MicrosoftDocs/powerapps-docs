@@ -33,7 +33,7 @@ To fix this issue for List/Basic forms:
 
 1. Find the record mentioned in the Portal checker rule.
 
-1. Update the property for [List](../configure/entity-lists#securing-lists.md) or [Basic forms](../configure/entity-forms#secure-your-forms.md)
+1. Update the property for [List](../configure/entity-lists.md#securing-lists) or [Basic forms](../configure/entity-forms.md#secure-your-forms).
 
 To fix this issue for Advanced forms:
 
