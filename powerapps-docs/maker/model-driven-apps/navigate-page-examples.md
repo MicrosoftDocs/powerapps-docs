@@ -2,12 +2,12 @@
 title: "Navigating to and from a custom page in your model-driven app (preview)" 
 description: ""
 ms.custom: ""
-ms.date: 04/03/2020
+ms.date: 07/21/2021
 ms.reviewer: ""
 ms.service: powerapps
-ms.topic: "article"
+ms.subservice: mda-maker
+ms.topic: "how-to"
 author: "aorth"
-ms.assetid: b4098c96-bce1-4f57-804f-8694e6254e81
 ms.author: "matp"
 manager: "kvivek"
 search.audienceType: 
@@ -16,11 +16,11 @@ search.app:
   - "PowerApps"
   - D365CE
 ---
-# Navigating to and from a custom page in your model-driven app (preview)
+# Navigating to and from a custom page (preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-This topic provides examples of navigating from a model page using the Client API to a custom page. It also includes examples of navigating from a custom page to other custom pages or a model page.
+This topic provides examples of navigating from a model-driven app page using the Client API to a custom page. It also includes examples of navigating from a custom page to other custom pages or a model page.
 
 outlines the steps to use the Client API to open a custom page as a full page, dialog, or pane.  It provides examples of **custom** as a pageType value in [navigateTo (Client API reference)](../../developer/model-driven-apps/clientapi/reference/xrm-navigation/navigateto.md).
 

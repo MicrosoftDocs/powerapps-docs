@@ -2,12 +2,11 @@
 title: "Design a custom page for your model-driven app" 
 description: ""
 ms.custom: ""
-ms.date: 04/02/2020
+ms.date: 07/21/2021
 ms.reviewer: ""
 ms.service: powerapps
-ms.topic: "article"
+ms.topic: "conceptual"
 author: "aorth"
-ms.assetid: b4098c96-bce1-4f57-804f-8694e6254e81
 ms.author: "matp"
 manager: "kvivek"
 search.audienceType: 
@@ -20,14 +19,15 @@ search.app:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-This topic provides tips to design a custom page for use in a model-driven app.
+This topic provides tips for designing a custom page for use in a model-driven app.
 
   > [!IMPORTANT]
   > - This is a preview feature, and isn't available in all regions.
   > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
 
-## Supported controls in custom page
-Custom page authoring will start with a subset of controls supported and will be gradually adding more controls. Interaction with controls currently not supported may change so they should not be used until they are officially supported.
+## Supported controls in a custom page
+
+Custom page authoring currently supports a subset of controls and interaction with these controls currently isn't supported.
 
   | Control | Control Type | Notes |
   | --- | --- | --- |
@@ -52,14 +52,19 @@ Custom page authoring will start with a subset of controls supported and will be
   |Code components|Custom| [Add code components to a custom page](page-code-components.md)|
   |Canvas components|Custom| [Add canvas components to a custom page](page-canvas-components.md)|
   
-  > [!Note]
-  >  <sup>1</sup> - Controls with superscript "1"  are the new modern controls which were introduced for [canvas apps in Teams]( ../../../../2020wave1/microsoft-powerapps/build-apps-teams-modern-controls); These controls are based on [Fluent UI library](https://developer.microsoft.com/en-us/fluentui#/controls/web) wrapped with [Power Apps Component Framework](../../developer/component-framework/overview.md). 
+<sup>1</sup> - Control is a new modern control. The control was introduced for [canvas apps in Teams]( ../../../../2020wave1/microsoft-powerapps/build-apps-teams-modern-controls). The control is based on [Fluent UI library](https://developer.microsoft.com/en-us/fluentui#/controls/web) wrapped with [Power Apps Component Framework](../../developer/component-framework/overview.md).
 
 
 ## Custom components support for custom page
-You can add both low-code( canvas components) and pro-code( code components) custom UX components to your environment and make them available for all makers. For custom page specific UX extensibility topics please see [add canvas components to a custom page for your model-driven app](/powerapps/maker/model-driven-apps/page-canvas-components) and [add code components to a custom page for your model-driven app.](/powerapps/maker/model-driven-apps/page-code-components) In general, low code extensibility approach is simpler to build, test and has lower maintainance cost. We recommend evaluating canvas components first and then using code components only if there is a need for complex and advanced customization.    
 
-You can refer to [canvas component gallery,](https://powerusers.microsoft.com/t5/Canvas-Apps-Components-Samples/bd-p/ComponentsGallery)[ code components OOB samples](../../developer/component-framework/use-sample-components.md) and [code components community resources](../../../developer/component-framework/community-resources.md) to quick start your custom component journey. 
+You can add both low-code (canvas components) and pro-code( code components) custom UX components to your environment and make them available for all makers. For custom page specific UX extensibility articles go to [add canvas components to a custom page for your model-driven app](/powerapps/maker/model-driven-apps/page-canvas-components) and [add code components to a custom page for your model-driven app.](/powerapps/maker/model-driven-apps/page-code-components) 
+
+In general, the low code extensibility approach is simpler to build, test, and has a lower maintenance cost. We recommend evaluating canvas components first and then use code components only if there is a need for more complex and advanced customization.
+
+More information:
+- [Canvas component gallery,](https://powerusers.microsoft.com/t5/Canvas-Apps-Components-Samples/bd-p/ComponentsGallery)
+- [Code components OOB samples](../../developer/component-framework/use-sample-components.md)
+- [Code components community resources](../../../developer/component-framework/community-resources.md) to quick start your custom component journey. 
 
 ## Enable responsive layout with Container control
 

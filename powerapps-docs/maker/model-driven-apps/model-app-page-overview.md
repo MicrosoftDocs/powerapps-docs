@@ -4,6 +4,7 @@ description: "Add a custom page to use canvas as a page in your model-driven app
 ms.date: 06/20/2021
 ms.reviewer: "matp"
 ms.service: powerapps
+ms.subservice: mda-maker
 ms.topic: "overview"
 author: "adrianorth"
 ms.author: "aorth"
