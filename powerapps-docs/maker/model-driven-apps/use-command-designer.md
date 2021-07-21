@@ -61,12 +61,14 @@ This topic guides you through creating and editing modern commands using the new
 Once you are in the app designer, use the command designer to customize your command bars.
 
 > [!NOTE]
-> Command designer can currently only be accessed through the modern app designer.
-> Classic commands cannot currently be edited within the command designer.
+> - Command designer can currently only be accessed through the modern app designer.
+> - Classic commands cannot currently be edited within the command designer.
  
- ### Edit the command bar
+### Edit the command bar
  
-1. Make sure you **Publish** you app before you work with the command designer.
+Make sure you **Publish** you app before you work with the command designer.
+
+#### Open the command designer to edit a command bar
  
 1. Select any table from the **Pages** area in the app designer.
  
@@ -74,58 +76,65 @@ Once you are in the app designer, use the command designer to customize your com
     > [!div class="mx-imgBorder"]
     > ![App Designer entry point](media/commanddesigner-app-designer-entry-point.png "App Designer entry point")
  
-1. Select the location of the command bar you'd like to edit.
+1. Select the location of the command bar you want, and then select **Edit**.
     > [!div class="mx-imgBorder"]
     > ![Select location](media/commanddesigner-command-bar-location-selection.png "Select location")
   
- ### Create a new command
+#### Create a new command
 
-Unlike classic commands, modern commands are only displayed within the app you're editing. This prevents unwanted cross pollination within other apps as well as better runtime performance. 
+Unlike classic commands, modern commands are only displayed within the app you're editing. This prevents unwanted cross pollination within other apps as well as better runtime performance.
 
-A command component library will be created on your behalf to store **Power Fx** formulas.
- 
-1. In command designer select **+ New**.
- 
-1. Provide a **label** and an **icon**.
- 
-1. You may choose from any system font icons or web resource SVG files. To upload your own icon, choose **Web resource** then upload an **SVG**, **Save**, and **Publish** the web resource.
- 
-1. Move the command to the desired location. You may arrange modern commands amongst classic commands.
- 
-1. Optionally provide **Tooltip** and **Accessibility** information.
- 
-## User Power Fx for actions and visibility
+When you create a new command, a command component library is created on your behalf to store **Power Fx** formulas.
 
-You may now use Power Fx for both Actions (what happens when the button is clicked) as well as visibility (logic to control when the button is visible). Power Fx is not supported in classic commands. 
+1. [Open the command designer](#open-the-command-designer), and then select **+ New** on the command designer command bar.
+   :::image type="content" source="media/commanddesigner-new.png" alt-text="Create a new command":::
+1. Enter or select the following options: 
+   - **Label**. Enter a label that will be displayed on the command button. 
+   - **Icon**. Select an icon for the command button. You may choose from any system icons or web resource SVG files. To upload your own icon, choose **Web resource** then upload an **SVG** format file. Then, select **Save** and **Publish** the web resource. For more information about how to create a web resource for the icon image you want, go to [Create or edit model-driven app web resources to extend an app](create-edit-web-resources.md).
+   - **Tooltip title**. 
+   - **Tooltip description**. 
+   - **Accessibility text**. 
+   - **Order number**. 
+   - **Action**. Select from the following:
+      - **Run formula**. Enter the Power Fx formula to run the command action. More information: [Use Power Fx for actions and visibility](#use-power-fx-for-actions-and-visibility)
+      - **JavaScript**. Provide the JavaScript library and command to run the command action. More information: [Use JavaScript for actions](#use-javascript-for-actions)
+   - **Visibility**. Select whether to **Always show** the command button or to **Show on condition from formula**. 
+
+1. Drag and drop the command to the desired location. You may arrange modern commands amongst classic commands.
+1. Select **Play** to run the command or **Save and Publish** to make the command available to app users.
  
-You’ll notice it has a similar formula bar experience as canvas apps. However, not all functions available within canvas apps are supported currently for commands. Additionally, we've introduced some new functions specific to commands.
+## Use Power Fx for actions and visibility
+
+You can use Power Fx for both actions (what happens when the command button is selected) as well as visibility (logic to control when the button is visible). Power Fx is not supported in classic commands.
  
- For working with **Dataverse** data you may use Power Fx formulas just as you would in canvas apps. The main difference is you cannot currently add additional tables as data sources directly from the command designer. However, you may **open the command component library in canvas studio and add additional tables as data sources** and then use them within the command designer. 
+You’ll notice the command has a similar formula bar experience as canvas apps. However, not all functions available within canvas apps are supported currently for commands. Additionally, we've introduced some new functions specific to commands.
+ 
+For working with **Dataverse** data you may use Power Fx formulas just as you would in canvas apps. The main difference is you cannot currently add additional tables as data sources directly from the command designer. However, you may **open the command component library in canvas studio and add additional tables as data sources** and then use them within the command designer. 
   > [!NOTE]
   > Dataverse is currently the only data source supported. Additional data sources will be supported in future releases. 
   
-## Use JavaScript for Actions
+## Use JavaScript for actions
   
-JavaScript is supported both in classic and modern commands and will remain supported for the foreseeable future. In fact, it’s now much simpler to create commands and associate your JavaScript. 
+JavaScript is supported with both classic and modern commands. It's simpler to create commands and associate your JavaScript using the command designer.
   
 1. For the **Action** select **Run JavaScript**.
 
 1. Select **Add library** or select another one from the list. The list is populated with any libraries in use by the current command bar.
  
    > [!div class="mx-imgBorder"]
-   > ![Add JavaScript Library](media/CommandDesigner-Add JavaScript Library.png "Add JavaScript Library")
+   > ![Add JavaScript Library](media/commanddesigner-add-javascript-library.png "Add JavaScript Library")
 
-1. Select **Add** and search for existing JavaScript web resources or you may add your own. 
+1. Select **Add** and search for existing JavaScript web resources or you may add your own.
 
     > [!div class="mx-imgBorder"]
-    > ![Add JavaScript Library](media/CommandDesigner-Add JavaScript Library Modal.png "Add JavaScript Library")
+    > ![Add JavaScript Library](media/commanddesigner-add-javaScript-library-modal.png "Add JavaScript Library")
  
-4. Type the Function name.	For example, choose the `Main_system_library.js` then call this function: `XrmCore.Commands.Open.opennewrecord`
+1. Type the **Function name**. For example, select the `Main_system_library.js` library then call this function: `XrmCore.Commands.Open.opennewrecord`.
 
-6. Add parameters to pass to your function. Existing functionality is supported here. 
+6. Add parameters to pass to your function. Existing functionality is supported here.
 
     > [!div class="mx-imgBorder"]
-    > ![Add Parameters](media/CommandDesigner-Add JavaScript Parameters.png "Add Parameters")
+    > ![Add Parameters](media/commanddesigner-add-javascript-parameters.png "Add Parameters")
  
 > [!NOTE]
 > The use of calling multiple JavaScript libraries or calling multiple functions from a single command is not supported.
