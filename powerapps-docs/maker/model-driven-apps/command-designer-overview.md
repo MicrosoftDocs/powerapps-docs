@@ -16,7 +16,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Modern commanding overview
+# Modern commanding overview (preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 

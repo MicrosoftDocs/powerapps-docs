@@ -17,7 +17,7 @@ search.app:
   - D365CE
 ---
 
-# Modern commanding known limitations
+# Modern commanding known limitations (preview)
 
 While this feature is in preview, our intent is to collect feedback that helps prioritize what’s next. This new infrastructure does not yet support many things you may want to do – nor does it have full parity with classic commanding capabilities. We invite you to join us in this journey that is only just beginning.
 
