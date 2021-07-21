@@ -66,7 +66,7 @@ Once you are in the app designer, use the command designer to customize your com
  
 ### Edit the command bar
  
-Make sure you **Publish** you app before you work with the command designer.
+Make sure you **Publish** your app before you work with the command designer.
 
 #### Open the command designer to edit a command bar
  
@@ -88,7 +88,7 @@ When you create a new command, a command component library is created on your be
 
 1. [Open the command designer to edit a command bar](#open-the-command-designer-to-edit-a-command-bar), and then select **+ New** on the command designer command bar.
    :::image type="content" source="media/commanddesigner-new.png" alt-text="Create a new command":::
-1. Enter or select the following options: 
+1. On the right pane, enter or select from the following options:
    - **Label**. Enter a label that will be displayed on the command button. 
    - **Icon**. Select an icon for the command button. You may choose from any system icons or web resource SVG files. To upload your own icon, choose **Web resource** then upload an **SVG** format file. Then, select **Save** and **Publish** the web resource. For more information about how to create a web resource for the icon image you want, go to [Create or edit model-driven app web resources to extend an app](create-edit-web-resources.md).
    - **Tooltip title**. 
@@ -127,7 +127,7 @@ JavaScript is supported with both classic and modern commands. It's simpler to c
 1. Select **Add** and search for existing JavaScript web resources or you may add your own.
 
     > [!div class="mx-imgBorder"]
-    > ![Add JavaScript Library](media/commanddesigner-add-javaScript-library-modal.png "Add JavaScript Library")
+    > ![Add JavaScript web resource](media/commanddesigner-add-javaScript-library-modal.png "Add JavaScript web resource")
  
 1. Type the **Function name**. For example, select the `Main_system_library.js` library then call this function: `XrmCore.Commands.Open.opennewrecord`.
 

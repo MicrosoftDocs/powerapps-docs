@@ -71,19 +71,18 @@ Modern commanding largely addresses the above gaps and provides a modern infrast
     > [!div class="mx-imgBorder"]
     > ![Main form](media/CommandDesigner-main-form-location.png "Main form")
     
-- **Subgrid view**. This command bar is displayed on forms of other tables that render this table’s data within a subgrid.
-   -	For example, the account main form has a subgrid control that lists contact records related to the account record. To edit the below command bar, edit the command bar for the contact table then subgrid view.
+- **Subgrid view**. This command bar is displayed on forms of other tables that render this table’s data within a subgrid. For example, the account main form has a subgrid control that lists contact records related to the account record. To edit the below command bar, edit the command bar for the contact table then subgrid view.
     > [!div class="mx-imgBorder"]
     > ![Subgrid view](media/CommandDesigner-subrid-location.png "Subgrid view")
 
--	**Associated view**. This command bar is displayed on the form of a parent table when viewing related data in this table.
-   -	For example, from the main form of an account record select the **Related** tab then select a related table like contacts.
+- **Associated view**. This command bar is displayed on the form of a parent table when viewing related data in this table.
+  -	For example, from the main form of an account record select the **Related** tab then select a related table like contacts.
     > [!div class="mx-imgBorder"]
     > ![Associated view](media/CommandDesigner-associated-view-location.png "Associated view")
     
--	**Quick actions**. There is not a specialized entry point from the command designer because quick actions are edited via the main grid of the table.
+-	**Quick actions**. There isn't a specialized entry point from the command designer because quick actions are edited from the main grid of the table.
     > [!div class="mx-imgBorder"]
-    > ![Quick actions](media/CommandDesigner-quick-actions-location.png.jpg "Quick actions")
+    > ![An example quick action configured on the contact table](media/CommandDesigner-quick-actions-location.png.jpg "An example quick action configured on the contact table")
 
 ### See also
 [Customize the command bar using command designer](use-command-designer.md) <br />

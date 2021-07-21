@@ -1,6 +1,6 @@
 ---
 title: "Command bar customization limitations | MicrosoftDocs"
-description: "Use the command designer to customize the command bar."
+description: "Discover the modern commanding limitations."
 Keywords: command bar, command designer
 author: caburk
 ms.author: caburk
