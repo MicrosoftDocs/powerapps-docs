@@ -33,12 +33,12 @@ To fix this issue for List/Basic forms:
 
 1. Find the record mentioned in the Portal checker rule.
 
-1. Update the property for [List](../configure/entity-lists.md#securing-lists) or [Basic forms](../configure/entity-forms.md#secure-your-forms).
+1. Update the property "Enable Table Permissions" for [List](../configure/entity-lists.md#securing-lists) or [Basic forms](../configure/entity-forms.md#secure-your-forms).
 
 To fix this issue for Advanced forms:
 
 > [!IMPORTANT]
-> Portal checker rule doesn't mention these steps in the Portal checker output.
+> Portal checker rule doesn't mention Advanced form steps that might have similar configuration.
 
 1. Open the [Portal Management app](../configure/configure-portal.md).
 
@@ -84,7 +84,7 @@ If you've unintended OData feed enabled on your portal anonymous, it could be be
 
 1. By securing lists, creating appropriate table permissions to the tables used in lists, and assigning those table permissions to anonymous web role.
 
-    To fix this problem, ensure that the table permissions assigned to **Anonymous** web role are updated to ensure that only intended data is made available anonymously.
+    - To fix this problem, ensure that the table permissions assigned to **Anonymous** web role are updated to ensure that only intended data is made available anonymously.
 
 ## Portal doesn't load and displays a generic error page (Server Error in "/" application) 
 
