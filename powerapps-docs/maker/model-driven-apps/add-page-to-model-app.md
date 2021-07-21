@@ -43,7 +43,7 @@ The following steps walk you through opening the new modern app designer, which 
     > [!div class="mx-imgBorder"]
     > ![New model-driven app design prompt](media/add-page-to-model-app/solution-explorer-new-model-app-designer-prompt.png "New model-driven app design prompt")
 
-1. Enter the new app's **Name**, optionally a **Description**, and the select **Create**.
+1. Enter the new app's **Name**, optionally a **Description**, and then select **Create**.
 
     > [!div class="mx-imgBorder"]
     > ![New model-driven app name prompt](media/add-page-to-model-app/app-designer-name-prompt.png "New model-driven app name prompt")
@@ -67,7 +67,7 @@ Custom pages can be created from two places. The first is while authoring a mode
 
 1. Open modern app designer.
 
-1. Either click **New page** in the command bar or within the **Pages** pane
+1. Select **New page** on the command bar or within the **Pages** tab.
 
     > [!div class="mx-imgBorder"]
     > ![App designer create new page](media/add-page-to-model-app/app-designer-create-new-page.png "App designer create new page")
