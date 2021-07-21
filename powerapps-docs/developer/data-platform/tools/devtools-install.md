@@ -22,7 +22,7 @@ search.app:
 This topic describes the pre-requisites for the Power Platform Tools (PPT) extension for Visual Studio and how to install and uninstall the extension.
 
 > [!IMPORTANT]
-> While the Power Platform Tools extension for Visual Studio is similar in appearance and function to the Developer Toolkit for Microsoft Dynamics CRM 2013, Power Platform Tools is a new product and completely independent of the Developer Toolkit. Power Platform Tools is not compatible with any templates or projects from the Developer Toolkit and vice versa.
+> While the Power Platform Tools extension for Visual Studio is similar in appearance and function to the Developer Toolkit for Microsoft Dynamics CRM 2013, Power Platform Tools is a new product and completely independent of the Developer Toolkit. Power Platform Tools is not directly compatible with any templates or projects from the Developer Toolkit and vice versa.
 
 ## Prerequisites
 

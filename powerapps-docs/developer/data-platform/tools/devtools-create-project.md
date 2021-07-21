@@ -23,7 +23,7 @@ Like any Visual Studio solution, you begin by creating a new project. In the new
 
 If you have not installed the Power Platform Tools extension for Visual Studio, do so now before continuing with the steps in this article. More info [Install Power Platform Tools](devtools-install.md)
 
-## Available C# project templates
+## Available project templates
 
 The following table introduces the available Power Platform Tools project templates.
 
@@ -37,7 +37,7 @@ The following table introduces the available Power Platform Tools project templa
 
 ## Use the Power Platform solution template
 
-The Power Platform solution template is a good starting point for any new solution. You can add and remove projects to and from the solution. However, you should not remove the Package project. Doing so will cause deployment of the Power Platform solution to the target environment to fail.
+The Power Platform solution template is a good starting point for any new solution. You can add and remove projects to and from the solution. However, you should not remove the CrmPackage project. Doing so will cause deployment of the Power Platform solution to the target environment to fail.
 
 > [!IMPORTANT]
 > A Power Platform solution must contain one and only one CrmPackage project. Otherwise, the Dataverse solution deployment will fail.
@@ -64,37 +64,37 @@ The following procedures describe some common operations for your Visual Studio 
 
 ### Add a new project to a Power Platform solution
 
-Right-click the solution and select Add and then New Project.
+To add a new project to a Visual Studio solution, follow these steps.
 
-Select one of the following from the installed templates under Visual C#:
+1. Right-click the solution in **Solution Explorer**, select **Add**, and then choose **New Project**.
 
-Dynamics CRM > Plug-in Library
+1. Select one of the installed Power Platform Tools templates and select **Next**.
 
-Dynamics CRM > Workflow Library
+1. Fill in any required information and select **Create**. For a plug-in or workflow activity library, be sure to choose .NET Framework 4.6.2 (or 4.7.2).
 
 ### Add an existing project to a Power Platform solution
 
-1. Right-click the solution and select Add and then Existing Project.
+1. Right-click the solution in **Solution Explorer**, select **Add**, and then choose **Existing Project**.
 
-1. Navigate to the .csprog file that represents the project you want to add.
+1. Navigate to the .csprog file of the target project, select it, and choose **Open**.
 
-1. In the CrmPackage project, right-click the References and select Add Reference.
+1. In **Solution Explorer**, under the CrmPackage project, right-click **References** and select **Add Reference**.
 
-1. In the Projects tab of the Add Reference dialog box, select the projects and then click Add to add them to the list of selected projects and components.
+1. In the **Projects** tab of the **Add Reference** dialog, select the projects from the list and then click **Add** to add them to the list of selected projects and components.
 
-1. Click OK to add the projects and close the Add Reference dialog box.
+1. Click **OK** to add the projects and close the **Add Reference** dialog box.
 
 ### Remove a project from a Power Platform solution
 
-Right-click the project and select Remove. The project will automatically be removed from the CrmPackage references.
+In **Solution Explorer**, right-click the project and select **Remove**. The project will automatically be removed from the CrmPackage references.
 
 ### See Also
 
-***Developer Toolkit specific articles***  
+*Developer Toolkit specific articles*  
 [Install Power Platform Tools](devtools-install.md)  
 [Create a plug-in using Power Platform Tools](devtools-create-plugin.md)
 
-***General event handler articles***  
+*General event handler articles*  
 [Event framework](../event-framework.md)  
 [Use plug-ins to extend business processes](../plug-ins.md)  
 [Workflow extensions](../workflow/workflow-extensions.md)

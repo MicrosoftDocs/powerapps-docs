@@ -1,6 +1,6 @@
 ---
-title: "Create a plug-in using the Developer Toolkit | Microsoft Docs"
-description: "Learn how to create and register a Dataverse plug-in using the Power Platform Tools for Visual Studio extension."
+title: "Create a plug-in using Power Platform Tools | Microsoft Docs"
+description: "Learn how to create and register a Dataverse plug-in using the Power Platform Tools extension for Visual Studio."
 ms.custom: ""
 ms.date: 07/19/2021
 ms.reviewer: "pehecke"
@@ -17,73 +17,148 @@ search.app:
   - D365CE
 ---
 
-# Create a plug-in using the Developer Toolkit
+# Create a plug-in using Power Platform Tools
 
-[!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
+To create a plug-in using the Power Platform Tools extension for Visual Studio, start by creating a new Dataverse solution with a plug-in library. Instructions to do this can be found in the topic [Create a Power Platform Tools project](devtools-create-project.md).
 
-Like any Visual Studio solution, you begin by creating a new project. In the New Project dialog box under Visual C#, select the Dynamics CRM group to view the available project templates.
+If you already have an existing Dataverse solution set up, then follow these [instructions](devtools-create-project.md#add-a-new-project-to-a-power-platform-solution) to add a Plug-in Library project to the solution using the Power Platform Tools template.
 
-## Available project templates for Power Platform development
+## Connect to your Dataverse environment
 
-The following table introduces the available project templates.
+To connect to your Dataverse environment and register custom code assemblies, steps, and more, follow these steps.
 
-| Project template | Description |
-| --- | --- |
-| New Visual Studio Solution Template | Solution template for creating a new instance of a  Visual Studio Solution |
+1. In the **Tools** menu, select **Connect to Dataverse**.
 
-Project template for creating a new Microsoft Dynamics CRM 2013 Plug-in class library (.dll).
-Project template for creating a new Microsoft Dynamics CRM 2013 Workflow class library (.dll).
-Project for creating a Microsoft Dynamics CRM 2013 Package project.
-Project template for creating CRM Workflows using the Visual Studio Workflow Designer.
+1. Step #1 is to login. Check the desired options in the dialog and select **Login**.
 
-The New Visual Studio Solution Template for Dynamics CRM 2013 project creates the following types of solution components:
+1. Step #2 is to select an existing Dataverse solution, or the **Default** solution. This is the solution that your plug-in and workflow activity assemblies will be registered with.
 
-1. Plug-in Library
-1. Workflow Library
-1. Web Resources (part of the CrmPackage project)
+1. Choose **Done** when finished.
 
-The New Visual Studio Solution Template is a good starting point for any new solution. You can add and remove new projects to and from the solution. You should not remove the CrmPackage project.
-
-The Plug-in Library and Workflow Library project templates are typically used for more advanced scenarios where you may want to add multiple assemblies to a project or if you are only interested in developing that specific component. Before you can deploy a solution that contains only a project of these types, you must add a Package (CrmPackage) project to the solution.
+The Power Platform Explorer view will be displayed. Expand the nodes to see what kinds of environment data you can view. Right-click on nodes to see what options are available.
 
 > [!NOTE]
-> A Microsoft Dynamics CRM solution can contain only a single CrmPackage project.
+> The Power Platform Explorer view of the Power Platform Tools extension is capable of more than plug-in and workflow activity registration. Documentation for additional features will be provided in a future documentation release. In the meantime, feel free to explore.  
 
-## Managing projects
 
-Use the following procedures to manage your Visual Studio solution.
+## Register a plug-in step with Dataverse
 
-### Add a new project to the solution
+Follow these instructions to register a plug-in step (also known as an SDK message processing step). The step identifies what table and event causes your plug-in to execute.
 
-Right-click the solution and select Add and then New Project.
+1. In **Power Platform Explorer**, expand your environment node and the **Tables** sub-node.
 
-Select one of the following from the installed templates under Visual C#:
+1. Right-click on the table type that the step is to be registered on, then select **Create Plug-in**.
 
-Dynamics CRM > Plug-in Library
+1. Fill out the **Register New Step** dialog information and choose **Register New Step**. The class name that you specify when filling out the step information will be used to name your new plug-in class. <!--note: link to the topic with info on creating a step -->
 
-Dynamics CRM > Workflow Library
+A new plug-in class that derives from `PluginBase` is now visible in your plug-in library, and a new step registration has been added to the solution. However, you will need to build and deploy your plug-in library before the plug-in and step are added to the actual environment.
 
-### Add an existing project to the solution
+## The generated plug-in class code
 
-1. Right-click the solution and select Add and then Existing Project.
+The Plug-in Library template provides the `PluginBase` abstract class. Your plug-in must derive from `PluginBase` if it is to work well with the Power Platform Tools extension. Below is the generated dereived class when creating a plug-in from **Power Platform Explorer**. You typically would add your code where the TODO comments are. Notice that the standard plug-in `Execute` method has been replaced with `ExecuteCrmPlugin.
 
-1. Navigate to the .csprog file that represents the project you want to add.
+```csharp
+using System;
+using System.ServiceModel;
+using Microsoft.Xrm.Sdk;
 
-1. In the CrmPackage project, right-click the References and select Add Reference.
+namespace PPTools_Sample_Solution.NotifyPlugin
+{
+    /// <summary>
+    /// NotifyAccountCreate Plugin.
+    /// </summary>    
+    public class NotifyAccountCreate: PluginBase
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="NotifyAccountCreate"/> class.
+        /// </summary>
+        /// <param name="unsecure">Contains public (unsecured) configuration information.</param>
+        /// <param name="secure">Contains non-public (secured) configuration information. 
+        /// When using Microsoft Dynamics 365 for Outlook with Offline Access, 
+        /// the secure string is not passed to a plug-in that executes while the client is offline.</param>
+        public NotifyAccountCreate(string unsecure, string secure)
+            : base(typeof(NotifyAccountCreate))
+        {
+            
+           // TODO: Implement your custom configuration handling.
+        }
 
-1. In the Projects tab of the Add Reference dialog box, select the projects and then click Add to add them to the list of selected projects and components.
 
-1. Click OK to add the projects and close the Add Reference dialog box.
+        /// <summary>
+        /// Main entry point for he business logic that the plug-in is to execute.
+        /// </summary>
+        /// <param name="localContext">The <see cref="LocalPluginContext"/> which contains the
+        /// <see cref="IPluginExecutionContext"/>,
+        /// <see cref="IOrganizationService"/>
+        /// and <see cref="ITracingService"/>
+        /// </param>
+        /// <remarks>
+        /// For improved performance, Microsoft Dynamics 365 caches plug-in instances.
+        /// The plug-in's Execute method should be written to be stateless as the constructor
+        /// is not called for every invocation of the plug-in. Also, multiple system threads
+        /// could execute the plug-in at the same time. All per invocation state information
+        /// is stored in the context. This means that you should not use global variables in plug-ins.
+        /// </remarks>
+        protected override void ExecuteCrmPlugin(LocalPluginContext localContext)
+        {
+            if (localContext == null)
+            {
+                throw new InvalidPluginExecutionException(nameof(localContext));
+            }           
+            // Obtain the tracing service
+            ITracingService tracingService = localContext.TracingService;
 
-### Remove a project from the solution
+            try
+            { 
+                // Obtain the execution context from the service provider.  
+                IPluginExecutionContext context = (IPluginExecutionContext)localContext.PluginExecutionContext;
 
-Right-click the project in **Solution Explorer** and select **Remove**. The project will automatically be removed from the CrmPackage references.
+                // Obtain the organization service reference for web service calls.  
+                IOrganizationService service = localContext.OrganizationService;
 
-### See also
+                // TODO: Implement your custom Plug-in business logic.
+
+                
+            }	
+            // Only throw an InvalidPluginExecutionException. Please Refer https://go.microsoft.com/fwlink/?linkid=2153829.
+            catch (Exception ex)
+            {
+                tracingService?.Trace("An error occurred executing Plugin PPTools_Sample_Solution.NotifyPlugin.NotifyAccountCreate : {0}", ex.ToString());
+                throw new InvalidPluginExecutionException("An error occurred executing Plugin PPTools_Sample_Solution.NotifyPlugin.NotifyAccountCreate .", ex);
+            }	
+        }
+    }
+}
+```
+
+## Sign the assembly
+
+All plug-in and custom workflow assemblies must be digitally signed before they are uploaded to the Dataverse server. to sign the assembly, follow these steps.
+
+1. Select the plug-in or workflow activity project in **Solution Explorer**.
+
+1. Choose **Project** > \<project name> **Properties** to edit the project's properties.
+
+1. On the **Signing** tab, check **Sign the assembly**, and then specify a strong name key file.
+
+
+## Deploy the plug-in to the environment solution
+
+After you are done modifying code and are ready to deploy the plug-in assembly and step(s) to you environment, follow these steps.
+
+1. Build the plug-in library.
+
+1. Right-click the plug-in library project in **Solution Explorer**.
+
+1. Select **Deploy** in the context menu.
+
+After deployment completes, select the refresh icon in **Power Platform Explorer**. Expand the Plug-in Assemblies sub-node of your environment node to see your registered assembly. Right-click on the assembly and step in **Power Platform Explorer** to see what operations are supported.
+
+### See Also
 
 ***Developer Toolkit specific articles***  
 [Install Power Platform Tools](devtools-install.md)  
-[Create a plug-in using Power Platform Tools](devtools-create-plugin.md)
+[Create a Power Platform Tools project](devtools-create-project.md)
 
 ***General event handler articles***  
 [Event framework](../event-framework.md)  
