@@ -1,5 +1,5 @@
 ---
-title: "Navigating to and from a custom page in your model-driven app (preview)" 
+title: "Navigating to and from a custom page in your model-driven app using client API (preview)" 
 description: "This topic provides examples of navigating from a model-driven app page using the Client API to a custom page."
 ms.custom: ""
 ms.date: 07/21/2021
@@ -18,17 +18,17 @@ search.app:
   - D365CE
 ---
 
-# Navigating to and from a custom page (preview)
+# Navigating to and from a custom page using client API (preview)
 
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
 
 This topic provides examples of navigating from a model-driven app page using the [Client API](../client-scripting.md) to a custom page. It also includes examples of navigating from a custom page to other custom pages or a model page.
 
-outlines the steps to use the Client API to open a custom page as a full page, dialog, or pane.  It provides examples of **custom** as a pageType value in [navigateTo (Client API reference)](../../developer/model-driven-apps/clientapi/reference/xrm-navigation/navigateto.md).
+outlines the steps to use the Client API to open a custom page as a full page, dialog, or pane.  It provides examples of **custom** as a pageType value in [navigateTo (Client API reference)](reference/xrm-navigation/navigateto.md).
 
   > [!IMPORTANT]
   > - This is a preview feature, and isn't available in all regions.
-  > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
+  > - [!INCLUDE[cc_preview_features_definition](../../../includes/cc-preview-features-definition.md)]
 
 
 ## Navigating from a model page to a custom page
@@ -94,7 +94,7 @@ Xrm.Navigation.navigateTo(pageInput, navigationOptions)
 
 ### Open as a centered dialog
 
-Within a model-driven app Client API event, call the following code and update the **name** parameter to be the logical custom page name.  This mode supports the sizing parameters similar to the [Main Form Dialogs](../../developer/model-driven-apps/customize-entity-forms.md#open-main-form-in-a-dialog-using-client-api).
+Within a model-driven app Client API event, call the following code and update the **name** parameter to be the logical custom page name.  This mode supports the sizing parameters similar to the [Main Form Dialogs](../../../developer/model-driven-apps/customize-entity-forms.md#open-main-form-in-a-dialog-using-client-api).
 
 ```javascript
 // Centered Dialog
