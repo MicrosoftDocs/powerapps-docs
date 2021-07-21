@@ -282,6 +282,9 @@ Select the site map ![Site map icon.](media/pa_mobile_sitemap_icon.png "Site map
 ![Close a model-driven app.](media/pa_mobile_close_app.png "Close a model-driven app")
 
 
+>[!Note]
+> If you're on [early access](/power-platform/admin/opt-in-early-access-updates) your site map may look different. An app maker can customize the navigation bar and show or hide the **Home**, **Recent**, **Pinned** buttons in the site map. An app maker can also enable collapsible groups. For more information, see [Improved site map in model-driven apps](/power-platform-release-plan/2021wave2/power-apps/improved-site-map-model-driven-apps).
+
 ## See also
 
 [User Guide for model-driven apps running on Power Apps mobile](use-custom-model-driven-app-on-mobile.md) <br/>
