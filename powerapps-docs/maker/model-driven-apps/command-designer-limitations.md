@@ -25,22 +25,23 @@ We look forward to your feedback on what you like or dislike as well as what fea
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-1.	Pre-existing classic commands cannot be customized within the command designer. This includes the out of the box commands. However, you may continue to use other mechanisms and 3rd party tools for customizing classic commands.
-2.	Not all Power Fx functions are currently supported for commands. We’re just getting started so certain functions will not work during this preview. 
-3.	Sharing is currently handled a little differently.
-a.	Canvas based resources such as component libraries must be shared with any user running or customizing the commands. 
-i.	Note that admins can share with themselves in the admin center or by using PowerShell.
-b.	For example, System administrators do not automatically have access to all command component libraries in the environment. 
-4.	Dataverse is currently the only supported data source when using Power Fx. Other data sources will be added in future releases.
-5.	You cannot currently add additional tables as data sources directly from the command designer. It will only add the table the command belongs to but not related tables. 
-a.	However, you may open the command component library in canvas studio and add additional tables as data sources and then use them within the command designer. You must first close your command designer session.
-6.	When writing Power Fx formulas in the command designer, intellisense may sometimes provide recommendations for unsupported functions. It may not show an error for unsupported functions in commanding. 
-a.	For example, functions that canvas apps support, but commands do not. You may not get an error when using the formula bar in command designer or when editing the command component library. 
-7.	Commands and the command component library created from one app cannot be added to different apps. 
-a.	For now you must re-create each command to use it in different apps and different locations. 
-8.	Not all out of the box visibility rules from classic commands are currently supported. Custom visibility rules are not currently supported either. We’re working to support these within Power Fx + on the backend, but do not plan on exposing these in the command designer. 
-9.	Split buttons and Flyout menus are not currently supported.
-10.	Dynamically populated buttons are not supported. We do not plan to support these and recommend creating them declaratively. 
-11.	Other types of command bars are not supported in the command designer. For example, the global application header or dashboard command bars. 
-a.	Please share feedback if you find this valuable to prioritize. This is not currently on the near-term roadmap. 
-12.	Command checker may not show all relevant information in some scenarios. 
+- Pre-existing classic commands can't be customized within the command designer. This includes the out-of-the-box commands. However, you may continue to use other mechanisms and third party tools for customizing classic commands.
+- Not all Power Fx functions are currently supported for commands. Certain functions won't work during this preview.
+-	Sharing is currently handled differently in the command designer than with canvas apps.
+   - Canvas based resources such as component libraries must be shared with any user running or customizing the commands. Notice that administrators can share with themselves in the Power Platform admin center or by using PowerShell. For example, system administrators don't automatically have access to all command component libraries in the environment.
+- Microsoft Dataverse is currently the only supported data source when using Power Fx.
+-	You can't currently add additional tables as data sources directly from the command designer. It will only add the table the command belongs to but not related tables.
+   - However, you may open the command component library in canvas studio and add additional tables as data sources and then use them within the command designer. You must first close your command designer session.
+-	When you write Power Fx formulas in the command designer, intellisense may sometimes provide recommendations for unsupported functions. It may not show an error for unsupported functions in commanding.
+   - For example, functions that canvas apps support, but commands do not. You may not get an error when using the formula bar in command designer or when editing the command component library. 
+-	Commands and the command component library created from one app can't be added to different apps.
+   - For now, you must re-create each command to use it in different apps and different locations. 
+-	Not all out-of-the-box visibility rules from classic commands are currently supported. Custom visibility rules are not currently supported either. During the preview, don't expose these in the command designer.
+-	Split buttons and flyout menus are not currently supported.
+-	Dynamically populated buttons aren't supported. We do not plan to support these and recommend creating them declaratively.
+-	Other types of command bars are not supported in the command designer. For example, the global application header or dashboard command bars. Share feedback if you find this valuable to prioritize.
+-	Command checker may not show all relevant information in some scenarios.
+
+### See also
+
+[Introducing Command Checker for model-app ribbons](https://powerapps.microsoft.com/blog/introducing-command-checker-for-model-app-ribbons/)

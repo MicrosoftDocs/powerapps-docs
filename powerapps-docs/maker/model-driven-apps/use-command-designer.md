@@ -131,7 +131,7 @@ JavaScript is supported with both classic and modern commands. It's simpler to c
  
 1. Type the **Function name**. For example, select the `Main_system_library.js` library then call this function: `XrmCore.Commands.Open.opennewrecord`.
 
-6. Add parameters to pass to your function. Existing functionality is supported here.
+6. Add parameters to pass to your function. <!-- Existing functionality is supported here. -->
 
     > [!div class="mx-imgBorder"]
     > ![Add Parameters](media/commanddesigner-add-javascript-parameters.png "Add Parameters")
