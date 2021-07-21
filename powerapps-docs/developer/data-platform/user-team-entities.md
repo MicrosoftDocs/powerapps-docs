@@ -25,9 +25,9 @@ User and team management is the area of Microsoft Dataverse where you can create
 
  Records can be owned by users or teams. Set the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.OwnershipType> to <xref:Microsoft.Xrm.Sdk.Metadata.OwnershipTypes>.`UserOwned` or <xref:Microsoft.Xrm.Sdk.Metadata.OwnershipTypes>.`TeamOwned` to enable ownership. You can use the <xref:Microsoft.Crm.Sdk.Messages.ReassignObjectsOwnerRequest> message or the <xref:Microsoft.Crm.Sdk.Messages.ReassignObjectsSystemUserRequest> message to do bulk reassignment of all records for an owner.  
 
- The following illustration shows the entity relationships for users and teams.  
+ The following illustration shows the relationships for users and teams.  
 
- ![User and team entity relationship diagram.](media/crm-v5s-em-userteam.gif "User and team entity relationship diagram")  
+ ![User and team table relationship diagram.](media/crm-v5s-em-userteam.gif "User and team table relationship diagram")  
 
 ## Users  
  In Dataverse, users can be disabled but they cannot be deleted. To find the user who is currently logged on or who is impersonated, call the <xref:Microsoft.Crm.Sdk.Messages.WhoAmIRequest> message.  
@@ -65,14 +65,11 @@ User and team management is the area of Microsoft Dataverse where you can create
 
 ### See also  
    
- [Use Teams to Collaborate and Share Information](use-access-teams-owner-teams-collaborate-share-information.md)   
- [Team Entity](reference/entities/team.md)   
- [Specify time zone settings for a user](specify-time-zone-settings-user.md)   
- [TeamTemplate Entity](reference/entities/teamtemplate.md)   
- [SystemUser Entity](reference/entities/systemuser.md)   
- [UserSettings Entity](reference/entities/usersettings.md)    
- [Sample: Share Records Using GrantAccess, ModifyAccess and RevokeAccess Messages](org-service/samples/share-records-using-grantaccess-modifyaccess-revokeaccess-messages.md)   
- [Sample: Share a record using an access team](org-service/samples/share-record-using-access-team.md)   
+ [Use Teams to Collaborate and Share Information](use-access-teams-owner-teams-collaborate-share-information.md)<br/>   
+ [Team table reference](reference/entities/team.md)<br/>   
+ [Specify time zone settings for a user](specify-time-zone-settings-user.md)<br/>   
+ [Sample: Share Records Using GrantAccess, ModifyAccess and RevokeAccess Messages](org-service/samples/share-records-using-grantaccess-modifyaccess-revokeaccess-messages.md)<br/>   
+ [Sample: Share a record using an access team](org-service/samples/share-record-using-access-team.md)<br/>   
  
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -1235,14 +1235,16 @@
         items:
         - name: "Access a view definition"
           href: ./model-driven-apps/accessing-view-definitions.md
-        - name: Create and edit views
-          href: ./model-driven-apps/create-edit-views-app-designer.md
+        - name: Create and edit public views
+          href: ./model-driven-apps/create-or-edit-model-driven-app-view.md
         - name: Choose and configure columns in views
           href: ./model-driven-apps/choose-and-configure-columns.md
         - name: Create or edit filters in app views
           href: ./model-driven-apps/create-edit-view-filters.md
         - name: "How to guides: Views"
           items:
+          - name: Create and edit views
+            href: ./model-driven-apps/create-edit-views-app-designer.md
           - name: How to make grids editable
             href: ./model-driven-apps/make-grids-lists-editable-custom-control.md
           - name: How to sort rows in a view
@@ -2294,6 +2296,10 @@
                   href: ../teams/extend-issue-auto-assignment.md
                 - name: Convert Issue reporting sample app to Work order management app
                   href: ../teams/extend-issue-rename-work-order.md
+                - name: Remove the Planner dependency for task creation
+                  href: ../teams/extend-issue-remove-planner.md
+                - name: Add the ability to be notified when an issue is resolved
+                  href: ../teams/extend-issue-sign-up-notification.md
         - name: Milestones
           items:
              - name: Milestones
