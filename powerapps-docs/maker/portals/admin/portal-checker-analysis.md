@@ -72,7 +72,7 @@ To find anonymous OData feeds enabled on your portal:
 
     ![Browse to OData feed](media/portal-checker-analysis/browse-to-enabled-odata-feeds.png "Browse to OData feed")
 
-1. If the OData field is available anonymously, it will return the data with HTTP 200 response. If the feed isn't enabled anonymously, it will return HTTP 403 response with a message “Access to oData, with the entity set name of '{entity set name}', has been denied.”
+1. If the OData field is available anonymously, it will return the data with HTTP 200 response. If the feed isn't enabled anonymously, it will return HTTP 403 response with a message “Access to OData, with the entity set name of '{table set name}', has been denied.”
 
 If you've unintended OData feed enabled on your portal anonymous, it could be because of one of these possibilities:
 
