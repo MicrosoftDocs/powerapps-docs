@@ -69,6 +69,16 @@ Legend
 4. **Pinned**: Expand this entry to view and open your favorite pinned rows. Use the **Recent** list to add rows here. Select the remove-pin icon next to a row listed here to remove it from this list.
 5.  **Page navigation**: This area lists each table and dashboard page available for the current work area. Select any entry here to open the named dashboard or list view for that table.
 
+
+#### Eary access: Hide or show the Home, Pinned, Recent, and collapsible groups
+
+If you're on [early access](/power-platform/admin/opt-in-early-access-updates) your site map may look different. With 2021 release wave 2, an app maker can customize the navigation bar to show or hide the **Home**, **Recent**, **Pinned** buttons in the site map. An app maker can also make groups collapsible or not. 
+
+
+![This diagram shows how the site map looks with a app maker customizes it to hide or show the Home, Pinned, Recent, and collapsible groups.](media/hide-show-nav-bar-buttons.gif
+ "This diagram shows how the site map looks with a app maker customizes it to hide or show the Home, Pinned, Recent, and collapsible groups.")  
+
+
 ### Area switcher 
 
 In the left-hand navigation pane, the area switcher appears at the bottom left only when a single model-driven app has more than one area in the sitemap definition. 
