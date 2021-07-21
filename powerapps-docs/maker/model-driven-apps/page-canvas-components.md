@@ -7,7 +7,6 @@ ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
 author: "hemantg"
-ms.assetid: b4098c96-bce1-4f57-804f-8694e6254e81
 ms.author: "matp"
 manager: "kvivek"
 search.audienceType: 
@@ -21,17 +20,16 @@ search.app:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-This topic outlines the use of low code canvas components to build custom UX for a custom page by utiliizing shared canvas component library capability. For code first custom UX extensibility please see [add code components to a custom page for your model-driven app.](/powerapps/maker/model-driven-apps/page-code-components) 
+This article outlines the use of low-code canvas components to build custom UX for a custom page by utiliizing shared canvas component library capability. For code first custom UX extensibility, see [Add code components to a custom page for your model-driven app.](/powerapps/maker/model-driven-apps/page-code-components) 
 
   > [!IMPORTANT]
   > - This is a preview feature, and may not be available in all regions.
   > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
 
   > [!NOTE]
-  > Custom page currently supports [limited set of controls](/powerapps/maker/model-driven-apps/design-page-for-model-app#supported-controls-in-custom-page) and only these  supported controls should be used to create canvas components for the custom page. 
+  > Custom page currently supports a [limited set of controls](/powerapps/maker/model-driven-apps/design-page-for-model-app#supported-controls-in-custom-page) and only the currently supported controls should be used to create canvas components for the custom page.
 
-
-Canvas components provides app makers an ability to create custom components in a low code fashion. These components can not only then be reused across custom pages and applications but also can be centrally updated, packaged and moved in the Dataverse solutions. See [create a component for canvas apps](/powerapps/maker/canvas-apps/create-component) for more details on how to create a component. Since custom page authoring is limited to only one page, canvas components can only be authored inside a [component library](/powerapps/maker/canvas-apps/component-library). This is different from the standalone canvas apps which additionally has ability to create components at the app level.
+Canvas components provide app makers an ability to create custom components in a low code fashion. These components can not only then be reused across custom pages and applications but also can be centrally updated, packaged and moved in the Dataverse solutions. See [create a component for canvas apps](/powerapps/maker/canvas-apps/create-component) for more details on how to create a component. Since custom page authoring is limited to only one page, canvas components can only be authored inside a [component library](/powerapps/maker/canvas-apps/component-library). This is different from the standalone canvas apps which additionally has ability to create components at the app level.
 
 ## Create a canvas component using component library 
 You can create a new [component library](/powerapps/maker/canvas-apps/component-library) or edit an existing one either from the Solutions area or Maker portal.  Browse to [make.powerapps.com](https://make.powerapps.com), select **Apps**, and then select **Component Libraries**:
