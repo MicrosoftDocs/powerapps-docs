@@ -128,6 +128,21 @@ By creating the custom page from the modern app designer, the important properti
     Height=35
     FontWeight=Normal
     ```
+## Tab Navigation - Keyboard accessibility for custom pages
+
+Custom page follows the same tab navigation design which is used by the hosting model app. Visually aligned  semantic HTML stucture helps users navigate the custom pages seamlessly when using a keyboard or a screen readers. Note that unlike stand alone canvas apps, custom page controls and other UX elements do not need explicit tab numbers assignments. Modern controls do not have TabIndex property and utilize the semantic HTML stucture for naviation. 
+
+Various elements like controls, canvas and code components, containers etc can be tabbed based on their position in the custom page layout. Note that the tab navigation follows Z order navigation. Individual tab-stops inside larger grouping elements like components, containers are navigated first before the tab moves out to the next element in the DOM tree. 
+
+Here is an example navigation with the page containing controls, code and canvas compoenents and containeres. 
+
+  > ![Custom page tab navigation.](media/add-component-to-model-app/tab-navigation-with-components-pcf-containers-and-controls.png "Custom page tab navigation")
+
+
+
+  > [!NOTE]
+  > Overlapping controls and elements on the custom page will not have their DOM merged so tab stops can be out of sync from visual layout. Same is true for the dynamic element positioning using formulas.  
+
 
 
 ## Related topics
