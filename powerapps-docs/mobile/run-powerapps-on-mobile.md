@@ -158,14 +158,7 @@ You can add a shortcut for both canvas apps and model-driven apps to the home sc
 
 ### Use Safari to add a shortcut (iOS 13 or earlier)
 
-1. Do one of the following depending on if you're on the current release or early access:
-
-  - **Current**: Select the ellipsis (...) on the app tile, select **Pin to Home**.
-
-     > [!div class="mx-imgBorder"]
-     > ![Select Pin to Home.](media/pa_mobile_pin_to_home_iphone.png "Select Pin to Home") 
-   
-  - **Early access**: On the app that you want to create a shortcut for, swipe to the right and select **Shortcut**.
+1. On the app that you want to create a shortcut for, swipe to the right and select **Shortcut**.
 
      > [!div class="mx-imgBorder"]
      > ![Select shortcut.](media/add-shortcut-iphone.png "Select shortcut") 
@@ -196,14 +189,7 @@ The Power Apps mobile app is now integrated with Siri shortcuts, which gives you
 Users on iOS 14 or later can use Siri Shortcuts to pin an app to the home screen. The new experience works for both model-driven and canvas apps. When you add a Siri shortcut, the app is added to the iOS **Shortcuts** app and from there you can add the app to your home screen.
 
 
-1. Do one of the following depending on if you're on the current release or early access:
-
- - **Current**: To add shortcut to the home screen for an app, select the ellipsis (...) on the app tile and then select **Add shortcut to Siri**.
-
-    > [!div class="mx-imgBorder"]
-    > ![Add shortcut to Siri.](media/add-shortcut.png "Add shortcut to Siri")
-    
- - **Early access**: On the app that you want add a shortcut for, swipe to the right and select **Shortcut**.
+1. On the app that you want add a shortcut for, swipe to the right and select **Shortcut**.
 
     > [!div class="mx-imgBorder"]
     > ![Select shortcut.](media/add-shortcut-iphone.png "Select shortcut") 
