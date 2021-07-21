@@ -5,11 +5,7 @@ ms.custom: ""
 ms.date: 06/15/2021
 ms.reviewer: ""
 ms.service: powerapps
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: "overview"
-applies_to: 
-  - "powerapps"
 author: "Mattp123"
 ms.subservice: common
 ms.author: "matp"
@@ -84,13 +80,13 @@ The following table summarizes what areas and categories the performance insight
 
 :::row:::
    :::column span="":::
-      Area
+      **Area**
    :::column-end:::
    :::column span="":::
-      Insight category
+      **Insight category**
    :::column-end:::
    :::column span="":::
-      Description
+      **Description**
    :::column-end:::
 :::row-end:::
 :::row:::
