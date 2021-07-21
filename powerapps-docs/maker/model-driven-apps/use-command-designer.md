@@ -16,7 +16,7 @@ search.app:
   - D365CE
 ---
 
-# Customize the command bar using command designer
+# Customize the command bar using command designer (preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
@@ -86,7 +86,7 @@ Unlike classic commands, modern commands are only displayed within the app you'r
 
 When you create a new command, a command component library is created on your behalf to store **Power Fx** formulas.
 
-1. [Open the command designer](#open-the-command-designer), and then select **+ New** on the command designer command bar.
+1. [Open the command designer to edit a command bar](#open-the-command-designer-to-edit-a-command-bar), and then select **+ New** on the command designer command bar.
    :::image type="content" source="media/commanddesigner-new.png" alt-text="Create a new command":::
 1. Enter or select the following options: 
    - **Label**. Enter a label that will be displayed on the command button. 
