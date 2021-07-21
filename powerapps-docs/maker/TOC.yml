@@ -1189,12 +1189,20 @@
           href: ./model-driven-apps/model-app-page-overview.md
         - name: Add a custom page to a model-driven app
           href: ./model-driven-apps/add-page-to-model-app.md
+        - name: Navigating to and from a custom page
+          href: ./model-driven-apps/navigate-page-examples.md
         - name: Design considerations for a custom page
           href: ./model-driven-apps/design-page-for-model-app.md
+        - name: Using Power Fx in custom page
+          href: ./model-driven-apps/page-powerfx-in-model-app.md
+        - name: Add canvas components to a custom page
+          href: ./model-driven-apps/page-canvas-components.md   
+        - name: Add code components to a custom page
+          href: ./model-driven-apps/page-code-components.md     
+        - name: Add connectors to a custom page
+          href: ./model-driven-apps/page-data-connectors.md
         - name: Known issues with custom pages
           href: ./model-driven-apps/model-app-page-issues.md
-        - name: Add connectors to a custom pages
-          href: ./model-driven-apps/page-data-connector.md
         - name: Use monitor to troubleshoot custom pages
           href: ./model-driven-apps/monitor-page-checker.md
       - name: Embed a canvas app on a model-driven form

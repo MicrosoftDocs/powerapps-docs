@@ -32,7 +32,7 @@ The following steps walk you through opening the new modern app designer, which 
 
 ### Create a new model-driven app using modern app designer
 
-1. Go to [make.powerapps.com](https://make.powerapps.com/?cds-app-module-designer.isCustomPageEnabled=true)
+1. Go to [make.powerapps.com](https://make.powerapps.com/?cds-app-module-designer.isCustomPageEnabled=true&oneCdsDesigner.enableCustomCanvasPage=true)
 
 1. On the left navigation pane, select **Solutions** and then open or create a solution to contain the new model-driven app.
 
@@ -50,7 +50,7 @@ The following steps walk you through opening the new modern app designer, which 
 
 ### Open an existing model-driven app using modern app designer
 
-1. Open [make.powerapps.com](https://make.powerapps.com/?cds-app-module-designer.isCustomPageEnabled=true)
+1. Open [make.powerapps.com](https://make.powerapps.com/?cds-app-module-designer.isCustomPageEnabled=true&oneCdsDesigner.enableCustomCanvasPage=true)
 
 1. On the left navigation pane, select **Solutions**, and then open the solution containing the existing model-driven app.
 
@@ -67,10 +67,15 @@ Custom pages can be created from two places. The first is while authoring a mode
 
 1. Open modern app designer.
 
-1. Select **New custom canvas page**.
+1. Either click **New page** in the command bar or within the **Pages** pane
 
     > [!div class="mx-imgBorder"]
     > ![App designer create new page](media/add-page-to-model-app/app-designer-create-new-page.png "App designer create new page")
+
+1. Select **Custom (preview)** as the page type.
+
+    > [!div class="mx-imgBorder"]
+    > ![New page select custom page](media/add-page-to-model-app/app-designer-create-new-custom-page.png "New page select custom page")
 
 1. Canvas designer opens to allow page authoring
 
@@ -79,7 +84,7 @@ Custom pages can be created from two places. The first is while authoring a mode
 
 ### Create new custom page from solution explorer
 
-1. Open up [make.powerapps.com](https://make.powerapps.com/?cds-app-module-designer.isCustomPageEnabled=true)
+1. Open up [make.powerapps.com](https://make.powerapps.com/?cds-app-module-designer.isCustomPageEnabled=true&oneCdsDesigner.enableCustomCanvasPage=true)
 
 1. Switch to Solutions and open or create a solution to contain the new custom page
 
@@ -90,7 +95,7 @@ Custom pages can be created from two places. The first is while authoring a mode
 
 ### Editing existing custom page
 
-1. Open up [make.powerapps.com](https://make.powerapps.com/?cds-app-module-designer.isCustomPageEnabled=true)
+1. Open up [make.powerapps.com](https://make.powerapps.com/?cds-app-module-designer.isCustomPageEnabled=true&oneCdsDesigner.enableCustomCanvasPage=true)
 
 1. Switch to Solutions and open or create a solution to contain the new custom page
 
@@ -118,7 +123,7 @@ Custom pages can be created from two places. The first is while authoring a mode
 
 ## Add existing custom page into model-driven app sitemap
 
-1. Open [make.powerapps.com](https://make.powerapps.com/?cds-app-module-designer.isCustomPageEnabled=true)
+1. Open [make.powerapps.com](https://make.powerapps.com/?cds-app-module-designer.isCustomPageEnabled=true&oneCdsDesigner.enableCustomCanvasPage=true)
 
 1. Select model-driven app and click **Edit** to open the new app designer
 
@@ -149,24 +154,14 @@ Custom pages can be created from two places. The first is while authoring a mode
 
 By default custom pages is not available in the new app designer until custom page public preview.  These parameters are not needed for internal test.
 ```
-?cds-app-module-designer.isCustomPageEnabled=true
+?cds-app-module-designer.isCustomPageEnabled=true&oneCdsDesigner.enableCustomCanvasPage=true
 ```
-
-## Recently added items in new App Designer
-
-* Live preview of model-driven app with custom page rendering and navigation
-
-* Creating custom page from new app designer
-
-* Creating new page will automatically add into sitemap
 
 ## Upcoming changes in new App Designer
 
 * Adding custom page in app designer without being in the navigation
 
     * Workaround: add into sitemap which adds to both sitemap and pages collection, then remove from sitemap which leaves in the pages collection
-
-* App designer allows moving custom pages in navigation pane
 
 ## Related topics
 

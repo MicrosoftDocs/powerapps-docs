@@ -35,4 +35,4 @@ When you filter on model-driven app custom page-related events in Monitor, you c
 
 [Using PowerFx in custom page](page-powerfx-in-model-app.md)
 
-[Add connectors into custom pages](page-data-connector.md)
+[Add connectors into custom pages](page-data-connectors.md)

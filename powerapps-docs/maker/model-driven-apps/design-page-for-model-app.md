@@ -27,11 +27,10 @@ This topic provides tips to design a custom page for use in a model-driven app.
   > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
 
 ## Supported controls in custom page
-Custom page authoring will start with a subset of controls supported and will be gradually adding more controls.  Interaction with controls not supported may change so they should not be used until supported.
+Custom page authoring will start with a subset of controls supported and will be gradually adding more controls. Interaction with controls currently not supported may change so they should not be used until they are officially supported.
 
   | Control | Control Type | Notes |
   | --- | --- | --- |
-  |Custom control|Custom|See [Power Apps Component Framework supported canvas control](../../developer/component-framework/overview.md)|
   |Label<sup>1</sup>|Display||
   |Text Box<sup>1</sup>|Input||
   |Date Picker<sup>1</sup>|Input|
@@ -50,12 +49,17 @@ Custom page authoring will start with a subset of controls supported and will be
   |Image|Media|
   |Edit Form|Input|
   |Display Form|Input|
+  |Code components|Custom| [Add code components to a custom page](page-code-components.md)|
+  |Canvas components|Custom| [Add canvas components to a custom page](page-canvas-components.md)|
   
   > [!Note]
-  > Controls with “1” are the new control version used by canvas apps in Teams; these controls are from the [Fluent UI library](https://developer.microsoft.com/en-us/fluentui#/controls/web) wrapped with [Power Apps Component Framework](../../developer/component-framework/overview.md). 
+  >  <sup>1</sup> - Controls with superscript "1"  are the new modern controls which were introduced for [canvas apps in Teams]( ../../../../2020wave1/microsoft-powerapps/build-apps-teams-modern-controls); These controls are based on [Fluent UI library](https://developer.microsoft.com/en-us/fluentui#/controls/web) wrapped with [Power Apps Component Framework](../../developer/component-framework/overview.md). 
 
-More examples of custom components is available in  
-[Custom component samples](../../developer/component-framework/use-sample-components.md).
+
+## Custom components support for custom page
+You can add both low-code( canvas components) and pro-code( code components) custom UX components to your environment and make them available for all makers. For custom page specific UX extensibility topics please see [add canvas components to a custom page for your model-driven app](/powerapps/maker/model-driven-apps/page-canvas-components) and [add code components to a custom page for your model-driven app.](/powerapps/maker/model-driven-apps/page-code-components) In general, low code extensibility approach is simpler to build, test and has lower maintainance cost. We recommend evaluating canvas components first and then using code components only if there is a need for complex and advanced customization.    
+
+You can refer to [canvas component gallery,](https://powerusers.microsoft.com/t5/Canvas-Apps-Components-Samples/bd-p/ComponentsGallery)[ code components OOB samples](../../developer/component-framework/use-sample-components.md) and [code components community resources](../../../developer/component-framework/community-resources.md) to quick start your custom component journey. 
 
 ## Enable responsive layout with Container control
 
@@ -90,6 +94,10 @@ Learn more about at [Building responsive layout](../canvas-apps/build-responsive
 
 By creating the custom page from the modern app designer, the important properties are defaulted.  
 
+1. Theme for custom page 
+   
+    Theme values for the controls used in custom page are automatically set to match the default blue theme of the unified interface. This default theme is used both in the studio and at application runtime. Explicit theme selector is removed from custom page authoring expereince. We will enhace the custom page theme integration in future releases to match the hosting model-application theming customization.
+
 1. Controls need to use different Font size based on their position in the page hierarchy
 
     > [!Note]
@@ -120,6 +128,21 @@ By creating the custom page from the modern app designer, the important properti
     Height=35
     FontWeight=Normal
     ```
+## Tab Navigation - Keyboard accessibility for custom pages
+
+Custom page follows the same tab navigation design which is used by the hosting model app. Visually aligned  semantic HTML stucture helps users navigate the custom pages seamlessly when using a keyboard or a screen readers. Note that unlike stand alone canvas apps, custom page controls and other UX elements do not need explicit tab numbers assignments. Modern controls do not have TabIndex property and utilize the semantic HTML stucture for naviation. 
+
+Various elements like controls, canvas and code components, containers etc can be tabbed based on their position in the custom page layout. Note that the tab navigation follows Z order navigation. Individual tab-stops inside larger grouping elements like components, containers are navigated first before the tab moves out to the next element in the DOM tree. 
+
+Here is an example navigation with the page containing controls, code and canvas compoenents and containeres. 
+
+  > ![Custom page tab navigation.](media/add-component-to-model-app/tab-navigation-with-components-pcf-containers-and-controls.png "Custom page tab navigation")
+
+
+
+  > [!NOTE]
+  > Overlapping controls and elements on the custom page will not have their DOM merged so tab stops can be out of sync from visual layout. Same is true for the dynamic element positioning using formulas.  
+
 
 
 ## Related topics

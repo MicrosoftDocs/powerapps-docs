@@ -1,6 +1,6 @@
 ---
 title: "Converge model-driven and canvas apps using the custom page"
-description: "Use a custom page to add a canvas app as a page to your model-driven app" 
+description: "Add a custom page to use canvas as a page in your model-driven app" 
 ms.date: 06/20/2021
 ms.reviewer: "matp"
 ms.service: powerapps
@@ -23,26 +23,29 @@ This new page can be more flexible than a model-driven app form, view, or dashbo
 
 Below shows the custom page inline within the model-driven app. The app has the full-page space without the header and navigation.
 
-Custom page as main page.
+[Custom page as main page.](/powerapps/maker/model-driven-apps/add-page-to-model-app).
 
   > [!div class="mx-imgBorder"]
   > ![Custom page as main page](media/model-app-page-overview/page-inline-model-app.png "Custom page as main page")
 
-Custom page as a center dialog.
+[Custom page as a center dialog.](/powerapps/maker/model-driven-apps/navigate-page-examples#open-as-a-centered-dialog)
 
   > [!div class="mx-imgBorder"]
   > ![Custom page as center dialog](media/model-app-page-overview/page-center-dialog-model-app.png "Custom page as center dialog")
 
-Custom page as a side dialog.
+[Custom page as a side dialog.](/powerapps/maker/model-driven-apps/navigate-page-examples#open-as-a-side-dialog)
 
   > [!div class="mx-imgBorder"]
   > ![Custom page as side dialog](media/model-app-page-overview/page-side-dialog-model-app.png "Custom page as side dialog")
+  > 
 
-Custom pages are added through a solution using either the modern app designer or the **Solutions** area in Power Apps. More information: [Add a custom page to your model-driven app](add-page-to-model-app.md) for details.
+Custom page must be created from a solution either from the modern app designer or the Solution area in Power Apps using New > Page. See [add a custom page to your model-driven app](add-page-to-model-app.md) for details.
 
   > [!IMPORTANT]
   > - This is a preview feature, and isn't available in all regions.
   > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
+
+Custom pages is a new feature with significant product changes and currently has a number of known limitations outlined in [Custom Page Known Issues](model-app-page-issues.md).
 
 ## Custom pages are different than embedded canvas apps
 
@@ -50,9 +53,8 @@ A custom page enables makers to create a new page experience using the canvas ap
 
 Embedded canvas apps also use the canvas capabilities with a hosting approach that isn't as integrated as a custom page. The simpler integration of an embedded canvas app means the current limitation on number of embedded canvas apps hasn't changed. The advanced integration of the custom page addresses those limits. The embedded canvas app can only be placed on a model-driven form acting like a low code component. More information: [Embed a canvas app on a model-driven form](embed-canvas-app-in-form.md).
 
-Think of a custom page in your model-driven app like a table form or a dashboard page. The page can consist of any set of controls that are supported on the page and can interact and navigate between other model-driven app page types and a canvas page. A custom page isn't a canvas app that has multiple screens or pages inside of it. It truly is a single page, not a series or set of canvas pages like an embedded canvas app.
+In most cases, we recommend that you use custom pages instead of embedded canvas apps for tighter integration and better performance. 
 
-In most cases, we recommend that you use custom pages instead of embedded canvas apps.
 
 ## Migrating standalone canvas app content to custom pages
 
@@ -71,7 +73,7 @@ To migrate an existing standalone canvas app, first start by identify a mapping 
 
 * What data can the custom page use?
 
-  A custom page can use Dataverse and some of the most common connectors for Power Apps. The list of verified connectors is listed in [Add connectors into custom pages](page-data-connector.md).
+  A custom page can use Dataverse and some of the most common connectors for Power Apps. The list of verified connectors is listed in [Add connectors into custom pages](page-data-connectors.md).
 
 * What interactions can the custom page have with the model-driven app?
 
@@ -93,21 +95,6 @@ To migrate an existing standalone canvas app, first start by identify a mapping 
 
   The custom page is aligned with the model-driven app page sharing, which relies on the model-driven app sharing without sharing individual pages for app users. Makers may need to share the custom page to allow editing.
 
-<!-- If these are already documented in the separate known issue topic we don't need to repeat them here. Otherwise, move them to the separate topic.
-## Known limitations
-
-Custom pages have a few known limitations.  Below are the most common and the full list is in [Custom Page Known Issues](model-app-page-issues.md).
-
-* Supports the most common canvas controls and custom pro-dev components. For more information on what is available, see [Design a custom page for your model-driven app](design-page-for-model-app.md)
-
-* Canvas component library or canvas component control support is coming soon
-
-* Native player support (for example, iOS, Android) is coming soon for online-only. Offline support will be coming in 2022
-
-* Custom pages require third-party cookie to be enabled which is required by the canvas runtime
-
-Custom pages will not work on premise since it requires the online service for canvas apps. Custom pages also will notwork with IE 11 because it depends on capabilities not available in that browser. -->
-
 ### See also
 
 [Add a custom page to your model-driven app](add-page-to-model-app.md)
@@ -118,7 +105,7 @@ Custom pages will not work on premise since it requires the online service for c
 
 [Using PowerFx in custom page](page-powerfx-in-model-app.md)
 
-[Add connectors into custom pages](page-data-connector.md)
+[Add connectors into custom pages](page-data-connectors.md)
 
 [Use Monitor to troubleshoot custom page](monitor-page-checker.md)
 
