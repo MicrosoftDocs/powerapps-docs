@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 06/22/2021
+ms.date: 07/21/2021
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
@@ -17,6 +17,7 @@ contributors:
   - tapanm-msft
   - lancedmicrosoft
   - alaug
+  - wimcoor
 ---
 # System requirements, limits, and configuration values for canvas apps
 This article contains device platform and web browser requirements, limits, and configuration values for canvas apps.
@@ -136,12 +137,23 @@ This list identifies all services to which Power Apps Studio talks and their usa
 > [!NOTE]
 > If you're using a VPN, it must be configured to exclude localhost from tunneling for Power Apps Mobile.
 
-## Embedding canvas app limits
+## Embedding limits for canvas app
 
-Power Apps does not support the nested embedding of canvas apps in native desktop, mobile or other non-browser clients.  For example, but not limited to:
-- embedding a canvas app in a SharePoint page that is added as tab into a Teams channel is not supported from within the Teams desktop or Teams mobile. 
-- embedding a canvas app in a Power BI report that is added into Teams or SharePoint is not supported from within a Teams or SharePoint desktop or mobile client.
-- embedding a canvas app in a model-driven form that is added into Teams is not supported from within the Teams desktop or mobile client.
+Power Apps doesn't support the nested embedding of canvas apps in native desktop, mobile or other non-browser clients.
+
+The following table shows some of the examples where embedding a canvas app isn't supported:
+
+| Canvas apps embedded to | Platform |
+| - | - |
+| A SharePoint page that is added as a tab in a Microsoft Teams channel | <ul> <li> Teams desktop </li> <li> Teams mobile </li> </ul> |
+| A Power BI report that is added to a Teams team, or a SharePoint site | <ul> <li> Teams desktop </li> <li> Teams mobile </li> <li> SharePoint site on desktop client </li> <li> SharePoint site on mobile client </li> </ul> |
+| A model-driven form that is added to Teams | <ul> <li> Teams desktop </li> <li> Teams mobile </li> </ul> |
+
+<!---
+- Embedding a canvas app in a SharePoint page that is added as a tab in a Microsoft Teams channel isn't supported from within the Teams desktop, or Teams mobile.
+- Embedding a canvas app in a Power BI report that is added to a Teams team, or a SharePoint site, isn't supported from within a Teams or SharePoint desktop or mobile client.
+- Embedding a canvas app in a model-driven form that is added into Teams is not supported from within the Teams desktop or mobile client.
+-->
 
 ## Size limits
 
