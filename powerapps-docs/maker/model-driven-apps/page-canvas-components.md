@@ -56,38 +56,38 @@ Once the modern controls are enabled, you can now [create desired components](/p
 
 ![Create a canvas component.](media/add-component-to-model-app/component-creation-for-canvas-lib.png "Create a canvas component")
 
-### Importing and using canvas component in a custom page
+### Import and use a canvas component in a custom page
 
-Custom pages can use the components from the canvas component library created or imported in the current environment. You can select **Get more components** at the bottom of the add control left navigation area. 
+Custom pages can use the components from the canvas component library created or imported in the current environment. You can select **Get more components** at the bottom of the add control left navigation area.
 
 ![Import a canvas component.](media/add-component-to-model-app/import-component-custom-page.png "import a canvas component")
 
-Newly added canvas component is now available under "Library components" section and can be added to the custom page. 
+The canvas component is available under the **Library components** section and can be added to the custom page.
 
 ![Add canvas component tp custom page.](media/add-component-to-model-app/add-component-to-custom-page.png "Add canvas component tp custom page")
 
 ### Component updates to the custom page
-When the component is added to the custom page via library, it maintains the reference to the library. When the library owner publishes the newer library version with updated components, custom page inline with canvas app will show update available message. This message is displayed when the custom page is opened for editing.
+
+When the component is added to the custom page via the component library, it maintains the reference to the library. When the library owner publishes the newer library version with updated components, the custom page inline with the canvas app displays an update available message. This message is displayed when the custom page is opened for editing.
 
 ![Update message when library is updated.](media/add-component-to-model-app/component-library-update-message.png "Update message when library is updated")
 
-You can review the updates and click ok to get component refreshed with the latest changes from canvas library. 
+Select **Review** to review the updates, and then select **ok** to get the component refreshed with the latest changes from the canvas library.
 
-  > [!NOTE]
-  >  Individual custom pages present in model app should be opened individualy for editing inside studio to get the latest updates from the shared component library.
+> [!NOTE]
+> Individual custom pages present in a model-driven app should be opened individually for editing inside canvas app studio to get the latest updates from the shared component library.
 
 ![Updated component in the custom page ](media/add-component-to-model-app/page-with-updated-library-component.png "Updated component in the canvas page")
 
-You can now publish the custom page and model app to get the latest changes reflected.
-
+You can now publish the custom page and model-driven app to get the latest changes reflected.
 
 ### Additional canvas component resources
-You can additionally evaluate and use canvas component samples from Microsoft and other Power Apps community developers which are hosted on [canvas components gallery](https://powerusers.microsoft.com/t5/Canvas-Apps-Components-Samples/bd-p/ComponentsGallery)
+
+You can evaluate and use canvas component samples from Microsoft and other Power Apps community developers, which are hosted on the [Canvas app components gallery](https://powerusers.microsoft.com/t5/Canvas-Apps-Components-Samples/bd-p/ComponentsGallery).
 
 ![Canvas component gallery](media/add-component-to-model-app/canvas-components-gallery.png "Canvas component gallery")
 
-
-## Related topics
+### See also
 
 [Model-driven app custom page overview](model-app-page-overview.md)
 

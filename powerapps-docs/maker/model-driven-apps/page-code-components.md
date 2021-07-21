@@ -7,7 +7,6 @@ ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
 author: "hemantg"
-ms.assetid: b4098c96-bce1-4f57-804f-8694e6254e81
 ms.author: "matp"
 manager: "kvivek"
 search.audienceType: 
