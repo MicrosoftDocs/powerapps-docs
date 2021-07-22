@@ -192,6 +192,8 @@ The following diagram shows the relationships between the Catalog and CatalogAss
 
 :::image type="content" source="media/catalog-catalogassignment-public.png" alt-text="Catalog and CatalogAssignment tables diagram":::
 
+The self-referential relationship using `ParentCatalogId` is what allows for creating the two-level hierarchy between one solution catalog and multiple catalogs that represent categories using catalog records.
+
 ## Catalog table columns
 
 All the available columns and relationships are available in [Catalog table/entity reference](reference/entities/catalog.md).
