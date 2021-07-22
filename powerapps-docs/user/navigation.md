@@ -68,7 +68,7 @@ Legend
 3. **Recent**: Expand this entry to view a list of rows you were recently using. Select a row here to open it. Select the push-pin icon next to a row listed here to add it to your pinned rows.
 4. **Pinned**: Expand this entry to view and open your favorite pinned rows. Use the **Recent** list to add rows here. Select the remove-pin icon next to a row listed here to remove it from this list.
 5.  **Page navigation**: This area lists each table and dashboard page available for the current work area. Select any entry here to open the named dashboard or list view for that table.
-6.  **Collapsible groups**: If you're on [early access](/power-platform/admin/opt-in-early-access-updates), your app makef can enable collapsible groups. For information on how customize the navigation bar, see [Overview of the model-driven app designer](../maker/model-driven-apps/app-designer-overview).
+6.  **Collapsible groups**: If you're on [early access](/power-platform/admin/opt-in-early-access-updates), your app maker can enable collapsible groups. For information on how customize the navigation bar, see [Overview of the model-driven app designer](../maker/model-driven-apps/app-designer-overview).
 
 
 ### Eary access: Hide or show the Home, Pinned, Recent, and collapsible groups
