@@ -171,7 +171,7 @@ Learn more about plug-in development
 
 ### See Also
 
-*Power Platform Tools specific articles* 
+*Power Platform Tools specific articles*  
 [Install Power Platform Tools](devtools-install.md)  
 [Create a Power Platform Tools project](devtools-create-project.md)
 
