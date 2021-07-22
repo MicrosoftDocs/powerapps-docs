@@ -1,6 +1,6 @@
 ---
-title: "Assign or share rows| MicrosoftDocs"
-description: How to assign or share rows
+title: "Assign a row to someone else| MicrosoftDocs"
+description: How to reassign a row to someone else.
 author: mduelae
 manager: kvivek
 ms.service: powerapps
@@ -18,7 +18,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Assign rows
+# Assign a row to someone else
 
 When you create a row, you are the owner of the row. If you would like another person in your organization to take ownership of the row, then you can assign the row to that person. You can assign a row to a user or team. You can also assign a row to yourself that another user owns but you need to have system administrator privilege to do this.
 
