@@ -283,7 +283,7 @@ Select the site map ![Site map icon.](media/pa_mobile_sitemap_icon.png "Site map
 
 
 >[!Note]
-> If you're on [early access](/power-platform/admin/opt-in-early-access-updates) your site map may look different. With 2021 release wave 2, an app maker can customize the navigation bar and show or hide the **Home**, **Recent**, **Pinned** buttons in the site map. An app maker can also make groups collapsible. For more information, see [Hide or show the Home, Pinned, Recent, and collapsible groups](../user/navigation.md#eary-access-hide-or-show-the-home-pinned-recent-and-collapsible-groups).
+> If you're on [early access](/power-platform/admin/opt-in-early-access-updates) your site map may look different. With 2021 release wave 2, an app maker can customize the navigation bar and show or hide the **Home**, **Recent**, **Pinned** buttons in the site map. An app maker can also make groups collapsible. For more information, see [Hide or show the Home, Pinned, Recent, and collapsible groups](../user/navigation.md#early-access-hide-or-show-the-home-pinned-recent-and-collapsible-groups).
 
 ## See also
 
