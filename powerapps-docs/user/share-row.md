@@ -25,21 +25,31 @@ search.app:
  
  If you want to keep ownership of a row but let someone else work on the row with you then use the share option.
  
- 
-1. From a list of rows, select the row that you want to assign to someone else. You can select multiple rows.
+Any user that you want to share a row with needs to have basic level access that is granted by a system administrator. If you cannot select an option when you share a row the you need to check with your system administrator to see if that user or team can be granted basic access based on your organizations roles and access defined by your administrator.
 
-   > [!div class="mx-imgBorder"]
-   > ![Select row that you want to reassign.](media/reassign-1.png "Select row that you want o reassign")
+> ![Note]
+> This feature is not supported on Power Apps mobile or when you're using the app in offline mode with no internet connection. 
 
-2. On the command bar, select **Share**. 
 
-   > [!div class="mx-imgBorder"]
-   > ![Select share to share row.](media/share-1.png "Select share to share to share a row")
-   
- 3. On the share dialog box, select **Add User/Team**.  
+## Share rows
+
+1. You can share a row from a view page or when you open a row.
+
+    - **Share from the view page**: Select one or more rows on a view page and then select **Share** on the command bar.
+
+      > [!div class="mx-imgBorder"]
+      > ![Share rows from the view page](media/share-row-view-page.png "Share rows from the view page")
+
+
+    - **Open a row and share**: Open a row and then select **Share** on the command bar. If you don't see the share option, then select the **More commands** ellipsis and then select **Share**.
+
+      > [!div class="mx-imgBorder"]
+      > ![Open a row and then select share](media/share-row-1.png "Open a row and then select share.")
+
+2.  On the share dialog box, select the lookup under **Add user/team**.  
 
     > [!div class="mx-imgBorder"]
-    > ![Select add user or team.](media/share-2.png "Select add user or team")
+    > ![Select add user or team.](media/share-row-share-dialog.png "Select add user or team")
    
  4. On the **Look up Rows** dialog box, select the **Look for** menu and choose **User** or **Team**.
  
