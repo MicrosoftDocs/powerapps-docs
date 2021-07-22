@@ -167,7 +167,7 @@ After deployment completes, select the refresh icon in **Power Platform Explorer
 Learn more about plug-in development
 
 > [!div class="nextstepaction"]
-> [Next steps button](plug-ins.md#next-steps)
+> [Next steps button](../plug-ins.md#next-steps)
 
 ### See Also
 
