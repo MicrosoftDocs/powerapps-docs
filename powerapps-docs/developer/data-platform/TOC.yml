@@ -7,7 +7,7 @@
   items:
   - name: Supported customizations
     href: supported-customizations.md
-  - name: Install tools
+  - name: Install Power Platform Tools
     href: ./tools/devtools-install.md
 - name: Understand terminology
   href: understand-terminology.md
