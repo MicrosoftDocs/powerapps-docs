@@ -136,7 +136,7 @@ This list identifies all services to which Power Apps Studio talks and their usa
 > [!NOTE]
 > If you're using a VPN, it must be configured to exclude localhost from tunneling for Power Apps Mobile.
 
-## Embedding limits for canvas app
+## Embedding limits for canvas apps
 
 Power Apps doesn't support the nested embedding of canvas apps in native desktop, mobile or other non-browser clients.
 
