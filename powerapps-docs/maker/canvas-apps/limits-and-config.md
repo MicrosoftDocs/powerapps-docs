@@ -142,7 +142,7 @@ Power Apps doesn't support the nested embedding of canvas apps in native desktop
 
 The following table shows some of the examples where embedding a canvas app isn't supported:
 
-| Canvas apps embedded to | Client |
+| Canvas apps embedded to | Unsupported client |
 | - | - |
 | A SharePoint page that is added as a tab in a Microsoft Teams channel | <ul> <li> Teams desktop </li> <li> Teams mobile </li> </ul> |
 | A Power BI report that is added to a Teams team, or a SharePoint site | <ul> <li> Teams desktop </li> <li> Teams mobile </li> <li> SharePoint mobile </li> </ul> |
