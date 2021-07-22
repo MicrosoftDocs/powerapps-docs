@@ -7,6 +7,7 @@ ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 3/12/2021
+ms.subservice: end-user
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
@@ -41,7 +42,7 @@ A few things to note:
 2. On the command bar select the **Export to Excel**, and then choose **Static worksheet** or **Static worksheet (Page only)**.  
 
    > [!div class="mx-imgBorder"] 
-   > ![Export to Excel static worksheet](media/export-excel-static.png "Export to Excel static worksheet")
+   > ![Export to Excel static worksheet.](media/export-excel-static.png "Export to Excel static worksheet")
   
 3. when the download is complete, navigate to the location of the downloaded file.
   
@@ -61,7 +62,7 @@ A few things to note:
 6. If you see the security warning **External Data Connections have been disabled**, select **Enable Content**.  
 
    > [!div class="mx-imgBorder"] 
-   > ![Enable content](media/enable-content.png "Enable content") 
+   > ![Enable content.](media/enable-content.png "Enable content") 
 
 By default, an exported worksheet includes the columns that are displayed in the list, using the same column order, sorting, and column widths.  
   

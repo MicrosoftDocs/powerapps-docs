@@ -8,11 +8,15 @@ ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 12/30/2018
+ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - emcoope-msft
 ---
 
 # Meeting-screen template for canvas apps
@@ -41,7 +45,7 @@ To add a meeting screen from the template:
 
   When filled out, both tabs of the meeting screen look similar to this:
 
-  ![Meeting screen, both tabs](media/meeting-screen/meeting-screen-full-both.png)
+  ![Meeting screen, both tabs.](media/meeting-screen/meeting-screen-full-both.png)
 
 A few helpful notes:
 

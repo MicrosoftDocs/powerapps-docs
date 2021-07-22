@@ -7,6 +7,7 @@ ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 10/30/2020
+ms.subservice: end-user
 ms.author: mkaur
 ms.reviewer: ""
 ms.assetid: 
@@ -39,7 +40,7 @@ A model-driven app is built out of applications (apps), areas, and tables.
 Select the user menu to view your account information or sign out. Go to your account page by selecting the **View account** hyperlink.
 
 > [!div class="mx-imgBorder"] 
-> ![User menu](media/usermenu_2.png "User menu")   
+> ![User menu.](media/usermenu_2.png "User menu")   
 
 
 ### Move between apps
@@ -50,7 +51,7 @@ Use the app-selector menu to switch between apps.
 2. On the **Apps** page select an app. You will only see apps for your organization.
 
    > [!div class="mx-imgBorder"] 
-   > ![The app-selector menu](media/app-selector2.png "The app-selector menu")   
+   > ![The app-selector menu.](media/app-selector2.png "The app-selector menu")   
 
 
 ### Move between pages and rows
@@ -58,7 +59,7 @@ Use the app-selector menu to switch between apps.
 It's easy to get around and get back to your favorite or most-used rows. The following illustration shows the primary navigation elements.
 
 
-![Navigation controls showing expanded view](media/nav-expanded2.png "Navigation controls showing expanded view")  
+![Navigation controls showing expanded view.](media/nav-expanded2.png "Navigation controls showing expanded view")  
 
 Legend
   
@@ -74,7 +75,7 @@ In the left-hand navigation pane, the area switcher appears at the bottom left o
 
 Open this menu to move to another work area. The current work area is named here.
 
-![Area switcher](media/work_area.png "Area switcher")
+![Area switcher.](media/work_area.png "Area switcher")
 
 
 ## Go back 
@@ -83,13 +84,13 @@ Use the back button for form, view, and dashboard pages on the command bar to go
 
 To go back to the previous page, select the **Go back** button.
 
-![Go back to the previous page](media/go_back_button.png "Go back to the previous page") 
+![Go back to the previous page.](media/go_back_button.png "Go back to the previous page") 
 
 ## Working with list views
 
 Usually, when you first open a table, you'll see the list view, which shows a list of rows belonging to that table, formatted as a table. For example, if you open the **Products** table, you'll see a list of accounts.
 
-![A typical list view](media/list-view1.png "A typical list view")
+![A typical list view.](media/list-view1.png "A typical list view")
 
 Legend:
 
@@ -106,7 +107,7 @@ Legend:
 
 Row views show all the details about a single row and sometimes also provide special features for working with it. Usually you'll open a row view by selecting a row that appears in a list view, but you can also open a row view by following a link from a related row.
 
-![A typical row view](media/form-view1.png "A typical row view")
+![A typical row view.](media/form-view1.png "A typical row view")
 
 Legend:
 
@@ -125,10 +126,10 @@ Navigate through multiple rows by using preset views and queries. The row-focuse
 The number of rows that you see in the row set navigation pane is based on the number of rows that your system administrator has defined for the subgrid.
 
 1. To use row set navigation, open a page with a list of rows.
-2. Open a row and then select **Open Row Set** ![Row set navigation](media/openrecordset_2.png "Row set button") and then select a row from the list. 
+2. Open a row and then select **Open Row Set** ![Row set navigation.](media/openrecordset_2.png "Row set button") and then select a row from the list. 
 
 
-![Row set navigation](media/recordsetnav_new.gif "This shows how to use the row set navigation feature")   
+![Row set navigation.](media/recordsetnav_new.gif "This shows how to use the row set navigation feature")   
 
 
 ## Reference panel
@@ -136,7 +137,7 @@ The number of rows that you see in the row set navigation pane is based on the n
 The reference panel is a great way to get work done without moving away from the screen you're on. You can look up other related items&mdash;such as reviews or reservations for a product&mdash;within the context of the row you're viewing, without having to navigate to other screens.
 
 
-![Reference panel](media/reference-panel1.png "Reference panel")
+![Reference panel.](media/reference-panel1.png "Reference panel")
 
  Watch this video to learn more about the reference panel:
 
@@ -149,21 +150,21 @@ The app message bar shows three types of notifications: informational, warning, 
 
 When you select the error notification, it will take you to the column on the form where the error occurred.
 
-![Example of notifications](media/notifications_1.png "Examples of notifications")   
+![Example of notifications.](media/notifications_1.png "Examples of notifications")   
 
 
 Legend:
 
-1. **Information notifications** ![Info notifications](media/info_icon.png "Info notification icon"): The notification is informational.
-2. **Warning notifications** ![Warning notifications](media/warning_icon.png "Warning notification icon"): The notification is a warning. 
-3. **Error notifications** ![Error notifications](media/error_icon.png "Error notification icon"): The notification is an error. 
+1. **Information notifications** ![Info notifications.](media/info_icon.png "Info notification icon"): The notification is informational.
+2. **Warning notifications** ![Warning notifications.](media/warning_icon.png "Warning notification icon"): The notification is a warning. 
+3. **Error notifications** ![Error notifications.](media/error_icon.png "Error notification icon"): The notification is an error. 
 
 
 ### Multiple notification
 
 If there is only one notification, you'll see a single line. If there are multiple notifications, you'll see chevron button. Select the chevron to view each message.
 
-![Example of multiple notifications](media/multiple_notification_1.png "Example of multiple notifications")
+![Example of multiple notifications.](media/multiple_notification_1.png "Example of multiple notifications")
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

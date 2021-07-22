@@ -6,12 +6,18 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 06/22/2021
+ms.date: 07/21/2021
+ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - lancedmicrosoft
+  - alaug
+  - wimcoor
 ---
 # System requirements, limits, and configuration values for canvas apps
 This article contains device platform and web browser requirements, limits, and configuration values for canvas apps.
@@ -127,9 +133,20 @@ This list identifies all services to which Power Apps Studio talks and their usa
 | vortex.data.microsoft.com |https |Telemetry |
 | localhost | https | Power Apps Mobile|
 
-
 > [!NOTE]
 > If you're using a VPN, it must be configured to exclude localhost from tunneling for Power Apps Mobile.
+
+## Embedding limits for canvas app
+
+Power Apps doesn't support the nested embedding of canvas apps in native desktop, mobile or other non-browser clients.
+
+The following table shows some of the examples where embedding a canvas app isn't supported:
+
+| Canvas apps embedded to | Client |
+| - | - |
+| A SharePoint page that is added as a tab in a Microsoft Teams channel | <ul> <li> Teams desktop </li> <li> Teams mobile </li> </ul> |
+| A Power BI report that is added to a Teams team, or a SharePoint site | <ul> <li> Teams desktop </li> <li> Teams mobile </li> <li> SharePoint mobile </li> </ul> |
+| A model-driven form that is added to Teams | <ul> <li> Teams desktop </li> <li> Teams mobile </li> </ul> |
 
 ## Size limits
 

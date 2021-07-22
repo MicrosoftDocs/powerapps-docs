@@ -9,6 +9,7 @@ ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "troubleshooting"
 author: "RichdiMSFT"
+ms.subservice: mda-maker
 ms.author: "matp"
 manager: "kvivek"
 tags: 
@@ -97,7 +98,7 @@ By default, canvas apps have the scale to fit option enabled.
 1. Open the canvas app that you’re embedding on a model-driven app form for editing.
 1. In Power Apps studio, select **File** > **Settings** > **Screen size + orientation**. 
 1. Under **Advanced Settings**, set **Scale to fit** to **On**.
-   :::image type="content" source="media/scale-to-fit-canvas-app.png" alt-text="Scale to fit canvas app setting":::
+   :::image type="content" source="media/scale-to-fit-canvas-app.png" alt-text="Scale to fit canvas app setting.":::
 
 #### The App Name property value is missing or is incorrectly defined
 
@@ -105,7 +106,7 @@ To resolve this issue, choose the correct option:
 - Managed solutions: If the solution was imported into an environment as a managed solution, follow these steps: 
    1. Sign into Power Apps and go to the development environment where you originally created your embedded canvas app. This is also the environment where the solution was exported.
    1. Open the unmanaged solution that includes the canvas app, and then find the canvas app in the list of solution components. Copy the canvas app **Name** exactly as it appears in the components list. For example, *contoso_flooringestimatesapp_624d7*.
-   :::image type="content" source="media/copy-canvas-app-name.png" alt-text="Copy the canvas app unique name":::
+   :::image type="content" source="media/copy-canvas-app-name.png" alt-text="Copy the canvas app unique name.":::
 
    1. In the same solution, edit the model-driven app that has the embedded canvas app control, and then set the canvas **App Name** to the embedded canvas app control using the value from the previous step. More information: [Add an embedded canvas app on a model-driven form](embedded-canvas-app-add-classic-designer.md)
    1. Export the solution from the development environment and then import the solution into your target environment.
