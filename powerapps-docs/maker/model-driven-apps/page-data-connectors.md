@@ -2,12 +2,12 @@
 title: "Add connectors to a custom page for your model-driven app (preview)" 
 description: ""
 ms.custom: ""
-ms.date: 06/06/2021
+ms.date: 07/22/2021
 ms.reviewer: ""
 ms.service: powerapps
+ms.subservice: mda-maker
 ms.topic: "article"
 author: "aorth"
-ms.assetid: b4098c96-bce1-4f57-804f-8694e6254e81
 ms.author: "matp"
 manager: "kvivek"
 search.audienceType: 
@@ -20,35 +20,30 @@ search.app:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-This topic outlines the use of Power Apps connectors within a custom page.  The most common connectors are being verified and status is available in this page.  This page also includes any known issues for connectors in custom pages. 
+This article outlines the use of Power Apps connectors within a custom page. The most common connectors are listed here. This article also includes the known issues for connectors in custom pages.
 
 Publishing a model-driven app with custom pages will consolidate all of the connections within the app. This connector consolidation allows for a single consent prompt for all of the connectors at the start of the app.
 
 ## Verified connectors for custom pages
 
-| Connector | Status | Notes |
+| Connector | Status | Comments |
 |--|--|--|
 | [Office 365 Users](../canvas-apps/connections/connection-office365-users.md) | Verified |
 | [Outlook](../canvas-apps/connections/connection-office365-outlook.md) | Verified |
 | [SharePoint Online](../canvas-apps/connections/connection-sharepoint-online.md) | Verified |
-| [SQL Server](../canvas-apps/connections/connection-azure-sqldatabase.md) | Verified | Includes AAD Auth, Sql Server Auth, Windows Auth, and Windows Auth non-shared | 
+| [SQL Server](../canvas-apps/connections/connection-azure-sqldatabase.md) | Verified | Includes AAD Auth, SQL Server Auth, Windows Auth, and Windows Auth non-shared | 
 | Power Automate | Verified |
 | [Teams](/connectors/teams/) | Verified |
 | [Custom connector](../canvas-apps/register-custom-api.md) | Verified |
 | [Excel Online for Business](../canvas-apps/connections/connection-excel.md) | Verified |  |
 | [Excel via file share](../canvas-apps/connections/connection-excel.md) | Verified |  |
 
-Note: connectors on the supported list are expected to work with on-prem gateway
-
-## Upcoming changes to connectors for custom pages
-
-* Environment variable support for connections
-* Connection References support for shared connections
+The connectors listed here are also supported with the on-premises data gateway for canvas apps.
 
 ## Known issues
 
-* No support to enable bypassing Microsoft connectors
-* Cross environment Dataverse connections can be used but the consent prompt is not shown
+* There's no support to enable bypassing Microsoft connectors.
+* Cross environment Microsoft Dataverse connections can be used but the consent prompt isn't shown.
 
 ## Related topics
 

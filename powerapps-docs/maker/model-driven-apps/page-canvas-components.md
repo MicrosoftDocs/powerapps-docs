@@ -5,6 +5,7 @@ ms.custom: ""
 ms.date: 07/14/2021
 ms.reviewer: ""
 ms.service: powerapps
+ms.subservice: mda-maker
 ms.topic: "article"
 author: "hemantg"
 ms.author: "matp"
@@ -16,7 +17,7 @@ search.app:
   - D365CE
 ---
 
-# Add canvas components to a custom page for your model-driven app 
+# Add canvas components to a custom page for your model-driven app (preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 

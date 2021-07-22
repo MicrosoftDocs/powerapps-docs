@@ -1,13 +1,13 @@
 ---
-title: "Known issues with custom pages in a model-driven app (preview)"
+title: "Known issues with custom pages in a model-driven app"
 description: "" 
 ms.custom: ""
-ms.date: 04/03/2020
+ms.date: 07/22/2021
 ms.reviewer: ""
 ms.service: powerapps
+ms.subservice: mda-maker
 ms.topic: "article"
 author: "adrianorth"
-ms.assetid: b4098c96-bce1-4f57-804f-8694e6254e81
 ms.author: "aorth"
 manager: "kvivek"
 search.audienceType: 
@@ -20,52 +20,51 @@ search.app:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-The custom page is a new page type within model-driven app, which brings in the power of canvas.  Below are the known issues to be aware of.
+The custom page is a new page type within model-driven apps. Custom pages bring the power of canvas apps into model-driven apps. Below are the known issues to be aware of.
 
-## Maker Related Issues
+## Maker-related issues
 
-* When a custom page is modified (for example saved and published), the model-driven app is not aware of the change and will continue to use the last version of the custom page when the model-driven app was published.  A model-driven app publish through app designer or solution explorer will update all custom pages in the model-driven app. This also applies to **Publish all**.
+* When a custom page is modified, such as saved and published, the model-driven app is not aware of the change and will continue to use the last version of the custom page when the model-driven app was published. A model-driven app publish through app designer or solution explorer will update all custom pages in the model-driven app. This also applies to **Publish all**.
 
-* Deleting a model-driven app with a custom page from the make.powerapps.com Apps list fails with an error.  The work-around is to delete from the solution explorer list.
+* Deleting a model-driven app with a custom page from the make.powerapps.com **Apps** area fails with an error. The work-around is to delete from the solutions list in the **Solutions** area.
 
-* Layout or control support for Right to Left (RTL) is coming before GA
+* Layout or control support for Right to Left (RTL) is currently unavailable.
 
-* Ability to get the current users settings including Locale, Language is coming before GA
+* The ability to get the current users settings including locale and language is currently unavailable.
 
-* Custom pages use a canvas hosting session that can time out after 8 hours where the Unified Interface session has a longer timeout.  When this timeout happens an error message bar will appear to prompt the user to refresh the browser
+* Custom pages use a canvas app hosting session that can time out after 8 hours whereas the Unified Interface session has a longer timeout. When this timeout happens an error message bar appears that prompts the user to refresh the browser.
 
   > [!div class="mx-imgBorder"]
   > ![Custom page session timeout app message bar error](media/model-app-page-overview/page-session-timeout-app-message-error.png "Custom page session timeout app message bar error")
 
-* Deleting a custom page that is referenced by a model-driven app will be blocked until the reference is removed from the model-driven app Pages and the sitemap. See more on [Managing dependencies](/power-platform/alm/removing-dependencies)
+* Deleting a custom page that is referenced by a model-driven app will be blocked until the reference is removed from the model-driven app using the Pages tab and the site map in app designer. More information: [Managing dependencies](/power-platform/alm/removing-dependencies)
 
-* When a custom page with code component is opened for editing, a security dialog is shown.  On this dialog, clicking on **Go back** button does not navigate back to parent context.  User can close the browser tab to leave the canvas designer.  
+* When a custom page with code component is opened for editing, a security dialog is shown. On this dialog, selecting **Go back** doesn't navigate back to the parent context. The user can close the browser tab to leave the canvas app designer.
 
-* Supports the most common canvas controls and custom pro-dev components. For more information on what is available, see [Design a custom page for your model-driven app](design-page-for-model-app.md)
+* Not all canvas app controls are available with custom pages. However, custom pages support the most common canvas app controls and custom pro-dev components. For more information about what is available, see [Design a custom page for your model-driven app](design-page-for-model-app.md)
 
-* Makers need to share custom pages to allow another maker to make changes.  This is a different behavior than the typical model components.  If a custom page can not be shared from solution explorer, open the environment in Power Platform admin center and then open Resources > Power Apps > Page > Share. Similarly in order to reuse the canvas components inside the custom page, corresponding canvas component library also need to be shared with the custom page makers. 
+* Makers need to share custom pages to allow another maker to make changes. This is a different behavior than the typical model-driven app components. If a custom page can't be shared from the **Solutions** area, open the environment in Power Platform admin center, and then open **Resources** > **Power Apps** > **Page** > **Share**. Similarly in order to reuse the canvas app components inside the custom page, the corresponding canvas app component library also needs to be shared with the custom page makers.
 
-* Maker experience for custom page does not has support for certain Power Apps component framework APIs like Navigation and Web APIs which is inline with the stand alone canvas apps. However these APIs are avaialable in the published app where the custom page is added to model apps, please see [add code components to a custom page for your model-driven app.](/powerapps/maker/model-driven-apps/page-code-components) 
+* The maker experience for the custom page doesn't have support for certain Power Apps component framework APIs like `Navigation` and Web APIs which is inline with the stand alone canvas apps. However, these APIs are available in the published app where the custom page is added to model-driven apps. More information: [add code components to a custom page for your model-driven app.](/powerapps/maker/model-driven-apps/page-code-components) 
 
+## User-related issues
 
-## End User Related Issues
+* When a user with no Power Apps user privileges opens a custom page in the model-driven app, they will see an error mentioning no active entitlements to use PowerApps.  More information: [Licensing overview for Microsoft Power Platform](/power-platform/admin/pricing-billing-skus) and the associated licensing guide.
 
-* When a user with no Power Apps user rights opens a custom page in the model-driven app, they will see an error mentioning no active entitlements to use PowerApps.  See more on [Licensing overview for Microsoft Power Platform](/power-platform/admin/pricing-billing-skus) and the associated licensing guide. 
+* Custom pages require third-party cookies to be enabled, which is required by the canvas app runtime.
 
-* Custom pages require third-party cookie to be enabled which is required by the canvas runtime.
-
-* When a user is prompted for consent with connectors and clicks "Don't allow", the custom page will render but without data.  The user does not get notified that data retrieval is skipped.
+* When a user is prompted for consent with connectors and selects **Don't allow**, the custom page will render but without data.  The user does not get notified that data retrieval is skipped.
 
 * After a model-driven app or custom page is changed and published, loading a custom page can take longer than normal and no page loading spinner is shown.
 
-* When navigating back to a custom page from another page, the page state is not restored so the page is like a new navigation.  We are looking at enabling page state to be saved before navigating away and restored on reload.
+* When navigating back to a custom page from another page, the page state is not restored so the page appears like a new navigation.
 
-* Native player support is available for iOS and Android in online-only mode. Offline support will be coming in 2022.  The preview Windows player current reports an error when the custom page is opened.
+* Native player support is available for iOS and Android in online-only mode. Offline support will come later. The preview Windows player currently reports an error when the custom page is opened.
 
-* When a user using model-driven apps in Teams opens a custom page, an error message will indicate not supported yet.
+* When a user running a model-driven app in Teams opens a custom page, an error message will indicate this action isn't supported yet.
 
-* When a user using Internet Explorer opens a custom page, an error message will appear indicating Internet Explorer is not supported.
+* When a user running Internet Explorer opens a custom page, an error message will appear indicating Internet Explorer isn't supported.
 
-## Related topics
+## See also
 
 [Model-driven app custom page overview](model-app-page-overview.md)
