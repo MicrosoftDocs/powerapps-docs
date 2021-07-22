@@ -43,9 +43,9 @@ The connectors listed here are also supported with the on-premises data gateway 
 ## Known issues
 
 * There's no support to enable bypassing Microsoft connectors.
-* Cross environment Microsoft Dataverse connections can be used but the consent prompt isn't shown.
+* Cross environment Microsoft Dataverse connections can be used but the consent prompt isn't presented to the user.
 
-## Related topics
+### See also
 
 [Model-driven app custom page overview](model-app-page-overview.md)
 

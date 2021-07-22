@@ -16,26 +16,30 @@ search.app:
   - D365CE
 ---
 
-# Add code components to a custom page for your model-driven app
+# Add code components to a custom page for your model-driven app (preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-This article outlines the use of code components, which are built by professional developers using Power Apps component framework within a custom page. For low-code custom UX extensibility please see [add canvas components to a custom page for your model-driven app.](/powerapps/maker/model-driven-apps/page-canvas-components) 
+This article outlines the use of code components, which are built by professional developers using Power Apps component framework within a custom page. For low-code custom UX extensibility, see [add canvas components to a custom page for your model-driven app.](/powerapps/maker/model-driven-apps/page-canvas-components) 
 
   > [!IMPORTANT]
   > - This is a preview feature, and may not be available in all regions.
   > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
 
   > [!NOTE]
-  > Custom pages support all component framework APIs that are currently supported with canvas apps. Additionally certain model-driven app only APIs like Web API and navigation have published app support for the custom pages. These APIs can be used in the code component for use with custom pages and function on the final published app. For individual API support status on each platform, see: [Power Apps component framework API reference](/powerapps/developer/component-framework/reference/)
+  > Custom pages support all component framework APIs that are currently supported with canvas apps. Additionally certain model-driven app only APIs like Web API and navigation have published app support for custom pages. These APIs can be used in the code component for use with custom pages and function on the final published app. For individual API support status on each platform, see: [Power Apps component framework API reference](/powerapps/developer/component-framework/reference/)
 
-Code components provides professional developers the ability to create custom code components for use within an app. This pro-code extensibility mechanism provides a first-class application lifecyle management (ALM) supported way to seamlessly extend the control-set available to all makers across the organization. These components can not only then be reused across custom pages, canvas and model-driven apps but also can be centrally updated, packaged and moved using standard Microsoft Dataverse solutions. More information: [Power Apps component framework overview](/powerapps/developer/component-framework/overview) 
+Code components provides professional developers the ability to create custom code components for use within an app. This pro-code extensibility mechanism provides a first-class application lifecyle management (ALM) supported way to seamlessly extend the control-set available to all makers across the organization. These components can not only then be reused across custom pages, canvas and model-driven apps but also can be centrally updated, packaged, and moved using standard Microsoft Dataverse solutions. More information: [Power Apps component framework overview](/powerapps/developer/component-framework/overview) 
 
 ## Enabling support for Power Apps component framework for custom pages
 
-In order to use code components inside a custom page, the Power Apps component framework feature, which is off by default for canvas apps, must be enabled. For detailed instructions, see [Code components for canvas apps.](/powerapps/developer/component-framework/component-framework-for-canvas-apps#enable-the-power-apps-component-framework-feature) and ![Enable Power Apps component framework.](../../developer/component-framework/media/enable-pcf-feature.png "Enable Power Apps component framework")
+In order to use code components inside a custom page, the Power Apps component framework feature, which is off by default for canvas apps, must be enabled. More information: [Enable the Power Apps component framework feature](/powerapps/developer/component-framework/component-framework-for-canvas-apps#enable-the-power-apps-component-framework-feature) 
+
+![Enable Power Apps component framework.](../../developer/component-framework/media/enable-pcf-feature.png "Enable Power Apps component framework")
 
 ## Create code components for use in a custom page
+
+This section describes how to create, import, and test code components.
 
 ### Creating and importing code components in Dataverse
 
