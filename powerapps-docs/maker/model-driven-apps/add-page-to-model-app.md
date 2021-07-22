@@ -62,13 +62,13 @@ The following steps walk you through opening the new modern app designer, which 
 Custom pages can be created from two places. The first is while authoring a model-driven app in the modern app designer. The other is from the **Solutions** area in Power Apps. Custom pages can be edited from the **Solutions** area but won't appear in the **Home** or **Apps** areas of make.powerapps.com.
 
   > [!NOTE]
-  > Custom pages must be created from a solution either from the modern app designer and or the **Solution** area in Power Apps using **New** > **Page**. The custom page is a different canvas app type than the normal standalone canvas app.
+  > Custom pages must be created from a solution either from the modern app designer and or the **Solutions** area in Power Apps using **New** > **Page**. The custom page is a different canvas app type than the normal standalone canvas app.
 
 ### Create new custom page from modern app designer
 
 1. Open modern app designer.
 
-1. Select **New page** on the command bar or within the **Pages** tab.
+1. Select **New page** on the command bar or on the **Pages** pane.
 
     > [!div class="mx-imgBorder"]
     > ![App designer create new page](media/add-page-to-model-app/app-designer-create-new-page.png "App designer create new page")
@@ -82,6 +82,8 @@ Custom pages can be created from two places. The first is while authoring a mode
 
     > [!div class="mx-imgBorder"]
     > ![Canvas designer new page](media/add-page-to-model-app/canvas-designer-new-page.png "Canvas designer new page")
+
+1. When you're finished creating your canvas app custom page, **Save**, **Publish**, and then close the canvas app designer browser tab to return to the model-driven app designer.
 
 ### Create new custom page from the solutions area
 
@@ -103,7 +105,7 @@ Custom pages can be created from two places. The first is while authoring a mode
 1. Select the custom page with **Page** type, and then select **Edit**.
 
     > [!div class="mx-imgBorder"]
-    > ![Solution explorer new page](media/add-page-to-model-app/solution-explorer-edit-page.png "Solution explorer new page")
+    > ![Solutions area new page](media/add-page-to-model-app/solution-explorer-edit-page.png "Solutions area new page")
 
 ## Author custom page content
 

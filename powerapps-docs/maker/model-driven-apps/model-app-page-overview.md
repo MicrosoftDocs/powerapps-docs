@@ -77,7 +77,7 @@ To migrate an existing standalone canvas app, first start by identify a mapping 
 
 * What interactions can the custom page have with the model-driven app?
 
-  Custom pages can be added to the site map for direct navigation using [Add custom page to sitemap](add-page-to-model-app.md#add-existing-custom-page-into-model-driven-app-sitemap). Model-driven app pages can open a custom page using the `navigateTo` Client API. Custom pages can navigate to other custom pages or to a model-driven app page such as a form, view, or dashboard with the Power Fx navigate function. More information: [Navigating to and from a custom page in your model-driven app](navigate-page-examples.md)
+  Custom pages can be added to the site map for direct navigation using [Add custom page to sitemap](add-page-to-model-app.md#add-existing-custom-page-into-model-driven-app-sitemap). Model-driven app pages can open a custom page using the `navigateTo` Client API. Custom pages can navigate to other custom pages or to a model-driven app page such as a form, view, or dashboard with the Power Fx navigate function. More information: [Navigating a custom page](page-powerfx-in-model-app.md#navigating-a-custom-page) 
 
 * How is the custom page made responsive?
 
@@ -85,7 +85,7 @@ To migrate an existing standalone canvas app, first start by identify a mapping 
 
 * How is the custom page managed in a solution?
 
-  Each custom page is a separate component in the solution, which allows one maker to edit a custom page at a time.  Most custom pages will have a single screen. Instead of multiple screens, they will use the custom page's navigation functions to move to another custom page or model-driven app page. When a custom page has multiple screens, it's still a single solution component so only one maker can be working on the contained set of screens.
+  Each custom page is a separate component in the solution, which allows one maker to edit one custom page at a time. Most custom pages will have a single screen. Instead of multiple screens, they will use the custom page's navigation functions to move to another custom page or model-driven app page. When a custom page has multiple screens, it's still a single solution component so only one maker can be working on the contained set of screens.
 
 * What licenses are allowed to use a custom page and does a custom page impact app counts?
 
