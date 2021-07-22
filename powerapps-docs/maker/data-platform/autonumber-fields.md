@@ -12,6 +12,7 @@ applies_to:
   - "powerapps"
 author: "daemelia"
 ms.assetid:
+ms.subservice: dataverse-maker
 ms.author: daemelia
 manager: kvivek
 ms.reviewer: Mattp123

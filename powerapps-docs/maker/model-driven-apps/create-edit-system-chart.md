@@ -12,6 +12,7 @@ applies_to:
   - "Dynamics 365 Version 9.x"
   - "PowerApps"
 author: "joel-lindstrom"
+ms.subservice: mda-maker
 ms.author: "matp"
 manager: "kvivek"
 ms.reviewer: matp

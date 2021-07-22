@@ -8,11 +8,15 @@ ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 04/03/2018
+ms.subservice: canvas-maker
 ms.author: yifwang
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - yifwang
 ---
 # Format a table in Excel and naming tips
 In Power Apps, you can create a canvas app based on Excel data only if it's formatted as a table. By following this content, you'll learn how to format a table in Excel and some tips of naming Excel columns.

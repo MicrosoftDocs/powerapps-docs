@@ -5,11 +5,14 @@ author: emcoope-msft
 ms.service: powerapps
 ms.topic: article
 ms.date: 02/18/2021
+ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
 ---
 
 # Review a canvas app for accessibility in Power Apps

@@ -2,6 +2,7 @@
 title: Add code components to a column or table in Microsoft Dataverse | Microsoft Docs
 description: Learn how to add code components to a column or table.
 keywords:
+ms.subservice: pcf
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek

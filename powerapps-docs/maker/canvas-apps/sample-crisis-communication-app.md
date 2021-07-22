@@ -8,11 +8,16 @@ ms.topic: sample
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 04/27/2020
+ms.subservice: canvas-maker
 ms.author: mabolan
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - matthewbolanos
+  - kumarvivek
 ---
 
 # Set up and learn about the Crisis Communication sample app in Power Apps

@@ -8,11 +8,15 @@ ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 10/23/2019
+ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - gregli-msft
 ---
 # Create a rule in canvas apps
 Create rules to automatically modify an app based on criteria that you specify. For example, show list items in red, yellow, or green based on their status, or show an approval button only for certain users (such as managers). You can add rules to a variety of controls. In this topic, you'll add a rule to change the text color of a **Label** control if the value of a **Slider** control is greater than 70.

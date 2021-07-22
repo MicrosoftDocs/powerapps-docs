@@ -3,6 +3,7 @@ title: "Create and configure model-driven app interactive experience dashboards 
 description: "Know how to create and configure interactive experience dashboards in Power Apps"
 keywords: Interactive dashboards; Customer Service; Microsoft Dynamics 365; Interactive service hub
 author: Mattp123
+ms.subservice: mda-maker
 ms.author: matp
 manager: kvivek
 ms.custom: ""

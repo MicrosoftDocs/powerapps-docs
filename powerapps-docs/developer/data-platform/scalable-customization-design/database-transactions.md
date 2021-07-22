@@ -102,7 +102,7 @@ Before understanding how customizations interact with the platform, it is useful
 |Forms (Retrieve)|&bull; Takes a read lock on the record shown.<br />&bull; Low impact on other uses.|
 |Create|&bull; Performs a create request through the platform<br />&bull; Low impact on other activities, as a new record nothing else blocking on it<br />&bull; Can potentially block locking queries to the whole table until it is complete.<br />&bull; Often can trigger related actions in customization which can have an impact.|
 |Update|&bull; Performs an update request through the platform.<br />&bull; More likely to have conflicts. An update lock will block anything else updating or reading that record. Also blocks anything taking a broad read lock on that table.<br />&bull; Often triggers other activities.|
-|View (RetrieveMultiple)|&bull; Would think this would block lots of other activity.<br />&bull; But deliberately passes `nolock` hints to queries<br />&bull; So typically does not lock other activities.<br />&bull; Although poor query optimization can affect DB resource usage and possibly hit timeouts.|
+|View (RetrieveMultiple)|&bull; Would think this would block lots of other activity.<br />&bull; Although poor query optimization can affect DB resource usage and possibly hit timeouts.|
 
 ## Event pipeline: platform step
 

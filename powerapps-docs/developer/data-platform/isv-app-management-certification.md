@@ -3,6 +3,7 @@ title: Connector certification from ISV Studio | Microsoft Docs
 description: Learn how to submit a custom connector for certification by using ISV Studio.
 author: "nkrb" # GitHub ID
 ms.service: powerapps
+ms.subservice: dataverse-developer
 ms.author: nabuthuk
 ms.topic: article
 ms.reviewer: pehecke

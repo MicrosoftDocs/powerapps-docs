@@ -8,11 +8,16 @@ ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
 ms.date: 05/12/2021
+ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - navjotm
+  - wimcoor
 ---
 # How to link SharePoint lists using a lookup column in Power Apps
 

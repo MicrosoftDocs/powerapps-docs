@@ -4,6 +4,7 @@ description: Learn how to use AppSource checker
 author: "nkrb" # GitHub ID
 ms.service: powerapps
 ms.topic: article
+ms.subservice: dataverse-developer
 ms.author: nabuthuk
 ms.reviewer: pehecke
 ms.workload: na

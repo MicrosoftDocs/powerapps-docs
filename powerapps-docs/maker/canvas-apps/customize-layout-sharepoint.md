@@ -8,11 +8,15 @@ ms.topic: tutorial
 ms.custom: canvas
 ms.reviewer: 
 ms.date: 06/18/2020
+ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - navjotm
 ---
 # Tutorial: Customize a gallery in Power Apps
 

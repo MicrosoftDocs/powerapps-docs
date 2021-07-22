@@ -7,6 +7,7 @@ ms.service: powerapps
 ms.component: pa-user
 ms.topic: article
 ms.date: 11/16/2020
+ms.subservice: teams
 ms.author: matp
 ms.custom: ""
 ms.reviewer: ""
@@ -14,6 +15,8 @@ ms.assetid:
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - mattp123
 ---
 
 # Embed a model-driven app as tab app in Teams

@@ -3,6 +3,7 @@ title: Create a component for canvas apps
 description: Learn about how to create reusable components for canvas apps.
 author: hemantgaur
 ms.service: powerapps
+ms.subservice: canvas-developer
 ms.topic: article
 ms.date: 07/01/2021
 ms.author: hemantg

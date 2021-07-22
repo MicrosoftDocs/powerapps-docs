@@ -8,11 +8,15 @@ ms.topic: article
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 04/26/2021
+ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - emcoope-msft
 ---
 # Transform your InfoPath form to Power Apps
 

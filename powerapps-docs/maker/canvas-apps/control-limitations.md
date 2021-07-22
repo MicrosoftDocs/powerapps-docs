@@ -7,11 +7,16 @@ ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 06/30/2021
+ms.subservice: canvas-maker
 ms.author: namarwah
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - navjotm
+  - chmoncay
 ---
 
 # Limitations of controls in canvas apps

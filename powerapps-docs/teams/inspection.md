@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 10/05/2020
+ms.subservice: teams
 ms.author: namarwah
 ms.reviewer: tapanm
 contributors:
@@ -404,6 +405,7 @@ To submit inspection of grouped locations:
 ### See also
 
 - [Understand Inspection sample apps architecture](inspection-architecture.md)
+- [Customize Inspection sample app](customize-inspections.md)
 - [Customize sample apps](customize-sample-apps.md)
 - [Sample apps FAQs](sample-apps-faqs.md)
 - [Use sample apps from the Microsoft Teams store](use-sample-apps-from-teams-store.md)

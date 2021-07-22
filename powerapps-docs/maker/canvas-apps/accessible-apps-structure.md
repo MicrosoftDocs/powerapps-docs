@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: article
 ms.custom: canvas
 ms.date: 02/12/2021
+ms.subservice: canvas-maker
 ms.author: tahoon
 ms.reviewer: tapanm
 search.audienceType:

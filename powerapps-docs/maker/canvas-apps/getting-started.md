@@ -10,6 +10,7 @@ ms.custom:
   - intro-internal
 ms.reviewer: 
 ms.date: 06/16/2020
+ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
   - maker
@@ -17,6 +18,8 @@ search.app:
   - PowerApps
 searchScope:
   - "Power Apps"
+contributors:
+  - tapanm-msft
 ---
 # What are canvas apps?
 

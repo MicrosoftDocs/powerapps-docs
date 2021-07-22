@@ -14,6 +14,7 @@ ms.topic: article
 ms.reviewer: pehecke
 ms.workload: na
 ms.date: 07/11/2019
+ms.subservice: dataverse-developer
 ms.author: prkoduku
 search.audienceType: 
   - developer

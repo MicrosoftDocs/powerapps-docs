@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 05/13/2021
+ms.subservice: portals
 ms.author: gisingh
 ms.reviewer: tapanm
 contributors:

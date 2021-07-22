@@ -7,6 +7,7 @@ ms.reviewer: "pehecke"
 ms.service: "powerapps"
 ms.topic: "article"
 author: "nkrb" 
+ms.subservice: dataverse-developer
 ms.author: "nabuthuk" 
 manager: "kvivek" 
 search.audienceType: 

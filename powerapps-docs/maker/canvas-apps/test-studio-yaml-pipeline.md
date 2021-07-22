@@ -7,12 +7,16 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 04/24/2020
+ms.date: 07/20/2021
+ms.subservice: canvas-maker
 ms.author: aheaney
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - aengusheaney
 ---
 
 # Automate tests with Azure Pipelines using YAML
@@ -24,9 +28,6 @@ You can use a public project on GitHub&mdash;[Microsoft/PowerAppsTestAutomation]
 - Automate the operations of signing in to your application.
 - Open a browser on the build agent and execute a set of test cases and suites.
 - View the status of the test execution in the Azure DevOps pipeline.
-
-> [!NOTE]
-> The [Test Studio](test-studio.md) feature is still experimental, and we recommend you use it to write tests for non-production apps only. More information: [Experimental and preview features](working-with-experimental-preview.md)
 
 ## Prerequisites
 

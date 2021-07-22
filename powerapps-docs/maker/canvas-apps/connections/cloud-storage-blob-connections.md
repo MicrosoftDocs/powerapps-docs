@@ -7,12 +7,16 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.date: 03/15/2021
+ms.subservice: canvas-maker
 ms.author: lanced
 ms.reviewer: tapanm
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - lancedmicrosoft
 ---
 # Connect to cloud-storage from Power Apps
 

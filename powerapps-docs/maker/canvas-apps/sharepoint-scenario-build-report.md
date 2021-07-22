@@ -8,11 +8,16 @@ ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
 ms.date: 06/18/2020
+ms.subservice: canvas-maker
 ms.author: fikaradz
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - navjotm
+  - wimcoor
 ---
 # Create a Power BI report to analyze projects
 > [!NOTE]

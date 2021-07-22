@@ -7,12 +7,16 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.date: 07/12/2017
+ms.subservice: canvas-maker
 ms.author: lanced
 ms.reviewer: tapanm
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - lancedmicrosoft
 ---
 # Connect to Microsoft Translator from Power Apps
 
