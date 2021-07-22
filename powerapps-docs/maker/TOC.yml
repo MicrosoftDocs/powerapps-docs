@@ -1123,6 +1123,10 @@
             href: ./model-driven-apps/create-edit-quick-view-forms.md
           - name: "Create a card form"
             href: ./model-driven-apps/create-card-forms.md
+        - name: Troubleshoot forms
+          items:
+          - name: Use Monitor to troubleshoot forms
+            href: ./model-driven-apps/monitor-form-checker.md
       - name: Use custom pages to converge canvas and model-driven apps
         items:
         - name: Custom pages overview
@@ -1199,10 +1203,6 @@
             href: ./model-driven-apps/manage-auto-save.md
           - name: How to add a tab for SharePoint documents
             href: ./model-driven-apps/add-documents-tab-entity-main-form.md
-        - name: Troubleshoot forms
-          items:
-          - name: Use Monitor to troubleshoot forms
-            href: ./model-driven-apps/monitor-form-checker.md
       - name: Embed a canvas app on a model-driven form
         href: ./model-driven-apps/embed-canvas-app-in-form.md
         items:
