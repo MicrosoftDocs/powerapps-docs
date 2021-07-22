@@ -138,7 +138,7 @@ Various elements like controls, canvas and code components, containers and so on
 
 Here is an example navigation with the page containing controls, code, and canvas components and containers.
 
-:::image type="content" source="media/add-component-to-model-app/tab-navigation-with-components-pcf-containers-and-controls.png" alt-text="Custom page tab navigation." lightbox="add-component-to-model-app/tab-navigation-with-components-pcf-containers-and-controls.png":::
+:::image type="content" source="media/add-component-to-model-app/tab-navigation-with-components-pcf-containers-and-controls.png" alt-text="Custom page tab navigation." lightbox="media/add-component-to-model-app/tab-navigation-with-components-pcf-containers-and-controls.png":::
 
 > [!NOTE]
 > Overlapping controls and elements on the custom page will not have their DOM merged so tab stops can be out of sync from visual layout. The same is true for the dynamic element positioning using formulas.  

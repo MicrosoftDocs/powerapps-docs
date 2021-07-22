@@ -107,4 +107,4 @@ Back( )
 
 [Model-driven app custom page overview](model-app-page-overview.md)
 
-[Navigating to and from a custom page in your model-driven app](navigate-page-examples.md)
+[Navigating a custom page](page-powerfx-in-model-app.md#navigating-a-custom-page)
