@@ -21,6 +21,8 @@ search.app:
 
  ## Share a row with someone else
  
+ [!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
+ 
  If you want to keep ownership of a row but let someone else work on the row with you then use the share option.
  
  
