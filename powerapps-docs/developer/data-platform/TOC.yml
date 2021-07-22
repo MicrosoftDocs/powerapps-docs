@@ -149,9 +149,9 @@
       href: access-web-services.md
     - name: Quickstarts
       items:
-      - name: Create a project
+      - name: Create a project using Power Platform Tools
         href: tools/devtools-create-project.md
-      - name: Create and deploy a plug-in
+      - name: Create a plug-in using Power Platform Tools
         href: tools/devtools-create-plugin.md
     - name: Tutorials
       items:

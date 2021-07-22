@@ -19,7 +19,7 @@ search.app:
 
 # Quickstart: Create a plug-in using Power Platform Tools
 
-To create a plug-in using the Power Platform Tools extension for Visual Studio, start by creating a new Dataverse solution with a plug-in library. Instructions to do this can be found in the topic [Create a Power Platform Tools project](devtools-create-project.md).
+To create and deploy a plug-in using the Power Platform Tools extension for Visual Studio, start by creating a new Dataverse solution with a plug-in library. Instructions to do this can be found in the topic [Create a Power Platform Tools project](devtools-create-project.md).
 
 If you already have an existing Dataverse solution set up, then follow these [instructions](devtools-create-project.md#add-a-new-project-to-a-power-platform-solution) to add a Plug-in Library project to the solution using the Power Platform Tools template.
 
@@ -51,19 +51,19 @@ The Power Platform Explorer view will be displayed. Expand the nodes to see what
 
 ## Register a plug-in step with Dataverse
 
-Follow these instructions to register a plug-in step (also known as an SDK message processing step). The step identifies what table and event causes your plug-in to execute.
+Follow these instructions to register a plug-in step (also known as an SDK message processing step). The step identifies what data table and event causes your plug-in to execute.
 
-1. In **Power Platform Explorer**, expand your environment node and the **Tables** sub-node.
+1. Select **View** > **Power Platform Explorer**, expand your environment node and the **Tables** sub-node.
 
-1. Right-click on the table type that the step is to be registered on, then select **Create Plug-in**.
+1. Right-click on the table type (e.g.; "Account") that the step is to be registered on, then select **Create Plug-in**.
 
-1. Fill out the **Register New Step** dialog information and choose **Register New Step**. The class name that you specify when filling out the step information will be used to name your new plug-in class. <!--note: link to the topic with info on creating a step -->
+1. Fill out the **Register New Step** dialog information and choose **Register New Step** when done. <p/>The class name that you specify when filling out the step information will be used to name your new plug-in class. The class will be placed in the plug-in project library specified by the **Handler Assembly** dialog field. If there is only one Plug-in Library project in the solution, the **Handler Assembly** field will be ghosted. More information: [Event framework](../event-framework.md), [Register plug-in step](../register-plug-in.md#register-plug-in-step)
 
-A new plug-in class that derives from `PluginBase` is now visible in your plug-in library, and a new step registration has been added to the solution. However, you will need to build and deploy your plug-in library before the plug-in and step are added to the actual environment.
+A new plug-in class that derives from `PluginBase` is now visible in your plug-in library, and a new step registration has been added to the solution. However, you will need to build and deploy your plug-in library before the plug-in assembly and step are added to the actual Dataverse environment and solution.
 
 ## The generated plug-in class code
 
-The Plug-in Library template provides the `PluginBase` abstract class. Your plug-in must derive from `PluginBase` if it is to work well with the Power Platform Tools extension. Below is the generated derived class when creating a plug-in from **Power Platform Explorer**. You typically would add your code where the TODO comments are. Notice that the standard plug-in `Execute` method has been replaced with `ExecuteCrmPlugin`.
+The Plug-in Library template provides the `PluginBase` abstract class. Your plug-in must derive from `PluginBase` if it is to work well with the Power Platform Tools extension. Below is the generated derived class when creating a plug-in from **Power Platform Explorer**. You typically would add your code where the TODO comments are. Notice that the standard [IPlugin](xref:Microsoft.Xrm.Sdk.IPlugin) interface `Execute` method has been replaced with `ExecuteCrmPlugin`.
 
 ```csharp
 using System;
@@ -138,6 +138,8 @@ namespace PPTools_Sample_Solution.NotifyPlugin
     }
 }
 ```
+
+At this point you would add your custom plug-in code where indicated by the TODO code comments. For more information, read some of these related topics: [Pass configuration data to your plug-in](../write-plug-in.md#pass-configuration-data-to-your-plug-in), [Understand the execution context](../understand-the-data-context.md#understand-the-execution-context), and [Tracing and logging](../logging-tracing.md).
 
 ## Sign the assembly
 
