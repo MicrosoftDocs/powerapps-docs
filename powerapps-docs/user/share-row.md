@@ -46,31 +46,32 @@ Any user that you want to share a row with needs to have basic level access that
       > [!div class="mx-imgBorder"]
       > ![Open a row and then select share](media/share-row-1.png "Open a row and then select share.")
 
-2.  On the share dialog box, select the lookup under **Add user/team**.  
+2.  On the share dialog box, select the lookup column under **Add user/team**.  
 
     > [!div class="mx-imgBorder"]
     > ![Select add user or team.](media/share-row-share-dialog.png "Select add user or team")
    
- 4. On the **Look up Rows** dialog box, select the **Look for** menu and choose **User** or **Team**.
- 
+3. Enter the name of the user or team in the [lookup column](lookup-field.md). The lookup will start displaying users or teams based what you typed, or you can select the lookup icon (magnifying glass) and an alphabetical list of names appears that you can select to assign access.
+
     > [!div class="mx-imgBorder"]
-    > ![Choose user or team from the drop down menu.](media/share-3.png "Choose user or team from the drop down menu")
-    
- 5. Use the lookup to find the user or team and select the name and then choose **Select**.
- 
-     > [!div class="mx-imgBorder"]
-     > ![Select the user name and then choose select.](media/share-4.png "Select the user name and then choose select")
-     
- 6. Select **Add**. 
- 
-     > [!div class="mx-imgBorder"]
-     > ![Select add.](media/share-5.png "Select add")
-     
- 7. On the share dialog box, select the type of permissions the user or team has for the row. When you're done, select **Share**   
- 
-     > [!div class="mx-imgBorder"]
-     > ![Select the type of permissions.](media/share-6.png "Select the type of permissions")
- 
+    > ![Select add user or team in the lookup.](media/share-row-lookup-rows.png "Select add user or team in the lookup")
+
+4. The user or team that you selected is listed under the lookup column. To add additional users or teams repeat the process or to remove a user or team from the list select **X** next to the name.
+
+    > [!div class="mx-imgBorder"]
+    > ![Select add more users or team](media/share-row-add-more-users.png "Select to add more users or team")
+
+
+5. Select a user or team one at a time, and then grant them the appropriate permissions to the row. 
+
+
+
+7. in the list on the left pane of the share dialog. When you select a record, you will see permissions on the right-hand pane to assign to the selected user(s) or team(s)
+
+Note that the share button is disabled until you start assigning access rights.  After selecting the share access rights click on the Share button to save your changes.
+
+
+
  
  ## Remove someone from a shared row
  
