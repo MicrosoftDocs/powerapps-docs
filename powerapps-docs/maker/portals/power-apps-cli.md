@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/27/2021
+ms.date: 07/21/2021
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: tapanm
@@ -284,7 +284,27 @@ The following sections provides additional details about different properties of
 |-------------|-----------|-------|
 |list|Lists all portal websites from the current Dataverse environment. |`pac paportal list`|
 |download|Download portal website content from the current Dataverse environment. It has the following parameters: <br/> - *path*: Path where the website content will be downloaded (alias: -p)<br/> - *webSiteId*: Portal website ID to download (alias: -id)<br/> - *overwrite*: (Optional) true - to overwrite existing content; false - to fail if the folder already has website content (alias: -o)|`pac paportal download --path "C:\portals" --webSiteId f88b70cc-580b-4f1a-87c3-41debefeb902`|
-|upload|Upload portal website content to the current Dataverse environment. It has the following parameter: <br/> - *path*: Path where the website content is stored (alias: -p)|`pac paportal upload --path "C:\portals\starter-portal"`|
+|upload|Upload portal website content to the current Dataverse environment. It has the following parameter: <br/> - *path*: Path where the website content is stored (alias: -p) <br/> -*deploymentProfile*: Upload portal data with environment details defined through [profile variables](#upload-profile-variables) in *deployment-profiles/[profile-name].depoyment.yaml* file  |`pac paportal upload --path "C:\portals\starter-portal" --deploymentProfile "profile-name"`|
+
+##### Upload profile variables
+
+The **deploymentProfile** switch allows you to define a set of variables for the environment in YAML format. For example, you can have different deployment profiles that have different schema details defined in the profile.
+
+Here's an example of the profile YAML file that has unique schema details:
+
+```
+adx_sitesetting:
+    - adx_sitesettingid: {GUID}
+    adx_value: ${OS.FacebookAppId} 
+    adx_name: Authentication/OpenAuth/Facebook/AppId
+    - adx_sitesettingid: {GUID}
+    adx_value: env_variable
+    adx_name: Authentication/OpenAuth/Facebook/Secret
+adx_contentsnippet:
+    - adx_contentsnippetid: {GUID}
+    adx_name: PowerBI/contoso/sales
+    adx_value:  https://powerbi.com/group/contoso/sales
+```
 
 > [!NOTE]
 > To learn about all commands used in CLI in addition to portals, go to [Common commands in Microsoft Power Platform CLI](../../developer/data-platform/powerapps-cli.md#common-commands).
