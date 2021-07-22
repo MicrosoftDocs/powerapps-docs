@@ -16,11 +16,11 @@ search.app:
   - D365CE
 ---
 
-# Add code components to a custom page for your model-driven app 
+# Add code components to a custom page for your model-driven app
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-This topic outlines the use of code components which are built by professional developers using Power Apps component framework within a custom page. For low code custom UX extensibility please see [add canvas components to a custom page for your model-driven app.](/powerapps/maker/model-driven-apps/page-canvas-components) 
+This topic outlines the use of code components, which are built by professional developers using Power Apps component framework within a custom page. For low-code custom UX extensibility please see [add canvas components to a custom page for your model-driven app.](/powerapps/maker/model-driven-apps/page-canvas-components) 
 
   > [!IMPORTANT]
   > - This is a preview feature, and may not be available in all regions.
@@ -28,7 +28,6 @@ This topic outlines the use of code components which are built by professional d
 
   > [!NOTE]
   > Custom page supports all component framework APIs which are currently supported on canvas applications. Additionally certain model-driven only APIs like Web API and navigation have published app support for the custom pages. These APIs can be used in the code component for use in custom page and will function on the final published app. For individual API support status on each platform please see: [Power Apps component framework API reference](/powerapps/developer/component-framework/reference/)
-
 
 Code components provides professional developers an ability to create custom code components for use within the Power Apps. This pro-code extensibility mechanism provides first class ALM supported way to seamlessly extend the control-set available to all makers across the organization. These components can not only then be reused across custom pages, canvas and model-driven apps but also can be centrally updated, packaged and moved via standard Dataverse solutions. See [Power Apps component framework overview](/powerapps/developer/component-framework/overview) for more details on how to create a code component. 
 
@@ -38,8 +37,9 @@ In order to use code components inside custom page, Power Apps component framewo
 
    > ![Enable Power Apps component framework.](../../developer/component-framework/media/enable-pcf-feature.png "Enable Power Apps component framework")
 
-## Create code component for use in custom page 
-### Creating and importing code component in Dataverse 
+## Create code components for use in a custom page
+
+### Creating and importing code components in Dataverse 
 Code components for custom page follow the same pattern as they do in canvas page. Code components being code first approach, need to be implemented first before they can be added to the custom page. Please see [Create your first component](/powerapps/developer/component-framework/implementing-controls-using-typescript) for step by step instrauctions. You can also [Try OOB sample components](/powerapps/developer/component-framework/use-sample-components#try-the-sample-components) to jump start. Once the code component is coded, it can be packaged into a solution and added to Dataverse which makes it available for use in all custom pages inline with model-driven and canvas apps. You can find more details on this process at [Code components application lifecycle management (ALM).](/powerapps/developer/component-framework/code-components-alm) 
 
 ### Importing and using code component in the custom page
