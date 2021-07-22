@@ -43,9 +43,63 @@ Notify( "Custom page notify warning message", NotificationType.Warning )
 > [!div class="mx-imgBorder"]
 > ![Custom page notify warning message bar](media/page-powerfx-in-model-app/custom-page-notify-warning.png "Custom page notify warning message bar")
 
-## Navigating from a custom page
+## Navigating a custom page
 
-A custom page navigation uses the Navigate and Back functions.
+This section provides examples of navigating from a model-driven app page to a custom page and examples of navigating from a custom page to other custom pages or model-driven app page using Power Fx.
+
+### Navigating from a custom page
+
+Custom Page Fx [Navigate function](../canvas-apps/functions/function-navigate.md) has been updated to allow navigating to either model pages or custom pages.  These functions only apply when the custom page is running within a model-driven app.  During custom page authoring or previewing in canvas designer, these functions have no effect.
+
+Navigate examples that use an entity must have it added as a Datasource in the page.
+
+### Navigate to another custom page
+
+A custom page can navigate to another custom page by passing the custom page display name as the first parameter.
+
+```powerappsfl
+Navigate( '<custom page>'  )
+```
+
+### Navigate to the default view for a table
+
+When Navigate is passed an entity as the first argument, it will open the user's default view page.
+
+```powerappsfl
+Navigate( Accounts )
+```
+
+### Navigate to a specific system view for a table
+
+When Navigate is passed an entity's Views enum, it will  open the specific system view for the entity.
+
+```powerappsfl
+Navigate( 'Accounts (Views)'.'My Active Accounts' )
+```
+
+### Navigate to the default form for a table
+
+When Navigate is passed a Microsoft Dataverse record as the first argument, it will open the default table form with the record.
+
+```powerappsfl
+Navigate( Gallery1.Selected )
+```
+
+### Navigate to the default form for a table in create mode
+
+When Navigate is passed a Dataverse record created from the Defaults function, it will open the default table form with the table record as a new record. The Defaults function takes a table name to create the record.
+
+```powerappsfl
+Navigate( Defaults( Accounts ) )
+```
+
+### Navigate back to the prior page or close a dialog
+
+When the Back function is called in a custom page, it closes the current page and returns to the priority model-driven app or custom page in the model-driven app. If the custom page has multiple screens, then see [Navigation advanced examples for custom page](navigate-page-advanced-examples.md) for advanced guidance.
+
+```powerappsfl
+Back( )
+```
 
 ### See also
 
