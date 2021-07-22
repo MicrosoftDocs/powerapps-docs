@@ -1,4 +1,3 @@
-
 ---
 title: "Share a row| MicrosoftDocs"
 description: How to share a row.
