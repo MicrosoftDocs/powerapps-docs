@@ -1,5 +1,5 @@
 ---
-title: "Create a plug-in using Power Platform Tools | Microsoft Docs"
+title: "Quickstart: Create a plug-in using Power Platform Tools | Microsoft Docs"
 description: "Learn how to create and register a Dataverse plug-in using the Power Platform Tools extension for Visual Studio."
 ms.custom: ""
 ms.date: 07/19/2021
@@ -17,11 +17,19 @@ search.app:
   - D365CE
 ---
 
-# Create a plug-in using Power Platform Tools
+# Quickstart: Create a plug-in using Power Platform Tools
 
 To create a plug-in using the Power Platform Tools extension for Visual Studio, start by creating a new Dataverse solution with a plug-in library. Instructions to do this can be found in the topic [Create a Power Platform Tools project](devtools-create-project.md).
 
 If you already have an existing Dataverse solution set up, then follow these [instructions](devtools-create-project.md#add-a-new-project-to-a-power-platform-solution) to add a Plug-in Library project to the solution using the Power Platform Tools template.
+
+## Prerequisites
+
+- Visual Studio 2019 or later
+- Power Platform Tools extension for Visual Studio
+- C# language
+- .NET Framework 4.6.2 (only for plug-in or custom workflow activity development)
+- Power Apps/Dataverse subscription or a trial environment
 
 ## Connect to your Dataverse environment
 
@@ -55,7 +63,7 @@ A new plug-in class that derives from `PluginBase` is now visible in your plug-i
 
 ## The generated plug-in class code
 
-The Plug-in Library template provides the `PluginBase` abstract class. Your plug-in must derive from `PluginBase` if it is to work well with the Power Platform Tools extension. Below is the generated dereived class when creating a plug-in from **Power Platform Explorer**. You typically would add your code where the TODO comments are. Notice that the standard plug-in `Execute` method has been replaced with `ExecuteCrmPlugin.
+The Plug-in Library template provides the `PluginBase` abstract class. Your plug-in must derive from `PluginBase` if it is to work well with the Power Platform Tools extension. Below is the generated derived class when creating a plug-in from **Power Platform Explorer**. You typically would add your code where the TODO comments are. Notice that the standard plug-in `Execute` method has been replaced with `ExecuteCrmPlugin.
 
 ```csharp
 using System;
@@ -153,6 +161,13 @@ After you are done modifying code and are ready to deploy the plug-in assembly a
 1. Select **Deploy** in the context menu.
 
 After deployment completes, select the refresh icon in **Power Platform Explorer**. Expand the Plug-in Assemblies sub-node of your environment node to see your registered assembly. Right-click on the assembly and step in **Power Platform Explorer** to see what operations are supported.
+
+## Next steps
+
+Learn more about plug-in development
+
+> [!div class="nextstepaction"]
+> [Next steps button](plug-ins.md#next-steps)
 
 ### See Also
 

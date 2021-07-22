@@ -5,7 +5,7 @@ suite: powerapps
 author: JimDaly
 manager: ryjones
 ms.service: powerapps
-ms.date: 03/11/2021
+ms.date: 07/21/2021
 ms.subservice: dataverse-developer
 ms.author: jdaly
 ms.reviewer: "pehecke"
@@ -30,6 +30,8 @@ Which one you should use depends on the type of project you are working on. More
 ## Applying business logic
 
 The most common extensions created using code involve automating the processes used by businesses. You can find a summary of options available for you in [Apply business logic with code](apply-business-logic-with-code.md). Each of these approaches are typically invoked based on events that occur on the server, so understanding of the [Event Framework](event-framework.md) will be valuable.
+
+This Developer Guide provides documentation for how to write custom business logic using the documented APIs. However, it is much easier to write and deploy your code if you [install](tools/devtools-install.md) and use the Power Platform Tools extension for Visual Studio.
 
 ## Integrate with external data
 

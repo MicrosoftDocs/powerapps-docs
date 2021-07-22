@@ -7,6 +7,8 @@
   items:
   - name: Supported customizations
     href: supported-customizations.md
+  - name: Install tools
+    href: ./tools/devtools-install.md
 - name: Understand terminology
   href: understand-terminology.md
 - name: Security and data access
@@ -145,6 +147,12 @@
       href: troubleshoot-plug-in.md
     - name: Access external web resources
       href: access-web-services.md
+    - name: Quickstarts
+      items:
+      - name: Create a project
+        href: devtools-create-project.md
+      - name: Create and deploy a plug-in
+        href: devtools-create-plugin.md
     - name: Tutorials
       items:
       - name: Write and register a plug-in

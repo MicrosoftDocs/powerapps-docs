@@ -1,5 +1,5 @@
 ---
-title: "Create a Power Platform Tools project | Microsoft Docs"
+title: "Quickstart: Create a Power Platform Tools project | Microsoft Docs"
 description: "Learn how to start a new Visual Studio project for plug-in or custom workflow assembly development using Power Platform Tools."
 ms.custom: ""
 ms.date: 07/19/2021
@@ -17,9 +17,17 @@ search.app:
   - D365CE
 ---
 
-# Create a Power Platform Tools project
+# Quickstart: Create a Power Platform Tools project
 
 Like any Visual Studio solution, you begin by creating a new project. In the new project dialog, enter "Power Platform" in the search box. You will see a list of available Power Platform Tools project C# templates as described below.
+
+## Prerequisites
+
+- Visual Studio 2019 or later
+- Power Platform Tools extension for Visual Studio
+- C# language
+- .NET Framework 4.6.2 (only for plug-in or custom workflow activity development)
+- Power Apps/Dataverse subscription or a trial environment
 
 If you have not installed the Power Platform Tools extension for Visual Studio, do so now before continuing with the steps in this article. More info [Install Power Platform Tools](devtools-install.md)
 
@@ -87,6 +95,13 @@ To add a new project to a Visual Studio solution, follow these steps.
 ### Remove a project from a Power Platform solution
 
 In **Solution Explorer**, right-click the project and select **Remove**. The project will automatically be removed from the CrmPackage references.
+
+## Next steps
+
+Advance to the next article to learn how to create and deploy a plug-in
+
+> [!div class="nextstepaction"]
+> [Next steps button](devtools-create-plugin.md)
 
 ### See Also
 
