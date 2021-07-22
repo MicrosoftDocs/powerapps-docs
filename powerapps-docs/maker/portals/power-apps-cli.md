@@ -30,7 +30,7 @@ CLI?](../../developer/data-platform/powerapps-cli.md)
 
 With this feature, Microsoft Power Apps portals
 supports Microsoft Power Platform CLI to enable CI/CD (Continuous Integration/Continuous
-Deployment) of portal configuration. You can now check-in the portal
+Deployment) of portal configuration. You can now check in the portal
 configuration to source control and move portal configuration to any environment
 using Microsoft Power Platform CLI.
 
@@ -66,16 +66,16 @@ support for Microsoft Power Platform CLI:
 
 -   Helps integrate seamlessly with any source control tools, such as “git”
 
--   Easily setup CI/CD pipelines
+-   Easily set up CI/CD pipelines
 
 ## Prerequisites
 
 Before using Microsoft Power Platform CLI commands for portals, ensure your portal is
 configured to enable support for this feature.
 
-## Install Microsoft Power Platform CLI 
+## Install Microsoft Power Platform CLI
 
-For a step-by-step instructions, please refer to [Install Microsoft Power Platform CLI](../../developer/data-platform/powerapps-cli.md#install-microsoft-power-platform-cli).
+For step-by-step instructions, refer to [Install Microsoft Power Platform CLI](../../developer/data-platform/powerapps-cli.md#install-microsoft-power-platform-cli).
 
 ## Supported tables
 
@@ -276,7 +276,7 @@ After installing Microsoft Power Platform CLI, open a command-prompt and run *pa
 
 Microsoft Power Platform CLI command for portals is “*paportal”*.
 
-The following sections provides additional details about different properties of the “*paportal”* command.
+The following sections provide more details about different properties of the “*paportal”* command.
 
 #### Parameters
 
@@ -294,7 +294,7 @@ If you're creating test profile, you can create file under **deployment-profiles
 
 `pac paportal upload --path "C:\portals\starter-portal" --deploymentProfile test`
 
-In this file, you can have the table (entity) name with table id, list of attributes, and the values that you want to override while uploading the portal configuration using the `deploymentProfile` parameter.
+In this file, you can have the table (entity) name with table ID, list of attributes, and the values that you want to override while uploading the portal configuration using the `deploymentProfile` parameter.
 
 Additionally, you can use the `OS` variable to access the operating system's environment variables.
 
