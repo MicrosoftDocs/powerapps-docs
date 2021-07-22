@@ -51,7 +51,7 @@ This section provides examples of navigating from a model-driven app page to a c
 
 Custom Page Fx [Navigate function](../canvas-apps/functions/function-navigate.md) has been updated to allow navigating to either model pages or custom pages.  These functions only apply when the custom page is running within a model-driven app.  During custom page authoring or previewing in canvas designer, these functions have no effect.
 
-Navigate examples that use an entity must have it added as a Datasource in the page.
+Navigate examples that use a table must have it added as a Datasource in the page.
 
 ### Navigate to another custom page
 
@@ -63,7 +63,7 @@ Navigate( '<custom page>'  )
 
 ### Navigate to the default view for a table
 
-When Navigate is passed an entity as the first argument, it will open the user's default view page.
+When Navigate is passed a table as the first argument, it will open the user's default view page.
 
 ```powerappsfl
 Navigate( Accounts )
@@ -71,7 +71,7 @@ Navigate( Accounts )
 
 ### Navigate to a specific system view for a table
 
-When Navigate is passed an entity's Views enum, it will  open the specific system view for the entity.
+When Navigate is passed a table's Views enum, it will  open the specific system view for the table.
 
 ```powerappsfl
 Navigate( 'Accounts (Views)'.'My Active Accounts' )
