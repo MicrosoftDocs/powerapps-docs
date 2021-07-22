@@ -101,11 +101,11 @@ In **Solution Explorer**, right-click the project and select **Remove**. The pro
 Advance to the next article to learn how to create and deploy a plug-in
 
 > [!div class="nextstepaction"]
-> [Next steps button](devtools-create-plugin.md)
+> [Next step](devtools-create-plugin.md)
 
 ### See Also
 
-*Developer Toolkit specific articles*  
+*Power Platform Tools specific articles*  
 [Install Power Platform Tools](devtools-install.md)  
 [Create a plug-in using Power Platform Tools](devtools-create-plugin.md)
 

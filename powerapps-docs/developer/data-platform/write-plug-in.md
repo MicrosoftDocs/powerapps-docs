@@ -42,6 +42,8 @@ Content in this topic discusses steps 1 thru 5 above and supports the following 
 - [Tutorial: Debug a plug-in](tutorial-debug-plug-in.md)
 - [Tutorial: Update a plug-in](tutorial-update-plug-in.md)
 
+There is also a [quickstart](tools/devtools-create-plugin.md) that uses the Power Platform Tools extension for Visual Studio to speed up the process of writing and deploying a plug-in.
+
 ## Assembly constraints
 
 When creating assemblies keep the following constraints in mind.

@@ -54,6 +54,8 @@ To install Power Platform Tools, follow these steps:
 
 1. Expand the left navigation panel node **Installed**. Search for or scroll to the Power Platform Tools extension, select it, and then choose **Uninstall**.
 
-### See also
+### See Also
+
+[Quickstart: Create a Power Platform Tools project](devtools-create-project.md)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -63,7 +63,7 @@ A new plug-in class that derives from `PluginBase` is now visible in your plug-i
 
 ## The generated plug-in class code
 
-The Plug-in Library template provides the `PluginBase` abstract class. Your plug-in must derive from `PluginBase` if it is to work well with the Power Platform Tools extension. Below is the generated derived class when creating a plug-in from **Power Platform Explorer**. You typically would add your code where the TODO comments are. Notice that the standard plug-in `Execute` method has been replaced with `ExecuteCrmPlugin.
+The Plug-in Library template provides the `PluginBase` abstract class. Your plug-in must derive from `PluginBase` if it is to work well with the Power Platform Tools extension. Below is the generated derived class when creating a plug-in from **Power Platform Explorer**. You typically would add your code where the TODO comments are. Notice that the standard plug-in `Execute` method has been replaced with `ExecuteCrmPlugin`.
 
 ```csharp
 using System;
@@ -167,15 +167,15 @@ After deployment completes, select the refresh icon in **Power Platform Explorer
 Learn more about plug-in development
 
 > [!div class="nextstepaction"]
-> [Next steps button](../plug-ins.md#next-steps)
+> [Next step](../plug-ins.md#next-steps)
 
 ### See Also
 
-***Developer Toolkit specific articles***  
+*Power Platform Tools specific articles* 
 [Install Power Platform Tools](devtools-install.md)  
 [Create a Power Platform Tools project](devtools-create-project.md)
 
-***General event handler articles***  
+*General event handler articles*  
 [Event framework](../event-framework.md)  
 [Use plug-ins to extend business processes](../plug-ins.md)  
 [Workflow extensions](../workflow/workflow-extensions.md)

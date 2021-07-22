@@ -44,6 +44,8 @@ This topic describes how to register a plug-in assembly and step, and add them t
 - [Tutorial: Debug a plug-in](tutorial-debug-plug-in.md)
 - [Tutorial: Update a plug-in](tutorial-update-plug-in.md)
 
+There is also a [quickstart](tools/devtools-create-plugin.md) that uses the Power Platform Tools extension for Visual Studio to speed up the process of writing and deploying a plug-in.
+
 ## Plug-in Registration tool (PRT)
 
 You will use the Plug-in Registration tool (PRT) to register your plug-in assemblies and steps.
