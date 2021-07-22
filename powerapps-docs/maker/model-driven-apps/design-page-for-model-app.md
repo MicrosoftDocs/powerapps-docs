@@ -62,8 +62,8 @@ In general, the low-code extensibility approach is simpler to build, test, and h
 
 More information:
 - [Canvas component gallery,](https://powerusers.microsoft.com/t5/Canvas-Apps-Components-Samples/bd-p/ComponentsGallery)
-- [Code components OOB samples](../../developer/component-framework/use-sample-components.md)
-- [Code components community resources](../../../developer/component-framework/community-resources.md)
+- [Code components samples](../../developer/component-framework/use-sample-components.md)
+- [Code components community resources](../../developer/component-framework/community-resources.md)
 
 ## Enable responsive layout with container control
 
@@ -152,5 +152,3 @@ Here is an example navigation with the page containing controls, code, and canva
 [Building responsive layout](../canvas-apps/build-responsive-apps.md)
 
 [Add a custom page to your model-driven app](add-page-to-model-app.md)
-
-[Navigating to and from a custom page in your model-driven app](navigate-page-examples.md)
