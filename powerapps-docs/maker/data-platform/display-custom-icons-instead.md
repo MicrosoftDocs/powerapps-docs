@@ -15,6 +15,7 @@ applies_to:
 author: "Mattp123"
 ms.assetid: af866aed-2586-4b6f-bb1c-3519baae3645
 caps.latest.revision: 25
+ms.subservice: dataverse-maker
 ms.author: "matp"
 manager: "kvivek"
 search.audienceType: 
@@ -32,7 +33,7 @@ Power Apps environment administrators and customizers can add graphics to a view
 This example displays custom icons in a view for the opportunity table, which is available with certain apps, such as Dynamics 365 Sales. You can display custom icons in views with other standard tables, such as the account or contact table, as well as custom tables. 
 
 > [!div class="mx-imgBorder"] 
-> ![All Opportunities view with Rating column displaying icons and text value](media/icon-in-opportunity-view.png "All Opportunities view with Rating column displaying icons and text value")
+> ![All Opportunities view with Rating column displaying icons and text value.](media/icon-in-opportunity-view.png "All Opportunities view with Rating column displaying icons and text value")
   
 Custom icons in list views can display in Unified Interface, legacy web client, mobile app, and App for Outlook. 
   
@@ -156,26 +157,26 @@ function displayIconTooltip(rowData, userLCID) {
   
  <!-- This results in displaying icons with tooltips in the **Rating** column that depend on the value in each row. The result could look like this:  
   
- ![Custom column graphics example](../customize/media/custom-column-graphics-example.png "Custom column graphics example")  --> 
+ ![Custom column graphics example.](../customize/media/custom-column-graphics-example.png "Custom column graphics example")  --> 
 
 ## Custom icon view display behavior
 ### Primary columns 
 In the grid list view, custom icons applied to the table primary column replace the default system-generated icon. 
 
 > [!div class="mx-imgBorder"] 
-> ![Primary column replaces default icon in the custom icon view](media/mobile-primary-field-custom-icon-display.png "Primary column replaces default icon in the custom icon view")
+> ![Primary column replaces default icon in the custom icon view.](media/mobile-primary-field-custom-icon-display.png "Primary column replaces default icon in the custom icon view")
 
 ### Other columns 
 In the grid list view, custom icons applied to a column that isn't the table primary column display as a secondary icon in addition to the default system-generated icon. 
 
 > [!div class="mx-imgBorder"] 
-> ![Not a table primary column custom icon view](media/card-form-not-primary-field.png "Not a table primary column custom icon view")
+> ![Not a table primary column custom icon view.](media/card-form-not-primary-field.png "Not a table primary column custom icon view")
 
 ### Card forms
 Custom icons replace the default system-generated icon when the view is configured to use a card form.
 
 > [!div class="mx-imgBorder"] 
-> ![Card view custom icon view](media/card-view-icon-display.png "Card view custom icon view")
+> ![Card view custom icon view.](media/card-view-icon-display.png "Card view custom icon view")
 
 ### See also
 

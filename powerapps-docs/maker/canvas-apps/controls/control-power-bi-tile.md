@@ -8,11 +8,15 @@ ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 02/25/2021
+ms.subservice: canvas-maker
 ms.author: chmoncay
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - chmoncay
 ---
 # Power BI tile control in Power Apps
 
@@ -84,7 +88,7 @@ You can use computed fields in the Power BI report to convert other value types 
 
 **[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
 
-**[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control. By default, the Power BI report that's associated with the tile opens.
+**[OnSelect](properties-core.md)** – Actions to perform when the user taps or clicks a control. By default, the Power BI report that's associated with the tile opens.
 
 **TileUrl** – The URL by which the tile is requested from the Power BI service. You can pass a single parameter into the Power BI tile by appending the parameter to the URL (for example: … & "&$filter=Town/Province eq '" & ListBox1.Selected.Abbr & "'"). You can use only the equals operator in the parameter. 
   > [!NOTE]

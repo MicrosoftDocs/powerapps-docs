@@ -5,6 +5,7 @@ ms.custom: ""
 ms.date: 04/15/2021
 ms.reviewer: ""
 ms.service: powerapps
+ms.subservice: troubleshoot
 ms.topic: "article"
 author: "Nkrb" # GitHub ID
 ms.author: "nabuthuk" # MSFT alias of Microsoft employees only
@@ -67,12 +68,12 @@ https://myorg.crm.dynamics.crm/main.aspx?appid=00000000-0000-0000-0000-000000000
 To view registered form event handles and libraries, you can view the `FormEvents` operation in [Monitor](../../maker/model-driven-apps/monitor-form-checker.md).
 
 > [!div class="mx-imgBorder"]
-> ![Form events](media/registered-form-events.png "Form events")
+> ![Form events.](media/registered-form-events.png "Form events")
 
 You'll need the `eventIndex` and `libraryIndex` parameter values when using the **DisableFormHandlers** or **DisableFormLibraries** URL flags. After an event or library is disabled, **disabledByConfigFlag** will be true and you'll also see such events in the actual event handling.
 
 > [!div class="mx-imgBorder"]
-> ![Form events OnLoad](media/form-events-onload.png "Form events OnLoad")
+> ![Form events OnLoad.](media/form-events-onload.png "Form events OnLoad")
 
 ## Disable form handlers
 
@@ -112,7 +113,7 @@ When you're troubleshooting issues caused by web resource controls, disable the 
 **&flags=DisableWebResourceControls=true**: Disables all the web resource controls.
 
 > [!div class="mx-imgBorder"]
-> ![Disable web resource](media/disable-web-resource-control.png "Disable web resource")
+> ![Disable web resource.](media/disable-web-resource-control.png "Disable web resource")
 
 ### Disable controls on a form
 
@@ -168,7 +169,7 @@ There are many ways to write unsupported Client API methods, and they all share 
 Using [Monitor](../../maker/model-driven-apps/monitor-form-checker.md), you can access information that helps you determine when the unsupported client access occurred, and when the access occurred at the wrong time due to a race condition.
 
 > [!div class="mx-imgBorder"]
-> ![Unsupported Client API method](media/unsupported-client-api-method.png "Unsupported Client API method")
+> ![Unsupported Client API method.](media/unsupported-client-api-method.png "Unsupported Client API method")
 
 > [!NOTE]
 > The call stack has been modified for illustration purposes. The call stack shows details like web resource, function, and the line that's causing the error.
@@ -184,7 +185,7 @@ A typical cause for this error is the script that calls the `save()` method in t
 In [Monitor](../../maker/model-driven-apps/monitor-form-checker.md) the `FormEvents.onsave` operation provides all the details that are causing the error. The form checker won't be able to detect the error if the issue can't be reproduced.
 
 > [!div class="mx-imgBorder"]
-> ![Save in progress error](media/save-in-progress-error.png "Save in progress error")
+> ![Save in progress error.](media/save-in-progress-error.png "Save in progress error")
 
 ## The form or record isn't saved when you try to save the form
 
@@ -195,7 +196,7 @@ A common cause is an [OnSave](./clientapi/reference/events/form-onsave.md) event
 In [Monitor](../../maker/model-driven-apps/monitor-form-checker.md), the `FormEvents.onsave` operation provides all the details why the save event was canceled, more details than that are available from the form UI itself.
 
 > [!div class="mx-imgBorder"]
-> ![Record isn't saved error](media/record-not-saved-error.png "Record isn't saved error")
+> ![Record isn't saved error.](media/record-not-saved-error.png "Record isn't saved error")
 
 ## Form script errors
 
@@ -213,14 +214,14 @@ function onload(controlName)
 This causes the form script error because the first parameter for the `OnLoad` function is `executionContext`, but the script incorrectly uses this as the control name for the `getControl()` method. The script throws the error shown in the following image.
 
 > [!div class="mx-imgBorder"]
-> ![Form script error](media/form-script-error.png "Form script error")
+> ![Form script error.](media/form-script-error.png "Form script error")
 
 **Resolution**:
 
 In [Monitor](../../maker/model-driven-apps/monitor-form-checker.md), the `FormEvent.onload` operation provides all the details including the web resource, function, and the line that's causing the issue.
 
 > [!div class="mx-imgBorder"]
-> ![FormEvent.onload operation](media/see-form-checker-for-details.png "FormEvent.onload operation")
+> ![FormEvent.onload operation.](media/see-form-checker-for-details.png "FormEvent.onload operation")
 
 ## Form freezes, loads slowly, or throws unexplained errors
 
@@ -279,7 +280,7 @@ An example of a common issue where this can happen is when a composite control i
 You can use [Monitor](../../maker/model-driven-apps/monitor-form-checker.md) to see more details, including the composite control that's causing the problem and the columns that can be used in the business rule or custom script instead.
 
 > [!div class="mx-imgBorder"]
-> ![Custom script not working](media/custom-script-error.png "Custom script not working")
+> ![Custom script not working.](media/custom-script-error.png "Custom script not working")
 
 ## Related menu/Related tab
 
@@ -290,14 +291,14 @@ There are many reasons why a related menu item doesn't appear on the **Related**
 In the following example, a related table `role` (security role) doesn't appear in the `team` form because the `role` table isn't available in Unified Interface.
 
 > [!div class="mx-imgBorder"]
-> ![Related menu](media/related-menu-error.png "Related menu")
+> ![Related menu.](media/related-menu-error.png "Related menu")
 
 In [Monitor](../../maker/model-driven-apps/monitor-form-checker.md), the `RelatedMenu` operation provides all the details that are causing the issue.
 
 There are also a few sources where a record can be included as an option for the **Related** menu tab. The following example includes details that indicate that the label `Activities` in the **Related** menu on an account form comes from the plural display name of the related table.
 
 > [!div class="mx-imgBorder"]
-> ![Related menu details](media/related-menu-error-details.png "Related menu details")
+> ![Related menu details.](media/related-menu-error-details.png "Related menu details")
 
 ## Why a control is disabled/enabled or visible/hidden
 
@@ -308,12 +309,12 @@ There are many possible reasons why a control might be disabled or hidden when t
 - You can use [Monitor](../../maker/model-driven-apps/monitor-form-checker.md) to view the `FormControls` event that includes all the details about the initial control state.
 
    > [!div class="mx-imgBorder"]
-   > ![Forms controls check](media/form-controls-check.png "Form controls check")
+   > ![Forms controls check.](media/form-controls-check.png "Form controls check")
 
 - Another way is to check the `ControlStateChange` operation that explains why the control is in a disabled or visible state. This can occur during a form load, or be triggered after the form is loaded, by using an `OnChange` event handler.
 
    > [!div class="mx-imgBorder"]
-   > ![Control state changed](media/control-state-changed.png "Control state changed")
+   > ![Control state changed.](media/control-state-changed.png "Control state changed")
 
 A control can be disabled by using the following list of rules. If a rule is met, the following rules are ignored. If you want to change whether a control is disabled, you must change the input to the rule used for the result or to a rule earlier in the list.
 
@@ -340,20 +341,20 @@ There are multiple reasons why a control may/may not have a certain value on for
 
 **Resolution:**
 
-The `ControlDefaultValue` operation in [Monitor](https://docs.microsoft.com/powerapps/maker/model-driven-apps/monitor-form-checker) explains the source of the default values. 
+The `ControlDefaultValue` operation in [Monitor](../../maker/model-driven-apps/monitor-form-checker.md) explains the source of the default values. 
 
 > [!div class="mx-imgBorder"]
-> ![Default control value](media/control-default-value.png "Default control value")
+> ![Default control value.](media/control-default-value.png "Default control value")
 
 If there are multiple updates happening to a control's value, there will be an `Update Sequence` to indicate which value is final. For example, here is a control that first has a default value and then got overridden with a value passed with a client API script. There is a call stack provided.
 
 > [!div class="mx-imgBorder"]
-> ![Control value before](media/control-default-value-after.png "Control value before")
+> ![Control value before.](media/control-default-value-after.png "Control value before")
 
 There are scenarios where columns are populated based on a relationship column mapping, in which case the event will show that.
 
 > [!div class="mx-imgBorder"]
-> ![Control value after](media/control-default-value-update-sequence.png "Control value after")
+> ![Control value after.](media/control-default-value-update-sequence.png "Control value after")
 
 Verify where the value is coming from and take an action based on the below table:
 
@@ -374,21 +375,21 @@ There are many possible reasons why a tab or section might be hidden or visible.
 The `TabStateChange` or `SectionStateChange` operations in [Monitor](../../maker/model-driven-apps/monitor-form-checker.md) explain the visible state change, as shown in the following image.
 
 > [!div class="mx-imgBorder"]
-> ![Tab section](media/tab-section-visible.png "Tab section")
+> ![Tab section.](media/tab-section-visible.png "Tab section")
 
 ## Unexpected alerts or navigation
 
 There are many possible reasons why an alert appears or navigation happens unexpectedly. One of the common causes is when you use the [Xrm.Navigation](./clientapi/reference/xrm-navigation.md) API methods to open a record or a form. For example, when you open a form, an alert appears as shown in the following image.
 
 > [!div class="mx-imgBorder"]
-> ![Alert dialog box](media/unexpected-alert-dialogs.png "Alert dialog box")
+> ![Alert dialog box.](media/unexpected-alert-dialogs.png "Alert dialog box")
 
 **Resolution**:
 
 The `XrmNavigation` operation in [Monitor](../../maker/model-driven-apps/monitor-form-checker.md) helps you identify the script that's causing unexpected behavior.
 
 > [!div class="mx-imgBorder"]
-> ![XrmNavigation operation in Monitor](media/form-checker-navigation.png "XrmNavigation operation in [Monitor](../../maker/model-driven-apps/monitor-form-checker.md)")
+> ![XrmNavigation operation in Monitor.](media/form-checker-navigation.png "XrmNavigation operation in [Monitor](../../maker/model-driven-apps/monitor-form-checker.md)")
 
 ## Opening another form instead of a quick create form?
 
@@ -402,7 +403,7 @@ When opening a quick create form from a lookup or a grid, another form may open 
 - You can use [Monitor](../../maker/model-driven-apps/monitor-form-checker.md) to view the `FormType` event that includes all the reasons why a quick create form was not opened.
 
 > [!div class="mx-imgBorder"]
-> ![Table not enabled for quick create](media/troubleshoot-forms-entity-not-eabled-for-quick-create.png "Table not enabled for quick create")
+> ![Table not enabled for quick create.](media/troubleshoot-forms-entity-not-eabled-for-quick-create.png "Table not enabled for quick create")
 
 
 ## Table doesn't appear in the quick create menu flyout?
@@ -425,13 +426,13 @@ When opening the global quick create menu flyout, not all tables are available. 
 See the examples below to understand the reasons for filtering. Based on the explanations, contact the responsible party or make changes accordingly.
 
 > [!div class="mx-imgBorder"]
-> ![Table not enabled for Unified Client](media/troubleshoot-forms-entity-unified-client.png "Table not enabled for Unified Client")
+> ![Table not enabled for Unified Client.](media/troubleshoot-forms-entity-unified-client.png "Table not enabled for Unified Client")
 
 > [!div class="mx-imgBorder"]
-> ![Table not available for quick create](media/troubleshoot-forms-entity-not-available-for-quick-create.png "Table not available for quick create")
+> ![Table not available for quick create.](media/troubleshoot-forms-entity-not-available-for-quick-create.png "Table not available for quick create")
 
 > [!div class="mx-imgBorder"]
-> ![Table not part of app module](media/troubleshoot-forms-entity-not-part-of-app.png "Table not part of app module")
+> ![Table not part of app module.](media/troubleshoot-forms-entity-not-part-of-app.png "Table not part of app module")
 
 ## Unexpected unsaved changes error
 
@@ -446,7 +447,7 @@ The `all attributes modified` section includes a quick summary of the columns th
 The screenshot below shows the root cause of the issue. You can see that the change has come from the `OnLoad` script.
 
 > [!div class="mx-imgBorder"]
-> ![Unsaved changes error](media/unsaved-changes-error.png "Unsaved changes error")
+> ![Unsaved changes error.](media/unsaved-changes-error.png "Unsaved changes error")
 
 > [!NOTE]
 > If the user has manually made the changes on the form, a call stack will not be provided.

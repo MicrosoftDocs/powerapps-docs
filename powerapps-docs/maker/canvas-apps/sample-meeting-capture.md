@@ -8,11 +8,15 @@ ms.topic: sample
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 10/29/2019
+ms.subservice: canvas-maker
 ms.author: mabolan
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - norliu
 ---
 # Set up and learn about the Meeting Capture sample template in Power Apps
 
@@ -20,7 +24,7 @@ search.app:
 
  In Power Apps, the Meeting Capture sample template is an all-in-one tool for capturing information from meetings as they happen. If you run the app, you can view meeting details, capture notes, take pictures of whiteboards, draw sketches and assign tasks. You can also export all of these items, send them to all meeting attendees, and schedule followup meetings quickly and easily.
 
-[![Meeting Capture](media/sample-meeting-capture/MeetingCapture.png)](https://aka.ms/previewmeetingcapture)
+[![Meeting Capture.](media/sample-meeting-capture/MeetingCapture.png)](https://aka.ms/previewmeetingcapture)
 
 ## Where can I run the app?
 

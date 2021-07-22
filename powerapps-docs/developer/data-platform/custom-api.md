@@ -2,11 +2,12 @@
 title: "Create and use Custom APIs (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Custom API is a new code-first way to define custom messages for the Microsoft Dataverse" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 06/29/2021
+ms.date: 07/03/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
+ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "sunilg" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -70,6 +71,10 @@ See the following topics for detailed information about the columns/attributes y
 - [CustomAPI Table Columns](customapi-table-columns.md)
 - [CustomAPIRequestParameter Table Columns](customapirequestparameter-table-columns.md)
 - [CustomAPIResponseProperty Table Columns](customapiresponseproperty-table-columns.md)
+
+This diagram shows how the tables are related to these tables as well as others:
+
+:::image type="content" source="media/custom-api-data-model.png" alt-text="Diagram showing relationships between tables.":::
 
 
 ## Invoking Custom APIs
@@ -362,7 +367,7 @@ This process involves exporting a file that contains the base language values an
 
 The following example shows editing the Excel worksheet to add Japanese translations for the English values.
 
-:::image type="content" source="media/solution-strings-for-translation.png" alt-text="Shows how labels are localized":::
+:::image type="content" source="media/solution-strings-for-translation.png" alt-text="Shows how labels are localized.":::
 
 > [!TIP]
 > If you are editing the solution files to create your Custom APIs, you can provide the localized labels directly. More information: [Providing Localized Labels with the solution](create-custom-api-solution.md#providing-localized-labels-with-the-solution)

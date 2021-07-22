@@ -227,8 +227,6 @@
           href: reference/linking/addlinkedentity.md
         - name: getLinkedEntity
           href: reference/linking/getlinkedentities.md
-      - name: LookupOptions
-        href: reference/lookupoptions.md
       - name: Metadata
         href: reference/metadata.md
       - name: Mode

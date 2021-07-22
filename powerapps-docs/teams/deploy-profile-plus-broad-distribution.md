@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 06/22/2021
+ms.subservice: teams
 ms.author: v-ljoel
 ms.reviewer: tapanm
 contributors:
@@ -55,29 +56,29 @@ This process begins by opening the app in the **Power Apps**. You may have Power
 
 1. Type **Power Apps** in the search field.
 
-    ![Search for Power Apps](media/profile-plus-broad-distribution/app-search.png "Search for Power Apps")
+    ![Search for Power Apps.](media/profile-plus-broad-distribution/app-search.png "Search for Power Apps")
 
 1. Select the app from the list to open the app. Power Apps will open in teams.
 
 1. Right-click on the **Power Apps** logo, and select **Pin** to lock the app to the side menu so it's easy to get to frequently.
 
-    ![Pin the app](media/profile-plus-broad-distribution/pin.png "Pin the app")
+    ![Pin the app.](media/profile-plus-broad-distribution/pin.png "Pin the app")
 
 1. We recommended that you “pop out” Power Apps so that if you need to go somewhere else in Microsoft Teams, you won’t lose your app configuration. To pop out the Power Apps app, right-click on the Power Apps logo, and then select **Pop out app**.
 
-    ![Pop out app](media/profile-plus-broad-distribution/pop-out-app.png "Pop out app")
+    ![Pop out app.](media/profile-plus-broad-distribution/pop-out-app.png "Pop out app")
 
 1. Now that you've loaded the Power Apps app, select **Build**.
 
 1. This screen will show all the teams that have Power Apps installed in them. Select the team that contain the app you want to share. And then, select **Share with colleagues**.
 
-    ![Share with colleagues](media/profile-plus-broad-distribution/share-with-colleagues.png "Share with colleagues")
+    ![Share with colleagues.](media/profile-plus-broad-distribution/share-with-colleagues.png "Share with colleagues")
 
 1. Enter the Azure AD security group, or a different team with which you would like to share access to the app.
 
 1. Set the **On/Off** toggle to **On** for Profile+ app.
 
-    ![Toggle share to on](media/profile-plus-broad-distribution/share-with-colleagues-2.png "Toggle share to on")
+    ![Toggle share to on.](media/profile-plus-broad-distribution/share-with-colleagues-2.png "Toggle share to on")
 
 1. Select **Save**.
 
@@ -104,11 +105,11 @@ By default, all of the table permissions for colleagues not in the Team are set 
 
 1. Select **See all** in the **Profile Plus** tile.
 
-    ![Select See all](media/profile-plus-broad-distribution/profile-tile.png "Select See all")
+    ![Select See all.](media/profile-plus-broad-distribution/profile-tile.png "Select See all")
 
 1. Select **Tables** from the solution components bar.
 
-    ![Select tables](media/profile-plus-broad-distribution/tables.png "Select tables")
+    ![Select tables.](media/profile-plus-broad-distribution/tables.png "Select tables")
 
 1. Select the tables listed individually, and then select **Manage Permissions**.
 
@@ -148,7 +149,7 @@ The colleagues that the Profile+ app is shared with, can acquire the app using t
 
 1. Select **Built for your org**.
 
-    ![Built for your org](media/profile-plus-broad-distribution/built-for-your-org.png "Built for your org")
+    ![Built for your org.](media/profile-plus-broad-distribution/built-for-your-org.png "Built for your org")
 
 1. When the app information screen appears, select **Add** to add the app to the main teams app menu.
 
@@ -156,11 +157,11 @@ The colleagues that the Profile+ app is shared with, can acquire the app using t
 
 1. If you want to make the app always appear in the app menu so you can easily find it, right-click on the Profile+ app button on the app menu, and then select **Pin**.
 
-    ![Pin Profile+](media/profile-plus-broad-distribution/pin.png "Pin Profile+")
+    ![Pin Profile+.](media/profile-plus-broad-distribution/pin.png "Pin Profile+")
 
 1. If you prefer to add the app to another team, select the drop-down next to the **Add** button, and then select **Add to a team**.
 
-    ![Add app to a Team](media/profile-plus-broad-distribution/add-to-team.png "Add app to a Team")
+    ![Add app to a Team.](media/profile-plus-broad-distribution/add-to-team.png "Add app to a Team")
 
 ## Limitations
 

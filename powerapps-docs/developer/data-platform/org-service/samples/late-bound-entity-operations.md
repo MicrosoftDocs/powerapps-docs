@@ -40,8 +40,8 @@ Checks for the current version of the org.
 
 1. Instantiates the account object.
 1. Creates an account record.
-1. Retrieves the account and its attributes.
-1. Updates the postal1 code attribute and set the postal2 code to null.
+1. Retrieves the account and its columns.
+1. Updates the postal1 code column and set the postal2 code to null.
 1. Update the account. 
 1. Prompts to delete the account records created.
 

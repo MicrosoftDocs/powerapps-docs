@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 07/02/2021
+ms.subservice: teams
 ms.author: v-shrutibahl
 ms.reviewer: tapanm
 contributors:
@@ -428,13 +429,13 @@ Now, we'll add a container that will include the idea details section on our ide
 
 1. We need to copy controls from **dtcFilesImages** from the **Campaign Detail Screen** to the canvas.
 
-    ![List of controls under dtcFileImages](media/make-ideas-editable-by-original-creator/controls-under-dtcfileimages-group.png "List of controls under dtcFileImages")
+    ![List of controls under dtcFileImages.](media/make-ideas-editable-by-original-creator/controls-under-dtcfileimages-group.png "List of controls under dtcFileImages")
 
 1. Select to expand the **Edit Idea Screen**.
 
 1. Select **galIdeaResponses_2**, and then paste the copied controls. When you paste the controls, you'll also see a few errors:
 
-    ![Errors on idea responses gallery](media/make-ideas-editable-by-original-creator/errors-on-idea-responses-gallery.png "Errors on idea responses gallery")
+    ![Errors on idea responses gallery.](media/make-ideas-editable-by-original-creator/errors-on-idea-responses-gallery.png "Errors on idea responses gallery")
 
 1. All errors except one are related to visibility of the controls. You can select the error, and select **Edit In Formula Bar**.
 
@@ -712,13 +713,13 @@ Finally, let’s test the app and try editing an idea.
 
 1. Verify that the **Edit** button shows up on the **Campaign Details Screen**.
 
-    ![Select edit option on the Idea screen](media/make-ideas-editable-by-original-creator/select-edit-option-on-campaign-details-screen.png "Select edit option on the Idea screen")
+    ![Select edit option on the Idea screen.](media/make-ideas-editable-by-original-creator/select-edit-option-on-campaign-details-screen.png "Select edit option on the Idea screen")
 
 1. Select the **Edit** button, and verify that the **Edit Idea** screen opens.
 
 1. Verify that all the details are displayed on the screen.
 
-    ![Idea details screen](media/make-ideas-editable-by-original-creator/idea-details.png "Idea details screen")
+    ![Idea details screen.](media/make-ideas-editable-by-original-creator/idea-details.png "Idea details screen")
 
 1. Make some changes to the idea and then select the **Update** button.
 

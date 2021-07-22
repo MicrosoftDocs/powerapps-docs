@@ -7,6 +7,7 @@ ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 06/30/2021
+ms.subservice: end-user
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
@@ -49,7 +50,7 @@ If you've enabled an email form but it is doesn't display, you'll need to enable
 
 3.	In **Application** settings, select **Apps*.
 
-4.	Select ![More commands icon](media\timeline-more-commands-icon.png "more commands") **More Options** on **Customer Service Hub**.
+4.	Select ![More commands icon.](media\timeline-more-commands-icon.png "more commands") **More Options** on **Customer Service Hub**.
 
 5.	On the **App Designer** drop-down menu, select **Open**. 
 
@@ -64,13 +65,13 @@ If you've enabled an email form but it is doesn't display, you'll need to enable
 > [!Note] 
 > You can't change the display order under **Main Form**. You must go back to the **Form Order** to change the display order.
 
-![Navigate to settings](media\email-faq-enabled-email-1.png "Navigate to settings")
+![Navigate to settings.](media\email-faq-enabled-email-1.png "Navigate to settings")
 
-![Select Apps under Application settings](media\email-faq-enabled-email-2.png "Select Apps under Application settings")
+![Select Apps under Application settings.](media\email-faq-enabled-email-2.png "Select Apps under Application settings")
 
-![Select More Options](media\email-faq-enabled-email-3.png "Select More Options")
+![Select More Options.](media\email-faq-enabled-email-3.png "Select More Options")
 
-![Select Open](media\email-faq-enabled-email-4.png "Select Open on the App Designer menu")
+![Select Open.](media\email-faq-enabled-email-4.png "Select Open on the App Designer menu")
 
 9. Add the email template and signature link to the site navigation by going to the site map and doing the following:
 
@@ -84,15 +85,15 @@ If you've enabled an email form but it is doesn't display, you'll need to enable
     
     e. Select **OPEN IN APP DESIGNER**.
     
-    ![Select OPEN IN APP DESIGNER](media\email-open-app-designer.png "Select OPEN IN APP DESIGNER")
+    ![Select OPEN IN APP DESIGNER.](media\email-open-app-designer.png "Select OPEN IN APP DESIGNER")
     
     f. Select the pencil icon to edit.
     
-    ![Select edit icon](media\email-edit-icon.png "Select edit icon")
+    ![Select edit icon.](media\email-edit-icon.png "Select edit icon")
     
     g. When the site map opens, create a new group for templates by selecting **New subarea**.
     
-    ![Select New subarea](media\email-select-new-subarea.png "Select New subarea")
+    ![Select New subarea.](media\email-select-new-subarea.png "Select New subarea")
     
     h. Select **email templates** or **email signature**.
     
@@ -100,6 +101,6 @@ If you've enabled an email form but it is doesn't display, you'll need to enable
     
     j. Save and publish. A link is added to the site map.
     
-    ![Site map link](media\email-site-map-link.png "New site map link")
+    ![Site map link.](media\email-site-map-link.png "New site map link")
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

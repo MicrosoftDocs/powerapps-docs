@@ -12,6 +12,7 @@ applies_to:
   - "powerapps"
 ms.assetid: 
 author: "Mattp123"
+ms.subservice: dataverse-maker
 ms.author: "matp"
 manager: "kvivek"
 search.audienceType: 
@@ -49,7 +50,7 @@ For this walkthrough, a single virtual table that contains the following columns
 
 The OData metadata of the external data source person table:
 
-:::image type="content" source="media/odata-external-source-table2.png" alt-text="Odata external data source XML part 2":::
+:::image type="content" source="media/odata-external-source-table2.png" alt-text="Odata external data source XML part 2.":::
 
 ## Create the data source
 
@@ -98,7 +99,7 @@ Part of the name of any custom table you create is the customization prefix. Thi
    > The OData resource path semantics uses `EntitySet` to identify the resource. In the sample OData web service, the `EntitySet` is defined as **People**. This value is used as the **External Name** for the virtual table **Person**.
 
 1. Next to **Areas that display this entity**, select **Sales**, and then select **Save** (but don’t close the table form).
-    ![Person table definition](media/ticket-entity.png)
+    ![Person table definition.](media/ticket-entity.png)
 
 ## Create the columns for the virtual table
 
@@ -112,13 +113,13 @@ On the left navigation pane of the **Entity: Person** page, select **Fields**. A
 
     **External Name**: Id
 
-    ![Create id column](media/ticketid-field.png)
+    ![Create id column.](media/ticketid-field.png)
 1. Select **Save and Close**.
 1. Open the **new_name** column, and change the following properties to have the values indicated here:
     - **Display Name**: Last Name
     - **External Name**: LastName
  
-   ![Create last name column](media/title-field.png)
+   ![Create last name column.](media/title-field.png)
 1. Select **Save and Close**.
 1. Select **New**, and on the **Field: New for Person** page enter the following information:
 
@@ -130,7 +131,7 @@ On the left navigation pane of the **Entity: Person** page, select **Fields**. A
    |**Field Requirement**|Business Required|
    |**Data Type**|Single Line of Text|
 
-   ![Create age column for person](media/severity-field.png)
+   ![Create age column for person.](media/severity-field.png)
 
 1. Select **Save and Close**.
 1. Select **New**, and on the **Field: New for Person** page enter the following information:
@@ -143,7 +144,7 @@ On the left navigation pane of the **Entity: Person** page, select **Fields**. A
    |**Field Requirement** |	Business Required |
    |**Data Type**	| Whole Number |
 
-   :::image type="content" source="media/age-field.png" alt-text="Create age column":::
+   :::image type="content" source="media/age-field.png" alt-text="Create age column.":::
 
 1. Select **Save and Close**.
 
@@ -157,14 +158,14 @@ On the left navigation pane of the **Entity: Person** page, select **Fields**. A
    | **Field Requirement**	| Business Required |
    |**Data Type**	|Date and Time|
 
-   :::image type="content" source="media/lastmodifiedon-field.png" alt-text="Create last modified on column":::
+   :::image type="content" source="media/lastmodifiedon-field.png" alt-text="Create last modified on column.":::
 
 ## Add the columns to the main form
 
 1. On the **Person** table window, select **Forms**.
 1. Open the main form, drag and drop the **First Name**, **Age**, and **Last Modified On**  columns from the right pane onto the form in the **General** section.
 
-    ![First name, age, and last modified on columns added to main form](media/drop-severity-field.png)
+    ![First name, age, and last modified on columns added to main form.](media/drop-severity-field.png)
 
 1. On the **Person** table window, select **Save and Close**.
 
@@ -173,7 +174,7 @@ On the left navigation pane of the **Entity: Person** page, select **Fields**. A
 1. On the left pane of the solution explorer, under the **Person entity**, select **Views**.
 1. Open the **All People** view.
 1. In the **Common Tasks** pane, select **Add Columns**.
-    ![Add columns for view](media/addcolumns.png)
+    ![Add columns for view.](media/addcolumns.png)
 1. Select the **First Name**, **Age**, and **Last Modified On** columns, and then select **OK**.
 1. On the **View: All People** window, arrange the column order by selecting the move left and move right arrows, and then select **Save and Close**.
 1. On the Solution Explorer window, select **Publish All Customizations**.
@@ -189,7 +190,7 @@ Then, app users can perform read, create, update, and delete operations using th
 1. Run the model-driven app. Select **New**, complete the required columns, and then save the record.
 1. Select **New** again to create another record and save it.
 1. You should now have two records similar to the following in the **All Persons** view.
-:::image type="content" source="media/vt-all-persons-view.png" alt-text="View All Persons":::
+:::image type="content" source="media/vt-all-persons-view.png" alt-text="View All Persons.":::
 1. To delete a record, select a person record and then select **Delete**. Confirm to delete the record on the confirmation page.
 
 ### See also
