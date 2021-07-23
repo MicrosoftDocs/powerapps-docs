@@ -1,5 +1,5 @@
 ---
-title: "Using PowerFx in custom page for your model-driven app (preview)" 
+title: "Use PowerFx in custom page for your model-driven app (preview)" 
 description: ""
 ms.custom: ""
 ms.date: 07/06/2021
@@ -15,7 +15,7 @@ search.app:
   - "PowerApps"
   - D365CE
 ---
-# Using PowerFx in a custom page for your model-driven app (preview)
+# Use PowerFx in a custom page for your model-driven app (preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 

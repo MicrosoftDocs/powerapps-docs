@@ -1161,7 +1161,7 @@
           href: ./model-driven-apps/add-page-to-model-app.md
         - name: Design considerations for a custom page
           href: ./model-driven-apps/design-page-for-model-app.md
-        - name: Using Power Fx in custom page
+        - name: Use Power Fx in a custom page
           href: ./model-driven-apps/page-powerfx-in-model-app.md
         - name: Add canvas components to a custom page
           href: ./model-driven-apps/page-canvas-components.md   
