@@ -44,7 +44,7 @@ Legend
 
 1. Shows the number of rows that you're editing.
 2. Shows the form title. 
-3. Select a tab to edit the columns on the form. A deader column is always listed on the last tab.
+3. Select a tab to edit the columns on the form. The header column is always listed on the last tab.
 4. Show the details of the form that you can edit.
 5. Save or cancel your changes.
 
