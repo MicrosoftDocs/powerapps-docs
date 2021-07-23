@@ -28,8 +28,6 @@ Solution checker runs offline analysis on a single solution file and requires th
 
 - Active layer hiding customizations
 - Malformed or corrupted metadata
-- Duplicate site maps
-- Soft deleted apps causing upgrade failures
 
 ## Use object checker
 1. Navigate to any solution containing the problematic object. You may run object checker within both managed and unmanaged solutions.
