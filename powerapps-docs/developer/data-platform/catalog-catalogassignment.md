@@ -2,7 +2,7 @@
 title: "Catalog and CatalogAssignment tables (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to use the Catalog and CatalogAssignment tables to expose events in your solution"
 ms.custom: ""
-ms.date: 07/12/2021
+ms.date: 07/22/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -185,6 +185,14 @@ To set this in the Power Apps UI:
     :::image type="content" source="media/catalog-managed-properties.deselect-allow-customizations.png" alt-text="Deselect allow customizations.":::
 
 1. Click **Done**
+
+## Table Diagram
+
+The following diagram shows the relationships between the Catalog and CatalogAssignment tables
+
+:::image type="content" source="media/catalog-catalogassignment-public.png" alt-text="Catalog and CatalogAssignment tables diagram":::
+
+The self-referential relationship using `ParentCatalogId` is what allows for creating the two-level hierarchy between one solution catalog and multiple catalogs that represent categories using catalog records.
 
 ## Catalog table columns
 
