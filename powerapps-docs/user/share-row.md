@@ -62,8 +62,11 @@ Any user that you want to share a row with needs to have basic level access that
     > ![Select add more users or team](media/share-row-add-more-users.png "Select to add more users or team")
 
 
-5. Select a user or team one at a time, and then grant them the appropriate permissions to the row. 
+5. Select a user or team one at a time, and then grant them the appropriate permissions to the row. <br> If check boxes are disabled it means a user or team does not have basic privileges to the record. For more information on user access, see [Check your user access to a row](access-checker).
 
+
+    > [!div class="mx-imgBorder"]
+    > ![Select a user or team and assign them permission to the row.](media/share-row-assign-permission.png "Select a user or team and assign them permission to the row.")
 
 
 7. in the list on the left pane of the share dialog. When you select a record, you will see permissions on the right-hand pane to assign to the selected user(s) or team(s)
