@@ -56,7 +56,7 @@ Keep ownership of a row and use the share feature to share the row with another 
     > [!div class="mx-imgBorder"]
     > ![Select add user or team in the lookup.](media/share-row-lookup-rows.png "Select add user or team in the lookup")
 
-4. The user or team that you selected is listed under the lookup column. To add additional users or teams repeat the process or to remove a user or team from the list select **X** next to the name.
+4. The user or team that you selected is listed under the lookup column. To add additional users or team repeat the process. <br> To remove a user or team from the list, select **X** next to the name.
 
     > [!div class="mx-imgBorder"]
     > ![Select add more users or team](media/share-row-add-more-users.png "Select to add more users or team")
@@ -69,7 +69,7 @@ Keep ownership of a row and use the share feature to share the row with another 
     > ![Select a user or team and assign them permission to the row.](media/share-row-assign-permission.png "Select a user or team and assign them permission to the row.")
 
 
-6. Select **Share** to save your changes. The changes made to all users or teams will be shared and options saved.
+6. Select **Share** to save your changes. 
 
     > [!div class="mx-imgBorder"]
     > ![Sharing is successful.](media/share-row-shared.png "Sharing is successful.")
