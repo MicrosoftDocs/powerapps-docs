@@ -25,7 +25,7 @@ search.app:
  
  If you want to keep ownership of a row but let someone else work on the row with you then use the share option.
  
-Any user that you want to share a row with needs to have basic level access that is granted by a system administrator. If you cannot select an option when you share a row then you need to contact your system administrator and verify if the user or team can be granted basic access based on your organizations roles and access defined by your administrator.
+Any user that you share a row with needs to have basic level access that is granted by a system administrator. If you cannot select permission such as read or write then contact your system administrator and check if the user or team has the required access set by your administrator.
 
 > ![Note]
 > This feature is not supported on Power Apps mobile or when you're using the app in offline mode with no internet connection. 
