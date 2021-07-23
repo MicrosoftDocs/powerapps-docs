@@ -65,8 +65,10 @@
         href: ../user/lookup-field.md
       - name: View a profile card
         href: ../user/profile-cards.md
-      - name: Assign or share rows
+      - name: Assign or share a row 
         href: ../user/assign-or-share-records.md
+      - name: Preview: Share a row with someone else
+        href: ../user/share-row.md
       - name: Share rows using Access Team
         href: ../user/Access-team.md
       - name: Check your user access to a record
