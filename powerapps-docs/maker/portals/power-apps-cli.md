@@ -298,7 +298,7 @@ In this file, you can have the table (entity) name with table ID, list of attrib
 
 Additionally, you can use the `OS` variable to access the operating system's environment variables.
 
-Here's an example of the profile YAML file that has unique schema details:
+Here's an example of this "test.deployment.yml"  profile YAML file that has unique schema details:
 
 ```yml
 adx_sitesetting:
@@ -306,8 +306,8 @@ adx_sitesetting:
       adx_value: ${OS.FacebookAppId} 
       adx_name: Authentication/OpenAuth/Facebook/AppId
     - adx_sitesettingid: 5ad86900-b5d7-43ac-8359-482529724979
-      adx_value: env_variable
-    adx_name: Authentication/OpenAuth/Facebook/Secret
+      adx_value: contoso_sample
+      adx_name: Authentication/OpenAuth/Facebook/Secret
 adx_contentsnippet:
     - adx_contentsnippetid: b0a1bc03-0df1-4688-86e8-c67b34476510
       adx_name: PowerBI/contoso/sales
