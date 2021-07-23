@@ -23,13 +23,11 @@ search.app:
  
  [!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
  
-You can edit multiple rows (bulk edit) in model-driven apps at once and update several columns of data in a single action. This is useful in scenarios when you need to update the same column in multiple rows such as change a website or phone number for multiple accounts from the same company.
+You can edit multiple rows in model-driven apps to update several columns of data in a single action. This is useful in scenarios when you need to update the same column in multiple rows such as change a website or phone number for multiple accounts records.
 
-Editing multiple records, or bulk edit now incorporates table forms that you're familiar with and use every day This includes the ability to change the form you want to use when editing multiple rows to help facilitate a quicker and easier process by using the form or forms you use in your daily tasks. Bulk edit is available from the view pages for a table.  
+When you edit multiple rows you can also select the form that that you want to edit. Columns such as timeline wall, quick view forms, reference panel, and etc. which you can edit indivdually aren't available when you're editing multple rows.
 
-When you're using bulk edit there's some columns such as timeline wall, quick view forms, reference panel, and etc. that you can edit indivdually but you can't edit them using bulk edit. 
-
-To open the bulk edit dialog, navigate or open the view page with the list of rows that you want to change. Select on two or more rows in the view page and then select **Edit** on the command bar.
+To open the bulk edit dialog, go to view page with the list of rows that you want to change. Select two or more rows and then on the command bar, select **Edit**.
 
 ![Edit multiple rows.](media/bulk-edit.gif "Edit multiple rows")
 
