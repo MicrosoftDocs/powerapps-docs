@@ -192,7 +192,6 @@ Customizers can now use the [powerbi Liquid tag](../liquid/portals-entity-tags.m
 ## Considerations and limitations
 
 - Power Apps portals doesn't support [Azure Analysis Services live connections](/power-bi/developer/embedded/embedded-row-level-security#working-with-analysis-services-live-connections). You can use Analysis Services in import mode with row-level security (RLS) applied in the report instead of Analysis Services.
-- Power Apps portals doesn't support guest users for Power BI dashboards and reports. The following message is displayed when a guest user tries to sign in to Power BI on the portal page: <br> `Selected user account does not exist in tenant '[Tenant Name]' and cannot access the application '[App ID]' in that tenant. The account needs to be added as an external user in the tenant first. Please use a different account.`
 - Portals with version [9.3.4.x](../versions/version-9.3.4.x.md) or later support the following capabilities:
     - Dashboards and report from Azure Analysis Services using [live connections](/azure/analysis-services/analysis-services-connect-pbi).
     - Dashboards with [role-based security](/power-bi/admin/service-admin-rls).
