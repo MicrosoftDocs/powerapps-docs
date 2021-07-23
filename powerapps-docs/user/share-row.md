@@ -62,7 +62,7 @@ Any user that you want to share a row with needs to have basic level access that
     > ![Select add more users or team](media/share-row-add-more-users.png "Select to add more users or team")
 
 
-5. Select a user or team one at a time, and then grant them the appropriate permissions to the row. <br> <br> If check boxes are disabled it means a user or team does not have basic privileges to the record. For more information on user access, see [Check your user access to a row](access-checker).
+5. Select a user or team one at a time, and then grant them the appropriate permissions to the row. <br> <br> If check boxes are disabled it means a user or team does not have basic privileges to the row. For more information on user access, see [Check your user access to a row](access-checker).
 
 
     > [!div class="mx-imgBorder"]
@@ -79,17 +79,17 @@ Any user that you want to share a row with needs to have basic level access that
  
  ## Issues and errors
  
-1. If you have been disconnected and no longer connected to a network while sharing a record you will not be able to set or update options for users or teams.  Share will be unavailable as an option on a view or form if you are offline.
+1. If are disconnected from the internet when sharing a row, then you won't be able to set or update options for users or teams. Sharing won't be available.
 
    > [!div class="mx-imgBorder"]
    > ![Sharing and not internet connection.](media/share-ts1.png "Sharing and not internet connection.")
 
-2. If you get a generic error while sharing it means that one or more of the rows could not be shared. The users will be hi-lighted in red. You can selcted on Share in the dialog to attempt another share with those users or you can close the dialog and retry.  This will usually happen if you are sharing many records in one Share attempt.
+2. If you get a generic error while sharing, this means that one or more of the rows could not be shared. The users will be hi-lighted in red. You can selcted on **Share** in the dialog to attempt another share with those users or you can close the dialog and retry. This usually happens if you are sharing lots of rows at once.
 
    > [!div class="mx-imgBorder"]
    > ![Can't share the row with user.](media/share-ts2.png "Can't share a row with user.")
 
-3. You may see an error if the system is unable to retrieve the users to assign share rights or sharing fails due to access related issues.
+3. You may see an error when the system is unable to retrieve the users to assign share rights or sharing fails due to access related issues.
 
 
    > [!div class="mx-imgBorder"]
