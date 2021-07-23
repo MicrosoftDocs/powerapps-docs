@@ -48,3 +48,11 @@ Legend
 4. Show the details of the form that you can edit.
 5. Save or cancel your changes.
 
+## Switch forms
+
+When you're in edit mode, you an easily switch from the default form to another form that you need to update. To switch a form, select the chevron icon and then select the form you want to edit.
+
+> [!div class="mx-imgBorder"]
+> ![Switch to another form.](media/bulk-edit-change-form.png "Switch to another form.")
+
+
