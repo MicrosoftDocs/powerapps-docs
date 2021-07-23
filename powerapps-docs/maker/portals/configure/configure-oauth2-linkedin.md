@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2021
+ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: tapanm
 contributors:
@@ -18,7 +19,7 @@ contributors:
 
 As explained in [Configure ah OAuth 2.0 provider for portals](configure-oauth2-provider.md), LinkedIn is one of several identity providers that use the OAuth 2.0 protocol. To get started with configuring LinkedIn as the identity provider, select **Configure** from the [provider settings](use-simplified-authentication-configuration.md#add-configure-or-delete-an-identity-provider) page.
 
-![Configure the LinkedIn app](media/use-simplified-authentication-configuration/configure-linkedin.png "Configure the LinkedIn app")
+![Configure the LinkedIn app.](media/use-simplified-authentication-configuration/configure-linkedin.png "Configure the LinkedIn app")
 
 ## Step 1. Create the LinkedIn app
 

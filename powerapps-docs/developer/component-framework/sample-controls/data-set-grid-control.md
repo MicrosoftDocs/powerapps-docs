@@ -20,7 +20,7 @@ This sample component shows how to change the user experience of interacting wit
 [!INCLUDE[cc-terminology](../../data-platform/includes/cc-terminology.md)]
 
 > [!div class="mx-imgBorder"]
-> ![Data Set Grid component](../media/data-set-grid.png "Data Set Grid component")
+> ![Data Set Grid component.](../media/data-set-grid.png "Data Set Grid component")
 
 ## Available for 
 

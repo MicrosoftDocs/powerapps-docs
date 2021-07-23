@@ -7,11 +7,15 @@ ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 07/06/2021
+ms.subservice: canvas-maker
 ms.author: chmoncay
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - chmoncay
 ---
 
 # Drop down control in Power Apps
@@ -74,7 +78,7 @@ A **Drop down** control conserves screen real estate, especially when the list c
 
 **[Italic](properties-text.md)** – Whether the text in a control is italic.
 
-**[OnChange](properties-core.md)** – Actions to perform when the user changes the value of the drop-down.
+**[OnChange](properties-core.md)** – Actions to perform when the user changes the value of a control (for example, by adjusting a slider).
 
 **[OnSelect](properties-core.md)** – Actions to perform when the user taps or clicks a control.
 

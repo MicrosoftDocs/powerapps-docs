@@ -7,11 +7,15 @@ ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: nabuthuk
 ms.date: 05/24/2021
+ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType:
   - maker
 search.app:
   - PowerApps
+contributors:
+  - nkrb
+  - emcoope-msft
 ---
 
 # Building responsive canvas apps  
@@ -56,14 +60,14 @@ Before you start using the responsive layouts, you need to do the following:
 1. Open the app where you want to use the responsive layout.
 1. Go to **File** > **Settings** > **Display** to disable **Scale to fit**, **Lock aspect ratio**, and **Lock orientation** and select **Apply**.
 
-   ![Settings disable lock orientation](media/create-responsive-layout/settings-disable-lock-orientation.png "Settings disable lock orientation")
+   ![Settings disable lock orientation.](media/create-responsive-layout/settings-disable-lock-orientation.png "Settings disable lock orientation")
 
 ## Responsive layouts
 
 The following responsive layouts can be created by adding a new screen and selecting the appropriate option from the **Layout** tab: 
 
 > [!div class="mx-imgBorder"]
-> ![Screen layouts](media/create-responsive-layout/different-screen-layouts.png "Screen layouts")
+> ![Screen layouts.](media/create-responsive-layout/different-screen-layouts.png "Screen layouts")
 
 > [!NOTE]
 > The new responsive layouts are available to the apps formats but the new screen templates are available only for **Tablet** format.
@@ -114,7 +118,7 @@ To build a responsive screen:
 1. Now from the **Insert** panes in the left sidebar, under **Layout** tab, select **Horizontal container**. 
 
    > [!div class="mx-imgBorder"]
-   > ![Insert containers](media/create-responsive-layout/insert-containers.png "Insert containers")
+   > ![Insert containers.](media/create-responsive-layout/insert-containers.png "Insert containers")
 
 1. The top-most container needs to be sized to take the entire space with these properties. It will be the same size as the screen as it resizes.  
    1. X = 0 
@@ -125,12 +129,12 @@ To build a responsive screen:
 1. Now, from the **Insert** pane add two **Vertical containers** into the Horizontal container. 
 
    > [!div class="mx-imgBorder"]
-   > ![Add vertical containers](media/create-responsive-layout/add-two-vertical-containers.png "Add vertical containers")
+   > ![Add vertical containers.](media/create-responsive-layout/add-two-vertical-containers.png "Add vertical containers")
 
 1. To make the containers, fill the full vertical space, Select **Container1** and set the `Align (vertical)` property to `Stretch`.  
 
    > [!div class="mx-imgBorder"]
-   > ![Align stretch](media/create-responsive-layout/align-property-stretch.png "Align stretch")
+   > ![Align stretch.](media/create-responsive-layout/align-property-stretch.png "Align stretch")
 
 1. To divide the screen between the content, use the `Fill portions` property on the two child containers. The left container will take up 1/4 of the screen space. 
    1. Select **Container2**. You'll see that the `Flexible width` property is turned on. Set the `Fill portions` to 1. 
@@ -139,20 +143,20 @@ To build a responsive screen:
 1. Add few buttons to create a menu. Rename the buttons as needed.  
 
    > [!div class="mx-imgBorder"]
-   > ![Add buttons](media/create-responsive-layout/add-buttons-to-container.png "Add buttons")
+   > ![Add buttons.](media/create-responsive-layout/add-buttons-to-container.png "Add buttons")
 
 1. Select **Container3** and add a Horizontal container and turn off the `Flexible height` property. Set `Height` to 100. Set `Align (vertical)` to `Stretch`.  
 1. Add some **Icons** into **Container4**. Change the icons to be different with the icon property.  
 
    > [!div class="mx-imgBorder"]
-   > ![Add icons](media/create-responsive-layout/add-icons-to-container.png "Add icons")
+   > ![Add icons.](media/create-responsive-layout/add-icons-to-container.png "Add icons")
 
 1. Select **Container4**. Set the `Justify (horizontal)` property to `End`. Set the `Align (vertical)` to `Center`. Set `Gap` to 40 to create space between the icons.  
 1. Select **Container3**. Set `Align (horizontal)` to `Stretch`. Set `Vertical Overflow` to `Scroll`.  
 1. Add different **Label**, **Inputs**, **Media**  until they extend beyond the container. Change the color of the rectangles to be different. You'll see a scroll bar to access the unseen content. 
 
    > [!div class="mx-imgBorder"]
-   > ![Add different inputs](media/create-responsive-layout/add-different-inputs-media-icons.png "Add different inputs")  
+   > ![Add different inputs.](media/create-responsive-layout/add-different-inputs-media-icons.png "Add different inputs")  
 
 1. Select Preview or F5. Change the size of the browser window to see how your app adjusts to different screen sizes.
 

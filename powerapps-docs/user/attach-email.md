@@ -7,6 +7,7 @@ ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 6/30/2021
+ms.subservice: end-user
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
@@ -22,10 +23,10 @@ search.app:
 
 Having the ability to attach file(s) to a message is one of the most useful features of email. You can attach a file using one of the two ways:
 
-   ![How to attach a file to email](media\email-how-to-attach-file-to-email-1a.png "How to attach a file to email")
+   ![How to attach a file to email.](media\email-how-to-attach-file-to-email-1a.png "How to attach a file to email")
 
    1. **Attach file**. Located in the top nav bar, **Attach file** allows you to do file attachments.
-   2. **New Attachments**. Located above the rich text editor, the **New Attachments** ![New Attachments](media\email-new-attachment-icon.png "new attachment") icon allows you to use drag-and-drop or copy-and-paste functionality. 
+   2. **New Attachments**. Located above the rich text editor, the **New Attachments** ![New Attachments.](media\email-new-attachment-icon.png "new attachment") icon allows you to use drag-and-drop or copy-and-paste functionality. 
 
       > [!Note] 
       > Once you save your email, you can use **Attach file** and **New Attachments** interchangeably.
@@ -39,7 +40,7 @@ You can attach an unlimited number of files to an email; however, there are file
 
 **Enhanced email** is the default email form, however you can switch forms by doing the following:
 
-   ![Switch forms](media\email-work-with-attachments-1a.png "Switch forms")
+   ![Switch forms.](media\email-work-with-attachments-1a.png "Switch forms")
    
    1. Under the email subject name, click on the caret (v) next to **Email**
    2.	A drop-down appears with a list of email form options you can choose from.<BR><BR>
@@ -48,14 +49,14 @@ File attachments display differently, depending on the email form you are workin
 
 ## Email form file attachment
 
-   ![Email form file attachment](media\email-work-with-attachments-2a.png "Email form file attachment")
+   ![Email form file attachment.](media\email-work-with-attachments-2a.png "Email form file attachment")
 
    1. **Email**. This display confirms which email form you are working in. 
    2. **Attachment**. This section displays a list of file attachments in a vertical view and only displays the first three attachments.
    3. **File count**. This displays when you have more files than what can be viewed and allows you to see the total number of attached files on the left side under the last attachment with the option to page over to see more images.
 
 ### Enhanced email form file attachment
-   ![Work with attachments](media\email-work-with-attachments-13b.png "Work with attachments")
+   ![Work with attachments.](media\email-work-with-attachments-13b.png "Work with attachments")
 
    1. **Enhanced Email**. This display confirms you are working in the **Enhanced email** form.
    2. **Attached files**. This section displays all your email  attachments in a tile view above your message horizontally. The defaulted setting for the maximum number of files that can display is five attachments before displaying the page forward functionality.
@@ -69,7 +70,7 @@ When you’ve attached one or more files to a message, you can manage them using
 
 Select commands allow you to select individual files or multiple files at once.
 
-   ![Attachment command bar](media\email-working-with-the-attachment-command-bar-11a.png "Work with the attachment command bar")
+   ![Attachment command bar.](media\email-working-with-the-attachment-command-bar-11a.png "Work with the attachment command bar")
 
    Legend
    1. **Select All**. This command is located on the right, above your attached files and allows you to select all file attachments at once. 
@@ -82,7 +83,7 @@ Select commands allow you to select individual files or multiple files at once.
 
 Formatting of file attachments in email can be realign based on the device being used and format it is being worked in.
 
-  ![Format file attachments](media\email-working-with-the-attachment-command-bar-12a.png "Format file attachments")
+  ![Format file attachments.](media\email-working-with-the-attachment-command-bar-12a.png "Format file attachments")
 
    1. **Format Display** Regardless of format display, file attachments will only display the number of files that are enabled by your system administrator.
    2. **Page view**. The page view displays the total number of email attachments and always is displayed under the file attachments. 
@@ -90,14 +91,14 @@ Formatting of file attachments in email can be realign based on the device being
 ### Delete and download commands
 These are two of the most important commands when working with images. 
 
-   ![Delete and download commands](media\email-working-with-the-attachment-command-bar-13a.png "Delete and download commands")
+   ![Delete and download commands.](media\email-working-with-the-attachment-command-bar-13a.png "Delete and download commands")
 
    1. **Delete**. This command works with the **Select** commands. You must first select a file before you can delete it. A confirmation request appears, requiring you to confirm you want to delete the file(s) you’ve selected.
    2. **Download**. This command also works with the **Select** commands and your browser download settings, allowing you to download an individual file or multiple files at once.  
 
 ## Preview image attachments
 
-   ![How to preview images attachments](media\email-how-to-preview-images-attachments-11a.png "How to preview images attachments")
+   ![How to preview images attachments.](media\email-how-to-preview-images-attachments-11a.png "How to preview images attachments")
 
    1. **More options**. This command provides a list of actions for that file type.
    2. **Non-preview image**. Only non-preview image types allow you to either **export selected records**, **download**, or **delete** the attached file.
@@ -122,7 +123,7 @@ The use of visual aids helps users convey a tremendous amount of information wit
 
 You can drag-and-drop or copy-and-paste images into the email.
 
-   ![How to view and insert images in email](media\email-how-to-view-and-insert-images-in-email-1b.png "How to view and insert images in email")
+   ![How to view and insert images in email.](media\email-how-to-view-and-insert-images-in-email-1b.png "How to view and insert images in email")
 
    1. **Email images** You can adjust the image size.  
    2. **Save**. When you complete your edits, select **Save** or **Save & Close**.

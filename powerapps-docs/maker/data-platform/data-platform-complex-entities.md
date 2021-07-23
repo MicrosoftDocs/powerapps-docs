@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.component: cds
 ms.topic: conceptual
 ms.date: 08/28/2020
+ms.subservice: dataverse-maker
 ms.author: kvivek
 search.audienceType: 
   - maker

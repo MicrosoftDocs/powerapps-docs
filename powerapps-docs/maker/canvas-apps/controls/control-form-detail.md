@@ -8,11 +8,16 @@ ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 07/06/2017
+ms.subservice: canvas-maker
 ms.author: aneesa
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - chmoncay
+  - aneesmsft
 ---
 # Edit form and Display form controls in Power Apps
 Display, edit, and create a record in a data source.
@@ -20,7 +25,7 @@ Display, edit, and create a record in a data source.
 ## Description
 If you add a **Display form** control, the user can display all fields of a record or only the fields that you specify. If you add an **Edit form** control, the user can edit those fields, create a record, and save those changes to a data source.
 
-![Example form and form view controls](./media/control-form-detail/form-detail-intro.png)
+![Example form and form view controls.](./media/control-form-detail/form-detail-intro.png)
 
 If you add a **[Gallery](control-gallery.md)** control, you can configure it to show a table in a data source and then configure a form to show whichever record the user selects in the gallery. You can also add one or more **[Button](control-button.md)** controls that the user can select to save edits, cancel edits, and create a record. By using controls together, you can [create a complete solution](../working-with-forms.md).
 

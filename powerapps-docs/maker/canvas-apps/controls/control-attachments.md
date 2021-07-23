@@ -6,12 +6,16 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.date: 07/06/2021
+ms.subservice: canvas-maker
 ms.author: chmoncay
 ms.reviewer: tapanm
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - chmoncay
 ---
 
 # Attachments control in Power Apps
@@ -35,11 +39,11 @@ An **Attachments** control lets you open, add, and delete files from a SharePoin
 
 **MaxAttachmentSize** – The maximum allowed file size in MB of each new attachment.  Currently there is a limit of 50 MB.
 
-**OnAddFile** – How the app responds when the user adds a new file attachment.
+**OnAddFile** – Actions to perform when the user adds a new file attachment.
 
-**OnRemoveFile** – How the app responds when the user deletes an existing attachment.
+**OnRemoveFile** – Actions to perform when the user deletes an existing attachment.
 
-**OnUndoRemoveFile** – How the app responds when the user restores a deleted attachment.
+**OnUndoRemoveFile** – Actions to perform when the user restores a deleted attachment.
 
 ## Additional properties
 **[AccessibleLabel](properties-accessibility.md)** – Label for screen readers. Should describe the purpose of the attachments.

@@ -2,6 +2,7 @@
 title: Microsoft Power Platform CLI | Microsoft Docs
 description: "Install Microsoft Power Platform CLI to create, debug, and deploy code components by using Power Apps component framework."
 keywords: Microsoft Power Platform CLI, code components, component framework, CLI
+ms.subservice: dataverse-developer
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
@@ -24,24 +25,38 @@ Microsoft Power Platform CLI is a simple, one-stop developer CLI that empowers d
 
 ## Install Microsoft Power Platform CLI
 
-1. Install [Microsoft Power Platform CLI](https://aka.ms/PowerAppsCLI).
+You can use either of the following ways to install Microsoft Power Platform CLI.
+
+### Using Power Platform VS Code Extension
+
+To install Microsoft Power Platform CLI using Visual Studio Code Extension:
+
+1. Open [Visual Studio Code](https://code.visualstudio.com/).
+1. Select **Extensions** icon from the **Activity** panel. In the search bar, enter **Power Platform VS Code Extension**.
+1. Select **Install**. Once the installation is finished, restart your Visual Studio Code to see the extension within the **Terminal** window.
+
+   > [!div class="mx-imgBorder"]
+   > ![VS code extension install.](media/power-platform-vs-code-extension-install.png "VS code extension install")
+   
+> [!NOTE]
+> Microsoft Power Platform Visual Studio Code Extension updates automatically. 
+
+1. You can also initiate the install into Visual Studio Code directly from [Marketplace]( https://aka.ms/ppcvscode) and it will launch Visual Studio Code and commence the extension installation.
+
+### Standalone Power Platform CLI
+
+To install standalone Power Platform CLI:
+
+1. Download and install [Microsoft Power Platform CLI](https://aka.ms/PowerAppsCLI).
 
 1. To take advantage of all the latest capabilities, update Microsoft Power Platform CLI tooling to the latest version by using this command (not applicable for Power Platform VS Code Extension):
     ```CLI
     pac install latest
+
     ```
 > [!NOTE]
 > - Currently, Microsoft Power Platform CLI is supported only on Windows 10.
-> - Power Platform Extension for Visual Studio Code is in public preview, and works on both Windows 10 and macOS. 
-
-## Install Power Platform VS Code Extension
-
-You can also install the [Power Platform VS Code Extension](https://aka.ms/ppcvscode), which installs Microsoft Power Platform CLI for use within Visual Studio Code. The Power Platform extension makes it easy to manage Microsoft Power Platform environments and allows the developer to create and build packages, and deploy solutions and portals.
-
-> [!IMPORTANT]
-> - Power Platform Extension for Visual Studio Code is in public preview. 
-> - Preview features aren't meant for production use, and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
-> - The Microsoft Power Platform CLI version that is included with this extension may also be a public preview version. We recommend that you install the latest version by using the steps described earlier in this topic.
+> - Power Platform VS Code Extension is in public preview, and works on both Windows 10 and macOS. 
 
 ## Common commands
 
@@ -188,7 +203,7 @@ Commands for working with [Dataverse solution projects](../../maker/data-platfor
 |clone|Creates a solution project based on the existing solution project. It has the following parameters:<ul><li>*name*: The name of the solution to be exported.</li><li>*targetversion*: The version that the exported solution supports.</li><li>*include*: Settings that should be included in the solution being exported. It has the following values: autonumbering, calendar, customization, emailtracking, externalapplications, general, isvconfig, marketing, outlooksynchronization, relationshiproles, sales</li></ul>|`pac solution clone -–name  sampleSolution --version 1.0.0.2 --include general`|
 |import|Imports a Dataverse solution to an environment. It requires that you be connected to an environment [Auth commands](#auth), and has the following parameters:<ul><li>*activate-plugins*: Activates plug-ins and workflows in the environment after the import (alias: -ap).</li><li>*async*: Imports the solution asynchronously (alias: -a).</li><li>*force-overwrite*: Forces an overwrite of unmanaged customizations (alias: -f). </li><li>*import-as-holding*: Imports the solution as a holding solution (alias: -h).</li><li>*max-async-wait-time*: Maximum asynchronous wait time in minutes. Default value is 60 minutes (alias: -wt).</li><li>*path*: Path to the solution .zip file. If not specified, assumes the current folder (alias: -p).</li><li>*publish-changes*: Publishes changes after successful import (alias: -pc). </li><li>*skip-dependency-check*: Skips the dependency check against dependencies flagged as product update (alias: -s). </li><li>*convert-to-managed*: Converts the solution as managed upon import.</li></ul>|`pac solution import --path c:\Users\Documents\Solution.zip `|
 |export|Exports a Dataverse solution from an environment. It requires that you be connected to an environment [Auth commands](#auth), and has the following parameters:<ul><li>*path*: Complete file name where the exported solution .zip file will be saved.</li><li>*name*: Name of the solution that needs to be exported.</li><li>*managed*: Defines whether the solution should be exported as a managed solution.</li><li>*targetversion*: The version that the exported solution supports.</li><li>*include*: Settings that should be included in the solution being exported.</li></ul>|`pac solution export --path c:\Users\Documents\Solution.zip -- name SampleComponentSolution --managed true --targetversion 10.0.03 --include general`|
-|list|Lists all solutions from a Dataverse environment. It requires that you be connected to an environment [Auth commands](#auth). This command has no parameters:|`pac solution list`  |
+|list|Lists all solutions from a Dataverse environment. It requires that you be connected to an environment [Auth commands](#auth). This command has no parameters.|`pac solution list`  |
 
 
 ### Auth
@@ -199,11 +214,11 @@ Commands to [authenticate to Dataverse](../component-framework/import-custom-con
 
 |Parameter Name|Description|Example|
 |-------------|-----------|-------|
-|create| Creates the authentication profile for your organization by passing the `url` parameter. Pass the organization URL for the `url` parameter.|`pac auth create --url https://Myorg.crm.dynamics.com`|
-|list|Provides the list of authentication profiles.|`pac auth list`|
-|select|Provides a way to switch between previously created authentication profiles by passing the `index` parameter.|`pac auth select --index 2`|
-|delete|Deletes the authentication profile created by passing the `index` parameter.|`pac auth delete --index 2`|
-|clear|Clears all the authentication profiles created on the local machine.|  `pac auth clear`|
+|create| Creates the authentication profile for your organization by passing the `url` parameter. Shows AAD dialog if sign in credentials are not specified, and has the following arguments:<ul><li> *name*: The name to give to this auth profile, maximum 12 characters (alias: -n). </li><li> *kind*: Kind of auth profile, defaults to Dataverse (alias: -k).</li><li> *url*: Resource URL to connect to (alias: -u).</li><li>  *username*: Optional: Username to authenticate with (alias: -un).</li><li> *password*: Optional: Password to authenticate with (alias: -p).</li><li> *applicationId*: Optional: Application ID to authenticate with (alias: -id).</li><li> *clientSecret*: Optional: Client secret to authenticate with (alias: -cs).</li><li> *tenant*: Optional: Tenant ID if using `app id` and `client secret` (alias: -t).</li><li>  *cloud*: Optional: Cloud instance to authenticate with. Values: Public, Tip1, Tip2, UsGov, UsGovHigh, UsGovDod (alias: -ci).</li></ul>|`pac auth create --url https://Myorg.crm.dynamics.com`|
+|list|Provides the list of authentication profiles stored on current computer. This command has no arguments.|`pac auth list`|
+|select|Provides a way to switch between previously created authentication profiles by passing the `index` parameter.<br/>It has the following arguments:<ul><li> *index*: The index of the profile to be active (alias: -i).</li><li> *name*: The name of the profile to be active (alias: -n).</li></ul>|`pac auth select --index 2`|
+|delete|Deletes the authentication profile created by passing  the `index` parameter.<br/>It has the following arguments:<ul><li> *index*: The index of the profile to be deleted (alias: -i).</li><li> *name*: The name of the profile to be deleted (alias: -n).</li></ul>|`pac auth delete --index 2`|
+|clear|Clears all the authentication profiles created on the local machine. This command has no arguments.| `pac auth clear`|
 
 ### Telemetry
 
@@ -240,7 +255,9 @@ Manages to create a [plug-in](./plug-ins.md) project.
 
 ## Uninstall Microsoft Power Platform CLI 
 
-To uninstall Microsoft Power Platform CLI tooling, run the MSI from [here](https://aka.ms/PowerAppsCLI).
+To uninstall Microsoft Power Platform CLI tooling, run the MSI from [here](https://aka.ms/PowerPlatformCLI).
+
+To uninstall the Visual Studio Code extension, follow the same steps as installing the extension, except this time select the uninstall button.
 
 If you're a Private Preview participant and have an older version of CLI, follow these steps:
 

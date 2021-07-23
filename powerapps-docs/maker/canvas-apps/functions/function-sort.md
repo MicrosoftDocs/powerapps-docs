@@ -8,11 +8,15 @@ ms.topic: reference
 ms.custom: canvas
 ms.reviewer: nabuthuk
 ms.date: 04/26/2016
+ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - gregli-msft
+  - nkrb
 ---
 # Sort and SortByColumns functions in Power Apps
 Sorts a [table](../working-with-tables.md).
@@ -66,16 +70,16 @@ In addition to sorting ascending or descending, **SortByColumns** can sort based
 ## Examples
 For the following examples, we'll use the **IceCream** [data source](../working-with-data-sources.md), which contains the data in this table:
 
-![IceCream example](media/function-sort/icecream.png)
+![IceCream example.](media/function-sort/icecream.png)
 
 | Formula | Description | Result |
 | --- | --- | --- |
-| **Sort( IceCream, Flavor )**<br><br>**SortByColumns( IceCream, "Flavor" )** |Sorts **IceCream** by its **Flavor** column. The **Flavor** column contains strings, so the table is sorted alphabetically. By default, the sort order is ascending. | ![Alphabetically sorted](media/function-sort/icecream-flavor.png) |
-| **Sort( IceCream, Quantity )**<br><br>**SortByColumns( IceCream, "Quantity" )** |Sorts **IceCream** by its **Quantity** column.  The **Quantity** column contains numbers, so the table is sorted numerically.  By default, the sort order is ascending. |![Sorted numerically](media/function-sort/icecream-quantity-asc.png) |
-| **Sort( IceCream, Quantity, SortOrder.Descending )**<br><br>**SortByColumns( IceCream, "Quantity", SortOrder.Descending )** |Sorts **IceCream** by its **Quantity** column.  The **Quantity** column contains numbers, so the sort is done numerically.  The sort order has been specified as descending. |![Sorted numerically and descending](media/function-sort/icecream-quantity-desc.png) |
-| **Sort( IceCream, Quantity + OnOrder )** |Sorts **IceCream** by the sum of its **Quantity** and **OnOrder** columns for each record individually. The sum is a number, so the table is sorted numerically.  By default, the sort order is ascending.  Since we are sorting by a formula and not by raw column values, there is no equivalent using **SortByColumns**. |![Sorted numerically and ascending](media/function-sort/icecream-total.png) |
-| **Sort( Sort( IceCream, OnOrder ), Quantity )**<br><br>**SortByColumns( IceCream, "OnOrder", Ascending, "Quantity", Ascending )** |Sorts **IceCream** first by its **OnOrder** column, and then by its **Quantity** column.  Note that "Pistachio" rose above "Vanilla" in the first sort based on **OnOrder**, and then together they moved to their appropriate place based on **Quantity**. |![Sorted with Pistachio above Vanilla](media/function-sort/icecream-onorder-quantity.png) |
-| **SortByColumns( IceCream, "Flavor", [&nbsp;"Pistachio",&nbsp;"Strawberry"&nbsp;] )** |Sorts **IceCream** by it's **Flavor** column based on the single column table containing "Pistachio" and "Strawberry".  Records which have a **Flavor** of "Pistachio" will appear first in the result, followed by records that contain "Strawberry".  For values in the **Flavor** column that are not matched, such as "Vanilla", they will appear after the items that were matched. |![Sorted with Pistachio above Strawberry](media/function-sort/icecream-onflavor-sorttable.png) |
+| **Sort( IceCream, Flavor )**<br><br>**SortByColumns( IceCream, "Flavor" )** |Sorts **IceCream** by its **Flavor** column. The **Flavor** column contains strings, so the table is sorted alphabetically. By default, the sort order is ascending. | ![Alphabetically sorted.](media/function-sort/icecream-flavor.png) |
+| **Sort( IceCream, Quantity )**<br><br>**SortByColumns( IceCream, "Quantity" )** |Sorts **IceCream** by its **Quantity** column.  The **Quantity** column contains numbers, so the table is sorted numerically.  By default, the sort order is ascending. |![Sorted numerically.](media/function-sort/icecream-quantity-asc.png) |
+| **Sort( IceCream, Quantity, SortOrder.Descending )**<br><br>**SortByColumns( IceCream, "Quantity", SortOrder.Descending )** |Sorts **IceCream** by its **Quantity** column.  The **Quantity** column contains numbers, so the sort is done numerically.  The sort order has been specified as descending. |![Sorted numerically and descending.](media/function-sort/icecream-quantity-desc.png) |
+| **Sort( IceCream, Quantity + OnOrder )** |Sorts **IceCream** by the sum of its **Quantity** and **OnOrder** columns for each record individually. The sum is a number, so the table is sorted numerically.  By default, the sort order is ascending.  Since we are sorting by a formula and not by raw column values, there is no equivalent using **SortByColumns**. |![Sorted numerically and ascending.](media/function-sort/icecream-total.png) |
+| **Sort( Sort( IceCream, OnOrder ), Quantity )**<br><br>**SortByColumns( IceCream, "OnOrder", Ascending, "Quantity", Ascending )** |Sorts **IceCream** first by its **OnOrder** column, and then by its **Quantity** column.  Note that "Pistachio" rose above "Vanilla" in the first sort based on **OnOrder**, and then together they moved to their appropriate place based on **Quantity**. |![Sorted with Pistachio above Vanilla.](media/function-sort/icecream-onorder-quantity.png) |
+| **SortByColumns( IceCream, "Flavor", [&nbsp;"Pistachio",&nbsp;"Strawberry"&nbsp;] )** |Sorts **IceCream** by it's **Flavor** column based on the single column table containing "Pistachio" and "Strawberry".  Records which have a **Flavor** of "Pistachio" will appear first in the result, followed by records that contain "Strawberry".  For values in the **Flavor** column that are not matched, such as "Vanilla", they will appear after the items that were matched. |![Sorted with Pistachio above Strawberry.](media/function-sort/icecream-onflavor-sorttable.png) |
 
 ### Step by step
 To run these examples yourself, create the **IceCream** data source as a [collection](../working-with-data-sources.md#collections):

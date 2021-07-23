@@ -8,11 +8,15 @@ ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 07/06/2021
+ms.subservice: canvas-maker
 ms.author: chmoncay
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - chmoncay
 ---
 # Add a list box, a drop-down list, a combo box, or radio buttons to a canvas app
 
@@ -119,7 +123,7 @@ In these steps, you used an expression to create a list of items. You can apply 
 
 6. Arrange the list box and button so they're lined up vertically.
 
-    ![List box button](media\add-list-box-drop-down-list-radio-button\listboxbutton.png "List box button")
+    ![List box button.](media\add-list-box-drop-down-list-radio-button\listboxbutton.png "List box button")
 
 7. Add a **[Text Input](controls/control-text-input.md)** control, and name it "txtAdd".
 
@@ -141,7 +145,7 @@ In these steps, you used an expression to create a list of items. You can apply 
 
 12. Arrange **txtAdd** and **btnAdd** so they're lined up vertically underneath **lbItems** and **btnReset**.
 
-    ![All controls - before adding](media\add-list-box-drop-down-list-radio-button\allcontrolsbeforeadd.png "All controls - before adding")
+    ![All controls - before adding.](media\add-list-box-drop-down-list-radio-button\allcontrolsbeforeadd.png "All controls - before adding")
 
 13. Preview the app by pressing **F5**.
 
@@ -168,7 +172,7 @@ In these steps, you used an expression to create a list of items. You can apply 
 
 4. Arrange **btnDelete** so it's lined up vertically underneath **btnReset**
 
-    ![All controls with delete button](media/add-list-box-drop-down-list-radio-button/allcontrolsdeletebutton.png "All controls with delete button")
+    ![All controls with delete button.](media/add-list-box-drop-down-list-radio-button/allcontrolsdeletebutton.png "All controls with delete button")
 
 5. Preview the app by pressing **F5**.
 
