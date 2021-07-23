@@ -62,28 +62,42 @@ Any user that you want to share a row with needs to have basic level access that
     > ![Select add more users or team](media/share-row-add-more-users.png "Select to add more users or team")
 
 
-5. Select a user or team one at a time, and then grant them the appropriate permissions to the row. <br> If check boxes are disabled it means a user or team does not have basic privileges to the record. For more information on user access, see [Check your user access to a row](access-checker).
+5. Select a user or team one at a time, and then grant them the appropriate permissions to the row. <br> <br> If check boxes are disabled it means a user or team does not have basic privileges to the record. For more information on user access, see [Check your user access to a row](access-checker).
 
 
     > [!div class="mx-imgBorder"]
     > ![Select a user or team and assign them permission to the row.](media/share-row-assign-permission.png "Select a user or team and assign them permission to the row.")
 
 
-7. in the list on the left pane of the share dialog. When you select a record, you will see permissions on the right-hand pane to assign to the selected user(s) or team(s)
+6. Select **Share** to save your changes. The changes made to all users or teams will be shared and options saved.
 
-Note that the share button is disabled until you start assigning access rights.  After selecting the share access rights click on the Share button to save your changes.
+    > [!div class="mx-imgBorder"]
+    > ![Sharing is successful.](media/share-row-shared.png "Sharing is successful.")
 
-
-
+> ![NOTE] 
+> If you add additional users or teams after saving share access and the check box is disable but has a value, this means that your administrator has changed the basic privileges for the user, and they no longer have basic access rights, however, the share permissions is retained and isn't reset when the administrator changes the base privileges. Contact your system administrator to update a user’s access if you want to change or update the disabled options for sharing a row.
  
- ## Remove someone from a shared row
+ ## Issues and errors
  
- When you are the assigned owner of a row, you can remove another user the row is shared with.
- 
- 1. From a list of rows that you own, select the row that you want to remove someone from the shared row.
- 2. On the command bar, select **Share**.
- 3. On the share dialog box, select the user or team who you want to remove sharing from.
- 4. Select the **Remove Selected items**.
- 5. Select the **Share** button.
+1. If you have been disconnected and no longer connected to a network while sharing a record you will not be able to set or update options for users or teams.  Share will be unavailable as an option on a view or form if you are offline.
 
- 
+   > [!div class="mx-imgBorder"]
+   > ![Sharing and not internet connection.](media/share-ts1.png "Sharing and not internet connection.")
+
+2. If you get a generic error while sharing it means that one or more of the rows could not be shared. The users will be hi-lighted in red. You can selcted on Share in the dialog to attempt another share with those users or you can close the dialog and retry.  This will usually happen if you are sharing many records in one Share attempt.
+
+   > [!div class="mx-imgBorder"]
+   > ![Can't share the row with user.](media/share-ts2.png "Can't share a row with user.")
+
+3. You may see an error if the system is unable to retrieve the users to assign share rights or sharing fails due to access related issues.
+
+
+   > [!div class="mx-imgBorder"]
+   > ![Sharing failed](media/share-ts3.png "Sharing failed")
+
+<br><br>
+
+   > [!div class="mx-imgBorder"]
+   > ![Unable to share.](media/share-ts4.png "Unable to share.")
+
+
