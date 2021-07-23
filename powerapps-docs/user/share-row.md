@@ -33,7 +33,7 @@ Keep ownership of a row and use the share feature to share the row with another 
 
 ## Share rows
 
-1. You can share a row from a view page or when you open a row.
+1. Share a row from a view page or when you open a row.
 
     - **Share from the view page**: Select one or more rows on a view page and then select **Share** on the command bar.
 
