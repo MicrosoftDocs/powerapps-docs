@@ -43,7 +43,7 @@ Notify( "Custom page notify warning message", NotificationType.Warning )
 > [!div class="mx-imgBorder"]
 > ![Custom page notify warning message bar](media/page-powerfx-in-model-app/custom-page-notify-warning.png "Custom page notify warning message bar")
 
-## Navigating from a model-driven app form to a custom page
+## Navigating to a custom page
 
 This section provides examples of navigating from a model-driven app form to a custom page, navigating from a custom page to other custom pages or model-driven app form using Power Fx.
 
@@ -109,7 +109,7 @@ An app maker can enable multiple screens in a custom page. These should be consi
 
 ### See also
 
-<!-- Link to dev related article -->
+[Navigating to and from a custom page using client API](../../developer/model-driven-apps/clientapi/navigate-to-custom-page-examples.md)
 
 [Model-driven app custom page overview](model-app-page-overview.md)
 

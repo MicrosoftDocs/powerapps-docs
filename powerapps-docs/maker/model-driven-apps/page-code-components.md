@@ -54,9 +54,8 @@ In an environment, custom pages can use all the code components previously impor
 ![Get code component for a custom page.](media/add-component-to-model-app/get-code-components-for-custom-page.png "Get code component for custom page")
 
   > [!NOTE]
-  > If the code tab doesn't show up in the **Import component** pane, verify that the Power Apps component framework feature setting for canvas apps is enabled. More information: [Enable Power Apps component framework feature](../../developer/component-framework/component-framework-for-canvas-apps.md#enable-power-apps-component-framework-feature) 
-  > 
-  > Also, ensure that you are working on the latest canvas app studio authoring version. 
+  > - If the code tab doesn't show up in the **Import component** pane, verify that the Power Apps component framework feature setting for canvas apps is enabled. More information: [Enable Power Apps component framework feature](../../developer/component-framework/component-framework-for-canvas-apps.md) 
+  > - Also, ensure that you are working on the latest canvas app studio authoring version. 
 
 
 The newly added code component is now available under the **Code components** section. It can be added to a custom page.

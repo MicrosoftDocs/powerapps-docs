@@ -174,6 +174,6 @@ By default custom pages are not available in the new app designer until custom p
 
 [Using PowerFx in custom page](page-powerfx-in-model-app.md)
 
-[Navigating to and from a custom page in your model-driven app](navigate-page-examples.md)
+[Navigating to and from a custom page using client API](../../developer/model-driven-apps/clientapi/navigate-to-custom-page-examples.md)
 
 [Code components for custom page designer](../../developer/component-framework/component-framework-for-canvas-apps.md)
