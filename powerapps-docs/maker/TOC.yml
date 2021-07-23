@@ -1855,6 +1855,8 @@
            href: ./portals/release-updates.md
          - name: Version updates
            items:
+              - name: Version 9.3.7.x and later
+                href: /power-platform/released-versions/portals
               - name: Version 9.3.6.x
                 href: ./portals/versions/version-9.3.6.x.md
               - name: Version 9.3.4.x
