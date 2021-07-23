@@ -290,7 +290,7 @@ The following sections provide more details about different properties of the â€
 
 The **deploymentProfile** switch allows you to define a set of variables for the environment in YAML format. For example, you can have different deployment profiles (such as dev, test, prod) that have different schema details defined in the profile.
 
-If you're creating test profile, you can create file under **deployment-profiles** with the name "test.deployment.yml" (that is, <profileTag>.deployment.yml). And you can run command with tag (<profileTag>) to use this profile:
+If you're creating test profile, you can create file under **deployment-profiles** with the name "test.deployment.yml" (that is, \<profileTag\>.deployment.yml). And you can run command with tag (\<profileTag\>) to use this profile:
 
 `pac paportal upload --path "C:\portals\starter-portal" --deploymentProfile test`
 
