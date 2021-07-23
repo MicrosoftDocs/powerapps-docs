@@ -1,6 +1,6 @@
 ---
-title: "Share a row| MicrosoftDocs"
-description: How to share a row.
+title: "Share rows with a user or team| MicrosoftDocs"
+description: How to share a row with a user or team.
 author: mduelae
 manager: kvivek
 ms.service: powerapps
@@ -19,7 +19,7 @@ search.app:
   - D365CE
 ---
 
- # Share a row with someone else
+ # Share rows with a user or team
  
  [!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
  
