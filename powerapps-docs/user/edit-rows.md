@@ -34,7 +34,7 @@ To open the bulk edit dialog, navigate or open the view page with the list of ro
 ![Edit multiple rows.](media/bulk-edit.gif "Edit multiple rows")
 
 
-When you select edit on the command bar the **Edit (number of rows) records** dialog opens with the default form for the table.
+The **Edit (number of rows) records** dialog opens with the default form for the table.
 
 > [!div class="mx-imgBorder"]
 > ![How to user bulk edit](media/bulk-edit-legend.png "How to use bulk edit")
