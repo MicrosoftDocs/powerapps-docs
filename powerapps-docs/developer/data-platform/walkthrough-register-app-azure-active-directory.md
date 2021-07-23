@@ -2,7 +2,7 @@
 title: "Tutorial: Register an app with Azure Active Directory (Microsoft Dataverse) | Microsoft Docs"
 description: "Describes how to register an application with Azure Active Directory for authentication with Microsoft Dataverse web services."
 keywords: ""
-ms.date: 03/23/2021
+ms.date: 07/22/2021
 ms.service: powerapps
 ms.topic: article
 ms.assetid: 86c4a8a8-7401-6d75-7979-3b04b506eb0c
@@ -64,7 +64,7 @@ App registration can also be done by an application developer or individual user
 
     ![Add app permission.](media/azure-api-permissions-page.png "Add app permission")
 
-7. Search for and choose **Common Data Service** under the **APIs my organization uses** tab.
+7. Search for and choose **Dataverse** under the **APIs my organization uses** tab. If "Dataverse" is not found, then search for "Common Data Service".
     
     ![Select API.](media/app-registration-select-api-page.png "Select API")    
     > [!TIP]
