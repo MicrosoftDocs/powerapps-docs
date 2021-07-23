@@ -11,7 +11,7 @@
   - name: "Learning catalog"
     items:
     - name: "Learning catalog"
-      href: ../learning-catalog/get-started.md
+      href: ../learning-catalog/learning-catalog.md
     - name: Business Decision Maker
       href: ../learning-catalog/bdm.md
     - name: App maker
@@ -80,21 +80,33 @@
       - name: Use timeline
         href: ../user/add-activities.md
       - name: FAQs about activities
-        href: ../user/faq-for-timeline-and-activity.md
-      - name: Known issues for activities
-        href: ../user/activities-known-issues.md     
+        href: ../user/faq-for-timeline-and-activity.md 
     - name: Work with email
       items:
-      - name: View and create email through the activities grid
+      - name: Understand the email experience
         href: ../user/view-create-email.md
-      - name: Send email using the enhanced email experience
-        href: ../user/enhanced-email.md
-      - name: Insert an email template
-        href: ../user/insert-email-template.md
+      - name: View, compose and respond to email
+        href: ../user/view-compose-email.md
+      - name: Attach a file to email
+        href: ../user/attach-email.md
+      - name: Use the rich text editor toolbar in email
+        href: ../user/email-rich-text-editor.md
       - name: Send email to multiple recipients
         href: ../user/direct-email.md
       - name: Resolve an unresolved email recipient
         href: ../user/unresolved-email-recipient.md
+      - name: FAQs about email
+        href: ../user/activities-known-issues.md    
+      - name: Email templates
+        items:
+        - name: Create email templates
+          href: ../user/email-template-create.md
+        - name: Insert an email template
+          href: ../user/insert-email-template.md
+        - name: Convert an email to a template
+          href: ../user/email-template-convert.md
+        - name: Create a signature for emails
+          href: ../user/email-signature.md
     - name: Work with grid filters
       items:
       - name: Use grid filters
@@ -387,6 +399,8 @@
               href: ./canvas-apps/geospatial-component-input-address.md
           - name: Add Power BI data
             href: ./canvas-apps/powerapps-custom-visual.md
+          - name: Add editable tables
+            href: ./canvas-apps/add-editable-tables.md
           - name: Working with gallery
             href: ./canvas-apps/show-images-text-gallery-sort-filter.md
           - name: Control reference
@@ -529,6 +543,8 @@
           href: ./canvas-apps/working-with-rules.md
         - name: Create or update bulk records
           href: ./canvas-apps/create-update-records-bulk.md
+        - name: Use Power Apps Ideas (Experimental)
+          href: ./canvas-apps/power-apps-ideas.md
         - name: Formula reference
           items:
           - name: Overview
@@ -933,7 +949,7 @@
             href: ./canvas-apps/accessible-apps-limitations.md
       - name: Send notifications from an app
         href: ./canvas-apps/add-notifications.md
-      - name: Experimental and preview features
+      - name: Experimental, preview, and retired features
         href: ./canvas-apps/working-with-experimental-preview.md
   - name: Save and publish an app
     href: ./canvas-apps/save-publish-app.md
@@ -1087,9 +1103,13 @@
         items: 
         - name: Create an app
           href: ./model-driven-apps/create-model-driven-app.md
+        - name: Create an app with an account table
+          href: ./model-driven-apps/create-a-model-driven-app.md
       - name: Work with forms
         href: ./model-driven-apps/create-design-forms.md
         items:
+        - name: Create and edit a form
+          href: ./model-driven-apps/create-and-edit-a-model-driven-form.md
         - name: Design forms for efficiency
           href: ./model-driven-apps/design-productive-forms.md
           items: 
@@ -1215,14 +1235,16 @@
         items:
         - name: "Access a view definition"
           href: ./model-driven-apps/accessing-view-definitions.md
-        - name: Create and edit views
-          href: ./model-driven-apps/create-edit-views-app-designer.md
+        - name: Create and edit public views
+          href: ./model-driven-apps/create-or-edit-model-driven-app-view.md
         - name: Choose and configure columns in views
           href: ./model-driven-apps/choose-and-configure-columns.md
         - name: Create or edit filters in app views
           href: ./model-driven-apps/create-edit-view-filters.md
         - name: "How to guides: Views"
           items:
+          - name: Create and edit views
+            href: ./model-driven-apps/create-edit-views-app-designer.md
           - name: How to make grids editable
             href: ./model-driven-apps/make-grids-lists-editable-custom-control.md
           - name: How to sort rows in a view
@@ -1242,6 +1264,8 @@
         href: ./model-driven-apps/create-business-rules-recommendations-apply-logic-form.md
     - name: Apply data visualizations in an app
       items:
+      - name: Add a Power BI visual to an app
+        href: ./model-driven-apps/add-powerbi-visual.md
       - name: Create a system chart
         href: ./model-driven-apps/create-edit-system-chart.md
       - name: Create or edit dashboards
@@ -1833,6 +1857,8 @@
            href: ./portals/release-updates.md
          - name: Version updates
            items:
+              - name: Version 9.3.7.x and later
+                href: /power-platform/released-versions/portals
               - name: Version 9.3.6.x
                 href: ./portals/versions/version-9.3.6.x.md
               - name: Version 9.3.4.x
@@ -2196,12 +2222,28 @@
           items:
             - name: Use Bulletins sample app
               href: ../teams/bulletins.md
-            - name: Understand Bulletins sample app architecture
-              href: ../teams/bulletins-architecture.md
+            - name: Deploy Bulletins app broadly in your organization
+              href: ../teams/bulletins-deploy-broadly.md
+            - name: Customize Bulletins app
+              items:
+                - name: Understand Bulletins sample app architecture
+                  href: ../teams/bulletins-architecture.md
+                - name: Customize Bulletins app
+                  href: ../teams/customize-bulletins.md
+                - name: Send an alert when a new bulletin is posted
+                  href: ../teams/new-bulletin-alert.md
+                - name: Add "Notify me" settings to category in Bulletins app
+                  href: ../teams/bulletins-notify-me.md
+                - name: Customize apps for end user to add notification preferences
+                  href: ../teams/bulletins-notification-preference.md
+                - name: Add contact phone in links and contacts section
+                  href: ../teams/bulletins-contact-phone.md
         - name: Employee ideas
           items:
             - name: Use Employee ideas sample app
               href: ../teams/employee-ideas.md
+            - name: Deploy Employee ideas app broadly in your organization
+              href: ../teams/deploy-employee-ideas-broad-distribution.md
             - name: Customize Employee ideas app
               items:
                 - name: Understand Employee ideas sample app architecture
@@ -2212,6 +2254,12 @@
                   href: ../teams/export-employee-ideas-for-reporting.md
                 - name: Replace notification with adaptive card to increase collaboration
                   href: ../teams/replace-notification-with-adaptive-card.md
+                - name: Make ideas editable by original creator
+                  href: ../teams/make-ideas-editable-by-original-creator.md
+                - name: Add tag to mark prioritized ideas
+                  href: ../teams/add-tag-to-mark-prioritized-ideas.md
+                - name: Enable users to discuss ideas
+                  href: ../teams/extend-ideas-discussions.md
         - name: How to (Preview)
           items:
              - name: Use How to sample app
@@ -2224,14 +2272,38 @@
           items:
             - name: Use Inspection sample app
               href: ../teams/inspection.md
-            - name: Understand Inspection sample app architecture
-              href: ../teams/inspection-architecture.md
+            - name: Customize Inspection app
+              items:
+                - name: Understand Inspection sample app architecture
+                  href: ../teams/inspection-architecture.md
+                - name: Customize Inspection sample app
+                  href: ../teams/customize-inspections.md
+                - name: Add hierarchy inspection location
+                  href: ../teams/inspections-hierarchy-locations.md
+                - name: Customize inspection steps
+                  href: ../teams/customize-inspection-steps.md
         - name: Issue reporting
           items:
             - name: Issue reporting
               href: ../teams/issue-reporting.md
-            - name: Issue reporting sample app architecture
-              href: ../teams/issue-reporting-architecture.md
+            - name: Deploy Issue reporting app broadly in your organization
+              href: ../teams/issue-reporting-broad-distribution.md
+            - name: Customize Inspection app
+              items:
+                - name: Issue reporting sample app architecture
+                  href: ../teams/issue-reporting-architecture.md
+                - name: Customize Issue reporting app
+                  href: ../teams/customize-issue-reporting.md
+                - name: Add urgency flag to reported issues
+                  href: ../teams/extend-issue-urgency.md
+                - name: Add business logic for automated task assignment
+                  href: ../teams/extend-issue-auto-assignment.md
+                - name: Convert Issue reporting sample app to Work order management app
+                  href: ../teams/extend-issue-rename-work-order.md
+                - name: Remove the Planner dependency for task creation
+                  href: ../teams/extend-issue-remove-planner.md
+                - name: Add the ability to be notified when an issue is resolved
+                  href: ../teams/extend-issue-sign-up-notification.md
         - name: Milestones
           items:
              - name: Milestones

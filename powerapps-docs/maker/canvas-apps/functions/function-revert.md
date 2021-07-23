@@ -8,11 +8,15 @@ ms.topic: reference
 ms.custom: canvas
 ms.reviewer: nabuthuk
 ms.date: 10/21/2015
+ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - gregli-msft
+  - nkrb
 ---
 # Revert function in Power Apps
 Refreshes and clears errors for the [records](../working-with-tables.md#records) of a [data source](../working-with-data-sources.md).
@@ -35,7 +39,7 @@ If the **[Errors](function-errors.md)** function reports a conflict after a **[P
 ## Example
 In this example, you'll revert the data source named **IceCream**, which starts with the data in this table:
 
-![IceCream example](media/function-revert/icecream.png)
+![IceCream example.](media/function-revert/icecream.png)
 
 A user on another device changes the **Quantity** property of the **Strawberry** record to **400**.  At about the same time, you change the same property of the same record to **500**, not knowing about the other change.
 
@@ -53,11 +57,11 @@ Based on the **Error** column, you have a **Reload** button for which the **[OnS
 
 After you select the **Reload** button, the **[Errors](function-errors.md)** table is [empty](function-isblank-isempty.md), and the new value for **Strawberry** has been loaded:
 
-![New value for Strawberry ice cream](media/function-revert/icecream-after.png)
+![New value for Strawberry ice cream.](media/function-revert/icecream-after.png)
 
 You reapply your change on top of the previous change, and your change succeed because the conflict has been resolved.
 
-![Reapplied changes with resolved conflict](media/function-revert/icecream-success.png)
+![Reapplied changes with resolved conflict.](media/function-revert/icecream-success.png)
 
 
 

@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 06/11/2021
+ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: tapanm
 contributors:
@@ -43,7 +44,7 @@ To add a dashboard or report connecting to Azure Analysis Services, use [CustomD
 For example:
 
 ```
-{% powerbi authentication_type:"powerbiembedded" path:"https://app.powerbi.com/groups/<GroupID>/reports/<ReportID>" roles:"<roles associated with report>" customdata:<customdata>" %}
+{% powerbi authentication_type:"powerbiembedded" path:"https://app.powerbi.com/groups/<GroupID>/reports/<ReportID>" roles:"<roles associated with report>" customdata:"<customdata>" %}
 ```
 
 The optional **customdata** tag can be configured as a string, or generated dynamically based on an object's attribute, using a period ("."), or square brackets ("[]") to separate between the object and the attribute, in between two pairs of curly brackets.
@@ -88,7 +89,7 @@ Roles are contained within the Azure Analysis Services database and not in the r
 3.	Copy the URL from the address bar.
 
     > [!div class=mx-imgBorder]
-    > ![Get the path of a Power BI dashboard](../media/powerbi-dashboard-url.png "Get the path of a Power BI dashboard")
+    > ![Get the path of a Power BI dashboard.](../media/powerbi-dashboard-url.png "Get the path of a Power BI dashboard")
 
 ## Get the ID of a dashboard tile
 
@@ -99,12 +100,12 @@ Roles are contained within the Azure Analysis Services database and not in the r
 3.	Point to the tile, select **More options**, and then select **Open in focus mode**.
 
     > [!div class=mx-imgBorder]
-    > ![Open Power BI dashboard tile in focus mode](../media/powerbi-dashboard-tile-focus.png "Open Power BI dashboard tile in focus mode")
+    > ![Open Power BI dashboard tile in focus mode.](../media/powerbi-dashboard-tile-focus.png "Open Power BI dashboard tile in focus mode")
 
 4.	Copy the tile ID from the URL in the address bar. The tile ID is the value after /tiles/.
 
     > [!div class=mx-imgBorder]
-    > ![Power BI dashboard tile ID](../media/powerbi-dashboard-tile-id.png "Power BI dashboard tile ID")
+    > ![Power BI dashboard tile ID.](../media/powerbi-dashboard-tile-id.png "Power BI dashboard tile ID")
 
 ## How to use powerbi-client JavaScript library in portals
 

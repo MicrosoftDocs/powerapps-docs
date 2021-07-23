@@ -7,6 +7,7 @@ ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID
+ms.subservice: dataverse-developer
 ms.author: "pehecke" # MSFT alias of Microsoft employees only
 manager: "kvivek" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -30,13 +31,13 @@ TDS (SQL) endpoint applications support for Power BI and SQL Server Management S
 
 You can also use [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms) (SSMS) version 18.4 or later with the Dataverse endpoint SQL connection. Examples of using SSMS with the SQL data connection are provided below.
 
-![Expanded account table](media/ssms-table-expanded.PNG)
+![Expanded account table.](media/ssms-table-expanded.PNG)
 
 #### Security and authentication
 
 Only Azure Active Directory authentication is supported. SQL authentication and Windows authentication aren't supported. Below is an example of how to logon to the SQL connection in SSMS. Notice the server name is the organization address URL.
 
-![Connec dialog](media/ssms-connect-dialog.PNG)
+![Connec dialog.](media/ssms-connect-dialog.PNG)
 
 > [!NOTE]
 > Ports 1433 and/or 5558 need to be enabled to use the TDS endpoint from a client application such as SSMS. If you only enable port 5558, the user must append that port number to the server name in the **Connect to Server** dialog of SSMS - for example: myorgname.crm.dynamics.com;5558.
@@ -49,7 +50,7 @@ Below are a couple of example queries composed in SSMS. The first image shows a 
 select top 5 a.name as [VIP customer], a.address1_postalcode as [ZIP code] from account a order by a.address1_postalcode desc
 ```
 
-![Simple query using aliases and ordering](media/ssms-simple-query.PNG)
+![Simple query using aliases and ordering.](media/ssms-simple-query.PNG)
 
 This next query shows a JOIN.
 
@@ -57,7 +58,7 @@ This next query shows a JOIN.
 select name, fullname from account a inner join contact c on a.primarycontactid = c.contactid
 ```
 
-![Another query using a JOIN](media/ssms-join-query.PNG)
+![Another query using a JOIN.](media/ssms-join-query.PNG)
 
 ### Power BI
 
@@ -134,7 +135,7 @@ Time: 2020-12-17T01:15:01.0497703Z (.Net SqlClient Data Provider)”
 
 A blocked port error may look something like the following.
 
-![Error message](media/TDS-SQL-blocked-port-error.png)
+![Error message.](media/TDS-SQL-blocked-port-error.png)
 
 The solution is to verify the TCP ports 1433 or 5558 from the client are unblocked. One possible method to do that is described below.
 

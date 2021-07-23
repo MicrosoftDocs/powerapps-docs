@@ -2,7 +2,7 @@
 title: "Understanding the information returned from performance insights in Power Apps | MicrosoftDocs"
 description: Understand the information returned with performance insights. 
 ms.custom: ""
-ms.date: 06/15/2021
+ms.date: 07/07/2021
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -11,6 +11,7 @@ ms.topic: "overview"
 applies_to: 
   - "powerapps"
 author: "Mattp123"
+ms.subservice: common
 ms.author: "matp"
 manager: "kvivek"
 search.audienceType: 
@@ -30,6 +31,7 @@ Performance insights distributes insights into the following categories:
 - [Customization](#customization)
 - [Configuration](#configuration)
 - [Network](#network)
+As the performance of an app could be impacted by various factors, performance insights categorizes areas to check how much overhead of performance get caused by. 
 
 ## Overall performance
 
@@ -69,7 +71,7 @@ Insight ID: Perf.Environment.Client.Browser.Version
 
 #### Motivation 
 
-This insight checks how many users are using your app from an old version of a browser. Even if users are on modern browsers, and not on non-recommended browser types like Internet Explorer, older versions of browsers perform slower.
+This insight checks how many users are using your app from an old version of a browser. Even when users run modern browsers, and not non-recommended browser types like Internet Explorer, older versions of browsers perform slower.
 
 #### How to improve 
 
@@ -105,7 +107,7 @@ Several configurations and network infrastructure can block the HTTP/2 protocol,
 
 Users can check what protocol has been used from a development tool included with the browser. In the figure below, network calls occurred over HTTP/2.
 
-:::image type="content" source="media/performance-insight-http.png" alt-text="Example of HTTP 2 network calls":::
+:::image type="content" source="media/performance-insight-http.png" alt-text="Example of HTTP 2 network calls.":::
 
 If the network protocol trace indicates HTTP/1.1, it might be because of the following:
 - Internet settings: The Windows Internet Option **Advanced** tab in Control Panel **Use HTTP2** and **Use TLS 1.2** options aren't enabled.
@@ -113,7 +115,7 @@ If the network protocol trace indicates HTTP/1.1, it might be because of the fol
 
 ## Usage pattern
 
-This category analyzes the state of page loads. Warm page loads retrieve the page directly from data that is cached locally, while cold page loads load from the server.
+This category analyzes the type of page loads. A warm page load renders the page using caches and existing DOM objects, while a cold page load renders the page fresh by downloading resources when required. Although users will not distinguish the type of page load, this insight analyzes and provides recommendations depending on what type of page loads occur on the client. 
 
 ### Page load type
 
@@ -142,11 +144,11 @@ Insight ID: Perf.ModelDriven.Page.Dashboard.SlowSQLQuery
 
 #### Motivation
 
-Slow SQL queries or using too many charts and tiles can cause poor performance in dashboards. This insight points to the dashboards that are affected by slow SQL queries. When this insight is recorded, the **Details** pane includes the dashboard ID for each dashboard included in the insight.
+Slow SQL queries or using too many charts and tiles in a dashboard can cause poor performance of the dashboard. This insight points to the dashboards that are affected by slow SQL queries. When this insight is recorded, the **Details** pane includes the dashboard ID for each dashboard included in the insight.
 
 #### How to improve
 
-Here's how to look up the name of dashboard using the dashboard ID. Then, you can determine which dashboards to consider for redesign.
+Here's how to look up the name of dashboard using the dashboard ID. Then, you can determine which dashboards to consider for redesign. 
 
 1. Go to your model-driven app, such as *https://contoso.crm.dynamics.com*.
 
@@ -155,6 +157,23 @@ Here's how to look up the name of dashboard using the dashboard ID. Then, you ca
 1. You will receive OData request similar to the below. **Agent Dashboard** displayed below represents the user-friendly name of the given dashboard ID.
 
    `{"@odata.context":https://contoso.crm.dynamics.com/api/data/v9.1/$metadata#systemforms(2ff4a8cf-378b-e811-a964-000d3a30dc0a)/name,"value":"Contoso - Agent Dashboard"}`
+  
+### Synchronous plug-ins with slow external calls
+
+Insight ID: Perf.Sandbox.Performance.Plug-ins.ExternalCall
+
+Plug-ins and custom workflow activities can access web services (external endpoints) via HTTP and HTTPS protocols. If these external services perform slowly, the plug-in itself will timeout or perform slowly.
+
+#### Motivation
+
+This insight checks the performance of the external endpoints and detects plug-ins in your app that are impacted by the slow external calls. 
+
+#### How to improve
+
+-	[Set KeepAlive to false when interacting with external hosts in a plug-in](/powerapps/developer/data-platform/best-practices/business-logic/set-keepalive-false-interacting-external-hosts-plugin).
+-	[Set Timeout explicitly when making external calls in a plug-in](/developer/data-platform/best-practices/business-logic/set-keepalive-false-interacting-external-hosts-plugin).
+
+ More information: [Access external web services (Microsoft Dataverse) - Power Apps | Microsoft Docs](/powerapps/developer/data-platform/access-web-services).
 
 ## Customization
 
@@ -192,7 +211,7 @@ Some older controls for model-driven apps like Flip Switch, Calendar Control (V1
 
 #### Motivation
 
-Using outdated controls can cause performance, reliability, and accessibility issues. Moreover, some of the limitations in these deprecated controls have been resolved with the new controls. For example, the Toggle control and Calendar Control (V2) use [Microsoft Fluent UI](https://developer.microsoft.com/fluentui).s
+Using outdated controls can cause performance, reliability, and accessibility issues. Moreover, some of the limitations in these deprecated controls have been resolved with the new controls. For example, the Toggle control and Calendar Control (V2) use [Microsoft Fluent UI](https://developer.microsoft.com/fluentui).
 
 #### How to improve
 
@@ -204,7 +223,7 @@ Notice that there are few significant design changes between the deprecated vers
 
 For more information about the deprecated controls, go to [Model-driven app controls deprecation](/power-platform/important-changes-coming#model-driven-app-controls-deprecation).
 
-### Sandbox performance - Dominant plug-ins
+### Sandbox performance - dominant plug-ins
 
 Insight ID: Perf.Sandbox.Performance.Plug-ins.Dominant
 
@@ -212,9 +231,13 @@ This insight will help us identify the dominant plug-in, or in other words, the 
 
 #### Motivation
 
-Slow dominant plug-ins affect performance. These plug-ins should be investigated first.
+Slow dominant plug-ins affect performance. These plug-ins should be investigated.
 
 #### How to improve
+  
+Investigate slow performing plug-ins. Check out the [best practices regarding plug-in and workflow development](/powerapps/developer/data-platform/best-practices/business-logic/).
+
+To further investigate the slow plug-in, you can set the **Plug-in trace log** settings to **All** in your development or test environment and determine where the delay is. However, don’t forget to disable the setting before going to production. More information: [Tracing and logging](/powerapps/developer/data-platform/logging-tracing)
 
 Investigate slow performing plug-ins. Some of the reasons for slow plug-ins are described here:
 
@@ -224,6 +247,31 @@ Investigate slow performing plug-ins. Some of the reasons for slow plug-ins are 
 - Plug-in logic isn't optimized for multi-threading environments. Check your code.
 
 To further investigate the slow plug-in, you can set the **Plug-in trace log** settings to **All** in your development or test environment and determine where the delay is. Don’t forget to disable the setting before going to production. More information: [Tracing and logging](/powerapps/developer/data-platform/logging-tracing)
+  
+### Saved query with leading wildcard
+
+Insight ID: Perf.ModelDriven.Customization.SavedQuery.LeadingWildCard
+
+Leading wildcards are *like* or *not like* conditions that use a wildcard (%) at the start of a search string. An example of a poorly written request is: 
+```xml
+<fetch version="1.0" output-format="xml-platform" mapping="logical"> 
+    <entity name="account"> 
+        <attribute name="accountid" /> 
+        <attribute name="accountnumber" /> 
+        <filter type="and"> 
+            <condition attribute="accountnumber" operator="like" value="%124" /> 
+        </filter> 
+    </entity> 
+</fetch>
+```
+
+#### Motivation
+
+A leading wildcard character (%) in a saved query can cause the query to timeout or perform slowly. This insight points to such slow saved queries with leading wildcards.
+
+#### How to improve
+
+Avoid using leading wildcards. In the search key, these are translated to “contains” in SQL Server, which won’t take the advantage of index seek but will do a scan. If it is necessary to use a leading wildcard, limit the scope of search by including other conditions. Note that it is ok to use trailing wildcards (%) at the end of search strings. 
 
 ## Configuration
 
@@ -233,7 +281,7 @@ Insight ID: Perf.Sandbox.Configuration.PluginTraceSettings
 
 Makers can debug their plug-ins through plug-in trace logs. The Dataverse admins can set plug-in and custom workflow activity tracing to **Off**, **Exception**, or **All**.
 
-:::image type="content" source="media/plug-in-trace-setting.png" alt-text="Plug-in trace log settings":::
+:::image type="content" source="media/plug-in-trace-setting.png" alt-text="Plug-in trace log settings.":::
 
 #### Motivation
 

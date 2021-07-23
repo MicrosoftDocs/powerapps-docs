@@ -6,12 +6,17 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 01/11/2021
+ms.date: 06/30/2021
+ms.subservice: canvas-maker
 ms.author: namarwah
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - navjotm
+  - chmoncay
 ---
 
 # Limitations of controls in canvas apps
@@ -71,6 +76,7 @@ The following controls aren't supported by apps embedded in Teams:
 - [Map](geospatial-component-map.md)
 - [Mixed reality](mixed-reality-overview.md) (View in MR, View shape in MR, Measure in MR)
 - [Power BI tile control](controls/control-power-bi-tile.md)
+- [Web barcode scanner control](controls/control-barcodescanner.md)
 
 ## Next steps
 
