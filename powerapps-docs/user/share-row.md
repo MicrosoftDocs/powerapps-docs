@@ -25,7 +25,7 @@ search.app:
  
  If you want to keep ownership of a row but let someone else work on the row with you then use the share option.
  
-Any user that you want to share a row with needs to have basic level access that is granted by a system administrator. If you cannot select an option when you share a row the you need to check with your system administrator to see if that user or team can be granted basic access based on your organizations roles and access defined by your administrator.
+Any user that you want to share a row with needs to have basic level access that is granted by a system administrator. If you cannot select an option when you share a row then you need to contact your system administrator and verify if the user or team can be granted basic access based on your organizations roles and access defined by your administrator.
 
 > ![Note]
 > This feature is not supported on Power Apps mobile or when you're using the app in offline mode with no internet connection. 
@@ -84,18 +84,16 @@ Any user that you want to share a row with needs to have basic level access that
    > [!div class="mx-imgBorder"]
    > ![Sharing and not internet connection.](media/share-ts1.png "Sharing and not internet connection.")
 
-2. If you get a generic error while sharing, this means that one or more of the rows could not be shared. The users will be hi-lighted in red. You can selcted on **Share** in the dialog to attempt another share with those users or you can close the dialog and retry. This usually happens if you are sharing lots of rows at once.
+2. If you get a generic error while sharing, this means that one or more of the rows can't be shared. The users will be hi-lighted in red. Select **Share** in the dialog to attempt another share with those users or close the dialog and retry. This usually happens if you are sharing lots of rows at once.
 
    > [!div class="mx-imgBorder"]
    > ![Can't share the row with user.](media/share-ts2.png "Can't share a row with user.")
 
 3. You may see an error when the system is unable to retrieve the users to assign share rights or sharing fails due to access related issues.
 
-
    > [!div class="mx-imgBorder"]
    > ![Sharing failed](media/share-ts3.png "Sharing failed")
 
-<br><br>
 
    > [!div class="mx-imgBorder"]
    > ![Unable to share.](media/share-ts4.png "Unable to share.")
