@@ -32,11 +32,19 @@ To open the bulk edit dialog, navigate or open the view page with the list of ro
 ![Edit multiple rows.](media/bulk-edit.gif "Edit multiple rows")
 
 
-The below example demonstrates how to use bulk edit when working with the Case table in a model-driven app and can be applied to any table in your application where you need to edit or manage data for more than one record.
+The below example demonstrates how to use bulk edit when working with the  table in a model-driven app and can be applied to any table in your application where you need to edit or manage data for more than one record.
 
-After clicking on edit a dialog will open with the default form for the table.
+When you select on edit the **Edit (number of rows) records** dialog opens with the default form for the table.
+
+> [!div class="mx-imgBorder"]
+> ![How to user bulk edit](media/bulk-edit-legend.png "How to use bulk edit")
 
 
+Legend
 
-   > [!div class="mx-imgBorder"]
-   > ![Share rows from the view page](media/share-row-view-page.png "Share rows from the view page")
+1. Shows the number of rows that you're editing.
+2. Shows the form title. 
+3. Select a tab to edit the columns on the form. A deader column is always listed on the last tab.
+4. Show the details of the form that you can edit.
+5. Save or cancel your changes.
+
