@@ -18,7 +18,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Assign or share a row to someone else
+# Assign or share a row 
 
 When you create a row, you are the owner of the row. If you would like another person in your organization to take ownership of the row, then you can assign the row to that person. You can assign a row to a user or team. You can also assign a row to yourself that another user owns but you need to have system administrator privilege to do this.
 
