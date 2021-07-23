@@ -287,7 +287,7 @@ Legend
 Legend
 1. Typing the @ sign in the **Note** field will display a flyout menu with a list of users that have been recently used.
 2. If the user row is not displayed, typing the name after the @ sign refreshes the rows in the flyout menu using the **Quick Find** search engine that's operating in the background.
-3. Switch views using **Advanced** to display the **Lookup Records** pane. In the **Lookup Records** pane, you can switch between the **Recent records** and **All records** view to search rerowscords.
+3. Switch views using **Advanced** to display the **Lookup Records** pane. In the **Lookup Records** pane, you can switch between the **Recent records** and **All records** view to search rows.
 
 When you mouse over the profile image, you can view the user's detailed profile card and online presence status.
 
