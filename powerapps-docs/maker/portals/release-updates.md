@@ -5,7 +5,7 @@ author: dileepsinghmicrosoft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/01/2021
+ms.date: 07/22/2021
 ms.subservice: portals
 ms.author: dileeps
 ms.reviewer: tapanm
@@ -30,6 +30,7 @@ For information about the roadmap and new features releasing over the next few m
 
 The following articles provide details about the portals version updates:
 
+- [Power Apps portals version 9.3.7.x and later](/power-platform/released-versions/portals)
 - [Power Apps portals version 9.3.6.x](versions/version-9.3.6.x.md)
 - [Power Apps portals version 9.3.4.x](versions/version-9.3.4.x.md)
 - [Power Apps portals version 9.3.3.x](versions/version-9.3.3.x.md)
