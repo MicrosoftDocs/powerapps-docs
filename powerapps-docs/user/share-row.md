@@ -79,7 +79,7 @@ Any user that you want to share a row with needs to have basic level access that
  
  ## Issues and errors
  
-1. If are disconnected from the internet when sharing a row, then you won't be able to set or update options for users or teams. Sharing won't be available.
+1. If you're disconnected from the internet when sharing a row, then you won't be able to set or update options for users or teams. Sharing won't be available.
 
    > [!div class="mx-imgBorder"]
    > ![Sharing and not internet connection.](media/share-ts1.png "Sharing and not internet connection.")
