@@ -44,7 +44,7 @@ Legend
 1. Shows the number of rows that you're editing.
 2. Shows the form title. 
 3. All the data is available on the form, including columns that are on a tab. Select a tab to edit the columns on the form. The header column is always listed on the last tab. 
-4. Show the details of the form that you can edit.
+4. Shows the details of the form that you can edit.
 5. Save or cancel your changes. Saved changes are saved for all selected rows.
 
 ## Switch forms
