@@ -19,15 +19,15 @@ search.app:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-This article outlines how the common Power Fx functions work within a custom page. Power Fx formulas in a custom page can be different than Power Fx in a standalone canvas app. This is because custom pages are a component within the model-driven app.
+This article outlines how the common Microsoft Power Fx functions works within a custom page. Power Fx formulas in a custom page can be different from Power Fx in a standalone canvas app. This is because custom pages are a component within the model-driven app.
 
   > [!IMPORTANT]
   > - This is a preview feature, and isn't available in all regions.
   > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
 
-## Add custom page notifications
+## Add notifications to a custom page
 
-A custom page notification can be shown to the user by calling the [Notify function](../canvas-apps/functions/function-showerror.md) to make a page message bar appear.  When the notify messages appear, they're docked above the page default to stay visible until disabled. Unless a timeout interval is provided, the message will disappear after the timeout interval. Avoid using a timeout interval of 10, it is currently treated as no timeout.
+A notification can be shown to the user in a custom page by calling the [Notify function](../canvas-apps/functions/function-showerror.md).  When the notification messages appear, they're docked above the default page to stay visible until disabled. If a timeout interval is provided, the notification message will disappear after the timeout interval. It is recommended to avoid using a timeout interval of 10, as this is no longer considered as a timeout interval. More information: [Notify function](../canvas-apps/functions/function-showerror.md).
 
 ```powerappsfl
 Notify( "Custom page notification message" )
@@ -43,51 +43,51 @@ Notify( "Custom page notify warning message", NotificationType.Warning )
 > [!div class="mx-imgBorder"]
 > ![Custom page notify warning message bar](media/page-powerfx-in-model-app/custom-page-notify-warning.png "Custom page notify warning message bar")
 
-## Navigating a custom page
+## Navigating to a custom page
 
-This section provides examples of navigating from a model-driven app page to a custom page and examples of navigating from a custom page to other custom pages or model-driven app page using Power Fx.
+This section provides examples of navigating from a model-driven app form to a custom page, navigating from a custom page to other custom pages or model-driven app form using Power Fx.
 
 ### Navigating from a custom page
 
-Custom Page Fx [Navigate function](../canvas-apps/functions/function-navigate.md) has been updated to allow navigating to either model pages or custom pages.  These functions only apply when the custom page is running within a model-driven app.  During custom page authoring or previewing in canvas designer, these functions have no effect.
+The [Navigate function](../canvas-apps/functions/function-navigate.md) allows the users to navigate either from model-driven app forms or custom pages.  This function is only applicable when the custom page is running within a model-driven app.  During custom page authoring or previewing in canvas designer, this function have no effect.
 
-Navigate examples that use a table must have it added as a Datasource in the page.
+Examples that use a table should be added as a data source in the page.
 
 ### Navigate to another custom page
 
-A custom page can navigate to another custom page by passing the custom page display name as the first parameter.
+To navigate from one custom page to another, pass the display name of the custom page as the first parameter.
 
 ```powerappsfl
 Navigate( '<custom page>'  )
 ```
 
-### Navigate to the default view for a table
+### Navigate to the default view of the table
 
-When Navigate is passed a table as the first argument, it will open the user's default view page.
+To navigate to the default view of the table, passed table name as the first argument.
 
 ```powerappsfl
 Navigate( Accounts )
 ```
 
-### Navigate to a specific system view for a table
+### Navigate to specific system view of the table
 
-When Navigate is passed a table's Views enum, it will  open the specific system view for the table.
+To navigate to a specific system view of the table,pass the table's Views enum.
 
 ```powerappsfl
 Navigate( 'Accounts (Views)'.'My Active Accounts' )
 ```
 
-### Navigate to the default form for a table
+### Navigate to the default form of the table
 
-When Navigate is passed a Microsoft Dataverse record as the first argument, it will open the default table form with the record.
+To navigate to the default form of the table, pass the record as the first argument.
 
 ```powerappsfl
 Navigate( Gallery1.Selected )
 ```
 
-### Navigate to the default form for a table in create mode
+### Navigate to the default form of the table in create mode
 
-When Navigate is passed a Dataverse record created from the Defaults function, it will open the default table form with the table record as a new record. The Defaults function takes a table name to create the record.
+To navigate to the default form of the table in create mode, pass a Dataverse record created from the [Defaults](../canvas-apps/functions/function-defaults.md) function. This will open the default form with the record as a new record. The **Defaults** function takes the table name to create the record.
 
 ```powerappsfl
 Navigate( Defaults( Accounts ) )
@@ -95,15 +95,21 @@ Navigate( Defaults( Accounts ) )
 
 ### Navigate back to the prior page or close a dialog
 
-When the Back function is called in a custom page, it closes the current page and returns to the priority model-driven app or custom page in the model-driven app. If the custom page has multiple screens, then see [Navigation advanced examples for custom page](navigate-page-advanced-examples.md) for advanced guidance.
+To navigate back to the last page or to close a dialog, the [Back](../canvas-apps/functions/function-navigate.md) function is called in a custom page. The **Back** function closes the current page and returns to the last model-driven app or custom page in the model-driven app. If the custom page has multiple screens, see the article [Navigation advanced examples for custom page](#navigating-back-when-custom-page-has-multiple-screens).
 
 ```powerappsfl
 Back( )
 ```
 
+### Navigating back when custom page has multiple screens
+
+The default configuration for a custom page is to have one screen. In this case the **Back** function call will close the custom page unless the custom page is the last in the page stack in model-driven app. The last page is kept open.
+
+An app maker can enable multiple screens in a custom page. These should be considered like full page controls within the custom page which can be stacked. Opening a custom page has no means of specifying the screen to use.  When a custom page contains multiple screens the maker is responsible for managing the screen stacking.  Calling the **Navigate** function to a screen will add to the screen stack with the custom page.  Each **Back** function call will remove a screen from the screen stack.  When there is only one screen on the screen stack, the custom page is closed.
+
 ### See also
 
-<!-- Link to dev related article -->
+[Navigating to and from a custom page using client API](../../developer/model-driven-apps/clientapi/navigate-to-custom-page-examples.md)
 
 [Model-driven app custom page overview](model-app-page-overview.md)
 

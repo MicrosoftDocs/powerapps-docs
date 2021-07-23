@@ -30,12 +30,6 @@ This topic provides more advanced examples of navigating between model and custo
 
 This section includes more advanced navigations when on a custom page.  
 
-### Navigating back when custom page has multiple screens
-
-The default configuration for a custom page is to only have one screen. In this case the **Back** function call will close the custom page unless the custom page is the last of the page stack in the model-driven app.  The last page is kept open.
-
-As an advanced change, a maker can enable multiple screens in a custom page. These should be considered like full page controls within the custom page which can be stacked. Opening a custom page has no means of specifying the screen to use.  When a custom page contains multiple screens the maker is responsible for managing the screen stacking.  Calling **Navigate** function to a screen will add to the screen stack with the custom page.  Each **Back** function call will remove a screen from the screen stack.  When there is only one screen on the screen stack, the custom page is closed.
-
 ## Navigating from a model page to a custom page
 
 ### Finding the logical page name
