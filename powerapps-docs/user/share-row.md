@@ -74,8 +74,8 @@ Any user that you want to share a row with needs to have basic level access that
     > [!div class="mx-imgBorder"]
     > ![Sharing is successful.](media/share-row-shared.png "Sharing is successful.")
 
-> ![NOTE] 
-> If you add additional users or teams after saving share access and the check box is disable but has a value, this means that your administrator has changed the basic privileges for the user, and they no longer have basic access rights, however, the share permissions is retained and isn't reset when the administrator changes the base privileges. Contact your system administrator to update a user’s access if you want to change or update the disabled options for sharing a row.
+  > ![NOTE] 
+  > If you add additional users or teams after saving share access and the check box is disable but has a value, this means that your administrator has changed the basic privileges for the user, and they no longer have basic access rights, however, the share permissions is retained and isn't reset when the administrator changes the base privileges. Contact your system administrator to update a user’s access if you want to change or update the disabled options for sharing a row.
  
  ## Issues and errors
  
