@@ -23,13 +23,14 @@ search.app:
  
  [!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
  
-You can edit multiple rows in model-driven apps and quickly update several columns of data accross multiple rows in a single action. This is useful in scenarios when you need to update the same column for multiple rows for example when you need to change a website or phone number for multiple accounts rows.
+You can edit multiple rows in model-driven apps and quickly update several columns of data accross multiple rows in a single action. This is useful in scenarios when you need to update the same column for multiple rows.
 
-When you edit multiple rows you can also select the form that that you want to edit. Columns such as timeline wall, quick view forms, reference panel, and etc. which you can edit indivdually aren't available when you're editing multple rows.
+When you edit multiple rows you can select the form that that you want to edit. Columns such as timeline wall, quick view forms, reference panel, and etc. aren't available when you're editing multple rows.
 
-To open the bulk edit dialog, go to view page with the list of rows that you want to change. Select two or more rows and then on the command bar, select **Edit**.
+1. To edit multiple rows, go to view page with the list of rows and select two or more rows.
+2. On the command bar, select **Edit**.
 
-![Edit multiple rows.](media/bulk-edit.gif "Edit multiple rows")
+   ![Edit multiple rows.](media/bulk-edit.gif "Edit multiple rows")
 
 
 The **Edit (number of rows) records** dialog opens with the default form for the table.
@@ -41,9 +42,10 @@ Legend
 
 1. Shows the number of rows that you're editing.
 2. Shows the form title. 
-3. All the data is available on the form, including columns that are on a tab. Select a tab to edit the columns on the form. The header column is always listed on the last tab. 
-4. Shows the details of the form that you can edit.
-5. Save or cancel your changes. Saved changes are saved for all selected rows.
+3. All the data is available on the form, including columns that are on other tabs. Select a tab to edit the columns on the form. The header column is always listed on the last tab. 
+4. If you changed the data for a required column, it needs to contain data otherwise you won't be able to save your changes.
+5. Shows the details of the form that you can edit.
+6. Save or cancel your changes. Saved changes are saved for all selected rows.
 
 ## Switch forms
 
@@ -51,4 +53,7 @@ When you're in edit mode, you an easily switch from the default form to another 
 
 > [!div class="mx-imgBorder"]
 > ![Switch to another form.](media/bult-edit-change-form.png "Switch to another form.")
+
+
+
 
