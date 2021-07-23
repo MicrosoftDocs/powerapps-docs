@@ -19,7 +19,7 @@ search.app:
   - D365CE
 ---
 
- ## Share a row with someone else
+ # Share a row with someone else
  
  [!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
  
@@ -62,7 +62,7 @@ Any user that you want to share a row with needs to have basic level access that
     > ![Select add more users or team](media/share-row-add-more-users.png "Select to add more users or team")
 
 
-5. Select a user or team one at a time, and then grant them the appropriate permissions to the row. <br> <br> If check boxes are disabled it means a user or team does not have basic privileges to the row. For more information on user access, see [Check your user access to a row](access-checker).
+5. Select a user or team one at a time, and then grant them the appropriate permissions to the row. <br> <br> If check boxes are disabled it means a user or team does not have basic privileges to the row. For more information on user access, see [Check your user access to a row](access-checker.md).
 
 
     > [!div class="mx-imgBorder"]
