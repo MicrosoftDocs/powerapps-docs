@@ -59,6 +59,8 @@
       items:
       - name: Create a row
         href: ../user/create-a-record.md
+      - name: Edit multiple rows  
+        hred: ../user/edit-rows.md
       - name: Work with rows in the new calendar view
         href: ../user/calendar-view.md
       - name: Use the lookup field on a row
