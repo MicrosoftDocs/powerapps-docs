@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: 07/21/2021
 ms.reviewer: ""
 ms.service: powerapps
-ms.subservice: mda-maker
+ms.subservice: mda-developer
 ms.topic: "how-to"
 author: "aorth"
 ms.author: "nabuthuk"
@@ -22,9 +22,9 @@ search.app:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
 
-This topic provides examples of navigating from a model-driven app page using the [Client API](../client-scripting.md) to a custom page. It also includes examples of navigating from a custom page to other custom pages or a model page.
+This topic provides examples of navigating from a model-driven app page to a custom page using [Client API](../client-scripting.md). This article also includes examples of navigating from a custom page to other custom pages or a model page.
 
-outlines the steps to use the Client API to open a custom page as a full page, dialog, or pane.  It provides examples of **custom** as a pageType value in [navigateTo (Client API reference)](reference/xrm-navigation/navigateto.md).
+This article outlines the steps to use Client API to open a custom page as a full-page, dialog, or pane.  It provides examples of **custom** as a `pageType` value in [navigateTo (Client API reference)](reference/xrm-navigation/navigateto.md).
 
   > [!IMPORTANT]
   > - This is a preview feature, and isn't available in all regions.
@@ -35,14 +35,13 @@ outlines the steps to use the Client API to open a custom page as a full page, d
 
 ### Finding the logical page name
 
-Each of the following Client API examples take the logical name of the custom page as an argument. The logical name is the **Name** value for the page in solution explorer. 
+Each of the following Client API examples takes the logical name of the custom page as an argument. The logical name is the **Name** value for the page in the solution explorer. 
 
-> [!div class="mx-imgBorder"]
-> ![Find page logical name](../../../maker/model-driven-apps/media/navigate-page-examples/find-page-logical-name.png "Find page logical name")
+:::image type="content" source="../../../maker/model-driven-apps/media/navigate-page-examples/find-page-logical-name.png" alt-text="Find page logical name." lightbox="../../../maker/model-driven-apps/media/navigate-page-examples/find-page-logical-name.png":::
 
 ### Open as an inline full page without context
 
-Within a model-driven app Client API event, call the following code and update the **name** parameter to be the logical page name.
+Within a model-driven app Client API event handler, call the following code and update the **name** parameter to be the logical page name.
 
 ```javascript
 // Inline Page
@@ -67,7 +66,7 @@ Xrm.Navigation.navigateTo(pageInput, navigationOptions)
 
 ### Open as an inline full page with a record context
 
-This example uses the `recordId` parameter within the [NavigateTo](reference/Xrm-Navigation/navigateTo.md) function to provide the custom page with the record to use.  Within the custom page, the Param function retrieves the value and uses Lookup function to retrieve the record.
+This example uses the `recordId` parameter within the [NavigateTo](reference/Xrm-Navigation/navigateTo.md) function to provide the custom page with the record to use.  The `Param` function within the custom page retrieves the value and uses the Lookup function to retrieve the record.
 
 ```javascript
 // Inline Page
@@ -94,7 +93,7 @@ Xrm.Navigation.navigateTo(pageInput, navigationOptions)
 
 ### Open as a centered dialog
 
-Within a model-driven app Client API event, call the following code and update the **name** parameter to be the logical custom page name.  This mode supports the sizing parameters similar to the [Main Form Dialogs](../../../developer/model-driven-apps/customize-entity-forms.md#open-main-form-in-a-dialog-using-client-api).
+Within a model-driven app Client API event, call the following code and update the **name** parameter to be the logical custom page name.  This mode supports the sizing parameters similar to the [Main form dialogs](../../../developer/model-driven-apps/customize-entity-forms.md#open-main-form-in-a-dialog-using-client-api).
 
 ```javascript
 // Centered Dialog
@@ -148,18 +147,18 @@ Xrm.Navigation.navigateTo(pageInput, navigationOptions)
     );
 ```
 
-### Open from a grid page primary field link as a full page with record id
+### Open from a grid page primary field link as a full page with the record id
 
-This example uses the recordId parameter within the NavigateTo function to provide the custom page with the record to use.  Within the custom page, the Param function retrieves the value and uses Lookup function to retrieve the record.
+This example uses the `recordId` parameter within the [navigateTo](reference/Xrm-Navigation/navigateTo.md) function to provide the custom page with the record to use.  The `Param` function within the custom page retrieves the value and uses the Lookup function to retrieve the record.
 
-1. Create a web resource of type JScript like the following and update the **name** parameter to be the logical page name  
+1. Create a web resource of type **JScript** and update the **name** parameter to be the logical page name. Add the following code to the web resource.
 
     ```javascript
     function run(selectedItems)
     {
         let selectedItem = selectedItems[0];
         
-        if (selectedItem) {		
+        if (selectedItem) {     
             let pageInput = {
                 pageType: "custom",
                 name: "<logical page name>",
@@ -183,7 +182,7 @@ This example uses the recordId parameter within the NavigateTo function to provi
     }
     ```
 
-1. Customize the entity ribbon CommandDefinition for OpenRecordItem to call the function above and include the **CrmParameter** with the value **SelectedControlSelectedItemReferences**
+1. Customize the table ribbon **CommandDefinition** for **OpenRecordItem** to call the function above and include the **CrmParameter** with the value **SelectedControlSelectedItemReferences**.
 
     ```xml
         <JavaScriptFunction FunctionName="run" Library="$webresource:cr62c_OpenCustomPage">
@@ -191,7 +190,7 @@ This example uses the recordId parameter within the NavigateTo function to provi
         </JavaScriptFunction>
     ```
 
-1. In the custom page, override the **App**'s **OnStart** property to use the Param function to get the recordId and lookup the record
+1. In the custom page, override the **App**'s **OnStart** property to use the `Param` function to get the `recordId` and lookup record.
 
     ```powerappsfl
     App.OnStart=Set(RecordItem, 
@@ -202,9 +201,9 @@ This example uses the recordId parameter within the NavigateTo function to provi
     ```
 
     > [!NOTE]
-    > After changing OnStart property, will need to run OnStart from App context menu. This function is only run one within a session
+    > After changing the `OnStart` property, you'll need to run `OnStart` from the App context menu. This function runs only once within a session.
 
-1. Then the custom page can use the **RecordItem** parameter as a record. Below is how to use it in an EditForm.
+1. Then, the custom page can use the **RecordItem** parameter as a record. Below is how to use it in an [EditForm](../../../maker/canvas-apps/functions/function-form.md).
 
     ```powerappsfl
     EditForm.Datasource=<datasource name>
@@ -213,10 +212,10 @@ This example uses the recordId parameter within the NavigateTo function to provi
 
 ### Known issues
 
-- Navigate function does not have support for opening a model or custom page to a dialog. All navigates from a custom page open inline.
-- Navigate function does not support opening.
+- Navigate function does not have support for opening a model or custom page to a dialog. All navigation from a custom page opens inline.
+- Navigate function does not support opening:
     - Dashboard collection or specific dashboard.
-    - Specific model form. 
+    - Specific model-driven form. 
 - Custom page can only open into the current session’s current app tab in a multi-session model-driven app.
 
 
