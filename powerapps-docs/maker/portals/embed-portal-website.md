@@ -124,3 +124,4 @@ approaches have limitations, and don't support full functionality.
 [Substitution template tag](liquid/template-tags.md#substitution) <br>
 [Enable header and footer output caching on a portal](configure/enable-header-footer-output-caching.md) <br>
 [SameSite mode](important-changes-deprecations.md#samesite-mode-changes)
+
