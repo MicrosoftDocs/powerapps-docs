@@ -20,7 +20,9 @@ search.app:
 
 [!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
-The process of writing, registering, and debugging a plug-in is:
+You can use Power Platform Tools for Visual Studio to quickly create and deploy (register) plug-ins. A [quickstart](tools/devtools-create-plugin.md) article is available to show you how.
+
+A more manual process of writing, registering, and debugging a plug-in is:
 
 1. Create a .NET Framework Class library project in Visual Studio
 1. Add the `Microsoft.CrmSdk.CoreAssemblies` NuGet package to the project
@@ -41,8 +43,6 @@ Content in this topic discusses steps 1 thru 5 above and supports the following 
 - [Tutorial: Write and register a plug-in](tutorial-write-plug-in.md)
 - [Tutorial: Debug a plug-in](tutorial-debug-plug-in.md)
 - [Tutorial: Update a plug-in](tutorial-update-plug-in.md)
-
-There is also a [quickstart](tools/devtools-create-plugin.md) that uses the Power Platform Tools extension for Visual Studio to speed up the process of writing and deploying a plug-in.
 
 ## Assembly constraints
 
