@@ -108,8 +108,6 @@ There are two ways apps using the components from library can get the latest cha
 
 ### Method 1: Component update notification on app edit
 
-This notification shows up when app is opened for editing in canvas studio. Makers see notification about the updated components being available. They can review and choose to update the components.
-
 Makers of other apps are notified of updated components being available. The notification appears when makers edit the apps in canvas app studio. They can choose to update the components:
 
 ![Update available.](./media/component-library/update-available.png "Update available")
