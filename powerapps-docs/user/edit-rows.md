@@ -45,7 +45,7 @@ Legend
 3. Select the chevron icon to switch from the default form to another form.
 4. Select a tab to edit the columns on the form. The header column is always listed on the last tab. 
 5. If you changed the data for a required column, it needs to contain data otherwise you won't be able to save your changes.
-6. Shows the details of the form that you can edit.
+6. Shows the form details that can be edited.
 7. Save or cancel your changes. Saved changes are saved for all selected rows.
 
 
