@@ -47,7 +47,7 @@ Legend
 5. Shows the details of the form that you can edit.
 6. Save or cancel your changes. Saved changes are saved for all selected rows.
 
-## Switch forms
+### Switch forms
 
 When you're in edit mode, you an easily switch from the default form to another form. To switch forms, select the chevron icon and then select the form you want to edit.
 
