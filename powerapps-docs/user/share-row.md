@@ -23,7 +23,7 @@ search.app:
  
  [!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
  
- If you want to keep ownership of a row but let someone else work on the row with you then use the share option.
+Keep ownership of a row and use the share feature to share the row with another user or team. 
  
 Any user that you share a row with needs to have basic level access that is granted by a system administrator. If you cannot select permission such as read or write then contact your system administrator and check if the user or team has the required access set by your administrator.
 
