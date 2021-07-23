@@ -26,6 +26,13 @@ We take backward compatibility very seriously. However, with any change or impro
 
 To help balance improvement against impact on existing apps, we take larger features through a progression of stages. This article describes this process and how you can control your exposure to features that are under development.
 
+In general, when creating a _new_ app:
+- **Preview switches are On.**  These features are ready for wide circulation, have been documented, and are fully supported.  One day, the option to turn off these features will be removed and they will become a permanent part of the product.
+- **Experimental switches are Off.**  These features should only be used with caution, it can change or be removed at any time.  If you don't know what the switch is referring to or its possible impact, you likely should not use it.
+- **Retired switches are Off.**  These features are ready to be removed.  Documentation will explain the alternatives to using these features.
+
+As _existing_ apps go through their lifecycle, you may want to adjust these switches to take advantage of new features or to remove a dependency on a feature that will be retired.  Turning **Preview** switches On and **Retired** switches Off brings existing apps into alignment with new apps and the future of the product.
+
 ## Feature roll-out stages
 
 Features move through three stages on their way to becoming official parts of the product:
