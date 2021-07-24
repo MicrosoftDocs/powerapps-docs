@@ -1110,6 +1110,8 @@
           items:
           - name: Use the command designer
             href: ./model-driven-apps/use-command-designer.md
+          - name: Use Power Fx with commands
+            href: ./model-driven-apps/commanding-use-powerfx.md
           - name: Manage commands in solutions
             href: ./model-driven-apps/manage-commands-in-solutions.md
           - name: Command designer limitations
