@@ -84,6 +84,14 @@ Modern commanding largely addresses the above gaps and provides a modern infrast
     > [!div class="mx-imgBorder"]
     > ![An example quick action configured on the contact table](media/CommandDesigner-quick-actions-location.png.jpg "An example quick action configured on the contact table")
 
+## Frequently asked questions
+- Why do I see more commands in the designer than I see in my app?
+  - There are several reasons. Sometimes there is visibility logic that will hide the command when running the app. Other times these commands are dynamically injected via custom JavaScript during runtime and are not configurable. 
+ - Why do I see duplicate commands in the designer?
+    - This was a common pattern used with classic commands. Both commands would not show up in runtime as they were controlled by visibility rules. The command designer will show all commands, regardless of their visibility rules. 
+ - Will I recieve updates during preview?
+   - Yes, you’ll receive updates weekly as we continuously ship improvements, new features, and fix bugs. 
+
 ### See also
 [Customize the command bar using command designer](use-command-designer.md) <br />
 [Manage commands in solutions](manage-commands-in-solutions.md) <br />
