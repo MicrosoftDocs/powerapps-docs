@@ -118,7 +118,7 @@ Custom pages can be created from two places. The first is while authoring a mode
 1. Return to the app designer browser tab and refresh the app designer by selecting **Dismiss**.
 
     > [!div class="mx-imgBorder"]
-    > ![Dimiss creating your page prompt](media/add-page-to-model-app/app-designer-creating-page-prompt.png "Dimiss creating your page prompt")
+    > ![Dismiss creating your page prompt](media/add-page-to-model-app/app-designer-creating-page-prompt.png "Dismiss creating your page prompt")
 
 1. Select **Publish** in the app designer to add the changed custom page into the model-driven app.
 

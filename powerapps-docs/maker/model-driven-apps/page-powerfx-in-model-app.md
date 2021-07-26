@@ -19,7 +19,7 @@ search.app:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-This article outlines how the common Microsoft Power Fx functions works within a custom page. Power Fx formulas in a custom page can be different from Power Fx in a standalone canvas app. This is because custom pages are a component within the model-driven app.
+This article outlines how the common [Microsoft Power FX](../canvas-apps/formula-reference.md) functions works within a custom page. Power Fx formulas in a custom page can be different from Power Fx in a standalone canvas app. This is because custom pages are a component within the model-driven app.
 
   > [!IMPORTANT]
   > - This is a preview feature, and isn't available in all regions.
@@ -58,12 +58,12 @@ Examples that use a table should be added as a data source in the page.
 To navigate from one custom page to another, pass the display name of the custom page as the first parameter.
 
 ```powerappsfl
-Navigate( '<custom page>'  )
+Navigate( '<Name of the custom page>'  )
 ```
 
 ### Navigate to the default view of the table
 
-To navigate to the default view of the table, passed table name as the first argument.
+To navigate to the default view of the table, passed table name as the first parameter.
 
 ```powerappsfl
 Navigate( Accounts )
@@ -71,7 +71,7 @@ Navigate( Accounts )
 
 ### Navigate to specific system view of the table
 
-To navigate to a specific system view of the table,pass the table's Views enum.
+To navigate to a specific system view of the table, pass the GUID of the view.
 
 ```powerappsfl
 Navigate( 'Accounts (Views)'.'My Active Accounts' )
@@ -79,7 +79,7 @@ Navigate( 'Accounts (Views)'.'My Active Accounts' )
 
 ### Navigate to the default form of the table
 
-To navigate to the default form of the table, pass the record as the first argument.
+To navigate to the default form of the table, pass the record as the first parameter.
 
 ```powerappsfl
 Navigate( Gallery1.Selected )
@@ -87,7 +87,7 @@ Navigate( Gallery1.Selected )
 
 ### Navigate to the default form of the table in create mode
 
-To navigate to the default form of the table in create mode, pass a Dataverse record created from the [Defaults](../canvas-apps/functions/function-defaults.md) function. This will open the default form with the record as a new record. The **Defaults** function takes the table name to create the record.
+To navigate to the default form of the table in create mode, pass a Dataverse record created from the [Defaults](../canvas-apps/functions/function-defaults.md) function. This opens the default form with the record as a new record. The **Defaults** function takes the table name to create the record.
 
 ```powerappsfl
 Navigate( Defaults( Accounts ) )
