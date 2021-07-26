@@ -37,7 +37,7 @@ Code components provide professional developers the ability to create custom cod
 
 To use code components inside a custom page, you need to enable Power Apps component framework feature. More information: [Enable the Power Apps component framework feature](/powerapps/developer/component-framework/component-framework-for-canvas-apps#enable-the-power-apps-component-framework-feature) 
 
-![Enable Power Apps component framework.](../../developer/component-framework/media/enable-pcf-feature.png "Enable Power Apps component framework")
+:::image type="content" source="../../developer/component-framework/media/enable-pcf-feature.png" alt-text="Enable Power Apps component framework." lightbox="../../developer/component-framework/media/enable-pcf-feature.png":::
 
 ## Create code components for use in a custom page
 
@@ -53,28 +53,27 @@ You can also try [OOB sample components](/powerapps/developer/component-framewor
 
 In an environment, custom pages can use all the code components previously imported into Dataverse using solutions. On the left pane, select **Add (+)**, and then select **Get more components** at the bottom of the page. You will see a code tab on the **Import components** pane showing all code components present in the environment.
 
-![Get code component for a custom page.](media/add-component-to-model-app/get-code-components-for-custom-page.png "Get code component for custom page")
+:::image type="content" source="media/add-component-to-model-app/get-code-components-for-custom-page.png" alt-text="Get code components for a custom page." lightbox="media/add-component-to-model-app/get-code-components-for-custom-page.png":::
 
   > [!NOTE]
   > - If the code tab doesn't show up in the **Import component** pane, verify that the Power Apps component framework feature setting for canvas apps is enabled. More information: [Enable Power Apps component framework feature](../../developer/component-framework/component-framework-for-canvas-apps.md) 
   > - Also, ensure that you are working on the latest canvas app studio authoring version. 
 
-
 The newly added code components are now available under the **Code components** section. It can be added to a custom page.
 
-![Add web API code component for a custom page.](media/add-component-to-model-app/add-web-api-component-to-custompage.png "Add web API code component for a custom page")
+:::image type="content" source="media/add-component-to-model-app/add-web-api-component-to-custompage.png" alt-text="Add Web API code components for a custom page." lightbox="media/add-component-to-model-app/add-web-api-component-to-custompage.png":::
 
 ### Testing the code component inside the studio and published app
 
 Like canvas apps, code components are interactive and can be tested in the custom page studio authoring environment. However, specific APIs like `Web APIs` and `Navigation`, which only have the custom page runtime support when invoked, will show the error message "Method not implemented".
+
+:::image type="content" source="media/add-component-to-model-app/create-record-not-implmented-custom-page-studio.png" alt-text="Create record Web API not implemented." lightbox="media/add-component-to-model-app/create-record-not-implmented-custom-page-studio.png":::
 
 ![Create record Web Api not implemented.](media/add-component-to-model-app/create-record-not-implmented-custom-page-studio.png "Create record Web Api not implemented.")
 
 You can dismiss this error and publish the custom page. Then, add this custom page to the model-driven app and publish the app to see the custom page web API in action.
 
 The image below shows the standard [Web API sample control](/powerapps/developer/component-framework/sample-controls/webapi-control) and [Navigation API control](/powerapps/developer/component-framework/sample-controls/navigation-api-control) added to custom page working inside a published model-driven app.
-
-![Create record and Navigation APIs in custom page.](media/add-component-to-model-app/custom-page-app-with-webapi-and-dialog-sample.png "Create record and Navigation APIs in custom page.")
 
 ### Additional code component resources
 
