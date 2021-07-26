@@ -112,5 +112,3 @@ An app maker can enable multiple screens in a custom page. These should be consi
 [Navigating to and from a custom page using client API](../../developer/model-driven-apps/clientapi/navigate-to-custom-page-examples.md)
 
 [Model-driven app custom page overview](model-app-page-overview.md)
-
-[Navigating a custom page](page-powerfx-in-model-app.md#navigating-a-custom-page)
