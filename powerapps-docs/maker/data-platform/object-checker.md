@@ -20,12 +20,6 @@ search.app:
 
 Object checker runs real-time diagnostics on component objects within your solution. If issues are detected, a recommendation is returned that describes how to fix the issue. This might include documentation, instructions, or a click-able action that can fix the issue for you.
 
-## Difference between object checker and solution checker
-
-Object checker and solution checker are similar and share much of the same infrastructure. However, object checker runs *live diagnostics on the database* and can analyze issues based on the metadata and layering of a given solution object - regardless of which solution(s) the object is in. Therefore, object checker is better suited for troubleshooting application lifecycle (ALM) related issues in test and production environments.
-
-Solution checker runs offline analysis on a single solution file and requires the solution to be exported. Solution checker is better suited for development environments or analyzing a solution prior to committing it to a source control repository.
-
 ## Example issues object checker detects
 
 - Active layer hiding customizations.
