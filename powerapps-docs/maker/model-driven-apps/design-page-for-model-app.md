@@ -1,10 +1,11 @@
 ---
 title: "Design a custom page for your model-driven app" 
-description: ""
+description: "Learn how to design a custom page for your model-driven app"
 ms.custom: ""
 ms.date: 07/21/2021
 ms.reviewer: ""
 ms.service: powerapps
+ms.subservice: mda-maker
 ms.topic: "conceptual"
 author: "aorth"
 ms.author: "matp"
@@ -19,7 +20,7 @@ search.app:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-This topic provides tips for designing a custom page for use in a model-driven app.
+This article provides tips for designing a custom page for use in a model-driven app.
 
   > [!IMPORTANT]
   > - This is a preview feature, and isn't available in all regions.

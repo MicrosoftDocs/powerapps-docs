@@ -1,6 +1,6 @@
 ---
 title: "Known issues with custom pages in a model-driven app"
-description: "" 
+description: "Find the known issue that might occur when you create a custom page" 
 ms.custom: ""
 ms.date: 07/22/2021
 ms.reviewer: ""

@@ -1,6 +1,6 @@
 ---
 title: "Add canvas components to a custom page for your model-driven app" 
-description: ""
+description: "Learn how to add a canvas app component using a custom page"
 ms.custom: ""
 ms.date: 07/14/2021
 ms.reviewer: ""

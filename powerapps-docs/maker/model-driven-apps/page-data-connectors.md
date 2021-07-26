@@ -1,6 +1,6 @@
 ---
 title: "Add connectors to a custom page for your model-driven app (preview)" 
-description: ""
+description: "Learn how to add a connector to a custom page"
 ms.custom: ""
 ms.date: 07/22/2021
 ms.reviewer: ""

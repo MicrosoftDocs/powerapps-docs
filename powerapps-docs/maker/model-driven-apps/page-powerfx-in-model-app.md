@@ -1,10 +1,11 @@
 ---
 title: "Use PowerFx in custom page for your model-driven app (preview)" 
-description: ""
+description: "Learn how to use Power Fx in a custom page"
 ms.custom: ""
 ms.date: 07/06/2021
 ms.reviewer: ""
 ms.service: powerapps
+ms.subservice: mda-maker
 ms.topic: "article"
 author: "aorth"
 ms.author: "matp"
