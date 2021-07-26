@@ -136,13 +136,13 @@ This list identifies all services to which Power Apps Studio talks and their usa
 > [!NOTE]
 > If you're using a VPN, it must be configured to exclude localhost from tunneling for Power Apps Mobile.
 
-## Embedding limits for canvas app
+## Embedding limits for canvas apps
 
 Power Apps doesn't support the nested embedding of canvas apps in native desktop, mobile or other non-browser clients.
 
 The following table shows some of the examples where embedding a canvas app isn't supported:
 
-| Canvas apps embedded to | Client |
+| Canvas apps embedded to | Unsupported client |
 | - | - |
 | A SharePoint page that is added as a tab in a Microsoft Teams channel | <ul> <li> Teams desktop </li> <li> Teams mobile </li> </ul> |
 | A Power BI report that is added to a Teams team, or a SharePoint site | <ul> <li> Teams desktop </li> <li> Teams mobile </li> <li> SharePoint mobile </li> </ul> |

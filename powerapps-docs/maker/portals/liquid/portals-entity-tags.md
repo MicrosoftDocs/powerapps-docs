@@ -509,20 +509,6 @@ Loaded entity view with {{ entityview.total_records }} total matching records.
 {% endentityview %}
 ```
 
-**enable\_entity\_permissions**
-
-Specifies whether to apply table permission filtering on view results. This parameter is set to false by default. If entityview is used within an entitylist block, the value of this parameter will be inherited from the list configuration.
-
-This parameter must be passed either an [boolean](liquid-types.md#boolean) value, or a string that can be parsed as a Boolean (true, false). If a value is provided for this parameter, but the value is null or otherwise cannot be parsed as a Boolean, the default of false will be used.  
-
-```
-{% entityview id:request.params.view, enable_entity_permissions:true %}
-
-Loaded entity view with {{ entityview.total_records }} total records to which the user has read permission.
-
-{% endentityview %}
-```
-
 **language\_code**
 
 A Power Apps integer language code to select the entity view localized labels (column header labels, etc.) to be loaded. If no language\_code is provided, the default language of the portal application Power Apps connection will be used.
