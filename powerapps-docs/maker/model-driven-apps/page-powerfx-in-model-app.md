@@ -19,7 +19,7 @@ search.app:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-This article outlines how the common [Microsoft Power FX](../canvas-apps/formula-reference.md) functions works within a custom page. Power Fx formulas in a custom page can be different from Power Fx in a standalone canvas app. This is because custom pages are a component within the model-driven app.
+This article outlines how the common [Microsoft Power FX](../canvas-apps/formula-reference.md) functions work within a custom page. Power Fx formulas in a custom page can be different from Power Fx in a standalone canvas app. This is because custom pages are a component within the model-driven app.
 
   > [!IMPORTANT]
   > - This is a preview feature, and isn't available in all regions.
@@ -27,7 +27,7 @@ This article outlines how the common [Microsoft Power FX](../canvas-apps/formula
 
 ## Add notifications to a custom page
 
-A notification can be shown to the user in a custom page by calling the [Notify function](../canvas-apps/functions/function-showerror.md).  When the notification messages appear, they're docked above the default page to stay visible until disabled. If a timeout interval is provided, the notification message will disappear after the timeout interval. It is recommended to avoid using a timeout interval of 10, as this is no longer considered as a timeout interval. More information: [Notify function](../canvas-apps/functions/function-showerror.md).
+A notification can be shown to the user in a custom page by calling the [Notify function](../canvas-apps/functions/function-showerror.md).  When the notification messages appear, they're docked above the default page to stay visible until disabled. If a timeout interval is provided, the notification message will disappear after the timeout interval. It is recommended not to use a timeout interval of 10, as this is no longer considered as a timeout interval. More information: [Notify function](../canvas-apps/functions/function-showerror.md).
 
 ```powerappsfl
 Notify( "Custom page notification message" )
@@ -103,9 +103,9 @@ Back( )
 
 ### Navigating back when custom page has multiple screens
 
-The default configuration for a custom page is to have one screen. In this case the **Back** function call will close the custom page unless the custom page is the last in the page stack in model-driven app. The last page is kept open.
+The default configuration for a custom page is to have one screen. In this case, the **Back** function call will close the custom page unless the custom page is the last in the page stack in model-driven app. The last page is kept open.
 
-An app maker can enable multiple screens in a custom page. These should be considered like full page controls within the custom page which can be stacked. Opening a custom page has no means of specifying the screen to use.  When a custom page contains multiple screens the maker is responsible for managing the screen stacking.  Calling the **Navigate** function to a screen will add to the screen stack with the custom page.  Each **Back** function call will remove a screen from the screen stack.  When there is only one screen on the screen stack, the custom page is closed.
+An app maker can enable multiple screens in a custom page. These should be considered like full page controls within the custom page that can be stacked. Opening a custom page has no means of specifying the screen to use.  When a custom page contains multiple screens the maker is responsible for managing the screen stacking.  Calling the **Navigate** function to a screen will add to the screen stack with the custom page.  Each **Back** function call will remove a screen from the screen stack.  When there is only one screen on the screen stack, the custom page is closed.
 
 ### See also
 
