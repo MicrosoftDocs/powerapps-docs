@@ -1,6 +1,6 @@
 ---
 title: "Use PowerFx in custom page for your model-driven app (preview)" 
-description: ""
+description: "This article outlines how the common Microsoft Power FX functions work within a custom page."
 ms.custom: ""
 ms.date: 07/06/2021
 ms.reviewer: ""
