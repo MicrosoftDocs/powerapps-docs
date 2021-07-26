@@ -29,17 +29,17 @@ This new page can be more flexible than a model-driven app form, view, or dashbo
 
 Below shows the custom page inline within the model-driven app. The model-driven app has the full-page space in the images without the header and navigation.
 
-[Custom page as main page.](/powerapps/maker/model-driven-apps/add-page-to-model-app).
+[Custom page as main page.](add-page-to-model-app).
 
   > [!div class="mx-imgBorder"]
   > ![Custom page as main page](media/model-app-page-overview/page-inline-model-app.png "Custom page as main page")
 
-[Custom page as a center dialog.](/powerapps/maker/model-driven-apps/navigate-page-examples#open-as-a-centered-dialog)
+[Custom page as a center dialog.](/powerapps/developer/model-driven-apps/clientapi/navigate-to-custom-page-examples#open-as-a-centered-dialog)
 
   > [!div class="mx-imgBorder"]
   > ![Custom page as center dialog](media/model-app-page-overview/page-center-dialog-model-app.png "Custom page as center dialog")
 
-[Custom page as a side dialog.](/powerapps/maker/model-driven-apps/navigate-page-examples#open-as-a-side-dialog)
+[Custom page as a side dialog.](/powerapps/developer/model-driven-apps/clientapi/navigate-to-custom-page-examples#open-as-a-side-dialog)
 
   > [!div class="mx-imgBorder"]
   > ![Custom page as side dialog](media/model-app-page-overview/page-side-dialog-model-app.png "Custom page as side dialog")
