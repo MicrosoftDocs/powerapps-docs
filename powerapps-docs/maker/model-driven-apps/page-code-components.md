@@ -69,8 +69,6 @@ Like canvas apps, code components are interactive and can be tested in the custo
 
 :::image type="content" source="media/add-component-to-model-app/create-record-not-implmented-custom-page-studio.png" alt-text="Create record Web API not implemented." lightbox="media/add-component-to-model-app/create-record-not-implmented-custom-page-studio.png":::
 
-![Create record Web Api not implemented.](media/add-component-to-model-app/create-record-not-implmented-custom-page-studio.png "Create record Web Api not implemented.")
-
 You can dismiss this error and publish the custom page. Then, add this custom page to the model-driven app and publish the app to see the custom page web API in action.
 
 The image below shows the standard [Web API sample control](/powerapps/developer/component-framework/sample-controls/webapi-control) and [Navigation API control](/powerapps/developer/component-framework/sample-controls/navigation-api-control) added to custom page working inside a published model-driven app.
