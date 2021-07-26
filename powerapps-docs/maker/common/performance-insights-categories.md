@@ -19,7 +19,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Understanding insights
+# Understanding insights (preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 

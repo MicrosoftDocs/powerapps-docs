@@ -1149,6 +1149,32 @@
             href: ./model-driven-apps/create-edit-quick-view-forms.md
           - name: "Create a card form"
             href: ./model-driven-apps/create-card-forms.md
+        - name: Troubleshoot forms
+          items:
+          - name: Use Monitor to troubleshoot forms
+            href: ./model-driven-apps/monitor-form-checker.md
+      - name: Use custom pages to converge canvas and model-driven apps
+        items:
+        - name: Custom pages overview
+          href: ./model-driven-apps/model-app-page-overview.md
+        - name: Add a custom page to a model-driven app
+          href: ./model-driven-apps/add-page-to-model-app.md
+        - name: Design considerations for a custom page
+          href: ./model-driven-apps/design-page-for-model-app.md
+        - name: Navigating to and from a custom page
+          href: ../developer/model-driven-apps/clientapi/navigate-to-custom-page-examples.md
+        - name: Use Power Fx in a custom page
+          href: ./model-driven-apps/page-powerfx-in-model-app.md
+        - name: Add canvas components to a custom page
+          href: ./model-driven-apps/page-canvas-components.md   
+        - name: Add code components to a custom page
+          href: ./model-driven-apps/page-code-components.md     
+        - name: Add connectors to a custom page
+          href: ./model-driven-apps/page-data-connectors.md
+        - name: Known issues with custom pages
+          href: ./model-driven-apps/model-app-page-issues.md
+        - name: Use monitor to troubleshoot custom pages
+          href: ./model-driven-apps/monitor-page-checker.md
       - name: Use the classic designers
         items:
         - name: Design model-driven apps by using the app designer
@@ -1205,10 +1231,6 @@
             href: ./model-driven-apps/manage-auto-save.md
           - name: How to add a tab for SharePoint documents
             href: ./model-driven-apps/add-documents-tab-entity-main-form.md
-        - name: Troubleshoot forms
-          items:
-          - name: Use Monitor to troubleshoot forms
-            href: ./model-driven-apps/monitor-form-checker.md
       - name: Embed a canvas app on a model-driven form
         href: ./model-driven-apps/embed-canvas-app-in-form.md
         items:
