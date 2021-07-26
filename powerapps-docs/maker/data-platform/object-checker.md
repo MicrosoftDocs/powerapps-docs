@@ -31,21 +31,22 @@ Solution checker runs offline analysis on a single solution file and requires th
 - Active layer hiding customizations.
 - Malformed or corrupted metadata.
 
-## Use object checker
+## Run object checker and view the results
 
 1. Open a solution that contains the problematic object. You may run object checker within either managed and unmanaged solutions.
 1. Select a single object, such as a model-driven app or a site map.
 1. On the command bar, select **...** > **Object checker** > **Run**.
    :::image type="content" source="media/object-checker-run.png" alt-text="Run object checker":::
 
-1. On the command bar, select **...** > **Object checker** > **View results**
+1. When object checker finishes, on the command bar, select **...** > **Object checker** > **View results**
    :::image type="content" source="media/object-checker-view-results.png" alt-text="View object checker results":::
 
 1. The results are displayed in the right pane. If issues are detected, follow the prompt to resolve the issue.
+1. Select **Close** to close the object checker results pane.
 
 ## Current limitations
 
-Object checker is currently only supported for model-driven apps and site map components. <!-- This is a framework that will grow to support other object types and additional rules over time. -->
+Object checker currently only works with model-driven app and site map components. <!-- This is a framework that will grow to support other object types and additional rules over time. -->
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
