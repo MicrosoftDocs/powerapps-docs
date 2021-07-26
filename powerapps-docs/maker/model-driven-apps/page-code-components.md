@@ -27,9 +27,11 @@ This article outlines the use of code components built by professional developer
   > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
 
   > [!NOTE]
-  > Custom pages support all the component framework APIs that are currently supported with canvas apps. Additionally, certain model-driven app only APIs like Web API and navigation have published app support for custom pages. These APIs can be used in the code component for custom pages and works on the final published app. For individual API support status on each platform, see [Power Apps component framework API reference](/powerapps/developer/component-framework/reference/)
+  > - Custom pages support all the component framework APIs that are currently supported for canvas apps. 
+  > - Certain model-driven app specific APIs like [WebAPI](../../developer/component-framework/reference/webapi.md) and [Navigation](../../developer/component-framework/reference/navigation.md) have published app support for custom pages. These APIs can be used in the code component for custom pages and works on the final published app. 
+  > - For individual API support status on each platform, see [Power Apps component framework API reference](/powerapps/developer/component-framework/reference/)
 
-Code components provide professional developers the ability to create custom code components for use within an app. This pro-code extensibility mechanism provides a first-class application lifecycle management (ALM) to seamlessly extend the components available to all the app makers across the organization. Code components can be reused across custom pages, canvas, and model-driven apps. They can be centrally updated, packaged, and moved using standard Microsoft Dataverse solutions. More information: [Power Apps component framework overview](/powerapps/developer/component-framework/overview) 
+Code components provide professional developers the ability to create custom code components for use within an app. This pro-code extensibility mechanism provides first-class application lifecycle management (ALM) to seamlessly extend the components available to all the app makers across the organization. Code components can be reused across custom pages, canvas, and model-driven apps. They can be centrally updated, packaged, and moved using standard Microsoft Dataverse solutions. More information: [Power Apps component framework overview](/powerapps/developer/component-framework/overview) 
 
 ## Enabling Power Apps component framework for custom pages
 
@@ -39,17 +41,17 @@ To use code components inside a custom page, you need to enable Power Apps compo
 
 ## Create code components for use in a custom page
 
-This section describes how to create, import, and test code components.
+This section outlines how to create, import, and test code components.
 
 ### Creating and importing code components in Dataverse
 
 Code components for custom pages follow the same pattern as they do with canvas app. Code components need to be implemented first before they can be added to a custom page. To create a code component, see [Create your first component](/powerapps/developer/component-framework/implementing-controls-using-typescript).
 
-You can also [try OOB sample components](/powerapps/developer/component-framework/use-sample-components#try-the-sample-components) to jump start. Once the you are done implementing your code component, it can be packaged into a solution and added to Dataverse, making it available for use in all the custom pages in line with model-driven and canvas apps. More information: [Code components application lifecycle management (ALM)](/powerapps/developer/component-framework/code-components-alm).
+You can also try [OOB sample components](/powerapps/developer/component-framework/use-sample-components#try-the-sample-components) to jump start. Once you are done implementing your code component, it can be packaged into a solution and added to Dataverse, making it available for use in all the custom pages in line with model-driven and canvas apps. More information: [Code components application lifecycle management (ALM)](/powerapps/developer/component-framework/code-components-alm).
 
 ### Importing and using code component in a custom page
 
-In an environment, custom pages can use all the code components previously imported into Dataverse using solutions. Select **Get more components** at the bottom of the add control left navigation area. You will see a code tab on the **Import components** pane showing all code components present in the environment.
+In an environment, custom pages can use all the code components previously imported into Dataverse using solutions. On the left pane, select **Add (+)**, and then select **Get more components** at the bottom of the page. You will see a code tab on the **Import components** pane showing all code components present in the environment.
 
 ![Get code component for a custom page.](media/add-component-to-model-app/get-code-components-for-custom-page.png "Get code component for custom page")
 
@@ -58,7 +60,7 @@ In an environment, custom pages can use all the code components previously impor
   > - Also, ensure that you are working on the latest canvas app studio authoring version. 
 
 
-The newly added code component is now available under the **Code components** section. It can be added to a custom page.
+The newly added code components are now available under the **Code components** section. It can be added to a custom page.
 
 ![Add web API code component for a custom page.](media/add-component-to-model-app/add-web-api-component-to-custompage.png "Add web API code component for a custom page")
 
