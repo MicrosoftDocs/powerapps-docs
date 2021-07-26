@@ -42,5 +42,7 @@ Object checker runs real-time diagnostics on component objects within your solut
 
 Object checker currently only works with model-driven app and site map components. <!-- This is a framework that will grow to support other object types and additional rules over time. -->
 
+### See also
+[Tools available to diagnose solutions](diagnose-solutions.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
