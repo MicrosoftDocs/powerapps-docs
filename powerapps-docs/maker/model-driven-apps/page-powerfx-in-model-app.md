@@ -95,7 +95,7 @@ Navigate( Defaults( Accounts ) )
 
 ### Navigate back to the prior page or close a dialog
 
-To navigate back to the last page or to close a dialog, the [Back](../canvas-apps/functions/function-navigate.md) function is called in a custom page. The **Back** function closes the current page and returns to the last model-driven app or custom page in the model-driven app. If the custom page has multiple screens, see the article [Navigation advanced examples for custom page](#navigating-back-when-custom-page-has-multiple-screens).
+To navigate back to the last page or to close a dialog, the [Back](../canvas-apps/functions/function-navigate.md) function is called in a custom page. The **Back** function closes the current page and returns to the last model-driven app or custom page in the model-driven app. If the custom page has multiple screens, see the article [Navigating back when custom page has multiple screens](#navigating-back-when-custom-page-has-multiple-screens).
 
 ```powerappsfl
 Back( )
