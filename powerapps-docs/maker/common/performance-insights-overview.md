@@ -15,7 +15,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# What are performance insights?
+# What are performance insights? (preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
