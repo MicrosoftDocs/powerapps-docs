@@ -25,7 +25,7 @@ search.app:
 
 With relevance search, the search box is always available at the top of every page in your app. You can start a new search and quickly find the information that you're looking for. 
 
-When relevance search is turned on, it's your default and only global search experience for all your apps. You won't be able to switch to [quick find search also known as categorized search](quick-find.md).
+When relevance search is turned on, it becomes your default and only global search experience for all your apps. You won't be able to switch to [quick find search also known as categorized search](quick-find.md).
 
 > [!div class="mx-imgBorder"]
 > ![Search box in the header for an app.](media/new-search-exp.png "Search box in the header for an app")
