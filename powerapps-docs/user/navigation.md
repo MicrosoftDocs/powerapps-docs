@@ -75,7 +75,7 @@ Legend
 
 ### Early access: Hide or show the Home, Pinned, Recent, and collapsible groups
 
-If you're on [early access](/power-platform/admin/opt-in-early-access-updates) your site map may look different. With 2021 release wave 2, an app maker can customize the navigation bar to show or hide the **Home**, **Recent**, **Pinned** buttons in the site map. An app maker can also make groups collapsible. For information on how customize the navigation bar, see [Overview of the model-driven app designer](/maker/model-driven-apps/app-designer-overview).
+If you're on [early access](/power-platform/admin/opt-in-early-access-updates) your site map might look different. With 2021 release wave 2, the app maker can customize the navigation bar to show or hide the **Home**, **Recent**, **Pinned** buttons in the site map. The app maker can also make groups collapsible. For information on how customize the navigation bar, see [Overview of the model-driven app designer](/maker/model-driven-apps/app-designer-overview).
 
 
 ![This diagram shows how the site map looks with a app maker customizes it to hide or show the Home, Pinned, Recent, and collapsible groups.](media/hide-show-nav-bar-buttons.gif
