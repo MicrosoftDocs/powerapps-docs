@@ -20,10 +20,9 @@ search.app:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-Command bars are at the core of every model-driven app and appear in many different locations. Commands are arranged in relation to other commands and are associated with a command bar location. The group of commands associated with a specific location make up a command bar. 
- 
-> [!div class="mx-imgBorder"]
-> ![Command bar](media/CommandDesigner-location.png "Command bar")
+Command bars are at the core of every model-driven app and appear in many different locations. Commands are arranged in relation to other commands and are associated with a command bar location. The group of commands associated with a specific location make up a command bar.
+
+![Command bar](media/CommandDesigner-location.png "Command bar")
 
 > [!IMPORTANT]
 > - This is a preview feature, and may not be available in all regions.
