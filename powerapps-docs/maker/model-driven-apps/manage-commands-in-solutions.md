@@ -23,8 +23,8 @@ search.app:
 
 Unlike classic commands, modern commands are treated the same as other solution components and support core solution behaviors.
 
-> [!div class="mx-imgBorder"]
-> ![Core solution actions](media/commanddesigner-core-solution-actions.png "Core solution actions")
+<!-- > [!div class="mx-imgBorder"]
+> ![Core solution actions](media/commanddesigner-core-solution-actions.png "Core solution actions")  -->
 
 Modern commanding provides these benefits when you work with solutions:
 - Add solution components that depend on your command actions.
@@ -42,3 +42,5 @@ Modern commanding provides these benefits when you work with solutions:
 ### See also
 
 [Modern commanding overview (preview)](command-designer-overview.md)
+
+[Solutions overview](../data-platform/solutions-overview.md)

@@ -44,4 +44,6 @@ We look forward to your feedback on what you like or dislike as well as what fea
 
 ### See also
 
+[Modern commanding overview (preview)](command-designer-overview.md)
+
 [Introducing Command Checker for model-app ribbons](https://powerapps.microsoft.com/blog/introducing-command-checker-for-model-app-ribbons/)

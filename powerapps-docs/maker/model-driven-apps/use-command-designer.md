@@ -33,7 +33,7 @@ Either [Create a new model-driven app using modern app designer](#create-a-new-m
 
 ### Create a new model-driven app using modern app designer
 
-1. Go to [make.powerapps.com](https://make.powerapps.com/?cds-app-module-designer.isCustomPageEnabled=true)
+1. Sign into [Power Apps](https://make.powerapps.com/?cds-app-module-designer.isCustomPageEnabled=true)
 
 1. On the left navigation pane, select **Solutions** and then open or create a solution to contain the new model-driven app.
 
@@ -47,18 +47,18 @@ Either [Create a new model-driven app using modern app designer](#create-a-new-m
 1. Enter a **Name** for your app, and then select **Create**. More information: [Create a model-driven app that has an account table page](create-a-model-driven-app.md)
 
    > [!div class="mx-imgBorder"]
-   > ![New model-driven app name prompt](media/add-page-to-model-app/app-designer-name-prompt.png "New model-driven app name prompt") -->
+   > ![New model-driven app name prompt](media/add-page-to-model-app/app-designer-name-prompt.png "New model-driven app name prompt")
 
 ### Open an existing model-driven app using modern app designer
 
-1. Go to [make.powerapps.com](https://make.powerapps.com/?cds-app-module-designer.isCustomPageEnabled=true)
+1. Sign into [Power Apps](https://make.powerapps.com/?cds-app-module-designer.isCustomPageEnabled=true)
 
 1. On the left navigation pane, select **Solutions**, and then open the solution containing the existing model-driven app.
 
-1. Open the model-driven app menu and select **Edit** > **Edit in preview** to open the modern app designer.
+1. Select the model-driven app, and then select **...** > **Edit** > **Edit in preview** to open the modern app designer.
 
    > [!div class="mx-imgBorder"]
-   > ![Open modern app designer preview](media/add-page-to-model-app/open-modern-app-designer-preview.png "Open modern app designer preview") -->
+   > ![Open modern app designer preview](media/add-page-to-model-app/open-modern-app-designer-preview.png "Open modern app designer preview")
 
 ## Create or edit modern commands
 
@@ -66,17 +66,17 @@ Once you are in the app designer, use the command designer to customize your com
 
 > [!NOTE]
 > - Currently, the command designer can only be accessed through the modern app designer.
-> - Currently, classic commands can't  be edited within the command designer.
+> - Currently, classic commands can't be edited within the command designer.
  
 ### Edit the command bar
  
 Make sure you **Publish** your app before you work with the command designer.
 
 #### Open the command designer to edit a command bar
- 
+
 1. Select any table from the **Pages** area in the app designer.
- 
- 1. Select **...** (ellipsis), and then select **Edit command bar**.
+
+1. Select **...** (ellipsis), and then select **Edit command bar**.
     > [!div class="mx-imgBorder"]
     > ![App Designer entry point](media/commanddesigner-app-designer-entry-point.png "App Designer entry point")
  
@@ -136,7 +136,7 @@ JavaScript is supported with both classic and modern commands. However, it's sim
  
 1. Enter the **Function name**. For example, select the `Main_system_library.js` library then call this function: `XrmCore.Commands.Open.opennewrecord`.
 
-6. Add parameters to pass to your function.
+1. Add parameters to pass to your function.
 
     > [!div class="mx-imgBorder"]
     > ![Add Parameters](media/commanddesigner-add-javascript-parameters.png "Add Parameters")

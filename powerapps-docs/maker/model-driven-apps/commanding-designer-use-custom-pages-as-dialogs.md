@@ -64,6 +64,8 @@ First, you'll need to determine the table and command bar location to place the 
 1. In the **Add JavaScript Library** dialog, select the library you created in the previous steps, and then select **Add**.
    > [!TIP]
    >    If you can't find the web resource enter the name in the **Search** box.
+   :::image type="content" source="media/add-javascript-library-command.png" alt-text="Add JavaScript library for command":::
+
 1. In the **Command** properties pane, enter the name of the JavaScript **Function**. In this example, *openDialog* is entered.
    > [!div class="mx-imgBorder"]
    > ![New model-driven app name prompt](media/CommandDesigner-open-dialog.png "Enter name of JavaScript function")
