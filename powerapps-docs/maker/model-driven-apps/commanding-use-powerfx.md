@@ -1,6 +1,6 @@
 ---
 title: "Use Power Fx with commands | MicrosoftDocs"
-description: "Use the command designer to customize the command bar."
+description: "Use Power Fx to customize the command bar."
 Keywords: command bar, command designer, commanding, modern, dialog, flow
 author: caburk
 ms.author: caburk
@@ -15,7 +15,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Using Power Fx with commands
+# Using Power Fx with commands (preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 

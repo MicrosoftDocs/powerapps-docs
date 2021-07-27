@@ -1105,17 +1105,6 @@
           href: ./model-driven-apps/create-model-driven-app.md
         - name: Create an app with an account table
           href: ./model-driven-apps/create-a-model-driven-app.md
-        - name: Customize app command bars
-          href: ./model-driven-apps/command-designer-overview.md
-          items:
-          - name: Use the command designer
-            href: ./model-driven-apps/use-command-designer.md
-          - name: Use Power Fx with commands
-            href: ./model-driven-apps/commanding-use-powerfx.md
-          - name: Manage commands in solutions
-            href: ./model-driven-apps/manage-commands-in-solutions.md
-          - name: Command designer limitations
-            href: ./model-driven-apps/command-designer-limitations.md
       - name: Work with forms
         href: ./model-driven-apps/create-design-forms.md
         items:
@@ -1186,6 +1175,19 @@
           href: ./model-driven-apps/model-app-page-issues.md
         - name: Use monitor to troubleshoot custom pages
           href: ./model-driven-apps/monitor-page-checker.md
+      - name: Customize app commands
+        href: ./model-driven-apps/command-designer-overview.md
+        items:
+        - name: Use command designer
+          href: ./model-driven-apps/use-command-designer.md
+        - name: Use Power Fx for commands
+          href: ./model-driven-apps/commanding-use-powerfx.md
+        - name: Use custom pages as dialogs
+          href: ./model-driven-apps/commanding-designer-use-custom-pages-as-dialogs.md
+        - name: Manage commands in solutions
+          href: ./model-driven-apps/manage-commands-in-solutions.md
+        - name: Command designer limitations
+          href: ./model-driven-apps/command-designer-limitations.md          
       - name: Use the classic designers
         items:
         - name: Design model-driven apps by using the app designer
