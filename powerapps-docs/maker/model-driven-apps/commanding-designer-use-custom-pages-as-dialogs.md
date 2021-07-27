@@ -1,6 +1,6 @@
 ---
-title: "Use commands with custom pages and cloud flows| MicrosoftDocs"
-description: "Use the command designer to customize the command bar."
+title: "Use commands with custom pages with cloud flows| MicrosoftDocs"
+description: "Use the command designer to customize as dialogs with cloud flows."
 Keywords: command bar, command designer, commanding, modern, dialog, flow
 author: caburk
 ms.author: caburk
@@ -39,7 +39,7 @@ First, you'll need to determine the table and command bar location to place the 
 1. Select the location of the command bar you want, and then select **Edit**.
     > [!div class="mx-imgBorder"]
     > ![Select location](media/commanddesigner-command-bar-location-selection.png "Select location")
-1. [Open the command designer to edit a command bar](#open-the-command-designer-to-edit-a-command-bar), and then select **+ New** on the command designer command bar.
+1. [Open the command designer to edit a command bar](use-command-designer.md#open-the-command-designer-to-edit-a-command-bar), and then select **+ New** on the command designer command bar.
    :::image type="content" source="media/commanddesigner-new.png" alt-text="Create a new command":::
 
 ## Create a JavaScript web resource

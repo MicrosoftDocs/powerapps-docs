@@ -20,14 +20,14 @@ search.app:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-> [!IMPORTANT]
-> - This is a preview feature, and may not be available in all regions.
-> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
-  
- Command bars are at the core of every model-driven app and appear in many different locations. Commands are arranged in relation to other commands and are associated with a command bar location. The group of commands associated with a specific location make up a command bar. 
+Command bars are at the core of every model-driven app and appear in many different locations. Commands are arranged in relation to other commands and are associated with a command bar location. The group of commands associated with a specific location make up a command bar. 
  
 > [!div class="mx-imgBorder"]
 > ![Command bar](media/CommandDesigner-location.png "Command bar")
+
+> [!IMPORTANT]
+> - This is a preview feature, and may not be available in all regions.
+> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
  
  ## Classic commanding deficiencies
 
@@ -75,8 +75,7 @@ Modern commanding largely addresses the above gaps and provides a modern infrast
     > [!div class="mx-imgBorder"]
     > ![Subgrid view](media/CommandDesigner-subrid-location.png "Subgrid view")
 
-- **Associated view**. This command bar is displayed on the form of a parent table when viewing related data in this table.
-  -	For example, from the main form of an account record select the **Related** tab then select a related table like contacts.
+- **Associated view**. This command bar is displayed on the form of a parent table when viewing related data in this table. For example, from the main form of an account record select the **Related** tab then select a related table like contacts.
     > [!div class="mx-imgBorder"]
     > ![Associated view](media/CommandDesigner-associated-view-location.png "Associated view")
     
@@ -85,12 +84,13 @@ Modern commanding largely addresses the above gaps and provides a modern infrast
     > ![An example quick action configured on the contact table](media/CommandDesigner-quick-actions-location.png.jpg "An example quick action configured on the contact table")
 
 ## Frequently asked questions
-- Why do I see more commands in the designer than I see in my app?
+
+- *Why do I see more commands in the designer than I see in my app?*
   - There are several reasons. Sometimes there is visibility logic that will hide the command when running the app. Other times these commands are dynamically injected via custom JavaScript during runtime and are not configurable. 
- - Why do I see duplicate commands in the designer?
-    - This was a common pattern used with classic commands. Both commands would not show up in runtime as they were controlled by visibility rules. The command designer will show all commands, regardless of their visibility rules. 
- - Will I recieve updates during preview?
-   - Yes, you’ll receive updates weekly as we continuously ship improvements, new features, and fix bugs. 
+- *Why do I see duplicate commands in the designer?*
+  - This was a common pattern used with classic commands. Both commands would not show up in runtime as they were controlled by visibility rules. The command designer will show all commands, regardless of their visibility rules. 
+- *Will I receive updates during preview?*
+  - Yes, you’ll receive updates weekly as we continuously ship improvements, new features, and fix bugs.
 
 ### See also
 [Customize the command bar using command designer](use-command-designer.md) <br />
