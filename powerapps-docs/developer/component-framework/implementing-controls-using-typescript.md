@@ -66,7 +66,7 @@ To create a new project:
     pac pcf init --namespace SampleNamespace --name LinearInputControl --template field
    ```
 
-1. The above command will also run npm install command for you to setup project build tools.
+1. The above command will also run `npm install` command for you to setup project build tools.
 ```
 Running 'npm install' for you...
 ```
