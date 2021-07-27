@@ -19,7 +19,7 @@ search.app:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-This section covers aspects of Power Fx that are specific to commanding. Many other functions that are in use today within canvas apps can also be used. Please keep in mind there are differences because commanding is for model-driven apps.
+This section covers aspects of Power Fx that are specific to commanding. Many other functions that are in use today within canvas apps can also be used. Keep in mind there are differences because commanding is for model-driven apps.
 - All existing data flow functions are supported.
 - Imperative functions that work with data are supported.
 - Imperative functions for simple Confirm and Notify are supported.
@@ -31,11 +31,11 @@ This section covers aspects of Power Fx that are specific to commanding. Many ot
 ## AutoSave
 
 - Many JavaScript commands start by saving the form buffer. This is because it makes the rest of the code easier to work with.
-- By default, we save the form buffer on behalf of the app maker.
-  - The form will save before the command is initiated.
-  - Any problems will be dealt with in the form's UI.
-- Not currently configurable:
-  - We later need facilities for working with the buffer. <!-- What does this mean? -->
+- By default, the form buffer is saved on behalf of the app maker.
+  - The form is saved before the command is initiated.
+  - Any problems that occur during the save operation are dealt with in the form's UI.
+<!--- Not currently configurable:
+  - We later need facilities for working with the buffer.  -->
  
  ## Selected property
 

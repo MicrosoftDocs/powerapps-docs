@@ -20,7 +20,7 @@ search.app:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-This topic guides you through creating and editing modern commands using the new low-code designer and Power Fx.
+This topic guides you through creating and editing modern commands using the command designer and Power Fx.
 
   > [!IMPORTANT]
   > - This is a preview feature, and may not be available in all regions.
@@ -76,7 +76,7 @@ Make sure you **Publish** your app before you work with the command designer.
 
 1. Select any table from the **Pages** area in the app designer.
 
-1. Select **...** (ellipsis), and then select **Edit command bar**.
+1. Select **...**, and then select **Edit command bar**.
     > [!div class="mx-imgBorder"]
     > ![App Designer entry point](media/commanddesigner-app-designer-entry-point.png "App Designer entry point")
  
