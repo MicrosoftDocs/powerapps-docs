@@ -66,7 +66,10 @@ To create a new project:
     pac pcf init --namespace SampleNamespace --name LinearInputControl --template field
    ```
 
-1. Install the project build tools using the command `npm install`. 
+1. The above command will also run npm install command for you to setup project build tools.
+```
+Running 'npm install' for you...
+```
 
    > [!NOTE]
    > If you receive the error `The term 'npm' is not recognized as the name of a cmdlet, function, script file, or operable program.`, make sure you have installed [node.js](https://nodejs.org/en/download/) (LTS version is recommended) and all other prerequisites.
