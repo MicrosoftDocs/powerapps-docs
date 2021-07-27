@@ -95,10 +95,11 @@ When you create a new command, a command component library is created on your be
 1. On the right pane, enter or select from the following options:
    - **Label**. Enter a label that will be displayed on the command button. 
    - **Icon**. Select an icon for the command button. You may choose from any system icons or web resource SVG files. To upload your own icon, choose **Web resource** then upload an **SVG** format file. Then, select **Save** and **Publish** the web resource. For more information about how to create a web resource for the icon image you want, go to [Create or edit model-driven app web resources to extend an app](create-edit-web-resources.md).
-   - **Tooltip title**. 
-   - **Tooltip description**. 
-   - **Accessibility text**. 
-   - **Order number**. 
+   - **Tooltip title**. Enter a tooltip title. The title appears to the user when they hover their mouse over the command.
+   - **Tooltip description**. Enter a tooltip description. The description appears for the user below the tooltip title when they hover their mouse over the command.
+      :::image type="content" source="media/command-tooltip.png" alt-text="Example of a command tooltip title and description.":::
+   - **Accessibility text**. Enter the text that will be read by screen readers.
+   - **Order number**. The order the command will display in at runtime in relation to other commands within the same command bar.
    - **Action**. Select from the following:
       - **Run formula**. Enter the Power Fx formula to run the command action. More information: [Use Power Fx for actions and visibility](#use-power-fx-for-actions-and-visibility)
       - **JavaScript**. Provide the JavaScript library and command to run the command action. More information: [Use JavaScript for actions](#use-javascript-for-actions)
