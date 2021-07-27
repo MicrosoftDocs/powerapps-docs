@@ -1153,7 +1153,7 @@
           items:
           - name: Use Monitor to troubleshoot forms
             href: ./model-driven-apps/monitor-form-checker.md
-      - name: Use custom pages to converge canvas and model-driven apps
+      - name: Use custom pages to add canvas apps (preview)
         items:
         - name: Custom pages overview
           href: ./model-driven-apps/model-app-page-overview.md
@@ -1175,7 +1175,7 @@
           href: ./model-driven-apps/model-app-page-issues.md
         - name: Use monitor to troubleshoot custom pages
           href: ./model-driven-apps/monitor-page-checker.md
-      - name: Customize app commands
+      - name: Customize app commands (preview)
         href: ./model-driven-apps/command-designer-overview.md
         items:
         - name: Use command designer
