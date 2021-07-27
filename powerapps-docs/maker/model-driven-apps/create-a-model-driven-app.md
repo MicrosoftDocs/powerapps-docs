@@ -6,7 +6,6 @@ ms.service: powerapps
 ms.subservice: mda-maker
 ms.topic: tutorial
 author: joel-lindstrom
-ms.subservice: mda-maker
 ms.author: v-ljoel
 ms.reviewer: matp
 ---
