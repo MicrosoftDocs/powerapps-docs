@@ -7,12 +7,16 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.date: 07/07/2021
+ms.subservice: canvas-maker
 ms.author: chmoncay
 ms.reviewer: tapanm
 search.audienceType:
   - maker
 search.app:
   - PowerApps
+contributors:
+  - tapanm-msft
+  - chmoncay
 ---
 # Barcode scanner control in Power Apps
 

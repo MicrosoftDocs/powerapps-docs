@@ -7,11 +7,17 @@ ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 09/01/2020
+ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - navjotm
+  - wimcoor
+  - emcoope-msft
 ---
 # Use drop-down lists with choices from lookup columns in a SharePoint list
 

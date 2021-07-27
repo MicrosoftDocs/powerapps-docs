@@ -5,6 +5,7 @@ author: sbahl10
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
+ms.subservice: teams
 ms.date: 07/13/2021
 ms.author: v-shrutibahl
 ms.reviewer: tapanm

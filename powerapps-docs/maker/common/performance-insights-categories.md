@@ -11,6 +11,7 @@ ms.topic: "overview"
 applies_to: 
   - "powerapps"
 author: "Mattp123"
+ms.subservice: common
 ms.author: "matp"
 manager: "kvivek"
 search.audienceType: 
@@ -18,7 +19,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Understanding insights
+# Understanding insights (preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 

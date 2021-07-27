@@ -7,6 +7,7 @@ ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 01/22/2021
+ms.subservice: canvas-maker
 ms.author: jiahn
 search.audienceType: 
   - maker

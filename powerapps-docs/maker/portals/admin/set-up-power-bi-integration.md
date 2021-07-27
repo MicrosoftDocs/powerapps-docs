@@ -5,7 +5,8 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/11/2021
+ms.date: 07/22/2021
+ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: tapanm
 contributors:
@@ -19,7 +20,7 @@ Power BI is one of the best tools to deliver insights with simple and interactiv
 
 > [!NOTE]
 > - You must have an appropriate Power BI license.
-> - To use Power BI Embedded service, you must have an appropriate Power BI Embedded license. For more information, see [Licensing](/power-bi/developer/embedded-faq#licensing).
+> - To use Power BI Embedded service, you must have an appropriate Power BI Embedded license. Ensure you review [capacity planning](/power-bi/developer/embedded/embedded-capacity-planning), and [pricing](https://azure.microsoft.com/pricing/details/power-bi-embedded/) for Power BI Embedded. More information: [Power BI Embedded Licensing FAQs](/power-bi/developer/embedded-faq#licensing).
 > - Ensure that **Embed content in apps** is *Enabled* in your Power BI tenant [Developer settings](/power-bi/guidance/admin-tenant-settings#developer-settings). When disabled, a portal can't render embedded Power BI dashboards or reports.
 
 ## Enable Power BI visualization
@@ -191,7 +192,6 @@ Customizers can now use the [powerbi Liquid tag](../liquid/portals-entity-tags.m
 ## Considerations and limitations
 
 - Power Apps portals doesn't support [Azure Analysis Services live connections](/power-bi/developer/embedded/embedded-row-level-security#working-with-analysis-services-live-connections). You can use Analysis Services in import mode with row-level security (RLS) applied in the report instead of Analysis Services.
-- Power Apps portals doesn't support guest users for Power BI dashboards and reports. The following message is displayed when a guest user tries to sign in to Power BI on the portal page: <br> `Selected user account does not exist in tenant '[Tenant Name]' and cannot access the application '[App ID]' in that tenant. The account needs to be added as an external user in the tenant first. Please use a different account.`
 - Portals with version [9.3.4.x](../versions/version-9.3.4.x.md) or later support the following capabilities:
     - Dashboards and report from Azure Analysis Services using [live connections](/azure/analysis-services/analysis-services-connect-pbi).
     - Dashboards with [role-based security](/power-bi/admin/service-admin-rls).

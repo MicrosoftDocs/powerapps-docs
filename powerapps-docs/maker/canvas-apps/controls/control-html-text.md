@@ -6,12 +6,16 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
+ms.subservice: canvas-maker
 ms.date: 07/13/2021
 ms.author: chmoncay
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - chmoncay
 ---
 # HTML text control in Power Apps
 A box that shows text and converts HTML tags to formatting.

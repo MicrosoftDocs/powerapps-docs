@@ -7,6 +7,7 @@ ms.reviewer: "kvivek"
 ms.service: powerapps
 ms.topic: "article"
 author: "Nkrb" # GitHub ID
+ms.subservice: mda-developer
 ms.author: "nabuthuk" # MSFT alias of Microsoft employees only
 manager: kvivek
 search.audienceType: 

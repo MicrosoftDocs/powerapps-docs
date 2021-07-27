@@ -6,12 +6,16 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.date: 08/21/2020
+ms.subservice: canvas-maker
 ms.author: caburk
 ms.reviewer: tapanm
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - caburk
 ---
 
 # Export and import canvas app packages

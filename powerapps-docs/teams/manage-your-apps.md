@@ -6,8 +6,12 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 09/22/2020
+ms.subservice: teams
 ms.author: chmoncay
 ms.reviewer: tapanm
+contributors:
+  - tapanm-msft
+  - chmoncay
 ---
 
 # Manage your apps in Teams

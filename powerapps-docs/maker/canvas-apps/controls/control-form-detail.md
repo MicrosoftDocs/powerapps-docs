@@ -8,11 +8,16 @@ ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 07/06/2017
+ms.subservice: canvas-maker
 ms.author: aneesa
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - chmoncay
+  - aneesmsft
 ---
 # Edit form and Display form controls in Power Apps
 Display, edit, and create a record in a data source.

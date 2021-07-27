@@ -8,11 +8,14 @@ ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 08/06/2020
+ms.subservice: canvas-maker
 ms.author: alaug
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
 ---
 # Delete a canvas app
 

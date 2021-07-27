@@ -11,7 +11,7 @@
   - name: "Learning catalog"
     items:
     - name: "Learning catalog"
-      href: ../learning-catalog/get-started.md
+      href: ../learning-catalog/learning-catalog.md
     - name: Business Decision Maker
       href: ../learning-catalog/bdm.md
     - name: App maker
@@ -949,7 +949,7 @@
             href: ./canvas-apps/accessible-apps-limitations.md
       - name: Send notifications from an app
         href: ./canvas-apps/add-notifications.md
-      - name: Experimental and preview features
+      - name: Experimental, preview, and retired features
         href: ./canvas-apps/working-with-experimental-preview.md
   - name: Save and publish an app
     href: ./canvas-apps/save-publish-app.md
@@ -1119,6 +1119,8 @@
       - name: Work with forms
         href: ./model-driven-apps/create-design-forms.md
         items:
+        - name: Create and edit a form
+          href: ./model-driven-apps/create-and-edit-a-model-driven-form.md
         - name: Design forms for efficiency
           href: ./model-driven-apps/design-productive-forms.md
           items: 
@@ -1157,7 +1159,33 @@
           - name: "Create a quick view form"
             href: ./model-driven-apps/create-edit-quick-view-forms.md
           - name: "Create a card form"
-            href: ./model-driven-apps/create-card-forms.md  
+            href: ./model-driven-apps/create-card-forms.md
+        - name: Troubleshoot forms
+          items:
+          - name: Use Monitor to troubleshoot forms
+            href: ./model-driven-apps/monitor-form-checker.md
+      - name: Use custom pages to converge canvas and model-driven apps
+        items:
+        - name: Custom pages overview
+          href: ./model-driven-apps/model-app-page-overview.md
+        - name: Add a custom page to a model-driven app
+          href: ./model-driven-apps/add-page-to-model-app.md
+        - name: Design considerations for a custom page
+          href: ./model-driven-apps/design-page-for-model-app.md
+        - name: Navigating to and from a custom page
+          href: ../developer/model-driven-apps/clientapi/navigate-to-custom-page-examples.md
+        - name: Use Power Fx in a custom page
+          href: ./model-driven-apps/page-powerfx-in-model-app.md
+        - name: Add canvas components to a custom page
+          href: ./model-driven-apps/page-canvas-components.md   
+        - name: Add code components to a custom page
+          href: ./model-driven-apps/page-code-components.md     
+        - name: Add connectors to a custom page
+          href: ./model-driven-apps/page-data-connectors.md
+        - name: Known issues with custom pages
+          href: ./model-driven-apps/model-app-page-issues.md
+        - name: Use monitor to troubleshoot custom pages
+          href: ./model-driven-apps/monitor-page-checker.md
       - name: Use the classic designers
         items:
         - name: Design model-driven apps by using the app designer
@@ -1214,10 +1242,6 @@
             href: ./model-driven-apps/manage-auto-save.md
           - name: How to add a tab for SharePoint documents
             href: ./model-driven-apps/add-documents-tab-entity-main-form.md
-        - name: Troubleshoot forms
-          items:
-          - name: Use Monitor to troubleshoot forms
-            href: ./model-driven-apps/monitor-form-checker.md
       - name: Embed a canvas app on a model-driven form
         href: ./model-driven-apps/embed-canvas-app-in-form.md
         items:
@@ -1244,14 +1268,16 @@
         items:
         - name: "Access a view definition"
           href: ./model-driven-apps/accessing-view-definitions.md
-        - name: Create and edit views
-          href: ./model-driven-apps/create-edit-views-app-designer.md
+        - name: Create and edit public views
+          href: ./model-driven-apps/create-or-edit-model-driven-app-view.md
         - name: Choose and configure columns in views
           href: ./model-driven-apps/choose-and-configure-columns.md
         - name: Create or edit filters in app views
           href: ./model-driven-apps/create-edit-view-filters.md
         - name: "How to guides: Views"
           items:
+          - name: Create and edit views
+            href: ./model-driven-apps/create-edit-views-app-designer.md
           - name: How to make grids editable
             href: ./model-driven-apps/make-grids-lists-editable-custom-control.md
           - name: How to sort rows in a view
@@ -1271,6 +1297,8 @@
         href: ./model-driven-apps/create-business-rules-recommendations-apply-logic-form.md
     - name: Apply data visualizations in an app
       items:
+      - name: Add a Power BI visual to an app
+        href: ./model-driven-apps/add-powerbi-visual.md
       - name: Create a system chart
         href: ./model-driven-apps/create-edit-system-chart.md
       - name: Create or edit dashboards
@@ -1860,6 +1888,8 @@
            href: ./portals/release-updates.md
          - name: Version updates
            items:
+              - name: Version 9.3.7.x and later
+                href: /power-platform/released-versions/portals
               - name: Version 9.3.6.x
                 href: ./portals/versions/version-9.3.6.x.md
               - name: Version 9.3.4.x
@@ -2287,8 +2317,24 @@
           items:
             - name: Issue reporting
               href: ../teams/issue-reporting.md
-            - name: Issue reporting sample app architecture
-              href: ../teams/issue-reporting-architecture.md
+            - name: Deploy Issue reporting app broadly in your organization
+              href: ../teams/issue-reporting-broad-distribution.md
+            - name: Customize Inspection app
+              items:
+                - name: Issue reporting sample app architecture
+                  href: ../teams/issue-reporting-architecture.md
+                - name: Customize Issue reporting app
+                  href: ../teams/customize-issue-reporting.md
+                - name: Add urgency flag to reported issues
+                  href: ../teams/extend-issue-urgency.md
+                - name: Add business logic for automated task assignment
+                  href: ../teams/extend-issue-auto-assignment.md
+                - name: Convert Issue reporting sample app to Work order management app
+                  href: ../teams/extend-issue-rename-work-order.md
+                - name: Remove the Planner dependency for task creation
+                  href: ../teams/extend-issue-remove-planner.md
+                - name: Add the ability to be notified when an issue is resolved
+                  href: ../teams/extend-issue-sign-up-notification.md
         - name: Milestones
           items:
              - name: Milestones

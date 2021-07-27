@@ -7,6 +7,7 @@ ms.service: powerapps
 ms.component: cds
 ms.topic: how-to
 ms.date: 07/07/2021
+ms.subservice: dataverse-maker
 ms.author: lanced
 search.audienceType: 
   - maker

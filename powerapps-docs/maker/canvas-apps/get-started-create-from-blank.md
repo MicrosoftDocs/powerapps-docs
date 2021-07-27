@@ -10,11 +10,14 @@ ms.custom:
   - intro-internal
 ms.reviewer: 
 ms.date: 12/05/2019
+ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
 ---
 # Create a canvas app from scratch based on Excel data
 

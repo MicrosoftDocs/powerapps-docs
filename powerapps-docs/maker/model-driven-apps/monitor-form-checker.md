@@ -9,6 +9,7 @@ ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "troubleshooting"
 author: "mspilde"
+ms.subservice: troubleshoot
 ms.author: "mspilde"
 manager: "kvivek"
 tags: 

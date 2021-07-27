@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: how-to
 ms.component: cds
 ms.date: 08/27/2020
+ms.subservice: dataverse-maker
 ms.author: sabinn
 search.audienceType: 
   - maker

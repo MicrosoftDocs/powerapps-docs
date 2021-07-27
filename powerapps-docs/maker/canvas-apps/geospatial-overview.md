@@ -8,12 +8,14 @@ ms.topic: conceptual
 ms.custom: canvas, ce06122020
 ms.reviewer: tapanm
 ms.date: 1/19/2021
+ms.subservice: canvas-maker
 ms.author: iawilt
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
-
+contributors:
+  - iaanw
 ---
 
 

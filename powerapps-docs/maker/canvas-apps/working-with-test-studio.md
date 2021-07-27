@@ -8,11 +8,15 @@ ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 06/04/2020
+ms.subservice: canvas-maker
 ms.author: aheaney
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - aengusheaney
 ---
 
 # Working with Test Studio

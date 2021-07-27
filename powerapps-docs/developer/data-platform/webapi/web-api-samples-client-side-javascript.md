@@ -1,8 +1,8 @@
 ---
 title: "Web API  Data operations Samples (Client-side JavaScript) (Microsoft Dataverse)| Microsoft Docs"
-description: "This article provides a description of various Web API samples that are implemented using Client-side JavaScript"
+description: "This article provides a description of various Web API samples that are implemented using client-side JavaScript"
 ms.custom: ""
-ms.date: 07/09/2021
+ms.date: 07/15/2021
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -21,20 +21,22 @@ search.app:
   - PowerApps
   - D365CE
 ---
+
 # Web API Data operations Samples (Client-side JavaScript)
 
-
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+[!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
 This article provides common understanding about Web API samples using client-side JavaScript. While each sample focuses on a different aspect of Microsoft Dataverse Web API, they all follow similar process and structure described in this topic.  
 
-<a name="bkmk_listOfSamples"></a>   
-## Web API Samples using client-side JavaScript  
+<a name="bkmk_listOfSamples"></a>
+
+## Web API Samples using client-side JavaScript
+
  The following samples use the patterns described here:  
   
 |Sample|Sample Group|Description|  
 |------------|------------------|-----------------|  
-|[Web API Basic Operations Sample (Client-side JavaScript)](samples/basic-operations-client-side-javascript.md)|[Web API Basic Operations Sample](web-api-basic-operations-sample.md)|Demonstrates how to create, retrieve, update, delete, associate and disassociate Dataverse entity records.|  
+|[Web API Basic Operations Sample (Client-side JavaScript)](samples/basic-operations-client-side-javascript.md)|[Web API Basic Operations Sample](web-api-basic-operations-sample.md)|Demonstrates how to create, retrieve, update, delete, associate and disassociate Dataverse table rows (entity records).|  
 |[Web API Query Data Sample (Client-side JavaScript)](samples/query-data-client-side-javascript.md)|[Web API Query Data Sample](web-api-query-data-sample.md)|Demonstrates how to use OData v4 query syntax and functions as well as Dataverse query functions. Includes demonstration of working with pre-defined queries and using FetchXML to perform  queries.|  
 |[Web API Conditional Operations Sample (Client-side JavaScript)](samples/conditional-operations-client-side-javascript.md)|[Web API Conditional Operations Sample](web-api-conditional-operations-sample.md)|Demonstrates how to perform conditional operations. The behavior of these operations depends on criteria you specify.|  
 |[Web API Functions and Actions Sample (Client-side JavaScript)](samples/functions-actions-client-side-javascript.md)|[Web API Functions and Actions Sample](web-api-functions-actions-sample.md)|Demonstrates how to use bound and unbound functions and actions, including custom actions.|  
@@ -64,8 +66,10 @@ This article provides common understanding about Web API samples using client-si
   
 3.  Select **Import** and follow the instructions on the import dialog to complete this action.  
   
-<a name="bkmk_howToRunSample"></a>   
-## How to run the sample to see the script in action  
+<a name="bkmk_howToRunSample"></a>
+
+## How to run the sample to see the script in action
+
  The sample program runs as a web resource within Dataverse. The imported solution provides a configuration page that gives you an option to keep or delete sample data and a button to start the sample program.
   
  To run the sample, do the following:  
@@ -76,8 +80,10 @@ This article provides common understanding about Web API samples using client-si
   
 3.  Select **Start Sample** button to execute the sample code.  
   
-<a name="bkmk_commonElements"></a>   
-## Common elements found in each sample  
+<a name="bkmk_commonElements"></a>
+
+## Common elements found in each sample
+
  The following list highlights some common elements found in each of these samples.  
   
 -   The `Sdk.startSample` function is called when a user selects the **Start Sample** button from the  HTML page. The `Sdk.startSample` function initializes global variables and kicks off the first operation in the chain.  
@@ -155,8 +161,6 @@ This article provides common understanding about Web API samples using client-si
 
 [Use the Dataverse Web API](overview.md)<br />
 [Web API Samples](web-api-samples.md)<br />
-[Web API Samples (C#)](web-api-samples-csharp.md)   
- 
-
+[Web API Samples (C#)](web-api-samples-csharp.md)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -12,6 +12,7 @@ ms.topic: "article"
 applies_to: 
   - "powerapps"
 ms.assetid: 
+ms.subservice: dataverse-maker
 ms.author: "matp"
 manager: "kvivek"
 search.audienceType: 

@@ -6,6 +6,7 @@ ms.topic: conceptual
 ms.custom: 
 ms.date: 10/15/2020
 author: navjotm
+ms.subservice: teams
 ms.author: namarwah
 ms.reviewer: tapanm
 contributors:

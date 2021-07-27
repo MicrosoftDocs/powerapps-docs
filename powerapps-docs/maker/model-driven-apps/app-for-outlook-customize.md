@@ -3,6 +3,7 @@ title: Set up and customize Dynamics 365 App for Outlook | Microsoft Docs
 description: Set up and customize the Dynamics 365 App for Outlook to best suit your organization needs
 keywords: outlook app; app for outlook; Dynamics 365
 author: mduelae
+ms.subservice: mda-maker
 ms.author: mkaur
 manager: kvivek
 ms.date: 05/21/2021

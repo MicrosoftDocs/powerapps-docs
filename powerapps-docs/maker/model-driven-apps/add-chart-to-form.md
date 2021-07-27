@@ -7,6 +7,7 @@ applies_to:
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
   - "powerapps"
+ms.subservice: mda-maker
 ms.author: matp
 manager: kvivek
 ms.reviewer: matp

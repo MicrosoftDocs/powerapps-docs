@@ -7,6 +7,7 @@ ms.service: powerapps
 ms.component: pa-user
 ms.topic: quickstart
 ms.date: 09/15/2020
+ms.subservice: teams
 ms.author: mkaur
 ms.custom: intro-internal
 ms.reviewer: ""
@@ -16,6 +17,8 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - mduelae
 ---
 
 # Embed a canvas app as tab app in Teams

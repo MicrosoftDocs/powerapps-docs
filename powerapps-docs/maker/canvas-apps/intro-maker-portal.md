@@ -8,11 +8,14 @@ ms.topic: conceptual
 ms.custom: intro-internal
 ms.reviewer: 
 ms.date: 06/15/2021
+ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
 ---
 # Sign in to Power Apps for the first time
 

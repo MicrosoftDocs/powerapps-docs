@@ -2,6 +2,7 @@
 title: Configure event handlers for model-driven app Main forms in Power Apps | MicrosoftDocs
 description: Understand how to configure event handlers
 author: Mattp123
+ms.subservice: mda-maker
 ms.author: matp
 manager: kvivek
 ms.date: 02/22/2021

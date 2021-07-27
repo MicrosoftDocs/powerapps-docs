@@ -3,6 +3,7 @@ title: Use the model-driven app main form and its components in Power Apps | Mic
 description: Know how to use the main form and its components in Unified Interface apps
 keywords: Main forms; Customer service; Customer Service Hub; Dynamics 365
 author: Mattp123
+ms.subservice: mda-maker
 ms.author: matp
 manager: kvivek
 ms.date: 06/06/2018

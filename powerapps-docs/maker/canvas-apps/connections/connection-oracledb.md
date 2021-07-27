@@ -7,11 +7,15 @@ ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 05/11/2021
+ms.subservice: canvas-maker
 ms.author: lanced
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - lancedmicrosoft
 ---
 # Connect to an Oracle database from Power Apps
 

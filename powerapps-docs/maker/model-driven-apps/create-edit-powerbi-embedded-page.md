@@ -6,6 +6,7 @@ ms.date: 09/24/2020
 ms.reviewer: "matp"
 ms.service: powerapps
 ms.topic: "how-to"
+ms.subservice: mda-maker
 ms.author: "aorth"
 manager: "kvivek"
 author: "adrianorth"
