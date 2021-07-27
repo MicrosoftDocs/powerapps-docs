@@ -31,7 +31,7 @@ Command bars are at the core of every model-driven app and appear in many differ
  
  ## Classic commanding deficiencies
 
-Classic commands (formerly known as the ribbon) were not customizable using low code. With code, command customizations were difficult, tedious, and error prone. In order to scale commanding to low code as well as [converge canvas and model-driven apps](/power-platform-release-plan/2021wave1/power-apps/converging-canvas-into-model-driven-apps-custom-page), it was vital to reinvent and rebuild the command infrastructure.
+Classic commands (formerly known as the ribbon) were not customizable using low code. With code, command customizations were difficult, tedious, and error prone. In order to scale commanding to low code as well as [use custom pages to converge canvas and model-driven apps](model-app-page-overview.md), it was vital to reinvent and rebuild the command infrastructure.
 
 Classic commands had several key gaps including:
   - No low code designer. This results in many forced XML hacks that often caused breaking changes.
