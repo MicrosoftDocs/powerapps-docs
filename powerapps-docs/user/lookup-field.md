@@ -139,7 +139,7 @@ When lookup has more rows in a column than can fit in the available display area
 
 ## Advanced lookup
 
-The **Advanced lookup** feature is available for early access in 2021 release wave 2. To use **Advanced lookup** your administrator needs to [enable early access](/power-platform/admin/opt-in-early-access-updates) and turn on **Enable advanced lookup in model-driven apps**. For more information, see [Manage behavior settings](/power-platform/admin/settings-behavior).
+The **Advanced lookup** feature is available for early access in 2021 release wave 2. To use **Advanced lookup** your administrator needs to [enable early access](/power-platform/admin/opt-in-early-access-updates). For more information, see [Manage behavior settings](/power-platform/admin/settings-behavior).
 
 Once enabled **Advanced lookup** is available on any lookup column that's on a quick create form, edit form, or dialog box. With **Advanced lookup** you can easily sort rows and switch between tables or views in a lookup column. 
 
