@@ -45,6 +45,8 @@
       items:
       - name: Basic navigation
         href: ../user/navigation.md
+      - name: App notifications
+        href: ../user/notifications.md
       - name: View your profile
         href: ../user/view-your-user-profile.md
       - name: Find your admin or support person
