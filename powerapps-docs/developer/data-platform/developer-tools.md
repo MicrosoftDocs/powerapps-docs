@@ -23,6 +23,10 @@ search.app:
 
 Developers will use the following tools and resources when working with solutions using Microsoft Dataverse.
 
+## Integrated Development Environment (IDE) extensions
+
+ Power Platform Tools for Visual Studio supports the rapid creation and deployment of plug-ins and custom workflow activities, integration technologies like Azure Service endpoints and webhooks, and more. To learn more about the tool, [install](tools/devtools-install.md) the extension and try the available [quickstart](tools/devtools-create-project.md) topics.
+
 ## Tools available for download from NuGet
 
 The following tools are distributed in NuGet packages. The [Developer Guide: Download tools from NuGet](/dynamics365/customer-engagement/developer/download-tools-nuget) topic includes a PowerShell script you can use to download and extract the latest versions of these tools.

@@ -7,8 +7,8 @@
   items:
   - name: Supported customizations
     href: supported-customizations.md
-  - name: Install Power Platform Tools
-    href: ./tools/devtools-install.md
+  - name: Learn about developer tools
+    href: developer-tools.md
 - name: Understand terminology
   href: understand-terminology.md
 - name: Security and data access
@@ -446,6 +446,8 @@
       href: download-tools-nuget.md
     - name: Microsoft Power Platform CLI 
       href: powerapps-cli.md
+    - name: Power Platform Tools for Visual Studio
+      href: ./tools/devtools-install.md
   - name: Community Tools
     href: community-tools.md
   - name: Testing tools

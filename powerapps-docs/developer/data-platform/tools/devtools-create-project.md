@@ -37,7 +37,7 @@ The following table introduces the available Power Platform Tools project templa
 
 | C# project template | Description |
 | --- | --- |
-| Power Platform Solution Template | Solution template for creating a Power Platform solution. This template is for a Microsoft Dataverse solution and not a Visual Studio solution. |
+| Power Platform Solution Template | Solution template for creating a Power Platform solution. This template is for a  Visual Studio solution and not a Microsoft Dataverse solution. |
 | Power Platform Plug-in Library | Project template for creating a Power Platform plug-in class library and assembly (DLL).|
 | Power Platform Package | Project template for creating a Power Platform package (CrmPackage). The package is used to deploy the solution and custom code libraries to a Dataverse environment.|
 | Power Platform Workflow Activity Library | Project template for creating a Power Platform custom workflow activity class library and assembly (DLL).|
