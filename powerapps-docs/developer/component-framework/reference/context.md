@@ -68,6 +68,8 @@ The resource interface of `context.resource`
 
 [!INCLUDE [resource-description](includes/resources-description.md)]
 
+**Type**: [Resources](resources.md)
+
 ### updatedProperties
 
 An array of strings with values that have changed since the last time it was passed and [parameters](#parameters). `updatesProperties` is currently only supported for model-driven apps and always returns empty string for canvas apps. More information: [updatedProperties](updatedproperties.md)
