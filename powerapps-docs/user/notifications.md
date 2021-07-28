@@ -21,7 +21,7 @@ search.app:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
 
-App notifications use the notification table to store notifications for each user. Your model-driven app will automatically check the system for new notifications and display them in the notication center. The notification sender or your system administrator can indicate if a toast is shown and how it can be dismissed. Notifications appear in notification center until you dismiss them or when they expire. By default, notification expire after 14 days but your administrator can override this time.
+App notifications use the notification table to store notifications for each user. Your model-driven app will automatically check the system for new notifications and display them in the notication center. The notification sender or your system administrator can indicate if a toast is shown and how it can be dismissed. Notifications appear in notification center until you dismiss them or until they expire. By default, notification expire after 14 days but your administrator can override this time.
 
   > [!IMPORTANT]
   > - This is a preview feature, and isn't available in all regions. Your administrator needs to enable [early access](/power-platform/admin/opt-in-early-access-updates) to use the new app notifications feature.
