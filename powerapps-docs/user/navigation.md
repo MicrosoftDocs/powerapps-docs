@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 10/30/2020
+ms.date: 8/2/2021
 ms.subservice: end-user
 ms.author: mkaur
 ms.reviewer: ""
@@ -147,6 +147,10 @@ The reference panel is a great way to get work done without moving away from the
 ## App message bar 
 
 The app message bar shows three types of notifications: informational, warning, and error. 
+
+> ![NOTE]
+> If you're on [early access](/power-platform/admin/opt-in-early-access-updates) notifications might appear differently. For more information, see [How notifications work in model-driven apps](notifications.md).
+ 
 
 When you select the error notification, it will take you to the column on the form where the error occurred.
 
