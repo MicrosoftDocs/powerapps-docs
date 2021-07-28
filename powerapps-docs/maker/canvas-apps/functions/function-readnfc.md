@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: nabuthuk
-ms.date: 06/16/2021
+ms.date: 07/21/2021
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
@@ -24,7 +24,7 @@ Reads a Near Field Communication (NFC) tag.
 
 ## Description
 
-Use **ReadNFC**  function to read an NFC tag that is close to your device. When invoked, the screen displays instructions for scanning an NFC tag, and only returns after the tag has been scanned or a timeout expires.  
+Use the **ReadNFC** function to read an NFC tag that is close to your device. When invoked, the screen displays instructions for scanning an NFC tag, and only returns after the tag has been scanned or a timeout expires.  
 
 **ReadNFC** returns a record of information about the tag that has been read. The record contains:
 
@@ -39,9 +39,9 @@ If the tag is not supported, for example, the TNF is not *TNF_WELL_KNOWN*, or th
 
 Always check the payload value for *blank* using the [**IsBlank**](function-isblank-isempty.md) function before using it.  You do not need to check the **RTD** and **TNF** values yourself as they must be the correct values for **Text** and **URI** to have a non *blank* value.
 
-Additional **RTD** and **TNF** values may be supported in the future. If more values are supported, additional payload columns will also be added.  The raw **RTD** and **TNF** values are provided for informational purposes.  More information about these values and their use is available through the [NFC Forum](https://nfc-forum.org) and many other books and articles on NFC.
+Additional **RTD** and **TNF** values may be supported in the future. If more values are supported, additional payload columns will also be added.  The raw **RTD** and **TNF** values are provided for informational purposes and do not need to be consulted if the payload column is checked for *blank*.  More information about these values and their use is available through the [NFC Forum](https://nfc-forum.org) and many other books and articles on NFC.
 
-If NFC is not supported on the device, a message will be shown to the user and the function will return a *blank* record. 
+**ReadNFC** is only supported when running the app in a native mobile player such as the iOS and Andriod players.  Even with a supported player, a device may not support NFC, in which case a message will be shown to the user and the function will return a *blank* record.  
 
 **ReadNFC** can only be used in [behavior formulas](../working-with-formulas-in-depth.md).
 
