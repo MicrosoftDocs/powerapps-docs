@@ -16,7 +16,9 @@ search.app:
   - D365CE
 ---
 
-# Use object checker to diagnose a solution component
+# Use object checker to diagnose a solution component (preview)
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 Object checker runs real-time diagnostics on component objects within your solution. If issues are detected, a recommendation is returned that describes how to fix the issue. This might include documentation, instructions, or a click-able action that can fix the issue for you.
 
@@ -43,6 +45,7 @@ Object checker runs real-time diagnostics on component objects within your solut
 Object checker currently only works with model-driven app and site map components. <!-- This is a framework that will grow to support other object types and additional rules over time. -->
 
 ### See also
+
 [Tools available to diagnose solutions](diagnose-solutions.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

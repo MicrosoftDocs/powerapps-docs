@@ -2102,7 +2102,7 @@
       - name: Diagnose solutions and solution objects
         href: ./data-platform/diagnose-solutions.md
         items:
-        - name: Use object checker
+        - name: Use object checker (preview)
           href: ./data-platform/object-checker.md
         - name: Use solution checker
           href: ./data-platform/use-powerapps-checker.md
