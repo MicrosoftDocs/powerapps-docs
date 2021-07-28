@@ -39,7 +39,6 @@ You can access the notification center by selecting the bell icon in the app hea
 
 TBE: Add screenshot of notification center
 
-When a notifcations expires it is automatically dated. 
 
 ## Related links
 
