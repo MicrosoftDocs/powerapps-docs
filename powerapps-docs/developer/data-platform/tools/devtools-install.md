@@ -19,6 +19,8 @@ search.app:
 
 # Install Power Platform Tools
 
+:::image type="content" source="../media/tools/devtools-main-views.png" alt-text="Power Platform Tools." lightbox="../media/tools/devtools-main-views.png":::
+
 This topic describes the pre-requisites for the Power Platform Tools extension for Visual Studio, and how to install and uninstall the extension. The Visual Studio extension supports the rapid creation and deployment of plug-ins and custom workflow activities, integration technologies like Azure Service endpoints and Webhooks, and more.
 
 > [!IMPORTANT]
