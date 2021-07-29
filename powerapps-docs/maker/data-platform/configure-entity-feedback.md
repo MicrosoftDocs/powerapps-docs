@@ -35,7 +35,7 @@ Let customers or employees write feedback for any table record, or rate table re
 
 For example, imagine you have an app that is used to maintain recipes and you want to get feedback from your users about their experience using the recipes in the app.
 
-:::image type="content" source="media/feedback-table-example.png" alt-text="Recipe table example with feedback":::
+:::image type="content" source="media/feedback-table-example.png" alt-text="Recipe table example with feedback" lightbox="media/feedback-table-example.png:::
   
 ## Configure feedback for a table
   
