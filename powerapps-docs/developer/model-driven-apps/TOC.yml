@@ -77,6 +77,8 @@
     href: troubleshoot-forms.md
   - name: Navigating to and from a custom page
     href: clientapi/navigate-to-custom-page-examples.md
+  - name: Send in-app notifications using client API
+    href: clientapi/send-in-app-notifications.md
   - name: Client API Reference
     href: clientapi/reference.md
     items:
