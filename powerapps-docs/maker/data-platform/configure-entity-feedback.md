@@ -35,7 +35,7 @@ Let customers or employees write feedback for any table record, or rate table re
 
 For example, imagine you have an app that is used to maintain recipes and you want to get feedback from your users about their experience using the recipes in the app.
 
-:::image type="content" source="media/feedback-table-example.png" alt-text="Recipe table example with feedback" lightbox="media/feedback-table-example.png:::
+:::image type="content" source="media/feedback-table-example.png" alt-text="Recipe table example with feedback" lightbox="media/feedback-table-example.png":::
   
 ## Configure feedback for a table
   
@@ -86,7 +86,7 @@ The feedback table form has the following columns:
 
 ## Add a rollup column for the feedback 
 
-Optionally, you can create a rollup column that's based on the feedback or ragings for the table, and then add it to the form of the table you're enabling for feedback.
+Optionally, you can create a rollup column that's based on the feedback or ratings for the table, and then add it to the form of the table you're enabling for feedback.
 
 For example, you can provide a running total of all feedback records created for a given record.
 1. Open the table that contains the form with the feeback grid and select the **Columns** tab.
