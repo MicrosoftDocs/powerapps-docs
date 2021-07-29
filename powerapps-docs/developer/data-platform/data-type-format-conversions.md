@@ -42,19 +42,21 @@ The following table provides information about the formats available for each da
 |                       | URL                | The text provides a hyperlink to open the page specified. Any text that does not begin with a valid protocol will have “https://” prepended to it.    | Yes  |       |
 |                       | Ticker Symbol      | For most languages, the text will be enabled as a link to open the [MSN Money](https://money.msn.com/) website to show details about the stock price represented by the ticker symbol. | Yes     |   |
 |                       | Phone              | Columns will be click-enabled to initiate calls.  | Yes |         |
-|                       | JSON               | Stores JSON content that can be used within apps, flows.   | Yes (API only)   | Only in non-SQL stores like Audit. |
+|                       | JSON               | Stores text using JSON formatting   | Yes (API only)   | Only in non-SQL stores like Audit. |
 |                       | Rich Text          | Allows rich text formatting, including HTML markup.   | Yes (API only) |   |
 |                       | Version Number     | Stores the version number for rows.   | No  | System use only.  |
 |                       | Text               | Basic text column that contains text characters.  | Yes   |        |
 | Multiline Text (Memo) | Text Area          | Text column that contains text characters and also allows line breaks. | Yes | |
 |                       | Email              | For internal use only.   | No  |  |
-|                       | JSON               | Stores JSON content which can be used within apps, flows.    | Yes (API Only) | Only in non-SQL stores like Log. |
+|                       | JSON               |   Stores text using JSON formatting  | Yes (API Only) | Only in non-SQL stores like Log. |
 |                       | RichText           | Allows for rich text formatting, including HTML markup.   | Y (API Only)  |      |
 |                       | InternalExtentData | For internal use only.   | No                       | System use only  |
 |                       | None/string.Empty  | This option simply displays a number.      | Yes                       | Default format value for whole number column. |
-| Whole Number          | Duration           | This format option can be used to display a list of duration options. But the data stored in the database is always a number of minutes. The field looks like a drop-down list and provides suggested options like 1 minute, 15 minutes, 30 minutes all the way up to 3 days. People can choose these options. However, people can also just type in a number of minutes and it resolves to that period of time. For example, type in 60 and it resolves to 1 hour. Or they can enter “1 hour” or “2 days” and it will resolve to display that time. <br/> The duration must be entered in the following format: “x minutes”, “x hours” or “x days”. Hours and days can also be entered using decimals, for example, “x.x hours” or “x.x days”. <br/> **NOTE**: Values must be expressible in minutes, sub-minute values will be rounded to the nearest minute.    | Yes   | System reads this value in seconds. |
-|                       | Timezone           | This option displays a select list of time zones such as (GMT-12:00) International Date Line West and (GMT-08:00) Pacific Time (US & Canada). Each of these zones is stored as a number. For example, for the time zone (GMT-08:00) Pacific Time (US & Canada), the TimeZoneCode is 4.  | Yes |     |
-|                       | Language           | This option displays a list of the languages provisioned for your organization. The values are displayed as a drop-down list of language names, but the data is stored as a number using LCID codes. Language codes are four-digit or five-digit locale IDs. Valid locale ID values can be found at [Locale ID (LCID) Chart)](https://docs.microsoft.com/previous-versions/windows/embedded/ms912047(v=winembedded.10)). | Yes   |  |
+| Whole Number          | Duration           | This format option displays a list of duration options. The data stored in the database is always a number of minutes. The field looks like a drop-down list and provides suggested options like 1 minute, 15 minutes, 30 minutes all the way up to 3 days. People can choose these options or type in a number of minutes and it resolves to that period of time. For example, type in 60 and it resolves to 1 hour. Or they can enter “1 hour” or “2 days” and it will resolve to display that time.
+The duration must be entered in the following format: “x minutes”, “x hours” or “x days”. Hours and days can also be entered using decimals, for example, “x.x hours” or “x.x days”.
+ <br/> **NOTE**: Values must be expressible in minutes, sub-minute values will be rounded to the nearest minute.    | Yes   | System reads this value in seconds. |
+|                       | Timezone           | This option displays a select list of time zones using Time Zone Codes. Each of these zones is stored as a number. For example, for the time zone (GMT-08:00) Pacific Time (US & Canada), the TimeZoneCode is 4. Model driven apps display these codes into time zone names, Canvas apps will display as the number stored.| Yes |     |
+|                       | Language           | This option displays a list of the languages provisioned for your organization. The values are stored as a number using LCID codes. Language codes are four-digit or five-digit locale IDs.  Valid locale ID values can be found at [Locale ID (LCID) Chart)](https://docs.microsoft.com/previous-versions/windows/embedded/ms912047(v=winembedded.10)). Model driven apps will display the languages as the language name, Canvas apps will display as the number stored.| Yes   |  |
 |                       | Locale             | Value that corresponds to a specific locale using ISO standard values.   | Yes (API Only)  | Not shown in Power Apps Maker UI. |
 |  Date and Time        | Date Only          |Date only. Includes a time of 00:00:00 if the **User Local** or **Time-Zone Independent** is selected.|Yes||
 |                       |Date and Time       |Date and time format.| Yes| Default format value for DateTime column.|
@@ -66,7 +68,7 @@ You can change the format of the data type to any of the compatible formats that
 > [!NOTE] 
 > At this time, format conversions are only done by performing API operations. 
 
-Format conversions doesn't change any data present in the column. Due to this, you may notice some unexpected formatting issues that need to be resolved after the conversion.
+Changing Formats doesn't change any data present in the column. Due to this, you may notice some unexpected formatting issues that need to be resolved after the conversion.
 
 As mentioned in the table above, there are some restrictions for format conversions:
 
