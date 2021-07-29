@@ -69,22 +69,22 @@ By default, users must go to the list of associated records of the record you wa
 The feedback subgrid displays commands for creating new or adding existing feedback. When a user selects **Create Feedback** from the subgrid, the records to create feedback use the feedback standard table.
 
 The feedback table form has the following columns:
-- General
-  - Title: User provided title for the record feedback.
-   - Regarding: System provided table record that the feedback is associated with.
-   - Source: The feedback source to display where the feedback was submitted. If the feedback was created from within a model-driven app, the default value is set to **Internal** while **Portal** is the other option. This can be changed by the user.
-   - Created By: System provided value that's the user who created or last modified the feedback record.
-- Comments
-   - Minimum Rating: The user can define a range for ratings by specifying a minimum and maximum (numerical) value for ratings. For example, a minimum rating of 1.
-   - Maximum Rating: The user can define a range for ratings by specifying a minimum and maximum (numerical) value for ratings. For example, a scale of maximum rating of 5.
-   - Normalized Rating. System generated numeric value that's automatically calculated to show the specified user rating scaled to a value between 0 and 1 based on the minimum and maximum rating values.
+- **General**
+  - **Title**: User provided title for the record feedback.
+   - **Regarding**: System provided table record that the feedback is associated with.
+   - **Source**: The feedback source to display where the feedback was submitted. If the feedback was created from within a model-driven app, the default value is set to **Internal** while **Portal** is the other option. This can be changed by the user.
+   - **Created By**: System provided value that's the user who created or last modified the feedback record.
+- **Comments**
+   - **Minimum Rating**: The user can define a range for ratings by specifying a minimum and maximum (numerical) value for ratings. For example, a minimum rating of 1.
+   - **Maximum Rating**: The user can define a range for ratings by specifying a minimum and maximum (numerical) value for ratings. For example, a scale of maximum rating of 5.
+   - **Normalized Rating**. System generated numeric value that's automatically calculated to show the specified user rating scaled to a value between 0 and 1 based on the minimum and maximum rating values.
 
       The normalized rating helps to normalize or even out the specified rating value for different rating ranges (minimum and maximum rating values). The normalized rating is calculated as follows: (Rating - Minimum Rating) / (Maximum Rating - Minimum Rating).
       Also, rating for a record is calculated as an average of all the normalized ratings for the record.
-   - Rating: User provided rating for the feedback that must be between the minimum and maximum range. For example, a rating of 4 on a scale of 1-5.
-   - Comments: User provided comments for the record feedback.
+   - **Rating**: User provided rating for the feedback that must be between the minimum and maximum range. For example, a rating of 4 on a scale of 1-5.
+   - **Comments**: User provided comments for the record feedback.
 
-## Add a rollup column for the feedback 
+## Add a rollup column for the feedback
 
 Optionally, you can create a rollup column that's based on the feedback or ratings for the table, and then add it to the form of the table you're enabling for feedback.
 
@@ -96,14 +96,14 @@ For example, you can provide a running total of all feedback records created for
    - **Calculated or Rollup**: Select **Add** > **Rollup**. Select **Save** when prompted.
 1. Select **Done**. Select the **Total feedback** column, and then in the right column properties pane select **Open rollup**.
 1. The rollup editor opens in a new browser window. Configure the following rollup conditions, and then select **Save and Close**: 
-   - Source entity:
-      - Source. Recipe (or the table that has the feedback subgrid)
-      - Use Hierarchy: No
-   - Related entity:
-      - Feedback (Regarding)
-      - Filters: If Status equals Open
-   - Aggregation:
-      - Count of Feedback
+   - **Source entity**:
+      - **Source**. Recipe (or the table that has the feedback subgrid)
+      - **Use Hierarchy**: **No**
+   - **Related entity**:
+      - **Feedback (Regarding)**
+      - **Filters**: **If Status equals Open**
+   - **Aggregation**:
+      - **Count of Feedback**
    :::image type="content" source="media/total-feedback-rollup-column.png" alt-text="Rollup column that displays the total feedback count":::
 1. Add the column to the form that has the feedback subrid, save and publish it.
 
