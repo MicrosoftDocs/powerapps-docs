@@ -28,7 +28,7 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-Let customers or employees write feedback for any table record, or rate table records within a defined rating range by enabling tables for feedback. Use this capability for the following scenarios: 
+Let customers or employees submit feedback for any table record, or rate table records within a defined rating range by enabling tables for feedback. Use this capability for the following scenarios: 
 - For customers to capture data via a portal or survey.
 - To collect data about service or product satisfaction from table records. 
 - For employees to provide comments on collaborative efforts or as a way to improve on products and services.
