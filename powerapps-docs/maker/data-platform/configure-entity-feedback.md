@@ -28,9 +28,12 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-Let customers or employees write feedback for any table record, or rate table records within a defined rating range by enabling tables for feedback. This capability is can also be used with a system that captures data from customers via a portal, or survey. Data about service or product satisfaction can be applied with tables that represent that kind of data. Also, feedback can be used by employees to provide comments on collaborative efforts or a way to improve on products and services.
+Let customers or employees write feedback for any table record, or rate table records within a defined rating range by enabling tables for feedback. Use this capability for the following scenarios: 
+- For customers to capture data via a portal or survey.
+- To collect data about service or product satisfaction from table records. 
+- For employees to provide comments on collaborative efforts or as a way to improve on products and services.
 
-For example, imagine you have an app that is used to maintain recipes and you want to get feedback from your users for the quality and experience for the recipes in the app.
+For example, imagine you have an app that is used to maintain recipes and you want to get feedback from your users about their experience using the recipes in the app.
 
 :::image type="content" source="media/feedback-table-example.png" alt-text="Recipe table example with feedback":::
   
@@ -50,20 +53,22 @@ First, you must enable the **Allow feedback** property in the table definition.
  
 ### Add a subgrid for feedback on the table form  
 
-By default, users must go to the list of associated records of the record you want to add feedback to. To make it easier for users to add feedback, you should add a feedback subgrid to the form of the table you are enabling feedback for, such as in the recipe example explained earlier in this article.  
+By default, users must go to the list of associated records of the record you want to add feedback to. To make it easier for users to add feedback, you should add a feedback subgrid to the form of the table you are enabling feedback for, such as in the recipe example depicted earlier in this article.  
 
 1. In the form designer, select the area of the form where you want the feedback subgrid, and then select **Subgrid** on the left **Components** pane.
 1. Select the following subgrid properties, and then select **Done**: 
-   - Show related records.
-   - Table Feedback (Regarding)
-   - Default view. The view that you want, such as Active Feedback.
+   - **Show related records**
+   - **Table Feedback (Regarding)**
+   - **Default view**. **Active Feedback**.
 
-   :::image type="content" source="media/configure-subgrid-for-feedback.png" alt-text="Configure the subgrid for feedback records":::
+     :::image type="content" source="media/configure-subgrid-for-feedback.png" alt-text="Configure the subgrid for feedback records":::
 1. **Save** and **Publish** the form.
 
-The subgrid displays commands for creating new or adding existing feedback. The records created for feedback use the feedback standard table.
+### About the feedback table form
 
-The Feedback table form has the following columns :
+The feedback subgrid displays commands for creating new or adding existing feedback. When a user selects **Create Feedback** from the subgrid, the records to create feedback use the feedback standard table.
+
+The feedback table form has the following columns:
 - General
   - Title: User provided title for the record feedback.
    - Regarding: System provided table record that the feedback is associated with.
@@ -79,9 +84,9 @@ The Feedback table form has the following columns :
    - Rating: User provided rating for the feedback that must be between the minimum and maximum range. For example, a rating of 4 on a scale of 1-5.
    - Comments: User provided comments for the record feedback.
 
-## Add a rollup column to the table form to show the ratings  
+## Add a rollup column for the feedback 
 
-Optionally, you can create a rollup column that's based on the ratings for the table, and then add it to the form of the table you're enabling for feedback. 
+Optionally, you can create a rollup column that's based on the feedback or ragings for the table, and then add it to the form of the table you're enabling for feedback.
 
 For example, you can provide a running total of all feedback records created for a given record.
 1. Open the table that contains the form with the feeback grid and select the **Columns** tab.
