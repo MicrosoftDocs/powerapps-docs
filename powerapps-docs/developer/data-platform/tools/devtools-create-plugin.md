@@ -59,7 +59,15 @@ Follow these instructions to register a plug-in step (also known as an SDK messa
 
 1. Fill out the **Register New Step** dialog information and choose **Register New Step** when done. <p/>The class name that you specify when filling out the step information will be used to name your new plug-in class. The class will be placed in the plug-in project library specified by the **Handler Assembly** dialog field. If there is only one Plug-in Library project in the solution, the **Handler Assembly** field will be inactive.
 
-A new plug-in class that derives from `PluginBase` is now visible in your plug-in library, and a new step registration has been added to the solution. However, you will need to build and deploy your plug-in library before the plug-in assembly and step are added to the specified Dataverse environment and solution.
+A new step registration has been added to the solution. However, you will need to build and deploy your plug-in library before the plug-in assembly and step are added to the specified Dataverse environment and solution.
+
+## The PluginBase abstract class
+
+`PluginBase` is automatically generated from the Plugin Library template. Your custom plug-in class should derive from this base class. The base class implements common plug-in code that helps to make you more productive sooner. Take a look at the `PluginBase` class code to see what it does.
+
+:::image type="content" source="../media/tools/devtools-class-diagram(small).png" alt-text="PluginBase class diagram" lightbox="../media/tools/devtools-class diagram(large).png":::
+
+In the above figure, `NotifyAccountCreate` is an example plug-in class that derives from `PluginBase`.
 
 ## The generated plug-in class code
 
