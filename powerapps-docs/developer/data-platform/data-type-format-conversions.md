@@ -1,6 +1,6 @@
 ---
 title: "Data type format conversions (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn about File columns that store file data within the application, supporting columns, retrieving data, and uploading file data." # 115-145 characters including spaces. This abstract displays in the search result.
+description: "Learn about data type format conversions in Microsoft Dataverse." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 07/30/2021
 ms.reviewer: "nabuthuk"
@@ -20,13 +20,11 @@ search.app:
 
 Microsoft Dataverse has several [data types](/powerapps/maker/data-platform/types-of-fields) that can be configured with different formats. You can specify the format of the column using either the [solution explorer](/powerapps/maker/data-platform/create-edit-fields)  or by API operations. The following sections provides additional details about data type formats, including:
 
-- Supported formats by data type
+- [Supported formats by data type](#supported-formats-by-data-type)
 
-- Format conversions
+- [Format conversions](#format-conversions)
 
-- Converting between formats within a data type
-
-- Format validations
+- [Format validations](format-validations.md)
 
 ## Supported formats by data type
 

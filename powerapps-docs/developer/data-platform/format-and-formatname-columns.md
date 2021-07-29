@@ -18,7 +18,7 @@ search.app:
 ---
 # Format and FormatName columns
 
-Format and FormatName are the columns that stores the format values and are used by the controls and UI to know how to display the contents.
+Format and FormatName are the columns that store the format values and are used by the controls and UI to know how to display the contents.
 
 **Format** is the older column that stored the values used by Microsoft Dataverse. To maintain backward compatibility, new formats were not able to be introduced. Because of this, some of the API responses won’t align with the new format. For `Text` and `Multiline Text` columns, it is recommended to use the `FormatName` column.
 
@@ -49,19 +49,19 @@ The following table provides the **Format** and **FormatName** values and API re
 |                    | Version Number   | StringFormat.VersionNumber  | StringFormatName.VersionNumber | **Format**: VersionNumber <br/> **FormatName**: VersionNumber   | |
 |                    | Phone   | StringFormat.Phone  | StringFormatName.Phone | **Format**: Text <br/> **FormatName**: Phone   |  |
 |                    | JSON   | StringFormat.Json  | StringFormatName.Json | **Format**: Text <br/> **FormatName**: Json   |  |
-|                    | RichText   | StringFormat.RichText  | MemoFormatName.RichText | **Format**: Text <br/> **FormatName**: RichText   | Only allowed for non-SQL data provider. |
+|                    | Rich Text   | StringFormat.RichText  | MemoFormatName.RichText | **Format**: Text <br/> **FormatName**: RichText   | Only allowed for non-SQL data provider. |
 | Memo/Multiline Text    | Text   | StringFormat.Text | MemoFormatName.Text | **Format**: Text <br/> **FormatName**: Text   | Default format value for Memo/Multiline column.  |
 |                    | Email   | StringFormat.Email  | MemoFormatName.Email | **Format**: Email <br/> **FormatName**: Email   |   |
-|                    | TextArea   | StringFormat.TextArea  | MemoFormatName.TextArea | **Format**: TextArea <br/> **FormatName**: TextArea   |  |
+|                    | Text Area   | StringFormat.TextArea  | MemoFormatName.TextArea | **Format**: TextArea <br/> **FormatName**: TextArea   |  |
 |                    | InternalExtentdata   | StringFormat.Te  | StringFormatName.Text | **Format**: Text <br/> **FormatName**: Text   |  |
 |                    | Json   | StringFormat.Json  | MemoFormatName.Json | **Format**: Text <br/> **FormatName**: Json   |   |
-|                    | RichText   | StringFormat.RichText  | MemoFormatName.RichText | **Format**: Text <br/> **FormatName**: RichText   | Only allowed for non-SQL data provider. |
-| Integer            | None/String.Empty   | IntegerFormat.None | N/A| **Format**: None    | Default format value for Integer column.  |
+|                    | Rich Text   | StringFormat.RichText  | MemoFormatName.RichText | **Format**: Text <br/> **FormatName**: RichText   | Only allowed for non-SQL data provider. |
+| Whole Number            | None/String.Empty   | IntegerFormat.None | N/A| **Format**: None    | Default format value for Integer column.  |
 |                    | Duration   |IntegerFormat.Duration  | N/A | **Format**: Duration   |   |
 |                    | TimeZone   | IntegerFormat.TimeZone  | N/A | **Format**: TimeZone   |  |
 |                    | Language   | IntegerFormat.Language  | N/A | **Format**: Language    |   |
 |                    | Locale   | IntegerFormat.Locale  | N/A | **Format**: Locale |  |
-| DateTime           | DateTime  | DateTimeFormat.DateAndTime | N/A| **Format**: DateAndTime    | Default format value for DateTime column.  |
+| Date and Time           | DateTime  | DateTimeFormat.DateAndTime | N/A| **Format**: DateAndTime    | Default format value for DateTime column.  |
 
 ### Related articles
 
