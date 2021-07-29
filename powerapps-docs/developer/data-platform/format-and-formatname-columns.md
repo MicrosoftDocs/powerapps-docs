@@ -67,4 +67,4 @@ The following table provides the **Format** and **FormatName** values and API re
 
 [Data type format conversions](data-type-format-conversions.md)
 
-[Format Validations](format-validations.md)
+[Format validations](format-validations.md)

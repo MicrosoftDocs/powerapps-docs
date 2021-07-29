@@ -22,7 +22,7 @@ Microsoft Dataverse has several [data types](/powerapps/maker/data-platform/type
 
 - [Supported formats by data type](#supported-formats-by-data-type)
 
-- [Format conversions](#format-conversions)
+- [Format conversions](#format-conversion)
 
 - [Format validations](format-validations.md)
 
@@ -63,8 +63,8 @@ The following table provides information about the formats available for each da
 
 You can change the format of the data type to any of the compatible formats that data type supports. Changing the format retains your previous table definitions (maxsize) if they exist in the new target format. If an inbound payload does not include a format, Dataverse assumes the format shouldn't be changed. You can convert the format by an API call with the desired payload in the `FormatName` column. It is recommended not change the value in `Format` column as any newly added `Format` selections are ignored.
 
->  [!NOTE] 
->  At this time, format conversions are only done by performing API operations. 
+> [!NOTE] 
+> At this time, format conversions are only done by performing API operations. 
 
 Format conversions doesn't change any data present in the column. Due to this, you may notice some unexpected formatting issues that need to be resolved after the conversion.
 
@@ -137,4 +137,4 @@ OData-Version: 4.0
 
 [Format and FormatName columns](format-and-formatname-columns.md)
 
-[Format Validations](format-validations.md)
+[Format validations](format-validations.md)

@@ -1,5 +1,5 @@
 ---
-title: "Format conversions (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Format validations (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to validate format conversions in Microsoft Dataverse." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 07/30/2021
@@ -17,7 +17,7 @@ search.app:
   - D365CE
 ---
 
-# Format Validations
+# Format validations
 
 You may have configured incompatible formats for data types in the past by directly making changes in the XML file. When these changes are packaged into a solution and imported into an environment, you may see unexpected issues or failures of apps, workflows, or other applications. To prevent this, format validations are introduced for both API operations and Solution imports.
 
