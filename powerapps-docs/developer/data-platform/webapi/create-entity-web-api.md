@@ -297,7 +297,7 @@ Accept: application/json
 }
 ```
 
-The response received from `InitializeFrom` request consists of values of attributes mapped between the source entity and target entity and the GUID of the parent record. The attribute mapping between entities is different for different entity sets and is customizable, so the response from `InitializeFrom` function request may vary for different entities and organizations. When this response is passed in the body of create request for a new record, these attribute values are replicated in the new record.
+The response received from `InitializeFrom` request consists of values of attributes mapped between the source entity and target entity and the GUID of the parent record. The attribute mapping between entities is different for different entity sets and is customizable, so the response from the `InitializeFrom` request may vary for different entities and organizations. When this response is passed in the body of a create request for a new record, these attribute values are replicated in the new record.
 
 > [!NOTE]
 > To determine whether two entities can be mapped, use this query:<br />
