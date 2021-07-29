@@ -2,7 +2,7 @@
 title: "Developer tools and resources (Microsoft Dataverse) | Microsoft Docs" 
 description: "Learn about available tools and resources when working with solutions."
 ms.custom: ""
-ms.date: 03/18/2021
+ms.date: 07/28/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -25,7 +25,9 @@ Developers will use the following tools and resources when working with solution
 
 ## Integrated Development Environment (IDE) extensions
 
- Power Platform Tools for Visual Studio supports the rapid creation and deployment of plug-ins and custom workflow activities, integration technologies like Azure Service endpoints and webhooks, and more. To learn more about the tool, [install](tools/devtools-install.md) the extension and try the available [quickstart](tools/devtools-create-project.md) topics.
+Power Platform Tools for Visual Studio - supports the rapid creation and deployment of plug-ins and custom workflow activities, integration technologies like Azure Service endpoints and webhooks, and more. To learn more about the tool, [install](tools/devtools-install.md) the extension and try the available [quickstart](tools/devtools-create-project.md) topics.
+
+Microsoft Power Platform CLI - a simple, one-stop developer CLI that empowers developers and ISVs to perform various operations in Microsoft Power Platform related to environment lifecycle features, and to authenticate and work with Microsoft Dataverse environments, solution packages, portals, code components, and so on. To learn more about the tool, install the [extension](powerapps-cli.md#install-microsoft-power-platform-cli) or try the available [standalone](powerapps-cli.md#standalone-power-platform-cli) version.
 
 ## Tools available for download from NuGet
 

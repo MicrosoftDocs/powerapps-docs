@@ -63,9 +63,9 @@ A new step registration has been added to the solution. However, you will need t
 
 ## The PluginBase abstract class
 
-`PluginBase` is automatically generated from the Plugin Library template. Your custom plug-in class should derive from this base class. The base class implements common plug-in code that helps to make you more productive sooner. Take a look at the `PluginBase` class code to see what it does.
+`PluginBase` is automatically generated from the Plug-in Library template. Your custom plug-in class should derive from this base class. The base class implements common plug-in code that helps to make you more productive sooner. Take a look at the `PluginBase` class code in your plug-in project to see what it does.
 
-:::image type="content" source="../media/tools/devtools-class-diagram(small).png" alt-text="PluginBase class diagram" lightbox="../media/tools/devtools-class diagram(large).png":::
+:::image type="content" source="../media/tools/devtools-class-diagram.png" alt-text="PluginBase class diagram":::
 
 In the above figure, `NotifyAccountCreate` is an example plug-in class that derives from `PluginBase`.
 
@@ -170,7 +170,7 @@ After you are done modifying code and are ready to deploy the plug-in assembly a
 
 1. Select **Deploy** in the context menu.
 
-After deployment completes, select the refresh icon in **Power Platform Explorer**. Expand the **Plug-in Assemblies** sub-node of your environment node to see your registered assembly. Right-click on the plug-in assembly and step in Power Platform Explorer to see what operations are supported.
+After deployment completes, select the refresh icon in **Power Platform Explorer**. Expand the **Plug-in Assemblies** sub-node of your environment node to see your registered assembly. Right-click on the plug-in assembly and step in ***Power Platform Explorer*** to see what operations are supported.
 
 ## Next steps
 
