@@ -268,9 +268,9 @@ See [Detect duplicate data using Web API](manage-duplicate-detection-create-upda
 
 ## Create a new table row from another table
 
-Use `InitializeFrom` function to create a new record in the context of an existing record where a mapping exists between the entities to which the records belong. 
+Use the `InitializeFrom` function to retrieve a template for creating a new record based on the content of an existing record where a mapping exists between the entities to which the records belong. 
 
-The following example shows how to create an account record using the attribute values of an existing record of account entity with `accountid` value equal to `c65127ed-2097-e711-80eb-00155db75426`.
+The following example shows how to fetch a template for a new account record that is based on the existing account entity with an `accountid` value equal to `c65127ed-2097-e711-80eb-00155db75426`.
 
 **Request**
 
@@ -297,7 +297,7 @@ Accept: application/json
 }
 ```
 
-The response received from `InitializeFrom` request consists of values of mapped attributes between the source entity and target entity and the GUID of the parent record. The attribute mapping between entities that have an entity relationship is different for different entity sets and is customizable, so the response from `InitializeFrom` function request may vary for different entities and organizations. When this response is passed in the body of create request of the new record, these attribute values are replicated in the new record. The values of custom mapped attributes also get set in the new record during the process.
+The response received from `InitializeFrom` request consists of values of attributes mapped between the source entity and target entity and the GUID of the parent record. The attribute mapping between entities is different for different entity sets and is customizable, so the response from `InitializeFrom` function request may vary for different entities and organizations. When this response is passed in the body of create request for a new record, these attribute values are replicated in the new record.
 
 > [!NOTE]
 > To determine whether two entities can be mapped, use this query:<br />
