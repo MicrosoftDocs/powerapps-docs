@@ -202,7 +202,7 @@ Run-time information about plug-ins and custom workflow extensions is captured a
 |TerminateMemoryContributionPercent|The plug-in type percentage contribution to Worker process termination due to excessive memory usage. |
 |TerminateOtherContributionPercent|The plug-in type percentage contribution to Worker process termination due to unknown reasons. |
 
-This data is also available for you to browse using the [Power Platform Admin Center](https://admin.powerplatform.microsoft.com/). Select **Analytics** > **Common Data Service** > **Plug-ins**.
+This data is also available for you to browse using the [Power Platform Admin Center](https://admin.powerplatform.microsoft.com/). Select **Analytics** > **Dataverse** > **Plug-ins**.
 
 
 ## Next steps
