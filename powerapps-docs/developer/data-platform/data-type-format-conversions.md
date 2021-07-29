@@ -18,13 +18,13 @@ search.app:
 ---
 # Data type format conversions
 
-Microsoft Dataverse has several [data types](/powerapps/maker/data-platform/types-of-fields) that can be configured with different formats. You can specify the format of the column of your wish using either the Power Apps Maker portal or by API operations. The next several sections will provide additional details about data type formats, including:
+Microsoft Dataverse has several [data types](/powerapps/maker/data-platform/types-of-fields) that can be configured with different formats. You can specify the format of the column using either the [solution explorer](/powerapps/maker/data-platform/create-edit-fields)  or by API operations. The following sections provides additional details about data type formats, including:
 
-- Formats for Text, Numbers, and DateTime
+- Supported formats by data type
 
-- Format columns
+- Format conversions
 
-- Conversion between formats within a data type
+- Converting between formats within a data type
 
 - Format validations
 
@@ -34,60 +34,56 @@ The format column specifies the UI on how to display the content. Some formats a
 
 ### Formats
 
-The following table provides information about the formats available for each data type, a brief description, and if users can select the format.
+The following table provides information about the formats available for each data type:
 
-| **Data Type**         | **Format name**    | **Description**            | **Available to Maker?** | **Notes**       |
+| **Data Type**         | **Format name**    | **Description**            | **Available to app maker?** | **Notes**       |
 |-----------------------|--------------------|----------------------------|-------------------------|-----------------|
-| Text                  | Text               | Basic text column that contains text characters.  | Yes   | Default format value for the string column.  |
-|                       | TextArea           | Text column that allows basic formatting like line breaks.   | Yes |      |
-|                       | Email              | Instructs to use their email control when selected.    | Yes |   |
-|                       | URL                | Instructs to use their URL/web control when selected    | Yes  |       |
-|                       | TickerSymbol       | Instructs to use their control to retrieve stock market details when selected. | Yes     |   |
-|                       | Phone              | Instructs to use their phone control when selected.  | Yes |         |
-|                       | JSON               | Stores JSON content that can be used within apps, flows.   | Yes (API only)   | Only in non-SQL stores like Audit |
-|                       | RichText           | Allows rich text formatting, including HTML markup.   | Yes (API only) |   |
-|                       | VersionNumber      | Stores the version number for rows.   | No  | System use only  |
-|                       | Text               | Basic text column.  | Yes   |        |
-| Multiline Text (Memo) | TextArea           | Text column that allows basic formatting like line breaks. | Yes | |
-|                       | Email          | For internal use only.   | No  |  |
-|                       | JSON              | Stores JSON content which can be used within apps, flows.    | Yes (API Only) | Only in non-SQL stores like Log |
+| Text                  | Text               | Basic text column that contains text characters.  | Yes   | Default format value for the text column.  |
+|                       | Text Area          | Text column that contains text characters and also allows line breaks.   | Yes |      |
+|                       | Email              | The text provides a mailto link to open the user’s email application.    | Yes |   |
+|                       | URL                | The text provides a hyperlink to open the page specified. Any text that does not begin with a valid protocol will have “https://” prepended to it.    | Yes  |       |
+|                       | Ticker Symbol      | For most languages, the text will be enabled as a link to open the [MSN Money](https://money.msn.com/) website to show details about the stock price represented by the ticker symbol. | Yes     |   |
+|                       | Phone              | Columns will be click-enabled to initiate calls.  | Yes |         |
+|                       | JSON               | Stores JSON content that can be used within apps, flows.   | Yes (API only)   | Only in non-SQL stores like Audit. |
+|                       | Rich Text          | Allows rich text formatting, including HTML markup.   | Yes (API only) |   |
+|                       | Version Number     | Stores the version number for rows.   | No  | System use only.  |
+|                       | Text               | Basic text column that contains text characters.  | Yes   |        |
+| Multiline Text (Memo) | Text Area          | Text column that contains text characters and also allows line breaks. | Yes | |
+|                       | Email              | For internal use only.   | No  |  |
+|                       | JSON               | Stores JSON content which can be used within apps, flows.    | Yes (API Only) | Only in non-SQL stores like Log. |
 |                       | RichText           | Allows for rich text formatting, including HTML markup.   | Y (API Only)  |      |
 |                       | InternalExtentData | For internal use only.   | No                       | System use only  |
-|                       | None/string.Empty  | Integer value.      | Yes                       | Default format value for Integer column. |
-| Integer               | Duration           | Integer value to show the duration of time.    | Yes   | System reads this value in seconds. |
-|                       | Timezone           | Integer value that corresponds to a specific time zone using ISO standard values.  | Yes |     |
-|                       | Language           | Integer value that corresponds to a specific language using ISO standard values. | Yes   |  |
-|                       | Locale             | Integer value that corresponds to a specific locale using ISO standard values.   | Yes (API Only)  | Not shown in Power Apps Maker UI. |
-|                       | Date               |Date only. Includes a time of 00:00:00 if the USer Local or Time zone independent is selected.|Yes||
-|Date and Time               |DateTime            |Date and time format.| Yes| Default format value for DateTime column.|
+|                       | None/string.Empty  | This option simply displays a number.      | Yes                       | Default format value for whole number column. |
+| Whole Number          | Duration           | This format option can be used to display a list of duration options. But the data stored in the database is always a number of minutes. The field looks like a drop-down list and provides suggested options like 1 minute, 15 minutes, 30 minutes all the way up to 3 days. People can choose these options. However, people can also just type in a number of minutes and it resolves to that period of time. For example, type in 60 and it resolves to 1 hour. Or they can enter “1 hour” or “2 days” and it will resolve to display that time. <br/> The duration must be entered in the following format: “x minutes”, “x hours” or “x days”. Hours and days can also be entered using decimals, for example, “x.x hours” or “x.x days”. <br/> **NOTE**: Values must be expressible in minutes, sub-minute values will be rounded to the nearest minute.    | Yes   | System reads this value in seconds. |
+|                       | Timezone           | This option displays a select list of time zones such as (GMT-12:00) International Date Line West and (GMT-08:00) Pacific Time (US & Canada). Each of these zones is stored as a number. For example, for the time zone (GMT-08:00) Pacific Time (US & Canada), the TimeZoneCode is 4.  | Yes |     |
+|                       | Language           | This option displays a list of the languages provisioned for your organization. The values are displayed as a drop-down list of language names, but the data is stored as a number using LCID codes. Language codes are four-digit or five-digit locale IDs. Valid locale ID values can be found at [Locale ID (LCID) Chart)](https://docs.microsoft.com/previous-versions/windows/embedded/ms912047(v=winembedded.10)). | Yes   |  |
+|                       | Locale             | Value that corresponds to a specific locale using ISO standard values.   | Yes (API Only)  | Not shown in Power Apps Maker UI. |
+|  Date and Time        | Date Only          |Date only. Includes a time of 00:00:00 if the **User Local** or **Time-Zone Independent** is selected.|Yes||
+|                       |Date and Time       |Date and time format.| Yes| Default format value for DateTime column.|
 
 ## Format conversion
 
-You can change the format of the data type to any of the compatible formats for that type. Changing the format retains your previous table definitions (maxsize) if they exist in the new target format. If an inbound payload does not include a format, Dataverse assumes the format shouldn't be changed. You can convert the format by an API call with the desired payload in the `FormatName` column. Do not change the value in `Format` column as any newly added `Format` selections are ignored.
+You can change the format of the data type to any of the compatible formats that data type supports. Changing the format retains your previous table definitions (maxsize) if they exist in the new target format. If an inbound payload does not include a format, Dataverse assumes the format shouldn't be changed. You can convert the format by an API call with the desired payload in the `FormatName` column. It is recommended not change the value in `Format` column as any newly added `Format` selections are ignored.
 
->  ![NOTE] 
->  At this time, format conversions are only done by API operations. 
+>  [!NOTE] 
+>  At this time, format conversions are only done by performing API operations. 
 
-Conversions will not change any data present in the column. Due to this, you may notice some unexpected formatting issues that need to be resolved after the change.
+Format conversions doesn't change any data present in the column. Due to this, you may notice some unexpected formatting issues that need to be resolved after the conversion.
 
-As indicated in the table above, there are some restrictions for conversions:
+As mentioned in the table above, there are some restrictions for format conversions:
 
-- JSON can only be used if a table is part of non-SQL storage (i.e., Log)
+- JSON can only be used if a table is part of non-SQL storage (i.e., Log).
 
-- You cannot convert columns with the formats of `emailbody`, `internalextentdata` to other formats. Any conversion for these is ignored and no error message is provided.
+- You cannot convert columns with the formats of type `emailbody`, `internalextentdata` to other formats. Any conversion for these are ignored and no error message is provided.
 
 - You cannot convert a column to the formats of `emailbody`, `internalextentdata` to other formats. If attempted, an error will occur.
 
-- Date only cannot be converted to DateTime, but Date with a behavior of User Local or Time Zone independent can be changed to DateTime.
+- Date only cannot be converted to DateTime, but Date with a behavior of **User Local** or **Time-Zone Independent** can be changed to DateTime.
+
 
 If you change the data type to an incompatible format, the following error is displayed:
 
-The format \<\<formatname\>\> is not valid for the \<\<datatype\>\> type column \<\<columnname\>\> of table \<\<tablename\>\>. For example, the format datetime is not valid for the text type column “Record Title” of table “Case Records”
-
-OData API
-
-> ![NOTE]
-> This is only an example to show where these values may appear. This is not meant to be pasted in to replace existing code.
+The format \<\<formatname\>\> is not valid for the \<\<datatype\>\> type column \<\<columnname\>\> of table \<\<tablename\>\>. For example, the format datetime is not valid for the text type column.
 
 To change the format of a data type, you need to add the new format details into an OData API **POST** call:
 
@@ -141,6 +137,6 @@ OData-Version: 4.0
 ### Related articles
 
 
-[Format and FormatName columns](format-and-formatname-attributes.md)
+[Format and FormatName columns](format-and-formatname-columns.md)
 
 [Format Validations](format-validations.md)

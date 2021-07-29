@@ -41,3 +41,9 @@ A solution import that includes format values on data types will fail in the fol
 In the second scenario if your current top layer solution has a column that includes a data type with an invalid format, the import will be successful, until the top layer’s incompatible format is updated.
 
 If your solution is failing because of an invalid format, you can perform the retrieve and update process in the source org to fix the invalid format and then repackage the solution.
+
+### Related articles
+
+[Data type format conversions](data-type-format-conversions.md)
+
+[Format and FormatName columns](format-and-formatname-columns.md)

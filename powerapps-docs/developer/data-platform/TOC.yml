@@ -345,6 +345,14 @@
     href: customize-labels-support-multiple-languages.md
   - name: Best Practices
     href: best-practices/work-with-metadata/index.md
+- name: Work with columns
+  items:
+  - name: Data type format conversions
+    href: data-type-format-conversions.md
+  - name: Format and FormatName columns
+    href: format-and-formatname-columns.md
+  - name: Format validations
+    href: format-validations.md
 - name: Introduction to solutions
   href: introduction-solutions.md
 - name: Publish and monitor your (ISV) app
