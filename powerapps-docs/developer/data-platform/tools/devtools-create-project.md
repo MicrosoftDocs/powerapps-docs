@@ -61,7 +61,7 @@ The easy way to create a Power Platform solution containing a CrmPackage project
 
 1. In the Visual Studio new project dialog, search for and choose **Power Platform Solution Template** and then select **Next**.
 
-1. Enter the requested project information, choose .NET Framework 4.6.2 or 4.7.2, and select **Create**. <p/>At this point you should see either a Dataverse login dialog or a dialog to reuse your last Dataverse connection. Do whatever is appropriate to connect to your Dataverse environment.
+1. Enter the requested project information, choose .NET Framework 4.6.2 or 4.7.2, and select **Create**. <p/>At this point you should see either a Dataverse login dialog or a dialog to reuse your last Dataverse connection. Do whatever is appropriate to connect to your Dataverse development environment. Never develop code in a production environment.
 
 1. At the **Configure Microsoft Power Platform Solution** dialog, choose either to use an existing Dataverse solution or create a new solution. <p/>Depending on what you have chosen, you will either be prompted to enter information about the new solution or select the existing solution from a drop-down list. **Step #3 Select Solution** is displayed but won't be active until you are logged in and choose **Next** in step #2.
 
@@ -79,7 +79,7 @@ The following procedures describe some common operations for your Visual Studio 
 
 ### Add a new project to a Power Platform solution
 
-To add a new project to a Visual Studio solution, follow these steps.
+Only projects created with a Power Platform Tools template should be added to a solution created using the Power Platform Tools Solution Template. To add a new project to a solution, follow these steps.
 
 1. Right-click the solution in **Solution Explorer**, select **Add**, and then choose **New Project**.
 
@@ -89,19 +89,28 @@ To add a new project to a Visual Studio solution, follow these steps.
 
 ### Add an existing project to a Power Platform solution
 
+Only projects created from Power Platform Tools templates should be added to a solution that was created using the Power Platform Tools Solution Template.
+
 1. Right-click the solution in **Solution Explorer**, select **Add**, and then choose **Existing Project**.
 
 1. Navigate to the .csprog file of the target project, select it, and choose **Open**.
 
 1. In **Solution Explorer**, under the CrmPackage project, right-click **References** and select **Add Reference**.
 
-1. In the **Projects** tab of the **Add Reference** dialog, select the projects from the list and then click **Add** to add them to the list of selected projects and components.
+1. In the **Projects** tab of the **Add Reference** dialog, select the (to be added) projects from the list and then click **Add** to add them to the list of selected projects and components.
 
-1. Click **OK** to add the projects and close the **Add Reference** dialog box.
+1. Click **OK** to add the projects to the solution and close the **Add Reference** dialog box.
 
 ### Remove a project from a Power Platform solution
 
-In **Solution Explorer**, right-click the project and select **Remove**. The project will automatically be removed from the CrmPackage references.
+1. In **Solution Explorer**, right-click the project and select **Remove**. The project will automatically be removed from the CrmPackage references.
+
+1. Edit the RegisterFile.crmregister XML file in the CrmPackage project and remove any XML registration code related to the project you just removed.
+
+1. Remove any deployed assembly and steps of your project from the Dataverse environment and solution. <p/>If you removed a plug-in or workflow activity library project from the Visual Studio solution, you may want to also remove any related assembly and steps from the Dataverse environment and solution. You can do this in **Power Platform Explorer** by expanding the Plug-in Assemblies node of your environment tree, right-click the target assembly, and choose **Delete Assembly**. This will delete the assembly and any registered steps.
+
+    > [!IMPORTANT]
+    > Your Dataverse logon account must own or have delete access to the the deployed assembly in order for you to delete it from the environment.
 
 ## Next steps
 
