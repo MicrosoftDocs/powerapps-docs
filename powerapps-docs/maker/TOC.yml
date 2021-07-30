@@ -1261,6 +1261,10 @@
           href: ./model-driven-apps/embedded-canvas-app-actions.md
         - name: "ModelDrivenFormIntegration control"
           href: ./model-driven-apps/embedded-canvas-app-properties-actions.md
+        - name: Pass the current record as data
+          href: ./model-driven-apps/pass-current-embedded-canvas-app.md
+        - name: Pass a related record as data
+          href: ./model-driven-apps/pass-related-embedded-canvas-app.md
         - name: "Share an embedded canvas app"
           href: ./model-driven-apps/share-embedded-canvas-app.md
         - name: "Embedded canvas app guidelines and known issues"
