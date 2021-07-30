@@ -42,13 +42,13 @@ The following table provides information about the formats available for each da
 |                       | URL                | The text provides a hyperlink to open the page specified. Any text that does not begin with a valid protocol will have “https://” prepended to it.    | Yes  |       |
 |                       | Ticker Symbol      | For most languages, the text will be enabled as a link to open the [MSN Money](https://money.msn.com/) website to show details about the stock price represented by the ticker symbol. | Yes     |   |
 |                       | Phone              | Columns will be click-enabled to initiate calls.  | Yes |         |
-|                       | JSON               | Stores JSON content that can be used within apps, flows.   | Yes (API only)   | Only in non-SQL stores like Audit. |
+|                       | JSON               | Stores text in JSON format.   | Yes (API only)   | Only in non-SQL stores like Audit. |
 |                       | Rich Text          | Allows rich text formatting, including HTML markup.   | Yes (API only) |   |
 |                       | Version Number     | Stores the version number for rows.   | No  | System use only.  |
 |                       | Text               | Basic text column that contains text characters.  | Yes   |        |
 | Multiline Text (Memo) | Text Area          | Text column that contains text characters and also allows line breaks. | Yes | |
 |                       | Email              | For internal use only.   | No  |  |
-|                       | JSON               | Stores JSON content which can be used within apps, flows.    | Yes (API Only) | Only in non-SQL stores like Log. |
+|                       | JSON               | Stores text using JSON format.    | Yes (API Only) | Only in non-SQL stores like Log. |
 |                       | RichText           | Allows for rich text formatting, including HTML markup.   | Y (API Only)  |      |
 |                       | InternalExtentData | For internal use only.   | No                       | System use only  |
 |                       | None/string.Empty  | This option simply displays a number.      | Yes                       | Default format value for whole number column. |
@@ -66,7 +66,7 @@ You can change the format of the data type to any of the compatible formats that
 > [!NOTE] 
 > At this time, format conversions are only done by performing API operations. 
 
-Format conversions doesn't change any data present in the column. Due to this, you may notice some unexpected formatting issues that need to be resolved after the conversion.
+Changing formats doesn't change any data present in the column. Due to this, you may notice some unexpected formatting issues that need to be resolved after the conversion.
 
 As mentioned in the table above, there are some restrictions for format conversions:
 
