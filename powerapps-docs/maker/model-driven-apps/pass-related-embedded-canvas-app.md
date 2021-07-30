@@ -52,18 +52,19 @@ Let's say you want to add an embedded canvas app on an account main form and pas
          - 	Notice that any change to the App ID value breaks the link from the model-driven form to the embedded canvas app.
 10.	Select the **Customize** button to create or edit the canvas app. This opens Power Apps Studio in a new browser tab.
 	 > [!IMPORTANT]
-     > If opening Power Apps Studio is blocked due to a web browser pop-up blocker, you must enable the make.powerapps.com site or temporarily disable the pop-up blocker and then select **Customize** again. 
+   > - The **Customize** option is currently only available by using the classic form designer.
+   > - If opening Power Apps Studio is blocked due to a web browser pop-up blocker, you must enable the make.powerapps.com site or temporarily disable the pop-up blocker and then select **Customize** again. 
 11.	In Power Apps Studio, notice that there is a **ModelDrivenFormIntegration** control located in the left pane. This control is responsible for bringing contextual data from the host model-driven form to the embedded canvas app. 
 12.	Select the **Gallery1** control and observe that the **Items** property is set to **ModelDrivenFormIntegration.Data**.
 13.	In the property pane on the right, next to **Columns**, select **Edit**.
 14.	In the data pane, change the column mapped to the **Title1** control to **FullName** or another column that has data.
 15.	Observe that the gallery displays the data being passed to it from the host model-driven form via the **ModelDrivenFormIntegration** control. Close the data pane.
-16.	Select the **File** tab, and select **App settings**.
-17.	On the **Advanced settings** tab, in the **Experimental features** section, set **Enable app embedding user experience** to **On**.
-18. Select **Save**. 
-19. Select the **The cloud** tab, provide a unique name for the app, and then select **Save** located on the lower right. Note the following: 
-    -  Saving an app for the first time automatically publishes the app. 
-	  -  On subsequent saves you must select **Publish** and then **Publish this version** to make your changes available.
+16.	Select the **File** tab, and select **Settings**.
+17.	On the **Upcoming features** tab, in the **Experimental features** section, set **Optimize embedding appearance** to **On**.
+18.	Select the **General** tab. Provide a unique name for the app and then select **Save**. Note the following: 
+    -  Saving an app for the first time automatically publishes the app.
+	  -  On subsequent saves, select **Publish** and then select **Publish this version** to make your changes available.
+19. Close the **Settings** dialog.
 20.	Select **Back**, and then select the browser tab that has the form editor open. 
 21.	Observe that the **App ID** property of the **Canvas app** control now has a value automatically filled in. Note the following: 
      - 	The form editor has a direct link with Power Apps Studio that was opened in another browser tab in an earlier step.
