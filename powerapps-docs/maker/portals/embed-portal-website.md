@@ -19,7 +19,7 @@ contributors:
 
 One of the most common ways of using portal applications is to embed portal functionality inside another website. Usually the other website already exists, but you want to enhance its abilities and add new functions that work with your data surfaced through the portal application.<!--note from editor: Edits suggested.-->
 
-In this scenario, it's easier to embed your portal functionality rather than building it from scratch. This article explains the steps to embed a portal application in a different website by using an iframe.
+In this scenario, it's easier to embed your portal functionality rather than build it from scratch. This article explains the steps to embed a portal application in a different website by using an iframe.
 
 ## Step 1. Enable the portal for iframe
 
