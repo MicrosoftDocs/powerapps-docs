@@ -173,7 +173,7 @@ After you are done modifying code and are ready to deploy the plug-in assembly a
 > [!TIP]
 > You can deploy all projects in the Visual Studio solution by right-clicking the CrmPackage project and choosing **Deploy**.
 
-After deployment completes, select the refresh icon in **Power Platform Explorer**. Expand the **Plug-in Assemblies** sub-node of your environment node to see your registered assembly. Right-click on the plug-in assembly and step in ***Power Platform Explorer*** to see what operations are supported.
+After deployment completes, select the refresh icon in **Power Platform Explorer**. Expand the **Plug-in Assemblies** sub-node of your environment node to see your registered assembly. Right-click on the plug-in assembly and step in ***Power Platform Explorer*** to see what operations are supported. Selecting **Delete Assembly** will un-register the assembly and its related steps.
 
 ## Next steps
 
