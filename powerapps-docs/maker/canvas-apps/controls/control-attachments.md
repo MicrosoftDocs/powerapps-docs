@@ -6,12 +6,16 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.date: 07/06/2021
+ms.subservice: canvas-maker
 ms.author: chmoncay
 ms.reviewer: tapanm
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - chmoncay
 ---
 
 # Attachments control in Power Apps

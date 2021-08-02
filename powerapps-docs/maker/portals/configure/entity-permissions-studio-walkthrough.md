@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 05/27/2021
+ms.subservice: portals
 ms.author: ckwan
 ms.reviewer: tapanm
 contributors:

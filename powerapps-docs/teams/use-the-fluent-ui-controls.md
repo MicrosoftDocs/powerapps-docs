@@ -6,8 +6,11 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 05/20/2021
+ms.subservice: teams
 ms.author: chmoncay
 ms.reviewer: tapanm
+contributors:
+  - tapanm-msft
 ---
 
 # Use Fluent UI controls

@@ -1,26 +1,38 @@
 ---
-title: Understand experimental, preview, and deprecated features in Power Apps
-description: Learn about experimental, preview, and deprecated features.
+title: Understand experimental, preview, and retired features in Power Apps
+description: Learn about experimental, preview, and retired features.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 05/24/2021
+ms.date: 07/22/2021
+ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - gregli-msft
 ---
-# Understand experimental, preview, and deprecated features in Power Apps
+# Understand experimental, preview, and retired features in Power Apps
 
 With every release, we make changes and add features to make Power Apps the best tool to fit your needs. We move the product forward.  
 
 We take backward compatibility very seriously. However, with any change or improvement, we might introduce an unintended side effect, and your app might not work exactly the way it did before.
 
 To help balance improvement against impact on existing apps, we take larger features through a progression of stages. This article describes this process and how you can control your exposure to features that are under development.
+
+In general, when creating a _new_ app:
+
+- **Preview switches are On.**  These features are ready for wide circulation, have been documented, and are fully supported. One day, the option to turn off these features will be removed, and they'll become a permanent part of the product.
+- **Experimental switches are Off.**  These features should only be used with caution, they can be changed or removed at any time. If you don't know what the switch is referring to or its possible impact, you likely should not turn it on.
+- **Retired switches are Off.**  These features are ready to be removed.  Documentation will explain the alternatives to using these features.
+
+As _existing_ apps go through their lifecycle, you may want to adjust these switches to take advantage of new features or to remove a dependency on a feature that will be retired.  Turning **Preview** switches On and **Retired** switches Off brings existing apps into alignment with new apps and the future of the product.
 
 ## Feature roll-out stages
 
@@ -72,17 +84,17 @@ At the top of the **Advanced settings** panel, you can find settings for fully s
 
 These settings are specific to each app, so changing a toggle switch affects only the app that's currently open. If you create an app, these switches revert to their default settings for that app.
 
-## Feature deprecation
+## Feature retirement
 
-Sometimes a feature needs to be retired.  Often this occurs when there is a new, better way to accomplish a task.  Unpopular features are also pruned too as all features require some overhead to keep up with product changes around them.
+Sometimes a feature needs to be retired, sometimes referred to as being deprecated.  Often this occurs when there is a new, better way to accomplish a task.  Unpopular features are also pruned too as all features require some overhead to keep up with product changes around them.
 
-Feature deprecation also goes through stages.  Features are unique and not every stage will be used by all features.
+Feature retirement also goes through stages.  Features are unique and not every stage will be used by all features.
 
 | Stage | When should I use it? | Can I use it with confidence?  Is it enabled by default for new apps? | 
 |----|----|----|
-| **Deprecated** | Existing apps may continue using this feature for a limited time. You can still turn on the feature for new apps.  It is time to evaluate alternatives.  | Yes, you can still use the feature with confidence. But it will be going away soon. For this reason you must explicitly opt in to use the feature in new apps and it is not recommended.  |
-| **Deprecated (Final&nbsp;warning)** | For a few features that would have broad impact, we may take the additional step beyond **Deprecated** of forcing the feature switch off once for existing apps the next time they are opened in the Studio.  If there is a issue, the feature can still be turned back on, and your feedback is critical before we take the next step.|  No.  The feature is about to be permanently removed. You must explicitly opt in to use the feature and it is not recommended. |
-| **Removed** for&nbsp;new&nbsp;apps | All new apps have this feature turned off and it cannot be enabled.  For existing apps where the feature is turned on, the feature will continue to show as a Deprecated feature until it is turned off.  If turned off and the feature switch becomes unavailable, you can [restore the app to a previous version](restore-an-app.md) to return to a state before the feature was disabled. | No.  The feature is about to be permanently removed. The feature is no longer available for new apps. |
+| **Retired** | Existing apps may continue using this feature for a limited time. You can still turn on the feature for new apps.  It is time to evaluate alternatives.  | Yes, you can still use the feature with confidence. But it will be going away soon. For this reason you must explicitly opt in to use the feature in new apps and it is not recommended.  |
+| **Retired (Final&nbsp;warning)** | For a few features that would have broad impact, we may take the additional step beyond **Retired** of forcing the feature switch off once for existing apps the next time they are opened in the Studio.  If there is a issue, the feature can still be turned back on, and your feedback is critical before we take the next step.|  No.  The feature is about to be permanently removed. You must explicitly opt in to use the feature and it is not recommended. |
+| **Removed** for&nbsp;new&nbsp;apps | All new apps have this feature turned off and it cannot be enabled.  For existing apps where the feature is turned on, the feature will continue to show as a Retired feature until it is turned off.  If turned off and the feature switch becomes unavailable, you can [restore the app to a previous version](restore-an-app.md) to return to a state before the feature was disabled. | No.  The feature is about to be permanently removed. The feature is no longer available for new apps. |
 | **Removed** for&nbsp;all&nbsp;apps | The feature is unavailable for all apps. | No. |  
 
 

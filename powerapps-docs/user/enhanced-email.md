@@ -7,6 +7,7 @@ ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 04/09/2020
+ms.subservice: end-user
 ms.author: shujoshi
 ms.custom: ""
 ms.reviewer: ""

@@ -12,6 +12,7 @@ applies_to:
   - "powerapps"
 author: "Mattp123"
 ms.assetid: 3ecea4a7-0d18-4ccd-9609-3a62179e9e1b
+ms.subservice: mda-maker
 ms.author: matp
 manager: kvivek
 ms.reviewer: 

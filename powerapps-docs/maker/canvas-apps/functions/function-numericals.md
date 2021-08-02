@@ -8,11 +8,15 @@ ms.topic: reference
 ms.custom: canvas
 ms.reviewer: nabuthuk
 ms.date: 09/13/2016
+ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - gregli-msft
+  - nkrb
 ---
 # Abs, Exp, Ln, Power, and Sqrt functions in Power Apps
 Calculates absolute values, natural logarithms, square roots, and the results of raising *e* or any number to specified powers.

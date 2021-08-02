@@ -3,6 +3,7 @@ title: "Navigating to my apps, solution explorer, and settings in Power Apps | M
 description: "Know how to locate advanced app making and customization areas in Power Apps"
 keywords: 
 author: Mattp123
+ms.subservice: mda-maker
 ms.author: matp
 manager: kvivek
 ms.custom: ""

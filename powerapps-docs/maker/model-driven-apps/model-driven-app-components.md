@@ -4,6 +4,7 @@ description: "Understand various components of a model-driven app such as data, 
 Keywords: columns, attributes, model-driven app
 ms.custom: intro-internal
 author: Mattp123
+ms.subservice: mda-maker
 ms.author: matp
 manager: kvivek
 ms.date: 05/26/2020
@@ -42,6 +43,7 @@ These components determine how users interact with the app.
 |Site map     | Specifies the navigation for your app.        | Site map designer        |
 |Form     | A set of data-entry columns for a given table that matches the items that your organization tracks for the table. For example, a set of data-entry columns that where user's input relevant information to track a customer's previous orders along with specific requested reorder dates.        | Form designer        |
 |View     | Views define how a list of rows for a specific table is displayed in your application. A view defines the columns to display, width of each column, sort behavior, and the default filters.   |  View designer       |
+|Custom page (preview) | A canvas based page which allows flexible layout, low-code Fx functions, and Power Apps connector data.  For more information, see [Model-driven app custom page overview (preview)](model-app-page-overview.md) | Canvas designer |
 
 > [!div class="mx-imgBorder"] 
 > ![App designer and form designer.](media/model-driven-app-overview/app-and-form-designers.png "App designer and form designer")

@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.date: 06/30/2021
+ms.subservice: canvas-maker
 ms.author: lanced
 ms.reviewer: tapanm
 search.audienceType: 

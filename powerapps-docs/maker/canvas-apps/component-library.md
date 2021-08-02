@@ -3,8 +3,9 @@ title: Component library
 description: Learn about working with a library of reusable components for canvas apps.
 author: hemantgaur
 ms.service: powerapps
+ms.subservice: canvas-developer
 ms.topic: article
-ms.date: 07/01/2021
+ms.date: 07/23/2021
 ms.author: hemantg
 ms.reviewer: tapanm
 search.audienceType:
@@ -103,6 +104,10 @@ Components available inside the app are listed under the **Custom** category in 
 
 You can modify an existing component library and save any changes with additional version notes. However, the updated component library version must be published for use in existing apps that use the component library. The [example component library](component-library.md#create-an-example-component-library) steps above explain how to publish a component library after saving it.
 
+There are two ways apps using the components from library can get the latest changes.
+
+### Method 1: Component update notification on app edit
+
 Makers of other apps are notified of updated components being available. The notification appears when makers edit the apps in canvas app studio. They can choose to update the components:
 
 ![Update available.](./media/component-library/update-available.png "Update available")
@@ -114,6 +119,22 @@ Select **Review**, and you'll see the option to update the component:
 Notice that the version note you added when publishing the component library version shows up here. 
 
 Select **Update** to update the components.
+
+![App updated with latest components](./media/component-library/updated-app.png "App updated with latest components")
+
+### Method 2: Proactive check for updates
+
+This method is to check for the app update proactively while working on the app in Studio.
+
+To do this check, select Insert component panel on the left-side, and then select **...** (ellipsis) next to the search button. And then, select **Check for updates**.
+
+![Check for latest components](./media/component-library/check-for-updates.png "Check for latest components")
+
+If there are updates in the components used from library , maker will get the message to review and get the latest changes. Upon review and update, the app gets updated with the latest components.
+
+The following animation shows the process to get the latest components.
+
+![Steps to get the latest components](./media/component-library/get-latest-components.gif "Steps to get the latest components")
 
 ## Component library permissions
 

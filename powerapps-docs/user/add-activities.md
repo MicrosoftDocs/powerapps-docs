@@ -7,6 +7,7 @@ ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 06/22/2021
+ms.subservice: end-user
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
@@ -89,7 +90,7 @@ The following category and sub-category options are available on the filer menu:
 | Category              | Sub-category   |
 |-----------------------|----------------|
 | Row type           |<li>Notes</li><li>Posts</li><li>Activities</li>|
-|Activity type         |<li>Appointment</li><li>Campaign Activity</li><li>Campaign Response</li><li>Email</li><li>Fax</li><li>Case Resolution</li><li>Letter</li><li>Opportunity Case</li><li>Order Case</li><li>Phone Call</li><li>Quote Close</li><li>Recurring Appointment</li><li>Social Activity</li><li>Task</li><li>Project Service Approval</li><li>Booking Alert</li><li>Conversation</li><li>Session</li><li>Customer Voice survey invite</li><li>Customer Voice survey response</li><li>Custom activities (as configured by your system administrator)</li> |
+|Activity type         |<li>Appointment</li><li>Campaign Activity</li><li>Campaign Response</li><li>Email</li><li>Fax</li><li>Case Resolution</li><li>Letter</li><li>Opportunity Close</li><li>Order Close</li><li>Phone Call</li><li>Quote Close</li><li>Recurring Appointment</li><li>Social Activity</li><li>Task</li><li>Project Service Approval</li><li>Booking Alert</li><li>Conversation</li><li>Session</li><li>Customer Voice survey invite</li><li>Customer Voice survey response</li><li>Custom activities (as configured by your system administrator)</li> |
 |Activity status            |<li>Active</li><li>Overdue</li><li>Closed</li>|               
 |Activity due date (active) |<li>Next 30 days</li><li>Next 7 days</li><li>Next 24 hours</li><li>Last 24 hours</li><li>Last 7 days</li><li>Last 30 days</li> |
 |Posts by                   |<li>Auto post</li><li>Users</li> |
@@ -286,7 +287,7 @@ Legend
 Legend
 1. Typing the @ sign in the **Note** field will display a flyout menu with a list of users that have been recently used.
 2. If the user row is not displayed, typing the name after the @ sign refreshes the rows in the flyout menu using the **Quick Find** search engine that's operating in the background.
-3. Switch views using **Advanced** to display the **Lookup Records** pane. In the **Lookup Records** pane, you can switch between the **Recent records** and **All records** view to search rerowscords.
+3. Switch views using **Advanced** to display the **Lookup Records** pane. In the **Lookup Records** pane, you can switch between the **Recent records** and **All records** view to search rows.
 
 When you mouse over the profile image, you can view the user's detailed profile card and online presence status.
 
@@ -364,7 +365,7 @@ For more information on notes and post functionality and configuration, see:
 The rich text editor toolbar provides features and functionality that allows you to work with rich text format in notes.
 
 ### Formatting options
-The following table describes the different formatting features and functionality options that are available in the rich text editor that you can use in notes. For more information on the rich text configuration, see [customer-service-hub-user-guide-timeline-admin#notes-on-timeline](Configure notes on timeline.md).
+The following table describes the different formatting features and functionality options that are available in the rich text editor that you can use in notes.
 
 > [!NOTE]
 > You can access your browser's context menu by selecting **Ctrl + right-click**. This is useful if you need to use your browser's built-in spellchecker. Otherwise, you can right-click to provide contextual formatting for any element you are using.

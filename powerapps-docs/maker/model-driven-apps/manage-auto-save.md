@@ -2,7 +2,7 @@
 title: "Disable auto-save in a model-driven app with Power Apps | MicrosoftDocs"
 description: Learn how to configure autosave for a model-driven app
 ms.custom: ""
-ms.date: 03/19/2020
+ms.date: 07/28/2021
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -14,6 +14,7 @@ applies_to:
 author: "Mattp123"
 ms.assetid: 2e7f75dd-7a3f-4716-b995-b626929c0501
 caps.latest.revision: 14
+ms.subservice: mda-maker
 ms.author: "matp"
 manager: "kvivek"
 search.audienceType: 
@@ -58,7 +59,9 @@ Auto-save helps app users focus on their work without having to manage saving da
  If you want to disable auto-save for specific table forms, you can add code to the `OnSave` event in an table.  
   
 > [!NOTE]
->  Auto-save will be disabled for the form, but data will still be saved when you select the ![Auto save button.](media/auto-save-icon.png "Auto save button") button in the lower-right corner. If you attempt to navigate away from a form or close a form where data has been changed they will get prompt to save their changes before they are allowed to navigate away or close the form.  
+>  Auto-save will be disabled for the form, but data will still be saved when you select the ![Auto save button.](media/auto-save-icon.png "Auto save button") button in the lower-right corner. If you attempt to navigate away from a form or close a form where data has been changed they will get prompt to save their changes before they are allowed to navigate away or close the form. 
+>  
+>  Using the below procedure will cause the "Save and Close" button on the form to not work, as it calls preventDefault on saveMode 2, which references **Save and Close**. You may remove the getSaveMode() == 2 check below to avoid this, but then the form will autosave if you attempt to navigate away from the form or close the form where data has changed.
   
 1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 

@@ -8,11 +8,15 @@ ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm-msft
 ms.date: 05/24/2021
+ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType:
   - maker
 search.app:
   - PowerApps
+contributors:
+  - tapanm-msft
+  - emcoope-msft
 ---
 # Create responsive layouts in canvas apps
 
@@ -149,7 +153,7 @@ If you use a gallery in your app, you'll need to lay out controls within the gal
 
 ### Container control
 
-You can use an experimental feature, the **Layout container** control, as a parent control. To turn this feature on, select **File** > **Settings** > **Upcoming features** > **Preview**, and select **Layout containers** to turn the feature on.
+You can use the **Layout container** control, as a parent control.
 
 Consider the example of a header at the top of a screen. It's common to have a header with a title and several icons with which your users can interact. You can construct such a header using the **Container** control, containing a **Label** control and two **Icon** controls:
 

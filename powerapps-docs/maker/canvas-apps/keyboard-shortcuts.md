@@ -8,11 +8,14 @@ ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 06/12/2020
+ms.subservice: canvas-maker
 ms.author: aorth
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
 ---
 # Keyboard shortcuts for canvas apps
 

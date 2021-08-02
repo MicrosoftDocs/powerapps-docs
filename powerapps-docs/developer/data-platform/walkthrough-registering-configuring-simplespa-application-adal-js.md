@@ -7,6 +7,7 @@ ms.service: powerapps
 ms.topic: article
 ms.assetid: a327d2ff-e252-61cf-1190-6a974130ef19
 author: "paulliew" # GitHub ID
+ms.subservice: dataverse-developer
 ms.author: "nabuthuk" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 ms.reviewer: "pehecke"

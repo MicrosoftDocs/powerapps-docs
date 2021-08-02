@@ -5,12 +5,9 @@ ms.custom: ""
 ms.date: 06/15/2021
 ms.reviewer: ""
 ms.service: powerapps
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: "overview"
-applies_to: 
-  - "powerapps"
 author: "Mattp123"
+ms.subservice: common
 ms.author: "matp"
 manager: "kvivek"
 search.audienceType: 
@@ -18,16 +15,18 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# What are performance insights?
+# What are performance insights? (preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 Performance insights are a self-service tool for enterprise app makers that analyzes runtime user data and provides a prioritized list of recommendations to help improve the performance of model-driven apps. This feature provides a daily set of analytic insights related to the performance of a Power Apps model-driven or customer engagement app, such as Dynamics 365 Sales or Dynamics 365 Service, with recommendations and actionable items. Enterprise app makers can view detailed performance insights at an app-level in the [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-## How to access 
+## How to access? 
 
-1. Go to [make.powerapps.com](https://make.powerapps.com). 
+1. Sign in to [Power Apps](https://make.powerapps.com). 
+
 1. On the left navigation pane, select **Apps**, and then select a model-driven app.
+
 1. Use the **...** context menu or command bar to select **Performance**.
 
 If you want to switch the environment where your app is deployed, you can select environments in the top-right corner of the page using the **Environment** selector. Alternatively, you can navigate to performance insights from a model-driven app’s context menu from the **Solutions** area. 
@@ -83,13 +82,13 @@ The following table summarizes what areas and categories the performance insight
 
 :::row:::
    :::column span="":::
-      Area
+      **Area**
    :::column-end:::
    :::column span="":::
-      Insight category
+      **Insight category**
    :::column-end:::
    :::column span="":::
-      Description
+      **Description**
    :::column-end:::
 :::row-end:::
 :::row:::

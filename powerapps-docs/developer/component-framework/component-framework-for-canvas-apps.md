@@ -2,6 +2,7 @@
 title: Code components for canvas apps  | Microsoft Docs
 description: Learn how to create code components using Power Apps component framework for canvas apps.
 keywords:
+ms.subservice: pcf
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek

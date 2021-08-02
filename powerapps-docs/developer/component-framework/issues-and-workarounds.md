@@ -3,6 +3,7 @@ title: Common issues and workarounds (Power Apps Component Framework) | Microsof
 description: Provides information on know issues and workarounds some come across while working with Power Apps component framework and CLI
 keywords:
 author: Nkrb
+ms.subservice: pcf
 ms.author: nabuthuk
 manager: kvivek
 ms.date: 07/01/2021

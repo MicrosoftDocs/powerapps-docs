@@ -11,6 +11,7 @@ ms.devlang: na
 ms.topic: conceptual
 ms.component: model
 ms.date: 12/14/2020
+ms.subservice: end-user
 ms.author: mkaur
 search.audienceType: 
   - maker

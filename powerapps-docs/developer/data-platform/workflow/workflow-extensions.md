@@ -307,10 +307,10 @@ The following example shows using the tracing service to write the following mes
 protected override void Execute(CodeActivityContext context)
 {
 //Create the tracing service
-ITracingService tracingService = executionContext.GetExtension<ITracingService>();
+ITracingService tracingService = context.GetExtension<ITracingService>();
 
 //Use the tracing service
-tracingService.Trace("{0} {1} {2}.","Add","your","message");
+tracingService.Trace("{0} {1} {2}.", "Add", "your", "message");
 ...
 ```
 
@@ -331,7 +331,7 @@ When you register an assembly containing custom workflow activities the version 
 
 You will find a section at the bottom that looks like this:
 
-```
+```csharp
 // Version information for an assembly consists of the following four values:
 //
 //      Major Version

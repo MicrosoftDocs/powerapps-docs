@@ -14,6 +14,7 @@ ms.topic: article
 ms.reviewer: nabuthuk
 ms.workload: na
 ms.date: 10/28/2020
+ms.subservice: dataverse-developer
 ms.author: nabuthuk
 search.audienceType: 
   - developer

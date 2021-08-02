@@ -7,20 +7,20 @@ ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: nabuthuk
 ms.date: 05/24/2021
+ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType:
   - maker
 search.app:
   - PowerApps
+contributors:
+  - nkrb
+  - emcoope-msft
 ---
 
 # Building responsive canvas apps  
 
 Responsiveness refers to the ability of an app to automatically align to different screen sizes and form factors to use the available screen space sensibly, providing great UI and UX in every device, form factor, and screen size. 
-
-> [!IMPORTANT]
-> - This feature is in public preview. For more information, see [Experimental and preview features](working-with-experimental-preview.md).
-> - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 
 Responsiveness allows different elements of the app to specify how they: 
 

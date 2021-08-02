@@ -7,12 +7,16 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.date: 04/20/2021
+ms.subservice: canvas-maker
 ms.author: fikaradz
 ms.reviewer: tapanm
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - chmoncay
 ---
 # Microsoft Stream video control in Power Apps
 A video player for Microsoft Stream videos and channels.

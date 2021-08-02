@@ -8,6 +8,7 @@ ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 03/11/2020
+ms.subservice: canvas-maker
 ms.author: yingchin
 search.audienceType: 
   - maker

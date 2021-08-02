@@ -2,17 +2,20 @@
 title: How to check license designation for an app
 description: Explains how to check license designation for the selected canvas app.
 author: tapanm-msft
-manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 03/18/2021
+ms.subservice: canvas-maker
+ms.date: 07/13/2021
 ms.author: alaug
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - alaug
+  - tapanm-msft
 ---
 
 # How to check license designation for an app
@@ -30,7 +33,7 @@ The following table outlines the designations and which license an end user must
 |-|-|
 | Standard​ | An app that only uses standard connectors. An end user must have a Power Apps for Office 365 plan, per app plan, or a per user plan to access this app.
 | Extended​ | An app allowed to use connectors promoted to premium on October 1, 2019.​ An end user must have a Power Apps for Office 365 plan, per app plan or per user plan. [Power Apps licensing FAQ](/power-platform/admin/powerapps-flow-licensing-faq#office-365) outlines which connectors were promoted to premium on October 1, 2019.
-| Premium​ | An app that uses at least one premium connector, a custom connector or an on-premise gateway. An end user must have a per app plan or per user plan to access.
+| Premium​ | An app that uses at least one premium connector, a custom connector, or an on-premise gateway. An end user must have a per app plan or per user plan to access.
 
 > [!NOTE]
 > Power Apps built in Microsoft Teams environments that connect to Dataverse for Teams, or use custom connectors have **Premium** license designation.
@@ -64,6 +67,12 @@ The following table outlines the designations and which license an end user must
 1. Select **Details**:
 
     ![App designation in details.](media/license-designation/app-details-page.png)
+
+## Known issues
+
+The use of the HTTP connector in a flow connected to an app isn't recognized by the app's license designation.
+
+For example, an app that only uses standard connectors and is connected to a flow using the HTTP connector will have a license designation as "Standard" although it requires end users to have "Premium" use rights.
 
 ## Pass assignment
 

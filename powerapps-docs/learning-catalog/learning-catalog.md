@@ -1,7 +1,7 @@
 ---
 title: Learning catalog for Power Apps
 description: Find all the training options for Power Apps
-author: loreleishannonmsft
+author: MargoC
 ms.topic: article
 ms.date: 03/25/2020
 ms.service: powerapps
@@ -9,40 +9,35 @@ ms.author: margoc
 ---
 # Learning catalog for Power Apps
 
-Find the right online training, in-person workshops, and events for your role as a user of Power Apps.
-
-<!-- ![Universal Windows Platform (UWP).](images/platform-uwp.png)  -->  
+Find the right online training, in person workshops, and events for your role as a user of Power Apps.
 
 :::row:::
     :::column:::
-<!-- ![Universal Windows Platform (UWP).](images/platform-uwp.png)  -->  
 
     ### Business and Technical Decision Makers
 
     Do you decide whether to invest in new technologies? 
 
-    [Business and Technical Decision Makers Learning Catalog](learning-catalog-bdm.md#)
+    [Business and Technical Decision Makers learning catalog](bdm.md)
 
-    [Get Started](learning-catalog-bdm.md#get-started)
+    [Get Started](bdm.md#get-started)
 
-    [App Creation](learning-catalog-bdm.md#app-creation)
+    [App Creation](bdm.md#app-creation)
 
-    [Exam](learning-catalog-bdm.md#exam)
+    [Exam](bdm.md#exam)
 
         :::column-end:::
     :::column:::
 
-    ### App Makers
+    ### App makers
 
     Are you interested in quickly creating custom business apps without writing code? 
 
-    [App Makers Learning Catalog](learning-catalog-app-maker.md#)
+    [Application Makers learning catalog](app-maker.md#)
 
-    [Get Started](learning-catalog-app-maker.md#get-started)
+    [Get Started](app-maker.md#get-started)
 
-    [App Creation](learning-catalog-app-maker.md#app-creation)
-
-    [Flow Creation](learning-catalog-app-maker.md#flow-creation)
+    [App Creation](app-maker.md#app-creation)
 
       :::column-end:::
 :::row-end:::
@@ -53,52 +48,52 @@ Find the right online training, in-person workshops, and events for your role as
 
     Do you need to write code to integrate with other data sources, extend core system functionality, or build a complex application?
 
-    [Developer Learning Catalog](learning-catalog-developer.md)
+    [Developer learning catalog](developer.md)
 
-    [Build](learning-catalog-developer.md#build)
+    [Build](developer.md#build)
 
-    [Extend](learning-catalog-developer.md#extend)
+    [Extend](developer.md#extend)
 
-    [Exam](learning-catalog-developer.md#exam)
+    [Exam](developer.md#exam)
 
         :::column-end:::
     :::column:::
 
     ### Administrators
 
-    Do you need to keep systems and data flowing, provisioned, and secure, round-the-clock?
+    Do you need to keep systems and data flowing, provisioned, and secure round-the-clock?
 
-    [Administrators Learning Catalog](learning-catalog-administrator.md)
+    [Administrators learning catalog](administrator.md)
 
     :::column-end:::
 :::row-end:::
 :::row:::
     :::column:::
 
-    ### Functional Consultants
+    ### Functional consultants
 
     Are you an implementation expert for a business domain? 
 
-    [Functional Application Consultant Learning Catalog](learning-catalog-functional-consultant.md)
+    [Functional Application Consultant learning catalog](functional-consultant.md)
 
-    [Get started](learning-catalog-functional-consultant.md#get-started)
+    [Get started](functional-consultant.md#get-started)
 
-    [App creation](learning-catalog-functional-consultant.md#app-creation)
+    [App creation](functional-consultant.md#app-creation)
 
-    [Exam](learning-catalog-functional-consultant.md#exam)
+    [Exam](functional-consultant.md#exam)
 
         :::column-end:::
     :::column:::
 
-    ### Solution Architects
+    ### Solution architects
 
     Do you design solutions that meet your customers' needs and budgets?
 
-    [Solution Architects Learning Catalog](learning-catalog-solution-architect.md)
+    [Solution Architects learning catalog](solution-architect.md)
 
-    [Get started](learning-catalog-solution-architect.md#get-started)
+    [Get started](solution-architect.md#get-started)
 
-    [Exam](learning-catalog-solution-architect.md#exam)
+    [Exam](solution-architect.md#exam)
 
     :::column-end:::
 :::row-end:::

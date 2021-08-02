@@ -1,12 +1,13 @@
 ---
-title: "Assign or share rows| MicrosoftDocs"
-description: How to assign or share rows
+title: "Assign a row to someone else| MicrosoftDocs"
+description: How to reassign a row to someone else.
 author: mduelae
 manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 11/10/2020
+ms.subservice: end-user
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
@@ -17,11 +18,11 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Assign or share rows
+# Assign or share a row 
 
 When you create a row, you are the owner of the row. If you would like another person in your organization to take ownership of the row, then you can assign the row to that person. You can assign a row to a user or team. You can also assign a row to yourself that another user owns but you need to have system administrator privilege to do this.
 
-If you want to keep ownership of the row but let someone else work on it with you, then use the **Share** option to share the row. 
+If you want to keep ownership of the row but let someone else work on it with you, then use the **Share** option to share the row. For more information, see [Share a row](share-row.md)
 
 For more information on how privileges and access works, see [How access to a row is determined](/power-platform/admin/how-record-access-determined).
 
@@ -113,9 +114,12 @@ Use advanced find to search for rows and then reassign them to someone else. For
    > - If there is an issue during the reassignment process such as the user that the rows are being reassigned to doesn't have the required privileges then the **Reassign Rows** process will stop. The rows that are processed before the issue will be updated and saved. For the rows that were not saved, you will need reassign the rows again using the **Reassign Rows** option.
    
  
- ## Share a row with someone else
+## Share a row with someone else
  
  If you want to keep ownership of a row but let someone else work on the row with you then use the share option.
+ 
+ > [!NOTE]
+ > For users on [early access](/power-platform/admin/opt-in-early-access-updates) the sharing feature has been updated for 2021 release wave 2. For more information, see [Share a row with someone else](share-row.md).
  
  
 1. From a list of rows, select the row that you want to assign to someone else. You can select multiple rows.
@@ -154,7 +158,7 @@ Use advanced find to search for rows and then reassign them to someone else. For
      > ![Select the type of permissions.](media/share-6.png "Select the type of permissions")
  
  
- ## Remove someone from a shared row
+ ### Remove someone from a shared row
  
  When you are the assigned owner of a row, you can remove another user the row is shared with.
  
@@ -163,8 +167,6 @@ Use advanced find to search for rows and then reassign them to someone else. For
  3. On the share dialog box, select the user or team who you want to remove sharing from.
  4. Select the **Remove Selected items**.
  5. Select the **Share** button.
-
- 
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
