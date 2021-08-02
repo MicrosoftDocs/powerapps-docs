@@ -5,7 +5,7 @@ author: dileepsinghmicrosoft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: intro-internal
-ms.date: 07/16/2021
+ms.date: 08/02/2021
 ms.subservice: portals
 ms.author: dileeps
 ms.reviewer: tapanm
@@ -17,7 +17,7 @@ contributors:
 
 # Embed a portal in another website by using an iframe
 
-One of the most common ways of using portal applications is to embed portal functionality inside another website. Usually the other website already exists, but you want to enhance its abilities and add new functions that work with your data surfaced through the portal application.<!--note from editor: Edits suggested.-->
+One of the most common ways of using portal applications is to embed portal functionality inside another website. Usually the other website already exists, but you want to enhance its abilities and add new functions that work with your data surfaced through the portal application.
 
 In this scenario, it's easier to embed your portal functionality rather than build it from scratch. This article explains the steps to embed a portal application in a different website by using an iframe.
 
@@ -25,12 +25,12 @@ In this scenario, it's easier to embed your portal functionality rather than bui
 
 Iframes are disabled on new portals by default, to ensure that no one can embed your portal application externally to attempt ["clickjacking" attacks](https://owasp.org/www-community/attacks/Clickjacking). 
 
-1. Set up the HTTP response header. You can choose either the [Content-Security-Policy (CSP) frame-ancestors](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors) directive (recommended) or [X-Frame-Options](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options).<!--note from editor: I don't think we should mention X-Frame-Options at all, but if you disagree, I suggest adding the following note to make it clear that they don't need to explore X-Frame-Options. Maybe it would be good to remove the link from the X-Frame-Options text?-->
+1. Set up the HTTP response header. You can choose either the [Content-Security-Policy (CSP) frame-ancestors](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors) directive (recommended) or [X-Frame-Options](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options).
 
     >[!NOTE]
     > Content-Security-Policy frame-ancestors has superseded X-Frame-Options, and is the method described in this article.
 
-    1. Set the site setting to enable the HTTP header **HTTP/Content-Security-Policy**. More information: [Set up HTTP headers in portals](configure/cors-support.md)<!--note from editor: I made this a simple "More info" link because you don't want to send the reader off to read the list of all available settings when they're in the middle of a procedure. We want them to follow a straighter path.-->
+    1. Set the site setting to enable the HTTP header **HTTP/Content-Security-Policy**. More information: [Set up HTTP headers in portals](configure/cors-support.md)
 
     1. Follow the syntax described in [CSP: frame-ancestors](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors) to set the value.
 
@@ -43,39 +43,36 @@ Iframes are disabled on new portals by default, to ensure that no one can embed 
         >
         > It's important to limit the ability to embed a portal in an iframe to specific sites, rather than use the wildcard character (\*).  
         >
-        > CSP consists of numerous directives whose values depends on various factors (like from where the scripts are loaded). This article doesn't cover that information because it's implementation-specific. However, we recommend that you first test this setup on a nonproduction portal, look at the browser console errors to identify issues you need to fix, and adjust the setting.<!--note from editor: Edit okay? -->
+        > CSP consists of numerous directives whose values depends on various factors (like from where the scripts are loaded). This article doesn't cover that information because it's implementation-specific. However, we recommend that you first test this setup on a nonproduction portal, look at the browser console errors to identify issues you need to fix, and adjust the setting.
 
-1. Set the **SameSite** default to **None** for portal cookies.<!--note from editor: This edit assumes that this is the actual step the reader needs to perform, and the following text expands on it.-->
+1. Set the **SameSite** default to **None** for portal cookies.
 
-    The [SameSite attribute](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) for cookies is useful for securing the site against cross-site request forgery (CSRF) attacks. However, this also means that the site can't be embedded in an iframe in scenarios like when the site requires user authentication<!--note from editor: Edit okay? I wasn't sure what "is for authenticated experiences" meant. --> or contains dynamic components like forms or lists.
+    The [SameSite attribute](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) for cookies is useful for securing the site against cross-site request forgery (CSRF) attacks. However, this also means that the site can't be embedded in an iframe in scenarios like when the site requires user authentication or contains dynamic components like forms or lists.
 
-    Therefore, to embed the portal in an iframe, you must change the SameSite cookie attribute for your portal to **None** by default. More information: [SameSite mode changes](important-changes-deprecations.md#samesite-mode-changes)<!--note from editor: The target article doesn't actually give any procedural directions, so I changed this to a "More info" link.  -->
+    Therefore, to embed the portal in an iframe, you must change the SameSite cookie attribute for your portal to **None** by default. More information: [SameSite mode changes](important-changes-deprecations.md#samesite-mode-changes)
 
     > [!NOTE]
     > Marking SameSite cookies as **None** doesn't make your portal vulnerable to CSRF attacks, because the portals platform uses anti-CSRF tokens to prevent these attacks.
 
 ## Step 2. Embed your portal
 
-After you complete the previous step, all you need to do to embed the portal experience into your website is to use the [HTML iframe tag](https://www.w3schools.com/html/html_iframe.asp) to embed the whole site or specific pages, as required.<!--note from editor: The reader will know where to use this tag? Or should we include a link to more detailed steps?-->
+After you complete the previous step, all you need to do to embed the portal experience into your website is to use the [HTML iframe tag](https://www.w3schools.com/html/html_iframe.asp) to embed the whole site or specific pages, as required.
   
 We recommend that the portal domain name be a sibling or a child of the domain name of the site where you're embedding the portal in an iframe. For example, if your root website is `www.contoso.com`, the portal domain name should be `portal.contoso.com`. This is important to ensure that the cookies used by the portal won't be classified as [third-party cookies and be blocked by the browser (blog)](https://blog.chromium.org/2020/01/building-more-private-web-path-towards.html). Otherwise, functionality such as Captcha and basic/advanced form redirection might not work properly. To set up a custom domain name on your portal, go to [Add a custom domain name](admin/add-custom-domain.md).
 
 ## Step 3. Handle headers and footers
-<!--note from editor: I was a bit confused by the structure of this section (especially that paragraph at the end), so if these edits don't work, please excuse.-->
+
 You can modify how headers and footers appear&mdash;or whether they appear at all&mdash;on embedded portal pages.
 
-### Keep the embedded portal headers and footers from showing 
+### Keep the embedded portal headers and footers from showing
 
 It's common for the parent site where you want to embed a portal to already have headers and footers. In such situations, you might not want to show the embedded portal's header and footer. Consider the following scenarios:
 
 - **When an entire portal is embedded in an iframe**  
-    Remove the content of your header and footer by updating the respective header and footer web templates.<!--note from editor: Will the reader know what you mean by "updating"? Does it just mean to remove the text from two fields in the template? (Is it worth linking to more information?)-->
+    Remove the content of your header and footer by updating the respective header and footer web templates.
 
 - **When a specific portal page is embedded in an iframe**  
-    Typically, you don't want to show the portal header or footer when you embed a specific page in a website. However, you still want the header and footer to be available when the user goes to the portal directly. You can achieve this by modifying headers and footers to render dynamically based on page content.<!--note from editor: How is this done? Can you give a "More information" link here?-->
-
-<!--note from editor: I didn't understand why the following paragraph was at the end of the article. It didn't seem to apply to the same scenario as the code sample in the next section but rather to suppressing headers and footers, so I moved it up here. But should it really be here at all, since it describes what *not* to do?-->
-For read-only scenarios that don't include any lists or forms, an alternative approach is to disable the header and footer from your template, or even use a special rewrite template (`~/Areas/Portal/Pages/Form.aspx`). However, we don't recommend either approach; they both have limitations, and neither supports full functionality.
+    Typically, you don't want to show the portal header or footer when you embed a specific page in a website. However, you still want the header and footer to be available when the user goes to the portal directly. You can achieve this by modifying headers and footers to render dynamically based on page content.
 
 ### Add conditional code in header and footers
 
@@ -108,6 +105,10 @@ For example, the following code displays a search bar in the header if the page 
 {% endsubstitution %}
 ```
 
+As an alternative to adding conditional code in header and footers, you can also consider the following methods. However, we don't recommend either approach; they both have limitations, and neither supports full functionality.
+
+- For read-only scenarios that don't include any lists or forms, disable header and footer from your template.
+- Use a special rewrite template (`~/Areas/Portal/Pages/Form.aspx`).
 
 ### See also
 
