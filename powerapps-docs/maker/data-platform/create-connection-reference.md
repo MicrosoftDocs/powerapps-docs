@@ -44,7 +44,7 @@ You can add a connection reference to a solution in a few different ways:
    - **Display name**: Enter a friendly name to help differentiate this connection reference from others.
    - **Add a description**: Enter text that describes the connection.
    - **Connector**: Select an existing connector from the list such as in the screenshot here. You can also select **New** to create a new connection for this connection reference. Once your finished creating a new connection, select **Refresh** to select your connection from the list.  
-   - **Connection**: Select an existing connection or select **New connection** to create one.
+   - **Connection**: Based on the **Connector** you selected, select an existing connection or select **New connection** to create one.
    :::image type="content" source="media/connection-reference-example.png" alt-text="Connection reference example":::
 
 1. Select **Create**.
