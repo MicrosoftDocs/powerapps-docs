@@ -1454,8 +1454,6 @@
           href: ./portals/control-portal-creation.md
         - name: Manage existing portals
           href: ./portals/manage-existing-portals.md
-        - name: Embed portal in another website
-          href: ./portals/embed-portal-website.md
     - name: Build using portals Studio
       items:
         - name: Portals Studio overview
@@ -1754,6 +1752,8 @@
       items:
         - name: Set up Azure Front Door with portals
           href: ./portals/azure-front-door.md
+        - name: Embed portal in another website
+          href: ./portals/embed-portal-website.md
     - name: For developers
       items:
         - name: Work with Liquid templates

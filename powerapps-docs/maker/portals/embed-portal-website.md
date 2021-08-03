@@ -5,7 +5,7 @@ author: dileepsinghmicrosoft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: intro-internal
-ms.date: 08/02/2021
+ms.date: 08/03/2021
 ms.subservice: portals
 ms.author: dileeps
 ms.reviewer: tapanm
