@@ -1748,8 +1748,10 @@
           href: ./portals/add-powerbi.md
         - name: Add a Power BI using powerbi liquid tag
           href: ./portals/admin/add-powerbi-report.md
-    - name: Set up Azure Front Door with portals
-      href: ./portals/azure-front-door.md
+    - name: How-to guides for extending portals
+      items:
+        - name: Set up Azure Front Door with portals
+          href: ./portals/azure-front-door.md
     - name: For developers
       items:
         - name: Work with Liquid templates
