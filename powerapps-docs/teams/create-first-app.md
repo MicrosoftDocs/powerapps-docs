@@ -5,13 +5,14 @@ author: tapanm-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: intro-internal
-ms.date: 05/13/2021
+ms.date: 08/03/2021
 ms.subservice: teams
 ms.author: jshum
 ms.reviewer: tapanm-msft
 contributors:
   - tapanm-msft
   - wimcoor
+  - josephshum
 ---
 
 # Create your first app in Microsoft Teams
@@ -37,13 +38,13 @@ After installing the Power Apps app from the Teams store:
 
 1. Start Teams, and sign in.
 
-1. In the left pane, select **Power Apps**, and then select **Create an app**.
+1. In the left pane, select **Power Apps**, and then select **Start now**.
 
     ![Start creating an app.](media/create-app-1.png "Start creating an app")
 
     > [!TIP]
     > If you don't see the **Power Apps** app in the left pane, select ![More added apps - ellipsis.](media/more-added-apps-ellipsis.png "More added apps - ellipsis") (*More added apps*), and then select **Power Apps**.
-    
+
     ![Power Apps.](media/power-apps.png "Power Apps")
 
 1. You'll be prompted to select a team where you want to create the app. This is where the app will live. Team members can't see the app until you publish the app. You will also have an opportunity to share the app with colleagues within your company that are not part of the Team. More information: [Set permission and share apps with colleagues](set-perms-and-share.md)
@@ -76,6 +77,10 @@ Data for apps built in Teams lives in Dataverse for Teams environments as tables
 > To learn about Dataverse for Teams tables in detail, go to [Overview of Dataverse for Teams](overview-data-platform.md).
 
 To get started creating your first table:
+
+1. Select **With data**.
+
+    ![Select With data](media/start-with-data.png "Select With data")
 
 1. Select **Create new table**.
 
