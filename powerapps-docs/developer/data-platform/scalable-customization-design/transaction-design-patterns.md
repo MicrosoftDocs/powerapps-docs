@@ -61,13 +61,13 @@ A simple and common example is when updating or interacting with groups of users
 
 Because both requests start together, Transaction A is able to get a lock on User X and Transaction B is able to get a lock on User Y, but as soon as each of them try to get a lock on the other user they block and then deadlock. 
 
-![Problem example: transaction deadlock](media/order-of-locks-example-1.png)
+![Problem example: transaction deadlock.](media/order-of-locks-example-1.png)
 
 Simply by ordering the resources you access in a consistent way you can prevent many deadlock situations. The ordering mechanism is often not important as long as it is consistent and can be done as efficiently as possible. For example, ordering users by name or even by GUID can at least ensure a level of consistency that avoids deadlocks.
 
 In a scenario using this approach, Transaction A would get User X, but Transaction B would also try now to get User X rather than User Y first. While that means Transaction B blocks until Transaction A completes, this scenario avoids the deadlock and is completed successfully.
 
-![Avoiding deadlock by ordering resources in a consistent way](media/order-of-locks-example-2.png)
+![Avoiding deadlock by ordering resources in a consistent way.](media/order-of-locks-example-2.png)
 
 In more complex and efficient scenarios, it may be that you lock least commonly referenced users first and more frequently referenced users last, which leads to the next design pattern.
 
@@ -79,7 +79,7 @@ When you have heavily contested resources, a good design is to not include the i
 
 With this approach, although there will still be some blocking on this resource, it reduces the amount of time that resource is locked, and therefore decreases the likelihood and time in which other requests are blocked while waiting for the resource. 
 
-![Hold contentious locks for shortest period](media/hold-contentious-locks-for-shortest-period.png)
+![Hold contentious locks for shortest period.](media/hold-contentious-locks-for-shortest-period.png)
 
 ## Reduce length of transactions
 
@@ -87,13 +87,13 @@ In a similar way, a lock only becomes a blocking issue if two processes need acc
 
 In the following example, the same locks are taken but other processing within the transaction means that the overall length of the transaction is extended, leading to overlapping requests for the same resources. This means that blocking occurs and each request is slower overall.
 
-![Problem example: blocking because length of transaction too long](media/reduce-length-of-transactions.png)
+![Problem example: blocking because length of transaction too long.](media/reduce-length-of-transactions.png)
 
 By shortening the overall length of the transaction, the first transaction completes and releases its locks before the second request even starts, meaning there is no blocking and both transactions complete efficiently. 
 
 Other activities within a request that extend the life of a transaction can increase the chance of blocking, particularly when there are multiple overlapping requests, and can lead to a significantly slower system. 
 
-![Less blocking because length of transaction reduced](media/reduce-length-of-transactions-1.png)
+![Less blocking because length of transaction reduced.](media/reduce-length-of-transactions-1.png)
 
 There are a number of ways that the transaction length can be reduced.
 
@@ -113,11 +113,11 @@ Review each query you make to determine whether:
 
 In the following example, the retrieval of related cases isn’t optimized and adds to the overall transaction length, introducing blocking between threads.
 
-![Retrieval of related cases not optimized](media/optimize-requests-1.png)
+![Retrieval of related cases not optimized.](media/optimize-requests-1.png)
 
 By optimizing the query, there’s less time spent performing it, and the chance of collision is lower, thereby reducing blocking.
 
-![Retrieval of related cases optimized](media/optimize-requests-2.png)
+![Retrieval of related cases optimized.](media/optimize-requests-2.png)
 
 Making sure that the database server can process your query as efficiently as possible can significantly decrease the overall time of your transactions and reduce the potential for blocking.
 
@@ -133,7 +133,7 @@ Considering whether some activities need to be synchronous or asynchronous can m
 
 As the following example shows, simply by moving some actions out to an asynchronous process, which means the actions are performed outside of the platform transaction, can mean that the length of the transaction is shorter and the potential for concurrent processing increases.
 
-![Moving some actions out to an asynchronous process shortens the transaction](media/reduce-chain-of-events.png)
+![Moving some actions out to an asynchronous process shortens the transaction.](media/reduce-chain-of-events.png)
 
 ## Avoid multiple updates to the same record
 
@@ -156,7 +156,7 @@ While it is important not to reduce the benefit of a Dataverse system by excludi
  
 If every time we create a task we also update the user record with the number of tasks they currently have allocated, that could introduce a secondary level of blocking as the user record would also now be heavily contended. It would add another resource that each request may need to block and wait for, despite not necessarily being critical to the action. In that example, consider carefully whether storing the count of tasks against the user is important or if the count can be calculated on demand or stored elsewhere such as using hierarchy and rollup field capabilities in Dataverse natively. 
 
-![Problem example showing unnecessary updates](media/only-update-things-you-need-to.png)
+![Problem example showing unnecessary updates.](media/only-update-things-you-need-to.png)
 
 As will be shown later, updating system user records can have negative consequences from a scalability perspective. 
 
@@ -164,7 +164,7 @@ As will be shown later, updating system user records can have negative consequen
 
 Triggering multiple actions on the same event can result in a greater chance of collision as by the nature of the requests those actions are likely to interact with the same related objects or parent object.
 
-![Multiple customizations triggered on same event](media/multiple-triggers-on-same-event.png)
+![Multiple customizations triggered on same event.](media/multiple-triggers-on-same-event.png)
 
 This is a pattern that should be carefully considered or avoided as it is very easy to overlook conflicts, particularly when different people implement the different processes.
 
@@ -221,7 +221,7 @@ An activity that is very beneficial as a preventative measure, as well as a tool
 
 The following example highlights how initially two processes work perfectly well together but in ongoing maintenance the addition of a new step to create a task can create an unintended loop. Using this documentation technique can highlight this at the design stage and avoid this affecting the system.
 
-![Diagram related actions](media/diagram-related-actions.png)
+![Diagram related actions.](media/diagram-related-actions.png)
 
 <!-- NOTE: Excluding content on isolation modes and transaction diagnosis as it is for on-premises only. -->
 

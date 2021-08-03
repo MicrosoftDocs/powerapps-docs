@@ -2,7 +2,7 @@
 title: "CDSWebApiService class library (C#) (Microsoft Dataverse) | Microsoft Docs"
 description: "This .NET Framework class library provides an easier to use API for HTTP messaging with the the Microsoft Dataverse Web API."
 ms.custom: ""
-ms.date: 07/16/2020
+ms.date: 07/14/2021
 ms.service: powerapps
 applies_to: 
   - "Dynamics 365 (online)"
@@ -15,9 +15,10 @@ search.app:
   - PowerApps
   - D365CE
 ---
+
 # CDSWebApiService class library (C#)
 
-[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+[!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 
 A .NET Framework sample class library that uses JSON objects and common HTTP messaging operations with the Microsoft Dataverse Web API. Use of these class methods result in less complicated application code, implementation of performance best practices, and improved error processing.
 
@@ -32,7 +33,7 @@ Using the provided Visual Studio project, you can build a class library and incl
 
 ## Example
 
-This example shows how to instantiate a CDSWebAPIService instance and create a contact record.
+This example shows how to instantiate a CDSWebAPIService instance and create a contact row.
 
 This example expects that the connection string is set in the App.config file as shown below.
 
@@ -88,7 +89,7 @@ This class provides the following public methods:
 
 ## PostCreate
 
-Creates an entity synchronously and returns the URI.
+Creates a table row (entity record) synchronously and returns the URI.
 
 ### Parameters
 
@@ -99,13 +100,13 @@ Creates an entity synchronously and returns the URI.
 
 ### Return Value
 
-The <xref:System.Uri> of the created entity
+The <xref:System.Uri> of the created table row (entity record)
 
 ### Remarks
 
 This method is provided because creating entities is a common operation and the URI is returned in the `OData-EntityId` header. Having this specialized method allows for less code than having only the [Post](#post) method, which returns only a [JObject](https://www.newtonsoft.com/json/help/html/T_Newtonsoft_Json_Linq_JObject.htm).
 
-More information: [Create an entity record using the Web API](../create-entity-web-api.md).
+More information: [Create a table row using the Web API](../create-entity-web-api.md).
 
 ## PostCreateAsync
 
@@ -129,7 +130,7 @@ A [JObject](https://www.newtonsoft.com/json/help/html/T_Newtonsoft_Json_Linq_JOb
 
 ### Remarks
 
-This method can be used for any operation using the `POST` http method, but it only includes the response content. Use [PostCreate](#postcreate) to create entities and return only the URI of the created entity.
+This method can be used for any operation using the `POST` http method, but it only includes the response content. Use [PostCreate](#postcreate) to create table rows (entity records) and return only the URI of the created row.
 
 More information:
 
@@ -149,13 +150,13 @@ Sends a `PATCH` request synchronously.
 
 |Name  |Type  |Description  |
 |---------|---------|---------|
-|uri|<xref:System.Uri>|The relative path to send the request. Frequently the Uri for a specific entity|
+|uri|<xref:System.Uri>|The relative path to send the request. Frequently the Uri for a specific table row (entity record)|
 |body|[JObject](https://www.newtonsoft.com/json/help/html/T_Newtonsoft_Json_Linq_JObject.htm)|The payload to send|
 |headers|`Dictionary<string, List<string>>`|(Optional) Any headers needed to apply special behaviors|
 
 ### Remarks
 
-Patch is frequently used to Update or Upsert records.
+Patch is frequently used to Update or Upsert table rows.
 
 More information:
 
@@ -186,7 +187,7 @@ A [JToken](https://www.newtonsoft.com/json/help/html/T_Newtonsoft_Json_Linq_JTok
 More information:
 
 - [Query Data using the Web API](../query-data-web-api.md)
-- [Retrieve an entity record using the Web API](../retrieve-entity-using-web-api.md)
+- [Retrieve a table row using the Web API](../retrieve-entity-using-web-api.md)
 - [Use Web API functions](../use-web-api-functions.md)
 
 
@@ -226,14 +227,14 @@ Sends a `PUT` request synchronously.
 |Name  |Type  |Description  |
 |---------|---------|---------|
 |uri|<xref:System.Uri>|The relative path to the resource to update.|
-|property|<xref:System.String>|The name of the property to update|
+|property|<xref:System.String>|The name of the column to update|
 |value|<xref:System.String>|The value to set|
 
 ### Remarks
 
-Put is used to update specific entity properties.
+Put is used to update specific table columns.
 
-**Note**: The Http `PUT` method is also used to update Metadata. This method cannot be used for that purpose. It is specifically for business data.
+**Note**: The Http `PUT` method is also used to update table or column definitions (metadata). This method cannot be used for that purpose. It is specifically for business data.
 
 More information: 
 

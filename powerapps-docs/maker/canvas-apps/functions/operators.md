@@ -1,6 +1,6 @@
 ---
-title: Operators and Identifiers | Microsoft Docs
-description: Reference information, including syntax and examples, for the operators and identifiers in Power Apps
+title: Operators and Identifiers in Power Apps
+description: Reference information including syntax and examples for the Operators and Identifiers in Power Apps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -8,11 +8,15 @@ ms.topic: reference
 ms.custom: canvas
 ms.reviewer: nabuthuk
 ms.date: 07/17/2020
+ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - gregli-msft
+  - nkrb
 ---
 # Operators and Identifiers in Power Apps
 
@@ -79,14 +83,14 @@ A few controls and functions apply formulas to individual records of a table.  T
 
 ### ThisItem operator
 
-For example, in the following **Gallery** control, the **Items** property is set to the **Employees** data source (such as the **Employees** entity included with the [Northwind Traders sample](../northwind-orders-canvas-overview.md)):
+For example, in the following **Gallery** control, the **Items** property is set to the **Employees** data source (such as the **Employees** table included with the [Northwind Traders sample](../northwind-orders-canvas-overview.md)):
 
 ```powerapps-dot
 Employees
 ``` 
 
 > [!div class="mx-imgBorder"]  
-> ![Employees shown in a gallery](media/operators/as-gallery-items.png)
+> ![Employees shown in a gallery.](media/operators/as-gallery-items.png)
 
 The first item in the gallery is a template that is replicated for each employee.  In the template, the formula for the picture uses **ThisItem** to refer to the current item:
 
@@ -95,7 +99,7 @@ ThisItem.Picture
 ``` 
 
 > [!div class="mx-imgBorder"]  
-> ![Formula for the picture of an employee](media/operators/as-gallery-picture.png)
+> ![Formula for the picture of an employee.](media/operators/as-gallery-picture.png)
 
 Likewise, the formula for the name also uses **ThisItem**:
 
@@ -104,7 +108,7 @@ ThisItem.'First Name' & " " & ThisItem.'Last Name'
 ``` 
 
 > [!div class="mx-imgBorder"]  
-> ![Formula for the first and last name of an employee](media/operators/as-gallery-name.png)
+> ![Formula for the first and last name of an employee.](media/operators/as-gallery-name.png)
 
 ### ThisRecord operator
 
@@ -115,7 +119,7 @@ Filter( Employees, StartsWith( ThisRecord.Employee.'First Name', "M" ) )
 ``` 
 
 > [!div class="mx-imgBorder"]  
-> ![Filtering the employees based on name, using ThisRecord](media/operators/as-gallery-filter-thisrecord.png)
+> ![Filtering the employees based on name, using ThisRecord.](media/operators/as-gallery-filter-thisrecord.png)
 
 **ThisRecord** is optional and implied by using the fields directly, for example, in this case, we could have written:
 
@@ -144,7 +148,7 @@ Employees As Employee
 ```   
 
 > [!div class="mx-imgBorder"]  
-> ![Gallery of employees, using the As operator](media/operators/as-gallery-filter-as-employee.png)
+> ![Gallery of employees, using the As operator.](media/operators/as-gallery-filter-as-employee.png)
 
 The formulas for the picture and name are adjusted to use this name for the current record:
 
@@ -152,13 +156,13 @@ The formulas for the picture and name are adjusted to use this name for the curr
 Employee.Picture
 ```
 > [!div class="mx-imgBorder"]  
-> ![Picture of an employee using the Employee name set with the As operator](media/operators/as-gallery-as-picture.png)
+> ![Picture of an employee using the Employee name set with the As operator.](media/operators/as-gallery-as-picture.png)
 
 ```powerapps-dot
 Employee.'First Name' & " " & Employee.'Last Name'
 ```
 > [!div class="mx-imgBorder"]  
-> ![First and last name of an employee using the Employee name set with the As operator](media/operators/as-gallery-as-name.png)
+> ![First and last name of an employee using the Employee name set with the As operator.](media/operators/as-gallery-as-name.png)
 
 **As** can also be used with record scope functions to replace the default name **ThisRecord**.  We can apply this to our previous example to clarify the record we are working with:
 
@@ -189,7 +193,7 @@ Concat(
 Setting a **Label** control's **Text** property to this formula displays:
 
 > [!div class="mx-imgBorder"]  
-> ![Chessboard text shown in a label control](media/operators/as-forall-nesting.png)
+> ![Chessboard text shown in a label control.](media/operators/as-forall-nesting.png)
 
 Let's unpack what is happening here:
 - We start by iterating an unnamed table of 8 numbered records from the [**Sequence**](function-sequence.md) function.  This loop is for each row of the board, which is commonly referred to as **Rank** and so we give it this name.
@@ -204,7 +208,7 @@ Sequence(8) as Rank
 ```
 
 > [!div class="mx-imgBorder"]  
-> ![Illustration of the outer gallery that provides the Rank iteration](media/operators/as-chessboard-rank.png)
+> ![Illustration of the outer gallery that provides the Rank iteration.](media/operators/as-chessboard-rank.png)
 
 Within this gallery, we'll place a horizontal gallery for the **File**, that will be replicated for each **Rank**, with an **Items** property of:
 
@@ -213,7 +217,7 @@ Sequence(8) as File
 ```
 
 > [!div class="mx-imgBorder"]  
-> ![Illustration of the inner gallery that provides the File iteration](media/operators/as-chessboard-file.png)
+> ![Illustration of the inner gallery that provides the File iteration.](media/operators/as-chessboard-file.png)
 
 And finally, within this gallery, we'll add a **Label** control that will be replicated for each **File** and each **Rank**.   We'll size it to fill the entire space and use the **Fill** property to provide the color with this formula:
 
@@ -222,7 +226,7 @@ If( Mod( Rank.Value + File.Value, 2 ) = 1, Green, Beige )
 ```
 
 > [!div class="mx-imgBorder"]  
-> ![Label control within the two galleries that provides the alternating colors for the chessboard](media/operators/as-chessboard-fill.png)
+> ![Label control within the two galleries that provides the alternating colors for the chessboard.](media/operators/as-chessboard-fill.png)
 
 ## Self and Parent operators
 
@@ -265,38 +269,38 @@ Some data sources such as SharePoint and Microsoft Dataverse have two different 
  
 Since display names are easier to understand, Canvas apps will suggest them as choices and not suggest logical names.  Although logical names are not suggested, they can still be used if typed indirectly.
 
-For example, imagine you have added a **Custom Field** to an entity in Dataverse.  A logical name will be assigned for you by the system, which you can modify only when creating the field.  The result would look similar to:
+For example, imagine you have added a **Custom Field** to a table in Dataverse.  A logical name will be assigned for you by the system, which you can modify only when creating the field.  The result would look similar to:
 
 > [!div class="mx-imgBorder"]  
-> ![Accounts entity with Custom Field added, showing a display name of "Custom Field" and a logical name of "cr5e3_customfield"](media/operators/customfield_portal.png)
+> ![Accounts table with Custom Field added, showing a display name of "Custom Field" and a logical name of "cr5e3_customfield."](media/operators/customfield_portal.png)
 
 When authoring a reference to a field of Accounts, the suggestion will be made to use **'Custom Field'** since this is the display name.  Note that the single quotes must be used because this name has a space in it:
 
 > [!div class="mx-imgBorder"]  
-> ![Studio formula bar showing suggestions for field names of Accounts with the display name 'Custom Field' highlighted](media/operators/customfield_suggest_display.png)
+> ![Studio formula bar showing suggestions for field names of Accounts with the display name 'Custom Field' highlighted.](media/operators/customfield_suggest_display.png)
 
 After selecting the suggestion, 'Custom Field' is shown in the formula bar and the data is retrieved: 
 
 > [!div class="mx-imgBorder"]  
-> ![Studio formula bar showing the use of the display name 'Custom Field' for the field](media/operators/customfield_display.png)
+> ![Studio formula bar showing the use of the display name 'Custom Field' for the field.](media/operators/customfield_display.png)
 
 Although it is not suggested, we could also use the logical name for this field.  This will result in the same data being retrieved.  Note that no single quotes are required since this name does not contain spaces or special characters:
 
 > [!div class="mx-imgBorder"]  
-> ![Studio formula bar showing the use of the logical name cr5e3_customfield for the field](media/operators/customfield_logical.png)
+> ![Studio formula bar showing the use of the logical name cr5e3_customfield for the field.](media/operators/customfield_logical.png)
 
 Behind the scenes, a mapping is maintained between the display names seen in formulas and the underlying logical names.  Since logical names must be used to interact with the data source, this mapping is used to convert from the current display name to the logical name automatically and that is what is seen in the network traffic.  This mapping is also used to convert back to logical names to switch into new display names, for example, if a display name changes or a maker in a different language edits the app.
 
 > [!NOTE] 
-> Logical names are not translated when moving an app between environments.  For Dataverse system entity and field names, this should not be a problem as logical names are consistent across environments.  But any custom fields, such as **cra3a_customfield** in this example above, may have a different environment prefix (**cra3a** in this case).  Display names are preferred as they can be matched against display names in the new environment. 
+> Logical names are not translated when moving an app between environments.  For Dataverse system table and field names, this should not be a problem as logical names are consistent across environments.  But any custom fields, such as **cra3a_customfield** in this example above, may have a different environment prefix (**cra3a** in this case).  Display names are preferred as they can be matched against display names in the new environment. 
 
 ## Name disambiguation
-Since display names are not unique, the same display name may appear more than once in the same entity.  When this happens, the logical name will be added to the end of the display name in parenthesis for one of more of the conflicting names.  Building on the example above, if there was a second field with the same display name of **Custom Field** with a logical name of **cra3a_customfieldalt** then the suggestions would show:
+Since display names are not unique, the same display name may appear more than once in the same table.  When this happens, the logical name will be added to the end of the display name in parenthesis for one of more of the conflicting names.  Building on the example above, if there was a second field with the same display name of **Custom Field** with a logical name of **cra3a_customfieldalt** then the suggestions would show:
 
 > [!div class="mx-imgBorder"]  
-> ![Studio formula bar showing the use of the logical name cr5e3_customfieldalt to disambiguate the two versions of "Custom Field"](media/operators/customfield_suggest_alt.png)
+> ![Studio formula bar showing the use of the logical name cr5e3_customfieldalt to disambiguate the two versions of "Custom Field."](media/operators/customfield_suggest_alt.png)
 
-Name disambiguation strings are added in other situations where name conflicts occur, such as the names of entities, option sets, and other Dataverse items. 
+Name disambiguation strings are added in other situations where name conflicts occur, such as the names of table, choices, and other Dataverse items. 
 
 ## Disambiguation operator
 

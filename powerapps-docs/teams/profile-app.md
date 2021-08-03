@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 05/24/2021
+ms.subservice: teams
 ms.author: namarwah
 ms.reviewer: tapanm
 contributors:
@@ -62,13 +63,13 @@ To open the Profile+ app:
 
 1. You can learn more about extending app capability on the splash screen. Select **Got it** to close the screen, and go to the app. To hide this message while opening this app again, select **Don't show this again** before you select **Got it**.
 
-    ![Splash screen](media/profile-app/splash.png "Splash screen")
+    ![Splash screen.](media/profile-app/splash.png "Splash screen")
 
 ## Understand the Profile+ interface
 
 The Profile+ app gives you easy access to details about the people of your company, details about their goals, projects, and open positions.
 
-![Understand the Profile+ app interface](media/profile-app/sample-profile-app.png "Understand the Profile+ app interface")
+![Understand the Profile+ app interface.](media/profile-app/sample-profile-app.png "Understand the Profile+ app interface")
 
 1. **Search for people** - find people in your organization
 
@@ -111,7 +112,7 @@ You can filter the list of people in your organization based on project and area
 
 1. Select **Apply**.
 
-    ![Filter expertise and project](media/profile-app/filter.png "Filter expertise and project")
+    ![Filter expertise and project.](media/profile-app/filter.png "Filter expertise and project")
 
 1. People matching the selected filters will be displayed.
 
@@ -141,7 +142,7 @@ Open positions allow you to give visibility to positions needing to be filled, m
 
 1. Select **Save**.
 
-    ![Open positions](media/profile-app/open-positions.png "Open positions")
+    ![Open positions.](media/profile-app/open-positions.png "Open positions")
 
 Open positions now appear in Profile+ linked to the manager responsible for them.
 
@@ -155,7 +156,7 @@ Open positions now appear in Profile+ linked to the manager responsible for them
 
 1. Select **Customize using Power Apps**.
 
-    ![Customize app](media/profile-app/customize-app.png "Customize app")
+    ![Customize app.](media/profile-app/customize-app.png "Customize app")
 
 1. Microsoft Teams desktop app opens Power Apps app interface.
 
@@ -163,6 +164,7 @@ Open positions now appear in Profile+ linked to the manager responsible for them
 
 ### See also
 
+- [Deploy Profile+ app broadly in your organization](deploy-profile-plus-broad-distribution.md)
 - [Profile+ sample app architecture](profile-plus-architecture.md)
 - [Extend Profile+ app (Preview) with additional org-specific data](profile-plus-org-specific.md)
 - [Customize sample apps](customize-sample-apps.md)

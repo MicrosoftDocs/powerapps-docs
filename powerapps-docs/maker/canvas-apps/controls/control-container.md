@@ -1,11 +1,12 @@
 ---
-title: 'Container control: reference | Microsoft Docs'
-description: Information, including properties and examples, about the Container control
+title: Container control in Power Apps
+description: Learn about the details, properties and examples of the container control in Power Apps.
 author: chmoncay
 ms.service: powerapps
 ms.topic: reference
 ms.component: canvas
 ms.date: 02/12/2021
+ms.subservice: canvas-maker
 ms.author: chmoncay
 ms.reviewer: tapanm-msft
 search.audienceType: 
@@ -17,19 +18,18 @@ contributors:
   - tahoon-ms
   - tapanm-msft
 ---
-# Container control in Power Apps (preview)
+# Container control in Power Apps
+
 Provides the ability to create hierarchy.
 
-> [!IMPORTANT]
-> This is a preview feature. Preview features are stable but might go through minor changes.
-> For more information, read [Understand experimental and preview features in Power Apps](../working-with-experimental-preview.md).
-
 ## Description
- The container can hold a set of controls and has its own properties.
+
+The container can hold a set of controls and has its own properties.
 
 You can start with inserting a blank container. And then, customize it by adding controls to it, resizing it, moving it, hiding it, and making other changes. You can also start with a number of controls, select them and add using tree view.
 
 ## Properties
+
 **[BorderColor](properties-color-border.md)** – The color of a control's border.
 
 **[BorderStyle](properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
@@ -51,7 +51,8 @@ You can start with inserting a blank container. And then, customize it by adding
 
 ## Known limitations
 
-Containers don't work within forms.
+- Containers don't work within forms.
+- You cannot add tables to the layout containers.
 
 ## Frequently asked questions
 
