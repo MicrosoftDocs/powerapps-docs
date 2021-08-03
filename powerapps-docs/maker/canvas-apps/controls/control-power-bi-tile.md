@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 07/26/2021
+ms.date: 08/03/2021
 ms.subservice: canvas-maker
 ms.author: chmoncay
 search.audienceType: 
@@ -68,11 +68,11 @@ You can use computed fields in the Power BI report to convert other value types 
 
 ## Key properties
 
-**AllowNewAPI** - Whether to use the new API when calling the Power BI service.  **True** will allow the use of the new Power BI API which is not supported in mobile and some embedded scenarios, but allows some more advanced filtering. **False** will use the original API.  Default **false**.
+**AllowNewAPI** - Whether to use the new API when calling the Power BI service. Setting the value to **True** will allow the use of the new Power BI API (which is not supported in mobile and some embedded scenarios, but allows some more advanced filtering). **False** will use the original API. Default value is **false**.
 
 **Dashboard** – The Power BI dashboard where the tile comes from.
 
-**LoadPowerBIContent** – When set to true, the Power BI content is loaded and shown. When set to false, the Power BI content is unloaded, which releases memory and optimizes performance.
+**LoadPowerBIContent** – When set to **True**, the Power BI content is loaded and shown. When set to **False**, the Power BI content is unloaded, which releases memory and optimizes performance.
 
 **Tile** – The name of the Power BI tile that you want to display.
 
