@@ -20,7 +20,7 @@ search.app:
 ---
 # How to import data
 
-Import data that's stored somewhere else into your model-drvien app using the import feature in Power Apps. 
+Import data that's stored somewhere else into your model-driven app using the import feature in Power Apps. 
 
 Every table has required columns that must exist in your input file. It's recommended that you download an Excel template, add your data, and then import the file to your app. The template saves time and effort. Don't add or modify columns in the template to avoid issues during the import.
 
