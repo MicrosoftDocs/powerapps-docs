@@ -287,7 +287,7 @@ Stores data points and series.
 
 > [!NOTE]
 > - Currently, we partially support `#PERCENT`. `#VAL` and `#TOTAL` are not supported in Unified Interface. 
-> - We only support a maximum of 5 `Series` (1 series and 2 categories/groupby) in a chart. 
+> - For non comparison charts, we support a maximum of 5 series (1 category). For comparison charts, we only support 1 series and 2 categories. 
 
 **Example**
 
