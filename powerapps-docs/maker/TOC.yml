@@ -1750,6 +1750,8 @@
           href: ./portals/admin/add-powerbi-report.md
     - name: How-to guides for extending portals
       items:
+        - name: Embed portal in another website
+          href: ./portals/embed-portal-website.md
         - name: Set up Azure Front Door with portals
           href: ./portals/azure-front-door.md
     - name: For developers
