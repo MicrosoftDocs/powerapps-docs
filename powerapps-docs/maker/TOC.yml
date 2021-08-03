@@ -941,6 +941,8 @@
             href: ./canvas-apps/accessible-apps.md
           - name: Create a logical app structure
             href: ./canvas-apps/accessible-apps-structure.md
+          - name: Improved tab stops for the keyboard tab key
+            href: ./canvas-apps/accessibility-tab-stops.md
           - name: Use color for accessibility
             href: ./canvas-apps/accessible-apps-color.md
           - name: Show or hide content from assistive technologies

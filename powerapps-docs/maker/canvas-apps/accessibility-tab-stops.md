@@ -1,5 +1,5 @@
 ---
-title: Improved tab stops (Experimental) for keyboard tab key in canvas apps 
+title: Improved tab stops for the keyboard tab key in canvas apps (Experimental)
 description: Learn about how to use the improved tab stops experience for better accessibility.
 author: hemantgaur
 ms.service: powerapps
@@ -18,7 +18,7 @@ contributors:
   - hemantgaur
 ---
 
-# Improved tab stops (Experimental) for keyboard tab key in canvas apps
+# Improved tab stops for the keyboard tab key in canvas apps (Experimental)
 
 [This article is pre-release documentation and is subject to change.]
 
