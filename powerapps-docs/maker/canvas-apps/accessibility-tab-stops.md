@@ -28,7 +28,7 @@ In some scenarios, when nesting controls such as containers and component instan
 
 > [!IMPORTANT]
 > - This is an experimental feature.
-> - [!INCLUDE[cc_preview_features_definition](../includes/cc-preview-features-definition.md)]
+> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
 
 When this feature is turned on, it also enables the following boolean properties for containers and component in canvas apps:
 
