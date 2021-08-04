@@ -39,7 +39,7 @@ The form designer interface has the following areas:
 
 1. Property pane – Displays properties of the selected element, and also allows you to make changes.
 1. Preview size switcher - Changes the size of the form preview helping you to see how the form will appear on various screen sizes.
-1. Show hidden - Show hidden columns on the form designer canvas. By default, this option is turned off and hidden columns don't appear on the form designer canvas. When enabled, columns that are hidden are indicated with ![Hidden column indicator](media/hidden-column.png).
+1. Show hidden - Displays hidden columns on the form designer canvas. By default, this option is turned off and hidden columns don't appear on the form designer canvas and are visible only from the tree view pane. When enabled, columns that are hidden are indicated on the form designer canvas with ![Hidden column indicator](media/hidden-column.png).
 1. Zoom slider - Zooms in or out of the form preview helping you take a closer look.
 1. Fit to width - Quick action to fit the form preview to the available width.
 
