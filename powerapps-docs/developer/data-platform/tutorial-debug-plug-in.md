@@ -74,27 +74,37 @@ Following the steps provided above results in a new managed solution named Plug-
 
 #### [Power Platform Tools](#tab/pptools)
 
-1. Select **View** > **Power Platform Explorer** to open the **Power Platform Explorer** view if it is not already open.
+1. In Visual Studio select **View** > **Power Platform Explorer** to open the view if it is not already open.
 
-1. Expand the **Plug-in Assemblies** node and then expand the **BasicPlugin.FollowupPlugin** assembly.
+1. Expand the **Plug-in Assemblies** node and then completely expand the **BasicPlugin.FollowupPlugin** assembly node.
 
-1. Right click the step registration and choose **Start Profiling**.
+1. Right click the step registration of the plug-in and choose **Start Profiling**.
 
 ---
 
 When presented with the **Profiler Settings** dialog, accept the default settings and click **OK** to close the dialog.
 
-    ![Profiler settings.](media/tutorial-debug-plug-in-profiler-settings.png)
+![Profiler settings.](media/tutorial-debug-plug-in-profiler-settings.png)
 
 ## Capture a profile
 
-1. In your model-driven app, create a new account to trigger the plug-in. This will capture an instance of the plug-in executing and persist it as a profile record in the system.
+In your model-driven (or other) app, create a new account to execute the plug-in. This will capture an instance of the plug-in executing and persist it as a Plug-in Profile table row in Dataverse. You can see this row in Power Apps under **Tables** > **Plug-in Profile** by choosing **Data**.
+
+#### [Plug-in Registration Tool](#tab/prt)
+
 1. In the Plug-in Registration tool, click **Debug**.
 
     ![Click Debug.](media/tutorial-debug-plug-in-capture-profile-debug.png)
 
-1. In the **Replay Plug-in Execution** dialog, on the **Setup** tab, click the ![Select profile command.](media/tutorial-debug-plug-in-select-profile-command.png) icon to open the **Select Profile from CRM** dialog.
-1. In the **Select Profile from CRM** dialog, select the profile where **Type Name** equals **BasicPlugin.FollowupPlugin** and represents the profile captured when you last triggered the plug-in.
+#### [Power Platform Tools](#tab/pptools)
+
+1. In Power Platform Tools, right-click the plug-in class file in the plug-in library project and choose **Debug**.
+
+---
+
+2. In the **Replay Plug-in Execution** dialog, on the **Setup** tab, click the ![Select profile command.](media/tutorial-debug-plug-in-select-profile-command.png) icon to open the **Select Profile from CRM** dialog.
+
+3. In the **Select Profile from CRM** dialog, select the profile where **Type Name** equals **BasicPlugin.FollowupPlugin** and represents the profile captured when you last triggered the plug-in.
 
     ![Select Profile from CRM dialog.](media/tutorial-debug-plug-in-select-profile-dialog.png)
 
