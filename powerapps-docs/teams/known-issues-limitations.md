@@ -5,7 +5,7 @@ author: matthewbolanos
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/22/2021
+ms.date: 08/02/2021
 ms.subservice: teams
 ms.author: mabolan
 ms.reviewer: tapanm
@@ -40,7 +40,11 @@ To learn about the limitations of controls in Dataverse for Teams environments, 
 
 ## Government Community Cloud (GCC)
 
-Dataverse for Teams currently isn't available in [Power Apps Government Community Cloud (GCC)](/power-platform/admin/powerapps-us-government).
+Dataverse for Teams currently isn't available in:
+
+- Power Apps Government Community Cloud – High (GCC High)
+- Power Apps Department of Defense (DoD)
+- Power Apps operated by 21Vianet in China
 
 ## Hidden membership groups
 
