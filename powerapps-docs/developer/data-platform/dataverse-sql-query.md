@@ -30,7 +30,7 @@ TDS (SQL) endpoint applications support for Power BI and SQL Server Management S
 ### SQL Server Management Studio (Preview)
 
 > [!NOTE]
-> A compatibility issue has been found with the SQL Server Management Studio 18.9.2 build. A fix is being investigated. Until the fix is available please use build [18.9.1 of SQL Server Management Studio](/sql/ssms/release-notes-ssms?view=sql-server-ver15#1891)
+> A compatibility issue has been found with the SQL Server Management Studio 18.9.2 build. A fix is being investigated. Until the fix is available please use build [18.9.1 of SQL Server Management Studio](/sql/ssms/release-notes-ssms?view=sql-server-ver15#1891).
 > This note will be updated once a fix is available.
 
 You can also use [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms) (SSMS) version 18.4 or later with the Dataverse endpoint SQL connection. Examples of using SSMS with the SQL data connection are provided below.
