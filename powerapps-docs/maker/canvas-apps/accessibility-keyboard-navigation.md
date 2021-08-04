@@ -37,7 +37,7 @@ When this feature is turned on, it also enables the following boolean properties
 
 | Property Name | Description |
 | - | - |
-| **Prioritize child controls** | Determines the order of navigation (**Z-order**) on canvas when pressing tab key on the keyboard. <ul> <li> **True** (Default): Pressing the tab key on the keyboard will first progress through all child controls of the current container before moving to the next available control. This option is recommended for similarly nested HTML elements. </li> <li> **False**: Pressing the tab key on the keyboard will progress through all controls only based on Z-order, ignoring parent-child relationship between controls or containers. </li> </ul> **Note**: This property isn't applicable to [responsive or autolayout](create-responsive-layout.md) containers. |
+| **Prioritize child controls** | Determines the order of navigation (**Z-order**) on canvas when pressing tab key on the keyboard. <ul> <li> **True** (Default): Pressing the tab key on the keyboard will first progress through all child controls of the current container before moving to the next available control. This option is recommended for similarly nested HTML elements. </li> <li> **False**: Pressing the tab key on the keyboard will progress through all controls only based on Z-order, ignoring parent-child relationship between controls or containers for keyboard navigation. </li> </ul> **Note**: This property isn't applicable to [responsive or autolayout](create-responsive-layout.md) containers. |
 | **Focus on child controls** | Determines the value of [TabIndex](controls/properties-accessibility.md#tabindex) for child controls. <ul> <li> **True** (Default): Pressing the tab key behaves as per TabIndex values defined on each control. </li> <li> **False**: Pressing the tab key doesn't move focus to any child control for the selected container or component. This option sets the TabIndex value to **-1** for all child controls of the current container or component. |
 
 ## Configure improved keyboard navigation in your app
@@ -62,7 +62,7 @@ Now that you've enabled the experimental feature, you'll see two new properties 
 
 Now that you understand the new feature with improved keyboard navigation, let's take a look at a few examples to understand the behavior when the tab key is pressed.
 
-### Default behavior
+### Default improved keyboard navigation behavior
 
 The following example shows multiple Text input controls, and several nesting scenarios. The number displayed in the input represents the value of the [TabIndex](controls/properties-accessibility.md#tabindex) property. There are two nested containers, and component controls overlaid on top of each other.
 
@@ -70,19 +70,19 @@ The default order is determined by the relative position of the controls. When f
 
 ![Default behavior of the app](media\accessibility-tab-stops\default-behavior.gif "Default behavior of the app")
 
-### Prioritize child controls set to False
+### When Prioritize child controls is set to False
 
 In the following example, every container and component have the **Prioritize child controls** property set to "False". All inputs are therefore considered to be on the same level of nesting, so the order is determined purely by their [X/Y position](controls/properties-size-location.md#position) relative to the screen.
 
 ![Don't prioritize child controls](media\accessibility-tab-stops\child-control-priority.gif "Don't prioritize child controls")
 
-### Hybrid settings
+### Advanced configuration with mixed settings
 
 In the following example, the orange outlined containers have **Prioritize child controls** property set to "False". All others controls have this property set to "True". Also, a custom [TabIndex](controls/properties-accessibility.md#tabindex) property has been set for some inputs, indicated by the number shown in each input.
 
 Tab order first proceeds through the containers and controls with TabIndex value of greater than 0, and then proceeds through all others with value of 0. This behavior was also the in the earlier implementation.
 
-![Mix and match](media\accessibility-tab-stops\hybrid-configuration.gif "Mix and match")
+![Advanced configuration with mixed settings](media\accessibility-tab-stops\hybrid-configuration.gif "Advanced configuration with mixed settings")
 
 ### See also
 
