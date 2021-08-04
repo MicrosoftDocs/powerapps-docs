@@ -17,6 +17,7 @@ search.app:
 contributors:
   - tapanm-msft
   - aengusheaney
+  - TYLEROL
 ---
 
 # Automate tests with Azure Pipelines using classic editor
