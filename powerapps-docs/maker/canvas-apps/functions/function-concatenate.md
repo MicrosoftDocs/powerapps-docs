@@ -34,10 +34,11 @@ Use the [**Split**](function-split.md) or [**MatchAll**](function-ismatch.md) fu
 
 ## Syntax
 
-**Concat**( *Table*, *Formula* )
+**Concat**( *Table*, *Formula*, *separator*)
 
 - *Table* - Required.  Table to operate on.
 - *Formula* - Required.  Formula to apply across the records of the table.
+- *Separator* - Optional. A text value to be inserted between concatenated rows of the table.
 
 **Concatenate**( *String1* [, *String2*, ...] )
 
