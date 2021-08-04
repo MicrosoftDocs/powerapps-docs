@@ -40,6 +40,6 @@ The default display mode for Poweer Apps mobile is set to **Light**.
 4. Select your display setting: **Light**, **Dark**, or **System default**.
   
    > [!div class="mx-imgBorder"]
-   > ![Select a display settting](media/dark-mode-1.png "Select your display setting") 
+   > ![Select a display settting](media/dark-mode-3.png "Select your display setting") 
 
 5. When you're done, select the **X** to close the window. 
