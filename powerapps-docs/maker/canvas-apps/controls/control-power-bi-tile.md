@@ -1,6 +1,6 @@
 ---
 title: Power BI tile control in Power Apps
-description: Learn about the details, properties and examples of the Power BI tile control in Power Apps.
+description: Learn about the details, properties, and examples of the Power BI tile control in Power Apps.
 author: chmoncay
 manager: kvivek
 ms.service: powerapps
@@ -34,31 +34,30 @@ When you share an app that contains Power BI content, you must share not only th
 
 ## Performance
 
-It's not recommended to have more than 3 Power BI tiles loaded at the same time within an app. You can control tile loading and unloading by setting the **LoadPowerBIContent** property.
+It's not recommended to have more than three Power BI tiles loaded at the same time within an app. You can control tile loading and unloading by setting the **LoadPowerBIContent** property.
 
 ## Embedding Options
 
-Embedding is different between versions of the Power BI Api. Due to the new Power BI api authentication scheme your tile may not be accessible on mobile or within other embedded scenarios (Teams or SharePoint). 
+Embedding is different between versions of the Power BI API. Because of the new Power BI API authentication scheme, your tile may not be accessible on mobile or within other embedded scenarios (Teams or SharePoint).
 
-### Using **AllowNewAPI** = true
+You can control the use of API version using the AllowNewAPI value. See [Key properties](#key-properties) for more information.
 
-When using **AllowNewAPI** = true, you're able to embed a dashboard, report or tile by taking the Embed URL from Power BI and making it the **TileUrl** value.
-
-### Using **AllowNewAPI** = false
-
-When using **AllowNewAPI** = false, you're able to embed a dashboard tile either by Embed URL and making it the **TileUrl** value or using the graphical interface provided.
+| AllowNewAPI property value | Behavior |
+| - | - |
+| True | You can embed a dashboard, report, or tile by taking the **Embed URL** from Power BI and making it the **TileUrl** value. |
+| False | You can embed a dashboard tile either by **Embed URL** and making it the **TileUrl** value, or using the graphical interface provided.
 
 ## Filtering
 
-Filtering is different between versions of the Power BI Api.  Please see the appropriate sections depending on how you configure the control.
+Filtering differs between the versions of the Power BI API. See the appropriate sections below depending on how you configure the control.
 
-### Using **AllowNewAPI** = true
+### When using the new API to call Power BI service
 
-Please visit the [Power BI service url filters](https://docs.microsoft.com/en-us/power-bi/collaborate-share/service-url-filters) page for detailed information.
+When **AllowNewAPI** property is set to "True", you're using new API to call Power BI service. For more information, see [Filter a report using query string parameters in the URL](/power-bi/collaborate-share/service-url-filters).
 
-### Using **AllowNewAPI** = false
+### When using the original API to call Power BI service
 
-By passing a single parameter from the app, you can filter the results that appear in a Power BI tile. However, only string values and the equals operator are supported, and the filter might not work if the table name or the column name contains spaces.
+When **AllowNewAPI** property is set to "False", you're using the original API to call Power BI service. In this case, by passing a single parameter from the app, you can filter the results that appear in a Power BI tile. However, only string values and the equals operator are supported, and the filter might not work if the table name or the column name contains spaces.
 
 To pass a single filter value, modify the value of the **TileURL** property, which follows this syntax:
 
@@ -72,7 +71,7 @@ To that value, append this syntax:
 &$filter=<TableName>/<ColumnName> eq '<Value>'
 ```
 
-For example - using a value from a list box: 
+For example, using a value from a list box: 
 ```
 "&$filter=Store/Territory eq '" & ListBox1.Selected.Abbr & "'"
 ```
@@ -89,7 +88,7 @@ You can use computed fields in the Power BI report to convert other value types 
 
 ## Key properties
 
-**AllowNewAPI** - Whether to use the new API when calling the Power BI service. Setting the value to **True** will allow the use of the new Power BI API (which is not supported in mobile and some embedded scenarios, but allows some more advanced filtering). **False** will use the original API. Default value is **false**.
+**AllowNewAPI** - Whether to use the new API when calling the Power BI service. Setting the value to **True** will allow the use of the new Power BI API (which isn't supported in mobile and some embedded scenarios, but allows some more advanced filtering). **False** will use the original API. Default value is **false**.
 
 **Dashboard** – The Power BI dashboard where the tile comes from.
 
@@ -111,9 +110,9 @@ You can use computed fields in the Power BI report to convert other value types 
 
 **[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
 
-**[OnSelect](properties-core.md)** – Actions to perform when the user taps or clicks a control. By default, the Power BI report that's associated with the tile opens.
+**[OnSelect](properties-core.md)** – Actions to perform when the user selects a control. By default, the Power BI report that's associated with the tile opens.
 
-**TileUrl** – The URL by which the tile is requested from the Power BI service. To add query string filtering to your url, please see the [filtering](#filtering) section above.
+**TileUrl** – The URL by which the tile is requested from the Power BI service. To add query string filtering to your URL, see the [filtering](#filtering) section above.
 
 **[Visible](properties-core.md)** – Whether a control appears or is hidden.
 
@@ -129,7 +128,7 @@ You can use computed fields in the Power BI report to convert other value types 
 
     Don't know how to [add and configure a control](../add-configure-controls.md)?
 
-2. On the **Data** tab of the options panel, click or tap **My Workspace** for the **Workspace** setting.
+2. On the **Data** tab of the options panel, select **My Workspace** for the **Workspace** setting.
 
 3. Select a dashboard in the list of dashboards, and then select a tile in the list of tiles.
 
