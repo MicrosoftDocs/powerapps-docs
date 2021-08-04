@@ -1,6 +1,6 @@
 ---
-title: Improved tab stops for the keyboard tab key in canvas apps (Experimental)
-description: Learn about how to use the improved tab stops experience for better accessibility.
+title: Improved keyboard navigation for the keyboard tab key in canvas apps (Experimental)
+description: Learn about how to use the improved keyboard navigation experience for better accessibility.
 author: hemantgaur
 ms.service: powerapps
 ms.topic: article
@@ -18,7 +18,7 @@ contributors:
   - hemantgaur
 ---
 
-# Improved tab stops for the keyboard tab key in canvas apps (Experimental)
+# Improved keyboard navigation for the keyboard tab key in canvas apps (Experimental)
 
 [This article is pre-release documentation and is subject to change.]
 
@@ -26,7 +26,7 @@ contributors:
 > - This is an experimental feature.
 > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
 
-When you're nesting controls such as containers and component instances, the user input value for [TabIndex](controls/properties-accessibility.md#tabindex) isn't respected sometimes. **Improved tab stops** experimental setting improves the keyboard tab stop behavior when using composite or nested controls in canvas apps during these instances.
+When you're nesting controls such as containers and component instances, the user input value for [TabIndex](controls/properties-accessibility.md#tabindex) isn't respected sometimes. **Improved keyboard navigation** experimental setting improves the keyboard tab stop behavior when using composite or nested controls in canvas apps during these instances.
 
 This feature also adds support for handling accessibility for keyboard tabs inline with rest of the controls in canvas apps. And addresses manual TabIndex assignments for all controls and components.
 
@@ -40,7 +40,7 @@ When this feature is turned on, it also enables the following boolean properties
 | **Prioritize child controls** | Determines the order of navigation (**Z-order**) on canvas when pressing tab key on the keyboard. <ul> <li> **True** (Default): Pressing the tab key on the keyboard will first progress through all child controls of the current container before moving to the next available control. This option is recommended for similarly nested HTML elements. </li> <li> **False**: Pressing the tab key on the keyboard will progress through all controls only based on Z-order, ignoring parent-child relationship between controls or containers. </li> </ul> **Note**: This property isn't applicable to [responsive or autolayout](create-responsive-layout.md) containers. |
 | **Focus on child controls** | Determines the value of [TabIndex](controls/properties-accessibility.md#tabindex) for child controls. <ul> <li> **True** (Default): Pressing the tab key behaves as per TabIndex values defined on each control. </li> <li> **False**: Pressing the tab key doesn't move focus to any child control for the selected container or component. This option sets the TabIndex value to **-1** for all child controls of the current container or component. |
 
-## Configure improved tab stops in your app
+## Configure improved keyboard navigation in your app
 
 Follow these steps to enable this feature in your app, and set the properties mentioned earlier.
 
@@ -52,7 +52,7 @@ Follow these steps to enable this feature in your app, and set the properties me
 
 1. In Power Apps Studio, select **File** > **Settings** > **Upcoming features** > **Experimental**.
 
-1. Select **Improved tab stops** to turn on the feature. !![Screenshot to follow]!!
+1. Select **Improved keyboard navigation** to turn on the feature. !![Screenshot to follow]!!
 
 1. Close settings.
 
@@ -60,7 +60,7 @@ Now that you've enabled the experimental feature, you'll see two new properties 
 
 ## Examples
 
-Now that you understand the new feature with improved tab stops, let's take a look at a few examples to understand the behavior when the tab key is pressed.
+Now that you understand the new feature with improved keyboard navigation, let's take a look at a few examples to understand the behavior when the tab key is pressed.
 
 ### Default behavior
 
