@@ -36,6 +36,7 @@ The form designer interface has the following areas:
     - **Columns** pane to add columns to a form.
     - **Components** pane to add components to a form.
     - **Tree view** to see the hierarchy of components on the form and select them.
+    - **Form libraries** pane is where form libraries can be viewed and added. More information: [Configure model-driven app form event handlers](configure-event-handlers-legacy.md)
 
 1. Property pane – Displays properties of the selected element, and also allows you to make changes.
 1. Preview size switcher - Changes the size of the form preview helping you to see how the form will appear on various screen sizes.
