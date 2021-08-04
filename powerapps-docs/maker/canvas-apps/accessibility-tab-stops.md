@@ -22,24 +22,27 @@ contributors:
 
 [This article is pre-release documentation and is subject to change.]
 
-We've introduced a new experimental setting named **Improved tab stops** to improve the keyboard tab stop behavior when using composite or nested controls in canvas apps. This feature adds support for handling accessibility for keyboard tabs inline with rest of the controls in canvas apps. To maintain backward compatibility and not affect the functionality of the existing apps, this feature is added as an experimental feature.
-
-In some scenarios, when nesting controls such as containers and component instances, a user input value for [TabIndex](controls/properties-accessibility.md#tabindex) isn't respected. This feature addresses manual TabIndex assignments for all controls and components.
-
 > [!IMPORTANT]
 > - This is an experimental feature.
 > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
+
+When you're nesting controls such as containers and component instances, the user input value for [TabIndex](controls/properties-accessibility.md#tabindex) isn't respected sometimes. **Improved tab stops** experimental setting improves the keyboard tab stop behavior when using composite or nested controls in canvas apps during these instances.
+
+This feature also adds support for handling accessibility for keyboard tabs inline with rest of the controls in canvas apps. And addresses manual TabIndex assignments for all controls and components.
+
+> [!NOTE]
+> This feature is added as "Experimental" to maintain backward compatibility and maintain existing app functionality.
 
 When this feature is turned on, it also enables the following boolean properties for containers and component in canvas apps:
 
 | Property Name | Description |
 | - | - |
-| **Prioritize child controls** | Determines the order of navigation (**Z-order**) on canvas when pressing tab key on the keyboard. <ul> <li> **True** (Default): Pressing the tab key on the keyboard will first progress through all child controls of the current container before moving to the next available control. This option is recommended for similarly nested HTML elements. </li> <li> **False**: Pressing the tab key on the keyboard will progress through all controls only based on Z-order, ignoring parent-child relationship between controls or containers. </li> </ul> **Note**: This property is not applicable to [responsive or auto-layout](create-responsive-layout.md) containers. |
+| **Prioritize child controls** | Determines the order of navigation (**Z-order**) on canvas when pressing tab key on the keyboard. <ul> <li> **True** (Default): Pressing the tab key on the keyboard will first progress through all child controls of the current container before moving to the next available control. This option is recommended for similarly nested HTML elements. </li> <li> **False**: Pressing the tab key on the keyboard will progress through all controls only based on Z-order, ignoring parent-child relationship between controls or containers. </li> </ul> **Note**: This property isn't applicable to [responsive or autolayout](create-responsive-layout.md) containers. |
 | **Focus on child controls** | Determines the value of [TabIndex](controls/properties-accessibility.md#tabindex) for child controls. <ul> <li> **True** (Default): Pressing the tab key behaves as per TabIndex values defined on each control. </li> <li> **False**: Pressing the tab key doesn't move focus to any child control for the selected container or component. This option sets the TabIndex value to **-1** for all child controls of the current container or component. |
 
 ## Configure improved tab stops in your app
 
-Follow these steps to enable this feature in your app, and set the properties mentioned ealier.
+Follow these steps to enable this feature in your app, and set the properties mentioned earlier.
 
 1. Sign in to [Power Apps](https://make.poweraps.com).
 
@@ -49,11 +52,11 @@ Follow these steps to enable this feature in your app, and set the properties me
 
 1. In Power Apps Studio, select **File** > **Settings** > **Upcoming features** > **Experimental**.
 
-1. Select **Improved tab stops** to turn the feature on. !![Screenshot to follow]!!
+1. Select **Improved tab stops** to turn on the feature. !![Screenshot to follow]!!
 
 1. Close settings.
 
-Now that you've enabled the experimental feature, you'll see two new properties for controls and containers&mdash;**Prioritize child controls**, and **Focus on child controls**. If desired, change the property values as appropriate.
+Now that you've enabled the experimental feature, you'll see two new properties for controls and containers&mdash;**Prioritize child controls**, and **Focus on child controls**. Change the property values as appropriate.
 
 ## Examples
 
@@ -69,7 +72,7 @@ The default order is determined by the relative position of the controls. When f
 
 ### Prioritize child controls set to False
 
-In the following example, every container and component has the **Prioritize child controls** property set to "False". All inputs are therefore considered to be on the same level of nesting, so the order is determined purely by their [X/Y position](controls/properties-size-location.md#position) relative to the screen.
+In the following example, every container and component have the **Prioritize child controls** property set to "False". All inputs are therefore considered to be on the same level of nesting, so the order is determined purely by their [X/Y position](controls/properties-size-location.md#position) relative to the screen.
 
 ![Don't prioritize child controls](media\accessibility-tab-stops\child-control-priority.gif "Don't prioritize child controls")
 
@@ -77,7 +80,7 @@ In the following example, every container and component has the **Prioritize chi
 
 In the following example, the orange outlined containers have **Prioritize child controls** property set to "False". All others controls have this property set to "True". Also, a custom [TabIndex](controls/properties-accessibility.md#tabindex) property has been set for some inputs, indicated by the number shown in each input.
 
-Tab order first proceeds through the containers and controls with TabIndex value of greater than 0, and then proceeds through all others with value of 0. This was also the default behavior in the earlier implementation.
+Tab order first proceeds through the containers and controls with TabIndex value of greater than 0, and then proceeds through all others with value of 0. This behavior was also the in the earlier implementation.
 
 ![Mix and match](media\accessibility-tab-stops\hybrid-configuration.gif "Mix and match")
 
