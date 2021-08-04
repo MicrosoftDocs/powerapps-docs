@@ -1,5 +1,5 @@
 ---
-title: Improved keyboard navigation for the keyboard tab key in canvas apps (Experimental)
+title: Improved keyboard navigation in canvas apps (Experimental)
 description: Learn about how to use the improved keyboard navigation experience for better accessibility.
 author: hemantgaur
 ms.service: powerapps
@@ -18,7 +18,7 @@ contributors:
   - hemantgaur
 ---
 
-# Improved keyboard navigation for the keyboard tab key in canvas apps (Experimental)
+# Improved keyboard navigation in canvas apps (Experimental)
 
 [This article is pre-release documentation and is subject to change.]
 
@@ -26,7 +26,7 @@ contributors:
 > - This is an experimental feature.
 > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
 
-When you're nesting controls such as containers and component instances, the user input value for [TabIndex](controls/properties-accessibility.md#tabindex) isn't respected sometimes. **Improved keyboard navigation** experimental setting improves the keyboard tab stop behavior when using composite or nested controls in canvas apps during these instances.
+When you're nesting controls such as containers and component instances, the user input value for [TabIndex](controls/properties-accessibility.md#tabindex) isn't respected sometimes. **Improved keyboard navigation** experimental setting improves the navigation experience in this situation when **Tab** key is pressed on the keyboard helping focus on the desired container or control precisely and predictably.
 
 This feature also adds support for handling accessibility for keyboard tabs inline with rest of the controls in canvas apps. And addresses manual TabIndex assignments for all controls and components.
 
