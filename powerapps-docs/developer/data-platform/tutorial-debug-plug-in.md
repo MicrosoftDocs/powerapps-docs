@@ -2,7 +2,7 @@
 title: "Tutorial: Debug a plug-in (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "The second of three tutorials that will show you how to work with plug-ins." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 03/16/2021
+ms.date: 08/03/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -34,34 +34,57 @@ For detailed explanation of supporting concepts and technical details see:
 
 ## Goal
 
-Because the plug-in executes on a remote server, you cannot attach a debugger to the process. The plug-in profiler captures a profile of an executing plug-in and allows you to re-play the execution of the plug-in using Visual Studio on your local computer.
+Because the plug-in executes on a remote server, you cannot attach a debugger to the plug-in process. The plug-in profiler captures a profile of an executing plug-in and allows you to re-play the execution of the plug-in using Visual Studio on your local computer.
 
 ## Prerequisites
 
-- All the prerequisites for  [Tutorial: Write and register a plug-in](tutorial-write-plug-in.md) apply. See [Prerequisites](tutorial-write-plug-in.md#prerequisites).
+- All the prerequisites for  [Tutorial: Write and register a plug-in](tutorial-write-plug-in.md) apply. See [Prerequisites](tutorial-write-plug-in.md#prerequisites). The exception is that Visual Studio 2019 or later is required to install and use Power Platform Tools.
 - If you haven't completed the previous tutorial, you can use the general steps below with a different registered plug-in.
 
 ## Install plug-in profiler
 
+There are two tools available from which to run the Plug-in Profiler: the Plug-in Registration Tool and Power Platform Tools for Visual Studio. Instructions for the use of both tools are provided in this tutorial.
+
+#### [Plug-in Registration Tool](#tab/prt)
+
 1. If the Plug-in Registration tool isn't already installed and open, follow the steps in [Tutorial: Write and register a plug-in](tutorial-write-plug-in.md) to open it. Complete the [Connect using the Plug-in Registration tool](tutorial-write-plug-in.md#connect-using-the-plug-in-registration-tool) section.
+
 1. In the Plugin Registration tool, click **Install Profiler**.
 
     ![Install Profiler.](media/tutorial-debug-plug-in-install-profiler.md.png)
 
-1. This will install a new managed solution named Plug-in Profiler in your Microsoft Dataverse environment. This will take a minute or two to complete.
+#### [Power Platform Tools](#tab/pptools)
+
+1. Follow the instructions in [Install Power Platform Tools](tools/devtools-install.md).
+
+---
+
+Following the steps provided above results in a new managed solution named Plug-in Profiler in your Microsoft Dataverse development environment.
 
 ## Start profiling
+
+#### [Plug-in Registration Tool](#tab/prt)
 
 1. In the Plug-in Registration tool, select the **(Step) BasicPlugin.FollowupPlugin: Create of account** step you registered earlier, and click **Start Profiling**.
 
     ![Start profiling.](media/tutorial-debug-plug-in-start-profiling.png)
 
-1. In the **Profiler Settings** dialog accept the default settings and click **OK** to close the dialog.
+    > [!TIP]
+    > For alternate information about running the profiler installed with the Plug-in Registration Tool see [Run the plug-in profiler from a Command Prompt window](#run-profiler-standalone).
 
-    ![foo.](media/tutorial-debug-plug-in-profiler-settings.png)
+#### [Power Platform Tools](#tab/pptools)
 
+1. Select **View** > **Power Platform Explorer** to open the **Power Platform Explorer** view if it is not already open.
 
-For more information about running the profiler see [Run the plug-in profiler from a Command Prompt window](#run-profiler-standalone).
+1. Expand the **Plug-in Assemblies** node and then expand the **BasicPlugin.FollowupPlugin** assembly.
+
+1. Right click the step registration and choose **Start Profiling**.
+
+---
+
+When presented with the **Profiler Settings** dialog, accept the default settings and click **OK** to close the dialog.
+
+    ![Profiler settings.](media/tutorial-debug-plug-in-profiler-settings.png)
 
 ## Capture a profile
 
