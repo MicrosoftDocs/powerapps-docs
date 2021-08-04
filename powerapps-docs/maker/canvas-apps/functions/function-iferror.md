@@ -109,27 +109,34 @@ IfError( Text( 1/x ), "#DIV/0!" )
 
 As seen above, **IfError** can return an error if the *Replacement* or *DefaultResult* is an error.
 
-### ErrorInfo
+### FirstError / AllErrors
 
-Within in the replacement formulas, the **ErrorInfo** record provides information about the error that was found. This record includes:
+Within in the replacement formulas, the **FirstError** record and **AllErrors** table provide information about any errors that were found. The records include:
 
-| **ErrorInfo** field | Type | Description |
+| **FirstError** field | Type | Description |
 |---------------------|------|-------------|
-| **Control** | Text string | Name of the current control, used to report where the error occurred. |
 | **Kind** | **ErrorKind** enum (number) | Categorized the error. |
 | **Message** | Text string | Message about the error, suitable to be displayed to the end user. |
-| **Notify** | Boolean | If not caught by IfError, whether an end-user notification banner should be displayed. |
-| **Property** | Text string | Name of the current property, used to report where the error occurred. |
+| **Source** | Text string | Location in the format *ControlName*.*PropertyName* where the error originated, used for reporting. |
+| **Observed** | Text string | Location in the format *ControlName*.*PropertyName* where the error is surfaced to the user, used for reporting. |
 
 For example, consider the following formula as a [**Button**](../controls/control-button.md) control's **OnSelect** property:
 
 ```powerapps-dot
-IfError( 1/0, Notify( "Internal error: " & ErrorInfo.Control & "." & ErrorInfo.Property ) )
+Set( a, 1/0 )
 ```
 
-The example formula above would display the following banner when the button is activated:
+And this formula on the **OnSelect** property of a second [**Button**](../controls/control-button.md) control:
 
-![Button control activated, showing a notification from the Notify function.](media/function-iferror/notify-errorinfo.png)
+```powerapps-dot
+IfError( a, Notify( "Internal error: originated on " & FirstError.Source & ", surfaced on " & FirstError.Observed ) )
+```
+
+The example formula above would display the following banner when the two buttons are activated in sequence:
+
+![Button control activated, showing a notification from the Notify function.](media/function-iferror/notify-firsterror.png)
+
+Typically, if an expression results in an error it will be a single one. But there are scenarios where multiple errors may be returned, for example, if the [formula chaining operator](./operators.md) or the [Concurrent function](./function-concurrent.md) are used. In those cases, the app can use the **AllErrors** table, whose records have the same fields as the **FirstError** record, to react to the errors.
 
 ## IsError
 
