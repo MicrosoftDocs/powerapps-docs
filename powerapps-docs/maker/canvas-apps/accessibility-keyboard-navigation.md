@@ -28,17 +28,19 @@ contributors:
 
 When you're nesting controls such as containers and component instances, the user input value for [TabIndex](controls/properties-accessibility.md#tabindex) isn't respected sometimes. **Improved keyboard navigation** experimental setting improves the navigation experience in this situation when **Tab** key is pressed on the keyboard helping focus on the desired container or control precisely and predictably.
 
-This feature also adds support for handling accessibility for keyboard tabs inline with rest of the controls in canvas apps. And addresses manual TabIndex assignments for all controls and components.
+This feature also adds support for handling accessibility for keyboard tabs inline with rest of the controls in canvas apps. And addresses manual TabIndex assignments for all controls.
 
 > [!NOTE]
 > This feature is added as "Experimental" to maintain backward compatibility and maintain existing app functionality.
 
-When this feature is turned on, it also enables the following boolean properties for containers and component in canvas apps:
+When this feature is turned on, it also enables the following boolean properties for controls in canvas apps:
 
 | Property Name | Description |
 | - | - |
 | **Prioritize child controls** | Determines the order of navigation (**Z-order**) on canvas when pressing tab key on the keyboard. <ul> <li> **True** (Default): Pressing the tab key on the keyboard will first progress through all child controls of the current container before moving to the next available control. This option is recommended for similarly nested HTML elements. </li> <li> **False**: Pressing the tab key on the keyboard will progress through all controls only based on Z-order, ignoring parent-child relationship between controls or containers for keyboard navigation. </li> </ul> **Note**: This property isn't applicable to [responsive or autolayout](create-responsive-layout.md) containers. |
-| **Focus on child controls** | Determines the value of [TabIndex](controls/properties-accessibility.md#tabindex) for child controls. <ul> <li> **True** (Default): Pressing the tab key behaves as per TabIndex values defined on each control. </li> <li> **False**: Pressing the tab key doesn't move focus to any child control for the selected container or component. This option sets the TabIndex value to **-1** for all child controls of the current container or component. |
+| **Focus on child controls** | Determines the value of [TabIndex](controls/properties-accessibility.md#tabindex) for child controls. <ul> <li> **True** (Default): Pressing the tab key behaves as per TabIndex values defined on each control. </li> <li> **False**: Pressing the tab key doesn't move focus to any child control for the selected container or control. This option sets the TabIndex value to **-1** for all child controls of the current container or control. |
+
+["Focus on child controls" can be "No focus on child controls" to flip true/false values, if required]
 
 ## Configure improved keyboard navigation in your app
 
@@ -72,7 +74,7 @@ The default order is determined by the relative position of the controls. When f
 
 ### When Prioritize child controls is set to False
 
-In the following example, every container and component have the **Prioritize child controls** property set to "False". All inputs are therefore considered to be on the same level of nesting, so the order is determined purely by their [X/Y position](controls/properties-size-location.md#position) relative to the screen.
+In the following example, each container and component control has the **Prioritize child controls** property set to "False". All inputs are therefore considered to be on the same level of nesting, so the order is determined purely by their [X/Y position](controls/properties-size-location.md#position) relative to the screen.
 
 ![Don't prioritize child controls](media\accessibility-tab-stops\child-control-priority.gif "Don't prioritize child controls")
 
