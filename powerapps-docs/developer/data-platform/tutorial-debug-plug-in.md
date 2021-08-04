@@ -78,7 +78,7 @@ Following the steps provided above results in a new managed solution named Plug-
 
 1. Expand the **Plug-in Assemblies** node and then completely expand the **BasicPlugin.FollowupPlugin** assembly node.
 
-1. Right click the step registration of the plug-in and choose **Start Profiling**.
+1. Right click the step registration (the lowest level node) of the plug-in and choose **Start Profiling**.
 
 ---
 
@@ -114,42 +114,54 @@ In your model-driven (or other) app, create a new account to execute the plug-in
 
     ![Replay plug-in execution.](media/tutorial-debug-plug-in-replay-plug-in-execution.png)
 
-1. In your Visual Studio project, set a break point in your plug-in class.
+2. In your Visual Studio project, set a break point in your plug-in class.
 
     ![Set a break point.](media/tutorial-debug-plug-in-set-break-point.png)
 
-1. In your Visual Studio project, select **Debug** > **Attach to Process…**.
+#### [Plug-in Registration Tool](#tab/prt)
+
+3. In your Visual Studio project, select **Debug** > **Attach to Process…**.
 
     ![Attach to process command.](media/tutorial-debug-plug-in-attach-to-process.png)
 
-1. Select the **PluginRegistration.exe** process and click **Attach**.
+4. Select the **PluginRegistration.exe** process and click **Attach**.
 
     ![Attach to process dialog.](media/tutorial-debug-plug-in-attach-to-process-dialog.png)
 
     > [!NOTE]
     > You should see that the Plug-in Registration tool is now running in debug mode.
 
-1. In the **Replay Plug-in Execution** dialog, click **Start Execution**.
+#### [Power Platform Tools](#tab/pptools)
+
+Continue with step #5
+
+---
+
+5. In the **Replay Plug-in Execution** dialog, click **Start Execution**.
 
     ![Start Execution.](media/tutorial-debug-plug-in-replay-plug-in-execution-debug.png)
 
-1. In your Visual Studio project, you should see that the code is paused at the breakpoint you set earlier. 
+6. In your Visual Studio project, you should see that the code is paused at the breakpoint you set earlier.
 
     ![Breakpoint hit.](media/tutorial-debug-plug-in-breakpoint-hit.png)
 
-1. You can now step through your code to debug.
-
-
-## Repeat
-
-To repeat, in your Visual Studio project select **Debug** > **Reattach** to process and in the **Replay Plug-in Execution** dialog click **Start Execution** again.
+7. You can now step through your code to debug.
 
 ## Stop profiling
 
 1. Close the **Replay Plug-in Execution** dialog
-1. In the Plug-in Registration tool, click **Stop Profiling**.
+
+#### [Plug-in Registration Tool](#tab/prt)
+
+2. In the Plug-in Registration tool, click **Stop Profiling**.
 
     ![Stop profiling.](media/tutorial-debug-plug-in-stop-profiling.png)
+
+#### [Power Platform Tools](#tab/pptools)
+
+2. In the **Power Platform Explorer** view, right-click the step registration node (lowest level node) of the plug-in assembly and choose **Stop Profiling**.
+
+---
 
 ## Next steps
 
@@ -161,13 +173,23 @@ If you will not continue to the next tutorial you should unregister the BasicPlu
 
 ## Run the plug-in profiler from a Command Prompt window
 
- While it is often preferable to run the profiler interactively from the Plug-in Registration tool, the profiler can be executed from a Command Prompt window independent of the tool. This is useful to obtain the plug-in profile log from a customer's [!INCLUDE[pn_dynamics_crm](../../includes/pn-dynamics-crm.md)] apps server to debug a failed plug-in. A developer can then use that log to replay the plug-in's execution in the Plug-in Registration tool and debug the plug-in using[!INCLUDE[pn_Visual_Studio](../../includes/pn-visual-studio.md)].
+#### [Plug-in Registration Tool](#tab/prt)
+
+While it is often preferable to run the profiler interactively from the Plug-in Registration tool, the profiler can be executed from a Command Prompt window independent of the tool. This is useful to obtain the plug-in profile log from a customer's [!INCLUDE[pn_dynamics_crm](../../includes/pn-dynamics-crm.md)] apps server to debug a failed plug-in. A developer can then use that log to replay the plug-in's execution in the Plug-in Registration tool and debug the plug-in using[!INCLUDE[pn_Visual_Studio](../../includes/pn-visual-studio.md)].
 
 ### Procedure: Run the plug-in profiler from a Command Prompt
 
 1. Open a Command Prompt window and set the working directory to the folder where you downloaded the Plug-in Registration tool `PluginRegistration.exe`.
 2. Type this command to see the available run-time parameters: `PluginProfiler.Debugger.exe /?`.  
 3. Review the supported parameter list and re-run the PluginProfiler.Debugger.exe program with the appropriate parameters.
+
+#### [Power Platform Tools](#tab/pptools)
+
+The Plug-in Profiler is not available as a command line tool from Power Platform Tools for Visual Studio.
+
+---
+
+ 
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
