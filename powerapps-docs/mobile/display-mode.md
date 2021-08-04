@@ -28,8 +28,20 @@ The default display mode for Poweer Apps mobile is set to **Light**.
 
 1. To change the display, open Power App mobile and sign in.
 2. From the **Home** screen, select your profile picture.
+
+   > [!div class="mx-imgBorder"]
+   > ![Select your profile picture](media/dark-mode-1.png "Profile picture") 
+
 3. Under **Settings**, select **Appearance**.
+
+   > [!div class="mx-imgBorder"]
+   > ![Select the Appearance setting](media/dark-mode-2.png "Select the Appearance setting") 
+   
 4. Select your display setting: **Light**, **Dark**, or **System default**.
+  
+  > [!div class="mx-imgBorder"]
+  > ![Select a display settting](media/dark-mode-1.png "Select your display setting") 
+
 5. When you're done, select the **X** to close the window. 
 
 
