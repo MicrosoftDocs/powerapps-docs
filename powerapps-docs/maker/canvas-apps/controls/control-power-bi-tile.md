@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 08/03/2021
+ms.date: 08/04/2021
 ms.subservice: canvas-maker
 ms.author: chmoncay
 search.audienceType: 
@@ -28,10 +28,6 @@ Don't have Power BI? [Sign up](/power-bi/service-self-service-signup-for-power-b
 
 Take advantage of your existing data analysis and reporting by displaying your **[Power BI tiles](/power-bi/service-dashboard-tiles)** inside your apps. Specify the tile that you want to show by setting its **Workspace**, **Dashboard**, and **Tile** properties in the **Data** tab of the options panel.
 
-  > [!NOTE]
-  > - Power BI tile control only supports tile visualizations pinned to a dashboard. To embed a report page, pin the page to the dashboard first. Then, you can embed that tile visualization.
-  > - *Querystring parameter filtering* is only supported within pinned visualization tiles. It's not supported for pinned reports.
-
 ## Sharing and security
 
 When you share an app that contains Power BI content, you must share not only the app itself but also the [dashboard](/power-bi/service-how-to-collaborate-distribute-dashboards-reports) where the tile comes from. Otherwise, the Power BI content won't appear even for users who open the app. Apps that contain Power BI content respect the permissions for that content.
@@ -40,7 +36,27 @@ When you share an app that contains Power BI content, you must share not only th
 
 It's not recommended to have more than 3 Power BI tiles loaded at the same time within an app. You can control tile loading and unloading by setting the **LoadPowerBIContent** property.
 
-## Pass a parameter
+## Embedding Options
+
+Embedding is different between versions of the Power BI Api. Due to the new Power BI api authentication scheme your tile may not be accessible on mobile or within other embedded scenarios (Teams or SharePoint). 
+
+### Using **AllowNewAPI** = true
+
+When using **AllowNewAPI** = true, you're able to embed a dashboard, report or tile by taking the Embed URL from Power BI and making it the **TileUrl** value.
+
+### Using **AllowNewAPI** = false
+
+When using **AllowNewAPI** = false, you're able to embed a dashboard tile either by Embed URL and making it the **TileUrl** value or using the graphical interface provided.
+
+## Filtering
+
+Filtering is different between versions of the Power BI Api.  Please see the appropriate sections depending on how you configure the control.
+
+### Using **AllowNewAPI** = true
+
+Please visit the [Power BI service url filters](https://docs.microsoft.com/en-us/power-bi/collaborate-share/service-url-filters) page for detailed information.
+
+### Using **AllowNewAPI** = false
 
 By passing a single parameter from the app, you can filter the results that appear in a Power BI tile. However, only string values and the equals operator are supported, and the filter might not work if the table name or the column name contains spaces.
 
@@ -54,6 +70,11 @@ To that value, append this syntax:
 
 ```
 &$filter=<TableName>/<ColumnName> eq '<Value>'
+```
+
+For example - using a value from a list box: 
+```
+"&$filter=Store/Territory eq '" & ListBox1.Selected.Abbr & "'"
 ```
 
 The parameter will filter a value in the dataset of the report where the tile originates. However, filtering feature has the following limitations:
@@ -92,9 +113,7 @@ You can use computed fields in the Power BI report to convert other value types 
 
 **[OnSelect](properties-core.md)** – Actions to perform when the user taps or clicks a control. By default, the Power BI report that's associated with the tile opens.
 
-**TileUrl** – The URL by which the tile is requested from the Power BI service. You can pass a single parameter into the Power BI tile by appending the parameter to the URL (for example: … & "&$filter=Town/Province eq '" & ListBox1.Selected.Abbr & "'"). You can use only the equals operator in the parameter. 
-  > [!NOTE]
-  > Filtering is only available on pinned visualization tiles.
+**TileUrl** – The URL by which the tile is requested from the Power BI service. To add query string filtering to your url, please see the [filtering](#filtering) section above.
 
 **[Visible](properties-core.md)** – Whether a control appears or is hidden.
 
