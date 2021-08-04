@@ -5,7 +5,7 @@ author: hemantgaur
 ms.service: powerapps
 ms.topic: article
 ms.custom: canvas
-ms.date: 08/03/2021
+ms.date: 08/04/2021
 ms.subservice: canvas-maker
 ms.author: hemantg
 search.audienceType:
@@ -36,6 +36,24 @@ When this feature is turned on, it also enables the following boolean properties
 | - | - |
 | **Prioritize child controls** | Determines the order of navigation (**Z-order**) on canvas when pressing tab key on the keyboard. <ul> <li> **True** (Default): Pressing the tab key on the keyboard will first progress through all child controls of the current container before moving to the next available control. This option is recommended for similarly nested HTML elements. </li> <li> **False**: Pressing the tab key on the keyboard will progress through all controls only based on Z-order, ignoring parent-child relationship between controls or containers. </li> </ul> **Note**: This property is not applicable to [responsive or auto-layout](create-responsive-layout.md) containers. |
 | **Focus on child controls** | Determines the value of [TabIndex](controls/properties-accessibility.md#tabindex) for child controls. <ul> <li> **True** (Default): Pressing the tab key behaves as per TabIndex values defined on each control. </li> <li> **False**: Pressing the tab key doesn't move focus to any child control for the selected container or component. This option sets the TabIndex value to **-1** for all child controls of the current container or component. |
+
+## Configure improved tab stops in your app
+
+Follow these steps to enable this feature in your app, and set the properties mentioned ealier.
+
+1. Sign in to [Power Apps](https://make.poweraps.com).
+
+1. Select **Apps** from the left-pane.
+
+1. Select your app, and then select **Edit**.
+
+1. In Power Apps Studio, select **File** > **Settings** > **Upcoming features** > **Experimental**.
+
+1. Select **Improved tab stops** to turn the feature on. !![Screenshot to follow]!!
+
+1. Close settings.
+
+Now that you've enabled the experimental feature, you'll see two new properties for controls and containers&mdash;**Prioritize child controls**, and **Focus on child controls**. If desired, change the property values as appropriate.
 
 ## Examples
 
