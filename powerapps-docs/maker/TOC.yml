@@ -1409,10 +1409,12 @@
     href: ../mobile/run-powerapps-on-mobile.md
   - name: Use model-driven apps on mobile
     href: ../mobile/use-custom-model-driven-app-on-mobile.md
+  - name: Use relevance search on Power Apps Mobile  
+    href: ../mobile/relevance-search-mobile.md  
+  - name: Set app display to dark or light mode  
+    href: ../mobile/display-mode.md
   - name: Configure mobile offline synchronization 
     href: ../mobile/setup-mobile-offline.md 
-  - name: Use relevance search on Power Apps Mobile  
-    href: ../mobile/relevance-search-mobile.md 
   - name: Work offline on your mobile device 
     href: ../mobile/work-in-offline-mode.md  
   - name: Create push notifications for Power Apps Mobile
