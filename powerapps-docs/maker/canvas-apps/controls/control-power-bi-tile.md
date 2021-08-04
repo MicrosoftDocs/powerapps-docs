@@ -40,7 +40,7 @@ It's not recommended to have more than three Power BI tiles loaded at the same t
 
 Embedding is different between versions of the Power BI API. Because of the new Power BI API authentication scheme, your tile may not be accessible on mobile or within other embedded scenarios (Teams or SharePoint).
 
-You can control the use of API version using the AllowNewAPI value. See [Key properties](#key-properties) for more information.
+You can control the use of API version using the **AllowNewAPI** property. See [Key properties](#key-properties) for more information.
 
 | AllowNewAPI property value | Behavior |
 | - | - |
