@@ -30,7 +30,7 @@ This article shows how to debug your code components using the test harness and 
 While you are implementing the code component logic, using `npm start` or `npm start watch` builds the code component and open the local test harness in a new browser window. This test harness is part of Microsoft Power Platform CLI and hence is the same irrespective of if you plan to use your code component in model-driven apps, canvas apps, or portals.  More information: [Create your first component](implementing-controls-using-typescript.md).
 
 > [!NOTE]
-> Before you can use `npm start` you need to install the required node modules using `npm install`.
+> Before you can use `npm start` you need to check if npm is installed in your machine.
 
 The following image shows what Visual Studio Code will look like when you use the `npm start watch` for the `DataSetGrid` sample:
 
