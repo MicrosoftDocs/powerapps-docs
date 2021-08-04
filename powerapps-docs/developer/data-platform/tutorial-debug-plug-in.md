@@ -102,9 +102,9 @@ In your model-driven (or other) app, create a new account to execute the plug-in
 
 ---
 
-  2. In the **Replay Plug-in Execution** dialog, on the **Setup** tab, click the ![Select profile command.](media/tutorial-debug-plug-in-select-profile-command.png) icon to open the **Select Profile from CRM** dialog.
+    2. In the **Replay Plug-in Execution** dialog, on the **Setup** tab, click the ![Select profile command.](media/tutorial-debug-plug-in-select-profile-command.png) icon to open the **Select Profile from CRM** dialog.
 
-  3. In the **Select Profile from CRM** dialog, select the profile where **Type Name** equals **BasicPlugin.FollowupPlugin** and represents the profile captured when you last triggered the plug-in.
+    3. In the **Select Profile from CRM** dialog, select the profile where **Type Name** equals **BasicPlugin.FollowupPlugin** and represents the profile captured when you last triggered the plug-in.
 
     ![Select Profile from CRM dialog.](media/tutorial-debug-plug-in-select-profile-dialog.png)
 
