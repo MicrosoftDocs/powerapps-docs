@@ -22,16 +22,16 @@ searchScope:
 
 # Set the appearance of your app to dark or light mode
 
-Easily change the display of your app to dark mode, light mode, or set it to the system default. When you choose the system default, the display will match your devices default setting.
+Easily change the display of your app to dark mode, light mode, or set it to the system default on iOS and Android devices. When you choose the **System default**, the display setting will match the default display setting of your mobile device.
 
-  > [!div class="mx-imgBorder"]
-  > ![Demonstration of how relevance search works in a model-driven app running on Power Apps Mobile.](media/powerapps-mobile-rel-search.gif "Demonstration of how relevance search works in a model-driven app running on Power Apps Mobile")
+The default display mode for Poweer Apps mobile is set to **Light**.
 
-## Run a search
+1. To change the display, open Power App mobile and sign in.
+2. From the **Home** screen, select your profile picture.
+3. Under **Settings**, select **Appearance**.
+4. Select your display setting: **Light**, **Dark**, or **System default**.
+5. When you done, select the **X** to close the window. 
 
-View suggested search results inline as you type, minimizing keystrokes and simplifying page navigation.
-
-1. Select the search button. 
 
    > [!div class="mx-imgBorder"]
-   > ![Select the search button.](media/search-on-mobile-1.png "Select the search button") 
+   > ![Change your Power App mobile app display.](media/dark-mode-1.gif "Change dispaly") 
