@@ -43,7 +43,7 @@ Benefits of using the Boards app:
 
 Before using this app:
 
-1.  Install the app by side-loading the manifest for the app into Teams. You can get the manifest from https://aka.ms/TeamsBoards. For more information and help with installing this app, read the documentation available with the app manifest.
+1.  Install the app by side-loading the manifest for the app into Teams. You can get the manifest from <https://aka.ms/TeamsBoards>. For more information and help with installing this app, read the documentation available with the app manifest.
 2.  Set up the app for the first use.
 
 ## Using Boards
