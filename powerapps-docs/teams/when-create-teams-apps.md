@@ -5,7 +5,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 08/05/2021
-author: namarway
+author: namarwah
 ms.author: v-ljoel
 ms.reviewer: tapanm
 contributors:
