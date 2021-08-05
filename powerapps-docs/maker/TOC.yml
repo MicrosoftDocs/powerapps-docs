@@ -2247,6 +2247,8 @@
           href: ../teams/use-teams-integration-object.md
         - name: How to build apps for Teams
           href: ../teams/how-templates-built.md
+        - name: When to build apps in Teams
+          href: ../teams/when-create-teams-apps.md
     - name: Manage your apps
       href: ../teams/manage-your-apps.md
     - name: Set permission and share your app
