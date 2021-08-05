@@ -12,6 +12,7 @@ applies_to:
   - "powerapps"
 author: "sabinn-msft"
 ms.assetid: 
+ms.subservice: dataverse-maker
 ms.author: "matp"
 manager: "kvivek"
 search.audienceType: 
@@ -43,7 +44,7 @@ Follow the steps in the [Create an Azure Storage account](/azure/storage/blobs
 
 Additionally, we recommend that you set replication to **read-access geo-redundant storage (RA-GRS)**. More information: [Read-access geo-redundant storage](/azure/storage/common/storage-redundancy-grs#read-access-geo-redundant-storage).
 
-![Storage account properties](media/storage-account-properties.png "Storage account properties")
+![Storage account properties.](media/storage-account-properties.png "Storage account properties")
 
 > [!NOTE]
 > - The storage account must be created in the same Azure Active Directory (Azure AD) tenant as your Power Apps tenant.
@@ -58,7 +59,7 @@ Additionally, we recommend that you set replication to **read-access geo-redunda
 
 2. Select **Data** > **Azure Synapse Link** from the left sidebar and select **+ New link to data lake** from the top.
 
-    ![Navigate to Power Apps](media/navigate-to-powerapps.png "Navigate to Power Apps")
+    ![Navigate to Power Apps.](media/navigate-to-powerapps.png "Navigate to Power Apps")
 
 3. Select each of the following settings, and then select **Next**:
    - **Subscription**. Select your Azure subscription.
@@ -70,7 +71,7 @@ Additionally, we recommend that you set replication to **read-access geo-redunda
 
 4. Select the tables that you want to export to the data lake, and then select **Save**. Only tables with change tracking enabled can be exported. More information: [Enable change tracking](/dynamics365/customer-engagement/admin/enable-change-tracking-control-data-synchronization).
 
-   ![Select tables for export](media/export-data-lake-select-entity.png "Select tables for export")
+   ![Select tables for export.](media/export-data-lake-select-entity.png "Select tables for export")
 
 Your Dataverse environment is linked to the Azure Data Lake Storage Gen2 account. The file system in the Azure storage account is created with a folder for each table selected to be replicated to the data lake.
 
@@ -89,23 +90,41 @@ After you have set up the Azure Synapse Link, you can manage the tables that are
 - On the Power Apps maker portal **Azure Synapse Link** area, select **Manage tables** on the command bar to add or remove one or more linked tables.
 - On the Power Apps maker portal **Tables** area, select **…** next to a table, and then select the linked data lake where you want to export table data.
 
-   ![Select a table for export](media/select-entity-export.png "Select a table for export")
+   ![Select a table for export.](media/select-entity-export.png "Select a table for export")
 
 To unlink all linked tables, on the Power Apps maker portal **Azure Synapse Link** area, select **Unlink data lake**.
 
 ## View your data in Azure Data Lake Storage Gen2
 
 1. Sign in to [Azure](https://portal.azure.com), select the storage account, and then in the leftmost navigation pane, select **Storage Explorer**.
-2. Expand **File Systems**, and then select Dataverse-*environmentName*-org-*Id*.
+2. Expand **File Systems**, and then select dataverse-*environmentName*-*organizationUniqueName*.
 
 The model.json file, along with its name and version, provides a list of tables that have been exported to the data lake. The model.json file also includes the initial sync status and sync completion time.
 
 A folder that includes snapshot comma-delimited (CSV format) files is displayed for each table exported to the data lake.
-   ![Table data in the data lake](media/entity-data-in-lake.png "Table data in the data lake")
+   ![Table data in the data lake.](media/entity-data-in-lake.png "Table data in the data lake")
+
+### Continuous snapshot updates
+
+Microsoft Dataverse data can continuously change through create, update, and delete transactions. Snapshots provide a read-only copy of data that's updated at regular intervals, in this case every hour. This ensures that at any given point, a data analytics consumer can reliably consume data in the lake.
+
+![Continuous snapshot updates.](media/snapshot-updates.png "Continuous snapshot updates")
+
+When tables are added as part of the initial export, the table data is written to the table.csv files under the corresponding folders in the data lake. This is the T1 interval, where a snapshot read-only file named *table*-T1.csv&mdash;for example, Account-T1.csv or Contacts-T1.csv&mdash;is created. Additionally, the model.json file is updated to point to these snapshot files. Opening model.json, you can view the snapshot details.
+
+Here's an example of an Account.csv partitioned file and snapshot folder in the data lake.
+
+![Accounts table snapshot.](media/export-data-lake-account-snapshots.png "Accounts table snapshot")
+
+Changes in Dataverse are continuously pushed to the corresponding CSV files by using the trickle feed engine. This is the T2 interval, where another snapshot is taken. *table*-T2.csv&mdash;for example, Accounts-T2.csv or Contacts-T2.csv (assuming there are changes for the table) &mdash;and model.json are updated to the new snapshot files. Any new person who views snapshot data from T2 onward is directed to the newer snapshot files. This way, the original snapshot viewer can continue to work on the older snapshot T1 files while newer viewers can read the latest updates. This is useful in scenarios that have longer-running downstream processes.
+
+Here's an example of the model.json file, which always points to the latest time-stamped account snapshot file.
+
+![Sample snapshot model.json file.](media/sample-snapshot-json.png "Sample snapshot model.json file")
 
 ### What's next?
 After successfully using the Azure Synapse Link for Dataverse service, discover how you can analyze and consume your data with **Discover Hub**. To access **Discover Hub**, go to **Power Apps** > **Azure Synapse Link**. Select your linked service and then select the **Discover Hub** tab. Here you can find recommended tools and curated documentation to help you get the most value out of your data.
-![Discover Hub](media/discover-hub.png "Discover Hub")
+![Discover Hub.](media/discover-hub.png "Discover Hub")
 
 ### See also
 

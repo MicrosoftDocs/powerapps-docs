@@ -75,6 +75,8 @@
     href: clientapi/debug-JavaScript-code.md
   - name: Troubleshoot form issues in Unified Interface
     href: troubleshoot-forms.md
+  - name: Navigating to and from a custom page
+    href: clientapi/navigate-to-custom-page-examples.md
   - name: Client API Reference
     href: clientapi/reference.md
     items:

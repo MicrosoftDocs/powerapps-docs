@@ -7,6 +7,7 @@ ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 04/28/2021
+ms.subservice: mobile
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
@@ -21,7 +22,9 @@ search.app:
 
 This troubleshooting article helps fix common issues for the [Power Apps mobile app](../mobile/run-powerapps-on-mobile.md).
 
-If you don't find the answer to your issue, then email us at [pamobsup@microsoft.com](mailto:pamobsup@microsoft.com?subject=Power%20Mobile%20issues) and include your device make and model, session ID, and provide the exact error message that you get.
+
+> [!NOTE]
+> If you are having an issue with Power Apps for iOS or Android and you don’t find a solution on this page, please send a description of your issue with a screenshot and session ID to [pamobsup@microsoft.com](mailto:pamobsup@microsoft.com?subject=Power%20Mobile%20issues). Comments on this page are not received by the support team.”
 
 
 ## Unable to sign in on an Android device using Authenticator or Company Portal

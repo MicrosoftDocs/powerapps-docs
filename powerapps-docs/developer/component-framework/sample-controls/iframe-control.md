@@ -16,7 +16,7 @@ This sample describes how to bind a code component to different columns on the f
 [!INCLUDE[cc-terminology](../../data-platform/includes/cc-terminology.md)]
 
 > [!div class="mx-imgBorder"]
-> ![IFRAME component](../media/iframe-control.png "IFRAME component")
+> ![IFRAME component.](../media/iframe-control.png "IFRAME component")
 
 ## Available for 
 

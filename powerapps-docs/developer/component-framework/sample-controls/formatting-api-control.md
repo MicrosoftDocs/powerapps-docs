@@ -20,7 +20,7 @@ This sample component explores the various methods available as part of the Powe
 [!INCLUDE[cc-terminology](../../data-platform/includes/cc-terminology.md)]
 
 > [!div class="mx-imgBorder"]
-> ![Formatting API component](../media/formatting-api.png "Formatting API component")
+> ![Formatting API component.](../media/formatting-api.png "Formatting API component")
 
 ## Available for 
 

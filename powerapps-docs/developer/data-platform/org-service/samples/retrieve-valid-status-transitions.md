@@ -19,7 +19,7 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
 
-This sample shows how to retrieve valid state transitions regardless of whether custom state transitions have been defined for the entity. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/RetrieveValidTransitions).
+This sample shows how to retrieve valid state transitions regardless of whether custom state transitions have been defined for the table. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/RetrieveValidTransitions).
  
 ## How to run this sample
 
@@ -28,7 +28,7 @@ This sample shows how to retrieve valid state transitions regardless of whether 
 
 ## What this sample does
 
-The `GetValidStatusOptions` method is intended to be used in a scenario where it contains data that returns valid status option transitions regardless of whether state transitions are enabled for the entity.
+The `GetValidStatusOptions` method is intended to be used in a scenario where it contains data that returns valid status option transitions regardless of whether state transitions are enabled for the table.
 ## How this sample works
 
 In order to simulate the scenario described in [What this sample does](#what-this-sample-does), the sample will do the following:
@@ -36,11 +36,11 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 ### Setup
 
 1. Checks for the current version of the org.
-1. The `MetadataFilterExpression` method checks for the entity metadata.
+1. The `MetadataFilterExpression` method checks for table definitions.
 
 ### Demonstrate
 
-1. The `MetadataFilterExpression` method retrieves the status options for the `Incident` entity.
+1. The `MetadataFilterExpression` method retrieves the status options for the `Incident` table.
 1. The `RetrieveMetadataChangeRequest` method retrieves the metadata.
 1. The `GetValidStatusOptions` method gets the valid status transitions for each status option.
 
