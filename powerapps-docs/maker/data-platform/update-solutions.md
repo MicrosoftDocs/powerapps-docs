@@ -2,7 +2,7 @@
 title: "Update a solution | MicrosoftDocs"
 description: "Learn how to update or upgrade a solution in Power Apps"
 ms.custom: ""
-ms.date: 09/14/2020
+ms.date: 08/05/2021
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -27,16 +27,17 @@ search.app:
 # Upgrade or update a solution  
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-There are times when you need to update an existing managed solution. To update the solution, follow these steps: 
+There are times when you need to update an existing managed solution. To update the solution, follow these steps:
 
-1.	Open the unmanaged solution in your development environment and create new or add and remove the existing components that you want. 
-2.	Increment the version number when you export the solution as a managed solution. More information: [Understanding version numbers for updates](#understanding-version-numbers-for-updates) 
+1. Open the unmanaged solution in your development environment and create new or add and remove the existing components that you want. 
+2. Increment the version number when you export the solution as a managed solution. More information: [Understanding version numbers for updates](#understanding-version-numbers-for-updates) 
 
     > [!div class="mx-imgBorder"] 
     > ![Update solution version.](media/update-solution-version.png)
 3. [Apply the upgrade or update in the target environment](#apply-the-upgrade-or-update-in-the-target-environment)
 
 ## Apply the upgrade or update in the target environment
+
 The procedure to import the updated solution is similar to installing a new managed solution, except you will get some different options. If you are updating a solution you got from someone else, you should get guidance from the solution publisher about which options you should choose.  
 
 1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select the target environment you want, and then select **Solutions** from the left navigation.  
@@ -48,18 +49,18 @@ The procedure to import the updated solution is similar to installing a new mana
 4. Select **Next**.  
 
 5. This page displays a yellow bar indicating **This solution package contains an update for a solution that is already installed**. To upgrade the solution, select **Next**. To view additional options, expand **Advanced settings**, and then select from the following solution action options:  
-   - **Upgrade (recommended)**
+   - **Upgrade**
         This is the default option and upgrades your solution to the latest version and rolls up all previous patches in one step.  Any components associated to the previous solution version that are not in the newer solution version will be deleted. This is the recommended option as it will ensure that your resulting configuration state is consistent with the importing solution including removal of components that are no longer part of the solution.
         
    - **Stage for Upgrade**
         This option upgrades your solution to the higher version, but defers the deletion of the previous version and any related patches until you apply a solution upgrade later.  This option should only be selected if you want to have both the old and new solutions installed in the system concurrently so that you can do some data migration before you complete the solution upgrade. Applying the upgrade will delete the old solution and any components that are not included in the new solution.
         
-   - **Update (not recommended)**
+   - **Update**
         This option replaces your solution with this version.  Components that are not in the newer solution won't be deleted and will remain in the system.  This option is not recommended as your destination environment will differ in configuration from your source environment and could cause issues that are difficult to reproduce and diagnose.
         
 8. Decide whether to enable the following option for post import actions:
-   - **Enable any SDK message processing steps included in the solution**  
-        Selecting this option will enable plugins and workflows that are included in the solution.
+   - **Enable plug-in steps and flows included in the solution**  
+        Selecting this option will enable plug-ins and Power Automate flows that are included in the solution.
         
 9. Select **Import**.  
 
