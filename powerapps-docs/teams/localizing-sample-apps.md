@@ -1,5 +1,5 @@
 ---
-title: How to localize sample apps
+title: Localize sample apps
 description: Learn how to add extra localizations to the sample for Microsoft Teams.
 ms.service: powerapps
 ms.topic: conceptual
@@ -14,7 +14,7 @@ contributors:
   - tapanm-msft
 ---
 
-# How to localize sample apps
+# Localize sample apps
 
 The sample apps for Microsoft Teams have been localized to support eight different languages so that they can be used by people with different languages. Depending on the user’s language, you can see the text in an app in the appropriate language, if that language has been included in the app localization.
 

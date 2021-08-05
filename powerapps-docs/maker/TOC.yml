@@ -2395,8 +2395,12 @@
                   href: ../teams/profile-plus-org-specific.md
                 - name: Customize Profile+ sample app
                   href: ../teams/customize-profile-plus.md
-        - name: Customize sample apps
-          href: ../teams/customize-sample-apps.md
+        - name: Do more with sample apps
+          items:
+            - name: Customize sample apps
+              href: ../teams/customize-sample-apps.md
+            - name: Localize sample apps 
+              href: ../teams/localizing-sample-apps.md
         - name: FAQs for sample apps
           href: ../teams/sample-apps-faqs.md
     - name: Known issues and limitations
