@@ -37,7 +37,7 @@ Before you begin using relevance search, the new experience needs to be enabled 
 
  [!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
  
- If you're on [early access](/power-platform/admin/opt-in-early-access-updates) you can use the barcode scanner to look up rows. The sanner automatically detects a barcode, a QR code, or a data-matrix code.
+ If you're on [early access](/power-platform/admin/opt-in-early-access-updates), you can use the barcode scanner to look up rows. The scanner automatically detects a barcode, a QR code, or a data-matrix code.
  
  1. To use the barcode scanner, select the search button.
  2. Select the barcode scanner button and then scan your item.
