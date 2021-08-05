@@ -93,7 +93,7 @@ Commands to work with environment lifecycle features.
 |restore|Restores an environment from a given backup. It has the following parameters: <ul><li>*source-url*: URL of the source environment to be restored from (alias: -s). </li><li>*target-url*: URL of the target environment to be restored to (alias: -t). </li><li>*selected-backup*: DateTime of the backup in `mm/dd/yyyy hh:mm` format or latest (alias: -sb).</li><li>*name*: Optional name of the restored environment (alias: -n).</li></ul>|
 |copy|Copies a source environment to a destination environment. It has the following parameters: <ul><li>*source-url*: URL of the source environment to be copied from (alias: -su).</li><li>*target-url*: URL of the target environment to be copied to (alias: -tu).</li><li>*source-environment-id*: ID of the source environment to be copied from (alias: -si).</li><li>*target-environment-id*: ID of the target environment to be copied to (alias: -ti). </li><li>*name*: Name to be used for the target environment (alias: -n).</li><li>*type*: Type of copy. Available values are: None, MinimalCopy, Fullcopy  (alias: -t).</li></ul>|
 
-### Canvas
+### Canvas (Preview)
 
 Commands for working with canvas app source files. Edit, manage, and collaborate on your app outside of Power Apps Studio with tools such as VS Code and GitHub.
 
