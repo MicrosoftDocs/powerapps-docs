@@ -1,40 +1,44 @@
 ---
-title: Localization of Power Apps template app for Microsoft Teams
-description: Learn how to add extra localizations to the template Power Apps for Microsoft Teams.
+title: How to localize sample apps
+description: Learn how to add extra localizations to the sample for Microsoft Teams.
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/16/2021
+ms.date: 08/05/2021
 author: joel-lindstrom
 ms.author: v-ljoel
 ms.reviewer: tapanm
 contributors:
+  - joel-lindstrom
   - navjotm
+  - tapanm-msft
 ---
 
-# Localization of Power Apps template app for Microsoft Teams
+# How to localize sample apps
 
-The Power App template apps for Microsoft Teams have been localized to support eight different languages so that they can be used by people with different languages. Depending on the user’s language, you can see the text in an app in the appropriate language, if that language has been included in the app localization.
+The sample apps for Microsoft Teams have been localized to support eight different languages so that they can be used by people with different languages. Depending on the user’s language, you can see the text in an app in the appropriate language, if that language has been included in the app localization.
 
-Say, for example, that you use the Russian language. Russian is not a language included in the standard localization; however, you can still use the app in Russian, if you add that language and localize the app labels.
+For example, consider that you use the Russian language. Russian isn't a language included in the standard localization; however, you can still use the app in Russian&mdash;if you add that language and localize the app labels.
 
-This topic covers the approach used for localization of the Power Apps templates for Microsoft Teams, and how to extend it to add support for another language (such as Russian). In this example we will use the Milestones app (aka.ms/TeamsMilestones), but this same approach is used consistently across all of the Teams template Power Apps, and you can follow the same approach for localization of your own canvas apps.
+This article covers the approach used for localization of the sample apps for Teams, and how to extend it to add support for another language (such as Russian). In this example, we'll use the [Milestones app](milestones.md); but this same approach is used consistently across all of the Teams template Power Apps, and you can follow the same approach for localization of your own canvas apps.
 
 ## Prerequisites
 
-To complete this lesson, we would need the ability to create Power Apps within Microsoft Teams, which is available as part of select Microsoft 365 subscriptions.
+To complete this lesson, we'd need the ability to create Power Apps within Teams, which is available as part of select Microsoft 365 subscriptions.
 
 ## Understanding localization in Power Apps
 
-In canvas Power Apps, text labels and other visual text components can be localized by loading a static Excel data source to your app containing the localized value for each text string in each language. For more information about this process, see [Language function - Power Apps \| MicrosoftDocs](https://docs.microsoft.com/powerapps/maker/canvas-apps/functions/function-language).
+In canvas apps, text labels and other visual text components can be localized by loading a static Excel data source to your app containing the localized value for each text string in each language. For more information about this process, see [Language function](maker/canvas-apps/functions/function-language.md).
 
-For example, Milestones app contains an Excel data source called StaticLocalizationsjon with three columns: OOBTextID, LanguageTag, and LocalizedText. 
+For example, Milestones app contains an Excel data source called **StaticLocalizationsjon** with three columns&mdash;"OOBTextID", "LanguageTag", and "LocalizedText".
 
 -   **OOBTextID** is the identifier of the text that is to be localized.
 
--   **LanguageTag** is the identifier of the language in which the text is to be localized – Language tag is a standard abbreviated text defining a language and the country its being used in (E.g., en-US = English-United States etc).
+-   **LanguageTag** is the identifier of the language in which the text is to be localized. Language tag is a standard abbreviated text defining a language and the country its being used in (for example, "en-US" means "English-United States").
 
--   **LocalizedText** is the text in the appropriate language that needs to be displayed
+-   **LocalizedText** is the text in the appropriate language that needs to be displayed.
+
+Here's an example with localized text for each text ID.
 
 | **OOBTextID**                         | **LanguageTag** | **LocalizedText**                     |
 |---------------------------------------|-----------------|---------------------------------------|
@@ -63,259 +67,157 @@ For example, Milestones app contains an Excel data source called StaticLocalizat
 | lblLoadingText\_BuiltWith\_\_locText  | nl-NL           | Gebouwd met Microsoft Power Platform  |
 | lblLoadingText\_BuiltWith\_\_locText  | pt-BR           | Criado com o Microsoft Power Platform |
 
-*NOTE\*\*: The table above is the master file that contains localized text for ALL the screens in the app. But it has been filtered to show only the rows we talked about above*
+> [!NOTE]
+> The above table is from the master file that contains localized text for all the screens in the app. However, it's been filtered to show only the rows relevant to earlier discussions.
 
-## Tip: How to use Excel as a static data source in Power Apps
+## How to use Excel as a static data source in your app
 
-Static data is data loaded into a Power App from Excel. This data is not editable in the app. If you want to add a static data source to your Power App, perform the following steps
+Static data is data loaded into Power Apps from Excel. This data isn't editable in the app. If you want to add a static data source to your app, perform the following steps.
 
-1.  In Microsoft Teams, right mouse click on the Power Apps icon and pop out the app.
+1. In Teams, right-click on **Power Apps**, and pop out the app.
 
-2.  Select the **Build** tab.
+1. Select the **Build** tab.
 
-3.  Open the desired app—in our example, we will use Milestones.
+1. Open the desired app to edit in Studio. In this example, we'll use **Milestones** app.
 
-4.  Open the app editor and select the Data tab.
+1. Select the **Data** tab.
 
-5.  Then select the **Add data** dropdown arrow.
-![Add data connection](media/localizing-sample-apps/add-data.png "Add data connection")
+1. Select **Add data**.
 
-6.  Then select **Connectors**.
+    ![Add data connection](media/localizing-sample-apps/add-data.png "Add data connection")
 
-7.  Select **See all connectors**.
+1. Select **Connectors**.
 
+1. Select **See all connectors**.
 
-![Display all connectors](media/localizing-sample-apps/see-all-connectors.png "Display all connectors")
+    ![Display all connectors](media/localizing-sample-apps/see-all-connectors.png "Display all connectors")
 
-8.  Select Import from Excel option – the browse file dialog box opens.
+1. Select **Import from Excel**.
 
-9.  Select the **LocalizationMilestones_AllLanguages** file and select **Open**.
+1. Select the **LocalizationMilestones_AllLanguages** file, and select **Open**.
 
-10.  Then on the right of the screen it asks you to choose a table – select the table staticLocalizations and sellect **Connect**.
+1. On the right of the screen, you're asked to choose a table. Select the table **staticLocalizations**, and select **Connect**. The table gets added as a data source and can be used in the app.
 
-11.  The table gets added as a data source and can be used in the app:
+    ![Statis localization connection](media/localizing-sample-apps/static-localization.png "Static localization connection")
 
-![Statis localization connection](media/localizing-sample-apps/static-localization.png "Static localization connection")
+## Adding a new language to your app
 
- 
+Now that you understand how localization is handled in Power Apps, if you want to add an additional language to the app, you don’t have to update every text control in the app. The text formulas are built to dynamically display the appropriate localized copy of text strings based on the user’s language.
 
-## Adding a new language to a Power Apps template app
+To add Russian, you would first add Russian translation to the spreadsheet for each **OOBTextID**. In this example, we'll show how we can add localized text for the text on the first page of the app.
 
-Now that you understand how localization is handled in Power Apps, if you want to add an additional language to the app, you don’t have to update every text control in the app—the text formulas are built to dynamically display the appropriate localized copy of text strings based on the user’s language.
+1. Open **LocalizationMilestoes_AllLanguages.xlsx** file.
 
-To add Russian, you would first add Russian translation to the spreadsheet for each OOBTextID.
+1. Add the following rows to the Excel:
 
-In our example, we will show how we can add localized text for the text on the first page of the app.
+    | OOBTextID                             | LanguageTag | LocalizedText                                 |
+    |---------------------------------------|-------------|-----------------------------------------------|
+    | lblLoadingText\_AppName\_\_locText    | ru-RU       | Вехи                                          |
+    | lblLoadingText\_BuiltWith\_\_locText  | ru-RU       | Создано на платформе Microsoft Power Platform |
+    | lblLoadingText\_AppLoading\_\_locText | ru-RU       | Готовимся ...                                 |
 
-1.  Open the **LocalizationMilestoes_AllLanguages.xlsx**.
+1. To add Russian text for all pages, we'd have to add rows for all the OOBTextIDs as they exist for any other language, then add **ru-RU** as the Language tag. and then add the Russian translation for each of those OOBTextIDs.
 
-2.  Add the following rows to the Excel:
+1. Save Excel file.
 
-| OOBTextID                             | LanguageTag | LocalizedText                                 |
-|---------------------------------------|-------------|-----------------------------------------------|
-| lblLoadingText\_AppName\_\_locText    | ru-RU       | Вехи                                          |
-| lblLoadingText\_BuiltWith\_\_locText  | ru-RU       | Создано на платформе Microsoft Power Platform |
-| lblLoadingText\_AppLoading\_\_locText | ru-RU       | Готовимся ...                                 |
+    > [!NOTE]
+    > Since the Excel file already exists as a data source in the data sources list for the app, we'll have to remove the excel from the list of data sources and then readd it as shown above.
 
-1.  To add Russian text for all pages, we would have to add rows for all the OOBTextIDs as they exist for any other language, then add **ru-RU** as the Language tag and then add the Russian translation for each of those OOBTextIDs.
-    
-2.  Save the Excel.
+1. Update the app OnStart function **gblUserLanguage** to include the language that you added to the Excel file. In the example below we've added Russian:
 
-> NOTE 
-> Since the Excel already exists as a data source in the data sources list for the app, we will have to remove the excel from the list of data sources and then readd it as shown above
-
-3.  Update the app OnStart gblUserLanguage to include the language that you
-    added to the Excel file. In the example below we have added Russian:
-
-    ```
-    
+    ```powerapps-dot
     //user language
-    
-    Set(
-    
-    gblUserLanguage,
-    
-    Switch(
-    
-    Left(
-    
-    Language(),
-    
-    2
-    
-    ),
-    
-    "de",
-    
-    "de-DE",
-    
-    "en",
-    
-    "en-US",
-    
-    "es",
-    
-    "es-ES",
-    
-    "fr",
-    
-    "fr-FR",
-    
-    "it",
-    
-    "it-IT",
-    
-    "ja",
-    
-    "ja-JP",
-    
-    "nl",
-    
-    "nl-NL",
-    
-    "pt",
-    
-    "pt-BR",
-    
-    “ru-RU”,
-    
+    Set(gblUserLanguage,Switch(Left(Language(),2),"de","de-DE","en","en-US","es","es-ES","fr","fr-FR","it","it-IT","ja","ja-JP","nl","nl-NL",
+    "pt","pt-BR",“ru-RU”,
     //default
-    
-    "en-US"
-    
-    )
-    
-    );
-    
+    "en-US"));
     //build localization collection, with user's language
-    
-    ClearCollect(
-    
-    colLocalization,
-    
-    Filter(
-    
-    staticLocalizations,
-    
-    LanguageTag = gblUserLanguage
-    
-    )
-    
-    );
-    
-    Collect(
-    
-    colLocalization,
-    
-    Filter(
-    
-    staticLocalizationsNewMessages,
-    
-    LanguageTag = gblUserLanguage
-    
-    )
-    
-    );
-    
+    ClearCollect(colLocalization,Filter(staticLocalizations,LanguageTag = gblUserLanguage));Collect(colLocalization,Filter(staticLocalizationsNewMessages,LanguageTag = gblUserLanguage));
     ```
-    
-    
-    
-4. Save and publish the app.
 
-Since the formulas dynamically retrieve the localized content, there is no need to update the formulas to reflect the newly added language.
+1. Save and publish the app.
+
+Since the formulas dynamically retrieve the localized content, there's no need to update the formulas to reflect the newly added language.
 
 ## Adding and localizing a new label
 
-As an extension to the OOB Milestones app, we will add a new label and learn how to localize it.
-
+As an extension to the default Milestones app, we'll add a new label and learn how to localize it.
 Let us add a label to the Loading screen:
 
-2.  Select the + sign below the Tree view button and select label to insert a label.
+1. Select **Insert**, and select label control.
 
-![Insert a label](media/localizing-sample-apps/insert-label.png "Insert a label").
+    ![Insert a label](media/localizing-sample-apps/insert-label.png "Insert a label").
 
-3.  Update the Text and properties of the label
+1. Update the Text and properties of the label.
 
-![Welcome to app](media/localizing-sample-apps/welcome-to-the-app.png "Welcome to app")
+    ![Welcome to app](media/localizing-sample-apps/welcome-to-the-app.png "Welcome to app")
 
-For now, we will set the text to “Welcome to the app” until it is ready for localization.
+    For now, we'll set the text to “Welcome to the app” until it's ready for localization.
 
-4.  Open the excel to add rows for this text:
+1. Open the Excel file to add rows for this text.
 
-5. Create eight rows in the Excel with OOBTextID value lblLoadingText_Welcome_locText and LanguageTag for the 8 rows:
+1. Create eight rows in the Excel file with **OOBTextID** value **lblLoadingText_Welcome_locText**, and **LanguageTag** for the 8 rows:
 
-| en-US |
-|-------|
-| de-DE |
-| es-ES |
-| fr-FR |
-| it-IT |
-| ja-JP |
-| nl-NL |
-| pt-BR |
+    | en-US |
+    |-------|
+    | de-DE |
+    | es-ES |
+    | fr-FR |
+    | it-IT |
+    | ja-JP |
+    | nl-NL |
+    | pt-BR |
 
-6. Now for the third column – LocalizedText, translate the text “Welcome to the app” in the 8 different languages *(***en-US** *= English,* **de-DE** *>   German,* **es-ES** *= Spanish,* **fr-FR** *= French,* **it-IT** *= Italian,* **ja-JP** *= Japanese,* **nl-NL** *= Dutch,* **pt-BR** *= Portuguese)*
-1.  Update the spreadsheet with all the translated text as shown below:
+1. For the third column&mdash;**LocalizedText**, translate the text “Welcome to the app” in the 8 different languages:
+
+    - en-US (US English)
+    - de-DE (German)
+    - es-ES (Spanish)
+    - fr-FR (French)
+    - it-IT (Italian)
+    - ja-JP (Japanese)
+    - nl-NL (Dutch)
+    - pt-BR (Portuguese)
+
+1. Update the spreadsheet with all the translated text as shown below.
 
     ![Component localization file](media/localizing-sample-apps/localization-file.png "Component localization file")
-    
-2.  Save the spreadsheet.
 
-3.  Go back to the app editor in Microsoft Teams.
+1. Save the spreadsheet.
 
-4. We need to refresh the excel data source since we updated it so select the Data icon then select the three dots next to the staticLocalizations Excel spreadsheet and hit **Remove**.
+1. Go back to the app editor in Teams.
 
-![Remove staticLocalizations](media/localizing-sample-apps/static-localization-remove.png "Display all connectors")
+1. To refresh the Excel data source (since we updated it), select **Data** > **...** (ellipsis), and then select **Remove** next to the **staticLocalizations** Excel spreadsheet.
 
-5.  Removing the table will cause some errors in the app but only for a minute since we will re-add the updated excel in our next step
+    ![Remove staticLocalizations](media/localizing-sample-apps/static-localization-remove.png "Display all connectors")
 
-6.  Readd the spreadsheet as a connector and select **staticLocalizations** table as the data source (make sure to select the correct excel file that was updated).
+    Removing the table will cause some errors in the app. However, we'll readd the updated Excel file in the next steps.
 
-7.  Select the label with the text “Welcome to the app”
+1. Readd the spreadsheet as a connector, and select **staticLocalizations** table as the data source (make sure to select the correct excel file that was updated).
 
-8. Open the Text property of the label and paste the following formula:
+1. Select the label with the text “Welcome to the app”.
 
-   ```
-   With(
-   
-   {
-   
-   varDefault: "Welcome to the app";
-   
-   varOOBTextId: "lblLoadingText_Welcome_locText"
-   
-   };
-   
-   With(
-   
-   {
-   
-   varLocalizedText: LookUp(
-   
-   colLocalization;
-   
-   OOBTextID = varOOBTextId;
-   
-   LocalizedText
-   
-   )
-   
-   };
-   
-   Coalesce(
-   
-   varLocalizedText;
-   
-   varDefault
-   
-   )
-   
-   )
-   
-   )
+1. Open the **Text** property of the label and paste the following formula:
+
+   ```powerapps-dot
+   With({varDefault: "Welcome to the app";varOOBTextId: "lblLoadingText_Welcome_locText"};With({varLocalizedText: LookUp(colLocalization;OOBTextID = varOOBTextId;LocalizedText)};Coalesce(varLocalizedText;varDefault)))
    ```
 
-9. To test the localization of the label we created, lets change the language of our user in Microsoft Teams to one of the languages that is in our localization excel spreadsheet. You can change your Microsoft Teams language by selecting your photo in the upper right corner and selecting settings.
+1. To test the localization of the label we created, change the language of our user in Teams to one of the languages that is in our localization Excel spreadsheet. You can change your Teams language by selecting your photo in the upper-right corner, and then selecting settings.
 
-10. Select Milestones to open the app and the **Welcome to the app** label has been localized to the language that was selected in the previous step. You can verify the same by going to the specific Team channel where the app was installed and playing the published app.
+1. Select Milestones to open the app and the **Welcome to the app** label has been localized to the language that was selected in the previous step. You can verify the same by going to the specific Team channel where the app was installed and playing the published app.
+
+### See also
+
+- [Boards (Preview) sample app](boards.md)
+- [Bulletins sample app](bulletins.md)
+- [Employee ideas sample app](employee-ideas.md)  
+- [Inspection sample apps](inspection.md)  
+- [Issue reporting sample apps](issue-reporting.md)
+- [Milestones sample app](milestones.md)
+- [Perspectives (Preview) sample app](perspectives.md)
+- [Profile+ (Preview) sample app](profile-app.md)
+- [Customize sample apps](customize-sample-apps.md)
+- [Sample apps FAQs](sample-apps-faqs.md)
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]
