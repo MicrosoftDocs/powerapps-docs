@@ -75,6 +75,8 @@ This table lists some of the common commands used in the CLI.
 |[solution](#solution)|Commands for working with [Dataverse solution projects](../../maker/data-platform/solutions-overview.md).|
 |[telemetry](#telemetry)|Manages the telemetry settings.|
 
+> [!TIP]
+> For the complete list of supported commands, run the `pac` command or `pac` \<subcommand> - for example: `pac solution`.
 
 ### Admin
 
