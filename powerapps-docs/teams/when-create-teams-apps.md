@@ -1,5 +1,5 @@
 ---
-title: When to create Power Apps in Microsoft Teams
+title: When to build apps in Microsoft Teams
 description: Learn when you should use build Power Apps in Microsoft Teams for collaborative apps.
 ms.service: powerapps
 ms.topic: conceptual
@@ -14,7 +14,7 @@ contributors:
   - tapanm-msft
 ---
 
-# When to create Power Apps in Microsoft Teams
+# When to build apps in Microsoft Teams
 
 Microsoft Teams is built with the purpose of enabling collaboration. With millions of people using Teams every day, Teams has become the digital platform for work and learning, which makes it a good place for collaborative apps.
 
