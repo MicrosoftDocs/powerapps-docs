@@ -1,10 +1,10 @@
 ---
-title: How to build apps your own apps like the sample apps built for Microsoft Teams
+title: How to build apps for Microsoft Teams
 description: Learn the process in which Microsoft built the template apps for Microsoft Teams, and how you can use similar techniques when designing and building your own apps.
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/02/2021
+ms.date: 08/05/2021
 author: joel-lindstrom
 ms.author: v-ljoel
 ms.reviewer: tapanm
@@ -14,12 +14,12 @@ contributors:
   - tapanm-msft
 ---
 
-# How to build apps your own apps like the sample apps built for Microsoft Teams
+# How to build apps for Microsoft Teams
 
-The template Power Apps for Microsoft Teams are designed, and built with the following goals:
+The [sample apps](use-sample-apps-from-teams-store.md) for Microsoft Teams are designed, and built with the following goals:
 
 - Provide fully functional apps for Teams that have relevance across multiple industries.
-- Provide examples of deeper integration of line of business data from Power Apps into collaborative elements of Teams to drive better more productive workloads.
+- Provide examples of deeper integration of line-of-business data from Power Apps into collaborative elements of Teams to drive better more productive workloads.
 - Provide examples of using good UX design with Teams and Power Apps.
 - Provide extensible apps which users can modify and extend to suit their business requirements.
 
@@ -36,7 +36,7 @@ Look to see if there are any existing solutions for the problem. Talk to the sta
 
 Identify “personas” or roles of users who will use your application. At this point, you want to focus on defining the user’s key problems&mdash;what are their unmet needs? How important is it for them to solve this problem?
 
-Many teams tend to dive into solutioning before they have fully understood the user’s problem. One way to avoid this trap is to use the “Jobs to be done” framework. This framework helps us identify and understand the needs and goals of the users that are the original drivers of their actions or decisions. This artifact documents each of the persona’s core objective and jobs they want to accomplish in their language.
+Many teams tend to dive into solutioning before they've fully understood the user’s problem. One way to avoid this trap is to use the “Jobs to be done” framework. This framework helps us identify and understand the needs and goals of the users that are the original drivers of their actions or decisions. This artifact documents each of the persona’s core objective and jobs they want to accomplish in their language.
 
 ![Jobs to be done framework](media/how-templates-are-built/personas.png "Jobs To Be Done framework")
 
@@ -44,7 +44,7 @@ The above example shows personas and jobs to be done for Inspection sample app f
 
 ## Design
 
-Once you have identified and validated your idea, personas, and their jobs to be done, now is time to design your app. It can be tempting to jump into development at this point, but a bit more design planning will serve you well.
+Once you've identified and validated your idea, personas, and their jobs to be done, now is time to design your app. It can be tempting to jump into development at this point, but a bit more design planning will serve you well.
 
 Having a plan will ensure a consistent user experience while enabling you to make the best design decisions for the app.
 
@@ -56,7 +56,7 @@ Playing with the flow can help you better understand the various pros and cons o
 
 This is also a good check point to get the feedback from end users. Share these high-level flows with your app users and get their feedback on the end to end experience. The iteration at this stage is lower risk as you can quickly make changes and compare options.  
 
-Once the base layout is in, now you can have some fun. Do you want a clean and crisp app? Or something more playful. Think about the state of mind of the user and what would work best for them. Wireframing the app screens also helps you to plan out what data connectors will be needed, as well as giving you an artifact you can review with the stakeholders to get feedback prior to building the app to verify that the proposed design addresses the requirements.  
+Once the base layout is in, now you can have some fun. Do you want a clean and crisp app? Or something more playful. Think about the state of mind of the user and what would work best for them. Wireframing the app screens also helps you to plan out what data connectors will be needed, and giving you an artifact you can review with the stakeholders to get feedback before building the app to verify that the proposed design addresses the requirements.  
 
 ![Wireframes](media/how-templates-are-built/storyboards.png "Wireframes")
 
@@ -64,11 +64,11 @@ Once the base layout is in, now you can have some fun. Do you want a clean and c
 
 ### Design data model
 
-Along with the user experience, designing the data model of the app is also very important. While Power Apps can connect to data virtually anywhere, you want to think through the data that is needed in the app and how it will be used. In Visio, or some other data diagraming tool, plan out the tables, fields and relationships that will be needed to support your desired app functionality. Here's an example of the data model for Milestones app tables, and their relationships.
+Along with the user experience, designing the data model of the app is also important. While Power Apps can connect to data from anywhere, you want to think through the data that is needed in the app and how it will be used. In Visio, or some other data diagraming tool, plan out the tables, fields, and relationships that will be needed to support your desired app functionality. Here's an example of the data model for Milestones app tables, and their relationships.
 
 ![Milestones data model](media/milestones-architecture/data-model.png "Milestones data model")
 
-Think through how users will need to interact with the data as you plan what field data types to use. For example, drop-downs for Status, Priority, and Category are updatable inside of Milestones&mdash;that's why we created a table for these options and used a lookup to link them to the work item. For other infrequently changing list options that are not editable by users in the app, we used choice data type fields. Make sure your data design fits the purpose and
+Think through how users will need to interact with the data as you plan what field data types to use. For example, drop-downs for Status, Priority, and Category are updatable in Milestones&mdash;that's why we created a table for these options and used a lookup to link them to the work item. For other infrequently changing list options that aren't editable by users in the app, we used choice data type fields. Make sure your data design fits the purpose and
 usage patterns of your app and users.
 
 ## Develop
@@ -128,7 +128,7 @@ To share an app for broad distribution, follow these steps:
 Users will now be able to find your app in the Teams store in the **Built for[company name]** section.
 
 > [!NOTE]
-> You'll need to set table permissions for the Dataverse tables included in your app before users will be able to use it. For more information on table permissions, see [Set permission and share apps with colleagues](set-perms-and-share.md).
+> You'll need to set table permissions for the Microsoft Dataverse tables included in your app before users will be able to use it. For more information on table permissions, see [Set permission and share apps with colleagues](set-perms-and-share.md).
 
 ### See also
 
