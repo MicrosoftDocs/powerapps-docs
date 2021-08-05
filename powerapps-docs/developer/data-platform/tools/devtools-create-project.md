@@ -69,7 +69,7 @@ The easy way to create a Power Platform solution containing a CrmPackage project
 
 1. In step #3 of the dialog, enter names for your chosen projects and select **Done**. <p/>Choose names that you will want to see as project names in Visual Studio Solution Explorer.
 
-1. You will be prompted to save the solution file. <p/>However, at this point the solution folder does not exist, so selecting **Save** results in an error. The workaround is to first copy the complete solution file path that is displayed in the **File name** field of the dialog, choose **New folder** and create the folder, then paste the path in the **File name** field and select **Save**.
+1. You will be prompted to save the solution file. Select **Save** to save the Visual Studio solution.
 
 In **Solution Explorer**, you should now see a solution containing a single **CrmPackage** project and one or more projects based of the project templates that you chose. Each plug-in or custom workflow activity class library will build an assembly. You can add additional classes to each class library by adding a new or existing item as desired, and you can add other projects to the solution using the Power Platform project templates.
 

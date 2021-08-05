@@ -21,7 +21,7 @@ search.app:
 
 :::image type="content" source="../media/tools/devtools-main-views.png" alt-text="Power Platform Tools." lightbox="../media/tools/devtools-main-views.png":::
 
-Power Platform Tools for Visual Studio supports the rapid creation, debugging, and deployment of plug-ins. Other capabilities currently in preview include development of custom workflow activities, integration technologies like Azure Service endpoints and webhooks, and more. This topic describes how to install and uninstall the tools in Visual Studio.
+Power Platform Tools for Visual Studio supports the rapid creation, debugging, and deployment of plug-ins. Other capabilities currently in preview include development of custom workflow activities, web resources, integration technologies like Azure Service endpoints and webhooks, and more. This topic describes how to install and uninstall the tools in Visual Studio.
 
 > [!IMPORTANT]
 > While Power Platform Tools for Visual Studio is similar in appearance and function to the Developer Toolkit for Microsoft Dynamics CRM 2013, Power Platform Tools is a new product and completely independent of the Developer Toolkit. Power Platform Tools is not directly compatible with any templates or projects from the Developer Toolkit and vice versa.
