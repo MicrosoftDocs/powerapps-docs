@@ -174,9 +174,9 @@ Using [Monitor](../../maker/model-driven-apps/monitor-form-checker.md), you can 
 > [!NOTE]
 > The call stack has been modified for illustration purposes. The call stack shows details like web resource, function, and the line that's causing the error.
 
-## Save in Progress error message
+## Saving in Progress error message
 
-Sometimes when you save a form, you see a **Save in Progress** error message. This error occurs when the form [OnSave](./clientapi/reference/events/form-onsave.md) event is triggered before the previous [OnSave](./clientapi/reference/events/form-onsave.md) event has been completed. This behavior isn't supported, and the error appears by design because calling the `OnSave` event before the previous `OnSave` event is complete will cause recursive save loops with unintended consequences.
+Sometimes when you save a form, you see a **Saving in Progress** error message. This error occurs when the form [OnSave](./clientapi/reference/events/form-onsave.md) event is triggered before the previous [OnSave](./clientapi/reference/events/form-onsave.md) event has been completed. This behavior isn't supported, and the error appears by design because calling the `OnSave` event before the previous `OnSave` event is complete will cause recursive save loops with unintended consequences.
 
 A typical cause for this error is the script that calls the `save()` method in the [OnSave](./clientapi/reference/events/form-onsave.md) event handler. Another possible cause might be concurrent `save()` calls in the `setTimeout()` method, which might cause the error to intermittently show up, depending on whether the prior `save()` call was completed before another `save()` call was made.
 
