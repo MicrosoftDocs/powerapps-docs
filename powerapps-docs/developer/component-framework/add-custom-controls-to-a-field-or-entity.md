@@ -2,6 +2,7 @@
 title: Add code components to a column or table in Microsoft Dataverse | Microsoft Docs
 description: Learn how to add code components to a column or table.
 keywords:
+ms.subservice: pcf
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
@@ -19,7 +20,7 @@ Code components let you transform columns that traditionally contain text into v
 [!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
 
    > [!div class="mx-imgBorder"] 
-   > ![Custom slider control](../../maker/model-driven-apps/media/slider-control.PNG "Custom slider control ")
+   > ![Custom slider control.](../../maker/model-driven-apps/media/slider-control.PNG "Custom slider control ")
 
 ## Add a code component to a column
 
@@ -36,7 +37,7 @@ Following the steps below will change the default label and text box column of t
 5. On the Add Control page, select the component that you want, such as the **Linear Slider** component, and then select **Add**.
 
    > [!div class="mx-imgBorder"] 
-   > ![Add linear slider control](../../maker/model-driven-apps/media/add-slider.PNG "Add linear slider control")
+   > ![Add linear slider control.](../../maker/model-driven-apps/media/add-slider.PNG "Add linear slider control")
 
 6. Choose the client where you want the component to appear.
 
@@ -47,12 +48,12 @@ Following the steps below will change the default label and text box column of t
    - **Tablet**. To make the code component available on tablet devices running Dynamics 365 for tablets, select the Tablet option next to the component.
 
    > [!div class="mx-imgBorder"] 
-   > ![Choose the client apps to view the custom control](../../maker/model-driven-apps/media/choose-client.png "Choose the client apps to view the custom control") 
+   > ![Choose the client apps to view the custom control.](../../maker/model-driven-apps/media/choose-client.png "Choose the client apps to view the custom control") 
 
 7. Select the pencil icon next to **Min**, **Max**, and **Step**, set the property option, and then select **OK**.  
    
    > [!div class="mx-imgBorder"] 
-   > ![Add custom control properties](../../maker/model-driven-apps/media/ccf-add-properties.png "Add custom control properties")
+   > ![Add custom control properties.](../../maker/model-driven-apps/media/ccf-add-properties.png "Add custom control properties")
 
    - **Min**. Set the minimum accepted value. You can bind a static value that you enter or bind the value to an existing column. In this example **Bind to static value** is **Currency** and the minimum value that can be entered is *zero*.  
   
@@ -88,7 +89,7 @@ To add a code component like dataset component or simple table component to a gr
  Open a record that includes the column with the code component, such as the Opportunity form from the previous example, and view how the column is changed. The column is now rendered as a slider component instead of the text column.  
 
 > [!div class="mx-imgBorder"] 
-> ![Slider control rendered on form](../../maker/model-driven-apps/media/slider-control.PNG "Slider control rendered on form")  
+> ![Slider control rendered on form.](../../maker/model-driven-apps/media/slider-control.PNG "Slider control rendered on form")  
 
 ### See also
 

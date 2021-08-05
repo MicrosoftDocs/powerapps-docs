@@ -7,6 +7,7 @@ ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "paulliew" # GitHub ID
+ms.subservice: dataverse-developer
 ms.author: "pehecke" # MSFT alias of Microsoft employees only
 manager: "kvivek" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -55,24 +56,24 @@ To create an application registration in Azure AD, follow these steps.
 5. In the **Register an application** form provide a name for your app, select **Accounts in this organizational directory only**, and choose **Register**. A redirect URI is not needed for this walkthrough and the provided sample code.
 
     > [!div class="mx-imgBorder"]
-    > ![Register an application form](media/S2S-app-registration-started.PNG)
+    > ![Register an application form.](media/S2S-app-registration-started.PNG)
 
 6. On the **Overview** page, select **API permissions**
 
     > [!div class="mx-imgBorder"]
-    > ![App registration permissions](media/S2S-app-registration-completed.PNG)
+    > ![App registration permissions.](media/S2S-app-registration-completed.PNG)
 
 7. Choose **+ Add a permission**
 8. In the **Microsoft APIs** tab, choose **Dynamics CRM**
 9. In the **Request API permission** form, select **Delegated permissions**, check **user_impersonation**, and select **Add permissions**
 
     > [!div class="mx-imgBorder"]
-    > ![Setting API permissions](media/S2S-api-permission-started.PNG)
+    > ![Setting API permissions.](media/S2S-api-permission-started.PNG)
 
 10. On the **API permissions** page select **Grant admin consent for "org-name"** and when prompted choose **Yes**
 
     > [!div class="mx-imgBorder"]
-    > ![Granting API permissions](media/S2S-api-permission-completed.PNG)
+    > ![Granting API permissions.](media/S2S-api-permission-completed.PNG)
 
 11. Select **Overview** in the navigation panel, record the **Display name**, **Application ID**, and **Directory ID** values of the app registration. You will provide these later in the code sample.
 12. In the navigation panel, select **Certificates & secrets**
@@ -94,7 +95,7 @@ To create an unlicensed "application user" in your environment, follow these ste
    1. In the **Application ID** field, enter the application ID of the app you registered earlier in Azure AD.
 
     > [!div class="mx-imgBorder"]
-    > ![New app user](media/S2S-new-appuser1.png)
+    > ![New app user.](media/S2S-new-appuser1.png)
 
 6. After selecting **SAVE**, if all goes well, the **User Name**, **Application ID URI**, **Azure AD Object Id**, **Full Name**, and **Primary Email** fields will auto-populate with correct values where:<p/>
 &nbsp;&nbsp;**User Name** == 'Application Name + Application ID'@TenantID.com<br/>
@@ -102,7 +103,7 @@ To create an unlicensed "application user" in your environment, follow these ste
 &nbsp;&nbsp;**Primary Email** == **User Name**
 
     > [!div class="mx-imgBorder"]
-    > ![New app user populated](media/S2S-new-appuser.png)
+    > ![New app user populated.](media/S2S-new-appuser.png)
 
 7. Before exiting the user form, choose **MANAGE ROLES** and assign a security role to this application user so that the application user can access the desired organization data.
 
@@ -127,7 +128,7 @@ In an event that an application user’s status is disabled and you need to enab
     1. Click on the Status grid, and then select Remove in the actions bar.
 
     > [!div class="mx-imgBorder"]
-    > ![Remove Status field from the Application User form](media/remove-status-app-user.png "Remove Status field from the Application User form")
+    > ![Remove Status field from the Application User form.](media/remove-status-app-user.png "Remove Status field from the Application User form")
 
 1. Add the **Status** field to a new section in the body of the Application User form.
     1. Select **Body** in the actions bar.
@@ -135,7 +136,7 @@ In an event that an application user’s status is disabled and you need to enab
     1. Under **Field Explorer** locate the **Status** field, and drag and drop the **Status** field into the new section area.
  
     > [!div class="mx-imgBorder"]
-    > ![Add Status field to the Application User form](media/add-status-app-user.png "Add Status field to the Application User form")
+    > ![Add Status field to the Application User form.](media/add-status-app-user.png "Add Status field to the Application User form")
 
 1. Save and publish the customizations
 

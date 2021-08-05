@@ -15,6 +15,7 @@ applies_to:
 author: "Mattp123"
 ms.assetid: 7c5aa1c3-bde9-43f1-a369-fdcdbf14dec0
 caps.latest.revision: 33
+ms.subservice: dataverse-maker
 ms.author: "matp"
 manager: "kvivek"
 tags: 
@@ -68,25 +69,25 @@ Mapping columns is done in the context of a 1:N or N:1 table relationship, so fi
 
 Column mappings aren’t actually defined within the table relationships, but they are exposed in the relationship user interface. Not every 1:N table relationship has them. When you view a list of 1:N (or N:1) table relationships for a table, you can filter the relationships shown by type. You can select either **All**, **Custom**, **Customizable**, or **Mappable**. Mappable table relationships provide access to allow mapping table columns. 
 
-![View mappable table relationships](media/mappable-entity-relationships.png) 
+![View mappable table relationships.](media/mappable-entity-relationships.png) 
 
 When you open a mappable table relationship, select **Mappings** in the left navigation.
 
-![Select Mappings for the table relationship](media/map-entity-fields-ui-solution-explorer.png)
+![Select Mappings for the table relationship.](media/map-entity-fields-ui-solution-explorer.png)
 
 ## Delete mappings
 
-If there are any mappings that you do not want to apply, you can select them and click the ![Delete icon](media/delete.gif) icon.
+If there are any mappings that you do not want to apply, you can select them and click the ![Delete icon.](media/delete.gif) icon.
 
 ## Add new mappings
 
 To create a new mapping click **New** in the toolbar. This will open the **Create Column Mapping** dialog.
 
-![Create column mapping dialog](media/create-field-mapping-dialog.png)
+![Create column mapping dialog.](media/create-field-mapping-dialog.png)
 
 Select one source table column and one target table columns with values you want to map. 
 
-![Configure column mapping](media/configure-field-mapping.png)
+![Configure column mapping.](media/configure-field-mapping.png)
 
 Then select **OK** to close the dialog.
 

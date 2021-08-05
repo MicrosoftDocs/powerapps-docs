@@ -1,11 +1,12 @@
 ---
-title: Show or hide content from assistive technologies in canvas apps | Microsoft Docs
+title: Show or hide content from assistive technologies for canvas apps
 description: Techniques to show content only to sighted users or only to screen-reader users only for canvas apps
 author: tahoon-ms
 ms.service: powerapps
 ms.topic: article
 ms.custom: canvas
 ms.date: 02/18/2021
+ms.subservice: canvas-maker
 ms.author: tahoon
 search.audienceType:
   - maker

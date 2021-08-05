@@ -3,15 +3,17 @@ title: Power Apps Developer Plan
 description: Sign up to build skills and learn more about Power Apps, Power Automate, and the Microsoft Dataverse.
 author: evanmlew
 ms.service: powerapps
+ms.subservice: canvas-developer
 ms.topic: conceptual
 ms.custom: intro-internal
-ms.date: 05/25/2021
+ms.date: 06/24/2021
 ms.author: evlew
 ms.reviewer: tapanm
 contributors:
   - evanmlew
   - tapanm-msft
   - gathapar
+  - alaug
 ---
 
 # Power Apps Developer Plan
@@ -28,7 +30,7 @@ The plan enables you to:
 
 - Create more environments to exercise application lifecycle management (coming soon).
 
-- Export the solutions you create in your individual environment, and [publish them on Microsoft AppSource](/powerapps/developer/data-platform/publish-app-appsource) so your customers can test-drive them.
+- Export the solutions you create in your developer environment, and [publish them on Microsoft AppSource](/powerapps/developer/data-platform/publish-app-appsource) so your customers can test-drive them.
 
 ## Improvements from the previous Power Apps Community Plan
 
@@ -38,7 +40,7 @@ Key changes include:
 
 - Ability to share apps with team members for
 development and testing purposes.
-- Increased capability allocations.
+- Increased capacity allocations.
 - Ability to create more environments to support ALM (Application Lifecycle Management) scenarios (coming soon).
 
 > [!NOTE]
@@ -53,20 +55,20 @@ Anyone with a [work or school email address](signup-for-powerapps.md#faq) can 
 Sign up on the [Power Apps Developer Plan website](https://aka.ms/PowerAppsDevPlan). If you're an existing Power Apps user, you can also [create a developer environment](https://make.powerapps.com/community/signup).
 
 After signing up for the Developer Plan, you'll be redirected to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). You
-may need to select your developer environment in the top right of the screen. It will be shown with your name, for example "John Doe's environment'" If there's already an environment with that name, the individual environment will be named "John Doe's (1) environment". You'll need to use this developer environment, instead of your tenant’s default environment, to use certain capabilities such as premium and custom connectors.
+may need to select your developer environment in the top right of the screen. It will be shown with your name, for example "John Doe's environment". If there's already an environment with that name, the developer environment will be named "John Doe's (1) environment". You'll need to use this developer environment, instead of your tenant’s default environment, to use certain capabilities such as premium and custom connectors.
 
-![Individual environment for Developer Plan](media/developer-plan/select-environment.png "Individual environment for Developer Plan")
+![Individual environment for Developer Plan.](media/developer-plan/select-environment.png "Individual environment for Developer Plan")
 
 ### Get the Developer Plan with Visual Studio Dev Essentials
 
 If you're a Visual Studio Dev Essentials user, the Power Apps Developer Plan is included in your benefits. Visit [My
 benefits](https://my.visualstudio.com/benefits), and select the Power Apps tile to sign up for the Power Apps Developer Plan.
 
-![Power Apps Developer Plan in Visual Studio](media/developer-plan/power-apps-plan.png "Power Apps Developer Plan in Visual Studio")
+![Power Apps Developer Plan in Visual Studio.](media/developer-plan/developer_plan_developer_essentials.png "Power Apps Developer Plan in Visual Studio")
 
 ## Which features are included in the Power Apps Developer Plan?
 
-With the individual environment, you get the following functionality.
+With the developer environment, you get the following functionality.
 
 | **Functionalities**                                                                                              | **Developer environment**                                            |
 | - | - |
@@ -87,18 +89,16 @@ With the individual environment, you get the following functionality.
 | Model your data in Dataverse                                                                                     | Yes                                                                  |
 | Create a database in Dataverse                                                                                   | Yes                                                                  |
 | Create and use dataflows                                                                                         | No                                                                   |
-| **Management** **\***                                                                                                |                                                                      |
-| Add coworkers as environment makers and admins                                                                  | No                                                                   |
-| Add coworkers to the database roles                                                                             | No                                                                   |
+| **Management**                                                                                                 |                                                                      |
+| Add coworkers as environment makers and admins                                                                  | Yes                                                                   |
+| Add coworkers to the database roles                                                                             | Yes                                                                   |
 | Supports data policies established by the Office 365 administrator                                               | Yes                                                                  |
-| Establish data policies for the individual environment                                                           | Yes                                                                  |
+| Establish data policies for the developer environment                                                           | Yes                                                                  |
 
-**\*** You can't add any other user as an environment admin or a maker, or to the
-database roles from the admin center.
 
-## What are the capacity limits for the individual environment?
+## What are the capacity limits for the developer environment?
 
-The following capacity limits apply for the individual environments.
+The following capacity limits apply for the developer environments.
 
 | **Capacity**                                                    | **Limits** |
 | - | - |
@@ -118,6 +118,8 @@ business. For more information, see [Publish your app on
 AppSource](../developer/data-platform/publish-app-appsource.md).
 
 ## Frequently Asked Questions
+
+The following section lists frequently asked questions relevant to Power Apps Developer Plan. For more information about different types of environments including developer environment, see [Types of environments in Power Platform](/power-platform/admin/environments-overview#types-of-environments).
 
 ### What should I do if I reach the capacity limits of the environment?
 
