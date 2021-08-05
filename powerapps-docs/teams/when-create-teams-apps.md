@@ -22,13 +22,13 @@ Stand-alone apps are great for individual productivity, but if work and communic
 
 The sample apps for Microsoft Teams are great examples of these types of collaborative apps:
 
-## Apps that provide collaboration and workloads centrally within Microsoft Teams
+## Apps for collaboration and centralized workload
 
 -   [Milestones](https://aka.ms/teamsmilestones) enables collaboration on  project work items from within Microsoft Teams.
 
 -   [Bulletins](https://aka.ms/teamsbulletins) enables collaboration by  providing a central place in Microsoft Teams for company news, frequently  asked questions (FAQs), and links and contacts.
 
-## Other workloads that apply deep integration with Microsoft Teams to facilitate collaboration
+## Apps for other workloads and deep integration with Teams
 
 -   [Inspection](https://aka.ms/teamsinspection) enables collaboration by creating tasks in Microsoft Planner and posting messages to a Teams channel  when an inspection is completed.
 
