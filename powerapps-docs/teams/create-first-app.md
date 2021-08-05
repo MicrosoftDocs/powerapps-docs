@@ -5,7 +5,7 @@ author: tapanm-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: intro-internal
-ms.date: 08/03/2021
+ms.date: 08/05/2021
 ms.subservice: teams
 ms.author: jshum
 ms.reviewer: tapanm-msft
