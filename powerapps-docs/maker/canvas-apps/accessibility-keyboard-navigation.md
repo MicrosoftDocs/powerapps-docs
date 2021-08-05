@@ -5,7 +5,7 @@ author: hemantgaur
 ms.service: powerapps
 ms.topic: article
 ms.custom: canvas
-ms.date: 08/04/2021
+ms.date: 08/05/2021
 ms.subservice: canvas-maker
 ms.author: hemantg
 search.audienceType:
@@ -38,7 +38,7 @@ When this feature is turned on, it also enables the following boolean properties
 | Property Name | Description |
 | - | - |
 | **Prioritize child controls** | Determines the order of navigation (**Z-order**) for child controls on canvas when pressing tab key on the keyboard. <ul> <li> **True** (Default): Pressing the tab key on the keyboard will first progress through all child controls before moving the focus outside of the selected container or component instance. This option is recommended for similarly nested HTML elements. </li> <li> **False**: Pressing the tab key on the keyboard will progress through all controls only based on Z-order, ignoring parent-child relationship between controls or containers for keyboard navigation. </li> </ul> **Note**: This property isn't applicable to [responsive or autolayout](create-responsive-layout.md) containers. |
-| **Disable child control focus** | Determines the value of [TabIndex](controls/properties-accessibility.md#tabindex) for child controls on canvas when pressing tab key on the keyboard. <ul> <li> **False** (Default): Pressing the tab key behaves as per TabIndex values defined on each control. </li> <li> **True**: Pressing the tab key doesn't move focus to any child control within the selected container or component instance. Sets the TabIndex value to **-1** for all child controls. </li> </ul> |
+| **Enable child control focus** | Determines the value of [TabIndex](controls/properties-accessibility.md#tabindex) for child controls on canvas when pressing tab key on the keyboard. <ul> <li> **True** (Default): Pressing the tab key behaves as per TabIndex values defined on each control. </li> <li> **False**: Pressing the tab key doesn't move focus to any child control within the selected container or component instance. Sets the TabIndex value to **-1** for all child controls. </li> </ul> |
 
 ## Configure improved keyboard navigation in your app
 
@@ -56,7 +56,7 @@ Follow these steps to enable this feature in your app, and set the properties me
 
 1. Close settings.
 
-Now that you've enabled the experimental feature, you'll see two new properties for controls and containers&mdash;**Prioritize child controls**, and **Disable child control focus**. Change the property values as appropriate.
+Now that you've enabled the experimental feature, you'll see two new properties for controls and containers&mdash;**Prioritize child controls**, and **Enable child control focus**. Change the property values as appropriate.
 
 ## Examples
 
