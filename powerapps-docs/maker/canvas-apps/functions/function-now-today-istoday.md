@@ -1,6 +1,6 @@
 ---
-title: Now, Today, and IsToday functions | Microsoft Docs
-description: Reference information, including syntax and examples, for the Now, Today, and IsToday functions in Power Apps
+title: Now, Today, and IsToday functions in Power Apps
+description: Reference information including syntax and examples for the Now, Today, and IsToday functions in Power Apps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -8,11 +8,15 @@ ms.topic: reference
 ms.custom: canvas
 ms.reviewer: nabuthuk
 ms.date: 06/09/2018
+ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - gregli-msft
+  - nkrb
 ---
 # Now, Today, and IsToday functions in Power Apps
 Returns the current date and time, and tests whether a date/time value is today.
@@ -74,7 +78,7 @@ For the examples in this section, the current time is **3:59 AM** on **February 
 
     Whenever the timer starts over (after each second), this formula sets the **CurrentTime** global variable to the current value of the **Now** function.
 
-	![A screen containing a timer control with the formula OnTimerEnd = Set(CurrentTime, Now())](media/function-now-today-istoday/now-set-currenttime.png)
+	![A screen containing a timer control with the formula OnTimerEnd = Set(CurrentTime, Now()).](media/function-now-today-istoday/now-set-currenttime.png)
 
 1. Add a **[Label](../controls/control-text-box.md)** control, and set its **Text** property to this formula:
 
@@ -82,13 +86,13 @@ For the examples in this section, the current time is **3:59 AM** on **February 
 
     Use the **[Text](function-text.md)** function to format the date and time however you want, or set this property to just **CurrentTime** to show hours and minutes but not seconds.
 
-	![A screen that contains a label control with Text property set to Text( CurrentTime, LongTime24)](media/function-now-today-istoday/now-use-currenttime.png)
+	![A screen that contains a label control with Text property set to Text( CurrentTime, LongTime24).](media/function-now-today-istoday/now-use-currenttime.png)
 
 1. Preview the app by pressing F5, and then start the timer by clicking or tapping it.
 
     The label continually shows the current time, down to the second.
 
-	![Four screens showing four time values (13:50:22, 13:50:45, 13:51:03,and  13:51:25)](media/function-now-today-istoday/now-four-times.png)
+	![Four screens showing four time values (13:50:22, 13:50:45, 13:51:03,and  13:51:25).](media/function-now-today-istoday/now-four-times.png)
 
 1. Set the timer's **AutoStart** property to **true** and its **Visible** property to **false**.
 

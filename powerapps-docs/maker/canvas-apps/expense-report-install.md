@@ -1,5 +1,5 @@
 ---
-title: Learn about how to use the Expense Report sample app to create an app. | Microsoft Docs
+title: Set up and learn about the Expense Report sample app in Power Apps
 description: Use the Expense Report sample app to create a canvas app, and preview the app features before you customize for business requirements.
 author: norliu
 ms.service: powerapps
@@ -7,6 +7,7 @@ ms.topic: sample
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 03/22/2021
+ms.subservice: canvas-maker
 ms.author: norliu
 search.audienceType: 
   - maker
@@ -21,7 +22,7 @@ contributors:
 
 Track expense reports from submission to approval. Tally line items as individual expenses accrue and submit for approval when ready. This app requires a small amount of setup to make it your own.
 
-![Opening screen of the Expense Report PowerApp](./media/expense-report-install/expense-report-powerapp.png)
+![Opening screen of the Expense Report PowerApp.](./media/expense-report-install/expense-report-powerapp.png)
 
 ## Where can I run the app?
 
@@ -39,7 +40,7 @@ Expense Report sample app is available in [Power Apps](https://make.powerapps.co
 
 1. Select **Expense Report** from the available sample app templates.
 
-    ![Open Expense Report sample app](./media/expense-report-install/use-expense-report-sample-template.png "Open Expense Report sample app")
+    ![Open Expense Report sample app.](./media/expense-report-install/use-expense-report-sample-template.png "Open Expense Report sample app")
 
 1. Enter a name.
 
@@ -47,7 +48,7 @@ Expense Report sample app is available in [Power Apps](https://make.powerapps.co
 
 1. When prompted, select **Allow** to let the app use the connections.
 
-1. Press **F5** on the keyboard, or use ![Preview button](./media/expense-report-install/preview.png "Preview button") to play the app.
+1. Press **F5** on the keyboard, or use ![Preview button.](./media/expense-report-install/preview.png "Preview button") to play the app.
 
 > [!NOTE]
 > This sample app includes locally saved information using [collections](create-update-collection.md). To use the app for business purpose, customize the app to store information using [connectors](/connectors/connector-reference/connector-reference-powerapps-connectors).

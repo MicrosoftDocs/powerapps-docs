@@ -137,6 +137,8 @@
       href: debug-plug-in.md
     - name: Tracing and logging
       href: logging-tracing.md
+    - name: Application Insights with ILogger (Preview)
+      href: application-insights-ilogger.md
     - name: Analyze performance
       href: analyze-performance.md
     - name: Troubleshoot plug-ins
@@ -219,7 +221,6 @@
       href: walkthrough-configure-azure-sas-integration.md
     - name: "Tutorial: Register an Azure-aware plug-in using the Plug-in Registration Tool"
       href: walkthrough-register-azure-aware-plug-in-using-plug-in-registration-tool.md
-
     - name: "Tutorial: Update a service endpoint imported from a solution"
       href: walkthrough-update-service-endpoint-imported-solution.md
   - name: Use Web Hooks
@@ -255,7 +256,7 @@
         href: create-recurring-appointment-series-instance-exception.md
       - name: Update a recurring appointment
         href: update-recurring-appointment.md
-      - name: Link custom attributes of the recurring appointment master and appointment entities
+      - name: Link custom columns of the recurring appointment master and appointment tables
         href: link-custom-attributes-recurring-master-appointment-entities.md
   - name: Annotation (note) table
     href: annotation-note-entity.md
@@ -395,7 +396,7 @@
       href: authenticate-dot-net-framework.md
     - name: Use OAuth
       href: authenticate-oauth.md
-    - name: Use Microsoft 365 (WS-Trust)
+    - name: Use Office365 (WS-Trust)
       href: authenticate-office365-deprecation.md
   - name: "Tutorial: Register an app with Azure Active Directory"
     href: walkthrough-register-app-azure-active-directory.md
