@@ -7,7 +7,7 @@ ms.topic: conceptual
 ms.custom: 
 ms.date: 07/07/2021
 ms.subservice: teams
-ms.author: v-shrutibahl
+ms.author: namarwah
 ms.reviewer: tapanm
 contributors:
   - joel-lindstrom
