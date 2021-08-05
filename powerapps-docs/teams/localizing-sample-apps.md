@@ -6,7 +6,7 @@ ms.topic: conceptual
 ms.custom: 
 ms.date: 08/05/2021
 author: joel-lindstrom
-ms.author: v-ljoel
+ms.author: namarwah
 ms.reviewer: tapanm
 contributors:
   - joel-lindstrom
@@ -28,7 +28,7 @@ To complete this lesson, we'd need the ability to create Power Apps within Teams
 
 ## Understanding localization in Power Apps
 
-In canvas apps, text labels and other visual text components can be localized by loading a static Excel data source to your app containing the localized value for each text string in each language. For more information about this process, see [Language function](maker/canvas-apps/functions/function-language.md).
+In canvas apps, text labels and other visual text components can be localized by loading a static Excel data source to your app containing the localized value for each text string in each language. For more information about this process, see [Language function](../maker/canvas-apps/functions/function-language.md).
 
 For example, Milestones app contains an Excel data source called **StaticLocalizationsjon** with three columns&mdash;"OOBTextID", "LanguageTag", and "LocalizedText".
 
