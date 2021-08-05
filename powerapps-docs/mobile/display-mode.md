@@ -24,7 +24,7 @@ searchScope:
 
 Easily change the display of your app to dark mode, light mode, or set it to the system default on iOS and Android devices. When you choose the **System default**, the display setting will match the default display setting of your mobile device.
 
-The default display mode for Poweer Apps mobile is set to **Light**.
+The default display mode for Power Apps mobile is set to **Light**.
 
 1. To change the display, open Power App mobile and sign in.
 2. From the **Home** screen, select your profile picture.
