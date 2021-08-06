@@ -1,6 +1,6 @@
 ---
-title: "Visualize Azure Synapse Link for Dataverse data with Power BI | MicrosoftDocs"
-description: "Learn how to visualize exported Dataverse table data with Power BI"
+title: "Transform Azure Synapse Link for Dataverse data with Apache Spark | MicrosoftDocs"
+description: "Learn how to transform exported Dataverse table data with Apache Spark"
 ms.custom: ""
 ms.date: 08/06/2021
 ms.reviewer: "Mattp123"
@@ -23,11 +23,11 @@ search.app:
 contributors: ""
 ---
 
-# Visualize Azure Synapse Link for Dataverse data with Power BI
+# Transform Azure Synapse Link for Dataverse data with Apache Spark
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-You can use the Azure Synapse Link to connect your Microsoft Dataverse data to Azure Synapse Analytics to explore your data and accelerate time to insight. This article shows you how to generate a Power BI report by connecting to the serverless SQL endpoint from your Azure Synapse Analytics workspace.
+You can use the Azure Synapse Link to connect your Microsoft Dataverse data to Azure Synapse Analytics to explore your data and accelerate time to insight. This article shows you how to transform your Dataverse data using the Apache Spark engine available in your Synapse workspace.
 
 > [!NOTE]
 >
@@ -36,27 +36,33 @@ You can use the Azure Synapse Link to connect your Microsoft Dataverse data to A
 
 ## Prerequisites
 
-This section describes the prerequisites necessary to access Dataverse choices with Power BI after using the Azure Synapse Link for Dataverse service.
-
-- **Power BI Desktop**. [Get it now](https://powerbi.microsoft.com/downloads/)
+This section describes the prerequisites necessary to transform Dataverse data with Apache Spark after using the Azure Synapse Link for Dataverse service.
 
 - **Azure Synapse Link for Dataverse:** This guide assumes that you have already exported data from Dataverse by using the [Azure Synapse Link for Dataverse](export-to-data-lake.md).
 
 - **Storage Account Access.** You must be granted one of the following roles for the storage account: Storage Blob Data Reader, Storage Blob Data Contributor, or Storage Blob Data Owner.
 
+- **Synapse administrator.** You must be granted the **Synapse Administrator** role access within Synapse studio.
+
 ## Transform your data with an Apache Spark notebook
 
-1. In your Synapse workspace, expand **Databases**, select your Dataverse container. Your exported tables are displayed under the **Tables** directory on the left sidebar.
+1. In Power Apps, select your desired Azure Synapse Link from the list, and then select **Go to Azure Synapse workspace**.
 
-2. Right-click the desired table and select **New notebook** > **Load to DataFrame**.
+    ![Go to workspace.](media/go-to-workspace.png "Go to workspace")
+
+2. Expand **Databases**, select your Dataverse container. Your exported tables are displayed under the **Tables** directory on the left sidebar.
+
+    ![Find tables in Synapse.](media/find-tables-synapse.png "Find tables in Synapse")
+
+3. Right-click the desired table and select **New notebook** > **Load to DataFrame**.
 
     ![Load to DataFrame.](media/load-to-dataframe.png "Load to DataFrame")
 
-3. Attach the notebook to an Apache Spark pool by selecting a pool from the drop down menu. If you do not have an Apache Spark pool, select **Manage pools** to create one.
+4. Attach the notebook to an Apache Spark pool by selecting a pool from the drop down menu. If you do not have an Apache Spark pool, select **Manage pools** to create one.
 
     ![Attach Spark pool.](media/attach-pool.png "Attach Spark pool")
 
-4. Add code cells to transform your data. Run individual cells by selecting the play button at the left of each cell or run all the cells in succession by selecting **Run all** from the top bar.
+5. Add code cells to transform your data. Run individual cells by selecting the play button at the left of each cell or run all the cells in succession by selecting **Run all** from the top bar.
 
     ![Spark notebook.](media/spark-notebook.png "Spark notebook")
 

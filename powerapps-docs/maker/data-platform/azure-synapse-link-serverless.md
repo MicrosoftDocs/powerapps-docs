@@ -1,6 +1,6 @@
 ---
-title: "Visualize Azure Synapse Link for Dataverse data with Power BI | MicrosoftDocs"
-description: "Learn how to visualize exported Dataverse table data with Power BI"
+title: "Query Azure Synapse Link for Dataverse data with Serverless SQL | MicrosoftDocs"
+description: "Learn how to query exported Dataverse table data with Serverless SQL"
 ms.custom: ""
 ms.date: 08/06/2021
 ms.reviewer: "Mattp123"
@@ -23,11 +23,11 @@ search.app:
 contributors: ""
 ---
 
-# Visualize Azure Synapse Link for Dataverse data with Power BI
+# Query Azure Synapse Link for Dataverse data with Serverless SQL
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-You can use the Azure Synapse Link to connect your Microsoft Dataverse data to Azure Synapse Analytics to explore your data and accelerate time to insight. This article shows you how to generate a Power BI report by connecting to the serverless SQL endpoint from your Azure Synapse Analytics workspace.
+You can use the Azure Synapse Link to connect your Microsoft Dataverse data to Azure Synapse Analytics to explore your data and accelerate time to insight. This article shows you how to query your Dataverse data with built-in Serverless SQL pool in your Azure Synapse Analytics workspace.
 
 > [!NOTE]
 >
@@ -36,20 +36,20 @@ You can use the Azure Synapse Link to connect your Microsoft Dataverse data to A
 
 ## Prerequisites
 
-This section describes the prerequisites necessary to access Dataverse choices with Power BI after using the Azure Synapse Link for Dataverse service.
-
-- **Power BI Desktop**. [Get it now](https://powerbi.microsoft.com/downloads/)
+This section describes the prerequisites necessary to query your Dataverse data after using the Azure Synapse Link for Dataverse service.
 
 - **Azure Synapse Link for Dataverse:** This guide assumes that you have already exported data from Dataverse by using the [Azure Synapse Link for Dataverse](export-to-data-lake.md).
 
 - **Storage Account Access.** You must be granted one of the following roles for the storage account: Storage Blob Data Reader, Storage Blob Data Contributor, or Storage Blob Data Owner.
+
+- **Synapse administrator.** You must be granted the **Synapse Administrator** role access within Synapse studio.
 
 ## Query your Dataverse data with serverless SQL pool
 
 > [!NOTE]
 > Azure Synapse Link for Dataverse does not support the use of dedicated SQL pools at this time.
 
-1. Select your storage account name from the list, and then select **Go to Azure Synapse workspace**.
+1. In Power Apps, select your desired Azure Synapse Link from the list, and then select **Go to Azure Synapse workspace**.
 
     ![Go to workspace.](media/go-to-workspace.png "Go to workspace")
 
@@ -72,15 +72,17 @@ This section describes the prerequisites necessary to access Dataverse choices w
 > - Azure Synapse Link for Dataverse does not support the use of dedicated SQL pools at this time.
 > - Querying multiple Dataverse databases requires that both Dataverse environments are in the same region.
 
-1. Follow the steps above to connect another Dataverse organization to same Azure Synapse Analytics workspace. You must use the same storage account for both connections.
+1. Add another Azure Data Lake Storage Gen2 account as a Linked service to the same Azure Synapse Analytics workspace where the current link resides.
 
-2. Expand **Databases**, select one of the Dataverse containers. Your exported tables are displayed under the **Tables** directory on the left sidebar.
+2. Follow the configuration steps to create a new Azure Synapse Link with the new Azure Synapse Analytics and Azure Data Lake combination.
 
-3. Right-click the a table and select **New SQL script** > **Select TOP 100 rows**.
+3. Navigate to the shared Synapse workspace and expand **Databases**. Select one of the Dataverse containers. Your exported tables are displayed under the **Tables** directory on the left sidebar.
 
-4. Edit the query to combine the two datasets. For instance, you can join the datasets based on a unique ID value.
+4. Right-click the a table and select **New SQL script** > **Select TOP 100 rows**.
 
-5. Select **Run**. Your query results are displayed on the **Results** tab.
+5. Edit the query to combine the two datasets. For instance, you can join the datasets based on a unique ID value.
+
+6. Select **Run**. Your query results are displayed on the **Results** tab.
 
 ### See also
 

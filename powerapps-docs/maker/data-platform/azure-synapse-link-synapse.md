@@ -124,7 +124,7 @@ If you deleted the file system when unlinking, follow the steps above to relink 
 
 3. Attach the notebook to an Apache Spark pool by selecting a pool from the drop down menu. If you do not have an Apache Spark pool, select **Manage pools** to create one.
 
-4. Enter the following script, replace **<\DATABASE_NAME\>** with the name of the database to unlink, and run the notebook.
+4. Enter the following script, replace **\<DATABASE_NAME\>** with the name of the database to unlink, and run the notebook.
 
 ```sql
     %%sql
