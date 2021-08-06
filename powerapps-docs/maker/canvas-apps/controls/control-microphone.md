@@ -1,6 +1,6 @@
 ---
-title: 'Microphone control: reference | Microsoft Docs'
-description: Information, including properties and examples, about the Microphone control
+title: Microphone control in Power Apps
+description: Learn about the details, properties and examples of the Microphone control in Power Apps.
 author: chmoncay
 manager: kvivek
 ms.service: powerapps
@@ -8,11 +8,15 @@ ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 01/07/2021
+ms.subservice: canvas-maker
 ms.author: chmoncay
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - chmoncay
 ---
 # Microphone control in Power Apps
 
@@ -46,7 +50,7 @@ Captured media is referenced by a text string URI. For more information, read th
 
 **Mic** – Numeric ID of the microphone on a device that has more than one microphone.
 
-**OnStop** – How the app responds when the user stops recording with a microphone control.
+**OnStop** – Actions to perform when the user stops recording with a microphone control.
 
 ## Additional properties
 
@@ -86,9 +90,9 @@ Captured media is referenced by a text string URI. For more information, read th
 
 [ImagePosition](properties-visual.md) – The position (**Fill**, **Fit**, **Stretch**, **Tile**, or **Center**) of an image in a screen or a control if it isn't the same size as the image.
 
-[OnSelect](properties-core.md) – How the app responds when the user selects a control.
+[OnSelect](properties-core.md) – Actions to perform when the user selects a control.
 
-**OnStart** – How the app responds when the user starts to record with a microphone control.
+**OnStart** – Actions to perform when the user starts to record with a microphone control.
 
 [PressedBorderColor](properties-color-border.md) – The color of a control's border when the user selects that control.
 

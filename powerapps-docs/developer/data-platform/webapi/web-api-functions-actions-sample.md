@@ -1,8 +1,8 @@
 ---
 title: "Web API Functions and Actions Sample (Microsoft Dataverse)| Microsoft Docs"
-description: "This group of samples demonstrates how to perform bound and unbound functions and actions, including custom actions, using the Microsoft Dataverse Web API. These are implemented using Client-side JavaScript and C#"
+description: "This collection of code samples demonstrates how to perform bound and unbound functions and actions, including custom actions, using the Microsoft Dataverse Web API. These samples are implemented using client-side JavaScript and C#."
 ms.custom: ""
-ms.date: 04/06/2020
+ms.date: 06/17/2021
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -20,9 +20,10 @@ search.app:
   - PowerApps
   - D365CE
 ---
+
 # Web API Functions and Actions Sample
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+[!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
 This group of samples demonstrate how to perform bound and unbound functions and actions, including custom actions, using the Microsoft Dataverse Web API. This sample is implemented as a separate project for the following languages:  
   
@@ -121,7 +122,7 @@ The sample operations in this topic are organized in the following ways.
   
 ## Working with functions  
 
-[Functions](web-api-types-operations.md#bkmk_functions) are operations that do not have side effects. A function can be bound to an entity instance or an entity collection. Query functions are never bound. For more info, see [Use Web API functions](use-web-api-functions.md). This section shows samples of how bound and unbound functions are used and how parameters are passed in.  
+[Functions](web-api-types-operations.md#bkmk_functions) are operations that do not have side effects. A function can be bound to a table row or table (entity type) collection. Query functions are never bound. For more info, see [Use Web API functions](use-web-api-functions.md). This section shows samples of how bound and unbound functions are used and how parameters are passed in.  
   
 <a name="bkmk_unboundFunctionNoParams"></a>  
  
@@ -327,17 +328,17 @@ This sample comes with two custom actions. They both require parameters but one 
 - `sample_AddNoteToContact`: A bound custom action that takes two parameters. One is a `NoteTitle` and the other is a `NoteText`. This custom action adds a note to a <xref href="Microsoft.Dynamics.CRM.contact?text=contact EntityType" />. Below is a screen shot of the **Information** page for this custom action.  
   
  <!-- TODO:
- ![Custom Action &#45; AddNoteToContact information](../media/custom-action-add-note-contact.PNG "Custom Action - AddNoteToContact information")   -->
+ ![Custom Action &#45; AddNoteToContact information.](../media/custom-action-add-note-contact.PNG "Custom Action - AddNoteToContact information")   -->
   
 - `sample_CreateCustomer`: An unbound custom action that require different parameters depending on what type of customer is being created. For example, when the `AccountType` is "account" then it only requires `AccountName` parameter. When the `AccountType` is "contact", a `ContactFirstName` and `ContactLastName` parameters are required. Below is a screen shot of the **Information** page for this custom action.  
 <!-- TODO:  
- ![Custom Action &#45; CreateCustomer information](../media/custom-action-create-customer.PNG "Custom Action - CreateCustomer information")  
+ ![Custom Action &#45; CreateCustomer information.](../media/custom-action-create-customer.PNG "Custom Action - CreateCustomer information")  
    -->
 <a name="bkmk_boundCustomActionWithParams"></a>
    
 ### Using bound custom action with parameters 
  
-This example calls the `sample_AddNoteToContact` custom action which is bound to the contact entity  with the required parameters. This custom action adds a note to an existing contact. This action returns an entity with an `annotationid` property. To show that the note was added, the `annotationid` is used to request information about the note.  
+This example calls the `sample_AddNoteToContact` custom action which is bound to the contact table  with the required parameters. This custom action adds a note to an existing contact. This action returns a row with an `annotationid` property. To show that the note was added, the `annotationid` is used to request information about the note.  
   
 The request and response of the action.  
   

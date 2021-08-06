@@ -1,6 +1,6 @@
 ---
-title: Use a sample app | Microsoft Docs
-description: Step-by-step instructions for creating a canvas app based on a sample in Power Apps
+title: Create a canvas app from a sample in Power Apps
+description: Step-by-step instructions for creating a canvas app based on a sample in Power Apps.
 author: wimcoor
 ms.service: powerapps
 ms.topic: conceptual
@@ -9,11 +9,15 @@ ms.custom:
   - intro-internal
 ms.reviewer: tapanm
 ms.date: 10/16/2020
+ms.subservice: canvas-maker
 ms.author: wimcoor
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - wimcoor
 ---
 # Create a canvas app from a sample in Power Apps
 
@@ -31,7 +35,7 @@ If you don't have a license for Power Apps, you can [sign up for free](../signup
 
 1. Choose a sample app from the list of sample apps, such as **Cost Estimator**.
 
-	![Cost Estimator template](./media/open-and-run-a-sample-app/cost-estimator-app.png "Cost Estimator template")
+	![Cost Estimator template.](./media/open-and-run-a-sample-app/cost-estimator-app.png "Cost Estimator template")
 
 1. Update the app name and select **Create** to create the app.
 
@@ -40,13 +44,13 @@ If you don't have a license for Power Apps, you can [sign up for free](../signup
 
 1. Select **Make my own app** to connect the app to data storage, such as OneDrive.
 
-    ![Make my own app](./media/open-and-run-a-sample-app/make-my-own-app.png "Make my own app")
+    ![Make my own app.](./media/open-and-run-a-sample-app/make-my-own-app.png "Make my own app")
 
 1. After you select, or connect to storage from the available choices, such as OneDrive, select **Done**.
 
 1. Open Preview mode by pressing F5 (or by selecting the play button near the upper-right corner).
 
-	![Preview the app](./media/open-and-run-a-sample-app/open-preview-app.png "Preview the app")
+	![Preview the app.](./media/open-and-run-a-sample-app/open-preview-app.png "Preview the app")
 
 	Each sample represents a different scenario with different kinds of screens and other controls. If you opened the Cost Estimator sample, you can use the default app to do these tasks:
 
@@ -68,7 +72,7 @@ If you don't have a license for Power Apps, you can [sign up for free](../signup
 
 1. Select **Save**.
 
-    ![Save the app with a unique name](./media/open-and-run-a-sample-app/settings-app.png "Save the app with a unique name")
+    ![Save the app with a unique name.](./media/open-and-run-a-sample-app/settings-app.png "Save the app with a unique name")
 
 ## Next steps
 

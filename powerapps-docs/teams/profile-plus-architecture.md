@@ -1,12 +1,13 @@
 ---
-title: Understand Profile Plus sample apps architecture | Microsoft Docs
+title: Understand Profile+ sample apps architecture (Preview) | Microsoft Docs
 description: Learn about the architecture of the Profile Plus sample apps.
 author: joel-lindstrom
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 06/16/2021
-ms.author: v-ljoel
+ms.subservice: teams
+ms.author: namarwah
 ms.reviewer: tapanm
 contributors:
     - tapanm-msft
@@ -14,7 +15,9 @@ contributors:
     - joel-lindstrom
 ---
 
-# Understand Profile + sample apps architecture
+# Understand Profile+ sample apps architecture (Preview)
+
+[This article is pre-release documentation and is subject to change.]
 
 In this article, you'll learn about the collections and global variables used by the [Profile +](profile-app.md) app, and understand how to use them effectively. If you want to learn more about how to install, and use the Inspection sample app instead, go to [Profile + sample apps](profile-app.md).
 
@@ -35,11 +38,15 @@ To understand and use information in this article, you'll need to know about dif
 You'll also need to know about how to [install](use-sample-apps-from-teams-store.md), and [use](profile-app.md) the
 Profile + sample app.
 
+> [!IMPORTANT]
+> - This is a preview feature.
+> - [!INCLUDE[cc_preview_features_definition](../includes/cc-preview-features-definition.md)]
+
 ## Application Data Flow
 
 The following diagram shows the intersection of users, data, and systems.
 
-![Profile + sample app data model](media/Profile-plus-architecture/architecture-model.png "Profile + sample app data model")
+![Profile + sample app data model.](media/Profile-plus-architecture/architecture-model.png "Profile + sample app data model")
 
 The following connectors are used in the Issue Reporting app:
 
@@ -53,7 +60,7 @@ The following connectors are used in the Issue Reporting app:
 
 ## Data Model
 
-![Profile + app data model](media/profile-plus-architecture/data-model.png "Profile + sample app data model")
+![Profile + app data model.](media/profile-plus-architecture/data-model.png "Profile + sample app data model")
 
 ## Tables
 
