@@ -32,15 +32,6 @@ Before you begin using relevance search, the new experience needs to be enabled 
   > [!div class="mx-imgBorder"]
   > ![Demonstration of how relevance search works in a model-driven app running on Power Apps Mobile.](media/powerapps-mobile-rel-search.gif "Demonstration of how relevance search works in a model-driven app running on Power Apps Mobile")
 
-
-## Early access: Use barcode scanner
-
- [!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
- 
- If you're on [early access](/power-platform/admin/opt-in-early-access-updates), you can use the barcode scanner to look up rows. The scanner automatically detects a barcode, a QR code, or a data-matrix code.
- 
- 1. To use the barcode scanner, select the search button.
- 2. Select the barcode scanner button and then scan your item.
  
 
 ## Run a search
