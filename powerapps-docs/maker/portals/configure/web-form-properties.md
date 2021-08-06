@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2020
+ms.date: 08/05/2021
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: tapanm
@@ -23,7 +23,8 @@ The other options on the advanced form record itself control top-level preferenc
 To view existing Advanced forms or to create new advanced forms, open the [Portal Management app](configure-portal.md) and go to **Portals** > **Advanced Forms**.
 
 > [!Note]
-> A **Advanced Form** must be associated with a webpage for a given website for the form to be viewable within the site.  
+> - A **Advanced Form** must be associated with a webpage for a given website for the form to be viewable within the site.
+> - Field level code components are in public preview, and can be added to forms. More information: [Add a code component to a field in a model-driven app](../component-framework.md#add-a-code-component-to-a-field-in-a-model-driven-app)
 
 When creating or editing a webpage from the the [Portal Management app](configure-portal.md), a **Advanced Form** can be specified in the lookup field provided on the **New Web Page** form.
 
