@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 08/05/2021
-ms.author: navjotm
+ms.author: namarwah
 ms.reviewer: tapanm
 contributors:
   - tapanm-msft
