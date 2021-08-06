@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: nabuthuk
-ms.date: 06/23/2021
+ms.date: 08/05/2021
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -23,6 +23,7 @@ Returns the week number of a specific date.
 Use the **WeekNum** and **ISOWeekNum** functions to determine the week number of a date.
 
 These functions differ in how they determine the first week of the year (week 1):
+
 - **WeekNum** uses the week containing January 1 as the first week of the year.  The result from this function can range from 1 to 54.
 
 - **ISOWeekNum** uses the week containing the first Thursday of the year as the first week of the year. This follows the [ISO 8601 date and time standard definition](https://en.wikipedia.org/wiki/ISO_week_date) for week numbering.  The result from this function can range from 1 to 53.  It is possible that 52 or 53 may be returned for the first days of January since the dates could belong to the last week of the previous year.
@@ -44,14 +45,15 @@ Use the second parameter to **WeekNum** to specify which day begins a week.  You
 If you pass a single number to these functions, the return value is a single result.  If you pass a single-column [table](../working-with-tables.md) that contains numbers, the return value is a single-column table of results, one result for each record in the argument's table. If you have a multi-column table, you can shape it into a single-column table, as [working with tables](../working-with-tables.md) describes.  
 
 ## Syntax
+
 **WeekNum**( *DateTime* [, *StartOfWeek* ] )
 
-* *DateTime* - Required.  Date/Time value to operate on.  
-* *StartOfWeek* - Optional.  Excel code or StartOfWeek enumartion that determines which day the week begins.
+- *DateTime* - Required.  Date/Time value to operate on.  
+- *StartOfWeek* - Optional.  Excel code or StartOfWeek enumeration that determines which day the week begins.
 
 **ISOWeekNum**( *DateTime* )
 
-* *DateTime* - Required.  Date/Time value to operate on.  The week always begins on Monday.
+- *DateTime* - Required.  Date/Time value to operate on.  The week always begins on Monday.
 
 ## Examples
 
@@ -61,7 +63,7 @@ First and last calendar weeks of 2021
 |------|:-------:|:-------:|:------:|
 | Friday,&nbsp;January&nbsp;1,&nbsp;2021 | 1 | 53 | 1 |
 | Saturday,&nbsp;January&nbsp;2,&nbsp;2021 | 1 | 53 | 1 |
-| Sunday,&nbsp;Jaunary&nbsp;3,&nbsp;2021 | 2 | 53 | 1 |
+| Sunday,&nbsp;January&nbsp;3,&nbsp;2021 | 2 | 53 | 1 |
 | Monday,&nbsp;January&nbsp;4,&nbsp;2021 | 2 | 1 | 1 |
 | Tuesday,&nbsp;January&nbsp;5,&nbsp;2021 | 2 | 1 | 1 |
 | Wednesday,&nbsp;January&nbsp;6,&nbsp;2021 | 2 | 1 | 2 |
