@@ -32,6 +32,8 @@ contributors: ""
 
 For columns that use Dataverse [Choices](/powerapps/maker/data-platform/create-edit-global-option-sets), choice values are written as an integer label and not a text label to maintain consistency during edits. The integer-to-text label mappingis stored in the *Microsoft.Athena.TrickleFeedService/,table-EntityMetadata.json* file. This article covers how to access the integer-to-text label mapping using Power BI.
 
+![Access option set.](media/access-option-set.png "Access option set")
+
 ## Prerequisites
 
 This section describes the prerequisites necessary to consume Dataverse data with Power BI by using the Azure Synapse Link for Dataverse service.

@@ -37,8 +37,7 @@ This article covers:
 
 1. In-Place Updates vs. Append-Only Writes
 2. User-Specified Partition Strategy
-3. Accessing and Consuming Dataverse Choices (Option Sets)
-4. Transporting the Azure Synapse Link for Dataverse Configuration across Environments
+3. Transporting the Azure Synapse Link for Dataverse Configuration across Environments
 
 ## In-place updates vs. append-only writes
 
@@ -77,40 +76,6 @@ Based on the Dataverse table volume and data distribution, you can choose a more
 Additional details with examples of how data is handled in the lake with yearly or monthly partition strategy:
 
 ![Partition Strategy.](media/export-data-lake-partition-strategy.png "Show advanced configuration")
-
-## Accessing and consuming Dataverse choices (option sets)
-
-For columns that use Dataverse [Choices](/powerapps/maker/data-platform/create-edit-global-option-sets), choice values are written as an integer label and not a text label to maintain consistency during edits. To access the integer-to-text label mapping, navigate to the *Microsoft.Athena.TrickleFeedService/,table-EntityMetadata.json* file.
-
-![Access option set.](media/access-option-set.png "Access option set")
-
-### Consuming Dataverse choices with Power BI
-
-To read all the Dataverse choices as a table in Power BI complete the following steps:
-
-1. Open Power BI Desktop.
-
-2. Select **Get Data** > **Blank query** and then open the **Advanced Editor**.
-
-3. Paste the following query and replace **\<STORAGE\>** with the storage account name, **\<CONTAINER\>** with the name of the container, and **\<TABLE\>** with the name of the Dataverse Table that contains the Choices you want to access.
-
-```Power Query M
-  let
-    Source = AzureStorage.DataLake("https://<STORAGE>.dfs.core.windows.net/<CONTAINER>/Microsoft.Athena.TrickleFeedService/<TABLE>-EntityMetadata.json"),
-    #"https://<STORAGE> dfs core windows net/<CONTAINER>/Microsoft Athena TrickleFeedService/_<TABLE>-EntityMetadata json" = Source{[#"Folder Path"="https://<STORAGE>.dfs.core.windows.net/<CONTAINER>/Microsoft.Athena.TrickleFeedService/",Name="<TABLE>-EntityMetadata.json"]}[Content],
-    #"Imported JSON" = Json.Document(#"https://<STORAGE> dfs core windows net/<CONTAINER>/Microsoft Athena TrickleFeedService/_<TABLE>-EntityMetadata json",1252),
-    OptionSetMetadata = #"Imported JSON"[OptionSetMetadata],
-    #"Converted to Table" = Table.FromList(OptionSetMetadata, Splitter.SplitByNothing(), null, null, ExtraValues.Error),
-    #"Expanded Column1" = Table.ExpandRecordColumn(#"Converted to Table", "Column1", {"EntityName", "OptionSetName", "Option", "IsUserLocalizedLabel", "LocalizedLabelLanguageCode", "LocalizedLabel"}, {"Column1.EntityName", "Column1.OptionSetName", "Column1.Option", "Column1.IsUserLocalizedLabel", "Column1.LocalizedLabelLanguageCode", "Column1.LocalizedLabel"})
-  in
-    #"Expanded Column1"
-```
-
-4. This will populate a dataset with the choices and various metadata for that choice that you can join with your Dataverse Table data to display the text label for the choice.
-
-### Consuming Dataverse choices with Azure Data Factory
-
-
 
 ## Transporting the Azure Synapse Link configuration across environments
 

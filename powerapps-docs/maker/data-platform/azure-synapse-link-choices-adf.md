@@ -32,6 +32,8 @@ contributors: ""
 
 For columns that use Dataverse [Choices](/powerapps/maker/data-platform/create-edit-global-option-sets), choice values are written as an integer label and not a text label to maintain consistency during edits. The integer-to-text label mappingis stored in the *Microsoft.Athena.TrickleFeedService/,table-EntityMetadata.json* file. This article covers how to access the integer-to-text label mapping using Azure Data Factory.
 
+![Access option set.](media/access-option-set.png "Access option set")
+
 ## Prerequisites
 
 This section describes the prerequisites necessary to access Dataverse choices with Azure Data Factory after using the Azure Synapse Link for Dataverse service.
@@ -42,27 +44,21 @@ This section describes the prerequisites necessary to access Dataverse choices w
 
 ![Access option set.](media/access-option-set.png "Access option set")
 
-## Consuming Dataverse choices with Power BI
+## Consuming Dataverse choices with Azure Data Factory
 
-1. Open Power BI Desktop.
+To add a column containing the text label of the Dataverse choice using Azure Data Factory, complete the following steps:
 
-2. Select **Get Data** > **Blank query** and then open the **Advanced Editor**.
+1. Launch Azure Data Factory.
 
-3. Paste the following query and replace **\<STORAGE\>** with the storage account name, **\<CONTAINER\>** with the name of the container, and **\<TABLE\>** with the name of the Dataverse Table that contains the Choices you want to access.
+2. Create a new Data flow and set the Source as the Azure Data Lake Storage Gen2 with your Dataverse data.
 
-```Power Query M
-  let
-    Source = AzureStorage.DataLake("https://<STORAGE>.dfs.core.windows.net/<CONTAINER>/Microsoft.Athena.TrickleFeedService/<TABLE>-EntityMetadata.json"),
-    #"https://<STORAGE> dfs core windows net/<CONTAINER>/Microsoft Athena TrickleFeedService/_<TABLE>-EntityMetadata json" = Source{[#"Folder Path"="https://<STORAGE>.dfs.core.windows.net/<CONTAINER>/Microsoft.Athena.TrickleFeedService/",Name="<TABLE>-EntityMetadata.json"]}[Content],
-    #"Imported JSON" = Json.Document(#"https://<STORAGE> dfs core windows net/<CONTAINER>/Microsoft Athena TrickleFeedService/_<TABLE>-EntityMetadata json",1252),
-    OptionSetMetadata = #"Imported JSON"[OptionSetMetadata],
-    #"Converted to Table" = Table.FromList(OptionSetMetadata, Splitter.SplitByNothing(), null, null, ExtraValues.Error),
-    #"Expanded Column1" = Table.ExpandRecordColumn(#"Converted to Table", "Column1", {"EntityName", "OptionSetName", "Option", "IsUserLocalizedLabel", "LocalizedLabelLanguageCode", "LocalizedLabel"}, {"Column1.EntityName", "Column1.OptionSetName", "Column1.Option", "Column1.IsUserLocalizedLabel", "Column1.LocalizedLabelLanguageCode", "Column1.LocalizedLabel"})
-  in
-    #"Expanded Column1"
-```
+3. Add a **Derived Column** transformation step and provide a new name for the column.
 
-4. This will populate a dataset with the choices and various metadata for that choice that you can join with your Dataverse Table data to display the text label for the choice.
+4. **Open expression builder** and build an expression with a series of *iff* functions to map the integer choice label to the text choice label that is found in the *Microsoft.Athena.TrickleFeedService/,table-EntityMetadata.json* file.
+
+![Expression builder](media/expression-builder.png "Expression builder")
+
+5. Add a sink to the data flow and run the pipeline.
 
 ### See also
 
