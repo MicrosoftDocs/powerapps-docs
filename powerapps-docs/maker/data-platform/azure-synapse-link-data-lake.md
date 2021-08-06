@@ -31,7 +31,11 @@ contributors:
 You can use the Azure Synapse Link to connect your Microsoft Dataverse data to Azure Data Lake Storage Gen2 to enable various analytics scenarios. This article shows you how to perform the following tasks:
 
 1. Connect your Dataverse data to your Azure Data Lake Storage Gen2 account with the Azure Synapse Link service.
-2. 
+2. Manage Dataverse tables included in the Azure Synapse Link.
+3. Monitor your Azure Synapse Link.
+4. Unlink your Azure Synapse Link.
+5. Relink your Azure Synapse Link.
+6. View your data in Azure Data Lake and understand the file structure.
 
 > [!NOTE]
 > Azure Synapse Link for Dataverse was formerly known as Export to data lake. The service was renamed effective May 2021 and will continue to export data to Azure Data Lake as well as Azure Synapse Analytics.
@@ -81,6 +85,15 @@ After you have set up the Azure Synapse Link, you can manage the tables that are
 - On the Power Apps maker portal **Tables** area, select **…** next to a table, and then select the linked data lake where you want to export table data.
 
    ![Select a table for export.](media/select-entity-export.png "Select a table for export")
+
+## Monitor your Azure Synapse Link
+
+After you have set up the Azure Synapse Link, you can monitor the Azure Synapse Link under the **Tables** tab.
+
+- There will be a list of tables that are a part of the selected Azure Synapse Link.
+- There are different stages the sync status will circulate through. **NotStarted** indicates that the Table is waiting to be synced. Once the table initial sync has been **Completed**, there will be a post processing stage where incremental updates will not take place. This may take several hours depending on the size of your data. As the incremental updates start taking place, the dat for the last sync will be regularly updated.
+- The Count column shows the number of changes to the data. It does not show the total number of rows to the data.
+- The final columns show the usage of difference advanced configurations.
 
 ## Unlinking an Azure Synapse Link
 
