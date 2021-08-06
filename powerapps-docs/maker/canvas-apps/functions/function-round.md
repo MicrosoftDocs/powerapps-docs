@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: nabuthuk
-ms.date: 11/07/2015
+ms.date: 08/05/2021
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
@@ -19,19 +19,21 @@ contributors:
   - nkrb
 ---
 # Int, Round, RoundDown, RoundUp, and Trunc functions in Power Apps
+
 Rounds a number.
 
 ## Round, RoundDown, and RoundUp
+
 The **Round**, **RoundDown**, and **RoundUp** functions round a number to the specified number of decimal places:
 
-* **Round** rounds up if the next digit is a 5 or higher. Otherwise, this function rounds down.
-* **RoundDown** always rounds down to the previous lower number, towards zero.
-* **RoundUp** always rounds up to the next higher number, away from zero.
+- **Round** rounds up if the next digit is 5 or higher. Otherwise, this function rounds down.
+- **RoundDown** always rounds down to the previous lower number, towards zero.
+- **RoundUp** always rounds up to the next higher number, away from zero.
 
 The number of decimal places can be specified for these functions:
 
 | Decimal places | Description | Example |
-|-----|-----|-----|
+|----------------|-------------|---------|
 | Greater than 0 | The number is rounded to the right of the decimal separator. | `Round( 12.37, 1 )` returns 12.4. | 
 | 0 |  The number is rounded to the nearest integer. | `Round( 12.37, 0 )` returns 12. |
 | Less than 0 | The number is rounded to the left of the decimal separator. | `Round( 12.37, -1 )` returns 10. | 
@@ -40,8 +42,8 @@ The number of decimal places can be specified for these functions:
 
 The **Int** and **Trunc** functions round a number to an integer (whole number without a decimal): 
 
-* **Int** rounds down to the nearest integer.  
-* **Trunc** truncates the number to just the integer portion by removing any decimal portion.  
+- **Int** rounds down to the nearest integer.  
+- **Trunc** truncates the number to just the integer portion by removing any decimal portion.  
 
 The difference between **Int** and **Trunc** is in the handling of negative numbers.  For example, for an argument of `-4.3`, **Int** will return the integer further away from zero, `-5`, while **Trunc** will return the integer closer to zero, `-4`.   **Int** returns values that are unique amongst the five rounding functions, while **Trunc** returns the same values as **RoundDown**.
 
@@ -50,17 +52,19 @@ Use **Trunc** to extract the decimal portion of a number by subtracting it from 
 Decimal places cannot be specified with **Trunc** as it can with Microsoft Excel.  Use **RoundDown** instead when this is needed.
 
 ## Single-column tables
-These functions support single-column tables.  If you pass a single number, the return value is the rounded version of that number.  If you pass a single-column [table](../working-with-tables.md) that contains numbers, the return value is a single-column table of rounded numbers.  The *DecimalPlaces* paraemter can be a single value or a single-column table.  If the single-column table has less values that the *Number*, zero is used for the remaining values.  Use [**ShowColumns**](function-table-shaping.md) and other table shaping functions to extract a single-column table from a larger table.  
+
+These functions support single-column tables.  If you pass a single number, the return value is the rounded version of that number.  If you pass a single-column [table](../working-with-tables.md) that contains numbers, the return value is a single-column table of rounded numbers.  The *DecimalPlaces* parameter can be a single value or a single-column table.  If the single-column table has less values that the *Number*, zero is used for the remaining values.  Use [**ShowColumns**](function-table-shaping.md) and other table shaping functions to extract a single-column table from a larger table.  
 
 ## Syntax
-**Round**( *Number*, *DecimalPlaces* )<br>**RoundDown**( *Number*, *DecimalPlaces* )<br>**RoundUp**( *Number*, *DecimalPlaces* )
 
-* *Number* - Required. The number to round.
-* *DecimalPlaces* - Required.  Number of decimal places to round to.  Use a positive value to indicate decimal places right of the decimal separator, a negative value to the left, and zero for a whole number.
+**Round**(*Number*, *DecimalPlaces*)<br>**RoundDown**(*Number*, *DecimalPlaces*)<br>**RoundUp**(*Number*, *DecimalPlaces*)
 
-**Int**( *Number* )<br>**Trunc**( *Number* )
+- *Number* - Required. The number to round.
+- *DecimalPlaces* - Required.  Number of decimal places to round to.  Use a positive value to indicate decimal places right of the decimal separator, a negative value to the left, and zero for a whole number.
 
-* *Number* - Required. The number to be rounded to an integer.
+**Int**(*Number*)<br>**Trunc**(*Number*)
+
+- *Number* - Required. The number to be rounded to an integer.
 
 ## Examples
 
