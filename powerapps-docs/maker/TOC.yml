@@ -2401,6 +2401,8 @@
               href: ../teams/customize-sample-apps.md
             - name: Localize sample apps 
               href: ../teams/localizing-sample-apps.md
+            - name: Theming in sample apps 
+              href: ../teams/sample-app-theming.md
         - name: FAQs for sample apps
           href: ../teams/sample-apps-faqs.md
     - name: Known issues and limitations
