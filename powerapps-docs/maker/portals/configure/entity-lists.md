@@ -276,7 +276,7 @@ Enabling a **Workflow action** allows a user to run an on-demand workflow agains
 ## Securing lists
 
 >[!NOTE]
-> This method of securing lists would be deprecated soon. Therefore, it shouldn't be used. Use proper [table permissions](entity-permissions-studio.md), and web role setup to provide access to users for any data instead. More information: [Table permissions changes for forms and lists on new portals](../important-changes-deprecations.md#table-permissions-changes-for-forms-and-lists-on-new-portals)
+> This method of securing lists would be deprecated soon. Therefore, it shouldn't be used. Use proper [table permissions](entity-permissions-studio.md), and web role setup to provide access to users for any data instead. More information: [Table permission changes for forms and lists on new portals](../important-changes-deprecations.md#table-permission-changes-for-forms-and-lists-on-new-portals)
 
 
 To secure a list, you must configure Table Permissions for the table for which records are being displayed and also set the **Enable Table Permissions** Boolean value on the list record to true.

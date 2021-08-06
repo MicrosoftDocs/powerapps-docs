@@ -29,9 +29,10 @@ To view existing basic forms or to create new basic forms, open the [Portal Mana
 When creating a new basic form, the first step is to decide the **Table** and **Form Name** that you will be rendering, in addition to the **mode: Insert, Edit, or Read Only**. The mode selected will determine if you are creating a new record from the portal, editing an existing record, or just displaying information about a record on the portal.
 
 > [!NOTE]
-> - An **Basic Form** must be associated with a webpage for a given website for the form to be viewable within the site.
+> - A **Basic Form** must be associated with a webpage for a given website for the form to be viewable within the site.
 > - The Connection table subgrids aren't supported in basic forms. If you add a Connection table subgrid to the form using Form designer, error messages are displayed when you render the form on the portal and use the Connection table.
-> - Duplicate fields, multi-select option set, custom controls, Party List fields and business rules aren't supported in basic forms.
+> - Duplicate fields, multi-select option set, Party List fields and business rules aren't supported in basic forms.
+> - Field level code components are in public preview, and can be added to forms. More information: [Add a code component to a field in a model-driven app](../component-framework.md#add-a-code-component-to-a-field-in-a-model-driven-app) 
 > - [Image attributes](../../../developer/data-platform/image-attributes.md), [file attributes](../../../developer/data-platform/file-attributes.md) and [table images](/dynamics365/customerengagement/on-premises/developer/sample-set-retrieve-entity-images) aren't supported in [basic forms](entity-forms.md), [advanced forms](web-form-properties.md) or when using liquid template tags, such as [fetchxl](../liquid/template-tags.md).
 > - Business rules and client API can enable locked fields on a read-only form.
 > - If you create a basic form in the Insert mode, you can't change a button's alignment or place an action button above the basic form.
@@ -46,7 +47,7 @@ The various master pages used by the portal contain declarations of the **TableF
 ## Secure your forms
 
 >[!NOTE]
-> This method of securing forms would be deprecated soon. Therefore, it shouldn't be used. Use proper [table permissions](entity-permissions-studio.md), and web role setup to provide access to users for any data instead. More information: [Table permissions changes for forms and lists on new portals](../important-changes-deprecations.md#table-permissions-changes-for-forms-and-lists-on-new-portals)
+> This method of securing forms would be deprecated soon. Therefore, it shouldn't be used. Use proper [table permissions](entity-permissions-studio.md), and web role setup to provide access to users for any data instead. More information: [Table permission changes for forms and lists on new portals](../important-changes-deprecations.md#table-permission-changes-for-forms-and-lists-on-new-portals)
 
 To secure your forms, you must create table permissions that determine access and ownership of the records according to web roles. If a user lands on a basic form and does not have permissions, they will receive an error message. To enable permissions for a basic form, set **Enable Table Permissions** to true. [!INCLUDE[proc-more-information](../../../includes/proc-more-information.md)] [Create web roles for portals](create-web-roles.md).  
 
@@ -63,7 +64,7 @@ To secure your forms, you must create table permissions that determine access an
 |Record ID Parameter Name|    A parameter name provided in the query string of the URL to the Web Page containing this Basic Form.|
 |Relationship Name|    Required when Record Source Type is Record Associated to Current Portal User. The logical name of the relationship between the current portal user record and the target record. This must return the same table type specified by the Table Name field.|
 |Allow Create If Null|    An optional boolean value available when Record Source Type is Record Associated to Current Portal User. Indicates that if the related record does not exist, allow the user to create it the first time, otherwise an exception will be thrown if the record does not already exist as the form needs a record to data bind to.|
-|Enable Table Permissions|    Will Cause the form to respect Table Permissions. The default is false for backwards compatibility reasons. If set to true, explicit permissions are REQUIRED for any user wanting to access the form. <br> **NOTE**: This method of securing forms would be deprecated soon. Therefore, it shouldn't be used. Use proper [table permissions](entity-permissions-studio.md), and web role setup to provide access to users for any data instead. More information: [Table permissions changes for forms and lists on new portals](../important-changes-deprecations.md#table-permissions-changes-for-forms-and-lists-on-new-portals) |
+|Enable Table Permissions|    Will Cause the form to respect Table Permissions. The default is false for backwards compatibility reasons. If set to true, explicit permissions are REQUIRED for any user wanting to access the form. <br> **NOTE**: This method of securing forms would be deprecated soon. Therefore, it shouldn't be used. Use proper [table permissions](entity-permissions-studio.md), and web role setup to provide access to users for any data instead. More information: [Table permission changes for forms and lists on new portals](../important-changes-deprecations.md#table-permission-changes-for-forms-and-lists-on-new-portals) |
 |||
 
 ### Form Options
