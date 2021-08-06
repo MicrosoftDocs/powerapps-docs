@@ -32,6 +32,8 @@ Before you begin using relevance search, the new experience needs to be enabled 
   > [!div class="mx-imgBorder"]
   > ![Demonstration of how relevance search works in a model-driven app running on Power Apps Mobile.](media/powerapps-mobile-rel-search.gif "Demonstration of how relevance search works in a model-driven app running on Power Apps Mobile")
 
+ 
+
 ## Run a search
 
 View suggested search results inline as you type, minimizing keystrokes and simplifying page navigation.
