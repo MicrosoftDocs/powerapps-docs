@@ -31,11 +31,7 @@ contributors:
 You can use the Azure Synapse Link to connect your Microsoft Dataverse data to Azure Synapse Analytics to explore your data and accelerate time to insight. This article shows you how to perform the following tasks:
 
 1. Connect your Dataverse data to your Azure Synapse Analytics workspace with the Azure Synapse Link service.
-2. Query your data in Azure Synapse Analytics workspace with the built-in serverless SQL pool.
-3. Query multiple Dataverse databases with the built-in serverless SQL pool.
-4. Transform your data with an Apache Spark notebook.
-5. Generate a Power BI report by connecting to the serverless SQL endpoint from your Azure Synapse Analytics workspace.
-6. Unlink your Azure Synapse Link.
+2. Unlink your Azure Synapse Link.
 
 > [!NOTE]
 >
@@ -68,89 +64,6 @@ You can use the Azure Synapse Link to connect your Microsoft Dataverse data to A
 5. Add the tables you want to export, and then select **Save**.
 
     ![Add tables.](media/add-tables.png "Add tables")
-
-## Query your Dataverse data with serverless SQL pool
-
-> [!NOTE]
-> Azure Synapse Link for Dataverse does not support the use of dedicated SQL pools at this time.
-
-1. Select your storage account name from the list, and then select **Go to Azure Synapse workspace**.
-
-    ![Go to workspace.](media/go-to-workspace.png "Go to workspace")
-
-2. Expand **Databases**, select your Dataverse container. Your exported tables are displayed under the **Tables** directory on the left sidebar.
-
-    ![Find tables in Synapse.](media/find-tables-synapse.png "Find tables in Synapse")
-
-3. Right-click the desired table and select **New SQL script** > **Select TOP 100 rows**.
-
-    ![Select top rows.](media/select-top-rows.png "Select top rows")
-
-4. Select **Run**. Your query results are displayed on the **Results** tab. Alternatively, you can edit the script to your needs.
-
-    ![Run query.](media/run-query.png "Run query")
-
-## Query multiple Dataverse databases with serverless SQL pool
-
-> [!NOTE]
->
-> - Azure Synapse Link for Dataverse does not support the use of dedicated SQL pools at this time.
-> - Querying multiple Dataverse databases requires that both Dataverse environments are in the same region.
-
-1. Follow the steps above to connect another Dataverse organization to same Azure Synapse Analytics workspace. You must use the same storage account for both connections.
-
-2. Expand **Databases**, select one of the Dataverse containers. Your exported tables are displayed under the **Tables** directory on the left sidebar.
-
-3. Right-click the a table and select **New SQL script** > **Select TOP 100 rows**.
-
-4. Edit the query to combine the two datasets. For instance, you can join the datasets based on a unique ID value.
-
-5. Select **Run**. Your query results are displayed on the **Results** tab.
-
-## Transform your data with an Apache Spark notebook
-
-1. In your Synapse workspace, expand **Databases**, select your Dataverse container. Your exported tables are displayed under the **Tables** directory on the left sidebar.
-
-2. Right-click the desired table and select **New notebook** > **Load to DataFrame**.
-
-    ![Load to DataFrame.](media/load-to-dataframe.png "Load to DataFrame")
-
-3. Attach the notebook to an Apache Spark pool by selecting a pool from the drop down menu. If you do not have an Apache Spark pool, select **Manage pools** to create one.
-
-    ![Attach Spark pool.](media/attach-pool.png "Attach Spark pool")
-
-4. Add code cells to transform your data. Run individual cells by selecting the play button at the left of each cell or run all the cells in succession by selecting **Run all** from the top bar.
-
-    ![Spark notebook.](media/spark-notebook.png "Spark notebook")
-
-## Connect to your Azure Synapse Analytics workspace to Power BI
-
-1. Open Power BI Desktop.
-
-2. Select **Get data** > **More...**.
-
-3. Select **Azure** > **Azure Synapse Analytics (SQL DW)** > **Connect**.
-
-4. Go to your Azure Synapse Analytics workspace and copy the **Serverless SQL endpoint**.
-
-    ![SQL OD endpoint.](media/sql-od-endpoint.png "SQL OD endpoint")
-
-5. Paste the endpoint for the **Server**. Select **DirectQuery** for the **Data Connectivity mode**. Select **OK**.
-
-    ![Enter server.](media/enter-server.png "Enter server")
-
-6. If prompted, sign in with your Microsoft Account.
-
-7. Select the container and the preferred table from the Navigator, and then select **Load**. Optionally, expand *default* to access tables created with an Apache Spark notebook.
-
-    ![Power BI select tables.](media/pbi-select-tables.png "Power BI select tables")
-
-> [!NOTE]
-> If you receive a credentials error, go to **File** > **Options and settings** > **Data source settings** and clear the permissions for the serverless SQL endpoint. Repeat the above steps.
-
-8. Select fields from the **Fields** pane to create a simple table or create other visualizations.
-
-    ![Power BI simple table.](media/pbi-simple-table.png "Power BI simple table")
 
 ## Unlinking an Azure Synapse Link
 

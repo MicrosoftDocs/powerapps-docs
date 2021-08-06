@@ -2,7 +2,7 @@
 title: "Visualize Azure Synapse Link for Dataverse data with Power BI | MicrosoftDocs"
 description: "Learn how to visualize exported Dataverse table data with Power BI"
 ms.custom: ""
-ms.date: 06/30/2021
+ms.date: 08/06/2021
 ms.reviewer: "Mattp123"
 ms.service: powerapps
 ms.suite: ""
