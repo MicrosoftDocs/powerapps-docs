@@ -63,6 +63,8 @@ Following the steps provided above results in a new managed solution named Plug-
 
 ## Start profiling
 
+Follow these steps to begin profiling a plug-in's execution.
+
 #### [Plug-in Registration Tool](#tab/prt)
 
 1. In the Plug-in Registration tool, select the **(Step) BasicPlugin.FollowupPlugin: Create of account** step you registered earlier, and click **Start Profiling**.
@@ -120,7 +122,7 @@ In your model-driven (or other) app, create a new account to execute the plug-in
 
 ## Debug your plug-in
 
-Follow these steps to debug your plug-in.
+Follow these steps to debug your plug-in code.
 
 #### [Plug-in Registration Tool](#tab/prt)
 
@@ -177,7 +179,7 @@ Follow these steps to debug your plug-in.
 
 ## Stop profiling
 
-Follow these steps to stop profiling the plug-in execution.
+Follow these steps to stop profiling the plug-in's execution.
 
 #### [Plug-in Registration Tool](#tab/prt)
 
