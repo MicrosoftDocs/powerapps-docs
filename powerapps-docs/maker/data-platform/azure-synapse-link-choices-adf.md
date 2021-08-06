@@ -42,8 +42,6 @@ This section describes the prerequisites necessary to access Dataverse choices w
 
 - **Storage Account Access.** You must be granted one of the following roles for the storage account: Storage Blob Data Reader, Storage Blob Data Contributor, or Storage Blob Data Owner.
 
-![Access option set.](media/access-option-set.png "Access option set")
-
 ## Consuming Dataverse choices with Azure Data Factory
 
 To add a column containing the text label of the Dataverse choice using Azure Data Factory, complete the following steps:
