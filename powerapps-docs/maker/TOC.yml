@@ -2210,8 +2210,6 @@
           href: ../teams/use-the-fluent-ui-controls.md
     - name: Create additional apps
       href: ../teams/create-additional-apps.md
-    - name: Use Teams integration object
-      href: ../teams/use-teams-integration-object.md
     - name: Work with Dataverse for Teams
       items:
         - name: Overview
@@ -2243,6 +2241,14 @@
           displayName: Dataverse for Teams environment language
         - name: Dataverse for Teams FAQs
           href: ../teams/data-platform-faqs.md
+    - name: Build collaborative apps
+      items:
+        - name: Use Teams integration object
+          href: ../teams/use-teams-integration-object.md
+        - name: How to build apps for Teams
+          href: ../teams/how-templates-built.md
+        - name: When to build apps in Teams
+          href: ../teams/when-create-teams-apps.md
     - name: Manage your apps
       href: ../teams/manage-your-apps.md
     - name: Set permission and share your app
@@ -2389,8 +2395,12 @@
                   href: ../teams/profile-plus-org-specific.md
                 - name: Customize Profile+ sample app
                   href: ../teams/customize-profile-plus.md
-        - name: Customize sample apps
-          href: ../teams/customize-sample-apps.md
+        - name: Do more with sample apps
+          items:
+            - name: Customize sample apps
+              href: ../teams/customize-sample-apps.md
+            - name: Localize sample apps 
+              href: ../teams/localizing-sample-apps.md
         - name: FAQs for sample apps
           href: ../teams/sample-apps-faqs.md
     - name: Known issues and limitations
