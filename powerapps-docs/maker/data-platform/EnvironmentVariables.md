@@ -7,7 +7,7 @@ ms.subservice: dataverse-maker
 ms.author: caburk
 ms.reviewer: matp
 manager: kvivek
-ms.date: 05/27/2020
+ms.date: 08/02/2021
 ms.service: powerapps
 ms.topic: conceptual
 search.audienceType: 
@@ -49,7 +49,7 @@ Environment variables can be created and modified within the modern solution int
    - **Data Type**. Select from **Decimal number**, **Text**, **JSON**, **Two options**, or **Data source**. 
      >[!NOTE]
      >If **Data source** is the selected type, you'll also need to select the **connector**, a valid **connection** for the selected connector, and the **parameter type**. For certain parameters such as SharePoint lists, you'll also need to select a parent data source environment variable such as the SharePoint site. Once saved, these will be related in the database. 
-   - **Current Value**. Also known as the value. This column is optional and is a part of the environment variable value table. When a value is present it will be used, even if a default value is also present. Remove the value from your solution if you don't want to use it in the next environment. The values are also separated into separate JSON files within the exported solution.zip file and can be edited offline. 
+   - **Current Value**. Also known as the value. This property is optional and is a part of the environment variable value table. When a value is present it will be used, even if a default value is also present. Remove the value from your solution if you don't want to use it in the next environment. The values are also separated into separate JSON files within the exported solution.zip file and can be edited offline. More information: [How do I remove a value from an environment variable?](#how-do-i-remove-a-value-from-an-environment-variable)
    - **Default Value**. This column is part of the environment variable definition table and is not required. The default value is used if there is no current value. 
   
 
@@ -109,9 +109,10 @@ To use an environment variable in a solution cloud flow:
 The modern solution import interface includes the ability to enter values for environment variables. This sets the value property on the `environmentvariablevalue` table.
 
    >[!NOTE]
-   > You may remove the value from your solution before exporting the solution. This ensures the existing value will remain in your development environment, but will not get exported in the solution. This approach allows a new value to be provided while importing the solution into other environments. You will **not** be prompted for new values during solution import if the environment variables already have either a default value or value present; whether values are part of your solution or are already present in the target environment. 
+   > You may remove the value from your solution before exporting the solution. This ensures the existing value will remain in your development environment, but will not get exported in the solution. This approach allows a new value to be provided while importing the solution into other environments. You will **not** be prompted for new values during solution import if the environment variables already have either a default value or value present; whether values are part of your solution or are already present in the target environment. More information: [How do I remove a value from an environment variable?](#how-do-i-remove-a-value-from-an-environment-variable)
 
 ## Notifications
+
 A notification is displayed when the environment variables do not have any values. This is a reminder to set the values so that components dependent on environment variables do not fail. 
 
 
@@ -136,50 +137,59 @@ The `environmentvariabledefinition` table is [user or team owned](/powerapps/mak
 
 ## Frequently asked questions
 
-**How can I view where environment variables are being used?**
+### How can I view where environment variables are being used?
 
 Either through selecting **Show dependencies** in the solution interface, while authoring components, or in source control and in the solution file by viewing the app or flow metadata. 
 
-**Are data source environment variables the same as connections?**
+### Are data source environment variables the same as connections?
 
 No. Although they're related. A connection represents a credential or authentication required to interact with the connector. Data source environment variables store parameters that are required by one or more actions in the connector and these parameters often vary depending on the action. For example, a SharePoint Online connection does not store any information about sites, lists, or document libraries. Therefore calling the connector requires both a valid connection as well as some additional parameters. 
 
-**Can data source environment variables be used with shared connections such as SQL Server with SQL authentication?**
+### Can data source environment variables be used with shared connections such as SQL Server with SQL authentication?
 
 Generally no. Shared connections such as SQL Server with SQL authentication store the parameters required to connect to data within the connection. For example, the Server and Database name are provided when creating the connection and therefore are always derived from the connection.
 
 Data source environment variables are used for connectors that rely on user based authentication such as Azure Active Directory because the parameters cannot be derived from the connection. For these reasons SQL Server with SQL authentication, which is a shared connection, will not use data source environment variables but SQL Server with Azure Active Directory (AAD) authentication, which is a personal connection will. 
 
-**Can my automated ALM pipeline use different values files for different environments?**
+### Can my automated ALM pipeline use different values files for different environments?
 
 Yes. Solution packager accepts file name as input parameters so your pipeline can pack a different values file into the solution depending on the environment type it’s executing against.
 
-**What if someone inadvertently deletes a value?**
+### What if someone inadvertently deletes a value?
 
 If not already prevented by dependency system, runtime will use the last known value as a fallback.
 
-**If a value is changed, when does the new value get used in canvas apps and cloud flows?**
+### If a value is changed, when does the new value get used in canvas apps and cloud flows?
 
 For canvas apps, the new value will be used during the next session. For example, closing the app and then playing it again. 
 
 With cloud flows, the flows must currently be de-activated and re-activated in order to use the updated value. 
 
-**Are premium licenses required?**
+### Are premium licenses required?
 
 No. While ALM requires Dataverse (or Dynamics 365 for Customer Engagement), use of premium connectors is not required. The one caveat is if you're using the Dataverse connector to interact with environment variables as you would with other data records like accounts or contacts. Previously this was the only way to use environment variables in canvas apps and flows.  
 
-**Is there a limit to the number of environment variables I can have?**
+### Is there a limit to the number of environment variables I can have?
 
 No. However, the max size of a solution is 29 MB.
 
-**Can environment variable display names and descriptions be localized?**
+### Can environment variable display names and descriptions be localized?
 
 Yes.
 
-**Should I use environment variables instead of storing configuration data in custom tables?**
+### Should I use environment variables instead of storing configuration data in custom tables?
 
 Yes if your configuration data is not relational. Environment variables should be used for key : value pairs and when the value likely needs to different in other environments. Other tools such as the Configuration migration utility are better suited for migration of relational configuration data stored within custom tables. Unlike other configuration data, environment variables are migrated within solutions and therefore much simpler to manage and more performant to import. 
 
+### How do I remove a value from an environment variable?
+
+You might want to remove the value of an environment variable from your solution before exporting the solution. Then, the existing value will remain in your development environment, but will not be exported in the solution. This approach allows a new value to be provided while importing the solution into another environment.
+
+To remove the value, follow these steps:
+
+1. In the solution where the environment variable is located select the environment variable to display the properties.
+1. Under **Current Value**, select **...** > **Remove from this solution**.
+   :::image type="content" source="media/remove-value-env-var.png" alt-text="Remove the value from an environment variable":::
 
 ### See also
 [Power Apps Blog: Environment variables available in preview!](https://powerapps.microsoft.com/blog/environment-variables-available-in-preview/) </BR>

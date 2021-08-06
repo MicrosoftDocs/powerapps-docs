@@ -19,7 +19,7 @@ ms.assetid: f393f227-7a88-4f25-9036-780b3bf14070
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
 > [!NOTE] 
-> Effective June 2021, Microsoft Power Apps CLI is rebranded to Microsoft Power Platform CLI. More information: [Blog: Microsoft Power Platform is the best way for teams to build together](https://cloudblogs.microsoft.com/powerplatform/2021/05/25/microsoft-power-platform-is-the-best-way-for-teams-to-build-together/)
+> Effective June 2021, Microsoft Power Apps CLI is rebranded to Microsoft Power Platform CLI. More information: [Blog: Microsoft Power Platform is the best way for teams to build together](https://cloudblogs.microsoft.com/powerplatform/2021/05/25/microsoft-power-platform-is-the-best-way-for-teams-to-build-together/)<p/>Microsoft Power Platform CLI is currently not available for use in the GCC and GCC High regions.
 
 Microsoft Power Platform CLI is a simple, one-stop developer CLI that empowers developers and ISVs to perform various operations in Microsoft Power Platform related to environment lifecycle features, and to authenticate and work with Microsoft Dataverse environments, solution packages, portals, code components, and so on.  
 
@@ -75,6 +75,8 @@ This table lists some of the common commands used in the CLI.
 |[solution](#solution)|Commands for working with [Dataverse solution projects](../../maker/data-platform/solutions-overview.md).|
 |[telemetry](#telemetry)|Manages the telemetry settings.|
 
+> [!TIP]
+> For the complete list of supported commands, run the `pac` command or `pac` \<subcommand> - for example: `pac solution`.
 
 ### Admin
 
@@ -175,7 +177,7 @@ Commands to work with [Power Apps portals (Preview)](../../maker/portals/power-a
 |-------------|-----------|-------|
 |list|Lists all portal websites from the current Dataverse environment. |`pac paportal list`|
 |download|Download portal website content from the current Dataverse environment. It has the following parameters: <ul><li>*path*: Path where the website content will be downloaded (alias: -p).</li><li>*webSiteId*: Portal website ID to download (alias: -id).</li><li>*overwrite*: (Optional) true to overwrite existing content, false to fail if the folder already has website content (alias: -o).</li></ul>|`pac paportal download --path "C:\portals" --webSiteId f88b70cc-580b-4f1a-87c3-41debefeb902`|
-|upload|Upload portal website content to the current Dataverse environment. It has the following parameter:<ul><li>*path*: Path where the website content is stored (alias: -p).</li></ul>|`pac paportal upload --path "C:\portals\starter-portal"`|
+|upload|Upload portal website content to the current Dataverse environment. It has the following parameter:<ul><li>*path*: Path where the website content is stored (alias: -p).</li><li>*deploymentProfile*: Upload portal data with environment details defined through [profile variables](/powerapps/maker/portals/power-apps-cli) in *deployment-profiles/[profile-name].depoyment.yaml* file.</li></ul> |`pac paportal upload --path "C:\portals\starter-portal"`|
 
 ### PCF
 
@@ -202,7 +204,7 @@ Commands for working with [Dataverse solution projects](../../maker/data-platfor
 |add-reference|Sets the reference path to the component project folder by passing the `path` parameter.|`pac solution add-reference --path c:\Users\Downloads\SampleComponent`|
 |clone|Creates a solution project based on the existing solution project. It has the following parameters:<ul><li>*name*: The name of the solution to be exported.</li><li>*targetversion*: The version that the exported solution supports.</li><li>*include*: Settings that should be included in the solution being exported. It has the following values: autonumbering, calendar, customization, emailtracking, externalapplications, general, isvconfig, marketing, outlooksynchronization, relationshiproles, sales</li></ul>|`pac solution clone -–name  sampleSolution --version 1.0.0.2 --include general`|
 |import|Imports a Dataverse solution to an environment. It requires that you be connected to an environment [Auth commands](#auth), and has the following parameters:<ul><li>*activate-plugins*: Activates plug-ins and workflows in the environment after the import (alias: -ap).</li><li>*async*: Imports the solution asynchronously (alias: -a).</li><li>*force-overwrite*: Forces an overwrite of unmanaged customizations (alias: -f). </li><li>*import-as-holding*: Imports the solution as a holding solution (alias: -h).</li><li>*max-async-wait-time*: Maximum asynchronous wait time in minutes. Default value is 60 minutes (alias: -wt).</li><li>*path*: Path to the solution .zip file. If not specified, assumes the current folder (alias: -p).</li><li>*publish-changes*: Publishes changes after successful import (alias: -pc). </li><li>*skip-dependency-check*: Skips the dependency check against dependencies flagged as product update (alias: -s). </li><li>*convert-to-managed*: Converts the solution as managed upon import.</li></ul>|`pac solution import --path c:\Users\Documents\Solution.zip `|
-|export|Exports a Dataverse solution from an environment. It requires that you be connected to an environment [Auth commands](#auth), and has the following parameters:<ul><li>*path*: Complete file name where the exported solution .zip file will be saved.</li><li>*name*: Name of the solution that needs to be exported.</li><li>*managed*: Defines whether the solution should be exported as a managed solution.</li><li>*targetversion*: The version that the exported solution supports.</li><li>*include*: Settings that should be included in the solution being exported.</li></ul>|`pac solution export --path c:\Users\Documents\Solution.zip -- name SampleComponentSolution --managed true --targetversion 10.0.03 --include general`|
+|export|Exports a Dataverse solution from an environment. It requires that you be connected to an environment [Auth commands](#auth), and has the following parameters:<ul><li>*path*: Complete file name where the exported solution .zip file will be saved.</li><li>*name*: Name of the solution that needs to be exported.</li><li>*managed*: Defines whether the solution should be exported as a managed solution.</li><li>*targetversion*: The version that the exported solution supports.</li><li>*include*: Settings that should be included in the solution being exported.</li></ul>|`pac solution export --path c:\Users\Documents\Solution.zip --name SampleComponentSolution --managed true --targetversion 10.0.03 --include general`|
 |list|Lists all solutions from a Dataverse environment. It requires that you be connected to an environment [Auth commands](#auth). This command has no parameters.|`pac solution list`  |
 
 

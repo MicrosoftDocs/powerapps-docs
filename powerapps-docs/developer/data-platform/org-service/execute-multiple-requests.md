@@ -37,7 +37,7 @@ Custom code in the form of plug-ins and custom workflow activities can even exec
 ```csharp
 
 // Create an ExecuteMultipleRequest object.
-requestWithResults = new ExecuteMultipleRequest()
+ExecuteMultipleRequest requestWithResults = new ExecuteMultipleRequest()
 {
     // Assign settings that define execution behavior: continue on error, return responses. 
     Settings = new ExecuteMultipleSettings()

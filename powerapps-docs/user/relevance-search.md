@@ -25,6 +25,8 @@ search.app:
 
 With relevance search, the search box is always available at the top of every page in your app. You can start a new search and quickly find the information that you're looking for. 
 
+When relevance search is turned on, it becomes your default and only global search experience for all of your model-driven apps. You won't be able to switch to [quick find search also known as categorized search](quick-find.md).
+
 > [!div class="mx-imgBorder"]
 > ![Search box in the header for an app.](media/new-search-exp.png "Search box in the header for an app")
 
@@ -167,6 +169,7 @@ Relevance search has a powerful set of capabilities to help you put Microsoft Da
 > [!NOTE]
 > - Relevance search is text-based, and can search only on columns of type **Single line of text**, **Multiple lines of text**, **Choice**, or **Lookup**. Columns of type **Numeric**, **Date**, and **File** aren't searched on.
 > - Relevance search enables you to search for rows that are shared with you and rows that you own. Hierarchical security models aren't supported. This means that even if you see a row in Dataverse because you have access to it through hierarchical security, you won't see that row matched by relevance search unless you own it or it was shared with you.
+> - Relevance search supports column level security. This means that a user with access to a restricted column can search for the column and will see it in the search results. A user that doesn't have permission to the restricted column won't be able to search or see results for the column.
 
 - **Boosted search results**  
   Use important attributes as keywords to "boost" your search for information. Entering a table type to boost search results is an easy way to indicate which results you prefer. For example, searching for **Susan Adatum** indicates that you're looking for a contact **Susan** related to the account **Adatum**.
