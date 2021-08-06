@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/11/2021
+ms.date: 08/05/2021
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: tapanm
@@ -44,6 +44,9 @@ When creating or editing a webpage, an **Basic Form** can be specified in the lo
 The various master pages used by the portal contain declarations of the **TableForm** server control. When rendering the webpage containing either the Page (~/Pages/Page.aspx) page template or Full Page (~/Pages/FullPage.aspx) page template, the controls will determine whether the basic form lookup contains a value, in which case the form will be rendered.
 
 ## Secure your forms
+
+>[!NOTE]
+> This method of securing forms would be deprecated soon. Therefore, it shouldn't be used. Use proper [table permissions](entity-permissions-studio.md), and web role setup to provide access to users for any data instead. More information: [Table permissions changes for forms and lists on new portals](#table-permissions-changes-for-forms-and-lists-on-new-portals)
 
 To secure your forms, you must create table permissions that determine access and ownership of the records according to web roles. If a user lands on a basic form and does not have permissions, they will receive an error message. To enable permissions for a basic form, set **Enable Table Permissions** to true. [!INCLUDE[proc-more-information](../../../includes/proc-more-information.md)] [Create web roles for portals](create-web-roles.md).  
 
