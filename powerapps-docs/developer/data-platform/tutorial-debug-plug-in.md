@@ -69,8 +69,12 @@ Following the steps provided above results in a new managed solution named Plug-
 
     ![Start profiling.](media/tutorial-debug-plug-in-start-profiling.png)
 
-    > [!TIP]
-    > For alternate information about running the profiler installed with the Plug-in Registration Tool see [Run the plug-in profiler from a Command Prompt window](#run-profiler-standalone).
+1. When presented with the **Profiler Settings** dialog, accept the default settings and click **OK** to close the dialog.
+
+    ![Profiler settings.](media/tutorial-debug-plug-in-profiler-settings.png)
+
+> [!TIP]
+> For alternate information about running the profiler installed with the Plug-in Registration Tool see [Run the plug-in profiler from a Command Prompt window](#run-profiler-standalone).
 
 #### [Power Platform Tools](#tab/pptools)
 
@@ -80,11 +84,11 @@ Following the steps provided above results in a new managed solution named Plug-
 
 1. Right click the step registration (the lowest level node) of the plug-in and choose **Start Profiling**.
 
+1. When presented with the **Profiler Settings** dialog, accept the default settings and click **OK** to close the dialog.
+
+    ![Profiler settings.](media/tutorial-debug-plug-in-profiler-settings.png)
+
 ---
-
-When presented with the **Profiler Settings** dialog, accept the default settings and click **OK** to close the dialog.
-
-![Profiler settings.](media/tutorial-debug-plug-in-profiler-settings.png)
 
 ## Capture a profile
 
@@ -96,70 +100,98 @@ In your model-driven (or other) app, create a new account to execute the plug-in
 
     ![Click Debug.](media/tutorial-debug-plug-in-capture-profile-debug.png)
 
+1. In the **Replay Plug-in Execution** dialog, on the **Setup** tab, click the ![Select profile command.](media/tutorial-debug-plug-in-select-profile-command.png) icon to open the **Select Profile from CRM** dialog.
+
+1. In the **Select Profile from CRM** dialog, select the profile where **Type Name** equals **BasicPlugin.FollowupPlugin** and represents the profile captured when you last triggered the plug-in.
+
+    ![Select Profile from CRM dialog.](media/tutorial-debug-plug-in-select-profile-dialog.png)
+
 #### [Power Platform Tools](#tab/pptools)
 
 1. In Solution Explorer, right-click the plug-in class file in the plug-in library project and choose **Debug**.
 
----
+1. In the **Replay Plug-in Execution** dialog, on the **Setup** tab, click the ![Select profile command.](media/tutorial-debug-plug-in-select-profile-command.png) icon to open the **Select Profile from CRM** dialog.
 
-2. In the **Replay Plug-in Execution** dialog, on the **Setup** tab, click the ![Select profile command.](media/tutorial-debug-plug-in-select-profile-command.png) icon to open the **Select Profile from CRM** dialog.
-
-3. In the **Select Profile from CRM** dialog, select the profile where **Type Name** equals **BasicPlugin.FollowupPlugin** and represents the profile captured when you last triggered the plug-in.
+1. In the **Select Profile from CRM** dialog, select the profile where **Type Name** equals **BasicPlugin.FollowupPlugin** and represents the profile captured when you last triggered the plug-in.
 
     ![Select Profile from CRM dialog.](media/tutorial-debug-plug-in-select-profile-dialog.png)
 
+---
+
 ## Debug your plug-in
+
+Follow these steps to debug your plug-in.
+
+#### [Plug-in Registration Tool](#tab/prt)
 
 1. In the **Replay Plug-in Execution** dialog, on the **Setup** tab, in the **Specify Assembly** section, click the ellipses (**…**) button and choose the location of your `BasicPlugin.dll`.
 
     ![Replay plug-in execution.](media/tutorial-debug-plug-in-replay-plug-in-execution.png)
 
-2. In your Visual Studio project, set a break point in your plug-in class.
+1. In your Visual Studio project, set a break point in your plug-in class.
 
     ![Set a break point.](media/tutorial-debug-plug-in-set-break-point.png)
 
-#### [Plug-in Registration Tool](#tab/prt)
-
-3. In your Visual Studio project, select **Debug** > **Attach to Process…**.
+1. In your Visual Studio project, select **Debug** > **Attach to Process…**.
 
     ![Attach to process command.](media/tutorial-debug-plug-in-attach-to-process.png)
 
-4. Select the **PluginRegistration.exe** process and click **Attach**.
+1. Select the **PluginRegistration.exe** process and click **Attach**.
 
     ![Attach to process dialog.](media/tutorial-debug-plug-in-attach-to-process-dialog.png)
 
     > [!NOTE]
     > You should see that the Plug-in Registration tool is now running in debug mode.
 
-#### [Power Platform Tools](#tab/pptools)
-
-Continue with step #5
-
----
-
-5. In the **Replay Plug-in Execution** dialog, click **Start Execution**.
+1. In the **Replay Plug-in Execution** dialog, click **Start Execution**.
 
     ![Start Execution.](media/tutorial-debug-plug-in-replay-plug-in-execution-debug.png)
 
-6. In your Visual Studio project, you should see that the code is paused at the breakpoint you set earlier.
+1. In your Visual Studio project, you should see that the code is paused at the breakpoint you set earlier.
 
     ![Breakpoint hit.](media/tutorial-debug-plug-in-breakpoint-hit.png)
 
-7. You can now step through your code to debug.
+1. Step through your code to debug.
+
+#### [Power Platform Tools](#tab/pptools)
+
+1. In the **Replay Plug-in Execution** dialog, on the **Setup** tab, in the **Specify Assembly** section, click the ellipses (**…**) button and choose the location of your `BasicPlugin.dll`.
+
+    ![Replay plug-in execution.](media/tutorial-debug-plug-in-replay-plug-in-execution.png)
+
+1. In your Visual Studio project, set a break point in your plug-in class.
+
+    ![Set a break point.](media/tutorial-debug-plug-in-set-break-point.png)
+
+1. In the **Replay Plug-in Execution** dialog, click **Start Execution**.
+
+    ![Start Execution.](media/tutorial-debug-plug-in-replay-plug-in-execution-debug.png)
+
+1. In your Visual Studio project, you should see that the code is paused at the breakpoint you set earlier.
+
+    ![Breakpoint hit.](media/tutorial-debug-plug-in-breakpoint-hit.png)
+
+1. Step through your code to debug.
+
+---
 
 ## Stop profiling
 
-1. Close the **Replay Plug-in Execution** dialog
+Follow these steps to stop profiling the plug-in execution.
 
 #### [Plug-in Registration Tool](#tab/prt)
 
-2. In the Plug-in Registration tool, click **Stop Profiling**.
+1. Close the **Replay Plug-in Execution** dialog
+
+1. In the Plug-in Registration tool, click **Stop Profiling**
 
     ![Stop profiling.](media/tutorial-debug-plug-in-stop-profiling.png)
 
 #### [Power Platform Tools](#tab/pptools)
 
-2. In the **Power Platform Explorer** view, right-click the step registration node (lowest level node) of the plug-in assembly and choose **Stop Profiling**.
+1. Close the **Replay Plug-in Execution** dialog
+
+1. In the **Power Platform Explorer** view, right-click the step registration node (lowest level node) of the plug-in assembly and choose **Stop Profiling**
 
 ---
 
