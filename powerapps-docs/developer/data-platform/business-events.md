@@ -25,7 +25,7 @@ Automation of business logic and integration with other systems are driven by ev
 - Power Automate Flows
 - Azure Service Bus
 - Azure Event Hub
-- Web Hooks
+- Webhooks
 - Dataverse plug-ins
 
 Dataverse has a robust event framework to capture system events *within* Dataverse. You can respond to events within the system using the Dataverse Event Framework. This isn't changing. More information [Event framework](event-framework.md)

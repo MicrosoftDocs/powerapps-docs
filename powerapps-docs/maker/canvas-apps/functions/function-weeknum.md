@@ -46,12 +46,12 @@ If you pass a single number to these functions, the return value is a single res
 
 ## Syntax
 
-**WeekNum**( *DateTime* [, *StartOfWeek* ] )
+**WeekNum**(*DateTime* [, *StartOfWeek* ])
 
 - *DateTime* - Required.  Date/Time value to operate on.  
 - *StartOfWeek* - Optional.  Excel code or StartOfWeek enumeration that determines which day the week begins.
 
-**ISOWeekNum**( *DateTime* )
+**ISOWeekNum**(*DateTime*)
 
 - *DateTime* - Required.  Date/Time value to operate on.  The week always begins on Monday.
 
