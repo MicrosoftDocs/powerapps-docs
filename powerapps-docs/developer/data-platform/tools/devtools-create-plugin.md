@@ -182,6 +182,12 @@ Learn more about plug-in development
 > [!div class="nextstepaction"]
 > [Next step](../plug-ins.md#next-steps)
 
+## Providing tool feedback
+
+You can send tool feedback to Microsoft using the feedback icon in the Power Platform Explorer view.
+
+:::image type="content" source="../media/tools/devtools-feedback-dialog(small).png" alt-text="Provide feedback." lightbox="../media/tools/devtools-feedback-dialog.png":::
+
 ### See Also
 
 *Power Platform Tools specific articles*  
