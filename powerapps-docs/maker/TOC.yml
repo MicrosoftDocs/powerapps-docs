@@ -1750,9 +1750,9 @@
       items:
         - name: Set up Power BI integration
           href: ./portals/admin/set-up-power-bi-integration.md
-        - name: Add a Power BI as a component to a webpage
+        - name: Add Power BI as a component to a webpage
           href: ./portals/add-powerbi.md
-        - name: Add a Power BI using powerbi liquid tag
+        - name: Add Power BI using powerbi liquid tag
           href: ./portals/admin/add-powerbi-report.md
     - name: How-to guides for extending portals
       items:
