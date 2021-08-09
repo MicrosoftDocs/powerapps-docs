@@ -189,6 +189,8 @@ Other elements include:
 
 **[in](functions/operators.md#in-and-exactin-operators)** – Checks if a text string is contained within another text string or table, case independent.  Also used to check if a record is in a table.
 
+**[Int](functions/function-round.md)** – Rounds down to the nearest integer.
+
 **[IsBlank](functions/function-isblank-isempty.md)** – Checks for a [blank](functions/function-isblank-isempty.md) value.
 
 **[IsBlankOrError](functions/function-iferror.md)** – Checks for a [blank](functions/function-isblank-isempty.md) value or error.
@@ -383,6 +385,8 @@ Other elements include:
 **[Trim](functions/function-trim.md)** – Removes extra spaces from the ends and interior of a string of text.
 
 **[TrimEnds](functions/function-trim.md)** – Removes extra spaces from the ends of a string of text only.
+
+**[Trunc](functions/function-round.md)** – Truncates the number to only the integer portion by removing any decimal portion.
 
 ## U
 **[Ungroup](functions/function-groupby.md)** – Removes a grouping.
