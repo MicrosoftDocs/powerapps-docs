@@ -713,6 +713,8 @@
             href: ./canvas-apps/functions/function-ismatch.md
           - name: IsNumeric
             href: ./canvas-apps/functions/function-isnumeric.md
+          - name: ISOWeekNum
+            href: ./canvas-apps/functions/function-weeknum.md            
           - name: IsToday
             href: ./canvas-apps/functions/function-now-today-istoday.md
           - name: IsType
@@ -917,6 +919,8 @@
             href: ./canvas-apps/functions/function-form.md
           - name: Weekday
             href: ./canvas-apps/functions/function-datetime-parts.md
+          - name: WeekNum
+            href: ./canvas-apps/functions/function-weeknum.md
           - name: With
             href: ./canvas-apps/functions/function-with.md
           - name: Year
