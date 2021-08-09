@@ -699,6 +699,8 @@
             href: ./canvas-apps/functions/function-iferror.md
           - name: in
             href: ./canvas-apps/functions/operators.md#in-and-exactin-operators
+          - name: Int
+            href: ./canvas-apps/functions/function-round.md
           - name: IsBlank
             href: ./canvas-apps/functions/function-isblank-isempty.md
           - name: IsBlankOrError
@@ -889,6 +891,8 @@
             href: ./canvas-apps/functions/function-trim.md
           - name: TrimEnds
             href: ./canvas-apps/functions/function-trim.md
+          - name: Trunc
+            href: ./canvas-apps/functions/function-round.md            
           - name: Ungroup
             href: ./canvas-apps/functions/function-groupby.md
           - name: Unrelate
@@ -1409,10 +1413,12 @@
     href: ../mobile/run-powerapps-on-mobile.md
   - name: Use model-driven apps on mobile
     href: ../mobile/use-custom-model-driven-app-on-mobile.md
+  - name: Use relevance search on Power Apps Mobile  
+    href: ../mobile/relevance-search-mobile.md  
+  - name: Set app display to dark or light mode  
+    href: ../mobile/display-mode.md
   - name: Configure mobile offline synchronization 
     href: ../mobile/setup-mobile-offline.md 
-  - name: Use relevance search on Power Apps Mobile  
-    href: ../mobile/relevance-search-mobile.md 
   - name: Work offline on your mobile device 
     href: ../mobile/work-in-offline-mode.md  
   - name: Create push notifications for Power Apps Mobile
@@ -2395,8 +2401,14 @@
                   href: ../teams/profile-plus-org-specific.md
                 - name: Customize Profile+ sample app
                   href: ../teams/customize-profile-plus.md
-        - name: Customize sample apps
-          href: ../teams/customize-sample-apps.md
+        - name: Do more with sample apps
+          items:
+            - name: Customize sample apps
+              href: ../teams/customize-sample-apps.md
+            - name: Localize sample apps 
+              href: ../teams/localizing-sample-apps.md
+            - name: Theming in sample apps 
+              href: ../teams/sample-app-theming.md
         - name: FAQs for sample apps
           href: ../teams/sample-apps-faqs.md
     - name: Known issues and limitations
