@@ -28,7 +28,7 @@ Description: `The field '{0}' contains one or more invalid characters.`<br />
 
 These characters are sometimes found in email content that includes replies or when text is copied from an another source which may have characters to control presentation.
 
-Applications that work with data that can contain these characters should always HTML Encode the content before saving.
+Applications that work with data that can contain these characters should always HTML Encode the content before saving. 
 
 ### See Also
 
