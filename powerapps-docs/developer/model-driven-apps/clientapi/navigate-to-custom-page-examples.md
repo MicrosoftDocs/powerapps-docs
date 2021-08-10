@@ -211,9 +211,9 @@ This example uses the `recordId` parameter within the [navigateTo](reference/Xrm
     ```
 ### Open from a selected record in editable grid as a centered dialog with record ID
 
-Editable grid can be used to trigger [OnRecordSelect](reference/events/grid-onrecordselect) event for scenarios where you want to run an action when a particular record is selected in a view. This example uses the `recordId` parameter within the [navigateTo](reference/Xrm-Navigation/navigateTo.md) function to provide the custom page with the record to use. The record ID is retrieved using the getId method in [GridEntity](reference/grids/gridentity) object. The `Param` function within the custom page retrieves the value and uses the Lookup function to retrieve the record. 
+Editable grid can be used to trigger [OnRecordSelect](reference/events/grid-onrecordselect.md) event for scenarios where you want to run an action when a particular record is selected in a view. This example uses the `recordId` parameter within the [navigateTo](reference/Xrm-Navigation/navigateTo.md) function to provide the custom page with the record to use. The record ID is retrieved using the getId method in [GridEntity](reference/grids/gridentity.md) object. The `Param` function within the custom page retrieves the value and uses the Lookup function to retrieve the record. 
 
-1. [Enable editable grid](https://docs.microsoft.com/en-us/powerapps/developer/model-driven-apps/use-editable-grids) control in the table.
+1. [Enable editable grid](../../../developer/model-driven-apps/use-editable-grids.md) control in the table.
 
 1. Create a web resource of type **JScript** and update the **name** parameter to be the logical page name. Add the following code to the web resource.
 
