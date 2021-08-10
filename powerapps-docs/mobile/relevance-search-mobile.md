@@ -64,9 +64,8 @@ View suggested search results inline as you type, minimizing keystrokes and simp
  1. To use the barcode scanner, select the search button.
  2. Select the barcode scanner button and then scan your item.
 
-
-   > [!div class="mx-imgBorder"]
-   > ![Select the barcode scanner.](media/bar-code-scanner.png "Barcode scanner")
+    > [!div class="mx-imgBorder"]
+    > ![Select the barcode scanner.](media/bar-code-scanner.png "Barcode scanner")
  
 
 ## View search results
