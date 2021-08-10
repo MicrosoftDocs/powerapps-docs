@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: nkrb
-ms.date: 03/23/2021
+ms.date: 08/09/2021
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
@@ -202,6 +202,8 @@ Other elements include:
 **[IsMatch](functions/function-ismatch.md)** – Checks a string against a pattern.  Regular expressions can be used.
 
 **[IsNumeric](functions/function-isnumeric.md)** – Checks for a numeric value.
+
+**[ISOWeekNum](functions/function-weeknum.md)** – Returns the ISO week number of a date/time value.
 
 **[IsToday](functions/function-now-today-istoday.md)** – Checks whether a date/time value is sometime today.
 
@@ -414,6 +416,8 @@ Other elements include:
 
 ## W
 **[Weekday](functions/function-datetime-parts.md)** – Retrieves the weekday portion of a date/time value.
+
+**[WeekNum](functions/function-weeknum.md)** – Returns the week number of a date/time value.
 
 **[With](functions/function-with.md)** – Calculates values and performs actions for a single record, including inline records of named values.
 
