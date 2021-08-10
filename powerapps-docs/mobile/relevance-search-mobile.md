@@ -5,7 +5,7 @@ author: mduelae
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 04/15/2021
+ms.date: 08/10/2021
 ms.subservice: mobile
 ms.author: mkaur
 ms.custom: ""
