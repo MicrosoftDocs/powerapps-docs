@@ -2,7 +2,7 @@
 title: Use the rich text editor control in Power Apps | MicrosoftDocs
 description: "The rich text editor control provides the app user a WYSIWYG editing area for formatting text"
 ms.custom: ""
-ms.date: 07/22/2021
+ms.date: 08/10/2021
 ms.reviewer: "matp"
 ms.service: powerapps
 ms.suite: ""
@@ -785,7 +785,6 @@ A. Large content size can cause latency. For more information, see [Best practic
 > [!div class="mx-imgBorder"] 
 > ![HTML markup displayed in a column on a subgrid.](media/html-markup-issue.png)
 
-- Don't replace the email activity control with the rich text editor control because it impacts the way images need to be saved and converted. We are working to fully enable using RTE as a replacement for the email activity editor in a future release.
 
 ### See also
 
