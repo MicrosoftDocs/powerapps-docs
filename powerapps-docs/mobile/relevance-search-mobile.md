@@ -53,6 +53,22 @@ View suggested search results inline as you type, minimizing keystrokes and simp
    > [!div class="mx-imgBorder"]
    > ![See suggested results as you type.](media/suggested-results.png "See suggested results as you type")
 
+
+
+## Early access: Use the barcode scanner
+
+ [!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
+ 
+ If you're on [early access](/power-platform/admin/opt-in-early-access-updates), you can use the barcode scanner to look up rows. The scanner automatically detects a barcode, a QR code, or a data-matrix code.
+ 
+ 1. To use the barcode scanner, select the search button.
+ 2. Select the barcode scanner button and then scan your item.
+
+
+   > [!div class="mx-imgBorder"]
+   > ![Select the barcode scanner.](media/bar-code-scanner.png "Barcode scanner")
+ 
+
 ## View search results
 
 Search results are ranked and grouped by table.
