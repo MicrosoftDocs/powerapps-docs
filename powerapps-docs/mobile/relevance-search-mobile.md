@@ -61,6 +61,8 @@ View suggested search results inline as you type, minimizing keystrokes and simp
  
  If you're on [early access](/power-platform/admin/opt-in-early-access-updates), you can use the barcode scanner to look up rows. The scanner automatically detects a barcode, a QR code, or a data-matrix code.
  
+ You also enter text in the search box such as **contoso** and then use the barcode scanner to scan a barcode, such as **12345**. In this case, the system will search for **contoso12345**.
+ 
  1. To use the barcode scanner, select the search button.
  2. Select the barcode scanner button and then scan your item.
 
