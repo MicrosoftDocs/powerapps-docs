@@ -55,43 +55,40 @@ This section describes the prerequisites necessary to consume Dataverse data wit
 
 1. Open Power BI Desktop, and sign in.
 
-2. Select **Get data** > **More**.
+1. Select **Get data** > **More**.
 
-3. On the **Get Data** page, select **Azure** > **Azure Data Lake Storage Gen2** > **Connect.**
+1. On the **Get Data** page, select **Azure** > **Azure Data Lake Storage Gen2** > **Connect.**
 
-4. Enter the storage container name in the format<br>*https://accountname.dfs.core.windows.net/containername/* and replace **accountname** and **containername** with your storage account's information.
-
-5. Find the storage account name by going to **Azure** > **Storage accounts**, and then select the Data Lake Storage Gen2 account that's populated with the exported Dataverse data.
-
-6. Find the container name by going to **Storage Explorer (preview)** > **Containers** and select the name of the container with the exported Dataverse data.
-
+1. Enter the storage container name in the format<br>*https://accountname.dfs.core.windows.net/containername/* and replace **accountname** and **containername** with your storage account's information.
+   -  Find the storage account name by going to **Azure** > **Storage accounts**, and then select the Data Lake Storage Gen2 account that's populated with the exported Dataverse data.
+   - Find the container name by going to **Storage Explorer (preview)** > **Containers** and select the name of the container with the exported Dataverse data.
     ![Find the storage container name.](media/find-container-name.png "Find the storage container name")
 
-7. Select **CDM Folder View (Beta)**, and then select **OK**.
+1. Select **CDM Folder View (Beta)**, and then select **OK**.
 
-8. If prompted to sign in, you can sign in with your Azure Active Directory account or with the **Account key**. To sign in with an **Account key**, select the option from the left side bar.
+1. If prompted to sign in, you can sign in with your Azure Active Directory account or with the **Account key**. To sign in with an **Account key**, select the option from the left side bar.
 
-9. Find the account key by going back to the storage account settings and selecting **Access keys** from the left pane. Copy the first key and paste it in Power BI. Select **OK**.
+1. Find the account key by going back to the storage account settings and selecting **Access keys** from the left pane. Copy the first key and paste it in Power BI. Select **OK**.
 
     ![Copy the access key.](media/copy-access-key.png "Copy the access key")
 
-10. After successfully connecting to your storage account, expand the **cdm** directory and select the tables that you want to analyze. Then, select **Load**.
+1. After successfully connecting to your storage account, expand the **cdm** directory and select the tables that you want to analyze. Then, select **Load**.
 
     ![Load account data.](media/load-account-data.png "Load account data")
 
-## Create a Power BI report with account revenue by account owner
+## Create a Power BI report with account revenue by account name
 
-1. Under the **Visualizations** menu, select **Pie Chart**.
+1. Under the **Visualizations** menu, select **Treemap**.
 
     ![Pie chart.](media/pie-chart.png "Pie chart")
 
-2. On the **Columns** menu, search for and select the columns **ownerid** and **revenue**. The columns will appear on the **Visualizations** menu under **Legend** and **Values**, respectively.
+2. On the **Columns** menu, search for and select the columns **name** and **revenue**. After you select them, the columns will appear on the **Visualizations** menu for the legend and values, respectively.
 
     ![Search for and select the revenue column.](media/select-fields.png "Search for and select the revenue column")
 
-   A pie chart appears that separates each account owner by color and displays the total revenue of accounts.
+   A tree map chart appears that separates each account name by color and indicates the total revenue for each account by size.
 
-    ![Colorful pie chart showing the total revenue and owner of ten individual accounts.](media/account-data-pie-chart.png "Colorful pie chart showing the total revenue and owner of ten individual accounts")
+    ![Colorful tree map chart showing the total revenue and name of ten individual accounts.](media/account-data-pie-chart.png "Colorful tree map chart showing the total revenue and name of ten individual accounts")
 
 ### See also
 
