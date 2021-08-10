@@ -2,7 +2,7 @@
 title: "Entity class operations using the Organization service (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about the Entity class used for data operations using the Microsoft Dataverse organization service" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 05/26/2021
+ms.date: 08/04/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -78,8 +78,9 @@ In the late-bound style, you need to know the <xref:Microsoft.Xrm.Sdk.Metadata.A
 - View the definition of the column (attribute) in the web application customization tools
 - For system tables, you can review the [Table/entity Reference](../reference/about-entity-reference.md)
 - Use a tool to browse the table definitions, such as the Metadata Browser described in [Browse the metadata for your environment](../browse-your-metadata.md)
+- View the list of derived classes on the <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata> reference page
 
-Attribute types can be any of the following:
+Attribute types can be any of the following. This is a partial list.
 
 |Type|Description|
 |--|--|

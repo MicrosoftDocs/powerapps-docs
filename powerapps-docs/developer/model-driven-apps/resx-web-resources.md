@@ -2,7 +2,7 @@
 title: "String (RESX) web resources (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about using string web resources to make localized strings available for use" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 04/14/2021
+ms.date: 08/06/2021
 ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
@@ -26,15 +26,21 @@ RESX web resources contain the keys and localized string values for a single lan
 
 [!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
 
-When you create RESX web resources you must explicitly set the language value and include the locale identifier (LCID) for the appropriate language in the name of the web resource. For example, `new_/strings/MyAppResources.1033.resx` would contain resources for English language. See [Microsoft locale ID values](/previous-versions/windows/embedded/ms912047(v=winembedded.10)) for a list of LCID values.
+When you create RESX web resources you must explicitly set the language value and include the locale identifier (LCID) for the appropriate language in the name of the web resource. For example, `new_/strings/MyAppResources.1033.resx` would contain resources for English language.  See [Microsoft locale ID values](/previous-versions/windows/embedded/ms912047(v=winembedded.10)) for a list of LCID values.
 
-To extract the localized value use the [Xrm.Utility.getResourceString](clientapi/reference/Xrm-Utility/getResourceString.md) function. This function accepts two parameters: `WebResourceName` and `keyValue`. 
+> [!NOTE]
+> If you have multiple RESX web resources with the same name for multiple languages, ensure there is a localized string value for each resource key.
 
-For example `Xrm.Utility.getResourceString("new_/strings/MyAppResources","hello")` will return the localized string value for the resource key hello within the `new_/strings/MyAppResources.1033.resx` web resource if the user’s preferred language is English. Notice that the function doesn’t refer to any specific language or full name of any RESX web resource. This functionality depends on the RESX web resource being associated to the calling JavaScript web resource as a dependency. More information: [Web resource dependencies](web-resource-dependencies.md).
+The appropriate string value will be determined by the individual user’s language preference and the languages available in the organization. This is done in two steps.
 
-The appropriate string value will be determined by the individual user’s language preference and the languages available in the organization. If a localized string is not found that matches the user’s language preference, the localized string will automatically fallback to the base language for the organization. If no matching localized string is found for the organizations base language, a null value will be returned.
+1. Determining the right RESX web resource: If there is a RESX web resource for user’s preferred language, that RESX will be used. If a RESX web resource for user’s preferred language is not found, then the RESX web resource for base language is chosen.
+2. Returning the string value: Within the chosen RESX web resource in Step 1, the string corresponding to the resource key is returned. If the RESX web resource that matches the user’s preferred language does not have the resource key, a null response is returned.
+ 
+For example, `Xrm.Utility.getResourceString("new_/strings/MyAppResources","hello")` will return the localized string value for the resource key hello within the `new_/strings/MyAppResources.1033.resx` web resource if the user’s preferred language is English. If the user’s preferred language is Spanish/Spain, then the localized string value for the resource key hello within the `new_/strings/MyAppResources.1034.resx` web resource is returned. If there is no resource key hello in `new_/strings/MyAppResources.1034.resx` web resource, then a null response is returned. You can see that the function doesn’t refer to any specific language or full name of any RESX web resource. This functionality depends on the RESX web resource being associated to the calling JavaScript web resource as a dependency. More information: [Web resource dependencies](web-resource-dependencies.md)
+
 
 ### See also
+
 [Web resources](web-resources.md)<br />
 [Create accessible web resources](create-accessible-web-resources.md)<br />
 [Web resource dependencies](web-resource-dependencies.md)<br />

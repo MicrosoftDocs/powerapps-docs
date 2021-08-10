@@ -2,7 +2,7 @@
 title: "Overview of the model-driven app form designer | MicrosoftDocs"
 description: Learn about the form designer for model-driven apps.
 ms.custom: intro-internal
-ms.date: 08/26/2019
+ms.date: 08/04/2021
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -36,9 +36,11 @@ The form designer interface has the following areas:
     - **Columns** pane to add columns to a form.
     - **Components** pane to add components to a form.
     - **Tree view** to see the hierarchy of components on the form and select them.
+    - **Form libraries** pane is where form libraries can be viewed and added. More information: [Configure model-driven app form event handlers](configure-event-handlers-legacy.md)
 
 1. Property pane – Displays properties of the selected element, and also allows you to make changes.
 1. Preview size switcher - Changes the size of the form preview helping you to see how the form will appear on various screen sizes.
+1. Show hidden - Displays hidden columns in the form preview area. By default, this option is turned off and hidden columns don't appear on the form preview and are visible only from the tree view pane. When enabled, columns that are hidden are indicated in the form preview area with ![Hidden column indicator icon](media/hidden-column.png).
 1. Zoom slider - Zooms in or out of the form preview helping you take a closer look.
 1. Fit to width - Quick action to fit the form preview to the available width.
 
