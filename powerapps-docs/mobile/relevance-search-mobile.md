@@ -27,7 +27,9 @@ You can quickly find the information that you're looking for by using relevance 
 
 Relevance search is already available when you're using a model-driven app in a web browser. The functionality is the same in Power Apps Mobile, but it works a little differently. More information: [Search for tables and rows by using relevance search](../user/relevance-search.md)
 
-Before you begin using relevance search, the new experience needs to be enabled by the administrator for your organization. More information: [Enable the new relevance search experience](/power-platform/admin/configure-relevance-search-organization#enable-the-new-relevance-search-experience)<!--note from editor: Edit to alt text suggested. This isn't really a "diagram," which is a line drawing such as a conceptual illustration.-->
+Before you begin using relevance search, the new experience needs to be enabled by the administrator for your organization. More information: [Enable the new relevance search experience](/power-platform/admin/configure-relevance-search-organization#enable-the-new-relevance-search-experience)
+
+When relevance search is turned on, it becomes your default and only global search experience for all of your model-driven apps. You won't be able to switch to [quick find search also known as categorized search](quick-find.md).
 
   > [!div class="mx-imgBorder"]
   > ![Demonstration of how relevance search works in a model-driven app running on Power Apps Mobile.](media/powerapps-mobile-rel-search.gif "Demonstration of how relevance search works in a model-driven app running on Power Apps Mobile")
