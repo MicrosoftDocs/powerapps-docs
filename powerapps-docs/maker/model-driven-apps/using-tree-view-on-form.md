@@ -13,6 +13,7 @@ applies_to:
   - "Dynamics 365 Version 9.x"
   - "PowerApps"
 author: "Aneesmsft"
+ms.subservice: mda-maker
 ms.author: "matp"
 manager: "kvivek"
 tags: 
@@ -33,7 +34,7 @@ You can also use the tree view to select columns and components present on the f
 You can expand or collapse nodes in the tree view to see or hide the elements within a node. When you select an element in the tree view, it becomes highlighted in the form preview, and the property pane displays the properties for the element. 
 
 > [!div class="mx-imgBorder"] 
-> ![Tree view](media/FormDesignerTreeView.png "Tree view")
+> ![Tree view.](media/FormDesignerTreeView.png "Tree view")
 
 ### Open the tree view 
 1. Open the form designer to create or edit a form. 

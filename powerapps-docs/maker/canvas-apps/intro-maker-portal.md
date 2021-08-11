@@ -8,11 +8,14 @@ ms.topic: conceptual
 ms.custom: intro-internal
 ms.reviewer: 
 ms.date: 06/15/2021
+ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
 ---
 # Sign in to Power Apps for the first time
 
@@ -22,15 +25,15 @@ You can select options in three general areas:
 
 - The header along the top of the page
 
-    ![Header for environment selection](media/intro-maker-portal/header.png)
+    ![Header for environment selection.](media/intro-maker-portal/header.png)
 
 - The navigation bar along the left side of the page
 
-    ![Navigation bar](media/intro-maker-portal/nav-bar.png)
+    ![Navigation bar.](media/intro-maker-portal/nav-bar.png)
 
 - The large icons that feature prominently in the middle of the page
 
-    ![Center area of the home page](media/intro-maker-portal/center-area.png)
+    ![Center area of the home page.](media/intro-maker-portal/center-area.png)
 
 For best results, start by ensuring that the home page is set to the right environment.
 
@@ -40,7 +43,7 @@ Whether you're creating an app, a flow, a data connection, or a table in Microso
 
 To verify which environment you're in, find the environment switcher near the right side of the header.
 
-![Environment switcher](media/intro-maker-portal/environment-switcher.png)
+![Environment switcher.](media/intro-maker-portal/environment-switcher.png)
 
 If you create an app in one environment, you won't be able to see it from another environment. In addition, people who want to run your app must have access to the environment in which you created it.
 
@@ -66,7 +69,7 @@ If you've created an app (or someone else has created one and shared it with you
 
 On the **Apps** page, you can filter the list of apps based on criteria such as whether you opened it recently.
 
-![list of apps](./media/intro-maker-portal/find-apps.png)
+![list of apps.](./media/intro-maker-portal/find-apps.png)
 
 You can also search for an app by typing one or more characters in the search bar, which appears near the upper-right corner. When you find the app you want, select the banner icon to play or edit the app.
 
@@ -87,7 +90,7 @@ You can find more information about either canvas apps or model-driven apps in t
 - In the left navigation bar, select **Learn**.
 - In the header, select the question mark icon.
 
-    ![List of model-driven apps with an ellipsis menu open](media/intro-maker-portal/help-icon.png)
+    ![List of model-driven apps with an ellipsis menu open.](media/intro-maker-portal/help-icon.png)
 
 Both options show links to this documentation set, Power Apps training on Microsoft Learn, the Power Apps Community (where you can share information with users in other organizations), and the Power Apps blog (where the newest features are announced).
 

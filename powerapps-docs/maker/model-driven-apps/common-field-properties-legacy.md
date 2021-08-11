@@ -3,6 +3,7 @@ title: Model-driven app common column properties in Power Apps | MicrosoftDocs
 description: Understand how to view the common column properties for a main form.
 Keywords: Main form; Common column properties; Dynamics 365
 author: Mattp123
+ms.subservice: mda-maker
 ms.author: matp
 manager: kvivek
 ms.date: 02/25/2020
@@ -54,7 +55,7 @@ Columns in a form display controls people use to view or edit data in a table ro
 
 You can access common **Field properties** in solution explorer. Under **Components**, expand **Entities**, expand the table you want, and then select **Forms**. In the list of forms, open the form of type **Main**. Then double-click one of the columns to view common column properties.
 
-![Common column properties in solution explorer](media/common-field-properties.png "Common column properties in solution explorer")
+![Common column properties in solution explorer.](media/common-field-properties.png "Common column properties in solution explorer")
   
 The following table describes properties that all columns have. Certain types of columns have special properties. These are described in [Special column properties](special-field-properties-legacy.md).  
   

@@ -7,6 +7,7 @@ ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: JimDaly
+ms.subservice: dataverse-developer
 ms.author: pehecke
 manager: kvivek
 search.audienceType: 
@@ -208,7 +209,7 @@ When this plug-in is registered on a synchronous `PostOperation` step for the `C
 
 You can filter items for a single operation using the `operation_ParentId` that represents the request id of the response header.
 
-:::image type="content" source="media/application-insights-ilogger-trace-operation_parentid.png" alt-text="Filter items for a single operation using the operation_ParentId ":::
+:::image type="content" source="media/application-insights-ilogger-trace-operation_parentid.png" alt-text="Filter items for a single operation using the operation_ParentId .":::
 
 The corresponding plug-in trace log entry looks like this:
 
@@ -226,11 +227,11 @@ Note that the information set with the [BeginScope Method](/dotnet/api/microsoft
 
 This query will limit the results to the logs added during the `Callback` scope
 
-:::image type="content" source="media/application-insights-ilogger-trace-callback-scope.png" alt-text="Query will limit the results to the logs added during the Callback scope":::
+:::image type="content" source="media/application-insights-ilogger-trace-callback-scope.png" alt-text="Query will limit the results to the logs added during the Callback scope.":::
 
 And this query will limit the results to the logs added during the `OutboundCall` scope:
 
-:::image type="content" source="media/application-insights-ilogger-trace-outboundcall-scope.png" alt-text="query will limit the results to the logs added during the OutboundCall scope":::
+:::image type="content" source="media/application-insights-ilogger-trace-outboundcall-scope.png" alt-text="query will limit the results to the logs added during the OutboundCall scope.":::
 
 ## Logging Exceptions
 
@@ -248,7 +249,7 @@ catch (Exception e)
 
 Using the plug-in code above, you can cause an exception by passing an invalid value to step registration configuration data. In this example, the value is `NOT_A_URL`.
 
-:::image type="content" source="media/application-insights-ilogger-cause-error.png" alt-text="Causing an error by entering invalid configuration value in plug-in step registration":::
+:::image type="content" source="media/application-insights-ilogger-cause-error.png" alt-text="Causing an error by entering invalid configuration value in plug-in step registration.":::
 
 This will override the default value (`https://www.bing.com`) and cause the outbound call to fail. 
 
@@ -326,11 +327,11 @@ Plugin failed:An invalid request URI was provided. The request URI must either b
 
 Within Application Insights, if you view traces scoped to this request and with the scope set to `OutboundCall` as shown earlier, you can see that the only entry is that the outbound call started.
 
-:::image type="content" source="media/application-insights-ilogger-trace-error.png" alt-text="View traces scoped to this request and with the scope set to OutboundCall":::
+:::image type="content" source="media/application-insights-ilogger-trace-error.png" alt-text="View traces scoped to this request and with the scope set to OutboundCall.":::
 
 Within Application Insights, when you switch your query to use `exceptions` rather than `traces`, you will see three exceptions logged: 
 
-:::image type="content" source="media/application-insights-ilogger-cause-error-exceptions.png" alt-text="Switch your query to use exceptions rather than traces":::
+:::image type="content" source="media/application-insights-ilogger-cause-error-exceptions.png" alt-text="Switch your query to use exceptions rather than traces.":::
 
 The one where `cloud_RoleInstance` equals `SandboxRoleInstance` is the one which was written because of the [ILogger LogError method](/api/microsoft.xrm.sdk.plugintelemetry.ilogger.logerror). The other two represent different locations where the error was logged on the server. 
 
@@ -339,7 +340,7 @@ The one where `cloud_RoleInstance` equals `SandboxRoleInstance` is the one which
 
 You can focus on the error log written by your code by filtering on the `cloud_RoleInstance`:
 
-:::image type="content" source="media/application-insights-ilogger-cause-error-cloud_roleinstance-query.png" alt-text="Focus on the error log written by your code by filtering on the cloud_RoleInstance":::
+:::image type="content" source="media/application-insights-ilogger-cause-error-cloud_roleinstance-query.png" alt-text="Focus on the error log written by your code by filtering on the cloud_RoleInstance.":::
 
 The formatted message text is captured as part of the `customDimensions`.
 

@@ -7,6 +7,7 @@ ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 04/28/2021
+ms.subservice: mobile
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""

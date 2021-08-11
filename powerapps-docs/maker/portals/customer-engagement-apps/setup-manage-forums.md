@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2020
+ms.subservice: portals
 ms.author: shjais
 ms.reviewer: shjais
 contributors:
@@ -45,7 +46,7 @@ For portal users with content management permissions, a limited set of propertie
 
 4. Specify values for the fields provided, and then select **Save**.
 
-    ![Create a new child forum](media/create-new-child-forum.png "Create a new child forum")  
+    ![Create a new child forum.](media/create-new-child-forum.png "Create a new child forum")  
 
 ### Forum attributes used by portals
 

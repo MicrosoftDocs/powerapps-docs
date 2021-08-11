@@ -6,7 +6,8 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 07/02/2021
-ms.author: v-ljoel
+ms.subservice: teams
+ms.author: namarwah
 ms.reviewer: tapanm
 contributors:
   - navjotm
@@ -58,29 +59,29 @@ This process begins by opening the app in the **Power Apps** app. You may have P
 
 1. Type **Power Apps** in the search field.
 
-    ![Search for Power Apps](media/profile-plus-broad-distribution/app-search.png "Search for Power Apps")
+    ![Search for Power Apps.](media/profile-plus-broad-distribution/app-search.png "Search for Power Apps")
 
 1. Select the Power Apps app from the list to open the app. Power Apps will open in teams.
 
 1. Right-click on the **Power Apps** logo, and select **Pin** to lock the app to the side menu to pin the app.
 
-    ![Pin the app](media/profile-plus-broad-distribution/pin.png "Pin the app")
+    ![Pin the app.](media/profile-plus-broad-distribution/pin.png "Pin the app")
 
 1. We recommended that you **pop out** Power Apps so that if you need to navigate somewhere else in Teams you won't lose your app configuration. To pop out the Power Apps app, right-click on the Power Apps logo, and select **Pop out app**.
 
-    ![Pop out app](media/profile-plus-broad-distribution/pop-out-app.png "Pop out app")
+    ![Pop out app.](media/profile-plus-broad-distribution/pop-out-app.png "Pop out app")
 
 1. Now that you've loaded the Power Apps app, select **Build**.
 
 1. This screen will show all the teams that have Power Apps installed in them. Select the team that contain the app you want to share. Select **Share with colleagues**.
 
-    ![Share with colleagues](media/deploy-employee-ideas-broad-distribution/share-with-colleagues.png "Share with colleagues")
+    ![Share with colleagues.](media/deploy-employee-ideas-broad-distribution/share-with-colleagues.png "Share with colleagues")
 
 1. Enter Azure AD security group or a different team with which you would like to share access to the app.
 
 1. Set the **on/off** toggle to **on** for Ideas.
 
-   ![Toggle share to on](media/deploy-employee-ideas-broad-distribution/share-with-colleagues-2.png "Toggle share to on")
+   ![Toggle share to on.](media/deploy-employee-ideas-broad-distribution/share-with-colleagues-2.png "Toggle share to on")
 
 1. Select **Save**.
 
@@ -110,11 +111,11 @@ By default, all of the table permissions for colleagues not in the Team are set 
 
 1. Select **See All** in the **Employee Ideas** tile.
 
-   ![Select See all](media/deploy-employee-ideas-broad-distribution/ideas-tile.png "Select See all")
+   ![Select See all.](media/deploy-employee-ideas-broad-distribution/ideas-tile.png "Select See all")
 
 1. Select **Tables** from the solution components bar.
 
-   ![Select tables](media/deploy-employee-ideas-broad-distribution/tables.png "Select tables")
+   ![Select tables.](media/deploy-employee-ideas-broad-distribution/tables.png "Select tables")
 
 1. Select the tables listed individually then **Manage Permissions.**
 
@@ -145,7 +146,7 @@ So now that you have shared. Ideas with colleagues outside of your team, here's 
 
 1. Select **Built for your org**.
 
-   ![Built for your org](media/deploy-employee-ideas-broad-distribution/built-for-your-org.png "Built for your org")
+   ![Built for your org.](media/deploy-employee-ideas-broad-distribution/built-for-your-org.png "Built for your org")
 
 1. When the app information screen appears, select **Add** to add the app to the main teams app menu.
 
@@ -153,11 +154,11 @@ So now that you have shared. Ideas with colleagues outside of your team, here's 
 
 1. If you want to make the app always appear in the app menu so you can easily find it, right-click on the Ideas button on the app menu and select **Pin**.
 
-   ![Pin Ideas](media/deploy-employee-ideas-broad-distribution/pin.png "Pin Ideas")
+   ![Pin Ideas.](media/deploy-employee-ideas-broad-distribution/pin.png "Pin Ideas")
 
 1. If you would prefer to add the app to another team, select the drop-down by the **Add** button, and select **Add to a team**.
 
-   ![Add app to a Team](media/deploy-employee-ideas-broad-distribution/add-to-team.png "Add app to a Team")
+   ![Add app to a Team.](media/deploy-employee-ideas-broad-distribution/add-to-team.png "Add app to a Team")
 
 ## Limitations
 

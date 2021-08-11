@@ -51,7 +51,13 @@ Creating a canvas app is easy. With Power Apps, you can find or create your app 
 
 When you create a model-driven app, you can use all the power of the Dataverse to rapidly configure your forms, business rules, and process flows. You create a model-driven app from the Power Apps site.
 
-Getting started with model-driven apps is simple. You can begin by reading these topics:
+As part of the custom page public preview, the new page type based on canvas can be added into a new or existing model-driven app. This allows the power and flexibility of a canvas experience within the model-driven app. Custom pages allow
+- Full control over page layout 
+- Out of box controls and custom components
+- Power Apps connectors
+- Low-code authoring
+
+Getting started with model-driven apps is simple. You can begin with these topics:
 
 - [Create an app](/dynamics365/customer-engagement/customize/create-edit-app)
 - [Create and design forms](/dynamics365/customer-engagement/customize/create-design-forms)
@@ -60,6 +66,7 @@ Getting started with model-driven apps is simple. You can begin by reading these
 - [Create or edit dashboards](/dynamics365/customer-engagement/customize/create-edit-dashboards)
 - [Add security](/dynamics365/customer-engagement/customize/manage-access-apps-security-roles)
 - [Add business logic](/dynamics365/customer-engagement/customize/guide-staff-through-common-tasks-processes)
+- [Converging model and canvas using custom page (preview)](model-driven-apps/model-app-page-overview.md)
 
 ## Portals
 
