@@ -8,11 +8,15 @@ ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 10/25/2016
+ms.subservice: canvas-maker
 ms.author: chmoncay
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - chmoncay
 ---
 # Label control in Power Apps
 
@@ -80,7 +84,7 @@ A label shows data that you specify as a literal string of text, which appears e
 * When set to **Polite**, the screen reader finishes speaking before announcing any changes that occurred while the screen reader was speaking.
 * When set to **Assertive**, the screen reader interrupts itself to announce any changes that occurred while the screen reader was speaking.
 
-**[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
+**[OnSelect](properties-core.md)** – Actions to perform when the user taps or clicks a control.
 
 **Overflow** – Whether a scrollbar appears in a label if its **Wrap** property is set to **true** and the value of the control's **[Text](properties-core.md)** property contains more characters than the control can show at one time.
 

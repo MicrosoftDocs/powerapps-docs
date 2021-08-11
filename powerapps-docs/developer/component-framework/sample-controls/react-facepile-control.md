@@ -18,7 +18,7 @@ This sample shows how to use React to create components using Power Apps compone
 [!INCLUDE[cc-terminology](../../data-platform/includes/cc-terminology.md)]
 
 > [!div class="mx-imgBorder"]
-> ![React Facepile](../media/react-facepile.png "React Facepile")
+> ![React Facepile.](../media/react-facepile.png "React Facepile")
 
 ## Available for 
 

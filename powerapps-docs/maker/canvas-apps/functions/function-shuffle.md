@@ -8,11 +8,15 @@ ms.topic: reference
 ms.custom: canvas
 ms.reviewer: nabuthuk
 ms.date: 11/07/2015
+ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - gregli-msft
+  - nkrb
 ---
 # Shuffle function in Power Apps
 Randomly reorders the [records](../working-with-tables.md#records) of a [table](../working-with-tables.md).

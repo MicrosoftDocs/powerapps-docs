@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2020
+ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: tapanm
 contributors:
@@ -36,7 +37,7 @@ The following site settings are used to control the deprecation of identity prov
 
 When a portal user tries to sign in and you've marked at least one identity provider as deprecated, the deprecated account is shown on the page. In the following image, a Microsoft account is marked as deprecated.
 
-![Deprecated account example](../media/gdpr-deprecate-account.png "Deprecated account example")
+![Deprecated account example.](../media/gdpr-deprecate-account.png "Deprecated account example")
 
 You can change the text that appears on-screen for a legacy authentication provider by using the following content snippet:
 
@@ -52,7 +53,7 @@ You can change the text that appears on-screen for a legacy authentication provi
 
 If a portal user signs in by using a deprecated identity provider, the account migration screen displays a message to sign in by using a non-deprecated identity provider. When the user signs in by using the non-deprecated identity provider, the user account is associated with the new provider.
 
-![Account migration example](../media/gdpr-account-migration.png "Account migration example")
+![Account migration example.](../media/gdpr-account-migration.png "Account migration example")
 
 You can change the message that appears on-screen for account migration by using the following content snippets:
 
@@ -84,7 +85,7 @@ The following field is added in the portal contact record to indicate whether lo
 
 - **Local Login Disabled** indicates that the contact can no longer sign in to the portal by using the local account. By default, this is set to **No**. This field is set to **Yes** if a user's account is migrated to a non-deprecated identity provider and local login is disabled.
 
-![Local login disabled](../media/local-login-disabled.png "Local login disabled")
+![Local login disabled.](../media/local-login-disabled.png "Local login disabled")
 
 ### See also
 

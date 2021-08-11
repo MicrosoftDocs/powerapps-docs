@@ -14,6 +14,7 @@ applies_to:
 ms.assetid: e9810433-224b-4bde-851a-e581cf5fb8a4
 caps.latest.revision: 21
 author: "Mattp123"
+ms.subservice: dataverse-developer
 ms.author: "matp"
 manager: "kvivek"
 search.audienceType: 

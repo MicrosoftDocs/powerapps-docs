@@ -6,7 +6,8 @@ ms.topic: conceptual
 ms.custom: 
 ms.date: 06/25/2021
 author: joel-lindstrom	
-ms.author: v-ljoel
+ms.subservice: teams
+ms.author: namarwah
 ms.reviewer: tapanm
 contributors:
   - joel-linkstrom

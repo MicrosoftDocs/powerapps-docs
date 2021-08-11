@@ -8,11 +8,15 @@ ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 10/25/2016
+ms.subservice: canvas-maker
 ms.author: chmoncay
 search.audienceType:
   - maker
 search.app:
   - PowerApps
+contributors:
+  - tapanm-msft
+  - chmoncay
 ---
 # Shape and Icon controls in Power Apps
 Graphics for which you can configure appearance and behavior properties.
@@ -23,7 +27,7 @@ These controls include arrows, geometric shapes, action icons, and symbols for w
 ## Key properties (icons and shapes)
 **[Fill](properties-color-border.md)** – The background color of a control.
 
-**[OnSelect](properties-core.md)** – How the app responds when the user selects a control.
+**[OnSelect](properties-core.md)** – Actions to perform when the user selects a control.
 
 ## Key properties (icons only)
 

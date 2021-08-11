@@ -6,12 +6,18 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 06/22/2021
+ms.date: 07/21/2021
+ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - lancedmicrosoft
+  - alaug
+  - wimcoor
 ---
 # System requirements, limits, and configuration values for canvas apps
 This article contains information on supported device platforms, web browser requirements, limits, and configuration values for canvas apps. 
@@ -126,7 +132,6 @@ This list identifies all services to which Power Apps Studio talks and their usa
 | \*.dynamics.com | https | Microsoft Dataverse |
 | vortex.data.microsoft.com |https |Telemetry |
 | localhost | https | Power Apps Mobile|
-
 
 > [!NOTE]
 > If you're using a VPN, it must be configured to exclude localhost from tunneling for Power Apps Mobile.

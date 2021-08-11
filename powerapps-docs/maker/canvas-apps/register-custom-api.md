@@ -4,6 +4,7 @@ description: Learn about creating, using, sharing, and certifying custom connect
 author: lancedMicrosoft
 manager: kvivek
 ms.service: powerapps
+ms.subservice: canvas-developer
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
@@ -13,6 +14,9 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - lancedmicrosoft
 ---
 
 # Custom connectors for canvas apps

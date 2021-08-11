@@ -15,6 +15,7 @@ applies_to:
 author: "Mattp123"
 ms.assetid: 7920ef78-2540-48ad-ba25-9ce9cb995ed1
 caps.latest.revision: 63
+ms.subservice: mda-maker
 ms.author: "matp"
 search.audienceType: 
   - maker
@@ -51,7 +52,7 @@ Following are descriptions for each control you can use on forms.
 
 Provide a timeline of recent, relevant news articles and Twitter tweets for an account. More information: [Set up the timeline control](set-up-timeline-control.md) 
 
-:::image type="content" source="media/timeline-control-example.png" alt-text="Example of the timeline control in a model-driven app":::
+:::image type="content" source="media/timeline-control-example.png" alt-text="Example of the timeline control in a model-driven app.":::
   
 |Property|Description|  
 |--------------|-----------------|  
@@ -115,13 +116,13 @@ The flip switch is like an on/off switch, providing a choice between two values.
 
  The toggle control allows users to choose between binary values, such as on/off and yes/no, by toggling the button.
 
-:::image type="content" source="media/toggle-control-example.png" alt-text="Example toggle control in a model-driven app":::
+:::image type="content" source="media/toggle-control-example.png" alt-text="Example toggle control in a model-driven app.":::
   
 ## Star rating
 
 Use the star rating to provide a visual representation of a rating. The maximum number of stars you can set is five. You can use this control for whole numbers only; it can’t accept decimal values.  
 
-:::image type="content" source="media/star-rating-control-example.png" alt-text="Example of the star rating control in a model-driven app":::
+:::image type="content" source="media/star-rating-control-example.png" alt-text="Example of the star rating control in a model-driven app.":::
   
 > [!NOTE]
 >  Be sure to select the **Hide on web** option for this control.  
@@ -163,7 +164,7 @@ The radial knob provides a way for users to enter data by sliding the knob, and 
 
  Use the pen control to capture written input such as signatures. The pen control can be configured for multiline text columns for use with web, tablet, and phone clients.
 
-:::image type="content" source="media/pen-control-runtime.png" alt-text="Pen control in a model-driven app":::
+:::image type="content" source="media/pen-control-runtime.png" alt-text="Pen control in a model-driven app.":::
   
 > [!IMPORTANT]
 > The minimum recommended **Maximum Length** specified for the column this control maps to is 15000.  
@@ -213,7 +214,7 @@ You can embed videos to provide a richer customer experience for sales and colum
 ## Number input  
  Use the number input control to help users enter data quickly. Users only have to tap the plus and minus buttons to change a numeric value in increments you set. Use this control for any numerical or money column. Users can also type a number directly into the column. This column is only supported in edit mode.  
 
-:::image type="content" source="media/number-input-control-example.png" alt-text="Example of the number input control in a model-driven app":::
+:::image type="content" source="media/number-input-control-example.png" alt-text="Example of the number input control in a model-driven app.":::
   
 |Property|Description|  
 |--------------|-----------------|  
@@ -272,7 +273,7 @@ With editable grids, users can do rich in-line editing directly from views and s
 
 The Calendar Control V2 control displays scheduled activities and their associated details in a calendar. You can view, create, and delete your activities in a day, week, or month view. More information: [Add the calendar control to tables](add-calendar-control.md)
 
-:::image type="content" source="media/calendar-v2-control-example.png" alt-text="Example of the version 2 calendar control in a model-driven app":::
+:::image type="content" source="media/calendar-v2-control-example.png" alt-text="Example of the version 2 calendar control in a model-driven app.":::
 
 ## Embedded canvas app control
 

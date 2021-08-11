@@ -34,6 +34,6 @@ Intro to a numbered list
 
     Explanation of first step
 
-    ![Here's a graphic](media/template/sample-apps.png)
+    ![Here's a graphic.](media/template/sample-apps.png)
 
 1. Second step
