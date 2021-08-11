@@ -13,3 +13,5 @@
     href: sample-generic-ve-plugin.md
   - name: 'Sample: Custom virtual table provider with CRUD operations'
     href: sample-ve-provider-crud-operations.md
+  - name: Create virtual table using virtual connectors
+    href: create-virtual-tables-using-connectors.md
