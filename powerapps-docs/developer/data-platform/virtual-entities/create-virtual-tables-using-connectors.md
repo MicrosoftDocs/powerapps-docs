@@ -41,7 +41,7 @@ For example, the **SQL Server** connector needs server, database, authentication
 
 The connector permissions enforce the ability for organizational users to access and operate on virtual table. The connection can be shared with one user or can be shared with entire organization. This allows users to access and operate on virtual tables using a shared connection.
 
-Additionally, you need to create a service principal (Application ID) that will be used to authenticate with the provider. The service principal needs to be created in the tenant of the organization. The provider supports the use of **client ID** and **secret** values when setting up the data source. See the [prerequisite](#prerequisite) section below on how to set up a service principal.
+Additionally, you need to create a service principal (Application ID) that will be used to authenticate with the provider. The service principal needs to be created in the tenant of the organization. The provider supports the use of **client ID** and **secret** values when setting up the data source. See the [prerequisite](#prerequisites) section below on how to set up a service principal.
 
 Application lifecycle management (ALM) is supported for virtual tables created through virtual connectors. Virtual tables should be part of the managed solution along with the connection reference to distribute the solution. The solution can have other components, such as a model-driven app that uses virtual tables. When importing the solution into a new Dataverse environment, the data source should be updated to use a connection reference setup in the respective environment and **client ID** and **secret**.
 
@@ -253,7 +253,7 @@ be added to forms and views to see all associated accounts for each of the servi
 
 1. You have configured the virtual table data source, but the **Entity Catalog** did not get created
 
-    **Solution:** One or more values you used when creating the virtual table data source are incorrect. See the [prerequisite](#prerequisite) section and make sure you are copying the correct values from the Azure portal. You need the Tenant ID, Application (Client) ID, and the client secret value. Additionally, you will also need the environment GUID when setting up the data source.
+    **Solution:** One or more values you used when creating the virtual table data source are incorrect. See the [prerequisite](#prerequisites) section and make sure you are copying the correct values from the Azure portal. You need the Tenant ID, Application (Client) ID, and the client secret value. Additionally, you will also need the environment GUID when setting up the data source.
 
 2. When querying the **Entity Catalog** from the Power Apps maker portal, you see an error – *The remote server returned an error: (403) forbidden.*
 
@@ -263,7 +263,7 @@ be added to forms and views to see all associated accounts for each of the servi
     > ![Add everyone in the org](../media/ve-add-everyone-in-org.png "Add everyone in the org")
     
     > [!div class="mx-imgBorder"]
-    > ![Add users to org](../media/ve-dd-users-to-org.png "Add users to org")
+    > ![Add users to org](../media/ve-add-users-to-org.png "Add users to org")
 
 3. When querying the **Entity Catalog** from the Power Apps maker portal, you see an error – *The given key was not present in the dictionary.*
 
