@@ -88,7 +88,7 @@ If you already know which calendar your users should view, you can simplify the 
     Set( _lastDayOfMonth, DateAdd( DateAdd( _firstDayOfMonth, 1, Months ), -1, Days ) );
     Set( _calendarVisible, false );
     Set( _myCalendar, 
-        LookUp( Office365.CalendarGetTables().value, DisplayName = "{YourCalendarNameHere}" )
+        LookUp(Office365Outlook.CalendarGetTablesV2().value, DisplayName = "{YourCalendarNameHere}" )
     );
     Set( _minDate, 
         DateAdd( _firstDayOfMonth, -( Weekday(_firstDayOfMonth) - 2 + 1 ), Days )
@@ -101,10 +101,10 @@ If you already know which calendar your users should view, you can simplify the 
         )
     );
     ClearCollect( MyCalendarEvents, 
-        Office365.GetEventsCalendarViewV2( _myCalendar.Name, 
-            Text( _minDate, UTC ), 
-            Text( _maxDate, UTC ) 
-        ).value
+    Office365Outlook.GetEventsCalendarViewV3(_myCalendar.name, 
+        Text( _minDate, UTC),
+        Text( _maxDate, UTC)
+    ).value
     );
     Set( _calendarVisible, true )
     ```
