@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 12/28/2018
+ms.date: 08/11/2021
 ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
@@ -76,7 +76,7 @@ If you want to modify the screen further, use the [calendar-screen reference](./
 
 If you already know which calendar your users should view, you can simplify the screen by specifying that calendar before you publish the app. This change removes the need for the drop-down list of calendars, so you can remove it.
 
-1. Set the **[OnStart](../controls/control-screen.md)** property of the default screen in the app to this formula:
+1. Set the **[OnStart](../controls/control-screen.md)** property of the app to this formula:
 
     ```powerapps-dot
     Set( _userDomain, Right( User().Email, Len( User().Email ) - Find( "@", User().Email ) ) );
