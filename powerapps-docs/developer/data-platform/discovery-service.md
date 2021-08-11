@@ -27,7 +27,7 @@ The Discovery service is accessed through two different APIs:
 - For the discovery API available through the 2011 (SOAP) endpoint: [Use the Discovery service with the Microsoft.Xrm.Sdk.Discovery NameSpace](org-service/discovery-service.md)
 
 > [!NOTE]
-> The *regional* Discovery service is deprecated. More information: [Regional Discovery Service is deprecated)](/power-platform/important-changes-coming#regional-discovery-service-is-deprecated).
+> The *regional* Discovery service is deprecated. More information: [Regional Discovery Service is deprecated](/power-platform/important-changes-coming#regional-discovery-service-is-deprecated).
 
 ### See Also
 
