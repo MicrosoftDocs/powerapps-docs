@@ -1,6 +1,6 @@
 ---
-title: Overview of creating apps | Microsoft Docs
-description: Overview of creating apps in either canvas or model-driven mode and incorporating the Microsoft Dataverse
+title: Start building apps | Microsoft Docs
+description: Get an introduction to creating canvas or model-driven apps in Power Apps, and incorporating the Microsoft Dataverse.
 author: alaug
 ms.service: powerapps
 ms.topic: conceptual
@@ -34,7 +34,7 @@ You can start to build your app from Microsoft tools where your data lives, such
 - [From a SharePoint list](canvas-apps/app-from-sharepoint.md#create-an-app-from-within-sharepoint-online)
 - [From a Power BI dashboard](canvas-apps/embed-powerapps-powerbi.md)
 
-Creating a canvas app is easy; with Power Apps, you can find or create your app in several ways:
+Creating a canvas app is easy. With Power Apps, you can find or create your app in several ways:
 
 - [From data](canvas-apps/app-from-sharepoint.md)
 - [From a sample](canvas-apps/open-and-run-a-sample-app.md)
@@ -47,11 +47,11 @@ Creating a canvas app is easy; with Power Apps, you can find or create your app 
 
 ## Model-driven apps
 
-[Model-driven apps](model-driven-apps/model-driven-app-overview.md) start with your data model – building up from the shape of your core business data and processes in the Dataverse to model forms, views, and other components. Model-driven apps automatically generate great UI that is responsive across devices. 
+[Model-driven apps](model-driven-apps/model-driven-app-overview.md) start with your data model – building up from the shape of your core business data and processes in the Dataverse to model forms, views, and other components. Model-driven apps automatically generate great UI that's responsive across devices. 
 
-When you create a model-driven app, you can use all of the power of the Dataverse to rapidly configure your forms, business rules, and process flows. You create a model-driven app from the Power Apps site.
+When you create a model-driven app, you can use all the power of the Dataverse to rapidly configure your forms, business rules, and process flows. You create a model-driven app from the Power Apps site.
 
-Getting started with model-driven apps is simple, and you can begin with these topics:
+Getting started with model-driven apps is simple. You can begin by reading these topics:
 
 - [Create an app](/dynamics365/customer-engagement/customize/create-edit-app)
 - [Create and design forms](/dynamics365/customer-engagement/customize/create-design-forms)
@@ -77,9 +77,9 @@ Use these topics to quickly get started with portals:
 
 [Dataverse](data-platform/data-platform-intro.md) is the data platform that comes with Power Apps and allows you to store and model business data. It's the platform on which Dynamics 365 apps (such as Dynamics 365 Sales, Customer Service, Field Service, Marketing, and Project Service Automation) are built. If you’re a Dynamics 365 customer, your data is already in Dataverse.
 
-Dataverse allows you to securely store and manage data within a set of standard and custom *tables*, and you can add columns to those tables when you need them.
+Dataverse allows you to securely store and manage data within a set of standard and custom tables, and you can add columns to those tables when you need them.
 
-Getting started with Dataverse is easy. For example, you can start with these items:
+Start working with Dataverse by reading these topics:
 
 - [Create a custom table](data-platform/data-platform-create-entity.md)
 - [Manage columns](data-platform/data-platform-manage-fields.md)
@@ -88,9 +88,9 @@ Getting started with Dataverse is easy. For example, you can start with these it
 
 ## Planning a Power Apps app or project
 
-It's easy to try building out your first app. Simply sign-in to [Power Apps](https://make.powerapps.com). For more information, go to [Sign in to Power Apps for the first time](canvas-apps/intro-maker-portal.md). If you're interested in exploring even more functionality, like creating environments, we have a [30 day trial](signup-for-powerapps.md) or [developer plan](developer-plan.md).
+It's easy to begin building out your first app. Simply sign in to [Power Apps](https://make.powerapps.com). For more information, go to [Sign in to Power Apps for the first time](canvas-apps/intro-maker-portal.md). If you're interested in exploring even more functionality, such as creating environments, we have a [30-day trial](signup-for-powerapps.md) or [Developer Plan](developer-plan.md).
 
-If you are new to Power Apps, and want to learn about how to convert your ideas into a fully working solution using Power Apps, start with [Planning a Power Apps project](/powerapps/guidance/planning/introduction).
+If you're new to Power Apps and want to learn about how to convert your ideas into a fully working solution, start with [Planning a Power Apps project](/powerapps/guidance/planning/introduction).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
