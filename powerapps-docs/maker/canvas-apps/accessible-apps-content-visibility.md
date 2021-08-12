@@ -5,7 +5,7 @@ author: tahoon-ms
 ms.service: powerapps
 ms.topic: article
 ms.custom: canvas
-ms.date: 02/18/2021
+ms.date: 08/12/2021
 ms.subservice: canvas-maker
 ms.author: tahoon
 search.audienceType:
@@ -28,16 +28,17 @@ In most cases, all users should be able to access all content, but you might occ
 
 ## Hide content from sighted users and show it to screen-reader users
 
-Use any of these techniques:
+Try any of these techniques:
 
 * Set **[Size](controls/properties-text.md)** to 0.
-* Set **[Width](controls/properties-size-location.md)** and **[Height](controls/properties-size-location.md)** to 1.
+* Set **[Width](controls/properties-size-location.md)** and **[Height](controls/properties-size-location.md)** to 0, or 1.
 * Set **[X](controls/properties-size-location.md)**, **[Y](controls/properties-size-location.md)**, or both properties such that the control is outside the screen.
 * Set **[Color](controls/properties-color-border.md)** and related properties to transparent.
 * Position a rectangle **[Shape](controls/control-shapes-icons.md)** above the content, and set **[Fill](controls/properties-color-border.md)** to the same color as the background color of the screen.
 
 > [!NOTE]
-> Users can still use a keyboard to access an interactive control, such as a **[Button](controls/control-button.md)**, even if you hide it by using one of the techniques in the previous list. Set **[TabIndex](controls/properties-accessibility.md)** to -1 if you want to prevent users from accessing the control by pressing the Tab key.
+> - If the above techniques don't help individually, try to use a mixed approach with multiple techniques, and use of different solutions.
+> - Users can still use a keyboard to access an interactive control, such as a **[Button](controls/control-button.md)**, even if you hide it by using one of the techniques in the previous list. Set **[TabIndex](controls/properties-accessibility.md)** to -1 if you want to prevent users from accessing the control by pressing the Tab key.
 
 ## Hide content from screen-reader users and show it to sighted users
 
