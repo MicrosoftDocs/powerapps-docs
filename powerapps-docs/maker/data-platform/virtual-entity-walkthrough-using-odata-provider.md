@@ -2,7 +2,7 @@
 title: "Virtual table walkthrough using the OData Data Provider in Microsoft Dataverse | MicrosoftDocs"
 description: "Learn how to use the OData v4 data provider with a virtual table"
 ms.custom: ""
-ms.date: 02/23/2021
+ms.date: 08/11/2021
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""

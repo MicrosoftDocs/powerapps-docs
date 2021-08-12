@@ -1,7 +1,7 @@
 ---
 title: "Use the Virtual table OData v4 Data Provider with Microsoft Dataverse | MicrosoftDocs"
 ms.custom: ""
-ms.date: 06/04/2018
+ms.date: 08/11/2021
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -34,7 +34,8 @@ This topic describes how to configure the OData v4 Data Provider as well as the 
 - Microsoft Dataverse requires that all tables have an ID attribute, this ID is known as a unique identifier and the value must be a guid.  You can only map ID columns to external columns with the `Edm.Guid` data type.  You can’t map an `Edm.Int32` data type to a Unique Identifier data type column in Dataverse.
 -  OData tables with nullable properties must be set to match the mapped column in the virtual table. For example, an OData table property with Nullable=False must have the mapped column in Dataverse **Field Requirement** attribute set to **Business Required**. 
 - For retrieve multiple queries, such as when you load data in to a grid, control the size of the dataset returned from the external data source by using the select and filter query parameters.
-- If not already enabled, system administrators should enable plug-in tracing. Once enabled, all errors from the OData endpoint are captured in the plug-in trace log. More information:  [Administrator Guide: System Settings dialog box - Customization tab](/dynamics365/customer-engagement/admin/system-settings-dialog-box-customization-tab) 
+- If not already enabled, system administrators should enable plug-in tracing. Once enabled, all errors from the OData endpoint are captured in the plug-in trace log. More information:  [Administrator Guide: System Settings dialog box - Customization tab](/dynamics365/customer-engagement/admin/system-settings-dialog-box-customization-tab)
+- You can't use the OData v4 Data Provider to connect to another Microsoft Dataverse environment.
 
 ## Data type mapping
 
