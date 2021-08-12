@@ -59,7 +59,7 @@ More information about Application lifecycle management (ALM) and solutions:
 - Create a **client secret** value for the registered Application ID. You need this information when you create a data source for the external data as part of setting up the virtual connector. Refer to [Create a new application secret](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal#option-2-create-a-new-application-secret) doc for steps on how to create this.
 
 > [!NOTE]
-> You will need the **client secret** when setting up the virtual table. You can copy this value when creating it.You will not be able to go back to the screen to copy the value.
+> You will need the **client secret** when setting up the virtual table. You can copy this value when creating it. You will not be able to go back to the screen to copy the value.
 
 Save the following values from Azure portal. This will help in setting up the Virtual Table Data Source:
 
@@ -236,7 +236,7 @@ be added to forms and views to see all associated accounts for each of the servi
    > ![New custom table](../media/ve-new-custom-table.png "New custom table")
 
    > [!NOTE]
-    > You will have to edit the forms and views for this table to include the lookup column and other requried columns prior to operation on the virtual table.
+    > You will have to edit the forms and views for this table to include the lookup column and other required columns prior to operation on the virtual table.
 
 #### Tips
 
@@ -252,7 +252,7 @@ be added to forms and views to see all associated accounts for each of the servi
 
 2. Maximum length of characters allowed for a text column in a virtual table is 4000 characters. Suppose the destination table has the character set to greater than this value. In that case, any create/update operation exceeding the max character limit will result in a validation error, and the operation will fail.
 
-3. If you have a 1:N or N:N relationship with a virtual table you will see an error when any query with table reference to the virtual table exceeds the 250 record limit. Use filtering in your query to reduce the recordset as a workaround to this limitation.
+3. If you have a 1:N or N:N relationship with a virtual table you will see an error when any query with table reference to the virtual table exceeds the 250 record limit. Use filtering in your query to reduce the record set as a workaround to this limitation.
 
 ## Troubleshooting
 
