@@ -35,7 +35,8 @@ Because the data source used for this walkthrough has an OData v4 web service, w
 Web service url: `https://contosowebservice.azurewebsites.net/odata/` 
 
 > [!IMPORTANT]
-> The web service url used for this walkthrough isn't a functioning web service.
+> - The web service url used for this walkthrough isn't a functioning web service.
+> - You can't use the OData v4 Data Provider to connect to another Microsoft Dataverse environment.
 
 For this walkthrough, a single virtual table that contains the following columns is needed.
 
