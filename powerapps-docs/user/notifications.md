@@ -38,7 +38,7 @@ The notification bell icon shows the count of new notifications and the count is
  > ![Sample notifications in your app.](media/notifications-bell.png)  
 
 
-To dismiss and delete a notification, select the close **X** button on a notification. Or, select **Dismiss all** to dismiss and delete all notifications. Your system administrator can set when notification expiree by default they will expire in 14 days.
+To dismiss and delete a notification, select the close **X** button on a notification. Or, select **Dismiss all** to dismiss and delete all notifications. Your system administrator can set when notification expire by default they will expire in 14 days.
 
  > [!div class="mx-imgBorder"] 
  > ![Select the close button to dismiss a notifications or select Dismiss all.](media/notifications-dismiss.png)  
@@ -52,7 +52,7 @@ Toast notifications appear temporarily to the left edge of the application. When
 > ![Example on how toast notifications appear.](media/notifications-toast.png)  
 
 
-The notification’s sender or system administrator can indicate if toasts are enable for notification. If toats are enabled, you can trun them off at a user level. Regardless of the toast being shown, all notifications can be accessed from notification center.
+The notification’s sender or system administrator can indicate if toasts are enable for notification. If toasts are enabled, you can trun them off at a user level. Regardless of the toast being shown, all notifications can be accessed from notification center.
 
 
 1. To enable or disable toast notifications, in the notication pane, select to the **Settings** 
@@ -60,7 +60,7 @@ The notification’s sender or system administrator can indicate if toasts are e
  > [!div class="mx-imgBorder"] 
  > ![Notification settings menu.](media/notifications-settings.png)  
 
-2. To enable or disable toast notificaino, do one of the following:
+2. To enable or disable toast notifications, do one of the following:
 
     - **To enable toast notifcations**: Move the toggle to **On** and then enter how many seconds the the toast will appear for. 
     - **To disable toast noficatoin**: Move the toggle to **Off**.
@@ -73,7 +73,11 @@ The notification’s sender or system administrator can indicate if toasts are e
 
 ## Notifications in Power Apps mobile
 
-You can access notications in Power Apps mobile, select the bell icon on the site map. 
+
+The notification toast will appear one at a time instead of stacking like the web player experience.
+
+
+To access notifications in Power Apps mobile, select the bell icon on the site map. 
 
 > [!div class="mx-imgBorder"] 
 > ![Enable to disable toast notifications.](media/mobile-bell.png)  
@@ -83,7 +87,6 @@ You can access notications in Power Apps mobile, select the bell icon on the sit
 
 
 
-The notification toast will appear one at a time instead of stacking like the web player experience.
 
 
 ## See also
