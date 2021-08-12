@@ -132,13 +132,13 @@ To add work items to a project:
 
 1. Select **New work item**.
 
-    ![New work item button.](media/milestones/new-work-item-button.jpg "New work item button")
+    ![New work item button.](media/milestones/new-work-item-button.png "New work item button")
 
 1. Add the work item details: *Name*, *Description*, values for *Assigned to*, *Milestone*, *Status*, *Category*, *Priority*, and *Target date*.
 
 1. Select **Create**.
 
-    ![New work item.](media/milestones/new-work-item.jpg "New work item")
+    ![New work item.](media/milestones/new-work-item.png "New work item")
 
 ## Edit an existing project
 
