@@ -31,7 +31,7 @@ The model-driven app polls the system for new notifications to be shown to the u
 
 ## Notification center
 
-You'll see a the number on the bell icon when there's a notification. To access your notification, select the bell icon on the nav bar. 
+The notification bell icon shows the count of new notifications and the count is cleared once the notification center is opened. To access your notification, select the bell icon on the nav bar. 
 
 
  > [!div class="mx-imgBorder"] 
@@ -71,9 +71,19 @@ The notification’s sender or system administrator can indicate if toasts are e
  3. When you're done, select **Save**.  
 
 
+## Notifications in Power Apps mobile
+
+You can access notications in Power Apps mobile, select the bell icon on the site map. 
+
+> [!div class="mx-imgBorder"] 
+> ![Enable to disable toast notifications.](media/mobile-bell.png)  
+   
 
 
 
+
+
+The notification toast will appear one at a time instead of stacking like the web player experience.
 
 
 ## See also
