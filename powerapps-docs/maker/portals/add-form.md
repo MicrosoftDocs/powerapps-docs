@@ -64,7 +64,10 @@ To add a form component:
 
         - **Redirect to URL**: Redirects the user to the specified URL. This field is required.
 
-    - **Show captcha for anonymous users**: Displays captcha to anonymous users. <br> **NOTE:** Captcha control is currently limited to only English language for audio, and Latin characters for image.
+    - **Show captcha for anonymous users**: Displays captcha to anonymous users.
+    
+    > [!NOTE]
+    > Captcha control is currently limited to only English language for audio, and Latin characters for image.
 
     - **Show captcha for authenticated users**: Displays captcha to authenticated users.
 
