@@ -71,24 +71,8 @@ The notification’s sender or system administrator can indicate if toasts are e
  3. When you're done, select **Save**.  
 
 
-## Notifications in Power Apps mobile
-
-
-The notification toast will appear one at a time instead of stacking like the web player experience.
-
-
-To access notifications in Power Apps mobile, select the bell icon on the site map. 
-
-> [!div class="mx-imgBorder"] 
-> ![Enable to disable toast notifications.](media/mobile-bell.png)  
-   
-
-
-
-
-
-
 
 ## See also
 
+[Notifications in Power Apps mobile](../mobile/mobile-notifications.md)
 [Send in-app notifications-TBD](../maker/model-driven-apps/send-in-app-notifications.md)
