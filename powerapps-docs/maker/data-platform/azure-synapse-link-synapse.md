@@ -12,6 +12,7 @@ applies_to:
   - "powerapps"
 author: "sabinn-msft"
 ms.assetid: 
+ms.subservice: dataverse-maker
 ms.author: "matp"
 manager: "kvivek"
 search.audienceType: 
@@ -45,7 +46,7 @@ You can use the Azure Synapse Link to connect your Microsoft Dataverse data to A
 
 - Azure Data Lake Storage Gen2: You must have an Azure Data Lake Storage Gen2 account and **Owner** and **Storage Blob Data Contributor** role access. Your storage account must enable **Hierarchical namespace** and it is recommended that replication is set to **read-access geo-redundant storage (RA-GRS)**.
 
-- Synapse workspace: You must have a Synapse workspace and the **Synapse Administrator** role access within the Synapse Studio. The Synapse workspace must be in the same region as your Azure Data Lake Storage Gen2 account. To create a Synapse workspace, go to [Creating a Synapse workspace](/azure/synapse-analytics/get-started-create-workspace).
+- Synapse workspace: You must have a Synapse workspace and the **Synapse Administrator** role access within the Synapse Studio. The Synapse workspace must be in the same region as your Azure Data Lake Storage Gen2 account. The storage account must be added as a linked service within the Synapse Studio. To create a Synapse workspace, go to [Creating a Synapse workspace](/azure/synapse-analytics/get-started-create-workspace).
 
 > [!NOTE]
 > When you add multiple users to the synapse workspace, they must have the **Synapse Administrator** role access within the Synapse Studio and the **Storage Blob Data Contributor** role on the Azure Data Lake Storage Gen2 account.
@@ -56,17 +57,17 @@ You can use the Azure Synapse Link to connect your Microsoft Dataverse data to A
 
 2. On the left navigation pane, select **Data**, select **Azure Synapse Link**, and then on the command bar, select **+ New link to data lake**.
 
-    ![Navigate to Power Apps](media/navigate-to-powerapps.png "Navigate to Power Apps")
+    ![Navigate to Power Apps.](media/navigate-to-powerapps.png "Navigate to Power Apps")
 
 3. Select the the **Connect to your Azure Synapse workspace (Preview)** option.
 
 4. Select the **Subscription**, **Resource group**, **Workspace name**, and **Storage account**. Ensure that the Synapse workspace and storage account meet the requirements specified in the [Prerequisites](#prerequisites) section. Select **Next**.
 
-    ![Connect to your workspace](media/connect-to-workspace.png "Connect to your workspace")
+    ![Connect to your workspace.](media/connect-to-workspace.png "Connect to your workspace")
 
 5. Add the tables you want to export, and then select **Save**.
 
-    ![Add tables](media/add-tables.png "Add tables")
+    ![Add tables.](media/add-tables.png "Add tables")
 
 ## Query your Dataverse data with serverless SQL pool
 
@@ -75,19 +76,19 @@ You can use the Azure Synapse Link to connect your Microsoft Dataverse data to A
 
 1. Select your storage account name from the list, and then select **Go to Azure Synapse workspace**.
 
-    ![Go to workspace](media/go-to-workspace.png "Go to workspace")
+    ![Go to workspace.](media/go-to-workspace.png "Go to workspace")
 
 2. Expand **Databases**, select your Dataverse container. Your exported tables are displayed under the **Tables** directory on the left sidebar.
 
-    ![Find tables in Synapse](media/find-tables-synapse.png "Find tables in Synapse")
+    ![Find tables in Synapse.](media/find-tables-synapse.png "Find tables in Synapse")
 
 3. Right-click the desired table and select **New SQL script** > **Select TOP 100 rows**.
 
-    ![Select top rows](media/select-top-rows.png "Select top rows")
+    ![Select top rows.](media/select-top-rows.png "Select top rows")
 
 4. Select **Run**. Your query results are displayed on the **Results** tab. Alternatively, you can edit the script to your needs.
 
-    ![Run query](media/run-query.png "Run query")
+    ![Run query.](media/run-query.png "Run query")
 
 ## Query multiple Dataverse databases with serverless SQL pool
 
@@ -112,15 +113,15 @@ You can use the Azure Synapse Link to connect your Microsoft Dataverse data to A
 
 2. Right-click the desired table and select **New notebook** > **Load to DataFrame**.
 
-    ![Load to DataFrame](media/load-to-dataframe.png "Load to DataFrame")
+    ![Load to DataFrame.](media/load-to-dataframe.png "Load to DataFrame")
 
 3. Attach the notebook to an Apache Spark pool by selecting a pool from the drop down menu. If you do not have an Apache Spark pool, select **Manage pools** to create one.
 
-    ![Attach Spark pool](media/attach-pool.png "Attach Spark pool")
+    ![Attach Spark pool.](media/attach-pool.png "Attach Spark pool")
 
 4. Add code cells to transform your data. Run individual cells by selecting the play button at the left of each cell or run all the cells in succession by selecting **Run all** from the top bar.
 
-    ![Spark notebook](media/spark-notebook.png "Spark notebook")
+    ![Spark notebook.](media/spark-notebook.png "Spark notebook")
 
 ## Connect to your Azure Synapse Analytics workspace to Power BI
 
@@ -132,24 +133,24 @@ You can use the Azure Synapse Link to connect your Microsoft Dataverse data to A
 
 4. Go to your Azure Synapse Analytics workspace and copy the **Serverless SQL endpoint**.
 
-    ![SQL OD endpoint](media/sql-od-endpoint.png "SQL OD endpoint")
+    ![SQL OD endpoint.](media/sql-od-endpoint.png "SQL OD endpoint")
 
 5. Paste the endpoint for the **Server**. Select **DirectQuery** for the **Data Connectivity mode**. Select **OK**.
 
-    ![Enter server](media/enter-server.png "Enter server")
+    ![Enter server.](media/enter-server.png "Enter server")
 
 6. If prompted, sign in with your Microsoft Account.
 
 7. Select the container and the preferred table from the Navigator, and then select **Load**. Optionally, expand *default* to access tables created with an Apache Spark notebook.
 
-    ![Power BI select tables](media/pbi-select-tables.png "Power BI select tables")
+    ![Power BI select tables.](media/pbi-select-tables.png "Power BI select tables")
 
 > [!NOTE]
 > If you receive a credentials error, go to **File** > **Options and settings** > **Data source settings** and clear the permissions for the serverless SQL endpoint. Repeat the above steps.
 
 8. Select fields from the **Fields** pane to create a simple table or create other visualizations.
 
-    ![Power BI simple table](media/pbi-simple-table.png "Power BI simple table")
+    ![Power BI simple table.](media/pbi-simple-table.png "Power BI simple table")
 
 ## Unlinking an Azure Synapse Link
 

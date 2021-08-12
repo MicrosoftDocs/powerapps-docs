@@ -6,7 +6,8 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 06/16/2021
-ms.author: v-ljoel
+ms.subservice: teams
+ms.author: namarwah
 ms.reviewer: tapanm
 contributors:
   - navjotm
@@ -39,13 +40,13 @@ To complete this tutorial, you'll need the ability to sign in to Microsoft Teams
 4.  Select Profile + to open the app.
 5.  The Profile+ app opens.
 
-![Opening Profile +](media/profile-plus-org-specific/profile-tile.png "Opening Profile +")
+![Opening Profile +.](media/profile-plus-org-specific/profile-tile.png "Opening Profile +")
 
 ## Add the data file as a data source connection to the app
 
 Power Apps can connect to hundreds of different data sources. For this example, we'll use a SharePoint list that includes employee data.
 
-![SharePoint list](media/profile-plus-org-specific/sharepoint-site.png "SharePoint list")
+![SharePoint list.](media/profile-plus-org-specific/sharepoint-site.png "SharePoint list")
 
 To add this SharePoint list as a data source connection to the Profile + app:
 
@@ -59,7 +60,7 @@ The SharePoint list shows up in the list of data sources
 1.  Select the tree view from the left pane.
 1.  Select the Profile screen.
 
-    ![Profile screen](media/profile-plus-org-specific/profile-screen.png "Profile screen")
+    ![Profile screen.](media/profile-plus-org-specific/profile-screen.png "Profile screen")
 
 1. Notice the two HTML text controls **Works from**  and **Lives in**. In our example, we'll replicate the HTML text and populate it with the **Started On** date from the SharePoint List.
 1. Copy the HTML Text for **Works From** and paste it (copying it so that all the other properties are copied as well).
@@ -78,7 +79,7 @@ The SharePoint list shows up in the list of data sources
 
 All the changes to the Profile+ app are completed. The app can now be published by selecting the Publish to Teams button on the top right.
 
-![Publish the app](media/profile-plus-org-specific/publish-to-teams.png "Publish the app")
+![Publish the app.](media/profile-plus-org-specific/publish-to-teams.png "Publish the app")
 
 ## Test the app
 
@@ -86,7 +87,7 @@ All the changes to the Profile+ app are completed. The app can now be published 
 1.  You should now see the new value **Started on** appear on the profile card.
 1.  Make sure to check for responsiveness by shrinking the size of the screen when testing in the Window mode.
 
-![Started on](media/profile-plus-org-specific/after.png "Started on")
+![Started on.](media/profile-plus-org-specific/after.png "Started on")
 
 ### See also
 

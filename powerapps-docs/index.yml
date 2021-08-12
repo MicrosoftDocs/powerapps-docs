@@ -12,7 +12,7 @@ metadata:
   ms.topic: hub-page # Required
   author: KumarVivek #Required; your GitHub user alias, with correct capitalization.
   ms.author: kvivek #Required; microsoft alias of author; optional team alias.
-  ms.date: 04/06/2021 #Required; mm/dd/yyyy format.
+  ms.date: 07/16/2021 #Required; mm/dd/yyyy format.
   hide_bc: false
 
 
@@ -162,7 +162,7 @@ conceptualContent:
           url: /powerapps/learning-catalog/developer
           itemType: learn     
       footerLink:
-        url: /powerapps/learning-catalog/get-started
+        url: /powerapps/learning-catalog/learning-catalog
         text: More
 
 # additionalContent section (optional)

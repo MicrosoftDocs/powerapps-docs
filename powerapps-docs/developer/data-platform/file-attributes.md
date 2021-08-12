@@ -7,6 +7,7 @@ ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "phecke" # GitHub ID
+ms.subservice: dataverse-developer
 ms.author: "pehecke" # MSFT alias of Microsoft employees only
 manager: "kvivek" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -29,7 +30,7 @@ For information about types of files that are not allowed, see [System Settings 
 
 > [!IMPORTANT]
 > Some restrictions do apply when using the File and enhanced Image data-types of the Microsoft Dataverse. If Customer Managed Keys (CMK) is enabled on the tenant, IoT data-types are not available to the tenant's organizations. Solutions that contain excluded data-types will not install. Customers must opt-out of CMK in order to make use of these data-types.<p/>
-> All CMK organizations as of version: 9.2.21052.00103 can support the use of the Dataverse file and image data types (aka File data type). Files within CMK organizations are
+> All CMK organizations as of version: 9.2.21052.00103 can support the use of the Dataverse File and Image data-types. Files within CMK organizations are
 > limited to a maximum size of 128MB per file. All files and images within CMK organizations will be stored in the Dataverse relational storage, instead of Dataverse File Blob
 > storage.
 > Other limitations:

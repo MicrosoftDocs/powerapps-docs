@@ -7,11 +7,16 @@ ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 06/30/2021
+ms.subservice: canvas-maker
 ms.author: namarwah
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - navjotm
+  - chmoncay
 ---
 
 # Limitations of controls in canvas apps
@@ -36,7 +41,7 @@ In this article, learn about the general limitations of the controls used in can
 
 - [Image control](controls/control-image.md) - only supports external media URLs using HTTPS.
 
-- [Power BI tile control](controls/control-power-bi-tile.md) - see [Power BI tile control limitations for passing a parameter](controls/control-power-bi-tile.md#pass-a-parameter).
+- [Power BI tile control](controls/control-power-bi-tile.md) - see [Power BI tile control limitations for passing a parameter](controls/control-power-bi-tile.md#filtering).
 
 - [PDF viewer control (experimental)](controls/control-pdf-viewer.md) - see [PDF viewer control (experimental) limitations](controls/control-pdf-viewer.md#limitations).
 

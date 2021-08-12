@@ -7,6 +7,7 @@ ms.topic: sample
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 03/22/2021
+ms.subservice: canvas-maker
 ms.author: norliu
 search.audienceType: 
   - maker
@@ -21,7 +22,7 @@ contributors:
 
 In Power Apps, the Help Desk sample template is a tool that provides a user-friendly experience to connect end users with support professionals. By running the app, you can quickly find answers to the most important questions, track progress of open tickets, and review details of previous requests. This app requires a small amount of setup to make it your own.
 
-![Opening screen of the Help Desk Tickets app](./media/help-desk-install/login-screen.png "Opening screen of the Help Desk Tickets app")
+![Opening screen of the Help Desk Tickets app.](./media/help-desk-install/login-screen.png "Opening screen of the Help Desk Tickets app")
 
 ## Where can I run the app?
 
@@ -39,7 +40,7 @@ The Help Desk sample app is available in [Power Apps](https://make.powerapps.com
 
 1. Select **Help Desk** from the available sample app templates.
 
-    ![Open Help Desk sample app](./media/help-desk-install/use-help-desk-sample-template.png "Open Help Desk sample app")
+    ![Open Help Desk sample app.](./media/help-desk-install/use-help-desk-sample-template.png "Open Help Desk sample app")
 
 1. Enter a name.
 

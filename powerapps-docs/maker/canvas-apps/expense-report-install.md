@@ -7,6 +7,7 @@ ms.topic: sample
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 03/22/2021
+ms.subservice: canvas-maker
 ms.author: norliu
 search.audienceType: 
   - maker
@@ -21,7 +22,7 @@ contributors:
 
 In Power Apps, the Expense Report sample template is a tool for helping you track expense reports from submission to approval. By running the app, you can tally line items as individual expenses accrue and submit them for approval when you’re ready. This app requires a small amount of setup to make it your own.
 
-![Opening screen of the Expense Report PowerApp](./media/expense-report-install/expense-report-powerapp.png)
+![Opening screen of the Expense Report PowerApp.](./media/expense-report-install/expense-report-powerapp.png)
 
 ## Where can I run the app?
 
@@ -39,7 +40,7 @@ The Expense Report sample app is available in [Power Apps](https://make.powerapp
 
 1. Select **Expense Report** from the available sample app templates.
 
-    ![Open Expense Report sample app](./media/expense-report-install/use-expense-report-sample-template.png "Open Expense Report sample app")
+    ![Open Expense Report sample app.](./media/expense-report-install/use-expense-report-sample-template.png "Open Expense Report sample app")
 
 1. Enter a name.
 

@@ -8,11 +8,15 @@ ms.topic: reference
 ms.custom: canvas
 ms.reviewer: nabuthuk
 ms.date: 09/25/2020
+ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - gregli-msft
+  - nkrb
 ---
 # Patch function in Power Apps
 
@@ -96,7 +100,7 @@ Specify two or more records that you want to merge. Records are processed in the
 #### Modify or create a record (in a data source)
 In these examples, you'll modify or create a record in a data source, named **IceCream**, that contains the data in this [table](../working-with-tables.md) and automatically generates the values in the **ID** [column](../working-with-tables.md#columns):
 
-![Example icecream](media/function-patch/icecream.png "Example icecream")
+![Example icecream.](media/function-patch/icecream.png "Example icecream")
 
 | Formula | Description | Result |
 | --- | --- | --- |
@@ -105,7 +109,7 @@ In these examples, you'll modify or create a record in a data source, named **Ic
 
 After the previous formulas have been evaluated, the data source ends with these values:
 
-![Example icecream after](media/function-patch/icecream-after.png "Example icecream after")
+![Example icecream after.](media/function-patch/icecream-after.png "Example icecream after")
 
 #### Merge records (outside of a data source)
 

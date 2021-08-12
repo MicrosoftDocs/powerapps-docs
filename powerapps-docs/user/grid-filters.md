@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 03/31/2020
+ms.subservice: end-user
 ms.author: mkaur
 ms.reviewer: ""
 ms.assetid: 
@@ -25,7 +26,7 @@ Public views created in Power Apps that include **Contains data** or **Does not 
 > In Unified Interface, grids don't prepopulate column filters based on the current view definition.
 
    > [!div class="mx-imgBorder"]
-   > ![Grid filtering](media/filter-options.png "Grid filtering")
+   > ![Grid filtering.](media/filter-options.png "Grid filtering")
    
 
 ## Grid and filter navigation
@@ -34,22 +35,22 @@ When you filter data on a grid, the main grid page remembers the filter, sort or
 
 
    > [!div class="mx-imgBorder"]
-   > ![Navigating back to the page opens it in the same state](media/grid-remember-state-on-back-navigate.gif "Navigating back to the page opens it in the same state")
+   > ![Navigating back to the page opens it in the same state.](media/grid-remember-state-on-back-navigate.gif "Navigating back to the page opens it in the same state")
 
 The page jump bar uses the first sorted column. If no change has been made to the sort order, the jump bar uses the primary column.
 
    > [!div class="mx-imgBorder"]
-   > ![Select a filter on the jump bar](media/jumpbar-filter-on-sorted-column.gif "Select a filter on the jump bar")
+   > ![Select a filter on the jump bar.](media/jumpbar-filter-on-sorted-column.gif "Select a filter on the jump bar")
   
 When you select the hierarchy icon, you navigate to the hierarchy view.
 
    > [!div class="mx-imgBorder"]
-   > ![Hierarchy icon](media/grid-row-hierarchy-icon.png "Hierarchy icon")
+   > ![Hierarchy icon.](media/grid-row-hierarchy-icon.png "Hierarchy icon")
 
 You can also open primary column and lookup columns in a new tab or window.
 
    > [!div class="mx-imgBorder"]
-   > ![Open in a new window](media/newtab.png "[Open in a new window")
+   > ![Open in a new window.](media/newtab.png "[Open in a new window")
   
   
 ## Lookup column 
@@ -59,14 +60,14 @@ When you filter on a lookup column, you can select from a list of rows to filter
 The filter on a lookup column helps you complete the search by suggesting results inline. These results are based the table being looked up and will include all rows with no filter.
 
    > [!div class="mx-imgBorder"]
-   > ![Lookup filtering](media/lookup-filter.png "Lookup filtering")
+   > ![Lookup filtering.](media/lookup-filter.png "Lookup filtering")
 
 ## Date filter
 
 The robust **Date** filter includes many different values to choose from, such as **On** to search by an exact date, or **Next X fiscal year** or **In fiscal period** to search by year or quarter.
 
    > [!div class="mx-imgBorder"]
-   > ![Date filtering](media/date-filter.png "Date filtering")
+   > ![Date filtering.](media/date-filter.png "Date filtering")
 
 ## Filter the list of activities
 
@@ -74,7 +75,7 @@ You can filter the list of activities to see only the ones you're interested in.
 
 
    > [!div class="mx-imgBorder"]
-   > ![Activities filter](media/activity_filter.png "Activities filter")
+   > ![Activities filter.](media/activity_filter.png "Activities filter")
 
 
 ### Known issue 
@@ -83,12 +84,12 @@ If you change the default display format for number, currency, time, or date and
 
 To fix the issue, set the display format for number, currency, time, and date back to the default setting. 
 
-1. In the upper-right corner, select the gear icon ![Gear icon](media/selection-rule-gear-button.png), and then select **Personalization Settings**.
+1. In the upper-right corner, select the gear icon ![Gear icon.](media/selection-rule-gear-button.png), and then select **Personalization Settings**.
 
 2. On the **Formats** tab, change the number, currency, time, and date value back to the default setting.
 
     > [!div class="mx-imgBorder"] 
-    > ![Format settings](media/default-format.png "Format settings")
+    > ![Format settings.](media/default-format.png "Format settings")
     
 We're working on this issue, please check back for information about the availability of a fix.
 
@@ -100,24 +101,24 @@ When you use the **Search this view** option on a grid page, the system searches
 1. Go to the **Contacts** grid, and then select **My Active Contacts** from the list of views.
 
     > [!div class="mx-imgBorder"]
-    > ![My active contact view](media/myactive-contacts-view.png "My Active Contacts view")
+    > ![My active contact view.](media/myactive-contacts-view.png "My Active Contacts view")
 
 2. Select **Search this view** to search for data in the view you're in.
 
     > [!div class="mx-imgBorder"]
-    > ![Search view](media/search-view.png "Search this view")
+    > ![Search view.](media/search-view.png "Search this view")
 
 The system searches for data in the **My Active Contacts** view and displays search results by using the same set of columns that are used in your current view.
 
    > [!div class="mx-imgBorder"]
-   > ![Search view](media/search-view2.png "Search results from the Search this view command")
+   > ![Search view.](media/search-view2.png "Search results from the Search this view command")
 
 
 ## Use the quick-find search experience
 
 To switch back to the old quick-find search experience that uses a table's quick-find view definition to perform searches, you'll need admin permissions.
 
-1. In the upper-right corner, select the gear icon ![Gear icon](media/selection-rule-gear-button.png), and then select **Advanced Settings**.
+1. In the upper-right corner, select the gear icon ![Gear icon.](media/selection-rule-gear-button.png), and then select **Advanced Settings**.
 
 2. Go to **Settings** > **Administration** > **System Settings**.
 
