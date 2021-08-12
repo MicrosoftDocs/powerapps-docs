@@ -1,5 +1,6 @@
 ---
-title: "Use the Virtual table OData v4 Data Provider with Microsoft Dataverse | MicrosoftDocs"
+title: "Use the virtual table OData v4 Data Provider with Microsoft Dataverse | MicrosoftDocs"
+description: Learn what's required and best practices when you use the OData v4 Data Provider with virtual tables
 ms.custom: ""
 ms.date: 08/11/2021
 ms.reviewer: ""
