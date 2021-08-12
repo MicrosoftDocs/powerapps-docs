@@ -37,7 +37,7 @@ Use one or more techniques listed below:
 * Position a rectangle **[Shape](controls/control-shapes-icons.md)** above the content, and set **[Fill](controls/properties-color-border.md)** to the same color as the background color of the screen.
 
 > [!NOTE]
-> - Users can still use a keyboard to access an interactive control, such as a **[Button](controls/control-button.md)**, even if you hide it by using one of the techniques in the previous list. Set **[TabIndex](controls/properties-accessibility.md)** to -1 if you want to prevent users from accessing the control by pressing the Tab key.
+> Users can still use a keyboard to access an interactive control, such as a **[Button](controls/control-button.md)**, even if you hide it by using one of the techniques in the previous list. Set **[TabIndex](controls/properties-accessibility.md)** to -1 if you want to prevent users from accessing the control by pressing the Tab key.
 
 ## Hide content from screen-reader users and show it to sighted users
 
