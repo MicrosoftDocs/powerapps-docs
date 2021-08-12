@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2020
+ms.date: 08/12/2021
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: tapanm
@@ -54,7 +54,7 @@ This step type allows the advanced form step to act as a basic form within the o
 
 | Name                      | Description                                                                                                                                                                       |
 |---------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Add Captcha               | Portal uses RadCaptcha by Telerik to prevent malicious spam attacks. The service requires a unique key to authenticate requests for your portal application. |
+| Add Captcha               | Portal uses RadCaptcha by Telerik to prevent malicious spam attacks. The service requires a unique key to authenticate requests for your portal application. <br> **NOTE:** Captcha control is currently limited to only English language for audio, and Latin characters for image. |
 | Validation Group          | The group name assigned to input controls for evaluating valid input of named groups.                                                                                             |
 | Previous Button CSS Class | CSS Class name assigned to the Previous button.                                                                                                                                   |
 | Previous Button Text      | Label on the previous button.                                                                                                                                                     |

@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/14/2021
+ms.date: 08/12/2021
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: tapanm
@@ -231,7 +231,7 @@ The following describes the settings for enabling and disabling user registratio
 | Authentication/Registration/Enabled                 | Enables or disables all forms of user registration. Registration must be enabled for the other settings in this section to take effect. Default: true                                   |
 | Authentication/Registration/OpenRegistrationEnabled | Enables or disables the sign-up registration form for creating new local users. The sign-up form allows any anonymous visitor to the portal to create a new user account. Default: true |
 | Authentication/Registration/InvitationEnabled       | Enables or disables the invitation code redemption form for registering users who have invitation codes. Default: true                                                               |
-|Authentication/Registration/CaptchaEnabled|Enables or disables captcha on the user registration page. Default: false<br>**Note**: This site setting might not be available by default. To enable captcha, you must create the site setting and set its value to true. |
+|Authentication/Registration/CaptchaEnabled|Enables or disables captcha on the user registration page. Default: false <br> **NOTE**: <br> - This site setting might not be available by default. To enable captcha, you must create the site setting and set its value to true. <br> - Captcha control is currently limited to only English language for audio, and Latin characters for image. |
 
 > [!NOTE]
 > Ensure that the primary email is specified for the user, because registration is done by using the primary email (emailaddress1) of the user. The user can't be registered by using the secondary email (emailaddress2) or alternate email (emailaddress3) of the contact record.
