@@ -20,7 +20,7 @@ search.app:
 
 Virtual tables enable integrating data from external data sources by seamlessly representing that data as tables in Microsoft Dataverse, without data replication. Solutions built on Microsoft Power Platform can leverage virtual tables as if they were native Dataverse tables. More information: [Get started with virtual tables](get-started-ve.md).
 
-In this public preview release, we are introducing the virtual connector provider which supports  creating virtual tables using the [SQL Server connector](https://docs.microsoft.com/connectors/sql). We will continue to expand and support other tabular connectors as part of this provider in subsequent releases. 
+In this public preview release, we are introducing the virtual connector provider that supports creating virtual tables using the [SQL Server connector](https://docs.microsoft.com/connectors/sql). We will continue to expand and support other tabular connectors as part of this provider in subsequent releases. 
 
 To learn more about supported actions and limitations, see [connector reference for the SQL Server connector](https://docs.microsoft.com/connectors/sql/).
 
@@ -54,9 +54,9 @@ More information about Application lifecycle management (ALM) and solutions:
 
 ### Prerequisites
 
-- Create a service principal (Application ID) that will be used to authenticate with the provider. The service principal needs to be created in the tenant of your Dataverse platform. For more information on how to create this, please refer to [Creating service principal from Azure portal](https://docs.microsoft.com/azure/active-directory/develop/howto-create-service-principal-portal#register-an-application-with-azure-ad-and-create-a-service-principal).
+- Create a service principal (Application ID) that will be used to authenticate with the provider. The service principal needs to be created in the tenant of your Dataverse platform. More information: [Creating service principal from Azure portal](https://docs.microsoft.com/azure/active-directory/develop/howto-create-service-principal-portal#register-an-application-with-azure-ad-and-create-a-service-principal).
 
-- Create a **client secret** value for the registered Application ID. You need this information when you create a data source for the external data as part of setting up the virtual connector. Refer to [Create a new application secret](https://docs.microsoft.com/azure/active-directory/develop/howto-create-service-principal-portal#option-2-create-a-new-application-secret) doc for steps on how to create this.
+- Create a **client secret** value for the registered Application ID. You need this information when you create a data source for the external data as part of setting up the virtual connector. More information: [Create a new application secret](https://docs.microsoft.com/azure/active-directory/develop/howto-create-service-principal-portal#option-2-create-a-new-application-secret) doc for steps on how to create this.
 
 > [!NOTE]
 > You will need the **client secret** when setting up the virtual table. You can copy this value when creating it. You will not be able to go back to the screen to copy the value.
@@ -95,7 +95,7 @@ To create a virtual table using **SQL Server** connector:
    > [!div class="mx-imgBorder"]
    > ![Select environment to install connector](../media/ve-select-the-environment.png "Select environment to install connector")
 
-1. You should also see the **Virtual Connector Provider** solution and other solutions enabled in the PowerApps environment .
+1. You should also see the **Virtual Connector Provider** solution and other solutions enabled in the Power Apps environment.
 
     > [!div class="mx-imgBorder"]
     > ![Virtual connector provider solution](../media/ve-select-virtual-connectors-solution.png "Virtual connector provider solution")
@@ -165,7 +165,7 @@ To create a virtual table using **SQL Server** connector:
     > [!div class="mx-imgBorder"]
     > ![Advance find virtual table](../media/ve-advance-find-virtual-table.png "Advance find virtual table")
 
-    Here is the view of the same records from the virtual table in the Data tab in PowerApps (**Data -> Tables** view).
+    Here is the view of the same records from the virtual table in the **Data** tab in Power Apps (**Data -> Tables** view).
 
     > [!div class="mx-imgBorder"]
     > ![View of records](../media/ve-view-of-records.png "View of records")
@@ -236,7 +236,7 @@ be added to forms and views to see all associated accounts for each of the servi
    > ![New custom table](../media/ve-new-custom-table.png "New custom table")
 
    > [!NOTE]
-    > You will have to edit the forms and views for this table to include the lookup column and other required columns prior to operation on the virtual table.
+   > You will have to edit the forms and views for this table to include the lookup column and other required columns prior to operation on the virtual table.
 
 #### Tips
 
@@ -252,7 +252,7 @@ be added to forms and views to see all associated accounts for each of the servi
 
 2. Maximum length of characters allowed for a text column in a virtual table is 4000 characters. Suppose the destination table has the character set to greater than this value. In that case, any create/update operation exceeding the max character limit will result in a validation error, and the operation will fail.
 
-3. If you have a 1:N or N:N relationship with a virtual table you will see an error when any query with table reference to the virtual table exceeds the 250 record limit. Use filtering in your query to reduce the record set as a workaround to this limitation.
+3. If you have a 1:N or N:N relationship with a virtual table, you will see an error when any query with table reference to the virtual table exceeds the 250 record limit. Use filtering in your query to reduce the record set as a workaround to this limitation.
 
 ## Troubleshooting
 
