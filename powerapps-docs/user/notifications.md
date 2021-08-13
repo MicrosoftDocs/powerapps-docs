@@ -27,7 +27,7 @@ In-app notifications allow you to receive notifications in the notification cent
 > - This is a preview feature, and isn't available in all regions. Your administrator needs to enable [early access](/power-platform/admin/opt-in-early-access-updates) to use the new app notifications feature.
 > - [!INCLUDE[cc_preview_features_definition](../includes/cc-preview-features-definition.md)]
 
-When you start using your app on the web or Power Apps mobile, the system checks for notifications and displays anything new. Notifications are at the organization level which means you see notifications regardless of the app your using.
+When you start using your app on the web or Power Apps mobile, the system checks for notifications and displays anything new. Notifications are at the organization level so  you'll see all notifications regardless of the app that your using.
 
 
 ## Notification center
@@ -47,7 +47,7 @@ When you start using your app on the web or Power Apps mobile, the system checks
 
 ## Toast notifications
 
-Toast notifications appear temporarily to the left edge of the application. When multiple notifications appear, they are stacked. When more than three toast notifications are received at a time, you'll see toast which indicates that there's more notification for you to see in the notification center.
+Toast notifications appear temporarily to the left edge of the application. When multiple notifications appear, they are stacked. When more than three toast notifications are received at a time, you'll see toast that indicates that there's more notification for you to see in the notification center.
 
 > [!div class="mx-imgBorder"] 
 > ![Example on how toast notifications appear.](media/notifications-toast.png)  
@@ -74,5 +74,5 @@ Your system administrator can enable or disable toast notifications. If toasts a
 
 ## See also
 
-[In-app notifications on Power Apps mobile](../mobile/mobile-notifications.md)
+[In-app notifications on Power Apps mobile](../mobile/mobile-notifications.md) </br>
 [Send in-app notifications-TBD](../maker/model-driven-apps/send-in-app-notifications.md)
