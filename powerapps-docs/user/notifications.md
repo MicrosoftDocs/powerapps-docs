@@ -27,8 +27,7 @@ In-app notifications allow you to receive notifications in the notification cent
 > - This is a preview feature, and isn't available in all regions. Your administrator needs to enable [early access](/power-platform/admin/opt-in-early-access-updates) to use the new app notifications feature.
 > - [!INCLUDE[cc_preview_features_definition](../includes/cc-preview-features-definition.md)]
 
-When you start using your app on the web or Power Apps mobile, the system checks for notifications and displays anything new. Notifications are at the organization level so  you'll see all notifications regardless of the app that your using.
-
+You only see notifications when you're using an app. That's when the system checks for notifications and displays any new notification. Notifications are at the organization level so you'll see all notifications in the app that you're using for all apps that are in your environment.
 
 ## Notification center
 
