@@ -28,7 +28,9 @@ contributors: ""
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
 > [!NOTE]
-> Azure Synapse Link for Dataverse was formerly known as Export to data lake. The service was renamed effective May 2021 and will continue to export data to Azure Data Lake as well as Azure Synapse Analytics.
+>
+> - Azure Synapse Link for Microsoft Dataverse was formerly known as Export to data lake. The service was renamed effective May 2021 and will continue to export data to Azure Data Lake as well as Azure Synapse Analytics.
+> - This feature is still in preview and preview features are are not complete, but are made available on a “preview” basis so customers can get early access and provide feedback. Preview features may have limited or restricted functionality, are not meant for production use, and may be available only in selected geographic areas.
 
 For columns that use Dataverse [Choices](/powerapps/maker/data-platform/create-edit-global-option-sets), choice values are written as an integer label and not a text label to maintain consistency during edits. The integer-to-text label mapping is stored in the *Microsoft.Athena.TrickleFeedService/,table-EntityMetadata.json* file. This article covers how to access the integer-to-text label mapping using Serverless SQL.
 
@@ -61,16 +63,18 @@ This section describes the prerequisites necessary to consume Dataverse data wit
     ) WITH (doc nvarchar(max)) AS rows
     CROSS APPLY OPENJSON(doc, '$.OptionSetMetadata')
     WITH (
-            [EntityName] nvarchar(max) '$.EntityName',
-            [OptionSetName] nvarchar(max) '$.OptionSetName',
+            [EntityName] nvarchar(4000) '$.EntityName',
+            [OptionSetName] nvarchar(4000) '$.OptionSetName',
             [Option] int '$.Option',
-            [IsUserLocalizedLabel] nvarchar(max) '$.IsUserLocalizedLabel',
+            [IsUserLocalizedLabel] nvarchar(4000) '$.IsUserLocalizedLabel',
             [LocalizedLabelLanguageCode] int '$.LocalizedLabelLanguageCode',
-            [LocalizedLabel] nvarchar(max) '$.LocalizedLabel'
+            [LocalizedLabel] nvarchar(4000) '$.LocalizedLabel'
     )
 ```
 
 4. **Run** the query and a table containing the Dataverse choices will be displayed.
+
+5. Join the Dataverse choices with your Dataverse table and store the view in a new database using the a three-part naming convention - *[database-name].[schema-name].[table-name]*.
 
 ### See also
 
