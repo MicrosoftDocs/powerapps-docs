@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 08/05/2021
+ms.date: 08/12/2021
 ms.subservice: canvas-maker
 ms.author: chmoncay
 search.audienceType: 
@@ -27,6 +27,10 @@ Don't have Power BI? [Sign up](/power-bi/service-self-service-signup-for-power-b
 ## Description
 
 Take advantage of your existing data analysis and reporting by displaying your **[Power BI tiles](/power-bi/service-dashboard-tiles)** inside your apps. Specify the tile that you want to show by setting its **Workspace**, **Dashboard**, and **Tile** properties in the **Data** tab of the options panel.
+
+> [!NOTE]
+> - Power BI tile control isn't availbale on [GCC High and DoD](/power-platform/admin/powerapps-us-government#power-apps-us-government-service-urls) environments.
+> - For licensing requirements when embedding Power BI tile, see [Licensing](/power-bi/collaborate-share/service-embed-secure#licensing).
 
 ## Sharing and security
 
