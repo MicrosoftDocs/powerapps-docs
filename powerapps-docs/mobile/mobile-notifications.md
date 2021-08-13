@@ -39,7 +39,7 @@ App notifications allow users to receive notifications in the notification cente
 
 ## Access notifications
 
-1. To access notifications in Power Apps mobile, select the bell icon on the site map. 
+1. To access notifications in Power Apps mobile, from the site map, select the bell icon.
 
    > [!div class="mx-imgBorder"] 
    > ![Enable to disable toast notifications.](media/mobile-bell.png)  
@@ -49,7 +49,7 @@ App notifications allow users to receive notifications in the notification cente
    > [!div class="mx-imgBorder"] 
    > ![Example notification center.](media/mobile-toast.png)  
    
-
+3. 
 ## Turn toast notifications on or off
 
 1. To turn toast notifications on or off, from the site map, go to **Settings**
@@ -58,3 +58,5 @@ App notifications allow users to receive notifications in the notification cente
 
    > [!div class="mx-imgBorder"] 
    > ![Notifications setting screen.](media/mobile-notifications-setting.png)  
+ 
+4. To dismiss and delete a notification, select the close **X** button on a notification. Or, select **Dismiss all** to dismiss and delete all notifications.
