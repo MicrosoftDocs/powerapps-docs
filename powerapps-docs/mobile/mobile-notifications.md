@@ -39,7 +39,7 @@ In-app notifications allow users to receive notifications in the notification ce
 
 ## Access notifications
 
-1. To access notifications in Power Apps mobile, from the site map, select the bell icon.
+1. To access notifications in Power Apps mobile, go to the site map and then select the bell icon.
 
    > [!div class="mx-imgBorder"] 
    > ![Enable to disable toast notifications.](media/mobile-bell.png)  
