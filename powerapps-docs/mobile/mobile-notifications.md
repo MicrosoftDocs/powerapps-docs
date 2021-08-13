@@ -25,7 +25,7 @@ searchScope:
 [!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
 
 
-In-app notifications allow users to receive notifications in the notification center and as a notification toast. For more information, see [In-app notifications in model-driven apps](../user/notifications.md). In Power Apps mobile, toast notification appear one at a time.
+In-app notifications allow users to receive notifications in the notification center and as a notification toast. For more information, see [In-app notifications in model-driven apps](../user/notifications.md). In Power Apps mobile, toast notifications appear one at a time.
 
 > [!div class="mx-imgBorder"] 
 > ![Example of a toast notifications.](media/mobile-toast-1.png)  
