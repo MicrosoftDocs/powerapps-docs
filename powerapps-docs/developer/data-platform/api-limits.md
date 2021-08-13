@@ -66,7 +66,7 @@ If the client is an interactive application, you should display a message that t
 
 ### Non-interactive application re-try
 
-If the client is not interactive, the common practice is to simply wait for the duration to pass before sending the request again. This is commonly done by pausing the execution of the current thread using [Thread.Sleep](/dotnet/api/system.threading.thread.sleep) or equivalent methods.
+If the client is not interactive, the common practice is to simply wait for the duration to pass before sending the request again. This is commonly done by pausing the execution of the current task using [Task.Delay](/dotnet/api/system.threading.tasks.task.delay) or equivalent methods.
 
 ## How Service Protection API Limits are enforced
 
@@ -288,7 +288,7 @@ private async Task<HttpResponseMessage> SendAsync(
                 //Otherwise, use an exponential backoff strategy
                 seconds = (int)Math.Pow(2, retryCount);
             }
-            Thread.Sleep(TimeSpan.FromSeconds(seconds));
+            await Task.Delay(TimeSpan.FromSeconds(seconds));
 
             return await SendAsync(request, httpCompletionOption, retryCount);
         }
