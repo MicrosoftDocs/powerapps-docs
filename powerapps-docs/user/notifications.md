@@ -57,8 +57,8 @@ Your system administrator can enable or disable toast notifications. If toasts a
 
 1. To enable or disable toast notifications in the notification center, select **Settings** 
 
- > [!div class="mx-imgBorder"] 
- > ![Notification settings menu.](media/notifications-settings.png)  
+   > [!div class="mx-imgBorder"] 
+   > ![Notification settings menu.](media/notifications-settings.png)  
 
 2. To enable or disable toast notifications, do one of the following:
 
