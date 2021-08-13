@@ -53,7 +53,7 @@ Toast notifications appear temporarily to the left edge of the application. When
 > ![Example on how toast notifications appear.](media/notifications-toast.png)  
 
 
-The notification’s sender or system administrator can indicate if toasts are enable for notification. If toasts are enabled, you can turn them off at a user level. Regardless of the toast being shown, all notifications can be accessed from notification center.
+Your system administrator can enable or disable toast notifications. If toasts are enabled, you can turn them off at a user level. Regardless of the toast being shown, all notifications can be accessed from notification center.
 
 1. To enable or disable toast notifications in the notification center, select **Settings** 
 
@@ -62,7 +62,7 @@ The notification’s sender or system administrator can indicate if toasts are e
 
 2. To enable or disable toast notifications, do one of the following:
 
-    - **To enable toast notifications**: Move the toggle to **On** and then enter how many seconds the the toast will appear for. 
+    - **To enable toast notifications**: Move the toggle to **On** and then enter how many seconds the toast will show. 
     - **To disable toast notifications**: Move the toggle to **Off**.
    
        > [!div class="mx-imgBorder"] 
