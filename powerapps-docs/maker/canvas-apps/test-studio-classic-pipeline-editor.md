@@ -17,6 +17,7 @@ search.app:
 contributors:
   - tapanm-msft
   - aengusheaney
+  - TYLEROL
 ---
 
 # Automate tests with Azure Pipelines using classic editor
@@ -227,7 +228,7 @@ from the pipeline in this sequence:
 1. Copy the following in the **Override test run parameters** field.
 
     ```
-    -OnlineUsername $(OnlineUsername) -OnlinePassword $(OnlinePassword) -BrowserType $(BrowserTypeChrome) -OnlineUrl $(OnlineUrl) -UsePrivateMode $(UsePrivateMode) -TestAutomationURLFilePath $(TestAutomationURLFilePath) -DriversPath $(ChromeWebDriver)
+    -OnlineUsername "$(OnlineUsername)" -OnlinePassword "$(OnlinePassword)" -BrowserType "$(BrowserTypeChrome)" -OnlineUrl "$(OnlineUrl)" -UsePrivateMode "$(UsePrivateMode)" -TestAutomationURLFilePath "$(TestAutomationURLFilePath)" -DriversPath "$(ChromeWebDriver)"
     ```
 
     > [!NOTE]
@@ -249,7 +250,7 @@ from the pipeline in this sequence:
     1.  **Override test run parameters**
 
         ```
-        -OnlineUsername $(OnlineUsername) -OnlinePassword $(OnlinePassword) -BrowserType $(BrowserTypeFirefox) -OnlineUrl $(OnlineUrl) -UsePrivateMode $(UsePrivateMode) -TestAutomationURLFilePath $(TestAutomationURLFilePath) -DriversPath $(GeckoWebDriver)
+        -OnlineUsername "$(OnlineUsername)" -OnlinePassword "$(OnlinePassword)" -BrowserType "$(BrowserTypeFirefox)" -OnlineUrl "$(OnlineUrl)" -UsePrivateMode "$(UsePrivateMode)" -TestAutomationURLFilePath "$(TestAutomationURLFilePath)" -DriversPath "$(GeckoWebDriver)"
         ```
 
     1.  **Test Run Title**: Run Power Apps Test Automation Tests via
