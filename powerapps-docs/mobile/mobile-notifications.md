@@ -25,7 +25,7 @@ searchScope:
 [!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
 
 
-In-app notifications allow users to receive notifications in the notification center and as a notification toast. For more information, see [In-app notifications in model-driven apps](../user/notifications.md). On Power Apps mobile toast notification appear one at a time.
+In-app notifications allow users to receive notifications in the notification center and as a notification toast. For more information, see [In-app notifications in model-driven apps](../user/notifications.md). In Power Apps mobile, toast notification appear one at a time.
 
 > [!div class="mx-imgBorder"] 
 > ![Example of a toast notifications.](media/mobile-toast-1.png)  
@@ -54,8 +54,8 @@ In-app notifications allow users to receive notifications in the notification ce
 ## Turn toast notifications on or off
 
 1. To turn toast notifications on or off, from the site map, go to **Settings**
-2. Under **In-App Notificaions** go to the **Enable toasts** and move the toggle to on or off.
-3. If you've enabled toast notifications, then select **Total duration** and enter how long you want the toast to apper.
+2. Under **In-App Notifications**, go to the **Enable toasts** and move the toggle to on or off.
+3. If you've enabled toast notifications, then select **Total duration** and enter how long you want the toast to appear.
 
    > [!div class="mx-imgBorder"] 
    > ![Notifications setting screen.](media/mobile-notifications-setting.png)  
