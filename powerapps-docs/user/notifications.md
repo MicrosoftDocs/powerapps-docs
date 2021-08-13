@@ -27,7 +27,7 @@ In-app notifications allow users to receive notifications in the notification ce
 > - This is a preview feature, and isn't available in all regions. Your administrator needs to enable [early access](/power-platform/admin/opt-in-early-access-updates) to use the new app notifications feature.
 > - [!INCLUDE[cc_preview_features_definition](../includes/cc-preview-features-definition.md)]
 
-When you start using an app the system checks for new notifications and will displays any new notifications. Notifications are at the organization level which means you can see notifications regardless of the app your using.
+When you start using an app the system checks for new notifications and displays any new notifications. Notifications are at the organization level which means you can see notifications regardless of the app your using.
 
 
 ## Notification center
@@ -39,7 +39,7 @@ When you start using an app the system checks for new notifications and will dis
   > ![Sample notifications in your app.](media/notifications-bell.png)  
 
 
-- To dismiss and delete a notification, select the close **X** button on a notification. Or, select **Dismiss all** to dismiss and delete all notifications. Your system administrator can set when notification expire by default they will expire in 14 days.
+- To dismiss and delete a notification, select the close **X** button on a notification. Or, select **Dismiss all** to dismiss and delete all notifications. By default, notifications expire in 14 days but you system administrator can modify the expiration setting.
 
   > [!div class="mx-imgBorder"] 
   > ![Select the close button to dismiss a notifications or select Dismiss all.](media/notifications-dismiss.png)  
@@ -53,7 +53,7 @@ Toast notifications appear temporarily to the left edge of the application. When
 > ![Example on how toast notifications appear.](media/notifications-toast.png)  
 
 
-The notification’s sender or system administrator can indicate if toasts are enable for notification. If toasts are enabled, you can trun them off at a user level. Regardless of the toast being shown, all notifications can be accessed from notification center.
+The notification’s sender or system administrator can indicate if toasts are enable for notification. If toasts are enabled, you can turn them off at a user level. Regardless of the toast being shown, all notifications can be accessed from notification center.
 
 1. To enable or disable toast notifications in the notification center, select **Settings** 
 
@@ -62,8 +62,8 @@ The notification’s sender or system administrator can indicate if toasts are e
 
 2. To enable or disable toast notifications, do one of the following:
 
-    - **To enable toast notifcations**: Move the toggle to **On** and then enter how many seconds the the toast will appear for. 
-    - **To disable toast noficatoin**: Move the toggle to **Off**.
+    - **To enable toast notifications**: Move the toggle to **On** and then enter how many seconds the the toast will appear for. 
+    - **To disable toast notifications**: Move the toggle to **Off**.
    
        > [!div class="mx-imgBorder"] 
        > ![Enable to disable toast notifications.](media/notifications-2.png)  
