@@ -21,25 +21,25 @@ search.app:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
 
-In-app notifications allow users to receive notifications in the notification center and optionally as a toast notification. Each notification is sent to a specific user and is only shown to the user when the web or mobile app is running. Notifications are stored until in the notification center until you dismiss them or when they expire. 
+In-app notifications allow you to receive notifications in the notification center of your model-driven app. Notifications are stored in the notification center until you dismiss them or when they expire. By default, notifications expire in 14 days but you system administrator can modify the expiration setting.
 
 > [!IMPORTANT]
 > - This is a preview feature, and isn't available in all regions. Your administrator needs to enable [early access](/power-platform/admin/opt-in-early-access-updates) to use the new app notifications feature.
 > - [!INCLUDE[cc_preview_features_definition](../includes/cc-preview-features-definition.md)]
 
-When you start using an app the system checks for new notifications and displays any new notifications. Notifications are at the organization level which means you can see notifications regardless of the app your using.
+When you start using an app on the web or Power Apps mobile the system checks for new notifications and displays any new notifications. Notifications are at the organization level which means you see notifications regardless of the app your using.
 
 
 ## Notification center
 
-- The notification bell icon shows the count of new notifications. When you open the notification center count is cleared. To access your notifications, select the bell icon on the nav bar. 
+- The notification bell icon shows the count of new notifications. When you open the notification center the count is cleared. To access your notifications, select the bell icon on the nav bar. 
 
 
   > [!div class="mx-imgBorder"] 
   > ![Sample notifications in your app.](media/notifications-bell.png)  
 
 
-- To dismiss and delete a notification, select the close **X** button on a notification. Or, select **Dismiss all** to dismiss and delete all notifications. By default, notifications expire in 14 days but you system administrator can modify the expiration setting.
+- To dismiss and delete a notification, select the close **X** button on a notification. Or, select **Dismiss all** to dismiss and delete all notifications. 
 
   > [!div class="mx-imgBorder"] 
   > ![Select the close button to dismiss a notifications or select Dismiss all.](media/notifications-dismiss.png)  
@@ -47,7 +47,7 @@ When you start using an app the system checks for new notifications and displays
 
 ## Toast notifications
 
-Toast notifications appear temporarily to the left edge of the application. When multiple notifications appear, they are stacked. When more than three toast notifications are received at a time, a toast indicates that there are more in notification center.
+Toast notifications appear temporarily to the left edge of the application. When multiple notifications appear, they are stacked. When more than three toast notifications are received at a time, you'll see toast which indicates that there's more notification for you to see in the notification center.
 
 > [!div class="mx-imgBorder"] 
 > ![Example on how toast notifications appear.](media/notifications-toast.png)  
