@@ -21,7 +21,7 @@ search.app:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
 
-In-app notifications allow you to receive notifications in the notification center of your model-driven app. Notifications are stored in the notification center until you dismiss them or when they expire. By default, notifications expire in 14 days but your system administrator can modify the expiration setting.
+In-app notifications allow you to receive notifications in the notification center of your model-driven app. Notifications are stored in the notification center until you dismiss them or when they expire. By default, notifications expire in 14 days but your system administrator can modify the expiration date.
 
 > [!IMPORTANT]
 > - This is a preview feature, and isn't available in all regions. Your administrator needs to enable [early access](/power-platform/admin/opt-in-early-access-updates) to use the new app notifications feature.
@@ -75,4 +75,4 @@ Your system administrator can enable or disable toast notifications. If toasts a
 ## See also
 
 [In-app notifications on Power Apps mobile](../mobile/mobile-notifications.md) </br>
-[Send in-app notifications-TBD](../maker/model-driven-apps/send-in-app-notifications.md)
+[Send in-app notifications within model-driven apps](../developer/model-driven-apps/clientapi/send-in-app-notifications.md)
