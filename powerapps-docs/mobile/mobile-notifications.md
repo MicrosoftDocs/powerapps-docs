@@ -20,12 +20,12 @@ searchScope:
   - "Power Apps"
 ---
 
-# Preview: Notifications in Power Apps mobile
+# Preview: In-app otifications on Power Apps mobile
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
 
 
-App notifications allow users to receive notifications in the notification center and as a notification toast. For more information, see [How notifications work in model-driven apps](../user/notifications.md). In Power Apps mobile toast notification appear one at a time.
+In-app notifications allow users to receive notifications in the notification center and as a notification toast. For more information, see [In-app notifications in model-driven apps](../user/notifications.md). On Power Apps mobile toast notification appear one at a time.
 
 > [!div class="mx-imgBorder"] 
 > ![Example of a toast notifications.](media/mobile-toast-1.png)  
@@ -49,14 +49,14 @@ App notifications allow users to receive notifications in the notification cente
    > [!div class="mx-imgBorder"] 
    > ![Example notification center.](media/mobile-toast.png)  
    
-3. 
+3. To dismiss and delete a notification, select the close **X** button on a notification. Or, select **Dismiss all** to dismiss and delete all notifications.
+
 ## Turn toast notifications on or off
 
 1. To turn toast notifications on or off, from the site map, go to **Settings**
-2. Under **In-App Notificaions** go to the **Enable toasts** setting and move the toggle to on or off.
-3. If you've enabled toast notifications, then select **Total duration** and enable how long you want the toast to apper.
+2. Under **In-App Notificaions** go to the **Enable toasts** and move the toggle to on or off.
+3. If you've enabled toast notifications, then select **Total duration** and enter how long you want the toast to apper.
 
    > [!div class="mx-imgBorder"] 
    > ![Notifications setting screen.](media/mobile-notifications-setting.png)  
- 
-4. To dismiss and delete a notification, select the close **X** button on a notification. Or, select **Dismiss all** to dismiss and delete all notifications.
+
