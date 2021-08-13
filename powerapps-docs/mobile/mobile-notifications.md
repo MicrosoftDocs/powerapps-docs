@@ -20,7 +20,7 @@ searchScope:
   - "Power Apps"
 ---
 
-# Preview: In-app otifications on Power Apps mobile
+# Preview: In-app notifications on Power Apps mobile
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
 
