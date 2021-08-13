@@ -129,7 +129,7 @@ The number of rows that you see in the row set navigation pane is based on the n
 2. Open a row and then select **Open Row Set** ![Row set navigation.](media/openrecordset_2.png "Row set button") and then select a row from the list. 
 
 
-![Row set navigation.](media/recordsetnav_new.gif "This shows how to use the row set navigation feature")   
+![How to use the row set navigation.](media/recordsetnav_new.gif "This shows how to use the row set navigation feature")   
 
 
 ## Reference panel
@@ -149,7 +149,7 @@ The reference panel is a great way to get work done without moving away from the
 The app message bar shows three types of notifications: informational, warning, and error. 
 
 > ![NOTE]
-> If you're on [early access](/power-platform/admin/opt-in-early-access-updates) notifications might appear differently. For more information, see [How notifications work in model-driven apps](notifications.md).
+> If you're on [early access](/power-platform/admin/opt-in-early-access-updates) there's a new in-app notifications feature. For more information, see [In-app notifications in model-driven apps](notifications.md).
  
 
 When you select the error notification, it will take you to the column on the form where the error occurred.
