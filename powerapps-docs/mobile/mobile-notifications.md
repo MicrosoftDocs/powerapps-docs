@@ -25,11 +25,15 @@ searchScope:
 [!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
 
 
-App notifications allow users to receive notifications in the notification center and optionally as a toast notification. For more information, see [How notifications work in model-driven apps](../user/notifications.md).
+App notifications allow users to receive notifications in the notification center and as a notification toast. For more information, see [How notifications work in model-driven apps](../user/notifications.md). In Power Apps mobile toast notification appear one at a time.
 
 > [!IMPORTANT]
 > - This is a preview feature, and isn't available in all regions. Your administrator needs to enable [early access](/power-platform/admin/opt-in-early-access-updates) to use the new app notifications feature.
 > - [!INCLUDE[cc_preview_features_definition](../includes/cc-preview-features-definition.md)]
+
+
+> [!div class="mx-imgBorder"] 
+> ![Example of a toast notifications.](media/mobile-toast-1.png)  
 
 
 To access notifications in Power Apps mobile, select the bell icon on the site map. 
