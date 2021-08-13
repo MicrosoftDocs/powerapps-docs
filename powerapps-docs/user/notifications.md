@@ -21,13 +21,13 @@ search.app:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
 
-In-app notifications allow you to receive notifications in the notification center of your model-driven app. Notifications are stored in the notification center until you dismiss them or when they expire. By default, notifications expire in 14 days but you system administrator can modify the expiration setting.
+In-app notifications allow you to receive notifications in the notification center of your model-driven app. Notifications are stored in the notification center until you dismiss them or when they expire. By default, notifications expire in 14 days but your system administrator can modify the expiration setting.
 
 > [!IMPORTANT]
 > - This is a preview feature, and isn't available in all regions. Your administrator needs to enable [early access](/power-platform/admin/opt-in-early-access-updates) to use the new app notifications feature.
 > - [!INCLUDE[cc_preview_features_definition](../includes/cc-preview-features-definition.md)]
 
-When you start using an app on the web or Power Apps mobile the system checks for new notifications and displays any new notifications. Notifications are at the organization level which means you see notifications regardless of the app your using.
+When you start using your app on the web or Power Apps mobile, the system checks for notifications and displays anything new. Notifications are at the organization level which means you see notifications regardless of the app your using.
 
 
 ## Notification center
