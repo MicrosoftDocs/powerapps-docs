@@ -27,8 +27,7 @@ In-app notifications allow you to receive notifications in the notification cent
 > - This is a preview feature, and isn't available in all regions. Your administrator needs to enable [early access](/power-platform/admin/opt-in-early-access-updates) to use the new app notifications feature.
 > - [!INCLUDE[cc_preview_features_definition](../includes/cc-preview-features-definition.md)]
 
-You only see notifications when you're using an app. That's when the system runs a check and displays any new notification. Notifications are at the organization level so you'll see notifications for apps in your environment in the current app that you're using.
-
+You only see notifications when you're using an app. That's when the system runs a check and displays any new notification. Notifications are at the organization level so you'll see notifications in the app you're using for all apps in your environment.
 ## Notification center
 
 - The notification bell icon shows the count of new notifications. When you open the notification center the count is cleared. To access your notifications, select the bell icon on the nav bar. 
@@ -46,7 +45,7 @@ You only see notifications when you're using an app. That's when the system runs
 
 ## Toast notifications
 
-Toast notifications appear temporarily to the left edge of the application. When multiple notifications appear, they are stacked. When more than three toast notifications are received at a time, you'll see toast that indicates that there's more notification for you to see in the notification center.
+Toast notifications appear temporarily to the left side of your app. When multiple notifications appear, they are stacked. When there's more than three toast notifications at the same time, you'll get a toast letting you know that there's more notifications.
 
 > [!div class="mx-imgBorder"] 
 > ![Example on how toast notifications appear.](media/notifications-toast.png)  
