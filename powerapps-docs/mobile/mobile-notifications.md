@@ -27,22 +27,34 @@ searchScope:
 
 App notifications allow users to receive notifications in the notification center and as a notification toast. For more information, see [How notifications work in model-driven apps](../user/notifications.md). In Power Apps mobile toast notification appear one at a time.
 
+> [!div class="mx-imgBorder"] 
+> ![Example of a toast notifications.](media/mobile-toast-1.png)  
+
+
 > [!IMPORTANT]
 > - This is a preview feature, and isn't available in all regions. Your administrator needs to enable [early access](/power-platform/admin/opt-in-early-access-updates) to use the new app notifications feature.
 > - [!INCLUDE[cc_preview_features_definition](../includes/cc-preview-features-definition.md)]
 
 
-> [!div class="mx-imgBorder"] 
-> ![Example of a toast notifications.](media/mobile-toast-1.png)  
 
+## Access notifications
 
-To access notifications in Power Apps mobile, select the bell icon on the site map. 
+1. To access notifications in Power Apps mobile, select the bell icon on the site map. 
 
-> [!div class="mx-imgBorder"] 
-> ![Enable to disable toast notifications.](media/mobile-bell.png)  
+   > [!div class="mx-imgBorder"] 
+   > ![Enable to disable toast notifications.](media/mobile-bell.png)  
 
-On Power Apps mobile, when there's notification a toast will appear for each notification. 
+2. The notification center opens which displays all your notifications.
  
-> [!div class="mx-imgBorder"] 
-> ![Example of a toast notifications.](media/mobile-toast.png)  
+   > [!div class="mx-imgBorder"] 
+   > ![Example notification center.](media/mobile-toast.png)  
    
+
+## Turn toast notifications on or off
+
+1. To turn toast notifications on or off, from the site map, go to **Settings**
+2. Under **In-App Notificaions** go to the **Enable toasts** setting and move the toggle to on or off.
+3. If you've enabled toast notifications, then select **Total duration** and enable how long you want the toast to apper.
+
+   > [!div class="mx-imgBorder"] 
+   > ![Notifications setting screen.](media/mobile-notifications-setting.png)  
