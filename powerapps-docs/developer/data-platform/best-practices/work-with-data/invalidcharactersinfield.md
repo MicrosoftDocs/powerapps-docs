@@ -26,9 +26,23 @@ Hexadecimal error code : `80040278`<br />
 Error Number: `-2147220872`<br />
 Description: `The field '{0}' contains one or more invalid characters.`<br />
 
-These characters are sometimes found in email content that includes replies or when text is copied from an another source which may have characters to control presentation.
+Dataverse uses the [System.Xml.XmlConvert.VerifyXmlChars(String) Method](/dotnet/api/system.xml.xmlconvert.verifyxmlchars) for every string value passed to these columns. This error is thrown on the first invalid character encountered.
 
-Applications that work with data that can contain these characters should always HTML Encode the content before saving. 
+You may encounter these characters in email content that includes replies or when text is copied from another source which may have characters to control presentation.
+
+To prevent this error you can:
+
+- HTML encode the content before saving.
+
+- Remove the individual invalid characters, use the [System.Xml.XmlConvert.IsXmlChar(Char) Method](/dotnet/api/system.xml.xmlconvert.isxmlchar) as shown in the following example:
+
+  ```csharp
+  static string RemoveInvalidXmlChars(string text) {
+      var validXmlChars = text.Where(ch => XmlConvert.IsXmlChar(ch)).ToArray();
+      return new string(validXmlChars);
+  }
+  ```
+
 
 ### See Also
 
