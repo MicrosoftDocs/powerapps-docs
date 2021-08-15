@@ -2170,6 +2170,8 @@
         href: ./data-platform/azure-synapse-link-spark.md 
       - name: Visualize data with Power BI
         href: ./data-platform/azure-synapse-link-powerbi.md
+      - name: Read Incremental Updates
+        href: ./data-platform/azure-synapse-link-incremental.md
       - name: Access Dataverse choices with Serverless SQL
         href: ./data-platform/azure-synapse-link-choices-serverless.md
       - name: Access Dataverse choices with Spark
