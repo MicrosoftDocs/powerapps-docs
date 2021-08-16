@@ -2173,9 +2173,7 @@
       - name: Read Incremental Updates
         href: ./data-platform/azure-synapse-link-incremental.md
       - name: Access Dataverse choices with Serverless SQL
-        href: ./data-platform/azure-synapse-link-choices-serverless.md
-      - name: Access Dataverse choices with Spark
-        href: ./data-platform/azure-synapse-link-choices-spark.md       
+        href: ./data-platform/azure-synapse-link-choices-serverless.md      
     - name: Analyze from Azure Data Lake Storage Gen2
       items:
       - name: Ingest exported data with Azure Data Factory

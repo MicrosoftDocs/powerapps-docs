@@ -30,7 +30,7 @@ contributors: ""
 > [!NOTE]
 > Azure Synapse Link for Dataverse was formerly known as Export to data lake. The service was renamed effective May 2021 and will continue to export data to Azure Data Lake as well as Azure Synapse Analytics.
 
-After creating a continuous pipeline of data from Dataverse to your Synapse workspace with Azure Synapse Link for Dataverse, you can read the incremental updates of a specified time interval.
+After creating a continuous pipeline of data from Dataverse to your Synapse workspace with Azure Synapse Link for Dataverse, you can read the incremental updates of a specified time interval. Every Dataverse table exported with Azure Synapse Link for Dataverse contains a *SinkModifiedOn* column which can be used to get the incremental updates.
 
 > [!NOTE]
 > Azure Synapse Link for Dataverse was formerly known as Export to data lake. The service was renamed effective May 2021 and will continue to export data to Azure Data Lake as well as Azure Synapse Analytics.
@@ -41,13 +41,23 @@ This section describes the prerequisites necessary to ingest exported Dataverse 
 
 ### Azure Synapse Link for Dataverse
 
-This guide assumes that you've already exported Dataverse data by using [Azure Synapse Link for Dataverse](export-to-data-lake.md). All tables must be exported with the append-only option.
+This guide assumes that you've already exported Dataverse data by using [Azure Synapse Link for Dataverse](export-to-data-lake.md). **All tables must be exported with the append-only option.**
 
 ## Read the Incremental Updates of your Dataverse data
 
-1. Every Dataverse table exported with Azure Synapse Link for Dataverse contains a *SinkModifiedOn* column.
+1. Navigate to you Azure Synapse Analytics workspace.
 
-2. Maintain a pointer to the *SinkModifiedOn* column to specify the time interval in which the read the data updates.
+2. Select **Develop** from the left side panel, then select **+** > **SQL script**.
+
+3. Paste the following SQL query and replace **CONTAINER_NAME** with the name of the container, **TABLE_NAME** with the name of the Dataverse table, and **TIMESTAMP_START** and **TIMESTAMP_END** with the time interval in UTC format (YYYY-MM-DDTHH:MM:SS).
+
+```SQL
+    SELECT * 
+    FROM [CONTAINER_NAME].[dbo].[TABLE_NAME]
+    WHERE [SinkModifiedOn] >= TIMESTAMP_START AND [SinkModifiedOn] <= TIMESTAMP_END
+```
+
+4. **Run** the query and a table containing the incremental updates to the Dataverse table from the specified time interval will be displayed.
 
 ### See also
 

@@ -126,12 +126,14 @@ If you deleted the file system when unlinking, follow the steps above to relink 
 
 4. Enter the following script, replace **\<DATABASE_NAME\>** with the name of the database to unlink, and run the notebook.
 
-```sql
+```SQL
     %%sql
     DROP DATABASE <DATABASE_NAME> CASCADE
 ```
 
-5. Navigate to Power Apps, and relink the Synapse workspace and data lake.
+5. After running the notebook, refresh the database list from the left panel. If the database still exists, try right clicking on the database and selecting **Delete**.
+
+6. Navigate to Power Apps, and relink the Synapse workspace and data lake.
 
 ## View your data in Azure Synapse Analytics
 
