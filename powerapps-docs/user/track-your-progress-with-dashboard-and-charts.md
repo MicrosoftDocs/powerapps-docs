@@ -7,6 +7,7 @@ ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 9/14/2020
+ms.subservice: end-user
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
@@ -30,7 +31,7 @@ A dashboard is made up of a collection of easy-to-read charts and graphs that pr
 Dashboards are available for all row types. Charts are available on the Dashboard page, Grid page, Associated Home page, and Edit Form page. 
 
 > [!div class="mx-imgBorder"]
-> ![Dashboard](media/dashboard_sample.png "Sample Dashboard") 
+> ![Dashboard.](media/dashboard_sample.png "Sample Dashboard") 
 
 
 ## View dashboards

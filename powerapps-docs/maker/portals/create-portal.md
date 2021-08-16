@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: intro-internal
 ms.date: 04/21/2021
+ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: tapanm
 contributors:
@@ -50,7 +51,7 @@ To create a portal:
 
 3.	If the selected environment doesn't contain portal pre-requisites, a message is displayed in the **Portal from blank** window suggesting you select another environment or create a new one.
 
-    ![create new environment message](media/create-portal-message.png "Create new environment message")
+    ![create new environment message.](media/create-portal-message.png "Create new environment message")
 
 4.	If you choose to continue with the current environment, enter the required information in the window as mentioned in the following steps. If you choose to create a new environment, see [Create new environment](create-additional-portals.md#create-new-environment).
 
@@ -60,19 +61,19 @@ To create a portal:
     > To create a portal using a different language, you must first [enable the language in the environment](/power-platform/admin/enable-languages#enable-the-language) so that it becomes available in the language drop-down list.
 
     > [!div class=mx-imgBorder]
-    > ![create new portal](media/create-new-portal.png "Create new portal")  
+    > ![create new portal.](media/create-new-portal.png "Create new portal")  
 
 After you select **Create**, the portal will begin provisioning and the provisioning status is displayed through [notifications](#portal-provisioning-notifications).
 
 If you've created your portal in the environment that doesn't have portal pre-requisites installed, the provisioning status is also displayed in the grid:
 
 > [!div class=mx-imgBorder]
-> ![Grid notification](media/provision-progress-notif.png "Grid notification")
+> ![Grid notification.](media/provision-progress-notif.png "Grid notification")
 
 After the portal is provisioned successfully, the status is updated and the portal is displayed in the grid:
 
 > [!div class=mx-imgBorder]
-> ![Portal provisioned](media/recent-apps.png "Portal provisioned")
+> ![Portal provisioned.](media/recent-apps.png "Portal provisioned")
 
 To edit the portal in Power Apps portals Studio, see [Edit a portal](manage-existing-portals.md#edit).
 
@@ -92,7 +93,7 @@ After you select **Create**, the portal will begin provisioning and the provisio
 The following notification is displayed when you select **Create** to provision the portal.
 
 > [!div class=mx-imgBorder]
-> ![Toast notification](media/toast-notif.png "Toast notification") 
+> ![Toast notification.](media/toast-notif.png "Toast notification") 
 
 **Notifications in the Notifications pane**
 
@@ -101,12 +102,12 @@ Once the provisioning request is successfully placed, the following notification
 Notification shown for provisioning in progress.
 
 > [!div class=mx-imgBorder]
-> ![Pane notification](media/pane-notif.png "Pane notification")
+> ![Pane notification.](media/pane-notif.png "Pane notification")
 
 Notification shown for provisioning successfully completed.
 
 > [!div class=mx-imgBorder]
-> ![Provisioning success notification](media/provision-complete-notif.png "Provisioning success notification") 
+> ![Provisioning success notification.](media/provision-complete-notif.png "Provisioning success notification") 
 
 If the portal provisioning fails, the notifications are displayed similarly.
   

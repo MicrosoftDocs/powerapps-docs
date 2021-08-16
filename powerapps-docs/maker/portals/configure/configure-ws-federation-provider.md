@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2021
+ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: tapanm
 contributors:
@@ -31,17 +32,17 @@ To configure a WS-Federation provider
 
 1. Enter a provider name.
 
-    ![Provider name](media/authentication/wsfed-provider-name.png "Provider name")
+    ![Provider name.](media/authentication/wsfed-provider-name.png "Provider name")
 
 1. Select **Next**.
 
 1. Create the application and configure the settings with your identity provider.
 
-    ![Create the WS-Federation application](media/authentication/step-1-wsfed.png "Create the WS-Federation application")
+    ![Create the WS-Federation application.](media/authentication/step-1-wsfed.png "Create the WS-Federation application")
 
 1. Enter the following site settings for portal configuration.
 
-    ![Configure WS-Federation site settings](media/authentication/configure-wsfed-site-settings.png "Configure WS-Federation site settings")
+    ![Configure WS-Federation site settings.](media/authentication/configure-wsfed-site-settings.png "Configure WS-Federation site settings")
 
     > [!NOTE]
     > Ensure that you review&mdash;and if required, change&mdash;the default values.
@@ -57,7 +58,7 @@ To configure a WS-Federation provider
 
 1. (Optional) Configure additional settings.
 
-    ![Additional settings](media/authentication/wsfed-site-settings-additional.png "Additional settings")
+    ![Additional settings.](media/authentication/wsfed-site-settings-additional.png "Additional settings")
 
     | Name | Description
     | - | - |

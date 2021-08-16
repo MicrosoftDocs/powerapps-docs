@@ -1,20 +1,25 @@
 ---
-title: Control limitations for Power Apps | Microsoft Docs
-description: Learn about limitations of controls in Power Apps.
+title: Limitations of controls in canvas apps
+description: Learn about the limitations of controls in canvas apps.
 author: navjotm
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 01/11/2021
+ms.date: 06/30/2021
+ms.subservice: canvas-maker
 ms.author: namarwah
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - navjotm
+  - chmoncay
 ---
 
-# Limitations of controls in Power Apps
+# Limitations of controls in canvas apps
 
 In this article, learn about the general limitations of the controls used in canvas apps. In addition, [limitations of controls in Teams](#limitations-of-controls-in-teams) lists the control limitations applicable to apps played inside Microsoft Teams. For more information about environments, go to [Types of environments](/power-platform/admin/environments-overview#types-of-environments).
 
@@ -36,7 +41,7 @@ In this article, learn about the general limitations of the controls used in can
 
 - [Image control](controls/control-image.md) - only supports external media URLs using HTTPS.
 
-- [Power BI tile control](controls/control-power-bi-tile.md) - see [Power BI tile control limitations for passing a parameter](controls/control-power-bi-tile.md#pass-a-parameter).
+- [Power BI tile control](controls/control-power-bi-tile.md) - see [Power BI tile control limitations for passing a parameter](controls/control-power-bi-tile.md#filtering).
 
 - [PDF viewer control (experimental)](controls/control-pdf-viewer.md) - see [PDF viewer control (experimental) limitations](controls/control-pdf-viewer.md#limitations).
 
@@ -71,6 +76,7 @@ The following controls aren't supported by apps embedded in Teams:
 - [Map](geospatial-component-map.md)
 - [Mixed reality](mixed-reality-overview.md) (View in MR, View shape in MR, Measure in MR)
 - [Power BI tile control](controls/control-power-bi-tile.md)
+- [Web barcode scanner control](controls/control-barcodescanner.md)
 
 ## Next steps
 

@@ -7,6 +7,7 @@ ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 32e8d1d0-4093-4588-a517-2930eec34dce
 author: "Nkrb"
+ms.subservice: mda-developer
 ms.author: "nabuthuk"
 manager: "kvivek"
 search.audienceType: 
@@ -19,7 +20,7 @@ search.app:
 
 Provides properties and methods to work with the data on a form.
 
-![formContext Data object model](../../media/ClientAPI-formContext-data-Model.png)
+![formContext Data object model.](../../media/ClientAPI-formContext-data-Model.png)
 
 ## Properties
 

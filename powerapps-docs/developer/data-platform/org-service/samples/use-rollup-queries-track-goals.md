@@ -68,14 +68,14 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 ### Demonstrate
 
 1. Creates Metric, and setting the Metric type to `Amount` and setting amount data type to `Money`.
-2. The `RollupField` creates a rollup field which targets the actual totals.
+2. The `RollupField` creates a rollup column which targets the actual totals.
 3. The `GoalRollupQuery` creates the goal rollup queries, locating the sales orders in the first sales representative's area (zip code: 60661) and with a value greater than $1000. 
 4. Creates two goals, one parent goal and one child goals.
 5. The `RecalculateRequest` calculates the rollup for goals. 
 
 ### Clean up
 
-Display an option to delete the sample data created in [Setup](#setup). The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the records to achieve the same result.
+Display an option to delete the sample data created in [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the records to achieve the same result.
 
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

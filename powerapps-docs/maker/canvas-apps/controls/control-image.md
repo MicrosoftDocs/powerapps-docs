@@ -1,6 +1,6 @@
 ---
-title: 'Image control: reference | Microsoft Docs'
-description: Information, including properties and examples, about the Image control
+title: Image control in Power Apps
+description: Learn about the details, properties and examples of the image control in Power Apps.
 author: chmoncay
 manager: kvivek
 ms.service: powerapps
@@ -8,11 +8,15 @@ ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 10/25/2016
+ms.subservice: canvas-maker
 ms.author: chmoncay
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - chmoncay
 ---
 # Image control in Power Apps
 A control that shows an image from, for example, a local file or a data source.
@@ -68,7 +72,7 @@ If you add one or more **Image** controls to your app, you can show individual i
 
 **ImageRotation** – How to rotate the image before displaying it.  Values can be none, clockwise (CW) 90 degrees, counter-clockwise (CCW) 90 degrees and clockwise 180 degrees.
 
-**[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
+**[OnSelect](properties-core.md)** – Actions to perform when the user taps or clicks a control.
 
 **OriginalHeight** – Original height of an image, enabled with the **CalculateOriginalDimensions** property.
 
