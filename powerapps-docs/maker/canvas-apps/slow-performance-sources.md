@@ -67,7 +67,7 @@ Connector-specific limits are available in [Power Apps connectors documentation]
 
 ## Debug published app setting enabled
 
-Apps published with the [Setting: Debug published app](monitor-canvasapps.md#setting-debug-published-app) enabled perform significantly slower. Publish your app with this setting disabled as soon as debugging of your published app with source expressions is no longer needed.  
+Apps published with the [Setting: Debug published app](monitor-canvasapps.md#setting-debug-published-app) enabled perform significantly slower. Publish your app with this setting disabled as soon as you no longer need to view source expressions when debugging your published app.  
 
 ## Next steps
 
