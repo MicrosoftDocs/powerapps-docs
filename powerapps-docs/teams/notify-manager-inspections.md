@@ -23,7 +23,8 @@ Let’s say you're using inspections to investigate a report of a problem in an 
 
 The outcome is that the Inspection app can be used to verify that employees are maintaining an area, and provide notification to management if there are issues. For example, the store manager may want to know if the supervisor of the electronics section of a store is properly maintaining the area of their store and if an issue is found, send their manager an email.
 
-> [!NOTE] Before you begin, read [Customize the Inspection app](customize-inspections.md).
+> [!NOTE]
+> Before you begin, read [Customize the Inspection app](customize-inspections.md).
 
 ## Prerequisites
 
@@ -65,7 +66,8 @@ Next, we'll add a responsible person column to the location table so we can choo
 
     ![Add Responsible User column](media/notify-manager-on-completion-of-inspections/add-responsible-user-column.png "Add Responsible User column")
 
-    > [!NOTE] Users must log in to the app one time before they can be selected from the user table.
+    > [!NOTE]
+    > Users must log in to the app one time before they can be selected from the user table.
 
 1. On the **Build** tab under Installed apps, select **Manage Inspections**.
 
@@ -235,7 +237,8 @@ All the changes to the Inspection app are completed. The app can now be publishe
 
 1. Select a User and confirm that the user has a Manager assigned.
 
-    > [!NOTE] If you're working on your organization’s environment, then you'd most likely not need this step. But if working from a trial environment, it is better to create another trial user and add that user as the manager to the Responsible user.
+    > [!NOTE]
+    > If you're working on your organization’s environment, then you'd most likely not need this step. But if working from a trial environment, it is better to create another trial user and add that user as the manager to the Responsible user.
 
 ## Test the app
 
