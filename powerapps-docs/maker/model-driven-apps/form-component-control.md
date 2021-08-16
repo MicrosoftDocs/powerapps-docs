@@ -89,6 +89,10 @@ If there are multiple errors during save, only one error will be shown to the us
 
 If there are unsaved changes in a form for a form component and a user tries to change the lookup column the form component is bound to, the user will be alerted about this change.
 
+### Client API
+
+A [form context](../../developer/model-driven-apps/clientapi/clientapi-form-context.md) is accessible for the control. It can be accessed via the main form's form context by accessing the control via an API like [getControl](../../developer/model-driven-apps/clientapi/reference/controls/getControl.md). Before accessing data for the related table in the form component control, event handlers should wait for the [isLoaded API](../../developer/model-driven-apps/clientapi/reference/formContext-ui-quickForms/isLoaded.md) for the control to return true.
+
 ## Limitations
 
 Note the following limitations when you add the form component control to a table form:
