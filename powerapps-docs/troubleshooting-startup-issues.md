@@ -93,7 +93,7 @@ Power Apps stores some data such as user identity and preferences locally levera
 
 Most browsers allow settings to reflect the changes immediately. You may also need to close all the browser windows and reopen instead.
 
-To enable this setting for the Power Apps and Dynamics 365 mobile apps for iOS you need to work through the iOS settings linked to the app rather than through the browser settings fpr iOS. 
+To enable this setting for the Power Apps and Dynamics 365 mobile apps for iOS you need to work through the iOS settings linked to the app rather than through the browser settings for iOS. 
 
 ### Instructions for Microsoft Edge
 
