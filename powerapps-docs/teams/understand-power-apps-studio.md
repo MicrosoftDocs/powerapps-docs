@@ -357,6 +357,7 @@ the table name. You can also expand the *Advanced settings* to update the table'
 ![Create table.](media/studio-create-table.png "Create table")
 
 Watch this video that shows you how to quickly create table and columns.
+
 [!VIDEO https://www.microsoft.com/videoplayer/embed/RWJ4MI]
 
 > [!NOTE]
