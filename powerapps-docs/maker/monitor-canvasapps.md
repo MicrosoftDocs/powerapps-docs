@@ -78,7 +78,7 @@ Monitor also displays a notification that the monitoring session that's currentl
 If you want to view the source expressions in Monitor for the published app, you need to turn on the setting to publish the expressions with the app. This setting is similar to generating a debug file in traditional development. Publishing source expressions with your app is optional. Even when this setting is off, you'll be able to see the events happening in your app, but you won't be able to map these events to specific expressions or formulas.
 
 > [!NOTE]
-> Enabling this setting has a detrimental impact on your app's performance. To minimize the impact for your users, disable this setting in production, as soon as you are done debugging, or when you no longer need to view source expressions for the published app. 
+> Enabling this setting has a detrimental impact on your app's performance for all your users. To minimize the impact, disable this setting as soon as you no longer need to view source expressions when debugging your published app. 
 
 To enable this setting, go to **File** > **Settings**, and then turn on **Debug published app**.
 
