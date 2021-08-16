@@ -167,7 +167,7 @@ Now that we've added the field to the Manage Inspections app, we'll create a pro
 
 After publishing the Manage Inspections app, select the **Back** button to go back to the **Build** > **Installed Apps** screen > Select **Inspection**.
 
-    ![Select Inspection App](media/notify-manager-on-completion-of-inspections/select-inspection-app.png "Select Inspection App")
+![Select Inspection App](media/notify-manager-on-completion-of-inspections/select-inspection-app.png "Select Inspection App")
 
 ### Add a Flow to send an Email to the Manager
 
@@ -181,7 +181,7 @@ After publishing the Manage Inspections app, select the **Back** button to go ba
 
     ![Trigger a Flow on the click of Continue Inspection button](media/notify-manager-on-completion-of-inspections/add-flow-on-continue-inspection-button.png "Trigger a Flow on the click of Continue Inspection button")
 
-1. Select **+ Create** to create a new flow on [Power Automate](flow.microsoft.com).
+1. Select **+ Create** to create a new flow on [Power Automate](https://flow.microsoft.com).
 
 ### Create a Flow to send an email to the Manager of the Responsible User
 
