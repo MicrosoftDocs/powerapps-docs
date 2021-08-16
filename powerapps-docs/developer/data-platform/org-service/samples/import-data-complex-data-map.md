@@ -36,7 +36,7 @@ In order to simulate the scenario described above, the sample will do the follow
 
 1. Checks for the current version of the org.
 1. The `ImportMap` method creates an import map.
-1. The `ColumnMapping` method creates a column mapping for a `text` type field.
+1. The `ColumnMapping` method creates a column mapping for a `text` type column.
 1. The `EntityReference` method relates the column mapping with the data map.
 1. The `LookUpMapping` method creates a lookup mapping to the parent account.
 1. The `ImportFile` method creates a import file.
@@ -48,7 +48,7 @@ In order to simulate the scenario described above, the sample will do the follow
 
 ### Clean up
 
-Display an option to delete the records created in the [Setup](#setup). The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the records to achieve the same result.
+Display an option to delete the records created in the [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the records to achieve the same result.
 
 
 ### See Also
@@ -59,7 +59,7 @@ Display an option to delete the records created in the [Setup](#setup). The dele
 [Add transformation mappings for import](../../add-transformation-mappings-import.md)<br />
 [Configure data import](../../configure-data-import.md)<br />
 [Run data import](../../run-data-import.md)<br />
-[Data import entities](../../data-import-entities.md)<br />
+[Data import tables](../../data-import-entities.md)<br />
 [Sample: Export and import a data map](export-import-data-map.md)<br />
 
 

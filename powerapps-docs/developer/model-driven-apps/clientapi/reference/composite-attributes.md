@@ -7,6 +7,7 @@ ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 9f3b2fed-fde5-46e4-8c59-43aa51aa82df
 author: "Nkrb"
+ms.subservice: mda-developer
 ms.author: "nabuthuk"
 manager: "kvivek"
 search.audienceType: 
@@ -290,7 +291,7 @@ When composite columns are added to a main form, the web application will show j
 
 For example, the **Address** column on a Contact form is a composite column. Selecting the **Address** column displays a flyout with individual columns that comprise the composite column. 
 
-![An example of a composite column](../../media/clientapi_compositeattribute.png "An example for composite column")
+![An example of a composite column.](../../media/clientapi_compositeattribute.png "An example for composite column")
 
 Although not explicitly added to the form in the form editor, each of the columns that are part of the column are available to the form. Although you can read the value of the composite value using [getValue](attributes/getValue.md), you can’t use [setValue](attributes/setValue.md) to change the value of the composite column directly; you must set one or more of the columns referenced by the composite column.
 
