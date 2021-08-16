@@ -60,6 +60,9 @@ The **Search** function finds records in a table that contain a string in one of
   The formula by which each record of the table is evaluated. The function returns the first record that results in **true**. You can reference columns within the table. In the UI, the syntax is shown as *condition* above the function box.
 * *ReductionFormula* - Optional. This formula is evaluated over the record that was found, and then reduces the record to a single value. You can reference columns within the table. If you don't use this parameter, the function returns the full record from the table. In the UI, the syntax is shown as *result* above the function box.
 
+> [!NOTE]
+> If you use a Collection to store the LookUp response, you may not be able to get some of the Columns. Use disambiguation operator (@) in Table name, like [@'_TableName_'] in such cases.
+
 ## Examples
 
 The following examples use the **IceCream** [data source](../working-with-data-sources.md):
