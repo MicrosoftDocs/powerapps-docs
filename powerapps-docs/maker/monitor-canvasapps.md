@@ -7,7 +7,7 @@ ms.subservice: troubleshoot
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 05/24/2021
+ms.date: 08/16/2021
 ms.author: austinj
 search.audienceType: 
   - maker
@@ -15,6 +15,7 @@ search.app:
   - PowerApps
 contributors:
   - tapanm-msft
+  - wimcoor
 ---
 
 # Debugging canvas apps with Monitor
@@ -80,7 +81,7 @@ If you want to view the source expressions in Monitor for the published app, you
 To enable this setting, go to **File** > **Settings**, and then turn on **Debug published app**.
 
 > [!NOTE]
-> Enabling this setting has a detrimental impact on your app's performance for all your users. To minimize the impact, disable this setting as soon as you no longer need to view source expressions when debugging your published app.
+> Enabling this setting has a detrimental impact on the performance of your app for all your users. To minimize the impact, disable this setting as soon as you no longer need to view source expressions when debugging your published app.
 
 ![Debug published app.](media/monitor/debug-published-app.png "Debug published app")
 
