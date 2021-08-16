@@ -44,24 +44,14 @@ This article shows you how to perform the following tasks:
 
 This section describes the prerequisites necessary to ingest exported Dataverse data with Data Factory.
 
-### Azure roles
+- **Azure roles.** The user account that's used to sign in to Azure must be a member of the
+*contributor* or *owner* role, or an *administrator* of the Azure subscription. To view the permissions that you have in the subscription, go to the [Azure portal](https://portal.azure.com/), select your username in the upper-right corner, select **...**, and then select **My permissions**. If you have access to multiple subscriptions, select the appropriate one. To create and manage child resources for Data Factory in the Azure portal&mdash;including datasets, linked services, pipelines, triggers, and integration runtimes&mdash;you must belong to the *Data Factory Contributor* role at the resource group level or above.
 
-The user account that's used to sign in to Azure must be a member of the
-*contributor* or *owner* role, or an *administrator* of the Azure subscription.
-To view the permissions that you have in the subscription, go to the [Azure portal](https://portal.azure.com/), select your username in the upper-right corner, select **...**, and then select **My permissions**. If you have access to multiple subscriptions, select the appropriate one. To create and manage child resources for Data Factory in the Azure portal&mdash;including datasets, linked services, pipelines, triggers, and integration runtimes&mdash;you must belong to the *Data Factory Contributor* role at the resource group level or above.
+- **Azure Synapse Link for Dataverse.**This guide assumes that you've already exported Dataverse data by using [Azure Synapse Link for Dataverse](export-to-data-lake.md). In this example, the account table data is exported to the data lake.
 
-### Azure Synapse Link for Dataverse
-This guide assumes that you've already exported Dataverse data by using [Azure Synapse Link for Dataverse](export-to-data-lake.md).
+- **Azure Data Factory.** This guide assumes that you've already created a data factory under the same subscription and resource group as the storage account containing the exported Dataverse data.
 
-In this example, the account table data is exported to the data lake.
-
-### Azure Data Factory
-
-This guide assumes that you've already created a data factory under the same subscription and resource group as the storage account containing the exported Dataverse data.
-
-### Azure SQL
-
-This guide assumes that you've already created an Azure SQL database under the same subscription and resource group as the storage account containing the exported Dataverse data.
+- **Azure SQL.** This guide assumes that you've already created an Azure SQL database under the same subscription and resource group as the storage account containing the exported Dataverse data.
 
 ## Copy Dataverse data to Azure SQL with a Pipeline Template
 

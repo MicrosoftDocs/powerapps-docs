@@ -38,9 +38,9 @@ For columns that use Dataverse [Choices](/powerapps/maker/data-platform/create-e
 
 This section describes the prerequisites necessary to access Dataverse choices with Power BI after using the Azure Synapse Link for Dataverse service.
 
-- **Power BI Desktop**. [Get it now](https://powerbi.microsoft.com/downloads/)
+- **Power BI Desktop.** [Get it now](https://powerbi.microsoft.com/downloads/)
 
-- **Azure Synapse Link for Dataverse:** This guide assumes that you have already exported data from Dataverse by using the [Azure Synapse Link for Dataverse](export-to-data-lake.md).
+- **Azure Synapse Link for Dataverse.** This guide assumes that you have already exported data from Dataverse by using the [Azure Synapse Link for Dataverse](export-to-data-lake.md).
 
 - **Storage Account Access.** You must be granted one of the following roles for the storage account: Storage Blob Data Reader, Storage Blob Data Contributor, or Storage Blob Data Owner.
 

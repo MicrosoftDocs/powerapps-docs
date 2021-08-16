@@ -27,27 +27,24 @@ contributors: ""
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
+After creating a continuous pipeline of data from Dataverse to your Synapse workspace with Azure Synapse Link for Dataverse, you can copy the data to Dedicated SQL with Synapse Pipelines.
+
 > [!NOTE]
 >
 > - Azure Synapse Link for Microsoft Dataverse was formerly known as Export to data lake. The service was renamed effective May 2021 and will continue to export data to Azure Data Lake as well as Azure Synapse Analytics.
 > - This feature is still in preview and preview features are are not complete, but are made available on a “preview” basis so customers can get early access and provide feedback. Preview features may have limited or restricted functionality, are not meant for production use, and may be available only in selected geographic areas.
 
-After creating a continuous pipeline of data from Dataverse to your Synapse workspace with Azure Synapse Link for Dataverse, you can copy the data to Dedicated SQL with Synapse Pipelines.
-
-> [!NOTE]
-> Azure Synapse Link for Dataverse was formerly known as Export to data lake. The service was renamed effective May 2021 and will continue to export data to Azure Data Lake as well as Azure Synapse Analytics.
-
 ## Prerequisites
 
-This section describes the prerequisites necessary to ingest exported Dataverse data with Data Factory.
+This section describes the prerequisites necessary to copy your Dataverse data to Dedicated SQL after using the Azure Synapse Link for Dataverse service.
 
-### Azure Synapse Link for Dataverse
+- **Azure Synapse Link for Dataverse.** This guide assumes that you've already exported Dataverse data by using [Azure Synapse Link for Dataverse](export-to-data-lake.md).
 
-This guide assumes that you've already exported Dataverse data by using [Azure Synapse Link for Dataverse](export-to-data-lake.md).
+- **Storage Account Access.** You must be granted one of the following roles for the storage account: Storage Blob Data Reader, Storage Blob Data Contributor, or Storage Blob Data Owner.
 
-### Dedicated SQL Pool
+- **Synapse administrator.** You must be granted the **Synapse Administrator** role access within Synapse studio.
 
-This guide assumes that you've already created a Dedicated SQL Pool. You can create a Dedicated SQL pool under the **Manage** tab in your Synapse workspace.
+- **Dedicated SQL Pool.** This guide assumes that you've already created a Dedicated SQL Pool. You can create a Dedicated SQL pool under the **Manage** tab in your Synapse workspace.
 
 ## Copy the exported Dataverse data to Dedicated SQL
 
@@ -73,7 +70,7 @@ This guide assumes that you've already created a Dedicated SQL Pool. You can cre
 
 8. Open the **Settings** and ensure that you have selected the data flow created in the previous steps.
 
-9. Run your pipeline. OPtionally, **Add trigger** to specify a time for the pipeline to run.
+9. Run your pipeline. Optionally, **Add trigger** to specify a time for the pipeline to run.
 
 ### See also
 

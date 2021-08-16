@@ -2170,7 +2170,7 @@
         href: ./data-platform/azure-synapse-link-spark.md 
       - name: Visualize data with Power BI
         href: ./data-platform/azure-synapse-link-powerbi.md
-      - name: Copy data to Dedicate SQL
+      - name: Copy data to Dedicated SQL
         href: ./data-platform/azure-synapse-link-dedicated.md
       - name: Read Incremental Updates
         href: ./data-platform/azure-synapse-link-incremental.md

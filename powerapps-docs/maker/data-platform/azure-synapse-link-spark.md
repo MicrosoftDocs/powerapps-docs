@@ -38,7 +38,7 @@ You can use the Azure Synapse Link to connect your Microsoft Dataverse data to A
 
 This section describes the prerequisites necessary to transform Dataverse data with Apache Spark after using the Azure Synapse Link for Dataverse service.
 
-- **Azure Synapse Link for Dataverse:** This guide assumes that you have already exported data from Dataverse by using the [Azure Synapse Link for Dataverse](export-to-data-lake.md).
+- **Azure Synapse Link for Dataverse.** This guide assumes that you have already exported data from Dataverse by using the [Azure Synapse Link for Dataverse](export-to-data-lake.md).
 
 - **Storage Account Access.** You must be granted one of the following roles for the storage account: Storage Blob Data Reader, Storage Blob Data Contributor, or Storage Blob Data Owner.
 

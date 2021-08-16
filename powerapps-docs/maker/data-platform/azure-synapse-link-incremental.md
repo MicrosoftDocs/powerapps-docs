@@ -36,11 +36,13 @@ After creating a continuous pipeline of data from Dataverse to your Synapse work
 
 ## Prerequisites
 
-This section describes the prerequisites necessary to ingest exported Dataverse data with Data Factory.
+This section describes the prerequisites necessary to read the incremental updates of your exported Dataverse data.
 
-### Azure Synapse Link for Dataverse
+- **Azure Synapse Link for Dataverse.** This guide assumes that you have already exported data from Dataverse by using the [Azure Synapse Link for Dataverse](export-to-data-lake.md).
 
-This guide assumes that you've already exported Dataverse data by using [Azure Synapse Link for Dataverse](export-to-data-lake.md). **All tables must be exported with the append-only option.**
+- **Storage Account Access.** You must be granted one of the following roles for the storage account: Storage Blob Data Reader, Storage Blob Data Contributor, or Storage Blob Data Owner.
+
+- **Synapse administrator.** You must be granted the **Synapse Administrator** role access within Synapse studio.
 
 ## Read the Incremental Updates of your Dataverse data
 
