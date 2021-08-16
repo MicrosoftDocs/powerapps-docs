@@ -7,7 +7,7 @@ ms.subservice: troubleshoot
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 07/08/2021
+ms.date: 08/16/2021
 ms.author: namarwah
 search.audienceType: 
   - maker
@@ -172,6 +172,12 @@ To enable this setting for the Power Apps and Dynamics 365 mobile apps for iOS y
 
 1. On iOS, select **Settings**.
 1. Scroll down to **Power Apps**. 
+1. Toggle on **Allow Cross-Website Tracking**.
+
+### Instructions for Microsoft Edge on iOS
+
+1. On iOS, select **Settings**.
+1. Scroll down to **Edge**. 
 1. Toggle on **Allow Cross-Website Tracking**.
 
 ### Instructions for Internet Explorer 11
