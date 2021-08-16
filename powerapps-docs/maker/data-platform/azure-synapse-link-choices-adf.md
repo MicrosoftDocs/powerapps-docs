@@ -27,12 +27,12 @@ contributors: ""
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-> [!NOTE]
-> Azure Synapse Link for Dataverse was formerly known as Export to data lake. The service was renamed effective May 2021 and will continue to export data to Azure Data Lake as well as Azure Synapse Analytics.
-
-For columns that use Dataverse [Choices](/powerapps/maker/data-platform/create-edit-global-option-sets), choice values are written as an integer label and not a text label to maintain consistency during edits. The integer-to-text label mappingis stored in the *Microsoft.Athena.TrickleFeedService/,table-EntityMetadata.json* file. This article covers how to access the integer-to-text label mapping using Azure Data Factory.
+For columns that use Dataverse [Choices](/powerapps/maker/data-platform/create-edit-global-option-sets), choice values are written as an integer label and not a text label to maintain consistency during edits. The integer-to-text label mappingis stored in the *Microsoft.Athena.TrickleFeedService/table-EntityMetadata.json* file. This article covers how to access the integer-to-text label mapping using Azure Data Factory.
 
 ![Access option set.](media/access-option-set.png "Access option set")
+
+> [!NOTE]
+> Azure Synapse Link for Dataverse was formerly known as Export to data lake. The service was renamed effective May 2021 and will continue to export data to Azure Data Lake as well as Azure Synapse Analytics.
 
 ## Prerequisites
 
@@ -52,7 +52,7 @@ To add a column containing the text label of the Dataverse choice using Azure Da
 
 3. Add a **Derived Column** transformation step and provide a new name for the column.
 
-4. **Open expression builder** and build an expression with a series of *iff* functions to map the integer choice label to the text choice label that is found in the *Microsoft.Athena.TrickleFeedService/,table-EntityMetadata.json* file.
+4. **Open expression builder** and build an expression with a series of *iff* functions to map the integer choice label to the text choice label that is found in the *Microsoft.Athena.TrickleFeedService/table-EntityMetadata.json* file.
 
 ![Expression builder](media/expression-builder.png "Expression builder")
 
