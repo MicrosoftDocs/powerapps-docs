@@ -1,5 +1,5 @@
 ---
-title: Notify Manager on completion of inspection
+title: Notify a manager on completion of inspection
 description: Learn about the changes that would be required to notify the manager on completion of an inspection.
 author: navjotm
 ms.service: powerapps
@@ -15,7 +15,7 @@ contributors:
   - sbahl10
 ---
 
-# Notify manager on completion of inspection
+# Notify a manager on completion of inspection
 
 The Inspections sample app allows users to create and perform inspections in the app. There are three apps - one per persona to perform, manage, and review Inspections. The three apps are&mdash;Inspections, Manage Inspections and Review Inspections.
 
