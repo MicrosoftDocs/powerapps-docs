@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 08/05/2021
+ms.date: 08/16/2021
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: tapanm
@@ -278,8 +278,9 @@ Enabling a **Workflow action** allows a user to run an on-demand workflow agains
 >[!NOTE]
 > This method of securing lists would be deprecated soon. Therefore, it shouldn't be used. Use proper [table permissions](entity-permissions-studio.md), and web role setup to provide access to users for any data instead. More information: [Table permission changes for forms and lists on new portals](../important-changes-deprecations.md#table-permission-changes-for-forms-and-lists-on-new-portals)
 
+To secure a list, you must configure Table Permissions for the table for which records are being displayed and also select the checkbox for **Enable Table Permissions** setting. If you don't, you'll see the following warning:
 
-To secure a list, you must configure Table Permissions for the table for which records are being displayed and also set the **Enable Table Permissions** Boolean value on the list record to true.
+"Table permissions should be enabled for this record or anyone on the internet can view the data.".
 
 The act of securing a list will ensure that for any user who accesses the page, only records that they have been given permission to are shown. This is achieved by an additional filter being added to the model-driven app views that are being surfaced via the list. This filter will filter only for records that are accessible to the user, via **Read** permission.
 
@@ -504,8 +505,9 @@ To display records by using a calendar, those records need to include at a minim
 
 If enabled, a table can be published to an OData feed. The OData protocol is an application-level protocol for interacting with data via RESTful web services. Data from this feed can be viewed in a web browser, consumed by a client-side web application, or imported into [!INCLUDE[pn-excel-short](../../../includes/pn-excel-short.md)].
 
-> [!CAUTION]
-> Use caution when enabling OData feeds without table permissions for sensitive information. OData feed is accessible anonymously and without authorization checks if **Enable Table Permissions** is disabled.
+> [!NOTE]
+> OData feed is accessible anonymously and without authorization checks if **Enable Table Permissions** is disabled. Hence, you must enable table permissions on a list that has OData feeds enabled. Otherwise, you'll see the following error, and won't be able save the changes to the list:
+> <br> "Table permissions must be enabled from the General tab because the OData feed is enabled."
 
 ## Enhanced view filter for lists
 

@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2021
+ms.date: 08/16/2021
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: tapanm
@@ -57,7 +57,10 @@ To add list component:
 
     - **Enable search in list**: Allows a user to search records in the list.
 
-    - **Enable table permissions**: Table permissions to be considered for the list. Not selected by default. If selected, explicit permissions are required for any user to access the form. More information: [Table permission](configure/assign-entity-permissions.md)  
+    - **Permissions**: Table permissions to be considered for the form. [Configure table permissions](configure/entity-permissions-studio.md) to make the form available to anyone, or any specific roles.  
+
+        > [!NOTE]
+        > If one or more forms/lists have no permissions configured, you'll see this warning: "One or more lists or forms on your site have no set permissions. Permissions must be enabled for all data components by April 2022 or they will be set by the system."
 
     > [!div class=mx-imgBorder]
     > ![list properties.](media/list-props.png "List properties")
