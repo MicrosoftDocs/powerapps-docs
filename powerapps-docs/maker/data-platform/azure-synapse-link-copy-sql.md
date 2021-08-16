@@ -42,7 +42,7 @@ This article shows you how to perform the following tasks:
 
 ## Prerequisites
 
-This section describes the prerequisites necessary to ingest exported Dataverse data with Data Factory.
+This section describes the prerequisites necessary to copy exported Dataverse data to Azure SQL.
 
 - **Azure roles.** The user account that's used to sign in to Azure must be a member of the
 *contributor* or *owner* role, or an *administrator* of the Azure subscription. To view the permissions that you have in the subscription, go to the [Azure portal](https://portal.azure.com/), select your username in the upper-right corner, select **...**, and then select **My permissions**. If you have access to multiple subscriptions, select the appropriate one. To create and manage child resources for Data Factory in the Azure portal&mdash;including datasets, linked services, pipelines, triggers, and integration runtimes&mdash;you must belong to the *Data Factory Contributor* role at the resource group level or above.
