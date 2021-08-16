@@ -113,7 +113,7 @@ You can generate your adaptive card JSON by going to <https://adaptivecards.io>.
 
 1. Save and test the flow to ensure it works properly. Selecting manually from the Test Flow sidebar will allow you to enter the Card Title, Location, and  Work Type variables.
 
-## Add the Flow to the Inspection app
+## Add the flow to the Inspection app
 
 Once you've verified that the flow is working properly, you can add it to the Inspection app.
 
@@ -125,11 +125,11 @@ Once you've verified that the flow is working properly, you can add it to the In
 
     ![Submit Inspection button on Inspection Overview screen](media/update-inspection-notification-to-use-adaptive-card/submit-inspection-button-on-inspection-overview-screen.png ""Submit Inspection button on Inspection Overview screen"")
 
-1. First, we'll copy the code currently in the OnSelect property of the button. One issue with adding Power Automate Flows to controls in Power Apps is that any existing code on the control will be removed. To work around this, paste the copied code into a text editor, such as Notepad, and edit it to paste back in the OnSelect property when done. After pasting the code, ensure that all the code was added.
+1. First, we'll copy the code currently in the OnSelect property of the button. One issue with adding Power Automate flows to controls in Power Apps is that any existing code on the control will be removed. To work around this, paste the copied code into a text editor, such as Notepad, and edit it to paste back in the OnSelect property when done. After pasting the code, ensure that all the code was added.
 
 1. With the button still selected, select the vertical ellipsis to the right of the **Settings** from the top. Select Power Automate, which will reveal the **Data** sidebar.
 
-1. You'll now see the **Inspection Adaptive Card To Teams** Flow in the Available flows section. Select it to add it to the button.
+1. You'll now see the **Inspection Adaptive Card To Teams** flow in the Available flows section. Select it to add it to the button.
 
 1. You'll now need to edit the pasted code. Find and remove the following portion of the formula:
 
@@ -199,7 +199,7 @@ Once you've verified that the flow is working properly, you can add it to the In
 
 1. Copy the entirety of the text that was edited and paste it back into the **OnSelect** property of the Submit inspection button. Verify that there are no errors on the button.
 
-1. Select the Welcome Screen from the Tree View, preview the app, and input a test inspection to verify that the Flow is posting the adaptive card to the Team channel that you defined in the Flow.
+1. Select the Welcome Screen from the Tree View, preview the app, and input a test inspection to verify that the flow is posting the adaptive card to the Team channel that you defined in the flow.
 
     ![Inspection notification adaptive card in Teams](media/update-inspection-notification-to-use-adaptive-card/inspection-notification-adaptive-card.png "Inspection notification adaptive card in Teams")
 
