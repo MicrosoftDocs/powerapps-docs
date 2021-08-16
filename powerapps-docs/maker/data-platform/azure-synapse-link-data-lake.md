@@ -1,5 +1,5 @@
 ---
-title: "Configure Azure Synapse Link for Dataverse with Azure Data Lake | MicrosoftDocs"
+title: "Create an Azure Synapse Link for Dataverse with Azure Data Lake | MicrosoftDocs"
 description: "Learn how to export table data to Azure Data Lake Storage Gen2 in Power Apps"
 ms.custom: ""
 ms.date: 02/10/2021
@@ -24,7 +24,7 @@ contributors:
   - sama-zaki
 ---
 
-# Configure Azure Synapse Link for Dataverse with Azure Data Lake
+# Create an Azure Synapse Link for Dataverse with Azure Data Lake
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 

@@ -2154,15 +2154,15 @@
     items:
     - name: Azure Synapse Link Overview
       href: ./data-platform/export-to-data-lake.md
-    - name: Configure Azure Synapse Link with a Synapse Workspace
+    - name: Create an Azure Synapse Link with a Synapse Workspace
       href: ./data-platform/azure-synapse-link-synapse.md
-    - name: Configure Azure Synapse Link with Data Lake
+    - name: Create an Azure Synapse Link with Data Lake
       href: ./data-platform/azure-synapse-link-data-lake.md
     - name: Advanced Configuration Settings
       href: ./data-platform/azure-synapse-link-advanced-configuration.md
     - name: Azure Synapse Link FAQ
       href: ./data-platform/export-data-lake-faq.yml      
-    - name: Analyze from Azure Synapse Analytics
+    - name: Analyze with Azure Synapse Analytics
       items:
       - name: Query data with Serverless SQL
         href: ./data-platform/azure-synapse-link-serverless.md
@@ -2176,7 +2176,7 @@
         href: ./data-platform/azure-synapse-link-incremental.md
       - name: Access Dataverse choices with Serverless SQL
         href: ./data-platform/azure-synapse-link-choices-serverless.md      
-    - name: Analyze from Azure Data Lake Storage Gen2
+    - name: Analyze in Azure Data Lake Storage Gen2
       items:
       - name: Ingest exported data with Azure Data Factory
         href: ./data-platform/export-to-data-lake-data-adf.md

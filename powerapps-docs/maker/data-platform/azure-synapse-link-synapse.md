@@ -1,5 +1,5 @@
 ---
-title: "Configure Azure Synapse Link for Dataverse with your Azure Synapse Workspace | MicrosoftDocs"
+title: "Create an Azure Synapse Link for Dataverse with your Azure Synapse Workspace | MicrosoftDocs"
 description: "Learn how to export table data to Azure Synapse Analytics in Power Apps"
 ms.custom: ""
 ms.date: 06/30/2021
@@ -24,7 +24,7 @@ contributors:
   - sama-zaki
 ---
 
-# Configure Azure Synapse Link for Dataverse with your Azure Synapse Workspace (Preview)
+# Create an Azure Synapse Link for Dataverse with your Azure Synapse Workspace (Preview)
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
@@ -127,7 +127,7 @@ If you deleted the file system when unlinking, follow the steps above to relink 
 4. Enter the following script, replace **\<DATABASE_NAME\>** with the name of the database to unlink, and run the notebook.
 
 ```SQL
-    %%sql
+    %%sqls
     DROP DATABASE <DATABASE_NAME> CASCADE
 ```
 
