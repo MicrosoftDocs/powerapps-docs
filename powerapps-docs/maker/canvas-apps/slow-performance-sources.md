@@ -65,6 +65,10 @@ Makers can select from several data sources available for Power Apps by using di
 
 Connector-specific limits are available in [Power Apps connectors documentation](/connectors/connector-reference/connector-reference-powerapps-connectors), and might vary in comparison to other connectors.
 
+## Debug published app setting enabled
+
+Apps published with the [Setting: Debug published app](monitor-canvasapps.md#setting-debug-published-app) enabled perform significantly slower. Publish your app with this setting disabled as soon as debugging of your published app with source expressions is no longer needed.  
+
 ## Next steps
 
 [Common canvas app performance issues and resolutions](common-performance-issue-resolutions.md)
