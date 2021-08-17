@@ -2323,6 +2323,10 @@
                   href: ../teams/add-tag-to-mark-prioritized-ideas.md
                 - name: Enable users to discuss ideas
                   href: ../teams/extend-ideas-discussions.md
+        - name: Get Connected (Preview)
+          items:
+            - name: Use Get Connected sample app
+              href: ../teams/get-connected.md
         - name: How to (Preview)
           items:
              - name: Use How to sample app
