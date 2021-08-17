@@ -42,7 +42,7 @@ You can use the Azure Synapse Link to connect your Microsoft Dataverse data to A
 
 ## Prerequisites
 
-- Azure Data Lake Storage Gen2: You must have an Azure Data Lake Storage Gen2 account and **Owner** and **Storage Blob Data Contributor** role access. Your storage account must enable **Hierarchical namespace** and it is recommended that replication is set to **read-access geo-redundant storage (RA-GRS)**.properties")
+- Azure Data Lake Storage Gen2: You must have an Azure Data Lake Storage Gen2 account and **Owner** and **Storage Blob Data Contributor** role access. Your storage account must enable **Hierarchical namespace** and we recommend that replication is set to **read-access geo-redundant storage (RA-GRS)** properties")
 
 > [!NOTE]
 >
@@ -91,9 +91,9 @@ After you have set up the Azure Synapse Link, you can manage the tables that are
 After you have set up the Azure Synapse Link, you can monitor the Azure Synapse Link under the **Tables** tab.
 
 - There will be a list of tables that are a part of the selected Azure Synapse Link.
-- There are different stages the sync status will circulate through. **NotStarted** indicates that the Table is waiting to be synced. Once the table initial sync has been **Completed**, there will be a post processing stage where incremental updates will not take place. This may take several hours depending on the size of your data. As the incremental updates start taking place, the dat for the last sync will be regularly updated.
-- The Count column shows the number of changes to the data. It does not show the total number of rows to the data.
-- The final columns show the usage of difference advanced configurations.
+- There are different stages the sync status will circulate through. **NotStarted** indicates that the table is waiting to be synced. Once the table initial sync has been **Completed**, there will be a post processing stage where incremental updates will not take place. This may take several hours depending on the size of your data. As the incremental updates start taking place, the date for the last sync will be regularly updated.
+- The **Count** column shows the number of changes to the data. It does not show the total number of rows to the data.
+- The **Append only** and **Partition strategy** columns show the usage of different advanced configurations.
 
 ## Unlinking an Azure Synapse Link
 
@@ -109,15 +109,15 @@ After you have set up the Azure Synapse Link, you can monitor the Azure Synapse 
 
 If you deleted the file system when unlinking, follow the steps above to relink the same data lake. If you did not delete the file system when unlinking, you must clear the data to relink:
 
-1. Navigate the Azure Data Lake.
+1. Go to the Azure Data Lake.
 
 2. Delete the Dataverse container.
 
-3. Navigate to Power Apps, and relink the data lake.
+3. Go to Power Apps, and relink the data lake.
 
 ## View your data in Azure Data Lake Storage Gen2
 
-1. Select the desired Azure Synapse Link and select the **Go to Azure data lake** from the top panel.
+1. Select the desired Azure Synapse Link, and then select **Go to Azure data lake** from the top panel.
 
 2. Expand **File Systems**, and then select dataverse-*environmentName*-*organizationUniqueName*.
 
