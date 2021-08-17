@@ -35,9 +35,9 @@ Azure Synapse Link offers multiple ways to write and read your data to fit vario
 
 This article covers:
 
-1. In-Place Updates vs. Append-Only Writes
-2. User-Specified Partition Strategy
-3. Transporting the Azure Synapse Link for Dataverse Configuration across Environments
+1. In-place updates vs. append-only writes
+2. User-specified partition strategy
+3. Transporting the Azure Synapse Link for Dataverse configuration across environments
 
 ## In-place updates vs. append-only writes
 

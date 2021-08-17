@@ -2,7 +2,7 @@
 title: "Create an Azure Synapse Link for Dataverse with your Azure Synapse Workspace | MicrosoftDocs"
 description: "Learn how to export table data to Azure Synapse Analytics in Power Apps"
 ms.custom: ""
-ms.date: 06/30/2021
+ms.date: 08/17/2021
 ms.reviewer: "Mattp123"
 ms.service: powerapps
 ms.suite: ""
