@@ -61,6 +61,15 @@ Several sample apps are available from the Teams store that you can add to your 
       ![Profile+ app](media/app-icons/profile-app-icon.png "Profile+ app") <br> [Profile+ (Preview)](profile-app.md) <br> Quickly find out about people in your organization.
    :::column-end:::
 :::row-end:::
+:::row:::
+   :::column span="":::
+    ![Get connected app](media/app-icons/get-connected-app-icon.png "Get connected app") <br> [Get connected (Preview)](get-connected.md) <br> Connect with people in your organization with similar skills.
+   :::column-end:::
+   :::column span="":::
+    :::column-end:::
+   :::column span="":::
+    :::column-end:::
+:::row-end:::
 
 The following tutorial shows how to install the Employee ideas app. You can use similar steps to install other sample apps.
 
@@ -167,6 +176,7 @@ For Frequently Asked Questions about sample apps, go to [Sample apps FAQs](sampl
 - [Milestones sample app](milestones.md)
 - [Perspectives (Preview) sample app](perspectives.md)
 - [Profile+ (Preview) sample app](profile-app.md)
+- [Get Connected (Preview) sample app](get-connected.md)
 - [Customize sample apps](customize-sample-apps.md)
 - [Sample apps FAQs](sample-apps-faqs.md)
 

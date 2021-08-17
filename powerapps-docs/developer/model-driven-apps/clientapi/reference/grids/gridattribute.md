@@ -19,7 +19,7 @@ search.app:
 
 
 
-GridAttribute is only supported for editable grids.
+GridAttribute is supported for both read-only and editable grids.
 
 GridAttribute represents the data in the cell of an editable grid, and contains a reference to all the cells associated with the column. See [Collections (Client API reference)](../collections.md) for information on the methods available to access data in a collection.
 
