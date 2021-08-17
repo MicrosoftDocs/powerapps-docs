@@ -2,7 +2,7 @@
 title: "Edit table records directly from another table’s main form | MicrosoftDocs"
 description: Learn how to design a main form that can be used to edit a related table record.
 ms.custom: ""
-ms.date: 06/15/2021
+ms.date: 08/15/2021
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -65,6 +65,7 @@ In this example, the **Contact** standard main form is configured for the form c
 This section describes form component behavior when used in a model-driven app.
 
 ### Record selection
+
 In order for the form component control to show a form, the lookup column it is bound to needs to have a value. Otherwise, the control will show the message **Source record not selected**. One way to set the value is to add to the form a lookup control that is bound to the same lookup column as the form component control. When you use the lookup control to change the lookup column value, the form component control will show a form with the data for the new lookup column value.
 
 ### Column validation
@@ -88,6 +89,10 @@ If there are multiple errors during save, only one error will be shown to the us
 ### Changing records with unsaved changes
 
 If there are unsaved changes in a form for a form component and a user tries to change the lookup column the form component is bound to, the user will be alerted about this change.
+
+### Client API
+
+A [form context](../../developer/model-driven-apps/clientapi/clientapi-form-context.md) is available for the form component control. It can be accessed via the main form's form context by accessing the control via an API, such as [getControl](../../developer/model-driven-apps/clientapi/reference/controls/getControl.md). Before you access data for the related table in the form component control, event handlers should wait for the [isLoaded API](../../developer/model-driven-apps/clientapi/reference/formContext-ui-quickForms/isLoaded.md) for the control to return true.
 
 ## Limitations
 

@@ -42,6 +42,7 @@ Legend:
 
 From the Home screen, select the site map ![Site map icon.](media/pa_mobile_sitemap_icon.png "Site map icon") to access tables, favorite or most-used rows, other apps, and settings.
 
+If you're on [early access](/power-platform/admin/opt-in-early-access-updates) your site map might look different. With 2021 release wave 2, the app maker can customize the navigation bar and show or hide the **Home**, **Recent**, **Pinned** buttons in the site map. The app maker can also make groups collapsible. For more information, see [Hide or show the Home, Pinned, Recent, and collapsible groups](../user/navigation.md#early-access-hide-or-show-the-home-pinned-recent-and-collapsible-groups).
  
    > [!div class="mx-imgBorder"]
    > ![Site map screen.](media/go_to_sitemap_iphone.gif "This image demonstrates how to get to the site map screen")
@@ -49,6 +50,7 @@ From the Home screen, select the site map ![Site map icon.](media/pa_mobile_site
 
 
 The following illustration shows the primary navigation elements on the site map screen. 
+
 
 ![Site map and navigation.](media/site_map_iphone.png "Site map and navigation")
 
