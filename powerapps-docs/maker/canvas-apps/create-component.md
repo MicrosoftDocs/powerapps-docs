@@ -5,7 +5,7 @@ author: hemantgaur
 ms.service: powerapps
 ms.subservice: canvas-developer
 ms.topic: article
-ms.date: 07/01/2021
+ms.date: 08/17/2021
 ms.author: hemantg
 ms.reviewer: tapanm
 search.audienceType:
