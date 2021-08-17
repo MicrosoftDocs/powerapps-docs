@@ -123,7 +123,7 @@ Once you've verified that the flow is working properly, you can add it to the In
 
 1. Select the Submit inspection button (named **btnContinueSubmitInspection** in the Tree View). We'll add the Power Automate flow we created to this button.
 
-    ![Submit Inspection button on Inspection Overview screen](media/update-inspection-notification-to-use-adaptive-card/submit-inspection-button-on-inspection-overview-screen.png ""Submit Inspection button on Inspection Overview screen"")
+    ![Submit Inspection button on Inspection Overview screen](media/update-inspection-notification-to-use-adaptive-card/submit-inspection-button-on-inspection-overview-screen.png "Submit Inspection button on Inspection Overview screen")
 
 1. First, we'll copy the code currently in the OnSelect property of the button. One issue with adding Power Automate flows to controls in Power Apps is that any existing code on the control will be removed. To work around this, paste the copied code into a text editor, such as Notepad, and edit it to paste back in the OnSelect property when done. After pasting the code, ensure that all the code was added.
 
@@ -134,58 +134,8 @@ Once you've verified that the flow is working properly, you can add it to the In
 1. You'll now need to edit the pasted code. Find and remove the following portion of the formula:
 
     ```powerapps-dot
-    MicrosoftTeams.PostMessageToChannelV3(
-    gblPlannerGroupId,
-    gblRecordSettings.'Parameter (Notification Channel Id)',// gblParamChannelId,
-    {
-    content: Concatenate(
-    With(
-    {
-    varDefault: "A new " & Lower(gblWorkType) & " has been submitted!",
-    varOOBTextId: "\_translateCommon\__" & gblWorkType & "Submitted"
-    },
-    With(
-    {
-    varLocalizedText: LookUp(
-    colLocalization,
-    OOBTextID = varOOBTextId,
-    LocalizedText
-    )
-    },
-    Coalesce(
-    varLocalizedText,
-    varDefault
-    )
-    )
-    ),
-    //"A new " & Lower(gblWorkType) & " has been submitted!",
-    "\<br\>\</br\>",
-    "\<b\>" & With(
-    {
-    varDefault: "For the Location:",
-    varOOBTextId: "\_translateCommon\_\_InspectionForLocation"
-    },
-    With(
-    {
-    varLocalizedText: LookUp(
-    colLocalization,
-    OOBTextID = varOOBTextId,
-    LocalizedText
-    )
-    },
-    Coalesce(
-    varLocalizedText,
-    varDefault
-    )
-    )
-    ) & " " & "\</b\>",
-    //"\<b\>For the Location: \</b\>",
-    gblLastInspection.Location.Name
-    ),
-    contentType: "html"
-    },
-    {subject: gblLastInspection.Name}
-    )
+    MicrosoftTeams.PostMessageToChannelV3(gblPlannerGroupId,gblRecordSettings.'Parameter (Notification Channel Id)',// gblParamChannelId,{content: Concatenate(With({varDefault: "A new " & Lower(gblWorkType) & " has been submitted!",
+    varOOBTextId: "\_translateCommon\__" & gblWorkType & "Submitted"},With({varLocalizedText: LookUp(colLocalization,OOBTextID = varOOBTextId,LocalizedText)},Coalesce(varLocalizedText,varDefault))),//"A new " & Lower(gblWorkType) & " has been submitted!","\<br\>\</br\>","\<b\>" & With({varDefault: "For the Location:",varOOBTextId:"\_translateCommon\_\_InspectionForLocation"},With({varLocalizedText: LookUp(colLocalization,OOBTextID = varOOBTextId,LocalizedText)},Coalesce(varLocalizedText,varDefault))) & " " & "\</b\>",//"\<b\>For the Location: \</b\>",gblLastInspection.Location.Name),contentType: "html"},{subject: gblLastInspection.Name})
     ```
 
 1. Replace the following code with the removed formula portion earlier:
