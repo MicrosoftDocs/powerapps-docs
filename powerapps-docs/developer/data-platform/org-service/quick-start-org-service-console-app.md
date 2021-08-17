@@ -43,18 +43,18 @@ You will use the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.X
 
 1. Create a new Console App (.NET Framework) project using .NET Framework 4.6.2
 
-    ![Start a console app project](../media/quick-start-org-service-console-app-1.png)
+    ![Start a console app project.](../media/quick-start-org-service-console-app-1.png)
 
     > [!NOTE]
     > This screenshot shows the name `OrgServiceQuickStart`, but you can choose to name the project and solution whatever you want. 
 
 1. In **Solution Explorer**, right-click the project you created and select **Manage NuGet Packages...** in the context menu.
 
-    ![Add NuGet package](../media/quick-start-org-service-console-app-2.png)
+    ![Add NuGet package.](../media/quick-start-org-service-console-app-2.png)
 
 1. Browse for the latest version of the  `Microsoft.CrmSdk.XrmTooling.CoreAssembly` NuGet package and install it.
 
-    ![Install Microsoft.CrmSdk.XrmTooling.CoreAssembly NuGet package](../media/quick-start-org-service-console-app-3.png)
+    ![Install Microsoft.CrmSdk.XrmTooling.CoreAssembly NuGet package.](../media/quick-start-org-service-console-app-3.png)
 
 > [!NOTE]
 > You must select **I Accept** in the **Licence Acceptance** dialog.

@@ -12,6 +12,7 @@ applies_to:
   - "Dynamics 365 Version 9.x"
   - "PowerApps"
 author: "Mattp123"
+ms.subservice: mda-maker
 ms.author: "emcoope"
 ms.reviewer: "matp"
 manager: "kvivek"
@@ -45,7 +46,7 @@ The app designer interface has the following areas:
 3. Panes - The left navigation pane consists of the following areas: 
 
    - **Pages**. Displays the components for you app. From the page area you can choose the forms, views, and dashboards you want to add or remove for each table.
-   - **Navigation**. Displays a site map view of your app that is formed using areas, groups, and subareas. Add or remove groups and subareas to structure your app's navigation. Within the navigation area, you can hide or show the **Home**, **Recent**, and **Pinned** buttons. You can also allow groups to be collapsible within the site map.
+   - **Navigation**. Displays a site map view of your app that is formed using areas, groups, and subareas. Add or remove groups and subareas to structure your app's navigation.
    - **Data**. Provides a view of all available data that’s currently included in your app or is available to add from your Dataverse environment. 
 
 4. Property pane – Displays properties of the selected component, and also allows you to make changes.
@@ -56,7 +57,7 @@ The app designer interface has the following areas:
 
 7. Fit to width - Quick action to fit the app preview to the available width.
 
-   :::image type="content" source="media/app-designer-layout.png" alt-text="Layout of the model-driven app designer that has the account and contact tables added":::
+   :::image type="content" source="media/app-designer-layout.png" alt-text="Layout of the model-driven app designer that has the account and contact tables added.":::
  
 ## Known limitations
 

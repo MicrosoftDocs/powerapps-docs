@@ -1,6 +1,6 @@
 ---
-title: Integrate Power Apps, Power Automate, and Power BI with SharePoint Online (Introduction) | Microsoft Docs
-description: 'This series of tutorials explores how to build out a basic canvas app for project management based on SharePoint lists and three key technologies that integrate with SharePoint Online: Power Apps, Power Automate, and Power BI.'
+title: Integrate Power Apps, Power Automate, and Power BI with SharePoint Online
+description: In this series of tutorials, we'll explore how to build out a basic canvas app for project management based on SharePoint lists and three key technologies that integrate with SharePoint Online - Power Apps, Power Automate, and Power BI.
 author: NickWaggoner
 manager: kvivek
 ms.service: powerapps
@@ -8,16 +8,21 @@ ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 06/18/2020
+ms.subservice: canvas-maker
 ms.author: niwaggon
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - navjotm
+  - wimcoor
 ---
 # Integrate Power Apps, Power Automate, and Power BI with SharePoint Online
 Do you have SharePoint Online and want to better automate and streamline your business processes? Have you worked with Power Apps, Power Automate, or Power BI, but you're not sure how to use them with SharePoint Online? You've come to the right place! This series of tutorials explores how to build out a basic canvas app for project management based on SharePoint lists and three key technologies that integrate with SharePoint Online: Power Apps, Power Automate, and Power BI. These technologies work together, making it easy to *measure* your business, *act* on the results, and *automate* your workflows. When you're done with this series, you will have a cool scenario like the following:
 
-![Diagram of completed scenario](./media/sharepoint-scenario-intro/composite-with-background.png)
+![Diagram of completed scenario.](./media/sharepoint-scenario-intro/composite-with-background.png)
 
 ## Business scenario
 In this series of tutorials, the company Contoso has a SharePoint Online site where they manage the lifecycle of projects, from request, to approval, to development, to final review. A *project requestor*, such as a department head, requests an IT project by adding an item to a SharePoint list. A *project approver*, such as an IT manager, reviews the project, and then approves it or rejects it. If approved, the project is assigned to a *project manager*, and additional detail is added to a second list through the same app. A *business analyst* reviews current and completed projects using a Power BI report embedded in SharePoint.  Power Automate is used to send approval email and respond to Power BI alerts.

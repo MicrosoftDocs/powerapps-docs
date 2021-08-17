@@ -1,11 +1,12 @@
 ---
-title: Organize controls in accessible canvas apps | Microsoft Docs
+title: Organize controls in accessible canvas apps
 description: Learn about organizing controls for accessibility in canvas apps.
 author: tahoon-ms
 ms.service: powerapps
 ms.topic: article
 ms.custom: canvas
 ms.date: 02/12/2021
+ms.subservice: canvas-maker
 ms.author: tahoon
 ms.reviewer: tapanm
 search.audienceType:
@@ -26,7 +27,7 @@ Controls in an app should be organized to help screen reader users navigate sequ
 
 When a screen is loaded, screen readers will say its name. Pick a meaningful name to orientate users.
 
-You can change the screen name in the controls tree or properties panel in Power Apps Studio. Select the screen, and then select ![Select pen icon to edit the name](media/accessible-apps-structure/pencil-icon.png "Select pen icon to edit the name") to rename the screen.
+You can change the screen name in the controls tree or properties panel in Power Apps Studio. Select the screen, and then select ![Select pen icon to edit the name.](media/accessible-apps-structure/pencil-icon.png "Select pen icon to edit the name") to rename the screen.
 
 ![Screen names can be changed from the controls tree or properties panel, as highlighted in the picture.](media/accessible-apps-structure/edit-screen-name.png "Rename the screen")
 
@@ -40,7 +41,7 @@ Screen reader users can navigate content sequentially. The order is determined b
 
 In this example, A appears first in the sequence since it's closest to the top. B and C have the same vertical position, but since B is closer to the left, and hence, it appears before C. D appears last since it's furthest from the top.
 
-![How positioning affects the order of 4 controls](media/accessible-apps-structure/control-order-isolated.png "How positioning affects the order of 4 controls.")
+![How positioning affects the order of 4 controls.](media/accessible-apps-structure/control-order-isolated.png "How positioning affects the order of 4 controls.")
 
 > [!NOTE]
 > - In **Preview** mode when editing an app, the control order is not updated for performance reasons. The order will be correct when the app is published and run.

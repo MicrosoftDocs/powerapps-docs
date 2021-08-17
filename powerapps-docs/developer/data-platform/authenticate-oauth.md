@@ -7,6 +7,7 @@ ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "paulliew" # GitHub ID
+ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -48,7 +49,7 @@ When you register an app with Azure AD one of the decisions you must make is the
 
 When you select **Web app /API** you must provide a **Sign-On URL** which is the URL where Azure AD will send the authentication response, including a token if authentication was successful. While you develop an app, this is usually set to `https://localhost/appname:[port]` so you can develop and debug your app locally. When you publish your app, you need to change this value to the published URL of the app.
 
-When you select **Native**, you must provide a Redirect URI. This is a unique identifier to which Azure AD will redirect the user-agent in an OAuth 2.0 request. This is typically a value formatted like so: `//app:<guid>`. 
+When you select **Native**, you must provide a Redirect URI. This is a unique identifier to which Azure AD will redirect the user-agent in an OAuth 2.0 request. This is typically a value formatted like so: `app://<guid>`. 
 
 ### Giving access to Dataverse
 
@@ -345,7 +346,7 @@ After you have created the custom security role, you must create the user accoun
   
     If you do not see the **Application ID**, **Application ID URI** and **Azure AD Object ID** fields in the form, you must select the **Application User** form from the list:  
   
-   ![Select Application User Form](media/select-application-user-form.PNG "Select Application User Form")  
+   ![Select Application User Form.](media/select-application-user-form.PNG "Select Application User Form")  
   
 4. Add the appropriate values to the fields:  
   
