@@ -68,8 +68,8 @@ Get connected is all about making connections with your colleagues. The Get conn
 
 1. **Connect with someone new.**&mdash;Find a new connection and meet the new people  randomly.
 1. **Connect with a peer.**&mdash;Message to a team channel to connect and meet.
-1. Connect with an Expert.**&mdash;Choose the skills and meet the expert of that skill.
-1. Update profile skills
+1. **Connect with an Expert.**&mdash;Choose the skills and meet the expert of that skill.
+1. **Update profile skills**
 1. **Connection by skills**
 1. **Find a skill**
 1. **Edit the app in Power Apps**&mdash;Get connected is built in Power Apps, and the app template can be edited using the Power Apps app in Teams. Selecting the **Built with Power Apps** button will launch the Power Apps maker studio in Teams, from which you can edit the Get connected app.
