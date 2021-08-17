@@ -6,6 +6,7 @@ ms.date: 06/23/2021
 ms.service: "powerapps"
 ms.topic: "article"
 ms.assetid: 18e88d702-3349-4022-a7d8-a9adf52cd34f
+ms.subservice: pcf
 ms.author: "nabuthuk"
 author: Nkrb
 contributors:
@@ -29,12 +30,12 @@ This article shows how to debug your code components using the test harness and 
 While you are implementing the code component logic, using `npm start` or `npm start watch` builds the code component and open the local test harness in a new browser window. This test harness is part of Microsoft Power Platform CLI and hence is the same irrespective of if you plan to use your code component in model-driven apps, canvas apps, or portals.  More information: [Create your first component](implementing-controls-using-typescript.md).
 
 > [!NOTE]
-> Before you can use `npm start` you need to install the required node modules using `npm install`.
+> Before you can use `npm start` you need to check if npm is installed in your machine.
 
 The following image shows what Visual Studio Code will look like when you use the `npm start watch` for the `DataSetGrid` sample:
 
 > [!div class="mx-imgBorder"]
-> ![Debugging Visual Studio Code](media/debugging-1.png "Debugging Visual Studio Code")
+> ![Debugging Visual Studio Code.](media/debugging-1.png "Debugging Visual Studio Code")
 
 Launching the test harness in `watch` mode enables you to quickly see the changes in action. Changes made to any of the following component assets are automatically reflected in the test harness without having to restart it:
 
@@ -45,12 +46,12 @@ Launching the test harness in `watch` mode enables you to quickly see the change
 If you make changes to any of these files, you will see a `Change detected` message and the browser reloads with the updated code.
 
 > [!div class="mx-imgBorder"]
-> ![Changes detected](media/changes-detected.png "Changes detected")
+> ![Changes detected.](media/changes-detected.png "Changes detected")
 
 The following image shows the test harness once it is opened in a new browser window:
 
 > [!div class="mx-imgBorder"]
-> ![Test harness 1](media/test-harness-1.png "Test harness 1")
+> ![Test harness 1.](media/test-harness-1.png "Test harness 1")
 
 As the image above shows, the browser window opens to display four areas. The code component is rendered in the left pane while the right pane has three sections that depend on the type of component being debugged:
 
@@ -79,17 +80,17 @@ As the image above shows, the browser window opens to display four areas. The co
 - For components with [`property`](reference\property.md) elements in the `ControlManifest.Input.xml`, the **Data Inputs** section will show an input box for each value.  
 
    > [!div class="mx-imgBorder"]
-   > ![Data Inputs](media/data-inputs.png "Data Inputs")
+   > ![Data Inputs.](media/data-inputs.png "Data Inputs")
 
 - For *dataset* type components, you can load a CSV file with test data for each  [data-set](manifest-schema-reference\data-set.md) element. You manually create or export in .csv format directly from your environment. After loading a CSV file, you can bind each [property-set](manifest-schema-reference\property-set.md) defined in the `ControlManifest.Input.xml` to a column in the CSV file. This is done by picking the column for each property as shown below:
 
    > [!div class="mx-imgBorder"]
-   > ![test harness 3](media/test-harness-3.png "test harness 3")
+   > ![test harness 3.](media/test-harness-3.png "test harness 3")
 
 - If you do not have any properties defined in the `ControlManifest.Input.xml` file, then all the columns get automatically loaded into the test harness. For each column in the source CSV, you can then assign the data type to be used provided to the code component as shown below:
 
    > [!div class="mx-imgBorder"]
-   > ![Test harness 5](media/test-harness-5.png "Test harness 5")
+   > ![Test harness 5.](media/test-harness-5.png "Test harness 5")
 
 > [!NOTE]
 > When loading a CSV sample dataset you must select **Apply** before the data is loaded. If the dataset has property-set elements defined, then each must be mapped to a column in the CSV before you can select **Apply**. These settings are not remembered and must be set every time a code change is made, after the test harness re-loads. 
@@ -143,7 +144,7 @@ This section describes how to debug your code component inside the Microsoft Edg
     `webpack://pcf_tools_652ac3f36e1e4bca82eb3c1dc44e6fad/./DataSetGrid/index.ts`
 
    > [!div class="mx-imgBorder"]
-   > ![Developer Tools 1](media/developer-tools-1.png "Developer Tools 1")
+   > ![Developer Tools 1.](media/developer-tools-1.png "Developer Tools 1")
 
 7. Locate the `updateView` function and place a breakpoint on the first line.
 
@@ -152,12 +153,12 @@ This section describes how to debug your code component inside the Microsoft Edg
 9. You will now see your breakpoint hit, and you can inspect the code.
 
    > [!div class="mx-imgBorder"]
-   > ![Developer Tools 2](media/developer-tools-2.png "Developer Tools 2")
+   > ![Developer Tools 2.](media/developer-tools-2.png "Developer Tools 2")
 
 10. You can also inspect the HTML elements and CSS created by the component using the **Elements** tab. If you have a specific set of interactions that you are interested in (root container element), you can place a breakpoint on the HTML Dom element using the **Context Menu** (while the root element is selected) > **Break on** > **subtree modifications**
 
     > [!div class="mx-imgBorder"]
-    > ![Developer Tools 3](media/developer-tools-3.png "Developer Tools 3")
+    > ![Developer Tools 3.](media/developer-tools-3.png "Developer Tools 3")
 
 ### ES5 vs ES6
 
@@ -201,7 +202,7 @@ To debug your code component using Fiddler:
    
    
    > [!div class="mx-imgBorder"]
-   > ![Select the marked checkboxes in the HTTP tab](media/fiddler-https-options.png "Select the marked checkboxes in the HTTP tab")
+   > ![Select the marked checkboxes in the HTTP tab.](media/fiddler-https-options.png "Select the marked checkboxes in the HTTP tab")
    
 5. Select **OK** to close the dialog box.
 
@@ -229,7 +230,7 @@ To debug your code component using Fiddler:
    An example of this would look like the following:
 
       > [!div class="mx-imgBorder"]
-      > ![AutoResponder rule](media/fiddler-rule-example.png "AutoResponder rule")
+      > ![AutoResponder rule.](media/fiddler-rule-example.png "AutoResponder rule")
 
    If you want a simpler **AutoResponder** rule approach, see [Streamline JavaScript web resource development using Fiddler AutoResponder](/dynamics365/customer-engagement/developer/streamline-javascript-development-fiddler-autoresponder).
 
@@ -252,7 +253,7 @@ To debug your code component using Fiddler:
     Value: `*`
 
     > [!div class="mx-imgBorder"]
-    > ![Fiddler Filter](media/fiddler-filter.png "Fiddler Filter")
+    > ![Fiddler Filter.](media/fiddler-filter.png "Fiddler Filter")
 
     > [!IMPORTANT]
     > This step is only necessary when debugging code components after they are deployed to canvas apps because the resources are stored in blob storage rather than underneath the `powerapp.com` domain. As such, any requests to these resources will require cross-domain access when loaded by the browser. Only enable this `Access-Control-Allow-Origin` filter rule when you are debugging since it will modify headers of other sites that you visit.
@@ -260,7 +261,7 @@ To debug your code component using Fiddler:
 12. Now that you have the **AutoResponder** rules running you will need to first clear the cache in the browser and reload the page containing the code component. This can easily be done by opening developer tools (`Ctrl + Shift + I`), right-clicking the **Refresh** > **Empty cache and hard refresh**.
 
     > [!div class="mx-imgBorder"]
-    > ![Empty cache and hard refresh](media/refresh-reload.png "Empty cache and hard refresh")
+    > ![Empty cache and hard refresh.](media/refresh-reload.png "Empty cache and hard refresh")
 
 13. Once you have your code component loaded from your local machine, you can make changes to the code (while `npm start watch` is running) and refresh the browser to load the newly built versions. Fiddler's AutoResponder will automatically add a cache-control header so that it will not be cached by the browser so a simple refresh will reload the resources without having to clear the cache each time.
 

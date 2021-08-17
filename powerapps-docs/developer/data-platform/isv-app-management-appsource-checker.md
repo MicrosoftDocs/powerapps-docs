@@ -4,6 +4,7 @@ description: Learn how to use AppSource checker
 author: "nkrb" # GitHub ID
 ms.service: powerapps
 ms.topic: article
+ms.subservice: dataverse-developer
 ms.author: nabuthuk
 ms.reviewer: pehecke
 ms.workload: na
@@ -30,12 +31,12 @@ In ISV Studio, you can upload either a full [package](/power-platform/alm/packag
 1. In ISV Studio, select **AppSource checker** in the leftmost pane, and then select **Validate your app**.
 
     > [!div class="mx-imgBorder"]
-    > ![AppSource checker](media/appsource-checker.png "AppSource checker")
+    > ![AppSource checker.](media/appsource-checker.png "AppSource checker")
 
 2. Select **Browse** to upload a solution file from your local machine, and then select **Run Check**.
    
    > [!div class="mx-imgBorder"]
-   > ![Run check command](media/appsource-browse-solution-files.png "Run check command")
+   > ![Run check command.](media/appsource-browse-solution-files.png "Run check command")
  
    > [!NOTE]
    > If you've previously uploaded a solution for validation, you'll see a history of submissions instead of the screenshot above.
@@ -43,12 +44,12 @@ In ISV Studio, you can upload either a full [package](/power-platform/alm/packag
 3. After the validation check is complete, a summary of results is displayed with the number of issues found (if any). Double-click to select the solution file to see the issues in detail.
 
    > [!div class="mx-imgBorder"]
-   > ![Summary of AppSource checker results](media/appsource-results-page.png "Summary of AppSource checker results")
+   > ![Summary of AppSource checker results.](media/appsource-results-page.png "Summary of AppSource checker results")
 
 4. If the submission has no errors, you'll see the following message:
  
    > [!div class="mx-imgBorder"]
-   > ![AppSource checker success message](media/appsource-no-error-page.png "AppSource checker success message")
+   > ![AppSource checker success message.](media/appsource-no-error-page.png "AppSource checker success message")
    
 Now you can download the validation report for your app and include it with your AppSource submission. 
 

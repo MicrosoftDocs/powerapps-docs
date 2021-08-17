@@ -3,6 +3,7 @@ title: Sign up for Power Apps Developer Plan
 description: Sign up for the Power Apps Developer Plan to get a free development environment to build and test with Power Apps, Power Automate, and Microsoft Dataverse.
 author: evanmlew
 ms.service: powerapps
+ms.subservice: canvas-developer
 ms.topic: conceptual
 ms.custom: intro-internal
 ms.date: 06/24/2021
@@ -55,14 +56,14 @@ Sign up on the [Power Apps Developer Plan website](https://aka.ms/PowerAppsDevP
 After signing up for the Developer Plan, you'll be redirected to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). You
 may need to select your developer environment from the top right of the screen. It will be shown with your name, for example "John Doe's environment." If there's already an environment with that name, the developer environment will be named "John Doe's (1) environment." You'll need to use this developer environment, instead of your tenant’s default environment, to use certain capabilities such as premium and custom connectors.
 
-![Individual environment for Developer Plan](media/developer-plan/select-environment.png "Individual environment for Developer Plan")
+![Individual environment for Developer Plan.](media/developer-plan/select-environment.png "Individual environment for Developer Plan")
 
 ### Get the Developer Plan with Visual Studio Dev Essentials
 
 If you're a Visual Studio Dev Essentials user, the Power Apps Developer Plan is included in your benefits. Visit [My
 benefits](https://my.visualstudio.com/benefits) and select the Power Apps tile to sign up for the Power Apps Developer Plan.
 
-![Power Apps Developer Plan in Visual Studio](media/developer-plan/developer_plan_developer_essentials.png "Power Apps Developer Plan in Visual Studio")
+![Power Apps Developer Plan in Visual Studio.](media/developer-plan/developer_plan_developer_essentials.png "Power Apps Developer Plan in Visual Studio")
 
 ## Which features are included in the Power Apps Developer Plan?
 
@@ -175,3 +176,5 @@ Resetting a developer environment isn't currently supported; however, it can be 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
 
+### Does the Power Apps Developer plan include Power Automate RPA use rights?
+No. However, users may start a Power Automate trial including RPA use rights to try out RPA capabilities. Power Apps Developer plan includes cloud flow use rights since these can be connected to an act as an extension of Power Apps apps. 

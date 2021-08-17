@@ -16,6 +16,8 @@ search.audienceType:
   - developer
 search.app: 
   - PowerApps
+contributors:
+  - kumarvivek
 ---
 
 # What's new in Power Apps?

@@ -8,11 +8,15 @@ ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 06/02/2015
+ms.subservice: canvas-maker
 ms.author: aorth
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - adrianorth
 ---
 # Show, sort, and filter data in a canvas app gallery
 Create a gallery to show images and text about several products, and sort and filter that information.

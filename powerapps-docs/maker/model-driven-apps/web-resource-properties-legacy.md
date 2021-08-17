@@ -7,6 +7,7 @@ applies_to:
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
   - "powerapps"
+ms.subservice: mda-maker
 ms.author: matp
 manager: kvivek
 ms.date: 04/03/2019
@@ -31,12 +32,12 @@ You can add or edit web resources on a form to make it more appealing or useful 
 ## Access web resource properties
 
 While viewing a form:
-- **When adding a web resource:**: Select the tab (for example, **General** or **Notes**) you would like to insert it on, and then on the **Insert** tab, select **Web Resource**.<br />![Insert Web resource](media/insert-web-resource.png)
-- **When editing a web resource**: Select a form tab and the web resource that you want to edit, and then on the **Home** tab, select **Change Properties**. <br />![Change web resource properties](media/web-resource-change-properties.png)
+- **When adding a web resource:**: Select the tab (for example, **General** or **Notes**) you would like to insert it on, and then on the **Insert** tab, select **Web Resource**.<br />![Insert Web resource.](media/insert-web-resource.png)
+- **When editing a web resource**: Select a form tab and the web resource that you want to edit, and then on the **Home** tab, select **Change Properties**. <br />![Change web resource properties.](media/web-resource-change-properties.png)
 
 This will open the **Add Web Resource** or **Web Resource Properties** dialog box.
 
-![Add Web Resource dialog](media/add-web-resource-dialog.png)
+![Add Web Resource dialog.](media/add-web-resource-dialog.png)
 
 > [!IMPORTANT]
 > You must select the **Visible by default** option for the web resource to appear on the form and be available to users.
@@ -61,7 +62,7 @@ Depending on the type of web resource you select, set additional properties.
 
 For HTML web resources you will see these:
 
-![HTML web resource properties](media/web-resource-general-html-properties.png)
+![HTML web resource properties.](media/web-resource-general-html-properties.png)
 
 |Column|Description|
 |--|--|
@@ -77,7 +78,7 @@ For Image web resources you have the option to specify **Alternative Text** that
 
 On the **Formatting** tab, the options that display vary based on the type of web resource inserted and the context where it is inserted. These options include specifying the number of columns and rows display, whether a border displays, and the scrolling behavior.
 
-![Web resource formatting properties](media/web-resource-formatting-properties.png)
+![Web resource formatting properties.](media/web-resource-formatting-properties.png)
 
 |Property|Description|  
 |--------------|-----------------|
@@ -91,7 +92,7 @@ On the **Formatting** tab, the options that display vary based on the type of we
 
 A web resource may interact with columns in the form using script. If a column is removed from the form the script in the web resource may break. Add any columns referenced by scripts in the web resource to the **Dependent columns** so that they cannot be removed accidentally.
 
-![Web Resource dependency properties](media/web-resource-dependency-properties.png)
+![Web Resource dependency properties.](media/web-resource-dependency-properties.png)
   
 <a name="BKMK_PassingParametersToWebResource"></a> 
  

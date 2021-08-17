@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2020
+ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: tapanm
 contributors:
@@ -35,7 +36,7 @@ To create a website access permission and add it to a web role:
 
 4. Under **General**, enter name, website, and select the required permissions.
 
-    ![Create website access permission](../media/website-access-permission.png "Create website access permission")
+    ![Create website access permission.](../media/website-access-permission.png "Create website access permission")
 
 5. Under **Web Roles**, select **Add Existing Web Role**, and add the web role to associate the permission with.
 

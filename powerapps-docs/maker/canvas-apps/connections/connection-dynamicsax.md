@@ -7,15 +7,19 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.date: 09/13/2016
+ms.subservice: canvas-maker
 ms.author: lanced
 ms.reviewer: tapanm
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - lancedmicrosoft
 ---
 # Connect to Dynamics AX from Power Apps
-![Dynamics AX Online](./media/connection-dynamicsax/dynamics-ax.png)
+![Dynamics AX Online.](./media/connection-dynamicsax/dynamics-ax.png)
 
 Use this connection to easily build apps that read, update, and delete data from these versions of Dynamics AX:
 

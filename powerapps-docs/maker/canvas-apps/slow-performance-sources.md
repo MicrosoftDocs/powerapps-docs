@@ -6,7 +6,8 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 01/22/2021
+ms.date: 08/16/2021
+ms.subservice: canvas-maker
 ms.author: jiahn
 search.audienceType: 
   - maker
@@ -15,6 +16,7 @@ search.app:
 contributors:
   - JinManAhn-MSFT
   - lancedMicrosoft
+  - wimcoor
 ---
 
 # Common sources of slow performance for a canvas app
@@ -63,6 +65,10 @@ If an app exceeds the connector's throttling limits, the app is subject to a tem
 Makers can select from several data sources available for Power Apps by using different [connectors](connections-list.md). Although there are many options to choose a data source from, choosing the right data source and connector is important from many perspectives&mdash;architecture, performance, maintenance, and scalability.
 
 Connector-specific limits are available in [Power Apps connectors documentation](/connectors/connector-reference/connector-reference-powerapps-connectors), and might vary in comparison to other connectors.
+
+## Debug published app setting enabled
+
+Apps published with the setting [Debug published app](../monitor-canvasapps.md#setting-debug-published-app) enabled perform significantly slower. Publish your app with this setting disabled as soon as you no longer need to view source expressions when debugging your published app.  
 
 ## Next steps
 

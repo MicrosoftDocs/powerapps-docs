@@ -21,7 +21,7 @@ This sample shows how to create a dataset component for canvas apps. The dataset
 
 
 > [!div class="mx-imgBorder"]
-> ![Data set grid control](../media/data-set-grid-control-canvas.png)
+> ![Data set grid control.](../media/data-set-grid-control-canvas.png)
 
 ## Available for 
 
@@ -57,7 +57,7 @@ The `context.parameters.[dataset_property_name].paging` method provides paging f
 Property-set is used to access individual column values for particular columns in the record. For example, map control can use the longitude and latitude in the data-set to show the location pings in the map. In this sample component, two property sets are defined in the manifest, `samplePropertySet` and `samplePropertySet2`. Users will see two empty columns when the component is added to canvas app before any column names is configured. For a property-set, the corresponding columns are added in the beginning and order will be 0. 
 
 > [!div class="mx-imgBorder"]
-> ![Property Set Configuration](../media/property-set-configuration.png)
+> ![Property Set Configuration.](../media/property-set-configuration.png)
 
 ### Sizing
 

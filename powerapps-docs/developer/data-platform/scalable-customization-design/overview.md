@@ -64,7 +64,7 @@ These problems typically have an impact on the user experience through slower re
 
 Common symptoms have causes that force particular requests to run slowly and then to trigger platform constraints. The following diagram shows typical symptoms with some of the common root causes of these symptoms.
 
-![understanding causes](media/understanding-causes.png)
+![understanding causes.](media/understanding-causes.png)
 
 The underlying impact of long running transactions, database blocking, and complex queries can all overlap with each other and amplify their effects to cause these symptoms. For example, a series of long running queries that are completely independent of each other may cause slow user response times, but only once they require access to the same resources do the response times become so slow that they become errors. 
 

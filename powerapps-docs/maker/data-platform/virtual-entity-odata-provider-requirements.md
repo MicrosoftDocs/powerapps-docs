@@ -1,7 +1,8 @@
 ---
-title: "Use the Virtual table OData v4 Data Provider with Microsoft Dataverse | MicrosoftDocs"
+title: "Use the virtual table OData v4 Data Provider with Microsoft Dataverse | MicrosoftDocs"
+description: Learn what's required and best practices when you use the OData v4 Data Provider with virtual tables
 ms.custom: ""
-ms.date: 06/04/2018
+ms.date: 08/11/2021
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -13,6 +14,7 @@ applies_to:
 ms.assetid: 
 caps.latest.revision: 
 author: "Mattp123"
+ms.subservice: dataverse-maker
 ms.author: "matp"
 manager: "kvivek"
 search.audienceType: 
@@ -33,7 +35,8 @@ This topic describes how to configure the OData v4 Data Provider as well as the 
 - Microsoft Dataverse requires that all tables have an ID attribute, this ID is known as a unique identifier and the value must be a guid.  You can only map ID columns to external columns with the `Edm.Guid` data type.  You can’t map an `Edm.Int32` data type to a Unique Identifier data type column in Dataverse.
 -  OData tables with nullable properties must be set to match the mapped column in the virtual table. For example, an OData table property with Nullable=False must have the mapped column in Dataverse **Field Requirement** attribute set to **Business Required**. 
 - For retrieve multiple queries, such as when you load data in to a grid, control the size of the dataset returned from the external data source by using the select and filter query parameters.
-- If not already enabled, system administrators should enable plug-in tracing. Once enabled, all errors from the OData endpoint are captured in the plug-in trace log. More information:  [Administrator Guide: System Settings dialog box - Customization tab](/dynamics365/customer-engagement/admin/system-settings-dialog-box-customization-tab) 
+- If not already enabled, system administrators should enable plug-in tracing. Once enabled, all errors from the OData endpoint are captured in the plug-in trace log. More information:  [Administrator Guide: System Settings dialog box - Customization tab](/dynamics365/customer-engagement/admin/system-settings-dialog-box-customization-tab)
+- You can't use the OData v4 Data Provider to connect to another Microsoft Dataverse environment.
 
 ## Data type mapping
 
@@ -83,7 +86,7 @@ This procedure shows you how to use the out-of-box OData Data Provider to use as
         -  **Return inline count**. Returns the total number rows in the result set. This setting is used to enable next page functionality when you return data to a grid. Use a value of false if your OData endpoint doesn't support the OData $inlinecount parameter. The default value is false.
     - **Request Parameters**. Optionally, you can add custom header or query string parameters used to connect to the OData web service, such as authentication parameters to the external service. Click **Query String** to toggle between header and query string parameter and value. Up to 10 header or query strings can be added. 
         > [!div class="mx-imgBorder"] 
-        > ![Virtual table data source row](media/virtual-entity-data-source.png) 
+        > ![Virtual table data source row.](media/virtual-entity-data-source.png) 
 
 
 ### See also  
