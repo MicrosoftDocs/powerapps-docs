@@ -5,7 +5,7 @@ author: navjotm
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/24/2021
+ms.date: 08/12/2021
 ms.subservice: teams
 ms.author: namarwah
 ms.reviewer: tapanm
@@ -171,8 +171,6 @@ To create a new bulletin post:
 
 1. Select **Save** from the top-right side of the screen.
 
-1. If the post is ready for an approver to review it, toggle **Ready for review** to *On*.
-
 1. To preview what the post will look like to users of the Bulletins app, select **Preview**.
 
 1. When ready to publish the post for all users in the Bulletin app to see, select **Publish.**
@@ -223,8 +221,6 @@ To create an FAQ post:
     1. Enter the answer in the **Answer** rich-text box. This text box supports formatted text, such as bold, underline, and hyperlinks.
 
 1. To make this FAQ a featured question in the FAQ section of the Bulletins app, toggle **Make it featured** to *Yes*.
-
-1. If the FAQ is ready for an approver to review it, toggle **Ready for review** to *On*.
 
 1. Select **Save** to save and publish the FAQ.
 

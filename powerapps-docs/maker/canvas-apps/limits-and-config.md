@@ -1,12 +1,12 @@
 ---
-title: System requirements, limits, and configuration values for canvas apps
-description: Learn about system requirements, limits, and configuration values for canvas apps built in Power Apps.
+title: Canvas app system requirements and limits
+description: Learn about device platform and web browser requirements, limits, and configuration values for canvas apps built in Power Apps.
 author: lancedMicrosoft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 06/22/2021
+ms.date: 07/21/2021
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
@@ -17,21 +17,22 @@ contributors:
   - tapanm-msft
   - lancedmicrosoft
   - alaug
+  - wimcoor
 ---
 # System requirements, limits, and configuration values for canvas apps
-This article contains device platform and web browser requirements, limits, and configuration values for canvas apps.
+This article contains information on supported device platforms, web browser requirements, limits, and configuration values for canvas apps. 
 
 ## Supported platforms for running canvas apps using the Power Apps mobile app
 
 | **Minimum required** | **Recommended** |
 | --- | --- |
-| iOS 12 or later |iOS 12 or later|
+| iOS 13 or later |iOS 13 or later|
 | Android 7 or later |Android 7 or later |
 | Windows 8.1 or later (PC only) |Windows 10 Fall Creators Update with at least 8 GB of RAM)|
 
 > [!NOTE]
-> - On October 16, 2020 we will no longer support iOS 12. After October 16, 2020 iOS 13 or later will be supported. 
-> - We currently don't support new features on Windows platform for [Power Apps mobile app](/powerapps/maker/canvas-apps/run-canvas-and-model-apps-on-mobile). Features such as the Improved Microsoft Dataverse option, and guest access are not available on this platform. We recommend using a web player on Windows to leverage the full set of capabilities. Updates to the Power Apps mobile app for Windows platform will be announced in future.
+> - As of October 16, 2020, we no longer support iOS 12. Only iOS 13 or later is supported. 
+> - We currently don't support new features on Windows platform for [Power Apps mobile app](/powerapps/maker/canvas-apps/run-canvas-and-model-apps-on-mobile). Features such as the Improved Microsoft Dataverse option and guest access are not available on this platform. We recommend using a web player on Windows to leverage the full set of capabilities. Updates to the Power Apps mobile app for Windows platform will be announced in future.
 > - Canvas apps running on Windows platform must use the legacy Microsoft Dataverse connector. A [warning is displayed](use-native-cds-connector.md) for apps that still use the legacy connector, but using it for Windows platform is supported.
 
 ## Supported browsers for running canvas apps
@@ -132,9 +133,20 @@ This list identifies all services to which Power Apps Studio talks and their usa
 | vortex.data.microsoft.com |https |Telemetry |
 | localhost | https | Power Apps Mobile|
 
-
 > [!NOTE]
 > If you're using a VPN, it must be configured to exclude localhost from tunneling for Power Apps Mobile.
+
+## Embedding limits for canvas apps
+
+Power Apps doesn't support the nested embedding of canvas apps in native desktop, mobile, or other non-browser clients.
+
+The following table shows some of the examples where embedding a canvas app isn't supported:
+
+| Canvas apps embedded to | Unsupported client |
+| - | - |
+| A SharePoint page that is added as a tab in a Microsoft Teams channel | <ul> <li> Teams desktop </li> <li> Teams mobile </li> </ul> |
+| A Power BI report that is added to a Teams team, or a SharePoint site | <ul> <li> Teams desktop </li> <li> Teams mobile </li> <li> SharePoint mobile </li> </ul> |
+| A model-driven form that is added to Teams | <ul> <li> Teams desktop </li> <li> Teams mobile </li> </ul> |
 
 ## Size limits
 
@@ -142,7 +154,7 @@ You can find information about size limits on text, hyperlinks, images, and medi
 
 ## Power Apps per app plan
 
-The information is now available in [Power Apps per app plan](/power-platform/admin/signup-for-powerapps-admin#power-apps-per-app-plan) section in the Power Platform admin guide.
+Information is now available in the [Power Apps per app plan](/power-platform/admin/signup-for-powerapps-admin#power-apps-per-app-plan) section in the Power Platform admin guide.
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 12/28/2018
+ms.date: 08/11/2021
 ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
@@ -76,7 +76,7 @@ If you want to modify the screen further, use the [calendar-screen reference](./
 
 If you already know which calendar your users should view, you can simplify the screen by specifying that calendar before you publish the app. This change removes the need for the drop-down list of calendars, so you can remove it.
 
-1. Set the **[OnStart](../controls/control-screen.md)** property of the default screen in the app to this formula:
+1. Set the **[OnStart](../controls/control-screen.md)** property of the app to this formula:
 
     ```powerapps-dot
     Set( _userDomain, Right( User().Email, Len( User().Email ) - Find( "@", User().Email ) ) );
@@ -88,7 +88,7 @@ If you already know which calendar your users should view, you can simplify the 
     Set( _lastDayOfMonth, DateAdd( DateAdd( _firstDayOfMonth, 1, Months ), -1, Days ) );
     Set( _calendarVisible, false );
     Set( _myCalendar, 
-        LookUp( Office365.CalendarGetTables().value, DisplayName = "{YourCalendarNameHere}" )
+        LookUp(Office365Outlook.CalendarGetTablesV2().value, DisplayName = "{YourCalendarNameHere}" )
     );
     Set( _minDate, 
         DateAdd( _firstDayOfMonth, -( Weekday(_firstDayOfMonth) - 2 + 1 ), Days )
@@ -101,10 +101,10 @@ If you already know which calendar your users should view, you can simplify the 
         )
     );
     ClearCollect( MyCalendarEvents, 
-        Office365.GetEventsCalendarViewV2( _myCalendar.Name, 
-            Text( _minDate, UTC ), 
-            Text( _maxDate, UTC ) 
-        ).value
+    Office365Outlook.GetEventsCalendarViewV3(_myCalendar.name, 
+        Text( _minDate, UTC),
+        Text( _maxDate, UTC)
+    ).value
     );
     Set( _calendarVisible, true )
     ```
