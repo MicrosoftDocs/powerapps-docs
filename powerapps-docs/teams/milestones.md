@@ -5,7 +5,7 @@ author: navjotm
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/27/2021
+ms.date: 08/12/2021
 ms.subservice: teams
 ms.author: namarwah
 ms.reviewer: tapanm
@@ -148,7 +148,7 @@ To edit project details:
 
 1. Select a project from the left pane.
 
-1. Select **Settings** (![Settings - icon.](media/milestones/settings-icon.png "Settings - icon")).
+1. Select the **Click to Customize**  button (![Click to customize - icon.](media/milestones/click-to-customize-icon.png "Click to customize - icon")).
 
 1. Update project details.
 
@@ -188,7 +188,7 @@ To delete an existing project:
 
 1. Open **Milestones** app.
 
-1. Select **Settings** (![Settings - icon.](media/milestones/settings-icon.png "Settings - icon")).
+1. Select **Click to customize** button (![Click to customize - icon.](media/milestones/click-to-customize-icon.png "Click to customize - icon")).
 
 1. Select the project that you want to delete from the list of projects on the left pane.
 

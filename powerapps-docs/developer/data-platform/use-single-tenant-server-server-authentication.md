@@ -86,7 +86,7 @@ To create an application registration in Azure AD, follow these steps.
 
 To create an unlicensed "application user" in your environment, follow these steps. This application user will be given access to your environment's data on behalf of the end user who is using your application.
 
-1. Navigate to your Dataverse environment (https://*[org]*.crm.dynamics.com).
+1. Navigate to your Dataverse environment (https://*[env-name]*.crm.dynamics.com).
 2. Navigate to **Settings** > **Security** > **Users**.
 3. Choose **Application Users** in the view filter.
 4. Select **+ New**.
@@ -120,7 +120,7 @@ When application users are created, they are automatically enabled. The default 
 In an event that an application user’s status is disabled and you need to enable it, you can perform the following steps to customize the Application User form to allow update to the **Status** field. You can also use these steps to disable an application user that is no longer used.
 
 1. Remove the **Status** field from the Application User form footer.
-    1. Navigate to your Dataverse environment (https://*[org]*.crm.dynamics.com).
+    1. Navigate to your Dataverse environment (https://*[env-name]*.crm.dynamics.com).
     1. Navigate to **Settings** > **Customizations** > **Customize the System**.
     1. In the left pane, select **Entities** > **User** > **Forms**.
     1. Select **Application User** in the list of forms
