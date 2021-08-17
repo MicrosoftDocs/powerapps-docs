@@ -2277,7 +2277,7 @@
           href: ../teams/use-sample-apps-from-teams-store.md
         - name: Boards (Preview)
           items:
-             - name: Boards
+             - name: Use Boards sample app
                href: ../teams/boards.md
              - name: Understand Boards sample app architecture
                href: ../teams/boards-architecture.md
@@ -2355,7 +2355,7 @@
                   href: ../teams/inspection-adaptive-card.md
         - name: Issue reporting
           items:
-            - name: Issue reporting
+            - name: Use Issue reporting sample app
               href: ../teams/issue-reporting.md
             - name: Deploy Issue reporting app broadly in your organization
               href: ../teams/issue-reporting-broad-distribution.md
@@ -2377,7 +2377,7 @@
                   href: ../teams/extend-issue-sign-up-notification.md
         - name: Milestones
           items:
-             - name: Milestones
+             - name: Use Milestones sample app
                href: ../teams/milestones.md
              - name: Deploy the Milestones app broadly in your organization
                href: ../teams/milestones-broad-distribution.md
@@ -2395,7 +2395,7 @@
                    href: ../teams/extend-milestones-send notification.md
         - name: Perspectives (Preview)
           items:
-            - name: Perspectives
+            - name: Use Perspectives sample app
               href: ../teams/perspectives.md
             - name: Understand Perspectives sample app architecture
               href: ../teams/perspectives-architecture.md
