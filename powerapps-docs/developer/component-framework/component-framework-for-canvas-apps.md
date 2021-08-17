@@ -54,16 +54,6 @@ To add code components to an app, you need to enable the Power Apps component fr
 
 5. From the list of available features, turn on **Power Apps component framework for canvas apps**, and then select **Save**.
 
-6. Now, open the app where you want to add the code component, got to **File** > **Settings**, and then select **Advanced settings**.
-
-   > [!div class="mx-imgBorder"]
-   > ![Enable components for Power Apps component framework.](media/enable-components-for-pcf.png "Enable components for Power Apps component framework")
-   
-7. In the **Experimental features** section, turn on **Components**.
-
-> [!NOTE]
-> When you create new canvas apps, steps 6 and 7 are enabled by default.
-
 ## Implementing code components
 
 After you enable the Power Apps component framework feature in your environment, you can start implementing the logic for code components. For a step-by-step tutorial, go to [Create your first code component](implementing-controls-using-typescript.md).
