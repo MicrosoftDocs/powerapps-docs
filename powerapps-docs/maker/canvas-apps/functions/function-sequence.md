@@ -1,6 +1,6 @@
 ---
-title: Sequence function | Microsoft Docs
-description: Reference information, including syntax and an example, for the Sequence function in Power Apps
+title: Sequence function in Power Apps
+description: Reference information including syntax and examples for the Sequence function in Power Apps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -8,11 +8,15 @@ ms.topic: reference
 ms.custom: canvas
 ms.reviewer: nabuthuk
 ms.date: 07/17/2020
+ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - gregli-msft
+  - nkrb
 ---
 # Sequence function in Power Apps
 Generate a table of sequential numbers.
@@ -50,12 +54,12 @@ The number of records to generate is rounded down to the nearest whole number an
 
 | Formula | Description | Result |
 | --- | --- | --- |
-| **Sequence( 4 )** | Generates a 4 record table starting at the default 1 and incrementing by the default 1. | ![Sequence-4](media/function-sequence/sequence-4.png "Sequence-4") |
-| **Sequence( 4, 24 )** | Generates a 4 record table starting at 24 and incrementing by the default 1. | ![Sequence-4-24](media/function-sequence/sequence-4-24.png "Sequence-4-24") |
-| **Sequence( 4, 4, -1 )** | Generates a 4 record table starting at 4 and incrementing by -1, effectively counting backward. | ![Sequence-4-4-n1](media/function-sequence/sequence-4-4-n1.png "Sequence-4-4-n1") |
-| **Sequence( 4, -100, 0.5 )** | Generates a 4 record table starting at -100 and incrementing by 0.5. | ![Sequence-4-n100-p5](media/function-sequence/sequence-4-n100-p5.png "Sequence-4-n100-p5") |
-| **Sequence( 0.9 )** | Generates an *empty* table as the count rounds down to 0. | ![Sequence-empty](media/function-sequence/sequence-empty.png "Sequence-empty") | 
-| **ForAll( Sequence( 4 ), Rand() )** | Generates a 4 record table of random numbers. | ![sequence-4-random](media/function-sequence/sequence-4-random.png "Sequence-4-random")<br>*Actual numbers will vary.* |
+| **Sequence( 4 )** | Generates a 4 record table starting at the default 1 and incrementing by the default 1. | ![Sequence # 4.](media/function-sequence/sequence-4.png "Sequence # 4") |
+| **Sequence( 4, 24 )** | Generates a 4 record table starting at 24 and incrementing by the default 1. | ![Sequence 4, 24.](media/function-sequence/sequence-4-24.png "Sequence 4, 24") |
+| **Sequence( 4, 4, -1 )** | Generates a 4 record table starting at 4 and incrementing by -1, effectively counting backward. | ![Sequence 4, 4, -1.](media/function-sequence/sequence-4-4-n1.png "Sequence 4, 4, -1") |
+| **Sequence( 4, -100, 0.5 )** | Generates a 4 record table starting at -100 and incrementing by 0.5. | ![Sequence 4, -100, 0.5.](media/function-sequence/sequence-4-n100-p5.png "Sequence 4, -100, 0.5") |
+| **Sequence( 0.9 )** | Generates an *empty* table as the count rounds down to 0. | ![Sequence 0.9.](media/function-sequence/sequence-empty.png "Sequence 0.9") | 
+| **ForAll( Sequence( 4 ), Rand() )** | Generates a 4 record table of random numbers. | ![Sequence # 4 with Random.](media/function-sequence/sequence-4-random.png "Sequence # 4 with Random")<br>*Actual numbers will vary.* |
 | **Concat( Sequence( 5 ),<br>Text( Value ) & " " )** | Generates a string of numbers from 1 to 5. | **"1 2 3 4 5 "** | 
 
 ### Character map

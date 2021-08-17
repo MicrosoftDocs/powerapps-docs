@@ -1,5 +1,5 @@
 ---
-title: Automate tests with Azure Pipelines using classic editor | Microsoft Docs
+title: Automate tests with Azure Pipelines using classic editor
 description: Describes how to automate test suites and cases using the classic editor from Azure Pipelines.
 author: aengusheaney
 manager: kvivek
@@ -7,26 +7,28 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 04/24/2020
+ms.date: 07/20/2021
+ms.subservice: canvas-maker
 ms.author: aheaney
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - aengusheaney
+  - TYLEROL
 ---
 
 # Automate tests with Azure Pipelines using classic editor
 
-In this article, you'll learn how to set up and run your canvas app tests built in Test Studio using the [Azure Pipelines classic editor](/azure/devops/pipelines/get-started/pipelines-get-started?view=azure-devops#define-pipelines-using-the-classic-interface) in [Azure DevOps Services](/azure/devops/user-guide/what-is-azure-devops?view=azure-devops).
+In this article, you'll learn how to set up and run your canvas app tests built in Test Studio using the [Azure Pipelines classic editor](/azure/devops/pipelines/get-started/pipelines-get-started#define-pipelines-using-the-classic-interface) in [Azure DevOps Services](/azure/devops/user-guide/what-is-azure-devops).
 
 You can use a public project on GitHub - [Microsoft/PowerAppsTestAutomation](https://github.com/microsoft/PowerAppsTestAutomation) to:
 
 - Automate operations of signing in to your application.
 - Open a browser on the build agent and execute a set of test cases and suites.
 - View the status of the test execution in the Azure DevOps pipeline.
-
-> [!NOTE]
-> The [Test Studio](test-studio.md) feature is still experimental and we recommend you use it to write tests for non-production apps. For more information, see [Experimental and preview features](working-with-experimental-preview.md).
 
 ## Prerequisites
 
@@ -47,15 +49,15 @@ A [fork](https://help.github.com/github/getting-started-with-github/fork-a-repo)
 
 1. Go to the [microsoft/PowerAppsTestAutomation](https://github.com/microsoft/PowerAppsTestAutomation) repository. You can also search for **microsoft/PowerAppsTestAutomation** instead, and then select the repository:
 
-    ![Search GitHub](media/test-studio-classic-pipeline-editor/search-github.png "Search GitHub")
+    ![Search GitHub.](media/test-studio-classic-pipeline-editor/search-github.png "Search GitHub")
 
 1. Select **Fork**:
 
-    ![Fork](media/test-studio-classic-pipeline-editor/fork.png "Fork")
+    ![Select Fork.](media/test-studio-classic-pipeline-editor/fork.png "Select Fork")
 
 1. Select where you want to fork:
 
-    ![Fork account](media/test-studio-classic-pipeline-editor/fork-account.png "Fork account")
+    ![Select fork account.](media/test-studio-classic-pipeline-editor/fork-account.png "Select fork account")
 
 Your forked repository will now be available.
 
@@ -73,7 +75,7 @@ You can find a sample file ```Samples/TestAutomationURLs.json``` in the repo you
 
 1. Commit the changes to your repo:
 
-    ![JSON update](media/test-studio-classic-pipeline-editor/json-update.png "JSON update")
+    ![JSON updated.](media/test-studio-classic-pipeline-editor/json-update.png "JSON updated")
 
 ## Create a pipeline
 
@@ -85,18 +87,18 @@ You can find a sample file ```Samples/TestAutomationURLs.json``` in the repo you
 
 1. Select **Create Pipeline**:
 
-    ![Create pipeline](media/test-studio-classic-pipeline-editor/create-pipeline.png "Create pipeline")
+    ![Created pipeline.](media/test-studio-classic-pipeline-editor/create-pipeline.png "Created pipeline")
 
 1. Select **Use the classic editor**:
 
-    ![Classic editor](media/test-studio-classic-pipeline-editor/use-classic-editor.png "Classic editor")
+    ![Classic editor.](media/test-studio-classic-pipeline-editor/use-classic-editor.png "Classic editor")
 
 1. Select GitHub as the source.
 
 1. If necessary, authorize your GitHub connection using OAuth or using a
     personal access token:
 
-    ![Pipeline - GitHub](media/test-studio-classic-pipeline-editor/pipeline-github.png "Pipeline - GitHub")
+    ![Pipeline in GitHub.](media/test-studio-classic-pipeline-editor/pipeline-github.png "Pipeline in GitHub")
 
 1. If needed, edit the connection name.
 
@@ -104,13 +106,13 @@ You can find a sample file ```Samples/TestAutomationURLs.json``` in the repo you
 
 1. Enter the name of your project on GitHub, and then **Select** it:
 
-    ![Select repo](media/test-studio-classic-pipeline-editor/select-repo.png "Select repo")
+    ![Select a repo.](media/test-studio-classic-pipeline-editor/select-repo.png "Select a repo")
 
 1. Select **Continue**.
 
 1. In the Select a template screen, select **Empty job**:
 
-    ![Empty job](media/test-studio-classic-pipeline-editor/empty-job.png "Empty job")
+    ![Select Empty job.](media/test-studio-classic-pipeline-editor/empty-job.png "Select Empty job")
 
 1. **Save** your pipeline.
 
@@ -137,7 +139,7 @@ from the pipeline in this sequence:
 
 1. Select **Add** to add a PowerShell task to the job:
 
-    ![PowerShell](media/test-studio-classic-pipeline-editor/powershell.png "PowerShell")
+    ![Add PowerShell.](media/test-studio-classic-pipeline-editor/powershell.png "Add PowerShell")
 
 1. Select the task. <br>
     You can also update the display name to *Set Agent Screen
@@ -154,7 +156,7 @@ from the pipeline in this sequence:
     Get-DisplayResolution
     ```
 
-    ![Script](media/test-studio-classic-pipeline-editor/script.png "Script")
+    ![Script example.](media/test-studio-classic-pipeline-editor/script.png "Script example")
 
 ### Step 2 - Restore NuGet packages
 
@@ -174,7 +176,7 @@ from the pipeline in this sequence:
 
 1. Select **OK**:
 
-    ![NuGet package](media/test-studio-classic-pipeline-editor/nuget.png "NuGet package")
+    ![NuGet package.](media/test-studio-classic-pipeline-editor/nuget.png "NuGet package")
 
 ### Step 3 - Build the PowerAppsTestAutomation solution
 
@@ -214,19 +216,19 @@ from the pipeline in this sequence:
 
 1. Select **Test mix contains UI tests**.
 
-    ![Chrome](media/test-studio-classic-pipeline-editor/chrome.png "Chrome")
+    ![Test mix contains UI tests.](media/test-studio-classic-pipeline-editor/chrome.png "Test mix contains UI tests")
 
 1. Select **…** (ellipsis) in the **Settings file** field.
 
 1. Expand the **Microsoft.PowerApps.TestAutomation.Tests**, select the
     **patestautomation.runsettings** file, and then select **OK**:
 
-    ![Run settings](media/test-studio-classic-pipeline-editor/runsettings.png "Run settings")
+    ![Run settings.](media/test-studio-classic-pipeline-editor/runsettings.png "Run settings")
 
 1. Copy the following in the **Override test run parameters** field.
 
     ```
-    -OnlineUsername $(OnlineUsername) -OnlinePassword $(OnlinePassword) -BrowserType $(BrowserTypeChrome) -OnlineUrl $(OnlineUrl) -UsePrivateMode $(UsePrivateMode) -TestAutomationURLFilePath $(TestAutomationURLFilePath) -DriversPath $(ChromeWebDriver)
+    -OnlineUsername "$(OnlineUsername)" -OnlinePassword "$(OnlinePassword)" -BrowserType "$(BrowserTypeChrome)" -OnlineUrl "$(OnlineUrl)" -UsePrivateMode "$(UsePrivateMode)" -TestAutomationURLFilePath "$(TestAutomationURLFilePath)" -DriversPath "$(ChromeWebDriver)"
     ```
 
     > [!NOTE]
@@ -234,7 +236,7 @@ from the pipeline in this sequence:
 
 1. Enter **Run Power Apps Test Automation Tests via \$(BrowserTypeChrome)** or similar in the **Test run title** field.
 
-    ![Test run](media/test-studio-classic-pipeline-editor/test-run.png "Test run")
+    ![Test run.](media/test-studio-classic-pipeline-editor/test-run.png "Test run")
 
 ### Step 5 - Add Visual Studio Tests for Mozilla Firefox
 
@@ -248,7 +250,7 @@ from the pipeline in this sequence:
     1.  **Override test run parameters**
 
         ```
-        -OnlineUsername $(OnlineUsername) -OnlinePassword $(OnlinePassword) -BrowserType $(BrowserTypeFirefox) -OnlineUrl $(OnlineUrl) -UsePrivateMode $(UsePrivateMode) -TestAutomationURLFilePath $(TestAutomationURLFilePath) -DriversPath $(GeckoWebDriver)
+        -OnlineUsername "$(OnlineUsername)" -OnlinePassword "$(OnlinePassword)" -BrowserType "$(BrowserTypeFirefox)" -OnlineUrl "$(OnlineUrl)" -UsePrivateMode "$(UsePrivateMode)" -TestAutomationURLFilePath "$(TestAutomationURLFilePath)" -DriversPath "$(GeckoWebDriver)"
         ```
 
     1.  **Test Run Title**: Run Power Apps Test Automation Tests via
@@ -275,7 +277,7 @@ You'll now configure the pipeline variables defined in the tasks you've added [e
 
 1. Check the lock image to make this variable a secret.
 
-    ![Variables](media/test-studio-classic-pipeline-editor/variables.png "Variables")
+    ![Make variable secret.](media/test-studio-classic-pipeline-editor/variables.png "Make variable secret")
 
 1. **Save** your pipeline configurations.
 
@@ -283,21 +285,21 @@ You'll now configure the pipeline variables defined in the tasks you've added [e
 
 To validate that your tests are executing successfully, select **Queue** and then select **Run**. Your job will start running.
 
-![Run job](media/test-studio-classic-pipeline-editor/run-job.png "Run job")
+![Run job.](media/test-studio-classic-pipeline-editor/run-job.png "Run job")
 
 As the job runs, select the job to see a detailed status on each of the tasks running:
 
-![Job details](media/test-studio-classic-pipeline-editor/job-details.png "Job details")
+![Job details.](media/test-studio-classic-pipeline-editor/job-details.png "Job details")
 
 When the job completes, you can view the high-level job summary, and any errors or warnings. By selecting the **Tests** tab, you can view specific details on the test cases you've executed.
 
 The following example indicates at least one of our test cases has failed while executing the tests using the Chrome browser:
 
-![Chrome - failed](media/test-studio-classic-pipeline-editor/chrome-failed.png "Chrome - failed")
+![Chrome - failed.](media/test-studio-classic-pipeline-editor/chrome-failed.png "Chrome - failed")
 
 Select **RunTestAutomation** test to drill into the details on what test case has failed. In the **Attachments** tab, you can see the summary of the test execution and which test cases have failed or passed in your test suite:
 
-![Attachments tab](media/test-studio-classic-pipeline-editor/attachments-tab.png "Attachments tab")
+![Attachments tab.](media/test-studio-classic-pipeline-editor/attachments-tab.png "Attachments tab")
 
 > [!NOTE]
 > If you execute a test suite, you'll see a summary of test cases passed and failed. If you execute a test case, you'll see specific details on the failure with any trace information, if available.

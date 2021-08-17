@@ -12,6 +12,7 @@ ms.topic: "article"
 applies_to: 
   - "powerapps"
 ms.assetid: 
+ms.subservice: dataverse-maker
 ms.author: "matp"
 manager: "kvivek"
 search.audienceType: 
@@ -66,11 +67,11 @@ This guide assumes that you've already created a data factory under the same sub
 
 2. Turn on **Data flow debug** mode and select your preferred time to live. This might take up to 10 minutes, but you can proceed with the following steps.
 
-    ![Dataflow debug mode](media/data-flow-debug.png "Dataflow debug mode")
+    ![Dataflow debug mode.](media/data-flow-debug.png "Dataflow debug mode")
 
 3. Select **Add Source.**
 
-    ![Add source](media/add-source.png "Add source")
+    ![Add source.](media/add-source.png "Add source")
 
 4. Under **Source settings**, do the following:
 
@@ -85,7 +86,7 @@ This guide assumes that you've already created a data factory under the same sub
     - **Root location**: Enter the container name in the first box (**Container**) or **Browse** for the container name and select **OK**.
     - **Entity**: Enter the table name or **Browse** for the table.
 
-  ![Source options](media/source-options.png "Source options")
+  ![Source options.](media/source-options.png "Source options")
   
 6. Check the **Projection** tab to ensure that your schema has been imported successfully. If you do not see any columns, select **Schema options** and check the **Infer drifted column types** option. Configure the formatting options to match your data set then select **Apply**.
 
@@ -106,7 +107,7 @@ Follow these instructions to create a rank for the each row by the *revenue* fie
      - **Rank column**: Enter the name of the rank column generated.
      - **Sort conditions**: Select the *revenue* column and sort by *Descending* order.
 
-       ![Configure the Rank settings tab](media/configure-rank.png "Configure the Rank settings tab")
+       ![Configure the Rank settings tab.](media/configure-rank.png "Configure the Rank settings tab")
 
 3. You can view your data in the **data preview** tab where you will find the new *revenueRank* column at the right-most position.
 
@@ -123,7 +124,7 @@ Ultimately, you must set a sink for your dataflow. Follow these instructions to 
     - **Sink type**: Select **DelimitedText**.
     - **Linked service**: Select your Data Lake Storage Gen2 storage container that has the data you exported by using the Azure Synapse Link for Dataverse service.
 
-      ![Configure the Sink tab](media/configure-sink.png "Configure the Sink tab")
+      ![Configure the Sink tab.](media/configure-sink.png "Configure the Sink tab")
 
 3. On the **Settings** tab, do the following:
 
@@ -132,7 +133,7 @@ Ultimately, you must set a sink for your dataflow. Follow these instructions to 
     - **Output to single file**: Enter a file name, such as *ADFOutput*
     - Leave all other default settings.
 
-      ![Configure the sink Settings tab](media/configure-settings.png "Configure the sink Settings tab")
+      ![Configure the sink Settings tab.](media/configure-settings.png "Configure the sink Settings tab")
 
 4. On the **Optimize** tab, set the **Partition option** to **Single partition**.
 
@@ -142,7 +143,7 @@ Ultimately, you must set a sink for your dataflow. Follow these instructions to 
 
 1. In the left pane under **Factory Resources**, select **+**, and then select **Pipeline**.
 
-     ![Create a new pipeline](media/create-pipeline.png "Create a new pipeline")
+     ![Create a new pipeline.](media/create-pipeline.png "Create a new pipeline")
 
 2. Under **Activities**, select **Move & Transform**, and then drag **Data flow** to the workspace.
 

@@ -8,17 +8,20 @@ ms.topic: conceptual
 ms.custom: canvas, ce06122020
 ms.reviewer: tapanm
 ms.date: 1/19/2021
+ms.subservice: canvas-maker
 ms.author: iawilt
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - iaanw
 ---
 
 
 # Interactive map component 
 
-Easily bring dynamic mapping capabilities into your canvas apps by viewing the physical position of entities from a data source, or by inputting new physical locations.
+Easily bring dynamic mapping capabilities into your canvas apps by viewing the physical position of objects from a data source, or by inputting new physical locations.
 
 Pan, tilt, zoom, and drag to center your map view. As you zoom out, the markers will optionally cluster to represent dense groups of data. 
 
@@ -26,7 +29,7 @@ The current location of the user can also be represented on the map on mobile de
 
 The map component also supports road and satellite views.
 
-![Map component](./media/augmented-geospatial/geospatial-map-component.png "Map component")
+![Map component.](./media/augmented-geospatial/geospatial-map-component.png "Map component")
 
 To use the component, you need to [enable geospatial features for the environment](geospatial-overview.md#enable-the-geospatial-features-for-the-environment).
 
@@ -44,7 +47,7 @@ With an app open for editing in the [Power Apps studio](https://create.powerapps
 4. To show the user's current location, 
 	- Toggle **Show current location** to **On**. 
 	- Under the property **Current location latitude**, insert **Location.Latitude**. 
-	- Under the property **Current location longitude**, insert **Location.Longitde**. 
+	- Under the property **Current location longitude**, insert **Location.Longitude**. 
 	- The current location pin should now appear on the map.
 	
 You can modify the component by using a number of [properties](#input-properties).
@@ -97,11 +100,11 @@ Coho Winery (sample) | -116.97751 | 32.87466 | |
 
 1. Select one of the cells, and then on the Home tab in the ribbon, select **Format as Table** and choose any style, and then **OK**.
 
-    ![Screenshot highlighting the format as table option in Excel](./media/geospatial/convert-table.png)
+    ![Screenshot highlighting the format as table option in Excel.](./media/geospatial/convert-table.png)
 
 1. Select the table, and then go to the **Table Design** tab on the ribbon. Enter a name for the table under **Table Name:**, for example *TestData*.
 
-    ![Screenshot highlighting the table name in Excel](./media/geospatial/table-name.png)
+    ![Screenshot highlighting the table name in Excel.](./media/geospatial/table-name.png)
 
 1. Save the workbook.
 
@@ -132,7 +135,7 @@ There are multiple properties that can be defined for the map component.
 
 The following properties can be defined and configured in the component's **Properties** pane.
 
-![Map component displayed next to its Properties pane](./media/augmented-geospatial/geospatial-controls.png "Map component displayed next to its Properties pane")
+![Map component displayed next to its Properties pane.](./media/augmented-geospatial/geospatial-controls.png "Map component displayed next to its Properties pane")
 
 Some properties are only available on the **Advanced** tab in the **Properties** pane, in the **More options** section.
 
@@ -185,10 +188,10 @@ The following table lists the output properties available.
 
 
 
-| Property | Description |
-| -- | -- |
-| CenterLocation | Center location of the map. |
-| OnMapClick | The last clicked location on the map. |
+| Property | Description | Type |
+| -- | -- | -- |
+| CenterLocation | Center location of the map. | Not Applicable |
+| OnMapClick | The last clicked location on the map. | Not Applicable |
 | Selected | The selected pin on the map. | Record |
 | SelectedItems | The selected pin or pins of the selected cluster on the map. | Table |
 | GeocodedItems | The geocoded locations of the pins on the map. | Table |

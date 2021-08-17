@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2020
+ms.subservice: portals
 ms.author: shjais
 ms.reviewer: shjais
 contributors:
@@ -57,7 +58,7 @@ The forum thread editor will appear automatically when a user has successfully s
 
 5. Select **Create this thread**.
 
-    ![Create a new forum thread](media/create-new-forum-thread.png "Create a new forum thread")  
+    ![Create a new forum thread.](media/create-new-forum-thread.png "Create a new forum thread")  
 
 ### Forum thread attributes used by portals
 

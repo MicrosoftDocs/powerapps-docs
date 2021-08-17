@@ -17,7 +17,7 @@ This sample component explores the various methods available as part of the Powe
 [!INCLUDE[cc-terminology](../../data-platform/includes/cc-terminology.md)]
 
 > [!div class="mx-imgBorder"]
-> ![Navigation API component](../media/navigation-api-control.png "Navigation API component")
+> ![Navigation API component.](../media/navigation-api-control.png "Navigation API component")
 
 ## Available for 
 
