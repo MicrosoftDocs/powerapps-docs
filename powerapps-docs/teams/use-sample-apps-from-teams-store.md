@@ -63,7 +63,7 @@ Several sample apps are available from the Teams store that you can add to your 
 :::row-end:::
 :::row:::
    :::column span="":::
-    ![Get Connected app](media/app-icons/get-connected-app-icon.png "Get Connected app") <br> [Get Connected (Preview)](get-connected.md) <br> Connect with people in your organization with similar skills.
+    ![Get connected app](media/app-icons/get-connected-app-icon.png "Get connected app") <br> [Get connected (Preview)](get-connected.md) <br> Connect with people in your organization with similar skills.
    :::column-end:::
    :::column span="":::
     :::column-end:::
