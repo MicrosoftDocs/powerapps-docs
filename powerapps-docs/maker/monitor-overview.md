@@ -1,14 +1,14 @@
 ---
 title: Monitor overview
 description: Overview of Power Apps Monitor.
-author: hasharaf
+author: tapanm-msft
 ms.service: powerapps
 ms.subservice: troubleshoot
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 11/19/2020
-ms.author: hasharaf
+ms.author: austinj
 search.audienceType: 
   - maker
 search.app: 
