@@ -53,7 +53,7 @@ You can use the Azure Synapse Link to connect your Microsoft Dataverse data to A
 > - The storage account and Synapse workspace must be created in the same Azure Active Directory (Azure AD) tenant as your Power Apps tenant.
 > - The storage account and Synapse workspace must be created in the same region as the Power Apps environment you will use the feature in.
 > - You must have **Reader** role access to the resource group with the storage account and Synapse workspace.  
-> - To link the Dataverse environment to Azure Data Lake Storage Gen2, you must be a Dataverse administrator.
+> - To link the Dataverse environment to Azure Data Lake Storage Gen2, you must have the Dataverse system administrator security role.
 > - Only tables that have change tracking enabled can be exported.
 > - When you add multiple users to the synapse workspace, they must have the **Synapse Administrator** role access within the Synapse Studio and the **Storage Blob Data Contributor** role on the Azure Data Lake Storage Gen2 account.
 
@@ -78,7 +78,7 @@ You can use the Azure Synapse Link to connect your Microsoft Dataverse data to A
 
     ![Add tables.](media/add-tables.png "Add tables")
 
-You can follow the steps above to create a link from one Dataverse environment to multiple Azure Synapse Analytics workspaces and Azure data lakes in your Azure subscription by adding an Azure Data Lake as a linked service on a Synapse workspace. Similarly, you could create a link from multiple Dataverse environments to the same Azure Synapse Analytics workspace and Azure Data Lake, all within the same tenant.
+You can follow the steps above to create a link from one Dataverse environment to multiple Azure Synapse Analytics workspaces and Azure data lakes in your Azure subscription by adding an Azure data lake as a linked service on a Synapse workspace. Similarly, you could create a link from multiple Dataverse environments to the same Azure Synapse Analytics workspace and Azure data lake, all within the same tenant.
 
 > [!NOTE]
 > The data exported by Azure Synapse Link service is encrypted at rest in Azure Data Lake Storage Gen2. Additionally, transient data in the blob storage is also encrypted at rest. Encryption in Azure Data Lake Storage Gen2 helps you protect your data, implement enterprise security policies, and meet regulatory compliance requirements. More information: [Azure Data Encryption-at-Rest]( /azure/security/fundamentals/encryption-atrest)
@@ -100,9 +100,9 @@ After you have set up the Azure Synapse Link, you can manage the tables that are
 After you have set up the Azure Synapse Link, you can monitor the Azure Synapse Link under the **Tables** tab.
 
 - There will be a list of tables that are a part of the selected Azure Synapse Link.
-- There are different stages the sync status will circulate through. **NotStarted** indicates that the Table is waiting to be synced. Once the table initial sync has been **Completed**, there will be a post processing stage where incremental updates will not take place. This may take several hours depending on the size of your data. As the incremental updates start taking place, the dat for the last sync will be regularly updated.
-- The Count column shows the number of changes to the data. It does not show the total number of rows to the data.
-- The final columns show the usage of difference advanced configurations.
+- There are different stages the sync status will circulate through. **NotStarted** indicates that the table is waiting to be synced. Once the table initial sync has been **Completed**, there will be a post processing stage where incremental updates will not take place. This may take several hours depending on the size of your data. As the incremental updates start taking place, the dat for the last sync will be regularly updated.
+- The **Count** column shows the number of changes to the data. It does not show the total number of rows to the data.
+- The  **Append only** and **Partition strategy** columns show the usage of difference advanced configurations.
 
 ## Unlinking an Azure Synapse Link
 
@@ -141,9 +141,10 @@ If you deleted the file system when unlinking, follow the steps above to relink 
 
 2. Expand **Databases**, and then select dataverse-*environmentName*-*organizationUniqueName* and expand **Tables**.
 
-3. All of the exported Dataverse tables will be listed and available for analysis.
+All of the exported Dataverse tables will be listed and available for analysis.
 
 ### What's next?
+
 After successfully using the Azure Synapse Link for Dataverse service, discover how you can analyze and consume your data with **Discover Hub**. To access **Discover Hub**, go to **Power Apps** > **Azure Synapse Link**. Select your linked service and then select the **Discover Hub** tab. Here you can find recommended tools and curated documentation to help you get the most value out of your data.
 ![Discover Hub.](media/discover-hub.png "Discover Hub")
 
