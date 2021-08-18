@@ -36,66 +36,18 @@ sections:
           Cipher suites for portals are enabled as per the Microsoft security policy to account support for different kinds of clients.
           The following table lists TLS 1.2 cipher suites supported by portals. All cipher suites meet the security standards with weaker suites added lower in the cipher suite order to ensure clients supporting better ciphers always use strongest available cipher.
 
-          :::row:::
-            :::column span="":::
-                TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
-            :::column-end:::
-          :::row-end:::
-          :::row:::
-            :::column span="":::
-                TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
-            :::column-end:::
-          :::row-end:::
-          :::row:::
-            :::column span="":::
-                TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384
-            :::column-end:::
-          :::row-end:::
-          :::row:::
-            :::column span="":::
-                TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256
-            :::column-end:::
-          :::row-end:::
-          :::row:::
-            :::column span="":::
-                TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA
-            :::column-end:::
-          :::row-end:::
-          :::row:::
-            :::column span="":::
-                TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA
-            :::column-end:::
-          :::row-end:::
-          :::row:::
-            :::column span="":::
-                TLS_RSA_WITH_AES_256_GCM_SHA384
-            :::column-end:::
-          :::row-end:::
-          :::row:::
-            :::column span="":::
-                TLS_RSA_WITH_AES_128_GCM_SHA256
-            :::column-end:::
-          :::row-end:::
-          :::row:::
-            :::column span="":::
-                TLS_RSA_WITH_AES_256_CBC_SHA256
-            :::column-end:::
-          :::row-end:::
-          :::row:::
-            :::column span="":::
-                TLS_RSA_WITH_AES_128_CBC_SHA256
-            :::column-end:::
-          :::row-end:::
-          :::row:::
-            :::column span="":::
-                TLS_RSA_WITH_AES_256_CBC_SHA
-            :::column-end:::
-          :::row-end:::
-          :::row:::
-            :::column span="":::
-                TLS_RSA_WITH_AES_128_CBC_SHA
-            :::column-end:::
-          :::row-end:::
+          - TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+          - TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+          - TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384
+          - TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256
+          - TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA
+          - TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA
+          - TLS_RSA_WITH_AES_256_GCM_SHA384
+          - TLS_RSA_WITH_AES_128_GCM_SHA256
+          - TLS_RSA_WITH_AES_256_CBC_SHA256
+          - TLS_RSA_WITH_AES_128_CBC_SHA256
+          - TLS_RSA_WITH_AES_256_CBC_SHA
+          - TLS_RSA_WITH_AES_128_CBC_SHA
           
           > [!NOTE]
           > You can control the cipher suites when configuring Azure Front Door with portals for edge caching and Web Application Firewall (WAF) capabilities. However, ensure you only use the [cipher suites supported by Azure Front Door](/azure/frontdoor/front-door-faq#what-are-the-current-cipher-suites-supported-by-azure-front-door-).
