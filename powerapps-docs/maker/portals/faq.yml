@@ -50,7 +50,7 @@ sections:
           - TLS_RSA_WITH_AES_128_CBC_SHA
           
           > [!NOTE]
-          > You can control the cipher suites when configuring Azure Front Door with portals for edge caching and Web Application Firewall (WAF) capabilities. However, ensure you only use the [cipher suites supported by Azure Front Door](/azure/frontdoor/front-door-faq#what-are-the-current-cipher-suites-supported-by-azure-front-door-).
+          > You can control the cipher suites when configuring [Azure Front Door with portals](azure-front-door.md) for edge caching and Web Application Firewall (WAF) capabilities. However, ensure you only use the [cipher suites supported by Azure Front Door](/azure/frontdoor/front-door-faq#what-are-the-current-cipher-suites-supported-by-azure-front-door-).
 
       - question: |
           How do I redirect a user to a default page after signing in?
