@@ -1,6 +1,6 @@
 ---
-title: "Query Azure Synapse Link for Dataverse data with Azure SQL Database serverless | MicrosoftDocs"
-description: "Learn how to query exported Dataverse table data with Azure SQL Database serverless"
+title: "Query Azure Synapse Link for Dataverse data with serverless SQL pool | MicrosoftDocs"
+description: "Learn how to query exported Dataverse table data with serverless SQL pool"
 ms.custom: ""
 ms.date: 08/06/2021
 ms.reviewer: "Mattp123"
@@ -23,11 +23,11 @@ search.app:
 contributors: ""
 ---
 
-# Query Azure Synapse Link for Dataverse data with Azure SQL Database serverless
+# Query Azure Synapse Link for Dataverse data with serverless SQL pool
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-You can use the Azure Synapse Link to connect your Microsoft Dataverse data to Azure Synapse Analytics to explore your data and accelerate time to insight. This article shows you how to query your Dataverse data with built-in Azure SQL Database serverless pool in your Azure Synapse Analytics workspace.
+You can use the Azure Synapse Link to connect your Microsoft Dataverse data to Azure Synapse Analytics to explore your data and accelerate time to insight. This article shows you how to query your Dataverse data with built-in serverless SQL pool in your Azure Synapse Analytics workspace.
 
 > [!NOTE]
 >
@@ -44,7 +44,7 @@ This section describes the prerequisites necessary to query your Dataverse data 
 
 - **Synapse administrator.** You must be granted the **Synapse Administrator** role access within Synapse studio.
 
-## Query your Dataverse data with Azure SQL Database serverless pool
+## Query your Dataverse data with serverless SQL pool
 
 > [!NOTE]
 > Azure Synapse Link for Dataverse does not support the use of dedicated SQL pools at this time.
@@ -65,7 +65,7 @@ This section describes the prerequisites necessary to query your Dataverse data 
 
     ![Run query.](media/run-query.png "Run query")
 
-## Query multiple Dataverse databases with Azure SQL Database serverless pool
+## Query multiple Dataverse databases with serverless SQL pool
 
 > [!NOTE]
 > Querying multiple Dataverse databases requires that both Dataverse environments are in the same region.
