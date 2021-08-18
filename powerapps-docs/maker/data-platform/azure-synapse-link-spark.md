@@ -58,7 +58,7 @@ This section describes the prerequisites necessary to transform Dataverse data w
 
     ![Load to DataFrame.](media/load-to-dataframe.png "Load to DataFrame")
 
-4. Attach the notebook to an Apache Spark pool by selecting a pool from the drop down menu. If you do not have an Apache Spark pool, select **Manage pools** to create one.
+4. Attach the notebook to an Apache Spark pool by selecting a pool from the drop-down menu. If you do not have an Apache Spark pool, select **Manage pools** to create one.
 
     ![Attach Spark pool.](media/attach-pool.png "Attach Spark pool")
 
@@ -70,4 +70,5 @@ This section describes the prerequisites necessary to transform Dataverse data w
 
 [Blog: Announcing Azure Synapse Link for Dataverse](https://aka.ms/synapse-dataverse)
 
+[What is Apache Spark in Azure HDInsight](/azure/hdinsight/spark/apache-spark-overview)
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
