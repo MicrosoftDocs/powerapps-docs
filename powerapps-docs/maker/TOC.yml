@@ -699,6 +699,8 @@
             href: ./canvas-apps/functions/function-iferror.md
           - name: in
             href: ./canvas-apps/functions/operators.md#in-and-exactin-operators
+          - name: Int
+            href: ./canvas-apps/functions/function-round.md
           - name: IsBlank
             href: ./canvas-apps/functions/function-isblank-isempty.md
           - name: IsBlankOrError
@@ -711,6 +713,8 @@
             href: ./canvas-apps/functions/function-ismatch.md
           - name: IsNumeric
             href: ./canvas-apps/functions/function-isnumeric.md
+          - name: ISOWeekNum
+            href: ./canvas-apps/functions/function-weeknum.md            
           - name: IsToday
             href: ./canvas-apps/functions/function-now-today-istoday.md
           - name: IsType
@@ -889,6 +893,8 @@
             href: ./canvas-apps/functions/function-trim.md
           - name: TrimEnds
             href: ./canvas-apps/functions/function-trim.md
+          - name: Trunc
+            href: ./canvas-apps/functions/function-round.md            
           - name: Ungroup
             href: ./canvas-apps/functions/function-groupby.md
           - name: Unrelate
@@ -913,6 +919,8 @@
             href: ./canvas-apps/functions/function-form.md
           - name: Weekday
             href: ./canvas-apps/functions/function-datetime-parts.md
+          - name: WeekNum
+            href: ./canvas-apps/functions/function-weeknum.md
           - name: With
             href: ./canvas-apps/functions/function-with.md
           - name: Year
@@ -1157,7 +1165,7 @@
           items:
           - name: Use Monitor to troubleshoot forms
             href: ./model-driven-apps/monitor-form-checker.md
-      - name: Use custom pages to add canvas apps (preview)
+      - name: Use custom pages within model-driven apps (preview)
         items:
         - name: Custom pages overview
           href: ./model-driven-apps/model-app-page-overview.md
@@ -1409,10 +1417,12 @@
     href: ../mobile/run-powerapps-on-mobile.md
   - name: Use model-driven apps on mobile
     href: ../mobile/use-custom-model-driven-app-on-mobile.md
+  - name: Use relevance search on Power Apps Mobile  
+    href: ../mobile/relevance-search-mobile.md  
+  - name: Set app display to dark or light mode  
+    href: ../mobile/display-mode.md
   - name: Configure mobile offline synchronization 
     href: ../mobile/setup-mobile-offline.md 
-  - name: Use relevance search on Power Apps Mobile  
-    href: ../mobile/relevance-search-mobile.md 
   - name: Work offline on your mobile device 
     href: ../mobile/work-in-offline-mode.md  
   - name: Create push notifications for Power Apps Mobile
@@ -1744,9 +1754,9 @@
       items:
         - name: Set up Power BI integration
           href: ./portals/admin/set-up-power-bi-integration.md
-        - name: Add a Power BI as a component to a webpage
+        - name: Add Power BI as a component to a webpage
           href: ./portals/add-powerbi.md
-        - name: Add a Power BI using powerbi liquid tag
+        - name: Add Power BI using powerbi liquid tag
           href: ./portals/admin/add-powerbi-report.md
     - name: How-to guides for extending portals
       items:
@@ -2267,6 +2277,10 @@
           href: ../teams/how-templates-built.md
         - name: When to build apps in Teams
           href: ../teams/when-create-teams-apps.md
+        - name: Add notifications to make your apps collaborative
+          href: ../teams/add-app-notifications.md
+        - name: Enable consistent experience across sessions
+          href: ../teams/consistent-experience-across-sessions.md
     - name: Manage your apps
       href: ../teams/manage-your-apps.md
     - name: Set permission and share your app
@@ -2285,7 +2299,7 @@
           href: ../teams/use-sample-apps-from-teams-store.md
         - name: Boards (Preview)
           items:
-             - name: Boards
+             - name: Use Boards sample app
                href: ../teams/boards.md
              - name: Understand Boards sample app architecture
                href: ../teams/boards-architecture.md
@@ -2331,6 +2345,12 @@
                   href: ../teams/add-tag-to-mark-prioritized-ideas.md
                 - name: Enable users to discuss ideas
                   href: ../teams/extend-ideas-discussions.md
+        - name: Get connected (Preview)
+          items:
+            - name: Use Get connected sample app
+              href: ../teams/get-connected.md
+            - name: Understand Get connected sample app architecture
+              href: ../teams/get-connected-architecture.md
         - name: How to (Preview)
           items:
              - name: Use How to sample app
@@ -2343,6 +2363,8 @@
           items:
             - name: Use Inspection sample app
               href: ../teams/inspection.md
+            - name: Deploy Inspection app broadly in your organization
+              href: ../teams/inspection-deploy-broad.md
             - name: Customize Inspection app
               items:
                 - name: Understand Inspection sample app architecture
@@ -2353,9 +2375,13 @@
                   href: ../teams/inspections-hierarchy-locations.md
                 - name: Customize inspection steps
                   href: ../teams/customize-inspection-steps.md
+                - name: Notify manager on completion of inspection
+                  href: ../teams/notify-manager-inspections.md
+                - name: Update inspection notification to use an adaptive card
+                  href: ../teams/inspection-adaptive-card.md
         - name: Issue reporting
           items:
-            - name: Issue reporting
+            - name: Use Issue reporting sample app
               href: ../teams/issue-reporting.md
             - name: Deploy Issue reporting app broadly in your organization
               href: ../teams/issue-reporting-broad-distribution.md
@@ -2377,7 +2403,7 @@
                   href: ../teams/extend-issue-sign-up-notification.md
         - name: Milestones
           items:
-             - name: Milestones
+             - name: Use Milestones sample app
                href: ../teams/milestones.md
              - name: Deploy the Milestones app broadly in your organization
                href: ../teams/milestones-broad-distribution.md
@@ -2395,7 +2421,7 @@
                    href: ../teams/extend-milestones-send notification.md
         - name: Perspectives (Preview)
           items:
-            - name: Perspectives
+            - name: Use Perspectives sample app
               href: ../teams/perspectives.md
             - name: Understand Perspectives sample app architecture
               href: ../teams/perspectives-architecture.md

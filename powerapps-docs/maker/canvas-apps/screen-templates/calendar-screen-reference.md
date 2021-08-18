@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 04/28/2020
+ms.date: 08/09/2021
 ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
@@ -90,7 +90,7 @@ Familiarity with how to add and configure screens and other controls as you [cre
         )
     );
     ClearCollect( MyCalendarEvents, 
-        'Office365'.GetEventsCalendarViewV2( _myCalendar.Name, 
+        Office365Outlook.GetEventsCalendarViewV2( _myCalendar.Name, 
             Text( _minDate, UTC ), 
             Text( _maxDate, UTC )
         ).value
@@ -159,7 +159,7 @@ Unique color properties for calendar drop-down control:
     Set( _lastDayOfMonth, DateAdd(DateAdd( _firstDayOfMonth, 1, Months ), -1, Days ) );
     If( _minDate > _firstDayOfMonth,
         Collect( MyCalendarEvents,
-            'Office365'.GetEventsCalendarViewV2( _myCalendar.Name,
+            Office365Outlook.GetEventsCalendarViewV2( _myCalendar.Name,
                 Text( _firstDayInView, UTC ), 
                 Text( DateAdd( _minDate, -1, Days ), UTC )
             ).value
@@ -175,7 +175,7 @@ Unique color properties for calendar drop-down control:
 
     If this is the case, **\_minDate** is the first day that appears when the previous month displays. Before the user selects the icon, **\_minDate** has a minimum possible value of the 23rd of the current month. (When March 1 falls on a Saturday, **\_firstDayInView** for March is February 23.) That means that if a user hasn't selected this month yet, **\_minDate** is greater than the new **\_firstDayOfMonth**, and the **If** function returns **true**. The code runs, and a collection and a variable are updated:
 
-    - **MyCalendarEvents** retrieves events from the selected calendar with the [Office365.GetEventsCalendarViewV2](/connectors/office365/#get-calendar-view-of-events--v2-) operation. The date range is between the **\_firstDayInView** date and **\_minDate** - 1. Because **MyCalendarEvents** already contains events on the **\_minDate** date, 1 is subtracted from that date for the maximum value in this new date range.
+    - **MyCalendarEvents** retrieves events from the selected calendar with the [Office365Outlook.GetEventsCalendarViewV2](/connectors/office365/#get-calendar-view-of-events--v2-) operation. The date range is between the **\_firstDayInView** date and **\_minDate** - 1. Because **MyCalendarEvents** already contains events on the **\_minDate** date, 1 is subtracted from that date for the maximum value in this new date range.
 
     - **\_minDate** is set to the current **\_firstDayInView** because this is the first date for which events have been retrieved. If a user returns to this date by selecting the previous-month chevron, the **If** function returns **false**; the code doesn't run because events for this view are already cached in **MyCalendarEvents**.
 
@@ -191,14 +191,14 @@ Unique color properties for calendar drop-down control:
     Set( _firstDayInView, 
         DateAdd( _firstDayOfMonth, -(Weekday( _firstDayOfMonth ) - 2 + 1), Days ) );
     Set( _lastDayOfMonth, DateAdd( DateAdd( _firstDayOfMonth, 1, Months ), -1, Days ) );
-    If( _maxDate < _lastDayOfMonth,
-        Collect( MyCalendarEvents, 
-            'Office365'.GetEventsCalendarViewV2( _myCalendar.Name, 
-                Text( DateAdd( _maxDate, 1, Days ), UTC ), 
-                DateAdd( _firstDayInView, 40, Days )
+    If(_maxDate < _lastDayOfMonth, 
+    Collect(MyCalendarEvents,
+            Office365Outlook.GetEventsCalendarViewV2(_myCalendar.Name,
+                Text(DateAdd(_maxDate, 1, Days), UTC),
+                Text(DateAdd(_firstDayInView, 40, Days))
             ).value
-        );
-        Set( _maxDate, DateAdd( _firstDayInView, 40, Days) )    
+    );
+    Set(_maxDate, DateAdd(_firstDayInView, 40, Days))
     )
     ```
 
@@ -209,7 +209,7 @@ Unique color properties for calendar drop-down control:
 
     In that case, **\_maxDate** is the last day that appears when the previous month displays. Before the user selects the next-month chevron, **\_maxDate** has a maximum possible value of the 13th of the next month. (When February 1 falls on a non-leap year Sunday, **\_maxDate** is March 13, which is **\_firstDayInView** + 40 days.) That means that if a user hasn't selected this month yet, **\_maxDate** is greater than the new **\_lastDayOfMonth**, and the **If** function returns **true**. The code runs, and a collection and a variable are updated:
 
-    - **MyCalendarEvents** retrieves events from the selected calendar with the [Office365.GetEventsCalendarViewV2](/connectors/office365/#get-calendar-view-of-events--v2-) operation. The date range is between **\_maxDate** + 1 day and **\_firstDayInView** + 40 days. Because **MyCalendarEvents** already contains events on the **\_minDate** date, 1 is added to that date for the minimum value in this new date range. **\_firstDayInView** + 40 is the formula for **\_maxDate**, so the second date in the range is just the new **\_maxDate**.
+    - **MyCalendarEvents** retrieves events from the selected calendar with the [Office365Outlook.GetEventsCalendarViewV2](/connectors/office365/#get-calendar-view-of-events--v2-) operation. The date range is between **\_maxDate** + 1 day and **\_firstDayInView** + 40 days. Because **MyCalendarEvents** already contains events on the **\_minDate** date, 1 is added to that date for the minimum value in this new date range. **\_firstDayInView** + 40 is the formula for **\_maxDate**, so the second date in the range is just the new **\_maxDate**.
 
     - **\_maxDate** is set to **\_firstDayInView** + 40 days because this is the last day for which events have been retrieved. If a user returns to this date by selecting the next-month chevron, the **If** function returns **false**; the code doesn't run because events for this view are already cached in **MyCalendarEvents**.
 
