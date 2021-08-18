@@ -2327,8 +2327,8 @@
           items:
             - name: Use Get connected sample app
               href: ../teams/get-connected.md
-             - name: Understand Get connected sample app architecture
-               href: ../teams/get-connected-architecture.md
+            - name: Understand Get connected sample app architecture
+              href: ../teams/get-connected-architecture.md
         - name: How to (Preview)
           items:
              - name: Use How to sample app
