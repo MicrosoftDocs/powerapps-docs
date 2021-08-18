@@ -2164,7 +2164,7 @@
       href: ./data-platform/export-data-lake-faq.yml      
     - name: Analyze with Azure Synapse Analytics
       items:
-      - name: Query data with Serverless SQL
+      - name: Query data with Azure SQL Database serverless
         href: ./data-platform/azure-synapse-link-serverless.md
       - name: Transform data with Apache Spark
         href: ./data-platform/azure-synapse-link-spark.md 
@@ -2174,7 +2174,7 @@
         href: ./data-platform/azure-synapse-link-dedicated.md
       - name: Read Incremental Updates
         href: ./data-platform/azure-synapse-link-incremental.md
-      - name: Access Dataverse choices with Serverless SQL
+      - name: Access Dataverse choices with Azure SQL Database serverless
         href: ./data-platform/azure-synapse-link-choices-serverless.md      
     - name: Analyze in Azure Data Lake Storage Gen2
       items:

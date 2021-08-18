@@ -1,6 +1,6 @@
 ---
-title: "Query Azure Synapse Link for Dataverse data with Serverless SQL | MicrosoftDocs"
-description: "Learn how to query exported Dataverse table data with Serverless SQL"
+title: "Query Azure Synapse Link for Dataverse data with Azure SQL Database serverless | MicrosoftDocs"
+description: "Learn how to query exported Dataverse table data with Azure SQL Database serverless"
 ms.custom: ""
 ms.date: 08/06/2021
 ms.reviewer: "Mattp123"
@@ -23,11 +23,11 @@ search.app:
 contributors: ""
 ---
 
-# Query Azure Synapse Link for Dataverse data with Serverless SQL
+# Query Azure Synapse Link for Dataverse data with Azure SQL Database serverless
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-You can use the Azure Synapse Link to connect your Microsoft Dataverse data to Azure Synapse Analytics to explore your data and accelerate time to insight. This article shows you how to query your Dataverse data with built-in Serverless SQL pool in your Azure Synapse Analytics workspace.
+You can use the Azure Synapse Link to connect your Microsoft Dataverse data to Azure Synapse Analytics to explore your data and accelerate time to insight. This article shows you how to query your Dataverse data with built-in Azure SQL Database serverless pool in your Azure Synapse Analytics workspace.
 
 > [!NOTE]
 >
@@ -44,7 +44,7 @@ This section describes the prerequisites necessary to query your Dataverse data 
 
 - **Synapse administrator.** You must be granted the **Synapse Administrator** role access within Synapse studio.
 
-## Query your Dataverse data with serverless SQL pool
+## Query your Dataverse data with Azure SQL Database serverless pool
 
 > [!NOTE]
 > Azure Synapse Link for Dataverse does not support the use of dedicated SQL pools at this time.
@@ -65,7 +65,7 @@ This section describes the prerequisites necessary to query your Dataverse data 
 
     ![Run query.](media/run-query.png "Run query")
 
-## Query multiple Dataverse databases with serverless SQL pool
+## Query multiple Dataverse databases with Azure SQL Database serverless pool
 
 > [!NOTE]
 > Querying multiple Dataverse databases requires that both Dataverse environments are in the same region.
@@ -76,7 +76,7 @@ This section describes the prerequisites necessary to query your Dataverse data 
 
 3. Navigate to the shared Synapse workspace and expand **Databases**. Select one of the Dataverse containers. Your exported tables are displayed under the **Tables** directory on the left sidebar.
 
-4. Right-click the a table and select **New SQL script** > **Select TOP 100 rows**.
+4. Right-click a table, and then select **New SQL script** > **Select TOP 100 rows**.
 
 5. Edit the query to combine the two datasets. For instance, you can join the datasets based on a unique ID value.
 
