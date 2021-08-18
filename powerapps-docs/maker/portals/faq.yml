@@ -33,7 +33,8 @@ sections:
         answer: |
           Power Apps portals version 8.3 and later supports [TLS 1.2](https://support.microsoft.com/help/4041984/portal-capabilities-for-microsoft-dynamics-365-version-8-3-2-85-releas).
 
-          The following table lists TLS 1.2 cipher suites supported by portals.
+          Cipher suites for portals are enabled as per the Microsoft security policy to account support for different kinds of clients.
+          The following table lists TLS 1.2 cipher suites supported by portals. All cipher suites meet the security standards with weaker suites added lower in the cipher suite order to ensure clients supporting better ciphers always use strongest available cipher.
 
           :::row:::
             :::column span="":::
@@ -97,7 +98,7 @@ sections:
           :::row-end:::
           
           > [!NOTE]
-          > If you configure Azure Front Door with portals for edge caching and Web Application Firewall (WAF) capabilities, ensure you only use the [cipher suites supported by Azure Front Door](/azure/frontdoor/front-door-faq#what-are-the-current-cipher-suites-supported-by-azure-front-door-).
+          > You can control the cipher suites when configuring Azure Front Door with portals for edge caching and Web Application Firewall (WAF) capabilities. However, ensure you only use the [cipher suites supported by Azure Front Door](/azure/frontdoor/front-door-faq#what-are-the-current-cipher-suites-supported-by-azure-front-door-).
 
       - question: |
           How do I redirect a user to a default page after signing in?
