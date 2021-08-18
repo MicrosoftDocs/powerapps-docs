@@ -1,6 +1,6 @@
 ---
-title: "Access Dataverse choices with Serverless SQL | MicrosoftDocs"
-description: "Learn how to access Dataverse choice data with Serverless SQL."
+title: "Access Dataverse choices with Azure SQL Database serverless | MicrosoftDocs"
+description: "Learn how to access Dataverse choice data with Azure SQL Database serverless."
 ms.custom: ""
 ms.date: 08/06/2021
 ms.reviewer: "Mattp123"
@@ -23,11 +23,11 @@ search.app:
 contributors: ""
 ---
 
-# Access Dataverse choices (option sets) with Serverless SQL
+# Access Dataverse choices (option sets) with Azure SQL Database serverless
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-For columns that use Dataverse [Choices](/powerapps/maker/data-platform/create-edit-global-option-sets), choice values are written as an integer label and not a text label to maintain consistency during edits. The integer-to-text label mapping is stored in the *Microsoft.Athena.TrickleFeedService/table-EntityMetadata.json* file. This article covers how to access the integer-to-text label mapping using Serverless SQL.
+For columns that use Microsoft Dataverse [Choices](/powerapps/maker/data-platform/create-edit-global-option-sets), choice values are written as an integer label and not a text label to maintain consistency during edits. The integer-to-text label mapping is stored in the *Microsoft.Athena.TrickleFeedService/table-EntityMetadata.json* file. This article covers how to access the integer-to-text label mapping using Azure SQL Database serverless.
 
 ![Access option set.](media/access-option-set.png "Access option set")
 
@@ -38,15 +38,15 @@ For columns that use Dataverse [Choices](/powerapps/maker/data-platform/create-e
 
 ## Prerequisites
 
-This section describes the prerequisites necessary to consume Dataverse data with Serverless SQL after using the Azure Synapse Link for Dataverse service.
+This section describes the prerequisites necessary to consume Dataverse data with Azure SQL Database serverless after using the Azure Synapse Link for Dataverse service.
 
 - **Azure Synapse Link for Dataverse:** This guide assumes that you have already exported data from Dataverse by using the [Azure Synapse Link for Dataverse](export-to-data-lake.md) with and Azure Synapse Analytics workspace.
 
 - **Storage Account Access.** You must be granted one of the following roles for the storage account: Storage Blob Data Reader, Storage Blob Data Contributor, or Storage Blob Data Owner.
 
-## Consuming Dataverse choices with Serverless SQL
+## Consuming Dataverse choices with Azure SQL Database serverless
 
-1. Navigate to you Azure Synapse Analytics workspace.
+1. Navigate to your Azure Synapse Analytics workspace.
 
 2. Select **Develop** from the left side panel, then select **+** > **SQL script**.
 
@@ -72,12 +72,14 @@ This section describes the prerequisites necessary to consume Dataverse data wit
     )
 ```
 
-4. **Run** the query and a table containing the Dataverse choices will be displayed.
+4. **Run** the query. A table containing the Dataverse choices is displayed.
 
-5. Join the Dataverse choices with your Dataverse table and store the view in a new database using the a three-part naming convention - *[database-name].[schema-name].[table-name]*.
+5. Join the Dataverse choices with your Dataverse table and store the view in a new database using a three-part naming convention - *[database-name].[schema-name].[table-name]*.
 
 ### See also
 
 [Azure Synapse Link for Dataverse](./export-to-data-lake.md)
+
+[Azure SQL Database serverless](/azure/azure-sql/database/serverless-tier-overview)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
