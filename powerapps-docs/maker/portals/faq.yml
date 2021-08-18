@@ -6,7 +6,7 @@ metadata:
   ms.service: powerapps
   ms.topic: conceptual
   ms.custom: 
-  ms.date: 04/27/2021
+  ms.date: 08/18/2021
   ms.author: sandhan
   ms.reviewer: tapanm
   contributors:
@@ -32,7 +32,73 @@ sections:
           Does Power Apps portals support TLS 1.2?
         answer: |
           Power Apps portals version 8.3 and later supports [TLS 1.2](https://support.microsoft.com/help/4041984/portal-capabilities-for-microsoft-dynamics-365-version-8-3-2-85-releas).
+
+          The following table lists TLS 1.2 cipher suites supported by portals.
+
+          :::row:::
+            :::column span="":::
+                TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+            :::column-end:::
+          :::row-end:::
+          :::row:::
+            :::column span="":::
+                TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+            :::column-end:::
+          :::row-end:::
+          :::row:::
+            :::column span="":::
+                TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384
+            :::column-end:::
+          :::row-end:::
+          :::row:::
+            :::column span="":::
+                TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256
+            :::column-end:::
+          :::row-end:::
+          :::row:::
+            :::column span="":::
+                TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA
+            :::column-end:::
+          :::row-end:::
+          :::row:::
+            :::column span="":::
+                TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA
+            :::column-end:::
+          :::row-end:::
+          :::row:::
+            :::column span="":::
+                TLS_RSA_WITH_AES_256_GCM_SHA384
+            :::column-end:::
+          :::row-end:::
+          :::row:::
+            :::column span="":::
+                TLS_RSA_WITH_AES_128_GCM_SHA256
+            :::column-end:::
+          :::row-end:::
+          :::row:::
+            :::column span="":::
+                TLS_RSA_WITH_AES_256_CBC_SHA256
+            :::column-end:::
+          :::row-end:::
+          :::row:::
+            :::column span="":::
+                TLS_RSA_WITH_AES_128_CBC_SHA256
+            :::column-end:::
+          :::row-end:::
+          :::row:::
+            :::column span="":::
+                TLS_RSA_WITH_AES_256_CBC_SHA
+            :::column-end:::
+          :::row-end:::
+          :::row:::
+            :::column span="":::
+                TLS_RSA_WITH_AES_128_CBC_SHA
+            :::column-end:::
+          :::row-end:::
           
+          > [!NOTE]
+          > If you configure Azure Front Door with portals for edge caching and Web Application Firewall (WAF) capabilities, ensure you only use the [cipher suites supported by Azure Front Door](/azure/frontdoor/front-door-faq#what-are-the-current-cipher-suites-supported-by-azure-front-door-).
+
       - question: |
           How do I redirect a user to a default page after signing in?
         answer: |
