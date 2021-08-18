@@ -138,7 +138,7 @@ To create a Power Apps app in teams, we need to open Power Apps Studio in Teams 
 
     ![Testing the issue](media/consistent-experience-across-sessions/testing-the-issue-2.gif)
 
-## Solution: use SaveData() and LoadData() functions
+## Solution: Use SaveData() and LoadData() functions
 
 To resolve the above issue, we'll use the [LoadData() and SaveData() functions](../maker/canvas-apps/functions/function-savedata-loaddata.md). We'll create a collection for the data entered on a form as and when data is entered, and keep saving the data in the collection until the record has been committed or saved. This way, if the record hasn't been saved and we must tab out of the screen for some reason, the collection would have the saved data that would get loaded once we're back in the app. We'll also clear the collection once the record has been saved so that the collection is ready to capture new data when the next new record is being created.
 
