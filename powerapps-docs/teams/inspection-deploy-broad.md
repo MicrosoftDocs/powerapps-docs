@@ -38,7 +38,7 @@ The people responsible for managing and reviewing submitted inspections should b
 
 You must be an owner of the Team in which the app is installed to share the app.
 
-### Action required to share an app with colleagues for broad distribution
+## Action required to share an app with colleagues for broad distribution
 
 1. Share the app with colleagues.
 1. Grant security permissions to the tables used in the app.
