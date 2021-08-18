@@ -2341,6 +2341,8 @@
           items:
             - name: Use Inspection sample app
               href: ../teams/inspection.md
+            - name: Deploy Inspection app broadly in your organization
+              href: ../teams/inspection-deploy-broad.md
             - name: Customize Inspection app
               items:
                 - name: Understand Inspection sample app architecture
