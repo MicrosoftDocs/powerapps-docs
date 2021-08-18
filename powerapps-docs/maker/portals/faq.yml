@@ -36,7 +36,7 @@ sections:
       - question: |
           Which cipher suites are supported by Power Apps portals?
         answer: |
-          The following table lists TLS 1.2 cipher suites supported by portals. Strongest cipher suites are on the top ensuring clients always use the strongest available cipher, while ensuring compatibility with different kinds of clients.
+          The following table lists TLS 1.2 cipher suites supported by portals. Strongest cipher suites are on the top ensuring clients always use the strongest available cipher, while maintaining compatibility with different kinds of clients.
 
           - TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
           - TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
