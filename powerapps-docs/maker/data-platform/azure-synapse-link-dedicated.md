@@ -1,6 +1,6 @@
 ---
-title: "Copy exported Dataverse data to Dedicated SQL | MicrosoftDocs"
-description: "Learn how to copy exported Dataverse data to Dedicated SQL with Synapse Pipelines."
+title: "Copy exported Dataverse data to dedicated SQL pool | MicrosoftDocs"
+description: "Learn how to copy exported Dataverse data to dedicated SQL pool with Synapse Pipelines."
 ms.custom: ""
 ms.date: 08/06/2021
 ms.reviewer: "Mattp123"
@@ -23,11 +23,11 @@ search.app:
 contributors: ""
 ---
 
-# Copy exported Dataverse data to Dedicated SQL
+# Copy exported Dataverse data to dedicated SQL pool
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-After creating a continuous pipeline of data from Dataverse to your Synapse workspace with Azure Synapse Link for Dataverse, you can copy the data to Dedicated SQL with Synapse Pipelines.
+After creating a continuous pipeline of data from Dataverse to your Synapse workspace with Azure Synapse Link for Dataverse, you can copy the data to dedicated SQL pool with Synapse Pipelines.
 
 > [!NOTE]
 >
@@ -36,7 +36,7 @@ After creating a continuous pipeline of data from Dataverse to your Synapse work
 
 ## Prerequisites
 
-This section describes the prerequisites necessary to copy your Dataverse data to Dedicated SQL after using the Azure Synapse Link for Dataverse service.
+This section describes the prerequisites necessary to copy your Dataverse data to dedicated SQL pool after using the Azure Synapse Link for Dataverse service.
 
 - **Azure Synapse Link for Dataverse.** This guide assumes that you've already exported Dataverse data by using [Azure Synapse Link for Dataverse](export-to-data-lake.md).
 
@@ -44,9 +44,9 @@ This section describes the prerequisites necessary to copy your Dataverse data t
 
 - **Synapse administrator.** You must be granted the **Synapse Administrator** role access within Synapse studio.
 
-- **Dedicated SQL Pool.** This guide assumes that you've already created a Dedicated SQL Pool. You can create a Dedicated SQL pool under the **Manage** tab in your Synapse workspace.
+- **Dedicated SQL Pool.** This guide assumes that you've already created a dedicated SQL pool. You can create a dedicated SQL pool under the **Manage** tab in your Synapse workspace.
 
-## Copy the exported Dataverse data to Dedicated SQL
+## Copy the exported Dataverse data to dedicated SQL pool
 
 1. Navigate to your Azure Synapse Analytics workspace.
 
@@ -58,7 +58,7 @@ This section describes the prerequisites necessary to copy your Dataverse data t
 
     ![New Synapse Source](media/new-synapse-source.png "New Synapse Source")
 
-4. Create a **Sink** and specify the **Sink type** as **Inline** and **Inline dataset type** as **Azure Synapse Analytics**. Select your Dedicated SQL Pool as the **Linked service**. If the Dedicated SQL Pool is not already a linked service, create a new connection.
+4. Create a **Sink** and specify the **Sink type** as **Inline** and **Inline dataset type** as **Azure Synapse Analytics**. Select your dedicated SQL pool as the **Linked service**. If the dedicated SQL pool is not already a linked service, create a new connection.
 
     ![New Synapse Sink](media/new-synapse-sink.png "New Synapse Sink")
 
@@ -75,5 +75,7 @@ This section describes the prerequisites necessary to copy your Dataverse data t
 ### See also
 
 [Azure Synapse Link for Dataverse](./export-to-data-lake.md)
+
+[What is dedicated SQL pool](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

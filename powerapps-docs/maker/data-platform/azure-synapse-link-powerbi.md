@@ -22,7 +22,6 @@ search.app:
   - D365CE
 contributors: ""
 ---
-
 # Visualize Azure Synapse Link for Dataverse data with Power BI
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
