@@ -27,7 +27,7 @@ contributors: ""
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-For columns that use Dataverse [Choices](/powerapps/maker/data-platform/create-edit-global-option-sets), choice values are written as an integer label and not a text label to maintain consistency during edits. The integer-to-text label mappingis stored in the *Microsoft.Athena.TrickleFeedService/table-EntityMetadata.json* file. This article covers how to access the integer-to-text label mapping using Azure Data Factory.
+For columns that use Microsoft Dataverse [choices](/powerapps/maker/data-platform/create-edit-global-option-sets), choice values are written as an integer label and not a text label to maintain consistency during edits. The integer-to-text label mapping is stored in the *Microsoft.Athena.TrickleFeedService/table-EntityMetadata.json* file. This article covers how to access the integer-to-text label mapping using Azure Data Factory.
 
 ![Access option set.](media/access-option-set.png "Access option set")
 
@@ -46,15 +46,15 @@ This section describes the prerequisites necessary to access Dataverse choices w
 
 To add a column containing the text label of the Dataverse choice using Azure Data Factory, complete the following steps:
 
-1. Launch Azure Data Factory.
+1. Go to Azure Data Factory.
 
-2. Create a new Data flow and set the Source as the Azure Data Lake Storage Gen2 with your Dataverse data.
+2. Create a new data flow and set the source as the Azure Data Lake Storage Gen2 with your Dataverse data.
 
 3. Add a **Derived Column** transformation step and provide a new name for the column.
 
-4. **Open expression builder** and build an expression with a series of *iff* functions to map the integer choice label to the text choice label that is found in the *Microsoft.Athena.TrickleFeedService/table-EntityMetadata.json* file.
+4. **Open expression builder** and build an expression with a series of `iff` functions to map the integer choice label to the text choice label that is found in the *Microsoft.Athena.TrickleFeedService/table-EntityMetadata.json* file.
 
-![Expression builder](media/expression-builder.png "Expression builder")
+   :::image type="content" source="media/expression-builder.png" alt-text="Expression builder":::
 
 5. Add a sink to the data flow and run the pipeline.
 

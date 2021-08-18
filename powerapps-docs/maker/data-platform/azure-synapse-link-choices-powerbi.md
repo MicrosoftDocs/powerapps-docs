@@ -23,11 +23,11 @@ search.app:
 contributors: ""
 ---
 
-# Access Dataverse choices (option sets) with Power BI
+# Access Dataverse choices with Power BI
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-For columns that use Dataverse [Choices](/powerapps/maker/data-platform/create-edit-global-option-sets), choice values are written as an integer label and not a text label to maintain consistency during edits. The integer-to-text label mapping is stored in the *Microsoft.Athena.TrickleFeedService/table-EntityMetadata.json* file. This article covers how to access the integer-to-text label mapping using Power BI.
+For columns that use Microsoft Dataverse [choices](/powerapps/maker/data-platform/create-edit-global-option-sets), choice values are written as an integer label and not a text label to maintain consistency during edits. The integer-to-text label mapping is stored in the *Microsoft.Athena.TrickleFeedService/table-EntityMetadata.json* file. This article covers how to access the integer-to-text label mapping using Power BI.
 
 ![Access option set.](media/access-option-set.png "Access option set")
 
@@ -64,7 +64,7 @@ This section describes the prerequisites necessary to access Dataverse choices w
     #"Expanded Column1"
 ```
 
-4. This will populate a dataset with the choices and various metadata for that choice that you can join with your Dataverse Table data to display the text label for the choice.
+This populates a dataset with the choices and various metadata for that choice that you can join with your Dataverse table data to display the text label for the choice.
 
 ### See also
 
