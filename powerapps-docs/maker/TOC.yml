@@ -2259,6 +2259,8 @@
           href: ../teams/how-templates-built.md
         - name: When to build apps in Teams
           href: ../teams/when-create-teams-apps.md
+        - name: Add notifications to make your apps collaborative
+          href: ../teams/add-app-notifications.md
     - name: Manage your apps
       href: ../teams/manage-your-apps.md
     - name: Set permission and share your app
@@ -2341,6 +2343,8 @@
           items:
             - name: Use Inspection sample app
               href: ../teams/inspection.md
+            - name: Deploy Inspection app broadly in your organization
+              href: ../teams/inspection-deploy-broad.md
             - name: Customize Inspection app
               items:
                 - name: Understand Inspection sample app architecture
