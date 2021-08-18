@@ -1,6 +1,6 @@
 ---
-title: "Ingest Microsoft Dataverse data with Azure Data Factory | MicrosoftDocs"
-description: Learn how to use Azure Data Factory to create dataflows, transform, and run analysis on Dataverse data
+title: "Ingest Dataverse data with Azure Data Factory | MicrosoftDocs"
+description: Learn how to use Azure Data Factory to create dataflows, transform, and run analysis on Microsoft Dataverse data
 ms.custom: ""
 ms.date: 03/22/2021
 ms.reviewer: "matp"
@@ -23,11 +23,11 @@ search.app:
 contributors:
   - sama-zaki
 ---
-# Ingest exported Microsoft Dataverse data with Azure Data Factory
+# Ingest exported Dataverse data with Azure Data Factory
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-After exporting data from Dataverse to Azure Data Lake Storage Gen2 with Azure Synapse Link for Dataverse, you can use Azure Data Factory to create dataflows, transform your data, and run analysis.
+After exporting data from Microsoft Dataverse to Azure Data Lake Storage Gen2 with Azure Synapse Link for Dataverse, you can use Azure Data Factory to create dataflows, transform your data, and run analysis.
 
 > [!NOTE]
 > Azure Synapse Link for Dataverse was formerly known as Export to data lake. The service was renamed effective May 2021 and will continue to export data to Azure Data Lake as well as Azure Synapse Analytics.
@@ -78,7 +78,7 @@ This section describes the prerequisites necessary to ingest exported Dataverse 
     - **Root location**: Enter the container name in the first box (**Container**) or **Browse** for the container name and select **OK**.
     - **Entity**: Enter the table name or **Browse** for the table.
 
-  ![Source options.](media/source-options.png "Source options")
+      ![Source options.](media/source-options.png "Source options")
   
 6. Check the **Projection** tab to ensure that your schema has been imported successfully. If you do not see any columns, select **Schema options** and check the **Infer drifted column types** option. Configure the formatting options to match your data set then select **Apply**.
 
@@ -99,7 +99,7 @@ Follow these instructions to create a rank for the each row by the *revenue* fie
      - **Rank column**: Enter the name of the rank column generated.
      - **Sort conditions**: Select the *revenue* column and sort by *Descending* order.
 
-       ![Configure the Rank settings tab.](media/configure-rank.png "Configure the Rank settings tab")
+       :::image type="content" source="media/configure-rank.png" alt-text="Configure the Rank settings tab":::
 
 3. You can view your data in the **data preview** tab where you will find the new *revenueRank* column at the right-most position.
 
@@ -116,7 +116,7 @@ Ultimately, you must set a sink for your dataflow. Follow these instructions to 
     - **Sink type**: Select **DelimitedText**.
     - **Linked service**: Select your Data Lake Storage Gen2 storage container that has the data you exported by using the Azure Synapse Link for Dataverse service.
 
-      ![Configure the Sink tab.](media/configure-sink.png "Configure the Sink tab")
+      :::image type="content" source="media/configure-sink.png" alt-text="Configure the Sink tab":::
 
 3. On the **Settings** tab, do the following:
 
@@ -125,7 +125,7 @@ Ultimately, you must set a sink for your dataflow. Follow these instructions to 
     - **Output to single file**: Enter a file name, such as *ADFOutput*
     - Leave all other default settings.
 
-      ![Configure the sink Settings tab.](media/configure-settings.png "Configure the sink Settings tab")
+      :::image type="content" source="media/configure-settings.png" alt-text="Configure the sink Settings tab":::
 
 4. On the **Optimize** tab, set the **Partition option** to **Single partition**.
 

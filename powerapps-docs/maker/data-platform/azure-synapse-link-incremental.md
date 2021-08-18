@@ -1,5 +1,5 @@
 ---
-title: "Read the Incremental Updates of Dataverse data | MicrosoftDocs"
+title: "Read the incremental updates of Dataverse data | MicrosoftDocs"
 description: "Learn how to read the incremental updates of your Dataverse data."
 ms.custom: ""
 ms.date: 08/06/2021
@@ -23,11 +23,11 @@ search.app:
 contributors: ""
 ---
 
-# Read the Incremental Updates of Dataverse data
+# Read the incremental updates of Dataverse data
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-After creating a continuous pipeline of data from Dataverse to your Synapse workspace with Azure Synapse Link for Dataverse, you can read the incremental updates of a specified time interval. Every Dataverse table exported with Azure Synapse Link for Dataverse contains a *SinkModifiedOn* column which can be used to get the incremental updates.
+After creating a continuous pipeline of data from Microsoft Dataverse to your Synapse workspace with Azure Synapse Link for Dataverse, you can read the incremental updates of a specified time interval. Every Dataverse table exported with Azure Synapse Link for Dataverse contains a *SinkModifiedOn* column which can be used to get the incremental updates.
 
 > [!NOTE]
 >
@@ -52,11 +52,11 @@ This section describes the prerequisites necessary to read the incremental updat
 
 3. Paste the following SQL query and replace **CONTAINER_NAME** with the name of the container, **TABLE_NAME** with the name of the Dataverse table, and **TIMESTAMP_START** and **TIMESTAMP_END** with the time interval in UTC format (YYYY-MM-DDTHH:MM:SS).
 
-```SQL
-    SELECT * 
-    FROM [CONTAINER_NAME].[dbo].[TABLE_NAME]
-    WHERE [SinkModifiedOn] >= TIMESTAMP_START AND [SinkModifiedOn] <= TIMESTAMP_END
-```
+   ```SQL
+       SELECT * 
+       FROM [CONTAINER_NAME].[dbo].[TABLE_NAME]
+       WHERE [SinkModifiedOn] >= TIMESTAMP_START AND [SinkModifiedOn] <= TIMESTAMP_END
+   ```
 
 4. **Run** the query and a table containing the incremental updates to the Dataverse table from the specified time interval will be displayed.
 
