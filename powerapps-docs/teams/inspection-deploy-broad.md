@@ -32,19 +32,17 @@ You want everyone at in your org, department, or a certain location to be able t
 The people responsible for managing and reviewing submitted inspections should be added as members of the team where the app is installed, as these apps are designed to be used from within a team.
 
 > [!NOTE]
-> By default, when an issue is logged in an inspection, a task is created in Microsoft Planner in the team in which the app is installed, so you should also share access to the Team Planner environment with the group for which the app is shared for broad distribution.
+> By default, when an issue is logged in an inspection, a task is created in Microsoft Planner in the team in which the app is installed, so you should also share access to the Teams Planner environment with the group for which the app is shared for broad distribution.
 
 ## Prerequisites
 
-You must be an owner of the Team in which the app is installed to share the app.
-
-## Action required to share an app with colleagues for broad distribution
-
-1. Share the app with colleagues.
-1. Grant security permissions to the tables used in the app.
+- You must be an owner of the team in which the app is installed to share the app.
+- Action required to share an app with colleagues for broad distribution:
+    1. Share the app with colleagues.
+    1. Grant security permissions to the tables used in the app.
 
 > [!NOTE]
-> Aps are installed inside of a tab in a Teams channel. People who develop and extend the app or managers who create or manage the inspection forms should use the app in a Team. For people who complete inspections or users who aren't managers, sharing the app with colleagues outside of the team will enable them to use the app without having to be a member of the Team.
+> Aps are installed inside of a tab in a Teams channel. People who develop and extend the app or managers who create or manage the inspection forms should use the app in a team. For people who complete inspections or users who aren't managers, sharing the app with colleagues outside of the team will enable them to use the app without having to be a member of the team.
 
 ## Sharing App with Colleagues
 
@@ -104,7 +102,7 @@ Understanding and assigning permissions to tables are vital to ensure proper sec
 
 ### Granting permissions to the tables
 
-By default, all of the table permissions for colleagues not in the Team are set to **none.** If you leave it that way, colleagues that you share the app with won't be able to use the app, as they won’t have permission to the tables in the app. Follow these steps to set permissions for the tables in the app for
+By default, all of the table permissions for colleagues not in the team are set to **none.** If you leave it that way, colleagues that you share the app with won't be able to use the app, as they won’t have permission to the tables in the app. Follow these steps to set permissions for the tables in the app for
 colleagues outside of the team:
 
 1. In Teams, open the **Power Apps** app.
@@ -113,7 +111,7 @@ colleagues outside of the team:
 
 1. Select the team that contain the app you want to share.
 
-1. Select **Installed apps.** This will show all apps installed in the Team.
+1. Select **Installed apps.** This will show all apps installed in the team.
 
 1. Select **See All** in the **Area Inspection** tile.
 
