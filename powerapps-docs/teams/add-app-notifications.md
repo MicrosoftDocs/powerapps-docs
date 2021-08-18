@@ -83,7 +83,7 @@ Microsoft365Outlook.SendEmail("mailbox@contoso.com", Summary, Description)
 
 In Power Automate, the send an email action is presented in a graphical manner, allowing users to populate the fields in a manner similar to how they send an email in Outlook.
 
-![power apps notifications vs power automate notifications](media/add-notifications-to-make-your-apps-more-collaborative/power-apps-notifications-vs-power-automate-notifications-1.png)
+![power apps notifications vs power automate notifications](media/add-app-notifications/notification-choices.png)
 
 Sending an email from Power Apps directly is faster for experienced makers, but the more detail required, such as attachment files and formatted text, for the less experienced makers, sending the email with Power Automate flow may be easier.
 
