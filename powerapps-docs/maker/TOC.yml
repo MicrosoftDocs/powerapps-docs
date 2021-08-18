@@ -2261,6 +2261,8 @@
           href: ../teams/when-create-teams-apps.md
         - name: Add notifications to make your apps collaborative
           href: ../teams/add-app-notifications.md
+        - name: Enable consistent experience across sessions
+          href: ../teams/consistent-experience-across-sessions.md
     - name: Manage your apps
       href: ../teams/manage-your-apps.md
     - name: Set permission and share your app
