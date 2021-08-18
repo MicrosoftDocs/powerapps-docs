@@ -16,6 +16,8 @@ contributors:
 
 # Get connected sample app (Preview)
 
+[This article is pre-release documentation and is subject to change.]
+
 In this tutorial, learn about the Get connected app, and how to use it effectively.
 
 > [!IMPORTANT]
@@ -170,6 +172,7 @@ Since Get connected is built using the Power Platform, you can easily extend it 
 
 ### See also
 
+- [Understand Get connected sample app architecture](get-connected-architecture.md)
 - [Customize sample apps](customize-sample-apps.md)
 - [Sample apps FAQs](sample-apps-faqs.md)
 
