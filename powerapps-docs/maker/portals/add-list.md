@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2021
+ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: tapanm
 contributors:
@@ -27,7 +28,7 @@ To add list component:
 
 3.  Select an editable element on the canvas.
 
-4.  Select **Components** ![components icon](media/components-icon.png "Components icon") from the left side of the screen.  
+4.  Select **Components** ![components icon.](media/components-icon.png "Components icon") from the left side of the screen.  
 
 5.  Under **Portal components**, select **List**.
 
@@ -59,7 +60,7 @@ To add list component:
     - **Enable table permissions**: Table permissions to be considered for the list. Not selected by default. If selected, explicit permissions are required for any user to access the form. More information: [Table permission](configure/assign-entity-permissions.md)  
 
     > [!div class=mx-imgBorder]
-    > ![list properties](media/list-props.png "List properties")
+    > ![list properties.](media/list-props.png "List properties")
 
 ### See also
 

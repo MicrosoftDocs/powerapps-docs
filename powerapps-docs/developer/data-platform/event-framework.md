@@ -7,6 +7,7 @@ ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
+ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -23,7 +24,7 @@ The capability to extend the default behavior of Microsoft Dataverse depends on 
 
 All capabilities to extend the default behavior of the platform depend on the event framework. When you configure a workflow to respond to an event using the workflow designer without writing code, that event is provided by the event framework.
 
-As a developer, you will use the *Plug-in Registration tool* to configure plug-ins, Azure integrations, virtual table data providers, and Web Hooks to respond to events that are provided by the event framework. When events occur and an extension is registered to respond to them, contextual information about the data involved in the operation is passed to the extension. Depending on how the registration for the event is configured, the extension can modify the data passed into it, initiate some automated process to be applied immediately, or define that an action is added to a queue to be performed later.
+As a developer, you will use the *Plug-in Registration tool* to configure plug-ins, Azure integrations, virtual table data providers, and Webhooks to respond to events that are provided by the event framework. When events occur and an extension is registered to respond to them, contextual information about the data involved in the operation is passed to the extension. Depending on how the registration for the event is configured, the extension can modify the data passed into it, initiate some automated process to be applied immediately, or define that an action is added to a queue to be performed later.
 
 To leverage the event framework for your custom extensions you must understand:
 
@@ -39,7 +40,7 @@ As described in [Use messages with the Organization service](org-service/use-mes
 
 When you use the Plug-in Registration tool to associate an extension with a particular message, you will register it as a *step*. The screenshot below is the **Register New Step** dialog used when registering a plug-in.
 
-![Dialog to register a step](media/register-new-step-plug-in.png)
+![Dialog to register a step.](media/register-new-step-plug-in.png)
 
 A step provides the information about which message the extensions should respond to as well as a number of other configuration choices. Use the **Message** field to choose the message your extension will respond to.
 

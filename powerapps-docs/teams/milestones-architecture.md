@@ -6,7 +6,8 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 06/02/2021
-ms.author: v-ljoel
+ms.subservice: teams
+ms.author: namarwah
 ms.reviewer: tapanm
 contributors:
   - joel-lindstrom
@@ -35,14 +36,14 @@ You'll also need to know about how to [install](use-sample-apps-from-teams-store
 ## Data Model  
 
 
-![Milestones sample app data model](media/milestones-architecture/data-model.png "Milestones sample app data model")
+![Milestones sample app data model.](media/milestones-architecture/data-model.png "Milestones sample app data model")
 
 ## Architecture model
 
 The following diagram illustrates the way that users and systems interact with
 data in this solution.
 
-![Milestones architecture model](media/milestones-architecture/architecture-model.png "Milestones sample app architecture model")
+![Milestones architecture model.](media/milestones-architecture/architecture-model.png "Milestones sample app architecture model")
 
 ### Connectors
 
@@ -1442,6 +1443,7 @@ The following variables are used when a status is deleted.
 
 ### See also
 
+- [Customize Milestones sample app](customize-milestones.md)
 - [Milestones sample app](milestones.md)
 - [Customize sample apps](customize-sample-apps.md)
 - [Sample apps FAQs](sample-apps-faqs.md)

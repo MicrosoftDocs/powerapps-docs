@@ -8,6 +8,7 @@ ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 03/11/2020
+ms.subservice: canvas-maker
 ms.author: yingchin
 search.audienceType: 
   - maker
@@ -51,7 +52,7 @@ ClearCollect( SalesOrderHeader, '[SalesLT].[SalesOrderHeader]' )
 
 You can confirm this behavior in the Developer Tools for your browser, as shown in the following image.
 
-![Diagram showing the four tables being loaded one after the other](./media/performance-tips/perfconcurrent1.png "Diagram showing the four tables being loaded one after the other")
+![Diagram showing the four tables being loaded one after the other.](./media/performance-tips/perfconcurrent1.png "Diagram showing the four tables being loaded one after the other")
 
 You can enclose the same formula in the **Concurrent** function to reduce the overall time that the operation needs:
 
@@ -65,7 +66,7 @@ Concurrent(
 
 With this change, the app fetches the tables in parallel, as shown in the following image.
 
-![Diagram showing the four tables being loaded simultaneously](./media/performance-tips/perfconcurrent2.png)	
+![Diagram showing the four tables being loaded simultaneously.](./media/performance-tips/perfconcurrent2.png)	
 
 > [!NOTE]
 > For more information about the performance problems and resolutions related to OnStart, read [OnStart event needs tuning](common-performance-issue-resolutions.md#onstart-event-needs-tuning).

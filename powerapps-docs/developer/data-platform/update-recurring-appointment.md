@@ -7,6 +7,7 @@ ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID
+ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -20,7 +21,7 @@ search.app:
 You can either update the whole series or update an instance of a recurring appointment.  
   
 ## Update a recurring appointment series  
- You can update a recurring appointment series by using the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*> method or the <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> message on the `RecurringAppointmentMaster` entity. You can update the *basic* or *recurrence* information.  
+ You can update a recurring appointment series by using the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*> method or the <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> message on the `RecurringAppointmentMaster` table. You can update the *basic* or *recurrence* information.  
   
 ### Update basic information  
  When you update the basic information of a recurring appointment series, such as subject, location, or attendees, all instances in the recurring appointment series are updated except those that have exceptions on the same column.  

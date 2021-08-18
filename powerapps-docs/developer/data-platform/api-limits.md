@@ -7,6 +7,7 @@ ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" 
+ms.subservice: dataverse-developer
 ms.author: "jdaly" 
 manager: "ryjones" 
 search.audienceType: 

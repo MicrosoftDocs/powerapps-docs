@@ -31,7 +31,7 @@ This sample shows how to use [QueryByAttribute](/dotnet/api/microsoft.xrm.sdk.qu
 
 ## What this sample does
 
-The `QueryByAttribute` class is intended to be used in a scenario where it contains a query that is expressed as a set of attribute and value pairs.
+The `QueryByAttribute` class is intended to be used in a scenario where it contains a query that is expressed as a set of column and value pairs.
 
 ## How this sample works
 
