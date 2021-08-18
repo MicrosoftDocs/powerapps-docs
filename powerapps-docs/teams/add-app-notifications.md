@@ -40,7 +40,7 @@ Here are some questions to ask when defining the appropriate type of notificatio
 
 1. Is the notification informational or actionable? If you're creating a notification, what do you want to have the notification recipient do with the notification?
 
-    Informational notifications are to notify users, but they are for information purposes only. For example, in the Employee Ideas template app for Teams when a new idea is created, a message is posted in a Teams channel notifying people that a new idea has been created.
+    Informational notifications are to notify users, but they are for information purposes only. For example, in the Employee Ideas sample app for Teams when a new idea is created, a message is posted in a Teams channel notifying people that a new idea has been created.
 
     Actionable notification enable one or more follow-up activities by the recipient. In the extending Employee Ideas article, we show how to change the notification to an adaptive card so users can open the submitted idea and vote for it.
 
@@ -54,18 +54,18 @@ Here are some questions to ask when defining the appropriate type of notificatio
 
 1. What is the frequency of notification?
 
-    In the Inspection template Power App for Teams, by default a message is posted to a Teams channel when an inspection is completed; however, if you have high frequency of inspections, many messages will be posted to the channel, and when many notifications are posted to a channel, individual notifications can get lost. Think of your phone notification center—when you have few apps giving you notifications, they're helpful, but if you have many apps posting updates, notifications become noise. In this case, you would want to reevaluate your notifications and either change the notification to only notify on urgent inspections or issues.
+    In the Inspection sample app for Teams, by default a message is posted to a Teams channel when an inspection is completed; however, if you have high frequency of inspections, many messages will be posted to the channel, and when many notifications are posted to a channel, individual notifications can get lost. Think of your phone notification center—when you have few apps giving you notifications, they're helpful, but if you have many apps posting updates, notifications become noise. In this case, you would want to reevaluate your notifications and either change the notification to only notify on urgent inspections or issues.
 
 1. What is the impact on the users?
 
-    Your colleagues are probably busy, and each interruption can add stress to their lives, especially in high quantities. Notifications are good if they make important information more available, but they can also have negative impact if too frequent or unnecessary. Also, arbitrary notifications can diminish a user's sense of control—if many messages start arriving over which a user has no control, it can be a frustrating experience. Consider giving users an option in the app to control their notifications—this can be a settings toggle to opt in to notifications or a preference to select what type of notification to receive. See extending bulletins for an example (insert link).
+    Your colleagues are probably busy, and each interruption can add stress to their lives, especially in high quantities. Notifications are good if they make important information more available, but they can also have negative impact if too frequent or unnecessary. Also, arbitrary notifications can diminish a user's sense of control—if many messages start arriving over which a user has no control, it can be a frustrating experience. Consider giving users an option in the app to control their notifications—this can be a settings toggle to opt in to notifications or a preference to select what type of notification to receive. See [extending bulletins](bulletins-notification-preference.md) for an example.
 
 ## Power Apps notifications or Power Automate notifications
 
 When creating a notification, you have two options:
 
 - Have your app create the notification directly
-- Trigger a Power App flow to post the notification
+- Trigger a Power Apps flow to post the notification
 
 The decision as to which approach you should use depends on what type of notification you're using and how the notification should be triggered. Some notification types, such as adaptive cards, require Power Automate. Others, like sending emails, text messages, or Teams channel messages can be sent from a Power Automate formula or a Power Automate flow. While there isn’t a “right or wrong” answer to this question, here are some rules of thumb:
 
