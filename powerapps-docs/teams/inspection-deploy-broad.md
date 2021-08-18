@@ -38,8 +38,8 @@ The people responsible for managing and reviewing submitted inspections should b
 
 - You must be an owner of the team in which the app is installed to share the app.
 - Action required to share an app with colleagues for broad distribution:
-    1. Share the app with colleagues.
-    1. Grant security permissions to the tables used in the app.
+    - Share the app with colleagues.
+    - Grant security permissions to the tables used in the app.
 
 > [!NOTE]
 > Aps are installed inside of a tab in a Teams channel. People who develop and extend the app or managers who create or manage the inspection forms should use the app in a team. For people who complete inspections or users who aren't managers, sharing the app with colleagues outside of the team will enable them to use the app without having to be a member of the team.
