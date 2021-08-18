@@ -36,7 +36,7 @@ sections:
       - question: |
           Which cipher suites are supported by Power Apps portals?
         answer: |
-          Cipher suites for portals are enabled as per the Microsoft security policy to account support for different kinds of clients. The following table lists TLS 1.2 cipher suites supported by portals. All cipher suites meet the security standards with weaker suites added lower in the cipher suite order to ensure clients supporting better ciphers always use strongest available cipher.
+          Cipher suites for portals are enabled as per the Microsoft security policy to account support for different kinds of clients. The following table lists TLS 1.2 cipher suites supported by portals. Weaker cipher suites are added lower in the cipher suite order to ensure clients always support strongest available cipher.
 
           - TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
           - TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
@@ -52,7 +52,7 @@ sections:
           - TLS_RSA_WITH_AES_128_CBC_SHA
           
           > [!NOTE]
-          > You can control the cipher suites when configuring [Azure Front Door with portals](azure-front-door.md) for edge caching and Web Application Firewall (WAF) capabilities. However, ensure you only use the [cipher suites supported by Azure Front Door](/azure/frontdoor/front-door-faq#what-are-the-current-cipher-suites-supported-by-azure-front-door-).
+          > You can control the cipher suites when configuring [Azure Front Door with portals](azure-front-door.md) for edge caching and Web Application Firewall (WAF) capabilities. In that case, ensure you only use the [cipher suites supported by Azure Front Door](/azure/frontdoor/front-door-faq#what-are-the-current-cipher-suites-supported-by-azure-front-door-).
 
       - question: |
           How do I redirect a user to a default page after signing in?
