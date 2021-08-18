@@ -6,7 +6,7 @@ ms.date: 07/30/2021
 ms.reviewer: "nabuthuk"
 ms.service: powerapps
 ms.topic: "article"
-author: "nkrb" # GitHub ID
+author: "NHelgren" # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: "nabuthuk" # MSFT alias of Microsoft employees only
 manager: "kvivek" # MSFT alias of manager or PM counterpart
@@ -39,7 +39,7 @@ Format and FormatName are the columns that store the format values and are used 
 
 The following table provides the **Format** and **FormatName** values and API responses for each type:
 
-| **Column type** | **Platform format / Value in solution XML** | **Format**   | **FormatName** | **API response value**  | **Remarks**   |
+| **Column type** | **Platform format / Value in solution XML** | **Format SDK Definition**   | **FormatName SDK Definition** | **API response value**  | **Remarks**   |
 |--------------------|---------------------------------------------------|--------------|----------------|----------------------------|---------------|
 | Text               | Text   | StringFormat.Text  | StringFormatName.Text | **Format**: Text <br/> **FormatName**: Text   | Default format value for String column.  |
 |                    | Email   | StringFormat.Email  | StringFormatName.Email | **Format**: Email <br/> **FormatName**: Email  | |
@@ -54,8 +54,8 @@ The following table provides the **Format** and **FormatName** values and API re
 |                    | Email   | StringFormat.Email  | MemoFormatName.Email | **Format**: Email <br/> **FormatName**: Email   |   |
 |                    | Text Area   | StringFormat.TextArea  | MemoFormatName.TextArea | **Format**: TextArea <br/> **FormatName**: TextArea   |  |
 |                    | InternalExtentdata   | StringFormat.Te  | StringFormatName.Text | **Format**: Text <br/> **FormatName**: Text   |  |
-|                    | Json   | StringFormat.Json  | MemoFormatName.Json | **Format**: Text <br/> **FormatName**: Json   |   |
-|                    | Rich Text   | StringFormat.RichText  | MemoFormatName.RichText | **Format**: Text <br/> **FormatName**: RichText   | Only allowed for non-SQL data provider. |
+|                    | Json   | StringFormat.Json  | MemoFormatName.Json | **Format**: Text <br/> **FormatName**: JSON   |  Only allowed for non-SQL data provider. |
+|                    | Rich Text   | StringFormat.RichText  | MemoFormatName.RichText | **Format**: Text <br/> **FormatName**: RichText   |  |
 | Whole Number            | None/String.Empty   | IntegerFormat.None | N/A| **Format**: None    | Default format value for Integer column.  |
 |                    | Duration   |IntegerFormat.Duration  | N/A | **Format**: Duration   |   |
 |                    | TimeZone   | IntegerFormat.TimeZone  | N/A | **Format**: TimeZone   |  |
