@@ -31,23 +31,23 @@ Once you have downloaded the PRT, click the `PluginRegistration.exe` to run it.
 
 From the PRT you can install the Plug-in profiler solution by clicking the **Install Profiler** button.
 
-![The install profiler button in the plug-in registration tool](../media/tutorial-debug-plug-in-install-profiler.md.png)
+![The install profiler button in the plug-in registration tool.](../media/tutorial-debug-plug-in-install-profiler.md.png)
 
 This solution add the capability to capture the context that is passed to your workflow activity and enables replay that you can use to debug the logic in your code locally using Visual Studio.
 
 When the **Plug-in profiler** is installed for your Microsoft Dataverse instance, you will see it in the PRT at the bottom of the list of **Registered Plugins & Custom Workflow Activities**.
 
-![Plug-in Profiler in the Plug-in Registration Tool](media/Plug-in-Profiler.png)
+![Plug-in Profiler in the Plug-in Registration Tool.](media/Plug-in-Profiler.png)
 
 ## Profile a workflow activity
 
 To profile a workflow activity, right-click on the **Plug-in Profiler** and select **Start Profiling Workflow**.
 
-![Start Profiling Workflow](media/Start-profiling-workflow.png)
+![Start Profiling Workflow.](media/Start-profiling-workflow.png)
 
 This will open the **Profiler Settings** dialog which will provide the following options:
 
-![profiler settings dialog](media/profiler-settings.png)
+![profiler settings dialog.](media/profiler-settings.png)
 
 |Field|Description|
 |--|--|
@@ -62,7 +62,7 @@ Click **OK** to save your settings.
 > [!NOTE]
 > At the time of this writing you may see the following error:
 > 
-> ![Error when setting workflow activity profiler settings](media/error-setting-profiler-settings-workflow-activity.png)
+> ![Error when setting workflow activity profiler settings.](media/error-setting-profiler-settings-workflow-activity.png)
 > 
 > The details of this error will include the message: `Automatic workflow cannot be published if no activation parameters have been specified.`
 > 
@@ -77,17 +77,17 @@ When a profile for workflow containing a custom workflow activity is configured,
 
 The deactivated workflows should look like this:
 
-![Copied workflow in solution explorer](media/copied-workflow-solution-explorer.png)
+![Copied workflow in solution explorer.](media/copied-workflow-solution-explorer.png)
 
 When the workflow is copied, some of the configuration is lost. If you try to activate the copied workflow, you will get the following error: `An automatic process cannot be activated if no activation parameters have been specified. Add activation parameters, and then activate. ...`
 
 This means you have to re-configure the **Start when** properties of the workflow. In this case, we want to set the workflow to start when the **Account Name** field changes:
 
-![Start when field changes setting](media/start-when-field-changes.png)
+![Start when field changes setting.](media/start-when-field-changes.png)
 
 Click the **Select** button to choose the **Account Name** field.
 
-![Start when field changes setting field select dialog](media/start-when-field-change-field-select-dialog.png)
+![Start when field changes setting field select dialog.](media/start-when-field-change-field-select-dialog.png)
 
 The copied profile workflow will also be changed to a background (asynchronous) workflow. It will be easier to test a real-time (synchronous) workflow, so in the menu bar click **Convert to a real-time workflow**.
 
@@ -104,7 +104,7 @@ After you have captured the profile you need to debug, you should stop profiling
 
 To stop profiling, unregister the workflow using the PRT.
 
-![Stop profiling workflow](media/stop-profiling.png)
+![Stop profiling workflow.](media/stop-profiling.png)
 
 This will delete the copy of the workflow that was made.
 
@@ -116,14 +116,14 @@ This will delete the copy of the workflow that was made.
 1. In the PRT, click **Replay Plug-in execution**.
 1. In the **Replay Plug-in Execution dialog**, on the **Setup** tab, click the download button to select a **Profile**.
 
-    ![Replay Plug-in Execution dialog](media/replay-plugin-execution-dialog.png)
+    ![Replay Plug-in Execution dialog.](media/replay-plugin-execution-dialog.png)
 
     > [!NOTE]
     > The **Unsecure Configuration**, **Secure Configuration**, and **Settings** tabs are not used for workflow activity debugging. They are only used for Plug-ins.
 
 1. In the **Select Profile from CRM** dialog, choose the most recent profile that represents the one you just generated.
 
-    ![Select the profile you just generated](media/select-profile-from-crm-dialog.png)
+    ![Select the profile you just generated.](media/select-profile-from-crm-dialog.png)
 
     > [!NOTE]
     > You can manage captured profiles in the **Dynamics 365 - custom** web application by navigating to **Settings** > **Extensions** > **Plug-in Profiles**.
@@ -133,7 +133,7 @@ This will delete the copy of the workflow that was made.
 1. Open your Workflow Activity project in Visual Studio.
 1. Add a breakpoint to a line within the `Execute` method of your workflow activity.
 
-    ![Set a breakpoint](media/set-breakpoint-in-workflow-activity.png)
+    ![Set a breakpoint.](media/set-breakpoint-in-workflow-activity.png)
 
 1. From the **Debug** menu, select **Attach to Process...**.
 1. Look for the process for `PluginRegistration.exe`.
@@ -141,7 +141,7 @@ This will delete the copy of the workflow that was made.
     > [!TIP]
     > The search filter will help you find this faster. The Process Id (PID) assigned to the process will be different for each session. The PID is shown in the **Replay Plug-in Execution** dialog under **Plug-in Traces**.
 
-    ![Visual Studio attach to process dialog](media/visual-studio-attach-to-process-dialog.png)
+    ![Visual Studio attach to process dialog.](media/visual-studio-attach-to-process-dialog.png)
 
 1. Click **Attach** to attach your Visual Studio debugger to the PRT application that will run the process replay.
 1. In the PRT **Replay Plug-in Execution** dialog, click the **Start Execution** button.

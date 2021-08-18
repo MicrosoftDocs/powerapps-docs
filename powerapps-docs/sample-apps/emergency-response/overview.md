@@ -7,6 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/23/2020
+ms.subservice: sample-apps
 ms.author: pankar
 ms.reviewer: kvivek
 ---
@@ -15,7 +16,7 @@ ms.reviewer: kvivek
 The Hospital Emergency Response sample solution provides a set of capabilities for healthcare organizations to collect data for situational awareness of available beds and supplies, COVID-19 related patients, staffing, and pending discharges. The solution also provides dashboards that summarize key data and insights for you to make informed decisions resulting in efficient deployment and usage of resources.
 
 > [!div class="mx-imgBorder"] 
-> ![Hospital Emergency Response app](media/conf-ermerg-response-solution-overview.png)
+> ![Hospital Emergency Response app.](media/conf-ermerg-response-solution-overview.png)
 
 The main components of the Hospital Emergency Response solution are:
 

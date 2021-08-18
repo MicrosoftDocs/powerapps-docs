@@ -7,6 +7,7 @@ ms.service: powerapps
 ms.topic: article
 ms.assetid: 201f5db9-be65-7c3b-8202-822d78338bd6
 author: Nkrb 
+ms.subservice: mda-developer
 ms.author: nabuthuk
 manager: kvivek 
 ms.reviewer: kvivek 

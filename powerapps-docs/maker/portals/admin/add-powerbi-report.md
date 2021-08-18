@@ -1,11 +1,12 @@
 ---
-title: Add a Power BI report or dashboard to a web page in portal
-description: Learn how to add a Power BI report or dashboard to a web page in the portal.
+title: Add a Power BI report or dashboard to a webpage in a portal
+description: Learn how to add a Power BI report or dashboard to a webpage in the portal by using the powerbi Liquid tag.
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/11/2021
+ms.date: 08/09/2021
+ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: tapanm
 contributors:
@@ -13,14 +14,14 @@ contributors:
     - tapanm-msft
 ---
 
-# Add a Power BI report or dashboard to a web page in portal
+# Add a Power BI report or dashboard to a webpage in a portal
 
 > [!TIP]
 > This article explains how to add a Power BI report or dashboard using *powerbi* Liquid tag. To add **Power BI component** on a webpage in your portal using the portals Studio, go to [Add a Power BI component to a webpage using the portals Studio](../add-powerbi.md).
 
 You can add a Power BI report or dashboard to a web page in portal by using the [powerbi](../liquid/portals-entity-tags.md#powerbi) Liquid tag. Use the `powerbi` tag in the **Copy** field on a web page or in the **Source** field on a web template.
 
-If adding a Power BI report or dashboard created in the new workspace in Power BI, you must specify the authentication type as **powerbiembedded** in the *powerbi* Liquid tag.
+If you're adding a Power BI report or dashboard created in the new workspace of Power BI, you must specify the authentication type as **powerbiembedded** in the *powerbi* Liquid tag.
 
 > [!NOTE]
 > - If you have specified AAD as the authentication type in powerbi Liquid tag, you must share it with the required users before adding the secure Power BI report or dashboard to a web page in portal. More information: [Share Power BI workspace](/power-bi/service-how-to-collaborate-distribute-dashboards-reports#collaborate-with-coworkers-in-an-app-workspace) and [Share Power BI dashboard and report](/power-bi/service-share-dashboards).
@@ -43,7 +44,7 @@ To add a dashboard or report connecting to Azure Analysis Services, use [CustomD
 For example:
 
 ```
-{% powerbi authentication_type:"powerbiembedded" path:"https://app.powerbi.com/groups/<GroupID>/reports/<ReportID>" roles:"<roles associated with report>" customdata:<customdata>" %}
+{% powerbi authentication_type:"powerbiembedded" path:"https://app.powerbi.com/groups/<GroupID>/reports/<ReportID>" roles:"<roles associated with report>" customdata:"<customdata>" %}
 ```
 
 The optional **customdata** tag can be configured as a string, or generated dynamically based on an object's attribute, using a period ("."), or square brackets ("[]") to separate between the object and the attribute, in between two pairs of curly brackets.
@@ -85,10 +86,10 @@ Roles are contained within the Azure Analysis Services database and not in the r
 
 2.	Open the dashboard or report you want to embed in your portal.
 
-3.	Copy URL from the address bar.
+3.	Copy the URL from the address bar.
 
     > [!div class=mx-imgBorder]
-    > ![Get the path of a Power BI dashboard](../media/powerbi-dashboard-url.png "Get the path of a Power BI dashboard")
+    > ![Get the path of a Power BI dashboard.](../media/powerbi-dashboard-url.png "Get the path of a Power BI dashboard")
 
 ## Get the ID of a dashboard tile
 
@@ -99,57 +100,55 @@ Roles are contained within the Azure Analysis Services database and not in the r
 3.	Point to the tile, select **More options**, and then select **Open in focus mode**.
 
     > [!div class=mx-imgBorder]
-    > ![Open Power BI dashboard tile in focus mode](../media/powerbi-dashboard-tile-focus.png "Open Power BI dashboard tile in focus mode")
+    > ![Open Power BI dashboard tile in focus mode.](../media/powerbi-dashboard-tile-focus.png "Open Power BI dashboard tile in focus mode")
 
 4.	Copy the tile ID from the URL in the address bar. The tile ID is the value after /tiles/.
 
     > [!div class=mx-imgBorder]
-    > ![Power BI dashboard tile ID](../media/powerbi-dashboard-tile-id.png "Power BI dashboard tile ID")
+    > ![Power BI dashboard tile ID.](../media/powerbi-dashboard-tile-id.png "Power BI dashboard tile ID")
 
 ## How to use powerbi-client JavaScript library in portals
 
-You can use [powerbi-client JavaScript library](https://github.com/microsoft/PowerBI-JavaScript#powerbi-client) while embedding Power BI reports or dashboards in portals. For more information about powerbi-client JavaScript library, see [Power BI JavaScript wiki](https://github.com/Microsoft/PowerBI-JavaScript/wiki).
+You can use [powerbi-client JavaScript library](https://github.com/microsoft/PowerBI-JavaScript#powerbi-client) while embedding Power BI reports or dashboards in your portal. For more information about powerbi-client JavaScript library, see the [Power BI JavaScript wiki](https://github.com/Microsoft/PowerBI-JavaScript/wiki).
 
-Below is a sample JavaScript to update the report settings, or to handle events. This sample disables filters pane, disables page navigation, and enables *dataSelected* event.
+Below is a sample JavaScript to update the report settings or to handle events. This sample disables filter pane, disables page navigation, and enables *dataSelected* event.
 
 > [!IMPORTANT]
-> Use powerbi-client JavaScript library to disable or enable filter pane. However, if you want to restrict access to data or configure security, use [Row-level security (RLS) with Power BI](/power-bi/admin/service-admin-rls). Disabling filter pane doesn't restrict data access, and can be re-enabled using JavaScript library code.
+> Use powerbi-client JavaScript library to disable or enable filter pane. However, if you want to restrict access to data or configure security, use [Row-level security (RLS) with Power BI](/power-bi/admin/service-admin-rls). Disabling filter pane doesn't restrict data access, and it can be re-enabled using JavaScript library code.
 
 ```javascript
-$(window).load(function(){
+$(document).ready(function () {
     var embedContainer = $(".powerbi")[0];
-    var report = powerbi.get(embedContainer);
-    report.on("loaded", function(){
-        report.updateSettings({
-            panes: {
-                filters :{
-                    visible: false
-                },
-                pageNavigation:{
-                    visible: false
+    if (embedContainer) {
+        var report = powerbi.get(embedContainer);
+        report.on("loaded", function () {
+            report.updateSettings({
+                panes: {
+                    filters: {
+                        visible: false
+                    },
+                    pageNavigation: {
+                        visible: false
+                    }
                 }
-            }
-        }).catch(function (errors) {
-            console.log(errors);
-        });
-    })
-    report.on('dataSelected', function(event){
-        console.log('Event - dataSelected:');
-        console.log(event.detail);
-    })
-})
+            }).catch(function (errors) {
+                console.log(errors);
+            });
+        })
+    }
+});
 ```
 
-To add custom JavaScript to a web page:
+To add custom JavaScript to a webpage:
 
 1. Open the [Portal Management](../configure/configure-portal.md) app.
-1. Select **Web Pages** from the left-pane.
-1. Select the web page that contains the Power BI report or dashboard.
+1. Select **Web Pages** from the left pane.
+1. Select the webpage that contains the Power BI report or dashboard.
 1. Select **Advanced** tab.
 1. Copy and paste the JavaScript inside the **Custom JavaScript** section.
 1. Select **Save & Close**.
 
-Let's understand the sample JavaScript operations, and different options.
+Now, let's understand the sample JavaScript operations and different options.
 
 ### Get a reference to the embedded report HTML
 
@@ -169,9 +168,9 @@ var report = powerbi.get(embedContainer);
 
 ### Work with Power BI panes
 
-You can use the settings for panes to work with Power BI panes on a portals web page. For example, you can use the filters setting to hide or show the pane. Or, use the paging with page navigation setting.
+You can use the settings for panes to work with Power BI panes on a portals webpage. For example, you can use the filters setting to hide or show the pane, or work with the page navigation setting.
 
-Below is the sample to remove filters pane:
+Below is a sample to remove filters pane:
 
 ```javascript
 report.updateSettings({
@@ -185,7 +184,7 @@ report.updateSettings({
         });
 ```
 
-Sample to work with both page navigation, and filters:
+Below is a sample to work with both page navigation and filters:
 
 ```javascript
 report.updateSettings({

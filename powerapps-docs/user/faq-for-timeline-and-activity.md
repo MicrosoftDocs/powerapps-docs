@@ -6,7 +6,8 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 09/23/2020
+ms.date: 06/22/2021
+ms.subservice: end-user
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
@@ -19,32 +20,23 @@ search.app:
 ---
 # Frequently Asked Questions about Activities and the Timeline Wall  
 
-## Is a title required when adding a new note?
+## Why can't I assign or delete an activity from the timeline?	
 
-No. When adding a note to an activity, the title column is marked as a mandatory column but is not required. This is a known issue in the legacy Web Client.
+If you use the **HideCustomActions** rule to hide buttons, such as **Assign** and **Delete** in the ribbon command bar definition, then those buttons that are present in the Timeline control will not work. The buttons in the command bar are the same as the buttons in the Timeline control; therefore, when a user selects the **Assign** or **Delete** button in the Timeline control, the following error message is displayed:
 
-## For an appointment, when I choose the option to *Save as Draft* it doesn't show that the appointment has been saved as a draft.
+  **You do not have permission to perform this action. Please contact your system administrator.**	
 
-When you save an appointment in the legacy Web Client as a draft the title does not display **[DRAFT]** to indicate that the appointment has been saved as a draft.
+  To mitigate the issue, show the buttons in the command bar definitions.	
+
+## Why do my users see different activities and records in My activities stream or other dashboard timelines?	
+
+The **My activities** stream in the dashboard shows the records and activities that are owned by a particular user. For example, user "A" sees records and activities that are owned by "A", and user "B" sees records and activities that are owned by "B".	
+
 
 ## Can I add activities to read only rows?
 
 Yes. You can add activities to tables that are read only such as, notes, phone calls, tasks, and more. 
 
-## Are HTML tags supported in **Notes**?
-
-No. When creating a note activity for any row or table, HTML tags are not supported. For example, if you add `<TAG> </TAG>` to a note column it will be displayed as `<TAG_XXX="XX"> </TAG>`.
-
-## How can I improve performance on timeline wall?
-
-Timeline Wall performance can be improved by optimizing how much data is returned by a specific table row. 
-
-1.	Configure table forms to only show activities that are in use.  This can be done at the form level to only show useful activities.  For example, if you don’t use tasks for cases you can configure the timeline wall on the case form to not show tasks.
-2.	Reduce the number of default rows that are shown by the timeline wall.  By default, it is set to return 10, beyond 10 it can cause performance issues.  It is recommended to not exceed the default. 
-
-## Activity Wall is not supported in Print Preview.
-
-When you select the **Print Preview** option in Dynamics 365 the **Timeline Wall** will not show in the available list. You will see **Notes** but it will not show tasks or emails.
 
 ## Why I can't see other users activities and rows in the My activities stream in the dashboard?
 
