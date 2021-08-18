@@ -7,6 +7,7 @@ ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 2/8/2020
+ms.subservice: end-user
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
@@ -24,7 +25,7 @@ search.app:
 
 The scope of content that's searched is defined by your administrator. An administrator can configure the tables, and specific columns in the tables, that can be searched. The specific columns that were searched for a table are indicated on the results page on each tab.
 
-![An example of search results on the Contacts tab](media/search-faq-1.png "An example of search results on the Contacts tab") 
+![An example of search results on the Contacts tab.](media/search-faq-1.png "An example of search results on the Contacts tab") 
 
 ## Why am I not seeing search results from a table that is enabled for relevance search?
 

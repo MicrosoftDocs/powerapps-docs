@@ -9,6 +9,7 @@ ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "conceptual"
 author: "Aneesmsft"
+ms.subservice: mda-maker
 ms.author: "matp"
 manager: "kvivek"
 tags: 
@@ -33,7 +34,7 @@ To ensure that key information is always visible, the framework displays read-on
 When a form does not specify header density or when a new form is created, the framework defaults to high-density header.
 
 > [!div class="mx-imgBorder"] 
-> ![High-density form header](media/form-header-high-density.png "High-density form header")
+> ![High-density form header.](media/form-header-high-density.png "High-density form header")
     
 ## Low density header
 > [!IMPORTANT]
@@ -44,7 +45,7 @@ Low density form header allows users to directly edit the column values in the h
 However, often this comes at the cost of key information being truncated or not readily visible. Low-density header truncates the row title as well as column values displayed in the header. Often only one or two columns are directly visible in the header and the rest overflow and are displayed in a flyout requiring an extra click.
 
 > [!div class="mx-imgBorder"] 
-> ![Low-density form header](media/form-header-low-density.png "Low-density form header")
+> ![Low-density form header.](media/form-header-low-density.png "Low-density form header")
 
 ### Configuring header density
 
@@ -55,7 +56,7 @@ To configure the header density of a model-driven form, follow these steps:
 2.	Select the form header by selecting the header in the form preview or by using the [tree view](using-tree-view-on-form.md).
 3.	In the property pane, select **High density** to use high-density form header or clear it to use low-density form header. Select **Show header flyout** to display a header flyout when users select the chevron in the form header. See the next section, **Header flyout** for more information.
     > [!div class="mx-imgBorder"] 
-    > ![Configure header density](media/configure-header-density.png "Configure header density")
+    > ![Configure header density.](media/configure-header-density.png "Configure header density")
 4.	In the command bar, select **Save** to save the form, or select **Publish** to save and make your changes visible to users.
 
 
@@ -68,7 +69,7 @@ The behavior of the header flyout changes depending on the header density config
 With a high-density form header, the header flyout displays all header columns including the four columns that are directly displayed in the header. The framework defaults to show the header flyout when high-density header is being used. Makers can control the visibility of the header flyout with a high-density header.
 
 > [!div class="mx-imgBorder"] 
-> ![Header flyout with high-density header](media/form-header-flyout-high-density.png "Header flyout with high-density header")
+> ![Header flyout with high-density header.](media/form-header-flyout-high-density.png "Header flyout with high-density header")
 
 ### Low-density header flyout
 > [!IMPORTANT]
@@ -77,7 +78,7 @@ With a high-density form header, the header flyout displays all header columns i
 With a low-density form header, the header flyout displays only overflow columns, such as  columns that the form is unable to display directly in the header based on the width of the form. The header flyout is also automatically displayed or hidden based on the number of columns in the header and the width of the form. Makers can't control the visibility of the header flyout when using a low-density header.
 
 > [!div class="mx-imgBorder"] 
-> ![Header flyout with low-density header](media/form-header-flyout-low-density.png "Header flyout with low-density header")
+> ![Header flyout with low-density header.](media/form-header-flyout-low-density.png "Header flyout with low-density header")
 
 ### Show or hide the header flyout
 To show or hide the header flyout for a model-driven form, follow these steps:

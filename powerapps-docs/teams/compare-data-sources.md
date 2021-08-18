@@ -6,8 +6,11 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: intro-internal
 ms.date: 05/06/2021
+ms.subservice: teams
 ms.author: mmercuri
 ms.reviewer: matp
+contributors:
+  - mattp123
 ---
 # Comparing Microsoft Lists, Dataverse for Teams, and Dataverse
 
@@ -33,7 +36,7 @@ Using the answers to the questions above, use the table below to help identify t
 |Types of data  |Lists, File, Image  |Relational, File, or Image  |Relational, File, Image, Lake, Log, Relevance Search<br/>Virtual tables  |
 |Number of data types  |15  |23 (Currency is basic version)  |24 (Currency is advanced version)  |
 |Common Data Model  |N/A  |User table only  |Full support  |
-|Capacity  |Up to 30M rows<br/>([considerations](/office365/servicedescriptions/sharepoint-online-service-description/sharepoint-online-limits) for lists > 100k)  |Up to 1M rows<br/><br/>Small number of files or images<br/><br/>2000 API Calls per day per user  |No specified limit on rows. No specified limit of files or images 2,000 with option of capacity add-ons  |
+|Capacity  |Up to 30M rows<br/>([considerations](/office365/servicedescriptions/sharepoint-online-service-description/sharepoint-online-limits) for lists > 100k)  |Up to 1M rows<br/><br/>Small number of files or images<br/><br/>2000 API calls per day per user | No specified limit on rows. <br/><br/>No specified limit of files or images.<br/><br/> 2,000 API requests per day with option of capacity add-ons. More information: [Request limits based on user licenses](/power-platform/admin/api-request-limits-allocations#request-limits-based-on-user-licenses)  |
 | Data movement  |Create from/Export to Excel  |Dataflows In  |Dataflows In/Out<br/>Server-side sync<br/>Synapse Integration (Bring Your Own Data Lake, Data Factory)  |
 |Security  |Owners, Members, Visitors, Designers, Approvers roles Customizable permissions  |Owner, Member, Guest roles<br/><br/> Share app with Azure AD group  |Robust options to satisfy complex enterprise scenario requirements, such as roles, business units, auditing, CMK, hierarchical/field-Level security, and so on  |
 |Clients  |Lists, Teams<sup>1</sup>, custom code   |Teams  |Teams, Power Apps, Power Apps portals, Dynamics 365, custom code |

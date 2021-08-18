@@ -7,6 +7,7 @@ ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 0a3f0349-af9a-418a-b99d-5085999884eb
 author: "Nkrb"
+ms.subservice: mda-developer
 ms.author: "nabuthuk"
 manager: "kvivek"
 search.audienceType: 

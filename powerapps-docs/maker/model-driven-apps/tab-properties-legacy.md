@@ -7,6 +7,7 @@ applies_to:
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
   - "powerapps"
+ms.subservice: mda-maker
 ms.author: matp
 manager: kvivek
 ms.date: 03/17/2020
@@ -38,7 +39,7 @@ These are the properties available to configure when using a tab on a form using
 ||**Event Handlers**|Configure the functions from the libraries that should be called for the tab `TabStateChange` event. More information: [Configure Event Handlers](configure-event-handlers-legacy.md)|  
 
   > [!div class="mx-imgBorder"] 
-  > ![tab-properties classic](media/tab-properties.png "Tab properties in Classic")
+  > ![tab-properties classic.](media/tab-properties.png "Tab properties in Classic")
 
 ## Next steps
 

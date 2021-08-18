@@ -8,11 +8,15 @@ ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 03/09/2020
+ms.subservice: canvas-maker
 ms.author: chmoncay
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - chmoncay
 ---
 # Text properties in Power Apps
 Configure the text that appears on a control, as a hint when the user types data, and specify other text-related characteristics.

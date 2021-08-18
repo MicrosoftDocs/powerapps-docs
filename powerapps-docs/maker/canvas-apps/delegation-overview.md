@@ -8,11 +8,16 @@ ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 05/24/2021
+ms.subservice: canvas-maker
 ms.author: lanced
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - gregli-msft
+  - lanced-microsoft
 ---
 # Understand delegation in a canvas app
 
@@ -137,7 +142,7 @@ Delegation warnings appear only on formulas that operate on delegable data sourc
 ## Examples
 For this example, you'll automatically generate a three-screen app based on a SQL Server table named **[dbo].[Fruit]**. For information about how to generate the app, you can apply similar principles in the [topic about Dataverse](data-platform-create-app.md) to SQL Server.
 
-![Three-screen app](./media/delegation-overview/products-afd.png)
+![Three-screen app.](./media/delegation-overview/products-afd.png)
 
 The gallery's **Items** property is set to a formula that contains **SortByColumns** and **Search** functions, both of which can be delegated.
 
@@ -145,15 +150,15 @@ In the search box, type **"Apple"**.
 
 Marching dots appear momentarily near the top of the screen as the app communicates with SQL Server to process the search request. All records that meet the search criteria appear, even if the data source contains millions of records.
 
-![Search text-input control](./media/delegation-overview/products-apple.png)
+![Search text-input control.](./media/delegation-overview/products-apple.png)
 
 The search results include **"Apples"**, **"Crab apples"**, and **"Pineapple"** because the **Search** function looks everywhere in a text column. If you wanted to find only records that contain the search term at the start of the fruit's name, you can use another delegable function, **Filter**, with a more complicated search term. (For simplicity, remove the **SortByColumns** call.)
 
-![Remove SortByColumns call](./media/delegation-overview/products-apple-delegationwarning.png)
+![Remove SortByColumns call.](./media/delegation-overview/products-apple-delegationwarning.png)
 
 The new results include **"Apples"** but not **"Crab apples"** or **"Pineapple"**.  However, a yellow triangle appears next to the gallery (and in the screen thumbnail if the left navigation bar shows thumbnails), and a blue, wavy line appears under a portion of the formula. Each of these elements indicate a warning. If you hover over the yellow triangle next to the gallery, this message appears:
 
-![Hover over delegation warning](./media/delegation-overview/products-apple-yellowwarning.png)
+![Hover over delegation warning.](./media/delegation-overview/products-apple-yellowwarning.png)
 
 SQL Server is a delegable data source, and **Filter** is a delegable function, However, **Mid** and **Len** can't be delegated to any data source.
 

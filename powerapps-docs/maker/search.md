@@ -12,6 +12,8 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - mattp123
 ---
 # Find the apps, templates, and information you need
 
@@ -34,7 +36,7 @@ Choose any suggestion to go directly to that item.
 
 > [!NOTE]
 > By default, search only displays items from your environment, which are apps and templates. Users can select the **See web results** option to expand their search to external web content.
-> :::image type="content" source="data-platform/media/search-see-web-results.png" alt-text="See web results ":::
+> :::image type="content" source="data-platform/media/search-see-web-results.png" alt-text="See web results .":::
 
 > [!WARNING]
 > Do not send personal data or confidential/proprietary information as part of your search when you choose this option.
