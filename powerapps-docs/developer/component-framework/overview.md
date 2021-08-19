@@ -48,7 +48,7 @@ Developers can bundle all the HTML, CSS, and TypeScript files into a single [sol
 - Optimized for performance
 - Reusability
 - Ability to bundle all files into a single solution file.
-- Ability to handle being destroyed and reloaded for performance reasons while preserving state
+- Ability to handle being destroyed and reloaded for performance reasons while preserving state.
 
 ## Licensing
 <!--note from editor: I stopped here, in case this content is direct from CELA, except I turned "is" into "are" in the first sentence. Also made a couple of changes to the Note.-->
