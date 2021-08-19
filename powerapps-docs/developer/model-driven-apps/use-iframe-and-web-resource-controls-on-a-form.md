@@ -25,7 +25,7 @@ IFRAME and web resource controls embed content from another location in pages by
 
 You can use an IFRAME to display the contents from another website in a form, for example, in an ASP.NET page. 
 
-If you're considering using a web resource control for content a user can interact with, it's highly recommended to use a [code component](../component-framework/custom-controls-overview.md) instead because of [these advantages](../component-framework/overview.md#advantages).
+It is recommended to use [Power Apps component framework components](../component-framework/custom-controls-overview.md) if you're considering to use a web resource to show content that users will interact with.
  
 Displaying a form within an IFrame embedded in another form is not supported.  
 
