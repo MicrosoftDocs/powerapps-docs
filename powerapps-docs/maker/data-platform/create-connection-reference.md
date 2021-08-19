@@ -17,7 +17,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Use a connection reference in a solution
+# Use a connection reference in a solution (preview)
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
