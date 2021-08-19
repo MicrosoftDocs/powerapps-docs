@@ -34,6 +34,8 @@ Because an HTML web resource is just streamed to the user's browser, it can incl
 
 - HTML web resources can only accept a limited number of query string parameters. [Pass parameters to HTML web resources](webpage-html-web-resources.md#BKMK_PassingParametersToWebResources)  
 
+- HTML web resources embedded as controls in a form be reloaded by the form runtime for performance reasons. For example, the form runtime may destroy and re-initialize the control during tab navigations. 
+
 <a name="BKMK_UsingTextEditor"></a>
 
 ## Use the text editor for HTML web resources
