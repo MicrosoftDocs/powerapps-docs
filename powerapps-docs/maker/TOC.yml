@@ -2281,8 +2281,6 @@
           href: ../teams/add-app-notifications.md
         - name: Enable consistent experience across sessions
           href: ../teams/consistent-experience-across-sessions.md
-        - name: Granting permission to tables in Dataverse for Teams
-          href: ../teams/dataverse-for-teams-table-permissions.md
     - name: Manage your apps
       href: ../teams/manage-your-apps.md
     - name: Set permission and share your app
@@ -2449,6 +2447,8 @@
               href: ../teams/localizing-sample-apps.md
             - name: Theming in sample apps 
               href: ../teams/sample-app-theming.md
+            - name: Working with table permission in sample apps
+              href: ../teams/dataverse-for-teams-table-permissions.md
         - name: FAQs for sample apps
           href: ../teams/sample-apps-faqs.md
     - name: Known issues and limitations
