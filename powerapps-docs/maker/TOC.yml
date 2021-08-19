@@ -2113,7 +2113,7 @@
           href: ./data-platform/view-component-dependencies.md
         - name: Use environment variables
           href: ./data-platform/EnvironmentVariables.md
-        - name: Use a connection reference
+        - name: Use a connection reference (preview)
           href: ./data-platform/create-connection-reference.md  
         - name: Translate customized component text
           items:
@@ -2164,22 +2164,40 @@
     items:
     - name: Azure Synapse Link Overview
       href: ./data-platform/export-to-data-lake.md
-    - name: Azure Synapse Analytics
-      items:
-      - name: Configure Azure Synapse Link with a Synapse Workspace
-        href: ./data-platform/azure-synapse-link-synapse.md
-    - name: Azure Data Lake Storage Gen2
-      items:
-      - name: Configure Azure Synapse Link with Data Lake
-        href: ./data-platform/azure-synapse-link-data-lake.md
-      - name: Ingest exported data with Azure Data Factory
-        href: ./data-platform/export-to-data-lake-data-adf.md
-      - name: Analyze exported data with Power BI
-        href: ./data-platform/export-to-data-lake-data-powerbi.md
+    - name: Create an Azure Synapse Link with a Synapse Workspace
+      href: ./data-platform/azure-synapse-link-synapse.md
+    - name: Create an Azure Synapse Link with Data Lake
+      href: ./data-platform/azure-synapse-link-data-lake.md
     - name: Advanced Configuration Settings
       href: ./data-platform/azure-synapse-link-advanced-configuration.md
     - name: Azure Synapse Link FAQ
-      href: ./data-platform/export-data-lake-faq.yml
+      href: ./data-platform/export-data-lake-faq.yml      
+    - name: Analyze with Azure Synapse Analytics
+      items:
+      - name: Query data with serverless SQL pool
+        href: ./data-platform/azure-synapse-link-serverless.md
+      - name: Transform data with Apache Spark
+        href: ./data-platform/azure-synapse-link-spark.md 
+      - name: Visualize data with Power BI
+        href: ./data-platform/azure-synapse-link-powerbi.md
+      - name: Copy data to Dedicated SQL
+        href: ./data-platform/azure-synapse-link-dedicated.md
+      - name: Read Incremental Updates
+        href: ./data-platform/azure-synapse-link-incremental.md
+      - name: Access Dataverse choices with serverless SQL pool
+        href: ./data-platform/azure-synapse-link-choices-serverless.md      
+    - name: Analyze in Azure Data Lake Storage Gen2
+      items:
+      - name: Ingest exported data with Azure Data Factory
+        href: ./data-platform/export-to-data-lake-data-adf.md
+      - name: Copy data to Azure SQL with Azure Data Factory
+        href: ./data-platform/azure-synapse-link-copy-sql.md
+      - name: Analyze exported data with Power BI
+        href: ./data-platform/export-to-data-lake-data-powerbi.md
+      - name: Access Dataverse choices with Azure Data Factory
+        href: ./data-platform/azure-synapse-link-choices-adf.md
+      - name: Access Dataverse choices with Power BI
+        href: ./data-platform/azure-synapse-link-choices-powerbi.md        
   - name: Security in Dataverse
     href: /power-platform/admin/wp-security-cds
   - name: Privileges for customization
