@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 08/17/2021
+ms.date: 08/19/2021
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: tapanm
@@ -29,6 +29,10 @@ To view existing basic forms or to create new basic forms, open the [Portal Mana
 When creating a new basic form, the first step is to decide the **Table** and **Form Name** that you will be rendering, in addition to the **mode: Insert, Edit, or Read Only**. The mode selected will determine if you are creating a new record from the portal, editing an existing record, or just displaying information about a record on the portal.
 
 > [!NOTE]
+> Before you continue, ensure you review [considerations](#considerations) for basic forms.
+
+<!---
+> [!NOTE]
 > - A **Basic Form** must be associated with a webpage for a given website for the form to be viewable within the site.
 > - The Connection table subgrids aren't supported in basic forms. If you add a Connection table subgrid to the form using Form designer, error messages are displayed when you render the form on the portal and use the Connection table.
 > - Duplicate fields, multi-select option set, Party List fields and business rules aren't supported in basic forms.
@@ -37,6 +41,7 @@ When creating a new basic form, the first step is to decide the **Table** and **
 > - Business rules and client API can enable locked fields on a read-only form.
 > - If you create a basic form in the Insert mode, you can't change a button's alignment or place an action button above the basic form.
 > - If you render a lookup control as a dropdown list on the form, the related records filter does not work.
+--->
 
 The webpages associated with the basic form can be viewed by selecting the **Web Pages** link listed in the **Related** navigation links in the leftmost menu.
 
@@ -217,6 +222,18 @@ To disable request validation, follow these steps:
 
 > [!CAUTION]
 > When request validation is disabled, content can be submitted to a page. You must ensure that content is properly encoded or processed.
+
+## Considerations
+
+- A **Basic Form** must be associated with a webpage for a given website for the form to be viewable within the site.
+- The Connection table subgrids aren't supported in basic forms. If you add a Connection table subgrid to the form using Form designer, error messages are displayed when you render the form on the portal and use the Connection table.
+- Duplicate fields, multi-select option set, Party List fields and business rules aren't supported in basic forms.
+- Field level code components are in public preview, and can be added to forms. More information: [Add a code component to a field in a model-driven app](../component-framework.md#add-a-code-component-to-a-field-in-a-model-driven-app) 
+- [Image attributes](../../../developer/data-platform/image-attributes.md), [file attributes](../../../developer/data-platform/file-attributes.md) and [table images](/dynamics365/customerengagement/on-premises/developer/sample-set-retrieve-entity-images) aren't supported in [basic forms](entity-forms.md), [advanced forms](web-form-properties.md) or when using liquid template tags, such as [fetchxl](../liquid/template-tags.md).
+- Business rules and client API can enable locked fields on a read-only form.
+- If you create a basic form in the Insert mode, you can't change a button's alignment or place an action button above the basic form.
+- If you render a lookup control as a dropdown list on the form, the related records filter does not work.
+- Rollup columns on portal forms may sometimes show up as editable although they're intended to be read-only. To ensure that these columns remain read-only, mark the column as **Read-only**  on the model-driven app form.
 
 ### See also
 
