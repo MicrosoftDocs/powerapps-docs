@@ -42,6 +42,7 @@ More information: [Data types (Transact-SQL)](/sql/t-sql/data-types/data-types-t
 - nchar
 - numeric
 - nvarchar*
+- nvarchar(max) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# multi-line text
 - real
 - smalldatetime
 - smallint
@@ -62,13 +63,9 @@ More information: [Data types (Transact-SQL)](/sql/t-sql/data-types/data-types-t
 
 - binary
 - image
-- ntext
-- nvarchar(max)
 - sql_variant
-- text
 - timestamp
 - varbinary
-- varchar(max)
 - virtual
 - partylist
 - HierarchyId
