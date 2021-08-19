@@ -1,8 +1,8 @@
 ---
-title: "Configure Azure Synapse Link for Dataverse with your Azure Synapse Workspace | MicrosoftDocs"
+title: "Create an Azure Synapse Link for Dataverse with your Azure Synapse Workspace | MicrosoftDocs"
 description: "Learn how to export table data to Azure Synapse Analytics in Power Apps"
 ms.custom: ""
-ms.date: 06/30/2021
+ms.date: 08/17/2021
 ms.reviewer: "Mattp123"
 ms.service: powerapps
 ms.suite: ""
@@ -24,18 +24,18 @@ contributors:
   - sama-zaki
 ---
 
-# Configure Azure Synapse Link for Dataverse with your Azure Synapse Workspace (Preview)
+# Create an Azure Synapse Link for Dataverse with your Azure Synapse Workspace (Preview)
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
 You can use the Azure Synapse Link to connect your Microsoft Dataverse data to Azure Synapse Analytics to explore your data and accelerate time to insight. This article shows you how to perform the following tasks:
 
 1. Connect your Dataverse data to your Azure Synapse Analytics workspace with the Azure Synapse Link service.
-2. Query your data in Azure Synapse Analytics workspace with the built-in serverless SQL pool.
-3. Query multiple Dataverse databases with the built-in serverless SQL pool.
-4. Transform your data with an Apache Spark notebook.
-5. Generate a Power BI report by connecting to the serverless SQL endpoint from your Azure Synapse Analytics workspace.
-6. Unlink your Azure Synapse Link.
+2. Manage Dataverse tables included in the Azure Synapse Link.
+3. Monitor your Azure Synapse Link.
+4. Unlink your Azure Synapse Link.
+5. Relink your Azure Synapse Link.
+6. View your data in Azure Synapse Analytics.
 
 > [!NOTE]
 >
@@ -44,12 +44,18 @@ You can use the Azure Synapse Link to connect your Microsoft Dataverse data to A
 
 ## Prerequisites
 
-- Azure Data Lake Storage Gen2: You must have an Azure Data Lake Storage Gen2 account and **Owner** and **Storage Blob Data Contributor** role access. Your storage account must enable **Hierarchical namespace** and it is recommended that replication is set to **read-access geo-redundant storage (RA-GRS)**.
+- Azure Data Lake Storage Gen2: You must have an Azure Data Lake Storage Gen2 account and **Owner** and **Storage Blob Data Contributor** role access. Your storage account must enable **Hierarchical namespace** and it is recommended that replication is set to **read-access geo-redundant storage (RA-GRS)**. 
 
 - Synapse workspace: You must have a Synapse workspace and the **Synapse Administrator** role access within the Synapse Studio. The Synapse workspace must be in the same region as your Azure Data Lake Storage Gen2 account. The storage account must be added as a linked service within the Synapse Studio. To create a Synapse workspace, go to [Creating a Synapse workspace](/azure/synapse-analytics/get-started-create-workspace).
 
 > [!NOTE]
-> When you add multiple users to the synapse workspace, they must have the **Synapse Administrator** role access within the Synapse Studio and the **Storage Blob Data Contributor** role on the Azure Data Lake Storage Gen2 account.
+>
+> - The storage account and Synapse workspace must be created in the same Azure Active Directory (Azure AD) tenant as your Power Apps tenant.
+> - The storage account and Synapse workspace must be created in the same region as the Power Apps environment you will use the feature in.
+> - You must have **Reader** role access to the resource group with the storage account and Synapse workspace.  
+> - To link the Dataverse environment to Azure Data Lake Storage Gen2, you must have the Dataverse system administrator security role.
+> - Only tables that have change tracking enabled can be exported.
+> - When you add multiple users to the synapse workspace, they must have the **Synapse Administrator** role access within the Synapse Studio and the **Storage Blob Data Contributor** role on the Azure Data Lake Storage Gen2 account.
 
 ## Connect Dataverse to Synapse workspace
 
@@ -65,102 +71,82 @@ You can use the Azure Synapse Link to connect your Microsoft Dataverse data to A
 
     ![Connect to your workspace.](media/connect-to-workspace.png "Connect to your workspace")
 
-5. Add the tables you want to export, and then select **Save**.
+    > [!NOTE]
+    > As part of linking the Dataverse environment to a data lake, you grant the Azure Synapse Link service access to your storage account. Ensure that you followed the [prerequisites](#prerequisites) of creating and configuring the Azure data lake storage account, and granting yourself an owner role on the storage account. Additionally, you grant the Power Platform Dataflows service access to your storage account. More information: [Self-service data prep with dataflows](self-service-data-prep-with-dataflows.md).  
+
+5. Add the tables you want to export, and then select **Save**. Only tables with change tracking enabled can be exported. More information: [Enable change tracking](/dynamics365/customer-engagement/admin/enable-change-tracking-control-data-synchronization).
 
     ![Add tables.](media/add-tables.png "Add tables")
 
-## Query your Dataverse data with serverless SQL pool
+You can follow the steps above to create a link from one Dataverse environment to multiple Azure Synapse Analytics workspaces and Azure data lakes in your Azure subscription by adding an Azure data lake as a linked service on a Synapse workspace. Similarly, you could create a link from multiple Dataverse environments to the same Azure Synapse Analytics workspace and Azure data lake, all within the same tenant.
 
 > [!NOTE]
-> Azure Synapse Link for Dataverse does not support the use of dedicated SQL pools at this time.
-
-1. Select your storage account name from the list, and then select **Go to Azure Synapse workspace**.
-
-    ![Go to workspace.](media/go-to-workspace.png "Go to workspace")
-
-2. Expand **Databases**, select your Dataverse container. Your exported tables are displayed under the **Tables** directory on the left sidebar.
-
-    ![Find tables in Synapse.](media/find-tables-synapse.png "Find tables in Synapse")
-
-3. Right-click the desired table and select **New SQL script** > **Select TOP 100 rows**.
-
-    ![Select top rows.](media/select-top-rows.png "Select top rows")
-
-4. Select **Run**. Your query results are displayed on the **Results** tab. Alternatively, you can edit the script to your needs.
-
-    ![Run query.](media/run-query.png "Run query")
-
-## Query multiple Dataverse databases with serverless SQL pool
-
-> [!NOTE]
+> The data exported by Azure Synapse Link service is encrypted at rest in Azure Data Lake Storage Gen2. Additionally, transient data in the blob storage is also encrypted at rest. Encryption in Azure Data Lake Storage Gen2 helps you protect your data, implement enterprise security policies, and meet regulatory compliance requirements. More information: [Azure Data Encryption-at-Rest]( /azure/security/fundamentals/encryption-atrest)
 >
-> - Azure Synapse Link for Dataverse does not support the use of dedicated SQL pools at this time.
-> - Querying multiple Dataverse databases requires that both Dataverse environments are in the same region.
+> Currently, you can't provide public IPs for the Azure Synapse Link for Dataverse service that can be used in **Azure Data Lake firewall settings**. Public IP network rules have no effect on requests originating from the same Azure region as the storage account. Services deployed in the same region as the storage account use private Azure IP addresses for communication. Thus, you can't restrict access to specific Azure services based on their public outbound IP address range.
+More information: [Configure Azure Storage firewalls and virtual networks]( /azure/storage/common/storage-network-security)
 
-1. Follow the steps above to connect another Dataverse organization to same Azure Synapse Analytics workspace. You must use the same storage account for both connections.
+## Manage table data to the Synapse workspace
 
-2. Expand **Databases**, select one of the Dataverse containers. Your exported tables are displayed under the **Tables** directory on the left sidebar.
+After you have set up the Azure Synapse Link, you can manage the tables that are exported in one of two ways:
 
-3. Right-click the a table and select **New SQL script** > **Select TOP 100 rows**.
+- On the Power Apps maker portal **Azure Synapse Link** area, select **Manage tables** on the command bar to add or remove one or more linked tables.
+- On the Power Apps maker portal **Tables** area, select **…** next to a table, and then select the linked data lake where you want to export table data.
 
-4. Edit the query to combine the two datasets. For instance, you can join the datasets based on a unique ID value.
+   ![Select a table for export.](media/select-entity-export.png "Select a table for export")
 
-5. Select **Run**. Your query results are displayed on the **Results** tab.
+## Monitor your Azure Synapse Link
 
-## Transform your data with an Apache Spark notebook
+After you have set up the Azure Synapse Link, you can monitor the Azure Synapse Link under the **Tables** tab.
 
-1. In your Synapse workspace, expand **Databases**, select your Dataverse container. Your exported tables are displayed under the **Tables** directory on the left sidebar.
-
-2. Right-click the desired table and select **New notebook** > **Load to DataFrame**.
-
-    ![Load to DataFrame.](media/load-to-dataframe.png "Load to DataFrame")
-
-3. Attach the notebook to an Apache Spark pool by selecting a pool from the drop down menu. If you do not have an Apache Spark pool, select **Manage pools** to create one.
-
-    ![Attach Spark pool.](media/attach-pool.png "Attach Spark pool")
-
-4. Add code cells to transform your data. Run individual cells by selecting the play button at the left of each cell or run all the cells in succession by selecting **Run all** from the top bar.
-
-    ![Spark notebook.](media/spark-notebook.png "Spark notebook")
-
-## Connect to your Azure Synapse Analytics workspace to Power BI
-
-1. Open Power BI Desktop.
-
-2. Select **Get data** > **More...**.
-
-3. Select **Azure** > **Azure Synapse Analytics (SQL DW)** > **Connect**.
-
-4. Go to your Azure Synapse Analytics workspace and copy the **Serverless SQL endpoint**.
-
-    ![SQL OD endpoint.](media/sql-od-endpoint.png "SQL OD endpoint")
-
-5. Paste the endpoint for the **Server**. Select **DirectQuery** for the **Data Connectivity mode**. Select **OK**.
-
-    ![Enter server.](media/enter-server.png "Enter server")
-
-6. If prompted, sign in with your Microsoft Account.
-
-7. Select the container and the preferred table from the Navigator, and then select **Load**. Optionally, expand *default* to access tables created with an Apache Spark notebook.
-
-    ![Power BI select tables.](media/pbi-select-tables.png "Power BI select tables")
-
-> [!NOTE]
-> If you receive a credentials error, go to **File** > **Options and settings** > **Data source settings** and clear the permissions for the serverless SQL endpoint. Repeat the above steps.
-
-8. Select fields from the **Fields** pane to create a simple table or create other visualizations.
-
-    ![Power BI simple table.](media/pbi-simple-table.png "Power BI simple table")
+- There will be a list of tables that are a part of the selected Azure Synapse Link.
+- There are different stages the sync status will circulate through. **NotStarted** indicates that the table is waiting to be synced. Once the table initial sync has been **Completed**, there will be a post processing stage where incremental updates will not take place. This may take several hours depending on the size of your data. As the incremental updates start taking place, the date for the last sync will be regularly updated.
+- The **Count** column shows the number of changes to the data. It does not show the total number of rows to the data.
+- The  **Append only** and **Partition strategy** columns show the usage of difference advanced configurations.
 
 ## Unlinking an Azure Synapse Link
 
-1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select your preferred environment.
+1. Select the desired Azure Synapse Link to unlink.
 
-2. On the left navigation pane, select **Data**, select **Azure Synapse Link**, select the desired Azure Synapse Link to unlink, and then select **Unlink data lake** from the command bar.
+2. Select **Unlink data lake** from the command bar.
 
-3. To delete both the Data Lake file system as well as the Synapse Database, select **Delete data lake file system**.
+3. To delete both the data lake file system as well as the Synapse Database, select **Delete data lake file system**.
 
 4. Select **Yes**, and allow a few minutes for everything to be unlinked and deleted.
+
+## Relinking an Azure Synapse Link
+
+If you deleted the file system when unlinking, follow the steps above to relink the same Synapse workspace and data lake. If you did not delete the file system when unlinking, you must clear the data to relink:
+
+1. Navigate the Azure Synapse Analytics.
+
+2. Select the **...** for the unlinked database and select **New notebook** > **Empty notebook**.
+
+3. Attach the notebook to an Apache Spark pool by selecting a pool from the drop down menu. If you do not have an Apache Spark pool, select **Manage pools** to create one.
+
+4. Enter the following script, replace **\<DATABASE_NAME\>** with the name of the database to unlink, and run the notebook.
+
+```SQL
+    %%sqls
+    DROP DATABASE <DATABASE_NAME> CASCADE
+```
+
+5. After running the notebook, refresh the database list from the left panel. If the database still exists, try right clicking on the database and selecting **Delete**.
+
+6. Navigate to Power Apps, and relink the Synapse workspace and data lake.
+
+## View your data in Azure Synapse Analytics
+
+1. Select the desired Azure Synapse Link and select the **Go to Azure Synapse Analytics workspace** from the top panel.
+
+2. Expand **Databases**, and then select dataverse-*environmentName*-*organizationUniqueName* and expand **Tables**.
+
+All of the exported Dataverse tables will be listed and available for analysis.
+
+### What's next?
+
+After successfully using the Azure Synapse Link for Dataverse service, discover how you can analyze and consume your data with **Discover Hub**. To access **Discover Hub**, go to **Power Apps** > **Azure Synapse Link**. Select your linked service and then select the **Discover Hub** tab. Here you can find recommended tools and curated documentation to help you get the most value out of your data.
+![Discover Hub.](media/discover-hub.png "Discover Hub")
 
 ### See also
 
