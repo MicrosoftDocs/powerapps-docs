@@ -6,6 +6,7 @@ ms.date: 03/12/2021
 ms.service: powerapps
 ms.topic: "article"
 author: "mayadumesh"
+ms.subservice: dataverse-developer
 ms.author: "jdaly"
 ms.reviewer: "pehecke"
 manager: "ryjones"

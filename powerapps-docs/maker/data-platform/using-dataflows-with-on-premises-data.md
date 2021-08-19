@@ -15,6 +15,7 @@ applies_to:
 author: "Mattp123"
 ms.assetid: 
 caps.latest.revision: 
+ms.subservice: dataverse-maker
 ms.author: "matp"
 manager: "kvivek"
 tags: 
@@ -66,24 +67,24 @@ With a gateway, you can connect to on-premises data through these connections:
 ## Install a gateway
 1.  In the left navigation pane of [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Gateways**.
 
-    ![Gateways in left navigation bar](media/nav-pane-gateways.png)
+    ![Gateways in left navigation bar.](media/nav-pane-gateways.png)
 
 2.  Select a gateway from the list. If you don't have administrative permissions for a gateway, select
     [Install a gateway now](https://go.microsoft.com/fwlink/?LinkID=820931), and then follow the prompts in the wizard.
 
-     ![Gateways install](media/install-gateway-now.png)
+     ![Gateways install.](media/install-gateway-now.png)
 
      For details about how to install a gateway, see [Understand on-premises data gateways](../canvas-apps/gateway-reference.md).
 
 ## Use an on-premises data source in a dataflow
 1. Select an on-premises data source from the data sources list.
 
-   ![Choose an on-premises data source](media/on-premises-data-sources.png)
+   ![Choose an on-premises data source.](media/on-premises-data-sources.png)
 
 2. Provide the connection details for the enterprise gateway that will be used to access the on-premises data. You must select the gateway itself, and provide credentials for the selected
 gateway. Only gateways for which you are an administrator appear in the list.
 
-    ![Provide connection details](media/connection-creds.png)
+    ![Provide connection details.](media/connection-creds.png)
 
 You can change the enterprise gateway used for a given dataflow and change the gateway assigned to all of your queries using the dataflow authoring tool.
 

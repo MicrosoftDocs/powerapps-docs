@@ -5,7 +5,8 @@ author: gitanjalisingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2020
+ms.date: 06/29/2021
+ms.subservice: portals
 ms.author: gisingh
 ms.reviewer: tapanm
 contributors:
@@ -24,15 +25,15 @@ Render the List associated with the current page as a paginated sortable table. 
       <div class="navbar-header">
         <button type="button" class="navbar-toggle"
           data-toggle="collapse"
-          data-target="#entitylist-navbar-{{ entitylist.id }}">
+          data-target="#entitylist-navbar-{{ entitylist.id | h }}">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="{{ page.url }}">{{ entitylist.adx_name }}</a>
+        <a class="navbar-brand" href="{{ page.url | h }}">{{ entitylist.adx_name | h }} </a>
       </div>
-      <div class="collapse navbar-collapse" id="entitylist-navbar-{{ entitylist.id }}">
+      <div class="collapse navbar-collapse" id="entitylist-navbar-{{ entitylist.id | h }} ">
 
         {% if entitylist.views.size > 1 %}
           <ul class="nav navbar-nav">
@@ -43,7 +44,7 @@ Render the List associated with the current page as a paginated sortable table. 
               <ul class="dropdown-menu" role="menu">
                 {% for view in entitylist.views -%}
                   <li{% if params.view == view.id %} class="active"{% endif %}>
-                    <a href="{{ request.path | add_query:'view', view.id }}">{{view.name}}</a>
+                    <a href="{{ request.path | add_query:'view', view.id | h }}">{{view.name | h }}</a>
                   </li>
                 {% endfor -%}
               </ul>
@@ -57,16 +58,16 @@ Render the List associated with the current page as a paginated sortable table. 
               {% if params.search.size > 0 %}
                 <div class="input-group-btn">
                   <a class="btn btn-default"
-                    href="{{ request.path_and_query | remove_query:'search' }}">&times;</a>
+                    href="{{ request.path_and_query | remove_query:'search' | h }}">&times;</a>
                 </div>
               {% endif %}
               <input name="search" class="form-control"
-                value="{{ params.search }}"
-                placeholder="{{ entitylist.search_placeholder | default: 'Search' }}"
-                type="text" />
+                value="{{ params.search  | h }}"
+                placeholder="{{ entitylist.search_placeholder | default: 'Search'  | h }}"
+                type="text"/>
               <div class="input-group-btn">
                 <button type="submit" class="btn btn-default"
-                  title="{{ entitylist.search_tooltip }}">
+                  title="{{ entitylist.search_tooltip  | h }}">
                   <i class="fa fa-search">&nbsp;</i>
                 </button>
               </div>
@@ -77,8 +78,8 @@ Render the List associated with the current page as a paginated sortable table. 
         {% if entitylist.create_enabled %}
           <ul class="nav navbar-nav navbar-right">
             <li>
-              <a href="{{ entitylist.create_url }}">
-                <i class="fa fa-plus"></i> {{ entitylist.create_label | default: 'Create' }}
+              <a href="{{ entitylist.create_url  | h }}">
+                <i class="fa fa-plus"></i> {{ entitylist.create_label | default: 'Create' | h }}
               </a>
             </li>
           </ul>
@@ -90,29 +91,29 @@ Render the List associated with the current page as a paginated sortable table. 
   
   {% entityview id:params.view, search:params.search, order:params.order, page:params.page, pagesize:params.pagesize, metafilter:params.mf %}
     {% assign order = params.order | default: entityview.sort_expression %}
-    <table class="table" data-order="{{ order }}">
+    <table class="table" data-order="{{ order  | h }}" >
       <thead>
         <tr>
           {% for c in entityview.columns -%}
-            <th width="{{ c.width }}" data-logicalname="{{ c.logical_name }}">
+            <th width="{{ c.width  | h }}" data-logicalname="{{ c.logical_name  | h }} ">
               {% if c.sort_enabled %}
                 {% assign current_sort = order | current_sort:c.logical_name %}
                 {% case current_sort %}
                 {% when 'ASC' %}
-                  <a href="{{ request.path_and_query | add_query:'order', c.sort_descending }}">
-                    {{ c.name }} <i class="fa fa-sort-asc"></i>
+                  <a href="{{ request.path_and_query | add_query:'order', c.sort_descending  | h }}">
+                    {{ c.name  | h }} <i class="fa fa-sort-asc"></i>
                   </a>
                 {% when 'DESC' %}
-                  <a href="{{ request.path_and_query | add_query:'order', c.sort_ascending }}">
-                    {{ c.name }} <i class="fa fa-sort-desc"></i>
+                  <a href="{{ request.path_and_query | add_query:'order', c.sort_ascending  | h }}">
+                    {{ c.name  | h }} <i class="fa fa-sort-desc"></i>
                   </a>
                 {% else %}
-                  <a href="{{ request.path_and_query | add_query:'order', c.sort_ascending }}">
-                    {{ c.name }} <i class="fa fa-unsorted"></i>
+                  <a href="{{ request.path_and_query | add_query:'order', c.sort_ascending  | h }}">
+                    {{ c.name  | h }} <i class="fa fa-unsorted"></i>
                   </a>
                 {% endcase %}
               {% else %}
-                {{ c.name }}
+                {{ c.name  | h }}
               {% endif %}
             </th>
           {% endfor -%}
@@ -128,19 +129,19 @@ Render the List associated with the current page as a paginated sortable table. 
               {% assign attr = e[c.logical_name] %}
               {% assign attr_type = c.attribute_type | downcase %}
 
-              <td data-logicalname="{{ c.logical_name }}">
+              <td data-logicalname="{{ c.logical_name  | h }}" >
                 {% if attr.is_entity_reference -%}
-                  {{ attr.name }}
+                  {{ attr.name  | h }}
                 {% elsif attr_type == 'datetime' %}
                   {% if attr %}
-                    <time datetime="{{ attr | date_to_iso8601 }}">
-                      {{ attr }}
+                    <time datetime="{{ attr | date_to_iso8601  | h }}" >
+                      {{ attr  | h }}
                     </time>
                   {% endif %}
                 {% elsif attr_type == 'picklist' %}
-                  {{ attr.label }}
+                  {{ attr.label  | h }}
                 {% else %}
-                  {{ attr }}
+                  {{ attr  | h }}
                 {% endif -%}
               </td>
             {% endfor -%}
@@ -148,8 +149,8 @@ Render the List associated with the current page as a paginated sortable table. 
             <td>
               {% if entitylist.detail_enabled -%}
                 <a class="btn btn-default btn-xs"
-                  href="{{ entitylist.detail_url}}?{{ entitylist.detail_id_parameter }}={{ e.id }}"
-                  title="{{ entitylist.detail_label }}">
+                  href="{{ entitylist.detail_url}}?{{ entitylist.detail_id_parameter  | h }}={{ e.id }}"
+                  title="{{ entitylist.detail_label  | h }}" >
                   <i class="fa fa-external-link"></i>
                 </a>
               {% endif -%}
@@ -167,11 +168,11 @@ Render the List associated with the current page as a paginated sortable table. 
       {% assign page_slice_first_page = page_offset | plus:1 %}
       {% assign page_slice_last_page = page_offset | plus:10 %}
 
-      <ul class="pagination">
+      <ul class="pagination" >
         <li {% unless first_page and entityview.page > 1 %}class="disabled"{% endunless %}>
           <a
             {% if first_page and entityview.page > 1 %}
-              href="{{ request.url | add_query:'page', first_page | path_and_query }}"
+              href="{{ request.url | add_query:'page', first_page | path_and_query  | h }}"
             {% endif %}>
             &laquo;
           </a>
@@ -180,7 +181,7 @@ Render the List associated with the current page as a paginated sortable table. 
         <li {% unless entityview.previous_page %}class="disabled"{% endunless %}>
           <a
             {% if entityview.previous_page %}
-              href="{{ request.url | add_query:'page', entityview.previous_page | path_and_query }}"
+              href="{{ request.url | add_query:'page', entityview.previous_page | path_and_query  | h }}"
             {% endif %}>
             &lsaquo;
           </a>
@@ -189,7 +190,7 @@ Render the List associated with the current page as a paginated sortable table. 
         {% if page_slice_first_page > 1 %}
           {% assign previous_slice_last_page = page_slice_first_page | minus:1 %}
           <li>
-            <a href="{{ request.url | add_query:'page', previous_slice_last_page | path_and_query }}">
+            <a href="{{ request.url | add_query:'page', previous_slice_last_page | path_and_query  | h }}">
               &hellip;
             </a>
           </li>
@@ -197,8 +198,8 @@ Render the List associated with the current page as a paginated sortable table. 
 
         {% for page in entityview.pages offset:page_offset limit:10 -%}
           <li{% if page == entityview.page %} class="active"{% endif %}>
-            <a href="{{ request.url | add_query:'page', page | path_and_query }}">
-              {{ page }}
+            <a href="{{ request.url | add_query:'page', page | path_and_query  | h }}">
+              {{ page  | h }}
             </a>
           </li>
         {% endfor -%}
@@ -206,7 +207,7 @@ Render the List associated with the current page as a paginated sortable table. 
         {% if page_slice_last_page < entityview.pages.size %}
           {% assign next_slice_first_page = page_slice_last_page | plus:1 %}
           <li>
-            <a href="{{ request.url | add_query:'page', next_slice_first_page | path_and_query }}">
+            <a href="{{ request.url | add_query:'page', next_slice_first_page | path_and_query  | h }}">
               &hellip;
             </a>
           </li>
@@ -215,7 +216,7 @@ Render the List associated with the current page as a paginated sortable table. 
         <li {% unless entityview.next_page %}class="disabled"{% endunless %}>
           <a
             {% if entityview.next_page %}
-              href="{{ request.url | add_query:'page', entityview.next_page | path_and_query }}"
+              href="{{ request.url | add_query:'page', entityview.next_page | path_and_query  | h }}"
             {% endif %}>
             &rsaquo;
           </a>
@@ -224,7 +225,7 @@ Render the List associated with the current page as a paginated sortable table. 
         <li {% unless last_page and entityview.page < last_page %}class="disabled"{% endunless %}>
           <a
             {% if last_page and entityview.page < last_page %}
-              href="{{ request.url | add_query:'page', last_page | path_and_query }}"
+              href="{{ request.url | add_query:'page', last_page | path_and_query  | h }}"
             {% endif %}>
             &raquo;
           </a>
