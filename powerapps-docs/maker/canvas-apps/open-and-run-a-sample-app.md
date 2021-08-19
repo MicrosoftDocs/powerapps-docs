@@ -1,6 +1,6 @@
 ---
-title: Create a canvas app from a sample in Power Apps
-description: Step-by-step instructions for creating a canvas app based on a sample in Power Apps.
+title: Create a canvas app from a sample template
+description: Follow these steps for creating a canvas app from a sample in Power Apps. Explore design possibilities and learn concepts for developing your own apps.
 author: wimcoor
 ms.service: powerapps
 ms.topic: conceptual
@@ -19,13 +19,13 @@ contributors:
   - tapanm-msft
   - wimcoor
 ---
-# Create a canvas app from a sample in Power Apps
+# Create a canvas app from a sample template in Power Apps
 
-In this quickstart, you'll create a canvas app from a sample template. Once created, you can explore the app design possibilities, and discover concepts that you can apply as you develop your own canvas apps.
+In this quickstart, you'll create a canvas app from a sample template. Once created, explore the app design possibilities and discover concepts that you can apply as you develop your own canvas apps.
 
 Each sample showcases a real-world scenario but uses fictitious data. 
 
-If you don't have a license for Power Apps, you can [sign up for free](../signup-for-powerapps.md).
+If you don't have a license for Power Apps, you can [sign up for a free 30-day trial](../signup-for-powerapps.md).
 
 ## Open a sample app
 
@@ -40,15 +40,15 @@ If you don't have a license for Power Apps, you can [sign up for free](../signup
 1. Update the app name and select **Create** to create the app.
 
     > [!NOTE]
-    > Some sample apps may be available in only phone or tablet layouts. Read [create responsive layouts in canvas apps](create-responsive-layout.md) for more details regarding layouts. If the sample app you selected has phone and tablet as layout options, select a layout of your choice.
+    > Some sample apps may be available in only phone or tablet layouts. Read [Create responsive layouts in canvas apps](create-responsive-layout.md) for more details regarding layouts. If the sample app you selected has phone and tablet as layout options, select the layout of your choice.
 
 1. Select **Make my own app** to connect the app to data storage, such as OneDrive.
 
     ![Make my own app.](./media/open-and-run-a-sample-app/make-my-own-app.png "Make my own app")
 
-1. After you select, or connect to storage from the available choices, such as OneDrive, select **Done**.
+1. After you select or connect to storage from the available choices, select **Done**.
 
-1. Open Preview mode by pressing F5 (or by selecting the play button near the upper-right corner).
+1. Open Preview mode by pressing F5, or by selecting the play button near the upper-right corner.
 
 	![Preview the app.](./media/open-and-run-a-sample-app/open-preview-app.png "Preview the app")
 
@@ -56,13 +56,13 @@ If you don't have a license for Power Apps, you can [sign up for free](../signup
 
 	- Create an appointment for estimating the cost of installing a flooring product in a room of a particular size.
 	- Capture details such as address and square footage, and calculate the price based on discounts and tax rates.
-	- Filter a list of appointments to only show the ones with estimates already created, for which estimates haven't been created, or all appointments.
+	- Filter a list of appointments to only show the ones with estimates already created, one for which estimates haven't been created, or all appointments.
 	
-1. When you finish exploring the app, close Preview mode by pressing Esc (or by clicking or tapping the close icon near the upper-right corner, under the title bar for Power Apps).
+1. When you finish exploring the app, close Preview mode by pressing Esc, or by clicking or tapping the Close icon near the upper-right corner, under the title bar for Power Apps.
 
 ## Save the app
 
-1. Near the upper-left corner, select **File** tab.
+1. Near the upper-left corner, select the **File** tab.
 
 1. In the **Settings** page, review the default settings.
 

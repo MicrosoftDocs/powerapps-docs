@@ -5,7 +5,7 @@ author: hemantgaur
 ms.service: powerapps
 ms.subservice: canvas-developer
 ms.topic: article
-ms.date: 07/01/2021
+ms.date: 08/18/2021
 ms.author: hemantg
 ms.reviewer: tapanm
 search.audienceType:
@@ -15,6 +15,7 @@ search.app:
 contributors:
   - hemantgaur
   - tapanm-msft
+  - gregli-msft
 ---
 
 # Create a component for canvas apps
@@ -44,13 +45,6 @@ Components available inside the app are listed under the **Custom** category in 
 
 > [!NOTE]
 > Components discussed in this article are different from the Power Apps component framework that enables developers and makers to create code components for model-driven and canvas apps. For more information, go to [Power Apps component framework overview](../../developer/component-framework/overview.md).
-
-## Scope
-
-Think of a component as an encapsulated black box with properties as the interface. You can't access controls in the component from outside of the component. And you can't refer to anything outside of the component from inside the component. The exception is data sources shared between an app and its components. Scope restrictions keep the data contract of a component simple and cohesive, and it helps enable component-definition updates, especially across apps with component libraries. You can update the data contract of the component by creating one or more custom properties.
-
-> [!NOTE]
-> You can insert instances of components into a screen within a component library, and preview that screen for testing purposes. Also, note that the component library does not display when using [Power Apps Mobile](https://powerapps.microsoft.com/downloads/).
 
 ## Custom properties
 
@@ -187,6 +181,31 @@ So far, you've created a component and added it to an app. Next, you'll create a
 
     The **Label** control reflects the menu item that you selected most recently.
 
+## Scope
+
+Input and output properties clearly define the interface between a component and its host app.  By default, the component is encapsulated so that it's easier to reuse the component across apps, requiring the use of the properties to pass the information in and out of the component. Scope restrictions keep the data contract of a component simple and cohesive, and it helps enable component-definition updates&mdash;especially across apps with component libraries.
+
+But there are times when a component may want to share a data source or a variable with its host. Especially when the component is only intended for use in one particular app. For these cases, you can directly access app level information by turning on the **Access app scope** switch in the component's property pane:
+
+![Access app scope switch in component property pane](media/create-component/access-app-scope.png)
+
+When **Access app scope** is turned on, the following are accessible from within a component:
+
+- Global variables
+- Collections
+- Controls and components on screens, such as a TextInput control
+- Tabular data sources, such as Dataverse tables
+
+When this setting is turned Off, none of the above are available to the component. [**Set**](functions/function-set.md) and [**Collect**](functions/function-clear-collect-clearcollect.md) functions are still available but the resulting variables and collections are scoped to the component instance and not shared with the app.
+
+Non-tabular data sources, such as Azure Blob Storage or a custom connector, are available whether this setting is turned on or off. Think of these data sources more like referencing an environment resource rather than an app resource. When a component is brought into an app from a component library, these data sources from the environment are also brought in.
+
+Components in a component library can never have access to app scope, as there's no single app scope to refer to. So, this setting isn't available in this context, and is effectively off. Once imported into an app, and if customization was allowed by the component maker, the switch can be enabled, and the component can be modified to use the app scope.
+
+> [!NOTE]
+> - You can insert instances of components into a screen within a component library, and preview that screen for testing purposes.
+> - Component library doesn't display when using [Power Apps Mobile](https://powerapps.microsoft.com/downloads/).
+
 ## Import and export components
 
 > [!NOTE]
@@ -249,7 +268,7 @@ Once you save the app, you can reuse the components of this app using the same m
 ## Known limitations
 
 - You can't save data sources, forms, and data tables with components.
-- Collections in components are not supported.
+- Collections in components aren't supported.
 - You can't insert a component into a gallery or a form.
 - A master instance of a component is a local master and scoped to the app. If you change a master instance, only copies of the component within the app will reflect the change. Copies in other apps will remain the same unless you import the component library again. All master instances in those apps will be automatically detected and updated.
 - You can't package media files when you import a component.

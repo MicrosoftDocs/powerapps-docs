@@ -2164,22 +2164,40 @@
     items:
     - name: Azure Synapse Link Overview
       href: ./data-platform/export-to-data-lake.md
-    - name: Azure Synapse Analytics
-      items:
-      - name: Configure Azure Synapse Link with a Synapse Workspace
-        href: ./data-platform/azure-synapse-link-synapse.md
-    - name: Azure Data Lake Storage Gen2
-      items:
-      - name: Configure Azure Synapse Link with Data Lake
-        href: ./data-platform/azure-synapse-link-data-lake.md
-      - name: Ingest exported data with Azure Data Factory
-        href: ./data-platform/export-to-data-lake-data-adf.md
-      - name: Analyze exported data with Power BI
-        href: ./data-platform/export-to-data-lake-data-powerbi.md
+    - name: Create an Azure Synapse Link with a Synapse Workspace
+      href: ./data-platform/azure-synapse-link-synapse.md
+    - name: Create an Azure Synapse Link with Data Lake
+      href: ./data-platform/azure-synapse-link-data-lake.md
     - name: Advanced Configuration Settings
       href: ./data-platform/azure-synapse-link-advanced-configuration.md
     - name: Azure Synapse Link FAQ
-      href: ./data-platform/export-data-lake-faq.yml
+      href: ./data-platform/export-data-lake-faq.yml      
+    - name: Analyze with Azure Synapse Analytics
+      items:
+      - name: Query data with serverless SQL pool
+        href: ./data-platform/azure-synapse-link-serverless.md
+      - name: Transform data with Apache Spark
+        href: ./data-platform/azure-synapse-link-spark.md 
+      - name: Visualize data with Power BI
+        href: ./data-platform/azure-synapse-link-powerbi.md
+      - name: Copy data to Dedicated SQL
+        href: ./data-platform/azure-synapse-link-dedicated.md
+      - name: Read Incremental Updates
+        href: ./data-platform/azure-synapse-link-incremental.md
+      - name: Access Dataverse choices with serverless SQL pool
+        href: ./data-platform/azure-synapse-link-choices-serverless.md      
+    - name: Analyze in Azure Data Lake Storage Gen2
+      items:
+      - name: Ingest exported data with Azure Data Factory
+        href: ./data-platform/export-to-data-lake-data-adf.md
+      - name: Copy data to Azure SQL with Azure Data Factory
+        href: ./data-platform/azure-synapse-link-copy-sql.md
+      - name: Analyze exported data with Power BI
+        href: ./data-platform/export-to-data-lake-data-powerbi.md
+      - name: Access Dataverse choices with Azure Data Factory
+        href: ./data-platform/azure-synapse-link-choices-adf.md
+      - name: Access Dataverse choices with Power BI
+        href: ./data-platform/azure-synapse-link-choices-powerbi.md        
   - name: Security in Dataverse
     href: /power-platform/admin/wp-security-cds
   - name: Privileges for customization
@@ -2259,6 +2277,10 @@
           href: ../teams/how-templates-built.md
         - name: When to build apps in Teams
           href: ../teams/when-create-teams-apps.md
+        - name: Add notifications to make your apps collaborative
+          href: ../teams/add-app-notifications.md
+        - name: Enable consistent experience across sessions
+          href: ../teams/consistent-experience-across-sessions.md
     - name: Manage your apps
       href: ../teams/manage-your-apps.md
     - name: Set permission and share your app
@@ -2277,7 +2299,7 @@
           href: ../teams/use-sample-apps-from-teams-store.md
         - name: Boards (Preview)
           items:
-             - name: Boards
+             - name: Use Boards sample app
                href: ../teams/boards.md
              - name: Understand Boards sample app architecture
                href: ../teams/boards-architecture.md
@@ -2323,6 +2345,12 @@
                   href: ../teams/add-tag-to-mark-prioritized-ideas.md
                 - name: Enable users to discuss ideas
                   href: ../teams/extend-ideas-discussions.md
+        - name: Get connected (Preview)
+          items:
+            - name: Use Get connected sample app
+              href: ../teams/get-connected.md
+            - name: Understand Get connected sample app architecture
+              href: ../teams/get-connected-architecture.md
         - name: How to (Preview)
           items:
              - name: Use How to sample app
@@ -2335,6 +2363,8 @@
           items:
             - name: Use Inspection sample app
               href: ../teams/inspection.md
+            - name: Deploy Inspection app broadly in your organization
+              href: ../teams/inspection-deploy-broad.md
             - name: Customize Inspection app
               items:
                 - name: Understand Inspection sample app architecture
@@ -2345,9 +2375,13 @@
                   href: ../teams/inspections-hierarchy-locations.md
                 - name: Customize inspection steps
                   href: ../teams/customize-inspection-steps.md
+                - name: Notify manager on completion of inspection
+                  href: ../teams/notify-manager-inspections.md
+                - name: Update inspection notification to use an adaptive card
+                  href: ../teams/inspection-adaptive-card.md
         - name: Issue reporting
           items:
-            - name: Issue reporting
+            - name: Use Issue reporting sample app
               href: ../teams/issue-reporting.md
             - name: Deploy Issue reporting app broadly in your organization
               href: ../teams/issue-reporting-broad-distribution.md
@@ -2369,7 +2403,7 @@
                   href: ../teams/extend-issue-sign-up-notification.md
         - name: Milestones
           items:
-             - name: Milestones
+             - name: Use Milestones sample app
                href: ../teams/milestones.md
              - name: Deploy the Milestones app broadly in your organization
                href: ../teams/milestones-broad-distribution.md
@@ -2387,7 +2421,7 @@
                    href: ../teams/extend-milestones-send notification.md
         - name: Perspectives (Preview)
           items:
-            - name: Perspectives
+            - name: Use Perspectives sample app
               href: ../teams/perspectives.md
             - name: Understand Perspectives sample app architecture
               href: ../teams/perspectives-architecture.md

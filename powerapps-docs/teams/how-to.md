@@ -17,6 +17,8 @@ contributors:
 
 # Use How to sample app (Preview)
 
+[This article is pre-release documentation and is subject to change.]
+
 The How-to template app for Microsoft Teams provides a simple way to learn how to be a Power Apps maker by walking you step-by-step through designing data model, screens, and connecting screens together to build a complete Power Apps asset checkout solution.
 
 Benefits of using the How-to app:
@@ -31,8 +33,8 @@ Benefits of using the How-to app:
 > This app is available in three different Teams themes: Default, Dark and High contrast. When you [**change the theme in Teams**](https://support.microsoft.com/office/change-settings-in-teams-b506e8f1-1a96-4cf1-8c6b-b6ed4f424bc7) the app automatically updates to match the selected theme. More information: [**Get the Teams theme using the Teams integration object**](use-teams-integration-object.md#get-the-teams-theme)
 
 > [!IMPORTANT]
-> This is a preview feature.
-> Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
+> - This is a preview feature.
+> - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 
 ## Prerequisites
 

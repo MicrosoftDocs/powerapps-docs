@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 08/16/2021
+ms.date: 08/17/2021
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: tapanm
@@ -65,6 +65,9 @@ To add a form component:
         - **Redirect to URL**: Redirects the user to the specified URL. This field is required.
 
     - **Show captcha for anonymous users**: Displays captcha to anonymous users.
+    
+    > [!NOTE]
+    > Captcha control is currently limited to only English language for audio, and Latin characters for image.
 
     - **Show captcha for authenticated users**: Displays captcha to authenticated users.
 
