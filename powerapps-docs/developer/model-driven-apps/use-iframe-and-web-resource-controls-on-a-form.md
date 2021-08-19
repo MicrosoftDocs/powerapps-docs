@@ -23,7 +23,11 @@ IFRAME and web resource controls embed content from another location in pages by
 > [!NOTE]
 >  The designs you choose for the form are also used for the Dynamics 365 for Outlook reading pane and forms used by Dynamics 365 tablets. Web resources and IFRAMEs aren’t displayed using the Dynamics 365 for Outlook reading pane, however, they are supported in Dynamics 365 for tablets. If your IFRAME depends on access to the `Xrm` object of the page or any form event handlers, you should configure the IFRAME so that it's not visible by default.  
 
- You can use an IFRAME to display the contents from another website in a form, for example, in an ASP.NET page. Displaying a form within an IFrame embedded in another form is not supported.  
+You can use an IFRAME to display the contents from another website in a form, for example, in an ASP.NET page. 
+
+If you're considering using a web resource control for content a user can interact with, it's highly recommended to use a [code component](../component-framework/custom-controls-overview.md) instead because of [these advantages](../component-framework/overview.md#advantages).
+ 
+Displaying a form within an IFrame embedded in another form is not supported.  
 
  You can use one of the following web resources to display the contents of web resources in a form:  
 
