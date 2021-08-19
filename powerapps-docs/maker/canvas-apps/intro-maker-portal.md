@@ -1,6 +1,6 @@
 ---
 title: Sign in to Power Apps for the first time
-description: An introduction to the first-time sign-in experience for Power Apps.
+description: Learn about signing in to Power Apps for the first time, choosing an environment, creating an app, playing or editing an app, and other common tasks.
 author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
@@ -19,19 +19,19 @@ contributors:
 ---
 # Sign in to Power Apps for the first time
 
-When you sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), the site offers you a variety of options for creating your own apps, opening apps that you or others have created, and performing related tasks. These tasks range from the most simple, such as identifying the license or licenses that give you access, to more advanced capabilities, such as creating custom connections to specific data sources.
+When you sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), the site offers you a variety of options for creating your own apps, opening apps that you or others have created, and performing related tasks. These tasks range from the most simple, such as identifying the license or licenses that give you access, to more advanced capabilities like creating custom connections to specific data sources.
 
 You can select options in three general areas:
 
-- the header along the top of the page
+- The header along the top of the page
 
     ![Header for environment selection.](media/intro-maker-portal/header.png)
 
-- the navigation bar along the left edge of the page
+- The navigation bar along the left side of the page
 
     ![Navigation bar.](media/intro-maker-portal/nav-bar.png)
 
-- the large icons that feature prominently in the middle of the page
+- The large icons that feature prominently in the middle of the page
 
     ![Center area of the home page.](media/intro-maker-portal/center-area.png)
 
@@ -39,7 +39,7 @@ For best results, start by ensuring that the home page is set to the right envir
 
 ## Choose an environment
 
-Whether you're creating an app, a flow, a data connection, or a table in Microsoft Dataverse, much of what you do in Power Apps is contained in a specific environment. Environments create boundaries between different types of work; for example, an organization might have separate environments for different departments. Many organizations use environments to separate apps that are still being developed from those that are ready for widespread use. You might have access to multiple environments or only one and, if you have appropriate permissions, you might be able to create your own environments.
+Whether you're creating an app, a flow, a data connection, or a table in Microsoft Dataverse, much of what you do in Power Apps is contained in a specific environment. Environments create boundaries between different types of work. For example, an organization might have separate environments for different departments. Many organizations use environments to separate apps that are still being developed from those that are ready for widespread use. You might have access to multiple environments or only one. If you have the appropriate permissions, you might even be able to create your own environments.
 
 To verify which environment you're in, find the environment switcher near the right side of the header.
 
@@ -75,7 +75,7 @@ You can also search for an app by typing one or more characters in the search ba
 
 ## Create an app, portal, chatbot, or AI model
 
-From the **Home** page, you can create apps, portals, chatbots and AI models:
+From the **Home** page, you can create apps, portals, chatbots, and AI models:
 
 - [Get started with canvas apps](/powerapps/maker/canvas-apps/)
 - [Get started with model-driven apps](/powerapps/maker/model-driven-apps/)
@@ -88,7 +88,7 @@ From the **Home** page, you can create apps, portals, chatbots and AI models:
 You can find more information about either canvas apps or model-driven apps in two ways:
 
 - In the left navigation bar, select **Learn**.
-- In the header, select the question-mark icon.
+- In the header, select the question mark icon.
 
     ![List of model-driven apps with an ellipsis menu open.](media/intro-maker-portal/help-icon.png)
 
@@ -119,9 +119,10 @@ By selecting options in the header and left navigation bar, you can do more than
 
 Extend the functionality of your apps by performing these tasks:
 
-- Manage tables, choices, and data integration in [Dataverse](../data-platform/data-platform-intro.md).
-- Configure business logic in [Power Automate](/flow/getting-started).
-- Author, package, and maintain [solutions](../../developer/data-platform/introduction-solutions.md).
+- Manage tables, choices, and data integration in [Dataverse](../data-platform/data-platform-intro.md)
+- Configure business logic in [Power Automate](/flow/getting-started)
+- Author, package, and maintain [solutions](../../developer/data-platform/introduction-solutions.md)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
+
