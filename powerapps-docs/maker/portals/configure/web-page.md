@@ -66,7 +66,7 @@ The table below explains many of the standard web page attributes used by portal
 Page comments provides users with the ability to view and post comments on a web page. By default this feature is disabled and can be enabled on a page by page basis.
 
 > [!NOTE]
-> Comments are available for pages that use **Full page** or **Page** as a template.
+> Comments are available when pages use **Full page** or **Page** page template.
 
 1. Open the [Portal Management app](configure-portal.md).
 
