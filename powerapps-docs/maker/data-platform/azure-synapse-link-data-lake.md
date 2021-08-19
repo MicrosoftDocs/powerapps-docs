@@ -49,7 +49,7 @@ You can use the Azure Synapse Link to connect your Microsoft Dataverse data to A
 > - The storage account must be created in the same Azure Active Directory (Azure AD) tenant as your Power Apps tenant.
 > - The storage account must be created in the same region as the Power Apps environment you will use the feature in.
 > - You must have **Reader** role access to the resource group with the storage account.  
-> - To link the Dataverse environment to Azure Data Lake Storage Gen2, you must the Dataverse system administrator security role.
+> - To link the Dataverse environment to Azure Data Lake Storage Gen2, you must have the Dataverse system administrator security role.
 > - Only tables that have change tracking enabled can be exported.
 
 ## Connect Dataverse to Azure Data Lake Storage Gen2
