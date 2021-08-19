@@ -67,6 +67,9 @@ Y dimension of the pin | PinsY
 Z dimension (depth) of the pin | PinsZ
 
 
+> [!IMPORTANT]
+> The mixed reality controls use a left-handed coordinate system.
+
 <!-- editor note: the following question was here prior to this edit. -->
 <!-- is there a label field? -->
 
