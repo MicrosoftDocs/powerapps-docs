@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2020
+ms.date: 08/19/2021
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: tapanm
@@ -64,6 +64,9 @@ The table below explains many of the standard web page attributes used by portal
 ## Enable page comments
 
 Page comments provides users with the ability to view and post comments on a web page. By default this feature is disabled and can be enabled on a page by page basis.
+
+> [!NOTE]
+> Comments are available for pages that use **Full page** or **Page** as a template.
 
 1. Open the [Portal Management app](configure-portal.md).
 
