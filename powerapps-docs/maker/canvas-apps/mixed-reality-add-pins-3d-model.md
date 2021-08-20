@@ -68,10 +68,7 @@ Z dimension (depth) of the pin | PinsZ
 
 
 > [!IMPORTANT]
-> The mixed reality controls use a left-handed coordinate system.
-
-<!-- editor note: the following question was here prior to this edit. -->
-<!-- is there a label field? -->
+> The mixed reality controls use a [left-handed coordinate system](/windows/uwp/graphics-concepts/coordinate-systems).
 
 
 The following is an example of an Excel table with the required columns:
