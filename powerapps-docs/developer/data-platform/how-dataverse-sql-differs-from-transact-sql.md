@@ -17,9 +17,7 @@ search.app:
   - D365CE
 ---
 
-# How Dataverse SQL differs from Transact-SQL (Preview)
-
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+# How Dataverse SQL differs from Transact-SQL
 
 This article describes the differences between Dataverse SQL and Transact-SQL. Dataverse SQL is a subset of Transact-SQL.
 
