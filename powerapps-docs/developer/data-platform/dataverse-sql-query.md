@@ -99,7 +99,8 @@ Dataverse choice columns are represented as \<choice\>Name and \<choice\>Label i
 
 There is an 80-MB maximum size limit for query results returned from the Dataverse endpoint. Consider using data integration tools such as [Azure Synapse Link for Dataverse](../../maker/data-platform/export-to-data-lake.md) and [dataflows](/power-bi/transform-model/dataflows/dataflows-introduction-self-service) for large data queries that return over 80 MB of data. More information: [Importing and exporting data](../../maker/data-platform/import-export-data.md)
 
-To help limit size of the return size limit, use of multi-line text columns, and choice columns. 
+> [!TIP]
+> To help keep the size of the returned data within acceptable limits, use as few multi-line text columns and choice columns as possible.
 
 Dates returned in query results are formatted as Universal Time Coordinated (UTC). Previously, dates were returned in local time.
 
