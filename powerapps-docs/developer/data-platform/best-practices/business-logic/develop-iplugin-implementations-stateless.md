@@ -1,10 +1,11 @@
 ---
 title: "Develop IPlugin implementations as stateless | MicrosoftDocs"
-description: "Members of classes that implement IPlugin are exposed to potential thread-safety issues which could lead to data inconsistency or performance problems."
+description: "Members of classes that implement IPlugin are exposed to potential thread-safety issues, which could lead to data inconsistency or performance problems."
 services: ''
 suite: powerapps
 documentationcenter: na
 author: jowells
+ms.reviewer: phecke
 manager: austinj
 editor: ''
 tags: ''
@@ -14,6 +15,7 @@ ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.date: 9/05/2019
+ms.subservice: dataverse-developer
 ms.author: jowells
 search.audienceType: 
   - developer
@@ -27,7 +29,7 @@ search.app:
 
 **Category**: Design, Performance
 
-**Impact potential**: High
+**Potential risk**: High
 
 <a name='symptoms'></a>
 
@@ -199,14 +201,14 @@ After Microsoft Dataverse instantiates the plug-in class, the platform caches th
 
 Because the platform caches plug-in class instances, the constructor is not called for every invocation of plug-in execution.  For this reason, IPlugin implementations should not depend on the timing of operations in the constructor apart from obtaining static configuration data. 
 
-Another reason IPlugins should be stateless is that multiple system threads could execute the same, shared, plug-in instance concurrently.  This opens up members of classes that implement IPlugin to potential thread-safety issues which could lead to data inconsistency or performance problems.
+Another reason IPlugins should be stateless is that multiple system threads could execute the same, shared, plug-in instance concurrently.  This opens up members of classes that implement IPlugin to potential thread-safety issues, which could lead to data inconsistency or performance problems.
 
 <a name='seealso'></a>
 
 ### See also
 
 [Write a plug-in](../../write-plug-in.md)<br />
-[CRM Team Blog: Thread Safety in Plug-ins](https://blogs.msdn.com/b/crm/archive/2008/11/18/member-static-variable-and-thread-safety-in-plug-in-for-crm-4-0.aspx)<br />
+[CRM Team Blog: Thread Safety in Plug-ins](https://cloudblogs.microsoft.com/dynamics365/no-audience/2008/11/18/member-static-variable-and-thread-safety-in-plug-in-for-crm-4-0/)<br />
 
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

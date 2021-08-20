@@ -1,6 +1,6 @@
 ---
-title: 'Horizontal container: reference | Microsoft Docs'
-description: Information, including properties and examples, about the Horizontal container control
+title: Horizontal container control in Power Apps
+description: Learn about the details, properties and examples of the horizontal container control in Power Apps.
 author: emcoope-msft
 manager: kvivek
 ms.service: powerapps
@@ -8,13 +8,17 @@ ms.topic: reference
 ms.custom: canvas
 ms.reviewer: nabuthuk
 ms.date: 10/30/2020
+ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - nkrb
+  - emcoope-msft
 ---
-# Horizontal container control 
+# Horizontal container control in Power Apps
 
 Horizontal container control determines the position of the child components so that you never have to set X, Y for a component inside the container.
 
@@ -82,7 +86,7 @@ Horizontal container control determines the position of the child components so 
 1. Now from the **Insert** panes in the left sidebar, under **Layout** tab, select **Horizontal container**. 
 
    > [!div class="mx-imgBorder"]
-   > ![Insert containers](../media/create-responsive-layout/insert-containers.png "Insert containers")
+   > ![Insert containers.](../media/create-responsive-layout/insert-containers.png "Insert containers")
 
 1. Set the following properties to occupy the full available space of the screen:
    1. X = 0

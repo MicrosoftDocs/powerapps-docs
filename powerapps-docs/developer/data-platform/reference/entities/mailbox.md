@@ -1,7 +1,7 @@
 ---
 title: "Mailbox table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the Mailbox table/entity."
-ms.date: 03/04/2021
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -33,7 +33,6 @@ search.app:
 |GrantAccess|<xref href="Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 |ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/mailboxes(*mailboxid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/mailboxes<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
@@ -90,6 +89,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [LastSyncErrorCount](#BKMK_LastSyncErrorCount)
 - [LastSyncErrorMachineName](#BKMK_LastSyncErrorMachineName)
 - [LastSyncErrorOccurredOn](#BKMK_LastSyncErrorOccurredOn)
+- [LastTaggedMessageId](#BKMK_LastTaggedMessageId)
 - [MailboxId](#BKMK_MailboxId)
 - [MailboxProcessingContext](#BKMK_MailboxProcessingContext)
 - [Name](#BKMK_Name)
@@ -112,6 +112,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [ProcessEmailReceivedAfter](#BKMK_ProcessEmailReceivedAfter)
 - [StateCode](#BKMK_StateCode)
 - [StatusCode](#BKMK_StatusCode)
+- [TagEmailsAfter](#BKMK_TagEmailsAfter)
 - [TestEmailConfigurationRetryCount](#BKMK_TestEmailConfigurationRetryCount)
 - [TestEmailConfigurationScheduled](#BKMK_TestEmailConfigurationScheduled)
 - [TestMailboxAccessCompletedOn](#BKMK_TestMailboxAccessCompletedOn)
@@ -636,6 +637,25 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|DateTime|
 
 
+### <a name="BKMK_LastTaggedMessageId"></a> LastTaggedMessageId
+
+**Added by**: msft_ServerSideSync_Extensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Identifies the last MessageId that has been processed for tagging in the remote system.|
+|DisplayName|Last Tagged MessageId|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForCreate|False|
+|IsValidForForm|False|
+|IsValidForRead|False|
+|LogicalName|lasttaggedmessageid|
+|MaxLength|320|
+|RequiredLevel|None|
+|Type|String|
+
+
 ### <a name="BKMK_MailboxId"></a> MailboxId
 
 |Property|Value|
@@ -1027,6 +1047,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |1|Active|0|
 |2|Inactive|1|
 
+
+
+### <a name="BKMK_TagEmailsAfter"></a> TagEmailsAfter
+
+**Added by**: msft_ServerSideSync_Extensions Solution
+
+|Property|Value|
+|--------|-----|
+|DateTimeBehavior|UserLocal|
+|Description|Identifies the timestamp after for which emails should be tagged in the remote system.|
+|DisplayName|Tag Emails After|
+|Format|DateOnly|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|tagemailsafter|
+|RequiredLevel|None|
+|Type|DateTime|
 
 
 ### <a name="BKMK_TestEmailConfigurationRetryCount"></a> TestEmailConfigurationRetryCount
@@ -2190,7 +2227,7 @@ Listed by **SchemaName**.
 - [mailbox_asyncoperations](#BKMK_mailbox_asyncoperations)
 - [tracelog_Mailbox](#BKMK_tracelog_Mailbox)
 - [email_sendermailboxid_mailbox](#BKMK_email_sendermailboxid_mailbox)
-- [mailbox_FileAttachments](#BKMK_mailbox_FileAttachments)
+- [mailbox_email_ReceivingMailboxId](#BKMK_mailbox_email_ReceivingMailboxId)
 
 
 ### <a name="BKMK_systemuser_defaultmailbox_mailbox"></a> systemuser_defaultmailbox_mailbox
@@ -2343,19 +2380,21 @@ Same as email table [email_sendermailboxid_mailbox](email.md#BKMK_email_senderma
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_mailbox_FileAttachments"></a> mailbox_FileAttachments
+### <a name="BKMK_mailbox_email_ReceivingMailboxId"></a> mailbox_email_ReceivingMailboxId
 
-Same as fileattachment table [mailbox_FileAttachments](fileattachment.md#BKMK_mailbox_FileAttachments) Many-To-One relationship.
+**Added by**: msft_ActivitiesInfra_Extensions Solution
+
+Same as email table [mailbox_email_ReceivingMailboxId](email.md#BKMK_mailbox_email_ReceivingMailboxId) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
-|ReferencingEntity|fileattachment|
-|ReferencingAttribute|objectid|
+|ReferencingEntity|email|
+|ReferencingAttribute|receivingmailboxid|
 |IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|mailbox_FileAttachments|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|mailbox_email_ReceivingMailboxId|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 <a name="manytoone"></a>
 
@@ -2369,13 +2408,11 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [lk_mailbox_modifiedonbehalfby](#BKMK_lk_mailbox_modifiedonbehalfby)
 - [user_mailbox](#BKMK_user_mailbox)
 - [team_mailbox](#BKMK_team_mailbox)
-- [owner_mailbox](#BKMK_owner_mailbox)
 - [business_unit_mailbox](#BKMK_business_unit_mailbox)
 - [mailbox_regarding_systemuser](#BKMK_mailbox_regarding_systemuser)
 - [emailserverprofile_mailbox](#BKMK_emailserverprofile_mailbox)
 - [organization_mailbox](#BKMK_organization_mailbox)
 - [mailbox_regarding_queue](#BKMK_mailbox_regarding_queue)
-- [FileAttachment_Mailbox_ExchangeSyncStateXmlFileRef](#BKMK_FileAttachment_Mailbox_ExchangeSyncStateXmlFileRef)
 
 
 ### <a name="BKMK_lk_mailbox_createdby"></a> lk_mailbox_createdby
@@ -2402,10 +2439,6 @@ See systemuser Table [user_mailbox](systemuser.md#BKMK_user_mailbox) One-To-Many
 
 See team Table [team_mailbox](team.md#BKMK_team_mailbox) One-To-Many relationship.
 
-### <a name="BKMK_owner_mailbox"></a> owner_mailbox
-
-See owner Table [owner_mailbox](owner.md#BKMK_owner_mailbox) One-To-Many relationship.
-
 ### <a name="BKMK_business_unit_mailbox"></a> business_unit_mailbox
 
 See businessunit Table [business_unit_mailbox](businessunit.md#BKMK_business_unit_mailbox) One-To-Many relationship.
@@ -2425,10 +2458,6 @@ See organization Table [organization_mailbox](organization.md#BKMK_organization_
 ### <a name="BKMK_mailbox_regarding_queue"></a> mailbox_regarding_queue
 
 See queue Table [mailbox_regarding_queue](queue.md#BKMK_mailbox_regarding_queue) One-To-Many relationship.
-
-### <a name="BKMK_FileAttachment_Mailbox_ExchangeSyncStateXmlFileRef"></a> FileAttachment_Mailbox_ExchangeSyncStateXmlFileRef
-
-See fileattachment Table [FileAttachment_Mailbox_ExchangeSyncStateXmlFileRef](fileattachment.md) One-To-Many relationship.
 
 ### See also
 

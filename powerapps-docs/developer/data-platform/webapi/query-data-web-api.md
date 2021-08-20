@@ -77,9 +77,9 @@ OData-Version: 4.0
   
 <a name="bkmk_limits"></a>
 
-## Limits on number of tables returned
+## Limits on number of table rows (entities) returned
 
- Unless you specify a smaller page size, a maximum of 5000 entities will be returned for each request. If there are more entities that match the query filter criteria, a `@odata.nextLink` property will be returned with the results. Use the value of the `@odata.nextLink` property with a new `GET` request to return the next page of entity data.  
+ Unless you specify a smaller page size, a maximum of 5000 rows will be returned for each request. If there are more rows that match the query filter criteria, a `@odata.nextLink` property will be returned with the results. Use the value of the `@odata.nextLink` property with a new `GET` request to return the next page of rows.  
   
 > [!NOTE]
 >  Queries on entity (table) definitions aren’t limited or paged. More information:[Query table definitions using the Web API](query-metadata-web-api.md)  
@@ -88,22 +88,22 @@ OData-Version: 4.0
 
 ### Use `$top` query option
 
-You can limit the number of results returned by using the `$top` system query option. The following example will return just the first three account entities.  
+You can limit the number of results returned by using the `$top` system query option. The following example will return just the first three account rows.  
   
 ```http 
 GET [Organization URI]/api/data/v9.1/accounts?$select=name,revenue&$top=3  
 ```  
   
 > [!NOTE]
->  Limiting results using `$top` will prevent `odata.maxpagesize` preference from being applied. You can use `odata.maxpagesize` preference or `$top`, but not both at the same time. For more information about `odata.maxpagesize`, see [Specify the number of tables to return in a page](query-data-web-api.md#bkmk_specifyNumber).  
+>  Limiting results using `$top` will prevent `odata.maxpagesize` preference from being applied. You can use `odata.maxpagesize` preference or `$top`, but not both at the same time. For more information about `odata.maxpagesize`, see [Specify the number of rows to return in a page](query-data-web-api.md#bkmk_specifyNumber).  
 >   
 >  You should also not use `$top` with `$count`.  
 
 <a name="bkmk_specifyNumber"></a>
 
-### Specify the number of tables to return in a page
+### Specify the number of rows to return in a page
 
-Use the `odata.maxpagesize` preference value to request the number of entities returned in the response.  
+Use the `odata.maxpagesize` preference value to request the number of rows returned in the response.  
   
 > [!NOTE]
 >  You can’t use an `odata.maxpagesize` preference value greater than 5000.  
@@ -193,7 +193,7 @@ GET [Organization URI]/api/data/v9.1/accounts?$select=name,revenue
 
 ## Filter results
 
- Use the `$filter` system query option to set criteria for which entities will be returned.  
+ Use the `$filter` system query option to set criteria for which rows will be returned.  
   
 <a name="bkmk_buildInFilterOperators"></a>
 
@@ -317,9 +317,9 @@ OData-MaxVersion: 4.0
 OData-Version: 4.0
 ```
 
-### Filter parent records based on values of child records
+### Filter parent rows (records) based on values of child records
 
-The example given below shows how you can use the [/any operator](#bkmk_anyoperator) to retrieve all the account records which have:
+The example given below shows how you can use the [/any operator](#bkmk_anyoperator) to retrieve all the account records that have:
 
 - any of their linked opportunity records' budget greater than or equal to 300, and
 - the opportunity records' have no description, or
@@ -341,7 +341,7 @@ OData-Version: 4.0
 
 <a name="BKMK_FilterNavProperties"></a>
 
-### Filter records based on single-valued navigation property
+### Filter rows (records) based on single-valued navigation property
 
 Navigation properties let you access data related to the current entity. *Single-valued* navigation properties correspond to Lookup attributes that support many-to-one relationships and allow setting a reference to another entity. More information: [Navigation properties](web-api-types-operations.md#bkmk_navprops).  
   
@@ -424,7 +424,7 @@ OData-Version: 4.0
 ### Filter results based on values of collection-valued navigation properties
 
 > [!NOTE]
-> It is possible to use `$filter` within `$expand` to filter results for related records in a Retrieve operation. You can use a semi-colon separated list of system query options enclosed in parentheses after the name of the collection-valued navigation property. The query options that are supported within `$expand` are `$select`, `$filter`, `$top` and `$orderby`. More information: [Options to apply to expanded entities](retrieve-entity-using-web-api.md#options-to-apply-to-expanded-tables).
+> It is possible to use `$filter` within `$expand` to filter results for related records in a Retrieve operation. You can use a semi-colon separated list of system query options enclosed in parentheses after the name of the collection-valued navigation property. The query options that are supported within `$expand` are `$select`, `$filter`, `$top` and `$orderby`. More information: [Options to apply to expanded tables](retrieve-entity-using-web-api.md#options-to-apply-to-expanded-tables).
 
 The two options for filtering results based on values of collection-valued navigation properties are:
 
@@ -513,16 +513,16 @@ GET [Organization URI]/api/data/v9.1/accounts?$select=name,revenue
     
 <a name="bkmk_retrieveCount"></a>
  
-## Retrieve a count of tables
+## Retrieve a count of rows
 
  Use the `$count` system query option with a value of `true` to include a count of entities that match the filter criteria up to 5000.  
   
 > [!NOTE]
-> The count value does not represent the total number of entities in the system. It is limited by the maximum number of entities that  can be returned. More information: [Limits on number of tables returned](#bkmk_limits)
+> The count value does not represent the total number of rows in the system. It is limited by the maximum number of rows that can be returned. More information: [Limits on number of rows returned](#bkmk_limits)
 >
-> If you want to retrieve the total number of records for an entity beyond 5000, use the <xref:Microsoft.Dynamics.CRM.RetrieveTotalRecordCount?text=RetrieveTotalRecordCount  Function />.
+> If you want to retrieve the total number of rows for a table beyond 5000, use the <xref:Microsoft.Dynamics.CRM.RetrieveTotalRecordCount?text=RetrieveTotalRecordCount  Function />.
   
- The response `@odata.count` property will contain the number of entities that match the filter criteria irrespective of an `odata.maxpagesize` preference limitation.  
+ The response `@odata.count` property will contain the number of rows that match the filter criteria irrespective of an `odata.maxpagesize` preference limitation.  
   
 > [!NOTE]
 >  You should not use `$top` with `$count`.  
@@ -787,9 +787,9 @@ OData-Version: 4.0
 
 <a bkmk="bkmk_retrieverelatedentitysingleandcollectionnavprop"></a>
   
-### Retrieve related tables by expanding both single-valued and collection-valued navigation properties
+### Retrieve related rows (records) by expanding both single-valued and collection-valued navigation properties
 
-The following example demonstrates how you can expand related entities for entity sets using both single and collection-valued navigation properties. As explained earlier, expanding on collection-valued navigation properties to retrieve related entities for entity sets returns an `@odata.nextLink` property for the related entities. You should use the value of the `@odata.nextLink` property with a new `GET` request to return the required data.  
+The following example demonstrates how you can expand related rows (records) for entity sets using both single and collection-valued navigation properties. As explained earlier, expanding on collection-valued navigation properties to retrieve related entities for entity sets returns an `@odata.nextLink` property for the related entities. You should use the value of the `@odata.nextLink` property with a new `GET` request to return the required data.  
   
 In this example, we are retrieving the contact and tasks assigned to the top 3 accounts.  
   

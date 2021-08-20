@@ -1,12 +1,13 @@
 ---
-title: Learn about how to use the Help Desk sample app to create an app. | Microsoft Docs
-description: Use the Help Desk sample app to create a canvas app, and preview the app features before you customize for business requirements.
+title: Set up the Help Desk sample app
+description: Set up the Help Desk sample app to create a canvas app, and preview the app features before you customize it for your business needs. 
 author: norliu
 ms.service: powerapps
 ms.topic: sample
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 03/22/2021
+ms.subservice: canvas-maker
 ms.author: norliu
 search.audienceType: 
   - maker
@@ -17,29 +18,29 @@ contributors:
   - norliu
 ---
 
-# Set up and learn about the Help Desk sample app in Power Apps
+# Set up and explore the Help Desk sample template in Power Apps
 
-Help Desk provides a user-friendly experience to connect end users with support professionals. Quickly find answers to your most important questions, track progress of open tickets, and review details of previous requests. This app requires a small amount of setup to make it your own.
+In Power Apps, the Help Desk sample template is a tool that provides a user-friendly experience to connect end users with support professionals. By running the app, you can quickly find answers to the most important questions, track progress of open tickets, and review details of previous requests. This app requires a small amount of setup to make it your own.
 
-![Opening screen of the Help Desk Tickets app](./media/help-desk-install/login-screen.png "Opening screen of the Help Desk Tickets app")
+![Opening screen of the Help Desk Tickets app.](./media/help-desk-install/login-screen.png "Opening screen of the Help Desk Tickets app")
 
 ## Where can I run the app?
 
-You can run this sample app in your browser, on a tablet, or other device that has a similar form factor.
+You can run this sample app in your browser, on a tablet, or on another device that has a similar form factor.
 
-## How do I use the sample app and run?
+## How do I open the template and run the app?
 
-Help Desk sample app is available in [Power Apps](https://make.powerapps.com). Follow these steps to open the sample app and run the app.
+The Help Desk sample app is available in [Power Apps](https://make.powerapps.com). Follow these steps to open and run the sample app:
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
-1. On the left-pane, select **Create**.
+1. On the left pane, select **Create**.
 
-1. On the right-side of the screen, scroll down to **Start from template** section.
+1. On the right side of the screen, scroll down to the **Start from template** section.
 
 1. Select **Help Desk** from the available sample app templates.
 
-    ![Open Help Desk sample app](./media/help-desk-install/use-help-desk-sample-template.png "Open Help Desk sample app")
+    ![Open Help Desk sample app.](./media/help-desk-install/use-help-desk-sample-template.png "Open Help Desk sample app")
 
 1. Enter a name.
 
@@ -47,16 +48,16 @@ Help Desk sample app is available in [Power Apps](https://make.powerapps.com). F
 
 1. When prompted, select **Allow** to let the app use the connections.
 
-1. Press **F5** on the keyboard, or use ![Preview button](./media/help-desk-install/preview.png "Preview button") to play the app.
+1. Press **F5** on the keyboard or use ![Preview button](./media/help-desk-install/preview.png "Preview button") to play the app.
 
 > [!NOTE]
-> This sample app includes locally saved information using [collections](create-update-collection.md). To use the app for business purpose, customize the app to store information using [connectors](/connectors/connector-reference/connector-reference-powerapps-connectors).
+> This sample app includes locally saved information using [collections](create-update-collection.md). To use the app for business purposes, customize the app to store information using [connectors](/connectors/connector-reference/connector-reference-powerapps-connectors).
 
 ## How do I build the app myself?
 
-Help Desk sample app includes the functionality commonly used in Power Apps. You can extend the app functionality by using connectors and connect the app to a data source instead of the default [collections](create-update-collection.md) used by the sample app.
+The Help Desk sample app includes a lot of the functionality commonly used in Power Apps. You can extend the app functionality by using connectors to connect the app to a data source instead of the default [collections](create-update-collection.md) used by the sample app.
 
-[Save](save-publish-app.md#save-changes-to-an-app) the app, and update the app to use data source such as [SharePoint](connections/connection-sharepoint-online.md), or [Microsoft Dataverse](connections/connection-common-data-service.md).
+[Save the app](save-publish-app.md#save-changes-to-an-app) and update it to use a data source such as [SharePoint](connections/connection-sharepoint-online.md) or [Microsoft Dataverse](connections/connection-common-data-service.md).
 
 You can also enable the capability to send emails or approval routing using [Power Automate flow](using-logic-flows.md) or [Approvals connector](/connectors/approvals).
 
@@ -72,3 +73,4 @@ You can also enable the capability to send emails or approval routing using [Pow
 [Share a canvas app](share-app.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
+

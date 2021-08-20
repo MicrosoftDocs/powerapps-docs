@@ -7,6 +7,7 @@ ms.service: powerapps
 ms.topic: article
 ms.assetid: 5b1d7633-ab0d-94ec-166f-f5bc1af2a657
 author: Nkrb # GitHub ID
+ms.subservice: mda-developer
 ms.author: nabuthuk # MSFT alias of Microsoft employees only
 manager: shilpas # MSFT alias of manager or PM counterpart
 ms.reviewer: 
@@ -31,7 +32,7 @@ There are three different ways that command data can be displayed.
 
  This is the presentation of the command bar throughout the application and for forms for table that have the updated user experience.  
   
- ![Account command bar](media/customization-account-grid-command-bar.PNG "Account command bar")
+ ![Account command bar.](media/customization-account-grid-command-bar.PNG "Account command bar")
   
  In this experience, only few commands are displayed and any remaining commands are available in a flyout menu.  
   
@@ -39,7 +40,7 @@ There are three different ways that command data can be displayed.
   
  Subgrids have a limited number of controls. Only controls to allow adding records, deleting records, or opening a view of the grid are available. But these commands are still defined by ribbon data and can be customized.  
   
- ![Contact sub-grid](media/customization-contract-subgrid.PNG "Contact sub-grid")  
+ ![Contact sub-grid.](media/customization-contract-subgrid.PNG "Contact sub-grid")  
   
  To perform more actions on the list of records displayed in a subgrid, select the option to open a view of the grid.  
   
@@ -51,7 +52,7 @@ There are three different ways that command data can be displayed.
 ### Dynamics 365 for tablets  
  Dynamics 365 for tablets presents commands in a manner optimized for touch experiences. Commands appear in the command bar at the bottom right of the screen in order from right to left.  
   
- ![Account form commands for Dynamics 365 for tablets](media/customization-nobile-app-account-form-command.PNG "Account form commands for Dynamics 365 for tablets")  
+ ![Account form commands for Dynamics 365 for tablets.](media/customization-nobile-app-account-form-command.PNG "Account form commands for Dynamics 365 for tablets")  
   
 > [!NOTE]
 >  Icons configured for commands will not display and labels that are too long will be truncated.  
@@ -60,7 +61,7 @@ There are three different ways that command data can be displayed.
   
  Subgrid commands are displayed when people tap and press the subgrid control. These commands are shown on the bottom left of the screen in order from left to right.  
   
- ![Activity sub-grid commands in Dynamics 365 for tablets](media/customization-mobile-app-activity-subgrid.PNG "Activity sub-grid commands in Dynamics 365 for tablets")  
+ ![Activity sub-grid commands in Dynamics 365 for tablets.](media/customization-mobile-app-activity-subgrid.PNG "Activity sub-grid commands in Dynamics 365 for tablets")  
   
 <a name="BKMK_CommandData"></a>   
 
@@ -95,7 +96,7 @@ There are three different ways that command data can be displayed.
  [Customize commands and the ribbon](customize-commands-ribbon.md)   
  [Ribbons available](./ribbons-available.md)   
  [Export ribbon definitions](export-ribbon-definitions.md)   
- [Troubleshoot ribbon issues](https://support.microsoft.com/help/4552163)
+ [Troubleshoot ribbon issues](/troubleshoot/power-platform/power-apps/ribbon-issues-button-hidden?tabs=delete)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

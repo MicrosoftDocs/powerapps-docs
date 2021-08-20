@@ -1,7 +1,7 @@
 ---
 title: "EmailServerProfile table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the EmailServerProfile table/entity."
-ms.date: 03/04/2021
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -33,7 +33,6 @@ Holds the Email Server Profiles of an organization
 |GrantAccess|<xref href="Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 |ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/emailserverprofiles(*emailserverprofileid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/emailserverprofiles<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
@@ -63,6 +62,7 @@ Holds the Email Server Profiles of an organization
 
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
+- [AadResourceId](#BKMK_AadResourceId)
 - [DefaultServerLocation](#BKMK_DefaultServerLocation)
 - [Description](#BKMK_Description)
 - [EmailServerProfileId](#BKMK_EmailServerProfileId)
@@ -78,6 +78,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [IncomingUseImpersonation](#BKMK_IncomingUseImpersonation)
 - [IncomingUserName](#BKMK_IncomingUserName)
 - [IncomingUseSSL](#BKMK_IncomingUseSSL)
+- [keyvaultreferenceid](#BKMK_keyvaultreferenceid)
 - [LastAuthorizationStatus](#BKMK_LastAuthorizationStatus)
 - [LastCrmMessage](#BKMK_LastCrmMessage)
 - [LastTestExecutionStatus](#BKMK_LastTestExecutionStatus)
@@ -86,6 +87,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [LastTestStartTime](#BKMK_LastTestStartTime)
 - [LastTestTotalExecutionTime](#BKMK_LastTestTotalExecutionTime)
 - [LastTestValidationStatus](#BKMK_LastTestValidationStatus)
+- [managedidentityid](#BKMK_managedidentityid)
 - [MaxConcurrentConnections](#BKMK_MaxConcurrentConnections)
 - [MinPollingIntervalInMinutes](#BKMK_MinPollingIntervalInMinutes)
 - [MoveUndeliveredEmails](#BKMK_MoveUndeliveredEmails)
@@ -116,6 +118,24 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [UseDefaultTenantId](#BKMK_UseDefaultTenantId)
 - [UseSameSettingsForOutgoingConnections](#BKMK_UseSameSettingsForOutgoingConnections)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
+
+
+### <a name="BKMK_AadResourceId"></a> AadResourceId
+
+**Added by**: msft_ServerSideSync_Extensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|AAD ResourceId used for OAuth athentication scheme|
+|DisplayName|AAD ResourceId|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|aadresourceid|
+|MaxLength|1024|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_DefaultServerLocation"></a> DefaultServerLocation
@@ -283,6 +303,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |3|Windows Integrated Authentication|
 |4|Without Credentials (Anonymous)|
 |5|Gmail OAuth|
+|6|Exchange Hybrid Modern Auth (HMA)|
+|7|Azure Active Directory OAuth|
 
 
 
@@ -394,6 +416,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 **DefaultValue**: True
 
+
+
+### <a name="BKMK_keyvaultreferenceid"></a> keyvaultreferenceid
+
+**Added by**: msft_ServerSideSync_Extensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|The Azure Key Vault reference id|
+|DisplayName|Key Vault Reference Id|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|keyvaultreferenceid|
+|RequiredLevel|None|
+|Targets|keyvaultreference|
+|Type|Lookup|
 
 
 ### <a name="BKMK_LastAuthorizationStatus"></a> LastAuthorizationStatus
@@ -536,6 +574,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |0|Failure|
 |1|Success|
 
+
+
+### <a name="BKMK_managedidentityid"></a> managedidentityid
+
+**Added by**: msft_ServerSideSync_Extensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|The managed identity id|
+|DisplayName|Managed Identity Id|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|managedidentityid|
+|RequiredLevel|None|
+|Targets|managedidentity|
+|Type|Lookup|
 
 
 ### <a name="BKMK_MaxConcurrentConnections"></a> MaxConcurrentConnections
@@ -710,6 +764,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |3|Windows Integrated Authentication|
 |4|Without Credentials (Anonymous)|
 |5|Gmail OAuth|
+|6|Exchange Hybrid Modern Auth (HMA)|
+|7|Azure Active Directory OAuth|
 
 
 
@@ -1132,6 +1188,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [IsIncomingPasswordSet](#BKMK_IsIncomingPasswordSet)
 - [IsOauthClientSecretSet](#BKMK_IsOauthClientSecretSet)
 - [IsOutgoingPasswordSet](#BKMK_IsOutgoingPasswordSet)
+- [keyvaultreferenceidName](#BKMK_keyvaultreferenceidName)
+- [managedidentityidName](#BKMK_managedidentityidName)
 - [ModifiedBy](#BKMK_ModifiedBy)
 - [ModifiedByName](#BKMK_ModifiedByName)
 - [ModifiedByYomiName](#BKMK_ModifiedByYomiName)
@@ -1416,6 +1474,42 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 **DefaultValue**: False
 
+
+
+### <a name="BKMK_keyvaultreferenceidName"></a> keyvaultreferenceidName
+
+**Added by**: msft_ServerSideSync_Extensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|keyvaultreferenceidname|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
+
+
+### <a name="BKMK_managedidentityidName"></a> managedidentityidName
+
+**Added by**: msft_ServerSideSync_Extensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|managedidentityidname|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_ModifiedBy"></a> ModifiedBy
@@ -1848,12 +1942,13 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 - [lk_emailserverprofile_createdonbehalfby](#BKMK_lk_emailserverprofile_createdonbehalfby)
 - [lk_emailserverprofile_modifiedonbehalfby](#BKMK_lk_emailserverprofile_modifiedonbehalfby)
-- [owner_emailserverprofile](#BKMK_owner_emailserverprofile)
 - [organization_emailserverprofile](#BKMK_organization_emailserverprofile)
 - [team_emailserverprofile](#BKMK_team_emailserverprofile)
 - [lk_emailserverprofile_modifiedby](#BKMK_lk_emailserverprofile_modifiedby)
 - [lk_emailserverprofile_createdby](#BKMK_lk_emailserverprofile_createdby)
 - [business_unit_emailserverprofile](#BKMK_business_unit_emailserverprofile)
+- [keyvaultreference_emailserverprofile_keyvaultreferenceid](#BKMK_keyvaultreference_emailserverprofile_keyvaultreferenceid)
+- [managedidentity_emailserverprofile_managedidentityid](#BKMK_managedidentity_emailserverprofile_managedidentityid)
 
 
 ### <a name="BKMK_lk_emailserverprofile_createdonbehalfby"></a> lk_emailserverprofile_createdonbehalfby
@@ -1863,10 +1958,6 @@ See systemuser Table [lk_emailserverprofile_createdonbehalfby](systemuser.md#BKM
 ### <a name="BKMK_lk_emailserverprofile_modifiedonbehalfby"></a> lk_emailserverprofile_modifiedonbehalfby
 
 See systemuser Table [lk_emailserverprofile_modifiedonbehalfby](systemuser.md#BKMK_lk_emailserverprofile_modifiedonbehalfby) One-To-Many relationship.
-
-### <a name="BKMK_owner_emailserverprofile"></a> owner_emailserverprofile
-
-See owner Table [owner_emailserverprofile](owner.md#BKMK_owner_emailserverprofile) One-To-Many relationship.
 
 ### <a name="BKMK_organization_emailserverprofile"></a> organization_emailserverprofile
 
@@ -1887,6 +1978,18 @@ See systemuser Table [lk_emailserverprofile_createdby](systemuser.md#BKMK_lk_ema
 ### <a name="BKMK_business_unit_emailserverprofile"></a> business_unit_emailserverprofile
 
 See businessunit Table [business_unit_emailserverprofile](businessunit.md#BKMK_business_unit_emailserverprofile) One-To-Many relationship.
+
+### <a name="BKMK_keyvaultreference_emailserverprofile_keyvaultreferenceid"></a> keyvaultreference_emailserverprofile_keyvaultreferenceid
+
+**Added by**: ManagedIdentityExtensions Solution
+
+See keyvaultreference Table [keyvaultreference_emailserverprofile_keyvaultreferenceid](keyvaultreference.md#BKMK_keyvaultreference_emailserverprofile_keyvaultreferenceid) One-To-Many relationship.
+
+### <a name="BKMK_managedidentity_emailserverprofile_managedidentityid"></a> managedidentity_emailserverprofile_managedidentityid
+
+**Added by**: ManagedIdentityExtensions Solution
+
+See managedidentity Table [managedidentity_emailserverprofile_managedidentityid](managedidentity.md#BKMK_managedidentity_emailserverprofile_managedidentityid) One-To-Many relationship.
 
 ### See also
 

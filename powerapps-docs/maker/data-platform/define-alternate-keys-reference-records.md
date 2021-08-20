@@ -7,7 +7,7 @@ ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "conceptual"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -15,6 +15,7 @@ applies_to:
 author: "Mattp123"
 ms.assetid: 29e53691-0b18-4fde-a1d0-7490aa227898
 caps.latest.revision: 10
+ms.subservice: dataverse-maker
 ms.author: "matp"
 manager: "kvivek"
 search.audienceType: 
@@ -36,8 +37,8 @@ For example, to identify an account row with an alternate key, you can use the a
 > [!NOTE]
 > While you can define alternate keys with Power Apps, they can only be used programmatically in code. 
 > To learn more about using alternate keys programmatically, see:   
-> - [Developer Documentation: Use an alternate key to create a row](/dynamics365/customer-engagement/developer/use-alternate-key-create-row) 
-> - [Developer Documentation: Retrieve a row with the Web API using an alternate key](/dynamics365/customer-engagement/developer/webapi/retrieve-table-using-web-api#retrieve-using-an-alternate-key)
+> - [Developer Documentation: Use an alternate key to create a row](/dynamics365/customer-engagement/developer/use-alternate-key-create-record) 
+> - [Developer Documentation: Retrieve a row with the Web API using an alternate key](/dynamics365/customer-engagement/developer/webapi/retrieve-entity-using-web-api#retrieve-using-an-alternate-key)
 
 Some of the benefits of the alternate keys feature include:  
   
@@ -58,7 +59,7 @@ There are two designers you can use to create alternate keys:
 > [!NOTE]
 > You can also create an alternate key in your environment using the following:
 > - Import a solution that contains the definition of the alternate key.
-> - A developer can also write code to create them. More information: [Developer Documentation: Define alternate keys for a table](/dynamics365/customer-engagement/developer/define-alternate-keys-table)
+> - A developer can also write code to create them. More information: [Developer Documentation: Define alternate keys for a table](/dynamics365/customer-engagement/developer/define-alternate-keys-entity)
 
 Information in this topic will help you choose which designer you can use. 
 
@@ -119,8 +120,8 @@ If the system job fails, locate the system job to view any errors. The system jo
 
 [Define alternate keys using Power Apps portal](define-alternate-keys-portal.md)<br />
 [Define alternate keys using solution explorer](define-alternate-keys-solution-explorer.md)<br />
-[Developer Documentation: Define alternate keys for a table](/dynamics365/customer-engagement/developer/define-alternate-keys-table)<br />
-[Developer Documentation: Use an alternate key to create a row](/dynamics365/customer-engagement/developer/use-alternate-key-create-row)
+[Developer Documentation: Define alternate keys for a table](/dynamics365/customer-engagement/developer/define-alternate-keys-entity)<br />
+[Developer Documentation: Use an alternate key to create a row](/dynamics365/customer-engagement/developer/use-alternate-key-create-record)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

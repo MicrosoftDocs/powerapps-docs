@@ -7,12 +7,13 @@ ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "conceptual"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
   - "powerapps"
 author: "Mattp123"
+ms.subservice: dataverse-maker
 ms.author: "matp"
 manager: "kvivek"
 search.audienceType: 
@@ -42,7 +43,7 @@ Part of the name of any custom relationship you create is the customization pref
 
 In solution explorer, expand **Tables** an select a table. Within that table, select either **1:N Relationships** or **N:1 Relationships**
 
-![View table relationships](media/view-1n-entity-relationships-solution-explorer.png)
+![View table relationships.](media/view-1n-entity-relationships-solution-explorer.png)
 
 ## Create relationships
 
@@ -53,7 +54,7 @@ While [viewing table relationships](#view-table-relationships), select either **
 
 Either option will open a form like the following. The difference is whether the **Primary table** or **Related table** column is set.
 
-![New one-to-many relationship form](media/new-1n-entity-relationship-form-solution-explorer.png)
+![New one-to-many relationship form.](media/new-1n-entity-relationship-form-solution-explorer.png)
 
 - With **1:N Relationship**, the **Primary table** is set to the current table
 - With **N:1 Relationship**, the **Related table** is set to the current table
@@ -68,7 +69,7 @@ The following columns must be set in order to save the table relationship:
 |**Lookup Column Display Name**|The localizable text for the lookup column that will be created for the related table. This is usually the same as the display name for the primary table. <br /> This can be changed later.|
 |**Lookup Column Name**|The name of the lookup column that will be created on the related table. A value will be generated based on the **Lookup Column Display Name**. This column will be prefixed by the customization prefix of the solution publisher.|
 
-You can click ![Save table relationship button](media/save-entity-icon-solution-explorer.png) to save the table and continue editing. More information: [Edit relationships](#edit-relationships)
+You can click ![Save table relationship button.](media/save-entity-icon-solution-explorer.png) to save the table and continue editing. More information: [Edit relationships](#edit-relationships)
 
 > [!NOTE]
 > If either the **Name** or **Lookup Column Name** values already exist in the system you will get an error when you save. Edit the values so that they are unique and try again.
@@ -190,7 +191,7 @@ Use the **Type of Behavior** column to choose between a set of standard behavior
 
 ## Delete relationships
 
-While [viewing table relationships](#view-table-relationships), select the table relationship you want to delete and click the ![Delete command](media/delete.gif) command.
+While [viewing table relationships](#view-table-relationships), select the table relationship you want to delete and click the ![Delete command.](media/delete.gif) command.
 
 Deleting the relationship will delete the lookup column on the related table.
 

@@ -7,12 +7,13 @@ applies_to:
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
   - "powerapps"
-ms.author: sumli
+ms.subservice: mda-maker
+ms.author: matp
 manager: kvivek
 ms.reviewer: matp
 ms.date: 07/27/2020
 ms.service: powerapps
-ms.topic: article
+ms.topic: how-to
 ms.assetid: 
 search.audienceType: 
   - maker
@@ -27,14 +28,14 @@ search.app:
 You can add a chart to a form or change an existing list to a chart. For example, you can change the Child Accounts filtered sub-grid to display a chart instead of a list on the account main form.
 
 > [!div class="mx-imgBorder"] 
-> ![Account main form child accounts grid](media/main-form-child-accts-chart.png)
+> ![Account main form child accounts grid.](media/main-form-child-accts-chart.png)
 
 1. Sign into Power Apps, select **Solutions**, open the solution with the table you want, and then select the **Forms** tab. 
 2. Open the form where you want to add a chart or change a list to a chart, on the form designer command bar, and then select **Switch to classic**. 
 3. Add a sub-grid to the form, or to change an existing list in a sub-grid, double-click a sub-grid on the form. 
 4.  On the **Set Properties** page for the sub-grid, select the **Show Chart Only** option. When enabled, this option displays the view in a chart format. 
       > [!div class="mx-imgBorder"] 
-      > ![Show chart only](media/form-show-chart-only.png)
+      > ![Show chart only.](media/form-show-chart-only.png)
 
 5. On the **Set Properties** page for the sub-grid, consider from the following options that affect how the chart is displayed, and then select **OK**. For more information about these properties, see [Set properties for a model-driven app chart or list included in a dashboard](set-properties-chart-list-included-dashboard.md).  
     - **Records**: 

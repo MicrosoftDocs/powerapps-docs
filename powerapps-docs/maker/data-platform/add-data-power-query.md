@@ -2,12 +2,14 @@
 title: Add data to a table in Microsoft Dataverse by using Power Query | Microsoft Docs
 description: Step-by-step instructions for how to use Power Query to add data to a new or existing table in Microsoft Dataverse from another data source.
 author: mllopis
-manager: kfile
+manager: kvivek
+ms.reviewer: matp
 ms.service: powerapps
 ms.devlang: na
-ms.topic: conceptual
+ms.topic: how-to
 ms.component: cds
 ms.date: 05/04/2020
+ms.subservice: dataverse-maker
 ms.author: millopis
 search.audienceType: 
   - maker
@@ -46,14 +48,14 @@ Before you start to follow this topic:
 1. In the navigation pane, select **Data** to expand it, and then select **Tables**. 
 
     > [!div class="mx-imgBorder"] 
-    > ![Tables area](./media/view-entities-portal.png)
+    > ![Tables area.](./media/view-entities-portal.png)
 
 1. In the command menu, select **Get data**.
 
 1. In the list of data sources, select **OData**.
 
     > [!div class="mx-imgBorder"] 
-    > ![Choose the OAuth connector](./media/data-platform-cds-newentity-pq/choose-odata.png)
+    > ![Choose the OAuth connector.](./media/data-platform-cds-newentity-pq/choose-odata.png)
 
 1. Under **Connection settings**, type or paste this URL, and then select **Next**:<br>
 `https://services.odata.org/V4/Northwind/Northwind.svc/`
@@ -61,7 +63,7 @@ Before you start to follow this topic:
 1. In the list of tables, select the **Customers** check box, and then select **Transform data**.
 
     > [!div class="mx-imgBorder"] 
-    > ![Select the Customers table](./media/data-platform-cds-newentity-pq/select-table.png)
+    > ![Select the Customers table.](./media/data-platform-cds-newentity-pq/select-table.png)
 
 1. (optional) Modify the schema to suit your needs by choosing which columns to include, transforming the table in one or more ways, adding an index or conditional column, or making other changes.
 
@@ -71,7 +73,7 @@ Before you start to follow this topic:
 1. Under **Load settings**, select **Load to new table**.
 
     > [!div class="mx-imgBorder"] 
-    > ![Load to new table](./media/data-platform-cds-newentity-pq/new-entity-name.png)
+    > ![Load to new table.](./media/data-platform-cds-newentity-pq/new-entity-name.png)
 
     You can give the new table a different name or display name, but leave the default values to follow this tutorial exactly.
 
@@ -86,7 +88,7 @@ Before you start to follow this topic:
     The **Customers** table that you created from an OData feed appears as a custom table.
 
     > [!div class="mx-imgBorder"] 
-    > ![List of standard and custom tables](./media/data-platform-cds-newentity-pq/entity-list.png)
+    > ![List of standard and custom tables.](./media/data-platform-cds-newentity-pq/entity-list.png)
 
 > [!WARNING]
 > If you use Power Query to add data to an existing table, all data in that table will be overwritten.
@@ -94,14 +96,11 @@ Before you start to follow this topic:
 If you select **Load to existing table**, you can specify a table into which you add data from the **Customers** table. You could, for example, add the data to the **Account** table with which the Dataverse ships. Under **Column mapping**, you can further specify that data in the **ContactName** column from the **Customers** table should be added to the **Name** column in the **Account** table.
 
   > [!div class="mx-imgBorder"] 
-  > ![Specify the name of the new table](./media/data-platform-cds-newentity-pq/existing-entity.png)
+  > ![Specify the name of the new table.](./media/data-platform-cds-newentity-pq/existing-entity.png)
 
 We're excited about this functionality and eager to hear your feedback. Please [send us your suggestions and feedback](https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1) about this feature!
 
-If an [error message about permissions](troubleshoot-power-query-issues.md) appears, talk to your administrator.
-
-> [!WARNING]
-> There is a limit of 500,000 rows per run and per project that can be loaded using this feature.
+If an [error message about permissions](troubleshoot-power-query-issues.md) appears, contact your administrator.
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -1,7 +1,7 @@
 ---
 title: "Contact table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the Contact table/entity."
-ms.date: 03/04/2021
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -34,7 +34,6 @@ Person with whom a business unit has a relationship, such as customer, supplier,
 |Merge|<xref href="Microsoft.Dynamics.CRM.Merge?text=Merge Action" />|<xref:Microsoft.Crm.Sdk.Messages.MergeRequest>|
 |ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/contacts(*contactid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/contacts<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
@@ -4038,7 +4037,6 @@ Listed by **SchemaName**.
 - [Contact_Email_EmailSender](#BKMK_Contact_Email_EmailSender)
 - [Contact_Tasks](#BKMK_Contact_Tasks)
 - [contact_PostFollows](#BKMK_contact_PostFollows)
-- [contact_PostRegardings](#BKMK_contact_PostRegardings)
 - [Contact_RecurringAppointmentMasters](#BKMK_Contact_RecurringAppointmentMasters)
 - [contact_master_contact](#BKMK_contact_master_contact)
 - [lk_contact_feedback_createdby](#BKMK_lk_contact_feedback_createdby)
@@ -4156,21 +4154,6 @@ Same as postfollow table [contact_PostFollows](postfollow.md#BKMK_contact_PostFo
 |IsHierarchical|False|
 |IsCustomizable|False|
 |ReferencedEntityNavigationPropertyName|contact_PostFollows|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_contact_PostRegardings"></a> contact_PostRegardings
-
-Same as postregarding table [contact_PostRegardings](postregarding.md#BKMK_contact_PostRegardings) Many-To-One relationship.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|postregarding|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|contact_PostRegardings|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
@@ -4623,7 +4606,6 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [manualsla_contact](#BKMK_manualsla_contact)
 - [system_user_contacts](#BKMK_system_user_contacts)
 - [lk_contactbase_modifiedby](#BKMK_lk_contactbase_modifiedby)
-- [owner_contacts](#BKMK_owner_contacts)
 - [sla_contact](#BKMK_sla_contact)
 - [contact_customer_accounts](#BKMK_contact_customer_accounts)
 - [lk_contact_modifiedonbehalfby](#BKMK_lk_contact_modifiedonbehalfby)
@@ -4664,10 +4646,6 @@ See systemuser Table [system_user_contacts](systemuser.md#BKMK_system_user_conta
 ### <a name="BKMK_lk_contactbase_modifiedby"></a> lk_contactbase_modifiedby
 
 See systemuser Table [lk_contactbase_modifiedby](systemuser.md#BKMK_lk_contactbase_modifiedby) One-To-Many relationship.
-
-### <a name="BKMK_owner_contacts"></a> owner_contacts
-
-See owner Table [owner_contacts](owner.md#BKMK_owner_contacts) One-To-Many relationship.
 
 ### <a name="BKMK_sla_contact"></a> sla_contact
 

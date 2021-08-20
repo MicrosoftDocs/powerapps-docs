@@ -1,8 +1,8 @@
 ---
 title: "Handle exceptions in your code (Microsoft Dataverse) | Microsoft Docs"
 description: "This article discusses the exceptions that are returned from a Microsoft Dataverse web service method call. The sample in this article highlights the common faults and exceptions that your application design should handle."
-ms.custom: ""
-ms.date: 06/17/2019
+ms.custom: intro-internal
+ms.date: 06/02/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -15,9 +15,10 @@ search.app:
   - PowerApps
   - D365CE
 ---
+
 # Handle exceptions in your code
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+[!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
 There are a number of exceptions that can be returned from a Microsoft Dataverse web service method call. Your application design must catch and appropriately handle these exceptions. In the SDK .NET assemblies, all web service method calls use a communication channel to the server based on the Windows communication foundation technology. In WCF terms, exceptions returned from the channel are called *faults*.  
 
@@ -71,7 +72,7 @@ catch (System.Exception ex)
 ```
   
 > [!NOTE]
->  If you’re accessing the Discovery web service, your code should catch <xref:Microsoft.Xrm.Sdk.DiscoveryServiceFault> instead of the <xref:Microsoft.Xrm.Sdk.OrganizationServiceFault> fault shown previously.  
+> If you’re accessing the Discovery web service, your code should catch <xref:Microsoft.Xrm.Sdk.DiscoveryServiceFault> instead of the <xref:Microsoft.Xrm.Sdk.OrganizationServiceFault> fault shown previously.  
   
 In addition to these exceptions and faults, your code must handle the following exceptions:  
   
@@ -121,7 +122,7 @@ Sync workflow 'Name of Entity Scope Business Rule returning Error' terminated wi
 </OrganizationServiceFault>  
 ```  
   
-More information: [Create a business rule for an entity](../../../maker/data-platform/data-platform-create-business-rule.md)  
+More information: [Create a business rule for a table](../../../maker/data-platform/data-platform-create-business-rule.md)  
   
 <a name="BKMK_AdditionalInfo"></a>
 

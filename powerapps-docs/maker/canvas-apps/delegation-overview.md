@@ -1,18 +1,23 @@
 ---
-title: Understand delegation in a canvas app | Microsoft Docs
-description: Use delegation to process large data sets efficiently in a canvas app.
+title: Understand delegation in a canvas app
+description: Learn about how to use delegation to process large data sets efficiently in a canvas app.
 author: lancedMicrosoft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 07/05/2018
+ms.date: 05/24/2021
+ms.subservice: canvas-maker
 ms.author: lanced
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - gregli-msft
+  - lanced-microsoft
 ---
 # Understand delegation in a canvas app
 
@@ -32,9 +37,10 @@ Where this becomes complicated, and the reason this article exists, is because n
 ## Delegable data sources
 Delegation is supported for certain tabular data sources only. If a data source supports delegation, its [connector documentation](/connectors/) outlines that support. For example, these tabular data sources are the most popular, and they support delegation:
 
-- [Common Data Service](/connectors/commondataservice/) 
-- [SharePoint](/connectors/sharepointonline/) 
-- [SQL Server](/connectors/sql/) 
+- [Power Apps delegable functions and operations for Microsoft Dataverse](connections/connection-common-data-service.md#power-apps-delegable-functions-and-operations-for-dataverse) 
+- [Power Apps delegable functions and operations for SharePoint](/connectors/sharepointonline/#power-apps-delegable-functions-and-operations-for-sharepoint) 
+- [Power Apps delegable functions and operations for SQL Server](/connectors/sql/#power-apps-delegable-functions-and-operations-for-sql-server) 
+- [Power Apps delegable functions and operations for Salesforce](/connectors/salesforce/#power-apps-delegable-functions-and-operations-for-salesforce) 
 
 Imported Excel workbooks (using the **Add static data to your app** data source), collections, and tables stored in context variables don't require delegation. All of this data is already in memory, and the full Power Apps language can be applied.
 
@@ -76,7 +82,7 @@ The previous list doesn't include these notable items:
 In **Sort**, the formula can only be the name of a single column and can't include other operators or functions.
 
 ### Aggregate functions
-**[Sum](functions/function-aggregates.md)**, **[Average](functions/function-aggregates.md)**, **[Min](functions/function-aggregates.md)**, and **[Max](functions/function-aggregates.md)** can be delegated. Only a limited number of data sources support this delegation at this time; check the [delegation list](#delegable-data-sourcesdelegable-data-sources) for details.
+**[Sum](functions/function-aggregates.md)**, **[Average](functions/function-aggregates.md)**, **[Min](functions/function-aggregates.md)**, and **[Max](functions/function-aggregates.md)** can be delegated. Only a limited number of data sources support this delegation at this time; check the [delegation list](#delegable-data-sources) for details.
 
 Counting functions such as **[CountRows](functions/function-table-counts.md)**, **[CountA](functions/function-table-counts.md)**, and **[Count](functions/function-table-counts.md)** can't be delegated.
 
@@ -121,8 +127,8 @@ Aggregate functions can also cause confusion. Take **Average** over a column of 
 ## Changing the limit
 500 is the default number of records, but you can change this number for an entire app:
 
-1. On the **File** tab, select **App settings**.
-2. Under **Advanced settings**, change the **Data row limit for non-delegable queries** setting from 1 to 2000.
+1. On the **File** tab, select **Settings**.
+1. Under **General**, change the **Data row limit** setting from 1 to 2000.
 
 In some cases, you'll know that 2,000 (or 1,000 or 1,500) will satisfy the needs of your scenario. With care, you can increase this number to fit your scenario. As you increase this number, your app's performance may degrade, especially for wide tables with lots of columns. Still, the best answer is to delegate as much as you can.
 
@@ -136,7 +142,7 @@ Delegation warnings appear only on formulas that operate on delegable data sourc
 ## Examples
 For this example, you'll automatically generate a three-screen app based on a SQL Server table named **[dbo].[Fruit]**. For information about how to generate the app, you can apply similar principles in the [topic about Dataverse](data-platform-create-app.md) to SQL Server.
 
-![Three-screen app](./media/delegation-overview/products-afd.png)
+![Three-screen app.](./media/delegation-overview/products-afd.png)
 
 The gallery's **Items** property is set to a formula that contains **SortByColumns** and **Search** functions, both of which can be delegated.
 
@@ -144,15 +150,15 @@ In the search box, type **"Apple"**.
 
 Marching dots appear momentarily near the top of the screen as the app communicates with SQL Server to process the search request. All records that meet the search criteria appear, even if the data source contains millions of records.
 
-![Search text-input control](./media/delegation-overview/products-apple.png)
+![Search text-input control.](./media/delegation-overview/products-apple.png)
 
 The search results include **"Apples"**, **"Crab apples"**, and **"Pineapple"** because the **Search** function looks everywhere in a text column. If you wanted to find only records that contain the search term at the start of the fruit's name, you can use another delegable function, **Filter**, with a more complicated search term. (For simplicity, remove the **SortByColumns** call.)
 
-![Remove SortByColumns call](./media/delegation-overview/products-apple-delegationwarning.png)
+![Remove SortByColumns call.](./media/delegation-overview/products-apple-delegationwarning.png)
 
 The new results include **"Apples"** but not **"Crab apples"** or **"Pineapple"**.  However, a yellow triangle appears next to the gallery (and in the screen thumbnail if the left navigation bar shows thumbnails), and a blue, wavy line appears under a portion of the formula. Each of these elements indicate a warning. If you hover over the yellow triangle next to the gallery, this message appears:
 
-![Hover over delegation warning](./media/delegation-overview/products-apple-yellowwarning.png)
+![Hover over delegation warning.](./media/delegation-overview/products-apple-yellowwarning.png)
 
 SQL Server is a delegable data source, and **Filter** is a delegable function, However, **Mid** and **Len** can't be delegated to any data source.
 

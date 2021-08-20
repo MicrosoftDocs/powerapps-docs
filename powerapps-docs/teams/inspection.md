@@ -5,9 +5,14 @@ author: navjotm
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/05/2020
+ms.date: 08/12/2021
+ms.subservice: teams
 ms.author: namarwah
 ms.reviewer: tapanm
+contributors:
+  - joel-lindstrom
+  - navjotm
+  - tapanm-msft
 ---
 
 # Inspection sample apps
@@ -61,7 +66,7 @@ To change labels used in the app:
 
 1. Select the **Manage inspections** tab in Teams.
 
-1. Select ![App settings to customize experience](media/inspection/teams-settings.png "App settings to customize experience") from the upper-right corner.
+1. Select ![App settings to customize experience.](media/inspection/teams-settings.png "App settings to customize experience") from the upper-right corner.
 
 1. Select **Customize experience** on the left pane.
 
@@ -71,7 +76,7 @@ To change labels used in the app:
 
 1. Select **Save** to save the changes to label setup.
 
-    ![Customize experience](media/inspection/customize-experience.png "Customize experience")
+    ![Customize experience.](media/inspection/customize-experience.png "Customize experience")
 
 ## Manage inspections app
 
@@ -81,7 +86,6 @@ The Manage inspections app gives a manager the following capabilities:
 - [Edit the app configuration](#edit-the-app-configuration)
 - [Add location types](#add-location-types)
 - [Add locations](#add-locations)
-- [Group locations](#group-locations)
 - [Review submitted inspections](#review-submitted-inspections)
 - [Review inspection insights](#review-inspection-insights)
 
@@ -105,13 +109,13 @@ To configure the app:
 
         > [!IMPORTANT]
         > Without Planer integration, the app will still work, but the tasks will not be created during the inspections.    
- 
+
     - To set up the Planner tab first, go back to the Teams channel, set up the Planner tab, and reopen the **Manage inspections** tab.
 
         > [!TIP]
         > Give your Planner a distinct name, such as “Inspection tasks”. When you select the Planner instance later to configure the **Manage inspections** app, you'll be able to identify the right Planner based on this name. The list of Planner instances inside the app as options shows Planner names, and not the name on the Teams tab for the Planner.
 
-    ![Planner integration](media/inspection/planner-tab.png "Planner integration")
+    ![Planner integration.](media/inspection/planner-tab.png "Planner integration")
 
 1. If you want, change the channel where the messages will be posted.
 
@@ -120,13 +124,13 @@ To configure the app:
     > [!NOTE]
     > - If you selected **I'll set up later** for Planner integration, you won't be able to select the *Tasks* (Planner) instance.
 
-    ![Select channel and Planner](media/inspection/select-planner-channel.png "Select channel and Planner")
+    ![Select Team, Channel and Planner.](media/inspection/select-planner-channel.png "Select channel and Planner")
 
 1. Select **Continue**.
 
 1. Select **Let's go**.
 
-    ![Integrate with channel and planner](media/inspection/channel-planner-integrate.png "Integrate with channel and planner")
+    ![Integrate with channel and planner.](media/inspection/channel-planner-integrate.png "Integrate with channel and planner")
 
 ### Edit the app configuration
 
@@ -134,7 +138,7 @@ To edit the app configuration:
 
 1. Go to the **Manage inspections** tab in Teams.
 
-1. Select ![Teams settings for managing inspections](media/inspection/teams-settings.png "Teams settings for managing inspections") from the upper-right corner.
+1. Select ![Teams settings for managing inspections.](media/inspection/teams-settings.png "Teams settings for managing inspections") from the upper-right corner.
 
 1. Select **General** from the settings menu.
 
@@ -142,7 +146,7 @@ To edit the app configuration:
 
 1. Select **Save**.
 
-    ![Edit app configuration](media/inspection/edit-app-configuration.png "Edit app configuration")
+    ![Edit app configuration.](media/inspection/edit-app-configuration.png "Edit app configuration")
 
 ### Add location types
 
@@ -154,7 +158,7 @@ To add the area types:
 
 1. Select the **Locations** tab in the app.
 
-1. Select ![Teams settings for locations](media/inspection/teams-settings.png "Teams settings for locations") from the upper-right corner.
+1. Select ![Teams settings for locations.](media/inspection/teams-settings.png "Teams settings for locations") from the upper-right corner.
 
 1. Select **Location type** on the left pane in the app.
 
@@ -162,7 +166,7 @@ To add the area types:
 
 1. Select **Save**.
 
-    ![Add location type](media/inspection/add-location-type.png "Add location type")
+    ![Add location type.](media/inspection/add-location-type.png "Add location type")
 
 ### Add locations
 
@@ -180,35 +184,7 @@ To add locations:
 
 1. Select **Save**.
 
-    ![Add location](media/inspection/add-location.png "Add location")
-
-### Group locations
-
-Grouped locations allow users to aggregate locations that are commonly inspected together to ensure that employees can more easily inspect all the necessary locations.
-
-To group locations:
-
-1. Select the **Manage inspections** tab in Teams.
-
-1. Select ![Teams settings for grouped locations](media/inspection/teams-settings.png "Teams settings for grouped locations") from the upper-right corner.
-
-1. Select **Grouped locations**.
-
-1. Select **Add group** to add a new group.
-
-    ![Add group](media/inspection/add-group.png "Add group")
-
-1. Enter a *Title*.
-
-1. Select locations and location types as required, such as area details.
-
-1. Select areas as applicable.
-
-1. Select the required location from the **Locations** drop-down menu.
-
-1. Select **Save**.
-
-    ![Group locations](media/inspection/group-locations.png "Group locations")
+    ![Add location.](media/inspection/add-location.png "Add location")
 
 ### Add inspection forms
 
@@ -230,13 +206,20 @@ To add inspection forms:
 
 1. Select **Save**.
 
-    ![Add inspection form](media/inspection/add-inspection-form.png "Add inspection form")
+    ![Add inspection form.](media/inspection/add-inspection-form.png "Add inspection form")
+
+## Review inspections app
+
+The Review inspections app gives a manager the following capabilities:
+
+- [Review submitted inspections](#review-submitted-inspections)
+- [Review inspection insights](#review-inspection-insights)
 
 ### Review submitted inspections
 
 To review submitted inspection:
 
-1. Select the **Manage inspections** tab in Teams.
+1. Select the **Review inspections** tab in Teams.
 
 1. Select the **Locations** tab.
 
@@ -244,11 +227,11 @@ To review submitted inspection:
 
 1. In the **Inspections** section, select a submitted inspection.
 
-    ![Select submitted inspection](media/inspection/select-submitted-inspection.png "Select submitted inspection")
+    ![Select submitted inspection.](media/inspection/select-submitted-inspection.png "Select submitted inspection")
 
 1. Review the submitted inspection details as required.
 
-    ![Review submitted inspection](media/inspection/review-submitted-inspection.png "Review submitted inspection")
+    ![Review submitted inspection.](media/inspection/review-submitted-inspection.png "Review submitted inspection")
 
 ### Review inspection insights
 
@@ -256,11 +239,11 @@ Inspection insights provide managers with a dashboard of insights about inspecti
 
 To view the inspection insights:
 
-1. Select the **Manage inspections** tab in Teams.
+1. Select the **Review inspections** tab in Teams.
 
 1. Select **Inspection insights** tab inside the app.
 
-    ![Inspection insights](media/inspection/inspection-insights.png "Inspection insights")
+    ![Inspection insights.](media/inspection/inspection-insights.png "Inspection insights")
 
 The following table explains dashboard areas in detail.
 
@@ -287,24 +270,23 @@ The **Inspection** app provides following capabilities:
 - [Inspection form](#inspection-form)
 - [Add Planner task to an inspection step](#add-a-planner-task-to-an-inspection-step)
 - [Review inspection](#review-inspection)
-- [Submit inspection for grouped locations](#submit-inspection-for-grouped-locations)
 
 ### Home screen
 
 The app greets you based on your time of the day. If Planner is integrated from the manager app, statistics of the Planner tasks and all inspections for the last seven days are displayed.
 
-![Home screen with Planner](media/inspection/home-screen-with-planner.png "Home screen with Planner")
+![Home screen with Planner.](media/inspection/home-screen-with-planner.png "Home screen with Planner")
 
 If Planner isn't integrated from the manager app, a screen as shown in the following image is displayed when you select **Open Tasks**. Selecting **Close** takes you back to the previous screen.
 
-![Home screen without Planner](media/inspection/home-screen-without-planner.png "Home screen without Planner")
+![Home screen without Planner.](media/inspection/home-screen-without-planner.png "Home screen without Planner")
 
 ### Choose a location to inspect
 
 Selecting **Inspect a location** takes you to the next screen, which allows
 you to select the location that needs to be inspected.
 
-![Inspect a location](media/inspection/inspect-location.png "Inspect a location")
+![Inspect a location.](media/inspection/inspect-location.png "Inspect a location")
 
 1. **Search box** - searches for a location based on the location type selected.
 
@@ -316,19 +298,19 @@ you to select the location that needs to be inspected.
 
 If more than one inspection form is associated to the location type, the app allows you to choose one of the inspection forms. Otherwise, the app takes you to *Inspection overview* screen.
 
-![Select an inspection form](media/inspection/select-inspection-form.png "Select an inspection form")
+![Select an inspection form.](media/inspection/select-inspection-form.png "Select an inspection form")
 
 ### Inspection overview
 
 This screen shows the image of the location with the checklist and the checklist steps that were configured in the manager app. To start an inspection, select **Begin inspection** or any of the checklist items.
 
-![Inspection overview](media/inspection/inspection-overview.png "Inspection overview")
+![Inspection overview.](media/inspection/inspection-overview.png "Inspection overview")
 
 ### Inspection form
 
 Inspect the location, and fill in the details on the inspection form. The checklist instructions configured in the manager app are displayed.
 
-![Inspection form](media/inspection/inspection-form.png "Inspection form")
+![Inspection form.](media/inspection/inspection-form.png "Inspection form")
 
 Select **Ok**, **Issue**, or **N/A** against each checklist. Select **Photo** to add an image, **Note** to add a note, and **Task** to add a Planner task.
 
@@ -346,11 +328,11 @@ You can add a task that automatically creates a Planner task in the team to comp
 
 1. Select **Add Task**.
 
-![Add a Planner task to an inspection step](media/inspection/add-task-to-inspection.png "Add a Planner task to an inspection step")
+![Add a Planner task to an inspection step.](media/inspection/add-task-to-inspection.png "Add a Planner task to an inspection step")
 
 If the Planner isn't integrated from the manager app, you can't create tasks and the following screen is displayed.
 
-![Planner not integrated](media/inspection/planner-not-integrated.png "Planner not integrated")
+![Planner not integrated.](media/inspection/planner-not-integrated.png "Planner not integrated")
 
 Selecting **Close** takes you to the previous screen.
 
@@ -359,53 +341,16 @@ Selecting **Close** takes you to the previous screen.
 Select the checklist step to go back to the previous screen and
 modify the outcome. Or, select **Submit inspection** to submit the inspection form.
 
-![Review inspection](media/inspection/review-inspection.png "Review inspection")
+![Review inspection.](media/inspection/review-inspection.png "Review inspection")
 
 After the inspection is submitted, the app takes you to the next screen that shows the status of the submission and the list of all the locations of the current location type.
 
-### Submit inspection for grouped locations
-
-To submit inspection of grouped locations:
-
-1. Open the **Inspection** tab in Teams.
-
-1. Select **Inspect location**.
-
-1. Select the group from the **Grouped locations** section.
-
-    ![Grouped locations](media/inspection/grouped-locations.png "Grouped locations")
-
-1. Select **Begin inspection**.
-
-    ![Begin inspection](media/inspection/begin-inspection.png "Begin inspection")
-
-1. Respond to the inspection steps on the screen.
-
-1. Select **Review inspection**.
-
-    ![Review grouped inspection](media/inspection/review-inspection-grouped.png "Review grouped inspection")
-
-1. Select the next location in the tab.
-
-1. Select **Continue inspection**.
-
-    ![Continue inspection](media/inspection/continue-inspection.png "Continue inspection")
-
-1. Respond to the inspection steps on the screen.
-
-1. Select **Submit inspection**.
-
-    ![Submit inspection](media/inspection/submit-inspection.png "Submit inspection")
-
 ### See also
 
+- [Understand Inspection sample apps architecture](inspection-architecture.md)
+- [Customize Inspection sample app](customize-inspections.md)
 - [Customize sample apps](customize-sample-apps.md)
 - [Sample apps FAQs](sample-apps-faqs.md)
-- [Bulletins (Preview) sample apps](bulletins.md)
-- [Employee ideas sample app](employee-ideas.md)  
-- [Issue reporting sample apps](issue-reporting.md)
-- [Milestones (Preview) sample app](milestones.md)
 - [Use sample apps from the Microsoft Teams store](use-sample-apps-from-teams-store.md)
-
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

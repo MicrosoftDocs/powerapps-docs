@@ -1,7 +1,7 @@
 ---
 title: "Dependency table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the Dependency table/entity."
-ms.date: 03/04/2021
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -31,7 +31,6 @@ A component dependency in CRM.
 |RetrieveDependenciesForDelete|<xref href="Microsoft.Dynamics.CRM.RetrieveDependenciesForDelete?text=RetrieveDependenciesForDelete Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveDependenciesForDeleteRequest>|
 |RetrieveDependenciesForUninstall|<xref href="Microsoft.Dynamics.CRM.RetrieveDependenciesForUninstall?text=RetrieveDependenciesForUninstall Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveDependenciesForUninstallRequest>|
 |RetrieveDependentComponents|<xref href="Microsoft.Dynamics.CRM.RetrieveDependentComponents?text=RetrieveDependentComponents Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveDependentComponentsRequest>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMissingDependencies|<xref href="Microsoft.Dynamics.CRM.RetrieveMissingDependencies?text=RetrieveMissingDependencies Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveMissingDependenciesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/dependencies<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrieveRequiredComponents|<xref href="Microsoft.Dynamics.CRM.RetrieveRequiredComponents?text=RetrieveRequiredComponents Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveRequiredComponentsRequest>|

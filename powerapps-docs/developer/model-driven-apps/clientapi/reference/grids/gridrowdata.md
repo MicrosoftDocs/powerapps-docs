@@ -26,7 +26,7 @@ GridRowData also provides methods for retrieving information specific to a recor
 ```JavaScript
 var myRows = gridContext.getGrid().getRows();
 var myRow = myRows.get(arg);
-var gridRowData = myRow.getData();
+var gridRowData = myRow.data;
 ```
 
 ## Properties

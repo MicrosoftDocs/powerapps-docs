@@ -1,7 +1,7 @@
 ---
 title: "Discover the URL for your organization (Microsoft Dataverse)| Microsoft Docs"
 description: "Use the Discovery Service to find the organizations (instances) that the logged-on user belongs to"
-ms.custom: ""
+ms.custom: intro-internal
 ms.date: 04/21/2021
 ms.service: powerapps
 ms.suite: ""

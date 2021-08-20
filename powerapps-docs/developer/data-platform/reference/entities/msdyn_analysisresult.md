@@ -1,7 +1,7 @@
 ---
 title: "msdyn_analysisresult table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the msdyn_analysisresult table/entity."
-ms.date: 03/04/2021
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -36,7 +36,6 @@ search.app:
 |IsValidStateTransition|<xref href="Microsoft.Dynamics.CRM.IsValidStateTransition?text=IsValidStateTransition Function" />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 |ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/msdyn_analysisresults(*msdyn_analysisresultid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/msdyn_analysisresults<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
@@ -85,6 +84,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [msdyn_MessageId](#BKMK_msdyn_MessageId)
 - [msdyn_Module](#BKMK_msdyn_Module)
 - [msdyn_name](#BKMK_msdyn_name)
+- [msdyn_RepairIssueType](#BKMK_msdyn_RepairIssueType)
 - [msdyn_ReturnStatus](#BKMK_msdyn_ReturnStatus)
 - [msdyn_RuleId](#BKMK_msdyn_RuleId)
 - [msdyn_RuleReferenceUri](#BKMK_msdyn_RuleReferenceUri)
@@ -435,6 +435,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|String|
 
 
+### <a name="BKMK_msdyn_RepairIssueType"></a> msdyn_RepairIssueType
+
+|Property|Value|
+|--------|-----|
+|Description|Type of issue that needs to be repaired. Same as IssueType Input Parameter for Solution Health Rule.|
+|DisplayName|Repair Issue Type|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|IsValidForUpdate|False|
+|LogicalName|msdyn_repairissuetype|
+|MaxLength|150|
+|RequiredLevel|None|
+|Type|String|
+
+
 ### <a name="BKMK_msdyn_ReturnStatus"></a> msdyn_ReturnStatus
 
 |Property|Value|
@@ -457,6 +474,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |192350003|Resolved|
 |192350004|Warning|
 |192350005|Error|
+|192350006|Suggestion|
 
 
 
@@ -1263,7 +1281,6 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [lk_msdyn_analysisresult_modifiedonbehalfby](#BKMK_lk_msdyn_analysisresult_modifiedonbehalfby)
 - [user_msdyn_analysisresult](#BKMK_user_msdyn_analysisresult)
 - [team_msdyn_analysisresult](#BKMK_team_msdyn_analysisresult)
-- [owner_msdyn_analysisresult](#BKMK_owner_msdyn_analysisresult)
 - [business_unit_msdyn_analysisresult](#BKMK_business_unit_msdyn_analysisresult)
 - [msdyn_analysiscomponent_msdyn_analysisresult](#BKMK_msdyn_analysiscomponent_msdyn_analysisresult)
 - [msdyn_analysisjob_msdyn_analysisresult](#BKMK_msdyn_analysisjob_msdyn_analysisresult)
@@ -1304,12 +1321,6 @@ See systemuser Table [user_msdyn_analysisresult](systemuser.md#BKMK_user_msdyn_a
 **Added by**: System Solution Solution
 
 See team Table [team_msdyn_analysisresult](team.md#BKMK_team_msdyn_analysisresult) One-To-Many relationship.
-
-### <a name="BKMK_owner_msdyn_analysisresult"></a> owner_msdyn_analysisresult
-
-**Added by**: System Solution Solution
-
-See owner Table [owner_msdyn_analysisresult](owner.md#BKMK_owner_msdyn_analysisresult) One-To-Many relationship.
 
 ### <a name="BKMK_business_unit_msdyn_analysisresult"></a> business_unit_msdyn_analysisresult
 

@@ -1,20 +1,26 @@
 ---
-title: Get started with formulas in a canvas app | Microsoft Docs
-description: In Power Apps, use formulas to customize a canvas app.
+title: Get started with formulas in canvas apps
+description: Learn about how to use formulas to customize a canvas app.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
+ms.custom: 
+- "intro-internal"
+- "canvas"
 ms.topic: conceptual
-ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 03/01/2019
+ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - gregli-msft
 ---
-# Get started with canvas-app formulas in Power Apps
+# Get started with formulas in canvas apps
 
 > [!NOTE]
 > Have you checked out new [Microsoft Power Fx](/power-platform/power-fx/overview)? 
@@ -44,7 +50,7 @@ In Excel, you can enter a specific piece of data, such as the number **42** or t
 
     The formula bar sits at the top of the screen.
 
-    ![Formula bar](./media/working-with-formulas/formula-bar.png)
+    ![Formula bar.](./media/working-with-formulas/formula-bar.png)
 
     This bar has two parts:
 
@@ -53,17 +59,17 @@ In Excel, you can enter a specific piece of data, such as the number **42** or t
 
      In the formula bar, you can see and edit properties for the selected control or for the screen if no controls are selected.  You can see the name of the selected control on the **Content** tab:
 
-     ![Content bar shows the currently selected control](./media/working-with-formulas/content-tab-selection.png)
+     ![Content bar shows the currently selected control.](./media/working-with-formulas/content-tab-selection.png)
 
      You can change the name of the selected control in the **Content** tab by clicking the name.
 3. Add a **[Label](controls/control-text-box.md)** control to the screen.
 
-    ![Added a TextBox control](./media/working-with-formulas/add-a-label.png)
+    ![Added a TextBox control.](./media/working-with-formulas/add-a-label.png)
 
     When you add a label, the property list automatically shows the **[Text](controls/properties-core.md)** property, which drives what the control shows. By default, the value of this property is **"Text"**.  
 4. Set the value of the **[Text](controls/properties-core.md)** property to **"Hello World"** by typing that string, surrounded by double quotes, into the formula bar:
 
-    ![Using the label "Hello World"](./media/working-with-formulas/label-hello-world.png)
+    ![Using the label "Hello World."](./media/working-with-formulas/label-hello-world.png)
 
     The label reflects this new value as you type it.  The screen may show yellow exclamation-point icons while you type. These icons indicate errors, but they'll go away when you finish entering a valid value. For example, a string without double quotation marks on both ends isn't valid.
 
@@ -73,33 +79,33 @@ In Excel, you can enter a specific piece of data, such as the number **42** or t
    > In Power Apps, you don't precede a formula with an equals sign or a plus sign as you do in Excel. The formula bar treats anything you type there as a formula by default. You also don't surround a formula with double quotation marks ("), as you did earlier to specify a string of text.
 5. In the **[Text](controls/properties-core.md)** property of the label, replace **"Hello World"** with **Sum(1,2,3)**.
 
-    ![Typing the partial function Sum(1,2,3 without a closing parenthesis shows errors](./media/working-with-formulas/label-sum-partial.png)
+    ![Typing the partial function Sum(1,2,3 without a closing parenthesis shows errors.](./media/working-with-formulas/label-sum-partial.png)
 
     While you type, the formula bar helps you by showing the description and the expected arguments for this function.  As with the final double quotation mark in **"Hello World"**, the screen shows yellow exclamation points to indicate an error until you type the final parenthesis of this formula:
 
-    ![Using the complete formula Sum(1,2,3)](./media/working-with-formulas/label-sum.png)
+    ![Using the complete formula Sum(1,2,3).](./media/working-with-formulas/label-sum.png)
 
 ## Change a value based on input
 
 In Excel, you type **=A1+A2** into a cell to show the sum of whatever values cells **A1** and **A2** contain. If either or both of those values change, the cell that contains the formula automatically shows the updated result.
 
-![Animation of Excel recalculating the sum of two numbers](./media/working-with-formulas/excel-recalc.gif)
+![Animation of Excel recalculating the sum of two numbers.](./media/working-with-formulas/excel-recalc.gif)
 
 In Power Apps, you can achieve a similar result by adding controls to a screen and setting their properties. This example shows a label control named **Label1** and two **[Text input](controls/control-text-input.md)** controls, named **TextInput1** and **TextInput2**.
 
-![Illustration of Power Apps recalculating the sum of two numbers](./media/working-with-formulas/recalc1.png)
+![Illustration of Power Apps recalculating the sum of two numbers.](./media/working-with-formulas/recalc1.png)
 
 Regardless of what numbers you type in the text-input controls, the label always shows the sum of those numbers because its **[Text](controls/properties-core.md)** property is set to this formula:
 
 `TextInput1 + TextInput2`
 
-![Animation of Power Apps recalculating the sum of two numbers](./media/working-with-formulas/recalc2.gif)
+![Animation of Power Apps recalculating the sum of two numbers.](./media/working-with-formulas/recalc2.gif)
 
 In Excel, you can use conditional-formatting formulas to show, for example, negative values in red. In Power Apps, you can use formulas to determine not only the primary value of a control but also properties such as formatting. In the next example, a formula for the **[Color](controls/properties-color-border.md)** property of the label automatically shows negative values in red. The **[If](functions/function-if.md)** function should look very familiar from Excel:
 
 `If( Value(Label1.Text) < 0, Red, Black )`
 
-![Animation of conditional formatting](media/working-with-variables/recalc-color.gif)
+![Animation of conditional formatting.](media/working-with-variables/recalc-color.gif)
 
 ## Change a color based on user input
 
@@ -107,29 +113,29 @@ You can configure your app with formulas so that users can change your app's app
 
 1. Remove the controls from the previous procedures, or create a blank app as you did previously, and add three slider controls to it:
 
-    ![Insert a slider control](./media/working-with-formulas/insert-slider.png)
+    ![Insert a slider control.](./media/working-with-formulas/insert-slider.png)
 2. Arrange the sliders so they don't overlap, add three labels, and configure them to show **Red**, **Green**, and **Blue**:
 
-    ![Arrange sliders and add labels for each color component](./media/working-with-formulas/three-sliders.png)
+    ![Arrange sliders and add labels for each color component.](./media/working-with-formulas/three-sliders.png)
 3. Set the **Max** property of each slider to 255, which is the maximum value of a color component for the **[RGBA](functions/function-colors.md)** function.
 
     You can specify the **Max** property by selecting it on the **Content** tab or in the property list:
 
-    ![Change the maximum value of each slider](./media/working-with-formulas/three-sliders-max.png)
+    ![Change the maximum value of each slider.](./media/working-with-formulas/three-sliders-max.png)
 4. Select the screen by clicking away from any control, and then set the screen's **[Fill](controls/properties-color-border.md)** property to this formula:<br>**RGBA( Slider1.Value, Slider2.Value, Slider3.Value, 1 )**
 
     As already described, you access control properties by using the **.** operator.  **Slider1.Value** refers to the slider's **[Value](controls/properties-core.md)** property, which reflects where the user has placed the slider between the **Min** and **Max** values. As you type this formula, each control that it contains is color coded between the screen and the formula bar:
 
-    ![Change the formula for the background fill color of the screen, but not yet complete](./media/working-with-formulas/three-sliders-partial-rgba.png)
+    ![Change the formula for the background fill color of the screen, but not yet complete.](./media/working-with-formulas/three-sliders-partial-rgba.png)
 
     As you type the closing parenthesis, the screen's background will change to dark gray based on the default value of each slider, which is **50**. At the moment when you finish typing the formula, it's calculated and used as the value of the background fill color. You can interact with your app while in the default workspace without needing to open Preview:
 
-    ![Change the maximum value of each slider](./media/working-with-formulas/three-sliders-complete-rgba.png)
+    ![Change the maximum value of each slider 1.](./media/working-with-formulas/three-sliders-complete-rgba.png)
 5. Adjust the sliders, and see how your changes affect the background color.
 
     As each slider changes, the formula that contains the **[RGBA](functions/function-colors.md)** function is recalculated, which immediately changes how the screen appears.
 
-    ![Change the formula for the background fill color of the screen, now complete](./media/working-with-formulas/color-sliders.gif)
+    ![Change the formula for the background fill color of the screen, now complete.](./media/working-with-formulas/color-sliders.gif)
 
 ## Manage app behavior
 
@@ -143,7 +149,7 @@ You can take more than one action in a behavior formula if you separate function
 
 The properties list shows properties alphabetically, but you can also view all the properties of a control, organized by category, if you select the **Advanced** option on the **View** tab:
 
-![Advanced view](./media/working-with-formulas/advanced-open.png)
+![Advanced view.](./media/working-with-formulas/advanced-open.png)
 
 You can edit formulas directly within this view.  With the control selector at the top of the pane, you can quickly find a control to work with.  And with the property search, you can quickly find a property of that control.
 
@@ -153,6 +159,6 @@ Initially, this view shows the most important properties.  To reveal all the pro
 
 As you type a formula in the formula bar, different syntax elements appear in different colors to improve readability and help you understand long formulas. Here is the color code list in Power Apps.
 
-![syntax highlighting](./media/working-with-formulas/syntax-highlighting.png)
+![syntax highlighting.](./media/working-with-formulas/syntax-highlighting.png)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -7,7 +7,7 @@ ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "how-to"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -15,6 +15,7 @@ applies_to:
 author: "Mattp123"
 ms.assetid: b2b64771-083b-42f9-a3d5-2218f9d8a713
 caps.latest.revision: 63
+ms.subservice: mda-maker
 ms.author: "matp"
 manager: "kvivek"
 search.audienceType: 
@@ -46,7 +47,7 @@ To add a timer control to a form:
 6.  In the classic form designer, select the **Insert** tab, and then on the toolbar select **Timer**. 
 
     > [!div class="mx-imgBorder"] 
-    > ![Insert timer control](media/insert-timer-control.png)
+    > ![Insert timer control.](media/insert-timer-control.png)
 
 7.  On the Timer Control properties page, enter or select the properties that you want, and then select **OK**. 
 

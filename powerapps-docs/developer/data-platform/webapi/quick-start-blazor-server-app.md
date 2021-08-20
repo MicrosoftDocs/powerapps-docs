@@ -1,7 +1,7 @@
 ---
 title: "Quickstart: Blazor Server Web API sample (C#) (Microsoft Dataverse)| Microsoft Docs"
 description: "This sample demonstrates how to authenticate with a Microsoft Dataverse from a Blazor Server application and then call a basic WhoAmI Web API function."
-ms.custom: ""
+ms.custom: intro-internal
 ms.date: 07/07/2020
 ms.service: powerapps
 ms.topic: "article"
@@ -41,11 +41,11 @@ You'll authenticate and use <xref:System.Net.Http.HttpClient> to send a `GET` re
 
 1. Create a new Blazor Server app using .NET Core 3.1 but don't choose **Create** just yet.
 
-    ![Start a Blazor Server project](../media/quick-start-blazor-server-app-csharp-1.png)
+    ![Start a Blazor Server project.](../media/quick-start-blazor-server-app-csharp-1.png)
 
 1. Select **Change** under **Authentication** and then choose **Work or School Accounts**. 
 
-    ![Choose authentication](../media/quick-start-blazor-server-app-csharp-2.png)
+    ![Choose authentication.](../media/quick-start-blazor-server-app-csharp-2.png)
 
 1. Choose the appropriate dropdown and then replace `CRM520451` in the example with your environment's name.
 
@@ -57,7 +57,7 @@ By default, the template will create a registered application. Connecting to Dat
 
 1. Choose **Authentication**, select (check) **Access tokens** under **Implicit grant**, and then click **Save**.
 
-    ![Implicit grant](../media/quick-start-blazor-server-app-csharp-3.png)
+    ![Implicit grant.](../media/quick-start-blazor-server-app-csharp-3.png)
 
 1. Choose **Certificates & secrets** and then select **New client secret**.
 
@@ -65,7 +65,7 @@ By default, the template will create a registered application. Connecting to Dat
 
 1. Select the clipboard icon next to your secret to copy it.
 
-    ![Copy secret](../media/quick-start-blazor-server-app-csharp-4.png)
+    ![Copy secret.](../media/quick-start-blazor-server-app-csharp-4.png)
 
 1. In your Blazor Server app, open `appsettings.json` and add an entry for "ClientSecret". The Active Directory settings should look like this:
     
@@ -88,7 +88,7 @@ By default, the template will create a registered application. Connecting to Dat
 
 1. Choose **Delegated permissions** and select (check) **user_impersonation**, and then click **Add permissions**
 
-    ![Add permission](../media/quick-start-blazor-server-app-csharp-5.png)
+    ![Add permission.](../media/quick-start-blazor-server-app-csharp-5.png)
 
 1. Select the newly created permission to highlight it, and then shoose **Grant admin consent for organization** (your environment name is shown)
 
@@ -255,7 +255,7 @@ The application is now ready!
 
 Press F5 to run the program. The output should look like this:
 
-![Connection success](../media/quick-start-blazor-server-app-csharp-6.png)
+![Connection success.](../media/quick-start-blazor-server-app-csharp-6.png)
 
 **Congratulations!** You have successfully connected to the Web API.
 

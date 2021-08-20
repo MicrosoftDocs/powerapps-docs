@@ -7,6 +7,7 @@ ms.service: powerapps
 ms.component: cds
 ms.topic: article
 ms.date: 08/12/2020
+ms.subservice: dataverse-maker
 ms.author: matp
 search.audienceType: 
   - maker
@@ -30,7 +31,7 @@ The solution checker analyzes these solution components:
 Solution checker works with unmanaged solutions that can be exported from an environment. 
 
 > [!NOTE]
-> - This topic explains how to run solution checker from the Power Apps maker portal. A PowerShell module is also available that you can use to interact directly with the service. The Microsoft.PowerApps.Checker.PowerShell module can be used for analysis of managed and unmanaged solutions for supported versions of on-premises and online environments, or to automate and integrate the service into your build and release pipelines. More information: [Microsoft.PowerApps.Checker.PowerShell Overview]( /powershell/powerapps/overview?view=pa-ps-latest#get-started-using-the-microsoftpowerappscheckerpowershell-module) 
+> - This topic explains how to run solution checker from the Power Apps maker portal. A PowerShell module is also available that you can use to interact directly with the service. The Microsoft.PowerApps.Checker.PowerShell module can be used for analysis of managed and unmanaged solutions for supported versions of on-premises and online environments, or to automate and integrate the service into your build and release pipelines. More information: [Microsoft.PowerApps.Checker.PowerShell Overview]( /powershell/powerapps/overview?view=pa-ps-latest#get-started-using-the-microsoftpowerappscheckerpowershell-module&preserve-view=true) 
 > - Solution checker supports global variables for ECMAScript 2015 (ES6) and up to ECMAScript 2018 (ES9) syntax. When JavaScript is detected using global variables later than ES6 or syntax later than ES9, a web-unsupported-syntax issue for the web resource is reported.
 > - Use of solution checker does not guarantee that a solution import will be successful. The static analysis checks performed against the solution do not know the configured state of the destination environment and import success may be dependent on other solutions or configurations in the environment. 
 <!-- 
@@ -42,7 +43,7 @@ The Solution checker is enabled by default in every Dataverse environment. A **S
 3. On the toolbar, select **Solution checker** and then select **Install** – this opens the Microsoft AppSource page. You need to allow pop-up windows if your browser blocks the page from opening. 
 
    > [!div class="mx-imgBorder"]
-   > ![Install solution checker](media/solution-checker-install.png "Install solution checker")
+   > ![Install solution checker.](media/solution-checker-install.png "Install solution checker")
 
 4. Select **Free Trial** on the AppSource page. 
 
@@ -57,12 +58,12 @@ The Solution checker is enabled by default in every Dataverse environment. A **S
 3. Next to the unmanaged solution that you want to analyze, select **...**, point to **Solution checker**, and then select **Run**. 
 
    > [!div class="mx-imgBorder"]
-   > ![Run solution checker command](media/solution-checker-run.png "Run solution checker command")
+   > ![Run solution checker command.](media/solution-checker-run.png "Run solution checker command")
 
 4.	The status pane located on the upper right of the **Solutions** page displays **Solution checker running**. 
 
     > [!div class="mx-imgBorder"]
-    > ![Solution checker status](media/solution-checker-status.png "Solution checker status")
+    > ![Solution checker status.](media/solution-checker-status.png "Solution checker status")
    
     Note the following:
     - The solution checker can take a few minutes to complete the analysis. 
@@ -101,7 +102,7 @@ When a solution check is completed, you can view the analysis report in the port
 3. Select an Issue to view the details and guidance on how to resolve.
 
     > [!div class="mx-imgBorder"] 
-    > ![Solution checker view results](media/solution-checker-viewresults.png "Solution checker view results")
+    > ![Solution checker view results.](media/solution-checker-viewresults.png "Solution checker view results")
 
 The solution check results are also available for download. The solution checker zip file is downloaded to the folder specified by your web browser.The download report is in [!INCLUDE [pn-excel-short](../../includes/pn-excel-short.md)] format and contains several visualizations and columns that assist you in identifying the impact, type, and location of each issue detected in your solution. A link to detailed guidance about how to resolve the issue is also provided. 
 
@@ -171,14 +172,12 @@ Here's a summary of each column in the report.
 | Canvas App  | [app-formula-issues-low](https://go.microsoft.com/fwlink/?LinkID=398563&error=app-formula-issues-low&client=PAChecker)  | Refer to Power Apps formula references for additional details. | 
 | Canvas App  | [app-use-delayoutput-text-input](https://go.microsoft.com/fwlink/?LinkID=398563&error=app-use-delayoutput-text-input&client=PAChecker)  | Use delayed load in some scenarios to improve performance. | 
 | Canvas App  | [app-reduce-screen-controls](https://go.microsoft.com/fwlink/?LinkID=398563&error=app-reduce-screen-controls&client=PAChecker)  | Limit the number of app controls for improved performance.  | 
-
 | Canvas App  | [app-include-accessible-label](https://go.microsoft.com/fwlink/?LinkID=398563&error=app-include-accessible-label&client=PAChecker)  | Use explicit labels to improve app accessibility. | 
 | Canvas App  | [app-include-alternative-input](https://go.microsoft.com/fwlink/?LinkID=398563&error=app-include-alternative-input&client=PAChecker)  | Ensure all interactive elements are accessible to alternative inputs.  | 
 | Canvas App  | [app-avoid-autostart](https://go.microsoft.com/fwlink/?LinkID=398563&error=app-avoid-autostart&client=PAChecker)  | Avoid using autostart on players within an app.  | 
 
-
-
 ### See also
+
 [Best practices and guidance for the Dataverse](../../developer/data-platform/best-practices/index.md)<br />
 [Best practices and guidance for model-driven apps](../../developer/model-driven-apps/best-practices/index.md)<br />
 [Common issues and resolutions for Solution Checker](common-issues-resolutions-solution-checker.md)<br />

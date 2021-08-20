@@ -1,7 +1,7 @@
 ---
 title: "KnowledgeArticle table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the KnowledgeArticle table/entity."
-ms.date: 03/04/2021
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -36,7 +36,6 @@ Organizational knowledge for internal and external use.
 |GrantAccess|<xref href="Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 |ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/knowledgearticles(*knowledgearticleid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/knowledgearticles<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
@@ -83,6 +82,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [LanguageLocaleId](#BKMK_LanguageLocaleId)
 - [MajorVersionNumber](#BKMK_MajorVersionNumber)
 - [MinorVersionNumber](#BKMK_MinorVersionNumber)
+- [msdyn_ingestedarticleurl](#BKMK_msdyn_ingestedarticleurl)
+- [msdyn_isingestedarticle](#BKMK_msdyn_isingestedarticle)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
@@ -411,6 +412,49 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MinValue|0|
 |RequiredLevel|SystemRequired|
 |Type|Integer|
+
+
+### <a name="BKMK_msdyn_ingestedarticleurl"></a> msdyn_ingestedarticleurl
+
+**Added by**: Knowledge Management Patch Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Ingested article URL|
+|DisplayName|Ingested Article URL|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|msdyn_ingestedarticleurl|
+|MaxLength|2048|
+|RequiredLevel|None|
+|Type|String|
+
+
+### <a name="BKMK_msdyn_isingestedarticle"></a> msdyn_isingestedarticle
+
+**Added by**: Knowledge Management Patch Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Value is true for all Ingested articles|
+|DisplayName|Is Ingested Article|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|msdyn_isingestedarticle|
+|RequiredLevel|None|
+|Type|Boolean|
+
+#### msdyn_isingestedarticle Choices/Options
+
+|Value|Label|
+|-----|-----|
+|1|Yes|
+|0|No|
+
+**DefaultValue**: False
+
 
 
 ### <a name="BKMK_OverriddenCreatedOn"></a> OverriddenCreatedOn
@@ -1496,7 +1540,6 @@ Listed by **SchemaName**.
 - [knowledgearticle_previousarticle_contentid](#BKMK_knowledgearticle_previousarticle_contentid)
 - [knowledgearticle_PostFollows](#BKMK_knowledgearticle_PostFollows)
 - [knowledgearticle_activity_parties](#BKMK_knowledgearticle_activity_parties)
-- [knowledgearticle_PostRegardings](#BKMK_knowledgearticle_PostRegardings)
 - [knowledgearticle_parentarticle_contentid](#BKMK_knowledgearticle_parentarticle_contentid)
 - [KnowledgeArticle_Phonecalls](#BKMK_KnowledgeArticle_Phonecalls)
 - [KnowledgeArticle_Emails](#BKMK_KnowledgeArticle_Emails)
@@ -1938,21 +1981,6 @@ Same as activityparty table [knowledgearticle_activity_parties](activityparty.md
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_knowledgearticle_PostRegardings"></a> knowledgearticle_PostRegardings
-
-Same as postregarding table [knowledgearticle_PostRegardings](postregarding.md#BKMK_knowledgearticle_PostRegardings) Many-To-One relationship.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|postregarding|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|knowledgearticle_PostRegardings|
-|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
 ### <a name="BKMK_knowledgearticle_parentarticle_contentid"></a> knowledgearticle_parentarticle_contentid
 
 Same as knowledgearticle table [knowledgearticle_parentarticle_contentid](knowledgearticle.md#BKMK_knowledgearticle_parentarticle_contentid) Many-To-One relationship.
@@ -2026,7 +2054,6 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [lk_knowledgearticle_modifiedonbehalfby](#BKMK_lk_knowledgearticle_modifiedonbehalfby)
 - [user_knowledgearticle](#BKMK_user_knowledgearticle)
 - [team_knowledgearticle](#BKMK_team_knowledgearticle)
-- [owner_knowledgearticle](#BKMK_owner_knowledgearticle)
 - [business_unit_knowledgearticle](#BKMK_business_unit_knowledgearticle)
 - [processstage_knowledgearticle](#BKMK_processstage_knowledgearticle)
 - [knowledgearticle_languagelocaleid](#BKMK_knowledgearticle_languagelocaleid)
@@ -2061,10 +2088,6 @@ See systemuser Table [user_knowledgearticle](systemuser.md#BKMK_user_knowledgear
 ### <a name="BKMK_team_knowledgearticle"></a> team_knowledgearticle
 
 See team Table [team_knowledgearticle](team.md#BKMK_team_knowledgearticle) One-To-Many relationship.
-
-### <a name="BKMK_owner_knowledgearticle"></a> owner_knowledgearticle
-
-See owner Table [owner_knowledgearticle](owner.md#BKMK_owner_knowledgearticle) One-To-Many relationship.
 
 ### <a name="BKMK_business_unit_knowledgearticle"></a> business_unit_knowledgearticle
 

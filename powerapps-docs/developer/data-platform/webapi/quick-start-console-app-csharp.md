@@ -1,7 +1,7 @@
 ---
 title: "Quick Start: Web API sample (C#) (Microsoft Dataverse)| Microsoft Docs"
 description: "Demonstrates how to authenticate with a Microsoft Dataverse Server and then call a basic Web API operation, the WhoAmI Function"
-ms.custom: ""
+ms.custom: intro-internal
 ms.date: 03/03/2021
 ms.service: powerapps
 ms.topic: "article"
@@ -41,7 +41,7 @@ You will authenticate and use an <xref:System.Net.Http.HttpClient> to send a `GE
 
 1. Create a new Console App (.NET Framework) project using **.NET Framework 4.6.2**
 
-    ![Start a console app project](../media/quick-start-web-api-console-app-csharp-1.png)
+    ![Start a console app project.](../media/quick-start-web-api-console-app-csharp-1.png)
 
     > [!NOTE]
     > This screenshot shows the name `WebAPIQuickStart`, but you can choose to name the project and solution whatever you want.
@@ -57,12 +57,12 @@ You will authenticate and use an <xref:System.Net.Http.HttpClient> to send a `GE
 
 1. In **Solution Explorer**, right-click the project you created and select **Manage NuGet Packages...** in the context menu.
 
-    ![Add NuGet package](../media/quick-start-web-api-console-app-csharp-2.png)
+    ![Add NuGet package.](../media/quick-start-web-api-console-app-csharp-2.png)
 
 1. Browse for the  `Microsoft.IdentityModel.Clients.ActiveDirectory` NuGet package.
 1. Select **Version** 2.29.0 and install it.
 
-    ![Install Microsoft.IdentityModel.Clients.ActiveDirectory NuGet package](../media/quick-start-web-api-console-app-csharp-3.png)
+    ![Install Microsoft.IdentityModel.Clients.ActiveDirectory NuGet package.](../media/quick-start-web-api-console-app-csharp-3.png)
 
     > [!IMPORTANT]
     > **Do not install the latest version of this NuGet package.**
@@ -74,7 +74,7 @@ You will authenticate and use an <xref:System.Net.Http.HttpClient> to send a `GE
 
 1. Browse for the `Newtonsoft.Json` NuGet package and install the latest version.
 
-    ![Install the Microsoft.IdentityModel.Clients.ActiveDirectory NuGet package](../media/quick-start-web-api-console-app-csharp-4.png)
+    ![Install the Microsoft.IdentityModel.Clients.ActiveDirectory NuGet package.](../media/quick-start-web-api-console-app-csharp-4.png)
 
 ## Edit Program.cs
 
@@ -152,7 +152,7 @@ You will authenticate and use an <xref:System.Net.Http.HttpClient> to send a `GE
     ```
     To get the `url` value for your environment, follow these steps:
 
-    1. From the [https://make.powerapps.com](https://make.powerapps.com) site with the appropriate environment selected, select **Settings** ![Settings button](media/settings-icon.png) and choose **Advanced Customizations**. Your browser will be redirected to the Dynamics 365 page.
+    1. From the [https://make.powerapps.com](https://make.powerapps.com) site with the appropriate environment selected, select **Settings** ![Settings button.](media/settings-icon.png) and choose **Advanced Customizations**. Your browser will be redirected to the Dynamics 365 page.
     1. On the Dynamics 365 page, select **Settings > Customizations > Developer Resources**.
     1. On the **Developer Resources** page, look below **Instance Web API** and copy the Service Root URL value. 
 

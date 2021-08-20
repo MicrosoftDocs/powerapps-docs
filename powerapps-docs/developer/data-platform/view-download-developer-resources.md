@@ -8,6 +8,7 @@ ms.custom:
 ms.topic: article
 ms.assetid: e200d242-ff3f-48e5-af32-aed050e02441
 author: Mattp123
+ms.subservice: dataverse-developer
 ms.author: matp
 manager: kvivek
 ms.reviewer: "pehecke"
@@ -22,8 +23,6 @@ search.app:
 
 # View or download developer resources
 
-[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
-
 This article provides resources for developers and information about the specific environment you're working with.
 
 ## View the Developer Resources page for your environment
@@ -32,15 +31,15 @@ This article provides resources for developers and information about the specifi
 
 1. Select the **Settings** button in the top-right corner, and select **Advanced Settings**.
 
-    ![Advanced settings](media/advanced-customizations-menu.png)
+    ![Advanced settings.](media/advanced-customizations-menu.png)
 
 1. On the **Settings** page, select the drop-down arrow next to **Settings**, and select **Customizations**.
 
-    ![Select customizations](media/dev-customization.png)
+    ![Select customizations.](media/dev-customization.png)
 
 1. On the **Customizations** page, select **Developer Resources** to view the page with resources for developers.
 
-    ![Developer Resources page](media/developer-resources-page.png)
+    ![Developer Resources page.](media/developer-resources-page.png)
 
 The following sections explain the information available on the developer resources page.
 
@@ -72,6 +71,8 @@ You can download the WSDL for this service here, but usually you will use the Cr
 - [Create early bound table classes with the code generation tool (CrmSvcUtil.exe)](/powerapps/developer/data-platform/org-service/generate-early-bound-classes)
 - [Use the Organization Service](/powerapps/developer/data-platform/org-service/overview)
 
+[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
+
 ### Instance Reference Information
 
 This information uniquely describes your instance. There is a GUID **ID** and a **Unique Name**.
@@ -92,4 +93,3 @@ More information: [Discover the URL for your organization using the Web API](/po
 This is the endpoint address for the SOAP version of the Discovery service to use for your instance. You can also download the service document here.
 More information: [Discover the URL for your organization using the Organization service](/powerapps/developer/data-platform/org-service/discovery-service)
   
-[!INCLUDE[footer-include](../../includes/footer-banner.md)]

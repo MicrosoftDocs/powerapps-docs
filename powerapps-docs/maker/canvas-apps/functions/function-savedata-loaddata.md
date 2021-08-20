@@ -1,18 +1,22 @@
 ---
-title: SaveData, LoadData, and ClearData functions | Microsoft Docs
-description: Reference information, including syntax, for the SaveData, LoadData, and ClearData functions in Power Apps
+title: SaveData, LoadData, and ClearData functions in Power Apps
+description: Reference information including syntax and examples for the SaveData, LoadData, and ClearData functions in Power Apps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: nabuthuk
-ms.date: 03/23/2021
+ms.date: 07/19/2021
+ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - gregli-msft
+  - nkrb
 ---
 # SaveData, LoadData, and ClearData functions in Power Apps
 Saves and reloads a [collection](../working-with-data-sources.md#collections) from the app host's storage.
@@ -25,7 +29,9 @@ The **LoadData** function reloads a collection by name that was previously saved
 The **ClearData** function clears the storage under a specific name or clears all storage associated with the app if no name is provided.  
 
 > [!NOTE]
-> The name shared between **SaveData**, **LoadData**, and **ClearData** is a key, not a file name. It need not be complex as names are unique to each app and there is no danger of name conflict. The name must not contain any of these characters: `*".?:\<>|/`.
+> * The name shared between **SaveData**, **LoadData**, and **ClearData** is a key, not a file name. It need not be complex as names are unique to each app and there is no danger of name conflict. The name must not contain any of these characters: `*".?:\<>|/`. 
+> * ClearData is currently only supported for Power Apps running in Teams. It is not yet supported for Power Apps running in a mobile player.
+> * SaveData is limited to 1 megabyte of data for Power Apps running in Teams.  There is no fixed limit for Power Apps running in a mobile player but there are practical limits discussed below.
 
 Use these functions to improve app-startup performance by:
 
@@ -88,7 +94,7 @@ You must have a device to work through this example as it uses the **LoadData** 
 
 1. Add a [**Text input**](../controls/control-text-input.md) control and a [**Camera**](../controls/control-camera.md) control and arrange them roughly as shown:
     > [!div class="mx-imgBorder"]  
-    > ![A text input and camera control added to a blank screen](media/function-savedata-loaddata/simple-text-camera.png)
+    > ![A text input and camera control added to a blank screen.](media/function-savedata-loaddata/simple-text-camera.png)
 
 1. Add a [**Button**](../controls/control-button.md) control.
 
@@ -131,25 +137,25 @@ You must have a device to work through this example as it uses the **LoadData** 
 
 1. When prompted, select the **MyItems** collection as the data source for this gallery.  This will set the **Items** property of the **Gallery** control: 
     > [!div class="mx-imgBorder"] 
-    > ![Gallery selection of data source](media/function-savedata-loaddata/simple-gallery-collection.png)
+    > ![Gallery selection of data source.](media/function-savedata-loaddata/simple-gallery-collection.png)
     The image control in the gallery template should default its **Image** property to **ThisItem.Picture** and the label controls should both default their **Text** properties to **ThisItem.Item**.  Check these formulas if after adding items in the following steps you don't see anything in the gallery. 
 
 1. Position the control to the right of the other controls: 
     > [!div class="mx-imgBorder"] 
-    > ![Gallery repositioned to the right of the screen](media/function-savedata-loaddata/simple-gallery-placed.png)
+    > ![Gallery repositioned to the right of the screen.](media/function-savedata-loaddata/simple-gallery-placed.png)
 
 1. Save your app.  If it's the first time it has been saved, there's no need to publish it. If it's not the first time, publish the app after you save.
 
 1. Open your app on a device such as a phone or tablet.  **SaveData** and **LoadData** can't be used in Studio or in a web browser.  Refresh your app list if you don't see your app immediately, it can take a few seconds for the app to appear on your device.  Signing out and back in to your account can help too.
     > [!div class="mx-imgBorder"] 
-    > ![App running with no items added](media/function-savedata-loaddata/simple-mobile.png) 
+    > ![App running with no items added.](media/function-savedata-loaddata/simple-mobile.png) 
     Once your app has been downloaded, you can disconnect from the network and run the app offline.
 
 1. Enter the name and take a picture of an item.
 
 2. Select the **Add Item** button.  Repeat adding items a couple of times to load up your collection.
     > [!div class="mx-imgBorder"] 
-    > ![App running with three items added](media/function-savedata-loaddata/simple-mobile-with3.png) 
+    > ![App running with three items added.](media/function-savedata-loaddata/simple-mobile-with3.png) 
 
 1. Select the **Save Data** button.  This will save the data in your collection to your local device.
 
@@ -157,15 +163,15 @@ You must have a device to work through this example as it uses the **LoadData** 
 
 1. Launch the app again.  The collection in memory will again show as empty in the gallery.
     > [!div class="mx-imgBorder"] 
-    > ![App again running with no items added](media/function-savedata-loaddata/simple-mobile.png) 
+    > ![App again running with no items added.](media/function-savedata-loaddata/simple-mobile.png) 
 
 1. Select the **Load Data** button.  The collection will be repopulated from the stored data on your device and your items will be back in the gallery.  The collection was empty before this button calls the **LoadData** function; there was no need to call **Collect** or **ClearCollect** before loading the data from storage.
     > [!div class="mx-imgBorder"] 
-    > ![App running with three items restored after calling the LoadData function](media/function-savedata-loaddata/simple-mobile-load1.png) 
+    > ![App running with three items restored after calling the LoadData function.](media/function-savedata-loaddata/simple-mobile-load1.png) 
 
 1. Select the **Load Data** button again.  The stored data will be appended to the end of the collection and a scroll bar will appear on the gallery.  If you would like to replace rather than append, use the **Clear** function first to clear out the collection before calling the **LoadData** function.
     > [!div class="mx-imgBorder"] 
-    > ![App running with six items restored after calling the LoadData function twice](media/function-savedata-loaddata/simple-mobile-load2.png) 
+    > ![App running with six items restored after calling the LoadData function twice.](media/function-savedata-loaddata/simple-mobile-load2.png) 
  
 ### More advanced offline example
 

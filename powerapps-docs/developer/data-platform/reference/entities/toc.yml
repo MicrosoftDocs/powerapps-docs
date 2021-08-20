@@ -8,6 +8,8 @@
   href: actioncard.md
 - name: ActionCardUserState
   href: actioncarduserstate.md
+- name: activityfileattachment
+  href: activityfileattachment.md
 - name: ActivityMimeAttachment
   href: activitymimeattachment.md
 - name: ActivityParty
@@ -30,12 +32,12 @@
   href: appmodule.md
 - name: AppModuleComponent
   href: appmodulecomponent.md
+- name: appnotification
+  href: appnotification.md
 - name: Appointment
   href: appointment.md
 - name: AsyncOperation
   href: asyncoperation.md
-- name: Attachment
-  href: attachment.md
 - name: Attribute
   href: attribute.md
 - name: AttributeImageConfig
@@ -56,8 +58,6 @@
   href: businessunitnewsarticle.md
 - name: Calendar
   href: calendar.md
-- name: CalendarRule
-  href: calendarrule.md
 - name: CallbackRegistration
   href: callbackregistration.md
 - name: CanvasApp
@@ -70,8 +70,6 @@
   href: category.md
 - name: ColumnMapping
   href: columnmapping.md
-- name: ComplexControl
-  href: complexcontrol.md
 - name: Connection
   href: connection.md
 - name: connectionreference
@@ -130,6 +128,8 @@
   href: entityanalyticsconfig.md
 - name: EntityDataProvider
   href: entitydataprovider.md
+- name: EntityDataSource
+  href: entitydatasource.md
 - name: EntityImageConfig
   href: entityimageconfig.md
 - name: EntityKey
@@ -154,10 +154,12 @@
   href: fieldpermission.md
 - name: FieldSecurityProfile
   href: fieldsecurityprofile.md
-- name: FileAttachment
-  href: fileattachment.md
 - name: FixedMonthlyFiscalCalendar
   href: fixedmonthlyfiscalcalendar.md
+- name: flowmachine
+  href: flowmachine.md
+- name: flowmachinegroup
+  href: flowmachinegroup.md
 - name: flowsession
   href: flowsession.md
 - name: Goal
@@ -166,8 +168,6 @@
   href: goalrollupquery.md
 - name: Import
   href: import.md
-- name: ImportData
-  href: importdata.md
 - name: ImportEntityMapping
   href: importentitymapping.md
 - name: ImportFile
@@ -188,6 +188,8 @@
   href: kbarticlecomment.md
 - name: KbArticleTemplate
   href: kbarticletemplate.md
+- name: KeyVaultReference
+  href: keyvaultreference.md
 - name: KnowledgeArticle
   href: knowledgearticle.md
 - name: KnowledgeArticleViews
@@ -196,8 +198,6 @@
   href: knowledgebaserecord.md
 - name: LanguageLocale
   href: languagelocale.md
-- name: LanguageProvisioningState
-  href: languageprovisioningstate.md
 - name: Letter
   href: letter.md
 - name: LookUpMapping
@@ -208,8 +208,8 @@
   href: mailboxtrackingfolder.md
 - name: MailMergeTemplate
   href: mailmergetemplate.md
-- name: ManagedProperty
-  href: managedproperty.md
+- name: ManagedIdentity
+  href: managedidentity.md
 - name: Metric
   href: metric.md
 - name: MobileOfflineProfile
@@ -268,20 +268,32 @@
   href: msdyn_federatedarticleincident.md
 - name: msdyn_helppage
   href: msdyn_helppage.md
+- name: msdyn_kalanguagesetting
+  href: msdyn_kalanguagesetting.md
 - name: msdyn_kmfederatedsearchconfig
   href: msdyn_kmfederatedsearchconfig.md
+- name: msdyn_kmpersonalizationsetting
+  href: msdyn_kmpersonalizationsetting.md
 - name: msdyn_knowledgearticleimage
   href: msdyn_knowledgearticleimage.md
 - name: msdyn_knowledgearticletemplate
   href: msdyn_knowledgearticletemplate.md
 - name: msdyn_knowledgeinteractioninsight
   href: msdyn_knowledgeinteractioninsight.md
+- name: msdyn_knowledgepersonalfilter
+  href: msdyn_knowledgepersonalfilter.md
+- name: msdyn_knowledgesearchfilter
+  href: msdyn_knowledgesearchfilter.md
 - name: msdyn_knowledgesearchinsight
   href: msdyn_knowledgesearchinsight.md
 - name: msdyn_nonrelationalds
   href: msdyn_nonrelationalds.md
 - name: msdyn_odatav4ds
   href: msdyn_odatav4ds.md
+- name: msdyn_pminferredtask
+  href: msdyn_pminferredtask.md
+- name: msdyn_pmrecording
+  href: msdyn_pmrecording.md
 - name: msdyn_richtextfile
   href: msdyn_richtextfile.md
 - name: msdyn_serviceconfiguration
@@ -310,16 +322,12 @@
   href: newprocess.md
 - name: OfficeGraphDocument
   href: officegraphdocument.md
-- name: OptionSet
-  href: optionset.md
 - name: Organization
   href: organization.md
 - name: organizationdatasyncsubscription
   href: organizationdatasyncsubscription.md
 - name: organizationdatasyncsubscriptionentity
   href: organizationdatasyncsubscriptionentity.md
-- name: Owner
-  href: owner.md
 - name: OwnerMapping
   href: ownermapping.md
 - name: package
@@ -348,10 +356,6 @@
   href: postfollow.md
 - name: PostLike
   href: postlike.md
-- name: PostRegarding
-  href: postregarding.md
-- name: PrincipalObjectAccess
-  href: principalobjectaccess.md
 - name: PrincipalObjectAttributeAccess
   href: principalobjectattributeaccess.md
 - name: Privilege
@@ -394,12 +398,8 @@
   href: ribbonmetadatatoprocess.md
 - name: Role
   href: role.md
-- name: RoleTemplate
-  href: roletemplate.md
 - name: RollupField
   href: rollupfield.md
-- name: RuntimeDependency
-  href: runtimedependency.md
 - name: SavedQuery
   href: savedquery.md
 - name: SavedQueryVisualization
@@ -426,8 +426,6 @@
   href: sharepointdocumentlocation.md
 - name: SharePointSite
   href: sharepointsite.md
-- name: SimilarityRule
-  href: similarityrule.md
 - name: SiteMap
   href: sitemap.md
 - name: SLA
@@ -456,28 +454,16 @@
   href: stagesolutionupload.md
 - name: Subject
   href: subject.md
-- name: SubscriptionStatisticsOffline
-  href: subscriptionstatisticsoffline.md
-- name: SubscriptionStatisticsOutlook
-  href: subscriptionstatisticsoutlook.md
-- name: SubscriptionSyncEntryOffline
-  href: subscriptionsyncentryoffline.md
-- name: SubscriptionSyncEntryOutlook
-  href: subscriptionsyncentryoutlook.md
 - name: SyncError
   href: syncerror.md
 - name: SystemForm
   href: systemform.md
 - name: SystemUser
   href: systemuser.md
-- name: SystemUserAuthorizationChangeTracker
-  href: systemuserauthorizationchangetracker.md
 - name: Task
   href: task.md
 - name: Team
   href: team.md
-- name: teammobileofflineprofilemembership
-  href: teammobileofflineprofilemembership.md
 - name: TeamTemplate
   href: teamtemplate.md
 - name: Template
@@ -486,8 +472,6 @@
   href: territory.md
 - name: Theme
   href: theme.md
-- name: TimeStampDateMapping
-  href: timestampdatemapping.md
 - name: TimeZoneDefinition
   href: timezonedefinition.md
 - name: TimeZoneLocalizedName
@@ -508,8 +492,6 @@
   href: userform.md
 - name: UserMapping
   href: usermapping.md
-- name: usermobileofflineprofilemembership
-  href: usermobileofflineprofilemembership.md
 - name: UserQuery
   href: userquery.md
 - name: UserQueryVisualization
@@ -518,8 +500,6 @@
   href: usersettings.md
 - name: WebResource
   href: webresource.md
-- name: WebWizard
-  href: webwizard.md
 - name: Workflow
   href: workflow.md
 - name: workflowbinary

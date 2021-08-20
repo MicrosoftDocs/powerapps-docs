@@ -1,21 +1,21 @@
 ### YamlMime:FAQ
 metadata:
-  title: Frequently asked questions about exporting Microsoft Dataverse table data to Azure Data Lake
-  description: Get answers to frequently asked questions about Power Apps export to Azure Data Lake.
+  title: Frequently asked questions about exporting Microsoft Dataverse table data to Azure Synapse Analytics and Azure Data Lake
+  description: Get answers to frequently asked questions about Power Apps Azure Synapse Link for Dataverse.
   author: sabinn-msft
   ms.service: powerapps
   ms.search.keywords: 
   ms.date: 02/10/2021
   ms.author: sabinn
   ms.reviewer: matp
-title: Export to Azure Data Lake FAQ
-summary: This article provides information on frequently asked questions about exporting Microsoft Dataverse table data to the Azure Data Lake.
+title: Azure Synapse Link for Dataverse FAQ
+summary: This article provides information on frequently asked questions about exporting Microsoft Dataverse table data to Azure Synapse Analytics and Azure Data Lake.
 sections:
 - name: General
   questions:
    - question: When should I use a yearly or monthly partition strategy?
      answer: |
-        For Dataverse tables where data volume is high within a year,we recommend you use monthly partitions. Doing so results in smaller files and better performance. Additionally, if the rows in Dataverse tables are updated frequently, splitting into multiple smaller files help improve performance in the case of in-place update scenarios.
+        For Dataverse tables where data volume is high within a year, we recommend you use monthly partitions. Doing so results in smaller files and better performance. Additionally, if the rows in Dataverse tables are updated frequently, splitting into multiple smaller files help improve performance in the case of in-place update scenarios.
    - question: When do I use Append only mode for a historical view of changes?
      answer: |
          Append only mode is the recommended option for writing Dataverse table data to the lake, especially when the data volumes are high within a partition with frequently changing data. Again, this is a commonly used and highly recommended option for enterprise customers. Additionally, you can choose to use this mode for scenarios where the intent is to incrementally review changes from Dataverse and process the changes for ETL, AI, and ML scenarios. Append only mode provides a history of changes, instead of the latest change or in place update, and enables several time series from AI scenarios, such as prediction or forecasting analytics based on historical values. 
@@ -32,15 +32,15 @@ sections:
         - Append-only: In this mode, when a Dataverse table row is deleted, it is not hard deleted from the destination. Instead, a row is added and set as isDeleted=True to the file in the corresponding data partition in Azure Data Lake.
    - question: What happens when I add a new table to sync to the data lake?
      answer: |
-        It is important to note that export to data lake simultaneously processes a fixed set of tables for initial sync at any given time. When a new table is added to the export to data lake profile, the incremental or delta sync for the existing tables are paused. While the delta messages for existing tables continue to queue, export to data lake won't process any messages from the delta queue until the initial sync for the newly added table is complete. This is true whether you create a new linked lake, a new export to data lake profile, or add a table to an existing profile. For new or existing profiles, we recommend that you add no more than 5 tables to sync to the data lake at a time. Adding more tables won't expedite the sync process. While initial sync for the newly added tables in ongoing, it will queue any delta changes on those tables into a single queue. Export to data lake won't process these deltas change until the initial sync for all previously added tables is complete.
+        It is important to note that Azure Synapse Link for Dataverse simultaneously processes a fixed set of tables for initial sync at any given time. When a new table is added to the profile, the incremental or delta sync for the existing tables are paused. While the delta messages for existing tables continue to queue, Azure Synapse Link won't process any messages from the delta queue until the initial sync for the newly added table is complete. This is true whether you create a new linked lake, a new profile, or add a table to an existing profile. For new or existing profiles, we recommend that you add no more than 5 tables to sync to the data lake at a time. Adding more tables won't expedite the sync process. While initial sync for the newly added tables in ongoing, it will queue any delta changes on those tables into a single queue. The Azure Synapse Link for Dataverse won't process these deltas change until the initial sync for all previously added tables is complete.
    - question: Does adding multiple Dataverse tables simultaneously to the lake impact performance?
      answer: |
-        Adding multiple tables to export to data lake will impact performance in following scenarios: 
-        - Initial sync: When the tables are first added, there is a fixed set of tables which are synched for initial data at a time. We recommend adding no more than 5 tables at a time to new or existing linked lake or export to data lake profile. Adding more than the recommend number of tables doesn't expedite the sync since only the fixed set of tables are processed at a given time.  
-        - Delta sync: After the initial sync of tables are completed, any change on Dataverse for selected tables is added to a common queue in export to data lake. The queue is processed with a fixed set of parallel listeners. If you add more tables to the queue, export to data lake will process the messages, but if number of messages are higher, it will add latency for data to sync to the data lake. 
+        Adding multiple tables to the Azure Synapse Link profile will impact performance in following scenarios: 
+        - Initial sync: When the tables are first added, there is a fixed set of tables which are synched for initial data at a time. We recommend adding no more than 5 tables at a time to new or existing profile. Adding more than the recommend number of tables doesn't expedite the sync since only the fixed set of tables are processed at a given time.  
+        - Delta sync: After the initial sync of tables are completed, any change on Dataverse for selected tables is added to a common queue in Azure Synapse Link. The queue is processed with a fixed set of parallel listeners. If you add more tables to the queue, Azure Synapse Link will process the messages, but if the number of messages are higher, it will add latency for data to sync to synapse and/or the data lake. 
 
 additionalContent: |
 
   ## See also
 
-  [Export table data to Azure Data Lake Storage Gen2](export-to-data-lake.md)
+  [Azure Synapse Link for Dataverse](export-to-data-lake.md)

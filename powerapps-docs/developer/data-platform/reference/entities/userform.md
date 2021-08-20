@@ -1,7 +1,7 @@
 ---
 title: "UserForm table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the UserForm table/entity."
-ms.date: 03/04/2021
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -33,7 +33,6 @@ User-owned dashboards.
 |GrantAccess|<xref href="Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 |ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/userforms(*userformid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/userforms<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
@@ -615,7 +614,6 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [lk_userformbase_modifiedonbehalfby](#BKMK_lk_userformbase_modifiedonbehalfby)
 - [lk_userformbase_createdonbehalfby](#BKMK_lk_userformbase_createdonbehalfby)
 - [team_userform](#BKMK_team_userform)
-- [owner_userform](#BKMK_owner_userform)
 - [lk_userform_createdby](#BKMK_lk_userform_createdby)
 - [lk_userform_modifiedby](#BKMK_lk_userform_modifiedby)
 - [user_userform](#BKMK_user_userform)
@@ -633,10 +631,6 @@ See systemuser Table [lk_userformbase_createdonbehalfby](systemuser.md#BKMK_lk_u
 ### <a name="BKMK_team_userform"></a> team_userform
 
 See team Table [team_userform](team.md#BKMK_team_userform) One-To-Many relationship.
-
-### <a name="BKMK_owner_userform"></a> owner_userform
-
-See owner Table [owner_userform](owner.md#BKMK_owner_userform) One-To-Many relationship.
 
 ### <a name="BKMK_lk_userform_createdby"></a> lk_userform_createdby
 

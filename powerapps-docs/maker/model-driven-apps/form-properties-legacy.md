@@ -2,16 +2,18 @@
 title: Model-driven app form properties in Power Apps | MicrosoftDocs
 description: Understand the main form properties
 Keywords: Main form properties; Dynamics 365
+ms.custom: intro-internal
 author: Mattp123
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
   - "powerapps"
+ms.subservice: mda-maker
 ms.author: matp
 manager: kvivek
 ms.date: 06/27/2018
 ms.service: powerapps
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4ed30bb7-dca1-4de8-80f3-842152ea921a
 search.audienceType: 
   - maker
@@ -26,7 +28,7 @@ This article describes the classic solution explorer. We recommend that you use 
 
 You can access **Form properties** in solution explorer. Under **Components**, expand **Tables**, expand the table you want, and then select **Forms**. In the list of forms, open the form of type **Main**. Then on the **Home** tab, select **Form Properties**.
 
-![Form properties](media/form-properties.png)
+![Form properties.](media/form-properties.png)
 
 The following table lists the form properties:  
   

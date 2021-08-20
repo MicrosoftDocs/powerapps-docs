@@ -7,11 +7,12 @@ applies_to:
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
   - "powerapps"
+ms.subservice: mda-maker
 ms.author: matp
 manager: kvivek
 ms.date: 03/17/2020
 ms.service: powerapps
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 82892cd3-3436-4677-b96b-f2ccd0a4f078
 search.audienceType: 
   - maker
@@ -26,7 +27,7 @@ This article describes the classic form editor. We recommend that you use the mo
 You can configure a sub-grid on a form using the classic form designer to display a list of rows or a chart. Select **Show Chart Only** on the **Display** tab to show a chart instead of a list.
 
   > [!div class="mx-imgBorder"] 
-  > ![sub-grid properties for show chart only](media/sub-grid-properties.png "sub-grid properties for show chart only")
+  > ![sub-grid properties for show chart only.](media/sub-grid-properties.png "sub-grid properties for show chart only")
 
 These are the properties available to configure when using a sub-grid component on a form using the classic form designer.
 
@@ -55,14 +56,14 @@ These are the properties available to configure when using a sub-grid component 
   
 
 ## Show list behavior  
- When displaying a list in forms with the [Updated forms](main-form-presentations.md#updated-forms), each sub-grid displays the **Open View** button ![Open view button](media/crm-itpro-cust-openview.PNG "Open view button") in the top right corner when the table is also displayed as one of the tables included in the navigation area of the form editor. Choosing this button will open the view. The behavior will change depending on the option chosen for the **Rows** property.  
+ When displaying a list in forms with the [Updated forms](main-form-presentations.md#updated-forms), each sub-grid displays the **Open View** button ![Open view button.](media/crm-itpro-cust-openview.PNG "Open view button") in the top right corner when the table is also displayed as one of the tables included in the navigation area of the form editor. Choosing this button will open the view. The behavior will change depending on the option chosen for the **Rows** property.  
   
  When you select **Only Related Rows** the view will open using one of the associated views in the same window. To return to the form, use the back button or choose the current row primary name value in the navigation bar.  
   
  When you select **All Row Types** the view will open in a new window.  
 
 ## Add row behavior  
- When displaying a list in forms with the [Updated forms](main-form-presentations.md#updated-forms), each sub-grid displays the **Add row** button ![Add button](media/crm-itpro-cust-subgridadd.PNG "Add button") in the top right side of the sub-grid. Choosing this button will allow you to add a row. This behavior will change depending on the option chosen for the **Rows** property and if the lookup is for activity rows.  
+ When displaying a list in forms with the [Updated forms](main-form-presentations.md#updated-forms), each sub-grid displays the **Add row** button ![Add button.](media/crm-itpro-cust-subgridadd.PNG "Add button") in the top right side of the sub-grid. Choosing this button will allow you to add a row. This behavior will change depending on the option chosen for the **Rows** property and if the lookup is for activity rows.  
   
  When you select **Only Related Rows** the default behavior is the behavior to add existing rows. People see an in-line lookup to search for an existing row first. This helps prevent creating duplicate rows.  If they can't find an existing row, they can choose the **New** option. When a new row is created any of the column mappings defined in the relationship will be applied. More information: [Map table columns](../data-platform/map-entity-fields.md)   
   
@@ -71,7 +72,7 @@ These are the properties available to configure when using a sub-grid component 
  If the sub-grid displays activities, people will first need to choose the type of activity and then they will see the "add new row" behavior.  
   
 ## Delete row behavior  
- When you select a row in a sub-grid the **Delete** button ![Sublist delete icon](media/crm-itpro-cust-subgriddelete.PNG "Sublist delete icon") appears on the right side of the row. The behavior of this delete action is different depending on the type of relationship with the current table.  
+ When you select a row in a sub-grid the **Delete** button ![Sublist delete icon.](media/crm-itpro-cust-subgriddelete.PNG "Sublist delete icon") appears on the right side of the row. The behavior of this delete action is different depending on the type of relationship with the current table.  
   
  When the sub-grid uses a 1:N (one-to-many) relationship, the normal row delete behavior is to show a confirmation dialog before deleting the row.  
   

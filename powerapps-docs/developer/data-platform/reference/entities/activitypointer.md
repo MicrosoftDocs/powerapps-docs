@@ -1,7 +1,7 @@
 ---
 title: "ActivityPointer table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the ActivityPointer table/entity."
-ms.date: 03/04/2021
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -28,7 +28,6 @@ Task performed, or to be performed, by a user. An activity is any action for whi
 |Message|Web API Operation|SDK Assembly|
 |-|-|-|
 |Retrieve|GET [*org URI*]/api/data/v9.0/activitypointers(*activityid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/activitypointers<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |Rollup|<xref href="Microsoft.Dynamics.CRM.Rollup?text=Rollup Function" />|<xref:Microsoft.Crm.Sdk.Messages.RollupRequest>|
 
@@ -1601,7 +1600,6 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [sla_activitypointer](#BKMK_sla_activitypointer)
 - [business_unit_activitypointer](#BKMK_business_unit_activitypointer)
 - [Account_ActivityPointers](#BKMK_Account_ActivityPointers)
-- [owner_activitypointers](#BKMK_owner_activitypointers)
 - [manualsla_activitypointer](#BKMK_manualsla_activitypointer)
 - [team_activity](#BKMK_team_activity)
 - [lk_activitypointer_modifiedby](#BKMK_lk_activitypointer_modifiedby)
@@ -1652,10 +1650,6 @@ See businessunit Table [business_unit_activitypointer](businessunit.md#BKMK_busi
 ### <a name="BKMK_Account_ActivityPointers"></a> Account_ActivityPointers
 
 See account Table [Account_ActivityPointers](account.md#BKMK_Account_ActivityPointers) One-To-Many relationship.
-
-### <a name="BKMK_owner_activitypointers"></a> owner_activitypointers
-
-See owner Table [owner_activitypointers](owner.md#BKMK_owner_activitypointers) One-To-Many relationship.
 
 ### <a name="BKMK_manualsla_activitypointer"></a> manualsla_activitypointer
 

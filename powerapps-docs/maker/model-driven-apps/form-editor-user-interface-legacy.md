@@ -1,11 +1,14 @@
 ---
 title: Overview of the model-driven app form editor user interface for Power Apps | MicrosoftDocs
 description: Know the form editor user interface to edit forms in Power Apps
+ms.custom: intro-internal
+ms.topic: overview
 author: Mattp123
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
   - "powerapps"
+ms.subservice: mda-maker
 ms.author: "matp"
 manager: "kvivek"
 ms.service: powerapps
@@ -29,7 +32,7 @@ The form editor displays commands in three tabs: **File**, **Home**, and **Inser
 The form editor is divided into three areas: **Navigation**, **Body**, and **Explorer**.  
 
 > [!div class="mx-imgBorder"] 
-> ![Form editor user interface](media/form-user-interface.png)
+> ![Form editor user interface.](media/form-user-interface.png)
   
 **Navigation**  
 Located on the left side, use the navigation area to control access to related tables or to add links to URLs to be displayed in the main pane of the form. To edit navigation, you must first select the **Navigation** command in the **Select** group of the **Home** tab.
@@ -46,7 +49,7 @@ By default, for the Case, Contact, and Account Main forms, the first section und
 > To preserve the card format (as shown in the following image), we recommend that you do not move the quick view form to any other section on the form.
 
 > [!div class="mx-imgBorder"] 
-> ![Card format](media/card-format.png)
+> ![Card format.](media/card-format.png)
    
 More information: [Create and edit quick view forms](create-edit-quick-view-forms.md)  
  
@@ -92,7 +95,7 @@ Select the **File** tab to add/view the following options:
  The **Home** tab displays the commands listed in the following table:
 
 > [!div class="mx-imgBorder"] 
-> ![Classic form editor home tab](media/home-tab.png)
+> ![Classic form editor home tab.](media/home-tab.png)
 
 |Group|Command|Description|
 |-----------|-------------|-----------------| 
@@ -119,7 +122,7 @@ Select the **File** tab to add/view the following options:
 
 ## Insert tab  
 > [!div class="mx-imgBorder"] 
-> ![Classic form editor insert tab](media/insert-tab.png)
+> ![Classic form editor insert tab.](media/insert-tab.png)
  
 The Insert tab displays the commands in the following table:
 

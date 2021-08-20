@@ -6,8 +6,12 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 10/05/2020
+ms.subservice: teams
 ms.author: namarwah
 ms.reviewer: tapanm
+contributors:
+  - navjotm
+  - tapanm-msft
 ---
 
 # Frequently Asked Questions (FAQs) for sample apps
@@ -36,7 +40,7 @@ For the steps to delete sample data from the sample apps, go to [Remove sample d
 When you assign a task in the Issue reporting, or Inspection apps who isn't a member of the Teams team, the user's name on the task will show as "Former member".
 To correctly display the user's name, add the user to the Team where the app is installed.
 
-![Former member](media\sample-apps-faqs\former-member.png "Former member")
+![Former member.](media\sample-apps-faqs\former-member.png "Former member")
 
 ## Why can't I create tasks in Inspection app?
 
@@ -57,11 +61,14 @@ If your inspection forms are loading slowly, reduce the size of images used in t
 ### See also
 
 - [Customize sample apps](customize-sample-apps.md)
-- [Bulletins (Preview) sample apps](bulletins.md)
+- [Boards (Preview) sample app](boards.md)
+- [Bulletins sample app](bulletins.md)
 - [Employee ideas sample app](employee-ideas.md)  
 - [Inspection sample apps](inspection.md)  
 - [Issue reporting sample apps](issue-reporting.md)
-- [Milestones (Preview) sample app](milestones.md)
+- [Milestones sample app](milestones.md)
+- [Perspectives (Preview) sample app](perspectives.md)
+- [Profile+ (Preview) sample app](profile-app.md)
 - [Use sample apps from the Microsoft Teams store](use-sample-apps-from-teams-store.md)
 
 

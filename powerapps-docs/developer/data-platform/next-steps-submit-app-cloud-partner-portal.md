@@ -1,12 +1,13 @@
 ---
 title: "Next steps: Submit your app on Partner Center (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn about how to submit an app on Cloud Partner Portal to be listed on AppSource." # 115-145 characters including spaces. This abstract displays in the search result.
+description: "Learn about how to submit an app on Partner Center to be listed on AppSource." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 07/25/2019
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "KumarVivek" # GitHub ID
+ms.subservice: dataverse-developer
 ms.author: "kvivek" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 

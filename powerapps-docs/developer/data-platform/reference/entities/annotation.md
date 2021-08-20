@@ -1,7 +1,7 @@
 ---
 title: "Annotation table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the Annotation table/entity."
-ms.date: 03/04/2021
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -33,7 +33,6 @@ Note that is attached to one or more objects, including other notes.
 |GrantAccess|<xref href="Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 |ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/annotations(*annotationid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/annotations<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
@@ -887,7 +886,6 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [lk_annotationbase_modifiedby](#BKMK_lk_annotationbase_modifiedby)
 - [Letter_Annotation](#BKMK_Letter_Annotation)
 - [Fax_Annotation](#BKMK_Fax_Annotation)
-- [owner_annotations](#BKMK_owner_annotations)
 - [Workflow_Annotation](#BKMK_Workflow_Annotation)
 - [Appointment_Annotation](#BKMK_Appointment_Annotation)
 - [lk_annotationbase_createdonbehalfby](#BKMK_lk_annotationbase_createdonbehalfby)
@@ -982,10 +980,6 @@ See letter Table [Letter_Annotation](letter.md#BKMK_Letter_Annotation) One-To-Ma
 ### <a name="BKMK_Fax_Annotation"></a> Fax_Annotation
 
 See fax Table [Fax_Annotation](fax.md#BKMK_Fax_Annotation) One-To-Many relationship.
-
-### <a name="BKMK_owner_annotations"></a> owner_annotations
-
-See owner Table [owner_annotations](owner.md#BKMK_owner_annotations) One-To-Many relationship.
 
 ### <a name="BKMK_Workflow_Annotation"></a> Workflow_Annotation
 

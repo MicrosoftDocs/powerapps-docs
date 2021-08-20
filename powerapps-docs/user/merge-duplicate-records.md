@@ -7,6 +7,7 @@ ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 10/31/2019
+ms.subservice: end-user
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
@@ -24,14 +25,14 @@ Duplicate rows can creep into your data when you or others enter data manually o
 For example, let's say you enter a contact row, Jim Glynn,  along with a mobile phone number.  The duplicate detection rule discovers that you already have a similar row, and displays this dialog box.  
   
  > [!div class="mx-imgBorder"] 
- > ![Duplicate contact row detected](media/duplicates-detected.png "Duplicate contact row detected")  
+ > ![Duplicate contact row detected.](media/duplicates-detected.png "Duplicate contact row detected")  
   
  You're not sure if this is a new row (one that happens to have the  same name as an existing contact) or a duplicate, so you select **Ignore And Save**.  
   
  Next, you go to the **All Contacts** list and see that now you have two rows with the same name. After reviewing the rows,  you  determine that they're duplicates that need to be merged.  
  
  > [!div class="mx-imgBorder"] 
- > ![Duplicate contact row is detected](media/duplicates-detected_1.png "Duplicate contact row is detected")  
+ > ![Duplicate contact row is detected.](media/duplicates-detected_1.png "Duplicate contact row is detected")  
  
 Dataverse includes duplicate detection rules for accounts and contacts. These rules are automatically turned on, so you don’t have to do anything to set up duplicate detection for these row types.  
   
@@ -43,13 +44,13 @@ Dataverse includes duplicate detection rules for accounts and contacts. These ru
 1. Select the duplicate rows, and then select **Merge**.  
   
    > [!div class="mx-imgBorder"] 
-   > ![Duplicate row detected](media/duplicates-detected_2.png "Duplicate row detected")  
+   > ![Duplicate row detected.](media/duplicates-detected_2.png "Duplicate row detected")  
   
 2. In the **Merge Rows** dialog box, select the master row (the one you want to keep), and then select any columns in the new row that you want to merge into the master row. Data in these columns may override the existing data in the master row. Select **OK**.  
   
      
    > [!div class="mx-imgBorder"] 
-   > ![Dialog box for merging rows](media/merge-records-dialog.png "Dialog box for merging rows")  
+   > ![Dialog box for merging rows.](media/merge-records-dialog.png "Dialog box for merging rows")  
   
 
 There are a few situations when duplicates may be found:  
@@ -61,7 +62,7 @@ There are a few situations when duplicates may be found:
 
 > [!IMPORTANT]
 >  If a column or control matches any of the following conditions, it will not show up in the merge dialog:  
->   - The containing section is invisible in form descriptor or form XML regardless whether the section shows up in runtime. It is possible to show it using the client API.
+>   - The field or containing section is invisible in form descriptor or form XML regardless whether the section shows up in runtime. It is possible to show it using the client API.
 >   - The control does not have a class property.
 >   - The column's metadata `ValidForUpdate` is False.
 >   - The control is **Quick Form Collection Control** or **Reference Panel Quick Form Collection Control**.

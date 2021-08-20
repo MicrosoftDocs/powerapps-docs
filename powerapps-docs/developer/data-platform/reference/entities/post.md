@@ -1,7 +1,7 @@
 ---
 title: "Post table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the Post table/entity."
-ms.date: 03/04/2021
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -30,7 +30,6 @@ An activity feed post.
 |Create|POST [*org URI*]/api/data/v9.0/posts<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
 |Delete|DELETE [*org URI*]/api/data/v9.0/posts(*postid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/posts(*postid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/posts<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 
 ## Properties
@@ -55,6 +54,7 @@ An activity feed post.
 
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
+- [LargeText](#BKMK_LargeText)
 - [PostId](#BKMK_PostId)
 - [RegardingObjectId](#BKMK_RegardingObjectId)
 - [RegardingObjectIdName](#BKMK_RegardingObjectIdName)
@@ -64,6 +64,25 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
 - [Type](#BKMK_Type)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
+
+
+### <a name="BKMK_LargeText"></a> LargeText
+
+**Added by**: Activities Patch Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Shows the text of a post.|
+|DisplayName|Text|
+|Format|Email|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|IsValidForUpdate|False|
+|LogicalName|largetext|
+|MaxLength|1073741823|
+|RequiredLevel|ApplicationRequired|
+|Type|Memo|
 
 
 ### <a name="BKMK_PostId"></a> PostId
@@ -161,7 +180,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForRead|True|
 |IsValidForUpdate|False|
 |LogicalName|text|
-|MaxLength|4000|
+|MaxLength|2000|
 |RequiredLevel|ApplicationRequired|
 |Type|String|
 
@@ -618,6 +637,7 @@ Listed by **SchemaName**.
 - [post_BulkDeleteFailures](#BKMK_post_BulkDeleteFailures)
 - [Post_Comments](#BKMK_Post_Comments)
 - [Post_Likes](#BKMK_Post_Likes)
+- [post_activity_file_attachment](#BKMK_post_activity_file_attachment)
 
 
 ### <a name="BKMK_post_AsyncOperations"></a> post_AsyncOperations
@@ -679,6 +699,23 @@ Same as postlike table [Post_Likes](postlike.md#BKMK_Post_Likes) Many-To-One rel
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
+
+### <a name="BKMK_post_activity_file_attachment"></a> post_activity_file_attachment
+
+**Added by**: Activities Patch Solution
+
+Same as activityfileattachment table [post_activity_file_attachment](activityfileattachment.md#BKMK_post_activity_file_attachment) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|activityfileattachment|
+|ReferencingAttribute|parentid|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|post_activity_file_attachment|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
 <a name="manytoone"></a>
 
 ## Many-To-One Relationships
@@ -689,7 +726,6 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [lk_post_createdonbehalfby](#BKMK_lk_post_createdonbehalfby)
 - [lk_post_modifiedby](#BKMK_lk_post_modifiedby)
 - [lk_post_modifiedonbehalfby](#BKMK_lk_post_modifiedonbehalfby)
-- [post_PostRegardings](#BKMK_post_PostRegardings)
 - [organization_post](#BKMK_organization_post)
 
 
@@ -708,10 +744,6 @@ See systemuser Table [lk_post_modifiedby](systemuser.md#BKMK_lk_post_modifiedby)
 ### <a name="BKMK_lk_post_modifiedonbehalfby"></a> lk_post_modifiedonbehalfby
 
 See systemuser Table [lk_post_modifiedonbehalfby](systemuser.md#BKMK_lk_post_modifiedonbehalfby) One-To-Many relationship.
-
-### <a name="BKMK_post_PostRegardings"></a> post_PostRegardings
-
-See postregarding Table [post_PostRegardings](postregarding.md#BKMK_post_PostRegardings) One-To-Many relationship.
 
 ### <a name="BKMK_organization_post"></a> organization_post
 

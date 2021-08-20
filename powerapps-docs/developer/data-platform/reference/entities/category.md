@@ -1,7 +1,7 @@
 ---
 title: "Category table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the Category table/entity."
-ms.date: 03/04/2021
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -32,7 +32,6 @@ Entity for categorizing records to make it easier for your customers to find the
 |Delete|DELETE [*org URI*]/api/data/v9.0/categories(*categoryid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |GrantAccess|<xref href="Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/categories(*categoryid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/categories<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
@@ -654,7 +653,6 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [lk_category_createdby](#BKMK_lk_category_createdby)
 - [lk_category_modifiedonbehalfby](#BKMK_lk_category_modifiedonbehalfby)
 - [lk_category_modifiedby](#BKMK_lk_category_modifiedby)
-- [owner_categories](#BKMK_owner_categories)
 - [business_unit_category](#BKMK_business_unit_category)
 
 
@@ -681,10 +679,6 @@ See systemuser Table [lk_category_modifiedonbehalfby](systemuser.md#BKMK_lk_cate
 ### <a name="BKMK_lk_category_modifiedby"></a> lk_category_modifiedby
 
 See systemuser Table [lk_category_modifiedby](systemuser.md#BKMK_lk_category_modifiedby) One-To-Many relationship.
-
-### <a name="BKMK_owner_categories"></a> owner_categories
-
-See owner Table [owner_categories](owner.md#BKMK_owner_categories) One-To-Many relationship.
 
 ### <a name="BKMK_business_unit_category"></a> business_unit_category
 

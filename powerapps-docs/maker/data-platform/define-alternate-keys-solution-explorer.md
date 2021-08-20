@@ -7,12 +7,13 @@ ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "how-to"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
   - "powerapps"
 author: "Mattp123"
+ms.subservice: dataverse-maker
 ms.author: "matp"
 manager: "kvivek"
 search.audienceType: 
@@ -45,14 +46,14 @@ Part of the name of any alternate key you create is the customization prefix. Th
 1. With solution explorer open, under **Components** expand **Entities** and select the table where you want to view alternate keys.
 2. Expand the table and select **Keys**.
 
-    ![View alternate keys](media/view-alternate-keys-solution-explorer.png)
+    ![View alternate keys.](media/view-alternate-keys-solution-explorer.png)
 
 ## Create an alternate key
 
 1. While [viewing alternate keys](#view-alternate-keys), select **New**.
 1. On the form, enter the **Display Name**. The **Name** column will be auto-populated based on the **Display Name**. 
 2. From the **Available Attributes** list, select each attribute and then **Add >** to move the attribute into the **Selected Attributes** list.
-    ![Create Alternate key](media/create-alternate-key-solution-explorer.png)
+    ![Create Alternate key.](media/create-alternate-key-solution-explorer.png)
 1. Select **OK** to close the form.
 
 ### (Optional) View the system job tracking creation of indexes
@@ -67,7 +68,7 @@ Part of the name of any alternate key you create is the customization prefix. Th
 
 ## Delete an alternate key
 
-While [viewing alternate keys](#view-alternate-keys), select ![Delete command](media/delete.gif).
+While [viewing alternate keys](#view-alternate-keys), select ![Delete command.](media/delete.gif).
 
 ### See also
 

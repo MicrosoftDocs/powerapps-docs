@@ -346,7 +346,7 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_organization_complexcontrols"></a> organization_complexcontrols
 
-See organization Table [organization_complexcontrols](organization.md#BKMK_organization_complexcontrols) One-To-Many relationship.
+See organization Table [organization_complexcontrols](organization.md) One-To-Many relationship.
 
 ### See also
 

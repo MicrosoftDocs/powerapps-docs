@@ -7,13 +7,14 @@ ms.reviewer:
 ms.service: powerapps
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 applies_to: 
   - Dynamics 365 for Customer Engagement (online)
   - PowerApps
 ms.assetid: cb1bb002-8300-43bb-ab75-99e7a9c9c35d
 caps.latest.revision: 11
 author: Mattp123
+ms.subservice: mda-maker
 ms.author: matp
 manager: kvivek
 tags: 

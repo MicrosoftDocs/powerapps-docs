@@ -1,13 +1,14 @@
 ---
 title: "Microsoft Dataverse real-time workflows | MicrosoftDocs"
 description: "Microsoft Dataverse real-time workflows"
-ms.custom: ""
+ms.custom: intro-internal
 ms.date: 07/27/2020
 ms.reviewer: "matp"
 ms.service: powerapps
 ms.topic: "article"
 ms.assetid: 1f3c9780-26ad-49ec-a3fb-fc226def19c5
 author: msftman
+ms.subservice: dataverse-maker
 ms.author: "deonhe"
 manager: "kvivek"
 search.app: 
@@ -30,7 +31,7 @@ There are two types of workflows:
 
 To create real-time workflows, you must *clear* the **Run this workflow in the background (recommended)** check box, while defining the workflow.
 
-![Workflow process with Under&#47;Not Under operators](media/wfp-under-not-under.PNG "Workflow process with Under/Not Under operators")
+![Workflow process with Under&#47;Not Under operators.](media/wfp-under-not-under.PNG "Workflow process with Under/Not Under operators")
 
 See other topics here in the Power Apps documentation to learn more about real-time workflows.
 

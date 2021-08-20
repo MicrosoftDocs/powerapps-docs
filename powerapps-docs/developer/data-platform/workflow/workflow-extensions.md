@@ -292,7 +292,7 @@ For custom workflow activities you must specify the following properties to cont
 |`Name`|The name of the menu represented|
 |`WorkflowActivityGroupName`|The name of the submenu added to the main menu in the Dataverse process designer.|
 
-![Set descriptive properties](media/create-workflow-activity-set-properties.png)
+![Set descriptive properties.](media/create-workflow-activity-set-properties.png)
 
 > [!NOTE]
 > These values will not be visible in the unmanaged solution when you test your workflow activity. However, when you export a managed solution that includes this workflow activity these values will be visible in the process designer.
@@ -307,10 +307,10 @@ The following example shows using the tracing service to write the following mes
 protected override void Execute(CodeActivityContext context)
 {
 //Create the tracing service
-ITracingService tracingService = executionContext.GetExtension<ITracingService>();
+ITracingService tracingService = context.GetExtension<ITracingService>();
 
 //Use the tracing service
-tracingService.Trace("{0} {1} {2}.","Add","your","message");
+tracingService.Trace("{0} {1} {2}.", "Add", "your", "message");
 ...
 ```
 
@@ -331,7 +331,7 @@ When you register an assembly containing custom workflow activities the version 
 
 You will find a section at the bottom that looks like this:
 
-```
+```csharp
 // Version information for an assembly consists of the following four values:
 //
 //      Major Version
@@ -370,7 +370,7 @@ If you make changes that include significant changes to public classes or method
 
     You will find a **Version** selector in the process designer that you can use to choose which version of the assembly should be used.
 
-    ![Workflow set version](media/workflow-set-version.png)
+    ![Workflow set version.](media/workflow-set-version.png)
 
 When all processes are converted to use the new assembly, you can use the Plug-in Registration tool to unregister the assembly, so it will no longer be available. More information: [Unregister components](../register-plug-in.md#unregister-components)
 
@@ -408,9 +408,9 @@ If your workflow extension depends on data passed in the execution context, the 
 > [!NOTE]
 > We don't recommend including logic dependencies based on the <xref:Microsoft.Xrm.Sdk.IExecutionContext.InputParameters> and <xref:Microsoft.Xrm.Sdk.IExecutionContext.OutputParameters>. Workflow extensions should depend on the configured [input and output parameters](#input-and-output-parameters) so that the person using the workflow extension can understand the expected behavior without having anything hidden from them.
 
-## Table images for workflow extensions
+## Entity images for workflow extensions
 
-There is no way to configure table images for workflow extensions since you only register the assembly and the workflow activity runs in the context of the workflow. Workflow extensions table images are available using the key values `PreBusinessEntity` and `PostBusinessEntity` respectively for the pre and post table images. More information: [Table images](../understand-the-data-context.md#table-images)
+There is no way to configure entity images for workflow extensions since you only register the assembly and the workflow activity runs in the context of the workflow. Workflow extensions entity images are available using the key values `PreBusinessEntity` and `PostBusinessEntity` respectively for the pre and post entity images. More information: [Entity images](../understand-the-data-context.md#entity-images)
 
 ### See also
 

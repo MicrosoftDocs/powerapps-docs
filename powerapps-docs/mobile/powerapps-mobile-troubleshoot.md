@@ -7,6 +7,7 @@ ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 04/28/2021
+ms.subservice: mobile
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
@@ -21,7 +22,9 @@ search.app:
 
 This troubleshooting article helps fix common issues for the [Power Apps mobile app](../mobile/run-powerapps-on-mobile.md).
 
-If you don't find the answer to your issue, then email us at [pamobsup@microsoft.com](mailto:pamobsup@microsoft.com?subject=Power%20Mobile%20issues) and include your device make and model, session ID, and provide the exact error message that you get.
+
+> [!NOTE]
+> If you are having an issue with Power Apps for iOS or Android and you don’t find a solution on this page, please send a description of your issue with a screenshot and session ID to [pamobsup@microsoft.com](mailto:pamobsup@microsoft.com?subject=Power%20Mobile%20issues). Comments on this page are not received by the support team.”
 
 
 ## Unable to sign in on an Android device using Authenticator or Company Portal
@@ -60,7 +63,6 @@ If you already have the Microsoft Authenticator app installed and you're having 
 4. Reinstall the Microsoft Authenticator app and add your back up account.
 5. Reinstall [Power Apps mobile](../mobile/run-powerapps-on-mobile.md#install-power-apps-mobile-app).
 6. Open Power Apps mobile and then sign in.
-
 
 ## Error: Your device configuration is preventing sign in
 
@@ -109,6 +111,10 @@ If you still can't sign in, then email us at pamobsup@microsoft.com and include 
 
 **iOS 13**: You can still use the Safari browser to pin an app to the Home screen. For more information, see [Pin an app to the home screen](../mobile/run-powerapps-on-mobile.md#use-safari-to-add-a-shortcut-ios-13-or-earlier)
 
+## Power Automate Flow menu opens a blank Login to Flow screen on iOS 14 
+
+If you encounter a blank **Login to Flow** page when using the Power Automate Flow menu in a Power App on mobile, enable **Allow Cross-Website Tracking** in **iOS Settings** > **Power Apps** and open the app again. 
+
 ## App list is empty
 
 The app list in the Power Apps mobile app may appear empty when you lose internet connection before the app list has completely downloaded. This can happen in any of the following scenarios:
@@ -119,6 +125,9 @@ The app list in the Power Apps mobile app may appear empty when you lose interne
 
 To resolve connection related issues, ensure you remain connected to the internet while the app list is fully downloaded.
 
+## Flows created in a solution is not supported on Power Apps mobile
+
+The Flow action menu in Power Apps mobile doesn't support flows created in a solution.
 
 ### See also  
 

@@ -2,11 +2,12 @@
 title: "Register a plug-in (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to register a plug-in in a step of the Microsoft Dataverse event pipeline." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 03/16/2021
+ms.date: 06/17/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
+ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -20,7 +21,9 @@ search.app:
 
 [!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
-The process of writing, registering, and debugging a plug-in is:
+You can use Power Platform Tools for Visual Studio to quickly create and deploy (register) plug-ins. A [quickstart](tools/devtools-create-plugin.md) article is available to show you how.
+
+A more manual process of writing, registering, and debugging a plug-in is:
 
 1. Create a .NET Framework class library project in Visual Studio
 1. Add the `Microsoft.CrmSdk.CoreAssemblies` NuGet package to the project
@@ -35,7 +38,6 @@ The process of writing, registering, and debugging a plug-in is:
     1. Test the behavior of the assembly
     1. Verify expected trace logs are written
     1. Debug the assembly as needed
-
 
 This topic describes how to register a plug-in assembly and step, and add them to a solution. Additional information can be found in these tutorials:
 
@@ -71,11 +73,11 @@ You can view information about registered assemblies in the application solution
 >
 > For more information about solutions, see [Introduction to solutions](introduction-solutions.md)
 
-![All Solutions internal](media/all-solutions-internal-view.png)
+![All Solutions internal.](media/all-solutions-internal-view.png)
 
 After selecting the name of the Default Solution in the internal solution list, you can find all the assemblies that are registered for this environment.
 
-![View all registered assemblies](media/view-plug-in-assemblies-default-solution.png)
+![View all registered assemblies.](media/view-plug-in-assemblies-default-solution.png)
 
 ### Query registered assemblies with code
 
@@ -132,15 +134,15 @@ As described in [View registered assemblies](#view-registered-assemblies), the a
 
 Within the unmanaged solution you are using, use solution explorer to navigate to **Plug-in Assemblies**. In the list menu, select **Add Existing**. Note that in the following figures, a custom solution named Common Data Service Default Solution is used.
 
-![Add Existing plug-in assembly](media/add-existing-plug-in-assembly.png)
+![Add Existing plug-in assembly.](media/add-existing-plug-in-assembly.png)
 
 Then add your assembly as a component to the solution.
 
-![Select plug-in assembly as a solution component](media/select-plug-in-assembly-as-solution-component.png)
+![Select plug-in assembly as a solution component.](media/select-plug-in-assembly-as-solution-component.png)
 
 When you select the plug-in assembly you added, you can view the plug-in classes it includes.
 
-![Plug-in assemblies and classes](media/view-plug-in-classes-solution-explorer.png)
+![Plug-in assemblies and classes.](media/view-plug-in-classes-solution-explorer.png)
 
 > [!NOTE]
 > Any existing or subsequent step registrations are not added to the unmanaged solution that includes the plug-in assemblies. You must add each registered step to the solution separately. More information: [Add step to solution](#add-step-to-solution)
@@ -207,17 +209,20 @@ There are certain scenarios where a step registration and table combination is n
 
 The **Unsecure Configuration** and **Secure Configuration** fields in the PRT allow you to specify configuration data to pass to the plug-in for a specific step.
 
+> [!NOTE]
+> Secure Configuration data is not included with the step registration when you export a solution.
+
 You can write your plug-in to accept string values in the constructor to use this data to control how the plug-in should work for the step. More information: [Pass configuration data to your plug-in](write-plug-in.md#pass-configuration-data-to-your-plug-in)
 
-### Define table images
+### Define entity images
 
 Within your plug-in, you may want to reference primary table property values that were not included in an operation. For example, in an `Update` operation you might want to know what a value was before it was changed, but the execution context doesn't provide this information, it only includes the changed value.
 
-If your plug-in step is registered in the **PreValidation** or **PreOperation** stages of the execution pipeline, you could use the Organization service to retrieve the current value of the property, but this is not a good practice for performance. A better practice is to define a pre-table image with your plug-in step registration. This will capture a 'snapshot' of the table with the fields you are interested in as they existed before the operation that you can use to compare with the changed values.
+If your plug-in step is registered in the **PreValidation** or **PreOperation** stages of the execution pipeline, you could use the Organization service to retrieve the current value of the property, but this is not a good practice for performance. A better practice is to define a pre-entity image with your plug-in step registration. This will capture a 'snapshot' of the table with the fields you are interested in as they existed before the operation that you can use to compare with the changed values.
 
-#### Messages that support table images
+#### Messages that support entity images
 
-In Dataverse, only the following messages support table images:
+In Dataverse, only the following messages support entity images:
 
 |Message|Request Class Property| Description|
 |--|--|--|
@@ -233,13 +238,13 @@ In Dataverse, only the following messages support table images:
 |`Update`|`Target`|The updated table.|
 
 
-#### Types of table images
+#### Types of entity images
 
-There are two types of table images: **Pre Image** and **Post Image**. When you configure them, these images will be available within the execution context as <xref:Microsoft.Xrm.Sdk.IExecutionContext.PreEntityImages> and <xref:Microsoft.Xrm.Sdk.IExecutionContext.PostEntityImages> properties respectively. As the names suggest, these snapshots represent what the table looks like before the operation and after the operation. When you configure a table image, you will define an *table alias* value that will be the key value you will use to access a specific table image from the `PreEntityImages` or `PostEntityImages` properties.
+There are two types of entity images: **Pre Image** and **Post Image**. When you configure them, these images will be available within the execution context as <xref:Microsoft.Xrm.Sdk.IExecutionContext.PreEntityImages> and <xref:Microsoft.Xrm.Sdk.IExecutionContext.PostEntityImages> properties respectively. As the names suggest, these snapshots represent what the table looks like before the operation and after the operation. When you configure an entity image, you will define an *table alias* value that will be the key value you will use to access a specific entity image from the `PreEntityImages` or `PostEntityImages` properties.
 
 #### Availability of images
 
-When you configure a table image it is important that you recognize that the type of table images available depend on the stage of the registered step and the type of operation. For example:
+When you configure an entity image it is important that you recognize that the type of entity images available depend on the stage of the registered step and the type of operation. For example:
 
 - You cannot have a **Pre Image** for the `Create` message because the table doesn't exist yet.
 - You cannot have a **Post Image** for the `Delete` message because the table won't exist anymore.
@@ -247,9 +252,9 @@ When you configure a table image it is important that you recognize that the typ
 - For an `Update` operation that is registered in the **PostOperation** stage you can have both a **Pre Image** AND a **Post Image**.
 
 
-#### Add a table image
+#### Add an entity image
 
-See [Add an image](tutorial-update-plug-in.md#add-an-image) step in the [Tutorial: Update a plug-in](tutorial-update-plug-in.md) for the steps to add a table image.
+See [Add an image](tutorial-update-plug-in.md#add-an-image) step in the [Tutorial: Update a plug-in](tutorial-update-plug-in.md) for the steps to add an entity image.
 
 ### Add step to solution
 
@@ -257,7 +262,7 @@ As mentioned in [Add your assembly to a solution](#add-your-assembly-to-a-soluti
 
 The procedure to add a step to a solution is similar to adding an assembly. You will use the **Add Existing** command to move it into the desired unmanaged solution. The only difference is that if you attempt to add a step but have not already added the assembly that contains the class used in the step, you will be prompted to add missing required components.
 
-![Missing required component dialog](media/missing-required-component.png)
+![Missing required component dialog.](media/missing-required-component.png)
 
 If you encounter this, you should usually select **OK** to bring the assembly in with the unmanaged solution. The only time you would not select this is if your solution is designed to be installed in an environment where another solution containing the assembly is already installed.
 
@@ -294,22 +299,22 @@ These are delete operations on the [PluginAssembly](reference/entities/pluginass
 
 You can also delete **Plug-in Assemblies** and **Sdk Message Processing Steps** in the solution explorer to achieve the same result. In the figure below, a custom solution named Common Data Service Default Solution is shown.
 
-![Deleting step in solution explorer](media/delete-sdk-message-processing-step.png)
+![Deleting step in solution explorer.](media/delete-sdk-message-processing-step.png)
 
 > [!NOTE]
-> You cannot delete any **Plug-in Assemblies** while existing **Sdk Message Processing Steps** depend on them. Table images are not available to be deleted separately, but they will be deleted when any steps that use them are deleted.
+> You cannot delete any **Plug-in Assemblies** while existing **Sdk Message Processing Steps** depend on them. Entity images are not available to be deleted separately, but they will be deleted when any steps that use them are deleted.
 
 ### Disable steps
 
 The PRT provides commands to disable and enable steps.
 
-![disable a step using the PRT](media/disable-step-prt.png)
+![disable a step using the PRT.](media/disable-step-prt.png)
 
-![enable a step using the PRT](media/enable-step-prt.png)
+![enable a step using the PRT.](media/enable-step-prt.png)
 
 You can also disable steps in the solution explorer using the **Activate** and **Deactivate** commands.
 
-![foo](media/step-activate-deactivate-commands-solution-explorer.png)
+![foo.](media/step-activate-deactivate-commands-solution-explorer.png)
 
 ## Next steps
 

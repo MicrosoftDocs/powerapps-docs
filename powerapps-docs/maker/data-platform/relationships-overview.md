@@ -1,7 +1,7 @@
 ---
 title: "table relationships in Power Apps | MicrosoftDocs"
 description: "Learn about table relationships in Power Apps"
-ms.custom: ""
+ms.custom: intro-internal
 ms.date: 07/25/2018
 ms.reviewer: ""
 ms.service: powerapps
@@ -15,6 +15,7 @@ applies_to:
 author: "Mattp123"
 ms.assetid: 
 caps.latest.revision: 0
+ms.subservice: dataverse-maker
 ms.author: "matp"
 manager: "kvivek"
 search.audienceType: 

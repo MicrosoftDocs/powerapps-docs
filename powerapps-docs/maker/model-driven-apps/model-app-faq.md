@@ -3,12 +3,13 @@ title: Model-driven app FAQ | MicrosoftDocs
 description: Understand the frequently asked questions about Power Apps model-driven apps
 Keywords: 
 author: alcerri
+ms.subservice: mda-maker
 ms.author: alcerri
 ms.reviewer: matp
 manager: kvivek
 ms.date: 12/02/2020
 ms.service: powerapps
-ms.topic: article
+ms.topic: troubleshooting
 applies_to: 
   - "powerapps"
 search.audienceType: 

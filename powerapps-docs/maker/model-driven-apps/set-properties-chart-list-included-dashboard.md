@@ -7,7 +7,7 @@ ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "conceptual"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -15,6 +15,7 @@ applies_to:
 author: "Mattp123"
 ms.assetid: 50fb2ab0-5c1a-4a5e-8ebc-5603fecc4da0
 caps.latest.revision: 26
+ms.subservice: mda-maker
 ms.author: "matp"
 manager: "kvivek"
 search.audienceType: 
@@ -29,12 +30,12 @@ search.app:
 
 To edit a chart or list component from the dashboard designer, select the chart or list you want and then select Edit Component on the dashboard designer toolbar.   
   > [!div class="mx-imgBorder"] 
-  > ![Dashboard designer chart edit component](media/dashboard-chart-select.png)
+  > ![Dashboard designer chart edit component.](media/dashboard-chart-select.png)
 
 This opens the **Set Properties** dialog box.
 
   > [!div class="mx-imgBorder"] 
-  > ![Chart set properties](media/set-properties-chart.png)  
+  > ![Chart set properties.](media/set-properties-chart.png)  
  
 You can set the following chart properties from the **Set Properties** dialog box:  
   

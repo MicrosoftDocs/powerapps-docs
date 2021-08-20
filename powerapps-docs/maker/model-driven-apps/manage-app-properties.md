@@ -5,13 +5,14 @@ keywords: ""
 ms.date: 02/05/2019
 ms.service: powerapps
 ms.custom: 
-ms.topic: article
+ms.topic: how-to
 applies_to:
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
   - "powerapps"
 author: "Mattp123"
 ms.assetid: e773e60f-0211-4c4b-a1af-663be4997629
+ms.subservice: mda-maker
 ms.author: matp
 manager: kvivek
 ms.reviewer: 
@@ -33,7 +34,7 @@ App properties define important details about the app, like its title or URL. Yo
 1.  In the app designer, on the right side, select the **Properties** tab.  
 
     > [!div class="mx-imgBorder"] 
-    > ![App designer Properties pane](media/app-designer-properties-tab.png "App designer Properties pane")  
+    > ![App designer Properties pane.](media/app-designer-properties-tab.png "App designer Properties pane")  
   
 2.  Change the information, as required:  
 

@@ -3,8 +3,10 @@ title: "FAQs for timeline control (section) in Power Apps | MicrosoftDocs"
 description: "FAQs for timeline control (section) in Power Apps"
 ms.date: 03/10/2020
 ms.service: powerapps
+ms.topic: troubleshooting
 author: "kabala123"
 ms.assetid: 7F495EE1-1208-49DA-9B02-17855CEB2FDF
+ms.subservice: mda-maker
 ms.author: "kabala"
 manager: "shujoshi"
 search.audienceType: 
@@ -46,7 +48,7 @@ When you perform the following procedures as an administrator, users will see an
 This error is caused because the number of activity tables for the data retrieval has exceeded the maximum limit of 10.
 
    > [!div class="mx-imgBorder"] 
-   > ![Number of link tables in query exceeded maximum limit](media/timeline-error2.png "[Number of link tables in query exceeded maximum limit")
+   > ![Number of link tables in query exceeded maximum limit.](media/timeline-error2.png "[Number of link tables in query exceeded maximum limit")
 
 ### Workaround
 
@@ -54,7 +56,7 @@ To work around the issue, you must reduce the number of tables to 10 or fewer. T
 
 1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-2.  Open a model-driven app, and then on the command bar select **Settings** ![Settings](../model-driven-apps/media/powerapps-gear.png) > **Advanced  Settings**.
+2.  Open a model-driven app, and then on the command bar select **Settings** ![Settings.](../model-driven-apps/media/powerapps-gear.png) > **Advanced  Settings**.
 
 3.   Go to **Settings** > **Customization** > **Customize the System**. The solution explorer page opens in a new browser window.
 
@@ -65,14 +67,14 @@ To work around the issue, you must reduce the number of tables to 10 or fewer. T
 6.   Select the **Account for Interactive experience** record that is a **Main** form type. The **Account for Interactive experience** form opens in a new browser window.
 
       > [!div class="mx-imgBorder"] 
-      > ![Select the table form with interactive experience in the name](media/account-interactive-experience.png "Select the table form with interactive experience in the name")
+      > ![Select the table form with interactive experience in the name.](media/account-interactive-experience.png "Select the table form with interactive experience in the name")
 
       For Unified Interface, you need to use the form name that has `<Entity> for Interactive experience`.
 
 7.    Double-click the **Conversation Tabs** column in the **Timeline** section. The **Activities Tab Properties** dialog is displayed.
 
       > [!div class="mx-imgBorder"] 
-      > ![Double-click the column in the social pane](media/timeline-conversation-tabs-field.png "Double-click the column in the social pane")  
+      > ![Double-click the column in the social pane.](media/timeline-conversation-tabs-field.png "Double-click the column in the social pane")  
 
 8.    Select the **Show selected** option for the **Show these activities** column in the **Filter by** container.
 

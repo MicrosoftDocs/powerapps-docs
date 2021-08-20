@@ -4,10 +4,13 @@ description: Explains the differences between Dataverse for Teams and Dataverse.
 author: mmercuri
 ms.service: powerapps
 ms.topic: conceptual
-ms.custom: 
+ms.custom: intro-internal
 ms.date: 03/19/2021
+ms.subservice: teams
 ms.author: mmercuri
 ms.reviewer: matp
+contributors:
+  - mattp123
 ---
 # How are Dataverse for Teams and Dataverse different?
 
@@ -95,7 +98,7 @@ Dataverse can also be used with server-side sync to synchronize with Exchange or
 |Integration feature  |Dataverse for Teams  |Dataverse  |
 |---------|---------|---------|
 |Power Automate     |   Yes      |  Yes       |
-|Export to Azure data lake    |   No      |  Yes       |
+|Azure Synapse Link for Dataverse    |   No      |  Yes       |
 |Data Export Service     |   No      |  Yes       |
 |Events to Azure Event Hubs     |   No      |  Yes       |
 |Events to Azure Service Bus     |   No      |  Yes       |

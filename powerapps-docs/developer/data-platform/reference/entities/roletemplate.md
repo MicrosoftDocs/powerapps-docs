@@ -122,7 +122,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_role_template_roles"></a> role_template_roles
 
-Same as role table [role_template_roles](role.md#BKMK_role_template_roles) Many-To-One relationship.
+Same as role table [role_template_roles](role.md) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|

@@ -1,6 +1,6 @@
 ---
-title: Set up lists for SharePoint Online integration with Power Apps, Power Automate, and Power BI | Microsoft Docs
-description: In this task, we'll set up SharePoint lists to use as a data source for apps, flows, reports, and dashboards.
+title: Set up lists for SharePoint Online integration with Power Apps, Power Automate, and Power BI
+description: Learn about how to set up SharePoint lists to use as a data source for apps, flows, reports, and dashboards.
 author: NickWaggoner
 manager: kvivek
 ms.service: powerapps
@@ -8,11 +8,16 @@ ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
 ms.date: 06/18/2020
+ms.subservice: canvas-maker
 ms.author: niwaggon
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - navjotm
+  - wimcoor
 ---
 # Set up lists for SharePoint Online integration with Power Apps, Power Automate, and Power BI
 > [!NOTE]
@@ -51,30 +56,30 @@ The second list is **Project Details**, which tracks details for all approved pr
 | PMAssigned |Single line of text |Project manager |
 
 ## Step 2: Create and review the lists
-To continue with the scenario, you need to create the two SharePoint lists and populate them with sample data. We'll show you how to do this by creating the list and pasting sample data into it. Make sure you have the Excel files from the [download package](https://aka.ms/o4ia0f).
+To continue with the scenario, you need to create the two SharePoint lists and populate them with sample data. We'll show you how to do this by creating the list and pasting sample data into it. Make sure you have [downloaded](https://download.microsoft.com/download/d/f/6/df6682e2-c625-47f2-9627-b78a86217cd8/project-requests.xlsx) the sample Excel file.
 
 > [!NOTE]
-> Use Internet Explorer for this step.
+> Use Microsoft Edge for this step.
 
 ### Create the lists
 
-1. In Internet Explorer, in your SharePoint site, click or tap **New**, then **List**.
+1. In Microsoft Edge, in your SharePoint site, click or tap **New**, then **List**.
    
-    ![Create new SharePoint list](./media/sharepoint-scenario-setup/01-01-01-new-list.png)
+    ![Create new SharePoint list.](./media/sharepoint-scenario-setup/01-01-01-new-list.png)
 
 2. Enter the name "Project Requests", then click or tap **Create**.
    
-    ![Specify name for new list](./media/sharepoint-scenario-setup/01-01-02-create-list.png)
+    ![Specify name for new list.](./media/sharepoint-scenario-setup/01-01-02-create-list.png)
    
     The **Project Requests** list is created, with the default **Title** field.
    
-    ![Project Requests list](./media/sharepoint-scenario-setup/01-01-03-initial-list.png)
+    ![Project Requests list.](./media/sharepoint-scenario-setup/01-01-03-initial-list.png)
 
 ### Add columns to the list
 
-1. Click or tap ![New item icon](./media/sharepoint-scenario-setup/icon-new.png), then **Single line of text**.
+1. Click or tap ![New item icon.](./media/sharepoint-scenario-setup/icon-new.png), then **Single line of text**.
    
-    ![Add single line of text field](./media/sharepoint-scenario-setup/01-01-04-add-column.png)
+    ![Add single line of text field.](./media/sharepoint-scenario-setup/01-01-04-add-column.png)
 
 2. Enter the name "Description", then click or tap **Save**.
    
@@ -89,96 +94,17 @@ To continue with the scenario, you need to create the two SharePoint lists and p
 ### Copy data into the list
 1. Click or tap **Quick edit**.
    
-    ![Quick edit for list](./media/sharepoint-scenario-setup/01-01-06-quick-edit.png)
+    ![Quick edit for list.](./media/sharepoint-scenario-setup/01-01-06-quick-edit.png)
 2. Select the cells in the grid.
    
-    ![List with all columns](./media/sharepoint-scenario-setup/01-01-07-empty-grid.png)
-3. Open the project-requests.xlsx workbook and select all the data (not the headings).
+    ![List with all columns.](./media/sharepoint-scenario-setup/01-01-07-empty-grid.png)
+3. Open the [downloaded workbook](https://download.microsoft.com/download/d/f/6/df6682e2-c625-47f2-9627-b78a86217cd8/project-requests.xlsx) and select all the data (not the headings).
    
-    ![Project Requests Excel table](./media/sharepoint-scenario-setup/01-01-08-excel-table.png)
+    ![Project Requests Excel table.](./media/sharepoint-scenario-setup/01-01-08-excel-table.png)
 4. Copy the data and paste it into the grid in SharePoint, then click or tap **Done**.
    
-    ![Completed list with data](./media/sharepoint-scenario-setup/01-01-09-full-grid.png)
+    ![Completed list with data.](./media/sharepoint-scenario-setup/01-01-09-full-grid.png)
 5. Repeat the list creation and copy process for the "Project Details" list, using the project-details.xlsx workbook. Refer to the Project Details table in [Step 1: Understand the lists](#step-1-understand-the-lists) for the column names and data types.
-
-## Step 3: Update connections to samples - optional
-As noted in the introduction to this tutorial series, we included two sample apps and a report in the [download package](https://aka.ms/o4ia0f). You can complete this scenario without using these samples, but if you want to use the samples, you need to update the connections to the SharePoint lists. You update them so that they use *your* lists as a data source, rather than ours.
-
-### Update connections for the sample apps
-
-1. In [Power Apps Studio](https://create.powerapps.com/studio/), click or tap **Open** in the left pane. 
-
-2. Click or tap **Browse**, then open the **project-management-app.msapp** file that you downloaded.
-
-3. Click or tap **Allow**, so that Power Apps can use SharePoint.
-
-4. On the ribbon, on the **View** tab, click or tap **Data sources**.
-
-    ![Power Apps data sources](./media/sharepoint-scenario-setup/01-03-01-data-sources.png)
-5. In the **Data** panel, click or tap the ellipsis (**. . .**) next to **Project Details**, then click or tap **Remove**.
-   
-    ![Remove Project Details data source](./media/sharepoint-scenario-setup/01-03-02-remove.png)
-6. Click or tap **Add Data Source**.
-   
-    ![Add data source](./media/sharepoint-scenario-setup/01-03-03-add.png)
-
-7. We'll show you two ways to connect to the list, depending on whether Power Apps already established a SharePoint connection for you: 
-
-    * If you see a SharePoint connection already, click or tap that connection.
-
-        ![Existing connection](./media/sharepoint-scenario-setup/01-03-03aa-existing-connection.png)
-
-    * If you don't see a SharePoint connection, click or tap **New connection**.
-
-        ![New connection](./media/sharepoint-scenario-setup/01-03-03a-new-connection.png)
-
-        Then click or tap **SharePoint**, and click or tap **Create**.
-   
-        ![SharePoint connection](./media/sharepoint-scenario-setup/01-03-03b-sharepoint.png)
-
-8. Enter the URL for the SharePoint Online site that contains the lists you created, then click or tap **Go**.
-   
-    ![SharePoint URL](./media/sharepoint-scenario-setup/01-03-03c-sharepoint-url.png)
-9. Select the **Project Details** list, then click or tap **Connect**.
-   
-    ![Project Details list](./media/sharepoint-scenario-setup/01-03-03d-project-details.png)
-   
-    The **Data** panel now shows the connection that you created.
-   
-    ![Data sources](./media/sharepoint-scenario-setup/01-03-03e-data-sources.png)
-
-10. Click or tap the ellipsis (**. . .**) next to **Project Details**, then click or tap **Refresh**.
-    
-    ![Refresh Project Details data source](./media/sharepoint-scenario-setup/01-03-02-remove.png)
-
-11. Click ![Run app icon](./media/sharepoint-scenario-setup/icon-run-arrow.png) in the upper right corner to run the app, and make sure the connection works properly.
-
-12. Click or tap **File**, then save the app to the cloud. 
-
-12. Repeat the steps in this section for **project-requests-app.msapp**, using the **Project Requests** list.
-
-### Update connections for the sample report
-1. Open **project-analysis.pbix** in Power BI Desktop.
-
-2. On the ribbon, on the **Home** tab, click or tap **Edit queries**, then **Data source settings**.
-   
-    ![Edit queries](./media/sharepoint-scenario-setup/01-03-04-edit-queries.png)
-
-3. Click or tap **Change Source**.
-   
-    ![Data source settings](./media/sharepoint-scenario-setup/01-03-05-settings.png)
-
-4. Enter the URL for your SharePoint Online site, then click or tap **OK**, then **Close**.
-   
-    ![SharePoint list URL](./media/sharepoint-scenario-setup/01-03-06-list-url.png)
-
-5. Power BI Desktop displays a banner under the ribbon, so you can apply changes and bring in data from the new source. Click or tap **Apply Changes**.
-   
-    ![Apply query changes](./media/sharepoint-scenario-setup/01-03-07-apply.png)
-
-6. Sign in with a Microsoft account (the account you use to access SharePoint Online), then click or tap **Connect**.
-   
-    ![Connect to SharePoint Online](./media/sharepoint-scenario-setup/01-03-08-connect.png)
 
 ## Next steps
 The next step in this tutorial series is to [generate an app to handle project requests](sharepoint-scenario-generate-app.md).

@@ -7,6 +7,7 @@ ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "paulliew" # GitHub ID
+ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -83,7 +84,7 @@ There are three levels where auditing can be configured: organization, table, an
  [Data management in Dynamics 365](/dynamics365/customer-engagement/developer/manage-data)   
  [Audit table data changes](/dynamics365/customer-engagement/developer/audit-entity-data-changes)   
  [Retrieve and delete the history of audited data changes](retrieve-and-delete-the-history-of-audited-data-changes.md)   
- [Sample: Audit table data changes](/dynamics365/customer-engagement/developer/sample-audit-entity-data-changes)   
+ [Sample: Audit table data changes](/dynamics365/customerengagement/on-premises/developer/sample-audit-entity-data-changes)   
  [Auditing data changes in Dynamics 365](/dynamics365/customer-engagement/developer/audit-entity-data-changes)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

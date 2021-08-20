@@ -73,7 +73,7 @@ To create a new entity record you must identify the valid property names and typ
 
 ## Create with data returned
 
-You can compose your `POST` request so that data from the created record will be returned with a status of `201 (Created)`.  To get his result, you must use the `return=representation` preference in the request headers.
+You can compose your `POST` request so that data from the created record will be returned with a status of `201 (Created)`.  To get this result, you must use the `return=representation` preference in the request headers.
 
 To control which properties are returned, append the `$select` query option to the URL to the entity set. You may also use `$expand` to return related entities.
 
@@ -143,6 +143,9 @@ OData-Version: 4.0
 - An opportunity is created because it is defined as an object within an array that is set to the value of a collection-valued navigation property `opportunity_customer_accounts`.
 
 - A task is created because it is defined an object within an array that is set to the value of a collection-valued navigation property `Opportunity_Tasks`.
+
+> [!NOTE]
+> When creating a new table row, it is not possible to combine the row creation with the insert of a non-primary image. For a non-primary image to be added, the row must already exist.
 
 **Request**
 
@@ -348,3 +351,4 @@ More information: [Access documents faster using storage partitions](azure-stora
 [Perform conditional operations using the Web API](perform-conditional-operations-using-web-api.md)<br />
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
+

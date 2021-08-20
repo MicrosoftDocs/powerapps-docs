@@ -7,7 +7,7 @@ ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "how-to"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -15,6 +15,7 @@ applies_to:
 author: "Mattp123"
 ms.assetid: 
 caps.latest.revision: 
+ms.subservice: dataverse-maker
 ms.author: "matp"
 manager: "kvivek"
 tags: 
@@ -31,7 +32,7 @@ search.app:
 You can configure dataflows to store their data in your organization’s Azure Data Lake Storage Gen2 account. This article describes the general steps necessary to do so, and provides guidance and best practices along the way. 
 
 > [!IMPORTANT]
-> Dataflow with Analytical tables feature utilizes the Export to data lake service, which may offer varying levels of compliance, privacy, security, and data location commitments. For more information about the **Export to data lake** service, see the [blog article](https://go.microsoft.com/fwlink/?linkid=2109088).
+> Dataflow with Analytical tables feature utilizes the Azure Synapse Link for Dataverse service, which may offer varying levels of compliance, privacy, security, and data location commitments. For more information about Azure Synapse Link for Dataverse, see the [blog article](https://go.microsoft.com/fwlink/?linkid=2109088).
 
 There are some advantages to configuring dataflows to store their definitions and datafiles in your data lake, including the following:
 - Azure Data Lake Storage Gen2 provides an enormously scalable storage facility for data.
@@ -70,15 +71,15 @@ To connect your Azure Data Lake Storage Gen2 account with the dataflow, follow t
 1.	Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and verify which environment you're in. The environment switcher is located on the right side of the header. 
 2. On the left navigation pane, select the down arrow next to **Data**.
 
-   ![Power Apps maker portal Data tab](media/powerapps-portal-data.png)
+   ![Power Apps maker portal Data tab.](media/powerapps-portal-data.png)
 
 3. In the list that appears, select **Dataflows** and then on the command bar select **New dataflow**.
 
-   ![Create a new dataflow](media/create-a-dataflow.png) 
+   ![Create a new dataflow.](media/create-a-dataflow.png) 
 
 4. Select the analytical tables you want. These tables indicate what data you want to store in your organization's Azure Data Lake Store Gen2 account. 
 
-   ![Select analytical tables](media/select-analytical-entities.png)
+   ![Select analytical tables.](media/select-analytical-entities.png)
 
 ## Select the storage account to use for dataflow storage
 If a storage account has not yet been associated with the environment, a **Link to data lake** dialog box appears. You'll need to sign in and find the data lake you created in the previous steps. In this example, no data lake is associated with the environment and so a prompt occurs to add one. 
@@ -88,7 +89,7 @@ If a storage account has not yet been associated with the environment, a **Link 
 
     The **Select Storage Account** screen appears.
     
-    ![Select storage account](media/select-storage-account.png)
+    ![Select storage account.](media/select-storage-account.png)
     
 2. Select the **Subscription ID** of the storage account.
 3. Select the **Resource group name** in which the storage account was created.
@@ -108,8 +109,8 @@ There are a few considerations and limitations to keep in mind when working with
 > You shouldn't change files created by dataflows in your organization’s lake or add files to a dataflow’s **CDM Folder**. Changing files might damage dataflows or alter their behavior and is not supported. Power Platform Dataflows only grants read access to files it creates in the lake. If you authorize other people or services to the filesystem used by Power Platform Dataflows, only grant them read access to files or folders in that filesystem.
 
 ## Privacy notice
-By enabling the creation of dataflows with Analytical tables in your organization, via the **Export to data lake** service, details about the Azure Data Lake storage account, such as the name of the storage account, will be sent to and stored in the Export to data lake service, which is currently located outside the PowerApps compliance boundary and may employ lesser or different privacy and security measures than those typically in PowerApps. Note that you may remove the data lake association at any time to discontinue use of this functionality and your Azure Data Lake storage account details will be removed from the **Export to data lake** service.
-Further information about Export to data lake, is available in [this article.](https://go.microsoft.com/fwlink/?linkid=2109088)
+By enabling the creation of dataflows with Analytical tables in your organization, via the Azure Synapse Link for Dataverse service, details about the Azure Data Lake storage account, such as the name of the storage account, will be sent to and stored in the Azure Synapse Link for Dataverse service, which is currently located outside the PowerApps compliance boundary and may employ lesser or different privacy and security measures than those typically in PowerApps. Note that you may remove the data lake association at any time to discontinue use of this functionality and your Azure Data Lake storage account details will be removed from the Azure Synapse Link for Dataverse service.
+Further information about Azure Synapse Link for Dataverse is available in [this article.](https://go.microsoft.com/fwlink/?linkid=2109088)
 
 
 ## Frequently asked questions

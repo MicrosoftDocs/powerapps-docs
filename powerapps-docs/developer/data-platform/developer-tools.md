@@ -2,11 +2,12 @@
 title: "Developer tools and resources (Microsoft Dataverse) | Microsoft Docs" 
 description: "Learn about available tools and resources when working with solutions."
 ms.custom: ""
-ms.date: 03/18/2021
+ms.date: 07/28/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "shmcarth" # GitHub ID
+ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -22,13 +23,19 @@ search.app:
 
 Developers will use the following tools and resources when working with solutions using Microsoft Dataverse.
 
+## Integrated Development Environment (IDE) extensions
+
+*Power Platform Tools for Visual Studio* - supports the rapid creation, debugging, and deployment of plug-ins. Other capabilities currently in preview include development of custom workflow activities, web resources, integration technologies like Azure Service endpoints and webhooks, and more. To learn more about the tool, install the [extension](tools/devtools-install.md) and try the available [quickstart](tools/devtools-create-project.md) topics.
+
+*Microsoft Power Platform CLI* - a simple, one-stop developer CLI that empowers developers and ISVs to perform various operations in Microsoft Power Platform related to environment lifecycle features, and to authenticate and work with Microsoft Dataverse environments, solution packages, portals, code components, and so on. To learn more about the tool, install the [extension](powerapps-cli.md#install-microsoft-power-platform-cli) or try the available [standalone](powerapps-cli.md#standalone-power-platform-cli) version.
+
 ## Tools available for download from NuGet
 
 The following tools are distributed in NuGet packages. The [Developer Guide: Download tools from NuGet](/dynamics365/customer-engagement/developer/download-tools-nuget) topic includes a PowerShell script you can use to download and extract the latest versions of these tools.
 
 |Tool  |Description  |
 |---------|---------|
-|Code Generation tool `CrmSvcUtil.exe`|A command-line code generation tool that generates early-bound .NET Framework classes that represent the Entity Data Model used by the Organization service. <br />More information: <br />[Organization service](work-with-data.md#organization-service)<br />[Create early bound table classes with the Code Generation tool](/dynamics365/customer-engagement/developer/org-service/create-early-bound-entity-classes-code-generation-tool)|
+|Code Generation tool `CrmSvcUtil.exe`|A command-line code generation tool that generates early-bound .NET Framework classes that represent the Entity Data Model used by the Organization service. <br />More information: <br />[Organization service](work-with-data.md#organization-service)<br />[Create early bound table classes with the Code Generation tool](org-service/generate-early-bound-classes.md)|
 |Configuration Migration tool `DataMigrationUtility.exe`|Used to move configuration data across environments. Configuration data is used to define custom functionality  and is typically stored in custom tables. This tool is not designed to move business data. <br /> More information: [Dataverse Administrator Guide: Move configuration data across instances and organizations with the Configuration Migration tool](/dynamics365/customer-engagement/admin/manage-configuration-data)|
 |Package Deployer `PackageDeployer.exe`|Used to deploy packages on Dataverse environments. A package is an installable unit that includes solutions. <br /> More information: <br />[Deploy packages](/power-platform/admin/deploy-packages-using-package-deployer-windows-powershell)<br />[Create packages for the Package Deployer](/power-platform/alm/package-deployer-tool)|
 |Plug-in Registration tool `PluginRegistration.exe`|A tool used to subscribe .NET assembly plug-in classes to data transaction events. <br />More information: <br />[Create a plug-in](apply-business-logic-with-code.md#create-a-plug-in)<br />[Register a plug-in](register-plug-in.md)|

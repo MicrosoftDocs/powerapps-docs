@@ -7,12 +7,13 @@ ms.reviewer: "matp"
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+ms.topic: "how-to"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
   - "PowerApps"
 author: "matthewbolanos"
+ms.subservice: mda-maker
 ms.author: "mabolan"
 manager: "kvivek"
 tags: 
@@ -27,7 +28,7 @@ search.app:
 # Add an embedded canvas app on a model-driven form
 Display data from a variety of sources right next to data from Microsoft Dataverse. This article explains how to embed a canvas app on a model-driven form.
 
-:::image type="content" source="media/embedded-canvas-app.png" alt-text="Example of an embedded canvas app on a model-driven app main form":::
+:::image type="content" source="media/embedded-canvas-app.png" alt-text="Example of an embedded canvas app on a model-driven app main form.":::
 
 Imagine that you want to embed a canvas app on a model-driven app main form, such as the main form for the Accounts table. To do this, follow these steps:
 
@@ -41,7 +42,7 @@ Imagine that you want to embed a canvas app on a model-driven app main form, suc
 
 1. On the table column properties pane, expand **Components**, select **+ Component**, and then select **Canvas app**. 
 
-    :::image type="content" source="media/add-canvas-app-control.png" alt-text="Add the canvas app control to a table column":::
+    :::image type="content" source="media/add-canvas-app-control.png" alt-text="Add the canvas app control to a table column.":::
 1. On the **Add canvas app** pane, enter the following properties, and then select **Done**: 
    - The **Entity name** area specifies the table that will provide the data to your embedded canvas app.
 

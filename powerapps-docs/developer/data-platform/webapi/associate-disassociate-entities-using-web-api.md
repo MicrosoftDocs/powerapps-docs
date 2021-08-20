@@ -1,5 +1,5 @@
 ---
-title: "Associate and disassociate tables using the Web API (Microsoft Dataverse)| Microsoft Docs"
+title: "Associate and disassociate table rows using the Web API (Microsoft Dataverse)| Microsoft Docs"
 description: "Read how to add a reference to a collection-valued navigation property, remove a reference, and change an existing reference using the Web API"
 ms.custom: ""
 ms.date: 05/03/2021
@@ -22,7 +22,7 @@ search.app:
   - D365CE
 ---
 
-# Associate and disassociate tables using the Web API
+# Associate and disassociate table rows using the Web API
 
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
@@ -32,7 +32,7 @@ There are several methods you can use to associate and disassociate tables (enti
 
 ## Add a reference to a collection-valued navigation property
 
- The following example shows how to associate an existing opportunity entity with the `opportunityid` value of `00000000-0000-0000-0000-000000000001` to the collection-valued `opportunity_customer_accounts` navigation property for an account entity with the `accountid` value of `00000000-0000-0000-0000-000000000002`. This is a 1:N relationship but you can perform the same operation for an N:N relationship.  
+ The following example shows how to associate an existing opportunity with the `opportunityid` value of `00000000-0000-0000-0000-000000000001` to the collection-valued `opportunity_customer_accounts` navigation property for an account with the `accountid` value of `00000000-0000-0000-0000-000000000002`. This is a 1:N relationship but you can perform the same operation for an N:N relationship.  
   
 **Request**  
 ```http  
@@ -59,7 +59,7 @@ OData-Version: 4.0
  
 ## Change the reference in a single-valued navigation property
 
- You can associate entities by setting the value of a single-valued navigation property using PUT request with the following pattern.  
+ You can associate rows by setting the value of a single-valued navigation property using PUT request with the following pattern.  
   
  **Request**
 
@@ -83,11 +83,11 @@ OData-Version: 4.0
 ```  
 
 
-<a name="bkmk_Removeareferencetoanentity"></a>
+<a name="bkmk_Removeareferencetoarow"></a>
 
-## Remove a reference to a table
+## Remove a reference to a table row
 
- Use a DELETE request to remove a reference to an entity. The way you do it is different depending on whether you’re referring to a collection-valued navigation property or a single-valued navigation property.  
+ Use a DELETE request to remove a reference to a row. The way you do it is different depending on whether you’re referring to a collection-valued navigation property or a single-valued navigation property.  
   
  **Request**  
  For a collection-valued navigation property, use the following.  
@@ -126,23 +126,23 @@ HTTP/1.1 204 No Content
 OData-Version: 4.0  
 ```
 
-<a name="bkmk_Associateentitiesoncreate"></a>
+<a name="bkmk_Associaterowsoncreate"></a>
 
-## Associate tables on create
+## Associate table rows on create
 
-As described in [Associate table rows on create](create-entity-web-api.md#associate-table-rows-on-create), you can associate the new record to existing records by setting the navigation properties using the `@odata.bind` annotation.
+As described in [Associate rows on create](create-entity-web-api.md#associate-table-rows-on-create), you can associate the new row to existing rows by setting the navigation properties using the `@odata.bind` annotation.
 
-As described in [Create related tables in one operation](create-entity-web-api.md#bkmk_CreateRelated), new entities can be created with relationships using *deep insert*.  
+As described in [Create related tables in one operation](create-entity-web-api.md#bkmk_CreateRelated), new tables can be created with relationships using *deep insert*.  
   
-## Associate and disassociate tables on update
+## Associate and disassociate table rows on update
 
-You can set the value of single-valued navigation properties using `PATCH` to associate or disassociate records.
+You can set the value of single-valued navigation properties using `PATCH` to associate or disassociate rows.
 
-<a name="bkmk_Associateentitiesonupdate"></a>
+<a name="bkmk_Associaterowsonupdate"></a>
 
-### Associate tables on update
+### Associate table rows on update
 
- You can associate entities on update using the same message described in [Basic update](update-delete-entities-using-web-api.md#bkmk_update) but you must use the `@odata.bind` annotation to set the value of a single-valued navigation property. The following example changes the account associated to an opportunity using the `customerid_account` single-valued navigation property.  
+ You can associate rows on update using the same message described in [Basic update](update-delete-entities-using-web-api.md#bkmk_update) but you must use the `@odata.bind` annotation to set the value of a single-valued navigation property. The following example changes the account associated to an opportunity using the `customerid_account` single-valued navigation property.  
   
  **Request**
 
@@ -165,7 +165,7 @@ HTTP/1.1 204 No Content
 OData-Version: 4.0  
 ```  
 
-### Disassociate tables on update
+### Disassociate table rows on update
 
 You can remove a reference to a single-valued navigation property when updating by setting the value to `null`. This method allows you to disassociate multiple references in a single operation.
 There are two ways to do this:
@@ -203,14 +203,14 @@ OData-Version: 4.0
 
 More information: [Basic update](update-delete-entities-using-web-api.md#basic-update)
 
-<a name="bkmk_Associateentitiesonupdate_multi"></a>
+<a name="bkmk_Associaterowsonupdate_multi"></a>
 
-## Associate tables on update using collection-valued navigation property
+## Associate table rows on update using collection-valued navigation property
 
-The following example shows how to associate multiple existing [ActivityParty](../reference/entities/activityparty.md) entities with an [Email](../reference/entities/email.md) entity using collection-valued navigation property `email_activity_parties`.
+The following example shows how to associate multiple existing [ActivityParty](../reference/entities/activityparty.md) with an [Email](../reference/entities/email.md) using collection-valued navigation property `email_activity_parties`.
 
 > [!NOTE]
-> Associating multiple entities with an entity on update is a special scenario that is possible only with <xref:Microsoft.Dynamics.CRM.activityparty?text=activityparty EntityType />.
+> Associating multiple tables with a table on update is a special scenario that is possible only with <xref:Microsoft.Dynamics.CRM.activityparty?text=activityparty EntityType />.
 
 **Request**
 

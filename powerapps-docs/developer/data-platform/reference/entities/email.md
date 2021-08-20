@@ -1,7 +1,7 @@
 ---
 title: "Email table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the Email table/entity."
-ms.date: 03/04/2021
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -40,7 +40,6 @@ Activity that is delivered using email protocols.
 |GrantAccess|<xref href="Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 |ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/emails(*activityid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/emails<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
@@ -74,6 +73,9 @@ Activity that is delivered using email protocols.
 
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
+- [AcceptingEntityId](#BKMK_AcceptingEntityId)
+- [AcceptingEntityIdName](#BKMK_AcceptingEntityIdName)
+- [AcceptingEntityTypeCode](#BKMK_AcceptingEntityTypeCode)
 - [ActivityAdditionalParams](#BKMK_ActivityAdditionalParams)
 - [ActivityId](#BKMK_ActivityId)
 - [ActualDurationMinutes](#BKMK_ActualDurationMinutes)
@@ -117,6 +119,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [PriorityCode](#BKMK_PriorityCode)
 - [ProcessId](#BKMK_ProcessId)
 - [ReadReceiptRequested](#BKMK_ReadReceiptRequested)
+- [ReceivingMailboxId](#BKMK_ReceivingMailboxId)
 - [RegardingObjectId](#BKMK_RegardingObjectId)
 - [RegardingObjectTypeCode](#BKMK_RegardingObjectTypeCode)
 - [ReminderActionCardId](#BKMK_ReminderActionCardId)
@@ -141,6 +144,58 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [TransactionCurrencyId](#BKMK_TransactionCurrencyId)
 - [TraversedPath](#BKMK_TraversedPath)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
+
+
+### <a name="BKMK_AcceptingEntityId"></a> AcceptingEntityId
+
+**Added by**: msft_ActivitiesInfra_Extensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|The Entity that Accepted the Email|
+|DisplayName|Accepting Entity|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|IsValidForUpdate|False|
+|LogicalName|acceptingentityid|
+|RequiredLevel|None|
+|Targets|queue,systemuser|
+|Type|Lookup|
+
+
+### <a name="BKMK_AcceptingEntityIdName"></a> AcceptingEntityIdName
+
+**Added by**: Active Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Accepting Entity Name|
+|DisplayName|Accepting Entity Name|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|IsValidForUpdate|False|
+|LogicalName|acceptingentityidname|
+|MaxLength|200|
+|RequiredLevel|None|
+|Type|String|
+
+
+### <a name="BKMK_AcceptingEntityTypeCode"></a> AcceptingEntityTypeCode
+
+**Added by**: Active Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Accepting Entity Object Type.|
+|DisplayName|Accepting User Or Queue Object Type|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|IsValidForUpdate|False|
+|LogicalName|acceptingentitytypecode|
+|RequiredLevel|None|
+|Type|EntityName|
 
 
 ### <a name="BKMK_ActivityAdditionalParams"></a> ActivityAdditionalParams
@@ -874,6 +929,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 
 
+### <a name="BKMK_ReceivingMailboxId"></a> ReceivingMailboxId
+
+**Added by**: msft_ActivitiesInfra_Extensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|The Mailbox that Received the Email.|
+|DisplayName|Receiving Mailbox|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|IsValidForUpdate|False|
+|LogicalName|receivingmailboxid|
+|RequiredLevel|None|
+|Targets|mailbox|
+|Type|Lookup|
+
+
 ### <a name="BKMK_RegardingObjectId"></a> RegardingObjectId
 
 |Property|Value|
@@ -1300,6 +1372,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [OwningUser](#BKMK_OwningUser)
 - [ParentActivityIdName](#BKMK_ParentActivityIdName)
 - [PostponeEmailProcessingUntil](#BKMK_PostponeEmailProcessingUntil)
+- [ReceivingMailboxIdName](#BKMK_ReceivingMailboxIdName)
 - [RegardingObjectIdName](#BKMK_RegardingObjectIdName)
 - [RegardingObjectIdYomiName](#BKMK_RegardingObjectIdYomiName)
 - [ReplyCount](#BKMK_ReplyCount)
@@ -1950,6 +2023,24 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Type|DateTime|
 
 
+### <a name="BKMK_ReceivingMailboxIdName"></a> ReceivingMailboxIdName
+
+**Added by**: msft_ActivitiesInfra_Extensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|receivingmailboxidname|
+|MaxLength|200|
+|RequiredLevel|None|
+|Type|String|
+
+
 ### <a name="BKMK_RegardingObjectIdName"></a> RegardingObjectIdName
 
 |Property|Value|
@@ -2522,8 +2613,10 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [processstage_emails](#BKMK_processstage_emails)
 - [sla_email](#BKMK_sla_email)
 - [lk_email_createdby](#BKMK_lk_email_createdby)
-- [owner_emails](#BKMK_owner_emails)
 - [email_email_CorrelatedActivityId](#BKMK_email_email_CorrelatedActivityId)
+- [mailbox_email_ReceivingMailboxId](#BKMK_mailbox_email_ReceivingMailboxId)
+- [email_acceptingentity_queue](#BKMK_email_acceptingentity_queue)
+- [email_acceptingentity_systemuser](#BKMK_email_acceptingentity_systemuser)
 
 
 ### <a name="BKMK_KnowledgeBaseRecord_Emails"></a> KnowledgeBaseRecord_Emails
@@ -2626,13 +2719,21 @@ See sla Table [sla_email](sla.md#BKMK_sla_email) One-To-Many relationship.
 
 See systemuser Table [lk_email_createdby](systemuser.md#BKMK_lk_email_createdby) One-To-Many relationship.
 
-### <a name="BKMK_owner_emails"></a> owner_emails
-
-See owner Table [owner_emails](owner.md#BKMK_owner_emails) One-To-Many relationship.
-
 ### <a name="BKMK_email_email_CorrelatedActivityId"></a> email_email_CorrelatedActivityId
 
 See email Table [email_email_CorrelatedActivityId](email.md#BKMK_email_email_CorrelatedActivityId) One-To-Many relationship.
+
+### <a name="BKMK_mailbox_email_ReceivingMailboxId"></a> mailbox_email_ReceivingMailboxId
+
+See mailbox Table [mailbox_email_ReceivingMailboxId](mailbox.md#BKMK_mailbox_email_ReceivingMailboxId) One-To-Many relationship.
+
+### <a name="BKMK_email_acceptingentity_queue"></a> email_acceptingentity_queue
+
+See queue Table [email_acceptingentity_queue](queue.md#BKMK_email_acceptingentity_queue) One-To-Many relationship.
+
+### <a name="BKMK_email_acceptingentity_systemuser"></a> email_acceptingentity_systemuser
+
+See systemuser Table [email_acceptingentity_systemuser](systemuser.md#BKMK_email_acceptingentity_systemuser) One-To-Many relationship.
 
 ### See also
 

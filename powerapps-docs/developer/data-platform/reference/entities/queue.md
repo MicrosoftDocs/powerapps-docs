@@ -1,7 +1,7 @@
 ---
 title: "Queue table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the Queue table/entity."
-ms.date: 03/04/2021
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -34,7 +34,6 @@ A list of records that require action, such as accounts, activities, and cases.
 |GrantAccess|<xref href="Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 |ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/queues(*queueid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/queues<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
@@ -1145,13 +1144,13 @@ Listed by **SchemaName**.
 - [Queue_Email_EmailSender](#BKMK_Queue_Email_EmailSender)
 - [Queue_DuplicateBaseRecord](#BKMK_Queue_DuplicateBaseRecord)
 - [queue_activity_parties](#BKMK_queue_activity_parties)
-- [queue_PostRegardings](#BKMK_queue_PostRegardings)
 - [queue_team](#BKMK_queue_team)
 - [queue_entries](#BKMK_queue_entries)
 - [Queue_ProcessSessions](#BKMK_Queue_ProcessSessions)
 - [queue_PostFollows](#BKMK_queue_PostFollows)
 - [mailbox_regarding_queue](#BKMK_mailbox_regarding_queue)
 - [Queue_BulkDeleteFailures](#BKMK_Queue_BulkDeleteFailures)
+- [email_acceptingentity_queue](#BKMK_email_acceptingentity_queue)
 
 
 ### <a name="BKMK_queue_system_user"></a> queue_system_user
@@ -1274,21 +1273,6 @@ Same as activityparty table [queue_activity_parties](activityparty.md#BKMK_queue
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_queue_PostRegardings"></a> queue_PostRegardings
-
-Same as postregarding table [queue_PostRegardings](postregarding.md#BKMK_queue_PostRegardings) Many-To-One relationship.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|postregarding|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|queue_PostRegardings|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
 ### <a name="BKMK_queue_team"></a> queue_team
 
 Same as team table [queue_team](team.md#BKMK_queue_team) Many-To-One relationship.
@@ -1378,6 +1362,23 @@ Same as bulkdeletefailure table [Queue_BulkDeleteFailures](bulkdeletefailure.md#
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
+
+### <a name="BKMK_email_acceptingentity_queue"></a> email_acceptingentity_queue
+
+**Added by**: msft_ActivitiesInfra_Extensions Solution
+
+Same as email table [email_acceptingentity_queue](email.md#BKMK_email_acceptingentity_queue) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|email|
+|ReferencingAttribute|acceptingentityid|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|email_acceptingentity_queue|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
 <a name="manytoone"></a>
 
 ## Many-To-One Relationships
@@ -1389,7 +1390,6 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [business_unit_queues2](#BKMK_business_unit_queues2)
 - [lk_queue_modifiedonbehalfby](#BKMK_lk_queue_modifiedonbehalfby)
 - [organization_queues](#BKMK_organization_queues)
-- [owner_queues](#BKMK_owner_queues)
 - [lk_queuebase_createdby](#BKMK_lk_queuebase_createdby)
 - [lk_queuebase_modifiedby](#BKMK_lk_queuebase_modifiedby)
 - [TransactionCurrency_Queue](#BKMK_TransactionCurrency_Queue)
@@ -1416,10 +1416,6 @@ See systemuser Table [lk_queue_modifiedonbehalfby](systemuser.md#BKMK_lk_queue_m
 ### <a name="BKMK_organization_queues"></a> organization_queues
 
 See organization Table [organization_queues](organization.md#BKMK_organization_queues) One-To-Many relationship.
-
-### <a name="BKMK_owner_queues"></a> owner_queues
-
-See owner Table [owner_queues](owner.md#BKMK_owner_queues) One-To-Many relationship.
 
 ### <a name="BKMK_lk_queuebase_createdby"></a> lk_queuebase_createdby
 
