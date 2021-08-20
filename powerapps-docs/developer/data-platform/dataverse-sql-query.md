@@ -165,7 +165,7 @@ If the connection is successful a line "TcpTestSucceeded : True" will be returne
 
 If the connection is successful, you will be in an active telnet session. If unsuccessful, you will receive the error:
 
-“Connecting to <environmentname>.crm.dynamics.com… Could not open connection to the host, on port 1433: connect failed”. 
+“Connecting to \<environmentname>.crm.dynamics.com… Could not open connection to the host, on port 1433: connect failed”. 
 
 This means the port has been blocked at the client.
 
