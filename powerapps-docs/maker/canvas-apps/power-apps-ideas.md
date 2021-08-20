@@ -1,5 +1,5 @@
 ---
-title: Power Apps Ideas (Experimental)
+title: Power Apps Ideas (Preview)
 description: Learn about using Power Apps Ideas natural language to transform into Power Fx formulas.
 author: norliu
 ms.service: powerapps
@@ -18,16 +18,10 @@ contributors:
   - tapanm-msft
 ---
 
-# Power Apps Ideas (Experimental)
-
-[This article is pre-release documentation and is subject to change.]
+# Power Apps Ideas (Preview)
 
 [Power Fx](/power-platform/power-fx/overview) is a powerful, low-code language to help makers stitch app components together. However, sometimes it's not easy to write a formula. It takes time to learn and effort to tune. Power Apps Ideas is created to help customers ease the formula authoring experience by using the power of AI models. It can
 now be used to transform natural language to a Power Fx formula.
-
-> [!IMPORTANT]
-> - This is an experimental feature.
-> - Experimental features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 
 For example, instead of figuring out how to write the following formula:
 
@@ -39,11 +33,9 @@ You can type in `search Contacts with 'Full Name' in TextSearchBox1 and sort res
 
 ![Power Apps Ideas demo.](media/power-apps-ideas/power-apps-ideas-demo.gif "Animation that shows how Power Apps Ideas work")
 
-## Enable Power Apps Ideas for your app
+## Using Power Apps Ideas in your app
 
-This feature is currently in the experimental phase, and it's turned "Off" by default. To try it out, open an existing canvas app or create a new one, select **Settings** > **Upcoming features**, search for “Ideas”, and toggle **Enable Ideas panel** to "On".
-
-Once turned on, you'll be able to see a new "Ideas" tab on the right-side of the screen inside the Power Apps Studio, next to Properties and Advanced tabs. You can now start using Power Apps Ideas.
+To use Power Apps Ideas, you will find an Ideas pane on the right side of your canvas app, next to Properties and Advanced. You can select or create a Gallery or Data table that is bound to a Dataverse table and start to type in ideas in natural language. Click **Get Ideas** after done and in a few seconds, formula suggestions will be ready for you to pick from.
 
 ## Transforming natural language to Power Fx formula
 
@@ -87,16 +79,45 @@ To get the best results, here are some tips that you can follow when writing the
 
 During this experimental release, Power Apps Ideas has the following limitations:
 
-- Regions and language: Currently available in environments created inside United States, with English set as the browser's default language.
-- Controls: Supports only **Gallery** and **Data table** controls&mdash;on their **Items** property.
-- Data sources: Currently the model is optimized for **Dataverse** tables and won't generate any suggestions if your Gallery or Data table isn't bound to a Dataverse table.
-- Functions: Works best on `Search()`, `Filter()`, `Sort()`, `SortByColumns()`, `FirstN()`, and `LastN()`. We’ll continue to add support for more functions.
-- Data types: Supports Text, Date time, Numbers. Not supported: Lookup, Choice, Choices, Yes/No, File and Image.
+- Regions and language: Currently available in environments created inside United States, with English (en-us) set as the browser's default language.
+- Controls: Supports generating formulas for **Gallery** and **Data table** controls&mdash;on their **Items** property. Can recognize control value of TextInput, Dropdown, DatePicker, Slider, Toggle, Checkbox, Radio as input.
+- Data sources: Currently Ideas only supports **Dataverse** tables and won't generate any suggestions if your Gallery or Data table isn't bound to a Dataverse table.
+- Functions: Works best on `Search()`, `Filter()`, `Sort()`, `SortByColumns()`, `FirstN()`, and `LastN()`. And also a list of basic functions for the conditions. See full supported function list at the end of this session. We’ll continue to add support for more functions.
+- Data types: Supports Text, Whole Number, Date and Time, Date Only, Decimal Number. Not supported: Lookup, Choice, Choices, Yes/No, File and Image.
 - This feature's model understands some commonly used expressions in natural  language. For example, it can translate from `latest on top`, `big to small` to a descending order and `oldest on top`, `small to big` to ascending order. However, it needs you to be precise about table, column, and control names. <br> For example, if you enter `search Accounts with name in textbox`, it might not give you good results because there’s no linkage built on the model to understand that “name” maps to the “Account Name” column and "textbox" maps to "TextSearchBox1". <br> 
 - This feature doesn’t understand business-related verbs. For example, if you want to show accounts that are created in the last month, you might not get good results, because the model doesn’t understand that “created” refers to the “Created On” column.
 
 > [!NOTE]
 > We're improving the model to make it better and to accomplish more complex tasks, support more functions, controls, and properties. If you have a wish list, submit ideas through [Power Apps Ideas - Power Platform Community](https://powerusers.microsoft.com/t5/Power-Apps-Ideas/idb-p/PowerAppsIdeas).
+
+Full list of supported Power Fx functions:
+- Search
+- Sort
+- SortByColumns
+- Filter
+- FirstN
+- LastN
+- IsBlank
+- Year
+- Today
+- Date
+- IsEmpty
+- Minute
+- Time
+- Hour
+- Distinct
+- StartsWith
+- Now
+- DateAdd
+- Weekday
+- Day
+- DateDiff
+- Month
+- DateValue
+- DateTimeValue
+- TimeValue
+- Second
+- EndsWith
 
 ## Reporting abuses
 
