@@ -169,7 +169,7 @@ To duplicate an idea campaign:
 
     ![Duplicate an idea campaign.](media/employee-ideas/duplicate-idea-campaign.png "Delete an idea campaign")
 
-    A copy of the selected campaign is created, with the name suffix "(COPY)".
+    A copy of the selected campaign is created, with the name suffix "(1)".
 
 1. Select **Add** to save the campaign, or **Cancel** to discard the changes.
 
