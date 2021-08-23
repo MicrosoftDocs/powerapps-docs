@@ -35,6 +35,8 @@
     items:
       - name: Service Protection API Limits
         href: ../api-limits.md
+      - name: Manage invalid characters
+        href: work-with-data/invalidcharactersinfield.md
   - name: Work with metadata using code
     href: work-with-metadata/index.md
     items:

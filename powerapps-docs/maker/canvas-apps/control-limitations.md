@@ -41,7 +41,7 @@ In this article, learn about the general limitations of the controls used in can
 
 - [Image control](controls/control-image.md) - only supports external media URLs using HTTPS.
 
-- [Power BI tile control](controls/control-power-bi-tile.md) - see [Power BI tile control limitations for passing a parameter](controls/control-power-bi-tile.md#pass-a-parameter).
+- [Power BI tile control](controls/control-power-bi-tile.md) - see [Power BI tile control limitations for passing a parameter](controls/control-power-bi-tile.md#filtering).
 
 - [PDF viewer control (experimental)](controls/control-pdf-viewer.md) - see [PDF viewer control (experimental) limitations](controls/control-pdf-viewer.md#limitations).
 
