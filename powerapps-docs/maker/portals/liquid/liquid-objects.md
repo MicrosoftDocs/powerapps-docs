@@ -5,7 +5,7 @@ author: gitanjalisingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2020
+ms.date: 08/23/2021
 ms.subservice: portals
 ms.author: gisingh
 ms.reviewer: tapanm
@@ -19,6 +19,9 @@ contributors:
 Liquid objects contain attributes to output dynamic content to the page. For example, the page object has an attribute called title that can be used to output the title of the current page.
 
 To access an object attribute by name, use a period (.). To render an object's attribute in a template, wrap it in {{ and }}.
+
+> [!IMPORTANT]
+> Always use [escape filter](liquid-filters.md#escape) when using Liquid code to read data.
 
 ```
 {{ page.title }}
@@ -264,10 +267,13 @@ The following table explains various attributes associated with blogpost Object.
 
 ## entities
 
+> [!CAUTION]
+> **entities** object values can be untrusted. Hence, we recommend that you always use [escape filter](liquid-filters.md#escape) with this object.
+
 Allows you to load any Power Apps table by ID. If the table exists, a table object will be returned. If a table with the given ID isn't found, [null](liquid-types.md#null) will be returned.  
 
 ```
-{% assign account = entities.account['936DA01F-9ABD-4d9d-80C7-02AF85C822A8'] %}
+{% assign account = entities.account['936DA01F-9ABD-4d9d-80C7-02AF85C822A8'] | escape %}
 
 {% if account %}
 
@@ -275,9 +281,9 @@ Allows you to load any Power Apps table by ID. If the table exists, a table obje
 
 {% endif %}
 
-{% assign entity_logical_name = 'contact' %}
+{% assign entity_logical_name = 'contact' | escape %}
 
-{% assign contact = entities[entity_logical_name][request.params.contactid] %}
+{% assign contact = entities[entity_logical_name][request.params.contactid] | escape %}
 
 {% if contact %}
 
@@ -996,12 +1002,15 @@ The polls object allows you to select a specific poll or poll placement:
 
 ## request
 
+> [!CAUTION]
+> **request** object values are untrusted. Hence, you must use [escape filter](liquid-filters.md#escape) when using **request** object.
+
 Contains information about the current HTTP request.
 
 ```
 {% assign id = request.params['id'] %}
 
-<a href={{ request.url | add_query: 'foo', 1 }}>Link</a>
+<a href={{ request.url | add_query: 'foo', 1 | escape }}>Link</a>
 ```
 
 > [!NOTE]
