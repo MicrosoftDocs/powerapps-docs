@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 08/17/2021
+ms.date: 08/23/2021
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: tapanm
@@ -32,8 +32,19 @@ This step type allows the advanced form step to act as a basic form within the o
 | Record ID Parameter Name | A parameter name provided in the query string of the URL to the Web Page containing this Basic Form.                                                                                                                                                                                                                                                                                                                                                                                |
 | Relationship Name                     | Required when Record Source Type is Record Associated to Current Portal User. The logical name of the relationship between the current portal user record and the target record. This must return the same table type specified by the Table Name field.                                                                                                                                                                                                                           |
 | Allow Create If Null                  | An optional Boolean value available when Record Source Type is Record Associated to Current Portal User. Checked indicates that if the related record does not exist, allow the user to create it the first time, otherwise an exception will be thrown if the record does not already exist because the form needs a record to data-bind to.                                                                                                                                        |
-| Enable Table Permissions             | Will cause the form to respect Table Permissions. The default is false for backwards compatibility reasons. If set to true, explicit permissions are REQUIRED for any user wanting to access the form. Note that this only applies to the FIRST step of a form.                                                                                                                                                                                                                     |
+| Enable Table Permissions             | Will cause the form to respect Table Permissions. The default is false for backwards compatibility reasons. If set to true, explicit permissions are REQUIRED for any user wanting to access the form. Note that this only applies to the FIRST step of a form. <br> **NOTE**: This method of securing forms would be deprecated soon. Therefore, it shouldn't be used. Use proper [table permissions](entity-permissions-studio.md), and web role setup to provide access to users for any data instead. See next section [Secure your forms](#secure-your-forms) for additional details. More information: [Table permission changes for forms and lists on new portals](../important-changes-deprecations.md#table-permission-changes-for-forms-and-lists-on-new-portals)                                                                                                                                                                                                                    |
 ||
+
+## Secure your forms
+
+>[!NOTE]
+> This method of securing forms would be deprecated soon. Therefore, it shouldn't be used. Use proper [table permissions](entity-permissions-studio.md), and web role setup to provide access to users for any data instead. More information: [Table permission changes for forms and lists on new portals](../important-changes-deprecations.md#table-permission-changes-for-forms-and-lists-on-new-portals)
+
+To secure your forms, you must create table permissions that determine access and ownership of the records according to web roles. If a user lands on a basic form and does not have permissions, they will receive an error message. In addition, you'll also see a warning when a form is configured with table permissions not enabled:
+
+"Table permissions should be enabled for this record or anyone on the internet can view the data."
+
+To enable permissions for a basic form, select the checkbox to **Enable Table Permissions**. [!INCLUDE[proc-more-information](../../../includes/proc-more-information.md)] [Create web roles for portals](create-web-roles.md).  
 
 ## Additional settings
 
