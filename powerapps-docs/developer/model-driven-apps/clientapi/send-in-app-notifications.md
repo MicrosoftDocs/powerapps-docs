@@ -41,7 +41,7 @@ To use the in-app notification feature: , enable the `AllowNotificationsEarlyAcc
 Since the notification system uses a table, any of the table functionalities can be used to create new notifications.  
 
 > [!div class="mx-imgBorder"] 
-> [Welcome notification](../media/welcome-notification.png "Welcome notification")
+> ![Welcome notification](../media/welcome-notification.png "Welcome notification")
 
 
 The following examples use the notification table and a notification record to create notifications.
@@ -336,6 +336,6 @@ Power Apps Notification Connector is for push notifications and is separate from
 
 ## Related articles
 
-- [Create an entity record using the Web API](../../developer/data-platform/webapi/create-entity-web-api.md)
+- [Create an entity record using the Web API](../../data-platform/webapi/create-entity-web-api.md)
 - [Create an entity record with Client API](reference/xrm-webapi/createrecord.md)
-- [Use in-app notifications](../../user/notifications.md)
+- [Use in-app notifications](../../../user/notifications.md)
