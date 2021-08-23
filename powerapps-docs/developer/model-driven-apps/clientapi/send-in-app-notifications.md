@@ -1,17 +1,17 @@
 ---
 title: "Send in-app notifications within model-driven apps" 
 description: Learn how to configure notifications in model-driven apps using client API.
-ms.custom: ""
-ms.date: 07/30/2021
+ms.date: 08/23/2021
 ms.reviewer: "nabuthuk"
 ms.service: powerapps
-ms.subservice: mda-maker
+ms.subservice: mda-developer
 ms.topic: "article"
 author: "aorth"
 ms.author: "nabuthuk"
 manager: "kvivek"
 search.audienceType: 
   - maker
+  - developer
 search.app: 
   - "PowerApps"
   - D365CE
@@ -21,15 +21,20 @@ search.app:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
 
-App notifications use the notification table to store notifications for each user.our model-driven app will automatically check the system for new notifications and display them in the notification center. The notification sender or your system administrator can indicate if a toast is shown and how it can be dismissed. Notifications appear in notification center until you dismiss them or until they expire. By default, notification expire after 14 days but your administrator can override this time.
+App notifications use the notification table to store notifications for each user. Your model-driven app will automatically check the system for new notifications and displays them in the notification center. The notification sender or your system administrator can configure how a toast is shown and how it can be dismissed. Notifications appear in notification center until you dismiss them or until they expire. By default, notification expires after 14 days but your administrator can override this time.
 
-This article outlines the steps on how to send in-app notifications to a specific user.
+This article outlines the steps on how to send in-app notifications to a specific user using [Client API](reference.md).
 
   > [!IMPORTANT]
   > - This is a preview feature, and isn't available in all regions.
   > - [!INCLUDE[cc_preview_features_definition](../../../includes/cc-preview-features-definition.md)]
 
-To use the in-app notification feature, enable the `AllowNotificationsEarlyAccess` app setting in model-driven app.
+## Enable in-app notification feature
+
+To use the in-app notification feature: , enable the `AllowNotificationsEarlyAccess` app setting in model-driven app
+
+1. Sign-in to [Power Apps admin center](https://admin.powerapps.com).
+1. Select the **Flag** icon on the top-right corner. Search for **AllowNotificationsEarlyAccess** and turn on the switch.
 
 ## Send basic in-app notifications
 
@@ -90,15 +95,15 @@ Accept: application/json
 
 ## Notification table
 
-The follow are the columns for the notification table:
+The following are the columns for the notification table:
 
 |Column|Description|
 |---|---|
 |Title|Title of the notification.|
 |Owner|User who receives the notification.|
 |Body|Details of the notification.|
-|Icon Type|List of predefined icons. The default value is `Info`. |
-|Toast Type|List of toast behaviors. The default value is `Timed`.|
+|Icon Type|List of predefined icons. The default value is `Info`. More information: [Notification icons](#changing-the-notification-icons)|
+|Toast Type|List of toast behaviors. The default value is `Timed`. More information: [Toast types](#changing-the-toast-notification-behavior)|
 |Expires on|Date when notification should be deleted if not already dismissed.|
 
 ### Changing the toast notification behavior
@@ -112,7 +117,7 @@ An in-app notification behavior can be changed by setting **Toast Type** to one 
 
 ### Changing the notification icon
 
-An in-app notification icon can be changed by setting **Icon Type** to one of the predefined values:
+An in-app notification icon can be changed by setting **Icon Type** to one of the following values:
 
 |Icon Type|Value|
 |---|---|
@@ -123,7 +128,7 @@ An in-app notification icon can be changed by setting **Icon Type** to one of th
 |Mention|100000004|
 |Custom|100000005|
 
-## Changing the navigation target in notification link
+### Changing the navigation target in notification link
 
 You can display notifications in different locations by setting the `navigationTarget` parameter. 
 
@@ -137,7 +142,7 @@ You can display notifications in different locations by setting the `navigationT
 
 ### Notification with action link
 
-This following examples shows how to create notifications with actions, custom body, and custom icons.
+The following examples show how to create notifications with actions, custom body, and custom icons.
 
 #### Action with title and URL
 
@@ -276,10 +281,8 @@ Xrm.WebApi.createRecord("appnotification", notificationRecord);
 
 ### Notification with custom icon
 
-This example shows how to create a notification by adding custom icons. Within the notification, set Icon to **Custom** and in body include **iconUrl** with a value pointing to a web resource.  The notification work with either SVG or PNG file types.
+This example shows how to create a notification by adding custom icons. Within the notification, set **iconType** to **Custom** and in the body include **iconUrl** with a value pointing to a web resource.  The notification work with either SVG or PNG file types.
 
-> [!div class="mx-imgBorder"] 
-> [Mention notification](media/send-in-app-notifications/welcome-notification.png "This image shows a mention notification")
 
 ```json
 var data =
@@ -325,7 +328,7 @@ var data =
 
 ## In-app notifications vs. push notifications
 
-Power Apps Notification Connector is for push notifications and is separate from the in-app notification. Push notification only appears on the mobile device notifications list to open the app.  The in-app notification appears when the app is open.  We recommend limiting yhe use of push notification to higher priority items to avoid overwhelming the user.
+Power Apps Notification Connector is for push notifications and is separate from the in-app notification. Push notification only appears on the mobile device notifications list to open the app.  The in-app notification appears when the app is open.  We recommend limiting the use of push notification to higher priority items to avoid overwhelming the user.
 
 - [Power Apps Notification Connector](https://docs.microsoft.com/connectors/powerappsnotification)
 - [Power Apps Notification Connector V2](https://docs.microsoft.com/connectors/powerappsnotificationv2/)
