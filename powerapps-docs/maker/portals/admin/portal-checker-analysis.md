@@ -55,7 +55,7 @@ Once these changes are made, appropriate table permissions would need to be crea
 
 ## Anonymous access available to OData feed
 
-List component in portal can be enabled for OData feed by enabling [OData feed configuration](/configure/entity-lists.md#list-odata-feeds) on lists.
+List component in portal can be enabled for OData feed by enabling [OData feed configuration](../configure/entity-lists.md#list-odata-feeds) on lists. 
 
 To find anonymous OData feeds enabled on your portal:
 
