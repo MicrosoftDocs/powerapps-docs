@@ -21,7 +21,7 @@ Liquid objects contain attributes to output dynamic content to the page. For exa
 To access an object attribute by name, use a period (.). To render an object's attribute in a template, wrap it in {{ and }}.
 
 > [!IMPORTANT]
-> Use [escape filter](liquid-filters.md#escape) when using Liquid code to read data.
+> To avoid potential cross-site scripting (XSS) issues, always use [escape filter](liquid-filters.md#escape) to HTML encode data whenever using Liquid objects to read untrusted data provided by the user.
 
 ```
 {{ page.title }}
@@ -268,7 +268,7 @@ The following table explains various attributes associated with blogpost Object.
 ## entities
 
 > [!CAUTION]
-> **entities** object values can be untrusted. Hence, we recommend that you always use [escape filter](liquid-filters.md#escape) with this object.
+> To avoid potential cross-site scripting (XSS) issues, always use [escape filter](liquid-filters.md#escape) to HTML encode data whenever using **entities** Liquid object to read data provided by the user that can't be trusted.
 
 Allows you to load any Power Apps table by ID. If the table exists, a table object will be returned. If a table with the given ID isn't found, [null](liquid-types.md#null) will be returned.  
 
@@ -281,7 +281,7 @@ Allows you to load any Power Apps table by ID. If the table exists, a table obje
 
 {% endif %}
 
-{% assign entity_logical_name = 'contact' | escape %}
+{% assign entity_logical_name = 'contact' %}
 
 {% assign contact = entities[entity_logical_name][request.params.contactid] | escape %}
 
@@ -1003,12 +1003,12 @@ The polls object allows you to select a specific poll or poll placement:
 ## request
 
 > [!CAUTION]
-> **request** object values are untrusted. Hence, ensure you use [escape filter](liquid-filters.md#escape) with this object.
+> The values for the **request** object are provided by end-users, and always untrusted. Hence, ensure you use [escape filter](liquid-filters.md#escape) whenever using this object.
 
 Contains information about the current HTTP request.
 
 ```
-{% assign id = request.params['id'] %}
+{% assign id = request.params['id'] | escape %}
 
 <a href={{ request.url | add_query: 'foo', 1 | escape }}>Link</a>
 ```
