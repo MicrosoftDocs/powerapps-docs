@@ -21,7 +21,7 @@ Liquid objects contain attributes to output dynamic content to the page. For exa
 To access an object attribute by name, use a period (.). To render an object's attribute in a template, wrap it in {{ and }}.
 
 > [!IMPORTANT]
-> Always use [escape filter](liquid-filters.md#escape) when using Liquid code to read data.
+> Use [escape filter](liquid-filters.md#escape) when using Liquid code to read data.
 
 ```
 {{ page.title }}
@@ -1003,7 +1003,7 @@ The polls object allows you to select a specific poll or poll placement:
 ## request
 
 > [!CAUTION]
-> **request** object values are untrusted. Hence, you must use [escape filter](liquid-filters.md#escape) when using **request** object.
+> **request** object values are untrusted. Hence, ensure you use [escape filter](liquid-filters.md#escape) with this object.
 
 Contains information about the current HTTP request.
 
