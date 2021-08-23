@@ -41,7 +41,7 @@ To use the in-app notification feature: , enable the `AllowNotificationsEarlyAcc
 Since the notification system uses a table, any of the table functionalities can be used to create new notifications.  
 
 > [!div class="mx-imgBorder"] 
-> [Mention notification](../../../media/send-in-app-notifications/basic-notification.png "This image shows a mention notification")
+> [Welcome notification](../media/welcome-notification.png "Welcome notification")
 
 
 The following examples use the notification table and a notification record to create notifications.
@@ -74,7 +74,7 @@ Xrm.WebApi.createRecord("appnotification", data).
 
 ### Send basic in-app notification using Web API
 
-In-app notifications can be sent by [Creating a table record using Web API](../developer/common-data-service/webapi/create-entity-web-api.md).
+In-app notifications can be sent by [Creating a table row using the Web API](../../data-platform/webapi/create-entity-web-api.md).
 
 ```Http
 POST [Organization URI]/api/data/v9.0/appnotifications 
@@ -102,7 +102,7 @@ The following are the columns for the notification table:
 |Title|Title of the notification.|
 |Owner|User who receives the notification.|
 |Body|Details of the notification.|
-|Icon Type|List of predefined icons. The default value is `Info`. More information: [Notification icons](#changing-the-notification-icons)|
+|Icon Type|List of predefined icons. The default value is `Info`. More information: [Notification icons](#changing-the-notification-icon)|
 |Toast Type|List of toast behaviors. The default value is `Timed`. More information: [Toast types](#changing-the-toast-notification-behavior)|
 |Expires on|Date when notification should be deleted if not already dismissed.|
 
@@ -300,7 +300,7 @@ var data =
 This notification example adds custom title and body definition, which allow multiple links, bold, and italics. 
 
 > [!div class="mx-imgBorder"] 
-> ![Mention notification](media/send-in-app-notifications/mention-notification.png "This image shows a mention notification")
+> ![Mention notification](../media/mention-notification.png "Mention notification")
 
 ```json
 var data =
@@ -338,4 +338,4 @@ Power Apps Notification Connector is for push notifications and is separate from
 
 - [Create an entity record using the Web API](../../developer/data-platform/webapi/create-entity-web-api.md)
 - [Create an entity record with Client API](reference/xrm-webapi/createrecord.md)
-- [Use in-app notifications](../../user/use-in-app-notifications.md)
+- [Use in-app notifications](../../user/notifications.md)
