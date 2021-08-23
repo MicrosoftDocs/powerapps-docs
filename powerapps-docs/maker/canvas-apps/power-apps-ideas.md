@@ -191,13 +191,10 @@ Functions supported by Power Apps Ideas feature:
       [Year](functions/function-datetime-parts.md)
    :::column-end:::
    :::column span="":::
-      
    :::column-end:::
    :::column span="":::
-      
    :::column-end:::
    :::column span="":::
-      
    :::column-end:::
 :::row-end:::
 
