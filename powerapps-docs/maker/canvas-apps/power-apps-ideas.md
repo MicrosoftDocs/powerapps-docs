@@ -116,11 +116,11 @@ Functions supported by Power Apps Ideas feature:
    :::column span="":::
       [DateValue](functions/function-datevalue-timevalue.md)
    :::column-end:::
-:::row-end:::
-:::row:::
    :::column span="":::
       [Day](functions/function-datetime-parts.md)
    :::column-end:::
+:::row-end:::
+:::row:::
    :::column span="":::
       [Distinct](functions/function-distinct.md)
    :::column-end:::
@@ -133,14 +133,14 @@ Functions supported by Power Apps Ideas feature:
    :::column span="":::
       [FirstN](functions/function-first-last.md)
    :::column-end:::
-:::row-end:::
-:::row:::
    :::column span="":::
       [Hour](functions/function-datetime-parts.md)
    :::column-end:::
    :::column span="":::
       [IsBlank](functions/function-isblank-isempty.md)
    :::column-end:::
+:::row-end:::
+:::row:::
    :::column span="":::
       [IsEmpty](functions/function-isblank-isempty.md)
    :::column-end:::
@@ -150,8 +150,6 @@ Functions supported by Power Apps Ideas feature:
    :::column span="":::
       [Minute](functions/function-datetime-parts.md)
    :::column-end:::
-:::row-end:::
-:::row:::
    :::column span="":::
       [Month](functions/function-datetime-parts.md)
    :::column-end:::
@@ -161,14 +159,14 @@ Functions supported by Power Apps Ideas feature:
    :::column span="":::
       [Search](functions/function-filter-lookup.md)
    :::column-end:::
+:::row-end:::
+:::row:::
    :::column span="":::
       [Second](functions/function-datetime-parts.md)
    :::column-end:::
    :::column span="":::
       [Sort](functions/function-sort.md)
    :::column-end:::
-:::row-end:::
-:::row:::
    :::column span="":::
       [SortByColumns](functions/function-sort.md)
    :::column-end:::
@@ -181,16 +179,25 @@ Functions supported by Power Apps Ideas feature:
    :::column span="":::
       [TimeValue](functions/function-datevalue-timevalue.md)
    :::column-end:::
+:::row-end:::
+:::row:::
    :::column span="":::
       [Today](functions/function-now-today-istoday.md)
    :::column-end:::
-:::row-end:::
-:::row:::
    :::column span="":::
       [Weekday](functions/function-datetime-parts.md)
    :::column-end:::
    :::column span="":::
       [Year](functions/function-datetime-parts.md)
+   :::column-end:::
+   :::column span="":::
+      
+   :::column-end:::
+   :::column span="":::
+      
+   :::column-end:::
+   :::column span="":::
+      
    :::column-end:::
 :::row-end:::
 
