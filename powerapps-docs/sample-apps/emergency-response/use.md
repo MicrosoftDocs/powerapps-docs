@@ -29,7 +29,7 @@ device using the device's app store.
 After you install the Power Apps Mobile, open the app from your device and
 sign in with your company's Azure Active Directory account. You can view all
 apps shared to you by your organization once you sign in. For more information, see [Power Apps mobile device sign
-in](/powerapps/user/run-app-client#open-power-apps-and-sign-in).
+in](/powerapps/mobile/run-powerapps-on-mobile#sign-in).
 
 ## Demo: Use the Hospital Emergency Response mobile app
 
@@ -47,7 +47,7 @@ The Hospital Emergency Response mobile app has a modular structure with differen
 
 > [!NOTE]
 > When you launch the Hospital Emergency Response mobile app or any of
-its components for the *first time*, you will be asked for your consent to allow the app to read your *Office 365 Users* profile and your *Location*. You must select **Allow** before you can start using the selected app. For more information, see [give consent](/powerapps/user/run-app-client#give-consent).
+its components for the *first time*, you will be asked for your consent to allow the app to read your *Office 365 Users* profile and your *Location*. You must select **Allow** before you can start using the selected app. For more information, see [give consent](/powerapps/mobile/run-powerapps-on-mobile#give-consent-to-a-canvas-app).
 
 ![Hospital Emergency Response mobile app components.](media/use/app-components.png)
 
