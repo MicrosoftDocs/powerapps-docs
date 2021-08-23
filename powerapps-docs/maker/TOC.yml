@@ -59,14 +59,18 @@
       items:
       - name: Create a row
         href: ../user/create-a-record.md
+      - name: Edit multiple rows  
+        href: ../user/edit-rows.md
       - name: Work with rows in the new calendar view
         href: ../user/calendar-view.md
       - name: Use the lookup field on a row
         href: ../user/lookup-field.md
       - name: View a profile card
         href: ../user/profile-cards.md
-      - name: Assign or share rows
+      - name: Assign or share a row 
         href: ../user/assign-or-share-records.md
+      - name: Share rows with a user or team
+        href: ../user/share-row.md
       - name: Share rows using Access Team
         href: ../user/Access-team.md
       - name: Check your user access to a record
@@ -695,6 +699,8 @@
             href: ./canvas-apps/functions/function-iferror.md
           - name: in
             href: ./canvas-apps/functions/operators.md#in-and-exactin-operators
+          - name: Int
+            href: ./canvas-apps/functions/function-round.md
           - name: IsBlank
             href: ./canvas-apps/functions/function-isblank-isempty.md
           - name: IsBlankOrError
@@ -707,6 +713,8 @@
             href: ./canvas-apps/functions/function-ismatch.md
           - name: IsNumeric
             href: ./canvas-apps/functions/function-isnumeric.md
+          - name: ISOWeekNum
+            href: ./canvas-apps/functions/function-weeknum.md            
           - name: IsToday
             href: ./canvas-apps/functions/function-now-today-istoday.md
           - name: IsType
@@ -885,6 +893,8 @@
             href: ./canvas-apps/functions/function-trim.md
           - name: TrimEnds
             href: ./canvas-apps/functions/function-trim.md
+          - name: Trunc
+            href: ./canvas-apps/functions/function-round.md            
           - name: Ungroup
             href: ./canvas-apps/functions/function-groupby.md
           - name: Unrelate
@@ -909,6 +919,8 @@
             href: ./canvas-apps/functions/function-form.md
           - name: Weekday
             href: ./canvas-apps/functions/function-datetime-parts.md
+          - name: WeekNum
+            href: ./canvas-apps/functions/function-weeknum.md
           - name: With
             href: ./canvas-apps/functions/function-with.md
           - name: Year
@@ -1153,7 +1165,7 @@
           items:
           - name: Use Monitor to troubleshoot forms
             href: ./model-driven-apps/monitor-form-checker.md
-      - name: Use custom pages to add canvas apps (preview)
+      - name: Use custom pages within model-driven apps (preview)
         items:
         - name: Custom pages overview
           href: ./model-driven-apps/model-app-page-overview.md
@@ -1257,6 +1269,10 @@
           href: ./model-driven-apps/embedded-canvas-app-actions.md
         - name: "ModelDrivenFormIntegration control"
           href: ./model-driven-apps/embedded-canvas-app-properties-actions.md
+        - name: Pass the current record as data
+          href: ./model-driven-apps/pass-current-embedded-canvas-app.md
+        - name: Pass a related record as data
+          href: ./model-driven-apps/pass-related-embedded-canvas-app.md
         - name: "Share an embedded canvas app"
           href: ./model-driven-apps/share-embedded-canvas-app.md
         - name: "Embedded canvas app guidelines and known issues"
@@ -1401,10 +1417,12 @@
     href: ../mobile/run-powerapps-on-mobile.md
   - name: Use model-driven apps on mobile
     href: ../mobile/use-custom-model-driven-app-on-mobile.md
+  - name: Use relevance search on Power Apps Mobile  
+    href: ../mobile/relevance-search-mobile.md  
+  - name: Set app display to dark or light mode  
+    href: ../mobile/display-mode.md
   - name: Configure mobile offline synchronization 
     href: ../mobile/setup-mobile-offline.md 
-  - name: Use relevance search on Power Apps Mobile  
-    href: ../mobile/relevance-search-mobile.md 
   - name: Work offline on your mobile device 
     href: ../mobile/work-in-offline-mode.md  
   - name: Create push notifications for Power Apps Mobile
@@ -1736,10 +1754,16 @@
       items:
         - name: Set up Power BI integration
           href: ./portals/admin/set-up-power-bi-integration.md
-        - name: Add a Power BI as a component to a webpage
+        - name: Add Power BI as a component to a webpage
           href: ./portals/add-powerbi.md
-        - name: Add a Power BI using powerbi liquid tag
+        - name: Add Power BI using powerbi liquid tag
           href: ./portals/admin/add-powerbi-report.md
+    - name: How-to guides for extending portals
+      items:
+        - name: Embed portal in another website
+          href: ./portals/embed-portal-website.md
+        - name: Set up Azure Front Door with portals
+          href: ./portals/azure-front-door.md
     - name: For developers
       items:
         - name: Work with Liquid templates
@@ -2089,7 +2113,7 @@
           href: ./data-platform/view-component-dependencies.md
         - name: Use environment variables
           href: ./data-platform/EnvironmentVariables.md
-        - name: Use a connection reference
+        - name: Use a connection reference (preview)
           href: ./data-platform/create-connection-reference.md  
         - name: Translate customized component text
           items:
@@ -2145,22 +2169,40 @@
     items:
     - name: Azure Synapse Link Overview
       href: ./data-platform/export-to-data-lake.md
-    - name: Azure Synapse Analytics
-      items:
-      - name: Configure Azure Synapse Link with a Synapse Workspace
-        href: ./data-platform/azure-synapse-link-synapse.md
-    - name: Azure Data Lake Storage Gen2
-      items:
-      - name: Configure Azure Synapse Link with Data Lake
-        href: ./data-platform/azure-synapse-link-data-lake.md
-      - name: Ingest exported data with Azure Data Factory
-        href: ./data-platform/export-to-data-lake-data-adf.md
-      - name: Analyze exported data with Power BI
-        href: ./data-platform/export-to-data-lake-data-powerbi.md
+    - name: Create an Azure Synapse Link with a Synapse Workspace
+      href: ./data-platform/azure-synapse-link-synapse.md
+    - name: Create an Azure Synapse Link with Data Lake
+      href: ./data-platform/azure-synapse-link-data-lake.md
     - name: Advanced Configuration Settings
       href: ./data-platform/azure-synapse-link-advanced-configuration.md
     - name: Azure Synapse Link FAQ
-      href: ./data-platform/export-data-lake-faq.yml
+      href: ./data-platform/export-data-lake-faq.yml      
+    - name: Analyze with Azure Synapse Analytics
+      items:
+      - name: Query data with serverless SQL pool
+        href: ./data-platform/azure-synapse-link-serverless.md
+      - name: Transform data with Apache Spark
+        href: ./data-platform/azure-synapse-link-spark.md 
+      - name: Visualize data with Power BI
+        href: ./data-platform/azure-synapse-link-powerbi.md
+      - name: Copy data to Dedicated SQL
+        href: ./data-platform/azure-synapse-link-dedicated.md
+      - name: Read Incremental Updates
+        href: ./data-platform/azure-synapse-link-incremental.md
+      - name: Access Dataverse choices with serverless SQL pool
+        href: ./data-platform/azure-synapse-link-choices-serverless.md      
+    - name: Analyze in Azure Data Lake Storage Gen2
+      items:
+      - name: Ingest exported data with Azure Data Factory
+        href: ./data-platform/export-to-data-lake-data-adf.md
+      - name: Copy data to Azure SQL with Azure Data Factory
+        href: ./data-platform/azure-synapse-link-copy-sql.md
+      - name: Analyze exported data with Power BI
+        href: ./data-platform/export-to-data-lake-data-powerbi.md
+      - name: Access Dataverse choices with Azure Data Factory
+        href: ./data-platform/azure-synapse-link-choices-adf.md
+      - name: Access Dataverse choices with Power BI
+        href: ./data-platform/azure-synapse-link-choices-powerbi.md        
   - name: Security in Dataverse
     href: /power-platform/admin/wp-security-cds
   - name: Privileges for customization
@@ -2201,8 +2243,6 @@
           href: ../teams/use-the-fluent-ui-controls.md
     - name: Create additional apps
       href: ../teams/create-additional-apps.md
-    - name: Use Teams integration object
-      href: ../teams/use-teams-integration-object.md
     - name: Work with Dataverse for Teams
       items:
         - name: Overview
@@ -2234,6 +2274,18 @@
           displayName: Dataverse for Teams environment language
         - name: Dataverse for Teams FAQs
           href: ../teams/data-platform-faqs.md
+    - name: Build collaborative apps
+      items:
+        - name: Use Teams integration object
+          href: ../teams/use-teams-integration-object.md
+        - name: How to build apps for Teams
+          href: ../teams/how-templates-built.md
+        - name: When to build apps in Teams
+          href: ../teams/when-create-teams-apps.md
+        - name: Add notifications to make your apps collaborative
+          href: ../teams/add-app-notifications.md
+        - name: Enable consistent experience across sessions
+          href: ../teams/consistent-experience-across-sessions.md
     - name: Manage your apps
       href: ../teams/manage-your-apps.md
     - name: Set permission and share your app
@@ -2252,7 +2304,7 @@
           href: ../teams/use-sample-apps-from-teams-store.md
         - name: Boards (Preview)
           items:
-             - name: Boards
+             - name: Use Boards sample app
                href: ../teams/boards.md
              - name: Understand Boards sample app architecture
                href: ../teams/boards-architecture.md
@@ -2298,6 +2350,12 @@
                   href: ../teams/add-tag-to-mark-prioritized-ideas.md
                 - name: Enable users to discuss ideas
                   href: ../teams/extend-ideas-discussions.md
+        - name: Get connected (Preview)
+          items:
+            - name: Use Get connected sample app
+              href: ../teams/get-connected.md
+            - name: Understand Get connected sample app architecture
+              href: ../teams/get-connected-architecture.md
         - name: How to (Preview)
           items:
              - name: Use How to sample app
@@ -2310,6 +2368,8 @@
           items:
             - name: Use Inspection sample app
               href: ../teams/inspection.md
+            - name: Deploy Inspection app broadly in your organization
+              href: ../teams/inspection-deploy-broad.md
             - name: Customize Inspection app
               items:
                 - name: Understand Inspection sample app architecture
@@ -2320,9 +2380,13 @@
                   href: ../teams/inspections-hierarchy-locations.md
                 - name: Customize inspection steps
                   href: ../teams/customize-inspection-steps.md
+                - name: Notify manager on completion of inspection
+                  href: ../teams/notify-manager-inspections.md
+                - name: Update inspection notification to use an adaptive card
+                  href: ../teams/inspection-adaptive-card.md
         - name: Issue reporting
           items:
-            - name: Issue reporting
+            - name: Use Issue reporting sample app
               href: ../teams/issue-reporting.md
             - name: Deploy Issue reporting app broadly in your organization
               href: ../teams/issue-reporting-broad-distribution.md
@@ -2344,7 +2408,7 @@
                   href: ../teams/extend-issue-sign-up-notification.md
         - name: Milestones
           items:
-             - name: Milestones
+             - name: Use Milestones sample app
                href: ../teams/milestones.md
              - name: Deploy the Milestones app broadly in your organization
                href: ../teams/milestones-broad-distribution.md
@@ -2362,7 +2426,7 @@
                    href: ../teams/extend-milestones-send notification.md
         - name: Perspectives (Preview)
           items:
-            - name: Perspectives
+            - name: Use Perspectives sample app
               href: ../teams/perspectives.md
             - name: Understand Perspectives sample app architecture
               href: ../teams/perspectives-architecture.md
@@ -2380,8 +2444,16 @@
                   href: ../teams/profile-plus-org-specific.md
                 - name: Customize Profile+ sample app
                   href: ../teams/customize-profile-plus.md
-        - name: Customize sample apps
-          href: ../teams/customize-sample-apps.md
+        - name: Do more with sample apps
+          items:
+            - name: Customize sample apps
+              href: ../teams/customize-sample-apps.md
+            - name: Localize sample apps 
+              href: ../teams/localizing-sample-apps.md
+            - name: Theming in sample apps 
+              href: ../teams/sample-app-theming.md
+            - name: Working with table permission in sample apps
+              href: ../teams/dataverse-for-teams-table-permissions.md
         - name: FAQs for sample apps
           href: ../teams/sample-apps-faqs.md
     - name: Known issues and limitations

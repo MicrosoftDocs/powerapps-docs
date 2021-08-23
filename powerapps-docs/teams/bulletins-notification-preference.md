@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 07/13/2021
-ms.author: v-shrutibahl
+ms.author: namarwah
 ms.reviewer: tapanm
 contributors:
   - joel-lindstrom

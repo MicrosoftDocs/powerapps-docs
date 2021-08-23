@@ -7,7 +7,7 @@ ms.subservice: troubleshoot
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 07/08/2021
+ms.date: 08/16/2021
 ms.author: namarwah
 search.audienceType: 
   - maker
@@ -93,7 +93,7 @@ Power Apps stores some data such as user identity and preferences locally levera
 
 Most browsers allow settings to reflect the changes immediately. You may also need to close all the browser windows and reopen instead.
 
-To enable this setting for the Power Apps and Dynamics 365 mobile apps for iOS you need to work through the iOS settings linked to the app rather than through the browser settings fpr iOS. 
+To enable this setting for the Power Apps and Dynamics 365 mobile apps for iOS you need to work through the iOS settings linked to the app rather than through the browser settings for iOS. 
 
 ### Instructions for Microsoft Edge
 
@@ -172,6 +172,12 @@ To enable this setting for the Power Apps and Dynamics 365 mobile apps for iOS y
 
 1. On iOS, select **Settings**.
 1. Scroll down to **Power Apps**. 
+1. Toggle on **Allow Cross-Website Tracking**.
+
+### Instructions for Microsoft Edge on iOS
+
+1. On iOS, select **Settings**.
+1. Scroll down to **Edge**. 
 1. Toggle on **Allow Cross-Website Tracking**.
 
 ### Instructions for Internet Explorer 11

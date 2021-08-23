@@ -9,7 +9,7 @@ ms.custom:
   - canvas
   - intro-internal
 ms.reviewer: tapanm
-ms.date: 07/13/2021
+ms.date: 08/03/2021
 ms.subservice: canvas-maker
 ms.author: lanced
 search.audienceType: 
@@ -114,7 +114,7 @@ This type of connection isn't secure because it doesn't rely on end-user authent
 
 ## Data sources in solutions
 
-Solutions are used for [application lifecycle management](/power-platform/alm/overview-alm) and provide additional capabilities for managing the lifecycle of **data sources**. If a canvas app is a solution, [connection references](/maker/data-platform/create-connection-reference) and [environment variables](/maker/data-platform/environmentvariables) may be created to store information about the data sources. This ensures data sources can be changed or re-established when solutions are migrated to different environments. 
+Solutions are used for [application lifecycle management](/power-platform/alm/overview-alm) and provide additional capabilities for managing the lifecycle of **data sources**. If a canvas app is a solution, [connection references](../data-platform/create-connection-reference.md) and [environment variables](../data-platform/environmentvariables.md) may be created to store information about the data sources. This ensures data sources can be changed or re-established when solutions are migrated to different environments. 
 
 ## Rename data sources in apps
 
@@ -153,7 +153,7 @@ For select connectors, admins can suppress this dialog, and consent on behalf of
 |----------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------|-------------------------|
 | Microsoft first-party connectors that support single sign-on (such as SharePoint, Office 365 users)                                                         | Yes                          | [Power Apps admin cmdlet](/powershell/module/microsoft.powerapps.administration.powershell/set-adminpowerappapistobypassconsent) |
 | Connector accessing a non-Microsoft, third-party service, such as Salesforce                                                                                  | No                           | Not applicable                    |
-| Custom connectors using OAuth with Azure Active Directory as the identity provider. These are custom connectors built by organizations, and are only accessible by the users within the organization (for example, built by Contoso for only Contoso users) | No                           | Not applicable                    |
+| Custom connectors using OAuth with Azure Active Directory as the identity provider. These are custom connectors built by organizations, and are only accessible by the users within the organization (for example, built by Contoso for only Contoso users) | Yes                           | [Manage Connections](add-manage-connections.md#manage-the-consent-dialog-appearance-for-custom-connectors-using-azure-active-directory-oauth)                    |
 
 Microsoft Power Platform is only able to suppress the consent dialog for connections to data sources where:
 
