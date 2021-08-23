@@ -29,7 +29,7 @@ Object checker runs real-time diagnostics on component objects within your solut
 
 ## Run object checker and view the results
 
-1. Open a solution that contains the problematic object. You may run object checker within either managed and unmanaged solutions.
+1. Open a solution that contains the problematic object. You can run object checker within either managed and unmanaged solutions.
 1. Select a single object, such as a model-driven app or a site map.
 1. On the command bar, select **...** > **Object checker** > **Run**.
    :::image type="content" source="media/object-checker-run.png" alt-text="Run object checker":::
