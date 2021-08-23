@@ -2115,7 +2115,7 @@
           href: ./data-platform/view-component-dependencies.md
         - name: Use environment variables
           href: ./data-platform/EnvironmentVariables.md
-        - name: Use a connection reference
+        - name: Use a connection reference (preview)
           href: ./data-platform/create-connection-reference.md  
         - name: Translate customized component text
           items:
@@ -2449,6 +2449,8 @@
               href: ../teams/localizing-sample-apps.md
             - name: Theming in sample apps 
               href: ../teams/sample-app-theming.md
+            - name: Working with table permission in sample apps
+              href: ../teams/dataverse-for-teams-table-permissions.md
         - name: FAQs for sample apps
           href: ../teams/sample-apps-faqs.md
     - name: Known issues and limitations
