@@ -6,7 +6,8 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 06/23/2021
-ms.author: v-ljoel
+ms.subservice: teams
+ms.author: namarwah
 ms.reviewer: tapanm
 contributors:
   - navjotm
@@ -47,29 +48,29 @@ This process begins by opening the app in **Power Apps** in Teams. You can also 
 
 1. Type **Power Apps** in the search field.
 
-    ![Select Power Apps app](media/milestones-broad-distribution/select-power-apps.png "Select Power Apps app")
+    ![Select Power Apps app.](media/milestones-broad-distribution/select-power-apps.png "Select Power Apps app")
 
 1. Select the Power Apps from the list to open the app. Power Apps will open in Teams.
 
 1. We recommended that you “pop out” Power Apps so that if you need to navigate somewhere else in Teams you won’t lose your app configuration. To pop out the Power Apps app, right-click on the Power Apps logo and select **Pop out app**.
 
-    ![Pop out Power Apps app](media/milestones-broad-distribution/pop-out-power-apps.png "Pop out Power Apps app")
+    ![Pop out Power Apps app.](media/milestones-broad-distribution/pop-out-power-apps.png "Pop out Power Apps app")
 
 1. Right-click on the **Power Apps** logo, and select **Pin** to lock the app to the side menu so it's easy to get to in the future.
 
 1. Now that you've loaded the Power Apps app, select **Build**.
 
-    ![Select Build tab](media/milestones-broad-distribution/build-tab.png "Select Build tab")
+    ![Select Build tab.](media/milestones-broad-distribution/build-tab.png "Select Build tab")
 
 1. This screen will show all the teams that have Power Apps installed in them. Select the team that contain the app you want to share. Select **Share with colleagues**.
 
-    ![Share with colleagues button](media/milestones-broad-distribution/share-with-colleagues.png "Share with colleagues button")
+    ![Share with colleagues button.](media/milestones-broad-distribution/share-with-colleagues.png "Share with colleagues button")
 
 1. Enter an Azure Active Directory security group, or a different team with that you'd like to share access to the app.
 
 1. Set the **On/Off** toggle to **On** for Milestones.
 
-    ![Sharing with colleagues](media/milestones-broad-distribution/colleague-can-use.png "Sharing with colleagues")
+    ![Sharing with colleagues.](media/milestones-broad-distribution/colleague-can-use.png "Sharing with colleagues")
 
 ## Understanding table permissions
 
@@ -77,19 +78,19 @@ Understanding and assigning permissions to tables are vital to ensure proper sec
 
 - **Full Access** – Allows end users to see and edit all records in the table.
 
-    ![Full access](media/milestones-broad-distribution/full.png "Full access")
+    ![Full access.](media/milestones-broad-distribution/full.png "Full access")
 
 - **Collaborate** – Allows end users to see all records, but they can only edit their own records.
     
-    ![Collaborate access](media/milestones-broad-distribution/collaborate.png "Collaborate access")
+    ![Collaborate access.](media/milestones-broad-distribution/collaborate.png "Collaborate access")
     
 - **Reference** – Provides a read-only view of data for end users.
 
-    ![Reference access](media/milestones-broad-distribution/reference.png "Reference access")
+    ![Reference access.](media/milestones-broad-distribution/reference.png "Reference access")
 
 - **Private** – Allows end users to only view and edit their own data.
 
-    ![Private access](media/milestones-broad-distribution/private.png "Private access")
+    ![Private access.](media/milestones-broad-distribution/private.png "Private access")
 
 ## Grant permissions to the tables
 
@@ -107,11 +108,11 @@ Follow these steps to set permissions for the tables in the app for colleagues o
 
 1. Select **See All** in the **Milestones** tile.
 
-    ![Select See all in Milestones app tile](media/milestones-broad-distribution/tile-see-all.png "Select See all in Milestones app tile")
+    ![Select See all in Milestones app tile.](media/milestones-broad-distribution/tile-see-all.png "Select See all in Milestones app tile")
 
 1. Select **Tables** from the solution components bar.
 
-    ![Select Tables in the component list](media/milestones-broad-distribution/select-tables.png "Select Tables in the component list")
+    ![Select Tables in the component list.](media/milestones-broad-distribution/select-tables.png "Select Tables in the component list")
 
 1. Select the tables listed individually then **Manage Permissions.**
 
@@ -145,17 +146,17 @@ Now that you've shared Milestones with colleagues outside of your team, here's h
 
 1. When the app information screen appears, select **Add** to add the app to the main teams app menu.
     
-    ![Add app](media/milestones-broad-distribution/new-version.png "Add app")
+    ![Add app.](media/milestones-broad-distribution/new-version.png "Add app")
     
 1. After adding the app to the Teams app menu, select the icon for the app to open it full screen in Teams.
 
 1. If you want to make the app always appear in the app menu so you can easily find it, right-click on the Milestones button on the app menu and select **Pin**.
 
-   ![Pin Milestones app](media/milestones-broad-distribution/pin-milestones.png "Pin Milestones app")
+   ![Pin Milestones app.](media/milestones-broad-distribution/pin-milestones.png "Pin Milestones app")
 
 1. If you would prefer to add the app to another team, select the drop-down located by the **Add** button and select **Add to a team**.
 
-   ![Add app to a Team](media/milestones-broad-distribution/add-to-team.png "Add app to a Team")
+   ![Add app to a Team.](media/milestones-broad-distribution/add-to-team.png "Add app to a Team")
 
 ## Limitations
 

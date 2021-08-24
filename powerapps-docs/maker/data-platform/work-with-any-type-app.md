@@ -11,6 +11,7 @@ ms.topic: "article"
 applies_to: 
   - "powerapps"
 author: "mmercuri"
+ms.subservice: dataverse-maker
 ms.author: "mmercuri"
 manager: "kvivek"
 search.audienceType: 
@@ -47,7 +48,7 @@ This interactivity can also occur in the opposite direction&mdash;an update in a
 
 The most popular approaches in Dataverse involve webhooks, Azure messaging (Service Bus, Event Hubs), Azure Logic Apps, or Power Automate.
 
-![Events in Dataverse](media/cds-events.png "Events in Dataverse")
+![Events in Dataverse.](media/cds-events.png "Events in Dataverse")
 
 ### Webhooks
 
@@ -84,7 +85,7 @@ More information: [Service Bus](https://azure.microsoft.com/services/service-bu
 
 Logic Apps, offered via Azure, and Power Automate, offered via Microsoft Power Platform, can trigger a workflow that can be used to integrate with application events and data on a schedule or by activity in a database, system, service, or SaaS.
 
-![Logic Apps and Power Automate with Dataverse](media/logic-apps-and-power-automate.png "Logic Apps and Power Automate with Dataverse")
+![Logic Apps and Power Automate with Dataverse.](media/logic-apps-and-power-automate.png "Logic Apps and Power Automate with Dataverse")
 
 These workflows can execute logic and interact with these systems using the hundreds of connectors to databases, PaaS, and SaaS.
 
@@ -96,7 +97,7 @@ With the ability to create custom connectors by using Open API (formerly known a
 
 All popular programming languages support a form of integration with REST-based APIs.
 
-![Dataverse with the OData API](media/cds-with-odata.png "Dataverse with the OData API")
+![Dataverse with the OData API.](media/cds-with-odata.png "Dataverse with the OData API")
 
 The Dataverse Web API provides a development experience that can be used across a wide variety of programming languages, platforms, and devices. The Web API implements the OData (Open Data Protocol), version 4.0, an OASIS standard for building and consuming RESTful APIs over rich data sources. You can learn more about this protocol at [www.odata.org](https://www.odata.org/). For more information about this standard, see [www.oasis-open.org](https://www.oasis-open.org/standards#odatav4.0).
 
@@ -144,7 +145,7 @@ One constraint with plug-ins is that they must be self-contained. If integration
 
 Azure Functions provides a serverless code execution option for business and integration logic.
 
-![Dataverse with Azure Functions](media/azure-functions.png "Dataverse with Azure Functions")
+![Dataverse with Azure Functions.](media/azure-functions.png "Dataverse with Azure Functions")
 
 Functions are triggered by a call from an external system, service, or code. For Dataverse, that trigger can come directly from Dataverse using Service Bus, a webhook, or a call from a plug-in. Additionally, the Azure Functions call can be initiated via a flow in either Logic Apps or Power Automate that involves the Common Data Service connector.
 

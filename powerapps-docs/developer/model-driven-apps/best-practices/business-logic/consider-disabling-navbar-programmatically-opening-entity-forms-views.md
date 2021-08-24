@@ -14,6 +14,7 @@ ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.date: 04/14/2021
+ms.subservice: mda-developer
 ms.author: jowells
 search.audienceType: 
   - developer
@@ -83,7 +84,7 @@ function enabledNavBarExplicit() {
 ## Additional information
 
 When opening up other records from within model driven apps, the navigation bar is being loaded with the areas and subareas defined within the sitemap.  In addition, it also renders the [Office app launcher](https://support.office.com/article/Meet-the-Office-365-app-launcher-79f12104-6fed-442f-96a0-eb089a3f476a) which displays the Office 365 apps the user has access to.<br/>
-![Comparison of NavBar being enabled and disabled](../media/navbar_comparison_enabled_disabled.png)
+![Comparison of NavBar being enabled and disabled.](../media/navbar_comparison_enabled_disabled.png)
 
 <a name='seealso'></a>
 

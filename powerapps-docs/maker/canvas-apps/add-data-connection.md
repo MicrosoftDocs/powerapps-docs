@@ -8,11 +8,15 @@ ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 05/11/2021
+ms.subservice: canvas-maker
 ms.author: lanced
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - lancedmicrosoft
 ---
 # Add data connections to canvas apps
 
@@ -47,11 +51,11 @@ Your [next step](#next-steps) after this article is to display and manage data f
 
 1. Expand **Connectors**, and if the list of connections includes the one that you want, select it to add it to the app. Otherwise, skip to the next step. To connect to a table in Microsoft Dataverse instead, choose a table from the list of tables.
 
-    ![Choose an existing connection](./media/add-data-connection/choose-existing-connection.png)
+    ![Choose an existing connection.](./media/add-data-connection/choose-existing-connection.png)
 
 1. To create a new connection, search for or select a connector such as SharePoint.
 
-    ![Add connection](./media/add-data-connection/add-connection.png)
+    ![Add connection.](./media/add-data-connection/add-connection.png)
 
 1. Select **Create** to both create the connection and add it to your app.
 
@@ -64,13 +68,13 @@ If you're updating an app, you might need to identify or change the source of da
 
     The name of the data source appears on the **Properties** tab of the right-hand pane.
 
-    ![Identify a connection](./media/add-data-connection/identify-connection.png)
+    ![Identify a connection.](./media/add-data-connection/identify-connection.png)
 
 1. To show more information about the data source or to change it, select the down arrow next to its name.
 
     More information about the current data source appears, and you can select or create another source.
 
-    ![Change a connection](./media/add-data-connection/change-connection.png)
+    ![Change a connection.](./media/add-data-connection/change-connection.png)
 
 ## Next steps
 

@@ -53,15 +53,15 @@ You can enable notification APIs by manually configuring them in the maker porta
 
 Let's say we have a Person Virtual Table with these properties, the **Name** property is `new_People`.
 
-:::image type="content" source="../media/new_people-virtual-table-properties.png" alt-text="The properties of the new_people virtual table":::
+:::image type="content" source="../media/new_people-virtual-table-properties.png" alt-text="The properties of the new_people virtual table.":::
 
 1. In the maker portal ([make.powerapps.com/](https://make.powerapps.com/)) , within your solution, select **+New** and then select **Virtual Entity Metadata**.
 
-    :::image type="content" source="../media/add-new-virtualentitymetadata-solution.png" alt-text="Add a new virtualentitymetadata to your solution":::
+    :::image type="content" source="../media/add-new-virtualentitymetadata-solution.png" alt-text="Add a new virtualentitymetadata to your solution.":::
 
     This will open the following form:
 
-    :::image type="content" source="../media/virtualentitymetadata-form.png" alt-text="virtualentitymetadata form":::
+    :::image type="content" source="../media/virtualentitymetadata-form.png" alt-text="virtualentitymetadata form.":::
 
 1. Complete the form, setting the **Extension Entity Id** value to the name of your virtual table. You are not required to enable all three messages. You can set one or more of them and come back to enable the rest later.
 
@@ -87,11 +87,11 @@ If you do not want people who install your managed solution to change the Virtua
 
 1. In your solution, select the Virtual Entity Metadata and click the ellipsis (...) and then select **Managed Properties**.
 
-    :::image type="content" source="../media/virtualentitymetadata-managed-properties.png" alt-text="Navigate to Managed Properties":::
+    :::image type="content" source="../media/virtualentitymetadata-managed-properties.png" alt-text="Navigate to Managed Properties.":::
 
 1. In the Managed Properties pane, de-select **Allow Customizations** and press **Done**.
 
-    :::image type="content" source="../media/virtualentitymetadata-managed-properties-pane.png" alt-text="De-select Allow Customizations":::
+    :::image type="content" source="../media/virtualentitymetadata-managed-properties-pane.png" alt-text="De-select Allow Customizations.":::
 
     This setting will not do anything until the Virtual Entity Metadata record is included in a managed solution.
 
@@ -292,7 +292,7 @@ You will find similar actions for `OnExternalDeleted`, and `OnExternalUpdated`:
 
 When you register a plug-in step using the plug-in registration tool, you will find these messages.
 
-:::image type="content" source="../media/virtualentitymetadata-register-onexternalcreated-step.png" alt-text="Registering a plugin step on the OnExternalCreated message for the new_people entity":::
+:::image type="content" source="../media/virtualentitymetadata-register-onexternalcreated-step.png" alt-text="Registering a plugin step on the OnExternalCreated message for the new_people entity.":::
 
 
 ## Use the messages to notify Dataverse of changes

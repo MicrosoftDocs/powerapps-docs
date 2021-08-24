@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2021
+ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: tapanm
 contributors:
@@ -33,7 +34,7 @@ To reset a configured portal:
 2.    Go to **Portal Actions** > **Reset Portal**.
 
         > [!div class=mx-imgBorder]
-        > ![Reset a portal](../media/reset-portal.png "Reset a portal")
+        > ![Reset a portal.](../media/reset-portal.png "Reset a portal")
 
 3.    Select **Reset** in the confirmation window.
 
@@ -47,7 +48,7 @@ To reset a configured portal:
 If your portal is not provisioned correctly, it goes into an error state and the following screen is displayed. In this case, you can also reset the portal by selecting **Reset Portal** on the error screen.
 
 > [!div class=mx-imgBorder]
-> ![Error while provisioning a portal](../media/provision-portal-error.png "Error while provisioning a portal")
+> ![Error while provisioning a portal.](../media/provision-portal-error.png "Error while provisioning a portal")
 
 ## Delete a portal
 
@@ -83,14 +84,14 @@ This section provides information about troubleshooting issues while resetting a
 If a portal reset request could not be submitted, an error is displayed as shown in the following image. In this case, you must close and reopen the Power Apps portals admin center, and try to reset the portal again. If the issue persists, contact Microsoft support.
 
 > [!div class=mx-imgBorder]
-> ![Couldn't submit error while resetting a portal](../media/reset-portal-request-error.png "Couldn't submit error while resetting a portal")
+> ![Couldn't submit error while resetting a portal.](../media/reset-portal-request-error.png "Couldn't submit error while resetting a portal")
 
 ### Reset portal job fails
 
 If a reset portal job fails, an error message is displayed along with the **Reset Portal** action.
 
 > [!div class=mx-imgBorder]
-> ![Failure error while resetting a portal](../media/reset-portal-error.png "Failure error while resetting a portal")
+> ![Failure error while resetting a portal.](../media/reset-portal-error.png "Failure error while resetting a portal")
 
 Typically, these are transient errors and you must select **Reset Portal** to restart the job. If the issue persists, contact Microsoft support.
 

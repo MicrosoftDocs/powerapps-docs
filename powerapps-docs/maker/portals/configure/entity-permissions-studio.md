@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 05/27/2021
+ms.subservice: portals
 ms.author: ckwan
 ms.reviewer: tapanm
 contributors:
@@ -49,7 +50,7 @@ To create a table permission using portals Studio:
 
 1. Select **Table permissions**.
 
-    ![Table permissions](media/entity-permissions-studio/select-table-permissions-studio.png "Table permissions")
+    ![Table permissions.](media/entity-permissions-studio/select-table-permissions-studio.png "Table permissions")
 
 1. Select **New permission**.
 
@@ -61,7 +62,7 @@ To create a table permission using portals Studio:
 
 1. If you select the **Contact** or **Account** access type, select the relationship between the Contact/Account and the table you selected for the permission.
 
-    ![Contact or Account access type](media/entity-permissions-studio/contact-account-access-type.png "Contact or Account access type")
+    ![Contact or Account access type.](media/entity-permissions-studio/contact-account-access-type.png "Contact or Account access type")
 
     > [!NOTE]
     > If you don't have any relationships available for the selected table, you can select **New relationship** to create a new relationship.
@@ -75,7 +76,7 @@ To create a table permission using portals Studio:
 
 1. Select **Save**.
 
-    ![Table permission example](media/entity-permissions-studio-walkthrough/contoso-ltd-global-access.png "Table permission example")
+    ![Table permission example.](media/entity-permissions-studio-walkthrough/contoso-ltd-global-access.png "Table permission example")
 
 ### View table permissions in portals Studio
 
@@ -93,11 +94,11 @@ To view table permissions using portals Studio:
 
 1. Select **Table permissions** to view table permissions.
 
-    ![View table permissions](media/entity-permissions-studio-walkthrough/configured-contoso-ltd-table-permissions-studio.png "View table permissions")
+    ![View table permissions.](media/entity-permissions-studio-walkthrough/configured-contoso-ltd-table-permissions-studio.png "View table permissions")
 
 1. To group or filter table permissions, select a view (List/Group by roles/Group by table/Group by state), or enter a table permission name in the filter text box.
 
-    ![Group or filter table permissions](media/entity-permissions-studio/group-table-permissions.png "Group or filter table permissions")
+    ![Group or filter table permissions.](media/entity-permissions-studio/group-table-permissions.png "Group or filter table permissions")
 
     > [!NOTE]
     > - When you group table permissions by role, table, or state, the permissions are listed as a flat structure without the parent-child relationships for configured permissions.
@@ -105,7 +106,7 @@ To view table permissions using portals Studio:
 
 1. To sort the table permissions, select a column at the top in the list of table permissions.
 
-    ![Sort table permissions](media/entity-permissions-studio/sort-permissions.png "Sort table permissions")
+    ![Sort table permissions.](media/entity-permissions-studio/sort-permissions.png "Sort table permissions")
 
 ### Edit table permissions using portals Studio
 
@@ -205,7 +206,7 @@ When you have a child permission associated with one or more web roles missing f
 
 For example, a child table permission shows the below message when the parent table permission doesn't have the *Marketing* web role associated, even though the child permission is still associated.
 
-![Parent table permission missing one or more web roles associated to child table permission](media/entity-permissions-studio/missing-webrole-parent.png "Parent table permission missing one or more web roles associated to child table permission")
+![Parent table permission missing one or more web roles associated to child table permission.](media/entity-permissions-studio/missing-webrole-parent.png "Parent table permission missing one or more web roles associated to child table permission")
 
 To fix this problem, add the *Marketing* web role to the parent table permission, or remove the *Marketing* web role from the child table permission.
 
@@ -215,7 +216,7 @@ For a table permission to take effect, it has to be associated to one or more we
 
 The following message shows when you try to save a table permission without any web role associated.
 
-![Saving a table permission without any associated web role](media/entity-permissions-studio/table-permission-without-webrole.png "Saving a table permission without any associated web role")
+![Saving a table permission without any associated web role.](media/entity-permissions-studio/table-permission-without-webrole.png "Saving a table permission without any associated web role")
 
 ## Next steps
 
