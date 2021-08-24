@@ -217,9 +217,9 @@ Self.Selected.Item.'Parent Account'.'Account Name'="parent"
 
 ### See also
 
-[Understand behavioral formulas](/maker/canvas-apps/working-with-formulas-in-depth.md)
+[Understand behavioral formulas](../canvas-apps/working-with-formulas-in-depth.md)
 
-[Formula reference](/maker/canvas-apps/formula-reference.md)
+[Formula reference](../canvas-apps/formula-reference.md)
 
-[Overview of Power Fx](/power-platform/power-fx/overview.md)
+[Overview of Power Fx](/power-platform/power-fx/overview)
 
