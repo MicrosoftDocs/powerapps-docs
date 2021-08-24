@@ -5,7 +5,7 @@ author: GitanjaliSingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 08/23/2021
+ms.date: 08/24/2021
 ms.subservice: portals
 ms.author: gisingh
 ms.reviewer: tapanm
