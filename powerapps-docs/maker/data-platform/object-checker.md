@@ -6,7 +6,7 @@ author: caburk
 ms.author: caburk
 ms.reviewer: matp
 manager: kvivek
-ms.date: 07/08/2021
+ms.date: 08/24/2021
 ms.service: powerapps
 ms.topic: how-to
 search.audienceType: 
@@ -26,6 +26,15 @@ Object checker runs real-time diagnostics on component objects within your solut
 
 - Active layer hiding customizations.
 - Malformed or corrupted metadata.
+
+## Prerequisite
+
+To use the object checker you must enable the solution preview.
+
+1. Go to the **Solutions** area.
+1. On the command bar, turn **Solutions preview on**.
+
+   :::image type="content" source="media/enable-solution-preview.png" alt-text="Turn solution preview on":::
 
 ## Run object checker and view the results
 
