@@ -21,7 +21,7 @@ contributors:
 # Work with Canvas Studio Git version control
 
 > [!IMPORTANT]
-> This feature is being provided to you as a private preview under a non-disclosure agreement.  Please do not distribute information about this feature to others.  Please send feedback or questions to [pagit@microsoft.com](mailto:pagit@microsoft.com).
+> This feature is being provided to you as a private preview under a non-disclosure agreement.  Please do not distribute information about this feature to others.  Please send feedback or questions to [PAGit@microsoft.com](mailto:pagit@microsoft.com).
 
 Use Git version control to enable more than one person to edit a Canvas app at the same time.  No longer will others be locked out of the app while one person is editing it.  As changes are made and synchronized, they are automatically merged with other changes, and made avaialble to all other editors of the app.  This is a first step toward a Microsoft Office style co-authoring experience.
 
@@ -32,7 +32,7 @@ Any Git provider can be used with Studio, such as [GitHub](https://github.com/) 
 ## Enabling Git version control
 
 > [!IMPORTANT]
-> Git version control is an experimental feature.  It is currently being offered through a private preview program and not to all customers yet.  We would like to hear your feedback before making it available to others.  Please send feedback or questions to [pagit@microsoft.com](mailto:pagit@microsoft.com).  As with all experimental features, this feature may significantly change or be removed at any time.  See [Understand experimental, preview, and retired features](working-with-experimental-preview.md) for more details.
+> Git version control is an experimental feature.  It is currently being offered through a private preview program and not to all customers yet.  We would like to hear your feedback before making it available to others.  Please send feedback or questions to [PAGit@microsoft.com](mailto:pagit@microsoft.com).  As with all experimental features, this feature may significantly change or be removed at any time.  See [Understand experimental, preview, and retired features](working-with-experimental-preview.md) for more details.
 
 Git version control is managed on a per app basis.  Each app must be individually addded to Git version control.
 
@@ -45,7 +45,7 @@ Git version control is managed on a per app basis.  Each app must be individuall
 
 When complete, your screen should look like this:
 
-![media/working-with-git-version-control/enable-git.png](swtich to enable Git version control)
+![swtich to enable Git version control](media/working-with-git-version-control/enable-git.png)
 
 If the **Show the Git version control setting** experimental feature is not shown, it may be that your tenant has not been properly enabled for this feature.  Send mail to [pagit@microsoft.com](mailto:pagit@microsoft.com) for help.
 
@@ -53,11 +53,11 @@ If the **Show the Git version control setting** experimental feature is not show
 
 Select **Git version control** in settings:
 
-![media/working-with-git-version-control/connect-git.png](button to initiate a connection to git for this app)
+![button to initiate a connection to git for this app](media/working-with-git-version-control/connect-git.png)
 
 Press the **Connect** button to fill in Git connection information for this app:  
 
-![media/working-with-git-version-control/connect-info.png](text input boxes to provide git connection information)
+![text input boxes to provide git connection information](media/working-with-git-version-control/connect-info.png)
 
 - **Git Repository URL**: The URL you would normally use with Git tools.  For Azure DevOps, be sure to include the **_git/repo** portion of the URL, as in `https://org.visualstudio.com/_git/repo`.  
 - **Branch**: The branch name to use.
@@ -79,7 +79,7 @@ Follow these instructions to obtain a personal access token:
 
 Plug the user name and personal access token when prompted:
 
-[media/working-with-git-version-control/credentials.png]
+![dialog asks for Git user name and password](media/working-with-git-version-control/credentials.png)
 
 The Git credentials are not stored by Power Apps between sessions.  Fortunately, if desired, the browser can cache these values in its saved passwords so that you do not need to enter it fresh each time.  With robust password caching, you should only need to add the credentials once.
 
@@ -89,7 +89,7 @@ After linking to Git, you can load, save, publish, and close apps as you normall
 
 Use the new synchronize button at the top of the Studio screen, between the App Checker and Undo buttons, to merge any current changes with what is in Git and bring the result into the Studio for further editing:
 
-![media/working-with-git-version-control/sync.png](button to synchronize changes with the Git repo)
+![button to synchronize changes with the Git repo](media/working-with-git-version-control/sync.png)
 
 The app will need to be loaded each time there is a merge.  If the app is large, this load could take some time.
 
@@ -113,6 +113,6 @@ At this time, we have no UI in Studio for doing Git operations other that pullin
 
 Each save or synchronize which includes changes will result in a commit in Git.  If other changes occured in Git, for example by other makers, then there will be attiional commits made in order to merge the result of all the changes.  No changes will be lost, even if a merge would override an edit, all of the changes by all users is in the commits somewhere.
 
-## Feedback
+## Feedback to PAGit@microsoft.com
 
-**Let us know what you think!**  This is but a first small step in a long journey to enable a great team development experience.  Please send us email at [pagit@microsoft.com](mailto:pagit@microsoft.com) with your thoughts.
+**Let us know what you think!**  This is but a first small step in a long journey to enable a great team development experience.  Please send us email at [PAGit@microsoft.com](mailto:pagit@microsoft.com) with your thoughts.
