@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 08/19/2021
+ms.date: 08/24/2021
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: tapanm
@@ -25,13 +25,7 @@ To view existing Advanced forms or to create new advanced forms, open the [Porta
 > [!NOTE]
 > Before you continue, ensure you review [considerations](#considerations) for advanced forms.
 
-<!---
-> [!Note]
-> - A **Advanced Form** must be associated with a webpage for a given website for the form to be viewable within the site.
-> - Field level code components are in public preview, and can be added to forms. More information: [Add a code component to a field in a model-driven app](../component-framework.md#add-a-code-component-to-a-field-in-a-model-driven-app)
--->
-
-When creating or editing a webpage from the the [Portal Management app](configure-portal.md), a **Advanced Form** can be specified in the lookup field provided on the **New Web Page** form.
+When creating or editing a webpage from the the [Portal Management app](configure-portal.md), an **Advanced Form** can be specified in the lookup field provided on the **New Web Page** form.
 
 ## Advanced form attributes
 
@@ -106,7 +100,7 @@ The form's map control requires additional configuration to tell it what the IDs
 
 ## Considerations
 
-- A **Advanced Form** must be associated with a webpage for a given website for the form to be viewable within the site.
+- An **Advanced Form** must be associated with a webpage for a given website for the form to be viewable within the site.
 - Field level code components are in public preview, and can be added to forms. More information: [Add a code component to a field in a model-driven app](../component-framework.md#add-a-code-component-to-a-field-in-a-model-driven-app)
 - Rollup columns on portal forms may sometimes show up as editable although they're intended to be read-only. To ensure that these columns remain read-only, mark the column as **Read-only**  on the model-driven app form.
 
