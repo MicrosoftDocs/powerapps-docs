@@ -29,7 +29,7 @@ Object checker runs real-time diagnostics on component objects within your solut
 
 ## Prerequisite
 
-To use the object checker you must enable the solution preview.
+To use the object checker, you must enable the solution preview.
 
 1. Go to the **Solutions** area.
 1. On the command bar, turn **Solutions preview on**.
