@@ -8,6 +8,7 @@ ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 09/14/2020
+ms.subservice: end-user
 ms.author: mkaur
 ms.reviewer: ""
 ms.assetid: 
@@ -36,7 +37,7 @@ For more information about profile cards, see [Profile cards in Office 365](http
 
 
     > [!div class="mx-imgBorder"] 
-    > ![Expand contact profile card detail](media/profilecard.gif "This image shows how to expand a contacts profile card and view details")
+    > ![Expand contact profile card detail.](media/profilecard.gif "This image shows how to expand a contacts profile card and view details")
 
 
 

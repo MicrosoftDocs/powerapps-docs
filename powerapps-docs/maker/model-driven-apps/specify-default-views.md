@@ -15,6 +15,7 @@ applies_to:
 author: "Mattp123"
 ms.assetid: 1a9d27e1-4dd7-4063-87a5-3d7565fc6194
 caps.latest.revision: 25
+ms.subservice: mda-maker
 ms.author: "matp"
 manager: "kvivek"
 search.audienceType: 
@@ -35,10 +36,10 @@ Unless someone has 'pinned' a different view in your app as their personal defau
 
 2.  Expand **Data**, select **Tables**, select the table you want, and then select the **Views** tab.
 
-3.  Select **More commands** ![More Commands button](media/more-commands.gif "More Commands button for Forms") next to the view you want, and then select **Set as default view**. You can also select **Set as default view** on the menu bar.
+3.  Select **More commands** ![More Commands button.](media/more-commands.gif "More Commands button for Forms") next to the view you want, and then select **Set as default view**. You can also select **Set as default view** on the menu bar.
 
     > [!div class="mx-imgBorder"] 
-    > ![Set as default view](media/set-as-default-menu-maker.png)
+    > ![Set as default view.](media/set-as-default-menu-maker.png)
 
 ## Set the default view for a table in solution explorer 
   
@@ -49,7 +50,7 @@ Unless someone has 'pinned' a different view in your app as their personal defau
 3.  On the menu bar, select **More Actions** > **Set Default**.  
 
     > [!div class="mx-imgBorder"] 
-    > ![Set as default](media/set-as-default-menu.png)
+    > ![Set as default.](media/set-as-default-menu.png)
   
 4.  On the solution explorer toolbar, select **Publish All Customizations**.  
 
