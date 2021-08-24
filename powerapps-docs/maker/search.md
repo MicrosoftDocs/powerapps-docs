@@ -51,9 +51,9 @@ By default, all search providers are enabled. The following search providers can
 
 |Search provider namespace |Description  |
 |---------|---------|
-|`PowerPlatform.UniversalSearch.disableDocsSearch`  |  When this provider is disabled, users in the environment will see a message that Microsoft Learn and Documentation search categories have been turned off by the administrator in the search results page.   |
-|`PowerPlatform.UniversalSearch.disableCommunitySearch`     | When this provider is disabled, users in the environment will see a message that Community and Blog search categories have been turned off by the administrator in the search results page.   |
-| `PowerPlatform.UniversalSearch.disableBingVideoSearch`    | When this provider is disabled, users in the environment will see a message that Video search categories have been turned off by the administrator in the search results page.   |
+|`PowerPlatform.Search.disableDocsSearch`  |  When this provider is disabled, users in the environment will see a message that Microsoft Learn and Documentation search categories have been turned off by the administrator in the search results page.   |
+|`PowerPlatform.Search.disableCommunitySearch`     | When this provider is disabled, users in the environment will see a message that Community and Blog search categories have been turned off by the administrator in the search results page.   |
+| `PowerPlatform.Search.disableBingVideoSearch`    | When this provider is disabled, users in the environment will see a message that Video search categories have been turned off by the administrator in the search results page.   |
 
 To return the current settings including which search providers are enabled or disabled, run this cmdlet:
 `Get-TenantSettings`
@@ -65,14 +65,14 @@ Members of the Power Platform admin role can disable or enable a search provider
 For example, to disable the Microsoft Learn and Documentation search provider, run this cmdlet:
 
 ```powershell
-$requestBody = @{PowerPlatform.UniversalSearch.disableDocsSearch = $true}
+$requestBody = @{PowerPlatform.Search.disableDocsSearch = $true}
 Set-TenantSettings -RequestBody $requestBody
 ```
 
 To enable the Microsoft Learn and Documentation search provider, run this cmdlet:
 
 ```powershell
-$requestBody = @{PowerPlatform.UniversalSearch.disableDocsSearch = $false}
+$requestBody = @{PowerPlatform.Search.disableDocsSearch = $false}
 Set-TenantSettings -RequestBody $requestBody
 ```
 
