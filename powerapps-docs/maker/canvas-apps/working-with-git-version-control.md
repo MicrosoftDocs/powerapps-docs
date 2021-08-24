@@ -21,7 +21,7 @@ contributors:
 # Work with Canvas Studio Git version control
 
 > [!IMPORTANT]
-> This feature is being provided to you as a private preview under a non-disclosure agreement.  Please do not distribute information about this feature to others.  Please send feedback or questions to [PAGit@microsoft.com](mailto:pagit@microsoft.com).
+> This feature is being provided to you as a private preview under a non-disclosure agreement.  Please do not distribute information about this feature to others.  Please send feedback or questions to [PAGit@microsoft.com](mailto:PAGit@microsoft.com).
 
 Use Git version control to enable more than one person to edit a Canvas app at the same time.  No longer will others be locked out of the app while one person is editing it.  As changes are made and synchronized, they are automatically merged with other changes, and made avaialble to all other editors of the app.  This is a first step toward a Microsoft Office style co-authoring experience.
 
@@ -32,7 +32,7 @@ Any Git provider can be used with Studio, such as [GitHub](https://github.com/) 
 ## Enabling Git version control
 
 > [!IMPORTANT]
-> Git version control is an experimental feature.  It is currently being offered through a private preview program and not to all customers yet.  We would like to hear your feedback before making it available to others.  Please send feedback or questions to [PAGit@microsoft.com](mailto:pagit@microsoft.com).  As with all experimental features, this feature may significantly change or be removed at any time.  See [Understand experimental, preview, and retired features](working-with-experimental-preview.md) for more details.
+> Git version control is an experimental feature.  It is currently being offered through a private preview program and not to all customers yet.  We would like to hear your feedback before making it available to others.  Please send feedback or questions to [PAGit@microsoft.com](mailto:PAGit@microsoft.com).  As with all experimental features, this feature may significantly change or be removed at any time.  See [Understand experimental, preview, and retired features](working-with-experimental-preview.md) for more details.
 
 Git version control is managed on a per app basis.  Each app must be individually addded to Git version control.
 
@@ -47,7 +47,7 @@ When complete, your screen should look like this:
 
 ![swtich to enable Git version control](media/working-with-git-version-control/enable-git.png)
 
-If the **Show the Git version control setting** experimental feature is not shown, it may be that your tenant has not been properly enabled for this feature.  Send mail to [pagit@microsoft.com](mailto:pagit@microsoft.com) for help.
+If the **Show the Git version control setting** experimental feature is not shown, it may be that your tenant has not been properly enabled for this feature.  Send mail to [PAGit@microsoft.com](mailto:PAGit@microsoft.com) for help.
 
 ## Connecting an app to Git
 
@@ -74,7 +74,7 @@ Once connected, the connection information will be displayed.  At this time, the
 
 Follow these instructions to obtain a personal access token:
 - **GitHub**: [https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token)
-- **Azure DevOps**: [https://docs.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=azure-devops&tabs=preview-page](https://docs.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=azure-devops&tabs=preview-page)
+- **Azure DevOps**: [https://docs.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate](https://docs.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate)
 - **Other**: Any Git provider can be used with Git version control, check your provider's help for how to create a personal access token.
 
 Plug the user name and personal access token when prompted:
@@ -115,4 +115,4 @@ Each save or synchronize which includes changes will result in a commit in Git. 
 
 ## Feedback to PAGit@microsoft.com
 
-**Let us know what you think!**  This is but a first small step in a long journey to enable a great team development experience.  Please send us email at [PAGit@microsoft.com](mailto:pagit@microsoft.com) with your thoughts.
+**Let us know what you think!**  This is but a first small step in a long journey to enable a great team development experience.  Please send us email at [PAGit@microsoft.com](mailto:PAGit@microsoft.com) with your thoughts.
