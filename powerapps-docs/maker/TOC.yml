@@ -1928,6 +1928,8 @@
            items:
               - name: Package 9.2.2103.x
                 href: ./portals/versions/package-version-9.2.2103.md
+              - name: Package 9.2.2108.x
+                href: ./portals/versions/package-version-9.2.2108.md
 - name: Dataverse
   items:
   - name: Dataverse
@@ -2447,6 +2449,8 @@
               href: ../teams/localizing-sample-apps.md
             - name: Theming in sample apps 
               href: ../teams/sample-app-theming.md
+            - name: Working with table permission in sample apps
+              href: ../teams/dataverse-for-teams-table-permissions.md
         - name: FAQs for sample apps
           href: ../teams/sample-apps-faqs.md
     - name: Known issues and limitations
