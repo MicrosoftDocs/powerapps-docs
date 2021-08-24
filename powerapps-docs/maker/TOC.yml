@@ -2286,6 +2286,8 @@
           href: ../teams/when-create-teams-apps.md
         - name: Add notifications to make your apps collaborative
           href: ../teams/add-app-notifications.md
+        - name: Integrate with Azure Active Directory
+          href: ../teams/integrate-azure-ad.md
         - name: Enable consistent experience across sessions
           href: ../teams/consistent-experience-across-sessions.md
     - name: Manage your apps
