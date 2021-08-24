@@ -4,7 +4,7 @@ description: Learn how to use the Employee Ideas app from Teams store.
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/15/2020
+ms.date: 08/24/2021
 author: navjotm
 ms.subservice: teams
 ms.author: namarwah
