@@ -123,7 +123,7 @@ We'll create an app with a button that will only show up if the user is a member
     ```
 
     > [!NOTE]
-    > The GUID highlighted in red should be replaced with the GUID you copied [earlier](#create-a-new-azure-ad-group).
+    > Update the formula with the group ID (GUID) for the group you copied [earlier](#create-a-new-azure-ad-group).
 
 1. Select **...** (ellipsis) next to the app, and then select **Run OnStart**.
 
