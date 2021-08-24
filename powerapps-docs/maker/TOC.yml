@@ -1928,6 +1928,8 @@
            items:
               - name: Package 9.2.2103.x
                 href: ./portals/versions/package-version-9.2.2103.md
+              - name: Package 9.2.2108.x
+                href: ./portals/versions/package-version-9.2.2108.md
 - name: Dataverse
   items:
   - name: Dataverse
