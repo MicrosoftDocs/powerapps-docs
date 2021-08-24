@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 08/24/2021
-ms.author: v-ljoel
+ms.author: namarwah
 ms.reviewer: tapanm
 contributors:
   - joel-lindstrom
@@ -57,6 +57,7 @@ The new team gets created, and is listed under the Teams tab.
 1. Set up the group with the following values:
 
     | Option | Value |
+    | - | - |
     | Group type | Microsoft 365 |
     | Group name | Admin Access |
     | Group email address | Automatically updated |
