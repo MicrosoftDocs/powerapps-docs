@@ -28,7 +28,7 @@ This article outlines the use of low-code canvas components to build custom UX f
   > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
 
   > [!NOTE]
-  > Custom page currently supports a [limited set of controls](/powerapps/maker/model-driven-apps/design-page-for-model-app#supported-controls-in-custom-page) and only the currently supported controls should be used to create canvas components for the custom page.
+  > Custom page currently supports a [limited set of controls](/powerapps/maker/model-driven-apps/design-page-for-model-app#supported-controls-in-a-custom-page) and only the currently supported controls should be used to create canvas components for the custom page.
 
 Canvas components provide app makers the ability to create custom components in a low-code fashion. These components cannot only then be reused across custom pages and applications, but also can be centrally updated, packaged, and moved using Microsoft Dataverse solutions. More information: [Create a component for canvas apps](/powerapps/maker/canvas-apps/create-component) 
 
