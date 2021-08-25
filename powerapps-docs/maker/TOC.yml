@@ -547,7 +547,7 @@
           href: ./canvas-apps/working-with-rules.md
         - name: Create or update bulk records
           href: ./canvas-apps/create-update-records-bulk.md
-        - name: Use Power Apps Ideas (Experimental)
+        - name: Use Power Apps Ideas (Preview)
           href: ./canvas-apps/power-apps-ideas.md
         - name: Formula reference
           items:
@@ -2125,11 +2125,16 @@
             href: ./data-platform/export-customized-entity-field-text-translation.md
           - name: Import translated component text
             href: ./data-platform/import-translated-entity-field-text.md
-      - name: Use solution checker
-        href: ./data-platform/use-powerapps-checker.md
+      - name: Diagnose solutions and solution objects
+        href: ./data-platform/diagnose-solutions.md
         items:
-        - name: "Common issues and resolutions: solution checker"
-          href: ./data-platform/common-issues-resolutions-solution-checker.md
+        - name: Use object checker (preview)
+          href: ./data-platform/object-checker.md
+        - name: Use solution checker
+          href: ./data-platform/use-powerapps-checker.md
+          items:
+          - name: "Common issues and resolutions: solution checker"
+            href: ./data-platform/common-issues-resolutions-solution-checker.md
   - name: Work with dataflows
     href: ./data-platform/self-service-data-prep-with-dataflows.md
     items:
@@ -2281,6 +2286,8 @@
           href: ../teams/when-create-teams-apps.md
         - name: Add notifications to make your apps collaborative
           href: ../teams/add-app-notifications.md
+        - name: Integrate with Azure Active Directory
+          href: ../teams/integrate-azure-ad.md
         - name: Enable consistent experience across sessions
           href: ../teams/consistent-experience-across-sessions.md
     - name: Manage your apps
