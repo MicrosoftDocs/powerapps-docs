@@ -121,7 +121,7 @@ Now that you've created the spreadsheet to which you'll extract the data, create
 
 ### Edit your flow
 
-Next we will add a step to get the idea records and for each idea, get the campaign details associated with it.
+Next, we'll add a step to get the idea records and for each idea, get the campaign details associated with it.
 
 1. Add a Dataverse List rows action. Select **Employee ideas** as the table name. Add **createdby** to the **Expand Query** field.
    
@@ -132,7 +132,7 @@ Next we will add a step to get the idea records and for each idea, get the campa
     > [!div class="mx-imgBorder"]
     > ![List ideas and get campaign steps.](media/export-employee-ideas-for-reporting/list-ideas-and-get-campaign-steps.png "List ideas and get campaign steps")
 
-6. In the Apply to each action, select **Add an action**, and select the O365 Users **Get user profile (V2)** action. Set **User (UPN)** to Created By Primary Email. This is going to get the details of the contact who created the idea.
+6. In the Apply to each action, select **Add an action**, and select the Office 365 Users **Get user profile (V2)** action. Set **User (UPN)** to Created By Primary Email. This action will get the details of the contact who created the idea.
    
    > [!div class="mx-imgBorder"]
    > ![Get user record of the creator of the idea record.](media/export-employee-ideas-for-reporting/get-user-record-from-created-by-of-the-idea.png "Get user record of the creator of the idea record")
@@ -173,10 +173,10 @@ Next we will add a step to get the idea records and for each idea, get the campa
       > [!div class="mx-imgBorder"]
       > ![Add idea row to excel table.](media/export-employee-ideas-for-reporting/add-idea-row-to-excel-step.png "Add idea row to excel table")
     
-9.  Next we are going to capture the vote details--to do that, we again need to get the idea data, so add another list rows step outside of the apply to each step to get employee ideas .
+9.  Next, we're going to capture the vote details. To do that, we again need to get the idea data, so add another list rows step outside of the apply to each step to get employee ideas.
 
-    - Select Employee Ideas for the table name
-    - Rename step to **List Ideas**
+    - Select Employee Ideas for the table name.
+    - Rename step to **List Ideas**.
     
 10. Add an apply to each step and rename it to **Update Vote Detail**. We are doing this so we can get the vote data for each idea.
 
