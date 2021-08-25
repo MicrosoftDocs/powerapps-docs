@@ -143,9 +143,9 @@ Now, we'll add a new screen where the app user can start or join a conversation.
     | Width     | 200                                                |
     | Height    | 32                                                 |
     | Font size | 12                                                 |
-    | X         | Parent.Width/2 - startaconversation_Button.Width/2 |
+    | X         | `Parent.Width/2 - startaconversation_Button.Width/2` |
     | Y         | 100                                                |
-    | OnSelect  | Set(enterMessage,true)                             |
+    | OnSelect  | `Set(enterMessage,true)`                             |
 
 1. Select **+** (Insert) > **Input** > **Combo box**.
 
@@ -154,10 +154,10 @@ Now, we'll add a new screen where the app user can start or join a conversation.
     | Property | Value                                  |
     |----------|----------------------------------------|
     | Name     | team_Combobox                          |
-    | Items    | MicrosoftTeams.GetAllTeams().value     |
+    | Items    | `MicrosoftTeams.GetAllTeams().value`     |
     | Width    | 320                                    |
     | Height   | 32                                     |
-    | X        | Parent.Width/2 - team_ComboBox.Width/2 |
+    | X        | `Parent.Width/2 - team_ComboBox.Width/2` |
     | Y        | 200                                    |
     | Text     | "Team"                                 |
     | Tooltip  | "Team"                                 |
@@ -168,10 +168,10 @@ Now, we'll add a new screen where the app user can start or join a conversation.
     | Property | Value                                                                                                               |
     |----------|---------------------------------------------------------------------------------------------------------------------|
     | Name     | channel_Combobox                                                                                                    |
-    | Items    |         If(!IsBlank(team_ComboBox.Selected.id),MicrosoftTeams.GetChannelsForGroup(team_ComboBox.Selected.id).value) |
+    | Items    |         `If(!IsBlank(team_ComboBox.Selected.id),MicrosoftTeams.GetChannelsForGroup(team_ComboBox.Selected.id).value)` |
     | Width    | 320                                                                                                                 |
     | Height   | 32                                                                                                                  |
-    | X        | Parent.Width/2 - channel_ComboBox.Width/2                                                                           |
+    | X        | `Parent.Width/2 - channel_ComboBox.Width/2`                                                                           |
     | Y        | 200                                                                                                                 |
     | Text     | "Channel"                                                                                                           |
     | Tooltip  | "Channel"                                                                                                           |
@@ -187,7 +187,7 @@ Now, we'll add a new screen where the app user can start or join a conversation.
     | Value       | ""                                       |
     | Width       | 500                                      |
     | Height      | 180                                      |
-    | X           | Parent.Width/2 - message_TextBox.Width/2 |
+    | X           | `Parent.Width/2 - message_TextBox.Width/2` |
     | Y           | 300                                      |
     | Placeholder | Type message here                        |
     | Visible     | enterMessage                             |
@@ -203,7 +203,7 @@ Now, we'll add a new screen where the app user can start or join a conversation.
     | Width     | 96                                     |
     | Height    | 32                                     |
     | Font size | 12                                     |
-    | X         | Parent.Width/2 - submit_Button.Width/2 |
+    | X         | `Parent.Width/2 - submit_Button.Width/2` |
     | Y         | 500                                    |
     | Visible   | enterMessage                           |
 
@@ -229,7 +229,7 @@ Now, we'll add a new screen where the app user can start or join a conversation.
     | Width     | 200                                    |
     | Height    | 32                                     |
     | Font size | 12                                     |
-    | X         | Parent.Width/2 - submit_Button.Width/2 |
+    | X         | `Parent.Width/2 - submit_Button.Width/2` |
     | Y         | 500                                    |
     | Visible   | enterMessage                           |
 
