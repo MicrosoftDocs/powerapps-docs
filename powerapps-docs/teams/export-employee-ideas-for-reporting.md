@@ -119,7 +119,7 @@ Now that you've created the spreadsheet to which you'll extract the data, create
 
 8. Select **Create**.
 
-### Create a flow
+### Edit your flow
 
 Next we will add a step to get the idea records and for each idea, get the campaign details associated with it.
 
@@ -167,7 +167,7 @@ Next we will add a step to get the idea records and for each idea, get the campa
         *if(not(empty(outputs('Get_user_profile_(V2)')?['body/department'])),outputs('Get_user_profile_(V2)')?['body/department'])*
     
     - Job_Title (Set to Job Title from get user profile step)
-        
+      
     - Email (set to Mail value from Get user profile (V2) step
     
       > [!div class="mx-imgBorder"]
@@ -211,7 +211,7 @@ Next we will add a step to get the idea records and for each idea, get the campa
 
 13. We now are going to update the excel workbook vote table with the votes by idea. Add an apply to each step inside the apply to each created in step 10. For the output field, select the value from the list rows step created in step 12.
     
-14. Inside the nested apply to each step added in step 13, add an Office 365 Users **Get user profile (V2)** step. Select the Created by Primary Email from the list voters step User (UPN) field.
+14. Inside the nested apply to each step added in step 13, add an Office 365 Users **Get user profile (V2)** step. Select the Primary Email from the list voters step User (UPN) field.
     
 15. Follow these steps to, add an Excel add row into table step.
 
