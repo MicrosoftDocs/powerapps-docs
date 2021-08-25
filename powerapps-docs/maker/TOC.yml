@@ -2290,6 +2290,8 @@
           href: ../teams/integrate-azure-ad.md
         - name: Enable consistent experience across sessions
           href: ../teams/consistent-experience-across-sessions.md
+        - name: Have a conversation about your business data in a Teams app
+          href: ../teams/business-data.md
     - name: Manage your apps
       href: ../teams/manage-your-apps.md
     - name: Set permission and share your app
