@@ -53,9 +53,9 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 ### Demonstrate
 
 1. Instantiate an account object.
-1. Retrieves the account containing its attributes .
-1. Rettrieves the version number of the account.
-1. Updates the account with postal1 code attribute. 
+1. Retrieves the account containing its columns .
+1. Retrieves the version number of the account.
+1. Updates the account with postal1 code column. 
 
 
 ### Clean up

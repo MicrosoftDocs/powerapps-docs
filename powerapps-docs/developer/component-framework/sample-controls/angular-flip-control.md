@@ -17,7 +17,7 @@ This sample shows how to use third-party libraries to create components in Power
 [!INCLUDE[cc-terminology](../../data-platform/includes/cc-terminology.md)]
 
 > [!div class="mx-imgBorder"]
-> ![Angular Flip](../media/angular-flip.png "Angular Flip")
+> ![Angular Flip.](../media/angular-flip.png "Angular Flip")
 
 ## Available for 
 

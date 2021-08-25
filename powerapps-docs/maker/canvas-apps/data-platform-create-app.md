@@ -9,18 +9,25 @@ ms.custom:
   - canvas
   - intro-internal
 ms.reviewer: 
-ms.date: 05/24/2021
+ms.date: 08/16/2021
+ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - lancedmicrosoft
 ---
 # Create a canvas app with data from Microsoft Dataverse
 
 In Power Apps, create a canvas app based on a list of sample accounts in [Dataverse](../data-platform/data-platform-intro.md). In this app, you can browse all accounts, show details of a single account, and create, update, or delete an account.
 
 If you're not signed up for Power Apps, [sign up for free](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) before you start.
+
+Watch this short video that shows you how to create a canvas app quickly using Dataverse tables.
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWIUJy]
 
 ## Prerequisites
 
@@ -32,7 +39,7 @@ To follow this quickstart, you must be assigned to the [Environment Maker](/powe
 
 1. Under **Start from data**, and select **Microsoft Dataverse**.
 
-    ![Start from data - Microsoft Dataverse](media/data-platform-create-app/start-from-data.png "Start from data - Microsoft Dataverse")
+    ![Start from data - Microsoft Dataverse.](media/data-platform-create-app/start-from-data.png "Start from data - Microsoft Dataverse")
 
 1. If this is you first time, you're prompted to create a connection to Microsoft Dataverse. Select **Create** this connection. Otherwise, under **Choose a table**, select **Accounts**, and then select **Connect**.
 
@@ -42,7 +49,7 @@ Your app opens to the browse screen, which shows a list of accounts in a control
 
 By default, the gallery shows an email address, a city, and an account name. As you'll see in [Next steps](data-platform-create-app.md#next-steps), you can customize the gallery to change how the data appears and even show other types of data.
 
-![Browse screen](./media/data-platform-create-app/browse-screen.png)
+![Browse screen.](./media/data-platform-create-app/browse-screen.png)
 
 ## Save the app
 You'll probably want to make more changes before you use this app or share it with others. As a best practice, save your work so far before you proceed.

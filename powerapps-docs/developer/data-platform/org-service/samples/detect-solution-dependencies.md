@@ -38,9 +38,9 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 1. Checks for the current version of the org.
 1. The `Publisher` method creates the sample publisher that will `own` the two solutions.
 1. The `Solution` method creates the primary solution.
-1. The `OptionSetMetadata` creates the global option set and associates it to the solution.
+1. The `OptionSetMetadata` creates the choice values and associates it to the solution.
 1. The `ExportSolutionRequest` exports the solution as managed so that we can later import it.
-1. The `DeleteOptionSetRequest` deletes the option set previously created, so it can be imported under the managed solution.
+1. The `DeleteOptionSetRequest` deletes the choice column previously created, so it can be imported under the managed solution.
 1. The `ImportSolutionRequest` re-imports the solution as managed.
 
 ### Demonstrate

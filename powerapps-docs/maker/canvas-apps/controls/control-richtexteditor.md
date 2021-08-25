@@ -8,11 +8,15 @@ ms.topic: article
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 05/24/2018
+ms.subservice: canvas-maker
 ms.author: chmoncay
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - chmoncay
 ---
 # Rich text editor control in Power Apps
 Allows end users to format text inside a WYSIWYG editing area.  Output format is HTML.

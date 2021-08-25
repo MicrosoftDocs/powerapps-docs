@@ -12,6 +12,7 @@ applies_to:
   - "Dynamics 365 Version 9.x"
   - "PowerApps"
 author: "Mattp123"
+ms.subservice: mda-maker
 ms.author: "emcoope"
 ms.reviewer: "matp"
 manager: "kvivek"
@@ -43,10 +44,10 @@ Verify the following prerequisites before you start creating an app:
 1. On the **New model-driven app from blank** dialog box, select **Modern app designer**, and then select **Create**.
 1. On the **New model-driven app** dialog box, enter a **Name** and optionally, a **Description**, and then select **Create**.
 1. On the left navigation pane, select **Navigation** to display the navigation tree. 
-   :::image type="content" source="media/navigation-area.png" alt-text="Select the navigation area from the Navigation pane":::
+   :::image type="content" source="media/navigation-area.png" alt-text="Select the navigation area from the Navigation pane.":::
 
 1. Notice that a basic site map is already created for you. Expand **Area1**, and then expand **Group1**.
-   :::image type="content" source="media/default-site-map.png" alt-text="Default site map is created for you":::
+   :::image type="content" source="media/default-site-map.png" alt-text="Default site map is created for you.":::
 1. Select **Group1** and change the title to *Accounts and Contacts*.
 1. Select **Subarea1**, and make the following changes: 
    - **Content type**: Table
@@ -60,7 +61,7 @@ Verify the following prerequisites before you start creating an app:
 1. On the command bar, select **New page**, select **Table based view and form**, and then select **Next**.
 1. On the **New table view and form pages** dialog box, select **Contact**, leave the **Show in navigation** option selected, and then select **Add**. Note the following: 
    - Notice the preview pane displays your app. Selecting a component, such as a table, affects what's displayed in the preview. If your environment includes data that you have access to view, that also appears in the preview.
-   :::image type="content" source="media/create-app.png" alt-text="App created with account and contact tables":::
+   :::image type="content" source="media/create-app.png" alt-text="App created with account and contact tables.":::
 1. Select **Save**, and then select **Publish**.
 
 To see how the app runs in a full browser window, on the command bar, select **Play**.
@@ -75,7 +76,7 @@ In a model-driven app, there are the three main app runtime navigation component
 1. Groups. Group names appear as a navigation element in an app with the subarea names within the group listed beneath it. In the screenshot below, one group is named *Accounts* and one is named *New Group*.
 1. Subareas. Subareas and pages appear under the group that they're configured within in the app designer. In the screenshot below, one subarea is named *All accounts revenue* and another subarea is named *Contacts*.
 
-   :::image type="content" source="media/default-sitemap.png" alt-text="Default model-driven app site map":::
+   :::image type="content" source="media/default-sitemap.png" alt-text="Default model-driven app site map.":::
 
 ### Create a group or subarea
 
@@ -114,7 +115,7 @@ Create, add, or remove one or more forms or views for a table.
 1. On the left navigation pane select **Pages**, and then select the component you want, such as **Account form**. 
 1. On the right properties pane, select **Manage forms**.
 1. On the **Manage forms** flyout, select the forms you want to add or remove, and then select **Save**. Alternatively, select **New form** to open the form designer to create a new form.
-   :::image type="content" source="media/app-design-manage-forms.png" alt-text="Manage forms interface":::
+   :::image type="content" source="media/app-design-manage-forms.png" alt-text="Manage forms interface.":::
 
 1. Select **Publish** to make the changes available to users.
 

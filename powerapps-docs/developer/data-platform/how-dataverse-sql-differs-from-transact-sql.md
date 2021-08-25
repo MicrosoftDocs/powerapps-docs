@@ -7,6 +7,7 @@ ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID
+ms.subservice: dataverse-developer
 ms.author: "pehecke" # MSFT alias of Microsoft employees only
 manager: "kvivek" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -16,9 +17,7 @@ search.app:
   - D365CE
 ---
 
-# How Dataverse SQL differs from Transact-SQL (Preview)
-
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+# How Dataverse SQL differs from Transact-SQL
 
 This article describes the differences between Dataverse SQL and Transact-SQL. Dataverse SQL is a subset of Transact-SQL.
 
@@ -41,6 +40,7 @@ More information: [Data types (Transact-SQL)](/sql/t-sql/data-types/data-types-t
 - nchar
 - numeric
 - nvarchar*
+- nvarchar(max) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# multi-line text
 - real
 - smalldatetime
 - smallint
@@ -61,13 +61,9 @@ More information: [Data types (Transact-SQL)](/sql/t-sql/data-types/data-types-t
 
 - binary
 - image
-- ntext
-- nvarchar(max)
 - sql_variant
-- text
 - timestamp
 - varbinary
-- varchar(max)
 - virtual
 - partylist
 - HierarchyId

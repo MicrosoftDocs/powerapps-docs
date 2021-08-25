@@ -7,6 +7,7 @@ ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly"
+ms.subservice: dataverse-developer
 ms.author: "pehecke"
 manager: "kvivek"
 search.audienceType: 
@@ -21,7 +22,7 @@ In addition to using a debugger and profiler to learn how your plug-in is perfor
 
 Through the [Plug-in](/power-platform/admin/analytics-common-data-service#plug-ins) dashboard you can view metrics such as average execution time, failures, most active plug-ins, and more.
 
-![Analytics plug-in dashboard](media/cds-insights-plugins.png)
+![Analytics plug-in dashboard.](media/cds-insights-plugins.png)
 
 ## See also
 
