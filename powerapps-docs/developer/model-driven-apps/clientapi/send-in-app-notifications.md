@@ -31,10 +31,27 @@ This article outlines the steps on how to send in-app notifications to a specifi
 
 ## Enable in-app notification feature
 
-To use the in-app notification feature: , enable the `AllowNotificationsEarlyAccess` app setting in model-driven app
+To use the in-app notification feature: , you need enable the `AllowNotificationsEarlyAccess` app setting in model-driven app.
 
-1. Sign-in to [Power Apps admin center](https://admin.powerapps.com).
-1. Select the **Flag** icon on the top-right corner. Search for **AllowNotificationsEarlyAccess** and turn on the switch.
+1. Sign-in to your model-driven app.
+1. Select the app where you want to use this feature.
+1. Select **F12** button on your keyboard to open the browser console.
+1. In the browser console, copy the code below. Enter your app unique name in the `AppUniqueName` parameter. Press **Enter**.   
+
+   ```javascript
+   fetch(window.origin + "/api/data/v9.1/SaveSettingValue()",{
+    method: "POST", 
+	  headers: {'Content-Type': 'application/json'},
+	  body: JSON.stringify({AppUniqueName: "Your app unique name", SettingName:"AllowNotificationsEarlyAccess", Value: "true"})
+	  });
+   ```
+1. Now sign-in to [Power Apps](https://make.powerapps.com).
+1. Select **Solutions** in the left navigation pane. Select **New solution**. Enter the details and then select **Create**. 
+1. Open the solution that you have created. Select **New** > **App** > **Model-driven app**. From the list of apps, select the model-driven app where you want to see the notifications feature.
+1. Select **Publish all customizations**. Refresh the model-driven app, you should see a **Bell** icon on the top-right corner.
+
+> [!TIP]
+> The logical name of your model-driven app can be found in the solution explorer under the **Name** column. 
 
 ## Send basic in-app notifications
 
@@ -51,11 +68,12 @@ The following examples use the notification table and a notification record to c
 In-app notifications can be sent by [Creating record using client API](reference/xrm-webapi/createrecord.md).
 
 ```javascript
+var systemuserid = "Guid of the user";
 var data =
 {
   "title": "Welcome",
   "body": "Welcome to the world of app notifications!",
-  "owner": "GUID of the user.",
+  "ownerid@odata.bind": "/systemusers(" + systemuserid + ")",
   "icontype": 100000000, // info
   "toasttype": 200000000 // timed
 }
@@ -87,7 +105,7 @@ Accept: application/json
 {
   "title": "Welcome",
   "body": "Welcome to the world of app notifications!",
-  "owner": <Guid of the user.>,
+  "ownerid@odata.bind": "/systemusers(<Guid of the user.>)",
   "icontype": 100000000, // info
   "toasttype": 200000000 // timed
 }
@@ -104,7 +122,8 @@ The following are the columns for the notification table:
 |Body|Details of the notification.|
 |Icon Type|List of predefined icons. The default value is `Info`. More information: [Notification icons](#changing-the-notification-icon)|
 |Toast Type|List of toast behaviors. The default value is `Timed`. More information: [Toast types](#changing-the-toast-notification-behavior)|
-|Expires on|Date when notification should be deleted if not already dismissed.|
+|Expiry (seconds)|Number of seconds from when the notification should be deleted if not already dismissed.|
+|Data|Json that is used for extensibility and parsing richer data into the notification. Maximum length is 5000.|
 
 ### Changing the toast notification behavior
 
@@ -117,7 +136,7 @@ An in-app notification behavior can be changed by setting **Toast Type** to one 
 
 ### Changing the notification icon
 
-An in-app notification icon can be changed by setting **Icon Type** to one of the following values:
+An in-app notification icon can be changed by setting **Icon Type** to one of the following values. When using a custom icon, a `iconUrl` parameter should be specified within the `data` parameter.
 
 |Icon Type|Value|
 |---|---|
@@ -130,13 +149,17 @@ An in-app notification icon can be changed by setting **Icon Type** to one of th
 
 ### Changing the navigation target in notification link
 
-You can display notifications in different locations by setting the `navigationTarget` parameter. 
+You can control where a navigation link should open by setting the `navigationTarget` parameter. 
 
 |Navigation target|Behavior|Example|
 |----------|-----------|-----------|
-|Dialog|Opens in center dialog.|`"navigationTarget": "dialog"` |
-|Inline|Default. Opens in the current page.|`"navigationTarget": "inline"` |
-|newWindow|Opens in the new browser tab.|`"navigationTarget": " newWindow"` |
+|Dialog|Opens in center dialog.|`"navigationTarget": "dialog"` |
+|Inline|Default. Opens in the current page.|`"navigationTarget": "inline"` |
+|newWindow|Opens in the new browser tab.|`"navigationTarget": "newWindow"` |
+
+### Notification storage
+
+The app notification table uses the organization's database storage capacity. Because of this, it is important to consider the volume of notifications sent and the expiration setting. More information: [Microsoft Dataverse storage capacity](/power-platform/admin/capacity-storage)
 
 ## Examples
 
@@ -167,26 +190,29 @@ This example shows how to create a notification by adding title and URL to the *
 
 This example shows how to create a notification by adding one action to the **actions** parameter.
 
-```JavaScript
-var notificationRecord = 
-{ 
-  "title": "Congratulations!", 
-  "body": "Your customer rating is now an A. You resolved 80% of your cases within SLA this week and average customer rating was A+.", 
-  "owner": "Guid of the user", 
-  "icontype": 100000001, // success 
-  "data": JSON.stringify({ 
-    "actions": [ 
-      { 
-        "title": "View Cases", 
-        "data": { 
-        "url": "?pagetype=entitylist&etn=incident&viewid=bad2fbea-2673-df11-986c-00155d2e3002&viewType=1039" 
-        } 
-      } 
-    ] 
-  }) 
-} 
+> [!div class="mx-imgBorder"] 
+> ![App notification with single action](../media/app-notification-with-single-action.png "App notification with single action")
 
-Xrm.WebApi.createRecord("appnotification", notificationRecord);
+```JavaScript
+var systemuserid = "6c3f944c-8c02-ec11-94ee-000d3a327308";
+  var notificationRecord = 
+  {
+    "title": "Congratulations",
+	  "body": "Your customer rating is now an A. You resolved 80% of your cases within SLA thi week and average customer rating was A+",
+	  "ownerid@odata.bind": "/systemusers(" + systemuserid + ")",
+    "icontype": 100000001, // success
+    "data": JSON.stringify({
+	 "actions": [
+	  {
+        "title": "View cases",
+        "data": {
+		"url": "?pagetype=entitylist&etn=incident&viewid=00000000-0000-0000-00aa-000010001028&viewType=1039"
+		}		
+	  }
+	 ]
+	})
+  }
+Xrm.WebApi.createRecord("appnotification",notificationRecord).
 then(
       function success(result) {
           console.log("notification created with single action: " + result.id);
@@ -198,41 +224,43 @@ then(
   );
 ``` 
 
-### Notification with multiple primary actions 
+### Notification with multiple actions 
 
-This example shows how to create a notification with a custom body along with an inline link and bold styling.
+This example shows how to create a notification with a multiple actions.
 
-```javascript
-// Notification with multiple primary actions as center dialog 
-var notificationRecord = 
-{ 
-  "title": "Upcoming Service Reminder", 
-  "body": "", 
-  "owner": "GUID of the user", 
-  "icontype": 100000005, // custom 
-  "data": JSON.stringify({ 
-    "body": "Coho Winery has a service appointment coming up on 4/1/2021. Call **[Jim Glynn](?pagetype=entityrecord&etn=contact&id=03f770b2-6567-eb11-bb2b-000d3ac2be4d)** to confirm the appointment.", 
-    "iconUrl": "/WebResources/contoso_Phone", 
-    "actions": [ 
-      { 
-        "title": "Coho Winery", 
-        "data": { 
-          "url": "?pagetype=entityrecord&etn=account&id=9df670b2-6567-eb11-bb2b-000d3ac2be4d", 
-          "navigationTarget": "dialog" 
-        } 
-      }, 
-      { 
-        "title": "Service Appointment", 
-        "data": { 
-          "url": "?pagetype=entityrecord&etn=appointment&id=03f770b2-6567-eb11-bb2b-000d3ac2be4d", 
-          "navigationTarget": "dialog" 
-        } 
-      } 
-    ] 
-  }) 
-} 
+> [!div class="mx-imgBorder"] 
+> ![App notification with multiple actions](../media/app-notification-with-multiple-actions.png "App notification with multiple actions")
 
-Xrm.WebApi.createRecord("appnotification", notificationRecord);
+
+```JavaScript
+// Notification with multiple actions as center dialog 
+var systemuserid = "6c3f944c-8c02-ec11-94ee-000d3a327308";
+  var notificationRecord = 
+  {
+    "title": "Upcoming Service Reminder",
+	  "body": "This is to inform you that you have an upcoming service request for your vehicle.",
+	  "ownerid@odata.bind": "/systemusers(" + systemuserid + ")",
+    "icontype": 100000000, // info
+    "data": JSON.stringify({
+	   "actions": [
+	    {
+        "title": "Cohor Winery",
+        "data": {
+		    "url": "?pagetype=entityrecord&etn=account&id=b0a19cdd-88df-e311-b8e5-6c3be5a8b200",
+		    "navigationTarget": "dialog"
+		       }		
+	    },
+	    {
+	      "title": "Service Appointment",
+        "data": {
+		    "url": "?pagetype=entityrecord&etn=appointment&id=96db3cf0-e605-ec11-94ef-000d3a36469a",
+		    "navigationTarget": "dialog"
+	        }
+	    }
+	 ]
+	})
+  }
+Xrm.WebApi.createRecord("appnotification",notificationRecord).
 then(
       function success(result) {
           console.log("notification created with multiple actions: " + result.id);
@@ -248,51 +276,90 @@ then(
 
 This example shows how to create a notification by adding custom body with an inline link and bold styling. 
 
+> [!div class="mx-imgBorder"] 
+> ![Notification ith custom body](../media/app-notification-with-custom-body.png "Notification with custom body")
+
 ```javascript
-var notificationRecord = 
-{ 
-  "title": "SLA critical", 
-  "body": "Case record assigned to you is critically past SLA", 
-  "owner": "<user-guid>", 
-  "icontype": 100000002, // failure 
-  "data": JSON.stringify({ 
-    "body": "Case record [Complete overhaul required (sample)](?pagetype=entityrecord&etn=incident&id=b1f670b2-6567-eb11-bb2b-000d3ac2be4d) assigned to you is **critically** past SLA and has been escalated to your manager." 
-  }) 
-} 
-Xrm.WebApi.createRecord("appnotification", notificationRecord);
+var systemuserid = "6c3f944c-8c02-ec11-94ee-000d3a327308";
+  var notificationRecord = 
+  {
+    "title": "SLA critical",
+	"body": "Records assigned to you is critically past SLA.",
+	"ownerid@odata.bind": "/systemusers(" + systemuserid + ")",
+    "icontype": 100000002, // failure
+    "data": JSON.stringify({
+	 "body": "Case record [Complete overhaul required (sample)](?pagetype=entityrecord&etn=incident&id=0a9f62a8-90df-e311-9565-a45d36fc5fe8) assigned to you is critically past SLA and has been escalated to your manager."
+	 })
+  }
+  Xrm.WebApi.createRecord("appnotification",notificationRecord).
+then(
+      function success(result) {
+          console.log("notification created with multiple actions: " + result.id);
+      },
+      function (error) {
+          console.log(error.message);
+          // handle error conditions
+      }
+  );
 ```
 
 This is another example with a custom body with an inline link and bold styling. 
 
-```javascript
-var notificationRecord = 
-{ 
-  "title": "SLA missed", 
-  "body": "Case record assigned to you is critically past SLA", 
-  "owner": "<user-guid>", 
-  "icontype": 100000003, // warning 
-  "data": JSON.stringify({ 
-    "body": "Case record [Average order shipment time (sample)](?pagetype=entityrecord&etn=incident&id=aff670b2-6567-eb11-bb2b-000d3ac2be4d) assigned to you just went out of SLA." 
-  }) 
-} 
+> [!div class="mx-imgBorder"] 
+> ![Notification with bold text](../media/app-notification-with-custom-body-and-bold-text.png "Notification with bold text")
 
-Xrm.WebApi.createRecord("appnotification", notificationRecord);
+
+```JavaScript
+var systemuserid = "6c3f944c-8c02-ec11-94ee-000d3a327308";
+  var notificationRecord = 
+  {
+    "title": "SLA Missed",
+	"body": "Records assigned to you is critically past SLA.",
+	"ownerid@odata.bind": "/systemusers(" + systemuserid + ")",
+    "icontype": 100000003, // warning
+    "data": JSON.stringify({
+	 "body": "Case record [Average order shipment time (sample)](?pagetype=entityrecord&etn=incident&id=0a9f62a8-90df-e311-9565-a45d36fc5fe8) **assigned** to you just went out of SLA."
+	 })
+  }
+  Xrm.WebApi.createRecord("appnotification",notificationRecord).
+then(
+      function success(result) {
+          console.log("notification created with multiple actions: " + result.id);
+      },
+      function (error) {
+          console.log(error.message);
+          // handle error conditions
+      }
+  );
 ```
 
 ### Notification with custom icon
 
 This example shows how to create a notification by adding custom icons. Within the notification, set **iconType** to **Custom** and in the body include **iconUrl** with a value pointing to a web resource.  The notification work with either SVG or PNG file types.
 
+> [!div class="mx-imgBorder"] 
+> ![Notification with custom icon](../media/app-notification-with-custom-icon.png "Notification with custom icon")
 
-```json
-var data =
+```JavaScript
+var systemuserid = "6c3f944c-8c02-ec11-94ee-000d3a327308";
+  var notificationRecord = 
 {
   "title": "Welcome",
   "body": "Welcome to the world of app notifications!",
-  "owner": "<user-guid>",
+  "ownerid@odata.bind": "/systemusers(" + systemuserid + ")",
   "icontype": 100000005, // custom
   "data": "{ 'data': { 'iconUrl': '/WebResources/cr245_AlertOn' } }"
 }
+Xrm.WebApi.createRecord("appnotification", notificationRecord).
+then(
+      function success(result) {
+          console.log("notification created with multiple actions: " + result.id);
+      },
+      function (error) {
+          console.log(error.message);
+          // handle error conditions
+      }
+  );
 ```
 
 ### Notification with custom title and body
@@ -300,33 +367,42 @@ var data =
 This notification example adds custom title and body definition, which allow multiple links, bold, and italics. 
 
 > [!div class="mx-imgBorder"] 
-> ![Mention notification](../media/mention-notification.png "Mention notification")
+> ![Notification with custom title and body ](../media/app-notification-with-custom-title-body.png "Notification with custom title and body")
 
-```json
-var data =
-{
-  "title": "Complete overhaul required (sample)",
-  "body": "Maria Campbell mentioned you in a post",
-  "owner": "<user-guid>",
-  "icontype": 100000004, // mention
-  "data": "{
-    "title": "[Complete overhaul required (sample)](?pagetype=entityrecord&etn=incident&id=b1f670b2-6567-eb11-bb2b-000d3ac2be4d)",
-    "body": "[Maria Campbell](?pagetype=entityrecord&etn=contact&id=f7f670b2-6567-eb11-bb2b-000d3ac2be4d) mentioned you in a post: _\"**[@Paul](?pagetype=entityrecord&etn=contact&id=fff670b2-6567-eb11-bb2b-000d3ac2be4d)** we need to prioritize this overdue case, [@Robert](?pagetype=entityrecord&etn=contact&id=fdf670b2-6567-eb11-bb2b-000d3ac2be4d) will work with you to engage engineering team ASAP.\"_",
-    "actions": [
-      {
-        "title": "View record",
-        "data": {
-          "url": "?pagetype=entityrecord&etn=incident&id=b1f670b2-6567-eb11-bb2b-000d3ac2be4d"
-        }
-      }
-    ]
+```JavaScript
+var systemuserid = "6c3f944c-8c02-ec11-94ee-000d3a327308";
+  var notificationRecord = 
+  {
+    "title": "Complete overhaul required (sample)",
+	"body": "Maria Campbell mentioned you in a post.",
+	"ownerid@odata.bind": "/systemusers(" + systemuserid + ")",
+    "icontype": 100000004, // mention
+    "data": JSON.stringify({
+	 "title": "[Complete overhaul required (sample)](?pagetype=entityrecord&etn=incident&id=0a9f62a8-90df-e311-9565-a45d36fc5fe8)",
+	 "body": "[Maria Campbell](?pagetype=entityrecord&etn=contact&id=43m770h2-6567-ebm1-ob2b-000d3ac3kd6c) mentioned you in a post: _\"**[@Paul](?pagetype=entityrecord&etn=contact&id=03f770b2-6567-eb11-bb2b-000d3ac2be4d)** we need to prioritize this over due case, [@Robert](?pagetype=entityrecord&etn=contact&id=73f970b2-6567-eb11-bb2b-000d3ac2se4h) will work with you to engage with engineering team ASAP.\"_",
+	  "actions": [
+	   {
+	     "title": "View record",
+		 "data": {
+		 "url": "?pagetype=entityrecord&etn=incident&id=0a9f62a8-90df-e311-9565-a45d36fc5fe8"
+		 }
+	   }
+	  ]
+	 })
   }
-}"
-}
-
+  Xrm.WebApi.createRecord("appnotification",notificationRecord).
+then(
+      function success(result) {
+          console.log("notification created with multiple actions: " + result.id);
+      },
+      function (error) {
+          console.log(error.message);
+          // handle error conditions
+      }
+  );
 ```
 
-## In-app notifications vs. push notifications
+## In-app notifications vs push notifications
 
 Power Apps Notification Connector is for push notifications and is separate from the in-app notification. Push notification only appears on the mobile device notifications list to open the app.  The in-app notification appears when the app is open.  We recommend limiting the use of push notification to higher priority items to avoid overwhelming the user.
 
