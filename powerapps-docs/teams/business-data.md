@@ -26,7 +26,7 @@ This way, Power Apps in Teams can use deep integration with other Teams capabili
 
 ## Prerequisites
 
-To complete this lesson, we'd need the ability to create apps within Teams which will be available as part of select Microsoft 365 subscriptions.
+To complete this lesson, we'd need the ability to create apps within Teams that will be available as part of select Microsoft 365 subscriptions.
 
 ## Log in into Teams
 
@@ -82,39 +82,35 @@ We need to add a table to maintain a list of companies we'll use as the company 
 
 1. Select **+ Add data** and then create a new table with the name "Company", and plural name as "Companies".
 
-1. Add a few company names to the table, and then select close to close the table.
+1. Add a few company names to the table, and then select **Close**.
 
-## Add a new screen to the app
+## Add a new screen to select the customer
 
-Next we will add a screen to the app so that users can select the customer which they want to discuss:
+Next, we'll add a screen to the app so that users can select the customer that they want to have the conversation about.
 
-1. In the tree view select +New screen, select Scenarios tab and select **List**.
+1. In the tree view, select **+ New screen** > select **Scenarios** tab > select **List**.
 
-2. A new screen gets added with a gallery list.
+    A new screen gets added with a gallery list.
 
-3. Update the Title of the Gallery to “Companies List.”
+1. Update the title of the gallery to "Companies List".
 
-4. Select Companies as the Data Source for the Gallery.
+1. Select **Companies** as the data source for the gallery.
 
-5. The list of companies that was added shows up in the gallery TemplateGalleryList1.
+    The list of companies that was added shows up in the gallery **TemplateGalleryList1**.
 
-6.  Delete Screen1 from the tree view and rename this screen to say Screen1.
+1. Delete **Screen1** from the tree view, and rename the new screen to **Screen1**.
 
-## Add a new table to capture Conversation details
+## Add a new table to capture the conversation details
 
-We need to add another table to capture details like Teams conversation id, team, channel etc. related to a conversation started in the ap To do this, select the Data icon from the left navigation menu:
+We need to add another table to capture the details such as the Teams conversation ID, team, and channel related to a conversation started in the app.
 
-3.  Select +Add data -\> + Create new table.
+1. Select **Data** > **+ Add data** > **Create new table**.
 
-4.  Table name = Conversation.
+1. Enter table name as **Conversation** and plural name as **Conversations**.
 
-5.  Plural name = Conversations.
+1. Change the default **Name** column name to **ID**.
 
-6.  The table gets created with one column called Name.
-
-7.  Change that column name to ID.
-
-8.  Add the following columns to the conversation table:
+1. Add the following columns to the conversation table:
 
     | **Column**   | **Type**                       |
     | ------------ | ------------------------------ |
@@ -123,203 +119,170 @@ We need to add another table to capture details like Teams conversation id, team
     | Team Name    | Text                           |
     | Channel Name | Text                           |
     | Company      | Lookup, related table= Company |
-    
-7.  Save and close the table
 
-## Add a new screen to the app
+1. Save and close the table.
 
-Now we will add a new screen where the app user can start or join a conversation:
+## Add a new screen to start or join a conversation
 
-1.  In the tree view select +New screen and select Blank layout.
-2.  A new screen gets added.
-3.  Update the Fill property of the screen to something other than white.
-4.  In our example, we set the Fill property of the screen to RGBA(224, 224,
-    237, 1).
-5.  Select the + (Insert) option from the left navigation menu.
-6.  Select Input-\> Button to add a button to the screen.
-7.  Update the following properties of the button.
+Now, we'll add a new screen where the app user can start or join a conversation.
 
-| Property  | Value                                              |
-|-----------|----------------------------------------------------|
-| Name      | startaconversation_Button                          |
-| Text      | "Start a conversation"                             |
-| Width     | 200                                                |
-| Height    | 32                                                 |
-| Font size | 12                                                 |
-| X         | Parent.Width/2 - startaconversation_Button.Width/2 |
-| Y         | 100                                                |
-| OnSelect  | Set(enterMessage,true)                             |
+1. In the tree view, select **+ New screen** > **Blank layout**.
 
-8.  Select the + (Insert) option from the left navigation menu.
+1. Update the **Fill** property of the screen to something other than white color.
 
-9.  Select Input-\> Combobox to add it to the screen.
+    In our example, we've set the Fill property of the screen to `RGBA(224, 224, 237, 1)`.
 
-10. Update the following properties of the Combobox.
+1. Select **+** (Insert) > **Input** > **Button**.
 
-| Property | Value                                  |
-|----------|----------------------------------------|
-| Name     | team_Combobox                          |
-| Items    | MicrosoftTeams.GetAllTeams().value     |
-| Width    | 320                                    |
-| Height   | 32                                     |
-| X        | Parent.Width/2 - team_ComboBox.Width/2 |
-| Y        | 200                                    |
-| Text     | "Team"                                 |
-| Tooltip  | "Team"                                 |
-| Visible  | enterMessage                           |
+1. Update the following properties of the button.
 
-11. Select the + (Insert) option from the left navigation menu.
+    | Property  | Value                                              |
+    |-----------|----------------------------------------------------|
+    | Name      | startaconversation_Button                          |
+    | Text      | "Start a conversation"                             |
+    | Width     | 200                                                |
+    | Height    | 32                                                 |
+    | Font size | 12                                                 |
+    | X         | Parent.Width/2 - startaconversation_Button.Width/2 |
+    | Y         | 100                                                |
+    | OnSelect  | Set(enterMessage,true)                             |
 
-12. Select Input-\> Combobox to add it to the screen.
+1. Select **+** (Insert) > **Input** > **Combo box**.
 
-13. Update the following properties of the Combobox.
+1. Update the following properties of the Combo box.
 
-| Property | Value                                                                                                               |
-|----------|---------------------------------------------------------------------------------------------------------------------|
-| Name     | channel_Combobox                                                                                                    |
-| Items    |         If(!IsBlank(team_ComboBox.Selected.id),MicrosoftTeams.GetChannelsForGroup(team_ComboBox.Selected.id).value) |
-| Width    | 320                                                                                                                 |
-| Height   | 32                                                                                                                  |
-| X        | Parent.Width/2 - channel_ComboBox.Width/2                                                                           |
-| Y        | 200                                                                                                                 |
-| Text     | "Channel"                                                                                                           |
-| Tooltip  | "Channel"                                                                                                           |
-| Visible  | enterMessage                                                                                                        |
+    | Property | Value                                  |
+    |----------|----------------------------------------|
+    | Name     | team_Combobox                          |
+    | Items    | MicrosoftTeams.GetAllTeams().value     |
+    | Width    | 320                                    |
+    | Height   | 32                                     |
+    | X        | Parent.Width/2 - team_ComboBox.Width/2 |
+    | Y        | 200                                    |
+    | Text     | "Team"                                 |
+    | Tooltip  | "Team"                                 |
+    | Visible  | enterMessage                           |
 
-14. Select the + (Insert) option from the left navigation menu.
+1. Add another combo box and update the following properties.
 
-15. Select Input-\> Textbox to add it to the screen.
+    | Property | Value                                                                                                               |
+    |----------|---------------------------------------------------------------------------------------------------------------------|
+    | Name     | channel_Combobox                                                                                                    |
+    | Items    |         If(!IsBlank(team_ComboBox.Selected.id),MicrosoftTeams.GetChannelsForGroup(team_ComboBox.Selected.id).value) |
+    | Width    | 320                                                                                                                 |
+    | Height   | 32                                                                                                                  |
+    | X        | Parent.Width/2 - channel_ComboBox.Width/2                                                                           |
+    | Y        | 200                                                                                                                 |
+    | Text     | "Channel"                                                                                                           |
+    | Tooltip  | "Channel"                                                                                                           |
+    | Visible  | enterMessage                                                                                                        |
 
-16. Update the following properties of the Textbox.
+1. Select **+** (Insert) > **Input** > **Text box**.
 
-| Property    | Value                                    |
-|-------------|------------------------------------------|
-| Name        | message_TextBox                          |
-| Value       | ""                                       |
-| Width       | 500                                      |
-| Height      | 180                                      |
-| X           | Parent.Width/2 - message_TextBox.Width/2 |
-| Y           | 300                                      |
-| Placeholder | Type message here                        |
-| Visible     | enterMessage                             |
+1. Update the following properties of the Textbox.
 
-17. Select the + (Insert) option from the left navigation menu.
+    | Property    | Value                                    |
+    |-------------|------------------------------------------|
+    | Name        | message_TextBox                          |
+    | Value       | ""                                       |
+    | Width       | 500                                      |
+    | Height      | 180                                      |
+    | X           | Parent.Width/2 - message_TextBox.Width/2 |
+    | Y           | 300                                      |
+    | Placeholder | Type message here                        |
+    | Visible     | enterMessage                             |
 
-18. Select Input-\> Button to add a button to the screen.
+1. Select **+** (Insert) > **Input** > **Button**.
 
-19. Update the following properties of the button.
+1. Update the following properties of the button.
 
-| Property  | Value                                  |
-|-----------|----------------------------------------|
-| Name      | submit_Button                          |
-| Value     | "Submit"                               |
-| Width     | 96                                     |
-| Height    | 32                                     |
-| Font size | 12                                     |
-| X         | Parent.Width/2 - submit_Button.Width/2 |
-| Y         | 500                                    |
-| Visible   | enterMessage                           |
+    | Property  | Value                                  |
+    |-----------|----------------------------------------|
+    | Name      | submit_Button                          |
+    | Value     | "Submit"                               |
+    | Width     | 96                                     |
+    | Height    | 32                                     |
+    | Font size | 12                                     |
+    | X         | Parent.Width/2 - submit_Button.Width/2 |
+    | Y         | 500                                    |
+    | Visible   | enterMessage                           |
 
-20.  Use this code in the OnSelect button of the button:
+1. Copy the following formula in the **OnSelect** event of the button.
 
-```
-Patch(Conversations,Defaults(Conversations),{ID:MicrosoftTeams.PostMessageToChannelV3(team_ComboBox.Selected.id,channel_ComboBox.Selected.id,{content:message_TextBox.Value,contentType: "text"},{subject:"New conversation"}).id,Team:team_ComboBox.Selected.id,'Team Channel':channel_ComboBox.Selected.id, 'Team Name':team_ComboBox.Selected.displayName,'Channel Name':channel_ComboBox.Selected.displayName, Company: TemplateGalleryList1.Selected}); Set(enterMessage,false); Reset(team_ComboBox);Reset(channel_ComboBox);Reset(message_TextBox)
-```
+    ```powerapps-dot
+    Patch(Conversations,Defaults(Conversations),{ID:MicrosoftTeams.PostMessageToChannelV3(team_ComboBox.Selected.id,channel_ComboBox.Selected.id,{content:message_TextBox.Value,contentType: "text"},{subject:"New conversation"}).id,Team:team_ComboBox.Selected.id,'Team Channel':channel_ComboBox.Selected.id, 'Team Name':team_ComboBox.Selected.displayName,'Channel Name':channel_ComboBox.Selected.displayName, Company: TemplateGalleryList1.Selected}); Set(enterMessage,false); Reset(team_ComboBox);Reset(channel_ComboBox);Reset(message_TextBox)
+    ```
 
-> NOTE: In the above formula, we are using the Patch function to create a row in the Conversations table to capture the conversation ID along with the Team, Team Name, Channel and Channel Name while at the same time also posting a message in the appropriate Team and Channel using the PostMessageToChannelV3 function. We then also set the enterMessage variable back to false to hide some of the fields and buttons whose visibility depends on this variable
->
-> Also, note that the subject here is hardcoded to “New conversation” to keep the app simple and not add another text box control to capture. But a text box can be added for subject to the screen and can be captured by the user. This formula will need to be adjusted accordingly to reference that control.
->
-> The Reset function does not work for the Fluent UI Combobox control. This is needed to not have any team or channel selected once a message is posted.*
+    > [!NOTE]
+    > - In the above formula, we're using the **Patch** function to create a row in the **Conversations** table to capture the conversation ID along with the team, team name, channel and channel came. At the same time, we're also posting a message in the appropriate team and channel using the **PostMessageToChannelV3** function. We then set the **enterMessage** variable back to "false" to hide some of the fields and buttons whose visibility depends on this variable.
+    > - The subject is hardcoded to “New conversation" to keep the app simple ,and not add another text box control to capture. But a text box can be added for subject to the screen and can be captured by the user. This formula will need to be adjusted accordingly to reference that control.
+    > The **Reset** function doesn't work for the **Fluent UI Combobox** control. This is needed to not have any team or channel selected once a message is posted.
 
-20. Select the **+** (Insert) option from the left navigation menu.
+1. Select **+** (Insert) > **Input** > **Button**.
 
-21. Select Input-\> Button to add a button to the screen.
+1. Update the following properties of the button.
 
-22. Update the following properties of the button.
+    | Property  | Value                                  |
+    |-----------|----------------------------------------|
+    | Name      | joinconversation_Button                |
+    | Text      | "Join conversation"                    |
+    | Width     | 200                                    |
+    | Height    | 32                                     |
+    | Font size | 12                                     |
+    | X         | Parent.Width/2 - submit_Button.Width/2 |
+    | Y         | 500                                    |
+    | Visible   | enterMessage                           |
 
-| Property  | Value                                  |
-|-----------|----------------------------------------|
-| Name      | joinconversation_Button                |
-| Text      | "Join conversation"                    |
-| Width     | 200                                    |
-| Height    | 32                                     |
-| Font size | 12                                     |
-| X         | Parent.Width/2 - submit_Button.Width/2 |
-| Y         | 500                                    |
-| Visible   | enterMessage                           |
+1. Copy the following formula in the **OnSelect** event of the button.
 
-23.  Use this code in the OnSelect button of the button:
+    ```powerapps-dot
+    Launch(Concatenate("msteams://teams.microsoft.com/l/message/",Last(Sort(Conversations, 'Created On', Ascending)).'Team Channel',"/",Gallery1.Selected.etag,"?tenantId=",Param("tenandId"),"&groupId=",Last(Sort(Conversations, 'Created On', Ascending)).Team,"&parentMessageId=",LookUp(MicrosoftTeams.GetMessagesFromChannel(Last(Sort(Conversations, 'Created On', Ascending)).Team,Last(Sort(Conversations, 'Created On', Ascending)).'Team Channel').value,id = Last(Sort(Conversations, 'Created On', Ascending)).Team).etag,"&teamName=",Last(Sort(Conversations, 'Created  On', Ascending)).'Team Name',"&channelName=",Last(Sort(Conversations, 'Created On', Ascending)).'Channel Name'),{},LaunchTarget.New)
+    ```
 
-```
-Launch(
-    Concatenate(
-        "msteams://teams.microsoft.com/l/message/",
-        Last(Sort(Conversations, 'Created On', Ascending)).'Team Channel',
-        "/",
-        Gallery1.Selected.etag,
-        "?tenantId=",
-        Param("tenandId"),
-        "&groupId=",
-        Last(Sort(Conversations, 'Created On', Ascending)).Team,
-        "&parentMessageId=",   
-        LookUp(MicrosoftTeams.GetMessagesFromChannel(Last(Sort(Conversations, 'Created On', Ascending)).Team,
-        Last(Sort(Conversations, 'Created On', Ascending)).'Team Channel').value,
-        id = Last(Sort(Conversations, 'Created On', Ascending)).Team).etag,
-        "&teamName=",
-        Last(Sort(Conversations, 'Created  On', Ascending)).'Team Name',
-        "&channelName=",
-        Last(Sort(Conversations, 'Created On', Ascending)).'Channel Name'
-    ),
-    {},
-    LaunchTarget.New
-)
-```
+    > [!NOTE]
+    > - In the above formula, we're using the **Launch** function to launch Teams using the team and channel parameters of the last record that was created in the **Conversations** table. We're doing this so that when a user starts a conversation and submits a message to post to a channel, the user can then select the **Join Conversation** button to go to the Teams post directly.
+    > - We're using the last function here to keep it simple. If you anticipate using this app more extensively and anticipate having multiple conversations, you could get creative by using a gallery of conversations, and letting the user select which conversation they'd want to join.*
 
-> NOTE: In the above formula, we are using the Launch function to launch Teams using the team and channel parameters of the last record that was created in the Conversations table. We are doing this so that when a user starts a conversation and submits a message to post to a channel, the user can then select the **Join Conversation** button to navigate to the Teams post directly.
->
-> We are using the last function here to keep it simple. If you anticipate using this app more extensively and anticipate having multiple conversations, you could get creative by using a gallery of conversations and letting the user select which one he would want to join.*
+## Update the gallery OnSelect Property
 
-## Update Gallery OnSelect Property
+Next, we'll update the **OnSelect** property of the company gallery so that when a user selects a company from the list, the app will go to the second screen.
 
-Now we will update the OnSelect property of the company gallery so that when a user selects a company from the list, the app will navigate to the second screen:
+1. Select **Screen1** from the tree view to open the **Companies** gallery.
 
-1. Select **Screen1** from the tree view to open the Companies gallery.
+2. Set the **OnSelect** property of the gallery item to `Navigate(Screen2)`.
 
-2. Set the **OnSelect** Property of the gallery item to Navigate(Screen2).
+## Save and publish the app
 
-## Save and Publish the App
+1. Select **Save** on the top-right to save the app.
 
-1.  Select **Save** on the top right to save the app.
+1. Select **Publish** on the top-right to publish the app.
 
-2.  Select the Publish button on the top right to Publish the app.
+1. Select **Next**.
 
-3.  Select Next on the popup.
+1. Under **Add to Channel**, make sure the channel under which the app should be shown is listed and shows as "1 active tab(s)" and not "0 active tab(s)".
 
-4.  Under Add to Channel, make sure the Channel under which the app should be shown is listed and shows as 1 active tab(s) and not 0 active tab(s).
-
-5.  Select Save and Close to complete the publishing of the app.
-
-6.  The app gets published.
+1. Select **Save and Close** to complete the publishing of the app.
 
 ## Testing the app
 
-Run the App in preview mode or go to the team in which the app is created
+Run the app in preview mode or go to the team in which the app is created.
 
-1.  The Companies gallery should show up as the first screen.
-2.  Select one of the companies.
-3.  The next screen should open .
-4.  You should only see two buttons – Start a conversation and Join conversation.
-5.  Select the **Start a conversation** button.
-6.  Additional fields should show up – Team (dropdown – list of teams), Channel (dropdown – list of channels within the selected team), Message box (text box to type in the message to be sent to the team), Submit button (to submit the message).
-7.  Select a Team.
-8.  Select a Channel within the team.
-9.  Type in a message.
-10.  Select the **Submit** button.
-11.  All the additional fields/controls get hidden.
-12.  Select **Join conversation** button to be taken to the Team and Channel chat where the last message was sent.
+1. The Companies gallery should show up as the first screen.
+1. Select one of the companies.
+1. You should only see two buttons: **Start a conversation** and **Join a conversation**.
+1. Select **Start a conversation**.
+1. Additional fields should show up:
+    - Team (dropdown with a list of teams)
+    - Channel (dropdown list of channels within the selected team)
+    - Message box (text box to type in the message to be sent to the team)
+    - Submit button (to submit the message)
+1. Select a team.
+1. Select a channel within the team.
+1. Enter message.
+1. Select **Submit**. All the additional fields/controls get hidden.
+1. Select **Join conversation** to be taken to the team and channel chat where the last message was sent.
 
-![Testing the app](media/have-a-conversation-about-your-business-data/testing-the-app-1.png "Testing the app")wind
+    ![Testing the app](media/have-a-conversation-about-your-business-data/testing-the-app-1.png "Testing the app")
 
 ### See also
 
