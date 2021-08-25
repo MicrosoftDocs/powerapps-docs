@@ -21,7 +21,7 @@ A cookie is a small file sent from the web site to visitor's device by the brows
 Power Apps portals also use cookies to store information for various purposes. The following table describes the cookies that Power Apps portals uses, and their lifetime.
 
 > [!IMPORTANT]
-> Cookies in portals can't be deactivated. Depending on business needs, you may consider adding a consent dialog for portal users through external scripts.
+> Cookies in portals can't be deactivated. If required, consider adding a consent dialog for portal users through external scripts.
 
 | Cookie name | Description | Lifetime |
 | - | - | - |
