@@ -17,7 +17,7 @@ This sample component changes the user experience of interacting with address fi
 [!INCLUDE[cc-terminology](../../data-platform/includes/cc-terminology.md)]
 
 > [!div class="mx-imgBorder"]
-> ![Map component](../media/map-control.png "Map component")
+> ![Map component.](../media/map-control.png "Map component")
 
 ## Available for 
 
