@@ -85,7 +85,7 @@ In **Sort**, the formula can only be the name of a single column and can't inclu
 **[Sum](functions/function-aggregates.md)**, **[Average](functions/function-aggregates.md)**, **[Min](functions/function-aggregates.md)**, and **[Max](functions/function-aggregates.md)** can be delegated. Only a limited number of data sources support this delegation at this time; check the [delegation list](#delegable-data-sources) for details.
 
 > [!NOTE]
-> If an expression is not delegated, the expression only will work on the first 500 records (configurable up to 2000, see [Changing the limit](#non-delegable-limits)) retrieved rather than the full set of data on the server. 
+> If an expression is not delegated, it'll only work on the first 500 records (configurable up to 2000, see [Changing the limit](#non-delegable-limits)) retrieved from the data source rather than delegating the processing of all data at the data source.
 
 Counting functions such as **[CountRows](functions/function-table-counts.md)**, **[CountA](functions/function-table-counts.md)**, and **[Count](functions/function-table-counts.md)** can't be delegated.
 
