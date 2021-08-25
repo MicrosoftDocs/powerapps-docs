@@ -5,9 +5,12 @@ author: navjotm
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: intro-internal
-ms.date: 05/24/2021
+ms.date: 06/25/2021
+ms.subservice: teams
 ms.author: namarwah
 ms.reviewer: tapanm
+contributors:
+  - tapanm-msft
 ---
 
 # Use sample apps from the Microsoft Teams store
@@ -16,7 +19,7 @@ Sample apps that were created by using Power Apps are available in the Teams sto
 
 In this tutorial, you'll learn how to search for a sample app in the Teams store and add it to your team channel. After you install the sample app, you can go to the team that you added the app to and use the tabs for the app just as you use other features such as **Post**, **Files**, or **Wiki**.
 
-![Employee ideas sample app](media/sample-app.png "Employee ideas sample app")
+![Employee ideas sample app.](media/sample-app.png "Employee ideas sample app")
 
 > [!IMPORTANT]
 > Installing the sample app automatically enables the selected team's Microsoft 365 Group for security. More information: [Enable security for the selected team's Microsoft 365 Group](../maker/canvas-apps/share-app.md#share-an-app-with-microsoft-365-groups)
@@ -27,7 +30,7 @@ Several sample apps are available from the Teams store that you can add to your 
 
 :::row:::
    :::column span="":::
-      ![Boards app (Preview)](media/app-icons/boards-app-icon.png "Boards app (Preview)") <br> [Boards (Preview)](boards.md) <br> A simple way to connect and share with people in your organization with similar interests.
+      ![Boards app (Preview).](media/app-icons/boards-app-icon.png "Boards app (Preview)") <br> [Boards (Preview)](boards.md) <br> A simple way to connect and share with people in your organization with similar interests.
    :::column-end:::
    :::column span="":::
       ![Bulletins app](media/app-icons/bulletins-app-icon.png "Bulletins app") <br> [Bulletins](bulletins.md) <br> Manager and user apps for company communications.
@@ -38,24 +41,34 @@ Several sample apps are available from the Teams store that you can add to your 
 :::row-end:::
 :::row:::
    :::column span="":::
+      ![How to.](media/app-icons/how-to-app-icon.png "How to app (Preview)") <br> [How to](how-to.md) <br> Learn how to be a Power Apps maker.
+   :::column-end:::
+   :::column span="":::
       ![Inspection app](media/app-icons/inspection-app-icon.png "Inspection app") <br> [Inspection](inspection.md) <br> Manager and user apps for area inspections.
    :::column-end:::
    :::column span="":::
       ![Issue reporting app](media/app-icons/issue-reporting-app-icon.png "Issue reporting app") <br> [Issue reporting](issue-reporting.md) <br> Manager and user apps for issue reporting.
    :::column-end:::
+:::row-end:::
+:::row:::
    :::column span="":::
       ![Milestones app](media/app-icons/milestones-app-icon.png "Milestones app") <br> [Milestones](milestones.md) <br> App to keep track of projects, and initiatives.
    :::column-end:::
-:::row-end:::
-:::row:::
     :::column span="":::
-      ![Perspectives app (Preview)](media/app-icons/perspectives-app-icon.png "Perspectives app (Preview)") <br> [Perspectives (Preview)](perspectives.md) <br> A simple way to add topics and extend the topics with Q&A for discussions.
+      ![Perspectives app (Preview).](media/app-icons/perspectives-app-icon.png "Perspectives app (Preview)") <br> [Perspectives (Preview)](perspectives.md) <br> A simple way to add topics and extend the topics with Q&A for discussions.
    :::column-end:::
    :::column span="":::
       ![Profile+ app](media/app-icons/profile-app-icon.png "Profile+ app") <br> [Profile+ (Preview)](profile-app.md) <br> Quickly find out about people in your organization.
    :::column-end:::
+:::row-end:::
+:::row:::
    :::column span="":::
+    ![Get connected app](media/app-icons/get-connected-app-icon.png "Get connected app") <br> [Get connected (Preview)](get-connected.md) <br> Connect with people in your organization with similar skills.
    :::column-end:::
+   :::column span="":::
+    :::column-end:::
+   :::column span="":::
+    :::column-end:::
 :::row-end:::
 
 The following tutorial shows how to install the Employee ideas app. You can use similar steps to install other sample apps.
@@ -69,25 +82,25 @@ The following tutorial shows how to install the Employee ideas app. You can use 
 
 1. Search for **Employee ideas**.
 
-    ![Employee ideas app search](media/sample-app-9.png "Employee ideas app search")
+    ![Employee ideas app search.](media/sample-app-9.png "Employee ideas app search")
 
 1. Select the app.
 
 1. Select **Add to a team**.
 
-    ![Select Add to a team](media/sample-app-1.png "Select Add to a team")
+    ![Select Add to a team.](media/sample-app-1.png "Select Add to a team")
 
 1. Search for the team channel that you want to add the app to.
 
-    ![Search for a team channel](media/sample-app-2.png "Search for a team channel")
+    ![Search for a team channel.](media/sample-app-2.png "Search for a team channel")
 
 1. Select **Set up a tab**.
 
-   ![Select set up a tab](media/sample-app-3.png "Select set up a tab")
+   ![Select set up a tab.](media/sample-app-3.png "Select set up a tab")
 
 1. Select **Save** to confirm and start the installation.
 
-    ![Save changes](media/sample-app-4.png "Save changes")
+    ![Save changes.](media/sample-app-4.png "Save changes")
 
     > [!NOTE]
     > You can keep **Post to the channel about this tab** selected to post an announcement
@@ -96,7 +109,7 @@ The following tutorial shows how to install the Employee ideas app. You can use 
 1. Installation of the app begins. Installation might take a while; you can continue
     with other activities.
 
-    ![App installation](media/sample-app-5.png "App installation")
+    ![App installation.](media/sample-app-5.png "App installation")
 
     > [!NOTE]
     > - If the selected Teams team doesn't already have an environment created, a new environment is created at this stage. More information: [Environment lifecycle](/power-platform/admin/about-teams-environment)
@@ -104,7 +117,7 @@ The following tutorial shows how to install the Employee ideas app. You can use 
 
 1. After the app is installed, you'll see a tab named **Employee ideas** added to the team channel that you selected earlier.
 
-    ![New Employee ideas tab](media/sample-app-6.png "New Employee ideas tab")
+    ![New Employee ideas tab.](media/sample-app-6.png "New Employee ideas tab")
 
 Similarly, you can find other apps in the Teams store and add them to your team channel.
 
@@ -119,7 +132,7 @@ Before you can use the app, it might ask your permission to use connections.
 > [!NOTE]
 > The list of connections you see below is an example. The number and types of connections asking for your permissions may vary depending on the app you install.
 
-![Select Allow to let the app use connections](media/sample-app-10.png "Select Allow to let the app use connections")
+![Select Allow to let the app use connections.](media/sample-app-10.png "Select Allow to let the app use connections")
 
 Select **Allow**, so the app can use connections.
 
@@ -127,13 +140,13 @@ Select **Allow**, so the app can use connections.
 
 Select the channel (in this example, the channel is populated automatically), and then select **Let's go**.
 
-![Select Let's go](media/sample-app-11.png "Select Let's go")
+![Select Let's go.](media/sample-app-11.png "Select Let's go")
 
 ### Step 3 - Use the app
 
 The **Employee ideas** app is now open and ready for your use.
 
-![Select app from available list](media/sample-app-12.png "Select app from available list")
+![Select app from available list.](media/sample-app-12.png "Select app from available list")
 
 For more details about using the **Employee ideas** app, go to [Employee ideas](employee-ideas.md).
 
@@ -163,6 +176,7 @@ For Frequently Asked Questions about sample apps, go to [Sample apps FAQs](sampl
 - [Milestones sample app](milestones.md)
 - [Perspectives (Preview) sample app](perspectives.md)
 - [Profile+ (Preview) sample app](profile-app.md)
+- [Get Connected (Preview) sample app](get-connected.md)
 - [Customize sample apps](customize-sample-apps.md)
 - [Sample apps FAQs](sample-apps-faqs.md)
 

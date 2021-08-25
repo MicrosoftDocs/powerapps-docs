@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: intro-internal
 ms.date: 04/21/2020
+ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: tapanm
 contributors:
@@ -95,21 +96,21 @@ The following content snippets are related to global search:
 
 | Name   | Default value  | Description   |
 |------------------|-----------------|--------------------|
-| Header/Search/Label| Search| This content snippet determines the watermark text shown in the search box in the portal header.<br>![Search label](../media/search-label.png "Search label")    |
-| Header/Search/ToolTip| Search  | This content snippet determines the tooltip text shown when you hover over the search icon in the portal header.<br>![Search tooltip](../media/search-tooltip.png "Search tooltip")  |
-| Search/Default/FilterText| All   | This content snippet determines the default text shown in the filter drop-down list next to the search box.<br>![Search filter text](../media/search-filter-text.png "Search filter text")  |
-| Search/Facet/All| All| This content snippet determines the default text shown for "all records facet" in the "Record Type" facet of the search result page.<br>![All facet](../media/facet-all.png "All facet") |
-| Search/Facet/ClearConstraints   | Clear All  | This content snippet determines the label of the button that resets all the facets applied in the search results page.<br>![Reset all facets ](../media/facet-clear-all.png "Reset all facets") |
-| Search/Facet/Downloads   | Downloads   | This content snippet determines the label displayed in the search results of annotation attachments and web file records in the "Record Type" facet.<br>![Download facet](../media/facet-download.png "Download facet")|
-| Search/Facet/Less    | Show less  | This content snippet determines the label of the button that collapses facet results.<br>![Show less facet](../media/facet-show-less.png "Show less facet") |
-| Search/Facet/ModifiedDate  | Modified date  | This content snippet determines the label of the header shown for the Modified date facet.<br>![Modified date](../media/facet-modified-date.png "Modified date facet")   |
-| Search/Facet/More   | Show more  | This content snippet determines the label of the button that expands facet results.<br>![Show more facet](../media/facet-show-more.png "Show more facet")  |
-| Search/Facet/Product  | Products | This content snippet determines the label of the Products facet.<br>![Products facet](../media/facet-product.png "Products facet")  |
-| Search/Facet/Rating   | Rating   | This content snippet determines the label of the Rating facet.<br>![Ratings facet](../media/facet-rating.png "Ratings facet")  |
-| Search/Facet/RecordType   | Record Type | This content snippet determines the label of the Record Type facet.<br>![Record Type facet](../media/facet-record-type.png "Record Type facet")     |
-| Search/Facet/SortOrder/AverageUserRating | Average User Ratings | This content snippet determines the label shown for the "Sort by Average User Ratings" option in the sorting drop-down list on the Search Results page.<br>![Sort by average user rating](../media/sort-avg-user-rating.png "Sort by average user rating")  |
-| Search/Facet/SortOrder/Relevance| Relevance| This content snippet determines the label shown for the "Sort by Relevance" option in the sorting drop-down list on the Search Results page.<br>![Sort by relevance](../media/sort-relevance.png "Sort by relevance")|
-| Search/Facet/SortOrder/Views| View Count| This content snippet determines the label shown for the "Sort by View Count" option in the sorting drop-down list on the Search Results page.<br>![Sort by view count](../media/sort-view-count.png "Sort by view count")|
+| Header/Search/Label| Search| This content snippet determines the watermark text shown in the search box in the portal header.<br>![Search label.](../media/search-label.png "Search label")    |
+| Header/Search/ToolTip| Search  | This content snippet determines the tooltip text shown when you hover over the search icon in the portal header.<br>![Search tooltip.](../media/search-tooltip.png "Search tooltip")  |
+| Search/Default/FilterText| All   | This content snippet determines the default text shown in the filter drop-down list next to the search box.<br>![Search filter text.](../media/search-filter-text.png "Search filter text")  |
+| Search/Facet/All| All| This content snippet determines the default text shown for "all records facet" in the "Record Type" facet of the search result page.<br>![All facet.](../media/facet-all.png "All facet") |
+| Search/Facet/ClearConstraints   | Clear All  | This content snippet determines the label of the button that resets all the facets applied in the search results page.<br>![Reset all facets .](../media/facet-clear-all.png "Reset all facets") |
+| Search/Facet/Downloads   | Downloads   | This content snippet determines the label displayed in the search results of annotation attachments and web file records in the "Record Type" facet.<br>![Download facet.](../media/facet-download.png "Download facet")|
+| Search/Facet/Less    | Show less  | This content snippet determines the label of the button that collapses facet results.<br>![Show less facet.](../media/facet-show-less.png "Show less facet") |
+| Search/Facet/ModifiedDate  | Modified date  | This content snippet determines the label of the header shown for the Modified date facet.<br>![Modified date.](../media/facet-modified-date.png "Modified date facet")   |
+| Search/Facet/More   | Show more  | This content snippet determines the label of the button that expands facet results.<br>![Show more facet.](../media/facet-show-more.png "Show more facet")  |
+| Search/Facet/Product  | Products | This content snippet determines the label of the Products facet.<br>![Products facet.](../media/facet-product.png "Products facet")  |
+| Search/Facet/Rating   | Rating   | This content snippet determines the label of the Rating facet.<br>![Ratings facet.](../media/facet-rating.png "Ratings facet")  |
+| Search/Facet/RecordType   | Record Type | This content snippet determines the label of the Record Type facet.<br>![Record Type facet.](../media/facet-record-type.png "Record Type facet")     |
+| Search/Facet/SortOrder/AverageUserRating | Average User Ratings | This content snippet determines the label shown for the "Sort by Average User Ratings" option in the sorting drop-down list on the Search Results page.<br>![Sort by average user rating.](../media/sort-avg-user-rating.png "Sort by average user rating")  |
+| Search/Facet/SortOrder/Relevance| Relevance| This content snippet determines the label shown for the "Sort by Relevance" option in the sorting drop-down list on the Search Results page.<br>![Sort by relevance.](../media/sort-relevance.png "Sort by relevance")|
+| Search/Facet/SortOrder/Views| View Count| This content snippet determines the label shown for the "Sort by View Count" option in the sorting drop-down list on the Search Results page.<br>![Sort by view count.](../media/sort-view-count.png "Sort by view count")|
 |||
 
 ## Table-specific handling
@@ -227,11 +228,11 @@ To block the Case table from getting indexed, you must rename the view of the Ca
 
 1. Select Solutions.
 
-    ![Solutions](../media/solutions-page.png "Solutions")
+    ![Solutions.](../media/solutions-page.png "Solutions")
 
 1. Search for **Default Solution** and select Edit to open.
 
-    ![Edit solution](../media/edit-solution.png "Edit solution")
+    ![Edit solution.](../media/edit-solution.png "Edit solution")
 
 1. Search and edit **Case** table to see its components.
 
@@ -260,9 +261,9 @@ The modified value will be:
 
 Once this site setting is changed, the Case table will be removed from filters on the search page as well as in the header.
 
-![Search on page](../media/search-on-page.png "Search on page")
+![Search on page.](../media/search-on-page.png "Search on page")
 
-![Search in header](../media/search-in-header.png "Search in header")
+![Search in header.](../media/search-in-header.png "Search in header")
 
 ## Next steps
 
