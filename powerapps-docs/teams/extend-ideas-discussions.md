@@ -58,7 +58,18 @@ The Employee Ideas sample app posts messages to teams channels when an app or a 
 
 Now we'll update the button that submits ideas to store the message ID in the **Employee Ideas** table so that later we can facilitate joining the conversation.
 
+1. In Microsoft Teams, open Power Apps by right clicking on the Power Apps button in Microsoft team and selecting **Pop out app.**
+
+1. Select the build tab.
+
+1. Select the team in which Employee Ideas is installed.
+
+1. Select **Installed apps.**
+
+1. In the Employee Ideas tile, select the Ideas link.btn    
+
 1. Switch to the **Tree View** to see controls in the app.
+
 1. Search for **btnCampaignIdeaControls_Submit** to find the button that will submit an idea.
 
     > [!NOTE]
@@ -100,6 +111,16 @@ Now we'll update the button that submits ideas to store the message ID in the **
                     }
                 )
             ),
+            Notify(
+                "Message was not posted. You may not have access to the Team and/or Channel. Contact the app administrator.",
+                NotificationType.Warning),
+                Patch(
+                    'Employee Ideas',
+                    locFormRecordIdea,
+                    {'Message ID': locTeamsMessage.id}
+            )
+        )
+    );
     ```
 
 ## Customize app – Add a button to direct user to discuss Idea
