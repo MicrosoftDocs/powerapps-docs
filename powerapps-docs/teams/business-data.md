@@ -1,12 +1,12 @@
 ---
 title: Have a conversation about your business data in a Teams app.
-description: Learn how to enable conversations about your business from within your Power App in Microsoft Teams.
+description: Learn how to enable conversations about your business from within your Power App in Teams.
 author: joel-lindstrom
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/02/2021
-ms.author: v-ljoel
+ms.date: 08/24/2021
+ms.author: namarwah
 ms.reviewer: tapanm
 contributors:
     - tapanm-msft
@@ -14,90 +14,75 @@ contributors:
     - joel-lindstrom
 ---
 
-# Have a conversation about your business data in a Power App in Microsoft Teams
+# Have a conversation about your business data in a Teams app
 
-Microsoft Teams apps drive collaboration by enabling users to do work where they communicate and collaborate. One way to make your apps collaborative is by adding the ability to have a conversation about your app or the data in your app. Microsoft Teams is your go-to place to have such conversations.
+Apps in Microsoft Teams drive collaboration by enabling users to do work where they communicate and collaborate. One way to make your apps collaborative is by adding the ability to have a conversation about your app or the data in your app. Teams is your go-to place to have such conversations.
 
-For example, in the Profile + template Power App for Microsoft Teams, when you select one or more profile cards in the app, you can start a chat with the selected people directly in Microsoft Teams.
+For example, in the [Profile+ sample app](profile-app.md) for Teams, when you select one or more profile cards in the app, you can start a chat with the selected people directly in Teams.
 
-You might also want to use this capability for your apps—for example, if you are building a sales opportunity tracker for the sales manager to review upcoming deals, you might want to add a button for the user to chat with the salesperson about the opportunity.
+You might also want to use this capability for your apps. For example, if you're building a sales opportunity tracker for the sales manager to review upcoming deals, you might want to add a button for the user to chat with the sales person about the opportunity.
 
-In this way, Power Apps in Teams can use deep integration with other Teams capabilities to make apps collaborative.
-
-In this topic we will learn how we can integrate Power Apps with Teams to facilitate conversations.
+This way, Power Apps in Teams can use deep integration with other Teams capabilities to make apps collaborative. In this article, we'll learn how we can integrate Power Apps with Teams to facilitate conversations.
 
 ## Prerequisites
 
-To complete this lesson, we would need the ability to create apps within Microsoft Teams which will be available as part of select Microsoft 365 subscriptions.
+To complete this lesson, we'd need the ability to create apps within Teams which will be available as part of select Microsoft 365 subscriptions.
 
-## Log in into Microsoft Teams
+## Log in into Teams
 
-Log in into Microsoft teams using either the Desktop app or the web app
+Log in into Teams using either the Desktop app or the web app
 
 ## Create a new Team
 
-In this section we will create a new Microsoft Teams team and then create an app within that team (If you already have a team you can use, then you can skip this section)
+In this section, we'll create a new Teams team and then create an app within that team. Skip this section if you already have a team you want to use instead.
 
-1.  To create a new team, select the Teams tab and then select **Join or create a team** on the left bottom of the screen -\> then select **Create Team** -\> **From Scratch** -\> **Public** and give the team a name – **Calls and Meetings Integration** for our example and select Create
-    
-2.  The next pop up that shows up is the Add members to the Team – if you have any members in your organization you would like to add to the team for testing purposes, select and add them here and select the Add button
-    
-3.  The member gets added to the team
+1. To create a new team, select the Teams tab, and then select **Join or create a team** on the left bottom of the screen.
 
-4.  Select Close
+1. Select **Create Team** > **From Scratch** > **Public**, give the team a name such as "Calls and Meetings Integration", and select **Create**.
 
-5.  The new team gets created and is listed under the Teams tab
+1. (Optional) If you have any members in your organization that you'd like to add to the team for testing purposes, select them, and add them in the popup for adding members.
 
-## Create a new App
+1. Select **Close**.
 
-We will create an app where the user can start conversation for a particular
-Team and Channel by selecting a button and typing in a message in a text box.
-The user can then select the Submit button to post the message in the particular
-Team and Channel in Microsoft Teams, then other user can join the conversation.
+The new team gets created, and is listed under the Teams tab.
 
-1.  Open Microsoft Teams app.
+## Create a new app
 
-2.  Select the Power Apps icon in the left navigation menu.
+We'll create an app where the user can start a conversation for a particular team and Channel by selecting a button and typing in a message in a text box. The user can then select the **Submit** button to post the message in the particular
+team and channel in Teams, then other user can join the conversation.
 
-3.  Select the +New App button under Recent apps.
+1. Open Teams.
 
-4.  Select the team we just created and select Create.
+1. Select **Power Apps** from the left-pane.
 
-5.  The app gets created and the app studio opens allowing us to make edits to
-    the app.
+1. Select **+ New app** under **Recent apps**.
 
-6.  Enter a Name for the app – Conversation App and select Save.
+1. Select the team created earlier, and then select **Create**.
 
-7.  The app is created with a default gallery on Screen 1.
+    The app gets created and Power Apps Studio opens to allow editing the app.
 
-8.  Ignore the first screen (for now).
+1. Enter a name for the app, such as "Conversation app", and select **Save**.
 
-## Add Microsoft Teams as a Connector
+    The app is created with a default gallery on Screen 1.
 
-We need to add Microsoft Teams as a connector to the app since we want to be able to access the Teams and Channels from the logged in user’s account.
+## Add Teams as a connector
 
-To do this, select the Data icon from the left navigation menu.
+We need to add Teams as a connector to the app since we want to be able to access the teams and channels from the logged in user’s account.
 
-1.  Select +Add data and then select Connectors.
-2.  Scroll down and select See all connectors.
-3.  Search for Microsoft Teams and select that as a connector.
-6.  Microsoft Teams gets added as a connector.
+1. Select **Data** from the left-pane.
+1. Select **+ Add data**, and then select **Connectors**.
+1. Scroll down and select **See all connectors**.
+1. Search for and select Teams connector.
 
-## Add a new table to capture Company record
+## Add a new table to capture company record
 
-We need to add a table to maintain a list of companies  We will use this company record and start a conversation about it.
+We need to add a table to maintain a list of companies we'll use as the company record, and to start a conversation about it.
 
-1. To do this, select the Data icon from the left navigation menu.
+1. Select **Data** from the left-pane.
 
-2. Select +Add data -> + Create new table.
+1. Select **+ Add data** and then create a new table with the name "Company", and plural name as "Companies".
 
-3. Table name = Company.
-
-4. Plural name = Companies.
-
-5. The table gets created with one column called Name.
-
-6. Add a few company names to the table and hit close to close the table.
+1. Add a few company names to the table, and then select close to close the table.
 
 ## Add a new screen to the app
 
@@ -117,7 +102,7 @@ Next we will add a screen to the app so that users can select the customer which
 
 ## Add a new table to capture Conversation details
 
-We need to add another table to capture details like Microsoft Teams conversation id, team, channel etc. related to a conversation started in the ap To do this, select the Data icon from the left navigation menu:
+We need to add another table to capture details like Teams conversation id, team, channel etc. related to a conversation started in the ap To do this, select the Data icon from the left navigation menu:
 
 3.  Select +Add data -\> + Create new table.
 
@@ -291,7 +276,7 @@ Launch(
 )
 ```
 
-> NOTE: In the above formula, we are using the Launch function to launch Microsoft Teams using the team and channel parameters of the last record that was created in the Conversations table. We are doing this so that when a user starts a conversation and submits a message to post to a channel, the user can then select the **Join Conversation** button to navigate to the Teams post directly.
+> NOTE: In the above formula, we are using the Launch function to launch Teams using the team and channel parameters of the last record that was created in the Conversations table. We are doing this so that when a user starts a conversation and submits a message to post to a channel, the user can then select the **Join Conversation** button to navigate to the Teams post directly.
 >
 > We are using the last function here to keep it simple. If you anticipate using this app more extensively and anticipate having multiple conversations, you could get creative by using a gallery of conversations and letting the user select which one he would want to join.*
 
@@ -335,3 +320,19 @@ Run the App in preview mode or go to the team in which the app is created
 12.  Select **Join conversation** button to be taken to the Team and Channel chat where the last message was sent.
 
 ![Testing the app](media/have-a-conversation-about-your-business-data/testing-the-app-1.png "Testing the app")wind
+
+### See also
+
+- [Boards (Preview) sample app](boards.md)
+- [Bulletins sample app](bulletins.md)
+- [Employee ideas sample app](employee-ideas.md)
+- [Get connected (Preview)](get-connected.md)  
+- [Inspection sample apps](inspection.md)  
+- [Issue reporting sample apps](issue-reporting.md)
+- [Milestones sample app](milestones.md)
+- [Perspectives (Preview) sample app](perspectives.md)
+- [Profile+ (Preview) sample app](profile-app.md)
+- [Customize sample apps](customize-sample-apps.md)
+- [Sample apps FAQs](sample-apps-faqs.md)
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]
