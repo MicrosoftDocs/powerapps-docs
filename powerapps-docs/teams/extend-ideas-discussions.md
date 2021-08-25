@@ -5,7 +5,7 @@ author: joel-lindstrom
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/02/2021
+ms.date: 08/25/2021
 ms.subservice: teams
 ms.author: namarwah
 ms.reviewer: tapanm
@@ -58,9 +58,9 @@ The Employee Ideas sample app posts messages to teams channels when an app or a 
 
 Now we'll update the button that submits ideas to store the message ID in the **Employee Ideas** table so that later we can facilitate joining the conversation.
 
-1. In Microsoft Teams, open Power Apps by right clicking on the Power Apps button in Microsoft team and selecting **Pop out app.**
+1. In Teams, right-click on Power Apps from the left-pane, and select **Pop out app**.
 
-1. Select the build tab.
+1. Select the **Build** tab.
 
 1. Select the team in which Employee Ideas is installed.
 
