@@ -73,4 +73,4 @@ Your system administrator can enable or disable toast notifications. If toasts a
 ## See also
 
 [In-app notifications on Power Apps mobile](../mobile/mobile-notifications.md) </br>
-[Send in-app notifications within model-driven apps](../developer/model-driven-apps/clientapi/send-in-app-notifications.md)
+[Send in-app notifications within model-driven apps](/powerapps/developer/model-driven-apps/clientapi/send-in-app-notifications)
