@@ -19,7 +19,7 @@ contributors:
 ---
 
 # Test for object fit using Measure in MR
-Using the [Measure in MR](mixed-reality-component-measure-distance.md) control you can create a spatial test filter to validate whether an object with known width, depth, and height dimensions will fit in a space. This topic will guide you through creating a test app that you can use to validate fit using the **Measure in MR** control, including: 
+Using the [Measure in MR](mixed-reality-component-measure-distance.md) control you can create a spatial test filter to validate whether an object with known width, depth, and height dimensions will fit in a space. This topic will guide you through creating a test app that you can use to validate fit using the **Measure in MR** control including: 
 - Inserting the **Measure In MR** component into an application to measure volumes
 - Setting up **Expected Measurements (Items)** to help users maintain context in the MR experience
 - Creating a spatial test filter using the **Bounding Width**, **Bounding Width**, and **Height** properties from the measurement outputs
@@ -46,16 +46,15 @@ First, we’ll set up the dimensions to validate for fit.
 
 ![Screenshot showing placed text labels.](./media/augmented-measure-fit-test/fit-test-completed-labels.png  "Screenshot showing placed text labels.")
 
-3. Open the **Insert** tab again.
-4. Expand **Input** and insert 3 **Text Input Fields**, and position them next to the three labels inserted above.
-5. In the **Properties** pane for each Text Input field rename them to `minWidth`, `minDepth`, and `minHeight` respectively.
-6. Set the **Format** to **Number** and set the **Default** value `1.0` for each Text Input field.
+3. Open the **Insert** tab again, and insert 3 **Text Input** controls, and position them next to the three labels inserted above.
+5. In the **Properties** pane for each Text Input rename them to `minWidth`, `minDepth`, and `minHeight` respectively.
+6. For each Text Input set the **Format** to **Number** and set the **Default** value to `1.0`
 
 ![Screenshot showing text inputs and properties.](./media/augmented-measure-fit-test/fit-test-text-input.png "Screenshot showing text inputs and properties.")
 
 ## Insert and bind the Measure in MR component
 
-Next, we’ll set up the Measure in MR component to allow users to capture measurements in MR, and bind the output value to apply to the filter.
+Next, we’ll set up the **Measure in MR** component to allow users to capture measurements, and bind the output value we will use to validate fit.
 
 1. Open the **Insert** tab.
 2. Expand **Mixed Reality**.
@@ -63,14 +62,14 @@ Next, we’ll set up the Measure in MR component to allow users to capture measu
 
 ![Screenshot showing insertion of a Measure in MR control.](./media/augmented-measure-fit-test/fit-test-insert-measure-in-mr.png "Screenshot showing insertion of a Measure in MR control.")
 
-4. Select the component by clicking on it and open the **Properties** Panel.
+4. Select the component by clicking on it to open the **Properties** Panel on the right hand side of the Studio.
 5. Set **Measurement Type** to **Volume** from the drop down menu.
 6. Set **Units of Measurement** to either **Feet** or **Meters**.
 
 ![Screenshot showing Measurement Type and Units of Measurement property values.](./media/augmented-measure-fit-test/fit-test-units-and-type.png "Screenshot showing Measurement Type and Units of Measurement property values.")
 
-7. Under the **Advanced** pane or the **Formula Bar** at the top of the screen find the Items property and set it to: `["Test Volume"]`
-8. Also under the **Advanced** pane or the **Formula Bar** at the top of the screen find the **ItemsLabels** property and set it to: `"Value"`.
+7. Under either the **Advanced** pane or the drop down menu on the **Formula Bar** at the top of the screen find the Items property and set it to: `["Test Volume"]`
+8. Also under the **Advanced** pane or the **Formula Bar** find the **ItemsLabels** property and set it to: `"Value"`
 
 ![Screenshot showing advanced property settings for Items and ItemsLabels.](./media/augmented-measure-fit-test/fit-test-advanced-properties-items.png "Screenshot showing advanced property settings for Items and ItemsLabels.")
 
@@ -80,8 +79,8 @@ Next, we’ll set up the Measure in MR component to allow users to capture measu
 
 ![Screenshot showing formula bar settings for Items.](./media/augmented-measure-fit-test/fit-test-on-mixed-reality-select.png "Screenshot showing formula bar settings for Items.")
 
-## Perform fit testand display result
-1. Open the **Insert** tab, and insert 4 more **Text labels**
+## Perform fit test and display result
+1. Open the **Insert** tab, and insert 4 more **Text labels**.
 
 ![Screenshot showing four added text labels.](./media/augmented-measure-fit-test/fit-test-output-labels.png "Screenshot showing four added text labels.")
 
@@ -102,9 +101,10 @@ If(IsBlankOrError(testVolume), "No Measurement captured",
 
 ![Screenshot showing the final completed application.](./media/augmented-measure-fit-test/fit-test-completed-app.png "Screenshot showing the formula for the spatial test predicate.")
 
-Now, enter the preview mode and click on the MeasureInMR button, and you should see the labels above get populated with data. You can test that the binding works as expected by changing values in the three text input fields above to verify that the filter is working. The values for **Bounding Width** and ***Bounding Depth** should be interchangeable and may be swapped when performing the test. After saving and publishing the application you can open it on a Mixed Reality enabled device to test whether an object with the typed in dimensions will fit within the bounds of any measurement captured.
+Now, enter preview mode and click on the MeasureInMR button, and you should see the labels above get populated with data. You can test that the binding works as expected by changing values in the three text input fields to verify that the filter is updating properly. The values for **Bounding Width** and **Bounding Depth** should be interchangeable and may be swapped when performing the test. After saving and publishing the application you can open it on a Mixed Reality enabled device to test whether an object with the specified dimensions will fit within the bounds of any measurement captured.
 
-This sample application only tests for a single set of user specified dimensions, but this could be expanded to work as a filter for a data collection by adapting the formula to a **Filter** predicate. For example, lets say our app contains a data collection named Products which has three columns Width, Depth, and Height corresponding to each product's dimensions. To filter the collection to only those that would fit within a measured volume we can apply the following formula:
+## Filtering a data source
+This sample application only tests for a single set of user specified dimensions, but could be expanded to work as a filter for any data source by applying the formula as a **Filter** predicate. For example, let's say our app contains a reference to a Dataverse table named **Products** which includes three columns **Width**, **Depth**, and **Height** corresponding to each product's dimensions. To filter the collection to only those that would fit within a measured volume we can apply the following formula:
 ```
 If(IsBlankOrError(testVolume), Products,
     Filter(Products, testVolume.Height >= Height &&
@@ -113,7 +113,7 @@ If(IsBlankOrError(testVolume), Products,
 ```
 
 > [!NOTE]
-> The **BoundingWidth**, and **BoundingDepth** properties represent the smallest possible rectangular prism that can fully encapsulate a measurement object. For irregularly shaped measurements it is possible that this will be an overestimate of the enclosed region, so this spatial filtering should be used as an estimate to help validate or narrow down results.
+> The **BoundingWidth**, **BoundingDepth**, and **Height** properties represent the smallest possible rectangular prism that can fully encapsulate a measured volume. For irregularly shaped measurements it is possible that this will be an overestimate of the enclosed region, so this approach should be used as an estimate to help validate or narrow down results, but would not guarantee fit in all scenarios.
 
 ## Other mixed-reality controls
 
