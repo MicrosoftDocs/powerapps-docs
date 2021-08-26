@@ -101,7 +101,7 @@ While some relationships may be automatically created, you can still review and 
 
 ## Troubleshooting 
 
-## Error message: Return records size cannot exceed 83886080
+### Error message: Return records size cannot exceed 83886080
 
 This error can occur with the Dataverse connector when you run or design a report with a result set greater than 80 MB. TDS has a result set size limit of 80 MB. 
 
