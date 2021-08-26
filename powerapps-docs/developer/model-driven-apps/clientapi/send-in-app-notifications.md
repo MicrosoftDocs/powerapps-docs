@@ -23,6 +23,8 @@ search.app:
 
 App notifications use the notification table to store notifications for each user. Your model-driven app will automatically check the system for new notifications and displays them in the notification center. The notification sender or your system administrator can configure how a toast is shown and how it can be dismissed. Notifications appear in notification center until you dismiss them or until they expire. By default, a notification expires after 14 days but your administrator can override this time.
 
+Each notification record is for a single user identified by the owner column value. If a notification needs to be sent to multiple users, then a record needs to be inserted per recipient. The sender controls the recipient through the owner column.
+
 This article outlines the steps on how to send in-app notifications to a specific user using [Client API](reference.md).
 
   > [!IMPORTANT]
@@ -33,7 +35,7 @@ This article outlines the steps on how to send in-app notifications to a specifi
 
 To use the in-app notification feature, you need enable the `AllowNotificationsEarlyAccess` app setting in model-driven app.
 
-1. Sign-in to your model-driven app.
+1. Sign in to your model-driven app.
 1. Select the app where you want to use this feature.
 1. Select **F12** button on your keyboard to open the browser console.
 1. In the browser console, copy the code below. Enter your app unique name in the `AppUniqueName` parameter. Press **Enter**.   
@@ -45,7 +47,7 @@ To use the in-app notification feature, you need enable the `AllowNotificationsE
 	  body: JSON.stringify({AppUniqueName: "Your app unique name", SettingName:"AllowNotificationsEarlyAccess", Value: "true"})
 	  });
    ```
-1. Now sign-in to [Power Apps](https://make.powerapps.com).
+1. Now sign in to [Power Apps](https://make.powerapps.com).
 1. Select **Solutions** in the left navigation pane. Select **New solution**. Enter the details and then select **Create**. 
 1. Open the solution that you have created. Select **Add** > **App** > **Model-driven app**. From the list of apps, select the model-driven app where you want to see the notifications feature.
 1. Select **Publish all customizations**. Refresh the model-driven app, you should see a **Bell** icon on the top-right corner.
@@ -157,6 +159,18 @@ You can control where a navigation link should open by setting the `navigationTa
 |Inline|Default. Opens in the current page.|`"navigationTarget": "inline"` |
 |newWindow|Opens in the new browser tab.|`"navigationTarget": "newWindow"` |
 
+### Managing security for notifications
+
+The in-app notification feature uses three tables, and a user needs to have the correct security roles to receive notifications and send notifications to themselves, or other users.  
+
+|Usage|Needed table privileges|
+|------------|----------------|
+|User has no in-app notification bell and receives no in-app notifications toasts |None: Read privilege on app notification table. |
+|User can receive in-app notifications|- Basic: Read privilege on app notification table.<br/> - Create and read privilege on model-driven app user setting.|
+|User can send in-app notifications to self |- Basic: Create privilege on app notification table. <br/> - Write and append privilege on model-driven app user setting. <br/> - Append privilege on setting definition. |
+|User can send in-app notifications to others |Read privilege with Local, Deep, or Global access level on app notification table based on the receiving user's business unit. |
+
+
 ### Notification storage
 
 The app notification table uses the organization's database storage capacity. Because of this, it is important to consider the volume of notifications sent and the expiration setting. More information: [Microsoft Dataverse storage capacity](/power-platform/admin/capacity-storage)
@@ -212,7 +226,7 @@ var notificationRecord =
 	 ]
 	})
 }
-Xrm.WebApi.createRecord("appnotification",notificationRecord).
+Xrm.WebApi.createRecord("appnotification", notificationRecord).
   then(
       function success(result) {
           console.log("notification created with single action: " + result.id);
@@ -226,7 +240,7 @@ Xrm.WebApi.createRecord("appnotification",notificationRecord).
 
 ### Notification with multiple actions 
 
-This example shows how to create a notification with a multiple actions.
+This example shows how to create a notification with multiple actions.
 
 > [!div class="mx-imgBorder"] 
 > ![App notification with multiple actions](../media/app-notification-with-multiple-actions.png "App notification with multiple actions")
@@ -294,7 +308,7 @@ var notificationRecord =
 Xrm.WebApi.createRecord("appnotification",notificationRecord).
   then(
       function success(result) {
-          console.log("notification created with multiple actions: " + result.id);
+          console.log("notification created with custom body: " + result.id);
       },
       function (error) {
           console.log(error.message);
@@ -324,7 +338,7 @@ var notificationRecord =
 Xrm.WebApi.createRecord("appnotification",notificationRecord).
 then(
       function success(result) {
-          console.log("notification created with multiple actions: " + result.id);
+          console.log("notification created with custom body and bold styling: " + result.id);
       },
       function (error) {
           console.log(error.message);
@@ -353,7 +367,7 @@ var notificationRecord =
 Xrm.WebApi.createRecord("appnotification", notificationRecord).
   then(
       function success(result) {
-          console.log("notification created with multiple actions: " + result.id);
+          console.log("notification created with custom icon: " + result.id);
       },
       function (error) {
           console.log(error.message);
@@ -393,7 +407,7 @@ var notificationRecord =
 Xrm.WebApi.createRecord("appnotification",notificationRecord).
   then(
       function success(result) {
-          console.log("notification created with multiple actions: " + result.id);
+          console.log("notification created with custom title and body: " + result.id);
       },
       function (error) {
           console.log(error.message);
