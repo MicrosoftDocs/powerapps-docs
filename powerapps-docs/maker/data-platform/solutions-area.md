@@ -25,6 +25,8 @@ search.app:
 
 # Solutions area (preview)
 
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+
 The solutions area makes it easier for you to work with solution objects and subcomponents in your solutions. To use this experience, [enable solution preview](#enable-solution-preview).
 
 ## Solutions area overview
