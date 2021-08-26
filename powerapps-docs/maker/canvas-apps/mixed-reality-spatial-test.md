@@ -101,6 +101,7 @@ If(IsBlankOrError(testVolume), "No Measurement captured",
 
 ![Screenshot showing the final completed application.](./media/augmented-measure-fit-test/fit-test-completed-app.png "Screenshot showing the formula for the spatial test predicate.")
 
+## Testing the application
 Now, enter preview mode and click on the MeasureInMR button. You should see the labels above get populated with data. You can test that the bindings are working as expected by changing values in the three text input fields to verify that the filter is updating properly. The values for **Bounding Width** and **Bounding Depth** should be interchangeable and may be swapped when performing the test. After saving and publishing the application you can open it on a Mixed Reality enabled device to test whether an object with the specified dimensions will fit within the bounds of any measurement captured.
 
 ## Filtering a data source
