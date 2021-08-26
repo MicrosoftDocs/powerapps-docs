@@ -42,7 +42,7 @@ The solutions area makes it easier for you to work with solution objects and sub
 
 ## Enable solution preview
 
-To enable, you must enable solution preview, from the **Solutions** area.
+To enable, turn on **Solution preview on**, from the **Solutions** area.
 
 :::image type="content" source="media/enable-solution-preview.png" alt-text="Turn on solution preview":::
 
