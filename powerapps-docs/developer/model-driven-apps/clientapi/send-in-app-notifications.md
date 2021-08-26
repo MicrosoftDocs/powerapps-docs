@@ -21,7 +21,7 @@ search.app:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
 
-App notifications use the notification table to store notifications for each user. Your model-driven app will automatically check the system for new notifications and displays them in the notification center. The notification sender or your system administrator can configure how a toast is shown and how it can be dismissed. Notifications appear in notification center until you dismiss them or until they expire. By default, notification expires after 14 days but your administrator can override this time.
+App notifications use the notification table to store notifications for each user. Your model-driven app will automatically check the system for new notifications and displays them in the notification center. The notification sender or your system administrator can configure how a toast is shown and how it can be dismissed. Notifications appear in notification center until you dismiss them or until they expire. By default, a notification expires after 14 days but your administrator can override this time.
 
 This article outlines the steps on how to send in-app notifications to a specific user using [Client API](reference.md).
 
