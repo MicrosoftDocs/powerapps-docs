@@ -152,7 +152,7 @@ Power Apps has three types of variables:
 
 | Variables type | Scope | Description | Functions that establish |
 | --- | --- | --- | --- |
-| Global variables |App |Simplest to use. Holds a number, text string, Boolean, record, table, etc. that can be references from anywhere in the app. |[**Set**](functions/function-set.md) |
+| Global variables |App |Simplest to use. Holds a number, text string, Boolean, record, table, etc. that can be referenced from anywhere in the app. |[**Set**](functions/function-set.md) |
 | Context variables |Screen |Great for passing values to a screen, much like parameters to a procedure in other languages. Can be referenced from only one screen. |[**UpdateContext**](functions/function-updatecontext.md)<br>[**Navigate**](functions/function-navigate.md) |
 | Collections |App |Holds a table that can be referenced from anywhere in the app. Allows the contents of the table to be modified rather than being set as a whole. Can be saved to the local device for later use. |[**Collect**](functions/function-clear-collect-clearcollect.md)<br>[**ClearCollect**](functions/function-clear-collect-clearcollect.md) |
 
