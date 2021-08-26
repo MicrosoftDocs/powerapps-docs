@@ -2,7 +2,7 @@
 title: "Add canvas components to a custom page for your model-driven app" 
 description: "Learn how to add a canvas app component using a custom page"
 ms.custom: ""
-ms.date: 07/14/2021
+ms.date: 08/26/2021
 ms.reviewer: ""
 ms.service: powerapps
 ms.subservice: mda-maker
@@ -28,7 +28,9 @@ This article outlines the use of low-code canvas components to build custom UX f
   > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
 
   > [!NOTE]
-  > Custom page currently supports a [limited set of controls](/powerapps/maker/model-driven-apps/design-page-for-model-app#supported-controls-in-a-custom-page) and only the currently supported controls should be used to create canvas components for the custom page.
+  > - Custom page currently supports a [limited set of controls](/powerapps/maker/model-driven-apps/design-page-for-model-app#supported-controls-in-a-custom-page) and only the currently supported controls should be used to create canvas components for the custom page.
+  >
+  > - [Modern controls](#enable-modern-controls-for-the-component-library) are currently only supported with custom pages and not with standalone canvas apps. Make sure that the modern control experimental setting is used only for component libraries used with custom pages.
 
 Canvas components provide app makers the ability to create custom components in a low-code fashion. These components cannot only then be reused across custom pages and applications, but also can be centrally updated, packaged, and moved using Microsoft Dataverse solutions. More information: [Create a component for canvas apps](/powerapps/maker/canvas-apps/create-component) 
 
