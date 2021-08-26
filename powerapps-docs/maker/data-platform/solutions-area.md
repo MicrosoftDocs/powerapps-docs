@@ -23,11 +23,11 @@ search.app:
   - D365CE
 ---
 
-# Solutions (preview)
+# Solutions area (preview)
 
-The solutions preview makes it easier for you to work with solution objects and subcomponents in your solutions.
+The solutions area makes it easier for you to work with solution objects and subcomponents in your solutions. To use this experience, [Enable solution preview](#enable-solution-preview).
 
-## Solution preview overview
+## Solutions area overview
 
 1. Panes - The left navigation pane consists of the following areas:
    - **Overview**. Provides details about the solution, such as display name, name, created on date, version, managed or unmanaged, publisher, description, and whether the solution is a patch.
