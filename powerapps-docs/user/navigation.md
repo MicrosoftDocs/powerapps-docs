@@ -21,6 +21,8 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
+[!INCLUDE cc-beta-prerelease-disclaimer]
+
 This introduction explains how to find and open an app, and how to work with its common user interface elements including lists, forms, and business processes.
 
 
@@ -64,10 +66,21 @@ It's easy to get around and get back to your favorite or most-used rows. The fol
 Legend
   
 1. **Click to change app**: Select the current app name to change to a different app. 
-2. **Collapse/expand button**: Select this to collapse the navigator to allow more room for the main part of the page. If the navigator is already collapsed, select this button to expand it again. 
+2. **Collapse/expand site map**: Select this to collapse the navigator to allow more room for the main part of the page. If the navigator is already collapsed, select this button to expand it again. 
 3. **Recent**: Expand this entry to view a list of rows you were recently using. Select a row here to open it. Select the push-pin icon next to a row listed here to add it to your pinned rows.
 4. **Pinned**: Expand this entry to view and open your favorite pinned rows. Use the **Recent** list to add rows here. Select the remove-pin icon next to a row listed here to remove it from this list.
 5.  **Page navigation**: This area lists each table and dashboard page available for the current work area. Select any entry here to open the named dashboard or list view for that table.
+6.  **Collapsible groups**: If you're on [early access](/power-platform/admin/opt-in-early-access-updates), your app maker can enable collapsible groups. For information on how customize the navigation bar, see [Overview of the model-driven app designer](../maker/model-driven-apps/app-designer-overview.md).
+
+
+### Early access: Hide or show the Home, Pinned, Recent, and collapsible groups
+
+If you're on [early access](/power-platform/admin/opt-in-early-access-updates) your site map might look different. With 2021 release wave 2, the app maker can customize the navigation bar to show or hide the **Home**, **Recent**, **Pinned** buttons in the site map. The app maker can also make groups collapsible. For information on how customize the navigation bar, see [Overview of the model-driven app designer](../maker/model-driven-apps/app-designer-overview.md).
+
+
+![This diagram shows how the site map looks with a app maker customizes it to hide or show the Home, Pinned, Recent, and collapsible groups.](media/hide-show-nav-bar-buttons.gif
+ "This diagram shows how the site map looks with a app maker customizes it to hide or show the Home, Pinned, Recent, and collapsible groups.")  
+
 
 ### Area switcher 
 
@@ -129,8 +142,8 @@ The number of rows that you see in the row set navigation pane is based on the n
 2. Open a row and then select **Open Row Set** ![Row set navigation.](media/openrecordset_2.png "Row set button") and then select a row from the list. 
 
 
-![How to use the row set navigation.](media/recordsetnav_new.gif "This shows how to use the row set navigation feature")   
 
+![How to use the row set navigation.](media/recordsetnav_new.gif "This shows how to use the row set navigation feature")   
 
 ## Reference panel
 
