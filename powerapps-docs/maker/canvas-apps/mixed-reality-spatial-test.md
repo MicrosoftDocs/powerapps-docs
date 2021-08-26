@@ -62,6 +62,7 @@ Next, we’ll set up the Measure in MR component to allow users to capture measu
 3. Select the component **Measure in MR** and place it at the bottom of the application.
 
 ![Screenshot showing insertion of a Measure in MR control.](./media/augmented-measure-fit-test/fit-test-insert-measure-in-mr.png "Screenshot showing insertion of a Measure in MR control.")
+
 4. Select the component by clicking on it and open the **Properties** Panel.
 5. Set **Measurement Type** to **Volume** from the drop down menu.
 6. Set **Units of Measurement** to either **Feet** or **Meters**.
