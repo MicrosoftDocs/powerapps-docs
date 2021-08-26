@@ -31,7 +31,7 @@ This article outlines the steps on how to send in-app notifications to a specifi
 
 ## Enable in-app notification feature
 
-To use the in-app notification feature: , you need enable the `AllowNotificationsEarlyAccess` app setting in model-driven app.
+To use the in-app notification feature, you need enable the `AllowNotificationsEarlyAccess` app setting in model-driven app.
 
 1. Sign-in to your model-driven app.
 1. Select the app where you want to use this feature.
@@ -47,7 +47,7 @@ To use the in-app notification feature: , you need enable the `AllowNotification
    ```
 1. Now sign-in to [Power Apps](https://make.powerapps.com).
 1. Select **Solutions** in the left navigation pane. Select **New solution**. Enter the details and then select **Create**. 
-1. Open the solution that you have created. Select **New** > **App** > **Model-driven app**. From the list of apps, select the model-driven app where you want to see the notifications feature.
+1. Open the solution that you have created. Select **Add** > **App** > **Model-driven app**. From the list of apps, select the model-driven app where you want to see the notifications feature.
 1. Select **Publish all customizations**. Refresh the model-driven app, you should see a **Bell** icon on the top-right corner.
 
 > [!TIP]
@@ -105,7 +105,7 @@ Accept: application/json
 {
   "title": "Welcome",
   "body": "Welcome to the world of app notifications!",
-  "ownerid@odata.bind": "/systemusers(<Guid of the user.>)",
+  "ownerid@odata.bind": "/systemusers(<Guid of the user>)",
   "icontype": 100000000, // info
   "toasttype": 200000000 // timed
 }
@@ -194,7 +194,7 @@ This example shows how to create a notification by adding one action to the **ac
 > ![App notification with single action](../media/app-notification-with-single-action.png "App notification with single action")
 
 ```JavaScript
-var systemuserid = "6c3f944c-8c02-ec11-94ee-000d3a327308";
+var systemuserid = "<user-guid>";
   var notificationRecord = 
   {
     "title": "Congratulations",
@@ -234,7 +234,7 @@ This example shows how to create a notification with a multiple actions.
 
 ```JavaScript
 // Notification with multiple actions as center dialog 
-var systemuserid = "6c3f944c-8c02-ec11-94ee-000d3a327308";
+var systemuserid = "<user-guid>";
   var notificationRecord = 
   {
     "title": "Upcoming Service Reminder",
@@ -280,7 +280,7 @@ This example shows how to create a notification by adding custom body with an in
 > ![Notification ith custom body](../media/app-notification-with-custom-body.png "Notification with custom body")
 
 ```javascript
-var systemuserid = "6c3f944c-8c02-ec11-94ee-000d3a327308";
+var systemuserid = "<user-guid>";
   var notificationRecord = 
   {
     "title": "SLA critical",
@@ -310,7 +310,7 @@ This is another example with a custom body with an inline link and bold styling.
 
 
 ```JavaScript
-var systemuserid = "6c3f944c-8c02-ec11-94ee-000d3a327308";
+var systemuserid = "<user-guid>";
   var notificationRecord = 
   {
     "title": "SLA Missed",
@@ -341,7 +341,7 @@ This example shows how to create a notification by adding custom icons. Within t
 > ![Notification with custom icon](../media/app-notification-with-custom-icon.png "Notification with custom icon")
 
 ```JavaScript
-var systemuserid = "6c3f944c-8c02-ec11-94ee-000d3a327308";
+var systemuserid = "<user-guid>";
   var notificationRecord = 
 {
   "title": "Welcome",
@@ -370,7 +370,7 @@ This notification example adds custom title and body definition, which allow mul
 > ![Notification with custom title and body ](../media/app-notification-with-custom-title-body.png "Notification with custom title and body")
 
 ```JavaScript
-var systemuserid = "6c3f944c-8c02-ec11-94ee-000d3a327308";
+var systemuserid = "<user-guid>";
   var notificationRecord = 
   {
     "title": "Complete overhaul required (sample)",
