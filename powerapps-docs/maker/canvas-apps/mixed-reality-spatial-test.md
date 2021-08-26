@@ -19,7 +19,7 @@ contributors:
 ---
 
 # Test for object fit using Measure in MR
-Using the [Measure in MR](mixed-reality-component-measure-distance.md) control you can create a spatial test filter to validate whether an object with known width, depth, and height dimensions will fit in a space. This topic will guide you through creating a test app that you can use to validate fit using the **Measure in MR** control including: 
+Using the [Measure in MR](mixed-reality-component-measure-distance.md) control you can create a spatial test filter to validate whether an object with known width, depth, and height dimensions will fit in a space. This topic will guide you through creating a test app that you can use to validate fit including: 
 - Inserting the **Measure In MR** component into an application to measure volumes
 - Setting up **Expected Measurements (Items)** to help users maintain context in the MR experience
 - Creating a spatial test filter using the **Bounding Width**, **Bounding Width**, and **Height** properties from the measurement outputs
@@ -95,13 +95,13 @@ If(IsBlankOrError(testVolume), "No Measurement captured",
 
 ![Screenshot showing the formula for the spatial test predicate.](./media/augmented-measure-fit-test/fit-test-spatial-test-formula.png "Screenshot showing the formula for the spatial test predicate.")
 
-3. Set the text property for the third label to: `Concatenate("Bounding Width: ", Text(testVolume.BoundingWidth))`
-4. Set the text property for the fourth label to: `Concatenate("Bounding Depth: ", Text(testVolume.BoundingDepth))`
-5. Set the text property for the fifth label to: `Concatenate("Bounding Height: ", Text(testVolume.Height))`
+3. Set the text property for the second label to: `Concatenate("Bounding Width: ", Text(testVolume.BoundingWidth))`
+4. Set the text property for the third label to: `Concatenate("Bounding Depth: ", Text(testVolume.BoundingDepth))`
+5. Set the text property for the fourth label to: `Concatenate("Bounding Height: ", Text(testVolume.Height))`
 
 ![Screenshot showing the final completed application.](./media/augmented-measure-fit-test/fit-test-completed-app.png "Screenshot showing the formula for the spatial test predicate.")
 
-Now, enter preview mode and click on the MeasureInMR button, and you should see the labels above get populated with data. You can test that the binding works as expected by changing values in the three text input fields to verify that the filter is updating properly. The values for **Bounding Width** and **Bounding Depth** should be interchangeable and may be swapped when performing the test. After saving and publishing the application you can open it on a Mixed Reality enabled device to test whether an object with the specified dimensions will fit within the bounds of any measurement captured.
+Now, enter preview mode and click on the MeasureInMR button. You should see the labels above get populated with data. You can test that the bindings are working as expected by changing values in the three text input fields to verify that the filter is updating properly. The values for **Bounding Width** and **Bounding Depth** should be interchangeable and may be swapped when performing the test. After saving and publishing the application you can open it on a Mixed Reality enabled device to test whether an object with the specified dimensions will fit within the bounds of any measurement captured.
 
 ## Filtering a data source
 This sample application only tests for a single set of user specified dimensions, but could be expanded to work as a filter for any data source by applying the formula as a **Filter** predicate. For example, let's say our app contains a reference to a Dataverse table named **Products** which includes three columns **Width**, **Depth**, and **Height** corresponding to each product's dimensions. To filter the collection to only those that would fit within a measured volume we can apply the following formula:
