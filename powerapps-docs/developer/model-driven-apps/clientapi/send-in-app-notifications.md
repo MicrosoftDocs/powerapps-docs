@@ -69,7 +69,7 @@ In-app notifications can be sent by [Creating record using client API](reference
 
 ```javascript
 var systemuserid = "Guid of the user";
-var data =
+var notificationRecord =
 {
   "title": "Welcome",
   "body": "Welcome to the world of app notifications!",
@@ -78,7 +78,7 @@ var data =
   "toasttype": 200000000 // timed
 }
 // Create notification record
-Xrm.WebApi.createRecord("appnotification", data).
+Xrm.WebApi.createRecord("appnotification", notificationRecord).
   then(
       function success(result) {
           console.log("notification created with ID: " + result.id);
@@ -195,8 +195,8 @@ This example shows how to create a notification by adding one action to the **ac
 
 ```JavaScript
 var systemuserid = "<user-guid>";
-  var notificationRecord = 
-  {
+var notificationRecord = 
+{
     "title": "Congratulations",
 	  "body": "Your customer rating is now an A. You resolved 80% of your cases within SLA thi week and average customer rating was A+",
 	  "ownerid@odata.bind": "/systemusers(" + systemuserid + ")",
@@ -211,9 +211,9 @@ var systemuserid = "<user-guid>";
 	  }
 	 ]
 	})
-  }
+}
 Xrm.WebApi.createRecord("appnotification",notificationRecord).
-then(
+  then(
       function success(result) {
           console.log("notification created with single action: " + result.id);
       },
@@ -235,8 +235,8 @@ This example shows how to create a notification with a multiple actions.
 ```JavaScript
 // Notification with multiple actions as center dialog 
 var systemuserid = "<user-guid>";
-  var notificationRecord = 
-  {
+var notificationRecord = 
+{
     "title": "Upcoming Service Reminder",
 	  "body": "This is to inform you that you have an upcoming service request for your vehicle.",
 	  "ownerid@odata.bind": "/systemusers(" + systemuserid + ")",
@@ -259,9 +259,9 @@ var systemuserid = "<user-guid>";
 	    }
 	 ]
 	})
-  }
+}
 Xrm.WebApi.createRecord("appnotification",notificationRecord).
-then(
+  then(
       function success(result) {
           console.log("notification created with multiple actions: " + result.id);
       },
@@ -281,8 +281,8 @@ This example shows how to create a notification by adding custom body with an in
 
 ```javascript
 var systemuserid = "<user-guid>";
-  var notificationRecord = 
-  {
+var notificationRecord = 
+{
     "title": "SLA critical",
 	"body": "Records assigned to you is critically past SLA.",
 	"ownerid@odata.bind": "/systemusers(" + systemuserid + ")",
@@ -290,9 +290,9 @@ var systemuserid = "<user-guid>";
     "data": JSON.stringify({
 	 "body": "Case record [Complete overhaul required (sample)](?pagetype=entityrecord&etn=incident&id=0a9f62a8-90df-e311-9565-a45d36fc5fe8) assigned to you is critically past SLA and has been escalated to your manager."
 	 })
-  }
-  Xrm.WebApi.createRecord("appnotification",notificationRecord).
-then(
+}
+Xrm.WebApi.createRecord("appnotification",notificationRecord).
+  then(
       function success(result) {
           console.log("notification created with multiple actions: " + result.id);
       },
@@ -311,8 +311,8 @@ This is another example with a custom body with an inline link and bold styling.
 
 ```JavaScript
 var systemuserid = "<user-guid>";
-  var notificationRecord = 
-  {
+var notificationRecord = 
+{
     "title": "SLA Missed",
 	"body": "Records assigned to you is critically past SLA.",
 	"ownerid@odata.bind": "/systemusers(" + systemuserid + ")",
@@ -320,8 +320,8 @@ var systemuserid = "<user-guid>";
     "data": JSON.stringify({
 	 "body": "Case record [Average order shipment time (sample)](?pagetype=entityrecord&etn=incident&id=0a9f62a8-90df-e311-9565-a45d36fc5fe8) **assigned** to you just went out of SLA."
 	 })
-  }
-  Xrm.WebApi.createRecord("appnotification",notificationRecord).
+}
+Xrm.WebApi.createRecord("appnotification",notificationRecord).
 then(
       function success(result) {
           console.log("notification created with multiple actions: " + result.id);
@@ -342,7 +342,7 @@ This example shows how to create a notification by adding custom icons. Within t
 
 ```JavaScript
 var systemuserid = "<user-guid>";
-  var notificationRecord = 
+var notificationRecord = 
 {
   "title": "Welcome",
   "body": "Welcome to the world of app notifications!",
@@ -351,7 +351,7 @@ var systemuserid = "<user-guid>";
   "data": "{ 'data': { 'iconUrl': '/WebResources/cr245_AlertOn' } }"
 }
 Xrm.WebApi.createRecord("appnotification", notificationRecord).
-then(
+  then(
       function success(result) {
           console.log("notification created with multiple actions: " + result.id);
       },
@@ -371,8 +371,8 @@ This notification example adds custom title and body definition, which allow mul
 
 ```JavaScript
 var systemuserid = "<user-guid>";
-  var notificationRecord = 
-  {
+var notificationRecord = 
+{
     "title": "Complete overhaul required (sample)",
 	"body": "Maria Campbell mentioned you in a post.",
 	"ownerid@odata.bind": "/systemusers(" + systemuserid + ")",
@@ -389,9 +389,9 @@ var systemuserid = "<user-guid>";
 	   }
 	  ]
 	 })
-  }
-  Xrm.WebApi.createRecord("appnotification",notificationRecord).
-then(
+}
+Xrm.WebApi.createRecord("appnotification",notificationRecord).
+  then(
       function success(result) {
           console.log("notification created with multiple actions: " + result.id);
       },
