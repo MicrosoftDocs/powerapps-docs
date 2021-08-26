@@ -8,11 +8,15 @@ ms.topic: reference
 ms.custom: canvas
 ms.reviewer: nabuthuk
 ms.date: 11/07/2015
+ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - gregli-msft
+  - nkrb
 ---
 # Len function in Power Apps
 Returns the length of a string of text.
@@ -43,12 +47,12 @@ For the examples in this section, the [data source](../working-with-data-sources
 ### Single-column table
 For the first example in this section, the data source is named **People** and contains this data:
 
-![People table](media/function-len/people-table.png)
+![People table.](media/function-len/people-table.png)
 
 | Formula | Description | Result |
 | --- | --- | --- |
-| **Len( ShowColumns(&nbsp;People,&nbsp;"Address"&nbsp;) )** |In the **Address** [column](../working-with-tables.md#columns) of the **People** table:<br><ul><li>Measures the length of each string.</li><li>Returns a single-column table that contains the length of each string.</li> | ![Len with ShowColumns](media/function-len/people-table-len.png) |
-| **Len( [ "Hello", "to the", "World", "" ] )** |In the **[Value](function-value.md)** column of the inline table:<br><ul><li>Measures the length of each string.</li><li>Returns a single-column table that contains the length of each string.</li> |![Len with text values](media/function-len/people-table-len-inline.png) |
+| **Len( ShowColumns(&nbsp;People,&nbsp;"Address"&nbsp;) )** |In the **Address** [column](../working-with-tables.md#columns) of the **People** table:<br><ul><li>Measures the length of each string.</li><li>Returns a single-column table that contains the length of each string.</li> | ![Len with ShowColumns.](media/function-len/people-table-len.png) |
+| **Len( [ "Hello", "to the", "World", "" ] )** |In the **[Value](function-value.md)** column of the inline table:<br><ul><li>Measures the length of each string.</li><li>Returns a single-column table that contains the length of each string.</li> |![Len with text values.](media/function-len/people-table-len-inline.png) |
 
 
 

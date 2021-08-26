@@ -8,11 +8,15 @@ ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 05/17/2019
+ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - gregli-msft
 ---
 # Overview of the canvas app for Northwind Traders
 
@@ -27,7 +31,7 @@ In this topic, discover:
 In a single screen, the app user can show, update, create, and delete orders.
 
 > [!div class="mx-imgBorder"]
-> ![Complete canvas app](media/northwind-orders-canvas-part1/orders-finished.png)
+> ![Complete canvas app.](media/northwind-orders-canvas-part1/orders-finished.png)
 
 ## Explore the user interface
 
@@ -44,7 +48,7 @@ In the upper-right corner, a form summarizes the order that the user selected in
 In the lower-right corner, another gallery shows information about which products the selected order contains and in what quantities. Each item in this gallery is known as an order detail. The app user can add and delete any item in that gallery by using controls in and under it. More information: [Create the detail gallery](northwind-orders-canvas-part3.md).
 
 > [!div class="mx-imgBorder"]
-> ![Definition of screen areas](media/northwind-orders-canvas-part1/orders-parts.png)
+> ![Definition of screen areas.](media/northwind-orders-canvas-part1/orders-parts.png)
 
 ## Explore the data sources
 

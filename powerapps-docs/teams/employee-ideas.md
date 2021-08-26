@@ -4,8 +4,9 @@ description: Learn how to use the Employee Ideas app from Teams store.
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/15/2020
+ms.date: 08/24/2021
 author: navjotm
+ms.subservice: teams
 ms.author: namarwah
 ms.reviewer: tapanm
 contributors:
@@ -66,7 +67,7 @@ To configure the app:
 
 1. Select **Let's go**.
 
-    ![App configuration](media/employee-ideas/app-configuration.png "App configuration")
+    ![App configuration.](media/employee-ideas/app-configuration.png "App configuration")
 
 ## Edit the app configuration
 
@@ -76,11 +77,11 @@ To edit the app configuration:
 
 1. Select app settings.
 
-    ![App settings](media/employee-ideas/app-settings.png "App settings")
+    ![App settings.](media/employee-ideas/app-settings.png "App settings")
 
 1. Change the channel.
 
-    ![Change channel](media/employee-ideas/change-channel.png "Change channel")
+    ![Change channel.](media/employee-ideas/change-channel.png "Change channel")
 
 1. Select **Save**.
 
@@ -112,15 +113,15 @@ To add campaigns:
 
 1. (Optional) Select **Post to channel**.
 
-1. (Optional) Select ![Add cover image](media/employee-ideas/cover-image-add.png "Add cover image") to add **Cover image**, and select a cover image of your choice. You can also upload a custom image.
+1. (Optional) Select ![Add cover image.](media/employee-ideas/cover-image-add.png "Add cover image") to add **Cover image**, and select a cover image of your choice. You can also upload a custom image.
 
 1. Select **Save**.
 
-    ![Add idea campaign](media/employee-ideas/add-campaign.png "Add idea campaign")
+    ![Add idea campaign.](media/employee-ideas/add-campaign.png "Add idea campaign")
 
 If **Post to channel** is selected, the message is posted to the channel when the campaign is created.
 
-![Post to channel](media/employee-ideas/post-to-channel-employee-ideas.png "Post to channel")
+![Post to channel.](media/employee-ideas/post-to-channel-employee-ideas.png "Post to channel")
 
 ## Edit an idea campaign
 
@@ -136,7 +137,7 @@ To edit an existing idea campaign:
 
 1. Select **Save**.
 
-    ![Edit an idea campaign](media/employee-ideas/edit-idea-campaign.png "Edit an idea campaign")
+    ![Edit an idea campaign.](media/employee-ideas/edit-idea-campaign.png "Edit an idea campaign")
 
 ## Delete an idea campaign
 
@@ -154,7 +155,7 @@ To delete an idea campaign:
 
 1. Select **Delete** to delete the record permanently.
 
-    ![Delete an idea campaign](media/employee-ideas/delete-idea-campaign.png "Delete an idea campaign")
+    ![Delete an idea campaign.](media/employee-ideas/delete-idea-campaign.png "Delete an idea campaign")
 
 ## Duplicate an idea campaign
 
@@ -166,9 +167,9 @@ To duplicate an idea campaign:
 
 1. Select **Duplicate**.
 
-    ![Duplicate an idea campaign](media/employee-ideas/duplicate-idea-campaign.png "Delete an idea campaign")
+    ![Duplicate an idea campaign.](media/employee-ideas/duplicate-idea-campaign.png "Delete an idea campaign")
 
-    A copy of the selected campaign is created, with the name suffix "(COPY)".
+    A copy of the selected campaign is created, with the name suffix "(1)".
 
 1. Select **Add** to save the campaign, or **Cancel** to discard the changes.
 
@@ -180,7 +181,7 @@ To review existing idea campaigns:
 
 1. Review the idea campaign.
 
-    ![Review idea campaign](media/employee-ideas/review-idea-campaign.png "Review idea campaign")
+    ![Review idea campaign.](media/employee-ideas/review-idea-campaign.png "Review idea campaign")
 
 ## Submit a new idea
 
@@ -192,7 +193,7 @@ To submit a new idea:
 
 1. Select **Submit an idea**.
 
-    ![Submit an idea](media/employee-ideas/submit-an-idea.png "Submit an idea")
+    ![Submit an idea.](media/employee-ideas/submit-an-idea.png "Submit an idea")
 
 1. Enter the idea campaign details such as title and description.
 
@@ -202,7 +203,7 @@ To submit a new idea:
 
 1. Select **Submit idea**.
 
-    ![Submit idea](media/employee-ideas/submit-idea.png "Submit idea")
+    ![Submit idea.](media/employee-ideas/submit-idea.png "Submit idea")
 
 ## Review and vote for an idea
 
@@ -216,7 +217,7 @@ To review and vote for an idea:
 
 1. Select **Like** to vote for the idea.
 
-    ![Review and vote for an idea](media/employee-ideas/review-vote-idea.png "Review and vote for an idea")
+    ![Review and vote for an idea.](media/employee-ideas/review-vote-idea.png "Review and vote for an idea")
 
 ## Submit a new idea and post it in a channel
 
@@ -238,11 +239,11 @@ To submit a new idea and post it in a channel:
 
 1. Select **Submit idea**.
 
-    ![Share an idea in a channel](media/employee-ideas/share-idea-in-channel.png "Share an idea in a channel")
+    ![Share an idea in a channel.](media/employee-ideas/share-idea-in-channel.png "Share an idea in a channel")
 
 Below is a sample message that gets posted in a channel when an idea is submitted.
 
-![Message posted in channel](media/employee-ideas/message-posted-channel.png "Message posted in channel")
+![Message posted in channel.](media/employee-ideas/message-posted-channel.png "Message posted in channel")
 
 ## Delete an idea
 
@@ -254,22 +255,23 @@ To delete an idea:
 
 1. Select the idea to see the details.
 
-1. Select ![Ellipsis](media/employee-ideas/employee-ideas-ellipsis.png "Ellipsis").
+1. Select ![Ellipsis.](media/employee-ideas/employee-ideas-ellipsis.png "Ellipsis").
 
 1. Select **Delete**.
 
-    ![Select delete](media/employee-ideas/delete-idea.png "Select delete")
+    ![Select delete.](media/employee-ideas/delete-idea.png "Select delete")
 
 1. Select the checkbox **I understand** to confirm.
 
 1. Select **Delete**.
 
-    ![Confirm delete](media/employee-ideas/confirm-delete-idea.png "Confirm delete")
+    ![Confirm delete.](media/employee-ideas/confirm-delete-idea.png "Confirm delete")
 
 ### See also
 
+- [Deploy Employee Ideas app as broad distribution app](deploy-employee-ideas-broad-distribution.md)
 - [Understand Employee ideas app architecture](employee-ideas-architecture.md)
-- [Customize sample apps](customize-sample-apps.md)
+- [Customize employee ideas app](customize-employee-ideas.md)
 - [Sample apps FAQs](sample-apps-faqs.md)
 - [Use sample apps from the Microsoft Teams store](use-sample-apps-from-teams-store.md)
 

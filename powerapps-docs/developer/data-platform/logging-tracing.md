@@ -1,12 +1,13 @@
 ---
 title: "Logging and tracing (Microsoft Dataverse) | Microsoft Docs"
-description: "Use the trace log to store plug-in execution information to aid in plug-in debugging."
+description: "Use the plugin trace log to store plug-in execution information to aid in plug-in debugging."
 ms.custom: ""
-ms.date: 03/16/2021
+ms.date: 04/24/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: JimDaly
+ms.subservice: dataverse-developer
 ms.author: pehecke
 manager: kvivek
 search.audienceType: 

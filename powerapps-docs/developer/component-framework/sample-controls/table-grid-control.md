@@ -18,7 +18,7 @@ The component header columns and internal record values are bound to the existin
 [!INCLUDE[cc-terminology](../../data-platform/includes/cc-terminology.md)]
 
 > [!div class="mx-imgBorder"]
-> ![Table Grid component](../media/table-grid-control.png "Table Grid component")
+> ![Table Grid component.](../media/table-grid-control.png "Table Grid component")
 
 ## Available for 
 

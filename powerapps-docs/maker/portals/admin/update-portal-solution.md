@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2021
+ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: tapanm
 contributors:
@@ -36,11 +37,11 @@ To view the portals package details:
 
 1. Select **Portal Package(s) details**.
 
-    ![Details of portal's packages](media/power-platform-admin-center/portal-package-details.png "Details of portal's packages")
+    ![Details of portal's packages.](media/power-platform-admin-center/portal-package-details.png "Details of portal's packages")
 
 1. View the details of the packages for the selected portal.
 
-    ![Details of portal's packages such as name, version, and installation status](media/power-platform-admin-center/portal-package-details-info.png "Details of portal's packages such as name, version, and installation status")
+    ![Details of portal's packages such as name, version, and installation status.](media/power-platform-admin-center/portal-package-details-info.png "Details of portal's packages such as name, version, and installation status")
 
 ## Update a portals package
 
@@ -61,7 +62,7 @@ You can use the Power Platform admin center to update portal packages, either by
 
 1. Select **Check portal package(s) for upgrade**.
 
-    ![Check portal packages for upgrade](media/power-platform-admin-center/check-upgrades.png "Check portal packages for upgrade")
+    ![Check portal packages for upgrade.](media/power-platform-admin-center/check-upgrades.png "Check portal packages for upgrade")
 
 1. Update any packages that are available.
 
@@ -69,11 +70,11 @@ You can use the Power Platform admin center to update portal packages, either by
 
 If the package update fails, you'll see a notification with a link to more details about the problem.
 
-![Notification of package update errors](media/power-platform-admin-center/upgrade-error.png "Notification of package update errors")
+![Notification of package update errors.](media/power-platform-admin-center/upgrade-error.png "Notification of package update errors")
 
 When you select **See details**, a page appears with more information as shown in the following image.
 
-![Page showing the details of the update error](media/power-platform-admin-center/error-example.png "Page showing the details of the update error")
+![Page showing the details of the update error.](media/power-platform-admin-center/error-example.png "Page showing the details of the update error")
 
 Select **Retry upgrade** to try the installation again.
 

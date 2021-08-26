@@ -6,7 +6,8 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 06/08/2021
+ms.date: 08/01/2021
+ms.subservice: end-user
 ms.author: mkaur
 ms.reviewer: ""
 ms.assetid: 
@@ -23,7 +24,7 @@ Lookup helps you to choose rows from a related table. When you select a related 
 For example, you might search for the name **Adrian Dumitrascu**. When you type **ad**, possible matching rows are automatically populated and displayed.
 
   > [!div class="mx-imgBorder"]
-  > ![Automatically populates matching rows](media/automatically-populate-matching-records.png "Automatically populates matching rows")
+  > ![Automatically populates matching rows.](media/automatically-populate-matching-records.png "Automatically populates matching rows")
   
 >[!NOTE] 
 >An administrator can define the criteria that lookup uses for resolving partial search text.
@@ -36,7 +37,7 @@ along with seven of your favorite rows. If you haven't pinned any rows to favori
 
 
   > [!div class="mx-imgBorder"]
-  > ![How to use lookups](media/lookups-main.png "How to use lookups")
+  > ![How to use lookups.](media/lookups-main.png "How to use lookups")
 
 
 Legend
@@ -65,7 +66,7 @@ Lookups are classified into the following:
 To search a lookup, select the textbox and type your search criteria. If recent rows are enabled for your lookup, your recent rows will be displayed when you select the textbox.
 
   > [!div class="mx-imgBorder"]
-  > ![Browse a lookup column](media/MRU.png "Browse a lookup column")  
+  > ![Browse a lookup column.](media/MRU.png "Browse a lookup column")  
   
 >[!NOTE]   
 > The default search result for lookup search is, **begins with**. This means results include rows that begin with a specific word. For example, if you want to search for **Alpine Ski House**, type **alp** in the search box; if you type **ski**, the row will not show up in the search result.
@@ -76,7 +77,7 @@ To search a lookup, select the textbox and type your search criteria. If recent 
 To browse a lookup, select the lookup icon (magnifying glass). A full list of items will be shown in the dropdown.
 
   > [!div class="mx-imgBorder"]
-  > ![Search a lookup column](media/MRU_1.png "Search a lookup column")  
+  > ![Search a lookup column.](media/MRU_1.png "Search a lookup column")  
  
 ## Most recently used row type images
 The most recently used list of rows shows an image to help distinguish between row types.
@@ -85,7 +86,7 @@ The most recently used list of rows shows an image to help distinguish between r
 >Recent rows are not filtered by search term, selected view or related rows.
 
   > [!div class="mx-imgBorder"]
-  > ![Lookup columns shows image](media/Lookup_03-MRU_Entity_Images_56[1].png "Lookup columns shows image")  
+  > ![Lookup columns shows image.](media/Lookup_03-MRU_Entity_Images_56[1].png "Lookup columns shows image")  
   
 ## Row type selection list  
 When results span multiple row types, you can see how many types of rows there are and select them from the list. The **Lookup Row** option is not available in Unified Interface. Instead, use the following to search:
@@ -95,7 +96,7 @@ When results span multiple row types, you can see how many types of rows there a
 - Select **Change View** to select a view.
 
   > [!div class="mx-imgBorder"]
-  > ![See how many rows](media/Lookup_04-MultipleEntityTypes[1].gif "See how many rows")  
+  > ![See how many rows.](media/Lookup_04-MultipleEntityTypes[1].gif "See how many rows")  
   
   
 ## Create a new row if you don’t find an existing row
@@ -114,13 +115,13 @@ Selecting **Change View** lets you determine:
  - What you want to view in the rows, such as name, email, or telephone number. For example, if you want to view only the contacts that you follow, select
     **Change View** \> **Contacts being followed**. Only the contacts that you are following will be displayed, as illustrated here. 
 
-    ![Change view contacts types](media/change-view.png "Change view contacts types")
+    ![Change view contacts types.](media/change-view.png "Change view contacts types")
 
 ### Filter by, Only my rows or Filter by related primary contact
 
 To apply extra filters, in the **Change View** menu, select **Only my rows** or **Filter by related Primary Contact**.
 
-![Add more filters](media/extra_filters.png "Add more filters")
+![Add more filters.](media/extra_filters.png "Add more filters")
 
 ### Choose from multiple rows
 
@@ -128,17 +129,17 @@ When lookup has more rows in a column than can fit in the available display area
 
 **Collapsed:**
 
-![Collapsed multi-lookup display area](media/collapsed-multi-lookup-display-area.png "Collapsed multi-lookup display area")
+![Collapsed multi-lookup display area.](media/collapsed-multi-lookup-display-area.png "Collapsed multi-lookup display area")
 
 
 **Non-collapsed:**
 
-![Non-collapsed multi-lookup display area](media/non-collapsed-multi-lookup-display-area.png "Non-collapsed multi-lookup display area")
+![Non-collapsed multi-lookup display area.](media/non-collapsed-multi-lookup-display-area.png "Non-collapsed multi-lookup display area")
 
 
 ## Advanced lookup
 
-To use **Advanced lookup**, your administrator needs to enable this feature. For more information, see [Manage behavior settings](/power-platform/admin/settings-behavior).
+The **Advanced lookup** feature is available for early access in 2021 release wave 2. To use **Advanced lookup** your administrator needs to [enable early access](/power-platform/admin/opt-in-early-access-updates). For more information, see [Manage behavior settings](/power-platform/admin/settings-behavior).
 
 Once enabled **Advanced lookup** is available on any lookup column that's on a quick create form, edit form, or dialog box. With **Advanced lookup** you can easily sort rows and switch between tables or views in a lookup column. 
 
@@ -147,13 +148,13 @@ Advanced lookup supports customizations on lookup control through Client APIs su
 1. To use **Advanced lookup**, select the lookup icon (magnifying glass) on any lookup column and then select **Advanced lookup**. 
 
    > [!div class="mx-imgBorder"]
-   > ![Advanced lookup](media/advanced-lookup-control.png "Advanced lookup")  
+   > ![Advanced lookup.](media/advanced-lookup-control.png "Advanced lookup")  
 
 2. The **Advanced lookup** gird opens with a list of rows.
 
 
    > [!div class="mx-imgBorder"]
-   > ![Advanced lookup grid](media/advanced-lookup-control-grid.png "Advanced lookup grid")  
+   > ![Advanced lookup grid.](media/advanced-lookup-control-grid.png "Advanced lookup grid")  
 
 Legend
 
@@ -173,12 +174,12 @@ In a **Regarding** lookup, you can switch between tables and their views
 1. In a **Regarding** lookup column, select the lookup icon (magnifying glass) then select **Advanced lookup**. 
 
    > [!div class="mx-imgBorder"]
-   > ![Advanced lookup for Regarding column](media/regarding-advanced-lookup.png "Advanced lookup for Regarding column")  
+   > ![Advanced lookup for Regarding column.](media/regarding-advanced-lookup.png "Advanced lookup for Regarding column")  
 
 2. On the advanced lookup grid, select a table from the list to see rows for the selected table. You can also select the current view to change views.
 
    > [!div class="mx-imgBorder"]
-   > ![Advanced lookup grid for Regarding column](media/regarding-advanced-lookup-2.png "Advanced lookup grid for Regarding column")  
+   > ![Advanced lookup grid for Regarding column.](media/regarding-advanced-lookup-2.png "Advanced lookup grid for Regarding column")  
 
 
 ### Party list advanced lookup
@@ -189,16 +190,16 @@ For lookup columns that is a party list, you can select multiple rows from diffe
 2. On the advanced lookup grid, select from multiple rows from different tables.
 
    > [!div class="mx-imgBorder"]
-   > ![Advanced lookup grid for choices](media/choices-lookup.png "Advanced lookup grid for party list")  
+   > ![Advanced lookup grid for choices.](media/choices-lookup.png "Advanced lookup grid for party list")  
 
 3. Select the **(number of rows) selected** tab or the link at the bottom to review and edit your choices and then select **Done**.
 
     > [!div class="mx-imgBorder"]
-    > ![Edit your choices](media/choices-lookup-2.png "Edit your choices")  
+    > ![Edit your choices.](media/choices-lookup-2.png "Edit your choices")  
    
 4. The selected rows appear in the lookup.
 
    > [!div class="mx-imgBorder"]
-   > ![Selected choices appear in the lookup](media/choices-lookup-3.png "Selected choices appear in the lookup")  
+   > ![Selected choices appear in the lookup.](media/choices-lookup-3.png "Selected choices appear in the lookup")  
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

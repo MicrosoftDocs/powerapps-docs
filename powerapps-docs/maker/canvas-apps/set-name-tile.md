@@ -8,11 +8,15 @@ ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 05/24/2021
+ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - emcoope-msft
 ---
 # Change app name and icon for canvas apps
 
@@ -28,7 +32,7 @@ Customize a canvas app by changing its name and icon.
 
 Under **General**, update the app name inside the **Name** text box.
 
-![Close an app](./media/set-name-tile/rename-app.png)
+![Close an app.](./media/set-name-tile/rename-app.png)
 
 ## Change an app tile
 
@@ -36,11 +40,11 @@ Follow one or more of these steps:
 
 * Select a different background color from the list of options.
 
-    ![Select a tile color](./media/set-name-tile/tile-colors.png)
+    ![Select a tile color.](./media/set-name-tile/tile-colors.png)
 
 * Select an icon from the list of default icons.
 
-    ![Select a tile icon](./media/set-name-tile/tile-icons.png)
+    ![Select a tile icon.](./media/set-name-tile/tile-icons.png)
 
 * Select **Browse file**, select the image that you want to use, and then select **Open**.
 

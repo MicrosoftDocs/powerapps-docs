@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom:
 ms.date: 04/21/2020
+ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: tapanm
 contributors:
@@ -34,7 +35,7 @@ Publishing states can be created, edited, and deleted within portals.
 4. Go to the **Publishing States** tab. The list of available publishing states is displayed.
 
     > [!div class=mx-imgBorder]
-    > ![Manage publishing states](../media/publishing-states.png "Manage publishing states")
+    > ![Manage publishing states.](../media/publishing-states.png "Manage publishing states")
 
 5. To add a new publishing state, select **New publishing state**.
 
@@ -93,7 +94,7 @@ If the logged-in user who is attempting the change is in any of the roles you as
 6. Select **Save** so you can continue adding web roles to it.
 
     > [!div class=mx-imgBorder]
-    > ![Create publishing state transition rule](../media/publishing-state-transition-rule.png "Create publishing state transition rule")
+    > ![Create publishing state transition rule.](../media/publishing-state-transition-rule.png "Create publishing state transition rule")
 
 7. On the **Web Roles** tab, select **Add Existing Web Role**. In the **Lookup Records** pane, browse and add the appropriate web roles.
 
@@ -108,7 +109,7 @@ For example, say you wanted someone in the content publishing role who can modif
 To do this, you would create a rule with the grant change permission and apply it to the branch in question (or the home page if the rule is to apply to the entire site). You would then associate this rule with the draft state.
 
 > [!div class=mx-imgBorder]
-> ![Create state-based control rule](../media/state-based-control-rule.png "Create state-based control rule")
+> ![Create state-based control rule.](../media/state-based-control-rule.png "Create state-based control rule")
 
 You would then associate this rule with the appropriate web role, for example, Content publishing. Assuming this web role isn't associated with a more permissive rule (a rule that grants change no matter which publishing state) then users in the content publishing web role can modify pages in the draft state but can't modify pages in the published state.
 
