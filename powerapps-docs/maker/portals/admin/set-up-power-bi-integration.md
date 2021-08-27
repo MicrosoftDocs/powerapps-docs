@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/22/2021
+ms.date: 08/26/2021
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: tapanm
@@ -195,7 +195,6 @@ Customizers can now use the [powerbi Liquid tag](../liquid/portals-entity-tags.m
 - Portals with version [9.3.4.x](../versions/version-9.3.4.x.md) or later support the following capabilities:
     - Dashboards and report from Azure Analysis Services using [live connections](/azure/analysis-services/analysis-services-connect-pbi).
     - Dashboards with [role-based security](/power-bi/admin/service-admin-rls).
-    - Dashboard with different data sources having different role-based security.
     - Single tile with role-based security.
 - For more information about Power BI Embedded service limitations, see [Considerations and limitations](/power-bi/developer/embed-service-principal#considerations-and-limitations).
 
