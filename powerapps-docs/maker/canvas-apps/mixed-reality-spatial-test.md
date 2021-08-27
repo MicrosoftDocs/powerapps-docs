@@ -1,7 +1,7 @@
 ---
 title: Test for object fit using Measure in MR
-description: Use your app to take photos of 3D objects that are overlaid in the real world.
-author: altran
+description: Create a spatial test filter in Mixed Reality.
+author: alex-msft
 manager: jopile
 ms.service: powerapps
 ms.topic: conceptual
@@ -9,7 +9,7 @@ ms.custom: canvas
 ms.reviewer: iaanw
 ms.date: 8/26/2021
 ms.subservice: canvas-maker
-ms.author: iaanw
+ms.author: iawilt
 search.audienceType: 
   - maker
 search.app: 
@@ -68,17 +68,17 @@ Next, we’ll set up the **Measure in MR** component to allow users to capture m
 
 ![Screenshot showing Measurement Type and Units of Measurement property values.](./media/augmented-measure-fit-test/fit-test-units-and-type.png "Screenshot showing Measurement Type and Units of Measurement property values.")
 
-7. Under either the **Advanced** pane or the drop down menu on the **Formula Bar** at the top of the screen find the Items property and set it to: `["Test Volume"]`
+7. Next we'll define a table with a single expected measurement to provide an interaction hint during each user session. Under either the **Advanced** pane or the drop down menu on the **Formula Bar** at the top of the screen find the Items property and set it to: `Table({label:"Test Volume"})`
 8. Also under the **Advanced** pane or the **Formula Bar** find the **ItemsLabels** property and set it to: `"Value"`
 
-![Screenshot showing advanced property settings for Items and ItemsLabels.](./media/augmented-measure-fit-test/fit-test-advanced-properties-items.png "Screenshot showing advanced property settings for Items and ItemsLabels.")
-
 ![Screenshot showing formula bar settings for Items.](./media/augmented-measure-fit-test/fit-test-formula-bar-items.png "Screenshot showing formula bar settings for Items.")
+
+![Screenshot showing advanced property settings for Items and ItemsLabels.](./media/augmented-measure-fit-test/fit-test-advanced-properties-items.png "Screenshot showing advanced property settings for Items and ItemsLabels.")
 
 9. Finally, in the **Advanced** pane set the OnMixedRealitySelect property to:
 `Set(testVolume, LookUp(MeasureInMR1.Measurements, Label = "Test Volume"))`;
 
-![Screenshot showing formula bar settings for Items.](./media/augmented-measure-fit-test/fit-test-on-mixed-reality-select.png "Screenshot showing formula bar settings for Items.")
+![Screenshot showing property setting for OnMixedRealitySelect.](./media/augmented-measure-fit-test/fit-test-on-mixed-reality-select.png "Screenshot showing property setting for OnMixedRealitySelect.")
 
 ## Perform fit test and display result
 1. Open the **Insert** tab, and insert 4 more **Text labels**.
@@ -118,7 +118,7 @@ If(IsBlankOrError(testVolume), Products,
 ```
 
 > [!NOTE]
-> The **BoundingWidth**, **BoundingDepth**, and **Height** properties represent the smallest possible rectangular prism that can fully encapsulate a measured volume. For irregularly shaped measurements it is possible that this will be an overestimate of the enclosed region, so this approach should be used as an estimate to help validate or narrow down results, but would not guarantee fit in all scenarios.
+> The **BoundingWidth**, **BoundingDepth**, and **Height** properties represent the smallest possible box that can fully encapsulate a measured volume. For irregularly shaped measurements it is possible that this will be an overestimate of the enclosed region, so this approach should be used as an estimate to help validate or narrow down results, but would not guarantee fit in all scenarios.
 
 ## Other mixed-reality controls
 
