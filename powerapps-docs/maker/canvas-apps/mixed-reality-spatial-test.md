@@ -75,7 +75,8 @@ Next, we’ll set up the **Measure in MR** component to allow users to capture m
 
 ![Screenshot showing formula bar settings for Items.](./media/augmented-measure-fit-test/fit-test-formula-bar-items.png "Screenshot showing formula bar settings for Items.")
 
-9. Finally, in the **Advanced** pane set the OnMixedRealitySelect property to: `Set(testVolume, LookUp(MeasureInMR1.Measurements, Label = "Test Volume"))`;
+9. Finally, in the **Advanced** pane set the OnMixedRealitySelect property to:
+`Set(testVolume, LookUp(MeasureInMR1.Measurements, Label = "Test Volume"))`;
 
 ![Screenshot showing formula bar settings for Items.](./media/augmented-measure-fit-test/fit-test-on-mixed-reality-select.png "Screenshot showing formula bar settings for Items.")
 
@@ -95,9 +96,12 @@ If(IsBlankOrError(testVolume), "No Measurement captured",
 
 ![Screenshot showing the formula for the spatial test predicate.](./media/augmented-measure-fit-test/fit-test-spatial-test-formula.png "Screenshot showing the formula for the spatial test predicate.")
 
-3. Set the text property for the second label to: `Concatenate("Bounding Width: ", Text(testVolume.BoundingWidth))`
-4. Set the text property for the third label to: `Concatenate("Bounding Depth: ", Text(testVolume.BoundingDepth))`
-5. Set the text property for the fourth label to: `Concatenate("Bounding Height: ", Text(testVolume.Height))`
+3. Set the text property for the second label to:
+ `Concatenate("Bounding Width: ", Text(testVolume.BoundingWidth))`
+4. Set the text property for the third label to:
+ `Concatenate("Bounding Depth: ", Text(testVolume.BoundingDepth))`
+5. Set the text property for the fourth label to:
+ `Concatenate("Bounding Height: ", Text(testVolume.Height))`
 
 ![Screenshot showing the final completed application.](./media/augmented-measure-fit-test/fit-test-completed-app.png "Screenshot showing the formula for the spatial test predicate.")
 
