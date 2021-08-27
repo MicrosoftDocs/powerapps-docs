@@ -114,7 +114,7 @@ This sample application only tests for a single set of user specified dimensions
 If(IsBlankOrError(testVolume), Products,
     Filter(Products, testVolume.Height >= Height &&
         ((testVolume.BoundingWidth >= Width && testVolume.BoundingDepth >= Depth) ||
-        (testVolume.BoundingWidth >= Depth && testVolume.BoundingDepth >= Width));
+        (testVolume.BoundingWidth >= Depth && testVolume.BoundingDepth >= Width))))
 ```
 
 > [!NOTE]
