@@ -1,11 +1,11 @@
 ---
-title: Portals support for Power Platform CLI (Preview)
+title: Portals support for Power Platform CLI
 description: Learn how to work with Power Platform CLI for CI/CD (Continuous Integration/Continuous Deployment) improvements of a portal.
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/22/2021
+ms.date: 08/26/2021
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: tapanm
@@ -14,9 +14,7 @@ contributors:
     - tapanm-msft
 ---
 
-# Portals support for Microsoft Power Platform CLI (Preview)
-
-[This article is pre-release documentation and is subject to change.]
+# Portals support for Microsoft Power Platform CLI
 
 Microsoft Power Platform CLI(Command Line Interface) is a simple, single-stop
 developer command-line interface that empowers developers and app makers to
@@ -33,10 +31,6 @@ supports Microsoft Power Platform CLI to enable CI/CD (Continuous Integration/Co
 Deployment) of portal configuration. You can now check in the portal
 configuration to source control and move portal configuration to any environment
 using Microsoft Power Platform CLI.
-
-> [!IMPORTANT]
-> - This is a preview feature.
-> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
 
 ### Why use Microsoft Power Platform CLI for portals development?
 
