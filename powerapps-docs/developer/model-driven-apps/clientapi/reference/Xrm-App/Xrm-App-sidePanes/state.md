@@ -14,13 +14,21 @@ search.app:
 ---
 # state (Client API reference)
 
-Returns whether the selected pane is collapsed or expanded.
+[!INCLUDE[cc-beta-prerelease-disclaimer](../../../../../../includes/cc-beta-prerelease-disclaimer.md)]
+
+Returns whether the selected pane is collapsed or expanded. 1 for expand and 0 for collapsed.
+
+> [!IMPORTANT]
+> - This is a preview feature, and isn't available in all regions.
+> - [!INCLUDE[cc-preview-features-definition](../../../../../../includes cc-preview-features-definition.md)]
 
 ## Syntax
 
 `Xrm.App.sidePanes.state();`
 
-### See also
 
-[sidePanes](../../xrm-appsidepanes.md)
-[Create side panes](../../../create-app-side-panes)
+### Related topics
+
+[sidePanes](../../xrm-app-sidepanes.md)
+
+[Creating side panes using client API](../../../create-app-side-panes.md)

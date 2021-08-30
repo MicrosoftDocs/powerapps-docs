@@ -14,13 +14,20 @@ search.app:
 ---
 # getAllPanes (Client API reference)
 
+[!INCLUDE[cc-beta-prerelease-disclaimer](../../../../../../includes/cc-beta-prerelease-disclaimer.md)]
+
 Returns a collection containing all active panes.
+
+> [!IMPORTANT]
+> - This is a preview feature, and isn't available in all regions.
+> - [!INCLUDE[cc-preview-features-definition](../../../../../../includes cc-preview-features-definition.md)]
 
 ## Syntax
 
 `Xrm.App.sidePanes.getAllPanes();`
 
-### See also
+### Related topics
 
-[sidePanes](../../xrm-appsidepanes.md)
-[Create side panes](../../../create-app-side-panes)
+[sidePanes](../../xrm-app-sidepanes.md)
+
+[Creating side panes using client API](../../../create-app-side-panes.md)

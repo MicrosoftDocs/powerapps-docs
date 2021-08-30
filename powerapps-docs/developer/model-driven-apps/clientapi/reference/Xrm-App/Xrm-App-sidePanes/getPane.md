@@ -14,13 +14,20 @@ search.app:
 ---
 # getPane (Client API reference)
 
-Returns the Pane corresponding to the input ID. If Pane does not exist, undefined is returned.
+[!INCLUDE[cc-beta-prerelease-disclaimer](../../../../../../includes/cc-beta-prerelease-disclaimer.md)]
+
+Returns the side pane corresponding to the input ID. If the side pane does not exist, undefined is returned.
+
+> [!IMPORTANT]
+> - This is a preview feature, and isn't available in all regions.
+> - [!INCLUDE[cc-preview-features-definition](../../../../../../includes cc-preview-features-definition.md)]
 
 ## Syntax
 
 `Xrm.App.sidePanes.getPane();`
 
-### See also
+### Related topics
 
-[sidePanes](../../xrm-appsidepanes.md)
-[Create side panes](../../../create-app-side-panes)
+[sidePanes](../../xrm-app-sidepanes.md)
+
+[Creating side panes using client API](../../../create-app-side-panes.md)

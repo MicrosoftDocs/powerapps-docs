@@ -14,7 +14,13 @@ search.app:
 ---
 # sidePanes (Client API reference)
 
+[!INCLUDE[cc-beta-prerelease-disclaimer](../../../../includes/cc-beta-prerelease-disclaimer.md)]
+
 Provides methods for managing side panes.
+
+> [!IMPORTANT]
+> - This is a preview feature, and isn't available in all regions.
+> - [!INCLUDE[cc-preview-features-definition](../../../../includes cc-preview-features-definition.md)]
 
 ## Methods
 

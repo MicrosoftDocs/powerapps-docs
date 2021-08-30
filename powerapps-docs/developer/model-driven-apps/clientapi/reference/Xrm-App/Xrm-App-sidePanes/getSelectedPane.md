@@ -14,14 +14,22 @@ search.app:
 ---
 # getSelectedPane (Client API reference)
 
+[!INCLUDE[cc-beta-prerelease-disclaimer](../../../../../../includes/cc-beta-prerelease-disclaimer.md)]
+
 Returns the currently selected pane.
+
+> [!IMPORTANT]
+> - This is a preview feature, and isn't available in all regions.
+> - [!INCLUDE[cc-preview-features-definition](../../../../../../includes cc-preview-features-definition.md)]
+
 
 ## Syntax
 
 `Xrm.App.sidePanes.getSelectedPane();`
 
-### See also
+### Related topics
 
-[Xrm.App.AppSidePanes](../../xrm-appsidepanes.md)
-[Create side panes](../../../create-app-side-panes)
+[sidePanes](../../xrm-app-sidepanes.md)
+
+[Creating side panes using client API](../../../create-app-side-panes.md)
 

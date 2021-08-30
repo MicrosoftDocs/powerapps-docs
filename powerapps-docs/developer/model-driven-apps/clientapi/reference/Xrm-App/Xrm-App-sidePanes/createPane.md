@@ -14,7 +14,13 @@ search.app:
 ---
 # createPane (Client API reference)
 
+[!INCLUDE[cc-beta-prerelease-disclaimer](../../../../../../includes/cc-beta-prerelease-disclaimer.md)]
+
 Provides all the information to create side panes.
+
+> [!IMPORTANT]
+> - This is a preview feature, and isn't available in all regions.
+> - [!INCLUDE[cc-preview-features-definition](../../../../../../includes cc-preview-features-definition.md)]
 
 ## Syntax
 
@@ -25,7 +31,7 @@ Provides all the information to create side panes.
 |Parameter Name| Type| Required|Description|
 |-------------|------|---------|------------|
 |title|string|Yes|The title of the pane. Used in pane header and for tooltip.|
-|panelId|string|Yes| The ID of the new pane. If the value is not passed, the Id value is auto-generated.|
+|panelId|string|Yes| The ID of the new pane. If the value is not passed, the ID value is auto-generated.|
 |canClose|Boolean|Yes| Whether the pane header will show a close button or not.|
 |imageSrc|string|Yes| The path of the icon to show in the panel switcher control.|
 |hideHeader|Boolean|No| Hides the header pane, including the title and close button. Default value is false.|
@@ -36,7 +42,8 @@ Provides all the information to create side panes.
 |keepBadgeOnSelect|Boolean|No| Prevents the badge from getting cleared when the pane becomes selected.|
 
 
-### See also
+### Related topics
 
-[sidePanes](../../xrm-appsidepanes.md)
-[Create side panes](../../../create-app-side-panes)
+[sidePanes](../../xrm-app-sidepanes.md)
+
+[Creating side panes using client API](../../../create-app-side-panes.md)

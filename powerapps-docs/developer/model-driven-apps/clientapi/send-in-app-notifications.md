@@ -33,12 +33,12 @@ This article outlines the steps on how to send in-app notifications to a specifi
 
 ## Enable in-app notification feature
 
-To use the in-app notification feature, you need enable the `AllowNotificationsEarlyAccess` app setting in model-driven app.
+To use the in-app notification feature, you need to enable the `AllowNotificationsEarlyAccess` app setting in a model-driven app.
 
 1. Sign in to your model-driven app.
 1. Select the app where you want to use this feature.
 1. Select **F12** button on your keyboard to open the browser console.
-1. In the browser console, copy the code below. Enter your app unique name in the `AppUniqueName` parameter. Press **Enter**.   
+1. In the browser console, copy the code below. Enter your app's unique name in the `AppUniqueName` parameter. Press **Enter**.   
 
    ```javascript
    fetch(window.origin + "/api/data/v9.1/SaveSettingValue()",{
