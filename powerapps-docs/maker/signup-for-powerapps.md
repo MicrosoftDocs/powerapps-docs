@@ -72,7 +72,7 @@ Regardless of whether you have a license for Power Apps, you can start a free 30
 
 ### What email address can I use?
 
-You can use a work or school email address to sign up for a trial license. If you use a different kind of address, you might experience one of the symptoms in this table.
+You can use a work or school email address, backed by [Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/sign-up-organization), to sign up for a trial license. If you use a different kind of address, you might experience one of the symptoms in this table.
 
 
 |                                                                                                                                                                                                                             Symptom / error message                                                                                                                                                                                                                             |                                                                                                                                                                                                     Cause and workaround                                                                                                                                                                                                      |
