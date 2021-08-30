@@ -20,7 +20,7 @@ Returns whether the selected pane is collapsed or expanded. 1 for expand and 0 f
 
 > [!IMPORTANT]
 > - This is a preview feature, and isn't available in all regions.
-> - [!INCLUDE[cc-preview-features-definition](../../../../../../includes cc-preview-features-definition.md)]
+> - [!INCLUDE[cc-preview-features-definition](../../../../../../includes/cc-preview-features-definition.md)]
 
 ## Syntax
 

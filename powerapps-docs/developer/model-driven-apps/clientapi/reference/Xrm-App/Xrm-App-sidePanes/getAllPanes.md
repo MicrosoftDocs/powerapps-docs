@@ -20,7 +20,7 @@ Returns a collection containing all active panes.
 
 > [!IMPORTANT]
 > - This is a preview feature, and isn't available in all regions.
-> - [!INCLUDE[cc-preview-features-definition](../../../../../../includes cc-preview-features-definition.md)]
+> - [!INCLUDE[cc-preview-features-definition](../../../../../../includes/cc-preview-features-definition.md)]
 
 ## Syntax
 

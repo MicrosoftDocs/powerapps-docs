@@ -20,7 +20,7 @@ Returns the side pane corresponding to the input ID. If the side pane does not e
 
 > [!IMPORTANT]
 > - This is a preview feature, and isn't available in all regions.
-> - [!INCLUDE[cc-preview-features-definition](../../../../../../includes cc-preview-features-definition.md)]
+> - [!INCLUDE[cc-preview-features-definition](../../../../../../includes/cc-preview-features-definition.md)]
 
 ## Syntax
 

@@ -20,7 +20,7 @@ Provides all the information to create side panes.
 
 > [!IMPORTANT]
 > - This is a preview feature, and isn't available in all regions.
-> - [!INCLUDE[cc-preview-features-definition](../../../../../../includes cc-preview-features-definition.md)]
+> - [!INCLUDE[cc-preview-features-definition](../../../../../../includes/cc-preview-features-definition.md)]
 
 ## Syntax
 
