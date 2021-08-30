@@ -7,7 +7,7 @@ ms.topic: conceptual
 ms.custom: 
   - canvas
   - intro-internal
-ms.date: 03/23/2020
+ms.date: 08/30/2021
 ms.author: alaug
 ms.reviewer: kvivek
 contributors:
@@ -72,23 +72,17 @@ Regardless of whether you have a license for Power Apps, you can start a free 30
 
 ### What email address can I use?
 
-You can use a work or school email address, backed by [Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/sign-up-organization), to sign up for a trial license. If you use a different kind of address, you might experience one of the symptoms in this table.
+You can use a work or school email address, backed by [Azure Active Directory](/azure/active-directory/fundamentals/sign-up-organization), to sign up for a trial license. If you use a different kind of address, you might experience one of the symptoms in this table.
 
 
 |                                                                                                                                                                                                                             Symptom / error message                                                                                                                                                                                                                             |                                                                                                                                                                                                     Cause and workaround                                                                                                                                                                                                      |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <strong>Personal email addresses (e.g. nancy@gmail.com)</strong> <br> <br> You receive a message like the following during signup: <br> <br> `You entered a personal email address: Please enter your work email address so we can securely store your company's data.` <br> <br> or <br> <br> `That looks like a personal email address. Enter your work address so we can connect you with others in your company. And don’t worry. We won’t share your address with anyone.` |                                                                                                        Power Apps doesn't support email addresses provided by consumer email services or telecommunications providers. <br> <br> To complete signup, try again using an email address assigned by your work or school.                                                                                                        |
+| <strong>Personal email addresses (for example, `@gmail.com` email address)</strong> <br> <br> You receive a message like the following during signup: <br> <br> `You entered a personal email address: Please enter your work email address so we can securely store your company's data.` <br> <br> or <br> <br> `That looks like a personal email address. Enter your work address so we can connect you with others in your company. And don’t worry. We won’t share your address with anyone.` |                                                                                                        Power Apps doesn't support email addresses provided by consumer email services or telecommunications providers. <br> <br> To complete signup, try again using an email address assigned by your work or school.                                                                                                        |
 |                             **.gov or .mil addresses** <br> <br> You receive a message like the following during signup: <br> <br> `Power Apps unavailable: Power Apps is not available for users with .gov or .mil email addresses at this time. Use another work email address or check back later.` <br> <br> or <br> <br> `We can't finish signing you up. It looks like Microsoft Power Apps isn't currently available for your work or school.`                              |                                                                                                                                                                                Power Apps doesn't support .gov or .mil addresses at this time.                                                                                                                                                                                |
 |                                                                                             **Email address is not an Office 365 ID** <br> <br>  You receive a message like the following during signup: <br> <br> `We can't find you at contoso.com.  Do you use a different ID at work or school? Try signing in with that, and if it doesn't work, contact your IT department.`                                                                                              | Your organization signs in to Office 365 and other Microsoft services with IDs other than email addresses. For example, your email address might be Nancy.Smith@contoso.com, but your ID is nancys@contoso.com. <br> <br> To complete signup, use the ID that your organization has assigned to you for signing in to Office 365 or other Microsoft services.  If you don't know what this is, contact your IT administrator. |
 
-<!--
-### When will my trial license expire?
-
-To determine when your trial license will expire, select the gear icon near the upper-right corner of the [Power Apps site](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then select **Plan(s)**.
--->
-
 ### Does the cloud environment I use Power Apps in allow the use of trial licenses? 
-Power Apps trial licenses are only available in the Azure commercial cloud. Power Apps trial licenses are not available in Azure Government or Microsoft Azure in China clouds.
+Power Apps trial licenses are only available in the Azure commercial cloud. Power Apps trial licenses aren't available in Azure Government or Microsoft Azure in China clouds.
 
 ### What happens when my trial expires?
 
