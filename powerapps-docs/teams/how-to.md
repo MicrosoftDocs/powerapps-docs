@@ -6,7 +6,8 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 06/29/2021
-ms.author: v-ljoel
+ms.subservice: teams
+ms.author: namarwah
 ms.reviewer: tapanm
 contributors:
   - navjotm
@@ -15,6 +16,8 @@ contributors:
 ---
 
 # Use How to sample app (Preview)
+
+[This article is pre-release documentation and is subject to change.]
 
 The How-to template app for Microsoft Teams provides a simple way to learn how to be a Power Apps maker by walking you step-by-step through designing data model, screens, and connecting screens together to build a complete Power Apps asset checkout solution.
 
@@ -30,8 +33,8 @@ Benefits of using the How-to app:
 > This app is available in three different Teams themes: Default, Dark and High contrast. When you [**change the theme in Teams**](https://support.microsoft.com/office/change-settings-in-teams-b506e8f1-1a96-4cf1-8c6b-b6ed4f424bc7) the app automatically updates to match the selected theme. More information: [**Get the Teams theme using the Teams integration object**](use-teams-integration-object.md#get-the-teams-theme)
 
 > [!IMPORTANT]
-> This is a preview feature.
-> Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
+> - This is a preview feature.
+> - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 
 ## Prerequisites
 
@@ -50,15 +53,15 @@ This article includes the steps from the app for makers who prefer to read them 
 
 From the main screen, you can see a summary of the steps to build the How to app and have the ability to preview the app.
 
-![How to app start screen](media/how-to/start-screen.png "How to app start screen")
+![How to app start screen.](media/how-to/start-screen.png "How to app start screen")
 
 Selecting **Get started in Power Apps** will take you to the Teams Power Apps app, from which you can start the maker journey. Selecting **Preview App** which will redirects the user to Assets Screen, from which the user can use the asset checkout app, and see what the final experience will be when they finish the app.
 
-![How to app - final app example](media/how-to/final-app.png "How to app - final app example")
+![How to app - final app example.](media/how-to/final-app.png "How to app - final app example")
 
 In the asset checkout app, selecting an item will take you to a screen where you can check out the item.
 
-![Example of checkout](media/how-to/checkout.png "Example of checkout")
+![Example of checkout.](media/how-to/checkout.png "Example of checkout")
 
 In the top-left corner, you can select the icon for checkout items, which are available in your account.
 
@@ -80,11 +83,11 @@ How to is a self-contained lesson in how to build a Power Apps. All of the instr
 
 1. In the How to tile, select the **How to** app. The app will open in the Power Apps app.
 
-    ![How to app tile](media/how-to/how-to-tile.png "How to app tile")
+    ![How to app tile.](media/how-to/how-to-tile.png "How to app tile")
 
 1. From the Tree view, select **Overview screen**.
 
-    ![How to app - overview screen](media/how-to/overview-screen.png "How to app - overview screen")
+    ![How to app - overview screen.](media/how-to/overview-screen.png "How to app - overview screen")
 
 ## Understanding the overview screen
 

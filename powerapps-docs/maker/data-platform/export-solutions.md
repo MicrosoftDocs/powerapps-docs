@@ -14,6 +14,7 @@ applies_to:
   - "powerapps"
 author: "Mattp123"
 ms.assetid: 
+ms.subservice: dataverse-maker
 ms.author: "matp"
 manager: "kvivek"
 search.audienceType: 
@@ -46,7 +47,7 @@ You can manually export solutions using the steps in this article. We recommend 
     - **Export as**: Select the package type, either **Managed** or **Unmanaged**. More information: [Managed and unmanaged solutions](/power-platform/alm/solution-concepts-alm#managed-and-unmanaged-solutions)
 
     > [!div class="mx-imgBorder"]  
-    > ![Export solution](media/solution-export.png "Export solution")
+    > ![Export solution.](media/solution-export.png "Export solution")
 
 The export can take several minutes to complete. Once finished, the export .zip file is available in the download folder specified by your web browser.
 

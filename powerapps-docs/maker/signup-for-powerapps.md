@@ -1,6 +1,6 @@
 ---
-title: Explore Power Apps for free for 30 days
-description: Sign up for a free license that includes all Power Apps capabilities and expires after 30 days.
+title: Power Apps 30-day free trial
+description: Explore Power Apps for free with a 30-day trial. You’ll be able to extend the capabilities of Office 365, create and run apps, manage environments, and more.
 author: alaug
 ms.service: powerapps
 ms.topic: conceptual
@@ -10,18 +10,21 @@ ms.custom:
 ms.date: 03/23/2020
 ms.author: alaug
 ms.reviewer: kvivek
+contributors:
+  - tapanm-msft
+  - alaug
 ---
 # Explore Power Apps for free for 30 days
 
-You can explore all Power Apps capabilities for free by signing up for a Power Apps trial plan that expires after 30 days. If you don't have any license for Power Apps, the trial plan provides temporary access to these and other features:
+You can explore all the Power Apps capabilities for free by signing up for a 30-day Power Apps trial plan. If you don't have any license for Power Apps, the trial plan provides temporary access to do the following:
 
-- Extend the capabilities of Office 365 (SharePoint Online, Teams, Excel and more).
-- Create and run canvas apps that connect to Microsoft Dataverse and a wide range of more than 200 other data sources, including premium connectors and on-premises data.
-- Create and run model-driven apps.
-- Create automated workflows with Power Automate.
-- Create and manage environments and Dataverse databases.
+- Extend the capabilities of Office 365 (SharePoint Online, Teams, Excel, and more)
+- Create and run canvas apps that connect to Microsoft Dataverse and a wide range of more than 200 other data sources, including premium connectors and on-premises data
+- Create and run model-driven apps
+- Create automated workflows with Power Automate
+- Create and manage environments and Dataverse databases
 
-If you have a Power Apps license or a license through Office 365, you already have access to some of these features; the trial license temporarily expands your access to include all features in the previous list. To find out what capabilities each type of license offers, see the [pricing page](https://powerapps.microsoft.com/pricing/).
+If you have a Power Apps license or a license through Office 365, you already have access to some of these features. However, the trial license temporarily expands your access to include all features in the previous list. To find out what capabilities each type of license offers, see the [pricing page](https://powerapps.microsoft.com/pricing/).
 
 > [!NOTE]
 > - If you're an administrator, see [Purchase Power Apps for your organization](../administrator/signup-for-powerapps-admin.md) or [Power Apps in your organization Q&A](../administrator/signup-question-and-answer.md).
@@ -31,45 +34,45 @@ If you have a Power Apps license or a license through Office 365, you already ha
 
 To find out which license or licenses you already have:
 
-1. Try to [sign in to Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) with your work or school credentials.
+1. [Sign in to Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) with your work or school credentials.
 
     > [!IMPORTANT]
     > You can't sign in by using a personal email address, such as one that ends in outlook.com, hotmail.com, or gmail.com. For more information, see [What email address can I use?](#what-email-address-can-i-use) later in this topic.
 
-2. Select the gear icon near the upper-right corner, and then select **Plan(s)**.
+2. Select the gear icon near the upper-right corner and then select **Plan(s)**.
 
-    ![Gear icon](./media/signup-for-powerapps/gear-icon.png)
+    ![Gear icon.](./media/signup-for-powerapps/gear-icon.png)
 
 ## Upgrade an existing license
 
-To start a free, 30-day trial of Power Apps per user plan from an existing license, [sign in to Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then try any feature that requires a premium Power Apps license. (For example, select the gear icon near the upper-right corner, select **Admin center**, and then select **New environment** near the upper-right corner.) Then follow the prompts to complete the sign-up process.
+To start a free 30-day trial of Power Apps per user plan from an existing license, [sign in to Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and then try any feature that requires a premium Power Apps license. (For example, select the gear icon near the upper-right corner, select **Admin center**, and then select **New environment** near the upper-right corner.) Follow the prompts to complete the sign-up process.
 
 ## Get a license from scratch
 
-Regardless of whether you have a license for Power Apps, you can start a free, 30-day trial of Power Apps per user plan by following these steps:
+Regardless of whether you have a license for Power Apps, you can start a free 30-day trial per user plan by following these steps:
 
 1. Open the [Power Apps site](https://powerapps.microsoft.com), and then select **Sign up free**.
 
     If you're using a phone, open the menu in the upper-right corner first, and then select **Sign up free**.
 
-1. Near the middle of the screen, select **Pricing**, and then select **Start free trial**.
+1. Near the middle of the screen, select **Pricing** and then select **Start free trial**.
 
-1. In the dialog box that appears, type or paste your work or school email address, and then select **Submit**.
+1. In the dialog box that appears, type or paste your work or school email address and then select **Submit**.
 
     > [!IMPORTANT]
     > For more information, see [What email address can I use?](#what-email-address-can-i-use) later in this topic.
 
 1. If a dialog box indicates that Power Apps recognizes your organizational credentials, follow the prompts to finish signing in.
 
-    ![Sign in with work account](./media/signup-for-powerapps/we-know-you.png)
+    ![Sign in with work account.](./media/signup-for-powerapps/we-know-you.png)
 
-    Otherwise, follow the prompts to check your email, verify your email address, provide more information if necessary, and select **Start**.
+    Otherwise, follow the prompts to check your email, verify your email address, provide more information if necessary, and then select **Start**.
 
 ## FAQ
 
 ### What email address can I use?
 
-You can use a work or school address to sign up for a trial license. If you use another kind of address, you might experience one of the symptoms in this table.
+You can use a work or school email address to sign up for a trial license. If you use a different kind of address, you might experience one of the symptoms in this table.
 
 
 |                                                                                                                                                                                                                             Symptom / error message                                                                                                                                                                                                                             |                                                                                                                                                                                                     Cause and workaround                                                                                                                                                                                                      |
@@ -85,13 +88,13 @@ To determine when your trial license will expire, select the gear icon near the 
 -->
 
 ### Does the cloud environment I use Power Apps in allow the use of trial licenses? 
-Power Apps trial licenses are only available in the Azure commercial cloud. Power Apps trial licenses are not available in Azure Government and Microsoft Azure in China clouds.
+Power Apps trial licenses are only available in the Azure commercial cloud. Power Apps trial licenses are not available in Azure Government or Microsoft Azure in China clouds.
 
 ### What happens when my trial expires?
 
 You'll be prompted to request an extension of the trial or purchase a plan 30 days after the trial starts. You can find details about all plans on the [pricing page](https://powerapps.microsoft.com/pricing/).
 
-If you don't extend the trial or purchase a plan but you still have another kind of license, you can still use all the features of Power Apps that your other license provides. Any data in Dataverse will remain as it is, and any app or flow that uses Dataverse will continue to run as it did if your license supports them. If you try to use premium Power Apps features but your existing license doesn't (for example, modify a schema or entities in Dataverse), you'll be prompted to purchase a plan.
+If you don't extend the trial or purchase a plan but you still have another kind of license, you can use all the features of Power Apps that your other license provides. Any data in Dataverse will remain as it is, and any app or flow that uses Dataverse will continue to run as it did if your license supports them. If you try to use premium Power Apps features but your existing license doesn't support them (for example, modify a schema or entities in Dataverse), you'll be prompted to purchase a plan.
 
 ### More questions?
 
@@ -99,3 +102,4 @@ Try the Power Apps [community](https://community.powerapps.com).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
+

@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2021
+ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: tapanm
 contributors:
@@ -46,7 +47,7 @@ Now that you have the TSLinearInputComponent component uploaded to the Datavers
 
 You can [update an existing model-driven app](../model-driven-apps/design-custom-business-apps-using-app-designer.md) or [create a new app](../model-driven-apps/build-first-model-driven-app.md) with the form to which you added the component. For example, the following image shows how the **Opportunity** table **Main** form looks when using the code component in this tutorial.
 
-![Slider control added to the Budget Amount field in model-driven app form](media/component-framework/model-driven-app.png "Slider control added to the Budget Amount field in model-driven app form")
+![Slider control added to the Budget Amount field in model-driven app form.](media/component-framework/model-driven-app.png "Slider control added to the Budget Amount field in model-driven app form")
 
 ## Step 4. Add code component to a basic form in portals
 
@@ -72,7 +73,7 @@ In this step, you’ll create a new basic form in portals and then add the compo
 
 8.  Select your portal **Website**.
 
-    ![Configure basic form using Portal Management app](media/component-framework/new-entity-form.png "Configure basic form using Portal Management app")
+    ![Configure basic form using Portal Management app.](media/component-framework/new-entity-form.png "Configure basic form using Portal Management app")
 
 9.  Select **Save & Close**.
 
@@ -94,13 +95,13 @@ In this step, you’ll create a new basic form in portals and then add the compo
 
 8.  Select **Attribute Logical Unit Name** as *Budget Amount (budgetamount)*.
 
-    ![Budget Amount attribute logical name](media/component-framework/attribute-logical-name.png "Budget Amount attribute logical name")
+    ![Budget Amount attribute logical name.](media/component-framework/attribute-logical-name.png "Budget Amount attribute logical name")
 
 9.  Enter **Label**. For example, *Budget Amount*.
 
 10. For **Control Style**, select **Code component**.
 
-    ![Control Style](media/component-framework/control-style.png "Control Style")
+    ![Control Style.](media/component-framework/control-style.png "Control Style")
 
 11. Select **Save & Close**.
 
@@ -125,13 +126,13 @@ In this step, you’ll create a new basic form in portals and then add the compo
 
 9.  Select **Save.**
 
-    ![Permissions for code component](media/component-framework/permissions.png "Permissions for code component")
+    ![Permissions for code component.](media/component-framework/permissions.png "Permissions for code component")
 
 10. Under **Web Roles**, select **Add Existing Web Role**.
 
 11. Choose the web role as required. For example, choose the *Authenticated Users* web role of a portal website record to allow access to all authenticated users.
 
-    ![Web Role for code component](media/component-framework/webrole.png "Web Role for code component")
+    ![Web Role for code component.](media/component-framework/webrole.png "Web Role for code component")
 
 12. Select **Save & Close**.
 
@@ -170,7 +171,7 @@ In this step, you’ll create a new basic form in portals and then add the compo
 
 The webpage will now show the basic form for the **Opportunities** table with the code component as the slider, similar to how it appears using the model-driven app for the same form.
 
-![Example preview of the Budget Amount slider control on portals page](media/component-framework/example-preview.png "Example preview of the Budget Amount slider control on portals page")
+![Example preview of the Budget Amount slider control on portals page.](media/component-framework/example-preview.png "Example preview of the Budget Amount slider control on portals page")
 
 ## Next steps
 
