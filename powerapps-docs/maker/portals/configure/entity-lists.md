@@ -507,9 +507,9 @@ If enabled, a table can be published to an OData feed. The OData protocol is an 
 
 > [!NOTE]
 > Lists that have OData feeds enabled require appropriate [table permissions](entity-permissions-studio.md) setup for the feed on these lists to work. Hence, you must enable table permissions on a list that has OData feeds enabled.
-> - Release [9.3.7.x](/power-platform/released-versions/portals/portalupdate1) or later will show the following error, and won't allow you to save the list without enabling table permissions:
+> - Latest version of the portal solutions (such as [version 9.2.2108 or later for starter portal](versions/package-version-9.2.2108)) will show the following error, and won't allow you to save the list without enabling table permissions:
 > <br> "Table permissions must be enabled from the General tab because the OData feed is enabled."
-> - Releases earlier than [9.3.7.x](/power-platform/released-versions/portals/portalupdate1) don't show the above message. However, the requirement to use the list OData feeds remains the same as the latest versions&mdash;you must enable table permissions on a list that has OData feeds enabled.
+> - Older portal solutions don't show the above message. However, the requirement to use the list OData feeds remains the same as the latest versions&mdash;you must enable table permissions on a list that has OData feeds enabled.
 
 ## Enhanced view filter for lists
 
