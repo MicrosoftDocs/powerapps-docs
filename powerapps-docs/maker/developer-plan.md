@@ -47,7 +47,7 @@ Key changes include:
 
 ## Who can sign up for the Power Apps Developer Plan?
 
-Anyone with a [work or school email address](signup-for-powerapps.md#faq) can sign up for the Power Apps Developer Plan.
+Anyone with a [work or school email address](signup-for-powerapps.md#faq) backed by [Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/sign-up-organization) can sign up for the Power Apps Developer Plan.
 
 ## Where can I sign up for the Power Apps Developer Plan?
 
