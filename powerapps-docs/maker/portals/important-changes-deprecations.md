@@ -28,7 +28,7 @@ Makers, developers, and IT professionals can use this information to prepare for
 
 Starting with release [9.3.7.x](/power-platform/released-versions/portals/portalupdate1), newly created portals will have table permissions enforced for all [forms](configure/entity-forms.md#secure-your-forms) and [lists](configure/entity-lists.md#securing-lists) irrespective of the **Enable Table Permissions** setting.
 
-Also, with the same release, lists on all portals (new or existing) that have [oData Feed](configure/entity-lists.md#list-odata-feeds) enabled will require appropriate [table permissions](configure/entity-permissions-studio.md) setup for the feed on these lists to work.
+Also, with the same release, lists on all portals (new or existing) that have [OData feeds](configure/entity-lists.md#list-odata-feeds) enabled will require appropriate [table permissions](configure/entity-permissions-studio.md) setup for the feed on these lists to work.
 
 To configure anonymous access explicitly, use proper [table permissions](configure/entity-permissions-studio.md), and web role setup instead.
 

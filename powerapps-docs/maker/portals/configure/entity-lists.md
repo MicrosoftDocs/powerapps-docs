@@ -506,9 +506,10 @@ To display records by using a calendar, those records need to include at a minim
 If enabled, a table can be published to an OData feed. The OData protocol is an application-level protocol for interacting with data via RESTful web services. Data from this feed can be viewed in a web browser, consumed by a client-side web application, or imported into [!INCLUDE[pn-excel-short](../../../includes/pn-excel-short.md)].
 
 > [!NOTE]
-> - Lists that have OData Feed enabled require appropriate [table permissions](entity-permissions-studio.md) setup for the feed on these lists to work. Hence, you must enable table permissions on a list that has OData feeds enabled. Release [9.3.7.x](/power-platform/released-versions/portals/portalupdate1) or later will show the following error, and won't allow you to save the list without enabling table permissions:
+> Lists that have OData feeds enabled require appropriate [table permissions](entity-permissions-studio.md) setup for the feed on these lists to work. Hence, you must enable table permissions on a list that has OData feeds enabled.
+> - Release [9.3.7.x](/power-platform/released-versions/portals/portalupdate1) or later will show the following error, and won't allow you to save the list without enabling table permissions:
 > <br> "Table permissions must be enabled from the General tab because the OData feed is enabled."
-> - Releases earlier than [9.3.7.x](/power-platform/released-versions/portals/portalupdate1) don't show the above message. However, the requirement remains the same as the latest versions&mdash;you must enable and setup table permissions on the list&mdash;before using list OData fees.
+> - Releases earlier than [9.3.7.x](/power-platform/released-versions/portals/portalupdate1) don't show the above message. However, the requirement remains the same as the latest versions&mdash;you must enable and setup table permissions on the list&mdash;before using list OData feeds.
 
 ## Enhanced view filter for lists
 

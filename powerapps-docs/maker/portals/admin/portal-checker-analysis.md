@@ -56,7 +56,7 @@ Once these changes are made, appropriate table permissions would need to be crea
 ## Anonymous access available to OData feed
 
 > [!NOTE]
-> Starting with release [9.3.7.x](/power-platform/released-versions/portals/portalupdate1), lists on all portals (new or existing) that have [OData feed](../configure/entity-lists.md#list-odata-feeds) enabled will require appropriate [table permissions](../configure/entity-permissions-studio.md) setup for the feed on these Lists to work.
+> Starting with release [9.3.7.x](/power-platform/released-versions/portals/portalupdate1), lists on all portals (new or existing) that have [OData feed](../configure/entity-lists.md#list-odata-feeds) enabled will require appropriate [table permissions](../configure/entity-permissions-studio.md) setup for the feed on these lists to work.
 
 List component in portal can be enabled for OData feed by enabling [OData feed configuration](../configure/entity-lists.md#list-odata-feeds) on lists. 
 
