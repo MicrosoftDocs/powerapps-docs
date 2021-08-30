@@ -98,6 +98,8 @@ You can use computed fields in the Power BI report to convert other value types 
 
 **LoadPowerBIContent** – When set to **True**, the Power BI content is loaded and shown. When set to **False**, the Power BI content is unloaded, which releases memory and optimizes performance.
 
+**PowerBIInteractions** -- When set to **True**, the Power BI content can be interacted with.  When set to **False**, the tile cannot be interacted with, similar to a read only mode.
+
 **Tile** – The name of the Power BI tile that you want to display.
 
 **Workspace** – The Power BI workspace where the tile comes from.
