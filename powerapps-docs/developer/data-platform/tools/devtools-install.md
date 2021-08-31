@@ -49,7 +49,7 @@ To install Power Platform Tools, follow these steps:
 1. Expand the left navigation panel node **Online** > **Visual Studio Marketplace**. Search for "Power Platform Tools", then download and install the extension.
 
 > [!IMPORTANT]
-> You will not find any Power Platform Tools related menu items or views in the Visual Studio user interface until you create or load a Visual Studio solution that contains at least one project created from a Power Platform Tools template.
+> After installing Power Platform Tools, you will not find any Power Platform Tools related menu items or views in the Visual Studio user interface until you create or load a Visual Studio solution that contains at least one project created from a Power Platform Tools template.
 
 ### Uninstall Power Platform Tools extension
 
