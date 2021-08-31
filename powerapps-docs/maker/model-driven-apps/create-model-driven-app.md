@@ -133,7 +133,7 @@ From the **Settings** dialog box you can make app-level changes such as app name
 
 Comments are notes that are associated with items in your app. Use comments to help your team review the app and provide feedback, or provide additional information on implementation details in your app.  
 
-In the app designer, the anchors, which are what comments attach to, are all of the pages in the pages pane, and any of the items in the **Navigation** pane, such as an area, group, page, table, or dashboard. Comments are stored in a table in Microsoft Dataverse in the default solution.
+In the app designer, the anchors, which are what comments attach to, are all of the pages in the pages pane, and any of the items in the **Navigation** pane. This lets you add comments to items such as areas, groups, pages, tables, and dashboards. Comments are stored in a table in Microsoft Dataverse in the default solution.
 
 ### Add a comment to a page
 
@@ -155,7 +155,7 @@ Comments are commonly questions, feedback, or ideas that are important context t
 
 1. In the **Comments** pane, next to a comment, select **...**, and then select **Resolve comment**.
 1. The comment thread appears as **Resolved**.
-1. To reopen select ![reopen comment thread button](media/reopen-thread-button.png)  **Reopen thread** or ![Delete comment thread button](media/delete-thread-button.png) **Delete thread** to remove the comment.
+1. To reopen select <img src = "media/reopen-thread-button.png" alt = "reopen comment thread button" width = "35" height = "35"> **Reopen thread** or <img src = "media/delete-thread-button.png" alt = "Delete comment thread button" width = "35" height = "35"> **Delete thread** to remove the comment.
 
 ### See also
 
