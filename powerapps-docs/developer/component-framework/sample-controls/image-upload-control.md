@@ -43,7 +43,7 @@ The `resources.getResource` method takes the input as the web resource name defi
 
 The `successCallback` will be triggered and the resource content injects in the `successCallback`. Then you use the image element 'src' points to the content and the default image loads.
 
-The `device.pickFile` method a dialog box to select files for the upload. For desktop, it opens the file explorer, for the mobile client, it opens the library of the photo. When you click on the `upload` button, the device API `pickFile` triggers and the user picks up the file. Once the file is successfully picked, the file's filename, file content will be injected in the `successCallback`.
+The `device.pickFile` method opens a dialog box to select files for the upload. For desktop, it opens the file explorer, for the mobile client, it opens the library of the photo. When you click on the `upload` button, the device API `pickFile` triggers and the user picks up the file. Once the file is successfully picked, the file's filename, file content will be injected in the `successCallback`.
 
 > [!NOTE]
 > If the same form or table is used on the legacy web client, then the field will show out-of-box text component on legacy web client, where there might have UX issues.  To make it hidden on the legacy web client, we could uncheck the **Visibility** checkbox and check **Hide Default Control** checkbox together.
