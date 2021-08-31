@@ -17,22 +17,19 @@ ms.assetid: b7cbb29f-4663-46c4-9aa8-1209a68e73b3
 
 [!INCLUDE[./includes/getbarcodevalue-description.md](./includes/getbarcodevalue-description.md)]
 
+## Available for
+
+Model-driven (mobile platform) and canvas apps (mobile platform)
+
 ## Syntax
 
 `context.device.getBarcodeValue()`
-
-## Available for 
-
-Model-driven and canvas apps
 
 ## Return Value
 
 Type: `Promise<string>`
 
-## Remarks
-
 See [Promise](https://developer.mozilla.org/docs/Web/JavaScript/reference/Global_Objects/Promise)
-
 
 ### Related topics
 
