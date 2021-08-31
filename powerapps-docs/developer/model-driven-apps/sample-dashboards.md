@@ -7,6 +7,7 @@ ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
 author: "Nkrb" # GitHub ID
+ms.subservice: mda-developer
 ms.author: "nabuthuk" # MSFT alias of Microsoft employees only
 manager: "shilpas" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -25,7 +26,7 @@ This topic contains sample dashboards along with the respective FormXML strings.
 ## Dashboard with charts and grids  
  The following is a sample dashboard that has four components: three charts and a grid. This is one of the default organization-owned dashboards,  available in model-driven apps.  
   
- ![Sample dashboard](media/dashboard-sample.png "Sample dashboard: Microsoft Dynamics 365 Overview")  
+ ![Sample dashboard.](media/dashboard-sample.png "Sample dashboard: Microsoft Dynamics 365 Overview")  
   
 ### FormXML
   
