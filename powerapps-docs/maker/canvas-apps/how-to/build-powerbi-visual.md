@@ -66,7 +66,7 @@ Sign in to Power BI with the same Office license as the one used for creating th
 
     ![Open the workspace and select the New button](media/build-powerbi-visual/create-a-new-workspace-8.png "Open the workspace and select the New button")
 
-1. Select **Samples** under "More ways to create your own content to use sample data”.
+1. Select **Samples** under "More ways to create your own content" to use sample data.
 
     ![Select the Samples hyperlink](media/build-powerbi-visual/create-a-new-workspace-9.png "Select the Samples hyperlink")
 
