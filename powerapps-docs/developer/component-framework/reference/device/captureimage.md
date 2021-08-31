@@ -19,7 +19,7 @@ ms.assetid: 1d9c0063-add2-4002-acab-1be07ca1f6b6
 
 ## Available for
 
-Model-driven (mobile platform) and canvas apps (mobile platform)
+Model-driven (mobile client) and canvas apps (mobile client)
 
 ## Syntax
 
