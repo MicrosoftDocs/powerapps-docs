@@ -154,7 +154,7 @@ When you previewed the app, you may have noticed that searching by account name 
    SortByColumns(Search([@Accounts], TextSearchBox1.Text, "name","address1_city","address1_composite"), "name", If(SortDescending1, Descending, Ascending))
    ```
 
-    The formula consists of [SortByColumns](../functions/function-sort.md), [Search](functions/function-filter-lookup.md), and [If](functions/function-if.md) functions to search the **Accounts** table with the text entered in the search box that has the matching data in the name, address1_city, and address1_composite fields, and allow sorting.
+    The formula consists of [SortByColumns](../functions/function-sort.md), [Search](../functions/function-filter-lookup.md), and [If](../functions/function-if.md) functions to search the **Accounts** table with the text entered in the search box that has the matching data in the name, address1_city, and address1_composite fields, and allow sorting.
 
 The account list can now be searched and sorted by the Account name field.
 
