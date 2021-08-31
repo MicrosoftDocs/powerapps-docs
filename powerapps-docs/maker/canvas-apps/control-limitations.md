@@ -33,8 +33,6 @@ In this article, learn about the general limitations of the controls used in can
    - When using Internet Explorer, the camera control isn't supported. Microsoft Edge is recommended.
    - When using desktop browsers, the barcode scanner isn't supported. Use the Power Apps for mobile app.
 
-- [Container control (experimental)](controls/control-container.md) - see [Container control (experimental) limitations](controls/control-container.md#known-limitations).
-
 - [Export and import controls](controls/control-export-import.md) - see [Export and import control limitations](controls/control-export-import.md#limitations).
 
 - [Gallery control](controls/control-gallery.md) - see [Gallery control limitations](controls/control-gallery.md#limitations).
