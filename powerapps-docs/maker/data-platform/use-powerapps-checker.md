@@ -7,6 +7,7 @@ ms.service: powerapps
 ms.component: cds
 ms.topic: article
 ms.date: 08/12/2020
+ms.subservice: dataverse-maker
 ms.author: matp
 search.audienceType: 
   - maker
@@ -42,7 +43,7 @@ The Solution checker is enabled by default in every Dataverse environment. A **S
 3. On the toolbar, select **Solution checker** and then select **Install** – this opens the Microsoft AppSource page. You need to allow pop-up windows if your browser blocks the page from opening. 
 
    > [!div class="mx-imgBorder"]
-   > ![Install solution checker](media/solution-checker-install.png "Install solution checker")
+   > ![Install solution checker.](media/solution-checker-install.png "Install solution checker")
 
 4. Select **Free Trial** on the AppSource page. 
 
@@ -57,12 +58,12 @@ The Solution checker is enabled by default in every Dataverse environment. A **S
 3. Next to the unmanaged solution that you want to analyze, select **...**, point to **Solution checker**, and then select **Run**. 
 
    > [!div class="mx-imgBorder"]
-   > ![Run solution checker command](media/solution-checker-run.png "Run solution checker command")
+   > ![Run solution checker command.](media/solution-checker-run.png "Run solution checker command")
 
 4.	The status pane located on the upper right of the **Solutions** page displays **Solution checker running**. 
 
     > [!div class="mx-imgBorder"]
-    > ![Solution checker status](media/solution-checker-status.png "Solution checker status")
+    > ![Solution checker status.](media/solution-checker-status.png "Solution checker status")
    
     Note the following:
     - The solution checker can take a few minutes to complete the analysis. 
@@ -101,7 +102,7 @@ When a solution check is completed, you can view the analysis report in the port
 3. Select an Issue to view the details and guidance on how to resolve.
 
     > [!div class="mx-imgBorder"] 
-    > ![Solution checker view results](media/solution-checker-viewresults.png "Solution checker view results")
+    > ![Solution checker view results.](media/solution-checker-viewresults.png "Solution checker view results")
 
 The solution check results are also available for download. The solution checker zip file is downloaded to the folder specified by your web browser.The download report is in [!INCLUDE [pn-excel-short](../../includes/pn-excel-short.md)] format and contains several visualizations and columns that assist you in identifying the impact, type, and location of each issue detected in your solution. A link to detailed guidance about how to resolve the issue is also provided. 
 

@@ -8,11 +8,16 @@ ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
 ms.date: 05/12/2021
+ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - navjotm
+  - wimcoor
 ---
 # How to link SharePoint lists using a lookup column in Power Apps
 
@@ -63,17 +68,17 @@ You do this first, so that when you add data to the **Assets** list, **RepairSho
 
 1. On your SharePoint site, create a new **RepairShop** list from blank.
 
-    ![New list](./media/sharepoint-lookup-fields/new-list.png)
+    ![New list.](./media/sharepoint-lookup-fields/new-list.png)
 
 2. Add a *ContactEmail* column of type **Single line of text**.
 
-    ![Add email column](./media/sharepoint-lookup-fields/add-email-field.png)
+    ![Add email column.](./media/sharepoint-lookup-fields/add-email-field.png)
 
 3. Add any other columns you need.
 
 4. Select **+ New** to enter sample data into the list, at least 3 rows with different *ContactEmail* values. When an asset needs to be repaired, you choose one of these. You can also use **Edit in grid view** to quickly enter text in grid.
 
-    ![Add repair shops](./media/sharepoint-lookup-fields/add-repair-shops.png)
+    ![Add repair shops.](./media/sharepoint-lookup-fields/add-repair-shops.png)
 
 ### Define the Assets list
 
@@ -81,17 +86,17 @@ You do this first, so that when you add data to the **Assets** list, **RepairSho
 
 1. Add an *AssetType* column of type **Choice**, and fill in the values you want to appear in the choice menu as choices. Then select **Save**.
 
-    ![Define choice column](./media/sharepoint-lookup-fields/define-choice-column.png)
+    ![Define choice column.](./media/sharepoint-lookup-fields/define-choice-column.png)
 
 1. Select **+ Add column** > **More**.
 
 1. Enter column name as *RepairShop*. And column type as **Lookup**.
 
-    ![Setup lookup column](./media/sharepoint-lookup-fields/setup-lookup-column.png)
+    ![Setup lookup column.](./media/sharepoint-lookup-fields/setup-lookup-column.png)
 
 1. In additional column settings, select **RepairShop** as the list to get the information from, and the column for the lookup as **ContactEmail**.
 
-    ![Lookup column](./media/sharepoint-lookup-fields/lookup-column.png)
+    ![Lookup column.](./media/sharepoint-lookup-fields/lookup-column.png)
 
 1. Select **Ok**.
 
@@ -105,19 +110,19 @@ You use this app to add data to the **Assets** list.
 
 1. Under **Start from data**, select **SharePoint**.
 
-    ![Create app](./media/sharepoint-lookup-fields/create-app.png)
+    ![Create app.](./media/sharepoint-lookup-fields/create-app.png)
 
 1. Select your SharePoint site. If you don't have a SharePoint connection, select **Create** instead, connect to SharePoint online, and then choose your site.
 
 1. Choose the main list from your SharePoint site, in this example, **Assets**. Select the **Connect** button in the lower-right corner.
 
-    ![Choose main list](./media/sharepoint-lookup-fields/choose-main-list.png)
+    ![Choose main list.](./media/sharepoint-lookup-fields/choose-main-list.png)
 
 ## Add data to the Assets list
 
 Now you can run the app and see how the view details screen looks for the lookup columns.
 
-1. Press F5 or select Preview ( ![Preview icon](./media/sharepoint-lookup-fields/preview.png) ).
+1. Press F5 or select Preview ( ![Preview icon.](./media/sharepoint-lookup-fields/preview.png) ).
 
 2. Select the **+** symbol in the upper right corner to add an entry.
 
@@ -125,11 +130,11 @@ Now you can run the app and see how the view details screen looks for the lookup
 
 4. Select the **AssetType** dropdown arrow. The values displayed are those you entered when you created this column. Choose one of the entries.
 
-    ![Fill asset type](./media/sharepoint-lookup-fields/fill-asset-type-3.png)
+    ![Fill asset type.](./media/sharepoint-lookup-fields/fill-asset-type-3.png)
 
 5. Select the **RepairShop** dropdown arrow. Choose one of the entries.
 
-    ![Fill repair shop](./media/sharepoint-lookup-fields/fill-repair-shop-3.png)
+    ![Fill repair shop.](./media/sharepoint-lookup-fields/fill-repair-shop-3.png)
 
 6. In the upper-right corner, select the check mark to save the new entry.
 

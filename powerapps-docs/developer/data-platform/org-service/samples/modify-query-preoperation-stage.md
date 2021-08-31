@@ -125,10 +125,10 @@ if (queryExpressionQuery != null)
     {
         tracingService.Trace("Query on Account confirmed");
 
-        //Recursively remove any conditions referring to the statecode attribute
+        //Recursively remove any conditions referring to the statecode column
         foreach (FilterExpression fe in queryExpressionQuery.Criteria.Filters)
         {
-            //Remove any existing criteria based on statecode attribute
+            //Remove any existing criteria based on statecode column
             RemoveAttributeConditions(fe, "statecode", tracingService);
         }
 
@@ -144,14 +144,14 @@ if (queryExpressionQuery != null)
 
 #### RemoveAttributeConditions method
 
-A recursive method that removes any conditions for a specific named attribute
+A recursive method that removes any conditions for a specific named column
 
 ```csharp
 /// <summary>
-/// Removes any conditions using a specific named attribute
+/// Removes any conditions using a specific named column
 /// </summary>
-/// <param name="filter">The filter that may have a condition using the attribute</param>
-/// <param name="attributeName">The name of the attribute that should not be used in a condition</param>
+/// <param name="filter">The filter that may have a condition using the column</param>
+/// <param name="attributeName">The name of the column that should not be used in a condition</param>
 /// <param name="tracingService">The tracing service to use</param>
 private void RemoveAttributeConditions(FilterExpression filter, string attributeName, ITracingService tracingService)
 {
@@ -198,7 +198,7 @@ if (queryByAttributeQuery != null)
 
 The following code demonstrates 5 different ways to perform the same query that will trigger the plug-in. 
 
-By specifying a specific criteria, in this case the `address1_city` attribute value, which only one active record will match, these queries will return just that record.
+By specifying a specific criteria, in this case the `address1_city` column value, which only one active record will match, these queries will return just that record.
 
 Then, deactivate that record and run this code a second time. No records will be returned.
 

@@ -8,11 +8,15 @@ ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 10/16/2020
+ms.subservice: canvas-maker
 ms.author: arthii
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - arthiriyer
 ---
 
 # Manage an on-premises data gateway in Power Apps
