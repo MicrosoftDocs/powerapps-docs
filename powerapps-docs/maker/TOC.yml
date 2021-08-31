@@ -437,7 +437,7 @@
               href: ./canvas-apps/controls/control-column.md
             - name: Combo box
               href: ./canvas-apps/controls/control-combo-box.md
-            - name: Container (preview)
+            - name: Container
               href: ./canvas-apps/controls/control-container.md
             - name: Data table
               href: ./canvas-apps/controls/control-data-table.md
