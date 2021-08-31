@@ -155,7 +155,7 @@ Comments are commonly questions, feedback, or ideas that are important context t
 
 1. In the **Comments** pane, next to a comment, select **...**, and then select **Resolve comment**.
 1. The comment thread appears as **Resolved**.
-1. To reopen select <img src = "media/reopen-thread-button.png" alt = "reopen comment thread button" width = "35" height = "35"> **Reopen thread** or <img src = "media/delete-thread-button.png" alt = "Delete comment thread button" width = "35" height = "35"> **Delete thread** to remove the comment.
+1. To reopen select <img src = "media/reopen-thread-button.png" alt = "reopen comment thread button" width = "20" height = "20"> **Reopen thread** or <img src = "media/delete-thread-button.png" alt = "Delete comment thread button" width = "20" height = "20"> **Delete thread** to remove the comment.
 
 ### See also
 
