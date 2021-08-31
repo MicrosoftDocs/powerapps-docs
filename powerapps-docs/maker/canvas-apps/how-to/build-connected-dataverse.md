@@ -279,7 +279,7 @@ By saving the app, your app will become available to use and share with others.
 
    - Search app list for **Blue Yonder Airlines**.
    - Select the **Blue Yonder** record and verify you see the fields added to the **Display form**.
-   - Select ![Select edit](media/build-connected-dataverse/pencil.png "Select edit") to Edit form.
+   - Select ![Select edit](media/build-connected-dataverse/pencil.png "Select edit") to edit the record.
    - Verify form displays two columns of fields.
    - Verify that the field names don't display **Address 1:** in the labels.
    - Select **Attach file** in the Attachment area, select a file, and select **Open**.
