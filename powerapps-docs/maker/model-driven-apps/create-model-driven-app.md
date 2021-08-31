@@ -141,7 +141,7 @@ In the app designer, the anchors, which are what comments attach to, are all of 
 1. Select a component in the **Pages** pane.
 1. Select **Comments** on the command bar. This opens the comments pane for the selected component.
    :::image type="content" source="media/comments-feature2.png" alt-text="Comments feature in app designer":::
-1. Select **New** to create a new comment and type the comment message in the box. Or, type into the **Reply** box to respond to an existing comment. Select Enter to commit your comment.
+1. Select **New** to create a new comment and type the comment message in the box. Or, type into the **Reply** box to respond to an existing comment. Select Enter to post your comment.
 
 ### Edit or delete a comment
 
