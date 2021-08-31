@@ -19,7 +19,7 @@ ms.assetid: 93021be2-b284-4da3-81a1-6d5587be6ce7
 
 ## Available for
 
-Model-driven apps (mobile platform)
+Model-driven apps (mobile client)
 
 ## Syntax
 
