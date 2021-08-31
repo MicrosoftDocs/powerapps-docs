@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 08/24/2021
+ms.date: 08/30/2021
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: tapanm
@@ -506,8 +506,10 @@ To display records by using a calendar, those records need to include at a minim
 If enabled, a table can be published to an OData feed. The OData protocol is an application-level protocol for interacting with data via RESTful web services. Data from this feed can be viewed in a web browser, consumed by a client-side web application, or imported into [!INCLUDE[pn-excel-short](../../../includes/pn-excel-short.md)].
 
 > [!NOTE]
-> OData feed is accessible anonymously and without authorization checks if **Enable Table Permissions** is disabled. Hence, you must enable table permissions on a list that has OData feeds enabled. Otherwise, you'll see the following error, and won't be able save the changes to the list:
+> Lists that have OData feeds enabled require appropriate [table permissions](entity-permissions-studio.md) setup for the feed on these lists to work. Hence, you must enable table permissions on a list that has OData feeds enabled.
+> - Latest portal solutions will show the following error, and won't allow you to save the list without enabling table permissions:
 > <br> "Table permissions must be enabled from the General tab because the OData feed is enabled."
+> - Older portal solutions don't show the above message. However, for the lists with OData feeds enabled, table permissions are always considered enabled even if you save the list without selecting **Enable Table Permissions** setting explicitly.
 
 ## Enhanced view filter for lists
 
