@@ -21,7 +21,7 @@ search.app:
 
 ## Available for
 
-This method is supported for all clients.
+This method is supported for both web and mobile clients.
 
 ## Syntax
 
