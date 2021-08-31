@@ -1,20 +1,25 @@
 ---
-title: Create a flow and trigger it from a Power App
-description: Learn about how to trigger a flow from a Power App.
+title: Build a canvas app that can trigger a Power Automate flow
+description: Learn about how to build a canvas app that can trigger a Power Automate flow.
 author: joel-lindstrom
 ms.service: powerapps
 ms.topic: article
-ms.date: 06/27/2021
-ms.author: v-ljoel
-ms.reviewer: tapanm
-search.audienceType:
+ms.custom: canvas
+ms.reviewer:
+ms.date: 08/31/2021
+ms.subservice: canvas-maker
+ms.author: emcoope
+search.audienceType: 
   - maker
-search.app:
+search.app: 
   - PowerApps
+contributors:
+    - joel-lindstrom
+    - tapanm-msft
 ---
 
 
-# Example: Create a flow and trigger it from a Power App
+# Build a canvas app that can trigger a Power Automate flow
 
 Power Automate can be used to create logic that performs one or more tasks when an event occurs in a canvas app. For example, a button can be configured so that, when a user selects it, an item is created in a SharePoint list, an email or meeting request is sent, a file is added to the cloud, or all of these. Any control in the app can be configured to start the flow, which continues to run even if you close Power Apps.
 
@@ -245,3 +250,7 @@ Navigate(Screen1);
 An email like this should appear in your inbox
 
 ![Email like this should appear in your inbox](media/create-and-trigger-a-flow-from-a-power-app/test-the-app-3.png "mail like this should appear in your inbox")
+
+### See also
+
+[Start a flow in canvas apps](../using-logic-flows.md)
