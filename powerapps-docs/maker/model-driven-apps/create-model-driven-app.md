@@ -2,7 +2,7 @@
 title: "Create a model-driven app using the designer | MicrosoftDocs"
 description: Learn how to create a model-driven app.
 ms.custom: ""
-ms.date: 04/30/2021
+ms.date: 08/31/2021
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -22,7 +22,7 @@ search.app:
   - "PowerApps"
   - D365CE
 ---
-# Create a model-driven app with the app designer
+# Create a model-driven app with the app designer (preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
@@ -128,6 +128,34 @@ From the **Settings** dialog box you can make app-level changes such as app name
    - **Name**: The name of the app.
    - **Description**: A description of the app is optional.
    <!-- - **Can be used offline**: Allows users to run the app and interact with data without an internet connection. More information: [Configure mobile offline synchronization for Power Apps mobile](../../mobile/setup-mobile-offline.md) -->
+
+## Add comments
+
+Comments are notes that are associated with items in your app. Use comments to help your team review the app and provide feedback, or provide additional information on implementation details in your app.  
+
+In the app designer, the anchors, which are what comments attach to, are all of the pages in the pages pane, and any of the items in the **Navigation** pane, such as an area, group, page, table, or dashboard. Comments are stored in a table in Microsoft Dataverse in the default solution.
+
+### Add a comment to a page
+
+1. Open a model-driven app for edit using the app designer.
+1. Select a component in the **Pages** pane.
+1. Select **Comments** on the command bar. This opens the comments pane for the selected component.
+   :::image type="content" source="media/comments-feature2.png" alt-text="Comments feature in app designer":::
+1. Select **New** to create a new comment and type the comment message in the box. Or, type into the **Reply** box to respond to an existing comment. Select Enter to commit your comment.
+
+### Edit or delete a comment
+
+You can edit your comments or or remove existing comments from appearing in the app.
+
+In the **Comments** pane, next to a comment, select **...** and then **Edit comment** or select **Delete comment**.
+
+### Resolve a comment
+
+Comments are commonly questions, feedback, or ideas that are important context to live alongside your app. But, they may not be active discussions anymore. You can resolve or unresolve a comment thread to track the open comments.  
+
+1. In the **Comments** pane, next to a comment, select **...**, and then select **Resolve comment**.
+1. The comment thread appears as **Resolved**.
+1. To reopen select ![reopen comment thread button](media/reopen-thread-button.png)  **Reopen thread** or ![Delete comment thread button](media/delete-thread-button.png) **Delete thread** to remove the comment.
 
 ### See also
 
