@@ -125,6 +125,6 @@ You've created a canvas app with Power BI tile.
 ### See also
 
 - [Connect to Power BI from Power Apps](../connections/connection-powerbi.md)
-- [Power Apps visual for Power BI](../canvas-apps/powerapps-custom-visual.md)
+- [Power Apps visual for Power BI](../powerapps-custom-visual.md)
 - [Power BI tile control in Power Apps](../controls/control-power-bi-tile.md)
 - [Tutorial: Embed a Power Apps visual in a Power BI report](/power-bi/visuals/power-bi-visualization-powerapp)
