@@ -147,11 +147,11 @@ In the app designer, the anchors, which are what comments attach to, are all of 
 
 You can edit your comments or or remove existing comments from appearing in the app.
 
-In the **Comments** pane, next to a comment, select **...** and then **Edit comment** or select **Delete comment**.
+In the **Comments** pane, next to a comment, select **...**, and then select **Edit comment** or **Delete comment**.
 
 ### Resolve a comment
 
-Comments are commonly questions, feedback, or ideas that are important context to live alongside your app. But, they may not be active discussions anymore. You can resolve or unresolve a comment thread to track the open comments.  
+Comments are commonly questions, feedback, or ideas that are important context to live alongside your app. But, they may not be active discussions anymore. You can resolve, or reopen a resolved, comment thread to better track the active comments.  
 
 1. In the **Comments** pane, next to a comment, select **...**, and then select **Resolve comment**.
 1. The comment thread appears as **Resolved**.
