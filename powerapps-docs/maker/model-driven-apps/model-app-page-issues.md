@@ -65,6 +65,11 @@ The custom page is a new page type within model-driven apps. Custom pages bring 
 
 * When a user running Internet Explorer opens a custom page, an error message will appear indicating Internet Explorer isn't supported.
 
+* When a user runs an app that isn't compliant with their organization's [Data Loss Prevention (DLP) policies](https://docs.microsoft.com/power-platform/admin/wp-data-loss-prevention), they'll see an error dialog and the 'Technical details' reflects the app isn't DLP compliant. 
+
+![Data Loss Prevention error dialog](media/model-app-page-issues/power_apps_unified_app_dlp_error.png "Data Loss Prevention error dialog")
+
+
 ## See also
 
 [Model-driven app custom page overview](model-app-page-overview.md)
