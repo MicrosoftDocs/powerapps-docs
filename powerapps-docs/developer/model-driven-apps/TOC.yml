@@ -739,8 +739,6 @@
           href: clientapi/reference/Xrm-App/Xrm-App-sidePanes/getPane.md
         - name: getSelectedPane
           href: clientapi/reference/Xrm-App/Xrm-App-sidePanes/getSelectedPane.md
-        - name: state
-          href: clientapi/reference/Xrm-App/Xrm-App-sidePanes/state.md
     - name: Xrm.Device
       href: clientapi/reference/xrm-device.md
       items:
