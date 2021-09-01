@@ -24,7 +24,7 @@ Troubleshooting issues in Unified Interface is important when you're working wit
 This article helps you fix some common issues that you might encounter while working with model-driven app forms.
 
 > [!IMPORTANT]
-> - The workarounds described in this article are only designed for troubleshooting purposes; they aren't meant to be used in production scenarios. 
+> - The troubleshooting tools described in this article are only designed for troubleshooting purposes; they aren't meant to be used in production scenarios. 
 > - These workarounds affect the current user session unless otherwise noted (for example, when a browser tab accesses the model-driven app). They don't change system customizations or affect any other users or sessions. After the current session is closed, the effect is no longer applied.
 > - Most of the workarounds are available in most production environments. Some of the workarounds mentioned in the guide might not have been deployed to your organization yet; new workarounds are added periodically.
 > - The tools listed in this article can be used independently to troubleshoot different categories of issues.
