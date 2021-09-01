@@ -26,7 +26,7 @@ Some of the common uses of barcode scanner control in a canvas app are:
 
 - An app to check in items like books into a collection
 - An inventory management app that uses barcode to identify items
-- An employee app to check-in and badge scanning for security
+- An employee app to check in and badge scanning for security
 
 In this article, we'll create a canvas app with barcode scanner and display scanned items in a gallery.
 
@@ -97,54 +97,44 @@ In this article, we'll create a canvas app with barcode scanner and display scan
 
     ![Left navigation bar select Title2](media/ceate-app-barcode-scanner/add-gallery-5.png "Left navigation bar select Title2")
 
-7.  On the **Properties** tab of the right-hand pane, select **Text**.
+1. Set the **Text** property of **Title2** to the following expression.
 
-![Properties tab of the right-hand pane, select Text](media/ceate-app-barcode-scanner/add-gallery-6.png "Properties tab of the right-hand pane, select Text")
+    ```powerapps-dot
+    ThisItem.ScannedItem
+    ```
 
-8.  Set the **Text** property of the Label control to this expression by typing or pasting it in the formula bar:
+    ![Text property of the Label control](media/ceate-app-barcode-scanner/add-gallery-7.png "Text property of the Label control")
 
-```
-ThisItem.ScannedItem
-```
+1. Select **Subtitle2** label, and set it's **Text** property to this expression.
 
-![Text property of the Label control](media/ceate-app-barcode-scanner/add-gallery-7.png "Text property of the Label control")
+    ```powerapps-dot
+    ThisItem.ScannedTime
+    ```
 
-9.  In the left navigation bar, select **Subtitle2**.
+    ![Set the Text property of the Label control](media/ceate-app-barcode-scanner/add-gallery-10.png "Set the Text property of the Label control")
 
-![Left navigation bar select Subtitle2](media/ceate-app-barcode-scanner/add-gallery-8.png "Left navigation bar select Subtitle2")
+## Try the app
 
-10. On the **Properties** tab of the right-hand pane, select **Text**.
+1. To test the app, select **Screen1**, and then press **F5** on the keyboard.
 
-![Properties tab of the right-hand pane select Text](media/ceate-app-barcode-scanner/add-gallery-9.png "Properties tab of the right-hand pane select Text]")
+1. After testing, [save and publish](save-publish-app.md) the app.
 
-11. Set the **Text** property of the Label control to this expression by typing or pasting it in the formula bar:
+1. Download [Power Apps Mobile](https://powerapps.microsoft.com/downloads/) on your phone.
 
-```
-ThisItem.ScannedTime
-```
+1. Open the **Power Apps** app, and sign in.
 
-![Set the Text property of the Label control](media/ceate-app-barcode-scanner/add-gallery-10.png "Set the Text property of the Label control")
+1. Select and open the barcode scanner app.
 
-## Test the app
+    ![Launch your Barcode Scanner application](media/ceate-app-barcode-scanner/test-the-app-2.png "Launch your Barcode Scanner application")
 
-1.  In the left navigation bar, select **Screen1**, and then open Preview by pressing F5 (or by selecting the play icon near the upper-right corner).
-
-2.  Exit Preview by pressing F5 (or by selecting the play icon near the upper-right corner).
-
-3.  **Save** & **Publish** by pressing the keyboard shortcut: **Ctrl+Shift+P**.
-
-4.  Select **Publish this version**.
-
-![Save and Publish](media/ceate-app-barcode-scanner/test-the-app-1.png "Save and Publish")
-
-5.  Download the **Power Apps** app on your mobile device.
-
-6.  Open the **Power Apps** app, Log in, and launch your Barcode Scanner application.
-
-![Launch your Barcode Scanner application](media/ceate-app-barcode-scanner/test-the-app-2.png "Launch your Barcode Scanner application")
-
-7.  Select **Scan** and scan any barcode label (example: book barcode label).
+1. Select **Scan**, and scan any barcode label (for example, barcode label on a book).
 
 ## Final Results
 
+You'll see the scanned barcode information is saved inside the app.
+
 ![Final Results](media/ceate-app-barcode-scanner/final-results-1.png "Final Results")
+
+### See also
+
+[Barcode scanner control in Power Apps](../controls/control-new-barcode-scanner.md)
