@@ -21,7 +21,7 @@ ms.assetid: f393f227-7a88-4f25-9036-780b3bf14070
 > [!NOTE] 
 > Effective June 2021, Microsoft Power Apps CLI is rebranded to Microsoft Power Platform CLI. More information: [Blog: Microsoft Power Platform is the best way for teams to build together](https://cloudblogs.microsoft.com/powerplatform/2021/05/25/microsoft-power-platform-is-the-best-way-for-teams-to-build-together/)<p/>Microsoft Power Platform CLI is currently not available for use in the GCC and GCC High regions.
 
-Microsoft Power Platform CLI is a simple, one-stop developer CLI that empowers developers and ISVs to perform various operations in Microsoft Power Platform related to environment lifecycle features, and to authenticate and work with Microsoft Dataverse environments, solution packages, portals, code components, and so on.  
+Microsoft Power Platform CLI is a simple, one-stop developer CLI that empowers developers and ISVs to perform various operations in Microsoft Power Platform related to environment lifecycle, authenticatication, and work with Microsoft Dataverse environments, solution packages, portals, code components, and so on.  
 
 ## Install Microsoft Power Platform CLI
 
@@ -225,26 +225,28 @@ Commands for working with [Dataverse solution projects](../../maker/data-platfor
 
 #### Differences between pac solution clone and export
 
-There are situations where you get confused on when to use `pac solution clone` and `pac solution export`. You can use one of the commands in the following scenarios:
+There are situations where you're unsure when to use `pac solution clone` or `pac solution export` command. You can use one of the commands in the following scenarios:
 
 - Use `pac solution clone` when you need to add new components to the solution.
-- Use `pac solution export` when you want modify the existing content in a solution file but not adding any new components to it.
+- Use `pac solution export` when you want to modify the existing content in a solution file but not adding any new components to the solution.
 
 **pac solution clone**
 
-When you export the solution using `pac solution clone` command, the exported solution layout looks like a Visual Studio project, but instead of a `.csproj` (as in Visual Studio), you'll see a `cdsproj` file. The `cdsproj` file has all the components information that is required to build the project. In this case, the build output will be a solution zip file that can be imported into other environments.
+The exported solution looks like a Visual Studio project when you export the solution using the `pac solution clone` command. Instead of a `.csproj` (as in Visual Studio), you'll see a `cdsproj` file. The `cdsproj` file has all the components information that is required to build the project. The build output is a solution zip file which you can import into different environments.
 
-Within the cloned solution, the developer does not have to unpack the solution because the solution is rendered in an unpacked format within the src (source) folder. 
+The developer does not have to unpack the cloned solution because it is rendered in an unpacked format within the src (source) folder. 
 
-Now, with the solution unpacked, if you want to associate a newly created plug-in with this solution. you can use the `pac solution add-reference` command to update the `.cdsproj` file to add the new plug-in. Then, you can proceed to build the project using either `dotnet build` or `msbuild`. It is recommended to do a build restore first before building the project. A build restore (dotnet build does a restore first automatically) will restore the required .NET libraries to generate a packed solution.
+Now, if you want to associate a newly created plug-in with this solution, with the solution unpacked, you can use the `pac solution add-reference` command to update the `.cdsproj` file to add the new plug-in. Then, you can build the project using either `dotnet build` or `msbuild`. 
+   
+It is recommended to do a build restore first before building the project. A build restore (dotnet build does a restore first automatically) will restore the required .NET libraries to generate a packed solution.
 
 **pac solution export**
 
 When you export the solution using `pac solution export` you feel like exporting the solution using the maker portal, and the resulting output is a solution zip file.  
 
-When you unpack the solution zip file (we do not recommend that you open the zip with standard decompression tools and use the appropriate command from CLI). The resulting directory structure looks as follows:
+When you unpack the solution zip file (we do not recommend that you open the zip with standard tools and use the appropriate command from CLI). The resulting directory structure  is similar to the structure in `pac solution clone`. The only difference is that you cannot add references to this unpacked solution, as it doesn't have the `.cdsproj` project file. 
 
-The directory structure of the unpacked solution is similar to the src folder structure in `pac solution clone`. The only difference is that you cannot add-references to this unpacked solution, as it is missing the `.cdsproj` project file. You can still modify the relevant set of files that you want to update and then proceed with the solution pack, which generates the solution zip file again to facilitate importing the solution into the target environment. The result from the action is a solution zip file with updated contents and an updated timestamp
+You can modify the relevant set of files that you want to update and then proceed with the solution pack, which generates the solution zip file again to facilitate importing the solution into the target environment. The result from the action is a solution zip file with updated contents and an updated timestamp.
 
 ### Auth
 
