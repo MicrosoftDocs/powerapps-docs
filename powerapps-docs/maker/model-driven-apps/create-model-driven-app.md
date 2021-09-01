@@ -129,7 +129,7 @@ From the **Settings** dialog box you can make app-level changes such as app name
    - **Description**: A description of the app is optional.
    <!-- - **Can be used offline**: Allows users to run the app and interact with data without an internet connection. More information: [Configure mobile offline synchronization for Power Apps mobile](../../mobile/setup-mobile-offline.md) -->
 
-## Add comments
+## Add comments (preview)
 
 Comments are notes that are associated with items in your app. Use comments to help your team review the app and provide feedback, or provide additional information on implementation details in your app.  
 
