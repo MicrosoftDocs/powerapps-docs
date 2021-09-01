@@ -24,10 +24,10 @@ Troubleshooting issues in Unified Interface is important when you're working wit
 This article helps you fix some common issues that you might encounter while working with model-driven app forms.
 
 > [!IMPORTANT]
-> - The troubleshooting tools described in this article are only designed for troubleshooting purposes; they aren't meant to be used in production scenarios. 
-> - These workarounds affect the current user session unless otherwise noted (for example, when a browser tab accesses the model-driven app). They don't change system customizations or affect any other users or sessions. After the current session is closed, the effect is no longer applied.
-> - Most of the workarounds are available in most production environments. Some of the workarounds mentioned in the guide might not have been deployed to your organization yet; new workarounds are added periodically.
-> - The tools listed in this article can be used independently to troubleshoot different categories of issues.
+> - The troubleshooting tools described in this article are only designed for troubleshooting purposes; they aren't meant to be regularly used in day-to-day production scenarios even though you can use them to troubleshoot issues in production environments. 
+> - These troubleshooting tools only affect the current user session unless otherwise noted (for example, when a browser tab accesses the model-driven app). They don't change system customizations or affect any other users or sessions. After the current session is closed, the effect is no longer applied.
+> - Most of the troubleshooting tools are available in most production environments. Some of them mentioned in the guide might not have been deployed to your organization yet; new tools are added periodically.
+> - Most of the tools listed in this article can be used independently to troubleshoot different categories of issues, though in some scenarios you may need to a set of them together to troubleshoot complex scenarios.
 
 ## Use URL parameters to disable various form components
 
