@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 06/30/2021
+ms.date: 09/01/2021
 ms.subservice: canvas-maker
 ms.author: namarwah
 search.audienceType: 
