@@ -8,7 +8,7 @@ ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 09/01/2021
 ms.subservice: canvas-maker
-ms.author: gregli
+ms.author: chmoncay
 search.audienceType: 
   - maker
 search.app: 
