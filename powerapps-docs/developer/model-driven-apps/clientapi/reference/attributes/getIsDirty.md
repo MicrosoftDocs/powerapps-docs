@@ -20,7 +20,7 @@ search.app:
 
 
 
-Returns a boolean value indicating if there are unsaved changes to the column value. 
+Returns a boolean value indicating if there are unsaved changes to the column value. An unsaved change to a column value means the client value is different than the last-known-committed value that was retrieved from Dataverse by the client form runtime.
 
 ## Column types supported
 
