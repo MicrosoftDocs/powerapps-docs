@@ -33,30 +33,6 @@ You can use a platform-provided header with the title and close button or a cust
 
 Side pane icons support badging indicating the user that a change needs attention.  The badge supports three modes, including a simple dot, a count, or an image.  By default, a badge is cleared when the user switches to the pane. You can control when the badge is cleared.
 
-## Enable side panes feature
-
-To use the side panes feature, you need to enable the `EnableAppSidePaneEarlyAccess` app setting in a model-driven app.
-
-1. Sign in to your model-driven app.
-1. Select the app where you want to use this feature.
-1. Select **F12** button on your keyboard to open the browser console.
-1. In the browser console, copy the code below. Enter your app's unique name in the `AppUniqueName` parameter. Press **Enter**.   
-
-   ```javascript
-   fetch(window.origin + "/api/data/v9.1/SaveSettingValue()",{
-    method: "POST", 
-      headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({AppUniqueName: "Your app unique name", SettingName:"EnableAppSidePaneEarlyAccess", Value: "true"})
-      });
-   ```
-1. Now sign in to [Power Apps](https://make.powerapps.com).
-1. Select **Solutions** in the left navigation pane. Select **New solution**. Enter the details and then select **Create**. 
-1. Open the solution that you have created. Select **Add** > **App** > **Model-driven app**. From the list of apps, select the model-driven app where you want to see the notifications feature.
-1. Select **Publish all customizations**. Refresh the model-driven app, and you should see a **Bell** icon on the top-right corner.
-
-> [!TIP]
-> The logical name of your model-driven app can be found in the solution explorer under the **Name** column. 
-
 
 ## Examples
 
