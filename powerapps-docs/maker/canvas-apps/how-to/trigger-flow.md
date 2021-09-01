@@ -21,7 +21,7 @@ contributors:
 
 # Build a canvas app that can trigger a Power Automate flow
 
-Power Automate can be used to create logic that performs one or more tasks when an event occurs in a canvas app. For example, a button can be configured so that, when a user selects it, an item is created in a SharePoint list, an email or meeting request is sent, a file is added to the cloud, or all of these. Any control in the app can be configured to start the flow, that continues to run even if you close the app.
+Power Automate can be used to create logic that performs one or more tasks when an event occurs in a canvas app. For example, a button can be configured so that, when a user selects it, an item is created in a SharePoint list, an email, or meeting request is sent, a file is added to the cloud, or all of these. Any control in the app can be configured to start the flow, that continues to run even if you close the app.
 
 In this article, we'll learn how create and trigger a flow using canvas apps.
 
@@ -31,225 +31,235 @@ To complete this lesson, you'll need Power Automate and Power Apps environment w
 
 ## Create a trial environment
 
-An environment in Power Apps is a space to store, manage, and share your organization’s business data, apps, chatbots, and flows. It also serves as a container to separate apps that might have different roles, security requirements, or target audiences.
+An environment in Power Apps is a space to store, manage, and share your organization’s business data, apps, chatbots, and flows. It also serves as a container to separate apps that might have different roles, security requirements, or target audiences. Each environment can have one Dataverse database.
 
-Each environment can have one Dataverse database.
+To make sure that you have what you need to complete this lesson, we're going to create a new environment that includes a Dataverse database. This is a 30-day trial that will go away at the end of the 30 days, but you can upgrade it to a sandbox or production environment if you want to keep it.
 
-To make sure that you have what you need to complete this lesson, we are going to create a new environment that includes a Dataverse database. This is a 30-day trial that will go away at the end of the 30 days, but it can be upgraded to a sandbox or production environment if you want to keep it
+We're going to create a trial environment that will include a Dataverse database, and the sample data used in this article.
 
-We are going to create a trial environment that will include a Dataverse database, and the sample data used in this topic.
+1. Go to [Power Platform admin center](https://admin.powerplatform.microsoft.com/).
 
-1.  Go to <https://aka.ms/ppac> in a web browser
+1. Select **Environments**.
 
-2.  Select **Environments**
+1. Select **New**.
 
-3.  Select **New**
+1. Name the environment **Dataverse Trial**.
 
-4.  Name the environment **Dataverse Trial**
+1. Select **Trial** for environment type.
 
-5.  Select **Trial** for environment type
+1. Toggle **Create Database** to **Yes**.
 
-6.  Toggle **Create Database** to **Yes**
+1. Select **Next**.
 
-7.  Select **Next**
+    ![Create trial environment](media/trigger-flow/trigger-flow-1.png "Create trial environment")
 
-    ![Create trial environment](media/create-and-trigger-a-flow-from-a-power-app/create-and-trigger-a-flow-from-a-power-app-1.png "Create trial environment")
+1. Toggle **Deploy Sample Apps and Data** to **Yes**.
 
-8.  Toggle **Deploy Sample Apps and Data** to **Yes**
+1. Select **Save**.
 
-9.  Select **Save**
-
-Your trial environment will now be created, including a Dataverse database and sample data in common business data tables.
+Your trial environment will now be created, including a Dataverse database and sample data.
 
 ## Build a canvas app
 
-In this lesson we will build an app to search, filter and lookup customer Account data
+In this lesson, we'll build an app to search, view, and create customer accounts using the **Accounts** table in Dataverse.
 
-1.  Log in to <https://make.powerapps.com>
+1. Sign in to [Power Apps](https://make.powerapps.com).
 
-2.  Select the Dataverse Trial environment in the upper right corner
+1. Select the **Dataverse Trial** environment.
 
-    ![Select the Dataverse Trial environment](media/create-and-trigger-a-flow-from-a-power-app/build-a-canvas-app-1.png "Select the Dataverse Trial environment")
+    ![Select the Dataverse Trial environment](media/trigger-flow/build-a-canvas-app-1.png "Select the Dataverse Trial environment")
 
-3.  Under **Build business apps – Make your own app, fast** select the button for **Canvas app from blank**
-    
-    ![Select the button for Canvas app from blank](media/create-and-trigger-a-flow-from-a-power-app/build-a-canvas-app-2.png "Select the button for Canvas app from blank")
-    
-4.  Give the app a name and select Format – Phone and select Create
+1. Select the button for **Canvas app from blank**
 
-    ![Give the app a name](media/create-and-trigger-a-flow-from-a-power-app/build-a-canvas-app-3.png "Give the app a name")
+    ![Select the button for Canvas app from blank](media/trigger-flow/build-a-canvas-app-2.png "Select the button for Canvas app from blank")
 
-5.  On the Welcome to Power Apps Studio dialog box, do not select any option and select the Skip button
+1. Enter a name, select **Format** as **Phone**, and then select **Create**.
 
-    ![Welcome to Power Apps Studio](media/create-and-trigger-a-flow-from-a-power-app/build-a-canvas-app-4.png "Welcome to Power Apps Studio")
-    
-6.  An App with Screen1 gets created – Select Accounts as the data source for the gallery
+    ![Give the app a name](media/trigger-flow/build-a-canvas-app-3.png "Give the app a name")
 
-    ![Select Accounts as the data source](media/create-and-trigger-a-flow-from-a-power-app/build-a-canvas-app-5.png "Select Accounts as the data source")
-    
-7.  Stretch the gallery to the bottom of the screen and add a label to the top with the Text Accounts and other properties as shown below
+1. Select **Create a gallery**.
 
-    ![Stretch the gallery to the bottom](media/create-and-trigger-a-flow-from-a-power-app/build-a-canvas-app-6.png "Stretch the gallery to the bottom")
+    ![Create a gallery](media/trigger-flow/build-a-canvas-app-4.png "Create a gallery")
 
-8.  Add an **Add** icon to the top right of the screen by selecting Insert -\> Icon -\> Add and update the properties of the icon to color white and padding of 5 from all sides
+1. Select **Accounts** table.
 
-![Add an **Add** icon](media/create-and-trigger-a-flow-from-a-power-app/build-a-canvas-app-7.png "Add an **Add** icon")
+1. Stretch the gallery to the bottom of the screen, and add a label to the top with the text **Accounts**. And then, update the other properties as listed below.
 
-9.  Select New screen on the top left to add a new Form screen to the app
+    | Property | Value |
+    | - | - |
+    | Font | Open Sans |
+    | Font size | 21 |
+    | Font weight | Bold |
+    | Text alignment | Center |
+    | Auto height | Off |
+    | Line height | 1.2 |
+    | Overflow | Hidden |
+    | Display mode | Edit |
+    | Visible | On |
+    | Position (X, Y) | 0, 0 |
+    | Size (Width, Height) | 640, 71 |
+    | Padding | 5 Top, 5 Bottom, 5 Left, 5 Right |
 
-![Select New screen on the top left](media/create-and-trigger-a-flow-from-a-power-app/build-a-canvas-app-8.png "Select New screen on the top left")
+    ![Update gallery properties](media/trigger-flow/build-a-canvas-app-6.png "Update gallery properties")
 
-10.  Screen 2 is added to the app
+1. Add an **Add** icon to the top-right of the screen by selecting **Insert** > **Icon** > **Add**. And then, update the properties of the icon to color white and padding of 5 from all sides.
 
-11.  Update the title of the form to New Account and select the data source as Accounts in the right pane
+    ![Add an **Add** icon](media/trigger-flow/build-a-canvas-app-7.png "Add an **Add** icon")
 
-![Update the title of the form to New Account](media/create-and-trigger-a-flow-from-a-power-app/build-a-canvas-app-9.png "Update the title of the form to New Account")
+1. From the top-left side of the screen, select **New screen** > **Form**.
 
-12.  Select the Edit fields button in the right pane
+    ![Add new form](media/trigger-flow/build-a-canvas-app-8.png "Add new form")
 
-![Select the Edit fields button in the right pane](media/create-and-trigger-a-flow-from-a-power-app/build-a-canvas-app-10.png "Select the Edit fields button in the right pane")
+1. Update the title of the form to **New Account**, and select the data source as **Accounts** from the pane on the right-side of the screen.
 
-13.  Select Add field button and look for Email and add the Email field to the form
+![Update title and select data source](media/trigger-flow/build-a-canvas-app-9.png "Update title and select data source")
 
-![Select Add field button and look for Email](media/create-and-trigger-a-flow-from-a-power-app/build-a-canvas-app-11.png "Select Add field button and look for Email")
+1. Select **Edit fields** on the right-pane.
 
-14.  The email field gets added
+    ![Select edit fields](media/trigger-flow/build-a-canvas-app-10.png "Select edit fields")
 
-![The email field gets added](media/create-and-trigger-a-flow-from-a-power-app/build-a-canvas-app-12.png "The email field gets added")
+1. Select **Add field** and add **Email** to the form.
 
-15.  Set the default mode of the form to New
+    ![Add email field](media/trigger-flow/build-a-canvas-app-11.png "Add email field")
 
-![Set the default mode of the form to New](media/create-and-trigger-a-flow-from-a-power-app/build-a-canvas-app-13.png "Set the default mode of the form to New")
+    The email field gets added to the form.
 
-16.  Navigate to Screen1 – accounts gallery screen and set the OnSelect property of the + icon to **Navigate(Screen2)**
+    ![The email field gets added](media/trigger-flow/build-a-canvas-app-12.png "The email field gets added")
 
-![Navigate to Screen1 accounts gallery screen](media/create-and-trigger-a-flow-from-a-power-app/build-a-canvas-app-14.png "Navigate to Screen1 accounts gallery screen")
+1. et the default mode of the form to **New**.
 
-17.  Select Insert -\> New screen -\> Blank screen to add a new screen to the app
+    ![Default form mode](media/trigger-flow/build-a-canvas-app-13.png "Default form mode")
 
-![Select Insert New screen Blank screen](media/create-and-trigger-a-flow-from-a-power-app/build-a-canvas-app-15.png "Select Insert New screen Blank screen")
+1. Select Screen1 that has the accounts gallery, and set the **OnSelect** property of the **+** icon to `Navigate(Screen2)`.
 
-18.  Select Insert -\> Icon and select the Check (badge) icon to add it to the screen
+    ![Configure navigation to screen 2](media/trigger-flow/build-a-canvas-app-14.png "Configure navigation to screen 2")
 
-![Select Insert Icon and select the Check badge icon](media/create-and-trigger-a-flow-from-a-power-app/build-a-canvas-app-16.png "Select Insert Icon and select the Check badge icon")
+1. Select **Insert** > **New screen** > **Blank screen** to add a new screen to the app.
 
-19. Place the check icon and adjust the icon position and size as shown in the screenshot below
+1. Select **Insert** > **Icon**, and then select the Check (badge) icon to add it to the screen.
 
-![Place the check icon and adjust the icon position](media/create-and-trigger-a-flow-from-a-power-app/build-a-canvas-app-17.png "Place the check icon and adjust the icon position")
+    ![Insert badge icon](media/trigger-flow/build-a-canvas-app-16.png "Insert badge icon")
 
-20. Add a label with text **Account was created successfully!** and size and position as shown in the screenshot below
+1. Move the icon to the top center of the canvas.
 
-![Add a label with text Account was created successfully!](media/create-and-trigger-a-flow-from-a-power-app/build-a-canvas-app-18.png "Add a label with text Account was created successfully!")
+    ![Move icon to top-center](media/trigger-flow/build-a-canvas-app-17.png "Move icon to top-center")
 
-21.  Add an additional label as shown below with text **Send a welcome note to the Customer?**
+1. Add a label with text **Account was created successfully!**, and move it under the icon added in the earlier step.
 
-![Send a welcome note to the Customer](media/create-and-trigger-a-flow-from-a-power-app/build-a-canvas-app-19.png "Send a welcome note to the Customer")
+    ![Add Account was created successfully label](media/trigger-flow/build-a-canvas-app-18.png "Add Account was created successfully label")
 
-22.  Add a Text Input box by selecting Insert -\> Input -\> Text Input and set the Mode to **Multiline** and default text to **Thank you for creating an account with us. We look forward to serving you!**
+1. Add an additional label below the label added in the previous step with text **Send a welcome note to the Customer?**.
 
-![Thank you for creating an account with us](media/create-and-trigger-a-flow-from-a-power-app/build-a-canvas-app-20.png "Thank you for creating an account with us")
+    ![Send a welcome note to the Customer](media/trigger-flow/build-a-canvas-app-19.png "Send a welcome note to the Customer")
 
-23.  Set the following value on the OnVisible property of Screen3 – **Reset(TextInput1)**
+1. Add a **Text Input** box by selecting **Insert** > **Input** > **Text Input**. Set the **Mode** of the control to **Multiline**, and default text to **Thank you for creating an account with us. We look forward to serving you!**. And move the control below the label added in the previous step.
 
-![Set the following value on the OnVisible property of Screen3](media/create-and-trigger-a-flow-from-a-power-app/build-a-canvas-app-21.png "Set the following value on the OnVisible property of Screen3")
+    ![Add multiline text input control](media/trigger-flow/build-a-canvas-app-20.png "Add multiline text input control")
 
-24.  Add two buttons to the screen with text Yes and No and place them below the Input text box as shown in the screenshot below
+1. Set the **OnVisible** property of **Screen3** to `Reset(TextInput1)`.
 
-![Add two buttons to the screen with text Yes and No](media/create-and-trigger-a-flow-from-a-power-app/build-a-canvas-app-22.png "Add two buttons to the screen with text Yes and No")
+    ![OnVisible property of screen 3](media/trigger-flow/build-a-canvas-app-21.png "OnVisible property of screen 3")
 
-25. Navigate to the New Account form screen and set the OnVisible property of the screen to **ResetForm(EditForm3)**
+1. Add two buttons to the screen with text **Yes** and **No**, and place them below the input text box added in the previous step.
 
-![Navigate to the New Account form screen and set the OnVisible property](media/create-and-trigger-a-flow-from-a-power-app/build-a-canvas-app-23.png "Navigate to the New Account form screen and set the OnVisible property")
+    ![Yes No buttons](media/trigger-flow/build-a-canvas-app-22.png "Yes No buttons")
 
-26. Select the check icon on the top right and set the OnSelect property to **SubmitForm(EditForm3);Navigate(Screen3)**
+1. Go to the **New Account** form screen, and set the **OnVisible** property of the screen to `ResetForm(EditForm3)`.
 
-![Select the check icon on the top right](media/create-and-trigger-a-flow-from-a-power-app/build-a-canvas-app-24.png "Select the check icon on the top right")
+    ![OnVisible property of New Account form](media/trigger-flow/build-a-canvas-app-23.png "OnVisible property of New Account form")
 
-27. Select the x button on the top right and set the OnSelect property to **Back()**
+1. Select the check icon on the top-right, and set the **OnSelect** property to `SubmitForm(EditForm3);Navigate(Screen3)`.
 
-![Select the x button on the top right and set the OnSelect property](media/create-and-trigger-a-flow-from-a-power-app/build-a-canvas-app-25.png "Select the x button on the top right and set the OnSelect property")
+    ![Navigate to screen 3](media/trigger-flow/build-a-canvas-app-24.png "Navigate to screen 3")
 
-28. Navigate back to Screen3 by selecting Screen3 in the tree view
+1. Select the X button on the top-right, and set the **OnSelect** property to `Back()`.
 
-![Navigate back to Screen3 by selecting Screen3](media/create-and-trigger-a-flow-from-a-power-app/build-a-canvas-app-26.png "Navigate back to Screen3 by selecting Screen3")
+    ![Back function for close](media/trigger-flow/build-a-canvas-app-25.png "Back function for close")
 
-29. Select the No button and select the OnSelect property and set it to Navigate(Screen1)
+1. Go back to **Screen3** by selecting **Screen3** in the tree view.
 
-![Select the No button and select the OnSelect property](media/create-and-trigger-a-flow-from-a-power-app/build-a-canvas-app-27.png "Select the No button and select the OnSelect property")
+    ![Go to screen 3](media/trigger-flow/build-a-canvas-app-26.png "Go to screen 3")
 
-30. Select the Yes button and select Action on the top and select Power Automate
+1. Select the **No** button, and set the button's **OnSelect** property to `Navigate(Screen1)`.
 
-![Select the Yes button and select Action on the top](media/create-and-trigger-a-flow-from-a-power-app/build-a-canvas-app-28.png "Select the Yes button and select Action on the top")
+    ![Navigate to screen 1](media/trigger-flow/build-a-canvas-app-27.png "Navigate to screen 1")
 
-31. Select Create a new flow to create a new Power Automate flow
+1. Select the **Yes** button, select **Action** on the top, and then select **Power Automate**.
 
-![Select Create a new flow to create](media/create-and-trigger-a-flow-from-a-power-app/build-a-canvas-app-29.png "Select Create a new flow to create")
+    ![Select the Yes button and select Action on the top](media/trigger-flow/build-a-canvas-app-28.png "Select the Yes button and select Action on the top")
+
+1. Select **Create a new flow** to create a new Power Automate flow.
+
+    ![Select Create a new flow to create](media/trigger-flow/build-a-canvas-app-29.png "Select Create a new flow to create")
 
 ## Create the Power Automate Flow
 
-1.  Power Automate opens – select the **+Create** option from the left navigation menu and select the **Instant cloud flow** option
+1. After Power Automate opens, select **+ Create** > **Instant cloud flow**.
 
-![select the Instant cloud flow option](media/create-and-trigger-a-flow-from-a-power-app/create-the-power-automate-flow-1.png "select the Instant cloud flow option")
+    ![select the Instant cloud flow option](media/trigger-flow/create-the-power-automate-flow-1.png "select the Instant cloud flow option")
 
-2.  Enter a name for the flow – Flow triggered by Power app and select PowerApps as the trigger
+1. Enter a name for the flow as "Flow triggered by Power Apps", and select **Power Apps** as the trigger.
 
-![Enter a name for the flow](media/create-and-trigger-a-flow-from-a-power-app/create-the-power-automate-flow-2.png "Enter a name for the flow")
+    ![Enter a name for the flow](media/trigger-flow/create-the-power-automate-flow-2.png "Enter a name for the flow")
 
-3.  PowerApps gets added as the trigger – select +New Step
+1. Select **+ New Step**.
 
-![PowerApps gets added as the trigger](media/create-and-trigger-a-flow-from-a-power-app/create-the-power-automate-flow-3.png "PowerApps gets added as the trigger")
+    ![Power Apps gets added as the trigger](media/trigger-flow/create-the-power-automate-flow-3.png "Power Apps gets added as the trigger")
 
-4.  Enter Send an email in the search connections textbox and select **Send an email (V2)** action
+1. Enter "Send an email" in the search connections textbox, and select **Send an email (V2)** action.
 
-![Enter Send an email in the search connections textbox](media/create-and-trigger-a-flow-from-a-power-app/create-the-power-automate-flow-4.png "Enter Send an email in the search connections textbox")
+    ![Enter Send an email in the search connections textbox](media/trigger-flow/create-the-power-automate-flow-4.png "Enter Send an email in the search connections textbox")
 
-5.  For the To field, select Add dynamic content and select Ask in PowerApps and then select Sendanemail(V2)\_To
+1. For the **To** field, select **Add dynamic content** > select **Ask in Power Apps** > select **Sendanemail(V2)_To**.
 
-![For the To field, select Add dynamic content](media/create-and-trigger-a-flow-from-a-power-app/create-the-power-automate-flow-5.png "For the To field, select Add dynamic content")
+    ![For the To field, select Add dynamic content](media/trigger-flow/create-the-power-automate-flow-5.png "For the To field, select Add dynamic content")
 
-6.  For the Body field, select Add dynamic content and select Ask in PowerApps and then select Sendanemail(V2)\_Body
+1. For the **Body** field, select **Add dynamic content** > select **Ask in Power Apps** > select **Sendanemail(V2)_Body**
 
-![For the Body field, select Add dynamic content](media/create-and-trigger-a-flow-from-a-power-app/create-the-power-automate-flow-6.png "For the Body field, select Add dynamic content")
+    ![For the Body field, select Add dynamic content](media/trigger-flow/create-the-power-automate-flow-6.png "For the Body field, select Add dynamic content")
 
-![select Ask in PowerApps and then select Sendanemail V2](media/create-and-trigger-a-flow-from-a-power-app/create-the-power-automate-flow-7.png "select Ask in PowerApps and then select Sendanemail V2")
+    ![select Ask in PowerApps and then select Sendanemail V2](media/trigger-flow/create-the-power-automate-flow-7.png "select Ask in PowerApps and then select Sendanemail V2")
 
-7.  Enter Thank you for your business! In the Subject field
+1. Enter "Thank you for your business!" in the **Subject** field.
 
-![Enter Thank you for your business](media/create-and-trigger-a-flow-from-a-power-app/create-the-power-automate-flow-8.png "Enter Thank you for your business")
+    ![Enter Thank you for your business](media/trigger-flow/create-the-power-automate-flow-8.png "Enter Thank you for your business")
 
-8.  Save the Power Automate Flow and go back to the Power App
+1. Save the Power Automate flow, and go back to Power Apps.
 
-## Trigger the Flow from within the Power App
+## Trigger the flow from within the canvas app
 
-1.  Select the Yes button and select Action -\> Power Automate and then select the flow just created – **FlowtriggeredbyaPowerapp.Run(** is added to the OnSelect property – the parameters for this run function need to be defined in the next step
+1. Select the **Yes** button > select **Action** > **Power Automate**, and then select the flow created earlier.
 
-![Flow triggered by a Powerapp](media/create-and-trigger-a-flow-from-a-power-app/trigger-the-flow-from-within-the-power-app-1.png "Flow triggered by a Powerapp")
+    ![Flow triggered by a Powerapp](media/trigger-flow/trigger-the-flow-from-within-the-power-app-1.png "Flow triggered by a Powerapp")
 
-2.  Then fill in the two parameters for the To email address and the Body of the email as follows
+    Function `FlowtriggeredbyaPowerapp.Run(` is also added to the **OnSelect** property.
 
-```
-FlowtriggeredbyaPowerapp.Run(
-   EditForm3.LastSubmit.Email,
-   TextInput1.Text
-);
-Navigate(Screen1);
-```
+1. Fill in the two parameters for the To email address and the Body of the email as follows:
 
-  NOTE: The email address is picked up from the new account record created on the previous screen and the body for the email is picked from the text box text captured on this screen.
+    ```powerapps-dot
+    FlowtriggeredbyaPowerapp.Run(
+       EditForm3.LastSubmit.Email,
+       TextInput1.Text
+    );
+    Navigate(Screen1);
+    ```
 
-![fill in the two parameters for the To email address](media/create-and-trigger-a-flow-from-a-power-app/trigger-the-flow-from-within-the-power-app-2.png)
+    > [!NOTE]
+    > The email address is picked up from the new account record created on the previous screen. and the body for the email is picked from the text box text captured on this screen.
+
+    ![Fill in the two parameters for the To email address](media/trigger-flow/trigger-the-flow-from-within-the-power-app-2.png "Fill in the two parameters for the To email address")
 
 ## Test the app
 
-1.  Run the app in Preview mode – In this test, we will create a new account by entering details like account name, phone number, city, and email address on the New Account page. On saving the new account details, we will be prompted to send an email to the customer where we can update the verbiage of the email and then select Yes to send the email. This will trigger the flow and email will be sent to the email address on the account.
+Run the app in preview mode. In this test, we'll create a new account by entering details like account name, phone number, city, and email address on the **New Account** screen. On saving the new account details, we'll be prompted to send an email to the customer where we can update the verbiage of the email, and then select **Yes** to send the email. This will trigger the flow, and email will be sent to the email address on the account.
 
-![Run the app in Preview mode](media/create-and-trigger-a-flow-from-a-power-app/test-the-app-1.png "Run the app in Preview mode")
+![Run the app in Preview mode](media/trigger-flow/test-the-app-1.png "Run the app in Preview mode")
 
-![Create a new account by entering details like account name](media/create-and-trigger-a-flow-from-a-power-app/test-the-app-2.gif "Create a new account by entering details like account name")
+![Create a new account by entering details like account name](media/trigger-flow/test-the-app-2.gif "Create a new account by entering details like account name")
 
 An email like this should appear in your inbox
 
-![Email like this should appear in your inbox](media/create-and-trigger-a-flow-from-a-power-app/test-the-app-3.png "mail like this should appear in your inbox")
+![Email like this should appear in your inbox](media/trigger-flow/test-the-app-3.png "mail like this should appear in your inbox")
 
 ### See also
 
