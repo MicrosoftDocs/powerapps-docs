@@ -967,11 +967,11 @@
         href: ./canvas-apps/working-with-experimental-preview.md
   - name: How-to guides
     items:
-    - name: Build a canvas app connected to Dataverse from scratch
+    - name: Create a canvas app connected to Dataverse from scratch
       href: ./canvas-apps/how-to/build-connected-dataverse.md
-    - name: Build a canvas app with Power BI visual
+    - name: Create a canvas app with Power BI visual
       href: ./canvas-apps/how-to/build-powerbi-visual.md
-    - name: Build a canvas app that can trigger a Power Automate flow
+    - name: Create a canvas app that can trigger a Power Automate flow
       href: ./canvas-apps/how-to/trigger-flow.md
   - name: Save and publish an app
     href: ./canvas-apps/save-publish-app.md
