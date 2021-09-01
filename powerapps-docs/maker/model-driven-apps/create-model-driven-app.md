@@ -138,10 +138,10 @@ In the app designer, the anchors, which are what comments attach to, are all of 
 ### Add a comment to a page
 
 1. Open a model-driven app for edit using the app designer.
-1. Select a component in the **Pages** pane.
-1. Select **Comments** on the command bar. This opens the comments pane for the selected component.
+1. Select an item in the **Pages** pane.
+1. Select **Comments** on the command bar. This opens the comments pane for the selected component. You can also open the comments pane by selecting the comment count indicator for existing comments to an item in the left pane.
    :::image type="content" source="media/comments-feature2.png" alt-text="Comments feature in app designer":::
-1. Select **New** to create a new comment and type the comment message in the box. Or, type into the **Reply** box to respond to an existing comment. Select Enter to post your comment.
+1. Select **New** to create a new comment and type the comment message in the box. Or, type into the **Reply** box to respond to an existing comment. Select <img src = "media/post-comment-button.png" alt = "Post your comment button" width = "25" height = "25"> **Post reply** or press Ctrl + Enter to post your comment.
 
 ### Edit or delete a comment
 
