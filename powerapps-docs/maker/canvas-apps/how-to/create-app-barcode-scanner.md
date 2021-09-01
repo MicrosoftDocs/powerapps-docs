@@ -33,7 +33,7 @@ In this article, we'll create a canvas app with barcode scanner and display scan
 ## Prerequisites
 
 - [Power Apps license](/power-platform/admin/pricing-billing-skus)
-- Before you create an app from scratch, familiarize yourself with Power Apps basics by [generating an app](../get-started-test-drive.md) and then customizing that app's [controls](../add-configure-controls.md), [gallery](../add-gallery.md), [forms](working-with-forms.md), and [cards](working-with-cards.md).
+- Before you create an app from scratch, familiarize yourself with Power Apps basics by [generating an app](../get-started-test-drive.md) and then customizing that app's [controls](../add-configure-controls.md), [gallery](../add-gallery.md), [forms](../working-with-forms.md), and [cards](../working-with-cards.md).
 - To create an app, you must be assigned to the [Environment Maker](/power-platform/admin/database-security) security role.
 
 ## Open a blank app
@@ -117,7 +117,7 @@ In this article, we'll create a canvas app with barcode scanner and display scan
 
 1. To test the app, select **Screen1**, and then press **F5** on the keyboard.
 
-1. After testing, [save and publish](save-publish-app.md) the app.
+1. After testing, [save and publish](../save-publish-app.md) the app.
 
 1. Download [Power Apps Mobile](https://powerapps.microsoft.com/downloads/) on your phone.
 
