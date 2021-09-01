@@ -18,9 +18,7 @@ search.app:
 ---
 # getIsDirty (Client API reference)
 
-
-
-Returns a boolean value indicating if there are unsaved changes to the column value. An unsaved change to a column value means the client value is different than the last-known-committed value that was retrieved from Dataverse by the client form runtime.
+Returns a boolean value indicating if there are unsaved changes to the column value. An unsaved change to a column value means the client value is different from the last known committed value retrieved from Dataverse by the client from runtime.
 
 ## Column types supported
 
