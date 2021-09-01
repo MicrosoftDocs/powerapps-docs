@@ -6,6 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: article
 ms.date: 03/24/2021
+ms.subservice: dataverse-developer
 ms.author: jdaly
 ms.reviewer: phecke
 search.audienceType: 

@@ -8,6 +8,7 @@ ms.service: powerapps
 ms.topic: get-started-article
 ms.component: model
 ms.date: 04/14/2021
+ms.subservice: mda-maker
 ms.author: matp
 search.audienceType: 
   - maker
@@ -23,7 +24,7 @@ search.app:
 In this article, you build a simple model-driven app that you can use to create, update, and delete account records as well as view data in one of the standard charts for the account table.
 
   > [!div class="mx-imgBorder"] 
-  > ![Simple account table app](media/build-first-model-driven-app/accounts-quickstart-app.png "Run the app")
+  > ![Simple account table app.](media/build-first-model-driven-app/accounts-quickstart-app.png "Run the app")
 
 ## Create your model-driven app
 
@@ -43,25 +44,25 @@ In this article, you build a simple model-driven app that you can use to create,
   - **Description**: Type a short description of what the app is or does, such as *This is my first app*.
 
     > [!div class="mx-imgBorder"] 
-    > ![Create a new app](media/create-new-app.png "Create a new app")
+    > ![Create a new app.](media/create-new-app.png "Create a new app")
 
 4. Select the **Open the Site Map Designer** edit button (pencil icon) to open the sitemap designer.
 
       > [!div class="mx-imgBorder"] 
-      > ![Create-new-sitemap](media/build-first-model-driven-app/new-sitemap.png "Create a site Map for the app")
+      > ![Create-new-sitemap.](media/build-first-model-driven-app/new-sitemap.png "Create a site Map for the app")
 
     Notice that when you create a new app, you must first create the site map for it.
 
 5. On the sitemap designer, select **New Subarea**. 
 
-   :::image type="content" source="media/build-first-model-driven-app/new-subarea.png" alt-text="Select new subarea"::: 
+   :::image type="content" source="media/build-first-model-driven-app/new-subarea.png" alt-text="Select new subarea."::: 
 
 6. In the right pane, select the **Properties** tab, and then select the following properties.
   - **Type**: **Entity**
   - **Entity**: **Account**
 
     > [!div class="mx-imgBorder"] 
-    > ![Add components to sitemap](media/build-first-model-driven-app/sitemap.png "Properties tab for new subarea")
+    > ![Add components to sitemap.](media/build-first-model-driven-app/sitemap.png "Properties tab for new subarea")
 
     When you leave the **Title** property blank, the app uses the table name in the app's left navigation pane. For this app, **Accounts** will be displayed in the app at runtime.
 
@@ -81,7 +82,7 @@ On the app designer toolbar, select **Play**.
 - To change the view, select the **My Active Accounts** view, and then select the view you want.
 - 
   > [!div class="mx-imgBorder"] 
-  > ![Simple account table app](media/build-first-model-driven-app/accounts-quickstart-app.png "Run the app")
+  > ![Simple account table app.](media/build-first-model-driven-app/accounts-quickstart-app.png "Run the app")
 
 To learn more about how to use your app, see [Basic navigation in a model-driven app](../../user/navigation.md).
 

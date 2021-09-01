@@ -8,11 +8,14 @@ ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 3/25/2021
+ms.subservice: canvas-maker
 ms.author: iawilt
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - iaanw
 ---
 
 # View 3D content in canvas apps
@@ -25,7 +28,7 @@ You can display a single 3D model, or you can let the user select from a gallery
 
 
 > [!IMPORTANT]
-> Your 3D content must be in the .glb file format.  
+> Your 3D content must be in the .glb, .obj, or .stl file formats.  
 > You can [convert your existing 3D models into the .glb file format](/dynamics365/mixed-reality/guides/3d-content-guidelines/) from a variety of 3D formats.
 
 > [!TIP]

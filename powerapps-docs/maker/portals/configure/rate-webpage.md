@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2020
+ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: tapanm
 contributors:
@@ -35,7 +36,7 @@ Ratings are custom activities, and can be used in the same way as any other acti
 
 For webpages that have page ratings enabled, users can rate the page by using the rating scale.
 
-![Rating type](../media/rating-type.png "Rating type")  
+![Rating type.](../media/rating-type.png "Rating type")  
 
 ## Manage ratings
 

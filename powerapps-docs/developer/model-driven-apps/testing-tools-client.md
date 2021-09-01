@@ -7,6 +7,7 @@ ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
 author: "aengusheaney" # GitHub ID
+ms.subservice: mda-developer
 ms.author: "nabuthuk" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 

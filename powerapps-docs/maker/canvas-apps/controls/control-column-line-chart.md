@@ -7,12 +7,16 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.date: 10/25/2016
+ms.subservice: canvas-maker
 ms.author: chmoncay
 ms.reviewer: tapanm
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - chmoncay
 ---
 # Column chart and Line chart controls in Power Apps
 Controls that show data as graphs with x- and y-axes.
@@ -62,7 +66,7 @@ Controls that show data as graphs with x- and y-axes.
 
 * The **MinimumBarWidth** property is available for the **Column chart** control but not the **Line chart** control.
 
-**[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
+**[OnSelect](properties-core.md)** – Actions to perform when the user taps or clicks a control.
 
 **[PaddingBottom](properties-size-location.md)** – The distance between text in a control and the bottom edge of that control.
 
