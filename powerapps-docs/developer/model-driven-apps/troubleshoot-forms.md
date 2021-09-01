@@ -41,21 +41,29 @@ When you're troubleshooting issues with forms, you need to use URL parameters to
 - **DisableFormHandlers**  
   This flag disables form handlers, but does not prevent the containing web resource files from being loaded. Please refer to [View registered form event handlers and libraries in Monitor](#view-registered-form-event-handlers-and-libraries-in-Monitor) to learn how to obtain event or library indices.
 
-#### Usage
-- **&flags=DisableFormHandlers=<event name>**
-You can specify any supported event name, such as DisableFormHandlers=onload. If you use DisableFormHandlers=true, it'll be a shortcut to disable these event handlers: onload, onsave, businessrule, onchange and ontabstatechange.
-- **&flags=DisableFormHandlers=<event name>_<event index>**
-This value disables the handler at index 0 in the event handler list of any given supported event name. For example, DisableFormHandlers=true_0 will disable handler at index 0 of the event names included by "true" value. DisableFormHandlers=onload_2 will disable handler at index 2 of the onload event.
-- **&flags=DisableFormHandlers=<event name>_<starting index>_<end index>**
-This value disables all handlers for a given event name within the given index range. For example, DisableFormHandlers=true_0_2 will disable handlers of index from 0 to 2 (0 and 2 are included) of the event names included by "true" value. DisableFormHandlers=onload_2_5 will disable onload handlers of index from 2 to 5.
+  #### Usage:
+  - **&flags=DisableFormHandlers=*eventname***  
+    You can specify any supported event name, such as DisableFormHandlers=onload. If you use DisableFormHandlers=true, it'll be a shortcut to disable these event handlers: onload,     onsave, businessrule, onchange and ontabstatechange.
+  - **&flags=DisableFormHandlers=*eventName_index***
+    This value disables the event handler at specified index in the event handler list of any given supported event name. For example, DisableFormHandlers=true_0 will disable handler at index 0 of the event names included by "true" value. DisableFormHandlers=onload_2 will disable the event handler at index 2 of the onload event.
+  - **&flags=DisableFormHandlers=*eventName_startIndex_endIndex***
+  This value disables all handlers for a given event name within the given range from startIndex to endIndex (both are included). For example, DisableFormHandlers=true_0_2 will disable handlers of index 0, 1 and 2 of the event names included by "true" value. DisableFormHandlers=onload_2_5 will disable onload handlers of index 2, 3, 4 and 5. If you have a large amount of event handlers,  you can use this approach to help narrow down problematic handlers quickly.
 
-- DisableFormLibraries
+- **DisableFormLibraries**  
+    This flag disables form libraries and actually prevents the libraries from being loaded. Please refer to [View registered form event handlers and libraries in Monitor](#view-registered-form-event-handlers-and-libraries-in-Monitor) to learn how to obtain event or library indices.
 
-- DisableWebResourceControls
+- **DisableWebResourceControls**  
+    This flag disables all web resource controls on the form.
 
-- DisableFormControl
+- **DisableFormControl**  
+    This flag disables a form control given the control name. If you have proven that the issue goes away with &flags=DisableWebResourceControls=true, and there are more than one web resource controls on the form, you can use this flag to further help pinpoint the control that's causing the issue.  
+   #### Usage:  
+   &flags=DisableFormControl=myControlName
 
-- DisableBusinessProcessFlow
+- **DisableBusinessProcessFlow**  
+  This flag disables Business Process Flows on the form.  
+   #### Usage:  
+   &flags=DisableBusinessProcessFlow=true
 
 - navbar (this isn't a **flag** parameter; instead, use **navbar=off** in the URL)
 
