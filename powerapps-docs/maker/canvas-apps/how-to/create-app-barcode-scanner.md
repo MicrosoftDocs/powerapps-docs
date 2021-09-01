@@ -8,7 +8,7 @@ ms.custom: canvas
 ms.reviewer:
 ms.date: 09/01/2021
 ms.subservice: canvas-maker
-ms.author: tapanm
+ms.author: vipare
 search.audienceType: 
   - maker
 search.app: 
@@ -16,6 +16,7 @@ search.app:
 contributors:
     - joel-lindstrom
     - tapanm-msft
+    - chmoncay
 ---
 
 # Create a canvas app with the barcode scanner control
