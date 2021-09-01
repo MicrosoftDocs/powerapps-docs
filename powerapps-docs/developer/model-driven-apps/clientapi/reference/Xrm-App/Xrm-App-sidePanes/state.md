@@ -24,7 +24,7 @@ Returns whether the selected pane is collapsed or expanded. 1 for expand and 0 f
 
 ## Syntax
 
-`Xrm.App.sidePanes.state();`
+`Xrm.App.sidePanes.state;`
 
 
 ### Related topics

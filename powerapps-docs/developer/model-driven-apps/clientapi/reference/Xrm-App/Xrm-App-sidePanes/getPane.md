@@ -24,7 +24,11 @@ Returns the side pane corresponding to the input ID. If the side pane does not e
 
 ## Syntax
 
-`Xrm.App.sidePanes.getPane();`
+`Xrm.App.sidePanes.getPane(panelId);`
+
+## Return value
+
+Returns the [AppSidePane](../../xrm-app-appsidepane.md) object.
 
 ### Related topics
 

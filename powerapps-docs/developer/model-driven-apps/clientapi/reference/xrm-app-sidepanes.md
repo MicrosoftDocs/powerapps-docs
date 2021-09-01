@@ -30,7 +30,11 @@ Provides methods for managing side panes.
 |[getAllPanes](Xrm-App/Xrm-App-sidePanes/getAllPanes.md)|Returns a collection containing all active panes.|
 |[getSelectedPane](Xrm-App/Xrm-App-sidePanes/getSelectedPane.md)|Returns the current selected pane.|
 |[getPane](Xrm-App/Xrm-App-sidePanes/getPane.md)|Returns the pane corresponding to the input ID. If pane doesn't exist, undefined is returned.|
-|[state](Xrm-App/Xrm-App-sidePanes/state.md)|Returns whether the selected pane is collapsed or expanded.|
+
+## Parameter
+
+|Parameter Name|Description|
+|state|Returns whether the selected pane is collapsed or expanded.|
 
 ### Related topics
 
