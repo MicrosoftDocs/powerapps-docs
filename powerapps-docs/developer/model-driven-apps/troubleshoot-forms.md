@@ -31,11 +31,23 @@ This article helps you fix some common issues that you might encounter while wor
 
 ## Use URL parameters to disable various form components
 
-When you're troubleshooting issues with forms, you need to use URL parameters to disable components as you work to isolate the problem to a specific component. We recommend that you use the flags one at a time to narrow down the cause of the issue. You can use the following URL parameters:
+When you're troubleshooting issues with forms, you need to use URL parameters to disable components as you work to isolate specific component that caused the issue. We recommend that you use the flags one at a time to narrow down the cause of the issue. You can use the following URL parameters:
 
-- DisableFormCommandbar
+- **DisableFormCommandbar**  
+  Disables the command bar on the form. Note that this only disables the command bar on form pages - it does not support list (grid) page, dashboard page, etc.
+  Usage:  
+  &flags=DisableFormCommandbar=true
 
-- DisableFormHandlers
+- **DisableFormHandlers**  
+  This flag disables form handlers, but does not prevent the containing web resource files from being loaded. Please refer to [View registered form event handlers and libraries in Monitor](#view-registered-form-event-handlers-and-libraries-in-Monitor) to learn how to obtain event or library indices.
+
+#### Usage
+- **&flags=DisableFormHandlers=<event name>**
+You can specify any supported event name, such as DisableFormHandlers=onload. If you use DisableFormHandlers=true, it'll be a shortcut to disable these event handlers: onload, onsave, businessrule, onchange and ontabstatechange.
+- **&flags=DisableFormHandlers=<event name>_<event index>**
+This value disables the handler at index 0 in the event handler list of any given supported event name. For example, DisableFormHandlers=true_0 will disable handler at index 0 of the event names included by "true" value. DisableFormHandlers=onload_2 will disable handler at index 2 of the onload event.
+- **&flags=DisableFormHandlers=<event name>_<starting index>_<end index>**
+This value disables all handlers for a given event name within the given index range. For example, DisableFormHandlers=true_0_2 will disable handlers of index from 0 to 2 (0 and 2 are included) of the event names included by "true" value. DisableFormHandlers=onload_2_5 will disable onload handlers of index from 2 to 5.
 
 - DisableFormLibraries
 
@@ -62,6 +74,12 @@ https://myorg.crm.dynamics.crm/main.aspx?appid=00000000-0000-0000-0000-000000000
 ```Http
 https://myorg.crm.dynamics.crm/main.aspx?appid=00000000-0000-0000-0000-000000000000&pagetype=entityrecord&id=00000000-0000-0000-0000-000000000000**&flags=DisableFormCommandbar=true
 ```
+
+**DisableFormCommandbar**
+
+
+**DisableFormHandlers**
+
 
 ## View registered form event handlers and libraries in Monitor
 
