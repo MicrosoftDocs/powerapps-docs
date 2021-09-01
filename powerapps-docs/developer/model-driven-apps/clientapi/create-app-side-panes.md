@@ -23,8 +23,6 @@ search.app:
 
 Developers can create and manage app side panes within a model-driven app using the [Xrm.App.sidePanes](reference/xrm-app-sidepanes.md) API which represents the collection of side panes. Calling the [createPane](reference/Xrm-App/Xrm-App-sidePanes/createPane.md) method adds a new pane that allows navigation to any model-driven app form or custom page. Pages within the side pane must fit within the minimum width of 300px and resize to larger widths based on the pane width.  
 
-You always need to use the [navigateTo](reference/Xrm-Navigation/navigateTo.md) method while using the [sidePanes (Client API reference)](reference/xrm-app-sidepanes.md) for displaying records and views in the side pane.
-
 The order of tabs in the side pane is based on the order created and placed in two groups. The top group contains the panes that are not closeable by a user, and the bottom group has user closeable panes. The non-closeable group is typically defined at the start of the app, while the closeable group generally is added based on user actions within the app.
 
 You can use a platform-provided header with the title and close button or a custom header.

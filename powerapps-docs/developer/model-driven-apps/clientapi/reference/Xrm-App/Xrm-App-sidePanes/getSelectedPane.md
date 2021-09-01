@@ -29,7 +29,7 @@ Returns the currently selected pane.
 
 ## Return value
 
-Returns the [AppSidePane (Client API reference)](../../xrm-app-appsidepane.md) object.
+Returns the [AppSidePane](../../xrm-app-appsidepane.md) object.
 
 ### Related topics
 
