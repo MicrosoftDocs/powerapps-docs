@@ -34,6 +34,7 @@ Provides methods for managing side panes.
 ## Parameter
 
 |Parameter Name|Description|
+|--------------|-----------|
 |state|Returns whether the selected pane is collapsed or expanded.|
 
 ### Related topics
