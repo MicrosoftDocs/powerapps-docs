@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 05/27/2021
+ms.subservice: portals
 ms.author: ckwan
 ms.reviewer: tapanm
 contributors:
@@ -73,7 +74,7 @@ Contoso has the following customizations configured for this scenario:
 
 Contoso has a webpage with a basic form that shows all current car listings in the inventory to all authenticated users.
 
-![Contoso Limited - global access to all authenticated users](media/entity-permissions-studio-walkthrough/global-access.png "Contoso Limited - global access to all authenticated users")
+![Contoso Limited - global access to all authenticated users.](media/entity-permissions-studio-walkthrough/global-access.png "Contoso Limited - global access to all authenticated users")
 
 To configure table permissions for Global access to all authenticated users:
 
@@ -103,7 +104,7 @@ To configure table permissions for Global access to all authenticated users:
 
 1. From the list of available roles, select **Authenticated users**.
 
-    ![Contoso Limited - global access](media/entity-permissions-studio-walkthrough/contoso-ltd-global-access.png "Contoso Limited - global access")
+    ![Contoso Limited - global access.](media/entity-permissions-studio-walkthrough/contoso-ltd-global-access.png "Contoso Limited - global access")
 
 1. Select **Save**.
 
@@ -111,7 +112,7 @@ To configure table permissions for Global access to all authenticated users:
 
 Contoso has a webpage with a basic form that allows sales staff to view, update, and delete car listings that they have created.
 
-![Contoso Limited - contact access to owner sales staff](media/entity-permissions-studio-walkthrough/contact-access.png "Contoso Limited - contact access to owner sales staff")
+![Contoso Limited - contact access to owner sales staff.](media/entity-permissions-studio-walkthrough/contact-access.png "Contoso Limited - contact access to owner sales staff")
 
 To configure table permissions to allow sales staff contact access to their owned listings:
 
@@ -143,7 +144,7 @@ To configure table permissions to allow sales staff contact access to their owne
 
 1. From the list of available roles, select **Sales**.
 
-    ![Contoso Limited - contact access](media/entity-permissions-studio-walkthrough/contoso-ltd-contact-access.png "Contoso Limited - contact access")
+    ![Contoso Limited - contact access.](media/entity-permissions-studio-walkthrough/contoso-ltd-contact-access.png "Contoso Limited - contact access")
 
 1. Select **Save**.
 
@@ -151,7 +152,7 @@ To configure table permissions to allow sales staff contact access to their owne
 
 Contoso has a webpage with a basic form that allows sales staff to view all the car dealerships owned by their company.
 
-![Contoso Limited - account access to view all car dealerships](media/entity-permissions-studio-walkthrough/account-access.png "Contoso Limited - account access to view all car dealerships")
+![Contoso Limited - account access to view all car dealerships.](media/entity-permissions-studio-walkthrough/account-access.png "Contoso Limited - account access to view all car dealerships")
 
 To configure table permissions to allow sales staff account access to all dealerships:
 
@@ -183,7 +184,7 @@ To configure table permissions to allow sales staff account access to all dealer
 
 1. From the list of available roles, select **Sales**.
 
-    ![Contoso Limited - account access](media/entity-permissions-studio-walkthrough/contoso-ltd-account-access.png "Contoso Limited - account access")
+    ![Contoso Limited - account access.](media/entity-permissions-studio-walkthrough/contoso-ltd-account-access.png "Contoso Limited - account access")
 
 1. Select **Save**.
 
@@ -191,7 +192,7 @@ To configure table permissions to allow sales staff account access to all dealer
 
 Contoso has a webpage with a basic form that allows sales staff to view car listings from the dealerships that the staff is associated to.
 
-![Contoso Limited - sales access to view car listings for associated dealership](media/entity-permissions-studio-walkthrough/child-table-permission.png "Contoso Limited - sales access to view car listings for associated dealership")
+![Contoso Limited - sales access to view car listings for associated dealership.](media/entity-permissions-studio-walkthrough/child-table-permission.png "Contoso Limited - sales access to view car listings for associated dealership")
 
 To configure table permissions for sales staff to view associated dealership's car listings:
 
@@ -221,7 +222,7 @@ To configure table permissions for sales staff to view associated dealership's c
 
 1. From the list of available roles, select **Sales**.
 
-    ![Contoso Limited - child table permission](media/entity-permissions-studio-walkthrough/contoso-ltd-child-table-permission.png "Contoso Limited - child table permission")
+    ![Contoso Limited - child table permission.](media/entity-permissions-studio-walkthrough/contoso-ltd-child-table-permission.png "Contoso Limited - child table permission")
 
     > [!NOTE]
     > **Sales** role is inherited from the parent table permission.
@@ -232,7 +233,7 @@ To configure table permissions for sales staff to view associated dealership's c
 
 Contoso uses the default profile page available within the portal template to allow sales staff to update their contact details.
 
-![Contoso Limited - sales staff able to change their own profile information](media/entity-permissions-studio-walkthrough/self-access.png "Contoso Limited - sales staff able to change their own profile information")
+![Contoso Limited - sales staff able to change their own profile information.](media/entity-permissions-studio-walkthrough/self-access.png "Contoso Limited - sales staff able to change their own profile information")
 
 To configure table permissions to allow sales staff to change their profile information:
 
@@ -260,7 +261,7 @@ To configure table permissions to allow sales staff to change their profile info
 
 1. From the list of available roles, select **Authenticated Users**.
 
-    ![Contoso Limited - self access](media/entity-permissions-studio-walkthrough/contoso-ltd-self-access.png "Contoso Limited - self access")
+    ![Contoso Limited - self access.](media/entity-permissions-studio-walkthrough/contoso-ltd-self-access.png "Contoso Limited - self access")
 
 1. Select **Save**.
 
@@ -268,7 +269,7 @@ To configure table permissions to allow sales staff to change their profile info
 
 Now that you have all the table permissions configured, this is how the permissions look like inside portals Studio.
 
-![Contoso Limited - summary of configured table permissions](media/entity-permissions-studio-walkthrough/configured-contoso-ltd-table-permissions-studio.png "Contoso Limited - summary of configured table permissions")
+![Contoso Limited - summary of configured table permissions.](media/entity-permissions-studio-walkthrough/configured-contoso-ltd-table-permissions-studio.png "Contoso Limited - summary of configured table permissions")
 
 - **All available cars** - This table permission allows all authenticated users to view all car listings across all dealerships using **Global access**.
 - **Cars associated to sales role** - This table permission allows each sales staff to view the car listings created by themselves using **Contact access**.

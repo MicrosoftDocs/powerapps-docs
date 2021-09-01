@@ -17,19 +17,17 @@ ms.assetid: 3e6a82ab-dbb2-4a60-acc2-c4f1012a8630
 
 [!INCLUDE[./includes/captureaudio-description.md](./includes/captureaudio-description.md)]
 
+## Available for
+
+Model-driven apps (mobile client)
+
 ## Syntax
 
 `context.device.captureAudio()`
 
-## Available for 
-
-Model-driven apps
-
 ## Return Value
 
 Type: `Promise<FileObject>`
-
-## Remarks
 
 See [Promise](https://developer.mozilla.org/docs/Web/JavaScript/reference/Global_Objects/Promise) and [FileObject](../fileobject.md)
 

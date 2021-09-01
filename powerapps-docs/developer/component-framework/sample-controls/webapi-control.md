@@ -16,7 +16,7 @@ The web API component is designed to perform create, retrieve, update and delete
 [!INCLUDE[cc-terminology](../../data-platform/includes/cc-terminology.md)]
 
 > [!div class="mx-imgBorder"]
-> ![Web API component](../media/web-api-control.png "Web API component")
+> ![Web API component.](../media/web-api-control.png "Web API component")
 
 ## Available for 
 

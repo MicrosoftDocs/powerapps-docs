@@ -1,6 +1,6 @@
 ---
-title: " Dump attribute metadata to a file (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "This sample showcases how to dump attribute metadata to a file." # 115-145 characters including spaces. This abstract displays in the search result.
+title: " Dump column definitions to a file (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "This sample showcases how to dump column definitions to a file." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 12/20/2019
 ms.reviewer: "pehecke"
@@ -16,11 +16,11 @@ search.app:
   - D365CE
 ---
 
-# Dump Attribute metadata information to a file
+# Dump column definitions information to a file
 
 [!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
 
-This sample shows how to write out all the attribute metadata to an `XML` file. It uses the [RetrieveAllEntitiesRequest](/dotnet/api/microsoft.xrm.sdk.messages.retrieveallentitiesrequest?view=dynamics-general-ce-9) message. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/DumpAttributeInfo).
+This sample shows how to write out all the column definitions to an `XML` file. It uses the [RetrieveAllEntitiesRequest](/dotnet/api/microsoft.xrm.sdk.messages.retrieveallentitiesrequest?view=dynamics-general-ce-9) message. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/DumpAttributeInfo).
 
 The following sample creates a new file at `\DumpAttributeInfo\bin\Debug\AllAttributeDesc.xml`. You can open this file in **Office Excel** to see a tabular report. 
 

@@ -1,7 +1,7 @@
 ---
 title: Functional application consultant learning catalog
-description: Find all the training options for Power Apps
-author: loreleishannonmsft
+description: Find all the training options for Power Apps functional consultants
+author: MargoC
 ms.topic: article
 ms.date: 02/19/2020
 ms.service: powerapps

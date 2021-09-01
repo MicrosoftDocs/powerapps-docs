@@ -2,11 +2,12 @@
 title: "Use Office365 authentication with Microsoft Dataverse (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Describes deprecation of the WS-Trust security protocol and the code changes required in applications that use Office365 authentication."
 ms.custom: ""
-ms.date: 03/23/2021
+ms.date: 08/29/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "phecke" # GitHub ID
+ms.subservice: dataverse-developer
 ms.author: "pehecke" # MSFT alias of Microsoft employees only
 manager: "kvivek" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -18,7 +19,7 @@ search.app:
 
 # Use Office365 authentication with Microsoft Dataverse
 
-Use of the WS-Trust authentication security protocol when connecting to Microsoft Dataverse is no longer recommended and has been deprecated; see the [announcement](/power-platform/important-changes-coming#deprecation-of-office365-authentication-type-and-organizationserviceproxy-class-for-connecting-to-common-data-service).
+Use of the WS-Trust authentication security protocol when connecting to Microsoft Dataverse is no longer recommended and has been deprecated; see the [announcement](/power-platform/important-changes-coming#deprecation-of-office365-authentication-type-and-organizationserviceproxy-class-for-connecting-to-dataverse).
 
 Additionally, the WS-Trust protocol does not support modern forms of multi-factor authentication and Azure AD Conditional Access controls to customer data.
 

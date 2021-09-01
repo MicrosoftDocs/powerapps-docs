@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2021
+ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: tapanm
 contributors:
@@ -31,7 +32,7 @@ To create a webpage by using basic forms and lists is a complex task. **Create P
 
 5. Select **Create**.
 
-   ![Create portal content using administrative wizard](media/create-portal-content.png "Create portal content by using the administrative wizard")  
+   ![Create portal content using administrative wizard.](media/create-portal-content.png "Create portal content by using the administrative wizard")  
 
 ### See also
 

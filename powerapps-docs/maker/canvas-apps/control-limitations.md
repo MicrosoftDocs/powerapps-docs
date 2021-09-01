@@ -6,12 +6,17 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 01/11/2021
+ms.date: 09/01/2021
+ms.subservice: canvas-maker
 ms.author: namarwah
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - navjotm
+  - chmoncay
 ---
 
 # Limitations of controls in canvas apps
@@ -28,15 +33,13 @@ In this article, learn about the general limitations of the controls used in can
    - When using Internet Explorer, the camera control isn't supported. Microsoft Edge is recommended.
    - When using desktop browsers, the barcode scanner isn't supported. Use the Power Apps for mobile app.
 
-- [Container control (experimental)](controls/control-container.md) - see [Container control (experimental) limitations](controls/control-container.md#known-limitations).
-
 - [Export and import controls](controls/control-export-import.md) - see [Export and import control limitations](controls/control-export-import.md#limitations).
 
 - [Gallery control](controls/control-gallery.md) - see [Gallery control limitations](controls/control-gallery.md#limitations).
 
 - [Image control](controls/control-image.md) - only supports external media URLs using HTTPS.
 
-- [Power BI tile control](controls/control-power-bi-tile.md) - see [Power BI tile control limitations for passing a parameter](controls/control-power-bi-tile.md#pass-a-parameter).
+- [Power BI tile control](controls/control-power-bi-tile.md) - see [Power BI tile control limitations for passing a parameter](controls/control-power-bi-tile.md#filtering).
 
 - [PDF viewer control (experimental)](controls/control-pdf-viewer.md) - see [PDF viewer control (experimental) limitations](controls/control-pdf-viewer.md#limitations).
 
@@ -71,6 +74,7 @@ The following controls aren't supported by apps embedded in Teams:
 - [Map](geospatial-component-map.md)
 - [Mixed reality](mixed-reality-overview.md) (View in MR, View shape in MR, Measure in MR)
 - [Power BI tile control](controls/control-power-bi-tile.md)
+- [Web barcode scanner control](controls/control-barcodescanner.md)
 
 ## Next steps
 

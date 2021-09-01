@@ -7,6 +7,7 @@ ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 05/11/2020
+ms.subservice: end-user
 ms.author: shjais
 ms.custom: ""
 ms.reviewer: ""
@@ -30,30 +31,30 @@ If you receive an email that has email addresses that aren't associated with a t
 
 1. Open the email editor and select the unresolved email recipient.
 
-    ![Unresolved email recipient](media/unresolved-email.png "Unresolved email recipient")
+    ![Unresolved email recipient.](media/unresolved-email.png "Unresolved email recipient")
 
 2. In the **Lookup Rows** pane, select **New Row**.
 
-    ![Lookup Rows pane for unresolved email recipient](media/unresolved-email-lookup.png "Lookup Rows pane for unresolved email recipient")
+    ![Lookup Rows pane for unresolved email recipient.](media/unresolved-email-lookup.png "Lookup Rows pane for unresolved email recipient")
 
     > [!NOTE]
     > If rows are displayed in search results, you can resolve the email to one of the existing rows.
 
 3. Select the row type to create. For example, **Contacts**.
 
-    ![Select a row type](media/unresolved-email-select-record-type.png "Select a row type")
+    ![Select a row type.](media/unresolved-email-select-record-type.png "Select a row type")
 
 4. In the **Quick Create: Contact** pane, enter the required details, and select **Save and Close**.
 
-    ![Enter contact details](media/unresolved-email-create-record.png "Enter contact details")
+    ![Enter contact details.](media/unresolved-email-create-record.png "Enter contact details")
 
 5. The contact is created and selected in the **Lookup Rows** pane. Select **Add**.
 
-    ![Add the contact](media/unresolved-email-add-record.png "Add the contact")
+    ![Add the contact.](media/unresolved-email-add-record.png "Add the contact")
 
 6. The unresolved email recipient is resolved and shown in the **To** column in the email editor.
 
-    ![Resolved email recipient](media/resolved-email-recipient.png "Resolved email recipient")
+    ![Resolved email recipient.](media/resolved-email-recipient.png "Resolved email recipient")
 
 
 ### See also
