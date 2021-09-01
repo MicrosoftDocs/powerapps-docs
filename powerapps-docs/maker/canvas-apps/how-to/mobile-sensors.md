@@ -158,17 +158,17 @@ Without any NFC data present, the control will display **Next Destination**. Whe
 
 Assuming the data for the NFC tags has been configured as described in the introduction, the user will see the next compass heading, latitude, and longitude values for the next scavenger hunt location after scanning one of those tags.
 
-![Compass heading latitude and longitude values](media/how-to-build-an-app-using-mobile-sensors/html-text-control-to-display-the-nfc-scan-information-1.png "Compass heading latitude and longitude values")
+![Compass heading latitude and longitude values](media/mobile-sensors/html-text-control-to-display-the-nfc-scan-information-1.png "Compass heading latitude and longitude values")
 
 ## Test the app
 
 Save and publish the app. On a mobile device with the necessary sensors, open the app and observe the compass heading, latitude, longitude, and altitude values. Try walking around while turning in various directions to see changes in the various sensor readings.
 
-![Try walking around while turning in various directions](media/how-to-build-an-app-using-mobile-sensors/html-text-control-to-display-the-nfc-scan-information-2.png "Try walking around while turning in various directions")
+![Try walking around while turning in various directions](media/mobile-sensors/html-text-control-to-display-the-nfc-scan-information-2.png "Try walking around while turning in various directions")
 
 Press the **Scan NFC Tag** button to observe the NFC reader control. If you have an NFC tag that can produce a **Text** value, scan the tag to observe the text in the app. If not, select **Cancel**.
 
-![Scan NFC Tag](media/how-to-build-an-app-using-mobile-sensors/html-text-control-to-display-the-nfc-scan-information-3.png "Scan NFC Tag")
+![Scan NFC Tag](media/mobile-sensors/html-text-control-to-display-the-nfc-scan-information-3.png "Scan NFC Tag")
 
 ## Add and configure second screen
 
@@ -354,7 +354,7 @@ This completes the bubble level-like visuals.
 
 ## Test the level app
 
-![Test the app](media/how-to-build-an-app-using-mobile-sensors/test-the-app-1.png "Test the app")
+![Test the app](media/mobile-sensors/test-the-app-1.png "Test the app")
 
 Save and publish the app. On a mobile device with the necessary sensors, open the app and navigate to screen with the bubble level visuals. Tilt the device from left to right, then up and down, and finally in all directions, noting the changes in angle properties as well as the changes in the visuals. Find an angled surface to place the device on and again note the angles and visuals.
 
