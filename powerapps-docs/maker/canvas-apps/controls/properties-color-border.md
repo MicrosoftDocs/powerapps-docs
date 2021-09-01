@@ -141,4 +141,14 @@ These properties are in effect when the user selects an item in a control.
 
 - Applies to **[Drop down](control-drop-down.md)** and **[List Box](control-list-box.md)** controls.
 
+## Order of color
+
+A control can be in multiple states.  For example: focused and hovered.  Only one color is used, in this order:
+
+1. Disabled
+1. Pressed
+1. Hover
+1. Focus 
+1. Normal
+
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
