@@ -975,6 +975,8 @@
       href: ./canvas-apps/how-to/trigger-flow.md
     - name: Create a canvas app to scan barcodes
       href: ./canvas-apps/how-to/create-app-barcode-scanner.md
+    - name: Create an app that uses mobile sensors
+      href: ./canvas-apps/how-to/mobile-sensors.md
   - name: Save and publish an app
     href: ./canvas-apps/save-publish-app.md
   - name: Share an app and its dependencies
