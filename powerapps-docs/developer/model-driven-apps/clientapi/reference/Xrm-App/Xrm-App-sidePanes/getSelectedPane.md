@@ -27,6 +27,10 @@ Returns the currently selected pane.
 
 `Xrm.App.sidePanes.getSelectedPane();`
 
+## Return value
+
+Returns the [AppSidePane (Client API reference)](../../xrm-app-appsidepane.md) object.
+
 ### Related topics
 
 [sidePanes](../../xrm-app-sidepanes.md)

@@ -1,6 +1,6 @@
 ---
 title: "sidePanes (Client API reference) in model-driven apps| MicrosoftDocs"
-description: Includes description and supported parameters for the AppSidePanes method.
+description: Includes description and supported parameters for the sidePanes method.
 ms.date: 08/31/2021
 ms.service: powerapps
 ms.topic: "reference"
