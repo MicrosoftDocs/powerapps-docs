@@ -726,6 +726,8 @@
         href: clientapi/reference/xrm-app/addGlobalNotification.md
       - name: clearGlobalNotification
         href: clientapi/reference/xrm-app/clearGlobalNotification.md
+      - name: AppSidePane
+        href: clientapi/reference/xrm-app-appsidepane.md
       - name: Xrm.App.sidePanes
         href: clientapi/reference/xrm-app-sidepanes.md
         items:
@@ -739,8 +741,6 @@
           href: clientapi/reference/Xrm-App/Xrm-App-sidePanes/getSelectedPane.md
         - name: state
           href: clientapi/reference/Xrm-App/Xrm-App-sidePanes/state.md
-      - name: AppSidePane
-        href: clientapi/reference/xrm-app-appsidepane.md
     - name: Xrm.Device
       href: clientapi/reference/xrm-device.md
       items:
