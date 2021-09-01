@@ -215,7 +215,7 @@ issues. This section provides troubleshooting tips when issues occur.
 ## Next steps
 The following articles are useful for further information and scenarios when using dataflows:
 
--   [Add data to a table in Dataverse](add-data-power-query.md)
+-   [Add data to a table in Dataverse](/power-query/dataflows/add-data-power-query)
 
 -   [Using an on-premises data gateway in Power Platform dataflows](/power-query/dataflows/using-dataflows-with-on-premises-data)
 

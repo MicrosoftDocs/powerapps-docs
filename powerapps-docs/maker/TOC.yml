@@ -2152,12 +2152,6 @@
     items:
     - name: Create and use dataflows
       href: ./data-platform/create-and-use-dataflows.md
-    - name: Add data to a table using Power Query
-      href: ./data-platform/add-data-power-query.md
-    - name: Connect Azure Data Lake for dataflow storage
-      href: ./data-platform/connect-azure-data-lake-storage-for-dataflow.md
-    - name: Use an on-premises data gateway
-      href: ./data-platform/using-dataflows-with-on-premises-data.md
   - name: License requirements for tables
     href: ./data-platform/data-platform-entity-licenses.md
     items:
