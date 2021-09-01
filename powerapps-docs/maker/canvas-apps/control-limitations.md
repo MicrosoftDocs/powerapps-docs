@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 06/30/2021
+ms.date: 09/01/2021
 ms.subservice: canvas-maker
 ms.author: namarwah
 search.audienceType: 
@@ -32,8 +32,6 @@ In this article, learn about the general limitations of the controls used in can
    - On Android, the camera control isn't supported in Teams Mobile.
    - When using Internet Explorer, the camera control isn't supported. Microsoft Edge is recommended.
    - When using desktop browsers, the barcode scanner isn't supported. Use the Power Apps for mobile app.
-
-- [Container control (experimental)](controls/control-container.md) - see [Container control (experimental) limitations](controls/control-container.md#known-limitations).
 
 - [Export and import controls](controls/control-export-import.md) - see [Export and import control limitations](controls/control-export-import.md#limitations).
 
