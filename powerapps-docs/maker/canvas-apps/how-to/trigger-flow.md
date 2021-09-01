@@ -51,8 +51,6 @@ We're going to create a trial environment that will include a Dataverse database
 
 1. Select **Next**.
 
-    ![Create trial environment](media/trigger-flow/trigger-flow-1.png "Create trial environment")
-
 1. Toggle **Deploy Sample Apps and Data** to **Yes**.
 
 1. Select **Save**.
