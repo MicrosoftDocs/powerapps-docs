@@ -91,15 +91,17 @@ Here's an example using asynchronous code in synchronous extension points.
 
 ```javascript
 //Only do this if an extension point does not yet support asynchronous code
-Xrm.Utility.showProgressIndicator("Checking settings...")
-Xrm.WebApi.retrieveRecord("settings_entity", "7333e80e-9b0f-49b5-92c8-9b48d621c37c").then(
-	(data) => {
-Xrm.Utility.closeProgressIndicator(); 
-//do other logic with data here
-	}, (error) => {
-Xrm.Utility.closeProgressIndicator(); 
-//do other logic with error here
-});
+Xrm.Utility.showProgressIndicator("Checking settings...");
+Xrm.WebApi.retrieveRecord("settings_entity", "7333e80e-9b0f-49b5-92c8-9b48d621c37c")
+	.then(
+		(data) => {
+			//do other logic with data here
+		},
+		(error) => {
+			//do other logic with error here
+		}
+	)
+	.finally(Xrm.Utility.closeProgressIndicator);
 ```
 
 You should be careful when using asynchronous code in an event handler that does not support waiting for asynchronous code, particularly for code that needs an action to be taken or handled on the resolution of the asynchronous code. Asynchronous code can cause issues if the resolution handler expects the application context to remain the same as it was when the asynchronous code was started. Your code should check that the user is in the same context after each asynchronous continuation point. 
