@@ -2,7 +2,7 @@
 title: "Guidelines and troubleshooting when working with embedded canvas apps | MicrosoftDocs"
 description: Understand the recommended ways to work with embedded canvas apps in Power Apps
 ms.custom: ""
-ms.date: 06/17/2021
+ms.date: 09/02/2021
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -20,7 +20,6 @@ search.app:
   - PowerApps
   - D365CE
 ---
-
 # Guidelines and troubleshooting for embedded canvas apps
 
 [!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
@@ -112,6 +111,19 @@ To resolve this issue, choose the correct option:
    1. Export the solution from the development environment and then import the solution into your target environment.
 
 - Unmanaged solutions: If the solution was imported into an environment as an unmanaged solution, edit the model-driven app, that has the embedded canvas app control, and then follow similar steps as described for a managed solution to set the canvas **App Name** property.
+
+#### Error message: "You don’t have read privileges for the Canvas App entity. Please contact your administrator"
+
+The error message is displayed on the model-driven app form where the embedded canvas app should appear.
+
+This behavior occurs because the user doesn't have to the read access to the CanvasApp Extended Metadata table. Add the user to the security role used for the app hat has read access to the CanvasApp Extended Metadata table.
+
+1. In Power Apps, on the left navigation pane select **Apps**, select the app you want, select **…**, and then select **Share**.
+1. On the left pane, select the app, and then select **Manage security roles**.
+1. Open the security role assigned to the app, such as the Basic User security role.
+1. Select the **Custom Entities** tab, and set organization scope read privileges for the **CanvasApp Extended Metadata** table.
+   :::image type="content" source="media/read-priv-canvasapp-ext-meta.png" alt-text="Set organization scope read privilege on the CanvasApp Extended Metadata table":::
+1. Select **Save and Close** to close the security role window.
 
 ### See also
 
