@@ -441,4 +441,25 @@ The screenshot below shows the root cause of the issue. You can see that the cha
 ### Follow up
 See where the change is coming from and if it's expected behavior or not. In case of a script making changes, the original web resource can be traced back in the call stack. In most cases it will either be a script - make a call based on the web resource itself.
 
+
+## Business Required field validation does not behave as expected
+### Problem
+Business Required fields by default would block form save if the value is missing. However in many by-design scenarios a business required field may not block save even when the value is empty, or block the save when you don't believe it should.
+
+### How to troubleshoot
+The 'RequiredFieldValidation' event is logged when a save is attempted, regardless whether save is successful or not, this event explains why each business required field blocks or does not block save operation.
+
+Below is an example of this event. This Form Checker event is self-explanatory. The top of message explains how to read the detailed reports of each required field. Please read it thoroughly before looking into the detailed analysis of each field and its bound controls. In this example, "fax" field is bound to one control, and the control with the same name is read only and will not trigger required field validation.
+
+> [!div class="mx-imgBorder"]
+> ![Required Field Validation.](media/required-field-validation.png "Required field validation")
+
+Below is another example that "jobtitle" is a business required field that put on the BPF but not on the form, and the field is not dirty (not modified after form is loaded), thus it does not block save even that it's empty.
+
+> [!div class="mx-imgBorder"]
+> ![Required Field Validation BPF only Field.](media/required-field-validation-bpf-only-field.png "Required field validation BPF only field")
+
+### Follow up
+Most times the behavior is by design, and the `RequiredFieldValidation` event explains why this field behaves in a certain way in form save operation. If the required field validation is skipped on a field because the control is disabled or hidden, as the first example ilustrate, please follow the Form Checker suggestions for further analysis that may lead to another troubleshooting scenario such as [Why a control is disabled/enabled or visible/hidden](#why-a-control-is-disabledenabled-or-visiblehidden).
+
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
