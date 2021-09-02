@@ -13,7 +13,7 @@ contributors:
   - tapanm-msft
 ---
 
-# Tutorial: Build an app to retrieve Power Platform videos for readiness
+# Build an app to retrieve Power Platform videos for readiness
 
 In this tutorial, you’ll build a solution that retrieves, lists, and displays content that can be used for readiness.
 
