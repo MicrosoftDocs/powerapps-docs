@@ -153,12 +153,11 @@ async function onLoad1(executionContext) {
 let requestPromise;
 async function onLoad2(executionContext) {
     let settingValue = sessionStorage.getItem(SETTING_VALUE_SESSION_STORAGE_KEY);
-    let settingValueRequested = false;
 
     // Ensure there is a stored setting value to use the first time in a session
     if (settingValue === null || settingValue === undefined) {
-        settingValueRequested = true;
-        settingValue = await requestSettingValue();
+        requestPromise = requestSettingValue();
+        settingValue = await requestPromise;
     }
 
     // Do logic with setting value here
@@ -166,7 +165,7 @@ async function onLoad2(executionContext) {
     // Request setting value again but don't wait on it
     // In case this handler fires twice, don’t make the same request again if it is already in flight
     // Additional logic can be added so that this is done less than once per page
-    if (!settingValueRequested && !requestPromise) {
+    if (!requestPromise) {
         requestPromise = requestSettingValue().finally(() => {
             requestPromise = undefined;
         });
