@@ -207,34 +207,8 @@ In [Monitor](../../maker/model-driven-apps/monitor-form-checker.md), the `FormEv
 ### Follow up
 Please follow up with the script owner to further troubleshoot this issue.
 
-
-## Form script errors
-
-If you see a form script error during the form [OnLoad](./clientapi/reference/events/form-onload.md), [OnSave](./clientapi/reference/events/form-onsave.md), [OnChange](./clientapi/reference/events/attribute-onchange.md), business rule execution, or other events, the error message itself might not contain sufficient information to troubleshoot.
-
-For example, the customer has an `onLoad` event handler as shown below (`onload(controlName)`), and selected the **Pass execution context as first parameter** option in the form designer.
-
-```javascript
-function onload(controlName)
-{
-  formContext.getControl(controlName);
-}
-```
-
-This causes the form script error because the first parameter for the `OnLoad` function is `executionContext`, but the script incorrectly uses this as the control name for the `getControl()` method. The script throws the error shown in the following image.
-
-> [!div class="mx-imgBorder"]
-> ![Form script error.](media/form-script-error.png "Form script error")
-
-**Resolution**:
-
-In [Monitor](../../maker/model-driven-apps/monitor-form-checker.md), the `FormEvent.onload` operation provides all the details including the web resource, function, and the line that's causing the issue.
-
-> [!div class="mx-imgBorder"]
-> ![FormEvent.onload operation.](media/see-form-checker-for-details.png "FormEvent.onload operation")
-
 ## Form freezes, loads slowly, or throws unexplained errors
-
+### Problem
 There are many possible reasons for a form to freeze, load slowly, or throw a "Web resource method does not exist" script error or an error that isn't a regular script error. Some of the possible reasons include:
 
 - Bad `OnLoad` scripts.
@@ -249,55 +223,41 @@ There are many possible reasons for a form to freeze, load slowly, or throw a "W
 
 - Business process flow errors.
 
-**Resolution**:
+### How to troubleshoot
+Determine if the issue reproduces without involving forms. If it does, then there is a broader issue that should be investigated out of the forms context. Actual ownership of the issue depends on the particular details case by case. 
 
-- Use the **DisableFormCommandbar** flag and refresh the page. If the issue is resolved, it was caused by some command customization. You may find it helpful to use [Command Checker](https://powerapps.microsoft.com/blog/introducing-command-checker-for-model-app-ribbons/) to identify which command is malfunctioning.  
+If you believe this issue only occurs on forms, please refer to [Use URL parameters to disable various form components](#use-url-parameters-to-disable-various-form-components) to help narrow down the component that's causing the issue.
 
-- If the issue persists, use the **DisableFormHandlers=true** flag. If the issue still isn't resolved, you can further identify the exact event handler function that's causing the problem.
+### Follow up
+- If you have proven the issue is caused by certain form libraries / script files, please follow up with the owner of these customizations to further root cause the issue.
+- If you have proven the issue is caused by web resource controls with the DisableWebResourceControls flag, then you can use the DisableFormControl flag to disable each one-by-one until the issue no longer repros. The last disabled control after the issue no longer repros is the one that is causing the issue. please follow up with the owner of the control to further troubleshoot the issue.
+- If you have proven the issue is caused by command bar / ribbon with the **DisableFormCommandbar** flag, this means this is not an issue with the form and an issue with the command bar. Please use [Command Checker](https://powerapps.microsoft.com/en-us/blog/introducing-command-checker-for-model-app-ribbons/) to troubleshoot individual commands and identify which one is causing the issue.
 
-- Assuming the form has 10 libraries, and 20 `OnLoad` event handlers, you can use the binary search approach to narrow down the handler index range as described in the following example:
-
-  1. Open [Monitor](../../maker/model-driven-apps/monitor-form-checker.md) to view the registered form event handlers and libraries to get the list of `OnLoad` event handlers of indexes ranging from 0 through 19 and form libraries of indexes ranging from 0 through 9.
-
-  1. Use the `DisableFormHandlers=onload_0_9` flag. If the issue is resolved, it indicates that the issue is caused by some handlers in the index range from 0 through 9; otherwise, the issue is caused by handlers in the index range from 10 through 19.
-
-  1. Assuming the issue is caused by handlers from index 0 through 9, use the `DisableFormHandlers=onload_0_4 (or true_0_4)` flag to disable handlers for the index range from 0 through 4. Continue doing the same until the range is small enough to loop through each one individually.
-  
-  1. Assuming the handler index is narrowed down to 3 or 4, use `DisableFormHandlers=onload_3` and then `DisableFormHandlers=onload_4` until you identify the exact handler that's causing the issue.
-
-  1. Assuming the issue is caused by the handler of index 3, read the details for that event handler in<!--note from editor: Edit okay?--> Monitor.
-
-- If the issue persists, use the `DisableFormLibraries=true` flag to disable all form libraries, and follow the similar binary search approach if the number of libraries is large. If there aren't many libraries, just disable them one after another in a similar way as described earlier.
-
-- If the issue persists, use the `DisableWebResourceControls=true` flag to disable all the web resource controls. If the issue is resolved, use the `DisableFormControl` flag to further identify the exact web resource control.
-
-- Continue turning off form components one by one by using the appropriate URL parameters. The component that makes the issue go away when it's disabled will be the component that's causing the problem. 
-
-Also, check for and fix synchronous network requests as described in the following:
-
-- [Turbocharge your model-driven apps by transitioning away from synchronous requests](https://powerapps.microsoft.com/blog/turbocharge-your-model-driven-apps-by-transitioning-away-from-synchronous-requests/) (blog post) 
-
-- [Interact with HTTP and HTTPS resources asynchronously](//powerapps/developer/model-driven-apps/best-practices/business-logic/interact-http-https-resources-asynchronously)
 
 ## A business rule or custom script isn't working
-
+### Problem
 This issue occurs if a business rule or custom script used to work in the legacy web client and stopped working in Unified Interface. One of the main reasons for this error to occur is when a business rule or script in Unified Interface references a control that isn't available in Unified Interface.
 
-**Resolution**:
+### How to troubleshoot
+One of the reasons that the business rule or script is not working in Unified Client is that the controls that are part of them - do not exist in Unified Client.
+Composite controls exist in web client, but in Unified Client the composite control is broken down into parts and is stored this way. For example, if a field "fullname" is part of the business rule or custom script, the fields "firstname", "middlename" or "lastname" should be used instead.
 
-An example of a common issue where this can happen is when a composite control is included in a script that exists in the legacy web client, but in the Unified Interface, the composite control is divided into parts and is stored differently. For example, if the column `fullname` is part of the business rule or custom script in the legacy web client, the columns `firstname`, `middlename`, or `lastname` should be used in Unified Interface.
+Once you launch Form Checker, you'll be able to see more details including the composite control that is causing the problem, the fields that can be used in the business rule or custom script instead and a full callstack (the callstack has been modified for demonstration purpose).
 
 You can use [Monitor](../../maker/model-driven-apps/monitor-form-checker.md) to see more details, including the composite control that's causing the problem and the columns that can be used in the business rule or custom script instead.
 
 > [!div class="mx-imgBorder"]
 > ![Custom script not working.](media/custom-script-error.png "Custom script not working")
 
-## Related menu/Related tab
+### Follow up
+Please follow up with the corresponding owner of the business rule or custom script to make the change to use controls suggested by the Form Checker.
 
+
+## Related menu/Related tab
+### Problem
 There are many reasons why a related menu item doesn't appear on the **Related** tab or has an incorrect label.
 
-**Resolution**:
-
+### How to troubleshoot
 In the following example, a related table `role` (security role) doesn't appear in the `team` form because the `role` table isn't available in Unified Interface.
 
 > [!div class="mx-imgBorder"]
@@ -310,12 +270,15 @@ There are also a few sources where a record can be included as an option for the
 > [!div class="mx-imgBorder"]
 > ![Related menu details.](media/related-menu-error-details.png "Related menu details")
 
-## Why a control is disabled/enabled or visible/hidden
+### Follow up
+Please follow up with the corresponding owner of the related menu item as the Form Checker suggests.
 
+
+## Why a control is disabled/enabled or visible/hidden
+### Problem
 There are many possible reasons why a control might be disabled or hidden when the form is loaded. 
 
-**Resolution**:
-
+### How to troubleshoot
 - You can use [Monitor](../../maker/model-driven-apps/monitor-form-checker.md) to view the `FormControls` event that includes all the details about the initial control state.
 
    > [!div class="mx-imgBorder"]
@@ -326,7 +289,7 @@ There are many possible reasons why a control might be disabled or hidden when t
    > [!div class="mx-imgBorder"]
    > ![Control state changed.](media/control-state-changed.png "Control state changed")
 
-A control can be disabled by using the following list of rules. If a rule is met, the following rules are ignored. If you want to change whether a control is disabled, you must change the input to the rule used for the result or to a rule earlier in the list.
+A control can be disabled by using the following list of rules in order. If a rule is met, then the following rules are ignored. If you want to change whether a control is disabled, you must change the input to the rule used for the result or to a rule earlier in the list.
 
 - If the flags `DisableWebResourceControls=true` or `DisableFormControl=<control name>` are passed and the control is affected by these flags, the control will be disabled.
 - If the owning table is read-only in Unified Interface in table definitions, the control is disabled.
