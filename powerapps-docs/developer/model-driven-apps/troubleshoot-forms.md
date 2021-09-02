@@ -194,15 +194,19 @@ Using [Monitor](../../maker/model-driven-apps/monitor-form-checker.md), you can 
 Please follow up with the script owner to further troubleshoot this issue.
 
 ## The form or record isn't saved when you try to save the form
+### Problem
+A common cause is an [OnSave](./clientapi/reference/events/form-onsave.md) event handler that calls the `[executionContext.getEventArgs().preventDefault()](./clientapi/reference/save-event-arguments/preventDefault.md)` method to cancel the save operation.
 
-A common cause is an [OnSave](./clientapi/reference/events/form-onsave.md) event handler that calls the `executionContext.getEventArgs().preventDefault()` method to cancel the save operation.
-
-**Resolution**:
+### How to troubleshoot
 
 In [Monitor](../../maker/model-driven-apps/monitor-form-checker.md), the `FormEvents.onsave` operation provides all the details why the save event was canceled, more details than that are available from the form UI itself.
 
 > [!div class="mx-imgBorder"]
 > ![Record isn't saved error.](media/record-not-saved-error.png "Record isn't saved error")
+
+### Follow up
+Please follow up with the script owner to further troubleshoot this issue.
+
 
 ## Form script errors
 
