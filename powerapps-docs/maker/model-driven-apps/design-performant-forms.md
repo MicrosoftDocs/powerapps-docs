@@ -36,6 +36,8 @@ This section covers how controls that display data and tabs impact form performa
 
 The default tab is the first expanded tab on a form. It plays a special role in the loading of a form page. By design, the controls of the default tab are always rendered when opening a record. Specifically, the control initialization logic, such as data retrieval, is invoked for every control on the tab. In contrast, a secondary tab does not perform this initialization on its controls when the form is initially loaded. Instead, the control initialization occurs at the time the secondary tab is opened either through user interaction or calling the `setFocus` client API method. This provides an opportunity to shelter the initial form load from excessive control processing by placing certain controls in secondary tabs instead of the default tab. Thus, the control placement strategy can have a significant effect on the responsiveness of the initial form load. A more responsive default tab provides a better overall experience for modifying important fields, interacting with the command bar, and exploring other tabs and sections.
 
+Always put controls that are used the most often at the top of your defualt tab.  Layout and information architecure is not only important for performance but also to improve productivity when users interact with data on the form.  More information [Design productive main forms in model-driven apps](design-productive-forms.md)
+
 ### Data driven controls
 
 Controls that require extra data beyond the primary record produce the most strain on form responsiveness and loading speed. These controls fetch data over the network and often involve a waiting period (seen as progress indicators) as it can take time to transmit the data.
@@ -61,13 +63,13 @@ This section covers good practices to use with web browsers.
 
 ### Don't open new windows
 
-The `openForm` client API method allows a parameter option to display a form in a new window. Modern browsers can open new windows as browser tabs, which are considered *windows* for this article. Don't use this parameter (or set it to false), which signals the `openForm` method to perform the default behavior of displaying the form using the existing window. It's also possible to directly call the `window.open` JavaScript function from a custom script or another application; however, this should also be avoided. Opening a new window means that all of the page resources need to be fetched and loaded from scratch since the page is unable to leverage most of the client caching capabilities between a previously loaded form and the form in a new window. As an alternative to opening new windows, consider using the multi-session experience that allows records to be opened in multiple tabs while still maximizing the performance benefits of client caching.
+The `openForm` client API method allows a parameter option to display a form in a new window, don't use this parameter (or set it to false).  Setting it to false will ensure the   `openForm` method performs the default behavior of displaying the form using the existing window. It is also possible to directly call the `window.open` JavaScript function from a custom script or another application; however, this should also be avoided. Opening a new window means that all of the page resources need to be fetched and loaded from scratch since the page is unable to leverage most of the client caching capabilities between a previously loaded form and the form in a new window. As an alternative to opening new windows, consider using the multi-session experience that allows records to be opened in multiple tabs while still maximizing the performance benefits of client caching.
 
 ### Use modern browsers
 
 Using the most up-to-date web browser is key to ensuring your model-driven app runs as fast as possible.  The reason for this is that many of the performance improvements can only be used in the newer modern browsers.
 
-For example, if your organization is using Internet Explorer, older versions of Firefox, non-Chromium-based browsers, and so on, many of the performance gains that are built into a model-driven app will not be available in the older browser versions because they don't support features that the app depends on to run quickly and smoothly.
+For example, if your organization older versions of Firefox, non-Chromium-based browsers, and so on, many of the performance gains that are built into a model-driven app will not be available in the older browser versions because they don't support features that the app depends on to run quickly and smoothly. Internet Explorer is no longer supported, please move to Edge or a modern browser.
 
 In most cases, you can expect to see page load improvements by just switching to Microsoft Edge, updating to the latest current browser version from an older version, or moving to a modern Chromium-based browser.
 
@@ -136,8 +138,8 @@ async function onLoad1(executionContext) {
 }
 
 // Retrieve setting value with stale-while-revalidate strategy
-let requestPromise;
 async function onLoad2(executionContext) {
+    let requestPromise;
     let settingValue = sessionStorage.getItem(SETTING_VALUE_SESSION_STORAGE_KEY);
     let settingValueRequested = false;
 
