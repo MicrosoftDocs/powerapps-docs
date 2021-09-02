@@ -182,12 +182,12 @@ async function requestSettingValue() {
         try {
             sessionStorage.setItem(SETTING_VALUE_SESSION_STORAGE_KEY, data[SETTING_FIELD_NAME]);
         } catch (error) {
-            // Handle error
+            // Handle sessionStorage error
         } finally {
             return data[SETTING_FIELD_NAME];
         }
     } catch (error) {
-        // Handle error   
+        // Handle retrieveRecord error   
     }
 }
 ```
