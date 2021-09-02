@@ -103,7 +103,7 @@ The Employee Ideas app template for Teams enables team members to quickly genera
 
 1. Select **Allow** to allow connection to the connectors used by the app.
 
-![Allow connection to the connectors used by the app](media/enable-dataverse-sample-app/installing-employee-ideas-template-app-6.png "Allow connection to the connectors used by the app")
+    ![Allow connection to the connectors used by the app](media/enable-dataverse-sample-app/installing-employee-ideas-template-app-6.png "Allow connection to the connectors used by the app")
 
 1. Verify the team and channel in which you want channel notifications to be installed, then Select **Let’s go.**
 
