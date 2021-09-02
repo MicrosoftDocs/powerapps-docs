@@ -2,7 +2,7 @@
 title: "Known issues with custom pages in a model-driven app"
 description: "Find the known issue that might occur when you create a custom page" 
 ms.custom: ""
-ms.date: 07/22/2021
+ms.date: 09/02/2021
 ms.reviewer: ""
 ms.service: powerapps
 ms.subservice: mda-maker
@@ -65,9 +65,9 @@ The custom page is a new page type within model-driven apps. Custom pages bring 
 
 * When a user running Internet Explorer opens a custom page, an error message will appear indicating Internet Explorer isn't supported.
 
-* When a user runs an app that isn't compliant with their organization's [Data Loss Prevention (DLP) policies](https://docs.microsoft.com/power-platform/admin/wp-data-loss-prevention), they'll see an error dialog and the 'Technical details' reflects the app isn't DLP compliant. 
+* When a user runs an app that isn't compliant with their organization's [Data Loss Prevention (DLP) policies](/power-platform/admin/wp-data-loss-prevention), they'll see an error dialog and the 'Technical details' reflects the app isn't DLP compliant. 
 
-![Data Loss Prevention error dialog](media/model-app-page-issues/power_apps_unified_app_dlp_error.png "Data Loss Prevention error dialog")
+   ![Data Loss Prevention error dialog](media/model-app-page-issues/power_apps_unified_app_dlp_error.png "Data Loss Prevention error dialog")
 
 
 ## See also
