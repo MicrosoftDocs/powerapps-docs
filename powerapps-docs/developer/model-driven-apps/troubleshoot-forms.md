@@ -124,7 +124,7 @@ The main difference between disabling form libraries and form handlers are:
     - The `DisableFormHandlers=true` flag only prevents the second alert, whereas the `DisableFormLibraries=true` flag prevents both alerts.
 
 ## Unexpected behaviors when loading a form
-### Symptom  
+### Problem  
 Some common issues that can cause unexpected behavior when a model-driven app form is loaded are:
 
 - Columns or controls don't have the values you expect.
@@ -141,8 +141,26 @@ If the unexpected behavior stops occuring after you disabled the form handler, i
 ### Follow up
 If you have identified the problematic script that's causing this behavior, please follow up with the script owner to further troubleshoot this issue.  
 
-## Intermittent form errors
+## Saving in Progress error message
+### Problem
+Sometimes when you save a form, you see a **Saving in Progress** error message. 
 
+This error occurs when the form [OnSave](./clientapi/reference/events/form-onsave.md) event is triggered before the previous [OnSave](./clientapi/reference/events/form-onsave.md) event has been completed. This behavior isn't supported, and the error appears by design because calling the `OnSave` event before the previous `OnSave` event is complete will cause recursive save loops with unintended consequences.
+
+A typical cause for this error is the script that calls the `save()` method in the [OnSave](./clientapi/reference/events/form-onsave.md) event handler. Another possible cause might be concurrent `save()` calls in the `setTimeout()` method, which might cause the error to intermittently show up, depending on whether the prior `save()` call was completed before another `save()` call was made.
+
+### How to troubleshoot
+In [Monitor](../../maker/model-driven-apps/monitor-form-checker.md) the `FormEvents.onsave` operation provides all the details that are causing the error (the callstack has been modified for demonstration purpose). The callstack tells what exact web resource, function and line and row number is causing this error. The form checker won't be able to detect the error if the issue can't be reproduced.
+
+> [!div class="mx-imgBorder"]
+> ![Save in progress error.](media/save-in-progress-error.png "Save in progress error")
+
+### Follow up
+Please follow up with the script owner to further troubleshoot this issue.
+
+
+## Intermittent form errors
+### Problem
 The most common cause of intermittent or random form errors is using unsupported [Client API](./clientapi/reference.md) methods. These errors have the following characteristics:
 
 - They occur only for certain records, users, regions, or browsers, or only during periods when the network load or service load is high.
@@ -163,7 +181,8 @@ There are many ways to write unsupported Client API methods, and they all share 
 
 - In the web resource file, the Client API is accessed inside a `window.setTimeout()` function. The page state is unpredictable when the `setTimeout()` method executes the wrapped function&mdash;due to the nature of the timer function&mdash;so when the execution occurs, the page might be in a transitional state (during page load or save) that's not readily accessible by the Client API.
 
-Using [Monitor](../../maker/model-driven-apps/monitor-form-checker.md), you can access information that helps you determine when the unsupported client access occurred, and when the access occurred at the wrong time due to a race condition.
+### How to troubleshoot
+Using [Monitor](../../maker/model-driven-apps/monitor-form-checker.md), you can access information that helps you determine when the unsupported client access occurred, and when the access occurred at the wrong time due to a race condition. However, Form Checker will not report such unsupported client access when the unsupported code happens to be executed at the right time that does not cause an issue.
 
 > [!div class="mx-imgBorder"]
 > ![Unsupported Client API method.](media/unsupported-client-api-method.png "Unsupported Client API method")
@@ -171,18 +190,8 @@ Using [Monitor](../../maker/model-driven-apps/monitor-form-checker.md), you can 
 > [!NOTE]
 > The call stack has been modified for illustration purposes. The call stack shows details like web resource, function, and the line that's causing the error.
 
-## Saving in Progress error message
-
-Sometimes when you save a form, you see a **Saving in Progress** error message. This error occurs when the form [OnSave](./clientapi/reference/events/form-onsave.md) event is triggered before the previous [OnSave](./clientapi/reference/events/form-onsave.md) event has been completed. This behavior isn't supported, and the error appears by design because calling the `OnSave` event before the previous `OnSave` event is complete will cause recursive save loops with unintended consequences.
-
-A typical cause for this error is the script that calls the `save()` method in the [OnSave](./clientapi/reference/events/form-onsave.md) event handler. Another possible cause might be concurrent `save()` calls in the `setTimeout()` method, which might cause the error to intermittently show up, depending on whether the prior `save()` call was completed before another `save()` call was made.
-
-**Resolution**:
-
-In [Monitor](../../maker/model-driven-apps/monitor-form-checker.md) the `FormEvents.onsave` operation provides all the details that are causing the error. The form checker won't be able to detect the error if the issue can't be reproduced.
-
-> [!div class="mx-imgBorder"]
-> ![Save in progress error.](media/save-in-progress-error.png "Save in progress error")
+### Follow up
+Please follow up with the script owner to further troubleshoot this issue.
 
 ## The form or record isn't saved when you try to save the form
 
