@@ -40,9 +40,6 @@ Side pane icons support badging indicating the user that a change needs attentio
 
 The following examples show how to display a default view of the table in the side pane. This example shows how to open reservation list and product list in the app side pane as non-closeable panes.
 
-> [!div class="mx-imgBorder"] 
-> ![Example 1](../media/app-side-panes-example-1.png "Example 1")
-
 ```javascript
 Xrm.App.sidePanes.createPane({
     title: "Reservations",
@@ -56,6 +53,9 @@ Xrm.App.sidePanes.createPane({
     })
 });
 ```
+
+> [!div class="mx-imgBorder"] 
+> ![Example 1](../media/app-side-panes-example-1.png "Example 1")
 
 ```javascript
 Xrm.App.sidePanes.createPane({

@@ -26,7 +26,7 @@ Provides methods for managing a single side pane.
 
 |Methods|Description|
 |--------|----------|
-|Close|Closes the side pane and removes it from the side bar.|
+|close|Closes the side pane and removes it from the side bar.|
 |select|Specify whether the pane should be selected or expanded.|
 |navigate|Opens a page within the selected pane. This is similar to the [navigateTo](Xrm-Navigation/navigateTo.md) method.|
 
@@ -34,11 +34,11 @@ Provides methods for managing a single side pane.
 
 |Parameter Name| Type| Required|Description|
 |-------------|------|---------|------------|
-|title|string|Yes|The title of the pane. Used in pane header and for tooltip.|
-|panelId|string|Yes| The ID of the new pane. If the value is not passed, the ID value is auto-generated.|
-|canClose|Boolean|Yes| Whether the pane header will show a close button or not.|
-|imageSrc|string|Yes| The path of the icon to show in the panel switcher control.|
-|width|Number|Yes| The width of the pane in pixels.|
+|title|string|No|The title of the pane. Used in pane header and for tooltip.|
+|panelId|string|No| The ID of the new pane. If the value is not passed, the ID value is auto-generated.|
+|canClose|Boolean|No| Whether the pane header will show a close button or not.|
+|imageSrc|string|No| The path of the icon to show in the panel switcher control.|
+|width|Number|No| The width of the pane in pixels.|
 |hidden|Boolean|No| Hides the pane and tab.|
 |alwaysRender|Boolean| No|Prevents the pane from unmounting when it is hidden.|
 |keepBadgeOnSelect|Boolean|No| Prevents the badge from getting cleared when the pane becomes selected.|

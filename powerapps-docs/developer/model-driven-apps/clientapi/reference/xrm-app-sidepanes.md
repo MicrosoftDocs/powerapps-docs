@@ -26,7 +26,7 @@ Provides methods for managing side panes.
 
 |Methods|Description|
 |--------|----------|
-|[createPane](Xrm-App/Xrm-App-sidePanes/createPane.md)|Add empty pane to SideBar. Need to call `pane.navigateTo()` to load the page.|
+|[createPane](Xrm-App/Xrm-App-sidePanes/createPane.md)|Add empty pane to sidePanes collection. Need to call `pane.navigateTo()` to load the page.|
 |[getAllPanes](Xrm-App/Xrm-App-sidePanes/getAllPanes.md)|Returns a collection containing all active panes.|
 |[getSelectedPane](Xrm-App/Xrm-App-sidePanes/getSelectedPane.md)|Returns the current selected pane.|
 |[getPane](Xrm-App/Xrm-App-sidePanes/getPane.md)|Returns the pane corresponding to the input ID. If pane doesn't exist, undefined is returned.|
