@@ -1,6 +1,6 @@
 ---
 title: Build an app in Teams using Power Apps and Dataverse for Teams to retrieve Power Platform videos for readiness | Microsoft Docs
-description: Tutorial on how to build an app in Teams using Power Apps and Datverse for Teams that retrieves, lists, and displays content to used for readiness.
+description: Tutorial on how to build an app in Teams using Power Apps and Dataverse for Teams that retrieves, lists, and displays content to used for readiness.
 author: mmercuri
 ms.service: powerapps
 ms.topic: conceptual
