@@ -102,7 +102,7 @@ Xrm.Utility.closeProgressIndicator();
 });
 ```
 
-Using asynchronous code is not recommended. Find other options to achieve the result. Asynchronous code can cause issues if the resolution handler expects the application context to remain the same as it was when the asynchronous code was started. Your code should check that the user is in the same context after each asynchronous continuation point. 
+You should be careful when using asynchronous code in an event handler that does not support waiting for asynchronous code, particularly for code that needs an action to be taken or handled on the resolution of the asynchronous code. Asynchronous code can cause issues if the resolution handler expects the application context to remain the same as it was when the asynchronous code was started. Your code should check that the user is in the same context after each asynchronous continuation point. 
 
 For example, there may be code in an event handler to make a network request and change a control to be disabled based on the response data. Before the response from the request is received, the user may have interacted with the control or navigated to a different page. Because the user is on a different page, the form context may not be available, which might lead to errors, or there might be other undesired behavior.
 
