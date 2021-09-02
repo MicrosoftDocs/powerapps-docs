@@ -437,7 +437,7 @@
               href: ./canvas-apps/controls/control-column.md
             - name: Combo box
               href: ./canvas-apps/controls/control-combo-box.md
-            - name: Container (preview)
+            - name: Container
               href: ./canvas-apps/controls/control-container.md
             - name: Data table
               href: ./canvas-apps/controls/control-data-table.md
@@ -965,6 +965,18 @@
         href: ./canvas-apps/add-notifications.md
       - name: Experimental, preview, and retired features
         href: ./canvas-apps/working-with-experimental-preview.md
+  - name: How-to guides
+    items:
+    - name: Create a canvas app connected to Dataverse from scratch
+      href: ./canvas-apps/how-to/build-connected-dataverse.md
+    - name: Create a canvas app with Power BI visual
+      href: ./canvas-apps/how-to/build-powerbi-visual.md
+    - name: Create a canvas app that can trigger a Power Automate flow
+      href: ./canvas-apps/how-to/trigger-flow.md
+    - name: Create a canvas app to scan barcodes
+      href: ./canvas-apps/how-to/create-app-barcode-scanner.md
+    - name: Create an app that uses mobile sensors
+      href: ./canvas-apps/how-to/mobile-sensors.md
   - name: Save and publish an app
     href: ./canvas-apps/save-publish-app.md
   - name: Share an app and its dependencies
@@ -2146,12 +2158,6 @@
     items:
     - name: Create and use dataflows
       href: ./data-platform/create-and-use-dataflows.md
-    - name: Add data to a table using Power Query
-      href: ./data-platform/add-data-power-query.md
-    - name: Connect Azure Data Lake for dataflow storage
-      href: ./data-platform/connect-azure-data-lake-storage-for-dataflow.md
-    - name: Use an on-premises data gateway
-      href: ./data-platform/using-dataflows-with-on-premises-data.md
   - name: License requirements for tables
     href: ./data-platform/data-platform-entity-licenses.md
     items:
@@ -2302,6 +2308,12 @@
           href: ../teams/consistent-experience-across-sessions.md
         - name: Have a conversation about your business data in a Teams app
           href: ../teams/business-data.md
+    - name: How-to guides
+      items:
+        - name: Enable Power Apps and Dataverse for Teams in Microsoft Teams
+          href: ../teams/how-to/enable-dataverse-sample-app.md
+        - name: Build an app to retrieve videos
+          href: ../teams/tutorial-buildapp-retrieve-videos.md
     - name: Manage your apps
       href: ../teams/manage-your-apps.md
     - name: Set permission and share your app
@@ -2311,9 +2323,7 @@
     - name: Remove your apps
       href: ../teams/remove-your-apps.md
     - name: Uninstall Power Apps personal app
-      href: ../teams/uninstall-personal-apps.md
-    - name: "Tutorial: Build an app to retrieve videos"
-      href: ../teams/tutorial-buildapp-retrieve-videos.md 
+      href: ../teams/uninstall-personal-apps.md 
     - name: Sample apps
       items:
         - name: Use sample apps from Teams store
