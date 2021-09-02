@@ -309,12 +309,11 @@ Finally, if the control passes all the above checks, the record state determines
 > The difference between `FormControls` and `ControlStateChange` is that the `FormControls` operation reflects the initial control state when the form is loaded, while the `ControlStateChange`operation reflects the state change at any time on the form. For example, if control is disabled for security reasons, it's very unlikely to be enabled after the form is loaded, so the initial state can be found in `FormControls` and isn't likely to be found in `ControlStateChange`. Even if a Client API function tries to enable the control, it won't be effective. You'll see the `ControlStateChange` event of the disabled state change intention by the script without success, and you'll be able to find out why the intention is unsuccessful in `FormControls`.
 
 ## Why a control has a certain value on form load
+### Problem
+A control may/may not have a certain value on form load as user expected. 
 
-There are multiple reasons why a control may/may not have a certain value on form load. 
-
-**Resolution:**
-
-The `ControlDefaultValue` operation in [Monitor](../../maker/model-driven-apps/monitor-form-checker.md) explains the source of the default values. 
+### How to troubleshoot
+There're many possible reasons why a control can have a value when a form loads. The `ControlDefaultValue` operation in [Monitor](../../maker/model-driven-apps/monitor-form-checker.md) explains the source of the default values. 
 
 > [!div class="mx-imgBorder"]
 > ![Default control value.](media/control-default-value.png "Default control value")
@@ -329,6 +328,7 @@ There are scenarios where columns are populated based on a relationship column m
 > [!div class="mx-imgBorder"]
 > ![Control value after.](media/control-default-value-update-sequence.png "Control value after")
 
+### Follow up
 Verify where the value is coming from and take an action based on the below table:
 
 | Source | How to fix |
