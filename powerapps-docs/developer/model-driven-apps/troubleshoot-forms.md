@@ -100,7 +100,7 @@ To view registered form event handles and libraries, you can view the `FormEvent
 > [!div class="mx-imgBorder"]
 > ![Form events.](media/registered-form-events.png "Form events")
 
-You'll need the `eventIndex` and `libraryIndex` parameter values when using the **DisableFormHandlers** or **DisableFormLibraries** URL flags. After an event or library is disabled, **disabledByConfigFlag** will be true and you'll also see such events in the actual event handling.
+You'll need the `eventIndex` and `libraryIndex` parameter values when using the **DisableFormHandlers** or **DisableFormLibraries** URL flags. After an event or library is disabled, you'll see the event enabled state in both **FormEvents** operation (an overall view of all registered event handlers of all events), and **FormEvents.*eventName*** operation (details logged when a specific event actually happens).
 
 > [!div class="mx-imgBorder"]
 > ![Form events OnLoad.](media/form-events-onload.png "Form events OnLoad")
