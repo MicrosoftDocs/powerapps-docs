@@ -39,15 +39,16 @@ When you're troubleshooting issues with forms, you need to use URL parameters to
   &flags=DisableFormCommandbar=true
 
 - **DisableFormHandlers**  
-  This flag disables form handlers, but does not prevent the containing web resource files from being loaded. Please refer to [View registered form event handlers and libraries in Monitor](#view-registered-form-event-handlers-and-libraries-in-Monitor) to learn how to obtain event or library indices.
+  Disables the form handlers by specifying the event name, for example, **DisableFormHandlers=OnLoad**. If you use the **DisableFormHandlers=true** flag, it disables the following event handlers: [OnLoad](./clientapi/reference/events/form-onload.md), [OnSave](./clientapi/reference/events/form-onsave.md), business rule, [OnChange](./clientapi/reference/events/attribute-onchange.md), and [TabStateChange](./clientapi/reference/events/tabstatechange.md).  
+  Please refer to [View registered form event handlers and libraries in Monitor](#view-registered-form-event-handlers-and-libraries-in-Monitor) to learn how to obtain event or library indices for granular controls.
 
   #### Usage:
-  - **&flags=DisableFormHandlers=*eventname***  
+  - **&flags=DisableFormHandlers=*eventName***  
     You can specify any supported event name, such as DisableFormHandlers=onload. If you use DisableFormHandlers=true, it'll be a shortcut to disable these event handlers: onload,     onsave, businessrule, onchange and ontabstatechange.
   - **&flags=DisableFormHandlers=*eventName_index***
-    This value disables the event handler at specified index in the event handler list of any given supported event name. For example, DisableFormHandlers=true_0 will disable handler at index 0 of the event names included by "true" value. DisableFormHandlers=onload_2 will disable the event handler at index 2 of the onload event.
+    This value disables the event handler at specified index in the event handler list of any given supported event name. For example, DisableFormHandlers=true_0 will disable handler at index 0 of the event names included by "true" value. DisableFormHandlers=onload_2 will disable the [OnLoad](./clientapi/reference/events/form-onload.md) event handler at index 2.
   - **&flags=DisableFormHandlers=*eventName_startIndex_endIndex***
-  This value disables all handlers for a given event name within the given range from startIndex to endIndex (both are included). For example, DisableFormHandlers=true_0_2 will disable handlers of index 0, 1 and 2 of the event names included by "true" value. DisableFormHandlers=onload_2_5 will disable onload handlers of index 2, 3, 4 and 5. If you have a large amount of event handlers,  you can use this approach to help narrow down problematic handlers quickly.
+  This value disables all handlers for a given event name within the given range from startIndex to endIndex (both are included). For example, DisableFormHandlers=true_0_2 will disable handlers of index 0, 1 and 2 of the event names included by "true" value. DisableFormHandlers=onload_2_5 will disable [OnLoad](./clientapi/reference/events/form-onload.md)  handlers of index 2, 3, 4 and 5. If you have a large amount of event handlers, you can use this approach to help narrow down problematic handlers quickly.  
 
 - **DisableFormLibraries**  
     This flag disables form libraries and actually prevents the libraries from being loaded. Please refer to [View registered form event handlers and libraries in Monitor](#view-registered-form-event-handlers-and-libraries-in-Monitor) to learn how to obtain event or library indices.  
@@ -105,36 +106,19 @@ You'll need the `eventIndex` and `libraryIndex` parameter values when using the 
 > [!div class="mx-imgBorder"]
 > ![Form events OnLoad.](media/form-events-onload.png "Form events OnLoad")
 
-## Disable form handlers
-
-When you're troubleshooting issues caused by form handlers, disable the form handlers by using the following URL flags:
-
-- **&flags=DisableFormHandlers=\<event name\>**: Disables the form handlers by specifying the event name, for example, **DisableFormHandlers=OnLoad**. If you use the **DisableFormHandlers=true** flag, it disables the following event handlers: [OnLoad](./clientapi/reference/events/form-onload.md), [OnSave](./clientapi/reference/events/form-onsave.md), business rule, [OnChange](./clientapi/reference/events/attribute-onchange.md), and [TabStateChange](./clientapi/reference/events/tabstatechange.md).
-
-- **&flags=DisableFormHandlers=\<event name\>_\<event index\>**: Disables the form handlers by specifying the event name and the event index value. For example, **DisableFormHandlers=true_0** disables the form handler at index 0. **DisableFormHandlers=onload_2** flag disables the form handler at index 2 of the [OnLoad](./clientapi/reference/events/form-onload.md) event.
-
-- **&flags=DisableFormHandlers=\<event name\>_\<starting index\>_\<end index\>**: Disables all the form handlers by specifying the event name and the given index range. For example, **DisableFormHandlers=true_0_2** disables the form handlers at indexes from 0 through 2. **DisableFormHandlers=onload_2_5** flag disables the [OnLoad](./clientapi/reference/events/form-onload.md) handlers at indexes from 2 through 5.
-
-## Disabling form libraries
-
-When you're troubleshooting issues caused by form libraries, disable the form libraries by using the following URL flags:
-
-- **&flags=DisableFormLibraries=true**: Disables all form libraries.
-
-- **&flags=DisableFormLibraries=\<library index\>**: Disables form libraries by specifying the library index value. For example, the **DisableFormLibraries=0** flag disables the form library at index 0.
-
-- **&flags=DisableFormLibraries=\<starting index\>_\<ending index\>**: Disables the form libraries by specifying the library index range. For example, **DisableFormLibraries=0_2** flag disables the form libraries at indexes from 0 through 2.
-
 ### Difference between DisableFormHandlers and DisableFormLibraries
 
 The main difference between disabling form libraries and form handlers are:
 
 - The **DisableFormHandlers** flag disables form handlers regardless of the containing form libraries, whereas the **DisableFormLibraries** flag disables the form libraries (web resources) regardless of the functions (event handlers) included in the libraries.
 
-- The **DisableFormHandlers** flag doesn't prevent the containing form library from being loaded, thus it doesn't prevent the JavaScript code that's present in the library&mdash;but not registered as an event handler&mdash;from being executed. For example, if a form library `new_myscript.js` is written in the following way:
+- The **DisableFormHandlers** flag doesn't prevent the containing form library from being loaded, thus it doesn't prevent the JavaScript code that's present in the library&mdash;but not registered as an event handler&mdash;from being executed. For example, if a form library `new_myscript.js` is written in the following way:  
 
-  - Assuming the `myOnloadHandler` is registered as an `OnLoad` event handler.
-  - The `DisableFormHandlers=true` flag only prevents the second alert, whereas the `DisableFormLibraries=true` flag prevents both alerts.
+  > [!div class="mx-imgBorder"]
+  > ![Difference between DisableFormHandlers and DisableFormLibraries.](media/difference-between-disableformhandlers-disableformlibraries.png "Difference between DisableFormHandlers and DisableFormLibraries")
+
+    - Assuming the `myOnloadHandler` is registered as an `OnLoad` event handler.
+    - The `DisableFormHandlers=true` flag only prevents the second alert, whereas the `DisableFormLibraries=true` flag prevents both alerts.
 
 ### Disable web resource controls
 
