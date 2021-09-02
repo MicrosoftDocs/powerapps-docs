@@ -124,7 +124,7 @@ The main difference between disabling form libraries and form handlers are:
     - The `DisableFormHandlers=true` flag only prevents the second alert, whereas the `DisableFormLibraries=true` flag prevents both alerts.
 
 ## Unexpected behaviors when loading a form
-
+### Symptom  
 Some common issues that can cause unexpected behavior when a model-driven app form is loaded are:
 
 - Columns or controls don't have the values you expect.
@@ -133,11 +133,13 @@ Some common issues that can cause unexpected behavior when a model-driven app fo
 
 - Controls aren't shown or aren't hidden.
 
-These behaviors occur after the form is opened&mdash;for example, you see a value or control for a second, and then the value changes or the control disappears.
-
+### How to troubleshoot
 There are multiple reasons why unexpected behaviors occur when a form opens. One of the most common is the [OnLoad](./clientapi/reference/events/form-onload.md) scripts that run synchronously or asynchronously to change the column or control behavior. To determine whether your script is causing the issue, you can disable the form handlers by appending **&flags=DisableFormHandlers=true** at the end of your app URL.
 
-If the form loads normally after you disable the form handler, there's an issue with the script that's blocking or causing an error when the form is loading.
+If the unexpected behavior stops occuring after you disabled the form handler, it is a strong indication that the specific form handler is causing this behavior.  
+
+### Follow up
+If you have identified the problematic script that's causing this behavior, please follow up with the script owner to further troubleshoot this issue.  
 
 ## Intermittent form errors
 
