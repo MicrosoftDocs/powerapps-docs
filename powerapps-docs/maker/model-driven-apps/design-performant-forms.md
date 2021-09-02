@@ -150,8 +150,8 @@ async function onLoad1(executionContext) {
 }
 
 // Retrieve setting value with stale-while-revalidate strategy
+let requestPromise;
 async function onLoad2(executionContext) {
-    let requestPromise;
     let settingValue = sessionStorage.getItem(SETTING_VALUE_SESSION_STORAGE_KEY);
     let settingValueRequested = false;
 
@@ -164,7 +164,7 @@ async function onLoad2(executionContext) {
     // Do logic with setting value here
 
     // Request setting value again but don't wait on it
-    // In case there is a fast navigation to another page, don’t make the same request again if it is already in flight
+    // In case this handler fires twice, don’t make the same request again if it is already in flight
     // Additional logic can be added so that this is done less than once per page
     if (!settingValueRequested && !requestPromise) {
         settingValueRequested = true;
