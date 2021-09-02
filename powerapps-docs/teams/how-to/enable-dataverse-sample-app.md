@@ -45,7 +45,7 @@ The first way to provision Dataverse for Teams in Teams is to create a new app. 
 
     Dataverse for Teams will be provisioned in the team you selected. A message notifies you that the environment is being prepared.
 
-    ![Message notifies you that the environment is being prepared](media/enable-dataverse-for-teams-and-power-apps-in-your-environment/provisioning-dataverse-for-teams-2.png "Message notifies you that the environment is being prepared")
+    ![Message notifies you that the environment is being prepared](media/enable-dataverse-sample-app/provisioning-dataverse-for-teams-2.png "Message notifies you that the environment is being prepared")
 
 1. Select **Done**.
 
@@ -81,29 +81,29 @@ The Employee Ideas app template for Teams enables team members to quickly genera
 
 1. Select **Add to a team**.
 
-    ![Select Add to a Team](media/enable-dataverse-for-teams-and-power-apps-in-your-environment/installing-employee-ideas-template-app-1.png "Select Add to a Team")
+    ![Select Add to a Team](media/enable-dataverse-sample-app/installing-employee-ideas-template-app-1.png "Select Add to a Team")
 
 1. Search for the channel in which you wish to install the app
 
-    ![Search for channel](media/enable-dataverse-for-teams-and-power-apps-in-your-environment/installing-employee-ideas-template-app-2.png "Search for channel")
+    ![Search for channel](media/enable-dataverse-sample-app/installing-employee-ideas-template-app-2.png "Search for channel")
 
 1. By default, the app will notify team members that the app has been added to the team. If you don’t want to notify the team, uncheck the **Post to the channel about this tab** checkbox.
 
 1. Select **Save**.
 
-    ![Select Save](media/enable-dataverse-for-teams-and-power-apps-in-your-environment/installing-employee-ideas-template-app-3.png "Select Save")
+    ![Select Save](media/enable-dataverse-sample-app/installing-employee-ideas-template-app-3.png "Select Save")
 
     The Employee Ideas app will be installed in the selected channel. The installation process will show you the installation progress, and helpful tips on how to get the most out of the app. You can navigate to other areas in Teams while the installation completes.
 
-    ![Employee Ideas app will be installed in the selected channel](media/enable-dataverse-for-teams-and-power-apps-in-your-environment/installing-employee-ideas-template-app-4.png "Employee Ideas app will be installed in the selected channel")
+    ![Employee Ideas app will be installed in the selected channel](media/enable-dataverse-sample-app/installing-employee-ideas-template-app-4.png "Employee Ideas app will be installed in the selected channel")
 
     When installation is complete, you'll receive a notification in the lower right corner of the Teams window.
 
-    ![Receive a notification in the lower right corner](media/enable-dataverse-for-teams-and-power-apps-in-your-environment/installing-employee-ideas-template-app-5.png "Receive a notification in the lower right corner")
+    ![Receive a notification in the lower right corner](media/enable-dataverse-sample-app/installing-employee-ideas-template-app-5.png "Receive a notification in the lower right corner")
 
 1. Select **Allow** to allow connection to the connectors used by the app.
 
-![Allow connection to the connectors used by the app](media/enable-dataverse-for-teams-and-power-apps-in-your-environment/installing-employee-ideas-template-app-6.png "Allow connection to the connectors used by the app")
+![Allow connection to the connectors used by the app](media/enable-dataverse-sample-app/installing-employee-ideas-template-app-6.png "Allow connection to the connectors used by the app")
 
 1. Verify the team and channel in which you want channel notifications to be installed, then Select **Let’s go.**
 
@@ -111,7 +111,7 @@ The Employee Ideas app template for Teams enables team members to quickly genera
 
 1. Select **Got it.**
 
-    ![Select Got it](media/enable-dataverse-for-teams-and-power-apps-in-your-environment/installing-employee-ideas-template-app-7.png "Select Got it")
+    ![Select Got it](media/enable-dataverse-sample-app/installing-employee-ideas-template-app-7.png "Select Got it")
 
 Dataverse for Teams is now provisioned in your Team and you can create or install other apps in the same Team.
 
