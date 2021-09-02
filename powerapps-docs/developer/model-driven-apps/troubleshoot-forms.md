@@ -340,15 +340,19 @@ Verify where the value is coming from and take an action based on the below tabl
 
 
 ## Why a tab or section is visible or hidden
-
+### Problem
 There are many possible reasons why a tab or section might be hidden or visible.
 
-**Resolution**:
+### How to troubleshoot
 
 The `TabStateChange` or `SectionStateChange` operations in [Monitor](../../maker/model-driven-apps/monitor-form-checker.md) explain the visible state change, as shown in the following image.
 
 > [!div class="mx-imgBorder"]
 > ![Tab section.](media/tab-section-visible.png "Tab section")
+
+### Follow up
+Please follow up according to the suggestion in the state reason or the owner of the web resource / business rules to change or fix the behavior.
+
 
 ## Unexpected alerts or navigation
 
@@ -365,18 +369,21 @@ The `XrmNavigation` operation in [Monitor](../../maker/model-driven-apps/monitor
 > ![XrmNavigation operation in Monitor.](media/form-checker-navigation.png "XrmNavigation operation in [Monitor](../../maker/model-driven-apps/monitor-form-checker.md)")
 
 ## Opening another form instead of a quick create form?
-
+### Problem
 When opening a quick create form from a lookup or a grid, another form may open (edit or main form) instead of quick create form. There are few reasons why this can happen:
 
 - The main form dialog force flag is being set.
 - Quick create form is not available.
 
-**Resolution**:
+### How to troubleshoot
 
 - You can use [Monitor](../../maker/model-driven-apps/monitor-form-checker.md) to view the `FormType` event that includes all the reasons why a quick create form was not opened.
 
 > [!div class="mx-imgBorder"]
 > ![Table not enabled for quick create.](media/troubleshoot-forms-entity-not-eabled-for-quick-create.png "Table not enabled for quick create")
+
+### Follow up
+You may need to follow up accoring to the Form Checker analysis. In the above example, you'll need to follow up with the entity owner who has disabled quick create through entity metadata.
 
 
 ## Table doesn't appear in the quick create menu flyout?
