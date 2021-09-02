@@ -175,7 +175,7 @@ async function onLoad2(executionContext) {
 
 async function requestSettingValue() {
     try {
-        await Xrm.WebApi.retrieveRecord(
+        const data = await Xrm.WebApi.retrieveRecord(
             SETTING_ENTITY_NAME,
             "7333e80e-9b0f-49b5-92c8-9b48d621c37c",
             `?$select=${SETTING_FIELD_NAME}`;
