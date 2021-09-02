@@ -5,7 +5,7 @@ author: joel-lindstrom
 ms.service: powerapps
 ms.topic: article
 ms.custom: canvas
-ms.reviewer:
+ms.reviewer: tapanm
 ms.date: 08/31/2021
 ms.subservice: canvas-maker
 ms.author: emcoope
