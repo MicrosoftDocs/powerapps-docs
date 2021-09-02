@@ -34,8 +34,8 @@ This article helps you fix some common issues that you might encounter while wor
 When you're troubleshooting issues with forms, you need to use URL parameters to disable components as you work to isolate specific component that caused the issue. We recommend that you use the flags one at a time to narrow down the cause of the issue. You can use the following URL parameters:
 
 - **DisableFormCommandbar**  
-  Disables the command bar on the form. Note that this only disables the command bar on form pages - it does not support list (grid) page, dashboard page, etc.
-  Usage:  
+  Disables the command bar on the form. Note that this only disables the command bar on form pages - it does not support list (grid) page, dashboard page, etc.  
+  #### Usage:   
   &flags=DisableFormCommandbar=true
 
 - **DisableFormHandlers**  
@@ -50,11 +50,21 @@ When you're troubleshooting issues with forms, you need to use URL parameters to
   This value disables all handlers for a given event name within the given range from startIndex to endIndex (both are included). For example, DisableFormHandlers=true_0_2 will disable handlers of index 0, 1 and 2 of the event names included by "true" value. DisableFormHandlers=onload_2_5 will disable onload handlers of index 2, 3, 4 and 5. If you have a large amount of event handlers,  you can use this approach to help narrow down problematic handlers quickly.
 
 - **DisableFormLibraries**  
-    This flag disables form libraries and actually prevents the libraries from being loaded. Please refer to [View registered form event handlers and libraries in Monitor](#view-registered-form-event-handlers-and-libraries-in-Monitor) to learn how to obtain event or library indices.
+    This flag disables form libraries and actually prevents the libraries from being loaded. Please refer to [View registered form event handlers and libraries in Monitor](#view-registered-form-event-handlers-and-libraries-in-Monitor) to learn how to obtain event or library indices.  
+    #### Usage:  
+    The usage is similar with DisableFormHandlers except it only does not take an event name as the value  
+    - This will disable all form libraries:  
+      &flags=DisableFormLibraries=true  
+    - This will disable form libraries at the specified index:  
+      &flags=DisableFormLibraries=*index*  
+    - this will disable form libraries in the range of startIndex and endIndex (both are included)  
+      &flags=DisableFormLibraries=*startIndex_endIndex*  
 
 - **DisableWebResourceControls**  
-    This flag disables all web resource controls on the form.
-
+    This flag disables all web resource controls on the form.  
+    #### Usage:  
+    &flags=DisableWebResourceControls=true  
+    
 - **DisableFormControl**  
     This flag disables a form control given the control name. If you have proven that the issue goes away with &flags=DisableWebResourceControls=true, and there are more than one web resource controls on the form, you can use this flag to further help pinpoint the control that's causing the issue.  
    #### Usage:  
@@ -82,12 +92,6 @@ https://myorg.crm.dynamics.crm/main.aspx?appid=00000000-0000-0000-0000-000000000
 ```Http
 https://myorg.crm.dynamics.crm/main.aspx?appid=00000000-0000-0000-0000-000000000000&pagetype=entityrecord&id=00000000-0000-0000-0000-000000000000**&flags=DisableFormCommandbar=true
 ```
-
-**DisableFormCommandbar**
-
-
-**DisableFormHandlers**
-
 
 ## View registered form event handlers and libraries in Monitor
 
