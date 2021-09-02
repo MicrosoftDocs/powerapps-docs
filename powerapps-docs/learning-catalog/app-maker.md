@@ -42,5 +42,9 @@ The following catalog is organized from core knowledge to specific domains, and 
 | [Get started with Power Automate buttons](/learn/paths/get-started-power-automate-buttons/)                                              | Do you want to create button flows to solve business problems? Then, take this learning path, which introduces you to Power Automate buttons and demonstrates how to create button flows. | Free, self-paced online learning path | 4 hr 23 min |
 | [Power Automate in a   day](https://aka.ms/flowinaday)                                                                           | Full instructor and attendee package to learn Power Automate | Free, Instructor Led | Workday   |
 
+## Exam<a name="exam"></a>
+| Content  | Description  | Format   | Length    | 
+|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------|-----------|
+| [Microsoft Power Platform App Maker ](/learn/certifications/exams/pl-100?wt.mc_id=learningredirect_certs-web-wwl)|	This exam measures your ability to accomplish the following technical tasks: design business solutions; create solutions; analyze and visualize data. |	Exam | cost varies by region |
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
