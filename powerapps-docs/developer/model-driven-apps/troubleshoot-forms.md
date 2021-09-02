@@ -387,7 +387,7 @@ You may need to follow up accoring to the Form Checker analysis. In the above ex
 
 
 ## Table doesn't appear in the quick create menu flyout?
-
+### Problem
 When opening the global quick create menu flyout, not all tables are available. There are few reasons why the tables are filtered in this list:
 
 - There is no quick create form available for the table.
@@ -399,7 +399,7 @@ When opening the global quick create menu flyout, not all tables are available. 
 - User does not have a create privilege on the table.
 - The create privilege is not supported for the table.
 
-**Resolution**:
+### How to troubleshoot
 
 - You can use [Monitor](../../maker/model-driven-apps/monitor-form-checker.md) to view the `QuickCreateMenu` event that includes all the tables and reasons why they are filtered from the quick create menu flyout.
 
@@ -413,6 +413,9 @@ See the examples below to understand the reasons for filtering. Based on the exp
 
 > [!div class="mx-imgBorder"]
 > ![Table not part of app module.](media/troubleshoot-forms-entity-not-part-of-app.png "Table not part of app module")
+
+### Follow up
+Please follow up according to the Form Checker analysis.
 
 ## Unexpected unsaved changes error
 
