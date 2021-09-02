@@ -13,6 +13,7 @@ applies_to:
   - "Dynamics 365 Version 9.x"
   - PowerApps
 ms.assetid: aa6aca00-f95a-4f06-bec4-18b427b4618c
+ms.subservice: mda-maker
 ms.author: matp
 manager: kvivek
 author: Mattp123
@@ -44,11 +45,11 @@ The app designer helps you bring together all these components quickly. Its tile
   
 |Step|Description|Related topics|  
 |----------|-----------------|--------------------|  
-|![Step 1](media/walkthrough-green-1.png "Step 1")|Define app properties.|[Create or edit an app](create-edit-app.md)|  
-|![Step 2](media/walkthrough-green-2.png "Step 2")|Define navigation for an app using the site map designer.|[Create a site map for an app](create-site-map-app.md)|  
-|![Step 3](media/walkthrough-green-3.png "Step 3")|Apps are composed of components like dashboards, tables, business process flows, forms, views, and charts. Include the required ones in your app by using the app designer.|[Add or edit app components](add-edit-app-components.md)|  
-|![Step 4](media/walkthrough-green-4.png "Step 4")|Check your app for any required components you haven't added. After all required components are added make the app available for use. |[Validate and publish an app](validate-app.md)|  
-|![Step 5](media/walkthrough-green-5.png "Step 5")|Give users access to the apps you created by using security roles.|[Share a model-driven app](./share-model-driven-app.md)|  
+|![Step 1.](media/walkthrough-green-1.png "Step 1")|Define app properties.|[Create or edit an app](create-edit-app.md)|  
+|![Step 2.](media/walkthrough-green-2.png "Step 2")|Define navigation for an app using the site map designer.|[Create a site map for an app](create-site-map-app.md)|  
+|![Step 3.](media/walkthrough-green-3.png "Step 3")|Apps are composed of components like dashboards, tables, business process flows, forms, views, and charts. Include the required ones in your app by using the app designer.|[Add or edit app components](add-edit-app-components.md)|  
+|![Step 4.](media/walkthrough-green-4.png "Step 4")|Check your app for any required components you haven't added. After all required components are added make the app available for use. |[Validate and publish an app](validate-app.md)|  
+|![Step 5.](media/walkthrough-green-5.png "Step 5")|Give users access to the apps you created by using security roles.|[Share a model-driven app](./share-model-driven-app.md)|  
   
 ## Supported web browsers
 

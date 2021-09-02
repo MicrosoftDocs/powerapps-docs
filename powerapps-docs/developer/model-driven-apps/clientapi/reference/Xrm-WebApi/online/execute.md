@@ -473,7 +473,7 @@ var createRequest = new Sdk.CreateRequest("account", payload);
 Xrm.WebApi.online.execute(createRequest)
 .then(function (response) {
     if (response.ok) {
-        console.log("Status: %s %s", result.status, result.statusText);
+        console.log("Status: %s %s", response.status, response.statusText);
         
         // The Create request does not return any response body content. So we
         // need not access the response.json() property.
@@ -523,10 +523,10 @@ var retrieveRequest = new Sdk.RetrieveRequest(entityReference, ["name"]);
 Xrm.WebApi.online.execute(retrieveRequest)
 .then(function (response) {
     if (response.ok) {
-        console.log("Status: %s %s", result.status, result.statusText);
+        console.log("Status: %s %s", response.status, response.statusText);
 
         // Use response.json() to access the content of the response body.
-        return result.json();
+        return response.json();
     }
 })
 .then(function(responseBody) {

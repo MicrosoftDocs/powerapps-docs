@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2021
+ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: tapanm
 contributors:
@@ -34,7 +35,7 @@ Users not having any of the above mentioned Azure roles are considered as non-ad
 When the portal creation is disabled in a tenant, non-administrators will see an error&mdash;`You don't have permission to create a portal in this tenant as it is blocked by your global administrator.`
 
 > [!div class=mx-imgBorder]
-> ![Portal creation blocked error](media/portal-create-blocked-error.png "Portal creation blocked error")
+> ![Portal creation blocked error.](media/portal-create-blocked-error.png "Portal creation blocked error")
 
 To enable portal creation in a tenant, change the settings value from `$true` to `$false`.
 

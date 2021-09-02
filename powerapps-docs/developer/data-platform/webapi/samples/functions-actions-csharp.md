@@ -2,7 +2,7 @@
 title: "Web API Functions and Actions Sample (C#) (Microsoft Dataverse)| Microsoft Docs"
 description: "This sample demonstrates how to call bound and unbound functions and actions, including custom actions, using the Microsoft Dataverse Web API and C#"
 ms.custom: ""
-ms.date: 8/17/2020
+ms.date: 07/15/2021
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -20,9 +20,10 @@ search.app:
   - PowerApps
   - D365CE
 ---
+
 # Web API Functions and Actions Sample (C#)
 
-[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+[!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 
 This sample demonstrates how to call bound and unbound functions and actions, including custom actions, using the Microsoft Dataverse Web API.  
   
@@ -302,6 +303,5 @@ namespace PowerApps.Samples
 [Use Web API actions](../use-web-api-actions.md)<br />
 [Web API Samples](../web-api-samples.md)<br />
 [Web API Functions and Actions Sample](../web-api-functions-actions-sample.md)
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

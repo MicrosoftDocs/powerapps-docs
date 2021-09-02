@@ -7,6 +7,7 @@ ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "paulliew" # GitHub ID
+ms.subservice: dataverse-developer
 ms.author: "paulliew" # MSFT alias of Microsoft employees only
 manager: "sunilg" # MSFT alias of manager or PM counterpart
 search.audienceType: 

@@ -15,6 +15,7 @@ applies_to:
 author: "Mattp123"
 ms.assetid: 8478a07a-c697-4784-874b-36958eb4f95d
 caps.latest.revision: 63
+ms.subservice: mda-maker
 ms.author: "matp"
 manager: "kvivek"
 search.audienceType: 
@@ -52,7 +53,7 @@ If you create any new solution components in the process of editing the form, fo
   
 2.  If there are multiple main forms for the table, verify that the form is the one you want to edit. If it isn't, use the form selector to choose the form you want to edit.  
   
-3.  Select the **More Commands** button ![More Commands button in Appointment Activity](media/more-commands.gif "More Commands button in Appointment Activity").  
+3.  Select the **More Commands** button ![More Commands button in Appointment Activity.](media/more-commands.gif "More Commands button in Appointment Activity").  
   
 4.  Select **Form Editor**.  
 

@@ -101,6 +101,17 @@ search.app:
 </li>
 <li><b>selectedStageId</b>: (Optional) String. ID of the selected stage in business process instance.</li>
 </ul>
+
+<p>----------------------------------------------------------------</p>
+<p><strong>Custom page (preview)</strong>
+<p>The object contains the following values:</p>
+<ul>
+<li><strong>pageType</strong>: String. Specify "custom".</li>
+<li><strong>name</strong>: String. The logical name of the custom page to open.</li>
+<li><strong>entityName</strong>: (Optional) String. The logical name of the table to be made available in the custom page via Param("entityName").</li>
+<li><strong>recordId</strong>: (Optional) String. ID of the table record to be made available in the custom page via Param("recordId").</li>
+</ul>
+
 <p>----------------------------------------------------------------</p>
 <p><strong>HTML web resource</strong>
 <p>The object contains the following values:</p>
@@ -252,6 +263,8 @@ Xrm.Navigation.navigateTo(pageInput, navigationOptions).then(
 ### Related topics
 
 [Xrm.Navigation](../xrm-navigation.md)
+
+[Navigating to and from a custom page (preview)](../../navigate-to-custom-page-examples.md)
 
 
 
