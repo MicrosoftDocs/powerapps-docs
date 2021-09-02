@@ -116,7 +116,9 @@ To resolve this issue, choose the correct option:
 
 The error message is displayed on the model-driven app form where the embedded canvas app should appear.
 
-This behavior occurs because the app user doesn't have read access to the CanvasApp Extended Metadata table. To resolve this issue, add the user to a security role used for the app that has read access to the CanvasApp Extended Metadata table.
+This issue occurs because the app user doesn't have read access to the CanvasApp Extended Metadata table. To resolve this issue, add the user to a security role used for the app that has read access to the CanvasApp Extended Metadata table.
+
+##### Grant read privileges for the CanvasApp Extended Metadata table
 
 1. In Power Apps, on the left navigation pane select **Apps**, select the app you want, select **…**, and then select **Share**.
 1. On the left pane, select the app, and then select **Manage security roles**.
@@ -124,6 +126,12 @@ This behavior occurs because the app user doesn't have read access to the Canvas
 1. Select the **Custom Entities** tab, and set organization scope read privileges for the **CanvasApp Extended Metadata** table.
    :::image type="content" source="media/read-priv-canvasapp-ext-meta.png" alt-text="Set organization scope read privilege on the CanvasApp Extended Metadata table":::
 1. Select **Save and Close** to close the security role window.
+
+#### Embedded canvas app control loads the canvas app from a different environment
+
+When a solution that contains a model-driven app with an embedded canvas app is imported into a target environment, the control loads the canvas app from the source environment (where the solution was exported). The control should load the canvas app from the target (current) environment.
+
+This issue occurs because the app user doesn't have read access to the CanvasApp Extended Metadata table. To resolve this issue, add the user to a security role used for the app that has read access to the CanvasApp Extended Metadata table. More information: [Grant read privileges for the CanvasApp Extended Metadata table](#grant-read-privileges-for-the-canvasapp-extended-metadata-table)
 
 ### See also
 
