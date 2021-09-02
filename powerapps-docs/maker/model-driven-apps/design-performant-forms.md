@@ -139,54 +139,54 @@ const SETTING_VALUE_SESSION_STORAGE_KEY = `${SETTING_ENTITY_NAME}_${SETTING_FIEL
 
 // Retrieve setting value once per session
 async function onLoad1(executionContext) {
-    let settingValue = sessionStorage.getItem(SETTING_VALUE_SESSION_STORAGE_KEY);
+	let settingValue = sessionStorage.getItem(SETTING_VALUE_SESSION_STORAGE_KEY);
 
-    // Ensure there is a stored setting value to use
-    if (settingValue === null || settingValue === undefined) {
-        settingValue = await requestSettingValue();
-    }
+	// Ensure there is a stored setting value to use
+	if (settingValue === null || settingValue === undefined) {
+		settingValue = await requestSettingValue();
+	}
 
-    // Do logic with setting value here
+	// Do logic with setting value here
 }
 
 // Retrieve setting value with stale-while-revalidate strategy
 let requestPromise;
 async function onLoad2(executionContext) {
-    let settingValue = sessionStorage.getItem(SETTING_VALUE_SESSION_STORAGE_KEY);
+	let settingValue = sessionStorage.getItem(SETTING_VALUE_SESSION_STORAGE_KEY);
 
-    // Request setting value again but don't wait on it
-    // In case this handler fires twice, don’t make the same request again if it is already in flight
-    // Additional logic can be added so that this is done less than once per page
-    if (!requestPromise) {
-        requestPromise = requestSettingValue().finally(() => {
-            requestPromise = undefined;
-        });
-    }
+	// Request setting value again but don't wait on it
+	// In case this handler fires twice, don’t make the same request again if it is already in flight
+	// Additional logic can be added so that this is done less than once per page
+	if (!requestPromise) {
+		requestPromise = requestSettingValue().finally(() => {
+			requestPromise = undefined;
+		});
+	}
 
-    // Ensure there is a stored setting value to use the first time in a session
-    if (settingValue === null || settingValue === undefined) {
-        settingValue = await requestPromise;
-    }
-    
-    // Do logic with setting value here
+	// Ensure there is a stored setting value to use the first time in a session
+	if (settingValue === null || settingValue === undefined) {
+		settingValue = await requestPromise;
+	}
+	
+	// Do logic with setting value here
 }
 
 async function requestSettingValue() {
-    try {
-        const data = await Xrm.WebApi.retrieveRecord(
-            SETTING_ENTITY_NAME,
-            "7333e80e-9b0f-49b5-92c8-9b48d621c37c",
-            `?$select=${SETTING_FIELD_NAME}`;
-        try {
-            sessionStorage.setItem(SETTING_VALUE_SESSION_STORAGE_KEY, data[SETTING_FIELD_NAME]);
-        } catch (error) {
-            // Handle sessionStorage error
-        } finally {
-            return data[SETTING_FIELD_NAME];
-        }
-    } catch (error) {
-        // Handle retrieveRecord error   
-    }
+	try {
+		const data = await Xrm.WebApi.retrieveRecord(
+			SETTING_ENTITY_NAME,
+			"7333e80e-9b0f-49b5-92c8-9b48d621c37c",
+			`?$select=${SETTING_FIELD_NAME}`;
+		try {
+			sessionStorage.setItem(SETTING_VALUE_SESSION_STORAGE_KEY, data[SETTING_FIELD_NAME]);
+		} catch (error) {
+			// Handle sessionStorage error
+		} finally {
+			return data[SETTING_FIELD_NAME];
+		}
+	} catch (error) {
+		// Handle retrieveRecord error   
+	}
 }
 ```
 
