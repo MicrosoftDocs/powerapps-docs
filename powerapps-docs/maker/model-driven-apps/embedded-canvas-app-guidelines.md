@@ -116,7 +116,7 @@ To resolve this issue, choose the correct option:
 
 The error message is displayed on the model-driven app form where the embedded canvas app should appear.
 
-This behavior occurs because the user doesn't have to the read access to the CanvasApp Extended Metadata table. Add the user to the security role used for the app hat has read access to the CanvasApp Extended Metadata table.
+This behavior occurs because the app user doesn't have read access to the CanvasApp Extended Metadata table. To resolve this issue, add the user to a security role used for the app that has read access to the CanvasApp Extended Metadata table.
 
 1. In Power Apps, on the left navigation pane select **Apps**, select the app you want, select **…**, and then select **Share**.
 1. On the left pane, select the app, and then select **Manage security roles**.
