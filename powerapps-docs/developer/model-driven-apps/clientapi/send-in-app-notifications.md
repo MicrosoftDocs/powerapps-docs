@@ -166,7 +166,7 @@ The in-app notification feature uses three tables, and a user needs to have the 
 |Usage|Needed table privileges|
 |------------|----------------|
 |User has no in-app notification bell and receives no in-app notifications toasts |None: Read privilege on app notification table. |
-|User can receive in-app notifications|- Basic: Read privilege on app notification table.<br/> - Create, Read, Write and Append on model-driven app user setting.<br/> - Read and AppendTo  privilege on settingdefinition|
+|User can receive in-app notifications|- Basic: Read privilege on app notification table.<br/> - Create, Read, Write and Append on model-driven app user setting.<br/> - Read and AppendTo  privilege on setting definition|
 |User can send in-app notifications to self |- Basic: Create and Read privilege on app notification table. 
 |User can send in-app notifications to others |Read privilege with Local, Deep, or Global access level on app notification table based on the receiving user's business unit. |
 
