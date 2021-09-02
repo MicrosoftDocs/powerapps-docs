@@ -82,8 +82,9 @@ If you find a problem with an app in Power Apps, you can help Microsoft troubles
 1. Select the **Session details**.
    :::image type="content" source="media/get-sessionid/session-details-powerapps.png" alt-text="Session details from Power Apps site":::
 
-## Get a canvas app or model-driven app ID
+## Get an app ID
 
+Get the app ID for either a canvas or model-driven app: 
 1. [Sign in to Power Apps](https://powerapps.microsoft.com).
 
 1. Near the left edge, select **Apps**.
