@@ -168,7 +168,7 @@ async function onLoad2(executionContext) {
     // Additional logic can be added so that this is done less than once per page
     if (!settingValueRequested && !requestPromise) {
         settingValueRequested = true;
-        requestPromise = requestSettingValue().then(() => {
+        requestPromise = requestSettingValue().finally(() => {
             requestPromise = undefined;
         });
     }
