@@ -2258,7 +2258,7 @@
     - name: How-to guides
       items:
         - name: Enable Power Apps and Dataverse for Teams in Microsoft Teams
-          href: ../teams/enable-dataverse-sample-app.md
+          href: ../teams/how-to/enable-dataverse-sample-app.md
         - name: Build an app to retrieve videos
           href: ../teams/tutorial-buildapp-retrieve-videos.md
     - name: Work with Dataverse for Teams
