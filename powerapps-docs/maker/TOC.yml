@@ -2255,12 +2255,6 @@
           href: ../teams/use-the-fluent-ui-controls.md
     - name: Create additional apps
       href: ../teams/create-additional-apps.md
-    - name: How-to guides
-      items:
-        - name: Enable Power Apps and Dataverse for Teams in Microsoft Teams
-          href: ../teams/how-to/enable-dataverse-sample-app.md
-        - name: Build an app to retrieve videos
-          href: ../teams/tutorial-buildapp-retrieve-videos.md
     - name: Work with Dataverse for Teams
       items:
         - name: Overview
@@ -2312,6 +2306,12 @@
           href: ../teams/consistent-experience-across-sessions.md
         - name: Have a conversation about your business data in a Teams app
           href: ../teams/business-data.md
+    - name: How-to guides
+      items:
+        - name: Enable Power Apps and Dataverse for Teams in Microsoft Teams
+          href: ../teams/how-to/enable-dataverse-sample-app.md
+        - name: Build an app to retrieve videos
+          href: ../teams/tutorial-buildapp-retrieve-videos.md
     - name: Manage your apps
       href: ../teams/manage-your-apps.md
     - name: Set permission and share your app
