@@ -65,18 +65,21 @@ When you're troubleshooting issues with forms, you need to use URL parameters to
     This flag disables all web resource controls on the form.  
     #### Usage:  
     &flags=DisableWebResourceControls=true  
+
+    > [!div class="mx-imgBorder"]
+    > ![Disable web resource.](media/disable-web-resource-control.png "Disable web resource")
     
 - **DisableFormControl**  
-    This flag disables a form control given the control name. If you have proven that the issue goes away with &flags=DisableWebResourceControls=true, and there are more than one web resource controls on the form, you can use this flag to further help pinpoint the control that's causing the issue.  
+    This flag disables a form control given the control name. If you have proven that the issue goes away with **&flags=DisableWebResourceControls=true**, and there are more than one web resource controls on the form, You can use this flag to further identify the control that's causing the issue.   
    #### Usage:  
-   &flags=DisableFormControl=myControlName
-
+     &flags=DisableFormControl=myControlName  
+   
 - **DisableBusinessProcessFlow**  
   This flag disables Business Process Flows on the form.  
    #### Usage:  
    &flags=DisableBusinessProcessFlow=true
 
-- navbar (this isn't a **flag** parameter; instead, use **navbar=off** in the URL)
+- **navbar** (this isn't a **flag** parameter; instead, use **navbar=off** in the URL)
 
 The following examples show how to use these flags.
 
@@ -119,28 +122,6 @@ The main difference between disabling form libraries and form handlers are:
 
     - Assuming the `myOnloadHandler` is registered as an `OnLoad` event handler.
     - The `DisableFormHandlers=true` flag only prevents the second alert, whereas the `DisableFormLibraries=true` flag prevents both alerts.
-
-### Disable web resource controls
-
-When you're troubleshooting issues caused by web resource controls, disable the controls by using the following URL flag:
-
-**&flags=DisableWebResourceControls=true**: Disables all the web resource controls.
-
-> [!div class="mx-imgBorder"]
-> ![Disable web resource.](media/disable-web-resource-control.png "Disable web resource")
-
-### Disable controls on a form
-
-When you're troubleshooting issues caused by controls on a form, disable the controls by using the following URL flag:
-
-**&flags=DisableFormControl=true**: Disables all the controls on a form.
-
-> [!NOTE]
-> **&flags=DisableFormControl=new_mycontrol** disables a specific control on the form. If the issue is resolved when the **&flags=DisableWebResourceControls=true** flag is used, there might be more than one web resource control on the form. You can use this flag to further identify the control that's causing the issue.
-
-## Disable business process flows
-
-If you're troubleshooting an issue caused by a business process flow, disable the flow on the form by using the following URL flag: **&flags=DisableBusinessProcessFlow=true**.
 
 ## Unexpected behaviors when loading a form
 
