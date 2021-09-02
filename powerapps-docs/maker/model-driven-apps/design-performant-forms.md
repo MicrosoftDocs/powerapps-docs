@@ -91,6 +91,16 @@ Here's an example using asynchronous code in synchronous extension points.
 
 ```javascript
 //Only do this if an extension point does not yet support asynchronous code
+try {
+    await Xrm.WebApi.retrieveRecord("settings_entity", "7333e80e-9b0f-49b5-92c8-9b48d621c37c");
+	//do other logic with data here
+} catch {
+	//do other logic with error here
+} finally {
+    Xrm.Utility.closeProgressIndicator();
+}
+
+// Or using .then/.finally
 Xrm.Utility.showProgressIndicator("Checking settings...");
 Xrm.WebApi.retrieveRecord("settings_entity", "7333e80e-9b0f-49b5-92c8-9b48d621c37c")
 	.then(
