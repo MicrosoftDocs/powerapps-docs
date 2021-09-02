@@ -258,7 +258,6 @@ The following table explains various attributes associated with blogpost Object.
 |Attribute   |Description   |
 |---|---|
 | url            | The URL of the post.                                                                |
-| content        | Returns the content field for the post.                                             |
 | content        | Returns the Content field for the post.                                             |
 | author         | Returns the authors for the post (which is simply a contact table object.          |
 | title          | The Title of the post.                                                              |
