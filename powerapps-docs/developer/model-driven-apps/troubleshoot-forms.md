@@ -418,10 +418,10 @@ See the examples below to understand the reasons for filtering. Based on the exp
 Please follow up according to the Form Checker analysis.
 
 ## Unexpected unsaved changes error
+### Problem
+When working on forms, you get the *unsaved changes* message on the form footer, when you navigate from the current form, or when the form is getting saved without any changes. 
 
-When working on forms, you get the *unsaved changes* error on the form footer, when you navigate from the current form, or when the form is getting saved without any changes. 
-
-**Resolution**:
+### How to troubleshoot
 
 The *unsaved changes* error appears when a change is made on the form and when the changes were not saved. If you haven't made any changes manually, they could be coming from a JavaScript, plug-in, or from a business rule. You can use [Monitor](../../maker/model-driven-apps/monitor-form-checker.md) to view the `UnsavedChanges` event that helps to find the source of the changes. You can filter by OperationType `UnsavedChanges`.
 
@@ -435,6 +435,7 @@ The screenshot below shows the root cause of the issue. You can see that the cha
 > [!NOTE]
 > If the user has manually made the changes on the form, a call stack will not be provided.
 
-
+### Follow up
+See where the change is coming from and if it's expected behavior or not. In case of a script making changes, the original web resource can be traced back in the call stack. In most cases it will either be a script - make a call based on the web resource itself.
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
