@@ -129,7 +129,7 @@ More information:
 
 #### Limit the amount of data requested during form load
 
-Only request the minimum amount of data that is necessary to perform business logic on a form. Cache the data that is requested as much as possible, especially for data that doesn’t change often or doesn’t need to be fresh. For example, imagine there is a form that requests data from a *setting* table. Based on data in the setting table, the form might choose to hide a section of the form. In this case, the JavaScript can cache data in `sessionStorage` so that data is only requested once per session. A stale-while-revalidate strategy might also be used where the JavaScript uses the data from `sessionStorage` while requesting data for the next navigation to the form.
+Only request the minimum amount of data that is necessary to perform business logic on a form. Cache the data that is requested as much as possible, especially for data that doesn’t change often or doesn’t need to be fresh. For example, imagine there is a form that requests data from a *setting* table. Based on data in the setting table, the form might choose to hide a section of the form. In this case, the JavaScript can cache data in `sessionStorage` so that data is only requested once per session (`onLoad1`). A stale-while-revalidate strategy might also be used where the JavaScript uses the data from `sessionStorage` while requesting data for the next navigation to the form (`onLoad2`). Finally, a deduplication strategy could be used in case a handler is called multiple times in a row (`onLoad3`).
 
 
 ```javascript
@@ -150,8 +150,23 @@ async function onLoad1(executionContext) {
 }
 
 // Retrieve setting value with stale-while-revalidate strategy
-let requestPromise;
 async function onLoad2(executionContext) {
+	let settingValue = sessionStorage.getItem(SETTING_VALUE_SESSION_STORAGE_KEY);
+
+    // Revalidate, but only await if session storage value is not present
+	const requestPromise = requestSettingValue();
+
+	// Ensure there is a stored setting value to use the first time in a session
+	if (settingValue === null || settingValue === undefined) {
+		settingValue = await requestPromise;
+	}
+	
+	// Do logic with setting value here
+}
+
+// Retrieve setting value with stale-while-revalidate and deduplication strategy
+let requestPromise;
+async function onLoad3(executionContext) {
 	let settingValue = sessionStorage.getItem(SETTING_VALUE_SESSION_STORAGE_KEY);
 
 	// Request setting value again but don't wait on it
