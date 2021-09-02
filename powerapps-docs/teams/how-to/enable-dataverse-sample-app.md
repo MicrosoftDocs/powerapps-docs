@@ -57,11 +57,11 @@ The first way to provision Dataverse for Teams in Teams is to create a new app. 
 
 1. Publish your app. More information: [Publish your app using Power Apps app in Teams](../publish-and-share-apps.md).
 
-You now have Dataverse for Teams and Power Apps in your Team!
+You now have Dataverse for Teams and Power Apps in your team!
 
 ## Install a sample app
 
-The second way to provision Dataverse for Teams in your Team is by installing one of the ready-made sample apps for Teams. These are fully functional apps that provide a complete experience, but are also easy to enhance and configure to meet your specifications.
+The second way to provision Dataverse for Teams in your team is by installing one of the ready-made sample apps for Teams. These are fully functional apps that provide a complete experience, but are also easy to enhance and configure to meet your specifications.
 
 To learn more about the sample apps for Teams, see [Use sample apps from teams store](../use-sample-apps-from-teams-store.md).
 
@@ -81,7 +81,7 @@ The Employee Ideas app template for Teams enables team members to quickly genera
 
 1. Select **Add to a team**.
 
-    ![Select Add to a Team](media/enable-dataverse-sample-app/installing-employee-ideas-template-app-1.png "Select Add to a Team")
+    ![Select Add to a team](media/enable-dataverse-sample-app/installing-employee-ideas-template-app-1.png "Select Add to a team")
 
 1. Search for the channel in which you wish to install the app
 
@@ -113,7 +113,7 @@ The Employee Ideas app template for Teams enables team members to quickly genera
 
     ![Select Got it](media/enable-dataverse-sample-app/installing-employee-ideas-template-app-7.png "Select Got it")
 
-Dataverse for Teams is now provisioned in your Team and you can create or install other apps in the same Team.
+Dataverse for Teams is now provisioned in your team and you can create or install other apps in the same team.
 
 ### See also
 
