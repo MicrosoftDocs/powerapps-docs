@@ -94,7 +94,7 @@ Here's an example using asynchronous code in synchronous extension points.
 try {
     await Xrm.WebApi.retrieveRecord("settings_entity", "7333e80e-9b0f-49b5-92c8-9b48d621c37c");
 	//do other logic with data here
-} catch {
+} catch (error) {
 	//do other logic with error here
 } finally {
     Xrm.Utility.closeProgressIndicator();
@@ -174,25 +174,22 @@ async function onLoad2(executionContext) {
     }
 }
 
-function requestSettingValue() {
-    return Xrm.WebApi.retrieveRecord(
-        SETTING_ENTITY_NAME,
-        "7333e80e-9b0f-49b5-92c8-9b48d621c37c",
-        `?$select=${SETTING_FIELD_NAME}`
-    ).then(
-        (data) => {
-            try {
-                sessionStorage.setItem(SETTING_VALUE_SESSION_STORAGE_KEY, data[SETTING_FIELD_NAME]);
-            } catch (e) {
-                // Handle  error
-            } finally {
-                return data[SETTING_FIELD_NAME];
-            }
-        },
-        (error) => {
+async function requestSettingValue() {
+    try {
+        await Xrm.WebApi.retrieveRecord(
+            SETTING_ENTITY_NAME,
+            "7333e80e-9b0f-49b5-92c8-9b48d621c37c",
+            `?$select=${SETTING_FIELD_NAME}`;
+        try {
+            sessionStorage.setItem(SETTING_VALUE_SESSION_STORAGE_KEY, data[SETTING_FIELD_NAME]);
+        } catch (error) {
             // Handle error
+        } finally {
+            return data[SETTING_FIELD_NAME];
         }
-    );
+    } catch (error) {
+        // Handle error   
+    }
 }
 ```
 
