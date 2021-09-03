@@ -52,7 +52,7 @@ When you're troubleshooting issues with forms, you need to use URL parameters to
   
   > [!NOTE]
   > Business Rules are authored in the Business Rule designer and compiled into client side script, and registered in multiple form events, such as onload, after succcessful save, onchange etc. The way to disable Business Rules are very similar with other form events, however there're a few key differences.  
-  > - When you use DisableFormHandlers=true, or DisableFormHandlers=businessrule, or DisableFormHandlers=businessrule_*index*, or DisableFormHandlers=businessrule_*startIndex_endIndex*, you're disabling the Business Rule(s) in all form events they register to.  
+  > - When you use DisableFormHandlers=true, businessrule, businessrule_*index*, or businessrule_*startIndex_endIndex*, you're disabling the Business Rule(s) in all form events they're registered to.  
   > - If you see below event in Form Checker, follow the instructions to refresh Business Rule(s) in the backend. You only need to do it once in your organization.  
     >  [!div class="mx-imgBorder"]
     > ![Refresh Business Rules.](media/businessrule-need-refresh.png "Refresh Business Rules")
