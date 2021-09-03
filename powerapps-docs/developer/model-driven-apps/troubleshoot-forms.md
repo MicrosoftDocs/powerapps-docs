@@ -359,7 +359,7 @@ There are many possible reasons why a tab or section might be hidden or visible.
 
 ### How to troubleshoot
 
-The `TabStateChange` or `SectionStateChange` operations in [Monitor](../../maker/model-driven-apps/monitor-form-checker.md) explain the visible state change, as shown in the following image.
+The `TabStateChange` or `SectionStateChange` operations in [Monitor](../../maker/model-driven-apps/monitor-form-checker.md) explain the visible state change, as shown in the following image. If it's caused by a script, then the callstack would reveal the web resource file, line number and function name that caused this behavior.
 
 > [!div class="mx-imgBorder"]
 > ![Tab section.](media/tab-section-visible.png "Tab section")
