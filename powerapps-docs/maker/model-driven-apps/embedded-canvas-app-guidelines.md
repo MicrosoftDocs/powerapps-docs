@@ -116,7 +116,7 @@ To resolve this issue, choose the correct option:
 
 When a solution that contains a model-driven app with an embedded canvas app is imported into a target environment, the control loads the canvas app from the source environment (where the solution was exported). The control should load the canvas app from the target (current) environment.
 
-This issue occurs because the app user doesn't have read access to the CanvasApp Extended Metadata table. To resolve this issue, add the user to a security role used for the app that has read access to the CanvasApp Extended Metadata table. More information: [Grant read privileges for the CanvasApp Extended Metadata table](#grant-read-privileges-for-the-canvasapp-extended-metadata-table)
+This issue occurs because the app user doesn't have read access to the CanvasApp Extended Metadata table in the target (current) environment. To resolve this issue, add the user to a security role used for the app that has read access to the CanvasApp Extended Metadata table. More information: [Grant read privileges for the CanvasApp Extended Metadata table](#grant-read-privileges-for-the-canvasapp-extended-metadata-table)
 
 #### Error message: "You don’t have read privileges for the Canvas App entity. Please contact your administrator"
 
