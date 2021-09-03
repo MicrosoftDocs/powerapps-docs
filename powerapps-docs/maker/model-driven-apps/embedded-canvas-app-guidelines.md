@@ -126,7 +126,7 @@ This issue occurs because the app user doesn't have read access to the CanvasApp
 
 ##### Grant read privileges for the CanvasApp Extended Metadata table
 
-1. In Power Apps, select the environment, on the left navigation pane select **Apps**.
+1. In Power Apps, select the environment, and then on the left navigation pane select **Apps**.
 1. Select the app you want, select **…**, and then select **Share**.
 1. On the left pane, select the app, and then select **Manage security roles**.
 1. Open the security role assigned to the app, such as the Basic User security role.
