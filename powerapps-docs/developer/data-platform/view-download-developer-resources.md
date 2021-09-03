@@ -1,5 +1,5 @@
 ---
-title: "View or download developer resources for Power Apps and Microsoft Dataverse | MicrosoftDocs"
+title: "View developer resources for Power Apps and Microsoft Dataverse | MicrosoftDocs"
 description: "Discover developer resources and services for Power Apps and Microsoft Dataverse."
 keywords: ""
 ms.date: 03/21/2021
@@ -21,7 +21,7 @@ search.app:
   - D365CE
 ---
 
-# View or download developer resources
+# View developer resources
 
 This article provides resources for developers and information about the specific environment you're working with.
 
@@ -29,17 +29,9 @@ This article provides resources for developers and information about the specifi
 
 1. Sign into [Power Apps](https://make.powerapps.com), and select your environment in the top-right corner.
 
-1. Select the **Settings** button in the top-right corner, and select **Advanced Settings**.
+1. Select the **Settings** button in the top-right corner, and select **Developer resources**.
 
-    ![Advanced settings.](media/advanced-customizations-menu.png)
-
-1. On the **Settings** page, select the drop-down arrow next to **Settings**, and select **Customizations**.
-
-    ![Select customizations.](media/dev-customization.png)
-
-1. On the **Customizations** page, select **Developer Resources** to view the page with resources for developers.
-
-    ![Developer Resources page.](media/developer-resources-page.png)
+    ![Developer resources.](media/advanced-customizations-menu.png)
 
 The following sections explain the information available on the developer resources page.
 
