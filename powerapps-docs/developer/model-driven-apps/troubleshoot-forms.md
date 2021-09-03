@@ -118,7 +118,7 @@ The main difference between **DisableFormHandlers** and **DisableFormLibraries**
   > [!div class="mx-imgBorder"]
   > ![Difference between DisableFormHandlers and DisableFormLibraries.](media/difference-between-disableformhandlers-disableformlibraries.png "Difference between DisableFormHandlers and DisableFormLibraries")
 
-    Assuming the `myOnloadHandler` is registered as an `OnLoad` event handler, the `DisableFormHandlers=true` flag only prevents the second alert, whereas the `DisableFormLibraries=true` flag prevents both alerts.
+  > Assuming the `myOnloadHandler` is registered as an `OnLoad` event handler, the `DisableFormHandlers=true` flag only prevents the second alert, whereas the `DisableFormLibraries=true` flag prevents both alerts.
 
 
 ## View registered form event handlers and libraries in Monitor
