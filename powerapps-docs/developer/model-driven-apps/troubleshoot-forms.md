@@ -465,7 +465,7 @@ Business Required fields by default would block form save if the value is missin
 ### How to troubleshoot
 The `RequiredFieldValidation` operation is logged when a save is attempted, regardless whether save is successful or not, this operation explains why each business required field blocks or does not block save operation.
 
-Below is an example of this operation. The top of message explains how to read the detailed reports of each required field. Please read it thoroughly before looking into the detailed analysis of each field and its bound controls. In this example, "fax" field is bound to one control, and the control with the same name is read only and will not trigger required field validation.
+Below is an example of this operation. The top of message explains how to read the detailed reports of each required field. Please read it thoroughly before looking into the detailed analysis of each field and its bound controls. In this example, "fax" field is bound to one control, and the control of the same name is read only hence will not trigger required field validation.
 
 > [!div class="mx-imgBorder"]
 > ![Required Field Validation.](media/required-field-validation.png "Required field validation")
