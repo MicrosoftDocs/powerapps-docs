@@ -106,6 +106,21 @@ https://myorg.crm.dynamics.crm/main.aspx?appid=00000000-0000-0000-0000-000000000
 https://myorg.crm.dynamics.crm/main.aspx?appid=00000000-0000-0000-0000-000000000000&pagetype=entityrecord&id=00000000-0000-0000-0000-000000000000**&flags=DisableFormCommandbar=true
 ```
 
+> [!NOTE]
+The main difference between **DisableFormHandlers** and **DisableFormLibraries** are:
+
+> - The **DisableFormHandlers** flag disables form handlers regardless of the containing form libraries, whereas the **DisableFormLibraries** flag disables the form libraries (web resources) regardless of the functions (event handlers) included in the libraries. Simply put, **DisableFormLibraries** makes sure the specified javascript web resource files are not even loaded.
+
+> - The **DisableFormHandlers** flag doesn't prevent the containing form library from being loaded, thus it doesn't prevent the JavaScript code that's present in the library&mdash;but not registered as an event handler&mdash;from being executed. For example, if a form library `new_myscript.js` is written in the following way (not recommended practice):  
+
+> - You should start with **DisableFormHandlers** to see if the issue goes away, and if not, you can try **DisableFormLibraries**. Disabling any script always involves some risks of potentially breaking your form scenarios, however the latter tends to have more side effects because of the disablement of the entire javascript files.
+
+  > [!div class="mx-imgBorder"]
+  > ![Difference between DisableFormHandlers and DisableFormLibraries.](media/difference-between-disableformhandlers-disableformlibraries.png "Difference between DisableFormHandlers and DisableFormLibraries")
+
+    Assuming the `myOnloadHandler` is registered as an `OnLoad` event handler, the `DisableFormHandlers=true` flag only prevents the second alert, whereas the `DisableFormLibraries=true` flag prevents both alerts.
+
+
 ## View registered form event handlers and libraries in Monitor
 
 To view registered form event handles and libraries, you can view the `FormEvents` operation in [Monitor](../../maker/model-driven-apps/monitor-form-checker.md).
@@ -118,19 +133,6 @@ You'll need the `eventIndex` and `libraryIndex` parameter values when using the 
 > [!div class="mx-imgBorder"]
 > ![Form events OnLoad.](media/form-events-onload.png "Form events OnLoad")
 
-### Difference between DisableFormHandlers and DisableFormLibraries
-
-The main difference between disabling form libraries and form handlers are:
-
-- The **DisableFormHandlers** flag disables form handlers regardless of the containing form libraries, whereas the **DisableFormLibraries** flag disables the form libraries (web resources) regardless of the functions (event handlers) included in the libraries. Simply put, **DisableFormLibraries** makes sure the specified javascript web resource files are not even loaded.
-
-- The **DisableFormHandlers** flag doesn't prevent the containing form library from being loaded, thus it doesn't prevent the JavaScript code that's present in the library&mdash;but not registered as an event handler&mdash;from being executed. For example, if a form library `new_myscript.js` is written in the following way (not recommended practice):  
-
-  > [!div class="mx-imgBorder"]
-  > ![Difference between DisableFormHandlers and DisableFormLibraries.](media/difference-between-disableformhandlers-disableformlibraries.png "Difference between DisableFormHandlers and DisableFormLibraries")
-
-    - Assuming the `myOnloadHandler` is registered as an `OnLoad` event handler.
-    - The `DisableFormHandlers=true` flag only prevents the second alert, whereas the `DisableFormLibraries=true` flag prevents both alerts.
 
 ## Unexpected behaviors when loading a form
 ### Problem  
