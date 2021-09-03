@@ -377,7 +377,7 @@ There are many possible reasons why a dialog appears or navigation happens unexp
 
 ### How to troubleshoot
 
-The `XrmNavigation` operation in [Monitor](../../maker/model-driven-apps/monitor-form-checker.md) helps you identify the script that's causing unexpected behavior.
+The `XrmNavigation` operation in [Monitor](../../maker/model-driven-apps/monitor-form-checker.md) contains callstack that helps you identify the script that's causing unexpected behavior.
 
 > [!div class="mx-imgBorder"]
 > ![XrmNavigation operation in Monitor.](media/form-checker-navigation.png "XrmNavigation operation in [Monitor](../../maker/model-driven-apps/monitor-form-checker.md)")
