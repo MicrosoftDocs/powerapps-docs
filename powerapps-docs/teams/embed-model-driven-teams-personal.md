@@ -70,7 +70,8 @@ If you're an admin, you can use the **Download app** option to also [publish the
 
 # Known Issues
 1. Running **Model-driven apps** on the Microsoft Teams mobile app is currently not supported. 
-1. Custom pages are not supported. 
+2. Embedded Canvas apps are not supported.
+3. Custom pages are not supported. 
 
 ### See also
 
