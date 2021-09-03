@@ -470,7 +470,7 @@ Below is an example of this operation. The top of message explains how to read t
 > [!div class="mx-imgBorder"]
 > ![Required Field Validation.](media/required-field-validation.png "Required field validation")
 
-Below is another example that "jobtitle" is a business required field that put on the BPF but not on the form, and the field is not dirty (not modified after form is loaded), thus it does not block save even that it's empty.
+Below is another example that "jobtitle" is a business required field that put on the BPF but not on the form, and the field is not dirty (not modified), thus it does not block save even that it's empty.
 
 > [!div class="mx-imgBorder"]
 > ![Required Field Validation BPF only Field.](media/required-field-validation-bpf-only-field.png "Required field validation BPF only field")
