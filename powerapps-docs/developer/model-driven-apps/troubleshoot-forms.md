@@ -370,7 +370,7 @@ Please follow up according to the suggestion in the state reason or the owner of
 
 ## Unexpected dialogs or navigation
 ### Problem
-There are many possible reasons why a dialog appears or navigation happens unexpectedly. One of the common causes is when you use the [Xrm.Navigation](./clientapi/reference/xrm-navigation.md) API methods to open a record or a form. For example, when you open a form, an alert appears as shown in the following image.
+There are many possible reasons why a dialog appears or navigation happens unexpectedly. One of the common causes is the [Xrm.Navigation](./clientapi/reference/xrm-navigation.md) API methods are called to open a record or a form by a custom script. For example, when you open a form, an alert appears as shown in the following image.
 
 > [!div class="mx-imgBorder"]
 > ![Alert dialog box.](media/unexpected-alert-dialogs.png "Alert dialog box")
