@@ -244,7 +244,7 @@ If you believe this issue only occurs on forms, please refer to [Use URL paramet
 
 ### Follow up
 - If you have proven the issue is caused by certain form libraries / script files, please follow up with the owner of these customizations to further root cause the issue.
-- If you have proven the issue is caused by web resource controls with the DisableWebResourceControls flag, then you can use the DisableFormControl flag to disable each one-by-one until the issue no longer repros. The last disabled control after the issue no longer repros is the one that is causing the issue. please follow up with the owner of the control to further troubleshoot the issue.
+- If you have proven the issue is caused by web resource controls with the **DisableWebResourceControls** flag, then you can use the DisableFormControl flag to disable each one-by-one until the issue no longer repros. The last disabled control after the issue no longer repros is the one that is causing the issue. please follow up with the owner of the control to further troubleshoot the issue.
 - If you have proven the issue is caused by command bar / ribbon with the **DisableFormCommandbar** flag, this means this is not an issue with the form and an issue with the command bar. Please use [Command Checker](https://powerapps.microsoft.com/en-us/blog/introducing-command-checker-for-model-app-ribbons/) to troubleshoot individual commands and identify which one is causing the issue.
 
 
