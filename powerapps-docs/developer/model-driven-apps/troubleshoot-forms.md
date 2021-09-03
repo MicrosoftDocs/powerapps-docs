@@ -213,7 +213,7 @@ A common cause is an [OnSave](./clientapi/reference/events/form-onsave.md) event
 
 ### How to troubleshoot
 
-In [Monitor](../../maker/model-driven-apps/monitor-form-checker.md), the `FormEvents.onsave` Operation provides all the details why the save event was canceled, more details than that are available from the form UI itself.
+In [Monitor](../../maker/model-driven-apps/monitor-form-checker.md), the `FormEvents.onsave` operation provides all the details why the save event was canceled, more details than that are available from the form UI itself.
 
 > [!div class="mx-imgBorder"]
 > ![Record isn't saved error.](media/record-not-saved-error.png "Record isn't saved error")
@@ -256,7 +256,7 @@ This issue occurs if a business rule or custom script used to work in the legacy
 One of the reasons that the business rule or script is not working in Unified Client is that the controls that are part of them - do not exist in Unified Client.
 Composite controls exist in web client, but in Unified Client the composite control is broken down into parts and is stored this way. For example, if a field "fullname" is part of the business rule or custom script, the fields "firstname", "middlename" or "lastname" should be used instead.
 
-Once you launch Form Checker, you'll be able to see more details including the composite control that is causing the problem, the fields that can be used in the business rule or custom script instead and a full callstack (the callstack has been modified for demonstration purpose).
+Once you launch Form Checker, you'll be able to see more details in the `CompositeControl` operation including the composite control that is causing the problem, the fields that can be used in the business rule or custom script instead and a full callstack (the callstack has been modified for demonstration purpose).
 
 You can use [Monitor](../../maker/model-driven-apps/monitor-form-checker.md) to see more details, including the composite control that's causing the problem and the columns that can be used in the business rule or custom script instead.
 
@@ -293,7 +293,7 @@ Please follow up with the corresponding owner of the related menu item as the Fo
 There are many possible reasons why a control might be disabled or hidden when the form is loaded. 
 
 ### How to troubleshoot
-- You can use [Monitor](../../maker/model-driven-apps/monitor-form-checker.md) to view the `FormControls` Operation that includes all the details about the initial control state.
+- You can use [Monitor](../../maker/model-driven-apps/monitor-form-checker.md) to view the `FormControls` operation that includes all the details about the initial control state.
 
    > [!div class="mx-imgBorder"]
    > ![Forms controls check.](media/form-controls-check.png "Form controls check")
@@ -320,7 +320,7 @@ A control can be disabled by using the following list of rules in order. If a ru
 Finally, if the control passes all the above checks, the record state determines whether the control is disabled. The control is enabled by default on active records and disabled on inactive records.
 
 > [!NOTE]
-> The difference between `FormControls` and `ControlStateChange` is that the `FormControls` operation reflects the initial control state when the form is loaded, while the `ControlStateChange`operation reflects the state change at any time on the form. For example, if control is disabled for security reasons, it's very unlikely to be enabled after the form is loaded, so the initial state can be found in `FormControls` and isn't likely to be found in `ControlStateChange`. Even if a Client API function tries to enable the control, it won't be effective. You'll see the `ControlStateChange` Operation of the disabled state change intention by the script without success, and you'll be able to find out why the intention is unsuccessful in `FormControls`.
+> The difference between `FormControls` and `ControlStateChange` is that the `FormControls` operation reflects the initial control state when the form is loaded, while the `ControlStateChange`operation reflects the state change at any time on the form. For example, if control is disabled for security reasons, it's very unlikely to be enabled after the form is loaded, so the initial state can be found in `FormControls` and isn't likely to be found in `ControlStateChange`. Even if a Client API function tries to enable the control, it won't be effective. You'll see the `ControlStateChange` operation of the disabled state change intention by the script without success, and you'll be able to find out why the intention is unsuccessful in `FormControls`.
 
 ## Why a control has a certain value on form load
 ### Problem
@@ -394,7 +394,7 @@ When opening a quick create form from a lookup or a grid, another form may open 
 
 ### How to troubleshoot
 
-- You can use [Monitor](../../maker/model-driven-apps/monitor-form-checker.md) to view the `FormType` Operation that includes all the reasons why a quick create form was not opened.
+- You can use [Monitor](../../maker/model-driven-apps/monitor-form-checker.md) to view the `FormType` operation that includes all the reasons why a quick create form was not opened.
 
 > [!div class="mx-imgBorder"]
 > ![Table not enabled for quick create.](media/troubleshoot-forms-entity-not-eabled-for-quick-create.png "Table not enabled for quick create")
@@ -418,7 +418,7 @@ When opening the global quick create menu flyout, not all tables are available. 
 
 ### How to troubleshoot
 
-- You can use [Monitor](../../maker/model-driven-apps/monitor-form-checker.md) to view the `QuickCreateMenu` Operation that includes all the tables and reasons why they are filtered from the quick create menu flyout.
+- You can use [Monitor](../../maker/model-driven-apps/monitor-form-checker.md) to view the `QuickCreateMenu` operation that includes all the tables and reasons why they are filtered from the quick create menu flyout.
 
 See the examples below to understand the reasons for filtering. Based on the explanations, contact the responsible party or make changes accordingly.
 
@@ -461,9 +461,9 @@ See where the change is coming from and if it's expected behavior or not. In cas
 Business Required fields by default would block form save if the value is missing. However in many by-design scenarios a business required field may not block save even when the value is empty, or block the save when you don't believe it should.
 
 ### How to troubleshoot
-The 'RequiredFieldValidation' Operation is logged when a save is attempted, regardless whether save is successful or not, this Operation explains why each business required field blocks or does not block save operation.
+The 'RequiredFieldValidation' operation is logged when a save is attempted, regardless whether save is successful or not, this operation explains why each business required field blocks or does not block save operation.
 
-Below is an example of this Operation. The top of message explains how to read the detailed reports of each required field. Please read it thoroughly before looking into the detailed analysis of each field and its bound controls. In this example, "fax" field is bound to one control, and the control with the same name is read only and will not trigger required field validation.
+Below is an example of this operation. The top of message explains how to read the detailed reports of each required field. Please read it thoroughly before looking into the detailed analysis of each field and its bound controls. In this example, "fax" field is bound to one control, and the control with the same name is read only and will not trigger required field validation.
 
 > [!div class="mx-imgBorder"]
 > ![Required Field Validation.](media/required-field-validation.png "Required field validation")
@@ -474,15 +474,15 @@ Below is another example that "jobtitle" is a business required field that put o
 > ![Required Field Validation BPF only Field.](media/required-field-validation-bpf-only-field.png "Required field validation BPF only field")
 
 ### Follow up
-Most times the behavior is by design, and the `RequiredFieldValidation` Operation explains why this field behaves in a certain way in form save operation. If the required field validation is skipped on a field because the control is disabled or hidden, as the first example ilustrate, please follow the Form Checker suggestions for further analysis that may lead to another troubleshooting scenario such as [Why a control is disabled/enabled or visible/hidden](#why-a-control-is-disabledenabled-or-visiblehidden).
+Most times the behavior is by design, and the `RequiredFieldValidation` operation explains why this field behaves in a certain way in form save operation. If the required field validation is skipped on a field because the control is disabled or hidden, as the first example ilustrate, please follow the Form Checker suggestions for further analysis that may lead to another troubleshooting scenario such as [Why a control is disabled/enabled or visible/hidden](#why-a-control-is-disabledenabled-or-visiblehidden).
 
 
 ## Some fields are not displayed on the Merge Dialog
 ### Problem
-The Merge Dialog uses the default main form definition for the entity and selectively renders most but not all of the fields in the dialog. This Form Checker Operation explains why some of the fields are not displayed on the Merge Dialog even that they may be displayed on the main form.
+The Merge Dialog uses the default main form definition for the entity and selectively renders most but not all of the fields in the dialog. This Form Checker operation explains why some of the fields are not displayed on the Merge Dialog even that they may be displayed on the main form.
 
 ### How to troubleshoot
-The `MergeDialog.load` Operation below explains the reason why some fields are not displayed.  
+The `MergeDialog.load` operation below explains the reason why some fields are not displayed.  
 In this example, parentcustomerid on contact form is not supported on the merge dialog. businesscard field is not displayed because the containing section is hidden in the main form xml definition. Note that even though it's possible to show the owning section in the main form via client API, the Merge Dialog just simply honor the form xml configuration as event handlers are not supported on the Merge Dialog.
 
 > [!div class="mx-imgBorder"]
