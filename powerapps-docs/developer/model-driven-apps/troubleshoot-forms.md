@@ -209,7 +209,7 @@ Please follow up with the script owner to further troubleshoot this issue.
 
 ## The form or record isn't saved when you try to save the form
 ### Problem
-A common cause is an [OnSave](./clientapi/reference/events/form-onsave.md) event handler that calls the `[executionContext.getEventArgs().preventDefault()](./clientapi/reference/save-event-arguments/preventDefault.md)` method to cancel the save operation.
+A common cause is an [OnSave](./clientapi/reference/events/form-onsave.md) event handler that calls the [executionContext.getEventArgs().preventDefault()](./clientapi/reference/save-event-arguments/preventDefault.md) method to cancel the save operation.
 
 ### How to troubleshoot
 
