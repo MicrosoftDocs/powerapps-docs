@@ -63,7 +63,7 @@ When you're troubleshooting issues with forms, you need to use URL parameters to
 
   
 - **DisableFormLibraries**  
-    This flag disables form libraries and actually prevents the libraries from being loaded. Please refer to [View registered form event handlers and libraries in Monitor](#view-registered-form-event-handlers-and-libraries-in-Monitor) to learn how to obtain event or library indices.  
+    This flag disables form libraries and actually prevents the libraries from being loaded. Please refer to [View registered form event handlers and libraries in Monitor](#view-registered-form-event-handlers-and-libraries-in-Monitor) to learn how to obtain event or library indices for granular controls.    
     #### Usage:  
     The usage is similar with DisableFormHandlers except it only does not take an event name as the value  
     - This will disable all form libraries:  
