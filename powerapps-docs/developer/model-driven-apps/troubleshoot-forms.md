@@ -298,7 +298,7 @@ There are many possible reasons why a control might be disabled or hidden when t
    > [!div class="mx-imgBorder"]
    > ![Forms controls check.](media/form-controls-check.png "Form controls check")
 
-- Another way is to check the `ControlStateChange` operation that explains why the control is in a disabled or visible state. This can occur during a form load, or be triggered after the form is loaded, by using an `OnChange` event handler.
+- Another way is to check the `ControlStateChange.visible` or `ControlStateChange.disabled` operation that explains why the control is in a disabled or visible state. This can occur during a form load, or be triggered after the form is loaded, by using an `OnChange` event handler.
 
    > [!div class="mx-imgBorder"]
    > ![Control state changed.](media/control-state-changed.png "Control state changed")
