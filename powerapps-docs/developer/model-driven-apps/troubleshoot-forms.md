@@ -354,6 +354,7 @@ Verify where the value is coming from and take an action based on the below tabl
 | Value passed by page input data passed via URL | Check the API that opens the specific form with the issue, it is passing the value. |
 
 
+
 ## Why a tab or section is visible or hidden
 ### Problem
 There are many possible reasons why a tab or section might be hidden or visible.
