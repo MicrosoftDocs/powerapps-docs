@@ -1,7 +1,7 @@
 ---
-title: "Send in-app notifications within model-driven apps" 
+title: "Send in-app notifications within model-driven apps (preview)" 
 description: Learn how to configure notifications in model-driven apps using client API.
-ms.date: 08/23/2021
+ms.date: 09/03/2021
 ms.reviewer: "nabuthuk"
 ms.service: powerapps
 ms.subservice: mda-developer
@@ -17,7 +17,7 @@ search.app:
   - D365CE
 ---
 
-# Preview: Send in-app notifications within model-driven apps 
+# Send in-app notifications within model-driven apps (preview) 
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
 
@@ -166,8 +166,8 @@ The in-app notification feature uses three tables, and a user needs to have the 
 |Usage|Needed table privileges|
 |------------|----------------|
 |User has no in-app notification bell and receives no in-app notifications toasts |None: Read privilege on app notification table. |
-|User can receive in-app notifications|- Basic: Read privilege on app notification table.<br/> - Create and read privilege on model-driven app user setting.|
-|User can send in-app notifications to self |- Basic: Create privilege on app notification table. <br/> - Write and append privilege on model-driven app user setting. <br/> - Append privilege on setting definition. |
+|User can receive in-app notifications|- Basic: Read privilege on app notification table.<br/>- Create, Read, Write, and Append on model-driven app user setting.<br/>- Read and AppendTo privilege on setting definition. |
+|User can send in-app notifications to self |- Basic: Create and Read privilege on app notification table. |
 |User can send in-app notifications to others |Read privilege with Local, Deep, or Global access level on app notification table based on the receiving user's business unit. |
 
 

@@ -200,7 +200,7 @@ Notify( "Model-driven app notification message" )
 ### Launch a URL
 
 ```powerappsfl
-Launch("https://www.bing.com"));
+Launch("https://www.bing.com");
 ```
 
 ### Access 1:N property
