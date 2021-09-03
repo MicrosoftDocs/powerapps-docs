@@ -122,9 +122,9 @@ You'll need the `eventIndex` and `libraryIndex` parameter values when using the 
 
 The main difference between disabling form libraries and form handlers are:
 
-- The **DisableFormHandlers** flag disables form handlers regardless of the containing form libraries, whereas the **DisableFormLibraries** flag disables the form libraries (web resources) regardless of the functions (event handlers) included in the libraries.
+- The **DisableFormHandlers** flag disables form handlers regardless of the containing form libraries, whereas the **DisableFormLibraries** flag disables the form libraries (web resources) regardless of the functions (event handlers) included in the libraries. Simply put, **DisableFormLibraries** makes sure the specified javascript web resource files are not even loaded.
 
-- The **DisableFormHandlers** flag doesn't prevent the containing form library from being loaded, thus it doesn't prevent the JavaScript code that's present in the library&mdash;but not registered as an event handler&mdash;from being executed. For example, if a form library `new_myscript.js` is written in the following way:  
+- The **DisableFormHandlers** flag doesn't prevent the containing form library from being loaded, thus it doesn't prevent the JavaScript code that's present in the library&mdash;but not registered as an event handler&mdash;from being executed. For example, if a form library `new_myscript.js` is written in the following way (not recommended practice):  
 
   > [!div class="mx-imgBorder"]
   > ![Difference between DisableFormHandlers and DisableFormLibraries.](media/difference-between-disableformhandlers-disableformlibraries.png "Difference between DisableFormHandlers and DisableFormLibraries")
