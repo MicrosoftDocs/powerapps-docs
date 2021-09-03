@@ -51,9 +51,9 @@ When you're troubleshooting issues with forms, you need to use URL parameters to
   This value disables all handlers for a given event name within the given range from startIndex to endIndex (both are included). For example, DisableFormHandlers=true_0_2 will disable handlers of index 0, 1 and 2 of the event names included by "true" value. DisableFormHandlers=onload_2_5 will disable [OnLoad](./clientapi/reference/events/form-onload.md)  handlers of index 2, 3, 4 and 5. If you have a large amount of event handlers, you can use this approach to help narrow down problematic handlers quickly.  
   
     > [!NOTE]
-    > Business Rules are authored in the Business Rule designer and compiled into client side script, and registered in multiple form events, such as onload, after succcessful save, onchange etc. The way to disable Business Rules are very similar with other form events, however there're a few key differences.  
+    > Business Rules are authored in the Business Rule designer and compiled into client side script, and registered in multiple form events, such as onload, after succcessful save, onchange etc. The way to disable Business Rules are very similar with other form events, however there're a few key differences:  
     > - When you use DisableFormHandlers=true, businessrule, businessrule_*index*, or businessrule_*startIndex_endIndex*, you're disabling the Business Rule(s) in all form events they're registered to.  
-    > - If you see below event in Form Checker, follow the instructions to refresh Business Rule(s) in the backend. You only need to do it once in your organization.  
+    > - If you see below event in Form Checker, follow the instructions to refresh Business Rule(s) in the backend. You only need to do it once in your organization, and you can revert your changes after troubleshooting is done.  
       >  [!div class="mx-imgBorder"]
       > ![Refresh Business Rules.](media/businessrule-need-refresh.png "Refresh Business Rules")
 
