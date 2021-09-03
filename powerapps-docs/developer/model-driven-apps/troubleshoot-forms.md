@@ -293,12 +293,12 @@ Please follow up with the corresponding owner of the related menu item as the Fo
 There are many possible reasons why a control might be disabled or hidden when the form is loaded. 
 
 ### How to troubleshoot
-- You can use [Monitor](../../maker/model-driven-apps/monitor-form-checker.md) to view the `FormControls` operation that includes all the details about the initial control state.
+- You can use [Monitor](../../maker/model-driven-apps/monitor-form-checker.md) to view the `FormControls` operation that includes all the details about the initial control state when the form loads.
 
    > [!div class="mx-imgBorder"]
    > ![Forms controls check.](media/form-controls-check.png "Form controls check")
 
-- Another way is to check the `ControlStateChange.visible` or `ControlStateChange.disabled` operation that explains why the control is in a disabled or visible state. This can occur during a form load, or be triggered after the form is loaded, by using an `OnChange` event handler.
+- Another place to check is the `ControlStateChange.visible` or `ControlStateChange.disabled` operation that explains why the control disabled or visible state is changed. Unlike the `FormControls` operation that is only reported once when the form loads, these state change operations can occur whenever client script tries to change the control state anytime, whether it's during form load, in onchange or onsave events after form is loaded.
 
    > [!div class="mx-imgBorder"]
    > ![Control state changed.](media/control-state-changed.png "Control state changed")
