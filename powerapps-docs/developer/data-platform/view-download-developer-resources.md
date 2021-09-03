@@ -31,57 +31,39 @@ This article provides resources for developers and information about the specifi
 
 1. Select the **Settings** button in the top-right corner, and select **Developer resources**.
 
-    ![Developer resources.](media/advanced-customizations-menu.png)
+    ![Developer resources.](media/dev-resources-menu.png)
 
 The following sections explain the information available on the developer resources page.
 
-## Getting started
+## Unique identifiers
+
+The first three pieces of information are the unique identifiers that describe your environment and specific Microsoft Dataverse instance (organization).
+
+This information is needed when you connect through developer tooling or use Azure extensions with your instance.
+More information: [Azure integration](./azure-integration.md)
+
+## Connect your apps to this instance of Microsoft Dataverse
+
+This next two pieces of information provide you with the APIs you need to connect to your Dataverse environment.
+
+### Instance Web API
+
+This is the URL for the Web API for your instance. The Web API is an OData v4 RESTful API. More information: [Use the Dataverse Web API](/powerapps/developer/data-platform/webapi/overview)
+
+### Organization Service
+
+This is the URL for the SOAP endpoint for the Organization Service for your instance.
+You will use the CrmSvcUtil.exe code generation tool to build table classes for .NET projects. More information: 
+- [Create early bound table classes with the code generation tool (CrmSvcUtil.exe)](/powerapps/developer/data-platform/org-service/generate-early-bound-classes)
+- [Use the Organization Service](/powerapps/developer/data-platform/org-service/overview)
+
+## Documentation
 
 This section provides links for developers to find resources. The following resources are available:
 
 |Link |Description|
 |---------|---------|
-|[Developer Center](../../index.yml)|The main entry point for documentation for developers.|
-|[Developer Forums](https://go.microsoft.com/fwlink/?LinkId=550993)|Ask and answer questions with other developers.|
-|[SDK NuGet Packages](https://go.microsoft.com/fwlink/?LinkId=550994)|Discover NuGet packages to add SDK assemblies to your projects.|
-|SDK Download|We no longer ship the SDK package as a download on Microsoft Download Center. Instead, the SDK assemblies and tools are available as [NuGet packages](https://go.microsoft.com/fwlink/?LinkId=550994). Use the PowerShell script in this article to get the latest version of SDK tools: [Download tools from NuGet](./download-tools-nuget.md)|
+|[Developer center](../../index.yml)|The main entry point for documentation for developers.|
+|[Official NuGet feed](https://go.microsoft.com/fwlink/?LinkId=550994)|Discover NuGet packages to add SDK assemblies to your projects.|
+|[PowerShell Gallery feed](https://go.microsoft.com/fwlink/?LinkId=2165435)|Discover PowerShell packages to make working with Dataverse easier.|
 |[Sample Code](https://go.microsoft.com/fwlink/?LinkId=553007)|A list of code samples available.|
-|[Developer Overview](./overview.md)|Link to a topic providing an overview for developers.|
-
-## Connect your apps to this instance of Microsoft Dataverse
-
-This section provides information you need to connect to your Dataverse environment.
-
-### Instance Web API
-
-This is the URL for the Web API for your instance. The Web API is an OData v4 RESTful API. You can also download the service document that describes the metadata and operations available in your instance. More information: [Use the Dataverse Web API](/powerapps/developer/data-platform/webapi/overview)
-
-### Organization Service
-
-This is the URL for the SOAP endpoint for the Organization Service for your instance.
-You can download the WSDL for this service here, but usually you will use the CrmSvcUtil.exe code generation tool to build table classes for .NET projects. More information: 
-- [Create early bound table classes with the code generation tool (CrmSvcUtil.exe)](/powerapps/developer/data-platform/org-service/generate-early-bound-classes)
-- [Use the Organization Service](/powerapps/developer/data-platform/org-service/overview)
-
-[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
-
-### Instance Reference Information
-
-This information uniquely describes your instance. There is a GUID **ID** and a **Unique Name**.
-This information is needed when you use Azure extensions with your instance.
-More information: [Azure integration](./azure-integration.md)
-
-## Connect your apps to the Dataverse Discovery Service
-
-Because people may have access to multiple Dataverse environments, the Discovery service allows for retrieving the available environments that a person can access based on their user credentials.
-
-### Discovery Web API
-
-This is the endpoint address for the RESTful OData v4 version of the Discovery service to use for your instance. You can also download the service document here.
-More information: [Discover the URL for your organization using the Web API](/powerapps/developer/data-platform/webapi/discover-url-organization-web-api)
-
-### Discovery service
-
-This is the endpoint address for the SOAP version of the Discovery service to use for your instance. You can also download the service document here.
-More information: [Discover the URL for your organization using the Organization service](/powerapps/developer/data-platform/org-service/discovery-service)
-  
