@@ -298,7 +298,7 @@ There are many possible reasons why a control might be disabled or hidden when t
    > [!div class="mx-imgBorder"]
    > ![Forms controls check.](media/form-controls-check.png "Form controls check")
 
-- Another place to check is the `ControlStateChange.visible` or `ControlStateChange.disabled` operation that explains why the control disabled or visible state is changed. Unlike the `FormControls` operation that is only reported once when the form loads, these state change operations can occur whenever client script tries to change the control state anytime, whether it's during form load, in onchange or onsave events after form is loaded.
+- Another place to check is the `ControlStateChange.visible` or `ControlStateChange.disabled` operation that explains why the control disabled or visible state is changed at any time on the form. This operation explains the control state before change, intended state change which may or may not succeed, and the state after the change. Note that not all control state change attempts are successful. For a control disabled by form xml, it's totally possible to enable it through Client API in an onload handler. However, if a control is disabled for security reasons, it's highly unlikely an attempt to enable it through client API would successfully change the state.
 
    > [!div class="mx-imgBorder"]
    > ![Control state changed.](media/control-state-changed.png "Control state changed")
@@ -320,7 +320,8 @@ A control can be disabled by using the following list of rules in order. If a ru
 Finally, if the control passes all the above checks, the record state determines whether the control is disabled. The control is enabled by default on active records and disabled on inactive records.
 
 > [!NOTE]
-> The difference between `FormControls` and `ControlStateChange` is that the `FormControls` operation reflects the initial control state when the form is loaded, while the `ControlStateChange`operation reflects the state change at any time on the form. For example, if control is disabled for security reasons, it's very unlikely to be enabled after the form is loaded, so the initial state can be found in `FormControls` and isn't likely to be found in `ControlStateChange`. Even if a Client API function tries to enable the control, it won't be effective. You'll see the `ControlStateChange` operation of the disabled state change intention by the script without success, and you'll be able to find out why the intention is unsuccessful in `FormControls`.
+> The difference between `FormControls` and `ControlStateChange` is that the `FormControls` operation reflects the initial control state when the form is loaded, while the `ControlStateChange`operation reflects the state change at any time on the form, whether it's during form load, in onchange or onsave events after form is loaded.
+
 
 ## Why a control has a certain value on form load
 ### Problem
