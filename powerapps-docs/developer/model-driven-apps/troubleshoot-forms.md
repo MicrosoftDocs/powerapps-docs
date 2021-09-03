@@ -66,17 +66,14 @@ When you're troubleshooting issues with forms, you need to use URL parameters to
     This flag disables form libraries and actually prevents the libraries from being loaded. Please refer to [View registered form event handlers and libraries in Monitor](#view-registered-form-event-handlers-and-libraries-in-Monitor) to learn how to obtain event or library indices for granular controls.    
     #### Usage:  
     The usage is similar with DisableFormHandlers except it only does not take an event name as the value  
-    - This will disable all form libraries:  
-      &flags=DisableFormLibraries=true  
-    - This will disable form libraries at the specified index:  
-      &flags=DisableFormLibraries=*index*  
-    - this will disable form libraries in the range of startIndex and endIndex (both are included)  
-      &flags=DisableFormLibraries=*startIndex_endIndex*  
+    - **&flags=DisableFormLibraries=true** (this will disable all form libraries)  
+    - **&flags=DisableFormLibraries=*index*** (this will disable form libraries at the specified index)  
+    - **&flags=DisableFormLibraries=*startIndex_endIndex*** (this will disable form libraries in the range of startIndex and endIndex (both are included))  
 
 - **DisableWebResourceControls**  
     This flag disables all web resource controls on the form.  
     #### Usage:  
-    &flags=DisableWebResourceControls=true  
+    **&flags=DisableWebResourceControls=true**  
 
     > [!div class="mx-imgBorder"]
     > ![Disable web resource.](media/disable-web-resource-control.png "Disable web resource")
@@ -84,12 +81,12 @@ When you're troubleshooting issues with forms, you need to use URL parameters to
 - **DisableFormControl**  
     This flag disables a form control given the control name. If you have proven that the issue goes away with **&flags=DisableWebResourceControls=true**, and there are more than one web resource controls on the form, You can use this flag to further identify the control that's causing the issue.   
    #### Usage:  
-     &flags=DisableFormControl=myControlName  
+   **&flags=DisableFormControl=myControlName**  
    
 - **DisableBusinessProcessFlow**  
   This flag disables Business Process Flows on the form.  
    #### Usage:  
-   &flags=DisableBusinessProcessFlow=true
+   **&flags=DisableBusinessProcessFlow=true**
 
 - **navbar** (this isn't a **flag** parameter; instead, use **navbar=off** in the URL)
 
