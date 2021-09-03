@@ -485,7 +485,7 @@ The Merge Dialog uses the default main form definition for the entity and select
 
 ### How to troubleshoot
 The `MergeDialog.load` operation below explains the reason why some fields are not displayed.  
-In this example, parentcustomerid on contact form is not supported on the merge dialog. businesscard field is not displayed because the containing section is hidden in the main form xml definition. Note that even though it's possible to show the owning section in the main form via client API, the Merge Dialog just simply honor the form xml configuration as event handlers are not supported on the Merge Dialog.
+In this example, parentcustomerid on contact form is not supported on the merge dialog. businesscard field is not displayed because the containing section is hidden in the main form xml definition. Note that even though it's possible to show the owning section in the main form via client API, the Merge Dialog just simply honors the form xml configuration as event handlers are not supported on the Merge Dialog.
 
 > [!div class="mx-imgBorder"]
 > ![Merge Dialog Load.](media/merge-dialog-load.png "Merge Dialog Load")
