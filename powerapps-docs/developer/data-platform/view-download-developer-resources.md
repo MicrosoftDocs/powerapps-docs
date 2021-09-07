@@ -36,7 +36,7 @@ The first three pieces of information (**Environment unique name**, **Environmen
 
 This information is needed when you connect through developer tooling or use Azure extensions with your instance. More information: [Azure integration](./azure-integration.md)
 
-## Connect your apps to this instance of Microsoft Dataverse
+## Connect your apps to Microsoft Dataverse instance
 
 This next two pieces of information provide you with the APIs you need to connect to your Dataverse environment.
 
