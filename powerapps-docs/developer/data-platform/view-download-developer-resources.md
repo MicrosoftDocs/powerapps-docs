@@ -54,7 +54,7 @@ This section provides links for developers to find resources. The following reso
 
 |Link |Description|
 |---------|---------|
-|[Developer center](../../index.yml)|The main entry point for documentation for developers.|
+|[Developer center](/powerapps/developer/data-platform)|The main entry point for documentation for developers.|
 |[Official NuGet feed](https://go.microsoft.com/fwlink/?LinkId=550994)|Discover NuGet packages to add SDK assemblies to your projects.|
 |[PowerShell Gallery feed](https://go.microsoft.com/fwlink/?LinkId=2165435)|Discover PowerShell packages to make working with Dataverse easier.|
 |[Sample Code](https://go.microsoft.com/fwlink/?LinkId=553007)|A list of code samples available.|
