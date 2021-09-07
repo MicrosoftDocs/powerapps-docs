@@ -44,12 +44,9 @@ This next two pieces of information provide you with the APIs you need to connec
 
 This is the URL for the Web API for your instance. The Web API is an OData v4 RESTful API. More information: [Use the Dataverse Web API](/powerapps/developer/data-platform/webapi/overview)
 
-### Organization Service
+### Discovery endpoint
 
-This is the URL for the SOAP endpoint for the Organization Service for your instance.
-You will use the CrmSvcUtil.exe code generation tool to build table classes for .NET projects. More information: 
-- [Create early bound table classes with the code generation tool (CrmSvcUtil.exe)](/powerapps/developer/data-platform/org-service/generate-early-bound-classes)
-- [Use the Organization Service](/powerapps/developer/data-platform/org-service/overview)
+HTTP REST API providing connection information for the set of instances to which the caller has access. More information: [Discover the URL for your organization](/powerapps/developer/data-platform/webapi/discover-url-organization-web-api)
 
 ## Documentation
 
