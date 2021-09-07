@@ -2,12 +2,11 @@
 title: Power BI tile control in Power Apps
 description: Learn about the details, properties, and examples of the Power BI tile control in Power Apps.
 author: chmoncay
-manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 08/05/2021
+ms.date: 08/30/2021
 ms.subservice: canvas-maker
 ms.author: chmoncay
 search.audienceType: 
@@ -28,6 +27,10 @@ Don't have Power BI? [Sign up](/power-bi/service-self-service-signup-for-power-b
 
 Take advantage of your existing data analysis and reporting by displaying your **[Power BI tiles](/power-bi/service-dashboard-tiles)** inside your apps. Specify the tile that you want to show by setting its **Workspace**, **Dashboard**, and **Tile** properties in the **Data** tab of the options panel.
 
+> [!NOTE]
+> - Power BI tile control isn't availbale on [GCC High and DoD](/power-platform/admin/powerapps-us-government#power-apps-us-government-service-urls) environments.
+> - For licensing requirements when embedding Power BI tile, see [Licensing](/power-bi/collaborate-share/service-embed-secure#licensing).
+
 ## Sharing and security
 
 When you share an app that contains Power BI content, you must share not only the app itself but also the [dashboard](/power-bi/service-how-to-collaborate-distribute-dashboards-reports) where the tile comes from. Otherwise, the Power BI content won't appear even for users who open the app. Apps that contain Power BI content respect the permissions for that content.
@@ -40,7 +43,7 @@ It's not recommended to have more than three Power BI tiles loaded at the same t
 
 Embedding is different between versions of the Power BI API. Because of the new Power BI API authentication scheme, your tile may not be accessible on mobile or within other embedded scenarios (Teams or SharePoint).
 
-You can control the use of API version using the **AllowNewAPI** property. See [Key properties](#key-properties) for more information.
+You can control the use of API version using the **AllowNewAPI** property. For more information, see [Key properties](#key-properties).
 
 | AllowNewAPI property value | Behavior |
 | - | - |
@@ -94,6 +97,8 @@ You can use computed fields in the Power BI report to convert other value types 
 
 **LoadPowerBIContent** – When set to **True**, the Power BI content is loaded and shown. When set to **False**, the Power BI content is unloaded, which releases memory and optimizes performance.
 
+**PowerBIInteractions** - When set to **True**, the Power BI content can be interacted with, but Power Apps **OnSelect** event won't trigger. When set to **False**, the tile can't be interacted with, but Power Apps **OnSelect** event will trigger when the tile is selected.
+
 **Tile** – The name of the Power BI tile that you want to display.
 
 **Workspace** – The Power BI workspace where the tile comes from.
@@ -118,9 +123,9 @@ You can use computed fields in the Power BI report to convert other value types 
 
 **[Width](properties-size-location.md)** – The distance between a control's left and right edges.
 
-**[X](properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (screen if no parent container).
+**[X](properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (screen&mdash;if no parent container).
 
-**[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
+**[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen&mdash;if no parent container).
 
 ## Example
 

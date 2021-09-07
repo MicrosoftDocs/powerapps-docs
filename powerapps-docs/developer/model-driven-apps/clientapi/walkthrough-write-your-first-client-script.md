@@ -105,21 +105,6 @@ Let's look at the code in detail:
 
 ## Step 2: Add your JavaScript code in a Script web resource
 
-### [Legacy](#tab/legacy-ui)
-
-Now that your code is ready, you want to associate it with events in model-driven apps. You use [Script web resources](../script-jscript-web-resources.md) in model-driven apps to upload the script to your model-driven apps instance, and then associate it with events.
-
-1. Navigate to your model-driven apps instance in browser, select the gear icon on the top-right corner and then select **Advance Settings**.
-1. Navigate to **Settings** > **Customizations**.
-1. In the Customization area, choose **Customize the System**.
-1. In the solutions explorer, under **Components**, choose **Web Resources**.  
-1. Choose **New** to create a web resource.
-1. In the new web resource dialog, specify the **Name** and **Display Name** for your web resource. For example: "mySampleScript.js" and "Sample: Walk through" Script. 
-1. Select **Script (JScript)** from the **Type** drop-down list. You can either upload a file containing your JavaScript code by selecting **Choose File**, or select **Text Editor** and then paste your JavaScript code in the editor.
-    ![Create Web resource.](../media/clientapi_walkThrough-img1.png)
-1. Choose **Save** to create the web resource containing your JavaScript code.
-1. Choose **Publish** to publish your web resource.
-
 ### [Unified Interface](#tab/unified-interface)
 
 Now that your code is ready, you want to associate it with events in model-driven apps. You use [Script web resources](../script-jscript-web-resources.md) in model-driven apps to upload the script to your model-driven apps instance, and then associate it with events.
@@ -143,9 +128,51 @@ Now that your code is ready, you want to associate it with events in model-drive
 1. Select **Save** to create the web resource containing your JavaScript code.
 1. Select **Publish** to publish your web resource.
 
+### [Legacy](#tab/legacy-ui)
+
+Now that your code is ready, you want to associate it with events in model-driven apps. You use [Script web resources](../script-jscript-web-resources.md) in model-driven apps to upload the script to your model-driven apps instance, and then associate it with events.
+
+1. Navigate to your model-driven apps instance in browser, select the gear icon on the top-right corner and then select **Advance Settings**.
+1. Navigate to **Settings** > **Customizations**.
+1. In the Customization area, choose **Customize the System**.
+1. In the solutions explorer, under **Components**, choose **Web Resources**.  
+1. Choose **New** to create a web resource.
+1. In the new web resource dialog, specify the **Name** and **Display Name** for your web resource. For example: "mySampleScript.js" and "Sample: Walk through" Script. 
+1. Select **Script (JScript)** from the **Type** drop-down list. You can either upload a file containing your JavaScript code by selecting **Choose File**, or select **Text Editor** and then paste your JavaScript code in the editor.
+    ![Create Web resource.](../media/clientapi_walkThrough-img1.png)
+1. Choose **Save** to create the web resource containing your JavaScript code.
+1. Choose **Publish** to publish your web resource.
+
 ---
 
 ## Step 3: Associate Script web resource to a form
+
+### [Unified Interface](#tab/unified-add-web-resource)
+
+1. Go to [Power Apps](https://make.powerapps.com).
+1. In the left navigation pane, select **Data** and then select **Tables**. 
+1. From the list of tables, select the table where you want to add the event handlers.
+1. Select **Forms** tab from the command bar and then select the form where you want to add.
+
+    ![Select form from list.](../media/select-form-from-list.png "Select form from list")
+
+1. Select **Events** tab. You'll notice that both the **On Save** and **On Load** event handlers.
+
+    ![Form event handlers.](../media/form-event-handlers.png "Form event handlers")
+
+1. Select `OnLoad` event handler and associate the function you want to achieve.
+
+   ![Configure Form event handlers.](../media/configure-events-on-from-handlers.png "Configure Form event handlers")
+
+1. Select `OnSave` event handler and associate the function you want to achieve.
+
+   ![Configure Form on save event handlers.](../media/configure-events-on-save-handlers.png "Configure Form on save event handlers")
+
+1. If you wish to add the event handler for the on change event, select the column and then select **Event** tab.
+
+     ![Onchange handler.](../media/onchange-event-handler.png "Onchange handler")
+
+That's it! You have completed the steps to configure the account form to use custom business logic specified in your JavaScript code.
 
 ### [Legacy](#tab/legacy-add-web-resource)
 
@@ -199,33 +226,6 @@ This makes the web resource available to be selected under the **Event Handlers*
 1. Select **OK** in the **Form Properties** dialog box to return to the form editor.
 1. Select **Save** to save the changes to the form.
 1. Select **Publish** to publish the form changes.
-
-That's it! You have completed the steps to configure the account form to use custom business logic specified in your JavaScript code.
-
-### [Unified Interface](#tab/unified-add-web-resource)
-
-1. Go to [Power Apps](https://make.powerapps.com).
-1. In the left navigation pane, select **Data** and then select **Tables**. 
-1. From the list of tables, select the table where you want to add the event handlers.
-1. Select **Forms** tab from the command bar and then select the form where you want to add.
-
-    ![Select form from list.](../media/select-form-from-list.png "Select form from list")
-
-1. Select **Events** tab. You'll notice that both the **On Save** and **On Load** event handlers.
-
-    ![Form event handlers.](../media/form-event-handlers.png "Form event handlers")
-
-1. Select `OnLoad` event handler and associate the function you want to achieve.
-
-   ![Configure Form event handlers.](../media/configure-events-on-from-handlers.png "Configure Form event handlers")
-
-1. Select `OnSave` event handler and associate the function you want to achieve.
-
-   ![Configure Form on save event handlers.](../media/configure-events-on-save-handlers.png "Configure Form on save event handlers")
-
-1. If you wish to add the event handler for the on change event, select the column and then select **Event** tab.
-
-     ![Onchange handler.](../media/onchange-event-handler.png "Onchange handler")
 
 That's it! You have completed the steps to configure the account form to use custom business logic specified in your JavaScript code.
 
