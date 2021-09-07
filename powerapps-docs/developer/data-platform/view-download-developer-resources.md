@@ -37,16 +37,15 @@ The following sections explain the information available on the developer resour
 
 ## Unique identifiers
 
-The first three pieces of information are the unique identifiers that describe your environment and specific Microsoft Dataverse instance (organization).
+The first three pieces of information (**Environment unique name**, **Environment ID**, and **Organization ID**) are the unique identifiers that describe your environment and specific Microsoft Dataverse instance (organization).
 
-This information is needed when you connect through developer tooling or use Azure extensions with your instance.
-More information: [Azure integration](./azure-integration.md)
+This information is needed when you connect through developer tooling or use Azure extensions with your instance. More information: [Azure integration](./azure-integration.md)
 
 ## Connect your apps to this instance of Microsoft Dataverse
 
 This next two pieces of information provide you with the APIs you need to connect to your Dataverse environment.
 
-### Instance Web API
+### Web API endpoint
 
 This is the URL for the Web API for your instance. The Web API is an OData v4 RESTful API. More information: [Use the Dataverse Web API](/powerapps/developer/data-platform/webapi/overview)
 
