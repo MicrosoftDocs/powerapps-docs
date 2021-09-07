@@ -1,16 +1,16 @@
 ---
-title: "View developer resources for Power Apps and Microsoft Dataverse | MicrosoftDocs"
+title: "View developer resources page for your Power Apps and Microsoft Dataverse environment | MicrosoftDocs"
 description: "Discover developer resources and services for Power Apps and Microsoft Dataverse."
 keywords: ""
 ms.date: 09/07/2021
 ms.service: powerapps
 ms.custom: 
 ms.topic: article
-author: Mattp123
+author: phecke
 ms.subservice: dataverse-developer
-ms.author: matp
+ms.author: pehecke
 manager: kvivek
-ms.reviewer: "pehecke"
+ms.reviewer: pehecke
 search.audienceType: 
   - developer
 search.app: 
@@ -21,8 +21,6 @@ search.app:
 # View developer resources
 
 This article provides resources for developers and information about the specific environment you're working with.
-
-## View the Developer Resources page for your environment
 
 1. Sign into [Power Apps](https://make.powerapps.com), and select your environment in the top-right corner.
 
