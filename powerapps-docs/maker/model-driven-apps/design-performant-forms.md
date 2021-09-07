@@ -69,7 +69,7 @@ The `openForm` client API method allows a parameter option to display a form in 
 
 Using the most up-to-date web browser is key to ensuring your model-driven app runs as fast as possible.  The reason for this is that many of the performance improvements can only be used in the newer modern browsers.
 
-For example, if your organization older versions of Firefox, non-Chromium-based browsers, and so on, many of the performance gains that are built into a model-driven app will not be available in the older browser versions because they don't support features that the app depends on to run quickly and smoothly. Internet Explorer is no longer supported, please move to Edge or a modern browser.
+For example, if your organization has older versions of Firefox, non-Chromium-based browsers, and so on, many of the performance gains that are built into a model-driven app will not be available in the older browser versions because they don't support features that the app depends on to run quickly and smoothly. And if you're using Internet Explorer, it's no longer supported.
 
 In most cases, you can expect to see page load improvements by just switching to Microsoft Edge, updating to the latest current browser version from an older version, or moving to a modern Chromium-based browser.
 
@@ -85,7 +85,7 @@ The ability for forms to be customized by JavaScript provides professional devel
 
 Request data asynchronously rather than synchronously when extra data is necessary for customizations. For events that support waiting for asynchronous code like the form `OnLoad` and form `OnSave` events, event handlers should return a `Promise` in order for the platform to wait until the `Promise` is settled. The platform will show an appropriate UI while the user waits for the event to complete.
 
-For events that do not support waiting for asynchronous code, like the form `OnChange` event, you can use a workaround to stop interaction with a form while the code is doing an asynchronous request by using `showProgressIndicator`. This is better than using synchronous requests as users will still be able to interact with other parts of the application and see a progress indicator.
+For events that do not support waiting for asynchronous code, like the form `OnChange` event, you can use a workaround to stop interaction with a form while the code is doing an asynchronous request by using `showProgressIndicator`. This is better than using synchronous requests as users will still be able to interact with other parts of the application as a progress indicator is displayed.
 
 Here's an example using asynchronous code in synchronous extension points.
 
