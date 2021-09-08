@@ -47,13 +47,13 @@ To install Microsoft Power Platform CLI using Visual Studio Code Extension:
 
 To install standalone Power Platform CLI:
 
-1. Install [Npm](https://www.npmjs.com/get-npm) (comes with Node.js) or [Node.js](https://nodejs.org/en/) (comes with npm). We recommend LTS (Long Term Support) version 10.15.3 LTS because it seems to be the most stable.
+<!--1. Install [Npm](https://www.npmjs.com/get-npm) (comes with Node.js) or [Node.js](https://nodejs.org/en/) (comes with npm). We recommend LTS (Long Term Support) version 10.15.3 LTS because it seems to be the most stable.
 
 1. Install [.NET Framework 4.6.2 Developer Pack](https://dotnet.microsoft.com/download/dotnet-framework/net462). 
 
 1. If you don’t already have Visual Studio 2017 or later, follow one of these options:
    - Option 1: Install [Visual Studio 2017](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2017) or later.
-   - Option 2: Install [.NET Core 2.2 SDK](https://dotnet.microsoft.com/download/dotnet-core/2.2) and then install [Visual Studio Code](https://code.visualstudio.com/Download)
+   - Option 2: Install [.NET Core 2.2 SDK](https://dotnet.microsoft.com/download/dotnet-core/2.2) and then install [Visual Studio Code](https://code.visualstudio.com/Download)-->
 1. Download and install [Microsoft Power Platform CLI](https://aka.ms/PowerAppsCLI).
 
 1. To take advantage of all the latest capabilities, update Microsoft Power Platform CLI tooling to the latest version by using this command (not applicable for Power Platform VS Code Extension):
@@ -234,7 +234,11 @@ There are situations where you're unsure when to use `pac solution clone` or `pa
 
 The exported solution looks like a Visual Studio project when you export the solution using the `pac solution clone` command. Instead of a `.csproj` (as in Visual Studio), you'll see a `cdsproj` file. The `cdsproj` file has all the components information that is required to build the project. The build output is a solution zip file which you can import into different environments.
 
+:::image type="content" source="media/pac-solution-clone.png" alt-text="Pac solution clone." lightbox="media/pac-solution-clone.png":::
+
 The developer does not have to unpack the cloned solution because it is rendered in an unpacked format within the src (source) folder. 
+
+:::image type="content" source="media/pac-solution-unpack.png" alt-text="Pac solution unpack." lightbox="media/pac-solution-unpack.png":::
 
 Now, if you want to associate a newly created plug-in with this solution, with the solution unpacked, you can use the `pac solution add-reference` command to update the `.cdsproj` file to add the new plug-in. Then, you can build the project using either `dotnet build` or `msbuild`. 
    
@@ -244,7 +248,11 @@ It is recommended to do a build restore first before building the project. A bui
 
 When you export the solution using `pac solution export` you feel like exporting the solution using the maker portal, and the resulting output is a solution zip file.  
 
+:::image type="content" source="media/pac-solution-export.png" alt-text="Pac solution export." lightbox="media/pac-solution-export.png":::
+
 When you unpack the solution zip file (we do not recommend that you open the zip with standard tools and use the appropriate command from CLI). The resulting directory structure  is similar to the structure in `pac solution clone`. The only difference is that you cannot add references to this unpacked solution, as it doesn't have the `.cdsproj` project file. 
+
+:::image type="content" source="media/pac-solution-structure.png" alt-text="Pac solution solution structure." lightbox="media/pac-solution-structure.png":::
 
 You can modify the relevant set of files that you want to update and then proceed with the solution pack, which generates the solution zip file again to facilitate importing the solution into the target environment. The result from the action is a solution zip file with updated contents and an updated timestamp.
 
