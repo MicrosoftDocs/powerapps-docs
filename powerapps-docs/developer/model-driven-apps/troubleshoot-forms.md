@@ -72,11 +72,9 @@ When you're troubleshooting issues with forms, you need to use the URL parameter
     > Business rules are authored in the business rule designer, compiled into the client-side script, and registered in multiple form events, such as `OnLoad`, `OnSave`, and `OnChange`. The way to disable business rules are very similar to other form events. However, there're a few key differences:  
     > - When you use `DisableFormHandlers=true`, `businessrule`, `businessrule_*index*`, or `businessrule_*startIndex_endIndex*`, you're disabling the business rule(s) in all the form events they're registered to.  
     > - For example, the image below shows instructions on refreshing business rule(s) in the backend. You only need to do it once in your organization, and you can revert your changes after troubleshooting.  
-      > [!div class="mx-imgBorder"]
-      > ![Refresh business rules](media/businessrule-need-refresh.png "Refresh business rules")
-      > After you perform the above action and refresh the form, you'll see different message with additional information, as shown in below:  
-      > [!div class="mx-imgBorder"]
-      > ![Business rules individual control](media/businessrule-individual-control.png "Business rules individual control")
+    > ![Refresh business rules](media/businessrule-need-refresh.png "Refresh business rules")
+    > - After you perform the above action and refresh the form, you'll see different message with additional information, as shown in below:  
+    > ![Business rules individual control](media/businessrule-individual-control.png "Business rules individual control")
 
   
 - **DisableFormLibraries**  
@@ -128,9 +126,8 @@ https://myorg.crm.dynamics.crm/main.aspx?appid=00000000-0000-0000-0000-000000000
 > - The **DisableFormHandlers** flag disables form handlers regardless of the containing form libraries. In contrast, the **DisableFormLibraries** flag disables the form libraries (web resources) regardless of the functions (event handlers) included in the libraries. Simply put, **DisableFormLibraries** makes sure the specified JavaScript web resource files are not loaded.
 > - The **DisableFormHandlers** flag doesn't prevent the containing form library from being loaded. Thus it doesn't stop the JavaScript code present in the library but not registered as an event handler from being executed. For example, if a form library `new_myscript.js` is written in the following way (not recommended practice):  
 > - You should start with **DisableFormHandlers** to see if the issue goes away, and if not, you can try **DisableFormLibraries**. Disabling any script always involves some risks of potentially breaking your form scenarios. However, the latter tend to have more side effects because of the disablement of the entire JavaScript files.
-> [!div class="mx-imgBorder"]
 > ![Difference between DisableFormHandlers and DisableFormLibraries](media/difference-between-disableformhandlers-disableformlibraries.png "Difference between DisableFormHandlers and DisableFormLibraries")
-> Assuming the `myOnloadHandler` is registered as an `OnLoad` event handler, the `DisableFormHandlers=true` flag only prevents the second alert, whereas the `DisableFormLibraries=true` flag prevents both alerts.
+> - Assuming the `myOnloadHandler` is registered as an `OnLoad` event handler, the `DisableFormHandlers=true` flag only prevents the second alert, whereas the `DisableFormLibraries=true` flag prevents both alerts.
 
 
 ## View registered form event handlers and libraries in monitor
