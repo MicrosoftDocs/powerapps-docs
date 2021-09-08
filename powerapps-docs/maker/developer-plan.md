@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.subservice: canvas-developer
 ms.topic: conceptual
 ms.custom: intro-internal
-ms.date: 06/24/2021
+ms.date: 08/30/2021
 ms.author: evlew
 ms.reviewer: tapanm
 contributors:
@@ -47,7 +47,7 @@ Key changes include:
 
 ## Who can sign up for the Power Apps Developer Plan?
 
-Anyone with a [work or school email address](signup-for-powerapps.md#faq) can sign up for the Power Apps Developer Plan.
+Anyone with a [work or school email address](signup-for-powerapps.md#faq) backed by [Azure Active Directory](/azure/active-directory/fundamentals/sign-up-organization) can sign up for the Power Apps Developer Plan.
 
 ## Where can I sign up for the Power Apps Developer Plan?
 
@@ -164,7 +164,7 @@ account](signup-for-powerapps.md#faq).
 
 ### Can I delete my developer environment?
 
-Tenant-level admins have the permissions needed to delete a developer environment through the user interface. An end user can delete a developer environment through a [Power Apps PowerShell admin cmdlet](/power-platform/admin/powerapps-powershell#power-apps-cmdlets-for-administrators-preview).
+Tenant-level admins have the permissions needed to delete a developer environment through the user interface. An end user can delete a developer environment through a [Power Apps PowerShell admin cmdlet](/power-platform/admin/powerapps-powershell#power-apps-cmdlets-for-administrators).
 
 ```powershell
 Remove-AdminPowerAppEnvironment -EnvironmentName <environmentGuid>

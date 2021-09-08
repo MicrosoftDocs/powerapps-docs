@@ -101,7 +101,7 @@ While some relationships may be automatically created, you can still review and 
 
 ## Troubleshooting 
 
-## Error message: Return records size cannot exceed 83886080
+### Error message: Return records size cannot exceed 83886080
 
 This error can occur with the Dataverse connector when you run or design a report with a result set greater than 80 MB. TDS has a result set size limit of 80 MB. 
 
@@ -114,6 +114,10 @@ When this error message occurs, the connector fails to connect to the TDS endpoi
 
 :::image type="content" source="media/tls-unable-to-connect.png" alt-text="Unable to connect error message.":::
 Remove the https:// and ending forward slash so that the URL is in the form *orgname.crm.dynamics.com*.
+
+### Troubleshooting connection issues
+
+For information about troubleshooting connection issues when using the TDS endpoint, see [Troubleshooting connection problems](/powerapps/developer/data-platform/dataverse-sql-query#troubleshooting-connection-problems).
 
 ### See also
 

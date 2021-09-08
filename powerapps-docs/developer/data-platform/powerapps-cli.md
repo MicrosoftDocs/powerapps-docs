@@ -21,7 +21,7 @@ ms.assetid: f393f227-7a88-4f25-9036-780b3bf14070
 > [!NOTE] 
 > Effective June 2021, Microsoft Power Apps CLI is rebranded to Microsoft Power Platform CLI. More information: [Blog: Microsoft Power Platform is the best way for teams to build together](https://cloudblogs.microsoft.com/powerplatform/2021/05/25/microsoft-power-platform-is-the-best-way-for-teams-to-build-together/)<p/>Microsoft Power Platform CLI is currently not available for use in the GCC and GCC High regions.
 
-Microsoft Power Platform CLI is a simple, one-stop developer CLI that empowers developers and ISVs to perform various operations in Microsoft Power Platform related to environment lifecycle features, and to authenticate and work with Microsoft Dataverse environments, solution packages, portals, code components, and so on.  
+Microsoft Power Platform CLI is a simple, one-stop developer CLI that empowers developers and ISVs to perform various operations in Microsoft Power Platform related to environment lifecycle, authenticatication, and work with Microsoft Dataverse environments, solution packages, portals, code components, and so on.  
 
 ## Install Microsoft Power Platform CLI
 
@@ -47,13 +47,13 @@ To install Microsoft Power Platform CLI using Visual Studio Code Extension:
 
 To install standalone Power Platform CLI:
 
-1. Install [Npm](https://www.npmjs.com/get-npm) (comes with Node.js) or [Node.js](https://nodejs.org/en/) (comes with npm). We recommend LTS (Long Term Support) version 10.15.3 LTS because it seems to be the most stable.
+<!--1. Install [Npm](https://www.npmjs.com/get-npm) (comes with Node.js) or [Node.js](https://nodejs.org/en/) (comes with npm). We recommend LTS (Long Term Support) version 10.15.3 LTS because it seems to be the most stable.
 
 1. Install [.NET Framework 4.6.2 Developer Pack](https://dotnet.microsoft.com/download/dotnet-framework/net462). 
 
 1. If you don’t already have Visual Studio 2017 or later, follow one of these options:
    - Option 1: Install [Visual Studio 2017](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2017) or later.
-   - Option 2: Install [.NET Core 2.2 SDK](https://dotnet.microsoft.com/download/dotnet-core/2.2) and then install [Visual Studio Code](https://code.visualstudio.com/Download)
+   - Option 2: Install [.NET Core 2.2 SDK](https://dotnet.microsoft.com/download/dotnet-core/2.2) and then install [Visual Studio Code](https://code.visualstudio.com/Download)-->
 1. Download and install [Microsoft Power Platform CLI](https://aka.ms/PowerAppsCLI).
 
 1. To take advantage of all the latest capabilities, update Microsoft Power Platform CLI tooling to the latest version by using this command (not applicable for Power Platform VS Code Extension):
@@ -218,6 +218,43 @@ Commands for working with [Dataverse solution projects](../../maker/data-platfor
 |upgrade|Command to upgrade the solution. It has the following parameters: <ul><li> *solution-name*: Name of the solution (alias:-sn).</li><li> *async*: Upgrades the solution asynchronously (alias: -a).</li><li>*max-async-wait-time*: Maximum asynchronous wait time in minutes. Default value is 60 minutes (alias: -wt).</li></ul>|`pac solution upgrade --solution-name SampleSolution --async --max-async-wait-time 60`|
 |add-license|Add license and plan info the solution. It has the following parameters: <ul><li>*planDefinitionFile*: License plan definition file in CSV format; expected columns: *Service ID, Display name, More info URL* (alias: -pd)</li><li>*planMappingFile*: License plan mapping file in CSV format; expected values: *Service ID, Component name* (alias: -pm)</li></ul>||
 |publish|Publishes all the customizations.|`pac solution publish`|
+|create-settings|Provides the ability to create a settings file that captures the environment variables and connection references in the setting. It has the following parameters: <ul><li>*solution zip*: Absolute path name or relative path name to the exported solution file (alias: -z).</li><li>*solution folder*: Folder location of the cloned solution on the filesystem, you can either use solution zip file or the solution folder location, not both together (alias: -f).</li><li> *settings file*: Location of the file to be created with the environment variable and connection reference information. The format of the created file is JSON (alias: -s).</li></ul>|`pac solution create-settings --solution-zip C:\SampleSolution.zip --settings-file .\SampleDeploymentSettingsDev.json`|
+|unpack|Provides the ability to unpack solution zip files after they have been exported to the filesystem. It has the following parameters: <ul><li>*zip file*: Absolute path name or relative path name to the exported solution file (alias: -z).</li><li>*folder*: The path to the root folder on the local filesystem. This will be the folder where the unpacked contents will be written (alias: -f).</li><li> *package type*: Use to specify dual managed and unmanaged operation (alias: -p).</li> <li> *log*: The path to the log file (alias: -l).</li><li> *error level*: Minimum logging level for log output. It has the following values: *Verbose, Info, Warning, Error, Off*. Default value is *Info* (alias: -e).</li><li> *single Component*: Performs the action on a single component type. It has the following values: *WebResource, Plugin, Workflow, None*. Default value is *None* (alias: -sc).</li><li> *allow Delete*: Specifies if the delete operations should occur or not. It has the following values: *Yes, No, Prompt*. Default is *Prompt* (alias: -ad).</li><li> *allow Write*: Specifies if the write operations should occur or not. Default value is false (alias: -aw).</li><li> *clobber*: Enables to delete or overwrite the files that are marked as read-only. Default value is false (alias: -c).</li><li> *map*: The full path to the mapping XML file that reads component folders to pack (alias: -m).</li><li> *sourceLoc*: Generates a template resource file. It has the following values: *auto, LCID, ISO code* of the language you wish to export. When set, this will extract the string resources from the given locale as a neutral resx file. If auto or just the long or short form of the switch is specified the base locale for the solution will be used (alias: -src).</li><li> *localize*: Extract or merge all string resources into `.resx` files (alias: -loc)</li><li> *use Lcid*: Use LCID's (1033) rather than ISO codes (en-US) for language files (alias: -lcid).</li><li> *use Unmanaged File for Missing Managed*: Use the same XML source file when packaging for managed and only unmanaged XML file is found. Applies to `AppModuleSiteMap`, `AppModuleMap`, `FormXml` files (alias: -same).</li></ul>|`pac solution unpack --solution-zip C:\SampleSolution.zip --folder .\SampleSolutionUnpacked\.`|
+|pack|Provides the ability to pack files on a filesystem into a solution zip file. It has the following parameters: <ul><li>*zip file*: Absolute path name or relative path name to the generated solution zip file (alias: -z).</li><li>*folder*: The path to the root folder on the local filesystem, this will be the folder from where the contents will be read from (alias: -f).</li><li> *package type*: Use to specify dual managed and unmanaged operation (alias: -p).</li> <li> *log*: The path to the log file (alias: -l).</li><li> *error level*: Minimum logging level for log output. It has the following values: *Verbose, Info, Warning, Error, Off*. Default value is *Info* (alias: -e).</li><li> *single Component*: Performs the action on a single component type. It has the following values: *WebResource, Plugin, Workflow, None*. Default value is *None* (alias: -sc).</li><li> *allow Delete*: Specifies if the delete operations should occur or not. It has the following values: *Yes, No, Prompt*. Default is *Prompt* (alias: -ad).</li><li> *allow Write*: Specifies if the write operations should occur or not. Default value is false (alias: -aw).</li><li> *clobber*: Enables to delete or overwrite the files that are marked as read-only. Default value is false (alias: -c).</li><li> *map*: The full path to the mapping XML file that reads component folders to pack (alias: -m).</li><li> *sourceLoc*: Generates a template resource file. It has the following values: *auto, LCID, ISO code* of the language you wish to export. When set, this will extract the string resources from the given locale as a neutral resx file. If auto or just the long or short form of the switch is specified the base locale for the solution will be used (alias: -src).</li><li> *localize*: Extract or merge all string resources into `.resx` files (alias: -loc)</li><li> *use Lcid*: Use LCID's (1033) rather than ISO codes (en-US) for language files (alias: -lcid).</li><li> *use Unmanaged File for Missing Managed*: Use the same XML source file when packaging for managed and only unmanaged XML file is found. Applies to `AppModuleSiteMap`, `AppModuleMap`, `FormXml` files (alias: -same).</li></ul>|`pac solution pack --solution-zip C:\SampleSolution.zip --folder .\SampleSolutionUnpacked\.`|
+
+
+#### Differences between pac solution clone and export
+
+There are situations where you're unsure when to use `pac solution clone` or `pac solution export` command. You can use one of the commands in the following scenarios:
+
+- Use `pac solution clone` when you need to add new components to the solution.
+- Use `pac solution export` when you want to modify the existing content in a solution file but not adding any new components to the solution.
+
+**pac solution clone**
+
+The exported solution looks like a Visual Studio project when you export the solution using the `pac solution clone` command. Instead of a `.csproj` (as in Visual Studio), you'll see a `cdsproj` file. The `cdsproj` file has all the components information that is required to build the project. The build output is a solution zip file which you can import into different environments.
+
+:::image type="content" source="media/pac-solution-clone.png" alt-text="Pac solution clone." lightbox="media/pac-solution-clone.png":::
+
+The developer does not have to unpack the cloned solution because it is rendered in an unpacked format within the src (source) folder. 
+
+:::image type="content" source="media/pac-solution-unpack.png" alt-text="Pac solution unpack." lightbox="media/pac-solution-unpack.png":::
+
+Now, if you want to associate a newly created plug-in with this solution, with the solution unpacked, you can use the `pac solution add-reference` command to update the `.cdsproj` file to add the new plug-in. Then, you can build the project using either `dotnet build` or `msbuild`. 
+   
+It is recommended to do a build restore first before building the project. A build restore (dotnet build does a restore first automatically) will restore the required .NET libraries to generate a packed solution.
+
+**pac solution export**
+
+When you export the solution using `pac solution export` you feel like exporting the solution using the maker portal, and the resulting output is a solution zip file.  
+
+:::image type="content" source="media/pac-solution-export.png" alt-text="Pac solution export." lightbox="media/pac-solution-export.png":::
+
+When you unpack the solution zip file (we do not recommend that you open the zip with standard tools and use the appropriate command from CLI). The resulting directory structure  is similar to the structure in `pac solution clone`. The only difference is that you cannot add references to this unpacked solution, as it doesn't have the `.cdsproj` project file. 
+
+:::image type="content" source="media/pac-solution-structure.png" alt-text="Pac solution solution structure." lightbox="media/pac-solution-structure.png":::
+
+You can modify the relevant set of files that you want to update and then proceed with the solution pack, which generates the solution zip file again to facilitate importing the solution into the target environment. The result from the action is a solution zip file with updated contents and an updated timestamp.
 
 ### Auth
 
