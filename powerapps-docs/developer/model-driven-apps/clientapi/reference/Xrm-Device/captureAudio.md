@@ -1,7 +1,7 @@
 ---
 title: "captureAudio| MicrosoftDocs"
 description: Includes description and supported parameters for the captureAudio method.
-ms.date: 04/21/2021
+ms.date: 09/08/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -38,6 +38,10 @@ This method is supported only for the mobile clients.
 ## Return Value
 
 On success, returns a base64 encoded audio object with the values specified earlier.
+
+## Exceptions
+
+See [Web service error codes](https://docs.microsoft.com/en-us/powerapps/developer/data-platform/org-service/web-service-error-codes)
 
 ### Related topics
 

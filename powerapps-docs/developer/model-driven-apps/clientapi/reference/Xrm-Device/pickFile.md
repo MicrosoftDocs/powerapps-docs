@@ -1,6 +1,6 @@
 ---
 title: "pickFile| MicrosoftDocs"
-ms.date: 10/31/2018
+ms.date: 09/08/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -38,6 +38,10 @@ This method is supported for both web and mobile clients.
 ## Return Value
 
 On success, returns a promise with array of objects as specified earlier for the **successCallback** function.
+
+## Exceptions
+
+See [Web service error codes](https://docs.microsoft.com/en-us/powerapps/developer/data-platform/org-service/web-service-error-codes)
 
 ### Related topics
 

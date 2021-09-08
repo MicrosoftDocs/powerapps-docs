@@ -2413,6 +2413,7 @@
 |0x80040334<br />-2147220684|Name: **OperationCanBeCalledOnlyOnce**<br />Message: The specified action can be done only one time.|
 |0x80060912<br />-2147088110|Name: **OperationCanceled**<br />Message: Refresh was canceled by user.|
 |0x80154B53<br />-2146088109|Name: **OperationFailedTryAgain**<br />Message: Operation could not be performed at the moment. Please try again.|
+|0x8005F1FF<br />-2147094017|Name: **OperationIsNotSupportedOnThisDevice**<br />Message: Operation is not supported on this device.|
 |0x8004D23a<br />-2147167686|Name: **OperationOrganizationNotFullyDisabled**<br />Message: The {1} operation failed because organization {0} is not fully disabled yet.  Use FORCE to override|
 |0x80072008<br />-2147016696|Name: **OperationReservedForSolutionAwareEntities**<br />Message: This operation is reserved for solution-aware entities only.|
 |0x80044241<br />-2147204543|Name: **OperatorCodeNotPresentError**<br />Message: OperatorCode should be present in condition xml.|

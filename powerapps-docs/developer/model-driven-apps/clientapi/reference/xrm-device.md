@@ -1,6 +1,6 @@
 ---
 title: "Xrm.Device| MicrosoftDocs"
-ms.date: 10/31/2018
+ms.date: 09/08/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
