@@ -73,16 +73,15 @@ When you're troubleshooting issues with forms, you need to use the URL parameter
     > - When you use `DisableFormHandlers=true`, `businessrule`, `businessrule_*index*`, or `businessrule_*startIndex_endIndex*`, you're disabling the business rule(s) in all the form events they're registered to.  
     > - For example, the image below shows instructions on refreshing business rule(s) in the backend. You only need to do it once in your organization, and you can revert your changes after troubleshooting.  
       > [!div class="mx-imgBorder"]
-      > ![Refresh Business Rules](media/businessrule-need-refresh.png "Refresh Business Rules")
-
-      After you perform the above action and refresh the form, you'll see different message with additional information, as shown in below:  
+      > ![Refresh business rules](media/businessrule-need-refresh.png "Refresh business rules")
+      > After you perform the above action and refresh the form, you'll see different message with additional information, as shown in below:  
       > [!div class="mx-imgBorder"]
-      > ![Business Rules Individual Control](media/businessrule-individual-control.png "Business Rules Individual Control")
+      > ![Business rules individual control](media/businessrule-individual-control.png "Business rules individual control")
 
   
 - **DisableFormLibraries**  
 
-   Disables form libraries and prevents the libraries from being loaded. To learn more about obtaining event or library indices for granular controls, see [View registered form event handlers and libraries in Monitor](#view-registered-form-event-handlers-and-libraries-in-monitor) . The usage is similar to `DisableFormHandlers`, except it does not take an event name as the value.
+   Disables form libraries and prevents the libraries from being loaded. To learn more about obtaining event or library indices for granular controls, see [View registered form event handlers and libraries in monitor](#view-registered-form-event-handlers-and-libraries-in-monitor) . The usage is similar to `DisableFormHandlers`, except it does not take an event name as the value.
  
     - **&flags=DisableFormLibraries=true**: Disable all the form libraries. 
     - **&flags=DisableFormLibraries=*index***: Disable form libraries at the specified index. 
@@ -129,9 +128,9 @@ https://myorg.crm.dynamics.crm/main.aspx?appid=00000000-0000-0000-0000-000000000
 > - The **DisableFormHandlers** flag disables form handlers regardless of the containing form libraries. In contrast, the **DisableFormLibraries** flag disables the form libraries (web resources) regardless of the functions (event handlers) included in the libraries. Simply put, **DisableFormLibraries** makes sure the specified JavaScript web resource files are not loaded.
 > - The **DisableFormHandlers** flag doesn't prevent the containing form library from being loaded. Thus it doesn't stop the JavaScript code present in the library but not registered as an event handler from being executed. For example, if a form library `new_myscript.js` is written in the following way (not recommended practice):  
 > - You should start with **DisableFormHandlers** to see if the issue goes away, and if not, you can try **DisableFormLibraries**. Disabling any script always involves some risks of potentially breaking your form scenarios. However, the latter tend to have more side effects because of the disablement of the entire JavaScript files.
-  > [!div class="mx-imgBorder"]
-  > ![Difference between DisableFormHandlers and DisableFormLibraries](media/difference-between-disableformhandlers-disableformlibraries.png "Difference between DisableFormHandlers and DisableFormLibraries")
-  > Assuming the `myOnloadHandler` is registered as an `OnLoad` event handler, the `DisableFormHandlers=true` flag only prevents the second alert, whereas the `DisableFormLibraries=true` flag prevents both alerts.
+> [!div class="mx-imgBorder"]
+> ![Difference between DisableFormHandlers and DisableFormLibraries](media/difference-between-disableformhandlers-disableformlibraries.png "Difference between DisableFormHandlers and DisableFormLibraries")
+> Assuming the `myOnloadHandler` is registered as an `OnLoad` event handler, the `DisableFormHandlers=true` flag only prevents the second alert, whereas the `DisableFormLibraries=true` flag prevents both alerts.
 
 
 ## View registered form event handlers and libraries in monitor
@@ -445,7 +444,7 @@ When opening the global quick create menu flyout, not all tables are available. 
 
 ### How to troubleshoot
 
-You can use [Monitor](..///maker/model-driven-apps/monitor-form-checker.md) to view the `QuickCreateMenu` operation, which includes all the tables and reasons why they are filtered from the quick create menu flyout.
+You can use [Monitor](../../maker/model-driven-apps/monitor-form-checker.md) to view the `QuickCreateMenu` operation, which includes all the tables and reasons why they are filtered from the quick create menu flyout.
 
 See the examples below to understand the reasons for filtering. Based on the explanations, contact the responsible party or make changes accordingly.
 
@@ -465,7 +464,7 @@ When working on forms, you get the *unsaved changes* message on the form footer 
 
 ### How to troubleshoot
 
-The *unsaved changes* error appears when you change the form and when the changes are not saved. If you haven't made any changes manually, they could come from a JavaScript, plug-in, or business rule. You can use [Monitor](..///maker/model-driven-apps/monitor-form-checker.md) to view the `UnsavedChanges` operation that helps find the source of the changes. You can filter by OperationType `UnsavedChanges`.
+The *unsaved changes* error appears when you change the form and when the changes are not saved. If you haven't made any changes manually, they could come from a JavaScript, plug-in, or business rule. You can use [Monitor](../../maker/model-driven-apps/monitor-form-checker.md) to view the `UnsavedChanges` operation that helps find the source of the changes. You can filter by OperationType `UnsavedChanges`.
 
 The `all attributes modified` section includes a quick summary of the columns causing the unsaved changes error and their values. The `unsaved changes` section shows what happened to the columns in detail. For every column, a list of controls are provided that could be causing a change. The value change is also displayed (previousValue, newValue), and a call stack.
 
