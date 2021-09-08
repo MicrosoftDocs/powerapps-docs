@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.subservice: canvas-developer
 ms.topic: conceptual
 ms.custom: intro-internal
-ms.date: 06/24/2021
+ms.date: 08/30/2021
 ms.author: evlew
 ms.reviewer: tapanm
 contributors:
@@ -47,7 +47,7 @@ Key changes include:
 
 ## Who can sign up for the Power Apps Developer Plan?
 
-Anyone with a [work or school email address](signup-for-powerapps.md#faq) can sign up for the Power Apps Developer Plan.
+Anyone with a [work or school email address](signup-for-powerapps.md#faq) backed by [Azure Active Directory](/azure/active-directory/fundamentals/sign-up-organization) can sign up for the Power Apps Developer Plan.
 
 ## Where can I sign up for the Power Apps Developer Plan?
 

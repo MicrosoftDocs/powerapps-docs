@@ -2,7 +2,7 @@
 title: "Catalog and CatalogAssignment tables (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to use the Catalog and CatalogAssignment tables to expose events in your solution"
 ms.custom: ""
-ms.date: 07/22/2021
+ms.date: 08/27/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -107,8 +107,10 @@ With this catalog, the following events will be available:
 Most tables will support **Create**, **Update**, and **Delete** events. There are some exceptions.
 User-owned tables will expose events for changes to sharing: **GrantAccess**, **ModifyAccess**, and **RevokeAccess**
 
-
-Any Custom API or Custom Process Actions, even if they are bound to a table, must be explicitly assigned.
+> [!NOTE]
+> Any Custom API or Custom Process Actions, that are bound to the table will also be included.
+> 
+> Custom Process Actions that are disabled will be shown, but the event will never occur until they are enabled and used.
 
 ## Create a Catalog in Power Apps
 
