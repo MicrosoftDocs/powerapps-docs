@@ -493,7 +493,7 @@ Below is an example of this operation. The message explains how to read the deta
 > [!div class="mx-imgBorder"]
 > ![Column validation](media/required-field-validation.png "Column validation")
 
-Below is another example that `jobtitle` is a business-required column on the business process flow but not on the form, and the column is not modified. Thus it does not block the save operation even whenit's empty.
+Below is another example that `jobtitle` is a business-required column on the business process flow but not on the form, and the column is not modified. Thus it does not block the save operation even when it's empty.
 
 > [!div class="mx-imgBorder"]
 > ![Required column validation](media/required-field-validation-bpf-only-field.png "Required column validation")
