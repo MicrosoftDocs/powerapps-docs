@@ -15,4 +15,4 @@ applies_to:
 ms.assetid: b8f41b5f-7de2-4855-87a1-d052ee9aa7ae
 ---
 
-Returns the top-most filter associated with the data-set.
+Returns the top-most filter associated with the dataset.

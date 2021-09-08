@@ -7,7 +7,7 @@ ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "overview"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -15,6 +15,7 @@ applies_to:
 author: "Mattp123"
 ms.assetid: 52c00707-b2bc-4950-abec-89baefd94f6e
 caps.latest.revision: 33
+ms.subservice: dataverse-maker
 ms.author: "matp"
 manager: "kvivek"
 tags: 
@@ -41,11 +42,11 @@ There are two designers you can use to create and edit 1:N (one-to-many) or N:1 
 
 > [!NOTE]
 > You can also create new table relationship in your environment using the following:
-> - In model-driven apps, select **New Column** from the form editor and create a *Lookup* column. <br />More information: [Add a column to a form](../model-driven-apps/add-field-form.md)
+> - In model-driven apps, select **New Column** from the form editor and create a *Lookup* column. <br />More information: [Add, configure, move, or delete columns on a form](../model-driven-apps/add-move-or-delete-fields-on-form.md)
 > - Create a new Lookup column for the related table. <br />More information: [Create and edit columns](create-edit-fields.md)
 > - Import a solution that contains the definition of the table relationship. <br />More information: [Import, update, and export solutions](import-update-export-solutions.md)
 > - Use Power Query to create new tables and fill them with data. <br />More information: [Add data to a table in Dataverse by using Power Query](add-data-power-query.md).
-> - A developer can use [Metadata services](../../developer/data-platform/metadata-services.md) to write a program to create and update table relationships. <br />More information: [Customize table relationship metadata](https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-table-relationship-metadata)
+> - A developer can use [Metadata services](../../developer/data-platform/metadata-services.md) to write a program to create and update table relationships. <br />More information: [Customize table relationship metadata](/dynamics365/customer-engagement/developer/customize-table-relationship-metadata)
 
 Information in this topic will help you choose which designer you can use. 
 
@@ -60,7 +61,7 @@ You should use the Power Apps portal to create and edit 1:N (one-to-many) or N:1
 
 ## Community tools
 
-**[table Relation Diagram Creator](https://www.xrmtoolbox.com/plugins/JourneyIntoCRM.XrmToolbox.ERDPlugin/)** is a tool that XrmToolbox community developed for Dataverse. Please see the [Developer tools for Dataverse](https://docs.microsoft.com/dynamics365/customer-engagement/developer/developer-tools) topic for more community developed tools.
+**[table Relation Diagram Creator](https://www.xrmtoolbox.com/plugins/JourneyIntoCRM.XrmToolbox.ERDPlugin/)** is a tool that XrmToolbox community developed for Dataverse. Please see the [Developer tools for Dataverse](/dynamics365/customer-engagement/developer/developer-tools) topic for more community developed tools.
 
 > [!NOTE]
 > The community tools are not a product of Microsoft and does not extend support to the community tools. 

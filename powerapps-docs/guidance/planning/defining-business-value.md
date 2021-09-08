@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: guidance
 ms.date: 06/16/2020
+ms.subservice: guidance
 ms.author: thground
 ms.reviewer: kathyos
 
@@ -78,7 +79,7 @@ If the business value you'll receive by automating the process doesn't compare f
 
 However, if the business value you receive by solving the business problem is
 greater than the cost of doing nothing&mdash;plus your development time and the
-monthly cost of any [software license](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus)&mdash;it makes sense to automate the
+monthly cost of any [software license](/power-platform/admin/pricing-billing-skus)&mdash;it makes sense to automate the
 process.
 
 ## Example: The business value of automating the expense process
@@ -134,7 +135,7 @@ report app.
     >
     >   Saving the company roughly **\$777,738 each year**
 
-![Business process flowchart showing the updated costs for the optimized process and the total savings to be gained](media/optimized-flow-costs.png "Business process flowchart showing the updated costs for the optimized process and the total savings to be gained")
+![Business process flowchart showing the updated costs for the optimized process and the total savings to be gained.](media/optimized-flow-costs.png "Business process flowchart showing the updated costs for the optimized process and the total savings to be gained")
 
 > [!div class="nextstepaction"]
 > [Next step: Measuring success](measuring-success.md)

@@ -1,6 +1,7 @@
 ---
 title: "save (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
+description: Saves the record asynchronously with the option to close the form or open a new form after the save is completed.
+ms.date: 04/15/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -16,8 +17,6 @@ search.app:
 ---
 # save (Client API reference)
 
-
-
 [!INCLUDE[./includes/save-description.md](./includes/save-description.md)]
 
 ## Syntax
@@ -32,6 +31,8 @@ search.app:
 |Name|Type|Required|Description|
 |--|--|--|--|
 |saveOption|String|No|Specify options for saving the record. If no parameter is included in the method, the record will simply be saved. This is the equivalent of using the **Save** command.<br/>You can specify one of the following values:<br/><br/>- **saveandclose**: This is the equivalent of using the **Save and Close** command.<br/><br/>- **saveandnew**: This is the equivalent of the using the **Save and New** command.|
+
+[!INCLUDE[cc-terminology](../../../../data-platform/includes/cc-terminology.md)]
 
 ## Example
 

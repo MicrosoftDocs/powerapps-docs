@@ -40,9 +40,9 @@ Watch a quick overview of the solution.
 Contact your local Microsoft account representative for questions related to licensing as per your requirements.
 
 See also: 
-- [Licensing overview for Power Platform](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus)
-- [Power Apps for US Government](https://docs.microsoft.com/power-platform/admin/powerapps-us-government)
-- [Power BI for US Government](https://docs.microsoft.com/power-bi/service-govus-overview)
+- [Licensing overview for Power Platform](/power-platform/admin/pricing-billing-skus)
+- [Power Apps for US Government](/power-platform/admin/powerapps-us-government)
+- [Power BI for US Government](/power-bi/service-govus-overview)
 
 ## Start here
 

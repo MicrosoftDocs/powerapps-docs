@@ -1,13 +1,17 @@
 ---
-title: Create additional portals in an environment | Microsoft Docs
+title: Create additional portals in an environment
 description: Instructions to create additional portals in an environment.
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/08/2021
+ms.date: 04/21/2021
+ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: tapanm
+contributors:
+    - neerajnandwana-msft
+    - tapanm-msft
 ---
 
 # Create additional portals in an environment
@@ -33,9 +37,9 @@ Similarly, the following table explains the allowed template type and language c
 
 When an environment already has a portal of the available template type created, and if the environment doesn't have any additional languages enabled, you'll see this error message: *You have reached the maximum limit of 1 portal(s) on this environment. Please choose another environment or create new environment.*
 
-![Error when creating additional portal](media/create-additional-portal-error.png "Error when creating additional portal")
+![Error when creating additional portal.](media/create-additional-portal-error.png "Error when creating additional portal")
 
-For more information about enabling languages in an environment, go to [Enable language for an environment](https://docs.microsoft.com/power-platform/admin/enable-languages#enable-the-language).
+For more information about enabling languages in an environment, go to [Enable language for an environment](/power-platform/admin/enable-languages#enable-the-language).
 
 ## Create new environment
 
@@ -44,7 +48,7 @@ Follow these steps when you create an environment using the option provided in t
 1.  In the **New environment** pane, enter a name for the environment, and then select a region and environment type from the drop-down lists. You can't change the region once the environment is created. When you're done, select **Create environment**.
 
     > [!div class=mx-imgBorder]
-    > ![create new environment](media/create-new-environment.png "Create new environment")  
+    > ![create new environment.](media/create-new-environment.png "Create new environment")  
 
 2.  Once the environment is created, you'll receive a confirmation message in the dialog box, and you'll be prompted to create a database. Select **Create database** to enable access to Dataverse.
 
@@ -52,7 +56,7 @@ Follow these steps when you create an environment using the option provided in t
     > The prompt to create a database might not be displayed automatically. In this case, you must go to the new environment and select the **Portal from blank** tile again.
 
     > [!div class=mx-imgBorder]
-    > ![new environment created](media/new-environment-created.png "New environment created")  
+    > ![new environment created.](media/new-environment-created.png "New environment created")  
 
 3.  Select the currency and language for the data stored in the database. You can't change the currency or language once the database is created. When you're done, select **Create my database**. The database is created with the starter portal that enables you to quickly get started with sample content once the portal is provisioned.
 
@@ -60,12 +64,12 @@ Follow these steps when you create an environment using the option provided in t
     > The **Include starter portal** option is available only when you create an environment using the option provided in the **Portal from blank** window. This option is not available when you create an environment from Power Platform admin center.
 
     > [!div class=mx-imgBorder]
-    > ![create new database](media/create-new-database.png "Create new database") 
+    > ![create new database.](media/create-new-database.png "Create new database") 
 
     It might take several minutes to create the database on Dataverse. Once the database is created, the new environment is selected in the list of environments on the Power Apps home page and the Portal Management app is created. This app isn't the actual portal but a model-driven companion app that allows you to perform advance configuration activities. You can now continue with creating the portal for designing the external-facing website.
 
     > [!div class=mx-imgBorder]
-    > ![portal management app](media/portal-mgmt-app.png "Portal management app")
+    > ![portal management app.](media/portal-mgmt-app.png "Portal management app")
 
 4. After creating the environment and database, under **Make your own app**, select **Portal from blank**. 
 
@@ -77,8 +81,8 @@ After you enter the portal name, address, and choose the language, the portal cr
 ### See also
 
 [Available portal templates](portal-templates.md) <br>
-[Microsoft Learn: Administer Power Apps portals](https://docs.microsoft.com/learn/paths/administer-portals/) <br>
-[Microsoft Learn: Access Dataverse in Power Apps portals](https://docs.microsoft.com/learn/modules/portals-access-data-platform/)
+[Microsoft Learn: Administer Power Apps portals](/learn/paths/administer-portals/) <br>
+[Microsoft Learn: Access Dataverse in Power Apps portals](/learn/modules/portals-access-data-platform/)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

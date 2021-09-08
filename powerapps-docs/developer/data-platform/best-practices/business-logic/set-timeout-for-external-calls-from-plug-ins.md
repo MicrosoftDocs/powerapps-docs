@@ -13,7 +13,8 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 08/19/2019
+ms.date: 03/06/2021
+ms.subservice: dataverse-developer
 ms.author: jdaly
 search.audienceType: 
   - developer
@@ -23,7 +24,6 @@ search.app:
 ---
 # Set Timeout when making external calls in a plug-in
 
-[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
 
 **Category**: Performance
 
@@ -60,10 +60,10 @@ using (HttpClient client = new HttpClient())
   client.DefaultRequestHeaders.ConnectionClose = true; //Set KeepAlive to false
   
 
-  HttpResponseMessage response =  client.GetAsync(webAddress).Result; //Make sure it is synchonrous
+  HttpResponseMessage response =  client.GetAsync(webAddress).ConfigureAwait(false).GetAwaiter().GetResult(); //Make sure it is synchronous
   response.EnsureSuccessStatusCode();
 
-  string responseText = response.Content.ReadAsStringAsync().Result; //Make sure it is synchonrous
+  string responseText = response.Content.ReadAsStringAsync().ConfigureAwait(false).GetAwaiter().GetResult(); //Make sure it is synchronous
   tracingService.Trace(responseText);
   //Log success in the Plugin Trace Log:
   tracingService.Trace("HttpClientPlugin completed successfully.");

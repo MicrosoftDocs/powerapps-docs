@@ -1,12 +1,13 @@
 ---
 title: "Create a dashboard (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
-description: "Organization-owned dashboards can be created by using the Microsoft Dataverse web services (SDK) or by customizing the entity form in Dataverse by editing the customizations.xml file." # 115-145 characters including spaces. This abstract displays in the search result."
+description: "Organization-owned dashboards can be created by using the Microsoft Dataverse web services (SDK) or by customizing the form in Dataverse by editing the customizations.xml file." # 115-145 characters including spaces. This abstract displays in the search result."
 keywords: ""
-ms.date: 10/31/2018
+ms.date: 04/15/2021
 ms.service: powerapps
 ms.topic: article
 ms.assetid: da41f997-1f61-7ea8-db83-5d670d708d67
 author: Nkrb # GitHub ID
+ms.subservice: mda-developer
 ms.author: nabuthuk # MSFT alias of Microsoft employees only
 manager: shilpas # MSFT alias of manager or PM counterpart
 ms.reviewer: 
@@ -19,10 +20,10 @@ search.app:
 
 # Create a dashboard
 
-Organization-owned dashboards can be created by using the Microsoft Dataverse or by customizing the entity form in Dataverse by editing the customizations.xml file.  
+Organization-owned dashboards can be created by using the Microsoft Dataverse or by customizing the form in Dataverse by editing the customizations.xml file.  
   
 > [!NOTE]
->  Some dashboards that are created by using the SDK or by customizing the entity form are not supported by the Dashboard Designer in the Web application. For more information, see [Limitations: Creating dashboards by using the SDK or through form customization](#Limitations) later in this topic.  
+>  Some dashboards that are created by using the SDK or by customizing the form are not supported by the dashboard designer in the Web application. More information: [Limitations: Creating dashboards by using the SDK or through form customization](#Limitations) later in this topic.  
   
  Before creating a dashboard, consider the following:  
   
@@ -30,11 +31,14 @@ Organization-owned dashboards can be created by using the Microsoft Dataverse or
   
      To create organization-owned dashboards, you must have the System Administrator or System Customizer role.  
   
-- **Dashboard layout**: While creating dashboards, you have to use the FormXML to define the dashboard components and layout. For information about working with FormXML to define a dashboard, see [Dashboard Components and FormXML Elements](understand-dashboards-dashboard-components-formxml.md#DashboardComponentsandFormXML). For some sample FormXMLs of different types of dashboards, see [Sample Dashboards](sample-dashboards.md).  
-  
+- **Dashboard layout**: While creating dashboards, you have to use the FormXML to define the dashboard components and layout. More information: [Dashboard components and FormXML elements](understand-dashboards-dashboard-components-formxml.md#DashboardComponentsandFormXML). For some sample FormXMLs of different types of dashboards, see [Sample dashboards](sample-dashboards.md).  
+
+[!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
+
 <a name="UsingSDK"></a>   
 
 ## Create a dashboard by using the SDK  
+
  To create a dashboard, create an instance of `SystemForm` for an organization-owned dashboard, or `UserForm` for a user-owned dashboard. The following sample shows how to create an organization-owned dashboard.  
   
  ```csharp
@@ -140,15 +144,15 @@ SystemForm dashboard = new SystemForm
 _dashboardId = service.Create(dashboard);
  ``` 
   
- For a complete sample, see [Sample: Create, Retrieve, Update and Delete (CRUD) a Dashboard](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/CRUDOperationsDashboard). For a sample to create a user-owned dashboard, and assign it to another user, see [Sample: Assign a User-Owned Dashboard to Another User](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/AssignUserOwnedDashboardToAnother).  
+ For a complete sample, see [Sample: Create, retrieve, update, and delete (CRUD) a dashboard](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/CRUDOperationsDashboard). For a sample to create a user-owned dashboard, and assign it to another user, see [Sample: Assign a user-owned dashboard to another user](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/AssignUserOwnedDashboardToAnother).  
   
 <a name="UsingFormCustomization"></a>   
 
-## Create an organization-owned dashboard by customizing the entity form  
+## Create an organization-owned dashboard by customizing the form  
 
- The customizations.xml file that is exported with an unmanaged solution contains definitions for entity forms and dashboards. You can add or modify the customizations.xml file to add or update a dashboard.  
+ The customizations.xml file that is exported with an unmanaged solution contains definitions for forms and dashboards. You can add or modify the customizations.xml file to add or update a dashboard.  
   
-#### Create a dashboard by customizing an entity form  
+#### Create a dashboard by customizing a form  
   
 1. Log in to Dataverse.  
   
@@ -211,8 +215,8 @@ _dashboardId = service.Create(dashboard);
  [Using FormXML for dashboards](understand-dashboards-dashboard-components-formxml.md)   
  [Actions on dashboards](actions-dashboards.md)   
  [Sample dashboards](sample-dashboards.md)   
- [Sample: Create, Retrieve, Update and Delete (CRUD) a dashboard](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/CRUDOperationsDashboardd)   
- [Customize entity forms](customize-entity-forms.md)
+ [Sample: Create, retrieve, update, and delete (CRUD) a dashboard](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/CRUDOperationsDashboardd)   
+ [Customize forms](customize-entity-forms.md)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

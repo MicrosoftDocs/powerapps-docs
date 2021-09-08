@@ -1,16 +1,20 @@
 ---
-title: "Manage forum access permissions | MicrosoftDocs"
-description: "Learn about control flow tags available in portal"
+title: Manage forum access permissions
+description: Learn about managing forum access permissions in portals.
 author: sbmjais
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/11/2021
+ms.date: 04/21/2020
+ms.subservice: portals
 ms.author: shjais
-ms.reviewer: 
+ms.reviewer: shjais
+contributors:
+    - tapanm-msft
+    - shjais
 ---
 
-# Manage forum access permissions 
+# Manage forum access permissions
 
 Forum Access Permission is a security rule that can be assigned to a particular forum and web role that can restrict particular users from viewing the forum or granting particular users the ability to moderate a forum within the webpages. To create, edit, or delete forum access permissions:
 
@@ -18,7 +22,7 @@ Forum Access Permission is a security rule that can be assigned to a particular 
 
 2. Go to **Community** > **Forum Access Permissions**.
 
-    ![Forum access permission](media/forum-access-permission.png "Forum access permission")
+    ![Forum access permission.](media/forum-access-permission.png "Forum access permission")
 
 3. To create a new forum access permission, select **New**.
 
@@ -28,7 +32,7 @@ Forum Access Permission is a security rule that can be assigned to a particular 
 
 6. Select **Save & Close**.
 
-    ![Edit forum access permission](media/edit-forum-access-permission.png "Edit forum access permission")  
+    ![Edit forum access permission.](media/edit-forum-access-permission.png "Edit forum access permission")  
 
 > [!NOTE]
 > A web role must be assigned for the rule to apply for users associated with the given role. See [Create web roles for portals](../configure/create-web-roles.md).

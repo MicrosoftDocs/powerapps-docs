@@ -1,18 +1,22 @@
 ---
-title: "Create and manage publishing states in Power Apps portals | MicrosoftDocs"
-description: "Learn how to create and manage publishing states in a portal."
+title: Create and manage publishing states
+description: Learn how to create and manage publishing states in a portal.
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom:
-ms.date: 09/22/2020
+ms.date: 04/21/2020
+ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - sandhangitmsft
 ---
 
 # Create and manage publishing states
 
-Publishing states allow for the definition of a content lifecycle in portals website. At a basic level, a publishing state can determine whether an associated entity should be considered visible/published on a portal. In more complex configurations, they can define a multi-stage process for content review and publishing, with security restrictions on each stage.
+Publishing states allow for the definition of a content lifecycle in portals website. At a basic level, a publishing state can determine whether an associated table should be considered visible/published on a portal. In more complex configurations, they can define a multi-stage process for content review and publishing, with security restrictions on each stage.
 
 Publishing states can be used with [web pages](web-page.md), [web files](web-files.md), [web links](manage-web-links.md), forums, and advertisements.
 
@@ -31,7 +35,7 @@ Publishing states can be created, edited, and deleted within portals.
 4. Go to the **Publishing States** tab. The list of available publishing states is displayed.
 
     > [!div class=mx-imgBorder]
-    > ![Manage publishing states](../media/publishing-states.png "Manage publishing states")
+    > ![Manage publishing states.](../media/publishing-states.png "Manage publishing states")
 
 5. To add a new publishing state, select **New publishing state**.
 
@@ -47,8 +51,8 @@ Publishing states can be created, edited, and deleted within portals.
 |-----|--------|
 |Name|The descriptive name of the state. This field is required.|
 |Website|The website to which the state belongs. This field is required.|
-|Is Default|If checked, sets this state as the default state for the website. This option will determine the default state selected when creating new entities through the portal front-side editing interface.<br>**Note**: Only one Publishing State in a given Website should be marked as the default state.|
-|Is Visible|If checked, sets that entities associated with this state will be considered visible (or published) on the portal.<br>While an entity associated with a non-visible state won't be visible on the portal, an entity associated with a visible state may also not be visible, because of the security permissions, expiration dates, or other visibility rules.<br>Users with content management permissions may be granted the ability to use Preview Mode, which allows these users to see (preview) unpublished content.|
+|Is Default|If checked, sets this state as the default state for the website. This option will determine the default state selected when creating new tables through the portal front-side editing interface.<br>**Note**: Only one Publishing State in a given Website should be marked as the default state.|
+|Is Visible|If checked, sets that tables associated with this state will be considered visible (or published) on the portal.<br>While a table associated with a non-visible state won't be visible on the portal, a table associated with a visible state may also not be visible, because of the security permissions, expiration dates, or other visibility rules.<br>Users with content management permissions may be granted the ability to use Preview Mode, which allows these users to see (preview) unpublished content.|
 |Display Order|An integer value indicating the order in which the state will be placed, in menus and drop-down lists for selecting a Publishing State – mostly found in the portal front-side editing interfaces.|
 |||
 
@@ -90,7 +94,7 @@ If the logged-in user who is attempting the change is in any of the roles you as
 6. Select **Save** so you can continue adding web roles to it.
 
     > [!div class=mx-imgBorder]
-    > ![Create publishing state transition rule](../media/publishing-state-transition-rule.png "Create publishing state transition rule")
+    > ![Create publishing state transition rule.](../media/publishing-state-transition-rule.png "Create publishing state transition rule")
 
 7. On the **Web Roles** tab, select **Add Existing Web Role**. In the **Lookup Records** pane, browse and add the appropriate web roles.
 
@@ -105,7 +109,7 @@ For example, say you wanted someone in the content publishing role who can modif
 To do this, you would create a rule with the grant change permission and apply it to the branch in question (or the home page if the rule is to apply to the entire site). You would then associate this rule with the draft state.
 
 > [!div class=mx-imgBorder]
-> ![Create state-based control rule](../media/state-based-control-rule.png "Create state-based control rule")
+> ![Create state-based control rule.](../media/state-based-control-rule.png "Create state-based control rule")
 
 You would then associate this rule with the appropriate web role, for example, Content publishing. Assuming this web role isn't associated with a more permissive rule (a rule that grants change no matter which publishing state) then users in the content publishing web role can modify pages in the draft state but can't modify pages in the published state.
 

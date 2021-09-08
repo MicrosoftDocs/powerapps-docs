@@ -1,20 +1,24 @@
 ---
-title: "Rate or vote on a webpage on a portal | MicrosoftDocs"
-description: "Instructions to enable and manage ratings on a web page on a portal."
+title: Rate or vote on a webpage on a portal
+description: Learn how to enable and manage ratings on a web page on a portal.
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/09/2020
+ms.date: 04/21/2020
+ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - sandhangitmsft
 ---
 
 # Rate or vote on a webpage on a portal
 
 Ratings provide users with the ability to rate or vote on a webpage. Ratings can also be enabled for comments on pages. By default, this feature is disabled, but it can be enabled on a page-by-page basis.
 
-Ratings are custom activities, and can be used in the same way as any other activity such as emails, phone calls, and so on. Because ratings are activities, by using customization you can have ratings appear for any entity you choose that appears and is rendered on the portal, including custom entities.
+Ratings are custom activities, and can be used in the same way as any other activity such as emails, phone calls, and so on. Because ratings are activities, by using customization you can have ratings appear for any table you choose that appears and is rendered on the portal, including custom tables.
 
 ## Enable ratings for pages
 
@@ -32,7 +36,7 @@ Ratings are custom activities, and can be used in the same way as any other acti
 
 For webpages that have page ratings enabled, users can rate the page by using the rating scale.
 
-![Rating type](../media/rating-type.png "Rating type")  
+![Rating type.](../media/rating-type.png "Rating type")  
 
 ## Manage ratings
 

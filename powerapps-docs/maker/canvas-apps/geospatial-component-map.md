@@ -8,17 +8,20 @@ ms.topic: conceptual
 ms.custom: canvas, ce06122020
 ms.reviewer: tapanm
 ms.date: 1/19/2021
+ms.subservice: canvas-maker
 ms.author: iawilt
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - iaanw
 ---
 
 
 # Interactive map component 
 
-Easily bring dynamic mapping capabilities into your canvas apps by viewing the physical position of entities from a data source, or by inputting new physical locations.
+Easily bring dynamic mapping capabilities into your canvas apps by viewing the physical position of objects from a data source, or by inputting new physical locations.
 
 Pan, tilt, zoom, and drag to center your map view. As you zoom out, the markers will optionally cluster to represent dense groups of data. 
 
@@ -26,7 +29,7 @@ The current location of the user can also be represented on the map on mobile de
 
 The map component also supports road and satellite views.
 
-![Map component](./media/augmented-geospatial/geospatial-map-component.png "Map component")
+![Map component.](./media/augmented-geospatial/geospatial-map-component.png "Map component")
 
 To use the component, you need to [enable geospatial features for the environment](geospatial-overview.md#enable-the-geospatial-features-for-the-environment).
 
@@ -41,12 +44,14 @@ With an app open for editing in the [Power Apps studio](https://create.powerapps
 1. Open the **Insert** tab.
 2. Expand **Media**.
 3. Select the component **Map** to place it in the center of the app screen, or drag it to position it anywhere on the screen.
-4. To show the user's current location: 
-	1. Switch **Show current location** to **On**. 
-	2. Under the property **Current location latitude**, insert **Location.Latitude**. 
-	3. Under the property **Current location longitude**, insert **Location.Longitde**. 
-	4. The current location pin should now appear on the map.
+4. To show the user's current location, 
+	- Toggle **Show current location** to **On**. 
+	- Under the property **Current location latitude**, insert **Location.Latitude**. 
+	- Under the property **Current location longitude**, insert **Location.Longitude**. 
+	- The current location pin should now appear on the map.
 	
+You can modify the component by using a number of [properties](#input-properties).
+
 ### Use the map component with data from Excel
 
 You can load a table that contains existing data from an Excel workbook into the map component. The component will then plot each row in your table as a map pin.
@@ -95,11 +100,11 @@ Coho Winery (sample) | -116.97751 | 32.87466 | |
 
 1. Select one of the cells, and then on the Home tab in the ribbon, select **Format as Table** and choose any style, and then **OK**.
 
-    ![Screenshot highlighting the format as table option in Excel](./media/geospatial/convert-table.png)
+    ![Screenshot highlighting the format as table option in Excel.](./media/geospatial/convert-table.png)
 
 1. Select the table, and then go to the **Table Design** tab on the ribbon. Enter a name for the table under **Table Name:**, for example *TestData*.
 
-    ![Screenshot highlighting the table name in Excel](./media/geospatial/table-name.png)
+    ![Screenshot highlighting the table name in Excel.](./media/geospatial/table-name.png)
 
 1. Save the workbook.
 
@@ -109,61 +114,28 @@ Coho Winery (sample) | -116.97751 | 32.87466 | |
 
     :::image type="content" source="media/geospatial/select-excel.png" alt-text="Screenshot of the Import from Excel option.":::
 
-
-1. Locate the Excel workbook and then select **Open**. Select the table that contains the information, **TestData**, and then **Connect**.
-
-    ![Screenshot of the table selection panel](./media/geospatial/select-table.png)
-
-1. On the **Properties** pane, go to the **Advanced** tab, and select **More options**.
-
-1. Set the following properties:
-
-    - **ItemsLabels** as *TestData.Name*
-    - **ItemLatitudes** as *TestData.Latitude*
-    - **ItemsLongitudes** as *TestData.Longitude*
-    - (Optional) **ItemsColors** as *TestData.Colors*
-    - (Optional) **ItemsIcons** as *TestData.Icons*
-
-1. The map component will now show each row in the table as a pin, labeled with its *Name* as defined in the Excel table, and using the provided icons and colors. If an icon or color isn't provided, then the component will use the default icon and color.
-
-    ![A screenshot of the map component with custom icons and different colors.](./media/geospatial/pins-map.png)
+4. To show the user's current location: 
+	1. Switch **Show current location** to **On**. 
+	2. Under the property **Current location latitude**, insert **Location.Latitude**. 
+	3. Under the property **Current location longitude**, insert **Location.Longitude**. 
+	4. The current location pin should now appear on the map.
+	
+## Interactive map features
 
 
+- [Use data from Excel to insert pins](geospatial-map-excel.md)
+- [Add info cards to pins](geospatial-map-infocards.md)
+- [Draw and insert shapes onto maps](geospatial-map-draw-shapes.md)
 
+## Properties
 
-
-### Add informational cards to pins
-
-You can add informational cards to each pin on the map. 
-
-When a user selects the pin (either by hovering over it or selecting it directly), a small card will pop-up with information taken from the dataset you bound to the component, as described in the section [Use the map component with data from Excel](#use-the-map-component-with-data-from-excel).
-
-Any column you add to the table in the data source (for example, the Excel table) will be available as a field to show on the card.
-
-**To add informational cards to pins:**
-
-1. First, insert the map component and bind a dataset to it as described in [Use the map component with data from Excel](#use-the-map-component-with-data-from-excel).
-
-2. In the **Properties** pane, select **Show info cards** and choose whether they should appear when a user hovers over the pin, or if the user has to select the pin.
-
-    :::image type="content" source="media/geospatial/map-info-card-type.png" alt-text="Screenshot of the properties pane showing the drop-down selection menu to show the cards on hover or on click.":::
-
-3. In the **Properties** pane, next to **Fields**, select **Edit**.
-
-4. Select **Add field**, and then select each of the fields you want to show in the card. Select **Add**.
-
-    :::image type="content" source="media/geospatial/map-choose-fields.png" alt-text="Screenshot showing the field selection options.":::
-
-5. Each pin will now show the fields associated with that pin in an informational card.
-
-    :::image type="content" source="media/geospatial/map-info-card-example.png" alt-text="Screenshot of the map component with an info card on top of a pin, showing information such as Name, Occupancy, and Phone.":::
+There are multiple properties that can be defined for the map component.
 
 ### Input properties
 
-
 The following properties can be defined and configured in the component's **Properties** pane.
 
-![Map component displayed next to its Properties pane](./media/augmented-geospatial/geospatial-controls.png "Map component displayed next to its Properties pane")
+![Map component displayed next to its Properties pane.](./media/augmented-geospatial/geospatial-controls.png "Map component displayed next to its Properties pane")
 
 Some properties are only available on the **Advanced** tab in the **Properties** pane, in the **More options** section.
 
@@ -183,14 +155,30 @@ Some properties are only available on the **Advanced** tab in the **Properties**
 | Compass control | Whether the compass component appears on the map. | Boolean | Properties |
 | Pitch control | Whether the pitch component appears on the map. | Boolean | Properties |
 | Pin color | The color of the pins. | Color picker | Properties |
-| ItemsLabels | A column in Items with the strings you want to use as labels for the pins. | TableName.ColumnName | Advanced |
-| ItemsAddresses | A column in Items with the strings that represent the location of the pins. | TableName.ColumnName | Advanced |
-| ItemsLongitudes | Name of the column in the table in your data source with floating-point numbers that represent the longitude position of the pins.  | TableName.ColumnName | Advanced |
-| ItemsLatitudes | Name of the column in the table in your data source with floating-point numbers that represent the latitude position of the pins. | TableName.ColumnName | Advanced |
+| ItemsLabels | A column in Items with the strings you want to use as labels for the pins. | ColumnName | Advanced |
+| ItemsAddresses | A column in Items with the strings that represent the location of the pins. | ColumnName | Advanced |
+| ItemsLongitudes | Name of the column in the table in your data source with floating-point numbers that represent the longitude position of the pins.  | ColumnName | Advanced |
+| ItemsLatitudes | Name of the column in the table in your data source with floating-point numbers that represent the latitude position of the pins. | ColumnName | Advanced |
 | ItemsColors | Color of the pins | [Any CSS color string](/functions/function-colors) | Advanced |
 | ItemsIcons | Icon of the pins | [Icons defined in Azure image templates](/azure/azure-maps/how-to-use-image-templates-web-sdk#list-of-image-templates) | Advanced |
 | Items | Name of the table in your data source that contains all the records that you want to plot in the map by using pins. Each row must have an entry for the label, longitude, and latitude for each row. | TableName | Advanced |
-| OnMapClick | The last clicked location on the map. |
+| OnMapClick | How the map responds when any location is clicked. | Event | Advanced
+| OnSelect | How the app responds when a map pin is selected. | Event | Advanced |
+| OnLoad | How the app responds when the map finishes loading. | Event | Advanced |
+| OnItemsChange | How the app responds when the map pins change. | Event | Advanced |
+| Show info cards | Whether informational cards appear on the pins of the map. | Enum | Properties |
+| Show shapes | Whether the shapes in **Shapes_Items** appear on the map. | Boolean | Properties |
+| Show shape labels | Whether the labels appear on the shapes of the map. | Boolean | Properties |
+| Enable shape drawing | Whether the drawing tools component appears on the map. | Boolean | Properties |
+| Enable shape deleting and label editing | Whether shapes can be deleted and their labels can be edited on the map. | Boolean | Properties |
+| Shapes_Items | Name of the table in your data source that contains all the records with GeoJSON objects that you want to show in the map as shapes. | TableName | Advanced |
+| ShapeGeoJSONObjects | Name of the column in the table in your data source with strings that represent the GeoJSON objects of the shapes. | ColumnName | Advanced |
+| ShapeLabels | A column in Shapes_Items with the strings you want to use as labels for the shapes. | ColumnName | Advanced |
+| ShapeColors | Color of the shapes. | ColumnName | Advanced |
+| OnShapeSelected | How the app responds when a shape on the map is selected. | Event | Advanced |
+| OnShapeCreated | How the app responds when a shape on the map is created. | Event | Advanced |
+| OnShapeEdited | How the app responds when a shape on the map is edited. | Event | Advanced |
+| OnShapeDeleted | How the app responds when a shape on the map is deleted. | Event | Advanced |
 
 ### Output properties
 
@@ -199,9 +187,20 @@ The component outputs various properties when a user interacts with it inside an
 The following table lists the output properties available.
 
 
-| Property | Description |
-| -- | -- |
-| CenterLocation | Center location of the map as either `.Latitude` or `.Longitude`. The output will be an integer. For example, calling `Map1.CenterLocation.Latitude` will output a single integer such as `47.60357`. |
+
+| Property | Description | Type |
+| -- | -- | -- |
+| CenterLocation | Center location of the map. | Not Applicable |
+| OnMapClick | The last clicked location on the map. | Not Applicable |
+| Selected | The selected pin on the map. | Record |
+| SelectedItems | The selected pin or pins of the selected cluster on the map. | Table |
+| GeocodedItems | The geocoded locations of the pins on the map. | Table |
+| ClickedLocation | The last clicked location on the map as either `.Latitude` or `.Longitude`. | Record |
+| Shapes_Selected | The record of the selected shape from **Shapes_Items**. | Record |
+| Shapes_SelectedItems | The records of the selected overlapping shapes from **Shapes_Items**. | Table |
+| SelectedShape | The selected shape on the map with `.Perimeter` and `.Area`. | Record |
+| DeletedShape | The last deleted shape on the map with `.Perimeter and `.Area`. | Record |
+| GeoJSON | The list of shapes on the map in Feature Collection GeoJSON format. | String |
 
 
 ### Additional (common) properties
@@ -233,6 +232,9 @@ The following table lists the output properties available.
 **[X](./controls/properties-size-location.md)** - The distance between the leftmost edge of a control and the leftmost edge of its parent container (or screen, if it has no parent container).
 
 **[Y](./controls/properties-size-location.md)** - The distance between the top edge of a control and the top edge of its parent container (or screen, if it has no parent container).
+
+
+
 
 ## Other geospatial components
 

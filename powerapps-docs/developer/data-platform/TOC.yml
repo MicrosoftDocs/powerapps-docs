@@ -7,6 +7,10 @@
   items:
   - name: Supported customizations
     href: supported-customizations.md
+  - name: Learn about developer tools
+    href: developer-tools.md
+- name: Understand terminology
+  href: understand-terminology.md
 - name: Security and data access
   href: security-model.md
   items:
@@ -22,23 +26,29 @@
   href: work-with-data.md
   items:
   - name: Use Web API
-    href: webapi/index.md
+    href: ./webapi/overview.md
   - name: Use Organization Service
-    href: org-service/index.md
+    href: ./org-service/overview.md
   - name: Create your own messages
     href: custom-actions.md
     items:
-    - name: Use Workflow Custom Actions with code
+    - name: Use Custom Process Actions with code
       href: workflow-custom-actions.md
-    - name: Create and use Custom APIs (Preview)
-      href: custom-api.md 
+    - name: Create and use Custom APIs
+      href: custom-api.md
       items:
-      - name: Create a Custom API in the maker portal (Preview)
+      - name: Create a Custom API in the maker portal
         href: create-custom-api-maker-portal.md
-      - name: Create a Custom API with code (Preview)
+      - name: Create a Custom API with code
         href: create-custom-api-with-code.md
-      - name: Create a Custom API with solution files (Preview)
+      - name: Create a Custom API with solution files
         href: create-custom-api-solution.md
+      - name: CustomAPI Table Columns
+        href: customapi-table-columns.md
+      - name: CustomAPIRequestParameter Table Columns
+        href: customapirequestparameter-table-columns.md
+      - name: CustomAPIResponseProperty Table Columns
+        href: customapiresponseproperty-table-columns.md
   - name: Use FetchXML to query data
     href: use-fetchxml-construct-query.md
     items:
@@ -64,6 +74,8 @@
     href: how-dataverse-sql-differs-from-transact-sql.md
   - name: Saved Queries
     href: saved-queries.md
+  - name: Query throttling
+    href: query-throttling.md
   - name: Query Hierarchical data
     href: query-hierarchical-data.md
   - name: Audit data changes
@@ -94,6 +106,8 @@
     href: impersonate-another-user.md
   - name: Service protection API limits
     href: api-limits.md
+  - name: Bypass Custom Business logic
+    href: bypass-custom-business-logic.md
   - name: Best Practices
     href: best-practices/work-with-data/index.md
   - name: Add and remove sample data
@@ -125,12 +139,20 @@
       href: debug-plug-in.md
     - name: Tracing and logging
       href: logging-tracing.md
+    - name: Application Insights with ILogger (Preview)
+      href: application-insights-ilogger.md
     - name: Analyze performance
       href: analyze-performance.md
     - name: Troubleshoot plug-ins
       href: troubleshoot-plug-in.md
     - name: Access external web resources
       href: access-web-services.md
+    - name: Quickstarts
+      items:
+      - name: Create a project using Power Platform Tools
+        href: tools/devtools-create-project.md
+      - name: Create a plug-in using Power Platform Tools
+        href: tools/devtools-create-plugin.md
     - name: Tutorials
       items:
       - name: Write and register a plug-in
@@ -147,14 +169,16 @@
         href: org-service/samples/web-access-plugin.md
   - name: Workflow extensions
     href: workflow/workflow-extensions.md
+  - name: Business Events (preview)
+    href: business-events.md
   - name: Scalable customization design
     href: scalable-customization-design/overview.md
   - name: Best Practices
     href: best-practices/business-logic/index.md
 - name: Integrate data using code
   items:
-  - name: Import Data
-    href: import-data.md #Topics are for both Web API and Organization service
+  - name: Import data
+    href: import-data.md 
     items:
     - name: Prepare source files for import
       href: prepare-source-files-import.md
@@ -205,35 +229,32 @@
       href: walkthrough-configure-azure-sas-integration.md
     - name: "Tutorial: Register an Azure-aware plug-in using the Plug-in Registration Tool"
       href: walkthrough-register-azure-aware-plug-in-using-plug-in-registration-tool.md
-
     - name: "Tutorial: Update a service endpoint imported from a solution"
       href: walkthrough-update-service-endpoint-imported-solution.md
   - name: Use Web Hooks
     href: use-webhooks.md
     items:
-    - name: Use webhooks to create external handlers for server events
-      href: use-webhooks.md
     - name: Register a web hook
       href: register-web-hook.md
     - name: Test webhook registration
       href: test-webhook-registration.md
-- name: Work with Dataverse entities
+- name: Work with tables using code
   href: entities.md
   items:
-  - name: Customer entities
+  - name: Customer tables
     href: customer-entities-account-contact.md
-  - name: Activity entities
+  - name: Activity tables
     href: activity-entities.md
     items:
     - name: Custom activities
       href: custom-activities.md
-    - name: Email activity entities
+    - name: Email activity tables
       href: email-activity-entities.md
-    - name: Task, fax, phone call, and letter activity entities
+    - name: Task, fax, phone call, and letter activity tables
       href: task-fax-phone-call-letter-activity-entities.md
-    - name: ActivityParty entity
+    - name: ActivityParty table
       href: activityparty-entity.md
-    - name: ActivityPointer (activity) entity
+    - name: ActivityPointer (activity) table
       href: activitypointer-activity-entity.md
     - name: Recurring Appointments
       items:
@@ -243,88 +264,90 @@
         href: create-recurring-appointment-series-instance-exception.md
       - name: Update a recurring appointment
         href: update-recurring-appointment.md
-      - name: Link custom attributes of the recurring appointment master and appointment entities
+      - name: Link custom columns of the recurring appointment master and appointment tables
         href: link-custom-attributes-recurring-master-appointment-entities.md
-  - name: Annotation (note) entity
+  - name: Annotation (note) table
     href: annotation-note-entity.md
-  - name: Calendar entities
+  - name: Calendar tables
     href: calendar-entities.md
     items:
     - name: Types of calendars
       href: types-calendars.md
-  - name: Queue entities
+  - name: Queue tables
     href: queue-entities.md
-  - name: Subject entity
+  - name: Subject table
     href: subject-entity.md
   - name: Apply Service Level Agreements (SLAs)
     href: apply-slas-entities.md
-  - name: Transaction Currency (currency) entity
+  - name: Transaction Currency (currency) table
     href: transaction-currency-currency-entity.md
-  - name: Category entity
+  - name: Category table
     href: use-category-entity.md
-  - name: Feedback entity
+  - name: Catalog & CatalogAssignment (preview)
+    href: catalog-catalogassignment.md
+  - name: Feedback table
     href: use-feedback-entity-manage-feedback-ratings-records.md
-  - name: User and team entities
+  - name: User and team tables
     href: user-team-entities.md
     items:
     - name: Specify time zone settings for a user
       href: specify-time-zone-settings-user.md
-    - name: Time zone entities
+    - name: Time zone tables
       href: time-zone-entities.md
-    - name: BusinessUnit entity
+    - name: BusinessUnit table
       href: businessunit-entity.md
-    - name: Field security entities
+    - name: Field security tables
       href: field-security-entities.md
     - name: Use access teams and owner teams to collaborate and share information
       href: use-access-teams-owner-teams-collaborate-share-information.md
-  - name: Template entities
+  - name: Template tables
     href: upload-manage-document-templates.md
-- name: Work with metadata using code
+- name: Work with table definitions using code
   href: metadata-services.md
   items:
-  - name: Browse your environment metadata
+  - name: Browse table definitions in your environment
     href: browse-your-metadata.md
-  - name: Entity metadata
+  - name: Table definitions
     href: entity-metadata.md
     items:
-    - name: Customize entity metadata
+    - name: Customize table definitions
       href: customize-entity-metadata.md
-    - name: Define alternate keys for an entity
+    - name: Define alternate keys for a table
       href: define-alternate-keys-entity.md
-  - name: Attribute metadata 
+  - name: Column definitions 
     href: entity-attribute-metadata.md
     items:
-    - name: Entity attribute metadata messages
+    - name: Table column definitions messages
       href: entity-attribute-metadata-messages.md
-    - name: Behavior and format of the date and time attribute
+    - name: Behavior and format of the date and time column
       href: behavior-format-date-time-attribute.md
-    - name: Calculated and rollup attributes
+    - name: Calculated and rollup columns
       href: calculated-rollup-attributes.md
-    - name: Create auto-number attributes
+    - name: Create auto-number columns
       href: create-auto-number-attributes.md
-    - name: Multi-Select Picklist attributes
+    - name: Choices
       href: multi-select-picklist.md
-    - name: File attributes
+    - name: File columns
       href: file-attributes.md
-    - name: Image attributes
+    - name: Image columns
       href: image-attributes.md
     - name: Define custom state model transitions
       href: define-custom-state-model-transitions.md
-  - name: Entity relationships metadata
+  - name: Table relationships definitions
     href: entity-relationship-metadata.md
     items:
-    - name: Entity relationship eligibility
+    - name: Table relationship eligibility
       href: entity-relationship-eligibility.md
-    - name: Entity relationship metadata messages
+    - name: Table relationship definition messages
       href: entity-relationship-metadata-messages.md
-    - name: Entity relationship cascading behavior
+    - name: Table relationship cascading behavior
       href: configure-entity-relationship-cascading-behavior.md
-  - name: Customize entity and attribute mappings
+  - name: Customize table and column mappings
     href: customize-entity-attribute-mappings.md
   - name: Use connections to link records to each other
     href: connection-entities.md
     items:
-    - name: Describe a relationship between entities with connection roles
+    - name: Describe a relationship between tables with connection roles
       href: describe-relationship-entities-connection-roles.md
   - name: Customize labels to support multiple languages
     href: customize-labels-support-multiple-languages.md
@@ -351,6 +374,8 @@
       href: appendix-app-design-best-practices-checklist.md
     - name: 'Appendix: App certification checklist'
       href: appendix-app-certification-checklist.md
+    - name: 'Appendix: Add licensing information to your solution'
+      href: appendix-add-license-information-to-your-solution.md
   - name: Monitor your app in ISV Studio
     items:
     - name: Introduction to ISV Studio
@@ -372,14 +397,14 @@
 - name: Create client applications
   href: connect-dataverse.md
   items:
-  - name: Authenticate
+  - name: Authenticate apps and services with Microsoft Dataverse
     href: authentication.md
     items:
     - name: .NET Framework applications
       href: authenticate-dot-net-framework.md
     - name: Use OAuth
       href: authenticate-oauth.md
-    - name: Microsoft 365 authentication with WS-Trust
+    - name: Use Office365 (WS-Trust)
       href: authenticate-office365-deprecation.md
   - name: "Tutorial: Register an app with Azure Active Directory"
     href: walkthrough-register-app-azure-active-directory.md
@@ -419,15 +444,17 @@
     items:
     - name: Download tools from NuGet 
       href: download-tools-nuget.md
-    - name: Install Power Apps CLI
+    - name: Microsoft Power Platform CLI 
       href: powerapps-cli.md
+    - name: Power Platform Tools for Visual Studio
+      href: ./tools/devtools-install.md
   - name: Community Tools
     href: community-tools.md
   - name: Testing tools
     href: testing-tools-server.md
 - name: Reference
   items:
-  - name: Entity reference
+  - name: Table/entity reference
     href: reference/entities/toc.yml
   - name: Web API Reference
     href: /dynamics365/customer-engagement/web-api/about
@@ -435,7 +462,7 @@
     href: /dotnet/api/?view=dynamics-general-ce-9
   - name: XRM Tooling
     href: /dotnet/api/?view=dynamics-xrmtooling-ce-9
-  - name: Virtual Entity
+  - name: Virtual Table
     href: /dotnet/api/?view=dynamics-virtualentity-ce-9
   - name: Workflow
     href: /dotnet/api/?view=dynamics-workflow-ce-9 
@@ -443,7 +470,5 @@
     href: /dotnet/api/?view=dynamics-deployer-ce-9
   - name: Customization solutions file schema
     href: customization-solutions-file-schema.md
-  - name: Solution component file reference (SolutionPackager) 
-    href: solution-component-file-reference-solutionpackager.md
   - name: FetchXML schema
     href: fetchxml-schema.md

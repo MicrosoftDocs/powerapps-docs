@@ -1,8 +1,8 @@
 ---
-title: "Retrieve and detect changes to metadata (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "The classes in the Query namespace and the RetrieveMetadataChangesRequest and RetrieveMetadataChangesResponse classes let you build efficient metadata queries and capture changes to metadata as they occur over time." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Retrieve and detect changes to table definitions (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "The classes in the Query namespace, and the RetrieveMetadataChangesRequest and RetrieveMetadataChangesResponse classes, let you build efficient queries and capture changes to table and column definitions (metadata) as they occur over time." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 06/10/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -15,25 +15,24 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Retrieve and detect changes to metadata
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+# Retrieve and detect changes to table definitions
 
-The classes in the <xref:Microsoft.Xrm.Sdk.Metadata.Query> namespace and the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMetadataChangesRequest> and <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMetadataChangesResponse> classes let you build efficient metadata queries and capture changes to metadata as they occur over time.  
+[!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
+
+The classes in the <xref:Microsoft.Xrm.Sdk.Metadata.Query> namespace, and the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMetadataChangesRequest> and <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMetadataChangesResponse> classes, let you build efficient queries and capture changes to table and column definitions (metadata) as they occur over time.  
   
- All code examples referenced in this document are found in [Sample: Query Metadata and Detect Changes](/dynamics365/customer-engagement/developer/org-service/sample-query-metadata-detect-changes).  
-  
- The technical article [Query Metadata Using JavaScript](https://msdn.microsoft.com/library/jj919080.aspx) provides a JavaScript library to use the objects and messages in client-sided code.  
+ All code examples referenced in this document are found in [Query and detect definition (metadata) changes](samples/query-metadata-changes.md).
   
 <a name="BKMK_MetadataStrategies"></a> 
   
-## Strategies for using metadata  
+## Strategies for using definitions
 
- Metadata lets you create applications that adapt as the Microsoft Dataverse data model changes. Metadata is important for the following types of application:  
+ Table and column definitions lets you create applications that adapt as the Microsoft Dataverse data model changes. Definitions are important for the following types of application:  
   
 -   UI for client applications  
   
--   Integration tools that have to map Dynamics 365 data to external systems  
+-   Integration tools that have to map Dataverse data to external systems  
   
 -   Development tools  
   
@@ -41,27 +40,27 @@ The classes in the <xref:Microsoft.Xrm.Sdk.Metadata.Query> namespace and the <xr
   
 ### Lightweight query
   
- An example of a lightweight query is when you have a custom web resource UI that provides a select control to display the current options in a Dynamics 365 Option Set (Picklist) attribute. You do not want to hard-code these options because you would have to update that code if the available options are ever changed. Instead you can construct a query to just retrieve those options values and labels from the metadata.  
+ An example of a lightweight query is when you have a custom web resource UI that provides a select control to display the current choice in a Dataverse choices (picklist) column. You do not want to hard-code these choices because you would have to update that code if the available choices are ever changed. Instead you can construct a query to just retrieve those choice values and labels from the definition.  
   
- You do not have to cache this data because you can use the <xref:Microsoft.Xrm.Sdk.Metadata.Query> classes to retrieve this data directly from the Dynamics 365 application cache.  
+ You do not have to cache this data because you can use the <xref:Microsoft.Xrm.Sdk.Metadata.Query> classes to retrieve this data directly from the Dataverse application cache.  
   
-### Persistent metadata cache
+### Persistent definition (metadata) cache
   
- When you have an application that must be able to work while disconnected from the Dynamics 365 Server, or that is sensitive to limited network bandwidth between the client and the server, such as a mobile application, you will want to implement a persistent metadata cache.  
+ When you have an application that must be able to work while disconnected from the Dataverse server, or that is sensitive to limited network bandwidth between the client and the server, such as a mobile application, you will want to implement a persistent metadata cache.  
   
  With a persistent metadata cache your application will have to query all the necessary metadata the first time it connects. Then you will save that data in the application. The next time the application connects to the server you can retrieve just the difference since your last query, which should be much less data to transmit, and then merge the changes into your metadata cache when your application is loading.  
   
  How frequently you should poll for metadata changes depends on the expected volatility of metadata for your application and how long your application will remaining running. There is no event available that you can use to detect when metadata changes occur. There is a limit to the number of days that deleted metadata changes are saved and a request for changes that occurs beyond that limit will require a full re-initialization of the metadata cache. For more information see [Deleted metadata expiration](/dynamics365/customer-engagement/developer/retrieve-detect-changes-metadata#BKMK_DeletedMetadataExpiration).  
   
- When there are no changes the query should respond quickly and there will be no data to transmit back. However, if there are changes, especially if there are deleted metadata items that have to be removed from your cache, you can expect that the request may take some additional time to finish. More information: [Performance When Retrieving Deleted Metadata](/dynamics365/customer-engagement/developer/retrieve-detect-changes-metadata#BKMK_PerformanceRetrievingDeletedMetadata)  
+ When there are no changes the query should respond quickly and there will be no data to transmit back. However, if there are changes, especially if there are deleted metadata items that have to be removed from your cache, you can expect that the request may take some additional time to finish. More information: [Performance when retrieving deleted metadata](/dynamics365/customer-engagement/developer/retrieve-detect-changes-metadata#BKMK_PerformanceRetrievingDeletedMetadata)  
   
 <a name="BKMK_RetrieveJusttheMetadataYouNeed"></a>
-   
-## Retrieve only the metadata you need  
+
+## Retrieve only the definitions you need
 
  Metadata is frequently retrieved or synchronized when an application starts and can affect the time the application takes to load. This is particularly true for mobile applications retrieving metadata for the first time. Retrieving only the metadata you need is very important to create an application that performs well.  
   
- The <xref:Microsoft.Xrm.Sdk.Metadata.Query.EntityQueryExpression> class provides a structure consistent with the <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> class you use to create complex queries to retrieve entity data. Unlike the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveAllEntitiesRequest>, <xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityRequest>,  <xref:Microsoft.Xrm.Sdk.Messages.RetrieveAttributeRequest>, or <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRelationshipRequest> classes, the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMetadataChangesRequest> contains a `Query` parameter that accepts an <xref:Microsoft.Xrm.Sdk.Metadata.Query.EntityQueryExpression> instance that you can use to specify specific criteria for the data to return in addition to which properties you want. You can use <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMetadataChangesRequest> to return the full set of metadata that you get using the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveAllEntitiesRequest>, or just a label for a specific attribute.  
+ The <xref:Microsoft.Xrm.Sdk.Metadata.Query.EntityQueryExpression> class provides a structure consistent with the <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> class you use to create complex queries to retrieve table data. Unlike the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveAllEntitiesRequest>, <xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityRequest>,  <xref:Microsoft.Xrm.Sdk.Messages.RetrieveAttributeRequest>, or <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRelationshipRequest> classes, the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMetadataChangesRequest> contains a `Query` parameter that accepts an <xref:Microsoft.Xrm.Sdk.Metadata.Query.EntityQueryExpression> instance that you can use to specify specific criteria for the data to return in addition to which properties you want. You can use <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMetadataChangesRequest> to return the full set of metadata that you get using the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveAllEntitiesRequest>, or just a label for a specific attribute.  
   
 ### Specify your filter criteria  
 
@@ -90,10 +89,10 @@ The classes in the <xref:Microsoft.Xrm.Sdk.Metadata.Query> namespace and the <xr
 |<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.Attributes>|<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.Description>|<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.DisplayCollectionName>|<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.DisplayName>|  
 |<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.ManyToManyRelationships>|<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.ManyToOneRelationships>|<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.OneToManyRelationships>|<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.Privileges>|  
   
- The following example shows a <xref:Microsoft.Xrm.Sdk.Metadata.Query.MetadataFilterExpression> that will return a set of non-intersect, user-owned entities not included in a list of entities to exclude:  
+ The following code example shows a <xref:Microsoft.Xrm.Sdk.Metadata.Query.MetadataFilterExpression> that will return a set of non-intersect, user-owned tables not included in a list of tables to exclude:  
   
  ```csharp
-   // An array SchemaName values for non-intersect, user-owned entities that should not be returned.
+   // An array of SchemaName values for non-intersect, user-owned entities that should not be returned.
      String[] excludedEntities = {
 "WorkflowLog",
 "Template",
@@ -153,7 +152,7 @@ The classes in the <xref:Microsoft.Xrm.Sdk.Metadata.Query> namespace and the <xr
   
  The strongly typed objects returned will include all properties, but only those that you request will have data. All other properties will be null, with the following few exceptions: every item of metadata will include the <xref:Microsoft.Xrm.Sdk.Metadata.MetadataBase.MetadataId> ,`LogicalName` and <xref:Microsoft.Xrm.Sdk.Metadata.MetadataBase.HasChanged> values if they exist for that item. You do not have to specify them in the <xref:Microsoft.Xrm.Sdk.Metadata.Query.MetadataQueryExpression.Properties> you request.  
   
- If you are not using managed code and are actually parsing the `responseXML` returned from the XMLHttpRequest you will get elements for each property but only those you request will contain data. The following XML shows the contact entity metadata xml that will be returned when `IsVisibleInMobile` is the only property requested.  
+ If you are not using managed code and are actually parsing the `responseXML` returned from the XMLHttpRequest you will get elements for each property but only those you request will contain data. The following XML shows the contact table metadata XML that will be returned when `IsVisibleInMobile` is the only property requested.  
   
 ```xml  
 <a:EntityMetadata>  
@@ -232,9 +231,9 @@ The classes in the <xref:Microsoft.Xrm.Sdk.Metadata.Query> namespace and the <xr
 </a:EntityMetadata>  
 ```  
   
- Metadata is returned in a hierarchical structure just as it is using the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveAllEntitiesRequest>. To access a specific attribute or relationship you must create a query that returns the entity they are part of. If you want to retrieve data about a specific attribute, you must include the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.Attributes> property in your <xref:Microsoft.Xrm.Sdk.Metadata.Query.EntityQueryExpression>.<xref:Microsoft.Xrm.Sdk.Metadata.Query.MetadataQueryExpression.Properties>. For the entity relationships to be returned, you must include one or more of the following <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata> properties:  <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.ManyToManyRelationships>,  <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.ManyToOneRelationships>, or <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.OneToManyRelationships>.  
+ Definitions are returned in a hierarchical structure just as it is using the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveAllEntitiesRequest>. To access a specific column or relationship you must create a query that returns the table they are part of. If you want to retrieve data about a specific column, you must include the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.Attributes> property in your <xref:Microsoft.Xrm.Sdk.Metadata.Query.EntityQueryExpression>.<xref:Microsoft.Xrm.Sdk.Metadata.Query.MetadataQueryExpression.Properties>. For the table relationships to be returned, you must include one or more of the following <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata> properties:  <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.ManyToManyRelationships>,  <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.ManyToOneRelationships>, or <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.OneToManyRelationships>.  
   
- The following example will return the `Attributes` property for requested entities:  
+ The following code example will return the `Attributes` property for requested tables:  
   
 ```csharp
 //A properties expression to limit the properties to be included with entities
@@ -245,9 +244,9 @@ MetadataPropertiesExpression EntityProperties = new MetadataPropertiesExpression
 EntityProperties.PropertyNames.AddRange(new string[] { "Attributes" });
 ```
 
-### Retrieve attribute metadata 
- 
- The <xref:Microsoft.Xrm.Sdk.Metadata.Query.EntityQueryExpression>.<xref:Microsoft.Xrm.Sdk.Metadata.Query.EntityQueryExpression.AttributeQuery> property accepts an <xref:Microsoft.Xrm.Sdk.Metadata.Query.AttributeQueryExpression> that defines <xref:Microsoft.Xrm.Sdk.Metadata.Query.MetadataQueryExpression.Criteria> and <xref:Microsoft.Xrm.Sdk.Metadata.Query.MetadataQueryExpression.Properties> for attributes to be returned for the entities that match the <xref:Microsoft.Xrm.Sdk.Metadata.Query.EntityQueryExpression><xref:Microsoft.Xrm.Sdk.Metadata.Query.MetadataQueryExpression.Criteria> and <xref:Microsoft.Xrm.Sdk.Metadata.Query.MetadataQueryExpression.Properties>.  
+### Retrieve column definitions
+
+ The <xref:Microsoft.Xrm.Sdk.Metadata.Query.EntityQueryExpression>.<xref:Microsoft.Xrm.Sdk.Metadata.Query.EntityQueryExpression.AttributeQuery> property accepts an <xref:Microsoft.Xrm.Sdk.Metadata.Query.AttributeQueryExpression> that defines <xref:Microsoft.Xrm.Sdk.Metadata.Query.MetadataQueryExpression.Criteria> and <xref:Microsoft.Xrm.Sdk.Metadata.Query.MetadataQueryExpression.Properties> for columns to be returned for the tables that match the <xref:Microsoft.Xrm.Sdk.Metadata.Query.EntityQueryExpression><xref:Microsoft.Xrm.Sdk.Metadata.Query.MetadataQueryExpression.Criteria> and <xref:Microsoft.Xrm.Sdk.Metadata.Query.MetadataQueryExpression.Properties>.  
   
  The following table lists <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata> properties that cannot be used in a <xref:Microsoft.Xrm.Sdk.Metadata.Query.MetadataFilterExpression>  
   
@@ -256,10 +255,10 @@ EntityProperties.PropertyNames.AddRange(new string[] { "Attributes" });
 |<xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.Description>|<xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.DisplayName>|  
 |<xref:Microsoft.Xrm.Sdk.Metadata.EnumAttributeMetadata.OptionSet>|<xref:Microsoft.Xrm.Sdk.Metadata.LookupAttributeMetadata.Targets>|  
   
- The following example will limit Attributes returned to only those that have an `OptionSet` and will only return the <xref:Microsoft.Xrm.Sdk.Metadata.EnumAttributeMetadata.OptionSet> and <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.AttributeType> properties for those attributes:  
+ The following code example will limit columns (attributes) returned to only those that have a choice (option set) and will only return the <xref:Microsoft.Xrm.Sdk.Metadata.EnumAttributeMetadata.OptionSet> and <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.AttributeType> properties for those columns:  
   
 ```csharp
-//A condition expresson to return optionset attributes
+//A condition expression to return optionset attributes
 MetadataConditionExpression[] optionsetAttributeTypes = new MetadataConditionExpression[] { 
 new MetadataConditionExpression("AttributeType", MetadataConditionOperator.Equals, AttributeTypeCode.Picklist),
 new MetadataConditionExpression("AttributeType", MetadataConditionOperator.Equals, AttributeTypeCode.State),
@@ -277,13 +276,13 @@ AttributeProperties.PropertyNames.Add("OptionSet");
 AttributeProperties.PropertyNames.Add("AttributeType");
 ```
   
-### Retrieve relationship metadata
+### Retrieve relationship definitions
   
- The <xref:Microsoft.Xrm.Sdk.Metadata.Query.EntityQueryExpression>.<xref:Microsoft.Xrm.Sdk.Metadata.Query.EntityQueryExpression.RelationshipQuery> property accepts a <xref:Microsoft.Xrm.Sdk.Metadata.Query.RelationshipQueryExpression> to specify the entity relationship <xref:Microsoft.Xrm.Sdk.Metadata.Query.MetadataQueryExpression.Criteria> and <xref:Microsoft.Xrm.Sdk.Metadata.Query.MetadataQueryExpression.Properties> you want for the entities that match the <xref:Microsoft.Xrm.Sdk.Metadata.Query.EntityQueryExpression><xref:Microsoft.Xrm.Sdk.Metadata.Query.MetadataQueryExpression.Criteria> and <xref:Microsoft.Xrm.Sdk.Metadata.Query.MetadataQueryExpression.Properties>.  
+ The <xref:Microsoft.Xrm.Sdk.Metadata.Query.EntityQueryExpression>.<xref:Microsoft.Xrm.Sdk.Metadata.Query.EntityQueryExpression.RelationshipQuery> property accepts a <xref:Microsoft.Xrm.Sdk.Metadata.Query.RelationshipQueryExpression> to specify the table relationship <xref:Microsoft.Xrm.Sdk.Metadata.Query.MetadataQueryExpression.Criteria> and <xref:Microsoft.Xrm.Sdk.Metadata.Query.MetadataQueryExpression.Properties> you want for the tables that match the <xref:Microsoft.Xrm.Sdk.Metadata.Query.EntityQueryExpression><xref:Microsoft.Xrm.Sdk.Metadata.Query.MetadataQueryExpression.Criteria> and <xref:Microsoft.Xrm.Sdk.Metadata.Query.MetadataQueryExpression.Properties>.  
   
- Use the <xref:Microsoft.Xrm.Sdk.Metadata.RelationshipMetadataBase.RelationshipType> property in your criteria to specify whether you want to return ManyToMany Relationships or OneToMany Relationships.  
+ Use the <xref:Microsoft.Xrm.Sdk.Metadata.RelationshipMetadataBase.RelationshipType> property in your criteria to specify whether you want to return many-to-many relationships or one-to-many relationships.  
   
- The following table lists Relationship metadata properties that cannot be used in a MetadataFilterExpression:  
+ The following table lists relationship metadata properties that cannot be used in a MetadataFilterExpression:  
   
 |Properties|  
 |-|  
@@ -294,7 +293,7 @@ AttributeProperties.PropertyNames.Add("AttributeType");
   
 ### Retrieve labels
   
- Finally, the <xref:Microsoft.Xrm.Sdk.Metadata.Query.EntityQueryExpression>.<xref:Microsoft.Xrm.Sdk.Metadata.Query.EntityQueryExpression.LabelQuery> property accepts a <xref:Microsoft.Xrm.Sdk.Metadata.Query.LabelQueryExpression> that lets you specify one or more integer `LCID` values for to determine which localized labels to return. Valid locale ID values can be found at [Locale ID (LCID) Chart](https://go.microsoft.com/fwlink/?LinkId=122128). If an organization has many language packs installed the labels for all languages will be returned unless you specify a <xref:Microsoft.Xrm.Sdk.Metadata.Query.EntityQueryExpression.LabelQuery>.  
+ Finally, the <xref:Microsoft.Xrm.Sdk.Metadata.Query.EntityQueryExpression>.<xref:Microsoft.Xrm.Sdk.Metadata.Query.EntityQueryExpression.LabelQuery> property accepts a <xref:Microsoft.Xrm.Sdk.Metadata.Query.LabelQueryExpression> that lets you specify one or more integer `LCID` values for to determine which localized labels to return. Valid locale ID values can be found at [Locale ID (LCID) Chart](/openspecs/office_standards/ms-oe376/6c085406-a698-4e12-9d4d-c3b0ee3dbc4a). If an organization has many language packs installed the labels for all languages will be returned unless you specify a <xref:Microsoft.Xrm.Sdk.Metadata.Query.EntityQueryExpression.LabelQuery>.  
   
  The following example defines a <xref:Microsoft.Xrm.Sdk.Metadata.Query.LabelQueryExpression> that will limit labels to only those representing the users preferred language.  
   
@@ -335,7 +334,7 @@ labelQuery.FilterLanguages.Add(_languageCode);
   
 <a name="BKMK_RetrievingNeworChangedMetadata"></a> 
   
-## Retrieve new or changed metadata
+## Retrieve new or changed definitions
 
  The <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMetadataChangesResponse> class returns a strongly typed <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadataCollection> that contains the requested data. The <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMetadataChangesResponse> class also provides a <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMetadataChangesResponse.ServerVersionStamp> value that you can pass to the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMetadataChangesRequest>.<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMetadataChangesRequest.ClientVersionStamp> property in later requests. When a value is included for the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMetadataChangesRequest.ClientVersionStamp> property, only data that matches the <xref:Microsoft.Xrm.Sdk.Metadata.Query.EntityQueryExpression> and has changed since the `ClientVersionStamp` was retrieved will be returned. The only exception to this is when your <xref:Microsoft.Xrm.Sdk.Metadata.Query.EntityQueryExpression>.<xref:Microsoft.Xrm.Sdk.Metadata.Query.MetadataQueryExpression.Properties> includes <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.Privileges>. Privileges will always be returned regardless of the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMetadataChangesRequest.ClientVersionStamp>. This way your application can determine whether any important changes have occurred that you care about since you last queried the metadata. You can then merge any new or changed metadata into your persistent metadata cache so that your application will be able to avoid the performance issues with downloading metadata you may not need.  
   
@@ -383,8 +382,8 @@ protected RetrieveMetadataChangesResponse getMetadataChanges(
 ```
 
 <a name="BKMK_RetrieveInformationaboutDeletedMetadata"></a>
-   
-## Retrieve information about deleted metadata  
+
+## Retrieve information about deleted definitions
 
  The <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMetadataChangesResponse>.<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMetadataChangesResponse.DeletedMetadata> property will return a <xref:Microsoft.Xrm.Sdk.Metadata.Query.DeletedMetadataCollection> when the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMetadataChangesRequest.ClientVersionStamp> and <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMetadataChangesRequest.DeletedMetadataFilters> properties are set on the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMetadataChangesRequest>. The <xref:Microsoft.Xrm.Sdk.Metadata.Query.DeletedMetadataCollection> contains the <xref:Microsoft.Xrm.Sdk.Metadata.MetadataBase.MetadataId> values of any <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata>,  <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata> or <xref:Microsoft.Xrm.Sdk.Metadata.RelationshipMetadataBase> objects that have been deleted from the system in a time limit. For more information, see [Deleted metadata expiration](/dynamics365/customer-engagement/developer/retrieve-detect-changes-metadata#BKMK_DeletedMetadataExpiration).  
   
@@ -405,8 +404,8 @@ protected RetrieveMetadataChangesResponse getMetadataChanges(
  When you design a metadata cache you will want to use the <xref:Microsoft.Xrm.Sdk.Metadata.MetadataBase.MetadataId> for each item so that you can identify deleted metadata items and remove them.  
   
 <a name="BKMK_DeletedMetadataExpiration"></a>
-   
-### Deleted metadata expiration  
+
+### Deleted definition expiration
 
  Any metadata items that are deleted are tracked for a limited period of time specified by the `Organization.ExpireSubscriptionsInDays` value. By default this value is 90 days. If the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMetadataChangesRequest>.<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMetadataChangesRequest.ClientVersionStamp> value indicates that the last metadata query was from before the expiration date, the service will throw an `ExpiredVersionStamp` error (0x80044352), When you are retrieving data to refresh and existing metadata cache you should always try to catch this error and be prepared to re-initialize your metadata cache with the results from a second request passed without a <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMetadataChangesRequest.ClientVersionStamp>. The `ExpiredVersionStamp` error is also thrown when changes on the server, such as changes to the `ExpireSubscriptionsInDays` value, affect accurately tracking the deleted metadata.  
   
@@ -451,20 +450,19 @@ protected String updateOptionLabelList(EntityQueryExpression entityQueryExpressi
 
   
 <a name="BKMK_PerformanceRetrievingDeletedMetadata"></a>
-   
-### Performance when retrieving deleted metadata 
- 
- When a metadata item is deleted it is saved in the database and not in the Dynamics 365 metadata cache. Although the deleted metadata is limited to just the <xref:Microsoft.Xrm.Sdk.Metadata.MetadataBase.MetadataId> and the type of metadata item, accessing the database is an operation that will require more server resources than just querying for changes.  
-  
-### See also  
- [Write Applications and Server Extensions](/dynamics365/customer-engagement/developer/extend-dynamics-365-server)   
- [Offline Use of the Dynamics 365 Services](/dynamics365/customer-engagement/developer/org-service/offline-use-services)   
- [Sample: Query Metadata and Detect Changes](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/MetadataQuery)   
- [Extend the Metadata Model for Dynamics 365](/dynamics365/customer-engagement/developer/org-service/use-organization-service-metadata)   
- [Customize Entity Metadata](/dynamics365/customer-engagement/developer/customize-entity-metadata)   
- [Customize Entity Attribute Metadata](/dynamics365/customer-engagement/developer/customize-entity-attribute-metadata)   
- [Customize Entity Relationship Metadata](/dynamics365/customer-engagement/developer/customize-entity-relationship-metadata)   
- [Query Metadata Using JavaScript](https://msdn.microsoft.com/library/jj919080.aspx)
 
+### Performance when retrieving deleted definitions
+
+ When a metadata item is deleted it is saved in the database and not in the Dataverse metadata cache. Although the deleted metadata is limited to just the <xref:Microsoft.Xrm.Sdk.Metadata.MetadataBase.MetadataId> and the type of metadata item, accessing the database is an operation that will require more server resources than just querying for changes.  
+  
+### See also
+
+ [Extend Dynamics 365 Customer Engagement (on-premises)](/dynamics365/customer-engagement/developer/extend-dynamics-365-server)   
+ [Offline use of the Dynamics 365 services](/dynamics365/customer-engagement/developer/org-service/offline-use-services)   
+ [Query and detect definition (metadata) changes](samples/query-metadata-changes.md)   
+ [Use the Organization service with metadata](/dynamics365/customer-engagement/developer/org-service/use-organization-service-metadata)   
+ [Customize entity metadata](/dynamics365/customer-engagement/developer/customize-entity-metadata)   
+ [Customize entity attribute metadata](/dynamics365/customer-engagement/developer/customize-entity-attribute-metadata)   
+ [Customize entity relationship metadata](/dynamics365/customer-engagement/developer/customize-entity-relationship-metadata)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

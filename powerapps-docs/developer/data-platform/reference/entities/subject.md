@@ -1,22 +1,24 @@
 ---
-title: "Subject entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the Subject table."
-ms.date: 11/14/2020
+title: "Subject table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the Subject table/entity."
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# Subject entity reference
+
+# Subject table/entity reference
 
 > [!NOTE]
-> Effective Nov 2020, Common Data Service has been renamed to [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro).
+> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
 Information regarding subjects available in the system.
 
@@ -25,13 +27,13 @@ Information regarding subjects available in the system.
 
 |Message|Web API Operation|SDK Assembly|
 |-|-|-|
-|Create|POST [*org URI*]/api/data/v9.0/subjects<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/subjects(*subjectid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/subjects(*subjectid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/subjects<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|Update|PATCH [*org URI*]/api/data/v9.0/subjects(*subjectid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|Create|POST [*org URI*]/api/data/v9.0/subjects<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE [*org URI*]/api/data/v9.0/subjects(*subjectid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|Retrieve|GET [*org URI*]/api/data/v9.0/subjects(*subjectid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/subjects<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|Update|PATCH [*org URI*]/api/data/v9.0/subjects(*subjectid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
-## Entity properties
+## Properties
 
 |Property|Value|
 |--------|-----|
@@ -49,9 +51,9 @@ Information regarding subjects available in the system.
 
 <a name="writable-attributes"></a>
 
-## Writable attributes
+## Writable columns/attributes
 
-These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
+These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [Description](#BKMK_Description)
 - [FeatureMask](#BKMK_FeatureMask)
@@ -172,9 +174,9 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 <a name="read-only-attributes"></a>
 
-## Read-only attributes
+## Read-only columns/attributes
 
-These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [CreatedBy](#BKMK_CreatedBy)
 - [CreatedByExternalParty](#BKMK_CreatedByExternalParty)
@@ -586,7 +588,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_Subject_AsyncOperations"></a> Subject_AsyncOperations
 
-Same as asyncoperation entity [Subject_AsyncOperations](asyncoperation.md#BKMK_Subject_AsyncOperations) Many-To-One relationship.
+Same as asyncoperation table [Subject_AsyncOperations](asyncoperation.md#BKMK_Subject_AsyncOperations) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -601,7 +603,7 @@ Same as asyncoperation entity [Subject_AsyncOperations](asyncoperation.md#BKMK_S
 
 ### <a name="BKMK_subject_knowledgearticles"></a> subject_knowledgearticles
 
-Same as knowledgearticle entity [subject_knowledgearticles](knowledgearticle.md#BKMK_subject_knowledgearticles) Many-To-One relationship.
+Same as knowledgearticle table [subject_knowledgearticles](knowledgearticle.md#BKMK_subject_knowledgearticles) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -616,7 +618,7 @@ Same as knowledgearticle entity [subject_knowledgearticles](knowledgearticle.md#
 
 ### <a name="BKMK_Subject_BulkDeleteFailures"></a> Subject_BulkDeleteFailures
 
-Same as bulkdeletefailure entity [Subject_BulkDeleteFailures](bulkdeletefailure.md#BKMK_Subject_BulkDeleteFailures) Many-To-One relationship.
+Same as bulkdeletefailure table [Subject_BulkDeleteFailures](bulkdeletefailure.md#BKMK_Subject_BulkDeleteFailures) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -631,7 +633,7 @@ Same as bulkdeletefailure entity [Subject_BulkDeleteFailures](bulkdeletefailure.
 
 ### <a name="BKMK_Subject_ProcessSessions"></a> Subject_ProcessSessions
 
-Same as processsession entity [Subject_ProcessSessions](processsession.md#BKMK_Subject_ProcessSessions) Many-To-One relationship.
+Same as processsession table [Subject_ProcessSessions](processsession.md#BKMK_Subject_ProcessSessions) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -646,7 +648,7 @@ Same as processsession entity [Subject_ProcessSessions](processsession.md#BKMK_S
 
 ### <a name="BKMK_Subject_SyncErrors"></a> Subject_SyncErrors
 
-Same as syncerror entity [Subject_SyncErrors](syncerror.md#BKMK_Subject_SyncErrors) Many-To-One relationship.
+Same as syncerror table [Subject_SyncErrors](syncerror.md#BKMK_Subject_SyncErrors) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -661,7 +663,7 @@ Same as syncerror entity [Subject_SyncErrors](syncerror.md#BKMK_Subject_SyncErro
 
 ### <a name="BKMK_subject_parent_subject"></a> subject_parent_subject
 
-Same as subject entity [subject_parent_subject](subject.md#BKMK_subject_parent_subject) Many-To-One relationship.
+Same as subject table [subject_parent_subject](subject.md#BKMK_subject_parent_subject) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -676,7 +678,7 @@ Same as subject entity [subject_parent_subject](subject.md#BKMK_subject_parent_s
 
 ### <a name="BKMK_subject_kb_articles"></a> subject_kb_articles
 
-Same as kbarticle entity [subject_kb_articles](kbarticle.md#BKMK_subject_kb_articles) Many-To-One relationship.
+Same as kbarticle table [subject_kb_articles](kbarticle.md#BKMK_subject_kb_articles) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -693,7 +695,7 @@ Same as kbarticle entity [subject_kb_articles](kbarticle.md#BKMK_subject_kb_arti
 
 **Added by**: Knowledge Management Features Solution
 
-Same as msdyn_knowledgearticletemplate entity [msdyn_subject_knowledgearticletemplate_subjectid](msdyn_knowledgearticletemplate.md#BKMK_msdyn_subject_knowledgearticletemplate_subjectid) Many-To-One relationship.
+Same as msdyn_knowledgearticletemplate table [msdyn_subject_knowledgearticletemplate_subjectid](msdyn_knowledgearticletemplate.md#BKMK_msdyn_subject_knowledgearticletemplate_subjectid) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -709,7 +711,7 @@ Same as msdyn_knowledgearticletemplate entity [msdyn_subject_knowledgearticletem
 
 ## Many-To-One Relationships
 
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related entity. Listed by **SchemaName**.
+Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
 
 - [lk_subjectbase_modifiedby](#BKMK_lk_subjectbase_modifiedby)
 - [lk_subjectbase_createdby](#BKMK_lk_subjectbase_createdby)
@@ -721,32 +723,30 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_subjectbase_modifiedby"></a> lk_subjectbase_modifiedby
 
-See systemuser Entity [lk_subjectbase_modifiedby](systemuser.md#BKMK_lk_subjectbase_modifiedby) One-To-Many relationship.
+See systemuser Table [lk_subjectbase_modifiedby](systemuser.md#BKMK_lk_subjectbase_modifiedby) One-To-Many relationship.
 
 ### <a name="BKMK_lk_subjectbase_createdby"></a> lk_subjectbase_createdby
 
-See systemuser Entity [lk_subjectbase_createdby](systemuser.md#BKMK_lk_subjectbase_createdby) One-To-Many relationship.
+See systemuser Table [lk_subjectbase_createdby](systemuser.md#BKMK_lk_subjectbase_createdby) One-To-Many relationship.
 
 ### <a name="BKMK_organization_subjects"></a> organization_subjects
 
-See organization Entity [organization_subjects](organization.md#BKMK_organization_subjects) One-To-Many relationship.
+See organization Table [organization_subjects](organization.md#BKMK_organization_subjects) One-To-Many relationship.
 
 ### <a name="BKMK_lk_subject_createdonbehalfby"></a> lk_subject_createdonbehalfby
 
-See systemuser Entity [lk_subject_createdonbehalfby](systemuser.md#BKMK_lk_subject_createdonbehalfby) One-To-Many relationship.
+See systemuser Table [lk_subject_createdonbehalfby](systemuser.md#BKMK_lk_subject_createdonbehalfby) One-To-Many relationship.
 
 ### <a name="BKMK_subject_parent_subject"></a> subject_parent_subject
 
-See subject Entity [subject_parent_subject](subject.md#BKMK_subject_parent_subject) One-To-Many relationship.
+See subject Table [subject_parent_subject](subject.md#BKMK_subject_parent_subject) One-To-Many relationship.
 
 ### <a name="BKMK_lk_subject_modifiedonbehalfby"></a> lk_subject_modifiedonbehalfby
 
-See systemuser Entity [lk_subject_modifiedonbehalfby](systemuser.md#BKMK_lk_subject_modifiedonbehalfby) One-To-Many relationship.
+See systemuser Table [lk_subject_modifiedonbehalfby](systemuser.md#BKMK_lk_subject_modifiedonbehalfby) One-To-Many relationship.
 
 ### See also
 
-[About entity reference](../about-entity-reference.md)<br />
-[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About the table reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.subject?text=subject EntityType" />
-
-[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

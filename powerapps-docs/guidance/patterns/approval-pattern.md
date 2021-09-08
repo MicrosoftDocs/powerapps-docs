@@ -6,24 +6,25 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: guidance
 ms.date: 01/04/2021
+ms.subservice: guidance
 ms.author: phtopnes
 ms.reviewer: kathyos
 ---
 
 # Pattern: Approval
 
-<!--![Collage of approval app screenshots](media/approvals-collage.jpg "Collage of approval app screenshots")-->
+<!--![Collage of approval app screenshots.](media/approvals-collage.jpg "Collage of approval app screenshots")-->
 
 Power Apps makers use the approval pattern to ensure that data, decisions,
 and documents are reviewed by a stakeholder or multiple stakeholders, either all at
 once or in sequence. Although the approval pattern can be valuable on its own, it's
 frequently combined with other patterns, especially the [inspection or audit pattern](/inspection-pattern).
-Approvals can be easily implemented with [Power Automate approval workflows](https://docs.microsoft.com/power-automate/modern-approvals), but
+Approvals can be easily implemented with [Power Automate approval workflows](/power-automate/modern-approvals), but
 can also be implemented with capability you build into your app.
 
 ## How to recognize the approval pattern
 
-![Illustration of the approval pattern with request, review, and respond steps](media/approval-illustration.png "Illustration of the project management pattern with request, review, and respond steps")
+![Illustration of the approval pattern with request, review, and respond steps.](media/approval-illustration.png "Illustration of the project management pattern with request, review, and respond steps")
 
 In a typical approval scenario:
 
@@ -72,7 +73,7 @@ addition to the approval notification over email and in the Microsoft Flow
 mobile app. Executive approvers have quickly taken to the ability to approve
 requests on their mobile devices.
 
-![Screenshot of a Power Automate flow for finding a manager to approve a travel request](media/toyota-travel-request-flow.png "Screenshot of a Power Automate flow for finding a manager to approve a travel request")
+![Screenshot of a Power Automate flow for finding a manager to approve a travel request.](media/toyota-travel-request-flow.png "Screenshot of a Power Automate flow for finding a manager to approve a travel request")
 
 ### T-Mobile Orbit app for customer initiative approvals
 
@@ -93,7 +94,7 @@ This app uses a customizable view of Power Automate approvals within a canvas
 app. [Find out how](https://powerapps.microsoft.com/blog/building-an-approval-experience-in-canvas-apps/)
 to deploy this capability in your own apps.
 
-![Screenshot of the T-Mobile Orbit app](media/tmobile-orbit-app.jpg "Screenshot of the T-Mobile Orbit app")
+![Screenshot of the T-Mobile Orbit app.](media/tmobile-orbit-app.jpg "Screenshot of the T-Mobile Orbit app")
 
 ### Virgin Atlantic employee credit card approvals
 
@@ -106,7 +107,7 @@ manager to approve. This process was previously managed by using paper forms, wh
 were printed out and handed to the Procurement team. It has now been digitized
 by using Power Apps.
 
-![Screenshot of the Virgin Atlantic credit card application app](media/virgin-atlantic-credt-card-app.png "Screenshot of the Virgin Atlantic credit card application app")
+![Screenshot of the Virgin Atlantic credit card application app.](media/virgin-atlantic-credt-card-app.png "Screenshot of the Virgin Atlantic credit card application app")
 
 ## Template: Microsoft Building Access app
 
@@ -124,10 +125,10 @@ Microsoft Power Platform environment.](https://aka.ms/BuildingAccessApp)
 
 :::row:::
    :::column span="":::
-      ![Screenshot of the Building Access app request screen](media/microsoft-building-app-request.png "Screenshot of the Building Access app request screen")
+      ![Screenshot of the Building Access app request screen.](media/microsoft-building-app-request.png "Screenshot of the Building Access app request screen")
    :::column-end:::
    :::column span="":::
-      ![Screenshot of the Building Access app approvals screen](media/microsoft-building-app-approvals.png "Screenshot of the Building Access app approvals screen")
+      ![Screenshot of the Building Access app approvals screen.](media/microsoft-building-app-approvals.png "Screenshot of the Building Access app approvals screen")
    :::column-end:::
 :::row-end:::
 

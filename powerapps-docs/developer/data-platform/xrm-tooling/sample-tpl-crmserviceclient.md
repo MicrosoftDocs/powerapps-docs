@@ -2,7 +2,7 @@
 title: "Sample: Task Parallel Library with CrmServiceClient (Microsoft Dataverse)| Microsoft Docs"
 description: "Task Parallel Library (TPL) makes developers more productive by simplifying the process of adding parallelism and concurrency to applications. This sample demonstrates using this with CrmServiceClient"
 ms.custom: ""
-ms.date: 04/20/2020
+ms.date: 04/12/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.suite: ""
@@ -21,7 +21,7 @@ search.app:
 ---
 # Sample: Task Parallel Library with CrmServiceClient
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+[!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
 Task Parallel Library (TPL) makes developers more productive by simplifying the process of adding parallelism and concurrency to applications.
 
@@ -43,9 +43,9 @@ More information: [Service Protection API Limits](../api-limits.md)
 
 The [CrmServiceClient.Clone Method](/dotnet/api/microsoft.xrm.tooling.connector.crmserviceclient.clone) enables TPL to use the client with multiple threads.
 
-This simple sample will generate a number of account entity records using the [System.Threading.Tasks.Parallel.ForEach Method](/dotnet/api/system.threading.tasks.parallel.foreach).
+This simple sample will generate a number of account table records using the [System.Threading.Tasks.Parallel.ForEach Method](/dotnet/api/system.threading.tasks.parallel.foreach).
 
-Then it will use that technique again to delete the entities created.
+Then it will use that technique again to delete the tables created.
 
 **NOTE**:
 > By default, this sample will create only 10 records, which is not enough to hit the service protection api limit errors. If you raise the `numberOfRecords` variable value to 10000, you can use Fiddler to observe how some of the requests will be rejected and re-tried.
@@ -277,6 +277,5 @@ private static void DeleteEntities(CrmServiceClient svc, List<EntityReference> e
 ### More information
 
 [Task Parallel Library (TPL)](/dotnet/standard/parallel-programming/task-parallel-library-tpl)
-
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

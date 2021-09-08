@@ -1,6 +1,6 @@
 ---
-title: 'Export control and Import control: reference | Microsoft Docs'
-description: Information, including properties and examples, about the Export control and the Import control
+title: Export and Import controls in Power Apps
+description: Learn about the details, properties and examples of the Export and Import controls in Power Apps.
 author: chmoncay
 manager: kvivek
 ms.service: powerapps
@@ -8,13 +8,17 @@ ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 03/09/2020
+ms.subservice: canvas-maker
 ms.author: chmoncay
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - chmoncay
 ---
-# Export control and Import control in Power Apps
+# Export and Import controls in Power Apps
 Controls for exporting data to a local file and then importing that data into another app in Power Apps.
 
 ## Description
@@ -31,7 +35,7 @@ The export functionality isn't supported in web browsers.
 
 * The **Data** property is available for an **Export** control but not an **Import** control.
 
-**[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
+**[OnSelect](properties-core.md)** – Actions to perform when the user taps or clicks a control.
 
 ## Additional properties
 **[Align](properties-text.md)** – The location of text in relation to the horizontal center of its control.

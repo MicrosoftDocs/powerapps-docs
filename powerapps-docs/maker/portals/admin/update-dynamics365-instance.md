@@ -1,13 +1,17 @@
 ---
-title: "Update the Dynamics 365 instance for your portal | MicrosoftDocs"
-description: "Information about how to update the Dynamics 365 instance for your portal."
+title: Update the Dynamics 365 instance for your portal
+description: Learn how to update the Dynamics 365 instance for your portal.
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/08/2021
+ms.date: 04/21/2021
+ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: tapanm
+contributors:
+    - neerajnandwana-msft
+    - tapanm-msft
 ---
 
 # Update the Dynamics 365 instance for your portal
@@ -23,21 +27,21 @@ You can use the Power Platform admin center to update the Dynamics 365 instance 
 
 1. Select **Update Dynamics 365 Instance**.
 
-    ![Update your Dynamics 365 instance](media/power-platform-admin-center/update-dynamics365-instance.png "Update your Dynamics 365 instance")
+    ![Update your Dynamics 365 instance.](media/power-platform-admin-center/update-dynamics365-instance.png "Update your Dynamics 365 instance")
 
 1. Select your existing instance and portal.
 
-    ![Select your Dynamics 365 instance](media/power-platform-admin-center/select-dynamics365-instance.png "Select your Dynamics 365 instance")
+    ![Select your Dynamics 365 instance.](media/power-platform-admin-center/select-dynamics365-instance.png "Select your Dynamics 365 instance")
 
 1. Select **OK**.
 
 1. Select **Submit** to confirm.
 
-    ![Submit Dynamics 365 solution update](media/power-platform-admin-center/submit-selection.png "Submit Dynamics 365 solution update")
+    ![Submit Dynamics 365 solution update.](media/power-platform-admin-center/submit-selection.png "Submit Dynamics 365 solution update")
 
     You'll see a confirmation that the update request is in progress.
 
-    ![Update request submitted](media/power-platform-admin-center/update-request-submitted.png "Update request submitted")
+    ![Update request submitted.](media/power-platform-admin-center/update-request-submitted.png "Update request submitted")
 
 The update might take a while after you select **Submit**. More information: [Upgrade a portal](upgrade-portal.md)
 

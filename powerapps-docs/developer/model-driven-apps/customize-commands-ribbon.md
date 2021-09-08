@@ -1,12 +1,14 @@
 ---
 title: "Customize commands and the ribbon (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
-description: "Microsoft Dataverse displays commands in different ways depending on the entity and the client. In most places in the web application, you will see a command bar instead of a ribbon. Dynamics 365 for tablets also uses data defined as ribbons to control what commands are available using a command bar that is optimized for touch." # 115-145 characters including spaces. This abstract displays in the search result."
+description: "Microsoft Dataverse displays commands in different ways depending on the table and the client. In most places in the web application, you will see a command bar instead of a ribbon. Dynamics 365 for tablets also uses data defined as ribbons to control what commands are available using a command bar that is optimized for touch." # 115-145 characters including spaces. This abstract displays in the search result."
 keywords: ""
-ms.date: 03/27/2020
+ms.date: 04/15/2021
 ms.service: powerapps
+ms.custom: "intro-internal"
 ms.topic: article
 ms.assetid: 926364b0-ede6-00e9-39d4-5aae5e00be0b
 author: Nkrb # GitHub ID
+ms.subservice: mda-developer
 ms.author: nabuthuk # MSFT alias of Microsoft employees only
 manager: shilpas # MSFT alias of manager or PM counterpart
 ms.reviewer: 
@@ -19,14 +21,12 @@ search.app:
 
 # Customize commands and the ribbon
 
-Microsoft Dataverse displays commands in different ways depending on the entity and the client. In most places in the web application, you will see a *command bar* instead of a ribbon. 
+Microsoft Dataverse displays commands in different ways depending on the table and the client. In most places in the web application, you will see a *command bar* instead of a ribbon. Dynamics 365 for Tablets also uses data defined as ribbons to control what commands are available using a command bar that is optimized for touch.  
+  
+The command bar provides better performance. The ribbon is still displayed in the web application for certain forms and it is still used for list views in Dynamics 365 for Outlook.  Both the command bar and the ribbon use the same underlying XML data to define what commands to display, when the commands are enabled, and what the commands do.  
 
-Dynamics 365 for Tablets also uses data defined as ribbons to control what commands are available using a command bar that is optimized for touch.  
-  
-The command bar provides better performance. The ribbon is still displayed in the web application for certain entity forms and it is still used for list views in Dynamics 365 for Outlook.  
-  
-Both the command bar and the ribbon use the same underlying XML data to define what commands to display, when the commands are enabled, and what the commands do.  
-  
+[!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
+
 The articles in this section introduce you to key concepts that you must understand, and common tasks you perform when you customize the command bar or the ribbon.  
   
 > [!NOTE]
@@ -34,7 +34,7 @@ The articles in this section introduce you to key concepts that you must underst
   
 ## Troubleshoot ribbon issues
 
-If you are experiencing an issue with a ribbon command bar button, use this [troubleshooting guide](https://support.microsoft.com/help/4552163) to find and solve the problem.
+If you are experiencing an issue with a ribbon command bar button, use this [troubleshooting guide](/troubleshoot/power-platform/power-apps/ribbon-issues-button-hidden?tabs=delete) to find and solve the problem.
 
 
 ## Community tool

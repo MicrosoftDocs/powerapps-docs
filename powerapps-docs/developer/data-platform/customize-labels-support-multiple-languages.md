@@ -2,11 +2,12 @@
 title: "Customize labels to support multiple languages (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about customizing labels to support multiple languages." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 03/11/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID
+ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -30,19 +31,19 @@ When you create customizations in Microsoft Dataverse, you can support multiple 
 |<xref:Microsoft.Xrm.Sdk.Label> class|<xref href="Microsoft.Dynamics.CRM.Label?text=Label ComplexType" />|
 |<xref:Microsoft.Xrm.Sdk.LocalizedLabel> class|<xref href="Microsoft.Dynamics.CRM.LocalizedLabel?text=LocalizedLabel ComplexType" />|
 
- Labels are localized strings displayed to users in the client applications. They are implemented by using `Label` (<xref href="Microsoft.Dynamics.CRM.Label?text=Label ComplexType" /> or <xref:Microsoft.Xrm.Sdk.Label> class), which supports language packs. Strings that are displayed to users, such as entity display names or options in an option set, can be stored in multiple languages. Users can select which language they want displayed in forms and views in Dataverse.  
+ Labels are localized strings displayed to users in the client applications. They are implemented by using `Label` (<xref href="Microsoft.Dynamics.CRM.Label?text=Label ComplexType" /> or <xref:Microsoft.Xrm.Sdk.Label> class), which supports language packs. Strings that are displayed to users, such as display names or choices, can be stored in multiple languages. Users can select which language they want displayed in forms and views in Dataverse.  
 
- The following table lists all of the metadata that uses the `Label`.  
+ The following table lists all of the table definitions that uses the `Label`.  
 
-|Metadata property|Description|  
+|Table definitions property|Description|  
 |-----------------------|-----------------|  
-|AttributeMetadata.Description|Description for an attribute.|  
-|AttributeMetadata.DisplayName|Display name for an attribute.|  
-|EntityMetadata.Description|Description for an entity.|  
-|EntityMetadata.DisplayCollectionName|Plural display name for an entity.|  
-|EntityMetadata.DisplayName|Display name for an entity.|  
-|AssociatedMenuConfiguration.Label|Label used for an entity in an entity relationship.|  
-|OptionMetadata.Label|Label used for an option in a picklist, state, or status attribute.|  
+|AttributeMetadata.Description|Description for a column.|  
+|AttributeMetadata.DisplayName|Display name for a column.|  
+|EntityMetadata.Description|Description for a table.|  
+|EntityMetadata.DisplayCollectionName|Plural display name for a table.|  
+|EntityMetadata.DisplayName|Display name for a table.|  
+|AssociatedMenuConfiguration.Label|Label used for a table in a table relationship.|  
+|OptionMetadata.Label|Label used for a value in a choice, state, or status column.|  
 
  The `Label` can store one string for each installed language. This array is the `LocalizedLabels` property. There must always be a label stored for the base language. The labels for other languages can be **null**. If the user wants to display the user interface in a language and a label does not have a string for that language, the label for the base language is used.  
 
@@ -59,28 +60,26 @@ When you create customizations in Microsoft Dataverse, you can support multiple 
 |                                               ExportTranslation</br>Exports all translations for a specific solution to a compressed file.                                                |                  <xref href="Microsoft.Dynamics.CRM.ExportTranslation?text=ExportTranslation Action" />                  |         <xref:Microsoft.Crm.Sdk.Messages.ExportTranslationRequest>         |
 |                                                          ImportTranslation</br>Imports all translations from a compressed file.                                                           |                  <xref href="Microsoft.Dynamics.CRM.ImportTranslation?text=ImportTranslation Action" />                  |         <xref:Microsoft.Crm.Sdk.Messages.ImportTranslationRequest>         |
 | RetrieveFormattedImportJobResults</br>Retrieves the results of an ImportJob as an XML document designed to be opened using Office Excel. | <xref href="Microsoft.Dynamics.CRM.RetrieveFormattedImportJobResults?text=RetrieveFormattedImportJobResults Function" /> | <xref:Microsoft.Crm.Sdk.Messages.RetrieveFormattedImportJobResultsRequest> |
-|                                                     RetrieveLocLabels</br>Retrieves the localized labels for the specified attribute.                                                     |                 <xref href="Microsoft.Dynamics.CRM.RetrieveLocLabels?text=RetrieveLocLabels Function" />                 |         <xref:Microsoft.Crm.Sdk.Messages.RetrieveLocLabelsRequest>         |
-|                                                          SetLocLabels</br>Sets the localized labels for the specified attribute.                                                          |                       <xref href="Microsoft.Dynamics.CRM.SetLocLabels?text=SetLocLabels Action" />                       |           <xref:Microsoft.Crm.Sdk.Messages.SetLocLabelsRequest>            |
+|                                                     RetrieveLocLabels</br>Retrieves the localized labels for the specified column.                                                     |                 <xref href="Microsoft.Dynamics.CRM.RetrieveLocLabels?text=RetrieveLocLabels Function" />                 |         <xref:Microsoft.Crm.Sdk.Messages.RetrieveLocLabelsRequest>         |
+|                                                          SetLocLabels</br>Sets the localized labels for the specified column.                                                          |                       <xref href="Microsoft.Dynamics.CRM.SetLocLabels?text=SetLocLabels Action" />                       |           <xref:Microsoft.Crm.Sdk.Messages.SetLocLabelsRequest>            |
 
 <a name="BKMK_CustomizingLabelsInBaseLanguage."></a>
    
 ## Customize labels in the base language  
- The customization tools provide ways to edit entity display names and you can customize these properties programmatically. You can also edit entity messages. But not every message is exposed. Another way to locate and customize text used in the application is to export the translations, edit the values for the base language and import the translations again. Although this is not the intended purpose of this feature it is a supported way to identify and customize text used in the application. For more information, see [Modify Messages for an Entity](/dynamics365/customer-engagement/developer/modify-messages-entity).  
+ The customization tools provide ways to edit display names and you can customize these properties programmatically. You can also edit messages. But not every message is exposed. Another way to locate and customize text used in the application is to export the translations, edit the values for the base language and import the translations again. Although this is not the intended purpose of this feature it is a supported way to identify and customize text used in the application. For more information, see [Modify messages for a table](/dynamics365/customer-engagement/developer/modify-messages-entity).  
 
-<a name="BKMK_TranslatingCustomizedEntityAndAttributeText"></a>   
-
-## Translate customized entity and attribute text  
+## Translate customized table and column text  
  Because you can only perform customizations in the application by using the base language, when you want to provide localized labels for these customizations you must export the text of the labels so that they can be localized for any other languages enabled for the organization.  
 
 ### Export customized text for translation  
- You can export the translations in the Web application or by using the `ExportTranslation` message (<xref href="Microsoft.Dynamics.CRM.ExportTranslation?text=ExportTranslation Action" /> or <xref:Microsoft.Crm.Sdk.Messages.ExportTranslationRequest> class).  
+ You can export the translations in the web application or by using the `ExportTranslation` message (<xref href="Microsoft.Dynamics.CRM.ExportTranslation?text=ExportTranslation Action" /> or <xref:Microsoft.Crm.Sdk.Messages.ExportTranslationRequest> class).  
 
  Exported text is saved as a compressed file that contains a CrmTranslations.xml that you open by using Office Excel. You can send this file to a linguistic expert, translation agency, or localization firm.  
 
  For more information, see [Office 2003 XML Reference Schemas](https://www.microsoft.com/downloads/details.aspx?FamilyID=fe118952-3547-420a-a412-00a2662442d9).  
 
 ### Import translated text  
- After you have exported the customized entity or attribute text and had it translated, you can import the translated text strings in the Web application by using the `ImportTranslation` message (<xref href="Microsoft.Dynamics.CRM.ImportTranslation?text=ImportTranslation Action" /> or <xref:Microsoft.Crm.Sdk.Messages.ImportTranslationRequest> class). The file that you import must be a compressed file that contains the CrmTranslations.xml and the [Content_Types].xml file just as they were exported.  
+ After you have exported the customized table or column text and had it translated, you can import the translated text strings in the Web application by using the `ImportTranslation` message (<xref href="Microsoft.Dynamics.CRM.ImportTranslation?text=ImportTranslation Action" /> or <xref:Microsoft.Crm.Sdk.Messages.ImportTranslationRequest> class). The file that you import must be a compressed file that contains the CrmTranslations.xml and the [Content_Types].xml file just as they were exported.  
 
  After you import the completed translations, customized text appears for users who work in the languages that you had the text translated into.  
 
@@ -108,9 +107,9 @@ When you create customizations in Microsoft Dataverse, you can support multiple 
 |RetrieveProvisionedLanguagePackVersion</br>Retrieves the version of the language packs installed on the server.|<xref href="Microsoft.Dynamics.CRM.RetrieveProvisionedLanguagePackVersion?text=RetrieveProvisionedLanguagePackVersion Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveProvisionedLanguagePackVersionRequest>|  
 
 ### See also  
- [Extend the Metadata Model for Dynamics 365](/dynamics365/customer-engagement/developer/org-service/use-organization-service-metadata)   
+ [Extend the table definitions model for Dynamics 365](/dynamics365/customer-engagement/developer/org-service/use-organization-service-metadata)   
  [Customize Dynamics 365](/dynamics365/customer-engagement/developer/customize-dev/customize-applications)   
- [Modify Messages for an Entity](/dynamics365/customer-engagement/developer/modify-messages-entity)     
+ [Modify messages for a table](/dynamics365/customer-engagement/developer/modify-messages-entity)     
  <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata>   
  <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata>    
  <xref:Microsoft.Xrm.Sdk.Metadata.OptionMetadata> 

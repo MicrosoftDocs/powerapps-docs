@@ -1,6 +1,7 @@
 ---
 title: "Xrm.WebApi.online.executeMultiple (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
+description: Includes description and supported parameters for the Xrm.WebApi.online.executeMultiple method.
+ms.date: 04/21/2021
 ms.service: powerapps
 ms.topic: "reference"
 ms.assetid: d4e92999-3b79-4783-8cac-f656fc5f7fda
@@ -24,7 +25,7 @@ If you want to execute multiple requests in a transaction, you must pass in a ch
 
 > [!NOTE]
 > - You cannot include read operations (retrieve, retrieve multiple, and Web API functions) as part of a change set; this is as per the OData v4 specifications.
-> - Requests can contain up to 1000 individual requests and cannot contain other batches. More information: [Execute batch operations](https://docs.microsoft.com/powerapps/developer/data-platform/webapi/execute-batch-operations-using-web-api).
+> - Requests can contain up to 1000 individual requests and cannot contain other batches. More information: [Execute batch operations](../../../../../data-platform/webapi/execute-batch-operations-using-web-api.md).
 
 ## Syntax
 
@@ -81,7 +82,7 @@ Xrm.WebApi.online.executeMultiple(requests).then(successCallback, errorCallback)
 <td>successCallback</td>
 <td>Function</td>
 <td>No</td>
-<td><p>A function to call when operation is executed successfully. An array of response objects are passed to the function where each response object has the following attributes:</p>
+<td><p>A function to call when operation is executed successfully. An array of response objects are passed to the function where each response object has the following values:</p>
 <ul>
 <li><b>json</b>: (Optional). Promise. Response body in JSON format.</li>
 <li><b>text</b>: (Optional). Promise. Response body in plaintext format. </li>
@@ -104,7 +105,7 @@ Xrm.WebApi.online.executeMultiple(requests).then(successCallback, errorCallback)
 
 ## Return Value
 
-On success, returns a promise containing an array of objects with the attributes specified earlier in the description of **successCallback** function.
+On success, returns a promise containing an array of objects with the values specified earlier in the description of **successCallback** function.
 
 ### See also
 

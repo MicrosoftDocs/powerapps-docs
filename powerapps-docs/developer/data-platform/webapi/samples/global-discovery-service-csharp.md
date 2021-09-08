@@ -2,7 +2,7 @@
 title: "Global Discovery Service Sample (C#) (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample shows how to access the global Discovery Service using the OData V4 RESTful API" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 4/16/2020
+ms.date: 07/15/2021
 ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
@@ -15,27 +15,35 @@ search.app:
   - PowerApps
   - D365CE
 ---
+
 # Global Discovery Service Sample (C#)
 
-[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+[!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 
-This sample shows how to access the Discovery Service using the OData V4 RESTful API.
+This sample shows how to access the global Discovery Service using the Web API.
 
 ## How to run this sample
 
-This sample is available on Github at [https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/webapi/C%23/GlobalDiscovery](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/webapi/C%23/GlobalDiscovery)
+The sample source code is available on Github at [PowerApps-Samples](https://github.com/Microsoft/PowerApps-Samples)/cds/webapi/C#/GlobalDiscovery.
+
+To run the sample:
+1. Download or clone the sample so that you have a local copy.
+2. Open the project solution file in Visual Studio.
+3. Press F5 to build and run the sample.
 
 ## What this sample does
 
-This sample returns the available Microsoft Dataverse instances for a given user credential.
+When run, the sample opens a logon form where you must specify the Microsoft Dataverse credentials for an enabled user. The program then displays to the console window a list of Dataverse environment instances that the specified user is a member of.
+
+Other important aspects of this sample include:
+1. Handles breaking API changes in different versions of Azure Active Directory Authentication Library (ADAL)
+1. No dependency on helper code or a helper library since all required code, including authentication code, is provided.
 
 ## How this sample works
 
-This sample will use credential information in the App.config file, but will not use the URL configured in the connection string. Instead, it will just use the user credentials and the client ID.
+This sample uses an HttpClient to authenticate the specified user using ADAL, and then calls the global Discovery Service to return information about available Dataverse environment instances the user is a member of.
 
 ### Demonstrates
-
-This sample uses a HttpClient to authenticate using ADAL and call the Discovery Service to return information about available instances the user can connect to.
 
 The sample depends on the `GetInstances` method and the `Instance` class below:
 
@@ -100,7 +108,8 @@ static List<Instance> GetInstances(string username, string password)
   }
 ```
 
-                                                                                                                    '''
+## See Also
 
+[Discover the URL for your organization](../discover-url-organization-web-api.md)
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

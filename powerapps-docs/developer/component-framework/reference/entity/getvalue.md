@@ -29,7 +29,7 @@ getvalue-description.md
 
 | Parameter Name|Type|Required|Description|
 | ------------- |----|--------|-----------|
-|`columnName`|`String`|Yes|Logical name of the entity attribute.|
+|`columnName`|`String`|Yes|Logical name of the table column.|
 
 ## Return Value
 

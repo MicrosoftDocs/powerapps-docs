@@ -21,7 +21,7 @@ search.app:
 
 <!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/integration-dev/sample-retrieve-absolute-url-and-site-collection-url-of-a-location-record -->
 
-This sample shows how to retrieve the absolute URL and the site collection URL of a SharePoint Server location record using the [RetrieveAbsoluteAndSiteCollectionUrlRequest](https://docs.microsoft.com/dotnet/api/microsoft.crm.sdk.messages.retrieveabsoluteandsitecollectionurlrequest?view=dynamics-general-ce-9) message.
+This sample shows how to retrieve the absolute URL and the site collection URL of a SharePoint Server location record using the [RetrieveAbsoluteAndSiteCollectionUrlRequest](/dotnet/api/microsoft.crm.sdk.messages.retrieveabsoluteandsitecollectionurlrequest?view=dynamics-general-ce-9) message.
 
 ## How to run this sample
 
@@ -38,7 +38,7 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 ### Setup
 
 1. Checks for the current version of the org. 
-1. The `CreateRequireRecords` method creates entity records that are used by the sample.
+1. The `CreateRequireRecords` method creates records that are used by the sample.
 
 ### Demonstrate
 
@@ -46,7 +46,7 @@ The `RetrieveAbsoluteAndSiteCollectionUrlRequest` is used to retrieve the absolu
 
 ### Clean up
 
-Display an option to delete the records created in the [Setup](#setup). The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the records to achieve the same result.
+Display an option to delete the records created in the [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the records to achieve the same result.
 
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

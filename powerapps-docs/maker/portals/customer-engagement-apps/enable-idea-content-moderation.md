@@ -1,13 +1,17 @@
 ---
-title: "Enable content moderation for ideas on a portal | MicrosoftDocs"
-description: "Learn how to enable content moderation for ideas on a portal."
+title: Enable content moderation on ideas
+description: Learn how to enable content moderation for ideas on a portal.
 author: sbmjais
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/11/2021
+ms.date: 04/21/2020
+ms.subservice: portals
 ms.author: shjais
-ms.reviewer: 
+ms.reviewer: shjais
+contributors:
+    - tapanm-msft
+    - shjais
 ---
 
 # Enable content moderation on ideas
@@ -39,7 +43,7 @@ To enable content moderation on ideas:
 5.	Select **Add new content moderation policy allowed reason** to add reasons a portal user can select while flagging an idea. You can add **Abusive**, **Inappropriate**, and **Spam** as the reasons.
 
     > [!div class=mx-imgBorder]
-    > ![Create a content moderation policy](media/idea-policy.png "Create a content moderation policy")
+    > ![Create a content moderation policy.](media/idea-policy.png "Create a content moderation policy")
 
 6.	Save the record.
 
@@ -50,7 +54,7 @@ To enable content moderation on ideas:
 2.	On the **Options** tab, browse and select the moderation policy from the **Idea content moderation policy** field.
 
     > [!div class=mx-imgBorder]
-    > ![Add content moderation policy to an idea forum](media/add-idea-policy.png "Add content moderation policy to an idea forum")
+    > ![Add content moderation policy to an idea forum.](media/add-idea-policy.png "Add content moderation policy to an idea forum")
 
 3.	Save the record.
 
@@ -59,7 +63,7 @@ To enable content moderation on ideas:
 After you have created a moderation policy and assigned it to an idea forum, the associated ideas will be governed by the moderation policy. The selected moderation reasons are displayed with the idea on the portal. A portal user can flag the idea by selecting a reason. 
 
 > [!div class=mx-imgBorder]
-> ![Moderate an idea](media/moderate-idea.png "Moderate an idea")
+> ![Moderate an idea.](media/moderate-idea.png "Moderate an idea")
 
 When a portal user flags an idea on the portal by using a reason, the idea is hidden from the portal and moved to the **Flagged Ideas** view in the Dynamics 365 Portals. As an administrator, you can open the Dynamics 365 Dynamics 365 Portals app and decide whether to accept or reject the flagged idea. You can further decide whether to deactivate the idea or keep it active.
 

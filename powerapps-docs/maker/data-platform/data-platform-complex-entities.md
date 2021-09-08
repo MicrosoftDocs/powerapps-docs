@@ -4,8 +4,9 @@ description: A list of complex tables in Microsoft Dataverse that require a Powe
 author: KumarVivek
 ms.service: powerapps
 ms.component: cds
-ms.topic: reference
+ms.topic: conceptual
 ms.date: 08/28/2020
+ms.subservice: dataverse-maker
 ms.author: kvivek
 search.audienceType: 
   - maker
@@ -27,7 +28,7 @@ search.app:
 
 Tables that include the following complex server-side logic require users of an app or flow that uses these tables to have a Power Apps Plan 2 or Power Automate Plan 2 license:
 
-* Code plug-ins. More information: [Plug-in development](/powerapps/developer/data-platform/plug-ins)
+* Code plug-ins. More information: [Plug-in development](../../developer/data-platform/plug-ins.md)
 * Real-time workflows. More information: [Workflow processes](/flow/workflow-processes)
 
     > [!NOTE]

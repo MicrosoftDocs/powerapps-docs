@@ -1,12 +1,13 @@
 ---
 title: "Upload and manage document templates (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "In Microsoft Dataverse, the *template* entities help you create consistent layout and content in email messages, articles, mail merge documents, and Microsoft Office documents (Excel and Word)."
+description: "In Microsoft Dataverse, the *template* tables help you create consistent layout and content in email messages, articles, mail merge documents, and Microsoft Office documents (Excel and Word)."
 ms.custom: ""
-ms.date: 06/19/2020
+ms.date: 03/27/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID
+ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -17,20 +18,12 @@ search.app:
 ---
 # Upload and manage document templates
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+In Microsoft Dataverse, the *template* tables help you create consistent layout and content in email messages, articles, mail merge documents, and Microsoft Office documents (Excel and Word).
 
-<!-- 
-Was Mike Carter
-https://docs.microsoft.com/dynamics365/customer-engagement/developer/upload-manage-document-templates
+[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
-Add the short description from  https://docs.microsoft.com/dynamics365/customer-engagement/developer/template-entities which was not migrated.
--->
+These are the types of template tables:
 
-In Microsoft Dataverse, the *template* entities help you create consistent layout and content in email messages, articles, mail merge documents, and Microsoft Office documents (Excel and Word).
-
-These are the types of template entites:
-
-<!-- Not in Dataverse, must be in service ContractTemplate  -->
 - [DocumentTemplate](reference/entities/documenttemplate.md)
 - [KbArticleTemplate](reference/entities/kbarticletemplate.md) 
 - [MailMergeTemplate](reference/entities/mailmergetemplate.md) 

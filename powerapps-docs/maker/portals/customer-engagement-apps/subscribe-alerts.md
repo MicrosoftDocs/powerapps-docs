@@ -1,13 +1,17 @@
 ---
-title: "Subscribe to alerts on a portal | MicrosoftDocs"
-description: "Instructions to create and manage alerts in a portal."
+title: Subscribe to alerts
+description: Learn how to create and manage alerts in a portal.
 author: sbmjais
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/11/2021
+ms.date: 04/21/2020
+ms.subservice: portals
 ms.author: shjais
-ms.reviewer: 
+ms.reviewer: shjais
+contributors:
+    - tapanm-msft
+    - shjais
 ---
 
 # Subscribe to alerts
@@ -24,7 +28,7 @@ Users can indicate they wish to receive notification when new posts are created 
 2. Navigate to a **Forum Thread**.
 3. Select **Subscribe**.
 
-![Subscribe to alerts](media/subscribe-alerts.png "Subscribe to alerts")  
+![Subscribe to alerts.](media/subscribe-alerts.png "Subscribe to alerts")  
 
 ## Unsubscribe from alerts in the portal
 
@@ -34,7 +38,7 @@ Users can indicate that they do not wish to receive notification when new posts 
 2. Navigate to a **Forum Thread**.
 3. Select **Unsubscribe**.
 
-![Unsubscribe from alerts](media/unsubscribe-alerts.png "Unsubscribe from alerts")  
+![Unsubscribe from alerts.](media/unsubscribe-alerts.png "Unsubscribe from alerts")  
 
 ## Manage forum alerts
 

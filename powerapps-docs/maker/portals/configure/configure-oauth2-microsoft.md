@@ -1,24 +1,29 @@
 ---
-title: "Configure Microsoft as the identity provider for Power Apps portals. | MicrosoftDocs"
-description: "Learn how to configure Microsoft as the identity provider for Power Apps portals."
+title: Configure the Microsoft provider for portals
+description: Learn how to configure Microsoft as the identity provider for Power Apps portals.
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/20/2020
+ms.date: 04/21/2021
+ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - sandhangitmsft
+    - dileepsinghmicrosoft
 ---
 
 # Configure the Microsoft provider for portals
 
 As explained in [Configure an OAuth 2.0 provider for portals](configure-oauth2-provider.md), Microsoft is one of several identity providers that use the OAuth 2.0 protocol. To get started with configuring Microsoft as the identity provider, select **Configure** from the [provider settings](use-simplified-authentication-configuration.md#add-configure-or-delete-an-identity-provider) page.
 
-![Configure the Microsoft app](media/use-simplified-authentication-configuration/configure-microsoft.png "Configure the Microsoft app")
+![Configure the Microsoft app.](media/use-simplified-authentication-configuration/configure-microsoft.png "Configure the Microsoft app")
 
 ## Step 1. Create the Microsoft app
 
-On the identity provider configuration steps, you'll see a **Reply URL** for your portal in step 1. You need to [create an app in Azure portal](https://aka.ms/AppRegistrations) with this reply URL. For step-by-step instructions, go to [Quickstart: Register an application with the Microsoft identity platform](https://docs.microsoft.com/azure/active-directory/develop/quickstart-register-app).
+On the identity provider configuration steps, you'll see a **Reply URL** for your portal in step 1. You need to [create an app in Azure portal](https://aka.ms/AppRegistrations) with this reply URL. For step-by-step instructions, go to [Quickstart: Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app).
 
 > [!NOTE]
 > The Reply URL is used by the Microsoft app to redirect users to the portal after the authentication succeeds. If your portal uses a custom domain name, you might have a different URL than the one provided here.​

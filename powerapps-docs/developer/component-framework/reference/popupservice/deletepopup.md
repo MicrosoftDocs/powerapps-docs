@@ -1,6 +1,6 @@
 ---
 title: deletePopup | Microsoft Docs
-description: 
+description: Removes the referenced popup from the popup service and unregister the service.
 keywords:
 ms.author: nabuthuk
 author: Nkrb

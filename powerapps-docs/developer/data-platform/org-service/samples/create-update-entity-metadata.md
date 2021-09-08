@@ -1,8 +1,8 @@
 ---
-title: "Sample: Create and update entity metadata  (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "This sample shows how to create and update entity metadata." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Sample: Create and update table definitions  (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "This sample shows how to create and update table definitions." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 06/17/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "samples"
@@ -16,13 +16,15 @@ search.app:
   - D365CE
 ---
 
-# Create and update entity metadata
+# Create and update table definitions
 
 [!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
 
-This topic shows how to programmatically create a custom user-owned entity called **Bank Account** and add four different types of attributes to it.
+This topic shows how to programmatically create a custom user-owned table called **Bank Account** and add four different types of columns to it.
 
-You can also create organization-owned custom entities. More information: [Entity ownership](https://docs.microsoft.com/dynamics365/customerengagement/on-premises/developer/introduction-entities#entity-ownership). You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/CreateUpdateEntityMetadata).
+You can also create organization-owned custom tables. More information: [Table ownership](/dynamics365/customerengagement/on-premises/developer/introduction-entities#entity-ownership). You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/CreateUpdateEntityMetadata).
+
+[!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 
 ## How to run this sample
 
@@ -30,7 +32,7 @@ You can also create organization-owned custom entities. More information: [Entit
 
 ## What this sample does
 
-The `CreateEntityRequest` message is intended to be used in a scenario where it contains  the data that is needed to create a custom entity, and optionally, to add it to a specified unmanaged solution.
+The `CreateEntityRequest` message is intended to be used in a scenario where it contains  the data that is needed to create a custom table, and optionally, to add it to a specified unmanaged solution.
 
 ## How this sample works
 
@@ -42,16 +44,16 @@ Checks for the current version of the org.
 
 ### Demonstrate
 
-1. The `createrequest` method creates the custom entity. 
-2. The `Entity` method is used to define the entity.
-3. The `StringAttributeMetadata` method defines the primary attribute of the entity.
-4. The `CreateBankNameAttributeRequest` method creates a string attribute to the entity.
-5. The `CreateBalanceAttributeRequest` method creates a money attribute to the entity.
-6. The `CreateCheckedDateRequest` method creates a DateTime attribute to the entity.
+1. The `createrequest` method creates the custom table. 
+2. The `Entity` method is used to define the table.
+3. The `StringAttributeMetadata` method defines the primary column of the table.
+4. The `CreateBankNameAttributeRequest` method creates a string column to the table.
+5. The `CreateBalanceAttributeRequest` method creates a money column to the table.
+6. The `CreateCheckedDateRequest` method creates a DateTime column to the table.
 
 ### Clean up
 
-Display an option to delete the records created in the [Setup](#setup). The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the records to achieve the same result.
+Display an option to delete the records created in the [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the records to achieve the same result.
 
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

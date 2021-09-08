@@ -1,20 +1,23 @@
 ---
 title: Build an app in Teams using Power Apps and Dataverse for Teams to retrieve Power Platform videos for readiness | Microsoft Docs
-description: Tutorial on how to build an app in Teams using Power Apps and Datverse for Teams that retrieves, lists, and displays content to used for readiness.
+description: Tutorial on how to build an app in Teams using Power Apps and Dataverse for Teams that retrieves, lists, and displays content to used for readiness.
 author: mmercuri
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 11/16/2020
+ms.subservice: teams
 ms.author: mmercuri
 ms.reviewer: tapanm
+contributors:
+  - tapanm-msft
 ---
 
-# Tutorial: Build an app to retrieve Power Platform videos for readiness
+# Build an app to retrieve Power Platform videos for readiness
 
 In this tutorial, you’ll build a solution that retrieves, lists, and displays content that can be used for readiness.
 
-![Video Library app](media/tutorial-buildapp-retrieve-videos/tutorial-buildapp-intro.png "Video Library app")
+![Video Library app.](media/tutorial-buildapp-retrieve-videos/tutorial-buildapp-intro.png "Video Library app")
 
 ## Objective
 
@@ -41,7 +44,7 @@ In this tutorial, we'll use a channel named "Readiness".
 
 ## Step 1: Install and pin Power Apps in Teams
 
-In this section, you’ll install the Power Apps app in Teams and pin it to the left rail so you can easily access it. To learn how to do install and pin the Power Apps app, see [Install the Power Apps personal app in Microsoft Teams](https://docs.microsoft.com/powerapps/teams/install-personal-app).
+In this section, you’ll install the Power Apps app in Teams and pin it to the left rail so you can easily access it. To learn how to do install and pin the Power Apps app, see [Install the Power Apps personal app in Microsoft Teams](./install-personal-app.md).
 
 If you’ve already done installed and pinned the Power Apps app, you can skip to the next step.
 
@@ -59,7 +62,7 @@ In this section, you’ll take the initial steps to create the application.
 
 1. Select the name of the team from the drop-down list and select **Create**.
 
-    ![Create app](media/tutorial-buildapp-retrieve-videos/tutorial-buildapp-createapp.png "Create app")
+    ![Create app.](media/tutorial-buildapp-retrieve-videos/tutorial-buildapp-createapp.png "Create app")
 
     > [!NOTE]
     > If this is the first time you’ve tried to create an app in this Microsoft Teams team, it will take a moment to set up.
@@ -170,7 +173,7 @@ In the visual editor, add a row for the Microsoft show "\#LessCodeMorePower" tha
 
 The visual editor should resemble the image below.
 
-![Visual editor](media/tutorial-buildapp-retrieve-videos/tutorial-buildapp-tbldesigner.png "Visual editor")
+![Visual editor.](media/tutorial-buildapp-retrieve-videos/tutorial-buildapp-tbldesigner.png "Visual editor")
 
 Select **Close** to close the visual editor.
 
@@ -178,7 +181,7 @@ The screen created automatically in the app, named **Screen1**, should automatic
 
 The screen should resemble the image below.
 
-![Screen created in the app](media/tutorial-buildapp-retrieve-videos/tutorial-buildapp-screen1.png "Screen created in the app")
+![Screen created in the app.](media/tutorial-buildapp-retrieve-videos/tutorial-buildapp-screen1.png "Screen created in the app")
 
 ### Step 2.2: Create the table for the feed items
 
@@ -188,7 +191,7 @@ In this section, you'll create a table to store the details for the videos store
 
 1. Select **Create new table**.
 
-    ![Create a new table](media/tutorial-buildapp-retrieve-videos/tutorial-buildapp-feeditems.png "Create a new table")
+    ![Create a new table.](media/tutorial-buildapp-retrieve-videos/tutorial-buildapp-feeditems.png "Create a new table")
 
 1. When prompted for the name of the table, enter *Feed Items*.
 
@@ -274,7 +277,7 @@ In this section, you'll create a table to store the details for the videos store
 
 The visual editor should resemble the image below.
 
-![Visual editor for feed items table](media/tutorial-buildapp-retrieve-videos/tutorial-buildapp-feeditems-tbl.png "Visual editor for feed items table")
+![Visual editor for feed items table.](media/tutorial-buildapp-retrieve-videos/tutorial-buildapp-feeditems-tbl.png "Visual editor for feed items table")
 
 Select **Close** to close the visual editor.
 
@@ -286,7 +289,7 @@ In this section, you'll create flows in Power Automate to retrieve videos for ea
 
 When you’ve completed this section, your flow should resemble the diagram below.
 
-![Entire flow - complete](media/tutorial-buildapp-retrieve-videos/tutorial-buildapp-complete_flow.png "Entire flow - complete")
+![Entire flow - complete.](media/tutorial-buildapp-retrieve-videos/tutorial-buildapp-complete_flow.png "Entire flow - complete")
 
 > [!NOTE]
 > Power Automate has a trigger that allows you to detect when a new item is added to a feed for an individual feed. When tracking multiple feeds, this would require multiple feeds and would require the same number of flows to match the number of feeds. The approach taken in this lab is more complex but with the benefit of having a single flow that supports any number of configured feeds in a single flow.
@@ -304,7 +307,7 @@ When you’ve completed this section, your flow should resemble the diagram belo
 1. Select **Flow** > **Scheduled**.
 
     > [!div class="mx-imgBorder"]
-    > ![Create a scheduled flow](media/tutorial-buildapp-retrieve-videos/tutorial-buildapp-flowsched.png "Create a scheduled flow")
+    > ![Create a scheduled flow.](media/tutorial-buildapp-retrieve-videos/tutorial-buildapp-flowsched.png "Create a scheduled flow")
 
 1. In the **Build a scheduled flow** dialog,
 
@@ -315,7 +318,7 @@ When you’ve completed this section, your flow should resemble the diagram belo
     1. Select **Create**.
 
     > [!div class="mx-imgBorder"]
-    > ![Build a scheduled flow](media/tutorial-buildapp-retrieve-videos/tutorial-buildapp-schedflow.png "Build a scheduled flow")
+    > ![Build a scheduled flow.](media/tutorial-buildapp-retrieve-videos/tutorial-buildapp-schedflow.png "Build a scheduled flow")
 
 ### Step 3.2: Add the initialize variable action
 
@@ -329,7 +332,7 @@ When you’ve completed this section, your flow should resemble the diagram belo
 
 1. Select **String** in the drop-down for **Type**.
 
-    ![Add the initialize variable action](media/tutorial-buildapp-retrieve-videos/tutorial-buildapp-init-variable.png "Add the initialize variable action")
+    ![Add the initialize variable action.](media/tutorial-buildapp-retrieve-videos/tutorial-buildapp-init-variable.png "Add the initialize variable action")
 
     > [!NOTE]
     > Don’t enter any value in the **Value** field.
@@ -338,7 +341,7 @@ When you’ve completed this section, your flow should resemble the diagram belo
 
 1. Select **New Step**.
 
-1. Enter *Common Data Service (current environment)* in the search box and select the action named **List records**.
+1. Enter *Microsoft Dataverse* in the search box and select the action named **List records**.
 
 1. Select **Feeds** in the **Entity name** property.
 
@@ -346,7 +349,7 @@ When you’ve completed this section, your flow should resemble the diagram belo
 
 1. Rename the action to *Get list of feeds to retrieve*.
 
-    ![Add the List Records action](media/tutorial-buildapp-retrieve-videos/tutorial-buildapp-feedslist.png "Add the List Records action")
+    ![Add the List Records action.](media/tutorial-buildapp-retrieve-videos/tutorial-buildapp-feedslist.png "Add the List Records action")
 
 ### Step 3.4: Add the Current time action
 
@@ -355,7 +358,7 @@ When you’ve completed this section, your flow should resemble the diagram belo
 1. Enter *Date Time* in the search box and select the action named **Current time**.
 
     > [!div class="mx-imgBorder"]
-    > ![Add the Current time action](media/tutorial-buildapp-retrieve-videos/tutorial-buildapp-current-time.png "Add the Current time action")
+    > ![Add the Current time action.](media/tutorial-buildapp-retrieve-videos/tutorial-buildapp-current-time.png "Add the Current time action")
 
 ### Step 3.5: Add the Apply to each action
 
@@ -371,7 +374,7 @@ When you’ve completed this section, your flow should resemble the diagram belo
 
 1. Rename the action to *Loop through each of the feeds in the database*.
 
-    ![Add the Apply to Each action](media/tutorial-buildapp-retrieve-videos/tutorial-buildapp-loopfeeds.png "Add the Apply to Each action")
+    ![Add the Apply to Each action.](media/tutorial-buildapp-retrieve-videos/tutorial-buildapp-loopfeeds.png "Add the Apply to Each action")
 
 ### Step 3.6: Add the List all RSS Feed Items action
 
@@ -385,7 +388,7 @@ When you’ve completed this section, your flow should resemble the diagram belo
 
 1. Select in the box for the property **since** and select **Last Retrieved**.
 
-    ![Add the List all RSS Feed Items action](media/tutorial-buildapp-retrieve-videos/tutorial-buildapp-rssfeeds.png "Add the List all RSS Feed Items action")
+    ![Add the List all RSS Feed Items action.](media/tutorial-buildapp-retrieve-videos/tutorial-buildapp-rssfeeds.png "Add the List all RSS Feed Items action")
 
 ### Step 3.7: Add the Apply to Each Action
 
@@ -401,7 +404,7 @@ When you’ve completed this section, your flow should resemble the diagram belo
 
 1. Rename the action to *Loop through each of the items in the feed since last retrieved*.
 
-    ![Loop through each of the items in the feed since last retrieved](media/tutorial-buildapp-retrieve-videos/feeds-body-loop-through.png "Loop through each of the items in the feed since last retrieved")
+    ![Loop through each of the items in the feed since last retrieved.](media/tutorial-buildapp-retrieve-videos/feeds-body-loop-through.png "Loop through each of the items in the feed since last retrieved")
 
 ### Step 3.8: Add the Apply to Each action
 
@@ -417,7 +420,7 @@ When you’ve completed this section, your flow should resemble the diagram belo
 
 1. Rename the action to *Evaluate links to determine if this is YouTube or a Vlog with a video*.
 
-    ![Evaluate links to determine if this is YouTube or a Vlog with a video](media/tutorial-buildapp-retrieve-videos/feeds-feed-links-loop-through.png "Evaluate links to determine if this is YouTube or a Vlog with a video")
+    ![Evaluate links to determine if this is YouTube or a Vlog with a video.](media/tutorial-buildapp-retrieve-videos/feeds-feed-links-loop-through.png "Evaluate links to determine if this is YouTube or a Vlog with a video")
 
 ### Step 3.9: Add the Condition action
 
@@ -437,7 +440,7 @@ When you’ve completed this section, your flow should resemble the diagram belo
 
 1. Rename the action to *Check to see if there is a link with an MP4 file*.
 
-    ![Check to see if there is a link with an MP4 file](media/tutorial-buildapp-retrieve-videos/feeds-mp4-check.png "Check to see if there is a link with an MP4 file")
+    ![Check to see if there is a link with an MP4 file.](media/tutorial-buildapp-retrieve-videos/feeds-mp4-check.png "Check to see if there is a link with an MP4 file")
 
 1. In the **If yes** path on the left, select **Add an action**.
 
@@ -453,7 +456,7 @@ When you’ve completed this section, your flow should resemble the diagram belo
 
     1. Rename the action to *Specify the Video Link is the link to an MP4 File*.
 
-        ![Specify the Video Link is the link to an MP4 File](media/tutorial-buildapp-retrieve-videos/feeds-mp4-yes.png "Specify the Video Link is the link to an MP4 File")
+        ![Specify the Video Link is the link to an MP4 File.](media/tutorial-buildapp-retrieve-videos/feeds-mp4-yes.png "Specify the Video Link is the link to an MP4 File")
 
 1. In the **If No** path on the left, select **Add an action**.
 
@@ -469,17 +472,17 @@ When you’ve completed this section, your flow should resemble the diagram belo
 
     1. Rename the action to *Specify the Video Link is the Primary feed link*.
 
-        ![Specify the Video Link is the Primary feed link](media/tutorial-buildapp-retrieve-videos/feeds-video-link.png "Specify the Video Link is the Primary feed link")
+        ![Specify the Video Link is the Primary feed link.](media/tutorial-buildapp-retrieve-videos/feeds-video-link.png "Specify the Video Link is the Primary feed link")
 
 Select the header of the action to show the title of **Evaluate links to determine if this is YouTube or a Vlog with a video**.
 
-![Add the primary feed link](media/tutorial-buildapp-retrieve-videos/tutorial-buildapp-primary-feed.png "Add the primary feed link")
+![Add the primary feed link.](media/tutorial-buildapp-retrieve-videos/tutorial-buildapp-primary-feed.png "Add the primary feed link")
 
 ### Step 3.10: Add the Create a New Record action
 
 1. Inside *Loop through each of the items in the feed since last retrieved* action, select **Add an action**.
 
-1. Enter *Common Data Service (current environment)* in the search box, and then select the action called **Create a new record**.
+1. Enter *Microsoft Dataverse* in the search box, and then select the action called **Create a new record**.
 
 1. Select **Feed Items** in the *Entity name* property.
 
@@ -513,7 +516,7 @@ Select the header of the action to show the title of **Evaluate links to determi
 
 1. In the **Dynamic content** list, scroll down to the section **Variables**, and then select **Link to Video**.
 
-    ![Set primary feed link](media/tutorial-buildapp-retrieve-videos/tutorial-create-new-record.png "Set primary feed link")
+    ![Set primary feed link.](media/tutorial-buildapp-retrieve-videos/tutorial-create-new-record.png "Set primary feed link")
 
 ### Step 3.11: Add the Set Variable action
 
@@ -529,7 +532,7 @@ Select the header of the action to show the title of **Evaluate links to determi
 
 1. In the *Message* property, create a message with details about the item. An example message is shown in the image below.
 
-    ![Add the Set Variable action](media/tutorial-buildapp-retrieve-videos/tutorial-buildapp-postmsg.png "Add the Set Variable action")
+    ![Add the Set Variable action.](media/tutorial-buildapp-retrieve-videos/tutorial-buildapp-postmsg.png "Add the Set Variable action")
 
 Select the header of the action to show the title of **Loop through each of the items since last retrieved**.
 
@@ -537,7 +540,7 @@ Select the header of the action to show the title of **Loop through each of the 
 
 1. Inside *Loop through each of the feeds in the database* action, select **Add an action**.
 
-1. Enter *Common Data Service (current environment)* in the search box, and then select the action **Update a record**.
+1. Enter *Microsoft Dataverse* in the search box, and then select the action **Update a record**.
 
 1. Select **Feeds** for the *Entity Name*.
 
@@ -575,11 +578,11 @@ Select the header of the action to show the title of **Loop through each of the 
 
 1. In **Dynamic content** list, scroll down to the section **Get list of feeds to retrieve**, and then select **Published On**.
 
-    ![Add the Update Record action](media/tutorial-buildapp-retrieve-videos/tutorial-buildapp-publishedon.png "Add the Update Record action")
+    ![Add the Update Record action.](media/tutorial-buildapp-retrieve-videos/tutorial-buildapp-publishedon.png "Add the Update Record action")
 
 Your complete flow should look like the following image:
 
-![Completed flow](media/tutorial-buildapp-retrieve-videos/tutorial-buildapp-complete_flow.png "Completed flow")
+![Completed flow.](media/tutorial-buildapp-retrieve-videos/tutorial-buildapp-complete_flow.png "Completed flow")
 
 ### Step 3.13: Save the Flow
 
@@ -597,7 +600,7 @@ Your complete flow should look like the following image:
 
 1. Select the refresh button in **28-day run history** to show the details of the flow run.
 
-    ![Run flow](media/tutorial-buildapp-retrieve-videos/run-flow.png "Run flow")
+    ![Run flow.](media/tutorial-buildapp-retrieve-videos/run-flow.png "Run flow")
 
 If the flow doesn't show as succeeded, select **Run** and it will display the failed action with any associated error message.
 
@@ -717,7 +720,7 @@ Now create a new screen and configure the screen controls using the following st
 
 In the tree view on the left side of the screen, there are three controls underneath the Video Gallery with names starting with Subtitle, Title, and Image.
 
-![Video library gallery](media/tutorial-buildapp-retrieve-videos/video-library-gallery.png "Video library gallery")
+![Video library gallery.](media/tutorial-buildapp-retrieve-videos/video-library-gallery.png "Video library gallery")
 
 #### Step 4.6.1: Set the Subtitle
 
@@ -966,7 +969,7 @@ Before publishing the application to teams, it’s important to test core functi
 
 1. Select **+** next to the channel, such as **Readiness** to add the app to.
 
-    ![Publish the app](media/tutorial-buildapp-retrieve-videos/tutorial-buildapp-publish-app.png)
+    ![Publish the app.](media/tutorial-buildapp-retrieve-videos/tutorial-buildapp-publish-app.png)
 
 1. Select **Save and close**.
 

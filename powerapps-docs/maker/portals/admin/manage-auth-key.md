@@ -1,13 +1,17 @@
 ---
-title: "Manage the authentication key used by Power Apps portals to connect to Microsoft Dataverse environment. | MicrosoftDocs"
-description: "Learn how to manage the authentication key used by Power Apps portals to connect to Microsoft Dataverse environment, check the key details, notifications and troubleshoot a failed renew attempt."
+title: Manage portal authentication key
+description: Learn how to manage the authentication key used by Power Apps portals to connect to Microsoft Dataverse environment, check the key details, notifications and troubleshoot a failed renew attempt.
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/08/2021
+ms.date: 04/21/2021
+ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: tapanm
+contributors:
+    - neerajnandwana-msft
+    - tapanm-msft
 ---
 
 # Manage portal authentication key
@@ -28,7 +32,7 @@ The details of an authentication key are displayed on Power Apps portals admin c
 2. Select **Manage portal authentication key**. The authentication key is displayed along with its expiration date and thumbprint.
 
    > [!div class=mx-imgBorder]
-   > ![Authentication key details in Power Apps portals admin center](../media/manage-auth-key.png "Authentication key details in Power Apps portals admin center")
+   > ![Authentication key details in Power Apps portals admin center.](../media/manage-auth-key.png "Authentication key details in Power Apps portals admin center")
 
 **Portal**
 
@@ -37,7 +41,7 @@ The details of an authentication key are displayed on Power Apps portals admin c
 2. Navigate to the URL <portal_path>/_services/about. The authentication key expiration date is displayed. 
 
    > [!div class=mx-imgBorder]
-   > ![Portal service page](../media/portal-services-page.png "Portal service page")
+   > ![Portal service page.](../media/portal-services-page.png "Portal service page")
 
 > [!NOTE]
 > To view authentication key information, you must sign in to the portal in the same browser session and you must have all website access permission.
@@ -48,7 +52,7 @@ Before the authentication key expires, you'll be notified by emails, Power Apps 
 
 **Email**
 
-Email will be sent to those users who have signed up for email notification for the organization connected to their portal. More information about signing up for email notification: [Manage email notifications to admins](https://docs.microsoft.com/dynamics365/customer-engagement/admin/manage-email-notifications)
+Email will be sent to those users who have signed up for email notification for the organization connected to their portal. More information about signing up for email notification: [Manage email notifications to admins](/dynamics365/customer-engagement/admin/manage-email-notifications)
 
 Email notifications are sent at the following intervals: 
 - 90 days 
@@ -77,7 +81,7 @@ You'll also be notified after the key expires every day until 1 week after key e
 A message about key expiration is displayed at the top of the page.
 
 > [!div class=mx-imgBorder]
-> ![Authentication key notification in Power Apps portals admin center](../media/portal-admin-center-auth-notif.png "Authentication key notification in Power Apps portals admin center")
+> ![Authentication key notification in Power Apps portals admin center.](../media/portal-admin-center-auth-notif.png "Authentication key notification in Power Apps portals admin center")
 
 ### Portal
 
@@ -87,7 +91,7 @@ When you navigate to the URL <portal_path>/_services/about, a notification about
 > You must sign in to your portal in the same browser session, and you must be assigned all website access permission.
 
 > [!div class=mx-imgBorder]
-> ![Authentication key notification on portal](../media/portal-service-page-auth-notif.png "Authentication key notification on portal")
+> ![Authentication key notification on portal.](../media/portal-service-page-auth-notif.png "Authentication key notification on portal")
 
 ## Renew authentication key
 
@@ -101,7 +105,7 @@ Use the following steps if the authentication key for your portal is near expira
 2. Select **Manage portal authentication key**. The authentication key is displayed along with its expiration date and thumbprint.
 
     > [!div class=mx-imgBorder]
-    > ![Manage portal authentication key](../media/manage-portal-auth-key.png "Manage portal authentication key")
+    > ![Manage portal authentication key.](../media/manage-portal-auth-key.png "Manage portal authentication key")
 
 3. Select **Update key**.
 
@@ -120,7 +124,7 @@ If the key update fails, an error message is displayed along with the following 
 - **Retry Authentication Key Update**. This action allows you to restart the portal authentication key update process. If the update fails multiple times, contact Microsoft support.
 
     > [!div class=mx-imgBorder]
-    > ![Retry portal authentication key update](../media/retry-auth-key-update.png "Retry portal authentication key update")
+    > ![Retry portal authentication key update.](../media/retry-auth-key-update.png "Retry portal authentication key update")
 
 ### See also
 

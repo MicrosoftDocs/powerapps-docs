@@ -7,7 +7,7 @@ ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "conceptual"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -15,6 +15,7 @@ applies_to:
 author: "Mattp123"
 ms.assetid: 8b00780c-74f0-4e3a-b570-b9289d0d5383
 caps.latest.revision: 41
+ms.subservice: dataverse-maker
 ms.author: "matp"
 manager: "kvivek"
 search.audienceType: 
@@ -58,7 +59,7 @@ You can also make changes to rows that support the table:
 
 In [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Solutions**, open the unmanaged solution you want, and then select the table you want to edit. To modify the table properties, select **Settings** on the command bar to view the **Edit table** pane as shown below:
 
-![Edit table properties](media/edit-entity-properties-powerapps-portal-designer.png)
+![Edit table properties.](media/edit-entity-properties-powerapps-portal-designer.png)
 
 For a description of the properties available to edit see, [Create a table](data-platform-create-entity.md#create-a-table).
 
@@ -107,7 +108,7 @@ The following table lists the table options that you can enable or disable at an
 
 ### See also
 
-[Create a table](create-edit-entities.md)<br />
+[Create a table](./data-platform-create-entity.md)<br />
 [Create and edit tables using solution explorer](create-edit-entities-solution-explorer.md)
 
 

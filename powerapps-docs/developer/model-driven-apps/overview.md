@@ -7,11 +7,13 @@ manager: kvivek
 editor: ''
 tags: ''
 ms.service: powerapps
+ms.custom: "intro-internal"
 ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.date: 12/01/2019
+ms.subservice: mda-developer
 ms.author: nabuthuk
 search.audienceType: 
   - developer
@@ -22,7 +24,7 @@ search.app:
 
 # Model-driven apps Developer Guide
 
-Model-driven apps are primarily a no-code or low-code component focused approach to app development. The value developers can provide is by extending the application. Before you start writing code, begin with [learning how to build model-driven apps](/powerapps/maker/model-driven-apps/model-driven-app-components) and what options can be applied without code.
+Model-driven apps are primarily a no-code or low-code component focused approach to app development. The value developers can provide is by extending the application. Before you start writing code, begin with [learning how to build model-driven apps](../../maker/model-driven-apps/model-driven-app-components.md) and what options can be applied without code.
 
 > [!NOTE]
 > Model-driven apps connect to Microsoft Dataverse. For information about how developers can add value at the service level, see [Dataverse Developer Overview](../data-platform/overview.md).
@@ -36,12 +38,9 @@ If you are new to the Dataverse applications, the topics in this section provide
 
 ### Related topics
 
-[Understand model-driven apps components](/powerapps/maker/model-driven-apps/model-driven-app-components)<br/>
-[Create your first model-driven app](/powerapps/maker/model-driven-apps/build-first-model-driven-app)
+[Understand model-driven apps components](../../maker/model-driven-apps/model-driven-app-components.md)<br/>
+[Create your first model-driven app](../../maker/model-driven-apps/build-first-model-driven-app.md)
 
-### See also
-
-[Power Apps for developers](/powerapps/#pivot=home&panel=developer)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

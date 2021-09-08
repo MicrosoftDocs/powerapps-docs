@@ -4,12 +4,14 @@ description: Explains the differences between Dataverse for Teams and Dataverse.
 author: mmercuri
 ms.service: powerapps
 ms.topic: conceptual
-ms.custom: 
-ms.date: 02/17/2021
+ms.custom: intro-internal
+ms.date: 03/19/2021
+ms.subservice: teams
 ms.author: mmercuri
 ms.reviewer: matp
+contributors:
+  - mattp123
 ---
-
 # How are Dataverse for Teams and Dataverse different?
 
 [!INCLUDE[cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
@@ -53,14 +55,14 @@ In Dataverse for Teams and Dataverse, data is stored within an environment. Data
 
 To make management easier, the lifecycle of the Dataverse for Teams environment is connected to that of the associated team. For example, when a team is deleted, the associated environment is also deleted.
 
-Whereas Dataverse for Teams focuses on one environment per team for up to 500 teams, Dataverse supports unlimited environments in addition to capabilities that are relevant for multiple environments, such as copy and reset.
+Whereas Dataverse for Teams focuses on one environment per team for up to 10,000 teams, Dataverse supports unlimited environments in addition to capabilities that are relevant for multiple environments, such as copy and reset.
 
 
 |Environment lifecycle  |Dataverse for Teams  |Dataverse  |
 |---------|---------|---------|
 |Environments   | 1 per Team     | Unlimited        |
 |Maximum size     |   1 million rows or 2 GB      |  4 TB or more     |
-|Promote to Dataverse or Dynamics 365   |  Yes    |  Yes    |
+|Upgrade to Dataverse   |  Yes    |  N/A    |
 
 ## Security
 
@@ -96,7 +98,7 @@ Dataverse can also be used with server-side sync to synchronize with Exchange or
 |Integration feature  |Dataverse for Teams  |Dataverse  |
 |---------|---------|---------|
 |Power Automate     |   Yes      |  Yes       |
-|Export to Azure data lake    |   No      |  Yes       |
+|Azure Synapse Link for Dataverse    |   No      |  Yes       |
 |Data Export Service     |   No      |  Yes       |
 |Events to Azure Event Hubs     |   No      |  Yes       |
 |Events to Azure Service Bus     |   No      |  Yes       |

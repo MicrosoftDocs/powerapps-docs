@@ -1,18 +1,22 @@
 ---
-title: "Integrate Dynamics 365 Field Service with a portal | MicrosoftDocs"
-description: "Instructions to integrate Field Service with a portal."
+title: Integrate Field Service
+description: Learn how to integrate Field Service with a portal.
 author: sbmjais
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/11/2021
+ms.date: 04/21/2020
+ms.subservice: portals
 ms.author: shjais
-ms.reviewer: 
+ms.reviewer: shjais
+contributors:
+    - tapanm-msft
+    - shjais
 ---
 
-# Integrate Field Service 
+# Integrate Field Service
 
-The Partner [!include[](../../../includes/pn-field-service.md)] solution can now be installed on a Partner Portal ([!include[](../../../includes/pn-field-service.md)] and Partner Portal solutions must be installed first). With this solution installed, customers and partners can view various parts of the [!include[](../../../includes/pn-field-service.md)] section on the partner portal. Some of the available entities that can be viewed are assets, work orders, and invoices.
+The Partner [!include[](../../../includes/pn-field-service.md)] solution can now be installed on a Partner Portal ([!include[](../../../includes/pn-field-service.md)] and Partner Portal solutions must be installed first). With this solution installed, customers and partners can view various parts of the [!include[](../../../includes/pn-field-service.md)] section on the partner portal. Some of the available tables that can be viewed are assets, work orders, and invoices.
 
 ## View agreements on the partner portal
 
@@ -27,7 +31,7 @@ Customers can view active and expired agreements that are connected to their acc
 
 Now a customer can sign in to the portal, go to **Field Service** &gt; **Agreements**, and change the filter to **All Agreements** to view the created agreements. The page will show basic information, and the customer can select an agreement to view further details about it.
 
-![View agreements in a partner portal](media/view-agreements-partner-portal.png "View agreements in a partner portal")  
+![View agreements in a partner portal.](media/view-agreements-partner-portal.png "View agreements in a partner portal")  
 
 ## View assets on the partner portal
 
@@ -41,7 +45,7 @@ Customers can view existing assets that are connected to their account on the pa
 
 Now the customer can sign in to the portal and go to **Field Service** &gt; **Assets** to see the created assets. The customer will be able to see each asset connected to their account, along with the parent or master assets the asset is connected to.
 
-![View assets in a partner portal](media/view-assets-partner-portal.png "View assets in a partner portal")
+![View assets in a partner portal.](media/view-assets-partner-portal.png "View assets in a partner portal")
 
 ## View work orders for Field Service on the partner portal
 
@@ -58,7 +62,7 @@ Customers can view active and inactive work orders that are connected to their a
 
 After signing in to the portal, the customer can go to **Field Service** &gt; **Work Orders** and see the work orders that are connected to their account.
 
-![View workorders in a partner portal](media/view-workorder-partner-portal.png "View work orders in a partner portal")
+![View workorders in a partner portal.](media/view-workorder-partner-portal.png "View work orders in a partner portal")
 
 ## View invoices for Field Service on the partner portal
 
@@ -75,19 +79,19 @@ Customers can view active and inactive invoices that are connected to their acco
 
 After signing in to the portal, the customer can go to **Field Service** &gt; **Invoices** to view invoices.
 
-![View field service invoices in a partner portal](media/view-fieldservice-invoices-partner-portal.png "View Field Service invoices in a partner portal")
+![View field service invoices in a partner portal.](media/view-fieldservice-invoices-partner-portal.png "View Field Service invoices in a partner portal")
 
 ## Automatically distribute opportunities to preferred partners
 
 You can automatically distribute opportunities to partners based on a set of criteria that determines the best partner for the job. The built-in metrics for opportunity assignment first determine which partners are available to take the opportunity on. This table shows the factors that are used to decide whether a partner is available.
 
 
-|||
+| Name | Description |
 |-----------------------|--------------------------------------------------------------------------------------------------------------------------------------|
 |Capacity     |  A partner's capacity is the maximum number of opportunities that partner can take on at a time. This value can be adjusted on the account details page for each partner. Capacity includes opportunities that are in progress, in addition to those that haven't yet been accepted by a partner. It doesn't include internal opportunities created by that partner.|
 |Estimated revenue     | You can set a minimum and maximum range for estimated revenue on the account details page for each partner. If the estimated revenue for an opportunity falls within this range, the partner will be available for assignment.|
 |Territory     | Territories are geographic regions that are assigned to a partner account. If the address of the customer associated with the opportunity is within a territory covered by a partner, the partner will be available for assignment. |
-|Lead type     | The lead type entity can be used to categorize opportunities. You can assign which lead types each partner is able to work on.       |
+|Lead type     | The lead type table can be used to categorize opportunities. You can assign which lead types each partner is able to work on.       |
 |Associated products| If the products associated with an opportunity are all covered by a partner, they will be available for assignment. If any of the products are not covered by a partner, they won't be available for assignment.|
  |  |               |
 
@@ -95,7 +99,7 @@ You can automatically distribute opportunities to partners based on a set of cri
 
 After the available partners have been identified, the opportunity is distributed to a partner based on a ranking system. This system takes the following factors into account.
 
-|||
+| Name | Description |
 |-----------------------|--------------------------------------------------------------------------------------------------------------------------------------|
 | Distance              | The distance between the address of the partner and the address of the customer account that is associated with the opportunity.     |
 | Win rate              | The percentage of distributed opportunities historically won by the partner.                                                         |

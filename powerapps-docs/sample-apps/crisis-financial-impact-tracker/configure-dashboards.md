@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 06/22/2020
+ms.subservice: sample-apps
 ms.author: ramanasr
 ms.reviewer: nkrb
 ---
@@ -42,15 +43,15 @@ To configure a Power BI report by using a blank report canvas:
 1. Open Power BI Desktop. You might be prompted to **Sign in** to the Power BI service by using your work or school account.
 
    > [!div class="mx-imgBorder"]
-   > ![Power BI Desktop](./media/powerbidesktop.png "Power BI Desktop")
+   > ![Power BI Desktop.](./media/powerbidesktop.png "Power BI Desktop")
 
 2. Select **Get data** > **Power Platform** > **Common Data Service**, and then select **Connect**.
   
    > [!div class="mx-imgBorder"]
-   > ![Get Data](./media/pbigetdata1.png "Get data")
+   > ![Get Data.](./media/pbigetdata1.png "Get data")
 
    > [!div class="mx-imgBorder"]
-   > ![Get Data](./media/pbigetdata.png "Get data")
+   > ![Get Data.](./media/pbigetdata.png "Get data")
 
 3. Enter the **Server Url** that's specific to your Dataverse environment. To get the Dataverse environment URL, do the following:
 
@@ -60,10 +61,10 @@ To configure a Power BI report by using a blank report canvas:
     <https://yourenvironmentid.crm.dynamics.com/>. Be sure not to copy the rest of the URL.
 
     > [!div class="mx-imgBorder"]
-    > ![Dataverse environment](./media/cdsenvironment.png "Dataverse environment")
+    > ![Dataverse environment.](./media/cdsenvironment.png "Dataverse environment")
 
     > [!div class="mx-imgBorder"]
-    > ![Service URL](./media/ppserviceurl.png "Service URL")
+    > ![Service URL.](./media/ppserviceurl.png "Service URL")
 
 4. After you successfully connect to your environment, you can see the folders for **Entities** and **System** in the **Navigator**. Expand **Entities**, and select the check boxes for the following entities:
 
@@ -89,17 +90,17 @@ To configure a Power BI report by using a blank report canvas:
 
 
     > [!div class="mx-imgBorder"]
-    > ![Choose entities](./media/chooseentities.png "Choose entities")
+    > ![Choose entities.](./media/chooseentities.png "Choose entities")
 
 5. After you finish selecting the list of entitites, select **Transform Data**. The Query Editor window opens with the selected tables and data loaded.
   
    > [!div class="mx-imgBorder"]
-   > ![Select tables](./media/selecttables.png "Select tables")
+   > ![Select tables.](./media/selecttables.png "Select tables")
 
 6. For each entity, select **Choose Columns** in the ribbon to open the console and select which fields to use in the data model and in reports.<!--Please note that images should never include information that isn't also available in text, either the main content or alt text.  This is an accessibility requirement. Unfortunately, some of these lists are too long for alt text (which has a maximum of 220 characters), so I've converted them to lists. I'd appreciate your double-checking that they're accurate.-->
 
    > [!div class="mx-imgBorder"]
-   > ![Choose Columns](./media/choosecolumn.png "Choose Columns")
+   > ![Choose Columns.](./media/choosecolumn.png "Choose Columns")
 
    - The following are suggested fields for the Contact entity:
       - msft_annualbasesalary
@@ -195,39 +196,39 @@ To configure a Power BI report by using a blank report canvas:
 
      - Contact
       > [!div class="mx-imgBorder"]
-      > ![Contact](./media/contact.png "Contact")
+      > ![Contact.](./media/contact.png "Contact")
 
      - msft_Campus
       > [!div class="mx-imgBorder"]
-      > ![Campus](./media/msftcampus.png "Campus")
+      > ![Campus.](./media/msftcampus.png "Campus")
 
      - msft_College
        > [!div class="mx-imgBorder"]
-       > ![College](./media/msftcollege.png "College")
+       > ![College.](./media/msftcollege.png "College")
 
      - msft_Department
        > [!div class="mx-imgBorder"]
-       > ![Department](./media/msftdepartment.png "Department")
+       > ![Department.](./media/msftdepartment.png "Department")
 
      - msft_EmployeeCompensation
        > [!div class="mx-imgBorder"]
-       > ![Employee Compensation](./media/msftemployeecomp.png "Employee Compensation")
+       > ![Employee Compensation.](./media/msftemployeecomp.png "Employee Compensation")
 
     - msft_Grant
 
-     ![Grant](./media/msftgrant.png)
+     ![Grant.](./media/msftgrant.png)
 
     - msft_LossReason
       > [!div class="mx-imgBorder"]
-      > ![Loss Reason](./media/msftlossreason.png "Loss Reason")
+      > ![Loss Reason.](./media/msftlossreason.png "Loss Reason")
 
     - msft_PayPeriod
       > [!div class="mx-imgBorder"]
-      > ![Pay Period](./media/msftpayperiod.png "Pay period")
+      > ![Pay Period.](./media/msftpayperiod.png "Pay period")
 
     - msft_SponsoredProgram
       > [!div class="mx-imgBorder"]
-      > ![Sponsored Program](media/msftsponsoredprogram.png "Sponsored Program")
+      > ![Sponsored Program.](media/msftsponsoredprogram.png "Sponsored Program")
 -->
 
 7. Select **Close & Apply** to close the Query Editor and apply the changes you made.
@@ -235,32 +236,32 @@ To configure a Power BI report by using a blank report canvas:
 8. You'll see the following screen in the Power BI report canvas. It might take several minutes for the queries to run.
 
    > [!div class="mx-imgBorder"]
-   > ![Close and Apply](./media/closeandapply.png "Close and Apply")
+   > ![Close and Apply.](./media/closeandapply.png "Close and Apply")
 
 9. After the changes are applied, the Power BI report canvas looks
 similar to the following screenshot, including the tables listed in the **Fields** panel on the
 right side of the page.
 
    > [!div class="mx-imgBorder"]
-   > ![Applied Report](./media/appliedreport.png "Applied Report")
+   > ![Applied Report.](./media/appliedreport.png "Applied Report")
 
 10. Select the icon on the left side of the page to open the **Model** view. You will see the tables that you selected. Use the slider in the lower-right corner to adjust the view size.
 
     > [!div class="mx-imgBorder"]
-    > ![Open the Model view](./media/clickleft.png "Open the Model view")
+    > ![Open the Model view.](./media/clickleft.png "Open the Model view")
 
     > [!div class="mx-imgBorder"]
-    > ![Tables](./media/tables.png "Tables")
+    > ![Tables.](./media/tables.png "Tables")
 
 11. On the **Home** tab, select  **Manage Relationships** to open the console where you'll create new relationships among the entities.
 
     > [!div class="mx-imgBorder"]
-    > ![Report Home](./media/reporthome.png "Report Home")
+    > ![Report Home.](./media/reporthome.png "Report Home")
 
     When creating or editing relationships among entities, you select the tables and columns to be joined, in addition to the **Cardinality** and **Cross-filter** direction for the relationship.
 
     > [!div class="mx-imgBorder"]
-    > ![Create relationship](./media/createrelationship.png "Create relationship")
+    > ![Create relationship.](./media/createrelationship.png "Create relationship")
 
 13. To use the suggested fields in Dataverse that are pertinent to the Power BI template, your relationship mapping between tables should look like the following.
 
@@ -276,16 +277,16 @@ right side of the page.
      | msft_SponsoredProgram (msft_grant) | msft_Grant (msft_grantid) |
 
     > [!div class="mx-imgBorder"]
-    > ![Manage relationships](./media/managerelationship.png "Manage relationships")
+    > ![Manage relationships.](./media/managerelationship.png "Manage relationships")
 
 The following screenshot shows the Entity Relationship Diagram in the Model view.
 
   > [!div class="mx-imgBorder"]
-  > ![Entity relationship](./media/entityrelationshipdiagram.png "Entity relationship")
+  > ![Entity relationship.](./media/entityrelationshipdiagram.png "Entity relationship")
 
 ## Configure a Power BI report by using a Power BI template<a name="using-power-bi-template"></a>
 
-The Power BI template contains sample data and interactive graphics in a .pbix file format that you can further edit and update in Power BI Desktop. Download the template from [GitHub](https://github.com/microsoft/powerapps-tools/blob/master/Apps/CrisisFinancialImpactTracker/PBITemplate.pbix).
+The Power BI template contains sample data and interactive graphics in a .pbix file format that you can further edit and update in Power BI Desktop. Download the template as part of the overall solution from [GitHub](https://github.com/microsoft/powerapps-tools/blob/master/Apps/HigherEducationCrisisFinancialImpactTracker/HECFIT.zip).
 
 ### Open the Power BI template
 
@@ -304,11 +305,11 @@ When you open the Power BI template, you'll see a series of tabs at the bottom o
 - **Department**: Opens the **Department** view.
 
 Your organization can add its logos to all pages in the template by inserting
-an image on the page and then copying it to other pages. More information:  [Copy and paste a report visualization](https://docs.microsoft.com/power-bi/visuals/power-bi-visualization-copy-paste)
+an image on the page and then copying it to other pages. More information:  [Copy and paste a report visualization](/power-bi/visuals/power-bi-visualization-copy-paste)
 
 ## Connect to Dataverse
 
-To use your own data collected by the Higher Education Crisis Financial Impact Tracker app, you need to update the data connection in the template. More information: [Create a Power BI report using the Common Data Service connector](https://docs.microsoft.com/powerapps/maker/data-platform/data-platform-powerbi-connector)
+To use your own data collected by the Higher Education Crisis Financial Impact Tracker app, you need to update the data connection in the template. More information: [Create a Power BI report using the Common Data Service connector](../../maker/data-platform/data-platform-powerbi-connector.md)
 
 To change the data source, select **Transform data** to open Query Editor. In the **Applied Steps** of Query Editor, change the **Source** for each entity. Use the Dataverse environment URL. 
 

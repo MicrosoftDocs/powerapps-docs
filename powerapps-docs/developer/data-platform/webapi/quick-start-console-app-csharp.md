@@ -1,8 +1,8 @@
 ---
 title: "Quick Start: Web API sample (C#) (Microsoft Dataverse)| Microsoft Docs"
-description: "This sample demonstrates how to authenticate with a Microsoft Dataverse Server and then call a basic Web API operation, the WhoAmI Function"
-ms.custom: ""
-ms.date: 02/02/2019
+description: "Demonstrates how to authenticate with a Microsoft Dataverse Server and then call a basic Web API operation, the WhoAmI Function"
+ms.custom: intro-internal
+ms.date: 03/03/2021
 ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
@@ -17,9 +17,7 @@ search.app:
 ---
 # Quick Start: Web API sample (C#)
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
-
-In this quick start you will create a simple console application to connect to your Microsoft Dataverse environment using the Web API. 
+In this quick start you will create a simple console application to connect to your Microsoft Dataverse environment using the Web API.
 
 You will authenticate and use an <xref:System.Net.Http.HttpClient> to send a `GET` request to the <xref href="Microsoft.Dynamics.CRM.WhoAmI?text=WhoAmI Function" /> the response will be a <xref href="Microsoft.Dynamics.CRM.WhoAmIResponse?text=WhoAmIResponse ComplexType" />. You will display the `UserId` property value.
 
@@ -28,7 +26,7 @@ You will authenticate and use an <xref:System.Net.Http.HttpClient> to send a `GE
 
 ## Prerequisites
 
- - Visual Studio (2017 recommended)
+ - Visual Studio (2017 or later recommended)
  - Internet connection
  - Valid user account for a Dataverse instance
     - Your username
@@ -43,7 +41,7 @@ You will authenticate and use an <xref:System.Net.Http.HttpClient> to send a `GE
 
 1. Create a new Console App (.NET Framework) project using **.NET Framework 4.6.2**
 
-    ![Start a console app project](../media/quick-start-web-api-console-app-csharp-1.png)
+    ![Start a console app project.](../media/quick-start-web-api-console-app-csharp-1.png)
 
     > [!NOTE]
     > This screenshot shows the name `WebAPIQuickStart`, but you can choose to name the project and solution whatever you want.
@@ -59,24 +57,24 @@ You will authenticate and use an <xref:System.Net.Http.HttpClient> to send a `GE
 
 1. In **Solution Explorer**, right-click the project you created and select **Manage NuGet Packages...** in the context menu.
 
-    ![Add NuGet package](../media/quick-start-web-api-console-app-csharp-2.png)
+    ![Add NuGet package.](../media/quick-start-web-api-console-app-csharp-2.png)
 
 1. Browse for the  `Microsoft.IdentityModel.Clients.ActiveDirectory` NuGet package.
 1. Select **Version** 2.29.0 and install it.
 
-    ![Install Microsoft.IdentityModel.Clients.ActiveDirectory NuGet package](../media/quick-start-web-api-console-app-csharp-3.png)
+    ![Install Microsoft.IdentityModel.Clients.ActiveDirectory NuGet package.](../media/quick-start-web-api-console-app-csharp-3.png)
 
     > [!IMPORTANT]
     > **Do not install the latest version of this NuGet package.**
     >
-    > This sample depends on the capability to pass user credentials without a separate Azure login dialog which is not available in the 3.x version of this library.
+    > This sample depends on the capability to pass user credentials without a separate Azure login dialog which is not available in the 3.x version (or greater) version of this library.
 
     > [!NOTE]
     > You must select **I Accept** in the **Licence Acceptance** dialog.
 
 1. Browse for the `Newtonsoft.Json` NuGet package and install the latest version.
 
-    ![Install Microsoft.IdentityModel.Clients.ActiveDirectory NuGet package](../media/quick-start-web-api-console-app-csharp-4.png)
+    ![Install the Microsoft.IdentityModel.Clients.ActiveDirectory NuGet package.](../media/quick-start-web-api-console-app-csharp-4.png)
 
 ## Edit Program.cs
 
@@ -152,12 +150,13 @@ You will authenticate and use an <xref:System.Net.Http.HttpClient> to send a `GE
     // e.g. y0urp455w0rd
     string password = "<your password>";
     ```
-    To get the `url` value:
+    To get the `url` value for your environment, follow these steps:
 
-    1. From the [https://make.powerapps.com](https://make.powerapps.com) site with the appropriate environment selected, select **Settings** ![Settings button](media/settings-icon.png) and choose **Advanced Customizations**. Then select **Developer resources**.
-    1. In the **Developer Resources** page, look for the **Instance Web API** value and copy it. 
+    1. From the [https://make.powerapps.com](https://make.powerapps.com) site with the appropriate environment selected, select **Settings** ![Settings button.](media/settings-icon.png) and choose **Advanced Customizations**. Your browser will be redirected to the Dynamics 365 page.
+    1. On the Dynamics 365 page, select **Settings > Customizations > Developer Resources**.
+    1. On the **Developer Resources** page, look below **Instance Web API** and copy the Service Root URL value. 
 
-        It should look something like `https://yourorgname.api.crm.dynamics.com/api/data/v9.1/`. But for this sample, you must trim off the final part (`/api/data/v9.1/`) so that it is just `https://yourorgname.api.crm.dynamics.com`
+        It should look something like `https://yourorgname.api.crm.dynamics.com/api/data/v9.2/`. But for this sample, you must trim off the final part (`/api/data/v9.2/`) so that it is just `https://yourorgname.api.crm.dynamics.com`
 
     For the `userName` and `password` variables, use the same credentials you used to log into the [https://make.powerapps.com](https://make.powerapps.com) site.
 
@@ -178,7 +177,7 @@ The quick start sample shows a simple approach to create a Visual Studio project
 
 This is enough to verify you can connect, but it doesn't represent a good pattern for building an app.
 
-The [Enhanced quick start](enhanced-quick-start.md) topic shows how to implement exception handling methods, basic authentication method using connection string, a re-usable method to refresh the acces token, and introduces how to build re-usable methods to perform data operations.
+The [Enhanced quick start](enhanced-quick-start.md) topic shows how to implement exception handling methods, basic authentication method using connection string, a re-usable method to refresh the access token, and introduces how to build re-usable methods to perform data operations.
 
 ## Next steps
 
@@ -186,6 +185,5 @@ Learn how to structure your code for a better design.
 
 > [!div class="nextstepaction"]
 > [Enhanced quick start](enhanced-quick-start.md)<br/>
-
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

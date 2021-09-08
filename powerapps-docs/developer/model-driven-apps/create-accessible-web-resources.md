@@ -7,6 +7,7 @@ ms.service: powerapps
 ms.topic: article
 ms.assetid: 307269ac-674c-5b8a-fee7-767f060af15f
 author: Nkrb # GitHub ID
+ms.subservice: mda-developer
 ms.author: nabuthuk # MSFT alias of Microsoft employees only
 manager: shilpas # MSFT alias of manager or PM counterpart
 ms.reviewer: 
@@ -46,19 +47,18 @@ The HTML in your web resources is processed by the browser and made available to
   
 The first thing to consider is making sure that your HTML follows expected patterns of usage. For example, you can define an HTML `div` element with a click event so that it functions exactly like an HTML `button` element. However, the browser will not expect that a `div` element is being used as a button and will not expose the same properties and events to an AT application.  
   
-It is important that you use the correct HTML elements for the types of interactions users will have with your web resources. This is known as [semantic HTML](https://docs.microsoft.com/microsoft-edge/accessibility).  
+It is important that you use the correct HTML elements for the types of interactions users will have with your web resources. This is known as [semantic HTML](/microsoft-edge/accessibility).  
   
-However, semantic HTML can only go so far. Modern web applications typically include custom controls that are composed of many HTML elements working together. Page content that is frequently updated dynamically using asynchronous JavaScript is confusing for AT applications that rely only on semantic HTML. [Accessible Rich Internet Applications (ARIA)](https://docs.microsoft.com/microsoft-edge/accessibility) technology provides a solution by extending HTML with additional attributes that communicate custom semantics.  
+However, semantic HTML can only go so far. Modern web applications typically include custom controls that are composed of many HTML elements working together. Page content that is frequently updated dynamically using asynchronous JavaScript is confusing for AT applications that rely only on semantic HTML. [Accessible Rich Internet Applications (ARIA)](/microsoft-edge/accessibility) technology provides a solution by extending HTML with additional attributes that communicate custom semantics.  
   
  ARIA provides a standard set of extended attributes that can be applied to HTML elements that are used in a control, or “widget.” These attributes describe the role that the HTML element plays in the control. ARIA also provides capabilities to improve the navigation experience and make the user aware of elements that may be updated dynamically. The recommended practice is to layer ARIA over semantic HTML.  
   
- In addition to including support for AT, there are other requirements you have to consider. For example, how does the UI adjust when the user increases the text size? Does your UI require that the user be able to differentiate colors to perform tasks? Can all actions be performed by using a keyboard? For more information, see [Introduction to Web Accessibility](https://docs.microsoft.com/previous-versions/windows/apps/hh452681(v=win.10)).
+ In addition to including support for AT, there are other requirements you have to consider. For example, how does the UI adjust when the user increases the text size? Does your UI require that the user be able to differentiate colors to perform tasks? Can all actions be performed by using a keyboard? For more information, see [Introduction to Web Accessibility](/previous-versions/windows/apps/hh452681(v=win.10)).
   
-<a name="BKMK_SilverlightWebResources"></a>   
 
-## Accessible Silverlight web resources  
+<!--## Accessible Silverlight web resources  
 
- Silverlight web resources are hosted in a form or an HTML web resource and the UI is rendered by the Silverlight browser plug-in. Silverlight is a subset of the Windows Presentation Framework (WPF) and therefore programmatic access and AT are exposed by using UIA that resembles WPF windows applications. For more information, see [Silverlight accessibility for developers](https://docs.microsoft.com/previous-versions/windows/).  
+ Silverlight web resources are hosted in a form or an HTML web resource and the UI is rendered by the Silverlight browser plug-in. Silverlight is a subset of the Windows Presentation Framework (WPF) and therefore programmatic access and AT are exposed by using UIA that resembles WPF windows applications. For more information, see [Silverlight accessibility for developers](/previous-versions/windows/). -->
   
 <a name="BKMK_AccessiblityTestingTools"></a>   
 
@@ -66,16 +66,16 @@ However, semantic HTML can only go so far. Modern web applications typically inc
 
  The following list provides some publicly available accessibility testing tools:  
   
- [Visual Studio Accessibility Checker](https://msdn.microsoft.com/library/ms228004)  <!--TODO No relevant microsoft docs link-->
+ [Visual Studio Accessibility Checker](/previous-versions/ms228004(v=vs.140))  
  If you are using Visual Studio to edit your HTML web resource files, you will find that there are built-in tools to check for issues related to accessibility. In the **Tools** menu, select **Check Accessibility** to see a report that will provide guidance about accessibility related issues.  
   
  [UI Accessibility Checker](https://acccheck.codeplex.com/)  
  UI Accessibility Checker (or AccChecker) enables testers to easily discover accessibility problems with Microsoft Active Accessibility (MSAA) and other user interface (UI) implementations for Windows. AccChecker was born from the realization that existing Windows Automation API tools, such as Inspect, provided in-depth details on the implementation, but no information about whether that implementation is correct or not.  
   
- [Inspect (Inspect.exe)](https://docs.microsoft.com/windows/desktop/WinAuto/inspect-objects)  
+ [Inspect (Inspect.exe)](/windows/desktop/WinAuto/inspect-objects)  
  Inspect (Inspect.exe) is a Windows-based tool that enables you select any UI element and view the element's accessibility data. You can view Microsoft UI Automation properties and control patterns in addition to Microsoft Active Accessibility properties. Inspect also enables you to test the navigational structure of the automation elements in the UI Automation tree, and the accessible objects in the Microsoft Active Accessibility hierarchy  
   
- [Accessible Event Watcher (AccEvent.exe)](https://docs.microsoft.com/windows/desktop/WinAuto/accessible-event-watcher)  
+ [Accessible Event Watcher (AccEvent.exe)](/windows/desktop/WinAuto/accessible-event-watcher)  
  The Accessible Event Watcher (AccEvent) tool allows developers and testers to validate that an application's UI elements raise appropriate Microsoft UI Automation and Microsoft Active Accessibility events when UI changes occur. Changes in the UI can occur when the focus changes, or when a UI element is invoked, selected, or has a state or property change.
   
 <a name="BKMK_AdditionalResources"></a> 
@@ -84,11 +84,9 @@ However, semantic HTML can only go so far. Modern web applications typically inc
 
  The following resources provide a starting point for defining requirements for making your web resources accessible:  
   
-- [Introduction to web accessibility](https://docs.microsoft.com/previous-versions/windows/apps/hh452681(v=win.10))  
+- [Introduction to web accessibility](/previous-versions/windows/apps/hh452681(v=win.10))  
   
-- [Accessibility in Visual Studio and ASP.NET](https://msdn.microsoft.com/library/ms228004)  <!--TODO No relevant microsoft docs link-->
-  
-- [Silverlight accessibility for developers](https://docs.microsoft.com/previous-versions/windows/)  
+- [Accessibility in Visual Studio and ASP.NET](/previous-versions/ms228004(v=vs.140))  
   
 - [Accessibility overview](https://developer.microsoft.com/windows/accessible-apps)  
   

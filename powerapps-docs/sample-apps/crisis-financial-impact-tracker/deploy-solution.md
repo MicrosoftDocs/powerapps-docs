@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 06/22/2020
+ms.subservice: sample-apps
 ms.author: ramanasr
 ms.reviewer: nkrb
 ---
@@ -46,18 +47,18 @@ When you extract the .zip file, you see the following components in the extracte
 
 ## Step 2: Sign up for Power Apps, and create an environment
 
-Sign up for [Power Apps](https://docs.microsoft.com/power-platform/admin/signup-for-powerapps-admin) if you don't have it already, and purchase an appropriate license. More information: [Power Apps pricing](https://powerapps.microsoft.com/pricing/)
+Sign up for [Power Apps](/power-platform/admin/signup-for-powerapps-admin) if you don't have it already, and purchase an appropriate license. More information: [Power Apps pricing](https://powerapps.microsoft.com/pricing/)
 
 After you purchase Power Apps, create an environment with a Dataverse database.
 
 1. Sign in to the [Power Platform admin center](https://aka.ms/ppac).
 
-1. Create a Dataverse environment with a database. More information: [Create and manage environments](https://docs.microsoft.com/power-platform/admin/create-environment)
+1. Create a Dataverse environment with a database. More information: [Create and manage environments](/power-platform/admin/create-environment)
 
     > [!IMPORTANT]
     > If you select a security group for the database while creating it, remember that any apps can be shared only with users who are members of that security group.
 
-1. Create users, and assign appropriate security roles. More information: [Create users and assign security roles](https://docs.microsoft.com/power-platform/admin/create-users-assign-online-security-roles)
+1. Create users, and assign appropriate security roles. More information: [Create users and assign security roles](/power-platform/admin/create-users-assign-online-security-roles)
 
 ## Step 3: Install the app
 
@@ -72,14 +73,14 @@ Follow the steps below to install and configure the Higher Education Crisis Fina
 1. You'll be prompted to connect to your environment. Select **Office 365** as the **Deployment Type**, select **Show Advanced**, and then enter your credentials to connect to your environment.
 
    > [!div class="mx-imgBorder"]
-   > ![Package deployer](./media/package-deployer-connection-details-pane.png "Package deployer")
+   > ![Package deployer.](./media/package-deployer-connection-details-pane.png "Package deployer")
 
 1. Select **Login** to continue.
 
 1. If you have access to more than one Dataverse environment, the next screen prompts you to select from the list of available environments where you want to install the package. Select the environment you want, and then select **Login**.
 
     > [!div class="mx-imgBorder"]
-    > ![List of organizations](./media/list-of-organizations-available.png "List of organizations")
+    > ![List of organizations.](./media/list-of-organizations-available.png "List of organizations")
 
 1. On the next screen, select **Next.**
 
@@ -88,15 +89,15 @@ Follow the steps below to install and configure the Higher Education Crisis Fina
 1. The next screen validates whether the package can be installed on your environment. Select **Next** to continue with the installation.
 
    > [!div class="mx-imgBorder"]
-   > ![Reading configuration](./media/reading-installer-configuration.png "Reading configuration")
+   > ![Reading configuration.](./media/reading-installer-configuration.png "Reading configuration")
 
 1. The next screen displays the installation status of the package. After the installation is complete, select **Next**.
 
    > [!div class="mx-imgBorder"]
-   > ![Execute actions](./media/execute-install-actions.png "Execute actions")
+   > ![Execute actions.](./media/execute-install-actions.png "Execute actions")
 
    > [!div class="mx-imgBorder"]
-   > ![Importing files](./media/importing-files.png "Importing files")
+   > ![Importing files.](./media/importing-files.png "Importing files")
 
    > [!NOTE]
    >  It might take a while for the package installation to be completed.
@@ -106,7 +107,7 @@ Follow the steps below to install and configure the Higher Education Crisis Fina
 1. After the app is installed, go to [Power Apps](https://make.powerapps.com/) and select your environment from the upper-right corner. You'll see the new app under **Apps**.
 
    > [!div class="mx-imgBorder"]
-   > ![Select app](./media/select-app-from-list-of-apps.png "Select app")
+   > ![Select app.](./media/select-app-from-list-of-apps.png "Select app")
 
 The installation also adds the configuration data for the Higher Education Crisis Financial Impact Tracker app.
 
@@ -119,12 +120,12 @@ You can change the app icon, color scheme, or display name to match the branding
 1. Open the admin app, and on the left pane, select **Administration** from the area picker, and then select **App Configs**. This shows all the records that you imported from the **AppConfig.xlsx** file.
 
    > [!div class="mx-imgBorder"]
-   > ![App Config record](./media/select-app-config-record.png "App Config record")
+   > ![App Config record.](./media/select-app-config-record.png "App Config record")
 
 1. Select the **Higher Education Crisis Financial Impact Tracker** record.
 
     > [!div class="mx-imgBorder"]
-    > ![Select record](./media/cfit-app-config-record.png "Select record")
+    > ![Select record.](./media/cfit-app-config-record.png "Select record")
 
 1. On the app details page, do the following:
 
@@ -150,12 +151,12 @@ to share apps with groups of users.
 1. Select the app you want, and then select **Share**.
 
    > [!div class="mx-imgBorder"]
-   > ![Share app](./media/share-app.png "Share app")
+   > ![Share app.](./media/share-app.png "Share app")
 
 1. Specify the Azure AD group or users who you want to share this app with. Because the app connects to Dataverse data, you also need to provide permissions to the entities. The sharing panel prompts you to manage security for the entities. Assign the **Higher Education Crisis Financial Impact Tracker User** and **Common Data Service User** security roles to the entities used by this app, and then select **Share**.
 
    > [!div class="mx-imgBorder"]   
-   > ![Assign roles](./media/assign-roles.png "Assign roles")
+   > ![Assign roles.](./media/assign-roles.png "Assign roles")
 
 ## Step 6: Share the model-driven app with admins in your organization
 

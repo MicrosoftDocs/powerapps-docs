@@ -1,13 +1,17 @@
 ---
-title: "Set up and moderate forums for a portal  | MicrosoftDocs"
-description: "Instructions to create and manage forums on a portal."
+title: Set up and manage forums
+description: Learn how to create and manage forums on a portal.
 author: sbmjais
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/11/2021
+ms.date: 04/21/2020
+ms.subservice: portals
 ms.author: shjais
-ms.reviewer: 
+ms.reviewer: shjais
+contributors:
+    - tapanm-msft
+    - shjais
 ---
 
 # Set up and manage forums
@@ -42,7 +46,7 @@ For portal users with content management permissions, a limited set of propertie
 
 4. Specify values for the fields provided, and then select **Save**.
 
-    ![Create a new child forum](media/create-new-child-forum.png "Create a new child forum")  
+    ![Create a new child forum.](media/create-new-child-forum.png "Create a new child forum")  
 
 ### Forum attributes used by portals
 
@@ -51,9 +55,9 @@ The table below explains many of the Forum attributes used by portals. It is imp
 
 |         Name         |                                                                                                                                                                                                                                                Description                                                                                                                                                                                                                                                |
 |----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|         Name         |                                                                                                                                                                  The descriptive name of the entity. This value will be used as the page title in most templates, particularly if a Title value is not provided. This field is required.                                                                                                                                                                  |
-|       Website        |                                                                                                                                                                                                                     The website to which the entity belongs. This field is required.                                                                                                                                                                                                                      |
-|     Parent Page      |                                                                                                                                                                                                                    The parent webpage of the entity in the website content hierarchy.                                                                                                                                                                                                                     |
+|         Name         |                                                                                                                                                                  The descriptive name of the table. This value will be used as the page title in most templates, particularly if a Title value is not provided. This field is required.                                                                                                                                                                  |
+|       Website        |                                                                                                                                                                                                                     The website to which the table belongs. This field is required.                                                                                                                                                                                                                      |
+|     Parent Page      |                                                                                                                                                                                                                    The parent webpage of the table in the website content hierarchy.                                                                                                                                                                                                                     |
 |     Partial URL      | The URL path segment used to build the portal URL of this forum. Partial URL values are used as URL path segments. As such, they should not contain illegal URL path characters, such as ?, \#, !, %. Because portal URLs are generated by joining together partial URL values with slashes (/), they should also not contain slashes. We recommend you restrict Partial URL values to letters, numbers, and hyphens or underscores. For example: press-releases, Users\_Guide, product1. |
 |    Display Order     |                                                                                                                                                                                              An integer value indicating the order in which the forum will be placed relative to other forums in a listing.                                                                                                                                                                                               |
 |   Publishing State   |                                                              The current publishing workflow state of the forum, which may dictate whether the forum is visible on the site. The most common use of this feature is to control whether content is in a published or draft state. Users with content management permissions may be granted the ability to use Preview Mode, which allows these users to see (preview) unpublished content.                                                               |

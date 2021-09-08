@@ -1,6 +1,6 @@
 ---
-title: addLinkedEtity | Microsoft Docs
-description: 
+title: addLinkedEntity | Microsoft Docs
+description: Adds a new linked table relationship with the existing query primary table.
 keywords:
 ms.author: nabuthuk
 author: Nkrb

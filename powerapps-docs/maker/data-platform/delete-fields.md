@@ -7,7 +7,7 @@ ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "how-to"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -15,6 +15,7 @@ applies_to:
 author: "Mattp123"
 ms.assetid: 578ac950-da16-4ec6-a0a4-25f3aaa3b96e
 caps.latest.revision: 33
+ms.subservice: dataverse-maker
 ms.author: "matp"
 manager: "kvivek"
 tags: 

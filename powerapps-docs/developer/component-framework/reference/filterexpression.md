@@ -1,6 +1,6 @@
 ---
 title: FilterExpression | Microsoft Docs
-description: 
+description: An expression used to represent a filter.
 keywords:
 ms.author: nabuthuk
 author: Nkrb

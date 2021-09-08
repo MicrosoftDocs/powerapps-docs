@@ -7,11 +7,12 @@ applies_to:
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
   - "powerapps"
+ms.subservice: mda-maker
 ms.author: matp
 manager: kvivek
 ms.date: 05/04/2020
 ms.service: powerapps
-ms.topic: article
+ms.topic: how-to
 ms.assetid: 68f68d5b-6c71-4b95-bb46-d48c59d9008e
 search.audienceType: 
   - maker
@@ -26,7 +27,7 @@ search.app:
 A quick view control on a model-driven app form displays data from a row that is selected in a lookup on the form. The data displayed in the control is defined using a quick view form. The data displayed is not editable, but when the primary column is included in the quick view form, it becomes a link to open the related row. More information: [Create and edit quick view forms](create-edit-quick-view-forms.md)  
 
 > [!div class="mx-imgBorder"] 
-> ![Contact quick view form on the account form](media/quick-view-form-contact.png "Contact quick view form on the account form")  
+> ![Contact quick view form on the account form.](media/quick-view-form-contact.png "Contact quick view form on the account form")  
 
 1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
@@ -41,7 +42,7 @@ A quick view control on a model-driven app form displays data from a row that is
 6.  In the **Select quick view forms** dialog box, select a **Lookup** column included in the form, and then select a quick view form for the related tables. The related tables shown depend on the **Lookup** column you choose.  
 
     > [!div class="mx-imgBorder"] 
-    > ![Add quick view control](media/select-quick-view-form.png "Add quick view control to main form")
+    > ![Add quick view control.](media/select-quick-view-form.png "Add quick view control to main form")
 
 7.  Select **Done** to close the **Select quick View forms** dialog box. The quick view form appears on the form, and the properties of the quick view appear in the Properties pane.
 
@@ -67,7 +68,7 @@ A quick view control on a model-driven app form displays data from a row that is
 5.  Then on the **Insert** tab, select **Quick View Form** to view quick view control properties.
 
     > [!div class="mx-imgBorder"] 
-    > ![Quick view control](media/quick-view-control.png)
+    > ![Quick view control.](media/quick-view-control.png)
   
 |Property|Description|  
 |--------------|-----------------|  

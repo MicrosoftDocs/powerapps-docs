@@ -1,7 +1,7 @@
 ---
 title: "Client-side JavaScript using Web API in model-driven apps | Microsoft Docs"
 description: "JavaScript can be used in HTML web resources, form scripts or ribbon commands to perform operations on Microsoft Dataverse for Apps data using Web API"
-ms.custom: ""
+ms.custom: intro-internal
 ms.date: 03/28/2019
 ms.reviewer: "pehecke"
 ms.service: powerapps
@@ -20,15 +20,11 @@ search.app:
 ---
 # Client-side JavaScript using Web API in model-driven apps
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
-
-In HTML web resources, form scripts, or ribbon commands in model-driven apps, you can use JavaScript to perform operations on Microsoft Dataverse data using the Web API. Use the [Xrm.WebApi](/powerapps/developer/model-driven-apps/clientapi/reference/xrm-webapi) client API methods to use Web API with JavaScript and web resources.
+In HTML web resources, form scripts, or ribbon commands in model-driven apps, you can use JavaScript to perform operations on Microsoft Dataverse data using the Web API. Use the [Xrm.WebApi](../../model-driven-apps/clientapi/reference/xrm-webapi.md) client API methods to use Web API with JavaScript and web resources.
 
 ### See also
-[Apply business logic using client scripting](/powerapps/developer/model-driven-apps/client-scripting)<br/>
-[Customize commands and ribbon](/powerapps/developer/model-driven-apps/customize-commands-ribbon)<br/>
-[Web resources](/powerapps/developer/model-driven-apps/web-resources)
-
-
+[Apply business logic using client scripting](../../model-driven-apps/client-scripting.md)<br/>
+[Customize commands and ribbon](../../model-driven-apps/customize-commands-ribbon.md)<br/>
+[Web resources](../../model-driven-apps/web-resources.md)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

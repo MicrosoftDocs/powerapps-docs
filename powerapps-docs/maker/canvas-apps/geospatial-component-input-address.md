@@ -8,11 +8,14 @@ ms.topic: conceptual
 ms.custom: canvas, ce06122020
 ms.reviewer: tapanm
 ms.date: 1/19/2021
+ms.subservice: canvas-maker
 ms.author: iawilt
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - iaanw
 ---
 
 # Address input component 
@@ -37,7 +40,7 @@ With an app open for editing in [Power Apps Studio](https://create.powerapps.com
 
 2. Expand **Input**.
 
-3. Select the component **Address input (preview)** to place it in the center of the app screen, or drag it to position it anywhere on the screen.
+3. Select the component **Address input** to place it in the center of the app screen, or drag it to position it anywhere on the screen.
 
 You can modify the component by using a number of [properties](#input-properties).
 
@@ -65,13 +68,13 @@ You can save addresses that a user inputs into the address component as a data c
 
     This causes the button to save the current latitude and longitude to a collection named *locations*, as long as the search results are not blank
 
-    ![Screenshot of the button on the app](./media/geospatial/input-code.png)
+    ![Screenshot of the button on the app.](./media/geospatial/input-code.png)
 
 4. Select the map component, and go to the **Advanced** tab on the **Properties** pane.
 
 5. Set the following properties:
 
-    - **ItemsLabels** as *locations*
+    - **Items** as *locations*
     - **ItemLatitudes** as *locations.Latitude*
     - **ItemsLongitudes** as *locations.Longitude*
 
@@ -81,7 +84,7 @@ Each time a user selects the button, the result from the address input component
 
 The following properties are on the component's **Address Input** pane on the **Properties** and **Advanced** tabs.
 
-![The properties are in the side panel](./media/geospatial/address-properties.png "The properties are in the side panel")
+![The properties are in the side panel.](./media/geospatial/address-properties.png "The properties are in the side panel")
 
 Some properties are only available on the **Advanced** tab, in the **More options** section.
 
@@ -210,5 +213,5 @@ The following table lists the output properties available.
 
 To visualize and interpret location data, use the **[Interactive map](geospatial-component-map.md)** component.
 
-
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
+

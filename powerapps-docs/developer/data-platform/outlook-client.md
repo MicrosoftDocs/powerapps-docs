@@ -6,7 +6,8 @@ ms.date: 10/31/2018
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
-author: "sriharibs" # GitHub ID Srihari Srinivasa
+author: "sriharibs-msft" # GitHub ID Srihari Srinivasa
+ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 

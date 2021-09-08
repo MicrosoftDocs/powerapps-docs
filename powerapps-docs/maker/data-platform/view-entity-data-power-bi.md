@@ -8,6 +8,7 @@ ms.reviewer: "matp"
 ms.service: powerapps
 author: "Mattp123"
 ms.assetid: 
+ms.subservice: dataverse-maker
 ms.author: "matp"
 manager: "kvivek"
 search.audienceType: 
@@ -47,7 +48,7 @@ table row data using a Power Apps app.
 4.  The pbids file is loaded in Power BI Desktop. In the dialog box, select **Organizational account**, select **Sign in**, and then in the browser window that appears select or enter your credentials.
 
     > [!div class="mx-imgBorder"] 
-    > ![Sign in to connect to your environment](media/power-bi-environment-signin.png "Sign in to connect to your environment")
+    > ![Sign in to connect to your environment.](media/power-bi-environment-signin.png "Sign in to connect to your environment")
 
 5.  In the dialog box in Power BI Desktop, select **Connect**.
 
@@ -56,7 +57,7 @@ table row data using a Power Apps app.
     its data.
 
     > [!div class="mx-imgBorder"] 
-    > ![table rows displayed example](media/entity-record-data-displayed.png "table rows displayed example" )
+    > ![table rows displayed example.](media/entity-record-data-displayed.png "table rows displayed example" )
 
 6. After you're finished selecting the tables you want to analyze, select **Load** to build a report.
 

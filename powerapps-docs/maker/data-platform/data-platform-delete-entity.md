@@ -5,8 +5,9 @@ author: lancedMicrosoft
 manager: kvivek
 ms.service: powerapps
 ms.component: cds
-ms.topic: conceptual
+ms.topic: how-to
 ms.date: 06/29/2020
+ms.subservice: dataverse-maker
 ms.author: lanced
 ms.reviewer: matp
 search.audienceType: 
@@ -27,7 +28,7 @@ You can delete custom tables, but you can't delete standard tables. Notice that 
 ## Delete a custom table
 1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Solutions** in the left navigation pane, open the solution that contains the custom table you want to delete, and then select it.
 
-    ![Table Details](./media/data-platform-cds-create-entity/entitylist.png "Table List")
+    ![Table Details.](./media/data-platform-cds-create-entity/entitylist.png "Table List")
 
 2. On the command bar select **Remove**, and then select from the following choices:  
    - **Remove from this solution**. Removes the table from the solution. You can still access the table from the Default Solution. 
@@ -51,7 +52,7 @@ Next, remove the component. For example, if you have a business process flow tha
 > Removing the dependency, can cause the component to no longer work. For example, removing a table from a model-driven app may cause the model-driven app to no longer work. 
 
 For more information, see these articles: 
-- [Edit or remove artifacts](../model-driven-apps/add-edit-app-components.md#edit-or-remove-artifacts)
+- [Edit or remove artifacts](../model-driven-apps/add-edit-app-components.md#edit-or-remove-components)
 - [Edit a business process flow](/power-automate/create-business-process-flow#edit-a-business-process-flow)
 - [Delete relationships](create-edit-1n-relationships-portal.md#delete-relationships)
 

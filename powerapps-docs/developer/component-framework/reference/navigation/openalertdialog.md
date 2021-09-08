@@ -1,6 +1,6 @@
 ---
 title: openAlertDialog | Microsoft Docs
-description: 
+description: Displays an alert dialog containing a message and a button.
 keywords:
 ms.author: nabuthuk
 author: Nkrb

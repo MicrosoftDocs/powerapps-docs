@@ -1,12 +1,13 @@
 ---
 title: "Impersonate another user (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Use impersonation to execute business logic on behalf of another Microsoft Dataverse user to provide a desired feature or service using the appropriate role and object-based security of that impersonated user." # 115-145 characters including spaces. This abstract displays in the search result.
+description: "Use impersonation to execute business logic on behalf of another Microsoft Dataverse user." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 04/07/2020
+ms.date: 03/12/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
+ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -17,13 +18,11 @@ search.app:
 ---
 # Impersonate another user
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
-
-Use impersonation to execute business logic on behalf of another Microsoft Dataverse user to provide a desired feature or service using the appropriate role and object-based security of that impersonated user. 
+Use impersonation to execute business logic on behalf of another Microsoft Dataverse user to provide a desired feature or service using the appropriate role and object-based security of that impersonated user.
 
 This is necessary because the Dataverse web services can be called by various clients and services on behalf of a Dataverse user.
 
-Impersonation involves two different user accounts: 
+Impersonation involves two different user accounts:
 
 |Impersonator|Impersonated user|
 |--|--|
@@ -61,7 +60,7 @@ To impersonate another user, set the `CallerId` property to the Guid value of th
 - <xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy>.<xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy.CallerId>
 - <xref:Microsoft.Xrm.Sdk.WebServiceClient.OrganizationWebProxyClient>.<xref:Microsoft.Xrm.Sdk.WebServiceClient.OrganizationWebProxyClient.CallerId>
 
-## Impersonate another user using Plug-ins
+## Impersonate another user using plug-ins
 
 You can register a plug-in you can specify a user that the operations should use. Within the code of a plug-in you can override this setting.
 More information: [Impersonate a user](impersonate-a-user.md).
@@ -72,7 +71,5 @@ More information: [Impersonate a user](impersonate-a-user.md).
 [Build web applications using Server-to-Server (S2S) authentication](build-web-applications-server-server-s2s-authentication.md)<br />
 [Impersonate another user using the Web API](webapi/impersonate-another-user-web-api.md)<br />
 [Write a plug-in](write-plug-in.md)
- 
-
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

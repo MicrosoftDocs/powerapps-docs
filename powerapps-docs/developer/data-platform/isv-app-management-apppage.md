@@ -14,6 +14,7 @@ ms.topic: article
 ms.reviewer: nabuthuk
 ms.workload: na
 ms.date: 01/11/2021
+ms.subservice: dataverse-developer
 ms.author: nabuthuk
 search.audienceType: 
   - developer
@@ -23,13 +24,12 @@ search.app:
 
 # The App page
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
-
-
 After the user selects an app, the user is navigated to the app's detail page, which provides a view to analyze the install history across tenants for that particular app. The app description is from [AppSource](https://appsource.microsoft.com/).
 
+[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
+
 > [!div class="mx-imgBorder"]
-> ![App detail page](media/isv-portal-apppage-appname.png)
+> ![App detail page.](media/isv-portal-apppage-appname.png)
 
 The app detail page contains the following graphs and metrics.
 
@@ -42,7 +42,7 @@ When hovering over the graph, the following information is shown:
 Install Count: Number of app installations happened on a particular date.
 
 > [!div class="mx-imgBorder"]
-> ![Package installs by environment type](media/isv-portal-apppage-graph1.png)
+> ![Package installs by environment type.](media/isv-portal-apppage-graph1.png)
 
 ## Installs by geo
 
@@ -55,7 +55,7 @@ When hovering over the graph, the following information is shown:
 
 
 > [!div class="mx-imgBorder"]
-> ![Package install attempts by tenant (last 28 days)](media/isv-portal-apppage-graph2.png)
+> ![Package install attempts by tenant (last 28 days).](media/isv-portal-apppage-graph2.png)
 
 ## Installs by environment
 
@@ -67,7 +67,7 @@ When hovering over the graph, the following information is shown:
 2. Install Count
 
 > [!div class="mx-imgBorder"]
-> ![Package installs by location of tenants](media/isv-portal-apppage-graph3.png)
+> ![Package installs by location of tenants.](media/isv-portal-apppage-graph3.png)
 
 ## Installs by tenant
 
@@ -82,7 +82,7 @@ When hovering over any item of the graph, the following information is shown:
 1. Environment
 
 > [!div class="mx-imgBorder"]
-> ![Package and version installs by tenant](media/isv-portal-apppage-graph4.png)
+> ![Package and version installs by tenant.](media/isv-portal-apppage-graph4.png)
 
 ## Filtering the app page
 

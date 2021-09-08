@@ -2,11 +2,12 @@
 title: "Sharing and assigning (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about the security that applies to sharing and assigning records." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 12/09/2020
+ms.date: 03/11/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "paulliew" # GitHub ID
+ms.subservice: dataverse-developer
 ms.author: "paulliew" # MSFT alias of Microsoft employees only
 manager: "sunilg" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -17,7 +18,7 @@ search.app:
 ---
 # Sharing and assigning
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
 In this article we will look at the security access when sharing and assigning records.
 
@@ -41,7 +42,7 @@ that this user has on the record are the union of all the rights.
 When you share a record with another user using the `GrantAccess` message (<xref:Microsoft.Dynamics.CRM.GrantAccess> action, <xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest> class), or modify access using the `ModifyAccess` message (<xref:Microsoft.Dynamics.CRM.ModifyAccess> action, <xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest> class), you must indicate what access rights you want to
 grant to the other user. Access rights on a shared record can be different for
 each user with whom the record is shared. However, you cannot give a user any
-rights that he or she would not have for that type of entity, based on the role
+rights that he or she would not have for that type of table, based on the role
 assigned to that user. For example, if a user does not have **Read** privileges on
 accounts and you share an account with that user, the user will be unable to see
 that account.
@@ -57,7 +58,7 @@ times, so he does not make another call.
 
 Sharing is maintained on individual records. A record inherits the sharing
 properties from its parent and maintains its own sharing properties. Therefore,
-a record can have two sets of sharing properties — one that it has on its ow, and
+a record can have two sets of sharing properties — one that it has on its own, and
 one that it inherits from its parent.
 
 Removing the share of a parent record removes the sharing properties of objects
@@ -78,8 +79,8 @@ whether records should be shared with previous owners or not after the assign
 operation. If **Share reassigned records with original owner** is selected (see **System Settings** > **General**), then the previous owner
 shares the record with all access rights after the assign operation. Otherwise,
 the previous owner does not share the record and may not have access to the
-record, depending on his or her privileges. The Organization entity's
-[ShareToPreviousOwnerOnAssign](reference/entities/organization.md#sharetopreviousowneronassign-options) attribute controls this setting.
+record, depending on his or her privileges. The Organization table's
+[ShareToPreviousOwnerOnAssign](reference/entities/organization.md#sharetopreviousowneronassign-choicesoptions) column controls this setting.
 
 ## Revoking access
 

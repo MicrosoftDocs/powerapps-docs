@@ -7,12 +7,13 @@ ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "how-to"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
   - "powerapps"
 author: "Mattp123"
+ms.subservice: dataverse-maker
 ms.author: "matp"
 manager: "kvivek"
 search.audienceType: 
@@ -43,7 +44,7 @@ Part of the name of any custom relationship you create is the customization pref
 
 In solution explorer, expand **Tables** an select a table. Within that table, select  **N:N Relationships**.
 
-![View N:N table relationships](media/view-nn-entity-relationships-solution-explorer.png)
+![View N:N table relationships.](media/view-nn-entity-relationships-solution-explorer.png)
 
 ## Create relationships
 
@@ -52,11 +53,11 @@ While [viewing table relationships](#view-table-relationships), select **New Man
 > [!NOTE]
 > If the command is not available, the table is not eligible to create a custom relationship.
 
-![New many-to-many relationship form](media/new-nn-entity-relationship-form-solution-explorer.png)
+![New many-to-many relationship form.](media/new-nn-entity-relationship-form-solution-explorer.png)
 
 In the **Other table** group, in the **table Name** column, choose the table that you want to create the relationship with. This will populate the **Name** and **Relationship table Name** columns in the **Relationship Definition** group.
 
-You can click ![Save table relationship button](media/save-entity-icon-solution-explorer.png) to save the table and continue editing. More information: [Edit relationships](#edit-relationships)
+You can click ![Save table relationship button.](media/save-entity-icon-solution-explorer.png) to save the table and continue editing. More information: [Edit relationships](#edit-relationships)
 
 > [!NOTE]
 > If either the **Name** or **Relationship table Name** values already exist in the system you will get an error when you save. Edit the values so that they are unique and try again.
@@ -102,7 +103,7 @@ You can hide the relationship from **Advanced Find** in model-driven apps by set
 
 ## Delete relationships
 
-While [viewing table relationships](#view-table-relationships), select the table relationship you want to delete and click the ![Delete command](media/delete.gif) command.
+While [viewing table relationships](#view-table-relationships), select the table relationship you want to delete and click the ![Delete command.](media/delete.gif) command.
 
 Deleting the relationship will delete the relationship table created. All data connecting tables using the relationship will be lost.
 

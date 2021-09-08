@@ -14,6 +14,7 @@ ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.date: 8/21/2019
+ms.subservice: dataverse-developer
 ms.author: jowells
 search.audienceType: 
   - developer
@@ -280,10 +281,10 @@ The following examples show the problematic pattern based on the method you use 
 
 ## Additional information
 
-Plug-ins interacting with external services may experience abnormally increased execution times. The problem is due to the ([KeepAlive property](https://msdn.microsoft.com/library/system.net.httpwebrequest.keepalive.aspx)) of HTTP requests issued to external web servers. If the `KeepAlive` property is set to true or not defined at all (default behavior is true) the Sandbox client on the server could continue to try and use a persistent session even though the session has become expired due to network device configuration. The cause of the extended execution time is due to the network retrying the request until the connection is, ultimately, reset.
+Plug-ins interacting with external services may experience abnormally increased execution times. The problem is due to the ([KeepAlive property](/dotnet/api/system.net.httpwebrequest.keepalive)) of HTTP requests issued to external web servers. If the `KeepAlive` property is set to true or not defined at all (default behavior is true) the Sandbox client on the server could continue to try and use a persistent session even though the session has become expired due to network device configuration. The cause of the extended execution time is due to the network retrying the request until the connection is, ultimately, reset.
 
 > [!IMPORTANT]
-> This affects all code that initiates HTTP Requests to a web server using [System.Net.WebClient](https://msdn.microsoft.com/library/system.net.webclient.aspx), [System.Net.WebRequest](https://msdn.microsoft.com/library/system.net.webrequest.aspx) or [System.Net.HttpWebRequest](https://msdn.microsoft.com/library/system.net.httpwebrequest.aspx) as well as Windows Communications Foundation (WCF) client communications using an HTTP transport binding directly or indirectly via [ChannelFactory\<TChannel>](https://docs.microsoft.com/dotnet/api/system.servicemodel.channelfactory-1) or [ClientBase\<T>](https://docs.microsoft.com/dotnet/api/system.servicemodel.clientbase-1).
+> This affects all code that initiates HTTP Requests to a web server using [System.Net.WebClient](/dotnet/api/system.net.webclient), [System.Net.WebRequest](/dotnet/api/system.net.webrequest) or [System.Net.HttpWebRequest](/dotnet/api/system.net.httpwebrequest) as well as Windows Communications Foundation (WCF) client communications using an HTTP transport binding directly or indirectly via [ChannelFactory\<TChannel>](/dotnet/api/system.servicemodel.channelfactory-1) or [ClientBase\<T>](/dotnet/api/system.servicemodel.clientbase-1).
 
 This behavior is transparent to end users and traditional logging as the execution is due to network delays.  If the plug-in was registered as a synchronous event, users could experience intermittent performance issues during those registered operations which could cause unresponsiveness of model-driven apps.  If the plug-in is registered asynchronously, the issue would only be observed by reviewing execution times of the plug-in and seeing the execution taking longer than normal or expected.
 
@@ -292,9 +293,9 @@ This behavior is transparent to end users and traditional logging as the executi
 ### See also
 
 [Sample: Web access from a sandboxed plug-in](../../org-service/samples/web-access-plugin.md)<br />
-[Load Balancing (WCF)](https://msdn.microsoft.com/library/ms730128.aspx)<br />
-[HttpTransportBindingElement.KeepAliveEnabled Property](https://msdn.microsoft.com/library/system.servicemodel.channels.httptransportbindingelement.keepaliveenabled.aspx)<br />
-[HttpWebRequest.KeepAlive Property](https://msdn.microsoft.com/library/system.net.httpwebrequest.keepalive.aspx)<br />
+[Load Balancing (WCF)](/dotnet/framework/wcf/load-balancing)<br />
+[HttpTransportBindingElement.KeepAliveEnabled Property](/dotnet/api/system.servicemodel.channels.httptransportbindingelement.keepaliveenabled)<br />
+[HttpWebRequest.KeepAlive Property](/dotnet/api/system.net.httpwebrequest.keepalive)<br />
 
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

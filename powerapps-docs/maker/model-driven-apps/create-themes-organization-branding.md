@@ -11,6 +11,7 @@ ms.topic: "how-to"
 author: "Mattp123"
 ms.assetid: 21a166a0-d25e-4260-a1e4-2ddc528787c2
 caps.latest.revision: 17
+ms.subservice: mda-maker
 ms.author: "matp"
 manager: "kvivek"
 search.audienceType: 
@@ -71,7 +72,7 @@ Themes aren't solution aware. The changes made for an organization's theme arenâ
 
  The easiest and quickest way to create a new theme is to clone and alter an existing theme, then save, preview and publish it.
  
-1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Settings** ![Settings icon](../model-driven-apps/media/powerapps-gear.png) (upper right), and then select **Advanced settings**.
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Settings** ![Settings icon.](../model-driven-apps/media/powerapps-gear.png) (upper right), and then select **Advanced settings**.
 1. Select **Customizations**, and then select **Themes**.
 1. Under **All themes**, select the theme you want to clone, such as the **CRM Default Theme**. Select **Clone** on the command bar.
 1. Replace an existing UI item's hexadecimal number, such as the **Title Text Color**, with the hexadecimal value that represents the color you want.
@@ -79,15 +80,15 @@ Themes aren't solution aware. The changes made for an organization's theme arenâ
 For example, the **CRM Default Theme** was cloned and changed using mostly varying shades of green color. The following screenshots show the new colors for navigation and highlighting. A custom logo was also added that will appear in the upper left corner of an app.  
  
  > [!div class="mx-imgBorder"] 
- > ![Gentle green theme colors for navigation bar](media/theme-gentle-green.png "Gentle green theme colors for navigation bar")
+ > ![Gentle green theme colors for navigation bar.](media/theme-gentle-green.png "Gentle green theme colors for navigation bar")
 
  > [!div class="mx-imgBorder"] 
- > ![Gentle green theme colors for UI elements](media/theme-gentle-green2.png "Gentle green theme colors for UI elements")  
+ > ![Gentle green theme colors for UI elements.](media/theme-gentle-green2.png "Gentle green theme colors for UI elements")  
   
  The following image shows an app account view with the new colors and logo.
 
  > [!div class="mx-imgBorder"] 
- > ![Gentle green theme account grid](media/themes-gentle-green-account-grid.png "Gentle green theme account grid")  
+ > ![Gentle green theme account grid.](media/themes-gentle-green-account-grid.png "Gentle green theme account grid")  
 
 > [!IMPORTANT]
 > Logos that are too large won't display. The image used in the example is 156 pixels wide x 48 pixels height.
@@ -102,7 +103,7 @@ For example, the **CRM Default Theme** was cloned and changed using mostly varyi
   
  The following screenshot shows the buttons on the command bar for preview and publishing.  
   
- ![Use preview buttons to enter&#47;exit the preview mode](media/themes-preview-buttons.PNG "Use preview buttons to enter/exit the preview mode")  
+ ![Use preview buttons to enter&#47;exit the preview mode.](media/themes-preview-buttons.PNG "Use preview buttons to enter/exit the preview mode")  
   
 <a name="BestPracticies"></a>   
 ## Best practices
@@ -143,7 +144,7 @@ For example, the **CRM Default Theme** was cloned and changed using mostly varyi
 ## See also  
          
  [Video: Themes](https://go.microsoft.com/fwlink/p/?LinkId=529568) <br />
- [Query and edit an organization theme](https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/query-and-edit-an-organization-theme)
+ [Query and edit an organization theme](/dynamics365/customer-engagement/developer/customize-dev/query-and-edit-an-organization-theme)
 
 
 

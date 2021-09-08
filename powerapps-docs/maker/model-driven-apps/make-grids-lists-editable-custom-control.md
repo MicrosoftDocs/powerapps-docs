@@ -1,5 +1,5 @@
 ---
-title: "Make model-driven app grids (lists) editable by using the Editable Grid custom control with Power Apps | MicrosoftDocs"
+title: "Make model-driven app views and grids (lists) editable by using the Editable Grid custom control with Power Apps | MicrosoftDocs"
 description: "Learn how to use the editable grid custom control"
 ms.custom: ""
 ms.date: 04/09/2020
@@ -7,7 +7,7 @@ ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+ms.topic: "how-to"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -15,6 +15,7 @@ applies_to:
 ms.assetid: cefbc0c2-769b-4230-ab5a-b28a84630a42
 caps.latest.revision: 8
 author: "Mattp123"
+ms.subservice: mda-maker
 ms.author: "matp"
 manager: "kvivek"
 search.audienceType: 
@@ -23,15 +24,15 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Make model-driven app grids (lists) editable using the Editable Grid custom control
+# Make model-driven app views editable using the editable grid control
 
 [!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-In previous releases of Dynamics CRM, users couldn't enter data directly in grids (sometimes called lists) or sub-grids on forms. They had to select the row in the grid to open a form, edit the data, and then save, which required multiple steps. With editable grids, users can do rich in-line editing directly from views and sub-grids whether they're using a web app, tablet, or phone.  
+By default, users can't enter data directly using the read-only view control for views and sub-grids on forms. Users select the row in the grid to open a form, edit the data, and then save, which requires multiple steps. With editable grids, users can do rich in-line editing directly from views and sub-grids whether they're using a web app, tablet, or phone.  
   
- ![Editable grid examples](media/editable-grid-example.png "Editable grid examples")  
+ ![Editable grid examples.](media/editable-grid-example.png "Editable grid examples")  
   
- When editable grids are enabled through the Editable Grids custom control, users can edit most types of columns, including basic Lookup columns and choices.  
+ When editable grids are enabled through the Editable Grids control, users can edit most types of columns, including basic Lookup columns and choices.  
 
 **Editable grids support:**
   
@@ -71,13 +72,13 @@ In previous releases of Dynamics CRM, users couldn't enter data directly in grid
   
 2.  In the **Tables** list, open the appropriate table, select the **Controls** tab, and then select **Add Control**.  
   
-     ![Add Editable Grids custom control](media/add-editable-grids-custom-control.png "Add Editable Grids custom control")  
+     ![Add Editable Grids custom control.](media/add-editable-grids-custom-control.png "Add Editable Grids custom control")  
   
 3.  In the **Add Control** dialog box, select **Editable Grid**, and then select **Add**.  
   
 4.  In the **Editable Grid** row that's added, select the form factor(s) you want to apply the grid to. This makes the editable grid control the default control for the selected form factor(s).  
   
-     ![Editable Grid row with form factor selection](media/editable-grid-row-wit-factor-selection.png "Editable Grid row with form factor selection")    
+     ![Editable Grid row with form factor selection.](media/editable-grid-row-wit-factor-selection.png "Editable Grid row with form factor selection")    
 
    > [!NOTE]
    >  At runtime, users can toggle between editable grids and read-only grids.  
@@ -92,7 +93,7 @@ In previous releases of Dynamics CRM, users couldn't enter data directly in grid
   
     4.  If you want to limit the rows displayed, select the **Only show rows where** check box, and then select your criteria from the list, and then select **OK**.  
   
-         ![Add lookup in Editable Grid control](media/add-lookup-in-editable-grid-control.png "Add lookup in Editable Grid control")  
+         ![Add lookup in Editable Grid control.](media/add-lookup-in-editable-grid-control.png "Add lookup in Editable Grid control")  
      
 6.  If you have a nested grid, select the pencil button for **Nested grid view**, and then select the table and view for the nested grid. For the **Nested grid parent ID** select the relationship for the tables. For example, the ParentAccountID column connects the **Account** and **Contact** tables.  
   
@@ -106,7 +107,7 @@ In previous releases of Dynamics CRM, users couldn't enter data directly in grid
   
 8.  If you want to add JavaScript events, select the **Events** tab, and then select the appropriate tables, columns, and events. More information: [Developer Documentation: Use editable grids](../../developer/model-driven-apps/use-editable-grids.md)
   
-     ![Add events in Editable Grid control](media/add-events-in-editable-grid-control.png "Add events in Editable Grid control")  
+     ![Add events in Editable Grid control.](media/add-events-in-editable-grid-control.png "Add events in Editable Grid control")  
   
 9. To save your work, select **Save** on the action bar.  
   
@@ -144,7 +145,7 @@ Grouping behavior works only on the client side and does not span pages. Group b
 Business Rules on an editable grid are supported only if the conditional column is also a column on the grid. If the column is not a column the business rules won’t work. Verify that each column referenced in the business rule is also included on the form. Note that business rules on an editable grid do not fire if the editable grid is configured on a dashboard.
 
 ## Next steps  
- [Use keyboard shortcuts in editable grids](https://docs.microsoft.com/dynamics365/customer-engagement/basics/keyboard-shortcuts#editable-grids-views)
+ [Use keyboard shortcuts in editable grids](/dynamics365/customer-engagement/basics/keyboard-shortcuts#editable-grids-views)
 
 
 

@@ -64,16 +64,16 @@ Power BI dashboard.
 
 Steps to use the .pbit file are the same as the original deployment; make sure you use the same workspace to overwrite the existing Power BI dashboard if you want to preserver the Power BI report URL that is used for embedding it into Power Apps portal. 
 
-More information: [Step 5: Configure and publish Power BI dashboard](https://docs.microsoft.com/powerapps/sample-apps/regional-emergency-response/deploy#step-5-configure-and-publish-power-bi-dashboard) in the deployment topic.
+More information: [Step 5: Configure and publish Power BI dashboard](./deploy.md#step-5-configure-and-publish-power-bi-dashboard) in the deployment topic.
 
 ## Step 4: Verify the Power BI report URL in your portal
 
 This step is required only if your Power BI report URL has changed in the previous step owing to you publishing the dashboard in a new workspace. Verify the **PowerBI Path** site setting in your portal and update the value with the latest Power BI report URL.
 
-For detailed steps, see [Embed Power BI report in portal](https://docs.microsoft.com/powerapps/sample-apps/regional-emergency-response/deploy#the-process-1) in the deployment topic.
+For detailed steps, see [Embed Power BI report in portal](./deploy.md#the-process-1) in the deployment topic.
 
 Make sure to restart our portal for the changes to take effect. More
-information: [Restart the portal](https://docs.microsoft.com/powerapps/sample-apps/regional-emergency-response/deploy#restart-the-portal) in the deployment topic.
+information: [Restart the portal](./deploy.md#restart-the-portal) in the deployment topic.
 
 ## Step 5: Verify the processes
 
@@ -81,7 +81,7 @@ Verify that the **Send Invitation** and **Send Password Reset To Contact**
 processes are still valid, that is, they have an account in the **From** field
 that can send emails and the rest of the details are fine.
 
-For details about how to fix these processes, see [Step 10: Fix the processes for the app](/powerapps/sample-apps/regional-emergency-response/deploy#step-10-fix-the-processes-for-the-app) in the deployment topic.
+For details about how to fix these processes, see [Step 10: Fix the processes for the app](./deploy.md#step-10-fix-the-processes-for-the-app) in the deployment topic.
 
 ## Step 6: Verify the flows for sending emails
 
@@ -92,13 +92,13 @@ Do the following:
 |**Portal User Request: Send Email on Decline Request**|Update the connection to connect to Microsoft Dataverse and then specify a user account to send emails.|
 |**Portal User Request: Send Email to Admins on Request Creation**|Update the connection to connect to Dataverse and then specify a user account to send emails. Additionally, update the portal URL in the email body as per your Portal URL.| 
 
-For detailed information about this, see [Step 11.1: Fix the flows for sending emails](deploy.md##step-111-fix-the-flows-for-sending-emails) in the deployment topic.
+For detailed information about this, see [Step 11.1: Fix the flows for sending emails](deploy.md#step-111-fix-the-flows-for-sending-emails) in the deployment topic.
 
 ## Step 7: Verify the flows for performing tasks
 
 Verify and authorize the connection information of the flows for performing specific tasks.
 
-For details about how to do this, see [Step 11.2: Fix the flows for performing specific tasks](/powerapps/sample-apps/regional-emergency-response/deploy#step-112-fix-the-flows-for-performing-specific-tasks) in the deployment topic.
+For details about how to do this, see [Step 11.2: Fix the flows for performing specific tasks](./deploy.md#step-112-fix-the-flows-for-performing-specific-tasks) in the deployment topic.
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

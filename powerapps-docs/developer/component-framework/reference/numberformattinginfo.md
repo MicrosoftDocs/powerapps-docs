@@ -1,6 +1,6 @@
 ---
 title: NumberFormattingInfo | Microsoft Docs
-description: 
+description: The interface for the Organization System Settings Number Format info exposed to a code component.
 keywords:
 ms.author: nabuthuk
 author: Nkrb

@@ -5,7 +5,8 @@ author: mduelae
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 02/01/2021
+ms.date: 08/10/2021
+ms.subservice: mobile
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
@@ -19,18 +20,21 @@ searchScope:
   - "Power Apps"
 ---
 
-# Use relevance search for model-driven apps using Power Apps Mobile (preview)
+# Use relevance search for model-driven apps using Power Apps Mobile 
 
-[!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
 
 You can quickly find the information that you're looking for by using relevance search. The relevance search experience delivers fast and comprehensive results across multiple tables, in a single list, sorted by relevance.
 
-Relevance search is already available when you're using a model-driven app in a web browser. The functionality is the same in Power Apps Mobile, but it works a little differently. More information: [Search for tables and rows by using relevance search](https://docs.microsoft.com/powerapps/user/relevance-search)
+Relevance search is already available when you're using a model-driven app in a web browser. The functionality is the same in Power Apps Mobile, but it works a little differently. More information: [Search for tables and rows by using relevance search](../user/relevance-search.md)
 
-Before you begin using relevance search, the new experience needs to be enabled by the administrator for your organization. More information: [Enable the new relevance search experience](https://docs.microsoft.com/power-platform/admin/configure-relevance-search-organization#enable-the-new-relevance-search-experience)<!--note from editor: Edit to alt text suggested. This isn't really a "diagram," which is a line drawing such as a conceptual illustration.-->
+Before you begin using relevance search, the new experience needs to be enabled by the administrator for your organization. More information: [Enable Relevance Search](/power-platform/admin/configure-relevance-search-organization#enable-relevance-search)
+
+When relevance search is turned on, it becomes your default and only global search experience for all of your model-driven apps. You won't be able to switch to [quick find search also known as categorized search](../user/quick-find.md).
 
   > [!div class="mx-imgBorder"]
-  > ![Demonstration of how relevance search works in a model-driven app running on Power Apps Mobile](media/powerapps-mobile-rel-search.gif "Demonstration of how relevance search works in a model-driven app running on Power Apps Mobile")
+  > ![Demonstration of how relevance search works in a model-driven app running on Power Apps Mobile.](media/powerapps-mobile-rel-search.gif "Demonstration of how relevance search works in a model-driven app running on Power Apps Mobile")
+
+ 
 
 ## Run a search
 
@@ -39,23 +43,40 @@ View suggested search results inline as you type, minimizing keystrokes and simp
 1. Select the search button. 
 
    > [!div class="mx-imgBorder"]
-   > ![Select the search button](media/search-on-mobile-1.png "Select the search button") 
+   > ![Select the search button.](media/search-on-mobile-1.png "Select the search button") 
   
 2. Enter the words you want to search for in the search box.  
 
    > [!div class="mx-imgBorder"]
-   > ![Enter search text](media/search-on-mobile-2.png "Enter search text") 
+   > ![Enter search text.](media/search-on-mobile-2.png "Enter search text") 
   
 3. As you enter search text, rows that match your text begin to appear.
 
    > [!div class="mx-imgBorder"]
-   > ![See suggested results as you type](media/suggested-results.png "See suggested results as you type")
+   > ![See suggested results as you type.](media/suggested-results.png "See suggested results as you type")
+
+
+
+## Early access: Use the barcode scanner
+
+ [!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
+ 
+ If you're on [early access](/power-platform/admin/opt-in-early-access-updates), you can use the barcode scanner to look up rows. The scanner automatically detects a barcode, a QR code, or a data-matrix code.
+ 
+ You also enter text in the search box such as **contoso** and then use the barcode scanner to scan a barcode, such as **12345**. In this case, the system will search for **contoso12345**.
+ 
+ 1. To use the barcode scanner, select the search button.
+ 2. Select the barcode scanner button and then scan your item.
+
+    > [!div class="mx-imgBorder"]
+    > ![Select the barcode scanner.](media/bar-code-scanner.png "Barcode scanner")
+ 
 
 ## View search results
 
 Search results are ranked and grouped by table.
 
-![Search results page](media/search-results-page.png "Search results page") 
+![Search results page.](media/search-results-page.png "Search results page") 
   
   Legend
   
@@ -69,7 +90,7 @@ Search results are ranked and grouped by table.
   
 Use filters to drill into and explore the results of your current search without having to repeatedly refine your search terms. Immediately after you perform a search, you can filter by **Owner**, **Created On**, or **Modified On**.
 
-![Filter results page](media/filter-results-page.png "Filter results page") 
+![Filter results page.](media/filter-results-page.png "Filter results page") 
   
   Legend
   

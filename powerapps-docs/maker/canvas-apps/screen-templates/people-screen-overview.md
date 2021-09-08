@@ -1,21 +1,25 @@
 ---
-title: People-screen template | Microsoft Docs
-description: Understand how the people-screen template for canvas apps works and how to extend the screen for your own use cases
+title: People-screen template in canvas apps
+description: Understand how the people-screen template for canvas apps works, modify the screen, and extend it as part of an app.
 author: emcoope-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 12/30/2018
+ms.date: 03/29/2021
+ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - emcoope-msft
 ---
 
-# Overview of the people-screen template for canvas apps
+# People-screen template in canvas apps
 
 In a canvas app, add a people screen that lets users search for people within their organizations. Users can search for, select, and add people to a collection. You can change which types of data appear in the search result gallery, use your people selections to send an email, and make other customizations.
 
@@ -45,15 +49,15 @@ To add a people screen from the template:
 
     By default, the screen looks similar to this:
 
-    ![Initial people screen state](media/people-screen/people-screen-empty.png)
+    ![Initial people screen state.](media/people-screen/people-screen-empty.png)
 
 1. To start searching for users, select the text input box at the top and start typing a coworker's name. The search results appear below the text input box:
 
-    ![people screen search state](media/people-screen/people-browse-gall-full.png)
+    ![people screen search state.](media/people-screen/people-browse-gall-full.png)
 
 1. When you select individuals from the search results, they are added to the **MyPeople** collection. The search bar input value is reset, revealing the collection of people you've selected:
 
-    ![people screen collection results](media/people-screen/people-people-gall-full.png)
+    ![people screen collection results.](media/people-screen/people-people-gall-full.png)
 
 ## Modify the screen
 
@@ -63,7 +67,7 @@ If you want to modify the screen further, use the [people-screen reference](./pe
 
 ### Show different data for people
 
-This screen uses the [Office365Users.SearchUser](https://docs.microsoft.com/connectors/office365users/#searchuser) operation to search for users in your org. It provides additional fields for each event beyond what appears in the **UserBrowseGallery** control. Adding or changing fields in the gallery is a simple process:
+This screen uses the [Office365Users.SearchUser](/connectors/office365users/#searchuser) operation to search for users in your org. It provides additional fields for each event beyond what appears in the **UserBrowseGallery** control. Adding or changing fields in the gallery is a simple process:
 
 1. In the **UserBrowseGallery**, select a label to modify (or add one and keep it selected).
 
@@ -90,7 +94,7 @@ The people screen caches your people selections in the **MyPeople** collection. 
 1. Set the **OnSelect** property of **SendIcon** to this formula:
 
     ```powerapps-dot
-    Office365.SendEmail( 
+    Office365.SendEmailV2( 
         Concat( MyPeople, UserPrincipalName & ";" ), 
         SubjectLine.Text, 
         MessageBody.Text 

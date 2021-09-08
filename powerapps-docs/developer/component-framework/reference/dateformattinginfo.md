@@ -1,6 +1,6 @@
 ---
 title: DateFormattingInfo | Microsoft Docs
-description: 
+description: Provides the date formatting information for the current user.
 keywords:
 ms.author: nabuthuk
 author: Nkrb

@@ -5,13 +5,14 @@ keywords: ""
 ms.date: 08/06/2018
 ms.service: powerapps
 ms.custom: 
-ms.topic: article
+ms.topic: how-to
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
   - "powerapps"
 ms.assetid: e82e7f64-37ad-41e5-acd7-16309881c6a2
 author: "Mattp123"
+ms.subservice: mda-maker
 ms.author: "matp"
 manager: "kvivek"
 ms.reviewer: 
@@ -41,7 +42,7 @@ In order to distribute your app, you create a solution so the app can be package
 3. Complete the columns on the **New Solution** page, and then select **Save**. More information: [Create a solution](../data-platform/create-solution.md)
 4. The **Solution** page appears. Select **Add Existing**, select **App**, select **Model-driven app**, select the app that you want to add to the solution, and then select **Add**. 
 
-    ![Select solution components](media/select-solution-components.png)
+    ![Select solution components.](media/select-solution-components.png)
 
 5. If a **Missing Required Components** page appears we recommend that you select **Yes, include required components** to add necessary components such as tables, views, forms, charts, and site map that are part of the app. Select **OK**.
 

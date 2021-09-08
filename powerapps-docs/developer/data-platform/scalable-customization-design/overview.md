@@ -64,7 +64,7 @@ These problems typically have an impact on the user experience through slower re
 
 Common symptoms have causes that force particular requests to run slowly and then to trigger platform constraints. The following diagram shows typical symptoms with some of the common root causes of these symptoms.
 
-![understanding causes](media/understanding-causes.png)
+![understanding causes.](media/understanding-causes.png)
 
 The underlying impact of long running transactions, database blocking, and complex queries can all overlap with each other and amplify their effects to cause these symptoms. For example, a series of long running queries that are completely independent of each other may cause slow user response times, but only once they require access to the same resources do the response times become so slow that they become errors. 
 
@@ -88,7 +88,7 @@ It is worth being aware of and understanding the platform constraints that do ex
 |**Workflow limits**|&bull; Operates under a Fair Usage policy<br />&bull; No specific hard limits, but balance resource across organizations<br />&bull; Where demand is low an organization can take full advantage of available capacity. Where demand is high, resources and throughput are shared.|
 |**Maximum concurrent connections**|&bull; There is a platform default setting of  a maximum connection pool limit of 100 connections from the  Web Server connection pool in IIS to the database. Dataverse does not change this value<br />&bull; If you hit this, it is an indication of an error in the system; look at why so many connections are blocking<br />&bull; With multiple web servers, each with 100 concurrent connections to the database of typical &lt; 10ms, this suggests a throughput of &gt; 10k database requests for each web server. This should not be required and would hit other challenges well before that|
 |**ExecuteMultiple**|&bull; The `ExecuteMultiple` message is designed to assist with collections of operations being sent to Dataverse from an external source<br />&bull; The processing of large groups of these requests can tie up vital resources in Dataverse at the expense of more response critical requests by users.|
-|**Service Protection Limits**|&bull; To ensure consistent availability and performance for everyone we apply some limits to how APIs are used. These limits are designed to detect when client applications are making extraordinary demands on server resources.<br />&bull; More information: [Service Protection API Limits](/powerapps/developer/data-platform/api-limits)|
+|**Service Protection Limits**|&bull; To ensure consistent availability and performance for everyone we apply some limits to how APIs are used. These limits are designed to detect when client applications are making extraordinary demands on server resources.<br />&bull; More information: [Service Protection API Limits](../api-limits.md)|
 
 ## Next steps
 

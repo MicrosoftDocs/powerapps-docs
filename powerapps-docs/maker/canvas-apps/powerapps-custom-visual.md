@@ -1,18 +1,22 @@
 ---
-title: Power Apps visual for Power BI | Microsoft Docs
-description: Procedure and limitations for embedding a canvas app that uses the same data source and can be filtered like other report items in Power BI 
+title: Power Apps visual for Power BI
+description: Procedure and limitations for embedding a canvas app that uses the same data source and can be filtered like other report items in Power BI. 
 author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 09/22/2020
-ms.author: pemikkel
+ms.date: 04/30/2021
+ms.subservice: canvas-maker
+ms.author: hahuber
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - mikkelsen2000
+  - tapanm-msft
 ---
 
 # Power Apps visual for Power BI
@@ -27,13 +31,13 @@ Let's look at the steps required to use the Power Apps visual in your Power BI r
 
 2. Add the Power Apps visual to your report, and set the data fields associated with it.
 
-    ![Select report data](./media/powerapps-custom-visual/add-visual-set-data.png)
+    ![Select report data.](./media/powerapps-custom-visual/add-visual-set-data.png)
 
     You can choose an existing app or create one, but the report must be published to the Power BI service and opened in Microsoft Edge or Google Chrome.
 
 3.  If you choose to create an app, you can choose in which environment to create it.
 
-    ![New or existing app](./media/powerapps-custom-visual/create-new-or-choose-app.png)
+    ![New or existing app.](./media/powerapps-custom-visual/create-new-or-choose-app.png)
 
     If you choose to use an existing app, the visual prompts you to open the app in Power Apps. The visual then sets up the required components in your app so that Power BI can send data to Power Apps.
 
@@ -42,11 +46,11 @@ Let's look at the steps required to use the Power Apps visual in your Power BI r
     > [!NOTE]
     > You must create a new app from Power Apps visual in Power BI report for the `PowerBIIntegration.Refresh()` function to be available in the app.
 
-    ![New app](./media/powerapps-custom-visual/new-app.png)
+    ![New app.](./media/powerapps-custom-visual/new-app.png)
 
 4. Now in Power Apps Studio, you can use the data fields you set in step 2. The `PowerBIIntegration` object acts like any other Power Apps read-only data source or collection. You can use the object to populate any control, or join and filter with other data sources.
 
-    ![Custom formula](./media/powerapps-custom-visual/custom-formula.png)
+    ![Custom formula.](./media/powerapps-custom-visual/custom-formula.png)
 
     This formula joins Power BI data with the Customer data source: `LookUp(Customer,Customer_x0020_Name=First(PowerBIIntegration.Data).Customer_Name)`
 
@@ -58,17 +62,21 @@ Let's look at the steps required to use the Power Apps visual in your Power BI r
 
 7. You've created a report in which your users can take actions as they gain insights from your data.
 
-    ![Working report](./media/powerapps-custom-visual/working-report.gif)
+    ![Working report.](./media/powerapps-custom-visual/working-report.gif)
 
     If you need to make changes to an app, open the report in edit mode, select **More options** (**. . .**) on the Power Apps visual and select **Edit**.
 
-    ![Edit app](./media/powerapps-custom-visual/edit-app.png)
+    ![Edit app.](./media/powerapps-custom-visual/edit-app.png)
 
 ## Limitations of the Power Apps visual
 
 The following limitations apply to the Power Apps visual:
 
-- Power Apps visual isn't supported for [guest users](share-app-guests.md).
+- The maximum number of records that can be passed from Power BI to Power Apps visual using "PowerBIIntegration" object is limited to 1000.
+- Power Apps visual is only supported for [guest users](share-app-guests.md) when the following conditions are met:
+  - The canvas app URI (weblink) includes the tenantId of the app in the query string.
+  - The Power BI portal authenticates the user, instead of allowing anonymous access. 
+  - The canvas app is shared with the guest user attempting to see the contents of the app. 
 - Power Apps visual doesn't support multi-level embedding of Power Apps in Sovereign clouds. For example, embedding a Power BI report with Power Apps visual to a SharePoint page, or further embedding that SharePoint page to a Teams channel isn't supported on sovereign clouds.
 - If you change the data fields associated with the visual, you must edit the app from within the Power BI service by selecting the ellipsis (...) and then selecting **Edit**. Otherwise, the changes won't be propagated to Power Apps, and the app will behave in unexpected ways.
 - The Power Apps visual can't trigger a refresh of Power BI reports and Power BI data sources from within Power BI Desktop. If you write back data from the app to the same data source as the report, your changes won't be reflected immediately in Power BI Desktop. Changes are reflected on the next scheduled refresh.
@@ -77,7 +85,7 @@ The following limitations apply to the Power Apps visual:
 - Power BI Report Server doesn't support the Power Apps visual.
 - Following limitations apply when using the `PowerBIIntegration.Refresh()` function:
     - You must create a new app from Power Apps visual in Power BI report for this function to be available in the app.
-    - You must use a source that supports [DirectQuery](https://docs.microsoft.com/power-bi/desktop-directquery-data-sources) and the data connection must be created using DirectQuery method.
+    - You must use a source that supports [DirectQuery](/power-bi/desktop-directquery-data-sources) and the data connection must be created using DirectQuery method.
 - Power Apps in Power BI Desktop provides data to Power Apps Studio when creating apps but not while editing. Use Power BI Web to preview the data while editing apps.
 - The Power BI mobile app doesn't support microphone control in Power Apps visuals.
 
@@ -108,12 +116,12 @@ To navigate the Power Apps visual using the keyboard, follow these steps:
 3. Use the **Ctrl+Right** key on the keyboard to enter the visual.
 3. Use the  **Tab** key on the keyboard until the component of the visual you want is selected.
 
-For more information, go to [Power BI Accessibility Documentation]( https://docs.microsoft.com/power-bi/desktop-accessibility)
+For more information, go to [Power BI Accessibility Documentation](/power-bi/desktop-accessibility)
 
 
 ## Next steps
 
-* Go through a simple [step-by-step tutorial](https://docs.microsoft.com/power-bi/visuals/power-bi-visualization-powerapp).
+* Go through a simple [step-by-step tutorial](/power-bi/visuals/power-bi-visualization-powerapp).
 * Check out our [video](https://aka.ms/powerappscustomvisualvideo).
 
 

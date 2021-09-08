@@ -1,22 +1,24 @@
 ---
-title: "KbArticle entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the KbArticle table."
-ms.date: 11/14/2020
+title: "KbArticle table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the KbArticle table/entity."
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# KbArticle entity reference
+
+# KbArticle table/entity reference
 
 > [!NOTE]
-> Effective Nov 2020, Common Data Service has been renamed to [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro).
+> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
 Structured content that is part of the knowledge base.
 
@@ -25,19 +27,19 @@ Structured content that is part of the knowledge base.
 
 |Message|Web API Operation|SDK Assembly|
 |-|-|-|
-|Create|POST [*org URI*]/api/data/v9.0/kbarticles<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/kbarticles(*kbarticleid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/kbarticles(*kbarticleid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|Create|POST [*org URI*]/api/data/v9.0/kbarticles<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE [*org URI*]/api/data/v9.0/kbarticles(*kbarticleid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|Retrieve|GET [*org URI*]/api/data/v9.0/kbarticles(*kbarticleid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
 |RetrieveByTopIncidentProductKbArticle||<xref:Microsoft.Crm.Sdk.Messages.RetrieveByTopIncidentProductKbArticleRequest>|
 |RetrieveByTopIncidentSubjectKbArticle|<xref href="Microsoft.Dynamics.CRM.RetrieveByTopIncidentSubjectKbArticle?text=RetrieveByTopIncidentSubjectKbArticle Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveByTopIncidentSubjectKbArticleRequest>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/kbarticles<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/kbarticles<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |SearchByBodyKbArticle|<xref href="Microsoft.Dynamics.CRM.SearchByBodyKbArticle?text=SearchByBodyKbArticle Function" />|<xref:Microsoft.Crm.Sdk.Messages.SearchByBodyKbArticleRequest>|
 |SearchByKeywordsKbArticle|<xref href="Microsoft.Dynamics.CRM.SearchByKeywordsKbArticle?text=SearchByKeywordsKbArticle Function" />|<xref:Microsoft.Crm.Sdk.Messages.SearchByKeywordsKbArticleRequest>|
 |SearchByTitleKbArticle|<xref href="Microsoft.Dynamics.CRM.SearchByTitleKbArticle?text=SearchByTitleKbArticle Function" />|<xref:Microsoft.Crm.Sdk.Messages.SearchByTitleKbArticleRequest>|
-|SetState|PATCH [*org URI*]/api/data/v9.0/kbarticles(*kbarticleid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.0/kbarticles(*kbarticleid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|SetState|PATCH [*org URI*]/api/data/v9.0/kbarticles(*kbarticleid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+|Update|PATCH [*org URI*]/api/data/v9.0/kbarticles(*kbarticleid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
-## Entity properties
+## Properties
 
 |Property|Value|
 |--------|-----|
@@ -55,9 +57,9 @@ Structured content that is part of the knowledge base.
 
 <a name="writable-attributes"></a>
 
-## Writable attributes
+## Writable columns/attributes
 
-These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
+These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [ArticleXml](#BKMK_ArticleXml)
 - [Comments](#BKMK_Comments)
@@ -246,7 +248,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|State|
 
-#### StateCode Options
+#### StateCode Choices/Options
 
 |Value|Label|DefaultStatus|InvariantName|
 |-----|-----|-------------|-------------|
@@ -269,7 +271,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Status|
 
-#### StatusCode Options
+#### StatusCode Choices/Options
 
 |Value|Label|State|
 |-----|-----|-----|
@@ -324,9 +326,9 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 <a name="read-only-attributes"></a>
 
-## Read-only attributes
+## Read-only columns/attributes
 
-These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [Content](#BKMK_Content)
 - [CreatedBy](#BKMK_CreatedBy)
@@ -774,7 +776,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_KbArticle_SharepointDocumentLocation"></a> KbArticle_SharepointDocumentLocation
 
-Same as sharepointdocumentlocation entity [KbArticle_SharepointDocumentLocation](sharepointdocumentlocation.md#BKMK_KbArticle_SharepointDocumentLocation) Many-To-One relationship.
+Same as sharepointdocumentlocation table [KbArticle_SharepointDocumentLocation](sharepointdocumentlocation.md#BKMK_KbArticle_SharepointDocumentLocation) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -789,7 +791,7 @@ Same as sharepointdocumentlocation entity [KbArticle_SharepointDocumentLocation]
 
 ### <a name="BKMK_kbarticle_principalobjectattributeaccess"></a> kbarticle_principalobjectattributeaccess
 
-Same as principalobjectattributeaccess entity [kbarticle_principalobjectattributeaccess](principalobjectattributeaccess.md#BKMK_kbarticle_principalobjectattributeaccess) Many-To-One relationship.
+Same as principalobjectattributeaccess table [kbarticle_principalobjectattributeaccess](principalobjectattributeaccess.md#BKMK_kbarticle_principalobjectattributeaccess) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -804,7 +806,7 @@ Same as principalobjectattributeaccess entity [kbarticle_principalobjectattribut
 
 ### <a name="BKMK_KbArticle_DuplicateBaseRecord"></a> KbArticle_DuplicateBaseRecord
 
-Same as duplicaterecord entity [KbArticle_DuplicateBaseRecord](duplicaterecord.md#BKMK_KbArticle_DuplicateBaseRecord) Many-To-One relationship.
+Same as duplicaterecord table [KbArticle_DuplicateBaseRecord](duplicaterecord.md#BKMK_KbArticle_DuplicateBaseRecord) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -819,7 +821,7 @@ Same as duplicaterecord entity [KbArticle_DuplicateBaseRecord](duplicaterecord.m
 
 ### <a name="BKMK_KbArticle_DuplicateMatchingRecord"></a> KbArticle_DuplicateMatchingRecord
 
-Same as duplicaterecord entity [KbArticle_DuplicateMatchingRecord](duplicaterecord.md#BKMK_KbArticle_DuplicateMatchingRecord) Many-To-One relationship.
+Same as duplicaterecord table [KbArticle_DuplicateMatchingRecord](duplicaterecord.md#BKMK_KbArticle_DuplicateMatchingRecord) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -834,7 +836,7 @@ Same as duplicaterecord entity [KbArticle_DuplicateMatchingRecord](duplicatereco
 
 ### <a name="BKMK_KbArticle_Annotation"></a> KbArticle_Annotation
 
-Same as annotation entity [KbArticle_Annotation](annotation.md#BKMK_KbArticle_Annotation) Many-To-One relationship.
+Same as annotation table [KbArticle_Annotation](annotation.md#BKMK_KbArticle_Annotation) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -849,7 +851,7 @@ Same as annotation entity [KbArticle_Annotation](annotation.md#BKMK_KbArticle_An
 
 ### <a name="BKMK_kbarticle_comments"></a> kbarticle_comments
 
-Same as kbarticlecomment entity [kbarticle_comments](kbarticlecomment.md#BKMK_kbarticle_comments) Many-To-One relationship.
+Same as kbarticlecomment table [kbarticle_comments](kbarticlecomment.md#BKMK_kbarticle_comments) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -864,7 +866,7 @@ Same as kbarticlecomment entity [kbarticle_comments](kbarticlecomment.md#BKMK_kb
 
 ### <a name="BKMK_KbArticle_SyncErrors"></a> KbArticle_SyncErrors
 
-Same as syncerror entity [KbArticle_SyncErrors](syncerror.md#BKMK_KbArticle_SyncErrors) Many-To-One relationship.
+Same as syncerror table [KbArticle_SyncErrors](syncerror.md#BKMK_KbArticle_SyncErrors) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -879,7 +881,7 @@ Same as syncerror entity [KbArticle_SyncErrors](syncerror.md#BKMK_KbArticle_Sync
 
 ### <a name="BKMK_KbArticle_AsyncOperations"></a> KbArticle_AsyncOperations
 
-Same as asyncoperation entity [KbArticle_AsyncOperations](asyncoperation.md#BKMK_KbArticle_AsyncOperations) Many-To-One relationship.
+Same as asyncoperation table [KbArticle_AsyncOperations](asyncoperation.md#BKMK_KbArticle_AsyncOperations) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -894,7 +896,7 @@ Same as asyncoperation entity [KbArticle_AsyncOperations](asyncoperation.md#BKMK
 
 ### <a name="BKMK_KbArticle_ProcessSessions"></a> KbArticle_ProcessSessions
 
-Same as processsession entity [KbArticle_ProcessSessions](processsession.md#BKMK_KbArticle_ProcessSessions) Many-To-One relationship.
+Same as processsession table [KbArticle_ProcessSessions](processsession.md#BKMK_KbArticle_ProcessSessions) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -909,7 +911,7 @@ Same as processsession entity [KbArticle_ProcessSessions](processsession.md#BKMK
 
 ### <a name="BKMK_KbArticle_BulkDeleteFailures"></a> KbArticle_BulkDeleteFailures
 
-Same as bulkdeletefailure entity [KbArticle_BulkDeleteFailures](bulkdeletefailure.md#BKMK_KbArticle_BulkDeleteFailures) Many-To-One relationship.
+Same as bulkdeletefailure table [KbArticle_BulkDeleteFailures](bulkdeletefailure.md#BKMK_KbArticle_BulkDeleteFailures) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -925,7 +927,7 @@ Same as bulkdeletefailure entity [KbArticle_BulkDeleteFailures](bulkdeletefailur
 
 ## Many-To-One Relationships
 
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related entity. Listed by **SchemaName**.
+Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
 
 - [subject_kb_articles](#BKMK_subject_kb_articles)
 - [lk_kbarticle_modifiedonbehalfby](#BKMK_lk_kbarticle_modifiedonbehalfby)
@@ -939,40 +941,38 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_subject_kb_articles"></a> subject_kb_articles
 
-See subject Entity [subject_kb_articles](subject.md#BKMK_subject_kb_articles) One-To-Many relationship.
+See subject Table [subject_kb_articles](subject.md#BKMK_subject_kb_articles) One-To-Many relationship.
 
 ### <a name="BKMK_lk_kbarticle_modifiedonbehalfby"></a> lk_kbarticle_modifiedonbehalfby
 
-See systemuser Entity [lk_kbarticle_modifiedonbehalfby](systemuser.md#BKMK_lk_kbarticle_modifiedonbehalfby) One-To-Many relationship.
+See systemuser Table [lk_kbarticle_modifiedonbehalfby](systemuser.md#BKMK_lk_kbarticle_modifiedonbehalfby) One-To-Many relationship.
 
 ### <a name="BKMK_kb_article_template_kb_articles"></a> kb_article_template_kb_articles
 
-See kbarticletemplate Entity [kb_article_template_kb_articles](kbarticletemplate.md#BKMK_kb_article_template_kb_articles) One-To-Many relationship.
+See kbarticletemplate Table [kb_article_template_kb_articles](kbarticletemplate.md#BKMK_kb_article_template_kb_articles) One-To-Many relationship.
 
 ### <a name="BKMK_lk_kbarticlebase_modifiedby"></a> lk_kbarticlebase_modifiedby
 
-See systemuser Entity [lk_kbarticlebase_modifiedby](systemuser.md#BKMK_lk_kbarticlebase_modifiedby) One-To-Many relationship.
+See systemuser Table [lk_kbarticlebase_modifiedby](systemuser.md#BKMK_lk_kbarticlebase_modifiedby) One-To-Many relationship.
 
 ### <a name="BKMK_organization_kb_articles"></a> organization_kb_articles
 
-See organization Entity [organization_kb_articles](organization.md#BKMK_organization_kb_articles) One-To-Many relationship.
+See organization Table [organization_kb_articles](organization.md#BKMK_organization_kb_articles) One-To-Many relationship.
 
 ### <a name="BKMK_lk_kbarticle_createdonbehalfby"></a> lk_kbarticle_createdonbehalfby
 
-See systemuser Entity [lk_kbarticle_createdonbehalfby](systemuser.md#BKMK_lk_kbarticle_createdonbehalfby) One-To-Many relationship.
+See systemuser Table [lk_kbarticle_createdonbehalfby](systemuser.md#BKMK_lk_kbarticle_createdonbehalfby) One-To-Many relationship.
 
 ### <a name="BKMK_TransactionCurrency_KbArticle"></a> TransactionCurrency_KbArticle
 
-See transactioncurrency Entity [TransactionCurrency_KbArticle](transactioncurrency.md#BKMK_TransactionCurrency_KbArticle) One-To-Many relationship.
+See transactioncurrency Table [TransactionCurrency_KbArticle](transactioncurrency.md#BKMK_TransactionCurrency_KbArticle) One-To-Many relationship.
 
 ### <a name="BKMK_lk_kbarticlebase_createdby"></a> lk_kbarticlebase_createdby
 
-See systemuser Entity [lk_kbarticlebase_createdby](systemuser.md#BKMK_lk_kbarticlebase_createdby) One-To-Many relationship.
+See systemuser Table [lk_kbarticlebase_createdby](systemuser.md#BKMK_lk_kbarticlebase_createdby) One-To-Many relationship.
 
 ### See also
 
-[About entity reference](../about-entity-reference.md)<br />
-[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About the table reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.kbarticle?text=kbarticle EntityType" />
-
-[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

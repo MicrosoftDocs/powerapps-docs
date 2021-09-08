@@ -1,13 +1,17 @@
 ---
-title: "Viewing portal error logs and storing them in Azure Blob storage | MicrosoftDocs"
-description: "Learn how to view portal error logs and store them in your Azure Blob storage account."
+title: View portal error logs
+description: Learn how to view portal error logs and store them in your Azure Blob storage account.
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/07/2019
+ms.date: 04/21/2021
+ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: tapanm
+contributors:
+    - neerajnandwana-msft
+    - tapanm-msft
 ---
 
 # View portal error logs
@@ -24,14 +28,14 @@ If any server-side exception occurs in your portal, a customized error page with
 However, it is better to see the ASP.NET detailed error page, also known as Yellow Screen of Death (YSOD), for debugging purposes. The detailed error page helps you to get the full stack of server errors.
 
 > [!div class=mx-imgBorder]
-> ![Yellow Screen of Death](../media/ysod.png "Yellow Screen of Death")
+> ![Yellow Screen of Death.](../media/ysod.png "Yellow Screen of Death")
 
 To enable YSOD, you need to [disable custom errors](#disable-custom-error) on your portal.
 
 > [!NOTE]
 > It is advisable to only disable custom errors when you are in the development phase and enable custom errors once you go live.
 
-More information on custom error: [Displaying a Custom Error Page](https://docs.microsoft.com/aspnet/web-forms/overview/older-versions-getting-started/deploying-web-site-projects/displaying-a-custom-error-page-cs)
+More information on custom error: [Displaying a Custom Error Page](/aspnet/web-forms/overview/older-versions-getting-started/deploying-web-site-projects/displaying-a-custom-error-page-cs)
 
 ### Disable custom error
 
@@ -42,7 +46,7 @@ You can disable custom errors on portals to display the detailed exception messa
 2. Go to **Portal Actions** > **Disable custom errors**.
 
    > [!div class=mx-imgBorder]
-   > ![Disable custom error](../media/disable-custom-errors.png "Disable custom error")
+   > ![Disable custom error.](../media/disable-custom-errors.png "Disable custom error")
 
 3. Select **Disable** in the confirmation message. While custom errors are being disabled, the portal restarts and will be unavailable. A message appears when custom errors are disabled.
 
@@ -55,7 +59,7 @@ You can enable custom errors on portals to display a professional-looking page i
 2. Go to **Portal Actions** > **Enable custom errors**.
 
    > [!div class=mx-imgBorder]
-   > ![Enable custom error](../media/enable-custom-errors.png "Enable custom error")
+   > ![Enable custom error.](../media/enable-custom-errors.png "Enable custom error")
 
 3. Select **Enable** in the confirmation message. While custom errors are being enabled, the portal restarts and will be unavailable. A message appears when custom errors are enabled.
 
@@ -84,7 +88,7 @@ Below is an example of a custom error message, using a content snippet of type H
 This is a custom error, please file a support ticket with screenshot of error by clicking here
 
 > [!div class=mx-imgBorder]
-> ![Custom error message](../media/custom-error-message.png "Custom error message")
+> ![Custom error message.](../media/custom-error-message.png "Custom error message")
 
 > [!NOTE]
 > If the portal cannot retrieve a content snippet because it can't connect to Microsoft Dataverse or if the snippet is not available in Dataverse, an error message appears.
@@ -103,11 +107,11 @@ After developing and publishing the portal, you still need to be able to access 
 2. Go to **Portal Actions** > **Enable diagnostic logging**.
 
    > [!div class=mx-imgBorder]
-   > ![Enable diagnostic logging](../media/enable-diagnostic-logging.png "Enable diagnostic logging")
+   > ![Enable diagnostic logging.](../media/enable-diagnostic-logging.png "Enable diagnostic logging")
 
 3. In the **Enable diagnostic logging** window, enter the following values:
 
-   - **Connection String of Azure Blob Storage service**: URL of the Azure Blob Storage service to store the portal error logs. The maximum length of the URL is 2048 characters. If the URL is longer than 2048 characters, an error message appears. More information on connection string: [Configure Azure Storage connection strings](https://docs.microsoft.com/azure/storage/common/storage-configure-connection-string)
+   - **Connection String of Azure Blob Storage service**: URL of the Azure Blob Storage service to store the portal error logs. The maximum length of the URL is 2048 characters. If the URL is longer than 2048 characters, an error message appears. More information on connection string: [Configure Azure Storage connection strings](/azure/storage/common/storage-configure-connection-string)
    - **Select retention period**: Duration to keep the portal error logs in blob storage. The error logs are deleted after the selected duration. You can select one of the following values:
      - 1 day
      - 7 days
@@ -120,14 +124,14 @@ After developing and publishing the portal, you still need to be able to access 
    By default, the retention period is 30 days.
   
    > [!div class=mx-imgBorder]
-   > ![Enable diagnostic logging window](../media/enable-diagnostic-logging-window.png "Enable diagnostic logging window")
+   > ![Enable diagnostic logging window.](../media/enable-diagnostic-logging-window.png "Enable diagnostic logging window")
 
 4. Click **Configure**.
 
 Once diagnostic logging is configured, a new **telemetry-logs** blob container is created in your Azure storage account and the logs are written into the blob files stored in the container. The following screenshot shows the **telemetry-logs** blob container in Azure Storage Explorer:
 
 > [!div class=mx-imgBorder]
-> ![Azure blog storage account](../media/azure-blob-storage.png "Azure blog storage account")
+> ![Azure blog storage account.](../media/azure-blob-storage.png "Azure blog storage account")
 
 When diagnostic logging is enabled successfully, the following action becomes available:
 - **Update diagnostic logging configuration**: Allows you to update or remove diagnostic logging configuration for the portal.
@@ -140,11 +144,11 @@ When diagnostic logging is enabled successfully, the following action becomes av
 2. Go to **Portal Actions** > **Update diagnostic logging configuration**.
 
    > [!div class=mx-imgBorder]
-   > ![Update diagnostic logging configuration](../media/update-diagnostic-logging.png "Update diagnostic logging configuration")
+   > ![Update diagnostic logging configuration.](../media/update-diagnostic-logging.png "Update diagnostic logging configuration")
 
 3. In the Update diagnostic logging configuration window, enter the following values:
    - **Do you want to update the Connection string of the Azure Blob Storage service?**: Allows you to specify whether to update the connection string of the Azure Blob Storage service. By default, it is selected.
-   - **Connection String of Azure Blob Storage service**: URL of the Azure Blob Storage service to store the portal error logs. The maximum length of the URL can be 2048 characters. If the URL is longer than 2048 characters, an error message appears. This field is displayed only if the **Do you want to update the Connection string of the Azure Blob Storage service?** check box is selected. More information on connection string: [Configure Azure Storage connection strings](https://docs.microsoft.com/azure/storage/common/storage-configure-connection-string)
+   - **Connection String of Azure Blob Storage service**: URL of the Azure Blob Storage service to store the portal error logs. The maximum length of the URL can be 2048 characters. If the URL is longer than 2048 characters, an error message appears. This field is displayed only if the **Do you want to update the Connection string of the Azure Blob Storage service?** check box is selected. More information on connection string: [Configure Azure Storage connection strings](/azure/storage/common/storage-configure-connection-string)
    - **Select retention period**: Duration to keep the portal error logs in blob storage. The error logs are deleted after the selected duration. You can select one of the following values:
      - 1 day
      - 7 days
@@ -157,7 +161,7 @@ When diagnostic logging is enabled successfully, the following action becomes av
    By default, the retention period is 30 days.
 
    > [!div class=mx-imgBorder]
-   > ![Update diagnostic logging configuration window](../media/update-diagnostic-logging-window.png "Update diagnostic logging configuration window")
+   > ![Update diagnostic logging configuration window.](../media/update-diagnostic-logging-window.png "Update diagnostic logging configuration window")
 
 4. Click **Update**.
 
@@ -168,7 +172,7 @@ When diagnostic logging is enabled successfully, the following action becomes av
 2. Go to **Portal Actions** > **Disable diagnostic logging**.
 
    > [!div class=mx-imgBorder]
-   > ![Disable diagnostic logging](../media/disable-diagnostic-logging.png "Disable diagnostic logging")
+   > ![Disable diagnostic logging.](../media/disable-diagnostic-logging.png "Disable diagnostic logging")
 
 3. Click **Disable** in the confirmation message.
 
@@ -179,12 +183,12 @@ Another scenario that often occurs while developing a portal is an error generat
 To display custom plugin errors, create the site setting `Site/EnableCustomPluginError` and set its value to True. The custom plugin errors will be displayed on the screen instead of a generic error. The error will display only the message part of the plugin error and not the complete stack trace.
 
 Following are the screens where custom plugin errors will appear: 
-- Entity list 
+- List 
     - Retrieval of records 
-- Entity form 
+- Basic form 
     - Retrieve 
     - Create/Update and so on 
-- Web forms 
+- Advanced forms 
     - Retrieve 
     - Create/Update and so on
 
@@ -192,7 +196,7 @@ If the site setting is not present, then it will be treated as false by default 
 
 ### See also
 
-[Microsoft Learn: Power App portal maintenance and troubleshooting](https://docs.microsoft.com/learn/modules/portals-maintenance-troubleshooting/)
+[Microsoft Learn: Power App portal maintenance and troubleshooting](/learn/modules/portals-maintenance-troubleshooting/)
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

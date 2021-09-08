@@ -1,13 +1,17 @@
 ---
-title: "Upgrade a portal | MicrosoftDocs"
-description: "Learn how to upgrade a portal."
+title: Upgrade a portal
+description: Learn how to upgrade a portal.
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/08/2021
+ms.date: 04/21/2021
+ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: tapanm
+contributors:
+    - neerajnandwana-msft
+    - tapanm-msft
 ---
  
 # Upgrade a portal
@@ -18,7 +22,7 @@ A portal consists of the following components:
 
 |Component|Description|Update process|
 |---------|-----------|--------------|
-|[Portal solutions](#portal-solution-update)|Solutions which are installed in Microsoft Dataverse environment and contains the metadata entities for any portal.|Updated by customers themselves from the Dynamics 365 Administration Center page.|
+|[Portal solutions](#portal-solution-update)|Solutions which are installed in Microsoft Dataverse environment and contains the metadata tables for any portal.|Updated by customers themselves from the Dynamics 365 Administration Center page.|
 |[Portal website host](#portal-website-host-update)|Portal website host is the Portal code which forms the actual website.|Portal website host is updated automatically for all portals.<br>**Note**: A new version of Portal website host is backwards compatible with all supported versions of Portal solutions. However, once a solution version becomes unsupported, it is not certified to run with the new version of Portal website host.|
 |||
 
@@ -53,7 +57,7 @@ To enable a portal for early upgrade:
 2.	On the **Portal Actions** tab, select **Enable portal for early upgrade**.
 
     > [!div class="mx-imgBorder"]
-    > ![Enable a portal for early upgrade](../media/upgrade-portal.png "Enable a portal for early upgrade")
+    > ![Enable a portal for early upgrade.](../media/upgrade-portal.png "Enable a portal for early upgrade")
 
 > [!NOTE]
 > You can enable or disable a portal for early upgrade anytime. However, a snapshot is taken for all portals marked for early access two days before any release, and any portal marked for early access after that is not guaranteed to get an early upgrade.
@@ -63,7 +67,7 @@ If you encounter any issue during the early upgrade phase, you can report it thr
 ### See also
 
 [Update portal solution](update-portal-solution.md) <br>
-[Microsoft Learn: Power App portal maintenance and troubleshooting](https://docs.microsoft.com/learn/modules/portals-maintenance-troubleshooting/)
+[Microsoft Learn: Power App portal maintenance and troubleshooting](/learn/modules/portals-maintenance-troubleshooting/)
 [Administer Power Platform](/power-platform/admin/admin-documentation) <br>
 [Manage Dynamics 365 apps](/power-platform/admin/manage-apps)
 

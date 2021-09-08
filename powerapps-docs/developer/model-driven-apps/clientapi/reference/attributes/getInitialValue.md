@@ -1,11 +1,13 @@
 ---
 title: "getInitialValue (Client API reference)| MicrosoftDocs"
-ms.date: 10/31/2018
+description: Includes description and supported parameters for the getInitialValue method.
+ms.date: 04/19/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 56fb62e6-d357-4096-bf4c-f4c1b543d633
 author: "Nkrb"
+ms.subservice: mda-developer
 ms.author: "nabuthuk"
 manager: "kvivek"
 search.audienceType: 
@@ -18,11 +20,11 @@ search.app:
 
 
 
-Returns a value that represents the value set for a **Boolean**, **OptionSet** or **MultiSelectOptionSet** attribute when the form is opened.
+Returns a value that represents the value set for a **Yes/No**, **Choice** or **Choices** column when the form is opened.
 
-## Attribute types supported
+## Column types supported
 
-Boolean, OptionSet, MultiSelectOptionSet 
+Tes/No, Choice, Choices 
 
 ## Syntax
 
@@ -32,7 +34,7 @@ Boolean, OptionSet, MultiSelectOptionSet
 
 **Type**: Number
 
-**Description**: The initial value for the attribute.
+**Description**: The initial value for the column.
 
 
 

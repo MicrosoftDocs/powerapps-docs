@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 12/14/2020
+ms.subservice: teams
 ms.author: namarwah
 ms.reviewer: tapanm
 ---
@@ -34,11 +35,11 @@ To start with customizing the sample apps, the first step is to open the app ins
 
 1. Sign in to Teams.
 
-1. Select ![More added apps](media/more-added-apps-ellipsis.png "More added apps") (*More added apps*).
+1. Select ![More added apps.](media/more-added-apps-ellipsis.png "More added apps") (*More added apps*).
 
 1. Select Power Apps.
 
-    ![Select Power Apps app](media/power-apps.png "Select Power Apps app")
+    ![Select Power Apps app.](media/power-apps.png "Select Power Apps app")
 
 1. Select [Build](overview-of-the-power-apps-app.md#build-hub) tab.
 
@@ -58,11 +59,11 @@ When you install sample apps, the tables are pre-populated with sample data. The
 
 | Sample app | Tables |
 | - | - |
-| [Bulletins (Preview)](bulletins.md) | Bulletins <br> Bulletin Bookmarks <br> Bulletin Categories <br> Bulletin Contacts <br> Bulletin FAQs <br> Bulletin FAQ Categories <br> Bulletin Links <br> Bulletin Link Categories <br> Bulletin Read Receipts
+| [Bulletins](bulletins.md) | Bulletins <br> Bulletin Bookmarks <br> Bulletin Categories <br> Bulletin Contacts <br> Bulletin FAQs <br> Bulletin FAQ Categories <br> Bulletin Links <br> Bulletin Link Categories <br> Bulletin Read Receipts
 | [Employee ideas](employee-ideas.md) | Employee Ideas <br> Employee Idea Campaigns <br> Employee Idea Files <br> Employee Idea Questions <br> Employee Idea Responses |
 | [Inspection](inspection.md) |     Area Inspection Steps <br> Area Inspections <br> Area Inspection Checklist Steps <br> Area Inspection Checklists <br> Area Inspection Locations <br> Area Inspection Location Types <br> Area Inspection Groups <br> Area Inspection Task|
 | [Issue reporting](issue-reporting.md) | Issue Reports <br> Issue Report Questions <br> Issue Report Templates <br> Issue Report Categories |
-| [Milestones (Preview)](milestones.md) | Projects <br> Project Activities <br> Project Milestones <br> Project Team Members <br> Project User Settings <br> Project Work items <br> Project Work Item Categories <br> Project Work Item Priorities <br> Project Work Item Statuses
+| [Milestones](milestones.md) | Projects <br> Project Activities <br> Project Milestones <br> Project Team Members <br> Project User Settings <br> Project Work items <br> Project Work Item Categories <br> Project Work Item Priorities <br> Project Work Item Statuses
 
 To remove data from the sample apps:
 
@@ -70,13 +71,13 @@ To remove data from the sample apps:
 
 1. Select **Data** from the left pane.
 
-1. Select ![Data - ellipsis](media/customize-sample-apps/data-ellipsis.png "Data - ellipsis") next to the table name (for example, *Area Inspection Task* for **Manage inspections** app).
+1. Select ![Data - ellipsis.](media/customize-sample-apps/data-ellipsis.png "Data - ellipsis") next to the table name (for example, *Area Inspection Task* for **Manage inspections** app).
 
 1. Select **Edit data**.
 
 1. Delete all rows containing sample data.
 
-    ![Delete rows](media/customize-sample-apps/delete-rows.png "Delete rows")
+    ![Delete rows.](media/customize-sample-apps/delete-rows.png "Delete rows")
 
 1. Close the visual editor.
 
@@ -94,17 +95,17 @@ To remove data from the sample apps:
 
 1. Select **Image** control in *Media*.
 
-    ![Add image](media/customize-sample-apps/add-image.png "Add image")
+    ![Add image.](media/customize-sample-apps/add-image.png "Add image")
 
 1. From the properties pane on the right side, select the **Image** drop-down, and then select **+ Add an image file**.
 
-    ![Add image file](media/customize-sample-apps/add-image-file.png "Add image file")
+    ![Add image file.](media/customize-sample-apps/add-image-file.png "Add image file")
 
 1. Select image for your company logo, and then select **Open**.
 
 1. Position and size image control to the position you want on loading screen.
 
-    ![Company logo](media/customize-sample-apps/company-logo.png "Company logo")
+    ![Company logo.](media/customize-sample-apps/company-logo.png "Company logo")
 
 ## Change the welcome screen text
 
@@ -164,7 +165,7 @@ variables to correctly display the desired terminology for inspections and items
     ) & Lower(areaLabel)
     ```
 
-    ![Update greeting text in formula](media/customize-sample-apps/update-greeting-text.png "Update greeting text in formula")
+    ![Update greeting text in formula.](media/customize-sample-apps/update-greeting-text.png "Update greeting text in formula")
 
 ## Change the screen background color
 
@@ -184,7 +185,7 @@ user experience. If you modify a screen fill, the modified screen will no longer
 
     Screen background fill color will be set to the selected background color.
 
-    ![Change background color](media/customize-sample-apps/change-background.png "Change background color")
+    ![Change background color.](media/customize-sample-apps/change-background.png "Change background color")
 
 ## Bulk edit data
 
@@ -197,7 +198,7 @@ If you want to quickly edit the data in the app, you can open the table and modi
 
 1. Select **Data** from the left pane.
 
-1. Select ![Data - ellipsis](media/customize-sample-apps/data-ellipsis.png "Data - ellipsis") next to the table name (for example, *Area Inspection Location Types* for Inspection app).
+1. Select ![Data - ellipsis.](media/customize-sample-apps/data-ellipsis.png "Data - ellipsis") next to the table name (for example, *Area Inspection Location Types* for Inspection app).
 
 1. Select the cell inside the Visual Editor, for example **Food** in the **Name** column.
 
@@ -207,7 +208,7 @@ If you want to quickly edit the data in the app, you can open the table and modi
 
     Data in the app should reflect the updated value, such as the location name in this example.
 
-    ![Bulk edit data](media/customize-sample-apps/update-table.png "Bulk edit data")
+    ![Bulk edit data.](media/customize-sample-apps/update-table.png "Bulk edit data")
 
 ## Add a column to the app
 
@@ -222,7 +223,7 @@ Consider a scenario where you have multiple stores, and you want to associate lo
 
 1. Select **Data** from the left pane.
 
-1. Select ![Data - ellipsis](media/customize-sample-apps/data-ellipsis.png "Data - ellipsis") next to the table name (for example, *Area Inspection Locations* for **Manage inspections** app).
+1. Select ![Data - ellipsis.](media/customize-sample-apps/data-ellipsis.png "Data - ellipsis") next to the table name (for example, *Area Inspection Locations* for **Manage inspections** app).
 
 1. Select **Add column**.
 
@@ -232,7 +233,7 @@ Consider a scenario where you have multiple stores, and you want to associate lo
 
 1. Close the visual editor.
 
-    ![Add Store Name column](media/customize-sample-apps/add-store-name.png "Add Store Name column")
+    ![Add Store Name column.](media/customize-sample-apps/add-store-name.png "Add Store Name column")
 
 ### Add Store Name column to the location form
 
@@ -256,7 +257,7 @@ Consider a scenario where you have multiple stores, and you want to associate lo
 
 1. Position the **Label** so that it's aligned horizontally with **Grouped areas**, and vertically with the **Area type**.
 
-    ![Label control position](media/customize-sample-apps/label-control.png "Label control position")
+    ![Label control position.](media/customize-sample-apps/label-control.png "Label control position")
 
 1. Select **Text** from the property list on the top-left.
 
@@ -278,7 +279,7 @@ Consider a scenario where you have multiple stores, and you want to associate lo
 
 1. In the formula bar, enter "White".
 
-    ![ColorBackground property](media/customize-sample-apps/colorbackground.png "ColorBackground property")
+    ![ColorBackground property.](media/customize-sample-apps/colorbackground.png "ColorBackground property")
 
 1. Select **Display mode** from the property list on the top-left.
 
@@ -286,7 +287,7 @@ Consider a scenario where you have multiple stores, and you want to associate lo
 
 1. Hold the **ALT key** on your keyboard, and select the **Edit**.
 
-    ![Edit with alt key pressed](media/customize-sample-apps/edit-alt-key.png "Edit with alt key pressed")
+    ![Edit with alt key pressed.](media/customize-sample-apps/edit-alt-key.png "Edit with alt key pressed")
 
 1. Select **Tree view** from the left pane.
 
@@ -349,7 +350,7 @@ Consider a scenario where you have multiple stores, and you want to associate lo
     If(gblViewInspection, false, true)
     ```
 
-    ![Position changes with property Y](media/customize-sample-apps/position-changes.png "Position changes with property Y")
+    ![Position changes with property Y.](media/customize-sample-apps/position-changes.png "Position changes with property Y")
 
 ## Publish app updates to Teams
 
@@ -362,18 +363,21 @@ To save and publish the changes to the sample app:
 1. Select **Next**.
 
 1. To publish updated version of an app to an existing active tab, select **Save + close**. <br> 
-To add published version of an app to a new tab in a different channel, Select ![Add a tab](media/publish-app-9.png) (Add a tab) for the channel you want, and then select **Save + close**.
+To add published version of an app to a new tab in a different channel, Select ![Add a tab.](media/publish-app-9.png) (Add a tab) for the channel you want, and then select **Save + close**.
 
 More information: [Publish and add an app to Teams](publish-and-share-apps.md)
 
 ### See also
 
 - [Sample apps FAQs](sample-apps-faqs.md)
-- [Bulletins (Preview) sample apps](bulletins.md)
+- [Boards (Preview) sample app](boards.md)
+- [Bulletins sample app](bulletins.md)
 - [Employee ideas sample app](employee-ideas.md)  
 - [Inspection sample apps](inspection.md)  
 - [Issue reporting sample apps](issue-reporting.md)
-- [Milestones (Preview) sample app](milestones.md)
+- [Milestones sample app](milestones.md)
+- [Perspectives (Preview) sample app](perspectives.md)
+- [Profile+ (Preview) sample app](profile-app.md)
 - [Use sample apps from the Microsoft Teams store](use-sample-apps-from-teams-store.md)
 
 

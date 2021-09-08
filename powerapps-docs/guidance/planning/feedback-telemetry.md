@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: guidance
 ms.date: 06/16/2020
+ms.subservice: guidance
 ms.author: tayoshi
 ms.reviewer: kathyos
 
@@ -44,15 +45,15 @@ report at [https://make.powerapps.com](https://make.powerapps.com). This report 
 app. Data is available for 30 days for you to view usage information such as app launch
 counts, unique users by day, and so on.
 
-![A screenshot of an app usage report](media/telemetry.png "A screenshot of an app usage report")
+![A screenshot of an app usage report.](media/telemetry.png "A screenshot of an app usage report")
 
 If you're an administrator, you can access analytics at the overall tenant level.
-More information: [Admin Analytics for Power Apps](https://docs.microsoft.com/power-platform/admin/analytics-powerapps)
+More information: [Admin Analytics for Power Apps](/power-platform/admin/analytics-powerapps)
 
 ### Adding manual telemetry using Azure Application Insights
 
 You can gain additional insights and telemetry about the app by setting up a
-connection to Application Insights, a feature that's part of [Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/overview).
+connection to Application Insights, a feature that's part of [Azure Monitor](/azure/azure-monitor/overview).
 Some of the telemetry you can gain from setting this up includes:
 
 - Number of active users using the app.
@@ -63,7 +64,7 @@ Some of the telemetry you can gain from setting this up includes:
 
 - User flow from one screen to another.
 
-![A screenshot of Application Insights](media/app-insights.png "A screenshot of Application Insights")
+![A screenshot of Application Insights.](media/app-insights.png "A screenshot of Application Insights")
 
 You can also set up custom telemetry by using the [trace
 function](../../maker/canvas-apps/functions/function-trace.md).

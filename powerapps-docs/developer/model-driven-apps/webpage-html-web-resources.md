@@ -2,11 +2,12 @@
 title: "Webpage (HTML) Web Resources (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This topic covers how to implement HTML web resources and its capabilities and limitations" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 04/14/2021
 ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
 author: "KumarVivek" # GitHub ID
+ms.subservice: mda-developer
 ms.author: "kvivek" # MSFT alias of Microsoft employees only
 manager: "shilpas" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -16,8 +17,6 @@ search.app:
   - D365CE
 ---
 # Webpage (HTML) web resources
-
-<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/webpage-html-web-resources -->
 
 Use webpage (HTML) web resources to create user interface elements for client extensions.
 
@@ -34,6 +33,8 @@ Because an HTML web resource is just streamed to the user's browser, it can incl
 - An HTML web resource can’t contain any code that must be executed on the server. ASP.NET pages can’t be uploaded as HTML web resources.
 
 - HTML web resources can only accept a limited number of query string parameters. [Pass parameters to HTML web resources](webpage-html-web-resources.md#BKMK_PassingParametersToWebResources)  
+
+- HTML web resources embedded as controls in a form can be reloaded by the form runtime for performance reasons. For example, the form runtime may destroy and re-initialize the control during tab navigations. 
 
 <a name="BKMK_UsingTextEditor"></a>
 
@@ -123,18 +124,20 @@ Because of the capability for the HTML in web resources to be changed by using t
 
 |Parameter|Name|Description|
 |---------------|----------|-----------------|
-|typename|Entity Name|The name of the entity.|
-|type|Entity Type Code|An integer that uniquely identifies the entity in a specific organization.|
+|typename|Table Name|The name of the table.|
+|type|Table Type Code|An integer that uniquely identifies the table in a specific organization.|
 |id|Object GUID|The GUID that represents a record.|
 |orgname|Organization Name|The unique name of the organization.|
 |userlcid|User Language Code|The language code identifier being used by the current user.|
 |orglcid|Organization Language Code|The language code identifier that represents the base language for the organization.|
 |data|Optional Data Parameter|An optional value that may be passed.|
 |formid|Form Id|The GUID that represents a form ID.|
-|entrypoint|Entry Point|A string value. This parameter is intended to be passed as an optional value to web resources opened as custom help content for an entity. When enabled, the custom help URL will include a value of either “form” or “hierarchychart”.|
+|entrypoint|Entry Point|A string value. This parameter is intended to be passed as an optional value to web resources opened as custom help content for a table. When enabled, the custom help URL will include a value of either “form” or “hierarchychart”.|
 |pagemode||For internal use only.|
 |security||For internal use only.|
 |tabSet||For internal use only.|
+
+[!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
 
  If multiple values are passed in the data parameter, they will be automatically encoded. Logic must also be included to decode the multiple parameters using script in your HTML web resource. The [Sample: Passing multiple values to a web resource through the data parameter](sample-pass-multiple-values-web-resource-through-data-parameter.md) topic demonstrates one approach to address passing multiple parameter values.  
 

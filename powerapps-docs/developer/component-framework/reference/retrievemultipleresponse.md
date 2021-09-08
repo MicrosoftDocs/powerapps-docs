@@ -1,6 +1,6 @@
 ---
-title: RetrieveMultipleResponse | Microsoft Docs
-description: 
+title: RetrieveMultipleResponse in Microsoft Dataverse| Microsoft Docs
+description: Learn how to use different methods and properties available for RetrieveMultipleResponse in Power Apps component framework.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -23,13 +23,13 @@ Model-driven apps
 
 ### entities
 
-An array of JSON objects, where each object represents the retrieved entity record containing attributes and their values.
+An array of JSON objects, where each object represents the retrieved table record containing columns and their values.
 
 **Type**: `Entity[]`
 
 ### nextLink
 
-If the number of records being retrieved is more than the value specified in the `maxPageSize` parameter in the request, this attribute returns the URL to return next set of records.
+If the number of records being retrieved is more than the value specified in the `maxPageSize` parameter in the request, this column returns the URL to return next set of records.
 
 **Type**: `string`
 

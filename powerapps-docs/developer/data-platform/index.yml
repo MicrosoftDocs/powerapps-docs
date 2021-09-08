@@ -13,7 +13,7 @@ metadata:
   ms.collection: collection
   author: phecke
   ms.author: pehecke
-  ms.date: 09/08/2020 
+  ms.date: 03/28/2021 
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -24,14 +24,14 @@ landingContent:
     linkLists:
        - linkListType: overview
          links:
-          - text: Developer overview
-            url: overview.md
           - text: "Developers: Get started"
             url: get-started-developers.md
+          - text: "Developers: Understand terminology"
+            url: understand-terminology.md
        - linkListType: learn
          links:
           - text: Introduction to Dataverse for developers
-            url: https://docs.microsoft.com/learn/modules/intro-cds-developers-power-platform/
+            url: /learn/modules/intro-cds-developers-power-platform/
          
           
   # Card
@@ -42,13 +42,13 @@ landingContent:
           - text: Work with data using code
             url: work-with-data.md
           - text: Types and operations (Web API)
-            url: /powerapps/developer/data-platform/webapi/web-api-types-operations
+            url: ./webapi/web-api-types-operations.md
           - text: Entity operations (Organization service)
-            url: /powerapps/developer/data-platform/org-service/entity-operations
+            url: ./org-service/entity-operations.md
           - text: Use FetchXML to query data
-            url: /powerapps/developer/data-platform/use-fetchxml-construct-query
+            url: ./use-fetchxml-construct-query.md
           - text: Use SQL to query data
-            url: /powerapps/developer/data-platform/dataverse-sql-query
+            url: ./dataverse-sql-query.md
 
   # Card
   - title: Integrate external data
@@ -56,15 +56,15 @@ landingContent:
       - linkListType: overview
         links:
           - text: Azure integration
-            url: /powerapps/developer/data-platform/azure-integration
+            url: ./azure-integration.md
           - text: Webhooks
-            url: /powerapps/developer/data-platform/use-webhooks
+            url: ./use-webhooks.md
           - text: Synchronize data with external system
-            url: /powerapps/developer/data-platform/data-synchronization
+            url: ./data-synchronization.md
           - text: Import data
-            url: /powerapps/developer/data-platform/import-data
+            url: ./import-data.md
           - text: Data Export Service
-            url: /powerapps/developer/data-platform/data-export-service
+            url: ./data-export-service.md
       
 
   # Card
@@ -73,17 +73,17 @@ landingContent:
       - linkListType: concept
         links:
           - text: Event framework
-            url: /powerapps/developer/data-platform/event-framework
+            url: ./event-framework.md
       - linkListType: overview
         links:
           - text: Plug-ins
-            url: /powerapps/developer/data-platform/plug-ins
+            url: ./plug-ins.md
           - text: Workflow extensions
-            url: /powerapps/developer/data-platform/workflow/workflow-extensions
+            url: ./workflow/workflow-extensions.md
       - linkListType: tutorial
         links:
           - text: Write and register a plug-in
-            url: /powerapps/developer/data-platform/tutorial-write-plug-in
+            url: ./tutorial-write-plug-in.md
   
   # Card
   - title: Deploy and publish
@@ -91,9 +91,9 @@ landingContent:
       - linkListType: overview
         links:
           - text: Solution concepts
-            url: /powerapps/developer/data-platform/introduction-solutions
+            url: ./introduction-solutions.md
           - text: ALM for developers
-            url: https://docs.microsoft.com/power-platform/alm/alm-for-developers
+            url: /power-platform/alm/alm-for-developers
       - linkListType: sample
         links:
           - text: Work with solutions using the SDK APIs
@@ -101,7 +101,7 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Publish your app on AppSource
-            url: /powerapps/developer/data-platform/publish-app-appsource          
+            url: ./publish-app-appsource.md
 
     # Card
   - title: Create client applications
@@ -113,7 +113,7 @@ landingContent:
           - text: Build web applications using Server-to-Server (S2S) authentication
             url: build-web-applications-server-server-s2s-authentication.md
           - text: Use OAuth with CORS to connect an SPA
-            url: /powerapps/developer/data-platform/oauth-cross-origin-resource-sharing-connect-single-page-application
+            url: ./oauth-cross-origin-resource-sharing-connect-single-page-application.md
           - text: Build Windows client applications using the XRM tools
             url: xrm-tooling/build-windows-client-applications-xrm-tools.md
        - linkListType: tutorial
@@ -127,27 +127,27 @@ landingContent:
       - linkListType: overview
         links:
           - text: View the developer resources page
-            url: /powerapps/developer/data-platform/view-download-developer-resources
+            url: ./view-download-developer-resources.md
           - text: Developer tools
-            url: /powerapps/developer/data-platform/developer-tools
-          - text: Microsoft Power Apps CLI
-            url: /powerapps/developer/data-platform/powerapps-cli
+            url: ./developer-tools.md
+          - text: Microsoft Power Platform CLI
+            url: ./powerapps-cli.md
           - text: Community tools
-            url: /powerapps/developer/data-platform/community-tools
+            url: ./community-tools.md
   
   # Card
-  - title: Entity and API reference
+  - title: Table and API reference
     linkLists:
       - linkListType: reference
         links:
-          - text: Entity reference
+          - text: Table reference
             url: reference/about-entity-reference.md
           - text: SDK API class libraries
-            url: https://docs.microsoft.com/dotnet/api/?view=dynamics-general-ce-9
+            url: /dotnet/api/?view=dynamics-general-ce-9
           - text: Web API
             url: /dynamics365/customer-engagement/web-api/about?view=dynamics-ce-odata-9
           - text: XRM Tooling API Reference
-            url: https://docs.microsoft.com/dotnet/api/?view=dynamics-xrmtooling-ce-9 
+            url: /dotnet/api/?view=dynamics-xrmtooling-ce-9
 
 
   # Card
@@ -160,4 +160,4 @@ landingContent:
           - text: Model-driven apps Developer Guide
             url: ../model-driven-apps/index.yml
           - text: Power Apps component framework
-            url: ../component-framework/overview.md    
+            url: ../component-framework/overview.md

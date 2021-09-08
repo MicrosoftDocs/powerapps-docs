@@ -1,12 +1,13 @@
 ---
-title: "File attributes (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn about File attributes that store file data within the application, supporting attributes, retrieving data, and uploading file data." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "File columns (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Learn about File columns that store file data within the application, supporting columns, retrieving data, and uploading file data." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/15/2020
+ms.date: 03/11/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "phecke" # GitHub ID
+ms.subservice: dataverse-developer
 ms.author: "pehecke" # MSFT alias of Microsoft employees only
 manager: "kvivek" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -15,11 +16,11 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# File attributes
+# File columns
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+A file column is used for storing file data up to a specified maximum size. A custom or customizable table can have zero or more file columns plus a notes (annotation) collection with zero to one attachment in each note. The <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.SchemaName> of the file column is `EntityFile`.
 
-A file attribute is used for storing file data up to a specified maximum size. A custom or customizable entity can have zero or more file attributes plus a notes (annotation) collection with zero to one attachment in each note. The <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.SchemaName> of the file attribute is `EntityFile`.
+[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
 Web API (REST) | .NET API (SOAP)
 ------- | -------
@@ -28,27 +29,31 @@ Web API (REST) | .NET API (SOAP)
 For information about types of files that are not allowed, see [System Settings General tab](/power-platform/admin/system-settings-dialog-box-general-tab) under the **Set blocked file extensions for attachments** setting.
 
 > [!IMPORTANT]
-> Some restrictions do apply when using the File and enhanced Image data-types of the Microsoft Dataverse. If Customer Managed Keys (CMK) is enabled on the tenant, then File, Image, and IoT data-types are not available to the tenant's organizations. Solutions that contain excluded data-types will not install. Customers must opt-out of CMK in order to make use of these data-types.<p/>
-> File attributes are supported in <xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy.SdkClientVersion> 9.0.45.329 or greater and Web API version 9.1 or greater.
+> Some restrictions do apply when using the File and enhanced Image data-types of the Microsoft Dataverse. If Customer Managed Keys (CMK) is enabled on the tenant, IoT data-types are not available to the tenant's organizations. Solutions that contain excluded data-types will not install. Customers must opt-out of CMK in order to make use of these data-types.<p/>
+> All CMK organizations as of version: 9.2.21052.00103 can support the use of the Dataverse File and Image data-types. Files within CMK organizations are
+> limited to a maximum size of 128MB per file. All files and images within CMK organizations will be stored in the Dataverse relational storage, instead of Dataverse File Blob
+> storage.
+> Other limitations:
+>  - User Delegation SAS Downloads are not supported
+>  - Chunking uploads and downloads are limited to a single chunk
+>  
+>  File columns are supported in <xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy.SdkClientVersion> 9.0.45.329 or greater and Web API version 9.1 or greater.
 
 
 <!--File data is not passed to plug-ins for performance reasons. You must retrieve the file data in plug-in code using an explicit retrieve call. -->
   
-<a name="BKMK_SupportingAttributes"></a>   
-## Supporting attributes  
-When a file attribute is added to an entity some additional attributes are created to support it.
+## Supporting columns  
+When a file column is added to a table some additional columns are created to support it.
   
-### MaxSizeInKB attribute
+### MaxValue column
 
- This value represents the maximum size (in kilobytes) of the file data that the attribute can contain. Set this value to the smallest useable data size appropriate for your particular application. See the <xref:Microsoft.Xrm.Sdk.Metadata.FileAttributeMetadata.MaxSizeInKB> property for the allowable size limit and the default value.
+ This value represents the maximum size (in kilobytes) of the file data that the column can contain. Set this value to the smallest useable data size appropriate for your particular application. See the <xref:Microsoft.Xrm.Sdk.Metadata.FileAttributeMetadata.MaxSizeInKB> property for the allowable size limit and the default value.
  
  > [!NOTE]
- > MaxSizeInKB is set when the File attribute is added to an entity. This cannot be changed after it is set.
+ > MaxValue is set when the File column is added to a table. This cannot be changed after it is set.
   
-<a name="BKMK_RetrievingFiles"></a>
-
 ## Retrieve file data
-To retrieve file attribute data use the following APIs.
+To retrieve file column data use the following APIs.
 
 Web API (REST) | .NET API (SOAP)
 ------- | -------
@@ -57,7 +62,7 @@ GET /api/data/v9.1/\<entity-type(id)\>/\<file-attribute-name\>/$value   | <xref:
 
 File data transfers from the web service endpoints are limited to a maximum of 16 MB data in a single service call. File data greater that that amount must be divided into 4 MB or smaller data blocks (chunks) where each block is received in a separate API call until all file data has been received. It is your responsibility to join the downloaded data blocks to form the complete data file by combining the data blocks in the same sequence as the blocks were received.
 
-Messages such as <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> and <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> cannot be used to download file attribute data.
+Messages such as <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> and <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> cannot be used to download file column data.
 
 ### Example: REST download with chunking
 
@@ -130,7 +135,7 @@ static async Task ChunkedDownloadAsync(
 <a name="BKMK_UploadingFiles"></a>
 
 ## Upload file data  
-To upload file attribute data, use the following APIs.
+To upload file column data, use the following APIs.
 
 Web API (REST) | .NET API (SOAP)
 ------- | -------
@@ -177,7 +182,7 @@ static async Task FullFileUploadAsync(
 
 The following is the legacy method of uploading a data file of 16 MB or more by dividing file data blocks of 4 MB or less. After the complete set of data blocks has been uploaded and a commit request has been sent, the web service will automatically combine the blocks, in the same sequence as the data blocks were uploaded, into a single data file in Azure Blob Storage.
 
-Messages such as <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> and <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> cannot be used to upload file attribute data.
+Messages such as <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> and <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> cannot be used to upload file column data.
 
 ### Example: REST upload with chunking (first request)
 
@@ -283,14 +288,14 @@ static async Task ChunkedUploadAsync(
 <a name="BKMK_DeletingFiles"></a>
 
 ## Delete file data  
-To delete the file attribute data from storage, use the following APIs.
+To delete the file column data from storage, use the following APIs.
 
 Web API (REST) | .NET API (SOAP)
 ------- | -------
 DELETE /api/data/v9.1/\<entity-type(id)\>/\<attribute-name\> | <xref:Microsoft.Crm.Sdk.Messages.DeleteFileRequest>
 
 ### See Also
-[Image attributes](image-attributes.md)
+[Image columns](image-attributes.md)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

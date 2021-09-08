@@ -1,6 +1,6 @@
 ---
 title: getValue | Microsoft Docs
-description: 
+description: Gets the raw value of the record's column.
 keywords:
 ms.author: nabuthuk
 author: Nkrb

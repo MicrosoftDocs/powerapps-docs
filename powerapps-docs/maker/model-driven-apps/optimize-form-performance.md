@@ -7,10 +7,11 @@ ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "conceptual"
 author: "Mattp123"
 ms.assetid: 59cfa5e6-638a-437f-a462-fddfd26fb07d
 caps.latest.revision: 8
+ms.subservice: mda-maker
 ms.author: "matp"
 manager: "kvivek"
 search.audienceType: 
@@ -43,7 +44,7 @@ Forms that load slowly can reduce productivity and user adoption. Follow these r
 The higher the number of network requests made during a form load, and the more amount of data downloaded from those requests, the more time it will take for a form to load. Only request the minimum amount of data needed. Also, consider caching the data when possible to avoid requesting data unnecessarily on future page loads.
   
 **Avoid using synchronous network requests**  
-Synchronous network requests can cause slow page loads and unresponsive forms. [Use asynchronous requests instead](https://docs.microsoft.com/powerapps/developer/model-driven-apps/best-practices/business-logic/interact-http-https-resources-asynchronously). See [this blog post](https://powerapps.microsoft.com/en-us/blog/turbocharge-your-model-driven-apps-by-transitioning-away-from-synchronous-requests/) for more examples.
+Synchronous network requests can cause slow page loads and unresponsive forms. [Use asynchronous requests instead](../../developer/model-driven-apps/best-practices/business-logic/interact-http-https-resources-asynchronously.md). See [this blog post](https://powerapps.microsoft.com/en-us/blog/turbocharge-your-model-driven-apps-by-transitioning-away-from-synchronous-requests/) for more examples.
   
 **Avoid including unnecessary JavaScript web resource libraries**  
 The more scripts you add to the form, the more time it will take to download them. Usually scripts are cached in your browser after they are loaded the first time, but the performance the first time a form is viewed often creates a significant impression.  
@@ -65,7 +66,7 @@ Avoid using form scripts in the `OnLoad` event that hide form elements. Instead 
  Within the command bar or the ribbon for the form, evaluate what controls are necessary and hide any that you don’t need. Every control that is displayed increases resources that need to be downloaded to the browser.
  
  **Use asynchronous network requests in Custom Rules**  
- When using custom rules that make network requests in Unified Interface, [use asynchronous rule evaluation](https://docs.microsoft.com/powerapps/developer/model-driven-apps/define-ribbon-enable-rules#custom-rule).
+ When using custom rules that make network requests in Unified Interface, [use asynchronous rule evaluation](../../developer/model-driven-apps/define-ribbon-enable-rules.md#custom-rule).
   
 ## Next steps  
  [Create and design forms](create-design-forms.md)    

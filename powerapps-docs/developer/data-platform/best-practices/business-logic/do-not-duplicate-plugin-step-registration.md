@@ -14,6 +14,7 @@ ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.date: 1/15/2019
+ms.subservice: dataverse-developer
 ms.author: jowells
 search.audienceType: 
   - developer
@@ -56,7 +57,7 @@ Ensure you are updating existing plug-in registration steps rather than deleting
 
 Deleting and recreating a step in the source instance (test, dev, preprod) will also create a duplicate step being registered in the target environment if that step had been registered before.
 
-![Duplicate Plug-in Step Registration](../media/duplicate-plugin-registration-step.png)
+![Duplicate Plug-in Step Registration.](../media/duplicate-plugin-registration-step.png)
 
 Manually creating the `SDKMessageProcessingSteps` with a new GUID or updating the existing GUID within the `customizations.xml` file will result in a duplicate step being registered. These types of tasks are unsupported as outlined in [When to edit the customizations file](/power-platform/alm/when-edit-customization-file).
 
@@ -71,7 +72,7 @@ Duplicate plug-in step registration could cause SQL deadlocking when the events 
 ### See also
 
 [Register a plug-in](../../register-plug-in.md)
-[Deadlocking](https://technet.microsoft.com/library/ms177433.aspx)<br />
+[Deadlocking](/previous-versions/sql/sql-server-2008-r2/ms177433(v=sql.105))<br />
 
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

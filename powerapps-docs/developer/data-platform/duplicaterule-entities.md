@@ -1,12 +1,13 @@
 ---
-title: "Duplicate rule entities (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "These entities contain data that define duplicate detection rules." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Duplicate rule tables (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Read about tables containing data that define duplicate detection rules." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 03/26/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID
+ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -15,29 +16,30 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Duplicate rule entities
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+# Duplicate rule tables
+
+[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
 For information about how to configure duplicate rules in the application, see [Administrators Guide: Set up duplicate detection rules to keep your data clean](/dynamics365/customer-engagement/admin/set-up-duplicate-detection-rules-keep-data-clean).
 
-Duplicate detection rules are defined using the following entities:
+Duplicate detection rules are defined using the following tables:
 
-- [DuplicateRule](reference/entities/duplicaterule.md): To detect duplicates in the system, create a *duplicate detection rule* for a specific entity type. You can create multiple detection rules for the same entity type. However, you can publish a maximum of five duplicate detection rules per entity type at one time.  
-- [DuplicateRuleCondition](reference/entities/duplicaterulecondition.md): A rule can have one or more *duplicate detection rule conditions* that are represented by the entity. The conditions are combined by the system as in logical `AND` operation. A duplicate detection rule specifies a base entity type and a matching entity type. A duplicate rule condition specifies the name of a base attribute and the name of a matching attribute. For example, specify an account as a base entity and a contact as a matching entity to compare last names and addresses. The matching criteria consist of operators such as exactly match, first n-number of characters, or last n-number of characters. 
+- [DuplicateRule](reference/entities/duplicaterule.md): To detect duplicates in the system, create a *duplicate detection rule* for a specific table type. You can create multiple detection rules for the same table type. However, you can publish a maximum of five duplicate detection rules per table type at one time.  
+- [DuplicateRuleCondition](reference/entities/duplicaterulecondition.md): A rule can have one or more *duplicate detection rule conditions* that are represented by the table. The conditions are combined by the system as in logical `AND` operation. A duplicate detection rule specifies a base table type and a matching table type. A duplicate rule condition specifies the name of a base column and the name of a matching column. For example, specify an account as a base table and a contact as a matching table to compare last names and addresses. The matching criteria consist of operators such as exactly match, first n-number of characters, or last n-number of characters. 
 
 
-These two entities are related using the [DuplicateRule_DuplicateRuleConditions](/reference/entities/duplicaterule.md#BKMK_DuplicateRule_DuplicateRuleConditions) relationship.
+These two tables are related using the [DuplicateRule_DuplicateRuleConditions](/reference/entities/duplicaterule.md#BKMK_DuplicateRule_DuplicateRuleConditions) relationship.
 
 Duplicate detection works by comparing generated match codes of existing records with each new record being created. These match codes are created as each new record is created. Therefore, there is potential for one or more duplicate records to be created if they are processed at the exact same moment. In addition to detecting duplicates as they are created, you should schedule duplicate detection jobs to check for other potential duplicate records.
  
- The duplicate detection rules are system-wide. You must publish them before running a duplicate detection job to detect duplicates for bulk data or retrieve duplicates for a particular entity record. To publish a duplicate detection rule, use the `PublishDuplicateRule` message(<xref href="Microsoft.Dynamics.CRM.PublishDuplicateRule?text=PublishDuplicateRule Action" /> or <xref:Microsoft.Crm.Sdk.Messages.PublishDuplicateRuleRequest>). Duplicate rule publishing is an asynchronous operation that runs in the background.
+ The duplicate detection rules are system-wide. You must publish them before running a duplicate detection job to detect duplicates for bulk data or retrieve duplicates for a particular table record. To publish a duplicate detection rule, use the `PublishDuplicateRule` message(<xref href="Microsoft.Dynamics.CRM.PublishDuplicateRule?text=PublishDuplicateRule Action" /> or <xref:Microsoft.Crm.Sdk.Messages.PublishDuplicateRuleRequest>). Duplicate rule publishing is an asynchronous operation that runs in the background.
 
-The following writable attributes in these entities control the behavior of duplicate detection rules.
+The following writable columns in these tables control the behavior of duplicate detection rules.
 
 ## DuplicateRule
 
-|Attribute|Description|
+|Column|Description|
 |-|-|
 |[BaseEntityName](/reference/entities/duplicaterule.md#BKMK_BaseEntityName)| Record type of the record being evaluated for potential duplicates.|
 |[Description](/reference/entities/duplicaterule.md#BKMK_Description)|Description of the duplicate detection rule.|
@@ -52,16 +54,16 @@ The following writable attributes in these entities control the behavior of dupl
 
 ### Inactive states
 
-Most system entities and all custom entities have two `StateCode` attribute options:
+Most system tables and all custom tables have two `StateCode` column choices:
 
 - `Value`: 0 `InvariantName`: `Active`
 - `Value`: 1 `InvariantName`: `Inactive`
 
-The label of the option may be changed, but the `InvariantName` value will not.
+The label of the choice may be changed, but the `InvariantName` value will not.
 
-Some system entities will have more than one active or inactive state.The following table lists examples of entities with more than one active or inactive state.
+Some system tables will have more than one active or inactive state.The following table lists examples of tables with more than one active or inactive state.
 
-|Entity StateCode |Active State(s)|Inactive State(s)|  
+| StateCode |Active State(s)|Inactive State(s)|  
 |--|--|--|  
 |[Appointment.StateCode](/reference/entities/appointment.md#BKMK_StateCode)|`Open`, `Scheduled`|`Completed`, `Canceled`|  
 |[CampaignActivity.StateCode](/reference/entities/CampaignActivity.md#BKMK_StateCode)|`Open`|`Closed`, `Canceled`|  
@@ -82,20 +84,20 @@ Some system entities will have more than one active or inactive state.The follow
 |[ServiceAppointment.StateCode](/reference/entities/ServiceAppointment.md#BKMK_StateCode)|`Open`, `Scheduled`|`Closed`, `Canceled`|  
 |[Task.StateCode](/reference/entities/Task.md#BKMK_StateCode)|`Open`|`Completed`, `Canceled`|  
 
- For example, if you set the `ExcludeInactiveRecords` attribute to `true`, only `Active`, `Submitted`, and `Invoiced` sales orders will be considered for matching during duplicate detection. 
+ For example, if you set the `ExcludeInactiveRecords` column to `true`, only `Active`, `Submitted`, and `Invoiced` sales orders will be considered for matching during duplicate detection. 
 
 
 > [!NOTE]
-> You can review the available `StateCode` options for an entity using the Metadata Browser described in [Browse the metadata for your organization](browse-your-metadata.md).
+> You can review the available `StateCode` choices for a table using the Metadata Browser described in [Browse the table and column definitions for your organization](browse-your-metadata.md).
 >
-> To retrieve the `StateCode` options for an entity you can use the following Web API query  by substituting the `LogicalName` of the entity with `appointment` used below:
+> To retrieve the `StateCode` choices for a table you can use the following Web API query  by substituting the `LogicalName` of the table with `appointment` used below:
 > ```HTTP
 > GET [organization URI]/api/data/v9.0/EntityDefinitions(LogicalName='appointment')/Attributes(LogicalName='statecode')/Microsoft.Dynamics.CRM.StateAttributeMetadata/OptionSet?$select=Options
 > ```
 
 ## DuplicateRule Special messages
 
-[DuplicateRule](/reference/entities/duplicaterule.md) is a user-owned entity and normal create, retrieve, update, assign, and delete operations are allowed as well as operations to control access. More information: [DuplicateRule Messages](/reference//reference/entities/duplicaterule.md#messages).
+[DuplicateRule](/reference/entities/duplicaterule.md) is a user-owned table and normal create, retrieve, update, assign, and delete operations are allowed as well as operations to control access. More information: [DuplicateRule Messages](/reference//reference/entities/duplicaterule.md#messages).
 
 The following special messages can also be used:
 
@@ -109,19 +111,19 @@ The following special messages can also be used:
 
 ## DuplicateRuleCondition
 
-|Attribute|Description|
+|Column|Description|
 |-|-|
 |[BaseAttributeName](/reference/entities/duplicaterulecondition.md#BKMK_BaseAttributeName)|Field that is being compared.|
 |[DuplicateRuleConditionId](/reference/entities/duplicaterulecondition.md#BKMK_DuplicateRuleConditionId)|Unique identifier of the condition.|
-|[IgnoreBlankValues](/reference/entities/duplicaterulecondition.md#BKMK_IgnoreBlankValues)|Determines whether to consider blank values as non-duplicate values. <br /> **Note**: <br />The default value of this attribute is `false`. Set it to `true` if you do not want the duplicate detection rule to consider `null` values as equal. <br /> **Important**: <br /> For a duplicate detection rule with one condition, if you set the attribute value to `false`, it is treated by the system as a `true` value. |
+|[IgnoreBlankValues](/reference/entities/duplicaterulecondition.md#BKMK_IgnoreBlankValues)|Determines whether to consider blank values as non-duplicate values. <br /> **Note**: <br />The default value of this column is `false`. Set it to `true` if you do not want the duplicate detection rule to consider `null` values as equal. <br /> **Important**: <br /> For a duplicate detection rule with one condition, if you set the column value to `false`, it is treated by the system as a `true` value. |
 |[MatchingAttributeName](/reference/entities/duplicaterulecondition.md#BKMK_MatchingAttributeName)|Field that is being compared with the base field.|
-|[OperatorCode](/reference/entities/duplicaterulecondition.md#BKMK_OperatorCode)|Operator for this rule condition.<br /> **Important**: <br />If you set the `OperatorCode` attribute to `ExactMatch`, don’t set the `OperatorParam` attribute to any value|
+|[OperatorCode](/reference/entities/duplicaterulecondition.md#BKMK_OperatorCode)|Operator for this rule condition.<br /> **Important**: <br />If you set the `OperatorCode` column to `ExactMatch`, don’t set the `OperatorParam` column to any value|
 |[OperatorParam](/reference/entities/duplicaterulecondition.md#BKMK_OperatorParam)|Parameter value of N if the operator is Same First Characters or Same Last Characters.<br /> **Important**: <br />Don’t set the `OperatorParam` to zero during create or update operations.|
 |[RegardingObjectId](/reference/entities/duplicaterulecondition.md#BKMK_RegardingObjectId)|Unique identifier of the object with which the condition is associated.|
 
 ## DuplicateRuleCondition Special messages
 
-[DuplicateRuleCondition](/reference/entities/duplicaterulecondition.md) is a child entity to `DuplicateRule`. Access to retrieve or modify these entities is dependent on access to the `DuplicateRule` it is associated with. More information: [DuplicateRuleCondition Messages](/reference/entities/duplicaterulecondition.md#messages).
+[DuplicateRuleCondition](/reference/entities/duplicaterulecondition.md) is a child table to `DuplicateRule`. Access to retrieve or modify these tables is dependent on access to the `DuplicateRule` it is associated with. More information: [DuplicateRuleCondition Messages](/reference/entities/duplicaterulecondition.md#messages).
 
 The following special messages can also be used:
 

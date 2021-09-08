@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: guidance
 ms.date: 06/16/2020
+ms.subservice: guidance
 ms.author: thground
 ms.reviewer: kathyos
 
@@ -67,7 +68,7 @@ Some key questions to ask:
 
   - Automating the action taken
 
-  - [Using AI](https://docs.microsoft.com/ai-builder/overview) to replace
+  - [Using AI](/ai-builder/overview) to replace
         human attention
 
 ## Example: Optimizing the expense report process
@@ -94,7 +95,7 @@ Rebecca is researching how the semiannual audit might be optimized by using AI.
 
 Our proposed optimized process looks like the following illustration.
 
-![Optimized business process flowchart that removes extra steps in the accounting process, as described in the article](media/optimized-business-process.png "Optimized business process flowchart that removes extra steps in the accounting process, as described in the article")
+![Optimized business process flowchart that removes extra steps in the accounting process, as described in the article.](media/optimized-business-process.png "Optimized business process flowchart that removes extra steps in the accounting process, as described in the article")
 
 > [!div class="nextstepaction"]
 > [Next step: Is it worth automating this process?](worth-automating-process.md)

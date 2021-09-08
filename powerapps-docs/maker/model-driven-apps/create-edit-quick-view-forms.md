@@ -7,7 +7,7 @@ ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "how-to"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -15,6 +15,7 @@ applies_to:
 author: "Mattp123"
 ms.assetid: 9b101734-cc11-4d05-bd45-eb611eae9931
 caps.latest.revision: 14
+ms.subservice: mda-maker
 ms.author: "matp"
 manager: "kvivek"
 search.audienceType: 
@@ -79,7 +80,7 @@ A quick view form can be added to another form as a quick view control. It provi
 5.  In the **Select quick view forms** dialog box, select the **Lookup** column, and then select the Lookup column value. More information: [Quick view control properties](quick-view-control-properties-legacy.md).  
 
     > [!div class="mx-imgBorder"] 
-    > ![Add quick view control](media/add-quick-view-control.png "Add quick view control to main form")
+    > ![Add quick view control.](media/add-quick-view-control.png "Add quick view control to main form")
 
 6.  Select **Done** to close the **Select quick View forms** dialog box. The quick view form appears on the form.
 

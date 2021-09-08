@@ -1,7 +1,7 @@
 ---
 title: "Quickstart: Blazor Server Web API sample (C#) (Microsoft Dataverse)| Microsoft Docs"
 description: "This sample demonstrates how to authenticate with a Microsoft Dataverse from a Blazor Server application and then call a basic WhoAmI Web API function."
-ms.custom: ""
+ms.custom: intro-internal
 ms.date: 07/07/2020
 ms.service: powerapps
 ms.topic: "article"
@@ -16,8 +16,6 @@ search.app:
   - D365CE
 ---
 # Quickstart: Blazor Server Web API sample (C#)
-
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
 
 In this quickstart, you'll create a Blazor Server application to connect to your Microsoft Dataverse environment using the Web API.
 
@@ -43,11 +41,11 @@ You'll authenticate and use <xref:System.Net.Http.HttpClient> to send a `GET` re
 
 1. Create a new Blazor Server app using .NET Core 3.1 but don't choose **Create** just yet.
 
-    ![Start a Blazor Server project](../media/quick-start-blazor-server-app-csharp-1.png)
+    ![Start a Blazor Server project.](../media/quick-start-blazor-server-app-csharp-1.png)
 
 1. Select **Change** under **Authentication** and then choose **Work or School Accounts**. 
 
-    ![Choose authentication](../media/quick-start-blazor-server-app-csharp-2.png)
+    ![Choose authentication.](../media/quick-start-blazor-server-app-csharp-2.png)
 
 1. Choose the appropriate dropdown and then replace `CRM520451` in the example with your environment's name.
 
@@ -59,7 +57,7 @@ By default, the template will create a registered application. Connecting to Dat
 
 1. Choose **Authentication**, select (check) **Access tokens** under **Implicit grant**, and then click **Save**.
 
-    ![Implicit grant](../media/quick-start-blazor-server-app-csharp-3.png)
+    ![Implicit grant.](../media/quick-start-blazor-server-app-csharp-3.png)
 
 1. Choose **Certificates & secrets** and then select **New client secret**.
 
@@ -67,7 +65,7 @@ By default, the template will create a registered application. Connecting to Dat
 
 1. Select the clipboard icon next to your secret to copy it.
 
-    ![Copy secret](../media/quick-start-blazor-server-app-csharp-4.png)
+    ![Copy secret.](../media/quick-start-blazor-server-app-csharp-4.png)
 
 1. In your Blazor Server app, open `appsettings.json` and add an entry for "ClientSecret". The Active Directory settings should look like this:
     
@@ -83,14 +81,14 @@ By default, the template will create a registered application. Connecting to Dat
       }
     }
     ```
-    
+
 1. Navigate to **API permissions**
 
 1. Select **Add a permission** and choose **Dynamics CRM**
 
 1. Choose **Delegated permissions** and select (check) **user_impersonation**, and then click **Add permissions**
 
-    ![Add permission](../media/quick-start-blazor-server-app-csharp-5.png)
+    ![Add permission.](../media/quick-start-blazor-server-app-csharp-5.png)
 
 1. Select the newly created permission to highlight it, and then shoose **Grant admin consent for organization** (your environment name is shown)
 
@@ -152,7 +150,7 @@ The application requires some extra steps to capture the authentication token an
 
 1. Obtain the environment name for the Dataverse management API. If you're not sure what the name is, open the [Power Platform admin center](https://admin.powerplatform.microsoft.com/environments), navigate to **Environments** then choose **Open environment**. You will see a URL like this: `https://{org}.crm.dynamics.com` where {org} is the environment name.
 
-1. Add an entry named `CDSAPI` to the appsettings.json file with the environment URL as the value. Append `/api/data/v.9.0/` to the end of the URL so it looks like this:
+1. Add an entry named `CDSAPI` to the appsettings.json file with the environment URL as the value. Append `/api/data/v9.0/` to the end of the URL so it looks like this:
 
     ```json
     { "CDSAPI": "https://{org}.crm.dynamics.com/api/data/v9.0/" }
@@ -257,7 +255,7 @@ The application is now ready!
 
 Press F5 to run the program. The output should look like this:
 
-![Connection success](../media/quick-start-blazor-server-app-csharp-6.png)
+![Connection success.](../media/quick-start-blazor-server-app-csharp-6.png)
 
 **Congratulations!** You have successfully connected to the Web API.
 
@@ -280,6 +278,5 @@ Learn how to structure your code for a better design.
 ### See Also
 
 [Tutorial: Create an ASP.NET Core Blazor WebAssembly App using Dataverse](../walkthrough-blazor-webassembly-single-tenant.md)
-
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

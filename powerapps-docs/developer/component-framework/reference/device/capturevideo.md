@@ -1,6 +1,6 @@
 ---
 title: CaptureVideo | Microsoft Docs
-description: 
+description: Invokes the device camera to record video.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -17,22 +17,19 @@ ms.assetid: 93021be2-b284-4da3-81a1-6d5587be6ce7
 
 [!INCLUDE[./includes/capturevideo-description.md](./includes/capturevideo-description.md)]
 
+## Available for
+
+Model-driven apps (mobile client)
+
 ## Syntax
 
 `context.device.captureVideo()`
-
-## Available for 
-
-Model-driven apps
 
 ## Return Value
 
 Type: `Promise<FileObject>`
 
-## Remarks
-
 See [Promise](https://developer.mozilla.org/docs/Web/JavaScript/reference/Global_Objects/Promise) and [FileObject](../fileobject.md)
-
 
 ### Related topics
 

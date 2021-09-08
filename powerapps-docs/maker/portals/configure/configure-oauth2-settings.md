@@ -1,13 +1,18 @@
 ---
-title: "Configure additional site settings for OAuth 2.0 providers in Power Apps portals.  | MicrosoftDocs"
-description: "Learn how to configure additional site settings for OAuth 2.0 providers in Power Apps portals."
+title: Configure additional settings for OAuth 2.0 providers
+description: Learn how to configure additional site settings for OAuth 2.0 providers in Power Apps portals.
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/20/2020
+ms.date: 04/21/2021
+ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - sandhangitmsft
+    - dileepsinghmicrosoft
 ---
 
 # Configure additional settings for OAuth 2.0 providers
@@ -16,7 +21,7 @@ As explained in [Configure an OAuth 2.0 provider for portals](configure-oauth2-p
 
 To configure the additional settings for any OAuth 2.0 identity provider, select **Configure** from the [provider settings](use-simplified-authentication-configuration.md#add-configure-or-delete-an-identity-provider) page, and expand **Additional settings**.
 
-![Configure additional settings](media/use-simplified-authentication-configuration/additional-oauth-settings.png "Configure additional settings")
+![Configure additional settings.](media/use-simplified-authentication-configuration/additional-oauth-settings.png "Configure additional settings")
 
 - **Authentication type**: The OWIN authentication middleware type. <br> Example: `https://sts.windows.net/contoso.onmicrosoft.com/`
 - **Authentication mode**: The OWIN authentication middleware mode.

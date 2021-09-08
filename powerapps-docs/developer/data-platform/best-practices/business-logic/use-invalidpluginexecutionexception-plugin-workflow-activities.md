@@ -13,8 +13,9 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 3/5/2020
-ms.author: JDaly
+ms.date: 03/06/2021
+ms.subservice: dataverse-developer
+ms.author: jdaly
 search.audienceType: 
   - developer
 search.app: 
@@ -23,7 +24,6 @@ search.app:
 ---
 # Use InvalidPluginExecutionException in plug-ins and workflow activities
 
-[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
 
 **Category**: Supportability, Usability
 
@@ -49,6 +49,10 @@ Plug-ins should only return an <xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionExc
 - Avoiding event log/trace file bloat
 
 Failure to convert the message into a <xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException> will result in an `IsvUnExpected` error with no message displayed to the user from a Power Apps client.
+
+### Handle errors from functions called in plug-ins
+
+Within your plug-in you will commonly call other functions to re-use code. How you handle errors in these functions is very important because an unhandled error may cause the worker process to crash. This will not only terminate your plug-in, but may also terminate any concurrent plug-ins running for your organization. More information: [Error: No Sandbox Worker processes are currently available](../../troubleshoot-plug-in.md#error-no-sandbox-worker-processes-are-currently-available)
 
 <a name='problem'></a>
 

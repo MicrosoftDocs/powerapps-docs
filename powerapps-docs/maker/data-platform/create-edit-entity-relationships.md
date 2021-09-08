@@ -1,18 +1,20 @@
 ---
 title: "About table relationships for Microsoft Dataverse | MicrosoftDocs"
-ms.custom: ""
+description: Learn about table relationships in Microsoft Dataverse
+ms.custom: intro-internal
 ms.date: 08/17/2020
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "overview"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
   - "PowerApps"
 ms.assetid: c765b6d9-4d87-4c2d-aae2-5b1c3b664a71
 caps.latest.revision: 28
+ms.subservice: dataverse-maker
 ms.author: "matp"
 manager: "kvivek"
 author: "Mattp123"
@@ -153,7 +155,7 @@ When a table relationship uses Reparent or Share, and the cascading behavior is 
 Inherited access rights cleanup is a system job that cleans up the legacy inherited access rights that remain after the cascading behavior is changed from **Cascade All** to **Cascade None**. This cleanup will not affect any user that was directly granted access to a table, but will remove access from anyone who received access through inheritance only.
 
 > [!NOTE]
-> Currently, to run inherited access rights cleanup requires using the Web API. More information: [CreateAsyncJobToRevokeInheritedAccess Action](/dynamics365/customer-engagement/web-api/createasyncjobtorevokeinheritedaccess?view=dynamics-ce-odata-9)
+> Currently, to run inherited access rights cleanup requires using the Web API. More information: [CreateAsyncJobToRevokeInheritedAccess Action](/dynamics365/customer-engagement/web-api/createasyncjobtorevokeinheritedaccess?view=dynamics-ce-odata-9&preserve-view=true)
 
 <!-- Automatic triggering to come later-- remove above alert at that time. The cleanup is automatically triggered when you switch Reparent or Share cascading behaviors from All to None. No action is required. -->
 

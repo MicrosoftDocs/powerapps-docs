@@ -1,17 +1,21 @@
 ---
-title: Canvas app debugging with Monitor | Microsoft Docs
+title: Debugging canvas apps with Monitor
 description: Learn about debugging canvas apps by using Monitor.
-author: hasharaf
+author: tapanm-msft
 ms.service: powerapps
+ms.subservice: troubleshoot
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 11/19/2020
-ms.author: hasharaf
+ms.date: 08/16/2021
+ms.author: austinj
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - wimcoor
 ---
 
 # Debugging canvas apps with Monitor
@@ -24,17 +28,17 @@ Monitor is available by default for all canvas apps. Using Monitor, you can trac
 
 1. Sign in to [Power Apps](https://make.powerapps.com/).
 
-1. Create a [new app](https://docs.microsoft.com/powerapps/maker/canvas-apps/get-started-test-drive), or [edit an existing app](https://docs.microsoft.com/powerapps/maker/canvas-apps/edit-app).
+1. Create a [new app](canvas-apps/get-started-test-drive.md), or [edit an existing app](canvas-apps/edit-app.md).
 
 1. On the left pane, select **Advanced tools**.
 
 1. Select **Open monitor**.
 
-    ![Open monitor](media/monitor/open-monitor.png "Open monitor")
+    ![Open monitor.](media/monitor/open-monitor.png "Open monitor")
 
 This action opens Monitor in a new browser tab and connects it to your existing Power Apps Studio session.
 
-![Monitor - opened](media/monitor/monitor-opened.png "Monitor - opened")
+![Monitor - opened.](media/monitor/monitor-opened.png "Monitor - opened")
 
 A notification appears at the top to show the current monitoring session as a *Studio session*.
 
@@ -58,37 +62,40 @@ You can also use Monitor to debug the published app in the web player.
 1. Select **Monitor** from the menu. Or, you can select **More
     Commands** (**...**), and then select **Monitor**.
 
-    ![Open Monitor for a published app](media/monitor/open-published-app-monitor.png "Open Monitor for a published app")
+    ![Open Monitor for a published app.](media/monitor/open-published-app-monitor.png "Open Monitor for a published app")
 
 1. Select **Play published app**.
 
-    ![Play published app](media/monitor/play-published-app.png "Play published app")
+    ![Play published app.](media/monitor/play-published-app.png "Play published app")
 
 This action opens the published app in a new browser tab and connects it to your current Monitor session. You'll immediately see events in Monitor when the app is loaded in the web player, and as you interact with the published app.
 
 Monitor also displays a notification that the monitoring session that's currently open is for the published version of the app.
 
-![Published app session](media/monitor/published-app-session.png "Published app session")
+![Published app session.](media/monitor/published-app-session.png "Published app session")
 
-### Advanced setting: Debug published app
+### Setting: Debug published app
 
 If you want to view the source expressions in Monitor for the published app, you need to turn on the setting to publish the expressions with the app. This setting is similar to generating a debug file in traditional development. Publishing source expressions with your app is optional. Even when this setting is off, you'll be able to see the events happening in your app, but you won't be able to map these events to specific expressions or formulas.
 
-To enable this setting, go to **File** > **Settings** > **Advanced settings**, and then turn on **Debug published app**.
+To enable this setting, go to **File** > **Settings**, and then turn on **Debug published app**.
 
-![Debug published app](media/monitor/debug-published-app.png "Debug published app")
+> [!NOTE]
+> Enabling this setting has a detrimental impact on the performance of your app for all your users. To minimize the impact, disable this setting as soon as you no longer need to view source expressions when debugging your published app.
+
+![Debug published app.](media/monitor/debug-published-app.png "Debug published app")
 
 ### View events in Monitor
 
 To view events from your app, play the app in Power Apps Studio. Monitor will then
 display the table of events as they're occurring, along with specific details.
 
-![View events as they occur](media/monitor/monitor-events-occurring.png "View events as they occur")
+![View events as they occur.](media/monitor/monitor-events-occurring.png "View events as they occur")
 
 ## Example: Using Monitor with canvas apps
 
 In this example, you'll use the Northwind Sample Data app included with
-the [Northwind sample solution](https://docs.microsoft.com/powerapps/maker/canvas-apps/northwind-install).
+the [Northwind sample solution](canvas-apps/northwind-install.md).
 
 The *Northwind sample solution* is a canvas app that loads sample data into Microsoft Dataverse. You can also create a new app or use an existing app instead.
 
@@ -100,7 +107,7 @@ When you check Monitor, you see data operations as expected. However, you also s
 
 When you select such an event, you see the error as "Rate limit exceeded. Try again in XX seconds."
 
-![Example scenario - error 429](media/monitor/error-429.png "Example scenario - error 429")
+![Example scenario - error 429.](media/monitor/error-429.png "Example scenario - error 429")
 
 ### **Analysis**
 
@@ -108,7 +115,7 @@ The problem needs further analysis to understand why requests are getting
 throttled. In Monitor, you see that for each **createRow** call, there are
 several **getRows** requests from the **ProgressCount.Text** property, each to a different entity. These entities aren't the entities the app is creating rows for. The **ProgressCount.Text** formula is seen in Monitor, as shown in the following image.
 
-![Error 429 - Formula](media/monitor/error-429-formula.png "Error 429 - Formula")
+![Error 429 - Formula.](media/monitor/error-429-formula.png "Error 429 - Formula")
 
 For each record added, the formula is evaluated again and **CountRows** is
 called on several entities. This behavior results in **getRows** in the log,

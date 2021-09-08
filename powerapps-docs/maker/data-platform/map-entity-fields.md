@@ -15,6 +15,7 @@ applies_to:
 author: "Mattp123"
 ms.assetid: 7c5aa1c3-bde9-43f1-a369-fdcdbf14dec0
 caps.latest.revision: 33
+ms.subservice: dataverse-maker
 ms.author: "matp"
 manager: "kvivek"
 tags: 
@@ -52,7 +53,9 @@ When you map table columns for a 1:N table relationship certain items of data fr
 > [!NOTE]
 > These mappings only set default values to a row before it is saved. People can edit the values before saving. The data that is transferred is the data at that point in time. It isn’t synchronized if the source data later changes.
 >   
-> These mappings aren’t applied to related rows created using a workflow or dialog process. They aren’t automatically applied to new rows created using code, although developers can use a special message called `InitializeFrom` ([InitializeFrom Function](/dynamics365/customer-engagement/web-api/initializefrom?view=dynamics-ce-odata-9) or [InitializeFromRequest Class](/dotnet/api/microsoft.crm.sdk.messages.initializefromrequest?view=dynamics-general-ce-9)) to create a new row using available mappings.  
+> These mappings aren’t applied to related rows created using a workflow or dialog process. They aren’t automatically applied to new rows created using code, although developers can use a special message called `InitializeFrom` ([InitializeFrom Function](/dynamics365/customer-engagement/web-api/initializefrom?view=dynamics-ce-odata-9) or [InitializeFromRequest Class](/dotnet/api/microsoft.crm.sdk.messages.initializefromrequest?view=dynamics-general-ce-9)) to create a new row using available mappings. 
+> 
+> These mappings aren't applied for new related table forms that are opened when an app does not have an active network connection to Dataverse, except for parent lookup fields. 
 
 ## Open solution explorer
 
@@ -66,25 +69,25 @@ Mapping columns is done in the context of a 1:N or N:1 table relationship, so fi
 
 Column mappings aren’t actually defined within the table relationships, but they are exposed in the relationship user interface. Not every 1:N table relationship has them. When you view a list of 1:N (or N:1) table relationships for a table, you can filter the relationships shown by type. You can select either **All**, **Custom**, **Customizable**, or **Mappable**. Mappable table relationships provide access to allow mapping table columns. 
 
-![View mappable table relationships](media/mappable-entity-relationships.png) 
+![View mappable table relationships.](media/mappable-entity-relationships.png) 
 
 When you open a mappable table relationship, select **Mappings** in the left navigation.
 
-![Select Mappings for the table relationship](media/map-entity-fields-ui-solution-explorer.png)
+![Select Mappings for the table relationship.](media/map-entity-fields-ui-solution-explorer.png)
 
 ## Delete mappings
 
-If there are any mappings that you do not want to apply, you can select them and click the ![Delete icon](media/delete.gif) icon.
+If there are any mappings that you do not want to apply, you can select them and click the ![Delete icon.](media/delete.gif) icon.
 
 ## Add new mappings
 
 To create a new mapping click **New** in the toolbar. This will open the **Create Column Mapping** dialog.
 
-![Create column mapping dialog](media/create-field-mapping-dialog.png)
+![Create column mapping dialog.](media/create-field-mapping-dialog.png)
 
 Select one source table column and one target table columns with values you want to map. 
 
-![Configure column mapping](media/configure-field-mapping.png)
+![Configure column mapping.](media/configure-field-mapping.png)
 
 Then select **OK** to close the dialog.
 

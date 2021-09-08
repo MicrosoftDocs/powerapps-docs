@@ -1,20 +1,25 @@
 ---
-title: "Configure LinkedIn as the identity provider for Power Apps portals. | MicrosoftDocs"
-description: "Learn how to configure LinkedIn as the identity provider for Power Apps portals."
+title: Configure the LinkedIn provider for portals
+description: Learn how to configure LinkedIn as the identity provider for Power Apps portals.
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/20/2020
+ms.date: 04/21/2021
+ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - sandhangitmsft
+    - dileepsinghmicrosoft
 ---
 
 # Configure the LinkedIn provider for portals
 
 As explained in [Configure ah OAuth 2.0 provider for portals](configure-oauth2-provider.md), LinkedIn is one of several identity providers that use the OAuth 2.0 protocol. To get started with configuring LinkedIn as the identity provider, select **Configure** from the [provider settings](use-simplified-authentication-configuration.md#add-configure-or-delete-an-identity-provider) page.
 
-![Configure the LinkedIn app](media/use-simplified-authentication-configuration/configure-linkedin.png "Configure the LinkedIn app")
+![Configure the LinkedIn app.](media/use-simplified-authentication-configuration/configure-linkedin.png "Configure the LinkedIn app")
 
 ## Step 1. Create the LinkedIn app
 

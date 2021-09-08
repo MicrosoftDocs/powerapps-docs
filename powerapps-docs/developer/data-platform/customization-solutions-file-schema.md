@@ -1,8 +1,8 @@
 ---
 title: "Customization solutions file schema (Microsoft Dataverse) | Microsoft Docs"
-description: "The following is the schema definition for an solution customization file from Microsoft Dataverse."
+description: "The following is the schema definition for an solution customization file used by Microsoft Dataverse."
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 03/18/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.suite: ""
@@ -13,6 +13,7 @@ helpviewer_keywords:
 ms.assetid: 71e3e594-0240-4af1-99b4-135042b7a000
 caps.latest.revision: 19
 author: "shmcarth" # GitHub ID
+ms.subservice: dataverse-developer
 ms.author: "jdaly"
 manager: "ryjones"
 search.audienceType: 
@@ -24,12 +25,11 @@ search.app:
 
 # Customization solutions file schema
 
+[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+The following is the schema definition for an import/export customization file from Microsoft Dataverse.
 
-The following is the schema definition for an import/export customization file from Microsoft Dataverse. 
-
-You can find schema  in the `Schemas\9.0.0.2090\CustomizationsSolution.xsd` folder when you download the Schemas zip file.
+You can find schema in the `Schemas\9.0.0.2090\CustomizationsSolution.xsd` folder when you download the Schemas zip file.
 
 Download the [Schemas](https://download.microsoft.com/download/B/9/7/B97655A4-4E46-4E51-BA0A-C669106D563F/Schemas.zip).
 
@@ -2488,8 +2488,6 @@ For more information, see [Solutions overview](../../maker/data-platform/solutio
 		</xs:sequence>
 	</xs:complexType>	
 </xs:schema>
-```  
-  
-
+```
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

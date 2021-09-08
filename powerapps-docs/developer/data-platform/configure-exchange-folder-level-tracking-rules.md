@@ -2,11 +2,12 @@
 title: "Configure Exchange folder-level tracking rules (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to configure Exchange folder-level tracking rules" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 03/24/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "revachauhan" # GitHub ID
+ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -29,14 +30,14 @@ Configure folder-level tracking rules to map a Microsoft Exchange inbox folder t
 
 ## Create and manage folder-level tracking rules 
  
- Use the [MailboxTrackingFolder Entity](/reference/entities/mailboxtrackingfolder.md) to programmatically configure and manage your folder-level tracking rules. To set up a tracking rule, use the following attributes.  
+ Use the [MailboxTrackingFolder table](/reference/entities/mailboxtrackingfolder.md) to programmatically configure and manage your folder-level tracking rules. To set up a tracking rule, use the following columns.  
 
 
-|                                   Attribute                                   |                                                                                                                                                                                                                Description                                                                                                                                                                                                                 |
-|-------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|  [ExchangeFolderId](/reference/entities/mailboxtrackingfolder.md#BKMK_ExchangeFolderId)  | Specify the Microsoft Exchange folder ID that you want to map. You can use the Exchange Web Services (EWS) to retrieve the ID of a folder under your Inbox folder. For more information, see [MSDN: How to: Work with folders by using EWS in Exchange](https://msdn.microsoft.com/library/office/dn535504.aspx). This is a required attribute. |
-|         [MailboxId](/reference/entities/mailboxtrackingfolder.md#BKMK_MailboxId)         |                                                                                                                                         Specify the mailbox ID in Dataverse that you want to create the rule for. This is a required attribute.                                                                                                                                          |
-| [RegardingObjectId](/reference/entities/mailboxtrackingfolder.md#BKMK_RegardingObjectId) |                                                                                                       Set the regarding object in Dataverse that you want the specified Microsoft Exchange folder to be mapped to. This is an optional attribute.                                                                                                       |
+|  Column       |  Description |
+|-------------------------------|----|
+| [ExchangeFolderId](/reference/entities/mailboxtrackingfolder.md#BKMK_ExchangeFolderId)  | Specify the Microsoft Exchange folder ID that you want to map. You can use the Exchange Web Services (EWS) to retrieve the ID of a folder under your Inbox folder. For more information, see [MSDN: How to: Work with folders by using EWS in Exchange](https://msdn.microsoft.com/library/office/dn535504.aspx). This is a required column. |
+|         [MailboxId](/reference/entities/mailboxtrackingfolder.md#BKMK_MailboxId)     |   Specify the mailbox ID in Dataverse that you want to create the rule for. This is a required column.                                                                                                                                          |
+| [RegardingObjectId](/reference/entities/mailboxtrackingfolder.md#BKMK_RegardingObjectId) |                                                                                                       Set the regarding object in Dataverse that you want the specified Microsoft Exchange folder to be mapped to. This is an optional column.                                                                                                       |
 
  The following sample code shows how you can create a folder-level tracking rule.  
 
@@ -90,10 +91,10 @@ foreach (var folderMapping in resp.MailboxTrackingFolderMappings)
 
 ### See also  
  <xref href="Microsoft.Dynamics.CRM.RetrieveMailboxTrackingFolders?text=RetrieveMailboxTrackingFolders Function" /><br />
- [MailboxTrackingFolder Entity](/reference/entities/mailboxtrackingfolder.md)<br />
- [Mailbox Entity](/reference/entities/mailbox.md)<br />
+ [MailboxTrackingFolder table](/reference/entities/mailboxtrackingfolder.md)<br />
+ [Mailbox table](/reference/entities/mailbox.md)<br />
  [Configure folder-level tracking](/dynamics365/customer-engagement/admin/configure-outlook-exchange-folder-level-tracking)<br />
- [Server-side Synchronization Entities](server-side-synchronization-entities.md)<br />
+ [Server-side Synchronization tables](server-side-synchronization-entities.md)<br />
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

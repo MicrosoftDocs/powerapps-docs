@@ -5,10 +5,11 @@ ms.custom: ""
 ms.date: 11/16/2020
 ms.reviewer: ""
 ms.service: powerapps
-ms.topic: "article"
+ms.topic: "overview"
 author: "Mattp123"
 ms.assetid: 88b18946-474c-4c94-8e4c-27532f930757
 caps.latest.revision: 28
+ms.subservice: dataverse-maker
 ms.author: "matp"
 manager: "kvivek"
 search.audienceType: 
@@ -28,10 +29,10 @@ Dataverse is designed so that you can quickly and easily create a data model for
   
 Different clients people use to interact with the data in your environment depend on the table metadata and adapt as you customize the metadata. But these clients also depend on other data to control what visual elements to display, any custom logic to apply, and how to apply security. This system data is also stored within tables but the tables themselves are not available for customization.
 
-You can learn about standard tables, attributes, and table relationships included by default in Dataverse by reviewing the [entity reference](/powerapps/developer/data-platform/reference/about-entity-reference).
+You can learn about standard tables, attributes, and table relationships included by default in Dataverse by reviewing the [entity reference](../../developer/data-platform/reference/about-entity-reference.md).
 
 > [!TIP]
-> The designers available to edit metadata cannot show all the details found in the metadata. You can install a model-driven app called the **Metadata Browser** which will allow you to view all the tables and metadata properties that are found in the system. More information: [Browse the metadata for your environment](https://docs.microsoft.com/dynamics365/customer-engagement/developer/browse-your-metadata).
+> The designers available to edit metadata cannot show all the details found in the metadata. You can install a model-driven app called the **Metadata Browser** which will allow you to view all the tables and metadata properties that are found in the system. More information: [Browse the metadata for your environment](/dynamics365/customer-engagement/developer/browse-your-metadata).
   
 <a name="BKMK_CreateNewOrUseExistingMetadata"></a>
 
@@ -50,7 +51,7 @@ For these reasons, we recommend that you look for and use the provided standard 
 <!--  Can we say this yet? 
     
 > [!NOTE]
-> The [Common Data Model](/powerapps/common-data-model/overview) will provide a capability to add additional standard tables. 
+> The [Common Data Model](/common-data-model/) will provide a capability to add additional standard tables. 
 
 -->
 
@@ -72,7 +73,7 @@ Choice columns provide a set of options that will be displayed in a drop-down co
   
 ### Next steps
 
-[Create or edit tables (row types)](create-edit-entities.md)<br />
+[Create or edit tables (row types)](./data-platform-create-entity.md)<br />
 [Create and edit relationships between tables](create-edit-entity-relationships.md)
 
 

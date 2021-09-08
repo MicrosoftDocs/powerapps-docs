@@ -1,12 +1,14 @@
 ---
 title: "Client API form context in model-driven apps| MicrosoftDocs"
-ms.date: 04/10/2019
+description: The Client API form context (**formContext**) provides a reference to the form or to an item on the form, such as, a quick view control or a row in an editable grid, against which the current code is executed.
+ms.date: 04/15/2021
 ms.service: powerapps
 ms.topic: "conceptual"
 applies_to: 
   - "Dynamics 365 (online)"
 ms.assetid: 0cf94e8d-801a-451f-98c3-130e912f963b
 author: "Nkrb"
+ms.subservice: mda-developer
 ms.author: "nabuthuk"
 manager: "kvivek"
 search.audienceType: 
@@ -16,8 +18,6 @@ search.app:
   - D365CE
 ---
 # Client API form context
-
-
 
 The Client API form context (**formContext**) provides a reference to the form or to an item on the form, such as, a quick view control or a row in an editable grid, against which the current code is executed.
 
@@ -60,18 +60,22 @@ function displayName(executionContext)
 
 Use the **data** and **ui** objects under the **formContext** object to programmatically manipulate data and user interface elements in model-driven apps.
 
-![formContext object model](../media/ClientAPI-formContextModel.png)
+![formContext object model.](../media/ClientAPI-formContextModel.png)
+
+[!INCLUDE[cc-terminology](../../data-platform/includes/cc-terminology.md)]
 
 ### data object
 
-Provides access to the entity data and methods to manage the data in the form as well as in the business process flow control. Contains the following objects:
+Provides properties and methods to work with the data on a form, including table data and data in the business process flow control. Contains the following objects:
+
 
 | **Object**  | **Description**|
-|-----------------|----------------|
-|entity|Provides methods to retrieve information specific to the record displayed on the page, the save method, and a collection of all the attributes included on the form|
-|process|Provides methods to retrieve properties of a business process flow.|
+|--|--|
+|attributes|Collection of non-table data on the form. Items in this collection are of the same type as the column collection, but they are not columns of the form table. <br/>More information: [Collections](reference/collections.md)|
+|entity|Provides methods to retrieve information specific to the record displayed on the page, the save method, and a collection of all the columns included on the form. Column data is limited to columns represented on the form. <br/>More information: [formContext.data.entity](reference/formContext-data-entity.md)|
+|process|Provides objects and methods to interact with the business process flow data on a form.<br/>More information: [formContext.data.process](reference/formContext-data-process.md)|
 
-It also provides an **attributes** collection for accessing non-entity bound control. See the **Collections in the formContext object model** section later in this topic.
+It also provides an **attributes** collection for accessing non-table bound control. See the **Collections in the formContext object model** section later in this topic.
 
 More information: [formContext.data](reference/formContext-data.md) 
 
@@ -96,10 +100,10 @@ reference)](reference/collections.md).
 
 | **Collection**  | **Description**|
 |-----------------|----------------|
-| [attributes](reference/attributes.md)  | Two objects contain an attributes collection:<br/><br/>- **formContext.data.attributes** collection provides access to non-entity bound attributes.<br/><br/>- **formContext.data.entity.attributes** collection provides access to each entity attribute that is available on the form. Only those attributes that correspond to fields added to the form are available.| 
-| [controls](reference/controls.md)  | Three objects contain a controls collection:<br/><br/> - **formContext.ui.controls**: Provides access to each control present on the form.<br/><br/>- **formContext.data.entity.attribute.controls**: Because an attribute may have more than one control on the form, this collection provides access to each of them. This collection will contain only one item unless multiple controls for the attribute are added to the form.<br/><br/>- **formContext.ui.tabs.sections.controls**: This collection only contains the controls found in the section.|
+| [attributes](reference/attributes.md)  | Two objects contain a column collection:<br/><br/>- **formContext.data.attributes** collection provides access to non-table bound columns.<br/><br/>- **formContext.data.entity.attributes** collection provides access to each table column that is available on the form. Only those columns added to the form are available.| 
+| [controls](reference/controls.md)  | Three objects contain a controls collection:<br/><br/> - **formContext.ui.controls**: Provides access to each control present on the form.<br/><br/>- **formContext.data.entity.attribute.controls**: Because a column may have more than one control on the form, this collection provides access to each of them. This collection will contain only one item unless multiple controls for the column are added to the form.<br/><br/>- **formContext.ui.tabs.sections.controls**: This collection only contains the controls found in the section.|
 |**formContext.data.process.**[stages](reference/formContext-data-process/process/getStages.md) and **formContext.data.process**.[steps](reference/formContext-data-process/stage/getSteps.md)| Provides access to stages and steps collection in a business process flow. These also allow for adding and removing of items from the collection.|
-|**formContext.ui.formSelector.**[items](reference/formContext-ui-formselector.md)|When multiple forms are provided for an entity, you can associate each form with security roles. When the security roles associated with a user enable them to see more than one form, the **formContext.ui.formSelector.items** collection provides access to each form definition available to that user.|
+|**formContext.ui.formSelector.**[items](reference/formContext-ui-formselector.md)|When multiple forms are provided for a table, you can associate each form with security roles. When the security roles associated with a user enable them to see more than one form, the **formContext.ui.formSelector.items** collection provides access to each form definition available to that user.|
 |**formContext.ui.navigation.**[items](reference/formContext-ui-navigation.md)|The **formContext.ui.navigation.items** collection provides access to navigation items that are defined using the navigation area of the form editor. People navigate to these using the command bar.|
 | **formContext.ui.**[quickForms](reference/formContext-ui-quickForms.md) | Provides methods to access all the quick view controls and its constituent controls on the Customer Enagagement forms.| **Xrm.Page.ui.tabs** collection provides access to each of these tabs.|
 | **formContext.ui.**[tabs](reference/formContext-ui-tabs.md) | You can organize each form by using one or more tabs. This collection provides access to each of these tabs.|

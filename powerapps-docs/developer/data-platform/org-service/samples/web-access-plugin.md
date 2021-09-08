@@ -1,8 +1,8 @@
 ---
 title: "Sample: Web access from a plug-in (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "This sample shows how to write a plug-in that can access resources on the web (network)." # 115-145 characters including spaces. This abstract displays in the search result.
+description: "Learn how to write a plug-in that can access resources on the World Wide Web." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 8/19/2019
+ms.date: 03/17/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "samples"
@@ -17,7 +17,7 @@ search.app:
 ---
 # Sample: Web access from a plug-in
 
-[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+[!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 
 This sample shows how to write a plug-in that can access web (network) resources like a web service or feed. It also demonstrates how to limit the time duration allowed for this call. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/WebAccessPlugin).
 
@@ -29,9 +29,9 @@ This sample shows how to write a plug-in that can access web (network) resources
     - HttpClientPlugin uses [HttpClient Class](/dotnet/api/system.net.http.httpclient)
 1. Open the sample solution in Visual Studio, navigate to the project's properties, and verify the assembly will be signed during the build. Press F6 to build the sample's assembly (WebAccessPlugin.dll).
 1. Run the Plug-in Registration tool and register the assembly in the Microsoft Dataverse server's sandbox and database. 
-1. For either plug-in type, when registering a step, specify a web URI string (i.e., `https://www.microsoft.com`) in the unsecure configuration field.
+1. For either plug-in type, when registering a step, specify a web URI string (i.e., `https://www.microsoft.com`) in the unsecure configuration column.
     - The default value `https://www.bing.com` will be used if none is provided.
-1. Using an app or write code to perform the appropriate operation to invoke the message and entity request that you registered the plug-in on.
+1. Using an app or write code to perform the appropriate operation to invoke the message and table request that you registered the plug-in on.
 1. When the plug-in runs, if the duration of the call exceeds the 15 second limit, it will throw an error. Otherwise it should succeed.
 1. When you are done testing, unregister the assembly and step.
 
@@ -39,9 +39,9 @@ This sample shows how to write a plug-in that can access web (network) resources
 
 When executed, the plug-in downloads web page data from the specified web service address (or the default address). 
 If the request exceeds the 15 second limit it will throw an [InvalidPluginExecutionException](/dotnet/api/microsoft.xrm.sdk.invalidpluginexecutionexception) 
-and write details to the Plugin Trace Log.
+and write details to the Plug-in Trace Log.
 
-- If the `WebClientPlugin` plugin fails, it will write something like the following to the Plugin Trace log:
+- If the `WebClientPlugin` plugin fails, it will write something like the following to the Plug-in Trace log:
     ```
     Downloading the target URI: https://www.bing.com
     Exception: Microsoft.Xrm.Sdk.InvalidPluginExecutionException: The timeout elapsed while attempting to issue the request. ---> System.Net.WebException: The operation has timed out
@@ -52,7 +52,7 @@ and write details to the Plugin Trace Log.
       at PowerApps.Samples.WebClientPlugin.Execute(IServiceProvider serviceProvider)
     ```
 
-- If the `HttpClientPlugin` plugin fails, it will write something like the following to the Plugin Trace log:
+- If the `HttpClientPlugin` plug-in fails, it will write something like the following to the Plug-in Trace log:
     ```
     Downloading the target URI: https://www.bing.com
     Inner Exceptions:
@@ -68,9 +68,9 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 
 ### Setup
 
-1. Checks the constuctor's unsecure configuration parameter for a web address value; otherwise, the default value is used.
+1. Checks the constructor's unsecure configuration parameter for a web address value; otherwise, the default value is used.
 2. Depending on which plug-in is registered, either the  [WebClient Class](/dotnet/api/system.net.webclient) or  [HttpClient Class](/dotnet/api/system.net.http.httpclient) class is used by the plug-in's `Execute` method to download web page data.
-3. If the call exceeds the 15 second duration specified, an [InvalidPluginExecutionException](/dotnet/api/microsoft.xrm.sdk.invalidpluginexecutionexception) will be thrown and details about the error will be written to the Plugin Trace Log.
+3. If the call exceeds the 15 second duration specified, an [InvalidPluginExecutionException](/dotnet/api/microsoft.xrm.sdk.invalidpluginexecutionexception) will be thrown and details about the error will be written to the Plug-in Trace Log.
 
 ### Demonstrate
 

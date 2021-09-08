@@ -1,12 +1,13 @@
 ---
 title: "FetchXML schema (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "The FetchXML query language is used to create queries against the Microsoft Dataverse database" # 115-145 characters including spaces. This abstract displays in the search result.
+description: "The FetchXML query language is one available method to create data queries against the Microsoft Dataverse database." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 03/18/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID
+ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -17,9 +18,9 @@ search.app:
 ---
 # FetchXML schema
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
-The FetchXML query language is used to create queries against the Microsoft Dataverse database. The following is the schema for the FetchXML query language. For more information, see [Use FetchXML to Construct a Query](use-fetchxml-construct-query.md).
+The FetchXML query language is used to create queries against the Microsoft Dataverse database. The following is the schema for the FetchXML query language. For more information, see [Use FetchXML to construct a query](use-fetchxml-construct-query.md).
 
 You can find this schema in the `Schemas\9.0.0.2090\Fetch.xsd` folder when you download the Schemas zip file.
 Download the [Schemas](https://download.microsoft.com/download/B/9/7/B97655A4-4E46-4E51-BA0A-C669106D563F/Schemas.zip).
@@ -571,7 +572,6 @@ Download the [Schemas](https://download.microsoft.com/download/B/9/7/B97655A4-4E
 ### See also  
  [Retrieve data with queries](/dynamics365/customer-engagement/developer/retrieve-data-queries-sdk-assemblies)   
  [Schemas used in Dynamics 365](/dynamics365/customer-engagement/developer/schemas-used-dynamics-365)   
- [Build Queries with FetchXML](/dynamics365/customer-engagement/developer/build-queries-fetchxml)
-
+ [Build queries with FetchXML](/dynamics365/customer-engagement/developer/build-queries-fetchxml)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

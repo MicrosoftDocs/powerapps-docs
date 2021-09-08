@@ -1,13 +1,17 @@
 ---
-title: "Configure web roles for a partner portal  | MicrosoftDocs"
-description: "Instructions to add web roles for a partner portal."
+title: Configure web roles for a partner relationship management (PRM) portal
+description: Learn how to add web roles for a partner portal.
 author: sbmjais
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/11/2021
+ms.date: 04/21/2020
+ms.subservice: portals
 ms.author: shjais
-ms.reviewer: 
+ms.reviewer: shjais
+contributors:
+    - tapanm-msft
+    - shjais
 ---
 
 # Configure web roles for a partner relationship management (PRM) portal
@@ -57,12 +61,12 @@ Website Access Permissions is a permission set, associated with a web role, that
 |   Manage Content Snippets    |                          Allows the editing of Snippet controls. [!INCLUDE[proc-more-information](../../../includes/proc-more-information.md)] [Customize content by using content snippets](../configure/customize-content-snippets.md)                           |
 |     Manage Site Markers      |    Allows the editing of hyperlinks that use site markers.                                                                                      |
 |     Manage Web Link Sets     | Allows the editing of web link sets, including adding and removing web links from a web link set. [!INCLUDE[proc-more-information](../../../includes/proc-more-information.md)] [Manage web links in portals](../configure/manage-web-links.md) |
-| Preview Unpublished Entities |                                                                            Allows the viewing of portal-exposed entities that have a publishing state of **Draft**.                                                                             |
+| Preview Unpublished Entities |                                                                            Allows the viewing of portal-exposed tables that have a publishing state of **Draft**.                                                                             |
 |                              |                                                                                                                                                                                                                                                 |
 
 To add website access permission to a web role, just create a new Website Access entity, give it the permission set you want, name it, associate with the website in question, save, and then associate it with the web role(s) you desire.
 
 ### See also
 [Control webpage access for portals](../configure/webpage-access-control.md)  
-[Add record-based security using entity permissions for portals](../configure/assign-entity-permissions.md)  
+[Add record-based security using table permissions for portals](../configure/assign-entity-permissions.md)  
 [Create web roles for portals](../configure/create-web-roles.md)  

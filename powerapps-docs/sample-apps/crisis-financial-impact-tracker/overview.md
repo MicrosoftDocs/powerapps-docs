@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 06/22/2020
+ms.subservice: sample-apps
 ms.author: ramanasr
 ms.reviewer: nkrb
 ---
@@ -31,7 +32,7 @@ Watch a quick overview of the Higher Education Crisis Financial Impact Tracker s
 
 Contact your local Microsoft account representative for questions related to licensing.
 
-More information: [Licensing overview for Power Platform](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus)
+More information: [Licensing overview for Power Platform](/power-platform/admin/pricing-billing-skus)
 
 ## Start here
 

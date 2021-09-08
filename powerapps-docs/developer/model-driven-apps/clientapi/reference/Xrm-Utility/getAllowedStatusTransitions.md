@@ -1,6 +1,7 @@
 ---
 title: "getAllowedStatusTransitions (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 09/03/2019
+description: Includes description and supported parameters for the getAllowedStatusTransitions method.
+ms.date: 04/21/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -28,7 +29,7 @@ search.app:
 
 |Name |Type |Required |Description |
 |---|---|---|---|
-|entityName|String|Yes|The logical name of the entity.|
+|entityName|String|Yes|The logical name of the table.|
 |statusCode|Number|Yes|The status code to find out the allowed status transition values.|
 |successCallback|Function|No|The function to execute when the operation succeeds.|
 |errorCallback|Function|No|The function to execute when the operation fails.|

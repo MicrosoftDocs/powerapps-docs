@@ -1,6 +1,6 @@
 ---
 title: getBarcodeValue | Microsoft Docs
-description: 
+description: Invokes the device camera to scan the barcode information, such as product number.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -17,22 +17,19 @@ ms.assetid: b7cbb29f-4663-46c4-9aa8-1209a68e73b3
 
 [!INCLUDE[./includes/getbarcodevalue-description.md](./includes/getbarcodevalue-description.md)]
 
+## Available for
+
+Model-driven (mobile client) and canvas apps (mobile client)
+
 ## Syntax
 
 `context.device.getBarcodeValue()`
-
-## Available for 
-
-Model-driven apps
 
 ## Return Value
 
 Type: `Promise<string>`
 
-## Remarks
-
 See [Promise](https://developer.mozilla.org/docs/Web/JavaScript/reference/Global_Objects/Promise)
-
 
 ### Related topics
 

@@ -1,18 +1,22 @@
 ---
-title: JSON function | Microsoft Docs
-description: Reference information, including syntax, for the JSON function in Power Apps
+title: JSON function in Power Apps
+description: Reference information including syntax and examples for the JSON function in Power Apps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: nabuthuk
-ms.date: 05/02/2019
+ms.date: 05/24/2021
+ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - gregli-msft
+  - nkrb
 ---
 # JSON function in Power Apps
 
@@ -34,7 +38,7 @@ Canvas apps support the [data types](data-types.md) that this table lists with d
 | **GUID** | String that contains the GUID value. Letters are lowercase. | `"751b58ac-380e-4a04-a925-9f375995cc40"`
 | **Image, Media** | If **IncludeBinaryData** is specified, media files are encoded in a string. Web references that use the http: or https: URL scheme aren't modified. References to in-memory binary data are encoded with the ["data:*mimetype*;base64,..."](https://en.wikipedia.org/wiki/Data_URI_scheme) format. In-memory data includes images that users capture by using the [**Camera**](../controls/control-camera.md) control and any other references with the appres: and blob: URL schemes.| `"data:image/jpeg;base64,/9j/4AA..."` |
 | **Number** | Number that uses the appropriate decimal separator for the user's language. Scientific notation is used if needed. | `1.345` |
-| **Option&nbsp;set** | Numeric value of the option set, not the label that's used for display. The numeric value is used because it's language independent.  | `1001` |
+| **Option&nbsp;set** | Numeric value of the choice, not the label that's used for display. The numeric value is used because it's language independent.  | `1001` |
 | **Time** | String that contains an ISO 8601 *hh:mm:ss.fff* format.  | `"23:12:49.000"` |
 | **Record** | Comma-delimited list, between **{** and **}**, of fields and their values. This notation resembles that for records in canvas apps, but the name is always between double quotation marks. This format doesn't support records that are based on many-to-one relationships.  | `{ "First Name": "Fred", "Age": 21 }` |
 | **Table** | Comma-delimited list, between **[** and **]**, of records. This format doesn't support tables that are based on one-to-many relationships.  | `[ { "First Name": "Fred", "Age": 21 }, { "First Name": "Jean", "Age": 20 } ]` |
@@ -87,12 +91,12 @@ If a column has both a display name and a logical name, the result contains the 
     The **CitiesByCountry** collection is created with this data structure, which you can show by selecting **Collections** on the **File** menu and then selecting the name of the collection.
 
     > [!div class="mx-imgBorder"]
-    > ![CitiesByCountry collection](media/function-json/cities-grouped.png)
+    > ![CitiesByCountry collection.](media/function-json/cities-grouped.png)
 
-    You can also show this collection by selecting **File** > **App settings** > **Advanced settings** > **Enable formula bar result view**, selecting the name of the collection in the formula bar, and then selecting the down arrow next to the name of the collection under the formula bar.
+    You can also show this collection by selecting **File** > **Settings** > **Upcoming features** > **Enable formula bar result view**, selecting the name of the collection in the formula bar, and then selecting the down arrow next to the name of the collection under the formula bar.
 
     > [!div class="mx-imgBorder"]
-    > ![Collection in the formula bar's result view](media/function-json/cities-grouped-resultview.png)
+    > ![Collection in the formula bar's result view.](media/function-json/cities-grouped-resultview.png)
 
 1. Insert another button, and set its **OnSelect** property to this formula:
 

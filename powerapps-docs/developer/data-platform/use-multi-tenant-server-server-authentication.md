@@ -1,12 +1,13 @@
 ---
-title: "Use Multi-Tenant Server-to-server authentication (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Describes how to configure an application user for server-to-server authentication with Microsoft Dataverse." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Use multi-tenant server-to-server authentication (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Learn how to access Microsoft Dataverse data across multiple tenants from an application or service without explicit user authentication." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 2/28/2019
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "paulliew" # GitHub ID
+ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -15,15 +16,15 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Use Multi-Tenant Server-to-server authentication
+# Use multi-tenant server-to-server authentication
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
-This is the most common scenario and the one which is used for apps distributed using Microsoft AppSource, but you can also use multi-tenant without listing your application with Microsoft AppSource.  
+Multi-tenancy is the most common app scenario and the one which is used for apps distributed using Microsoft AppSource, but you can also use multi-tenancy without listing your application with Microsoft AppSource.  
   
 Each Microsoft Dataverse organization is associated with an Azure Active Directory tenant. Your web application or service is registered with its own Azure AD tenant.  
   
-In this scenario any Dataverse tenant can potentially use your multi-tenant application after they grant consent for the application to access data.  
+In this scenario any Dataverse tenant can potentially use your multi-tenant application after an administrator grants consent for the application to access data.  
   
 <a name="bkmk_Requirements"></a>   
 
@@ -33,14 +34,14 @@ In this scenario any Dataverse tenant can potentially use your multi-tenant appl
   
 - An Azure AD tenant you will use to publish your application or service.  
   
-- 2 Dataverse subscriptions  
+- Two (2) Dataverse subscriptions  
   
   -   One must be associated with Azure AD tenant you will use to publish your application or service.  
   
   -   The other might be a trial subscription to use for testing how a subscriber will access your application.  
   
 <a name="bkmk_DevelopAndTest"></a>  
- 
+
 ## Overview: Develop and test your application  
 
  The application you will create must be registered with the Azure AD tenant you will use when you publish the application.  
@@ -49,18 +50,18 @@ In this scenario any Dataverse tenant can potentially use your multi-tenant appl
   
 1. Create a multi-tenant web application registered with your Azure AD tenant.  
   
-2. Create an application user associated with the registered application  in your Dataverse tenant  
+2. Create an application user associated with the registered application in your Dataverse tenant  
   
 3. Create a custom security role and assign it to the application user in your Dataverse tenant  
   
-4. Test your application using your Dataverse tenant  
+4. Test your application using your Dataverse tenant
   
 5. Test your application using a separate Dataverse tenant  
   
 <a name="bkmk_CreateAMultitenantWebApp"></a>
-   
-## Create a multi-tenant web application registered with your Azure AD tenant 
- 
+
+## Create a multi-tenant web application registered with your Azure AD tenant
+
  You will create a multi-tenant web application or service which uses Azure AD as the authentication provider.  
   
  Exactly how you do this will not be the focus of this topic. There are a number of ways you can approach this and make choices that fit your requirements or preferences. See the following links for more information and samples:  
@@ -74,7 +75,7 @@ Azure AD requires the following values to register your application:
 |Value|Description|  
 |-----------|-----------------|  
 |**Application ID URI**|The identifier for an application. This value is sent to Azure AD during authentication to indicate which application the caller wants a token for. Additionally, this value is included in the token so that the application knows it was the intended target.|  
-|**Reply URL and Redirect URI**|In the case of a web API or web application, the Reply URL is the location to which Azure AD will send the authentication response, including a token if authentication was successful.|  
+|**Reply URL and Redirect URI**|In the case of a Web API or web application, the Reply URL is the location to which Azure AD will send the authentication response, including a token if authentication was successful.|  
 |**Client ID**|The ID for an application, which is generated by Azure AD when the application is registered. When requesting an authorization code or token, the client ID and key are sent to Azure AD during authentication.|  
 |**Key**|The key that is sent along with a client ID when authenticating to Azure AD to call a web API  .|  
   
@@ -82,7 +83,7 @@ Azure AD requires the following values to register your application:
   
  If you create a new ASP.NET MVC application with Visual Studio you will have options to specify that the application will support the multi-tenant functionality. The template for an MVC application provides the option to specify what kind of authentication occurs. You will have the option to choose the authentication method by configuring the properties of your project when you create it. The following diagram shows the options available:  
   
- ![ASP.NET  MVC Change Authentication Dialog](media/mvc-change-authentication-dialog.png "ASP.NET  MVC Change Authentication Dialog")  
+ ![ASP.NET MVC Change Authentication Dialog.](media/mvc-change-authentication-dialog.png "ASP.NET  MVC Change Authentication Dialog")  
   
  When you configure a project with these options it will be configured to use OWIN middleware and scaffolding for a basic application that supports this scenario. With some basic modifications it can be adapted to work with Dataverse. 
   
@@ -91,10 +92,10 @@ Azure AD requires the following values to register your application:
  When you register your app you must generate a key, also known as a `ClientSecret`. These keys can be configured for a 1 or 2-year duration. As the host of the application you must treat this value like a password and it is your responsibility to manage renewal of the keys before they expire. You may want to use Key Vault. More information: [https://azure.microsoft.com/services/key-vault/](https://azure.microsoft.com/services/key-vault/)  
   
 <a name="bkmk_GrantApplicationRights"></a>
-   
+
 ## Grant your application rights to access Dataverse data
   
- This is the reason why your Dataverse instance must be associated with your Azure AD tenant. If your Azure AD tenant is not associated with a Dataverse tenant, you will not be able to perform the following steps.  
+ This is the reason why your Dataverse tenant must be associated with your Azure AD tenant. If your Azure AD tenant is not associated with a Dataverse tenant, you will not be able to perform the following steps.  
   
 1. Go to [https://portal.azure.com](https://portal.azure.com) and select **Azure Active Directory**.  
   
@@ -108,14 +109,15 @@ Azure AD requires the following values to register your application:
   
 6. Click **Done** to add these permissions. When you are done you should see the permissions applied.  
   
-   ![Grant Dynamics 365&#45;Permissions to application](media/grant-crm-permissions-to-application.png "Grant Dynamics 365-Permissions to application")  
+   ![Grant Dynamics 365&#45;Permissions to application.](media/grant-crm-permissions-to-application.png "Grant Dynamics 365-Permissions to application")  
   
 <a name="bkmk_CreateAppUser"></a>
-   
-## Create an application user  associated with the registered application  in Dataverse  
+
+## Create an application user associated with the registered application in Dataverse
+
  When your application accesses the Dataverse data of one of the subscribers of your application, it will require an application user in the subscriber’s Dataverse organization. Like any Dataverse user, this application user must be associated with at least one security role which defines the data the user is able to access.  
   
- The [SystemUser Entity](reference/entities/systemuser.md) has three new attributes to store this data.  
+ The [SystemUser Table](reference/entities/systemuser.md) has three new columns to store this data.  
   
 |Schema Name|Display Name|Type|Description|  
 |-----------------|------------------|----------|-----------------|  
@@ -131,10 +133,10 @@ Azure AD requires the following values to register your application:
 >  However, in order to create the application user in a different organization for testing, or whenever a subscriber will use your application, they must first grant consent for your application, so the steps in the process are different. See [Test your application using a separate Dynamics 365 tenant](#bkmk_TestUsingSeparateTenant) for more information.  
   
 <a name="bkmk_CreateSecurityRole"></a>  
- 
+
 ### Create a security role for the application user  
 
- In the next step you will create a Dataverse application user. The privileges and access rights for this user will be defined by a custom security role you set. Before you create the application user, you must create a custom security role so you can associate the user to it. More information: [Create or edit a security role](https://technet.microsoft.com/library/dn531130.aspx)  
+ In the next step you will create a Dataverse application user. The privileges and access rights for this user will be defined by a custom security role you set. Before you create the application user, you must create a custom security role so you can associate the user to it. More information: [Create or edit a security role](/previous-versions/dynamicscrm-2016/administering-dynamics-365/dn531130(v=crm.8))  
   
 > [!NOTE]
 >  The application user cannot be associated with one of the default Dataverse security roles. You must create a custom security role to associate with the application user.  
@@ -143,7 +145,7 @@ Azure AD requires the following values to register your application:
 
 ### Manually create a Dataverse application user  
 
- The procedure to create this user is different from creating a licensed user. Use the following steps:  
+ The procedure to create this unlicensed user is different from creating a licensed user. Use the following steps:  
   
 1. Navigate to **Settings** > **Security** > **Users**  
   
@@ -153,7 +155,7 @@ Azure AD requires the following values to register your application:
   
     If you do not see the **Application ID**, **Application ID URI** and **Azure AD Object ID** fields in the form, you must select the **Application User** form from the list:  
   
-   ![Select Application User Form](media/select-application-user-form.PNG "Select Application User Form")  
+   ![Select Application User Form.](media/select-application-user-form.PNG "Select Application User Form")  
   
 4. Add the appropriate values to the fields:  
   
@@ -170,9 +172,9 @@ Azure AD requires the following values to register your application:
 5. Associate the application user with the custom security role you created in [Create a security role for the application user](#bkmk_CreateSecurityRole). More information: [Create users and assign security roles](/dynamics365/customer-engagement/admin/create-users-assign-online-security-roles)  
   
 <a name="bkmk_TestUsingYourTenant"></a>  
- 
-## Test your application using your Dataverse tenant 
- 
+
+## Test your application using your Dataverse tenant
+
  Because the application has been registered with your Azure AD tenant and the application user in your development organization is already configured, you can continue to develop your application against your own Dataverse tenant. But this is not a valid test of the multi-tenant capability. You need to test your application on a separate Dataverse tenant.  
   
 <a name="bkmk_TestUsingSeparateTenant"></a>   
@@ -181,7 +183,7 @@ Azure AD requires the following values to register your application:
 
  Before you test your application with a separate Dataverse tenant, an administrator for the Azure AD tenant must grant consent for the application. The administrator grants consent by navigating to the application using a browser. The first time they access the application, they will see a dialog like this:  
   
- ![Grant consent to access Dynamics 365 data](media/grant-consent-to-access-crm-data.PNG "Grant consent to access Dynamics 365 data")  
+ ![Grant consent to access Dynamics 365 data.](media/grant-consent-to-access-crm-data.PNG "Grant consent to access Dynamics 365 data")  
   
  When they grant consent, your registered application will be added to the  Azure AD Enterprise applications list and it is available to the users of the Azure AD tenant.  
   
@@ -190,7 +192,7 @@ Azure AD requires the following values to register your application:
  For initial tests you may want to manually perform these steps. When you are ready to make your application or service available to subscribers you will want to have a more efficient procedure. This is covered in the next section.  
   
 <a name="bkmk_PrepareMethodToDeployAppUser"></a>
-   
+
 ## Prepare a method to deploy the application user  
 
  After subscribers grant consent to your application or service you will need an easy, reliable way for them to add the application user and any other required components to their Dataverse organization.  
@@ -214,10 +216,10 @@ Azure AD requires the following values to register your application:
   
   The Dynamics 365 Package Deployer is an application which can be used to prepare a package to automate transferring solutions and data to a different Dataverse organization. More information: [Create packages for the Package Deployer](/power-platform/alm/package-deployer-tool)  
   
-### See also  
- [Use Single-Tenant Server-to-server authentication](use-single-tenant-server-server-authentication.md)   
- [Build web applications using Server-to-Server (S2S) authentication](build-web-applications-server-server-s2s-authentication.md)   
- [Connect to Dynamics 365](/dynamics365/customer-engagement/developer/connect-customer-engagement)
+### See also
 
+ [Use single-tenant server-to-server authentication](use-single-tenant-server-server-authentication.md)   
+ [Build web applications using server-to-server (S2S) authentication](build-web-applications-server-server-s2s-authentication.md)   
+ [Connect to Dynamics 365](/dynamics365/customer-engagement/developer/connect-customer-engagement)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

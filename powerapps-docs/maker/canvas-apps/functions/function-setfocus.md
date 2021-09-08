@@ -1,6 +1,6 @@
 ---
-title: SetFocus function | Microsoft Docs
-description: Reference information, including syntax, for the SetFocus function in Power Apps
+title: SetFocus function in Power Apps
+description: Reference information including syntax and examples for the SetFocus function in Power Apps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -8,11 +8,15 @@ ms.topic: reference
 ms.custom: canvas
 ms.reviewer: nabuthuk
 ms.date: 08/23/2019
+ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - gregli-msft
+  - nkrb
 ---
 # SetFocus function in Power Apps
 Moves input focus to a specific control. 
@@ -38,6 +42,8 @@ The control with focus may be visually different based on the [**FocusedBorderCo
 
 You cannot set the focus to controls that are within a [**Gallery**](../controls/control-gallery.md) control, [**Edit form**](../controls/control-form-detail.md) control, or [Component](../create-component.md).  **SetFocus** can be used with a control in a scrollbale screen.
 
+You cannot set the focus to controls that are within a [**Container**](../controls/control-container.md) control.
+
 You can only set the focus to controls on the same screen as the formula containing the **SetFocus** call.
 
 Attempting to set the focus to a control that has its [**DisplayMode**](../controls/properties-core.md) property set to **Disabled** has no effect.  Focus will remain where it was previously.
@@ -57,7 +63,7 @@ You can use **SetFocus** only in [behavior formulas](../working-with-formulas-in
 
 Many shopping carts allow the customer to use the shipping address as the billing address, alleviating the need to enter the same information twice.  If a different billing address is desired, the billing address text input boxes are enabled, and it is helpful to guide the customer to the these newly enabled controls for faster data entry.  
 
-![Animation of choosing to use a custom Billing address, with focus moved to the Billing name input control as a result,turning off the automatic sync with the Shipping addresss](media/function-setfocus/shipping-billing.gif)
+![Animation of choosing to use a custom Billing address, with focus moved to the Billing name input control as a result,turning off the automatic sync with the Shipping addresss.](media/function-setfocus/shipping-billing.gif)
 
 There are many formulas in play here, but the one that moves the focus is on the **OnUncheck** property of the **Check box** control:
 
@@ -130,7 +136,7 @@ To create this example:
 
 Similar to exposing an input control, when displaying a data entry screen it is helpful to focus the first input control for faster data entry.
 
-![An animation showing a side by side comparison of using SetFocus versus not using it when displaying a data entry screen](media/function-setfocus/visible-setfocus.gif)
+![An animation showing a side by side comparison of using SetFocus versus not using it when displaying a data entry screen.](media/function-setfocus/visible-setfocus.gif)
 
 In this animation, the data entry screen on the left is not using **SetFocus**.  Upon display no input control has focus, requiring the user to tab, touch, mouse, or use another means to focus the **Name** field before a value can be typed into it.
 

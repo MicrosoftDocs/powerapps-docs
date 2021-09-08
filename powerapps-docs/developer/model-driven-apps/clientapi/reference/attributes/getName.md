@@ -1,11 +1,13 @@
 ---
 title: "getName (Client API reference)| MicrosoftDocs"
-ms.date: 10/31/2018
+description: Includes description and supported parameters for the getName method.
+ms.date: 04/19/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: d9f0639b-c14e-4a26-9d1a-c45471e131f1
 author: "Nkrb"
+ms.subservice: mda-developer
 ms.author: "nabuthuk"
 manager: "kvivek"
 search.audienceType: 
@@ -18,9 +20,9 @@ search.app:
 
 
 
-Returns a string representing the logical name of the attribute. 
+Returns a string representing the logical name of the column. 
 
-## Attribute types supported
+## Column types supported
 
 All
 
@@ -32,7 +34,7 @@ All
 
 **Type**: String. 
 
-**Description**: The logical name of the attribute.
+**Description**: The logical name of the column.
 
 ### Related topics
 [setSubmitMode (Client API reference)](setSubmitMode.md)

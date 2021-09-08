@@ -1,13 +1,17 @@
 ---
-title: "Download public key of a portal | MicrosoftDocs"
-description: "Learn how to download public key of a portal."
+title: Download public key of a portal
+description: Learn how to download public key of a portal.
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/07/2019
+ms.date: 04/21/2021
+ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: tapanm
+contributors:
+    - neerajnandwana-msft
+    - tapanm-msft
 ---
 
 # Download public key of portal
@@ -22,7 +26,7 @@ The public key of a portal is used to configure Live Assist for customer engagem
 2.	Go to **Portal Actions** > **Get Public Key**. The key is displayed.
 
     > [!div class=mx-imgBorder]
-    > ![Get public key of a portal](../media/get-public-key.png "Get public key of a portal")
+    > ![Get public key of a portal.](../media/get-public-key.png "Get public key of a portal")
 
 3.	Select **Download as Text** to download the key in a text file.
 

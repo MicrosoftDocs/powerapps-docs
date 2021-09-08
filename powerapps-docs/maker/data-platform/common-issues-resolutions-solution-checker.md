@@ -6,9 +6,10 @@ ms.date: 09/09/2020
 ms.service: powerapps
 ms.custom:
   - ""
-ms.topic: article
+ms.topic: troubleshooting
 ms.assetid: caa4e3f2-9700-49b8-87ed-8a68e8878b02
 author: jowells1 # GitHub ID
+ms.subservice: dataverse-maker
 ms.author: jowells # MSFT alias of Microsoft employees only
 manager: austinj # MSFT alias of manager or PM counterpart
 ms.reviewer: 
@@ -33,15 +34,15 @@ Shortly after submitting a solution checker request to run an analysis or downlo
 
 Whenever possible, solution checker attempts to return a specific error message with a link to details about the potential cause and resolution steps. Select **'Learn more'** for details.
 
-![Error message bar](media/solution-checker-missing-roles-error.png)
+![Error message bar.](media/solution-checker-missing-roles-error.png)
 
 Failures that occur during background processing of the analysis will fail with **'Couldn't be completed'** status and return an error message in the Power Apps portal as well as send email notification to the requestor.
 
-![Error status](media/solution-checker-exception-status.png)
+![Error status.](media/solution-checker-exception-status.png)
 
 Selecting the portal notification will link to this page of common issues for further troubleshooting. If one of the provided common issues does not resolve the problem, a reference number is also returned. Provide this reference number to Microsoft Support for further investigation.
 
-![Failure notification](media/solution-checker-failure-notification.png)
+![Failure notification.](media/solution-checker-failure-notification.png)
 
 
 ## Solution Checker fails to check Default solution
@@ -80,7 +81,7 @@ To install Power Apps Checker back into your Dataverse environment:
 
 ## Solution checker can't access environments in Administration Mode
 
-Environments that have been placed into [Administration Mode](https://docs.microsoft.com/dynamics365/customer-engagement/admin/manage-sandbox-instances#administration-mode) purposely restrict access to only users with System Administrator and System Customizer roles. Because the Power Apps Checker application identity has neither of these roles assigned by default, it can't access organizations operating in this mode.
+Environments that have been placed into [Administration Mode](/dynamics365/customer-engagement/admin/manage-sandbox-instances#administration-mode) purposely restrict access to only users with System Administrator and System Customizer roles. Because the Power Apps Checker application identity has neither of these roles assigned by default, it can't access organizations operating in this mode.
 
 In order to use solution checker in this organization, Administration Mode must be disabled.
 
@@ -93,7 +94,7 @@ To disable administration mode for an organization instance:
 
 3. Set **Administration mode** to disabled, and then select **Save**.
 
-    ![Disable Admin mode](media/solution-checker-instance-disable-admin-mode.png)
+    ![Disable Admin mode.](media/solution-checker-instance-disable-admin-mode.png)
 
 4. Run solution checker again.
 
@@ -113,7 +114,7 @@ To assign missing security roles to the Power Apps Checker user:
 3. Select **MANAGE ROLES** on the command bar.
 4. Select **'Export Customizations'** and **'Solution Checker'** role checkboxes, and then select **OK**.
 
-![Required Security Roles](media/solution-checker-required-roles.png)
+![Required Security Roles.](media/solution-checker-required-roles.png)
 
 5. Run solution checker again.
 
@@ -132,7 +133,7 @@ To update the access mode for the Power Apps Checker user:
 3. Scroll to the **'Administration'** > **'Client Access License (CAL) Information'** section of the form.
 4. Select **'Non-interactive'** in the **Access Mode** drop-down control.
 
-![Access Mode](media/solution-checker-access-mode.png)
+![Access Mode.](media/solution-checker-access-mode.png)
 
 5. Save and close the user form.
 6. Run solution checker again.
@@ -141,7 +142,7 @@ To update the access mode for the Power Apps Checker user:
 
 The Power Apps Checker application user in the Dataverse organization containing solutions to be analyzed must be enabled. If the application user becomes disabled, requests to analyze solutions in the same organization will fail. If receiving this error message, first verify that the Power Apps Checker application user is indeed disabled. Then follow the mitigation steps provided below.
 
-![Disabled user status](media/solution-checker-disabled-application-user.png)
+![Disabled user status.](media/solution-checker-disabled-application-user.png)
 
 ### How to enable the Power Apps Checker application user
 
@@ -149,12 +150,12 @@ The Power Apps Checker application user in the Dataverse organization containing
 2. In the **Application Users** view, select the checkmark next to the Power Apps Checker Application user.
 3. On the Actions toolbar, select **Enable**
 
-![Enable user from view](media/solution-checker-enable-application-user-view.png)
+![Enable user from view.](media/solution-checker-enable-application-user-view.png)
 
 4. In the **Confirm User Activation** message, select **Activate**.
 5. An alternative approach is to open the application user form and select **Enabled** status in the form footer. **Save** the change.
 
-![Enable user from form](media/solution-checker-enable-application-user-form.png)
+![Enable user from form.](media/solution-checker-enable-application-user-form.png)
 
 ## Common plugin conditions that cause solution checker to fail
 
@@ -197,17 +198,17 @@ To verify and/or modify the enabled status of the PowerApps-Advisor enterprise a
 2. Navigate to **Enterprise Applications**.
 3. Select **All Application** and search for **'PowerApps-Advisor'**.
 
-![Search PowerApps-Advisor app](media/solution-checker-search-advisor-app.png)
+![Search PowerApps-Advisor app.](media/solution-checker-search-advisor-app.png)
 
 4. Select **'PowerApps-Advisor'** to view the app details.
 5. Select **Properties**.
 6. Check the state of **Enabled for users to sign in**. If **'No'**, then the application has been disabled.
 
-![Disabled enterprise app](media/solution-checker-disabled-app.png)
+![Disabled enterprise app.](media/solution-checker-disabled-app.png)
 
 7. Select the radio control to switch the value to **'Yes'**. This enables the application.
 
-![Enable PowerApps-Advisor app](media/solution-checker-enable-app.png)
+![Enable PowerApps-Advisor app.](media/solution-checker-enable-app.png)
 
 8. Select **Save**. The application is now enabled. You may need to wait a few minutes for change to propagate.
 9. Run solution checker again.
@@ -270,6 +271,10 @@ For plug-in and workflow activity rules where the issue is only relevant in the 
 ## app-formula-issues-high may show different number of errors than those shown in design mode
 
 The solution checker will list the number of the errors found in the app, *including those from tests*. The app checker in design mode only shows errors from screen controls and components. If the error count shown in the app checker in design mode is smaller, open the [Test Studio](../canvas-apps/test-studio.md) and search for the errors in the expressions used in tests.
+
+## Solution Checker violations reported for code components
+
+Solution Checker reports multiple violation when run on the solution which has code components built in debug mode. Solution checker is targeted to validate code for production use, thus code components must be build using proper buildMode: `npm run build -- --buildMode production or msbuild /p:configuration=Release` depending on your building system. More information [Create and build a code component](../../developer/component-framework/create-custom-controls-using-pcf.md).
 
 ## See also
 

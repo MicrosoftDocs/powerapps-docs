@@ -1,6 +1,6 @@
 ---
 title: createPopup | Microsoft Docs
-description: 
+description: Creates a new popup element.
 keywords:
 ms.author: nabuthuk
 author: Nkrb

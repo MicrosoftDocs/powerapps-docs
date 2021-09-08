@@ -31,7 +31,7 @@ landingContent:
        - linkListType: learn
          links:
           - text: Extend model-driven apps using code
-            url: https://docs.microsoft.com/learn/paths/extend-power-platform-model-driven-app
+            url: /learn/paths/extend-power-platform-model-driven-app
 
   # Card
   - title: Customize
@@ -69,7 +69,7 @@ landingContent:
           - text: Web resources
             url: web-resources.md 
           - text: Script web resource development using Fiddler AutoResponder
-            url: /powerapps/developer/model-driven-apps/streamline-javascript-development-fiddler-autoresponder
+            url: ./streamline-javascript-development-fiddler-autoresponder.md
           - text: Web resource dependencies
             url: web-resource-dependencies.md
       - linkListType: sample
@@ -93,7 +93,7 @@ landingContent:
       - linkListType: learn
         links:
           - text: Create components with Power Apps Component Framework
-            url: https://docs.microsoft.com/learn/paths/use-power-apps-component-framework/
+            url: /learn/paths/use-power-apps-component-framework/
 
 # Card
   - title: Reference
@@ -105,11 +105,11 @@ landingContent:
           - text: Customization XML reference
             url: customization-xml-reference.md      
           - text: Form XML schema
-            url: /powerapps/developer/model-driven-apps/form-xml-schema
+            url: ./form-xml-schema.md
           - text: Power Apps component framework API reference
             url: ../component-framework/reference/index.md
           - text: Power Apps component framework Manifest schema reference
-            url: /powerapps/developer/component-framework/manifest-schema-reference
+            url: ../component-framework/manifest-schema-reference/index.md
 
 # Card
   - title: Related resources
@@ -117,9 +117,8 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Model-driven apps documentation
-            url: /powerapps/maker/model-driven-apps
+            url: ../../maker/model-driven-apps/index.yml
           - text: Microsoft Dataverse developer documentation
-            url: /powerapps/developer/data-platform/      
+            url: ../data-platform/index.yml
           - text: Canvas apps developer documentation
-            url: /powerapps/maker/canvas-apps/dev-enterprise-intro
-  
+            url: ../../maker/canvas-apps/dev-enterprise-intro.md

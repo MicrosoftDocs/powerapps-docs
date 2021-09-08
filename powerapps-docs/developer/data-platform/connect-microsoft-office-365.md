@@ -7,6 +7,7 @@ ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "paulliew" # GitHub ID
+ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -21,7 +22,7 @@ search.app:
 
 Dataverse is part of the Microsoft 365 collaboration and productivity tools. The [Microsoft 365 portal](https://www.microsoft.com/office365) provides a single sign-on experience for Microsoft 365 customers where they can sign in once and access any Microsoft 365 application, including Dataverse. In addition, system user accounts in Dataverse can be provisioned in the [Microsoft Online Services](https://portal.microsoftonline.com/) admin portal.  
   
- Using federation, applications can connect to Dataverse using the same system user identities and credentials available in an Azure Active Directory based network. More information: [Single sign-on roadmap](https://technet.microsoft.com/library/hh967643.aspx).  
+ Using federation, applications can connect to Dataverse using the same system user identities and credentials available in an Azure Active Directory based network. More information: [Single sign-on roadmap](/previous-versions/azure/azure-services/hh967643(v=azure.100)).  
   
 ## In This Section  
  [Dataverse Integration with Microsoft 365](online-integration-office-365.md)  

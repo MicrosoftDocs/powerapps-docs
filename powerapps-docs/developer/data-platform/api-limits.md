@@ -1,12 +1,13 @@
 ---
-title: "Service Protection API Limits (Microsoft Dataverse) | Microsoft Docs" 
+title: "Service protection API limits (Microsoft Dataverse) | Microsoft Docs" 
 description: "Understand the service protection limits for API requests." 
 ms.custom: ""
-ms.date: 02/07/2021
+ms.date: 03/26/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" 
+ms.subservice: dataverse-developer
 ms.author: "jdaly" 
 manager: "ryjones" 
 search.audienceType: 
@@ -15,9 +16,8 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Service Protection API Limits
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+# Service protection API limits
 
 To ensure consistent availability and performance for everyone we apply some limits to how APIs are used. These limits are designed to detect when client applications are making extraordinary demands on server resources.
 
@@ -26,7 +26,7 @@ The limits should not affect normal users of interactive clients. Only client ap
 When a client application makes extraordinarily demanding requests, the Dataverse follows the common pattern for online services. We return an error indicating that too many requests have been made.
 
 - With the Web API, we return a [429 Too Many Requests](https://developer.mozilla.org/docs/Web/HTTP/Status/429) error.
-- With the Organization Service, you will get an [OrganizationServiceFault](/dotnet/api/microsoft.xrm.sdk.organizationservicefault) error with one of three specific error codes. More information: [Service Protection API Limit Errors returned](#service-protection-api-limit-errors-returned)
+- With the Organization Service, you will get an [OrganizationServiceFault](/dotnet/api/microsoft.xrm.sdk.organizationservicefault) error with one of three specific error codes. More information: [Service protection API limit errors returned](#service-protection-api-limit-errors-returned)
 
 
 ## Impact on client applications
@@ -51,7 +51,7 @@ Portal applications typically send requests from anonymous users through a servi
 
 Plug-ins and custom workflow activities apply business logic triggered by incoming requests. Service protection limits are not applied to plug-ins and custom workflow activities. Plug-ins and custom workflow activities are uploaded and run within the isolated sandbox service. Dataverse operations invoked on the sandbox service do not use the public API endpoints.
 
-If your application performs operations that trigger custom logic, the number of requests sent by plug-ins or custom workflow activities will not be counted towards service protection API limits. However, the additional computation time that these operations contribute will be added to the initial request that triggered them. This computation time is part of the service protection API limits. More information: [How Service Protection API Limits are enforced](#how-service-protection-api-limits-are-enforced)
+If your application performs operations that trigger custom logic, the number of requests sent by plug-ins or custom workflow activities will not be counted towards service protection API limits. However, the additional computation time that these operations contribute will be added to the initial request that triggered them. This computation time is part of the service protection API limits. More information: [How service protection API limits are enforced](#how-service-protection-api-limits-are-enforced)
 
 ## Retry operations
 
@@ -233,7 +233,7 @@ This section describes ways that you can design your clients and systems to avoi
 
 ### Update your client application
 
-Service Protection API limits have been applied to Dataverse since 2018, but there are many client applications written before these limits existed. These clients didn't expect these errors and can't handle the errors correctly. You should update these applications and apply the patterns described in the [Using the Organization Service](#using-the-organization-service) or [Using the Web API](#using-the-web-api) sections below.
+Service Protection API limits have been applied to Dataverse since 2018, but there are many client applications written before these limits existed. These clients didn't expect these errors and can't handle the errors correctly. You should update these applications and apply the patterns described in the [Using the Organization service](#using-the-organization-service) or [Using the Web API](#using-the-web-api) sections below.
 
 ### Move towards real-time integration
 
@@ -243,7 +243,7 @@ Remember that the main point of service protection API limits is to smooth out t
 
 If you are using the Web API with a client library, you may find that it supports the retry behavior expected for 429 errors. Check with the client library publisher.
 
-If you have written your own library, you can include behaviors to be similar to the one included in this sample code for a helper [Web API CDSWebApiService class Sample (C#)](webapi/samples/cdswebapiservice.md).
+If you have written your own library, you can include behaviors to be similar to the one included in this sample code for a helper [Web API CDSWebApiService class sample (C#)](webapi/samples/cdswebapiservice.md).
 
 ```csharp
 private async Task<HttpResponseMessage> SendAsync(
@@ -317,10 +317,10 @@ You should not depend on these values to control how many requests you send. The
 
 To achieve optimum throughput, you should use multiple-threads. The Task Parallel Library (TPL) makes developers more productive by simplifying the process of adding parallelism and concurrency to applications.
 
-See these examples using the [Web API CDSWebApiService class Sample (C#)](webapi/samples/cdswebapiservice.md):
+See these examples using the [Web API CDSWebApiService class sample (C#)](webapi/samples/cdswebapiservice.md):
 
-- [Web API CDSWebApiService Parallel Operations Sample (C#)](webapi/samples/cdswebapiservice-parallel-operations.md)
-- [Web API CDSWebApiService Async Parallel Operations Sample (C#)](webapi/samples/cdswebapiservice-async-parallel-operations.md)
+- [Web API CDSWebApiService Parallel Operations sample (C#)](webapi/samples/cdswebapiservice-parallel-operations.md)
+- [Web API CDSWebApiService Async Parallel Operations sample (C#)](webapi/samples/cdswebapiservice-async-parallel-operations.md)
 
 
 ## Using the Organization Service
@@ -354,7 +354,7 @@ Work with the ETL application vendor to learn which settings to apply. Make sure
 
 No. Relevance search is a different API (`api/search` rather than `api/data`) and has different rules. When using the relevance search API, there is a throttling limit of one request per second for each user.
 
-More information: [Search across entity data using relevance search](webapi/relevance-search.md)
+More information: [Search across table data using relevance search](webapi/relevance-search.md)
 
 ### How do these limits apply to how many requests a user is entitled to each day?
 
@@ -365,7 +365,6 @@ These limits are not related to entitlement limits. More information: [Entitleme
 [Administer Power Platform / Licensing and license management / Requests limits and allocations](/power-platform/admin/api-request-limits-allocations)<br />
 [Dataverse API limits overview](../../maker/data-platform/api-limits-overview.md)<br />
 [Use Dataverse Web API](webapi/overview.md)<br />
-[Use Dataverse Organization Service](org-service/overview.md)
-
+[Use Dataverse Organization service](org-service/overview.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -1,13 +1,17 @@
 ---
-title: "Accessibility in Power Apps portals | MicrosoftDocs"
-description: "Learn about making Power Apps portal accessible."
+title: Accessibility in Power Apps portals
+description: Learn about making Power Apps portal accessible.
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/08/2021
+ms.date: 04/21/2021
+ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: tapanm
+contributors:
+    - neerajnandwana-msft
+    - tapanm-msft
 ---
  
 # Accessibility in Power Apps portals
@@ -46,7 +50,7 @@ Microsoft accessibility features help various agencies address accessibility req
 
 ### See also
 
-[Accessibility in Dynamics 365](https://docs.microsoft.com/dynamics365/get-started/accessibility/)
+[Accessibility in Dynamics 365](/dynamics365/get-started/accessibility/)
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -1,13 +1,17 @@
 ---
-title: "Manage forum threads in a portal | MicrosoftDocs"
-description: "Instructions to manage forum threads in a portal."
+title: Manage forum threads
+description: Learn how to manage forum threads in a portal.
 author: sbmjais
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/11/2021
+ms.date: 04/21/2020
+ms.subservice: portals
 ms.author: shjais
-ms.reviewer: 
+ms.reviewer: shjais
+contributors:
+    - tapanm-msft
+    - shjais
 ---
 
 # Manage forum threads
@@ -54,7 +58,7 @@ The forum thread editor will appear automatically when a user has successfully s
 
 5. Select **Create this thread**.
 
-    ![Create a new forum thread](media/create-new-forum-thread.png "Create a new forum thread")  
+    ![Create a new forum thread.](media/create-new-forum-thread.png "Create a new forum thread")  
 
 ### Forum thread attributes used by portals
 

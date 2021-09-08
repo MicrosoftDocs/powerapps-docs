@@ -1,24 +1,28 @@
 ---
-title: "Use custom JavaScript for a portal | MicrosoftDocs"
-description: "Instructions to add custom JavaScript to a form in a portal"
+title: Add custom JavaScript
+description: Learn how to add custom JavaScript to a form in a portal.
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/04/2019
+ms.date: 04/21/2021
+ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - sandhangitmsft
 ---
 
 # Add custom JavaScript
 
-The Web Form Step record contains a field named **Custom JavaScript** that can be used to store JavaScript code to allow you to extend or modify the form's visual display or function.
+The Advanced Form Step record contains a field named **Custom JavaScript** that can be used to store JavaScript code to allow you to extend or modify the form's visual display or function.
 
 The custom block of JavaScript will be added to the bottom of the page just before the closing form tag element.
 
 ## Form fields
 
-The HTML input ID of an entity field is set to the logical name of the attribute. This makes selecting a field, setting values, or other client-side manipulation easy by with [jQuery](https://jquery.com/).  
+The HTML input ID of a table field is set to the logical name of the attribute. This makes selecting a field, setting values, or other client-side manipulation easy by with [jQuery](https://jquery.com/).  
 
 ```JavaScript
 $(document).ready(function() {
@@ -92,13 +96,13 @@ if (window.jQuery) {
 ### See also
 
 - [Configure a portal](configure-portal.md)  
-- [Define entity forms](entity-forms.md)  
-- [Web Form steps for portals](web-form-steps.md)  
+- [Define basic forms](entity-forms.md)  
+- [Advanced Form steps for portals](web-form-steps.md)  
 - [Load Form/Load Tab step type](load-form-step.md)  
 - [Redirect step type](add-redirect-step.md)  
 - [Conditional step type](add-conditional-step.md)
-- [Microsoft Learn: Extend Power Apps portals with scripts](https://docs.microsoft.com/learn/modules/extend-power-app-portals/3-portal-javascript)
-- [Microsoft Learn: Advanced client-side development](https://docs.microsoft.com/learn/modules/extend-power-app-portals/5-advanced-portal-development)
+- [Microsoft Learn: Extend Power Apps portals with scripts](/learn/modules/extend-power-app-portals/3-portal-javascript)
+- [Microsoft Learn: Advanced client-side development](/learn/modules/extend-power-app-portals/5-advanced-portal-development)
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

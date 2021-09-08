@@ -2,11 +2,12 @@
 title: "Create a Custom API with solution files (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "You can write create custom APis by editing solution files." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/26/2020
+ms.date: 03/13/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
+ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -16,9 +17,6 @@ search.app:
   - D365CE
 ---
 # Create a Custom API with solution files 
-
-
-[This topic is pre-release documentation and is subject to change.]
 
 > [!NOTE]
 > This is an advanced topic that assumes you have already read and understood these topics:
@@ -31,7 +29,7 @@ While you can create Custom APIs through a designer or with code, you can also d
 A solution file is a compressed (zip) file that has been exported from a Microsoft Dataverse instance. The contents of this file can be extracted and the components checked into a source repository. The contents can be edited and then compressed again. The changes applied to the solution will then be part of the solution and will be created when the solution is imported.
 
 > [!NOTE]
-> These processes are typically automated with tools and processes that are beyond the scope of this topic. This topic will focus on the simple scenario of creating a Custom API by manually manipulating the extracted files in a solution to demonstrate how the data in the files can be used to create Custom API.
+> These processes are typically automated with tools and processes that are beyond the scope of this topic. This topic will focus on the simple scenario of creating a Custom API by manually manipulating the extracted files in a solution to demonstrate how the data in the files can be used to create Custom API. More information: [Source control with solution files](/power-platform/alm/use-source-control-solution-files)
 
 ## Step 1: Create an Unmanaged solution
 
@@ -41,13 +39,13 @@ You should not try to compose a solution file manually. Use the tools in [Power 
 
     For this example, the solution is defined simply like this:
 
-    :::image type="content" source="media/custom-api-solution.png" alt-text="An empty solution":::
+    :::image type="content" source="media/custom-api-solution.png" alt-text="An empty solution.":::
 
 1. [Export solutions](../../maker/data-platform/export-solutions.md)
 
     For this example, make sure you export an unmanaged solution. Managed solution is the default.
 
-    :::image type="content" source="media/export-empty-unmanaged-solution.png" alt-text="Option to select to export an unmanaged solution":::
+    :::image type="content" source="media/export-empty-unmanaged-solution.png" alt-text="Option to select to export an unmanaged solution.":::
     
 You can find the exported file in your downloads folder. It will have a name that depends on the name and version of the solution, in this case: `CustomAPIExample_1_0_0_2.zip`.
 
@@ -99,6 +97,7 @@ Within the folder, the data representing the Custom API is found within an XML f
       <displayname default="Custom API Example">
         <label description="Custom API Example" languagecode="1033" />
       </displayname>
+      <iscustomizable>0</iscustomizable>
       <executeprivilegename />
       <isfunction>0</isfunction>
       <isprivate>0</isprivate>
@@ -107,7 +106,7 @@ Within the folder, the data representing the Custom API is found within an XML f
     </customapi>
     ```
 
-  See the information in [CustomAPI entity attributes](custom-api.md#customapi-entity-attributes) to set the values of the elements.
+  See the information in [CustomAPI Table Columns](customapi-table-columns.md) to set the values of the elements.
       
   > [!NOTE]
   > If you already have a Plug-in Type that you want to associate with this Custom API, you can include a reference to it in this definition by adding the following element within the  `<customapi>` element:
@@ -141,6 +140,7 @@ Any definitions of request parameters for the Custom API are included in a folde
     <displayname default="Custom API Example String Parameter">
       <label description="Custom API Example String Parameter" languagecode="1033" />
     </displayname>
+    <iscustomizable>0</iscustomizable>
     <isoptional>0</isoptional>
     <logicalentityname />
     <name>sample_CustomAPIExample.StringParameter</name>
@@ -148,8 +148,7 @@ Any definitions of request parameters for the Custom API are included in a folde
   </customapirequestparameter>
   ```
 
-See the information in [CustomAPIRequestParameter entity attributes](custom-api.md#customapirequestparameter-entity-attributes) to set the values of the elements.
-
+See the information in [CustomAPIRequestParameter Table Columns](customapirequestparameter-table-columns.md) to set the values of the elements.
 
 ## Step 5: Add any Custom API Response Properties
 
@@ -168,13 +167,14 @@ Any definitions of response properties for the Custom API are included in a fold
     <displayname default="Custom API Example String Property">
       <label description="Custom API Example String Property" languagecode="1033" />
     </displayname>
+    <iscustomizable>0</iscustomizable>
     <logicalentityname />
     <name>sample_CustomAPIExample.StringProperty</name>
     <type>10</type>
   </customapiresponseproperty>
   ```
 
-See the information in [CustomAPIResponseProperty entity attributes](custom-api.md#customapiresponseproperty-entity-attributes) to set the values of the elements.
+See the information in [CustomAPIResponseProperty Table Columns](customapiresponseproperty-table-columns.md) to set the values of the elements.
 
 > [!NOTE]
 > While the schema for request parameters and response properties is very similar, note that `isoptional` is not valid for a response property and will cause an error when you try to import the solution.
@@ -184,7 +184,7 @@ See the information in [CustomAPIResponseProperty entity attributes](custom-api.
 1. Return to the folder where you extracted the original solution file in [Step 2: Extract the contents of the solution and update the version](#step-2-extract-the-contents-of-the-solution-and-update-the-version)
 1. Select all the extracted files and the **customapis** folder you created.
 
-    :::image type="content" source="media/selected-solution-files.png" alt-text="The selected solution files":::
+    :::image type="content" source="media/selected-solution-files.png" alt-text="The selected solution files.":::
 
 1. Right-click the selected files and choose **Send to** > **Compressed (zipped folder)**.
 1. You can re-name the resulting file to be anything you want. For this example, rename it to match the original exported solution file: `CustomAPIExample_1_0_0_2.zip`.
@@ -194,7 +194,7 @@ See the information in [CustomAPIResponseProperty entity attributes](custom-api.
 1. Return to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select **Solutions**.
 1. Select **Import** and follow the instructions to select the solution file you created in the previous step.
 
-    :::image type="content" source="media/import-solution-with-customapi.png" alt-text="Import the solution file":::
+    :::image type="content" source="media/import-solution-with-customapi.png" alt-text="Import the solution file.":::
 
     > [!NOTE]
     > If you see a warning saying **This version of the solution package is already installed**, you must not have updated the `Version` element of the solution.xml as described in [Step 2: Extract the contents of the solution and update the version](#step-2-extract-the-contents-of-the-solution-and-update-the-version).
@@ -209,14 +209,14 @@ See the information in [CustomAPIResponseProperty entity attributes](custom-api.
 
 Open the solution you created and verify that the Custom API and the associated request parameters and response properties are included.
 
-:::image type="content" source="media/customapi-solution-installed-successfully.png" alt-text="Showing that the solution component installed successfully":::
+:::image type="content" source="media/customapi-solution-installed-successfully.png" alt-text="Showing that the solution component installed successfully.":::
 
 At this point, you can test your API using the steps describe in [Test your Custom API](create-custom-api-maker-portal.md#test-your-custom-api)
 
 
 ## Providing Localized Labels with the solution
 
-As an alternative to using the process described in [Localized values](custom-api.md#localized-values), if you are editing the solution files for Custom API entities, you can provide translations directly in these files. For example if you want to provide Japanese localized labels for your Custom API, you can provide them for the `description` and `displayname` properties as shown below
+As an alternative to using the process described in [Localized Label values](custom-api.md#localized-label-values), if you are editing the solution files for Custom API entities, you can provide translations directly in these files. For example if you want to provide Japanese localized labels for your Custom API, you can provide them for the `description` and `displayname` properties as shown below
 
 ```xml
 <customapi uniquename="sample_CustomAPIExample">
@@ -230,6 +230,7 @@ As an alternative to using the process described in [Localized values](custom-ap
     <label description="Custom API Example" languagecode="1033" />
     <label description="カスタムAPIの例" languagecode="1041" />
   </displayname>
+  <iscustomizable>0</iscustomizable>
   <isfunction>0</isfunction>
   <name>sample_CustomAPIExample</name>
 </customapi>

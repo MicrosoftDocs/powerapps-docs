@@ -2,13 +2,14 @@
 title: Use the rich text editor control in Power Apps | MicrosoftDocs
 description: "The rich text editor control provides the app user a WYSIWYG editing area for formatting text"
 ms.custom: ""
-ms.date: 02/18/2021
+ms.date: 08/10/2021
 ms.reviewer: "matp"
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "how-to"
 author: "Mattp123"
+ms.subservice: mda-maker
 ms.author: "craigm"
 manager: "kvivek"
 tags: 
@@ -59,10 +60,10 @@ You can create a new text column and configure the control, or replace an existi
 The rich text editor control comes with a rich set of configuration options that make it possible to customize its appearance, features, and behavior. To configure the rich text editor control, follow these steps:
 
 1. Create a JSON file that includes the defaultSupportedProps structure and configuration with the changes you want. More information: [Sample rich text editor configurations](#sample-rich-text-editor-configurations) and [Rich text editor properties](#rich-text-editor-properties)
-2. In Power Apps, create a JavaScript web resource using the JSON file created in step 1. More information: [Create or edit model-driven app web resources to extend an app](create-edit-web-resources.md)
+2. In Power Apps, create a Script(JScript) type web resource using the JSON file created in step 1. More information: [Create or edit model-driven app web resources to extend an app](create-edit-web-resources.md)
 3. Open the **Column Properties** page for the text column with the rich text editor control, and then next to **RichTextEditorControl_URL** select **Edit**.
    > [!div class="mx-imgBorder"] 
-   > ![Rich text editor control URL](media/richtexteditorcontrol-url.png)
+   > ![Rich text editor control URL.](media/richtexteditorcontrol-url.png)
 4. Select **Bind to static value**, enter the relative URL to the JavaScript web resource in the box next to **SingleLine.URL**, and then select **OK**. The relative URL is located on the web resource definition.
 5. Select **OK** to close the **Column Properties** page.
 6. On the form editor command bar, select **Publish**.
@@ -91,11 +92,11 @@ The following two images visually identify the two configuration sections. For t
 
 **defaultSupportedProps**
 
-:::image type="content" source="media/defaultsupportedprops-visualization.png" alt-text="defaultsupportedprops configuration visualation":::
+:::image type="content" source="media/defaultsupportedprops-visualization.png" alt-text="defaultsupportedprops configuration visualation.":::
 
 **Individual configuration settings**
 
-:::image type="content" source="media/individual-config-visualization.png" alt-text="Individual configuration settings visualization":::
+:::image type="content" source="media/individual-config-visualization.png" alt-text="Individual configuration settings visualization.":::
 
 
 ### defaultSupportedProps
@@ -496,7 +497,7 @@ The following sample rich text editor configuration code sample data can be used
 { "showAsTabControl": true, "showFullScreenExpander": true }
  ```
 
-:::image type="content" source="media/cke-screen-expander.png" alt-text="Screen expander control":::
+:::image type="content" source="media/cke-screen-expander.png" alt-text="Screen expander control.":::
 
 ### Add the HTML source view tab
 
@@ -504,7 +505,7 @@ The following sample rich text editor configuration code sample data can be used
 { "showAsTabControl": true, "showHtml": true }
  ```
 
-:::image type="content" source="media/cke-html-source.png" alt-text="HTML tab control":::
+:::image type="content" source="media/cke-html-source.png" alt-text="HTML tab control.":::
 
 ### Add a simple toolbar with font size, bold, italic, underline, and highlight
 
@@ -512,7 +513,7 @@ The following sample rich text editor configuration code sample data can be used
  { "defaultSupportedProps": {"toolbar":[{ "items": ["FontSize", "Bold", "Italic", "Underline", "BGColor"]}]  }}
  ```
 
-:::image type="content" source="media/cke-simple-editor.png" alt-text="Controls for a simple editor":::
+:::image type="content" source="media/cke-simple-editor.png" alt-text="Controls for a simple editor.":::
 
 ### Remove the toolbar to make a rich text rendering surface
 
@@ -520,7 +521,7 @@ The following sample rich text editor configuration code sample data can be used
 { "defaultSupportedProps": {"toolbar":[]  }}
  ```
 
-:::image type="content" source="media/cke-no-toolbar.png" alt-text="No toolbar":::
+:::image type="content" source="media/cke-no-toolbar.png" alt-text="No toolbar.":::
 
 ### Add a new font list and set Brush Script MT as the default font with a default size of 20 px
 
@@ -528,7 +529,7 @@ The following sample rich text editor configuration code sample data can be used
  { "defaultSupportedProps": {"font_names":"Brush Script MT/'Brush Script MT', cursive;Calibri/Calibri, Helvetica, sans-serif;Calibri Light/'Calibri Light', 'Helvetica Light', sans-serif;", "font_defaultLabel":"Brush Script MT", "fontSize_sizes":"8/8px;12/12px;20/20px;32/32px", "fontSize_defaultLabel":"20", "stickyStyle":{"font-size":"20px", "font-family":"'Brush Script MT', cursive"}  }}
  ```
 
-:::image type="content" source="media/cke-default-font.png" alt-text="Set a new default font":::
+:::image type="content" source="media/cke-default-font.png" alt-text="Set a new default font.":::
 
 ### Position the toolbar at the top of the rich text editor
 
@@ -536,7 +537,7 @@ The following sample rich text editor configuration code sample data can be used
  { "defaultSupportedProps": {"toolbarLocation":"top"  }}
  ```
 
-:::image type="content" source="media/cke-toolbar-top.png" alt-text="Toolbar positioned at the top of the rich text editor":::
+:::image type="content" source="media/cke-toolbar-top.png" alt-text="Toolbar positioned at the top of the rich text editor.":::
 
 ### Start the editor at 30 px height and then auto-grow to fit content
 
@@ -544,7 +545,7 @@ The following sample rich text editor configuration code sample data can be used
  { "defaultSupportedProps": { "autoGrow_onStartup": false , "autoGrow_maxHeight": 0 , "autoGrow_minHeight": 30 , "height": 30  }}
  ```
 
-:::image type="content" source="media/cke-autogrow.png" alt-text="Typing into the rich text area will increase it to fit the content":::
+:::image type="content" source="media/cke-autogrow.png" alt-text="Typing into the rich text area will increase it to fit the content.":::
 
 ### Fix the height of the editor at 500 px
 
@@ -559,7 +560,7 @@ The following sample rich text editor configuration code sample data can be used
 
 `{ "defaultSupportedProps": {     "enterMode": 2 ,     "shiftEnterMode": 2 ,     "allowedContent":"*",     "disallowedContent":"*",     "forcePasteAsPlainText": true ,     "toolbar":[],     "removePlugins":"contextmenu,liststyle,openlink,tableresize,tableselection,tabletools"  },  "disableImages": true}}`
 
-:::image type="content" source="media/rte-plain-text-surface.png" alt-text="Creating a plain text surface makes the strips html":::
+:::image type="content" source="media/rte-plain-text-surface.png" alt-text="Creating a plain text surface makes the strips html.":::
 
 ## Remove the context menu so right-clicking will work with the default browser spell check
 
@@ -567,7 +568,7 @@ Enabling this functionality removes the contextual right-click editing capabilit
 
 `{  "defaultSupportedProps": {     "removePlugins":"contextmenu,liststyle,openlink,tableresize,tableselection,tabletools"  }}`
 
-:::image type="content" source="media/rte-right-click-config.png" alt-text="Remove the context menu so right-clicking will work with the default browser spell check":::
+:::image type="content" source="media/rte-right-click-config.png" alt-text="Remove the context menu so right-clicking will work with the default browser spell check.":::
 
 ## Use the webresource for organization-wide changes
 
@@ -690,15 +691,15 @@ The default RTE webresource is available with the display name RTEGlobalConfigur
 2. Hold down **Ctrl** while clicking the rich text editor control area, and then select **Inspect**.
 3. In the inspection pane, select the **Console** tab, and then select the parent **Main.aspx** page in the drop-down list box on the command bar.
 
-   :::image type="content" source="media/cke-select-parent-main.png" alt-text="Select the Console tab and then select the parent main.aspx page from the drop-down list box":::
+   :::image type="content" source="media/cke-select-parent-main.png" alt-text="Select the Console tab and then select the parent main.aspx page from the drop-down list box.":::
 
 4. Select **Clear console** on the inspection pane command bar.
 
-   :::image type="content" source="media/cke-clear-console.png" alt-text="Clear console command":::
+   :::image type="content" source="media/cke-clear-console.png" alt-text="Clear console command.":::
 
 5. In the inspection pane console, enter **CKEDITOR.config.** to display the different configurations.
 
-   :::image type="content" source="media/cke-configs.png" alt-text="List of CK Editor configurations":::
+   :::image type="content" source="media/cke-configs.png" alt-text="List of CK Editor configurations.":::
 
 6. Select a configuration, such as **autoGrow_minHeight**, to display the current setting.
 
@@ -715,42 +716,42 @@ The following table describes the different formatting features and functionalit
 
 |Icon | Name | Shortcut key | Description |
 |----------------------|-------------------------|-----------------------------|-----------------------------|
-|![Format Painter](media/format-painter.png "Format Painter")| Format Painter | Ctrl+Shift+C, Ctrl+Shift+V | Apply the look of a particular section to another section. |
-|![Font](media/format-font.png "Font") | Font | Ctrl+Shift+F | Select your desired font. The default font is Segoe UI.<br /><br /> **Note**: When you select any formatted content, the font name for that content displays. If your selection contains multiple fonts, the topmost font name of your selection is displayed. |
-|![Font Size](media/font-size.png "Font Size") | Font size | Ctrl+Shift+P | Change the size of your text. The default size is 12.<br /><br /> **Note**: When you select any formatted content, the font size for that content displays. If your selection contains multiple font sizes, the topmost font name of your selection is displayed.|
-|![Bold](media/format-bold.png "Bold")| Bold | Ctrl+B | Make your text bold. |
-|![Italic](media/format-italic.png "Italic")| Italic | Ctrl+I | Italicize your text. |
-|![Underline](media/format-underline.png "Underline")| Underline | Ctrl+U | Underline your text. |
-|![Text Highlight Color](media/text-highlight-color.png "Text Highlight Color")| Text Highlight Color |  | Make your text stand out by highlighting it in a bright color. |
-|![Font Color](media/font-color.png "Font Color")| Font Color |  | Change the color of your text. |
-|![Bullets](media/format-bullets.png "Bullets")| Bullets |  | Create a bulleted list. |
-|![Numbering](media/format-numbering.png "Numbering")| Numbering |  | Create a numbered list. |
-|![Decrease Indent](media/decrease-indent.png "Decrease Indent")| Decrease Indent |  | Move your paragraph closer to the margin. |
-|![Increase Indent](media/increase-indent.png "Increase Indent")| Increase Indent |  | Move your paragraph farther away from the margin. |
-|![Block Quote](media/block-quote.png "Block Quote")| Block Quote |  | Apply a block-level quotation format in your content. |
-|![Align Left](media/align-left.png "Align Left")| Align Left | Ctrl+L | Align your content with the left margin. (Commonly used for body text to make it easier to read.) |
-|![Align Center](media/align-center.png "Align Center")| Align Center | Ctrl+E | Center your content on the page. (Commonly used for a formal appearance.) |
-|![Align Right](media/align-right.png "Align Right")| Align Right | Ctrl+R | Align your content with the right margin. (Commonly used for a formal appearance.) |
-|![Link](media/format-link.png "Link")| Link |  | Create a link in your document for quick access to web pages and files.<br /><br />Pasted or typed URL text is converted into a link. For example, "http://myexample.com" will become "<a href="http://myexample.com">http://myexample.com</a>".<br /><br /> In the **Link** dialog box, choose the type of link you'd like to insert.<br /><br />The **Link Info** tab allows you to choose the link type as well as set the link protocol and URL.<br /><br />The **Target** tab is only available for the URL link type. It specifies the location where the link will open after you select it. |
-|![Remove Link](media/remove-link.png "Unlink")| Unlink |  | Delete a link in your email or document.<br /><br />When you place the cursor on a link, the **Unlink** button on the toolbar becomes active. Select the button to remove the link and make it plain text. |
-|![Superscript](media/format-superscript.png "Superscript")| Superscript |  | Type very small letters just above the line of text. |
-|![Subscript](media/format-subscript.png "Subscript")| Subscript |  | Type very small letters just below the line of text. |
-|![Strikethrough](media/format-strikethrough.png "Strikethrough")| Strikethrough |  | Cross out text by drawing a line through it. |
-|![Insert Image](media/insert-picture.png "Insert Image")| Insert Image|	|You can insert an image by directly copying and pasting it inline in the editor, dragging and dropping it from your desktop or local folder directly into the editor, or by typing a URL. The following formats are supported: .PNG, .JPG., or .GIF.<br /><br />To insert an image inline in your article: <br />1. Drag and drop the image or copy and paste it directly into the article. <br />2. Drag any corner of the image to resize it.<br /><br />To insert an image using a URL or navigating to the local image:<br />1. Choose Insert Image.<br />2. In the **Image** property dialog, choose from the following options:<br /><ul><li>Select **Browse** to navigate to the image on your computer.</li><li>Or specify the web address of the image, and properties to define how the image will appear in the email or article.</li><br />**Note:**<ul><li>If the image is located on the external server, use the full absolute path. </li><li>If the image is located on a local server, you can use a relative path. </li><li>If you want the image to be linked to a target, add a URL for the image.</li><li>You can also specify if you want the targeted page to open in a new window, topmost window, same window, or parent window.</li></ul>
-|![Left to Right](media/left-to-right.png "Left to Right")| Left to Right |  | Change the text to left-to-right for content such as a paragraph, header, table, or list. Commonly used for bi-directional language content. This is the default setting.|
-|![Right to Left](media/right-to-left.png "Right to Left")| Right to Left |  | Change the text to right-to-left for content such as a paragraph, header, table, or list. Commonly used for bi-directional language content. The default setting is left-to-right. |
-|![Undo Typing](media/undo-typing.png "Undo Typing")| Undo Typing |  | Undo changes you made to the content. |
-|![Redo Typing](media/redo-typing.png "Redo Typing")| Redo Typing |  | Redo changes you made to the content. |
-|![Clear All Formatting](media/clear-formatting.png "Clear All Formatting")| Clear All Formatting |  | Remove all formatting from a selection of text, leaving only the normal, unformatted text. |
-|![Add a Table](media/add-table.png "Add a Table")| Add a Table |  | Add a table to your content. <br /><br />After adding a table, you can do any of the following:<br /><br /><ul><li>Resize table columns by clicking and dragging your mouse to resize to the columns to the desired width.</li><li>Select one or several cells within a table and apply specific formatting, add links to the selection, or cut, copy, or paste entire rows or columns.</li><li>Right-click to access the properties. This supports features such as cell type, width and height, word wrapping, alignment, merging and splitting cells horizontally and vertically, inserting or deleting rows and columns, row and column span, and cell and border color.</li></ul>|
-|![Expand Toolbar](media/show-more.png "Expand Toolbar")| Expand Toolbar |  | Displays when the toolbar is collapsed and not all options appear. Click to expand the toolbar and make all options visible. |
+|![Format Painter.](media/format-painter.png "Format Painter")| Format Painter | Ctrl+Shift+C, Ctrl+Shift+V | Apply the look of a particular section to another section. |
+|![Font.](media/format-font.png "Font") | Font | Ctrl+Shift+F | Select your desired font. The default font is Segoe UI.<br /><br /> **Note**: When you select any formatted content, the font name for that content displays. If your selection contains multiple fonts, the topmost font name of your selection is displayed. |
+|![Font Size.](media/font-size.png "Font Size") | Font size | Ctrl+Shift+P | Change the size of your text. The default size is 12.<br /><br /> **Note**: When you select any formatted content, the font size for that content displays. If your selection contains multiple font sizes, the topmost font name of your selection is displayed.|
+|![Bold.](media/format-bold.png "Bold")| Bold | Ctrl+B | Make your text bold. |
+|![Italic.](media/format-italic.png "Italic")| Italic | Ctrl+I | Italicize your text. |
+|![Underline.](media/format-underline.png "Underline")| Underline | Ctrl+U | Underline your text. |
+|![Text Highlight Color.](media/text-highlight-color.png "Text Highlight Color")| Text Highlight Color |  | Make your text stand out by highlighting it in a bright color. |
+|![Font Color.](media/font-color.png "Font Color")| Font Color |  | Change the color of your text. |
+|![Bullets.](media/format-bullets.png "Bullets")| Bullets |  | Create a bulleted list. |
+|![Numbering.](media/format-numbering.png "Numbering")| Numbering |  | Create a numbered list. |
+|![Decrease Indent.](media/decrease-indent.png "Decrease Indent")| Decrease Indent |  | Move your paragraph closer to the margin. |
+|![Increase Indent.](media/increase-indent.png "Increase Indent")| Increase Indent |  | Move your paragraph farther away from the margin. |
+|![Block Quote.](media/block-quote.png "Block Quote")| Block Quote |  | Apply a block-level quotation format in your content. |
+|![Align Left.](media/align-left.png "Align Left")| Align Left | Ctrl+L | Align your content with the left margin. (Commonly used for body text to make it easier to read.) |
+|![Align Center.](media/align-center.png "Align Center")| Align Center | Ctrl+E | Center your content on the page. (Commonly used for a formal appearance.) |
+|![Align Right.](media/align-right.png "Align Right")| Align Right | Ctrl+R | Align your content with the right margin. (Commonly used for a formal appearance.) |
+|![Link.](media/format-link.png "Link")| Link |  | Create a link in your document for quick access to web pages and files.<br /><br />Pasted or typed URL text is converted into a link. For example, "http://myexample.com" will become "<a href="http://myexample.com">http://myexample.com</a>".<br /><br /> In the **Link** dialog box, choose the type of link you'd like to insert.<br /><br />The **Link Info** tab allows you to choose the link type as well as set the link protocol and URL.<br /><br />The **Target** tab is only available for the URL link type. It specifies the location where the link will open after you select it. |
+|![Remove Link.](media/remove-link.png "Unlink")| Unlink |  | Delete a link in your email or document.<br /><br />When you place the cursor on a link, the **Unlink** button on the toolbar becomes active. Select the button to remove the link and make it plain text. |
+|![Superscript.](media/format-superscript.png "Superscript")| Superscript |  | Type very small letters just above the line of text. |
+|![Subscript.](media/format-subscript.png "Subscript")| Subscript |  | Type very small letters just below the line of text. |
+|![Strikethrough.](media/format-strikethrough.png "Strikethrough")| Strikethrough |  | Cross out text by drawing a line through it. |
+|![Insert Image.](media/insert-picture.png "Insert Image")| Insert Image|	|You can insert an image by directly copying and pasting it inline in the editor, dragging and dropping it from your desktop or local folder directly into the editor, or by typing a URL. The following formats are supported: .PNG, .JPG., or .GIF.<br /><br />To insert an image inline in your article: <br />1. Drag and drop the image or copy and paste it directly into the article. <br />2. Drag any corner of the image to resize it.<br /><br />To insert an image using a URL or navigating to the local image:<br />1. Choose Insert Image.<br />2. In the **Image** property dialog, choose from the following options:<br /><ul><li>Select **Browse** to navigate to the image on your computer.</li><li>Or specify the web address of the image, and properties to define how the image will appear in the email or article.</li><br />**Note:**<ul><li>If the image is located on the external server, use the full absolute path. </li><li>If the image is located on a local server, you can use a relative path. </li><li>If you want the image to be linked to a target, add a URL for the image.</li><li>You can also specify if you want the targeted page to open in a new window, topmost window, same window, or parent window.</li></ul>
+|![Left to Right.](media/left-to-right.png "Left to Right")| Left to Right |  | Change the text to left-to-right for content such as a paragraph, header, table, or list. Commonly used for bi-directional language content. This is the default setting.|
+|![Right to Left.](media/right-to-left.png "Right to Left")| Right to Left |  | Change the text to right-to-left for content such as a paragraph, header, table, or list. Commonly used for bi-directional language content. The default setting is left-to-right. |
+|![Undo Typing.](media/undo-typing.png "Undo Typing")| Undo Typing |  | Undo changes you made to the content. |
+|![Redo Typing.](media/redo-typing.png "Redo Typing")| Redo Typing |  | Redo changes you made to the content. |
+|![Clear All Formatting.](media/clear-formatting.png "Clear All Formatting")| Clear All Formatting |  | Remove all formatting from a selection of text, leaving only the normal, unformatted text. |
+|![Add a Table.](media/add-table.png "Add a Table")| Add a Table |  | Add a table to your content. <br /><br />After adding a table, you can do any of the following:<br /><br /><ul><li>Resize table columns by clicking and dragging your mouse to resize to the columns to the desired width.</li><li>Select one or several cells within a table and apply specific formatting, add links to the selection, or cut, copy, or paste entire rows or columns.</li><li>Right-click to access the properties. This supports features such as cell type, width and height, word wrapping, alignment, merging and splitting cells horizontally and vertically, inserting or deleting rows and columns, row and column span, and cell and border color.</li></ul>|
+|![Expand Toolbar.](media/show-more.png "Expand Toolbar")| Expand Toolbar |  | Displays when the toolbar is collapsed and not all options appear. Click to expand the toolbar and make all options visible. |
 
 > [!Note]
 > You can access your browser's context menu by pressing **Ctrl** + right-click. This is useful if you need to use your browser's built-in spell checker. Otherwise, you can use the right-click to provide contextual formatting for any element you might be using.
 
 ## Accessibility shortcuts
 
-The following table outlines a list of accessibility shortcuts available when using email. You can access this list while composing email by pressing **Alt+0**.
+The following table outlines a list of accessibility shortcuts available when using the rich text editor control. You can access this list while composing content by pressing **Alt+0**.
 
 |Type | Shortcut key | Description |
 |----------------------|-------------------------|-----------------------------|
@@ -784,7 +785,6 @@ A. Large content size can cause latency. For more information, see [Best practic
 > [!div class="mx-imgBorder"] 
 > ![HTML markup displayed in a column on a subgrid.](media/html-markup-issue.png)
 
-- Don't replace the email activity control with the rich text editor control because it impacts the way images need to be saved and converted. We are working to fully enable using RTE as a replacement for the email activity editor in a future release.
 
 ### See also
 

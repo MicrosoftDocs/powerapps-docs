@@ -1,6 +1,6 @@
 ---
 title: "Sample: Synchronize data with external systems using the change tracking system (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "This sample shows how to retrieve changes from an entity and synchronize data with external systems." # 115-145 characters including spaces. This abstract displays in the search result.
+description: "This sample shows how to retrieve changes from a table and synchronize data with external systems." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: "pehecke"
@@ -21,9 +21,9 @@ search.app:
 
 <!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/sample-synchronize-data-external-systems-using-change-tracking -->
 
-This sample code shows how to retrieve changes from an entity and synchronize data with external systems by using the `RetrieveEntityChanges` message with the [RetrieveEntityChangesRequest](https://docs.microsoft.com/dotnet/api/microsoft.xrm.sdk.messages.retrieveentitychangesrequest) and [RetrieveEntityChangesResponse](https://docs.microsoft.com/dotnet/api/microsoft.xrm.sdk.messages.retrieveentitychangesresponse) classes. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/Changetracking).
+This sample code shows how to retrieve changes from a table and synchronize data with external systems by using the `RetrieveEntityChanges` message with the [RetrieveEntityChangesRequest](/dotnet/api/microsoft.xrm.sdk.messages.retrieveentitychangesrequest) and [RetrieveEntityChangesResponse](/dotnet/api/microsoft.xrm.sdk.messages.retrieveentitychangesresponse) classes. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/Changetracking).
 
-For more information about the feature that this sample demonstrates, see [Use change tracking to synchronize data with external systems](https://docs.microsoft.com/powerapps/developer/data-platform/use-change-tracking-synchronize-data-external-systems).
+For more information about the feature that this sample demonstrates, see [Use change tracking to synchronize data with external systems](../../use-change-tracking-synchronize-data-external-systems.md).
 <!-- The link above won't work until the topic is published -->
 
 ## How to run this sample
@@ -42,19 +42,19 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 
 ### Setup
 
-1. Import a managed solution (ChangeTrackingSample_1_0_0_0_managed.zip) that creates a `sample_book` entity that has an alternate key named `sample_bookcode`. Verify that the indexes to support the alternate key are active
-1. 10 initial sample_book entity records are created so that changes to those entities can be tracked.
+1. Import a managed solution (ChangeTrackingSample_1_0_0_0_managed.zip) that creates a `sample_book` table that has an alternate key named `sample_bookcode`. Verify that the indexes to support the alternate key are active
+1. 10 initial sample_book table records are created so that changes to those tables can be tracked.
 
 ### Demonstrate
 
 1. Perform initial request and cache the results, including the `DataToken`
 1. Update the records created in [Setup](#setup)
 1. Perform a second request, this time passing the `DataVersion` with the `DataToken` value retrieved from the initial request.
-1. Show the entity changes returned by the second request
+1. Show the table changes returned by the second request
 
 ### Clean up
 
-Display an option to delete the managed solution imported in [Setup](#setup), which removes the `sample_book` entity and all the data created in the sample. The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the `ChangeTrackingSample` to achieve the same result.
+Display an option to delete the managed solution imported in [Setup](#setup), which removes the `sample_book` table and all the data created in the sample. The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the `ChangeTrackingSample` to achieve the same result.
 
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

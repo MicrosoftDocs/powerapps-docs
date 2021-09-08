@@ -5,13 +5,14 @@ keywords: ""
 ms.date: 03/05/2020
 ms.service: powerapps
 ms.custom: 
-ms.topic: article
+ms.topic: get-started-article
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
   - "powerapps"
 author: "Mattp123"
 ms.assetid: 2a44229e-44f0-4c4e-ba21-a476210d0a12
+ms.subservice: mda-maker
 ms.author: "matp"
 manager: "kvivek"
 ms.reviewer: 
@@ -26,23 +27,24 @@ search.app:
   - D365CE
 ---
 
-# Create a model-driven app by using the app designer
+# Create a model-driven app using the app designer
 
-In this topic you learn the basics of how to create and edit a model-driven app by using the tile-based app designer.
+In this topic you learn the basics of how to create and edit a model-driven app that can be shared and distributed to other environments.
 
 ## Prerequisites
+
 Verify the following prerequisites before you start creating an app:
-- A Power Apps environment. More information: [Create an environment](https://docs.microsoft.com/powerapps/administrator/create-environment)
-- System administrator or system customizer security role. More information: [About predefined security roles](https://docs.microsoft.com/powerapps/maker/model-driven-apps/share-model-driven-app#about-predefined-security-roles)
+- A Power Apps environment used for app development. More information [Create an environment](/power-platform/admin/create-environment) and [Environment strategy for ALM](/power-platform/alm/environment-strategy-alm).
+- Environment maker, system administrator, or system customizer role. More information: [About predefined security roles](./share-model-driven-app.md#about-predefined-security-roles)
  
-<a name="createApp"></a>   
 ## Create an app  
 
-1.  On the [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) **Home** page, select the **Model-driven app from blank** option for a model-driven app.  
+1.  On the [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) **Home** page, select **Solutions** from the left navigation pane.
+ 
+2. Open an unmanaged solution or create a new one. More information: [Create a solution](../data-platform/create-solution.md)
+3. Select **New** > **App** > **Model-driven app**.  
 
-2.  Select **Create**.
-
-3.  On the **Create a New App** page, enter the following details: 
+4. On the **Create a New App** page, enter the following details: 
 
     - **Name**: Enter a name for the app.  
   
@@ -61,7 +63,7 @@ Verify the following prerequisites before you start creating an app:
       > By selecting **Default Solution** when you add a site map, the components that are associated with that site map are automatically added to the app.  
 
       > [!div class="mx-imgBorder"] 
-      > ![Use existing solution to create the app page](media/use-existing-solution-to-create-the-app.png "Use an existing solution to create the app") 
+      > ![Use existing solution to create the app page.](media/use-existing-solution-to-create-the-app.png "Use an existing solution to create the app") 
 
     - **Choose a welcome page**: This option allows you to select from the web resources available in your organization. The welcome pages you create can contain information that's useful to users, such as links to videos, upgrade instructions, or getting started information. The welcome page is displayed when an app is opened. Users can select **Do not show this Welcome Screen next time** on the welcome page to disable the page so it doesn't appear the next time the app starts. Notice that the **Do not show this Welcome Screen next time** option is a user-level setting and can't be controlled by administrators or app makers. More information about how to create a web resource, such as an HTML file that you can use as a welcome page: [Create and edit web resources to extend the web application](create-edit-web-resources.md)  
       
@@ -70,11 +72,10 @@ Verify the following prerequisites before you start creating an app:
      > [!NOTE]
      >  You can't change the unique name and app URL suffix on the **Properties** tab.  
   
-4. Select **Done** or&mdash;if you selected **Use an existing solution to create the App**&mdash;select **Next** to select from the available solutions that were imported in the organization.  
+5. Select **Done** or&mdash;if you selected **Use an existing solution to create the App**&mdash;select **Next** to select from the available solutions that were imported in the organization.  
   
-    A new app is created and is shown in Draft status. You'll see the app designer canvas for the new app. From there you can add components, such as tables, views, and dashboards to make your app useful. More information: [Add or edit app components](add-edit-app-components.md)  
+    A new app is created and is shown in **Draft** status. You'll see the app designer canvas for the new app. From there you can add components, such as tables, views, and dashboards to make your app useful. More information: [Add or edit app components](add-edit-app-components.md)  
    
-<a name="editApp"></a>   
 ## Edit an app  
   
 1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
@@ -86,8 +87,6 @@ Verify the following prerequisites before you start creating an app:
   
 ### Next steps  
  [Add or edit app components](add-edit-app-components.md)   
-
-
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

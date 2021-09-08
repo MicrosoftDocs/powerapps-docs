@@ -1,6 +1,6 @@
 ---
 title: getTimeZoneOffsetMinutes | Microsoft Docs
-description: 
+description: Gets the offset in minutes from UTC for the given date.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -19,7 +19,7 @@ ms.assetid: 86290d20-7dbb-4932-adaa-31121ae7a3f6
 
 ## Available for 
 
-Model-driven apps
+Model-driven and canvas apps
 
 ## Syntax
 

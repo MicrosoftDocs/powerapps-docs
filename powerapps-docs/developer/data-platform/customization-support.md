@@ -14,6 +14,7 @@ applies_to:
 ms.assetid: e9810433-224b-4bde-851a-e581cf5fb8a4
 caps.latest.revision: 21
 author: "Mattp123"
+ms.subservice: dataverse-developer
 ms.author: "matp"
 manager: "kvivek"
 search.audienceType: 
@@ -51,7 +52,7 @@ You don’t need to be a developer to build and customize Power Apps apps. Howev
 ## What kinds of customizations are supported?  
  We expect that you can do most app building and customization using the available Power Apps tools. If the customization tools don’t meet your needs, you can install a solution provided by a third party or hire a developer to code your app. If you need to invest in a solution that requires code, you should make sure that the code is written using only supported APIs. This helps you protect your investment in both the apps and any solutions you get.  
   
- Developers who extend Power Apps apps have a responsibility to follow rules and best practices documented [here](/powerapps/developer/data-platform/best-practices/). Microsoft supports only the APIs and practices that are documented in the SDK. You may find something on the Internet that describes how you can solve a problem, but if it doesn’t leverage APIs documented in the SDK, it isn’t supported by Microsoft. Before you have a developer apply a change you should verify whether it uses supported methods.  
+ Developers who extend Power Apps apps have a responsibility to follow rules and best practices documented [here](./best-practices/index.md). Microsoft supports only the APIs and practices that are documented in the SDK. You may find something on the Internet that describes how you can solve a problem, but if it doesn’t leverage APIs documented in the SDK, it isn’t supported by Microsoft. Before you have a developer apply a change you should verify whether it uses supported methods.  
   
  If developers use the APIs and best practices described in the SDK we can be sure to test whether any of the changes we make to Dataverse has the potential to break existing customizations. Our goal is that code customizations written using supported methods will continue to work when new versions or updates to Dataverse are released. You benefit because you can upgrade to new versions with improved features without having developers change their code each time.  
   
@@ -65,7 +66,7 @@ You don’t need to be a developer to build and customize Power Apps apps. Howev
   
 <a name="BKMK_CommonUnsupportedCustomizations"></a>   
 ### Common unsupported customization practices  
- The following is a list of common customization practices that aren’t supported. This is not a complete list. More information: [Supported extensions for Dynamics 365: Unsupported customizations](https://docs.microsoft.com/dynamics365/customer-engagement/developer/supported-extensions#Unsupported). 
+ The following is a list of common customization practices that aren’t supported. This is not a complete list. More information: [Supported extensions for Dynamics 365: Unsupported customizations](/dynamics365/customer-engagement/developer/supported-extensions#Unsupported). 
  
 **Interacting with the web application Document Object Model (DOM) elements using JavaScript**  
  Any JavaScript libraries used anywhere in the application must only interact with the documented APIs. When JavaScript developers work with applications they frequently access DOM elements using specific names. Because Power Apps apps are web applications these techniques work, but they are likely to break during an update because the names of the elements they reference are subject to change at any time. We reserve the right to make any changes necessary in the application and this frequently means changing how the page is constructed. Adding any changes that depend on the current structure of the page means that you’ll need to invest in testing and perhaps changing the custom code in these scripts each time you apply an update to your application.  

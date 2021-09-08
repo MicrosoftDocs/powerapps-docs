@@ -1,7 +1,7 @@
 ---
 title: "Self-service data prep with dataflows in Power Apps | MicrosoftDocs"
 description: "Learn how to use dataflows in Power Apps to prepare your data"
-ms.custom: ""
+ms.custom: intro-internal
 ms.date: 08/05/2019
 ms.reviewer: ""
 ms.service: powerapps
@@ -15,6 +15,7 @@ applies_to:
 author: "Mattp123"
 ms.assetid: 
 caps.latest.revision:
+ms.subservice: dataverse-maker
 ms.author: "matp"
 manager: "kvivek"
 tags: 
@@ -24,12 +25,6 @@ search.app:
   - PowerApps
   - D365CE
 ---
-
-
-<!--note from editor: I think "dataflows" should be lowercase based on this entry in the Microsoft style guide (scroll down to find dataflows): https://styleguides.azurewebsites.net/Styleguide/Read?id=2696&topicid=42299 -->
-
-
-
 # Self-service data prep with dataflows
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
@@ -70,7 +65,7 @@ in either of the following:
 -   **Azure Data Lake Storage Gen2.** Lets you collaborate with people in your
     organization using Power BI, Azure Data, and AI services or custom-built line-of-business applications that read data from the lake. Dataflows that load
     data to an Azure Data Lake Storage Gen2 account store data in [Common Data Model
-    folders](https://go.microsoft.com/fwlink/?linkid=2045304). **Common Data Model folders**
+    folders](/common-data-model/data-lake). **Common Data Model folders**
     contain schematized data and metadata in a standardized format to
     facilitate data exchange and to enable full interoperability across services
     that produce or consume data stored in an organization’s Azure Data Lake
@@ -105,12 +100,9 @@ section, you get a tour of how dataflows can be used in an organization.
 
 ### Load data to Dataverse
 Dataflows can be used to populate tables in the [Common Data
-Service](https://docs.microsoft.com/powerapps/maker/data-platform/data-platform-intro)
+Service](./data-platform-intro.md)
 that are then used in Power Apps applications. With a few clicks, you can
-integrate data from online and on-premises sources data sources.
-
-<!--from editor: In the last sentence above, should it change to "...on-premises data sources." ? -->
-
+integrate data from online and on-premises data sources.
 
 ### Extend the Common Data Model for your business needs
 For organizations that want to extend and build upon the Common Data Model,
@@ -128,7 +120,7 @@ Databricks, Azure Data Factory, and more.
 
 For more information about Azure Data Lake Storage Gen2 and dataflows
 integration, including how to create dataflows that reside in your
-organization's Azure Data Lake, see [Connect Azure Data Lake Storage Gen2 for dataflow storage](connect-azure-data-lake-storage-for-dataflow.md).
+organization's Azure Data Lake, see [Connect Azure Data Lake Storage Gen2 for dataflow storage](/power-query/dataflows/connect-azure-data-lake-storage-for-dataflow).
 
 ## Summary of self-service data prep for big data in Power Apps
 There are multiple scenarios and examples where dataflows can enable you to get
@@ -164,13 +156,13 @@ This article provided an overview of self-service data prep in the Power Apps po
 and the ways you can use it. The following topics go into more detail about
 common usage scenarios for dataflows:
 
--   [Creating and using dataflows in Power Apps](https://go.microsoft.com/fwlink/?linkid=2100076)
+-   [Creating and using dataflows in Power Apps](./create-and-use-dataflows.md)
 
--   [Add data to a table in Dataverse](https://go.microsoft.com/fwlink/?linkid=2100075)
+-   [Add data to a table in Dataverse](/power-query/dataflows/add-data-power-query)
 
--   [Connect Azure Data Lake Storage Gen2 for dataflow storage](https://go.microsoft.com/fwlink/?linkid=2099973)
+-   [Connect Azure Data Lake Storage Gen2 for dataflow storage](/power-query/dataflows/connect-azure-data-lake-storage-for-dataflow)
 
--   [Using dataflows with on-premises data sources](https://go.microsoft.com/fwlink/?linkid=2100077)
+-   [Using an on-premises data gateway in Power Platform dataflows](/power-query/dataflows/using-dataflows-with-on-premises-data)
 
 For more information about Power Query and scheduled refresh, you can read these
 articles:
@@ -182,7 +174,7 @@ articles:
 For more information about the Common Data Model, you can read its overview
 article:
 
--   [Common Data Model - overview](/powerapps/common-data-model/overview)
+-   [Common Data Model - overview](/common-data-model/)
 
 
 

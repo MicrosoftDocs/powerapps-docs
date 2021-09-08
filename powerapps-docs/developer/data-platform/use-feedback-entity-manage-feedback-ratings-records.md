@@ -1,40 +1,41 @@
 ---
-title: "Use the Feedback entity to manage feedback and ratings for records (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn about the feedback eneity to obtain feedback and ratings for the records." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Use the Feedback table to manage feedback and ratings for records (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Learn about the feedback table to obtain feedback and ratings for the records." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 03/27/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" #TODO: NoOwner
+ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# Use the Feedback entity to manage feedback and ratings for records
+# Use the Feedback table to manage feedback and ratings for records
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
-Improve your products and services by enabling users to provide feedback and ratings for entity records in Microsoft Dataverse. For example, you can enable feedbacks and ratings for the `Product` entity to know user's feedback on the products you sell, or on the `Incident` (case) entity to understand and improve the quality of your customer support team.  
+
+Improve your products and services by enabling users to provide feedback and ratings for rows in Microsoft Dataverse. For example, you can enable feedbacks and ratings for the `Product` table to know user's feedback on the products you sell, or on the `Incident` (case) table to understand and improve the quality of your customer support team.  
   
- You can enable feedback and rating for both system and custom entities in Dataverse. By default, the `KnowledgeArticle` entity is enabled for feedback and ratings. Use the new `Feedback` entity to programmatically create and manage feedback for entity records.  
+ You can enable feedback and rating for both system and custom tables in Dataverse. By default, the `KnowledgeArticle` table is enabled for feedback and ratings. Use the new `Feedback` table to programmatically create and manage feedback for records.  
   
  To programmatically enable feedback for a:  
   
-- System entity, use the <xref:Microsoft.Xrm.Sdk.Messages.UpdateEntityRequest> message to update the entity, and set the <xref:Microsoft.Xrm.Sdk.Messages.UpdateEntityRequest.HasFeedback> property to true.  
+- System table, use the <xref:Microsoft.Xrm.Sdk.Messages.UpdateEntityRequest> message to update the table, and set the <xref:Microsoft.Xrm.Sdk.Messages.UpdateEntityRequest.HasFeedback> property to true.  
   
-- Custom entity, set the <xref:Microsoft.Xrm.Sdk.Messages.CreateEntityRequest>.<xref:Microsoft.Xrm.Sdk.Messages.CreateEntityRequest.HasFeedback> property to true  while creating the entity, or update existing custom entity to set the <xref:Microsoft.Xrm.Sdk.Messages.UpdateEntityRequest>.<xref:Microsoft.Xrm.Sdk.Messages.UpdateEntityRequest.HasFeedback> property to true.  
+- Custom table, set the <xref:Microsoft.Xrm.Sdk.Messages.CreateEntityRequest>.<xref:Microsoft.Xrm.Sdk.Messages.CreateEntityRequest.HasFeedback> property to true  while creating the table, or update existing custom table to set the <xref:Microsoft.Xrm.Sdk.Messages.UpdateEntityRequest>.<xref:Microsoft.Xrm.Sdk.Messages.UpdateEntityRequest.HasFeedback> property to true.  
   
-  Once you have enabled an entity for feedback and rating, you can't disable it. After you enable an entity for feedback, a regarding relationship is created between the entity and the `Feedback` entity.  
+  Once you have enabled a table for feedback and rating, you can't disable it. After you enable a table for feedback, a regarding relationship is created between the table and the `Feedback` table.  
   
 > [!NOTE]
->  You can also use the customization tools in Dataverse to enable feedback and rating for system and custom entities. More information: [Enable an entity for feedback](https://go.microsoft.com/fwlink/p/?LinkId=785436)  
+>  You can also use the customization tools in Dataverse to enable feedback and rating for system and custom entities.  
   
- The `Feedback` entity stores the following information :  
+ The `Feedback` table stores the following information :  
   
 - Feedback title  
   
@@ -47,7 +48,7 @@ Improve your products and services by enabling users to provide feedback and rat
   > [!NOTE]
   >  The normalized rating helps to normalize or even out the specified rating value for different rating ranges (minimum and maximum rating values). The normalized  rating is calculated as follows: (Rating - Minimum Rating) / (Maximum Rating - Minimum Rating).  
   >   
-  >  Also, rating for a record is calculated as an average of all the normalized ratings for the record.  
+  >  Also, rating for a row is calculated as an average of all the normalized ratings for the record.  
   
 - Feedback status such as Open or Closed  
   
@@ -55,7 +56,7 @@ Improve your products and services by enabling users to provide feedback and rat
   
 - User who created or last modified the feedback record  
   
-- Entity record that the feedback is associated with  
+- Table row that the feedback is associated with  
   
 
 

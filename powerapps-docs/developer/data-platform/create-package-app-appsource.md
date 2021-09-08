@@ -7,6 +7,7 @@ ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "KumarVivek" # GitHub ID
+ms.subservice: dataverse-developer
 ms.author: "kvivek" # MSFT alias of Microsoft employees only
 manager: "annbe" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -17,9 +18,9 @@ search.app:
 ---
 # Step 3: Create an AppSource package for your app
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
-
 You must create an AppSource package (.zip file) to include your solution and demo data files along with other required files. An AppSource package consists of the following files:
+
+[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
 |File|Description|
 |--|--|
@@ -58,6 +59,8 @@ A package lets you bundle and deploy multiple files related to your app at once.
       <Default Extension="html" ContentType="application/octet-stream" />
       <Default Extension="db" ContentType="application/octet-stream" />
       <Default Extension="css" ContentType="application/octet-stream" />
+      <Default Extension="json" ContentType="application/octet-stream" />
+      <Default Extension="msapp" ContentType="application/octet-stream" />
     </Types>
     ```
 
@@ -68,7 +71,7 @@ A package lets you bundle and deploy multiple files related to your app at once.
 
      To compress these files, browse to the folder where these files are present, select them all, right-click and select **Send to** > **Compressed (zipped) folder**.
 
-     ![Zip the files for a package](media/appsource-zip-package.png) 
+     ![Zip the files for a package.](media/appsource-zip-package.png) 
 
 4. Rename the .zip file to **package.zip**.
 
@@ -129,7 +132,7 @@ The final step is to add all the components that you created earlier into a sing
 
 1. Navigate to the folder that contains the package file, [Content_Types].xml, icon, license terms file (HTML), select them all, right-click and then select **Send to** > **Compressed (zipped) folder**.
 
-    ![AppSource package](media/appsource-package.png)
+    ![AppSource package.](media/appsource-package.png)
 
     > [!IMPORTANT]
     > You must follow the content structure precisely for your package as described here otherwise, your package will fail during certification. Some common issues that lead to certification failure are incorrect file names or a nested file structure.

@@ -1,6 +1,7 @@
 ---
 title: "moveNext (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
+description: Progresses to the next stage.
+ms.date: 04/15/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -20,11 +21,13 @@ search.app:
 
 [!INCLUDE[./includes/moveNext-description.md](./includes/moveNext-description.md)]
 
-Moving to next stage is not supported for different entity.
+Moving to next stage is not supported for different table.
 
 ## Syntax
 
 `formContext.data.process.moveNext(callbackFunction);`
+
+[!INCLUDE[cc-terminology](../../../../../data-platform/includes/cc-terminology.md)]
 
 ## Parameters
 
@@ -51,7 +54,7 @@ Moving to next stage is not supported for different entity.
 </tr>
 <tr>
 <td>crossEntity</td>
-<td>The next stage is for a different entity.</td>
+<td>The next stage is for a different table.</td>
 </tr>
 <tr>
 <td>end</td>
@@ -67,7 +70,7 @@ Moving to next stage is not supported for different entity.
 </tr>
 <tr>
 <td>stageGate</td>
-<td>One or more required field on the current stage is empty.</td>
+<td>One or more required column on the current stage is empty.</td>
 </tr>
 </table>
 </td>

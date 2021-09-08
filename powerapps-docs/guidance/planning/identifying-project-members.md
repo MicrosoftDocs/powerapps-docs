@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: guidance
 ms.date: 06/16/2020
+ms.subservice: guidance
 ms.author: tayoshi
 ms.reviewer: kathyos
 
@@ -32,7 +33,7 @@ Consider whether you need team members to fill the following roles.
 | Users / subject matter experts | Provide the necessary requirements and feedback to ensure the apps meet the functionality they requested.   |
 | App makers                         | Use Power Apps to make apps for users. For simple apps, the user might be the app maker. Some organizations have dedicated app makers who are experts in building apps for others.  |
 | Software developers    | Provide solutions that can't be solved by using out-of-the-box features, when requirements are complex and need custom development. Developers can also create APIs and set up custom connectors to allow app makers to consume those APIs.    |
-| IT administrators                  | Provide necessary resources and support to connect to internal systems in addition to enterprise systems. IT administrators ensure that environments and tenants are set up for governance and administration. Some organizations have a [Center of Excellence](https://docs.microsoft.com/power-platform/guidance/coe/starter-kit) for scalable adoption of the platform. |
+| IT administrators                  | Provide necessary resources and support to connect to internal systems in addition to enterprise systems. IT administrators ensure that environments and tenants are set up for governance and administration. Some organizations have a [Center of Excellence](/power-platform/guidance/coe/starter-kit) for scalable adoption of the platform. |
 | Project manager                    | Manages the project to help ensure it stays on track for scope, budget, time, and meeting the goals you set out.      |
 | Management                         | Provides sponsorship and shows support of the activities and projects related to the platform; empowers the project team members; ratifies the project objectives; communicates support to the organization to aid adoption; makes sure that accomplishments are recognized.   |
 

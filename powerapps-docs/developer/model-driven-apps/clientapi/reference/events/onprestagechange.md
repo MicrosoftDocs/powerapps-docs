@@ -1,6 +1,7 @@
 ---
-title: "OnPreStageChange Event (Client API reference) in model-driven apps in Power Apps| MicrosoftDocs"
-ms.date: 01/23/2019
+title: "OnPreStageChange event (Client API reference) in model-driven apps in Power Apps| MicrosoftDocs"
+description: This event occurs before the stage of a business process flow control changes.
+ms.date: 04/15/2021
 ms.service: powerapps
 ms.topic: reference
 ms.assetid: 
@@ -12,7 +13,7 @@ search.audienceType:
 search.app: 
   - D365CE
 ---
-# OnPreStageChange Event (Client API reference)
+# OnPreStageChange event (Client API reference)
 
 This event occurs **Before** the stage of a business process flow control changes. This event occurs after the user selects the **Next Stage**, **Move to previous stage** or **Set Active Stage** buttons in the user interface or when a developer uses the `formContext.data.process.moveNext`, `formContext.data.process.movePrevious`, or `formContext.data.process.setActiveStage` methods.
 
@@ -26,17 +27,20 @@ From within a web resource script registered to the onPreStageChange event, a de
 When you invoke `preventDefault`:
 
 - The stage navigation will not be processed. The process instance will remain on the original stage.
+- In a cross-table navigation, the form of the table of the destination stage will not open.
 - The save of the main form will not be processed. If the main form was in a dirty state, it would remain in a dirty state.
 - Any web resources that registered onStageChange will not be invoked.
 
 
 An execution context object is passed to event handlers for this event. You can use the [getEventArgs](../executioncontext/getEventArgs.md) method to retrieve an object that has the following methods:
+
 - **getDirection**: Returns a string that is either “next” or “previous” to show the direction of the stage change.
-- **getStage**: Returns a stage object. Except when the navigation moves to a new entity, the stage returned represents the destination stage object—that is, the next active stage. When the navigation moves to a new entity, the stage is the stage being navigated from—that is, the previous active stage object. More information: [Stage methods](../formContext-data-process.md#stage-methods).
+- **getStage**: Returns a stage object. Except when the navigation moves to a new table, the stage returned represents the destination stage object—that is, the next active stage. When the navigation moves to a new table, the stage is the stage being navigated from—that is, the previous active stage object. More information: [Stage methods](../formContext-data-process.md#stage-methods).
 
-
+[!INCLUDE[cc-terminology](../../../../data-platform/includes/cc-terminology.md)]
 
 ## Methods supported for this event
+
 - **formContext.data.process**.[addOnPreStageChange](../formcontext-data-process/eventhandlers/addOnPreStageChange.md) method to add event handlers for this event.
 - **formContext.data.process**.[removeOnPreStageChange](../formcontext-data-process/eventhandlers/removeOnPreStageChange.md) method to remove event handlers for this event. 
 

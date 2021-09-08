@@ -1,13 +1,17 @@
 ---
-title: "Create website access permissions in Power Apps portals | MicrosoftDocs"
-description: "Learn how to create and associate website access permissions to elements in a portal."
+title: Create website access permissions
+description: Learn how to create and associate website access permissions to elements in a portal.
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/04/2019
+ms.date: 04/21/2020
+ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - sandhangitmsft
 ---
 
 # Create website access permissions
@@ -19,7 +23,7 @@ Website Access Permissions is a permission set, associated with a [web role](cre
 | Manage Content Snippets      | Allows the editing of Snippet controls.                                                          |
 | Manage Site Markers          | Allows the editing of hyperlinks that use Site Markers                                           |
 | Manage Web Link Sets         | Allows the editing of [web link sets](manage-web-links.md), including adding an removing web links from a web link set. |
-| Preview Unpublished Entities | Allows the viewing of portal-exposed entities that have a publishing state of Draft.             |
+| Preview Unpublished Entities | Allows the viewing of portal-exposed tables that have a publishing state of Draft.             |
 |||
 
 To create a website access permission and add it to a web role:
@@ -32,7 +36,7 @@ To create a website access permission and add it to a web role:
 
 4. Under **General**, enter name, website, and select the required permissions.
 
-    ![Create website access permission](../media/website-access-permission.png "Create website access permission")
+    ![Create website access permission.](../media/website-access-permission.png "Create website access permission")
 
 5. Under **Web Roles**, select **Add Existing Web Role**, and add the web role to associate the permission with.
 

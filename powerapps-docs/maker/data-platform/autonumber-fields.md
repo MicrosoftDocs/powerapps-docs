@@ -5,13 +5,14 @@ keywords: ""
 ms.date: 02/26/2019
 ms.service: powerapps
 ms.custom: 
-ms.topic: article
+ms.topic: conceptual
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
   - "powerapps"
 author: "daemelia"
 ms.assetid:
+ms.subservice: dataverse-maker
 ms.author: daemelia
 manager: kvivek
 ms.reviewer: Mattp123
@@ -55,7 +56,7 @@ For example, a date prefixed number would generate rows such as *2019-26-02-1000
 ### Custom
 
 For more advanced makers with specific use cases, we provide the option to fully customize the desired format of an autonumber column. The format may consist of string constants, automatically incrementing numbers, formatted dates, or random alphanumeric sequences.
-For detailed information about how to define custom formats, see [AutoNumberFormat options](https://docs.microsoft.com/dynamics365/customer-engagement/developer/create-auto-number-attributes#autonumberformat-options).
+For detailed information about how to define custom formats, see [AutoNumberFormat options](/dynamics365/customer-engagement/developer/create-auto-number-attributes#autonumberformat-options).
 
 ## Seed values
 
@@ -80,7 +81,7 @@ Autonumber columns have a default seed value of 1000, but you may set a custom s
 5.  On the right pane, enter a **Display name** and select **Autonumber** for the **Data type**.
 
     > [!div class="mx-imgBorder"] 
-    > ![Create an autonumber column](media/create-autonumber-field.png "Create an autonumber column")
+    > ![Create an autonumber column.](media/create-autonumber-field.png "Create an autonumber column")
   
 6. Set optional columns as needed. More information: [Create and edit columns](create-edit-field-portal.md#create-a-column)
 

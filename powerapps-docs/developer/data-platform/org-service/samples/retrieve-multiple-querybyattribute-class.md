@@ -22,7 +22,7 @@ search.app:
 
 <!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/org-service/sample-retrieve-multiple-querybyattribute-class -->
 
-This sample shows how to use [QueryByAttribute](https://docs.microsoft.com/dotnet/api/microsoft.xrm.sdk.query.querybyattribute?view=dynamics-general-ce-9) in the [RetrieveMultiple](https://docs.microsoft.com/dotnet/api/microsoft.xrm.sdk.iorganizationservice.retrievemultiple?view=dynamics-general-ce-9) method. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/RetrieveMultipleQueryByAttribute).
+This sample shows how to use [QueryByAttribute](/dotnet/api/microsoft.xrm.sdk.query.querybyattribute?view=dynamics-general-ce-9) in the [RetrieveMultiple](/dotnet/api/microsoft.xrm.sdk.iorganizationservice.retrievemultiple?view=dynamics-general-ce-9) method. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/RetrieveMultipleQueryByAttribute).
 
 ## How to run this sample
 
@@ -31,7 +31,7 @@ This sample shows how to use [QueryByAttribute](https://docs.microsoft.com/dotne
 
 ## What this sample does
 
-The `QueryByAttribute` class is intended to be used in a scenario where it contains a query that is expressed as a set of attribute and value pairs.
+The `QueryByAttribute` class is intended to be used in a scenario where it contains a query that is expressed as a set of column and value pairs.
 
 ## How this sample works
 

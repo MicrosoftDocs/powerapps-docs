@@ -2,11 +2,13 @@
 title: Build your first model-driven app from scratch with Power Apps | Microsoft Docs
 description: Learn how to build a simple model-driven app
 documentationcenter: ''
+ms.custom: intro-internal
 author: Mattp123
 ms.service: powerapps
-ms.topic: conceptual
+ms.topic: get-started-article
 ms.component: model
-ms.date: 08/04/2020
+ms.date: 04/14/2021
+ms.subservice: mda-maker
 ms.author: matp
 search.audienceType: 
   - maker
@@ -15,83 +17,88 @@ search.app:
   - D365CE
 ---
 
-# Build your first model-driven app from scratch
+# Build your first model-driven app
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-Model-driven app design is a component-focused approach to app development. In this topic, you simplify how to create a model-driven app by using one of the standard tables that's available in your Power Apps environment.
+In this article, you build a simple model-driven app that you can use to create, update, and delete account records as well as view data in one of the standard charts for the account table.
 
-> [!TIP]
-> Ready to convert your ideas into an app? Start here: [Planning a Power Apps project](/powerapps/guidance/planning/introduction).<br/> 
-> For detailed information about model-driven apps and how to build it, start here: [Understand model-driven app components](model-driven-app-components.md). 
-
-## Sign in to Power Apps
-Sign in to [Power Apps](https://make.powerapps.com/). If you don't already have a [!INCLUDE [powerapps](../../includes/powerapps.md)] account, select the **Get started free** link. 
+  > [!div class="mx-imgBorder"] 
+  > ![Simple account table app.](media/build-first-model-driven-app/accounts-quickstart-app.png "Run the app")
 
 ## Create your model-driven app
 
-1. Select the environment you want, or go to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/) to create a new one.
+> [!NOTE]
+> If you plan to share and distribute the app you create, see this article: [Create a model-driven app by using the app designer](create-edit-app.md) 
 
-2. On the **Home** page, select **Model-driven app from blank**.
+1. Sign in to [Power Apps](https://make.powerapps.com/). If you don't already have a [!INCLUDE [powerapps](../../includes/powerapps.md)] account, you can [get started free](https://powerapps.microsoft.com/#).
+
+2. On the **Home** page, select **Model-driven app from blank**, and then select **Create**.
 
     > [!div class="mx-imgBorder"] 
     > <img src="media/build-first-model-driven-app/start-from-blank-model-driven.png" alt="Start from blank model" height="429" width="673">
 
-3. Select **Create**.
-
 3. On the **Create a New App** page, enter the following details, and then select **Done**: 
-  - **Name**: Enter a name for the app, such as *My first app*. 
-  - **Unique Name**: By default, the unique name uses the name your specify in the **Name** box without spaces and preceded by the publisher prefix and an underscore (_). For example, *crecf_Myfirstapp*. More information: [Change the solution publisher prefix](../data-platform/create-solution.md#solution-publisher)
+  - **Name**: Enter a name for the app, such as *Account tracking*. 
+  - **Unique Name**: By default, the unique name uses the name you specify in the **Name** box without spaces and preceded by the publisher prefix and an underscore (_). For example, *crecf_Accounttracking*.
   - **Description**: Type a short description of what the app is or does, such as *This is my first app*.
-For information about the additional app properties, see [Create an app](create-edit-app.md#create-an-app).
 
-  > [!div class="mx-imgBorder"] 
-  > ![Create a new app](media/create-new-app.png "Create a new app")
+    > [!div class="mx-imgBorder"] 
+    > ![Create a new app.](media/create-new-app.png "Create a new app")
 
-## Add components to your app
-From the app designer you add components to your app.
-1. Select the **Open the Site Map Designer** edit button to open the sitemap designer.
+4. Select the **Open the Site Map Designer** edit button (pencil icon) to open the sitemap designer.
 
       > [!div class="mx-imgBorder"] 
-      > ![Create-new-sitemap](media/build-first-model-driven-app/new-sitemap.png "Site Map Designer")
+      > ![Create-new-sitemap.](media/build-first-model-driven-app/new-sitemap.png "Create a site Map for the app")
 
-2. On the sitemap designer select **New Subarea**, in the right pane select the **Properties** tab, and then select the following properties.
+    Notice that when you create a new app, you must first create the site map for it.
+
+5. On the sitemap designer, select **New Subarea**. 
+
+   :::image type="content" source="media/build-first-model-driven-app/new-subarea.png" alt-text="Select new subarea."::: 
+
+6. In the right pane, select the **Properties** tab, and then select the following properties.
   - **Type**: **Entity**
   - **Entity**: **Account**
 
     > [!div class="mx-imgBorder"] 
-    > ![Add components to sitemap](media/build-first-model-driven-app/sitemap.png "New Subarea")
+    > ![Add components to sitemap.](media/build-first-model-driven-app/sitemap.png "Properties tab for new subarea")
 
-3. Select **Save And Close**.
-4. On the app designer canvas select **Forms**, and then on the right pane under the **Main Forms** group select the **Account** form.
+    When you leave the **Title** property blank, the app uses the table name in the app's left navigation pane. For this app, **Accounts** will be displayed in the app at runtime.
 
-      > [!div class="mx-imgBorder"] 
-      > ![Account main form](media/build-first-model-driven-app/main-form.png "App Forms")
+7. Select **Save And Close** to close the sitemap designer.
 
-5. On the app designer canvas select **Views**, and then select the **Active Accounts**, **All Accounts**, and **My Active Accounts** views.<!-- All checkbox seems to be selected by default -->
+   By default, all the account table's forms, views, charts, and dashboards are enabled for the app. From the app designer **Components** tab on the right pane, you can clear a component so it isn't available in the app at runtime. You can also create new components, such as a custom form. For this app, leave all components enabled.
 
-      > [!div class="mx-imgBorder"] 
-      > ![Account views](media/build-first-model-driven-app/views.png "App Views")
+8. On the app designer toolbar, select **Save**.
 
-6. On the app designer canvas select **Charts**, and then select the **Accounts by Industry** chart.
-7. On the app designer toolbar, select **Save**.
-
-      > [!div class="mx-imgBorder"] 
-      > ![App designer toolbar save](media/build-first-model-driven-app/app-designer-toolbar.png "Save the app")
+9. After your app is saved, on the app designer toolbar, select **Publish** to make it available to run and share.
  
-## Publish your app
-On the app designer toolbar, select **Publish**.
+## Play your app
+On the app designer toolbar, select **Play**.
 
-After publishing the app it's ready for you to run or share with others.
-
+- To create a record, select **+ New**. 
+- To view a chart, on the app command bar select **Show Chart**. 
+- To change the view, select the **My Active Accounts** view, and then select the view you want.
+- 
   > [!div class="mx-imgBorder"] 
-  > ![Simple account table app](media/build-first-model-driven-app/accounts-quickstart-app.png "Run the app")
+  > ![Simple account table app.](media/build-first-model-driven-app/accounts-quickstart-app.png "Run the app")
+
+To learn more about how to use your app, see [Basic navigation in a model-driven app](../../user/navigation.md).
+
+> [!NOTE]
+> Don't see any of the data in your app like in the above screenshot? This is probably because your environment database doesn't have **Deploy sample apps and data** provisioned. More information: [Create an environment with a database](/power-platform/admin/create-environment#create-an-environment-with-a-database)
 
 ## Next steps
-In this topic, you built a simple model-driven app. 
-- To see how your app looks when you run it, see [Run a model-driven app on a mobile device](../../user/run-app-client-model-driven.md).
+
+In this article, you built a simple model-driven app.
+- To see how your app looks when you run it, see [Run a model-driven app on a mobile device](/dynamics365/customerengagement/on-premises/basics/dynamics-365-phones-tablets-users-guide-onprem).
 - To learn how to share your app, see [Share a model-driven app](share-model-driven-app.md).
-- To get started and learn all about building model-driven apps, see [Understand model-driven app components](model-driven-app-components.md)
+- To get started and learn more about building model-driven apps, see [Understand model-driven app components](model-driven-app-components.md)
+
+> [!TIP]
+> Ready to convert your ideas into an app? Start here: [Planning a Power Apps project](../../guidance/planning/introduction.md).<br/> 
+> For detailed information about model-driven apps and how to build it, start here: [Understand model-driven app components](model-driven-app-components.md).
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

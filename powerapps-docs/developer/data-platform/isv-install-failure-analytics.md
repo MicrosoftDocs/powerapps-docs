@@ -14,6 +14,7 @@ ms.topic: article
 ms.reviewer: nabuthuk
 ms.workload: na
 ms.date: 10/28/2020
+ms.subservice: dataverse-developer
 ms.author: nabuthuk
 search.audienceType: 
   - developer
@@ -24,18 +25,19 @@ search.app:
 
 # Install failures
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 As an ISV, you need data like failure details or failure count to quickly resolve the issues for the customers. You can use the install failures feature to get the install failures data. 
+
+[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
 The install failures features makes it easy for you to quickly resolve the issues that customer encounter while installing your application by providing the detailed error logs thus reducing the time for the customers to get the issues resolved.
 
 With the install failures feature, you can see the install failures data by date, GEO, package, and by solution version. You can also see the failure details on the install failures dashboard. 
 
 > [!div class="mx-imgBorder"]
-> ![Install failure dashboard](media/isv-install-failure-report.png "Install failure dashboard")
+> ![Install failure dashboard.](media/isv-install-failure-report.png "Install failure dashboard")
  
 ## View the install failure dashboard
 
@@ -47,7 +49,7 @@ To view the install failure data:
 1. You can also see the install failure details by directly selecting the install failure icon from the list of apps as shown in the screenshot:
 
    > [!div class="mx-imgBorder"]
-   > ![Failure icon](media/isv-install-failure-icon.png "Failure icon")
+   > ![Failure icon.](media/isv-install-failure-icon.png "Failure icon")
 
 The install failures tab contains the following graphs and metrics.
 
@@ -59,7 +61,7 @@ The line chart shown below illustrates the number of app installation failures o
  1. Date 
 
 > [!div class="mx-imgBorder"]
-> ![Date](media/isv-failure-by-date.png "Date")
+> ![Date.](media/isv-failure-by-date.png "Date")
 
 ### Failure by Geo
 
@@ -69,7 +71,7 @@ The pie chart shown below illustrates the number app installation failures by GE
 1. Failure Count
 
 > [!div class="mx-imgBorder"]
-> ![Geo](media/isv-failure-by-geo.png "Geo")
+> ![Geo.](media/isv-failure-by-geo.png "Geo")
 
 ### Failure by solution version
 
@@ -80,7 +82,7 @@ The bar chart shown below illustrates the number of app installation failures oc
 1. Failure Count
 
 > [!div class="mx-imgBorder"]
-> ![Package version](media/isv-failure-by-package-version.png "Package version")
+> ![Package version.](media/isv-failure-by-package-version.png "Package version")
 
 ### Failure details
 
@@ -97,12 +99,12 @@ Tracks the information about the app install failure error in detail. The follow
 1. Tenant
 
 > [!div class="mx-imgBorder"]
-> ![Install error details](media/isv-install-error-details.png "Install error details")
+> ![Install error details.](media/isv-install-error-details.png "Install error details")
 
 You can drill through the **Failure** column to see the full failure details. To see the full failure details, right-click on one of the error messages on the **Failure details** tab and then select **Drill through** > **Failure details**.
 
 > [!div class="mx-imgBorder"]
-> ![Failure details](media/isv-failure-details-drill-through.png "Failure details")
+> ![Failure details.](media/isv-failure-details-drill-through.png "Failure details")
 
 ### Filtering the install failure dashboard
 

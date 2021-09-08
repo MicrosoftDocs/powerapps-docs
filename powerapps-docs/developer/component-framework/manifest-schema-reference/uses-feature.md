@@ -1,7 +1,8 @@
 ---
 title: uses-feature | Microsoft Docs
-description: 
+description: Indicates which feature their components want to use.
 keywords:
+ms.subservice: pcf
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek

@@ -1,6 +1,7 @@
 ---
 title: "openWebResource (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 12/20/2019
+description: Includes description and supported parameters for the openWebResource method.
+ms.date: 04/21/2021
 ms.service: powerapps
 ms.topic: "reference"
 author: "Nkrb"
@@ -27,12 +28,12 @@ search.app:
 |Name |Type |Required |Description |
 |---|---|---|---|
 |webResourceName|String|Yes|Name of the HTML web resource to open.|
-|windowOptions|Object|No|Window options for opening the web resource. The object contains the following attributes:<br/>- **height**: (Optional) Number. Height of the window to open in pixels.<br/>- **width**: (Optional) Number. Width of the window to open in pixels.|
+|windowOptions|Object|No|Window options for opening the web resource. The object contains the following values:<br/>- **height**: (Optional) Number. Height of the window to open in pixels.<br/>- **width**: (Optional) Number. Width of the window to open in pixels.|
 |data|String|No|Data to be passed into the data parameter.|
 
 ## Remarks
 
-You must use this method to display web resources instead of the deprecated [Xrm.Utility.openWebResource](https://msdn.microsoft.com/library/jj602956.aspx#BKMK_OpenWebResource) method.
+You must use this method to display web resources instead of the deprecated [Xrm.Utility.openWebResource](/previous-versions/dynamicscrm-2016/developers-guide/jj602956(v=crm.8)#BKMK_OpenWebResource) method.
 
 An HTML web resource can accept the parameter values described in [Pass parameters to HTML web resources](../../../webpage-html-web-resources.md#BKMK_PassingParametersToWebResources). This function only provides for passing in the optional data parameter. To pass values for the other valid parameters, you must append them to the `webResourceName` parameter.
 
@@ -49,7 +50,7 @@ An HTML web resource can accept the parameter values described in [Pass paramete
 
 - Open an HTML web resource, setting the windowOptions:
 
-  ```
+  ```JavaScript
   var windowOptions = { height: 400, width: 400 };
   Xrm.Navigation.openWebResource("new_webResource.htm",windowOptions);
   ```

@@ -7,12 +7,13 @@ ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+ms.topic: "how-to"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
   - "PowerApps"
 author: "Aneesmsft"
+ms.subservice: mda-maker
 ms.author: "matp"
 manager: "kvivek"
 tags: 
@@ -24,15 +25,18 @@ search.app:
   - D365CE
 ---
 
-# Add, configure, move, or delete columns on a form  
+# Add, configure, move, or delete columns on a form
+
 Add, configure, move, or delete columns using the form designer.
 
 ## Add columns to a form
+
 To add columns to a form, use the **Columns** pane. The **Columns** pane lets you search and filter to help you quickly find columns. It also includes the option to show only unused columns. 
 
 <img src = "media/FormDesignerFieldsPane.png" alt = "Columns pane" width = "350" height = "557">
 
 ### Add columns to a form using drag and drop
+
 > [!NOTE]
 > When adding or moving columns using drag and drop be aware that the form preview is responsive and may be rendering multiple section columns as stacked. To ensure that the column being added or moved is in the correct section column, drop or paste it anchored to another column that is already in that section column.
 1. Open the form designer to create or edit a form. More information: [Create a form](create-and-edit-forms.md#create-a-form) or [Edit a form](create-and-edit-forms.md#edit-a-form)
@@ -59,28 +63,37 @@ To add columns to a form, use the **Columns** pane. The **Columns** pane lets yo
 7. In the command bar, select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to users. 
 
 ## Configure columns on a form
-These are the properties available to configure a column when you create or edite a form using the form designer.
+These are the properties and events available to configure a column when you create or edit a form using the form designer.
 
 ## Column properties
 
+The **Properties** tab displays the following properties. 
+
 |Area  |Name  |Description  |
 |---------|---------|---------|
-|**Display options** | **Column label** | By default the label will match the display name of the column. You can override that name for the form by entering a different label here. <br /><br />This property is required. |
-|**Display options** |  **Column name** | The name of the column. This comes from the column properties on the table and is read-only. |
+|**Display options** | **Table column** | The name of the column. This comes from the column properties on the table and is read-only.  |
+|**Display options** |  **Label** | By default the label will match the display name of the column. You can override that name for the form by entering a different label here. <br /><br />This property is required. |
 |**Display options** | **Hide label** | When selected, the column label is hidden. |
-|**Display options** | **Read-only column** | When selected, the column value is not editable. |
-|**Display options** | **Lock column** |  Lock this column so it can't be removed. |
-|**Display options** | **Hide column** | When selected, the column is hidden by default and can be shown using code. |
 |**Display options** | **Hide on phone** | The column can be hidden to render a condensed version of the form on phone screens. |
+|**Display options** | **Hide** | When selected, the column is hidden by default and can be shown using code. |
+|**Display options** | **Lock** |  Lock this column so it can't be removed. |
+|**Display options** | **Read-only** | When selected, the column value is not editable. |
 |**Formatting** | **Column width** |  When the section containing the columns has more than one column you can set the column to occupy up to the number of columns that the section has. |
+| **Components**  |  **+ Component**  | Adds a control to the column such as the canvas app control or the AI business card control.    |
 
 > [!NOTE]
 > In Unified Interface, the label size setting is ignored because the form adjusts width for all columns to ensure proper rendering for screen sizes from very small to extra-large.
 
+## Column events
+
+The **Events** tab is where event handlers for model-driven app forms can be configured for a column. An event handler consists of a reference to a JavaScript web resource and a function defined within that web resource that will execute when the event occurs, such as when the value for the column changes. More information: [Configure model-driven app form event handlers](configure-event-handlers-legacy.md)
+
 ## Move columns on a form
+
 You can move a column on a form using drag and drop or cut and paste actions. 
 
 ### Move columns on a form using drag and drop
+
 1. Open the form designer to create or edit a form. More information: [Create a form](create-and-edit-forms.md#create-a-form) or [Edit a form](create-and-edit-forms.md#edit-a-form)
 2. In the form preview, select the column that you want to move and drag and drop it. As you drag the column on the form preview, you will see drop targets where you can move the column to. 
    Note the following:
@@ -91,6 +104,7 @@ You can move a column on a form using drag and drop or cut and paste actions.
 4. On the command bar, select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to users. 
 
 ### Move columns on a form using cut and paste
+
 1. Open the form designer to create or edit a form. More information: [Create a form](create-and-edit-forms.md#create-a-form) or [Edit a form](create-and-edit-forms.md#edit-a-form)
 2. In the form preview, select the column that you want to move.
 3. On the command bar, select **Cut**.
@@ -103,6 +117,7 @@ You can move a column on a form using drag and drop or cut and paste actions.
 7. On the command bar, select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to users. 
 
 ## Delete columns on a form
+
 1. Open the form designer to create or edit a form. More information: [Create a form](create-and-edit-forms.md#create-a-form) or [Edit a form](create-and-edit-forms.md#edit-a-form)
 2. In the form preview, select the column that you want to delete from the form. 
 3. On the command bar, select **Delete**. 
@@ -113,7 +128,8 @@ You can move a column on a form using drag and drop or cut and paste actions.
      >   -  If you delete a column by mistake, on the command bar, select **Undo** to revert the form to its previous state. 
      >   -  You can't delete a column that is locked or is required and not present anywhere else on the form. 
 
-## Create a new column on the table when editing a form 
+## Create a new column on the table when editing a form
+
 1. Open the form designer to create or edit a form. More information: [Create a form](create-and-edit-forms.md#create-a-form) or [Edit a form](create-and-edit-forms.md#edit-a-form)
 2. On the command bar, select **Add column**, or in the left pane, select **Columns**. The **Columns** pane is open by default when the form designer is opened. 
 3. In the **Columns** pane, select **+ New column**.

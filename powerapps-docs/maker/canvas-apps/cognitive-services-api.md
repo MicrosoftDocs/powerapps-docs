@@ -1,5 +1,5 @@
 ---
-title: Use Cognitive Services in Power Apps | Microsoft Docs
+title: Use Cognitive Services in canvas apps
 description: Build a basic canvas app that uses the Azure Cognitive Services Text Analytics API to analyze text.
 author: lancedMicrosoft
 ms.service: powerapps
@@ -7,6 +7,7 @@ ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 03/01/2021
+ms.subservice: canvas-maker
 ms.author: lanced
 search.audienceType: 
   - maker
@@ -18,22 +19,22 @@ contributors:
   - parasharshah
 ---
 
-# Use Cognitive Services in Power Apps
+# Use Cognitive Services in canvas apps
 
-This article shows you how to build a basic canvas app that uses the [Azure Cognitive Services Text Analytics API](https://docs.microsoft.com/azure/cognitive-services/text-analytics/overview) to analyze text. We'll show you how to set up the Text Analytics API, and connect to it with the [Text Analytics connector](https://docs.microsoft.com/connectors/cognitiveservicestextanalytics/). Then we'll show you how to create a canvas app that calls the API.
+This article shows you how to build a basic canvas app that uses the [Azure Cognitive Services Text Analytics API](/azure/cognitive-services/text-analytics/overview) to analyze text. We'll show you how to set up the Text Analytics API, and connect to it with the [Text Analytics connector](/connectors/cognitiveservicestextanalytics/). Then we'll show you how to create a canvas app that calls the API.
 
 > [!NOTE]
 > If you are new to building apps in Power Apps, we recommend reading [Create an app from scratch](get-started-create-from-blank.md) before diving into this article.
 
 ## Introduction to Azure Cognitive Services
 
-[Azure Cognitive Services](https://docs.microsoft.com/azure/cognitive-services/) is a set of APIs, SDKs, and services available to make your applications more intelligent, engaging, and discoverable. These services enable you to easily add intelligent features – such as emotion and video detection; facial, speech, and vision recognition; and speech and language understanding – into your applications.
+[Azure Cognitive Services](/azure/cognitive-services/) is a set of APIs, SDKs, and services available to make your applications more intelligent, engaging, and discoverable. These services enable you to easily add intelligent features – such as emotion and video detection; facial, speech, and vision recognition; and speech and language understanding – into your applications.
 
 We'll focus on "language understanding" for this article, working with the Text Analytics API. This API enables you to detect sentiment, key phrases, topics, and language from your text. Let's get started by trying out a demo of the API.
 
 ## Prerequisites
 
-Before you begin building a canvas app using the Text Analytics API, you must prepare the Text Analytics resource. For more details, go to [Text Analytics API prerequisites](https://docs.microsoft.com/azure/cognitive-services/text-analytics/quickstarts/client-libraries-rest-api#prerequisites).
+Before you begin building a canvas app using the Text Analytics API, you must prepare the Text Analytics resource. For more details, go to [Text Analytics API prerequisites](/azure/cognitive-services/text-analytics/quickstarts/client-libraries-rest-api#prerequisites).
 
 ## Create the app and add a connection
 
@@ -46,27 +47,27 @@ Create a blank app and add a connection with the **Text Analytics** connector.
 
 1. Select **Canvas app from blank**.
 
-    ![Create an app from blank](./media/cognitive-services-api/app-from-blank.png "Create an app from blank")
+    ![Create an app from blank.](./media/cognitive-services-api/app-from-blank.png "Create an app from blank")
 
 1. Enter app name.
 
 1. Choose a layout for the app, and select **Create**. For this demo, we'll use **Tablet** layout.
 
-    ![Name the app, choose the layout, and select Create](./media/cognitive-services-api/app-name-create.png "Name the app, choose the layout, and select Create")
+    ![Name the app, choose the layout, and select Create.](./media/cognitive-services-api/app-name-create.png "Name the app, choose the layout, and select Create")
 
 1. Select **Data** from the left pane.
 
 1. Search for **Text Analytics** connection.
 
-    ![Add Text Analytics connection](./media/cognitive-services-api/text-analytics-data-source.png "Add Text Analytics connection")
+    ![Add Text Analytics connection.](./media/cognitive-services-api/text-analytics-data-source.png "Add Text Analytics connection")
 
 1. Enter **Account Key**, and **Site URL** values.
 
-    ![Account Key and Site URL for Text Analytics API in Power Apps](./media/cognitive-services-api/text-analytics-power-apps.png "Account Key and Site URL for Text Analytics API in Power Apps")
+    ![Account Key and Site URL for Text Analytics API in Power Apps.](./media/cognitive-services-api/text-analytics-power-apps.png "Account Key and Site URL for Text Analytics API in Power Apps")
 
     You can find the **Account Key** and **Site URL** from the **KEY** and **Endpoint** values using the Azure portal.
 
-    ![KEY and Endpoint in Azure portal](./media/cognitive-services-api/account-key-endpoint-azure.png "KEY and Endpoint in Azure portal")
+    ![KEY and Endpoint in Azure portal.](./media/cognitive-services-api/account-key-endpoint-azure.png "KEY and Endpoint in Azure portal")
 
 1. Select **Connect**.
 
@@ -76,13 +77,13 @@ Your app is now connected to the Cognitive Services resource of Text Analytics A
 
 In this section, you'll design the demo app with controls required to work with the Text Analytics API. After you've completed the app design, this is how it will look:
 
-![Demo app](./media/cognitive-services-api/demo-app.png "Demo app")
+![Demo app.](./media/cognitive-services-api/demo-app.png "Demo app")
 
 > [!NOTE]
 > - The app in this tutorial demonstrates how to get started using the Text Analytics API with Power Apps. If you want to design the app from scratch, or to meet specific business requirements, you can customize this demo app, or directly add, configure [controls](add-configure-controls.md) and use the [Text Analytics API actions](/connectors/cognitiveservicestextanalytics/#actions) instead.
 > - Values for component properties such as alignment, size, color, position (X, Y) in this tutorial are suggested. Actual values may vary depending on the app layout you select. You can also change these suggested values to design the app as per your requirements.
 
-1. Select ![Insert](./media/cognitive-services-api/insert-icon.png "Insert") from the left pane.
+1. Select ![Insert.](./media/cognitive-services-api/insert-icon.png "Insert") from the left pane.
 
 1. Select **Text label**.
 
@@ -359,7 +360,7 @@ In this section, you'll design the demo app with controls required to work with 
 
 Here's how the app should look like after following the above steps.
 
-![App design](./media/cognitive-services-api/app-design.png "App design")
+![App design.](./media/cognitive-services-api/app-design.png "App design")
 
 ## Add logic to the app
 
@@ -480,7 +481,7 @@ Now that you've created a basic structure of the app with the expected design, l
 
 1. Review the output.
 
-    ![Analyzed sample text output](./media/cognitive-services-api/output.png "Analyzed sample text output")
+    ![Analyzed sample text output.](./media/cognitive-services-api/output.png "Analyzed sample text output")
 
 Now that you've used Azure Cognitive Services in Power Apps by creating a demo app, you can customize the app interface and add more features.
 

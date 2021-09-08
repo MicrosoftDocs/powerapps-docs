@@ -6,15 +6,21 @@ manager: annbe
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/19/2021
+ms.date: 07/06/2021
 ms.author: kvivek
 ms.reviewer: kvivek
 searchScope:
   - "Power Apps"
+contributors:
+  - kumarvivek
 ---
 # Power Apps webinars
 
 Register and watch our recorded sessions on-demand.
+
+**What's new and what's next for Power Platform**  
+by Charles Lamanna and Julie Strauss  
+[Register and watch now](https://info.microsoft.com/ww-landing-whats-new-whats-next-power-platform.html?LCID=EN-US)
 
 **Introduction to New Governance Capabilities in Microsoft Power Platform**  
 by Anupma Sharma  
@@ -79,6 +85,34 @@ by Holger Bruchelt and Ronald Chang
 **A Deep Dive into Serverless Applications on Power Apps and Azure**  
 by Simona Cotin  
 [Register and watch now](https://info.microsoft.com/ww-Landing-ADeepDiveintoServerlessApplications.html?LCID=EN-US)
+
+**Unlock the Future of Azure IoT through Power Platform**  
+by Samuel Adranyi  
+[Register and watch now](https://info.microsoft.com/ww-Landing-UnlocktheFutureofAzureIoTthroughPowerPlatform.html?LCID=EN-US)
+
+**Anyone Can Be a Developer with Microsoft Dataverse for Teams**  
+by Bryony Wolf and Corey Sanders  
+[Register and watch now](https://info.microsoft.com/ww-Landing-AnyoneCanBeaDeveloperwithMicrosoftDataverseforTeams.html?LCID=EN-US)
+
+**Increase Efficiency with Azure Functions and Power Platform**  
+by Lee Baker  
+[Register and watch now](https://info.microsoft.com/ww-Landing-IncreaseEfficiencyAzureFunctionsPowerPlatform.html?LCID=EN-US)
+
+**Build Custom Apps with Power Apps component framework**  
+by Cassie Breviu  
+[Register and watch now](https://info.microsoft.com/ww-Landing-build-apps-Powerapps-component-framework.html?lcid=en-us)
+
+**3 easy steps to build your first app in Microsoft Teams**  
+by Matthew Bolanos  
+[Register and watch now](https://info.microsoft.com/ww-landing-3Steps-build-first-app-teams.html?LCID=EN-US)
+
+**Transform Your Org with Low Code App Platforms**  
+by Clay Wesener  
+[Register and watch now](https://info.microsoft.com/ww-landing-low-code-platforms-15minutes.html?LCID=EN-US)
+
+**Fusion Teams 101: Low-Code Apps with Power Platform (What's new with Power Apps and Azure)**  
+by Matt Soucoup and Kartik Kanakasabesan  
+[Register and watch now](https://info.microsoft.com/ww-Landing-fusion-teams-101LowCode-power-platform.html?LCID=EN-US)
 
 ### See also
 

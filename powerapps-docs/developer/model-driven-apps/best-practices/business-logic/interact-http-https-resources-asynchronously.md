@@ -14,6 +14,7 @@ ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.date: 02/20/2018
+ms.subservice: mda-developer
 ms.author: jowells
 search.audienceType: 
   - developer
@@ -47,7 +48,7 @@ The following options are available in modern browsers for interacting with serv
 > [!NOTE]
 > Adding asynchronous interactions requires a different style of design than synchronous interactions. Callbacks can execute in a non-deterministic order, which means you must give more thought to ensure that the page flow and integrity are correct at all times. For example, you'll often need to put measures in place to ensure that controls aren't enabled until all dependent service calls have returned. Taking a few additional steps can help ensure a more enjoyable user experience.
 
-- Traditionally, ribbon rules were written with synchronous requests since true/false needed to be returned. Unified Interface supports returning a promise rather than a boolean, which allows ribbon rules to issue asynchronous network requests. For more information, see [Define ribbon enable rules](/powerapps/developer/model-driven-apps/define-ribbon-enable-rules#custom-rule).
+- Traditionally, ribbon rules were written with synchronous requests since true/false needed to be returned. Unified Interface supports returning a promise rather than a boolean, which allows ribbon rules to issue asynchronous network requests. For more information, see [Define ribbon enable rules](../../define-ribbon-enable-rules.md#custom-rule).
 
 - [`XMLHttpRequest`](https://developer.mozilla.org/docs/Web/API/XMLHttpRequest) with the async parameter omitted or set to true
 
@@ -90,7 +91,7 @@ There are multiple ways to interact with the server or request resources. Common
   var requestAjax = $.ajax({ async: false, url: '/test/test.txt' });
   ```
 
-- Specific to interactions with the Dynamics 365 services, there are JavaScript libraries that provide explicit operations for common interactions with the product. Common libraries include (but aren't limited to): [`SDK.REST.js`](https://msdn.microsoft.com/library/gg334427(v=crm.7).aspx#BKMK_SDKREST), [`SDK.Soap.js`](https://code.msdn.microsoft.com/sdksoapjs-9b51b99a) and [`XrmServiceToolkit.js`](https://github.com/XrmServiceToolkit/XrmServiceToolkit).
+- Specific to interactions with the Dynamics 365 services, there are JavaScript libraries that provide explicit operations for common interactions with the product. Common libraries include (but aren't limited to): [`SDK.REST.js`](/previous-versions/dynamicscrm-2015/developers-guide/gg334427(v=crm.7)#BKMK_SDKREST), [`SDK.Soap.js`](https://code.msdn.microsoft.com/sdksoapjs-9b51b99a) and [`XrmServiceToolkit.js`](https://github.com/XrmServiceToolkit/XrmServiceToolkit).
   - For these, there are some functions that only support synchronous operations; others require passing in a callback function as a parameter to set async to true. The default behavior for most is to set the underlying async parameter to false for the open call of the `XMLHttpRequest` object.
 
 <a name='additional'></a>
@@ -126,8 +127,8 @@ The approach in this example still processes on the main browser UI thread, lock
 
 ### See also
 
-[Define ribbon enable rules](/powerapps/developer/model-driven-apps/define-ribbon-enable-rules#custom-rule)
-[XMLHttpRequest](https://docs.microsoft.com/microsoft-edge/dev-guide/performance/xmlhttprequest)<br />
+[Define ribbon enable rules](../../define-ribbon-enable-rules.md#custom-rule)
+[XMLHttpRequest](/microsoft-edge/dev-guide/performance/xmlhttprequest)<br />
 [XMLHttpRequest specification (with synchronous deprecation statement)](https://xhr.spec.whatwg.org/#the-open()-method)<br />
 [Fetch API specification](https://fetch.spec.whatwg.org/#fetch-api)<br />
 [Fetch API](https://developer.mozilla.org/docs/Web/API/Fetch_API)

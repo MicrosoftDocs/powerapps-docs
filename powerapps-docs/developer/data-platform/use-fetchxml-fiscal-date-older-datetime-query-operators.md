@@ -1,12 +1,13 @@
 ---
 title: "Fiscal date and older than datetime query operators in FetchXML (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Read how to use FetchXML fiscal data conditional operators and &quot;older than&quot; clauses for date and time values" # 115-145 characters including spaces. This abstract displays in the search result.
+description: "Find out how to use FetchXML fiscal data conditional operators and &quot;older than&quot; clauses for date and time values." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 03/25/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
+ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -15,17 +16,20 @@ search.app:
   - PowerApps
   - D365CE
 ---
+
 # Fiscal date and older than datetime query operators in FetchXML
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
 A FetchXML query in Microsoft Dataverse can use special fiscal date values and *older than* clauses for date and time values in queries. For example, a FetchXML query can find all orders fulfilled in the last fiscal month or urgent cases with high severity that are older than 15 minutes.  
   
 > [!NOTE]
->  For all fiscal date queries, the FetchXML query uses the organization’s fiscal year settings.  
+> For all fiscal date queries, the FetchXML query uses the organization’s fiscal year settings.  
   
-<a name="FiscalDate"></a>   
-## Using FetchXML fiscal date conditional operators  
+<a name="FiscalDate"></a>
+
+## Using FetchXML fiscal date conditional operators
+
  The following example shows a FetchXML expression that finds all orders fulfilled in the last fiscal period, according to the organization’s fiscal year settings. For example, if the organization uses fiscal months, the query returns orders fulfilled in the last fiscal month. If the organization uses fiscal quarters, the query returns orders fulfilled in the last fiscal quarter. If the organization uses fiscal semesters, orders fulfilled in the last fiscal semester are returned.  
   
 ```xml  
@@ -52,7 +56,7 @@ A FetchXML query in Microsoft Dataverse can use special fiscal date values and *
 </fetch>  
 ```  
   
- The following example shows a FetchXML expression that finds all opportunities with an estimated close date in the next three fiscal years, based on the organization’s fiscal year settings. The value for `x` is specified in the value attribute of the condition tag.  
+ The following example shows a FetchXML expression that finds all opportunities with an estimated close date in the next three fiscal years, based on the organization’s fiscal year settings. The value for `x` is specified in the value column of the condition tag.  
   
 ```xml  
 <fetch>  
@@ -65,7 +69,7 @@ A FetchXML query in Microsoft Dataverse can use special fiscal date values and *
 </fetch>  
 ```  
   
- The following example shows a FetchXML expression that finds all orders fulfilled in period three of any fiscal year, according to the organization’s fiscal year settings. The fiscal period value is specified in the value attribute of the condition tag. If the organization uses fiscal months, the query returns results from month three. If the organization uses fiscal quarters, the query returns results from quarter three. If the organization uses fiscal semesters, no results are returned; there are only two semesters, and the value supplied is therefore out-of-range.  
+ The following example shows a FetchXML expression that finds all orders fulfilled in period three of any fiscal year, according to the organization’s fiscal year settings. The fiscal period value is specified in the value column of the condition tag. If the organization uses fiscal months, the query returns results from month three. If the organization uses fiscal quarters, the query returns results from quarter three. If the organization uses fiscal semesters, no results are returned; there are only two semesters, and the value supplied is therefore out-of-range.  
   
 ```xml  
 <fetch>  
@@ -131,7 +135,7 @@ A FetchXML query in Microsoft Dataverse can use special fiscal date values and *
 ```  
   
 > [!NOTE]
->  This clause is not supported for date and time attributes with `DateOnly` behavior. More information: [Date and time query operators not supported for DateOnly behavior](/dynamics365/customer-engagement/developer/behavior-format-date-time-attribute#date-and-time-query-operators-not-supported-for-dateonly-behavior)
+> This clause is not supported for date and time columns with `DateOnly` behavior. More information: [Date and time query operators not supported for DateOnly behavior](/dynamics365/customer-engagement/developer/behavior-format-date-time-attribute#date-and-time-query-operators-not-supported-for-dateonly-behavior)
   
  Older than X hours  
  ```xml  
@@ -139,7 +143,7 @@ A FetchXML query in Microsoft Dataverse can use special fiscal date values and *
 ```  
   
 > [!NOTE]
->  This clause is not supported for date and time attributes with `DateOnly` behavior. More information: [Date and time query operators not supported for DateOnly behavior](/dynamics365/customer-engagement/developer/behavior-format-date-time-attribute#date-and-time-query-operators-not-supported-for-dateonly-behavior)  
+>  This clause is not supported for date and time columns with `DateOnly` behavior. More information: [Date and time query operators not supported for DateOnly behavior](/dynamics365/customer-engagement/developer/behavior-format-date-time-attribute#date-and-time-query-operators-not-supported-for-dateonly-behavior)  
   
  Older than X days  
  ```xml  

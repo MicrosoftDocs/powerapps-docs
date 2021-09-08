@@ -6,6 +6,7 @@ ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 4d025f92-db16-440c-9f82-e40d71e09862
 author: "Nkrb"
+ms.subservice: mda-developer
 ms.author: "nabuthuk"
 manager: "kvivek"
 search.audienceType: 
@@ -27,7 +28,7 @@ search.app:
 
 ## Parameters
 
-Delegate function with parameters for attribute and index. |
+Delegate function with parameters for column and index. |
 
 ### Related topics
 [Collections in Client API](../collections.md)

@@ -1,24 +1,28 @@
 ---
-title: 'Microsoft Stream video control: reference | Microsoft Docs'
-description: Information, including properties and examples, about the Microsoft Stream video control
+title: Microsoft Stream video control in Power Apps
+description: Learn about the details, properties and examples of the Microsoft Stream video control in Power Apps.
 author: fikaradz
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.date: 11/26/2019
+ms.date: 04/20/2021
+ms.subservice: canvas-maker
 ms.author: fikaradz
 ms.reviewer: tapanm
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - chmoncay
 ---
 # Microsoft Stream video control in Power Apps
 A video player for Microsoft Stream videos and channels.
 
 ## Description
-The control will allow app users to play videos and browse through channels from the Microsoft Stream service.
+The control will allow app users to play videos and browse through channels from the Microsoft Stream service. For a list of supported regions for this control, go to [Microsoft Stream FAQ](/stream/faq#which-regions-does-microsoft-stream-host-my-data-in-).
 
 ## Limitations
 The control is currently not supported in the native Windows player for Power Apps.  It works successfully in web browsers as well as the Android and iOS Power Apps players.
@@ -70,11 +74,11 @@ The control is currently not supported in the native Windows player for Power Ap
 1. On the **File** menu, select **Insert** and then open **Media** drop-down menu. 
 2. Select **Microsoft Stream** from the list of media controls:
 
-    ![Microsoft Stream](./media/control-stream-video/stream-icon.png "Microsoft Stream")
+    ![Microsoft Stream.](./media/control-stream-video/stream-icon.png "Microsoft Stream")
 
 3. Paste the video link inside **Stream URL** property on the left:
 
-    ![Customize StreamUrl property](./media/control-stream-video/stream-url.png "Customize StreamUrl property")
+    ![Customize StreamUrl property.](./media/control-stream-video/stream-url.png "Customize StreamUrl property")
 
 4. Press F5, select the play button of the control that you added.
 

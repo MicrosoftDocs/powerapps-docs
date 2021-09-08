@@ -1,22 +1,24 @@
 ---
-title: "RecurrenceRule entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the RecurrenceRule table."
-ms.date: 11/14/2020
+title: "RecurrenceRule table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the RecurrenceRule table/entity."
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# RecurrenceRule entity reference
+
+# RecurrenceRule table/entity reference
 
 > [!NOTE]
-> Effective Nov 2020, Common Data Service has been renamed to [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro).
+> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
 Recurrence Rule represents the pattern of incidence of recurring entities.
 
@@ -25,14 +27,14 @@ Recurrence Rule represents the pattern of incidence of recurring entities.
 
 |Message|Web API Operation|SDK Assembly|
 |-|-|-|
-|Create|POST [*org URI*]/api/data/v9.0/recurrencerules<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/recurrencerules(*ruleid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/recurrencerules(*ruleid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/recurrencerules<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|Update|PATCH [*org URI*]/api/data/v9.0/recurrencerules(*ruleid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|Create|POST [*org URI*]/api/data/v9.0/recurrencerules<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE [*org URI*]/api/data/v9.0/recurrencerules(*ruleid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|Retrieve|GET [*org URI*]/api/data/v9.0/recurrencerules(*ruleid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/recurrencerules<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|Update|PATCH [*org URI*]/api/data/v9.0/recurrencerules(*ruleid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 |ValidateRecurrenceRule|<xref href="Microsoft.Dynamics.CRM.ValidateRecurrenceRule?text=ValidateRecurrenceRule Function" />|<xref:Microsoft.Crm.Sdk.Messages.ValidateRecurrenceRuleRequest>|
 
-## Entity properties
+## Properties
 
 |Property|Value|
 |--------|-----|
@@ -50,9 +52,9 @@ Recurrence Rule represents the pattern of incidence of recurring entities.
 
 <a name="writable-attributes"></a>
 
-## Writable attributes
+## Writable columns/attributes
 
-These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
+These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [DayOfMonth](#BKMK_DayOfMonth)
 - [DaysOfWeekMask](#BKMK_DaysOfWeekMask)
@@ -203,7 +205,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Picklist|
 
-#### Instance Options
+#### Instance Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -243,7 +245,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsNthMonthly Options
+#### IsNthMonthly Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -266,7 +268,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsNthYearly Options
+#### IsNthYearly Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -289,7 +291,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsRegenerate Options
+#### IsRegenerate Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -312,7 +314,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsWeekDayPattern Options
+#### IsWeekDayPattern Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -335,7 +337,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Picklist|
 
-#### MonthOfYear Options
+#### MonthOfYear Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -454,7 +456,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
 
-#### PatternEndType Options
+#### PatternEndType Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -491,7 +493,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
 
-#### RecurrencePatternType Options
+#### RecurrencePatternType Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -532,9 +534,9 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 <a name="read-only-attributes"></a>
 
-## Read-only attributes
+## Read-only columns/attributes
 
-These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [CreatedBy](#BKMK_CreatedBy)
 - [CreatedByName](#BKMK_CreatedByName)
@@ -869,7 +871,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_recurrencerule_recurringappointmentmaster"></a> recurrencerule_recurringappointmentmaster
 
-Same as recurringappointmentmaster entity [recurrencerule_recurringappointmentmaster](recurringappointmentmaster.md#BKMK_recurrencerule_recurringappointmentmaster) Many-To-One relationship.
+Same as recurringappointmentmaster table [recurrencerule_recurringappointmentmaster](recurringappointmentmaster.md#BKMK_recurrencerule_recurringappointmentmaster) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -885,7 +887,7 @@ Same as recurringappointmentmaster entity [recurrencerule_recurringappointmentma
 
 ## Many-To-One Relationships
 
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related entity. Listed by **SchemaName**.
+Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
 
 - [business_unit_recurrencerule](#BKMK_business_unit_recurrencerule)
 - [activity_pointer_recurrencerule](#BKMK_activity_pointer_recurrencerule)
@@ -897,32 +899,30 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_business_unit_recurrencerule"></a> business_unit_recurrencerule
 
-See businessunit Entity [business_unit_recurrencerule](businessunit.md#BKMK_business_unit_recurrencerule) One-To-Many relationship.
+See businessunit Table [business_unit_recurrencerule](businessunit.md#BKMK_business_unit_recurrencerule) One-To-Many relationship.
 
 ### <a name="BKMK_activity_pointer_recurrencerule"></a> activity_pointer_recurrencerule
 
-See activitypointer Entity [activity_pointer_recurrencerule](activitypointer.md#BKMK_activity_pointer_recurrencerule) One-To-Many relationship.
+See activitypointer Table [activity_pointer_recurrencerule](activitypointer.md#BKMK_activity_pointer_recurrencerule) One-To-Many relationship.
 
 ### <a name="BKMK_lk_recurrencerule_modifiedby"></a> lk_recurrencerule_modifiedby
 
-See systemuser Entity [lk_recurrencerule_modifiedby](systemuser.md#BKMK_lk_recurrencerule_modifiedby) One-To-Many relationship.
+See systemuser Table [lk_recurrencerule_modifiedby](systemuser.md#BKMK_lk_recurrencerule_modifiedby) One-To-Many relationship.
 
 ### <a name="BKMK_lk_recurrencerule_createdby"></a> lk_recurrencerule_createdby
 
-See systemuser Entity [lk_recurrencerule_createdby](systemuser.md#BKMK_lk_recurrencerule_createdby) One-To-Many relationship.
+See systemuser Table [lk_recurrencerule_createdby](systemuser.md#BKMK_lk_recurrencerule_createdby) One-To-Many relationship.
 
 ### <a name="BKMK_lk_recurrencerulebase_createdonbehalfby"></a> lk_recurrencerulebase_createdonbehalfby
 
-See systemuser Entity [lk_recurrencerulebase_createdonbehalfby](systemuser.md#BKMK_lk_recurrencerulebase_createdonbehalfby) One-To-Many relationship.
+See systemuser Table [lk_recurrencerulebase_createdonbehalfby](systemuser.md#BKMK_lk_recurrencerulebase_createdonbehalfby) One-To-Many relationship.
 
 ### <a name="BKMK_lk_recurrencerulebase_modifiedonbehalfby"></a> lk_recurrencerulebase_modifiedonbehalfby
 
-See systemuser Entity [lk_recurrencerulebase_modifiedonbehalfby](systemuser.md#BKMK_lk_recurrencerulebase_modifiedonbehalfby) One-To-Many relationship.
+See systemuser Table [lk_recurrencerulebase_modifiedonbehalfby](systemuser.md#BKMK_lk_recurrencerulebase_modifiedonbehalfby) One-To-Many relationship.
 
 ### See also
 
-[About entity reference](../about-entity-reference.md)<br />
-[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About the table reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.recurrencerule?text=recurrencerule EntityType" />
-
-[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

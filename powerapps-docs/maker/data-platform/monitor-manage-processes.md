@@ -4,7 +4,7 @@ description: "Learn how to manage real-time workflow processes with Power Apps"
 ms.custom: ""
 ms.date: 09/03/2020
 ms.reviewer: ""
-ms.service: flow
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -15,6 +15,7 @@ applies_to:
 author: "Mattp123"
 ms.assetid: a987a803-4674-4eb0-87de-caefa003b1eb
 caps.latest.revision: 12
+ms.subservice: dataverse-maker
 ms.author: "matp"
 manager: "kvivek"
 search.app: 
@@ -72,13 +73,13 @@ If your organization uses background workflows or business process flows that ru
    
    - **Completed On Older than X Days 30**: Use the Completed On column to only delete real-time workflow process log rows that are older than 30 days.
    
-   ![View of a page for custom bulk row deletions](media/custom-bulk-record-deletion.png)
+   ![View of a page for custom bulk row deletions.](media/custom-bulk-record-deletion.png)
    
 6. Select **Next**.
 
 7. Set the frequency that your bulk delete job will run. You can schedule your job to run at set intervals or create a one-time bulk deletion job [using the Immediately option](#using-the-immediately-option). In this example, a recurring job is set to run on May 21, 2018, and every 30 days thereafter. 
 
-   ![Bulk row deletion options](media/custom-bulk-record-delete-options.png)
+   ![Bulk row deletion options.](media/custom-bulk-record-delete-options.png)
 
 ### Using the Immediately option
 

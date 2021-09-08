@@ -1,6 +1,6 @@
 ---
-title: Column | Microsoft Docs
-description: 
+title: Column in Microsoft Dataverse| Microsoft Docs
+description: Learn how to use different methods and properties available for column in Power Apps component framework.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -19,7 +19,7 @@ ms.assetid: db4be085-c31e-4045-8834-b0f45c569964
 
 ## Available for 
 
-Model-driven apps and canvas apps (public preview)
+Model-driven and canvas apps
 
 ## Properties
 
@@ -55,7 +55,7 @@ The column visibility state.
 
 ### isPrimary
 
-Is specific column the primary attribute of the view's entity.
+Is specific column the primary column of the view's table.
 
 **Type**: `boolean`<br />
 

@@ -1,13 +1,17 @@
 ---
-title: "Power Apps portals settings in the Power Platform admin center | MicrosoftDocs"
-description: "Information about Power Apps portals settings in the Power Platform admin center."
+title: Manage portals from the Power Platform admin center
+description: Learn about Power Apps portals settings in the Power Platform admin center.
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/08/2021
+ms.date: 04/21/2021
+ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: tapanm
+contributors:
+    - neerajnandwana-msft
+    - tapanm-msft
 ---
 
 # Manage portals from the Power Platform admin center
@@ -25,13 +29,13 @@ You can manage portals in the Power Platform admin center in two ways:
 
 1. On the left pane, select **Resources**, and then select **Portals**.
 
-    ![The Portals option in the Power Platform admin center](media/power-platform-admin-center/manage-portals-all-environments.png "The Portals option in the Power Platform admin center")
+    ![The Portals option in the Power Platform admin center.](media/power-platform-admin-center/manage-portals-all-environments.png "The Portals option in the Power Platform admin center")
 
 1. Select a portal.
 
 1. Select **More portal actions** (**...**), and then select **Manage**.<br>or<br>Select the portal, and then select **Manage** at the top of the page.
 
-    ![Manage a portal from the Power Platform admin center](media/power-platform-admin-center/portals-manage-ppac.png "Manage a portal from the Power Platform admin center")
+    ![Manage a portal from the Power Platform admin center.](media/power-platform-admin-center/portals-manage-ppac.png "Manage a portal from the Power Platform admin center")
 
 To configure portal details, go to [Portal details](portal-details.md).
 
@@ -41,23 +45,23 @@ To configure portal details, go to [Portal details](portal-details.md).
 
 1. On the left pane, select **Environments**.
 
-    ![Environment list](media/power-platform-admin-center/environments-list.png "Environment list")
+    ![Environment list.](media/power-platform-admin-center/environments-list.png "Environment list")
 
 1. Hover over and select the hyperlinked environment name to open the environment details.
 
-    ![Select an environment](media/power-platform-admin-center/select-environment.png "Select an environment")
+    ![Select an environment.](media/power-platform-admin-center/select-environment.png "Select an environment")
 
 1. On the right side of the screen, under **Resources**, select **Portals**.
 
-    ![Environment details](media/power-platform-admin-center/environment-details.png "Environment details")
+    ![Environment details.](media/power-platform-admin-center/environment-details.png "Environment details")
 
    You'll see a list of portals installed in the selected environment.
 
-    ![Portals specific to an environment](media/power-platform-admin-center/environments-portals.png "Portals specific to an environment")
+    ![Portals specific to an environment.](media/power-platform-admin-center/environments-portals.png "Portals specific to an environment")
 
 1. Select **More portal actions** (**...**), and then select **Manage**.<br>or<br>Select the portal, and then select **Manage** from the top of the page.
 
-    ![Manage a portal specific to an environment](media/power-platform-admin-center/manage-environments-portal.png "Manage a portal specific to an environment")
+    ![Manage a portal specific to an environment.](media/power-platform-admin-center/manage-environments-portal.png "Manage a portal specific to an environment")
 
 To configure portal details, see [Portal details](portal-details.md).
 

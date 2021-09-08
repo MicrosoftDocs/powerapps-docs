@@ -2,7 +2,7 @@
 title: "Web API CDSWebApiService Async Parallel Operations Sample (C#) (Microsoft Dataverse)| Microsoft Docs"
 description: "This sample demonstrates using Task Parallel Library (TPL) dataflow components with asynchronous requests."
 ms.custom: ""
-ms.date: 04/20/2020
+ms.date: 07/15/2021
 ms.service: powerapps
 applies_to: 
   - "Dynamics 365 (online)"
@@ -15,9 +15,10 @@ search.app:
   - PowerApps
   - D365CE
 ---
+
 # Web API CDSWebApiService Async Parallel Operations Sample (C#)
 
-[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+[!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 
 This sample demonstrates using Task Parallel Library (TPL) dataflow components [Dataflow (Task Parallel Library)](/dotnet/standard/parallel-programming/dataflow-task-parallel-library) with asynchronous requests.
 
@@ -25,7 +26,7 @@ TPL provides capabilities to add parallelism and concurrency to applications. Th
 
 This sample uses the CDSWebApiService class asynchronous methods within asynchronous operations. Because the CDSWebApiService class can manage Service Protection API limits, this code can be resilient to the transient 429 errors that clients should expect. It will retry a configurable number of times. More information: [Service Protection API Limits](../../api-limits.md)
 
-This sample simply creates a configurable number of account records to create, which it will in turn delete. This sample uses dataflow components to process the records and transform the results of the create operation into the next phase that deletes these records. Because of the nature of this data flow, delete operations for previously created records will start before all the records to create are finished.
+This sample simply creates a configurable number of account rows (records) to create, which it will in turn delete. This sample uses dataflow components to process the rows and transform the results of the create operation into the next phase that deletes these rows. Because of the nature of this data flow, delete operations for previously created rows will start before all the rows to create are finished.
 
 ## Prerequisites
 
@@ -38,11 +39,11 @@ The following is required to build and run the CDSWebApiService C# samples :
   
 ## How to run this sample
 
-1. Go to [Web API CDSWebApiService Sample](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/webapi/C%23/CDSWebApiService), clone or download the samples repository, and extract its contents into a local folder.
+1. Go to the [PowerApps-Samples](https://github.com/microsoft/PowerApps-Samples) GitHub repository, clone or download the samples repository, and extract its contents into a local folder.
 
-1. Open the [CDSWebApiService.sln](https://github.com/microsoft/PowerApps-Samples/blob/master/cds/webapi/C%23/CDSWebApiService/CDSWebApiService.sln).
+1. Navigate to the repository folder cds/webapi/C#/AsyncParallelOperations, and then open the AsyncParallelOperations.sln file in Visual Studio.
 
-1. Select the **AsyncParallelOperations** project and open the App.config. This is a common [App.config](https://github.com/microsoft/PowerApps-Samples/blob/master/cds/webapi/C%23/CDSWebApiService/App.config) file used by all the samples in this solution. Once you edit this, you can run any of the samples in this solution.
+1. In **Solution Explorer**, under the **AsyncParallelOperations** project, open the App.config file. This is a shared application configuration file used by all the Web API C# samples. Once you edit this file, you do not have to edit it again unless you're changing the environment or logon used to run the samples.
 
 1. You must edit the `Url`, `UserPrincipalName`, and `Password` values to set the Dataverse instance and credentials you want to connect to.
 
@@ -184,8 +185,7 @@ namespace PowerApps.Samples
 [Web API CDSWebApiService class Sample (C#)](cdswebapiservice.md)<br />
 [Web API CDSWebApiService Basic Operations Sample (C#)](cdswebapiservice-basic-operations.md)<br />
 [Web API CDSWebApiService Parallel Operations Sample (C#)](cdswebapiservice-parallel-operations.md)<br />
-[Create an entity using the Web API](../create-entity-web-api.md)<br />
-[Update and delete entities using the Web API](../update-delete-entities-using-web-api.md)
-
+[Create a table using the Web API](../create-entity-web-api.md)<br />
+[Update and delete table rows using the Web API](../update-delete-entities-using-web-api.md)
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

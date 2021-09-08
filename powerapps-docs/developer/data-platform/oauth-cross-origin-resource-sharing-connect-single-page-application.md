@@ -1,8 +1,8 @@
 ---
-title: "Use OAuth with Cross-Origin Resource Sharing to connect a Single Page Application (Microsoft Dataverse)| Microsoft Docs"
-description: "Learn how to use OAuth with Cross-Origin Resource Sharing to connect a Single Page Application"
+title: "Use OAuth with Cross-Origin Resource Sharing to connect a Single-Page Application (Microsoft Dataverse)| Microsoft Docs"
+description: "Learn how to use OAuth with Cross-Origin Resource Sharing (CORS) to connect a Single-Page Application."
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 03/24/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.suite: ""
@@ -13,6 +13,7 @@ applies_to:
 ms.assetid: oauth-cross-origin-resource-sharing-connect-single-page-application
 caps.latest.revision: 11
 author: "paulliew" # GitHub ID
+ms.subservice: dataverse-developer
 ms.author: "jdaly"
 search.audienceType: 
   - developer
@@ -20,14 +21,10 @@ search.app:
   - PowerApps
   - D365CE
 ---
-<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/oauth-cross-origin-resource-sharing-connect-single-page-application 
 
--->
-# Use OAuth with Cross-Origin Resource Sharing to connect a Single Page Application
+# Use OAuth with Cross-Origin Resource Sharing to connect a Single-Page Application
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
-
-You can create a Single Page Apps (SPAs) which uses JavaScript to work with Microsoft Dataverse data. To provide this, Cross-Origin Resource Sharing (CORS) is enabled so that your SPAs can bypass browser restrictions that normally prevent requests that cross domain boundaries.  
+You can create a Single-Page Application (SPA) which uses JavaScript to work with Microsoft Dataverse data. To provide this, Cross-Origin Resource Sharing (CORS) is enabled so that your SPAs can bypass browser restrictions that normally prevent requests that cross domain boundaries.  
   
 > [!NOTE]
 >  CORS support is only provided when using the Web API. You cannot use the organization service or the deprecated organization data service.  
@@ -36,12 +33,12 @@ You can create a Single Page Apps (SPAs) which uses JavaScript to work with Micr
   
 ## SPAs and Same-Origin policy  
 
-SPAs depend on extensive use of client-side JavaScript to create a single dynamic page which doesn't need to load new pages. Instead they use XMLHTTPRequests to retrieve data and other resources from the server. SPAs work well when the data and resources exist in the same domain as the application. But to protect access to data and resources on other domains, all modern browsers enforce a Same-Origin policy to prevent sites from using data and resources from sites on a different domain. CORS provides a way to gain access to resources on another domain. Creating a SPA to access Dataverse data without CORS is not a viable option.  
+SPAs depend on extensive use of client-side JavaScript to create a single dynamic page which doesn't need to load new pages. Instead they use and XMLHttpRequest to retrieve data and other resources from the server. SPAs work well when the data and resources exist in the same domain as the application. But to protect access to data and resources on other domains, all modern browsers enforce a Same-Origin policy to prevent sites from using data and resources from sites on a different domain. CORS provides a way to gain access to resources on another domain. Creating a SPA to access Dataverse data without CORS is not a viable option.  
   
 <a name="bkmk_use_cors"></a>
 
-## Use CORS with Dataverse 
- 
+## Use CORS with Dataverse
+
 The [Cross-Origin Resource Sharing specification](https://www.w3.org/TR/cors/) provides a detailed description of how to implement and use CORS. It explains all about the various headers and preflight requests that you need to apply to make CORS work. The good news is that you don't need to become an expert in CORS to use it with Dataverse. The server-side part has been done for you and all you need is to know how to consume it.  You don't need to understand all the inner workings of CORS to use it with Dataverse. Instead you can use the [Azure Active Directory Authentication Library for JavaScript](https://github.com/AzureAD/azure-activedirectory-library-for-js) (adal.js) and it will take care of much of the CORS complexity for you. Since Dataverse are authenticated using Azure Active Directory, ADAL.js is the supported way to authenticate SPA users.  
   
 <a name="bkmk_how_adaljs_works"></a>
@@ -77,9 +74,6 @@ When calling the Dataverse Web API, you must include the token value in an Autho
   
 ### See also
 
-[Use OAuth to connect to Dataverse web Services](connect-web-services-using-oauth.md)   
-
-
-
+[Use OAuth to connect to Dataverse web services](authenticate-oauth.md)   
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -7,6 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 06/10/2020
+ms.subservice: sample-apps
 ms.author: pankar
 ms.reviewer: kvivek
 ---
@@ -42,7 +43,7 @@ You must add master data in these entities in the following sequence:
 The master data is managed from the **Locations** area in the left navigation in the admin app:
 
 > [!div class="mx-imgBorder"]
-> ![Locations area](media/locations-area.png)
+> ![Locations area.](media/locations-area.png)
 
 The entities under the **Hierarchy** area are listed in the order you should populate data.
 
@@ -59,11 +60,11 @@ To create a record:
 
 1. Select **Systems** in the left pane, and select **New**:  
     > [!div class="mx-imgBorder"]
-    > ![Select new systems](media/select-systems-new.png)
+    > ![Select new systems.](media/select-systems-new.png)
 
 1. In the **New System** page, specify appropriate values:  
    > [!div class="mx-imgBorder"]
-   > ![New System](media/enter-details-new-system.png)
+   > ![New System.](media/enter-details-new-system.png)
 
    | **Field**            | **Description**                                    |
    |----------------------|----------------------------------------------------|
@@ -89,7 +90,7 @@ To create a record:
 1. In the **New Region** page, specify appropriate values:  
 
     > [!div class="mx-imgBorder"]
-    > ![Select New Region](media/enter-details-new-region.png)
+    > ![Select New Region.](media/enter-details-new-region.png)
 
     | **Field**            | **Description**                                                                                          |
     |----------------------|----------------------------------------------------------------------------------------------------------|
@@ -117,7 +118,7 @@ To create a record:
 1. In the **New Facility** page, specify appropriate values: 
 
     > [!div class="mx-imgBorder"] 
-    > ![Select New Facility](media/enter-details-new-facility.png)
+    > ![Select New Facility.](media/enter-details-new-facility.png)
 
     | **Field**                    | **Description**            |
     |------------------------------|---------------------------------------------------|
@@ -167,7 +168,7 @@ To create a record:
 1. In the **New Location** page, specify appropriate values:  
  
     > [!div class="mx-imgBorder"]
-    > ![Select New Location](media/enter-details-new-location.png)
+    > ![Select New Location.](media/enter-details-new-location.png)
 
     | **Field**            | **Description**                                                                                      |
     |----------------------|------------------------------------------------------------------------------------------------------|
@@ -194,7 +195,7 @@ To edit the record, select the record, update the values as required, and select
 You can view the associated data for a location, such as **Census**, **COVID Tracking**, **Equipment Needs**, by opening an existing location record and selecting the respective tabs. The associated data is entered by frontline staff using the [mobile apps](use.md).
 
 > [!div class="mx-imgBorder"]
-> ![Select location related records](media/location-related-records.png)
+> ![Select location related records.](media/location-related-records.png)
 
 
 ### Departments data
@@ -210,7 +211,7 @@ To create a record:
 1. In the **New Department** page, specify appropriate values:
 
     > [!div class="mx-imgBorder"]
-    > ![New Department - enter details](media/enter-details-new-department.png)
+    > ![New Department - enter details.](media/enter-details-new-department.png)
 
     | **Field**            | **Description**                                    |
     |----------------------|----------------------------------------------------|
@@ -244,14 +245,14 @@ As an admin, you can change the default tracking level of mobile apps.
 1. In the left navigation, select the **Administration** area, and then select **Apps**. 
 
     > [!div class="mx-imgBorder"]
-    > ![config-admin-app-records](media/admin-apps.png)
+    > ![config-admin-app-records.](media/admin-apps.png)
 
 1. Select one of the canvas apps to open the record.
 
 1. In the app record, select an appropriate value in the **Tracking Level** field.
 
     > [!div class="mx-imgBorder"]
-    > ![Tracking Level](media/app-tracking-level.png)
+    > ![Tracking Level.](media/app-tracking-level.png)
 
     - If **Location** is selected for an app, records created using the mobile app will contain location and facility information along with other data. Additionally, a **Location** drop-down will be available in the mobile app for users to select a location to track the data.
 
@@ -278,7 +279,7 @@ You can set the Power BI report URL for the **Dashboard** mobile app so that fro
 1.  In the app record, specify the report URL in the **Launch URL** field.
 
     > [!div class="mx-imgBorder"]
-    > ![Launch URL](media/dashboard-launch-url.png)
+    > ![Launch URL.](media/dashboard-launch-url.png)
 
 1.  Save the record.
 
@@ -317,12 +318,12 @@ To manage dashboards:
 2. In the left navigation pane, select **Dashboards** from the area picker:
 
     > [!div class="mx-imgBorder"]
-    > ![Dashboards](media/select-dashboards.png)
+    > ![Dashboards.](media/select-dashboards.png)
 
 3. Select a dashboard name in the left navigation to view the charts:
 
     > [!div class="mx-imgBorder"]
-    > ![View charts](media/view-charts.png)
+    > ![View charts.](media/view-charts.png)
 
     > [!NOTE]
     > You can filter data at the bottom of the screen and the charts on top are automatically updated with filtered values.
@@ -330,39 +331,39 @@ To manage dashboards:
 4. Select the **Expand** option to view a chart in full-screen mode:
 
     > [!div class="mx-imgBorder"]
-    > ![Select expand](media/select-expand.png)
+    > ![Select expand.](media/select-expand.png)
 
 ### Additional analysis
 
 - **Drill down**: You can select chart area to drill down further with additional attributes (fields) for an entity:
 
     > [!div class="mx-imgBorder"]
-    > ![Additional analysis - drill-down](media/select-chart-area-drill-down.png)
+    > ![Additional analysis - drill-down.](media/select-chart-area-drill-down.png)
 
 - **Refresh**: You can refresh the dashboards to reflect updated data. You can either refresh all charts on a specific dashboard with **Refresh All**, or a selected chart with **Refresh**:
 
     > [!div class="mx-imgBorder"]
-    > ![Additional analysis - Refresh](media/refresh-dashboards.png)
+    > ![Additional analysis - Refresh.](media/refresh-dashboards.png)
 
 - **View records**: Select **More Commands** (**…**) and then **View Records** to view all records associated to a given chart:
 
     > [!div class="mx-imgBorder"]
-    > ![Additional analsis - View records](media/select-more-commands.png)
+    > ![Additional analsis - View records.](media/select-more-commands.png)
 
     > [!NOTE] 
     > When you select **View records**, you'll see the view of the entity split between chart and the records. Any change to filters for records on the right-side reflects with automatic updates to the chart on left-side of the screen.
 
 For more information about editing an existing dashboard and updating properties
-of charts, read [edit an existing dashboard](https://docs.microsoft.com/powerapps/maker/model-driven-apps/create-edit-dashboards#edit-an-existing-dashboard).
+of charts, read [edit an existing dashboard](../../maker/model-driven-apps/create-edit-dashboards.md#edit-an-existing-dashboard).
 
 ### Create new dashboards
 
 You can also create your own dashboards and customize to suite your needs. To create a new dashboard, select **New** and then select **Dynamics 365 Dashboard**:
 
 > [!div class="mx-imgBorder"]
-> ![Create new dashboards](media/select-new-dynamics-dashboard.png)
+> ![Create new dashboards.](media/select-new-dynamics-dashboard.png)
 
-For more information about creating a new dashboard, read [create new dashboard](https://docs.microsoft.com/powerapps/maker/model-driven-apps/create-edit-dashboards#create-a-new-dashboard).
+For more information about creating a new dashboard, read [create new dashboard](../../maker/model-driven-apps/create-edit-dashboards.md#create-a-new-standard-dashboard).
 
 ## View Power BI dashboard
 
@@ -379,12 +380,12 @@ View the Power BI dashboards for insights and decision making.
 Sign in to [Power BI](https://apps.powerbi.com) to access and view the Power BI dashboard.
 
 > [!div class="mx-imgBorder"]
-> ![View Power BI dashboard](media/view-powerbi-dashboard.png)
+> ![View Power BI dashboard.](media/view-powerbi-dashboard.png)
 
 You can use the filters on the right side to filter data for COVID locations, facilities, regions and hospital systems.
 
 > [!NOTE]
-> The Power BI dashboard is also optimized to view in the Power BI mobile app. For information about using the Power BI mobile app to view dashboards, see [Explore dashboards and reports in the Power BI mobile apps](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-apps-quickstart-view-dashboard-report) in Power BI docs.
+> The Power BI dashboard is also optimized to view in the Power BI mobile app. For information about using the Power BI mobile app to view dashboards, see [Explore dashboards and reports in the Power BI mobile apps](/power-bi/consumer/mobile/mobile-apps-quickstart-view-dashboard-report) in Power BI docs.
 
 #### System at a glance page 
 
@@ -406,7 +407,7 @@ The page displays a summarized view of the following:
 
 > [!NOTE]
 > - Selecting the title in any of the summarized area takes you to the respective details page for the area. 
-> - You can also perform other actions on reports such as filter and sort data, export the report to PDF and PowerPoint, add a spotlight, and so on. For detailed information about report features in Power BI, see [Reports in Power BI](https://docs.microsoft.com/power-bi/consumer/end-user-reports)
+> - You can also perform other actions on reports such as filter and sort data, export the report to PDF and PowerPoint, add a spotlight, and so on. For detailed information about report features in Power BI, see [Reports in Power BI](/power-bi/consumer/end-user-reports)
 > - The most recent or last updated columns in some of these reports show the date and time when the data was last refreshed. It's also easy to identify the freshness by viewing the color of the date and time values in these columns:
 >    - Black: Data is refreshed less than 20 hours ago
 >    - Gray: Data is refreshed 20 - 24 hours ago
@@ -421,56 +422,56 @@ The **System View** page displays charts with the following information for a ho
 - Supplies on hand over a period of time
 
 > [!div class="mx-imgBorder"]
-> ![System View](media/report-system-view.png)
+> ![System View.](media/report-system-view.png)
 
 #### Location details page 
 
 From the **System at a glance** page, select **i** on the top-right corner. The **Location details** page displays data by location such as total number of beds, available beds, surge beds, COVID patients, and so on. 
 
 > [!div class="mx-imgBorder"]
-> ![Location Details](media/report-location-details.png) 
+> ![Location Details.](media/report-location-details.png) 
 
 #### COVID patients page 
 
 The page provides drill-down information about the COVID patients such as patients at each location, patient trend over time that shows peaks and valleys of number of patients under investigation (PUI), and number of patients found positive, and get a sense of where the patients are located within the hospital.
 
 > [!div class="mx-imgBorder"]
-> ![COVID Patient Details](media/report-covid-details.png)
+> ![COVID Patient Details.](media/report-covid-details.png)
 
 #### Bed management page 
 
 The page provides drill-down information by location such as total available beds, acute care beds available, and occupancy percentage.
 
 > [!div class="mx-imgBorder"]
-> ![Bed Management](media/report-bed-details.png)
+> ![Bed Management.](media/report-bed-details.png)
 
 #### Staffing details page  
 
 The page provides details about the staff by location, number of nurses assigned, total number of patients and number of COVID patients. It also displays nurse to patient ratio and ICU nurse to patient ratio over a period of time.
 
 > [!div class="mx-imgBorder"]
-> ![Staff Details](media/report-staff-details.png)
+> ![Staff Details.](media/report-staff-details.png)
 
 #### Equipment page 
 
 The page provides details about the equipment by location, the total number of vents in use, overlaid by number of COVID patients, and other pieces of equipment, such as belts, chargers, and hoods in use.
 
 > [!div class="mx-imgBorder"]
-> ![Equipment Details](media/report-equipment-details.png)
+> ![Equipment Details.](media/report-equipment-details.png)
 
 #### Discharges page 
 
 The page provides details about the long-term patients, discharge barriers over a period, and variance in terms of actual and anticipated discharges.
 
 > [!div class="mx-imgBorder"]
-> ![Discharges](media/report-discharge-details.png)
+> ![Discharges.](media/report-discharge-details.png)
 
 #### Supplies page 
 
 The page provides details about the supplies by location. It also provides a chart about days on hand by supply and facility, and the supply available on hand over a period of time.
 
 > [!div class="mx-imgBorder"]
-> ![Supplies](media/report-supplies.png)
+> ![Supplies.](media/report-supplies.png)
 
 ## View and manage app feedback
 
@@ -485,7 +486,7 @@ To view and manage app feedback:
 3. Select **App Feedback** to view a list of app feedback submitted by users. You can click a record to view details and mark them as reviewed or not.  
 
     > [!div class="mx-imgBorder"]
-    > ![App feedback](media/select-app-feedback.png)
+    > ![App feedback.](media/select-app-feedback.png)
 
 ## View the admin app in your language
 
@@ -500,12 +501,12 @@ Before you can view the admin app in one of the supported languages, the languag
 2. In the left pane, select **Environments**, and then select [Your Environment] > **Settings** > **Product** > **Languages**.
 
     > [!div class="mx-imgBorder"]
-    > ![PPAC settings](media/ppac-settings.png)
+    > ![PPAC settings.](media/ppac-settings.png)
 
 3. On the **Language Settings** page, select the languages you want to enable from one of the supported languages mentioned earlier, and select **Apply** in the lower-right corner. For example, we are enabling the **French** and **German** languages.
 
     > [!div class="mx-imgBorder"]
-    > ![PPAC language settings](media/ppac-lang-settings.png)
+    > ![PPAC language settings.](media/ppac-lang-settings.png)
 
 4. On the **Confirm Language Change** dialog box, select **OK**.
 
@@ -521,12 +522,12 @@ After the required languages are enabled by your system administrator, each admi
 2. Select the **Settings** button in the upper-right corner of the screen, and then select **Personalization Settings**.
 
     > [!div class="mx-imgBorder"]
-    > ![Settings for personalization](media/personal-settings.png)
+    > ![Settings for personalization.](media/personal-settings.png)
 
 3. On the **Set Personal Options** page, select the **Languages** tab, and then select a language of choice from the **User Interface Language** list. The list shows all the languages enabled by your system administrator for your environment.
 
     > [!div class="mx-imgBorder"]
-    > ![Personal language setting](media/select-lang.png)
+    > ![Personal language setting.](media/select-lang.png)
 
 4. Select **OK** in the lower-right corner.
 
@@ -537,7 +538,7 @@ The admin app UI will switch to display in the language you selected.
 You can extend Hospital Emergency Response mobile app labels with custom text. To do this, you model-driven app named **Canvas App Label Management** to customize the mobile app labels. Add new languages supported by the solution and text for corresponding mobile app labels using the model-driven app. You can create and edit strings across different languages for use in the mobile app.
 
 > [!div class="mx-imgBorder"]
-> ![Extend mobile app labels](media/canvas-app-label-app.png)
+> ![Extend mobile app labels.](media/canvas-app-label-app.png)
 
 ### Add new language record
 
@@ -550,7 +551,7 @@ Create a new language record for labels in mobile app. After you add the languag
 1. Select **New**.
 1. Enter values for Name, Language Tag and Display Name. For example, 'English' as the name and display name, with 'en' as the language tag.
 
-    ![Create new language record](media/01-create-language-tag.png "Create new language record")
+    ![Create new language record.](media/01-create-language-tag.png "Create new language record")
 
 1. Select **Save**.
 
@@ -560,7 +561,7 @@ Create a new language record for labels in mobile app. After you add the languag
 1. Select **New**.
 1. Enter TextID and Description. For example, *SplashScreenFacilityDropdownLabel* and *Facility selection on splash screen*.
 
-    ![Add new string record](media/02-create-string-record.png "Add new string record")
+    ![Add new string record.](media/02-create-string-record.png "Add new string record")
 
     > [!NOTE]
     > To find TextID in Hospital Emergency Response mobile app, go to [Find TextID of a label](#find-the-textid-value-of-the-label).
@@ -579,7 +580,7 @@ Create a new language record for labels in mobile app. After you add the languag
     > [!NOTE]
     > **Override Text** is the new label value to be displayed in your Hospital Emergency Response mobile app.
 
-    ![Add custom string value](media/03-create-string-value.png "Add custom string value")
+    ![Add custom string value.](media/03-create-string-value.png "Add custom string value")
 
 1. Select **Save**.
 
@@ -595,7 +596,7 @@ To play the app in browser:
 1. Select **Apps** from the left pane.
 1. Select the canvas app to play.
 
-![Play the app with custom label](media/05-play-app-with-change.png "Play the app with custom label")
+![Play the app with custom label.](media/05-play-app-with-change.png "Play the app with custom label")
 
 ### Find the TextID value of the label
 
@@ -606,7 +607,7 @@ To play the app in browser:
 1. Select the label that you want to customize text for.
 1. From the property list on top left, select the **Text** property.
 
-    ![Check TextID of a label](media/04-get-canvasapp-textid.png "Check TextID of a label")
+    ![Check TextID of a label.](media/04-get-canvasapp-textid.png "Check TextID of a label")
 
 The **Text** property formula bar on top shows the **TextID**. And the **Text** property on the right side property pane shows the **Default Text** value.
 
@@ -641,7 +642,7 @@ This data is collated from various areas of the hospital solution such as inform
 1. The following CDC data is available for each facility: **Patient Impact And Hospital Capacity**, **Healthcare Supplies**, and **Healthcare Worker Staffings**. Select a row, and then select **Download CSV** to download the data.
 
     > [!div class="mx-imgBorder"]
-    > ![Download CDC data](media/download-cdc-data.png)
+    > ![Download CDC data.](media/download-cdc-data.png)
 
 After downloading the data as CSV files from the **Download Data for CDC** app, you can review and upload them to the CDC web site.
 

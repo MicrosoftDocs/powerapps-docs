@@ -1,13 +1,17 @@
 ---
-title: "Use Liquid filters for a portal | MicrosoftDocs"
-description: "Learn about the available liquid filters in a portal."
+title: Available Liquid filters
+description: Learn about the available liquid filters in a portal.
 author: gitanjalisingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/07/2019
+ms.date: 04/21/2020
+ms.subservice: portals
 ms.author: gisingh
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - GitanjaliSingh33msft
 ---
 
 # Available Liquid filters
@@ -436,9 +440,9 @@ Date filters can be used for date arithmetic or to convert DateTime values into 
 
 Formats a DateTime value using a .NET format string.
 
-[Standard Date and Time Format Strings](https://docs.microsoft.com/dotnet/standard/base-types/standard-date-and-time-format-strings)  
+[Standard Date and Time Format Strings](/dotnet/standard/base-types/standard-date-and-time-format-strings)  
 
-[Custom Date and Time Format Strings](https://docs.microsoft.com/dotnet/standard/base-types/custom-date-and-time-format-strings)  
+[Custom Date and Time Format Strings](/dotnet/standard/base-types/custom-date-and-time-format-strings)  
 
 **Code**
 
@@ -634,9 +638,9 @@ Mon, 07 May 2018 07:20:46 Z
 ```
 
 
-## Entity list filters
+## List filters
 
-Entity List filters are used to work with certain [entitylist](liquid-objects.md#entitylist) attribute values, and to help create entity list views.  
+List filters are used to work with certain [entitylist](liquid-objects.md#entitylist) attribute values, and to help create list views.  
 
 ### current\_sort
 

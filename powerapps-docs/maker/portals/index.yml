@@ -13,11 +13,31 @@ metadata:
   ms.collection: collection
   author: kumarvivek
   ms.author: kvivek
-  ms.date: 09/03/2019 
+  ms.date: 06/01/2021 
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
 landingContent:
+
+  # Card 
+  - title: What's new
+    linkLists:
+       - linkListType: whats-new
+         links:
+          - text: Use the Visual Studio Code extension (Preview)
+            url: vs-code-extension.md
+          - text: Add chatbot to a page (Preview)
+            url: add-chatbot.md
+          - text: Table permissions using portals Studio (Preview)
+            url: configure/entity-permissions-studio.md
+          - text: "Tutorial: Configure table permissions using portals Studio (Preview)"
+            url: configure/entity-permissions-studio-walkthrough.md
+       - linkListType: reference
+         links:
+          - text: Portals version 9.3.6.x released
+            url: versions/version-9.3.6.x.md
+          - text: Starter Portal package version 9.2.2103.x released
+            url: versions/package-version-9.2.2103.md
 
   # Card 
   - title: Get started
@@ -31,7 +51,7 @@ landingContent:
        - linkListType: learn
          links:
           - text: Get started with Power Apps portals
-            url: https://docs.microsoft.com/learn/paths/get-started-power-apps-portals/
+            url: /learn/paths/get-started-power-apps-portals/
 
   # Card
   - title: Create
@@ -59,10 +79,10 @@ landingContent:
        - linkListType: learn
          links:
           - text: Customize web pages using Studio
-            url: https://docs.microsoft.com/learn/modules/explore-portals-studio/
+            url: /learn/modules/explore-portals-studio/
 
   # Card
-  - title: Administer and manage
+  - title: Administer and Manage
     linkLists:
       - linkListType: concept
         links:
@@ -73,18 +93,18 @@ landingContent:
       - linkListType: learn
         links:
           - text: Power Apps portals administration
-            url: https://docs.microsoft.com/learn/modules/portals-administration/
+            url: /learn/modules/portals-administration/
 
   # Card
   - title: Integrate with Dataverse
     linkLists:
       - linkListType: concept
         links:
-          - text: Entity forms
+          - text: Basic forms
             url: configure/entity-forms.md
-          - text: Entity lists
+          - text: Lists
             url: configure/entity-lists.md
-          - text: Web forms
+          - text: Advanced forms
             url: configure/web-form-properties.md
 
   # Card
@@ -96,7 +116,7 @@ landingContent:
             url: configure/invite-contacts.md
           - text: Create web roles
             url: configure/create-web-roles.md
-          - text: Assign entity permissions
+          - text: Assign table permissions
             url: configure/assign-entity-permissions.md
           - text: Control web page access
             url: configure/webpage-access-control.md
@@ -145,12 +165,12 @@ landingContent:
        - linkListType: learn
          links:
           - text: Get Started with Power Apps portals
-            url: https://docs.microsoft.com/learn/paths/get-started-power-apps-portals/
+            url: /learn/paths/get-started-power-apps-portals/
           - text: Work with Power Apps portals
-            url: https://docs.microsoft.com/learn/paths/work-power-apps-portals/
+            url: /learn/paths/work-power-apps-portals/
           - text: Administer Power Apps portals
-            url: https://docs.microsoft.com/learn/paths/administer-portals/
+            url: /learn/paths/administer-portals/
           - text: Extend Power Apps portals
-            url: https://docs.microsoft.com/learn/paths/extend-power-apps-portals/
+            url: /learn/paths/extend-power-apps-portals/
           - text: Manage permissions and administration for Dataverse
             url: https://docs.microsoft.com/learn/paths/manage-permissions-administration-common-data-service/

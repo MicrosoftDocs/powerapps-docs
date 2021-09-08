@@ -1,22 +1,26 @@
 ---
-title: Create a component library for canvas apps | Microsoft Docs
-description: Library of reusable components for canvas apps
-author: yifwang
+title: Component library
+description: Learn about working with a library of reusable components for canvas apps.
+author: hemantgaur
 ms.service: powerapps
+ms.subservice: canvas-developer
 ms.topic: article
-ms.date: 04/24/2020
-ms.author: yifwang
+ms.date: 07/23/2021
+ms.author: hemantg
 ms.reviewer: tapanm
 search.audienceType:
   - maker
 search.app:
   - PowerApps
+contributors:
+  - hemantgaur
+  - tapanm-msft
 ---
 
 # Component library
 
 > [!IMPORTANT]
-> This feature is still in public preview. For more information, see [Experimental and preview features](working-with-experimental.md).
+> This feature is still in public preview. For more information, see [Experimental and preview features](./working-with-experimental-preview.md).
 
 In the [overview](create-component.md) article for creating components, you are introduced to components inside canvas app. As you create components inside an app, you can also create a library of components that can be reused. By creating a component library, app makers easily share and update one or more components with other makers.
 
@@ -27,7 +31,7 @@ Component libraries are containers of component definitions that make it easy to
 - Notify app makers of available component updates. 
 
 > [!NOTE]
-> Component libraries are the recommended way to reuse components across apps. When using a component library, an app maintains dependencies on the components it uses. The app maker will be alerted when the updates to dependent components become available. Hence, all new reusable components should be created within the component libraries instead. An earlier Power Apps feature that allowed [importing components from one canvas app to another](create-component.md?#import-and-export-components) will be deprecated.
+> Component libraries are the recommended way to reuse components across apps. When using a component library, an app maintains dependencies on the components it uses. The app maker will be alerted when the updates to dependent components become available. Hence, all new reusable components should be created within the component libraries instead. An earlier Power Apps feature that allowed [importing components from one canvas app to another](create-component.md?#import-and-export-components) is retired.
 
 ## Difference between an app and a component library
 
@@ -40,13 +44,13 @@ The screens inside a component library are available for testing only. It provid
 You can preview component library components using the screens inside the library with the play option. When you select the component tab, the play option is disabled. The component library doesn't display when using Power Apps Mobile.
 
 > [!NOTE]
-> The component library discussed in this article is different from the Power Apps component framework that enables developers and makers to create code components for model-driven and canvas apps. For more information, go to [Power Apps component framework overview](https://docs.microsoft.com/powerapps/developer/component-framework/overview).
+> The component library discussed in this article is different from the Power Apps component framework that enables developers and makers to create code components for model-driven and canvas apps. For more information, go to [Power Apps component framework overview](../../developer/component-framework/overview.md).
 
 ## Working with component library
 
 You can create a new component library or edit an existing component library from the same interface. Browse to [make.powerapps.com](https://make.powerapps.com), select **Apps**, and then select **Component Libraries**:
 
-![Create or edit component library](./media/component-library/create-edit-component-library.png "Create or edit component library")
+![Create or edit component library.](./media/component-library/create-edit-component-library.png "Create or edit component library")
 
 ## Create an example component library
 
@@ -66,14 +70,14 @@ The steps to create components inside a component library are the same as creati
 
     You also have an option to save a **version note**. A version note is useful to retrieve versions of a component library and for upgrading the components used in apps from this component library.
 
-    ![Version note when saving component library](./media/component-library/save-component-libray-version-note.png "Version note when saving component library")
+    ![Version note when saving component library.](./media/component-library/save-component-libray-version-note.png "Version note when saving component library")
 
     > [!TIP]
     > A version note is useful when reviewing versions of a component library and for the app makers using your component library to review changes and update apps consuming these components as needed. Go to [update a component library](component-library.md?#update-a-component-library) for more details.   
 
 1. A saved component library can be published. Only published component library updates are available for apps that consume a component library. Select **Publish** to publish the component library version:
 
-    ![Publish component library version](./media/component-library/publish-component-library.png "Publish component library version")
+    ![Publish component library version.](./media/component-library/publish-component-library.png "Publish component library version")
 
 ## Import from a component library
 
@@ -81,11 +85,11 @@ After you create a component library and publish, apps can consume the component
 
 To import from a component library, edit an existing app or create a new app. After the app opens in canvas app studio, select **Insert** or the **+** on the left navigation. Then select **Get more components** to list the component libraries available in the current environment:
 
-![Get more components](./media/component-library/get-more-components.png "Get more components")
+![Get more components.](./media/component-library/get-more-components.png "Get more components")
 
 You'll see the list of component libraries available in the current environment on the right side of the screen. Select an individual component from a component library. Or use **Select all** to import all of the components from the library at once:
 
-![Import components](./media/component-library/components.png "Import components")
+![Import components.](./media/component-library/components.png "Import components")
 
 > [!NOTE]
 > If a maker doesn't see the component library listed in the import section, ensure the component library is shared with the maker. For more details, go to [component library permissions](component-library.md#component-library-permissions). 
@@ -94,23 +98,43 @@ Notice you can select and import more than one component and across different co
 
 Components available inside the app are listed under the **Custom** category in the list of components in the **Insert** pane. Components available from imported component libraries are listed under the **Library components** category:
 
-![Insert components to the app](./media/component-library/insert-components.png "Insert components to the app")
+![Insert components to the app.](./media/component-library/insert-components.png "Insert components to the app")
 
 ## Update a component library
 
 You can modify an existing component library and save any changes with additional version notes. However, the updated component library version must be published for use in existing apps that use the component library. The [example component library](component-library.md#create-an-example-component-library) steps above explain how to publish a component library after saving it.
 
+There are two ways apps using the components from library can get the latest changes.
+
+### Method 1: Component update notification on app edit
+
 Makers of other apps are notified of updated components being available. The notification appears when makers edit the apps in canvas app studio. They can choose to update the components:
 
-![Update available](./media/component-library/update-available.png "Update available")
+![Update available.](./media/component-library/update-available.png "Update available")
 
 Select **Review**, and you'll see the option to update the component:
 
-![Update component](./media/component-library/update-components.png "Update component")
+![Update component.](./media/component-library/update-components.png "Update component")
 
 Notice that the version note you added when publishing the component library version shows up here. 
 
 Select **Update** to update the components.
+
+![App updated with latest components](./media/component-library/updated-app.png "App updated with latest components")
+
+### Method 2: Proactive check for updates
+
+This method is to check for the app update proactively while working on the app in Studio.
+
+To do this check, select Insert component panel on the left-side, and then select **...** (ellipsis) next to the search button. And then, select **Check for updates**.
+
+![Check for latest components](./media/component-library/check-for-updates.png "Check for latest components")
+
+If there are updates in the components used from library , maker will get the message to review and get the latest changes. Upon review and update, the app gets updated with the latest components.
+
+The following animation shows the process to get the latest components.
+
+![Steps to get the latest components](./media/component-library/get-latest-components.gif "Steps to get the latest components")
 
 ## Component library permissions
 
@@ -121,13 +145,13 @@ Sharing a component library works the same way you share a canvas app. When you 
 - [Known limitations](create-component.md#known-limitations) applicable to components also applies to component libraries.
 - You can't import components using a component library from locally saved component library files. If you try to import a locally saved component library using **File** > **Save As** > **This Computer** and download the component library file as an app, following error message appears: 
 
-    ![Import component library file](./media/component-library/import-component-library-file.png "Import component library file")
+    ![Import component library file.](./media/component-library/import-component-library-file.png "Import component library file")
 
 - You can't add existing component libraries to a [solution](add-app-solution.md). However, you can create new component libraries for solutions using add component library flow.
 
 - If you import a component from a component library, you can't edit it inside the consuming app. If you select **Edit component**, you'll see an option to create a copy of the component inside the current app for you to make changes: 
 
-    ![Edit library component](./media/component-library/edit-library-component.png "Edit library component")
+    ![Edit library component.](./media/component-library/edit-library-component.png "Edit library component")
 
     If you select **Create a copy**, the component is copied to the local app. The local copy of the component appears under the **Custom** category in the **Insert** pane. This local copy of the component won't receive updates if a new version of the originating component library is published later.
     

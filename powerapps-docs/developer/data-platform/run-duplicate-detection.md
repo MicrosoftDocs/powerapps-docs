@@ -1,12 +1,13 @@
 ---
 title: "Run duplicate detection (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Execute duplicate detection for a specific record, entity type, or during create or update operations." # 115-145 characters including spaces. This abstract displays in the search result.
+description: "Execute duplicate detection for a specific record, table type, or during create or update operations." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 03/26/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID
+ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -15,9 +16,10 @@ search.app:
   - PowerApps
   - D365CE
 ---
+
 # Run duplicate detection
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
 There are several ways to perform duplicate detection after you enable it and publish the duplicate detection rules.  
 
@@ -27,9 +29,9 @@ There are several ways to perform duplicate detection after you enable it and pu
 
 Detect and retrieve duplicates:
 
-- Before you create an entity
-- For an existing entity
-- For other entities that correspond to duplicate rules across entities. For example, any Lead entity which matches a contact entity.
+- Before you create a table
+- For an existing table
+- For other tables that correspond to duplicate rules across tables. For example, any Lead table which matches a contact table.
 
 ### Options:
 
@@ -66,9 +68,9 @@ OData-Version: 4.0
 
 <a name="BKMK_DupEntwebapi"></a>
 
-## Detect duplicates for an entity type
+## Detect duplicates for a table type
 
-Submit an asynchronous duplicate detection job that runs in the background. The duplicates are detected according to the published duplicate rules for the entity type. The detected duplicates are stored as `DuplicateRecord` records in Dynamics 365. 
+Submit an asynchronous duplicate detection job that runs in the background. The duplicates are detected according to the published duplicate rules for the table type. The detected duplicates are stored as `DuplicateRecord` records in Dynamics 365. 
 
 A maximum of 5000 duplicates are returned by the duplicate detection job.
 
@@ -77,9 +79,9 @@ A maximum of 5000 duplicates are returned by the duplicate detection job.
 - Web API: <xref href="Microsoft.Dynamics.CRM.BulkDetectDuplicates?text=BulkDetectDuplicates Action" />
 - Organization Service: <xref:Microsoft.Crm.Sdk.Messages.BulkDetectDuplicatesRequest>
 
-### Example: Detect duplicates for an entity type using the Web API 
+### Example: Detect duplicates for a table type using the Web API 
 
-The following example shows how to detect duplicates for an entity type by creating an asynchronous job using `BulkDetectDuplicates` action.
+The following example shows how to detect duplicates for a table type by creating an asynchronous job using `BulkDetectDuplicates` action.
 
 **Request**
 ```http
@@ -115,7 +117,7 @@ OData-Version: 4.0
     "JobId": "efaff068-7598-e711-80e8-00155db64062"
 }
 ```
-The above request creates an asynchronous duplicate detection job whose JobID is returned in the response. The JobID returned from the above request can be used to fetch duplicate records in an entity type, as shown in the example below.
+The above request creates an asynchronous duplicate detection job whose JobID is returned in the response. The JobID returned from the above request can be used to fetch duplicate records in a table type, as shown in the example below.
 
 **Request**
 ```http
@@ -179,7 +181,7 @@ OData-Version: 4.0
    ]
 }
 ```
-The GUID of the base record is stored as `baserecordid` in the `DuplicateRecord` records. `duplicateid`, in the above response is the unique identifier of the duplicate record. `asyncoperationid` is the unique idenitifier of the system job that created that record. And, `ownerid` is the unique identifier of the user or team that owns the duplicate record. See [DuplicateRecord Entity](reference/entities/duplicaterecord.md) for more information.
+The GUID of the base record is stored as `baserecordid` in the `DuplicateRecord` records. `duplicateid`, in the above response is the unique identifier of the duplicate record. `asyncoperationid` is the unique idenitifier of the system job that created that record. And, `ownerid` is the unique identifier of the user or team that owns the duplicate record. See [DuplicateRecord Table](reference/entities/duplicaterecord.md) for more information.
 
 > [!NOTE]
 >  Before creating and executing duplicate detection jobs, make sure that there are appropriate duplicate detection rules in place. Dynamics 365 includes default duplicate detection rules for accounts, contacts, and leads, but not for other types of records. If you want the system to detect duplicates for other record types, you’ll need to create a new rule. For information on how to create a duplicate detection rule, see [Duplicate detection rules](/dynamics365/customer-engagement/admin/set-up-duplicate-detection-rules-keep-data-clean).
@@ -188,16 +190,15 @@ The GUID of the base record is stored as `baserecordid` in the `DuplicateRecord`
 
 ## Detect duplicates during Create and Update operations
 
-Duplicate detection while creating or updating records only applies when the organization has duplicate detection enabled, the entity is enabled for duplicate detection, and there are active duplicate detection rules being applied. By default, duplicate detection is suppressed when you are creating or updating a record using Web API or Organization service. 
+Duplicate detection while creating or updating records only applies when the organization has duplicate detection enabled, the table is enabled for duplicate detection, and there are active duplicate detection rules being applied. By default, duplicate detection is suppressed when you are creating or updating a record using Web API or Organization service. 
 
 To detect duplicate data while creating and updating records, see:
 
 - WebAPI: [Detect duplicate data using the Web API](webapi/manage-duplicate-detection-create-update.md)
 - Organization Service: [Detect duplicate data using the Organization service](org-service/detect-duplicate-data.md)
 
-  
-### See also  
- [Duplicate Detection Messages](duplicate-detection-messages.md)
+### See also
 
+[Duplicate detection messages](duplicate-detection-messages.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

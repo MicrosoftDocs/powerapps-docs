@@ -1,13 +1,17 @@
 ---
-title: Add custom menu component to a Power Apps portals page using portals Studio. | Microsoft Docs
+title: Add custom menu
 description: Learn about how to add custom menu component to a Power Apps portals page using portals Studio.
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/08/2021
+ms.date: 04/21/2021
+ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: tapanm
+contributors:
+    - neerajnandwana-msft
+    - tapanm-msft
 ---
 
 # Add custom menu
@@ -22,7 +26,7 @@ After you create the web link set:
 
 1. In the properties on the right side of the screen, select the web link set name from the **Navigation Menu** list.
 
-    ![Navigation menu](media/navigation-menu.png "Navigation menu")
+    ![Navigation menu.](media/navigation-menu.png "Navigation menu")
 
 ### See also
 

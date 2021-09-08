@@ -1,12 +1,13 @@
 ---
 title: "Work with alternate keys (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "The topic explains about how to create alternate keys for an entity. Alternate keys can be created programmatically or by using the customization tools" # 115-145 characters including spaces. This abstract displays in the search result.
+description: "The topic explains about how to create alternate keys for a table. Alternate keys can be created programmatically or by using the customization tools" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 08/01/2020
+ms.date: 03/12/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID
+ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -17,9 +18,9 @@ search.app:
 ---
 # Work with alternate keys
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+All Microsoft Dataverse records have unique identifiers defined as GUIDs. These are the primary key for each table. When you need to integrate with an external data store, you might be able to add a column to the external database tables to contain a reference to the unique identifier in Dataverse. This allows you to have a local reference to link to the Dataverse record. However, sometimes you can't modify the external database. With alternate keys you can now define a column in a Dataverse table to correspond to a unique identifier (or unique combination of columns) used by the external data store. This alternate key can be used to uniquely identify a record in Dataverse in place of the primary key. You must be able to define which columns represent a unique identity for your records. Once you identify the columns that are unique to the table, you can declare them as alternate keys through the customization user interface (UI) or in the code. This topic provides information about defining alternate keys in the data model.  
 
-All Microsoft Dataverse records have unique identifiers defined as GUIDs. These are the primary key for each entity. When you need to integrate with an external data store, you might be able to add a column to the external database tables to contain a reference to the unique identifier in Dataverse. This allows you to have a local reference to link to the Dataverse record. However, sometimes you can't modify the external database. With alternate keys you can now define an attribute in a Dataverse entity to correspond to a unique identifier (or unique combination of columns) used by the external data store. This alternate key can be used to uniquely identify a record in Dataverse in place of the primary key. You must be able to define which attributes represent a unique identity for your records. Once you identify the attributes that are unique to the entity, you can declare them as alternate keys through the customization user interface (UI) or in the code. This topic provides information about defining alternate keys in the data model.  
+[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
 <a name="BKMK_Declare"></a>
 
@@ -27,16 +28,16 @@ All Microsoft Dataverse records have unique identifiers defined as GUIDs. These 
 
 You can create alternate keys programmatically or by using the customizations tools. For more information about using the customization tools, see [Define alternate keys using Power Apps](../../maker/data-platform/define-alternate-keys-portal.md).
 
-To define alternate keys programmatically, you first have to create an object of type <xref:Microsoft.Xrm.Sdk.Metadata.EntityKeyMetadata> (or use <xref href="Microsoft.Dynamics.CRM.EntityKeyMetadata?text=EntityKeyMetadata EntityType" /> if working with Web API). This class contains the key attributes. Once the key attributes are set, you can use `CreateEntityKey` to create the keys for an entity. This message takes the entity name and `EntityKeyMetadata` values as input to create the key.  
+To define alternate keys programmatically, you first have to create an object of type <xref:Microsoft.Xrm.Sdk.Metadata.EntityKeyMetadata> (or use <xref href="Microsoft.Dynamics.CRM.EntityKeyMetadata?text=EntityKeyMetadata EntityType" /> if working with Web API). This class contains the key columns. Once the key columns are set, you can use `CreateEntityKey` to create the keys for a table. This message takes the table name and `EntityKeyMetadata` values as input to create the key.  
 
 You should be aware of the following constraints when creating alternate keys:  
 
-- **Valid attributes in key definitions**  
+- **Valid columns in key table definitions**  
 
-   Only attributes of the following types can be included in alternate key definitions:  
+   Only columns of the following types can be included in alternate key table definitions:  
 
 
-  |      Attribute Type      |    Display Name     |
+  |      Column Type      |    Display Name     |
   |--------------------------|---------------------|
   | DecimalAttributeMetadata |   Decimal Number    |
   | IntegerAttributeMetadata |    Whole Number     |
@@ -50,13 +51,13 @@ You should be aware of the following constraints when creating alternate keys:
 
    When a key is created, the system validates that the key can be supported by the platform, including that the total key size does not violate SQL-based index constraints like 900 bytes per key and 16 columns per key. If the key size doesn't meet the constraints, an error message will be displayed.  
 
-- **Maximum number of alternate key definitions for an entity**  
+- **Maximum number of alternate key table definitions for a table**  
 
-   There can be a maximum of 5 alternate key definitions for an entity in a Dataverse instance.  
+   There can be a maximum of ten alternate key table definitions for a table in a Dataverse instance.  
 
 - **Unicode characters in key value**
 
-  If the data within a field that is used in an alternate key will contain one of the following characters `/`,`<`,`>`,`*`,`%`,`&`,`:`,`\\`,`?` then retrieve (`GET`), update or upsert (`PATCH`) actions will not work.  If you only need uniqueness then this approach will work, but if you need to use these keys as part of data integration then it is best to create the key on fields that won't have data with those characters.
+  If the data within a column that is used in an alternate key will contain one of the following characters `/`,`<`,`>`,`*`,`%`,`&`,`:`,`\\`,`?` then retrieve (`GET`), update or upsert (`PATCH`) actions will not work.  If you only need uniqueness then this approach will work, but if you need to use these keys as part of data integration then it is best to create the key on columns that won't have data with those characters.
 
 <a name="BKMK_crud"></a>   
 
@@ -69,7 +70,7 @@ If you need to retrieve or delete alternate keys, you can use the customization 
 |<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityKeyRequest>|Retrieves the specified alternate key.|  
 |<xref:Microsoft.Xrm.Sdk.Messages.DeleteEntityKeyRequest>|Deletes the specified alternate key.|  
 
-To retrieve all the keys for an entity, use the new <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.Keys> property of `EntityMetadata` (<xref href="Microsoft.Dynamics.CRM.EntityMetadata?text=EntityMetadata EntityType" /> or <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata> class). It gets an array of keys for an entity.  
+To retrieve all the keys for a table, use the new <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.Keys> property of `EntityMetadata` (<xref href="Microsoft.Dynamics.CRM.EntityMetadata?text=EntityMetadata EntityType" /> or <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata> class). It gets an array of keys for a table.  
 
 <a name="BKMK_index"></a>   
 

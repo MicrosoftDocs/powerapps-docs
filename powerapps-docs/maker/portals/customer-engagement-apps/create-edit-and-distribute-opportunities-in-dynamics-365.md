@@ -1,13 +1,17 @@
 ---
-title: "Create, edit, and distribute opportunities | MicrosoftDocs"
-description: "Learn about how you can use opportunities to notify your partners of sales prospects that they can follow up on."
+title: Create, edit, and distribute opportunities
+description: Learn how you can use opportunities to notify your partners of sales prospects that they can follow up on.
 author: sbmjais
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/11/2021
+ms.date: 04/21/2020
+ms.subservice: portals
 ms.author: shjais
-ms.reviewer: 
+ms.reviewer: shjais
+contributors:
+    - tapanm-msft
+    - shjais
 ---
 
 # Create, edit, and distribute opportunities

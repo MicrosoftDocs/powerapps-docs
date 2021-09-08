@@ -1,13 +1,17 @@
 ---
-title: "Reset a portal | MicrosoftDocs"
-description: "Learn how to reset a portal."
+title: Reset a portal
+description: Learn how to reset a portal.
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/08/2021
+ms.date: 04/21/2021
+ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: tapanm
+contributors:
+    - neerajnandwana-msft
+    - tapanm-msft
 ---
 
 # Reset a portal
@@ -30,7 +34,7 @@ To reset a configured portal:
 2.    Go to **Portal Actions** > **Reset Portal**.
 
         > [!div class=mx-imgBorder]
-        > ![Reset a portal](../media/reset-portal.png "Reset a portal")
+        > ![Reset a portal.](../media/reset-portal.png "Reset a portal")
 
 3.    Select **Reset** in the confirmation window.
 
@@ -44,7 +48,7 @@ To reset a configured portal:
 If your portal is not provisioned correctly, it goes into an error state and the following screen is displayed. In this case, you can also reset the portal by selecting **Reset Portal** on the error screen.
 
 > [!div class=mx-imgBorder]
-> ![Error while provisioning a portal](../media/provision-portal-error.png "Error while provisioning a portal")
+> ![Error while provisioning a portal.](../media/provision-portal-error.png "Error while provisioning a portal")
 
 ## Delete a portal
 
@@ -54,7 +58,7 @@ A Power Apps portal consists of the following components:
 
 - **Portal configuration**: The portal configuration in the Dataverse environment that defines portal components such as *Websites*, *Pages*, *Content Snippets* and *Web Roles* records.
 
-- **Portal solutions**: Solutions that are installed in the Dataverse environment and contain the metadata entities for any portal.
+- **Portal solutions**: Solutions that are installed in the Dataverse environment and contain the metadata tables for any portal.
 
 **To delete a portal**, you must delete the **portal website host** and the  **portal configuration**.
 
@@ -80,14 +84,14 @@ This section provides information about troubleshooting issues while resetting a
 If a portal reset request could not be submitted, an error is displayed as shown in the following image. In this case, you must close and reopen the Power Apps portals admin center, and try to reset the portal again. If the issue persists, contact Microsoft support.
 
 > [!div class=mx-imgBorder]
-> ![Couldn't submit error while resetting a portal](../media/reset-portal-request-error.png "Couldn't submit error while resetting a portal")
+> ![Couldn't submit error while resetting a portal.](../media/reset-portal-request-error.png "Couldn't submit error while resetting a portal")
 
 ### Reset portal job fails
 
 If a reset portal job fails, an error message is displayed along with the **Reset Portal** action.
 
 > [!div class=mx-imgBorder]
-> ![Failure error while resetting a portal](../media/reset-portal-error.png "Failure error while resetting a portal")
+> ![Failure error while resetting a portal.](../media/reset-portal-error.png "Failure error while resetting a portal")
 
 Typically, these are transient errors and you must select **Reset Portal** to restart the job. If the issue persists, contact Microsoft support.
 

@@ -1,18 +1,23 @@
 ---
-title: Customize a SharePoint list form | Microsoft Docs
-description: Use Power Apps to customize the form with which users create and update entries in a SharePoint list.
-author: emcoope-msft
-manager: kvivek
+title: Customize a SharePoint list or library form by using Power Apps
+description: Learn about how to use Power Apps to customize the form with which users create and update entries in a SharePoint list.
+author: wimcoor
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 10/09/2020
+ms.date: 08/17/2021
+ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - Steven-Jia
+  - tapanm-msft
+  - wimcoor
+  - alaug
 ---
 # Customize a SharePoint list or library form by using Power Apps
 
@@ -21,10 +26,11 @@ You can easily customize the form for a SharePoint list or SharePoint document l
 To follow the steps in this article, you'll create a list so that you can see how customization works, and then you can apply the same concepts to your own list.
 
 > [!NOTE]
-> - If the **Customize forms** option isn't available or doesn't work correctly for your list, it might contain data types that [Power Apps doesn't support](connections/connection-sharepoint-online.md#known-issues). Also, you can't move your form to a different list or [environment](working-with-environments.md). 
+> - If the **Customize forms** option isn't available or doesn't work correctly for your list, it might contain data types that [Power Apps doesn't support](connections/connection-sharepoint-online.md#known-issues). Also, you can't move your form to a different list or [environment](/power-platform/admin/working-with-environments). 
 > - Custom forms for lists are only supported in generic lists and generic document libraries. Custom list and library templates are currently not supported; including but not limited to lists such as Announcements, Contacts and Tasks.
 > - Custom forms for document libraries only supports editing custom metadata. Editing or managing file(s) is not supported.
-> - Additional actions are needed when changing the address of a SharePoint site that uses custom forms. More information: [Effects of changing a SharePoint site address on Power Apps](https://docs.microsoft.com/sharepoint/change-site-address#effects-of-changing-a-site-address).
+> - Additional actions are needed when changing the address of a SharePoint site that uses custom forms. More information: [Effects of changing a SharePoint site address on Power Apps](/sharepoint/change-site-address#effects-of-changing-a-site-address).
+> - To access custom form, users must have access to the SharePoint list.
 
 ## Create a list
 
@@ -40,7 +46,7 @@ On a SharePoint site, create a list, and then add these columns to that list:
 
 ## Open the form
 
-1. In the command bar, select **Power Apps**, and then select **Customize form**.
+1. In the command bar, select **Integrate** -> **Power Apps** -> **Customize forms**.
 
     Power Apps Studio opens in the same browser tab.
 
@@ -114,7 +120,7 @@ You can configure the **Price**, **Availability**, and **Colors** fields to appe
 
     You can toggle back and forth between options, as needed.
 
-    ![Form Settings options](./media/customize-list-form/form-settings.png)
+    ![Form Settings options.](./media/customize-list-form/form-settings.png)
 
 ## Delete the custom form
 
@@ -124,7 +130,7 @@ You can configure the **Price**, **Availability**, and **Colors** fields to appe
 
 1. On the **Form Settings** page, select **Use the default SharePoint form**, and then select **Delete custom form**.
 
-    ![Delete the custom form](./media/customize-list-form/use-default-sharepoint.png)
+    ![Delete the custom form.](./media/customize-list-form/use-default-sharepoint.png)
 
 ## Q & A
 
@@ -164,7 +170,7 @@ You can configure the **Price**, **Availability**, and **Colors** fields to appe
 
 **A:** Yes.
 
-1. Open your list, select **Power Apps** on the command bar, and then select **Customize forms**.
+1. Open your list, select **Integrate** -> **Power Apps** -> **Customize forms**.
 
 1. In Power Apps Studio, select **File**, and then select **See all versions**. The **Versions** page opens in a new browser tab.
 
@@ -198,7 +204,9 @@ You can configure the **Price**, **Availability**, and **Colors** fields to appe
 
 **Q:** Do I need a Power Apps license to create or use custom list forms?
 
-**A:** Guest users can **use** custom forms. To **create** custom forms, you need an [Office 365 plan that includes Power Apps](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus#licenses).
+**A:** Guest users can **use** custom forms. To **create** custom forms, you need a [Microsoft 365 plan that includes Power Apps](/power-platform/admin/pricing-billing-skus#licenses).
+- To know about license requirements for members of a tenant, see **Power Apps user rights included with Microsoft 365 licenses** section in [Microsoft Power Apps and Power Automate Licensing Guide](https://go.microsoft.com/fwlink/?linkid=2085130).
+- For more information about license expectations for guest users, see [What license must be assigned to my guest so they can run an app shared with them?](share-app-guests.md#what-license-must-be-assigned-to-my-guest-so-they-can-run-an-app-shared-with-them).
 
 **Q:** What happens when guest users access a list that has a custom form?
 
@@ -220,7 +228,13 @@ You can configure the **Price**, **Availability**, and **Colors** fields to appe
 
     If the app type is SharePoint Form, the app is a customized form.
 
-    ![List of customized forms](./media/customize-list-form/customized-forms.png)
+    ![List of customized forms.](./media/customize-list-form/customized-forms.png)
 
+### See also
+
+- [Manage who can share canvas apps](/power-platform/admin/admin-manage-apps#manage-who-can-share-canvas-apps)
+- [Assign a security role](/power-platform/admin/create-users#assign-a-security-role)
+- [Licensing overview for Microsoft Power Platform](/power-platform/admin/pricing-billing-skus)
+- [Understand Power Platform environments](/power-platform/admin/environments-overview)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

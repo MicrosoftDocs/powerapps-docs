@@ -1,7 +1,8 @@
 ---
 title: Type | Microsoft Docs
-description: 
+description: The type in the type-group node defines the data type in Microsoft Dataverse.
 keywords:
+ms.subservice: pcf
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek

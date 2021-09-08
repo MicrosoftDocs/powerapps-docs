@@ -1,21 +1,25 @@
 ---
-title: Calendar-screen template | Microsoft Docs
-description: Understand how the calendar-screen template for canvas apps works, modify the screen, and extend it as part of an app
+title: Calendar-screen template in canvas apps
+description: Understand how the calendar-screen template for canvas apps works, modify the screen, and extend it as part of an app.
 author: emcoope-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 12/28/2018
+ms.date: 08/11/2021
+ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - emcoope-msft
 ---
 
-# Overview of the calendar-screen template for canvas apps
+# Calendar-screen template in canvas apps
 
 In a canvas app, add a calendar screen that shows users upcoming events from their Office 365 Outlook accounts. Users can select a date from a calendar and scroll through a list of that day's events. You can change which details appear in the list, add a second screen that shows more details about each event, show a list of attendees for each event, and make other customizations.
 
@@ -45,11 +49,11 @@ To add a calendar screen from the template:
 
     By default, the screen looks similar to this:
 
-    ![Calendar screen](media/calendar-screen/calendar-initial.png)
+    ![Calendar screen.](media/calendar-screen/calendar-initial.png)
 
 1. To show data, select an option in the drop-down list near the top of the screen.
 
-    ![Calendar screen after loading is complete](./media/calendar-screen/calendar-screen.png)
+    ![Calendar screen after loading is complete.](./media/calendar-screen/calendar-screen.png)
 
 A few helpful notes:
 
@@ -72,7 +76,7 @@ If you want to modify the screen further, use the [calendar-screen reference](./
 
 If you already know which calendar your users should view, you can simplify the screen by specifying that calendar before you publish the app. This change removes the need for the drop-down list of calendars, so you can remove it.
 
-1. Set the **[OnStart](../controls/control-screen.md)** property of the default screen in the app to this formula:
+1. Set the **[OnStart](../controls/control-screen.md)** property of the app to this formula:
 
     ```powerapps-dot
     Set( _userDomain, Right( User().Email, Len( User().Email ) - Find( "@", User().Email ) ) );
@@ -84,7 +88,7 @@ If you already know which calendar your users should view, you can simplify the 
     Set( _lastDayOfMonth, DateAdd( DateAdd( _firstDayOfMonth, 1, Months ), -1, Days ) );
     Set( _calendarVisible, false );
     Set( _myCalendar, 
-        LookUp( Office365.CalendarGetTables().value, DisplayName = "{YourCalendarNameHere}" )
+        LookUp(Office365Outlook.CalendarGetTablesV2().value, DisplayName = "{YourCalendarNameHere}" )
     );
     Set( _minDate, 
         DateAdd( _firstDayOfMonth, -( Weekday(_firstDayOfMonth) - 2 + 1 ), Days )
@@ -97,10 +101,10 @@ If you already know which calendar your users should view, you can simplify the 
         )
     );
     ClearCollect( MyCalendarEvents, 
-        Office365.GetEventsCalendarViewV2( _myCalendar.Name, 
-            Text( _minDate, UTC ), 
-            Text( _maxDate, UTC ) 
-        ).value
+    Office365Outlook.GetEventsCalendarViewV3(_myCalendar.name, 
+        Text( _minDate, UTC),
+        Text( _maxDate, UTC)
+    ).value
     );
     Set( _calendarVisible, true )
     ```
@@ -143,7 +147,7 @@ If you already know which calendar your users should view, you can simplify the 
 
 ### Show different details about an event
 
-By default, the gallery under the calendar, named **CalendarEventsGallery**, shows the start time, the duration, the subject, and the location of each event. You can configure the gallery to show any field (such as the organizer) that the [Office 365 connector](https://docs.microsoft.com/connectors/office365/#calendareventclientreceive) supports.
+By default, the gallery under the calendar, named **CalendarEventsGallery**, shows the start time, the duration, the subject, and the location of each event. You can configure the gallery to show any field (such as the organizer) that the [Office 365 connector](/connectors/office365/#calendareventclientreceive) supports.
 
 1. In **CalendarEventsGallery**, set the **Text** property of a new or an existing label to `ThisItem` followed by a period.
 
@@ -330,7 +334,7 @@ This list discusses what each **ClearCollect** operation does:
         )
     );
     ```
-    To retrieve Office 365 profiles, you must use the  [Office365Users.UserProfile](https://docs.microsoft.com/connectors/office365users/#userprofile) or [Office365Users.UserProfileV2](https://docs.microsoft.com/connectors/office365users/#userprofile) operation. These operations first gather all the Office 365 profiles for attendees who are in the user's org. Then the operations add a few fields for attendees from outside the organization. You separated these two items into distinct operations because the **ForAll** loop doesn't guarantee order. Therefore, **ForAll** might collect an attendee from outside the organization first. In this case, the schema for **MyPeople** contains only **DisplayName**, **Id**, **JobTitle**, and **UserPrincipalName**. However, the UserProfile operations retrieve much richer data than that. So you force the **MyPeople** collection to add Office 365 profiles before the other profiles.
+    To retrieve Office 365 profiles, you must use the  [Office365Users.UserProfile](/connectors/office365users/#userprofile) or [Office365Users.UserProfileV2](/connectors/office365users/#userprofile) operation. These operations first gather all the Office 365 profiles for attendees who are in the user's org. Then the operations add a few fields for attendees from outside the organization. You separated these two items into distinct operations because the **ForAll** loop doesn't guarantee order. Therefore, **ForAll** might collect an attendee from outside the organization first. In this case, the schema for **MyPeople** contains only **DisplayName**, **Id**, **JobTitle**, and **UserPrincipalName**. However, the UserProfile operations retrieve much richer data than that. So you force the **MyPeople** collection to add Office 365 profiles before the other profiles.
 
     > [!NOTE]
     > You can achieve the same result with only one **ClearCollect** function:

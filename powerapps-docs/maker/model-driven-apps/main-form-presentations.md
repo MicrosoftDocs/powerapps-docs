@@ -7,7 +7,7 @@ ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "conceptual"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -15,6 +15,7 @@ applies_to:
 author: "Mattp123"
 ms.assetid: da3ac59a-5413-46cb-b355-1987e42e3853
 caps.latest.revision: 35
+ms.subservice: mda-maker
 ms.author: "matp"
 manager: "kvivek"
 search.audienceType: 
@@ -42,7 +43,7 @@ The main form is used by all model-driven app clients. This form provides a cons
 ## Updated forms  
  This diagram represents common components found in updated table forms.  
   
- ![Diagram shows Updated table form structure in Dynamics 365](media/updated-form-diagram.png "Diagram shows Updated table form structure in Dynamics 365")  
+ ![Diagram shows Updated table form structure in Dynamics 365.](media/updated-form-diagram.png "Diagram shows Updated table form structure in Dynamics 365")  
   
  For updated tables, the layout of the form works with a wide range of displays and window sizes. As the width of window decreases, tab columns move down so that you can scroll down to work with them instead of being compressed or requiring you to scroll to the right.  
   
@@ -51,7 +52,7 @@ The main form is used by all model-driven app clients. This form provides a cons
 |Component|Summary|  
 |---------------|-------------|  
 |**Navigation bar**|Uses the data in the site map to provide the ability to move to different areas of the application.<br /><br /> The navigation pane used in classic forms isn’t included in the updated form. In the context of a row, the navigation bar provides access to views of related rows. Rather than navigating to related rows using the navigation pane or by using the navigation bar, adding sub-grids configured to show useful related table rows provides a better experience for most people.|  
-|**Command bar**|Uses the data defined for ribbons to provide commands relevant for the row.<br /><br /> The first five commands are displayed followed by an ellipsis (![More commands button](media/not-available.gif "More commands button")) that provides a flyout menu to choose additional commands.|  
+|**Command bar**|Uses the data defined for ribbons to provide commands relevant for the row.<br /><br /> The first five commands are displayed followed by an ellipsis (![More commands button.](media/not-available.gif "More commands button")) that provides a flyout menu to choose additional commands.|  
 |**Image**|When a table has an image column and the table **Primary Image** option is set to **Default Image**, an image can be displayed in the header when the form is configured to show the image.|  
 |**Header**|Columns placed in the header remain visible when people scroll down through the body of the form.<br /><br /> Up to four columns can be placed in the header. Multiple lines of text, web resources, or iFrames aren’t allowed in the header. The header and footer share some properties with sections.|  
 |**Process Control**|When a table has active business process flows, the process control displays below the header. More information: [Business process flows](/flow/business-process-flows-overview)|  
@@ -74,22 +75,22 @@ The main form is used by all model-driven app clients. This form provides a cons
   
 <a name="BKMK_EntitiesEnabledForCRMForTablets"></a>   
 ### Tables enabled for Dynamics 365 for phones and tablets  
- Only tables that are enabled for Dynamics 365 for phones and tablets use this presentation of the main form. More information: [Entities displayed in Dynamics 365 for phones and tablets](https://docs.microsoft.com/dynamics365/customer-engagement/customize/customize-phones-tablets#BKMK_CustomEntity)  
+ Only tables that are enabled for Dynamics 365 for phones and tablets use this presentation of the main form. More information: [Entities displayed in Dynamics 365 for phones and tablets](/dynamics365/customer-engagement/customize/customize-phones-tablets#BKMK_CustomEntity)  
   
 ### Form design  
  Dynamics 365 for phones and tablets takes many of the main form elements and presents them in a way optimized for phones or tablets. The following diagrams show the reflow from the web app to the tablet and phone apps.  
   
  **Web app**  
   
- ![Dynamics 365 form reflow from web app](media/custon-reflow-web-app.png "Dynamics 365 form reflow from web app")  
+ ![Dynamics 365 form reflow from web app.](media/custon-reflow-web-app.png "Dynamics 365 form reflow from web app")  
   
  **Tablet app**  
   
- ![Dynamics 365 form reflow to tablet app](media/reflow-tablet-app.png "Dynamics 365 form reflow to tablet app")  
+ ![Dynamics 365 form reflow to tablet app.](media/reflow-tablet-app.png "Dynamics 365 form reflow to tablet app")  
   
  **Phone app**  
   
- ![Dynamics 365 form reflow to phone app](media/custon-reflow-phone-app.png "Dynamics 365 form reflow to phone app")  
+ ![Dynamics 365 form reflow to phone app.](media/custon-reflow-phone-app.png "Dynamics 365 form reflow to phone app")  
   
  The form elements are transformed to a wide panorama layout in  Dynamics 365 for tablets, where users swipe the screen to change elements visible within a view port. In Dynamics 365 for phones, users swipe the screen to see a different column, or pane of elements, and the process control appears over every column.  
   
@@ -97,7 +98,7 @@ The main form is used by all model-driven app clients. This form provides a cons
  The following items are always visible within the view port in the context of a form:  
   
  **Nav bar**  
- The nav bar is a presentation of the sitemap that is optimized for touch. More information: [Change navigation options](https://docs.microsoft.com/dynamics365/customer-engagement/customize/customize-phones-tablets#BKMK_NavigationOptions)  
+ The nav bar is a presentation of the sitemap that is optimized for touch. More information: [Change navigation options](/dynamics365/customer-engagement/customize/customize-phones-tablets#BKMK_NavigationOptions)  
   
  **Home**  
  The home button takes users to the dashboard that is the starting page for Dynamics 365  for phones and tablets.  
@@ -109,14 +110,14 @@ The main form is used by all model-driven app clients. This form provides a cons
  People can tap the search control to open the screen to search for rows.  
   
  **Command Bar**  
- By default, some of the commands that appear in the app running in a web browser do not appear in the Dynamics 365 for phones and tablets apps. Similar to the web application, the command bar is context-sensitive, so the available commands change depending on what is currently viewed or selected. More information [Change commands](https://docs.microsoft.com/dynamics365/customer-engagement/customize/customize-phones-tablets#BKMK_ChangeCommands)  
+ By default, some of the commands that appear in the app running in a web browser do not appear in the Dynamics 365 for phones and tablets apps. Similar to the web application, the command bar is context-sensitive, so the available commands change depending on what is currently viewed or selected. More information [Change commands](/dynamics365/customer-engagement/customize/customize-phones-tablets#BKMK_ChangeCommands)  
   
 ### Form elements  
  The form elements displayed are taken from the main form and presented as a series of panels that users see through the view port.  
   
  In Dynamics 365 for tablets, the first panel displays contact information about relationships that exist for the row. In Dynamics 365 for phones, the first panel also displays header columns from the form above the relationship tiles.  
   
- ![Dynamics 365 for tablets relationships panel](media/mobile-app-form-relationships.png "Dynamics 365 for tablets relationships panel")  
+ ![Dynamics 365 for tablets relationships panel.](media/mobile-app-form-relationships.png "Dynamics 365 for tablets relationships panel")  
   
  For Contact and User forms, the top item displays a communication card for the row. The communication card provides buttons to initiate communication with the person. For other tables, a communication card is displayed if there is a Contact quick view form embedded in the main form.  
   
@@ -133,7 +134,7 @@ The main form is used by all model-driven app clients. This form provides a cons
   
  In Dynamics 365 for tablets, the second panel begins with the name of the first tab on the form. Any columns that are included within the header are included and then the contents of the first tab. In Dynamics 365 for phones, headers appear in the first column.  
   
- ![CRM for Tablets Form First Panel](media/mobile-app-form-first-panel.png "CRM for Tablets Form First Panel")  
+ ![CRM for Tablets Form First Panel.](media/mobile-app-form-first-panel.png "CRM for Tablets Form First Panel")  
   
  If there is a process flow active for the form, the third tab displays tasks for the current stage of the process in Dynamics 365 for tablets. In Dynamics 365 for phones, the process control floats above the panes, expands over the user’s current pane when it’s selected, and is always visible and actionable.  
   
@@ -179,7 +180,7 @@ The main form is used by all model-driven app clients. This form provides a cons
 ## Classic forms  
  The following diagram shows the main form components used in the classic presentation.  
   
- ![Major form elements](media/elements.png "Major form elements")  
+ ![Major form elements.](media/elements.png "Major form elements")  
   
  The forms for updated tables have inherited many components from the classic forms, but there are significant differences.  
   

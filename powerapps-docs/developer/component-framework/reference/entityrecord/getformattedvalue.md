@@ -1,6 +1,6 @@
 ---
 title: getFormattedValue | Microsoft Docs
-description: 
+description: Gets the current formatted value of the record column.
 keywords:
 ms.author: nabuthuk
 author: Nkrb

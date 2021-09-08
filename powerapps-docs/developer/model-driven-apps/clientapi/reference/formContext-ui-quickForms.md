@@ -1,12 +1,13 @@
 ---
 title: "formContext.ui.quickForms (Client API reference) in model-driven apps| MicrosoftDocs"
 description: "Learn about working with processes in model-driven apps using client API."
-ms.date: 10/31/2018
+ms.date: 04/15/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: a04043de-3497-433a-ae73-4101806dd931
 author: "Nkrb"
+ms.subservice: mda-developer
 ms.author: "nabuthuk"
 manager: "kvivek"
 search.audienceType: 
@@ -17,9 +18,7 @@ search.app:
 ---
 # formContext.ui.quickForms (Client API reference)
 
-
-
-Provides methods to access all the quick view controls and its constituent controls on the model-driven apps forms when using the new form rendering engine (also called "turbo forms"). A quick view control is a quick view form added to a main form in model-driven apps that enables you to view information about a related entity record within the main form. Data in constituent controls in a quick view control cannot be edited.
+Provides methods to access all the quick view controls and its constituent controls on the model-driven apps forms when using the new form rendering engine (also called "turbo forms"). A quick view control is a quick view form added to a main form in model-driven apps that enables you to view information about a related table record within the main form. Data in constituent controls in a quick view control cannot be edited.
 
 The **quickForms** collection provides access to all the quick view controls on a form, and supports all the standard methods of the collections. See [Collections](collections.md)) for information about the collection methods. 
 
@@ -27,6 +26,7 @@ You can retrieve a quick view control in the **quickForms** collection by using 
 
 `quickViewControl = formContext.ui.quickForms.get(arg)`
 
+[!INCLUDE[cc-terminology](../../../data-platform/includes/cc-terminology.md)]
 
 ## Quick form control Methods
 

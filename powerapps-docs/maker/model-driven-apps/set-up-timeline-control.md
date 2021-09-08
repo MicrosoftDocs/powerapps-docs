@@ -7,8 +7,9 @@ ms.reviewer: "matp"
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "how-to"
 author: "lerobbin"
+ms.subservice: mda-maker
 ms.author: "lerobbin"
 manager: "kvivek"
 tags: 
@@ -27,7 +28,7 @@ The timeline control provides an easy and immersive experience to view informati
 
 This experience gives app makers the ability to configure the information displayed in each timeline to help users access information and create new activity rows, such as tasks and emails directly from the timeline quickly so they can deliver more personalized service.
 
-![Timeline view of activity](../../user/media/TimelineViewOfActivity.png)
+![Timeline view of activity.](../../user/media/TimelineViewOfActivity.png)
 
   1. Search Records
   2. Take notes
@@ -48,7 +49,7 @@ Timelines are located on forms within tables. By default, the account and contac
 4. The **Forms** tab displays all the forms available for the table. Select the main form where you want to add a timeline control. Notice that, the timeline control can only be used with **Main** form types.
 5. In the form editor, select **Components** on the command bar. Then, on the left navigation pane, scroll down to the **Timeline** control, and then drag and drop it to a section on the form.
 
-    ![Adding the timeline control to the form](media/add-timeline-main-form.gif "Adding the timeline control to the form")
+    ![Adding the timeline control to the form.](media/add-timeline-main-form.gif "Adding the timeline control to the form")
 
 6. Select **Save**, and then select **Publish**.
 
@@ -74,7 +75,7 @@ The following sections describe how to configure display options, advanced setti
 
   The following image shows the timeline at runtime when the **Rows shown on page** column is set to 10.
 
-   ![Rows shown on page](media/timeline-records-shown-on-page-runtime.png "Rows shown on page")
+   ![Rows shown on page.](media/timeline-records-shown-on-page-runtime.png "Rows shown on page")
 
 - **Row types shown**: Select which row types you want to show in the timeline. Users will also be able to create new rows of the row types you select here. You can select from: Activities and Notes. Both are selected by default.
 
@@ -90,7 +91,7 @@ The following sections describe how to configure display options, advanced setti
 
     The following image shows that because you selected **Activities**, **Notes**, and **Posts** in the **Row types to show** section of timeline properties, users will see an option to create these row types at runtime. The rows of these row types will also be shown in the timeline section at runtime.  
 
-    ![Option to create the row types that are selected in timeline properties](media/timeline-record-type-to-show-runtime.png "Row types shown based on the row types selected in timeline properties")  
+    ![Option to create the row types that are selected in timeline properties.](media/timeline-record-type-to-show-runtime.png "Row types shown based on the row types selected in timeline properties")  
        
     The timeline shows an icon before the activity, note, post, and custom table making it easy for you to identify the row type. Dates and timestamps are shown for each activity, note, or post in the timeline. 
 
@@ -98,7 +99,7 @@ The following sections describe how to configure display options, advanced setti
 
 Expand the **Advanced** section in the **Timeline** **Properties** for settings that span an activity or note, which are the primary row types that appear in the timeline section. This section is collapsed by default. When you enable or disable settings in the advanced section, you won't be able to see the changes at runtime until you save and publish your changes and refresh the form's web browser page in the app.
 
-![Advanced settings in Timeline properties](media/timeline-properties-advanced-section.png "Advanced settings in Timeline properties")
+![Advanced settings in Timeline properties.](media/timeline-properties-advanced-section.png "Advanced settings in Timeline properties")
 
 - **Quick entry row type**: Select the row type that you want to enable for quick create. For example, if **Notes** are selected in the drop-down list, users will see an option to quickly create a note from the timeline.
 
@@ -135,7 +136,7 @@ After you select **Activities** in the **Rows types to show** section, you can a
     
     - **Enable**: To show the activity type in the fly-out menu that appears when you select **Create a timeline row** in the timeline section, select **Enable**. The activity type will appear as shown in the following image:
 
-      ![Email activity in the flyout menu](media/timeline-email-option-in-create-timeline-flyout-runtime.png "Email activity in the flyout menu")
+      ![Email activity in the flyout menu.](media/timeline-email-option-in-create-timeline-flyout-runtime.png "Email activity in the flyout menu")
     
       The rows for this activity type will also be shown in the timeline.
 
@@ -199,7 +200,7 @@ All card forms are broken out into the following four sections:
 | d | **Footer** | This section is not displayed on the timeline row. | 
 | e | **Table Columns** | You can select which columns you want to add to your card form from the column options listed on the right.  You can customize your card form by dragging and dropping the columns you want to use into the sections you want that column to appear in on the timeline row. |
 
-![Advanced display options about how to customize a card form in the timeline](media/timeline-card-form-advanced-1.png "Advanced display options about how to customize a card form in the timeline")
+![Advanced display options about how to customize a card form in the timeline.](media/timeline-card-form-advanced-1.png "Advanced display options about how to customize a card form in the timeline")
 
 Each individual card form has to be customized for each activity row such as email, tasks, and so on.
 
@@ -234,7 +235,7 @@ This section is not visible on the timeline row.
 **h.**	**Footer – Column 3.** For this example, we selected **Priority** for this column.
 </ol>
 
-![Advanced display options how to customize a card form in timeline](media/timeline-activity-record-types-advanced2.png "Advanced display options how to customize a card form in timeline")
+![Advanced display options how to customize a card form in timeline.](media/timeline-activity-record-types-advanced2.png "Advanced display options how to customize a card form in timeline")
 
 ## Enable a custom activity in a timeline
 When you create a custom table, you might want to show the custom table as an activity for your users in the timeline. 
@@ -243,7 +244,7 @@ When you create a custom table, you might want to show the custom table as an ac
    - **Display in Activity menus**
    - **Enable quick create forms**
     
-    ![Custom activity](media/timeline-custom-activity.png)
+    ![Custom activity.](media/timeline-custom-activity.png)
 
     More information: [Create a custom table](../data-platform/data-platform-create-entity.md)
 
@@ -251,20 +252,20 @@ When you create a custom table, you might want to show the custom table as an ac
 
 ## Enable or disable rich-text editor for notes in timeline
 
-Rich-text editor enables users to create rich and well-formatted content for the notes with emphasis. The editor brings common word processor features. To learn more, see [Take notes](https://docs.microsoft.com/dynamics365/customer-service/customer-service-hub-user-guide-basics#take-a-note). 
+Rich-text editor enables users to create rich and well-formatted content for the notes with emphasis. The editor brings common word processor features. To learn more, see [Take notes](/dynamics365/customer-service/customer-service-hub-user-guide-basics#take-a-note). 
 
 The feature is enabled by default. If you want to disable and enable later for your users, follow the steps:
 
 1.	Sign in to [Power Apps](https://make.powerapps.com) and select your environment.
 
-2. Open a model-driven app, and then on the command bar select **Settings** ![Settings](../model-driven-apps/media/powerapps-gear.png) > **Administration** > **System Settings**.
+2. Open a model-driven app, and then on the command bar select **Settings** ![Settings.](../model-driven-apps/media/powerapps-gear.png) > **Administration** > **System Settings**.
 
 3. In the **System Settings** dialog, under the **General** tab, scroll down and select or unselect the check box for the **Use rich text to make it easier to format notes created in Timeline.** column.
 
 4. Select **OK**.
 
     > [!div class=mx-imgBorder] 
-    > ![Enable rich-text editor](media/timeline-note-enable-rich-text-editor.png "Enable rich-text editor")
+    > ![Enable rich-text editor.](media/timeline-note-enable-rich-text-editor.png "Enable rich-text editor")
 
 The rich-text editor is enabled or disabled for your users based on the check box selection.
 

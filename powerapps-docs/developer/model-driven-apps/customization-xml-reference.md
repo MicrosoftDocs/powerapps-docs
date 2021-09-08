@@ -7,6 +7,7 @@ ms.service: powerapps
 ms.topic: article
 ms.assetid: 864699de-c22f-3504-f120-84ca5a4aeca6
 author: Nkrb # GitHub ID
+ms.subservice: mda-developer
 ms.author: nabuthuk # MSFT alias of Microsoft employees only
 manager: shilpas # MSFT alias of manager or PM counterpart
 ms.reviewer: 
@@ -42,7 +43,7 @@ The customizations.xml file is one of the files included in an exported unmanage
 [When to edit the customizations file](/power-platform/alm/when-edit-customization-file)  
 [Edit the Customizations file with schema validation](edit-customizations-xml-file-schema-validation.md)  
 [Customize the Ribbon for Dynamics 365](customize-commands-ribbon.md)  
-[Change application navigation using the SiteMap](https://docs.microsoft.com/powerapps/maker/model-driven-apps/create-site-map-app) 
+[Change application navigation using the SiteMap](../../maker/model-driven-apps/create-site-map-app.md) 
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

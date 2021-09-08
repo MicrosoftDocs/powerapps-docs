@@ -2,7 +2,7 @@
 title: "Authenticate to use the Online Management API for Microsoft Dataverse| MicrosoftDocs"
 description: "Provides information about authenticating to the Online Management API to perform environment-related operations."
 ms.date: 10/23/2020
-ms.service: crm-online
+ms.service: powerapps
 ms.topic: conceptual
 ms.assetid: c292c148-01f0-41f6-a2fe-7ed05a01a733
 author: KumarVivek
@@ -18,15 +18,15 @@ search.app:
 > [!NOTE]
 > Effective August 26, 2020, the Online Management API is [deprecated](/power-platform/important-changes-coming##online-management-api-powershell-module-and-rest-api-are-deprecated). 
 
-Online Management API supports OAuth 2.0 protocol for authentication. Use [Azure Active Directory (AAD)](https://docs.microsoft.com/azure/active-directory/active-directory-whatis) to authenticate by obtaining a valid OAuth 2.0 access token, and pass it using the **Authorization** header in your requests to the Online Management API.
+Online Management API supports OAuth 2.0 protocol for authentication. Use [Azure Active Directory (AAD)](/azure/active-directory/active-directory-whatis) to authenticate by obtaining a valid OAuth 2.0 access token, and pass it using the **Authorization** header in your requests to the Online Management API.
 
-The recommended authentication API to use with the Online Management API is [Azure Active Directory Authentication Library (ADAL)](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-libraries), which is available for a wide variety of platforms and programming languages. 
+The recommended authentication API to use with the Online Management API is [Azure Active Directory Authentication Library (ADAL)](/azure/active-directory/develop/active-directory-authentication-libraries), which is available for a wide variety of platforms and programming languages. 
 
 ## How to authenticate?
 
 These are the broad steps to authenticate to the Online Management API service. 
 
-1. Register an app with Azure Active Directory to obtain *clientId* and *redirectUrl* values for your app. For information about this, see the "App registration for OAuth authentication" section in [Walkthrough: Register an app with Azure Active Directory](/powerapps/developer/data-platform/walkthrough-register-app-azure-active-directory)
+1. Register an app with Azure Active Directory to obtain *clientId* and *redirectUrl* values for your app. For information about this, see the "App registration for OAuth authentication" section in [Walkthrough: Register an app with Azure Active Directory](../walkthrough-register-app-azure-active-directory.md)
 
 1. Specify the values obtained from step# 1 in the authentication [helper code](sample-authentication-helper.md):
 

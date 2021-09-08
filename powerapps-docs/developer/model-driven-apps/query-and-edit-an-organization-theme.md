@@ -2,11 +2,12 @@
 title: "Query and edit an organization theme(model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about defining and applying visual themes for an organization. This provides a supported way to apply an organization’s logo and color choices to the application." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 04/14/2021
 ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
 author: "KumarVivek" # GitHub ID
+ms.subservice: mda-developer
 ms.author: "kvivek" # MSFT alias of Microsoft employees only
 manager: "shilpas" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -17,16 +18,13 @@ search.app:
 ---
 # Query and edit an organization theme
 
-<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/query-and-edit-an-organization-theme -->
-
-You can define and apply visual themes for an organization. This provides a supported way to apply an organization’s logo and color choices to the application. You can create a custom theme for your application by making changes to the default colors and visual elements provided in the un-customized model-driven apps system. For example, you can create your personal product branding, add a company logo and provide entity-specific coloring. The theme colors are applied globally throughout the application, with the exception of some legacy areas.  
+You can define and apply visual themes for an organization. This provides a supported way to apply an organization’s logo and color choices to the application. You can create a custom theme for your application by making changes to the default colors and visual elements provided in the un-customized model-driven apps system. For example, you can create your personal product branding, add a company logo and provide table-specific coloring. The theme colors are applied globally throughout the application, with the exception of some legacy areas.  
   
-<!-- [!NOTE]
-> [!INCLUDE[cc_feature_included_with_2015_update_1_admins](../../includes/cc-feature-included-with-2015-update-1-admins.md)]  -->
+[!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
   
- Theme customization is supported in this release only for the web application. The changes made for an organization's theme are not included in solutions exported from the organization. You can define multiple themes, but only one can be set and published as the default theme.  
+Theme customization is supported in this release only for the web application. The changes made for an organization's theme are not included in solutions exported from the organization. You can define multiple themes, but only one can be set and published as the default theme.  
   
- Video: [Theming](https://go.microsoft.com/fwlink/p/?LinkId=529568)  
+Video: [Theming](https://go.microsoft.com/fwlink/p/?LinkId=529568)  
   
 <a name="BKMK_QueryTheme"></a>
 
@@ -76,9 +74,9 @@ OData-Version: 4.0
 
  A theme is created by using the customization tools in the UI, without requiring a developer to write code. Details about how to apply these customizations can be found in [Change the color scheme or add a logo to match your organization’s brand](/dynamics365/customer-engagement/customize/change-color-scheme-add-logo-match-organizations-brand).  
 
- Most theme data is stored within the Theme entity. Customized colors for specific entities is included in the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.EntityColor> property. This data is exported with the entity if the entity is included in a solution.
+ Most theme data is stored within the theme table. Customized colors for specific tables is included in the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.EntityColor> property. This data is exported with the table if the table is included in a solution.
 
- The following table describes the `Theme` entity attributes that are valid for update and contain data that is applied by the theme:  
+ The following table describes the `Theme` table columns that are valid for update and contain data that is applied by the theme:  
 
 |Schema Name|Type|Value of default theme|Description|  
 |-----------------|----------|----------------------------|-----------------| 
@@ -86,8 +84,8 @@ OData-Version: 4.0
 |BackgroundColor|String|#FFFFFF|For internal use only.|
 |ControlBorder|String|#BDC3C7|The color that controls will use for borders.|  
 |ControlShade|String|#FFFFFF|The color for controls to use to indicate when you hover over items.|  
-|DefaultCustomEntityColor|String|#00CCA3|The default custom entity color if no color is assigned.|  
-|DefaultEntityColor|String|#666666|The default color for system entities if no color is assigned.|  
+|DefaultCustomEntityColor|String|#00CCA3|The default custom table color if no color is assigned.|  
+|DefaultEntityColor|String|#666666|The default color for system tables if no color is assigned.|  
 |GlobalLinkColor|String|#1160B7|The color for links, such as email addresses or lookups.|  
 |HeaderColor|String|#1160B7|The color for header text, such as form tab labels.|  
 |HoverLinkEffect|String|#E7EFF7|The color that commands or lists will use when you hover over the items.|  
@@ -96,7 +94,7 @@ OData-Version: 4.0
 |LogoId|String|null|The name of a web resource to use as a logo. Recommended dimensions are a height of 50 pixels and a maximum width of 400 pixels.|  
 |LogoToolTip|String|Model-driven apps|The text that will be used as the tooltip and alt text for the logo.| 
 |MainColor|String|#3B79B7|The Unified Interface primary theme color to be used on main command bar, buttons and tabs.| 
-|Name|String|Model-driven apps Default Theme|The name of the Theme entity.|  
+|Name|String|Model-driven apps Default Theme|The name of the theme table.|  
 |NavBarBackgroundColor|String|#002050|The primary navigation bar color.|  
 |NavBarShelfColor|String|#DFE2E8|The secondary navigation bar color.|  
 |OverriddenCreatedOn|DateTime|null|Date and time that the record was migrated.|  
@@ -106,7 +104,7 @@ OData-Version: 4.0
 |SelectedLinkEffect|String|#F8FAFC|The color that commands or lists will use to indicate selected items.| 
 |TransactionCurrencyId|Lookup|null|Exchange rate for the currency associated with the Theme with respect to the base currency.| 
  
- After you have applied changes, use the <xref href="Microsoft.Dynamics.CRM.PublishTheme?text=PublishTheme Action" /> or <xref:Microsoft.Crm.Sdk.Messages.PublishThemeRequest> class to make one of the theme records the current theme.  
+After you have applied changes, use the <xref href="Microsoft.Dynamics.CRM.PublishTheme?text=PublishTheme Action" /> or <xref:Microsoft.Crm.Sdk.Messages.PublishThemeRequest> class to make one of the theme records the current theme.  
 
 <a name="BKMK_ExportingAndImportingThemes"></a>
 
@@ -116,7 +114,7 @@ OData-Version: 4.0
 
 ### See also
 
- [Theme Entity](../data-platform/reference/entities/theme.md) <br/>
+ [Theme table](../data-platform/reference/entities/theme.md) <br/>
  [Create a theme](https://docs.microsoft.com/powerapps/maker/model-driven-apps/create-themes-organization-brandingd) <br/>
  [Developers guide to customization](overview.md)
 
