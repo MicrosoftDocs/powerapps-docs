@@ -340,4 +340,4 @@ Once the app is ready to use, [share the app](../share-app.md).
 - [Control reference](../reference-properties.md)
 
 
-[!INCLUDE[footer-include](../../../includes/footer-banner.md)]
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)] 
