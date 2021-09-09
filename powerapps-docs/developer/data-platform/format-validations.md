@@ -2,11 +2,11 @@
 title: "Format validations (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to validate format conversions in Microsoft Dataverse." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 07/30/2021
+ms.date: 09/09/2021
 ms.reviewer: "nabuthuk"
 ms.service: powerapps
 ms.topic: "article"
-author: "nkrb" # GitHub ID
+author: "NHelgren" # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: "nabuthuk" # MSFT alias of Microsoft employees only
 manager: "kvivek" # MSFT alias of manager or PM counterpart
@@ -37,7 +37,7 @@ When you import solutions that include format values on data types, will fail in
 
 - When a solution is imported that contains a column with an invalid format for the data type for a column that already exists in the installed solution.
 
-In the second scenario, if your installed solution has a column that includes a data type with an invalid format, the import will be successful, until the columns incompatible format is updated in the installed solution.
+In the second scenario, if your installed solution has a column that includes a data type with an invalid format, the import will be successful until the columns' incompatible format is updated in the installed solution.
 
 Suppose your solution is failing because of an invalid format. In that case, you can perform the retrieve and update process in the source org to fix the invalid format and then repackage the solution.
 
