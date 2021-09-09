@@ -19,7 +19,7 @@ As a portal maker, you can use [Azure Front Door](/azure/frontdoor/standard-prem
 
 > [!NOTE]
 > - Although this article is focused on Azure Front Door, similar steps can be used for any content delivery network or WAF provider. The terminology used by various components might be different.
-> - While [custom domain HTTPS settings using Azure portal](/azure/frontdoor/front-door-faq#can-i-configure-tls-policy-to-control-tls-protocol-versions-) allows you to choose a [default minimum](/azure/frontdoor/front-door-faq#what-tls-versions-are-supported-by-azure-front-door-) TLS version between 1.0 and 1.2, use TLS 1.2 for stronger security.
+> - While [custom domain HTTPS settings using Azure portal](/azure/frontdoor/front-door-faq#can-i-configure-tls-policy-to-control-tls-protocol-versions-) allows you to choose a [default minimum](/azure/frontdoor/front-door-faq#what-tls-versions-are-supported-by-azure-front-door-) TLS version between 1.0 and 1.2, use TLS version 1.2 for stronger security.
 
 Follow these steps to set up Azure Front Door with portals:
 
