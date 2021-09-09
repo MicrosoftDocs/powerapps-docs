@@ -280,10 +280,12 @@ To debug your code component using Requestly:
    1. Open IIS on your machine
    2. In right side panel "Connections", expand tree and right click on Sites
    3. Add website
-   4. Set name (for instance as a name of your controller **YOUR_CONTROL_NAME**)
-   5. Set physical path to your custom controller folder, like `C:\COMPONENT_ROOT_FOLDER\out\controls\YOUR_CONTROL_NAME\`
-   6. Set port (any number for instance **7777**)
-   7. Click OK. Selected folder is now hosted on `http://localhost:<selectedPort>`
+   4. Set "Site name"
+   5. Set "Physical path" to your custom controller folder, like `C:\COMPONENT_ROOT_FOLDER\out\controls\YOUR_CONTROL_NAME\`
+   6. Set "Port" (any number for instance **7777**)
+   7. Click OK. Selected folder is now hosted on `http://localhost:<SELECTED_PORT>`
+
+> [!div class="mx-imgBorder"] > ![IIS website.](media/iis-website.png "IIS website")
 
 3. Download and install [Requestly](https://requestly.io)
 
@@ -294,7 +296,7 @@ To debug your code component using Requestly:
 6. Add "Replace Host" rule
    1. Set name of the rule
    2. Set "Replace" field with `https://[ORG_URL]/[APPLICATION_ID]/webresources/[YOUR_NAMESPACE].[YOUR_CONTROL_NAME]/`
-   3. Set "With" with `http://localhost:<selectedPort>`
+   3. Set "With" with `http://localhost:<SELECTED_PORT>`
    4. Set "If request" with "URL" "Contains" `[YOUR_NAMESPACE].[YOUR_CONTROL_NAME]`
    5. Save the rule and enable it.
 
