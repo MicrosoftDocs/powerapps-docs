@@ -18,16 +18,19 @@ contributors:
 
 As explained in the [portal lifecycle](portal-lifecycle.md) article earlier, a Power Apps portals goes through different stages. You can convert a portal from one stage to another, depending on what conversion is allowed, and whether the environment has the required license, or capacity.
 
+> [!IMPORTANT]
+> Default settings that apply to a newly provisioned portal also apply to a converted portal. For example, after a portal is converted, [table permission changes for forms and lists](../important-changes-deprecations.md#table-permission-changes-for-forms-and-lists-on-new-portals) that applies to newly created portals will also take effect on the converted portal. However, portal configuration changes and customizations are preserved during this conversion process.
+
 ## Convert a portal from trial to production
 
 You can convert a trial portal to a production portal from the notifications displayed in the Power Apps Portals admin center.
 
 > [!NOTE]
-> - You must be assigned one of the following roles to convert a portal from trial to production:
->     - Global administrator
->     - System administrator
-> <br> More information: [Admin roles required for portal administrative tasks](portal-admin-roles.md)
-> - Default settings that apply to a newly provisioned portal also apply to a portal converted from trial to production. For example, when a trial portal is converted to production, [table permission changes for forms and lists on new portals](../important-changes-deprecations.md#table-permission-changes-for-forms-and-lists-on-new-portals) will take effect on the converted production portal. However, configuration changes and customizations made in trial portal are preserved during this conversion process.
+> You must be assigned one of the following roles to convert a portal from trial to production:
+> - Global administrator
+> - System administrator
+>
+> More information: [Admin roles required for portal administrative tasks](portal-admin-roles.md)
 
 When you open the [Power Apps Portals admin center](admin-overview.md) and go to the **[Portal Details](portal-details.md)** tab, you'll see the notification about the trial expiration displayed below the **Type** field.
 
