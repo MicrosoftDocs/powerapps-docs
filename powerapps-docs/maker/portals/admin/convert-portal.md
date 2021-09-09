@@ -27,7 +27,7 @@ You can convert a trial portal to a production portal from the notifications dis
 >     - Global administrator
 >     - System administrator
 > <br> More information: [Admin roles required for portal administrative tasks](portal-admin-roles.md)
-> - Any default settings that apply to a newly provisioned portal also apply to a portal converted from trial to production. For example, when a trial portal is converted to production, [table permission changes for forms and lists on new portals](../important-changes-deprecations.md#table-permission-changes-for-forms-and-lists-on-new-portals) will take effect on the converted production portal as if the converted portal is a new portal. However, configuration changes and customizations made in trial portal are preserved during this conversion process.
+> - Default settings that apply to a newly provisioned portal also apply to a portal converted from trial to production. For example, when a trial portal is converted to production, [table permission changes for forms and lists on new portals](../important-changes-deprecations.md#table-permission-changes-for-forms-and-lists-on-new-portals) will take effect on the converted production portal. However, configuration changes and customizations made in trial portal are preserved during this conversion process.
 
 When you open the [Power Apps Portals admin center](admin-overview.md) and go to the **[Portal Details](portal-details.md)** tab, you'll see the notification about the trial expiration displayed below the **Type** field.
 
