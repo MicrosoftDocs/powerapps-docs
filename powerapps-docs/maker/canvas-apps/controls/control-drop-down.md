@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 07/06/2021
+ms.date: 08/09/2021
 ms.subservice: canvas-maker
 ms.author: chmoncay
 search.audienceType: 
@@ -98,7 +98,7 @@ A **Drop down** control conserves screen real estate, especially when the list c
 
 **[Reset](properties-core.md)** – Whether a control reverts to its default value.
 
-**SelectedText (Deprecated)** – A string value that represents the selected item.
+**SelectedText (Deprecated)** – A string value that represents the selected item. Use **Dropdown1.SelectedText.Value** instead, replacing "Dropdown1" with drop-down control name in the app.
 
 **[SelectionColor](properties-color-border.md)** – The text color of a selected item or items in a list or the color of the selection tool in a pen control.
 

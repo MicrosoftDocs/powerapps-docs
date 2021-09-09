@@ -42,7 +42,7 @@ People frequently compare workflows and plug-ins as the choices to apply custom 
 
 - Custom Actions are a type of process similar to workflows that allow for creating re-usable messages that can be called from other workflows or from the web service endpoints.
 
-- Azure Service Bus integration and WebHooks can be used to push data to external systems where logic can be applied using many different resources.
+- Azure Service Bus integration and Webhooks can be used to push data to external systems where logic can be applied using many different resources.
 
 - Power Automate provides many capabilities that previously were performed using plug-ins.
 

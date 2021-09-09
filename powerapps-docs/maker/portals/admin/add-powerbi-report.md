@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/11/2021
+ms.date: 08/09/2021
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: tapanm
@@ -44,7 +44,7 @@ To add a dashboard or report connecting to Azure Analysis Services, use [CustomD
 For example:
 
 ```
-{% powerbi authentication_type:"powerbiembedded" path:"https://app.powerbi.com/groups/<GroupID>/reports/<ReportID>" roles:"<roles associated with report>" "customdata:<customdata>" %}
+{% powerbi authentication_type:"powerbiembedded" path:"https://app.powerbi.com/groups/<GroupID>/reports/<ReportID>" roles:"<roles associated with report>" customdata:"<customdata>" %}
 ```
 
 The optional **customdata** tag can be configured as a string, or generated dynamically based on an object's attribute, using a period ("."), or square brackets ("[]") to separate between the object and the attribute, in between two pairs of curly brackets.
@@ -117,28 +117,26 @@ Below is a sample JavaScript to update the report settings or to handle events. 
 > Use powerbi-client JavaScript library to disable or enable filter pane. However, if you want to restrict access to data or configure security, use [Row-level security (RLS) with Power BI](/power-bi/admin/service-admin-rls). Disabling filter pane doesn't restrict data access, and it can be re-enabled using JavaScript library code.
 
 ```javascript
-$(window).load(function(){
+$(document).ready(function () {
     var embedContainer = $(".powerbi")[0];
-    var report = powerbi.get(embedContainer);
-    report.on("loaded", function(){
-        report.updateSettings({
-            panes: {
-                filters :{
-                    visible: false
-                },
-                pageNavigation:{
-                    visible: false
+    if (embedContainer) {
+        var report = powerbi.get(embedContainer);
+        report.on("loaded", function () {
+            report.updateSettings({
+                panes: {
+                    filters: {
+                        visible: false
+                    },
+                    pageNavigation: {
+                        visible: false
+                    }
                 }
-            }
-        }).catch(function (errors) {
-            console.log(errors);
-        });
-    })
-    report.on('dataSelected', function(event){
-        console.log('Event - dataSelected:');
-        console.log(event.detail);
-    })
-})
+            }).catch(function (errors) {
+                console.log(errors);
+            });
+        })
+    }
+});
 ```
 
 To add custom JavaScript to a webpage:

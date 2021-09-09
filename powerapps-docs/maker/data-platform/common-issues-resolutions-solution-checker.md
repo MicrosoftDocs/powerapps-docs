@@ -272,6 +272,10 @@ For plug-in and workflow activity rules where the issue is only relevant in the 
 
 The solution checker will list the number of the errors found in the app, *including those from tests*. The app checker in design mode only shows errors from screen controls and components. If the error count shown in the app checker in design mode is smaller, open the [Test Studio](../canvas-apps/test-studio.md) and search for the errors in the expressions used in tests.
 
+## Solution Checker violations reported for code components
+
+Solution Checker reports multiple violation when run on the solution which has code components built in debug mode. Solution checker is targeted to validate code for production use, thus code components must be build using proper buildMode: `npm run build -- --buildMode production or msbuild /p:configuration=Release` depending on your building system. More information [Create and build a code component](../../developer/component-framework/create-custom-controls-using-pcf.md).
+
 ## See also
 
 [Best practices and guidance for the Dataverse](../../developer/data-platform/best-practices/index.md)

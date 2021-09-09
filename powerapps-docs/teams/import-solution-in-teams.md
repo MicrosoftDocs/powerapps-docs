@@ -5,7 +5,7 @@ author: wimcoor
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 03/11/2020
+ms.date: 08/02/2021
 ms.subservice: teams
 ms.author: wimcoor
 ms.reviewer: matp
@@ -18,7 +18,7 @@ Microsoft Dataverse for Teams provides a simplified way to transport customizati
 
 ## Export customizations from Dataverse for Teams
 
-Take the following steps to export your customizations from Dataverse for Teams:
+Take the following steps to export your customizations from Dataverse for Teams. Notice that the solution packages you export from Dataverse for Teams are unmanaged.
 1. From the Power Apps personal app in Teams, select the **Build** tab of the team where you want to export your customizations. More information: [Install the Power Apps personal app in Microsoft Teams](install-personal-app.md)
 1. Select **See all**, and select the items you want to export. 
 1. On the command bar, select **Export**.
