@@ -268,7 +268,7 @@ To debug your code component using Fiddler:
 
 To debug your code component using Requestly:
 
-1. Enable IIS on your machine
+1. Enable Internet Information Services (IIS) on your machine
 
    1. Open Control Panel and click Programs and Features > Turn Windows features on or off.
    2. Enable Internet Information Services.
