@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: intro-internal
-ms.date: 07/16/2021
+ms.date: 09/09/2021
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: tapanm
