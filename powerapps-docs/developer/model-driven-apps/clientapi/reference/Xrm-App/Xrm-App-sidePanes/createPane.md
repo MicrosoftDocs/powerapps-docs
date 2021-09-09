@@ -33,7 +33,7 @@ The `paneOptions` object has the following values:
 |Parameter Name| Type| Required|Description|
 |-------------|------|---------|------------|
 |title|string|No|The title of the pane. Used in pane header and for tooltip.|
-|panelId|string|No| The ID of the new pane. If the value is not passed, the ID value is auto-generated.|
+|paneId|string|No| The ID of the new pane. If the value is not passed, the ID value is auto-generated.|
 |canClose|Boolean|No| Whether the pane header will show a close button or not.|
 |imageSrc|string|No| The path of the icon to show in the panel switcher control.|
 |hideHeader|Boolean|No| Hides the header pane, including the title and close button. Default value is false.|
