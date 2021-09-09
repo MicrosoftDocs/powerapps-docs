@@ -30,7 +30,7 @@ Provides methods to use native device capabilities.
 | [getCurrentPosition](xrm-device/getCurrentPosition.md) | [!INCLUDE[xrm-device/includes/getCurrentPosition-description.md](xrm-device/includes/getCurrentPosition-description.md)] |
 | [pickFile](xrm-device/pickFile.md)                     | [!INCLUDE[xrm-device/includes/pickFile-description.md](xrm-device/includes/pickFile-description.md)]                     |
 
-### Related topics
+### Related articles
 
 [Client API Xrm object](../clientapi-xrm.md)
 
