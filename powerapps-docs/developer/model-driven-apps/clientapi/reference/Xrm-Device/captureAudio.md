@@ -41,7 +41,7 @@ On success, returns a base64 encoded audio object with the values specified earl
 
 ## Exceptions
 
-See [Web service error codes](https://docs.microsoft.com/en-us/powerapps/developer/data-platform/org-service/web-service-error-codes)
+See [Web service error codes](../../../../data-platform/org-service/web-service-error-codes.md)
 
 ### Related topics
 

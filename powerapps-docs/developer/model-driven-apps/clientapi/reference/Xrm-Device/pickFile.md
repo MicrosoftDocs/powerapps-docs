@@ -41,7 +41,7 @@ On success, returns a promise with array of objects as specified earlier for the
 
 ## Exceptions
 
-See [Web service error codes](https://docs.microsoft.com/en-us/powerapps/developer/data-platform/org-service/web-service-error-codes)
+See [Web service error codes](../../../../data-platform/org-service/web-service-error-codes.md)
 
 ### Related topics
 

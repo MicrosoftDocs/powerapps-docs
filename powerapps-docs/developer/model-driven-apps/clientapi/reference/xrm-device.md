@@ -1,5 +1,6 @@
 ---
 title: "Xrm.Device| MicrosoftDocs"
+description: Provides methods to use native device capabilities.
 ms.date: 09/08/2021
 ms.service: powerapps
 ms.topic: "reference"
