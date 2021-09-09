@@ -70,6 +70,10 @@ You can also move to a previous stage in a different table.
 <td>stageGate</td>
 <td>One or more required column on the current stage is empty.</td>
 </tr>
+<tr>
+<td>preventDefault</td>
+<td>This value will be returned if an OnPreStageChange event handler invokes preventDefault</td>
+</tr>
 </table>
 </td>
 </tr>
