@@ -1,5 +1,6 @@
 ---
 title: "pickFile| MicrosoftDocs"
+description: Opens a dialog box to select files for the upload
 ms.date: 09/08/2021
 ms.service: powerapps
 ms.topic: "reference"

@@ -1,6 +1,6 @@
 ---
 title: PickFile | Microsoft Docs
-description: Opens a dialog box to select files for the upload.
+description: Opens a window to select files for the upload.
 keywords:
 ms.author: nabuthuk
 author: Nkrb

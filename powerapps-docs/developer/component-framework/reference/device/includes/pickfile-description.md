@@ -1,6 +1,6 @@
 ---
 title: PickFile | Microsoft Docs
-description:
+description: Opens a window to select files for the upload
 keywords:
 ms.author: nabuthuk
 manager: kvivek
