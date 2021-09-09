@@ -34,7 +34,7 @@ sections:
           Power Apps portals version 8.3 and later supports [TLS 1.2](https://support.microsoft.com/help/4041984/portal-capabilities-for-microsoft-dynamics-365-version-8-3-2-85-releas).
 
       - question: |
-          Which cipher suites are supported by Power Apps portals?
+          Which TLS 1.2 cipher suites are supported by Power Apps portals?
         answer: |
           Power Apps portals supports the following TLS 1.2 cipher suites as per [Microsoft Security Policy](/compliance/assurance/assurance-governance#how-do-microsoft-online-services-implement-the-microsoft-security-policy-msp) to account for multiple supported clients. Strongest cipher suites are at the top of the list. This ensures the clients always use the strongest cipher suite from this list that they support while connecting to portals.
 
