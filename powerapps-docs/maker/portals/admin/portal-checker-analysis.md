@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/21/2021
+ms.date: 08/30/2021
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: tapanm
@@ -51,11 +51,14 @@ To fix this issue for Advanced forms:
 Once these changes are made, appropriate table permissions would need to be created and assigned to appropriate web roles to ensure that all the users can access these components.
 
 > [!NOTE]
-> This method of disabling **Table Permissions** would be deprecated soon. Therefore, it shouldn't be used. Use proper table permissions, and web role setup to provide access to users for any data instead.
+> This method of disabling **Table Permissions** would be deprecated soon. Therefore, it shouldn't be used. Use proper [table permissions](../configure/entity-permissions-studio.md), and web role setup to provide access to users for any data instead. More information: [Table permission changes for forms and lists on new portals](../important-changes-deprecations.md#table-permission-changes-for-forms-and-lists-on-new-portals)
 
 ## Anonymous access available to OData feed
 
-List component in portal can be enabled for OData feed by enabling [OData feed configuration](/configure/entity-lists.md#list-odata-feeds) on lists.
+> [!NOTE]
+> Starting with release [9.3.7.x](/power-platform/released-versions/portals/portalupdate1), lists on all portals (new or existing) that have [OData feed](../configure/entity-lists.md#list-odata-feeds) enabled will require appropriate [table permissions](../configure/entity-permissions-studio.md) setup for the feed on these lists to work.
+
+List component in portal can be enabled for OData feed by enabling [OData feed configuration](../configure/entity-lists.md#list-odata-feeds) on lists. 
 
 To find anonymous OData feeds enabled on your portal:
 

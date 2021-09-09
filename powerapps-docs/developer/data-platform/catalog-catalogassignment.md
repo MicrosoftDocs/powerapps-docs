@@ -2,7 +2,7 @@
 title: "Catalog and CatalogAssignment tables (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to use the Catalog and CatalogAssignment tables to expose events in your solution"
 ms.custom: ""
-ms.date: 07/22/2021
+ms.date: 09/08/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -107,8 +107,10 @@ With this catalog, the following events will be available:
 Most tables will support **Create**, **Update**, and **Delete** events. There are some exceptions.
 User-owned tables will expose events for changes to sharing: **GrantAccess**, **ModifyAccess**, and **RevokeAccess**
 
-
-Any Custom API or Custom Process Actions, even if they are bound to a table, must be explicitly assigned.
+> [!NOTE]
+> Any Custom API or Custom Process Actions, that are bound to the table will also be included.
+> 
+> Custom Process Actions that are disabled will be shown, but the event will never occur until they are enabled and used.
 
 ## Create a Catalog in Power Apps
 
@@ -132,14 +134,6 @@ You should always create a catalog as part of a solution. Use the following inst
 
 1. Save and close the form.
 
-> [!IMPORTANT]
-> There is a known issue where the catalog will not be added to the solution. Until this is fixed, you must manually add the catalog to your solution.
-
-### Add a catalog to your solution
-
-1. While viewing your solution, click **Add existing**.
-1. Select the catalog you want to add, and click **Add**.
-
 
 ## Create a Catalog Assignment in Power Apps
 
@@ -160,14 +154,6 @@ Using the same solution that contains the catalog in [Power Apps](https://make.p
     > The catalog you select must be a second-level catalog representing a category.
 
 1. Save and close the form
-
-> [!IMPORTANT]
-> There is a known issue where the catalog assignment will not be added to the solution. Until this is fixed, you must manually add the catalog assignement to your solution.
-
-### Add a catalog assignment to your solution
-
-1. While viewing your solution, click **Add existing**.
-1. Select the catalog assignment you want to add, and click **Add**.
 
 ## Block customization of catalog items in your managed solution
 

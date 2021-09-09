@@ -5,7 +5,7 @@ author: navjotm
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/05/2020
+ms.date: 08/12/2021
 ms.subservice: teams
 ms.author: namarwah
 ms.reviewer: tapanm
@@ -86,7 +86,6 @@ The Manage inspections app gives a manager the following capabilities:
 - [Edit the app configuration](#edit-the-app-configuration)
 - [Add location types](#add-location-types)
 - [Add locations](#add-locations)
-- [Group locations](#group-locations)
 - [Review submitted inspections](#review-submitted-inspections)
 - [Review inspection insights](#review-inspection-insights)
 
@@ -110,7 +109,7 @@ To configure the app:
 
         > [!IMPORTANT]
         > Without Planer integration, the app will still work, but the tasks will not be created during the inspections.    
- 
+
     - To set up the Planner tab first, go back to the Teams channel, set up the Planner tab, and reopen the **Manage inspections** tab.
 
         > [!TIP]
@@ -125,7 +124,7 @@ To configure the app:
     > [!NOTE]
     > - If you selected **I'll set up later** for Planner integration, you won't be able to select the *Tasks* (Planner) instance.
 
-    ![Select channel and Planner.](media/inspection/select-planner-channel.png "Select channel and Planner")
+    ![Select Team, Channel and Planner.](media/inspection/select-planner-channel.png "Select channel and Planner")
 
 1. Select **Continue**.
 
@@ -187,34 +186,6 @@ To add locations:
 
     ![Add location.](media/inspection/add-location.png "Add location")
 
-### Group locations
-
-Grouped locations allow users to aggregate locations that are commonly inspected together to ensure that employees can more easily inspect all the necessary locations.
-
-To group locations:
-
-1. Select the **Manage inspections** tab in Teams.
-
-1. Select ![Teams settings for grouped locations.](media/inspection/teams-settings.png "Teams settings for grouped locations") from the upper-right corner.
-
-1. Select **Grouped locations**.
-
-1. Select **Add group** to add a new group.
-
-    ![Add group.](media/inspection/add-group.png "Add group")
-
-1. Enter a *Title*.
-
-1. Select locations and location types as required, such as area details.
-
-1. Select areas as applicable.
-
-1. Select the required location from the **Locations** drop-down menu.
-
-1. Select **Save**.
-
-    ![Group locations.](media/inspection/group-locations.png "Group locations")
-
 ### Add inspection forms
 
 Inspection forms are tied to location types. You can define more than one inspection form for each location type. Each inspection form can be tied to more than one location types.
@@ -237,11 +208,18 @@ To add inspection forms:
 
     ![Add inspection form.](media/inspection/add-inspection-form.png "Add inspection form")
 
+## Review inspections app
+
+The Review inspections app gives a manager the following capabilities:
+
+- [Review submitted inspections](#review-submitted-inspections)
+- [Review inspection insights](#review-inspection-insights)
+
 ### Review submitted inspections
 
 To review submitted inspection:
 
-1. Select the **Manage inspections** tab in Teams.
+1. Select the **Review inspections** tab in Teams.
 
 1. Select the **Locations** tab.
 
@@ -261,7 +239,7 @@ Inspection insights provide managers with a dashboard of insights about inspecti
 
 To view the inspection insights:
 
-1. Select the **Manage inspections** tab in Teams.
+1. Select the **Review inspections** tab in Teams.
 
 1. Select **Inspection insights** tab inside the app.
 
@@ -292,7 +270,6 @@ The **Inspection** app provides following capabilities:
 - [Inspection form](#inspection-form)
 - [Add Planner task to an inspection step](#add-a-planner-task-to-an-inspection-step)
 - [Review inspection](#review-inspection)
-- [Submit inspection for grouped locations](#submit-inspection-for-grouped-locations)
 
 ### Home screen
 
@@ -367,40 +344,6 @@ modify the outcome. Or, select **Submit inspection** to submit the inspection fo
 ![Review inspection.](media/inspection/review-inspection.png "Review inspection")
 
 After the inspection is submitted, the app takes you to the next screen that shows the status of the submission and the list of all the locations of the current location type.
-
-### Submit inspection for grouped locations
-
-To submit inspection of grouped locations:
-
-1. Open the **Inspection** tab in Teams.
-
-1. Select **Inspect location**.
-
-1. Select the group from the **Grouped locations** section.
-
-    ![Grouped locations.](media/inspection/grouped-locations.png "Grouped locations")
-
-1. Select **Begin inspection**.
-
-    ![Begin inspection.](media/inspection/begin-inspection.png "Begin inspection")
-
-1. Respond to the inspection steps on the screen.
-
-1. Select **Review inspection**.
-
-    ![Review grouped inspection.](media/inspection/review-inspection-grouped.png "Review grouped inspection")
-
-1. Select the next location in the tab.
-
-1. Select **Continue inspection**.
-
-    ![Continue inspection.](media/inspection/continue-inspection.png "Continue inspection")
-
-1. Respond to the inspection steps on the screen.
-
-1. Select **Submit inspection**.
-
-    ![Submit inspection.](media/inspection/submit-inspection.png "Submit inspection")
 
 ### See also
 

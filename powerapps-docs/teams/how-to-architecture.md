@@ -7,7 +7,7 @@ ms.topic: conceptual
 ms.custom: 
 ms.date: 06/29/2021
 ms.subservice: teams
-ms.author: v-ljoel
+ms.author: namarwah
 ms.reviewer: tapanm
 contributors:
     - navjotm
@@ -32,8 +32,8 @@ To understand and use information in this article, you'll need to know about dif
 - [Add a screen to a canvas app and navigate between screens](../maker/canvas-apps/add-screen-context-variables.md)
 
 > [!IMPORTANT]
-> This is a preview feature.
-> Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
+> - This is a preview feature.
+> - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 
 ## Data model
 The following diagram shows the tables, columns, and relationships in the How to app solution:

@@ -14,11 +14,11 @@ search.audienceType:
 search.app: 
   - "PowerApps"
 ---
-# Overview of canvas app custom pages for model-driven apps (preview)
+# Overview of custom pages for model-driven apps (preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-The custom page is a new page type within a model-driven app, which brings the power of canvas apps into model-driven apps. Custom pages increase the convergence of model-driven and canvas apps and can be used to add full pages, dialogs, or panes with the flexibility of the canvas app designer. It also includes a low-code page authoring experience with expressions and custom Power Apps component framework controls.  
+The custom page is a new page type within a model-driven app, which brings the power of canvas apps into model-driven apps. Custom pages increase the convergence of model-driven and canvas apps and can be used to add full pages, dialogs, or panes with the flexibility of the canvas designer. It also includes a low-code page authoring experience with expressions and custom Power Apps component framework controls.  
 
 This new page can be more flexible than a model-driven app form, view, or dashboard page. It lets you include one or more tables. Then, the maker can define the data and component interactions. The custom page is a separate solution element supporting co-authoring at a page level. Like other model-driven app pages, the page state is either from the parameters passed or retrieved from persisted tables.
 
@@ -29,17 +29,17 @@ This new page can be more flexible than a model-driven app form, view, or dashbo
 
 Below shows the custom page inline within the model-driven app. The model-driven app has the full-page space in the images without the header and navigation.
 
-[Custom page as main page.](add-page-to-model-app.md).
+[Custom page as main page](add-page-to-model-app.md).
 
   > [!div class="mx-imgBorder"]
   > ![Custom page as main page](media/model-app-page-overview/page-inline-model-app.png "Custom page as main page")
 
-[Custom page as a center dialog.](/powerapps/developer/model-driven-apps/clientapi/navigate-to-custom-page-examples#open-as-a-centered-dialog)
+[Custom page as a center dialog](/powerapps/developer/model-driven-apps/clientapi/navigate-to-custom-page-examples#open-as-a-centered-dialog).
 
   > [!div class="mx-imgBorder"]
   > ![Custom page as center dialog](media/model-app-page-overview/page-center-dialog-model-app.png "Custom page as center dialog")
 
-[Custom page as a side dialog.](/powerapps/developer/model-driven-apps/clientapi/navigate-to-custom-page-examples#open-as-a-side-dialog)
+[Custom page as a side dialog](/powerapps/developer/model-driven-apps/clientapi/navigate-to-custom-page-examples#open-as-a-side-dialog).
 
   > [!div class="mx-imgBorder"]
   > ![Custom page as side dialog](media/model-app-page-overview/page-side-dialog-model-app.png "Custom page as side dialog")

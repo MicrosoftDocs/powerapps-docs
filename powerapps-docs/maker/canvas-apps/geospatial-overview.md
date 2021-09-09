@@ -58,7 +58,7 @@ The geospatial features require additional terms of use that must be reviewed an
 
     ![Screenshot of environment settings with Features selection highlighted.](./media/geospatial/ppac-settings.png "Screenshot of environment settings with Features selection highlighted")
 
-1. Under **Geospatial services (preview)**, set the toggle switch to **On**. A terms of service notice will appear. Read through the terms of service, and if you agree, select the checkbox **I agree to the terms of service**, and then select **Enable**.
+1. Under **Geospatial services**, set the toggle switch to **On**. A terms of service notice will appear. Read through the terms of service, and if you agree, select the checkbox **I agree to the terms of service**, and then select **Enable**.
 
     ![Screenshot of the terms of service.](./media/geospatial/ppac-tos.png "Screenshot of the terms of service")
 

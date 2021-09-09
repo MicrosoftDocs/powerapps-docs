@@ -7,6 +7,8 @@
   items:
   - name: Supported customizations
     href: supported-customizations.md
+  - name: Learn about developer tools
+    href: developer-tools.md
 - name: Understand terminology
   href: understand-terminology.md
 - name: Security and data access
@@ -145,6 +147,12 @@
       href: troubleshoot-plug-in.md
     - name: Access external web resources
       href: access-web-services.md
+    - name: Quickstarts
+      items:
+      - name: Create a project using Power Platform Tools
+        href: tools/devtools-create-project.md
+      - name: Create a plug-in using Power Platform Tools
+        href: tools/devtools-create-plugin.md
     - name: Tutorials
       items:
       - name: Write and register a plug-in
@@ -446,6 +454,8 @@
       href: download-tools-nuget.md
     - name: Microsoft Power Platform CLI 
       href: powerapps-cli.md
+    - name: Power Platform Tools for Visual Studio
+      href: ./tools/devtools-install.md
   - name: Community Tools
     href: community-tools.md
   - name: Testing tools
