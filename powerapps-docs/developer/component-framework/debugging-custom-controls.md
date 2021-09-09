@@ -108,7 +108,7 @@ While the test harness is suitable for testing simple code components, the follo
 5. Model-driven apps specifics such as field level security, read-only behavior, dataset selection API, and integration with the model-driven apps command bar.
 6. Other context APIs such as [Navigation](reference/navigation.md) and [Utility](reference/utility.md) methods.
 
-To test these scenarios, you will need to first deploy your code component and test using the technique described in [Debugging after deploying to Dataverse using Fiddler](#debugging-after-deploying-into-microsoft-dataverse-using-fiddler)
+To test these scenarios, you will need to first deploy your code component and test using the technique described in [Debugging after deploying to Dataverse using Fiddler](#debugging-after-deploying-into-microsoft-dataverse)
 
 ## Using browser developer tools to debug your code component
 
@@ -132,7 +132,7 @@ This section describes how to debug your code component inside the Microsoft Edg
 1. Load your code component into a browser session using either:
 
    1. The test harness using `npm start watch`.
-   2. A local development build of your code component loaded into a model-driven, canvas app, or portal browser session. You do not need to deploy a development build of your code component to Dataverse server, but instead, you can use Fiddler AutoResponders as described in [Debugging after deployment into Microsoft Dataverse using Fiddler](#debugging-after-deploying-into-microsoft-dataverse-using-fiddler) below.
+   2. A local development build of your code component loaded into a model-driven, canvas app, or portal browser session. You do not need to deploy a development build of your code component to Dataverse server, but instead, you can use Fiddler AutoResponders as described in [Debugging after deployment into Microsoft Dataverse using Fiddler](#debugging-after-deploying-into-microsoft-dataverse) below.
 
 2. Select `Ctrl` + `Shift` + `I` to open the developer tools.
 
