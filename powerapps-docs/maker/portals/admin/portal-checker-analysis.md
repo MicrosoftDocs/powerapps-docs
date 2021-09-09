@@ -23,7 +23,7 @@ In this article, you'll learn about Portal Checker diagnostics results, and how 
 
 This issue occurs when the **Search** site marker isn't available in your portal configuration. To fix this issue:
 
-1. Open the [Portal Management app](configure/configure-portal.md).
+1. Open the [Portal Management app](../configure/configure-portal.md).
 1. In the left pane, select **Site Markers**.
 1. If a site marker named **Search** is available and deactivated, activate it.
 1. If not available, create a new site marker with following values:
