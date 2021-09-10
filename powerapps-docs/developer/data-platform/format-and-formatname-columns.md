@@ -31,7 +31,7 @@ Format and FormatName are the columns that store the format values and are used 
    
    - **Format**: 'Text'
    - **FormatName**: 'RichText'.
-   - Retrieve operation corrects any incompatible **Format** or **FormatName** values present on a data type by changing the values to default. For example, if a Text column is changed to **Date Only** in the XML file, the retrieve operation corrects the format to the following values:
+   - Retrieve operation corrects any incompatible **Format** or **FormatName** values present on a data type by changing the values to default. For example, if a Text column is changed to **Date Only** in Dataverse, the retrieve operation corrects the format to the following values:
      - **Format**: 'Text'
      - **FormatName**: 'Text'.
 
