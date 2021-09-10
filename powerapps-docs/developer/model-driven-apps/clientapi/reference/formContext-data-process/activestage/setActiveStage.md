@@ -74,7 +74,7 @@ search.app:
 </tr>
 <tr>
 <td>preventDefault</td>
-<td>This value will be returned if an OnPreStageChange event handler invokes preventDefault</td>
+<td>This value will be returned if an `OnPreStageChange` event handler invokes preventDefault.</td>
 </tr>
 </table>
 </td>
