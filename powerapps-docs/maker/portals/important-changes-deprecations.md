@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/09/2021
+ms.date: 09/10/2021
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: tapanm
@@ -24,11 +24,11 @@ Makers, developers, and IT professionals can use this information to prepare for
 > [!IMPORTANT]
 > "Deprecated" means we intend to remove the feature or capability from a future major release. The feature or capability will continue to work and is fully supported until it is officially removed. This deprecation notification can span a few months or years. After removal, the feature or capability no longer work. This notice is to allow you sufficient time to plan and update your code before the feature or capability is removed.
 
-## CDNs for US Government
+## CDN for US Government
 
-Starting December 2021, Power Apps portals for US Government will begin using Azure Content Delivery Networks (CDN) for [default JavaScript and CSS files](faq.yml#do-portals-use-any-static-content-from-cdns--content-delivery-network--that-i-need-to-allow-list-). Depending on the US Government deployment, configure the allow-list for the following CDNs:
+Starting December 2021, Power Apps portals for US Government will begin using [Azure Content Delivery Network (CDN)](/azure/cdn/cdn-overview) for [default JavaScript and CSS files](faq.yml#do-portals-use-any-static-content-from-cdns--content-delivery-network--that-i-need-to-allow-list-). Depending on the US Government deployment, configure the allow-list for the following CDN URLs:
 
-| Power Apps portals version | CDN |
+| Power Apps portals version | CDN URL |
 | - | - |
 | Government Community Cloud (GCC) | `https://gov.content.powerapps.us` |
 | GCC High | `https://high.content.powerapps.us` |
