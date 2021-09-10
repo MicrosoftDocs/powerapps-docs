@@ -1,6 +1,6 @@
 ---
 title: Power Apps Ideas (Preview)
-description: Learn about using Power Apps Ideas natural language to transform into Power Fx formulas.
+description: Learn about using Power Apps Ideas to transform natural language into Power Fx formulas.
 author: norliu
 ms.service: powerapps
 ms.topic: article
