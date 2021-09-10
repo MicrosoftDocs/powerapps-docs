@@ -185,7 +185,7 @@ Indicates whether the Skype protocol is used for the current organization.
 
 ## fullNameConventionCode 
 
-Returns the FullNameConventionCode setting of the current organization
+Returns the FullNameConventionCode setting of the current organization.
 
 ### Syntax
 
