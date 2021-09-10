@@ -1,3 +1,25 @@
+---
+title: Example to formula (Preview)
+description: Learn about using Power Apps Ideas to transform examples into Power Fx formulas.
+author: norliu
+ms.service: powerapps
+ms.topic: article
+ms.custom: canvas
+ms.date: 09/10/2021
+ms.subservice: canvas-maker
+ms.author: norliu
+ms.reviewer: tapanm
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
+contributors:
+  - norliu
+  - tapanm-msft
+---
+
+# Example to formula
+
 We all had the time when we struggled with manipulation of text when we’re building apps. Searching online for tips and examples, or tools to test RegEx patterns. Example to formula uses PROSE (Program Synthesis using Example) so you could now just give us one or a few desired outputs, then Power Apps can automatically generate the formula for you. 
 
 ### What’s supported 
