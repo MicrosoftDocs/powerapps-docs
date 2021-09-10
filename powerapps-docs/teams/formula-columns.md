@@ -34,7 +34,7 @@ Formula columns are a new data type in Microsoft Dataverse for Teams that are bu
    - Select **Formula** as the **Type**, enter the formula in the **Expression** box. In this example, the *Price* column (Decimal data type) is multiplied by the *Number of units* column (Number data type).  Select **Create**.
    :::image type="content" source="media/create-formula-column.png" alt-text="Create a formula column":::
 
-When you create a record, the formula column takes the data type necessary to render the value determined by the formula. For example, for the `Price * 'Number of units'` formula, the total price formula column are displayed as decimal values. If the formula column value for a record doesn't update, select **Refresh** on the command bar to execute the formula.
+When you create a record, the formula column executes the formula and displays the data for the record. If the formula column value for a record doesn't update, select **Refresh** on the command bar to execute the formula.
 
 :::image type="content" source="media/record-example-formula-column.png" alt-text="Example record with a formula column":::
 
