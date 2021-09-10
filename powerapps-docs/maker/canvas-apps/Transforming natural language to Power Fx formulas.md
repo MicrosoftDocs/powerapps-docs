@@ -1,3 +1,25 @@
+---
+title: Power Apps Ideas (Preview)
+description: Learn about using Power Apps Ideas natural language to transform into Power Fx formulas.
+author: norliu
+ms.service: powerapps
+ms.topic: article
+ms.custom: canvas
+ms.date: 08/24/2021
+ms.subservice: canvas-maker
+ms.author: norliu
+ms.reviewer: tapanm
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
+contributors:
+  - norliu
+  - tapanm-msft
+---
+
+# Transforming natural language to Power Fx formulas (Preview)
+
 > [!IMPORTANT]
 > - This is a preview feature.
 > - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
@@ -53,6 +75,24 @@ To get the best results, here are some tips that you can follow when writing the
 - Enter the complete context in the query. For example, if you need to filter a table by some conditions, be precise about which table to filter, which column to filter by, and what conditions need to be met.
 - Use IntelliSense as much as possible. IntelliSense could help the AI model recognize context, and understand data types better.
 - Double quote the text string you want to filter or search for. This will help the model recognize the target string better and provide a more accurate formula suggestion.
+
+## More examples
+| Scenario | Description | Ideas example |
+| --- | --- | --- |
+|**Sort your table** |Sort by a single column |sort Accounts by 'Account Name'|
+| | |sort Accounts by 'Account Name' A-Z|
+| | |sort Accounts by 'Account Name' Z-A|
+| |Sort by a few columns|sort Accounts by 'Account Name' and 'Created On'|
+| | |sort Accounts by 'Account Name' A-Z and 'Created On' latest on top|
+| |Sort existing tables |sort 'Gallery3' by 'Account Name' z to a|
+|**Filter or search table by some conditions**|A number condition|'Accounts' with length of 'Account Name' bigger than 10|
+| |A date condition|'Accounts' whose 'Created On' is last year, 'Accounts' whose 'Modified On' is within 7 days of 'Created On'|
+| |A text condition|'Accounts' whose 'Account Name' contains "test"|
+| |A few conditions|'Accounts' whose s Name' contains "test" and 'Status' is Active|
+| |Search table by user input|search 'Accounts' by 'Account Name' in 'TextInput1'|
+| |Find a single record|find the first record in 'Accounts' where 'Account Name' contains "test"|
+| |Find records on the top or the bottom of the table|Top 10 Accounts|
+| | |Last 10 Accounts|
 
 ## Limitations
 
