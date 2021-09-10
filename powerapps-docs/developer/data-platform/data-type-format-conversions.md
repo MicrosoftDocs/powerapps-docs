@@ -85,10 +85,10 @@ If you change the data type to an incompatible format, the following error is di
 
 The format \<\<formatname\>\> is not valid for the \<\<datatype\>\> type column \<\<columnname\>\> of table \<\<tablename\>\>. For example, the format datetime is not valid for the text type column.
 
-To change the format of a data type, you need to add the new format details into an OData API **POST** call:
+To change the format of a data type, you need to add the new format details into an OData API **PUT** call:
 
 ```http
-POST [Organization URI]/api/data/v9.0/EntityDefinitions(402fa40f-287c-e511-80d2-00155d2a68d2)/Attributes
+PUT [Organization URI]/api/data/v9.0/EntityDefinitions(<<entity name>>)/Attributes(<<attribute name>>)
 HTTP/1.1
 
 Accept: application/json
@@ -101,20 +101,20 @@ OData-Version: 4.0
 "Value": *\<\<Datatype Type\>\>*
 },
 "Description": {
-"\@odata.type": "Microsoft.Dynamics.CRM.Label",
+"@odata.type": "Microsoft.Dynamics.CRM.Label",
 "LocalizedLabels": [
 {
-"\@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+"@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
 "Label": *\<\<text label to use for the format\>\>*
 "LanguageCode": 1033
 }
 ]
 },
 "DisplayName": {
-"\@odata.type": "Microsoft.Dynamics.CRM.Label",
+"@odata.type": "Microsoft.Dynamics.CRM.Label",
 "LocalizedLabels": [
 {
-"\@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+"@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
 "Label": *\<\<text label to use for the format\>\>*
 "LanguageCode": 1033
 }
@@ -126,7 +126,7 @@ OData-Version: 4.0
 "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"
 },
 "SchemaName": *\<\<Your chosen schema name\>\>*
-"\@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata",
+"@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata",
 "FormatName": {
 "Value": *\<\<Formatname value\>\>*
 },
