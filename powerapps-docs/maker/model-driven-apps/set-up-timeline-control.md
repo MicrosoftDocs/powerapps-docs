@@ -250,7 +250,7 @@ You can easily search for records in the timeline. When you search for a phrase 
 |Configure View |  |Display View |
 |---------------|---|------------|
 |![Configure Expand all records in timeline](media\timeline-expand-all-records-display-options-advanced-2a.PNG "Configure Expand all records in timeline")||![Enable Expand all records in timeline](media\timeline-expand-all-records-display-options-advanced-2b.PNG "Enable Expand all records in timeline")||
-|You can enable the **Expand all records** feature by checking the box next to the feature. This sets the default view to display all records in the expanded view format in the form each time the timeline is opened. The **Expand all records** is disabled by default.||1. When enabled, the **Expand all records** icon is displayed in the top-right corner of the timeline nav. <BR>2. Records can be expanded or collapsed by using the **Expand all records** icon. When expanded, all records are displayed in the expanded view in the form each time it is opened. When you clear the box next to the **Expand all records** feature it will no longer display activities in an expanded view.<BR><BR> When disabled, the **Expand all records** icon will not display in the top-right nav of the timeline. Records will always be displayed in a collapsed view.|	
+|You can enable the **Expand all records** feature by checking the box next to the feature. This sets the default view to display all records in the expanded view format in the form each time the timeline is opened. The **Expand all records** is disabled by default.||1. When enabled, the **Expand all records** icon is displayed in the top-right corner of the timeline nav. <BR>2. Records can be expanded or collapsed by using the **Expand all records** icon. When expanded, all records are displayed in the expanded view in the form each time it is opened. When you clear the box next to the **Expand all records** feature, it no longer displays activities in an expanded view.<BR><BR> When disabled, the **Expand all records** icon will not display in the top-right nav of the timeline. Records will always be displayed in a collapsed view.|	
   
 ### Edit filter pane
 
@@ -260,44 +260,44 @@ You can configure the default filters that are applied when a form loads or is r
 
 ### Expand records with images in timeline
 
-You can send and receive records with images, but they will not display when the record is collapsed. Records with images must be expanded to be viewed.
+You can send and receive records with images, but they won't display when the record is collapsed. Records with images must be expanded to be viewed.
 
 ![Expand records with images in timeline.](media\timeline-expand-records-with-images-display-optiones-advanced-2b.png "Expand records with images in timeline")
 1. Records when collapsed provide a visual summary. To expand an individual record, click anywhere on the timeline record to expand and collapse a record view.  In the bottom-right corner of the record there is a caret:  
-> - When the caret is facing downward (˅) the record is collapsed.
-> - When the caret is facing upward (^) the record it expanded.
+> - When the caret is facing downward (˅), the record is collapsed.
+> - When the caret is facing upward (^), the record is expanded.
 
-2. Records with images will often display the following notice. <BR>
+2. Records with images will often display the following notice: <BR>
 ![Expand records with images in timeline at runtime.](media\timeline-expand-records-with-images-display-optiones-advanced-1a.png "Expand records with images in timeline at runtime")
-3. When you click on the message the warning goes  away and the image appears. 
+3. When you select the message, the warning goes away and the image appears. 
 
-If you don’t see a message and the image is not displaying, see [Timeline FAQs](timeline-faqs.md) for more information.
+If you don’t see a message and the image isn't displayed, see [Timeline FAQs](timeline-faqs.md) for more information.
 
 ### Enable “What you’ve missed” summary
 
-**What you’ve missed** helps you stay on top of updates and changes made records by displaying updates at the top of the timeline when you access a record. 
+**What you’ve missed** helps you stay on top of updates and changes made to records by displaying updates at the top of the timeline when you access a record. 
 
 |Configure View | | Display View|
 |---------------|--|-------------|
 |![Configure “What you’ve missed” summary](media\timeline-what-you-missed-display-options-advanced-11a.png "Configure “What you’ve missed” summary")| |![Disable “What you’ve missed” summary](media\timeline-what-you-missed-display-options-advanced-11b.png "Disable “What you’ve missed” summary") |
-|The **What you’ve missed** feature displays new records you have not seen. It is disabled by default. To enable **What you’ve missed**, select the box next to the feature. To disable, uncheck the box next to the feature ||Once enabled, now when you view a customer’s account, a box will appear at the top of the timeline section notifying you updates.<BR><BR> When disabled, notifications will not display when you access an account.| 
+|The **What you’ve missed** feature displays new records you haven't seen. It's disabled by default. To enable it, select the box next to the feature. To disable it, uncheck the box next to the feature ||Once enabled, when you view a customer’s account, a box will appear at the top of the timeline section, notifying you of updates.<BR><BR> When disabled, notifications aren't displayed when you access an account.| 
 
 ## Record settings
 
-The **Record types to show** is tied to the **Record settings** that support activities, notes, and posts in the timeline.
+The **Record types to show** feature is tied to the **Record settings** that support activities, notes, and posts in the timeline.
 
 **Record settings** lets you manage the settings within the record types. 
 - The **Activities** record type is tied to **Activities** in record settings.
 - **Notes** record type is tied to **Notes** in record settings.
 - **Posts** record type is tied to **Posts** in record settings.
 
-To enable or disable a record type simply check or uncheck the box and that record type will either display or no longer appear in the **Record settings** section.
+To enable or disable a record type, simply select or deselect the box, and then that record type will either display or no longer appear in the **Record settings** section.
 
 **Example:**
 ![Display options - Advanced - Record Settings.](media\timeline-record-settings-display-options-advanced-1a.png "Display options - Advanced - Record Settings")
 
-1. When **Posts** is checked in the **Record types to show** section, it is enabled in the **Record settings** section below.
-2. When **Posts** is unchecked in the **Record types to show** section, it is disabled in the **Record settings** section below.
+1. When **Posts** is checked in the **Record types to show** section, it's enabled in the **Record settings** section below.
+2. When **Posts** is unchecked in the **Record types to show** section, it's disabled in the **Record settings** section below.
 
 ### Configure activity record types
 
@@ -309,11 +309,11 @@ When you expand the **Activities record settings** on the timeline component sec
 |1. Expand and view **Activities** under the **Record settings** section using the caret (^).<BR> 2. A list of **Activity types** is displayed in the expanded view. <BR> 3. You can enable or disable activity by selecting an activity type. In this example, we selected **Email**<BR><BR> To enable an **Activity type**, check the box next to **Enable** and select **Done**.<BR><BR>To disable an **Activity type**, uncheck the box next to **Enable** and select **Done**. This will grey out all other items in the box and disable the activity type from displaying on the timeline.  This also disables the activity type from being created or viewed in the timeline.  || 1. When enabled, an **Activity type** will appear under the **Create a timeline record** ![Create a timeline record.](media\timeline-create-a-record-icon.png "Create a timeline record"). <BR> 2. The activity type will be displayed as an option the user can choose from the dropdown menu. <BR> 3. Also, the **Activity type** record is displayed in the body of the timeline.| 
 
 > [!NOTE]
-> A check mark appears to the right next to enabled **Activity types**. Additional record type settings are disabled until they're enabled under that specific record type.
+> A checkmark appears to the right, next to enabled **Activity types**. Additional record type settings are disabled until they're enabled under that specific record type.
 
 ### Enable status tags on activity record types
 
-Status tags match the status filter that display in the timeline to help you to see at a glance if the state of an activity record is **Active**, **Overdue**, or **Closed** on a task, appointment, or email.  Admin can enable or disable status tags for any **Activity type** in the **Record settings**. Status tags are enabled by default.
+Status tags match the status filter that display in the timeline to help you to see at a glance if the state of an activity record is **Active**, **Overdue**, or **Closed** on a task, appointment, or email. The administrator can enable or disable status tags for any **Activity type** in the **Record settings**. Status tags are enabled by default.
 
 |Configuration View | | Display View|
 |-------------------|--|------------|
@@ -322,7 +322,7 @@ Status tags match the status filter that display in the timeline to help you to 
 
 ### Enable the ability to create directly from timeline
 
-Admins have the ability to enable activity types so they can be created directly on the timeline. Having the ability to quickly click and create an activity such as, email, tasks, and appointments, streamlines productivity.  
+Administrators have the ability to enable activity types so they can be created directly on the timeline. Having the ability to quickly select and create an activity, such as email, tasks, and appointments, helps to streamline productivity.  
 
 |Configuration View | | Display View |
 |-------------------|--|-------------|
@@ -349,19 +349,17 @@ All card forms are broken out into the following four sections:
 
 Legend
 
-1. **ColorStrip Section.** This section does not appear on the timeline record. The **ColorStrip** is located on the left of the card form.<br>
-2. **Header Section.** This section is displayed on the timeline record, however only the first two fields are displayed on the timeline record. For this example, only the **Subject** and **Modified On** fields are visible.<br>
-3. **Details Section.** This section is displayed on timeline record, however only the first three fields are displayed on the timeline record. For this example, only the **To**, **CC**, and **Description** fields are visible on the timeline record.<br>
-4. **Footer Section.**	This section is not displayed on the timeline record.<br>
-5. **Entity Fields.** You can select which fields you want to add to your card form from the field options listed on the right.  You can customize your card form by dragging and dropping the fields you want to use into the sections you want that field to appear in on the timeline record.
+1. **ColorStrip Section.** This section doesn't appear on the timeline record. The **ColorStrip** is located on the left of the card form.<br>
+2. **Header Section.** This section is displayed on the timeline record; however, only the first two fields are displayed on the timeline record. For this example, only the **Subject** and **Modified On** fields are visible.<br>
+3. **Details Section.** This section is displayed on timeline record; however, only the first three fields are displayed on the timeline record. For this example, only the **To**, **CC** and **Description** fields are visible on the timeline record.<br>
+4. **Footer Section.** This section isn't displayed on the timeline record.<br>
+5. **Entity Fields.** You can select which fields you want to add to your card form from the field options listed on the right. You can customize your card form by dragging and dropping the fields you want to use into the sections you want that field to appear in on the timeline record.
 
-  
-
-Each individual card form has to be customized for each activity record such as email, tasks, posts, etc. 
+Each individual card form must be customized for each activity record, such as email, tasks, posts, and so forth. 
 
 **Header Section**
 
-The Card Header displays the title/subject in your timeline email form. You can have up to six  fields in the Header section, only the first two  fields will be seen on the timeline record. Also empty fields will be ignored by the form in all sections.
+The Card Header displays the title/subject in your timeline email form. You can have up to six fields in the Header section, only the first two  fields will be seen on the timeline record. Also empty fields will be ignored by the form in all sections.
 
 |Configuration View || Display View|
 |-------------------|-|------------|
@@ -370,7 +368,7 @@ The Card Header displays the title/subject in your timeline email form. You can 
 
 **Details Section**
 
-The Card Details section displays in the body of your the timeline email record. You can have up to four (4) fields in the **Detail** section, but only the first three (3) fields are seen on the timeline record.
+The Card Details section displays in the body of your the timeline email record. You can have up to four fields in the **Details** section, but only the first three fields are viewable on the timeline record.
 
 |Configuration View ||Display View|
 |------------------|--|-----------|
@@ -378,7 +376,7 @@ The Card Details section displays in the body of your the timeline email record.
 |The Card Details will always appear below the Header regardless of the field you choose.<BR><BR>**Field 1**<BR>1. In the card details Field 1 acts as a subheader on the timeline record. For this example, we selected **To** for this field.<BR><BR>**Field 2**<BR>2. This field will only display one line of text in a summary view on the timeline record.  When you expand your timeline record,  content in this field is fully displayed and formatted. For this example, we selected **CC** for this field.<BR><BR>**Field 3**<BR>3. This field follows the content of Field 2 and is part of the main body of your timeline record that is only viewable when you expand the record. For this example, we selected **Description** for this field.||**Field 1**<BR>1. This field always displays in this section and acts as a subheader on the timeline record. <BR><BR>**Field 2**<BR>2. This field always displays in this section and only displays one line of text in the summary view but when expanded, content is fully displayed. <BR><BR>**Field 3**<BR>3. This field will always display in this section and is only viewable when the record is expanded.|	
 
 **Footer Section**<br>
-This section is not visible on the timeline record.  
+This section isn't visible on the timeline record.  
 
 |Configuration View | |Display View|
 |-------------------|--|-----------|
