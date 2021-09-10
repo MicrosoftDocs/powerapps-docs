@@ -1,13 +1,13 @@
 ---
 title: "FAQs for timeline control (section) in Power Apps | MicrosoftDocs"
 description: "FAQs for timeline control (section) in Power Apps"
-ms.date: 03/10/2020
+ms.date: 09/10/2021
 ms.service: powerapps
 ms.topic: troubleshooting
-author: "kabala123"
+author: "lalexms"
 ms.assetid: 7F495EE1-1208-49DA-9B02-17855CEB2FDF
 ms.subservice: mda-maker
-ms.author: "kabala"
+ms.author: "laalexan"
 manager: "shujoshi"
 search.audienceType: 
   - maker
