@@ -28,7 +28,7 @@ Formula columns are a data type in Microsoft Dataverse for Teams that are built 
 
 1. On the **Build** tab, select **See all**, and then expand **Tables**.
 1. From the list of tables in Power Apps app for Teams, select the table you want.
-1. Select **Add column** or select **Edit data** > **Add column**. When you select **Edit data**, you can also select **+** next to the row where you want to add the formula column.
+1. Select **Add column** or select **Edit data** > **Add column**. When you select **Edit data**, you can also select **+** on the column where you want to add the formula column.
 1. In the **Add new column** pane: 
    - Enter a **Name** for the column, such as *Total price*.
    - Select **Formula** as the **Type**.
