@@ -6,7 +6,7 @@ metadata:
   ms.service: powerapps
   ms.topic: conceptual
   ms.custom: 
-  ms.date: 04/27/2021
+  ms.date: 09/10/2021
   ms.author: sandhan
   ms.reviewer: tapanm
   contributors:
@@ -15,6 +15,7 @@ metadata:
     - GitanjaliSingh33msft
     - sandhangitmsft
     - dileepsinghmicrosoft
+    - nageshbhat-msft
     
 title: Power Apps portals FAQs
 summary: |
@@ -150,9 +151,14 @@ sections:
           Yes. Power Apps portals uses out of the box portal's static assets from Azure CDN that includes default JavaScript and CSS files for presentation that earlier rendered as part of the portal app. You must allow-list the following CDN URL to render portals successfully:
           
           `https://content.powerapps.com/resource/powerappsportal`
-          
-          > [!NOTE]
-          > Power Apps portals hosted in Microsoft Government Cloud don't use CDN.
+
+          CDNs for Power Apps US Government version:
+
+          | Power Apps portals version | CDN |
+          | - | - |
+          | Government Community Cloud (GCC) | `https://gov.content.powerapps.us` |
+          | GCC High | `https://high.content.powerapps.us` |
+          | Power Apps Department of Defence (DoD) | `https://content.appsplatform.us` |
           
       - question: |
           How do I use a custom login provider on my portal?
