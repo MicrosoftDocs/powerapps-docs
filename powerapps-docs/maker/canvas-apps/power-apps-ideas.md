@@ -1,6 +1,6 @@
 ---
-title: Power Apps Ideas (Preview)
-description: Learn about using Power Apps Ideas natural language to transform into Power Fx formulas.
+title: Power Apps Ideas overview (Preview)
+description: Over view of Power Apps Ideas
 author: norliu
 ms.service: powerapps
 ms.topic: article
@@ -18,7 +18,7 @@ contributors:
   - tapanm-msft
 ---
 
-# Power Apps Ideas (Preview)
+# Power Apps Ideas overview (Preview)
 
 [This article is pre-release documentation and is subject to change.]
 
@@ -29,6 +29,6 @@ You can use Ideas in two ways
 
 The natural langauge to formula feature can only work on Gallery and Data table's Items property. The example to formula feature can only work on a label control within a gallery. Please refer to following links to see details.
 
-- [Transform natural langauge to formulas](Transforming natural language to Power Fx formulas)
-- [Example to formula](Example to formula)
+- [Transform natural langauge to formulas](Transforming natural language to Power Fx formulas.md)
+- [Example to formula](Example to formula.md)
 
