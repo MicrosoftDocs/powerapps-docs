@@ -30,7 +30,7 @@ This article shows how to debug your code components using the test harness and 
   - [Debugging after deploying into Microsoft Dataverse](#debugging-after-deploying-into-microsoft-dataverse)
     - [Using Fiddler](#using-fiddler)
     - [Using Requestly](#using-requestly)
-    - [Related articles](#related-articles)
+
 
 [!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
 
@@ -43,7 +43,8 @@ While you are implementing the code component logic, using `npm start` or `npm s
 
 The following image shows what Visual Studio Code will look like when you use the `npm start watch` for the `DataSetGrid` sample:
 
-> [!div class="mx-imgBorder"] > ![Debugging Visual Studio Code.](media/debugging-1.png "Debugging Visual Studio Code")
+> [!div class="mx-imgBorder"] 
+> ![Debugging Visual Studio Code.](media/debugging-1.png "Debugging Visual Studio Code")
 
 Launching the test harness in `watch` mode enables you to quickly see the changes in action. Changes made to any of the following component assets are automatically reflected in the test harness without having to restart it:
 
@@ -53,11 +54,13 @@ Launching the test harness in `watch` mode enables you to quickly see the change
 
 If you make changes to any of these files, you will see a `Change detected` message and the browser reloads with the updated code.
 
-> [!div class="mx-imgBorder"] > ![Changes detected.](media/changes-detected.png "Changes detected")
+> [!div class="mx-imgBorder"] 
+> ![Changes detected.](media/changes-detected.png "Changes detected")
 
 The following image shows the test harness once it is opened in a new browser window:
 
-> [!div class="mx-imgBorder"] > ![Test harness 1.](media/test-harness-1.png "Test harness 1")
+> [!div class="mx-imgBorder"] 
+> ![Test harness 1.](media/test-harness-1.png "Test harness 1")
 
 As the image above shows, the browser window opens to display four areas. The code component is rendered in the left pane while the right pane has three sections that depend on the type of component being debugged:
 
@@ -84,15 +87,18 @@ As the image above shows, the browser window opens to display four areas. The co
 
 - For components with [`property`](reference\property.md) elements in the `ControlManifest.Input.xml`, the **Data Inputs** section will show an input box for each value.
 
-  > [!div class="mx-imgBorder"] > ![Data Inputs.](media/data-inputs.png "Data Inputs")
+  > [!div class="mx-imgBorder"] 
+  > ![Data Inputs.](media/data-inputs.png "Data Inputs")
 
 - For _dataset_ type components, you can load a CSV file with test data for each [data-set](manifest-schema-reference\data-set.md) element. You manually create or export in .csv format directly from your environment. After loading a CSV file, you can bind each [property-set](manifest-schema-reference\property-set.md) defined in the `ControlManifest.Input.xml` to a column in the CSV file. This is done by picking the column for each property as shown below:
 
-  > [!div class="mx-imgBorder"] > ![test harness 3.](media/test-harness-3.png "test harness 3")
+  > [!div class="mx-imgBorder"] 
+  > ![test harness 3.](media/test-harness-3.png "test harness 3")
 
 - If you do not have any properties defined in the `ControlManifest.Input.xml` file, then all the columns get automatically loaded into the test harness. For each column in the source CSV, you can then assign the data type to be used provided to the code component as shown below:
 
-  > [!div class="mx-imgBorder"] > ![Test harness 5.](media/test-harness-5.png "Test harness 5")
+  > [!div class="mx-imgBorder"] 
+  > ![Test harness 5.](media/test-harness-5.png "Test harness 5")
 
 > [!NOTE]
 > When loading a CSV sample dataset you must select **Apply** before the data is loaded. If the dataset has property-set elements defined, then each must be mapped to a column in the CSV before you can select **Apply**. These settings are not remembered and must be set every time a code change is made, after the test harness re-loads.
@@ -145,7 +151,8 @@ This section describes how to debug your code component inside the Microsoft Edg
 6. Select the file in the matches listed that will be similar to:
    `webpack://pcf_tools_652ac3f36e1e4bca82eb3c1dc44e6fad/./DataSetGrid/index.ts`
 
-   > [!div class="mx-imgBorder"] > ![Developer Tools 1.](media/developer-tools-1.png "Developer Tools 1")
+   > [!div class="mx-imgBorder"] 
+   > ![Developer Tools 1.](media/developer-tools-1.png "Developer Tools 1")
 
 7. Locate the `updateView` function and place a breakpoint on the first line.
 
@@ -153,11 +160,13 @@ This section describes how to debug your code component inside the Microsoft Edg
 
 9. You will now see your breakpoint hit, and you can inspect the code.
 
-   > [!div class="mx-imgBorder"] > ![Developer Tools 2.](media/developer-tools-2.png "Developer Tools 2")
+   > [!div class="mx-imgBorder"] 
+   > ![Developer Tools 2.](media/developer-tools-2.png "Developer Tools 2")
 
 10. You can also inspect the HTML elements and CSS created by the component using the **Elements** tab. If you have a specific set of interactions that you are interested in (root container element), you can place a breakpoint on the HTML Dom element using the **Context Menu** (while the root element is selected) > **Break on** > **subtree modifications**
 
-    > [!div class="mx-imgBorder"] > ![Developer Tools 3.](media/developer-tools-3.png "Developer Tools 3")
+    > [!div class="mx-imgBorder"] 
+    > ![Developer Tools 3.](media/developer-tools-3.png "Developer Tools 3")
 
 ### ES5 vs ES6
 
@@ -229,7 +238,8 @@ To debug your code component using Fiddler:
 
    An example of this would look like the following:
 
-   > [!div class="mx-imgBorder"] > ![AutoResponder rule.](media/fiddler-rule-example.png "AutoResponder rule")
+   > [!div class="mx-imgBorder"] 
+   > ![AutoResponder rule.](media/fiddler-rule-example.png "AutoResponder rule")
 
    If you want a simpler **AutoResponder** rule approach, see [Streamline JavaScript web resource development using Fiddler AutoResponder](/dynamics365/customer-engagement/developer/streamline-javascript-development-fiddler-autoresponder).
 
@@ -253,7 +263,8 @@ To debug your code component using Fiddler:
 
    Value: `*`
 
-   > [!div class="mx-imgBorder"] > ![Fiddler Filter.](media/fiddler-filter.png "Fiddler Filter")
+   > [!div class="mx-imgBorder"] 
+   > ![Fiddler Filter.](media/fiddler-filter.png "Fiddler Filter")
 
    > [!IMPORTANT]
    > This step is only necessary when debugging code components after they are deployed to canvas apps because the resources are stored in blob storage rather than underneath the `powerapp.com` domain. As such, any requests to these resources will require cross-domain access when loaded by the browser. Only enable this `Access-Control-Allow-Origin` filter rule when you are debugging since it will modify headers of other sites that you visit.
@@ -264,49 +275,52 @@ To debug your code component using Fiddler:
 
 12. Once you have your code component loaded from your local machine, you can make changes to the code (while `npm start watch` is running) and refresh the browser to load the newly built versions. Fiddler's AutoResponder will automatically add a cache-control header so that it will not be cached by the browser so a simple refresh will reload the resources without having to clear the cache each time.
 
-### Using Requestly
+### Using requestly
 
 To debug your code component using Requestly:
 
-1. Enable Internet Information Services (IIS) on your machine
+1. Enable Internet Information Services (IIS) on your machine.
 
-   1. Open Control Panel and click Programs and Features > Turn Windows features on or off.
+   1. Open **Control Panel** and select **Programs and Features** > **Turn Windows** features on or off.
    2. Enable Internet Information Services.
-   3. Expand the Internet Information Services feature and verify that the web server components listed in the next section are enabled.
-   4. Click OK.
+   3. Expand the Internet Information Services and verify that the web server components listed in the next section are enabled.
+   4. Select **OK**.
 
 2. Setup ISS
 
-   1. Open IIS on your machine
-   2. In right side panel "Connections", expand tree and right click on Sites
-   3. Add website
-   4. Set "Site name"
-   5. Set "Physical path" to your custom controller folder, like `C:\COMPONENT_ROOT_FOLDER\out\controls\YOUR_CONTROL_NAME\`
-   6. Set "Port" (any number for instance **7777**)
-   7. Click OK. Selected folder is now hosted on `http://localhost:<SELECTED_PORT>`
+   1. Open IIS on your machine.
+   2. In right side panel **Connections**, expand tree and right-click on **Sites**.
+   3. Add website.
+   4. Set **Site** name.
+   5. Set **Physical path** to your custom component folder, for example, `C:\COMPONENT_ROOT_FOLDER\out\controls\YOUR_CONTROL_NAME\`
+   6. Set **Port** (any number for instance **7777**).
+   7. Select **OK**. Selected folder is now hosted on `http://localhost:<SELECTED_PORT>`
 
-> [!div class="mx-imgBorder"] > ![IIS website.](media/iis-website.png "IIS website")
+   > [!div class="mx-imgBorder"] 
+   > ![IIS website.](media/iis-website.png "IIS website")
 
 3. Download and install [Requestly](https://requestly.io)
 
 4. Follow onboarding to the tool.
 
-5. Open rules (navigate to https://app.requestly.io/rules)
+5. Open rules (navigate to https://app.requestly.io/rules).
 
-6. Add "Replace Host" rule
-   1. Set name of the rule
+6. Add "Replace Host" rule:
+   1. Set name of the rule.
    2. Set "Replace" field with `https://[ORG_URL]/[APPLICATION_ID]/webresources/[YOUR_NAMESPACE].[YOUR_CONTROL_NAME]/`
    3. Set "With" with `http://localhost:<SELECTED_PORT>`
    4. Set "If request" with "URL" "Contains" `[YOUR_NAMESPACE].[YOUR_CONTROL_NAME]`
    5. Save the rule and enable it.
 
-> [!div class="mx-imgBorder"] > ![Requestly rule.](media/requestly-rule.png "Requestly rule")
+   > [!div class="mx-imgBorder"] 
+   > ![Requestly rule.](media/requestly-rule.png "Requestly rule")
 
-7. Now you will need to first clear the cache in the browser and reload the page containing the code component. This can easily be done by opening developer tools (`Ctrl + Shift + I`), right-clicking the **Refresh** > **Empty cache and hard refresh**.
+7. Now you need to clear the cache in the browser and reload the page containing the code component. This can easily be done by opening developer tools (`Ctrl + Shift + I`), right-clicking the **Refresh** > **Empty cache and hard refresh**.
 
-   > [!div class="mx-imgBorder"] > ![Empty cache and hard refresh.](media/refresh-reload.png "Empty cache and hard refresh")
+   > [!div class="mx-imgBorder"] 
+   > ![Empty cache and hard refresh.](media/refresh-reload.png "Empty cache and hard refresh")
 
-8. Once you have your code component loaded from your local machine, you can make changes to the code (while `npm start watch` is running) and refresh the browser to load the newly built versions. Reuestly will automatically add a cache-control header so that it will not be cached by the browser so a simple refresh will reload the resources without having to clear the cache each time.
+8. Once you have your code component loaded from your local machine, you can make changes to the code (while `npm start watch` is running) and refresh the browser to load the newly built versions. Requestly will automatically add a cache-control header so that it will not be cached by the browser so a simple refresh will reload the resources without having to clear the cache each time.
 
 ### Related articles
 
