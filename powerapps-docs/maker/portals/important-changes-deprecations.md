@@ -32,7 +32,7 @@ Starting December 2021, Power Apps portals for US Government will begin using Az
 | - | - |
 | Government Community Cloud (GCC) | `https://gov.content.powerapps.us` |
 | GCC High | `https://high.content.powerapps.us` |
-| Power Apps Department of Defence (DoD) | `https://content.appsplatform.us` |
+| Power Apps Department of Defense (DoD) | `https://content.appsplatform.us` |
 
 ## Table permission changes for forms and lists on new portals
 
