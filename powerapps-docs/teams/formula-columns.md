@@ -18,7 +18,7 @@ contributors:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)] More information: [Power Apps preview program](/power-platform/admin/preview-environments)
 
-Formula columns are a new data type in Microsoft Dataverse for Teams that are built on Power Fx. You can add a formula column to a table in real time. The Dataverse table stores the logic and gives you the values during fetch operations. This means you can create the formula and compute the values as you read. Formula columns use a syntax that's similar to Office Excel. As you enter the formula, Intellisense helps you with recommendations for formula, syntax, and errors.
+Formula columns are a data type in Microsoft Dataverse for Teams that are built on Power Fx. You can add a formula column to a table in real time. The Dataverse table stores the logic and gives you the values during fetch operations. This means you can create the formula and compute the values as you read. Formula columns use a syntax that's similar to Office Excel. As you enter the formula, Intellisense helps you with recommendations for formula, syntax, and errors.
 
 > [!NOTE]
 > - Currently, formula columns are only available with Dataverse for Teams environments.
