@@ -18,7 +18,7 @@ contributors:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)] More information: [Power Apps preview program](/power-platform/admin/preview-environments)
 
-Formula columns are a new data type in Microsoft Dataverse for Teams that are built on Power Fx. You can add a formula column to a table in real time. The Dataverse table stores the logic and gives you the values during fetch operations. This means you can create the formula and compute the values as you read. Formula columns use a syntax that's similar to Office Excel. Intellisense helps you with recommendations for formula and syntax, and errors, as you enter the formula.
+Formula columns are a new data type in Microsoft Dataverse for Teams that are built on Power Fx. You can add a formula column to a table in real time. The Dataverse table stores the logic and gives you the values during fetch operations. This means you can create the formula and compute the values as you read. Formula columns use a syntax that's similar to Office Excel. As you enter the formula, Intellisense helps you with recommendations for formula, syntax, and errors.
 
 > [!NOTE]
 > - Currently, formula columns are only available with Dataverse for Teams environments.
@@ -31,7 +31,8 @@ Formula columns are a new data type in Microsoft Dataverse for Teams that are bu
 1. Select **Add column** or select **Edit data** > **Add column**. When you select **Edit data**, you can also select **+** next to the row where you want to add the formula column.
 1. In the **Add new column** pane: 
    - Enter a **Name** for the column, such as *Total price*.
-   - Select **Formula** as the **Type**, enter the formula in the **Expression** box. In this example, the *Price* column (Decimal data type) is multiplied by the *Number of units* column (Number data type).  Select **Create**.
+   - Select **Formula** as the **Type**
+   - Enter the formula in the **Expression** box. In this example, the *Price* column (Decimal data type) is multiplied by the *Number of units* column (Number data type).  Select **Create**.
    :::image type="content" source="media/create-formula-column.png" alt-text="Create a formula column":::
 
 When you create a record, the formula column executes the formula and displays the data for the record. If the formula column value for a record doesn't update, select **Refresh** on the command bar to execute the formula.
