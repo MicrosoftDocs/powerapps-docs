@@ -124,20 +124,20 @@ The **Name** field under the **Properties** tab in  **Display options** serves o
 | Configuration View | | Display View   |
 |--------------------|--|---------------|
 |![Configure Timeline component name](media\timeline-component-name-display-options-1a.png "Configure Timeline component name")||  ![Display  Timeline component name](media\timeline-component-name-display-options-1c.png "Display Timeline component name")|
-|The timeline **Name** field allows you to create a unique name as a maker's reference. In this example, we changed the **Name** field to, **Timeline_for_ Account**. | | The name, **Timeline_for_Account** does not display on the rendered form.  The name is for Admin reference only. |
+|The timeline **Name** field allows you to create a unique name as a maker's reference. In this example, we changed the **Name** field to **Timeline_for_ Account**. | | The name, **Timeline_for_Account**, doesn't display on the rendered form. The name is for administrator reference only. |
 |||
 
 >[!NOTE]
-> There are field limitations in the **Name** field.  For example, you cannot use spaces between words, you must use an underscore (_).	
+> The **Name** field has limitations. For example, you can't use spaces between words. Instead, you must use an underscore (_).	
 
 ### Records shown on page
 
-This section allows you to control the number records that appear before displaying Load more at the bottom of the section.
+This section allows you to control the number records that appear before displaying **Load more** at the bottom of the section.
 
 |Configuration View || Display View |
 |-------------------|-|--------------|
 ![Configure Records shown on page](media\timeline-records-shown-on-page-display-options-1a.png "Configure Records shown on page")| | ![Display Records shown on page](media\timeline-records-shown-on-page-display-options-1b.png "Display Records shown on page")|
-|The default setting on the **Records shown on page** field is set to 10 records. You can change this to any number, there is no limit. || 1. Per the default setting shown in this example, the form displays a max. of 10 records, but you can display up to 50 records. <BR> 2. Once records exceed 10, the **Load more** option appears at the bottom of the form.|
+|The default setting on the **Records shown on page** field is set to 10 records, but you can set it to any number (there isn't a limit). || 1. Per the default setting shown in this example, the form displays a maximum of 10 records, but you can display up to 50 records. <BR> 2. Once records exceed 10, the **Load more** option appears at the bottom of the form.|
 |||
 
 ### Record types shown
@@ -145,10 +145,10 @@ This section allows you to control the number records that appear before display
 There are three primary record types: activities, notes, and posts. All record types are enabled by default.
 
 #### Activities
-Activities can have a large number of customizable subactivity record types to support business needs. Depending on what you have installed, Admin can create, add, and display a number of different customized subactivity record types under the Activity section of the dropdown menu on the timeline. 
+Activities can have a large number of customizable subactivity record types to support business needs. Depending on what you have installed, the administrator can create, add, and display a number of different customized subactivity record types under the **Activity** section of the dropdown menu on the timeline. 
 
 #### Notes
-Notes allow you to capture notes related to the entity record. For example, you can use notes to grab thoughts, summarize information, and provide feedback on a case and make edits whenever you want. 
+Notes allow you to capture details related to the entity record. For example, you can use notes to capture thoughts, summarize information, and provide feedback on a case, and then update the case details later. 
 
 #### Posts
 There are two types of posts: auto and user.
@@ -164,13 +164,13 @@ There are two types of posts: auto and user.
 |To enable **Record types shown** for **Activities**, **Notes**, and **Posts** on a form, check the box next to the record type.||1. To confirm that the record type is displaying on the form, select **Create a timeline record** ![Create a timeline record icon.](media\timeline-create-a-record-icon.png "Create a timeline record icon") (Create a timeline record icon) in the top-right nav in the timeline, and a dropdown menu that displays the list of enabled record types will appear.<BR>2. When **Activities** are enabled, you'll see **Activity** record types for appointments, email, phone calls, and tasks.<BR> 3. When **Notes** are enabled, you'll see the Note record types on the form.<BR> 4. When **Posts** are enabled, you'll also see the Post record types on the form.|
 
 > [!Note]
-> Activities, Notes, and Posts are standard entities. If your administrator or system customizer has configured other entities, they'll also be displayedr.
+> Activities, notes, and posts are standard entities. If your administrator or system customizer has configured other entities, they'll also be displayed.
 
-### Activity, note, post icons and date / timestamp display on timelines
+### Activity, notes, post icons and date / timestamp display on timelines
 
 The timeline shows a simple icon before the activity, post, note, and custom entity, making it easy for you to identify the record type. 
 
-Dates and timestamps always appear on each record on the bottom-right side of the preview, and can be viewed always.
+Dates and timestamps always appear on each record on the bottom-right side of the preview, and are always viewable.
 
 ## Advanced
 
