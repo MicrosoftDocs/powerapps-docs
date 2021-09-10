@@ -183,6 +183,10 @@ Indicates whether the Skype protocol is used for the current organization.
 
 **Description**: **true** if Skype protocol is used; **false** otherwise.
 
+## fullNameConventionCode 
+
+Returns the FullNameConventionCode setting of the current organization
+
 ### Syntax
 
 `organizationSettings.fullNameConventionCode`
