@@ -276,4 +276,5 @@ The following scalar functions are available with formula columns.
 
 ### See also
 
-[Work with table columns](table-columns.md)
+[Work with table columns](table-columns.md) <br />
+[Formula reference for Power Apps](../maker/canvas-apps/formula-reference.md)
