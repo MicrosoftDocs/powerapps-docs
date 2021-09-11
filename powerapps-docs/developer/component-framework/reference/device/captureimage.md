@@ -5,7 +5,7 @@ keywords:
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 10/01/2019
+ms.date: 09/08/2021
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -46,6 +46,10 @@ The `options` parameter object has the following properties:
 Type: `Promise<FileObject>`
 
 See [Promise](https://developer.mozilla.org/docs/Web/JavaScript/reference/Global_Objects/Promise) and [FileObject](../fileobject.md)
+
+## Exceptions
+
+See [Web service error codes](../../../data-platform/org-service/web-service-error-codes.md)
 
 ### Related topics
 

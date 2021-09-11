@@ -5,7 +5,7 @@ author: dileepsinghmicrosoft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 08/03/2021
+ms.date: 09/09/2021
 ms.author: dileeps
 ms.reviewer: tapanm
 contributors:
@@ -18,7 +18,8 @@ contributors:
 As a portal maker, you can use [Azure Front Door](/azure/frontdoor/standard-premium/overview) with Power Apps portals to use its edge caching and Web Application Firewall (WAF) capabilities. In this article, you'll learn how to set up Azure Front Door with portals.
 
 > [!NOTE]
-> Although this article is focused on Azure Front Door, similar steps can be used for any content delivery network or WAF provider. The terminology used by various components might be different.
+> - Although this article is focused on Azure Front Door, similar steps can be used for any content delivery network or WAF provider. The terminology used by various components might be different.
+> - While [custom domain HTTPS settings using Azure portal](/azure/frontdoor/front-door-faq#can-i-configure-tls-policy-to-control-tls-protocol-versions-) allows you to choose a [default minimum](/azure/frontdoor/front-door-faq#what-tls-versions-are-supported-by-azure-front-door-) TLS version between 1.0 and 1.2, use TLS version 1.2 for strong ciphers.
 
 Follow these steps to set up Azure Front Door with portals:
 
