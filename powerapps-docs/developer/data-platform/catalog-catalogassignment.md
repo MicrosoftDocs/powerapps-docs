@@ -2,7 +2,7 @@
 title: "Catalog and CatalogAssignment tables (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to use the Catalog and CatalogAssignment tables to expose events in your solution"
 ms.custom: ""
-ms.date: 09/09/2021
+ms.date: 09/10/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -30,10 +30,7 @@ The first level catalog must represent your solution. Use multiple second-level 
 For each second-level catalog that represents the categories within your solution, you will use the `CatalogAssignment` table to specify any Tables, Custom API, or Custom Process actions you want to be available as events.
 
 > [!IMPORTANT]
-> Anyone can view the Catalog and CatalogAssignment data in the Power Automate Dataverse connector **When an action is performed** trigger.
-> 
-> For other use cases, in order for people to use Catalogs and Catalog Assignments, they must be given read access to these these tables. Currently only the System Administrator has full access to the Catalog and Catalog Assignment tables.
-> You must grant **Read** access to the security roles assigned to any users who will need to use these tables. These tables are found within the **Custom Entities** tab when you edit a security role.
+> Users with the **Environment Maker** security role can view the Catalog data in the Power Automate Dataverse connector **When an action is performed** trigger. Other security roles must have an appropriate access level **Read** privilege to these these tables: **Custom API**, **Process**, **SDK Message**.
 > 
 > More information: 
 > - [Edit a security role](/power-platform/admin/create-edit-security-role#edit-a-security-role)
