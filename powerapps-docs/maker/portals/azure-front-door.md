@@ -29,6 +29,10 @@ Follow these steps to set up Azure Front Door with portals:
 1. [Set up WAF rules to analyze incoming requests](#set-up-waf-rules-to-analyze-incoming-requests).
 1. [Set up the portal to accept traffic only from Azure Front Door](#set-up-power-apps-portals-to-accept-traffic-only-from-azure-front-door).
 
+> [!NOTE]
+> This document describes how to implement Azure Front Door Standard/Premium (Preview), which is in public preview. Please refer to the [Azure Front Door Standard/Premium (Preview) documentation](/azure/frontdoor/standard-premium/overview) for preview guidance.
+>
+> You can also adapt this guidance to work with the fully supported version of Azure Front Door, or with another content delivery network.
 
 ## Set up the Azure Front Door endpoint and custom domain name
 
