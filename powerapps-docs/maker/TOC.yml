@@ -2235,6 +2235,8 @@
     href: ../teams/embed-teams-app.md
   - name: Embed a model-driven app as tab app
     href: ../teams/embed-model-driven-teams-tab.md
+  - name: Embed a model-driven app as a personal app
+    href: ../teams/embed-model-driven-teams-personal.md
   - name: Create apps in Teams
     items:
     - name: Create apps in Teams
