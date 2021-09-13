@@ -41,27 +41,28 @@ The following table provides the **Format** and **FormatName** values and API re
 
 | **Column type** | **Platform format / Value in solution XML** | **Format SDK Definition**   | **FormatName SDK Definition** | **API response value**  | **Remarks**   |
 |--------------------|---------------------------------------------------|--------------|----------------|----------------------------|---------------|
-| Text               | Text   | StringFormat.Text  | StringFormatName.Text | **Format**: Text <br/> **FormatName**: Text   | Default format value for String column.  |
-|                    | Email   | StringFormat.Email  | StringFormatName.Email | **Format**: Email <br/> **FormatName**: Email  | |
-|                    | Text Area   | StringFormat.TextArea  | StringFormatName.TextArea | **Format**: TextArea <br/> **FormatName**: TextArea   ||
-|                    | URL   | StringFormat.Url  | StringFormatName.Url | **Format**: Url <br/> **FormatName**: Url   |  |
-|                    | Ticker Symbol   | StringFormat.TickerSymbol  | StringFormatName.TickerSymbol | **Format**: TickerSymbol <br/> **FormatName**: TickerSymbol   |   |
-|                    | Version Number   | StringFormat.VersionNumber  | StringFormatName.VersionNumber | **Format**: VersionNumber <br/> **FormatName**: VersionNumber   | |
-|                    | Phone   | StringFormat.Phone  | StringFormatName.Phone | **Format**: Text <br/> **FormatName**: Phone   |  |
-|                    | JSON   | StringFormat.Json  | StringFormatName.Json | **Format**: Text <br/> **FormatName**: Json   |  |
-|                    | Rich Text   | StringFormat.RichText  | MemoFormatName.RichText | **Format**: Text <br/> **FormatName**: RichText   | Only allowed for non-SQL data provider. |
-| Memo/Multiline Text    | Text   | StringFormat.Text | MemoFormatName.Text | **Format**: Text <br/> **FormatName**: Text   | Default format value for Memo/Multiline column.  |
-|                    | Email   | StringFormat.Email  | MemoFormatName.Email | **Format**: Email <br/> **FormatName**: Email   |   |
-|                    | Text Area   | StringFormat.TextArea  | MemoFormatName.TextArea | **Format**: TextArea <br/> **FormatName**: TextArea   |  |
-|                    | InternalExtentdata   | StringFormat.Te  | StringFormatName.Text | **Format**: Text <br/> **FormatName**: Text   |  |
-|                    | Json   | StringFormat.Json  | MemoFormatName.Json | **Format**: Text <br/> **FormatName**: JSON   |  Only allowed for non-SQL data provider. |
-|                    | Rich Text   | StringFormat.RichText  | MemoFormatName.RichText | **Format**: Text <br/> **FormatName**: RichText   |  |
-| Whole Number            | None/String.Empty   | IntegerFormat.None | N/A| **Format**: None    | Default format value for Integer column.  |
-|                    | Duration   |IntegerFormat.Duration  | N/A | **Format**: Duration   |   |
-|                    | TimeZone   | IntegerFormat.TimeZone  | N/A | **Format**: TimeZone   |  |
-|                    | Language   | IntegerFormat.Language  | N/A | **Format**: Language    |   |
-|                    | Locale   | IntegerFormat.Locale  | N/A | **Format**: Locale |  |
-| Date and Time           | DateTime  | DateTimeFormat.DateAndTime | N/A| **Format**: DateAndTime    | Default format value for DateTime column.  |
+| Text               | text   | StringFormat.Text  | StringFormatName.Text | **Format**: Text <br/> **FormatName**: Text   | Default format value for String column.  |
+|                    | email   | StringFormat.Email  | StringFormatName.Email | **Format**: Email <br/> **FormatName**: Email  | |
+|                    | textarea   | StringFormat.TextArea  | StringFormatName.TextArea | **Format**: TextArea <br/> **FormatName**: TextArea   ||
+|                    | url   | StringFormat.Url  | StringFormatName.Url | **Format**: Url <br/> **FormatName**: Url   |  |
+|                    | tickersymbol   | StringFormat.TickerSymbol  | StringFormatName.TickerSymbol | **Format**: TickerSymbol <br/> **FormatName**: TickerSymbol   |   |
+|                    | versionnumber   | StringFormat.VersionNumber  | StringFormatName.VersionNumber | **Format**: VersionNumber <br/> **FormatName**: VersionNumber   | |
+|                    | phone   | StringFormat.Phone  | StringFormatName.Phone | **Format**: Text <br/> **FormatName**: Phone   |  |
+|                    | json   | StringFormat.Json  | StringFormatName.Json | **Format**: Text <br/> **FormatName**: Json   |  |
+|                    | richtext   | StringFormat.RichText  | MemoFormatName.RichText | **Format**: Text <br/> **FormatName**: RichText   | Only allowed for non-SQL data provider. |
+| Memo/Multiline Text    | text   | StringFormat.Text | MemoFormatName.Text | **Format**: Text <br/> **FormatName**: Text   | Default format value for Memo/Multiline column.  |
+|                    | email   | StringFormat.Email  | MemoFormatName.Email | **Format**: Email <br/> **FormatName**: Email   |   |
+|                    | textarea   | StringFormat.TextArea  | MemoFormatName.TextArea | **Format**: TextArea <br/> **FormatName**: TextArea   |  |
+|                    | internalextentdata   | StringFormat.Te  | StringFormatName.Text | **Format**: Text <br/> **FormatName**: Text   |  |
+|                    | json   | StringFormat.Json  | MemoFormatName.Json | **Format**: Text <br/> **FormatName**: JSON   |  Only allowed for non-SQL data provider. |
+|                    | richtext   | StringFormat.RichText  | MemoFormatName.RichText | **Format**: Text <br/> **FormatName**: RichText   |  |
+| Whole Number            | none/string.Empty   | IntegerFormat.None | N/A| **Format**: None    | Default format value for Integer column.  |
+|                    | duration   |IntegerFormat.Duration  | N/A | **Format**: Duration   |   |
+|                    | timezone   | IntegerFormat.TimeZone  | N/A | **Format**: TimeZone   |  |
+|                    | language   | IntegerFormat.Language  | N/A | **Format**: Language    |   |
+|                    | locale   | IntegerFormat.Locale  | N/A | **Format**: Locale |  |
+| Date and Time      | date     | DateTimeFormat.DateOnly | N/A | Yes | Format: DateOnly | Default format value for DateTime attribute|
+|                    | datetime  | DateTimeFormat.DateAndTime | N/A| **Format**: DateAndTime    | Default format value for DateTime column.  |
 
 ### Related articles
 
