@@ -2273,7 +2273,9 @@
         - name: Work with table relationships
           href: ../teams/relationships-table.md
         - name: Work with table columns
-          href: ../teams/table-columns.md        
+          href: ../teams/table-columns.md
+        - name: Work with formula table columns (preview)
+          href: ../teams/formula-columns.md  
         - name: Edit table data in Excel
           href: ../teams/edit-data-in-excel.md
         - name: Move customizations between environments
