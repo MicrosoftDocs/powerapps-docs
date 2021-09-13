@@ -13,6 +13,7 @@ contributors:
     - tapanm-msft
     - sandhangitmsft
     - dileepsinghmicrosoft
+    - nageshbhat-msft
 ---
 
 # Important changes coming in Power Apps portals
