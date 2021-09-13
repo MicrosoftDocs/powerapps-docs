@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/10/2021
+ms.date: 09/13/2021
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: tapanm
@@ -26,7 +26,7 @@ Makers, developers, and IT professionals can use this information to prepare for
 
 ## CDN for US Government
 
-Starting December 2021, Power Apps portals for US Government will begin using [Azure Content Delivery Network (CDN)](/azure/cdn/cdn-overview) for [default JavaScript and CSS files](faq.yml#do-portals-use-any-static-content-from-cdns--content-delivery-network--that-i-need-to-allow-list-). Depending on the US Government deployment, configure the allow-list for the following CDN URLs:
+Starting January 2022, Power Apps portals for US Government will begin using [Azure Content Delivery Network (CDN)](/azure/cdn/cdn-overview) for [default JavaScript and CSS files](faq.yml#do-portals-use-any-static-content-from-cdns--content-delivery-network--that-i-need-to-allow-list-). Depending on the US Government deployment, configure the allow-list for the following CDN URLs:
 
 | Power Apps portals version | CDN URL |
 | - | - |
