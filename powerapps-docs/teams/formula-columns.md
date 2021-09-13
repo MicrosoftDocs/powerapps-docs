@@ -39,6 +39,8 @@ When you create a record, the formula column executes the formula and displays t
 
 :::image type="content" source="media/record-example-formula-column.png" alt-text="Example record with a formula column":::
 
+Notice that the column type is determined by the formula. You can change the formula after you’ve created it if it doesn’t change the column type. For example, the formula *price * discount* creates a column type of number, whereas the formula *First & “ “ & Last* creates a column type of string. You can change a *price * discount* formula to  *price * (discount +10%)* because that doesn’t change the column type. However, once saved, you can’t change the *price * discount* formula to  *Text(price * discount)* because that would require changing the column type to string.
+
 ## Data types
 
 The following data types can be displayed in a formula column:
