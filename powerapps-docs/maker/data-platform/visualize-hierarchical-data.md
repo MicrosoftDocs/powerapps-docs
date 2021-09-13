@@ -109,7 +109,6 @@ Based on your needs, you can choose between using a tree view, which shows the e
 ### See also 
 
 [Define and query hierarchically related data](../data-platform/define-query-hierarchical-data.md)<br />
-[Video: Hierarchy Visualization](https://www.youtube.com/watch?v=_dGBE6icLNw&index=9&list=PLC3591A8FE4ADBE07)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
