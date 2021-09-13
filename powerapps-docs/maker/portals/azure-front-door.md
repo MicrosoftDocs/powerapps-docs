@@ -5,7 +5,7 @@ author: dileepsinghmicrosoft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/09/2021
+ms.date: 09/13/2021
 ms.author: dileeps
 ms.reviewer: tapanm
 contributors:
@@ -15,10 +15,10 @@ contributors:
 
 # Set up Azure Front Door with portals
 
-As a portal maker, you can use [Azure Front Door](/azure/frontdoor/standard-premium/overview) with Power Apps portals to use its edge caching and Web Application Firewall (WAF) capabilities. In this article, you'll learn how to set up Azure Front Door with portals.
+As a portal maker, you can use [Azure Front Door Standard/Premium (Preview)](/azure/frontdoor/standard-premium/overview) with Power Apps portals to use its edge caching and Web Application Firewall (WAF) capabilities. In this article, you'll learn how to set up Azure Front Door with portals.
 
 > [!NOTE]
-> - Although this article is focused on Azure Front Door, similar steps can be used for any content delivery network or WAF provider. The terminology used by various components might be different.
+> - Although this article is focused on [Azure Front Door Standard/Premium (Preview)](/azure/frontdoor/standard-premium/overview), similar steps can be used for [Azure Front Door](/azure/frontdoor/front-door-overview) or any other content delivery network or WAF provider. The terminology used by various components might be different.
 > - While [custom domain HTTPS settings using Azure portal](/azure/frontdoor/front-door-faq#can-i-configure-tls-policy-to-control-tls-protocol-versions-) allows you to choose a [default minimum](/azure/frontdoor/front-door-faq#what-tls-versions-are-supported-by-azure-front-door-) TLS version between 1.0 and 1.2, use TLS version 1.2 for strong ciphers.
 
 Follow these steps to set up Azure Front Door with portals:
@@ -28,11 +28,6 @@ Follow these steps to set up Azure Front Door with portals:
 1. [Set up routing rules to cache static requests](#set-up-routing-rules-to-cache-static-requests).
 1. [Set up WAF rules to analyze incoming requests](#set-up-waf-rules-to-analyze-incoming-requests).
 1. [Set up the portal to accept traffic only from Azure Front Door](#set-up-power-apps-portals-to-accept-traffic-only-from-azure-front-door).
-
-> [!NOTE]
-> This document describes how to implement Azure Front Door Standard/Premium (Preview), which is in public preview. Please refer to the [Azure Front Door Standard/Premium (Preview) documentation](/azure/frontdoor/standard-premium/overview) for preview guidance.
->
-> You can also adapt this guidance to work with the fully supported version of Azure Front Door, or with another content delivery network.
 
 ## Set up the Azure Front Door endpoint and custom domain name
 
