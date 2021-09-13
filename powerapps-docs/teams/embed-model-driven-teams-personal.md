@@ -38,7 +38,7 @@ You can share an app you've created by embedding it directly into Microsoft Team
 
 1. **Add to Teams** panel opens on the right-side of the screen.
 
-    ![Add to Teams panel.](media/embed-teams-app/add-to-teams-model.png "Add to Teams panel")
+   :::image type="content" source="media/embed-teams-app/add-to-teams-model.png" alt-text="Add to Teams panel":::
 
 1. (Optional) If the app doesn't have any description, select **Edit details** to open the app in add designer to add.
 
