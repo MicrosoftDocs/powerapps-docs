@@ -17,7 +17,7 @@ search.app:
   - PowerApps
 contributors:
 ---
-# Embed a model driven app as personal app in Teams
+# Embed a model-driven app as personal app in Teams
 
 You can share an app you've created by embedding it directly into Microsoft Teams. When completed, users can select **+** to add your app to any of **your** team channels or conversations in the team you are in. The app appears as a tile under **Tabs for your team**.
 
@@ -40,7 +40,7 @@ You can share an app you've created by embedding it directly into Microsoft Team
 
     ![Add to Teams panel.](media/embed-teams-app/add-to-teams-model.png "Add to Teams panel")
 
-1. (Optional) If the app doesn't have any description, select **Edit details** to open the app in Power Apps Studio to add.
+1. (Optional) If the app doesn't have any description, select **Edit details** to open the app in add designer to add.
 
 1. (Optional) Select **Advanced settings** to add additional details such as *Name*, *Website*, *Terms of Use*, *Privacy Policy*, *MPN ID* (Microsoft Partner Network ID).
 
@@ -69,7 +69,7 @@ If you're an admin, you can use the **Download app** option to also [publish the
 
 - Running **Model-driven apps** on the Microsoft Teams mobile app is currently not supported.
 - Embedded canvas apps are not supported.
-- Custom pages are not supported. 
+- Custom pages are not supported.
 
 ### See also
 
