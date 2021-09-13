@@ -43,7 +43,7 @@ You can embed a section that hosts Power BI reports and tiles in your system for
 	</labels>
 	<rows>
 		<row>
-			<cell id="{7d18b61c-c588-136c-aee7-03e5e74a09a1}" showlabel="true" rowspan="20" colspan="1" auto="false">
+			<cell id="{7d18b61c-c588-136c-aee7-03e5e74a09a1}" showlabel="true" rowspan="20" colspan="1" auto="false" solutionaction="Added">
 				<labels>
 					<label languagecode="1033" description="Accounts (Parent Account)"/>
 				</labels>
@@ -63,7 +63,7 @@ You can embed a section that hosts Power BI reports and tiles in your system for
 > [!IMPORTANT]
 > Be sure to use the control `classid="{8C54228C-1B25-4909-A12A-F2B968BB0D62}"` as indicated in the XML sample.
 
-This table describes the values you need to change to the elements in the previous example.
+This table describes the values you need to change to the elements in the previous XML sample.
 
 |                                                 Property                                                  |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 |-----------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -91,9 +91,9 @@ The filtering is done by adding a `<PowerBIFilter>` element in the `<parameter>`
 </control>
 ```
 
-Note that this uses the same control as the unfiltered report embedding, and hence the control class id remains unchanged. 
+Note that this uses the same control as the unfiltered report embedding, and hence the control class id remains unchanged.
 
-This table describes any additional properties used in the previous example.
+This table describes any additional properties used in the previous XML sample.
 
 |                                                 Property                                                  |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 |-----------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -126,24 +126,8 @@ You can create more complex filter expressions by looking at examples from [Cons
 
 Before you import the solution into the target environment, make sure the unmodified attribute isn’t included in formXml section of the customizations.xml file. If the unmodified attribute is present in the XML that includes the Power BI control XML, remove the attribute before you import the solution into the target environment. For example, replace `<systemform unmodified="1">` with `<systemform>`.
 
-Additionally, when you export the solution as managed, add the **solutionaction="Added"** attribute to the formXml as indicated in the **cell** element below: 
-
-```xml
-<cell id="{7d18b61c-c588-136c-aee7-03e5e74a09a1}" showlabel="true" rowspan="20" colspan="1" auto="false" solutionaction="Added">
-  <labels>
-    <label languagecode="1033" description="Accounts (Parent Account)"/> 
-  </labels> 
-  <control id="unfilteredreport" classid="{8C54228C-1B25-4909-A12A-F2B968BB0D62}">
-    <parameters>
-      <PowerBIGroupId>00000000-0000-0000-0000-000000000000</PowerBIGroupId>
-      <PowerBIReportId>544c4162-6773-4944-900c-abfd075f6081</PowerBIReportId>      
-      <TileUrl>https://xyz.powerbi.com/reportEmbed?reportId=544c4162-6773-4944-900c-abfd075f6081</TileUrl>        
-     </parameters> 
-  </control> 
-</cell>
-```
-
 ## Find the Power BI workspace and report Ids
+
 1. The workspace Id for this example is efc85277-2bdb-47bc-9762-363f64335108.
 1. The report Id for this example is 643ab643-7126-4a57-bd82-ca8f1fb676fc.
 :::image type="content" source="media/embed-powerbi/power-bi-service-url.png" alt-text="Power BI workspace Id and report Id example":::
