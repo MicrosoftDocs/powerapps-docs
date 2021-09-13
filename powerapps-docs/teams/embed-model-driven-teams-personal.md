@@ -16,7 +16,6 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-
 ---
 # Embed a model driven app as personal app in Teams
 
@@ -29,7 +28,7 @@ You can share an app you've created by embedding it directly into Microsoft Team
 
 ## Add the app as a personal app
 
-1. Sign in to [Power Apps](https://make.powerapps.com), and then select **Apps** in the menu.
+1. Sign into [Power Apps](https://make.powerapps.com), and then select **Apps** in the menu.
 
     ![Show list of apps.](media/embed-teams-app/file-apps2.png "Show list of apps")
 
@@ -49,10 +48,11 @@ You can share an app you've created by embedding it directly into Microsoft Team
 
 1. Select **Add to Teams** to add the app as a personal app or select **Add to a team** or **Add to a chat** to add the app as a tab within an existing channel or conversation.
 
-
 ## Download app
 
-1. You can also **Download app** in Power Apps. Power Apps will then generate your Teams manifest file using the app description and logo you've already set in your app. To add the app as a personal app or as a tab to any channel or conversation, select **Apps** in the left navigation and then select **Upload a custom app**.
+You can also **Download app** in Power Apps. Power Apps will then generate your Teams manifest file using the app description and logo you've already set in your app.
+
+1. To add the app as a personal app or as a tab to any channel or conversation, select **Apps** in the left navigation and then select **Upload a custom app**.
 
     > [!NOTE]
     > The **Upload a custom app** only appears if your Teams administrator has created a [custom app policy](/microsoftteams/teams-app-setup-policies) and turned on **Allow uploading of custom apps**.
@@ -65,10 +65,11 @@ You can share an app you've created by embedding it directly into Microsoft Team
 
 If you're an admin, you can use the **Download app** option to also [publish the app](/microsoftteams/tenant-apps-catalog-teams) to the Microsoft Teams catalog.
 
-# Known Issues
-1. Running **Model-driven apps** on the Microsoft Teams mobile app is currently not supported. 
-2. Embedded Canvas apps are not supported.
-3. Custom pages are not supported. 
+## Features currently unavailable
+
+- Running **Model-driven apps** on the Microsoft Teams mobile app is currently not supported.
+- Embedded canvas apps are not supported.
+- Custom pages are not supported. 
 
 ### See also
 
