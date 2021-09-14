@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/13/2021
+ms.date: 09/14/2021
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: tapanm
@@ -40,6 +40,9 @@ Starting January 2022, Power Apps portals for US Government will begin using [Az
 Starting with release [9.3.7.x](/power-platform/released-versions/portals/portalupdate1), newly created portals will have table permissions enforced for all [forms](configure/entity-forms.md#secure-your-forms) and [lists](configure/entity-lists.md#securing-lists) irrespective of the **Enable Table Permissions** setting.
 
 Also, with the same release, lists on all portals (new or existing) that have [OData feeds](configure/entity-lists.md#list-odata-feeds) enabled will require appropriate [table permissions](configure/entity-permissions-studio.md) setup for the feed on these lists to work.
+
+> [!NOTE]
+> The changes described above also apply to portals [converted](admin/convert-portal.md) from trial to production.
 
 To configure anonymous access explicitly, use proper [table permissions](configure/entity-permissions-studio.md), and web role setup instead.
 
