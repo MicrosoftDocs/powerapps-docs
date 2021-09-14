@@ -75,7 +75,7 @@ If you chose to stage for upgrade, or if the system had an issue completing an u
 
 ## Understanding version numbers for updates
 
-A solution’s version has the following format: major.minor.build.revision. An update must have a higher major, minor, build or revision number than the parent solution. For example, for a base solution version 3.1.5.7, a small update could be a version 3.1.5.8 or a slightly more signficant update could have version 3.1.7.0. A substantially more significant update could be version 3.2.0.0.
+A solution’s version has the following format: major.minor.build.revision. An update must have a higher major, minor, build, or revision number than the parent solution. For example, for a base solution version 3.1.5.7, a small update could be a version 3.1.5.8 or a slightly more significant update could have version 3.1.7.0. A substantially more significant update could be version 3.2.0.0.
 
 ## Removing a managed component from the target environment
 
