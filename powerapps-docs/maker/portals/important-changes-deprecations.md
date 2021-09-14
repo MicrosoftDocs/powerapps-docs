@@ -41,6 +41,9 @@ Starting with release [9.3.7.x](/power-platform/released-versions/portals/portal
 
 Also, with the same release, lists on all portals (new or existing) that have [OData feeds](configure/entity-lists.md#list-odata-feeds) enabled will require appropriate [table permissions](configure/entity-permissions-studio.md) setup for the feed on these lists to work.
 
+> [!NOTE]
+> The changes described above also apply to portals [converted](../admin/convert-portal.md) from trial to production.
+
 To configure anonymous access explicitly, use proper [table permissions](configure/entity-permissions-studio.md), and web role setup instead.
 
 ## SameSite mode changes
