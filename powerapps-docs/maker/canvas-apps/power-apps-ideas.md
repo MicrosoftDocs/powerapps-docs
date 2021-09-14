@@ -55,10 +55,10 @@ You can enter your requirements in plain natural language (such as English (en-u
 
 When the formula doesn’t meet your needs, or there’s no formula suggestion, you can try to provide more examples for the model to learn so it could try to provide you a better suggestion. For details, go to [Tutorial: Train with examples](power-apps-ideas-train-examples.md).
 
+## Limitations
+
 > [!NOTE]
 > We're improving the model to make it better and to accomplish more complex tasks, support more functions, controls, and properties. If you have a wish list, submit ideas through [Power Apps Ideas - Power Platform Community](https://powerusers.microsoft.com/t5/Power-Apps-Ideas/idb-p/PowerAppsIdeas).
-
-## Limitations
 
 During this experimental release, Power Apps Ideas has the following limitations:
 
