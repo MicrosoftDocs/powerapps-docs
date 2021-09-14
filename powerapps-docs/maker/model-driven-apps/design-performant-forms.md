@@ -114,13 +114,13 @@ Xrm.WebApi.retrieveRecord("settings_entity", "7333e80e-9b0f-49b5-92c8-9b48d621c3
 	.finally(Xrm.Utility.closeProgressIndicator);
 ```
 
-You should be careful when using asynchronous code in an event handler that does not support waiting for asynchronous code, particularly for code that needs an action to be taken or handled on the resolution of the asynchronous code. Asynchronous code can cause issues if the resolution handler expects the application context to remain the same as it was when the asynchronous code was started. Your code should check that the user is in the same context after each asynchronous continuation point. 
+You should be careful when using asynchronous code in an event handler that does not support waiting for asynchronous code. This is particularly true for code that needs an action to be taken or handled on the resolution of the asynchronous code. Asynchronous code can cause issues if the resolution handler expects the application context to remain the same as it was when the asynchronous code was started. Your code should check that the user is in the same context after each asynchronous continuation point.
 
 For example, there may be code in an event handler to make a network request and change a control to be disabled based on the response data. Before the response from the request is received, the user may have interacted with the control or navigated to a different page. Because the user is on a different page, the form context may not be available, which might lead to errors, or there might be other undesired behavior.
 
 #### Async support in form Onload and form OnSave events
 
-Starting in 2021 release wave 2, the form `OnLoad` and `OnSave` events support handlers returning promises. The events will wait for any promises returned by a handler to resolve, up to a timeout period.
+Starting in 2021 release wave 2, the form `OnLoad` and `OnSave` events support handlers that return promises. The events will wait for any promises returned by a handler to resolve, up to a timeout period.
 
 More information:
 - [Form OnLoad](/powerapps/developer/model-driven-apps/clientapi/reference/events/form-onload)
