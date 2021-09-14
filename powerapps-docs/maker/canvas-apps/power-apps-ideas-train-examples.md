@@ -79,6 +79,8 @@ In the this date scenario, if you try to change the date display to only the fir
     Mid(Left(Text(ThisItem.'Created On'), 3), Match(Text(ThisItem.'Created On'), "[\p{Lu}\p{Ll}]+").StartMatch) 
     ```
 
+    You've just used **Train with examples** capability and generated formula using Power Apps Ideas for the specific requirement that couldn't be achieved using the natural language alone.
+
 ### See also
 
 - [Formula reference](formula-reference.md)
