@@ -83,10 +83,13 @@ If you change the data type to an incompatible format, the following error is di
 
 The format \<\<formatname\>\> is not valid for the \<\<datatype\>\> type column \<\<columnname\>\> of table \<\<tablename\>\>. For example, the format datetime is not valid for the text type column.
 
-To change the format of a data type, you need to add the new format details into an OData API **POST** call:
+To set or change the format of a data type, you need to add the new format details into an OData API **POST** for a new column or **PUT** call to update an existing column:
+
+> [!NOTE]
+> For more samples on how to use the API, see https://github.com/microsoft/PowerApps-Samples
 
 ```http
-PUT [Organization URI]/api/data/v9.0/EntityDefinitions(402fa40f-287c-e511-80d2-00155d2a68d2)/Attributes
+PUT [Organization URI]/api/data/v9.2/EntityDefinitions(402fa40f-287c-e511-80d2-00155d2a68d2)/Attributes
 HTTP/1.1
 
 Accept: application/json
