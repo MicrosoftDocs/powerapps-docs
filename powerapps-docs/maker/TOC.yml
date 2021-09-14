@@ -549,8 +549,14 @@
           href: ./canvas-apps/working-with-rules.md
         - name: Create or update bulk records
           href: ./canvas-apps/create-update-records-bulk.md
-        - name: Use Power Apps Ideas (Preview)
-          href: ./canvas-apps/power-apps-ideas.md
+        - name: Power Apps Ideas (Preview)
+          items:
+          - name: Use Power Apps Ideas
+            href: ./canvas-apps/power-apps-ideas.md
+          - name: "Tutorial: Transforming natural language to Power Fx formulas"
+            href: ./canvas-apps/power-apps-ideas-transform.md
+          - name: "Tutorial: Train with examples"
+            href: ./canvas-apps/power-apps-ideas-train-examples.md
         - name: Formula reference
           items:
           - name: Overview
