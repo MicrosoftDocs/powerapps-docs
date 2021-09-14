@@ -7,7 +7,7 @@ ms.topic: conceptual
 ms.custom: 
 ms.date: 07/02/2021
 ms.subservice: teams
-ms.author: v-ljoel
+ms.author: namarwah
 ms.reviewer: tapanm
 contributors:
   - navjotm

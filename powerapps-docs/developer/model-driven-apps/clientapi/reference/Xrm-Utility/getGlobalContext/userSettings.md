@@ -187,7 +187,7 @@ On success, returns a promise object containing the values specified in the desc
 
 ### Example
 
-```
+```javascript
 userSettings
   .getSecurityRolePrivilegesInfo()
   .then(function success(rolePrivileges) {
@@ -198,8 +198,8 @@ userSettings
     var guid = privilegeGuids[0];
     console.log("Privilege Id: " + privilege[guid].id);
     console.log("Privilege Name: " + privilege[guid].privilegeName);
-    console.log("Privilege Business Unit Id: " + privilege[guid].businessUnitId);
-    console.log("Privilege depth: " + privilege[guid].depth);
+    console.log("Privilege Business Unit Id: " + rolePrivileges[guid].businessUnitId);
+    console.log("Privilege depth: " + rolePrivileges[guid].depth);
   });
 ```
 

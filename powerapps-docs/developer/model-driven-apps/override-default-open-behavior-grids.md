@@ -82,12 +82,9 @@ Create a custom button on the form where you want to change the default behavior
 
 1. Open the solution that you created in step 1, and add the table where you want to create the button. It is not required to include all table components and metadata.
 
-1. Select **Add existing** > **Other** > **Site map** to add the site map. 
+1. Select **Add existing** > **Table**  
 
-    > [!div class="mx-imgBorder"]
-    > ![Add the site map.](media/add-existing-site-map-to-solution.png "Add the site map")
-
-1. From the list, select **Site Map**.
+1. From the list, select **Contact**.
 
 1. Save and publish the solution. 
 

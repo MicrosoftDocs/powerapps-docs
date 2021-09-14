@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 02/05/2021
+ms.date: 08/25/2021
 ms.subservice: canvas-maker
 ms.author: alaug
 search.audienceType: 
@@ -78,7 +78,8 @@ After you share an app for guest access, guests can discover and access apps sha
 - Power Apps [per app plans](/power-platform/admin/powerapps-flow-licensing-faq#how-is-microsoft-power-apps-and-power-automate-licensed) are scoped to apps in a specific environment, so they can't be recognized across tenants.
 - Power Apps [included with Office](/power-platform/admin/pricing-billing-skus#power-appspower-automate-for-microsoft-365) and Power Apps [per user plans](/power-platform/admin/powerapps-flow-licensing-faq#how-is-microsoft-power-apps-and-power-automate-licensed) have the following characteristics:
   - In the Azure public cloud, they're recognized across tenants in guest scenarios because they aren't bound to a specific environment.
-  - In Azure national or sovereign clouds, they aren't recognized across tenants in guest scenarios. More information: [National clouds](/azure/active-directory/develop/authentication-national-cloud), [Azure geographies](https://azure.microsoft.com/global-infrastructure/geographies/#geographies)
+  - In Azure national or sovereign clouds, they're recognized across tenants in guest scenarios. More information: [National clouds](/azure/active-directory/develop/authentication-national-cloud), [Azure geographies](https://azure.microsoft.com/global-infrastructure/geographies/#geographies)
+  - Licenses are not recognized across tenants in difference Azure clouds. 
 
 ## Frequently asked questions
 
