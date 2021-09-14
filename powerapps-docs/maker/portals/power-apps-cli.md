@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/22/2021
+ms.date: 09/09/2021
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: tapanm
@@ -83,7 +83,29 @@ Portals support for Microsoft Power Platform CLI is limited to the tables listed
 
 :::row:::
    :::column span="":::
-      adx_contentaccesslevel
+      adx_ad
+   :::column-end:::
+   :::column span="":::
+      adx_adplacement
+   :::column-end:::
+   :::column span="":::
+      adx_blog
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      adx_blogpost
+   :::column-end:::
+   :::column span="":::
+      adx_botconsumer
+   :::column-end:::
+   :::column span="":::
+      adx_communityforum
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      adx_communityforumaccesspermission
    :::column-end:::
    :::column span="":::
       adx_contentsnippet
@@ -105,156 +127,110 @@ Portals support for Microsoft Power Platform CLI is limited to the tables listed
 :::row-end:::
 :::row:::
    :::column span="":::
-      adx_entitypermission_webrole
+      adx_forumthreadtype
    :::column-end:::
-   :::column span="":::
-      adx_externalidentity
-   :::column-end:::
-   :::column span="":::
-      adx_pagealert
-   :::column-end:::
-:::row-end:::
-:::row:::
-   :::column span="":::
-      adx_pagenotification
-   :::column-end:::
-   :::column span="":::
-      adx_pagetag
-   :::column-end:::
-   :::column span="":::
-      adx_pagetag_webpage
-   :::column-end:::
-:::row-end:::
-:::row:::
    :::column span="":::
       adx_pagetemplate
    :::column-end:::
    :::column span="":::
-      adx_portallanguage
-   :::column-end:::
-   :::column span="":::
-      adx_publishingstate
+      adx_poll
    :::column-end:::
 :::row-end:::
 :::row:::
    :::column span="":::
-      adx_publishingstatetransitionrule
+      adx_polloption
    :::column-end:::
    :::column span="":::
-      adx_publishingstatetransitionrule_webrole
+      adx_pollplacement
+   :::column-end:::
+   :::column span="":::
+      adx_portallanguage
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      adx_publishingstate
    :::column-end:::
    :::column span="":::
       adx_redirect
    :::column-end:::
-:::row-end:::
-:::row:::
-   :::column span="":::
-      adx_setting
-   :::column-end:::
    :::column span="":::
       adx_shortcut
    :::column-end:::
+:::row-end:::
+:::row:::
    :::column span="":::
       adx_sitemarker
+   :::column-end:::
+   :::column span="":::
+      adx_sitesetting
+   :::column-end:::
+   :::column span="":::
+      adx_tag
    :::column-end:::
 :::row-end:::
 :::row:::
    :::column span="":::
-      adx_sitesetting
+      adx_urlhistory
    :::column-end:::
    :::column span="":::
       adx_webfile
    :::column-end:::
    :::column span="":::
-      adx_webfilelog
+      adx_webform
    :::column-end:::
 :::row-end:::
 :::row:::
-   :::column span="":::
-      adx_webform
-   :::column-end:::
    :::column span="":::
       adx_webformmetadata
    :::column-end:::
-   :::column span="":::
-      adx_webformsession
-   :::column-end:::
-:::row-end:::
-:::row:::
    :::column span="":::
       adx_webformstep
    :::column-end:::
    :::column span="":::
       adx_weblink
    :::column-end:::
-   :::column span="":::
-      adx_weblinkset
-   :::column-end:::
 :::row-end:::
 :::row:::
    :::column span="":::
-      adx_webnotificationentity
-   :::column-end:::
-   :::column span="":::
-      adx_webnotificationurl
+      adx_weblinkset
    :::column-end:::
    :::column span="":::
       adx_webpage
    :::column-end:::
-:::row-end:::
-:::row:::
-   :::column span="":::
-      adx_webpage_tag
-   :::column-end:::
    :::column span="":::
       adx_webpageaccesscontrolrule
    :::column-end:::
-   :::column span="":::
-      adx_webpageaccesscontrolrule_webrole
-   :::column-end:::
 :::row-end:::
 :::row:::
    :::column span="":::
-      adx_webpagehistory
+      adx_webrole
    :::column-end:::
-   :::column span="":::
-      adx_webpagelog
-   :::column-end:::
-   :::column span="":::
-      adx_webrole_systemuser
-   :::column-end:::
-:::row-end:::
-:::row:::
    :::column span="":::
       adx_website
    :::column-end:::
    :::column span="":::
-      adx_website_list
-   :::column-end:::
-   :::column span="":::
-      adx_website_sponsor
-   :::column-end:::
-:::row-end:::
-:::row:::
-   :::column span="":::
       adx_websiteaccess
    :::column-end:::
-   :::column span="":::
-      adx_websiteaccess_webrole
-   :::column-end:::
-   :::column span="":::
-      adx_websitebinding
-   :::column-end:::
 :::row-end:::
 :::row:::
+   :::column span="":::
+      adx_websitebinding (only download)
+   :::column-end:::
    :::column span="":::
       adx_websitelanguage
    :::column-end:::
    :::column span="":::
       adx_webtemplate
    :::column-end:::
+:::row-end:::
+:::row:::
    :::column span="":::
-      adx_urlhistory
+      annotation
+   :::column-end:::
+   :::column span="":::
+   :::column-end:::
+   :::column span="":::
    :::column-end:::
 :::row-end:::
 

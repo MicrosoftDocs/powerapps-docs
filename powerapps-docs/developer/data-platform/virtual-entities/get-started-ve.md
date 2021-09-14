@@ -61,6 +61,7 @@ Following are the limitations in virtual tables that must be considered.
     - A column on a virtual table cannot be calculated or rollup.  Any desired calculations must be done on the external side, possibly within or directed by the data provider.
     - Although you can add virtual table columns as a lookup on a grid or other UI views, you cannot filter or sort based on this virtual table lookup column.
 - Auditing is not supported.
+- Search functionality is not support for virtual tables as they do not persist data.
 - Charts and dashboards are not supported for virtual tables.
 - Virtual tables cannot be enabled for queues.
 - Offline caching of values is not supported for virtual tables.
