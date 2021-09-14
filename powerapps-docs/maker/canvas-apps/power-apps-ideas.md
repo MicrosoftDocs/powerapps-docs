@@ -1,6 +1,6 @@
 ---
-title: Power Apps Ideas overview (Preview)
-description: Over view of Power Apps Ideas
+title: Power Apps Ideas (Preview)
+description: Learn about how to use Power Apps Ideas, its limitations and supportability, and benefit from the generated formulas.
 author: norliu
 ms.service: powerapps
 ms.topic: article
@@ -18,7 +18,7 @@ contributors:
   - tapanm-msft
 ---
 
-# Power Apps Ideas overview (Preview)
+# Power Apps Ideas (Preview)
 
 [This article is pre-release documentation and is subject to change.]
 
@@ -44,9 +44,9 @@ You can type in `search Contacts with 'Full Name' in TextSearchBox1 and sort res
 
 There are two methods to benefit from Power Apps Ideas in your app.
 
-### Method 1: Transforming natural language to Power Fx formulas
+### Method 1: Transform natural language to Power Fx formulas
 
-You can enter your requirements in plain natural language (such as English (en-us)), and Power Apps transforms your requirement to Power Fx formula. For details, go to [Tutorial: Transforming natural language to Power Fx formulas](power-apps-ideas-transform.md).
+You can enter your requirements in plain natural language (such as English (en-us)), and Power Apps transforms your requirement to Power Fx formula. For details, go to [Tutorial: Transform natural language to Power Fx formulas](power-apps-ideas-transform.md).
 
 > [!NOTE]
 > This capability only works on the **Items** property of [Gallery](controls/control-gallery.md) and [Data table](controls/control-data-table.md) controls. See [limitations](#limitations), [supported/unsupported capabilities](#supported-and-unsupported-capabilities), and [supported functions](#supported-power-fx-functions) later for more information.
@@ -198,7 +198,7 @@ Ideas, select the [Report it now](https://msrc.microsoft.com/report/abuse) link 
 
 ## Next steps
 
-- [Tutorial: Transforming natural language to Power Fx formulas](power-apps-ideas-transform.md)
+- [Tutorial: Transform natural language to Power Fx formulas](power-apps-ideas-transform.md)
 - [Tutorial: Train with examples](power-apps-ideas-train-examples.md)
 
 ### See also

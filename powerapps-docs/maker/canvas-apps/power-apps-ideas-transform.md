@@ -1,5 +1,5 @@
 ---
-title: "Tutorial: Transforming natural language to Power Fx formulas (Preview)"
+title: "Tutorial: Transform natural language to Power Fx formulas (Preview)"
 description: Learn about using Power Apps Ideas to transform natural language into Power Fx formulas.
 author: norliu
 ms.service: powerapps
@@ -18,7 +18,7 @@ contributors:
   - tapanm-msft
 ---
 
-# Tutorial: Transforming natural language to Power Fx formulas (Preview)
+# Tutorial: Transform natural language to Power Fx formulas (Preview)
 
 [This article is pre-release documentation and is subject to change.]
 

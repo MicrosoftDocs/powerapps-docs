@@ -85,4 +85,4 @@ In the this date scenario, if you try to change the date display to only the fir
 
 - [Formula reference](formula-reference.md)
 - [Power Apps Ideas overview (Preview)](power-apps-ideas.md)
-- [Tutorial: Transforming natural language to Power Fx formulas (Preview)](power-apps-ideas-transform.md)
+- [Tutorial: Transform natural language to Power Fx formulas (Preview)](power-apps-ideas-transform.md)
