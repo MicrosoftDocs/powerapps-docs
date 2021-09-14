@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.date: 01/07/2021
+ms.date: 09/03/2021
 ms.subservice: canvas-maker
 ms.author: chmoncay
 ms.reviewer: tapanm
@@ -27,7 +27,9 @@ A control that enables users to take pictures using the camera on a device.
 
 Use the **Camera** control to capture pictures with a device's camera. The device must have a camera and the user must authorize the app to use the camera.
 
-The most recently captured picture is available through the **Photo** property. With this property, the images can be:
+Tap or select the camera control to capture a picture from the camera.
+
+The most recently captured picture is available through the **Photo** property.  With this property, the images can be:
 
 - **Viewed with the Image control.** Use the [Image](control-image.md) control to view the captured image. For more information, see the [examples](#examples).  
 - **Temporarily put in a variable or a collection.**  Use the [Set](../functions/function-set.md) or [Collect](../functions/function-clear-collect-clearcollect.md) functions to store images in a variable or a collection.  Use caution when using multiple images in a collection at the same time consuming device's limited memory. Use the [SaveData](../functions/function-savedata-loaddata.md) and [LoadData](../functions/function-savedata-loaddata.md) functions to move images to the local storage on the device and for [offline scenarios](../offline-apps.md).

@@ -166,21 +166,6 @@ Same dialog as the last example, but adds title text.
 If( Confirm( "Are you sure?", {Title: "Delete Confirmation"} ), Remove( ThisItem ) )
 ```
 
-Asks the user for their favorite color, capturing the result into a global variable. The result that will be placed in `FavColor` will be the text string "Red" or "Green." As the confirm choice, "Red" is the default. This only works on platforms that support `ConfirmButton` and `CancelButton` options.
-
-```powerapps-dot
-Set( FavColor, 
-     If( Confirm( "What is your favorite color?", 
-                  { ConfirmButton: "Red", CancelButton: "Green" } 
-         ), 
-         "Red", 
-         "Green" 
-     ) 
-)
-
-
-```
-
 Displays a message much like the `Notify` function does, but is modal and requires the user to select a button to proceed. Use in situations where it is important that the user acknowledge the message before proceeding. In this case, which button was selected isn't important.
 
 ```powerapps-dot
@@ -200,7 +185,7 @@ Notify( "Model-driven app notification message" )
 ### Launch a URL
 
 ```powerappsfl
-Launch("https://www.bing.com"));
+Launch("https://www.bing.com");
 ```
 
 ### Access 1:N property

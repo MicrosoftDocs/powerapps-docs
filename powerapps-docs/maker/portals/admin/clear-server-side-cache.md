@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2021
+ms.date: 09/03/2021
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: tapanm
@@ -218,7 +218,6 @@ Clearing the server-side configuration cache for a portal includes refreshing th
 Power Apps portals with version 9.2.6.x or later benefit from improved caching functionality to increase consistency and reliability as follows.
 
 - [Capacity-based portals and add-on portals](../overview.md#power-apps-portals-dynamics-365-portals-and-add-on-portals) will use the same caching functionality.
-- Capacity-based portals don't have to manually [clear the configuration table cache](#configuration-entity-caching-portals-with-capacity-based-licenses).
 - Add-on portals with high load will have improved performance and a reliable data cache refresh.
 
 > [!IMPORTANT]
