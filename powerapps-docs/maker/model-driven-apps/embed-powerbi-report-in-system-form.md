@@ -130,7 +130,7 @@ Before you import the solution into the target environment, make sure the unmodi
 
 1. The workspace Id for this example is efc85277-2bdb-47bc-9762-363f64335108.
 1. The report Id for this example is 643ab643-7126-4a57-bd82-ca8f1fb676fc.
-:::image type="content" source="media/embed-powerbi/power-bi-service-url.png" alt-text="Power BI workspace Id and report Id example":::
+:::image type="content" source="media/embed-powerbi/power-bi-service-url.png" alt-text="Power BI workspace Id and report Id example" lightbox="media/embed-powerbi/power-bi-service-url.png":::
 
 ## Known issues and limitations
 
