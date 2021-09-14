@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/09/2021
+ms.date: 09/13/2021
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: tapanm
@@ -19,7 +19,7 @@ contributors:
 As explained in the [portal lifecycle](portal-lifecycle.md) article earlier, a Power Apps portals goes through different stages. You can convert a portal from one stage to another, depending on what conversion is allowed, and whether the environment has the required license, or capacity.
 
 > [!IMPORTANT]
-> Default settings that apply to a newly provisioned portal also apply to a converted portal. For example, after a portal is converted, [table permission changes for forms and lists](../important-changes-deprecations.md#table-permission-changes-for-forms-and-lists-on-new-portals) that applies to newly created portals will also take effect on the converted portal. However, portal configuration changes and customizations are preserved during this conversion process.
+> The [table permission changes for forms and lists](../important-changes-deprecations.md#table-permission-changes-for-forms-and-lists-on-new-portals) introduced with the portals release version [9.3.7.x](/power-platform/released-versions/portals/portalupdate1) also take effect on a portal that's converted from trial to production.
 
 ## Convert a portal from trial to production
 
