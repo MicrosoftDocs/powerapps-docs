@@ -265,6 +265,10 @@ The linear gauge lets your users input numerical values by dragging a slider ins
 
 The timer control shows your users how much time is available to complete an action in the resolution of an active row or how much time has passed since the time to complete the action has passed. More information: [Model-driven app timer control overview](timer-control-legacy.md)
 
+## Subgrid
+
+Similar to a view, a form section can display records in a subgrid control where the user can interact with the records as well as create new ones. The subgrid control displays a list of related or unrelated records in a tabular format. More information: [Add and configure a subgrid component on a form](form-designer-add-configure-subgrid.md)
+
 ## Editable grid
 
 With editable grids, users can do rich in-line editing directly from views and sub-grids whether they're using a web app, tablet, or phone. More information: [Make model-driven app grids (lists) editable using the editable grid control](make-grids-lists-editable-custom-control.md)

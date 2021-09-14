@@ -44,18 +44,18 @@ Controls that require extra data beyond the primary record produce the most stra
 
 Some of the data driven controls include:
 
-- Quick view form
-- Subgrid
-- Timeline
+- [Quick view form](form-designer-add-configure-quickview.md)
+- [Subgrid](form-designer-add-configure-subgrid.md)
+- [Timeline](set-up-timeline-control.md)
 - Assistant
 
 Keep only the most frequently used of these controls on the default tab. The remaining data driven controls should be distributed into secondary tabs to allow the default tab to load quickly. Furthermore, this layout strategy reduces the chance of fetching data that ends up being unused.
 
 There are other controls that are less impactful than the data driven controls but can still participate in the above layout strategy in order to achieve the best performance. These controls include:
 
-- Lookup
-- iFrame
-- Web Resource
+- [Lookup](form-designer-add-configure-lookup.md)
+- [iFrame](iframe-properties-legacy.md)
+- [Web Resource](create-edit-web-resources.md)
 
 ## Web browser
 
@@ -63,7 +63,7 @@ This section covers good practices to use with web browsers.
 
 ### Don't open new windows
 
-The `openForm` client API method allows a parameter option to display a form in a new window, don't use this parameter (or set it to false).  Setting it to false will ensure the   `openForm` method performs the default behavior of displaying the form using the existing window. It is also possible to directly call the `window.open` JavaScript function from a custom script or another application; however, this should also be avoided. Opening a new window means that all of the page resources need to be fetched and loaded from scratch since the page is unable to leverage the in-memory data caching capabilities between a previously loaded form and the form in a new window. As an alternative to opening new windows, consider using the multi-session experience that allows records to be opened in multiple tabs while still maximizing the performance benefits of client caching.
+The `openForm` client API method allows a parameter option to display a form in a new window. Don't use this parameter or set it to false.  Setting it to false will ensure the `openForm` method performs the default behavior of displaying the form using the existing window. It is also possible to directly call the `window.open` JavaScript function from a custom script or another application; however, this should also be avoided. Opening a new window means that all of the page resources need to be fetched and loaded from scratch since the page is unable to leverage the in-memory data caching capabilities between a previously loaded form and the form in a new window. As an alternative to opening new windows, consider using the multi-session experience that allows records to be opened in multiple tabs while still maximizing the performance benefits of client caching.
 
 ### Use modern browsers
 
