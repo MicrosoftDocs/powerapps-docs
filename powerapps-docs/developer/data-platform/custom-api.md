@@ -2,7 +2,7 @@
 title: "Create and use Custom APIs (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Custom API is a new code-first way to define custom messages for the Microsoft Dataverse" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 07/03/2021
+ms.date: 09/08/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -501,12 +501,6 @@ Custom API is now generally available, but there are still some related capabili
 To debug using the Plug-in Registration tool and the Plug-in profiler solution, you need to be able to select a specific plug-in step. The main stage implementation for the plug-in is not currently available in the Plug-in Registration tool.
 
 **Workaround**: Register the plug-in type on the `PostOperation` stage of the message created for the Custom API.
-
-### A custom API created is not added to the current solution in the maker portal
-
-When you create a Custom API in the maker portal ([https://make.powerapps.com/](https://make.powerapps.com/)), you should do so in the context of a solution. However, due to the current dependency on the legacy web application designer, the Custom API or any of the Custom API Request Parameters or Custom API Response Properties do not get added to the solution automatically. You must still manually add each part to the solution by selecting the **Add Existing** button.
-
-This will be fixed when a modern designer is provided, or you may want to define your Custom APIs by writing code or with solution files. 
 
 ### Private messages cannot be used in plug-ins
 
