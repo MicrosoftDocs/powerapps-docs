@@ -551,7 +551,7 @@
           href: ./canvas-apps/create-update-records-bulk.md
         - name: Power Apps Ideas (Preview)
           items:
-          - name: Use Power Apps Ideas
+          - name: Power Apps Ideas
             href: ./canvas-apps/power-apps-ideas.md
           - name: "Tutorial: Transform natural language to Power Fx formulas"
             href: ./canvas-apps/power-apps-ideas-transform.md
