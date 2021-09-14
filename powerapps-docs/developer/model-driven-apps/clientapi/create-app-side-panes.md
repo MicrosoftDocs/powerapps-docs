@@ -100,27 +100,27 @@ Xrm.App.sidePanes.createPane({
 
 ### Managing side panes
 
-In addition to creating side panes and showing records or views within the side pane, you can also do the following: 
+In addition to creating side panes and showing records or views within the side pane, you can also: 
 
-- You can use the `state` method to collapse the side pane programmatically:
+- Use the `state` method to collapse the side pane programmatically:
 
   `Xrm.App.sidePanes.state = 0;`
 
-- You can use the `state` method to expand<!--note from editor: Edit okay?--> the side pane programmatically:
+- Use the `state` method to expand<!--note from editor: Edit okay?--> the side pane programmatically:
 
   `Xrm.App.sidePanes.state = 1;`
 
-- You can also change properties by retrieving the selected pane:
+- Change properties by retrieving the selected pane:
 
   `var lastPane = Xrm.App.sidePanes.getSelectedPane();`  
   `lastPane.width = 400;`
 
-- You can retrieve a specific pane by using the `paneId` parameter:
+- Retrieve a specific pane by using the `paneId` parameter:
 
   `var reservationPane = Xrm.App.sidePanes.getPane("ReservationList");`  
   `reservationPane.close();`
 
-- You can enable the badge property on a pane:
+- Enable the badge property on a pane:
 
   `Xrm.App.sidePanes.getSelectedPane().badge = 1;`
 
