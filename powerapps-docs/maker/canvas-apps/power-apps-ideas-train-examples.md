@@ -60,8 +60,6 @@ To work with and manipulate dates in a gallery using Power Apps Ideas:
 
 ## Step 3. Train with examples
 
-This capability allows you to enter one or more examples to train Power Apps Ideas for help with generating formulas that suits your requirements. Use this feature in situations where the transformed formulas don't help.
-
 In the this date scenario, if you try to change the date display to only the first 3 letters of the month, and you provided one example, it may not be able to give you a result.
 
 1. Select **Train with examples** under the **Answers** pane, and give more examples in the side pane.
