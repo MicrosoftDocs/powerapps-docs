@@ -45,14 +45,14 @@ The following table provides information about the formats available for each da
 |                       | JSON               | Stores text in JSON format.   | Yes (API only)   | Only in non-SQL stores like Audit. |
 |                       | Rich Text          | Allows rich text formatting, including HTML markup.   | Yes (API only) |   |
 |                       | Version Number     | Stores the version number for rows.   | No  | System use only.  |
-|                       | Text               | Basic text column that contains text characters.  | Yes   |        |
-| Multiline Text (Memo) | Text Area          | Text column contains text characters and allows line breaks. | Yes | |
+| Multiline Text (Memo) | Text               | Basic text column that contains text characters.  | Yes   |        |
+|                       | Text Area          | Text column contains text characters and allows line breaks. | Yes | |
 |                       | Email              | For internal use only.   | No  |  |
 |                       | JSON               | Stores text using JSON format.    | Yes (API Only) | Only in non-SQL stores like Log. |
 |                       | RichText           | Allows for rich text formatting, including HTML markup.   | Y (API Only)  |      |
 |                       | InternalExtentData | For internal use only.   | No                       | System use only  |
-|                       | None/string.Empty  | This option simply displays a number.      | Yes                       | Default format value for whole number column. |
-| Whole Number          | Duration           | This format option can be used to display a list of duration options. But the data stored in the database is always in minutes. The column looks like a drop-down list and provides suggested options like 1 minute, 15 minutes, 30 minutes all the way up to three days. You can choose these options. However, you can also just type in the minutes, which resolve to that time. For example, type in 60, and it resolves to 1 hour. You can also enter “1 hour” or “two days,” and it will resolve to display that time. <br/> The duration must be entered in the following format: “x minutes”, “x hours,” or “x days”. Hours and days can also be entered using decimals, for example, “x.x hours” or “x.x days”. <br/> **NOTE**: Values must be expressible in minutes, subminute values will be rounded to the nearest minute.    | Yes   | System reads this value in seconds. |
+| Whole Number          | None/string.Empty  | This option simply displays a number.      | Yes                       | Default format value for whole number column. |
+|                       | Duration           | This format option can be used to display a list of duration options. But the data stored in the database is always in minutes. The column looks like a drop-down list and provides suggested options like 1 minute, 15 minutes, 30 minutes all the way up to three days. You can choose these options. However, you can also just type in the minutes, which resolve to that time. For example, type in 60, and it resolves to 1 hour. You can also enter “1 hour” or “two days,” and it will resolve to display that time. <br/> The duration must be entered in the following format: “x minutes”, “x hours,” or “x days”. Hours and days can also be entered using decimals, for example, “x.x hours” or “x.x days”. <br/> **NOTE**: Values must be expressible in minutes, subminute values will be rounded to the nearest minute.    | Yes   | System reads this value in seconds. |
 |                       | Timezone           | This option displays a select list of time zones such as (GMT-12:00) International Date Line West and (GMT-08:00) Pacific Time (US & Canada). Each of these zones is stored as a number. For example, for the time zone (GMT-08:00) Pacific Time (US & Canada), the TimeZoneCode is 4.  | Yes |     |
 |                       | Language           | This option displays a list of the languages provisioned for your organization. The values are displayed as a drop-down list of language names, but the data is stored as a number using LCID codes. Language codes are four-digit or five-digit locale IDs. Valid locale ID values can be found at [Locale ID (LCID) Chart)](https://docs.microsoft.com/previous-versions/windows/embedded/ms912047(v=winembedded.10)). | Yes   |  |
 |                       | Locale             | Value that corresponds to a specific locale using ISO standard values.   | Yes (API Only)  | Not shown in Power Apps Maker UI. |
@@ -83,10 +83,13 @@ If you change the data type to an incompatible format, the following error is di
 
 The format \<\<formatname\>\> is not valid for the \<\<datatype\>\> type column \<\<columnname\>\> of table \<\<tablename\>\>. For example, the format datetime is not valid for the text type column.
 
-To change the format of a data type, you need to add the new format details into an OData API **POST** call:
+To set or change the format of a data type, you need to add the new format details into an OData API **POST** for a new column or **PUT** call to update an existing column:
+
+> [!NOTE]
+> For more samples on how to use the API, see https://github.com/microsoft/PowerApps-Samples
 
 ```http
-POST [Organization URI]/api/data/v9.0/EntityDefinitions(402fa40f-287c-e511-80d2-00155d2a68d2)/Attributes
+PUT [Organization URI]/api/data/v9.2/EntityDefinitions(402fa40f-287c-e511-80d2-00155d2a68d2)/Attributes
 HTTP/1.1
 
 Accept: application/json
@@ -99,20 +102,20 @@ OData-Version: 4.0
 "Value": *\<\<Datatype Type\>\>*
 },
 "Description": {
-"\@odata.type": "Microsoft.Dynamics.CRM.Label",
+"@odata.type": "Microsoft.Dynamics.CRM.Label",
 "LocalizedLabels": [
 {
-"\@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+"@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
 "Label": *\<\<text label to use for the format\>\>*
 "LanguageCode": 1033
 }
 ]
 },
 "DisplayName": {
-"\@odata.type": "Microsoft.Dynamics.CRM.Label",
+"@odata.type": "Microsoft.Dynamics.CRM.Label",
 "LocalizedLabels": [
 {
-"\@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+"@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
 "Label": *\<\<text label to use for the format\>\>*
 "LanguageCode": 1033
 }
@@ -124,7 +127,7 @@ OData-Version: 4.0
 "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"
 },
 "SchemaName": *\<\<Your chosen schema name\>\>*
-"\@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata",
+"@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata",
 "FormatName": {
 "Value": *\<\<Formatname value\>\>*
 },
