@@ -26,9 +26,9 @@ contributors:
 > - This is a preview feature.
 > - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 
-[Power Fx](/power-platform/power-fx/overview) is a powerful, low-code language to help makers stitch app components together. However, sometimes it's not easy to write a formula. It takes time to learn and effort to tune. Power Apps Ideas is created to help customers ease the formula authoring experience by using the power of AI models.
+[Power Fx](/power-platform/power-fx/overview) is the open-source programming language for low code, and makes it possible for hundreds of millions of people with Excel skills to add advanced logic to their apps. However, sometimes it's not easy to write a formula, even for the most experienced Power Fx users, as it may sometimes take a lot of time searching for, learning about, and debugging complex formulas. Power Apps Ideas is created to help everyone from the new makers to the seasoned IT pros to ease and expedite the formula authoring experience by using the power of AI models.
 
-You'll find an Ideas pane on the right side of your canvas app, next to Properties and Advanced tabs. You can select or create a Gallery or Data table that is bound to a Dataverse table and start to type in ideas in natural language. Select **Get Ideas** after done and in a few seconds, formula suggestions will be ready for you to pick from.
+If you’re also struggling with Power Fx and you don’t actually want to spend that much time on it, try out Power Apps Ideas.
 
 For example, instead of figuring out how to write the following formula:
 
@@ -42,18 +42,25 @@ You can type in `search Contacts with 'Full Name' in TextSearchBox1 and sort res
 
 ## Use Power Apps Ideas in your app
 
+To use Power Apps Ideas, you'll find an Ideas pane on the right side of your canvas app, next to **Properties** and **Advanced** tabs.
+
 There are two methods to benefit from Power Apps Ideas in your app.
 
 ### Method 1: Transform natural language to Power Fx formulas
 
-You can enter your requirements in plain natural language (such as English (en-us)), and Power Apps transforms your requirement to Power Fx formula. For details, go to [Tutorial: Transform natural language to Power Fx formulas](power-apps-ideas-transform.md).
+You can enter your requirements in plain natural language (currently limited to English (en-us)), and Power Apps transforms your requirement to Power Fx formula. For details, go to [Transform natural language to Power Fx formulas](power-apps-ideas-transform.md).
 
 > [!NOTE]
 > This capability only works on the **Items** property of [Gallery](controls/control-gallery.md) and [Data table](controls/control-data-table.md) controls. See [limitations](#limitations), [supported/unsupported capabilities](#supported-and-unsupported-capabilities), and [supported functions](#supported-power-fx-functions) later for more information.
 
 ### Method 2: Train with examples
 
-When the formula doesn’t meet your needs, or there’s no formula suggestion, you can try to provide more examples for the model to learn so it could try to provide you a better suggestion. For details, go to [Tutorial: Train with examples](power-apps-ideas-train-examples.md).
+With method 1, you can transform natural language to formulas. However, we know that not all requirements are easy to describe even in our daily language. One of the typical use case is data manipulation.
+
+Let’s say you want to change a date field’s display format from the default to another format, and you don’t know how to describe that format. With Power Apps Ideas, you can now simply select that field, then in the ideas pane, enter your desired format, and press enter. One or a few formula suggestions will be popped out for you to select from.
+Make sure your selection is a label within a Gallery field. Unlike method 1, method 2 doesn’t require you to use Dataverse specifically.
+
+For details, go to [Train with examples](power-apps-ideas-train-examples.md).
 
 ## Limitations
 
@@ -198,8 +205,8 @@ Ideas, select the [Report it now](https://msrc.microsoft.com/report/abuse) link 
 
 ## Next steps
 
-- [Tutorial: Transform natural language to Power Fx formulas](power-apps-ideas-transform.md)
-- [Tutorial: Train with examples](power-apps-ideas-train-examples.md)
+- [Transform natural language to Power Fx formulas](power-apps-ideas-transform.md)
+- [Train with examples](power-apps-ideas-train-examples.md)
 
 ### See also
 

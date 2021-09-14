@@ -1,5 +1,5 @@
 ---
-title: "Tutorial: Train with examples (Preview)"
+title: "Train with examples (Preview)"
 description: Learn about how to train Power Apps with your own examples and generate formulas using Power Apps Ideas.
 author: norliu
 ms.service: powerapps
@@ -18,7 +18,7 @@ contributors:
   - tapanm-msft
 ---
 
-# Tutorial: Train with examples (Preview)
+# Train with examples (Preview)
 
 [This article is pre-release documentation and is subject to change.]
 
@@ -26,15 +26,15 @@ contributors:
 > - This is a preview feature.
 > - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 
-We all had the time when we struggled with manipulation of text when we’re building apps. Searching online for tips and examples, or tools to test RegEx patterns. **Train with examples** uses PROSE (Program Synthesis using Example) so you can now just give us one or a more desired outputs, and then Power Apps can automatically generate the formula for you.
+We all had the time when we struggled with manipulation of text when we’re building apps. Searching online for tips and examples, or tools to test RegEx patterns. **Train with examples** uses [PROSE](https://www.microsoft.com/research/group/prose/) (Programming by Examples and Natural Language) so you can now just give us one or a more desired outputs, and then Power Apps can automatically generate the formula for you.
 
 Let's use a simple app to show you how to use this feature. You can follow [Create an app from scratch](data-platform-create-app-scratch.md) to create a sample app. In the following example, we're using the **Accounts** table in Dataverse with sample data that gets installed when you choose to install sample data while creating the environment. You can also use your own table if you don't have sample data.
 
-## Step 1. Work with dates in a gallery
+## Work with dates in a gallery
 
 To work with and manipulate dates in a gallery using Power Apps Ideas:
 
-1. Select your target label. For this tutorial, we'll use **Created On**. Select the Ideas pane on the right-side of the screen, and you'll see a screen like the following:
+1. Select your target label. For this example, we'll use **Created On**. Select the Ideas pane on the right-side of the screen, and you'll see a screen like the following:
 
     ![Power Apps Ideas demo.](media/power-apps-ideas/PROSE-entrypoint.png "Find example to formula in Ideas pane")
 
@@ -46,7 +46,7 @@ To work with and manipulate dates in a gallery using Power Apps Ideas:
 
     The formula is updated in the formula bar, and you can check the rest of the items in your gallery to see if the formula did the manipulation that you wanted.
 
-## Step 2. Work with text display in a gallery
+## Work with text display in a gallery
 
 1. Select your target label, such as **email**, and then select the Ideas pane.
 
@@ -58,7 +58,7 @@ To work with and manipulate dates in a gallery using Power Apps Ideas:
 
     The formula is updated in the formula bar, and you can check the rest of the items in your gallery to see if the formula did the manipulation that you wanted.
 
-## Step 3. Train with examples
+## Use Train with examples in your app
 
 In the this date scenario, if you try to change the date display to only the first 3 letters of the month, and you provided one example, it may not be able to give you a result.
 
@@ -85,4 +85,4 @@ In the this date scenario, if you try to change the date display to only the fir
 
 - [Formula reference](formula-reference.md)
 - [Power Apps Ideas overview (Preview)](power-apps-ideas.md)
-- [Tutorial: Transform natural language to Power Fx formulas (Preview)](power-apps-ideas-transform.md)
+- [Transform natural language to Power Fx formulas (Preview)](power-apps-ideas-transform.md)
