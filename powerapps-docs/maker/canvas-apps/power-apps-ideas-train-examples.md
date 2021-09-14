@@ -28,7 +28,7 @@ contributors:
 
 We all had the time when we struggled with manipulation of text when we’re building apps. Searching online for tips and examples, or tools to test RegEx patterns. **Train with examples** uses PROSE (Program Synthesis using Example) so you can now just give us one or a more desired outputs, and then Power Apps can automatically generate the formula for you.
 
-Let's use a simple app to show you how to use this feature. You can follow [Create from blank](data-platform-create-app-scratch) to create a sample app. In the following example, we're using the **Accounts** table in Dataverse with sample data that gets installed when you choose to install sample data while creating the environment. You can also use your own table if you don't have sample data.
+Let's use a simple app to show you how to use this feature. You can follow [Create an app from scratch](data-platform-create-app-scratch.md) to create a sample app. In the following example, we're using the **Accounts** table in Dataverse with sample data that gets installed when you choose to install sample data while creating the environment. You can also use your own table if you don't have sample data.
 
 ## Step 1. Work with dates in a gallery
 

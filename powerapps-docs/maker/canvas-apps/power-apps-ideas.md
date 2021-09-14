@@ -46,7 +46,7 @@ There are two methods to benefit from Power Apps Ideas in your app.
 
 ### Method 1: Transforming natural language to Power Fx formulas
 
-You can enter your requirements in plain natural language (such as English (en-us)), and Power Apps transforms your requirement to Power Fx formula. For details, go to [Tutorial: Transforming natural language to Power Fx formulas (Preview)](power-apps-ideas-transform.md).
+You can enter your requirements in plain natural language (such as English (en-us)), and Power Apps transforms your requirement to Power Fx formula. For details, go to [Tutorial: Transforming natural language to Power Fx formulas](power-apps-ideas-transform.md).
 
 > [!NOTE]
 > This capability only works on the **Items** property of [Gallery](controls/control-gallery.md) and [Data table](controls/control-data-table.md) controls. See [limitations](#limitations), [supported/unsupported capabilities](#supported-and-unsupported-capabilities), and [supported functions](#supported-power-fx-functions) later for more information.
@@ -198,8 +198,8 @@ Ideas, select the [Report it now](https://msrc.microsoft.com/report/abuse) link 
 
 ## Next steps
 
-- [Tutorial - Transforming natural language to Power Fx formulas (Preview)](power-apps-ideas-transform.md)
-- [Tutorial - Use Power Apps Ideas in your app](power-apps-ideas-tutorial.md)
+- [Tutorial: Transforming natural language to Power Fx formulas](power-apps-ideas-transform.md)
+- [Tutorial: Train with examples](power-apps-ideas-train-examples.md)
 
 ### See also
 
