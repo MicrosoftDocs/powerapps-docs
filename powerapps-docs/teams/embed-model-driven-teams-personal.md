@@ -63,7 +63,7 @@ You can also **Download app** in Power Apps. Power Apps will then generate your 
 
 ## Publish the app to the Teams catalog
 
-If you're an admin, you can use the **Download app** option to also [publish the app](/microsoftteams/tenant-apps-catalog-teams) to the Microsoft Teams catalog.
+If you're an admin, you can use the **Download app** option to also [publish the app](/microsoftteams/tenant-apps-catalog-teams#publish-a-custom-app-to-your-organizations-app-store) to the Microsoft Teams catalog.
 
 ## Features currently unavailable
 
