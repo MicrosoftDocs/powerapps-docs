@@ -21,9 +21,9 @@ search.app:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
 
-Developers can create and manage app side panes within a model-driven app by using the [Xrm.App.sidePanes](reference/xrm-app-sidepanes.md) API, which represents the collection of side panes. Calling the [createPane](reference/Xrm-App/Xrm-App-sidePanes/createPane.md) method adds a new pane that allows navigation to any model-driven app form or custom page. Pages displayed in the side pane must fit within the minimum width of 300 pixels<!--note from editor: Via Writing Style Guide.--> and resize to larger widths based on the pane width.<!--note from editor: What does the reader need to do to make sure the page can "resize to larger widths"? Should this be something like "and must be able to be resized if the pane is wider"? I'm not sure how this last phrase relates to the "must fit within the minimum width of 300 pixels" requirement.--> 
+Developers can create and manage app side panes within a model-driven app by using the [Xrm.App.sidePanes](reference/xrm-app-sidepanes.md) API, which represents the collection of side panes. Calling the [createPane](reference/Xrm-App/Xrm-App-sidePanes/createPane.md) method adds a new pane that allows navigation to any model-driven app form or custom page. Pages displayed in the side pane must fit within the minimum width of 300 pixels and resize to larger widths based on the pane width.
 
-Tabs are listed in the side pane in two groups&mdash;non-closable and closable. Within each group, the tabs are listed in the order they were created in. The top group contains the panes that a user can't close, and the bottom group has user-closable panes. Typically, the non-closable group is populated when the app is opened<!--note from editor: Is this what "at the start of the app" means?-->, whereas<!--note from editor: Via Writing Style Guide.--> the closable group is added based on user actions within the app.<!--note from editor: "Typically" is a bit vague. Are there other untypical behaviors the reader should know about?-->
+Tabs are listed in the side pane in two groups&mdash;non-closable and closable. Within each group, the tabs are listed in the order they were created in. The top group contains the panes that a user can't close, and the bottom group has user-closable panes. The non-closable group is populated when the app is opened, whereas the closable group is added based on user actions within the app.
 
 You can use a platform-provided header with the title and Close button, or you can use a custom header.
 
@@ -53,7 +53,7 @@ Xrm.App.sidePanes.createPane({
     })
 });
 ```
-<!--note from editor: I assume these names are from sample data? Please double-check my alt text.-->
+
 > [!div class="mx-imgBorder"] 
 > ![Screenshot showing a Reservations table with a list of active reservations, including name, equipment, and the start date of the reservation.](../media/app-side-panes-example-1.png "Example 1")
 
@@ -74,9 +74,9 @@ Xrm.App.sidePanes.createPane({
 > [!div class="mx-imgBorder"] 
 > ![Screenshot showing a Products table with a list of products that can be reserved.](../media/app-side-panes-example-2.png "Example 2")
 
-### Showing a table record
-<!--note from editor: Aren't we combining two different terminologies here? I'd expect to see "table row" or "entity record."-->
-This example shows how to display a record in the side pane. A reservation record is opened in a side pane where the default header is hidden and the width is customized to 600 pixels.<!--note from editor: Suggested.-->
+### Showing a table row
+
+This example shows how to display a row in the side pane. A reservation row is opened in a side pane where the default header is hidden and the width is customized to 600 pixels.<!--note from editor: Suggested.-->
 
 ```javascript
 Xrm.App.sidePanes.createPane({
@@ -94,19 +94,18 @@ Xrm.App.sidePanes.createPane({
 });
 ```
 
-<!--note from editor: In the image, where does the sample_reservation_icon appear? Is it something that should be described in alt text? Please double-check that my alt text describes what's important about the image.-->
 > [!div class="mx-imgBorder"] 
 > ![Screenshot showing an Active Reservations list opened to an individual record.](../media/app-side-panes-opening-record.png "Open record")
 
 ### Managing side panes
 
-In addition to creating side panes and showing records or views within the side pane, you can also: 
+In addition to creating side panes and showing rows or views within the side pane, you can also: 
 
 - Use the `state` method to collapse the side pane programmatically:
 
   `Xrm.App.sidePanes.state = 0;`
 
-- Use the `state` method to expand<!--note from editor: Edit okay?--> the side pane programmatically:
+- Use the `state` method to expand the side pane programmatically:
 
   `Xrm.App.sidePanes.state = 1;`
 
