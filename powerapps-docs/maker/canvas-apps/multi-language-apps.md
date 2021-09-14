@@ -98,14 +98,14 @@ When working with a multi-language app, the first step is to create a reusable c
                 Language: "en-us",
                 Labels: {
                     Title: "UI Tips for building canvas apps",
-                    JobTitle: "Power Platform Specialist",
+                    JobTitle: "Power Platform Specialist"
                 }
             },
             {
                 Language: "pt-br",
                 Labels: {
                     Title: "Dicas de UI para construir canvas apps",
-                    JobTitle: "Especialista de Power Platform",
+                    JobTitle: "Especialista de Power Platform"
                 }
             }
         )

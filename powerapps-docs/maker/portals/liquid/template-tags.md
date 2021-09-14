@@ -5,7 +5,7 @@ author: gitanjalisingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 08/17/2021
+ms.date: 09/09/2021
 ms.subservice: portals
 ms.author: gisingh
 ms.reviewer: tapanm
@@ -85,6 +85,19 @@ Results attribute in provided variable (such as 'resultVariable' in above sample
 ### XML attribute
 
 XML attribute in provided variable (such as 'resultVariable' in above sample) holds the resultant query which can be used to get data from Microsoft Dataverse. This attribute is useful for debugging purpose when you want to understand how table permission is getting applied on this *fetchxml* tag.  
+
+### Other supported elements and attributes
+
+fetchxml liquid tag supports the following attributes, and child elements.
+
+| Element/Child element | Attributes | Child element |
+| - | - | - |
+| fetch | mapping <br> version <br> count  <br> page  <br> paging-cookie  <br> utc-offset  <br> aggregate  <br> distinct  <br> min-active-row-version  <br> output-format  <br> returntotalrecordcount  <br> no-lock | order <br> entity |
+| order | attribute <br> alias <br> descending | |
+| entity | name <br> all-attributes <br> no-attrs <br> attribute | order <br> filter <br> link-entity |
+| filter | type <br> hint <br> isquickfindfields | condition <br> filter |
+| link-entity | name <br> from <br> to <br> alias <br> link-type <br> visible <br> intersect <br> all-attributes <br> no-attrs <br> attribute | order <br> filter <br> link-entity |
+| condition | column <br> entityname <br> attribute <br> operator <br> aggregate <br> alias <br> uiname <br> uitype <br> uihidden <br> value | value |
 
 ## include
 
