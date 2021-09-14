@@ -2,7 +2,7 @@
 title: "Update a solution | MicrosoftDocs"
 description: "Learn how to update or upgrade a solution in Power Apps"
 ms.custom: ""
-ms.date: 08/05/2021
+ms.date: 09/14/2021
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -76,6 +76,16 @@ If you chose to stage for upgrade, or if the system had an issue completing an u
 ## Understanding version numbers for updates
 
 A solution’s version has the following format: major.minor.build.revision. An update must have a higher major, minor, build or revision number than the parent solution. For example, for a base solution version 3.1.5.7, a small update could be a version 3.1.5.8 or a slightly more signficant update could have version 3.1.7.0. A substantially more significant update could be version 3.2.0.0.
+
+## Removing a managed component from the target environment
+
+There might be occasions when you want to remove a managed component from an environment. There are two different solution actions that you can perform that will remove a managed component from an environment.
+
+- Upgrade the solution (recommended). In the development environment where the managed solution originated, update the solution so that it no longer includes the component. In other words, remove the component such as a column, chart, or form from the solution and then export it as managed. Then, when you import the managed solution into the target environment, choose the **Solution action** as **Upgrade**. This action removes the component (if there aren’t any other components that depend on it in the target environment).
+- Delete the managed solution. In in the environment where the managed solution was imported, delete the managed solution that includes the managed component. You can do this from the **Solutions** area of Power Apps.
+   > [!WARNING]
+   > Deleting a managed solution deletes ALL the components that are in the managed solution as well as any related data. Always use caution before deleting a managed solution.
+
 
 ## Overwrite customizations option
 
