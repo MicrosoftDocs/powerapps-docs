@@ -233,7 +233,7 @@ Performance insights is a self-service tool for enterprise app makers that analy
 
 Solution checker is a powerful tool that can analyze client and server customizations for performance or reliability issues.  It can parse client-side JavaScript, form XML, and .NET server-side plug-ins and give targeted insights into what may slow end users down.  We recommend that you run solution checker each time you publish changes in a development environment, so that any performance concerns are surfaced before reaching end users. More information: [Use solution checker to validate your model-driven apps in Power Apps](../data-platform/use-powerapps-checker.md)
 
-Some examples of performance-related issues found with Solution Checker:
+Some examples of performance-related issues found with solution checker:
 
 - [il-specify-column](/powerapps/developer/data-platform/best-practices/work-with-metadata/retrieve-specific-columns-entity-via-query-apis?client=PAChecker&error=il-specify-column&source=featuredocs). Avoid selecting all columns via Dataverse query APIs.
 - [web-use-async](/powerapps/developer/model-driven-apps/best-practices/business-logic/interact-http-https-resources-asynchronously?client=PAChecker&error=web-use-async&source=featuredocs). Interact with HTTP and HTTPS resources asynchronously.
