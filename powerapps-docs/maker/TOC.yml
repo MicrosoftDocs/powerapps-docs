@@ -553,9 +553,9 @@
           items:
           - name: Power Apps Ideas
             href: ./canvas-apps/power-apps-ideas.md
-          - name: "Tutorial: Transform natural language to Power Fx formulas"
+          - name: Transform natural language to Power Fx formulas
             href: ./canvas-apps/power-apps-ideas-transform.md
-          - name: "Tutorial: Train with examples"
+          - name: Train with examples
             href: ./canvas-apps/power-apps-ideas-train-examples.md
         - name: Formula reference
           items:
