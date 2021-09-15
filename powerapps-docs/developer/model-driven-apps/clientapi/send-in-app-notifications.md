@@ -21,9 +21,9 @@ search.app:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
 
-The notification table stores notifications for each user. Your model-driven app automatically checks the system for new notifications and displays them in the notification center. The notification sender or your system administrator can configure how the notification is shown and how it can be dismissed. Notifications appear in the notification center until the recipient dismisses them<!--note from editor: Edit okay? I think we should keep "you" in this topic to mean the developer.--> or they expire. By default, a notification expires after 14 days but your administrator can override this setting.
+The notification table stores notifications for each user. Your model-driven app automatically checks the system for new notifications and displays them in the notification center. The notification sender or your system administrator can configure how the notification is shown and how it can be dismissed. Notifications appear in the notification center until the recipient dismisses them or they expire. By default, a notification expires after 14 days but your administrator can override this setting.
 
-Each notification record<!--note from editor: Here and throughout, should mentions of "records" be changed to "rows"? --> is meant for a single user, identified by the **Owner** column value. If a notification needs to be sent to multiple users, a record needs to be added for each recipient. The sender controls the recipient through the **Owner** column.
+Each notification row is meant for a single user, identified by the **Owner** column value. If a notification needs to be sent to multiple users, a record needs to be added for each recipient. The sender controls the recipient through the **Owner** column.
 
 This topic outlines the steps for how to send in-app notifications to a specific user by using a [client API](reference.md).
 
@@ -37,9 +37,8 @@ To use the in-app notification feature, you need to enable the `AllowNotificatio
 
 1. Sign in to your model-driven app.
 
-1. Select the app where you want to use this feature.<!--note from editor: Shouldn't this be the first step? I'm not sure how this app is different from "your model-driven app".-->
-
-1. Copy the following code:<!--note from editor: Edit okay (I hope)? The existing step said "In the browser window, copy the code below", but I think it meant to paste the code? If this is wrong, please excuse.-->
+1. Select the app where you want to use this feature.
+1. Copy the following code:
 
    ```javascript
    fetch(window.origin + "/api/data/v9.1/SaveSettingValue()",{
@@ -51,7 +50,7 @@ To use the in-app notification feature, you need to enable the `AllowNotificatio
 
 1. Select **F12** on your keyboard to open the browser console.
 
-1. In the browser console, paste the code that you copied in step 3. Enter the name of your app in the `AppUniqueName` parameter, and then select **Enter**.<!--note from editor: Edit assumes that the tip applies to this step.-->
+1. In the browser console, paste the code that you copied in step 3. Enter the name of your app in the `AppUniqueName` parameter, and then select **Enter**.
 
    > [!TIP]
    > You can find the logical name of your model-driven app in the solution explorer in the **Name** column. 
@@ -174,7 +173,7 @@ The in-app notification feature uses three tables. A user needs to have the corr
 |Usage|Required table privileges|
 |------------|----------------|
 |User has no in-app notification bell and receives no in-app notification |None: Read privilege on the app notification table. |
-|User can receive in-app notifications|<ul><li>Basic: Read privilege on the app notification table.</li><li>Create, Read, Write, and Append privileges on the model-driven app user setting.</li><li>Read and AppendTo privileges on setting definition.<!--note from editor: What does "setting definition" mean here? --></li></ul> |
+|User can receive in-app notifications|<ul><li>Basic: Read privilege on the app notification table.</li><li>Create, Read, Write, and Append privileges on the model-driven app user setting.</li><li>Read and AppendTo privileges on setting definition.</li></ul> |
 |User can send in-app notifications to self |Basic: Create and Read privileges on the app notification table. |
 |User can send in-app notifications to others |Read privilege with Local, Deep, or Global access level on the app notification table based on the receiving user's business unit. |
 
@@ -189,8 +188,7 @@ The following examples show how to create notifications that include actions, cu
 
 ### Notification with an action that has a title and URL
 
-This example shows how to create a notification by adding title and URL to the **actions** parameter.<!--note from editor: Would it be possible to add an image here? Just to show how this example looks different from the following one.-->
-
+This example shows how to create a notification by adding title and URL to the **actions** parameter.
 ```json
 {
   "data": {
@@ -246,7 +244,7 @@ Xrm.WebApi.createRecord("appnotification", notificationRecord).
 
 ### Notification with multiple actions 
 
-This example shows how to create a notification that includes multiple actions.<!--note from editor: The image says "Cohor Winery". I changed that in the code, but I don't think having a link to the winery makes sense in the context of this notification anyway.-->
+This example shows how to create a notification that includes multiple actions.
 
 > [!div class="mx-imgBorder"] 
 > ![App notification with multiple actions.](../media/app-notification-with-multiple-actions.png "App notification with multiple actions")
@@ -294,7 +292,7 @@ Xrm.WebApi.createRecord("appnotification",notificationRecord).
 
 ### Notification with a custom body definition
 
-This example shows how to create a notification by adding a custom body definition that includes an inline link.<!--note from editor: I don't see bold formatting here.-->
+This example shows how to create a notification by adding a custom body definition that includes an inline link.
 
 > [!div class="mx-imgBorder"] 
 > ![Notification with a block of text that includes an inline link.](../media/app-notification-with-custom-body.png "Notification with an inline link")
@@ -356,7 +354,7 @@ then(
 
 ### Notification with a custom icon
 
-This example shows how to add a custom icon to a notification<!--note from editor: Edit okay?-->. Within the notification, set **iconType** to **Custom** and in the body, include **iconUrl** with a value pointing to a web resource. The icon can be either an SVG or PNG file type.<!--note from editor: Can you use a better example of a custom icon? The bell doesn't seem very customized.-->
+This example shows how to add a custom icon to a notification<!--note from editor: Edit okay?-->. Within the notification, set **iconType** to **Custom** and in the body, include **iconUrl** with a value pointing to a web resource. The icon can be either an SVG or PNG file type.
 
 > [!div class="mx-imgBorder"] 
 > ![Notification with a custom icon.](../media/app-notification-with-custom-icon.png "Notification with a custom icon")
@@ -385,7 +383,7 @@ Xrm.WebApi.createRecord("appnotification", notificationRecord).
 
 ### Notification with a custom title and body
 
-This example adds a custom title and a body definition that allows multiple links, bold formatting, and italic formatting.<!--note from editor: In the image, "over due case" should be "overdue case". I took the liberty of making that change in the code sample.-->
+This example adds a custom title and a body definition that allows multiple links, bold formatting, and italic formatting.
 
 > [!div class="mx-imgBorder"] 
 > ![Notification that includes a custom title, multiple links, bold text, and italic formatting.](../media/app-notification-with-custom-title-body.png "Notification with a custom title and body")
@@ -425,7 +423,7 @@ Xrm.WebApi.createRecord("appnotification",notificationRecord).
 
 ## In-app notifications vs. push notifications
 
-The Power Apps Notification connector is for push notifications, which are separate from in-app notification. Push notifications only appear on the mobile device notifications list to open the app. In-app notifications appear when the app is open. We recommend limiting the use of push notifications to high-priority items<!--note from editor: Suggested.-->, to avoid overwhelming the user. For more information, go to:
+The Power Apps Notification connector is for push notifications, which are separate from in-app notification. Push notifications only appear on the mobile device notifications list to open the app. In-app notifications appear when the app is open. We recommend limiting the use of push notifications to high-priority items, to avoid overwhelming the user. For more information, go to:
 
 - [Power Apps Notification connector](/connectors/powerappsnotification)
 - [Power Apps Notification V2 connector](/connectors/powerappsnotificationv2/)
