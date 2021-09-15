@@ -26,7 +26,9 @@ contributors:
 > - This is a preview feature.
 > - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 
-Power Apps Ideas feature currently supports only **Gallery** and **Data table** controls for the **Items** property, and it's trained for the [Microsoft Dataverse](/connectors/commondataserviceforapps/) connector. So, if you've a gallery bound to a Dataverse table, and are about to compose a formula for its **Items** property, you can benefit from Power Apps Ideas. For example, instead of figuring out how to write the following formula:
+Power Apps Ideas feature currently supports only **Gallery** and **Data table** controls for the **Items** property, and it's trained for the [Microsoft Dataverse](/connectors/commondataserviceforapps/) connector. So, if you've a gallery bound to a Dataverse table, and are about to compose a formula for its **Items** property, you can benefit from Power Apps Ideas. 
+
+For example, instead of figuring out how to write the following formula:
 ```powerapps-dot
 Sort(Search('Contacts', TextSearchBox1.Text, "fullname"), 'Created On', Descending)
 ```
@@ -59,29 +61,6 @@ You can follow the steps mentioned in [Create a canvas app from Microsoft Datave
 
 1. When you select any suggested idea for a formula, the formula gets updated automatically and runs so you can check the result in your app. You can then decide whether to keep the selected formula, or modify it.
 
-## Best practices
-
-To get the best results, here are some tips that you can follow when writing the plain natural language query in the Ideas pane.
-
-- Enter the complete context in the query. For example, if you need to filter a table by some conditions, be precise about which table to filter, which column to filter by, and what conditions need to be met.
-- Use IntelliSense as much as possible. IntelliSense could help the AI model recognize context, and understand data types better.
-- Double quote the text string you want to filter or search for. This will help the model recognize the target string better and provide a more accurate formula suggestion.
-
-## Limitations
-
-> [!NOTE]
-> We're improving the model to make it better and to accomplish more complex tasks, support more functions, controls, and properties. If you have a wish list, submit ideas through [Power Apps Ideas - Power Platform Community](https://powerusers.microsoft.com/t5/Power-Apps-Ideas/idb-p/PowerAppsIdeas).
-
-During this experimental release, Power Apps Ideas has the following limitations:
-
-- Regions and language: Currently available in environments created inside United States, with English (en-us) set as the browser's default language.
-- Controls: Supports generating formulas for **Gallery** and **Data table** controls&mdash;on their **Items** property. Can recognize control value of TextInput, Dropdown, DatePicker, Slider, Toggle, Checkbox, Radio as input.
-- Data sources: Currently Ideas only supports **Dataverse** tables and won't generate any suggestions if your Gallery or Data table isn't bound to a Dataverse table.
-- Functions: Works best on `Search()`, `Filter()`, `Sort()`, `SortByColumns()`, `FirstN()`, and `LastN()`. And also a list of basic functions for the conditions. See [Supported Power Fx functions](#supported-power-fx-functions). We’ll continue to add support for more functions.
-- Data types: Supports Text, Whole Number, Date and Time, Date Only, Decimal Number. Not supported: Lookup, Choice, Choices, Yes/No, File and Image.
-- This feature's model understands some commonly used expressions in natural  language. For example, it can translate from `latest on top`, `big to small` to a descending order and `oldest on top`, `small to big` to ascending order. However, it needs you to be precise about table, column, and control names. <br> For example, if you enter `search Accounts with name in textbox`, it might not give you good results because there’s no linkage built on the model to understand that “name” maps to the “Account Name” column and "textbox" maps to "TextSearchBox1". <br> 
-- This feature doesn’t understand business-related verbs. For example, if you want to show accounts that are created in the last month, you might not get good results, because the model doesn’t understand that “created” refers to the “Created On” column.
-
 ## More examples
 
 Consider the following examples to inspire from while working with Power Apps Ideas.
@@ -103,7 +82,31 @@ Consider the following examples to inspire from while working with Power Apps Id
 | |Find records on the top or the bottom of the table|Top 10 Accounts|
 | | |Last 10 Accounts|
 
+## Best practices
+
+To get the best results, here are some tips that you can follow when writing the plain natural language query in the Ideas pane.
+
+- Enter the complete context in the query. For example, if you need to filter a table by some conditions, be precise about which table to filter, which column to filter by, and what conditions need to be met.
+- Use IntelliSense as much as possible. IntelliSense could help the AI model recognize context, and understand data types better.
+- Double quote the text string you want to filter or search for. This will help the model recognize the target string better and provide a more accurate formula suggestion.
+
+## Limitations
+
+> [!NOTE]
+> We're improving the model to make it better and to accomplish more complex tasks, support more functions, controls, and properties. If you have a wish list, submit ideas through [Power Apps Ideas - Power Platform Community](https://powerusers.microsoft.com/t5/Power-Apps-Ideas/idb-p/PowerAppsIdeas).
+
+Power Apps Ideas has the following limitations currently:
+
+- Regions and language: Currently available in environments created inside United States, with English (en-us) set as the browser's default language.
+- Controls: Supports generating formulas for **Gallery** and **Data table** controls&mdash;on their **Items** property. Can recognize control value of TextInput, Dropdown, DatePicker, Slider, Toggle, Checkbox, Radio as input.
+- Data sources: Currently Ideas only supports **Dataverse** tables and won't generate any suggestions if your Gallery or Data table isn't bound to a Dataverse table.
+- Functions: Works best on `Search()`, `Filter()`, `Sort()`, `SortByColumns()`, `FirstN()`, and `LastN()`. And also a list of basic functions for the conditions. See [Supported Power Fx functions](#supported-power-fx-functions). We’ll continue to add support for more functions.
+- Data types: Supports Text, Whole Number, Date and Time, Date Only, Decimal Number. Not supported: Lookup, Choice, Choices, Yes/No, File and Image.
+- This feature's model understands some commonly used expressions in natural  language. For example, it can translate from `latest on top`, `big to small` to a descending order and `oldest on top`, `small to big` to ascending order. However, it needs you to be precise about table, column, and control names. <br> For example, if you enter `search Accounts with name in textbox`, it might not give you good results because there’s no linkage built on the model to understand that “name” maps to the “Account Name” column and "textbox" maps to "TextSearchBox1". <br> 
+- This feature doesn’t understand business-related verbs. For example, if you want to show accounts that are created in the last month, you might not get good results, because the model doesn’t understand that “created” refers to the “Created On” column.
+
 ## Supported Power Fx functions
+
 Functions supported by Power Apps Ideas feature:
 
 :::row:::
@@ -210,7 +213,6 @@ Microsoft is committed to developing and deploying AI technologies in a responsi
 Ideas, select the [Report it now](https://msrc.microsoft.com/report/abuse) link at the bottom of the Ideas pane to help us improve the AI model. Make sure to select Threat type as URL and Incident type as Responsible AI as shown in the following screenshot so we can try our best to respond in time.
 
 ![Reporting abuses](media/power-apps-ideas/report.png "Reporting abuses")
-
 
 ## Next steps
 

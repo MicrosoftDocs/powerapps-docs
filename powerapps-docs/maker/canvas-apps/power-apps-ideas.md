@@ -38,12 +38,12 @@ There are two methods to benefit from Power Apps Ideas in your app.
 
 ### Method 1: Transform natural language to Power Fx formulas
 
-You can enter your requirements in plain natural language (currently limited to English (en-us)), and Power Apps transforms your requirement to Power Fx formula. 
+You can enter your requirements in plain natural language (currently limited to English (en-us)), and Power Apps transforms your requirement to Power Fx formula.
 
 For details, go to [Transform natural language to Power Fx formulas](power-apps-ideas-transform.md).
 
 > [!NOTE]
-> This capability only works on the **Items** property of [Gallery](controls/control-gallery.md) and [Data table](controls/control-data-table.md) controls. See [limitations](#limitations), [supported/unsupported capabilities](#supported-and-unsupported-capabilities), and [supported functions](#supported-power-fx-functions) later for more information.
+> This capability only works on the **Items** property of [Gallery](controls/control-gallery.md) and [Data table](controls/control-data-table.md) controls. See [limitations](power-apps-ideas-transform.md#limitations), and [supported functions](power-apps-ideas-transform.md#supported-power-fx-functions) for more information.
 
 ### Method 2: Transform examples to Power Fx formulas
 
@@ -53,6 +53,9 @@ Let’s say you want to change a date field’s display format from the default 
 Make sure your selection is a label within a Gallery field. Unlike method 1, method 2 doesn’t require you to use Dataverse specifically.
 
 For details, go to [Transform examples to Power Fx formulas](power-apps-ideas-train-examples.md).
+
+> [!NOTE]
+> This method has support for specific capabilities. See [Supported and unsupported capabilities](power-apps-ideas-train-examples.md#supported-and-unsupported-capabilities) for more information.
 
 ## Next steps
 
