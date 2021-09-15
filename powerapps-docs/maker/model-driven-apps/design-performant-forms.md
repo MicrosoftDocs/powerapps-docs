@@ -20,6 +20,12 @@ search.app:
   - "PowerApps"
   - D365CE
 ---
+
+<!-- Line 58: No link for Assistant? -->
+
+
+
+
 # Design forms for performance in model-driven apps
 
 Building experiences where tasks can be completed quickly and efficiently is crucial to user satisfaction. Model-driven apps can be highly customized to create experiences that meet the needs of your users, but it is important to know how to effectively code, build, and run model-driven apps that load quickly when a user opens and navigates in your app while working on daily tasks. Performance has been shown to be a key driver of dissatisfaction of an app when it is not optimized for performance.
@@ -223,17 +229,15 @@ This section describes the tools that can help you understand performance issues
 
 Performance insights is a self-service tool for enterprise app makers that analyzes runtime telemetry data and provides a prioritized list of recommendations to help improve the performance of model-driven apps. This feature provides a daily set of analytic insights related to the performance of a Power Apps model-driven or customer engagement app, such as Dynamics 365 Sales or Dynamics 365 Service, with recommendations and actionable items. Enterprise app makers can view detailed performance insights at an app-level in Power Apps. More information: [What are performance insights? (preview)](../common/performance-insights-overview.md)
 
-### Solution Checker
+### Solution checker
 
-Solution Checker is a powerful tool that can analyze client and server customizations for performance or reliability issues.  It can parse client-side JavaScript, form XML, and .NET server-side plug-ins and give targeted insights into what may slow end users down.  We recommend that you run Solution Checker each time you publish changes in a development environment, so that any performance concerns are surfaced before reaching end users. More information: [Use solution checker to validate your model-driven apps in Power Apps](../data-platform/use-powerapps-checker.md)
+Solution checker is a powerful tool that can analyze client and server customizations for performance or reliability issues.  It can parse client-side JavaScript, form XML, and .NET server-side plug-ins and give targeted insights into what may slow end users down.  We recommend that you run solution checker each time you publish changes in a development environment, so that any performance concerns are surfaced before reaching end users. More information: [Use solution checker to validate your model-driven apps in Power Apps](../data-platform/use-powerapps-checker.md)
 
 Some examples of performance-related issues found with Solution Checker:
 
 - [il-specify-column](/powerapps/developer/data-platform/best-practices/work-with-metadata/retrieve-specific-columns-entity-via-query-apis?client=PAChecker&error=il-specify-column&source=featuredocs). Avoid selecting all columns via Dataverse query APIs.
 - [web-use-async](/powerapps/developer/model-driven-apps/best-practices/business-logic/interact-http-https-resources-asynchronously?client=PAChecker&error=web-use-async&source=featuredocs). Interact with HTTP and HTTPS resources asynchronously.
 - [web-avoid-ui-refreshribbon](https://go.microsoft.com/fwlink/?linkid=2157641&error=web-remove-console&client=PAChecker). Avoid using `refreshRibbon` in form `OnLoad` and `EnableRule`.
- 
-More info here: [Use solution checker to validate your apps in Power Apps](/powerapps/maker/data-platform/use-powerapps-checker.md)
 
 ### Object checker
 
