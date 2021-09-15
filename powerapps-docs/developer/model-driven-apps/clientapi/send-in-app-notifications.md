@@ -427,8 +427,8 @@ Xrm.WebApi.createRecord("appnotification",notificationRecord).
 
 The Power Apps Notification connector is for push notifications, which are separate from in-app notification. Push notifications only appear on the mobile device notifications list to open the app. In-app notifications appear when the app is open. We recommend limiting the use of push notifications to high-priority items<!--note from editor: Suggested.-->, to avoid overwhelming the user. For more information, go to:
 
-- [Power Apps Notification connector](https://docs.microsoft.com/connectors/powerappsnotification)
-- [Power Apps Notification V2 connector](https://docs.microsoft.com/connectors/powerappsnotificationv2/)
+- [Power Apps Notification connector](/connectors/powerappsnotification)
+- [Power Apps Notification V2 connector](/connectors/powerappsnotificationv2/)
 - [Create push notifications for Power Apps Mobile](../../../mobile/power-apps-mobile-notification.md)
 
 ## Related articles
