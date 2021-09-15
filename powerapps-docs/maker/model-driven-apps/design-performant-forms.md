@@ -34,28 +34,30 @@ This section covers how controls that display data and tabs impact form performa
 
 ### Significance of the default tab
 
-The default tab is the first expanded tab on a form. It plays a special role in the loading of a form page. By design, the controls of the default tab are always rendered when opening a record. Specifically, the control initialization logic, such as data retrieval, is invoked for every control on the tab. In contrast, a secondary tab does not perform this initialization on its controls when the form is initially loaded. Instead, the control initialization occurs at the time the secondary tab is opened either through user interaction or calling the `setFocus` client API method. This provides an opportunity to shelter the initial form load from excessive control processing by placing certain controls in secondary tabs instead of the default tab. Thus, the control placement strategy can have a significant effect on the responsiveness of the initial form load. A more responsive default tab provides a better overall experience for modifying important fields, interacting with the command bar, and exploring other tabs and sections.
+The default tab is the first expanded tab on a form. It plays a special role in the loading of a form page. By design, the controls of the default tab are always rendered when opening a record. Specifically, the control initialization logic, such as data retrieval, is invoked for every control on the tab. 
 
-Always put controls that are used the most often at the top of your default tab.  Layout and information architecure is not only important for performance but also to improve productivity when users interact with data on the form.  More information [Design productive main forms in model-driven apps](design-productive-forms.md)
+In contrast, a secondary tab does not perform this initialization on its controls when the form is initially loaded. Instead, the control initialization occurs at the time the secondary tab is opened either through user interaction or calling the `setFocus` client API method. This provides an opportunity to shelter the initial form load from excessive control processing by placing certain controls in secondary tabs instead of the default tab. Thus, the control placement strategy can have a significant effect on the responsiveness of the initial form load. A more responsive default tab provides a better overall experience for modifying important fields, interacting with the command bar, and exploring other tabs and sections.
 
-### Data driven controls
+Always put controls that are used the most at the top of your default tab.  Layout and information architecture is not only important for performance but also to improve productivity when users interact with data on the form.  More information: [Design productive main forms in model-driven apps](design-productive-forms.md)
 
-Controls that require extra data beyond the primary record produce the most strain on form responsiveness and loading speed. These controls fetch data over the network and often involve a waiting period (seen as progress indicators) as it can take time to transmit the data.
+### Data-driven controls
 
-Some of the data driven controls include:
+Controls that require extra data beyond the primary record produce the most strain on form responsiveness and loading speed. These controls fetch data over the network and often involve a waiting period (seen as progress indicators) because it can take time to transmit the data.
+
+Some of the data-driven controls include:
 
 - [Quick view form](form-designer-add-configure-quickview.md)
 - [Subgrid](form-designer-add-configure-subgrid.md)
 - [Timeline](set-up-timeline-control.md)
 - Assistant
 
-Keep only the most frequently used of these controls on the default tab. The remaining data driven controls should be distributed into secondary tabs to allow the default tab to load quickly. Furthermore, this layout strategy reduces the chance of fetching data that ends up being unused.
+Keep only the most frequently used of these controls on the default tab. The remaining data-driven controls should be distributed into secondary tabs to allow the default tab to load quickly. Furthermore, this layout strategy reduces the chance of fetching data that ends up being unused.
 
-There are other controls that are less impactful than the data driven controls but can still participate in the above layout strategy in order to achieve the best performance. These controls include:
+There are other controls that are less impactful than the data-driven controls but can still participate in the above layout strategy in order to achieve the best performance. These controls include:
 
 - [Lookup](form-designer-add-configure-lookup.md)
 - [iFrame](iframe-properties-legacy.md)
-- [Web Resource](create-edit-web-resources.md)
+- [Web resource](create-edit-web-resources.md)
 
 ## Web browser
 
@@ -63,7 +65,7 @@ This section covers good practices to use with web browsers.
 
 ### Don't open new windows
 
-The `openForm` client API method allows a parameter option to display a form in a new window. Don't use this parameter or set it to false.  Setting it to false will ensure the `openForm` method performs the default behavior of displaying the form using the existing window. It is also possible to directly call the `window.open` JavaScript function from a custom script or another application; however, this should also be avoided. Opening a new window means that all of the page resources need to be fetched and loaded from scratch since the page is unable to leverage the in-memory data caching capabilities between a previously loaded form and the form in a new window. As an alternative to opening new windows, consider using the multi-session experience that allows records to be opened in multiple tabs while still maximizing the performance benefits of client caching.
+The `openForm` client API method allows a parameter option to display a form in a new window. Don't use this parameter or set it to false.  Setting it to false will ensure the `openForm` method performs the default behavior of displaying the form using the existing window. It is also possible to directly call the `window.open` JavaScript function from a custom script or another application; however, this should also be avoided. Opening a new window means that all of the page resources need to be fetched and loaded from scratch since the page is unable to leverage the in-memory data caching capabilities between a previously loaded form and the form in a new window. As an alternative to opening new windows, consider using the multisession experience that allows records to be opened in multiple tabs while still maximizing the performance benefits of client caching.
 
 ### Use modern browsers
 
@@ -75,7 +77,7 @@ In most cases, you can expect to see page load improvements by just switching to
 
 ## JavaScript customization
 
-This section covers how to make intelligent customizations when you use JavaScript that help you build performant forms and pages in a model driven app.
+This section covers how to make intelligent customizations when you use JavaScript that help you build performant forms and pages in a model-driven app.
 
 ### Using JavaScript with forms
 
@@ -85,7 +87,7 @@ The ability for forms to be customized by JavaScript provides professional devel
 
 Request data asynchronously rather than synchronously when extra data is necessary for customizations. For events that support waiting for asynchronous code like the form `OnLoad` and form `OnSave` events, event handlers should return a `Promise` in order for the platform to wait until the `Promise` is settled. The platform will show an appropriate UI while the user waits for the event to complete.
 
-For events that do not support waiting for asynchronous code, like the form `OnChange` event, you can use a workaround to stop interaction with a form while the code is doing an asynchronous request by using `showProgressIndicator`. This is better than using synchronous requests as users will still be able to interact with other parts of the application as a progress indicator is displayed.
+For events that do not support waiting for asynchronous code, like the form `OnChange` event, you can use a workaround to stop interaction with a form while the code is doing an asynchronous request by using `showProgressIndicator`. This is better than using synchronous requests because users will still be able to interact with other parts of the application as a progress indicator is displayed.
 
 Here's an example using asynchronous code in synchronous extension points.
 
@@ -118,7 +120,7 @@ You should be careful when using asynchronous code in an event handler that does
 
 For example, there may be code in an event handler to make a network request and change a control to be disabled based on the response data. Before the response from the request is received, the user may have interacted with the control or navigated to a different page. Because the user is on a different page, the form context may not be available, which might lead to errors, or there might be other undesired behavior.
 
-#### Async support in form Onload and form OnSave events
+#### Async support in form OnLoad and form OnSave events
 
 Starting in 2021 release wave 2, the form `OnLoad` and `OnSave` events support handlers that return promises. The events will wait for any promises returned by a handler to resolve, up to a timeout period.
 
@@ -223,14 +225,15 @@ Performance insights is a self-service tool for enterprise app makers that analy
 
 ### Solution Checker
 
-Solution Checker is a powerful tool that can analyze client and server customizations for performance or reliability issues.  It can parse client-side JavaScript, form XML, and .NET server-side plugins and give targeted insights into what may slow end users down.  We recommend that you run Solution Checker each time you publish changes in a development environment, so that any performance concerns are surfaced before reaching end users. More information: [Use solution checker to validate your model-driven apps in Power Apps](../data-platform/use-powerapps-checker.md)
+Solution Checker is a powerful tool that can analyze client and server customizations for performance or reliability issues.  It can parse client-side JavaScript, form XML, and .NET server-side plug-ins and give targeted insights into what may slow end users down.  We recommend that you run Solution Checker each time you publish changes in a development environment, so that any performance concerns are surfaced before reaching end users. More information: [Use solution checker to validate your model-driven apps in Power Apps](../data-platform/use-powerapps-checker.md)
 
-Some examples of performance-related issues found with solution checker:
+Some examples of performance-related issues found with Solution Checker:
 
 - [il-specify-column](/powerapps/developer/data-platform/best-practices/work-with-metadata/retrieve-specific-columns-entity-via-query-apis?client=PAChecker&error=il-specify-column&source=featuredocs). Avoid selecting all columns via Dataverse query APIs.
 - [web-use-async](/powerapps/developer/model-driven-apps/best-practices/business-logic/interact-http-https-resources-asynchronously?client=PAChecker&error=web-use-async&source=featuredocs). Interact with HTTP and HTTPS resources asynchronously.
-- [web-avoid-ui-refreshribbon](https://go.microsoft.com/fwlink/?linkid=2157641&error=web-remove-console&client=PAChecker) Avoid using `refreshRibbon` in form `onload` and `EnableRule`.
-More info here: Use solution checker to validate your apps in Power Apps - Power Apps | Microsoft Docs
+- [web-avoid-ui-refreshribbon](https://go.microsoft.com/fwlink/?linkid=2157641&error=web-remove-console&client=PAChecker). Avoid using `refreshRibbon` in form `OnLoad` and `EnableRule`.
+ 
+More info here: [Use solution checker to validate your apps in Power Apps](/powerapps/maker/data-platform/use-powerapps-checker.md)
 
 ### Object checker
 
