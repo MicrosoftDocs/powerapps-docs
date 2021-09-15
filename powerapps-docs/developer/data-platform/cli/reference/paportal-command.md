@@ -13,7 +13,7 @@ ms.topic: "article"
 
 # Paportal
 
-Commands to work with [Power Apps portals (Preview)](../../maker/portals/power-apps-cli.md).
+Commands to work with [Power Apps portals (Preview)](../../../maker/portals/power-apps-cli.md).
 
 ## Parameters
 

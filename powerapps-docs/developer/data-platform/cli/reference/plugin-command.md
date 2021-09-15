@@ -13,7 +13,7 @@ ms.topic: "article"
 
 # Plugin
 
-Manages to create a [plug-in](./plug-ins.md) project.
+Manages to create a [plug-in](./../../plug-ins.md) project.
 
 ## Parameters
 

@@ -13,7 +13,7 @@ ms.topic: "article"
 
 # Auth
 
-Commands to [authenticate to Dataverse](../component-framework/import-custom-controls.md#connecting-to-your-environment).
+Commands to [authenticate to Dataverse](../../../component-framework/import-custom-controls.md#connecting-to-your-environment).
 
 ## Parameters
 

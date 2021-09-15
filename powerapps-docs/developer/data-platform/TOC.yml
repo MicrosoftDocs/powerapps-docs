@@ -452,6 +452,32 @@
     items:
     - name: Download tools from NuGet 
       href: download-tools-nuget.md
+    - name: Microsoft Power Platform CLI
+      items:
+      - name: Overview
+        href: powerapps-cli.md
+      - name: CLI reference
+        items:
+        - name: admin 
+          href: cli/reference/admin-command.md
+        - name: auth
+          href: cli/reference/auth-command.md
+        - name: canvas 
+          href: ccli/reference/canvas-command.md
+        - name: org 
+          href: cli/reference/org-command.md
+        - name: package
+          href: cli/reference/package-command.md
+        - name: paportal 
+          href: cli/reference/paportal-command.md
+        - name: pcf
+          href: cli/reference/pcf-command.md
+        - name: plugin 
+          href: cli/reference/plugin-command.md
+        - name: solution 
+          href: cli/reference/solution-command.md
+        - name: telemetry
+          href: cli/reference/telemetry-command.md
     - name: Microsoft Power Platform CLI 
       href: powerapps-cli.md
     - name: Power Platform Tools for Visual Studio

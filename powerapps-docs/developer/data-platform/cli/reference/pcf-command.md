@@ -13,7 +13,7 @@ ms.topic: "article"
 
 # PCF
 
-Commands to work with [Power Apps component framework](../component-framework/overview.md). 
+Commands to work with [Power Apps component framework](../../../component-framework/overview.md). 
 
 ## Parameters
 
