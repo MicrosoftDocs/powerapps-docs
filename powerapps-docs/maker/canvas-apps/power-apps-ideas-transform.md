@@ -74,7 +74,7 @@ Consider the following examples to inspire from while working with Power Apps Id
 | | |sort Accounts by 'Account Name' A-Z and 'Created On' latest on top|
 | |Sort existing tables |sort 'Gallery3' by 'Account Name' z to a|
 |**Filter or search table by some conditions**|A number condition|'Accounts' with length of 'Account Name' bigger than 10|
-| |A date condition|'Accounts' whose 'Created On' is last year, 'Accounts' whose 'Modified On' is within 7 days of 'Created On'|
+| |A date condition|'Accounts' whose 'Created On' is last year, 'Accounts' whose 'Modified On' is within seven days of 'Created On'|
 | |A text condition|'Accounts' whose 'Account Name' contains "test"|
 | |A few conditions|'Accounts' whose s Name' contains "test" and 'Status' is Active|
 | |Search table by user input|search 'Accounts' by 'Account Name' in 'TextInput1'|
