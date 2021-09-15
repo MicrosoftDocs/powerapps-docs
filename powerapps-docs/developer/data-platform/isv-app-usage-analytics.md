@@ -14,6 +14,7 @@ ms.topic: article
 ms.reviewer: nabuthuk
 ms.workload: na
 ms.date: 10/02/2020
+ms.subservice: dataverse-developer
 ms.author: nabuthuk
 search.audienceType: 
   - developer
@@ -40,7 +41,7 @@ With the app usage feature, you can filter usage data by **Component Type**, **D
 > An app must be deployed via [AppSource](https://appsource.microsoft.com) in order for you to see this data.
 
 > [!div class="mx-imgBorder"]
-> ![Usage dashboard](media/isv-app-usage-analytics-report.png "Usage dashboard")
+> ![Usage dashboard.](media/isv-app-usage-analytics-report.png "Usage dashboard")
 
 Some of the components of a solution can have shared ownership by multiple ISVs. For shared components, only the publisher who created the component gets the usage credit. For example, ISV1 created a form and ISV2 extended the form by adding a widget to it. Every time the form is used, ISV1 gets the usage credit. Whenever the widget is used, ISV2 gets the usage credit. If a user visited the form only to access the widget, ISV1 also gets the usage credit.
 
@@ -52,12 +53,12 @@ For a component that isn't shared, only the publisher who created it gets the us
 1. Select the app, and then select the **Usage** tab.
 
    > [!div class="mx-imgBorder"]
-   > ![List of top apps](media/isv-top-apps.png "List of top apps")
+   > ![List of top apps.](media/isv-top-apps.png "List of top apps")
 
    You can also go directly to the app usage details by selecting the app usage icon from an app in the list, as shown in the following image.
 
    > [!div class="mx-imgBorder"]
-   > ![Usage icon](media/isv-select-app-to-see-details.png "Usage icon")
+   > ![Usage icon.](media/isv-select-app-to-see-details.png "Usage icon")
 
 ## Overview of the usage dashboard
 

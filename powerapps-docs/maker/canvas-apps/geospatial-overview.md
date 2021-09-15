@@ -8,12 +8,14 @@ ms.topic: conceptual
 ms.custom: canvas, ce06122020
 ms.reviewer: tapanm
 ms.date: 1/19/2021
+ms.subservice: canvas-maker
 ms.author: iawilt
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
-
+contributors:
+  - iaanw
 ---
 
 
@@ -50,15 +52,15 @@ The geospatial features require additional terms of use that must be reviewed an
 
 1. On the **Environments** tab, select the environment you want to use for your apps, and then select **Settings** from the top menu.
 
-    ![Environment selected in the Power Platform admin center](./media/geospatial/ppac-environment.png "Environment selected in the Power Platform admin center")
+    ![Environment selected in the Power Platform admin center.](./media/geospatial/ppac-environment.png "Environment selected in the Power Platform admin center")
 
 1. Expand **Product**, and then select **Features**.
 
-    ![Screenshot of environment settings with Features selection highlighted](./media/geospatial/ppac-settings.png "Screenshot of environment settings with Features selection highlighted")
+    ![Screenshot of environment settings with Features selection highlighted.](./media/geospatial/ppac-settings.png "Screenshot of environment settings with Features selection highlighted")
 
-1. Under **Geospatial services (preview)**, set the toggle switch to **On**. A terms of service notice will appear. Read through the terms of service, and if you agree, select the checkbox **I agree to the terms of service**, and then select **Enable**.
+1. Under **Geospatial services**, set the toggle switch to **On**. A terms of service notice will appear. Read through the terms of service, and if you agree, select the checkbox **I agree to the terms of service**, and then select **Enable**.
 
-    ![Screenshot of the terms of service](./media/geospatial/ppac-tos.png "Screenshot of the terms of service")
+    ![Screenshot of the terms of service.](./media/geospatial/ppac-tos.png "Screenshot of the terms of service")
 
     >[!IMPORTANT]
     >You must read and agree to the terms of service before you can use geospatial features. 
@@ -81,11 +83,11 @@ The geospatial features require additional terms of use that must be reviewed an
 
 1. Select **Save** at the bottom of the settings page.
 
-    ![Screenshot of the Save button](./media/geospatial/ppac-save.png "Screenshot of the Save button")
+    ![Screenshot of the Save button.](./media/geospatial/ppac-save.png "Screenshot of the Save button")
 
 ### Review the environment's data loss prevention policies
 
-The geospatial components require the Common Data Service and Spatial Services connectors. 
+The geospatial components require the Microsoft Dataverse and Spatial Services connectors. This connector is used by the Power Apps Maps and Address Input components to connect to Microsoft’s Azure Maps service. It is used to fetch map tiles and satellite imagery, geocode addresses, and search for addresses. Thus, it is required for the Interactive Map and Address Input components to function.
 
 For the components to function properly, these connectors must not have conflicting data loss prevention policies. An admin must review the environment's data loss prevention policies and ensure that these connectors are classified under the same data group, typically the **Business** data group. [Learn more about data loss prevention policies for Power Platform](/power-platform/admin/prevent-data-loss). 
 

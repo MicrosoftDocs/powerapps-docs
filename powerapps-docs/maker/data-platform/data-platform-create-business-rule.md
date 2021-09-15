@@ -7,6 +7,7 @@ ms.service: powerapps
 ms.component: cds
 ms.topic: how-to
 ms.date: 03/21/2018
+ms.subservice: dataverse-maker
 ms.author: lanced
 ms.reviewer: matp
 search.audienceType: 
@@ -83,13 +84,13 @@ To follow this topic, you must switch to an [environment](/power-platform/admin/
   
     1. Drag the **Condition** component from the **Components** tab to a plus sign in the designer.  
   
-        ![Add a condition in a business rule](./media/data-platform-cds-create-business-rule/add-condition-business-rule.png "Add a condition in a business rule")  
+        ![Add a condition in a business rule.](./media/data-platform-cds-create-business-rule/add-condition-business-rule.png "Add a condition in a business rule")  
   
     2. To set properties for the condition, click the **Condition** component in the designer window, and then set the properties in the **Properties** tab on the right side of the screen. As you set properties, the Microsoft Dataverse creates an expression at the bottom of the **Properties** tab.  
   
     3. To add an additional clause (an AND or OR)  to the  condition, click **New** in the **Properties** tab to create a new rule, and then set the properties for that rule. In the **Rule Logic** column, you can specify whether to add the new rule as an AND or an OR.  
   
-        ![Add a new rule to a condition](./media/data-platform-cds-create-business-rule/add-new-rule-condition.png "Add a new rule to a condition")  
+        ![Add a new rule to a condition.](./media/data-platform-cds-create-business-rule/add-new-rule-condition.png "Add a new rule to a condition")  
   
     4. When you're done setting properties for the condition, click **Apply**.  
   
@@ -97,7 +98,7 @@ To follow this topic, you must switch to an [environment](/power-platform/admin/
   
     1. Drag one of the action components from the **Components** tab to a plus sign next to **Condition** component. Drag the action to a plus sign next to a check mark if you want the business rule to take that action when the condition is met, or to a plus sign next to an  x if you want the business rule to take that action if the condition is not met.
   
-        ![Drag an action to a business rule](./media/data-platform-cds-create-business-rule/drag-an-action-business-rule.png "Drag an action to a business rule")  
+        ![Drag an action to a business rule.](./media/data-platform-cds-create-business-rule/drag-an-action-business-rule.png "Drag an action to a business rule")  
   
     2. To set properties for the action, click the **Action** component in the designer window, and then set the properties in the **Properties** tab.  
   
@@ -149,12 +150,12 @@ A business rule may not execute because the field referenced in the business rul
 4.	In the business rule designer select each condition and action to verify all the fields referenced in each condition and action. 
 
      > [!div class="mx-imgBorder"] 
-     > ![Field referenced in business rule exists in entity](media/data-platform-cds-create-business-rule/business-rule-field.png "Field referenced in business rule exists in entity")
+     > ![Field referenced in business rule exists in entity.](media/data-platform-cds-create-business-rule/business-rule-field.png "Field referenced in business rule exists in entity")
 
  5.	Verify that each field referenced in the business rule is also included on the form. If not, add the missing field to the form.
 
      > [!div class="mx-imgBorder"] 
-     > ![Account name field on form](media/data-platform-cds-create-business-rule/account-name-on-form.png "Account name field on form")
+     > ![Account name field on form.](media/data-platform-cds-create-business-rule/account-name-on-form.png "Account name field on form")
 
 ## Frequently asked questions (FAQ)
 
@@ -166,6 +167,9 @@ A business rule may not execute because the field referenced in the business rul
 
 *Do business rules react to changes made by an onLoad script?*
 - No, they will execute before an onload script is executed.
+
+*When I update a business rule, is it executed against all existing records?*
+- No. Business rules are run on clients. For example, they run when a form is opened by a user and when a field value changes on that open form. They are not executed inside Dataverse.
  
 ### See also
 

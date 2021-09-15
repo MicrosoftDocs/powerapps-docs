@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: ebook
 ms.date: 04/26/2021
+ms.subservice: guidance
 ms.author: shboyer
 ms.reviewer: kvivek
 
@@ -37,11 +38,11 @@ When someone runs an app, it can retrieve information about the user from the Of
 
 4.  Move the control so that it appears below the details showing the next appointment.
 
-    ![Modify the layout of the Home screen](media/image233.png)
+    ![Modify the layout of the Home screen.](media/image233.png)
 
 5.  On the **Data** pane, select **Add data**. In the search box, enter **Office 365 Users**. Add the **Office 365 Users** connection to the app.
 
-    ![Add the Office 365 Users connectore](media/image234.png)
+    ![Add the Office 365 Users connectore.](media/image234.png)
 
 6.  On the **Tree view** pane, select the **UserName** label, and set the **Text** property to the following formula.
 
@@ -51,14 +52,14 @@ When someone runs an app, it can retrieve information about the user from the Of
 
     This formula uses the **Office365Users** connection to retrieve identity information about the current user. The **displayName** property of the **MyProfileV2** function contains the user's signed-on name.
 
-    ![Home screen with the user name displayed](media/image235.png)
+    ![Home screen with the user name displayed.](media/image235.png)
 
 > [!NOTE]
 > Feel free to style the **UserName** control to make it stand out more.
 
 Office 365 runs in an Azure AD domain, but you can also extend this security domain with your own Azure AD installation. If your organization authenticates users through your own Azure AD domain, you can obtain user information by using the **Azure AD** connector instead of **Office365Users**.
 
-![Add the Azure AD connector](media/image236.png)
+![Add the Azure AD connector.](media/image236.png)
 
 In this case, set the **Text** property of the **UserName** label to the following.
 
@@ -91,11 +92,11 @@ ClearCollect(appointmentsCollection, Filter(FieldEngineerAPI.getapischeduleengin
 > [!NOTE]
 > This modification requires that the **EngineerId** column in the **Appointments** table be populated with the user's ID. This ID is a GUID, but is stored as a string in the database. The following image shows a few rows of sample data.
 
-![Sample engineer data with IDs as GUIDs](media/image237.png)
+![Sample engineer data with IDs as GUIDs.](media/image237.png)
 
 The **Engineers** table must also contain the name of an engineer with the corresponding ID.
 
-![The Engineers table in the database](media/image238.png)
+![The Engineers table in the database.](media/image238.png)
 
 The app is now ready to deploy and roll out.
 
@@ -109,15 +110,15 @@ To publish an app, do the following:
 
 2.  Select **Publish**. In the **Publish** dialog, the **Edit details** option enables you to select settings such as the name of the app, an icon for the app, and a description. You can also change the screen size and orientation used by the app. Select **Publish this version** to make the app available to other Power Apps users in your organization.
 
-    ![Publish the app](media/image239.png)
+    ![Publish the app.](media/image239.png)
 
 You can track the deployment history and app usage from the **Apps** tab on the **Administrators** page in Power Apps Studio, at <https://make.powerapps.com>. Select the app and then, on the ellipses menu, select **Details**.
 
-![Select the Details pane for an app](media/image240.png)
+![Select the Details pane for an app.](media/image240.png)
 
 On the **Details** pane, the **Versions** tab shows the version history for the app. The options on the ellipses menu for an app enable you to restore a previous version if you need to roll back a recent publication.
 
-![Restore a previous version of an app](media/image241.png)
+![Restore a previous version of an app.](media/image241.png)
 
 ## Maintaining the app
 
@@ -135,7 +136,7 @@ Dataverse provides four types of environments: 
 
 You create environments by using the [Power Platform admin center](https://admin.powerplatform.microsoft.com/). On the **Environments** tab, select the **New** option in the menu bar. Specify the type of environment.
 
-![Create a new Power Apps environment](media/image242.png)
+![Create a new Power Apps environment.](media/image242.png)
 
 A good approach to application lifecycle management (ALM) is to start in a new sandbox environment, allowing you to safely develop and test your app in isolation from the production environment. Share and test your app as it's being developed. When your app is ready for real use, deploy it to a production environment and publish it from there. You can automate much of this process by using the [Microsoft Power Platform Build Tools](/power-platform/alm/devops-build-tools).
 

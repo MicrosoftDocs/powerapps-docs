@@ -2,7 +2,7 @@
 title: "Edit table records directly from another table’s main form | MicrosoftDocs"
 description: Learn how to design a main form that can be used to edit a related table record.
 ms.custom: ""
-ms.date: 12/14/2020
+ms.date: 08/15/2021
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -11,6 +11,7 @@ ms.topic: "how-to"
 applies_to: 
   - "PowerApps"
 author: "Mattp123"
+ms.subservice: mda-maker
 ms.author: "mspilde"
 manager: "kvivek"
 search.audienceType: 
@@ -27,11 +28,11 @@ Another way you can work with related table records is by adding a form componen
 
 For example, here's the form component on a separate tab on the main account form, which lets the user edit a contact record without leaving the account form.
 
-:::image type="content" source="media/form-component-tab.png" alt-text="Form component control added to a separate tab":::
+:::image type="content" source="media/form-component-tab.png" alt-text="Form component control added to a separate tab.":::
 
 For example, here's the form component on an existing tab on the main account form, which also lets the user edit a contact record without leaving the account form.
 
-:::image type="content" source="media/form-component-section.png" alt-text="Form component control added to an existing tab":::
+:::image type="content" source="media/form-component-section.png" alt-text="Form component control added to an existing tab.":::
 
 ## Add the form component to a table main form
 
@@ -43,25 +44,29 @@ In this example, the **Contact** standard main form is configured for the form c
 1. Select the lookup column, and then on the **Home** tab, select **Change Properties**.
 1. On the **Controls** tab, select **Add Control**, in the list of control types select **Form Component Control**, and then select **Add**.
 
-    :::image type="content" source="media/form-component-control.png" alt-text="Select the Form Component Control":::
+    :::image type="content" source="media/form-component-control.png" alt-text="Select the Form Component Control.":::
 1. Select **Web**, **Tablet**, and **Phone** for the component.
 1. Select **Edit** (pencil icon) and on the **Configure Property** dialog box select **Bind to a static value** and then add an XML entry similar to this where *TableName* is the table unique name and *FormID* is the form ID for the main form:`<QuickForms><QuickFormIds><QuickFormId entityname="TableName">FormID</QuickFormId></QuickFormIds></QuickForms>`
    - For example, to render the **Contact** main form on the account form, use: `<QuickForms><QuickFormIds><QuickFormId entityname="contact">1fed44d1-ae68-4a41-bd2b-f13acac4acfa</QuickFormId></QuickFormIds></QuickForms>`
 
-    :::image type="content" source="media/form-component-control2.png" alt-text="Configure the form component control":::
+    :::image type="content" source="media/form-component-control2.png" alt-text="Configure the form component control.":::
 1. Select **OK**, and then select **OK** again.
 1. **Save** and then **Publish** your form.
 
 > [!TIP]
 > To find the unique name for a table, select the table in Power Apps and then select **Settings**. The **Name** appears on the **Edit** table pane.
 > The form ID can be found in the browser URL when you edit a form. The ID follows the **/edit/** portion of the URL.
->  :::image type="content" source="media/form-component-formid.png" alt-text="Form ID can be found in the browser URL when you open a form in the modern form designer":::
+>  :::image type="content" source="media/form-component-formid.png" alt-text="Form ID can be found in the browser URL when you open a form in the modern form designer.":::
 >
 > In the classic form designer, the form ID follows the **formId%3d** portion of the URL.
 
 ## Form component behavior
 
 This section describes form component behavior when used in a model-driven app.
+
+### Record selection
+
+In order for the form component control to show a form, the lookup column it is bound to needs to have a value. Otherwise, the control will show the message **Source record not selected**. One way to set the value is to add to the form a lookup control that is bound to the same lookup column as the form component control. When you use the lookup control to change the lookup column value, the form component control will show a form with the data for the new lookup column value.
 
 ### Column validation
 
@@ -85,6 +90,10 @@ If there are multiple errors during save, only one error will be shown to the us
 
 If there are unsaved changes in a form for a form component and a user tries to change the lookup column the form component is bound to, the user will be alerted about this change.
 
+### Client API
+
+A [form context](../../developer/model-driven-apps/clientapi/clientapi-form-context.md) is available for the form component control. It can be accessed via the main form's form context by accessing the control via an API, such as [getControl](../../developer/model-driven-apps/clientapi/reference/controls/getControl.md). Before you access data for the related table in the form component control, event handlers should wait for the [isLoaded API](../../developer/model-driven-apps/clientapi/reference/formContext-ui-quickForms/isLoaded.md) for the control to return true.
+
 ## Limitations
 
 Note the following limitations when you add the form component control to a table form:
@@ -106,6 +115,8 @@ Note the following limitations when you add the form component control to a tabl
 - On mobile, the timeline control does not currently appear in the form component control.
 
 - For subgrids, the **See all records** and **See associated records** command buttons will not be available if they are rendered inside a form component.
+
+- Form component controls are not supported in bulk edit dialogs. They will not appear in the form in the bulk edit dialog by default and any changes made to related table records with them will not be saved.
 
 ### See also
 

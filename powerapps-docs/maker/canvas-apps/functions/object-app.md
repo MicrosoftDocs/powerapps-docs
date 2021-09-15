@@ -1,6 +1,6 @@
 ---
-title: App object | Microsoft Docs
-description: Reference information, including syntax and examples, for the App object in Power Apps
+title: App object in Power Apps
+description: Reference information including syntax and examples for the App object in Power Apps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -13,6 +13,9 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - gregli-msft
+  - nkrb
 ---
 # App object in Power Apps
 
@@ -25,7 +28,7 @@ Like a control, the **App** object provides properties that identify which scree
 You can write formulas for some properties of the **App** object. At the top of the **Tree view** pane, select the **App** object as you would any other control or screen. View and edit one of the object's properties by selecting it in the drop-down list to the left of the formula bar.
 
 > [!div class="mx-imgBorder"]
-> ![The App object in the Tree view pane](media/object-app/appobject.png)
+> ![The App object in the Tree view pane.](media/object-app/appobject.png)
 
 ## ActiveScreen property
 
@@ -35,6 +38,20 @@ This property returns a screen object, which you can use to reference properties
 
 Use the **[Back](function-navigate.md)** or **[Navigate](function-navigate.md)** function to change the screen that's showing.
 
+## OnStart property
+
+The **OnStart** property runs when the user starts the app. App makers often use this property to perform these tasks:
+
+- Retrieve and cache data into collections by using the **[Collect](function-clear-collect-clearcollect.md)** function.
+- Set up global variables by using the **[Set](function-set.md)** function.
+- Navigate to an initial screen by using the **[Navigate](function-navigate.md)** function.
+
+This formula is evaluated before the first screen appears. No screen is loaded, so you can't set context variables with the **[UpdateContext](function-updatecontext.md)** function. However, you can pass context variables with the **Navigate** function.
+
+After you change the **OnStart** property, test it by hovering over the **App** object in the **Tree view** pane, selecting the ellipsis (...) that appears, and then selecting **Run OnStart**. Unlike when the app is loaded for the first time, existing collections and variables will already be set. To start with empty collections, use the **[ClearCollect](function-clear-collect-clearcollect.md)** function instead of the **Collect** function.
+
+> [!div class="mx-imgBorder"]
+> ![App-item shortcut menu for Run OnStart.](media/object-app/appobject-runonstart.png)
 
 ## ConfirmExit properties
 
@@ -76,6 +93,10 @@ Use **ConfirmExitMessage** to provide a custom message in the confirmation dialo
 
 In a browser, the confirmation dialog box might appear with a generic message from the browser.
 
+
+> [!NOTE]
+> App object has two more additional properties `OnMessage` and `BackEnabled` which are experimental properties and will go away from the app object in future. We recommend not to use these properties in your production environment.
+
 ### Example
 
 1. Create an app that contains two form controls, **AccountForm** and **ContactForm**.
@@ -89,7 +110,7 @@ In a browser, the confirmation dialog box might appear with a generic message fr
     This dialog box appears if the user changes data in either form and then tries to close the app without saving those changes.
 
     > [!div class="mx-imgBorder"]
-    > ![Generic confirmation dialog box](media/object-app/confirm-native.png)
+    > ![Generic confirmation dialog box.](media/object-app/confirm-native.png)
 
 1. Set the **App** object's **ConfirmExitMessage** property to this formula:
 
@@ -103,7 +124,7 @@ In a browser, the confirmation dialog box might appear with a generic message fr
     This dialog box appears if the user changes data in the Account form and then tries to close the app without saving those changes.
 
     > [!div class="mx-imgBorder"]
-    > ![Form-specific confirmation dialog box](media/object-app/confirm-native-custom.png)
+    > ![Form-specific confirmation dialog box.](media/object-app/confirm-native-custom.png)
 
 ## OnStart property
 

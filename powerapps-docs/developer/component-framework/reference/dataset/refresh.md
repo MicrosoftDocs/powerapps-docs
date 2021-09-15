@@ -1,6 +1,6 @@
 ---
 title: refresh | Microsoft Docs
-description: Refreshes the data-set based on filters, sorting, linking, new column.
+description: Refreshes the dataset based on filters, sorting, linking, new column.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -19,7 +19,7 @@ ms.assetid: d8fde7bd-6e69-46cb-a644-d3c527726169
 
 ## Available for 
 
-Model-driven apps
+Model-driven and canvas apps
 
 ## Syntax
 

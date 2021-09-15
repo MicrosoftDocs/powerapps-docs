@@ -5,13 +5,15 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/04/2020
+ms.date: 08/17/2021
+ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: tapanm
 contributors:
     - tapanm-msft
     - sandhangitmsft
     - dileepsinghmicrosoft
+    - nageshbhat-msft
 ---
 
 # Local authentication, registration, and other settings
@@ -58,19 +60,19 @@ Returning portal visitors can authenticate by using local user credentials or ex
 
 The following image shows a sign in option with using a local account, or by selecting an external identity provider.
 
-![Sign in by using a local account](../media/sign-in-local-account.png "Sign in by using a local account")  
+![Sign in by using a local account.](../media/sign-in-local-account.png "Sign in by using a local account")  
 
 ### Sign up by using a local identity or external identity
 
 The following image shows a sign-up screen to register with using a local account, or by selecting an external identity provider.
 
-![Register for a new local account](../media/register-new-local-account.png "Register for a new local account")  
+![Register for a new local account.](../media/register-new-local-account.png "Register for a new local account")  
 
 ### Redeem an invitation code manually
 
 The following image shows the option to redeem an invitation using the invitation code.
 
-![Sign up by using an invitation code](../media/sign-up-invitation-code.png "Sign up by using an invitation code")  
+![Sign up by using an invitation code.](../media/sign-up-invitation-code.png "Sign up by using an invitation code")  
 
 ## Forgot password or password reset 
 
@@ -104,18 +106,18 @@ The email sent by this workflow must be customized by using the URL to the redee
 
 1. Create an invitation for a new contact.
 
-    ![Create an invitation for a new contact](../media/create-invitation.png "Create an invitation for a new contact")  
+    ![Create an invitation for a new contact.](../media/create-invitation.png "Create an invitation for a new contact")  
 
 2. Customize and save the new invitation.
 
-    ![Customize a new invitation](../media/customize-new-invitation.png "Customize a new invitation")  
+    ![Customize a new invitation.](../media/customize-new-invitation.png "Customize a new invitation")  
 
 3. Customize the invitation email.
 4. Process the [Send invitation](invite-contacts.md) workflow.
 1. The invitation email opens the redemption page.
 1. The user signs up by using the submitted invitation code.
 
-    ![Sign up by using an invitation code](../media/sign-up-invitation-code.png "Sign up by using an invitation code")  
+    ![Sign up by using an invitation code.](../media/sign-up-invitation-code.png "Sign up by using an invitation code")  
 
 ### Disabled registration
 
@@ -195,7 +197,7 @@ An authenticated user can connect (register) multiple external identities to the
 
 1.  Select a provider to connect to your user account.
 
-    ![Manage external accounts](../media/manage-external-accounts.png "Manage external accounts")  
+    ![Manage external accounts.](../media/manage-external-accounts.png "Manage external accounts")  
 
 2.  Sign in by using the provider you want to connect.
 
@@ -229,7 +231,7 @@ The following describes the settings for enabling and disabling user registratio
 | Authentication/Registration/Enabled                 | Enables or disables all forms of user registration. Registration must be enabled for the other settings in this section to take effect. Default: true                                   |
 | Authentication/Registration/OpenRegistrationEnabled | Enables or disables the sign-up registration form for creating new local users. The sign-up form allows any anonymous visitor to the portal to create a new user account. Default: true |
 | Authentication/Registration/InvitationEnabled       | Enables or disables the invitation code redemption form for registering users who have invitation codes. Default: true                                                               |
-|Authentication/Registration/CaptchaEnabled|Enables or disables captcha on the user registration page. Default: false<br>**Note**: This site setting might not be available by default. To enable captcha, you must create the site setting and set its value to true. |
+|Authentication/Registration/CaptchaEnabled|Enables or disables captcha on the user registration page. Default: false <br> **NOTE**: <br> - This site setting might not be available by default. To enable captcha, you must create the site setting and set its value to true. <br> - Captcha control is currently limited to only English language for audio, and Latin characters for image. |
 
 > [!NOTE]
 > Ensure that the primary email is specified for the user, because registration is done by using the primary email (emailaddress1) of the user. The user can't be registered by using the secondary email (emailaddress2) or alternate email (emailaddress3) of the contact record.
@@ -274,12 +276,12 @@ The following describes settings for modifying default authentication cookie beh
 | Authentication/ApplicationCookie/CookieSecure                            | Determines whether the cookie should only be transmitted on HTTPS request. <br> Default: `SameAsRequest` |
 | Authentication/ApplicationCookie/ExpireTimeSpan                          | Controls how much time the application cookie will remain valid from the moment it was created. <br> Default: `24:00:00` (1 day) |
 | Authentication/ApplicationCookie/SlidingExpiration                       | The SlidingExpiration is set to true to instruct the middleware to reissue a new cookie with a new expiration time whenever it processes a request that's more than halfway through the expiration window. <br> Default: true |
-| Authentication/ApplicationCookie/LoginPath                               | The LoginPath property informs the middleware that it should change an outgoing 401 Unauthorized status code into a 302 redirection onto the given sign-in path. <br> Default: `~/signin` |
+| Authentication/ApplicationCookie/LoginPath                               | The LoginPath property informs the middleware that it should change an outgoing 401 Unauthorized status code into a 302 redirection onto the given sign-in path. <br> Default: `/signin` |
 | Authentication/ApplicationCookie/LogoutPath                              | If the sign-out path is provided by the middleware, a request to that path will be redirected based on the ReturnUrlParameter. |
 | Authentication/ApplicationCookie/ReturnUrlParameter                      | The ReturnUrlParameter determines the name of the query string parameter that's appended by the middleware when a 401 Unauthorized status code is changed to a 302 redirect onto the sign-in path. |
 | Authentication/ApplicationCookie/SecurityStampValidator/ValidateInterval | The period of time between security stamp validations. <br> Default: `30` minutes |
 | Authentication/TwoFactorCookie/AuthenticationType                        | The type of two-factor authentication cookie. <br> Default: `TwoFactorCookie` |
-| Authentication/TwoFactorCookie/ExpireTimeSpan                            | Controls how much time a two-factor cookie will remain valid from the moment it was created. <br> Default: `5` minutes |
+| Authentication/TwoFactorCookie/ExpireTimeSpan                            | Controls how much time a two-factor cookie will remain valid from the moment it was created. Value shouldn't exceed `6` minutes. <br> Default: `5` minutes |
 
 ## Next steps
 

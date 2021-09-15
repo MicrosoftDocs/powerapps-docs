@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2020
+ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: tapanm
 contributors:
@@ -25,7 +26,7 @@ Once the portal customizations have been imported into the Microsoft Dataverse e
 
 1. Go to **Portals** > **Web Link Sets**.
 
-    ![Web Link Sets](media/manage-web-links/web-link-set.png "Web Link Sets")
+    ![Web Link Sets.](media/manage-web-links/web-link-set.png "Web Link Sets")
 
     More information: [Web link set attributes and relationships](#web-link-set-attributes-and-relationships)
 
@@ -39,7 +40,7 @@ Once the portal customizations have been imported into the Microsoft Dataverse e
 
 1. To create a new web link, select **New Web Link**. To edit an existing web link instead, select the web link name.
 
-    ![Add web link](media/manage-web-links/add-web-link.png "add web link")
+    ![Add web link.](media/manage-web-links/add-web-link.png "add web link")
 
     More information: [Web link attributes and relationships](#web-link-attributes-and-relationships)
 
@@ -51,7 +52,7 @@ Once the portal customizations have been imported into the Microsoft Dataverse e
 
 The primary menu on the website is created automatically based on the hierarchy of the webpages. It's called the **Default** menu. You can also create a custom menu to display on the website.
 
-![Default Navigation Menu](media/manage-web-links/navigation-menu.png "Default Navigation Menu")
+![Default Navigation Menu.](media/manage-web-links/navigation-menu.png "Default Navigation Menu")
 
 If you change the web link set using the [Portal Management app](configure-portal.md), and then try to edit the portal using the [portals Studio](../portal-designer-anatomy.md), you may see the following message:
 

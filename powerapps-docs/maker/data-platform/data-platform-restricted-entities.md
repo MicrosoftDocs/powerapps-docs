@@ -4,7 +4,8 @@ description: A list of restricted tables in Microsoft Dataverse that require Dyn
 author: KumarVivek
 ms.service: powerapps
 ms.topic: conceptual
-ms.date: 03/18/2021
+ms.date: 06/08/2021
+ms.subservice: dataverse-maker
 ms.author: kvivek
 search.audienceType: 
   - maker
@@ -74,14 +75,14 @@ Unique Number|msdyn_uniquenumber |Dynamics 365 for Field Service<br>**or** Dynam
 Work Order |msdyn_workorder |Dynamics 365 for Field Service<br>**or** Dynamics 365 Customer Engagement plan <br> **or** Dynamics 365 plan
 Work Order Details Generation Queue (Deprecated)|msdyn_workorderdetailsgenerationqueue |Dynamics 365 for Field Service<br>**or** Dynamics 365 Customer Engagement plan <br> **or** Dynamics 365 plan
 
-[1] *Case table actions permitted with only Power Apps or Power Automate license:*  
-     Power Apps or Power Automate licensed users can ‘create’ cases; can ‘read’, ‘update’ and ‘delete’ self-created cases to enable scenarios including employee self-service and case creation on behalf of customers. Power Apps or Power Automate licensed users can only perform ‘read’ operation on cases created by other users. They cannot ‘update’, ‘resolve’, ‘route’, ‘close’,‘delete’,‘assign’,‘duplicate’, ‘merge’, ‘create child cases’ or perform any other custom operation on cases created by others. Users can't act as a customer service agent, can't manage cases.
+[1] *Case table actions permitted with only Power Apps, Power Automate, or Power Virtual Agents license:*  
+Power Apps, Power Automate, or Power Virtual Agents licensed users can ‘create’ cases; can ‘read’, ‘update’ and ‘delete’ self-created cases to enable scenarios including employee self-service and case creation on behalf of customers. Power Apps, Power Automate, or Power Virtual Agents licensed users can only perform ‘read’ operation on cases created by other users. They cannot ‘update’, ‘resolve’, ‘route’, ‘close’,‘delete’,‘assign’,‘duplicate’, ‘merge’, ‘create child cases’ or perform any other custom operation on cases created by others. Users can't act as a customer service agent, can't manage cases.
 
 > [!NOTE]
 > Dynamics 365 Customer Engagement Plan and Dynamics 365 Plan licenses are no longer available for purchase and is referenced here only for the benefit of existing customers who have bought these licenses in the past.
 
 ## Licensing
-For more information on Power Apps, Power Automate, and Dynamics 365 licenses, see [Licensing overview](/power-platform/admin/pricing-billing-skus) page.
+For more information on Power Apps, Power Automate, Power Virtual Agents, and Dynamics 365 licenses, see [Licensing overview](/power-platform/admin/pricing-billing-skus) page.
 
 
 

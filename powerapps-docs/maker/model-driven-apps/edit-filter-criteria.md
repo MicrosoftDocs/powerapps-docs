@@ -15,6 +15,7 @@ applies_to:
 author: "Mattp123"
 ms.assetid: fecf23c9-05e6-4397-9a5d-37210bcc2816
 caps.latest.revision: 25
+ms.subservice: mda-maker
 ms.author: "matp"
 manager: "kvivek"
 search.audienceType: 
@@ -40,7 +41,7 @@ Along with the columns displayed in a view, the filter criteria applied to a vie
 3.  Select a view to open it in the view designer.
 
     > [!div class="mx-imgBorder"] 
-    > ![Edit filters](media/view-column-menu.png "Edit filters")
+    > ![Edit filters.](media/view-column-menu.png "Edit filters")
 
 4.  Select a column name in the column head, and from the column menu, select **Sort A to Z** or **Sort Z to A**. The sort order is indicated in the column head with an up arrow or a down arrow.
 
@@ -59,7 +60,7 @@ You can also change the sort order by using the view properties panel.
 1.  Select a column, and from the column menu, select **Filter by**.
 
     > [!div class="mx-imgBorder"] 
-    > ![Filter by](media/edit-filter-criteria.png "Filter by")
+    > ![Filter by.](media/edit-filter-criteria.png "Filter by")
 
 2.  Select the conditional operator that you want to use.
 
@@ -84,7 +85,7 @@ Change the sort order for a view.
 2.  In the view designer, select **Configure Sorting**.  
 
     > [!div class="mx-imgBorder"] 
-    > ![Configure sorting](media/configure-sorting.png "Configure sorting")
+    > ![Configure sorting.](media/configure-sorting.png "Configure sorting")
   
 3.  In the **Configure Sort Order** dialog box, in the **Sort By** list, select the column you want to sort, then select **Ascending Order** or **Descending Order**.  
   

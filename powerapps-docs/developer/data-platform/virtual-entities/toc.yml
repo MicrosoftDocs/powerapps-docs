@@ -7,7 +7,11 @@
     href: api-considerations-ve.md
   - name: Custom data providers
     href: custom-ve-data-providers.md
+  - name: Enable Virtual Tables to support Dataverse events
+    href: enable-virtual-table-event-support.md
   - name: 'Sample: Generic virtual table data provider plug-in'
     href: sample-generic-ve-plugin.md
   - name: 'Sample: Custom virtual table provider with CRUD operations'
     href: sample-ve-provider-crud-operations.md
+  - name: Create virtual tables using virtual connectors
+    href: create-virtual-tables-using-connectors.md

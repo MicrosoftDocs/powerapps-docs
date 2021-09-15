@@ -5,7 +5,8 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: intro-internal
-ms.date: 04/21/2020
+ms.date: 09/09/2021
+ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: tapanm
 contributors:
@@ -79,13 +80,13 @@ The following site settings are related to global search:
 |-----------------------|--------------------|-------------|
 | Search/Enabled | True  | A Boolean value that indicates whether search is enabled. If you set its value to false, global search in the portal is turned off.<br>If you're using out-of-the-box web templates and you turn off this setting, the search box will not be displayed in the header as well as on the search page. Also, no results are returned even if the direct URL for the search page is hit.  |
 | Search/EnableAdditionalEntities  | False  | Setting this value to true enables searching on additional tables on your portal. <br> Requires *Search/Enabled* set to *True* when used.  |
-| Search/Filters  | Content:adx_webpage;Events:adx_event,adx_eventschedule;Blogs:adx_blog,adx_blogpost,adx_blogpostcomment;Forums:adx_communityforum,adx_communityforumthread,adx_communityforumpost;Ideas:adx_ideaforum,adx_idea,adx_ideacomment;Issues:adx_issueforum,adx_issue,adx_issuecomment;Help Desk:incident | A collection of search logical name filter options. Defining a value here will add drop-down filter options to global search. This value should be in the form of name/value pairs, with name and value separated by a colon, and pairs separated by a semicolon. For example: "Forums:adx_communityforum,adx_communityforumthread,adx_communityforumpost;Blogs:adx_blog,adx_blogpost,adx_blogpostcomment".  |
+| Search/Filters  | Content:adx_webpage;Events:adx_event,adx_eventschedule;<br>Blogs:adx_blog,adx_blogpost,adx_blogpostcomment;Forums:adx_communityforum,<br>adx_communityforumthread,adx_communityforumpost;Ideas:adx_ideaforum,adx_idea,adx_ideacomment;<br>Issues:adx_issueforum,adx_issue,adx_issuecomment;Help Desk:incident | A collection of search logical name filter options. Defining a value here will add drop-down filter options to global search. This value should be in the form of name/value pairs, with name and value separated by a colon, and pairs separated by a semicolon. For example: "Forums:adx_communityforum,adx_communityforumthread,adx_communityforumpost;Blogs:adx_blog,adx_blogpost,adx_blogpostcomment". <br> **Note**: <ul> <li> Values in the filter dropdown will have the table's plural name instead of the key value defined here. </li> <li> When using multiple tables, the filter dropdown will have the name of the first table in the comma separated list. </li> </ul>  |
 | Search/IndexQueryName   | Portal search  | The name of the system view used by the portal search query to define the fields of a table enabled that are indexed and searched.   |
-| Search/Query  | +(@Query) _title:(@Query) _logicalname:adx_webpage\~0.9^0.2 -_logicalname:adx_webfile\~0.9 adx_partialurl:(@Query) _logicalname:adx_blogpost\~0.9^0.1 -_logicalname:adx_communityforumthread\~0.9   | This setting adds additional weights and filters to the query that a user enters in the default search box that is displayed on the portal. In the default value, @Query is the query text entered by a user.<br>For information on how to modify this value, follow [Lucene query syntax](https://lucene.apache.org/core/old_versioned_docs/versions/2_9_1/queryparsersyntax.html).<br>**Important**: This weighting and filtering only apply to the search box that comes in the default search page of the portal. If you're using a liquid search tag to create your own search page, then this setting doesn't apply. |
+| Search/Query  | +(@Query) _title:(@Query) _logicalname:adx_webpage\~0.9^0.2<br> -_logicalname:adx_webfile\~0.9 adx_partialurl:<br>(@Query) _logicalname:adx_blogpost\~0.9^0.1 -_logicalname:<br>adx_communityforumthread\~0.9   | This setting adds additional weights and filters to the query that a user enters in the default search box that is displayed on the portal. In the default value, @Query is the query text entered by a user.<br>For information on how to modify this value, follow [Lucene query syntax](https://lucene.apache.org/core/old_versioned_docs/versions/2_9_1/queryparsersyntax.html).<br>**Important**: This weighting and filtering only apply to the search box that comes in the default search page of the portal. If you're using a liquid search tag to create your own search page, then this setting doesn't apply. |
 | Search/Stemmer  | English    | The language used by the portal search's stemming algorithm.   |
 | Search/FacetedView  | True   | This enables facets in the search results. When set to True, facets will be shown along with results on the search page.  |
 | Search/IndexNotesAttachments   | False    | Indicates whether the content of notes attachments in knowledge base articles and web files should be indexed. By default, it's set to False. More information: [Search within file attachment content](search-file-attachment.md)    |
-| Search/RecordTypeFacetsEntities  | Blogs:adx_blog,adx_blogpost;Forums:adx_communityforum,adx_communityforumthread,adx_communityforumpost;Ideas:adx_ideaforum,adx_idea;Downloads:annotation,adx_webfile    | This determines how the tables are grouped in Record Type facet on the Search page. This setting is in the format <br>"DisplayNameinRecordTypeFacet1:logicalnameoftable1,logicalnameoftable2; DisplayNameinRecordTypeFacet2:logicalnameoftable3,logicalnameoftable4" <br>Display Name in Record Type facet will appear on the UI. This facet group will combine the result of the tables defined in the configuration.   |
+| Search/RecordTypeFacetsEntities  | Blogs:adx_blog,adx_blogpost;Forums:adx_communityforum,<br>adx_communityforumthread,adx_communityforumpost;<br>Ideas:adx_ideaforum,adx_idea;Downloads:annotation,adx_webfile    | This determines how the tables are grouped in Record Type facet on the Search page. This setting is in the format <br>"DisplayNameinRecordTypeFacet1:logicalnameoftable1,logicalnameoftable2; DisplayNameinRecordTypeFacet2:logicalnameoftable3,logicalnameoftable4" <br>Display Name in Record Type facet will appear on the UI. This facet group will combine the result of the tables defined in the configuration.   |
 | KnowledgeManagement/DisplayNotes | True   | Indicates whether to index attachments of knowledge base articles. By default, it's set to False. |
 |||
 
@@ -95,21 +96,21 @@ The following content snippets are related to global search:
 
 | Name   | Default value  | Description   |
 |------------------|-----------------|--------------------|
-| Header/Search/Label| Search| This content snippet determines the watermark text shown in the search box in the portal header.<br>![Search label](../media/search-label.png "Search label")    |
-| Header/Search/ToolTip| Search  | This content snippet determines the tooltip text shown when you hover over the search icon in the portal header.<br>![Search tooltip](../media/search-tooltip.png "Search tooltip")  |
-| Search/Default/FilterText| All   | This content snippet determines the default text shown in the filter drop-down list next to the search box.<br>![Search filter text](../media/search-filter-text.png "Search filter text")  |
-| Search/Facet/All| All| This content snippet determines the default text shown for "all records facet" in the "Record Type" facet of the search result page.<br>![All facet](../media/facet-all.png "All facet") |
-| Search/Facet/ClearConstraints   | Clear All  | This content snippet determines the label of the button that resets all the facets applied in the search results page.<br>![Reset all facets ](../media/facet-clear-all.png "Reset all facets") |
-| Search/Facet/Downloads   | Downloads   | This content snippet determines the label displayed in the search results of annotation attachments and web file records in the "Record Type" facet.<br>![Download facet](../media/facet-download.png "Download facet")|
-| Search/Facet/Less    | Show less  | This content snippet determines the label of the button that collapses facet results.<br>![Show less facet](../media/facet-show-less.png "Show less facet") |
-| Search/Facet/ModifiedDate  | Modified date  | This content snippet determines the label of the header shown for the Modified date facet.<br>![Modified date](../media/facet-modified-date.png "Modified date facet")   |
-| Search/Facet/More   | Show more  | This content snippet determines the label of the button that expands facet results.<br>![Show more facet](../media/facet-show-more.png "Show more facet")  |
-| Search/Facet/Product  | Products | This content snippet determines the label of the Products facet.<br>![Products facet](../media/facet-product.png "Products facet")  |
-| Search/Facet/Rating   | Rating   | This content snippet determines the label of the Rating facet.<br>![Ratings facet](../media/facet-rating.png "Ratings facet")  |
-| Search/Facet/RecordType   | Record Type | This content snippet determines the label of the Record Type facet.<br>![Record Type facet](../media/facet-record-type.png "Record Type facet")     |
-| Search/Facet/SortOrder/AverageUserRating | Average User Ratings | This content snippet determines the label shown for the "Sort by Average User Ratings" option in the sorting drop-down list on the Search Results page.<br>![Sort by average user rating](../media/sort-avg-user-rating.png "Sort by average user rating")  |
-| Search/Facet/SortOrder/Relevance| Relevance| This content snippet determines the label shown for the "Sort by Relevance" option in the sorting drop-down list on the Search Results page.<br>![Sort by relevance](../media/sort-relevance.png "Sort by relevance")|
-| Search/Facet/SortOrder/Views| View Count| This content snippet determines the label shown for the "Sort by View Count" option in the sorting drop-down list on the Search Results page.<br>![Sort by view count](../media/sort-view-count.png "Sort by view count")|
+| Header/Search/Label| Search| This content snippet determines the watermark text shown in the search box in the portal header.<br>![Search label.](../media/search-label.png "Search label")    |
+| Header/Search/ToolTip| Search  | This content snippet determines the tooltip text shown when you hover over the search icon in the portal header.<br>![Search tooltip.](../media/search-tooltip.png "Search tooltip")  |
+| Search/Default/FilterText| All   | This content snippet determines the default text shown in the filter drop-down list next to the search box.<br>![Search filter text.](../media/search-filter-text.png "Search filter text")  |
+| Search/Facet/All| All| This content snippet determines the default text shown for "all records facet" in the "Record Type" facet of the search result page.<br>![All facet.](../media/facet-all.png "All facet") |
+| Search/Facet/ClearConstraints   | Clear All  | This content snippet determines the label of the button that resets all the facets applied in the search results page.<br>![Reset all facets .](../media/facet-clear-all.png "Reset all facets") |
+| Search/Facet/Downloads   | Downloads   | This content snippet determines the label displayed in the search results of annotation attachments and web file records in the "Record Type" facet.<br>![Download facet.](../media/facet-download.png "Download facet")|
+| Search/Facet/Less    | Show less  | This content snippet determines the label of the button that collapses facet results.<br>![Show less facet.](../media/facet-show-less.png "Show less facet") |
+| Search/Facet/ModifiedDate  | Modified date  | This content snippet determines the label of the header shown for the Modified date facet.<br>![Modified date.](../media/facet-modified-date.png "Modified date facet")   |
+| Search/Facet/More   | Show more  | This content snippet determines the label of the button that expands facet results.<br>![Show more facet.](../media/facet-show-more.png "Show more facet")  |
+| Search/Facet/Product  | Products | This content snippet determines the label of the Products facet.<br>![Products facet.](../media/facet-product.png "Products facet")  |
+| Search/Facet/Rating   | Rating   | This content snippet determines the label of the Rating facet.<br>![Ratings facet.](../media/facet-rating.png "Ratings facet")  |
+| Search/Facet/RecordType   | Record Type | This content snippet determines the label of the Record Type facet.<br>![Record Type facet.](../media/facet-record-type.png "Record Type facet")     |
+| Search/Facet/SortOrder/AverageUserRating | Average User Ratings | This content snippet determines the label shown for the "Sort by Average User Ratings" option in the sorting drop-down list on the Search Results page.<br>![Sort by average user rating.](../media/sort-avg-user-rating.png "Sort by average user rating")  |
+| Search/Facet/SortOrder/Relevance| Relevance| This content snippet determines the label shown for the "Sort by Relevance" option in the sorting drop-down list on the Search Results page.<br>![Sort by relevance.](../media/sort-relevance.png "Sort by relevance")|
+| Search/Facet/SortOrder/Views| View Count| This content snippet determines the label shown for the "Sort by View Count" option in the sorting drop-down list on the Search Results page.<br>![Sort by view count.](../media/sort-view-count.png "Sort by view count")|
 |||
 
 ## Table-specific handling
@@ -227,11 +228,11 @@ To block the Case table from getting indexed, you must rename the view of the Ca
 
 1. Select Solutions.
 
-    ![Solutions](../media/solutions-page.png "Solutions")
+    ![Solutions.](../media/solutions-page.png "Solutions")
 
 1. Search for **Default Solution** and select Edit to open.
 
-    ![Edit solution](../media/edit-solution.png "Edit solution")
+    ![Edit solution.](../media/edit-solution.png "Edit solution")
 
 1. Search and edit **Case** table to see its components.
 
@@ -260,9 +261,9 @@ The modified value will be:
 
 Once this site setting is changed, the Case table will be removed from filters on the search page as well as in the header.
 
-![Search on page](../media/search-on-page.png "Search on page")
+![Search on page.](../media/search-on-page.png "Search on page")
 
-![Search in header](../media/search-in-header.png "Search in header")
+![Search in header.](../media/search-in-header.png "Search in header")
 
 ## Next steps
 

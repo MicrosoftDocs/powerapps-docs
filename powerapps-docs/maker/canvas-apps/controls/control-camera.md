@@ -1,18 +1,22 @@
 ---
-title: 'Camera control: reference | Microsoft Docs'
-description: Information, including properties and examples, about the Camera control
+title: Camera control in Power Apps
+description: Learn about the details, properties and examples of the camera control in Power Apps.
 author: chmoncay
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.date: 01/07/2021
+ms.date: 09/03/2021
+ms.subservice: canvas-maker
 ms.author: chmoncay
 ms.reviewer: tapanm
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - chmoncay
 ---
 
 # Camera control in Power Apps
@@ -23,7 +27,9 @@ A control that enables users to take pictures using the camera on a device.
 
 Use the **Camera** control to capture pictures with a device's camera. The device must have a camera and the user must authorize the app to use the camera.
 
-The most recently captured picture is available through the **Photo** property. With this property, the images can be:
+Tap or select the camera control to capture a picture from the camera.
+
+The most recently captured picture is available through the **Photo** property.  With this property, the images can be:
 
 - **Viewed with the Image control.** Use the [Image](control-image.md) control to view the captured image. For more information, see the [examples](#examples).  
 - **Temporarily put in a variable or a collection.**  Use the [Set](../functions/function-set.md) or [Collect](../functions/function-clear-collect-clearcollect.md) functions to store images in a variable or a collection.  Use caution when using multiple images in a collection at the same time consuming device's limited memory. Use the [SaveData](../functions/function-savedata-loaddata.md) and [LoadData](../functions/function-savedata-loaddata.md) functions to move images to the local storage on the device and for [offline scenarios](../offline-apps.md).
@@ -51,7 +57,7 @@ Table contains two columns:
 
 **Camera** – The numeric ID of the camera to use.  Helpful on devices with more than one camera.  
 
-**OnStream** – How the app responds when the **Stream** property is updated.
+**OnStream** – Actions to perform when the **Stream** property is updated.
 
 **Photo** – The image captured when the user takes a picture. 
 
@@ -81,7 +87,7 @@ Table contains two columns:
 
 [Height](properties-size-location.md) – The distance between a control's top and bottom edges.
 
-[OnSelect](properties-core.md) – How the app responds when the user taps or clicks a control.
+[OnSelect](properties-core.md) – Actions to perform when the user taps or clicks a control.
 
 [TabIndex](properties-accessibility.md) – Keyboard navigation order compared to other controls.
 

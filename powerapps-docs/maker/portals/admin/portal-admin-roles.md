@@ -5,7 +5,8 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2021
+ms.date: 08/09/2021
+ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: tapanm
 contributors:
@@ -29,7 +30,7 @@ The following table lists different administrative tasks for portals, and the ro
 | - | - |
 | [Add a custom domain name](add-custom-domain.md) | Any one of the following roles: <ul> <li> [Portal owner](#portal-owner) </li> <li> [System customizer](#system-customizer) </li> <li> [System administrator](#system-administrator) </li> <li> [Dynamics 365 administrator](#dynamics-365-administrator) </li> <li> [Power Platform administrator](#power-platform-administrator) </li> <li> [Global administrator](#global-administrator) </li> </ul>   |
 | [Change the Dynamics 365 instance of an add-on portal](change-dynamics-instance.md) | Any one of the following roles: <ul> <li> [Portal owner](#portal-owner) </li> <li> [System customizer](#system-customizer) </li> <li> [System administrator](#system-administrator) </li> <li> [Dynamics 365 administrator](#dynamics-365-administrator) </li> <li> [Power Platform administrator](#power-platform-administrator) </li> <li> [Global administrator](#global-administrator) </li> </ul> |
-| [Connect to a Microsoft Dataverse environment by using a portal](manage-auth-key.md) | Any one of the following roles: <ul> <li> [Portal owner](#portal-owner) </li> <li> [System customizer](#system-customizer) </li> <li> [System administrator](#system-administrator) </li> <li> [Dynamics 365 administrator](#dynamics-365-administrator) </li> <li> [Power Platform administrator](#power-platform-administrator) </li> <li> [Global administrator](#global-administrator) </li> </ul> |
+| [Manage portal authentication key](manage-auth-key.md) | Any one of the following roles: <ul> <li> [Portal owner](#portal-owner) </li> <li> [System customizer](#system-customizer) </li> <li> [System administrator](#system-administrator) </li> <li> [Dynamics 365 administrator](#dynamics-365-administrator) </li> <li> [Power Platform administrator](#power-platform-administrator) </li> <li> [Global administrator](#global-administrator) </li> </ul> |
 | [Convert an existing portal to capacity-based model](convert-portal.md#convert-an-existing-portal-to-capacity-based-model) |  [Portal app owner](#portal-app-owner) and any one of the following roles: <ul> <li> [Portal owner](#portal-owner) </li> <li> [System customizer](#system-customizer) </li> <li> [System administrator](#system-administrator) </li> <li> [Dynamics 365 administrator](#dynamics-365-administrator) </li> <li> [Power Platform administrator](#power-platform-administrator) </li> <li> [Global administrator](#global-administrator) </li> </ul> |
 | [Convert a portal from trial to production](convert-portal.md#convert-a-portal-from-trial-to-production) | [Portal app owner](#portal-app-owner) and any one of the following roles: <ul> <li> [Portal owner](#portal-owner) </li> <li> [System customizer](#system-customizer) </li> <li> [System administrator](#system-administrator) </li> <li> [Dynamics 365 administrator](#dynamics-365-administrator) </li> <li> [Power Platform administrator](#power-platform-administrator) </li> <li> [Global administrator](#global-administrator) </li> </ul> |
 | [Create a portal](..\create-portal.md) | Required roles and permissions in Azure Active Directory (Azure AD): <ul> <li> Is [portal creation disabled](../control-portal-creation.md) in the tenant? </li> <ul> <li> If **No**, [permissions to register an app](/azure/active-directory/develop/howto-create-service-principal-portal#permissions-required-for-registering-an-app) in Azure AD are required. </li> <li> If **Yes**, only a [Global administrator](#global-administrator) can create a portal. </ul> </ul> <br> Required roles and permissions in Microsoft Power Platform (both are required): <ul> <li>A user account with [Read-Write Access Mode](#read-write-access-mode). </li> <li>[System administrator](#system-administrator) role. </li> </ul> <ul>   |
@@ -60,7 +61,7 @@ More information: [About admin roles in Microsoft 365](/microsoft-365/admin/add-
 
 ### Portal app owner
 
-A *portal app owner* is a user who owns [portal application registration](/azure/active-directory/develop/quickstart-register-ap) in the [Azure portal](https://portal.azure.com).
+A *portal app owner* is a user who owns [portal application registration](/azure/active-directory/develop/quickstart-register-app) in the [Azure portal](https://portal.azure.com).
 <!--markdownlint-disable MD036-->
 **To add an app owner for the portal app in the Azure portal**
 <!--markdownlint-enable MD036-->
