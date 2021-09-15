@@ -1,5 +1,5 @@
 ---
-title: "Visualize hierarchical data with model-driven apps | MicrosoftDocs"
+title: "Configure visualizations for hierarchical data with model-driven apps | MicrosoftDocs"
 description: "Learn how to query and visualize hierarchical related data"
 ms.custom: ""
 ms.date: 06/11/2020
