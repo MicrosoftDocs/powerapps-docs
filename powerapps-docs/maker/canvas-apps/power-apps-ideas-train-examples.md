@@ -1,5 +1,5 @@
 ---
-title: "Train with examples (Preview)"
+title: "Transform examples to Power Fx formulas (Preview)"
 description: Learn about how to train Power Apps with your own examples and generate formulas using Power Apps Ideas.
 author: norliu
 ms.service: powerapps
@@ -18,7 +18,7 @@ contributors:
   - tapanm-msft
 ---
 
-# Train with examples (Preview)
+# Transform examples to Power Fx formulas (Preview)
 
 [This article is pre-release documentation and is subject to change.]
 
@@ -38,7 +38,7 @@ To work with and manipulate dates in a gallery using Power Apps Ideas:
 
     ![Power Apps Ideas demo.](media/power-apps-ideas/PROSE-entrypoint.png "Find example to formula in Ideas pane")
 
-1. Enter your desired output in the text box. For example, change "March 22, 2020 3:19 PM" to "March", so it will only show the month, and then press Enter. <br> You will find a formula generated for you, click on it  
+1. Enter your desired output in the text box. For example, change "May 25, 2021 3:33 PM" to "May", so it will only show the month, and then press Enter. <br> You will find a formula generated for you, click on it  
 
     ```powerapps-dot
     TrimEnds(Left(Text(ThisItem.'Created On'), Match(Text(ThisItem.'Created On'), "\p{Zs}*\ \p{Zs}*").StartMatch + Len(Match(Text(ThisItem.'Created On'), "\p{Zs}*\ \p{Zs}*").FullMatch) - 1)) 
