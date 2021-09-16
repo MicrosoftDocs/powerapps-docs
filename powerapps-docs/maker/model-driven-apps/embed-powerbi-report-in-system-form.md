@@ -1,8 +1,8 @@
 ---
-title: "Embed a Power BI report in a model-driven system form | MicrosoftDocs"
+title: "Embed a Power BI report in a model-driven app main form | MicrosoftDocs"
 description: Learn how to embed a Power BI report in a model-driven app form
 ms.custom: ""
-ms.date: 07/01/2021
+ms.date: 09/16/2021
 ms.service: powerapps
 ms.topic: "how-to"
 author: "adrianorth"
@@ -16,25 +16,33 @@ search.app:
   - "PowerApps"
   - D365CE
 ---
-
-# Embed a Power BI report in a model-driven system form
+# Embed a Power BI report in a model-driven app main form
 
 [!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-You can use Power BI reports in Power Apps model-driven apps to bring rich reporting and analytics to your system forms and empower your users to accomplish more. This unlocks the power to aggregate data across systems, and tailor it down to the context of a single row.
+You can use Power BI reports in Power Apps model-driven apps to bring rich reporting and analytics to your main forms and empower your users to accomplish more. This unlocks the power to aggregate data across systems, and tailor it down to the context of a single record.
  
 ## Prerequisites
+
 Embedding Power BI content is an optional feature and is disabled on all environments by default. You must enable it before you can embed Power BI content. More information: [Enable Power BI visualizations in the organization](/power-platform/admin/use-power-bi#embed--visualizations-on-personal-dashboards).
 
 This feature requires exporting a solution, modifying it to add the xml snippet, and then importing back into the environment. Be sure to import the changes on your target environment via a managed solution only. See [Import, update, and export solutions](../data-platform/import-update-export-solutions.md) for guidance on installing an update to an existing managed solution.
 
 ## Embed without contextual filtering
-You can use your Power BI reports and tiles by simply embedding them, and get the exact same report. This does not involve contextualizing them to the current model-driven form, and hence you get the same report or tile on all rows of the table. For example, the following report shows the geographic location of all accounts at once, and is useful to show summary information.
+
+You can use your Power BI reports and tiles by simply embedding them, and get the exact same report. This does not involve contextualizing them to the current model-driven form, and hence you get the same report or tile on all records of the table. For example, the following report shows the geographic location of all accounts at once, and is useful to show summary information.
 
 > [!div class="mx-imgBorder"] 
 > ![Embedded  Power BI report without contextual filtering.](media/embed-powerbi/embed-powerbi-report-in-system-form-unfiltered.png "Embedded  Power BI report without contextual filtering")
 
-You can embed a section that hosts Power BI reports and tiles in your system forms by adding the following code snippet inside the `<sections>` block of the form XML. Make the changes to the form XML for your Power BI report. Then, import the solution in the target environment. 
+You can customize a main form section so that it can host an embedded Power BI report and tile by following these steps:
+
+1. In your development environment, create a solution and add the table that contains the main form where you want the embedded Power BI report to display.
+
+   - If the table already exists in the target environment where you will import the solution, choose the **Select components** option when you add the table to the solution. Then, add just the table’s main form.
+   - If the table doesn’t exist in the target environment where you will import the solution, choose **Include all components** when you add the table to the solution.
+1. Export the solution as managed.
+2. Expand the solution package zip file. Then, in the customizations.xml file, add the XML code provided below inside the `<sections>` block of the form XML.
 
 ```xml
 <section id="{d411658c-7450-e1e3-bc80-07021a04bcc2}" locklevel="0" showlabel="true" IsUserDefined="0" name="tab_4_section_1" labelwidth="115" columns="1" layout="varwidth" showbar="false">
@@ -60,16 +68,20 @@ You can embed a section that hosts Power BI reports and tiles in your system for
 	</rows>
 </section>
 ```
-> [!IMPORTANT]
-> Be sure to use the control `classid="{8C54228C-1B25-4909-A12A-F2B968BB0D62}"` as indicated in the XML sample.
+   > [!IMPORTANT]
+   > Be sure to use the control `classid="{8C54228C-1B25-4909-A12A-F2B968BB0D62}"` as indicated in the XML sample.
 
+3. Make the following changes to the form XML that you copied for your Power BI report.
 This table describes the values you need to change to the elements in the previous XML sample.
 
-|                                                 Property                                                  |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-|-----------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|                         **PowerBIGroupId**                          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 The Power BI workspace Id. If your report is in **My workspace** then the workspace Id is 00000000-0000-0000-0000-000000000000. Otherwise, add the workspace Id. You can find the Id of the workspace in the Power BI service URL. For example, https://app.powerbi.com/groups/0ddbe381-256d-44bc-93de-34e47f3d9ab4/ More information: [Find the Power BI workspace and report Ids](#find-the-power-bi-workspace-and-report-ids).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-|                               **PowerBIReportId**                                |                             The Power BI report Id. Replace this with the report that you want to embed. You can find the Id of your report in the Power BI service URL. For example, https://app.powerbi.com/groups/me/reports/544c4162-6773-4944-900c-abfd075f6081. More information: [Find the Power BI workspace and report Ids](#find-the-power-bi-workspace-and-report-ids)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-|                                       **TileUrl**                                       |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        The Power BI report or tile URL that you want to embed. Be sure to use the correct Power BI subdomain name (you might need to replace app.powerbi.com with your own) and report Id (replace reportId=544c4162-6773-4944-900c-abfd075f6081 with your own). For example, https://app.powerbi.com/reportEmbed?reportId=544c4162-6773-4944-900c-abfd075f6081.                                                                                                                                                                                                                                                              
+| Property              | Description                        |
+|-------------------------|-----------------------------------|
+|  **PowerBIGroupId**          |     The Power BI workspace Id. If your report is in **My workspace** then the workspace Id is 00000000-0000-0000-0000-000000000000. Otherwise, add the workspace Id. You can find the Id of the workspace in the Power BI service URL. More information: [Find the Power BI workspace and report Ids](#find-the-power-bi-workspace-and-report-ids).                 |
+|   **PowerBIReportId**       |    The Power BI report Id. Replace this with the report that you want to embed. You can find the Id of your report in the Power BI service URL. More information: [Find the Power BI workspace and report Ids](#find-the-power-bi-workspace-and-report-ids)    |
+|   **TileUrl**            |    The Power BI report or tile URL that you want to embed. Be sure to use the correct Power BI subdomain name (you might need to replace app.powerbi.com with your own) and report Id (replace reportId=544c4162-6773-4944-900c-abfd075f6081 with your own). For example, `https://app.powerbi.com/reportEmbed?reportId=544c4162-6773-4944-900c-abfd075f6081`. |
+| **solutionaction="Added"** | If the table already exists in the target environment leave the `solutionaction=Added` parameter for the cell element as provided in the XML sample. If the table doesn’t exist in the target environment, remove the `solutionaction=Added` parameter. |
+
+4. Import the solution into the target environment.
 
 ## Embed with contextual filtering
 
