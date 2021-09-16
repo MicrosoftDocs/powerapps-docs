@@ -42,7 +42,7 @@ You can customize a main form section so that it can host an embedded Power BI r
    - If the table already exists in the target environment where you will import the solution, choose the **Select components** option when you add the table to the solution. Then, add just the table’s main form.
    - If the table doesn’t exist in the target environment where you will import the solution, choose **Include all components** when you add the table to the solution.
 1. Export the solution as managed.
-2. Expand the solution package zip file. Then, in the customizations.xml file, add the XML code provided below inside the `<sections>` block of the form XML.
+2. Extract all files in the solution package zip file. Then, edit the customizations.xml file and add the XML code provided below inside the `<sections>` block of the form XML.
 
 ```xml
 <section id="{d411658c-7450-e1e3-bc80-07021a04bcc2}" locklevel="0" showlabel="true" IsUserDefined="0" name="tab_4_section_1" labelwidth="115" columns="1" layout="varwidth" showbar="false">
@@ -71,8 +71,7 @@ You can customize a main form section so that it can host an embedded Power BI r
    > [!IMPORTANT]
    > Be sure to use the control `classid="{8C54228C-1B25-4909-A12A-F2B968BB0D62}"` as indicated in the XML sample.
 
-3. Make the following changes to the form XML that you copied for your Power BI report.
-This table describes the values you need to change to the elements in the previous XML sample.
+3. Make the following changes to the form XML that you copied into the customizations.xml file for your Power BI report. This table describes the values you need to change to the elements in the previous XML sample.
 
 | Property              | Description                        |
 |-------------------------|-----------------------------------|
@@ -81,7 +80,7 @@ This table describes the values you need to change to the elements in the previo
 |   **TileUrl**            |    The Power BI report or tile URL that you want to embed. Be sure to use the correct Power BI subdomain name (you might need to replace app.powerbi.com with your own) and report Id (replace reportId=544c4162-6773-4944-900c-abfd075f6081 with your own). For example, `https://app.powerbi.com/reportEmbed?reportId=544c4162-6773-4944-900c-abfd075f6081`. |
 | **solutionaction="Added"** | If the table already exists in the target environment leave the `solutionaction=Added` parameter for the cell element as provided in the XML sample. If the table doesn’t exist in the target environment, remove the `solutionaction=Added` parameter. |
 
-4. Import the solution into the target environment.
+4. Create a zip file out of all the solution files previously extracted. Then, import the solution into the target environment.
 
 ## Embed with contextual filtering
 
