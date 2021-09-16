@@ -556,7 +556,7 @@ The following sample rich text editor configuration code sample data can be used
 :::image type="content" source="media/cke-fixed-height.png" alt-text="With a fixed height, the editor remains at the same height. When enough content is added, a scroll bar appears.":::
 
 
-## Create plain text surface that removes all html tag (except for the "br" tag)
+### Create plain text surface that removes all html tag (except for the "br" tag)
 
 `{ "defaultSupportedProps": {     "enterMode": 2 ,     "shiftEnterMode": 2 ,     "allowedContent":"*",     "disallowedContent":"*",     "forcePasteAsPlainText": true ,     "toolbar":[],     "removePlugins":"contextmenu,liststyle,openlink,tableresize,tableselection,tabletools"  },  "disableImages": true}}`
 
