@@ -756,12 +756,13 @@ The following table outlines a list of accessibility shortcuts available when us
 |Type | Shortcut key | Description |
 |----------------------|-------------------------|-----------------------------|
 | General | Alt+F11 | Toggle full-screen view. |
-| Tab navigation | Alt+Ctrl+0 | Go to menu bar. |
+| Tab navigation | Alt+Ctrl+0 | Go to editor toolbar. |
 | Tab navigation | Alt+1 | Go to the rich-text editor. |
 | Tab navigation | Alt+2 | Go to the HTML editor. |
 | Tab navigation | Alt+3 | Go to the preview view. |
+| General editor commands | Alt+- | Expand/Collapse the editor toolbar.
 | General editor commands | Alt+F10 | Navigate to the editor toolbar. Move to the next and previous toolbar group with Tab and Shift+Tab. Move to the next and previous toolbar button with Right Arrow or Left Arrow. Press Space or Enter to activate the toolbar button. |
-| General editor commands | See description. | Editor dialog: Inside a dialog, press Tab to navigate to the next dialog element, press Shift+Tab to move to the previous dialog element, press Enter to submit the dialog, press ESC to cancel the dialog. When a dialog has multiple tabs, the tab list can be reached either with Alt+F10 or with Tab, following the dialog tabbing order. With a tab list focused, move to the next and previous tab with Right and Left Arrow, respectively.. |
+| General editor commands | See description. | Editor dialog: Inside a dialog, press Tab to navigate to the next dialog element, press Shift+Tab to move to the previous dialog element, press Enter to submit the dialog, press ESC to cancel the dialog. When a dialog has multiple tabs, the tab list can be reached either with Alt+F10 or with Tab, following the dialog tabbing order. With a tab list focused, move to the next and previous tab with Right and Left Arrow, respectively. |
 | General editor commands | See description. | Editor list box: Inside a list box, move to next list item with Tab or Down Arrow. Move to previous list item with Shift+Tab or Up Arrow. Press Space or Enter to select the list option. Press ESC to close the list box. |
 | Base commands | Ctrl+Z | Undo command. |
 | Base commands | Shift+Ctrl+Z | Redo command. |
