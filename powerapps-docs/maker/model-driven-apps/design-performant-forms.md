@@ -20,12 +20,6 @@ search.app:
   - "PowerApps"
   - D365CE
 ---
-
-<!-- Line 58: No link for Assistant? -->
-
-
-
-
 # Design forms for performance in model-driven apps
 
 Building experiences where tasks can be completed quickly and efficiently is crucial to user satisfaction. Model-driven apps can be highly customized to create experiences that meet the needs of your users, but it is important to know how to effectively code, build, and run model-driven apps that load quickly when a user opens and navigates in your app while working on daily tasks. Performance has been shown to be a key driver of dissatisfaction of an app when it is not optimized for performance.
@@ -40,11 +34,11 @@ This section covers how controls that display data and tabs impact form performa
 
 ### Significance of the default tab
 
-The default tab is the first expanded tab on a form. It plays a special role in the loading of a form page. By design, the controls of the default tab are always rendered when opening a record. Specifically, the control initialization logic, such as data retrieval, is invoked for every control on the tab. 
+The default tab is the first expanded tab on a form. It plays a special role in the loading of a form page. By design, the controls of the default tab are always rendered when opening a record. Specifically, the control initialization logic, such as data retrieval, is invoked for every control on the tab.
 
 In contrast, a secondary tab does not perform this initialization on its controls when the form is initially loaded. Instead, the control initialization occurs at the time the secondary tab is opened either through user interaction or calling the `setFocus` client API method. This provides an opportunity to shelter the initial form load from excessive control processing by placing certain controls in secondary tabs instead of the default tab. Thus, the control placement strategy can have a significant effect on the responsiveness of the initial form load. A more responsive default tab provides a better overall experience for modifying important fields, interacting with the command bar, and exploring other tabs and sections.
 
-Always put controls that are used the most at the top of your default tab.  Layout and information architecture is not only important for performance but also to improve productivity when users interact with data on the form.  More information: [Design productive main forms in model-driven apps](design-productive-forms.md)
+Always put controls that are used the most at the top of your default tab. Layout and information architecture is not only important for performance but also to improve productivity when users interact with data on the form.  More information: [Design productive main forms in model-driven apps](design-productive-forms.md)
 
 ### Data-driven controls
 
