@@ -42,7 +42,7 @@ You can customize a main form XML `sections` node so that it can host an embedde
    - If the table already exists in the target environment where you will import the solution, choose the **Select components** option when you add the table to the solution. Then, add just the table’s main form.
    - If the table doesn’t exist in the target environment where you will import the solution, choose **Include all components** when you add the table to the solution.
 1. Export the solution as managed.
-2. Extract all files in the solution package zip file. Then, edit the customizations.xml file and add the XML code provided below inside the`<sections>` block that is inside the `<forms type="main">` node in the customizations.xml file.
+2. Extract all files in the solution package zip file. Then, edit the customizations.xml file and add the XML code provided below inside the `<sections>` block that is inside the `<forms type="main">` node in the customizations.xml file.
 
 ```xml
 <section id="{d411658c-7450-e1e3-bc80-07021a04bcc2}" locklevel="0" showlabel="true" IsUserDefined="0" name="tab_4_section_1" labelwidth="115" columns="1" layout="varwidth" showbar="false">
