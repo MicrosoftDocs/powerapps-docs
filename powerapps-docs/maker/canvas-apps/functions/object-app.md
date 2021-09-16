@@ -162,7 +162,7 @@ The **StartScreen** property determines which screen will be displayed first.  I
 
 If **StartScreen** returns an error, the first screen in the Studio Tree view will be shown as if StartScreen had not been set.  Use the **IfError** function to catch any errors and redirect to an appropriate error screen.
 
-After changing **StartScreen** in Studio, test it by hovering over the **App** object in the **Tree view** pane, selecting the ellipsis (...) that appears, and then selecting **Run StartScreen**.  The screen will change as if the app has just been loaded.
+After changing **StartScreen** in Studio, test it by hovering over the **App** object in the **Tree view** pane, selecting the ellipsis (...) that appears, and then selecting **Navigate to StartScreen**.  The screen will change as if the app has just been loaded.
 
 > [!div class="mx-imgBorder"]
 > ![App-item shortcut menu for Run OnStart](media/object-app/appobject-runstartscreen.png)
