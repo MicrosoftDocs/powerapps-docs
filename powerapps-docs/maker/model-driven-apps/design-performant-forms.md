@@ -49,7 +49,7 @@ Some of the data-driven controls include:
 - [Quick view form](form-designer-add-configure-quickview.md)
 - [Subgrid](form-designer-add-configure-subgrid.md)
 - [Timeline](set-up-timeline-control.md)
-- Assistant
+- [Assistant](/dynamics365/ai/sales/assistant) (requires Dynamics 365 Sales Insights)
 
 Keep only the most frequently used of these controls on the default tab. The remaining data-driven controls should be distributed into secondary tabs to allow the default tab to load quickly. Furthermore, this layout strategy reduces the chance of fetching data that ends up being unused.
 
