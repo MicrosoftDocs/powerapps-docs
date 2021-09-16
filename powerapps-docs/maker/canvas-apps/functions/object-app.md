@@ -38,21 +38,6 @@ This property returns a screen object, which you can use to reference properties
 
 Use the **[Back](function-navigate.md)** or **[Navigate](function-navigate.md)** function to change the screen that's showing.
 
-## OnStart property
-
-The **OnStart** property runs when the user starts the app. App makers often use this property to perform these tasks:
-
-- Retrieve and cache data into collections by using the **[Collect](function-clear-collect-clearcollect.md)** function.
-- Set up global variables by using the **[Set](function-set.md)** function.
-- Navigate to an initial screen by using the **[Navigate](function-navigate.md)** function.
-
-This formula is evaluated before the first screen appears. No screen is loaded, so you can't set context variables with the **[UpdateContext](function-updatecontext.md)** function. However, you can pass context variables with the **Navigate** function.
-
-After you change the **OnStart** property, test it by hovering over the **App** object in the **Tree view** pane, selecting the ellipsis (...) that appears, and then selecting **Run OnStart**. Unlike when the app is loaded for the first time, existing collections and variables will already be set. To start with empty collections, use the **[ClearCollect](function-clear-collect-clearcollect.md)** function instead of the **Collect** function.
-
-> [!div class="mx-imgBorder"]
-> ![App-item shortcut menu for Run OnStart.](media/object-app/appobject-runonstart.png)
-
 ## ConfirmExit properties
 
 Nobody wants to lose unsaved changes. Use the **ConfirmExit** and **ConfirmExitMessage** properties to warn the user before they close your app.
@@ -144,7 +129,7 @@ After you change the **OnStart** property, test it by hovering over the **App** 
 > ![App-item shortcut menu for Run OnStart](media/object-app/appobject-runonstart.png)
 
 > [!NOTE]
-> Using the [**Navigate**](function-navigate.md) function in the **OnStart** property has been retired.  Existing apps will continue to work and for a limited it time it can still be enabled in the app's Advanced settings.  Using **Navigate** in this manner led to app load delays as it forced the system to complete evaluation of **OnStart** before displaying the first screen.  Use the **StartScreen** property instead to specify the first screen displayed.  If needed, use [**UpdateContext**](function-updatecontext.md) in the **OnVisible** property of the screen to setup context variables.
+> Using the [**Navigate**](function-navigate.md) function in the **OnStart** property has been retired.  Existing apps will continue to work and for a limited time it can still be enabled in the app's settings under **Retired**.  Using **Navigate** in this manner led to app load delays as it forced the system to complete evaluation of **OnStart** before displaying the first screen.  Use the **StartScreen** property instead to specify the first screen displayed.  
 
 ## StartScreen property
 
