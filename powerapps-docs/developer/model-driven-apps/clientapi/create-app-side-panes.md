@@ -76,7 +76,7 @@ Xrm.App.sidePanes.createPane({
 
 ### Showing a table row
 
-This example shows how to display a row in the side pane. A reservation row is opened in a side pane where the default header is hidden and the width is customized to 600 pixels.<!--note from editor: Suggested.-->
+This example shows how to display a row in the side pane. A reservation row is opened in a side pane where the default header is hidden and the width is customized to 600 pixels.
 
 ```javascript
 Xrm.App.sidePanes.createPane({
