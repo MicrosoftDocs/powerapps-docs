@@ -35,14 +35,14 @@ You can use your Power BI reports and tiles by simply embedding them, and get th
 > [!div class="mx-imgBorder"] 
 > ![Embedded  Power BI report without contextual filtering.](media/embed-powerbi/embed-powerbi-report-in-system-form-unfiltered.png "Embedded  Power BI report without contextual filtering")
 
-You can customize a main form section so that it can host an embedded Power BI report and tile by following these steps:
+You can customize a main form XML `sections` node so that it can host an embedded Power BI report and tile by following these steps:
 
 1. In your development environment, create a solution and add the table that contains the main form where you want the embedded Power BI report to display.
 
    - If the table already exists in the target environment where you will import the solution, choose the **Select components** option when you add the table to the solution. Then, add just the table’s main form.
    - If the table doesn’t exist in the target environment where you will import the solution, choose **Include all components** when you add the table to the solution.
 1. Export the solution as managed.
-2. Extract all files in the solution package zip file. Then, edit the customizations.xml file and add the XML code provided below inside the `<sections>` block of the form XML.
+2. Extract all files in the solution package zip file. Then, edit the customizations.xml file and add the XML code provided below inside the`<sections>` block that is inside the `<forms type="main">` node in the customizations.xml file.
 
 ```xml
 <section id="{d411658c-7450-e1e3-bc80-07021a04bcc2}" locklevel="0" showlabel="true" IsUserDefined="0" name="tab_4_section_1" labelwidth="115" columns="1" layout="varwidth" showbar="false">
@@ -77,7 +77,7 @@ You can customize a main form section so that it can host an embedded Power BI r
 |-------------------------|-----------------------------------|
 |  **PowerBIGroupId**          |     The Power BI workspace Id. If your report is in **My workspace** then the workspace Id is 00000000-0000-0000-0000-000000000000. Otherwise, add the workspace Id. You can find the Id of the workspace in the Power BI service URL. More information: [Find the Power BI workspace and report Ids](#find-the-power-bi-workspace-and-report-ids).                 |
 |   **PowerBIReportId**       |    The Power BI report Id. Replace this with the report that you want to embed. You can find the Id of your report in the Power BI service URL. More information: [Find the Power BI workspace and report Ids](#find-the-power-bi-workspace-and-report-ids)    |
-|   **TileUrl**            |    The Power BI report or tile URL that you want to embed. Be sure to use the correct Power BI subdomain name (you might need to replace app.powerbi.com with your own) and report Id (replace reportId=544c4162-6773-4944-900c-abfd075f6081 with your own). For example, `https://app.powerbi.com/reportEmbed?reportId=544c4162-6773-4944-900c-abfd075f6081`. |
+|   **TileUrl**            |    The Power BI report or tile URL that you want to embed. Be sure to use the correct Power BI subdomain name (you might need to replace app.powerbi.com with your own) and report Id (replace *reportId=544c4162-6773-4944-900c-abfd075f6081* with your own). For example, `https://app.powerbi.com/reportEmbed?reportId=544c4162-6773-4944-900c-abfd075f6081`. |
 | **solutionaction="Added"** | If the table already exists in the target environment leave the `solutionaction=Added` parameter for the cell element as provided in the XML sample. If the table doesn’t exist in the target environment, remove the `solutionaction=Added` parameter. |
 
 4. Create a zip file out of all the solution files previously extracted. Then, import the solution into the target environment.
