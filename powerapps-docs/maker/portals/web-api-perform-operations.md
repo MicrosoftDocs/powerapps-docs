@@ -109,7 +109,7 @@ For example, the following request body posted to the Account table set will cre
 
 `documentbody` will contain the attachment as a base64 string.
 
-## Update and delete tables by using the Web API
+## Update and delete records by using the Web API
 
 ### Basic update
 
