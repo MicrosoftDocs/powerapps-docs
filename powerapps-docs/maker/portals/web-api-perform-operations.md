@@ -25,7 +25,7 @@ You can perform [available Web API operations](web-api-overview.md#web-api-opera
 
 ### Basic create
 
-<table style="text-align:left">
+<table>
   <tr>
     <th>Operation</th>
     <th>Method</th>
@@ -71,7 +71,7 @@ For example, the following request body posted to the Account table set will cre
 
 ### Associate table records on create
 
-<table style="text-align:left">
+<table>
   <tr>
     <th>Operation</th>
     <th>Method</th>
@@ -113,7 +113,7 @@ For example, the following request body posted to the Account table set will cre
 
 ### Basic update
 
-<table style="text-align:left">
+<table>
   <tr>
     <th>Operation</th>
     <th>Method</th>
@@ -130,7 +130,7 @@ For example, the following request body posted to the Account table set will cre
 
 ### Update a single property value
 
-<table style="text-align:left">
+<table>
   <tr>
     <th>Operation</th>
     <th>Method</th>
@@ -147,7 +147,7 @@ For example, the following request body posted to the Account table set will cre
 
 ### Delete a single property value
 
-<table style="text-align:left">
+<table>
   <tr>
     <th>Operation</th>
     <th>Method</th>
@@ -162,7 +162,7 @@ For example, the following request body posted to the Account table set will cre
 
 ### Basic delete
 
-<table style="text-align:left">
+<table>
   <tr>
     <th>Operation</th>
     <th>Method</th>
@@ -179,7 +179,7 @@ For example, the following request body posted to the Account table set will cre
 
 ### Add a reference to a collection-valued navigation property
 
-<table style="text-align:left">
+<table>
   <tr>
     <th>Operation</th>
     <th>Method</th>
@@ -196,7 +196,7 @@ For example, the following request body posted to the Account table set will cre
 
 ### Remove a reference to a table
 
-<table style="text-align:left">
+<table>
   <tr>
     <th>Operation</th>
     <th>Method</th>
@@ -211,7 +211,7 @@ For example, the following request body posted to the Account table set will cre
 
 ### Remove a reference to a table for a single-valued navigation property
 For a single-valued navigation property, remove the $id query string parameter.
-<table style="text-align:left">
+<table>
   <tr>
     <th>Operation</th>
     <th>Method</th>
@@ -226,7 +226,7 @@ For a single-valued navigation property, remove the $id query string parameter.
 
 ### Change the reference in a single-valued navigation property
 
-<table style="text-align:left">
+<table>
   <tr>
     <th>Operation</th>
     <th>Method</th>
@@ -251,7 +251,7 @@ You can associate tables on update by using the same message described in [Basic
 
 ### Associate tables on update by using a single-valued navigation property
 
-<table style="text-align:left">
+<table>
   <tr>
     <th>Operation</th>
     <th>Method</th>
