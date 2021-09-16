@@ -562,7 +562,7 @@ The following sample rich text editor configuration code sample data can be used
 
 :::image type="content" source="media/rte-plain-text-surface.png" alt-text="Creating a plain text surface makes the strips html.":::
 
-## Remove the context menu so right-clicking will work with the default browser spell check
+### Remove the context menu so right-clicking will work with the default browser spell check
 
 Enabling this functionality removes the contextual right-click editing capability.
 
