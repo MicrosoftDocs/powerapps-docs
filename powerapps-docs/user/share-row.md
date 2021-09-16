@@ -20,8 +20,7 @@ search.app:
 ---
 
  # Share rows with a user or team
- 
- [!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
+
  
 Keep ownership of a row and use the share feature to share the row with another user or team. 
  
