@@ -20,9 +20,7 @@ search.app:
 
 [!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-## Why do my users see different activities and records in their My activities stream in the dashboard?
-
-**My activities** stream in the dashboard shows the records and activities that are owned by a particular user. For example, user **A** see records and activities that are owned by **A**, and user **B** see records and activities that are owned by **B**.
+There aren't currently any FAQs. As new FAQs are raised, we will update this topic.
 
 
 ## See also
