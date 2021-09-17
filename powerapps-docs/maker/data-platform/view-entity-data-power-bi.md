@@ -20,9 +20,6 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-> [!IMPORTANT]
-> This feature has been re-enabled in the majority of regions. Please resume testing, and provide feedback. We thank you for your patience and feedback.
-
 You can use Power BI Desktop to view tables in Microsoft Dataverse. The table
 row data that you can access from your environment is read-only. Data access
 uses the Dataverse security model that is the same used to access
@@ -30,7 +27,7 @@ table row data using a Power Apps app.
 
 ## Prerequisites
 
-* Enable the Tabular Data Stream (TDS) endpoint. More information: [Manage feature settings](/power-platform/admin/settings-features).
+* Enable the Tabular Data Stream (TDS) endpoint (on by default). More information: [Manage feature settings](/power-platform/admin/settings-features).
 * Power BI Desktop. [Get it now](https://powerbi.microsoft.com/downloads/)
           
 ## View table data

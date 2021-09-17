@@ -1138,7 +1138,9 @@
           href: ./model-driven-apps/create-and-edit-a-model-driven-form.md
         - name: Design forms for efficiency
           href: ./model-driven-apps/design-productive-forms.md
-          items: 
+          items:
+          - name: Design forms for performance
+            href: ./model-driven-apps/design-performant-forms.md
           - name: Design considerations for main forms
             href: ./model-driven-apps/design-considerations-main-forms.md        
         - name: Use the new form designer
