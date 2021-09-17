@@ -26,7 +26,7 @@ Keep ownership of a row and use the share feature to share the row with another 
  
 
 > [!NOTE]
-> - This feature is not supported on Power Apps mobile or when you're using the app in offline mode with no internet connection. 
+> - This feature isn't supported on Power Apps mobile or when you're using the app in offline mode with no internet connection. 
 > - Any user that you share a row with needs to have basic level access that is granted by a system administrator. If you cannot select permissions such as read or write then contact your system administrator and check if the user or team has the required access.
 
 
