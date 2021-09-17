@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 08/1/2021
+ms.date: 10/27/2021
 ms.subservice: end-user
 ms.author: mkaur
 ms.custom: ""
@@ -49,6 +49,8 @@ Keep ownership of a row and use the share feature to share the row with another 
 
     - **First time sharing a row**
       1.  Select the lookup column under **Add user/team**. Enter the name of the user or team in the [lookup column](lookup-field.md). The lookup will start displaying users or teams based what you typed, or you can select the lookup icon (magnifying glass) and an alphabetical list of names appears that you can select to assign access.
+          > [!NOTE] You can also search for a user that has previous share rights to manage or change access privileges.
+
 
           > [!div class="mx-imgBorder"]
           > ![Select add user or team in the lookup.](media/share-row-lookup-rows.png "Select add user or team in the lookup")
