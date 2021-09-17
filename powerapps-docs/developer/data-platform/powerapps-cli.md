@@ -29,17 +29,17 @@ You can use either of the following ways to install Microsoft Power Platform CLI
 
 ### Using Power Platform VS Code Extension
 
-To install Microsoft Power Platform CLI using Visual Studio Code Extension:
+Follow these steps to install Microsoft Power Platform CLI using Visual Studio Code:
 
 1. Open [Visual Studio Code](https://code.visualstudio.com/).
-1. Select **Extensions** icon from the **Activity** panel. In the search bar, enter **Power Platform VS Code Extension**.
+1. Select **Extensions** icon from the **Activity** panel. In the search bar, enter **Power Platform**.
 1. Select **Install**. Once the installation is finished, restart your Visual Studio Code to see the extension within the **Terminal** window.
 
    > [!div class="mx-imgBorder"]
    > ![VS code extension install.](media/power-platform-vs-code-extension-install.png "VS code extension install")
    
 > [!NOTE]
-> Microsoft Power Platform Visual Studio Code Extension updates automatically. 
+> Power Platform extension for Visual Studio Code updates automatically. 
 
 1. You can also initiate the install into Visual Studio Code directly from [Marketplace]( https://aka.ms/ppcvscode) and it will launch Visual Studio Code and commence the extension installation.
 
@@ -63,7 +63,7 @@ To install standalone Power Platform CLI:
     ```
 > [!NOTE]
 > - Currently, Microsoft Power Platform CLI is supported only on Windows 10.
-> - Power Platform VS Code Extension is in public preview, and works on both Windows 10 and macOS. 
+> - Power Platform Extension for VS Code is in public preview, and works on both Windows 10 and macOS. 
 
 ## Common commands
 
