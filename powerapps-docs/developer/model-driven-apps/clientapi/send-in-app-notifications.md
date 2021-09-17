@@ -61,7 +61,9 @@ To use the in-app notification feature, you need to enable the `AllowNotificatio
 
 1. Open the solution that you created. Select **Add** > **App** > **Model-driven app**. From the list of apps, select the model-driven app where you want to see the notifications feature.
 
-1. Select **Publish all customizations**, and then refresh the model-driven app. You'll see a bell icon in the upper-right corner.
+1. For development, select **Publish all customizations**, and then refresh the model-driven app. You'll see a bell icon in the upper-right corner.
+
+1. For production, package the app setting within a managed solution to be deployed in production with a publish.
 
 ## Send basic in-app notifications
 
