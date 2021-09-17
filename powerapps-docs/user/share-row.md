@@ -47,27 +47,25 @@ Keep ownership of a row and use the share feature to share the row with another 
 
 2.  On the share dialog box, do one of the following:
 
-    - Select the lookup column under **Add user/team**. Enter the name of the user or team in the [lookup column](lookup-field.md). The lookup will start displaying users or teams based what you typed, or you can select the lookup icon (magnifying glass) and an alphabetical list of names appears that you can select to assign access.
+    - **First time sharing a row**
+      1.  Select the lookup column under **Add user/team**. Enter the name of the user or team in the [lookup column](lookup-field.md). The lookup will start displaying users or teams based what you typed, or you can select the lookup icon (magnifying glass) and an alphabetical list of names appears that you can select to assign access.
 
-     > [!div class="mx-imgBorder"]
-     > ![Select add user or team in the lookup.](media/share-row-lookup-rows.png "Select add user or team in the lookup")
+          > [!div class="mx-imgBorder"]
+          > ![Select add user or team in the lookup.](media/share-row-lookup-rows.png "Select add user or team in the lookup")
 
+      2. Select a user or team one at a time, and then grant them the appropriate permissions to the row. <br> <br> If check boxes are disabled it means a user or team does not have basic privileges to the row. For more information on user access, see [Check your user access to a row](access-checker.md).
 
-    - Under **Previously shared access** select a user or team one at a time, and then grant them the appropriate permissions to the row. <br> <br> If check boxes are disabled it means a user or team does not have basic privileges to the row. For more information on user access, see [Check your user access to a row](access-checker.md).
+         > [!div class="mx-imgBorder"]
+         > ![Select a user or team and assign them permission to the row.](media/share-row-assign-permission.png "Select a user or team and assign them permission to the row.")
 
-      > [!div class="mx-imgBorder"]
-      > ![Select add user or team.](media/share-row-share-dialog.png "Select add user or team")
-   
+    - **Previously shared access to a row**
+      1. Under **Previously shared access** select a user or team one at a time and then grant them the appropriate permissions to the row. <br> <br> If check boxes are disabled it means a user or team does not have basic privileges to the row. For more information on user access, see [Check your user access to a row](access-checker.md).
 
-
-5. Select a user or team one at a time, and then grant them the appropriate permissions to the row. <br> <br> If check boxes are disabled it means a user or team does not have basic privileges to the row. For more information on user access, see [Check your user access to a row](access-checker.md).
-
-
-    > [!div class="mx-imgBorder"]
-    > ![Select a user or team and assign them permission to the row.](media/share-row-assign-permission.png "Select a user or team and assign them permission to the row.")
+          > [!div class="mx-imgBorder"]
+          > ![Select add user or team.](media/share-row-share-dialog.png "Select add user or team")
 
 
-6. Select **Share** to save your changes. 
+3. Select **Share** to save your changes. 
 
     > [!div class="mx-imgBorder"]
     > ![Sharing is successful.](media/share-row-shared.png "Sharing is successful.")
