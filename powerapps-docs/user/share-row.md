@@ -45,20 +45,19 @@ Keep ownership of a row and use the share feature to share the row with another 
       > [!div class="mx-imgBorder"]
       > ![Open a row and then select share](media/share-row-1.png "Open a row and then select share.")
 
-2.  On the share dialog box, select the lookup column under **Add user/team**.  
+2.  On the share dialog box, do one of the following:
 
-    > [!div class="mx-imgBorder"]
-    > ![Select add user or team.](media/share-row-share-dialog.png "Select add user or team")
+    - Select the lookup column under **Add user/team**. Enter the name of the user or team in the [lookup column](lookup-field.md). The lookup will start displaying users or teams based what you typed, or you can select the lookup icon (magnifying glass) and an alphabetical list of names appears that you can select to assign access.
+
+     > [!div class="mx-imgBorder"]
+     > ![Select add user or team in the lookup.](media/share-row-lookup-rows.png "Select add user or team in the lookup")
+
+
+    - Under **Previously shared access** select a user or team one at a time, and then grant them the appropriate permissions to the row. <br> <br> If check boxes are disabled it means a user or team does not have basic privileges to the row. For more information on user access, see [Check your user access to a row](access-checker.md).
+
+      > [!div class="mx-imgBorder"]
+      > ![Select add user or team.](media/share-row-share-dialog.png "Select add user or team")
    
-3. Enter the name of the user or team in the [lookup column](lookup-field.md). The lookup will start displaying users or teams based what you typed, or you can select the lookup icon (magnifying glass) and an alphabetical list of names appears that you can select to assign access.
-
-    > [!div class="mx-imgBorder"]
-    > ![Select add user or team in the lookup.](media/share-row-lookup-rows.png "Select add user or team in the lookup")
-
-4. The user or team that you selected is listed under the lookup column. To add additional users or team repeat the process. <br> To remove a user or team from the list, select **X** next to the name.
-
-    > [!div class="mx-imgBorder"]
-    > ![Select add more users or team](media/share-row-add-more-users.png "Select to add more users or team")
 
 
 5. Select a user or team one at a time, and then grant them the appropriate permissions to the row. <br> <br> If check boxes are disabled it means a user or team does not have basic privileges to the row. For more information on user access, see [Check your user access to a row](access-checker.md).
