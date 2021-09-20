@@ -164,7 +164,7 @@ account](signup-for-powerapps.md#faq).
 
 ### Can I delete my developer environment?
 
-Tenant-level admins have the permissions needed to delete a developer environment through the user interface. An end user can delete a developer environment through a [Power Apps PowerShell admin cmdlet](/power-platform/admin/powerapps-powershell#power-apps-cmdlets-for-administrators).
+End user (creator), Power Platform admins and tenant-level admins have the permissions needed to delete a developer environment through the user interface. In addition, an end user can also delete a developer environment through a [Power Apps PowerShell admin cmdlet](/power-platform/admin/powerapps-powershell#power-apps-cmdlets-for-administrators).
 
 ```powershell
 Remove-AdminPowerAppEnvironment -EnvironmentName <environmentGuid>
