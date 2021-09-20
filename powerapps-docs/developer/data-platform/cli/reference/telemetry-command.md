@@ -19,6 +19,12 @@ Manages the telemetry settings.
 
 |Parameter Name|Description|Example|
 |------------|------------|---------|
-|enable|Enables the telemetry option.|`pac telemetry enable`|
 |disable|Disables the telemetry option.| `pac telemetry disable`|
+|enable|Enables the telemetry option.|`pac telemetry enable`|
 |status|Returns whether the telemetry is enabled or disabled.|`pac telemetry status`|
+
+### See also
+
+[Power Apps component framework](../component-framework/overview.md)
+
+[What is Microsoft Power Platform CLI](../../powerapps-cli.md)

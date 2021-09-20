@@ -20,3 +20,9 @@ Command to work with Dataverse organizations.
 |Parameter Name|Description|Example|
 |-------------|-----------|--------|
 |who|Displays information about the current Dataverse organizations.|`pac org who`|
+
+### See also
+
+[Power Apps component framework](../component-framework/overview.md)
+
+[What is Microsoft Power Platform CLI](../../powerapps-cli.md)

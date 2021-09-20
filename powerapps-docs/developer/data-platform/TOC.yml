@@ -463,7 +463,7 @@
         - name: auth
           href: cli/reference/auth-command.md
         - name: canvas 
-          href: ccli/reference/canvas-command.md
+          href: cli/reference/canvas-command.md
         - name: org 
           href: cli/reference/org-command.md
         - name: package

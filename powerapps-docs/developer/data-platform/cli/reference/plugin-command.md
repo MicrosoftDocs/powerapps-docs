@@ -20,3 +20,9 @@ Manages to create a [plug-in](./../../plug-ins.md) project.
 |Parameter Name|Description|Example|
 |-------------|-----------|--------|
 |init|Initializes a directory with a new plug-in class library.|`pac plugin init`|
+
+### See also
+
+[Power Apps component framework](../component-framework/overview.md)
+
+[What is Microsoft Power Platform CLI](../../powerapps-cli.md)
