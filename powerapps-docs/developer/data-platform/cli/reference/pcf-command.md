@@ -25,6 +25,6 @@ Commands to work with [Power Apps component framework](../../../component-framew
 
 ### See also
 
-[Power Apps component framework](../component-framework/overview.md)
+[Power Apps component framework overview](../../../component-framework/overview.md)
 
 [What is Microsoft Power Platform CLI](../../powerapps-cli.md)

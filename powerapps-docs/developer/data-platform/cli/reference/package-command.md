@@ -27,6 +27,6 @@ Command to work with solution packages.
 
 ### See also
 
-[Power Apps component framework](../component-framework/overview.md)
+[Power Apps component framework overview](../../../component-framework/overview.md)
 
 [What is Microsoft Power Platform CLI](../../powerapps-cli.md)
