@@ -1,7 +1,7 @@
 ---
 title: Sign up for Power Apps Developer Plan
 description: Sign up for the Power Apps Developer Plan to get a free development environment to build and test with Power Apps, Power Automate, and Microsoft Dataverse.
-author: evanmlew
+author: alaug
 ms.service: powerapps
 ms.subservice: canvas-developer
 ms.topic: conceptual
