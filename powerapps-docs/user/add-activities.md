@@ -404,7 +404,7 @@ The following table describes the different formatting features and functionalit
 
 The rich text editor is enabled by default. Your system administrator can enable or disable the editor for you.
 
-For more information, see [Enable rich-text editor for notes in timeline](../maker/model-driven-apps/set-up-timeline-control.md#enable-or-disable-rich-text-editor-for-notes-in-timeline).
+For more information, see [Rich text editor control configurations](../maker/model-driven-apps/rich-text-editor-control#rich-text-editor-control-configuration-options).
 
 ## See also
 
