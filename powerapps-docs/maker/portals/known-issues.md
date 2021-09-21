@@ -36,7 +36,7 @@ contributors:
     | Enity Form Metadata | Subgrid Setting (adx_subgrid_settings) |
     | Web Page | Copy (adx_copy) |
 
-- Rich-text for notes in timeline isn't fully supported by Power Apps portals because there's no rich-text editor equivalent control available in portals. For more information, go to [notes created with rich-text editor](configure-notes.md?#notes-created-with-rich-text-editor). If you want to disable the rich text editor for notes in the timeline of the Microsoft Dataverse model-driven app, see [Rich text editor control configurations](../maker/model-driven-apps/rich-text-editor-control#rich-text-editor-control-configuration-options).
+- Rich-text for notes in timeline isn't fully supported by Power Apps portals because there's no rich-text editor equivalent control available in portals. For more information, go to [notes created with rich-text editor](configure-notes.md?#notes-created-with-rich-text-editor). If you want to disable the rich text editor for notes in the timeline of the Microsoft Dataverse model-driven app, see [Rich text editor control configurations](/model-driven-apps/rich-text-editor-control#rich-text-editor-control-configuration-options).
 
 - The **Modified Date** for the app might be incorrect because these apps are pre-provisioned apps and could have been provisioned earlier.
 
