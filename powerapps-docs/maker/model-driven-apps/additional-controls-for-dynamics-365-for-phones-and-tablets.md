@@ -236,6 +236,10 @@ Gain valuable insights from the latest news about your customers, competitors, a
 |--------------|-----------------|  
 |PenMode|Specify **PenMode!Draw**, **PenMode!Erase**, or **PenMode!Select** to determine what happens when a user drags a pointing device in a pen control.|  
 
+## Quick view
+
+The quick view control displays data from a record that is selected in a lookup on the form. The data displayed in the control is defined using a quick view form. The data displayed is not editable, but when the primary column is included in the quick view form, it becomes a link to open the related record. More information: [Model-driven app quick view control properties](quick-view-control-properties-legacy.md)
+
 ## Radial knob
 
 The radial knob provides a way for users to enter data by sliding the knob, and shows up on the screen as a circle. The radial knob control provides whole number input and display only. Use this control for any numerical or money columns. You can use touch to change the value, or you can use the keypad to focus on the number and edit it.  
@@ -250,10 +254,6 @@ The radial knob provides a way for users to enter data by sliding the knob, and 
 |Min|Set the minimum value to display on the gauge.|  
 |Value|Get or set the value to display on the gauge.|  
 |Step|Set the amount to add or subtract from the current value when entering data with this control.|  
-
-## Quick view
-
-The quick view control displays data from a row that is selected in a lookup on the form. The data displayed in the control is defined using a quick view form. The data displayed is not editable, but when the primary column is included in the quick view form, it becomes a link to open the related row. More information: [Model-driven app quick view control properties](quick-view-control-properties-legacy.md)
 
 ## Rich text editor
 
