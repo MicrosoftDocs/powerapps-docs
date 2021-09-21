@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.subservice: canvas-developer
 ms.topic: conceptual
 ms.custom: intro-internal
-ms.date: 08/30/2021
+ms.date: 09/21/2021
 ms.author: evlew
 ms.reviewer: tapanm
 contributors:
@@ -164,11 +164,12 @@ account](signup-for-powerapps.md#faq).
 
 ### Can I delete my developer environment?
 
-Tenant-level admins have the permissions needed to delete a developer environment through the user interface. An end user can delete a developer environment through a [Power Apps PowerShell admin cmdlet](/power-platform/admin/powerapps-powershell#power-apps-cmdlets-for-administrators).
+Users with the System Administrator security role in the environment, Power Platform admins and tenant-level admins have the permissions needed to delete a developer environment through the user interface.
 
-```powershell
-Remove-AdminPowerAppEnvironment -EnvironmentName <environmentGuid>
-```
+> [!NOTE]
+> Creator of an environment is automatically assigned System Administrator role. Therefore, the creator of a developer environment can also delete it because of being a System Administrator.
+
+To learn about how to delete an environment, go to [Delete an environment](/power-platform/admin/delete-environment)
 
 ### Can I reset my developer environment?
 
@@ -177,4 +178,7 @@ Resetting a developer environment isn't currently supported; however, it can be 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
 
 ### Does the Power Apps Developer plan include Power Automate RPA use rights?
-No. However, users may start a Power Automate trial including RPA use rights to try out RPA capabilities. Power Apps Developer plan includes cloud flow use rights since these can be connected to an act as an extension of Power Apps apps. 
+No. However, users may start a Power Automate trial including RPA use rights to try out RPA capabilities. Power Apps Developer plan includes cloud flow use rights since these can be connected to an act as an extension of Power Apps apps.
+
+### Does the Power Apps Developer plan include AI Builder use rights? 
+No. However, users may start an AI Builder trial to try out the AI Builder capabilities.
