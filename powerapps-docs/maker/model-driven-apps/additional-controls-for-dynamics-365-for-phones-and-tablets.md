@@ -238,7 +238,7 @@ Gain valuable insights from the latest news about your customers, competitors, a
 
 ## Quick view
 
-The quick view control displays data from a row that is selected in a lookup on the form. The data displayed in the control is defined using a quick view form. The data displayed is not editable, but when the primary column is included in the quick view form, it becomes a link to open the related row. More information: [Model-driven app quick view control properties](quick-view-control-properties-legacy.md)
+The quick view control displays data from a record that is selected in a lookup on the form. The data displayed in the control is defined using a quick view form. The data displayed is not editable, but when the primary column is included in the quick view form, it becomes a link to open the related record. More information: [Model-driven app quick view control properties](quick-view-control-properties-legacy.md)
 
 ## Radial knob
 
