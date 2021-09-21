@@ -549,8 +549,14 @@
           href: ./canvas-apps/working-with-rules.md
         - name: Create or update bulk records
           href: ./canvas-apps/create-update-records-bulk.md
-        - name: Use Power Apps Ideas (Preview)
-          href: ./canvas-apps/power-apps-ideas.md
+        - name: Power Apps Ideas (Preview)
+          items:
+          - name: Power Apps Ideas
+            href: ./canvas-apps/power-apps-ideas.md
+          - name: Transform natural language to Power Fx formulas
+            href: ./canvas-apps/power-apps-ideas-transform.md
+          - name: Transform examples to Power Fx formulas
+            href: ./canvas-apps/power-apps-ideas-train-examples.md
         - name: Formula reference
           items:
           - name: Overview
@@ -1138,7 +1144,9 @@
           href: ./model-driven-apps/create-and-edit-a-model-driven-form.md
         - name: Design forms for efficiency
           href: ./model-driven-apps/design-productive-forms.md
-          items: 
+          items:
+          - name: Design forms for performance
+            href: ./model-driven-apps/design-performant-forms.md
           - name: Design considerations for main forms
             href: ./model-driven-apps/design-considerations-main-forms.md        
         - name: Use the new form designer
@@ -2235,6 +2243,8 @@
     href: ../teams/embed-teams-app.md
   - name: Embed a model-driven app as tab app
     href: ../teams/embed-model-driven-teams-tab.md
+  - name: Embed a model-driven app as personal app
+    href: ../teams/embed-model-driven-teams-personal.md
   - name: Create apps in Teams
     items:
     - name: Create apps in Teams
@@ -2273,7 +2283,9 @@
         - name: Work with table relationships
           href: ../teams/relationships-table.md
         - name: Work with table columns
-          href: ../teams/table-columns.md        
+          href: ../teams/table-columns.md
+        - name: Work with formula table columns (preview)
+          href: ../teams/formula-columns.md  
         - name: Edit table data in Excel
           href: ../teams/edit-data-in-excel.md
         - name: Move customizations between environments

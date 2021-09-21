@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 08/25/2021
+ms.date: 09/17/2021
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: tapanm
@@ -19,9 +19,6 @@ contributors:
 A cookie is a small file sent from the web site to visitor's device by the browser. A single web session may use multiple cookies.
 
 Power Apps portals also use cookies to store information for various purposes. The following table describes the cookies that Power Apps portals uses, and their lifetime.
-
-> [!IMPORTANT]
-> Cookies in portals can't be deactivated. If required, consider adding a consent dialog for portal users through external scripts.
 
 | Cookie name | Description | Lifetime |
 | - | - | - |
@@ -38,9 +35,34 @@ Power Apps portals also use cookies to store information for various purposes. T
 | timeZoneCode | Stores the *timezonecode* field value of *CRM timezonedefinition* table for the current timezone. | Session |
 | timezoneoffset | Stores the [timezone difference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date/getTimezoneOffset) between UTC and Local browser time. | Session |
 
+## Frequently asked questions
+
+### Can I deactivate some or all cookies in my portal?
+
+No. If required, consider adding a consent dialog for portal users through external scripts.
+
+### Why can't I use my portal without cookies?
+
+Cookies are required to maintain a portal functional, with the purpose as described in the table above.
+
+### What does the session lifetime mean?
+
+Cookies with the "session" lifetime are only used while the browser is open, and removed after you close the browser.
+
+### What is the data governance policy for cookies in portals?
+
+For information about data governance, data storage and access, read [Microsoft Privacy Statement](https://privacy.microsoft.com/privacystatement).
+
+### Do cookies in portals store any personal data?
+
+No.
+
+### Do cookies in portals store my IP address?
+
+No. However, check the terms of your analytics provider if you've configured traffic analysis on your portal. Traffic analysis can be configured through [Portal Management app](../configure/configure-portal.md) > **Administration** > **Enable Traffic Analysis**.
+
 ### See also
 
 [Cookie authentication site settings](../configure/set-authentication-identity.md#cookie-authentication-site-settings)
-
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
