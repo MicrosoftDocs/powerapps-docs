@@ -164,7 +164,7 @@ account](signup-for-powerapps.md#faq).
 
 ### Can I delete my developer environment?
 
-Users with the System Administrator security role in the environment, Power Platform admins and tenant-level admins have the permissions needed to delete a developer environment through the user interface.
+Users with the System Administrator security role in the environment, Power Platform admins and tenant-level admins have the permissions needed to delete a developer environment.
 
 > [!NOTE]
 > Creator of an environment is automatically assigned System Administrator role. Therefore, the creator of a developer environment can also delete it because of being a System Administrator.
