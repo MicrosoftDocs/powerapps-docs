@@ -67,8 +67,8 @@ Y dimension of the pin | PinsY
 Z dimension (depth) of the pin | PinsZ
 
 
-<!-- editor note: the following question was here prior to this edit. -->
-<!-- is there a label field? -->
+> [!IMPORTANT]
+> The mixed-reality (MR) controls use a [left-handed coordinate system](/windows/uwp/graphics-concepts/coordinate-systems).
 
 
 The following is an example of an Excel table with the required columns:
@@ -211,11 +211,11 @@ You can display each of the pins as they are added:
 
 As users add pins with the **Add pin** button, they will display in the table below the button.
 
-## Other mixed-reality controls
+## Other MR controls
 
 - View 3D content in mixed reality with the **[View in MR](mixed-reality-component-view-mr.md)** component.
-- Measure distance, area, and volume with the **[Measure in mixed reality](mixed-reality-component-measure-distance.md)** component.
-- Create and view predefined 3D shapes with the **[View shape in mixed reality](mixed-reality-component-view-shape.md)** component
+- Measure distance, area, and volume with the **[Measure in MR](mixed-reality-component-measure-distance.md)** component.
+- Create and view predefined 3D shapes with the **[View shape in MR](mixed-reality-component-view-shape.md)** component
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

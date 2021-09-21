@@ -66,12 +66,18 @@ In this scenario, since there are multiple async processes and both calls return
 
 An app setting is a platform component that allows you to override a setting on an app. App setting should have a unique name and must be in the format `solutionpublisherprefix_appname_settingname`.
 
-To enable the async `OnSave` event handlers for a specific app, add the below XML in the `customization.xml`  file. This should be added in the existing AppModule node in your `customization.xml` file.
+To enable the async `OnSave` event handlers for a specific app:
 
-Setting the `<value>true</value>` enables async `OnSave` event handler support for that specific app. Any form within this app will be able to get access to the async OnSave functionality.
+- Create a new unmanaged solution. 
+- Open the newly created solution. Select **Add existing** > **App** > **Model-driven app**.
+- From the list of existing model-driven apps, select the app where you want to see this feature. 
+- Publish all customizations. 
+- Again from the list of solutions in the solution explorer, select the solution where you have added the model-driven app and then select **Export**. A zip file is downloaded to your local machine.
+- Extract the downloaded  zip file. Open the **Customizations.xml** file in your preferred editing tool. 
+- Add the following code `AppModule` node in the `customization.xml` file. Setting the `<value>true</value>` enables async `OnSave` event handler support for that specific app. Any form within this app will be able to get access to the async OnSave functionality.
 
-```XML
- <appsettings>
+   ```XML
+   <appsettings>
    <appsetting uniquename="MyAppName_AsyncOnSave">
       <iscustomizable>1</iscustomizable>
       <settingdefinitionid>
@@ -79,15 +85,17 @@ Setting the `<value>true</value>` enables async `OnSave` event handler support f
       </settingdefinitionid>
       <value>true</value>
    </appsetting>
-</appsettings>
- ```
-You can verify that the configuration has been successfully installed using the following request: 
+  </appsettings>
+   ```
 
-```http
-GET https://org00000000.crm0.dynamics.com/api/data/v9.2/appsettings?$filter=(uniquename eq 'MyAppName_AsyncOnSave')
-Accept: application/json
-Authorization: Bearer ey...
-```
+- You can verify whether the configuration has been successfully installed using the following request: 
+
+  ```http
+  GET https://org00000000.crm.dynamics.com/api/data/v9.2/appsettings?$filter=(uniquename eq 'MyAppName_AsyncOnSave')
+  Accept: application/json
+  Authorization: Bearer ey...
+  ```
+
 ### Related article
 
 [Grid OnSave Event](grid-onsave.md)  

@@ -6,7 +6,7 @@ manager: annbe
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/06/2021
+ms.date: 09/14/2021
 ms.author: kvivek
 ms.reviewer: kvivek
 searchScope:
@@ -113,6 +113,22 @@ by Clay Wesener
 **Fusion Teams 101: Low-Code Apps with Power Platform (What's new with Power Apps and Azure)**  
 by Matt Soucoup and Kartik Kanakasabesan  
 [Register and watch now](https://info.microsoft.com/ww-Landing-fusion-teams-101LowCode-power-platform.html?LCID=EN-US)
+
+**Building large-scale solutions with Power Platform**  
+by April Dunnam and Dustin Sitton  
+[Register and watch now](https://info.microsoft.com/ww-landing-buildinglargesolutionspowerplatform.html?LCID=EN-US)
+
+**Empower Data Innovation with Dataverse and Power Apps**  
+by Marc Mercuri  
+[Register and watch now](https://info.microsoft.com/ww-landing-empowerdataversepowerapps.html?LCID=EN-US)
+
+**Streamline Workflows with Power Platform Connectors**  
+by Natalie Pienkowska and Greg Hurlman  
+[Register and watch now](https://info.microsoft.com/ww-landing-streamlinepowerplatformconnectors.html?LCID=EN-US)
+
+**Citizen Development 101: APIM, Power Platform and Teams**  
+by Geetha Sivasailam and April Dunnam  
+[Register and watch now](https://info.microsoft.com/ww-landing-citdev101powerplatformteams.html?LCID=EN-US)
 
 ### See also
 

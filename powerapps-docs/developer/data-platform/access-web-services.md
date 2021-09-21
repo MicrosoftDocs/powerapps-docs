@@ -26,7 +26,7 @@ Plug-ins and custom workflow activities can access the network through the HTTP 
 - IP addresses cannot be used. You must use a named web address that requires DNS name resolution.
 - Anonymous authentication is supported and recommended. There is no provision for prompting the logged on user for credentials or saving those credentials.
 
-Other methods of accessing web services include the use of WebHooks and the [!INCLUDE [pn_azure_service_bus](../../includes/pn_azure_service_bus.md)]. Refer to the links provided below for more information on those topics.
+Other methods of accessing web services include the use of Webhooks and the [!INCLUDE [pn_azure_service_bus](../../includes/pn_azure_service_bus.md)]. Refer to the links provided below for more information on those topics.
 
 ## How to access external web services
 
@@ -53,7 +53,7 @@ You should make sure to set an appropriate `Timeout` period for your external ca
 [Plug-ins](plug-ins.md)<br />
 [Workflow extensions](workflow/workflow-extensions.md)<br />
 [Azure integration](azure-integration.md)<br />
-[Use WebHooks](use-webhooks.md)<br />
+[Use Webhooks](use-webhooks.md)<br />
 [Sample: Web access from a sandboxed plug-in](org-service/samples/web-access-plugin.md)
 
 

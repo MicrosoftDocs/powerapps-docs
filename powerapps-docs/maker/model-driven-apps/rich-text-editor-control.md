@@ -2,7 +2,7 @@
 title: Use the rich text editor control in Power Apps | MicrosoftDocs
 description: "The rich text editor control provides the app user a WYSIWYG editing area for formatting text"
 ms.custom: ""
-ms.date: 07/22/2021
+ms.date: 08/10/2021
 ms.reviewer: "matp"
 ms.service: powerapps
 ms.suite: ""
@@ -60,7 +60,7 @@ You can create a new text column and configure the control, or replace an existi
 The rich text editor control comes with a rich set of configuration options that make it possible to customize its appearance, features, and behavior. To configure the rich text editor control, follow these steps:
 
 1. Create a JSON file that includes the defaultSupportedProps structure and configuration with the changes you want. More information: [Sample rich text editor configurations](#sample-rich-text-editor-configurations) and [Rich text editor properties](#rich-text-editor-properties)
-2. In Power Apps, create a JavaScript web resource using the JSON file created in step 1. More information: [Create or edit model-driven app web resources to extend an app](create-edit-web-resources.md)
+2. In Power Apps, create a Script(JScript) type web resource using the JSON file created in step 1. More information: [Create or edit model-driven app web resources to extend an app](create-edit-web-resources.md)
 3. Open the **Column Properties** page for the text column with the rich text editor control, and then next to **RichTextEditorControl_URL** select **Edit**.
    > [!div class="mx-imgBorder"] 
    > ![Rich text editor control URL.](media/richtexteditorcontrol-url.png)
@@ -785,7 +785,6 @@ A. Large content size can cause latency. For more information, see [Best practic
 > [!div class="mx-imgBorder"] 
 > ![HTML markup displayed in a column on a subgrid.](media/html-markup-issue.png)
 
-- Don't replace the email activity control with the rich text editor control because it impacts the way images need to be saved and converted. We are working to fully enable using RTE as a replacement for the email activity editor in a future release.
 
 ### See also
 

@@ -13,7 +13,7 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 05/04/2021
+ms.date: 08/06/2021
 ms.subservice: dataverse-developer
 ms.author: jdaly
 search.audienceType: 
@@ -52,7 +52,7 @@ The `CascadeConfiguration` (<xref:Microsoft.Xrm.Sdk.Metadata.CascadeConfiguratio
 
 **Active Records considered for Cascading action**
 
-Cascading actions on active records will only include records that have a state code of “Active”. The following State Codes for these tables, are considered Active for Cascade actions. Different labels (other than Active) may be used for this state code in different tables. However, any other solution provided or custom status codes with values other than the above will not be processed as an active record for cascading purposes.
+Cascading actions on active records will only include records that have a state code of “Active”. The following State Codes for these tables, are considered Active for Cascade actions. Different labels (other than Active) may be used for this state code in different tables. Any custom state or status code with values other than below will not be processed as an active record for cascading purposes.
 
 | Table Name                       |    State Code 0       |    State Code 1       |    State Code 2       |    State Code 3       | 
 | :--------------------------------| :----------------:    | :----------------:    | :----------------:    | :-----------------:    |
