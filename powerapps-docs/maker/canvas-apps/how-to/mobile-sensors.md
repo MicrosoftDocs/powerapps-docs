@@ -35,9 +35,9 @@ For the second screen, imagine needing a tool to roughly measure angles. When on
 - An [NFC capable device](https://en.wikipedia.org/wiki/List_of_NFC-enabled_mobile_devices) is needed for the NFC scanning feature. It's also assumed that the NFC tags to be scanned have been pre-configured to produce text values in the following example format:
 
     ```
-    <b>Heading: </b> 80 degrees <br>
+    "<b>Heading: </b> 80 degrees <br>
     <b>Latitude: </b> 44.4604788 <br>
-    <b>Longitude: </b> -110.82813759
+    <b>Longitude: </b> -110.82813759"
     ```
 
     This will provide the text in an HTML-friendly format for the app. The setup of the NFC tags is beyond the scope of this article, and the NFC elements can be ignored if needed; the primary focus is using the mobile sensors in Power Apps.
@@ -135,7 +135,7 @@ The code in the **OnSelect** property is utilizing the [ReadNFC()](../functions/
 Add a second **Html text** control and use the following formula in the **HTMLText** property:
 
 ```powerapps-dot
-<b><u>Next Destination</u></b><br>
+"<b><u>Next Destination</u></b><br>
 <br>" &
 First(colNFCScan).Text
 ```
