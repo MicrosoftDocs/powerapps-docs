@@ -271,7 +271,7 @@ You can send and receive records with images, but they won't display when the re
 ![Expand records with images in timeline at runtime.](media\timeline-expand-records-with-images-display-optiones-advanced-1a.png "Expand records with images in timeline at runtime")
 3. When you select the message, the warning goes away and the image appears. 
 
-If you don’t see a message and the image isn't displayed, see [Timeline FAQs](user/faq-for-timeline-and-activity.md) for more information.
+If you don’t see a message and the image isn't displayed, see [Timeline FAQs](/power-platform/user/faq-for-timeline-and-activity.md) for more information.
 
 ### Enable “What you’ve missed” summary
 
@@ -493,7 +493,7 @@ Go to your timeline configuration in [make.powerapps.com](https://make.powerapps
 
 ## Configure mentions in notes and posts on timeline
 
-To enable mentions in notes and posts, contact [Microsoft Help + support](admin/get-help-support.md). You can also temporarily try out this feature before asking Microsoft to enable it by appending the following text string to your current browser session URL:
+To enable mentions in notes and posts, contact [Microsoft Help + support](/power-platform/admin/get-help-support.md). You can also temporarily try out this feature before asking Microsoft to enable it by appending the following text string to your current browser session URL:
 
 ```
      &flags=FCB.TimelineWallRichTextPosts=true,FCB.TimelineNotesRichTextMentions=true
