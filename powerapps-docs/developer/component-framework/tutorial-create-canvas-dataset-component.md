@@ -1222,7 +1222,8 @@ Now that you've implemented all the features, you must deploy the code component
 5. To use code components inside canvas apps, you must enable the **Power Apps component framework for canvas apps** on the environment you're using. Open the **Admin center** (admin.powerplatform.microsoft.com) and navigate to your environment.
    Navigate to **Settings** > **Product** > **Features** . Ensure **Power Apps component framework for canvas apps** is turned **On**:
 
-   > [!div class="mx-imgBorder"] > ![Enable Code Components.](media/canvas-datagrid-enable.png "Enable code components")
+   > [!div class="mx-imgBorder"] 
+   > ![Enable Code Components.](media/canvas-datagrid-enable.png "Enable code components")
 
 6. Create a new canvas app using the **Tablet** layout.
 
