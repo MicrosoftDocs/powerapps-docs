@@ -362,7 +362,7 @@ var notificationRecord =
   "body": "Welcome to the world of app notifications!",
   "ownerid@odata.bind": "/systemusers(" + systemuserid + ")",
   "icontype": 100000005, // custom
-  "data": "{ 'data': { 'iconUrl': '/WebResources/cr245_AlertOn' } }"
+  "data": "{ 'iconUrl': '/WebResources/cr245_AlertOn'}"
 }
 Xrm.WebApi.createRecord("appnotification", notificationRecord).
   then(
