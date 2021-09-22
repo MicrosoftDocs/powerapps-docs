@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 10/25/2016
+ms.date: 09/22/2021
 ms.subservice: canvas-maker
 ms.author: chmoncay
 search.audienceType: 
@@ -17,6 +17,7 @@ search.app:
 contributors:
   - tapanm-msft
   - chmoncay
+  - tahoon-ms
 ---
 # Image control in Power Apps
 A control that shows an image from, for example, a local file or a data source.
