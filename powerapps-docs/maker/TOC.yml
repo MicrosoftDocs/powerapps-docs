@@ -1520,7 +1520,7 @@
                   href: ./portals/use-code-editor.md
                 - name: Add Power BI
                   href: ./portals/add-powerbi.md
-                - name: Add a chatbot (Preview)
+                - name: Add a chatbot (preview)
                   href: ./portals/add-chatbot.md
         - name: Work with templates
           href: ./portals/work-with-templates.md
@@ -1676,7 +1676,7 @@
                 href: ./portals/configure/use-simplified-authentication-configuration.md
               - name: Azure AD B2C
                 items:
-                    - name: Configure (Preview)
+                    - name: Configure (preview)
                       href: ./portals/configure/configure-azure-ad-b2c-provider.md
                     - name: Configure manually
                       href: ./portals/configure/configure-azure-ad-b2c-provider-manual.md
@@ -1842,13 +1842,13 @@
           - name: Compose HTTP requests and handle errors
             displayName: Portals Web API handle HTTP requests and errors
             href: ./portals/web-api-http-requests-handle-errors.md
-        - name: Code components (Preview)
+        - name: Code components (preview)
           items:
           - name: Overview of code components in portals
             href: ./portals/component-framework.md          
           - name: "Tutorial: Use code components in portals"
             href: ./portals/component-framework-tutorial.md            
-        - name: Use Microsoft Power Platform CLI (Preview)
+        - name: Use Microsoft Power Platform CLI (preview)
           items:
           - name: Overview of portals support for Microsoft Power Platform CLI 
             href: ./portals/power-apps-cli.md
