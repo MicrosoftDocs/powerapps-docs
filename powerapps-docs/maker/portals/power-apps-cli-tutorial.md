@@ -44,7 +44,7 @@ PowerShell instead.
 Before you connect, list, download, or upload any changes for a Power Apps
 portal, you must authenticate to the Dataverse environment first. For more
 information about authentication using Microsoft Power Platform CLI, go to [Microsoft Power Platform CLI –
-Auth](../../developer/data-platform/powerapps-cli.md#auth).
+Auth](../../developer/data-platform/cli/reference/auth-command.md).
 
 To authenticate, open Windows PowerShell and run the following command using
 your Dataverse environment URL:
