@@ -397,9 +397,10 @@ Legend
 #### Sort date
 Some dates can only exist on specific types of activities. For example, **Date sent** or **Date delivery last attempted** only apply to email. If you sort by such dates, then non-email activities end up grouped together without any ordering. You can't create a custom date field, but if you need more flexibility, you can use **Sort date**, which is empty by default and requires that you populate it for each activity record with the date you want to use for sorting. Some of the ways you can populate the date are by using Microsoft Power Automate (previously Microsoft Flow), business rules, or Javascript. 
 
-> [!IMPORTANT]
-> If you set a value in Sort date, you can use it for more customized sorting, but be aware that you have to populate it for every activity record or it won't work. Sort date has to be configured for each timeline instance, and must be set up for all three main forms in the Account entity.
-
+When using Sort date, keep in mind the following:
+- If you set a value in Sort date, you can use it for more customized sorting, but be aware that you have to populate it for every activity record or it won't work. Sort date has to be configured for each timeline instance, and must be set up for all three main forms in the Account entity.
+- If the DateTime field is on the same calendar day, the date won't be displayed if DateTime was earlier in the day compared to current time.
+- Sort date is not based on a 24-hour period, but rather, compares the **DateTime** field value with the current date and time (based on the Dynamics 365 user's preferred time zone). If the value entered occurred earlier in the day, the date isn't displayed.
 
 ### Set create activities form type in timeline
 
