@@ -1,6 +1,6 @@
 ---
 title: "Connection references in solutions | MicrosoftDocs"
-description: "Create a connection reference in Power Apps"
+description: "Create a connection reference"
 ms.custom: ""
 ms.date: 08/02/2021
 ms.reviewer: "matp"
@@ -17,7 +17,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Use a connection reference in a solution (preview)
+# Use a connection reference in a solution
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
@@ -39,7 +39,7 @@ You can add a connection reference to a solution in a few different ways:
 > - Canvas apps and flows added from outside solutions will not automatically be upgraded to use connection references. 
 > - Connection references get associated with canvas apps only at the time a data source is added to the app. To upgrade apps you must remove the connection from the app and then add a connection containing an associated connection reference. 
 
-1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and on the left pane select **Solutions**.
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) or [Power Automate](https://flow.microsoft.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and on the left pane select **Solutions**.
 1. Create a new or open an existing solution.
 1. On the command bar select **New**, and then in the list of components select **Connection Reference**.
 1. On the **New Connection Reference** pane, enter the following information. Required columns are denoted with an asterisk (*).
@@ -53,7 +53,8 @@ You can add a connection reference to a solution in a few different ways:
 
 ## Limits
 
-While connection references are in preview, one connection reference can only be used within a maximum of 16 flows. If the same connection needs to be used in more than 16 flows, then create another connection reference with a connection to the same connector. There is no limit to the number of actions in each flow that can be associated with the connection reference.
+Connection references are now saved asynchronously, so unlike during the preview period, there is no longer a limit to how many flows can reference the same connection reference. When connection references are updated, an info banner will be shown that links to a panel containing asynchronous update details.
+There is also no limit to the number of actions in each flow that can be associated with the connection reference.
 
 ## Connection Reference usage tips
 
