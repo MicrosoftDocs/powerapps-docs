@@ -56,6 +56,13 @@ You can add a connection reference to a solution in a few different ways:
 Connection references are now saved asynchronously, so unlike during the preview period, there is no longer a limit to how many flows can reference the same connection reference. When connection references are updated, an info banner will be shown that links to a panel containing asynchronous update details.
 There is also no limit to the number of actions in each flow that can be associated with the connection reference.
 
+## Updating a flow to use connection references instead of connections
+
+When a flow is not in a solution it uses connections. If that flow is then added into solution, it will continue to use connections intially. 
+Flows can be updated to use connections references instead of connections in one of two ways:
+1. If the flow is exported in an unmanaged solution and imported, the connections will be removed and replaced with connection references. 
+2. When a solution flow is opened, the flow checker on the flow details page will show a warning to **Use connection references**. The warning message contains an action to **Remove connections so connection references can be added**. Clicking that action will remove connections from the trigger and actions in the flow and allow connection references to be selected and created.
+
 ## Connection Reference usage tips
 
 ### Reusing connections in a solution flow
