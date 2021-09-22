@@ -44,7 +44,8 @@ When your code component is ready for testing inside a model-driven app, canvas 
 
    The following diagram shows the one-to-many relationship between `cdsproj` and `pcfproj` projects:
 
-   > [!div class="mx-imgBorder"] > ![One-to-many relationship between cdsproj and pcfproj projects.](media/code-component-projects.png "One-to-many relationship between cdsproj and pcfproj projects")
+   > [!div class="mx-imgBorder"] 
+   > ![One-to-many relationship between cdsproj and pcfproj projects.](media/code-component-projects.png "One-to-many relationship between cdsproj and pcfproj projects")
 
 More information: [Package a code component](import-custom-controls.md#package-a-code-component).
 
@@ -180,7 +181,8 @@ Reasons for adopting a segmented solution approach over a mixed single solution 
 
 The following diagram shows an overview of the solution lifecycle for these two approaches:
 
-> [!div class="mx-imgBorder"] > ![Solution Strategies.](media/solution-strategies.png "Solution Strategies")
+> [!div class="mx-imgBorder"] 
+> ![Solution Strategies.](media/solution-strategies.png "Solution Strategies")
 
 The diagram describes the following points:
 
@@ -191,7 +193,8 @@ The diagram describes the following points:
 
 2. **Add existing code components (after PAC CLI deployment)** - If you're using the single solution approach, once deployed, the code component can be added to another solution. (That solution must share the same solution publisher as used by the **PowerAppsTools** solution.)
 
-   > [!div class="mx-imgBorder"] > ![Add Existing.](media/add-existing.png "Add Existing")
+   > [!div class="mx-imgBorder"] 
+   > ![Add Existing.](media/add-existing.png "Add Existing")
 
 3. **Build unmanaged solution project** - If you're using solution `cdsproj` projects, then an unmanaged solution can be built using `msbuild`, and then imported into your development environment.
 
@@ -300,7 +303,8 @@ If you're using **AzureDevOps**, you can set your build pipeline versioning usin
 
 Consuming code components in canvas apps is different from doing so in model-driven apps. Code components must be explicitly added to the app by selecting **Get more components** on the **Insert** panel. Once the code component is added to the canvas app, it's included as the content inside the app definition. To update to a new version of the code component after it's deployed (and the control version incremented), the app maker must first open the app in Power Apps Studio and select **Update** when prompted on the **Update code components** dialog. The app must then be saved and published for the new version to be used when the app is played by users.
 
-> [!div class="mx-imgBorder"] > ![Update code components.](media/upgrade-code-component.png "Update code components")
+> [!div class="mx-imgBorder"] 
+> ![Update code components.](media/upgrade-code-component.png "Update code components")
 
 If the app is not updated or **Skip** is used, the app continues to use the older version of the code component, even though it doesn't exist in the environment since it's been overwritten by the newer version.
 

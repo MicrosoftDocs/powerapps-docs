@@ -210,7 +210,8 @@ To debug your code component using Fiddler:
 
 3. Select the **HTTPS** tab in the dialog box and check the **Capture HTTPS CONNECTS** and **Decrypt HTTPS traffic** checkboxes so that the HTTPS traffic is captured and then decrypted.
 
-   > [!div class="mx-imgBorder"] > ![Select the marked checkboxes in the HTTP tab.](media/fiddler-https-options.png "Select the marked checkboxes in the HTTP tab")
+   > [!div class="mx-imgBorder"] 
+   > ![Select the marked checkboxes in the HTTP tab.](media/fiddler-https-options.png "Select the marked checkboxes in the HTTP tab")
 
 4. Select **OK** to close the dialog box.
 
@@ -271,7 +272,8 @@ To debug your code component using Fiddler:
 
 11. Now that you have the **AutoResponder** rules running you will need to first clear the cache in the browser and reload the page containing the code component. This can easily be done by opening developer tools (`Ctrl + Shift + I`), right-clicking the **Refresh** > **Empty cache and hard refresh**.
 
-   > [!div class="mx-imgBorder"] > ![Empty cache and hard refresh.](media/refresh-reload.png "Empty cache and hard refresh")
+   > [!div class="mx-imgBorder"] 
+   > ![Empty cache and hard refresh.](media/refresh-reload.png "Empty cache and hard refresh")
 
 12. Once you have your code component loaded from your local machine, you can make changes to the code (while `npm start watch` is running) and refresh the browser to load the newly built versions. Fiddler's AutoResponder will automatically add a cache-control header so that it will not be cached by the browser so a simple refresh will reload the resources without having to clear the cache each time.
 

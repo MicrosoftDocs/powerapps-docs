@@ -24,7 +24,8 @@ In addition to these requirements, you'll also ensure the code component follows
 1. Assurance that the code component renders at the width and height provided by the parent canvas app screen
 1. Consideration for the app maker to customize the user interface using input properties and external app elements as far as possible
 
-> [!div class="mx-imgBorder"] > ![Canvas Grid Demo.](media/canvas-datagrid-demo.gif "Canvas Grid Demo")
+> [!div class="mx-imgBorder"] 
+> ![Canvas Grid Demo.](media/canvas-datagrid-demo.gif "Canvas Grid Demo")
 
 Before you start, make sure you've installed all the [prerequisite components](implementing-controls-using-typescript.md#prerequisites).
 
@@ -62,7 +63,8 @@ You can download the complete sample from [here](https://github.com/microsoft/Po
    >
    > If you receive the message, `The term 'npm' is not recognized as the name of a cmdlet, function, script file, or operable program.`, make sure you've installed all the prerequisites, specifically [node.js](https://nodejs.org/en/download/) (LTS version is recommended).
 
-   > [!div class="mx-imgBorder"] > ![Canvas dataset grid.](media/canvas-datagrid-1.gif "Canvas dataset grid")
+   > [!div class="mx-imgBorder"] 
+   > ![Canvas dataset grid.](media/canvas-datagrid-1.gif "Canvas dataset grid")
 
 The template includes an `index.ts` file along with various configuration files. This is the starting point of your code component and contains the lifecycle methods described in [Component implementation](control-implementation-library.md).
 
@@ -446,7 +448,8 @@ public destroy(): void {
 
 You can use `npm start watch` to see the simple grid inside the test harness. You need to set the width and height to see the code component grid that's populated using the sample three records. You can then export a set of records into a CSV file from Dataverse and then load it into the test harness using **Data Inputs** > **Records panel**:
 
-> [!div class="mx-imgBorder"] > ![Test Harness.](media/canvas-datagrid-2.gif "Test Harness")
+> [!div class="mx-imgBorder"] 
+> ![Test Harness.](media/canvas-datagrid-2.gif "Test Harness")
 
 > [!NOTE]
 > There's only a single column shown in the test harness regardless of the columns you provide in the loaded CSV file. This is because the test harness only shows `property-set` when there is one defined. If no `property-set` is defined, then all of the columns in the loaded CSV file will be populated.
@@ -585,7 +588,8 @@ ReactDOM.render(
 
 When you save all files, the test harness will reload. If you use `Ctrl` + `Shift` + `I` (or `F12`) and use **Open File** (`Ctrl` + `P`) searching for `index.ts`, you can place a breakpoint inside the `onNavigate` method. Double-clicking on a row (or highlighting it with the cursor keys and pressing `Enter`) will cause the breakpoint to be hit because the `DetailsList` invokes the `onNavigate` callback.
 
-> [!div class="mx-imgBorder"] > ![Canvas data grids 3.](media/canvas-datagrid-3.png "Canvas data grids 3")
+> [!div class="mx-imgBorder"] 
+> ![Canvas data grids 3.](media/canvas-datagrid-3.png "Canvas data grids 3")
 
 There is a reference to `_this` because the function is defined as an arrow function and has been transpiled into a JavaScript closure to capture the instance of `this`.
 
@@ -1186,7 +1190,8 @@ Now that you've implemented all the features, you must deploy the code component
 
 1. Inside your Dataverse environment, ensure there's a publisher created with a prefix of `samples`:
 
-   > [!div class="mx-imgBorder"] > ![Add new publisher.](media/field-component-4.png "Add new publisher")
+   > [!div class="mx-imgBorder"] 
+   > ![Add new publisher.](media/field-component-4.png "Add new publisher")
 
    Equally, this could be your own publisher, provided you update the publisher prefix parameter in the call to `pac pcf push` below.
    More information: [Create a solution publisher](/powerapps/maker/data-platform/create-solution#solution-publisher).
@@ -1211,7 +1216,8 @@ Now that you've implemented all the features, you must deploy the code component
 
 4. Once completed, this process will have created a small temporary solution named **PowerAppTools_samples** in your environment, and the `CanvasGrid` code component will be added to this solution. You can move the code component into your own solution later if necessary. More information: [Code Component Application Lifecycle Management (ALM)](code-components-alm.md).
 
-   > [!div class="mx-imgBorder"] > ![PowerAppsTools_samples solution.](media/canvas-datagrid-4.png "PowerAppsTools_samples solution")
+   > [!div class="mx-imgBorder"] 
+   > ![PowerAppsTools_samples solution.](media/canvas-datagrid-4.png "PowerAppsTools_samples solution")
 
 5. To use code components inside canvas apps, you must enable the **Power Apps component framework for canvas apps** on the environment you're using. Open the **Admin center** (admin.powerplatform.microsoft.com) and navigate to your environment.
    Navigate to **Settings** > **Product** > **Features** . Ensure **Power Apps component framework for canvas apps** is turned **On**:
@@ -1236,7 +1242,8 @@ Now that you've implemented all the features, you must deploy the code component
     - **Highlight Color** = `#FDE7E9` - This is the color to use when the record is inactive.
     - **`HighlightIndicator`** = `"statecode"` - This is the field to compare against. This will be on the **Advanced** panel in the **DATA** section.
 
-    > [!div class="mx-imgBorder"] > ![Properties Panel.](media/canvas-datagrid-5.png "Properties Panel")
+    > [!div class="mx-imgBorder"] 
+    > ![Properties Panel.](media/canvas-datagrid-5.png "Properties Panel")
 
 13. Add a new `TextInput` component and name it `txtSearch`.
 
@@ -1268,7 +1275,8 @@ You can easily debug your code component while it's running inside the canvas ap
 
 Select `Ctrl` + `P` and type `Grid.tsx` or `Index.tsx`. You can then set a break point and step through your code.
 
-> [!div class="mx-imgBorder"] > ![Debug in canvas apps.](media/canvas-datagrid-9.png "Debug in canvas apps")
+> [!div class="mx-imgBorder"] 
+> ![Debug in canvas apps.](media/canvas-datagrid-9.png "Debug in canvas apps")
 
 If you need to make further changes to your component, you don't need to deploy each time. Instead, use the technique described in [Debug code components](debugging-custom-controls.md) to create a Fiddler **AutoResponder** to load the file from your local file system while `npm start watch` is running.
 
@@ -1282,7 +1290,8 @@ REGEX:(.*?)((?'folder'css|html)(%252f|\/))?SampleNamespace\.CanvasGrid[\.\/](?'f
 C:\repos\CanvasGrid\out\controls\CanvasGrid\${folder}\${fname}
 ```
 
-> [!div class="mx-imgBorder"] > ![AutoResponder rule.](media/canvas-datagrid-8.png "AutoResponder rule")
+> [!div class="mx-imgBorder"] 
+> ![AutoResponder rule.](media/canvas-datagrid-8.png "AutoResponder rule")
 
 You'll also need to enable the filters to add the `Access-Control-Allow-Origin` header. More information: [Debugging after deploying into Microsoft Dataverse](debugging-custom-controls.md#debugging-after-deploying-into-microsoft-dataverse).
 
