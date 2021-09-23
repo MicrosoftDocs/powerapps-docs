@@ -1,5 +1,5 @@
 ---
-title: Power Apps Ideas (Preview)
+title: Power Apps Ideas (preview)
 description: Learn about how to use Power Apps Ideas, its limitations and supportability, and benefit from the generated formulas.
 author: norliu
 ms.service: powerapps
@@ -18,7 +18,7 @@ contributors:
   - tapanm-msft
 ---
 
-# Power Apps Ideas (Preview)
+# Power Apps Ideas (preview)
 
 [This article is pre-release documentation and is subject to change.]
 

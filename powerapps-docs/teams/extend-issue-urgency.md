@@ -174,7 +174,7 @@ In this section we'll be creating a flow and replacing the app logic that create
 
 1. Set input for the template step to **Ask in PowerApps**.
 
-1. Add a Planner **Create a task (Preview)** action.
+1. Add a Planner **Create a task (preview)** action.
 
 1. Set the following fields to **Ask in Power Apps**.
 
