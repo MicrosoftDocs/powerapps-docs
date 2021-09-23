@@ -74,5 +74,7 @@ To use the control inside a form, select the "Edit multi-line text" card, and cu
 > [!TIP]
 > Use **Alt+0** while the editor is focused to learn about other keyboard shortcuts.
 
+> [!NOTE]
+> When the toolbar is focused, **Tab** and **Shift+Tab** keys will navigate between toolbar groups. But you can't cycle back from the last group to the first group and vice-versa.
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
