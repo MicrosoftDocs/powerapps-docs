@@ -1,5 +1,5 @@
 ---
-title: "Transform natural language to Power Fx formulas (Preview)"
+title: "Transform natural language to Power Fx formulas (preview)"
 description: Learn about using Power Apps Ideas to transform natural language into Power Fx formulas.
 author: norliu
 ms.service: powerapps
@@ -18,13 +18,9 @@ contributors:
   - tapanm-msft
 ---
 
-# Transform natural language to Power Fx formulas (Preview)
+# Transform natural language to Power Fx formulas (preview)
 
 [This article is pre-release documentation and is subject to change.]
-
-> [!IMPORTANT]
-> - This is a preview feature.
-> - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 
 Power Apps Ideas feature currently supports only **Gallery** and **Data table** controls for the **Items** property, and it's trained for the [Microsoft Dataverse](/connectors/commondataserviceforapps/) connector. So, if you've a gallery bound to a Dataverse table, and are about to compose a formula for its **Items** property, you can benefit from Power Apps Ideas. 
 
@@ -221,4 +217,4 @@ Ideas, select the [Report it now](https://msrc.microsoft.com/report/abuse) link 
 ### See also
 
 - [Formula reference](formula-reference.md)
-- [Power Apps Ideas overview (Preview)](power-apps-ideas.md)
+- [Power Apps Ideas overview (preview)](power-apps-ideas.md)
