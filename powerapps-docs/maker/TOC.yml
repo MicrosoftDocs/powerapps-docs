@@ -549,7 +549,7 @@
           href: ./canvas-apps/working-with-rules.md
         - name: Create or update bulk records
           href: ./canvas-apps/create-update-records-bulk.md
-        - name: Power Apps Ideas (Preview)
+        - name: Power Apps Ideas (preview)
           items:
           - name: Power Apps Ideas
             href: ./canvas-apps/power-apps-ideas.md
@@ -2338,7 +2338,7 @@
       items:
         - name: Use sample apps from Teams store
           href: ../teams/use-sample-apps-from-teams-store.md
-        - name: Boards (Preview)
+        - name: Boards (preview)
           items:
              - name: Use Boards sample app
                href: ../teams/boards.md
@@ -2386,13 +2386,13 @@
                   href: ../teams/add-tag-to-mark-prioritized-ideas.md
                 - name: Enable users to discuss ideas
                   href: ../teams/extend-ideas-discussions.md
-        - name: Get connected (Preview)
+        - name: Get connected (preview)
           items:
             - name: Use Get connected sample app
               href: ../teams/get-connected.md
             - name: Understand Get connected sample app architecture
               href: ../teams/get-connected-architecture.md
-        - name: How to (Preview)
+        - name: How to (preview)
           items:
              - name: Use How to sample app
                href: ../teams/how-to.md
@@ -2460,13 +2460,13 @@
                    href: ../teams/extend-milestones-weekly-report.md
                  - name: Send notification to the Team when work item status is updated in the Milestones sample app
                    href: ../teams/extend-milestones-send notification.md
-        - name: Perspectives (Preview)
+        - name: Perspectives (preview)
           items:
             - name: Use Perspectives sample app
               href: ../teams/perspectives.md
             - name: Understand Perspectives sample app architecture
               href: ../teams/perspectives-architecture.md
-        - name: Profile+ (Preview)
+        - name: Profile+ (preview)
           items:
             - name: Use the Profile+ sample app 
               href: ../teams/profile-app.md
