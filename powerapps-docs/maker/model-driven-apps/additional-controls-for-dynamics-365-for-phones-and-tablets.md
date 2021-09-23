@@ -2,7 +2,7 @@
 title: "List of controls available for model-driven apps | MicrosoftDocs"
 description: "A list of controls available for use with Power Apps model-driven apps for web, phones, and tablets"
 ms.custom: ""
-ms.date: 03/29/2021
+ms.date: 09/10/2021
 ms.reviewer: "matp"
 ms.service: powerapps
 ms.suite: ""
@@ -48,6 +48,7 @@ To use these controls in the form designer:
   
 Following are descriptions for each control you can use on forms.  
 
+
 ## AI Builder business card reader
 
 Use the AI Builder business card reader control to detect business cards and extract their information. You can take photos directly in the component or load images that you've taken. More information: [Use the business card reader component in model-driven apps](/ai-builder/business-card-reader-component-model-driven)
@@ -59,13 +60,6 @@ Use the AI Builder business card reader control to detect business cards and ext
 > - This control will be deprecated in April 2021. More information: [Model-driven app controls deprecation](/power-platform/important-changes-coming#model-driven-app-controls-deprecation)
 > - This control isn’t supported on Android 4.2 and 4.3 devices. It impacts the scrolling experience on those versions.  
   
-|Property|Description|  
-|--------------|-----------------|  
-|Max|Set the maximum value to display on the gauge.|  
-|Min|Set the minimum value to display on the gauge.|  
-|Value|Get or set the value to display on the gauge.|  
-|Step|Set the amount to add or subtract from the current value when entering data with this control.|  
-
 ## Auto-complete
 
  The auto-complete control filters an item list as you type and lets you select a value from the drop-down list. For example, you can use this control to let users choose from a dropdown list of states or countries/regions. This control maps to a **Single Line of Text** type column.  
@@ -274,38 +268,9 @@ Use the star rating to provide a visual representation of a rating. The maximum 
 
 ## Timeline control
 
-Provide a timeline of recent, relevant news articles and Twitter tweets for an account. More information: [Set up the timeline control](set-up-timeline-control.md) 
+The timeline helps users see all customer interaction history across channels, personnel, and the support lifecycle. The timeline is used across Dynamics 365 applications to capture activities like notes, appointments, emails, tasks, and more, to ensure that all interactions with the customer are tracked and visible over time. More information: [Set up the timeline control](set-up-timeline-control.md) 
 
 :::image type="content" source="media/timeline-control-example.png" alt-text="Example of the timeline control in a model-driven app.":::
-  
-|Property|Description|  
-|--------------|-----------------|  
-|CC_Timeline_Title|Property to map for the title of each timeline item.|  
-|CC_Timeline_Title_Desc|Description for Title.|  
-|CC_Timeline_Label1|Column to be displayed below the title of timeline item.|  
-|CC_Timeline_Label1_Desc|Description for Label 1.|  
-|CC_Timeline_Label2|Column to be displayed after Label 1.|  
-|CC_Timeline_Label2_Desc|Description for Label 2.|  
-|CC_Timeline_Label3|Column to be displayed after Label 2.|  
-|CC_Timeline_Label3_Desc|Description for Label 3.|  
-|CC_Timeline_Label4|Column to be displayed after Label 3.|  
-|CC_Timeline_Label4_Desc|Description for Label 4.|  
-|CC_Timeline_Label5|Column to be displayed after Label 4.|  
-|CC_Timeline_Label5_Desc|Description for Label 5.|  
-|CC_Timeline_Timestamp|Column to use for sorting timeline in reverse chronological order.|  
-|CC_Timeline_Timestamp_Desc|Description for Timestamp.|  
-|CC_Timeline_Group|Column to map for grouping timeline.|  
-|CC_Timeline_Group_Desc|Description for Group column.|  
-|CC_Timeline_GroupOrder|Order of the group the item belongs to relative to other groups (assign values 1, 2, 3, and so on for groups to be displayed). The group will be displayed in ascending value of group values assigned.|  
-|CC_Timeline_GroupOrder_Desc|Description for Group Order column.|  
-|CC_Timeline_URL|URL  column to map for displaying the URL of each timeline item.|  
-|CC_Timeline_URL_Desc|Description for URL column.|  
-|CC_Timeline_ThumbnailURL|Column to map for thumbnail of image/icon to display for each item.|  
-|CC_Timeline_ThumbnailURL_Desc|Description for the `ThumbnailURL` column.|  
-|CC_Timeline_Filter|Column to map for timeline filter.|  
-|CC_Timeline_Filter_Desc|Description for Filter.|  
-|CC_Timeline_Footer|Web resource to display as the footer of the timeline.|  
-|CC_Timeline_Footer_Desc|Description for Footer column.|  
 
 ## Timer control
 

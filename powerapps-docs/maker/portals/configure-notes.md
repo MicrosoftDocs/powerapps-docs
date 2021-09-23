@@ -199,7 +199,7 @@ Notes, and the **Add**, **Edit**, and **Delete** buttons for the note control wi
 
 ### Notes created with rich-text editor
 
-You can view the notes created using the [rich-text editor in timeline](../model-driven-apps/set-up-timeline-control.md#enable-or-disable-rich-text-editor-for-notes-in-timeline) on your portal webpage. However, when you try to edit, you'll see the text in HTML markup format.
+You can view the notes created using the [Rich text editor control configurations](/model-driven-apps/rich-text-editor-control#rich-text-editor-control-configuration-options) on your portal webpage. However, when you try to edit, you'll see the text in HTML markup format.
 
 For example, this note shows rich-text format in the model-driven app.
 
