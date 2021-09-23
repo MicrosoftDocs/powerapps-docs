@@ -89,15 +89,15 @@ Sending an email from Power Apps directly is faster for experienced makers, but 
 
 ### See also
 
-- [Boards (Preview) sample app](boards.md)
+- [Boards (preview) sample app](boards.md)
 - [Bulletins sample app](bulletins.md)
 - [Employee ideas sample app](employee-ideas.md)
-- [Get connected (Preview)](get-connected.md)  
+- [Get connected (preview)](get-connected.md)  
 - [Inspection sample apps](inspection.md)  
 - [Issue reporting sample apps](issue-reporting.md)
 - [Milestones sample app](milestones.md)
-- [Perspectives (Preview) sample app](perspectives.md)
-- [Profile+ (Preview) sample app](profile-app.md)
+- [Perspectives (preview) sample app](perspectives.md)
+- [Profile+ (preview) sample app](profile-app.md)
 - [Customize sample apps](customize-sample-apps.md)
 - [Sample apps FAQs](sample-apps-faqs.md)
 

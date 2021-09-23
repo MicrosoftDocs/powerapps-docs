@@ -1,5 +1,5 @@
 ---
-title: Understand Perspectives (Preview) sample app architecture
+title: Understand Perspectives (preview) sample app architecture
 description: Learn about the architecture of the Perspectives sample app.
 author: joel-lindstrom
 ms.service: powerapps
@@ -16,7 +16,7 @@ contributors:
 ---
 
 
-# Understand Perspectives sample apps architecture (Preview)
+# Understand Perspectives sample apps architecture (preview)
 
 [This article is pre-release documentation and is subject to change.]
 
@@ -33,10 +33,6 @@ To understand and use information in this article, you'll need to know about dif
 - [Add a screen to a canvas app and navigate between screens](../maker/canvas-apps/add-screen-context-variables.md)
 
 You'll also need to know about how to [install](use-sample-apps-from-teams-store.md), and [use](perspectives.md) the Perspectives sample app.
-
-> [!IMPORTANT]
->-   This is a preview feature.
->-   Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 
 ## Architecture model 
 
@@ -437,7 +433,7 @@ Variables used from response screen:
 
 ### See also
 
-- [Perspectives (Preview) sample app](perspectives.md)
+- [Perspectives (preview) sample app](perspectives.md)
 - [Customize sample apps](customize-sample-apps.md)
 - [Sample apps FAQs](sample-apps-faqs.md)
 - [Use sample apps from the Microsoft Teams store](use-sample-apps-from-teams-store.md)
