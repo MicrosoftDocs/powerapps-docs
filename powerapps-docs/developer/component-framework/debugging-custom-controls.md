@@ -112,7 +112,7 @@ To test these scenarios, you will need to first deploy your code component and t
 
 Modern browsers have a built-in set of developer tools that allow you to inspect the HTML, CSS, and JavaScript loaded on the current page. You can access these developer tools using the keyboard shortcut `Ctrl`+`Shift`+`I`. Using the `F12` key is also a common keyboard shortcut to open the developer tools however this will not work inside Power Apps Studio due to it being already used for the **Download App** keyboard shortcut.
 
-### Bundling using web pack
+### Bundling using webpack
 
 When writing code components using TypeScript, your code will likely look different from the JavaScript that is emitted into the bundled code component output.  When you run `npm start` or `npm start watch`, the `pcf-scripts` module (added to the `packages.json` by running `pac pcf init`) uses web pack to build multiple TypeScript files into a single `bundle.js` inside the `out` folder. This folder will also contain any other resources (for example, `html`/`css`) that are referenced by your `ControlManifest.Input.xml` including the manifest itself, but named instead as just `ControlManifest.xml`.
 
