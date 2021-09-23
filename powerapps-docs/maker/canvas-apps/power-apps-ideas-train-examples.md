@@ -1,5 +1,5 @@
 ---
-title: "Transform examples to Power Fx formulas (Preview)"
+title: "Transform examples to Power Fx formulas (preview)"
 description: Learn about how to train Power Apps with your own examples and generate formulas using Power Apps Ideas.
 author: norliu
 ms.service: powerapps
@@ -18,13 +18,9 @@ contributors:
   - tapanm-msft
 ---
 
-# Transform examples to Power Fx formulas (Preview)
+# Transform examples to Power Fx formulas (preview)
 
 [This article is pre-release documentation and is subject to change.]
-
-> [!IMPORTANT]
-> - This is a preview feature.
-> - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 
 We all had the time when we struggled with manipulation of text when we’re building apps. Searching online for tips and examples, or tools to test RegEx patterns. **Train with examples** uses [PROSE](https://www.microsoft.com/research/group/prose/) (Programming by Examples and Natural Language) so you can now just give us one or more desired output, and then Power Apps can automatically generate the formula for you.
 
@@ -101,5 +97,5 @@ The following capabilities aren't supported:
 ### See also
 
 - [Formula reference](formula-reference.md)
-- [Power Apps Ideas overview (Preview)](power-apps-ideas.md)
-- [Transform natural language to Power Fx formulas (Preview)](power-apps-ideas-transform.md)
+- [Power Apps Ideas overview (preview)](power-apps-ideas.md)
+- [Transform natural language to Power Fx formulas (preview)](power-apps-ideas-transform.md)
