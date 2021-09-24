@@ -142,7 +142,7 @@ To complete this exercise, we would need the ability to log in into Teams that w
 
 1. Add another step by selecting **+New step**.
 
-1. Select the action Post adaptive card in a chat or channel (Preview).
+1. Select the action Post adaptive card in a chat or channel (preview).
 
     - Post as - User
 

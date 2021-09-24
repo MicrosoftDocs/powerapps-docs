@@ -1,5 +1,5 @@
 ---
-title: Add a chatbot to a page (Preview)
+title: Add a chatbot to a page (preview)
 description: "Learn how to add a Power Virtual Agents chatbot to a Power Apps portals page to automatically answer questions posted by a visitor in a chat conversation."
 author: neerajnandwana-msft
 ms.service: powerapps
@@ -14,7 +14,7 @@ contributors:
     - tapanm-msft
 ---
 
-# Add chatbot to a page (Preview)
+# Add chatbot to a page (preview)
 
 [This article is pre-release documentation and is subject to change.]
 
