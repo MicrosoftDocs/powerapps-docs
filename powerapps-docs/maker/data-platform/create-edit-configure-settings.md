@@ -4,7 +4,7 @@ description: "Use settings to provide tailored app experiences."
 Keywords: settings, settings environment value, settings app value, model-driven app
 author: aneesmsft
 ms.subservice: dataverse-maker
-ms.author: aneesmsft
+ms.author: aneesa
 ms.reviewer: matp
 manager: kvivek
 ms.date: 09/22/2021
