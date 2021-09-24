@@ -2,9 +2,9 @@
 title: "Use settings to provide tailored app experiences | MicrosoftDocs"
 description: "Use settings to provide tailored app experiences."
 Keywords: settings, settings environment value, settings app value, model-driven app
-author: aneesa
+author: aneesmsft
 ms.subservice: dataverse-maker
-ms.author: aneesa
+ms.author: aneesmsft
 ms.reviewer: matp
 manager: kvivek
 ms.date: 09/22/2021
