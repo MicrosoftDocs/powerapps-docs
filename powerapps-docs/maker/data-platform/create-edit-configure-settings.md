@@ -27,6 +27,9 @@ Settings are made up of three sub-components: Setting definition, setting enviro
 |**Setting environment value** | Settting environment value is used to override the setting's default value for all apps in an environment. |
 |**Setting app value** | Settting app value is used to override the setting's default value and any setting environment value for a specific app. |
 
+> [!NOTE]
+> To follow the steps listed below you need to have **Solution preview on**. When viewing the list of solutions, in the command bar, ensure you see **Solution preview on**. If you see **Solution preview off**, use the toggle to enable the preview.
+
 ## Setting definition
 A setting definition specifies the base properties of a settings. The full list of properties that can be configured on a setting definition are listed below. Some of these properties cannot be changed after the setting has been created.
 
@@ -40,37 +43,104 @@ A setting definition specifies the base properties of a settings. The full list 
 |**Data type** | The Data type of a setting controls how the setting’s value is stored. Data type can be set to Number, String or Yes/No. Data type cannot be changed after the setting has been created. |
 |**Default value** | The default value specifies the setting's value that will be used until it is overridden by a setting environment value or a setting app value. |
 
-### Creating a setting definition
+### Adding a new setting definition
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 1. In the navigation pane, select **Solutions**.
-1. In the command bar, ensure you see **Solution preview on**. If you see **Solution preview off**, use the toggle to enable the preview.
 1. From the list of solutions, open the solution you want to add the setting to.
 1. In the command bar, select **New > More > Setting > Setting definition**.
-1. In the **New Setting** dialog, provide values for each of the properties based on your requirements.
+1. In the **New setting** dialog, provide values for each of the properties based on your requirements.
 1. When you are done providing values for the properties, select **Save**.
+
+### Adding an existing setting definition
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. In the navigation pane, select **Solutions**.
+1. From the list of solutions, open the solution you want to add the setting to.
+1. In the command bar, select **Add existing > More > Setting**.
+1. In the **Add existing setting definition** dialog, select one or more settings that you wish to add.
+1. Select **Next**
+1. In the **Selected setting definition** dialog, for each setting you have selected, you will have the option to **Include setting definition**. You can also **Include setting environment value** for each setting, if one exists. 
+1. Select **Add** to add the setting definitions and/or setting environment values.
 
 ### Updating a setting definition
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 1. In the navigation pane, select **Solutions**.
-1. In the command bar, ensure you see **Solution preview on**. If you see **Solution preview off**, use the toggle to enable the preview.
 1. From the list of solutions, open the solution you created the setting in.
-1. In the tree view click on **Settings** or **Settings > Setting definitions**.
-1. In the **Edit Setting** dialog, update values for any of the properties you want to change. Note that some properties cannot be updated after a setting has been created.
+1. In the tree view select **Settings > Setting definitions**.
+1. Click on the setting definition that you wish to update.
+1. In the **Edit setting** dialog, update values for any of the properties you want to change. Note that some properties cannot be updated after a setting has been created.
 1. When you are done updating the values for the properties, select **Save**.
 
-### Add existing setting
-
-### Removing or deleting a setting definition
+### Removing a setting definition
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 1. In the navigation pane, select **Solutions**.
-1. In the command bar, ensure you see **Solution preview on**. If you see **Solution preview off**, use the toggle to enable the preview.
 1. From the list of solutions, open the solution you created or added the setting to.
-1. In the tree view click on **Settings** or **Settings > Setting definitions**.
-1. Select the setting definition you wish to delete or remove.
-1. In the command bar, select **Remove > Remove from this solution** or **Remove > Delete from this environment**.<br> **Remove from this solution** will remove the setting definition from the current solution but it will continue to be a part of the default solution or any other solutions it was added to.<br> **Delete from this environment** will delete the setting definition from the current environment and it will no longer be a part of any solutions in that environment.
+1. In the tree view select **Settings > Setting definitions**.
+1. Select the setting definition you wish to remove.
+1. In the command bar, select **Remove > Remove from this solution**.<br> **Remove from this solution** will remove the setting definition from the current solution but it will continue to be a part of the default solution or any other solutions it was added to.
+
+### Deleting a setting definition
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. In the navigation pane, select **Solutions**.
+1. From the list of solutions, open the solution you created or added the setting to.
+1. In the tree view select **Settings > Setting definitions**.
+1. Select the setting definition you wish to delete.
+1. In the command bar, select **Remove > Delete from this environment**.<br> **Delete from this environment** will delete the setting definition from the current environment and it will no longer be a part of any solutions in that environment.
 
 ## Setting environment value
 Settting environment value is used to override the setting's default value for all apps in an environment.
+
+### Adding a new setting environment value
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. In the navigation pane, select **Solutions**.
+1. From the list of solutions, open the solution you want to add the setting environment value to.
+1. If the setting definition is available in the solution
+   1. Click on the setting definition.
+   1. In the **Edit setting value** dialog, in the **Setting environment value** section, select **New value**.
+   1. Provide the value and select **Save**.
+1. If the setting definition is not available in the solution
+   1. In the command bar, select **New > More > Setting > Setting environment value**.
+   1. Select the setting you wish to add the setting environment value for and select **Add**.
+   1. In the **New setting environment value** dialog, in the **Setting environment value** section, select **New value**.
+   1. Provide the value and select **Save**.
+
+### Adding an existing setting environment value
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. In the navigation pane, select **Solutions**.
+1. From the list of solutions, open the solution you want to add the setting environment value to.
+1. If the setting definition is available in the solution
+   1. Click on the setting definition.
+   1. In the **Edit setting value** dialog, in the **Setting environment value** section, select **Add existing value**.
+   1. Update the value if needed and select **Save**.
+1. If the setting definition is not available in the solution
+   1. In the command bar, select **Add existing > More > Setting**.
+   1. In the **Add existing setting definition** dialog, select one or more settings that you wish to add setting environment values for.
+   1. Select **Next**
+   1. In the **Selected setting definition** dialog, for each setting you have selected, you will have the option to **Include setting environment value**, if one exists. You can also **Include setting definition** for each setting, if you want. 
+   1. Select **Add** to add the setting environment values and/or setting definitions.
+
+### Updating a setting environment value
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. In the navigation pane, select **Solutions**.
+1. From the list of solutions, open the solution you added the settings environment value to.
+1. In the tree view select **Settings > Setting environment values**.
+1. Click on the setting environment value that you wish to update.
+1. In the **Edit setting** dialog, in the **Setting environment value** section, update the value and select **Save**.
+
+### Removing a setting environment value
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. In the navigation pane, select **Solutions**.
+1. From the list of solutions, open the solution you created or added the setting to.
+1. In the tree view select **Settings > Setting environment values**.
+1. Select the setting environment value you wish to remove.
+1. In the command bar, select **Remove > Remove from this solution**.<br> **Remove from this solution** will remove the setting environment value from the current solution but it will continue to be a part of the default solution or any other solutions it was added to.
+
+### Deleting a setting environment value
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. In the navigation pane, select **Solutions**.
+1. From the list of solutions, open the solution you created or added the setting to.
+1. In the tree view select **Settings > Setting environment values**.
+1. Select the setting definition you wish to delete.
+1. In the command bar, select **Remove > Delete from this environment**.<br> **Delete from this environment** will delete the setting environment value from the current environment and it will no longer be a part of any solutions in that environment.
 
 ## Setting app value
 Settting app value is used to override the setting's default value and any setting environment value for a specific app.
