@@ -1,6 +1,6 @@
 ---
-title: Work with Canvas Studio Git vserion control
-description: Learn how to use Git to manage app versions and enable co-authoring.
+title: Work with Experimental Co-authoring
+description: Learn how to use enable expiremental co-authoring in Power Apps Studio.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -18,7 +18,7 @@ contributors:
   - tapanm-msft
   - gregli-msft
 ---
-# Work with Canvas Studio Git version control
+# Work with Experimental Co-authoring
 
 > [!IMPORTANT]
 > This feature is being provided to you as a private preview under a non-disclosure agreement.  Please do not distribute information about this feature to others.  Please send feedback or questions to [PAGit@microsoft.com](mailto:PAGit@microsoft.com).
