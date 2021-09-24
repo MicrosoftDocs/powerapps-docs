@@ -25,22 +25,52 @@ Settings are made up of three sub-components: Setting definition, setting enviro
 |:--------------|:-------------------------|
 |**Setting definition** | A setting definition specifies the base properties of a settings like its name, description, data type and default value. |
 |**Setting environment value** | Settting environment value is used to override the setting's default value for all apps in an environment. |
-|**Setting app value** | Settting app value is used to override both the setting's default value and any setting environment value for a specific app. |
+|**Setting app value** | Settting app value is used to override the setting's default value and any setting environment value for a specific app. |
 
 ## Setting definition
-A setting definition specifies the base properties of a settings. Some of these properties cannot be updated after the setting has been created.
+A setting definition specifies the base properties of a settings. The full list of properties that can be configured on a setting definition are listed below. Some of these properties cannot be changed after the setting has been created.
 
 | Property | Description |
 |:--------------|:-------------------------|
 |**Display name** | The name displayed to consumers of the setting in any framework generated UI. |
-|**Name** | The unique name of the setting in an environment. Name is automatically generated based on the display name provided but can be changed before the settings is created. Once a setting is created the Name cannot be changed as it may be referenced in applications or code. <br> The Name has a prefix that maps to the solution (publisher)[create-solution.md#solution-publisher]. This prefix is intended to give your objects a unique name if you wish to import them into another environment in the future (which would have a different prefix). |
+|**Name** | The unique name of the setting in an environment. Name is automatically generated based on the display name provided but can be changed before the settings is created. Once a setting is created the Name cannot be changed as it may be referenced in applications or code.<br> Name has a prefix that corresponds to the solution (publisher)[create-solution.md#solution-publisher]. This prefix is intended to give the setting a unique name if you wish to import them into another solution or environment in the future (which would have a different prefix). |
 |**Description** | The description helps others understand what the setting is used for. |
-|**Release level** | Rrelease level is used to inform the framework and other consumers of the setting about the state of the feature that the setting is used with. <br> It can be one of the two values: Generally Available or Preview. |
-|**Overridable** | Overridable enables a setting’s default value to be overridden by an environment or an app. You cannot change overridable after a setting has been created. |
-|**Data type** | The data type of a setting controls how the setting’s value is stored. Currently suppoYou cannot change the data type after a setting has been created. |
-|**Default value** | The default value of the setting |
+|**Release level** | Release level is used to inform the framework and other consumers of the setting about the state of the feature that the setting is used with.<br> Release level can be set to Generally Available or Preview. |
+|**Overridable** | Overridable enables a setting’s default value to be overridden by an environment (setting environment value) or an app (setting app value).<br> A setting that is Overridable can be further configured to enable the override behavior for app and environment, environment only or app only.<br> Overridable cannot be changed after the setting has been created. |
+|**Data type** | The Data type of a setting controls how the setting’s value is stored. Data type can be set to Number, String or Yes/No. Data type cannot be changed after the setting has been created. |
+|**Default value** | The default value specifies the setting's value that will be used until it is overridden by a setting environment value or a setting app value. |
 
-Settting environment value can be used to override the setting's default value for an environment. Setting environment value applies to all apps in that environment.
-If a setting environment value exists for a setting, all apps in that environment will get that value instead of the setting's default value. If no setting environment value exists for a setting, all apps in that environment will get the setting's default value.
+### Creating a setting definition
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. In the navigation pane, select **Solutions**.
+1. In the command bar, ensure you see **Solution preview on**. If you see **Solution preview off**, use the toggle to enable the preview.
+1. From the list of solutions, open the solution you want to add the setting to.
+1. In the command bar, select **New > More > Setting > Setting definition**.
+1. In the **New Setting** dialog, provide values for each of the properties based on your requirements.
+1. When you are done providing values for the properties, select **Save**.
 
-Settting app value can be used to override both the setting's default value as well as any setting environment value created for that setting in that environment. Setting app value applies only to one specific app. If a setting app value exists for a setting, that app will get that value instead of the setting's default value. If no setting app value exists for a setting, that app will get the setting's default value.
+### Updating a setting definition
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. In the navigation pane, select **Solutions**.
+1. In the command bar, ensure you see **Solution preview on**. If you see **Solution preview off**, use the toggle to enable the preview.
+1. From the list of solutions, open the solution you created the setting in.
+1. In the tree view click on **Settings** or **Settings > Setting definitions**.
+1. In the **Edit Setting** dialog, update values for any of the properties you want to change. Note that some properties cannot be updated after a setting has been created.
+1. When you are done updating the values for the properties, select **Save**.
+
+### Add existing setting
+
+### Removing or deleting a setting definition
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. In the navigation pane, select **Solutions**.
+1. In the command bar, ensure you see **Solution preview on**. If you see **Solution preview off**, use the toggle to enable the preview.
+1. From the list of solutions, open the solution you created or added the setting to.
+1. In the tree view click on **Settings** or **Settings > Setting definitions**.
+1. Select the setting definition you wish to delete or remove.
+1. In the command bar, select **Remove > Remove from this solution** or **Remove > Delete from this environment**.<br> **Remove from this solution** will remove the setting definition from the current solution but it will continue to be a part of the default solution or any other solutions it was added to.<br> **Delete from this environment** will delete the setting definition from the current environment and it will no longer be a part of any solutions in that environment.
+
+## Setting environment value
+Settting environment value is used to override the setting's default value for all apps in an environment.
+
+## Setting app value
+Settting app value is used to override the setting's default value and any setting environment value for a specific app.
