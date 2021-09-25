@@ -350,58 +350,51 @@ Legend
 2. The **Sort activities by** column displays a list when selected. You can select from this list how you want your data to be sorted and displayed on timeline in the form.<BR><BR>
 
 #### Sort date
-<!-- Start reviewing here-->
-Some dates can only exist on specific types of activities. For example, **Date sent** or **Date delivery last attempted** only apply to email. If you sort by such dates, then non-email activities end up grouped together without any ordering. You can't create a custom date column, but if you need more flexibility, you can use **Sort date**, which is empty by default and requires that you populate it for each activity record with the date you want to use for sorting. Some of the ways you can populate the date are by using Microsoft Power Automate (previously Microsoft Flow), business rules, or Javascript. 
+
+Some dates can only exist on specific types of activities. For example, **Date sent** or **Date delivery last attempted** only apply to email. If you sort by such dates, then non-email activities end up grouped together without any ordering. You can't create a custom date column, but if you need more flexibility, you can use **Sort date**, which is empty by default and requires that you populate it for each activity record with the date you want to use for sorting. Some of the ways you can populate the date are by using Microsoft Power Automate, business rules, or Javascript.
 
 When using Sort date, keep in mind the following:
-- If you set a value in Sort date, you can use it for more customized sorting, but be aware that you have to populate it for every activity record or it won't work. Sort date has to be configured for each timeline instance, and must be set up for all three main forms in the Account table.
-- If the DateTime column is on the same calendar day, the date won't be displayed if DateTime was earlier in the day compared to current time.
-- Sort date is not based on a 24-hour period, but rather, compares the **DateTime** column value with the current date and time (based on the Dynamics 365 user's preferred time zone). If the value entered occurred earlier in the day, the date isn't displayed.
+- If you set a value in **Sort date**, you can use it for more customized sorting, but be aware that you have to populate it for every activity record or it won't work. The sort date has to be configured for each timeline instance, and must be set up for all three main forms in the account table.
+- If the **DateTime** column is on the same calendar day, the date won't be displayed if **DateTime** was earlier in the day compared to current time.
+- The sort date is not based on a 24-hour period, but rather, compares the **DateTime** column value with the current date and time (based on the user's preferred time zone). If the value entered occurred earlier in the day, the date isn't displayed.
 
-### Set create activities form type in timeline
+### Set create activities form type in the timeline
 
 ![How to set create activities form type in timeline.](media\timeline-how-to-set-create-activities-form-type-1a.png "How to set create activities form type in timeline")
 
-1. The **Create activities** feature allows you to choose which type of form you want to work in based on your business needs.  
-2. **Quick create form** appears in a model on the right. There are some activities that don't support quick create that will always use email, for example. For more information, see [Create or edit model-driven app quick create forms for a streamlined data entry experience](/powerapps/maker/model-driven-apps/create-edit-quick-create-forms).
-<BR>**Main form** navigates you to the activity table main form. For more information, see [Create or edit a model-driven app main form for an table](/powerapps/maker/model-driven-apps/create-edit-main-forms).  
-
-> [!NOTE]
-> If a **quick create** form for an activity has not been created, then the main form will be used. If **quick create** form is not supported, such as with email, the **main form** will always be used. 
+1. **Create activities using** lets you choose which type of form users will work in based on your business needs.  
+2. Select **Quick create form** or **Main form**. There are some activities that don't support quick create forms, such as email, and will use a main form. More information: [Create or edit model-driven app quick create forms for a streamlined data entry experience](/powerapps/maker/model-driven-apps/create-edit-quick-create-forms) and [Create or edit a model-driven app main form for an table](/powerapps/maker/model-driven-apps/create-edit-main-forms).  
 
 ### Set the activity rollup type in timeline
 
-The activity rollup type can be configured for timelines on forms for the **Account, Contact and Opportunity** table. The available types of rollups are **Extended**, **Related**, and **None**. Activity rollup only affects accounts and contacts in Dynamics 365 apps, such as Dynamics 365 Customer Service applications. To only show activities that are directly related to the table in timeline, select **None**.
+The activity rollup type can be configured for timelines on forms for the account and contact tables. The available types of rollups are **Extended**, **Related**, and **None**. Activity rollup only affects accounts and contacts in Dynamics 365 apps, such as Dynamics 365 Customer Service applications. To only show activities that are directly related to the table in timeline, select **None**.
 
 More information is on rollup types is available from [RollupType EnumType](/dynamics365/customer-engagement/web-api/rolluptype).
 
 ![Activity rollup type.](media\activity-rollup-type.png "Activity rollup type")
 
+### Timeline performance
 
-### Timeline performance impacts
+Only enable the activities that you need on the form. If you select more than 10 **Activity types**, a warning notice displays to let you know that the number of activity types you have selected impacts the performance of your timeline. To improve timeline performance, consider limiting activity types to 10 or less.
 
-Only enable the activities that you need on this form. If you select more than 10 **Activity types**, a warning notice displays to let you know that the number of activity types you have selected impacts the performance speed on your timeline. To improve timeline performance speed, consider limiting activity types to 10 or less.
-
-![Timeline performance impacts.](media\timeline-performance-impacts-1a.png "Timeline performance impacts")
+![Timeline performance impact.](media\timeline-performance-impacts-1a.png "Timeline performance impact")
 
 ## Notes on timeline
 
 |Form designer configuration view | |Form designer display view|
 |-------------------|-|------------|
 |![Notes on timeline](media\timeline-notes-1a.png "Notes on timeline") | | ![Notes on timeline - Runtime](media\timeline-notes-3.png "Notes on timeline - Runtime")|
-|The **Notes** the section expands when enabled and allows you to:<BR>1. **Sort notes by** date created or date modified. The **Modified On** date is the default setting. <BR>2. Add a relative web resource path in the **Rich text editor configuration URL** column for customized note capability. More information: [Add the rich text editor control to a model-driven app](/powerapps/maker/model-driven-apps/rich-text-editor-control) ||1. When enabled, Notes can be access via the **Create a timeline record** ![Create a timeline record.](media\timeline-create-a-record-icon.png "Create a timeline record") icon.<BR>2. A dropdown will appear where you can access **Notes**.<BR>3. Use the Notes feature to create a note to add to a record using rich text editing.|
+|The **Notes** section expands when enabled and allows you to:<BR>1. **Sort notes by** date created or date modified. The **Modified On** date is the default setting. <BR>2. Add a relative web resource path in the **Rich text editor configuration URL** column for customized note capability. More information: [Add the rich text editor control to a model-driven app](/powerapps/maker/model-driven-apps/rich-text-editor-control) ||1. When enabled, Notes can be access via the **Create a timeline record** ![Create a timeline record.](media\timeline-create-a-record-icon.png "Create a timeline record") icon.<BR>2. A dropdown list appears where you can access **Notes**.<BR>3. Use **Notes** to create a note to add to a record using rich text editing.|
   
-### Configure form for notes
+### Configure the form for notes
 
-You can configure how information is displayed in notes, such as relevant users and dates, and whether or not to include labels. This enables you to increase or reduce the number of timeline records that appear onscreen.
+In the **Notes** area, under **Configure form**, select**Default form** to configure how information is displayed in notes, such as relevant users and dates, and whether or not to include labels. This enables you to increase or reduce the number of timeline records that appear onscreen.
 
-![Configure the form for notes.](media\timeline-configure-form-notes.png "Configure the form for notes")
-
-Go to your timeline configuration in [make.powerapps.com](https://make.powerapps.com "make.powerapps.com"), scroll down to the **Notes** section containing the **Configure form** column, and edit the following columns in the default form:
+:::image type="content" source="media/timeline-configure-form-notes.png" alt-text="Configure the form for notes":::
 
 - Header
   - Label option: Hide, show, or show on hover the label, "Created by" or "Modified by".
-  - Label: Select the **Use default label** checkbox label to display the label "Note modified by". Deselect the checkbox to display the label "Modified by".
+  - Label: Select the **Use default label** checkbox label to display the label "Note modified by". Clear the checkbox to display the label "Modified by".
   - Data column: Select to show either the user who created the note or the user who modified the note. The label changes to match the data column you selected.
   - Display option: Always show, show on expand, or hide this header containing the user who created or modified the note.
 - Body1
@@ -417,17 +410,17 @@ Go to your timeline configuration in [make.powerapps.com](https://make.powerapps
 
 ## Posts on timeline
 
-To enable rich text posts on timeline, contact [Microsoft Support](/power-platform/admin/get-help-support). 
+To enable rich text posts on the timeline, contact [Microsoft Support](/power-platform/admin/get-help-support). 
 
 > [!NOTE]
-> Posts are currently only available for Dynamics 365 apps, such as Dynamics 365 Customer Service.
+> Posts are only available with certain Dynamics 365 apps, such as Dynamics 365 Customer Service.
 
 |Form designer configuration view | | Form designer display view|
 |-------------------|--|------------|
 |![Posts on timeline](media\timeline-posts-1a-rich-text.png "Posts on timeline") ||![Posts on timeline - Runtime](media\timeline-posts-1b.png "Posts on timeline - Runtime")|
-|The **Posts** the section expands when enabled and allows you to:<br>1. **Sort notes by** date created or date modified. The **Created On** date is the default setting.<BR>2. Add a relative web resource path in the **Rich text editor configuration URL** column for customized post capability. More information: [Add the rich text editor control to a model-driven app](/powerapps/maker/model-driven-apps/rich-text-editor-control) || 1. When enabled, posts can be accessed via **Create a timeline record** ![Create a timeline record.](media\timeline-create-a-record-icon.png "Create a timeline record") icon.<BR>2. A dropdown menu displays, and you can access **Posts**.<BR>3. Use the Post feature to create a post to add to a record.<BR><BR> When date **Created On** is used to sort posts on the timeline, the location in the timeline remains constant even when there are responses to that post. <BR><BR> When date **Modified On** is used to sort posts on the timeline, the location in the timeline adjusts to the top when there are responses to that post. <BR><BR> **NOTE**: The timeline doesn't automatically refresh when post replies are added.|
+|The **Posts** the section expands when enabled and allows you to:<br>1. **Sort notes by** date created or date modified. The **Created On** date is the default setting.<BR>2. Add a relative web resource path in the **Rich text editor configuration URL** column for customized post capability. More information: [Add the rich text editor control to a model-driven app](/powerapps/maker/model-driven-apps/rich-text-editor-control) || 1. When enabled, posts can be accessed by selecting **Create a timeline record** ![Create a timeline record.](media\timeline-create-a-record-icon.png "Create a timeline record").<BR>2. A dropdown menu displays, and you can access **Posts**.<BR>3. Use **Posts** to create a post to add to a record.<BR><BR> When date **Created On** is used to sort posts on the timeline, the location in the timeline remains constant even when there are responses to that post. <BR><BR> When date **Modified On** is used to sort posts on the timeline, the location in the timeline adjusts to the top when there are responses to that post. <BR><BR> **NOTE**: The timeline doesn't automatically refresh when post replies are added.|
 
-### Configure form for posts
+### Configure the form for posts
 
 You can configure how information is displayed in posts, such as relevant users and dates, and whether or not to include labels. This enables you to increase or reduce the number of timeline records that appear onscreen.
 
@@ -456,7 +449,7 @@ To enable mentions in notes and posts, contact [Microsoft Help + support](/power
      &flags=FCB.TimelineWallRichTextPosts=true,FCB.TimelineNotesRichTextMentions=true
 
 ```
-
+<!-- Start here -->
 When the rich text editor is enabled, users can mention other users and entities in notes and posts using the **@** and **#** symbols. Configuration for the rich text editor is available in the maker experience in **Power Apps**: [make.powerapps.com](https://make.powerapps.com "make.powerapps.com"). The users and entities that are displayed are pulled from the configuration file provided in the **Rich text editor configuration URL** column. More information: [Use the rich text editor control in Power Apps](/powerapps/maker/model-driven-apps/rich-text-editor-control)
 
 By default, the **@** symbol returns matches with the first name, last name, or email address of system users starting with the search string.
