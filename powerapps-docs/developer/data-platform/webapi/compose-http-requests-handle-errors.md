@@ -80,7 +80,7 @@ Although the OData protocol allows for both JSON and ATOM format, the web API on
   
 Every request should include the `Accept` header value of `application/json`, even when no response body is expected. Any error returned in the response will be returned as JSON. While your code should work even if this header isn't included, we recommend including it as a best practice  
   
-The current OData version is 4.0, but future versions may allow for new capabilities. To ensure that there is no ambiguity about the OData version that will be applied to your code at that point in the future, you should always include an explicit statement of the current OData version and the Maximum version to apply in your code. Use both `OData-Version` and `OData-MaxVersion` headers set to a value of 4.0.  
+The current OData version is 4.0, but future versions may allow for new capabilities. To ensure that there is no ambiguity about the OData version that will be applied to your code at that point in the future, you should always include an explicit statement of the current OData version and the Maximum version to apply in your code. Use both `OData-Version` and `OData-MaxVersion` headers set to a value of `4.0`.  
  
 Queries which expand collection-valued navigation properties may return cached data for those properties that doesn't reflect recent changes. Include `If-None-Match: null` header in the request body to override browser caching of Web API request. For more information see [Hypertext Transfer Protocol (HTTP/1.1): Conditional Requests 3.2 : If-None-Match](https://tools.ietf.org/html/rfc7232#section-3.2).
  

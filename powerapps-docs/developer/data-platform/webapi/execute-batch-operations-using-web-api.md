@@ -98,7 +98,7 @@ The end of the change set must contain a termination indicator like the followin
 
 <a name="bkmk_handling_errors"></a>
 
-## Handling Errors
+## Handling errors
 
 When an error occurs for a request within a batch, the error for that request will be returned for the batch request and additional requests will not be processed.
 
