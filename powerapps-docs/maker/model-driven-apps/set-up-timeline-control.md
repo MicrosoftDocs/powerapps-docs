@@ -42,6 +42,8 @@ For custom tables to appear in the list of activities that can be added to a tim
 - Set the table **Type** as **Activity**.
 - Check the **Enable attachments** setting if you want app users to be able to add attachments and notes to the custom activity record.
 
+More information: [Create a custom table](../data-platform/data-platform-create-entity.md)
+
 ### Add the timeline component to a form
 
 1. Sign into [Power Apps](https://make.powerapps.com), and then go to the **Dataverse** section.
