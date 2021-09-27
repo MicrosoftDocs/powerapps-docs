@@ -517,9 +517,9 @@ If you are using a Dynamics 365 app other than Customer Service Hub or Customer 
 
 You can create custom tables that display on a timeline. More information: [Display a custom table in a timeline](#display-a-custom-table-in-a-timeline) 
 
-## Configure blocked attachment file types in timeline
+## Configure blocked attachment file types
 
-Power platform administrators can configure the file types that are blocked from being added as file attachments.
+Power platform administrators can configure the file types that are blocked from being added as file attachments to records including records in a timeline.
 
 1. Find the **Set blocked file extensions for attachments** systems setting. More information: [Open the System Settings dialog box General tab](/power-platform/admin/system-settings-dialog-box-general-tab#open-the-system-settings-dialog-box)
 1. In the text box of blocked file attachments, type the file extension type you want to block for attachments (for example, ".pdf"). Separate file types with a semi-colon.
