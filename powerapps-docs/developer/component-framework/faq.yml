@@ -48,6 +48,14 @@ sections:
       - question: Can I access form context like I can in model-driven apps event handlers?
         answer: |
           Accessing form context directly in a control is not supported. Code components are expected to work across various products like model-driven apps, canvas apps, dashboards, and hence they cannot have dependency on the form context. A work around is to make the code component bound to a column and add an `OnChange` event handler to that column. The code component can update the column value, and the `OnChange` event handler can access the form context. Column not bound to a table could be used, or a column bound to a table with `submitMode` set to `never` can be used. We will add support for the custom events in future which can be used for communicating changes outside of a control without adding a column configuration.
+
+      - question: Code components cannot remove properties
+        answer: |
+          Make the properties optional and hidden.
+
+      - question: Code components cannot add required properties
+        answer: |
+          Create a new code component with new name and reconfigure the control.
      
 additionalContent: |
   ## See also
