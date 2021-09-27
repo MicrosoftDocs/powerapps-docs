@@ -34,7 +34,15 @@ This experience gives app makers the ability to configure the information displa
 
 ## Add or configure a timeline
 
-A timeline control is located on a form within table. Any timeline control that's on a form can be configured. For example, an account table has three standard forms, and each of those forms can have a timeline that can be configured. For custom tables where you want to add a timeline control, make sure that the **Enable attachments** setting is selected for the table. Notice that there can be only one timeline per form.
+A timeline control is located on a form within table. Any timeline control that's on a form can be configured. For example, an account table has three standard forms, and each of those forms can have a timeline that can be configured. Notice that there can be only one timeline per form.
+
+### Display a custom table in a timeline
+
+For custom tables to appear in the list of activities that can be added to a timeline control, make sure that when you create the table you configure the following settings:
+- Check the table **Type** as **Activity**.
+- Check the **Enable attachments** setting if you want app users to be able to add attachments and notes to the custom activity record.
+
+### Add a timeline to a form
 
 1. Sign into [Power Apps](https://make.powerapps.com), and then go to the **Dataverse** section.
 1. Select **Tables**, open the table you want, and then select the **Forms** tab.
@@ -42,18 +50,20 @@ A timeline control is located on a form within table. Any timeline control that'
 1. Select **Components** > **Main**. A landing page is displayed.
 1. Scroll down to the **Timeline** component on the left side, then drag and drop it into a section on the form.
    ![Adding or removing a timeline from an entity form.](media\timeline-add-or-remove-entity-from-form-1b.png "Adding or removing a timeline from an entity form")
+1. Make changes to the timeline settings as appropriate. More information: [Configure the timeline component](#configure-the-timeline-component)
+1. Before you can view any configuration changes on the table form, you must save and publish your updates on the timeline component. Select **Save**, and then select **Publish** to make your form changes available on the table form for the environment.
 
 Note the following when you work with the timeline control in the form designer.
 - If the timeline control is unavailable to add to a form, it means a timeline already exists on the form. You can only have one timeline per form.
-- To remove the timeline component from a form, highlight the inside of the **Timeline** component area, and then select the Delete key.
+- To remove the timeline component from a form, select the **Timeline** component area, and then press the Delete key.
 - Since the timeline component relies exclusively on underlying related data, **Almost there** is displayed in the timeline section.
-- Because you are in a create and/or edit state on the form, there is no underlying data, so the timeline section is blank.
+- Because you are in a create and/or edit state on the form, there is no underlying data, so the timeline section is blank in the form designer.
 
 ## Configure the timeline component
 
 The timeline component is rich in features and functionality that can be configured and tailored to support specific business needs. The timeline is comprised of features and functionality that you configure in the timeline component, which is then displayed in the table form.
 
-The following overview provides a detailed breakdown of each timeline feature, what it supports, how it is configured, and how it is displayed in the corresponding timeline section on the table form:
+The following overview provides a detailed breakdown of each timeline setting, what it supports, how it is configured, and how it is displayed in the corresponding timeline section on the table form:
 
 - **Display options** 
   - [Timeline component name](#timeline-component-name)
@@ -66,7 +76,7 @@ The following overview provides a detailed breakdown of each timeline feature, w
   -	[Notes](#notes)
   -	[Posts](#posts)
 
-- **[How to create and add custom activities](/powerapps/maker/model-driven-apps/set-up-timeline-control#enable-custom-activity-in-timeline)**
+- **[Display a custom table in a timeline](#display-a-custom-table-in-a-timeline)**
 
 ## Display options
 
@@ -129,7 +139,7 @@ Dates and timestamps always appear on each record on the bottom-right side of th
 
 ## Advanced
 
-The **Advanced** feature settings apply to all record types.
+The **Advanced** settings apply to all record types.
 
 When enabling and disabling **Advanced** features, you won't be able to view updates (even though it may appear that there's activity occurring on the timeline component) until you save and publish your configuration updates and refresh the table form.
 
@@ -142,7 +152,7 @@ The following is a detailed overview of the **Advanced** configuration options, 
 |Form designer configuration View | |Form designer display View |
 |-------------------|--|------------|
 |![Configure Quick entry record type and sort order default](media\timeline-quick-entry-record-type-and-sort-order-default-display-settings-advanced-2a.png "Configure Quick entry record type and sort order default")| |![Display Quick entry record type and sort order default](media\timeline-quick-entry-record-type-and-sort-order-default-display-settings-advanced-3b.png "Display Quick entry record type and sort order default")|
-|1.Select **Advanced** to expand this feature in the configuration view. The **Quick entry record** type provides you with quick access to create either a **Note** or a **Post**. The default setting for this feature is set to **Notes**.<BR> 2.The **Sort order default** feature controls the order of how all data is sorted on the timeline. The default setting for this feature is set to Descending. ||1. When you select **Notes**, it will display under the **Search** bar in the timeline. Also, you will see a paperclip ![Paperclip icon.](media\timelilne-paperclip-icon.png "Paperclip icon") icon that allows you to attach files. You can only attach files to Notes.<BR>2.	If you select **Posts** it also will display under the **Search** bar in timeline.|
+|1.Select **Advanced** to expand this area in the configuration view. The **Quick entry record** type provides you with quick access to create either a **Note** or a **Post**. The default setting for this setting is set to **Notes**.<BR> 2.The **Sort order default** setting controls the order of how all data is sorted on the timeline. The default setting for this setting is set to Descending. ||1. When you select **Notes**, it will display under the **Search** bar in the timeline. Also, you will see a paperclip ![Paperclip icon.](media\timelilne-paperclip-icon.png "Paperclip icon") icon that allows you to attach files. You can only attach files to Notes.<BR>2.	If you select **Posts** it also will display under the **Search** bar in timeline.|
 
 ### Enable filter pane
 
@@ -150,7 +160,7 @@ Using filters provides a quick option to sort and look for specific data quickly
 
 |Form designer configuration View | |Form designer display View |
 |-------------------|--|-------------|
-|![Configure filter pane](media\timeline-enable-filter-pane-display-options-advanced-2a.png "Configure Enable filter pane")||![Enable filter pane](media\timeline-enable-filter-pane-display-options-advanced-3b.png "Enable filter pane")| |The **filter pane** feature allows you to enable or disable filter functionality on timeline. It is enabled by default.|| Enable the **filter pane** by checking the box next to the feature.  This will enable the filter icon to display on the timeline.  <BR><BR> To disable the **filter pane**, uncheck the box next to the feature and the filter icon will no longer appear on the timeline.   |
+|![Configure filter pane](media\timeline-enable-filter-pane-display-options-advanced-2a.png "Configure Enable filter pane")||![Enable filter pane](media\timeline-enable-filter-pane-display-options-advanced-3b.png "Enable filter pane")| |The **filter pane** setting allows you to enable or disable filter functionality on timeline. It is enabled by default.|| Enable the **filter pane** by checking the box next to the setting.  This will enable the filter icon to display on the timeline.  <BR><BR> To disable the **filter pane**, clear the box next to the setting and the filter icon will no longer appear on the timeline.   |
 |||
 
 ### Filter records on timeline
@@ -183,12 +193,12 @@ The following category and subcategory options are available on the filer menu:
 
 ### Expand filter pane 
 
-The **Expand filter pane** feature provides quick access to sorting options within the timeline.  It is enabled by default.
+The **Expand filter pane** setting provides quick access to sorting options within the timeline.  It is enabled by default.
 
 |Form designer configure view | |Form designer display view |
 |---------------|--|------------|
 |![Configure filter pane ](media\timeline-expand-filter-pane-display-options-advanced-3a.PNG "Configure filter pane")| |![Enable filter pane ](media\timeline-expand-filter-pane-display-options-advanced-2b.PNG "Enable filter pane")| 
-The <B>Expand filter pane by default</B> feature displays an expanded filter pane at the top of the form anytime it is opened and refreshed.  It is disabled by default.||Enable the **Expand filter pane** by checking the box next to the feature. This enables the filter pane to appear at the top of the form anytime the form is opened and refreshed.<BR><BR>To disable the **Expand filter pane**, clear the box next to the feature and the filter pane will not appear on the timeline.|
+The <B>Expand filter pane by default</B> setting displays an expanded filter pane at the top of the form anytime it is opened and refreshed.  It is disabled by default.||Enable the **Expand filter pane** by checking the box next to the setting. This enables the filter pane to appear at the top of the form anytime the form is opened and refreshed.<BR><BR>To disable the **Expand filter pane**, clear the box next to the setting and the filter pane will not appear on the timeline.|
 
 ### Enable search bar
 
@@ -197,7 +207,7 @@ You can search for records in the timeline. When you search for a phrase in the 
 |Form designer configure view | | Form designer display view |
 |---------------|-|-------------|
 |![Configure search bar](media\timeline-enable-search-bar-display-options-advanced-3a.PNG "Configue search bar")| |![Enable search bar](media\timeline-enable-search-bar-display-options-advanced-2b.PNG "Enable search bar")| 
-|Select **Enable search bar** to enable the **Search timeline** bar functionality. It is enabled by default.||Enable the search bar feature to display a **search bar** at the top of the timeline.<BR><BR>Disable the search bar by clearing the box next to the feature and the search bar won't appear on the timeline.| 
+|Select **Enable search bar** to enable the **Search timeline** bar functionality. It is enabled by default.||Enable the search bar setting to display a **search bar** at the top of the timeline.<BR><BR>Disable the search bar by clearing the box next to the setting and the search bar won't appear on the timeline.| 
 
 ### Expand all records in timeline
 
@@ -236,11 +246,11 @@ If you don’t see a message and the image isn't displayed, see [Timeline FAQs](
 |Form designer configure view | | Form designer display view|
 |---------------|--|-------------|
 |![Configure “What you’ve missed” summary](media\timeline-what-you-missed-display-options-advanced-11a.png "Configure “What you’ve missed” summary")| |![Disable “What you’ve missed” summary](media\timeline-what-you-missed-display-options-advanced-11b.png "Disable “What you’ve missed” summary") |
-|The **What you’ve missed** feature displays new records you haven't seen. It's disabled by default. To enable it, select the box next to the feature. To disable it, clear the box next to the feature ||Once enabled, when you view an account record, a box appears at the top of the timeline section, notifying you of updates.<BR><BR> When disabled, notifications aren't displayed when you access an account.| 
+|The **What you’ve missed** setting displays new records you haven't seen. It's disabled by default. To enable it, select the box next to the setting. To disable it, clear the box next to the setting ||Once enabled, when you view an account record, a box appears at the top of the timeline section, notifying you of updates.<BR><BR> When disabled, notifications aren't displayed when you access an account.| 
 
 ## Record settings
 
-The **Record types to show** feature is tied to the **Record settings** that support activities, notes, and posts in the timeline.
+The **Record types to show** setting is tied to the **Record settings** that support activities, notes, and posts in the timeline.
 
 **Record settings** let you manage the settings within the record types.
 - The **Activities** record type is tied to **Activities** in record settings.
@@ -261,14 +271,14 @@ When you expand the **Activities record settings** on the timeline component sec
 |Form designer configuration view ||Form designer display view|
 |-------------------|-|-----------|
 |![How to configure activity record types](media\timeline-how-to-configure-activity-record-types-display-options-advanced-11a.png "How to configure activity record types")||![Activity record types](media\timeline-how-to-configure-activity-record-types-display-options-advanced-11d.png "activity record types")|
-|1. Expand and view **Activities** under the **Record settings** section using the caret (^).<BR> 2. A list of **Activity types** is displayed in the expanded view. <BR> 3. You can enable or disable an activity by selecting an activity type. For example, enable **Email**.<BR><BR> To enable an **Activity type**, check the box next to **Enable** and select **Done**.<BR><BR>To disable an **Activity type**, uncheck the box next to **Enable**, and then select **Done**. This disables all other items in the box and disables the activity type from displaying on the timeline.  This also disables the activity type from being created or viewed in the timeline.  || 1. When enabled, an **Activity type** appears under the **Create a timeline record** ![Create a timeline record.](media\timeline-create-a-record-icon.png "Create a timeline record"). <BR> 2. The activity type is displayed as an option the user can choose from the dropdown menu. <BR> 3. Also, the **Activity type** record is displayed in the body of the timeline.| 
+|1. Expand and view **Activities** under the **Record settings** section using the caret (^).<BR> 2. A list of **Activity types** is displayed in the expanded view. <BR> 3. You can enable or disable an activity by selecting an activity type. For example, enable **Email**.<BR><BR> To enable an **Activity type**, check the box next to **Enable** and select **Done**.<BR><BR>To disable an **Activity type**, clear the box next to **Enable**, and then select **Done**. This disables all other items in the box and disables the activity type from displaying on the timeline.  This also disables the activity type from being created or viewed in the timeline.  || 1. When enabled, an **Activity type** appears under the **Create a timeline record** ![Create a timeline record.](media\timeline-create-a-record-icon.png "Create a timeline record"). <BR> 2. The activity type is displayed as an option the user can choose from the dropdown menu. <BR> 3. Also, the **Activity type** record is displayed in the body of the timeline.| 
 
 > [!NOTE]
 > A check mark appears to the right, next to enabled **Activity types**. Additional record type settings are disabled until they're enabled under that specific record type.
 
 ### Enable status tags on activity record types
 
-Status tags match the status filter that display in the timeline to help you to see at a glance if the state of an activity record is **Active**, **Overdue**, or **Closed** on a task, appointment, or email. The administrator can enable or disable status tags for any **Activity type** in the **Record settings**. Status tags are enabled by default.
+Status tags match the status filter that display in the timeline to help you to see at a glance if the state of an activity record is **Active**, **Overdue**, or **Closed** on an activity, such as a task, appointment, or email. The administrator can enable or disable status tags for any **Activity type** in the **Record settings**. Status tags are enabled by default.
 
 |Form designer configuration view | | Form designer display view|
 |-------------------|--|------------|
@@ -346,7 +356,7 @@ How users view data is important, and setting a default display view of the data
 
 Legend
 
-1. The **Sort activity by** feature in the **Activities record settings** allows you to control how data is sorted in timeline.  
+1. The **Sort activity by** setting in the **Activities record settings** allows you to control how data is sorted in timeline.  
 2. The **Sort activities by** column displays a list when selected. You can select from this list how you want your data to be sorted and displayed on timeline in the form.<BR><BR>
 
 #### Sort date
@@ -483,15 +493,6 @@ To configure additional entities, add and modify the following code to the confi
 
 ```
 The "systemser" table will persist for **@** and the "account" and "contact" entities for **#** regardless of how the file is edited.
-
-## Save and publish timeline updates and changes
-
-Before you can view any configuration changes on the table form, you must first save and publish your updates on the timeline component. 
-
-![Save and publish timeline updates and changes.](media\timeline-save-and-publish-updates-and-changes-1b.png "Save and publish timeline updates and changes")
-
-1.	Before you can publish, you must **Save** any changes you've made in the timeline component.
-2.	After your configuration changes are saved, you can  **Publish** them, which makes them live in your timeline environment and viewable.
 
 <!-- 
 ## Configure dashboard timelines
