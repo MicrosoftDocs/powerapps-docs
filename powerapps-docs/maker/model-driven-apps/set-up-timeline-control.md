@@ -364,14 +364,14 @@ Only enable the activities that you need on the form. If you select more than 10
 
 ![Timeline performance impact.](media\timeline-performance-impacts-1a.png "Timeline performance impact")
 
-## Notes on timeline
+### Notes on timeline
 
 |Form designer configuration view | |Form designer display view|
 |-------------------|-|------------|
 |![Notes on timeline](media\timeline-notes-1a.png "Notes on timeline") | | ![Notes on timeline - Runtime](media\timeline-notes-3.png "Notes on timeline - Runtime")|
 |The **Notes** section expands when enabled and allows you to:<BR>1. **Sort notes by** date created or date modified. The **Modified On** date is the default setting. <BR>2. Add a relative web resource path in the **Rich text editor configuration URL** column for customized note capability. More information: [Add the rich text editor control to a model-driven app](/powerapps/maker/model-driven-apps/rich-text-editor-control) ||1. When enabled, Notes can be access via the **Create a timeline record** ![Create a timeline record.](media\timeline-create-a-record-icon.png "Create a timeline record") icon.<BR>2. A dropdown list appears where you can access **Notes**.<BR>3. Use **Notes** to create a note to add to a record using rich text editing.|
   
-### Configure the form for notes
+#### Configure the form for notes
 
 In the **Notes** area, under **Configure form**, select**Default form** to configure how information is displayed in notes, such as relevant users and dates, and whether or not to include labels. This enables you to increase or reduce the number of timeline records that appear onscreen.
 
@@ -393,7 +393,7 @@ In the **Notes** area, under **Configure form**, select**Default form** to confi
   - Data column: Select to show the createdon, modifiedon, or overridenon date.
   - Display option: Always show, show on expand, this footer containing the createdon, modifiedon, or overridenon date.
 
-## Posts on timeline
+### Posts on timeline
 
 To enable rich text posts on the timeline, contact [Microsoft Support](/power-platform/admin/get-help-support). 
 
@@ -405,7 +405,7 @@ To enable rich text posts on the timeline, contact [Microsoft Support](/power-pl
 |![Posts on timeline](media\timeline-posts-1a-rich-text.png "Posts on timeline") ||![Posts on timeline - Runtime](media\timeline-posts-1b.png "Posts on timeline - Runtime")|
 |The **Posts** the section expands when enabled and allows you to:<br>1. **Sort notes by** date created or date modified. The **Created On** date is the default setting.<BR>2. Add a relative web resource path in the **Rich text editor configuration URL** column for customized post capability. More information: [Add the rich text editor control to a model-driven app](/powerapps/maker/model-driven-apps/rich-text-editor-control) || 1. When enabled, posts can be accessed by selecting **Create a timeline record** ![Create a timeline record.](media\timeline-create-a-record-icon.png "Create a timeline record").<BR>2. A dropdown menu displays, and you can access **Posts**.<BR>3. Use **Posts** to create a post to add to a record.<BR><BR> When date **Created On** is used to sort posts on the timeline, the location in the timeline remains constant even when there are responses to that post. <BR><BR> When date **Modified On** is used to sort posts on the timeline, the location in the timeline adjusts to the top when there are responses to that post. <BR><BR> **NOTE**: The timeline doesn't automatically refresh when post replies are added.|
 
-### Configure the form for posts
+#### Configure the form for posts
 
 You can configure how information is displayed in posts, such as relevant users and dates, and whether or not to include labels. This enables you to increase or reduce the number of timeline records that appear onscreen.
 
@@ -513,7 +513,7 @@ If you are using a Dynamics 365 app other than Customer Service Hub or Customer 
 
 ## Create and add custom activities to timeline
 
-You can create custom tables that display on a timeline. More information: [Add or configure a timeline](#add-or-configure-a-timeline) 
+You can create custom tables that display on a timeline. More information: [Display a custom table in a timeline](#display-a-custom-table-in-a-timeline) 
 
 ## Configure blocked attachment file types in timeline
 
