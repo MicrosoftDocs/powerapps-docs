@@ -64,6 +64,8 @@ The timeline component is rich in features and functionality that can be configu
 
 ### Display options
 
+This section describes the settings available in the Display options area of the timeline control settings.
+
 #### Timeline component name
 
 The **Name** column under the **Properties** tab in **Display options** is the unique name of the timeline control and is only used by the app maker to reference.
@@ -82,7 +84,7 @@ This section allows you to control the number records that appear before display
 |The default setting on the **Records shown on page** column is set to 10 records, but you can change it to display up to 50 records. || 1. Per the default setting shown in this example, the form displays a maximum of 10 records. <BR> 2. Once records exceed 10, the **Load more** option appears at the bottom of the form.|
 |||
 
-#### Record types shown
+#### Record types to show
 
 There are three primary record types: Activities, notes, and posts. All record types are enabled by default.
 
@@ -112,7 +114,7 @@ Dates and timestamps always appear on each record on the bottom-right side of th
 
 ### Advanced
 
-The **Advanced** settings apply to all record types.
+This section describes the settings available in the Advanced area of the timeline control settings. The **Advanced** settings apply to all record types.
 
 When enabling and disabling **Advanced** features, you won't be able to view updates (even though it may appear that there's activity occurring on the timeline component) until you save and publish your configuration updates and refresh the table form.
 
@@ -223,7 +225,7 @@ If you don’t see a message and the image isn't displayed, see [Timeline FAQs](
 
 ### Record settings
 
-The **Record types to show** setting is tied to the **Record settings** that support activities, notes, and posts in the timeline.
+This section describes the settings available in the Record settings area of the timeline control settings. The **Record types to show** setting determines the record types that are affected by the **Record settings** described here.
 
 **Record settings** let you manage the settings within the record types.
 - The **Activities** record type is tied to **Activities** in record settings.
