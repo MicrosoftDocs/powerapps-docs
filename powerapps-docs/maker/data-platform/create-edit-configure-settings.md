@@ -176,7 +176,7 @@ Settting app value is used to override the setting's default value and any setti
 1. Provide the value and select **Save**.
 1. For the app setting value to take effect you will next have to re-publish the app using the app designer or solution explorer.
 
-### Deleting a setting app value using the app designer
+### Deleting a setting app value using the solution explorer
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 1. In the navigation pane, select **Solutions**.
 1. From the list of solutions, open the solution you want to delete the setting app value from.
