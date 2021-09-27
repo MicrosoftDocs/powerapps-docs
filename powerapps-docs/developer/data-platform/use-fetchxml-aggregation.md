@@ -84,7 +84,7 @@ Client error message: The maximum record limit is exceeded. Reduce the number of
 To avoid this error add appropriate filters to your query to ensure that it will not need to evaluate more than 50,000 records. Then run you query multiple times and combine the results.
 
 > [!TIP]
-> If you want to get a total count of records with no filter, use the `RetrieveTotalRecordCount` message with either the Web API <xref href="Microsoft.Dynamics.CRM.RetrieveTotalRecordCount?text=RetrieveTotalRecordCount Function" /> or with the Organization service <xref:Microsoft.Crm.Sdk.Messages.RetrieveTotalRecordCountRequest> message class. The data retrieved will be from a snapshot within last 24 hours.
+> If you want to get a total count of records with no filter, use the `RetrieveTotalRecordCount` message with either the Web API <xref href="Microsoft.Dynamics.CRM.RetrieveTotalRecordCount?text=RetrieveTotalRecordCount Function" /> or with the Organization service <xref:Microsoft.Crm.Sdk.Messages.RetrieveTotalRecordCountRequest> message class. The data retrieved will be from a snapshot within the last 24 hours.
   
 <a name="AVG"></a>
 
