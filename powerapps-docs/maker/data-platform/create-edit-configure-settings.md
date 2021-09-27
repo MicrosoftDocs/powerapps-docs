@@ -174,7 +174,7 @@ Settting app value is used to override the setting's default value and any setti
 1. Click on the setting definition or setting environment value.
 1. In the **Edit setting value** dialog, in the **Setting app value** section, find the app that you wish to add the setting app value for. Note that using the solution explorer you can only add setting app values for apps that are in the current solution.
 1. Provide the value and select **Save**.
-1. For the app setting value to take effect you will next have to re-publish the app using the app designer or solution explorer.
+1. For the app setting value to take effect you will have to re-publish the app using the app designer or solution explorer.
 
 ### Deleting a setting app value using the solution explorer
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
@@ -185,4 +185,4 @@ Settting app value is used to override the setting's default value and any setti
 1. In the **Edit setting value** dialog, in the **Setting app value** section, find the app that you wish to delete the setting app value for. Note that using the solution explorer you can only remove setting app values for apps that are in the current solution.
 1. Select the ellipsis "***...***" next to the setting app value and then select **Reset to environment**.
 1. Select **Save**.
-1. For the deletion of the setting app value to take effect you will next have to re-publish the app using the app designer or solution explorer.
+1. For the deletion of the setting app value to take effect you will have to re-publish the app using the app designer or solution explorer.
