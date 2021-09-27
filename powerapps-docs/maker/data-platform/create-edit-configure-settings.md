@@ -146,17 +146,17 @@ Settting environment value is used to override the setting's default value for a
 Settting app value is used to override the setting's default value and any setting environment value for a specific app.
 
 > [!NOTE]
-> To follow the steps listed below you need to use the new (**App designer**)[../model-driven-apps/app-designer-overview.md].
+> To follow the steps listed below you need to use the new [App designer](../model-driven-apps/app-designer-overview.md).
 
 ### Adding or updating a setting app value using the app designer
-1. Open the app you wish to add the setting app value for in the (app designer)[../model-driven-apps/create-model-driven-app.md#create-an-app].
+1. Open the app you wish to add the setting app value for in the [app designer](../model-driven-apps/create-model-driven-app.md#create-an-app).
 1. In the command bar, select **Settings**.
 1. In the **Settings** dialog, select **Features** tab or the **Upcoming** tab. The **Features** tab shows all settings that have Release level set to Generally available. The **Upcoming** tab shows all settings that have Release level set to Preview.
 1. Add or update an app value for the setting you want.
 1. Save and publish the app.
 
 ### Deleting a setting app value using the app designer
-1. Open the app you wish to add the setting app value for in the (app designer)[../model-driven-apps/create-model-driven-app.md#create-an-app].
+1. Open the app you wish to add the setting app value for in the [app designer](../model-driven-apps/create-model-driven-app.md#create-an-app).
 1. In the command bar, select **Settings**.
 1. In the **Settings** dialog, select **Features** tab or the **Upcoming** tab.
 1. Select **Reset to environment value** next to the setting app value you wish to delete. This will make the setting value fallback to the setting environment value, if one exists. If no setting environment value exists, it will fallback to the setting's default value.
@@ -166,7 +166,7 @@ Settting app value is used to override the setting's default value and any setti
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 1. In the navigation pane, select **Solutions**.
 1. From the list of solutions, open the solution you want to add the setting app value to.
-1. If the setting definition or setting environment value is not available in the solution add one of them. See [**Adding an existing setting definition**](create-edit-configure-settings.md) or [**Adding an existing setting environment value**](create-edit-configure-settings.md).
+1. If the setting definition or setting environment value is not available in the solution add one of them. See [**Adding an existing setting definition**](create-edit-configure-settings.md#adding-an-existing-setting-definition) or [**Adding an existing setting environment value**](create-edit-configure-settings.md#adding-an-existing-setting-environment-value).
 1. Click on the setting definition or setting environment value.
 1. In the **Edit setting value** dialog, in the **Setting app value** section, find the app that you wish to add the setting app value for. Note that using the solution explorer you can only add app values for apps that are in the current solution.
 1. Provide the value and select **Save**.
@@ -176,7 +176,7 @@ Settting app value is used to override the setting's default value and any setti
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 1. In the navigation pane, select **Solutions**.
 1. From the list of solutions, open the solution you want to delete the setting app value from.
-1. If the setting definition or setting environment value is not available in the solution add one of them. See [**Adding an existing setting definition**](create-edit-configure-settings.md) or [**Adding an existing setting environment value**](create-edit-configure-settings.md).
+1. If the setting definition or setting environment value is not available in the solution add one of them. See [**Adding an existing setting definition**](create-edit-configure-settings.md#adding-an-existing-setting-definition) or [**Adding an existing setting environment value**](create-edit-configure-settings.md#adding-an-existing-setting-environment-value).
 1. Click on the setting definition or setting environment value.
 1. In the **Edit setting value** dialog, in the **Setting app value** section, find the app that you wish to delete the setting app value for. Note that using the solution explorer you can only remove app values for apps that are in the current solution.
 1. Select the ellipsis "..." next to the setting app value and then select **Reset to environment**.
