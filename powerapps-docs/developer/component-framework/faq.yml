@@ -51,11 +51,11 @@ sections:
 
       - question: Code components cannot remove properties
         answer: |
-          Make the properties optional and hidden.
+          Make the properties optional and hidden. The optional properties can be added in the newer component version.
 
       - question: Code components cannot add required properties
         answer: |
-          Create a new code component with new name and reconfigure the control.
+          Create a code component with new name and reconfigure it in the target system.
      
 additionalContent: |
   ## See also
