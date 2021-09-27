@@ -32,17 +32,17 @@ The timeline control provides an easy and immersive experience to view informati
 
 This experience gives app makers the ability to configure the information displayed on the timeline to help users access information and create new activity records, such as emails and tasks directly from the timeline quickly so they can deliver more personalized service.
 
-## Add or configure a timeline
+## Add a timeline
 
 A timeline control is located on a form within table. Any timeline control that's on a form can be configured. For example, an account table has three standard forms, and each of those forms can have a timeline that can be configured. Notice that there can be only one timeline per form.
 
 ### Display a custom table in a timeline
 
 For custom tables to appear in the list of activities that can be added to a timeline control, make sure that when you create the table you configure the following settings:
-- Check the table **Type** as **Activity**.
+- Set the table **Type** as **Activity**.
 - Check the **Enable attachments** setting if you want app users to be able to add attachments and notes to the custom activity record.
 
-### Add a timeline to a form
+### Add the timeline component to a form
 
 1. Sign into [Power Apps](https://make.powerapps.com), and then go to the **Dataverse** section.
 1. Select **Tables**, open the table you want, and then select the **Forms** tab.
@@ -61,21 +61,6 @@ Note the following when you work with the timeline control in the form designer.
 ## Configure the timeline component
 
 The timeline component is rich in features and functionality that can be configured and tailored to support specific business needs. The timeline is comprised of features and functionality that you configure in the timeline component, which is then displayed in the table form.
-
-The following overview provides a detailed breakdown of each timeline setting, what it supports, how it is configured, and how it is displayed in the corresponding timeline section on the table form:
-
-- **Display options** 
-  - [Timeline component name](#timeline-component-name)
-  - [Records shown on page](#records-shown-on-page)
-  - [Record types shown](#record-types-shown) 
-  - [Advanced](#advanced)
-
-- **Record settings** 
-  - [Activities](#activities)
-  -	[Notes](#notes)
-  -	[Posts](#posts)
-
-- **[Display a custom table in a timeline](#display-a-custom-table-in-a-timeline)**
 
 ### Display options
 
