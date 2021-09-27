@@ -449,7 +449,7 @@ To enable mentions in notes and posts, contact [Microsoft Help + support](/power
      &flags=FCB.TimelineWallRichTextPosts=true,FCB.TimelineNotesRichTextMentions=true
 
 ```
-<!-- Start here -->
+
 When the rich text editor is enabled, users can mention other users and entities in notes and posts using the **@** and **#** symbols. Configuration for the rich text editor is available in the maker experience in **Power Apps**: [make.powerapps.com](https://make.powerapps.com "make.powerapps.com"). The users and entities that are displayed are pulled from the configuration file provided in the **Rich text editor configuration URL** column. More information: [Use the rich text editor control in Power Apps](/powerapps/maker/model-driven-apps/rich-text-editor-control)
 
 By default, the **@** symbol returns matches with the first name, last name, or email address of system users starting with the search string.
@@ -493,6 +493,7 @@ Before you can view any configuration changes on the table form, you must first 
 1.	Before you can publish, you must **Save** any changes you've made in the timeline component.
 2.	After your configuration changes are saved, you can  **Publish** them, which makes them live in your timeline environment and viewable.
 
+<!-- 
 ## Configure dashboard timelines
 
 Timelines can be configured and put on a dashboard. However, the configuration available for timeline applied to a dashboard is limited to the functionality provided by the legacy designer experience. The new form designer experience on dashboards is not available. 
@@ -501,13 +502,13 @@ Timelines can be configured and put on a dashboard. However, the configuration a
 > Capabilities on a dashboard timeline are different than those in an embedded dashboard timeline.  
 Dashboard timelines contain records related to the current user. This means each user will see a different set of information when viewing the same dashboard timeline. Notes are not available on the dashboard.
 
-This following image shows the General tab, where you can modify the Timeline Control properties:
+This following image shows the General tab, where you can modify the timeline control properties:
 
-![Timeline Control Properties General tab.](media\timeline-control-properties-general.png "Timeline Control Properties General tab")
+:::image type="content" source="media/timeline-control-properties-general.png" alt-text="Timeline control properties General tab":::
 
 The following image shows the Activities tab, where you can modify the Timeline Control properties:
 
-![Timeline Control Properties Activities tab.](media\timeline-control-properties-activities.png "Timeline Control Properties Activities tab")
+:::image type="content" source="media/timeline-control-properties-activities.png" alt-text="Timeline control properties Activities tab":::  -->
 
 ## Configure auto-post messages to display on the timeline
 
@@ -518,35 +519,33 @@ You can configure which auto-post messages will appear on the timeline when a sy
 
 To configure the auto-post messages that should be displayed:
 
-1. In Customer Service Hub, go to **Service Management**, and under **Timeline settings**, click **Auto-post rules**.
+1. In Customer Service Hub, go to **Service Management**, and under **Timeline settings**, select **Auto-post rules**.
 2. Select which auto-post rules to make active using the grid and **Activate** and **Deactivate** buttons at the top.
 
 When a system event corresponding to an active rule occurs, an auto-post message will display on the timeline.
 
 ![Auto-post rules timeline settings.](media\timeline_auto-post_rules.png "Auto-post rules timeline settings")
 
-If you are using a Dynamics 365 app other than CSH or CSw, you need to add your own sitemap. To add your own sitemap in your app:
+If you are using a Dynamics 365 app other than Customer Service Hub or Customer Service workspace, you need to add your own sitemap. To add your own sitemap in your app:
 
-1. Open your app in the App Designer in **Power Apps**: [make.powerapps.com](https://make.powerapps.com "make.powerapps.com")
-2. Click the pencil icon to open the Sitemap Designer.
-3. Click the + symbol and select **Subarea** from the dropdown list.
-4. In the **Table** dropdown list, select **Post Rule Configuration table**, and enter a **Title**.
-5. Click **Save** and then click **Publish**.
-
-![Add a subarea in the Sitemap Designer.](media\timeline_sitemap_designer_subarea.png "Add a subarea in the Sitemap Designer")
+1. Open your app in the app designer in **Power Apps**: [make.powerapps.com](https://make.powerapps.com "make.powerapps.com")
+1. On the app designer command bar, select **Add page**, select **Table based view and form**, and then select **Next**.
+1. In the **Table** list, select **Post Rule Configuration**, and then select **Add**.
+   > [!NOTE]
+   > If you don't have the Post Rule Configuration table, you're environment doesn't have the required Dynamics 365 app installed.
+1. Select **Save**, and then select **Publish**.
 
 ## Create and add custom activities to timeline
 
-You can create custom entities to display on the timeline by enabling specific options during the creation of the table. See the [How to create and add custom activities](/powerapps/maker/model-driven-apps/set-up-timeline-control#enable-custom-activity-in-timeline) for a step-by-step guide.
+You can create custom tables that display on a timeline. More information: [Add or configure a timeline](#add-or-configure-a-timeline) 
 
 ## Configure blocked attachment file types in timeline
 
-You can configure the file types that are blocked from being added as file attachments.
+Power platform administrators can configure the file types that are blocked from being added as file attachments.
 
-1. Go to **Settings** > **Advanced settings** > **Settings** > **Administration** > **System Settings**.
-2. In the **System Settings** dialog, under the **General** tab, scroll down to **Set blocked file extensions for attachments**.
-3. In the column, type the file extension type you want to block for attachments (for example, ".pdf"). Separate file types with a semi-colon.
-4. Select **OK**.
+1. Find the **Set blocked file extensions for attachments** systems setting. More information: [Open the System Settings dialog box General tab](/power-platform/admin/system-settings-dialog-box-general-tab#open-the-system-settings-dialog-box)
+1. In the text box of blocked file attachments, type the file extension type you want to block for attachments (for example, ".pdf"). Separate file types with a semi-colon.
+1. Select **OK**.
 
 ### See also
 
