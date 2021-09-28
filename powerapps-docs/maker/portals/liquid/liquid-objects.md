@@ -5,7 +5,7 @@ author: gitanjalisingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/23/2021
+ms.date: 09/27/2021
 ms.subservice: portals
 ms.author: gisingh
 ms.reviewer: tapanm
@@ -1001,9 +1001,6 @@ The polls object allows you to select a specific poll or poll placement:
 
 ## request
 
-> [!CAUTION]
-> The values for the **request** object are provided by end-users, and always untrusted. Hence, ensure you use [escape filter](liquid-filters.md#escape) whenever using this object.
-
 Contains information about the current HTTP request.
 
 ```
@@ -1263,13 +1260,13 @@ user is an [entity](#entity) object.
 
 ```
 {% if user %}
-
-Hello, {{ user.fullname }}!
-
+ 
+Hello, {{ user.fullname | escape }}!
+ 
 {% else %}
-
+ 
 Hello, anonymous user!
-
+ 
 {% endif %}
 ```
 
