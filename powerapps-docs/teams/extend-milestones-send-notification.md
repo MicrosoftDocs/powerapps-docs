@@ -124,7 +124,7 @@ To complete this exercise, we would need the ability to log in into Teams that w
 
 1. Copy that decoded text and go back to the Power Automate flow.
 
-1. Return to the Initialiaze variable- Review Work item Link ste.
+1. Return to the Initialize variable- Review Work item Link ste.
 
 1. Set the Value field to the decoded URL text copied earlier.
 
