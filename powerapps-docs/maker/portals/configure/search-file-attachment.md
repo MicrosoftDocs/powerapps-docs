@@ -38,7 +38,7 @@ When you search for a term, the search results also include attachments. If the 
 ![Download attachment.](../media/search-attachment-content.png "Download attachment") 
 
 > [!NOTE]
-> - To use this functionality, you must [enable relevance search](/dynamics365/customer-engagement/admin/configure-relevance-search-organization). More information: [Relevance search](/dynamics365/customer-engagement/basics/relevance-search-results)
+> - To use this functionality, you must [enable Dataverse search](/dynamics365/customer-engagement/admin/configure-relevance-search-organization). More information: [Dataverse search](/dynamics365/customer-engagement/basics/relevance-search-results)
  
 ## Update portal configurations
 
