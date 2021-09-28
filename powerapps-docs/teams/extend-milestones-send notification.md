@@ -4,7 +4,7 @@ description: Learn how to send an adaptive card when a work item status is updat
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/25/2021
+ms.date: 09/28/2021
 author: joel-lindstrom	
 ms.subservice: teams
 ms.author: namarwah
@@ -111,10 +111,10 @@ To complete this exercise, we would need the ability to log in into Teams that w
     - Type - "String"
     - Value - leave blank - will be added later.
 
->Note
->After adding a new step you may see a warning in the flow checker. This is not an error--it is expected because the flow is called from a Power App and adding a new step to a flow called from a Power App may break the connection with the app. Later in the exercise we will be replacing the connection to the flow, so this is not a problem.
+    > [!NOTE]
+    > After adding a new step, you may see a warning in the flow checker. This warning is expected because the flow is called from a Power Apps app, and adding a new step to a flow called from a Power Apps app may break the connection with the app. Later in the exercise, we'll replace the connection to the flow to fix this warning.
 
-12. For the **Review Work Item Link** action, we'll use the link to the app. To find this link, open the team where the Milestones app is installed, and copy the link for tab in which the app is installed. You can copy the link to the tab by opening the tab, then selecting **...** (ellipses) in the upper right corner.
+1. For the **Review Work Item Link** action, we'll use the link to the app. To find this link, open the team where the Milestones app is installed, and copy the link for tab in which the app is installed. You can copy the link to the tab by opening the tab, then selecting **...** (ellipses) in the upper right corner.
 
     Your URL will look similar to the following example:
 
@@ -126,7 +126,7 @@ To complete this exercise, we would need the ability to log in into Teams that w
 
 1. Return to the Initialiaze variable- Review Work item Link ste.
 
-16. Set the Value field to the decoded url text copied above.
+1. Set the Value field to the decoded URL text copied earlier.
 
 1. Add a new step with the action **Compose**, and in the **Inputs** field, paste the following snippet.
 
@@ -136,76 +136,71 @@ To complete this exercise, we would need the ability to log in into Teams that w
 
 1. Add another step by selecting **+New step**.
 
-19. Select the action Post adaptive card in a chat or channel (Preview).
+1. Select the action Post adaptive card in a chat or channel (Preview).
 
      - Post as - User
-
      - Post in - Channel
-
      - Team - {the team in which your app is installed}
-
      - Channel - General
-
      - Adaptive Card - Paste the following JSON code:
 
-       > Note
-       >
-       > The following JSON code contains dynamic references to values from previous flow steps. These should automatically resolve to the correct reference, but if they do not, manually update them with the correct reference. For example, @{outputs('Get_Work_Item_Status_record')?['body/msft_name']} references the name column from the Get Work Item Status step.
-
-     ```
-     {
-                 "type": "AdaptiveCard",
-                 "body": [
-                 {
-            
-                        "type": "TextBlock",
-            
-            "size": "large",
-            
-            "weight": "Bolder",
-            
-            "text": "Status Update for
-            @{outputs('Get_Work_Item_record')?['body/msft_name']}",
-            
-            "wrap": true
-            
-            },
-            
-            {
-            
-            "type": "TextBlock",
-            
-            "text": "Status for Work Item
-            '@{outputs('Get_Work_Item_record')?['body/msft_name']}' has been updated to
-            @{outputs('Get_Work_Item_Status_record')?['body/msft_name']}",
-            
-            "wrap": true
-            
-            }
-            
-            ],
-            
-            "actions": [
-            
-            {
-            
-            "type": "Action.OpenUrl",
-            
-            "title": "View @{variables('varCardTitle')}",
-            //Update the part of the following URL before "context=" with the URL copied in step 12. 
-            "url":
-            "[https://teams.microsoft.com/l/entity/040880f4-0c68-4c38-8821-d5efd2b6ddbe/_djb2_msteams_prefix_956529380?context=@{outputs('Compose](https://teams.microsoft.com/l/entity/040880f4-0c68-4c38-8821-d5efd2b6ddbe/_djb2_msteams_prefix_956529380?context=@%7boutputs('Compose)')}"
-            
-            }
-            
-            ],
-            
-            "$schema": "<http://adaptivecards.io/schemas/adaptive-card.json>",
-            
-            "version": "1.2"
-            
-            }
-     ```
+        > [!NOTE]
+        > The following JSON code contains dynamic references to values from previous flow steps. These should automatically resolve to the correct reference, but if they do not, manually update them with the correct reference. For example, @{outputs('Get_Work_Item_Status_record')?['body/msft_name']} references the name column from the Get Work Item Status step.
+    
+         ```
+         {
+                     "type": "AdaptiveCard",
+                     "body": [
+                     {
+                
+                            "type": "TextBlock",
+                
+                "size": "large",
+                
+                "weight": "Bolder",
+                
+                "text": "Status Update for
+                @{outputs('Get_Work_Item_record')?['body/msft_name']}",
+                
+                "wrap": true
+                
+                },
+                
+                {
+                
+                "type": "TextBlock",
+                
+                "text": "Status for Work Item
+                '@{outputs('Get_Work_Item_record')?['body/msft_name']}' has been updated to
+                @{outputs('Get_Work_Item_Status_record')?['body/msft_name']}",
+                
+                "wrap": true
+                
+                }
+                
+                ],
+                
+                "actions": [
+                
+                {
+                
+                "type": "Action.OpenUrl",
+                
+                "title": "View @{variables('varCardTitle')}",
+                //Update the part of the following URL before "context=" with the URL copied in step 12. 
+                "url":
+                "[https://teams.microsoft.com/l/entity/040880f4-0c68-4c38-8821-d5efd2b6ddbe/_djb2_msteams_prefix_956529380?context=@{outputs('Compose](https://teams.microsoft.com/l/entity/040880f4-0c68-4c38-8821-d5efd2b6ddbe/_djb2_msteams_prefix_956529380?context=@%7boutputs('Compose)')}"
+                
+                }
+                
+                ],
+                
+                "$schema": "<http://adaptivecards.io/schemas/adaptive-card.json>",
+                
+                "version": "1.2"
+                
+                }
+         ```
 
 1. Save the flow.
 
