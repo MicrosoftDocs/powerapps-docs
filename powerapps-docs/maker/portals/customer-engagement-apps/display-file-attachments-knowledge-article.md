@@ -5,7 +5,7 @@ author: sbmjais
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2020
+ms.date: 10/04/2021
 ms.subservice: portals
 ms.author: shjais
 ms.reviewer: shjais
@@ -20,10 +20,4 @@ Knowledge articles help you achieve self-service. As a Knowledge Manager, you mi
 
 To display knowledge articles with downloadable file attachments, you must [create the site setting](../configure/configure-site-settings.md) KnowledgeManagement/DisplayNotes and set the value to true. When you set the site setting to true, knowledge articles are displayed along with their attachments, so portal users can search for these attachments.
 
-You can continue to use the legacy behavior of prefixing the notes description with \*WEB\* to publish it on the portal. If you want a note with a different prefix to be published to the portal, you must [modify the value of the site setting](../configure/configure-site-settings.md) KnowledgeManagement/NotesFilter to the prefix you want. The value entered for this site setting is used to filter which notes with attachments are displayed on the portal. Notes without attachments are not displayed even if they match the filter. If you do not specify anything for the site setting, all attachments are displayed on the portal and will be searchable.
-
-> [!Note]
-> - The Notes title is not exposed on the portal. Only the note description and file attachment name are exposed and are searchable.
-> - Notes are grouped under a knowledge article. A maximum of three notes matching the search result for a knowledge article are displayed as part of the search results.
-> - If the search term matches with a knowledge article and an attachment, all the text from the note and the file attachment name are highlighted.
-> - If the search term matches only with an attachment, the corresponding article is also displayed.
+To search for knowledge article attachments in the portal, you'll want to use the attachments function in the knowledge article editor instead of adding attachments in the notes section. If you've enabled **Sync knowledge article attachments to portal**, knowledge article attachments will automatically be synced to the notes attachment. To learn how to create knowledge article attachments, see [Add a file attachment to a knowledge article](https://docs.microsoft.com/dynamics365/customer-service/customer-service-hub-user-guide-knowledge-article#add-a-file-attachment-to-a-knowledge-article).
