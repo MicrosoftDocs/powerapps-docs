@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 08/17/2021
+ms.date: 09/28/2021
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: tapanm
@@ -148,6 +148,9 @@ A user who has an existing local account can apply a new password by providing t
 **Related processes:**
 - Create a username and password.
 - Change an existing password.
+
+> [!NOTE]
+> The processes mentioned above are not affected by the [upcoming deprecation of task flows](/power-platform/important-changes-coming#task-flows-are-deprecated).
 
 ## Confirm an email address
 
