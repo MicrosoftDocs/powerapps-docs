@@ -94,7 +94,7 @@ To complete this exercise, we would need the ability to log in into Teams that w
 
 1. Add the action Initialize variable.
 
-    - Rename step to Initialize variable - "Card Title"
+    - Rename step to Initialize variable - Card Title
 
     - Name - "varCardTitle"
 
@@ -107,14 +107,14 @@ To complete this exercise, we would need the ability to log in into Teams that w
 1. Add the action Initialize variable.
 
     - Rename step to Initialize variable - Review Link
-
     - Name - "varReviewWorkItemLink"
-
     - Type - "String"
-
     - Value - leave blank - will be added later.
 
-1. For the **Review Work Item Link** action, we'll use the link to the app. To find this link, open the team where the Milestones app is installed, and copy the link for tab in which the app is installed. You can copy the link to the tab by opening the tab, then selecting **...** (ellipses) in the upper right corner.
+>Note
+>After adding a new step you may see a warning in the flow checker. This is not an error--it is expected because the flow is called from a Power App and adding a new step to a flow called from a Power App may break the connection with the app. Later in the exercise we will be replacing the connection to the flow, so this is not a problem.
+
+12. For the **Review Work Item Link** action, we'll use the link to the app. To find this link, open the team where the Milestones app is installed, and copy the link for tab in which the app is installed. You can copy the link to the tab by opening the tab, then selecting **...** (ellipses) in the upper right corner.
 
     Your URL will look similar to the following example:
 
@@ -124,90 +124,88 @@ To complete this exercise, we would need the ability to log in into Teams that w
 
 1. Copy that decoded text and go back to the Power Automate flow.
 
-1. Add a new step to the flow to initialize a variable.
+1. Return to the Initialiaze variable- Review Work item Link ste.
 
-1. Rename the step to **Initialize variable – Review Work Item Link**.
-
-    - Name - "varReviewWorkItemLink"
-
-    - Type - "String"
-
-    - Value - {paste the text copied from the decoded url above}
+16. Set the Value field to the decoded url text copied above.
 
 1. Add a new step with the action **Compose**, and in the **Inputs** field, paste the following snippet.
 
     ```
-    replace(replace(replace(variables('varReviewIdeasLink'),'{','%7B'),'"','%22'),'}','%7D')
+    replace(replace(replace(variables('varReviewWorkItemLink'),'{','%7B'),'"','%22'),'}','%7D')
     ```
 
 1. Add another step by selecting **+New step**.
 
-1. Select the action Post adaptive card in a chat or channel (preview).
+19. Select the action Post adaptive card in a chat or channel (Preview).
 
-    - Post as - User
+     - Post as - User
 
-    - Post in - Channel
+     - Post in - Channel
 
-    - Team - {the team in which your app is installed}
+     - Team - {the team in which your app is installed}
 
-    - Channel - General
+     - Channel - General
 
-    - Adaptive Card - Paste the following JSON code.
+     - Adaptive Card - Paste the following JSON code:
 
-    ```
-    {
-                "type": "AdaptiveCard",
-                "body": [
-                {
-           
-                       "type": "TextBlock",
-           
-           "size": "large",
-           
-           "weight": "Bolder",
-           
-           "text": "Status Update for
-           @{outputs('Get_Work_Item_record')?['body/msft_name']}",
-           
-           "wrap": true
-           
-           },
-           
-           {
-           
-           "type": "TextBlock",
-           
-           "text": "Status for Work Item
-           '@{outputs('Get_Work_Item_record')?['body/msft_name']}' has been updated to
-           @{outputs('Get_Work_Item_Status_record')?['body/msft_name']}",
-           
-           "wrap": true
-           
-           }
-           
-           ],
-           
-           "actions": [
-           
-           {
-           
-           "type": "Action.OpenUrl",
-           
-           "title": "View @{variables('varCardTitle')}",
-           
-           "url":
-           "[https://teams.microsoft.com/l/entity/040880f4-0c68-4c38-8821-d5efd2b6ddbe/_djb2_msteams_prefix_956529380?context=@{outputs('Compose](https://teams.microsoft.com/l/entity/040880f4-0c68-4c38-8821-d5efd2b6ddbe/_djb2_msteams_prefix_956529380?context=@%7boutputs('Compose)')}"
-           
-           }
-           
-           ],
-           
-           "\$schema": "<http://adaptivecards.io/schemas/adaptive-card.json>",
-           
-           "version": "1.2"
-           
-           }
-    ```
+       > Note
+       >
+       > The following JSON code contains dynamic references to values from previous flow steps. These should automatically resolve to the correct reference, but if they do not, manually update them with the correct reference. For example, @{outputs('Get_Work_Item_Status_record')?['body/msft_name']} references the name column from the Get Work Item Status step.
+
+     ```
+     {
+                 "type": "AdaptiveCard",
+                 "body": [
+                 {
+            
+                        "type": "TextBlock",
+            
+            "size": "large",
+            
+            "weight": "Bolder",
+            
+            "text": "Status Update for
+            @{outputs('Get_Work_Item_record')?['body/msft_name']}",
+            
+            "wrap": true
+            
+            },
+            
+            {
+            
+            "type": "TextBlock",
+            
+            "text": "Status for Work Item
+            '@{outputs('Get_Work_Item_record')?['body/msft_name']}' has been updated to
+            @{outputs('Get_Work_Item_Status_record')?['body/msft_name']}",
+            
+            "wrap": true
+            
+            }
+            
+            ],
+            
+            "actions": [
+            
+            {
+            
+            "type": "Action.OpenUrl",
+            
+            "title": "View @{variables('varCardTitle')}",
+            //Update the part of the following URL before "context=" with the URL copied in step 12. 
+            "url":
+            "[https://teams.microsoft.com/l/entity/040880f4-0c68-4c38-8821-d5efd2b6ddbe/_djb2_msteams_prefix_956529380?context=@{outputs('Compose](https://teams.microsoft.com/l/entity/040880f4-0c68-4c38-8821-d5efd2b6ddbe/_djb2_msteams_prefix_956529380?context=@%7boutputs('Compose)')}"
+            
+            }
+            
+            ],
+            
+            "$schema": "<http://adaptivecards.io/schemas/adaptive-card.json>",
+            
+            "version": "1.2"
+            
+            }
+     ```
 
 1. Save the flow.
 
@@ -257,673 +255,337 @@ To complete this exercise, we would need the ability to log in into Teams that w
 
     ```powerapps-dot
     If(
-    
-    gblAppLoaded,// && !IsBlankOrError(gblAppStyles),
-    
-    If(
-    
-    !IsBlank(Param("subEntityId")), //check if the parameter is blank or not
-    
-    If( //if the parameter is not blank, check if the user is on a mobile device or
-    desktop/web and then populate the relevant variables and collections to make
-    deep linking work
-    
-    (!IsBlank(Param("hostClientType")) && (Param("hostClientType") = "android" Or
-    Param("hostClientType") = "ios")) \|\| (IsBlank(Param("hostClientType")) &&
-    (Acceleration.X \> 0 \|\| Acceleration.Y \> 0 \|\| Acceleration.Z \> 0)) Or
-    tglAdmin_Mobile.Value,
-    
-    //project cover colors
-    
-    ClearCollect(
-    
-    colMobileProjectCoverColors,
-    
-    {
-    
-    Color: "\#F4B9B9",
-    
-    Theme: "default",
-    
-    Base: "Color1"
-    
-    },
-    
-    {
-    
-    Color: "\#94BFFF",
-    
-    Theme: "default",
-    
-    Base: "Color2"
-    
-    },
-    
-    {
-    
-    Color: "\#E6F0FF",
-    
-    Theme: "default",
-    
-    Base: "Color3"
-    
-    },
-    
-    {
-    
-    Color: "\#5AC6CC",
-    
-    Theme: "default",
-    
-    Base: "Color4"
-    
-    },
-    
-    {
-    
-    Color: "\#C5E9EA",
-    
-    Theme: "default",
-    
-    Base: "Color5"
-    
-    },
-    
-    {
-    
-    Color: "\#F0F9FA",
-    
-    Theme: "default",
-    
-    Base: "Color6"
-    
-    },
-    
-    {
-    
-    Color: "\#EE6F99",
-    
-    Theme: "default",
-    
-    Base: "Color7"
-    
-    },
-    
-    {
-    
-    Color: "\#F495BF",
-    
-    Theme: "default",
-    
-    Base: "Color8"
-    
-    },
-    
-    {
-    
-    Color: "\#F4D2DC",
-    
-    Theme: "default",
-    
-    Base: "Color9"
-    
-    },
-    
-    {
-    
-    Color: "\#CEF0CD",
-    
-    Theme: "default",
-    
-    Base: "Color10"
-    
-    },
-    
-    {
-    
-    Color: "\#BDBDE6",
-    
-    Theme: "default",
-    
-    Base: "Color11"
-    
-    },
-    
-    {
-    
-    Color: "\#E2E2F6",
-    
-    Theme: "default",
-    
-    Base: "Color12"
-    
-    },
-    
-    {
-    
-    Color: "\#F4F4FC",
-    
-    Theme: "default",
-    
-    Base: "Color13"
-    
-    },
-    
-    {
-    
-    Color: "\#FBF6D9",
-    
-    Theme: "default",
-    
-    Base: "Color14"
-    
-    },
-    
-    {
-    
-    Color: "\#791818",
-    
-    Theme: "dark",
-    
-    Base: "Color1"
-    
-    },
-    
-    {
-    
-    Color: "\#053385",
-    
-    Theme: "dark",
-    
-    Base: "Color2"
-    
-    },
-    
-    {
-    
-    Color: "\#6264A7",
-    
-    Theme: "dark",
-    
-    Base: "Color3"
-    
-    },
-    
-    {
-    
-    Color: "\#002F31",
-    
-    Theme: "dark",
-    
-    Base: "Color4"
-    
-    },
-    
-    {
-    
-    Color: "\#025C5F",
-    
-    Theme: "dark",
-    
-    Base: "Color5"
-    
-    },
-    
-    {
-    
-    Color: "\#03787C",
-    
-    Theme: "dark",
-    
-    Base: "Color6"
-    
-    },
-    
-    {
-    
-    Color: "\#461525",
-    
-    Theme: "dark",
-    
-    Base: "Color7"
-    
-    },
-    
-    {
-    
-    Color: "\#CC3D6D",
-    
-    Theme: "dark",
-    
-    Base: "Color8"
-    
-    },
-    
-    {
-    
-    Color: "\#EA5788",
-    
-    Theme: "dark",
-    
-    Base: "Color9"
-    
-    },
-    
-    {
-    
-    Color: "\#043615",
-    
-    Theme: "dark",
-    
-    Base: "Color10"
-    
-    },
-    
-    {
-    
-    Color: "\#33344A",
-    
-    Theme: "dark",
-    
-    Base: "Color11"
-    
-    },
-    
-    {
-    
-    Color: "\#6264A7",
-    
-    Theme: "dark",
-    
-    Base: "Color12"
-    
-    },
-    
-    {
-    
-    Color: "\#464775",
-    
-    Theme: "dark",
-    
-    Base: "Color13"
-    
-    },
-    
-    {
-    
-    Color: "\#FFAA44",
-    
-    Theme: "dark",
-    
-    Base: "Color14"
-    
-    }
-    
-    );
-    
+        gblAppLoaded,// && !IsBlankOrError(gblAppStyles),
+        If(
+            !IsBlank(Param("subEntityId")), //check if the parameter is blank or not
+            If( //if the parameter is not blank, check if the user is on a mobile device or desktop/web and then populate the relevant variables and collections to make deep linking work
+                (!IsBlank(Param("hostClientType")) && (Param("hostClientType") = "android" Or Param("hostClientType") = "ios")) || (IsBlank(Param("hostClientType")) && (Acceleration.X > 0 || Acceleration.Y > 0 || Acceleration.Z > 0)) Or tglAdmin_Mobile.Value, 
+                //project cover colors
+                ClearCollect(
+                    colMobileProjectCoverColors,
+                    {
+                        Color: "#F4B9B9",
+                        Theme: "default",
+                        Base: "Color1"
+                    },
+                    {
+                        Color: "#94BFFF",
+                        Theme: "default",
+                        Base: "Color2"
+                    },
+                    {
+                        Color: "#E6F0FF",
+                        Theme: "default",
+                        Base: "Color3"
+                    },
+                    {
+                        Color: "#5AC6CC",
+                        Theme: "default",
+                        Base: "Color4"
+                    },
+                    {
+                        Color: "#C5E9EA",
+                        Theme: "default",
+                        Base: "Color5"
+                    },
+                    {
+                        Color: "#F0F9FA",
+                        Theme: "default",
+                        Base: "Color6"
+                    },
+                    {
+                        Color: "#EE6F99",
+                        Theme: "default",
+                        Base: "Color7"
+                    },
+                    {
+                        Color: "#F495BF",
+                        Theme: "default",
+                        Base: "Color8"
+                    },
+                    {
+                        Color: "#F4D2DC",
+                        Theme: "default",
+                        Base: "Color9"
+                    },
+                    {
+                        Color: "#CEF0CD",
+                        Theme: "default",
+                        Base: "Color10"
+                    },
+                    {
+                        Color: "#BDBDE6",
+                        Theme: "default",
+                        Base: "Color11"
+                    },
+                    {
+                        Color: "#E2E2F6",
+                        Theme: "default",
+                        Base: "Color12"
+                    },
+                    {
+                        Color: "#F4F4FC",
+                        Theme: "default",
+                        Base: "Color13"
+                    },
+                    {
+                        Color: "#FBF6D9",
+                        Theme: "default",
+                        Base: "Color14"
+                    },
+                    {
+                        Color: "#791818",
+                        Theme: "dark",
+                        Base: "Color1"
+                    },
+                    {
+                        Color: "#053385",
+                        Theme: "dark",
+                        Base: "Color2"
+                    },
+                    {
+                        Color: "#6264A7",
+                        Theme: "dark",
+                        Base: "Color3"
+                    },
+                    {
+                        Color: "#002F31",
+                        Theme: "dark",
+                        Base: "Color4"
+                    },
+                    {
+                        Color: "#025C5F",
+                        Theme: "dark",
+                        Base: "Color5"
+                    },
+                    {
+                        Color: "#03787C",
+                        Theme: "dark",
+                        Base: "Color6"
+                    },
+                    {
+                        Color: "#461525",
+                        Theme: "dark",
+                        Base: "Color7"
+                    },
+                    {
+                        Color: "#CC3D6D",
+                        Theme: "dark",
+                        Base: "Color8"
+                    },
+                    {
+                        Color: "#EA5788",
+                        Theme: "dark",
+                        Base: "Color9"
+                    },
+                    {
+                        Color: "#043615",
+                        Theme: "dark",
+                        Base: "Color10"
+                    },
+                    {
+                        Color: "#33344A",
+                        Theme: "dark",
+                        Base: "Color11"
+                    },
+                    {
+                        Color: "#6264A7",
+                        Theme: "dark",
+                        Base: "Color12"
+                    },
+                    {
+                        Color: "#464775",
+                        Theme: "dark",
+                        Base: "Color13"
+                    },
+                    {
+                        Color: "#FFAA44",
+                        Theme: "dark",
+                        Base: "Color14"
+                    }
+                );
+                
     //local table of character widths, used for auto width labels
-    
     ClearCollect(
-    
-    colMobileCharsWidth,
-    
-    staticCharWidths
-    
-    );
-    
+                    colMobileCharsWidth,
+                    staticCharWidths
+                );
+                
     //stock project cover images
-    
     ClearCollect(
-    
-    colMobileStockImages,
-    
-    {appStockImage: Blank()},
-    
-    {appStockImage: ProjectCover_Future},
-    
-    {appStockImage: ProjectCover_Work},
-    
-    {appStockImage: ProjectCover_Shapes},
-    
-    {appStockImage: ProjectCover_Design},
-    
-    {appStockImage: ProjectCover_Flow},
-    
-    {appStockImage: ProjectCover_Abstract},
-    
-    {appStockImage: ProjectCover_Mountain},
-    
-    {appStockImage: ProjectCover_Vision},
-    
-    {appStockImage: ProjectCover_DarkShapes},
-    
-    {appStockImage: ProjectCover_Morning},
-    
-    {appStockImage: ProjectCover_Sublime},
-    
-    {appStockImage: ProjectCover_Tech},
-    
-    {appStockImage: ProjectCover_Neon},
-    
-    {appStockImage: ProjectCover_City}
-    
-    );
-    
-    Set(
-    
-    gblMobileProject,
-    
-    LookUp(
-    
-    'Project Work Items',
-    
-    'Project Work item' = GUID(Param("subEntityId"))
-    
-    ).Project
-    
-    );
-    
-    ClearCollect(
-    
-    colMobileWorkItems,
-    
-    Filter(
-    
-    'Project Work Items',
-    
-    Project.Project = gblMobileProject.Project
-    
+                    colMobileStockImages,
+                    {appStockImage: Blank()},
+                    {appStockImage: ProjectCover_Future},
+                    {appStockImage: ProjectCover_Work},
+                    {appStockImage: ProjectCover_Shapes},
+                    {appStockImage: ProjectCover_Design},
+                    {appStockImage: ProjectCover_Flow},
+                    {appStockImage: ProjectCover_Abstract},
+                    {appStockImage: ProjectCover_Mountain},
+                    {appStockImage: ProjectCover_Vision},
+                    {appStockImage: ProjectCover_DarkShapes},
+                    {appStockImage: ProjectCover_Morning},
+                    {appStockImage: ProjectCover_Sublime},
+                    {appStockImage: ProjectCover_Tech},
+                    {appStockImage: ProjectCover_Neon},
+                    {appStockImage: ProjectCover_City}
+                );
+                Set(
+                    gblMobileProject,
+                    LookUp(
+                        'Project Work Items',
+                        'Project Work item' = GUID(Param("subEntityId"))
+                    ).Project
+                );
+                ClearCollect(
+                    colMobileWorkItems,
+                    Filter(
+                        'Project Work Items',
+                        Project.Project = gblMobileProject.Project
+                    )
+                );
+                UpdateContext(
+                    {
+                        locMobileCompletionStatus: First(
+                            Sort(
+                                'Project Work Item Statuses',
+                                Sequence,
+                                Ascending
+                            )
+                        )
+                    }
+                );
+                Clear(colMobileWorkItemStatuses);
+                ForAll(
+                    Sort(
+                        Filter(
+                            'Project Work Item Statuses',
+                            'Project Work Item Status' <> locMobileCompletionStatus.'Project Work Item Status'
+                        ),
+                        Sequence,
+                        Ascending
+                    ),
+                    Collect(
+                        colMobileWorkItemStatuses,
+                        {
+                            Name: ThisRecord.Name,
+                            Color: ThisRecord.Color,
+                            'Color Dark': ThisRecord.'Color Dark',
+                            'Project Work Item Status': ThisRecord.'Project Work Item Status',
+                            Sequence: ThisRecord.Sequence
+                        }
+                    )
+                );
+                Collect(
+                    colMobileWorkItemStatuses,
+                    {
+                        Name: locMobileCompletionStatus.Name,
+                        Color: locMobileCompletionStatus.Color,
+                        'Color Dark': locMobileCompletionStatus.'Color Dark',
+                        'Project Work Item Status': locMobileCompletionStatus.'Project Work Item Status',
+                        Sequence: locMobileCompletionStatus.Sequence
+                    }
+                );
+                Navigate(
+                    'Mobile Work Item Details Screen',
+                    ScreenTransition.None,
+                    {
+                        locMobileSelectedWorkItem: LookUp(
+                            'Project Work Items',
+                            'Project Work item' = GUID(Param("subEntityId"))
+                        ),
+                        locMobileShowWorkItemDetail: true,
+                        locMobileShowSearchWorkItem: false,
+                        locMobileNavToDetailFromAbout: true
+                    }
+                ),
+                Set(
+                    gblProject,
+                    LookUp(
+                        'Project Work Items',
+                        'Project Work item' = GUID(Param("subEntityId"))
+                    ).Project
+                );
+                UpdateContext(
+                    {
+                        locCompletionStatus: First(
+                            Sort(
+                                'Project Work Item Statuses',
+                                Sequence,
+                                Ascending
+                            )
+                        )
+                    }
+                );
+                Clear(colWorkItemStatuses);
+                ForAll(
+                    Sort(
+                        Filter(
+                            'Project Work Item Statuses',
+                            'Project Work Item Status' <> locCompletionStatus.'Project Work Item Status'
+                        ),
+                        Sequence,
+                        Ascending
+                    ),
+                    Collect(
+                        colWorkItemStatuses,
+                        {
+                            Name: ThisRecord.Name,
+                            Color: ThisRecord.Color,
+                            'Color Dark': ThisRecord.'Color Dark',
+                            'Project Work Item Status': ThisRecord.'Project Work Item Status',
+                            Sequence: ThisRecord.Sequence
+                        }
+                    )
+                );
+                Collect(
+                    colWorkItemStatuses,
+                    {
+                        Name: locCompletionStatus.Name,
+                        Color: locCompletionStatus.Color,
+                        'Color Dark': locCompletionStatus.'Color Dark',
+                        'Project Work Item Status': locCompletionStatus.'Project Work Item Status',
+                        Sequence: locCompletionStatus.Sequence
+                    }
+                );
+                Navigate(
+                    'Add/Edit Work Item',
+                    ScreenTransition.None,
+                    {
+                        locEditWorkItem: true,
+                        locSelectedWorkItem: LookUp(
+                            'Project Work Items',
+                            'Project Work item' = GUID(Param("subEntityId"))
+                        ),
+                        locAddProject: false,
+                        locExpandProjectList: true,
+                        locProjectSortOrder: true,
+                        locSortWorkItemBy: "eta",
+                        locShowSearchWorkItem: false,
+                        locAddWorkItem: false,
+                        locProjectStatusSelection: "Milestone status",
+                        locWorkItemSortOrder: true
+                    }
+                )
+            ),
+            If( //if the parameter is blank, check if the user is on a mobile device or desktop/web and redirect the user accordingly 
+                (!IsBlank(Param("hostClientType")) && (Param("hostClientType") = "android" Or Param("hostClientType") = "ios")) || (IsBlank(Param("hostClientType")) && Acceleration.X > 0) Or tglAdmin_Mobile.Value,
+                Navigate(
+                    'Mobile Projects Screen',
+                    ScreenTransition.None
+                ),
+                Navigate(
+                    'Projects Screen',
+                    ScreenTransition.None,
+                    {
+                        locShowFirstRun: gblFirstRun,
+                        locShowPowerAppsPrompt: gblRecordUserSettings.'Display Splash (Power Apps)' = 'Display Splash (Power Apps) (Project User Settings)'.Yes
+                    } 
+                )
+            )
+        )
     )
     
-    );
-    
-    UpdateContext(
-    
-    {
-    
-    locMobileCompletionStatus: First(
-    
-    Sort(
-    
-    'Project Work Item Statuses',
-    
-    Sequence,
-    
-    Ascending
-    
-    )
-    
-    )
-    
-    }
-    
-    );
-    
-    Clear(colMobileWorkItemStatuses);
-    
-    ForAll(
-    
-    Sort(
-    
-    Filter(
-    
-    'Project Work Item Statuses',
-    
-    'Project Work Item Status' \<\> locMobileCompletionStatus.'Project Work Item
-    Status'
-    
-    ),
-    
-    Sequence,
-    
-    Ascending
-    
-    ),
-    
-    Collect(
-    
-    colMobileWorkItemStatuses,
-    
-    {
-    
-    Name: ThisRecord.Name,
-    
-    Color: ThisRecord.Color,
-    
-    'Color Dark': ThisRecord.'Color Dark',
-    
-    'Project Work Item Status': ThisRecord.'Project Work Item Status',
-    
-    Sequence: ThisRecord.Sequence
-    
-    }
-    
-    )
-    
-    );
-    
-    Collect(
-    
-    colMobileWorkItemStatuses,
-    
-    {
-    
-    Name: locMobileCompletionStatus.Name,
-    
-    Color: locMobileCompletionStatus.Color,
-    
-    'Color Dark': locMobileCompletionStatus.'Color Dark',
-    
-    'Project Work Item Status': locMobileCompletionStatus.'Project Work Item
-    Status',
-    
-    Sequence: locMobileCompletionStatus.Sequence
-    
-    }
-    
-    );
-    
-    Navigate(
-    
-    'Mobile Work Item Details Screen',
-    
-    ScreenTransition.None,
-    
-    {
-    
-    locMobileSelectedWorkItem: LookUp(
-    
-    'Project Work Items',
-    
-    'Project Work item' = GUID(Param("subEntityId"))
-    
-    ),
-    
-    locMobileShowWorkItemDetail: true,
-    
-    locMobileShowSearchWorkItem: false,
-    
-    locMobileNavToDetailFromAbout: true
-    
-    }
-    
-    ),
-    
-    Set(
-    
-    gblProject,
-    
-    LookUp(
-    
-    'Project Work Items',
-    
-    'Project Work item' = GUID(Param("subEntityId"))
-    
-    ).Project
-    
-    );
-    
-    UpdateContext(
-    
-    {
-    
-    locCompletionStatus: First(
-    
-    Sort(
-    
-    'Project Work Item Statuses',
-    
-    Sequence,
-    
-    Ascending
-    
-    )
-    
-    )
-    
-    }
-    
-    );
-    
-    Clear(colWorkItemStatuses);
-    
-    ForAll(
-    
-    Sort(
-    
-    Filter(
-    
-    'Project Work Item Statuses',
-    
-    'Project Work Item Status' \<\> locCompletionStatus.'Project Work Item Status'
-    
-    ),
-    
-    Sequence,
-    
-    Ascending
-    
-    ),
-    
-    Collect(
-    
-    colWorkItemStatuses,
-    
-    {
-    
-    Name: ThisRecord.Name,
-    
-    Color: ThisRecord.Color,
-    
-    'Color Dark': ThisRecord.'Color Dark',
-    
-    'Project Work Item Status': ThisRecord.'Project Work Item Status',
-    
-    Sequence: ThisRecord.Sequence
-    
-    }
-    
-    )
-    
-    );
-    
-    Collect(
-    
-    colWorkItemStatuses,
-    
-    {
-    
-    Name: locCompletionStatus.Name,
-    
-    Color: locCompletionStatus.Color,
-    
-    'Color Dark': locCompletionStatus.'Color Dark',
-    
-    'Project Work Item Status': locCompletionStatus.'Project Work Item Status',
-    
-    Sequence: locCompletionStatus.Sequence
-    
-    }
-    
-    );
-    
-    Navigate(
-    
-    'Add/Edit Work Item',
-    
-    ScreenTransition.None,
-    
-    {
-    
-    locEditWorkItem: true,
-    
-    locSelectedWorkItem: LookUp(
-    
-    'Project Work Items',
-    
-    'Project Work item' = GUID(Param("subEntityId"))
-    
-    ),
-    
-    locAddProject: false,
-    
-    locExpandProjectList: true,
-    
-    locProjectSortOrder: true,
-    
-    locSortWorkItemBy: "eta",
-    
-    locShowSearchWorkItem: false,
-    
-    locAddWorkItem: false,
-    
-    locProjectStatusSelection: "Milestone status",
-    
-    locWorkItemSortOrder: true
-    
-    }
-    
-    )
-    
-    ),
-    
-    If( //if the parameter is blank, check if the user is on a mobile device or
-    desktop/web and redirect the user accordingly
-    
-    (!IsBlank(Param("hostClientType")) && (Param("hostClientType") = "android" Or
-    Param("hostClientType") = "ios")) \|\| (IsBlank(Param("hostClientType")) &&
-    Acceleration.X \> 0) Or tglAdmin_Mobile.Value,
-    
-    Navigate(
-    
-    'Mobile Projects Screen',
-    
-    ScreenTransition.None
-    
-    ),
-    
-    Navigate(
-    
-    'Projects Screen',
-    
-    ScreenTransition.None,
-    
-    {
-    
-    locShowFirstRun: gblFirstRun,
-    
-    locShowPowerAppsPrompt: gblRecordUserSettings.'Display Splash (Power Apps)' =
-    'Display Splash (Power Apps) (Project User Settings)'.Yes
-    
-    }
-    
-    )
-    
-    )
-    
-    )
-    
-    )
     ```
 
 ## Publish the Milestones app
