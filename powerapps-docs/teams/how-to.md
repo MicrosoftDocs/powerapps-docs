@@ -5,7 +5,7 @@ author: joel-lindstrom
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/29/2021
+ms.date: 09/28/2021
 ms.subservice: teams
 ms.author: namarwah
 ms.reviewer: tapanm
