@@ -48,18 +48,18 @@ This program will authenticate and use an <xref:System.Net.Http.HttpClient> to s
 
     :::image type="content" source="media/quickstart-configure-project.png" alt-text="Configure the project":::
 
-1. In **Solution Explorer**, right-click the project you created and select **Manage NuGet Packages...** in the context menu. We will now bring in required assemblies for our project.
+1. In **Solution Explorer**, right-click the project you created and select **Manage NuGet Packages** in the context menu. We will now bring in required assemblies for our project.
 
 1. Browse for the  `Microsoft.IdentityModel.Clients.ActiveDirectory` NuGet package, select it, and then choose **Install**.
 
-    :::image type="content" source="media/quickstart-nuget-package-install.png" alt-text="Install the Active Directory Nuget package":::
+    :::image type="content" source="media/quickstart-nuget-package-install.png" alt-text="Install the Active Directory Nuget package" lightbox="media/quickstart-nuget-package-install.png":::
 
     > [!NOTE]
-    > You will be prompted to preview and **OK** the assembly changes, and **Accept** the license agreements, for the installed packages and their contents.
+    > You will be prompted to preview and **OK** the assembly additions, and **Accept** the license agreements, for the installed packages and their contents.
 
 1. Browse for the `Newtonsoft.Json` NuGet package and install the latest version.
 
-    :::image type="content" source="media/quickstart-nuget-package-json.png" alt-text="Install the JSON package":::
+    :::image type="content" source="media/quickstart-nuget-package-json.png" alt-text="Install the JSON package" lightbox="media/quickstart-nuget-package-json.png":::
 
 ## Edit Program.cs
 
@@ -159,7 +159,7 @@ namespace WebAPIQuickStart
     1. Navigate your browser to [Power Apps](https://make.powerapps.com).
     1. Select the environments icon (to the right of the search field), and choose a test environment.
     1. Select the settings icon ![Settings button.](media/settings-icon.png) and choose **Developer resources**.
-    1. Copy the Web API endpoint URL from "https:" through ".com" leaving off the /api/data...
+    1. Copy the Web API endpoint URL from "https:" through ".com" leaving off the /api/data/v9.x.
     1. Replace the resource string value in the program code with that endpoint URL value. For example:<p/>
         `string resource = "https://contoso.api.crm.dynamics.com";`
 
@@ -167,11 +167,9 @@ namespace WebAPIQuickStart
 
 1. Press F5 to build and run the program. The output should look something like this:
 
-```bash
-Your user ID is 969effb0-98ae-478c-b547-53a2968c2e75
-```
+    `Your user ID is 969effb0-98ae-478c-b547-53a2968c2e75`
 
-1. With the console window active, press any key to terminate the program.
+2. With the console window active, press any key to terminate the program.
 
 ### Congratulations!
 
