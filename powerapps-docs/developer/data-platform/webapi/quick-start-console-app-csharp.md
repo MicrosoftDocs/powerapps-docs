@@ -25,6 +25,8 @@ This program will authenticate and use an <xref:System.Net.Http.HttpClient> to s
 > [!NOTE]
 > This is a very simple example to show how to get connected with a minimum of code. The [Enhanced quick start](enhanced-quick-start.md) will build upon this sample to apply better design patterns.
 
+You can find the complete Visual Studio solution for this project in the [PowerApps-Samples](https://github.com/microsoft/PowerApps-Samples) repo under cds/webapi/C#/QuickStart.
+
 ## Prerequisites
 
  - Visual Studio 2019
