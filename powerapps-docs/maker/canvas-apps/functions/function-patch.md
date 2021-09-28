@@ -50,7 +50,7 @@ Then specify one or more change records, each of which contains new property val
 
 The return value of **Patch** is the record that you modified or created.  If you created a record, the return value may include properties that the data source generated automatically. However, the return value doesn't provide a value for fields of a related table.  
 
-For example, you use `Set(MyAccount, Patch(Accounts, First(Account), 'Account Name': "Example name");` and then `MyAccount.'Primary Contact'.'Full Name'`. You can't yield a full name in this case. Instead, to access the fields of a related table, use a separate lookup such as:
+For example, you use `Set(MyAccount, Patch(Accounts, First(Account), 'Account Name': "Example name"));` and then `MyAccount.'Primary Contact'.'Full Name'`. You can't yield a full name in this case. Instead, to access the fields of a related table, use a separate lookup such as:
 
 ```powerapps-dot
 LookUp(Accounts, Account = MyAccount.Account).'Primary Contact'.'Full Name'
