@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2021
+ms.date: 10/204/2021
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: tapanm
@@ -16,6 +16,15 @@ contributors:
 
 # Create additional portals in an environment
 
+The ability to create additional environments is determined by the template chosen for the new portal. The following table explains the limits for creating additional portals in an environment.
+
+| Environment type | Template | Limit | Additional information |
+| - | - | - | - |
+| [Environment with Dataverse](portal-templates.md#environment-with-dataverse) | Dataverse starter portal | 50 portals | No limits for language. For example, more than one or all portals can use same language. |
+| [Environment with customer engagement apps](portal-templates.md#environment-with-customer-engagement-apps) | Portal from blank | 50 portals | No limits for language. For example, more than one or all portals can use same language. |
+| [Environment with customer engagement apps](portal-templates.md#environment-with-customer-engagement-apps) | All templates except "Portal from blank" | 1 portal per language | For example, 1 English language portal for "Community portal" template |
+
+<!---
 An environment can have one portal of each type and for each language. Environments with Dataverse have [starter portal template](portal-templates.md#environment-with-dataverse) available. If you already have a starter portal for such an environment, you can't create another starter portal for the same language. Similarly, environments with customer engagement apps (Dynamics 365 Sales, Dynamics 365 Customer Service, Dynamics 365 Field Service, Dynamics 365 Marketing, or Dynamics 365 Project Service Automation) have several [portal templates](portal-templates.md#environment-with-customer-engagement-apps) available. If you have a portal from one of the templates already created in a language, you can't create a new portal with the same template type and language. New portal must have either a different portal type, or a different language.
 
 For example, consider a scenario where you have a Dataverse environment without the Dynamics 365 Apps. In this environment, you have a portal with *English* language created with the template type of *Starter portal*. You want to create a new portal in this environment.
@@ -34,10 +43,11 @@ Similarly, the following table explains the allowed template type and language c
 | *Portal from blank* in English | *Portal from blank* in English | &cross; |
 | *Portal from blank* in English | *Community portal* in English | &check; |
 | *Portal from blank* in English | *Portal from blank* in French | &check; |
+--->
 
-When an environment already has a portal of the available template type created, and if the environment doesn't have any additional languages enabled, you'll see this error message: *You have reached the maximum limit of 1 portal(s) on this environment. Please choose another environment or create new environment.*
+When an [environment with customer engagement apps](portal-templates.md#environment-with-customer-engagement-apps) already has a portal of the available template type (all templates except "Portal from blank") created, and if the environment doesn't have any additional languages enabled, you'll see this error message: *You have reached the maximum limit of 1 portal(s) on this environment. Please choose another environment or create new environment.*
 
-![Error when creating additional portal.](media/create-additional-portal-error.png "Error when creating additional portal")
+When an [environment with Dataverse](portal-templates.md#environment-with-dataverse) exceeds the maximum limit, you'll see this error message: *You have reached the maximum limit of sites for this environment. Please choose another environment or create new environment.*
 
 For more information about enabling languages in an environment, go to [Enable language for an environment](/power-platform/admin/enable-languages#enable-the-language).
 

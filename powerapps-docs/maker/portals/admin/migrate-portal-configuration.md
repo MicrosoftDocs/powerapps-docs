@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/07/2021
+ms.date: 10/04/2021
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: tapanm
@@ -114,6 +114,10 @@ You can export portal configuration data from a source system by using portal-sp
 5.	The next screen displays the import status of your records. The data import is done in multiple passes to first import the foundation data while queuing up the dependent data, and then import the dependent data in the subsequent passes to handle any data dependencies or linkages. This action ensures clean and consistent data import. 
 
 6.	Select **Exit** to close the tool. 
+
+### Create new portal using migrated data
+
+After importing the configuration data, you can now create a new portal using the imported website record. For details, see [Create portal](../create-portal.md) article, and ensure that you choose the existing website record to create the portal.
 
 ## Tenant to tenant migration
 
