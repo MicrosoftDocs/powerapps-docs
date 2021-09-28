@@ -2,12 +2,12 @@
   "redirections": [
     {
       "source_path": "powerapps-docs/teams/extend-milestones-send%20notification.md",
-      "redirect_url": "extend-milestones-send-notification.md",
+      "redirect_url": "extend-milestones-send-notification",
       "redirect_document_id": "false"
     },
     {
       "source_path": "powerapps-docs/teams/extend-milestones-send notification.md",
-      "redirect_url": "extend-milestones-send-notification.md",
+      "redirect_url": "extend-milestones-send-notification",
       "redirect_document_id": "false"
     },
     {
