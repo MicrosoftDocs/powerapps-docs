@@ -45,9 +45,13 @@ Similarly, the following table explains the allowed template type and language c
 | *Portal from blank* in English | *Portal from blank* in French | &check; |
 --->
 
-When an [environment with customer engagement apps](portal-templates.md#environment-with-customer-engagement-apps) already has a portal of the available template type (all templates except "Portal from blank") created, and if the environment doesn't have any additional languages enabled, you'll see this error message: *You have reached the maximum limit of 1 portal(s) on this environment. Please choose another environment or create new environment.*
+When an [environment with customer engagement apps](portal-templates.md#environment-with-customer-engagement-apps) already has a portal of the available template type (all templates except "Portal from blank") created, and if the environment doesn't have any additional languages enabled, you'll see this error message:
 
-When an [environment with Dataverse](portal-templates.md#environment-with-dataverse) exceeds the maximum limit, you'll see this error message: *You have reached the maximum limit of sites for this environment. Please choose another environment or create new environment.*
+"You have reached the maximum limit of 1 portal(s) on this environment. Please choose another environment or create new environment."
+
+When an [environment with Dataverse](portal-templates.md#environment-with-dataverse) exceeds the maximum limit, you'll see this error message:
+
+"You have reached the maximum limit of sites for this environment. Please choose another environment or create new environment."
 
 For more information about enabling languages in an environment, go to [Enable language for an environment](/power-platform/admin/enable-languages#enable-the-language).
 
