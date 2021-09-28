@@ -1,8 +1,8 @@
 ---
 title: "Quick Start: Web API sample (C#) (Microsoft Dataverse)| Microsoft Docs"
-description: "Demonstrates how to authenticate with a Microsoft Dataverse Server and then call a basic Web API operation, the WhoAmI Function"
+description: "Walks you through creating a program to authenticate with the Microsoft Dataverse Server and then call a Web API function."
 ms.custom: intro-internal
-ms.date: 03/03/2021
+ms.date: 09/28/2021
 ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
@@ -15,167 +15,171 @@ search.app:
   - PowerApps
   - D365CE
 ---
+
 # Quick Start: Web API sample (C#)
 
-In this quick start you will create a simple console application to connect to your Microsoft Dataverse environment using the Web API.
+In this quick start you will create a simple console application to connect to your target Microsoft Dataverse environment and invoke the Web API `WhoAmI` function. This function retrieves information about the logged on Dataverse user. Once you understand the basic functionality described here, you can move onto other Web API operations such as create, retrieve, update, and deletion of Dataverse table rows.
 
-You will authenticate and use an <xref:System.Net.Http.HttpClient> to send a `GET` request to the <xref href="Microsoft.Dynamics.CRM.WhoAmI?text=WhoAmI Function" /> the response will be a <xref href="Microsoft.Dynamics.CRM.WhoAmIResponse?text=WhoAmIResponse ComplexType" />. You will display the `UserId` property value.
+This program will authenticate and use an <xref:System.Net.Http.HttpClient> to send a `GET` request to the <xref href="Microsoft.Dynamics.CRM.WhoAmI?text=WhoAmI Function" /> the response will be a <xref href="Microsoft.Dynamics.CRM.WhoAmIResponse?text=WhoAmIResponse ComplexType" />. The program will then display the `UserId` property value obtained from the response.
 
 > [!NOTE]
-> This is a very simple example to show how to get connected with a minimum of code. The following [Enhanced quick start](enhanced-quick-start.md) will build upon this sample to apply better design patterns.
+> This is a very simple example to show how to get connected with a minimum of code. The [Enhanced quick start](enhanced-quick-start.md) will build upon this sample to apply better design patterns.
 
 ## Prerequisites
 
- - Visual Studio (2017 or later recommended)
+ - Visual Studio 2019
  - Internet connection
- - Valid user account for a Dataverse instance
-    - Your username
-    - Your password
+ - Valid user account for a Dataverse environment
  - Url to the Dataverse environment you want to connect with
  - Basic understanding of the Visual C# language
 
 > [!NOTE]
-> To authenticate you must have an app registered in Azure Active Directory. This quick start example provides an app registration `clientid` value you can use for the purpose of running sample code published by Microsoft. For your own applications you must register your apps. More information: [Walkthrough: Register an app with Azure Active Directory](../walkthrough-register-app-azure-active-directory.md)
+> To authenticate you must have an app registered in Azure Active Directory (AD). This quick start example provides an app registration `clientid` value you can use for the purpose of running sample code published by Microsoft. However, for your own custom applications you must register your apps with AD. More information: [Walkthrough: Register an app with Azure Active Directory](../walkthrough-register-app-azure-active-directory.md)
 
 ## Create Visual Studio project
 
-1. Create a new Console App (.NET Framework) project using **.NET Framework 4.6.2**
+1. Launch Visual Studio and select **Create a new project**.
 
-    ![Start a console app project.](../media/quick-start-web-api-console-app-csharp-1.png)
+1. Create a new Console App (.NET Framework) project.
 
-    > [!NOTE]
-    > This screenshot shows the name `WebAPIQuickStart`, but you can choose to name the project and solution whatever you want.
+    :::image type="content" source="media/quickstart-new-project.png" alt-text="New console app project":::
 
-    > [!IMPORTANT]
-    > **Known Issue with Visual Studio 2015**
-    > 
-    > When you are running your project/solution in VS 2015 in debug mode, you may not be able to connect. This happens regardless of whether you are using a Target Framework of 4.6.2 or higher. This can occur because the Visual Studio hosting process is compiled against .NET 4.5 which means by default it does not support TLS 1.2. You can disable the Visual Studio hosting process as a work around. 
-    >
-    > Right-click on the name of your project in Visual Studio and then click **Properties**. On the **Debug** tab you can uncheck the **Enable the Visual Studio hosting process** option. 
-    >
-    > This only impacts the debug experience in VS 2015. This does not impact the binaries or executable that are built. The same issue does not occur in Visual Studio 2017.
+1. Configure the project to use .NET Framework 4.6.2.
 
-1. In **Solution Explorer**, right-click the project you created and select **Manage NuGet Packages...** in the context menu.
+    :::image type="content" source="media/quickstart-configure-project.png" alt-text="Configure the project":::
 
-    ![Add NuGet package.](../media/quick-start-web-api-console-app-csharp-2.png)
+1. In **Solution Explorer**, right-click the project you created and select **Manage NuGet Packages...** in the context menu. We will now bring in required assemblies for our project.
 
-1. Browse for the  `Microsoft.IdentityModel.Clients.ActiveDirectory` NuGet package.
-1. Select **Version** 2.29.0 and install it.
+1. Browse for the  `Microsoft.IdentityModel.Clients.ActiveDirectory` NuGet package, select it, and then choose **Install**.
 
-    ![Install Microsoft.IdentityModel.Clients.ActiveDirectory NuGet package.](../media/quick-start-web-api-console-app-csharp-3.png)
-
-    > [!IMPORTANT]
-    > **Do not install the latest version of this NuGet package.**
-    >
-    > This sample depends on the capability to pass user credentials without a separate Azure login dialog which is not available in the 3.x version (or greater) version of this library.
+    :::image type="content" source="media/quickstart-nuget-package-install.png" alt-text="Install the Active Directory Nuget package":::
 
     > [!NOTE]
-    > You must select **I Accept** in the **Licence Acceptance** dialog.
+    > You will be prompted to preview and **OK** the assembly changes, and **Accept** the license agreements, for the installed packages and their contents.
 
 1. Browse for the `Newtonsoft.Json` NuGet package and install the latest version.
 
-    ![Install the Microsoft.IdentityModel.Clients.ActiveDirectory NuGet package.](../media/quick-start-web-api-console-app-csharp-4.png)
+    :::image type="content" source="media/quickstart-nuget-package-json.png" alt-text="Install the JSON package":::
 
 ## Edit Program.cs
 
-1. Add these using statements to the top of `Program.cs`
+1. Replace the entire contents of Program.cs with the following code. If you used a different name for your project than WebAPIQuickStart, you will need to change to namespace name in the new code to match your project name.
 
-    ```csharp
-    using Microsoft.IdentityModel.Clients.ActiveDirectory;
-    using System.Net.Http.Headers;
-    using System.Net.Http;
-    using Newtonsoft.Json.Linq;
-    ```
+```csharp
+using Microsoft.IdentityModel.Clients.ActiveDirectory;
+using Newtonsoft.Json.Linq;
+using System;
+using System.Net.Http;
+using System.Net.Http.Headers;
 
-1. Replace the `Main` method with the following code:
-
-    ```csharp
-    static void Main(string[] args)
+namespace WebAPIQuickStart
+{
+    class Program
     {
-       // Set these values:
-        // e.g. https://yourorg.crm.dynamics.com
-        string url = "<your environment url>";
-        // e.g. you@yourorg.onmicrosoft.com
-        string userName = "<your user name>";
-        // e.g. y0urp455w0rd
-        string password = "<your password>";
-
-        // Azure Active Directory registered app clientid for Microsoft samples
-        string clientId = "51f81489-12ee-4a9e-aaae-a2591f45987d";
-
-        var userCredential = new UserCredential(userName, password);
-        string apiVersion = "9.0";
-        string webApiUrl = $"{url}/api/data/v{apiVersion}/";
-
-        //Authenticate using IdentityModel.Clients.ActiveDirectory
-        var authParameters = AuthenticationParameters.CreateFromResourceUrlAsync(new Uri(webApiUrl)).Result;
-        var authContext = new AuthenticationContext(authParameters.Authority, false);
-        var authResult = authContext.AcquireToken(url, clientId, userCredential);
-        var authHeader = new AuthenticationHeaderValue("Bearer", authResult.AccessToken);
-
-        using (var client = new HttpClient())
+        static void Main()
         {
-            client.BaseAddress = new Uri(webApiUrl);
-            client.DefaultRequestHeaders.Authorization = authHeader;
+            // TODO Specify the Dataverse environment URL to connect with.
+            string resource = "https://<env-name>.<region>.dynamics.com";
 
-            // Use the WhoAmI function
+            // Azure Active Directory app registration shared by all Power App samples.
+            // For your custom apps, you will need to register them with Azure AD yourself.
+            // See https://docs.microsoft.com/powerapps/developer/data-platform/walkthrough-register-app-azure-active-directory
+            var clientId = "51f81489-12ee-4a9e-aaae-a2591f45987d";
+            var redirectUri = new Uri("app://58145B91-0C36-4500-8554-080854F2AC97");
+
+            #region Authentication
+
+            // The authentication context used to acquire the web service access token
+            var authContext = new AuthenticationContext(
+                "https://login.microsoftonline.com/common", false);
+
+            // Get the web service access token. Its lifetime is about one hour after
+            // which it must be refreshed. For this simple sample, no refresh is needed.
+            // See https://docs.microsoft.com/powerapps/developer/data-platform/authenticate-oauth
+            var token = authContext.AcquireTokenAsync(
+                resource, clientId, redirectUri,
+                new PlatformParameters(
+                    PromptBehavior.SelectAccount   // Prompt the user for a logon account.
+                ),
+                UserIdentifier.AnyUser
+            ).Result;
+            #endregion Authentication
+
+            #region Client configuration
+
+            var client = new HttpClient
+            {
+                // See https://docs.microsoft.com/en-us/powerapps/developer/data-platform/webapi/compose-http-requests-handle-errors#web-api-url-and-versions
+                BaseAddress = new Uri(resource + "/api/data/v9.2/"),
+                Timeout = new TimeSpan(0, 2, 0)    // Standard two minute timeout on web service calls.
+            };
+
+            // Default headers for each Web API call.
+            // See https://docs.microsoft.com/powerapps/developer/data-platform/webapi/compose-http-requests-handle-errors#http-headers
+            HttpRequestHeaders headers = client.DefaultRequestHeaders;
+            headers.Authorization = new AuthenticationHeaderValue("Bearer", token.AccessToken);
+            headers.Add("OData-MaxVersion", "4.0");
+            headers.Add("OData-Version", "4.0");
+            headers.Accept.Add(
+                new MediaTypeWithQualityHeaderValue("application/json"));
+            #endregion Client configuration
+
+            #region Web API call
+
+            // Invoke the Web API 'WhoAmI' unbound function.
+            // See https://docs.microsoft.com/powerapps/developer/data-platform/webapi/compose-http-requests-handle-errors
+            // See https://docs.microsoft.com/powerapps/developer/data-platform/webapi/use-web-api-functions#unbound-functions
             var response = client.GetAsync("WhoAmI").Result;
 
             if (response.IsSuccessStatusCode)
             {
-                //Get the response content and parse it.  
-                JObject body = JObject.Parse(response.Content.ReadAsStringAsync().Result);
+                // Parse the JSON formatted service response to obtain the user ID.  
+                JObject body = JObject.Parse(
+                    response.Content.ReadAsStringAsync().Result);
                 Guid userId = (Guid)body["UserId"];
-                Console.WriteLine("Your UserId is {0}", userId);
+
+                Console.WriteLine("Your user ID is {0}", userId);
             }
             else
             {
-                Console.WriteLine("The request failed with a status of '{0}'",
-                            response.ReasonPhrase);
+                Console.WriteLine("Web API call failed");
+                Console.WriteLine("Reason: " + response.ReasonPhrase);
             }
+            #endregion Web API call
 
-            Console.WriteLine("Press any key to exit.");
-            Console.ReadLine();
-        }       
+            // Pause program execution.
+            Console.ReadKey();
+        }
     }
-    ```
+}
+```
 
-1. Edit the following values to add information for your environment:
+1. Right below the TODO comment in the above code, replace the `resource` value with the actual URL of your Dataverse test environment. To find the URL value for your test environment, follow these steps:
 
-    ```csharp
-    // e.g. https://yourorg.crm.dynamics.com
-    string url = "<your environment url>";
-    // e.g. you@yourorg.onmicrosoft.com
-    string userName = "<your user name>";
-    // e.g. y0urp455w0rd
-    string password = "<your password>";
-    ```
-    To get the `url` value for your environment, follow these steps:
-
-    1. From the [https://make.powerapps.com](https://make.powerapps.com) site with the appropriate environment selected, select **Settings** ![Settings button.](media/settings-icon.png) and choose **Advanced Customizations**. Your browser will be redirected to the Dynamics 365 page.
-    1. On the Dynamics 365 page, select **Settings > Customizations > Developer Resources**.
-    1. On the **Developer Resources** page, look below **Instance Web API** and copy the Service Root URL value. 
-
-        It should look something like `https://yourorgname.api.crm.dynamics.com/api/data/v9.2/`. But for this sample, you must trim off the final part (`/api/data/v9.2/`) so that it is just `https://yourorgname.api.crm.dynamics.com`
-
-    For the `userName` and `password` variables, use the same credentials you used to log into the [https://make.powerapps.com](https://make.powerapps.com) site.
+    1. Navigate your browser to [Power Apps](https://make.powerapps.com).
+    1. Select the environments icon (to the right of the search field), and choose a test environment.
+    1. Select the settings icon ![Settings button.](media/settings-icon.png) and choose **Developer resources**.
+    1. Copy the Web API endpoint URL from "https:" through ".com" leaving off the /api/data...
+    1. Replace the resource string value in the program code with that endpoint URL value. For example:<p/>
+        `string resource = "https://contoso.api.crm.dynamics.com";`
 
 ## Run the program
 
-1. Press F5 to run the program. The output should look like this:
+1. Press F5 to build and run the program. The output should look something like this:
 
-    ```
-    Your UserId is 969effb0-98ae-478c-b547-53a2968c2e75
-    Press any key to exit.
-    ```
+```bash
+Your user ID is 969effb0-98ae-478c-b547-53a2968c2e75
+```
+
+1. With the console window active, press any key to terminate the program.
 
 ### Congratulations!
 
 You have successfully connected to the Web API.
 
-The quick start sample shows a simple approach to create a Visual Studio project without any exception handling or method to refresh the access token. 
+The quick start sample shows a simple approach to create a Visual Studio project without any exception handling or method to refresh the access token.
 
-This is enough to verify you can connect, but it doesn't represent a good pattern for building an app.
+This is enough to verify you can connect, but it doesn't necessarily represent a good pattern for building an app.
 
 The [Enhanced quick start](enhanced-quick-start.md) topic shows how to implement exception handling methods, basic authentication method using connection string, a re-usable method to refresh the access token, and introduces how to build re-usable methods to perform data operations.
 
