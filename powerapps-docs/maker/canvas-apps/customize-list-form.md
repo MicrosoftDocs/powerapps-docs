@@ -32,6 +32,9 @@ To follow the steps in this article, you'll create a list so that you can see ho
 > - Additional actions are needed when changing the address of a SharePoint site that uses custom forms. More information: [Effects of changing a SharePoint site address on Power Apps](/sharepoint/change-site-address#effects-of-changing-a-site-address).
 > - To access custom form, users must have access to the SharePoint list.
 
+Watch this video to learn how to customize a list form:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLvLK]
+
 ## Create a list
 
 On a SharePoint site, create a list, and then add these columns to that list:
