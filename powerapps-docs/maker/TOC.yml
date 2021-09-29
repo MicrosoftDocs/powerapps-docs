@@ -2459,7 +2459,7 @@
                  - name: Send a weekly report on project status from the Milestones sample app
                    href: ../teams/extend-milestones-weekly-report.md
                  - name: Send notification to the Team when work item status is updated in the Milestones sample app
-                   href: ../teams/extend-milestones-send notification.md
+                   href: ../teams/extend-milestones-send-notification.md
         - name: Perspectives (preview)
           items:
             - name: Use Perspectives sample app
