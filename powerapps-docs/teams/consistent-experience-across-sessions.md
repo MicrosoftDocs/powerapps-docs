@@ -25,7 +25,7 @@ While using an app, if we switch a tab in Teams to look at Wiki or Planner, or e
 In this article, we'll learn how to use the [LoadData() and SaveData() functions](../maker/canvas-apps/functions/function-savedata-loaddata.md) to store the session data within the app to avoid any loss of work because of switching tabs in Teams.
 
 Watch this video to learn how to enable consistent experience across sessions:
-> [!VIDOE https://www.microsoft.com/videoplayer/embed/RWL0DT]
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWL0DT]
 
 ## Prerequisites
 
