@@ -318,7 +318,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description|The type of search run, like full text search, Relevance search, etc.|
+|Description|The type of search run, like full text search, relevance search, etc.|
 |DisplayName|Search type|
 |FormatName|Text|
 |IsLocalizable|False|
