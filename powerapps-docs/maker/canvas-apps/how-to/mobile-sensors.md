@@ -28,6 +28,9 @@ To set up the scenario behind the first screen, imagine that you are building an
 
 For the second screen, imagine needing a tool to roughly measure angles. When on the second screen, the participant will be able to place or hold their device on a surface, and get the angles on the X and Y axis of the device as well as view a visual representation of those angles.
 
+Watch this video to learn how to build an app that uses mobile sensors:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLTiu]
+
 ## Prerequisites
 
 - Any level of Power Apps license can be used for this app, as no data connections are being used.
