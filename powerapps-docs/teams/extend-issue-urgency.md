@@ -18,6 +18,9 @@ contributors:
 
 As a user of the Issue reporting sample app for Microsoft Teams, you may want to modify the logic of how reported issues are create in Planner. We've included many of the standard fields in Planner in the standard app, but based on your specific requirements, you may want to make further changes.
 
+Watch this video to learn how to add urgency flag to reported issues:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLkWO]
+
 ## Create tasks in app vs using Power Automate
 
 When you create or update a record in another service, like Planner/Tasks, you have a choice of how to create or update the record:

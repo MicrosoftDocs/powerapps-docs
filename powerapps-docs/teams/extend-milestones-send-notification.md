@@ -21,6 +21,9 @@ The Milestones sample app for Microsoft Teams allows users to track progress of 
 
 In this article, we'll learn how to create a Power Automate flow to send an adaptive card notification to the Team (in which the app is installed) when work item status changes.
 
+Watch this video to learn how to configure notification to the Team when work item status is updated in the Milestones sample app:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLkWN]
+
 ## Prerequisites
 
 To complete this exercise, we would need the ability to log in into Teams that will be available as part of select Microsoft 365 subscriptions and will also need to have the Milestones Power Apps template for Teams installed. This app can be installed from <https://aka.ms/TeamsInspection>.
