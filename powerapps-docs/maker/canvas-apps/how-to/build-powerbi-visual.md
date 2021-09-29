@@ -24,12 +24,12 @@ Microsoft Power BI is a powerful analysis and visualization tool. Power Apps is 
 
 In this example, we'll create a quick Power BI report and a canvas app, and then see how we can add the report as a tile in the app.
 
+Watch this video to learn how to create a canvas app with Power BI visual:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLj3t]
+
 ## Prerequisites
 
 To complete this lesson, we'd need the ability to create Power BI dashboards and reports.
-
-Watch this video to learn how to create a canvas app with Power BI visual:
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLj3t]
 
 ## Sign in to Power BI
 

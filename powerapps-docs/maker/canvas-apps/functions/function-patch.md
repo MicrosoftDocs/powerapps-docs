@@ -26,6 +26,9 @@ Use the **Patch** function to modify records in complex situations. Such as, whe
 
 To update records in a data source more easily for simple changes, use the **Edit form** control instead. When you add an **Edit form** control, you provide users with a form to fill in and then save the changes to a data source. For more information, see [Understand data forms](../working-with-forms.md).
 
+Watch this video to learn how to use the Patch function:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLgbF]
+
 ## Overview
 Use the **Patch** function to modify one or more records of a data source.  The values of specific [fields](../working-with-tables.md#elements-of-a-table) are modified without affecting other properties. For example, this formula changes the phone number for a customer named Contoso:
 
@@ -38,9 +41,6 @@ Use **Patch** with the **[Defaults](function-defaults.md)** function to create r
 Even if you're not working with a data source, you can use **Patch** to merge two or more records. For example, this formula merges two records into one that identifies both the phone number and the location for Contoso:
 
 `Patch( { Name: "Contoso", Phone: "1-212-555-1234" }, { Name: "Contoso", Location: "Midtown"  } )`
-
-Watch this video to learn how to use the Patch function:
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLgbF]
 
 ## Description
 ### Modify or create a record in a data source
