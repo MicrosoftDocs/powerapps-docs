@@ -28,6 +28,9 @@ In this article, we'll review the process that we used to build these apps, and 
 > [!TIP]
 > This article highlights some of the approaches taken when designing the Teams template apps. For additional resources on bet practices for building Power Apps, please refer to [Power Apps guidance documentation](/powerapps/guidance/planning/introduction) section of the Power Apps docs.
 
+Watch this video to learn how the Power Apps templates for Microsoft Teams were made:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWL0DQ]
+
 ## Define
 
 Before designing and building, you need to have an idea&mdash;can be an idea for a solution to a business problem, an idea for modernizing a legacy or manual process, or an idea for an app that will make the life of your users easier.
