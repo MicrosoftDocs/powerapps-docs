@@ -35,6 +35,9 @@ Canvas apps can be shared with guest users of an Azure Active Directory (Azure A
   - The tenant hosting the app being shared
   - The home tenant of the guest user
 
+Watch this video to learn how to share an app with guests:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLTiv]
+
 ## Steps to grant guest access
 
 1. In Azure AD, select **New guest user**. More information: [Quickstart: Add a new guest user in Azure AD](/azure/active-directory/b2b/b2b-quickstart-add-guest-users-portal)

@@ -42,6 +42,9 @@ For the second screen, imagine needing a tool to roughly measure angles. When on
 
     This will provide the text in an HTML-friendly format for the app. The setup of the NFC tags is beyond the scope of this article, and the NFC elements can be ignored if needed; the primary focus is using the mobile sensors in Power Apps.
 
+Watch this video to learn how to build an app that uses mobile sensors:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLTiu]
+
 ## Add header and HTML text for the device sensor outputs
 
 ### Header label
