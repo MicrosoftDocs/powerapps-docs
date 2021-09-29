@@ -18,6 +18,9 @@ contributors:
 
 In the Issue reporting sample app, you can share the app for broad distribution. When you do this, the users outside of the Microsoft Teams team may not have access to the Planner. If this case is true, creation of tasks will fail because the users submitting the issue.
 
+Watch this video to learn how to remove the Planner dependency for task creation in the Issue reporting sample app:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLiBZ]
+
 Issue reporting is heavily dependent on Planner, and the users of the app must have access to the Planner that the app uses to create issues. Planner is referenced in multiple places in the app:
 
 1. During the app OnLoad, the app checks to see if Planner environment has been set in the app settings, and that the user of the app has access to that Planner environment.

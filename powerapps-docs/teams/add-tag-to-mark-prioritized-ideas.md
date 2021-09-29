@@ -29,6 +29,9 @@ In this article, we'll learn how to add a **Priority** tag to an idea in the Man
 > [!NOTE]
 > Before starting with the steps in this article, read [Customize the Employee Ideas app](customize-employee-ideas.md).
 
+Watch this video to learn how to add a tag to mark prioritized ideas:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLn9D]
+
 ## Prerequisites
 
 To complete this tutorial, you'll need the ability to sign in to Microsoft Teams, which will be available as part of select Microsoft 365 subscriptions. You'll also need to have the [Employee Ideas sample app](employee-ideas.md) installed. This app can also be installed using <https://aka.ms/TeamsEmployeeIdeas>.

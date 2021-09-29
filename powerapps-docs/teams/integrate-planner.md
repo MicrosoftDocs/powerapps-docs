@@ -20,6 +20,9 @@ In this article, we'll learn how to integrate Power Apps with Planner to create 
 
 Power Apps in Microsoft Teams enables collaboration between people and groups. Employees already use Teams to work, communicate, and collaborate. Apps in Teams have deep integration with other Teams capabilities. For example, in Teams, you can assign tasks to team members using Planner in your Teams channel. Apps that require follow-up by others in your team, such as to address issues reported in the Issue Reporting app, can leverage Planner in the Teams channel and create Tasks where users already manage their tasks.
 
+Watch this video to learn how to integrate Power Apps with Planner:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWL2Ut]
+
 ## Prerequisites
 
 To complete this lesson, we'd need the ability to create apps within Teams that will be available as part of select Microsoft 365 subscriptions. We'll also need the ability to connect to Planner.
