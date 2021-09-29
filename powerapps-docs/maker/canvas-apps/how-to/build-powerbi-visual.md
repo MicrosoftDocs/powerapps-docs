@@ -28,6 +28,9 @@ In this example, we'll create a quick Power BI report and a canvas app, and then
 
 To complete this lesson, we'd need the ability to create Power BI dashboards and reports.
 
+Watch this video to learn how to create a canvas app with Power BI visual:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLj3t]
+
 ## Sign in to Power BI
 
 Sign in to Power BI with the same Office license as the one used for creating the Power Apps.

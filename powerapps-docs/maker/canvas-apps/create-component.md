@@ -46,6 +46,9 @@ Components available inside the app are listed under the **Custom** category in 
 > [!NOTE]
 > Components discussed in this article are different from the Power Apps component framework that enables developers and makers to create code components for model-driven and canvas apps. For more information, go to [Power Apps component framework overview](../../developer/component-framework/overview.md).
 
+Watch this video to learn how to use components in canvas apps:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLlkO]
+
 ## Custom properties
 
 A component can receive input values and emit data if you create one or more custom properties. These scenarios are advanced and require you to understand [formulas](formula-reference.md) and binding contracts.
