@@ -26,7 +26,7 @@ Power Automate can be used to create logic that performs one or more tasks when 
 In this article, we'll learn how create and trigger a flow using canvas apps.
 
 Watch this video to learn how to create a canvas app that can trigger a flow:
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWLvLE]
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLvLE]
 
 ## Prerequisites
 
