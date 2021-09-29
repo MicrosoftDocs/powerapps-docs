@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: nabuthuk
-ms.date: 09/18/2021
+ms.date: 09/29/2021
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
@@ -21,7 +21,11 @@ contributors:
 # RecordInfo function in Power Apps
 Provides information about a [record](../working-with-tables#elements-of-a-table) of a [data source](../working-with-data-sources.md).
 
-Use **RecordInfo** to obtain information about a particular record of a data source, such as Dataverse, SharePoint, or SQL Server.  The data source must be tabular and compatible with the [**Remove**](function-remove-removeif.md) and [**Patch**](function-patch.md) functions.  The information available:
+Use **RecordInfo** to obtain information about a particular record of a data source.  The data source must be tabular and compatible with the [**Remove**](function-remove-removeif.md) and [**Patch**](function-patch.md) functions.  
+
+At this time, only Microsoft Dataverse is supported.  Records from all other data sources will result in a formula error.
+
+The information available:
 
 | Information argument | Description |
 | --- | --- |
@@ -29,14 +33,12 @@ Use **RecordInfo** to obtain information about a particular record of a data sou
 | **RecordInfo.EditPermission** | Does the current user have permission to modify this record in the data source? |
 | **RecordInfo.ReadPermission** | Does the current user have permission to read this record from the data source? |
 
-**RecordInfo** returns a Boolean, *blank*, or an error:
+**RecordInfo** returns a Boolean value:
 
 | Return value | Description |
 | --- | --- |
 | *true* | The user has the permission. |
-| *false* | The user does not have the permission. |
-| *blank* | The function could not determine if the user has the permission.  The operation can still be attempted as permissions will be checked by the data source and an error displayed if it was not allowed. If the record is *blank* then **RecordInfo** will also return *blank*. |  
-| *error* | The function was called on a record that did not originate from a data source.  This includes records of collections and tables in variables.  Records from a data source can be placed into a variables or collection and then **RecordInfo** can be used. |
+| *false* | The user does not have the permission.  If the record is *blank* then **RecordInfo** will also return *false*. |
 
 **RecordInfo** takes into account permissions at the data source level.  For example, if the user has permission at the record level to modify a record, but the user does not have permissions at the table level, then it will return *false* for **ModifyPermission**.
 
