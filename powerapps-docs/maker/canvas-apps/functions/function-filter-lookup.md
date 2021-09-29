@@ -38,6 +38,9 @@ The **Search** function finds records in a table that contain a string in one of
 
 [!INCLUDE [delegation](../../../includes/delegation.md)]
 
+Watch this video to learn how to use Filter, Search and LookUp functions:
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWLj3m]
+
 ## Syntax
 **Filter**(Table*, *Formula1* [, *Formula2*, ... ] )
 

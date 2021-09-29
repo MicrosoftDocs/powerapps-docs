@@ -39,6 +39,9 @@ Even if you're not working with a data source, you can use **Patch** to merge tw
 
 `Patch( { Name: "Contoso", Phone: "1-212-555-1234" }, { Name: "Contoso", Location: "Midtown"  } )`
 
+Watch this video to learn how to use the Patch function:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLgbF]
+
 ## Description
 ### Modify or create a record in a data source
 To use this function with a data source, specify the data source, and then specify a base record:
