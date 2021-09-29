@@ -21,6 +21,9 @@ contributors:
 
 Canvas apps can be shared with guest users of an Azure Active Directory (Azure AD) tenant. This enables inviting external business partners, contractors, and third parties to run your company's canvas apps.
 
+Watch this video to learn how to share an app with guests:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLTiv]
+
 ## Prerequisites
 
 - In Azure AD, enable B2B external collaboration for the tenant. More information: [Enable B2B external collaboration and manage who can invite guests](/azure/active-directory/b2b/delegate-invitations)
@@ -34,9 +37,6 @@ Canvas apps can be shared with guest users of an Azure Active Directory (Azure A
 
   - The tenant hosting the app being shared
   - The home tenant of the guest user
-
-Watch this video to learn how to share an app with guests:
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLTiv]
 
 ## Steps to grant guest access
 

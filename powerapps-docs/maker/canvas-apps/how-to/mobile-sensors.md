@@ -28,6 +28,9 @@ To set up the scenario behind the first screen, imagine that you are building an
 
 For the second screen, imagine needing a tool to roughly measure angles. When on the second screen, the participant will be able to place or hold their device on a surface, and get the angles on the X and Y axis of the device as well as view a visual representation of those angles.
 
+Watch this video to learn how to build an app that uses mobile sensors:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLTiu]
+
 ## Prerequisites
 
 - Any level of Power Apps license can be used for this app, as no data connections are being used.
@@ -41,9 +44,6 @@ For the second screen, imagine needing a tool to roughly measure angles. When on
     ```
 
     This will provide the text in an HTML-friendly format for the app. The setup of the NFC tags is beyond the scope of this article, and the NFC elements can be ignored if needed; the primary focus is using the mobile sensors in Power Apps.
-
-Watch this video to learn how to build an app that uses mobile sensors:
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLTiu]
 
 ## Add header and HTML text for the device sensor outputs
 
