@@ -21,6 +21,9 @@ In the Issue reporting sample app for Teams, tasks are created in Microsoft Plan
 > [!NOTE]
 > This lesson customizes the Issue reporting Power App template for Microsoft Teams. Before you proceed with this article, read [Customize the Issue reporting sample app](customize-issue-reporting.md).
 
+Watch this video to learn how to add the ability to be notified when an issue is resolved:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLiBP]
+
 To add the ability for notification when issue is resolved:
 
 1. Open the Power Apps app in Teams. We recommend that you right-click on Power Apps in Teams, and "pop out" the app so you won’t lose your changes when you go somewhere else in Teams.

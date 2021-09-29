@@ -28,6 +28,9 @@ Use a collection to store data that users can manage in your app. A collection i
 - Create an app or open an existing app in Power Apps.
 - Learn how to [configure a control](add-configure-controls.md) in Power Apps.
 
+Watch this video to learn how to create and update a collection:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLvLS]
+
 ## Create a multicolumn collection
 
 1. In Power Apps Studio, add a **Text input** control.

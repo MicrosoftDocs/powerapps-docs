@@ -28,6 +28,9 @@ Teams and Power Platform give you many options in the ways that you can notify p
 - Adaptive cards
 - Channel posts
 
+Watch this video to learn how to add notifications to make your apps collaborative:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLaWd]
+
 ## Choose the right notification type
 
 How should you decide what type of notification to use? Many people default to email notifications, but many people also complain that they receive too many emails. Email is an acceptable type of notification, but it should be used sparingly. Especially for urgent notifications, as frequently emails aren't seen immediately.

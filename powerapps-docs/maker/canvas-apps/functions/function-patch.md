@@ -26,6 +26,9 @@ Use the **Patch** function to modify records in complex situations. Such as, whe
 
 To update records in a data source more easily for simple changes, use the **Edit form** control instead. When you add an **Edit form** control, you provide users with a form to fill in and then save the changes to a data source. For more information, see [Understand data forms](../working-with-forms.md).
 
+Watch this video to learn how to use the Patch function:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLgbF]
+
 ## Overview
 Use the **Patch** function to modify one or more records of a data source.  The values of specific [fields](../working-with-tables.md#elements-of-a-table) are modified without affecting other properties. For example, this formula changes the phone number for a customer named Contoso:
 

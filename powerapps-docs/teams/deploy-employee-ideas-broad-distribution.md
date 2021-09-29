@@ -30,6 +30,9 @@ You can use **Share with Colleague** feature to accomplish this. In this case, y
 
 In this article, we'll explain how to share the app with colleagues outside of the team.
 
+Watch this video to learn how to deploy Employee Ideas app as a broad distribution app:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLkvR]
+
 ## Prerequisites
 
 You must be an owner of the Team in which the app is installed to share the app.
