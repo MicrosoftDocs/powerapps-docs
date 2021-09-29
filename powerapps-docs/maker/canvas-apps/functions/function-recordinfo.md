@@ -40,7 +40,7 @@ The information available:
 | *true* | The user has the permission. |
 | *false* | The user does not have the permission.  If the record is *blank* then **RecordInfo** will also return *false*. |
 
-**RecordInfo** takes into account permissions at the data source level.  For example, if the user has permission at the record level to modify a record, but the user does not have permissions at the table level, then it will return *false* for **ModifyPermission**.
+**RecordInfo** takes into account permissions at the data source level too.  For example, if the user has permission at the record level to modify a record, but the user does not have permissions at the table level, then it will return *false* for **ModifyPermission**.  Use the [**DataSourceInfo**](function-datasourceinfo.md) function to obtain information about the data source as a whole.
 
 ## Syntax
 **RecordInfo**( *Record*, *Information* )
