@@ -93,6 +93,9 @@ The following tutorial shows how to install the Employee ideas app. You can use 
 1. Search for the team channel that you want to add the app to.
 
     ![Search for a team channel.](media/sample-app-2.png "Search for a team channel")
+    
+> [!IMPORTANT]
+> You cannot select an private channel as sample apps require access to your Microsoft 365 Group.
 
 1. Select **Set up a tab**.
 
