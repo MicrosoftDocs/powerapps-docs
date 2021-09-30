@@ -38,7 +38,7 @@ The information available:
 | Return value | Description |
 | --- | --- |
 | *true* | The user has the permission. |
-| *false* | The user does not have the permission.  If the record is *blank* then **RecordInfo** will also return *false*. |
+| *false* | The user does not have permission.  If the record is *blank* then **RecordInfo** will also return *false*. |
 
 **RecordInfo** takes into account permissions at the data source level too.  For example, if the user has permission at the record level to modify a record, but the user does not have permissions at the table level, then it will return *false* for **ModifyPermission**.  Use the [**DataSourceInfo**](function-datasourceinfo.md) function to obtain information about the data source as a whole.
 
@@ -53,13 +53,13 @@ The information available:
 ```powerapps-dot
 RecordInfo( First(Accounts), RecordInfo.EditPermission )
 ```
-Checks the edit permission for the first record in the `Accounts` data source, which could be in Dataverse, SharePoint, SQL Server, or another tabular data source.  If the user has permission to edit this record, and to modify the `Accounts` data source in general, then **RecordInfo** will return *true*.  
+Checks the edit permission for the first record in the `Accounts` data source, which could be in Dataverse, SharePoint, SQL Server, or another tabular data source.  If the user has permission to edit this record and modify the `Accounts` data source in general, then **RecordInfo** will return *true*.  
 
 ```powerapps-dot
 With( { MyRecord: First( Accounts ) }, 
       RecordInfo( MyRecord, RecordInfo.EditPermission ) )
 ```
-Captures a record using the [**With**](function-with.md) function and then passes this value to the RecordInfo function.  The result will be the same as the last example.
+Captures a record using the [**With**](function-with.md) function and then passes this value to the `RecordInfo` function.  The result will be the same as the last example.
 
 ```powerapps-dot
 Collect( MyAccounts, FirstN( Accounts, 10 ) );
