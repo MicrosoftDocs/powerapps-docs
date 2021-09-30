@@ -9,7 +9,7 @@ ms.custom:
   - canvas
   - intro-internal
 ms.reviewer: 
-ms.date: 05/24/2021
+ms.date: 08/16/2021
 ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
@@ -25,6 +25,9 @@ contributors:
 In Power Apps, create a canvas app based on a list of sample accounts in [Dataverse](../data-platform/data-platform-intro.md). In this app, you can browse all accounts, show details of a single account, and create, update, or delete an account.
 
 If you're not signed up for Power Apps, [sign up for free](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) before you start.
+
+Watch this short video that shows you how to create a canvas app quickly using Dataverse tables.
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWIUJy]
 
 ## Prerequisites
 

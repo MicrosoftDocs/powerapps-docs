@@ -1,13 +1,13 @@
 ---
-title: Use How to sample app (Preview)
+title: Use How to sample app (preview)
 description: Learn how to use the How to app and learn how to be a Power Apps maker.
 author: joel-lindstrom
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/29/2021
+ms.date: 09/28/2021
 ms.subservice: teams
-ms.author: v-ljoel
+ms.author: namarwah
 ms.reviewer: tapanm
 contributors:
   - navjotm
@@ -15,7 +15,9 @@ contributors:
   - tapanm-msft
 ---
 
-# Use How to sample app (Preview)
+# Use How to sample app (preview)
+
+[This article is pre-release documentation and is subject to change.]
 
 The How-to template app for Microsoft Teams provides a simple way to learn how to be a Power Apps maker by walking you step-by-step through designing data model, screens, and connecting screens together to build a complete Power Apps asset checkout solution.
 
@@ -31,8 +33,8 @@ Benefits of using the How-to app:
 > This app is available in three different Teams themes: Default, Dark and High contrast. When you [**change the theme in Teams**](https://support.microsoft.com/office/change-settings-in-teams-b506e8f1-1a96-4cf1-8c6b-b6ed4f424bc7) the app automatically updates to match the selected theme. More information: [**Get the Teams theme using the Teams integration object**](use-teams-integration-object.md#get-the-teams-theme)
 
 > [!IMPORTANT]
-> This is a preview feature.
-> Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
+> - This is a preview feature.
+> - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 
 ## Prerequisites
 
@@ -746,19 +748,20 @@ From this screen, the user provides details of the reason for checkout, duration
 
 1. Add an image to galCheckoutAdminContact control - imgCheckoutAdmin_Chat.
 
-    | **Control**                             | **Property**  | **Value**                                      |
-    |-----------------------------------------|---------------|------------------------------------------------|
-    | Add an image to galCheckoutAdminContact | Name          | imgCheckoutAdmin_Chat                          |
-    | imgCheckoutAdmin_Chat                   | X             | Parent.Width - Self.Width - 20                 |
-    | imgCheckoutAdmin_Chat                   | Y             | (Parent.TemplateHeight - Self.Height)/2        |
-    | imgCheckoutAdmin_Chat                   | Width         | 32                                             |
-    | imgCheckoutAdmin_Chat                   | Height        | 32                                             |
-    | imgCheckoutAdmin_Chat                   | PaddingTop    | 4                                              |
-    | imgCheckoutAdmin_Chat                   | paddingBottom | 4                                              |
-    | imgCheckoutAdmin_Chat                   | PaddingLeft   | 4                                              |
-    | imgCheckoutAdmin_Chat                   | PaddingRight  | 4                                              |
-    | imgCheckoutAdmin_Chat                   | ImagePosition | ImagePosition.Fit                              |
-    | imgCheckoutAdmin_Chat                   | Image         | If(gblThemeDark\|\|gblThemeHiCo,ChatDark,Chat) |
+     | **Control**                             | **Property**  | **Value**                                                    |
+     | --------------------------------------- | ------------- | ------------------------------------------------------------ |
+     | Add an image to galCheckoutAdminContact | Name          | imgCheckoutAdmin_Chat                                        |
+     | imgCheckoutAdmin_Chat                   | X             | Parent.Width - Self.Width - 20                               |
+     | imgCheckoutAdmin_Chat                   | Y             | (Parent.TemplateHeight - Self.Height)/2                      |
+     | imgCheckoutAdmin_Chat                   | Width         | 32                                                           |
+     | imgCheckoutAdmin_Chat                   | Height        | 32                                                           |
+     | imgCheckoutAdmin_Chat                   | PaddingTop    | 4                                                            |
+     | imgCheckoutAdmin_Chat                   | paddingBottom | 4                                                            |
+     | imgCheckoutAdmin_Chat                   | PaddingLeft   | 4                                                            |
+     | imgCheckoutAdmin_Chat                   | PaddingRight  | 4                                                            |
+     | imgCheckoutAdmin_Chat                   | ImagePosition | ImagePosition.Fit                                            |
+     | imgCheckoutAdmin_Chat                   | Image         | If(gblThemeDark\|\|gblThemeHiCo,ChatDark,Chat)               |
+     | ImgCheckoutAdmin_Chat                   | OnSelect      | With(     {varUserName: Office365Users.UserProfileV2(locSelectedItem.'Item Type'.'Checkout Admin').userPrincipalName},     If(         Param("hostClientType") = "web",         Launch(             "https://teams.microsoft.com/l/chat/0/0?users=" & varUserName & "&topicName=&message=Hi!",             {},             LaunchTarget.New         ),         Launch(             "msteams://teams.microsoft.com/l/chat/0/0?users=" & varUserName & "&topicName=&message=Hi!",             {},             LaunchTarget.New         )     ) ) |
 
 1. Add a button to conCheckoutConfirmation control – btnCheckoutBackToHome.
 
@@ -1060,19 +1063,20 @@ In this step, we're going to build the final screen of the app, the My checkout 
 
 1. Add an image to galReturnAdminContact control - imgReturnAdmin_Chat.
 
-    | **Control**                           | **Property**  | **Value**                                      |
-    |---------------------------------------|---------------|------------------------------------------------|
-    | Add an image to galReturnAdminContact | Name          | imgReturnAdmin_Chat                            |
-    | imgReturnAdmin_Chat                   | X             | Parent.Width - Self.Width - 20                 |
-    | imgReturnAdmin_Chat                   | Y             | (Parent.TemplateHeight - Self.Height)/2        |
-    | imgReturnAdmin_Chat                   | Width         | 32                                             |
-    | imgReturnAdmin_Chat                   | Height        | 32                                             |
-    | imgReturnAdmin_Chat                   | PaddingTop    | 4                                              |
-    | imgReturnAdmin_Chat                   | paddingBottom | 4                                              |
-    | imgReturnAdmin_Chat                   | PaddingLeft   | 4                                              |
-    | imgReturnAdmin_Chat                   | PaddingRight  | 4                                              |
-    | imgReturnAdmin_Chat                   | ImagePosition | ImagePosition.Fit                              |
-    | imgReturnAdmin_Chat                   | Image         | If(gblThemeDark\|\|gblThemeHiCo,ChatDark,Chat) |
+     | **Control**                           | **Property**  | **Value**                                                    |
+     | ------------------------------------- | ------------- | ------------------------------------------------------------ |
+     | Add an image to galReturnAdminContact | Name          | imgReturnAdmin_Chat                                          |
+     | imgReturnAdmin_Chat                   | X             | Parent.Width - Self.Width - 20                               |
+     | imgReturnAdmin_Chat                   | Y             | (Parent.TemplateHeight - Self.Height)/2                      |
+     | imgReturnAdmin_Chat                   | Width         | 32                                                           |
+     | imgReturnAdmin_Chat                   | Height        | 32                                                           |
+     | imgReturnAdmin_Chat                   | PaddingTop    | 4                                                            |
+     | imgReturnAdmin_Chat                   | paddingBottom | 4                                                            |
+     | imgReturnAdmin_Chat                   | PaddingLeft   | 4                                                            |
+     | imgReturnAdmin_Chat                   | PaddingRight  | 4                                                            |
+     | imgReturnAdmin_Chat                   | ImagePosition | ImagePosition.Fit                                            |
+     | imgReturnAdmin_Chat                   | Image         | If(gblThemeDark\|\|gblThemeHiCo,ChatDark,Chat)               |
+     | ImgReturnAdmin_Chat                   | OnSelect      | With(     {varUserName: Office365Users.UserProfileV2(locSelectedItem.'Item Type'.'Checkout Admin').userPrincipalName},     If(         Param("hostClientType") = "web",         Launch(             "https://teams.microsoft.com/l/chat/0/0?users=" & varUserName & "&topicName=&message=Hi!",             {},             LaunchTarget.New         ),         Launch(             "msteams://teams.microsoft.com/l/chat/0/0?users=" & varUserName & "&topicName=&message=Hi!",             {},             LaunchTarget.New         )     ) ) |
 
 1. Add a button to conReturnConfirmation control - btnReturnBackToHome.
 

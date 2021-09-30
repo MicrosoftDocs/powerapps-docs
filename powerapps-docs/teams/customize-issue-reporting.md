@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 07/15/2021
-ms.author: v-ljoel
+ms.author: namarwah
 ms.reviewer: tapanm
 contributors:
   - joel-lindstrom
@@ -22,6 +22,9 @@ The Issue reporting Power App template for Microsoft Teams is designed to be a c
 > Before you can customize the app, you must install it from the Teams store. You can get the app at <https://aka.ms/TeamsIssueReporting>.
 
 Once the app is installed, you can then customize the app using the following steps:
+
+Watch this video to learn how to customize the Issue reporting sample app:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLnv1]
 
 ## Opening Power Apps app in Teams
 

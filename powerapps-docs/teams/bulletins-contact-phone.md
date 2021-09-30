@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 07/13/2021
-ms.author: v-shrutibahl
+ms.author: namarwah
 ms.reviewer: tapanm
 contributors:
   - joel-lindstrom
@@ -18,6 +18,9 @@ contributors:
 # Add contact phone in links and contacts section
 
 The Bulletins sample app for Microsoft Teams provides a central location for all company communication such as broadcasts, memos, announcements, and company news. The app allows you to create, categorize, bookmark, search and read bulletin posts.
+
+Watch this video to learn how to add contact phone in links and contacts section:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLkvV]
 
 The Bulletins app solution consists of two apps:
 

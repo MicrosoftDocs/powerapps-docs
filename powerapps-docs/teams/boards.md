@@ -1,5 +1,5 @@
 ---
-title: Boards sample app (Preview)
+title: Boards sample app (preview)
 description: Learn how to use the Boards app.
 author: joel-lindstrom
 ms.service: powerapps
@@ -7,7 +7,7 @@ ms.topic: conceptual
 ms.custom: 
 ms.date: 05/24/2021
 ms.subservice: teams
-ms.author: v-ljoel
+ms.author: namarwah
 ms.reviewer: tapanm
 contributors:
   - joel-lindstrom
@@ -15,7 +15,7 @@ contributors:
   - tapanm-msft
 ---
 
-# Boards sample app (Preview)
+# Boards sample app (preview)
 
 [This article is pre-release documentation and is subject to change.]
 
@@ -43,7 +43,7 @@ Benefits of using the Boards app:
 
 Before using this app:
 
-1.  Install the app by side-loading the manifest for the app into Teams. You can get the manifest from https://aka.ms/TeamsBoards. For more information and help with installing this app, read the documentation available with the app manifest.
+1.  Install the app by side-loading the manifest for the app into Teams. You can get the manifest from <https://aka.ms/TeamsBoards>. For more information and help with installing this app, read the documentation available with the app manifest.
 2.  Set up the app for the first use.
 
 ## Using Boards
@@ -261,7 +261,7 @@ To add categories:
 
 ### See also
 
-- [Understand Boards (Preview) sample app architecture](boards-architecture.md)
+- [Understand Boards (preview) sample app architecture](boards-architecture.md)
 - [Customize sample apps](customize-sample-apps.md)
 - [Sample apps FAQs](sample-apps-faqs.md)
 - [Use sample apps from the Microsoft Teams store](use-sample-apps-from-teams-store.md)

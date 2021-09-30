@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 07/15/2021
-ms.author: v-ljoel
+ms.author: namarwah
 ms.reviewer: tapanm
 contributors:
   - joel-lindstrom
@@ -17,6 +17,9 @@ contributors:
 # Add urgency flag to reported issues
 
 As a user of the Issue reporting sample app for Microsoft Teams, you may want to modify the logic of how reported issues are create in Planner. We've included many of the standard fields in Planner in the standard app, but based on your specific requirements, you may want to make further changes.
+
+Watch this video to learn how to add urgency flag to reported issues:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLkWO]
 
 ## Create tasks in app vs using Power Automate
 
@@ -174,7 +177,7 @@ In this section we'll be creating a flow and replacing the app logic that create
 
 1. Set input for the template step to **Ask in PowerApps**.
 
-1. Add a Planner **Create a task (Preview)** action.
+1. Add a Planner **Create a task (preview)** action.
 
 1. Set the following fields to **Ask in Power Apps**.
 

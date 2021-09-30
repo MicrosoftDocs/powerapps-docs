@@ -7,7 +7,7 @@ ms.topic: conceptual
 ms.custom: 
 ms.date: 07/02/2021
 ms.subservice: teams
-ms.author: v-ljoel
+ms.author: namarwah
 ms.reviewer: tapanm
 contributors:
   - navjotm
@@ -29,6 +29,9 @@ There are a couple of ways to deploy the app. Within the Teams team where only t
 You can use **Share with Colleague** feature to accomplish this. In this case, you'd want to create a Teams team only for those members in the organization who will administer the campaigns, and developers who would extend the app to meet your unique business needs. And then, we'll share the app to be used by an external group outside the team.
 
 In this article, we'll explain how to share the app with colleagues outside of the team.
+
+Watch this video to learn how to deploy Employee Ideas app as a broad distribution app:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLkvR]
 
 ## Prerequisites
 

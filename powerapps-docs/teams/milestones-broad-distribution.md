@@ -7,7 +7,7 @@ ms.topic: conceptual
 ms.custom: 
 ms.date: 06/23/2021
 ms.subservice: teams
-ms.author: v-ljoel
+ms.author: namarwah
 ms.reviewer: tapanm
 contributors:
   - navjotm
@@ -18,6 +18,9 @@ contributors:
 # Deploy Milestone apps as broad distribution app
 
 The Milestones sample app is designed to make it easy to manage project work items based on Milestones, and track them through the completion.
+
+Watch this video to learn how to deploy Milestone apps as broad distribution app:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLiBW]
 
 The app addresses the following personas:
 

@@ -153,7 +153,7 @@ If you use a gallery in your app, you'll need to lay out controls within the gal
 
 ### Container control
 
-You can use an experimental feature, the **Layout container** control, as a parent control. To turn this feature on, select **File** > **Settings** > **Upcoming features** > **Preview**, and select **Layout containers** to turn the feature on.
+You can use the **Layout container** control, as a parent control.
 
 Consider the example of a header at the top of a screen. It's common to have a header with a title and several icons with which your users can interact. You can construct such a header using the **Container** control, containing a **Label** control and two **Icon** controls:
 
@@ -236,7 +236,7 @@ You can adjust your layout based on the size of the device. The screen's **Size*
 
 Use these sizes to make decisions about your app's layout. For example, if you want a control to be hidden on a phone-sized device but visible otherwise, you could set the control's **Visible** property to this formula:
 
-`Parent.Size >= ScreenSize.Medium`
+`Parent.Width >= ScreenSize.Medium`
 
 This formula evaluates to **true** when the size is medium or larger and **false** otherwise.
 
@@ -244,7 +244,7 @@ If you want a control to occupy a different fraction of the screen width based o
 
 ```powerapps-dot
 Parent.Width *  
-    Switch(Parent.Size,  
+    Switch(Parent.Width,  
         ScreenSize.Small, 0.5,  
         ScreenSize.Medium, 0.3,  
         0.25)

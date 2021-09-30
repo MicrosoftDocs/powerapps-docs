@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 06/13/2021
-ms.author: v-ljoel
+ms.author: namarwah
 ms.reviewer: tapanm
 contributors:
   - joel-lindstrom
@@ -17,6 +17,9 @@ contributors:
 # Deploy Issue reporting app as broad distribution app
 
 The Issue reporting sample app for Microsoft Teams is designed to make it easy to capture issues with your equipment, facility, or store.
+
+Watch this video to learn how to deploy Issue reporting app as broad distribution app:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLvkW]
 
 The app addresses the following personas:
 

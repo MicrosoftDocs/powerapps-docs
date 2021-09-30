@@ -7,7 +7,7 @@ ms.custom:
 ms.date: 06/24/2021
 author: joel-lindstrom
 ms.subservice: teams
-ms.author: v-ljoel
+ms.author: namarwah
 ms.reviewer: tapanm
 contributors:
   - navjotm
@@ -20,6 +20,9 @@ contributors:
 The Power Apps templates for Microsoft Teams include many pre-defined columns to track the most common data points for their scenario. For example, in the Milestones app (https://aka.ms/TeamsMilestones), users can track the category and priority of work items.
 
 In this article, we'll learn how to add a new column/field to a work item. For our example, we'll add a new field to capture the effort required for a particular work item. we'll add this field to the **New** and **Edit** Work Item screens for both desktop and mobile.
+
+Watch this video to learn how to add a new column to Milestones sample app to track work items:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLiBS]
 
 ## Prerequisites
 

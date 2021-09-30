@@ -5,9 +5,9 @@ author: joel-lindstrom
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/02/2021
+ms.date: 08/26/2021
 ms.subservice: teams
-ms.author: v-ljoel
+ms.author: namarwah
 ms.reviewer: tapanm
 contributors:
   - joel-lindstrom
@@ -21,6 +21,9 @@ contributors:
 The Employee Ideas sample app for Microsoft Teams makes it easy to capture ideas and suggestions from your colleagues and have colleagues vote for their favorite ideas. But you might want to make this more interactive by facilitating discussions around ideas.
 
 Currently the Employee Ideas app posts messages to a teams channel when an Idea is submitted. In this article, we'll extend the app to provide a mechanism for users to go to the idea channel message so the can interact and discuss the idea with other users.
+
+Watch this video to learn how to enable users to discuss ideas:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLxVr]
 
 ## Prerequisites
 
@@ -58,7 +61,18 @@ The Employee Ideas sample app posts messages to teams channels when an app or a 
 
 Now we'll update the button that submits ideas to store the message ID in the **Employee Ideas** table so that later we can facilitate joining the conversation.
 
+1. In Teams, right-click on Power Apps from the left-pane, and select **Pop out app**.
+
+1. Select the **Build** tab.
+
+1. Select the team in which Employee Ideas app is installed.
+
+1. Select **Installed apps.**
+
+1. In the Employee Ideas tile, select the Ideas link.
+
 1. Switch to the **Tree View** to see controls in the app.
+
 1. Search for **btnCampaignIdeaControls_Submit** to find the button that will submit an idea.
 
     > [!NOTE]
@@ -73,7 +87,7 @@ Now we'll update the button that submits ideas to store the message ID in the **
         tglIdeaDetailControls_PostToTeams.Value,......
     ```
 
-    And replace that part of the formula with the following:
+    And replace that part of the formula with the following formula:
 
     ```powerapps-dot
     If(
@@ -100,9 +114,19 @@ Now we'll update the button that submits ideas to store the message ID in the **
                     }
                 )
             ),
+            Notify(
+                "Message was not posted. You may not have access to the Team and/or Channel. Contact the app administrator.",
+                NotificationType.Warning),
+                Patch(
+                    'Employee Ideas',
+                    locFormRecordIdea,
+                    {'Message ID': locTeamsMessage.id}
+            )
+        )
+    );
     ```
 
-## Customize app – Add a button to direct user to discuss Idea
+## Add a button to direct user to discuss idea
 
 > [!NOTE]
 > This app is responsively designed. Follow the steps below to maintain responsive design.
@@ -121,32 +145,18 @@ Now we'll update the button that submits ideas to store the message ID in the **
     | **Property** | **Value**                                                                                           |
     |--------------|-----------------------------------------------------------------------------------------------------|
     | Text         | "Discuss"                                                                                           |
-    | X            | btnCampaignIdeaControls_Votes.X - Self.Width - 20                                                   |
-    | Y            | btnCampaignIdeaControls_Votes.Y                                                                     |
-    | DisplayMode  | If(  IsBlankOrError(gblRecordCampaignIdea.'Message ID'),  DisplayMode.Disabled,  DisplayMode.Edit ) |
-    | Visible      | btnCampaignIdeaControls_Votes.Visible                                                               |
+    | X            | `btnCampaignIdeaControls_Votes.X - Self.Width - 20`                                                   |
+    | Y            | `btnCampaignIdeaControls_Votes.Y`                                                                     |
+    | DisplayMode  | `If(  IsBlankOrError(gblRecordCampaignIdea.'Message ID'),  DisplayMode.Disabled,  DisplayMode.Edit )` |
+    | Visible      | `btnCampaignIdeaControls_Votes.Visible`                                                               |
 
-1. Set the **OnSelect** property of the button to the following:
+1. Set the **OnSelect** property of the button to the following formula:
 
     > [!NOTE]
     > The example below uses **msteams:** as the launcher. This launcher can also be **https:**, or dynamically switch to use the appropriate client.
 
     ```powerapps-dot
-    With(
-    {varMessage: gblRecordCampaignIdea.'Message ID'},
-    Launch(
-    Concatenate(
-    "msteams://teams.microsoft.com/l/message/",
-    gblSettingNotificationChannelId,
-    "/",
-    varMessage,
-    "?groupId=",
-    gblSettingTeamId,
-    "&parentMessageId=",
-    varMessage
-    )
-    )
-    )
+    With({varMessage: gblRecordCampaignIdea.'Message ID'},Launch(Concatenate("msteams://teams.microsoft.com/l/message/",gblSettingNotificationChannelId,"/",varMessage,"?groupId=",gblSettingTeamId,"&parentMessageId=",varMessage)))
     ```
 
 1. Save and publish the app.

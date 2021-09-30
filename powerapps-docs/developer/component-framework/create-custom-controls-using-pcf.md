@@ -31,7 +31,7 @@ To begin, open **Developer Command Prompt for VS 2017 or higher** after installi
     ```CLI
     pac pcf init --namespace <specify your namespace here> --name <Name of the code component> --template <component type>
     ```
-4. To retrieve all the required project dependencies, run the command `npm install`.
+4. The above command will also run `npm install` command for you to retrieve all the required project dependencies.
 5. Open your project folder `C:\Users\<your name>\Documents\<My_code_Component>` in any developer environment of your choice and get started with your code component development. The quickest way to get started is by running `code .` from your command prompt once you are in the `C:\Users\<your name>\Documents\<My_code_Component>` directory. This command opens your component project in Visual Studio Code.
 6. Implement the required artifacts for the component like manifest, component logic, and styling and then build the component project. More information: [Create your first code component](implementing-controls-using-typescript.md)
 
@@ -39,7 +39,7 @@ To begin, open **Developer Command Prompt for VS 2017 or higher** after installi
 
 To build the component project, open the project folder that contains `package.json` in Visual Studio Code and use the (Ctrl-Shift-B) command, then select the build options. 
 
-Alternatively, you can build the component quickly using the `npm run build` command in the Developer Command Prompt for VS 2017 window.
+Alternatively, you can build the component quickly using the `npm run build` command in the Developer Command Prompt for VS 2017 window for development purposes, or use `npm run build -- --buildMode production` for building a release version.
 
 > [!TIP]
 > To debug the component during or after the build operation, see [Debug a code component](debugging-custom-controls.md).

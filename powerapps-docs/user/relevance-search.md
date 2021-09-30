@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 6/24/2021
+ms.date: 9/24/2021
 ms.subservice: end-user
 ms.author: mkaur
 ms.custom: ""
@@ -24,6 +24,8 @@ search.app:
 [!INCLUDE[cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
 With relevance search, the search box is always available at the top of every page in your app. You can start a new search and quickly find the information that you're looking for. 
+
+When relevance search is turned on, it becomes your default and only global search experience for all of your model-driven apps. You won't be able to switch to [quick find search also known as categorized search](quick-find.md).
 
 > [!div class="mx-imgBorder"]
 > ![Search box in the header for an app.](media/new-search-exp.png "Search box in the header for an app")
@@ -47,7 +49,7 @@ Legend
 
 ## Inline suggestions
 
-As you start entering text, you'll see suggested results that help minimize keystrokes and simplify page navigation. Suggested results are based on a search performed on the primary column of a table, which is enabled for relevance search and included in your model-driven app. For more information, see [Add or edit model-driven app components in the Power Apps app designer](../maker/model-driven-apps/add-edit-app-components.md#add-a-component).
+As you start entering text, you'll see suggested results that help minimize keystrokes and simplify page navigation. Suggested results are based on a search performed on the primary column of a table, which is enabled for relevance search and included in your model-driven app. Suggested results are sometimes also based on non-primary columns of tables enabled for relevance search, depending on your search usage pattern and the search usage pattern in the environment. For more information, see [Add or edit model-driven app components in the Power Apps app designer](../maker/model-driven-apps/add-edit-app-components.md#add-a-component).
 
 Suggestions are shown when three or more characters are entered in the search box, and are based on two types of matching:
 
@@ -55,7 +57,7 @@ Suggestions are shown when three or more characters are entered in the search bo
 
 - **Fuzzy search**: Terms that are misspelled by one character are matched. For example, entering **winry** will show the account **Coho Winery**, among other results. 
 
-Suggested rows show a secondary field in addition to the primary field. This helps you differentiate between rows that have the same primary field value. The secondary field is chosen based on the table’s quick find view. It is always the first non-primary field on the table’s quick find view that contains data for the row.
+Suggested rows show a secondary field in addition to the primary field. This helps you differentiate between rows that have the same primary field value. The secondary field is chosen based on the table’s quick find view. It is either the field that has the search text or the first non-primary field on the table’s quick find view that contains data for the row.
 
 
 ![Suggested results that appear when you enter a search query.](media/relevance-search-suggested-results.gif "Suggested results that appear when you enter a search query")
@@ -167,6 +169,7 @@ Relevance search has a powerful set of capabilities to help you put Microsoft Da
 > [!NOTE]
 > - Relevance search is text-based, and can search only on columns of type **Single line of text**, **Multiple lines of text**, **Choice**, or **Lookup**. Columns of type **Numeric**, **Date**, and **File** aren't searched on.
 > - Relevance search enables you to search for rows that are shared with you and rows that you own. Hierarchical security models aren't supported. This means that even if you see a row in Dataverse because you have access to it through hierarchical security, you won't see that row matched by relevance search unless you own it or it was shared with you.
+> - Relevance search supports column level security. This means that a user with access to a restricted column can search for the column and will see it in the search results. A user that doesn't have permission to the restricted column won't be able to search or see results for the column.
 
 - **Boosted search results**  
   Use important attributes as keywords to "boost" your search for information. Entering a table type to boost search results is an easy way to indicate which results you prefer. For example, searching for **Susan Adatum** indicates that you're looking for a contact **Susan** related to the account **Adatum**.

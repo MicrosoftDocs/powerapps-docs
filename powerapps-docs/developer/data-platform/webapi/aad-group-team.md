@@ -2,7 +2,7 @@
 title: "Work with Azure Active Directory group teams (Dataverse)| Microsoft Docs"
 description: "Learn about working with an Azure Active Directory group team using the Web API."
 ms.custom: ""
-ms.date: 04/12/2021
+ms.date: 09/14/2021
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -97,7 +97,7 @@ Accept: application/json
 }
 ```
 
-## Share a record to an AAD group member
+<!-- ## Share a record to an AAD group member
 
 “An administrator or a record owner can share a record to an AAD group member. The AAD group member is added into Dataverse automatically if the user doesn’t exist in Dataverse.
 
@@ -121,7 +121,7 @@ Accept: application/json
     "AccessMask":"ReadAccess"
   }
 }
-```
+``` -->
 
 ## Security roles and privileges
 

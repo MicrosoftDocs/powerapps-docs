@@ -1,5 +1,5 @@
 ---
-title: How to deploy Profile+ sample app as a broad distribution app (Preview)
+title: How to deploy Profile+ sample app as a broad distribution app (preview)
 description: Learn how to share Profile+ with colleagues that aren't members of the team where the app is installed.
 author: joel-lindstrom
 ms.service: powerapps
@@ -7,7 +7,7 @@ ms.topic: conceptual
 ms.custom: 
 ms.date: 06/22/2021
 ms.subservice: teams
-ms.author: v-ljoel
+ms.author: namarwah
 ms.reviewer: tapanm
 contributors:
   - navjotm
@@ -15,11 +15,14 @@ contributors:
   - tapanm-msft
 ---
 
-# How to deploy Profile+ app as broad distribution app (Preview)
+# How to deploy Profile+ app as broad distribution app (preview)
 
 [This article is pre-release documentation and is subject to change.]
 
 The Profile+ sample app is designed to give you a single place to see complete information about the people in your organization, your organization hierarchy, and open positions for which you may want to apply.
+
+Watch this video to learn how to deploy Profile+ app as broad distribution app:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLiBV]
 
 The app addresses the following personas:
 
@@ -30,10 +33,6 @@ The app addresses the following personas:
 Profile+ app is installed in a Microsoft Teams team, but it’s designed to be used primarily by the people outside of the team. Since there's no app administration required, only those users who develop or customize the app need to be members of the team. Everybody else can use the app outside of the team.
 
 In this article, you'll learn how to allow everyone in your organization to view profiles in Profile+ app. Also, update their biographical information, and publish open positions for people outside of the Teams team. And then, share the Profile+ app with them.
-
-> [!IMPORTANT]
-> - This is a preview feature.
-> - [!INCLUDE[cc_preview_features_definition](../includes/cc-preview-features-definition.md)]
 
 ## Prerequisites
 
@@ -169,7 +168,7 @@ Currently, Teams apps can only be shared with a single Azure Active Directory gr
 
 ### See also
 
-- [Profile+ (Preview) sample app](profile-app.md)
+- [Profile+ (preview) sample app](profile-app.md)
 - [Customize sample apps](customize-sample-apps.md)
 - [Sample apps FAQs](sample-apps-faqs.md)
 - [Use sample apps from the Microsoft Teams store](use-sample-apps-from-teams-store.md)

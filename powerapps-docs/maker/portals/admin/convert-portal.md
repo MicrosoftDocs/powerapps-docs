@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2021
+ms.date: 09/14/2021
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: tapanm
@@ -18,6 +18,9 @@ contributors:
 
 As explained in the [portal lifecycle](portal-lifecycle.md) article earlier, a Power Apps portals goes through different stages. You can convert a portal from one stage to another, depending on what conversion is allowed, and whether the environment has the required license, or capacity.
 
+> [!IMPORTANT]
+> The [table permission changes for forms and lists](../important-changes-deprecations.md#table-permission-changes-for-forms-and-lists-on-new-portals) introduced with the portals release version [9.3.7.x](/power-platform/released-versions/portals/portalupdate1) also take effect on a portal that's converted from trial to production.
+
 ## Convert a portal from trial to production
 
 You can convert a trial portal to a production portal from the notifications displayed in the Power Apps Portals admin center.
@@ -26,7 +29,8 @@ You can convert a trial portal to a production portal from the notifications dis
 > You must be assigned one of the following roles to convert a portal from trial to production:
 > - Global administrator
 > - System administrator
-> <br> More information: [Admin roles required for portal administrative tasks](portal-admin-roles.md)
+>
+> More information: [Admin roles required for portal administrative tasks](portal-admin-roles.md)
 
 When you open the [Power Apps Portals admin center](admin-overview.md) and go to the **[Portal Details](portal-details.md)** tab, you'll see the notification about the trial expiration displayed below the **Type** field.
 

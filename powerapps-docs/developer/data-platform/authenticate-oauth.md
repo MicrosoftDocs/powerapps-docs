@@ -49,7 +49,7 @@ When you register an app with Azure AD one of the decisions you must make is the
 
 When you select **Web app /API** you must provide a **Sign-On URL** which is the URL where Azure AD will send the authentication response, including a token if authentication was successful. While you develop an app, this is usually set to `https://localhost/appname:[port]` so you can develop and debug your app locally. When you publish your app, you need to change this value to the published URL of the app.
 
-When you select **Native**, you must provide a Redirect URI. This is a unique identifier to which Azure AD will redirect the user-agent in an OAuth 2.0 request. This is typically a value formatted like so: `//app:<guid>`. 
+When you select **Native**, you must provide a Redirect URI. This is a unique identifier to which Azure AD will redirect the user-agent in an OAuth 2.0 request. This is typically a value formatted like so: `app://<guid>`. 
 
 ### Giving access to Dataverse
 
@@ -100,7 +100,7 @@ The Dataverse supports application authentication with the Web API endpoint usin
 
 For your custom .NET applications, use ADAL v2 or greater for application authentication with the Web API endpoint. When using the XrmTooling APIs found in the [Microsoft.CrmSdk.XrmTooling.CoreAssembly](https://www.nuget.org/packages/Microsoft.CrmSdk.XrmTooling.CoreAssembly/) NuGet package, the correct version of the ADAL library will be imported automatically into your Visual Studio project. Note that the transition from ADAL v2 to ADAL v3 in the XrmTooling APIs occurred in the [v9.1.0.13](https://www.nuget.org/packages/Microsoft.CrmSdk.XrmTooling.CoreAssembly/9.1.0.13) NuGet package. Consult the package's release notes for detailed information.  
 
-For a code sample using the v3 ADAL library see : [ADAL v3 WhoAmI sample](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/webapi/C%23/ADALV3WhoAmI/ADALV3WhoAmI).
+For a code sample that uses newer versions of the ADAL library see [QuickStart sample](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/webapi/C%23/QuickStart).
 
 ## Use the AccessToken with your requests
 

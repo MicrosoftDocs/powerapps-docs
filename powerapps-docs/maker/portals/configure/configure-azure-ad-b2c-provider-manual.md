@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2021
+ms.date: 09/28/2021
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: tapanm
@@ -71,9 +71,9 @@ This article describes how to configure Azure Active Directory B2C (Azure AD B2C
 
         1. On the left pane, under **Manage**, select **Authentication**.
 
-            ![Enable implicit grant flow with ID tokens.](media/authentication/id-tokens-b2c.png "Enable implicit grant flow with ID tokens")
+            ![Enable implicit grant flow with ID tokens.](media/authentication/access-token.png "Enable implicit grant flow with ID tokens")
 
-        1. Under **Implicit grant**, select the **ID tokens** check box.
+        1. Under **Implicit grant**, select the **Access tokens (used for implicit flows)** check box.
 
         1. Select **Save**.
 
@@ -132,10 +132,10 @@ This article describes how to configure Azure Active Directory B2C (Azure AD B2C
 
     ![Configure additional settings.](media/use-simplified-authentication-configuration/configure-ad-b2c-step3.png "Configure additional settings")
 
-    - **Registration claims mapping​**: Enter a list of logical name/claim pairs to be used to map claim values returned from Azure AD B2C (created during sign-up) to attributes in the contact record. <br> Format: `field_logical_name=jwt_attribute_name`, where `field_logical_name` is the logical name of the field in portals and `jwt_attribute_name` is the attribute with the value returned from the identity provider. <br> 
+    - **Registration claims mapping​**: Not required if using *email*, *first name*, or *last name* attributes. For additional attributes, enter a list of logical name/claim pairs to be used to map claim values returned from Azure AD B2C (created during sign-up) to attributes in the contact record. <br> Format: `field_logical_name=jwt_attribute_name`, where `field_logical_name` is the logical name of the field in portals and `jwt_attribute_name` is the attribute with the value returned from the identity provider. <br> 
      For example, if you've enabled **Job Title (jobTitle)** and **Postal Code (postalCode)** as **User Attributes** in your user flow, and you want to update the corresponding Contact table fields **Job Title (jobtitle)** and **Address 1: ZIP / Postal Code (address1_postalcode)**, enter the claims mapping as ```jobtitle=jobTitle,address1_postalcode=postalCode```.
 
-    - **Login claims mapping**: Enter a list of logical name/claim pairs to be used to map claim values returned from Azure AD B2C after sign-in to the attributes in the contact record. <br> Format: `field_logical_name=jwt_attribute_name` where `field_logical_name` is the logical name of the field in portals, and `jwt_attribute_name` is the attribute with the value returned from the identity provider. <br> 
+    - **Login claims mapping**: Not required if using *email*, *first name*, or *last name* attributes. For additional attributes, enter a list of logical name/claim pairs to be used to map claim values returned from Azure AD B2C after sign-in to the attributes in the contact record. <br> Format: `field_logical_name=jwt_attribute_name` where `field_logical_name` is the logical name of the field in portals, and `jwt_attribute_name` is the attribute with the value returned from the identity provider. <br> 
      For example, if you've enabled **Job Title (jobTitle)** and **Postal Code (postalCode)** as **Application Claims** in your user flow, and you want to update the corresponding Contact table fields **Job Title (jobtitle)** and **Address 1: ZIP / Postal Code (address1_postalcode)**, enter the claims mapping as ```jobtitle=jobTitle,address1_postalcode=postalCode```.
 
     - **External logout**: Choose whether to enable or disable federated sign-out:
