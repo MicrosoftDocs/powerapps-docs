@@ -149,7 +149,7 @@ Well create an app with a gallery of users and buttons on each of the display fo
     | Text     | "Chat"              |
     | Width    | 150                 |
     | Height   | 45                  |
-    | X        | Button1.X + 200     |
+    | X        | Button2.X + 200     |
     | Y        | Button1.Y           |
 
 1. Copy the following formula in the **OnSelect** property of the new button:
