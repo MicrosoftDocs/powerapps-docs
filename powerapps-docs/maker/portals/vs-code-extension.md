@@ -1,5 +1,5 @@
 ---
-title: Use the Visual Studio Code extension (Preview)
+title: Use the Visual Studio Code extension (preview)
 description: Learn about how to use the Visual Studio Code extension for portals and integrate with Microsoft Power Platform CLI for CI/CD.
 author: neerajnandwana-msft
 ms.service: powerapps
@@ -14,7 +14,7 @@ contributors:
     - tapanm-msft
 ---
 
-# Use the Visual Studio Code extension (Preview)
+# Use the Visual Studio Code extension (preview)
 
 [This article is pre-release documentation and is subject to change.]
 
@@ -55,7 +55,7 @@ Before using the VS Code extension for Power Apps portals, you must:
     [Download Visual Studio Code](https://code.visualstudio.com/Download)
 
 -   Configure your environment and system for Power Apps portals CI/CD support
-    using CLI. More information: [Portals support for Microsoft Power Platform CLI (Preview)](power-apps-cli.md)
+    using CLI. More information: [Portals support for Microsoft Power Platform CLI (preview)](power-apps-cli.md)
 
 ## Install VS Code extension
 
@@ -160,4 +160,4 @@ The following limitations currently apply to the Power Platform VS Code Extensio
 
 ### See also
 
-[Portals support for Microsoft Power Platform CLI (Preview)](power-apps-cli.md)
+[Portals support for Microsoft Power Platform CLI (preview)](power-apps-cli.md)

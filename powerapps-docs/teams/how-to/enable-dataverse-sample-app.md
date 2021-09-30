@@ -21,6 +21,9 @@ contributors:
 
 In this article, we'll cover how to provision Dataverse for Teams and Power Apps in your Teams team.
 
+Watch this video to learn how to enable Power Apps and Dataverse for Teams:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWL2Ur]
+
 ## Provisioning Dataverse for Teams
 
 Dataverse for Teams is provisioned in Teams automatically when you create an app or install one of the pre-made sample or template apps for Teams.

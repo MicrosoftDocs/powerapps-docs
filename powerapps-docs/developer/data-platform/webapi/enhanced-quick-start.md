@@ -421,8 +421,6 @@ In your Visual Studio project perform the following steps:
 
 If you have any trouble running this sample, you can download all the Power Apps samples from the GitHub repository at [https://github.com/Microsoft/PowerApps-Samples](https://github.com/Microsoft/PowerApps-Samples).
 
-This enhanced quick start sample is based on the [SimpleWebApi](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/webapi/C%23/SimpleWebApi) sample located in the repo under the cds\webapi\C#\SimpleWebApi folder.
-
 > [!IMPORTANT]
 > All the samples on the GitHub repo are configured to use a common App.config that is located at PowerApps-Samples:cds\App.config. When you set your connection string you must edit this file. When you do, you can run all the samples without setting your credentials again.
 
