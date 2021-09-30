@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: nabuthuk
-ms.date: 03/12/2021
+ms.date: 09/30/2021
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
@@ -56,7 +56,7 @@ You can also use **DataSourceInfo** to obtain information about a data source as
 | **DataSourceInfo.ReadPermission** |Boolean |Does the current user have permission to read records in this data source? If not set by the data source, returns **true**. |
 
 > [!NOTE]
-> **DataSourceInfo** returns *true* if it cannot determine whether the current user has the requested permission.  Permissions will be checked again by the server when the actual operation is carried out and an error is displayed if it was not allowed.
+> **DataSourceInfo** returns *true* if it cannot determine whether the current user has the requested permission.  Permissions will be checked again by the server when the actual operation is carried out and an error is displayed if it was not allowed.  At this time, permissions checking with **DataSourceInfo** is only possible when using Microsoft Dataverse.
 
 ## Syntax
 **DataSourceInfo**( *DataSource*, *Information*, *ColumnName* )
