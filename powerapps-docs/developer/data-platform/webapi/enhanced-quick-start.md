@@ -2,7 +2,7 @@
 title: "Enhanced quick start (Microsoft Dataverse)| Microsoft Docs"
 description: "Create a new project in Visual Studio to build a console application that uses Microsoft Dataverse Web API"
 ms.custom: intro-internal
-ms.date: 02/02/2019
+ms.date: 10/01/2021
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -23,22 +23,21 @@ search.app:
 ---
 # Enhanced quick start
 
-This topic demonstrates how to re-factor the code in [Quick start](quick-start-console-app-csharp.md) topic by adding re-usable <xref:System.Net.Http.HttpClient> and error handling methods. Complete the steps in the [Quick start](quick-start-console-app-csharp.md) topic to create a new Visual Studio project before you begin this topic.
+This topic demonstrates how to re-factor the code in the [Quick start](quick-start-console-app-csharp.md) topic by adding re-usable <xref:System.Net.Http.HttpClient> and error handling methods. Complete the steps in the [Quick start](quick-start-console-app-csharp.md) topic to create a new Visual Studio project before you begin this topic, or simply [download](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/webapi/C#/QuickStart) the MSAL version of the complete Visual Studio project.
+
+If you get stuck following this enhanced quick start, you can [download](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/webapi/C#/EnhancedQuickStart) the completed solution.
 
 ## Enable passing credentials in a connection string
 
-Putting user credentials inside your code the way that the [Quick start](quick-start-console-app-csharp.md) example did is not a good practice. 
-
-How you capture user credentials depends on the type of client you are making. For this console application we will set the credentials within the `App.config` because it is a convenient way to move the credentials out of code. It is also the method used in the [Web API Data operations Samples (C#)](web-api-samples-csharp.md), so if you understand this method, you can easily see how the various samples work.
+Putting user logon credentials inside your code is not a good practice. How you capture user credentials depends on the type of client you are making. For this console application we will set the credentials within the App.config file because it is a convenient way to move the credentials out of code. It is also the method used in the [Web API Data operations Samples (C#)](web-api-samples-csharp.md), so if you understand this method, you can easily see how the other Web API samples work.
 
 Enabling this requires three steps:
 
-1. [Add Reference to System.Configuration to the Visual Studio project](#add-reference-to-systemconfiguration-to-the-visual-studio-project)
+1. [Add a System.Configuration reference to the Visual Studio project](#add-a-systemconfiguration-reference-to-the-visual-studio-project)
 1. [Edit the application configuration file](#edit-the-application-configuration-file)
-1. [Add using directive to Program.cs](#add-using-directive-to-programcs)
+1. [Add a `using` directive in Program.cs](#add-using-directive-to-programcs)
 
-
-### Add Reference to System.Configuration to the Visual Studio project
+### Add a System.Configuration reference to the Visual Studio project
 
 1. In **Solution Explorer**, right click **References** and select **Add Reference...** .
 1. In the **Reference Manager** dialog search for `System.Configuration` and select the checkbox to add this reference to your project.
@@ -75,7 +74,7 @@ Edit the `<configuration>` element to add a the `connectionStrings` node as show
 
 This creates a connection string that can be referenced by name, in this case `Connect`, so that you can define more than one connection if you wish.
 
-Edit the connection string `Url`, `Username` and `Password` values in the `connectionString` to match what you need to connect to your Microsoft Dataverse environment.
+Edit the connection string `Url`, `Username` and `Password` values in the `connectionString` parameter to match what you need to connect to your Microsoft Dataverse test environment.
 
 ### Add using directive to Program.cs
 
@@ -85,189 +84,227 @@ At the top of your Program.cs file, add this using directive:
 using System.Configuration;
 ```
 
+## Install the MSAL NuGet package
+
+In Visual Studio, right-click the project in **Solution Explorer** and choose **Manage NuGet Packages** in the context menu. Browse for and install the [Microsoft.Identity.Client](https://www.nuget.org/packages/Microsoft.Identity.Client/) package into your project. This package will be used for web service authentication.
+
 ## Add helper code
 
-In the [Quick start](quick-start-console-app-csharp.md) example, all the code is within the `program.cs` file. We are going to move the code that deals with connecting and creating an <xref:System.Net.Http.HttpClient> into a separate file of helper methods. 
+In the [Quick start](quick-start-console-app-csharp.md) example, all the code is within the `Program.cs` file. We are going to move the code that deals with connecting and creating an <xref:System.Net.Http.HttpClient> into a separate file of helper methods.
 
-These helpers are also used in the [SampleHelper.cs](https://github.com/Microsoft/PowerApps-Samples/blob/master/cds/webapi/C%23/SampleHelpers.cs) used by the [Web API Data operations Samples (C#)](web-api-samples-csharp.md). If you understand these helpers, you will understand how they are used in the samples.
+These helpers are also used in the [SampleHelper.cs](https://github.com/Microsoft/PowerApps-Samples/blob/master/cds/webapi/C%23/SampleHelpers.cs) file used by the [Web API Data operations Samples (C#)](web-api-samples-csharp.md). If you understand these helpers, you will understand how they are used in the samples.
 
 1. In **Solution Explorer**, right click your project and select **Add** > **Class...** (or press `Shift`+`Alt`+`C`) to open the **Add New Item** dialog.
-1. Specify a name for your class. To follow the pattern used by the [Web API Data operations Samples (C#)](web-api-samples-csharp.md), call it `SampleHelpers.cs`. 
 
-    > [!NOTE]
-    > The name of the class will determine how you will reference these helper properties and methods within your `Program.cs`. The remaining instructions will expect you named it `SampleHelpers`, so remember if you named it something else.
+2. Specify a name for your class file. To follow the pattern used by the [Web API Data operations Samples (C#)](web-api-samples-csharp.md), call it "SampleHelpers.cs".
 
-1. Add the following `using` directives:
+  > [!NOTE]
+  > The name of the class will determine how you will reference these helper properties and methods within your main program. The remaining instructions will assume you named the class `SampleHelpers`.
 
-    ```csharp
-    using Microsoft.IdentityModel.Clients.ActiveDirectory;
-    using System;
-    using System.Linq;
-    using System.Net.Http;
-    using System.Net.Http.Headers;
-    using System.Threading.Tasks;
-    ```
+3. Add the following code to your SampleHelpers.cs file.
 
-1. Add the following properties and methods to your `SampleHelper` class:
+  ```csharp
 
-    ```csharp
-    //These sample application registration values are available for all online instances.
-    //You can use these while running sample code, but you should get your own for your own apps
-    public static string clientId = "51f81489-12ee-4a9e-aaae-a2591f45987d";
-    public static string redirectUrl = "app://58145B91-0C36-4500-8554-080854F2AC97";
+  using System;
+  using System.Linq;
+  using System.Net.Http;
 
+  namespace EnhancedQuickStart
+  {
     /// <summary>
-    /// Method used to get a value from the connection string
+    /// Shared code for common operations used by many Power Apps samples.
     /// </summary>
-    /// <param name="connectionString"></param>
-    /// <param name="parameter"></param>
-    /// <returns>The value from the connection string that matches the parameter key value</returns>
-    public static string GetParameterValueFromConnectionString(string connectionString, string parameter)
+    class SampleHelpers
     {
-      try
-      {
-        return connectionString.Split(';').Where(s => s.Trim().StartsWith(parameter)).FirstOrDefault().Split('=')[1];
-      }
-      catch (Exception)
-      {
-        return string.Empty;
-      }
-    }
+        //These sample application registration values are available for all online instances.
+        //You can use these while running sample code, but you should get your own for your own apps
+        public static string clientId = "51f81489-12ee-4a9e-aaae-a2591f45987d";
+        public static string redirectUrl = "app://58145B91-0C36-4500-8554-080854F2AC97";
 
-    /// <summary>
-    /// Returns an HttpClient configured with an OAuthMessageHandler
-    /// </summary>
-    /// <param name="connectionString">The connection string to use.</param>
-    /// <param name="clientId">The client id to use when authenticating.</param>
-    /// <param name="redirectUrl">The redirect Url to use when authenticating</param>
-    /// <param name="version">The version of Web API to use. Defaults to version 9.1 </param>
-    /// <returns>An HttpClient you can use to perform authenticated operations with the Web API</returns>
-    public static HttpClient GetHttpClient(string connectionString, string clientId, string redirectUrl, string version = "v9.1")
-    {
-      string url = GetParameterValueFromConnectionString(connectionString, "Url");
-      string username = GetParameterValueFromConnectionString(connectionString, "Username");
-      string password = GetParameterValueFromConnectionString(connectionString, "Password");
-      try
-      {
-        HttpMessageHandler messageHandler = new OAuthMessageHandler(url, clientId, redirectUrl, username, password,
-                      new HttpClientHandler());
-
-        HttpClient httpClient = new HttpClient(messageHandler)
+        /// <summary>
+        /// Method used to get a value from the connection string
+        /// </summary>
+        /// <param name="connectionString"></param>
+        /// <param name="parameter"></param>
+        /// <returns>The value from the connection string that matches the parameter key value</returns>
+        public static string GetParameterValueFromConnectionString(string connectionString, string parameter)
         {
-          BaseAddress = new Uri(string.Format("{0}/api/data/{1}/", url, version)),
+            try
+            {
+                return connectionString.Split(';').Where(s => s.Trim().StartsWith(parameter)).FirstOrDefault().Split('=')[1];
+            }
+            catch (Exception)
+            {
+                return string.Empty;
+            }
+        }
 
-          Timeout = new TimeSpan(0, 2, 0)  //2 minutes
-        };
+        /// <summary>
+        /// Returns an HttpClient configured with an OAuthMessageHandler
+        /// </summary>
+        /// <param name="connectionString">The connection string to use.</param>
+        /// <param name="clientId">The client id to use when authenticating.</param>
+        /// <param name="redirectUrl">The redirect Url to use when authenticating</param>
+        /// <param name="version">The version of Web API to use. Defaults to version 9.2 </param>
+        /// <returns>An HttpClient you can use to perform authenticated operations with the Web API</returns>
+        public static HttpClient GetHttpClient(string connectionString, string clientId, string redirectUrl, string version = "v9.2")
+        {
+            string url = GetParameterValueFromConnectionString(connectionString, "Url");
+            string username = GetParameterValueFromConnectionString(connectionString, "Username");
+            string password = GetParameterValueFromConnectionString(connectionString, "Password");
+            try
+            {
+                HttpMessageHandler messageHandler = new OAuthMessageHandler(url, clientId, redirectUrl, username, password,
+                              new HttpClientHandler());
 
-        return httpClient;
-      }
-      catch (Exception)
-      {
-        throw;
-      }
+                HttpClient httpClient = new HttpClient(messageHandler)
+                {
+                    BaseAddress = new Uri(string.Format("{0}/api/data/{1}/", url, version)),
+
+                    Timeout = new TimeSpan(0, 2, 0)  //2 minutes
+                };
+
+                return httpClient;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        /// <summary> Displays exception information to the console. </summary>
+        /// <param name="ex">The exception to output</param>
+        public static void DisplayException(Exception ex)
+        {
+            Console.WriteLine("The application terminated with an error.");
+            Console.WriteLine(ex.Message);
+            while (ex.InnerException != null)
+            {
+                Console.WriteLine("\t* {0}", ex.InnerException.Message);
+                ex = ex.InnerException;
+            }
+        }
     }
+  }
+  ```
 
-    /// <summary> Displays exception information to the console. </summary>
-    /// <param name="ex">The exception to output</param>
-    public static void DisplayException(Exception ex)
-    {
-      Console.WriteLine("The application terminated with an error.");
-      Console.WriteLine(ex.Message);
-      while (ex.InnerException != null)
-      {
-        Console.WriteLine("\t* {0}", ex.InnerException.Message);
-        ex = ex.InnerException;
-      }
-    }
-    ```
+4. Add an `OAuthMessageHandler` class in its own class file using the code provided below.
 
-1. Add the `OAuthMessageHandler` class within the namespace of your `SampleHelpers.cs` file.
+  This class ensures that the access token is refreshed each time an operation is performed. Each access token will expire after about an hour. This class implements a <xref:System.Net.Http.DelegatingHandler> that will work with the Microsoft Authentication Library (MSAL) authentication context to call the correct `AcquireToken` variation every time an operation is performed so you don't need to explicitly manage token expiration.
 
-    > [!NOTE]
-    > Do not add this within the `SampleHelpers` class itself.
+  ```csharp
+  using Microsoft.Identity.Client;
+  using System.Net.Http;
+  using System.Net.Http.Headers;
+  using System.Security;
+  using System.Threading.Tasks;
 
-    This class ensures that the access token is refreshed each time an operation is performed. Each access token will expire after about an hour. This class implements a <xref:System.Net.Http.DelegatingHandler> that will work with the Azure Active Directory Authentication Library (ADAL) authentication context to call the `AcquireToken` method every time an operation is performed so you don't need to explicitly manage token expiration.
-
-    ```csharp
+  namespace EnhancedQuickStart
+  {
     /// <summary>
-    ///Custom HTTP message handler that uses OAuth authentication through ADAL.
+    /// Custom HTTP message handler that uses OAuth authentication through 
+    /// Microsoft Authentication Library (MSAL).
     /// </summary>
     class OAuthMessageHandler : DelegatingHandler
     {
-      private AuthenticationHeaderValue authHeader;
+        private AuthenticationHeaderValue authHeader;
 
-      public OAuthMessageHandler(string serviceUrl, string clientId, string redirectUrl, string username, string password,
-              HttpMessageHandler innerHandler)
-          : base(innerHandler)
-      {
-        // Obtain the Azure Active Directory Authentication Library (ADAL) authentication context.
-        AuthenticationParameters ap = AuthenticationParameters.CreateFromResourceUrlAsync(
-                new Uri(serviceUrl + "/api/data/")).Result;
-        AuthenticationContext authContext = new AuthenticationContext(ap.Authority, false);
-        //Note that an Azure AD access token has finite lifetime, default expiration is 60 minutes.
-        AuthenticationResult authResult;
-        if (username != string.Empty && password != string.Empty)
+        public OAuthMessageHandler(string serviceUrl, string clientId, string redirectUrl, string username, string password,
+                HttpMessageHandler innerHandler)
+            : base(innerHandler)
         {
 
-          UserCredential cred = new UserCredential(username, password);
-          authResult = authContext.AcquireToken(serviceUrl, clientId, cred);
+            string apiVersion = "9.2";
+            string webApiUrl = $"{serviceUrl}/api/data/v{apiVersion}/";
+
+            //Build Microsoft.Identity.Client (MSAL) OAuth Token Request
+            var authBuilder = PublicClientApplicationBuilder.Create(clientId)
+                            .WithAuthority(AadAuthorityAudience.AzureAdMultipleOrgs)
+                            .WithRedirectUri(redirectUrl)
+                            .Build();
+            var scope = serviceUrl + "//.default";
+            string[] scopes = { scope };
+
+            AuthenticationResult authBuilderResult;
+            if (username != string.Empty && password != string.Empty)
+            {
+                //Make silent Microsoft.Identity.Client (MSAL) OAuth Token Request
+                var securePassword = new SecureString();
+                foreach (char ch in password) securePassword.AppendChar(ch);
+                authBuilderResult = authBuilder.AcquireTokenByUsernamePassword(scopes, username, securePassword)
+                            .ExecuteAsync().Result;
+            }
+            else
+            {
+                //Popup authentication dialog box to get token
+                authBuilderResult = authBuilder.AcquireTokenInteractive(scopes)
+                            .ExecuteAsync().Result;
+            }
+
+            //Note that an Azure AD access token has finite lifetime, default expiration is 60 minutes.
+            authHeader = new AuthenticationHeaderValue("Bearer", authBuilderResult.AccessToken);
         }
-        else
+
+        protected override Task<HttpResponseMessage> SendAsync(
+                  HttpRequestMessage request, System.Threading.CancellationToken cancellationToken)
         {
-          authResult = authContext.AcquireToken(serviceUrl, clientId, new Uri(redirectUrl), PromptBehavior.Auto);
+            request.Headers.Authorization = authHeader;
+            return base.SendAsync(request, cancellationToken);
         }
-
-        authHeader = new AuthenticationHeaderValue("Bearer", authResult.AccessToken);
-      }
-
-      protected override Task<HttpResponseMessage> SendAsync(
-                HttpRequestMessage request, System.Threading.CancellationToken cancellationToken)
-      {
-        request.Headers.Authorization = authHeader;
-        return base.SendAsync(request, cancellationToken);
-      }
     }
-    ```
+  }
+  ```
 
 ## Update Program.cs
 
-Now that you have made the changes to [Enable passing credentials in a connection string](#enable-passing-credentials-in-a-connection-string) and [Add helper code](#add-helper-code), you can update the `Main` method in your `Program.cs` to only contain the following:
+Now that you have made the changes to [Enable passing credentials in a connection string](#enable-passing-credentials-in-a-connection-string) and [Add helper code](#add-helper-code), you can update the `Main` method in the Program.cs file to only contain the following:
 
 ```csharp
-static void Main(string[] args)
+using Newtonsoft.Json.Linq;
+using System;
+using System.Configuration;
+using System.Net.Http;
+
+namespace EnhancedQuickStart
 {
-  try
-  {
-    //Get configuration data from App.config connectionStrings
-    string connectionString = ConfigurationManager.ConnectionStrings["Connect"].ConnectionString;
-
-    using (HttpClient client = SampleHelpers.GetHttpClient(connectionString, SampleHelpers.clientId, SampleHelpers.redirectUrl))
+    class Program
     {
-      // Use the WhoAmI function
-      var response = client.GetAsync("WhoAmI").Result;
+        static void Main(string[] args)
+        {
+            try
+            {
+                //Get configuration data from App.config connectionStrings
+                string connectionString = ConfigurationManager.ConnectionStrings["Connect"].ConnectionString;
 
-      if (response.IsSuccessStatusCode)
-      {
-        //Get the response content and parse it.  
-        JObject body = JObject.Parse(response.Content.ReadAsStringAsync().Result);
-        Guid userId = (Guid)body["UserId"];
-        Console.WriteLine("Your UserId is {0}", userId);
-      }
-      else
-      {
-        Console.WriteLine("The request failed with a status of '{0}'",
-                    response.ReasonPhrase);
-      }
-      Console.WriteLine("Press any key to exit.");
-      Console.ReadLine();
+                using (HttpClient client = SampleHelpers.GetHttpClient(connectionString, SampleHelpers.clientId, SampleHelpers.redirectUrl))
+                {
+                    // Use the WhoAmI function
+                    var response = client.GetAsync("WhoAmI").Result;
+
+                    if (response.IsSuccessStatusCode)
+                    {
+                        //Get the response content and parse it.  
+                        JObject body = JObject.Parse(response.Content.ReadAsStringAsync().Result);
+                        Guid userId = (Guid)body["UserId"];
+                        Console.WriteLine("Your UserId is {0}", userId);
+                    }
+                    else
+                    {
+                        Console.WriteLine("The request failed with a status of '{0}'",
+                                    response.ReasonPhrase);
+                    }
+                    Console.WriteLine("Press any key to exit.");
+                    Console.ReadLine();
+                }
+            }
+            catch (Exception ex)
+            {
+                SampleHelpers.DisplayException(ex);
+                Console.WriteLine("Press any key to exit.");
+                Console.ReadLine();
+            }
+        }
     }
-  }
-  catch (Exception ex)
-  {
-    SampleHelpers.DisplayException(ex);
-    Console.WriteLine("Press any key to exit.");
-    Console.ReadLine();
-  }
 }
 ```
 
@@ -282,7 +319,7 @@ Press any key to exit.
 
 ## Create re-usable methods
 
-While we have reduced the total amount of code in the `Program.cs` `main` method, you aren't going to write a program to just call one operation, and it isn't realistic to write so much code just to call a single operation.
+While we have reduced the total amount of code in the `Program.Main` method, you aren't going to write a program to just call one operation, and it isn't realistic to write so much code just to call a single operation.
 
 This section shows how you can change this:
 
@@ -302,6 +339,7 @@ This section shows how you can change this:
         response.ReasonPhrase);
   }
   ```
+
 to this:
 
   ```csharp
@@ -332,7 +370,7 @@ In your Visual Studio project perform the following steps:
 
     `partial class Program`
 
-1. Create a new class named `ProgramMethods.cs`
+1. Create a new class file named `ProgramMethods.cs`
 
     In `ProgramMethods.cs`, change this:
 
@@ -342,9 +380,9 @@ In your Visual Studio project perform the following steps:
 
     `partial class Program`
 
-    In this way the `Program` class in `ProgramMethods.cs` file is just an extension of the original `Program` class in the `Program.cs` file. 
+    In this way the `Program` class in ProgramMethods.cs file is just an extension of the original `Program` class in the Program.cs file.
 
-1. Add the following using directives to the top of the `ProgramMethods.cs` file.
+1. Add the following using directives to the top of the ProgramMethods.cs file.
 
     ```csharp
     using Newtonsoft.Json.Linq;
@@ -352,7 +390,7 @@ In your Visual Studio project perform the following steps:
     using System.Net.Http;
     ```
 
-1. Add the following method to the `Program` class in the `ProgramMethods.cs` file.
+1. Add the following method to the `Program` class in the ProgramMethods.cs file.
 
     ```csharp
     public static WhoAmIResponse WhoAmI(HttpClient client) {
@@ -377,7 +415,7 @@ In your Visual Studio project perform the following steps:
     }
     ```
 
-1. Add the following class outside of the `Program` class but within the namespace of the `ProgramMethods.cs` file.
+1. Add the following class outside of the `Program` class but within the namespace of the ProgramMethods.cs file.
 
     ```csharp
     public class WhoAmIResponse
@@ -388,7 +426,7 @@ In your Visual Studio project perform the following steps:
     }
     ```
 
-1. In the `Program` `main` method in the original `Program.cs` file:
+1. In the `Program.Main` method in the original Program.cs file:
 
     Replace this:
 
@@ -408,6 +446,7 @@ In your Visual Studio project perform the following steps:
                   response.ReasonPhrase);
     }
     ```
+
     With this:
 
     ```csharp
