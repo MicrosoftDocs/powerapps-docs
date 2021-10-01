@@ -74,7 +74,7 @@ Edit the `<configuration>` element to add a the `connectionStrings` node as show
 
 This creates a connection string that can be referenced by name, in this case `Connect`, so that you can define more than one connection if you wish.
 
-Edit the connection string `Url`, `Username` and `Password` values in the `connectionString` value to match what you need to connect to your Microsoft Dataverse test environment.
+Edit the connection string `Url`, `Username` and `Password` values in the `connectionString` parameter to match what you need to connect to your Microsoft Dataverse test environment.
 
 ### Add using directive to Program.cs
 
@@ -86,7 +86,7 @@ using System.Configuration;
 
 ## Install the MSAL NuGet package
 
-In visual Studio, right-click the project in **Solution Explorer** and choose **Manage NuGet Packages** in the context menu. Browse for and install the [Microsoft.Identity.Client](https://www.nuget.org/packages/Microsoft.Identity.Client/) package into your project. This package will be used for web service authentication.
+In Visual Studio, right-click the project in **Solution Explorer** and choose **Manage NuGet Packages** in the context menu. Browse for and install the [Microsoft.Identity.Client](https://www.nuget.org/packages/Microsoft.Identity.Client/) package into your project. This package will be used for web service authentication.
 
 ## Add helper code
 
@@ -96,12 +96,12 @@ These helpers are also used in the [SampleHelper.cs](https://github.com/Microsof
 
 1. In **Solution Explorer**, right click your project and select **Add** > **Class...** (or press `Shift`+`Alt`+`C`) to open the **Add New Item** dialog.
 
-1. Specify a name for your class file. To follow the pattern used by the [Web API Data operations Samples (C#)](web-api-samples-csharp.md), call it "SampleHelpers.cs".
+2. Specify a name for your class file. To follow the pattern used by the [Web API Data operations Samples (C#)](web-api-samples-csharp.md), call it "SampleHelpers.cs".
 
   > [!NOTE]
   > The name of the class will determine how you will reference these helper properties and methods within your main program. The remaining instructions will assume you named the class `SampleHelpers`.
 
-1. Add the following code to your SampleHelpers.cs file.
+3. Add the following code to your SampleHelpers.cs file.
 
   ```csharp
 
@@ -188,7 +188,7 @@ These helpers are also used in the [SampleHelper.cs](https://github.com/Microsof
   }
   ```
 
-1. Add an `OAuthMessageHandler` class in its own class file using the code provided below.
+4. Add an `OAuthMessageHandler` class in its own class file using the code provided below.
 
   This class ensures that the access token is refreshed each time an operation is performed. Each access token will expire after about an hour. This class implements a <xref:System.Net.Http.DelegatingHandler> that will work with the Microsoft Authentication Library (MSAL) authentication context to call the correct `AcquireToken` variation every time an operation is performed so you don't need to explicitly manage token expiration.
 
