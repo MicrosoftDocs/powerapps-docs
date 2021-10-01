@@ -59,7 +59,7 @@ You can find the complete Visual Studio solution for this project in the [PowerA
     > [!NOTE]
     > You will be prompted to preview and **OK** the assembly additions, and **Accept** the license agreements, for the installed packages and their contents.
 
-    To use the Microsoft Authentication Library (MSAL) instead of Azure Active Directory Authentication Library (ADAL), browse for an install the `Microsoft.Identity.Client` package.
+    To use the Microsoft Authentication Library (MSAL) instead of Azure Active Directory Authentication Library (ADAL), browse for and install the `Microsoft.Identity.Client` package instead of the `Microsoft.IdentityModel.Clients.ActiveDirectory` package.
 
 1. Browse for the `Newtonsoft.Json` NuGet package and install the latest version.
 
