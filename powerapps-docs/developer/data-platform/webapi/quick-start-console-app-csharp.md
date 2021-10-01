@@ -67,6 +67,8 @@ You can find the complete Visual Studio solution for this project in the [PowerA
 
 ## Edit Program.cs
 
+Follow these next steps to add code for the main program.
+
 1. Replace the entire contents of Program.cs with the following code. If you used a different name for your project than WebAPIQuickStart, you will need to change to namespace name in the new code to match your project name.
 
 #### [C#/ADAL](#tab/adal)
@@ -248,7 +250,7 @@ namespace PowerApps.Samples
 
 ---
 
-1. Right below the TODO comment in the above code, replace the `resource` value with the actual URL of your Dataverse test environment. To find the URL value for your test environment, follow these steps:
+2. Right below the TODO comment in the above code, replace the `resource` value with the actual URL of your Dataverse test environment. To find the URL value for your test environment, follow these steps:
 
     1. Navigate your browser to [Power Apps](https://make.powerapps.com).
     1. Select the environments icon (to the right of the search field), and choose a test environment.
