@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/27/2021
+ms.date: 10/01/2021
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: tapanm
@@ -38,14 +38,14 @@ portals.
 
 ### VS Code extension for portals
 
-The **Power Platform VS Code Extension** adds the capability to configure portals using
+The **Power Platform Tools** adds the capability to configure portals using
 VS Code, and use the built-in Liquid language
 [IntelliSense](https://code.visualstudio.com/docs/editor/intellisense) enabling
 help with code completion, assistance, and hinting while customizing portals
 interface using VS Code. Using the VS Code extension, you can also configure portals through the [portals
 support for Microsoft Power Platform CLI](power-apps-cli.md).
 
-![Animation that explains how to install and set Power Platform VS Code Extension with file icon theme.](media/vs-code-extension/install-set-icon-theme.gif "Animation that explains how to install and set Power Platform VS Code Extension with file icon theme")
+![Animation that explains how to install and set Power Platform Tools with file icon theme.](media/vs-code-extension/install-set-icon-theme.gif "Animation that explains how to install and set Power Platform Tools with file icon theme")
 
 ## Prerequisites
 
@@ -72,9 +72,9 @@ To install the VS Code extension:
 
 3.  Select ![Settings icon.](media/vs-code-extension/settings-symbol.png "Settings icon") from the top-right on the extensions pane.
 
-4.  Search for and select **Power Platform VS Code Extension**.
+4.  Search for and select **Power Platform Tools**.
 
-    ![Select Power Platform VS Code Extension.](media/vs-code-extension/vs-code-extension.png "Select Power Platform VS Code Extension")
+    ![Select Power Platform Tools.](media/vs-code-extension/vs-code-extension.png "Select Power Platform Tools")
 
 5.  Select **Install**.
 
@@ -86,7 +86,7 @@ To authenticate against a Microsoft Dataverse environment, and to download
 portals content, refer to the tutorial [Use Microsoft Power Platform CLI with portals - download portals content](power-apps-cli-tutorial.md#step-3-download-portals-content).
 
 > [!TIP]
-> The Power Platform VS Code Extension automatically enables using Microsoft Power Platform CLI commands from within VS Code through [Visual Studio Integrated Terminal](https://code.visualstudio.com/docs/editor/integrated-terminal).
+> The Power Platform Tools Extension automatically enables using Microsoft Power Platform CLI commands from within VS Code through [Visual Studio Integrated Terminal](https://code.visualstudio.com/docs/editor/integrated-terminal).
 
 ## Snippet support
 
@@ -153,7 +153,7 @@ being edited, and the relevant autocomplete elements through IntelliSense.
 
 ## Limitations
 
-The following limitations currently apply to the Power Platform VS Code Extension:
+The following limitations currently apply to the Power Platform Tools for portals:
 
 - [Snippet support](#snippet-support) and [autocomplete](#autocomplete) features only support limited functionality.
 - [Live preview](#live-preview) doesn't support custom themes or Liquid objects.
