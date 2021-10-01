@@ -23,9 +23,9 @@ search.app:
 ---
 # Enhanced quick start
 
-This topic demonstrates how to re-factor the code in the [Quick start](quick-start-console-app-csharp.md) topic by adding re-usable <xref:System.Net.Http.HttpClient> and error handling methods. Complete the steps in the [Quick start](quick-start-console-app-csharp.md) topic to create a new Visual Studio project before you begin this topic, or simply [download](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/webapi/C#/QuickStart) the MSAL version of the complete Visual Studio project.
+This topic demonstrates how to re-factor the code in the [Quick start](quick-start-console-app-csharp.md) topic by adding re-usable <xref:System.Net.Http.HttpClient> and error handling methods. Complete the steps in the [Quick start](quick-start-console-app-csharp.md) topic to create a new Visual Studio project before you begin this topic, or simply [download](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/webapi/C%23/QuickStart) the MSAL version of the complete Visual Studio project.
 
-If you get stuck following this enhanced quick start, you can [download](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/webapi/C#/EnhancedQuickStart) the completed solution.
+If you get stuck following this enhanced quick start, you can [download](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/webapi/C%23/EnhancedQuickStart) the completed solution.
 
 ## Enable passing credentials in a connection string
 
