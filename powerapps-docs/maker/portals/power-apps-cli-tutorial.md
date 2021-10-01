@@ -113,7 +113,7 @@ directly in Visual Studio Code.
 
 After making the required changes, upload them using the following command:
 
-`pac paportal --path [Folder-location]`
+`pac paportal upload --path [Folder-location]`
 
 **Example**
 
