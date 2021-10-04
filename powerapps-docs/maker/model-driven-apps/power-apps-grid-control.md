@@ -63,7 +63,7 @@ When a view or sub-grid is narrow it changes into a card list format that is bet
 ### The list view doesn’t display custom cards for the table
 
 To workaround, you can display a custom card by configuring the table to use the card form of the old grid control. 
-1. Power Apps (make.powerapps.com) go to **Settings** > **Advanced Settings** > **Settings** > **Customizations** > **Customize the System** > Expand **Entities** > select the entity you want to customize > **Controls** tab > **Add Control**. 
+1. Power Apps (make.powerapps.com) go to **Settings** > **Advanced Settings** > **Settings** > **Customizations** > **Customize the System** > expand **Entities** > select the entity you want to customize > **Controls** tab > **Add Control**. 
 1. Select **Read Only Grid**, and then select **Add**. Choose to display that grid on one or more client form factors. 
    :::image type="content" source="media/change-card-form-readonlygrid.png" alt-text="Change card form for the read only grid control":::
 1. Select **Configure property** (pencil icon) for the **Card Form** property, and select the custom card form from the drop down list.
@@ -74,9 +74,8 @@ To workaround, you can display a custom card by configuring the table to use the
 The Power Apps grid control can be disabled in different ways:
 
 - For the entire environment by setting the `FCB.PcfDatasetGrid` value to false.
-- For a particular table by customizing the control for the table and selecting the read only grid control. To do this, go to Settings > Advanced Settings > Settings > Customizations > Customize the system > Expand Entities > select the entity you want to customize > Controls tab > Add Control. Select **Read Only Grid**. Choose to display that grid on one or more client form factors. Select **Save** on the command bar, and then **Publish** the customization.
-
+- For a particular table by customizing the control for the table and selecting the read only grid control. To do this, go to **Settings** > **Advanced Settings** > **Settings** > **Customizations** > **Customize the System** > expand **Entities** > select the entity you want to customize > **Controls** tab > **Add Control**. Select **Read Only Grid**. Choose to display that grid on one or more client form factors. Select **Save** on the command bar, and then **Publish** the customization.
 
 ### See also
 
-[Use grid filters](../../user/grid-filters.md)
+[Use the column options in an editable view or grid (preview)](../../user/grid-filters.md#use-the-column-options-in-an-editable-view-or-grid-preview)
