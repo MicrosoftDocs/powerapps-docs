@@ -5,7 +5,7 @@ author: navjotm
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 08/16/2021
+ms.date: 10/04/2021
 ms.author: namarwah
 ms.reviewer: tapanm
 contributors:
@@ -80,9 +80,8 @@ Get connected is all about making connections with your colleagues. The Get conn
 
 When you connect with someone new, the system will connect you with someone random from your organization so you can get to know others in your organization. For example, if you're new and don't know many people, you can use Get connected to expand your network of work connections.
 
-> Note
->
-> Get Connected requires that there be at least three people who have edited their profile in Get Connected and opted in to the setting to allow meeting colleagues randomly. If an insufficient number of employees have opted in, you will have the option to invite colleagues to use the app. For more information, see the [Update profile skills](#update-profile-skills) section.
+> [!NOTE]
+> Get Connected app requires at least three users who have edited their profile in the app, and opted-in to allow meeting colleagues randomly. If an insufficient number of employees have opted-in, you'll have the option to invite colleagues to use the app. For more information, see the [Update profile skills](#update-profile-skills) section.
 
 1. In Teams, go to the team in which Get connected is installed.
 1. Select the **Get connected** tab.
@@ -96,9 +95,8 @@ When you connect with someone new, the system will connect you with someone rand
 
 Connecting with a peer will connect you with someone with the same job title as you in Active Directory so you can collaborate and share ideas.
 
-> Note
->
-> Get Connected requires that there be at least three people who have edited their profile in Get Connected and opted in to the setting to allow meeting colleagues randomly. If an insufficient number of employees have opted in, you will have the option to invite colleagues to use the app. For more information, see the [Update profile skills](#update-profile-skills) section.
+> [!NOTE]
+> Get Connected app requires at least three users who have edited their profile in the app, and opted-in to allow meeting colleagues randomly. If an insufficient number of employees have opted-in, you'll have the option to invite colleagues to use the app. For more information, see the [Update profile skills](#update-profile-skills) section.
 
 1. Open Teams and select the team in which the Get connected app is installed.
 1. Select the Get connected tab.
@@ -139,15 +137,14 @@ You can also make yourself available to help others with skills in which you hav
 
    ![Select profile button](media/get-connected/profile-button.png "Connect with an expert")
 
-1. Add the skills and intro, and opt in to meeting with colleagues and helping them learn about skills that you know..
+1. Add the skills and intro, and opt-in to meeting with colleagues and helping them learn about skills that you know.
 
    ![Update profile skills](media/get-connected/profile-screen.png "Update profile skills")
 
 1. Select **Save**.
 
-   > Note
-   >
-   > When you add a skill to your profile, others will see you associated with the skill if you opt in to helping colleagues learn about a skill. When you view the skill tiles on the main screen, you will not see your profile in skill categories--this displays colleagues with the skill, and you will not see your profile in the list.
+   > [!NOTE]
+   > When you add a skill to your profile, others will see you associated with the skill if you opt-in to helping colleagues learn about a skill. When you view the skill tiles on the main screen, you won't see your profile in skill categories (it displays colleagues with the skill), and you also won't see your profile in the list.
 
 ## Connection by Skills
 
