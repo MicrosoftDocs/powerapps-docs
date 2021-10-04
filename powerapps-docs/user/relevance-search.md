@@ -1,12 +1,12 @@
 ---
-title: "Dataverse search| MicrosoftDocs"
+title: "Search for tables and rows by using Dataverse search| MicrosoftDocs"
 description: How to use Dataverse search
 author: mduelae
 manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 9/24/2021
+ms.date: 10/04/2021
 ms.subservice: end-user
 ms.author: mkaur
 ms.custom: ""
