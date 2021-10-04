@@ -49,6 +49,34 @@ When you configure the grid control for a table, *all* views for that table will
 1. In the **Set Properties** dialog box, select the **Controls** tab, select **Add Control**, and then select **Power Apps Grid**. 
 1. To continue with configuring and publishing the control, see [Configure the Power Apps grid control](#configure-the-power-apps-grid-control).
 
+## Known issues and limitations with card form lists
+
+When a view or sub-grid is narrow it changes into a card list format that is better for small screens, such as mobile devices. The Power Apps grid control displays the following behavior in a card list:
+
+- Sort is not currently available in a card list view. To workaround, create views with the sort order you want.
+- Select all and clear all isn't available in a card list view.
+- The jump bar isn't available in a card list view. To work around, select **Search** to filter records. Type the desired letter, and then press Enter.
+- Images on a record in the list don't display in a card list view. This includes table icons, web resource images, custom images, and conditional images. The only image displayed for a record in the list are the initials of the record.
+- There are no icons for context menu commands in a card list view.
+- When there are no records, some lists have a prompt to create a new item. This button is not displayed in a card list view that uses the Power Apps grid control.
+
+### The list view doesn’t display custom cards for the table
+
+To workaround, you can display a custom card by configuring the table to use the card form of the old grid control. 
+1. Power Apps (make.powerapps.com) go to **Settings** > **Advanced Settings** > **Settings** > **Customizations** > **Customize the System** > Expand **Entities** > select the entity you want to customize > **Controls** tab > **Add Control**. 
+1. Select **Read Only Grid**, and then select **Add**. Choose to display that grid on one or more client form factors. 
+   :::image type="content" source="media/change-card-form-readonlygrid.png" alt-text="Change card form for the read only grid control":::
+1. Select **Configure property** (pencil icon) for the **Card Form** property, and select the custom card form from the drop down list.
+1. Select **OK**, and then **Publish** the customization.
+
+## Disable the Power Apps grid control
+
+The Power Apps grid control can be disabled in different ways:
+
+- For the entire environment by setting the `FCB.PcfDatasetGrid` value to false.
+- For a particular table by customizing the control for the table and selecting the read only grid control. To do this, go to Settings > Advanced Settings > Settings > Customizations > Customize the system > Expand Entities > select the entity you want to customize > Controls tab > Add Control. Select **Read Only Grid**. Choose to display that grid on one or more client form factors. Select **Save** on the command bar, and then **Publish** the customization.
+
+
 ### See also
 
 [Use grid filters](../../user/grid-filters.md)
