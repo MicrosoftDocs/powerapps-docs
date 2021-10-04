@@ -1104,7 +1104,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description|Indicates whether the organization can opt out of the new Relevance search experience (released in Oct 2020)|
+|Description|Indicates whether the organization can opt out of the new Dataverse search experience (released in Oct 2020)|
 |DisplayName|Can disable Oct 2020 Search|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -4992,7 +4992,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description|Indicates whether an organization has enabled the new Relevance search experience (released in Oct 2020) for the organization|
+|Description|Indicates whether an organization has enabled the new Dataverse search experience (released in Oct 2020) for the organization|
 |DisplayName|Oct 2020 Search enabled|
 |IsValidForForm|True|
 |IsValidForRead|True|
