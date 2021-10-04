@@ -19,6 +19,9 @@ Apps in Microsoft Teams drive collaboration by enabling users to do work where t
 
 Power Apps in Teams can leverage deep integration with other Teams capabilities to make apps collaborative. In this article, we'll learn how we can integrate Power Apps with Teams to make calls or schedule meetings with other users within the organization.
 
+Watch this video to learn how to integrate Power Apps with calls and meetings:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWL0DS]
+
 ## Prerequisites
 
 To complete this lesson, we'd need the ability to create apps within Teams that will be available as part of select Microsoft 365 subscriptions.

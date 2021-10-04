@@ -21,6 +21,9 @@ contributors:
 
 The Profile+ sample app is designed to give you a single place to see complete information about the people in your organization, your organization hierarchy, and open positions for which you may want to apply.
 
+Watch this video to learn how to deploy Profile+ app as broad distribution app:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLiBV]
+
 The app addresses the following personas:
 
 - **Manager**: Provide details about their department, including open positions that need to be filled.

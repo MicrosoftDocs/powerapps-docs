@@ -20,6 +20,9 @@ The most attractive feature about canvas apps is the ability to customize the us
 
 In this article, we'll learn how to use global variables to define themes, and how the colors and properties can be easily changed throughout the app by just updating the global variables.
 
+Watch this video to learn about theming in sample apps:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWL2Us]
+
 ## Prerequisites
 
 To complete this lesson, we'd need the ability to create apps within Microsoft Teams that will be available as part of select Microsoft 365 subscriptions. You'll also need the Milestones sample app for Microsoft Teams installed in your Team. You can install it in your team at <https://aka.ms/TeamsMilestones>.

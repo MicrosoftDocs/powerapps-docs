@@ -24,6 +24,9 @@ But what if you want to add data from another source that has additional informa
 
 In this article, we'll learn how to capture data from a different data source and display in the app. Power Apps can connect to hundreds of different data sources using out of the box connectors. In this tutorial, we'll pull data from a SharePoint list containing information about your employees, and display in the Profile+ app. This source could be any system that has employee data, such as your HR system or training database.
 
+Watch this video to learn how to extend Profile+ app (preview) with additional org-specific data:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLiBQ]
+
 ## Prerequisites
 
 To complete this tutorial, you'll need the ability to sign in to Microsoft Teams, which will be available as part of select Microsoft 365 subscriptions. You'll also need to have the Profile+ sample app for Microsoft Teams installed. This app can be installed from https://aka.ms/TeamsProfilePlus.
