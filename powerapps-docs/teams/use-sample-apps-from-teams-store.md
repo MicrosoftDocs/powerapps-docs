@@ -5,7 +5,7 @@ author: navjotm
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: intro-internal
-ms.date: 06/25/2021
+ms.date: 10/04/2021
 ms.subservice: teams
 ms.author: namarwah
 ms.reviewer: tapanm
@@ -91,6 +91,9 @@ The following tutorial shows how to install the Employee ideas app. You can use 
     ![Select Add to a team.](media/sample-app-1.png "Select Add to a team")
 
 1. Search for the team channel that you want to add the app to.
+
+    > [!IMPORTANT]
+    > Teams sample apps can't be installed in private channels. Hence, ensure you select the channel in your team that isn't private.
 
     ![Search for a team channel.](media/sample-app-2.png "Search for a team channel")
 
