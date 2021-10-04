@@ -28,7 +28,7 @@ The Power Apps grid control lets app users make rich in-line editing directly fr
 
 When you configure the grid control for a table, *all* views for that table will display using the Power Apps grid control.
 
-1. Open [solution explorer](powerapps/maker/model-driven-apps/advanced-navigation.md#solution-explorer).
+1. Open [solution explorer](advanced-navigation.md#solution-explorer).
 1. Expand **Entities**, in the list of tables, open the table you want, select the **Controls** tab, and then select **Add Control**.
 1. In the **Add Control** dialog box, select **Power Apps Grid**, and then select **Add**.
    :::image type="content" source="media/add-power-apps-grid-control.png" alt-text="Add Power Apps grid control to a table":::
@@ -40,7 +40,7 @@ When you configure the grid control for a table, *all* views for that table will
 
 ## Configure a sub-grid to use the Power Apps grid control
 
-1. Open [solution explorer](powerapps/maker/model-driven-apps/advanced-navigation.md#solution-explorer).
+1. Open [solution explorer](advanced-navigation.md#solution-explorer).
 1. Open the form that contains the sub-grid.
 1. Select the sub-grid where you want configure the Power Apps grid control, and then select **Change Properties** on the command bar.
 1. In the **Set Properties** dialog box, select the **Controls** tab, select **Add Control**, and then select **Power Apps Grid**. 
