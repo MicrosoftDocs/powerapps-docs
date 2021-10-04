@@ -18,6 +18,9 @@ contributors:
 
 The Issue reporting sample app for Microsoft Teams is designed to make it easy to capture issues with your equipment, facility, or store.
 
+Watch this video to learn how to deploy Issue reporting app as broad distribution app:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLvkW]
+
 The app addresses the following personas:
 
 - Issue Reporter&mdash;this user submits issue reports and creates tasks.

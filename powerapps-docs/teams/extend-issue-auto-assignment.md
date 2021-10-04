@@ -22,6 +22,9 @@ But what if you want additional logic to further automate issue assignment?
 
 Let’s say you want any urgent issues to be automatically assigned to a manager. Power Automate is a great option to automate conditional logic like task creation.
 
+Watch this video to learn how to add business logic for automated task assignment:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLiBY]
+
 ## Open Power Automate
 
 In this step, we'll open Power Automate to edit the flow we previously created.

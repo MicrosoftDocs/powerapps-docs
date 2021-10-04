@@ -20,6 +20,9 @@ contributors:
 
 The Inspection sample app for Microsoft Teams is designed to be a complete app experience but allow makers to easily extend it for their own purposes. In this article, we'll go over how to customize the Inspection app using Power Apps in Teams.
 
+Watch this video to learn how to customize the Inspection app:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLn9E]
+
 > [!NOTE]
 > Before you can customize the app:
 > 1. You must install it from the Teams store. You can get the app at <https://aka.ms/TeamsInspection>.

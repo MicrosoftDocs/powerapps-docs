@@ -877,7 +877,7 @@ More information: [Use column comparison in queries](../column-comparison.md)
 
 ### See also
 
-[Search across table data using relevance search](relevance-search.md)  
+[Search across table data using Dataverse search](relevance-search.md)  
 [Work with Quick Find’s search item limit](../quick-find-limit.md)  
 [Web API Query Data Sample (C#)](samples/cdswebapiservice-query-data.md)<br />
 [Web API Query Data Sample (Client-side JavaScript)](samples/query-data-client-side-javascript.md)<br />

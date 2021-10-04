@@ -45,7 +45,7 @@ To use Power BI with Dataverse, you need the following items:
 1. Select one of the following connectors, and then select **Connect**.
 
    * **Dataverse**: This connector is the most recent version and uses the tabular data stream (TDS) protocol.
-   * **Common Data Service (Legacy)**: This is the earlier version of the connector. Use this connector for large datasets that are greater than 80 MB. This version also supports paging of the query results and building reports that use the image data type.  
+   * **Common Data Service (Legacy)**: This is the earlier version of the connector. Use this connector when the query results will be greater than 80 MB. This version also supports paging of the query results and building reports that use the image data type.  
 
 1. In the dialog box that appears, paste in your Dataverse environment URL into the **Environment domain** box, in the format *org.crm.dynamics.com*. Don't include the *https://* or ending */*. More information: [Find your Dataverse environment URL](#find-your-dataverse-environment-url)
    
