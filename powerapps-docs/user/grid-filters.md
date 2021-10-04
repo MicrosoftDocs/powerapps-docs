@@ -124,10 +124,18 @@ To switch back to the old quick-find search experience that uses a table's quick
 
 3. On the **General** tab, under **Set up Quick Find**, select **Yes** for **Use quick find view of a table for searching on grids and sub-grids**.
 
+## Use the column options in an editable view or grid (preview)
 
+If the app you're using has the [Power Apps grid control](../maker/model-driven-apps/power-apps-grid-control.md), you can make changes to records directly in views and sub-grids. Additionally, you can add or remove columns in the view or sub-grid.
 
-
-
+1. From a model-driven app view, select the **Column options** icon.
+   :::image type="content" source="media/column-options.png" alt-text="Select column option to change how your view appears":::
+1. From the **Edit columns** pane you can select from the following actions:
+   - Select **Add columns** to add a column to the view.
+   - Drag and drop a column to move the column order.
+   - Select **...** next to a column you want to remove from the view, and then select **Remove**.
+   :::image type="content" source="media/column-options-2.png" alt-text="Choose the options you want to change your view":::
+1. Select **Apply** to save your changes.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

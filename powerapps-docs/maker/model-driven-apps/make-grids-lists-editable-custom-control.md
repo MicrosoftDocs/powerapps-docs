@@ -28,7 +28,10 @@ search.app:
 
 [!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-By default, users can't enter data directly using the read-only view control for views and sub-grids on forms. Users select the row in the grid to open a form, edit the data, and then save, which requires multiple steps. With editable grids, users can do rich in-line editing directly from views and sub-grids whether they're using a web app, tablet, or phone.  
+By default, users can't enter data directly using the read-only view control for views and sub-grids on forms. Users select the row in the grid to open a form, edit the data, and then save, which requires multiple steps. With editable grids, users can do rich in-line editing directly from views and sub-grids whether they're using a web app, tablet, or phone.
+
+> [!NOTE]
+> Consider using the newer Power Apps grid control. More information: [Power Apps grid control (preview)](power-apps-grid-control.md)
   
  ![Editable grid examples.](media/editable-grid-example.png "Editable grid examples")  
   
