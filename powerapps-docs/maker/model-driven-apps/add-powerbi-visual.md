@@ -5,7 +5,7 @@ ms.date: 10/04/2021
 ms.service: powerapps
 ms.topic: tutorial
 author: joel-lindstrom
-ms.author: v-ljoel
+ms.author: matp
 ms.reviewer: matp
 ---
 
@@ -13,10 +13,10 @@ ms.reviewer: matp
 
 Power BI is a powerful analysis and visualization tool. Power Apps is great at enabling people to take action via the web and mobile. With Power Apps, a Power BI dashboard can be embedded in an app. Similarly, a Power BI report tile can be added to an app. The best of both worlds can be achieved at the same place and at the same time.
 
+In this tutorial, you create a quick Power BI report and a model-driven app. Then, you see how to add the report as a dashboard in the app.
+
 Watch this video for a quick overview about how to add an embedded Power BI report to a model-driven app:
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWLj3u]
-
-In this tutorial, you create a quick Power BI report and a model-driven app. Then, you see how to add the report as a dashboard in the app.
 
 ## Prerequisites
 

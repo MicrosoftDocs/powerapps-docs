@@ -29,9 +29,9 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-In Microsoft Dataverse 1:N (one-to-many) or N:1 (many-to-one) relationships define how two tables are related to each other. 
+In Microsoft Dataverse 1:N (one-to-many) or N:1 (many-to-one) relationships define how two tables are related to each other.
   
-Before you create a custom table relationship, evaluate whether using an existing table relationship would meet your requirements. <br />More information: [Create new metadata or use existing metadata?](create-edit-metadata.md#create-new-metadata-or-use-existing-metadata)
+Before you create a custom table relationship, evaluate whether using an existing table relationship would meet your requirements. More information: [Create new metadata or use existing metadata?](create-edit-metadata.md#create-new-metadata-or-use-existing-metadata)
 
 Watch this video for a quick overview about how to create a table, a table relationship, and columns:
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWLPQb]
