@@ -1,5 +1,5 @@
 ---
-title: "Search across table data using relevance search (Microsoft Dataverse)| Microsoft Docs"
+title: "Search across table data using Dataverse search (Microsoft Dataverse)| Microsoft Docs"
 description: "Read about the various ways to find table data, including search, suggestions, and autocomplete, and even search across table types using Microsoft Dataverse."
 ms.custom: ""
 ms.date: 10/13/2020
@@ -22,21 +22,21 @@ search.app:
   - D365CE
 ---
 
-# Search across table data using relevance search
+# Search across table data using Dataverse search
 
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
-Relevance search delivers fast and comprehensive search results across multiple
-tables, in a single list, sorted by relevance. Relevance search must be
+Dataverse search delivers fast and comprehensive search results across multiple
+tables, in a single list, sorted by relevance. Dataverse search must be
 enabled in your target environment by an administrator before you can use the
-feature. More information: [Using relevance search to search for records](../../../user/relevance-search.md)
+feature. More information: [Using Dataverse search to search for records](../../../user/relevance-search.md)
 
-To begin using relevance search, your application simply issues an HTTP POST
-request (presently Web API only) to start a relevance search. When searching
+To begin using Dataverse search, your application simply issues an HTTP POST
+request (presently Web API only) to start a Dataverse search. When searching
 data, specify optional query parameters to set criteria for how the environment
 data is to be searched.
 
-There are three relevance search methods that can be used in the Power Apps web
+There are three Dataverse search methods that can be used in the Power Apps web
 application UI:
 
 - **Search**: Provides a search results page.
@@ -51,7 +51,7 @@ capabilities from application code.
 
 ## Search
 
-The minimum syntax of a relevance search HTTP request is as shown below.
+The minimum syntax of a Dataverse search HTTP request is as shown below.
 
 ```http
 POST [Organization URI]/api/search/v1.0/query
@@ -80,12 +80,12 @@ parameters are indicated in the following section.
 
 ### Query parameters
 
-The following query parameters are supported for relevance search.
+The following query parameters are supported for Dataverse search.
 
 #### `entities=[list<string>] (optional)`
 
-The default table list searches across all relevance search&ndash;configured tables
-and columns. The default list is configured by your administrator when relevance
+The default table list searches across all Dataverse search&ndash;configured tables
+and columns. The default list is configured by your administrator when Dataverse
 search is enabled.
 
 #### `facets=[list<string>] (optional)`
@@ -181,7 +181,7 @@ The Lucene query syntax supports the following functionality:
 | Regular expression (regex) search | For example, /\[mh\]otel/ matches "motel" or "hotel". |
 
 > [!NOTE]
-> Wildcards are used only for word completion in Relevance Search. As a rule, querying with a leading wildcard will take significantly longer than not using a wildcard, so we encourage you to explore alternative ways to find what you're looking for and only use leading wildcards sparingly, if at all.
+> Wildcards are used only for word completion in Dataverse search. As a rule, querying with a leading wildcard will take significantly longer than not using a wildcard, so we encourage you to explore alternative ways to find what you're looking for and only use leading wildcards sparingly, if at all.
 
 In order to use any of the search operators as part of the search text, escape the character by prefixing it with a single backslash (\\). Special characters that require escaping include the following: + - & | ! ( ) { } [ ] ^ " ~ * ? : \ /
 
@@ -327,7 +327,7 @@ POST [Organization URI]/api/search/v1.0/query
 Suggestions provide a list of matches to the specified search parameter value,
 based on a table record's primary column. This is different from a regular search
 request because a suggestion search only searches through a record's primary column,
-while search requests search through all relevance search&ndash;enabled table columns.
+while search requests search through all Dataverse search&ndash;enabled table columns.
 
 The minimum syntax of a suggestion search HTTP request is as shown below.
 
@@ -372,7 +372,7 @@ If the query request includes a filter for a specific table type, `orderby` can 
 
 #### `entities=[list<string>] (optional)`
 
-The default is searching across all relevance search&ndash;configured tables.
+The default is searching across all Dataverse search&ndash;configured tables.
 
 #### `filter=[string] (optional)`
 
@@ -434,7 +434,7 @@ POST [Organization URI]/api/search/v1.0/suggest
 Provides autocompletion of user input. Autocomplete is based on a table
 record's primary column.
 
-The minimum syntax of a relevance search HTTP request is as follows.
+The minimum syntax of a Dataverse search HTTP request is as follows.
 
 ```http
 POST [Organization URI]/api/search/v1.0/autocomplete
@@ -458,7 +458,7 @@ Fuzzy search to aid with misspellings. The default is **false**.
 
 #### `entities=[list<string>] (optional)`
 
-The default scope is searching across all relevance search&ndash;configured tables
+The default scope is searching across all Dataverse search&ndash;configured tables
 and columns.
 
 #### `filter=[string] (optional)`
@@ -501,7 +501,7 @@ POST [Organization URI]/api/search/v1.0/autocomplete
 
 ### See also
 
-[Configure Relevance Search to improve search results and performance](/power-platform/admin/configure-relevance-search-organization)  
+[Configure Dataverse search to improve search results and performance](/power-platform/admin/configure-relevance-search-organization)  
 [Compare search options in Microsoft Dataverse](../../../user/search.md)  
 [Retrieve related table records with a query](retrieve-related-entities-query.md)  
 [Query Data using the Web API](query-data-web-api.md)  
