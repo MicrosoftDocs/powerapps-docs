@@ -22,7 +22,7 @@ search.app:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)] More information: [Previews for portals, model-driven apps, and app management](/power-platform/admin/preview-environments#portals-model-driven-apps-and-app-management)
 
-The Power Apps grid control provides a read-only experience for views and subgrids. The control supports the latest Microsoft Accessibility Standards and is built to be performant and easily extensible for the future. The Power Apps grid control also aligns with the latest Microsoft design guidance for fonts, sizing, and styling. The Power Apps grid control will eventually replace the legacy read-only grid control in both model-driven and canvas apps.
+The Power Apps grid control provides a read-only experience for views and subgrids. The control supports the latest Microsoft accessibility standards and is built to be performant and easily extensible for the future. The Power Apps grid control also aligns with the latest Microsoft design guidance for fonts, sizing, and styling. The Power Apps grid control will eventually replace the legacy read-only grid control in both model-driven and canvas apps.
 
 ## Add the Power Apps grid control to views for a table
 
@@ -68,13 +68,14 @@ To work around, you can display a custom card by configuring the table to use th
 1. Power Apps (make.powerapps.com) go to **Settings** > **Advanced Settings** > **Settings** > **Customizations** > **Customize the System** > expand **Entities** > select the entity you want to customize > **Controls** tab > **Add Control**.
 1. Select **Read Only Grid**, and then select **Add**. Choose to display that grid on one or more client form factors.
    :::image type="content" source="media/change-card-form-readonlygrid.png" alt-text="Change card form for the read only grid control":::
+
 1. Select **Configure property** (pencil icon) for the **Card Form** property, and select the custom card form from the drop-down list.
 1. Select **OK**, and then **Publish** the customization.
 
 ### UI limitations and differences from the read-only grid control
 
-- Users can’t right-click links in the Power Apps grid to get browser link options like **Open in new tab**. To work around this limitation:
-   - Option 1: Ctrl+click to open in new tab, Shift+click to open in new window.
+- Users can’t right-click links in the Power Apps grid to get browser link options like **Open link in new tab**. To work around this limitation:
+   - Option 1: Ctrl+click the link to open in a new tab, and then Shift+click to open in a new window.
    - Option 2: Duplicate the browser tab, then navigate to the record.
 - Filtering a column using the column filter drop-down list doesn't change the underlying view. To work around this limitation, use the **Column Editor** and **Advanced Filter** to change the actual view.
 - Users can’t drag the mouse across multiple records to select a range of records. To work around this limitation, use Shift+click to select a range of records.
@@ -87,6 +88,10 @@ The Power Apps grid control can be disabled in different ways:
 
 - For the entire environment by setting the `FCB.PcfDatasetGrid` value to false.
 - For a particular table by customizing the control for the table and selecting the read-only grid control. To do this, go to **Settings** > **Advanced Settings** > **Settings** > **Customizations** > **Customize the System** > expand **Entities** > select the entity you want to customize > **Controls** tab > **Add Control**. Select **Read Only Grid**. Choose to display that grid on one or more client form factors. Select **Save** on the command bar, and then **Publish** the customization.
+
+## Enable the jump bar by default
+
+You can turn on the jump bar by default for all grids that are using the Power Apps grid control in the environment by setting the `FCB.PcfDatasetGridShowJumpBar` value to true. View and grid-level customizations to disable the jump bar will continue to work with this feature control enabled.
 
 ### See also
 

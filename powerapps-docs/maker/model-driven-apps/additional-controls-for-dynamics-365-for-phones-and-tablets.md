@@ -116,7 +116,7 @@ The Calendar Control V2 control displays scheduled activities and their associat
 
 ## Power Apps grid control
 
-The Power Apps grid control provides a read-only list of records that lets app users view and open records from views and sub-grids. The control supports the latest Microsoft Accessibility Standards and is built to be performant and easily extensible for the future. The Power Apps grid control will eventually replace the read-only grid control in both model-driven and canvas apps. More information: [Power Apps grid control (preview)](power-apps-grid-control.md)
+The Power Apps grid control provides a read-only list of records that lets app users view and open records from views and sub-grids. The control supports the latest Microsoft accessibility standards and is built to be performant and easily extensible for the future. The Power Apps grid control will eventually replace the read-only grid control in both model-driven and canvas apps. More information: [Power Apps grid control (preview)](power-apps-grid-control.md)
 
 ## Editable grid
 
