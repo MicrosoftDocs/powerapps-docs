@@ -149,9 +149,6 @@ A user who has an existing local account can apply a new password by providing t
 - Create a username and password.
 - Change an existing password.
 
-> [!NOTE]
-> The processes mentioned above are not affected by the [upcoming deprecation of task flows](/power-platform/important-changes-coming#task-flows-are-deprecated).
-
 ## Confirm an email address
 
 Changing an email address (or setting it for the first time) puts it into an unconfirmed state. The user can request a confirmation email to be sent to their new email address, and the email will include instructions to the user for completing the email confirmation process.

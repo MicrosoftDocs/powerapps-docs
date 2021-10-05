@@ -109,11 +109,11 @@ Apart from the standard configuration required for basic form or advanced form, 
 Two table permission records are required to establish the necessary access to view and upload documents.
 
 - Permissions on the table of the table or advanced form: 
-    - Create an **Table Permission** record specifying the **Table Name** as the table of the basic form or advanced form configured previously. 
+    - Create a **Table Permission** record specifying the **Table Name** as the table of the basic form or advanced form configured previously. 
     - Select a **Access Type** and access type relationship that is appropriate to the behavior of the form that you want.
     - Enable **Read** and **Append To** privileges to allow read access to documents and optionally enable **Write** privilege to allow document uploads. Ignore the **Child Table Permissions** section for now since it will be populated by the next step.
 - Permissions on the **Document Location** with **Parent access type** referring to the previous permission record: 
-    - Create an **Table Permission** record specifying the **Table Name** as **Document Location** table with **Access Type** set to **Parent**. 
+    - Create a **Table Permission** record specifying the **Table Name** as **Document Location** table with **Access Type** set to **Parent**. 
     - Select the Parent Table Permission to the table permission record created in previous step. 
     - Privileges 
         - The minimum privileges to allow read access to documents are **Read**, **Create**, and **Append**. 
@@ -197,7 +197,7 @@ The below example demonstrates configuration using the Case table which needs th
 
    1. Go to the **Web Role** record that is associated to the user. For this sample, we’ll assume that the user has an Administrator web role.
 
-   2. Ensure that an Table Permission record exists by the name of **Customer Service - Cases where contact is customer**. 
+   2. Ensure that a Table Permission record exists by the name of **Customer Service - Cases where contact is customer**. 
 
       > [!NOTE]
       > Ensure that your web role has this table permission added. If your user is already an Administrator, then the above table permission need not be explicitly assigned.
