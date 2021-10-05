@@ -182,7 +182,7 @@ Notes, and the **Add**, **Edit**, and **Delete** buttons for the note control wi
 
     For example, add the table permission created in the previous step to the Lead Manager web role.
 
-    ![Add web roles to an table permission.](media/configure-notes/add-webrole-entity-permissions.png "Add web roles to an table permission")
+    ![Add web roles to a table permission.](media/configure-notes/add-webrole-entity-permissions.png "Add web roles to a table permission")
 
 1. Create a table permission for the **Annotation** table with the [Parental access type](configure/assign-entity-permissions.md#parental-access-type) and required privileges as explained in the table below. The **Parent Table Permission** must be set to the same table permissions created in step 2.
 
