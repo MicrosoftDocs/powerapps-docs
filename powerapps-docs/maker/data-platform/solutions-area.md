@@ -40,11 +40,11 @@ The solutions area makes it easier for you to work with solution objects and sub
 
    :::image type="content" source="media/solutions-area-solution.png" alt-text="Solutions area displaying the objects pane":::
 
-## Enable solution preview
+<!-- ## Enable solution preview
 
 To enable, turn on **Solution preview on**, from the **Solutions** area.
 
-:::image type="content" source="media/enable-solution-preview.png" alt-text="Turn on solution preview":::
+:::image type="content" source="media/enable-solution-preview.png" alt-text="Turn on solution preview":::  -->
 
 ### See also
 [View the history of a solution](solution-history.md) <br />
