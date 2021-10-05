@@ -136,6 +136,8 @@ From the column property pane, next to the column name, select the <img src = "m
 
 You can also hover over a column from the **Table columns** pane to view properties for a column.
 
+:::image type="content" source="media/column-properties2.png" alt-text="Column properties displayed from the table columns left pane":::
+
 ## Create a new column on the table when editing a form
 
 1. Open the form designer to create or edit a form. More information: [Create a form](create-and-edit-forms.md#create-a-form) or [Edit a form](create-and-edit-forms.md#edit-a-form)
