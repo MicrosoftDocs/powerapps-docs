@@ -37,7 +37,7 @@ When you configure the Power Apps grid control for a table, *all* views for that
 
 1. In the **Power Apps Grid** row that's added, select the app types you want to apply the grid to. This makes the control the default control for the selected clients.
    :::image type="content" source="media/configure-power-apps-grid-control.png" alt-text="Select the client types where you want to use the control":::
-1. By default the jump bar is disabled. To display an alphabetic list at the bottom of of views or subgrids (the jump bar), select the pencil icon in the **Jump bar** row. Under **Bind to static options**, select **Enable** in the dropdown list. Below is a screenshot of the jump bar enabled for the contact table in a model-driven app.
+1. By default the jump bar is disabled. To display an alphabetic list at the bottom of views or subgrids (the jump bar), select the pencil icon in the **Jump bar** row. Under **Bind to static options**, select **Enable** in the dropdown list. Below is a screenshot of the jump bar enabled for the contact table in a model-driven app.
    :::image type="content" source="media/jump-bar-in-view.png" alt-text="Jump bar enabled and displayed in the view for an app":::
 1. To save your changes, select **Save** on the command bar. When you're ready to make the changes available to app users, select **Publish** on the command bar.
 
@@ -65,7 +65,7 @@ When a view or subgrid is narrow it changes into a card list format that is bett
 #### The list view doesn’t display custom cards for the table
 
 To work around, you can display a custom card by configuring the table to use the card form of the legacy read-only grid control.
-1. Power Apps (make.powerapps.com) go to **Settings** > **Advanced Settings** > **Settings** > **Customizations** > **Customize the System** > expand **Entities** > select the entity you want to customize > **Controls** tab > **Add Control**.
+1. Go to Power Apps (make.powerapps.com) > **Settings** > **Advanced Settings** > **Settings** > **Customizations** > **Customize the System** > expand **Entities** > select the entity you want to customize > **Controls** tab > **Add Control**.
 1. Select **Read Only Grid**, and then select **Add**. Choose to display that grid on one or more client form factors.
 
    :::image type="content" source="media/change-card-form-readonlygrid.png" alt-text="Change card form for the read only grid control":::
