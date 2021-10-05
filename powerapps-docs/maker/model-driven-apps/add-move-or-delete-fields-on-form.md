@@ -2,7 +2,7 @@
 title: "Add, configure, move, or delete columns on a form | MicrosoftDocs"
 description: Learn how to work with columns on a form using Power Apps.
 ms.custom: ""
-ms.date: 05/04/2020
+ms.date: 10/04/2021
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -127,6 +127,14 @@ You can move a column on a form using drag and drop or cut and paste actions.
      > [!NOTE]
      >   -  If you delete a column by mistake, on the command bar, select **Undo** to revert the form to its previous state. 
      >   -  You can't delete a column that is locked or is required and not present anywhere else on the form. 
+
+## View and copy column properties
+
+From the column property pane, next to the column name, select the <img src = "media/info-icon.png" alt = "information icon" width = "20" height = "20"> information icon to display column properties. Copy a property to the clipboard, such as display, schema, or unique name. Select **Edit table column** to make changes to the column.
+
+:::image type="content" source="media/column-properties.png" alt-text="Column properties":::
+
+You can also hover over a column from the **Table columns** pane to view properties for a column.
 
 ## Create a new column on the table when editing a form
 
