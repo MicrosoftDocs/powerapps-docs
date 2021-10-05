@@ -109,11 +109,11 @@ Apart from the standard configuration required for basic form or advanced form, 
 Two table permission records are required to establish the necessary access to view and upload documents.
 
 - Permissions on the table of the table or advanced form: 
-    - Create an **Table Permission** record specifying the **Table Name** as the table of the basic form or advanced form configured previously. 
+    - Create a **Table Permission** record specifying the **Table Name** as the table of the basic form or advanced form configured previously. 
     - Select a **Access Type** and access type relationship that is appropriate to the behavior of the form that you want.
     - Enable **Read** and **Append To** privileges to allow read access to documents and optionally enable **Write** privilege to allow document uploads. Ignore the **Child Table Permissions** section for now since it will be populated by the next step.
 - Permissions on the **Document Location** with **Parent access type** referring to the previous permission record: 
-    - Create an **Table Permission** record specifying the **Table Name** as **Document Location** table with **Access Type** set to **Parent**. 
+    - Create a **Table Permission** record specifying the **Table Name** as **Document Location** table with **Access Type** set to **Parent**. 
     - Select the Parent Table Permission to the table permission record created in previous step. 
     - Privileges 
         - The minimum privileges to allow read access to documents are **Read**, **Create**, and **Append**. 
