@@ -23,9 +23,7 @@ search.app:
   - D365CE
 ---
 
-# Solutions area (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)] More information: [Power Apps preview program](/power-platform/admin/preview-environments)
+# Solutions area
 
 The solutions area makes it easier for you to work with solution objects and subcomponents in your solutions. To use this experience, [enable solution preview](#enable-solution-preview).
 

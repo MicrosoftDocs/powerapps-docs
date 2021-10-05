@@ -2123,7 +2123,7 @@
     items:
       - name: Solutions overview
         href: ./data-platform/solutions-overview.md
-      - name: Solutions area (preview)
+      - name: Solutions area
         href: ./data-platform/solutions-area.md
       - name: Create a solution
         href: ./data-platform/create-solution.md
