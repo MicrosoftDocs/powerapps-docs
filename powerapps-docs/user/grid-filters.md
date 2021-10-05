@@ -124,7 +124,7 @@ To switch back to the old quick-find search experience that uses a table's quick
 
 3. On the **General** tab, under **Set up Quick Find**, select **Yes** for **Use quick find view of a table for searching on grids and sub-grids**.
 
-## Use the column options in an editable view or grid (preview)
+## Use the column options in a view or grid (preview)
 
 If the app you're using has the [Power Apps grid control](../maker/model-driven-apps/power-apps-grid-control.md), you can view and open records in views and sub-grids. Additionally, you can add or remove columns in the view or sub-grid.
 
