@@ -67,6 +67,7 @@ When a view or subgrid is narrow it changes into a card list format that is bett
 To work around, you can display a custom card by configuring the table to use the card form of the legacy read-only grid control.
 1. Power Apps (make.powerapps.com) go to **Settings** > **Advanced Settings** > **Settings** > **Customizations** > **Customize the System** > expand **Entities** > select the entity you want to customize > **Controls** tab > **Add Control**.
 1. Select **Read Only Grid**, and then select **Add**. Choose to display that grid on one or more client form factors.
+
    :::image type="content" source="media/change-card-form-readonlygrid.png" alt-text="Change card form for the read only grid control":::
 
 1. Select **Configure property** (pencil icon) for the **Card Form** property, and select the custom card form from the drop-down list.
