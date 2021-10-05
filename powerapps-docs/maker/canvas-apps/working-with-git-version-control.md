@@ -29,6 +29,15 @@ Use Git version control to enable more than one person to edit a Canvas app at t
 
 Any Git provider can be used with Studio, such as [GitHub](https://github.com/) or [Azure DevOps](https://azure.microsoft.com/en-us/services/devops/).  Use existing Git tools to see version history, create and manage pull requests, and perform other version control tasks.
 
+## Known limitations
+
+This is very much an experimental feature and we welcome your feedback.  Here is a list of known limitations, most of which we plan to eliminate in a future version.
+
+1. This feature is not compatible with [code components](../../developer/component-framework/create-custom-controls-using-pcf). Do not use this feature with apps that make of use of code components.
+1. This feature does not work with public Git repository.  Use a private repo instead.
+1. This feature does not work with on-premisis Git repositories.  The Git repro must be hosted on the web and accessible via username and personal access token.
+1. Edits to the same property on the same control are not merged.  The last edit made will win.
+
 ## Enabling Git version control
 
 > [!IMPORTANT]
