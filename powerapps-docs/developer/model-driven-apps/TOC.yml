@@ -79,6 +79,8 @@
     href: clientapi/navigate-to-custom-page-examples.md
   - name: Send in-app notifications using client API
     href: clientapi/send-in-app-notifications.md
+  - name: Creating side panes using client API
+    href: clientapi/create-app-side-panes.md
   - name: Client API Reference
     href: clientapi/reference.md
     items:
@@ -173,12 +175,12 @@
     - name: Attributes
       href: clientapi/reference/attributes.md
       items:
+      - name: controls collection
+        href: clientapi/reference/attributes/controls-collection.md
       - name: Composite attributes
         href: clientapi/reference/composite-attributes.md
       - name: addOnChange
         href: clientapi/reference/attributes/addOnChange.md
-      - name: controls collection
-        href: clientapi/reference/attributes/controls-collection.md
       - name: fireOnChange
         href: clientapi/reference/attributes/fireOnChange.md
       - name: getAttributeType
@@ -724,6 +726,19 @@
         href: clientapi/reference/xrm-app/addGlobalNotification.md
       - name: clearGlobalNotification
         href: clientapi/reference/xrm-app/clearGlobalNotification.md
+      - name: AppSidePane
+        href: clientapi/reference/xrm-app-appsidepane.md
+      - name: Xrm.App.sidePanes
+        href: clientapi/reference/xrm-app-sidepanes.md
+        items:
+        - name: createPane
+          href: clientapi/reference/Xrm-App/Xrm-App-sidePanes/createPane.md
+        - name: getAllPanes
+          href: clientapi/reference/Xrm-App/Xrm-App-sidePanes/getAllPanes.md
+        - name: getPane
+          href: clientapi/reference/Xrm-App/Xrm-App-sidePanes/getPane.md
+        - name: getSelectedPane
+          href: clientapi/reference/Xrm-App/Xrm-App-sidePanes/getSelectedPane.md
     - name: Xrm.Device
       href: clientapi/reference/xrm-device.md
       items:

@@ -1,11 +1,11 @@
 ---
-title: Portals support for Power Platform CLI (Preview)
+title: Portals support for Power Platform CLI (preview)
 description: Learn how to work with Power Platform CLI for CI/CD (Continuous Integration/Continuous Deployment) improvements of a portal.
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/22/2021
+ms.date: 09/09/2021
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: tapanm
@@ -14,7 +14,7 @@ contributors:
     - tapanm-msft
 ---
 
-# Portals support for Microsoft Power Platform CLI (Preview)
+# Portals support for Microsoft Power Platform CLI (preview)
 
 [This article is pre-release documentation and is subject to change.]
 
@@ -83,7 +83,29 @@ Portals support for Microsoft Power Platform CLI is limited to the tables listed
 
 :::row:::
    :::column span="":::
-      adx_contentaccesslevel
+      adx_ad
+   :::column-end:::
+   :::column span="":::
+      adx_adplacement
+   :::column-end:::
+   :::column span="":::
+      adx_blog
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      adx_blogpost
+   :::column-end:::
+   :::column span="":::
+      adx_botconsumer
+   :::column-end:::
+   :::column span="":::
+      adx_communityforum
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      adx_communityforumaccesspermission
    :::column-end:::
    :::column span="":::
       adx_contentsnippet
@@ -105,156 +127,110 @@ Portals support for Microsoft Power Platform CLI is limited to the tables listed
 :::row-end:::
 :::row:::
    :::column span="":::
-      adx_entitypermission_webrole
+      adx_forumthreadtype
    :::column-end:::
-   :::column span="":::
-      adx_externalidentity
-   :::column-end:::
-   :::column span="":::
-      adx_pagealert
-   :::column-end:::
-:::row-end:::
-:::row:::
-   :::column span="":::
-      adx_pagenotification
-   :::column-end:::
-   :::column span="":::
-      adx_pagetag
-   :::column-end:::
-   :::column span="":::
-      adx_pagetag_webpage
-   :::column-end:::
-:::row-end:::
-:::row:::
    :::column span="":::
       adx_pagetemplate
    :::column-end:::
    :::column span="":::
-      adx_portallanguage
-   :::column-end:::
-   :::column span="":::
-      adx_publishingstate
+      adx_poll
    :::column-end:::
 :::row-end:::
 :::row:::
    :::column span="":::
-      adx_publishingstatetransitionrule
+      adx_polloption
    :::column-end:::
    :::column span="":::
-      adx_publishingstatetransitionrule_webrole
+      adx_pollplacement
+   :::column-end:::
+   :::column span="":::
+      adx_portallanguage
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      adx_publishingstate
    :::column-end:::
    :::column span="":::
       adx_redirect
    :::column-end:::
-:::row-end:::
-:::row:::
-   :::column span="":::
-      adx_setting
-   :::column-end:::
    :::column span="":::
       adx_shortcut
    :::column-end:::
+:::row-end:::
+:::row:::
    :::column span="":::
       adx_sitemarker
+   :::column-end:::
+   :::column span="":::
+      adx_sitesetting
+   :::column-end:::
+   :::column span="":::
+      adx_tag
    :::column-end:::
 :::row-end:::
 :::row:::
    :::column span="":::
-      adx_sitesetting
+      adx_urlhistory
    :::column-end:::
    :::column span="":::
       adx_webfile
    :::column-end:::
    :::column span="":::
-      adx_webfilelog
+      adx_webform
    :::column-end:::
 :::row-end:::
 :::row:::
-   :::column span="":::
-      adx_webform
-   :::column-end:::
    :::column span="":::
       adx_webformmetadata
    :::column-end:::
-   :::column span="":::
-      adx_webformsession
-   :::column-end:::
-:::row-end:::
-:::row:::
    :::column span="":::
       adx_webformstep
    :::column-end:::
    :::column span="":::
       adx_weblink
    :::column-end:::
-   :::column span="":::
-      adx_weblinkset
-   :::column-end:::
 :::row-end:::
 :::row:::
    :::column span="":::
-      adx_webnotificationentity
-   :::column-end:::
-   :::column span="":::
-      adx_webnotificationurl
+      adx_weblinkset
    :::column-end:::
    :::column span="":::
       adx_webpage
    :::column-end:::
-:::row-end:::
-:::row:::
-   :::column span="":::
-      adx_webpage_tag
-   :::column-end:::
    :::column span="":::
       adx_webpageaccesscontrolrule
    :::column-end:::
-   :::column span="":::
-      adx_webpageaccesscontrolrule_webrole
-   :::column-end:::
 :::row-end:::
 :::row:::
    :::column span="":::
-      adx_webpagehistory
+      adx_webrole
    :::column-end:::
-   :::column span="":::
-      adx_webpagelog
-   :::column-end:::
-   :::column span="":::
-      adx_webrole_systemuser
-   :::column-end:::
-:::row-end:::
-:::row:::
    :::column span="":::
       adx_website
    :::column-end:::
    :::column span="":::
-      adx_website_list
-   :::column-end:::
-   :::column span="":::
-      adx_website_sponsor
-   :::column-end:::
-:::row-end:::
-:::row:::
-   :::column span="":::
       adx_websiteaccess
    :::column-end:::
-   :::column span="":::
-      adx_websiteaccess_webrole
-   :::column-end:::
-   :::column span="":::
-      adx_websitebinding
-   :::column-end:::
 :::row-end:::
 :::row:::
+   :::column span="":::
+      adx_websitebinding (only download)
+   :::column-end:::
    :::column span="":::
       adx_websitelanguage
    :::column-end:::
    :::column span="":::
       adx_webtemplate
    :::column-end:::
+:::row-end:::
+:::row:::
    :::column span="":::
-      adx_urlhistory
+      annotation
+   :::column-end:::
+   :::column span="":::
+   :::column-end:::
+   :::column span="":::
    :::column-end:::
 :::row-end:::
 
@@ -317,9 +293,9 @@ adx_contentsnippet:
 > [!NOTE]
 > To learn about all commands used in CLI in addition to portals, go to [Common commands in Microsoft Power Platform CLI](../../developer/data-platform/powerapps-cli.md#common-commands).
 
-## Use the Visual Studio Code extension (Preview)
+## Use the Visual Studio Code extension (preview)
 
-You can also use VS Code extension **Power Platform VS Code Extension** to benefit built-in Liquid language from IntelliSense, code completion assistance, hinting, and interact with Microsoft Power Platform CLI using VS Code Integrated Terminal. More information: [Use the Visual Studio Code extension (Preview)](vs-code-extension.md)
+You can also use VS Code extension **Power Platform VS Code Extension** to benefit built-in Liquid language from IntelliSense, code completion assistance, hinting, and interact with Microsoft Power Platform CLI using VS Code Integrated Terminal. More information: [Use the Visual Studio Code extension (preview)](vs-code-extension.md)
 
 ## Additional considerations
 
@@ -333,5 +309,5 @@ You can also use VS Code extension **Power Platform VS Code Extension** to benef
 ### See also
 
 - [Microsoft Power Platform CLI](../../developer/data-platform/powerapps-cli.md)
-- [Use the Visual Studio Code extension (Preview)](vs-code-extension.md)
+- [Use the Visual Studio Code extension (preview)](vs-code-extension.md)
 

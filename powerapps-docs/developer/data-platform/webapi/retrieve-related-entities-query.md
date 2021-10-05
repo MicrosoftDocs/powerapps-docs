@@ -359,7 +359,7 @@ The Web API allows you to use two lambda operators, which are `any` and `all` to
 
 ## See also
 
-[Search across table data using relevance search](relevance-search.md)  
+[Search across table data using Dataverse search](relevance-search.md)  
 [Query data using Web API](query-data-web-api.md)<br />
 [Perform operations using the Web API](perform-operations-web-api.md)<br />
 [Compose Http requests and handle errors](compose-http-requests-handle-errors.md)<br />

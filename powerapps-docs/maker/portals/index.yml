@@ -24,13 +24,13 @@ landingContent:
     linkLists:
        - linkListType: whats-new
          links:
-          - text: Use the Visual Studio Code extension (Preview)
+          - text: Use the Visual Studio Code extension (preview)
             url: vs-code-extension.md
-          - text: Add chatbot to a page (Preview)
+          - text: Add chatbot to a page (preview)
             url: add-chatbot.md
-          - text: Table permissions using portals Studio (Preview)
+          - text: Table permissions using portals Studio (preview)
             url: configure/entity-permissions-studio.md
-          - text: "Tutorial: Configure table permissions using portals Studio (Preview)"
+          - text: "Tutorial: Configure table permissions using portals Studio (preview)"
             url: configure/entity-permissions-studio-walkthrough.md
        - linkListType: reference
          links:

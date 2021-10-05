@@ -22,6 +22,9 @@ The Inspections sample app allows users to create and perform inspections in the
 
 In this article, we'll learn how to customize inspection steps in the user app. For example, removing the ability to add pictures to checklist steps. This customization is important because just deleting the particular control can cause issues with responsiveness, and the look and feel of the app can get affected.
 
+Watch this video to learn how to customize inspection steps:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLiBT]
+
 ## Prerequisites
 
 To complete this lesson, we'd need the ability to sign-in to Microsoft Teams that will be available as part of select Microsoft 365 subscriptions, and will also need to have the Inspections sample app for Teams installed. This app can be installed from <https://aka.ms/TeamsInspection>.

@@ -22,7 +22,7 @@ search.app:
 ---
 # Design productive main forms in model-driven apps
 
-Building experiences where tasks can be completed quickly and effectively is crucial to user satisfaction. Model-driven apps provide many options to build highly performant experiences, including application-level options, site map organization options, and many form-creation options.
+Building experiences where tasks can be completed quickly and effectively is crucial to user satisfaction. Model-driven apps provide many options to build highly efficient experiences, including application-level options, site map organization options, and many form-creation options.
 
 This article shows you how to design highly efficient and productive forms in a model-driven app, including how to work with main forms, main form dialogs, form component controls, quick create forms, and quick view forms.
 
