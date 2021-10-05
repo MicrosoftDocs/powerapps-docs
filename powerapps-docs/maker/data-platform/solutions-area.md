@@ -38,7 +38,7 @@ The modern solution view makes it easier for you to work with solution objects a
 4. Objects list. Displays information and components that can be viewed and/or opened for editing of the selected object from the **Objects** pane. Add existing objects and subcomponents or create new ones for unmanaged solutions.
 5. Search. Use to filter the list of subcomponents for the object that's currently selected. Filter on any of the subcomponent's properties. For example, filter on only **Lookup** data types or whether a column is **Required** by entering those strings in the **Search** box.
 
-   :::image type="content" source="media/solutions-area-solution.png" alt-text="Solutions area displaying the objects pane":::
+   :::image type="content" source="media/solutions-area-solution.png" alt-text="Solutions area displaying the objects pane" lightbox="media/solutions-area-solution.png":::
 
 ## Disable modern solution view
 
