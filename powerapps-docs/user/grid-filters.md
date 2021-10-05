@@ -126,7 +126,7 @@ To switch back to the old quick-find search experience that uses a table's quick
 
 ## Use the column options in an editable view or grid (preview)
 
-If the app you're using has the [Power Apps grid control](../maker/model-driven-apps/power-apps-grid-control.md), you can make changes to records directly in views and sub-grids. Additionally, you can add or remove columns in the view or sub-grid.
+If the app you're using has the [Power Apps grid control](../maker/model-driven-apps/power-apps-grid-control.md), you can view and open records in views and sub-grids. Additionally, you can add or remove columns in the view or sub-grid.
 
 1. From a model-driven app view, select the **Column options** icon.
    :::image type="content" source="media/column-options.png" alt-text="Select column option to change how your view appears":::
