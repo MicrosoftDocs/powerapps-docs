@@ -197,7 +197,7 @@ The below example demonstrates configuration using the Case table which needs th
 
    1. Go to the **Web Role** record that is associated to the user. For this sample, we’ll assume that the user has an Administrator web role.
 
-   2. Ensure that an Table Permission record exists by the name of **Customer Service - Cases where contact is customer**. 
+   2. Ensure that a Table Permission record exists by the name of **Customer Service - Cases where contact is customer**. 
 
       > [!NOTE]
       > Ensure that your web role has this table permission added. If your user is already an Administrator, then the above table permission need not be explicitly assigned.
