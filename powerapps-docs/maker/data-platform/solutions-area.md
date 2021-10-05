@@ -23,11 +23,11 @@ search.app:
   - D365CE
 ---
 
-# Solutions area
+# Solution view
 
-The solutions area makes it easier for you to work with solution objects and subcomponents in your solutions. To use this experience, [enable solution preview](#enable-solution-preview).
+The modern solution view makes it easier for you to work with solution objects and subcomponents in your solutions.
 
-## Solutions area overview
+## Solution view overview
 
 1. Panes - The left navigation pane consists of the following areas:
    - **Overview**. Provides details about the solution, such as display name, name, created on date, version, managed or unmanaged, publisher, description, and whether the solution is a patch. Also, solution health information and solution actions available on the command bar such as export, clone, apply upgrade, and translations.
@@ -40,11 +40,11 @@ The solutions area makes it easier for you to work with solution objects and sub
 
    :::image type="content" source="media/solutions-area-solution.png" alt-text="Solutions area displaying the objects pane":::
 
-<!-- ## Enable solution preview
+## Disable modern solution view
 
-To enable, turn on **Solution preview on**, from the **Solutions** area.
+By default, the modern solution view is enabled. To disable, switch **Solution preview on** to off, from the **Solutions** area.
 
-:::image type="content" source="media/enable-solution-preview.png" alt-text="Turn on solution preview":::  -->
+:::image type="content" source="media/enable-solution-preview.png" alt-text="Turn on solution preview"::: 
 
 ### See also
 [View the history of a solution](solution-history.md) <br />
