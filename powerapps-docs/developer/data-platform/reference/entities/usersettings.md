@@ -448,7 +448,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|
 |-----|-----|
-|0|Relevance search|
+|0|Dataverse search|
 |1|Categorized search|
 |2|Use last search|
 |3|Custom search|

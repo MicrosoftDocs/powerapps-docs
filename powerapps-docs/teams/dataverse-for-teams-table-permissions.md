@@ -29,6 +29,9 @@ For example, if there's a table that the users should only be able to modify for
 > [!NOTE]
 > Only team owners have the ability to edit table permissions currently.
 
+Watch this video to learn how to configure table permissions:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWKV6P]
+
 ## Understanding team roles
 
 Permission to apps and the data that they use in Teams are based on the following roles in Teams team.

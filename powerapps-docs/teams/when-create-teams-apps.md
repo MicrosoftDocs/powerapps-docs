@@ -22,6 +22,9 @@ Stand-alone apps are great for individual productivity, but if work and communic
 
 The [sample apps for Microsoft Teams](use-sample-apps-from-teams-store.md) are great examples of these types of collaborative apps:
 
+Watch this video to learn when to build canvas apps in Teams:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWKV6X]
+
 ## Apps for collaboration and centralized workload
 
 -   [Milestones](milestones.md) sample app enables collaboration on  project work items from within Microsoft Teams.

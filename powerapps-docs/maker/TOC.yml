@@ -141,15 +141,15 @@
       items:
       - name: Compare search options
         href: ../user/search.md
-      - name: Relevance search
+      - name: Dataverse search
         items:
-        - name: What is relevance search?
+        - name: What is Dataverse search?
           href: ../user/relevance-search-benefits.md
-        - name: Search for tables and rows by using relevance search
+        - name: Search for tables and rows by using Dataverse search
           href: ../user/relevance-search.md
         - name: Configure facets and filters
           href: ../user/facets-and-filters.md
-        - name: FAQs about relevance search 
+        - name: FAQs about Dataverse search 
           href: ../user/relevance-faq.md
       - name: Quick Find
         href: ../user/quick-find.md
@@ -803,6 +803,8 @@
             href: ./canvas-apps/functions/function-rand.md
           - name: ReadNFC
             href: ./canvas-apps/functions/function-readnfc.md
+          - name: RecordInfo
+            href: ./canvas-apps/functions/function-recordinfo.md            
           - name: Refresh
             href: ./canvas-apps/functions/function-refresh.md
           - name: Relate
@@ -1302,7 +1304,7 @@
         - name: "Migrating embedded canvas from public preview"
           href: ./model-driven-apps/embedded-canvas-app-migrate-from-preview.md
       - name: Embed a Power BI report on a form
-        href: ./model-driven-apps/embed-powerbi-report-in-system-form.md
+        href: ./model-driven-apps/embed-powerbi-report-in-system-form.md 
       - name: Work with views
         href: ./model-driven-apps/create-edit-views.md
         items:
@@ -1439,7 +1441,7 @@
     href: ../mobile/run-powerapps-on-mobile.md
   - name: Use model-driven apps on mobile
     href: ../mobile/use-custom-model-driven-app-on-mobile.md
-  - name: Use relevance search on Power Apps Mobile  
+  - name: Use Dataverse search on Power Apps Mobile  
     href: ../mobile/relevance-search-mobile.md  
   - name: Set app display to dark or light mode  
     href: ../mobile/display-mode.md
@@ -1676,7 +1678,7 @@
                 href: ./portals/configure/use-simplified-authentication-configuration.md
               - name: Azure AD B2C
                 items:
-                    - name: Configure (preview)
+                    - name: Configure (using interface in preview)
                       href: ./portals/configure/configure-azure-ad-b2c-provider.md
                     - name: Configure manually
                       href: ./portals/configure/configure-azure-ad-b2c-provider-manual.md
@@ -2121,6 +2123,8 @@
     items:
       - name: Solutions overview
         href: ./data-platform/solutions-overview.md
+      - name: Solution view
+        href: ./data-platform/solutions-area.md
       - name: Create a solution
         href: ./data-platform/create-solution.md
       - name: Export solutions
@@ -2459,7 +2463,7 @@
                  - name: Send a weekly report on project status from the Milestones sample app
                    href: ../teams/extend-milestones-weekly-report.md
                  - name: Send notification to the Team when work item status is updated in the Milestones sample app
-                   href: ../teams/extend-milestones-send notification.md
+                   href: ../teams/extend-milestones-send-notification.md
         - name: Perspectives (preview)
           items:
             - name: Use Perspectives sample app

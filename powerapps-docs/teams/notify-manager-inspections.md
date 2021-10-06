@@ -26,6 +26,9 @@ The outcome is that the Inspection app can be used to verify that employees are 
 > [!NOTE]
 > Before you begin, read [Customize the Inspection app](customize-inspections.md).
 
+Watch this video to learn how to configure manager notification on completion of an inspection:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLn9G]
+
 ## Prerequisites
 
 To complete this lesson, we'd need the ability to log in into Microsoft Teams that will be available as part of select Microsoft 365 subscriptions, and will also need to have the Inspections sample app for Microsoft Teams installed. This app can be installed from https://aka.ms/TeamsInspection.
