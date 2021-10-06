@@ -22,7 +22,10 @@ search.app:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)] More information: [Previews for portals, model-driven apps, and app management](/power-platform/admin/preview-environments#portals-model-driven-apps-and-app-management)
 
-The Power Apps grid control provides a read-only experience for views and subgrids. The control supports the latest Microsoft accessibility standards and is built to be performant and easily extensible for the future. The Power Apps grid control also aligns with the latest Microsoft design guidance for fonts, sizing, and styling. The Power Apps grid control will eventually replace the legacy read-only grid control in both model-driven and canvas apps.
+The Power Apps grid control lets users view and open records from views and subgrids. The control supports the latest Microsoft accessibility standards and is built to be performant and easily extensible for the future. The Power Apps grid control also aligns with the latest Microsoft design guidance for fonts, sizing, and styling. The Power Apps grid control will eventually replace both the legacy read-only grid and editable grid controls in both model-driven and canvas apps.
+
+> [!NOTE]
+> Currently, the Power Apps grid control provides read-only views and subgrids.
 
 ## Add the Power Apps grid control to views for a table
 
@@ -78,10 +81,14 @@ To work around, you can display a custom card by configuring the table to use th
 - Users can’t right-click links in the Power Apps grid to get browser link options like **Open link in new tab**. To work around this limitation:
    - Option 1: Ctrl+click the link to open in a new tab, and then Shift+click to open in a new window.
    - Option 2: Duplicate the browser tab, then navigate to the record.
-- Filtering a column using the column filter drop-down list doesn't change the underlying view. To work around this limitation, use the **Column Editor** and **Advanced Filter** to change the actual view.
 - Users can’t drag the mouse across multiple records to select a range of records. To work around this limitation, use Shift+click to select a range of records.
 - Cells with no data are blank instead of displaying three dashes **---**.
 - The owner column does not show online status and a people card for the user.
+- Filtering a column using the column **Filter By** drop-down list doesn't change the underlying view. 
+  :::image type="content" source="media/view-filter-by.png" alt-text="Filter By drop down list in a view":::
+   To work around this limitation, use the **Open advanced filtering panel** to change the actual view.
+   :::image type="content" source="media/advanced-filter-panel.png" alt-text="Select the Open advanced filtering panel feature":::
+   More information: [See the current view definition)](../../user/grid-filters-advanced?branch=matp-2451824#see-the-current-view-definition)
 
 ## Disable the Power Apps grid control
 
@@ -96,4 +103,4 @@ You can turn on the jump bar by default for all grids that are using the Power A
 
 ### See also
 
-[Use the column options in an editable view or grid (preview)](../../user/grid-filters.md#use-the-column-options-in-an-editable-view-or-grid-preview)
+[Use the column options in a view or grid (preview)](../../user/grid-filters.md#use-the-column-options-in-a-view-or-grid-preview)
