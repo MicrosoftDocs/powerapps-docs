@@ -22,7 +22,7 @@ search.app:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)] More information: [Previews for portals, model-driven apps, and app management](/power-platform/admin/preview-environments#portals-model-driven-apps-and-app-management)
 
-The Power Apps grid control lets users view and open records from views and subgrids. The control supports the latest Microsoft accessibility standards and is built to be performant and easily extensible for the future. The Power Apps grid control also aligns with the latest Microsoft design guidance for fonts, sizing, and styling. The Power Apps grid control will eventually replace both the legacy read-only grid and editable grid controls in both model-driven and canvas apps.
+The Power Apps grid control lets users view and open records from views and subgrids. The control supports the latest Microsoft accessibility standards and is built to be performant and easily extensible for the future. The Power Apps grid control also aligns with the latest Microsoft design guidance for fonts, sizing, and styling. The Power Apps grid control will eventually replace the legacy read-only grid and editable grid controls in both model-driven and canvas apps.
 
 > [!NOTE]
 > Currently, the Power Apps grid control provides read-only views and subgrids.
@@ -85,10 +85,13 @@ To work around, you can display a custom card by configuring the table to use th
 - Cells with no data are blank instead of displaying three dashes **---**.
 - The owner column does not show online status and a people card for the user.
 - Filtering a column using the column **Filter By** drop-down list doesn't change the underlying view. 
+
   :::image type="content" source="media/view-filter-by.png" alt-text="Filter By drop down list in a view":::
-   To work around this limitation, use the **Open advanced filtering panel** to change the actual view.
+
+   To work around this limitation, select **Open advanced filtering panel** to change the actual view.
+
    :::image type="content" source="media/advanced-filter-panel.png" alt-text="Select the Open advanced filtering panel feature":::
-   More information: [See the current view definition)](../../user/grid-filters-advanced?branch=matp-2451824#see-the-current-view-definition)
+   More information: [See the current view definition](../../user/grid-filters-advanced?branch=matp-2451824#see-the-current-view-definition)
 
 ## Disable the Power Apps grid control
 
