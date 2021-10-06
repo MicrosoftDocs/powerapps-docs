@@ -92,7 +92,7 @@ To work around, you can display a custom card by configuring the table to use th
    To change the actual view, select **Open advanced filtering panel**, make your changes, and then select **Apply**.
 
    :::image type="content" source="media/advanced-filter-panel.png" alt-text="Select the Open advanced filtering panel feature":::
-   More information: [See the current view definition](../../user/grid-filters-advanced?branch=matp-2451824#see-the-current-view-definition)
+   More information: [See the current view definition](../../user/grid-filters-advanced.md#see-the-current-view-definition)
 
 ### See also
 
