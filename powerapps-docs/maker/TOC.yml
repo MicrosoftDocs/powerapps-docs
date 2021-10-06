@@ -1304,7 +1304,7 @@
         - name: "Migrating embedded canvas from public preview"
           href: ./model-driven-apps/embedded-canvas-app-migrate-from-preview.md
       - name: Embed a Power BI report on a form
-        href: ./model-driven-apps/embed-powerbi-report-in-system-form.md
+        href: ./model-driven-apps/embed-powerbi-report-in-system-form.md 
       - name: Work with views
         href: ./model-driven-apps/create-edit-views.md
         items:
@@ -2123,6 +2123,8 @@
     items:
       - name: Solutions overview
         href: ./data-platform/solutions-overview.md
+      - name: Solution view
+        href: ./data-platform/solutions-area.md
       - name: Create a solution
         href: ./data-platform/create-solution.md
       - name: Export solutions
