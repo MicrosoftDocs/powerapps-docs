@@ -38,9 +38,9 @@ The solutions area is where you can view, edit, create, import, export, and dele
 ## Solution explorer
 Use solution explorer to perform app making and customization tasks that can’t be completed from the Power Apps home page.
 
-1.	From a Power Apps model-driven app, select **Settings** ![Settings.](../model-driven-apps/media/powerapps-gear.png) on the app toolbar, and then select **Advanced Settings**. 
+1.	From [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) (make.powerapps.com) or a model-driven app, select **Settings** ![Settings.](../model-driven-apps/media/powerapps-gear.png) on the command bar, and then select **Advanced Settings**.
 
-2.	Select **Settings** > **Customizations** > **Customize the System**, and then select the settings area that you want.
+2.	Select **Settings** > **Customizations** > **Customize the System**, and then select the customization area that you want.
 
 ## Apps
 The Apps area lists all model-driven and canvas apps that you have privileges to in your environment. In addition to launching an app, from the Apps area you can also assign security roles to it. 
