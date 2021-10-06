@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: intro-internal
-ms.date: 09/28/2021
+ms.date: 10/11/2021
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: tapanm
