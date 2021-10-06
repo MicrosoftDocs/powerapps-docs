@@ -84,11 +84,11 @@ To work around, you can display a custom card by configuring the table to use th
 - Users can’t drag the mouse across multiple records to select a range of records. To work around this limitation, use Shift+click to select a range of records.
 - Cells with no data are blank instead of displaying three dashes **---**.
 - The owner column does not show online status and a people card for the user.
-- Filtering a column using the column **Filter By** drop-down list doesn't change the underlying view. 
+- Filtering a column using **Filter by** from the column header drop-down list doesn't change the underlying view.
 
   :::image type="content" source="media/view-filter-by.png" alt-text="Filter By drop down list in a view":::
 
-   To work around this limitation, select **Open advanced filtering panel** to change the actual view.
+   To change the actual view, select **Open advanced filtering panel**, make your changes, and then select **Apply**.
 
    :::image type="content" source="media/advanced-filter-panel.png" alt-text="Select the Open advanced filtering panel feature":::
    More information: [See the current view definition](../../user/grid-filters-advanced?branch=matp-2451824#see-the-current-view-definition)
