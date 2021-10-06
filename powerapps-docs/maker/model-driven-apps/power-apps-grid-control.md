@@ -25,7 +25,8 @@ search.app:
 The Power Apps grid control lets users view and open records from views and subgrids. The control supports the latest Microsoft accessibility standards and is built to be performant and easily extensible for the future. The Power Apps grid control also aligns with the latest Microsoft design guidance for fonts, sizing, and styling. The Power Apps grid control will eventually replace the legacy read-only grid and editable grid controls in both model-driven and canvas apps.
 
 > [!NOTE]
-> Currently, the Power Apps grid control provides read-only views and subgrids.
+> - Currently, the Power Apps grid control provides read-only views and subgrids.
+> - The Power Apps grid control is now the default control for all previously read-only views and subgrids.
 
 ## Add the Power Apps grid control to views for a table
 
