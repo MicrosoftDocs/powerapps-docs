@@ -94,17 +94,6 @@ To work around, you can display a custom card by configuring the table to use th
    :::image type="content" source="media/advanced-filter-panel.png" alt-text="Select the Open advanced filtering panel feature":::
    More information: [See the current view definition](../../user/grid-filters-advanced?branch=matp-2451824#see-the-current-view-definition)
 
-## Disable the Power Apps grid control
-
-The Power Apps grid control can be disabled in different ways:
-
-- For the entire environment by setting the `FCB.PcfDatasetGrid` value to false.
-- For a particular table by customizing the control for the table and selecting the read-only grid control. To do this, go to **Settings** > **Advanced Settings** > **Settings** > **Customizations** > **Customize the System** > expand **Entities** > select the entity you want to customize > **Controls** tab > **Add Control**. Select **Read Only Grid**. Choose to display that grid on one or more client form factors. Select **Save** on the command bar, and then **Publish** the customization.
-
-## Enable the jump bar by default
-
-You can turn on the jump bar by default for all grids that are using the Power Apps grid control in the environment by setting the `FCB.PcfDatasetGridShowJumpBar` value to true. View and grid-level customizations to disable the jump bar will continue to work with this feature control enabled.
-
 ### See also
 
 [Use the column options in a view or grid (preview)](../../user/grid-filters.md#use-the-column-options-in-a-view-or-grid-preview)
