@@ -34,7 +34,7 @@ To create a portal in an environment containing customer engagement apps, sign i
 
 1. Select the required portal template.
 
-1. In the create portal window, enter a name for the portal and address for the website, and select a language from the drop-down list. If you've selected **Custom portal** template, you can optionally choose a website record.
+1. In the create portal window, enter a name for the portal and address for the website, and select a language from the drop-down list. If you've selected to create portal from blank, you can optionally choose a website record.
 
 1. Select **Create**. For detailed steps about creating a portal, see [Create a Dataverse starter portal](create-portal.md) section.
 
