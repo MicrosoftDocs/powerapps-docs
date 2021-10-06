@@ -299,8 +299,6 @@ Next, add a **Circle** shape and change the following properties in the **Advanc
 | Y                      | (Parent.Height - Self.Height) / 2 - (Round(Acceleration.Y / 9.81 \* 90, 0) / 90 \* btnCircleLevel.Width / 2) |
 | Width                  | 42                                                                                                               |
 | Height                 | Self.Width                                                                                                       |
-| X                      | (Parent.Width - Self.Width) / 2                                                                                  |
-| Y                      | (Parent.Height - Self.Height) / 2                                                                                |
 | Width                  | 400                                                                                                              |
 | Height                 | Self.Width                                                                                                       |
 
