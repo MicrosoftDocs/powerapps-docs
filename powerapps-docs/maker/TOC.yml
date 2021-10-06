@@ -1369,6 +1369,8 @@
           href: ./model-driven-apps/stay-current-with-news-control.md
         - name: Add the form component control
           href: ./model-driven-apps/form-component-control.md
+        - name: Use the Power Apps grid control (preview)
+          href: ./model-driven-apps/power-apps-grid-control.md  
       - name: Use custom controls for data visualizations
         href: ./model-driven-apps/use-custom-controls-data-visualizations.md
     - name: Use Excel and Word templates
