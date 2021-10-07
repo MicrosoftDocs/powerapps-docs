@@ -1,5 +1,5 @@
 ---
-title: getCellImageInfo | Microsoft Docs
+title: getDataSetCapabilities | Microsoft Docs
 description:
 keywords:
 ms.author: vilesyk
@@ -15,4 +15,4 @@ applies_to:
 ms.assetid: e8c9f86c-55cd-45ad-92a7-985d61040b34
 ---
 
-Retrieve image info (such as url and associated tooltip) from column web resource.
+The capabilities for this dataset

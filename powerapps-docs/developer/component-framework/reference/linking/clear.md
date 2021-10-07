@@ -1,37 +1,33 @@
 ---
-title: GetRecordId | Microsoft Docs
-description: Gets the record ID.
+title: clear | Microsoft Docs
+description:
 keywords:
-ms.author: nabuthuk
+ms.author: vilesyk
 author: Nkrb
 manager: kvivek
-ms.date: 10/01/2019
+ms.date: 14/19/2021
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-ms.assetid: 8d98a8ca-d4e9-405e-bd59-a1207a46020c
+ms.assetid: feb4e449-935f-452e-a67a-d3cf3c2bdcfb
 ---
 
-# getRecordId
+# clear
 
-[!INCLUDE [getrecordid-description](includes/getrecordid-description.md)]
+[!INCLUDE [clear-description](includes/clear-description.md)]
 
 ## Available for
 
-Model-driven apps and Canvas
+Model-driven apps
 
 ## Syntax
 
-`getRecordId()`
-
-## Return Value
-
-**Type**: `string`
+`clear()`
 
 ### Related topics
 
-[Entityrecord](../entityrecord.md)<br/>
+[Linking](../linking.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>
 [Power Apps component framework overview](../../overview.md)
 

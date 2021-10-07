@@ -1,8 +1,8 @@
 ---
-title: getTargetEntityType | Microsoft Docs
+title: getRelatedDataSet | Microsoft Docs
 description:
 keywords:
-ms.author: nabuthuk
+ms.author: vilesyk
 manager: kvivek
 ms.date: 14/19/2021
 ms.service: "powerapps"
@@ -12,7 +12,7 @@ ms.topic: "article"
 applies_to:
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
-ms.assetid: 6c9ba34d-579a-4378-b47b-ba1205e9bdf1
+ms.assetid: e8c9f86c-55cd-45ad-92a7-985d61040b34
 ---
 
-Returns the target table type name.
+Gets the related dataset for this column (only if this is related entity column like lookup)

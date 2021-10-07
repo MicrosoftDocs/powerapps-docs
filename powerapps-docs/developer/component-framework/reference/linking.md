@@ -5,7 +5,7 @@ keywords:
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 10/01/2019
+ms.date: 14/19/2021
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -17,16 +17,18 @@ ms.assetid: f9fbfe65-4a9f-42f6-91a4-fe997f030012
 
 [!INCLUDE [linking-description](includes/linking-description.md)]
 
-## Available for 
+## Available for
 
 Model-driven apps
 
 ## Methods
 
-|Method | Description | 
-| ------------- |-------------|
-|[addLinkedEntity](linking/addlinkedentity.md)|[!INCLUDE [addlinkedentity-description](linking/includes/addlinkedentity-description.md)]|
-|[getLinkedEntities](linking/getlinkedentities.md)|[!INCLUDE [getlinkedentities-description](linking/includes/getlinkedentities-description.md)]|
+| Method                                              | Description                                                                                     |
+| --------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| [addLinkedEntity](linking/addLinkedEntity.md)       | [!INCLUDE [addLinkedEntity-description](linking/includes/addLinkedEntity-description.md)]       |
+| [clear](linking/clear.md)                           | [!INCLUDE [addlinkedentity-description](linking/includes/clear-description.md)]                 |
+| [getLinkedEntities](linking/getlinkedentities.md)   | [!INCLUDE [getlinkedentities-description](linking/includes/getlinkedentities-description.md)]   |
+| [removeLinkedEntity](linking/removeLinkedEntity.md) | [!INCLUDE [removeLinkedEntity-description](linking/includes/removeLinkedEntity-description.md)] |
 
 ### Related topics
 

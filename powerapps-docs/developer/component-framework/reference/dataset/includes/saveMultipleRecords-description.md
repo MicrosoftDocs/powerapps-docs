@@ -1,5 +1,5 @@
 ---
-title: canDisableRelationshipFilter | Microsoft Docs
+title: saveMultipleRecords | Microsoft Docs
 description:
 keywords:
 ms.author: vilesyk
@@ -12,7 +12,7 @@ ms.topic: "article"
 applies_to:
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
-ms.assetid: a2c13ae9-562d-4a11-8503-394a2758d27f
+ms.assetid: e8c9f86c-55cd-45ad-92a7-985d61040b34
 ---
 
-Returns true if relationship filtering can be disabled
+Save multiple records

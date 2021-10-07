@@ -1,8 +1,5 @@
-TODO: NEED TO TEST THIS
-
 ---
-
-title: getCellImageInfo | Microsoft Docs
+title: delete | Microsoft Docs
 description:
 keywords:
 manager: kvivek
@@ -15,12 +12,11 @@ ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 35d94cf8-eab3-4dee-82af-336f6b33b789
-
 ---
 
-# getCellImageInfo
+# delete
 
-[!INCLUDE[./includes/getCellImageInfo-description.md](./includes/getCellImageInfo-description.md)]
+[!INCLUDE[./includes/delete-description.md](./includes/delete-description.md)]
 
 ## Available for
 
@@ -28,19 +24,17 @@ Model-driven and canvas apps
 
 ## Syntax
 
-`context.parameters.dataset.getCellImageInfo(ids)`
+`context.parameters.dataset.delete(ids)`
 
 ## Parameters
 
-| Parameter Name | Type     | Required | description |
-| -------------- | -------- | -------- | ----------- |
-| columnName     | `string` | Yes      |             |
-| recordId       | `string` | Yes      |             |
-| userLcid       | `number` | Yes      |             |
+| Parameter Name | Type       | Required | description |
+| -------------- | ---------- | -------- | ----------- |
+| ids            | `string[]` | Yes      |             |
 
 ## Return value
 
-Type: [`IImageInfo`](../../IImageInfo.md)
+Type: Promise
 
 ### Related topics
 

@@ -5,7 +5,7 @@ keywords:
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 10/01/2019
+ms.date: 14/19/2021
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -17,7 +17,7 @@ ms.assetid: 6e066350-9d22-4078-b497-26be7d2fa374
 
 [!INCLUDE [context-description](includes/context-description.md)]
 
-## Available for 
+## Available for
 
 Model-driven and canvas apps
 
@@ -72,7 +72,7 @@ The resource interface of `context.resources`
 
 ### updatedProperties
 
-An array of strings with values that have changed since the last time it was passed and [parameters](#parameters). `updatesProperties` is currently only supported for model-driven apps and always returns empty string for canvas apps. More information: [updatedProperties](updatedproperties.md)
+An array of strings with values that have changed since the last time it was passed and [parameters](#parameters). More information: [updatedProperties](updatedproperties.md)
 
 **Type**: `string[]`
 

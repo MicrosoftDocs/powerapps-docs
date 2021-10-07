@@ -5,7 +5,7 @@ keywords:
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 10/01/2019
+ms.date: 14/19/2021
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -15,9 +15,9 @@ ms.assetid: 4027f62f-1cc7-4eb6-aae8-a05d1a5fc722
 
 # getTargetEntityType
 
-[!INCLUDE[./includes/gettargetentitytype-description.md](./includes/gettargetentitytype-description.md)]
+[!INCLUDE[./includes/getTargetEntityType-description.md](./includes/getTargetEntityType-description.md)]
 
-## Available for 
+## Available for
 
 Model-driven and canvas apps
 
@@ -28,7 +28,6 @@ Model-driven and canvas apps
 ## Return Value
 
 **Type**: `string`
-
 
 ### Related topics
 

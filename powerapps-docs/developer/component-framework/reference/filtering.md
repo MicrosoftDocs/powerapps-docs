@@ -23,20 +23,13 @@ Model-driven and canvas apps
 
 ## Properties
 
-# aliasMap
-
-Mapping between dataset columns and entity columns.
-
-**Type**: `{ [key: string]: any };`
-
 ## Methods
 
-| Method                                                                    | Description                                                                                                           | Available for                |
-| ------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | ---------------------------- |
-| [canDisableRelationshipFilter](filtering/canDisableRelationshipFilter.md) | [!INCLUDE [canDisableRelationshipFilter-description](filtering/includes/canDisableRelationshipFilter-description.md)] | Model-driven and canvas apps |
-| [clearFilter](filtering/clearfilter.md)                                   | [!INCLUDE [clearfilter-description](filtering/includes/clearfilter-description.md)]                                   | Model-driven and canvas apps |
-| [getFilter](filtering/getfilter.md)                                       | [!INCLUDE [getfilter-description](filtering/includes/getfilter-description.md)]                                       | Model-driven and canvas apps |
-| [setFilter](filtering/setfilter.md)                                       | [!INCLUDE [setfilter-description](filtering/includes/setfilter-description.md)]                                       | Model-driven and canvas apps |
+| Method                                  | Description                                                                         | Available for                |
+| --------------------------------------- | ----------------------------------------------------------------------------------- | ---------------------------- |
+| [clearFilter](filtering/clearfilter.md) | [!INCLUDE [clearfilter-description](filtering/includes/clearfilter-description.md)] | Model-driven and canvas apps |
+| [getFilter](filtering/getfilter.md)     | [!INCLUDE [getfilter-description](filtering/includes/getfilter-description.md)]     | Model-driven and canvas apps |
+| [setFilter](filtering/setfilter.md)     | [!INCLUDE [setfilter-description](filtering/includes/setfilter-description.md)]     | Model-driven and canvas apps |
 
 ### Related topics
 

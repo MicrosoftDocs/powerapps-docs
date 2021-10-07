@@ -1,6 +1,6 @@
 ---
-title: getTitle | Microsoft Docs
-description: Retrieves the view display name used by the dataset property.
+title: isValid | Microsoft Docs
+description:
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -10,28 +10,28 @@ ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-ms.assetid: 4e35efbc-4557-41c6-9821-6198bda9a32a
+ms.assetid: 5928055f-784f-496d-bd96-6921d9574d2f
 ---
 
-# getTitle
+# isValid
 
-[!INCLUDE[./includes/getTitle-description.md](./includes/getTitle-description.md)]
+[!INCLUDE[./includes/isValid-description.md](./includes/isValid-description.md)]
 
 ## Available for
 
-Model-driven apps (check for canvas)
+Model-driven apps and Canvas
 
 ## Syntax
 
-`context.parameters.dataset.getTitle()`
+`isValid()`
 
 ## Return Value
 
-**Type**: `string`
+Type: `boolean`
 
 ### Related topics
 
-[Dataset](../dataset.md)<br/>
+[Entityrecord](../entityrecord.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>
 [Power Apps component framework overview](../../overview.md)
 

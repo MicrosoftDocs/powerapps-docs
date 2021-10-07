@@ -1,5 +1,5 @@
 ---
-title: getTargetEntityType | Microsoft Docs
+title: isDirty | Microsoft Docs
 description:
 keywords:
 ms.author: nabuthuk
@@ -12,7 +12,8 @@ ms.topic: "article"
 applies_to:
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
-ms.assetid: 6c9ba34d-579a-4378-b47b-ba1205e9bdf1
+ms.assetid: 9ce70427-e789-46be-b9c7-35466a430b0f
 ---
 
-Returns the target table type name.
+Whether this record is dirty
+Only applicable if the dataset is editable and this record dirty values

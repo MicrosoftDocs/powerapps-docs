@@ -1,6 +1,6 @@
 ---
-title: getTitle | Microsoft Docs
-description: Retrieves the view display name used by the dataset property.
+title: getChanges | Microsoft Docs
+description:
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -10,28 +10,28 @@ ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-ms.assetid: 4e35efbc-4557-41c6-9821-6198bda9a32a
+ms.assetid: 74992f97-89b7-401e-ac95-9c8a47f990d1
 ---
 
-# getTitle
+# getChanges
 
-[!INCLUDE[./includes/getTitle-description.md](./includes/getTitle-description.md)]
+[!INCLUDE[./includes/getChanges-description.md](./includes/getChanges-description.md)]
 
 ## Available for
 
-Model-driven apps (check for canvas)
+Model-driven apps
 
 ## Syntax
 
-`context.parameters.dataset.getTitle()`
+`getChanges()`
 
 ## Return Value
 
-**Type**: `string`
+**Type**: `[fieldName: string]: | string | Date | number | number[] | boolean | EntityReference | EntityReference[] | FileObject | ImageObject;`
 
 ### Related topics
 
-[Dataset](../dataset.md)<br/>
+[Entityrecord](../entityrecord.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>
 [Power Apps component framework overview](../../overview.md)
 

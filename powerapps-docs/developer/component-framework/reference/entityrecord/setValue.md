@@ -1,6 +1,6 @@
 ---
 title: getValue | Microsoft Docs
-description: Gets the raw value of the record's column.
+description:
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -13,9 +13,9 @@ ms.topic: "article"
 ms.assetid: 5928055f-784f-496d-bd96-6921d9574d2f
 ---
 
-# getValue
+# setValue
 
-[!INCLUDE[./includes/getvalue-description.md](./includes/getvalue-description.md)]
+[!INCLUDE[./includes/setValue-description.md](./includes/setValue-description.md)]
 
 ## Available for
 
@@ -23,17 +23,18 @@ Model-driven apps and Canvas
 
 ## Syntax
 
-`getValue(columnName)`
+`setValue(columnName, value)`
 
 ## Parameters
 
 | Parameter Name | Type     | Required | Description               |
-| -------------- | -------- | -------- | ------------------------- |
+| -------------- | -------- | -------- | ------------------------- | -------- | ------- | --------------- | ----------------- | ---------- | ------------ | --- | ------------------------ |
 | `columnName`   | `string` | Yes      | Column name of the record |
+| `value`        | `string  | Date     | number                    | number[] | boolean | EntityReference | EntityReference[] | FileObject | ImageObject` | Yes | New value for the record |
 
 ## Return Value
 
-Type: `string`
+Type: `Promise`
 
 ### Related topics
 

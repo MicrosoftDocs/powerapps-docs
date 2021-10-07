@@ -29,11 +29,9 @@ The alias of the column.
 
 **Type**: `string`
 
-## cellType
+### attributes
 
-The column's cell type
-
-**Type**: `string`
+**Type**: `[AttributeMetadata](./attributemetadata.md)`
 
 ### dataType
 
@@ -50,18 +48,6 @@ Prevents the UI from making the column sortable.
 ### displayName
 
 Localized display name for the column
-
-**Type**: `string`
-
-## imageProviderFunctionName
-
-The column image provider function name
-
-**Type**: `string`
-
-## imageProviderWebresource
-
-The column web resource name.
 
 **Type**: `string`
 

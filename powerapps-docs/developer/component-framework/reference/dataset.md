@@ -23,21 +23,6 @@ Model-driven and canvas apps.
 
 ## Properties
 
-### addColumn
-
-Adds a column to the columnset. This is supported only in model-driven apps. Dataset components can request additional columns on top of already selected `fields` in the dataset.
-
-`context.parameters.[dataset_property_name].addColumn("columnName")`
-
-### Remarks
-
-This method accept two parameters.
-
-| Name        | Type     | Required | Description                                              |
-| ----------- | -------- | -------- | -------------------------------------------------------- |
-| name        | `string` | Yes      | Column name to be added to the dataset.                  |
-| entityAlias | `string` | No       | Table alias for which the column name needs to be added. |
-
 ### columns
 
 The set of columns available in this dataset. This is supported in both model-driven and canvas apps.
@@ -50,13 +35,13 @@ Whether an error occurred in data retrieval. This is supported in both model-dri
 
 **Type**: `boolean`
 
-### errorMessage
-
-The error message associated with the last encountered error, if applicable. This is supported in both model-driven and canvas apps.
-
 ## errorCode
 
 The error code associated with the last encountered error, if applicable.
+
+### errorMessage
+
+The error message associated with the last encountered error, if applicable. This is supported in both model-driven and canvas apps.
 
 **Type**: `number | string`
 
@@ -115,11 +100,9 @@ The column filtering for the current query. This is supported in both model-driv
 
 **Type**: [Filtering](filtering.md)
 
-### innerError
-
-The inner error associated with the last encountered error, if applicable.
-
 ### linking
+
+DOES NOT WORK ON CANVAS
 
 Defines the linked table information. This is supported only in model-driven apps.
 
@@ -168,15 +151,21 @@ The sorting status for the current query. This is supported in both model-driven
 
 | Method                                                      | Description                                                                                             |
 | ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| [addColumn](dataset/addColumn.md)                           | [!INCLUDE [addColumn-description](dataset/includes/addColumn-description.md)]                           |
 | [clearSelectedRecordIds](dataset/clearselectedrecordids.md) | [!INCLUDE [clearselectedrecordids-description](dataset/includes/clearselectedrecordids-description.md)] |
-| [getCellImageInfo](dataset/getCellImageInfo.md)             | [!INCLUDE [getCellImageInfo-description](dataset/includes/getCellImageInfo-description.md)]             |
-| [getSelectedRecordIds](dataset/getselectedrecordids.md)     | [!INCLUDE [getselectedrecordids-description](dataset/includes/getselectedrecordids-description.md)]     |
-| [getTargetEntityType](dataset/gettargetentitytype.md)       | [!INCLUDE [gettargetentitytype-description](dataset/includes/gettargetentitytype-description.md)]       |
-| [getTitle](dataset/gettitle.md)                             | [!INCLUDE [gettitle-description](dataset/includes/gettitle-description.md)]                             |
-| [getViewId](dataset/getviewid.md)                           | [!INCLUDE [getviewid-description](dataset/includes/getviewid-description.md)]                           |
-| [openDatasetItem](dataset/opendatasetitem.md)               | [!INCLUDE [opendatasetitem-description](dataset/includes/opendatasetitem-description.md)]               |
+| [delete](dataset/delete.md)                                 | [!INCLUDE [delete-description](dataset/includes/delete-description.md)]                                 |
+| [getCommands](dataset/getCommands.md)                       | [!INCLUDE [getCommands-description](dataset/includes/getCommands-description.md)]                       |
+| [getDataSetCapabilities](dataset/getDataSetCapabilities.md) | [!INCLUDE [getDataSetCapabilities-description](dataset/includes/getDataSetCapabilities-description.md)] |
+| [getRelatedDataSet](dataset/getRelatedDataSet.md)           | [!INCLUDE [getRelatedDataSet-description](dataset/includes/getRelatedDataSet-description.md)]           |
+| [getSelectedRecordIds](dataset/getSelectedRecordIds.md)     | [!INCLUDE [getselectedrecordids-description](dataset/includes/getSelectedRecordIds-description.md)]     |
+| [getTargetEntityType](dataset/getTargetEntityType.md)       | [!INCLUDE [getTargetEntityType-description](dataset/includes/getTargetEntityType-description.md)]       |
+| [getTitle](dataset/getTitle.md)                             | [!INCLUDE [gettitle-description](dataset/includes/getTitle-description.md)]                             |
+| [getViewId](dataset/getViewId.md)                           | [!INCLUDE [getviewid-description](dataset/includes/getViewId-description.md)]                           |
+| [newRecord](dataset/newRecord.md)                           | [!INCLUDE [newRecord-description](dataset/includes/newRecord-description.md)]                           |
+| [openDatasetItem](dataset/openDatasetItem.md)               | [!INCLUDE [opendatasetitem-description](dataset/includes/openDatasetItem-description.md)]               |
 | [refresh](dataset/refresh.md)                               | [!INCLUDE [refresh-description](dataset/includes/refresh-description.md)]                               |
 | [retrieveRecordCommand](dataset/retrieveRecordCommand.md)   | [!INCLUDE [retrieveRecordCommand-description](dataset/includes/retrieveRecordCommand-description.md)]   |
+| [saveMultipleRecords](dataset/saveMultipleRecords.md)       | [!INCLUDE [saveMultipleRecords-description](dataset/includes/saveMultipleRecords-description.md)]       |
 | [setSelectedRecordIds](dataset/setselectedrecordids.md)     | [!INCLUDE [setselectedrecordids-description](dataset/includes/setselectedrecordids-description.md)]     |
 
 ## Lookup columns

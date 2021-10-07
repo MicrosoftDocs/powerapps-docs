@@ -1,33 +1,34 @@
 ---
-title: getTitle | Microsoft Docs
-description: Retrieves the view display name used by the dataset property.
+title: newRecord | Microsoft Docs
+description:
 keywords:
-ms.author: nabuthuk
-author: Nkrb
 manager: kvivek
 ms.date: 14/19/2021
 ms.service: "powerapps"
+ms.reviewer: "nabuthuk"
+ms.author: vilesyk
+author: Nkrb
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-ms.assetid: 4e35efbc-4557-41c6-9821-6198bda9a32a
+ms.assetid: 35d94cf8-eab3-4dee-82af-336f6b33b789
 ---
 
-# getTitle
+# newRecord
 
-[!INCLUDE[./includes/getTitle-description.md](./includes/getTitle-description.md)]
+[!INCLUDE[./includes/newRecord-description.md](./includes/newRecord-description.md)]
 
 ## Available for
 
-Model-driven apps (check for canvas)
+Model-driven and canvas apps
 
 ## Syntax
 
-`context.parameters.dataset.getTitle()`
+`context.parameters.dataset.newRecord()`
 
-## Return Value
+## Return value
 
-**Type**: `string`
+Type: `[EntityRecord](../entityrecord.md)`
 
 ### Related topics
 

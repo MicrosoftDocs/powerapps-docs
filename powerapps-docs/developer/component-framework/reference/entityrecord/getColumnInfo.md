@@ -1,6 +1,6 @@
 ---
-title: getFormattedValue | Microsoft Docs
-description: Gets the current formatted value of the record column.
+title: getColumnInfo | Microsoft Docs
+description:
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -13,9 +13,9 @@ ms.topic: "article"
 ms.assetid: 74992f97-89b7-401e-ac95-9c8a47f990d1
 ---
 
-# getFormattedValue
+# getColumnInfo
 
-[!INCLUDE[./includes/getformattedvalue-description.md](./includes/getformattedvalue-description.md)]
+[!INCLUDE[./includes/getColumnInfo-description.md](./includes/getColumnInfo-description.md)]
 
 ## Available for
 
@@ -23,17 +23,28 @@ Model-driven apps and Canvas
 
 ## Syntax
 
-`getFormattedValue(columnName)`
+`getColumnInfo(columnName)`
 
 ## Parameters
 
-| Parameter Name | Type     | Required | Description               |
-| -------------- | -------- | -------- | ------------------------- |
-| `columnName`   | `string` | Yes      | Column name of the record |
+| Parameter Name | Type     | Required | description |
+| -------------- | -------- | -------- | ----------- |
+| columnName     | `string` | Yes      |             |
 
 ## Return Value
 
-**Type**: `string`
+**Type**: `ColumnInfo`
+
+ADD new TYPE
+
+```
+ColumnInfo{
+readonly error: boolean;
+	readonly errorMessage?: string;
+	readonly security?: SecurityValues;
+	readonly type: string;
+}
+```
 
 ### Related topics
 
