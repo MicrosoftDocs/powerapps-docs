@@ -14,13 +14,13 @@ ms.topic: "article"
 ms.assetid: 35d94cf8-eab3-4dee-82af-336f6b33b789
 ---
 
-# delete
+# getCommands
 
 [!INCLUDE[./includes/getCommands-description.md](./includes/getCommands-description.md)]
 
 ## Available for
 
-Model-driven and canvas apps (test on canvas)
+Model-driven and canvas apps
 
 ## Syntax
 

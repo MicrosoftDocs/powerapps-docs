@@ -5,7 +5,7 @@ keywords:
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 14/19/2021
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -15,9 +15,9 @@ ms.assetid: 96fa69f3-38d2-4e95-bb25-02d92aa6296c
 
 # getSelectedRecordIds
 
-[!INCLUDE[./includes/getSelectedRecordIds-description.md](./includes/getSelectedRecordIds-description.md)]
+[!INCLUDE[./includes/getselectedrecordids-description.md](./includes/getselectedrecordids-description.md)]
 
-## Available for
+## Available for 
 
 Model-driven and canvas apps
 
@@ -28,6 +28,7 @@ Model-driven and canvas apps
 ## Return Value
 
 **Type**: `string[]`
+
 
 ### Related topics
 

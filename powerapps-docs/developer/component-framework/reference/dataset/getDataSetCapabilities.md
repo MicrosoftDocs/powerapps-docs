@@ -14,7 +14,7 @@ ms.topic: "article"
 ms.assetid: 35d94cf8-eab3-4dee-82af-336f6b33b789
 ---
 
-# delete
+# getDataSetCapabilities
 
 [!INCLUDE[./includes/getDataSetCapabilities-description.md](./includes/getDataSetCapabilities-description.md)]
 
