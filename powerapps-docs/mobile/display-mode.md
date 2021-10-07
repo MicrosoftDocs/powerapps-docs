@@ -24,6 +24,8 @@ searchScope:
 
 Easily change the display of your app to dark mode, light mode, or set it to the system default on iOS and Android devices. 
 
+sample line
+
 When you choose the **System default**, the display setting for Power Apps mobile will match the dark or light mode display setting on your [iOS](https://support.apple.com/HT210332) or [Android](https://support.google.com/accessibility/android/answer/6151800?hl=en) device.
 
 The default display mode for Power Apps mobile is set to **Light**.
