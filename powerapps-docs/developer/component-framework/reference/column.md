@@ -5,7 +5,7 @@ keywords:
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 10/01/2019
+ms.date: 14/19/2021
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -17,7 +17,7 @@ ms.assetid: db4be085-c31e-4045-8834-b0f45c569964
 
 [!INCLUDE [column-description](includes/column-description.md)]
 
-## Available for 
+## Available for
 
 Model-driven and canvas apps
 
@@ -26,6 +26,12 @@ Model-driven and canvas apps
 ### alias
 
 The alias of the column.
+
+**Type**: `string`
+
+## cellType
+
+The column's cell type
 
 **Type**: `string`
 
@@ -44,6 +50,18 @@ Prevents the UI from making the column sortable.
 ### displayName
 
 Localized display name for the column
+
+**Type**: `string`
+
+## imageProviderFunctionName
+
+The column image provider function name
+
+**Type**: `string`
+
+## imageProviderWebresource
+
+The column web resource name.
 
 **Type**: `string`
 
@@ -73,10 +91,9 @@ The column order for the layout.
 
 ### visualSizeFactor
 
-Customized column width ratios. 
+Customized column width ratios.
 
 **Type**: `number`
-
 
 ### Related topics
 

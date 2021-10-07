@@ -5,7 +5,7 @@ keywords:
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 10/01/2019
+ms.date: 14/19/2021
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -17,17 +17,26 @@ ms.assetid: e4673628-28d9-432c-92f4-24d1fcb44e21
 
 [!INCLUDE [filtering-description](includes/filtering-description.md)]
 
-## Available for 
+## Available for
 
 Model-driven and canvas apps
 
+## Properties
+
+# aliasMap
+
+Mapping between dataset columns and entity columns.
+
+**Type**: `{ [key: string]: any };`
+
 ## Methods
 
-|Method | Description | Available for|
-| ------------- |-------------|--------|
-|[clearFilter](filtering/clearfilter.md)|[!INCLUDE [clearfilter-description](filtering/includes/clearfilter-description.md)]|Model-driven and canvas apps|
-|[getFilter](filtering/getfilter.md)|[!INCLUDE [getfilter-description](filtering/includes/getfilter-description.md)]|Model-driven and canvas apps|
-|[setFilter](filtering/setfilter.md)|[!INCLUDE [setfilter-description](filtering/includes/setfilter-description.md)]|Model-driven and canvas apps|
+| Method                                                                    | Description                                                                                                           | Available for                |
+| ------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | ---------------------------- |
+| [canDisableRelationshipFilter](filtering/canDisableRelationshipFilter.md) | [!INCLUDE [canDisableRelationshipFilter-description](filtering/includes/canDisableRelationshipFilter-description.md)] | Model-driven and canvas apps |
+| [clearFilter](filtering/clearfilter.md)                                   | [!INCLUDE [clearfilter-description](filtering/includes/clearfilter-description.md)]                                   | Model-driven and canvas apps |
+| [getFilter](filtering/getfilter.md)                                       | [!INCLUDE [getfilter-description](filtering/includes/getfilter-description.md)]                                       | Model-driven and canvas apps |
+| [setFilter](filtering/setfilter.md)                                       | [!INCLUDE [setfilter-description](filtering/includes/setfilter-description.md)]                                       | Model-driven and canvas apps |
 
 ### Related topics
 
