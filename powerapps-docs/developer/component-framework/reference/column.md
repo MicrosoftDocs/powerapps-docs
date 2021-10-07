@@ -41,6 +41,7 @@ The data type of the column's values.
 
 ### disableSorting
 
+Model-driven Only
 Prevents the UI from making the column sortable.
 
 **Type**: `boolean`<br />
@@ -53,12 +54,14 @@ Localized display name for the column
 
 ### isHidden
 
+Model-driven Only
 The column visibility state.
 
 **Type**: `boolean`<br />
 
 ### isPrimary
 
+Model-driven Only
 Is specific column the primary column of the view's table.
 
 **Type**: `boolean`<br />
@@ -77,6 +80,7 @@ The column order for the layout.
 
 ### visualSizeFactor
 
+Model-driven Only
 Customized column width ratios.
 
 **Type**: `number`

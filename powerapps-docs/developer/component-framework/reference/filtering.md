@@ -21,8 +21,6 @@ ms.assetid: e4673628-28d9-432c-92f4-24d1fcb44e21
 
 Model-driven and canvas apps
 
-## Properties
-
 ## Methods
 
 | Method                                  | Description                                                                         | Available for                |

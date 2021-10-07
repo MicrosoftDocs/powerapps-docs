@@ -1,7 +1,4 @@
-NEED TO TEST IT
-
 ---
-
 title: retrieveRecordCommand | Microsoft Docs
 description:
 keywords:
@@ -14,7 +11,6 @@ ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: ec4d6f14-d08b-410f-aad7-6a040c2b1c6a
-
 ---
 
 # retrieveRecordCommand
@@ -23,7 +19,7 @@ ms.assetid: ec4d6f14-d08b-410f-aad7-6a040c2b1c6a
 
 ## Available for
 
-Model-driven and canvas apps
+Model-driven apps
 
 ## Syntax
 

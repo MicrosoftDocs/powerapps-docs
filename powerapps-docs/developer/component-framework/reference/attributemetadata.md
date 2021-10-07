@@ -19,26 +19,26 @@ Provides all the information about attributes metadata.
 
 ## Available for
 
-Model-driven apps and Canvas (check if same comves from canvas)
+Model-driven apps and Canvas
 
 ## Properties
 
-| Name          | Type    | Description                                          |
-| ------------- | ------- | ---------------------------------------------------- |
-| Behaviour     | string  | Description of the attribute.                        |
-| Description   | string  | Description of the attribute.                        |
-| DisplayName   | string  | Display name of the attribute.                       |
-| Format        | string  | Display name of the attribute.                       |
-| ImeMode       | ImeMode | Display name of the attribute.                       |
-| IsEditable    | boolean | Determines whether the attribute is editable or not  |
-| IsSecured     | boolean | Determines whether the attribute is secure or not.   |
-| IsReadable    | boolean | Determines whether the attribute is read-only or not |
-| LogicalName   | string  | Logical name of the attribute.                       |
-| MaxLength     | number  | Required level of the attribute.                     |
-| RequiredLevel | number  | Required level of the attribute.                     |
-| SourceType    | number  | Determines the source type.                          |
-| Type          | string  | Attribute data type.                                 |
-|               |         |                                                      |
+| Name          | Type    | Description                                          | --                                |
+| ------------- | ------- | ---------------------------------------------------- | --------------------------------- |
+| Behaviour     | string  | Description of the attribute.                        | MDA                               |
+| Description   | string  | Description of the attribute.                        | MDA                               |
+| DefaultValue  | string  | Description of the attribute.                        | Canvas                            |
+| DisplayName   | string  | Display name of the attribute.                       | Both                              |
+| Format        | string  | Display name of the attribute.                       | MDA                               |
+| ImeMode       | ImeMode | Display name of the attribute.                       | MDA                               |
+| IsEditable    | boolean | Determines whether the attribute is editable or not  | Both                              |
+| IsSecured     | boolean | Determines whether the attribute is secure or not.   | MDA                               |
+| IsReadable    | boolean | Determines whether the attribute is read-only or not | MDA                               |
+| LogicalName   | string  | Logical name of the attribute.                       | Both                              |
+| MaxLength     | number  | Required level of the attribute.                     | Both                              |
+| RequiredLevel | number  | Required level of the attribute.                     | Both                              |
+| SourceType    | number  | Determines the source type.                          | MDA                               |
+| Type          | string  | Attribute data type.                                 | Both (but diffeernt set of types) |
 
 ADD NEW TYPE:
 /\*\*

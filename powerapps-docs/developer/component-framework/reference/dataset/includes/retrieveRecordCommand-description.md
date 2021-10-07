@@ -1,5 +1,3 @@
-NEED TO TEST IT
-
 ---
 
 title: retrieveRecordCommand | Microsoft Docs
