@@ -1,5 +1,5 @@
-|Error values|Error name and message|
-|---|---|
+| Error values | Error name and message |
+| --- | --- |
 |0x80072559<br />-2147015335|Name: **AADError**<br />Message: Error from AAD|
 |0x80048350<br />-2147187888|Name: **AadGroupTeamsCanOnlyAssignInheritableRoles**<br />Message: Cannot assign security role with "Team Privileges only" Inheritance to AAD Group or Office Group teams. (TeamId = {0})|
 |0x80048405<br />-2147187707|Name: **AccessDenied**<br />Message: Access is denied.|
