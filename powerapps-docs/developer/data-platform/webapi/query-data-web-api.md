@@ -706,7 +706,7 @@ Preference-Applied: odata.include-annotations="*"
 
 ## Retrieve related tables by expanding navigation properties
  
-<a bkmk="bkmk_retrieverelatedentityexpandcollectionnavprop"></a>
+<a name="bkmk_retrieverelatedentityexpandcollectionnavprop"></a>
 
 ### Retrieve related tables by expanding collection-valued navigation properties
 
@@ -785,7 +785,7 @@ OData-Version: 4.0
  
 ```  
 
-<a bkmk="bkmk_retrieverelatedentitysingleandcollectionnavprop"></a>
+<a name="bkmk_retrieverelatedentitysingleandcollectionnavprop"></a>
   
 ### Retrieve related rows (records) by expanding both single-valued and collection-valued navigation properties
 
