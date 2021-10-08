@@ -1,13 +1,13 @@
 ---
 title: "msdyn_knowledgesearchinsight table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the msdyn_knowledgesearchinsight table/entity."
-ms.date: 05/20/2021
+ms.date: 10/05/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -318,7 +318,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description|The type of search run, like full text search, Dataverse search, etc.|
+|Description|The type of search run, like full text search, relevance search, etc.|
 |DisplayName|Search type|
 |FormatName|Text|
 |IsLocalizable|False|

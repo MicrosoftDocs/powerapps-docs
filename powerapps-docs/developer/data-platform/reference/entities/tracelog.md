@@ -1,13 +1,13 @@
 ---
-title: "TraceLog table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the TraceLog table/entity."
-ms.date: 05/20/2021
+title: "Trace (TraceLog) table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the Trace (TraceLog) table/entity."
+ms.date: 10/05/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -15,7 +15,7 @@ search.app:
   - D365CE
 ---
 
-# TraceLog table/entity reference
+# Trace (TraceLog) table/entity reference
 
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
@@ -90,8 +90,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### CanBeDeleted Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -163,8 +163,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsUnique Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -187,11 +187,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### Level Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Information|
-|2|Warning|
-|3|Error|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Information||
+|2|Warning||
+|3|Error||
 
 
 
@@ -384,8 +384,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### TraceStatus Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Success|
 |0|Failure|
 

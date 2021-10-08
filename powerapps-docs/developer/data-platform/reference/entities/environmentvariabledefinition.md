@@ -1,13 +1,13 @@
 ---
 title: "EnvironmentVariableDefinition table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the EnvironmentVariableDefinition table/entity."
-ms.date: 05/20/2021
+ms.date: 10/05/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -36,10 +36,10 @@ Contains information about the settable variable: its type, default value, and e
 |IsValidStateTransition|<xref href="Microsoft.Dynamics.CRM.IsValidStateTransition?text=IsValidStateTransition Function" />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 |ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/environmentvariabledefinitions(*environmentvariabledefinitionid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveAllCompositeDataSources|||
-|RetrieveCompositeDataSource|||
-|RetrieveEnvironmentVariables|||
-|RetrieveEnvironmentVariableValue|||
+|RetrieveAllCompositeDataSources|<xref href="Microsoft.Dynamics.CRM.RetrieveAllCompositeDataSources?text=RetrieveAllCompositeDataSources Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveAllCompositeDataSourcesRequest>|
+|RetrieveCompositeDataSource|<xref href="Microsoft.Dynamics.CRM.RetrieveCompositeDataSource?text=RetrieveCompositeDataSource Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveCompositeDataSourceRequest>|
+|RetrieveEnvironmentVariables|<xref href="Microsoft.Dynamics.CRM.RetrieveEnvironmentVariables?text=RetrieveEnvironmentVariables Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveEnvironmentVariablesRequest>|
+|RetrieveEnvironmentVariableValue|<xref href="Microsoft.Dynamics.CRM.RetrieveEnvironmentVariableValue?text=RetrieveEnvironmentVariableValue Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveEnvironmentVariableValueRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/environmentvariabledefinitions<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
@@ -265,8 +265,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsRequired Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -441,13 +441,13 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### Type Choices/Options
 
-|Value|Label|
-|-----|-----|
-|100000000|String|
-|100000001|Number|
-|100000002|Boolean|
-|100000003|JSON|
-|100000004|Data Source|
+|Value|Label|Description|
+|-----|-----|--------|
+|100000000|String||
+|100000001|Number||
+|100000002|Boolean||
+|100000003|JSON||
+|100000004|Data Source||
 
 
 
@@ -531,12 +531,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### ComponentState Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Published|
-|1|Unpublished|
-|2|Deleted|
-|3|Deleted Unpublished|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Published||
+|1|Unpublished||
+|2|Deleted||
+|3|Deleted Unpublished||
 
 
 
@@ -686,8 +686,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsManaged Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Managed|
 |0|Unmanaged|
 

@@ -1,13 +1,13 @@
 ---
-title: "usermobileofflineprofilemembership table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the usermobileofflineprofilemembership table/entity."
-ms.date: 03/04/2021
+title: "VirtualEntityMetadata table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the VirtualEntityMetadata table/entity."
+ms.date: 10/05/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -15,37 +15,43 @@ search.app:
   - D365CE
 ---
 
-# usermobileofflineprofilemembership table/entity reference
+# VirtualEntityMetadata table/entity reference
 
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
+Holds  metadata values for virtual entities
 
-
-**Added by**: MobileOfflineMembership Solution
+**Added by**: RuntimeIntegration Solution
 
 
 ## Messages
 
 |Message|Web API Operation|SDK Assembly|
 |-|-|-|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
+|Create|POST [*org URI*]/api/data/v9.0/virtualentitymetadatas<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE [*org URI*]/api/data/v9.0/virtualentitymetadatas(*virtualentitymetadataid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|IsValidStateTransition|<xref href="Microsoft.Dynamics.CRM.IsValidStateTransition?text=IsValidStateTransition Function" />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
+|Retrieve|GET [*org URI*]/api/data/v9.0/virtualentitymetadatas(*virtualentitymetadataid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/virtualentitymetadatas<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|SetState|PATCH [*org URI*]/api/data/v9.0/virtualentitymetadatas(*virtualentitymetadataid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+|Update|PATCH [*org URI*]/api/data/v9.0/virtualentitymetadatas(*virtualentitymetadataid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
 ## Properties
 
 |Property|Value|
 |--------|-----|
-|CollectionSchemaName|usermobileofflineprofilememberships|
-|DisplayCollectionName|UserMobileOfflineProfileMemberships|
-|DisplayName|UserMobileOfflineProfileMembership|
-|EntitySetName|usermobileofflineprofilememberships|
+|CollectionSchemaName|VirtualEntityMetadatas|
+|DisplayCollectionName|Virtual Entity  Metadatas|
+|DisplayName|Virtual Entity  Metadata|
+|EntitySetName|virtualentitymetadatas|
 |IsBPFEntity|False|
-|LogicalCollectionName|usermobileofflineprofilememberships|
-|LogicalName|usermobileofflineprofilemembership|
+|LogicalCollectionName|virtualentitymetadatas|
+|LogicalName|virtualentitymetadata|
 |OwnershipType|OrganizationOwned|
-|PrimaryIdAttribute|usermobileofflineprofilemembershipid|
+|PrimaryIdAttribute|virtualentitymetadataid|
 |PrimaryNameAttribute|name|
-|SchemaName|usermobileofflineprofilemembership|
+|SchemaName|VirtualEntityMetadata|
 
 <a name="writable-attributes"></a>
 
@@ -53,43 +59,42 @@ search.app:
 
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
-- [HasMobileOfflineProfileIdConflict](#BKMK_HasMobileOfflineProfileIdConflict)
+- [ExtensionOfRecordId](#BKMK_ExtensionOfRecordId)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
-- [MobileOfflineProfileId](#BKMK_MobileOfflineProfileId)
-- [name](#BKMK_name)
+- [IsChangedFieldsEnabledForUpdateEvent](#BKMK_IsChangedFieldsEnabledForUpdateEvent)
+- [IsCustomizable](#BKMK_IsCustomizable)
+- [IsOnExternalCreatedEnabled](#BKMK_IsOnExternalCreatedEnabled)
+- [IsOnExternalDeletedEnabled](#BKMK_IsOnExternalDeletedEnabled)
+- [IsOnExternalUpdatedEnabled](#BKMK_IsOnExternalUpdatedEnabled)
+- [Name](#BKMK_Name)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [statecode](#BKMK_statecode)
 - [statuscode](#BKMK_statuscode)
-- [SystemUserId](#BKMK_SystemUserId)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
-- [usermobileofflineprofilemembershipId](#BKMK_usermobileofflineprofilemembershipId)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
+- [VirtualEntityMetadataId](#BKMK_VirtualEntityMetadataId)
 
 
-### <a name="BKMK_HasMobileOfflineProfileIdConflict"></a> HasMobileOfflineProfileIdConflict
+### <a name="BKMK_ExtensionOfRecordId"></a> ExtensionOfRecordId
+
+**Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description||
-|DisplayName|HasMobileOfflineProfileIdConflict|
+|Description|The name of the virtual entity that these settings are for.|
+|DisplayName|Virtual Entity|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|hasmobileofflineprofileidconflict|
-|RequiredLevel|None|
-|Type|Boolean|
-
-#### HasMobileOfflineProfileIdConflict Choices/Options
-
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
-
-**DefaultValue**: False
-
+|IsValidForUpdate|False|
+|LogicalName|extensionofrecordid|
+|RequiredLevel|SystemRequired|
+|Targets|entity|
+|Type|Lookup|
 
 
 ### <a name="BKMK_ImportSequenceNumber"></a> ImportSequenceNumber
+
+**Added by**: Basic Solution Solution
 
 |Property|Value|
 |--------|-----|
@@ -106,25 +111,118 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Integer|
 
 
-### <a name="BKMK_MobileOfflineProfileId"></a> MobileOfflineProfileId
+### <a name="BKMK_IsChangedFieldsEnabledForUpdateEvent"></a> IsChangedFieldsEnabledForUpdateEvent
 
 |Property|Value|
 |--------|-----|
-|Description||
-|DisplayName|MobileOfflineProfileId|
+|Description|Whether the OnExternalUpdated message ChangedFields parameter will include data about which fields have changed.|
+|DisplayName|Includes data on changed fields for the update message|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|mobileofflineprofileid|
+|LogicalName|ischangedfieldsenabledforupdateevent|
 |RequiredLevel|None|
-|Targets|mobileofflineprofile|
-|Type|Lookup|
+|Type|Boolean|
+
+#### IsChangedFieldsEnabledForUpdateEvent Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes|
+|0|No|
+
+**DefaultValue**: False
 
 
-### <a name="BKMK_name"></a> name
+
+### <a name="BKMK_IsCustomizable"></a> IsCustomizable
+
+**Added by**: Basic Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|The name of the custom entity.|
+|Description|For internal use only.|
+|DisplayName|Is Customizable|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|iscustomizable|
+|RequiredLevel|SystemRequired|
+|Type|ManagedProperty|
+
+
+### <a name="BKMK_IsOnExternalCreatedEnabled"></a> IsOnExternalCreatedEnabled
+
+|Property|Value|
+|--------|-----|
+|Description|Will enable a message to send information about new records created in the external data source.|
+|DisplayName|Enable external create message|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|isonexternalcreatedenabled|
+|RequiredLevel|None|
+|Type|Boolean|
+
+#### IsOnExternalCreatedEnabled Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes|
+|0|No|
+
+**DefaultValue**: False
+
+
+
+### <a name="BKMK_IsOnExternalDeletedEnabled"></a> IsOnExternalDeletedEnabled
+
+|Property|Value|
+|--------|-----|
+|Description|Will enable a message to send information about deleted records in the external data source.|
+|DisplayName|Enable external delete message|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|isonexternaldeletedenabled|
+|RequiredLevel|None|
+|Type|Boolean|
+
+#### IsOnExternalDeletedEnabled Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes|
+|0|No|
+
+**DefaultValue**: False
+
+
+
+### <a name="BKMK_IsOnExternalUpdatedEnabled"></a> IsOnExternalUpdatedEnabled
+
+|Property|Value|
+|--------|-----|
+|Description|Will enable a message to send information about updated records in the external data source.|
+|DisplayName|Enable external update message|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|isonexternalupdatedenabled|
+|RequiredLevel|None|
+|Type|Boolean|
+
+#### IsOnExternalUpdatedEnabled Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes|
+|0|No|
+
+**DefaultValue**: False
+
+
+
+### <a name="BKMK_Name"></a> Name
+
+|Property|Value|
+|--------|-----|
+|Description|The name of the  settings.|
 |DisplayName|Name|
 |FormatName|Text|
 |IsLocalizable|False|
@@ -132,7 +230,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForRead|True|
 |LogicalName|name|
 |MaxLength|100|
-|RequiredLevel|ApplicationRequired|
+|RequiredLevel|None|
 |Type|String|
 
 
@@ -156,7 +254,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description|Status of the UserMobileOfflineProfileMembership|
+|Description|Status of the VirtualEntityMetadata|
 |DisplayName|Status|
 |IsValidForCreate|False|
 |IsValidForForm|True|
@@ -178,7 +276,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description|Reason for the status of the UserMobileOfflineProfileMembership|
+|Description|Reason for the status of the VirtualEntityMetadata|
 |DisplayName|Status Reason|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -193,20 +291,6 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |1|Active|0|
 |2|Inactive|1|
 
-
-
-### <a name="BKMK_SystemUserId"></a> SystemUserId
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName|SystemUserId|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|systemuserid|
-|RequiredLevel|None|
-|Targets|systemuser|
-|Type|Lookup|
 
 
 ### <a name="BKMK_TimeZoneRuleVersionNumber"></a> TimeZoneRuleVersionNumber
@@ -225,20 +309,6 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Integer|
 
 
-### <a name="BKMK_usermobileofflineprofilemembershipId"></a> usermobileofflineprofilemembershipId
-
-|Property|Value|
-|--------|-----|
-|Description|Unique identifier for entity instances|
-|DisplayName|UserMobileOfflineProfileMembership|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|usermobileofflineprofilemembershipid|
-|RequiredLevel|SystemRequired|
-|Type|Uniqueidentifier|
-
-
 ### <a name="BKMK_UTCConversionTimeZoneCode"></a> UTCConversionTimeZoneCode
 
 |Property|Value|
@@ -254,12 +324,28 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|Integer|
 
+
+### <a name="BKMK_VirtualEntityMetadataId"></a> VirtualEntityMetadataId
+
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier for entity instances|
+|DisplayName|VirtualEntityMetadata|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|IsValidForUpdate|False|
+|LogicalName|virtualentitymetadataid|
+|RequiredLevel|SystemRequired|
+|Type|Uniqueidentifier|
+
 <a name="read-only-attributes"></a>
 
 ## Read-only columns/attributes
 
 These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
+- [ComponentIdUnique](#BKMK_ComponentIdUnique)
+- [ComponentState](#BKMK_ComponentState)
 - [CreatedBy](#BKMK_CreatedBy)
 - [CreatedByName](#BKMK_CreatedByName)
 - [CreatedByYomiName](#BKMK_CreatedByYomiName)
@@ -267,7 +353,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [CreatedOnBehalfBy](#BKMK_CreatedOnBehalfBy)
 - [CreatedOnBehalfByName](#BKMK_CreatedOnBehalfByName)
 - [CreatedOnBehalfByYomiName](#BKMK_CreatedOnBehalfByYomiName)
-- [MobileOfflineProfileIdName](#BKMK_MobileOfflineProfileIdName)
+- [ExtensionOfRecordIdName](#BKMK_ExtensionOfRecordIdName)
+- [IsManaged](#BKMK_IsManaged)
 - [ModifiedBy](#BKMK_ModifiedBy)
 - [ModifiedByName](#BKMK_ModifiedByName)
 - [ModifiedByYomiName](#BKMK_ModifiedByYomiName)
@@ -277,9 +364,50 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [ModifiedOnBehalfByYomiName](#BKMK_ModifiedOnBehalfByYomiName)
 - [OrganizationId](#BKMK_OrganizationId)
 - [OrganizationIdName](#BKMK_OrganizationIdName)
-- [SystemUserIdName](#BKMK_SystemUserIdName)
-- [SystemUserIdYomiName](#BKMK_SystemUserIdYomiName)
+- [OverwriteTime](#BKMK_OverwriteTime)
+- [SolutionId](#BKMK_SolutionId)
+- [SupportingSolutionId](#BKMK_SupportingSolutionId)
 - [VersionNumber](#BKMK_VersionNumber)
+
+
+### <a name="BKMK_ComponentIdUnique"></a> ComponentIdUnique
+
+**Added by**: Basic Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description|For internal use only.|
+|DisplayName|Row id unique|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|componentidunique|
+|RequiredLevel|SystemRequired|
+|Type|Uniqueidentifier|
+
+
+### <a name="BKMK_ComponentState"></a> ComponentState
+
+**Added by**: Basic Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description|For internal use only.|
+|DisplayName|Component State|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|componentstate|
+|RequiredLevel|SystemRequired|
+|Type|Picklist|
+
+#### ComponentState Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Published||
+|1|Unpublished||
+|2|Deleted||
+|3|Deleted Unpublished||
+
 
 
 ### <a name="BKMK_CreatedBy"></a> CreatedBy
@@ -401,7 +529,9 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Type|String|
 
 
-### <a name="BKMK_MobileOfflineProfileIdName"></a> MobileOfflineProfileIdName
+### <a name="BKMK_ExtensionOfRecordIdName"></a> ExtensionOfRecordIdName
+
+**Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
@@ -411,10 +541,35 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |IsLocalizable|False|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|mobileofflineprofileidname|
-|MaxLength|255|
+|LogicalName|extensionofrecordidname|
+|MaxLength|100|
 |RequiredLevel|None|
 |Type|String|
+
+
+### <a name="BKMK_IsManaged"></a> IsManaged
+
+**Added by**: Basic Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Indicates whether the solution component is part of a managed solution.|
+|DisplayName|Is Managed|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|ismanaged|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### IsManaged Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Managed|
+|0|Unmanaged|
+
+**DefaultValue**: False
+
 
 
 ### <a name="BKMK_ModifiedBy"></a> ModifiedBy
@@ -570,36 +725,51 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Type|String|
 
 
-### <a name="BKMK_SystemUserIdName"></a> SystemUserIdName
+### <a name="BKMK_OverwriteTime"></a> OverwriteTime
+
+**Added by**: Basic Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
+|DateTimeBehavior|UserLocal|
+|Description|For internal use only.|
+|DisplayName|Record Overwrite Time|
+|Format|DateAndTime|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|systemuseridname|
-|MaxLength|200|
-|RequiredLevel|None|
-|Type|String|
+|LogicalName|overwritetime|
+|RequiredLevel|SystemRequired|
+|Type|DateTime|
 
 
-### <a name="BKMK_SystemUserIdYomiName"></a> SystemUserIdYomiName
+### <a name="BKMK_SolutionId"></a> SolutionId
+
+**Added by**: Basic Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
+|Description|Unique identifier of the associated solution.|
+|DisplayName|Solution|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|systemuseridyominame|
-|MaxLength|200|
+|LogicalName|solutionid|
+|RequiredLevel|SystemRequired|
+|Type|Uniqueidentifier|
+
+
+### <a name="BKMK_SupportingSolutionId"></a> SupportingSolutionId
+
+**Added by**: Basic Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description|For internal use only.|
+|DisplayName|Solution|
+|IsValidForForm|False|
+|IsValidForRead|False|
+|LogicalName|supportingsolutionid|
 |RequiredLevel|None|
-|Type|String|
+|Type|Uniqueidentifier|
 
 
 ### <a name="BKMK_VersionNumber"></a> VersionNumber
@@ -608,7 +778,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Property|Value|
 |--------|-----|
-|Description|Version number of UserMobileOfflineProfileMembership.|
+|Description|Version Number|
 |DisplayName|Version Number|
 |IsValidForForm|False|
 |IsValidForRead|True|
@@ -624,19 +794,19 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 Listed by **SchemaName**.
 
-- [usermobileofflineprofilemembership_SyncErrors](#BKMK_usermobileofflineprofilemembership_SyncErrors)
-- [usermobileofflineprofilemembership_AsyncOperations](#BKMK_usermobileofflineprofilemembership_AsyncOperations)
-- [usermobileofflineprofilemembership_MailboxTrackingFolders](#BKMK_usermobileofflineprofilemembership_MailboxTrackingFolders)
-- [usermobileofflineprofilemembership_ProcessSession](#BKMK_usermobileofflineprofilemembership_ProcessSession)
-- [usermobileofflineprofilemembership_BulkDeleteFailures](#BKMK_usermobileofflineprofilemembership_BulkDeleteFailures)
-- [usermobileofflineprofilemembership_PrincipalObjectAttributeAccesses](#BKMK_usermobileofflineprofilemembership_PrincipalObjectAttributeAccesses)
+- [virtualentitymetadata_SyncErrors](#BKMK_virtualentitymetadata_SyncErrors)
+- [virtualentitymetadata_AsyncOperations](#BKMK_virtualentitymetadata_AsyncOperations)
+- [virtualentitymetadata_MailboxTrackingFolders](#BKMK_virtualentitymetadata_MailboxTrackingFolders)
+- [virtualentitymetadata_ProcessSession](#BKMK_virtualentitymetadata_ProcessSession)
+- [virtualentitymetadata_BulkDeleteFailures](#BKMK_virtualentitymetadata_BulkDeleteFailures)
+- [virtualentitymetadata_PrincipalObjectAttributeAccesses](#BKMK_virtualentitymetadata_PrincipalObjectAttributeAccesses)
 
 
-### <a name="BKMK_usermobileofflineprofilemembership_SyncErrors"></a> usermobileofflineprofilemembership_SyncErrors
+### <a name="BKMK_virtualentitymetadata_SyncErrors"></a> virtualentitymetadata_SyncErrors
 
 **Added by**: System Solution Solution
 
-Same as syncerror table [usermobileofflineprofilemembership_SyncErrors](syncerror.md) Many-To-One relationship.
+Same as syncerror table [virtualentitymetadata_SyncErrors](syncerror.md#BKMK_virtualentitymetadata_SyncErrors) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -644,16 +814,16 @@ Same as syncerror table [usermobileofflineprofilemembership_SyncErrors](syncerro
 |ReferencingAttribute|regardingobjectid|
 |IsHierarchical|False|
 |IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|usermobileofflineprofilemembership_SyncErrors|
+|ReferencedEntityNavigationPropertyName|virtualentitymetadata_SyncErrors|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_usermobileofflineprofilemembership_AsyncOperations"></a> usermobileofflineprofilemembership_AsyncOperations
+### <a name="BKMK_virtualentitymetadata_AsyncOperations"></a> virtualentitymetadata_AsyncOperations
 
 **Added by**: System Solution Solution
 
-Same as asyncoperation table [usermobileofflineprofilemembership_AsyncOperations](asyncoperation.md) Many-To-One relationship.
+Same as asyncoperation table [virtualentitymetadata_AsyncOperations](asyncoperation.md#BKMK_virtualentitymetadata_AsyncOperations) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -661,16 +831,16 @@ Same as asyncoperation table [usermobileofflineprofilemembership_AsyncOperations
 |ReferencingAttribute|regardingobjectid|
 |IsHierarchical|False|
 |IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|usermobileofflineprofilemembership_AsyncOperations|
+|ReferencedEntityNavigationPropertyName|virtualentitymetadata_AsyncOperations|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_usermobileofflineprofilemembership_MailboxTrackingFolders"></a> usermobileofflineprofilemembership_MailboxTrackingFolders
+### <a name="BKMK_virtualentitymetadata_MailboxTrackingFolders"></a> virtualentitymetadata_MailboxTrackingFolders
 
 **Added by**: System Solution Solution
 
-Same as mailboxtrackingfolder table [usermobileofflineprofilemembership_MailboxTrackingFolders](mailboxtrackingfolder.md) Many-To-One relationship.
+Same as mailboxtrackingfolder table [virtualentitymetadata_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_virtualentitymetadata_MailboxTrackingFolders) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -678,16 +848,16 @@ Same as mailboxtrackingfolder table [usermobileofflineprofilemembership_MailboxT
 |ReferencingAttribute|regardingobjectid|
 |IsHierarchical|False|
 |IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|usermobileofflineprofilemembership_MailboxTrackingFolders|
+|ReferencedEntityNavigationPropertyName|virtualentitymetadata_MailboxTrackingFolders|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_usermobileofflineprofilemembership_ProcessSession"></a> usermobileofflineprofilemembership_ProcessSession
+### <a name="BKMK_virtualentitymetadata_ProcessSession"></a> virtualentitymetadata_ProcessSession
 
 **Added by**: System Solution Solution
 
-Same as processsession table [usermobileofflineprofilemembership_ProcessSession](processsession.md) Many-To-One relationship.
+Same as processsession table [virtualentitymetadata_ProcessSession](processsession.md#BKMK_virtualentitymetadata_ProcessSession) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -695,16 +865,16 @@ Same as processsession table [usermobileofflineprofilemembership_ProcessSession]
 |ReferencingAttribute|regardingobjectid|
 |IsHierarchical|False|
 |IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|usermobileofflineprofilemembership_ProcessSession|
+|ReferencedEntityNavigationPropertyName|virtualentitymetadata_ProcessSession|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_usermobileofflineprofilemembership_BulkDeleteFailures"></a> usermobileofflineprofilemembership_BulkDeleteFailures
+### <a name="BKMK_virtualentitymetadata_BulkDeleteFailures"></a> virtualentitymetadata_BulkDeleteFailures
 
 **Added by**: System Solution Solution
 
-Same as bulkdeletefailure table [usermobileofflineprofilemembership_BulkDeleteFailures](bulkdeletefailure.md) Many-To-One relationship.
+Same as bulkdeletefailure table [virtualentitymetadata_BulkDeleteFailures](bulkdeletefailure.md#BKMK_virtualentitymetadata_BulkDeleteFailures) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -712,16 +882,16 @@ Same as bulkdeletefailure table [usermobileofflineprofilemembership_BulkDeleteFa
 |ReferencingAttribute|regardingobjectid|
 |IsHierarchical|False|
 |IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|usermobileofflineprofilemembership_BulkDeleteFailures|
+|ReferencedEntityNavigationPropertyName|virtualentitymetadata_BulkDeleteFailures|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_usermobileofflineprofilemembership_PrincipalObjectAttributeAccesses"></a> usermobileofflineprofilemembership_PrincipalObjectAttributeAccesses
+### <a name="BKMK_virtualentitymetadata_PrincipalObjectAttributeAccesses"></a> virtualentitymetadata_PrincipalObjectAttributeAccesses
 
 **Added by**: System Solution Solution
 
-Same as principalobjectattributeaccess table [usermobileofflineprofilemembership_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md) Many-To-One relationship.
+Same as principalobjectattributeaccess table [virtualentitymetadata_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_virtualentitymetadata_PrincipalObjectAttributeAccesses) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -729,7 +899,7 @@ Same as principalobjectattributeaccess table [usermobileofflineprofilemembership
 |ReferencingAttribute|objectid|
 |IsHierarchical|False|
 |IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|usermobileofflineprofilemembership_PrincipalObjectAttributeAccesses|
+|ReferencedEntityNavigationPropertyName|virtualentitymetadata_PrincipalObjectAttributeAccesses|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
@@ -739,59 +909,52 @@ Same as principalobjectattributeaccess table [usermobileofflineprofilemembership
 
 Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
 
-- [lk_usermobileofflineprofilemembership_createdby](#BKMK_lk_usermobileofflineprofilemembership_createdby)
-- [lk_usermobileofflineprofilemembership_createdonbehalfby](#BKMK_lk_usermobileofflineprofilemembership_createdonbehalfby)
-- [lk_usermobileofflineprofilemembership_modifiedby](#BKMK_lk_usermobileofflineprofilemembership_modifiedby)
-- [lk_usermobileofflineprofilemembership_modifiedonbehalfby](#BKMK_lk_usermobileofflineprofilemembership_modifiedonbehalfby)
-- [organization_usermobileofflineprofilemembership](#BKMK_organization_usermobileofflineprofilemembership)
-- [mobileofflineprofile_usermobileofflineprofilemembership_MobileOfflineProfileId](#BKMK_mobileofflineprofile_usermobileofflineprofilemembership_MobileOfflineProfileId)
-- [systemuser_usermobileofflineprofilemembership_SystemUserId](#BKMK_systemuser_usermobileofflineprofilemembership_SystemUserId)
+- [lk_virtualentitymetadata_createdby](#BKMK_lk_virtualentitymetadata_createdby)
+- [lk_virtualentitymetadata_createdonbehalfby](#BKMK_lk_virtualentitymetadata_createdonbehalfby)
+- [lk_virtualentitymetadata_modifiedby](#BKMK_lk_virtualentitymetadata_modifiedby)
+- [lk_virtualentitymetadata_modifiedonbehalfby](#BKMK_lk_virtualentitymetadata_modifiedonbehalfby)
+- [organization_virtualentitymetadata](#BKMK_organization_virtualentitymetadata)
+- [virtualentitymetadata_extensionofrecordid](#BKMK_virtualentitymetadata_extensionofrecordid)
 
 
-### <a name="BKMK_lk_usermobileofflineprofilemembership_createdby"></a> lk_usermobileofflineprofilemembership_createdby
-
-**Added by**: System Solution Solution
-
-See systemuser Table [lk_usermobileofflineprofilemembership_createdby](systemuser.md) One-To-Many relationship.
-
-### <a name="BKMK_lk_usermobileofflineprofilemembership_createdonbehalfby"></a> lk_usermobileofflineprofilemembership_createdonbehalfby
+### <a name="BKMK_lk_virtualentitymetadata_createdby"></a> lk_virtualentitymetadata_createdby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_usermobileofflineprofilemembership_createdonbehalfby](systemuser.md) One-To-Many relationship.
+See systemuser Table [lk_virtualentitymetadata_createdby](systemuser.md#BKMK_lk_virtualentitymetadata_createdby) One-To-Many relationship.
 
-### <a name="BKMK_lk_usermobileofflineprofilemembership_modifiedby"></a> lk_usermobileofflineprofilemembership_modifiedby
-
-**Added by**: System Solution Solution
-
-See systemuser Table [lk_usermobileofflineprofilemembership_modifiedby](systemuser.md) One-To-Many relationship.
-
-### <a name="BKMK_lk_usermobileofflineprofilemembership_modifiedonbehalfby"></a> lk_usermobileofflineprofilemembership_modifiedonbehalfby
+### <a name="BKMK_lk_virtualentitymetadata_createdonbehalfby"></a> lk_virtualentitymetadata_createdonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_usermobileofflineprofilemembership_modifiedonbehalfby](systemuser.md) One-To-Many relationship.
+See systemuser Table [lk_virtualentitymetadata_createdonbehalfby](systemuser.md#BKMK_lk_virtualentitymetadata_createdonbehalfby) One-To-Many relationship.
 
-### <a name="BKMK_organization_usermobileofflineprofilemembership"></a> organization_usermobileofflineprofilemembership
-
-**Added by**: System Solution Solution
-
-See organization Table [organization_usermobileofflineprofilemembership](organization.md) One-To-Many relationship.
-
-### <a name="BKMK_mobileofflineprofile_usermobileofflineprofilemembership_MobileOfflineProfileId"></a> mobileofflineprofile_usermobileofflineprofilemembership_MobileOfflineProfileId
+### <a name="BKMK_lk_virtualentitymetadata_modifiedby"></a> lk_virtualentitymetadata_modifiedby
 
 **Added by**: System Solution Solution
 
-See mobileofflineprofile Table [mobileofflineprofile_usermobileofflineprofilemembership_MobileOfflineProfileId](mobileofflineprofile.md) One-To-Many relationship.
+See systemuser Table [lk_virtualentitymetadata_modifiedby](systemuser.md#BKMK_lk_virtualentitymetadata_modifiedby) One-To-Many relationship.
 
-### <a name="BKMK_systemuser_usermobileofflineprofilemembership_SystemUserId"></a> systemuser_usermobileofflineprofilemembership_SystemUserId
+### <a name="BKMK_lk_virtualentitymetadata_modifiedonbehalfby"></a> lk_virtualentitymetadata_modifiedonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [systemuser_usermobileofflineprofilemembership_SystemUserId](systemuser.md) One-To-Many relationship.
+See systemuser Table [lk_virtualentitymetadata_modifiedonbehalfby](systemuser.md#BKMK_lk_virtualentitymetadata_modifiedonbehalfby) One-To-Many relationship.
+
+### <a name="BKMK_organization_virtualentitymetadata"></a> organization_virtualentitymetadata
+
+**Added by**: System Solution Solution
+
+See organization Table [organization_virtualentitymetadata](organization.md#BKMK_organization_virtualentitymetadata) One-To-Many relationship.
+
+### <a name="BKMK_virtualentitymetadata_extensionofrecordid"></a> virtualentitymetadata_extensionofrecordid
+
+**Added by**: System Solution Solution
+
+See entity Table [virtualentitymetadata_extensionofrecordid](entity.md#BKMK_virtualentitymetadata_extensionofrecordid) One-To-Many relationship.
 
 ### See also
 
 [About the table reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
-<xref href="Microsoft.Dynamics.CRM.usermobileofflineprofilemembership?text=usermobileofflineprofilemembership EntityType" />
+<xref href="Microsoft.Dynamics.CRM.virtualentitymetadata?text=virtualentitymetadata EntityType" />
