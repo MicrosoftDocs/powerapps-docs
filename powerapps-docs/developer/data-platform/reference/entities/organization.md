@@ -1,13 +1,13 @@
 ---
 title: "Organization table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the Organization table/entity."
-ms.date: 05/20/2021
+ms.date: 10/05/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -55,6 +55,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 - [ACIWebEndpointUrl](#BKMK_ACIWebEndpointUrl)
 - [AcknowledgementTemplateId](#BKMK_AcknowledgementTemplateId)
+- [AdvancedLookupEnabled](#BKMK_AdvancedLookupEnabled)
 - [AllowAddressBookSyncs](#BKMK_AllowAddressBookSyncs)
 - [AllowAutoResponseCreation](#BKMK_AllowAutoResponseCreation)
 - [AllowAutoUnsubscribe](#BKMK_AllowAutoUnsubscribe)
@@ -66,6 +67,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [AllowMarketingEmailExecution](#BKMK_AllowMarketingEmailExecution)
 - [AllowOfflineScheduledSyncs](#BKMK_AllowOfflineScheduledSyncs)
 - [AllowOutlookScheduledSyncs](#BKMK_AllowOutlookScheduledSyncs)
+- [AllowRedirectAdminSettingsToModernUI](#BKMK_AllowRedirectAdminSettingsToModernUI)
 - [AllowUnresolvedPartiesOnEmailSend](#BKMK_AllowUnresolvedPartiesOnEmailSend)
 - [AllowUserFormModePreference](#BKMK_AllowUserFormModePreference)
 - [AllowUsersSeeAppdownloadMessage](#BKMK_AllowUsersSeeAppdownloadMessage)
@@ -134,6 +136,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [EnableLivePersonaCardUCI](#BKMK_EnableLivePersonaCardUCI)
 - [EnableLivePersonCardIntegrationInOffice](#BKMK_EnableLivePersonCardIntegrationInOffice)
 - [EnableLPAuthoring](#BKMK_EnableLPAuthoring)
+- [EnableMakerSwitchToClassic](#BKMK_EnableMakerSwitchToClassic)
 - [EnableMicrosoftFlowIntegration](#BKMK_EnableMicrosoftFlowIntegration)
 - [EnablePricingOnCreate](#BKMK_EnablePricingOnCreate)
 - [EnableSmartMatching](#BKMK_EnableSmartMatching)
@@ -262,6 +265,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [MailboxIntermittentIssueMinRange](#BKMK_MailboxIntermittentIssueMinRange)
 - [MailboxPermanentIssueMinRange](#BKMK_MailboxPermanentIssueMinRange)
 - [MaxActionStepsInBPF](#BKMK_MaxActionStepsInBPF)
+- [MaxAllowedPendingRollupJobCount](#BKMK_MaxAllowedPendingRollupJobCount)
+- [MaxAllowedPendingRollupJobPercentage](#BKMK_MaxAllowedPendingRollupJobPercentage)
 - [MaxAppointmentDurationDays](#BKMK_MaxAppointmentDurationDays)
 - [MaxConditionsForMobileOfflineFilters](#BKMK_MaxConditionsForMobileOfflineFilters)
 - [MaxDepthForHierarchicalSecurityModel](#BKMK_MaxDepthForHierarchicalSecurityModel)
@@ -274,6 +279,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [MaxProductsInBundle](#BKMK_MaxProductsInBundle)
 - [MaxRecordsForExportToExcel](#BKMK_MaxRecordsForExportToExcel)
 - [MaxRecordsForLookupFilters](#BKMK_MaxRecordsForLookupFilters)
+- [MaxRollupFieldsPerEntity](#BKMK_MaxRollupFieldsPerEntity)
+- [MaxRollupFieldsPerOrg](#BKMK_MaxRollupFieldsPerOrg)
 - [MaxSLAItemsPerSLA](#BKMK_MaxSLAItemsPerSLA)
 - [MaxUploadFileSize](#BKMK_MaxUploadFileSize)
 - [MicrosoftFlowEnvironment](#BKMK_MicrosoftFlowEnvironment)
@@ -311,13 +318,18 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [PrivReportingGroupName](#BKMK_PrivReportingGroupName)
 - [ProductRecommendationsEnabled](#BKMK_ProductRecommendationsEnabled)
 - [QualifyLeadAdditionalOptions](#BKMK_QualifyLeadAdditionalOptions)
+- [QuickActionToOpenRecordsInSidePaneEnabled](#BKMK_QuickActionToOpenRecordsInSidePaneEnabled)
 - [QuickFindRecordLimitEnabled](#BKMK_QuickFindRecordLimitEnabled)
 - [QuotePrefix](#BKMK_QuotePrefix)
+- [RecalculateSLA](#BKMK_RecalculateSLA)
 - [RecurrenceDefaultNumberOfOccurrences](#BKMK_RecurrenceDefaultNumberOfOccurrences)
 - [RecurrenceExpansionJobBatchInterval](#BKMK_RecurrenceExpansionJobBatchInterval)
 - [RecurrenceExpansionJobBatchSize](#BKMK_RecurrenceExpansionJobBatchSize)
 - [RecurrenceExpansionSynchCreateMax](#BKMK_RecurrenceExpansionSynchCreateMax)
 - [ReferenceSiteMapXml](#BKMK_ReferenceSiteMapXml)
+- [ReleaseWaveName](#BKMK_ReleaseWaveName)
+- [RelevanceSearchEnabledByPlatform](#BKMK_RelevanceSearchEnabledByPlatform)
+- [RelevanceSearchModifiedOn](#BKMK_RelevanceSearchModifiedOn)
 - [RenderSecureIFrameForEmail](#BKMK_RenderSecureIFrameForEmail)
 - [ReportingGroupId](#BKMK_ReportingGroupId)
 - [ReportingGroupName](#BKMK_ReportingGroupName)
@@ -421,6 +433,31 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Lookup|
 
 
+### <a name="BKMK_AdvancedLookupEnabled"></a> AdvancedLookupEnabled
+
+**Added by**: UnifiedClientLookupExtension Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Flag to indicate if the Advanced Lookup feature is enabled for lookup controls|
+|DisplayName|Advanced lookup enabled|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|advancedlookupenabled|
+|RequiredLevel|None|
+|Type|Boolean|
+
+#### AdvancedLookupEnabled Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes|
+|0|No|
+
+**DefaultValue**: False
+
+
+
 ### <a name="BKMK_AllowAddressBookSyncs"></a> AllowAddressBookSyncs
 
 |Property|Value|
@@ -435,8 +472,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### AllowAddressBookSyncs Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -458,8 +495,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### AllowAutoResponseCreation Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -481,8 +518,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### AllowAutoUnsubscribe Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -504,8 +541,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### AllowAutoUnsubscribeAcknowledgement Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -527,8 +564,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### AllowClientMessageBarAd Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -551,8 +588,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### AllowEntityOnlyAudit Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -574,8 +611,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### AllowLegacyClientExperience Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -597,8 +634,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### AllowLegacyDialogsEmbedding Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -620,8 +657,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### AllowMarketingEmailExecution Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -643,8 +680,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### AllowOfflineScheduledSyncs Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -666,8 +703,33 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### AllowOutlookScheduledSyncs Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes|
+|0|No|
+
+**DefaultValue**: False
+
+
+
+### <a name="BKMK_AllowRedirectAdminSettingsToModernUI"></a> AllowRedirectAdminSettingsToModernUI
+
+**Added by**: PowerAppsUnifiedClientInfraExtensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Control whether the organization Allow Redirect Legacy Admin Settings To Modern UI|
+|DisplayName|Allow Redirect Legacy Admin Settings To Modern UI|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|allowredirectadminsettingstomodernui|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### AllowRedirectAdminSettingsToModernUI Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -689,8 +751,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### AllowUnresolvedPartiesOnEmailSend Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -712,8 +774,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### AllowUserFormModePreference Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -735,8 +797,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### AllowUsersSeeAppdownloadMessage Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -758,8 +820,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### AllowWebExcelExport Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -797,8 +859,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### AppDesignerExperienceEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -822,8 +884,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### AppointmentRichEditorExperience Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -879,8 +941,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### AutoApplyDefaultonCaseCreate Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -902,8 +964,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### AutoApplyDefaultonCaseUpdate Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -925,8 +987,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### AutoApplySLA Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -1011,8 +1073,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### BoundDashboardDefaultCardExpanded Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -1104,7 +1166,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description|Indicates whether the organization can opt out of the new Dataverse search experience (released in Oct 2020)|
+|Description|Indicates whether the organization can opt out of the new Relevance search experience (released in Oct 2020)|
 |DisplayName|Can disable Oct 2020 Search|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -1114,8 +1176,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### CanOptOutNewSearchExperience Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -1137,8 +1199,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### CascadeStatusUpdate Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -1240,8 +1302,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### CortanaProactiveExperienceEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -1263,8 +1325,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### CreateProductsWithoutParentInActiveState Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -1282,8 +1344,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|False|
 |IsValidForRead|True|
 |LogicalName|currencydecimalprecision|
-|MaxValue|2147483647|
-|MinValue|-2147483648|
+|MaxValue|10|
+|MinValue|0|
 |RequiredLevel|SystemRequired|
 |Type|Integer|
 
@@ -1302,10 +1364,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### CurrencyDisplayOption Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Currency symbol|
-|1|Currency code|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Currency symbol||
+|1|Currency code||
 
 
 
@@ -1323,12 +1385,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### CurrencyFormatCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|$123|
-|1|123$|
-|2|$ 123|
-|3|123 $|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|$123||
+|1|123$||
+|2|$ 123||
+|3|123 $||
 
 
 
@@ -1522,8 +1584,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### DateFormatCode Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 
 
 
@@ -1666,11 +1728,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### DefaultRecurrenceEndRangeType Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|No End Date|
-|2|Number of Occurrences|
-|3|End By Date|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|No End Date||
+|2|Number of Occurrences||
+|3|End By Date||
 
 
 
@@ -1718,8 +1780,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### DisableSocialCare Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -1741,10 +1803,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### DiscountCalculationMethod Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Line item|
-|1|Per unit|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Line item||
+|1|Per unit||
 
 
 
@@ -1762,8 +1824,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### DisplayNavigationTour Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -1785,10 +1847,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### EmailConnectionChannel Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Server-Side Synchronization|
-|1|Microsoft Dynamics 365 Email Router|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Server-Side Synchronization||
+|1|Microsoft Dynamics 365 Email Router||
 
 
 
@@ -1806,8 +1868,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### EmailCorrelationEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -1845,8 +1907,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### EnableBingMapsIntegration Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -1868,8 +1930,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### EnableImmersiveSkypeIntegration Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -1891,8 +1953,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### EnableLivePersonaCardUCI Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -1914,8 +1976,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### EnableLivePersonCardIntegrationInOffice Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -1937,8 +1999,33 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### EnableLPAuthoring Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes|
+|0|No|
+
+**DefaultValue**: False
+
+
+
+### <a name="BKMK_EnableMakerSwitchToClassic"></a> EnableMakerSwitchToClassic
+
+**Added by**: PowerAppsUnifiedClientInfraExtensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Control whether the organization Switch Maker Portal to Classic|
+|DisplayName|Switch Maker Portal to Classic|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|enablemakerswitchtoclassic|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### EnableMakerSwitchToClassic Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -1960,8 +2047,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### EnableMicrosoftFlowIntegration Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -1983,8 +2070,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### EnablePricingOnCreate Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -2006,8 +2093,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### EnableSmartMatching Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -2029,8 +2116,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### EnableUnifiedInterfaceShellRefresh Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -2052,8 +2139,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### EnforceReadOnlyPlugins Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -2218,15 +2305,15 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### FiscalPeriodFormatPeriod Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Quarter {0}|
-|2|Q{0}|
-|3|P{0}|
-|4|Month {0}|
-|5|M{0}|
-|6|Semester {0}|
-|7|Month Name|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Quarter {0}||
+|2|Q{0}||
+|3|P{0}||
+|4|Month {0}||
+|5|M{0}||
+|6|Semester {0}||
+|7|Month Name||
 
 
 
@@ -2292,10 +2379,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### FiscalYearFormatPrefix Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|FY|
-|2||
+|Value|Label|Description|
+|-----|-----|--------|
+|1|FY||
+|2|||
 
 
 
@@ -2313,11 +2400,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### FiscalYearFormatSuffix Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|FY|
-|2| Fiscal Year|
-|3||
+|Value|Label|Description|
+|-----|-----|--------|
+|1|FY||
+|2| Fiscal Year||
+|3|||
 
 
 
@@ -2335,11 +2422,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### FiscalYearFormatYear Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|YYYY|
-|2|YY|
-|3|GGYY|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|YYYY||
+|2|YY||
+|3|GGYY||
 
 
 
@@ -2373,16 +2460,16 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### FullNameConventionCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Last Name, First Name|
-|1|First Name|
-|2|Last Name, First Name, Middle Initial|
-|3|First Name, Middle Initial, Last Name|
-|4|Last Name, First Name, Middle Name|
-|5|First Name, Middle Name, Last Name|
-|6|Last Name, space, First Name|
-|7|Last Name, no space, First Name|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Last Name, First Name||
+|1|First Name||
+|2|Last Name, First Name, Middle Initial||
+|3|First Name, Middle Initial, Last Name||
+|4|Last Name, First Name, Middle Name||
+|5|First Name, Middle Name, Last Name||
+|6|Last Name, space, First Name||
+|7|Last Name, no space, First Name||
 
 
 
@@ -2416,8 +2503,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### GenerateAlertsForErrors Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -2439,8 +2526,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### GenerateAlertsForInformation Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -2462,8 +2549,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### GenerateAlertsForWarnings Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -2485,8 +2572,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### GetStartedPaneContentEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -2508,8 +2595,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### GlobalAppendUrlParametersEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -2547,8 +2634,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### GlobalHelpUrlEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -2603,8 +2690,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### GrantAccessToNetworkService Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -2706,8 +2793,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IgnoreInternalEmail Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -2731,8 +2818,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### ImproveSearchLoggingEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -2754,8 +2841,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### InactivityTimeoutEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -2871,8 +2958,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsActionCardEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -2894,8 +2981,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsActionSupportFeatureEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -2917,8 +3004,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsActivityAnalysisEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -2940,8 +3027,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsAppMode Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -2963,8 +3050,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsAppointmentAttachmentSyncEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -2986,8 +3073,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsAssignedTasksSyncEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -3009,8 +3096,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsAuditEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -3032,8 +3119,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsAutoDataCaptureEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -3055,8 +3142,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsAutoDataCaptureV2Enabled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -3078,8 +3165,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsAutoSaveEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -3101,8 +3188,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsBPFEntityCustomizationFeatureEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -3124,8 +3211,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsConflictDetectionEnabledForMobileClient Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -3147,8 +3234,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsContactMailingAddressSyncEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -3170,8 +3257,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsContentSecurityPolicyEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -3193,8 +3280,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsContextualEmailEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -3216,8 +3303,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsContextualHelpEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -3239,8 +3326,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsCustomControlsInCanvasAppsEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -3262,8 +3349,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsDefaultCountryCodeCheckEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -3285,8 +3372,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsDelegateAccessEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -3308,8 +3395,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsDelveActionHubIntegrationEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -3331,8 +3418,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsDuplicateDetectionEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -3354,8 +3441,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsDuplicateDetectionEnabledForImport Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -3377,8 +3464,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsDuplicateDetectionEnabledForOfflineSync Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -3400,8 +3487,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsDuplicateDetectionEnabledForOnlineCreateUpdate Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -3423,8 +3510,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsEmailMonitoringAllowed Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -3446,8 +3533,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsEmailServerProfileContentFilteringEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -3469,8 +3556,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsEnabledForAllRoles Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -3492,8 +3579,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsExternalFileStorageEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -3515,8 +3602,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsExternalSearchIndexEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -3538,8 +3625,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsFiscalPeriodMonthBased Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -3561,8 +3648,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsFolderAutoCreatedonSP Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -3584,8 +3671,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsFolderBasedTrackingEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -3607,8 +3694,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsFullTextSearchEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -3630,8 +3717,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsGeospatialAzureMapsIntegrationEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -3653,8 +3740,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsHierarchicalSecurityModelEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -3676,8 +3763,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsLUISEnabledforD365Bot Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -3699,8 +3786,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsMailboxForcedUnlockingEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -3722,8 +3809,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsMailboxInactiveBackoffEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -3745,8 +3832,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsManualSalesForecastingEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -3768,8 +3855,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsMobileClientOnDemandSyncEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -3791,8 +3878,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsMobileOfflineEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -3814,8 +3901,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsModelDrivenAppsInMSTeamsEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -3837,8 +3924,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsMSTeamsCollaborationEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -3860,8 +3947,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsMSTeamsEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -3883,8 +3970,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsMSTeamsSettingChangedByUser Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -3906,8 +3993,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsMSTeamsUserSyncEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -3929,8 +4016,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsNewAddProductExperienceEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -3952,8 +4039,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsNotesAnalysisEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -3975,8 +4062,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsOfficeGraphEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -3998,8 +4085,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsOneDriveEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -4021,8 +4108,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsPAIEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -4060,8 +4147,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsPlaybookEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -4083,8 +4170,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsPresenceEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -4106,8 +4193,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsPreviewEnabledForActionCard Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -4129,8 +4216,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsPreviewForAutoCaptureEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -4152,8 +4239,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsPreviewForEmailMonitoringAllowed Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -4175,8 +4262,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsPriceListMandatory Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -4198,8 +4285,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsQuickCreateEnabledForOpportunityClose Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -4221,8 +4308,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsReadAuditEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -4244,8 +4331,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsRelationshipInsightsEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -4268,8 +4355,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsResourceBookingExchangeSyncEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -4291,8 +4378,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsRichTextNotesEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -4314,8 +4401,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsSalesAssistantEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -4337,8 +4424,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsSOPIntegrationEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -4360,8 +4447,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsTextWrapEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -4383,8 +4470,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsUserAccessAuditEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -4406,16 +4493,16 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### ISVIntegrationCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|None|
-|1|Web|
-|2|Outlook Workstation Client|
-|3|Web; Outlook Workstation Client|
-|4|Outlook Laptop Client|
-|5|Web; Outlook Laptop Client|
-|6|Outlook|
-|7|All|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|None||
+|1|Web||
+|2|Outlook Workstation Client||
+|3|Web; Outlook Workstation Client||
+|4|Outlook Laptop Client||
+|5|Web; Outlook Laptop Client||
+|6|Outlook||
+|7|All||
 
 
 
@@ -4433,8 +4520,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsWriteInProductsAllowed Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -4617,6 +4704,44 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|False|
 |IsValidForRead|True|
 |LogicalName|maxactionstepsinbpf|
+|MaxValue|100|
+|MinValue|0|
+|RequiredLevel|SystemRequired|
+|Type|Integer|
+
+
+### <a name="BKMK_MaxAllowedPendingRollupJobCount"></a> MaxAllowedPendingRollupJobCount
+
+**Added by**: RollupFields Extension Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Maximum Allowed Pending Rollup Job Count|
+|DisplayName|MaxAllowedPendingRollupJobCount|
+|Format|None|
+|IsValidForCreate|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|maxallowedpendingrollupjobcount|
+|MaxValue|2147483647|
+|MinValue|0|
+|RequiredLevel|SystemRequired|
+|Type|Integer|
+
+
+### <a name="BKMK_MaxAllowedPendingRollupJobPercentage"></a> MaxAllowedPendingRollupJobPercentage
+
+**Added by**: RollupFields Extension Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Percentage Of Entity Table Size For Kicking Off Bootstrap Job|
+|DisplayName|MaxAllowedPendingRollupJobPercentage|
+|Format|None|
+|IsValidForCreate|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|maxallowedpendingrollupjobpercentage|
 |MaxValue|100|
 |MinValue|0|
 |RequiredLevel|SystemRequired|
@@ -4815,6 +4940,44 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Integer|
 
 
+### <a name="BKMK_MaxRollupFieldsPerEntity"></a> MaxRollupFieldsPerEntity
+
+**Added by**: RollupFields Extension Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Maximum Rollup Fields Per Entity|
+|DisplayName|MaxRollupFieldsPerEntity|
+|Format|None|
+|IsValidForCreate|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|maxrollupfieldsperentity|
+|MaxValue|50|
+|MinValue|0|
+|RequiredLevel|SystemRequired|
+|Type|Integer|
+
+
+### <a name="BKMK_MaxRollupFieldsPerOrg"></a> MaxRollupFieldsPerOrg
+
+**Added by**: RollupFields Extension Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Maximum Rollup Fields Per Organization|
+|DisplayName|MaxRollupFieldsPerOrg|
+|Format|None|
+|IsValidForCreate|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|maxrollupfieldsperorg|
+|MaxValue|500|
+|MinValue|0|
+|RequiredLevel|SystemRequired|
+|Type|Integer|
+
+
 ### <a name="BKMK_MaxSLAItemsPerSLA"></a> MaxSLAItemsPerSLA
 
 **Added by**: Service Level Agreement (SLA) Solution
@@ -4976,13 +5139,13 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### NegativeFormatCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Brackets|
-|1|Dash|
-|2|Dash plus Space|
-|3|Trailing Dash|
-|4|Space plus Trailing Dash|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Brackets||
+|1|Dash||
+|2|Dash plus Space||
+|3|Trailing Dash||
+|4|Space plus Trailing Dash||
 
 
 
@@ -4992,7 +5155,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description|Indicates whether an organization has enabled the new Dataverse search experience (released in Oct 2020) for the organization|
+|Description|Indicates whether an organization has enabled the new Relevance search experience (released in Oct 2020) for the organization|
 |DisplayName|Oct 2020 Search enabled|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -5002,8 +5165,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### NewSearchExperienceEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -5041,8 +5204,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### NotifyMailboxOwnerOfEmailServerLevelAlerts Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -5112,8 +5275,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### OfficeAppsAutoDeploymentEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -5151,8 +5314,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### OOBPriceCalculationEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -5206,8 +5369,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### OrgInsightsEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -5229,8 +5392,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### PaiPreviewScenarioEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -5301,11 +5464,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### PluginTraceLogSetting Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Off|
-|1|Exception|
-|2|All|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Off||
+|1|Exception||
+|2|All||
 
 
 
@@ -5355,8 +5518,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### PowerBiFeatureEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Enable|
 |0|Disable|
 
@@ -5374,7 +5537,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|False|
 |IsValidForRead|True|
 |LogicalName|pricingdecimalprecision|
-|MaxValue|4|
+|MaxValue|10|
 |MinValue|0|
 |RequiredLevel|SystemRequired|
 |Type|Integer|
@@ -5452,8 +5615,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### ProductRecommendationsEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -5477,6 +5640,31 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|String|
 
 
+### <a name="BKMK_QuickActionToOpenRecordsInSidePaneEnabled"></a> QuickActionToOpenRecordsInSidePaneEnabled
+
+**Added by**: PowerAppsUnifiedClientInfraExtensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Flag to indicate if the feature to use quick action to open records in search side pane is enabled|
+|DisplayName|Enable quick actions to open records in search side pane|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|quickactiontoopenrecordsinsidepaneenabled|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### QuickActionToOpenRecordsInSidePaneEnabled Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes|
+|0|No|
+
+**DefaultValue**: False
+
+
+
 ### <a name="BKMK_QuickFindRecordLimitEnabled"></a> QuickFindRecordLimitEnabled
 
 |Property|Value|
@@ -5491,8 +5679,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### QuickFindRecordLimitEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -5514,6 +5702,31 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MaxLength|20|
 |RequiredLevel|None|
 |Type|String|
+
+
+### <a name="BKMK_RecalculateSLA"></a> RecalculateSLA
+
+**Added by**: Service Level Agreement (SLA) Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Indicates whether SLA Recalculation has been enabled for the organization|
+|DisplayName|Indicates whether SLA Recalculation has been enabled for the organization|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|recalculatesla|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### RecalculateSLA Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes|
+|0|No|
+
+**DefaultValue**: False
+
 
 
 ### <a name="BKMK_RecurrenceDefaultNumberOfOccurrences"></a> RecurrenceDefaultNumberOfOccurrences
@@ -5596,6 +5809,66 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|String|
 
 
+### <a name="BKMK_ReleaseWaveName"></a> ReleaseWaveName
+
+**Added by**: PowerAppsUnifiedClientInfraExtensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Release Wave Applied to Environment.|
+|DisplayName|Release Wave|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|releasewavename|
+|MaxLength|200|
+|RequiredLevel|None|
+|Type|String|
+
+
+### <a name="BKMK_RelevanceSearchEnabledByPlatform"></a> RelevanceSearchEnabledByPlatform
+
+**Added by**: PowerAppsUnifiedClientInfraExtensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Indicates whether relevance search was enabled for the environment as part of Dataverse's relevance search on-by-default sweep|
+|DisplayName|Relevance search enabled automatically by Dataverse|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|relevancesearchenabledbyplatform|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### RelevanceSearchEnabledByPlatform Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes|
+|0|No|
+
+**DefaultValue**: False
+
+
+
+### <a name="BKMK_RelevanceSearchModifiedOn"></a> RelevanceSearchModifiedOn
+
+**Added by**: PowerAppsUnifiedClientInfraExtensions Solution
+
+|Property|Value|
+|--------|-----|
+|DateTimeBehavior|UserLocal|
+|Description|This setting contains the last modified date for relevance search setting that appears as a toggle in PPAC.|
+|DisplayName|RelevanceSearchModifiedOnDate|
+|Format|DateAndTime|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|relevancesearchmodifiedon|
+|RequiredLevel|None|
+|Type|DateTime|
+
+
 ### <a name="BKMK_RenderSecureIFrameForEmail"></a> RenderSecureIFrameForEmail
 
 |Property|Value|
@@ -5610,8 +5883,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### RenderSecureIFrameForEmail Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -5662,12 +5935,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### ReportScriptErrors Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|No preference for sending an error report to Microsoft about Microsoft Dynamics 365|
-|1|Ask me for permission to send an error report to Microsoft|
-|2|Automatically send an error report to Microsoft without asking me for permission|
-|3|Never send an error report to Microsoft about Microsoft Dynamics 365|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|No preference for sending an error report to Microsoft about Microsoft Dynamics 365||
+|1|Ask me for permission to send an error report to Microsoft||
+|2|Automatically send an error report to Microsoft without asking me for permission||
+|3|Never send an error report to Microsoft about Microsoft Dynamics 365||
 
 
 
@@ -5685,8 +5958,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### RequireApprovalForQueueEmail Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -5708,8 +5981,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### RequireApprovalForUserEmail Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -5731,8 +6004,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### ResolveSimilarUnresolvedEmailAddress Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -5754,8 +6027,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### RestrictStatusUpdate Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -5822,8 +6095,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### SendBulkEmailInUCI Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -5845,8 +6118,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### ServeStaticResourcesFromAzureCDN Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -5868,8 +6141,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### SessionTimeoutEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -5923,10 +6196,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### SharePointDeploymentType Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Online|
-|1|On-Premises|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Online||
+|1|On-Premises||
 
 
 
@@ -5945,8 +6218,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### ShareToPreviousOwnerOnAssign Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -5968,8 +6241,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### ShowKBArticleDeprecationNotification Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -5991,8 +6264,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### ShowWeekNumber Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -6063,8 +6336,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### SocialInsightsEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -6103,8 +6376,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### SocialInsightsTermsAccepted Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -6171,8 +6444,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### SQMEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -6208,8 +6481,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### SuppressSLA Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -6263,8 +6536,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### SyncOptInSelection Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Enable|
 |0|Disable|
 
@@ -6286,11 +6559,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### SyncOptInSelectionStatus Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Processing|
-|2|Passed|
-|3|Failed|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Processing||
+|2|Passed||
+|3|Failed||
 
 
 
@@ -6353,8 +6626,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### TaskBasedFlowEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -6395,8 +6668,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### TextAnalyticsEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -6418,8 +6691,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### TimeFormatCode Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 
 
 
@@ -6600,8 +6873,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### UnresolveEmailAddressIfMultipleMatch Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -6623,8 +6896,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### UseInbuiltRuleForDefaultPricelistSelection Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -6646,8 +6919,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### UseLegacyRendering Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -6669,8 +6942,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### UsePositionHierarchy Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -6692,8 +6965,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### UseQuickFindViewForGridSearch Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -6731,8 +7004,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### UseReadForm Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -6767,8 +7040,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### UseSkypeProtocol Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -6822,8 +7095,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### WeekStartDayCode Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 
 
 
@@ -6893,8 +7166,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### YammerOAuthAccessTokenExpired Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -6917,10 +7190,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### YammerPostMethod Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Public|
-|1|Private|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Public||
+|1|Private||
 
 
 
@@ -7034,7 +7307,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |IsValidForForm|False|
 |IsValidForRead|True|
 |LogicalName|basecurrencyprecision|
-|MaxValue|4|
+|MaxValue|10|
 |MinValue|0|
 |RequiredLevel|SystemRequired|
 |Type|Integer|
@@ -7333,8 +7606,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### FiscalSettingsUpdated Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -7356,8 +7629,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsAllMoneyDecimal Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -7379,8 +7652,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsDisabled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -7648,12 +7921,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### OrganizationState Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Creating|
-|1|Upgrading|
-|2|Updating|
-|3|Active|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Creating||
+|1|Upgrading||
+|2|Updating||
+|3|Active||
 
 
 
@@ -7799,17 +8072,21 @@ Listed by **SchemaName**.
 - [organization_solutioncomponentrelationshipconfiguration](#BKMK_organization_solutioncomponentrelationshipconfiguration)
 - [organization_package](#BKMK_organization_package)
 - [organization_relationshipattribute](#BKMK_organization_relationshipattribute)
+- [organization_catalog](#BKMK_organization_catalog)
+- [organization_catalogassignment](#BKMK_organization_catalogassignment)
 - [organization_entityanalyticsconfig](#BKMK_organization_entityanalyticsconfig)
 - [organization_datalakeworkspace](#BKMK_organization_datalakeworkspace)
 - [organization_datalakeworkspacepermission](#BKMK_organization_datalakeworkspacepermission)
 - [organization_msdyn_helppage](#BKMK_organization_msdyn_helppage)
+- [organization_msdyn_tour](#BKMK_organization_msdyn_tour)
 - [organization_territories](#BKMK_organization_territories)
 - [organization_msdyn_federatedarticleincident](#BKMK_organization_msdyn_federatedarticleincident)
 - [organization_msdyn_kmpersonalizationsetting](#BKMK_organization_msdyn_kmpersonalizationsetting)
-- [organization_catalog](#BKMK_organization_catalog)
-- [organization_catalogassignment](#BKMK_organization_catalogassignment)
+- [organization_pluginpackage](#BKMK_organization_pluginpackage)
+- [organization_virtualentitymetadata](#BKMK_organization_virtualentitymetadata)
 - [organization_organizationdatasyncsubscription](#BKMK_organization_organizationdatasyncsubscription)
 - [organization_organizationdatasyncsubscriptionentity](#BKMK_organization_organizationdatasyncsubscriptionentity)
+- [organization_appaction](#BKMK_organization_appaction)
 - [organization_msdyn_solutionhealthruleset](#BKMK_organization_msdyn_solutionhealthruleset)
 
 
@@ -8933,6 +9210,40 @@ Same as relationshipattribute table [organization_relationshipattribute](relatio
 |CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
+### <a name="BKMK_organization_catalog"></a> organization_catalog
+
+**Added by**: Active Solution Solution
+
+Same as catalog table [organization_catalog](catalog.md#BKMK_organization_catalog) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|catalog|
+|ReferencingAttribute|organizationid|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|organization_catalog|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_organization_catalogassignment"></a> organization_catalogassignment
+
+**Added by**: Active Solution Solution
+
+Same as catalogassignment table [organization_catalogassignment](catalogassignment.md#BKMK_organization_catalogassignment) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|catalogassignment|
+|ReferencingAttribute|organizationid|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|organization_catalogassignment|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
 ### <a name="BKMK_organization_entityanalyticsconfig"></a> organization_entityanalyticsconfig
 
 **Added by**: Advanced Analytics Infrastructure Solution
@@ -9001,6 +9312,23 @@ Same as msdyn_helppage table [organization_msdyn_helppage](msdyn_helppage.md#BKM
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
+### <a name="BKMK_organization_msdyn_tour"></a> organization_msdyn_tour
+
+**Added by**: Active Solution Solution
+
+Same as msdyn_tour table [organization_msdyn_tour](msdyn_tour.md#BKMK_organization_msdyn_tour) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_tour|
+|ReferencingAttribute|organizationid|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|organization_msdyn_tour|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
 ### <a name="BKMK_organization_territories"></a> organization_territories
 
 **Added by**: Application Common Solution
@@ -9052,36 +9380,36 @@ Same as msdyn_kmpersonalizationsetting table [organization_msdyn_kmpersonalizati
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_organization_catalog"></a> organization_catalog
+### <a name="BKMK_organization_pluginpackage"></a> organization_pluginpackage
 
 **Added by**: Active Solution Solution
 
-Same as catalog table [organization_catalog](catalog.md#BKMK_organization_catalog) Many-To-One relationship.
+Same as pluginpackage table [organization_pluginpackage](pluginpackage.md#BKMK_organization_pluginpackage) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
-|ReferencingEntity|catalog|
+|ReferencingEntity|pluginpackage|
 |ReferencingAttribute|organizationid|
 |IsHierarchical|False|
 |IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|organization_catalog|
+|ReferencedEntityNavigationPropertyName|organization_pluginpackage|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_organization_catalogassignment"></a> organization_catalogassignment
+### <a name="BKMK_organization_virtualentitymetadata"></a> organization_virtualentitymetadata
 
 **Added by**: Active Solution Solution
 
-Same as catalogassignment table [organization_catalogassignment](catalogassignment.md#BKMK_organization_catalogassignment) Many-To-One relationship.
+Same as virtualentitymetadata table [organization_virtualentitymetadata](virtualentitymetadata.md#BKMK_organization_virtualentitymetadata) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
-|ReferencingEntity|catalogassignment|
+|ReferencingEntity|virtualentitymetadata|
 |ReferencingAttribute|organizationid|
 |IsHierarchical|False|
 |IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|organization_catalogassignment|
+|ReferencedEntityNavigationPropertyName|organization_virtualentitymetadata|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
@@ -9116,6 +9444,23 @@ Same as organizationdatasyncsubscriptionentity table [organization_organizationd
 |IsHierarchical|False|
 |IsCustomizable|False|
 |ReferencedEntityNavigationPropertyName|organization_organizationdatasyncsubscriptionentity|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_organization_appaction"></a> organization_appaction
+
+**Added by**: Active Solution Solution
+
+Same as appaction table [organization_appaction](appaction.md#BKMK_organization_appaction) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|appaction|
+|ReferencingAttribute|organizationid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|organization_appaction|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 

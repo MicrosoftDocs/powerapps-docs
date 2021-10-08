@@ -1,13 +1,13 @@
 ---
-title: "RecurringAppointmentMaster table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the RecurringAppointmentMaster table/entity."
-ms.date: 05/20/2021
+title: "Recurring Appointment (RecurringAppointmentMaster) table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the Recurring Appointment (RecurringAppointmentMaster) table/entity."
+ms.date: 10/05/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -15,7 +15,7 @@ search.app:
   - D365CE
 ---
 
-# RecurringAppointmentMaster table/entity reference
+# Recurring Appointment (RecurringAppointmentMaster) table/entity reference
 
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
@@ -325,13 +325,13 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### Instance Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|First|
-|2|Second|
-|3|Third|
-|4|Fourth|
-|5|Last|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|First||
+|2|Second||
+|3|Third||
+|4|Fourth||
+|5|Last||
 
 
 
@@ -365,8 +365,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsAllDayEvent Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -388,8 +388,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsBilled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -411,8 +411,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsMapiPrivate Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -434,8 +434,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsNthMonthly Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -457,8 +457,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsNthYearly Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -480,8 +480,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsRegenerate Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -503,8 +503,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsWeekDayPattern Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -526,8 +526,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsWorkflowCreated Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -565,21 +565,21 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### MonthOfYear Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Invalid Month Of Year|
-|1|January|
-|2|February|
-|3|March|
-|4|April|
-|5|May|
-|6|June|
-|7|July|
-|8|August|
-|9|September|
-|10|October|
-|11|November|
-|12|December|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Invalid Month Of Year||
+|1|January||
+|2|February||
+|3|March||
+|4|April||
+|5|May||
+|6|June||
+|7|July||
+|8|August||
+|9|September||
+|10|October||
+|11|November||
+|12|December||
 
 
 
@@ -715,11 +715,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### PatternEndType Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|No End Date|
-|2|Occurrences|
-|3|Pattern End Date|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|No End Date||
+|2|Occurrences||
+|3|Pattern End Date||
 
 
 
@@ -752,11 +752,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### PriorityCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Low|
-|1|Normal|
-|2|High|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Low||
+|1|Normal||
+|2|High||
 
 
 
@@ -787,12 +787,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### RecurrencePatternType Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Daily|
-|1|Weekly|
-|2|Monthly|
-|3|Yearly|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Daily||
+|1|Weekly||
+|2|Monthly||
+|3|Yearly||
 
 
 
@@ -851,8 +851,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### SeriesStatus Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Active|
 |0|Inactive|
 
@@ -1249,8 +1249,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |IsValidForRead|True|
 |LogicalName|exchangerate|
 |MaxValue|100000000000|
-|MinValue|0.0000000001|
-|Precision|10|
+|MinValue|0.000000000001|
+|Precision|12|
 |RequiredLevel|None|
 |Type|Decimal|
 
@@ -1269,11 +1269,11 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### ExpansionStateCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Unexpanded|
-|1|Partial|
-|2|Full|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Unexpanded||
+|1|Partial||
+|2|Full||
 
 
 
@@ -1305,13 +1305,13 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### InstanceTypeCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Not Recurring|
-|1|Recurring Master|
-|2|Recurring Instance|
-|3|Recurring Exception|
-|4|Recurring Future Exception|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Not Recurring||
+|1|Recurring Master||
+|2|Recurring Instance||
+|3|Recurring Exception||
+|4|Recurring Future Exception||
 
 
 
@@ -1329,8 +1329,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsRegularActivity Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 

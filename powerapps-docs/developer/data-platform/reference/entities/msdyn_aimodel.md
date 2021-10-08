@@ -1,13 +1,13 @@
 ---
 title: "msdyn_AIModel table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the msdyn_AIModel table/entity."
-ms.date: 05/20/2021
+ms.date: 10/05/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -243,8 +243,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### msdyn_ShareWithOrganizationOnCreate Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -438,12 +438,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### ComponentState Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Published|
-|1|Unpublished|
-|2|Deleted|
-|3|Deleted Unpublished|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Published||
+|1|Unpublished||
+|2|Deleted||
+|3|Deleted Unpublished||
 
 
 
@@ -580,8 +580,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsManaged Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Managed|
 |0|Unmanaged|
 
@@ -922,8 +922,8 @@ Listed by **SchemaName**.
 - [msdyn_aimodel_ProcessSession](#BKMK_msdyn_aimodel_ProcessSession)
 - [msdyn_aimodel_BulkDeleteFailures](#BKMK_msdyn_aimodel_BulkDeleteFailures)
 - [msdyn_aimodel_PrincipalObjectAttributeAccesses](#BKMK_msdyn_aimodel_PrincipalObjectAttributeAccesses)
-- [msdyn_aimodel_Annotations](#BKMK_msdyn_aimodel_Annotations)
 - [msdyn_aimodel_msdyn_aiconfiguration](#BKMK_msdyn_aimodel_msdyn_aiconfiguration)
+- [msdyn_aimodel_Annotations](#BKMK_msdyn_aimodel_Annotations)
 - [msdyn_AIBDatasetsContainer_msdyn_AIModelI](#BKMK_msdyn_AIBDatasetsContainer_msdyn_AIModelI)
 
 
@@ -1029,6 +1029,21 @@ Same as principalobjectattributeaccess table [msdyn_aimodel_PrincipalObjectAttri
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
+### <a name="BKMK_msdyn_aimodel_msdyn_aiconfiguration"></a> msdyn_aimodel_msdyn_aiconfiguration
+
+Same as msdyn_aiconfiguration table [msdyn_aimodel_msdyn_aiconfiguration](msdyn_aiconfiguration.md#BKMK_msdyn_aimodel_msdyn_aiconfiguration) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_aiconfiguration|
+|ReferencingAttribute|msdyn_aimodelid|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|msdyn_aimodel_msdyn_aiconfiguration|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
+
+
 ### <a name="BKMK_msdyn_aimodel_Annotations"></a> msdyn_aimodel_Annotations
 
 **Added by**: System Solution Solution
@@ -1043,21 +1058,6 @@ Same as annotation table [msdyn_aimodel_Annotations](annotation.md#BKMK_msdyn_ai
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|msdyn_aimodel_Annotations|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
-
-
-### <a name="BKMK_msdyn_aimodel_msdyn_aiconfiguration"></a> msdyn_aimodel_msdyn_aiconfiguration
-
-Same as msdyn_aiconfiguration table [msdyn_aimodel_msdyn_aiconfiguration](msdyn_aiconfiguration.md#BKMK_msdyn_aimodel_msdyn_aiconfiguration) Many-To-One relationship.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|msdyn_aiconfiguration|
-|ReferencingAttribute|msdyn_aimodelid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|msdyn_aimodel_msdyn_aiconfiguration|
-|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
 |CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
 
 

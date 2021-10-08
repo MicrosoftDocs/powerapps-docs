@@ -1,13 +1,13 @@
 ---
 title: "SystemForm table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the SystemForm table/entity."
-ms.date: 05/20/2021
+ms.date: 10/05/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -138,10 +138,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### FormActivationState Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Inactive|
-|1|Active|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Inactive||
+|1|Active||
 
 
 
@@ -189,11 +189,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### FormPresentation Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|ClassicForm|
-|1|AirForm|
-|2|ConvertedICForm|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|ClassicForm||
+|1|AirForm||
+|2|ConvertedICForm||
 
 
 
@@ -244,8 +244,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsAIRMerged Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -280,8 +280,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsDefault Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -303,8 +303,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsDesktopEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -326,8 +326,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsTabletEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -380,26 +380,26 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### Type Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Dashboard|
-|1|AppointmentBook|
-|2|Main|
-|3|MiniCampaignBO|
-|4|Preview|
-|5|Mobile - Express|
-|6|Quick View Form|
-|7|Quick Create|
-|8|Dialog|
-|9|Task Flow Form|
-|10|InteractionCentricDashboard|
-|11|Card|
-|12|Main - Interactive experience|
-|13|Contextual Dashboard|
-|100|Other|
-|101|MainBackup|
-|102|AppointmentBookBackup|
-|103|Power BI Dashboard|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Dashboard||
+|1|AppointmentBook||
+|2|Main||
+|3|MiniCampaignBO||
+|4|Preview||
+|5|Mobile - Express||
+|6|Quick View Form||
+|7|Quick Create||
+|8|Dialog||
+|9|Task Flow Form||
+|10|InteractionCentricDashboard||
+|11|Card||
+|12|Main - Interactive experience||
+|13|Contextual Dashboard||
+|100|Other||
+|101|MainBackup||
+|102|AppointmentBookBackup||
+|103|Power BI Dashboard||
 
 
 
@@ -485,12 +485,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### ComponentState Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Published|
-|1|Unpublished|
-|2|Deleted|
-|3|Deleted Unpublished|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Published||
+|1|Unpublished||
+|2|Deleted||
+|3|Deleted Unpublished||
 
 
 
@@ -537,8 +537,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsManaged Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Managed|
 |0|Unmanaged|
 
