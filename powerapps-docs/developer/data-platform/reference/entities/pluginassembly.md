@@ -1,13 +1,13 @@
 ---
-title: "PluginAssembly table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the PluginAssembly table/entity."
-ms.date: 05/20/2021
+title: "Plug-in Assembly (PluginAssembly) table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the Plug-in Assembly (PluginAssembly) table/entity."
+ms.date: 10/05/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -15,7 +15,7 @@ search.app:
   - D365CE
 ---
 
-# PluginAssembly table/entity reference
+# Plug-in Assembly (PluginAssembly) table/entity reference
 
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
@@ -65,6 +65,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [IsolationMode](#BKMK_IsolationMode)
 - [ManagedIdentityId](#BKMK_ManagedIdentityId)
 - [Name](#BKMK_Name)
+- [PackageId](#BKMK_PackageId)
 - [Password](#BKMK_Password)
 - [Path](#BKMK_Path)
 - [PluginAssemblyId](#BKMK_PluginAssemblyId)
@@ -90,9 +91,9 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### AuthType Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|BasicAuth|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|BasicAuth||
 
 
 
@@ -201,11 +202,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsolationMode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|None|
-|2|Sandbox|
-|3|External|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|None||
+|2|Sandbox||
+|3|External||
 
 
 
@@ -239,6 +240,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MaxLength|256|
 |RequiredLevel|SystemRequired|
 |Type|String|
+
+
+### <a name="BKMK_PackageId"></a> PackageId
+
+**Added by**: Plugin Infrastructure Extension Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier for Plugin Package associated with Plug-in Assembly.|
+|DisplayName|Package|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|packageid|
+|RequiredLevel|None|
+|Targets|pluginpackage|
+|Type|Lookup|
 
 
 ### <a name="BKMK_Password"></a> Password
@@ -333,12 +350,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### SourceType Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Database|
-|1|Disk|
-|2|Normal|
-|3|AzureWebApp|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Database||
+|1|Disk||
+|2|Normal||
+|3|AzureWebApp||
 
 
 
@@ -416,6 +433,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [ModifiedOnBehalfByYomiName](#BKMK_ModifiedOnBehalfByYomiName)
 - [OrganizationId](#BKMK_OrganizationId)
 - [OverwriteTime](#BKMK_OverwriteTime)
+- [PackageIdName](#BKMK_PackageIdName)
 - [PluginAssemblyIdUnique](#BKMK_PluginAssemblyIdUnique)
 - [SolutionId](#BKMK_SolutionId)
 - [SupportingSolutionId](#BKMK_SupportingSolutionId)
@@ -436,12 +454,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### ComponentState Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Published|
-|1|Unpublished|
-|2|Deleted|
-|3|Deleted Unpublished|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Published||
+|1|Unpublished||
+|2|Deleted||
+|3|Deleted Unpublished||
 
 
 
@@ -566,8 +584,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsManaged Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Managed|
 |0|Unmanaged|
 
@@ -589,8 +607,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsPasswordSet Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -768,6 +786,24 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Type|DateTime|
 
 
+### <a name="BKMK_PackageIdName"></a> PackageIdName
+
+**Added by**: Plugin Infrastructure Extension Solution
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|packageidname|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
+
+
 ### <a name="BKMK_PluginAssemblyIdUnique"></a> PluginAssemblyIdUnique
 
 |Property|Value|
@@ -853,6 +889,7 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [organization_pluginassembly](#BKMK_organization_pluginassembly)
 - [lk_pluginassembly_modifiedonbehalfby](#BKMK_lk_pluginassembly_modifiedonbehalfby)
 - [lk_pluginassembly_createdonbehalfby](#BKMK_lk_pluginassembly_createdonbehalfby)
+- [pluginpackage_pluginassembly](#BKMK_pluginpackage_pluginassembly)
 - [managedidentity_PluginAssembly](#BKMK_managedidentity_PluginAssembly)
 
 
@@ -875,6 +912,12 @@ See systemuser Table [lk_pluginassembly_modifiedonbehalfby](systemuser.md#BKMK_l
 ### <a name="BKMK_lk_pluginassembly_createdonbehalfby"></a> lk_pluginassembly_createdonbehalfby
 
 See systemuser Table [lk_pluginassembly_createdonbehalfby](systemuser.md#BKMK_lk_pluginassembly_createdonbehalfby) One-To-Many relationship.
+
+### <a name="BKMK_pluginpackage_pluginassembly"></a> pluginpackage_pluginassembly
+
+**Added by**: Plugin Infrastructure Extension Solution
+
+See pluginpackage Table [pluginpackage_pluginassembly](pluginpackage.md#BKMK_pluginpackage_pluginassembly) One-To-Many relationship.
 
 ### <a name="BKMK_managedidentity_PluginAssembly"></a> managedidentity_PluginAssembly
 

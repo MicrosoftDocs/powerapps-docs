@@ -1,13 +1,13 @@
 ---
-title: "appnotification table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the appnotification table/entity."
-ms.date: 05/20/2021
+title: "Notification (appnotification) table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the Notification (appnotification) table/entity."
+ms.date: 10/05/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -15,7 +15,7 @@ search.app:
   - D365CE
 ---
 
-# appnotification table/entity reference
+# Notification (appnotification) table/entity reference
 
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
@@ -29,19 +29,13 @@ Notification to be provided to a user.
 
 |Message|Web API Operation|SDK Assembly|
 |-|-|-|
-|Assign|PATCH [*org URI*]/api/data/v9.0/appnotifications(*appnotificationid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
 |Create|POST [*org URI*]/api/data/v9.0/appnotifications<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
 |Delete|DELETE [*org URI*]/api/data/v9.0/appnotifications(*appnotificationid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|GrantAccess|<xref href="Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
-|IsValidStateTransition|<xref href="Microsoft.Dynamics.CRM.IsValidStateTransition?text=IsValidStateTransition Function" />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
-|ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/appnotifications(*appnotificationid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/appnotifications<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
-|RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
-|RevokeAccess|<xref href="Microsoft.Dynamics.CRM.RevokeAccess?text=RevokeAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
-|SetState|PATCH [*org URI*]/api/data/v9.0/appnotifications(*appnotificationid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
 |Update|PATCH [*org URI*]/api/data/v9.0/appnotifications(*appnotificationid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|Upsert||<xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest>|
 
 ## Properties
 
@@ -69,18 +63,17 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [appnotificationId](#BKMK_appnotificationId)
 - [Body](#BKMK_Body)
 - [Data](#BKMK_Data)
-- [ExpiresOn](#BKMK_ExpiresOn)
 - [IconType](#BKMK_IconType)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
+- [PartitionId](#BKMK_PartitionId)
 - [Priority](#BKMK_Priority)
-- [statecode](#BKMK_statecode)
-- [statuscode](#BKMK_statuscode)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
 - [Title](#BKMK_Title)
 - [ToastType](#BKMK_ToastType)
+- [TTLInSeconds](#BKMK_TTLInSeconds)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
 
 
@@ -144,21 +137,6 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Memo|
 
 
-### <a name="BKMK_ExpiresOn"></a> ExpiresOn
-
-|Property|Value|
-|--------|-----|
-|DateTimeBehavior|DateOnly|
-|Description|Date and time when the notification will be deleted|
-|DisplayName|Expires on|
-|Format|DateOnly|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|expireson|
-|RequiredLevel|None|
-|Type|DateTime|
-
-
 ### <a name="BKMK_IconType"></a> IconType
 
 |Property|Value|
@@ -173,14 +151,14 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IconType Choices/Options
 
-|Value|Label|
-|-----|-----|
-|100000000|Info|
-|100000001|Success|
-|100000002|Failure|
-|100000003|Warning|
-|100000004|Mention|
-|100000005|Custom|
+|Value|Label|Description|
+|-----|-----|--------|
+|100000000|Info||
+|100000001|Success||
+|100000002|Failure||
+|100000003|Warning||
+|100000004|Mention||
+|100000005|Custom||
 
 
 
@@ -248,6 +226,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|EntityName|
 
 
+### <a name="BKMK_PartitionId"></a> PartitionId
+
+|Property|Value|
+|--------|-----|
+|Description|Partitioning will be based on owner and it is recommended to specify this field for all operations for performance reason|
+|DisplayName|Partition Id|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|partitionid|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
+
+
 ### <a name="BKMK_Priority"></a> Priority
 
 |Property|Value|
@@ -262,53 +256,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### Priority Choices/Options
 
-|Value|Label|
-|-----|-----|
-|200000000|Normal|
-|200000001|High|
-
-
-
-### <a name="BKMK_statecode"></a> statecode
-
-|Property|Value|
-|--------|-----|
-|Description|Status of the notification|
-|DisplayName|Status|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|statecode|
-|RequiredLevel|SystemRequired|
-|Type|State|
-
-#### statecode Choices/Options
-
-|Value|Label|DefaultStatus|InvariantName|
-|-----|-----|-------------|-------------|
-|0|Active|1|Active|
-|1|Inactive|3|Inactive|
-
-
-
-### <a name="BKMK_statuscode"></a> statuscode
-
-|Property|Value|
-|--------|-----|
-|Description|Reason for the status of the Notification|
-|DisplayName|Status Reason|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|statuscode|
-|RequiredLevel|None|
-|Type|Status|
-
-#### statuscode Choices/Options
-
-|Value|Label|State|
-|-----|-----|-----|
-|1|Unread|0|
-|2|Read|0|
-|3|Inactive|1|
+|Value|Label|Description|
+|-----|-----|--------|
+|200000000|Normal||
+|200000001|High||
 
 
 
@@ -358,11 +309,27 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### ToastType Choices/Options
 
-|Value|Label|
-|-----|-----|
-|200000000|Timed|
-|200000001|Hidden|
+|Value|Label|Description|
+|-----|-----|--------|
+|200000000|Timed|Toast will fade out after the time out configured by the user|
+|200000001|Hidden|Toast will not show but the notification will still be displayed in notification center|
 
+
+
+### <a name="BKMK_TTLInSeconds"></a> TTLInSeconds
+
+|Property|Value|
+|--------|-----|
+|Description|After the specified number of seconds the notification will be deleted|
+|DisplayName|Expiry (seconds)|
+|Format|None|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|ttlinseconds|
+|MaxValue|2147483647|
+|MinValue|1|
+|RequiredLevel|None|
+|Type|Integer|
 
 
 ### <a name="BKMK_UTCConversionTimeZoneCode"></a> UTCConversionTimeZoneCode
@@ -763,157 +730,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|BigInt|
 
-<a name="onetomany"></a>
-
-## One-To-Many Relationships
-
-Listed by **SchemaName**.
-
-- [appnotification_SyncErrors](#BKMK_appnotification_SyncErrors)
-- [appnotification_DuplicateMatchingRecord](#BKMK_appnotification_DuplicateMatchingRecord)
-- [appnotification_DuplicateBaseRecord](#BKMK_appnotification_DuplicateBaseRecord)
-- [appnotification_AsyncOperations](#BKMK_appnotification_AsyncOperations)
-- [appnotification_MailboxTrackingFolders](#BKMK_appnotification_MailboxTrackingFolders)
-- [appnotification_ProcessSession](#BKMK_appnotification_ProcessSession)
-- [appnotification_BulkDeleteFailures](#BKMK_appnotification_BulkDeleteFailures)
-- [appnotification_PrincipalObjectAttributeAccesses](#BKMK_appnotification_PrincipalObjectAttributeAccesses)
-
-
-### <a name="BKMK_appnotification_SyncErrors"></a> appnotification_SyncErrors
-
-**Added by**: System Solution Solution
-
-Same as syncerror table [appnotification_SyncErrors](syncerror.md#BKMK_appnotification_SyncErrors) Many-To-One relationship.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|syncerror|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|appnotification_SyncErrors|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_appnotification_DuplicateMatchingRecord"></a> appnotification_DuplicateMatchingRecord
-
-**Added by**: System Solution Solution
-
-Same as duplicaterecord table [appnotification_DuplicateMatchingRecord](duplicaterecord.md#BKMK_appnotification_DuplicateMatchingRecord) Many-To-One relationship.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|duplicaterecord|
-|ReferencingAttribute|duplicaterecordid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|appnotification_DuplicateMatchingRecord|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_appnotification_DuplicateBaseRecord"></a> appnotification_DuplicateBaseRecord
-
-**Added by**: System Solution Solution
-
-Same as duplicaterecord table [appnotification_DuplicateBaseRecord](duplicaterecord.md#BKMK_appnotification_DuplicateBaseRecord) Many-To-One relationship.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|duplicaterecord|
-|ReferencingAttribute|baserecordid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|appnotification_DuplicateBaseRecord|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_appnotification_AsyncOperations"></a> appnotification_AsyncOperations
-
-**Added by**: System Solution Solution
-
-Same as asyncoperation table [appnotification_AsyncOperations](asyncoperation.md#BKMK_appnotification_AsyncOperations) Many-To-One relationship.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|asyncoperation|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|appnotification_AsyncOperations|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_appnotification_MailboxTrackingFolders"></a> appnotification_MailboxTrackingFolders
-
-**Added by**: System Solution Solution
-
-Same as mailboxtrackingfolder table [appnotification_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_appnotification_MailboxTrackingFolders) Many-To-One relationship.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|mailboxtrackingfolder|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|appnotification_MailboxTrackingFolders|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_appnotification_ProcessSession"></a> appnotification_ProcessSession
-
-**Added by**: System Solution Solution
-
-Same as processsession table [appnotification_ProcessSession](processsession.md#BKMK_appnotification_ProcessSession) Many-To-One relationship.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|processsession|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|appnotification_ProcessSession|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_appnotification_BulkDeleteFailures"></a> appnotification_BulkDeleteFailures
-
-**Added by**: System Solution Solution
-
-Same as bulkdeletefailure table [appnotification_BulkDeleteFailures](bulkdeletefailure.md#BKMK_appnotification_BulkDeleteFailures) Many-To-One relationship.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|bulkdeletefailure|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|appnotification_BulkDeleteFailures|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_appnotification_PrincipalObjectAttributeAccesses"></a> appnotification_PrincipalObjectAttributeAccesses
-
-**Added by**: System Solution Solution
-
-Same as principalobjectattributeaccess table [appnotification_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_appnotification_PrincipalObjectAttributeAccesses) Many-To-One relationship.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|principalobjectattributeaccess|
-|ReferencingAttribute|objectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|appnotification_PrincipalObjectAttributeAccesses|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
 <a name="manytoone"></a>
 
 ## Many-To-One Relationships
@@ -982,3 +798,4 @@ See appmodule Table [appmodule_appnotification_app](appmodule.md#BKMK_appmodule_
 
 [About the table reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+<xref href="Microsoft.Dynamics.CRM.appnotification?text=appnotification EntityType" />
