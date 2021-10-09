@@ -1,4 +1,4 @@
----
+e---
 title: "Design a custom page for your model-driven app" 
 description: "Learn how to design a custom page for your model-driven app"
 ms.custom: ""
@@ -42,14 +42,14 @@ Custom page authoring currently supports a subset of canvas app controls. The ta
   |Radio Group<sup>1</sup>|Input|
   |Slider<sup>1</sup>|Input|
   |Rating<sup>1</sup>|Input|
-  |[Vertical Container](/maker/canvas-apps/controls/control-vertical-container.md)|Layout|New responsive horizontal layout container|
-  |[Horizontal Container](/maker/canvas-apps/controls/control-horizontal-container.md)|Layout|New responsive horizontal layout container|
-  |[Rich Text Editor](/maker/canvas-apps/controls/control-richtexteditor.md)|Input|
-  |[Gallery](/maker/canvas-apps/controls/control-gallery.md)|List|
-  |[Icon](/maker/canvas-apps/controls/control-shapes-icons.md)|Media|
-  |[Image](/maker/canvas-apps/controls/control-image.md)|Media|
-  |[Edit Form](/maker/canvas-apps/controls/control-form-detail.md)|Input|
-  |[Display Form](/maker/canvas-apps/controls/control-form-detail.md)|Input|
+  |[Vertical Container](/powerapps/maker/canvas-apps/controls/control-vertical-container.md)|Layout|New responsive horizontal layout container|
+  |[Horizontal Container](/powerapps/maker/canvas-apps/controls/control-horizontal-container.md)|Layout|New responsive horizontal layout container|
+  |[Rich Text Editor](/powerapps/maker/canvas-apps/controls/control-richtexteditor.md)|Input|
+  |[Gallery](/powerapps/maker/canvas-apps/controls/control-gallery.md)|List|
+  |[Icon](/powerapps/maker/canvas-apps/controls/control-shapes-icons.md)|Media|
+  |[Image](/powerapps/maker/canvas-apps/controls/control-image.md)|Media|
+  |[Edit Form](/powerapps/maker/canvas-apps/controls/control-form-detail.md)|Input|
+  |[Display Form](/powerapps/maker/canvas-apps/controls/control-form-detail.md)|Input|
   |Code components|Custom| [Add code components to a custom page](page-code-components.md)|
   |Canvas components|Custom| [Add canvas components to a custom page](page-canvas-components.md)|
   
