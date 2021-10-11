@@ -33,7 +33,7 @@ configuration to source control and move portal configuration to any environment
 using Microsoft Power Platform CLI.
 
 > [!NOTE]
-> This feature is generally available starting with Power Platform CLI version 1.9.8. To learn about installing the latest version, see [Install Microsoft Power Platform CLI](../../developer/data-platform/powerapps-cli#standalone-power-platform-cli).
+> This feature is generally available starting with Power Platform CLI version 1.9.8. To learn about installing the latest version, see [Install Microsoft Power Platform CLI](../../developer/data-platform/powerapps-cli.md#standalone-power-platform-cli).
 
 ### Why use Microsoft Power Platform CLI for portals development?
 
