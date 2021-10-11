@@ -17,7 +17,7 @@ search.app:
   - D365CE
 ---
 
-# Preview: In-app notifications in model-driven apps 
+# In-app notifications in model-driven apps (preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
 
