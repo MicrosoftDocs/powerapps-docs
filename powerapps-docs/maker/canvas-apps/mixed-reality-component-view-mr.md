@@ -82,7 +82,7 @@ OnChange | Behavior that is triggered when any property on the button is changed
 
 ### How object scaling is handled
 
-When you insert a model with the **View in MR** component, it will follow the model's inherent dimensions. Alternatively, you can specify some or all of the dimensions - these dimensions are labelled as the **Object width**, **Object height**, and **Object depth** properties.
+When you insert a model with the **View in MR** component, it will follow the model's inherent dimensions. Alternatively, you can specify some or all of the dimensions - these dimensions are labeled as the **Object width**, **Object height**, and **Object depth** properties.
 
 If you want to change the size of the model, we apply certain scaling techniques depending on how many dimensions you change:
 
