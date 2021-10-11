@@ -1,12 +1,12 @@
 ---
-title: "Relevance search| MicrosoftDocs"
-description: How to use relevance search
+title: "Search for tables and rows by using Dataverse search| MicrosoftDocs"
+description: How to use Dataverse search
 author: mduelae
 manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 6/24/2021
+ms.date: 10/04/2021
 ms.subservice: end-user
 ms.author: mkaur
 ms.custom: ""
@@ -19,13 +19,13 @@ search.app:
   - D365CE
 ---
 
-# Search for tables and rows by using relevance search
+# Search for tables and rows by using Dataverse search
 
 [!INCLUDE[cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-With relevance search, the search box is always available at the top of every page in your app. You can start a new search and quickly find the information that you're looking for. 
+With Dataverse search, the search box is always available at the top of every page in your app. You can start a new search and quickly find the information that you're looking for. 
 
-When relevance search is turned on, it becomes your default and only global search experience for all of your model-driven apps. You won't be able to switch to [quick find search also known as categorized search](quick-find.md).
+When Dataverse search is turned on, it becomes your default and only global search experience for all of your model-driven apps. You won't be able to switch to [quick find search also known as categorized search](quick-find.md).
 
 > [!div class="mx-imgBorder"]
 > ![Search box in the header for an app.](media/new-search-exp.png "Search box in the header for an app")
@@ -37,10 +37,10 @@ See your recent searches and recently accessed rows when you select the search b
 
 Up to three recent search terms appear at the top, based on the last three search queries that you viewed the results for. These recent search terms are personalized and based on your device and browser.
 
-The recent search terms are followed by up to seven of the rows you recently accessed. If you frequently access a small number of rows, you can quickly get to them from here. Recently accessed rows are independent of tables that have been indexed for relevance search, because no search has been performed yet. The rows are also grouped by table type, which lets you quickly scan the list.
+The recent search terms are followed by up to seven of the rows you recently accessed. If you frequently access a small number of rows, you can quickly get to them from here. Recently accessed rows are independent of tables that have been indexed for Dataverse search, because no search has been performed yet. The rows are also grouped by table type, which lets you quickly scan the list.
 
 > [!div class="mx-imgBorder"]
-> ![Screenshot of the relevance search flyout window.](media/legend-for-new-exp.png "Screenshot of the relevance search flyout window]") 
+> ![Screenshot of the Dataverse search flyout window.](media/legend-for-new-exp.png "Screenshot of the Dataverse search flyout window]") 
 
 Legend
 
@@ -49,7 +49,7 @@ Legend
 
 ## Inline suggestions
 
-As you start entering text, you'll see suggested results that help minimize keystrokes and simplify page navigation. Suggested results are based on a search performed on the primary column of a table, which is enabled for relevance search and included in your model-driven app. For more information, see [Add or edit model-driven app components in the Power Apps app designer](../maker/model-driven-apps/add-edit-app-components.md#add-a-component).
+As you start entering text, you'll see suggested results that help minimize keystrokes and simplify page navigation. Suggested results are based on a search performed on the primary column of a table, which is enabled for Dataverse search and included in your model-driven app. Suggested results are sometimes also based on non-primary columns of tables enabled for Dataverse search, depending on your search usage pattern and the search usage pattern in the environment. For more information, see [Add or edit model-driven app components in the Power Apps app designer](../maker/model-driven-apps/add-edit-app-components.md#add-a-component).
 
 Suggestions are shown when three or more characters are entered in the search box, and are based on two types of matching:
 
@@ -57,7 +57,7 @@ Suggestions are shown when three or more characters are entered in the search bo
 
 - **Fuzzy search**: Terms that are misspelled by one character are matched. For example, entering **winry** will show the account **Coho Winery**, among other results. 
 
-Suggested rows show a secondary field in addition to the primary field. This helps you differentiate between rows that have the same primary field value. The secondary field is chosen based on the table’s quick find view. It is always the first non-primary field on the table’s quick find view that contains data for the row.
+Suggested rows show a secondary field in addition to the primary field. This helps you differentiate between rows that have the same primary field value. The secondary field is chosen based on the table’s quick find view. It is either the field that has the search text or the first non-primary field on the table’s quick find view that contains data for the row.
 
 
 ![Suggested results that appear when you enter a search query.](media/relevance-search-suggested-results.gif "Suggested results that appear when you enter a search query")
@@ -164,18 +164,18 @@ Currently there is no option to disable the feedback question prompt.
 
 ## Understand search results
 
-Relevance search has a powerful set of capabilities to help you put Microsoft Dataverse at your fingertips. Here are some pointers to help you understand what results you can expect in different scenarios.
+Dataverse search has a powerful set of capabilities to help you put Microsoft Dataverse at your fingertips. Here are some pointers to help you understand what results you can expect in different scenarios.
 
 > [!NOTE]
-> - Relevance search is text-based, and can search only on columns of type **Single line of text**, **Multiple lines of text**, **Choice**, or **Lookup**. Columns of type **Numeric**, **Date**, and **File** aren't searched on.
-> - Relevance search enables you to search for rows that are shared with you and rows that you own. Hierarchical security models aren't supported. This means that even if you see a row in Dataverse because you have access to it through hierarchical security, you won't see that row matched by relevance search unless you own it or it was shared with you.
-> - Relevance search supports column level security. This means that a user with access to a restricted column can search for the column and will see it in the search results. A user that doesn't have permission to the restricted column won't be able to search or see results for the column.
+> - Dataverse search is text-based, and can search only on columns of type **Single line of text**, **Multiple lines of text**, **Choice**, or **Lookup**. Columns of type **Numeric**, **Date**, and **File** aren't searched on.
+> - Dataverse search enables you to search for rows that are shared with you and rows that you own. Hierarchical security models aren't supported. This means that even if you see a row in Dataverse because you have access to it through hierarchical security, you won't see that row matched by Dataverse search unless you own it or it was shared with you.
+> - Dataverse search supports column level security. This means that a user with access to a restricted column can search for the column and will see it in the search results. A user that doesn't have permission to the restricted column won't be able to search or see results for the column.
 
 - **Boosted search results**  
   Use important attributes as keywords to "boost" your search for information. Entering a table type to boost search results is an easy way to indicate which results you prefer. For example, searching for **Susan Adatum** indicates that you're looking for a contact **Susan** related to the account **Adatum**.
 
 - **Natural language understanding**   
-  Search<!--note from editor: Should this be "relevance search" or "intelligent search"?--> has a better understanding of terms that are used to indicated intent. Some examples include:
+  Search<!--note from editor: Should this be "Dataverse search" or "intelligent search"?--> has a better understanding of terms that are used to indicated intent. Some examples include:
   - Searching for **open phone calls** will show phone call activity records that have the status **open**.
   - Searching for **contact missing email** will show contacts who have an empty email address field, rather than treating **missing** as a keyword.
 
@@ -262,7 +262,7 @@ Use double quotation marks around a keyword to perform an exact match. Search ig
 
 ## Quick actions
 
-The relevance search experience brings some of the most frequently used actions closer to search results, to help you complete your task without having to navigate to the record page in model-driven apps.
+The Dataverse search experience brings some of the most frequently used actions closer to search results, to help you complete your task without having to navigate to the record page in model-driven apps.
 
 Quick actions are small set of commands specific to a table. You can see quick actions when you're interacting with search in model-driven apps running on a web browser. Some of the commonly used tables are configured to show a set of commands to help you complete your task without losing context.
 
@@ -275,7 +275,7 @@ Quick actions are small set of commands specific to a table. You can see quick a
 | Phone Call     |     Mark complete, Cancel, Set Regarding, Assign, Email a link |
 | Email     |     Cancel, Set Regarding, Email a link  |
 
-For more information on how to configure quick actions, see [Configure Relevance Search to improve search results and performance](/power-platform/admin/configure-relevance-search-organization#configure-quick-actions).
+For more information on how to configure quick actions, see [Configure Dataverse search to improve search results and performance](/power-platform/admin/configure-relevance-search-organization#configure-quick-actions).
 
 ### Quick actions and suggested results
 
@@ -308,8 +308,8 @@ The following keyboard shortcuts apply to grids. For more information, see:
 
 ### See also
 
-[What is relevance search?](relevance-search-benefits.md)<br/>
+[What is Dataverse search?](relevance-search-benefits.md)<br/>
 [Configure facets and filters](facets-and-filters.md)<br/>
-[Frequently asked questions about relevance search](relevance-faq.md)
+[Frequently asked questions about Dataverse search](relevance-faq.md)
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

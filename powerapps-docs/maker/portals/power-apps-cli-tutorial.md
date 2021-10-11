@@ -44,7 +44,7 @@ PowerShell instead.
 Before you connect, list, download, or upload any changes for a Power Apps
 portal, you must authenticate to the Dataverse environment first. For more
 information about authentication using Microsoft Power Platform CLI, go to [Microsoft Power Platform CLI –
-Auth](../../developer/data-platform/powerapps-cli.md#auth).
+Auth](../../developer/data-platform/cli/reference/auth-command.md).
 
 To authenticate, open Windows PowerShell and run the following command using
 your Dataverse environment URL:
@@ -113,7 +113,7 @@ directly in Visual Studio Code.
 
 After making the required changes, upload them using the following command:
 
-`pac paportal --path [Folder-location]`
+`pac paportal upload --path [Folder-location]`
 
 **Example**
 
@@ -158,5 +158,5 @@ portals content for other [supported tables](power-apps-cli.md#supported-tables)
 ### See also
 
 - [Microsoft Power Platform CLI](../../developer/data-platform/powerapps-cli.md)
-- [Use the Visual Studio Code extension (Preview)](vs-code-extension.md)
+- [Use the Visual Studio Code extension (preview)](vs-code-extension.md)
 

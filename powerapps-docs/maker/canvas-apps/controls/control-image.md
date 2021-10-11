@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 10/25/2016
+ms.date: 09/22/2021
 ms.subservice: canvas-maker
 ms.author: chmoncay
 search.audienceType: 
@@ -17,6 +17,7 @@ search.app:
 contributors:
   - tapanm-msft
   - chmoncay
+  - tahoon-ms
 ---
 # Image control in Power Apps
 A control that shows an image from, for example, a local file or a data source.
@@ -145,20 +146,18 @@ If you add one or more **Image** controls to your app, you can show individual i
 * Consider checking for contrast issues within the image, if it is not purely decorative.
 
 ### Screen reader support
-* **[AccessibleLabel](properties-accessibility.md)** must be present, if the graphic is used as a button or is otherwise not just for decoration.
-* **[AccessibleLabel](properties-accessibility.md)** must be empty or the empty string **""**, if the graphic is purely for decoration. This causes screen readers to ignore the graphic.
-* **[AccessibleLabel](properties-accessibility.md)** can be empty or the empty string **""**, if the graphic provides redundant information.
-  * For example, an **Image** of gears with its **[AccessibleLabel](properties-accessibility.md)** set to **Settings**. This image is not used as a button. It is next to a **[Label](control-text-box.md)** that also says **Settings**. Screen readers will read the image as **Settings**, and the label as **Settings** again. This is unnecessarily verbose. In this case, the **Image** does not need an **[AccessibleLabel](properties-accessibility.md)**.
+- **[AccessibleLabel](properties-accessibility.md)** must be set for important graphics.
 
-    > [!IMPORTANT]
-    > Screen readers will always read **Image**s that have **[TabIndex](properties-accessibility.md)** of zero or greater, even if **[AccessibleLabel](properties-accessibility.md)** is empty. This is because they are rendered as buttons. If no **[AccessibleLabel](properties-accessibility.md)** is provided, screen readers will simply read the graphic as **button**.
+- If the graphic is for decoration or provides redundant information, leave **[AccessibleLabel](properties-accessibility.md)** empty or set it to the empty string **""** . Screen readers will ignore these graphics.
+
+For example, you might place an **Image** of a padlock next to a **[Label](control-text-box.md)** that says **This form cannot be modified**. You don't need an **[AccessibleLabel](properties-accessibility.md)** for the image because the **Label** already explains its meaning.
+
+> [!IMPORTANT]
+> When **[TabIndex](properties-accessibility.md)** is zero or greater, the **Image** becomes a button. Its appearance doesn't change, but screen readers will treat it as a button. They will not ignore the control, even if **AccessibleLabel** is empty.
 
 ### Keyboard support
-* **[TabIndex](properties-accessibility.md)** must be zero or greater, if the graphic is used as a button. This allows keyboard users to navigate to it.
-* Focus indicators must be clearly visible, if the graphic is used as a button. Use **[FocusedBorderColor](properties-color-border.md)** and **[FocusedBorderThickness](properties-color-border.md)** to achieve this.
+* **[TabIndex](properties-accessibility.md)** must be zero or greater, if the graphic is used as a button. Keyboard users can then navigate to it.
 
-    > [!NOTE]
-  > When **[TabIndex](properties-accessibility.md)** is zero or greater, the **Image** is rendered as a button. There is no change to the visual appearance, but screen readers will correctly identify the image as a button. When **[TabIndex](properties-accessibility.md)** is less than zero, the **Image** is identified as an image.
-
+* Focus indicators must be clearly visible, if the graphic is used as a button. Use **[FocusedBorderColor](properties-color-border.md)** and **[FocusedBorderThickness](properties-color-border.md)** to achieve this result.
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

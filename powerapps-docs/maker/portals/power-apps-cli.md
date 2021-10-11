@@ -1,5 +1,5 @@
 ---
-title: Portals support for Power Platform CLI (Preview)
+title: Portals support for Power Platform CLI (preview)
 description: Learn how to work with Power Platform CLI for CI/CD (Continuous Integration/Continuous Deployment) improvements of a portal.
 author: neerajnandwana-msft
 ms.service: powerapps
@@ -14,7 +14,7 @@ contributors:
     - tapanm-msft
 ---
 
-# Portals support for Microsoft Power Platform CLI (Preview)
+# Portals support for Microsoft Power Platform CLI (preview)
 
 [This article is pre-release documentation and is subject to change.]
 
@@ -293,9 +293,9 @@ adx_contentsnippet:
 > [!NOTE]
 > To learn about all commands used in CLI in addition to portals, go to [Common commands in Microsoft Power Platform CLI](../../developer/data-platform/powerapps-cli.md#common-commands).
 
-## Use the Visual Studio Code extension (Preview)
+## Use the Visual Studio Code extension (preview)
 
-You can also use VS Code extension **Power Platform VS Code Extension** to benefit built-in Liquid language from IntelliSense, code completion assistance, hinting, and interact with Microsoft Power Platform CLI using VS Code Integrated Terminal. More information: [Use the Visual Studio Code extension (Preview)](vs-code-extension.md)
+You can also use VS Code extension **Power Platform VS Code Extension** to benefit built-in Liquid language from IntelliSense, code completion assistance, hinting, and interact with Microsoft Power Platform CLI using VS Code Integrated Terminal. More information: [Use the Visual Studio Code extension (preview)](vs-code-extension.md)
 
 ## Additional considerations
 
@@ -309,5 +309,5 @@ You can also use VS Code extension **Power Platform VS Code Extension** to benef
 ### See also
 
 - [Microsoft Power Platform CLI](../../developer/data-platform/powerapps-cli.md)
-- [Use the Visual Studio Code extension (Preview)](vs-code-extension.md)
+- [Use the Visual Studio Code extension (preview)](vs-code-extension.md)
 

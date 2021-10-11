@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 10/25/2016
+ms.date: 09/22/2021
 ms.subservice: canvas-maker
 ms.author: chmoncay
 search.audienceType:
@@ -17,6 +17,7 @@ search.app:
 contributors:
   - tapanm-msft
   - chmoncay
+  - tahoon-ms
 ---
 # Shape and Icon controls in Power Apps
 Graphics for which you can configure appearance and behavior properties.
@@ -108,22 +109,18 @@ For shapes without borders:
 - **[HoverFill](properties-color-border.md)** and the color outside the control (if used as a button)
 
 ### Screen-reader support
-- **[AccessibleLabel](properties-accessibility.md)** must be set to a non-empty string if the graphic is used as a button or is otherwise not just for decoration.
+- **[AccessibleLabel](properties-accessibility.md)** must be set for important graphics.
 
-- **[AccessibleLabel](properties-accessibility.md)** must be empty or the empty string **""** if the graphic provides redundant information or is purely for decoration. This value causes screen readers to ignore the graphic.
+- If the graphic is for decoration or provides redundant information, leave **[AccessibleLabel](properties-accessibility.md)** empty or set it to the empty string **""** . Screen readers will ignore these graphics.
 
-For example, you might set the **[AccessibleLabel](properties-accessibility.md)** property of a **Settings** icon to **Settings**. This icon isn't used as a button. It's next to a **[Label](control-text-box.md)** that also says **Settings**. Screen readers will read both the icon and the label as **Settings**, which is unnecessarily verbose. In this case, the icon doesn't need an **[AccessibleLabel](properties-accessibility.md)**.
+For example, you might place a **Lock** icon next to a **[Label](control-text-box.md)** that says **This form cannot be modified**. You don't need an **[AccessibleLabel](properties-accessibility.md)** for the icon because the **Label** already explains its meaning.
 
 > [!IMPORTANT]
-> Screen readers will read an icon or shape as **button** if its **[AccessibleLabel](properties-accessibility.md)** is set to an empty string and its **[TabIndex](properties-accessibility.md)** is set to zero or greater. Such icons or shapes are rendered as buttons. 
+> When **[TabIndex](properties-accessibility.md)** is zero or greater, the icon or shape becomes a button. Its appearance doesn't change, but screen readers will treat it as a button. They will not ignore the control, even if **AccessibleLabel** is empty. When **[TabIndex](properties-accessibility.md)** is less than zero, screen readers treat the icon or shape as an image.
 
 ### Keyboard support
-- **[TabIndex](properties-accessibility.md)** must be zero or greater if the graphic is used as a button. If you set this value for an icon or shape, keyboard users can navigate to it.
+- **[TabIndex](properties-accessibility.md)** must be zero or greater if the graphic is used as a button. Keyboard users can then navigate to it.
 
 - Focus indicators must be clearly visible if the graphic is used as a button. Use **[FocusedBorderColor](properties-color-border.md)** and **[FocusedBorderThickness](properties-color-border.md)** to achieve this result.
-
-    > [!NOTE]
-    > When **[TabIndex](properties-accessibility.md)** is zero or greater, the icon or shape is rendered as a button. Its appearance doesn't change, but screen readers will correctly identify the image as a button. When **[TabIndex](properties-accessibility.md)** is less than zero, the icon or shape is identified as an image.
-
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

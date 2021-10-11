@@ -21,8 +21,6 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-[!INCLUDE cc-beta-prerelease-disclaimer]
-
 This introduction explains how to find and open an app, and how to work with its common user interface elements including lists, forms, and business processes.
 
 
