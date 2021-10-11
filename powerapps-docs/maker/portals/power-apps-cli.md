@@ -32,6 +32,9 @@ Deployment) of portal configuration. You can now check in the portal
 configuration to source control and move portal configuration to any environment
 using Microsoft Power Platform CLI.
 
+> [!NOTE]
+> This feature is generally available starting with Power Platform CLI version 1.9.8. To learn about installing the latest version, see [Install Microsoft Power Platform CLI](../../developer/data-platform/powerapps-cli#standalone-power-platform-cli).
+
 ### Why use Microsoft Power Platform CLI for portals development?
 
 With portals support for Microsoft Power Platform CLI, you can now use offline-like capability
