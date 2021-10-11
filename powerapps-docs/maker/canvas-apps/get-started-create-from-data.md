@@ -27,6 +27,9 @@ The Excel file must be in a cloud-storage account, such as OneDrive, Google Driv
 
 If you don't have a license for Power Apps, you can [sign up for free](../signup-for-powerapps.md).
 
+Watch this video to learn how to create a canvas app with data from an Excel file:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLj3l]
+
 ## Prerequisites
 
 To follow this topic exactly, download the [Flooring Estimates](https://az787822.vo.msecnd.net/documentation/get-started-from-data/FlooringEstimates.xlsx) file in Excel, and save it in your [cloud storage account](connections/cloud-storage-blob-connections.md).

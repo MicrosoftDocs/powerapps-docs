@@ -21,6 +21,9 @@ The Power Apps templates for Microsoft Teams include many pre-defined columns to
 
 In this article, we'll learn how to add a new column/field to a work item. For our example, we'll add a new field to capture the effort required for a particular work item. we'll add this field to the **New** and **Edit** Work Item screens for both desktop and mobile.
 
+Watch this video to learn how to add a new column to Milestones sample app to track work items:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLiBS]
+
 ## Prerequisites
 
 To complete this exercise, we'd need the ability to log in into Teams&mdash;which will be available as part of select Microsoft 365 subscriptions, and also have the Milestones app installed in a Teams channel. If you don’t have it installed, you can install it from https://aka.ms/teamsmilestones.

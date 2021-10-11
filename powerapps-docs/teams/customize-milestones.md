@@ -24,6 +24,9 @@ Before you can customize the app, you must install it from the Teams store. You 
 
 Once the app is installed, you can then customize it using the following steps.
 
+Watch this video to learn how to customize Milestones sample app:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLiBR]
+
 ## Open Power Apps app in Teams
 
 1. Select ellipsis (…), and search for **Power Apps**.

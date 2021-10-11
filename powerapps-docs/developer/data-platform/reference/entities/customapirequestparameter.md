@@ -1,13 +1,13 @@
 ---
 title: "CustomAPIRequestParameter table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the CustomAPIRequestParameter table/entity."
-ms.date: 05/20/2021
+ms.date: 10/05/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -195,8 +195,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsOptional Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -358,21 +358,21 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### Type Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Boolean|
-|1|DateTime|
-|2|Decimal|
-|3|Entity|
-|4|EntityCollection|
-|5|EntityReference|
-|6|Float|
-|7|Integer|
-|8|Money|
-|9|Picklist|
-|10|String|
-|11|StringArray|
-|12|Guid|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Boolean||
+|1|DateTime||
+|2|Decimal||
+|3|Entity||
+|4|EntityCollection||
+|5|EntityReference||
+|6|Float||
+|7|Integer||
+|8|Money||
+|9|Picklist||
+|10|String||
+|11|StringArray||
+|12|Guid||
 
 
 
@@ -474,12 +474,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### ComponentState Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Published|
-|1|Unpublished|
-|2|Deleted|
-|3|Deleted Unpublished|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Published||
+|1|Unpublished||
+|2|Deleted||
+|3|Deleted Unpublished||
 
 
 
@@ -634,8 +634,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsManaged Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Managed|
 |0|Unmanaged|
 
@@ -1090,3 +1090,4 @@ See customapi Table [customapi_customapirequestparameter](customapi.md#BKMK_cust
 
 [About the table reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+<xref href="Microsoft.Dynamics.CRM.customapirequestparameter?text=customapirequestparameter EntityType" />

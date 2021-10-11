@@ -23,6 +23,9 @@ The Issue reporting Power App template for Microsoft Teams is designed to be a c
 
 Once the app is installed, you can then customize the app using the following steps:
 
+Watch this video to learn how to customize the Issue reporting sample app:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLnv1]
+
 ## Opening Power Apps app in Teams
 
 1. In Teams, select **…** (ellipsis) from the left-pane.

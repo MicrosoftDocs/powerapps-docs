@@ -1,13 +1,13 @@
 ---
 title: "msdyn_knowledgearticleimage table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the msdyn_knowledgearticleimage table/entity."
-ms.date: 05/20/2021
+ms.date: 10/05/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -68,6 +68,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [msdyn_FileName](#BKMK_msdyn_FileName)
 - [msdyn_knowledgearticleimageId](#BKMK_msdyn_knowledgearticleimageId)
+- [msdyn_ParentEntityRecordID](#BKMK_msdyn_ParentEntityRecordID)
 - [msdyn_ParentKnowledgeArticleID](#BKMK_msdyn_ParentKnowledgeArticleID)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [OwnerId](#BKMK_OwnerId)
@@ -125,6 +126,20 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Uniqueidentifier|
 
 
+### <a name="BKMK_msdyn_ParentEntityRecordID"></a> msdyn_ParentEntityRecordID
+
+|Property|Value|
+|--------|-----|
+|Description|Parent entity record ID|
+|DisplayName|msdyn_ParentEntityRecordID|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|msdyn_parententityrecordid|
+|RequiredLevel|None|
+|Targets||
+|Type|Lookup|
+
+
 ### <a name="BKMK_msdyn_ParentKnowledgeArticleID"></a> msdyn_ParentKnowledgeArticleID
 
 |Property|Value|
@@ -135,7 +150,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForRead|True|
 |LogicalName|msdyn_parentknowledgearticleid|
 |RequiredLevel|None|
-|Targets||
+|Targets|knowledgearticle|
 |Type|Lookup|
 
 
@@ -281,6 +296,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [ModifiedOnBehalfByName](#BKMK_ModifiedOnBehalfByName)
 - [ModifiedOnBehalfByYomiName](#BKMK_ModifiedOnBehalfByYomiName)
 - [msdyn_BlobFile_Name](#BKMK_msdyn_BlobFile_Name)
+- [msdyn_parentknowledgearticleidName](#BKMK_msdyn_parentknowledgearticleidName)
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
@@ -541,6 +557,22 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |IsValidForRead|True|
 |LogicalName|msdyn_blobfile_name|
 |MaxLength|200|
+|RequiredLevel|None|
+|Type|String|
+
+
+### <a name="BKMK_msdyn_parentknowledgearticleidName"></a> msdyn_parentknowledgearticleidName
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|msdyn_parentknowledgearticleidname|
+|MaxLength|4000|
 |RequiredLevel|None|
 |Type|String|
 
@@ -809,6 +841,7 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [user_msdyn_knowledgearticleimage](#BKMK_user_msdyn_knowledgearticleimage)
 - [team_msdyn_knowledgearticleimage](#BKMK_team_msdyn_knowledgearticleimage)
 - [business_unit_msdyn_knowledgearticleimage](#BKMK_business_unit_msdyn_knowledgearticleimage)
+- [msdyn_knowledgearticleimage_parentknowledgearticleid](#BKMK_msdyn_knowledgearticleimage_parentknowledgearticleid)
 
 
 ### <a name="BKMK_lk_msdyn_knowledgearticleimage_createdby"></a> lk_msdyn_knowledgearticleimage_createdby
@@ -852,6 +885,12 @@ See team Table [team_msdyn_knowledgearticleimage](team.md#BKMK_team_msdyn_knowle
 **Added by**: System Solution Solution
 
 See businessunit Table [business_unit_msdyn_knowledgearticleimage](businessunit.md#BKMK_business_unit_msdyn_knowledgearticleimage) One-To-Many relationship.
+
+### <a name="BKMK_msdyn_knowledgearticleimage_parentknowledgearticleid"></a> msdyn_knowledgearticleimage_parentknowledgearticleid
+
+**Added by**: System Solution Solution
+
+See knowledgearticle Table [msdyn_knowledgearticleimage_parentknowledgearticleid](knowledgearticle.md#BKMK_msdyn_knowledgearticleimage_parentknowledgearticleid) One-To-Many relationship.
 
 ### See also
 

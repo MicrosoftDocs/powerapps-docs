@@ -141,15 +141,15 @@
       items:
       - name: Compare search options
         href: ../user/search.md
-      - name: Relevance search
+      - name: Dataverse search
         items:
-        - name: What is relevance search?
+        - name: What is Dataverse search?
           href: ../user/relevance-search-benefits.md
-        - name: Search for tables and rows by using relevance search
+        - name: Search for tables and rows by using Dataverse search
           href: ../user/relevance-search.md
         - name: Configure facets and filters
           href: ../user/facets-and-filters.md
-        - name: FAQs about relevance search 
+        - name: FAQs about Dataverse search 
           href: ../user/relevance-faq.md
       - name: Quick Find
         href: ../user/quick-find.md
@@ -549,8 +549,14 @@
           href: ./canvas-apps/working-with-rules.md
         - name: Create or update bulk records
           href: ./canvas-apps/create-update-records-bulk.md
-        - name: Use Power Apps Ideas (Preview)
-          href: ./canvas-apps/power-apps-ideas.md
+        - name: Power Apps Ideas (preview)
+          items:
+          - name: Power Apps Ideas
+            href: ./canvas-apps/power-apps-ideas.md
+          - name: Transform natural language to Power Fx formulas
+            href: ./canvas-apps/power-apps-ideas-transform.md
+          - name: Transform examples to Power Fx formulas
+            href: ./canvas-apps/power-apps-ideas-train-examples.md
         - name: Formula reference
           items:
           - name: Overview
@@ -797,6 +803,8 @@
             href: ./canvas-apps/functions/function-rand.md
           - name: ReadNFC
             href: ./canvas-apps/functions/function-readnfc.md
+          - name: RecordInfo
+            href: ./canvas-apps/functions/function-recordinfo.md            
           - name: Refresh
             href: ./canvas-apps/functions/function-refresh.md
           - name: Relate
@@ -1296,7 +1304,7 @@
         - name: "Migrating embedded canvas from public preview"
           href: ./model-driven-apps/embedded-canvas-app-migrate-from-preview.md
       - name: Embed a Power BI report on a form
-        href: ./model-driven-apps/embed-powerbi-report-in-system-form.md
+        href: ./model-driven-apps/embed-powerbi-report-in-system-form.md 
       - name: Work with views
         href: ./model-driven-apps/create-edit-views.md
         items:
@@ -1361,6 +1369,8 @@
           href: ./model-driven-apps/stay-current-with-news-control.md
         - name: Add the form component control
           href: ./model-driven-apps/form-component-control.md
+        - name: Use the Power Apps grid control
+          href: ./model-driven-apps/power-apps-grid-control.md  
       - name: Use custom controls for data visualizations
         href: ./model-driven-apps/use-custom-controls-data-visualizations.md
     - name: Use Excel and Word templates
@@ -1433,7 +1443,7 @@
     href: ../mobile/run-powerapps-on-mobile.md
   - name: Use model-driven apps on mobile
     href: ../mobile/use-custom-model-driven-app-on-mobile.md
-  - name: Use relevance search on Power Apps Mobile  
+  - name: Use Dataverse search on Power Apps Mobile  
     href: ../mobile/relevance-search-mobile.md  
   - name: Set app display to dark or light mode  
     href: ../mobile/display-mode.md
@@ -1514,7 +1524,7 @@
                   href: ./portals/use-code-editor.md
                 - name: Add Power BI
                   href: ./portals/add-powerbi.md
-                - name: Add a chatbot (Preview)
+                - name: Add a chatbot (preview)
                   href: ./portals/add-chatbot.md
         - name: Work with templates
           href: ./portals/work-with-templates.md
@@ -1670,7 +1680,7 @@
                 href: ./portals/configure/use-simplified-authentication-configuration.md
               - name: Azure AD B2C
                 items:
-                    - name: Configure (Preview)
+                    - name: Configure (using interface in preview)
                       href: ./portals/configure/configure-azure-ad-b2c-provider.md
                     - name: Configure manually
                       href: ./portals/configure/configure-azure-ad-b2c-provider-manual.md
@@ -1836,19 +1846,19 @@
           - name: Compose HTTP requests and handle errors
             displayName: Portals Web API handle HTTP requests and errors
             href: ./portals/web-api-http-requests-handle-errors.md
-        - name: Code components (Preview)
+        - name: Code components (preview)
           items:
           - name: Overview of code components in portals
             href: ./portals/component-framework.md          
           - name: "Tutorial: Use code components in portals"
             href: ./portals/component-framework-tutorial.md            
-        - name: Use Microsoft Power Platform CLI (Preview)
+        - name: Use Microsoft Power Platform CLI
           items:
           - name: Overview of portals support for Microsoft Power Platform CLI 
             href: ./portals/power-apps-cli.md
           - name: "Tutorial: Use Microsoft Power Platform CLI with portals"
             href: ./portals/power-apps-cli-tutorial.md
-          - name: Use the Visual Studio Code extension for portals
+          - name: Use the Visual Studio Code extension for portals (Preview)
             href: ./portals/vs-code-extension.md
     - name: Update, upgrade, migrate and convert portals
       items:
@@ -1944,6 +1954,8 @@
                 href: ./portals/versions/versions-before-9.3.3.x.md
          - name: Starter portal package updates
            items:
+              - name: Package 9.3.2109.x
+                href: ./portals/versions/package-version-9.3.2109.md
               - name: Package 9.2.2108.x
                 href: ./portals/versions/package-version-9.2.2108.md
               - name: Package 9.2.2103.x
@@ -2115,6 +2127,8 @@
     items:
       - name: Solutions overview
         href: ./data-platform/solutions-overview.md
+      - name: Solution view
+        href: ./data-platform/solutions-area.md
       - name: Create a solution
         href: ./data-platform/create-solution.md
       - name: Export solutions
@@ -2133,7 +2147,7 @@
           href: ./data-platform/view-component-dependencies.md
         - name: Use environment variables
           href: ./data-platform/EnvironmentVariables.md
-        - name: Use a connection reference (preview)
+        - name: Use a connection reference
           href: ./data-platform/create-connection-reference.md  
         - name: Translate customized component text
           items:
@@ -2237,6 +2251,8 @@
     href: ../teams/embed-teams-app.md
   - name: Embed a model-driven app as tab app
     href: ../teams/embed-model-driven-teams-tab.md
+  - name: Embed a model-driven app as personal app
+    href: ../teams/embed-model-driven-teams-personal.md
   - name: Create apps in Teams
     items:
     - name: Create apps in Teams
@@ -2330,7 +2346,7 @@
       items:
         - name: Use sample apps from Teams store
           href: ../teams/use-sample-apps-from-teams-store.md
-        - name: Boards (Preview)
+        - name: Boards (preview)
           items:
              - name: Use Boards sample app
                href: ../teams/boards.md
@@ -2378,13 +2394,13 @@
                   href: ../teams/add-tag-to-mark-prioritized-ideas.md
                 - name: Enable users to discuss ideas
                   href: ../teams/extend-ideas-discussions.md
-        - name: Get connected (Preview)
+        - name: Get connected (preview)
           items:
             - name: Use Get connected sample app
               href: ../teams/get-connected.md
             - name: Understand Get connected sample app architecture
               href: ../teams/get-connected-architecture.md
-        - name: How to (Preview)
+        - name: How to (preview)
           items:
              - name: Use How to sample app
                href: ../teams/how-to.md
@@ -2451,14 +2467,14 @@
                  - name: Send a weekly report on project status from the Milestones sample app
                    href: ../teams/extend-milestones-weekly-report.md
                  - name: Send notification to the Team when work item status is updated in the Milestones sample app
-                   href: ../teams/extend-milestones-send notification.md
-        - name: Perspectives (Preview)
+                   href: ../teams/extend-milestones-send-notification.md
+        - name: Perspectives (preview)
           items:
             - name: Use Perspectives sample app
               href: ../teams/perspectives.md
             - name: Understand Perspectives sample app architecture
               href: ../teams/perspectives-architecture.md
-        - name: Profile+ (Preview)
+        - name: Profile+ (preview)
           items:
             - name: Use the Profile+ sample app 
               href: ../teams/profile-app.md

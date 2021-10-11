@@ -1,13 +1,13 @@
 ---
 title: "msdyn_analysiscomponent table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the msdyn_analysiscomponent table/entity."
-ms.date: 05/20/2021
+ms.date: 10/05/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -140,11 +140,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### msdyn_AnalysisComponentType Choices/Options
 
-|Value|Label|
-|-----|-----|
-|192350000|Organization Health|
-|192350001|Component Health|
-|192350002|Object Health|
+|Value|Label|Description|
+|-----|-----|--------|
+|192350000|Organization Health||
+|192350001|Component Health||
+|192350002|Object Health||
 
 
 
@@ -208,14 +208,14 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### msdyn_ComponentType Choices/Options
 
-|Value|Label|
-|-----|-----|
-|192350000|Solution|
-|192350001|Entity|
-|192350002|View|
-|192350003|Form|
-|192350004|Plugin|
-|192350005|Configuration|
+|Value|Label|Description|
+|-----|-----|--------|
+|192350000|Solution||
+|192350001|Entity||
+|192350002|View||
+|192350003|Form||
+|192350004|Plugin||
+|192350005|Configuration||
 
 
 
