@@ -1,13 +1,13 @@
 ---
-title: "botcomponent table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the botcomponent table/entity."
-ms.date: 05/20/2021
+title: "Chatbot subcomponent (botcomponent) table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the Chatbot subcomponent (botcomponent) table/entity."
+ms.date: 10/05/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -15,7 +15,7 @@ search.app:
   - D365CE
 ---
 
-# botcomponent table/entity reference
+# Chatbot subcomponent (botcomponent) table/entity reference
 
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
@@ -65,12 +65,15 @@ Holds key authoring components of a Chatbot such a topics, entities, variables, 
 
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
+- [AccentColor](#BKMK_AccentColor)
 - [botcomponentId](#BKMK_botcomponentId)
 - [Category](#BKMK_Category)
 - [ComponentType](#BKMK_ComponentType)
 - [Content](#BKMK_Content)
 - [Data](#BKMK_Data)
 - [Description](#BKMK_Description)
+- [HelpLink](#BKMK_HelpLink)
+- [IconUrl](#BKMK_IconUrl)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [IsCustomizable](#BKMK_IsCustomizable)
 - [Language](#BKMK_Language)
@@ -79,11 +82,28 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
 - [ParentBotComponentId](#BKMK_ParentBotComponentId)
+- [ReusePolicy](#BKMK_ReusePolicy)
 - [SchemaName](#BKMK_SchemaName)
 - [statecode](#BKMK_statecode)
 - [statuscode](#BKMK_statuscode)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
+
+
+### <a name="BKMK_AccentColor"></a> AccentColor
+
+|Property|Value|
+|--------|-----|
+|Description|Accent Color for this re-usable subcomponent|
+|DisplayName|Accent Color|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|accentcolor|
+|MaxLength|7|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_botcomponentId"></a> botcomponentId
@@ -131,17 +151,17 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### ComponentType Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Topic|
-|1|Skill|
-|2|Bot variable|
-|3|Bot entity|
-|4|Dialog|
-|5|Trigger|
-|6|Language understanding|
-|7|Language generation|
-|8|Dialog schema|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Topic|A topic defines a how a bot conversation plays out. A topic has trigger phrases - these are phrases, keywords, or questions - and conversation nodes - these are what you use to define how a bot should respond and what it should do.|
+|1|Skill|Power Virtual Agents enables you to extend your bot using Bot Framework Skills. Bot Framework Skills are re-usable conversational skill building-blocks covering conversational use-cases.|
+|2|Bot variable|Variables let you save responses from your customers in a conversation with your bot so that you can reuse them later in the conversation.|
+|3|Bot entity|An entity can be viewed as an information unit that represents a certain type of a real-world subject, like a phone number, zip code, city, or even a person's name.|
+|4|Dialog|Dialogs provide more advanced functionality than topics and integrate with Bot Framework Composer.|
+|5|Trigger|Trigger defines how the topic is triggered and/or what actions are executed.|
+|6|Language understanding|Language Understanding (LU) is used by a bot to understand language naturally and contextually to determine what next to do in a conversation flow.|
+|7|Language generation|Language Generation (LG) lets you define multiple variations of a phrase, execute simple expressions based on context, and refer to conversational memory.|
+|8|Dialog schema|Schema of the dialog that specifies dialog's input and output parameters|
 
 
 
@@ -193,6 +213,38 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Memo|
 
 
+### <a name="BKMK_HelpLink"></a> HelpLink
+
+|Property|Value|
+|--------|-----|
+|Description|Link to learn More about this subcomponent|
+|DisplayName|Help Link|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|helplink|
+|MaxLength|2000|
+|RequiredLevel|None|
+|Type|String|
+
+
+### <a name="BKMK_IconUrl"></a> IconUrl
+
+|Property|Value|
+|--------|-----|
+|Description|Icon Url for this subcomponent|
+|DisplayName|Icon Url|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|iconurl|
+|MaxLength|2000|
+|RequiredLevel|None|
+|Type|String|
+
+
 ### <a name="BKMK_ImportSequenceNumber"></a> ImportSequenceNumber
 
 **Added by**: Basic Solution Solution
@@ -242,28 +294,28 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### Language Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1025|Arabic|
-|1028|Chinese (Traditional)|
-|1030|Danish|
-|1031|German|
-|1033|English|
-|1034|Spanish|
-|1036|French|
-|1040|Italian|
-|1041|Japanese|
-|1042|Korean|
-|1043|Dutch|
-|1044|Norwegian|
-|1045|Polish|
-|1046|Portuguese (Brazilian)|
-|1049|Russian|
-|1053|Swedish|
-|1055|Turkish|
-|1057|Indonesian|
-|1081|Hindi|
-|2052|Chinese (Simplified)|
+|Value|Label|Description|
+|-----|-----|--------|
+|1025|Arabic||
+|1028|Chinese (Traditional)||
+|1030|Danish||
+|1031|German||
+|1033|English||
+|1034|Spanish||
+|1036|French||
+|1040|Italian||
+|1041|Japanese||
+|1042|Korean||
+|1043|Dutch||
+|1044|Norwegian||
+|1045|Polish||
+|1046|Portuguese (Brazilian)||
+|1049|Russian||
+|1053|Swedish||
+|1055|Turkish||
+|1057|Indonesian||
+|1081|Hindi||
+|2052|Chinese (Simplified)||
 
 
 
@@ -342,6 +394,28 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Targets|botcomponent|
 |Type|Lookup|
+
+
+### <a name="BKMK_ReusePolicy"></a> ReusePolicy
+
+|Property|Value|
+|--------|-----|
+|Description|Reuse Policy for the chatbot subcomponent|
+|DisplayName|Reuse Policy|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|reusepolicy|
+|RequiredLevel|None|
+|Type|Picklist|
+
+#### ReusePolicy Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|0|None|Not Reusable. By default, a chatbot subcomponent is not reusable and Reuse Policy is None|
+|1|Private|Is required by one or more Public chatbot subcomponent, but is not directly invokable or visible|
+|2|Public|Visible shared / reusable chatbot subcomponent for use in all bots in the environment|
+
 
 
 ### <a name="BKMK_SchemaName"></a> SchemaName
@@ -501,12 +575,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### ComponentState Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Published|
-|1|Unpublished|
-|2|Deleted|
-|3|Deleted Unpublished|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Published||
+|1|Unpublished||
+|2|Deleted||
+|3|Deleted Unpublished||
 
 
 
@@ -645,8 +719,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsManaged Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Managed|
 |0|Unmanaged|
 
@@ -1217,3 +1291,4 @@ IntersectEntityName: botcomponent_workflow<br />
 
 [About the table reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+<xref href="Microsoft.Dynamics.CRM.botcomponent?text=botcomponent EntityType" />

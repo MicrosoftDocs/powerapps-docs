@@ -1,13 +1,13 @@
 ---
 title: "ServicePlan table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the ServicePlan table/entity."
-ms.date: 05/20/2021
+ms.date: 10/05/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -79,13 +79,13 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### AccessMode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Custom applications|
-|1|First party applications|
-|2|First party and Custom applications|
-|3|No restrictions -For legacy license only, overrides 0,1,2|
-|4|Restricted to ISV applications and will Override all other access modes (including access mode= 3)|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Custom applications||
+|1|First party applications||
+|2|First party and Custom applications||
+|3|No restrictions -For legacy license only, overrides 0,1,2||
+|4|Restricted to ISV applications and will Override all other access modes (including access mode= 3)||
 
 
 
@@ -293,12 +293,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### ComponentState Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Published|
-|1|Unpublished|
-|2|Deleted|
-|3|Deleted Unpublished|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Published||
+|1|Unpublished||
+|2|Deleted||
+|3|Deleted Unpublished||
 
 
 
@@ -437,8 +437,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsManaged Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Managed|
 |0|Unmanaged|
 
@@ -642,6 +642,7 @@ Listed by **SchemaName**.
 - [serviceplan_ProcessSession](#BKMK_serviceplan_ProcessSession)
 - [serviceplan_BulkDeleteFailures](#BKMK_serviceplan_BulkDeleteFailures)
 - [serviceplan_PrincipalObjectAttributeAccesses](#BKMK_serviceplan_PrincipalObjectAttributeAccesses)
+- [serviceplan_serviceplanmapping](#BKMK_serviceplan_serviceplanmapping)
 
 
 ### <a name="BKMK_serviceplan_SyncErrors"></a> serviceplan_SyncErrors
@@ -778,6 +779,21 @@ Same as principalobjectattributeaccess table [serviceplan_PrincipalObjectAttribu
 |ReferencedEntityNavigationPropertyName|serviceplan_PrincipalObjectAttributeAccesses|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_serviceplan_serviceplanmapping"></a> serviceplan_serviceplanmapping
+
+Same as serviceplanmapping table [serviceplan_serviceplanmapping](serviceplanmapping.md#BKMK_serviceplan_serviceplanmapping) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|serviceplanmapping|
+|ReferencingAttribute|serviceplan|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|serviceplan_serviceplanmapping|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 <a name="manytoone"></a>
 

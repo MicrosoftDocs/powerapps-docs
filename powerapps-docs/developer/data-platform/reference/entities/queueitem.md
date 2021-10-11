@@ -1,13 +1,13 @@
 ---
 title: "QueueItem table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the QueueItem table/entity."
-ms.date: 05/20/2021
+ms.date: 10/05/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -538,8 +538,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |IsValidForRead|True|
 |LogicalName|exchangerate|
 |MaxValue|100000000000|
-|MinValue|0.0000000001|
-|Precision|10|
+|MinValue|0.000000000001|
+|Precision|12|
 |RequiredLevel|None|
 |Type|Decimal|
 
@@ -681,19 +681,19 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### ObjectTypeCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|4200|Activity|
-|4201|Appointment|
-|4202|Email|
-|4204|Fax|
-|4207|Letter|
-|4210|Phone Call|
-|4212|Task|
-|4216|Social Activity|
-|4251|Recurring Appointment|
-|9953|Knowledge Article|
-|10060|Knowledge Article Template|
+|Value|Label|Description|
+|-----|-----|--------|
+|4200|Activity|Task performed, or to be performed, by a user. An activity is any action for which an entry can be made on a calendar.|
+|4201|Appointment|Commitment representing a time interval with start/end times and duration.|
+|4202|Email|Activity that is delivered using email protocols.|
+|4204|Fax|Activity that tracks call outcome and number of pages for a fax and optionally stores an electronic copy of the document.|
+|4207|Letter|Activity that tracks the delivery of a letter. The activity can contain the electronic copy of the letter.|
+|4210|Phone Call|Activity to track a telephone call.|
+|4212|Task|Generic activity representing work needed to be done.|
+|4216|Social Activity|For internal use only.|
+|4251|Recurring Appointment|The Master appointment of a recurring appointment series.|
+|9953|Knowledge Article|Organizational knowledge for internal and external use.|
+|10086|Knowledge Article Template|Organizational Knowledge Article Template for Internal and external creation of Knowledge Articles.|
 
 
 
