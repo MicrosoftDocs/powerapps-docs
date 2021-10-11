@@ -23,8 +23,7 @@ create code components.
 Microsoft Power Platform CLI tooling is the first step toward a comprehensive application
 life-cycle management (ALM) story where the enterprise developers and ISVs can
 create, build, debug, and publish their extensions and customizations quickly
-and efficiently. For more information, see [What is Microsoft Power Apps
-CLI?](../../developer/data-platform/powerapps-cli.md)
+and efficiently. For more information, see [What is Microsoft Power Platform CLI?](../../developer/data-platform/powerapps-cli.md)
 
 With this feature, Microsoft Power Apps portals
 supports Microsoft Power Platform CLI to enable CI/CD (Continuous Integration/Continuous
