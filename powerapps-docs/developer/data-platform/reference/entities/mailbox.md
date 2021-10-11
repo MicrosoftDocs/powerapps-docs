@@ -1,13 +1,13 @@
 ---
 title: "Mailbox table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the Mailbox table/entity."
-ms.date: 05/20/2021
+ms.date: 10/05/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -137,11 +137,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### ACTDeliveryMethod Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Microsoft Dynamics 365 for Outlook|
-|1|Server-Side Synchronization|
-|2|None|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Microsoft Dynamics 365 for Outlook||
+|1|Server-Side Synchronization||
+|2|None||
 
 
 
@@ -160,11 +160,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### ACTStatus Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Not Run|
-|1|Success|
-|2|Failure|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Not Run||
+|1|Success||
+|2|Failure||
 
 
 
@@ -182,8 +182,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### AllowEmailConnectorToUseCredentials Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -221,12 +221,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### EmailRouterAccessApproval Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Empty|
-|1|Approved|
-|2|Pending Approval|
-|3|Rejected|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Empty||
+|1|Approved||
+|2|Pending Approval||
+|3|Rejected||
 
 
 
@@ -259,8 +259,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### EnabledForACT Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -283,8 +283,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### EnabledForIncomingEmail Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -307,8 +307,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### EnabledForOutgoingEmail Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -362,11 +362,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### ExchangeContactsImportStatus Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|NotImported|
-|1|Imported|
-|2|ImportFailed|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|NotImported||
+|1|Imported||
+|2|ImportFailed||
 
 
 
@@ -416,12 +416,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IncomingEmailDeliveryMethod Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|None|
-|1|Microsoft Dynamics 365 for Outlook|
-|2|Server-Side Synchronization or Email Router|
-|3|Forward Mailbox|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|None||
+|1|Microsoft Dynamics 365 for Outlook||
+|2|Server-Side Synchronization or Email Router||
+|3|Forward Mailbox||
 
 
 
@@ -440,11 +440,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IncomingEmailStatus Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Not Run|
-|1|Success|
-|2|Failure|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Not Run||
+|1|Success||
+|2|Failure||
 
 
 
@@ -462,8 +462,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsACTSyncOrgFlagSet Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -486,8 +486,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsEmailAddressApprovedByO365Admin Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -649,7 +649,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsLocalizable|False|
 |IsValidForCreate|False|
 |IsValidForForm|False|
-|IsValidForRead|False|
+|IsValidForRead|True|
 |LogicalName|lasttaggedmessageid|
 |MaxLength|320|
 |RequiredLevel|None|
@@ -763,8 +763,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### OfficeAppsDeploymentScheduled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -786,13 +786,13 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### OfficeAppsDeploymentStatus Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|NotInstalled|
-|1|Installed|
-|2|InstallFailed|
-|3|UninstallFailed|
-|4|UpgradeRequired|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|NotInstalled||
+|1|Installed||
+|2|InstallFailed||
+|3|UninstallFailed||
+|4|UpgradeRequired||
 
 
 
@@ -810,8 +810,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### OrgMarkedAsPrimaryForExchangeSync Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -833,11 +833,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### OutgoingEmailDeliveryMethod Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|None|
-|1|Microsoft Dynamics 365 for Outlook|
-|2|Server-Side Synchronization or Email Router|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|None||
+|1|Microsoft Dynamics 365 for Outlook||
+|2|Server-Side Synchronization or Email Router||
 
 
 
@@ -856,11 +856,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### OutgoingEmailStatus Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Not Run|
-|1|Success|
-|2|Failure|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Not Run||
+|1|Success||
+|2|Failure||
 
 
 
@@ -982,8 +982,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### ProcessAndDeleteEmails Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -1096,8 +1096,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### TestEmailConfigurationScheduled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -1530,8 +1530,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsExchangeContactsImportScheduled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -1553,8 +1553,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsForwardMailbox Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -1576,8 +1576,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsOauthAccessTokenSet Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -1599,8 +1599,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsOauthRefreshTokenSet Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -1622,8 +1622,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsPasswordSet Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -1645,8 +1645,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsServiceAccount Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -1745,11 +1745,11 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### MailboxStatus Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Not Run|
-|1|Success|
-|2|Failure|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Not Run||
+|1|Success||
+|2|Failure||
 
 
 

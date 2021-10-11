@@ -19,6 +19,9 @@ contributors:
 
 The Milestones sample app is designed to make it easy to manage project work items based on Milestones, and track them through the completion.
 
+Watch this video to learn how to deploy Milestone apps as broad distribution app:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLiBW]
+
 The app addresses the following personas:
 
 - **Project creator**: This user sets up the project and defines the milestones, project members, and work items.

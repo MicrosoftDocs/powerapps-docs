@@ -1,13 +1,13 @@
 ---
 title: "organizationdatasyncsubscription table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the organizationdatasyncsubscription table/entity."
-ms.date: 05/20/2021
+ms.date: 10/05/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -111,12 +111,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### BlobPartitionBy Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|None|
-|1|Day|
-|2|Month|
-|3|Year|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|None||
+|1|Day||
+|2|Month||
+|3|Year||
 
 
 
@@ -134,8 +134,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### CanSyncAllMetadata Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -157,12 +157,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### DataEndpointPostingType Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|DefaultEndpoint|
-|1|ServiceBusTopic|
-|2|HTTPS|
-|3|ServiceBusEventHub|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|DefaultEndpoint||
+|1|ServiceBusTopic||
+|2|HTTPS||
+|3|ServiceBusEventHub||
 
 
 
@@ -180,13 +180,13 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### DataProcessingType Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Unknown|
-|1|Streaming|
-|2|Batch|
-|3|Mixed|
-|4|NotificationOnly|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Unknown||
+|1|Streaming||
+|2|Batch||
+|3|Mixed||
+|4|NotificationOnly||
 
 
 
@@ -253,8 +253,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsOutOfBoxSubscription Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -292,8 +292,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### NeedCopyAttachmentsToBlob Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 

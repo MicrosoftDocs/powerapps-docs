@@ -19,6 +19,9 @@ contributors:
 
 The Inspection sample app for Microsoft Teams is designed to make it easy to track and perform inspections of your assets, equipment, facility, or store.
 
+Watch this video to learn how to deploy Inspection app as broad distribution app:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLxVt]
+
 The inspection solution addresses the following personas:
 
 - **Inspection Manager**: This user creates Inspection forms and manages the list of areas or assets. Inspection Managers use the Manage Inspections app.

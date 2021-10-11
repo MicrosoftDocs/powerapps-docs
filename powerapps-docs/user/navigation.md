@@ -21,8 +21,6 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-[!INCLUDE cc-beta-prerelease-disclaimer]
-
 This introduction explains how to find and open an app, and how to work with its common user interface elements including lists, forms, and business processes.
 
 
@@ -161,7 +159,7 @@ The reference panel is a great way to get work done without moving away from the
 
 The app message bar shows three types of notifications: informational, warning, and error. 
 
-> ![NOTE]
+> [!NOTE]
 > If you're on [early access](/power-platform/admin/opt-in-early-access-updates) there's a new in-app notifications feature. For more information, see [In-app notifications in model-driven apps](notifications.md).
  
 
