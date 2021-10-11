@@ -41,6 +41,9 @@ To use **Combo box** as a people picker, choose the **Person** template from the
 
 **DefaultSelectedItems** – The initial selected item(s) before the user interacts with the control.
 
+> [!NOTE]
+> This control also contains a property called Default. It doesn't do anything, use DefaultSelectedItems instead.
+
 **SelectedItems** – List of selected items resulting from user interaction.
 
 **SelectMultiple** – Whether the user can select a single item or multiple items.
