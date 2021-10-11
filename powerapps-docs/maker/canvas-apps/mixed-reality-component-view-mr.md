@@ -29,8 +29,9 @@ The component creates a button in your app. When app users click the button, it 
 You can also take photos and [upload them to OneDrive](mixed-reality-take-upload-photos.md).
 
 > [!IMPORTANT]
-> Your 3D content must be in .glb, .stl, or .obj file formats.  
+> Your 3D content must be in the .glb, .stl, or .obj file formats.
 > You can [convert your existing 3D models into the .glb file format](/dynamics365/mixed-reality/guides/3d-content-guidelines/) from a variety of 3D formats.
+> 3D content compressed with Draco compression is not supported.
 
 
 > [!TIP]
