@@ -1954,6 +1954,8 @@
                 href: ./portals/versions/versions-before-9.3.3.x.md
          - name: Starter portal package updates
            items:
+              - name: Package 9.3.2109.x
+                href: ./portals/versions/package-version-9.3.2109.md
               - name: Package 9.2.2108.x
                 href: ./portals/versions/package-version-9.2.2108.md
               - name: Package 9.2.2103.x
