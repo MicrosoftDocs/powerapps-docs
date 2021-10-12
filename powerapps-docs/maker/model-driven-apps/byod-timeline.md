@@ -1,0 +1,82 @@
+---
+title: Bring your own data to the timeline in Power Apps | MicrosoftDocs
+description: "Learn how to bring your own data, such as records, to the timeline in Power Apps."
+ms.custom: ""
+ms.date: 10/12/2021
+ms.reviewer: "matp"
+ms.service: powerapps
+ms.suite: ""
+ms.tgt_pltfrm: ""
+ms.topic: "how-to"
+author: "laalexan"
+ms.subservice: mda-maker
+ms.author: "lalexms"
+manager: "kvivek"
+tags: 
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
+  - D365CE
+---
+
+
+# Bring your own data to timeline
+
+The Bring Your Own Data (BYOD) feature for the timeline is a way for developers to surface information, such as records, within the TimelineWallControl component. It allows for a broader set of scenarios in addition to the existing out-of-box notes, posts, and activities.
+
+For information about configuring and using the timeline, see the following topics:
+
+- [Use timeline](/powerapps/user/add-activities)
+- [Configure timeline](/dynamics365/customer-service/customer-service-hub-user-guide-timeline-admin)
+- [Timeline record card configuration](/set-up-timeline-control.md#customize-a-card-form-in-the-timeline)
+
+Records that are configured within BYOD are a javascript web resource that conforms to the IRecordSource interface. The name of a web resource, along with the constructor (name including namespace), and optional JSON web resource path can be added as a configuration as a UClientRecordSourcesJSON parameter within FormXML.
+
+```<UClientRecordSourcesJSON>{"recordSources": [{"name": "new_SecondaryRecordSource", "constructor": "SampleNamespace.SecondaryRecordSource"}]}</UClientRecordSourcesJSON>```
+
+TimelineWallControl is expected to load the javascript web resource, and then create the instance of IRecordSource from the configured constructor.
+
+The IRecordSource will then be initialized (init), with a request for pages of records (getRecordsData), and a request for the UX representation of a single record (getRecordUX).
+
+The response from requesting records will be persisted to minimize the number of record requests that occur within multi-session scenarios.
+
+## Scope
+
+BYOD is supported within single-session and multi-session table forms in Unified Interface client model apps.
+
+### Planned improvements
+
+The following are planned improvements to BYOD. Exact release dates are not currently known, but improvements are expected before the end of December 2021.
+
+- Current experience: BYOD records are always be displayed, no matter the selected filters/keyword search. Planned improvement: Pass currently applied filters within the request for pages of records (getRecordsData).
+- Current experience: There isn't a mechanism in place to configure filter information from a record source. Planned improvement: BYOD records should be able to supply filters, filter options, or filter counts to existing filter options.
+- Current experience: For existing OOB records (notes, posts, and activities) it's not possible to extend or define filters. Planned improvement: BYOD will allow you to define just filters instead of an entire record source
+
+### Out of scope
+The following functionality is not available for BYOD:
+- Offline and offline-by-default (OBD) scenarios
+- Dashboards
+- Locations where TimelineWallControl is not available (such as converged apps, canvas apps, portals, custom pages, and so forth)
+
+## Known limitations:
+
+- See the list in [Planned improvements](#planned-improvements).
+
+- The configured web resources are not formally declared as dependencies to the form. This means that exporting a form will not automatically export these web resources. These web resources would need to be added to that export manually. In addition, it can be easy to accidentally delete this web resource.
+
+## Develop a Record Source
+
+When developing a record source, make sure you follow these practices:
+
+- Ensure that you're retrieving data securely. The Unified Interface security model considers JS and JSON web resources as untrusted, and thus, such resources shouldn't contain tokens or secrets in them, as they'd be stored in plain text.
+- If the data is within Dataverse, utilize the context object from init behavior to make requests into Dataverse. Calls into Dataverse from context have requests proxied through a secure iframe. This is how out-of-box record sources within TimelineWallControl retrieve data.
+- If the data is outside of Dataverse, leverage existing mechanisms from the platform to retrieve external data.
+- Locally test changes by leveraging Fiddler: Improve the agility of development and debugging of javascript web resources by leveraging Fiddler AutoResponder. More information: [Script web resource development using Fiddler AutoResponder](../streamline-javascript-development-fiddler-autoresponder.md).
+- Reduce the risk of XSS attacks: The risk of XSS attacks occurs when adding/binding HTML to the DOM. Use plain text whenever possible to reduce this risk. If HTML is required, you must sanitize sanitize this content before adding it to the record
+- Follow general best practices for client scripting. More information: [Client scripting in model-driven apps](../developer/model-driven-apps/clientapi/client-scripting-best-practices)
+- Ensure inclusive design practices, including the usage of automated testing tools such as Accessibility Insights.
+
+## Sample solution
+
+You can leverage the BYOD functionality by downloading this [sample solution](https://dynamicscrm.visualstudio.com/OneCRM/_wiki/wikis/OneCRM.wiki?wikiVersion=GBwikiMaster&pagePath=/Customer%20Service/Productivity%20and%20Collaboration/TimelineWallControl/blob%3Ahttps%3A//dynamicscrm.visualstudio.com/d229f7b9%209f88%2046fb%20bbe8%20ad2b802d988f). This sample solution has the "SecondaryRecordSource" web resource, which is configured for "Account for Interactive Experiences" and "Account for Multisession Experiences" forms.
