@@ -1,4 +1,4 @@
-e---
+---
 title: "Design a custom page for your model-driven app" 
 description: "Learn how to design a custom page for your model-driven app"
 ms.custom: ""
