@@ -352,11 +352,11 @@ This section includes frequently asked questions. If you have questions that are
 
 Work with the ETL application vendor to learn which settings to apply. Make sure you are using a version of the product that supports the Retry-After behavior.
 
-### Do these limits apply to Relevance Search?
+### Do these limits apply to Dataverse search?
 
-No. Relevance search is a different API (`api/search` rather than `api/data`) and has different rules. When using the relevance search API, there is a throttling limit of one request per second for each user.
+No. Dataverse search is a different API (`api/search` rather than `api/data`) and has different rules. When using the Dataverse search API, there is a throttling limit of one request per second for each user.
 
-More information: [Search across table data using relevance search](webapi/relevance-search.md)
+More information: [Search across table data using Dataverse search](webapi/relevance-search.md)
 
 ### How do these limits apply to how many requests a user is entitled to each day?
 

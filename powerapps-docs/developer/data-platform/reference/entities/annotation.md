@@ -1,13 +1,13 @@
 ---
-title: "Annotation table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the Annotation table/entity."
-ms.date: 05/20/2021
+title: "Note (Annotation) table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the Note (Annotation) table/entity."
+ms.date: 10/05/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -15,7 +15,7 @@ search.app:
   - D365CE
 ---
 
-# Annotation table/entity reference
+# Note (Annotation) table/entity reference
 
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
@@ -157,8 +157,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsDocument Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -552,8 +552,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsPrivate Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -1013,13 +1013,13 @@ See msdyn_aimodel Table [msdyn_aimodel_Annotations](msdyn_aimodel.md#BKMK_msdyn_
 
 ### <a name="BKMK_msdyn_aifptrainingdocument_Annotations"></a> msdyn_aifptrainingdocument_Annotations
 
-**Added by**: AI Solution default templates Solution
+**Added by**: AI Solution deprecated templates Solution
 
 See msdyn_aifptrainingdocument Table [msdyn_aifptrainingdocument_Annotations](msdyn_aifptrainingdocument.md#BKMK_msdyn_aifptrainingdocument_Annotations) One-To-Many relationship.
 
 ### <a name="BKMK_msdyn_aiodimage_Annotations"></a> msdyn_aiodimage_Annotations
 
-**Added by**: AI Solution default templates Solution
+**Added by**: AI Solution deprecated templates Solution
 
 See msdyn_aiodimage Table [msdyn_aiodimage_Annotations](msdyn_aiodimage.md#BKMK_msdyn_aiodimage_Annotations) One-To-Many relationship.
 

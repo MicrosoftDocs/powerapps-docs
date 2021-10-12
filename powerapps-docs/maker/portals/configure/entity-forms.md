@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 08/24/2021
+ms.date: 10/04/2021
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: tapanm
@@ -74,7 +74,7 @@ To enable permissions for a basic form, select the checkbox to **Enable Table Pe
 |Auto Generate Steps From Tabs|    Indicates that multiple tabs on a basic form will be displayed with each tab as a sequential step starting with the first tab and continue until all tabs have been navigated to and upon final submission a record is inserted. By default, it is not selected. The default value indicates that only one tab or form is to be rendered for the current step. If the Tab Name is not specified, then the first tab is displayed.|
 |Render Web Resources Inline|    Eliminates the iframe that encompasses a web resource in a basic form.|
 |ToolTips Enabled|    The tooltip is set using the description of the attribute on the target table.|
-|Show Unsupported Fields|    All fields are currently supported. This is reserved for potential changes Dataverse may make to field types.|
+|Show Unsupported Fields|    Show or hide column names with unsupported Dataverse column types. |
 |Set Recommended Fields as Required|     Makes all attributes required that have the field requirement level set to 'Business Recommended'.|
 |Make All Fields Required|     Makes all fields required regardless of the field requirement level.|
 |Validation Summary CSS Class|    CSS Class name assigned to the validation summary. Default is 'validation-summary alert alert-error alert-block'|

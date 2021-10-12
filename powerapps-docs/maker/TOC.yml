@@ -45,7 +45,7 @@
       items:
       - name: Basic navigation
         href: ../user/navigation.md
-      - name: In-app notifications
+      - name: In-app notifications (preview)
         href: ../user/notifications.md
       - name: View your profile
         href: ../user/view-your-user-profile.md
@@ -141,15 +141,15 @@
       items:
       - name: Compare search options
         href: ../user/search.md
-      - name: Relevance search
+      - name: Dataverse search
         items:
-        - name: What is relevance search?
+        - name: What is Dataverse search?
           href: ../user/relevance-search-benefits.md
-        - name: Search for tables and rows by using relevance search
+        - name: Search for tables and rows by using Dataverse search
           href: ../user/relevance-search.md
         - name: Configure facets and filters
           href: ../user/facets-and-filters.md
-        - name: FAQs about relevance search 
+        - name: FAQs about Dataverse search 
           href: ../user/relevance-faq.md
       - name: Quick Find
         href: ../user/quick-find.md
@@ -1304,7 +1304,7 @@
         - name: "Migrating embedded canvas from public preview"
           href: ./model-driven-apps/embedded-canvas-app-migrate-from-preview.md
       - name: Embed a Power BI report on a form
-        href: ./model-driven-apps/embed-powerbi-report-in-system-form.md
+        href: ./model-driven-apps/embed-powerbi-report-in-system-form.md 
       - name: Work with views
         href: ./model-driven-apps/create-edit-views.md
         items:
@@ -1369,6 +1369,8 @@
           href: ./model-driven-apps/stay-current-with-news-control.md
         - name: Add the form component control
           href: ./model-driven-apps/form-component-control.md
+        - name: Use the Power Apps grid control
+          href: ./model-driven-apps/power-apps-grid-control.md  
       - name: Use custom controls for data visualizations
         href: ./model-driven-apps/use-custom-controls-data-visualizations.md
     - name: Use Excel and Word templates
@@ -1441,11 +1443,11 @@
     href: ../mobile/run-powerapps-on-mobile.md
   - name: Use model-driven apps on mobile
     href: ../mobile/use-custom-model-driven-app-on-mobile.md
-  - name: Use relevance search on Power Apps Mobile  
+  - name: Use Dataverse search on Power Apps Mobile  
     href: ../mobile/relevance-search-mobile.md  
   - name: Set app display to dark or light mode  
     href: ../mobile/display-mode.md
-  - name: In-app notifications on Power Apps mobile
+  - name: In-app notifications in Power Apps mobile (preview)
     href: ../mobile/mobile-notifications.md
   - name: Configure mobile offline synchronization 
     href: ../mobile/setup-mobile-offline.md 
@@ -1850,13 +1852,13 @@
             href: ./portals/component-framework.md          
           - name: "Tutorial: Use code components in portals"
             href: ./portals/component-framework-tutorial.md            
-        - name: Use Microsoft Power Platform CLI (preview)
+        - name: Use Microsoft Power Platform CLI
           items:
           - name: Overview of portals support for Microsoft Power Platform CLI 
             href: ./portals/power-apps-cli.md
           - name: "Tutorial: Use Microsoft Power Platform CLI with portals"
             href: ./portals/power-apps-cli-tutorial.md
-          - name: Use the Visual Studio Code extension for portals
+          - name: Use the Visual Studio Code extension for portals (Preview)
             href: ./portals/vs-code-extension.md
     - name: Update, upgrade, migrate and convert portals
       items:
@@ -1952,6 +1954,8 @@
                 href: ./portals/versions/versions-before-9.3.3.x.md
          - name: Starter portal package updates
            items:
+              - name: Package 9.3.2109.x
+                href: ./portals/versions/package-version-9.3.2109.md
               - name: Package 9.2.2108.x
                 href: ./portals/versions/package-version-9.2.2108.md
               - name: Package 9.2.2103.x
@@ -2123,6 +2127,8 @@
     items:
       - name: Solutions overview
         href: ./data-platform/solutions-overview.md
+      - name: Solution view
+        href: ./data-platform/solutions-area.md
       - name: Create a solution
         href: ./data-platform/create-solution.md
       - name: Export solutions

@@ -1,13 +1,13 @@
 ---
 title: "ServiceEndpoint table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the ServiceEndpoint table/entity."
-ms.date: 05/20/2021
+ms.date: 10/05/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -64,11 +64,13 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [IntroducedVersion](#BKMK_IntroducedVersion)
 - [IsCustomizable](#BKMK_IsCustomizable)
 - [KeyVaultReferenceId](#BKMK_KeyVaultReferenceId)
+- [MessageCharset](#BKMK_MessageCharset)
 - [MessageFormat](#BKMK_MessageFormat)
 - [Name](#BKMK_Name)
 - [NamespaceAddress](#BKMK_NamespaceAddress)
 - [NamespaceFormat](#BKMK_NamespaceFormat)
 - [Path](#BKMK_Path)
+- [RuntimeIntegrationProperties](#BKMK_RuntimeIntegrationProperties)
 - [SASKey](#BKMK_SASKey)
 - [SASKeyName](#BKMK_SASKeyName)
 - [SASToken](#BKMK_SASToken)
@@ -94,16 +96,16 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### AuthType Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|ACS|
-|2|SAS Key|
-|3|SAS Token|
-|4|Webhook Key|
-|5|Http Header|
-|6|Http Query String|
-|7|Connection String|
-|8|Access Key|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|ACS||
+|2|SAS Key||
+|3|SAS Token||
+|4|Webhook Key||
+|5|Http Header||
+|6|Http Query String||
+|7|Connection String||
+|8|Access Key||
 
 
 
@@ -137,10 +139,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### ConnectionMode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Normal|
-|2|Federated|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Normal||
+|2|Federated||
 
 
 
@@ -158,17 +160,17 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### Contract Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|OneWay|
-|2|Queue|
-|3|Rest|
-|4|TwoWay|
-|5|Topic|
-|6|Queue (Persistent)|
-|7|Event Hub|
-|8|Webhook|
-|9|Event Grid|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|OneWay||
+|2|Queue||
+|3|Rest||
+|4|TwoWay||
+|5|Topic||
+|6|Queue (Persistent)||
+|7|Event Hub||
+|8|Webhook||
+|9|Event Grid||
 
 
 
@@ -234,6 +236,29 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Lookup|
 
 
+### <a name="BKMK_MessageCharset"></a> MessageCharset
+
+**Added by**: ServiceEndpointInfrastructure Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Specifies the character encoding for message content|
+|DisplayName|Specifies the character encoding to be used for messages sent to a service endpoint|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|messagecharset|
+|RequiredLevel|None|
+|Type|Picklist|
+
+#### MessageCharset Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Default||
+|1|UTF8||
+
+
+
 ### <a name="BKMK_MessageFormat"></a> MessageFormat
 
 |Property|Value|
@@ -248,11 +273,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### MessageFormat Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Binary XML|
-|2|Json|
-|3|Text XML|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Binary XML||
+|2|Json||
+|3|Text XML||
 
 
 
@@ -302,10 +327,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### NamespaceFormat Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Namespace Name|
-|2|Namespace Address|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Namespace Name||
+|2|Namespace Address||
 
 
 
@@ -322,6 +347,24 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|path|
 |MaxLength|160|
 |RequiredLevel|SystemRequired|
+|Type|String|
+
+
+### <a name="BKMK_RuntimeIntegrationProperties"></a> RuntimeIntegrationProperties
+
+**Added by**: RuntimeIntegration Solution
+
+|Property|Value|
+|--------|-----|
+|Description|For internal use only. Holds miscellaneous properties related to runtime integration.|
+|DisplayName|Runtime Integration Properties|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|runtimeintegrationproperties|
+|MaxLength|512|
+|RequiredLevel|None|
 |Type|String|
 
 
@@ -389,10 +432,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### SchemaType Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Event Grid|
-|2|Cloud Events|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Event Grid||
+|2|Cloud Events||
 
 
 
@@ -458,8 +501,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### UseKeyVaultConfiguration Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -481,11 +524,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### UserClaim Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|None|
-|2|UserId|
-|3|UserInfo|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|None||
+|2|UserId||
+|3|UserInfo||
 
 
 <a name="read-only-attributes"></a>
@@ -531,12 +574,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### ComponentState Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Published|
-|1|Unpublished|
-|2|Deleted|
-|3|Deleted Unpublished|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Published||
+|1|Unpublished||
+|2|Deleted||
+|3|Deleted Unpublished||
 
 
 
@@ -629,8 +672,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsAuthValueSet Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -652,8 +695,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsManaged Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Managed|
 |0|Unmanaged|
 
@@ -675,8 +718,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsSASKeySet Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -698,8 +741,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsSASTokenSet Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 

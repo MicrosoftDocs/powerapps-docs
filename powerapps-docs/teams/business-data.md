@@ -5,7 +5,7 @@ author: joel-lindstrom
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 08/24/2021
+ms.date: 10/06/2021
 ms.author: namarwah
 ms.reviewer: tapanm
 contributors:
@@ -23,6 +23,9 @@ For example, in the [Profile+ sample app](profile-app.md) for Teams, when you se
 You might also want to use this capability for your apps. For example, if you're building a sales opportunity tracker for the sales manager to review upcoming deals, you might want to add a button for the user to chat with the sales person about the opportunity.
 
 This way, Power Apps in Teams can use deep integration with other Teams capabilities to make apps collaborative. In this article, we'll learn how we can integrate Power Apps with Teams to facilitate conversations.
+
+Watch this video to learn how to configure having conversations about business data in Teams app:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWMLrD]
 
 ## Prerequisites
 
