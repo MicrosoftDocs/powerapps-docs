@@ -47,7 +47,7 @@ While all properties are optional, either the address field or the longitude and
 
 The following Excel table shows the required columns:
 
-TODO: INSERT SCREENSHOT
+   ![Sample excel file with a table named TestData that contains Name, Longitude, Latitude, and Address columns.](./media/geospatial/map-routing-table.png)
 
 You can copy the following sample data to test this functionality:
 
@@ -73,9 +73,9 @@ You can copy the following sample data to test this functionality:
 
 1. Open or create a new app in Power Apps, and insert the map component.
 
-1. On the **Properties** pane, select the **Locations(Items)** field and then search for *excel* and select **Import from Excel**.
+1. On the **Properties** pane, select the **Route waypoints(Items)** field and then search for *excel* and select **Import from Excel**.
 
-    TODO: INSERT SCREENSHOT
+   ![Screenshot of the route waypoints option](./media/geospatial/map-routing-property.png)
 
 
 1. Locate the Excel workbook and then select **Open**. Select the table that contains the information, **TestData**, and then **Connect**.
@@ -89,7 +89,10 @@ You can copy the following sample data to test this functionality:
     - **RouteWaypointsLabels** as *"Name"*
     - **RouteWaypointsLatitudes** as *"Latitude"*
     - **RouteWaypointsLongitudes** as *"Longitude"*
-    - **RouteWaypointsAddresses** as *"Address"* (Optional, if your dataset has an address field. Note that if your dataset has an address field, then the latitude and longitude fields do not need to be set)
+    - **RouteWaypointsAddresses** as *"Address"* (Optional, if your dataset has an address field. Note that Address can be used in place of Latitude and Longitude in any rows where Latitude and Longitude are not set)
+
+>[!Note]
+>Address is interchangable with Latitude and Longitude. If Latitude and Longitude are provided, then Address is not necessary. If only Address is provided, then Latitude and Longitude are not necessary.
 
 1. The map component will now show each row in the table as a pin, labeled with its *Name* as defined in the Excel table, and numbered in the same order as the given dataset.
 
