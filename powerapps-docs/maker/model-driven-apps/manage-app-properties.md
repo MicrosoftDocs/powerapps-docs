@@ -29,14 +29,15 @@ search.app:
 
 # Manage model-driven app properties in the app designer
 
-App properties define important details about the app, like its title or URL. You define app properties when you create an app. If you want to change those properties later, you can do that in the app designer.  
+App properties define important details about the app, like its title or URL. You define app properties when you create an app. If you want to change those properties later, you can do that in the app designer.
   
-1.  In the app designer, on the right side, select the **Properties** tab.  
+1. In the app designer, on the right side, select the **Properties** tab.  
 
-    > [!div class="mx-imgBorder"] 
+    > [!div class="mx-imgBorder"]
     > ![App designer Properties pane.](media/app-designer-properties-tab.png "App designer Properties pane")  
+
   
-2.  Change the information, as required:  
+2. Change the information, as required:  
 
     |Property|Description|  
     |--------------|-----------------|
@@ -49,7 +50,7 @@ App properties define important details about the app, like its title or URL. Yo
     |**Enable Mobile Offline**|This option enables the app to be available offline on mobiles to the profiles that are selected using **Mobile Offline Profiles** drop down list.|
 
     <sup>1</sup>The **Client** and **App URL Suffix** properties are no longer available when you create a new app.
-3.  Save the app.  
+3. Save the app.  
   
 ## Next steps  
  [Create or edit an app](create-edit-app.md)

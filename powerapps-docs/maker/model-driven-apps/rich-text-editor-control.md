@@ -23,7 +23,9 @@ search.app:
 
 [!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-The rich text editor control provides the app user a WYSIWYG editing area for formatting text. The control's input and output format is HTML. The control allows copied rich text, such as from a web browser or Word, to be pasted into the control. 
+[!INCLUDE [cc-classic-interface-control-note](../../includes/cc-classic-interface-control-note.md)]
+
+The rich text editor control provides the app user a WYSIWYG editing area for formatting text. The control's input and output format is HTML. The control allows copied rich text, such as from a web browser or Word, to be pasted into the control.
 
 Some of the format options available are:
 
@@ -37,14 +39,13 @@ Some of the format options available are:
 
 For a full list of default options, see [Use the rich text editor toolbar](#use-the-rich-text-editor-toolbar).<br></br>
 
-
 <img src="media/rich-text-control.png" alt="Rich text control editor in a model-driven app"> 
 
 ## Add or replace a text column for rich text editing
 
 You can create a new text column and configure the control, or replace an existing text column. The rich text editor control can be used with single or multi-line text columns.
 
-1. Sign in to Power Apps. Go to **Solutions**, open the solution that you want, open the table that you want, and then select the **Forms** tab. 
+1. Sign in to Power Apps. Go to **Solutions**, open the solution that you want, open the table that you want, and then select the **Forms** tab.
 2. Select the form, and then select **Edit form**.
 3. In the form designer on the command bar, select **Switch to classic**.
 4. On the legacy form designer canvas, add or create a text column or select an existing text column, such as the account table **Description** column. On the **Home** tab, select **Change Properties**.

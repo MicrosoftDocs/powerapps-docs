@@ -28,9 +28,23 @@ search.app:
 
 [!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-Model-driven apps have a number of capabilities that allow customers to surface business data that helps them drive decisions and interact with their customers more effectively.  Capabilities that are available include views, charts, dashboards, and SQL Server Reporting Services reports. Also included is Microsoft Excel integration that allows users to easily build self-service reports using the Power BI features [PowerView](https://support.office.com/article/power-view-overview-and-learning-5380e429-3ee0-4be2-97b7-64d7930020b6), [PowerPivot](https://support.office.com/article/power-pivot-overview-and-learning-f9001958-7901-4caa-ad80-028a6d2432ed), and [PowerQuery](https://support.office.com/article/power-query-overview-and-learning-ed614c81-4b00-4291-bd3a-55d80767f81d). As the volume of data held in the app's database continues to grow it becomes more important than ever to think about your BI strategy and determine the most effective mechanisms for reporting and visualizing large datasets.  
+## Model-driven app reporting capabilities
+
+Model-driven apps have a number of capabilities that allow customers to surface business data that helps them drive decisions and interact with their customers more effectively.  
+
+These include
+- [views](model-driven-app-glossary.md#view)
+- [charts](model-driven-app-glossary.md#chart)
+- [dashboards](model-driven-app-glossary.md#dashboard)
+- SQL Server Reporting Services reports
+- Microsoft Excel integration that allows users to easily build self-service reports using the Power BI features [PowerView](https://support.office.com/article/power-view-overview-and-learning-5380e429-3ee0-4be2-97b7-64d7930020b6), [PowerPivot](https://support.office.com/article/power-pivot-overview-and-learning-f9001958-7901-4caa-ad80-028a6d2432ed), and [PowerQuery](https://support.office.com/article/power-query-overview-and-learning-ed614c81-4b00-4291-bd3a-55d80767f81d).
+- [Power BI](model-driven-app-glossary.md#Power-bi)
   
- In an environment, the reporting infrastructure is shared and separate from the database. In this architecture, although customers share the resources required to run the report, each report runs against the customers’ individual database instances.  Additionally, users can run as many reports as they need whenever they want to run them to meet business goals.  We do not place time restrictions on reports.  
+As the volume of data held in the app's database continues to grow it becomes more important than ever to think about your BI strategy and determine the most effective mechanisms for reporting and visualizing large datasets.  
+
+## Reporting infrastructure
+
+In an environment, the reporting infrastructure is shared and separate from the database. In this architecture, although customers share the resources required to run the report, each report runs against the customers’ individual database instances.  Additionally, users can run as many reports as they need whenever they want to run them to meet business goals.  We do not place time restrictions on reports.  
   
  The reporting capabilities built in to Microsoft Dataverse are designed to let users run reports on datasets that span shorter periods of time. Considering this, note the following fixed settings:  
   
@@ -45,28 +59,28 @@ Model-driven apps have a number of capabilities that allow customers to surface 
 ## Tips and solutions for reporting  
  Typically, for most organizations' reporting needs, these settings are adequate. To make sure that your users do not exceed these settings and to improve report querying performance in general, consider the following best practices.  
   
-- When you create custom reports or dashboards, design them to query smaller datasets over shorter periods of time by adding a time-based filter in the report, such as the current month or quarter, to limit the results.  
+- When creating custom reports or dashboards, design them to query smaller datasets over shorter periods of time by adding a time-based filter in the report, such as the current month or quarter, to limit the results.  
   
-- We recommend that you limit the number of tables that are needed to return the result. This helps reduce the time required to run the query and return the result set.  
+- Limit the number of tables that are needed to return the result. This helps reduce the time required to run the query and return the result set.  
   
-- We recommend that you reduce the number of rows shown in detailed reports. Suitable filtering can be used to reduce the number of rows returned by the query to reduce timeouts.  
+- Rows shown in detailed reports. Suitable filtering can be used to reduce the number of rows returned by the query to reduce timeouts.  
   
-- For aggregated or summarized reports, queries must be used to push the aggregation to the database and not fetch detailed rows and perform aggregation in the SQL Server Reporting Services report.  
+- For **aggregated** or **summarized** reports, queries must be used to push the aggregation to the database and not fetch detailed rows and perform aggregation in the SQL Server Reporting Services report.  
   
 - When appropriate for your business, users should run the default (out-of-the-box) reports and dashboards. These reports and dashboards are typically designed to query per user datasets, so in most cases will not exceed the dataset limit.  
   
-  If users must run reports that exceed these settings, we recommend that you review the following options for assistance with complex reporting needs. Both options effectively offload reporting workloads from Dataverse to another datastore by using a data integration solution.  
+If users must run reports that exceed these settings, we recommend that the following options are reviewed for assistance with complex reporting needs. Both options effectively offload reporting workloads from Dataverse to another datastore by using a data integration solution.  
   
 - [Adapters](reporting-considerations.md#BKMK_ThirdPartyAdapt) are used in conjunction with SQL Server Integration Services (SSIS) to extend the capabilities for integration with your apps data.  
   
 - Extract transform load [(ETL) tools](reporting-considerations.md#BKMK_ETL) provide a new tool set for creating analysis of data by combining multiple data sources or extracting data to the data warehouse solution if SSIS is not in use. ETL tools provide comprehensive solutions for connecting with Dataverse to move data.  
   
 > [!IMPORTANT]
->  When you use these tools, we recommend you move or synchronize data during nonbusiness hours.  
+>  When you use these tools, we recommend that moving or synchronizing data takes place during nonbusiness hours.  
   
  If needed, there are many Microsoft partners who can help provide a solution for your specific reporting needs, such as creating an offline copy of the data specifically used for running large reports.  These partners are knowledgeable with the data integration tools available. More information: [Find a Dynamics 365 partner](https://dynamics.microsoft.com/partners/find-a-partner/)  
   
-<a name="BKMK_ThirdPartyAdapt"></a>   
+<a name="BKMK_ThirdPartyAdapt"></a>
 ## Third-party adapters for SSIS  
   
 -   [CozyRoc SSIS+ component for Dynamics 365/CRM](https://www.cozyroc.com/ssis/dynamics-crm)  

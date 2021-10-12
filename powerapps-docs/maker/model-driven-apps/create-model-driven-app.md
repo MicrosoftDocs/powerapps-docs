@@ -29,32 +29,46 @@ search.app:
 In this article you learn the basics of how to create a model-driven app that can be shared and distributed to other environments.
 
 ## Prerequisites
-Verify the following prerequisites before you start creating an app: 
 
-- A Power Apps environment used for app development. More information [Create an environment](/power-platform/admin/create-environment) and [Environment strategy for ALM](/power-platform/alm/environment-strategy-alm).
-- Environment maker, system administrator, or system customizer role. More information: [About predefined security roles](share-model-driven-app.md#about-predefined-security-roles)
+Verify the availability of the following prerequisites before you start to create a model-driven app:
+
+- A Power Platform environment used for app development.
+- An environment maker, system administrator or system customizer use role.
+
+For more information review the following articles:
+
+- [Create an environment](/power-platform/admin/create-environment).
+- [Environment strategy for ALM](/power-platform/alm/environment-strategy-alm).
+- [About predefined security roles](share-model-driven-app.md#about-predefined-security-roles).
 
 ## Create an app
 
 1. On the [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) **Home** page, select **Solutions** from the left navigation pane.
 
-1. Open an unmanaged solution or create a new one. More information: [Create a solution](../data-platform/create-solution.md) 
-
+1. Open an unmanaged solution or [create a new solution](../data-platform/create-solution.md)
+   > [!NOTE]   
+   > Unmanaged solutions can be recognised by the open lock in the **Managed Externally?** column.
+   > :::image type="content" source="media/unmanaged-solutions.png" alt-text="Select the navigation area from the Navigation pane":::
+   > Although the **Default Solution** is an unmanaged solution it is in most circumstances not recommmended to edit the default solution.
 1. Select **New** > **App** > **Model-driven app**.
-1. On the **New model-driven app from blank** dialog box, select **Modern app designer**, and then select **Create**.
+1. On the **New model-driven app from blank** dialog box, select **Modern app designer**, and then select **Create**. :::image type="content" source="media/new-model-driven-app-from-blank.png" alt-text="New model-driven app from blank":::
 1. On the **New model-driven app** dialog box, enter a **Name** and optionally, a **Description**, and then select **Create**.
 1. On the left navigation pane, select **Navigation** to display the navigation tree. 
-   :::image type="content" source="media/navigation-area.png" alt-text="Select the navigation area from the Navigation pane.":::
 
-1. Notice that a basic site map is already created for you. Expand **Area1**, and then expand **Group1**.
-   :::image type="content" source="media/default-site-map.png" alt-text="Default site map is created for you.":::
-1. Select **Group1** and change the title to *Accounts and Contacts*.
-1. Select **Subarea1**, and make the following changes: 
+   :::image type="content" source="media/navigation-area.png" alt-text="Select the navigation area from the Navigation pane":::
+   > [!TIP]
+   > Use the menu toggle to show or hide the names of the menu options. :::image type="content" source="media/menu-toggle.png" alt-text="Toggle the menu to show or hide the name of the menu options":::
+1. Notice that a basic navigation structure is already created for you. Expand **Area1**, and then expand **Group1**.
+   :::image type="content" source="media/default-site-map.png" alt-text="Default site map is created for you":::
+1. Select **Group1** and change the title in the property pane to for example *Accounts and Contacts*. :::image type="content" source="media/edit-navigation-group-title.png" alt-text="edit the group's title in the property pane":::
+1. Select **Subarea1**, and make for example the following changes:
+
    - **Content type**: Table
    - **Table**: Account
    - **Title**: Accounts
 
    > [!NOTE]
+   >
    > - A subarea won't appear in the app preview until you add a content type to it.
    > - By default, all forms and views are included for a table that's added to a page. To remove one or more components, see [Create, add, and remove forms, views, or dashboards](#create-add-and-remove-forms-views-or-dashboards).
 
@@ -66,69 +80,17 @@ Verify the following prerequisites before you start creating an app:
 
 To see how the app runs in a full browser window, on the command bar, select **Play**.
 
-## App navigation
 
-By default, a new model-driven app's navigation (or sitemap) is created that includes one area named **Area1**, one group named **Group1**, and one subarea named **Subarea1**. You can change the default area, group, and subarea names to something that is more meaningful to your users or configure a different site map. 
 
-In a model-driven app, there are the three main app runtime navigation components.
 
-1. Areas. For apps with more than one area, a switch control is displayed in the lower left navigation pane. In the screenshot below, the current area is named *Accounts*.
-1. Groups. Group names appear as a navigation element in an app with the subarea names within the group listed beneath it. In the screenshot below, one group is named *Accounts* and one is named *New Group*.
-1. Subareas. Subareas and pages appear under the group that they're configured within in the app designer. In the screenshot below, one subarea is named *All accounts revenue* and another subarea is named *Contacts*.
+### Next Steps
 
-   :::image type="content" source="media/default-sitemap.png" alt-text="Default model-driven app site map.":::
+- [Create, add and remove forms, views or dashboards](create-add-remove-forms-views-dashboards.md)
+- [Create and remove pages](create-remove-pages.md)
+- [App navigation](app-navigation.md)
+  
+### See Also
 
-### Create a group or subarea
-
-1. On the left navigation pane, select **Navigation**.
-1. Select **Add**, and then select **Group** or **Subarea**.
-1. Complete the properties pane for the group or subarea.
-   - For groups:
-      - **Title**: Enter a title used to describe the group.
-      - **ID**: The system generates an identifier for the group. Except the system generated ID or enter a new one.
-   - For subareas:
-      - **Content type**: Select either **Table** or **Dashboard**.
-      - **Table** or **Dashboard**: Depending on the content type you selected, select a table or dashboard from the list.
-      - **Title**: Leave the default title or enter a title used to describe the subarea.
-1. To save your app navigation changes select **Save**.
-1. To publish the changes to make them available to users, select **Publish**.
-
-### Remove a group or subarea
-
-1. On the left navigation pane, select **Navigation**.
-1. Select the group or subarea you want, select **...**, and then select **Remove**.
-
-## Create and remove pages
-
-App designer pages are containers for one or more tables or dashboards. You can choose whether to have the page appear in the app navigation (site map) or not.
-
-To create a page, select **New page**, select the page type of either **Table based view and form** or **Dashboard**, and then select **Next**. If you don't want your page to appear in the app's site map, clear **Show in navigation**. Select the components you want and then select **Add**. 
-
-To remove a page, select a page, select **...**, and then select **Remove**.
-
-To remove a component from a page, expand a page, select the component, such as a form, view, or dashboard, select **...**, and then select **Remove**.
-
-## Create, add, and remove forms, views, or dashboards
-
-Create, add, or remove one or more forms or views for a table.
-
-1. On the left navigation pane select **Pages**, and then select the component you want, such as **Account form**. 
-1. On the right properties pane, select **Manage forms**.
-1. On the **Manage forms** flyout, select the forms you want to add or remove, and then select **Save**. Alternatively, select **New form** to open the form designer to create a new form.
-   :::image type="content" source="media/app-design-manage-forms.png" alt-text="Manage forms interface.":::
-
-1. Select **Publish** to make the changes available to users.
-
-## Configure app properties
-
-From the **Settings** dialog box you can make app-level changes such as app name and description.
-
-1. On the command bar select **Settings**.
-1. On the **General** tab, select from the following options: 
-   - **Name**: The name of the app.
-   - **Description**: A description of the app is optional.
-   <!-- - **Can be used offline**: Allows users to run the app and interact with data without an internet connection. More information: [Configure mobile offline synchronization for Power Apps mobile](../../mobile/setup-mobile-offline.md) -->
-
-### See also
-
-[Overview of the model-driven app designer](app-designer-overview.md)
+- [Overview of the model-driven app designer](app-designer-overview.md)
+- [Configure app properties (Preview)](manage-app-properties-preview.md)
+- [Configure app properties](manage-app-properties.md)

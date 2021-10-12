@@ -26,44 +26,51 @@ search.app:
 ---
 # Design considerations for model-driven app main forms
 
-Main forms are the primary user interface where people view and interact with their data. Main forms provide the widest range of options and are available for model-driven apps, the exception being Dynamics 365 for phones.  
+Main forms are the **primary user interface** where people view and interact with their data. Main forms provide the widest range of presentation options that are available for model-driven apps.
+
+Other [form types](../../maker/model-driven-apps/types-forms.md) include Quick view, Quick Create and Card.
   
- One of the main design objectives for main forms is that you design them once and deploy them everywhere. The same main form you design for a model-driven app is also used in Dynamics 365 for Outlook and Dynamics 365 for tablets. The advantage to this approach is that you don’t have to integrate changes into multiple forms. However there are several important factors to consider in designing these forms.  
+One of the fundamental qualities of model-driven apps is that they are responsive to the size and type of device used when interacting with them.  This affects the position of the controls on the form in addition to the way in which they behave.  This is most notably the case with **Main Forms**.
+
+ One of the main design objectives for main forms is that they are **designed once** per table and deployed everywhere required. The same main form designed for a model-driven app is also used in Dynamics 365 for Outlook and Dynamics 365 for tablets. The advantage to this approach is that it is not necessary to integrate changes into multiple forms.
+
+ However there are several important factors to consider in designing these forms.  
   
 <a name="BKMK_CustomFormsForGroups"></a>   
 
 ## Custom forms for different groups  
- Because you can create multiple main forms and assign different security roles to each form you can present different groups in your organization with a form that is optimized for how they use the application. You can even provide each group with different options so that they have different forms to choose from. More information: [Control access to forms](control-access-forms.md)  
+ Because multiple main forms can be created and assigned to different security roles to it is possible to present different groups in an organization with a form that is optimized for how the group uses the application. It is also possible to provide each group with different options so that they have different forms to choose from. More information: [Control access to forms](control-access-forms.md)  
   
- You can expect that managers and decisions makers will want forms that are optimized to provide quick reference to key data points. They will like to see charts more than lists and they may not perform a lot of data entry.  
+ Managers and decisions makers will want forms that are optimized to provide **quick reference to key data points**. They will like to see charts more than lists and they may not perform a lot of data entry.  
   
- People who interact directly with customers may need forms tailored to tasks they perform most frequently. They may want forms that allow for the most efficient data entry.  
+ People who interact directly with customers may need forms tailored to tasks they perform most frequently. They may want forms that allow for the **most efficient data entry**.  
   
- You’ll need to find out what people in your organization want and need. This is frequently an iterative process where you gather input, try different things and build forms that people can use. Keep in mind that you have a variety of tools available to you and that not everything has to be done within the form. Use business rules, workflow processes, dialogs and business process flows together with your forms to provide a solution that works for your organization.  
+ Form creation may be **iterative process** where input is gathered and the user interface developed. Keep in mind that there are a variety of tools available to developers and that **not everything has to be done within the form**. Use [business rules](../model-driven-apps/model-driven-app-glossary.md#business-rule), workflow processes, dialogs and [business process flows](../model-driven-apps/model-driven-app-glossary.md#business-process-flow) together with main forms to provide a solution that works for the organization.  
   
- You’ll have to balance this with the amount of time you want to spend managing forms. Creating and editing forms is relatively easy, but as you create more forms, you have to manage more forms.  
+  Creating and editing forms is relatively easy, but as more forms are created more forms need to be maintained.  
   
 <a name="BKMK_PresentationDifferences"></a>   
-## Presentation differences  
- Although you don’t have to manage multiple forms for each presentation, you must consider how differences in the presentation can be accounted for in the main form. [Main form presentations](main-form-presentations.md) describes the different ways that the main form may be presented. The primary things to take into consideration are:  
+## Form Presentation differences  
+ Although it is not necessary to manage multiple forms for each delivery mechanism (Web, Tablet, Phone), a developer must consider how differences in the presentation can be accounted for in the main form. 
+ 
+ [Main form appearance](main-form-presentations.md) describes the different ways that the main form may be presented. The primary things to take into consideration are:  
   
 - Dynamics 365 for tablets doesn’t support image, HTML, or Silverlight web resources to be added to forms.  
   
--   The layout of Dynamics 365 for tablets forms is auto-generated based on the main form. There is no special form editor for Dynamics 365 for tablets forms. You need to verify that the form presentation works well for both clients.  
+- The layout of Dynamics 365 for tablets forms is auto-generated based on the main form. There is no special form editor for Dynamics 365 for tablets forms.  It is necessary to verify that the form presentation works well for both clients.  
   
--   If you have unsupported scripts that interact with DOM elements found in the web application, those scripts won’t work in the Dynamics 365 for tablets forms because the same DOM elements aren’t available.  
+- If there are unsupported scripts that interact with DOM elements found in the web application, those scripts won’t work in the Dynamics 365 for tablets forms because the same DOM elements aren’t available.  
   
 - Dynamics 365 for Outlook Reading Pane forms don’t allow for scripting. The visibility of form elements depend on the default settings and can’t be changed at runtime using scripts.  
   
-<a name="BKMK_FormPerformance"></a>   
-## Form performance  
- Forms that load slowly or don’t respond quickly are sure to affect productivity and user adoption of the app. [Optimize form performance](optimize-form-performance.md) provides a number of recommendations you should consider when designing forms so that customizations don’t adversely affect form performance.  
+<a name="BKMK_FormPerformance"></a>
+## Form performance
+ Forms that load slowly or don’t respond quickly may affect productivity and user adoption of the app. [Optimize form performance](optimize-form-performance.md) provides a number of recommendations to be considered when designing forms so that customizations don’t adversely affect form performance.  
   
-### Next steps 
- [Create and design forms](create-design-forms.md)    
- [Create and edit quick create forms](create-edit-quick-create-forms.md)   
+## Next steps
 
- 
-
+ [Create and design forms](create-design-forms.md)
+ [Create and edit quick create forms](create-edit-quick-create-forms.md)
+ [View form types](../../maker/model-driven-apps/types-forms.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -29,7 +29,9 @@ search.app:
 
 [!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-Interactive experience dashboards can be a one-stop workplace for app users, such as service reps, to see workload information and take action. They're fully configurable, security-role based, and deliver workload information across multiple streams in real time. Interactive dashboard users don't need to page through the application looking for a particular row; they can act on a it directly from the dashboard. 
+## Introducing interactive dashboards
+
+Interactive experience dashboards can be a one-stop workplace for app users, such as service reps, to see workload information and take action. They're fully configurable, security-role based, and deliver workload information across multiple streams in real time. Interactive dashboard users don't need to page through the application looking for a particular row; they can act on a it directly from the dashboard.
 
  The interactive experience dashboards come in two forms: multi-stream and single-stream. In addition, multi-stream dashboards can be home page or table-specific dashboards. The table-specific dashboards are configured in a different part of the user interface and partially preloaded with the table-specific configuration information.  
   
@@ -45,100 +47,111 @@ Interactive experience dashboards can be a one-stop workplace for app users, suc
  Users can apply additional filtering with global filter and timeframe filter. The global filter works at a column level on all charts, and also on streams and tiles that are based on the filter table (you specify the filter table when you configure the visual filters). 
   
 > [!NOTE]
->  The interactive dashboards are solution aware and can be exported and then imported into a different environment as a solution. However, the queues that the streams and tiles are based on aren’t solution aware. Before importing the dashboard solution into the target system, the queues have to be manually created in the target system in **Settings** > **Service Management** > **Queues**. After you create the queues, import the dashboard solution to the target system, and then edit the streams or tiles that are based on the queues  to assign the newly created queues appropriately.  
+>  The interactive dashboards are solution aware and can be exported and then imported into a different environment as a solution. However, the queues that the streams and tiles are based on aren’t solution aware. Before importing the dashboard solution into the target system, the queues have to be manually created in the target system in **Settings** > **Service Management** > **Queues**. After you create the queues, import the dashboard solution to the target system, and then edit the streams or tiles that are based on the queues to assign the newly created queues appropriately.  
   
  The illustrations in this topic show multi-stream and single-stream dashboards with the header pane. Below the header you see visual filters and streams. In the single-stream dashboard, you also see tiles. For each dashboard type, you can choose from several different layouts that are also shown. The dashboard header contains the following controls and select-able icons, from left to right: dashboard picker, refresh, visual filter icon, global filter icon, and timeframe filter.  
-  
-### Multi-stream dashboard standard view  
+
+## Dashboard layouts
+
+### Multi-stream dashboard standard view
+
  In the multi-stream dashboard, you see a row of visual filters at the top with the data streams below them.  
- 
-![Multi-stream interactive dashboard.](media/interactive-dashboards-multi-stream.png) 
-   
-### Multi-stream dashboard tile view  
+
+![Multi-stream interactive dashboard.](media/interactive-dashboards-multi-stream.png)
+
+### Multi-stream dashboard tile view
+
  The same dashboard, only in the tile view.  
   
  ![Multi-stream dashboard tile view.](media/interactive-dashboards-multi-stream-tiles.png "Multi-stream dashboard tile view")  
   
-### Multi-stream dashboard layouts  
+### Multi-stream dashboard layouts
+
  For multi-stream dashboards, you can choose from four different layouts.  
 
  > [!div class="mx-imgBorder"] 
  > ![Multi-stream dashboard layouts.](media/interactive-dashboards-multi-stream-layout.png "Multi-stream dashboard layouts")  
   
-### Multi-stream table-specific dashboard  
+### Multi-stream table-specific dashboard
+
  The table-specific dashboard for the case table is shown here.  
   
  ![Open cases dashboard.](media/interactive-dashboard-cases-entity-specific.png "Open cases dashboard")  
   
-### Single-stream dashboard  
+### Single-stream dashboard
+
  The single-stream dashboard contains the data stream on the left and visual filters and tiles on the right.  
   
  ![Single-stream interactive service hub dashboard.](media/interactive-dashboards-single-stream.png "Single-stream interactive service hub dashboard")  
   
-### Single-stream dashboard layouts  
- For single-stream dashboards, you can choose from four different layouts.  
- 
+### Single-stream dashboard layouts
+
+ Four different layouts can be chosen for single-stream dashboards.
+
  > [!div class="mx-imgBorder"] 
  > ![Single-stream dashboard layouts.](media/interactive-dashboards-single-stream-layout.png "Single-stream dashboard layouts.")  
   
-<a name="BKMK_Enable"></a>   
-## Configure filter columns, and security roles for the interactive dashboards  
- When you configure interactive dashboards, your first task is to enable filter columns and security roles, so that interactive dashboards can be configured for them. Notice that interactive dashboards are enabled for all tables and custom tables by default. 
+<a name="BKMK_Enable"></a>
+
+## Configure filter columns, and security roles for he interactive dashboards
+
+ When interactive dashboards are configured, the first task is to enable filter columns and security roles, so that interactive dashboards can be configured for them. Notice that interactive dashboards are enabled for all tables and custom tables by default.
   
-### Configure filter columns  
- For a column to appear in the global filter and be included in the data stream sort, you must set two flags:
+### Configure filter columns
+
+ For a column to appear in the global filter and be included in the data stream sort, two flags must be set:
 
 - Appears in global filter in interactive experience
 - Sortable in interactive experience dashboard
 
-In this example there are two interactive dashboard options available in the Case table for the **IsEscalated** column.  
+In this example there are two interactive dashboard options available in the Case table for the **IsEscalated** column.
 
- > [!div class="mx-imgBorder"] 
- > ![Enable a column for global filter and sort.](media/enable-filter-sort.png "Enable a column for global filter and sort")  
+ > [!div class="mx-imgBorder"]
+ > ![Enable a column for global filter and sort.](media/enable-filter-sort.png "Enable a column for global filter and sort")
   
 ### Configure the 'Appears in global filter in interactive experience' option
 
-1.	Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
-2.  Select **Solutions**, open the solution you want, and then on the toolbar select **Switch to classic**. 
-3. Under **Components**, expand **Tables**, and then expand the table you want.
-4. In the navigation pane, select **Columns** and in the grid, double-click the column you want to enable.
+1.	Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+2.  Select **Solutions**, open the solution required, and then on the toolbar select **Switch to classic**.
+3. Under **Components**, expand **Tables**, and then expand the specific table.
+4. In the navigation pane, select **Columns** and in the grid, double-click the column required.
 5. In the **General** tab, select the **Appears in global filter in interactive experience** check box. Select **Save and Close**.
-6. Select **Publish All Customizations** for your changes to take effect.
+6. Select **Publish All Customizations** for the changes to take effect.
   
- The columns that you enable for **Appears in global filter in interactive experience** appear in the global filter flyout window when the global filter icon is clicked on the dashboard header. In the flyout window, the service reps can select the columns on which they want to filter globally, in charts, and also in streams and tiles that are based on the filter table.   
+ The columns that are enabled for **Appears in global filter in interactive experience** appear in the global filter flyout window when the global filter icon is clicked on the dashboard header. In the flyout window, the service reps can select the columns on which they want to filter globally, in charts, and also in streams and tiles that are based on the filter table.
   
  The global filter flyout window is shown here:  
   
  ![Add two global filter columns.](media/global-filter-escalated.png "Global filter columns")  
   
 > [!TIP]
->  When you configure a visual filter based on the columns like priority or status, a best practice is to also enable these columns (priority, status) to appear in the global filter.  
+>  When a visual filter is configured based on the columns like priority or status, a best practice is to also enable these columns (priority, status) to appear in the global filter.  
   
 ### Configure the 'Sortable in interactive experience dashboard' option
   
 1.	Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
-2.  Select **Solutions**, open the solution you want, and then on the toolbar select **Switch to classic**. 
-3. Under **Components**, expand **Tables**, and then expand the table you want.
-4. In the navigation pane, select **Columns** and in the grid, double-click the column you want to enable.
+2.  Select **Solutions**, open the solution required, and then on the toolbar select **Switch to classic**. 
+3. Under **Components**, expand **Tables**, and then expand the relevant table.
+4. In the navigation pane, select **Columns** and in the grid, double-click the column for which sorting is required.
 5. In the **General** tab, select the **Sortable in interactive experience dashboard** check box. Select **Save and Close**.
-6. Select **Publish All Customizations** for your changes to take effect.
+6. Select **Publish All Customizations** for the changes to take effect.
   
-The columns that you configure for sorting appear in the drop-down list on the stream header. 
+The columns that are configured for sorting appear in the drop-down list on the stream header.
 
 The following illustration shows the flyout dialog with the list of the available columns for sorting, in the drop-down list. The default sort is always set on the **Modified On** column.  
   
- ![Sort by drop-down list.](media/sort-field.png "Sort by drop-down list")    
+ ![Sort by drop-down list.](media/sort-field.png "Sort by drop-down list")
     
 ### Enable security roles  
  Select and enable security roles that will be able to view the interactive dashboards.  
   
 #### Enable security roles for interactive dashboards
 
-1.	Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
+1.	Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
   
-2.  Select **Solutions**, and then open the solution you want. 
+2.  Select **Solutions**, and then open the required solution. 
 
-3.  Select the dashboard that you want and then on the toolbar select **Enable security roles**. 
+3.  Select the dashboard and then on the toolbar select **Enable security roles**.
   
     > [!div class="mx-imgBorder"] 
     > ![Enable security roles.](media/dashboard-enable-security-roles.png)
@@ -147,8 +160,7 @@ The following illustration shows the flyout dialog with the list of the availabl
 
      ![Select display only these selected security roles.](media/security-roles.png "Select display only these selected security roles")    
   
-5.  Select **Publish** for your changes to take effect.    
-  
+5.  Select **Publish** for the changes to take effect.
   
 <a name="BKMK_Configure"></a>   
 ## Create interactive experience dashboards  
@@ -158,9 +170,9 @@ The following sections describe how to create and then configure the various typ
  
 1.	Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
   
-2.  Select **Solutions**, open the solution you want, and then on the toolbar select **Switch to classic**. 
+2.  Select **Solutions**, open the solution required, and then on the toolbar select **Switch to classic**.
 
-3.  In the left navigation pane, select **Dashboards**, on the toolbar select **New**, and then select **Interactive experience dashboard**. 
+3.  In the left navigation pane, select **Dashboards**, on the toolbar select **New**, and then select **Interactive experience dashboard**.
 
     ![New Interactive experience dashboard.](media/interactive-exp-dash-sol-explorer.png)
   
@@ -179,7 +191,7 @@ The following sections describe how to create and then configure the various typ
       
    - **Time Frame**: The default time frame filter value for the **Filter By** column.  
       
- After you  have specified the filtering information, start adding components for the charts and the data streams. To add a component, simply select the element in the center of the chart or stream, and when the dialog appears, select the required information from the drop-down list, as shown in the following illustrations.  
+ After filtering information has been specified, start adding components for the charts and the data streams. To add a component, simply select the element in the center of the chart or stream, and when the dialog appears, select the required information from the drop-down list, as shown in the following illustrations.  
   
  Add the **Cases By Priority** doughnut chart.
   
@@ -189,8 +201,8 @@ The following sections describe how to create and then configure the various typ
  Some charts, such as bar charts or pie charts, render showing the data stored in the system. The doughnut charts and tag charts load as static images and don’t show the preview of the actual data.  
   
 > [!NOTE]
->  The charts configured for the visual filters can use the columns of the **Filter** table as well as related tables. When you use charts based on related table columns, the customer service representatives can filter charts using these related table columns. The columns that are based on the related table usually have the following format in the chart configuration window: “field name (entity name)”, such as the **Modified By (Delegate)** column. To create multi-entity charts, you must add  columns of a related table to any of the views, and then use these columns while creating charts.  
- 
+>  The charts configured for the visual filters can use the columns of the **Filter** table as well as related tables. When charts are based on related table columns, the customer service representatives can filter charts using these related table columns. The columns that are based on the related table usually have the following format in the chart configuration window: “field name (entity name)”, such as the **Modified By (Delegate)** column. To create multi-entity charts, columns of a related table must be added to any of the views, and then use these columns while creating charts.  
+
  > [!div class="mx-imgBorder"] 
  > ![Creating charts for visual filters.](media/interactive-dashboard-visual-charts-x-y-axes.PNG "Creating charts for visual filters")  
   
@@ -201,20 +213,20 @@ The following sections describe how to create and then configure the various typ
  ![Add a stream of my active cases.](media/add-stream-dashboard.png "Add a stream of my active cases.")  
 
 > [!NOTE]
->  The **Queue** option is available in the dialog box only for queue-enabled tables. For table dashboards, if the table is not queue enabled, you won't see the **Queue** option in the dialog box. You can only use the **View option** in the stream of dashboards for tables that are not queue enabled.    
- 
+>  The **Queue** option is available in the dialog box only for queue-enabled tables. For table dashboards, if the table is not queue enabled, the **Queue** option will not be visible in the dialog box. It is only possible to use the **View option** in the stream of dashboards for tables that are not queue enabled.
+
 The following illustration is an example of a fully configured chart panel and stream panel:  
- 
+
  > [!div class="mx-imgBorder"] 
  > ![Fully configured dashboard.](media/example-stream-visual.png "Fully configured dashboard")  
   
- After you have completed configuring the dashboard, save it and publish the customizations for your changes to take effect.   
+ After the dashboard has been completely configured, save it and publish the customizations for the changes to take effect.
   
 #### Edit or delete individual streams of an existing dashboard  
   
-1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).   
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
   
-2. Select **Solutions**, open the solution you want, and then open the interactive dashboard.  
+2. Select **Solutions**, open the solution required, and then open the interactive dashboard.  
   
 3.  Select the stream that you want to edit to select it, and then select **Edit Component**.  
   
@@ -222,32 +234,35 @@ The following illustration is an example of a fully configured chart panel and s
   
 5.  Select **Save**.  
   
- You can also delete an individual stream from a dashboard. To do this, select the stream, and then on the toolbar, select **Delete**.  
+ It is also possible to delete an individual stream from a dashboard. To do this, select the stream, and then on the toolbar, select **Delete**.  
   
-### Create a table-specific dashboard  
- A table-specific dashboard is a multi-stream dashboard. Configuring this dashboard is similar to configuring a home page multi-stream dashboard, but you do it in the different place in the UI and there are other minor differences. 
+### Create a table-specific dashboard
 
-For example, instead of selecting a table, some columns in the table-specific dashboard are preset to the table for which you are creating the dashboard.  
+ A table-specific dashboard is a multi-stream dashboard. Configuring this dashboard is similar to configuring a home page multi-stream dashboard, but this is performed in the different place in the UI and there are other minor differences.
+
+For example, instead of selecting a table, some columns in the table-specific dashboard are preset to the table relevant to the dashboard.  
   
 1.	Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-2.  Select **Data** > **Tables** > select the table you want. 
+2.  Select **Data** > **Tables** > select the required table.
 
-3.  Select the **Dashboards** tab, and then on the toolbar select **Add dashboard**.  
-4.  Choose the layout, either 2, 3, or 4 column width.    
+3.  Select the **Dashboards** tab, and then on the toolbar select **Add dashboard**.
+
+4.  Choose the layout, either 2, 3, or 4 column width.
   
-5.  When the dashboard form opens, the **Filter Table** is preset to the table for which you are creating the dashboard. The **Table View** drop-down list contains the available views for the table. Select the view and fill in the rest of the required information on the page.  
+5.  When the dashboard form opens, the **Filter Table** is preset to the table which is tied to the dashboard. The **Table View** drop-down list contains the available views for the table. Select the view and fill in the rest of the required information on the page.  
   
  The rest of the setup is very similar to the home page multi-stream dashboard setup described in the previous section.  
   
-### Configure a single-stream dashboard  
- Configuring a single-stream dashboard is similar to the multi-stream dashboard. All UI navigation steps are the same as for the multi-stream dashboard. You can choose a layout that includes tiles or the layout that doesn’t include tiles. If the tiles are included, they are always displayed on the dashboard. To configure a tile, you select the icon in the center of the tile. When the **Add Tile** window opens, fill in the required data. The following illustration is an example of the tile setup.  
+### Configure a single-stream dashboard
+
+ Configuring a single-stream dashboard is similar to the multi-stream dashboard. All UI navigation steps are the same as for the multi-stream dashboard. It is possible to choose a layout that includes tiles or the layout that doesn’t include tiles. If the tiles are included, they are always displayed on the dashboard. To configure a tile, the icon in the center of the tile is selected. When the **Add Tile** window opens, fill in the required data. The following illustration is an example of the tile setup.  
   
  ![Add a tile to the single-stream dashboard.](media/add-tile.png "Add a tile to the single-stream dashboard")  
   
 ## Configure dashboard colors
 
-You can configure a particular color that will appear in the charts and streams for specific column values. For example, high priority cases can be shown in red, medium priority cases in blue, and low priority cases in green in the interactive charts. In the streams, there will be a thin vertical line in color next to the work item description.  
+The color that will appear in the charts and streams for specific column values can be configured. For example, high priority cases can be shown in red, medium priority cases in blue, and low priority cases in green in the interactive charts. In the streams, there will be a thin vertical line in color next to the work item description.  
   
 > [!IMPORTANT]
 >  - The color coding isn’t available for the tag charts and doughnut charts. These charts appear on the dashboard in white, gray, and black shades.
@@ -259,17 +274,17 @@ You can configure a particular color that will appear in the charts and streams 
 >    More information: [Chart colors are not correct on dashboards]( https://support.microsoft.com/topic/chart-colors-are-not-correct-on-dashboards-82dd1165-b509-ab64-954e-2e09a3487fd7)
   
 1.  Open [solution explorer](advanced-navigation.md#solution-explorer).  
-2.  Under **Components**, expand **Tables**, and then expand the table you want. If the table you want isn't displayed select **Add Existing** to add it.  
+2.  Under **Components**, expand **Tables**, and then expand the table required. If the table isn't displayed select **Add Existing** to add it.  
   
-3.  In the navigation pane, select **Columns**. In the grid, double-click the column that you want to configure the color for.  
-  
-4.  In the **General** tab, in the **Type** sub-area, select **Yes** and then select **Edit**.  
+3.  In the navigation pane, select **Columns**. In the grid, double-click the relevant column.  
+
+4.  In the **General** tab, in the **Type** sub-area, select **Yes** and then select **Edit**.
   
 5.  When the **Modify List Value** dialog appears, set the new value in the **Color** text box. Select **OK**.  
   
 6.  Select **Save and Close**.  
   
-7.  Select **Publish** for your changes to take effect.  
+7.  Select **Publish** for the changes to take effect.  
   
 In the following example, we’re changing the color for the **IsEscalated** column. Use the **Edit** button to open the **Modify List Value** dialog box:  
  
@@ -280,15 +295,12 @@ When the **Modify List Value** dialog box opens, enter the hexadecimal color cod
   
  ![Enter the hexadecimal color code.](media/modify-color.png "Enter the hexadecimal color code")  
 
-Similarly, if you go to the **Priority** column to modify the colors of the case priority options, choose the color in the **Options** sub-area of the **General** tab, as shown below:
+Similarly, if the **Priority** column is ued to modify the colors of the case priority options, choose the color in the **Options** sub-area of the **General** tab, as shown below:
 
  ![Modify the dashboard color.](media/priority-color-modify.png "Change dashboard color for case priority")  
   
 ### See also  
- 
+
 [Create or edit dashboards](create-edit-dashboards.md)
- 
-
-
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

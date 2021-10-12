@@ -26,11 +26,23 @@ search.app:
 ---
 # How model-driven app main forms appear on different devices
 
-The main form is used by all model-driven app clients. This form provides a consistent user experience whether someone is using a web browser,  Dynamics 365 for phones, Dynamics 365 for tablets, or Dynamics 365 for Outlook.  
+There are 4 types of form.  Main, Quick View, Quick Create and Card.
+
+The **main form** is a fundamental building block of any model-driven app and is used by all devices used to deliver them.
+
+This form can be rendered using a web browser,  Dynamics 365 for phones, Dynamics 365 for tablets, or Dynamics 365 for Outlook and its design will adjust to accommodate the device used.  This responsive design is one of the most important features of any model-driven app.
+
+Additionally, the main form is an intrinsic part of the table and it travels with the table as part of any solution.  This helps with the [application lifecycle management](model-driven-app-glossary.md#application-lifecycle-management)
+
+[Learn more about all the form types](types-forms.md)
+
+[Notes on Microsoft Dynamics 365](model-driven-app-glossary.md#Dynamics)
   
-<a name="BKMK_MainFormPresentations"></a>   
-## Main forms  
- Any main forms that exist for a table may be displayed differently depending on the factors in the following table below. When you design a main form, consider how it works in each different presentation.  
+<a name="BKMK_MainFormPresentations"></a>
+
+## Main form presentation options
+
+ Any main forms that exist for a table may be displayed differently depending on the factors in the following table below. When designing a main form, consider how it works in each presentation tool.  
   
 |Presentation|Description|  
 |------------------|-----------------|  
@@ -39,19 +51,25 @@ The main form is used by all model-driven app clients. This form provides a cons
 |**Dynamics 365 for phones**| Dynamics 365 for phones presents the content of the main form in a manner optimized for a phone.|  
 |**Classic**|These forms are for the tables that haven't been updated. They use the ribbon rather than the command bar and the navigation pane on the left side of the form.<br /><br /> These forms have a two-column layout.|  
   
-<a name="BKMK_MainFormComponentsForUpdatedEntities"></a>   
-## Updated forms  
+<a name="BKMK_MainFormComponentsForUpdatedEntities"></a>
+
+## Updated forms
+
  This diagram represents common components found in updated table forms.  
   
  ![Diagram shows Updated table form structure in Dynamics 365.](media/updated-form-diagram.png "Diagram shows Updated table form structure in Dynamics 365")  
   
- For updated tables, the layout of the form works with a wide range of displays and window sizes. As the width of window decreases, tab columns move down so that you can scroll down to work with them instead of being compressed or requiring you to scroll to the right.  
+ For updated tables, the layout of the form works with a wide range of displays and window sizes. As the width of window decreases, tab columns move down so that you can scroll down to work with them instead of being compressed or requiring you to scroll to the right.
+
+The image below illustrate the accounts table main form as it would be viewed through a web browser. 
+
+ :::image type="content" source="media/create-and-edit-a-model-driven-form/main-form-accounts.png" alt-text="Sample model-driven app":::  
   
  The following table summarizes available components of the main form for updated tables.  
   
 |Component|Summary|  
 |---------------|-------------|  
-|**Navigation bar**|Uses the data in the site map to provide the ability to move to different areas of the application.<br /><br /> The navigation pane used in classic forms isn’t included in the updated form. In the context of a row, the navigation bar provides access to views of related rows. Rather than navigating to related rows using the navigation pane or by using the navigation bar, adding sub-grids configured to show useful related table rows provides a better experience for most people.|  
+|**Navigation bar**|Uses the data in the site map to provide the ability to move to different areas of the application.<br /><br /> The navigation pane used in classic forms isn’t included in the updated form. In the context of a row, the navigation bar provides access to views of related rows. Rather than navigating to related rows using the navigation pane or by using the navigation bar, adding [subgrids](model-driven-app-glossary.md#subgrid) configured to show useful related table rows provides a better experience for most people.|  
 |**Command bar**|Uses the data defined for ribbons to provide commands relevant for the row.<br /><br /> The first five commands are displayed followed by an ellipsis (![More commands button.](media/not-available.gif "More commands button")) that provides a flyout menu to choose additional commands.|  
 |**Image**|When a table has an image column and the table **Primary Image** option is set to **Default Image**, an image can be displayed in the header when the form is configured to show the image.|  
 |**Header**|Columns placed in the header remain visible when people scroll down through the body of the form.<br /><br /> Up to four columns can be placed in the header. Multiple lines of text, web resources, or iFrames aren’t allowed in the header. The header and footer share some properties with sections.|  
@@ -177,7 +195,9 @@ The main form is used by all model-driven app clients. This form provides a cons
 -   People with the Vice President of Sales role will always see **Sales Form Four**.  
   
 <a name="BKMK_ClassicPresentation"></a>   
-## Classic forms  
+
+## Classic forms
+
  The following diagram shows the main form components used in the classic presentation.  
   
  ![Major form elements.](media/elements.png "Major form elements")  
@@ -188,10 +208,8 @@ The main form is used by all model-driven app clients. This form provides a cons
   
  The form assistant is exposed for certain tables, such as `Article`.  
   
-## Next steps  
- [Create and design forms](create-design-forms.md)   
+## Next steps
 
- 
-
+ [Create and design forms](create-design-forms.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

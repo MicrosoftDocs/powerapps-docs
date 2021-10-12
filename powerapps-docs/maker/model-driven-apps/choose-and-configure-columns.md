@@ -34,16 +34,6 @@ search.app:
 <a name="BKMK_ChooseAndConfigureColumns"></a>   
 
  Along with the filter criteria, the columns visible in a Power Apps view are very important to the value provided by the view. In this topic, you create or edit views by performing the following tasks:  
-
--   [Open the view editor](choose-and-configure-columns.md#open-the-view-editor)  
-   
--   [Add columns](choose-and-configure-columns.md#BKMK_AddColumns)  
-  
--   [Remove columns](choose-and-configure-columns.md#BKMK_RemoveColumns)  
-  
--   [Change column width](choose-and-configure-columns.md#BKMK_ChangeColumnWidth)  
-  
--   [Move a column](choose-and-configure-columns.md#BKMK_MoveAColumns)  
     
   > [!IMPORTANT]
   > The latest version of the view designer is currently in preview. Some features like enabling or disabling presence for a column and adding a find column are not yet supported. To accomplish these tasks, [open the view in the classic view designer](/dynamics365/customer-engagement/customize/create-and-edit-views#open-the-classic-view-designer).
@@ -53,11 +43,11 @@ search.app:
 
 
 
-### Open the view editor
+## Opening the view editor
 
 1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
-2.  Expand **Data**, select **Tables**, select the table that you want, and then select the **Views** tab. 
+2.  Expand **Data**, select **Tables**, select the table that you want, and then select the **Views** tab. You can also navigate to the table and views via solutions as shown below.
 
     > [!div class="mx-imgBorder"] 
     > ![Account view definitions.](media/account-view-definitions.png)
@@ -65,14 +55,14 @@ search.app:
 3. Select an existing view to open it or on the toolbar select **Add view**. 
 
 <a name="BKMK_AddColumns"></a>   
-### Add columns  
+## Adding columns  
  You can include columns from the current table or any of the related tables that have a 1:N table relationship with the current table.  
   
  For example, perhaps you want to display the owner of a user-owned table in a column. You can choose the **Owner** column of the current table to display the name of the owner. This will appear as a link to open the **User** row for the person who is the owner.  
   
  If you want to display the phone number for the owner of the row, you must select **Owning User (User)** from the **Row type** drop-down and then select the **Main Phone** column.  
   
-#### Add columns to views  
+### Add columns to views  
   
 1.  While creating and editing views, ensure that the **Table columns** panel is open. If it is not, select **View column** on the toolbar. 
 
@@ -92,14 +82,14 @@ search.app:
 >  When you add columns to Lookup views for updated tables, only the first three columns will be displayed.  
   
 <a name="BKMK_RemoveColumns"></a>   
-### Remove columns  
+## Removing columns  
   
 1.  Select the header of the column you want to remove.  
   
 2.  In the dropdown, select **Remove**.  
   
 <a name="BKMK_ChangeColumnWidth"></a>   
-### Change column width  
+## Changing column widths 
   
 1.  Hover over the area between columns in the view.  
   
@@ -108,7 +98,7 @@ search.app:
 3.  Drag the column to the appropriate width.  
   
 <a name="BKMK_MoveAColumns"></a>   
-### Move a column  
+## Moving a column  
   
 Click and drag the column header to the correct position.
   
@@ -117,7 +107,7 @@ Click and drag the column header to the correct position.
 
 
   
-## Next steps
+### Next steps
 [Create or edit views](create-edit-views.md)
 
 

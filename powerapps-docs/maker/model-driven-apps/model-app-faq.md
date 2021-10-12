@@ -21,15 +21,20 @@ search.app:
 
 These frequently asked questions (FAQ) can help you resolve issues that might occur when you work with model-driven apps.
 
-## What is an app module?
+## How do I run a model-driven app?
 
-The term *app module* has been used to describe model-driven apps, and *appmodule* is the name referenced in the Microsoft Dataverse and customer engagement apps schema. **Model-Driven App** is included in the display names for some of the tables referenced in Power Apps. For information about the `appmodule` table, go to [AppModule entity reference](../../developer/data-platform/reference/entities/appmodule.md). For information about using the `appmodule` table API, go to [Create, manage, and publish model-driven apps using code](../../developer/model-driven-apps/create-manage-model-driven-apps-using-code.md).
+In order to play an app you need to have a security role assigned to you and the URL to the app.
 
-App modules, which are referred to as model-driven apps in Power Apps, are created and customized within a solution. Solutions are used for application lifecycle management, and you can use them to migrate customizations from one environment to another. It's beneficial to be familiar with the [solution layering](/power-platform/alm/solution-layers-alm) concepts.
+To share the app simply navigate to the app as a designer and share it as shown below by assigning a [security role](../model-driven-apps/model-driven-app-glossary.md#security-role).
 
-## What's the best way to define and manage my model-driven app?
+!["Sharing a model driven app"](media/share-model-driven-app/share-app.png "Sharing a model driven app")
 
-We recommend that you create your app in a dedicated solution. By creating a solution for your app, you can maintain your other solutions without creating any dependencies with your app. Only make changes to that solution when you want to update your app&mdash;for example, when you add, change, or remove components from the app. More information: [Create a solution](../data-platform/create-solution.md)
+You can find the URL using the process below.
+
+!["Acquiring the link for a model-driven app"](media/share-model-driven-app/app-designer-copy-web-url-process.gif "Acquiring the link for a model-driven app")
+To play the app simply navigate the URL into your browser.
+
+For more details see [sharing model-driven apps](share-model-driven-app.md)
 
 ## Why can't I create a model-driven app?
 
@@ -81,13 +86,13 @@ The site map defines the navigation for your model-driven app. You add tables to
 
 You use security roles that contain the appropriate privileges and assign them to the users, teams, and apps you want. More information: [Share a model-driven app using Power Apps](share-model-driven-app.md)
 
-## I'm a developer. Where do I get started?
-
-Go to [Supported Customizations for Dataverse](../../developer/data-platform/supported-customizations.md).
-
 ## Why don't I see all the views after importing a solution?
 
 A model-driven app change that was made by selecting **All** when selecting a component, such as a view, isn't reflected after importing an update to the app in the target environment. More information: [Newly added components don't appear in the app after importing an update to the app](../data-platform/import-update-export-solutions.md#newly-added-components-dont-appear-in-the-app-after-importing-an-update-to-the-app)
+
+## What's the best way to define and manage my model-driven app?
+
+We recommend that you create your app in a dedicated solution. By creating a solution for your app, you can maintain your other solutions without creating any dependencies with your app. Only make changes to that solution when you want to update your app&mdash;for example, when you add, change, or remove components from the app. More information: [Create a solution](../data-platform/create-solution.md)
 
 ## What is `solutionaction`?
 
@@ -98,6 +103,16 @@ More advanced users can review the solution's customization.xml file. When you i
 * Modified
 
 This value specifies the changes in the current layer with respect to the previous managed layer. For example, on solution import, `solutionAction="Removed"` will remove the component from the app. More information: [*Microsoft.Crm.CrmInvalidOperationException: full formXml is expected to create a form message during solution import](../data-platform/import-update-export-solutions.md#microsoftcrmcrminvalidoperationexception-full-formxml-is-expected-to-create-a-form--message-during-solution-import)
+
+## What is an app module?
+
+The term *app module* has been used to describe model-driven apps, and *appmodule* is the name referenced in the Microsoft Dataverse and customer engagement apps schema. **Model-Driven App** is included in the display names for some of the tables referenced in Power Apps. For information about the `appmodule` table, go to [AppModule entity reference](../../developer/data-platform/reference/entities/appmodule.md). For information about using the `appmodule` table API, go to [Create, manage, and publish model-driven apps using code](../../developer/model-driven-apps/create-manage-model-driven-apps-using-code.md).
+
+App modules, which are referred to as model-driven apps in Power Apps, are created and customized within a solution. Solutions are used for application lifecycle management, and you can use them to migrate customizations from one environment to another. It's beneficial to be familiar with the [solution layering](/power-platform/alm/solution-layers-alm) concepts.
+
+## I'm a developer. Where do I get started?
+
+Go to [Supported Customizations for Dataverse](../../developer/data-platform/supported-customizations.md).
 
 ## How do I get help?
 

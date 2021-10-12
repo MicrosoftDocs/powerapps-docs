@@ -27,7 +27,7 @@ search.app:
 
 # Properties available in the form designer
 
-Located on the right-pane of the model-driven form designer, the property pane lets you quickly view and update the properties of any element selected from the preview or the tree view. 
+Located on the right-pane of the model-driven form designer, the **property pane** lets an app designer quickly view and update the properties of any element selected from the preview or the tree view. 
 
 > [!div class="mx-imgBorder"] 
 > ![Form designer property pane.](media/form-designer-property-pane.png "Form designer property pane")
@@ -77,7 +77,7 @@ Located on the right-pane of the model-driven form designer, the property pane l
 |**Display options**     |  **Lock column**   |  Lock this column to keep it from being removed.     |
 |**Display options**     |  **Hide column**     | When selected, column is hidden by default and can be shown using code.      |
 |**Display options**     |  **Hide on phone**    | For a condensed version of this form on phone screens, columns can be hidden.         |
-|**Formatting**     | **Column width**      |  When the section containing the columns has more than one column you can set the column to occupy up to the number of columns that the section has.       |
+|**Formatting**     | **Column width**      |  Columns, or Dataverse fields, exist within sections and sections can be divided into columns.  When the section containing the record columns has more than one column the number of section columns that the record column can occupy can be set with the maximum being the total number of section columns specified in the section properties.       |
 
 ## See also
 [Overview of the model-driven form designer](form-designer-overview.md)  

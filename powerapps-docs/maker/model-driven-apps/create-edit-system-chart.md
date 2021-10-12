@@ -28,21 +28,20 @@ search.app:
 
 In this article you learn how to create a system chart. System charts are organization-owned charts, which makes them available to anyone with access to read the data running the app. System charts can't be assigned or shared with specific app users.
 
-1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-1. On the left navigation pane, select **Apps**.
+> [!Note] Model-driven apps not set up to see **all charts** for a given table will need to have newly created charts added to the table within the app.  This is done through the app designer.
 
-1. Next to the model driven app to which you want to edit by adding a chart, select **...** (ellipses), and then select **Edit**. <!--In this example, we use the **Manage Customers** app used in the tutorial *How to create a model driven app*. -->
-1. In the app designer, locate the table to which you want to add the chart, and then select the corresponding **Charts** tile. In this example, we add a chart to the **Account** table.
+## Create a new chart
 
-   :::image type="content" source="media/add-and-customize-visualizations-in-model-driven apps/add-and-customize-visualizations-in-model-driven-apps-1.png" alt-text="Locate the table where you want to add a chart.":::
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. On the left navigation pane, select **Dataverse** and then the table which requires a chart.
 
-1. On the **Components** tab, select **Create New**.
+1. Select **Charts** from the menu and then **Add Chart**.
 
-   :::image type="content" source="media/add-and-customize-visualizations-in-model-driven apps/add-and-customize-visualizations-in-model-driven-apps-2.png" alt-text="On the Components tab pane select Create New.":::
+   :::image type="content" source="media/create-table-chart.png" alt-text="Steps to introducing a chart into a table.":::
 
    A new window opens where you can create a chart.
 
-1. Specify the type of chart, and how the data is displayed in the chart.
+2. Specify the type of chart, and how the data is displayed in the chart.
 
    - Enter the chart name, such as *Number of employees by account*.
    - In the **Select Column** dropdowns:
@@ -53,30 +52,28 @@ In this article you learn how to create a system chart. System charts are organi
 
    :::image type="content" source="media/add-and-customize-visualizations-in-model-driven apps/add-and-customize-visualizations-in-model-driven-apps-3.png" alt-text="Description to identify the purpose of the system chart you create.":::
 
-1. Select **Save and Close**.
+3. Select **Save and Close**.
 
 The **Number of employees by account** chart is now displayed in the app designer list of charts available for the account table.
 
-## View your visualization in your model-driven app
+## View your visualization in a model-driven app
 
-Now that you have created your chart, you can use it to visualize account data in your app. Follow these steps to view your chart:
+Now that the chart has been created, it can be used to visualize table data in the model-driven app. Follow these steps to view the chart:
 
-1. In the app designer, select **Play**.
+1. Navigate to a model-driven app that contains your table via a solution or directly to the app.
+2. Click on the three dots next to the app and select **play**.  The model-driven app will open in a separate tab.
 
-   The app launches.
+4. On the left navigation pane, select a table such as **Accounts**.
 
-1. On the left navigation pane, select **Accounts**.
-
-1. On the command bar, select **Show Chart**.
+5. On the command bar, select the **Show Chart** toggle
 
    The chart pane opens.
 
-1. Select the chart selector, and then select **Number of employees by account**.
+   :::image type="content" source="media/add-and-customize-visualizations-in-model-driven apps/view-your-visualization-in-your-model-driven-app-3.png" alt-text="Chart selector.":::
 
-   :::image type="content" source="media/add-and-customize-visualizations-in-model-driven apps/view-your-visualization-in-your-model-driven-app-1.png" alt-text="Chart selector.":::
+6. By selecting the dropdown available any one of the system charts in the app will be available as an option.
 
-
-   Your chart appears in-line with the data view.
+   The chart appears in-line with the data view.
 
    :::image type="content" source="media/add-and-customize-visualizations-in-model-driven apps/view-your-visualization-in-your-model-driven-app-2.png" alt-text="Your system chart named Number of employees by account is displayed.":::
 
@@ -85,12 +82,15 @@ Use your chart:
 - Refresh the chart to display other data by changing the view.
 - Add the chart to a model-driven app dashboard. More information: [Create or edit model-driven app dashboards](create-edit-dashboards.md)
 
-## Known issue
+>[!NOTE] If the chart is not visible in the dropdown then the model-driven app has been created with specific charts associated with it.  To resolve this open the model-driven app in design mode, select charts and select your newly created chart.
+> :::image type="content" source="media/add-and-customize-visualizations-in-model-driven apps/add-and-customize-visualizations-in-model-driven-apps-1.png" alt-text="Select Chart from within app":::
+
+## Known chart creation issues
 
 In the chart designer, adding a order by on certain calculated columns are not supported and will cause an error. The calculated columns causing this are using another calculated columns, a related table column, or a local column on the table.
 
-## Next steps  
-[Create or edit dashboards](create-edit-dashboards.md)
+## Next steps
 
+[Create or edit dashboards](create-edit-dashboards.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

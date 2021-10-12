@@ -30,13 +30,36 @@ search.app:
 
 <a name="BKMK_ManagedProperties"></a>   
  
- If you create a custom public view in Power Apps that you want to include in a managed solution that you will distribute, you have the option to limit the ability of anyone who is installing your solution from customizing the view.  
+ If a custom public view has been created for a table in Power Apps and this is included in a managed solution there is the option to limit the ability of anyone who is installing the solution from customizing the view.
+
+ In addition to this there are also high level options that can be applied to the table that apply to all views.  
   
- By default, most views have their **Customizable** managed property set to true so that people can customize them. Unless you have a very good reason to change this, we recommend you allow people to customize views in your app.  
+ By default, most views have their **Customizable** managed property set to true so that people can customize them. Unless there is a very good reason to change this, it is recommend to allow people to customize views in the table.  
   
-## Set managed properties for a view  
+## Set managed properties for all views  
+
+1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+
+2.  Select **Solutions**, open the solution required. Select **Tables**, then select the table required.
+
+3.  Select the three dots either next to the table or in the top menu, then select **managed properties**.
+
+:::image type="content" source="media/table-managed-properties-navigation.png" alt-text="Sample model-driven app":::
+
+4.  There are a range of options relevant to the current table to either prevent any customizations or to prevent the creation of new views.
+
+:::image type="content" source="media/table-managed-properties.png" alt-text="Sample model-driven app":::
+
+5.  Make any necessary changes and when finished, select **Done**.  
   
-1.  Open [solution explorer](advanced-navigation.md#solution-explorer), expand **Entities**, select the table that you want, and then select **Views**.  
+> [!NOTE]
+> The setting does not take effect until the solution is exported from the development environment and imported as a managed solution into a new environment.
+
+## Set managed properties for a view (classic)
+
+With this approach the ability for the view to be amended can be set at the level of the individual view.
+  
+1.  Open [solution explorer](advanced-navigation.md#solution-explorer), expand **Entities**, select the table required, and then select **Views**.  
   
 2.  Select a custom public view.  
   
@@ -49,12 +72,8 @@ search.app:
 
     > [!div class="mx-imgBorder"] 
     > ![Set managed properties.](media/set-managed-properties.png)
-  
-> [!NOTE]
-> The setting does not take effect until you export a solution that contains the view as a managed solution and install it in a different environment.  
 
 ## Next steps
 [Understand views](create-edit-views.md)
-
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -28,28 +28,31 @@ search.app:
 
 # Design model-driven apps using the classic app designer
 
-With Power Apps, model-driven apps are comprised of components such as tables, dashboards, forms, views, charts, and business processes.  
+With Power Apps, model-driven apps are comprised of components such as [tables](model-driven-app-glossary.md#table), [forms](model-driven-app-glossary.md#form), [views](model-driven-app-glossary.md#view), [dashboards](model-driven-app-glossary.md#dashboard) and [business process flows](model-driven-app-glossary.md#business-process-flow).  
+
+As the model-driven apps have evolved so too have the ways in which the various elements are edited.  This article describes the method of creating an app using the classic app designer.
+
 
 > [!TIP]
 > Use the modern app designer to build your apps. More information: [Create a model-driven app using the app designer](create-model-driven-app.md)
   
-The app designer helps you bring together all these components quickly. Its tile-based information structure and simplified interface make the process of building an app much easier, and you can create apps that are specific to your business roles and functions without having to write any code.  
+The [app designer](model-driven-app-glossary.md#app-designer) helps all these components to be brought together quickly. Its tile-based information structure and simplified interface make the process of building an app much easier, and apps that are specific to business roles and functions can be brought together without having to write any code.  
   
- Each app that you create can have its own site map with the integrated and easy-to-use site map designer.  Just drag and drop areas, groups, and subareas to the canvas. Components that you select in the site map are also added as tables in the app designer.  
+ Each app that created can have its own [site map](model-driven-app-glossary.md#site-map) with the integrated and easy-to-use site map designer.  Just drag and drop [areas](model-driven-app-glossary.md#area), [group](model-driven-app-glossary.md#group), and [subareas](model-driven-app-glossary.md#subarea) to the canvas. Components that selected in the site map are also added as tables in the app designer.  
   
- You can add or remove tables as necessary, and also add other components.  
+ [Tables](model-driven-app-glossary.md#table) can be added and removed as necessary, and also add other components.  
   
- Once you're done adding components, you can validate your app to check if you have missed adding any required components, add those, and then publish the app for users.  
+ Once [components](model-driven-app-glossary.md#component) have been added, the app can be validated to confirm that all components have been added correctly.
   
- The following table shows the steps you'll take to create an app.  
+ The following table shows the steps required to create an app and assumes that all the necessary [tables](model-driven-app-glossary.md#table), [forms](model-driven-app-glossary.md#form), [views](model-driven-app-glossary.md#view), [dashboards](model-driven-app-glossary.md#dashboard) and [relationships](model-driven-app-glossary.md#relationship) have been created within the environment in advance.
   
 |Step|Description|Related topics|  
 |----------|-----------------|--------------------|  
 |![Step 1.](media/walkthrough-green-1.png "Step 1")|Define app properties.|[Create or edit an app](create-edit-app.md)|  
 |![Step 2.](media/walkthrough-green-2.png "Step 2")|Define navigation for an app using the site map designer.|[Create a site map for an app](create-site-map-app.md)|  
 |![Step 3.](media/walkthrough-green-3.png "Step 3")|Apps are composed of components like dashboards, tables, business process flows, forms, views, and charts. Include the required ones in your app by using the app designer.|[Add or edit app components](add-edit-app-components.md)|  
-|![Step 4.](media/walkthrough-green-4.png "Step 4")|Check your app for any required components you haven't added. After all required components are added make the app available for use. |[Validate and publish an app](validate-app.md)|  
-|![Step 5.](media/walkthrough-green-5.png "Step 5")|Give users access to the apps you created by using security roles.|[Share a model-driven app](./share-model-driven-app.md)|  
+|![Step 4.](media/walkthrough-green-4.png "Step 4")|Check the app for any required components that have not been added. After all required components are added make the app available for use. |[Validate and publish an app](validate-app.md)|  
+|![Step 5.](media/walkthrough-green-5.png "Step 5")|Give users access to the data within the apps created by using security roles.|[Share a model-driven app](./share-model-driven-app.md)|  
   
 ## Supported web browsers
 
@@ -58,7 +61,5 @@ The app designer helps you bring together all these components quickly. Its tile
 ### Next steps
 
  [Build your first model-driven app from scratch](./build-first-model-driven-app.md)
-
-
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -28,11 +28,11 @@ search.app:
 
 [!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-By default, users can't enter data directly using the read-only view control for views and sub-grids on forms. Users select the row in the grid to open a form, edit the data, and then save, which requires multiple steps. With editable grids, users can do rich in-line editing directly from views and sub-grids whether they're using a web app, tablet, or phone.
-
-![Editable grid examples.](media/editable-grid-example.png "Editable grid examples")  
+By default, users can't enter data directly using the read-only view control for views and sub-grids on forms. Users select the row in the grid to open a form, edit the data, and then save, which requires multiple steps. With editable grids, users can do rich in-line editing directly from views and sub-grids whether they're using a web app, tablet, or phone.  
   
- When editable grids are enabled through the Editable Grids control, users can edit most types of columns, including basic Lookup columns and choices.  
+ ![Editable grid examples.](media/editable-grid-example.png "Editable grid examples")  
+  
+ When editable grids are enabled through the Editable Grids control, users can edit the data inside most types of columns, including basic Lookup columns and choices.  This avoids the need to navigate to a form.
 
 **Editable grids support:**
   

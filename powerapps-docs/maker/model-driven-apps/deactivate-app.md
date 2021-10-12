@@ -19,21 +19,26 @@ search.app:
 ---
 # Hide a model-driven app from users
 
-Deactivate a model-driven app to hide it from users who otherwise would be able to find and run it. When you deactivate a model-driven app, it no longer appears in the common places where apps are found, such as the list of model-driven apps displayed in Power Apps Mobile or [Office apps](https://www.office.com/apps).
+Deactivate a model-driven app to hide it from users who otherwise would be able to find and run it. When a model-driven app is deactivated, it no longer appears in the common places where apps are found, such as the list of model-driven apps displayed in Power Apps Mobile or [Office apps](https://www.office.com/apps).
 
 ## Deactivate a model-driven app
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-1. On the left pane, select **Apps**.
-1. Select the app that you want to hide from all users, and then select **Deactivate** on the command bar or app context menu.
+2. Select the environment in which the app is located
+3. Select **Solutions**
+1. Select the model-driven app to be hidden from all users, select the 3 dots to the right of the app or in the top menu, and then select **Deactivate** on the command bar or app context menu.
 
    :::image type="content" source="media/deactivate-app.png" alt-text="Deactivate command for a model-driven app.":::
+
+2. Note that the status of the app will be shown as **Off** within the explorer.
 
 > [!NOTE]
 > - Deactivated apps are still visible to other users from the **Apps** area of Power Apps.
 > - While a model-driven app is in a deactivated state, it can't be played or shared.
 
-You can activate a deactivated app by selecting the app and then selecting **Activate**.
+## Reactive a model-driven app
+
+A deactivated app can be reactivated by following the same process and then selecting **Activate**.
 
 ### See also
 

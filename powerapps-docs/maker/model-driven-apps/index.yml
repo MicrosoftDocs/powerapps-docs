@@ -20,60 +20,85 @@ metadata:
 landingContent:
 
   # Card 
-  - title: Get started
+  - title: Getting Started
     linkLists:
        - linkListType: overview
          links:
           - text: What are model-driven apps?
             url: model-driven-app-overview.md
-          - text: Planning a Power Apps project
-            url: ../../guidance/planning/introduction.md
-       - linkListType: learn
-         links:
-          - text: Get started with model-driven apps
-            url: /learn/modules/get-started-with-model-driven-apps-in-powerapps/
-
+          - text: Reasons for building model-driven apps
+            url: app-value-proposition.md
+          - text: Meet the app editors
+            url: app-designer-overview.md
+          - text: Sample model-driven apps
+            url: overview-model-driven-samples.md
+          - text: Licensing guide
+            url: https://docs.microsoft.com/en-us/power-platform/admin/pricing-billing-skus
+         
   # Card
   - title: Create
     linkLists:
        - linkListType: quickstart
          links:
-          - text: Explore sample apps
-            url: overview-model-driven-samples.md
-          - text: Create your first app
+          - text: Create a simple app
             url: build-first-model-driven-app.md
+          - text: Steps to building a model-driven app
+            url: app-building-steps.md
+          
        - linkListType: concept
          links:  
-          - text: Define data for your model-driven app
-            url: define-data-model-driven-app.md
-          - text: Use app designer to build an app
-            url: design-custom-business-apps-using-app-designer.md
+          - text: Create an app site map for navigation
+            url: create-site-map-app.md
           
   # Card
-  - title: Customize
+  - title: Model development
     linkLists:
-       - linkListType: how-to-guide
+       - linkListType: concept
          links:
-          - text: Create and design app forms
-            url: create-design-forms.md
-          - text: Apply business logic
-            url: guide-staff-through-common-tasks-processes.md
-          - text: Create and manage app views
-            url: create-edit-views.md
-          - text: Embed a canvas app on a model-driven form
+          - text: Model driven App components
+            url: model-driven-app-components.md
+          - text: Data modelling
+            url: model-driven-app-glossary.md#data-model
+          - text: Tables
+            url: model-driven-app-glossary.md#table
+          - text: Forms
+            url: model-driven-app-glossary.md#form
+          - text: Views
+            url: model-driven-app-glossary.md#view
+          - text: Relationships
+            url: model-driven-app-glossary.md#relationship
+      
+  # Card
+  - title: Apply data visualizations
+    linkLists:
+      - linkListType: How to guide
+        links:
+          - text: Table system charts
+            url: create-edit-system-chart.md
+          - text: Table dashboards
+            url: create-edit-dashboards.md
+          - text: Add a Power BI Dashboard
+            url: add-power-bi-visual.md
+
+  # Card
+  - title: Advanced modelling
+    linkLists:
+      - linkListType: How to guide
+        links:
+          - text: Business rules
+            url: ../data-platform/data-platform-create-business-rule.md
+          - text: Business process flows
+            url: https://docs.microsoft.com/en-us/power-automate/business-process-flows-overview
+          - text: Embedding canvas apps
             url: embed-canvas-app-in-form.md
 
   # Card
-  - title: Work with controls
+  - title: Modern apps
     linkLists:
-      - linkListType: concept
+      - linkListType: how-to-guide
         links:
-          - text: Custom controls overview
-            url: use-custom-controls-data-visualizations.md
-          - text: Set up the timeline control
-            url: set-up-timeline-control.md
-          - text: Add the rich text editor control
-            url: rich-text-editor-control.md
+          - text: Modern app building
+            url: app-designer-overview.md
 
   # Card
   - title: Apply data visualizations
@@ -88,10 +113,12 @@ landingContent:
             url: set-properties-chart-list-included-dashboard.md
 
   # Card
-  - title: Distribute and share
+  - title: Distribute, share and use
     linkLists:
-      - linkListType: concept
+      - linkListType: deploy
         links:
+          - text: Use a model-driven app
+            url: https://docs.microsoft.com/en-us/powerapps/user/use-model-driven-apps     
           - text: Share an app
             url: share-model-driven-app.md
           - text: Distribute an app
@@ -100,37 +127,72 @@ landingContent:
             url: ../data-platform/solutions-overview.md
 
   # Card
-  - title: Transition to Unified Interface
-    linkLists:
-      - linkListType: concept
-        links:
-          - text: Transition quick start
-            url: ../../user/unified-interface.md
-          - text: Approaching a Unified Interface transition
-            url: ../../user/unified-interface.md
-          - text: Transition FAQs
-            url: ../../user/unified-interface.md
-
-  # Card
-  - title: Advanced app making and customization
+  - title: Developer zone
     linkLists:
       - linkListType: how-to-guide
-        links:
-          - text: Create web resources
-            url: create-edit-web-resources.md
-          - text: Change custom table icons
-            url: change-custom-entity-icons.md
-          - text: Create customizable help
-            url: use-customizable-help.md
-
-  # Card
-  - title: For developers
-    linkLists:
-      - linkListType: how-to-guide
-        links:
+        links:      
+          - text: Developer guide
+            url: https://docs.microsoft.com/en-us/powerapps/developer/model-driven-apps/
           - text: Customize table forms using code
             url: ../../developer/model-driven-apps/customize-entity-forms.md
           - text: Apply data visualizations using code
-            url: ../../developer/model-driven-apps/customize-visualizations-dashboards.md      
-          - text: More >
-            url: ../../developer/model-driven-apps/index.yml
+            url: ../../developer/model-driven-apps/customize-visualizations-dashboards.md
+
+  # Card
+  - title: Best practice
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Planning a Power Apps project
+            url: ../../guidance/planning/introduction.md
+          - text: Performance monitoring
+            url: ../../maker/common/performance-insights-categories.md
+          - text: Designing productive forms
+            url: design-productive-forms.md
+          - text: Optimize forms for performance
+            url: optimize-form-performance.md
+
+  # Card
+  - title: Resources
+    linkLists:
+      - linkListType: deploy
+        links:
+          - text: Glossary of terms
+            url: model-driven-app-glossary.md    
+          - text: Share an app
+            url: share-model-driven-app.md
+          - text: Microsoft Learn
+            url: /learn/modules/get-started-with-model-driven-apps-in-powerapps/
+      - linkListType: concept
+        links:
+          - text: Environments
+            url: https://docs.microsoft.com/en-us/power-platform/admin/environments-overview  
+          - text: Solutions
+            url: https://docs.microsoft.com/en-us/power-platform/alm/solution-concepts-alm
+          - text: Dataverse
+            url: https://docs.microsoft.com/en-us/powerapps/maker/data-platform/data-platform-intro
+  # Card
+  - title: Work with controls - to remove
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Custom controls overview
+            url: use-custom-controls-data-visualizations.md
+          - text: Set up the timeline control
+            url: set-up-timeline-control.md
+          - text: Add the rich text editor control
+            url: rich-text-editor-control.md
+          - text: Set chart or list properties (dataviz)
+            url: set-properties-chart-list-included-dashboard.md
+
+# Card
+  - title: Integration (to remove)
+  linkLists: 
+    - linkListType: how-to-guide
+    links:
+      - text: Embed a canvas app on a model-driven form
+            url: embed-canvas-app-in-form.md
+      - text: App for Outlook
+          url: app-for-outlook.md
+      - text: Power BI
+          url: add-powerbi-visual.md

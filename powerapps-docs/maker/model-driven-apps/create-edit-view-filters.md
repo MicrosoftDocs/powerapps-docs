@@ -33,7 +33,7 @@ search.app:
 
 <a name="BKMK_CreateOrEditViewFilters"></a>   
 
-The filters in a Power Apps view are important to the value provided by the view. The filters you apply determine which rows appear in the list by default. You can add or edit a filter for the columns that you include in a view by selecting the column and selecting **Filter by**. You can also use the expression builder in the view designer. Use the expression builder to add or edit filters for any columns of the table in the current view or any columns in a related table. 
+The filters in a Power Apps view define the records that a user will be able to see when selecting the view for the current table. You can add or edit a filter for the columns that you include in a view by selecting the column and selecting **Filter by**. You can also use the expression builder in the view designer. Use the expression builder to add or edit filters for any columns of the table in the current view or any columns in a related table.
 
 In this topic, you create or edit filters by performing the following tasks:
 
@@ -53,25 +53,27 @@ In this topic, you create or edit filters by performing the following tasks:
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
-2. Expand **Data**, select **Tables**, select the table that you want, and then select the **Views** tab.
+2. Expand **Data**, select **Tables**, select the table that you want, and then select the **Views** tab.  
 
-3. Select a view to open it. The view properties panel lists existing filters.
+3. You may wish to navigate to the table via the **solution**.  If so navigate to solutions, select your solution and then select the **table** you are interested in, then select the **views** tab.  
+
+4. Select a view to open it. The view properties panel lists existing filters.
 
     > [!div class="mx-imgBorder"] 
     > ![View panel filters.](media/views-panel-filters.png "View panel filters")
 
-4. On the view properties panel, select a filter condition.
+5. On the view properties panel, select a filter condition.
 
     > [!div class="mx-imgBorder"] 
     > ![Edit filters.](media/edit-filter-viewpanel.png "Edit filters")
 
-5. Select the conditional operator that you want to use.
+6. Select the conditional operator that you want to use.
 
-6. Type or select the comparison value for the condition.
+7. Type or select the comparison value for the condition.
 
-7. Select **Apply**.
+8. Select **Apply**.
 
-8. To remove a condition, select **Close**. The condition is removed without confirmation.
+9. To remove a condition, select **Close**. The condition is removed without confirmation.
 
 ### Open the expression builder
 
