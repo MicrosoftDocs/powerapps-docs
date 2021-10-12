@@ -82,7 +82,7 @@ You can copy the following sample data to test this functionality:
 
     ![Screenshot of the table selection panel.](./media/geospatial/select-table.png)
 
-1. On the **Properties** pane, go to the **Advanced** tab, and select **More options**.
+1. On the **Properties** pane, go to the **Advanced** tab.
 
 1. Set the following properties:
 
@@ -92,11 +92,11 @@ You can copy the following sample data to test this functionality:
     - **RouteWaypointsAddresses** as *"Address"* (Optional, if your dataset has an address field. Note that Address can be used in place of Latitude and Longitude in any rows where Latitude and Longitude are not set)
 
 >[!Note]
->Address is interchangable with Latitude and Longitude. If Latitude and Longitude are provided, then Address is not necessary. If only Address is provided, then Latitude and Longitude are not necessary.
+>Address is interchangable with Latitude and Longitude. If Latitude and Longitude are provided, then Address will not be used. If only Address is provided, then Latitude and Longitude are not necessary.
 
 1. The map component will now show each row in the table as a pin, labeled with its *Name* as defined in the Excel table, and numbered in the same order as the given dataset.
 
-    TODO: INSERT SCREENSHOT
+   ![Screenshot of the map with the waypoints as pins](./media/geospatial/map-routing-pins.png)
 
 ## Draw routes between the waypoints
 To draw routes between the waypoints on the map and customize how the route is calculated, you need to configure the following settings:
@@ -106,13 +106,12 @@ To draw routes between the waypoints on the map and customize how the route is c
 1. Switch this toggle to **On**:
     -  **Enable routing**
     
-    TODO: INSERT SCREENSHOT
-    
 1. The component will now draw routes between the waypoints on the map.
 
-    TODO: INSERT SCREENSHOT
+   ![Screenshot of the map with the waypoints as pins](./media/geospatial/map-routing-directions.png)
 
-1. By default, the component will reorder the waypoints to decrease travel time or travel distance. Waypoint order can be kept locked by switching the **Maintain waypoint order** toggle to **On**. 
+>[!Note]
+>By default, the component will reorder the middle waypoints to decrease travel time or travel distance. The first and last waypoints are considered the origin and destination and cannot be reordered. Waypoint order can be kept locked by switching the **Maintain waypoint order** toggle to **On**. 
 
 
 ### Properties
@@ -123,8 +122,8 @@ The following properties can configure how the route is calculated or:
 | - | - | -
 | Enable routing | Whether routes are drawn between waypoints | Boolean | **Properties** (also in **Advanced** as **UseRouting**)
 | Maintain waypoint order | If true, the component will reorder the waypoints to optimize the route based on the **Optimize route** setting. If false, the component will maintain the order that the waypoints have in the dataset, and the **Optimize route** setting will only affect the drawn route. | Boolean | **Properties** (also in **Advanced** as **RouteMaintainOrder**)
-| Optimize route | Whether to optimize the route to decrease travel time or decrease travel distance. | Enumeration (TODO: What should this be?) | **Properties** (also in **Advanced** as **RouteOptimization**)
-| Route travel mode | Whether the route will be travelled by car or by truck. | Enumeration (TODO: What should this be?) | **Properties** (also in **Advanced** as **RouteTravelMode**)
+| Optimize route | Whether to optimize the route to decrease travel time or decrease travel distance. | Enumeration (None, Distance, Time) | **Properties** (also in **Advanced** as **RouteOptimization**)
+| Route travel mode | Whether the route will be travelled by car or by truck. | Enumeration (Car, Truck) | **Properties** (also in **Advanced** as **RouteTravelMode**)
 
 
 ### Output Properties
@@ -134,4 +133,4 @@ The component outputs various properties when the route changes. These propertie
 | Property | Description | Type | Location
 | - | - | -
 | OnRouteDirectionChange | How the app responds when the route is changed | Event | Advanced
-| RouteDirection | Object describing all of the routing outputs (TODO: How to format this?) | TODO: ??? | Not applicable (output property only)
+| RouteDirection | Object describing all of the routing outputs:<ul><li>LengthInMeters - Number representing the length in meters of the entire route</li><li>TravelTimeInSeconds - Number representing the expected travel time in seconds of the entire route</li><li>RouteGeoJSON - String containing the route in GeoJSON format</li><li>RouteLegs - Table describing properties of each leg of the route:<ul><li>Index - Number representing the route leg's order in the route</li><li>LengthInMeters - Number representing the length in meters of the route leg</li><li>TravelTimeInSeconds - Number representing the expected travel time in seconds of the route leg</li><li>StartLabel - String representing the label of the route leg's start point</li><li>StartLatitude - Number representing the latitude of the route leg's start point</li><li>StartLongitude - Number representing the longitude of the route leg's start point</li><li>StartAddress - String representing the address of the route leg's start point</li><li>EndLabel - String representing the label of the route leg's end point</li><li>EndLatitude - Number representing the latitude of the route leg's end point</li><li>EndLongitude - Number representing the longitude of the route leg's end point</li><li>EndAddress - String representing the address of the route leg's end point</li></ul><li>OrderedWaypoints - Table describing properties of each waypoint in the route after ordering the waypoints:<ul><li>Index - Number representing the waypoint's order in the route</li><li>Label - String representing the label of the waypoint</li><li>Latitude - Number representing the latitude of the waypoint</li><li>Longitude - Number representing the longitude of the waypoint</li><li>Address - String representing the address of the waypoint</li></ul></ul> | Object | Not applicable (output property only)
