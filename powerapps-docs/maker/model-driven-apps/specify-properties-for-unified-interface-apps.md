@@ -31,6 +31,8 @@ search.app:
 
 [!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
+## Responsive design principles
+
 Model driven apps use responsive design principles to provide an optimal viewing and interaction experience for any screen size or orientation. As the size of the screen or the container decreases—for example, on phones and smaller viewports—the grid is transformed into a list.
 
 The Read Only Grid control specifies how a grid should respond to different screen sizes. As an app maker, if you’re working with a model-driven app, you can configure the Read Only Grid control and its properties for custom grids and lists.
@@ -78,13 +80,13 @@ Adding the **Read Only Grid** control to the list of controls list associated wi
     ![Card form properties.](media/UnifiedInterface_ReadOnlyGrid_CardFormProperties.png "Card form properties")
 
     c. Choose **OK**.
-1. Configure the **Reflow behavior** property. 
+1. Configure the **Reflow behavior** property.
 
     a. Choose the pencil icon next to **Reflow behavior**.
 
     ![Edit Reflow behavior.](media/UnifiedInterface_ReadOnlyGrid_EditReflow.png "Edit Reflow behavior")
 
-    b. Select the grid flow type from **Bind to static options** drop down. 
+    b. Select the grid flow type from **Bind to static options** drop down.
 
     |Flow Type|Description|
     |--------------|--------------------|
@@ -96,15 +98,14 @@ Adding the **Read Only Grid** control to the list of controls list associated wi
 
     c. Choose **OK**.
 
-
 1.	Save and publish the changes.
 
-
 ## Conditional image
+
 You can display a custom icon instead of a value in a list and establish the logic used to select them based on a column’s values by using JavaScript. For more information about conditional images, see [Display custom icons instead of values in list views](../data-platform/display-custom-icons-instead.md).
 
 ## Next steps
-[Create or edit a view](create-edit-views.md)
 
+[Create or edit a view](create-edit-views.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
