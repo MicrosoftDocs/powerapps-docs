@@ -29,7 +29,7 @@ For information about configuring and using the timeline, see the following topi
 
 - [Use timeline](/powerapps/user/add-activities)
 - [Configure timeline](set-up-timeline-control.md)
-- [Timeline record card configuration](set-up-timeline-control.md##display-a-custom-table-in-a-timeline)
+- [Timeline record card configuration](set-up-timeline-control.md#display-a-custom-table-in-a-timeline)
 
 Records that are configured within BYOD are a JavaScript web resource that conforms to the IRecordSource interface. The name of a web resource, along with the constructor (name including namespace), and optional JSON web resource path, can be added as a UClientRecordSourcesJSON parameter configuration within FormXML.
 
