@@ -38,7 +38,11 @@ For example, here's the form component on an **existing tab** on the main accoun
 
 In this example, the **Contact** standard main form is configured for the form component control that’s added to the account main form.
 
-1. Open [solution explorer](advanced-navigation.md#solution-explorer), expand **Entities**, select the table that you want, select **Forms**, and then open the main form where you want to add the form component.
+1. Navigate to make.powerapps.com
+1. Select **Dataverse** and then **Tables** in the left hand menu.  Alternatively, select a [solution](model-driven-app-glossary.md#solution) from the menu and then select a table, such as **Account**.
+1. Select **Forms** from the components menu.
+1. Select a form with a form type of **Main** from the forms available.  There will be others such as Card and QuickViewForm available.
+1. Select **Switch to classic** and the classic form editor interface will be opened as a tab in your browser.
 1. Select the **Insert** tab. Then, create a new tab and add a new section or add a new section to an existing tab.  
 1. In the new section, add a lookup column, such as the **Primary Contact** lookup column.
 1. Select the lookup column, and then on the **Home** tab, select **Change Properties**.
