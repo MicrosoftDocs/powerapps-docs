@@ -28,8 +28,8 @@ The Bring Your Own Data (BYOD) feature for the timeline is a way for developers 
 For information about configuring and using the timeline, see the following topics:
 
 - [Use timeline](/powerapps/user/add-activities)
-- [Configure timeline](/set-up-timeline-control)
-- [Timeline record card configuration](/set-up-timeline-control#customize-a-card-form-in-the-timeline)
+- [Configure timeline](/set-up-timeline-control.md)
+- [Timeline record card configuration](/set-up-timeline-control.md#customize-a-card-form-in-the-timeline)
 
 Records that are configured within BYOD are a JavaScript web resource that conforms to the IRecordSource interface. The name of a web resource, along with the constructor (name including namespace), and optional JSON web resource path can be added as a configuration as a UClientRecordSourcesJSON parameter within FormXML.
 
