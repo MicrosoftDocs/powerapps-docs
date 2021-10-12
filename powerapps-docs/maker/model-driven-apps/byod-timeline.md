@@ -31,7 +31,7 @@ For information about configuring and using the timeline, see the following topi
 - [Configure timeline](set-up-timeline-control.md)
 - [Timeline record card configuration](set-up-timeline-control.md#customize-a-card-form-in-the-timeline)
 
-Records that are configured within BYOD are a JavaScript web resource that conforms to the IRecordSource interface. The name of a web resource, along with the constructor (name including namespace), and optional JSON web resource path, can be added as a UClientRecordSourcesJSON parameter configuratio within FormXML.
+Records that are configured within BYOD are a JavaScript web resource that conforms to the IRecordSource interface. The name of a web resource, along with the constructor (name including namespace), and optional JSON web resource path, can be added as a UClientRecordSourcesJSON parameter configuration within FormXML.
 
 ```<UClientRecordSourcesJSON>{"recordSources": [{"name": "new_SecondaryRecordSource", "constructor": "SampleNamespace.SecondaryRecordSource"}]}</UClientRecordSourcesJSON>```
 
