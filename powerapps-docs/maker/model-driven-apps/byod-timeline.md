@@ -28,8 +28,8 @@ The Bring Your Own Data (BYOD) feature for the timeline is a way for developers 
 For information about configuring and using the timeline, see the following topics:
 
 - [Use timeline](/powerapps/user/add-activities)
-- [Configure timeline](/dynamics365/customer-service/customer-service-hub-user-guide-timeline-admin)
-- [Timeline record card configuration](/set-up-timeline-control.md#customize-a-card-form-in-the-timeline)
+- [Configure timeline](/set-up-timeline-control)
+- [Timeline record card configuration](/set-up-timeline-control#customize-a-card-form-in-the-timeline)
 
 Records that are configured within BYOD are a JavaScript web resource that conforms to the IRecordSource interface. The name of a web resource, along with the constructor (name including namespace), and optional JSON web resource path can be added as a configuration as a UClientRecordSourcesJSON parameter within FormXML.
 
@@ -72,7 +72,7 @@ When developing a record source, make sure you follow these practices:
 - Ensure that you're retrieving data securely. The Unified Interface security model considers JS and JSON web resources as untrusted, and thus, such resources shouldn't contain tokens or secrets in them, as they'd be stored in plain text.
 - If the data is within Dataverse, use the context object from init behavior to make requests into Dataverse. Calls into Dataverse from context have requests proxied through a secure iframe. This is how out-of-box record sources within TimelineWallControl retrieve data.
 - If the data is outside of Dataverse, use existing mechanisms from the platform to retrieve external data.
-- Locally test changes by using Fiddler: Improve the agility of development and debugging of JavaScript web resources by using Fiddler AutoResponder. More information: [Script web resource development using Fiddler AutoResponder](/streamline-javascript-development-fiddler-autoresponder.md).
+- Locally test changes by using Fiddler: Improve the agility of development and debugging of JavaScript web resources by using Fiddler AutoResponder. More information: [Script web resource development using Fiddler AutoResponder](/developer/model-driven-apps/streamline-javascript-development-fiddler-autoresponder).
 - Reduce the risk of XSS attacks: The risk of XSS attacks occurs when adding/binding HTML to the DOM. Use plain text whenever possible to reduce this risk. If HTML is required, you must sanitize this content before adding it to the record
 - Follow general best practices for client scripting. More information: [Client scripting in model-driven apps](/developer/model-driven-apps/clientapi/client-scripting-best-practices)
 - Ensure inclusive design practices, including the usage of automated testing tools such as Accessibility Insights.
