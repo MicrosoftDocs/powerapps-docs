@@ -80,3 +80,14 @@ When developing a record source, make sure you follow these practices:
 ## Sample solution
 
 You can leverage the BYOD functionality by downloading this [sample solution](https://dynamicscrm.visualstudio.com/OneCRM/_wiki/wikis/OneCRM.wiki?wikiVersion=GBwikiMaster&pagePath=/Customer%20Service/Productivity%20and%20Collaboration/TimelineWallControl/blob%3Ahttps%3A//dynamicscrm.visualstudio.com/d229f7b9%209f88%2046fb%20bbe8%20ad2b802d988f). This sample solution has the "SecondaryRecordSource" web resource, which is configured for "Account for Interactive Experiences" and "Account for Multisession Experiences" forms.
+
+
+
+### See also
+
+[Use timeline](/powerapps/user/add-activities)<br>
+[Configure timeline](/set-up-timeline-control)<br>
+[Timeline record card configuration](/set-up-timeline-control#customize-a-card-form-in-the-timeline)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]
