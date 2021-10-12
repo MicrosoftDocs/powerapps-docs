@@ -108,7 +108,7 @@ This table describes any additional properties used in the previous XML sample.
 
 |  Property  |    Description  |
 |------------|------|
-|   **PowerBIFilter**   |  The filter expression that contextualizes the Power BI report by passing the form attributes as parameters. To make it more readable, the filter is constructed as shown here. The filter expression cannot be a comma separated list of values.	|
+|   **PowerBIFilter**   |  The filter expression that contextualizes the Power BI report by passing the form attributes as parameters. To make it more readable, the filter is constructed as shown here. The filter expression can't be a comma separated list of values.	|
 
 ```json
 	{
