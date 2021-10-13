@@ -117,7 +117,7 @@ The site map describes the components that make up our model driven app.
 
    By default, all the account table's forms, views, charts, and dashboards are enabled for the app. From the app designer **Components** tab on the right pane, components can be cleared so that they aren't available in the app at runtime. It is also possible to create new components, such as a custom form. For this app, leave all components enabled.
 
-  :::image type="content" source="media/app-designer-form-component-properties.png" alt-text="App designer in draft stage":::
+  :::image type="content" source="media/app-designer-form-component-properties.png" alt-text="Model-driven App designer in draft stage":::
 
 1. On the app designer toolbar, select **Save**.
 
