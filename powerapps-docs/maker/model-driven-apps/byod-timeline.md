@@ -2,7 +2,7 @@
 title: Bring your own data to the timeline in Power Apps | MicrosoftDocs
 description: "Learn how to bring your own data, such as records, to the timeline in Power Apps."
 ms.custom: ""
-ms.date: 10/12/2021
+ms.date: 10/13/2021
 ms.reviewer: "matp"
 ms.service: powerapps
 ms.suite: ""
@@ -79,7 +79,7 @@ When developing a record source, make sure you follow these practices:
 
 ## Sample solution
 
-You can leverage the BYOD functionality by downloading this [sample solution](https://dynamicscrm.visualstudio.com/OneCRM/_wiki/wikis/OneCRM.wiki?wikiVersion=GBwikiMaster&pagePath=/Customer%20Service/Productivity%20and%20Collaboration/TimelineWallControl/blob%3Ahttps%3A//dynamicscrm.visualstudio.com/d229f7b9%209f88%2046fb%20bbe8%20ad2b802d988f). This sample solution has the "SecondaryRecordSource" web resource, which is configured for "Account for Interactive Experiences" and "Account for Multisession Experiences" forms.
+You can use the BYOD functionality in a sample solution by contacting Microsoft Support. The sample solution has the "SecondaryRecordSource" web resource, which is configured for "Account for Interactive Experiences" and "Account for Multisession Experiences" forms.
 
 ### See also
 
