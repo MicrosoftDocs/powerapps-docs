@@ -29,9 +29,9 @@ search.app:
 
 In this topic you learn how to create a quick view form and how to add a quick view control to a main form. 
 
-A quick view form can be added to another form as a quick view control. It provides a template to view information about a related table row within a form for another table row. This means your app users do not need to navigate to a different row to see the information needed to do their work.  
+A quick view form can be added to another form as a quick view control. It provides a template to view information about a related table row within a form for another table row. This means your app users do not need to navigate to a different row to see the information needed to do their work.  All controls in on a quick view form **can not be edited and data will not change**.  Any control on a form will be disabled and the form does not run any events or javascript that updates data on a control in a quick view form.
   
- Quick view controls are associated with a lookup column that is included in a form. If the lookup column value is not set, the quick view control will not be visible. Data in quick view controls cannot be edited and quick view forms do not support form scripts.  
+Quick view controls are associated with a lookup column that is included in a form. If the lookup column value is not set, the quick view control will not be visible. Data in quick view controls cannot be edited and quick view forms do not support form scripts.  
   
  Because quick view forms are viewed using a quick view control in a form, they do not include header, footer, or navigation areas. Security roles cannot be assigned to quick view forms and they cannot be activated or deactivated.  
   
