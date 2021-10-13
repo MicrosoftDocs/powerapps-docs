@@ -51,19 +51,19 @@ The following are planned improvements to BYOD. Exact release dates aren't curre
 
 - Current experience: BYOD records are always be displayed, no matter the selected filters/keyword search. Planned improvement: Pass currently applied filters within the request for pages of records (getRecordsData).
 - Current experience: There isn't a mechanism in place to configure filter information from a record source. Planned improvement: BYOD records should be able to supply filters, filter options, or filter counts to existing filter options.
-- Current experience: For existing OOB records (notes, posts, and activities) it isn't possible to extend or define filters. Planned improvement: BYOD will allow you to define just filters instead of an entire record source
+- Current experience: For existing out-of-box records (notes, posts, and activities), it isn't possible to extend or define filters. Planned improvement: BYOD will allow you to define just filters instead of an entire record source.
 
 ### Out of scope
 The following functionality isn't available for BYOD:
-- Offline and offline-by-default (OBD) scenarios
+- Offline and offline-by-default scenarios
 - Dashboards
 - Locations where TimelineWallControl isn't available (such as converged apps, canvas apps, portals, custom pages, and so forth)
 
-## Known limitations:
+## Known limitations
 
 - See the list in [Planned improvements](#planned-improvements).
 
-- The configured web resources aren't formally declared as dependencies to the form. This means that exporting a form won't automatically export these web resources. These web resources would need to be added to that export manually. In addition, it can be easy to accidentally delete this web resource.
+- The configured web resources aren't formally declared as dependencies to the form. This means that exporting a form won't automatically export these web resources. These web resources would need to be added to that export manually. In addition, it can be easy to accidentally delete these web resources.
 
 ## Develop a Record Source
 
