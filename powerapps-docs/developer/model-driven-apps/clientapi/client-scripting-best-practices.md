@@ -60,9 +60,9 @@ On the Internet, you can find many examples or suggestions that describe using u
 
 ## Avoid using jQuery for form scripts
 
-We do not recommend using jQuery in form scripts and ribbon commands. Most of the benefit provided by jQuery is that it allows for easy cross-browser manipulation of the DOM. This is explicitly unsupported within form scripts and ribbon commands. Restrict your scripts to use the objects/methods available in the [Xrm object model](understand-clientapi-object-model.md). 
+You should not use jQuery in form scripts and ribbon commands. Most of the benefit provided by jQuery is that it allows for easy cross-browser manipulation of the DOM. This is explicitly unsupported within form scripts and ribbon commands. Restrict your scripts to use the objects/methods available in the [Xrm object model](understand-clientapi-object-model.md). If there are different versions of jQuery used by the platform and/or among components on the page your script runs on, there can be conflicts that cause breaking issues. Since the platform and other components may change their version at any time, you may encounter a breaking issue at any time by using jQuery.
 
-If you decide to use the remaining capabilities of jQuery that are useful with model-driven apps and include the ability to use **$.ajax**, consider the following:
+If you are still considering using jQuery despite the risks, consider the following:
 
 - For best performance, don’t load jQuery in the page if you do not need it.
 - Using **$.ajax** to perform requests against the model-driven apps web services is supported, but there are alternatives. The alternative to using **$.ajax** is to use the browsers **XMLHttpRequest** object directly. The jQuery **$.ajax** method is just a wrapper for this object. If you use the native **XMLHttpRequest** object directly, you do not need to load jQuery.
