@@ -107,10 +107,10 @@ The `CascadeConfiguration` (<xref:Microsoft.Xrm.Sdk.Metadata.CascadeConfiguratio
 > if they want to continue using it.
 
 ### About the assign action
-The assign action allows the owner, owning business unit or both owner and business unit updates to be cascaded down to all child records when the parent record is updated.
+The assign action allows the owner, the Owning Business Unit or both owner and business unit updates to be cascaded down to all child records when the parent record is updated.
 
 #### Allowed record ownership across business unites not enabled
-When the [allow record ownership across business units](/power-platform/admin/wp-security-cds#to-enable-this-matrix-data-access-structure-preview) is not enabled, the owning business unit field can't be explicitly updated when changing the record’s owner. The following lists the cascading behaviors when the parent’s record owner is updated.
+When the [allow record ownership across business units](/power-platform/admin/wp-security-cds#to-enable-this-matrix-data-access-structure-preview) is not enabled, the Owning Business Unit field can't be explicitly updated when changing the record’s owner. The following lists the cascading behaviors when the parent’s record owner is updated.
 
 If you update the owner:
 
@@ -127,7 +127,7 @@ If you update the owner:
 
 #### Allowed record ownership across business unites is enabled
 When [allow record ownership across business units](/power-platform/admin/wp-security-cds#to-enable-this-matrix-data-access-structure-preview) is enabled,
-the owning business unit field can be explicitly updated when changing the record’s owner. The following lists the cascading behaviors when the parent’s record owner and/or the business unit is updated.
+the Owning Business Unit field can be explicitly updated when changing the record’s owner. The following lists the cascading behaviors when the parent’s record owner and/or the business unit is updated.
 
 **AlwaysMoveRecordToOwnerBusinessUnit** can be set in [environment database settings](/power-platform/admin/environment-database-settings) and can also be set using the [OrgDBOrgSettings tool for Microsoft Dynamics CRM](https://support.microsoft.com/help/2691237/orgdborgsettings-tool-for-microsoft-dynamics-crm).
 
