@@ -79,7 +79,7 @@ When developing a record source, make sure you follow these practices:
 
 ## Sample solution
 
-You can use the BYOD functionality in a sample solution by contacting Microsoft Support. The sample solution has the "SecondaryRecordSource" web resource, which is configured for "Account for Interactive Experiences" and "Account for Multisession Experiences" forms.
+You can contact Microsoft Support to receive the BYOD functionality in a solution sample. The solution sample has the "SecondaryRecordSource" web resource, which is configured for "Account for Interactive Experiences" and "Account for Multisession Experiences" forms.
 
 ### See also
 
