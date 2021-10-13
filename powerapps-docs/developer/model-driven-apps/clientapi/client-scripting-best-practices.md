@@ -60,7 +60,7 @@ On the Internet, you can find many examples or suggestions that describe using u
 
 ## Avoid using jQuery for form scripts
 
-You should not use jQuery in form scripts and ribbon commands. Most of the benefit provided by jQuery is that it allows for easy cross-browser manipulation of the DOM. This is explicitly unsupported within form scripts and ribbon commands. Restrict your scripts to use the objects/methods available in the [Xrm object model](understand-clientapi-object-model.md). If there are different versions of jQuery used by the platform and/or among components on the page your script runs on, there can be conflicts that cause breaking issues. Since the platform and other components may change their version at any time, you may encounter a breaking issue at any time by using jQuery.
+You should not use jQuery in form scripts and ribbon commands. Most of the benefit provided by jQuery is that it allows for easy cross-browser manipulation of the DOM. This is explicitly unsupported within form scripts and ribbon commands. Restrict your scripts to use the objects/methods available in the [Xrm object model](understand-clientapi-object-model.md). If there are different versions of jQuery used by the platform and/or among components on the page your script runs on, there can be conflicts that cause issues. Since the platform and other components may change their version at any time, you may encounter an issue at any time by using jQuery.
 
 If you are still considering using jQuery despite the risks, consider the following:
 
