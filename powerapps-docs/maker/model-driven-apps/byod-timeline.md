@@ -50,11 +50,11 @@ Bring Your Own Data is supported within single-session and multi-session table f
 The following are planned improvements to Bring Your Own Data. Exact release dates aren't currently available, but incremental improvements are expected before the end of December 2021.
 
 - Current experience: Bring Your Own Data records are always be displayed, no matter the selected filters/keyword search. Planned improvement: Pass currently applied filters within the request for pages of records (getRecordsData).
-- Current experience: There isn't a mechanism in place to configure filter information from a record source. Planned improvement: BYOD records should be able to supply filters, filter options, or filter counts to existing filter options.
+- Current experience: There isn't a mechanism in place to configure filter information from a record source. Planned improvement: Bring Your Own Data records should be able to supply filters, filter options, or filter counts to existing filter options.
 - Current experience: For existing out-of-box records (notes, posts, and activities), it isn't possible to extend or define filters. Planned improvement: Bring Your Own Data will allow you to define just filters instead of an entire record source.
 
 ### Out of scope
-The following functionality isn't available for BYOD:
+The following functionality isn't available for the Bring Your Own Data feature:
 - Offline and offline-by-default scenarios
 - Dashboards
 - Locations where TimelineWallControl isn't available (such as converged apps, canvas apps, portals, custom pages, and so forth)
