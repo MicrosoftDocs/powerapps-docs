@@ -35,8 +35,7 @@ search.app:
 
 
 ## Remarks
-This method is supported only for the web client.
-
+This API is being replaced with Xrm.App.sidePanes.createPane.  See [Create side panes working with loadPanel](../../create-app-side-panes#use-with-xrmapppanelsloadpanel.md) for more details on the interaction of loadPanel and createPane. 
 
 
 
