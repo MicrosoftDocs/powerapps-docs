@@ -45,6 +45,8 @@ Below shows the custom page inline within the model-driven app. The model-driven
   > ![Custom page as side dialog](media/model-app-page-overview/page-side-dialog-model-app.png "Custom page as side dialog")
   > 
 
+[Custom page as an app side pane](/powerapps/developer/model-driven-apps/clientapi/create-app-side-panes) allows opening a custom page within the new app side pane on the right side of the app.
+
 Custom pages must be created from a solution either from the modern app designer or the **Solution** area in Power Apps using **New** > **Page**. More information: [Add a custom page to your model-driven app](add-page-to-model-app.md)
 
 ## Custom pages are different than embedded canvas apps
