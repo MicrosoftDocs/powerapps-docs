@@ -23,7 +23,7 @@ To get access to the **GetGlobalContext** function in your HTML web resource, in
 > [!IMPORTANT]
 > - The ClientGlobalContext.js.aspx page is deprecated and scheduled to be unavailable after October 1, 2022. Depending on how HTML web resources are configured, there are two options available:
 > 1. Use [Power Apps component framework](../../../component-framework/overview) to build configurable and reusable components that enable external integrations in a supported way.
-> 2. Use [custom pages](../../../maker/model-app-page-overview) to add custom full page or dialog or pane experiences into model-driven apps, with the flexibility of the canvas designer.
+> 2. Use [custom pages](../../../maker/model-driven-apps/model-app-page-overview) to add custom full page or dialog or pane experiences into model-driven apps, with the flexibility of the canvas designer.
 > - Including a reference to **ClientGlobalContext.js.aspx** does not make the **Xrm** object available in HTML web resources. Therefore, scripts containing `Xrm.*` methods aren’t supported in HTML web resources. `parent.Xrm.*` will work if the HTML web resource is loaded in a form container. However, for other places, such as loading an HTML web resource as part of the SiteMap, `parent.Xrm.*` also won’t work.
 
 ## GetGlobalContext function
