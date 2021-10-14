@@ -5,13 +5,14 @@ keywords: ""
 ms.date: 03/05/2020
 ms.service: powerapps
 ms.custom: 
-ms.topic: article
+ms.topic: tutorial
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
   - "PowerApps"
 author: "Mattp123"
 ms.assetid: be93b9d7-f1c2-4ee7-8d7c-0f5c34dfa5f7
+ms.subservice: mda-maker
 ms.author: matp
 ms.reviewer: 
 ms.suite: 
@@ -31,7 +32,7 @@ search.app:
 
 In this tutorial you learn how to add components to and remove components from a model-driven app. 
 
-A model-driven app is composed of various components. You can add two types of components to an app: artifacts and table assets. In the context of the app designer, tables, dashboard, and business process flows are all artifacts of an app. Table assets consist of forms, views, charts, and dashboards.  
+A model-driven app is composed of various components. You can add two types of components to an app: components and table assets. In the context of the app designer, tables, dashboard, and business process flows are all components of an app. Table assets consist of forms, views, charts, and dashboards.  
   
 The app designer refers to existing metadata in the default solution. You can use it to create components like forms, views, charts, and dashboards.  
   
@@ -39,27 +40,32 @@ The app designer refers to existing metadata in the default solution. You can us
  The app designer has two main areas. On the left side is the canvas where you add app components.  
   
  > [!div class="mx-imgBorder"]
- > ![App designer canvas](../model-driven-apps/media/app-designer-canvas-pane.png "App designer canvas")
+ > ![App designer canvas.](../model-driven-apps/media/app-designer-canvas-pane.png "App designer canvas")
 
  On the right side are tabs that you'll use to select components and set component properties.  
  
  > [!div class="mx-imgBorder"]
- > ![App designer components](../model-driven-apps/media/app-designer-canvas-components-tab.png "App designer components")  
+ > ![App designer components.](../model-driven-apps/media/app-designer-canvas-components-tab.png "App designer components")  
   
  On the canvas, you'll see areas for the site map, business process flow, dashboard, and tables. When you select a dashboard or business process flow, or configure a site map, the app designer automatically adds the tables that are used in these components to the canvas. After the tables are in place, all you need to do is select each table and add required table assets such as forms, views, and charts to it.
  
  You can also use **Search Canvas** to search for components on the canvas. When you select **Search Canvas**, a new search tab opens to the right of the tabs in the rightmost pane.   
  
  > [!div class="mx-imgBorder"]
- > ![Canvas search option](media/app-designer-search-tab.png "Canvas search")
+ > ![Canvas search option.](media/app-designer-search-tab.png "Canvas search")
 
 ## Open an app
 1. Sign in to [Power Apps](https://make.powerapps.com/). 
 
-2. Select an existing model-driven app or select **Model-driven app from blank**. For information about how to create an app, see [Create or edit a model-driven app by using the app designer](create-edit-app.md#create-an-app).
+2. Select an existing model-driven app. For information about how to create an app, see [Create or edit a model-driven app by using the app designer](create-edit-app.md#create-an-app).
 
-## Add an artifact (table, dashboard, or business process flow)  
- When you add a dashboard or business process flow to an app, the tables they use are automatically added to the app. When you add a table, the tiles for its assets are automatically added. There are two ways you can add artifacts to the designer canvas: by using the **Add** button  ![Add button on the designer](../model-driven-apps/media/dynamics365-designer-addbutton.PNG "Add button on the designer") on the command bar or by using the tiles on the **Components** tab.  
+## Add or edit a site map
+
+Before you can add app components to a newly created app, a site map must be defined. More information: [Create a model-driven app site map using the site map designer](create-site-map-app.md)
+
+## Add a component 
+
+ When you add a dashboard or business process flow to an app, the tables they use are automatically added to the app. When you add a table, the tiles for its assets are automatically added. There are two ways you can add components to the designer canvas: by using the **Add** button  ![Add button on the designer.](../model-driven-apps/media/dynamics365-designer-addbutton.PNG "Add button on the designer") on the command bar or by using the tiles on the **Components** tab.  
   
  Here are the steps for adding a dashboard to the app. Use the same steps to add a business process flow or table.  
   
@@ -70,7 +76,7 @@ The app designer refers to existing metadata in the default solution. You can us
     > [!TIP]
     >  Alternatively, you can also do one of the following:  
     >   
-    > - Select **Add** ![Add button on the designer](../model-driven-apps/media/dynamics365-designer-addbutton.PNG "Add button on the designer"), and then select **Dashboards**.  
+    > - Select **Add** ![Add button on the designer.](../model-driven-apps/media/dynamics365-designer-addbutton.PNG "Add button on the designer"), and then select **Dashboards**.  
     > - On the **Components** tab, under **Artifacts**, select **Dashboards**.  
   
 2.  In the **search** box, type a few keywords for the dashboard name you're looking for.  
@@ -86,24 +92,24 @@ The app designer refers to existing metadata in the default solution. You can us
      All tables the dashboard uses are also added to the **Entity View** area. For example, if you add the Customer Service Manager dashboard, the Case, Entitlement, and Queue Item tables are added to the Table View area. For each table, tiles for its assets are also added. You can use these tiles to add forms, views, and charts. More information: [Add or edit app components in the Power Apps app designer](add-edit-app-components.md#bkmk_AddEntityAssets)   
   
     > [!div class="mx-imgBorder"]
-    > ![Add table to the app designer canvas](../model-driven-apps/media/add-entity-app-designer-canvas.png "Add a table to the app designer canvas")  
+    > ![Add table to the app designer canvas.](../model-driven-apps/media/add-entity-app-designer-canvas.png "Add a table to the app designer canvas")  
   
 4.  If the dashboard you want doesn't exist in the default solution, create a dashboard by selecting **Create New** on the **Components** tab to the right of the canvas.  
   
      > [!div class="mx-imgBorder"]
-     > ![Create New link on the Components tab of app designer](../model-driven-apps/media/app-designer-components-tab-create-new.png "Create New link on the Components tab of the app designer")  
+     > ![Create New link on the Components tab of app designer.](../model-driven-apps/media/app-designer-components-tab-create-new.png "Create New link on the Components tab of the app designer")  
   
      The dashboard designer opens. More information: [Create and edit dashboards](create-edit-dashboards.md)  
   
     > [!NOTE]
-    > - When you're adding a business process flow or table, the **Create New** option opens the corresponding designer. To learn more about creating business process flows or tables, see [Create a business process flow](/flow/create-business-process-flow) and  [Create a custom table](https://docs.microsoft.com/powerapps/maker/common-data-service/data-platform-create-entity).  
+    > - When you're adding a business process flow or table, the **Create New** option opens the corresponding designer. To learn more about creating business process flows or tables, see [Create a business process flow](/flow/create-business-process-flow) and  [Create a custom table](../data-platform/data-platform-create-entity.md).  
       
   
-5.  When you're done adding artifacts, on the command bar, select **Save**.  
+5.  When you're done adding components, on the command bar, select **Save**.  
   
 <a name="bkmk_AddEntityAssets"></a>   
 ## Add table assets (forms, views, charts, or dashboards)  
- With the artifacts in place, you can start adding table assets like forms, views, charts, and dashboards to the app.
+ With the components in place, you can start adding table assets like forms, views, charts, and dashboards to the app.
  Additionally, if you're using the Unified Interface client, you can also add table dashboard assets to the app.  
   
  This section describes the steps for adding a form to the app. Use the same steps to add a view or chart to the app.  
@@ -115,7 +121,7 @@ The app designer refers to existing metadata in the default solution. You can us
     > [!NOTE]
     >  Alternatively, you can also do one of the following:  
     >   
-    > - Select **Add** ![Add button on the designer](../model-driven-apps/media/dynamics365-designer-addbutton.PNG "Add button on the designer"), and then select **Forms**.  
+    > - Select **Add** ![Add button on the designer.](../model-driven-apps/media/dynamics365-designer-addbutton.PNG "Add button on the designer"), and then select **Forms**.  
     > - On the **Components** tab, under **Entity Assets**, select **Forms**.  
   
     > [!TIP]
@@ -125,7 +131,7 @@ The app designer refers to existing metadata in the default solution. You can us
  
      The form tile of the selected table will display the number of forms added.  
   
-     ![Form tile for case table](../model-driven-apps/media/add-forms-entity.png "Form tile for case table")  
+     ![Form tile for case table.](../model-driven-apps/media/add-forms-entity.png "Form tile for case table")  
   
      For example, if you don't select any form for a table, all the forms for that table will be displayed to end users while they use the app. This behavior is similar for views and charts also, if no view or chart is selected. This helps to create apps quickly when you need to work with all available components; there's no need to select each component during app design.  
 
@@ -148,27 +154,27 @@ The app designer refers to existing metadata in the default solution. You can us
     > [!NOTE]
     >  When you're adding a view, you can reference only public views that are listed under the **Views** node in the solution explorer.  
   
-4. Select the down arrow ![Drop down icon](../model-driven-apps/media/drop-down-icon.png "down arrow") to expand the tile and see a list of forms that have been added.  
+4. Select the down arrow ![Drop down icon.](../model-driven-apps/media/drop-down-icon.png "down arrow") to expand the tile and see a list of forms that have been added.  
   
-     ![Form tile expanded in app designer](../model-driven-apps/media/app-designer-expanded-form-tile.png "Form tile expanded in the app designer")  
+     ![Form tile expanded in app designer.](../model-driven-apps/media/app-designer-expanded-form-tile.png "Form tile expanded in the app designer")  
   
 5.  Repeat these steps to add table views and charts to the app.  
   
 6.  Select **Save**.  
   
-## Edit or remove artifacts  
+## Edit or remove components  
   
-- To edit a dashboard or a business process flow, select the down arrow ![Drop down icon](../model-driven-apps/media/drop-down-icon.png "down arrow") to expand the tile, and then select the site map designer button ![Open Site Map Designer button](../model-driven-apps/media/dynamics365-open-designer.PNG "Open Site Map Designer button") corresponding to the dashboard or business process flow that you want to edit.  
+- To edit a dashboard or a business process flow, select the down arrow ![Drop down icon.](../model-driven-apps/media/drop-down-icon.png "down arrow") to expand the tile, and then select the site map designer button ![Open Site Map Designer button.](../model-driven-apps/media/dynamics365-open-designer.PNG "Open Site Map Designer button") corresponding to the dashboard or business process flow that you want to edit.  
   
      The designer for the selected artifact opens.  
   
-- To remove a dashboard or a business process flow, select the down arrow ![Drop down icon](../model-driven-apps/media/drop-down-icon.png "down arrow") to expand the tile, and then select the dashboard or business process flow that you want to remove. On the command bar, select **Remove**.  
+- To remove a dashboard or a business process flow, select the down arrow ![Drop down icon.](../model-driven-apps/media/drop-down-icon.png "down arrow") to expand the tile, and then select the dashboard or business process flow that you want to remove. On the command bar, select **Remove**.  
 
     Another way to remove a dashboard or business process flow is by clearing the corresponding check box on the **Components** tab.
   
 - To edit or remove a table, select the table tile, and then on the command bar, select **Edit** or **Remove**. When you edit a table, the solution explorer opens, where you can make changes to the table.  
   
-     Another way to remove a component is to select the dashboard, business process flow, or table tile. On the **Components** tab, clear the check boxes for the artifacts you want to remove from the designer.  
+     Another way to remove a component is to select the dashboard, business process flow, or table tile. On the **Components** tab, clear the check boxes for the components you want to remove from the designer.  
   
     > [!NOTE]
     >  When you make any changes to a table&mdash;like changing a table display name or description&mdash;the changes don't appear in the app designer unless the changes are published in the solution explorer.  
@@ -177,7 +183,7 @@ The app designer refers to existing metadata in the default solution. You can us
 
 ### Edit table assets
   
-1. Select the down arrow ![Drop down icon](../model-driven-apps/media/drop-down-icon.png "down arrow") to expand the tile for forms, views, charts, or dashboards.  
+1. Select the down arrow ![Drop down icon.](../model-driven-apps/media/drop-down-icon.png "down arrow") to expand the tile for forms, views, charts, or dashboards.  
   
 2. Select the form, view, chart, or dashboard that you want to edit.  
   
@@ -200,3 +206,6 @@ Alternatively, you can select the forms, views, charts, or dashboards tile, and 
 ## Next steps  
  [Create a site map for an app](create-site-map-app.md) </br>  
  [Validate and publish an app](validate-app.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

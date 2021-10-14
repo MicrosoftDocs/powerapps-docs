@@ -1,13 +1,14 @@
 ---
 title: Use the model-driven app main form and its components in Power Apps | Microsoft Docs
-description: Know how to use the main form and its components in the unified interface based apps
+description: Know how to use the main form and its components in Unified Interface apps
 keywords: Main forms; Customer service; Customer Service Hub; Dynamics 365
 author: Mattp123
+ms.subservice: mda-maker
 ms.author: matp
 manager: kvivek
 ms.date: 06/06/2018
 ms.service: powerapps
-ms.topic: article
+ms.topic: how-to
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -23,13 +24,13 @@ search.app:
 
 [!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-Forms in the Unified interface based apps provide improved user experience for optimum agent productivity and help maintain context while working on related rows. You can see the forms enlisted in the solution explorer. The form type of the new forms is **Main**.
+Forms in Unified Interface apps provide improved user experience for optimum agent productivity and help maintain context while working on related rows. You can see the forms enlisted in the solution explorer. The form type of the new forms is **Main**.
 
 This topic explains how to edit a main form, and add or change various elements of the form.
 
 ## Open the form editor
 
-To edit a form or to add or change elements, use the form editor. The form editor lets you edit forms for all the Unified interface based apps.
+To edit a form or to add or change elements, use the form editor. The form editor lets you edit forms for all Unified Interface apps.
 
 Follow the procedures given below to access the form editor. 
 
@@ -43,24 +44,24 @@ Follow the procedures given below to access the form editor.
 
 2.  On the left navigation pane, select **Apps**, select the app you want, and then on the toolbar select **Edit**.  
 
-3. On the app designer canvas, select the down arrow ![Down arrow for app designer](media/down-arrow-app-designer.png) next to a table to see the forms available for that table. 
+3. On the app designer canvas, select the down arrow ![Down arrow for app designer.](media/down-arrow-app-designer.png) next to a table to see the forms available for that table. 
 
-4. Select the open designer button ![open designer](media/site-map-designer.png)corresponding to the form to edit.
+4. Select the open designer button ![open designer.](media/site-map-designer.png)corresponding to the form to edit.
 
-   ![Form editor in app designer](media/app-designer-forms.png)
+   ![Form editor in app designer.](media/app-designer-forms.png)
  
 5. In the form designer, make your changes and then select **Save** to save the changes and select **Publish** to publish them for use in the app. 
 
 > [!NOTE]
 > If you have made other changes to the app, publish them using the app level publish option. See [Validate and publish an app using the app designer](validate-app.md) for more information.
 
-> [!NOTE]
-> The webclient main form is also compatible with the Customer Service Hub and is available to be edited using the app designer.
+<!-- > [!NOTE]
+> The web client main form is also compatible with the Customer Service Hub and is available to be edited using the app designer. -->
 
 
 ### Access the form editor through the default solution
 
-1.  Sign in to [Power Apps](https:///?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
+1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
 2.  Expand **Data**, select **Tables**, select the table that you want, and then select the **Forms** tab.  
 
@@ -77,7 +78,7 @@ Follow the procedures given below to access the form editor.
 1. With the unmanaged solution opened in solution explorer, select the **Entities** node and, in the toolbar above the list, select **Add Existing**.
 
      > [!div class="mx-imgBorder"] 
-     > ![Add existing table](media/add-existing-entity.png)
+     > ![Add existing table.](media/add-existing-entity.png)
 
 2. In the **Select Solution Components** dialog box, with the **Component Type** selector set to **Entity**, select the table you want to add and select **OK**.
 
@@ -148,7 +149,7 @@ You can add or edit web resources on a form to make it more appealing or useful 
 You can add iFrames to a form to integrate content from another website within a form. To know more about the IFRAME properties, see [IFRAME properties](iframe-properties-legacy.md). 
   
 ## Edit navigation  
- Navigation within the form allows people to view lists of related rows. Each table relationship has properties to control whether it should be shown. More information: [Navigation Pane Item for Primary Table](../common-data-service/create-edit-1n-relationships-solution-explorer.md#navigation-pane-item-for-primary-table)
+ Navigation within the form allows people to view lists of related rows. Each table relationship has properties to control whether it should be shown. More information: [Navigation Pane Item for Primary Table](../data-platform/create-edit-1n-relationships-solution-explorer.md#navigation-pane-item-for-primary-table)
   
  Any table relationships that are configured to be displayed can be overridden within the form editor.  
   
@@ -170,3 +171,6 @@ An event handler consists of a reference to a JavaScript web resource and a func
  [Create and design forms](create-design-forms.md)   
  [Create and edit quick create forms](create-edit-quick-view-forms.md)   
  [Create and edit quick view forms](create-edit-quick-view-forms.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

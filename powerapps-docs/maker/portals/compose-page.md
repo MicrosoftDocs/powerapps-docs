@@ -1,35 +1,42 @@
 ---
-title: Compose webpages | Microsoft Docs
-description: Instructions to compose webpages in portal.
+title: WYSIWYG editor
+description: Learn about how to customize page using Power Apps portals Studio through the WYSIWYG editor.
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/22/2020
+ms.date: 05/10/2021
+ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: tapanm
+contributors:
+    - neerajnandwana-msft
+    - tapanm-msft
 ---
 
-# Compose a page
+# WYSIWYG editor
 
-After adding the required webpages and managing their hierarchy in the sitemap, you can add various components. The WYSIWYG editor allows you to add and edit the required components on the canvas easily. You can add and edit the following components on the canvas:
+After adding the required webpages and managing their hierarchy in the sitemap, you can add various components. The WYSIWYG (What You See Is What You Get) editor allows you to add and edit the required components on the canvas easily. You can add and edit the following components on the canvas:
 
-- Sections
+- [Sections](add-sections.md)
     - One column section
     - Two columns section
     - Three columns section
-- Portal components
-    - Text
-    - Image
-    - IFrame
-    - Form
-    - List
-    - Breadcrumb
+- Components
+    - [Text](add-text.md)
+    - [Image](add-image.md)
+    - [IFrame](add-iframe.md)
+    - [Form](add-form.md)
+    - [List](add-list.md)
+    - [Breadcrumb](add-breadcrumb.md)
+    - [Custom menu](add-custom-menu.md)
+    - [Use code editor](use-code-editor.md)
+    - [Power BI](add-powerbi.md)
 
 > [!NOTE]
 > If you customize your portal using Power Apps portals Studio, the website users would notice a performance impact. We recommended you to do the changes during non-peak hours on a live portal. 
 
-## Use the WYSIWYG editor
+To use the WYSIWYG editor:
 
 1.  [Edit the portal](manage-existing-portals.md#edit) to open it in Power Apps portals Studio.  
 
@@ -40,434 +47,28 @@ After adding the required webpages and managing their hierarchy in the sitemap, 
     > [!NOTE]
     > The editable elements are demarcated by a boundary.
 
-4.  Select **Components** ![components icon](media/components-icon.png "Components icon") from the left side of the screen.  
+4.  Select **Components** ![components icon.](media/components-icon.png "Components icon") from the left side of the screen.  
 
 5.  Select the component to be added.
 
-    > [!div class=mx-imgBorder]
-    > ![components pane](media/components-pane.png "Components pane")  
+    ![components pane.](media/components-pane.png "Components pane")  
 
     The selected component is added to the canvas inside the editable element.
 
 6.  To delete a component, select the component on the canvas and then select **Delete** on the command bar at the top of the page.
 
     > [!div class=mx-imgBorder]
-    > ![delete component](media/delete-component.png "Delete component")  
-
-## Add sections
-
-Sections allow you to define a structure for your page and arrange portal components.
-
-Once you add sections to your page, you can add portal components inside the sections as per the requirement.
-
-1.    [Edit the portal](manage-existing-portals.md#edit) to open it in Power Apps portals Studio.
-
-2.    Select the page on which you want to add a section.
-
-3.    Select an editable element on the canvas.
-
-4.    Select **Components** ![components icon](media/components-icon.png "Components icon") from left side of the screen.
-
-5.    Under **Section layout**, select the section type to be inserted.
-
-6.    In the properties pane on the right side of the screen, enter or select the following information:
-
-       - **Min Height**: Enter the minimum height of the section. If you add a component that occupies more space than the specified height, the section expands to accommodate the component. By default, the minimum height is 100 px. You can also enter the height in points (pt) and percentage (%).
-
-        > [!div class=mx-imgBorder]
-        > ![Min Height](media/section-props-height.png "Min Height")  
-
-        - **Alignment**: Select whether the component in the section must be left, center, or right aligned.
-
-        > [!div class=mx-imgBorder]
-        > ![Alignment in the section](media/section-props-align.png "Alignment in the section")  
-
-        - **Background**: Select if you'd like to have color or an image as the section background.
-
-        - **Fill**: Select a color for the background.
-
-            > [!div class=mx-imgBorder]
-            > ![Fill color in the section](media/section-props-fill.png "Fill color in the section")  
-
-        - **Image**: Select an image from the list. If you would like to upload a new image, select **Upload image**.
-
-            > [!div class=mx-imgBorder]
-            > ![Add image in the section](media/section-props-image.png "Add image in the section")  
-
-7.    Add the required portal component in the section.
-
-
-## Add portal components
-
-You can add the following components on a webpage:
-
-- [Text](#add-text-box)
-- [Image](#add-image)
-- [IFrame](#add-iframe)
-- [Form](#add-form)
-- [List](#add-list)
-- [Breadcrumb](#add-breadcrumb)
-- [Power BI](#add-power-bi)
-
-
-### Add text box
-
-1.  [Edit the portal](manage-existing-portals.md#edit) to open it in Power Apps portals Studio.  
-
-2.  Select the page on which you want to add the component.
-
-3.  Select an editable element on the canvas.
-
-4.  Select **Components** ![components icon](media/components-icon.png "Components icon") from the left side of the screen.  
-
-5.    Under **Portal components**, select **Text**.
-
-6.  Enter the required text in the text box.
-
-7.  To format the text, select the text to display the format options. Modify the font size and style as required.
-
-    > [!div class=mx-imgBorder]
-    > ![text component](media/text-component.png "Text component")  
-
-8. In the properties pane on the right side of the screen, select the following information:
-
-    - **Alignment**: Select whether the text must be left, center, or right aligned.
-
-    - **Font color**: Select a color for the text.
-
-        > [!div class=mx-imgBorder]
-        > ![Select text alignment and color](media/text-props.png "Select text alignment and color")  
- 
-
-### Add image
-
-1.  [Edit the portal](manage-existing-portals.md#edit) to open it in Power Apps portals Studio.  
-
-2.  Select the page on which you want to add the component.
-
-3.  Select an editable element on the canvas.
-
-4.  Select **Components** ![components icon](media/components-icon.png "Components icon") from the left side of the screen.  
-
-5.  Under **Portal components**, select **Image**. The image placeholder is added to the canvas.
-
-6.  In the properties pane on the right side of the screen, enter the following information:
-
-    - **Image**: Select this option if you would like to select an existing image or upload a new one. If you want to select a previously uploaded image, choose an image from the **Select image** list. To upload a new image, select **Upload image**. All the uploaded images are included in the image library, which can be selected again through the **Select image** list.
-
-        > [!div class=mx-imgBorder]
-        > ![image properties](media/image-props.png "Image properties")  
-
-        > [!NOTE]
-        > - You can upload only the images of type png, svg, jpg, and jpeg with the maximum size of 5 MB.
-        > - You can't upload an image with the same name. You need to modify the name of the image to upload it again.
-
-    - **External url**: Select this option if you would like to upload an image from an external URL. Enter the URL in the **External url** field. Only secured links are accepted—that is, https:// is mandatory. If you have images stored in your content delivery network, you can provide the link in this field.
-
-        > [!div class=mx-imgBorder]
-        > ![image external url](media/image-ext-url.png "Image external URL")  
-
-    -   **Formatting options**
-
-        - **Width**: Enter width of the image.
-
-        - **Height**: Enter height of the image.
-
-    > [!NOTE]
-    > You can also select the image on the canvas and drag the handles to resize it.
-
-### Add IFrame
-
-1.  [Edit the portal](manage-existing-portals.md#edit) to open it in Power Apps portals Studio.  
-
-2.  Select the page on which you want to add the component.
-
-3.  Select an editable element on the canvas.
-
-4.  Select **Components** ![components icon](media/components-icon.png "Components icon") from the left side of the screen.  
-
-5.  Under **Portal components**, select **IFrame**. The IFrame placeholder is added to the canvas.
-
-6.  In the properties pane on the right side of the screen, enter the following information:
-
-    - **Width**: Enter the width of the IFrame.
-
-    - **Height**: Enter the height of the IFrame.
-
-        > [!NOTE]
-        > You can also select the IFrame on the canvas and drag the handles to resize it.
-
-    - **Link**: Enter the URL of the website to be displayed in the IFrame. Only secured links are accepted—that is, https:// is mandatory. By default, <https://www.bing.com> is available as the value.
-    
-        > [!div class=mx-imgBorder]
-        > ![IFrame properties](media/iframe-props.png "IFrame properties")  
-
-> [!NOTE]
-> You can also add [Power Virtual Agent](https://docs.microsoft.com/power-virtual-agents/fundamentals-what-is-power-virtual-agents) bot to the  IFrame similarly using steps described in [add bot to your web site](https://docs.microsoft.com/power-virtual-agents/publication-connect-bot-to-web-channels#custom-website).
-
-### Add form
-
-Form is a data-driven configuration that collects data in the portal without the need for a developer to surface the form in the portal. 
-
-Forms are [created in Microsoft Dataverse](https://docs.microsoft.com/powerapps/maker/model-driven-apps/form-designer-overview). You can use them in webpages in the portal or in conjunction with lists to build out complete web applications.  
-
-1.  [Edit the portal](manage-existing-portals.md#edit) to open it in Power Apps portals Studio.  
-
-2.  Select the page on which you want to add the component.
-
-3.  Select an editable element on the canvas.
-
-4.  Select **Components** ![components icon](media/components-icon.png "Components icon") from the left side of the screen.  
-
-5.  Under **Portal components**, select **Form**.
-
-6.  In the properties pane on the right side of the screen, select one of the following options:
-
-    - **Create new**: Create a new form.
-    - **Use existing**: Use an existing form.
-
-7. Enter information or make selection:
-
-    - **Name**: Name of the form.
-
-    - **Entity**: The name of the entity from which the form is loaded.
-
-    - **Form layout**: The name of the form on the target entity in Dataverse that is to be rendered.
-
-    - **Mode**: Select one of the following options:
-
-        - **Insert**: Indicates the form should insert a new record upon submission.
-
-        - **Edit**: Indicates the form should edit an existing record.
-
-        - **Read only**: Indicates the form should display an existing record's non-editable form.
-
-        > [!NOTE]
-        > The default option for **Edit** and **ReadOnly** modes is set as Query String Parameter Name passed as ID in URL. To change these values, you need to open Portal Management app and update the form properties.
-
-    - **On success**: Select one of the following options:
-
-        - **Show success message**: Requires a message to be displayed to the user on successful submission of the form. You can also select **Hide form on success** to hide the form upon successful submission.
-
-        - **Redirect to webpage**: Redirects the user to the selected webpage in the portal. This field is required.
-
-        - **Redirect to URL**: Redirects the user to the specified URL. This field is required.
-
-    - **Show captcha for anonymous users**: Displays captcha to anonymous users.
-
-    - **Show captcha for authenticated users**: Displays captcha to authenticated users.
-
-    - **Enable entity permissions**: Entity permissions to be considered for the form. By default, it isn't selected. If selected, explicit permissions are required for any user to access the form. More information: [Entity permission](configure/assign-entity-permissions.md)
-
-        > [!div class=mx-imgBorder]
-        > ![Form properties](media/form-props.png "Form properties")
-
-### Add list
-
-List is a data-driven configuration to render a list of records without the need for a developer to surface the grid in the portal.
-
-Lists use [Dataverse views](https://docs.microsoft.com/powerapps/maker/model-driven-apps/create-and-edit-views) to display records on the portal.  
-
-1.  [Edit the portal](manage-existing-portals.md#edit) to open it in Power Apps portals Studio.  
-
-2.  Select the page on which you want to add the component.
-
-3.  Select an editable element on the canvas.
-
-4.  Select **Components** ![components icon](media/components-icon.png "Components icon") from the left side of the screen.  
-
-5.  Under **Portal components**, select **List**.
-
-6.  In the properties pane on the right side of the screen, select one of the following options:
-
-    - **Create new**: Create a new list.
-    - **Use existing**: Use an existing list.
-
-7.  Enter information or make selection:
-
-    - **Name**: Name of the list.
-
-    - **Entity**: The name of the entity from which the views are loaded.
-
-    - **Views**: The list of views of the target entity that is to be rendered. You can select multiple views to display records in the list. The view selected first is the default view.
-
-    - **Create new record**: Allows a user to create a record. Select a webpage that contains a form to create a new record.
-
-    - **View details**: Allows a user to view details. Select a webpage that contains a form to display details.
-
-    - **Edit record**: Allows a user to edit a record. Select a webpage that contains a form to edit the record.
-
-    - **Delete record**: Allows a user to delete a record.
-
-    - **Empty list message**: Message to be displayed when there are no records to be displayed.
-
-    - **Number of records per page**: Enter the number of the records to display on a page.
-
-    - **Enable search in entity list**: Allows a user to search records in the list.
-
-    - **Enable entity permissions**: Entity permissions to be considered for the list. Not selected by default. If selected, explicit permissions are required for any user to access the form. More information: [Entity permission](configure/assign-entity-permissions.md)  
-
-    > [!div class=mx-imgBorder]
-    > ![list properties](media/list-props.png "List properties")
-
-### Add breadcrumb
-
-1.  [Edit the portal](manage-existing-portals.md#edit) to open it in Power Apps portals Studio.  
-
-2.  Select the page on which you want to add the component.
-
-3.  Select an editable element on the canvas.
-
-4.  Select **Components** ![components icon](media/components-icon.png "Components icon") from the left side of the screen.  
-
-5.  Under **Portal components**, select **Breadcrumb**.
-
-## Add a custom menu
-
-By default, the menu on the website is created automatically based on the hierarchy of the webpages. It's called the **default** menu. To create a custom menu, you must create the web link set in the Portal Management app. More information: [Manage web links](configure/manage-web-links.md)
-
-After you create the web link set:
-
-1. [Edit the portal](manage-existing-portals.md#edit) to open it in Power Apps portals Studio.
-
-1. Select the header component. 
-
-1. In the properties on the right side of the screen, select the web link set name from the **Navigation Menu** list.
-
-    ![Navigation menu](media/navigation-menu.png "Navigation menu")
-
-## Use code editor
-
-To view the source of a component on the canvas, select the component, and then select the source code editor icon **&lt;/&gt;** in the footer.
-
-> [!div class=mx-imgBorder]
-> ![code editor icon](media/code-editor-icon.png "Code editor icon")  
-
-The source code is displayed in the **Code Editor** pane at the bottom of the screen. The changes you made earlier are updated in the source code. To make changes, update the source code and select **Save**. The changes are reflected on the canvas.
-
-> [!div class=mx-imgBorder]
-> ![code editor](media/code-editor.png "Code editor") 
-
-> [!NOTE]
-> You can also add Liquid tags in source code editor for advanced configuration. More information: [Work with Liquid templates](liquid/liquid-overview.md)
-
-## Add Power BI
-
-You can add Power BI component on a page to display Power BI dashboards and reports on your portal.
-
-> [!NOTE]
-> Before you begin, read [Power BI access type considerations](#power-bi-access-type-considerations) and [general Power BI considerations](#general-power-bi-considerations) to get familiar with important Power BI terms and considerations for Power Apps portals.
-
-To add a Power BI component to a web page:
-
-1. [Edit the
-    portal](../portals/manage-existing-portals.md#edit).
-
-1. Select the page to add a component to.
-
-1. Select an editable element on the canvas.
-
-1. Select **Components** from the left side of the screen.
-
-1. From Portal components section, select **Power BI**. The Power BI placeholder is added to the canvas:
-
-    ![Components](media/components-powerbi.png)
-
-1. In the properties pane on the right side of the screen, enter the following information:
-
-    1. **Access type**: Select appropriate option from the drop-down as per your requirement.
-
-        ![Power BI Access type](media/powerbi-access-type.png "Power BI Access type")
-
-        1. **Embed for your customers** - Allows you to securely share the Power BI dashboards or reports to external users without Power BI license or Azure Active Directory authentication setup. This option uses Power BI Embedded services to integrate Power BI dashboards or reports into portal.
-            > [!NOTE]
-            > Ensure [Power BI Embedded service is enabled](../portals/admin/set-up-power-bi-integration.md#enable-power-bi-embedded-service) and respective Power BI workspaces are selected, and shared with the maker or the logged-in user.
-
-        1. **Embed for your organization** - Allows you to securely share the Power BI dashboards or reports to Azure Active Directory authenticated users.
-
-            > [!NOTE]
-            > Ensure you've shared Power BI workspaces with maker and target portal users.
-
-        3. **Publish to web** - Allows you to share Power BI report or dashboard to anyone on the internet.
-
-        For more information about access types, go to [access types](#power-bi-access-type-considerations).
-
-    1. **Workspace**: Select the Power BI workspace from the list.
-
-    1. **Select type**: Select type as *Dashboard* or *Report* from the list.
-
-        ![Select type](media/type-powerbi.png "Select type")
-
-        - **Dashboard** - Allows you to choose a **Dashboard**, and then a **Tile** from the selected dashboard to display on the web page.
-        - **Report** - Allows you to select a **Report**, and then a **Page** from the report to display on the web page.
-
-    1. **Apply roles**: If you have defined roles in Power BI and assigned them to reports, you must enter appropriate roles in this field.
-
-        ![Apply roles](media/apply-roles-powerbi.png "Apply roles")
-    
-        - You can enter multiple roles separated by a comma (for example, `role_1,role_2`). For more information on defining roles in Power BI, go to [Row-level security (RLS) with Power BI](https://docs.microsoft.com/power-bi/service-admin-rls). <br>
-        - Only available for access type **Embed for your customer**.
-
-    1. **Apply filter**: Allows user to load the report with pre-filtered values. User can provide filter condition in the field. 
-        
-        ![Apply filter](media/apply-filter-powerbi.png "Apply filter")
-
-        - Filter parameter must be without `?filter=''` prefix. For example, `Table/Field eq 'value'`.
-        <br> For more information, go to [filter parameter details](https://docs.microsoft.com/power-bi/service-url-filters).
-        - Only available for **Reports** with access types **Embed for your customer** and **Embed for your organization**.
-
-    1. **Embed code URL**: Enter embed code URL.
-    
-        ![Embed Code URL](media/embed-code-url.png "Embed Code URL")
-
-        - To learn about how to get embed code URL, go to [Publish to web from Power BI](https://docs.microsoft.com/power-bi/service-publish-to-web)
-        - Only available for access type **Publish to web**.
-
-### Power BI access type considerations
-
-The following list explains Power BI access types in brief. And lists access type considerations for Power Apps portals. For more information about Power BI access types, go to [Difference between Power BI service and Power BI embedded](https://docs.microsoft.com/power-bi/developer/embedded/embedded-faq#how-is-power-bi-embedded-different-from-power-bi-the-service).
-
-- **Embed for your customers**:
-    - Shows the list of workspaces shared to user currently logged in and enabled for [Power BI Embedded service](../portals/admin/set-up-power-bi-integration.md#enable-power-bi-embedded-service).
-    - Uses Power BI Embedded service.
-    - If you've used Power BI Embedded service with Power Apps portals before, you'll see the following error when you select **Embed for your customers**:
-
-        ![Power BI Embed for your customers - enable visualization again](media/embed-power-bi-visualization-enable-again.png)
-    
-        When this happens, ensure you [disable](../portals/admin/set-up-power-bi-integration.md#disable-power-bi-visualization) and then [enable](../portals/admin/set-up-power-bi-integration.md#enable-power-bi-visualization) Power BI visualization again.
-    - If you add Power BI with **Embed for your customers** on a Power Apps portal page that is available **anonymously**, anyone can view the dashboard. To secure such a web page, read [web page access control in Power Apps portal](../portals/configure/webpage-access-control.md).
-
-- **Embed for your organization**:
-
-    - Shows the list of workspaces shared with logged in user.
-    - Uses Azure Active Directory authentication.
-
-- **Publish to web**: Anyone on Internet can view your published report or visual. This requires no authentication and includes viewing detail level data your reports aggregate. Before publishing a report, make sure you can share the data and visualizations publicly. Don't publish confidential or sensitive information. Refer to your organization's policies before publishing.
-
-### General Power BI considerations
-
-- [Portals Studio](../portals/portal-designer-anatomy.md) performance can degrade while working with Power BI workspaces because of the following Power BI workspace configurations:
-    - High number of workspaces shared with logged in maker user.
-    - Power BI workspaces are shared with many users.
-- [Capture liquid variable](../portals/liquid/portals-entity-tags.md#powerbi) isn't supported in portals Studio while working with Power BI component.
-- If you [reset portal](../portals/admin/reset-portal.md) and provision a new portal, you must add portal application ID of the new portal to the **Portal Power BI Embedded service** Azure AD security group. For more information, go to [Set up Power BI integration](../portals/admin/set-up-power-bi-integration.md#create-security-group-and-add-to-power-bi-account).
-- If you make a change in Power Apps portals admin center, you must reload the portals Studio if you already have it open.
-- Adding users to Power BI dashboards and reports may take a while to reflect in the portals Studio.
-
-### Power BI performance and optimization considerations
-
-Embedding multiple Power BI workspaces may need additional considerations. Refer to the following resources for Power BI embed scenario troubleshooting, optimization, and best practices:
-
-- [Troubleshooting Power BI Embedded application content rendering](https://docs.microsoft.com/power-bi/developer/embedded/embedded-troubleshoot#content-rendering).
-- [Power BI Embedded performance best practices](https://docs.microsoft.com/power-bi/developer/embedded/embedded-performance-best-practices).
-- [Power BI optimization guide](https://docs.microsoft.com/power-bi/guidance/power-bi-optimization).
-
+    ![delete component.](media/delete-component.png "Delete component")  
 
 ## Next steps
 
-[Work with templates](work-with-templates.md)
+[Add sections](add-sections.md)
 
 ### See also
 
 - [Create and manage web pages](create-manage-webpages.md)
-- [Microsoft Learn: Integration with Power BI](https://docs.microsoft.com/learn/modules/portals-integration/3-power-bi)
+- [Microsoft Learn: Integration with Power BI](/learn/modules/portals-integration/3-power-bi)
+- [Work with templates](work-with-templates.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -7,8 +7,9 @@ ms.reviewer:
 ms.service: powerapps
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: overview
 author: Mattp123
+ms.subservice: mda-maker
 ms.author: matp
 manager: kvivek
 search.audienceType: 
@@ -25,10 +26,13 @@ The Power BI cloud service works with Microsoft Dataverse apps to provide a self
 - [How app users can add or edit Power BI visualizations on their dashboards](../../user/add-powerbi-dashboards.md) 
  
 ### See also
-[Use Power BI with Dataverse data](../common-data-service/use-powerbi-with-cds.md) <br />
+[Use Power BI with Dataverse data](../data-platform/use-powerbi-dataverse.md) <br />
 [Connect to Power BI from Power Apps canvas apps](../canvas-apps/connections/connection-powerbi.md)
  
   
 
   
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

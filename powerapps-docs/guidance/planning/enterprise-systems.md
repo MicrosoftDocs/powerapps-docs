@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: guidance
 ms.date: 06/16/2020
+ms.subservice: guidance
 ms.author: tayoshi
 ms.reviewer: kathyos
 
@@ -65,10 +66,10 @@ an installer, but there are several factors to consider:
 The speed of the app will depend on whether the network bandwidth between the
 on-premises datacenter or server and the cloud service is sufficient. If
 many people use the app simultaneously, not having enough bandwidth will cause
-the app to take a long time to respond. More information:[Web application requirements](https://docs.microsoft.com/power-platform/admin/web-application-requirements)
+the app to take a long time to respond. More information:[Web application requirements](/power-platform/admin/web-application-requirements)
 
 To find out the network speed of your organization, use the [Network Speed Test](https://www.microsoft.com/p/network-speed-test/9wzdncrfhx52)
-from Microsoft Store (free of charge) and also [diagnostic tools](https://docs.microsoft.com/power-platform/admin/verify-network-capacity-throughput-clients)
+from Microsoft Store (free of charge) and also [diagnostic tools](/power-platform/admin/verify-network-capacity-throughput-clients)
 specifically for model-driven apps.
 
 ### Database tuning of the data source
@@ -84,7 +85,7 @@ app that searches by using phone number. The data won't have been indexed to hel
 Indexing helps your apps speed up searches, and when an index is missing
 it takes longer to search and query for data. You might need to contact the IT
 team for the data source to discuss how you'll access the data and add
-additional indexes. For more information about indexing with SQL Server, see [SQL Server Index Architecture and Design Guide](https://docs.microsoft.com/sql/relational-databases/sql-server-index-design-guide?view=sql-server-ver15).
+additional indexes. For more information about indexing with SQL Server, see [SQL Server Index Architecture and Design Guide](/sql/relational-databases/sql-server-index-design-guide?view=sql-server-ver15).
 
 ### Server specification of on-premises systems
 
@@ -92,7 +93,7 @@ Another aspect to consider is your server specification that handles the
 on-premises gateway. If you have too many users accessing the app simultaneously,
 your server might not be able to cope with all the requests. In these situations,
 you should consider setting up your on-premises gateway to multiple servers, to
-form a cluster. More information: [Manage on-premises data gateway high-availability clusters and load balancing](https://docs.microsoft.com/data-integration/gateway/service-gateway-high-availability-clusters)
+form a cluster. More information: [Manage on-premises data gateway high-availability clusters and load balancing](/data-integration/gateway/service-gateway-high-availability-clusters)
 
 ### Volume and frequency of data transmission
 
@@ -101,3 +102,6 @@ performance while still allowing integration with on-premises data.
 
 > [!div class="nextstepaction"]
 > [Next step: Data modeling](data-modeling.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

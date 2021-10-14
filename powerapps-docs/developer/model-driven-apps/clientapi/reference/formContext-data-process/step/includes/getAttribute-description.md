@@ -1,1 +1,1 @@
-Returns the logical name of the attribute associated to the step.
+Returns the logical name of the column associated to the step.

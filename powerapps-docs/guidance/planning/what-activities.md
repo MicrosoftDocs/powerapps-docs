@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: guidance
 ms.date: 10/12/2021
+ms.subservice: guidance
 ms.author: thground
 ms.reviewer: kathyos
 
@@ -62,3 +63,6 @@ and reveals bottlenecks and metrics for your process through an analytical repor
 
 > [!div class="nextstepaction"]
 > [Next step: What data is needed?](what-data-needed.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

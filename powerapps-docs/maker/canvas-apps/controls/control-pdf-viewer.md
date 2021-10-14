@@ -1,6 +1,6 @@
 ---
-title: 'PDF viewer control: reference | Microsoft Docs'
-description: Information, including properties and examples, about the PDF viewer control
+title: PDF viewer control (experimental) in Power Apps
+description: Learn about the details, properties and examples of the PDF viewer control in Power Apps.
 author: chmoncay
 manager: kvivek
 ms.service: powerapps
@@ -8,11 +8,15 @@ ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 04/10/2020
+ms.subservice: canvas-maker
 ms.author: chmoncay
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - chmoncay
 ---
 # PDF viewer control (experimental) in Power Apps
 An experimental control that shows the content of a PDF file.
@@ -63,9 +67,9 @@ App users can work around these limitations by opening PDF documents in an exter
 
 **[HoverBorderColor](properties-color-border.md)** – The color of a control's border when the user keeps the mouse pointer on that control.
 
-**[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
+**[OnSelect](properties-core.md)** – Actions to perform when the user taps or clicks a control.
 
-**OnStateChange** – How an app responds when the state of the control changes.
+**OnStateChange** – Actions to perform when the state of the control changes.
 
 **[PaddingBottom](properties-size-location.md)** – The distance between text in a control and the bottom edge of that control.
 
@@ -113,3 +117,6 @@ Learn how to create accessible PDF documents with the [WCAG 2.0](https://www.w3.
 
 ### Screen reader support
 * Consider adding a heading using a **[Label](control-text-box.md)**, if the PDF document does not have a title. The heading can be positioned immediately before the **PDF viewer**.
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

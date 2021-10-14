@@ -1,6 +1,7 @@
 ---
 title: "htmlAttributeEncode| MicrosoftDocs"
-ms.date: 10/31/2018
+description: Includes description and supported parameters for the htmlAttributeEncode method.
+ms.date: 04/21/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -39,3 +40,5 @@ search.app:
 
 ## Related topics
 [htmEncode](htmlEncode.md)
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

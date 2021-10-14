@@ -1,12 +1,13 @@
 ---
 title: "formContext.data (Client API reference) in model-driven apps| MicrosoftDocs"
 description: "Learn about working with processes in model-driven apps using client API."
-ms.date: 10/31/2018
+ms.date: 04/15/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 32e8d1d0-4093-4588-a517-2930eec34dce
 author: "Nkrb"
+ms.subservice: mda-developer
 ms.author: "nabuthuk"
 manager: "kvivek"
 search.audienceType: 
@@ -17,20 +18,19 @@ search.app:
 ---
 # formContext.data (Client API reference)
 
-
-
 Provides properties and methods to work with the data on a form.
 
-![formContext Data object model](../../media/ClientAPI-formContext-data-Model.png)
+![formContext Data object model.](../../media/ClientAPI-formContext-data-Model.png)
 
 ## Properties
 
 |Name|Description|
 |--|--|
-|attributes|Collection of non-entity data on the form. Items in this collection are of the same type as the attributes collection, but they are not attributes of the form entity. <br/>More information: [Collections](collections.md)|
-|entity|Provides methods to retrieve information specific to the record displayed on the page, the save method, and a collection of all the attributes included on the form. Attribute data is limited to attributes represented by fields on the form. <br/>More information: [formContext.data.entity](formContext-data-entity.md)|
+|attributes|Collection of non-table data on the form. Items in this collection are of the same type as the columns collection, but they are not columns of the form table. <br/>More information: [Collections](collections.md)|
+|entity|Provides methods to retrieve information specific to the record displayed on the page, the save method, and a collection of all the columns included on the form. Column data is limited to columns represented on the form. <br/>More information: [formContext.data.entity](formContext-data-entity.md)|
 |process|Provides objects and methods to interact with the business process flow data on a form.<br/>More information: [formContext.data.process](formContext-data-process.md)|
 
+[!INCLUDE[cc-terminology](../../../data-platform/includes/cc-terminology.md)]
 
 ## Methods 
 
@@ -53,3 +53,6 @@ Provides properties and methods to work with the data on a form.
 
 
 
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

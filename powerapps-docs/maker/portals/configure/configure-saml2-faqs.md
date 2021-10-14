@@ -1,16 +1,21 @@
 ---
-title: "Frequently Asked Questions (FAQs) about using SAML 2.0 providers for authentication in Power Apps portals.  | MicrosoftDocs"
-description: "Learn about Frequently Asked Questions (FAQs) when using SAML 2.0 providers for authentication in Power Apps portals."
+title: FAQs for using SAML 2.0 in portals
+description: Learn about Frequently Asked Questions when using SAML 2.0 providers for authentication in Power Apps portals.
 author: dileepsinghmicrosoft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/20/2020
+ms.date: 04/21/2021
+ms.subservice: portals
 ms.author: dileeps
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - sandhangitmsft
+    - dileepsinghmicrosoft
 ---
 
-# FAQ for using SAML 2.0 in portals
+# FAQs for using SAML 2.0 in portals
 
 This article includes information about common Power Apps portals scenarios and frequently asked questions for using an authentication provider that conforms to the Security Assertion Markup Language (SAML) 2.0 standard.
 
@@ -43,3 +48,6 @@ Yes. Portals will specify *PasswordProtectedTransport* in authentication request
 [Configure a SAML 2.0 provider for portals with Azure AD](configure-saml2-settings-azure-ad.md)  
 [Configure a SAML 2.0 provider for portals with AD FS](configure-saml2-settings.md)  
 [Configure a SAML 2.0 provider for portals](configure-saml2-provider.md)  
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

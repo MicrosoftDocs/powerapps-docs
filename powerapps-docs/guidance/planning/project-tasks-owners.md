@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: guidance
 ms.date: 06/16/2020
+ms.subservice: guidance
 ms.author: tayoshi
 ms.reviewer: kathyos
 
@@ -43,3 +44,6 @@ solving this problem, is taking the lead on this project.
 
 > [!div class="nextstepaction"]
 > [Next step: Defining the project schedule](defining-project-schedule.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

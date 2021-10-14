@@ -1,7 +1,7 @@
 ---
 title: "htmlDecode| MicrosoftDocs"
 description: "The Client API method converts a string that has been HTML-encoded into a decoded string."
-ms.date: 10/31/2018
+ms.date: 04/21/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -43,3 +43,6 @@ search.app:
 [htmlEncode](htmlEncode.md)
 
 [htmlAttributeEncode](htmlAttributeEncode.md)
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

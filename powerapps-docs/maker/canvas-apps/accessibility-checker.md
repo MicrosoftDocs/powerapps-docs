@@ -1,15 +1,18 @@
 ---
-title: Review a canvas app for accessibility | Microsoft Docs
+title: Review a canvas app for accessibility in Power Apps
 description: Identify ways to make a canvas app more accessible to users who have vision, hearing, and other impairments
 author: emcoope-msft
 ms.service: powerapps
 ms.topic: article
-ms.date: 07/05/2018
+ms.date: 02/18/2021
+ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
 ---
 
 # Review a canvas app for accessibility in Power Apps
@@ -23,19 +26,19 @@ The Accessibility checker helps you identify settings that you might want to cha
 
 1. In the upper-right corner of Power Apps Studio, select the icon for the App checker.
 
-    ![App checker icon](./media/accessibility-checker/app-checker-icon.png)
+    ![App checker icon.](./media/accessibility-checker/app-checker-icon.png)
 
 2. In the menu that appears, select **Accessibility**.
 
-    ![App checker pane list of options](./media/accessibility-checker/app-checker-menu.png)
+    ![App checker pane list of options.](./media/accessibility-checker/app-checker-menu.png)
 
     A list of issues appears, sorted first by severity and then by screen.
 
-    ![Accessibility checker pane and list of items](./media/accessibility-checker/accessibility-checker-pane.png)
+    ![Accessibility checker pane and list of items.](./media/accessibility-checker/accessibility-checker-pane.png)
 
 3. Select the arrow next to an item to show details about it.
 
-    ![Accessibility checker details](./media/accessibility-checker/details-pane.png)
+    ![Accessibility checker details.](./media/accessibility-checker/details-pane.png)
 
 4. Select the back arrow to return to the list of items.
 
@@ -70,6 +73,13 @@ The Accessibility checker classifies each issue as an error, a warning, or a tip
 
 ## Next steps
 
+[Accessibility limitations in canvas apps](accessible-apps-limitations.md)
+
+### See also
+
 - [Create accessible apps](accessible-apps.md)
-- [Accessible colors](accessible-apps-color.md)
+- [Accessible app structure](accessible-apps-structure.md)
+- [Accessible colors in Power Apps](accessible-apps-color.md)
+- [Show or hide content from assistive technologies for canvas apps](accessible-apps-content-visibility.md)
+- [Announce dynamic changes with live regions for canvas apps](accessible-apps-live-regions.md)
 - [Accessibility properties](controls/properties-accessibility.md)

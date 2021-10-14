@@ -1,7 +1,8 @@
 ---
 title: uses-feature | Microsoft Docs
-description: 
+description: Indicates which feature their components want to use.
 keywords:
+ms.subservice: pcf
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
@@ -55,3 +56,5 @@ The table below shows the relationship of these settings to what happens in the 
 [Power Apps component framework manifest schema reference](index.md)<br/>
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

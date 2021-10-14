@@ -1,6 +1,6 @@
 ---
-title: People-screen template reference | Microsoft Docs
-description: Understand details of how the people-screen template for canvas apps works in Power Apps
+title: Reference information about the people-screen template for canvas apps
+description: Understand details of how the people-screen template for canvas apps works in Power Apps.
 author: emcoope-msft
 manager: kvivek
 ms.service: powerapps
@@ -8,11 +8,15 @@ ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 1/2/2019
+ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - emcoope-msft
 ---
 
 # Reference information about the people-screen template for canvas apps
@@ -31,7 +35,7 @@ Familiarity with how to add and configure screens and other controls as you [cre
 
 ## Text search box
 
-![TextSearchBox control](media/people-screen/people-search-box.png)
+![TextSearchBox control.](media/people-screen/people-search-box.png)
 
 A couple other controls interact or have a dependency on the text search box:
 
@@ -40,7 +44,7 @@ A couple other controls interact or have a dependency on the text search box:
 
 ## User-browse gallery
 
-![UserBrowseGallery control](media/people-screen/people-browse-gall.png)
+![UserBrowseGallery control.](media/people-screen/people-browse-gall.png)
 
 * Property: **Items**<br>
     Value: Logic to look up users when the user starts typing:
@@ -56,13 +60,13 @@ A couple other controls interact or have a dependency on the text search box:
     )
     ```
     
-The items of this gallery are populated by search results from the [Office365.SearchUser](https://docs.microsoft.com/connectors/office365users/#searchuser) operation. The operation takes the text in `Trim(TextSearchBox)` as its search term and returns the top 15 results based on that search. **TextSearchBox** is wrapped in a `Trim()` function because a user search on spaces is invalid.
+The items of this gallery are populated by search results from the [Office365.SearchUser](/connectors/office365users/#searchuser) operation. The operation takes the text in `Trim(TextSearchBox)` as its search term and returns the top 15 results based on that search. **TextSearchBox** is wrapped in a `Trim()` function because a user search on spaces is invalid.
 
 The `Office365Users.SearchUser` operation is wrapped in an `If(!IsBlank(Trim(TextSearchBox.Text)) ... )` function because you only need to call the operation when the search box contains user-entered text. This improves performance.
 
 ### UserBrowseGallery Title control
 
-![UserBrowseGallery Title control](media/people-screen/people-browse-gall-title.png)
+![UserBrowseGallery Title control.](media/people-screen/people-browse-gall-title.png)
 
 * Property: **Text**<br>Value: `ThisItem.DisplayName`
 
@@ -88,7 +92,7 @@ Selecting this control does three things concurrently:
 
 ### UserBrowseGallery ProfileImage control
 
-![UserBrowseGallery ProfileImage control](media/people-screen/people-browse-gall-image.png)
+![UserBrowseGallery ProfileImage control.](media/people-screen/people-browse-gall-image.png)
 
 * Property: **Image**<br>
     Value: Logic to retrieve a user's profile photo.
@@ -100,16 +104,16 @@ Selecting this control does three things concurrently:
     )
     ```
 
-The **Image** control retrieves the user's image with the [Office365Users.UserPhoto](https://docs.microsoft.com/connectors/office365users/#get-user-photo--v1-) operation. However, before doing that, it checks for two things:
+The **Image** control retrieves the user's image with the [Office365Users.UserPhoto](/connectors/office365users/#get-user-photo--v1-) operation. However, before doing that, it checks for two things:
   
    * Whether the ID field is empty or not empty. This prevents the **Image** control from trying to retrieve a user photo before the gallery has been populated with search results.
-   * Whether the user has a photo (with the [Office365Users.UserPhotoMetadata](https://docs.microsoft.com/connectors/office365users/#get-user-photo-metadata) operation). This prevents the `Office365Users.UserPhoto` lookup from returning an exception if the user doesn't have a profile picture.
+   * Whether the user has a photo (with the [Office365Users.UserPhotoMetadata](/connectors/office365users/#get-user-photo-metadata) operation). This prevents the `Office365Users.UserPhoto` lookup from returning an exception if the user doesn't have a profile picture.
 
 Note that if an image isn't retrieved, the **Image** control is blank, and the **iconUser** control is visible instead.
 
 ## People-added gallery
 
-![PeopleAddedGallery control](media/people-screen/people-people-gall.png)
+![PeopleAddedGallery control.](media/people-screen/people-people-gall.png)
 
 * Property: **Items**<br>
     Value: `MyPeople`
@@ -118,7 +122,7 @@ This is the collection of people initialized or added to by selecting the **User
 
 ### PeopleAddedGallery Title control
 
-![PeopleAddedGallery Title control](media/people-screen/people-people-gall-title.png)
+![PeopleAddedGallery Title control.](media/people-screen/people-people-gall-title.png)
 
 * Property: **OnSelect**<br>
     Value: `Set( _selectedUser, ThisItem )`
@@ -127,7 +131,7 @@ Sets the **_selectedUser** variable to the item selected in **EmailPeopleGallery
 
 ### PeopleAddedGallery iconRemove control
 
-![PeopleAddedGallery iconRemove control](media/people-screen/people-people-gall-delete.png)
+![PeopleAddedGallery iconRemove control.](media/people-screen/people-people-gall-delete.png)
 
 * Property: **OnSelect**<br>
     Value: `Remove( MyPeople, LookUp( MyPeople, UserPrincipalName = ThisItem.UserPrincipalName ) )`
@@ -139,3 +143,6 @@ Looks up the record in the **MyPeople** collection, where **UserPrincipalName** 
 * [Learn more about this screen](./people-screen-overview.md).
 * [Learn more about the Office 365 Outlook connector](../connections/connection-office365-outlook.md).
 * [Learn more about the Office 365 Users connector](../connections/connection-office365-users.md).
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: guidance
 ms.date: 07/20/2020
+ms.subservice: guidance
 ms.author: phtopnes
 ms.reviewer: kathyos
 
@@ -13,7 +14,7 @@ ms.reviewer: kathyos
 
 # Pattern: Calculation
 
-![Collage of calculation app screenshots](media/calculation-collage.png "Collage of calculation app screenshots")
+<!--![Collage of calculation app screenshots.](media/calculation-collage.png "Collage of calculation app screenshots")-->
 
 Power Apps makers use the calculation/transformation pattern to teach, to learn,
 and to make their work easier and more accurate. These apps might replace
@@ -28,7 +29,7 @@ Services.
 
 ## How to recognize the calculation pattern
 
-![Illustration of the calculation pattern with input, calculation, and output steps](media/calculation-illustration.png "Illustration of the calculation pattern with input, calculation, and output steps")
+![Illustration of the calculation pattern with input, calculation, and output steps.](media/calculation-illustration.png "Illustration of the calculation pattern with input, calculation, and output steps")
 
 In a typical calculation scenario:
 
@@ -74,7 +75,7 @@ quickly. By moving to this app, they've reduced their time
 for data entry by half and can create bids more easily now that the data is
 instantly available. With its related improvements to labor, accuracy, and purchasing incorporated,  the app built in Power Apps has saved Reliable Electric between CAD80,000 and CAD100,000 annually, compared to the top purpose-built electrical estimating solutions on the market.
 
-![Screenshot of the Reliable Electric project estimation app](media/reliable-electric-takeoffs.jpg "Screenshot of the Reliable Electric project estimation app")
+![Screenshot of the Reliable Electric project estimation app.](media/reliable-electric-takeoffs.jpg "Screenshot of the Reliable Electric project estimation app")
 
 ### SNCF Manufacturing Configuration
 
@@ -87,7 +88,7 @@ train. The app identifies the most suitable parts and configures the
 installation. The app then validates the result and provides
 calculations to estimate the end result of installing the selected parts.
 
-![Screenshot of SNCF Manufacturing Configuration](media/sncf-digibogies.png "Screenshot of SNCF Manufacturing Configuration")
+![Screenshot of SNCF Manufacturing Configuration.](media/sncf-digibogies.png "Screenshot of SNCF Manufacturing Configuration")
 
 ### SNCF Translation Assistant
 
@@ -102,7 +103,7 @@ task. This example illustrates the use of an external algorithm, Microsoft
 Translator, while the app itself still provides real-time results to the user.
 In this case, the calculation is a transformation of one language into another.
 
-![Screenshot of SNCF Translation Assistant](media/sncf-translation-app.png "Screenshot of SNCF Translation Assistant")
+![Screenshot of SNCF Translation Assistant.](media/sncf-translation-app.png "Screenshot of SNCF Translation Assistant")
 
 ### TransAlta Economic Callouts
 
@@ -129,7 +130,7 @@ worthwhile to dispatch a wind technician. The data source includes labor costs,
 price forecasts, the average time it takes to repair an asset, and current
 market forecasts.
 
-![Screenshot of TransAlta Economic Callouts](media/trans-alta-callouts.png "Screenshot of TransAlta Economic Callouts")
+![Screenshot of TransAlta Economic Callouts.](media/trans-alta-callouts.png "Screenshot of TransAlta Economic Callouts")
 
 ### Elementary school classroom lessons
 
@@ -144,14 +145,17 @@ construct words by their individual sounds, record and blend words before trying
 to spell them out, and sort words according to detected patterns (for example,
 group all "-ity" or "-ing" words).
 
-![Screenshot of 8-bit Classroom Bits](media/8bit-bits-app.png "Screenshot of 8-bit Classroom Bits")
+![Screenshot of 8-bit Classroom Bits.](media/8bit-bits-app.png "Screenshot of 8-bit Classroom Bits")
 
 Another application helps students understand how fractions are combined and
 multiplied, by performing real-time calculations to develop problem sets and to
 visually illustrate fractions and fraction multiplication.
 
-![Screenshot of the 8-bit Classroom fractions app](media/8bit-fractions-app.png "Screenshot of the 8-bit Classroom fractions app")
+![Screenshot of the 8-bit Classroom fractions app.](media/8bit-fractions-app.png "Screenshot of the 8-bit Classroom fractions app")
 
 ### Additional examples
 
 [Higher Education Crisis Financial Impact Tracker solution template](https://powerapps.microsoft.com/blog/tracking-financial-impact-for-higher-education-a-power-platform-template/)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

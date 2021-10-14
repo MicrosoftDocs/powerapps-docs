@@ -6,7 +6,8 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 11/16/2018
+ms.date: 09/30/2021
+ms.subservice: end-user
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
@@ -43,6 +44,8 @@ Keyboard shortcuts give you an alternate way to do common tasks instead of using
 |Open a lookup drop-down list| Enter|
 |Close a lookup drop-down list|Esc|
 |Open a row found in lookup with forms in edit mode| Enter|
+|View more information when focus is on a lookup row item with a chevron | Right arrow (→) key|
+|Close the more information when focus is on a lookup item with a chevron | Left (←) arrow key|
 |Add an article to an email| N/A|
 |Apply an email template (when editing an email message)| N/A|
 
@@ -59,7 +62,26 @@ Keyboard shortcuts give you an alternate way to do common tasks instead of using
 
 ## Email 
 
-For accessibility shortcuts available when using email, see [Accessibility shortcuts for email](view-create-email.md#accessibility-shortcuts).
+The following table outlines a list of accessibility shortcuts available when using email. You can access this list while composing email by pressing **Alt+0**.
+
+|Type | Shortcut key | Description |
+|----------------------|-------------------------|-----------------------------|
+| General | Alt+F11 | Toggle full-screen view. |
+| Tab navigation | Alt+Ctrl+0 | Go to the editor toolbar. |
+| Tab navigation | Alt+1 | Go to the rich-text editor. |
+| Tab navigation | Alt+2 | Go to the HTML editor. |
+| Tab navigation | Alt+3 | Go to the preview view. |
+| General editor commands | Alt+F10 | Navigate to the editor toolbar. Move to the next and previous toolbar group with Tab and Shift+Tab. Move to the next and previous toolbar button with Right Arrow or Left Arrow. Press Space or Enter to activate the toolbar button. |
+| General editor commands | Alt+- | Expand/collapse the toolbar. |
+| General editor commands | See description. | Editor dialog: Inside a dialog, press Tab to navigate to the next dialog element, press Shift+Tab to move to the previous dialog element, press Enter to submit the dialog, press ESC to cancel the dialog. When a dialog has multiple tabs, the tab list can be reached either with Alt+F10 or with Tab, following the dialog tabbing order. With a tab list focused, move to the next and previous tab with Right and Left Arrow, respectively. |
+| General editor commands | See description. | Editor list box: Inside a list box, move to next list item with Tab or Down Arrow. Move to previous list item with Shift+Tab or Up Arrow. Press Space or Enter to select the list option. Press ESC to close the list box. |
+| Base commands | Ctrl+Z | Undo command. |
+| Base commands | Shift+Ctrl+Z | Redo command. |
+| Base commands | Ctrl+B | Bold command. |
+| Base commands | Ctrl+I | Italic command. |
+| Base commands | Ctrl+U | Underline command. |
+| Base commands | Alt+0 | Accessibility help. |
+| Base commands | Esc | Cancel operation. |
 
 
 ## Editable grids (views)
@@ -202,3 +224,6 @@ If you’re in a row—for example, a lead—this section shows you the keyboard
 - **Keyboard shortcuts in Windows**: If you are using the Windows operating system, select the following link and choose the version number from the drop-down list. You can view all the shortcuts that are applicable to a Windows environment. See [Windows keyboard shortcuts](https://support.microsoft.com/help/12445/windows-keyboard-shortcuts). 
 - **Keyboard shortcuts in Mac**: If you are using a Mac operating system, select the following link to view all the shortcuts that are applicable to a Mac environment. See [Mac keyboard shortcuts](https://support.apple.com/HT201236).
 
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

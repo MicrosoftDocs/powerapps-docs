@@ -1,10 +1,11 @@
 ---
 title: "GetGlobalContext function and ClientGlobalContext.js.aspx in model-driven apps| MicrosoftDocs"
-ms.date: 10/07/2020
+ms.date: 03/22/2021
 ms.service: powerapps
 ms.topic: "conceptual"
 ms.assetid: b58e6173-e3cd-4a3b-b39a-334c295503ec
 author: "Nkrb"
+ms.subservice: mda-developer
 ms.author: "nabuthuk"
 manager: "kvivek"
 search.audienceType: 
@@ -15,14 +16,12 @@ search.app:
 ---
 # GetGlobalContext function and ClientGlobalContext.js.aspx (Client API reference)
 
-
-
 Use the **GetGlobalContext** function when programming with [web resources](../../web-resources.md) to gain access to the global context information such as the information specific to the client, organization or user for your model-driven apps instance. 
 
 To get access to the **GetGlobalContext** function in your HTML web resource, include a reference to **ClientGlobalContext.js.aspx**.
 
 > [!IMPORTANT]
-> - The ClientGlobalContext.js.aspx page is deprecated and scheduled to be unavailable after October 1, 2021. Alternative methods to access global context information will be available before April 1, 2021
+> - The ClientGlobalContext.js.aspx page is deprecated and scheduled to be unavailable after April 1, 2022. Alternative methods to access global context information will be available by December, 2021.
 > - Including a reference to **ClientGlobalContext.js.aspx** does not make the **Xrm** object available in HTML web resources. Therefore, scripts containing `Xrm.*` methods aren’t supported in HTML web resources. `parent.Xrm.*` will work if the HTML web resource is loaded in a form container. However, for other places, such as loading an HTML web resource as part of the SiteMap, `parent.Xrm.*` also won’t work.
 
 ## GetGlobalContext function
@@ -33,7 +32,7 @@ The **GetGlobalContext** function returns the same context object as returned by
 
 You must include a reference to the **ClientGlobalContext.js.aspx** page located at the root of the web resources directory to be able to use the **GetGlobalContext** function.
 
-- If you are not using backslash characters in HTML web resource names to simulate a folder structure, you can include this script by directly referring to it. For example:
+- If you are not using slash characters in HTML web resource names to simulate a folder structure, you can include this script by directly referring to it. For example:
 
     ```HTML
     <head>
@@ -68,3 +67,6 @@ The **ClientGlobalContext.js.aspx** page will include some global event handlers
 
 [Web resources for model-driven apps](../../web-resources.md)
 
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

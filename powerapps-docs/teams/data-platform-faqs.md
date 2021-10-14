@@ -6,8 +6,12 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 09/22/2020
+ms.subservice: teams
 ms.author: mmercuri
 ms.reviewer: kvivek
+contributors:
+  - kvivek
+  - tapanm-msft
 ---
 # FAQs for Dataverse for Teams 
 
@@ -15,7 +19,7 @@ Here is a list of frequently asked (FAQs) for Dataverse for Teams; also see [Dat
 
 ### What does Dataverse for Teams enable and how does this impact Microsoft Power Platform and Teams users? 
 
-Power Apps developers and Power Virtual Agents chatbot creators will now be able to make and manage their apps and bots directly in Teams with embedded [Power Apps](overview.md) and [Power Virtual Agents](https://aka.ms/pva-teams-docs) apps. This enables a streamlined end-to-end user experience and allows makers to deploy to Teams with one click through the Teams app store. These new features are powered by Power Platform enhancement in Teams that provide enterprise datastores with rich data types to Microsoft 365 users and is now included in Microsoft 365 and Office 365 licenses.
+Power Apps developers and Power Virtual Agents chatbot creators will now be able to make and manage their apps and bots directly in Teams with embedded [Power Apps](overview.md) and [Power Virtual Agents](/power-virtual-agents/teams/fundamentals-what-is-power-virtual-agents-teams) apps. This enables a streamlined end-to-end user experience and allows makers to deploy to Teams with one click through the Teams app store. These new features are powered by Power Platform enhancement in Teams that provide enterprise datastores with rich data types to Microsoft 365 users and is now included in Microsoft 365 and Office 365 licenses.
 
 Also, apps built with Power Apps and used in Teams will be responsive to the form factor that they're loaded on, meaning a creator can build an app once for users to view full screen on both mobile devices and desktops.  
 
@@ -52,7 +56,7 @@ Makers have the opportunity to bring in data through both the apps they develop 
  
 Dataverse for Teams makes it easy for users to create custom tables for all of their scenarios. 
 
-It also includes a User table that represents the Common Data Model's [User entity](https://docs.microsoft.com/common-data-model/schema/core/applicationcommon/user). Data stored in the User table corresponds to a user in Azure Active Directory (Azure AD). 
+It also includes a User table that represents the Common Data Model's [User entity](/common-data-model/schema/core/applicationcommon/user). Data stored in the User table corresponds to a user in Azure Active Directory (Azure AD). 
 
 
 ### Does Dataverse for Teams include support for Common Data Model?
@@ -74,3 +78,6 @@ In addition to the table designer experience previously found in Dataverse, Data
 [How are Dataverse for Teams and Dataverse different?](data-platform-compare.md) <br />
 [Create tables](create-table.md)<br/>
 [Work with table relationships](relationships-table.md)
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

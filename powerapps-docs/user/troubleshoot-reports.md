@@ -7,6 +7,7 @@ ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 06/27/2019
+ms.subservice: end-user
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
@@ -43,3 +44,6 @@ There are several possible reasons why data that you expect to be in a report do
 
 [Edit report filter](edit-report-filter.md)
 
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

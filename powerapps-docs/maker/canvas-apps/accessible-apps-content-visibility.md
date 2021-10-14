@@ -1,16 +1,21 @@
 ---
-title: Show or hide content from assistive technologies in canvas apps | Microsoft Docs
+title: Show or hide content from assistive technologies for canvas apps
 description: Techniques to show content only to sighted users or only to screen-reader users only for canvas apps
 author: tahoon-ms
 ms.service: powerapps
 ms.topic: article
 ms.custom: canvas
-ms.date: 10/22/2018
+ms.date: 08/12/2021
+ms.subservice: canvas-maker
 ms.author: tahoon
 search.audienceType:
   - maker
 search.app:
   - PowerApps
+contributors:
+  - tahoon-ms
+  - tapanm-msft
+  - chmoncay
 ---
 
 # Show or hide content from assistive technologies for canvas apps
@@ -23,7 +28,7 @@ In most cases, all users should be able to access all content, but you might occ
 
 ## Hide content from sighted users and show it to screen-reader users
 
-Use any of these techniques:
+Use one or more techniques listed below:
 
 * Set **[Size](controls/properties-text.md)** to 0.
 * Set **[Width](controls/properties-size-location.md)** and **[Height](controls/properties-size-location.md)** to 1.
@@ -40,4 +45,13 @@ Use any of these techniques:
 
 ## Next steps
 
-Learn about [accessibility properties](controls/properties-accessibility.md) of controls in canvas apps.
+[Announce dynamic changes with live regions for canvas apps](accessible-apps-live-regions.md)
+
+### See also
+
+- [Create accessible apps](accessible-apps.md)
+- [Accessible app structure](accessible-apps-structure.md)
+- [Accessible colors in Power Apps](accessible-apps-color.md)
+- [Use the Accessibility checker](accessibility-checker.md)
+- [Accessibility limitations in canvas apps](accessible-apps-limitations.md)
+- [Accessibility properties](controls/properties-accessibility.md)

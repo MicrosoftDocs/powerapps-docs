@@ -1,6 +1,6 @@
 ---
-title: "Consider disabling NavBar when programmatically opening entity forms or views | MicrosoftDocs"
-description: "Opening up entity forms or views with a URL, could lead to slower client performance on high latency networks when the navigation bar (NavBar) is enabled."
+title: "Consider disabling NavBar when programmatically opening forms or views | MicrosoftDocs"
+description: "Opening up forms or views with a URL, could lead to slower client performance on high latency networks when the navigation bar (NavBar) is enabled."
 services: ''
 suite: powerapps
 documentationcenter: na
@@ -13,7 +13,8 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 3/04/2019
+ms.date: 04/14/2021
+ms.subservice: mda-developer
 ms.author: jowells
 search.audienceType: 
   - developer
@@ -21,7 +22,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Consider disabling NavBar when programmatically opening entity forms or views
+# Consider disabling NavBar when programmatically opening forms or views
 
 **Category**: Design, Performance
 
@@ -31,15 +32,17 @@ search.app:
 
 ## Symptoms
 
-Opening up entity forms or views with a URL, could lead to slower client performance on high latency networks when the navigation bar (NavBar) is enabled.
+Opening up forms or views with a URL, could lead to slower client performance on high latency networks when the navigation bar (NavBar) is enabled.
 
 <a name='guidance'></a>
 
 ## Guidance
 
-Determine if your users need to have the full navigation bar when creating customizations that open entity forms or views through a URL. In most cases, users click on a link to open an entity form, do some quick work, and then close the record.  Disabling the navigation bar will lower the amount of resources to be loaded which lowers the number of network requests being made.  
+Determine if your users need to have the full navigation bar when creating customizations that open forms or views through a URL. In most cases, users selects on a link to open a form, do some quick work, and then close the record.  Disabling the navigation bar will lower the amount of resources to be loaded which lowers the number of network requests being made.  
 
-When constructing URLs to open up entity forms or views, implement `navbar=off` within your query string parameters for the `main.aspx` page. The following example opens an Account entity form with the navigation bar disabled.
+[!INCLUDE[cc-terminology](../../../data-platform/includes/cc-terminology.md)]
+
+When constructing URLs to open up forms or views, implement `navbar=off` within your query string parameters for the `main.aspx` page. The following example opens an Account form with the navigation bar disabled.
 
 ```JavaScript
 function disableNavBar() {
@@ -58,7 +61,7 @@ function disableNavBar() {
 > [!WARNING] 
 > These scenarios should be avoided. 
 
-Keeping the navigation bar (NavBar) enabled does not mean users will experience performance issues. However, it does mean that additional resources must be loaded on the entity form or view which does require additional network requests.  It has been observed on highly latent networks this can lead to a poor user experience.
+Keeping the navigation bar (NavBar) enabled does not mean users will experience performance issues. However, it does mean that additional resources must be loaded on the form or view which does require additional network requests.  It has been observed on highly latent networks this can lead to a poor user experience.
 
 An example of a constructed URL with the NavBar enabled is as follows
 
@@ -81,10 +84,13 @@ function enabledNavBarExplicit() {
 ## Additional information
 
 When opening up other records from within model driven apps, the navigation bar is being loaded with the areas and subareas defined within the sitemap.  In addition, it also renders the [Office app launcher](https://support.office.com/article/Meet-the-Office-365-app-launcher-79f12104-6fed-442f-96a0-eb089a3f476a) which displays the Office 365 apps the user has access to.<br/>
-![Comparison of NavBar being enabled and disabled](../media/navbar_comparison_enabled_disabled.png)
+![Comparison of NavBar being enabled and disabled.](../media/navbar_comparison_enabled_disabled.png)
 
 <a name='seealso'></a>
 
 ### See also
 
 [Open forms, views, dialogs, and reports with a URL](../../open-forms-views-dialogs-reports-url.md)
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

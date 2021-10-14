@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: guidance
 ms.date: 06/16/2020
+ms.subservice: guidance
 ms.author: thground
 ms.reviewer: kathyos
 
@@ -121,3 +122,6 @@ it.
 
 > [!div class="nextstepaction"]
 > [Next step: The expense reporting example](example-expense-reporting.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

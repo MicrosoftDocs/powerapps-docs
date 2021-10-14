@@ -1,13 +1,18 @@
 ---
-title: "Configure SAML 2.0 provider for portals with AD FS. | MicrosoftDocs"
-description: "Instructions to configure SAML 2.0 provider for portals with AD FS."
+title: Configure a SAML 2.0 provider for portals with AD FS
+description: Learn how to configure SAML 2.0 provider for portals with AD FS.
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/20/2020
+ms.date: 04/21/2021
+ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - sandhangitmsft
+    - dileepsinghmicrosoft
 ---
 
 # Configure a SAML 2.0 provider for portals with AD FS
@@ -20,7 +25,7 @@ ms.reviewer: tapanm
 > [!NOTE]
 > See [Configure AD FS by using PowerShell](#configure-ad-fs-by-using-powershell), for information about how to perform these steps in a PowerShell script.
 
-1. Using the [AD FS Management tool, go to **Service** > **Claim Descriptions**.
+1. Using the AD FS Management tool, go to **Service** > **Claim Descriptions**.
 
     1.  Select **Add Claim Description**.
     2.  Specify the claim:
@@ -78,7 +83,7 @@ After setting up the AD FS relying party trust, you can follow the steps in [Con
 
 ### Identity provider&ndash;initiated sign-in
 
-AD FS supports the [identity provider&ndash;initiated single sign-on (SSO)](https://docs.microsoft.com/azure/active-directory/manage-apps/configure-saml-single-sign-on) profile of the SAML 2.0 [specification](https://docs.oasis-open.org/security/saml/Post2.0/sstc-saml-tech-overview-2.0-cd-02.html#5.1.4.IdP-Initiated%20SSO:%20POST%20Binding|outline). In order for the portal (service provider) to respond properly to the SAML request started by the identity provider, the [RelayState](https://blogs.technet.com/b/askds/archive/2012/09/27/ad-fs-2-0-relaystate.aspx) parameter must be encoded properly.  
+AD FS supports the [identity provider&ndash;initiated single sign-on (SSO)](/azure/active-directory/manage-apps/configure-saml-single-sign-on) profile of the SAML 2.0 [specification](https://docs.oasis-open.org/security/saml/Post2.0/sstc-saml-tech-overview-2.0-cd-02.html#5.1.4.IdP-Initiated%20SSO:%20POST%20Binding|outline). In order for the portal (service provider) to respond properly to the SAML request started by the identity provider, the [RelayState](/archive/blogs/askds/ad-fs-2-0-relaystate) parameter must be encoded properly.  
 
 The basic string value to be encoded into the SAML RelayState parameter must be in the format `ReturnUrl=/content/sub-content/`, where `/content/sub-content/` is the path to the webpage you want to go to on the portal (service provider). The path can be replaced by any valid webpage on the portal. The string value is encoded and placed into a container string of the format `RPID=&lt;URL encoded RPID&gt;&RelayState=&lt;URL encoded RelayState&gt;`. This entire string is once again encoded and added to another container of the format `<https://adfs.contoso.com/adfs/ls/idpinitiatedsignon.aspx?RelayState=&lt;URL> encoded RPID/RelayState&gt;`.
 
@@ -263,3 +268,6 @@ After setting up the AD FS relying party trust, you can follow the steps in [Con
 [Configure a SAML 2.0 provider for portals with Azure AD](configure-saml2-settings-azure-ad.md)  
 [FAQ for using SAML 2.0 in portals](configure-saml2-faqs.md)  
 [Configure a SAML 2.0 provider for portals](configure-saml2-provider.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

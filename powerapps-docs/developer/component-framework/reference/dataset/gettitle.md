@@ -1,6 +1,6 @@
 ---
 title: getTitle | Microsoft Docs
-description: 
+description: Retrieves the view display name used by the dataset property.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -35,3 +35,5 @@ Model-driven apps
 [Dataset](../dataset.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>
 [Power Apps component framework overview](../../overview.md)
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: guidance
 ms.date: 06/16/2020
+ms.subservice: guidance
 ms.author: thground
 ms.reviewer: kathyos
 
@@ -16,7 +17,7 @@ ms.reviewer: kathyos
 The example below shows how a typical paper-based expense approval within the
 organization has inefficiencies for multiple departments and employees.
 
-![Various team members explain the drawbacks of the current paper-based process](media/process-problem.png "Various team members explain the drawbacks of the current paper-based process")
+![Various team members explain the drawbacks of the current paper-based process.](media/process-problem.png "Various team members explain the drawbacks of the current paper-based process")
 
 As you can see from the example, every person has their own issues, but the
 common issue here is that the expense approval process is done on paper, which
@@ -49,3 +50,6 @@ Throughout the process of planning a Power Apps project, we'll refer back to thi
 
 > [!div class="nextstepaction"]
 > [Next step: Understanding the current business process](understanding-current-business-process.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

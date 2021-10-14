@@ -1,11 +1,13 @@
 ---
 title: "getMaxLength (Client API reference)| MicrosoftDocs"
-ms.date: 10/31/2018
+description: Includes description and supported parameters for the getMaxLength method.
+ms.date: 04/19/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 67a96fc4-4d65-4858-90da-f41eeba0365a
 author: "Nkrb"
+ms.subservice: mda-developer
 ms.author: "nabuthuk"
 manager: "kvivek"
 search.audienceType: 
@@ -18,9 +20,9 @@ search.app:
 
 
 
-Returns a number indicating the maximum length of a string or memo attribute. 
+Returns a number indicating the maximum length of a string or memo column. 
 
-## Attribute types supported
+## Column types supported
 
 string, memo
 
@@ -32,7 +34,9 @@ string, memo
 
 **Type**: Number. 
 
-**Description**: The maximum allowed length of a string for this attribute.
+**Description**: The maximum allowed length of a string for this column.
 
 > [!NOTE]
-> The email form description attribute is a memo attribute, but it does not have a `getMaxLength` method.
+> The email form description column is a memo column, but it does not have a `getMaxLength` method.
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

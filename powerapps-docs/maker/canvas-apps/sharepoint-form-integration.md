@@ -1,6 +1,6 @@
 ---
-title: Understand SharePoint forms integration | Microsoft Docs
-description: Understand how custom forms work with SharePoint
+title: Understand SharePoint forms integration
+description: Learn about integration of SharePoint forms with Power Apps, and how to customize those forms.
 author: NickWaggoner
 manager: kvivek
 ms.service: powerapps
@@ -8,11 +8,16 @@ ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 06/18/2020
+ms.subservice: canvas-maker
 ms.author: niwaggon
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - navjotm
+  - wimcoor
 ---
 # Understand SharePoint forms integration
 You can now easily [customize any SharePoint list form](customize-list-form.md) in Power Apps. In this article, we'll walk through the details of how these forms work and how you can customize them further.
@@ -68,7 +73,7 @@ These defaults ensure that the form works when running within SharePoint - they 
 ## Understand the SharePointIntegration control
 The **SharePointIntegration** control communicates user actions between SharePoint and Power Apps.
 
-![SharePoint integration object](./media/sharepoint-form-integration/sharepointintegration-object.png)
+![SharePoint integration object.](./media/sharepoint-form-integration/sharepointintegration-object.png)
 
 >[!NOTE]
 >You can access the properties for the **SharePointIntegration** control only when the form is running in SharePoint, not when you're customizing the form in Power Apps Studio. These properties may not be available in **OnStart** or **OnVisible**. 
@@ -77,15 +82,15 @@ The **SharePointIntegration** control has the following properties:
 
 **Selected** - The selected item from the SharePoint list.
 
-**OnNew** - How an app responds when a user clicks or taps the **New** button or opens the **Create item** form in SharePoint.
+**OnNew** - Actions to perform when a user clicks or taps the **New** button or opens the **Create item** form in SharePoint.
 
-**OnView** - How an app responds when a user clicks or taps an **item** or opens the **Item detail** form in SharePoint.
+**OnView** - Actions to perform when a user clicks or taps an **item** or opens the **Item detail** form in SharePoint.
 
-**OnEdit** - How an app responds when a user clicks or taps the **Edit all** button or opens the **Edit item** form in SharePoint.
+**OnEdit** - Actions to perform when a user clicks or taps the **Edit all** button or opens the **Edit item** form in SharePoint.
 
-**OnSave** - How an app responds when a user clicks or taps the **Save** button in SharePoint.
+**OnSave** - Actions to perform when a user clicks or taps the **Save** button in SharePoint.
 
-**OnCancel** - How an app responds when a user clicks or taps the **Cancel** button in SharePoint.
+**OnCancel** - Actions to perform when a user clicks or taps the **Cancel** button in SharePoint.
 
 **SelectedListItemID** - Item ID for the selected item in a SharePoint list.
 
@@ -112,3 +117,6 @@ Now that you have a better understanding of the default generated form and the *
 - EditForm, NewForm, SubmitForm, ResetForm, and ViewForm functions - [form functions in Power Apps](functions/function-form.md)
 - [RequestHide function](functions/function-requesthide.md)
 - [SharePoint integration scenarios](sharepoint/scenarios-intro.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

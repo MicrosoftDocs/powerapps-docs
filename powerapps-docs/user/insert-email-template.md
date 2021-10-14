@@ -7,7 +7,8 @@ manager: shujoshi
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 04/09/2020
+ms.date: 06/30/2021
+ms.subservice: end-user
 ms.author: shjais
 ms.reviewer: ""
 ms.assetid: 
@@ -21,39 +22,48 @@ search.app:
 
 # Insert an email template
 
-You can use an email template—a preformatted email message—to quickly create and send email messages. You can insert the template while composing an email by selecting **Insert Template** on the command bar. The list of available templates is displayed in the **Email templates** window. In the **Recently used** section, the four most recently used templates by you are displayed. The **All templates** section displays a list of all out-of-the-box email templates (global and table specific), in alphabetical order. Global templates are shown as the type User. If you've created a custom email template, it will also be available here. For information about creating a custom email template, see [Create templates for email](https://docs.microsoft.com/power-platform/admin/create-templates-email).
+If you previously created an email template, you can easily use it as the basis for your email by inserting it into the email.
 
-You can see templates of a particular language by selecting a language from the **Language** list. You can either search for a template or browse through the list and select it. When you select an email template, a preview is displayed on the right side of the window. The preview shows you the content so you can pick the template that best meets your needs. After inserting an email template, you can modify the content as needed, and then send the email.
+   ![Insert an email template.](media\email-how-to-insert-an-email-template-1a.png "How to insert an email template")
 
-> [!NOTE]
-> The search does not support regular expressions and it works on the template name only.
+   - You can access the email template you created from the command bar by selecting **Insert Template**. <BR><BR>
 
-**To insert an email template**
+**Insert an email template overview**  
 
-1.	In the email editor, select **Insert Template** on the command bar.
+Once you select **Insert Template**, the following window appears displaying a list of existing **Email templates** that are available to use.
 
-     > [!div class="mx-imgBorder"]
-     > ![Insert template button](media/insert-email-template-button.png "Insert template button") 
+> [!Note]
+> There is an intermediary window that may display if:
+> 1. You don't have either a Recipient or Regarding field for your email.
+>
+> ![Message window for no recipient or regarding field.](media\email-template-recipient.png "Message when missing recipient or regarding field")
+>
+> 2. When you have both a Recipient and Regarding field. You must select one.
+>
+> ![Message when both recipient and regarding field are present.](media\email-template-select-record.png "Message when both recipient and regarding fields are present")
+>
+> The selection of one of these fields determines which template types are shown to a user in the template selection window:
+> - Recipient (TO): user (global) and contact templates are displayed.
+> - Regarding: user (global) and templates for the regarding entity are shown.
 
-    The **Email templates** window opens.
+#### Email template selection window
 
-2.	To see templates of a different locale, select a language from the **Language** list. The templates are loaded as per the selected language.	
+   ![Email template selection window.](media\email-how-to-insert-an-email-template-1b.png "Email template selection window")
 
-3.  Browse for the template you want. Select the template, and preview the content of the template.
+   Legend
+   1. **Language**. Templates are loaded as per the selected language.
+   2. **search**. You can use search to find a template. Search does not support regular expressions and only works when using the name of that specific template.  
+   3. **All templates**. All existing templates that have been created are displayed in this window  which you can browse and choose from.
+   4. **Preview**. When you select an email template, a preview of the template is displayed here. The preview shows you the content so you can pick the template that best meets your needs. After inserting an email template, you can modify the content as needed.
+   5. **Apply template** to insert the content to your  email.
 
-4.	Optionally, you can select the down arrow on the name of the template to see a description of its content.
-
-5.	Select **Apply template** to insert the content in the email.
-
-     > [!div class="mx-imgBorder"]
-     > ![Email templates window](media/email-templates-window.png "Email templates window")
-
-If you try to insert an email template on a device with smaller screen size, you'll only see an option to search and select a template.
-
-> [!div class="mx-imgBorder"]
-> ![Search template](media/search-template.png "Search template") 
-
+      > [!Note] 
+      > If you try to insert an email template on a device with a smaller screen size, you'll only see an option to search and select a template.
+      
 ### See also
 
-[Set up enhanced email](https://docs.microsoft.com/power-platform/admin/system-settings-dialog-box-email-tab)<br>
-[Compose and send email using the enhanced email experience](enhanced-email.md)
+[Set up enhanced email](/power-platform/admin/system-settings-dialog-box-email-tab)<br>
+[Understand the email experience](view-create-email.md)
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

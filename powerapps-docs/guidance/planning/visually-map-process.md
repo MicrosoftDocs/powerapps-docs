@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: guidance
 ms.date: 06/16/2020
+ms.subservice: guidance
 ms.author: thground
 ms.reviewer: kathyos
 
@@ -28,7 +29,7 @@ process accurately.
 
 Here's an example business process map:
 
-![Example business process flowchart showing the steps of filling in the expense report, getting it approved, entering the data into the accounting system, and creating reports](media/original-business-process.png "Example business process flowchart showing the steps of filling in the expense report, getting it approved, entering the data into the accounting system, and creating reports")
+![Example business process flowchart showing the steps of filling in the expense report, getting it approved, entering the data into the accounting system, and creating reports.](media/original-business-process.png "Example business process flowchart showing the steps of filling in the expense report, getting it approved, entering the data into the accounting system, and creating reports")
 
 List each activity in order, and link it to the next part of the process​:
 
@@ -54,3 +55,6 @@ can also use this for comparing the money or time saved by the new process.
 
 > [!div class="nextstepaction"]
 > [Next step: Optimize the process](optimizing-business-process.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -1,6 +1,6 @@
 ---
-title: 'Timer control: reference | Microsoft Docs'
-description: Information, including properties and examples, about the timer control
+title: Timer control in Power Apps
+description: Learn about the details, properties and examples of the Timer control in Power Apps.
 author: chmoncay
 manager: kvivek
 ms.service: powerapps
@@ -8,11 +8,15 @@ ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 10/25/2016
+ms.subservice: canvas-maker
 ms.author: chmoncay
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - chmoncay
 ---
 # Timer control in Power Apps
 A control that can determine how your app responds after a certain amount of time passes.
@@ -27,7 +31,7 @@ Timers can, for example, determine how long a control appears or change other pr
 ## Key properties
 **Duration** – How long a timer runs in milliseconds. The maximum is 24 hours expressed in milliseconds. Default is 60 seconds.
 
-**OnTimerEnd** – How an app responds when a timer finishes running.
+**OnTimerEnd** – Actions to perform when a timer finishes running.
 
 **Repeat** – Whether a timer automatically restarts when it finishes running.
 
@@ -74,9 +78,9 @@ Timers can, for example, determine how long a control appears or change other pr
 
 **[Italic](properties-text.md)** – Whether the text in a control is italic.
 
-**[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
+**[OnSelect](properties-core.md)** – Actions to perform when the user taps or clicks a control.
 
-**OnTimerStart** – How an app responds when a timer starts to run.
+**OnTimerStart** – Actions to perform when a timer starts to run.
 
 **[PressedBorderColor](properties-color-border.md)** – The color of a control's border when the user taps or clicks that control.
 
@@ -166,3 +170,6 @@ Some scenarios are exempt from these requirements. Learn more in the [WCAG 2.0 g
 * For interactive timers:
     * **[Text](properties-core.md)** must be present.
     * Consider adding a **[Label](control-text-box.md)** control to show the elapsed time. Use the timer's **[Text](properties-core.md)** property to instruct the user to start or stop the timer.
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

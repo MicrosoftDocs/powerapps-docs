@@ -7,6 +7,7 @@ ms.service: powerapps
 ms.topic: article
 ms.assetid: 2bf0d49f-8b6d-6d5b-0af5-edf6dd485fed
 author: Nkrb # GitHub ID
+ms.subservice: mda-developer
 ms.author: nabuthuk # MSFT alias of Microsoft employees only
 manager: shilpas # MSFT alias of manager or PM counterpart
 ms.reviewer: 
@@ -40,3 +41,5 @@ Use Data (XML) Web resources to save and access data.
  [Using Script (JScript) web resources](script-jscript-web-resources.md)   
  [Using Image (JPG, PNG, GIF) web resources](image-web-resources.md)   
  [Using Stylesheet (XSL) web resources](stylesheet-xsl-web-resources.md) 
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

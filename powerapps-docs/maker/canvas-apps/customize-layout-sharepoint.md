@@ -1,6 +1,6 @@
 ---
-title: Tutorial - Customize a gallery in a generated app | Microsoft Docs
-description: In this tutorial, you customize the data that appears in the gallery and other elements of an app that was generated automatically in Power Apps.
+title: "Tutorial: Customize a gallery in Power Apps"
+description: Learn about how to customize data that appears in gallery and other elements of canvas apps generated automatically.
 author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
@@ -8,11 +8,15 @@ ms.topic: tutorial
 ms.custom: canvas
 ms.reviewer: 
 ms.date: 06/18/2020
+ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - navjotm
 ---
 # Tutorial: Customize a gallery in Power Apps
 
@@ -20,11 +24,11 @@ In this tutorial, you'll customize a list of records, called a gallery, and make
 
 For example, the gallery for this tutorial matches this graphic by default. The email address is featured more prominently than other types of data, and users can sort and filter the gallery based on text in that address:
 
-![Default gallery](./media/customize-layout-sharepoint/gallery-before.png)
+![Default gallery.](./media/customize-layout-sharepoint/gallery-before.png)
 
 However, your users might be more interested in the account name more than the email address, so you'll reconfigure the gallery to highlight, sort, and filter based on the key data for your organization. In addition, you'll change the title of the default screen to differentiate it from the other screens in the app.
 
-![Final gallery](./media/customize-layout-sharepoint/gallery-after.png)
+![Gallery after changes.](./media/customize-layout-sharepoint/gallery-after.png)
 
 You'll also add a scroll bar so that users who don't have touch screens or mouse wheels can browse the entire gallery.
 
@@ -41,7 +45,7 @@ If you're not signed up for Power Apps, [sign up for free](https://make.powerapp
 
 ## Prerequisites
 
-[Generate an app](data-platform-create-app.md) from the **Accounts** entity of Microsoft Dataverse.
+[Generate an app](data-platform-create-app.md) from the **Accounts** table of Microsoft Dataverse.
 
 ## Open the generated app
 
@@ -49,7 +53,7 @@ If you're not signed up for Power Apps, [sign up for free](https://make.powerapp
 
 1. Find the app that you generated, select the ellipsis icon (**...**) for it, and then select **Edit**.
 
-    ![Open app for editing](./media/customize-layout-sharepoint/open-app.png)
+    ![Open app for editing.](./media/customize-layout-sharepoint/open-app.png)
 
 1. If the **Welcome to Power Apps Studio** dialog box appears, select **Skip**.
 
@@ -59,11 +63,11 @@ If you're not signed up for Power Apps, [sign up for free](https://make.powerapp
 
     When the gallery is selected, a selection box with handles surrounds it.
 
-    ![Select gallery](media/customize-layout-sharepoint/select-gallery-1.png)
+    ![Select gallery.](media/customize-layout-sharepoint/select-gallery-1.png)
 
 1. On the **Properties** tab of the right-hand pane, open the list of options under **Layout**, and then select the option that shows only a title.
 
-    ![Select title-only layout](./media/customize-layout-sharepoint/choose-layout.png)
+    ![Select title-only layout.](./media/customize-layout-sharepoint/choose-layout.png)
 
 1. Next to **Fields**, select **Edit**, and then select the down arrow for the title box.
 
@@ -73,17 +77,17 @@ If you're not signed up for Power Apps, [sign up for free](https://make.powerapp
 
     The gallery shows the name of each account.
 
-    ![Final gallery](./media/customize-layout-sharepoint/final-gallery.png)
+    ![Final gallery.](./media/customize-layout-sharepoint/final-gallery.png)
 
 ## Change sort and search columns
 
 1. Select the gallery as the previous section describes.
 
-    ![Select gallery](./media/customize-layout-sharepoint/select-gallery-title.png)
+    ![Gallery highlighted.](./media/customize-layout-sharepoint/select-gallery-title.png)
 
 1. Near the upper-left corner, confirm that the property list shows **Items**.
 
-    ![Items property](./media/customize-layout-sharepoint/items-property.png)
+    ![Items property.](./media/customize-layout-sharepoint/items-property.png)
 
     The value of this property appears in the formula bar. You set this property to specify not only the data source for the gallery but also the columns by which users can sort and search the data.
 
@@ -102,15 +106,15 @@ If you're not signed up for Power Apps, [sign up for free](https://make.powerapp
 
 1. Open Preview mode by pressing F5 (or by selecting the play button near the upper-right corner).
 
-    ![Open Preview mode](./media/customize-layout-sharepoint/open-preview.png)
+    ![Open Preview mode.](./media/customize-layout-sharepoint/open-preview.png)
 
 1. Near the upper-right corner of the browse screen, select the sort icon one or more times to change the alphabetical sort order between ascending and descending.
 
-    ![Test the sort icon](./media/customize-layout-sharepoint/sort-button.png)
+    ![Test the sort icon.](./media/customize-layout-sharepoint/sort-button.png)
 
 1. In the search box, type **k** to show only those account names that contain the letter that you typed.
 
-    ![Test the search bar](./media/customize-layout-sharepoint/test-filter.png)
+    ![Test the search bar.](./media/customize-layout-sharepoint/test-filter.png)
 
 1. Remove all text from the search bar, and then close Preview mode by pressing Esc (or by selecting the close icon near the upper-right corner).
 
@@ -118,15 +122,15 @@ If you're not signed up for Power Apps, [sign up for free](https://make.powerapp
 
 1. Select the title of the screen by clicking or tapping it.
 
-    ![Select screen title](./media/customize-layout-sharepoint/select-title.png)
+    ![Select screen title.](./media/customize-layout-sharepoint/select-title.png)
 
 1. Ensure that the property list shows **Text** and then, in the formula bar, replace **Accounts** with **Browse** (retaining the double quotation marks).
 
-    ![Update screen title](./media/customize-layout-sharepoint/change-screen-title.png)
+    ![Update screen title.](./media/customize-layout-sharepoint/change-screen-title.png)
 
     The screen reflects your change.
 
-    ![New screen title](./media/customize-layout-sharepoint/new-screen-title.png)
+    ![New screen title.](./media/customize-layout-sharepoint/new-screen-title.png)
 
 ## Show a scrollbar
 
@@ -134,7 +138,7 @@ If your users might have neither touch screens nor mouse wheels, configure the g
 
 1. Select the gallery as the first procedure describes.
 
-    ![Select gallery](./media/customize-layout-sharepoint/select-gallery-sorted.png)
+    ![Gallery highlighted for scrollbar.](./media/customize-layout-sharepoint/select-gallery-sorted.png)
 
 1. Set the gallery's **Show scrollbar** property to **true**.
 
@@ -148,3 +152,6 @@ In this tutorial, you've customized the gallery and made other changes to the de
 ### See also
 
 - [SharePoint integration scenarios](sharepoint/scenarios-intro.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

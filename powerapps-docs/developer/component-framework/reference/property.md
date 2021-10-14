@@ -1,6 +1,6 @@
 ---
 title: Property | Microsoft Docs
-description:
+description: Interface for context.parameters.<property_key>
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -19,7 +19,7 @@ Interface for `context.parameters.<property_key>`
 
 ## Available for
 
-Model-driven apps and canvas apps (public preview)
+Model-driven and canvas apps
 
 ## Properties
 
@@ -51,3 +51,6 @@ Model-driven apps and canvas apps (public preview)
 
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

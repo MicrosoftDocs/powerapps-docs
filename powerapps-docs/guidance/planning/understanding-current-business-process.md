@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: guidance
 ms.date: 06/16/2020
+ms.subservice: guidance
 ms.author: thground
 ms.reviewer: kathyos
 
@@ -41,7 +42,7 @@ Also, consider diverse perspectives in work preferences and constraints.
 
 In our example scenario, we identified these key contributors:
 
-![Lee -Sales, Nick - Sales manager, Gibson - Operations, Rebecca - Auditor, Abhay - Accountant, Charlotte - CFO](media/contributors.png "Lee -Sales, Nick - Sales manager, Gibson - Operations, Rebecca - Auditor, Abhay - Accountant, Charlotte - CFO")
+![Lee -Sales, Nick - Sales manager, Gibson - Operations, Rebecca - Auditor, Abhay - Accountant, Charlotte - CFO.](media/contributors.png "Lee -Sales, Nick - Sales manager, Gibson - Operations, Rebecca - Auditor, Abhay - Accountant, Charlotte - CFO")
 
 ## Discover processes to improve on using Process advisor
 If your task is done fully on the desktop, you can discover all the steps 
@@ -54,3 +55,6 @@ and reveals bottlenecks and metrics for your process through an analytical repor
 
 > [!div class="nextstepaction"]
 > [Next step: Documenting the business process](what-is-task.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

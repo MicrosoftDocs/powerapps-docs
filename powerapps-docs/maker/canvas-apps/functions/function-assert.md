@@ -1,6 +1,6 @@
 ---
-title: Assert function | Microsoft Docs
-description: Reference information, including syntax, for the Assert function in Power Apps Test Studio
+title: Assert function in Power Apps Test Studio
+description: Reference information, including syntax, for the Assert function in Power Apps Test Studio.
 author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
@@ -8,11 +8,15 @@ ms.topic: reference
 ms.custom: canvas
 ms.reviewer: nabuthuk
 ms.date: 12/19/2018
-ms.author: aheneay
+ms.subservice: canvas-maker
+ms.author: aheaney
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - gregli-msft
+  - nkrb
 ---
 # Assert function in Power Apps Test Studio
 
@@ -38,3 +42,6 @@ Assertion messages, for both passed and failed assertions, are also contained in
 
 [Test Studio Overview](../test-studio.md) <br>
 [Working with Test Studio](../working-with-test-studio.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

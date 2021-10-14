@@ -3,9 +3,10 @@ title: Common issues and workarounds (Power Apps Component Framework) | Microsof
 description: Provides information on know issues and workarounds some come across while working with Power Apps component framework and CLI
 keywords:
 author: Nkrb
+ms.subservice: pcf
 ms.author: nabuthuk
 manager: kvivek
-ms.date: 11/25/2019
+ms.date: 07/01/2021
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -14,7 +15,19 @@ ms.topic: "article"
 
 # Common issues and workarounds
 
-Here are some common issues that you might come across while using the Power Apps component framework and Power Apps CLI.
+Here are some common issues that you might come across while using the Power Apps component framework and Microsoft Power Platform CLI.
+
+[!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
+
+## Component changes are not reflected after the updated solution import?
+
+Update the component version (minor or patch) in the component manifest file (for example, 1.0.0 to 1.0.1). Every update in the component needs a component version bump to be reflected on the Microsoft Dataverse server.
+
+```XML
+ <control namespace="SampleNamespace" constructor="TSLinearInputControl" 
+   version="1.0.1" 
+    display-name-key="TSLinearInputControl_Display_Key" description-key="TSLinearInputControl_Desc_Key" control-type="standard">
+```
 
 ## Msbuild error MSB4036
 
@@ -32,20 +45,8 @@ Here are some common issues that you might come across while using the Power App
 > [!NOTE]
 > We will be constantly adding common issues and workarounds as we come across during the development process. If you encounter an issue and have a workaround and you think that is helpful, raise the issue [here](https://powerusers.microsoft.com/t5/Power-Apps-Component-Framework/bd-p/pa_component_framework) or raise a pull request so that we can review and add it to the list.
 
-## Publisher Prefix
-
-If a component is created using the CLI version lower than 0.4.3, you will encounter an error while trying to reimport the solution file into Microsoft Dataverse. 
-
-**Workaround**:
-
-- Delete the solution containing the relevant component from Dataverse. 
-- The component should be removed from the filed or grid if the component is already configured to avoid dependencies.
-- Import the new solution with updates to the component built by the latest CLI version.
-- Newly imported components can now be configured on forms or grids.  
-
 ## Issues while updating existing code components
 
-- If you get a 1ES notification asking how pcf-scripts are being used, note that these scripts are only used to build the code components but they are not bundled or used by the resulting component.
 - If you have created a code component using the CLI version 0.1.817.1 or earlier and want to ensure that the latest build and debug modules are being used, make the updates to the `package.json` file as shown below:
    
    ```JSON
@@ -63,13 +64,13 @@ If a component is created using the CLI version lower than 0.4.3, you will encou
      <?xml version="1.0" encoding="utf-8"?>  
      <configuration>  
      <packageSources>  
-         <add key="CRMSharedFeed" value="https://dynamicscrm.pkgs.visualstudio.com/_packaging/CRMSharedFeed/nuget/v3/index.json" />  
+         <add key="YourFeedName" value="https://contoso.com/_packaging/YourFeedName/nuget/v3/index.json" />  
       </packageSources>  
       <packageSourceCredentials>  
-      <CRMSharedFeed>  
+      <YourFeedName>  
       <add key="Username" value="anything" />  
       <add key="Password" value="User PAT" />  
-        </CRMSharedFeed>  
+        </YourFeedName>  
         </packageSourceCredentials>  
        </configuration>
      ```
@@ -80,15 +81,15 @@ Error  **Import Solution Failed: Web resource content size is too big**.
 
 **Workaround**
 
-- Build  the `.pcfproj` as release configuration which sets the webpack to production mode using the command 
+- Build  the `.pcfproj` as release configuration, which sets the web pack to production mode using the command 
   ```CLI
   msbuild /property:configuration=Release
   ```
-- Run the msbuild command with an additional property as shown below: 
+- Run the msbuild command with an extra property as shown below: 
   ```CLI
   msbuild /p:PcfBuildMode=production
   ```
-- Edit the `.pcfproj` to always build the webpack in production mode by setting the property `PcfBuildMode` to production:
+- Edit the `.pcfproj` to always build the web pack in production mode by setting the property `PcfBuildMode` to production:
   ```XML
   <PropertyGroup>
     <Name>TS_ReactStandardControl</Name>
@@ -101,7 +102,8 @@ Error  **Import Solution Failed: Web resource content size is too big**.
 ## When running Power Apps checker with the solution built using CLI tooling in default configuration
 
 **Error: Do not use the eval function or its functional equivalents**
-This warning is by design since the default `msbuild` configuration is `Configuration=Debug`. This in turn instructs webpack (used to bundle the code component) to package in development mode, which emits `eval()`. 
+
+This warning is by design since the default `msbuild` configuration is `Configuration=Debug`. This in turn instructs web pack (used to bundle the code component) to package in development mode, which emits `eval()`. 
 
 **Workaround**
 
@@ -115,7 +117,7 @@ msbuild/property:configuration:Release
 npm run build -- --buildMode production
 ```
 
-## Power Apps component framework Datasets getValue by property alias doesn't work
+<!--## Power Apps component framework Datasets getValue by property alias doesn't work
 
 Power Apps component framework dataset API's getValue function only searches record by the dataset column name and not the property alias set in the manifest. Attempting to get value by property alias will return an empty value.
 
@@ -141,5 +143,15 @@ Power Apps component framework dataset component currently does not properly sho
 
 **Workaround**
 
-No workaround as of now. We are working on pushing a fix to our deployment trains.
+No workaround as of now. We are working on pushing a fix to our deployment trains.-->
 
+## Canvas dataset paging is not reset when external filter applied
+ 
+Currently there is an issue with canvas app datasets bound to code components. When the dataset is filtered externally to the code component using PowerFX, the page should be reset to the first page, and the hasPreviousPage should be set to false. This is the functionality inside model-driven apps. This does not happen for canvas apps and so the code components cannot reset the paging and the page numbers can get out of sync. 
+ 
+**Workaround**
+
+No workaround as of now. A fix for this issue is being deployed.
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

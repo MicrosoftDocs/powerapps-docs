@@ -9,6 +9,7 @@ ms.custom:
 ms.topic: article
 ms.assetid: b77d962e-6e3c-bd28-d03c-cf2e23cd742d
 author: Nkrb # GitHub ID
+ms.subservice: mda-developer
 ms.author: nabuthuk # MSFT alias of Microsoft employees only
 manager: shilpas # MSFT alias of manager or PM counterpart
 ms.reviewer: 
@@ -63,7 +64,7 @@ The XSD schema files that are used to validate the customization.xml file in a s
   
 3. Select **View** and then select **Properties Window**.  
   
-4. In the **Properties** window, in the **Schemas** field, click the ellipsis [**...**] button.  
+4. In the **Properties** window, in the **Schemas** column, click the ellipsis [**...**] button.  
   
 5. In the **Xml Schemas** dialog box you should see the customizationsSolution.xsd. In the **Use** column, select **Use this schema**.  
   
@@ -83,3 +84,6 @@ The XSD schema files that are used to validate the customization.xml file in a s
 [Form XML schema](form-xml-schema.md)     
 [ISV configuration file schema](/dynamics365/customer-engagement/developer/customize-dev/isv-configuration-file-schema)<br/>   <!-- TODO need to fix link relevant to the topic in powerapps repo-->
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -1,50 +1,52 @@
 ---
-title: Overview of the Microsoft Translator connection | Microsoft Docs
-description: See how to connect to Microsoft Translator, step through some examples, and see all the functions
+title: Connect to Microsoft Translator from Power Apps
+description: See how to connect to Microsoft Translator, step through some examples, and see all the functions.
 author: lancedMicrosoft
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.date: 07/12/2017
+ms.subservice: canvas-maker
 ms.author: lanced
 ms.reviewer: tapanm
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - lancedmicrosoft
 ---
 # Connect to Microsoft Translator from Power Apps
-![Microsoft Translator](./media/connection-microsoft-translator/translatoricon.png)
+
+![Microsoft Translator.](./media/connection-microsoft-translator/translatoricon.png)
 
 Add the Microsoft Translator connector to display translated text in a **Label** control in your app. For example, you can create an input text box that asks the user to enter some text to translate. In another label, you can display the translated text.
 
 This topic shows you how to create the Microsoft Translator connection, use the Microsoft Translator connection in an app, and lists the available functions.
-
-> [!NOTE]
-> This connector is limited to 150 calls per user per day.
 
 [!INCLUDE [connection-requirements](../../../includes/connection-requirements.md)]
 
 ## Connect to Microsoft Translator
 1. Open Power Apps, select **New**, and then create a **Blank app**. Choose phone or tablet layout. Tablet layout gives you more workspace:  
 
-   ![Open a blank app](./media/connection-microsoft-translator/blank-app.png)
+   ![Open a blank app.](./media/connection-microsoft-translator/blank-app.png)
 2. In the right-hand pane, click or tap **Data** tab, and then click or tap **Add data source**.
 3. Select **New connection**, and then select **Microsoft Translator**:  
 
-    ![Connect to Microsoft Translator](./media/connection-microsoft-translator/addconnection.png)
+    ![Add connection.](./media/connection-microsoft-translator/addconnection.png "Add connection")
 
-    ![Connect to Microsoft Translator](./media/connection-microsoft-translator/add-translator.png)
+    ![Connect to Microsoft Translator.](./media/connection-microsoft-translator/add-translator.png)
 4. Select **Connect**. Your connection appears under **Data sources**:  
 
-    ![Connect to Microsoft Translator](./media/connection-microsoft-translator/translatordatasource.png)
+    ![Connect.](./media/connection-microsoft-translator/translatordatasource.png "Connect")
 
 ## Use the Microsoft Translator connection in your app
 ### Translate text
 1. On the **Insert** menu, select **Text**, and then select **Text input**. Rename the text input control to **Source**:  
 
-    ![Rename](./media/connection-microsoft-translator/renametosource.png)
+    ![Rename.](./media/connection-microsoft-translator/renametosource.png)
 2. Add a **Drop down** list (**Insert** menu > **Controls**), rename it to **TargetLang**, and move it below **Source**.
 3. Set the **[Items](../controls/properties-core.md)** property of **TargetLang** to the following formula:  
 
@@ -54,7 +56,7 @@ This topic shows you how to create the Microsoft Translator connection, use the 
     `MicrosoftTranslator.Translate(Source.Text, TargetLang.Selected.Value)`
 5. Type some text into **Source**, and select a language in **TargetLang**. The label shows the text that you entered in the language you chose:  
 
-    ![Translate text from English to Spanish](./media/connection-microsoft-translator/translate-text.png)
+    ![Translate text from English to Spanish.](./media/connection-microsoft-translator/translate-text.png)
 
 ### Speak translated text
 If you haven't already, follow the steps in the previous section to translate some text. These next steps use the same controls.
@@ -66,7 +68,7 @@ If you haven't already, follow the steps in the previous section to translate so
 3. Add an **Audio** control (**Insert** menu > **Media**), and set its **Media** property to the following formula:  
 
     `MicrosoftTranslator.TextToSpeech(Target.Text, TargetLang.Selected.Value)`
-4. Press F5, or select the Preview button (![](./media/connection-microsoft-translator/preview.png)). Type some text into **Source**, select a language in **TargetLang**, and then select the play button in the audio control.
+4. Press F5, or select the Preview button (![Preview icon.](./media/connection-microsoft-translator/preview.png)). Type some text into **Source**, select a language in **TargetLang**, and then select the play button in the audio control.
 
     The app plays an audio version of the text that you entered in the language you chose.
 5. Press Esc to return to the default workspace.
@@ -166,3 +168,6 @@ None.
 See all the [available connections](../connections-list.md).  
 Learn how to [add connections](../add-manage-connections.md) to your apps.
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

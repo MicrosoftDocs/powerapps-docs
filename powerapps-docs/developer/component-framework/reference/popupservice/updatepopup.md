@@ -1,6 +1,6 @@
 ---
 title: updatePopup | Microsoft Docs
-description: 
+description: Updates an existing popup in the service with the given name. Does nothing if popup does not exist yet.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -39,3 +39,5 @@ Model-driven apps
 [Popup Service](../popupservice.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>
 [Power Apps component framework overview](../../overview.md)
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

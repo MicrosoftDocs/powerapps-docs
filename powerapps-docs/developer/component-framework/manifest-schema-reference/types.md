@@ -1,7 +1,8 @@
 ---
 title: Types  | Microsoft Docs
-description: 
+description: Provides information on methods available for types element.
 keywords:
+ms.subservice: pcf
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
@@ -17,7 +18,7 @@ ms.assetid: 87f5e921-4114-4710-a362-db741426a69b
 
 ## Available for 
 
-Model-driven apps and canvas apps (public preview) 
+Model-driven and canvas apps 
 
 ## Parent Elements
 
@@ -37,3 +38,5 @@ Model-driven apps and canvas apps (public preview)
 [Power Apps component framework manifest schema reference](index.md)<br/>
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

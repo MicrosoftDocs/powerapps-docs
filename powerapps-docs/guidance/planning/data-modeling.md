@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: guidance
 ms.date: 06/16/2020
+ms.subservice: guidance
 ms.author: tayoshi
 ms.reviewer: kathyos
 
@@ -25,7 +26,7 @@ design basics has a good general discussion of data modeling principles: [Databa
 
 Let's take the following expense report as an example.
 
-![Expense report example](media/expense-report.png "Expense report example")
+![Expense report example.](media/expense-report.png "Expense report example")
 
 You see the main part of the expense report, which has the employee name and
 department details. Below the main part, you see multiple rows of
@@ -50,7 +51,7 @@ example is your network of business partners. You have multiple business
 partners (customers and vendors) that you work with, and those business partners
 also work with multiple colleagues of yours.
 
-![Multiple people connected by lines](media/many-to-many.png "Multiple people connected by lines")
+![Multiple people connected by lines.](media/many-to-many.png "Multiple people connected by lines")
 
 ## Data modeling examples
 
@@ -59,7 +60,7 @@ through a couple of examples.
 
 ### Example 1: Time-off approval request
 
-![Example time-off approval request data structure](media/time-off.png "Example time-off approval request data structure")
+![Example time-off approval request data structure.](media/time-off.png "Example time-off approval request data structure")
 
 This simple example show two sets of data. One is the employee, the other is
 the time-off request. Because each employee will submit multiple requests, the
@@ -69,7 +70,7 @@ by having the employee number as the common field (also known as the *key*).
 
 ### Example 2: Purchase approval
 
-![Example purchase approval request data structure](media/purchase-approval.png "Example purchase approval request data structure")
+![Example purchase approval request data structure.](media/purchase-approval.png "Example purchase approval request data structure")
 
 Here, the data structure looks quite sophisticated but is very similar to the
 expense report example that was discussed at the beginning of this article. Each
@@ -83,7 +84,10 @@ Hence, the relationship between employees and vendors is many-to-many.
 
 ### Example 3: Expense reporting
 
-![Example expense reporting data structure](media/expense-report-data.png "Example expense reporting data structure")
+![Example expense reporting data structure.](media/expense-report-data.png "Example expense reporting data structure")
 
 > [!div class="nextstepaction"]
 > [Next step: Determine which type of app to make](app-type.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

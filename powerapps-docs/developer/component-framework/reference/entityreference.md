@@ -1,6 +1,6 @@
 ---
-title: Entityreference | Microsoft Docs
-description: 
+title: EntityReference in Microsoft Dataverse| Microsoft Docs
+description: Learn how to use different methods and properties available for EntityReference in Power Apps component framework.
 keywords:
 ms.author: nabuthuk
 manager: kvivek
@@ -13,7 +13,7 @@ ms.topic: "article"
 ms.assetid: ad8659f7-f566-43db-bed1-c8484c114a59
 ---
 
-# Entityreference
+# EntityReference
 
 [!INCLUDE [entityreference-description](includes/entityreference-description.md)]
 
@@ -25,7 +25,7 @@ Model-driven apps
 
 ### etn
 
-The entity type name. Read-only.
+The table type name. Read-only.
 
 **Type**: `string`
 
@@ -43,7 +43,7 @@ The `id` object contains the following property:
 
 ### name
 
-The name of the entity reference. Read-only.
+The name of the table reference. Read-only.
 
 **Type**: `string`
 
@@ -51,3 +51,6 @@ The name of the entity reference. Read-only.
 
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

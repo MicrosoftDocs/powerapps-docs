@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: guidance
 ms.date: 08/10/2020
+ms.subservice: guidance
 ms.author: thground
 ms.reviewer: kathyos
 
@@ -68,3 +69,6 @@ If you're a **"full stack" developer**:
 
 - Then, if you're already familiar with app project planning, you may want to jump right to the [Designing phase \> Architectural design](where-is-data.md) section, which is where the material specific to Power Platform starts.
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

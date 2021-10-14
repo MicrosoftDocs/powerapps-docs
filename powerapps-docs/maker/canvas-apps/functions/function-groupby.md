@@ -1,6 +1,6 @@
 ---
-title: GroupBy and Ungroup functions | Microsoft Docs
-description: Reference information, including syntax and examples, for the GroupBy and Ungroup functions in Power Apps
+title: GroupBy and Ungroup functions in Power Apps
+description: Reference information including syntax and examples for the GroupBy and Ungroup functions in Power Apps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -8,11 +8,15 @@ ms.topic: reference
 ms.custom: canvas
 ms.reviewer: nabuthuk
 ms.date: 04/26/2016
+ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - gregli-msft
+  - nkrb
 ---
 # GroupBy and Ungroup functions in Power Apps
 Groups and ungroups [records](../working-with-tables.md#records) of a [table](../working-with-tables.md).
@@ -79,10 +83,11 @@ ClearCollect( CityPopulations,
    
     You just created a [collection](../working-with-data-sources.md#collections), named **CityPopulations**, that contains this data:
    
-    ![](media/function-groupby/cities.png)
+    You just created a [collection](../working-with-data-sources.md#collections), named **CityPopulations**, that contains this data:
+    ![CityPopulations example.](media/function-groupby/cities.png)
 4. To display this collection, select **Collections** on the **File** menu and then select the **CityPopulations** collection.  The first five records in the collection appear:
    
-    ![](media/function-groupby/citypopulations-collection.png)
+    ![CityPopulations collection.](media/function-groupby/citypopulations-collection.png)
 
 ### Group records
 1. Add another button, and set its **[Text](../controls/properties-core.md)** property to **"Group"**.
@@ -93,13 +98,13 @@ ClearCollect( CityPopulations,
    
     You just created a collection, named **CitiesByCountry**, in which the records of the previous collection are grouped by the **Country** column.
    
-    ![](media/function-groupby/cities-grouped.png)
+    ![Cities grouped.](media/function-groupby/cities-grouped.png)
 4. To display the first five records in this collection, select **Collections** on the **File** menu.
    
-    ![](media/function-groupby/citiesbycountry-collection.png)
+    ![Cities by country.](media/function-groupby/citiesbycountry-collection.png)
 5. To display the populations of cities in a country, select the table icon in the **Cities** column for that country (for example, Germany):
    
-    ![](media/function-groupby/population-germany.png)
+    ![Population - Germany.](media/function-groupby/population-germany.png)
 
 ### Filter and ungroup records
 1. Add another button, and set its **[Text](../controls/properties-core.md)** property so that the button shows **"Filter"**.
@@ -110,7 +115,7 @@ ClearCollect( CityPopulations,
    
     You just created a third collection, named **CitiesByCountryFiltered**, that includes only those countries that have an "e" in their names (that is, not Spain or Italy).
    
-    ![](media/function-groupby/cities-grouped-hase.png)
+    ![CitiesByCountryFiltered.](media/function-groupby/cities-grouped-hase.png)
 4. Add one more button, and set its **[Text](../controls/properties-core.md)** property so that the button shows **"Ungroup"**.
 5. Set the **[OnSelect](../controls/properties-core.md)** property of this button to this formula:
    
@@ -118,7 +123,7 @@ ClearCollect( CityPopulations,
    
     Which results in:
    
-    ![](media/function-groupby/cities-hase.png)
+    ![Cities by country after ungroup.](media/function-groupby/cities-hase.png)
 
 ### Aggregate results
 Something else we can do with a grouped table is to aggregate the results.  In this example, we will sum the population of the major cities in each country.
@@ -130,7 +135,7 @@ Something else we can do with a grouped table is to aggregate the results.  In t
    
     Which results in:
    
-    ![](media/function-groupby/cities-sum.png)
+    ![Cities sum.](media/function-groupby/cities-sum.png)
    
     **[AddColumns](function-table-shaping.md)** starts with the base **CitiesByCountry** collection and adds a new column **Sum of City Populations**.  This column's values are calculated row-by-row, based on the formula **Sum( Cities, Population )**.  **AddColumns** provides the value of the **Cities** column (a table) for each row, and **[Sum](function-aggregates.md)** adds up the **Population** for each row of this sub table.
 
@@ -143,7 +148,10 @@ Something else we can do with a grouped table is to aggregate the results.  In t
    
     Which results in:
    
-    ![](media/function-groupby/cities-sum-drop-cities.png)
+    ![Countries sum.](media/function-groupby/cities-sum-drop-cities.png)
    
     Note that we didn't need to ungroup this table.
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

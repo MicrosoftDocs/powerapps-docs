@@ -1,6 +1,6 @@
 ---
-title: Set function | Microsoft Docs
-description: Reference information, including syntax and examples, for the Set function in Power Apps
+title: Set function in Power Apps
+description: Reference information including syntax and examples for the Set function in Power Apps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -8,11 +8,15 @@ ms.topic: reference
 ms.custom: canvas
 ms.reviewer: nabuthuk
 ms.date: 06/29/2017
+ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - gregli-msft
+  - nkrb
 ---
 # Set function in Power Apps
 Sets the value of a global variable.
@@ -60,3 +64,6 @@ Global variables cannot use the same name as an existing collection or control. 
 | **Set(&nbsp;Person,&nbsp;{&nbsp;Name:&nbsp;"Milton", Address:&nbsp;"1&nbsp;Main&nbsp;St"&nbsp;} )** |Creates or modifies the global variable **Person**, setting its value to a record. The record contains two columns, named **Name** and **Address**. The value of the **Name** column is **Milton**, and the value of the **Address** column is **1 Main St**. |**Person** has the value of record **{&nbsp;Name:&nbsp;"Milton", Address:&nbsp;"1&nbsp;Main&nbsp;St"&nbsp;}**.<br><br>Reference this record as a whole with the name **Person**, or reference an individual column of this record with **Person.Name** or **Person.Address**. |
 | **Set(&nbsp;Person, Patch(&nbsp;Person,&nbsp;{Address:&nbsp;"2&nbsp;Main&nbsp;St"&nbsp;}&nbsp;)&nbsp;)** |Works with the **[Patch](function-patch.md)** function to update the **Person** global variable by setting the value of the **Address** column to **2 Main St**. |**Person** now has the value of record **{&nbsp;Name:&nbsp;"Milton", Address:&nbsp;"2&nbsp;Main&nbsp;St"&nbsp;}**. |
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

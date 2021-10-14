@@ -1,6 +1,6 @@
 ---
 title: formatLanguage | Microsoft Docs
-description: 
+description: Returns a formatted string that represents a given language.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -23,7 +23,7 @@ ms.assetid: 859ca133-92db-49d5-a68f-a2f47d8daa83
 
 ## Available for 
 
-Model-driven apps and canvas apps (public preview)
+Model-driven apps 
 
 ## Parameters
 
@@ -41,3 +41,5 @@ Type: `string`
 [Formatting](../formatting.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>
 [Power Apps component framework overview](../../overview.md)
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

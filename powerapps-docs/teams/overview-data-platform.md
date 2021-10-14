@@ -1,19 +1,22 @@
 ---
 title: Microsoft Dataverse for Teams overview | Microsoft Docs
-description: Provides an overview of Dataverse for Teams.
+description: Provides the benefits of Dataverse for Teams.
 author: NHelgren
 ms.service: powerapps
 ms.topic: conceptual
-ms.custom: 
+ms.custom: intro-internal
 ms.date: 09/22/2020
+ms.subservice: teams
 ms.author: nhelgren
 ms.reviewer: matp
+contributors:
+  - mattp123
 ---
 # Overview of Microsoft Dataverse for Teams
 
 Microsoft Dataverse for Teams delivers a built-in, low-code data platform for Microsoft Teams. It provides relational data storage, rich data types, enterprise-grade governance, and one-click solution deployment. Dataverse for Teams enables everyone to easily build and deploy apps.
 
-:::image type="content" source="media/tables-in-teams.png" alt-text="Dataverse for Teams table in Teams":::
+:::image type="content" source="media/tables-in-teams.png" alt-text="Dataverse for Teams table in Teams.":::
 
 Some of the benefits of Dataverse for Teams include:
 
@@ -64,3 +67,6 @@ You can administer and manage Dataverse for Teams environment using the Power Pl
 [Create tables](create-table.md)<br/>
 [Work with table relationships](relationships-table.md)<br/>
 [Dataverse for Teams FAQs](data-platform-faqs.md)
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

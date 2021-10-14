@@ -1,11 +1,13 @@
 ---
 title: "getOption (Client API reference)| MicrosoftDocs"
-ms.date: 10/31/2018
+description: Includes description and supported parameters for the getOption method.
+ms.date: 04/19/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: e334d2d9-91c0-4953-956d-444a84dc9da2
 author: "Nkrb"
+ms.subservice: mda-developer
 ms.author: "nabuthuk"
 manager: "kvivek"
 search.audienceType: 
@@ -20,9 +22,9 @@ search.app:
 
 Returns an option object with the value matching the argument (label or enumeration value) passed to the method. 
 
-## Attribute types supported
+## Column types supported
 
-OptionSet, MultiSelectOptionSet
+Choice, Choices
 
 ## Syntax
 
@@ -36,5 +38,8 @@ OptionSet, MultiSelectOptionSet
 
 **Type**: Option object. 
 
-**Description**: The logical name of the attribute.
+**Description**: The logical name of the column.
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

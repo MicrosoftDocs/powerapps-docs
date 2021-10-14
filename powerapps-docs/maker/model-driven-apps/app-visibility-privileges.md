@@ -10,6 +10,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.component: model
 ms.date: 10/22/2020
+ms.subservice: mda-maker
 ms.author: matp
 search.audienceType: 
   - maker
@@ -27,7 +28,7 @@ Apps can be viewed by valid users with appropriate privileges who sign into Powe
 
 Note that read, create, and write privileges can be granted to a user by the security roles assigned to the user or granted through team membership.
 
-By default, users who have only the Common Data Service User security role can only access model-driven apps that have that security role assigned to the app. This is because the Common Data Service User security role only has read privileges on the Model-driven App table.
+By default, users who have only the Basic User security role can only access model-driven apps that have that security role assigned to the app. This is because the Basic User security role only has read privileges on the Model-driven App table.
 
 However, users who have the Environment Maker, System Administrator, or System Customizer security role can access and edit all model-driven apps within the environment. This is because these security roles have create, read, and write privileges on the Model-driven App table. More information: [Share a model-driven app using Power Apps](share-model-driven-app.md)
 
@@ -35,3 +36,5 @@ However, users who have the Environment Maker, System Administrator, or System C
 
 [Manage teams](/power-platform/admin/manage-teams) <br />
 [Security roles and privileges](/power-platform/admin/security-roles-privileges)
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -2,6 +2,7 @@
 title: Library Element | Microsoft Docs
 description: 
 keywords:
+ms.subservice: pcf
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
@@ -17,7 +18,7 @@ ms.assetid: 90f2b4c9-7396-4ab9-bc9f-810189dc18b7
 
 [!INCLUDE [library-description](includes/library-description.md)]
 
-## Attributes
+## Parameters
 
 |Name|Description|Type|Required|
 |--|--|--|--|
@@ -52,3 +53,5 @@ ms.assetid: 90f2b4c9-7396-4ab9-bc9f-810189dc18b7
 [Power Apps component framework manifest schema reference](index.md)<br/>
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -1,6 +1,6 @@
 ---
-title: Size and location properties | Microsoft Docs
-description: Reference material for properties such as Height and Width
+title: Size and location properties in Power Apps
+description: Reference information about size and location properties in Power Apps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -8,11 +8,16 @@ ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 10/25/2016
+ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - chmoncay
+  - gregli-msft
 ---
 # Size and location properties in Power Apps
 ## Overview
@@ -82,3 +87,6 @@ Configure how big a control (or an element of a control) is and where it is in r
 
 * Applies to **[Button](control-button.md)**, **[Export](control-export-import.md)**, **[Image](control-image.md)**, **[Import](control-export-import.md)**, and **[Text input](control-text-input.md)** controls.
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

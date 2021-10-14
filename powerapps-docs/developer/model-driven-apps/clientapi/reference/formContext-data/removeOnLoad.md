@@ -1,6 +1,7 @@
 ---
 title: "removeOnLoad (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
+description: Includes description and supported parameters for the removeOnLoad method.
+ms.date: 04/19/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -28,7 +29,7 @@ search.app:
 
 |Name|Type|Required|Description|
 |--|--|--|--|
-|myFunction|function reference|Yes|The function to be removed when the form data loads.
+|myFunction|function reference|Yes|The function to be removed when the form data loads.|
 
 ### Related topics
 
@@ -36,3 +37,6 @@ search.app:
 
 [Form data OnLoad event](../events/form-data-onload.md)
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

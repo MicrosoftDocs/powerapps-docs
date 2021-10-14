@@ -1,21 +1,25 @@
 ---
-title: Overview of the Dynamics AX connection | Microsoft Docs
-description: See the available Dynamics AX functions, responses, and examples
+title: Connect to Dynamics AX from Power Apps
+description: See the available Dynamics AX functions, responses, and examples.
 author: lancedMicrosoft
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.date: 09/13/2016
+ms.subservice: canvas-maker
 ms.author: lanced
 ms.reviewer: tapanm
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - lancedmicrosoft
 ---
-# Connect from Microsoft Power Apps to Dynamics AX
-![Dynamics AX Online](./media/connection-dynamicsax/dynamics-ax.png)
+# Connect to Dynamics AX from Power Apps
+![Dynamics AX Online.](./media/connection-dynamicsax/dynamics-ax.png)
 
 Use this connection to easily build apps that read, update, and delete data from these versions of Dynamics AX:
 
@@ -33,3 +37,6 @@ See the [list of available connections](../connections-list.md), and learn how t
 * Learn how to [show data from a data source](../add-gallery.md).
 * Learn how to [view details and create or update records](../add-form.md).
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

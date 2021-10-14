@@ -2,11 +2,12 @@
 title: "Ribbon core schema (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "The following is the schema definition for the ribbon core portion of an import/export customization file. It is included from the Customization Solutions File Schema." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 04/14/2021
 ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
 author: "KumarVivek" # GitHub ID
+ms.subservice: mda-developer
 ms.author: "kvivek" # MSFT alias of Microsoft employees only
 manager: "shilpas" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -17,14 +18,14 @@ search.app:
 ---
 # Ribbon core schema
 
-<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/ribbon-core-schema -->
-
-The following is the schema definition for the ribbon core portion of an import/export customization file. It is included from the [Customization Solutions File Schema](../common-data-service/customization-solutions-file-schema.md). `RibbonCore.xsd` schema includes `RibbonTypes.xsd` and `RibbonWss.xsd` and you can find schema  in the `Schemas\9.0.0.2090\RibbonCore.xsd` folder when you download the Schemas zip file.
+The following is the schema definition for the ribbon core portion of an import/export customization file. It is included from the [Customization solutions file schema](../data-platform/customization-solutions-file-schema.md). `RibbonCore.xsd` schema includes `RibbonTypes.xsd` and `RibbonWss.xsd` and you can find schema  in the `Schemas\9.0.0.2090\RibbonCore.xsd` folder when you download the Schemas zip file.
 
 Download the [Schemas](https://download.microsoft.com/download/B/9/7/B97655A4-4E46-4E51-BA0A-C669106D563F/Schemas.zip).
 
-For more information, see [Package and Distribute Extensions with Solutions](https://docs.microsoft.com/powerapps/developer/common-data-service/introduction-solutions).
-  
+For more information, see [Package and distribute extensions with solutions](../data-platform/introduction-solutions.md).
+
+[!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
+ 
 ## Ribbon Core Schema  
   
 ```xml  
@@ -141,4 +142,7 @@ For more information, see [Package and Distribute Extensions with Solutions](htt
  [Ribbon core schema](ribbon-core-schema.md)<br/>
  [Ribbon types schema](ribbon-types-schema.md)<br/>
  [Ribbon WSS schema](ribbon-wss-schema.md)<br/>
- [Customization solutions file schema](../common-data-service/customization-solutions-file-schema.md)
+ [Customization solutions file schema](../data-platform/customization-solutions-file-schema.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

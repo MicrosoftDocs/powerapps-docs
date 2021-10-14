@@ -1,13 +1,13 @@
 ---
 title: "Apply custom business logic with business rules and flows in model-driven apps | MicrosoftDocs"
 description: "Learn about the types of business logic you can use in your app"
-ms.custom: ""
+ms.custom: intro-internal
 ms.date: 08/02/2018
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+ms.topic: "conceptual"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -15,6 +15,7 @@ applies_to:
 ms.assetid: 0b4e6602-5701-4859-81cc-6f6fe50901b2
 caps.latest.revision: 44
 author: "Mattp123"
+ms.subservice: mda-maker
 ms.author: "matp"
 manager: "kvivek"
 search.audienceType: 
@@ -41,7 +42,7 @@ Business rules provide a simple interface to implement and maintain fast-changin
 For more information about defining business rules for a form in a model-driven app, see [Create business rules to apply logic in a model-driven app form](create-business-rules-recommendations-apply-logic-form.md)
 
 > [!NOTE]
-> To define a business rule for a table so that it applies at the server level to both *canvas apps* and *model-driven apps*, see [Create a business rule for a table](/powerapps/maker/common-data-service/data-platform-create-business-rule).
+> To define a business rule for a table so that it applies at the server level to both *canvas apps* and *model-driven apps*, see [Create a business rule for a table](../data-platform/data-platform-create-business-rule.md).
 
 ## Flows  
   
@@ -55,7 +56,7 @@ Power Automate includes several types of processes, each designed for a differen
   
 -   Business process flows.  Ensure that people enter data consistently and follow the same steps every time they work in an app by creating a business process flow. More information: [Business process flows overview](/flow/business-process-flows-overview)
 
--   Workflows and actions. Dynamics 365 customizers may be familiar with the classic Microsoft Dataverse processes, which are workflows and actions. More information: [Use Workflow processes](/flow/workflow-processes) and [Actions overview](/powerapps/maker/common-data-service/actions)
+-   Workflows and actions. Dynamics 365 customizers may be familiar with the classic Microsoft Dataverse processes, which are workflows and actions. More information: [Use Workflow processes](/flow/workflow-processes) and [Actions overview](../data-platform/actions.md)
   
 ## Next step
 
@@ -63,4 +64,7 @@ Power Automate includes several types of processes, each designed for a differen
 
 ### See also
 
-[Apply business logic with Dataverse](../common-data-service/cds-processes.md)
+[Apply business logic with Dataverse](../data-platform/processes.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

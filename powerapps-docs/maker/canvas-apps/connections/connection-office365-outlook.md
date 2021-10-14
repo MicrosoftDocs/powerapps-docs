@@ -1,22 +1,26 @@
 ---
-title: Overview of the Office 365 Outlook connection | Microsoft Docs
-description: Reference information, including examples, for the Office 365 Outlook connection to Power Apps
+title: Connect to Office 365 Outlook from Power Apps
+description: Reference information, including examples, for the Office 365 Outlook connection to Power Apps.
 author: lancedMicrosoft
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.date: 08/07/2020
+ms.subservice: canvas-maker
 ms.author: lanced
 ms.reviewer: tapanm
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - lancedmicrosoft
 ---
 # Connect to Office 365 Outlook from Power Apps
 
-![Office 365 Outlook](./media/connection-office365-outlook/office365icon.png)
+![Office 365 Outlook.](./media/connection-office365-outlook/office365icon.png)
 
 If you connect to Office 365 Outlook, you can show, send, delete, and reply to email messages, in addition to other tasks.
 
@@ -33,7 +37,7 @@ This article shows you how to add Office 365 Outlook as a connection, add Office
 
 1. [Add a data connection](../add-data-connection.md) and select **Office 365 Outlook**:  
    
-    ![Connect to Office 365](./media/connection-office365-outlook/add-office.png)
+    ![Connect to Office 365.](./media/connection-office365-outlook/add-office.png)
 
 1. Select **Connect**, and if prompted to sign in, enter your work account.
 
@@ -69,7 +73,7 @@ The Office 365 Outlook connection has been created and added to your app. Now, i
 
 1. Repeat the previous step 2 more times so that you have three boxes, and then arrange them in a column:  
    
-    ![Three boxes in a column](./media/connection-office365-outlook/threetextinput.png)
+    ![Three boxes in a column.](./media/connection-office365-outlook/threetextinput.png)
 
 1. Rename the controls to:  
    
@@ -83,7 +87,7 @@ The Office 365 Outlook connection has been created and added to your app. Now, i
 
 1. Move the button so that it appears under all the other controls, and set its **[Text](../controls/properties-core.md)** property to **"Send email"**.
 
-1. Press F5, or select the Preview button (![Preview button](./media/connection-office365-outlook/preview.png)). Type in a valid email address in **inputTo**, and type whatever you want in the other two **Text input** controls.
+1. Press F5, or select the Preview button (![Preview button.](./media/connection-office365-outlook/preview.png)). Type in a valid email address in **inputTo**, and type whatever you want in the other two **Text input** controls.
 
 1. Select **Send email** to send the message. Press Esc to return to the default workspace.
 
@@ -122,13 +126,13 @@ In this example, an audio file will be sent in addition to the photo:
 
 1. Select the first label in the gallery, and rename it to **EmailID**:
    
-    ![Rename first label](./media/connection-office365-outlook/renameheading.png)
+    ![Rename first label.](./media/connection-office365-outlook/renameheading.png)
 
 5. Select the third label in the gallery, and add a **Button** (**Insert** menu). Set the button's **OnSelect** property to the following formula:  
    
     `Office365Outlook.DeleteEmail(EmailID.Text)`
 
-6. Press F5, or select the Preview button (![Preview button](./media/connection-office365-outlook/preview.png)). Select one of the emails in your gallery, and select the button. 
+6. Press F5, or select the Preview button (![Preview button.](./media/connection-office365-outlook/preview.png)). Select one of the emails in your gallery, and select the button. 
     
     > [!NOTE]
     > This deletes the selected email from your inbox. So, choose wisely.
@@ -143,12 +147,15 @@ This section uses the same controls as [Delete a message](connection-office365-o
    
     `Office365Outlook.MarkAsRead(EmailID.Text)`
 
-1. Press F5, or select the Preview button (![Preview button](./media/connection-office365-outlook/preview.png)). Select one of the unread emails, and then select the button.
+1. Press F5, or select the Preview button (![Preview button.](./media/connection-office365-outlook/preview.png)). Select one of the unread emails, and then select the button.
 
 1. Press Esc to return to the default workspace.
 
 ### See also
 
-- For a list of all functions and their parameters, see the [Office 365 Outlook reference](https://docs.microsoft.com/connectors/office365connector/).
+- For a list of all functions and their parameters, see the [Office 365 Outlook reference](/connectors/office365connector/).
 - See all the [available connections](../connections-list.md).  
 - Learn how to [manage your connections](../add-manage-connections.md).
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

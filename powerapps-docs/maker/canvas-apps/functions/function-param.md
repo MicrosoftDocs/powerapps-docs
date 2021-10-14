@@ -1,18 +1,22 @@
 ---
-title: Launch and Param functions | Microsoft Docs
-description: Reference information, including syntax and examples, for the Launch and Param functions in canvas apps
+title: Launch and Param functions in Power Apps
+description: Reference information including syntax and examples for the Launch and Param functions in Power Apps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: nabuthuk
-ms.date: 05/20/2020
+ms.date: 06/30/2021
+ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - gregli-msft
+  - nkrb
 ---
 # Launch and Param functions in Power Apps
 
@@ -43,11 +47,11 @@ You can launch canvas apps with **Web link** or **App ID**. To find these values
 1. Select your app.
 1. Select **Details** from top menu. <br> You can also select **...** (**More Commands**) and then select **Details** from the drop-down menu.
 
-    ![App details option](media/function-param/portal-details.png "App details option")
+    ![App details option.](media/function-param/portal-details.png "App details option")
 
 1. Copy **Web link** or **App ID**.
     
-    ![App details with web link and app id](media/function-param/portal-links.png "App details with web link and app id")
+    ![App details with web link and app id.](media/function-param/portal-links.png "App details with web link and app id")
 
 The **Web link** can be used in any web page and will launch the canvas app.  It can also be used with the **Launch** function.
 
@@ -77,17 +81,11 @@ Native apps on a device can't be launched directly. There may be indirect option
 
     This form can be easier to work with as it makes the association between name and value clearer. It's the only form that supports the optional *LaunchTarget* argument.
 
-> [!NOTE]
-> The record option for parameters is currently in **Preview** and will be released in all regions soon. For more details about preview features, go to [Understand experimental, preview, and deprecated features in Power Apps](../working-with-experimental-preview.md).
-
 The address and parameters are URL encoded before being passed to replace certain non-alphanumeric characters with `%` and a hexadecimal number as if the [**EncodeUrl**](function-encode-decode.md) function has been used on each.
 
 When launching a webpage, a [query string](https://en.wikipedia.org/wiki/Query_string) of parameters can be included at the end of the URL address.  Any additional parameters provided to **Launch** will be added to the end of the query string. Query strings don't work when launching a canvas app.
 
 ### Target
-
-> [!NOTE]
-> The *LaunchTarget* argument is currently in **Preview** and will be released in all regions soon. For more details about preview features, go to [Understand experimental, preview, and deprecated features in Power Apps](../working-with-experimental-preview.md).
 
 Use the *LaunchTarget* argument to specify the target browser window in which to open the webpage or app.  Use one of the following **LaunchTarget** enum values or provide a custom window *name*.
 
@@ -148,7 +146,7 @@ The **Param** function retrieves a parameter passed to the app when it was launc
 | ------- | ----------- |
 | **Launch(&nbsp;"http://bing.com/search",&nbsp;<br>"q",&nbsp;"Power&nbsp;Apps",&nbsp;"count",&nbsp;1&nbsp;)** | Opens the webpage **http://bing.com/search?q=Power%20Apps&count=1**.  A new window or tab is opened. |  
 | **Launch(&nbsp;"http://bing.com/search",&nbsp;<br>{&nbsp;q:&nbsp;"Power&nbsp;Apps",&nbsp;count:&nbsp;1&nbsp;}&nbsp;)** | The same as the previous examples using the equivalent record notation.  A new window or tab is opened. | 
-| **Launch(&nbsp;"http://bing.com/search",&nbsp;<br>{&nbsp;q:&nbsp;"Power&nbsp;Apps",&nbsp;count:&nbsp;1&nbsp;},&nbsp;<br>LaunchTarget.Self&nbsp;)** | The same as the previous examples, replacing the current window or tab with the result if running in a web browser. | 
+| **Launch(&nbsp;"http://bing.com/search",&nbsp;<br>{&nbsp;q:&nbsp;"Power&nbsp;Apps",&nbsp;count:&nbsp;1&nbsp;},&nbsp;<br>LaunchTarget.Replace&nbsp;)** | The same as the previous examples, replacing the current window or tab with the result if running in a web browser. | 
 | **Launch(&nbsp;"http://bing.com/search",&nbsp;<br>{&nbsp;q:&nbsp;"Power&nbsp;Apps",&nbsp;count:&nbsp;1&nbsp;},&nbsp;<br>"Search&nbsp;Results"&nbsp;)** | The same as the previous example, creating or replacing the contents of the window or tab named **Search Results**. |
 
 #### From a canvas app to a canvas app
@@ -199,7 +197,7 @@ The **Product Showcase** tablet layout template was used for the following examp
 1. From property list on top left, select **OnSelect**.
 1. Enter formula as ```Launch("https://www.bing.com/news/search","q","Microsoft Surface tablets")```. You can also use any other URL, parameter, and keywords of your choice.
 
-    ![Launch example](media/function-param/launch-example-onselect.png "Launch example")
+    ![Launch example.](media/function-param/launch-example-onselect.png "Launch example")
 
 1. Save and publish the app.
 1. Play the app.
@@ -218,25 +216,25 @@ The **Product Showcase** tablet layout template was used for the following examp
 1. Select **Text** property for the label from top left.
 1. Enter formula as ```Param("browser")```. You can also use a different parameter of your choice.
 
-    ![Param example](media/function-param/param-example.png "Param example")
+    ![Param example.](media/function-param/param-example.png "Param example")
 
 1. Save and publish the app.
 1. Copy [web link](#address) for your app from [Power Apps](https://make.powerapps.com).
 1. Open a new browser.
 1. Paste the app web link in the browser and append ```&browser=Microsoft%20Edge``` at the end.
 
-    ![Web address](media/function-param/param-example-web-address.png "Web address")
+    ![Web address.](media/function-param/param-example-web-address.png "Web address")
 
 1. When your app launches, the label shows the parameter value passed.
 
-    ![Param example label](media/function-param/param-example-label.png "Param example label")
+    ![Param example label.](media/function-param/param-example-label.png "Param example label")
 
 1. Close the app player and edit the app.
 1. Select **App** from the Tree view on left navigation.
 1. Select **OnStart** property on top left.
 1. Enter the formula as ```If(Param("screen")="techspecs",Navigate(TechSpecs,Fade))```.  
 
-    ![Param example for navigation](media/function-param/param-example-screen.png "Param example for navigation")
+    ![Param example for navigation.](media/function-param/param-example-screen.png "Param example for navigation")
 
     [If function](function-if.md) in [OnStart](object-app.md#onstart-property) property checks if parameter equals a certain value, in this case the value *techspecs*. And if it matches, the app navigates to *TechSpecs* screen.
 
@@ -247,10 +245,13 @@ The **Product Showcase** tablet layout template was used for the following examp
 1. Open a new browser.
 1. Paste the app web link in the browser and append ```&screen=techspecs``` at the end.
 
-    ![Web address for TechSpecs screen](media/function-param/param-example-web-address-techspecs.png "Web address for TechSpecs screen")
+    ![Web address for TechSpecs screen.](media/function-param/param-example-web-address-techspecs.png "Web address for TechSpecs screen")
 
 1. The app directly launches with **TechSpecs** or a screen you entered in Navigate function.
 
 ### See also
 
 [Canvas app formula reference](../formula-reference.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

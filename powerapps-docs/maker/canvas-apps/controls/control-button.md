@@ -1,18 +1,21 @@
 ---
-title: 'Button control: reference | Microsoft Docs'
-description: Information, including properties and examples, about the Button control
+title: Button control in Power Apps
+description: Learn about the details, properties and examples of the button control in Power Apps.
 author: chmoncay
-manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.date: 10/25/2016
+ms.date: 01/28/2021
+ms.subservice: canvas-maker
 ms.author: chmoncay
 ms.reviewer: tapanm
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - chmoncay
 ---
 # Button control in Power Apps
 A control that the user can click or tap to interact with the app.
@@ -21,7 +24,7 @@ A control that the user can click or tap to interact with the app.
 Configure the **[OnSelect](properties-core.md)** property of a **Button** control to run one or more formulas when the user clicks or taps the control.
 
 ## Key properties
-**[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
+**[OnSelect](properties-core.md)** – Actions to perform when the user taps or clicks a control.
 
 **[Text](properties-core.md)** – Text that appears on a control or that the user types into a control.
 
@@ -122,7 +125,7 @@ Configure the **[OnSelect](properties-core.md)** property of a **Button** contro
    **UpdateContext({Total:Total + Value(Source.Text)})**
    
     Want more information about the **[UpdateContext](../functions/function-updatecontext.md)** function or [other functions](../formula-reference.md)?
-3. Add a **[Label](control-text-box.md)** control, set its **[Text](properties-core.md)** property to **Total**, and then press **F5**.
+3. Add a **[Label](control-text-box.md)** control, set its **[Text](properties-core.md)** property in the formula bar to **Value(Total)**, and then press **F5**.
 4. Clear the default text from **Source**, type a number in it, and then click or tap **Add**.
    
     The **[Label](control-text-box.md)** control shows the number that you typed.
@@ -191,3 +194,6 @@ You can also specify the color of a **Button** control by setting its **[HoverFi
 * **[TabIndex](properties-accessibility.md)** must be zero or greater so that keyboard users can navigate to it.
 * Focus indicators must be clearly visible. Use **[FocusedBorderColor](properties-color-border.md)** and **[FocusedBorderThickness](properties-color-border.md)** to achieve this.
  
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -7,10 +7,11 @@ ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "how-to"
 author: "Mattp123"
 ms.assetid: 15d123e0-b604-45dd-ab34-0b37787a04bb
 caps.latest.revision: 33
+ms.subservice: mda-maker
 ms.author: "matp"
 manager: "kvivek"
 tags: 
@@ -47,7 +48,7 @@ You can access form settings from the **Forms** tab in Power Apps or command bar
    - To set the security roles for every user select **Everyone**. 
    - To set the access to the form for one or more specific security roles, select **Specific security roles**. Then, select the security roles you want to grant access from the list of security roles that have been set up for your environment.  
      > [!div class="mx-imgBorder"] 
-     > ![Form settings set access](media/form-settings-sec-role.png)
+     > ![Form settings set access.](media/form-settings-sec-role.png)
 5. Select **Save and Publish**.
 
 ## Set the form order
@@ -60,7 +61,7 @@ Notice that the form order does not set who can see the form, that is managed by
 3. In the left navigation on the **Form settings** page, select **Form order**. 
 4. Select the form set that you want, such as **Main Form**, **Quick Create Form**, **Quick View Form** or **Card Form**. 
 5. Change the order by dragging and dropping the form up and down the list in the order you want it to be shown to your users. You can also use these keyboard shortcuts: Tab/Tab + Shift to move the focus, Space to select or release a form, and Down/Up arrow keys to move a form. Select **Save and publish**. 
-   ![Set form order using drag and drop](media/set-form-order.gif)
+   ![Set form order using drag and drop.](media/set-form-order.gif)
 To set the form order using solution explorer, see [Assign model-driven app form order](assign-form-order.md). 
 
 ## Set the fallback form for a table
@@ -84,7 +85,7 @@ If you are using role-based forms because you want to restrict the information p
 3. In the left navigation on the **Form settings** page, select **Fallback forms**. 
 4. To disable a form from the fallback order, clear the checkbox. In this example the **Information** form will be removed from the fallback order. 
    > [!div class="mx-imgBorder"] 
-   > ![Form settings fall back order](media/form-settings-fallback-form.png)
+   > ![Form settings fall back order.](media/form-settings-fallback-form.png)
    To enable a form for fallback select the checkbox next to the form to enable it.
 5. Select **Save and publish**. 
 
@@ -92,8 +93,11 @@ If you are using role-based forms because you want to restrict the information p
 The Client API form context (formContext) provides a reference to the form or to an item on the form, such as, a quick view control or a row in an editable grid, against which the current code is executed. More information: [Client API form context](/dynamics365/customer-engagement/developer/clientapi/clientapi-form-context)
 
 > [!IMPORTANT]
-> The Xrm.Page object is [deprecated](/dynamics365/get-started/whats-new/customer-engagement/important-changes-coming#some-client-apis-are-deprecated), and you should use the [getFormContext](/powerapps/developer/model-driven-apps/clientapi/reference/executioncontext/getformcontext) method of the passed in execution context object to return reference to the appropriate form or an item on the form.
+> The Xrm.Page object is [deprecated](/dynamics365/get-started/whats-new/customer-engagement/important-changes-coming#some-client-apis-are-deprecated), and you should use the [getFormContext](../../developer/model-driven-apps/clientapi/reference/executioncontext/getformcontext.md) method of the passed in execution context object to return reference to the appropriate form or an item on the form.
 
 ### See also  
 
 [Overview of the model-driven form designer](form-designer-overview.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

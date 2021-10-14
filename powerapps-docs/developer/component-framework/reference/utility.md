@@ -1,6 +1,6 @@
 ---
 title: Utility | Microsoft Docs
-description: 
+description: Provides a container for useful methods.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -34,3 +34,5 @@ Model-driven apps
 
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

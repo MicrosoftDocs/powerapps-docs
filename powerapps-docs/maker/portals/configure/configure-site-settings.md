@@ -1,13 +1,17 @@
 ---
-title: "Configure site settings for a portal | MicrosoftDocs"
-description: "Instructions to add and configure site settings for a portal and global settings for all portals in your organization."
+title: Configure site settings for portals
+description: Learnhow to add and configure site settings for a portal and global settings for all portals in your organization.
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/20/2019
+ms.date: 09/27/2021
+ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - sandhangitmsft
 ---
 
 # Configure site settings for portals
@@ -61,8 +65,8 @@ You can manage the following types of site settings:
 |search/query|+(@Query) _title:(@Query) _logicalname:adx_webpage~0.9^0.2<br> -_logicalname:adx_webfile~0.9 adx_partialurl:(@Query)<br> _logicalname:adx_blogpost~0.9^0.1 -_logicalname:adx_communityforumthread~0.9|Override query for site search, to apply additional weights and filters. @Query is the query text entered by a user. Lucene query syntax reference: [https://lucene.apache.org/core/old_versioned_docs/versions/2_9_1/queryparsersyntax.html](https://lucene.apache.org/core/old_versioned_docs/versions/2_9_1/queryparsersyntax.html)| 
 |Search/Stemmer|English|The language used by the portal search's stemming algorithm. Default: English|
 |CustomerSupport/DisplayAllUserActivitiesOnTimeline|FALSE| |
-|Authentication/[Protocol]/[Provider]/AllowContactMappingWithEmail| |Allow auto-association to a contact record based on email. More information: [Allow contact mapping with email and require unique email general options](use-simplified-authentication-configuration.md#general-authentication-settings).|
-|||
+|Authentication/[Protocol]/[Provider]/AllowContactMappingWithEmail| |Allow auto-association to a contact record based on email. More information: [Allow contact mapping with email and require unique email general options](use-simplified-authentication-configuration.md#general-authentication-settings). |
+| Site/EnableDefaultHtmlEncoding | True/False | Power Apps portals release version [9.3.8.x](/power-platform/released-versions/portals/portalupdate938x) or later will by default have [escape](../liquid/liquid-filters.md#escape) Liquid filter enforced for [user](../liquid/liquid-objects.md#user) and [request](../liquid/liquid-objects.md#request) Liquid objects. To disable this default configuration and allow these Liquid objects without escape Liquid filter, add this setting and set its value to **False**. |
 
 For site settings related to various portal features, see:
 
@@ -76,8 +80,8 @@ For site settings related to various portal features, see:
 - [Search within file attachment content](search-file-attachment.md)
 - [Behavior and format of the date and time field](behavior-format-date-time-field.md)
 - [Add geolocation](add-geolocation.md)
-- [Implementing General Data Protection Regulations](https://docs.microsoft.com/dynamics365/customer-engagement/portals/implement-gdpr)
-- [Enable header and footer output caching](https://docs.microsoft.com/dynamics365/customer-engagement/portals/enable-header-footer-output-caching)
+- [Implementing General Data Protection Regulations](implement-gdpr.md)
+- [Enable header and footer output caching](enable-header-footer-output-caching.md)
 
 ## Manage global portal settings
 
@@ -103,3 +107,6 @@ For site settings related to various portal features, see:
 > Bing Maps integration is not supported in the German Sovereign Cloud. If you try to create the BinMap/Key or Adxstudio/ProductivityPack/BingMap/Key setting in this environment, an error message will be displayed.
 
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

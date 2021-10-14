@@ -1,6 +1,6 @@
 ---
-title: Replace and Substitute functions | Microsoft Docs
-description: Reference information, including syntax, for the Replace and Substitute functions in Power Apps
+title: Replace and Substitute functions in Power Apps
+description: Reference information including syntax and examples for the Replace and Substitute functions in Power Apps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -8,11 +8,15 @@ ms.topic: reference
 ms.custom: canvas
 ms.reviewer: nabuthuk
 ms.date: 12/02/2018
+ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - gregli-msft
+  - nkrb
 ---
 # Replace and Substitute functions in Power Apps
 Replace a portion of a string of text with another string.
@@ -70,3 +74,6 @@ If you pass a single string, the return value is the modified string. If you pas
  
 
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

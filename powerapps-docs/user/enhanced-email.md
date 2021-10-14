@@ -7,6 +7,7 @@ ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 04/09/2020
+ms.subservice: end-user
 ms.author: shujoshi
 ms.custom: ""
 ms.reviewer: ""
@@ -43,7 +44,7 @@ Compose an email using the enhanced experience:
    A new email pop-up window opens. 
 
    > [!div class="mx-imgBorder"]
-   > ![Enhanced email pop-up window](media/enhanced-email-pop-up.png "Enhanced email pop-up window")
+   > ![Enhanced email pop-up window.](media/enhanced-email-pop-up.png "Enhanced email pop-up window")
 
    The **From** and **To** columns are automatically populated based on the user and the account and contact of the original row.
 
@@ -61,5 +62,8 @@ Compose an email using the enhanced experience:
 
 ### See also
 
-[Set up enhanced email](https://docs.microsoft.com/power-platform/admin/system-settings-dialog-box-email-tab)<br>
+[Set up enhanced email](/power-platform/admin/system-settings-dialog-box-email-tab)<br>
 [Insert an email template](insert-email-template.md)
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

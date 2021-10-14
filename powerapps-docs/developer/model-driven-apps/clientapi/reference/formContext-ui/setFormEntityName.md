@@ -1,6 +1,7 @@
 ---
 title: "setFormEntityName (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
+description: Includes description and supported parameters for the setFormEntityName method.
+ms.date: 04/19/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -28,7 +29,7 @@ search.app:
 
 |Name|Type|Required|Description|
 |--|--|--|--|
-|arg|String|Yes|Name of the entity to be displayed on the form.|
+|arg|String|Yes|Name of the table to be displayed on the form.|
 
 ### Related topics
 
@@ -36,3 +37,6 @@ search.app:
 
 [formContext](../../clientapi-form-context.md)
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

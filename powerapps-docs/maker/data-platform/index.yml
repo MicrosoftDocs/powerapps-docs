@@ -1,0 +1,139 @@
+### YamlMime:Landing
+
+title: Microsoft Dataverse documentation
+summary: Securely store and manage data that's used by Power Apps business applications. 
+
+metadata:
+  title: Dataverse documentation
+  description: Provides access to highlighted areas within the Dataverse documentation
+  services: service
+  ms.service: powerapps 
+  ms.subservice: subservice
+  ms.topic: landing-page 
+  ms.collection: collection
+  author: Mattp123
+  ms.author: matp
+  ms.date: 09/08/2020 
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+  # Card 
+  - title: Get started
+    linkLists:
+       - linkListType: overview
+         links:
+          - text: What is Dataverse?
+            url: data-platform-intro.md
+          - text: Why choose Dataverse?
+            url: why-dataverse-overview.md
+       - linkListType: learn
+         links:
+          - text: Introduction to Dataverse
+            url: /learn/modules/introduction-common-data-service
+
+  # Card
+  - title: Define data
+    linkLists:
+       - linkListType: concept
+         links:
+          - text: Tables and metadata
+            url: create-edit-metadata.md
+          - text: Types of tables
+            url: types-of-entities.md
+          - text: Table relationships
+            url: relationships-overview.md
+          - text: Columns
+            url: fields-overview.md
+          - text: Choices
+            url: create-edit-global-option-sets.md
+          
+  # Card
+  - title: Customize
+    linkLists:
+       - linkListType: how-to-guide
+         links:
+          - text: Create a custom table
+            url: data-platform-create-entity.md
+          - text: Import or export data
+            url: data-platform-import-export.md
+          - text: Create a relationship between tables
+            url: data-platform-entity-lookup.md
+          - text: Create and edit columns
+            url: create-edit-fields.md
+          - text: Create a choice 
+            url: custom-picklists.md
+
+    # Card
+  - title: Apply business logic
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Business rules 
+            url: data-platform-create-business-rule.md
+          - text: Real-time workflows
+            url: overview-realtime-workflows.md
+          - text: Actions
+            url: actions.md
+          - text: More >
+            url: processes.md
+
+  # Card
+  - title: Work with dataflows
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Self-service data prep
+            url: self-service-data-prep-with-dataflows.md
+      - linkListType: how-to-guide
+        links:
+          - text: Create and use dataflows
+            url: create-and-use-dataflows.md
+          - text: Connect Azure Data Lake Storage Gen2
+            url: connect-azure-data-lake-storage-for-dataflow.md
+
+  # Card
+  - title: Integrate with external data
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Use Power BI 
+            url: use-powerbi-dataverse.md
+          - text: Use SharePoint, OneNote, and OneDrive
+            url: sharepoint-onedrive-onenote-intro.md
+      - linkListType: how-to-guide
+        links:
+          - text: Create a Power BI report
+            url: data-platform-powerbi-connector.md
+
+
+  # Card
+  - title: Use solutions for ALM
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: What are solutions?
+            url: solutions-overview.md
+      - linkListType: how-to-guide
+        links:
+         - text: Create a solution
+           url: create-solution.md
+         - text: Export solutions
+           url: export-solutions.md
+         - text: More > 
+           url: solution-layers.md
+
+  # Card
+  - title: For developers
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Work with data using code
+            url: ../../developer/data-platform/work-with-data.md
+          - text: Apply business logic using code
+            url: ../../developer/data-platform/apply-business-logic-with-code.md      
+          - text: Work with metadata using code
+            url: ../../developer/data-platform/metadata-services.md
+          - text: More >
+            url: ../../developer/data-platform/index.yml

@@ -1,0 +1,67 @@
+### YamlMime:FAQ
+metadata:
+  title: Power App component framework FAQs
+  description: Get answers to frequently asked questions about Power Apps component framework.
+  author: ghurlman
+  ms.service: powerapps
+  ms.search.keywords: 
+  ms.date: 06/08/2021
+  ms.author: grhurl
+  ms.reviewer: nabuthuk
+title: Power Apps component framework FAQs
+summary: This article provides information on frequently asked questions about Power Apps component framework.
+sections:
+  - name: General
+    questions:
+      - question: Where can I find some good examples of code components?
+        answer: |
+          We have published set of [basic components](https://docs.microsoft.com/powerapps/developer/component-framework/use-sample-components) which showcase usage of various component capabilities and APIs. Lots of great examples from the community are available on the [Power Apps Community Forums](https://powerusers.microsoft.com/t5/Power-Apps-Component-Framework/Community-content-sample-components-blogs-etc-Link-to-this-page/td-p/280710).
+
+      - question: How to use rich data types in code components such as Collections?
+        answer: |
+          Currently, this feature is not supported. However, there is a [JSON function](../../maker/canvas-apps/functions/function-json.md) in canvas-apps that allows app makers to stringify their data.
+          
+          1. Pass the collection into the JSON function.
+          2. Pass the string representation of the collection data that is returned from the JSON function into one of the component's string properties.
+          3. Use [JSON.parse](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse) in the component code to convert it back into a JavaScript Object.         
+
+      - question: Can I call other components from within another component?
+        answer: |
+          This is not currently supported.
+
+      - question: Can I bundle font resources?
+        answer: |
+          Currently, font resources (files with a .ttf file extension) are not supported by the framework.
+
+      - question: Can I use img resource property in canvas apps?
+        answer: |
+          Currently, [img](manifest-schema-reference/img.md) resources are not supported in canvas apps.
+
+      - question: TabIndex support for components in canvas apps
+        answer: |
+          Currently, code components do not support `tabindex` property in canvas apps. For model-driven apps the tab assignment is assigned automatically using `tabIndex = 0`, so elements are navigated in the order they appear. 
+
+      - question: Can I add commandbar, search to subgrids
+        answer: |
+          To add commandbar, search to a subgrid for model-driven apps, you need to specify the [cds-data-set-options](manifest-schema-reference/data-set.md).
+          
+      - question: Can I access form context like I can in model-driven apps event handlers?
+        answer: |
+          Accessing form context directly in a control is not supported. Code components are expected to work across various products like model-driven apps, canvas apps, dashboards, and hence they cannot have dependency on the form context. A work around is to make the code component bound to a column and add an `OnChange` event handler to that column. The code component can update the column value, and the `OnChange` event handler can access the form context. Column not bound to a table could be used, or a column bound to a table with `submitMode` set to `never` can be used. We will add support for the custom events in future which can be used for communicating changes outside of a control without adding a column configuration.
+
+      - question: Cannot add/remove properties from code component once it is imported
+        answer: |
+          The optional properties can be added in the newer component version, but existing properties cannot be removed. As a workaround, you can make the properties optional and hidden. Additionally, code components cannot add required properties in the newer version, and you need to create a code component with a new name and reconfigure it in the target system.
+
+      - question: Can I access Window object from the component?
+        answer: |
+          Currently, accessing [Window object](https://developer.mozilla.org/docs/Web/API/Window) from the control is not supported.
+     
+additionalContent: |
+  ## See also
+
+  [Power Apps component framework API reference](reference/index.md)<br/>
+  [Power Apps component framework overview](overview.md)
+
+
+

@@ -1,4 +1,4 @@
-To define options, in the **Options** area click ![Add option icon](../maker/common-data-service/media/add-option-set-option-button.png) to add an option.
+To define options, in the **Options** area click ![Add option icon.](../maker/data-platform/media/add-option-set-option-button.png) to add an option.
 
 For each option you can add the following property values
 
@@ -14,8 +14,8 @@ Use the other icons in the options toolbar to perform the following operations:
 
 |Icon|Operation|
 |--|--|
-|![Remove the selected option icon](../maker/common-data-service/media/remove-option-solution-explorer.gif)|Remove the selected option|
-|![Move the selected option up icon](../maker/common-data-service/media/move-selected-option-up-solution-explorer.png)|Move the selected option up|
-|![move selected option down icon](../maker/common-data-service/media/move-selected-option-down-solution-explorer.png)|Move the selected option down|
-|![Sort option ascending icon](../maker/common-data-service/media/sort-option-set-option-asc-solution-explorer.png)|Sort the options by label in ascending order|
-|![Sort option descending icon](../maker/common-data-service/media/sort-option-set-option-des-solution-explorer.png)|Sort the options by label in descending order|
+|![Remove the selected option icon.](../maker/data-platform/media/remove-option-solution-explorer.gif)|Remove the selected option|
+|![Move the selected option up icon.](../maker/data-platform/media/move-selected-option-up-solution-explorer.png)|Move the selected option up|
+|![move selected option down icon.](../maker/data-platform/media/move-selected-option-down-solution-explorer.png)|Move the selected option down|
+|![Sort option ascending icon.](../maker/data-platform/media/sort-option-set-option-asc-solution-explorer.png)|Sort the options by label in ascending order|
+|![Sort option descending icon.](../maker/data-platform/media/sort-option-set-option-des-solution-explorer.png)|Sort the options by label in descending order|

@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: guidance
 ms.date: 12/05/2020
+ms.subservice: guidance
 ms.author: thground
 ms.reviewer: kathyos
 
@@ -42,3 +43,6 @@ In this section, you'll learn about:
 
 > [!div class="nextstepaction"]
 > [Next step: Identifying the business problem to solve](identifying-business-problem-to-solve.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

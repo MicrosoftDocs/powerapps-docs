@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: guidance
 ms.date: 06/16/2020
+ms.subservice: guidance
 ms.author: thground
 ms.reviewer: kathyos
 
@@ -55,3 +56,6 @@ We created a table like this for our expense report project:
 
 > [!div class="nextstepaction"]
 > [Next step: Get support from management](gaining-support.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -2,6 +2,7 @@
 title: Update existing code components using Power Apps component framework tooling| Microsoft Docs
 description: Update components using the Power Apps component framework tooling
 keywords: Power Apps component framework, code component, component Framework
+ms.subservice: pcf
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
@@ -16,14 +17,16 @@ ms.assetid: d2cbf58a-9112-45c2-b823-2c07a310714c
 
 If you are a Power Apps component framework Private Preview participant for model-driven apps and have already built code components, you need to make some minor updates to make it compatible with the new ALM-centric project structures. 
 
-A few changes are required to use the new Power Apps CLI tooling with your existing Power Apps component framework code components.
+[!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
+
+A few changes are required to use the new Microsoft Power Platform CLI tooling with your existing Power Apps component framework code components.
 
 > [!NOTE]
-> This topic is applicable only for updating code components for model-driven apps because the Power Apps CLI tooling is not available at the time of private preview for the model-driven apps.  
+> This topic is applicable only for updating code components for model-driven apps because Microsoft Power Platform CLI tooling is not available at the time of private preview for the model-driven apps.  
 
 ## Creating an empty project
 
-Use Power Apps CLI to create a new empty project for your code component. More information: [Create components using tooling](create-custom-controls-using-pcf.md)
+Use Microsoft Power Platform CLI to create a new empty project for your code component. More information: [Create components using tooling](create-custom-controls-using-pcf.md)
 
 Once the project is created, migrate your code component source to the new project:
 
@@ -40,7 +43,7 @@ But there are a couple of important semantic changes:
 1. The `code` resource entry must now point to the precompiled source file of the code component. The file name defaults to **index.ts**.
 
    For example, if your component source is implemented in a file called `MyControl.ts`, then the `code` entry in `ControlManifest.Input.xml` must point to that file. The `code` file must also be a valid TypeScript file. This is in contrast to legacy manifest files that specified the compiled JS output file in the `code` entry.
-2. The `path` attribute of the resource element like `code` or `css` now refers to the local path to the file on disk. For example:
+2. The `path` parameter of the resource element like `code` or `css` now refers to the local path to the file on disk. For example:
 
     ```XML
    <resources>
@@ -48,7 +51,7 @@ But there are a couple of important semantic changes:
     </resources>
     ```
 
-The `path` attribute above indicates that the `YourControlName.css` file is located in the `css` subfolder relative to the current directory where the `ControlManifest.Input.xml` resides on disk.
+The `path` parameter above indicates that the `YourControlName.css` file is located in the `css` subfolder relative to the current directory where the `ControlManifest.Input.xml` resides on disk.
 
 Update the ControlManifest.Input.xml files as follows:
 
@@ -122,7 +125,7 @@ The build tools expect the component source to be exported using standard ES6 mo
 
 ## Using generated manifest typing file
 
-Legacy projects require manually creating and editing an `inputsOutputs.d.ts` typing file, which is typically located under the `private_typing` subfolder. The Power Apps CLI tooling now automatically generates this file upon build. 
+Legacy projects require manually creating and editing an `inputsOutputs.d.ts` typing file, which is typically located under the `private_typing` subfolder. Microsoft Power Platform CLI tooling now automatically generates this file upon build. 
 
 Code-gen ensures that `type` definitions used in the component source code stay in sync with `types` defined in the component manifest file.
 
@@ -143,3 +146,6 @@ To use the new typing file:
 [Limitations of Power Apps component framework](limitations.md)<br/>
 [Power Apps component framework API reference](reference/index.md)<br/>
 [Power Apps component framework overview](overview.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

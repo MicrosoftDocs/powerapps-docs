@@ -14,4 +14,4 @@ applies_to:
   - "Dynamics 365 Version 9.x"
 ms.assetid: 69d4e3ba-84f5-4efc-95cf-6af58d8188c3
 ---
-Use HTML webresources to create user interface elements for client extensions. 
+Use HTML web resources to create user interface elements for client extensions. 

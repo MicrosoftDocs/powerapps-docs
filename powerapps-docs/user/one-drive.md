@@ -7,6 +7,7 @@ ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 03/02/2020
+ms.subservice: end-user
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
@@ -26,7 +27,7 @@ Before you can use OneDrive for Business, it must be enabled by your system admi
 
 -   [Find your administrator or support person](find-admin.md)  
 
--   [Enable OneDrive for Business](https://docs.microsoft.com/power-platform/admin/enable-onedrive-for-business)  
+-   [Enable OneDrive for Business](/power-platform/admin/enable-onedrive-for-business)  
 
 
 ## The first time you view your documents  
@@ -36,17 +37,17 @@ Before you can use OneDrive for Business, it must be enabled by your system admi
 2.  On the open row, select the **Related** tab, and then select **Documents**.
 
      > [!div class="mx-imgBorder"]
-     > ![Open the Documents tab in a row ](media/onedrive_nav.png "Open the Documents tab in a row")
+     > ![Open the Documents tab in a row .](media/onedrive_nav.png "Open the Documents tab in a row")
 
 3.  Select **Document Location** > **OneDrive**.
 
      > [!div class="mx-imgBorder"]
-     > ![Open the Documents tab and select OneDrive](media/onedrive_menu.png "Open the Documents tab and select OneDrive")
+     > ![Open the Documents tab and select OneDrive.](media/onedrive_menu.png "Open the Documents tab and select OneDrive")
 
 4. After OneDrive for Business is enabled, you'll see the following dialog box when you go to the **Documents** tab to view documents in Dataverse and upload a file to OneDrive, or when you attempt to create a new document or folder.  
 
     > [!div class="mx-imgBorder"]
-    > ![Change your OneDrive folder](media/setup_onedrive.png "Change your OneDrive folder")  
+    > ![Change your OneDrive folder.](media/setup_onedrive.png "Change your OneDrive folder")  
 
 5. Select **Change folder location** to pick a new location to store OneDrive documents, or select **Continue** to accept the default folder location.
 
@@ -58,12 +59,12 @@ Before you can use OneDrive for Business, it must be enabled by your system admi
 2. On the open row, select the **Related** tab, and then select **Documents**.
  
     > [!div class="mx-imgBorder"]
-    > ![Open the Documents tab in a row ](media/onedrive_nav.png "Open the Documents tab in a row")
+    > ![Open the Documents tab in a row .](media/onedrive_nav.png "Open the Documents tab in a row")
  
 3. Select **Document Location** to filter the document list.
 
     > [!div class="mx-imgBorder"]
-    > ![Open the Document Location](media/onedrive_doc_location.png "Open the Document Location")
+    > ![Open the Document Location.](media/onedrive_doc_location.png "Open the Document Location")
 
 4.  Select a location as described in the following table.  
 
@@ -83,14 +84,14 @@ Before you can use OneDrive for Business, it must be enabled by your system admi
 2. On the open row, select the **Related** tab, and then select **Documents**.
  
     > [!div class="mx-imgBorder"]
-    > ![Open the Documents tab in a row ](media/onedrive_nav.png "Open the Documents tab in a row")
+    > ![Open the Documents tab in a row .](media/onedrive_nav.png "Open the Documents tab in a row")
 
 2. Select **Document Location**, and change the location to **OneDrive**.
 
 3. Select **New**, and then choose a document type such as PowerPoint or Word. 
 
     > [!div class="mx-imgBorder"]
-    > ![Create a new document](media/onedrive_new_doc.png "Create a new document")
+    > ![Create a new document.](media/onedrive_new_doc.png "Create a new document")
 
 4. Enter a document name, and then select **Save**.  
 
@@ -102,3 +103,6 @@ Be aware of the following regarding OneDrive for Business in Dataverse:
 - OneDrive storage folders are created in the user's current Dataverse language. If the language changes, new folders will be created in the new language. Old folders will remain in the previous language.  
 
 - There might be a delay between when the documents are shared in OneDrive and when they're available to other users. 
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

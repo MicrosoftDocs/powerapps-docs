@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: guidance
 ms.date: 10/12/2021
+ms.subservice: guidance
 ms.author: thground
 ms.reviewer: kathyos
 
@@ -62,3 +63,6 @@ We later discovered additional tasks through talking with other team members:
 
 > [!div class="nextstepaction"]
 > [Next step: Who's doing the work?](who-is-doing-work.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -1,6 +1,6 @@
 ---
-title: Manage an on-premises data gateway for canvas apps | Microsoft Docs
-description: Manage an on-premises data gateway and its connections
+title: Manage an on-premises data gateway in Power Apps
+description: Learn about how to manage an on-premises data gateway and its connections.
 author: arthiriyer
 manager: kvivek
 ms.service: powerapps
@@ -8,25 +8,28 @@ ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 10/16/2020
+ms.subservice: canvas-maker
 ms.author: arthii
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - arthiriyer
 ---
 
 # Manage an on-premises data gateway in Power Apps
 
 Install an on-premises data gateway to transfer data quickly and securely between a canvas app that's built in Power Apps and a data source that isn't in the cloud, such as an on-premises SQL Server database or an on-premises SharePoint site. View all gateways for which you have administrative permissions, and manage permissions and connections for those gateways. 
 
-You can connect to on-premises data over the [connectors](https://docs.microsoft.com/connectors/connector-reference/connector-reference-powerapps-connectors) that use data gateway.
+You can connect to on-premises data over the [connectors](/connectors/connector-reference/connector-reference-powerapps-connectors) that use data gateway.
 
 ## Prerequisites
 
 * The user name and password that you used to [sign up](../signup-for-powerapps.md) for Power Apps.
 * Administrative permissions on a gateway. (You have these permissions by default for each gateway that you install, and an administrator of another gateway can grant you these permissions for that gateway.)
-* A license that supports accessing on-premises data using an on-premises gateway. For more information, see the “Connectivity” section of the [pricing page](https://powerapps.microsoft.com/pricing/).
-* Gateways and on-premises connections can only be created and used in the user's [default environment](working-with-environments.md).
+* A license that supports accessing on-premises data using an on-premises gateway. For more information, see the [pricing page](https://powerapps.microsoft.com/pricing/).
 
 ## Install a gateway
 
@@ -69,3 +72,6 @@ For more information about troubleshooting issues with gateways, see [Troublesho
 * [Install the on-premises data gateway](/data-integration/gateway/service-gateway-install).
 * Create an app that connects to an on-premises data source, such as [SQL Server](connections/connection-azure-sqldatabase.md) or [SharePoint](connections/connection-sharepoint-online.md).
 * [Share an app](share-app.md) that connects to an on-premises data source.
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

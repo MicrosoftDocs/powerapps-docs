@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: guidance
 ms.date: 06/16/2020
+ms.subservice: guidance
 ms.author: thground
 ms.reviewer: kathyos
 
@@ -179,3 +180,6 @@ negotiate better rates. We'll note this in our project plan.
 
 > [!div class="nextstepaction"]
 > [Next step: What are the business rules?](decisions-approvals.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

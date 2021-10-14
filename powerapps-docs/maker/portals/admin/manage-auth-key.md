@@ -1,47 +1,38 @@
 ---
-title: "Connect a portal to a Microsoft Dataverse environment | MicrosoftDocs"
-description: "Learn how to connect a portal to a Microsoft Dataverse environment and how to renew the authentication key."
+title: Manage portal authentication key
+description: Learn how to manage the authentication key used by Power Apps portals to connect to Microsoft Dataverse environment, check the key details, notifications and troubleshoot a failed renew attempt.
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/20/2020
+ms.date: 04/21/2021
+ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: tapanm
+contributors:
+    - neerajnandwana-msft
+    - tapanm-msft
 ---
 
-# Connect to a Microsoft Dataverse environment using a portal
+# Manage portal authentication key
 
-A portal connects to a Dataverse environment using an Azure Active Directory application. The application is created in the same tenant where the portal is provisioned. The application is registered with the Dataverse environment during the portal provisioning process.
+Power Apps portals connectivity architecture explained how a portal connects to Microsoft Dataverse environment. When a portal is created, a new authentication key is generated with the public key uploaded to Azure Active Directory application. Portals uses this authentication key to connect to the Dataverse environment. You must renew the key every two years to ensure that your portal can connect to Dataverse environment.
 
-![Connecting a portal with Dataverse environment](../media/connect-with-dynamics.png "Connecting a portal with Dataverse environment")
-
-Each portal has a separate Azure Active Directory application associated with it, whether it's connected to the same Dataverse environment or not. The default Azure Active Directory authentication provider created for a portal uses the same Azure Active Directory application to authenticate the portal. Authorization is enforced by web roles assigned to the user accessing the portal.
-
-You can see the associated portal application in Azure Active Directory. The name of this application will be Microsoft CRM Portals, and the portal ID is in the **App ID URI** field in the Azure Active Directory application. The person who provisions the portal owns this application. Don't delete or modify this application, or you might break the portal functionality. You must be the application owner to manage a portal from the Power Apps Portals admin center.
-
-## Authentication key
-
-For a portal to connect to Dataverse using an Azure Active Directory application, it requires an authentication key connected to the Azure Active Directory application. This key is generated when you provision a portal and the public part of this key is automatically uploaded to the Azure Active Directory application.
-
-> [!IMPORTANT]
-> The authentication key will expire in two years. It must be renewed every two years to ensure that your portal will continue to connect to the Dataverse environment. If you do not update the key, the portal will stop working.  
-
-### Authentication key details
+## Check authentication key details
 
 > [!TIP]
 > To learn about the roles required to perform this task, read [Admin roles required for portal administrative tasks](portal-admin-roles.md).
 
-The details of an authentication key are displayed on Power Apps Portals admin center and portal.
+The details of an authentication key are displayed on Power Apps portals admin center and portal.
 
-**Power Apps Portals admin center**
+**Power Apps portals admin center**
 
-1. Open [Power Apps Portals admin center](admin-overview.md).
+1. Open [Power Apps portals admin center](admin-overview.md).
 
 2. Select **Manage portal authentication key**. The authentication key is displayed along with its expiration date and thumbprint.
 
    > [!div class=mx-imgBorder]
-   > ![Authentication key details in Power Apps Portals admin center](../media/manage-auth-key.png "Authentication key details in Power Apps Portals admin center")
+   > ![Authentication key details in Power Apps portals admin center.](../media/manage-auth-key.png "Authentication key details in Power Apps portals admin center")
 
 **Portal**
 
@@ -50,18 +41,18 @@ The details of an authentication key are displayed on Power Apps Portals admin c
 2. Navigate to the URL <portal_path>/_services/about. The authentication key expiration date is displayed. 
 
    > [!div class=mx-imgBorder]
-   > ![Portal service page](../media/portal-services-page.png "Portal service page")
+   > ![Portal service page.](../media/portal-services-page.png "Portal service page")
 
 > [!NOTE]
 > To view authentication key information, you must sign in to the portal in the same browser session and you must have all website access permission.
 
-### Authentication key expiration notification
+## Check authentication key expiration notification
 
-Before the authentication key expires, you'll be notified by emails, Power Apps Portals admin center, and portal.
+Before the authentication key expires, you'll be notified by emails, Power Apps portals admin center, and portal.
 
 **Email**
 
-Email will be sent to those users who have signed up for email notification for the organization connected to their portal. More information about signing up for email notification: [Manage email notifications to admins](https://docs.microsoft.com/dynamics365/customer-engagement/admin/manage-email-notifications)
+Email will be sent to those users who have signed up for email notification for the organization connected to their portal. More information about signing up for email notification: [Manage email notifications to admins](/dynamics365/customer-engagement/admin/manage-email-notifications)
 
 Email notifications are sent at the following intervals: 
 - 90 days 
@@ -85,14 +76,14 @@ You'll also be notified after the key expires every day until 1 week after key e
 > - Intervals are calculated in UTC from the key expiration date.
 > - Email is not guaranteed to be exactly at the intervals as listed above. Email notification can be delayed or missed. Be sure to check for the key expiration date online as well.
 
-**Power Apps Portals admin center**
+**Power Apps portals admin center**
 
 A message about key expiration is displayed at the top of the page.
 
 > [!div class=mx-imgBorder]
-> ![Authentication key notification in Power Apps Portals admin center](../media/portal-admin-center-auth-notif.png "Authentication key notification in Power Apps Portals admin center")
+> ![Authentication key notification in Power Apps portals admin center.](../media/portal-admin-center-auth-notif.png "Authentication key notification in Power Apps portals admin center")
 
-**Portal**
+### Portal
 
 When you navigate to the URL <portal_path>/_services/about, a notification about key expiration is displayed at the bottom of the page.
 
@@ -100,21 +91,21 @@ When you navigate to the URL <portal_path>/_services/about, a notification about
 > You must sign in to your portal in the same browser session, and you must be assigned all website access permission.
 
 > [!div class=mx-imgBorder]
-> ![Authentication key notification on portal](../media/portal-service-page-auth-notif.png "Authentication key notification on portal")
+> ![Authentication key notification on portal.](../media/portal-service-page-auth-notif.png "Authentication key notification on portal")
 
-## Renew portal authentication key
+## Renew authentication key
 
-You must renew the key every two years to ensure that your portal can connect to Dataverse environment.
+Use the following steps if the authentication key for your portal is near expiration.
 
 > [!NOTE]
 > To renew the key, you must have permissions to manage your portal.
 
-1. Open [Power Apps Portals admin center](admin-overview.md).
+1. Open [Power Apps portals admin center](admin-overview.md).
 
 2. Select **Manage portal authentication key**. The authentication key is displayed along with its expiration date and thumbprint.
 
     > [!div class=mx-imgBorder]
-    > ![Manage portal authentication key](../media/manage-portal-auth-key.png "Manage portal authentication key")
+    > ![Manage portal authentication key.](../media/manage-portal-auth-key.png "Manage portal authentication key")
 
 3. Select **Update key**.
 
@@ -126,11 +117,18 @@ You must renew the key every two years to ensure that your portal can connect to
 > - This process will take five to seven minutes.
 > - Updating authentication key doesn't change any other portal configuration or the portal state.
 
-### Troubleshooting
+### Troubleshooting renewal of authentication key
 
 If the key update fails, an error message is displayed along with the following action:
 
 - **Retry Authentication Key Update**. This action allows you to restart the portal authentication key update process. If the update fails multiple times, contact Microsoft support.
 
     > [!div class=mx-imgBorder]
-    > ![Retry portal authentication key update](../media/retry-auth-key-update.png "Retry portal authentication key update")
+    > ![Retry portal authentication key update.](../media/retry-auth-key-update.png "Retry portal authentication key update")
+
+### See also
+
+[Portals connectivity to a Microsoft Dataverse environment](connectivity.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -1,13 +1,18 @@
 ---
-title: "Configure a SAML 2.0 provider for Power Apps portals. | MicrosoftDocs"
-description: "Instructions to configure SAML 2.0 provider for Power Apps portals."
+title: Configure a SAML 2.0 provider for portals
+description: Learn how to configure SAML 2.0 provider for Power Apps portals.
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/20/2020
+ms.date: 04/21/2021
+ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - sandhangitmsft
+    - dileepsinghmicrosoft
 ---
 
 # Configure a SAML 2.0 provider for portals
@@ -27,17 +32,17 @@ To provide external authentication, you can add one or more [SAML 2.0](https://d
 
 1. Enter a provider name.
 
-    ![Provider name](media/authentication/saml2-provider-name.png "Provider name")
+    ![Provider name.](media/authentication/saml2-provider-name.png "Provider name")
 
 1. Select **Next**.
 
 1. Create the application and configure the settings with your identity provider.
 
-    ![Create a SAML 2.0 application](media/authentication/step-1-saml2.png "Create a SAML 2.0 application")
+    ![Create a SAML 2.0 application.](media/authentication/step-1-saml2.png "Create a SAML 2.0 application")
 
 1. Enter the following site settings for portal configuration.
 
-    ![Configure SAML 2.0 site settings](media/authentication/saml2-site-settings.png "Configure SAML 2.0 site settings")
+    ![Configure SAML 2.0 site settings.](media/authentication/saml2-site-settings.png "Configure SAML 2.0 site settings")
 
     > [!NOTE]
     > Ensure that you review&mdash;and if required, change&mdash;the default values.
@@ -53,7 +58,7 @@ To provide external authentication, you can add one or more [SAML 2.0](https://d
 
 1. (Optional) Configure additional settings.
 
-    ![Additional settings](media/authentication/saml2-site-settings-additional.png "Additional settings")
+    ![Additional settings.](media/authentication/saml2-site-settings-additional.png "Additional settings")
 
     | Name | Description
     | - | - |
@@ -72,3 +77,6 @@ See [Edit a provider](use-simplified-authentication-configuration.md#edit-a-prov
 [Configure a SAML 2.0 provider for portals with Azure AD](configure-saml2-settings-azure-ad.md)  
 [Configure a SAML 2.0 provider for portals with AD FS](configure-saml2-settings.md)  
 [FAQ for using SAML 2.0 in portals](configure-saml2-faqs.md)  
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

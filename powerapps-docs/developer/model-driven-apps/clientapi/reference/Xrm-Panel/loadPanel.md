@@ -1,6 +1,7 @@
 ---
 title: "loadPanel| MicrosoftDocs"
-ms.date: "09/15/2017"
+description: Includes description and supported parameters for the loadPanel method.
+ms.date: 04/21/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -37,3 +38,6 @@ search.app:
 This method is supported only for the web client.
 
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

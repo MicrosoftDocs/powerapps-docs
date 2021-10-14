@@ -1,6 +1,6 @@
 ---
-title: EncodeUrl and PlainText functions | Microsoft Docs
-description: Reference information, including syntax and examples, for the EncodeUrl and PlainText functions in Power Apps
+title: EncodeUrl and PlainText functions in Power Apps
+description: Reference information including syntax and examples for the EncodeUrl and PlainText functions in Power Apps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -8,11 +8,15 @@ ms.topic: reference
 ms.custom: canvas
 ms.reviewer: nabuthuk
 ms.date: 11/07/2015
+ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - gregli-msft
+  - nkrb
 ---
 # EncodeUrl and PlainText functions in Power Apps
 Encodes and decodes strings.
@@ -48,3 +52,5 @@ If you set the **[Text](../controls/properties-core.md)** property of the label 
 ```
     We have done an unusually "deep" globalization and localization.
 ```
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

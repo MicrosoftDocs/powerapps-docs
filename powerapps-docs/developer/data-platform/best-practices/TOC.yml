@@ -1,0 +1,46 @@
+- name: Best practices and guidance for the Microsoft Dataverse
+  href: index.md
+  items: 
+  - name: Apply business logic using code
+    href: business-logic/index.md
+    items:
+      - name: Do not use batch request types in plug-ins and workflow activities
+        href: business-logic/avoid-batch-requests-plugin.md
+      - name: Develop IPlugin implementations as stateless
+        href: business-logic/develop-iplugin-implementations-stateless.md
+      - name: Do not duplicate plug-in step registration
+        href: business-logic/do-not-duplicate-plugin-step-registration.md
+      - name: Do not use parallel execution within plug-ins and workflow activities
+        href: business-logic/do-not-use-parallel-execution-in-plug-ins.md
+      - name: Implement all types of queries when filtering results using PreOperation RetrieveMultiple
+        href: business-logic/implement-all-types-of-queries-when-filtering-preoperation-retrievemultiple.md
+      - name: Include filtering attributes with plug-in registration
+        href: business-logic/include-filtering-attributes-plugin-registration.md
+      - name: Limit the registration of plug-ins for Retrieve and RetrieveMultiple messages
+        href: business-logic/limit-registration-plugins-retrieve-retrievemultiple.md
+      - name: Optimize custom assembly development
+        href: business-logic/optimize-assembly-development.md
+      - name: Remove unsupported code that uses reflection in custom workflow activities
+        href: business-logic/remove-unsupported-code-using-reflection-workflow-activities.md
+      - name: Set KeepAlive to false when interacting with external hosts in a plug-in
+        href: business-logic/set-keepalive-false-interacting-external-hosts-plugin.md
+      - name: Set Timeout when making external calls in a plug-in
+        href: business-logic/set-timeout-for-external-calls-from-plug-ins.md
+      - name: Use InvalidPluginExecutionException in plug-ins and workflow activities
+        href: business-logic/use-invalidpluginexecutionexception-plugin-workflow-activities.md
+      - name: Verify certification dependencies for plug-ins making outbound calls
+        href: business-logic/verify-certification-dependencies.md
+  - name: Work with data using code
+    href: work-with-data/index.md
+    items:
+      - name: Service Protection API Limits
+        href: ../api-limits.md
+      - name: Manage invalid characters
+        href: work-with-data/invalidcharactersinfield.md
+  - name: Work with metadata using code
+    href: work-with-metadata/index.md
+    items:
+      - name: Retrieve published metadata
+        href: work-with-metadata/retrieve-published-metadata.md
+      - name: Retrieve specific columns for an entity via query APIs
+        href: work-with-metadata/retrieve-specific-columns-entity-via-query-apis.md  

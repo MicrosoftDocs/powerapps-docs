@@ -6,6 +6,7 @@ ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: dff20ae0-c9ec-4413-9cd1-0ff77639ad91
 author: "Nkrb"
+ms.subservice: mda-developer
 ms.author: "nabuthuk"
 manager: "kvivek"
 search.audienceType: 
@@ -33,3 +34,6 @@ When the form [OnSave](events/form-onsave.md) event occurs, you can use the [get
 
 [Execution context methods](execution-context.md)
 
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

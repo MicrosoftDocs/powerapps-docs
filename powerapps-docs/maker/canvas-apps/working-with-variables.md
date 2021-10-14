@@ -1,6 +1,6 @@
 ---
-title: Understand variables in canvas apps | Microsoft Docs
-description: Reference information about working with state, context variables, and collections in canvas apps
+title: Understand variables in canvas apps
+description: Reference information about working with state, context variables, and collections in canvas apps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -8,13 +8,17 @@ ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 06/29/2020
+ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - gregli-msft
 ---
-# Understand canvas-app variables in Power Apps
+# Understand variables in canvas apps
 
 If you've used another programming tool, such as Visual Basic or JavaScript, you may be asking: **Where are the variables?** Power Apps is a little different and requires a different approach. Instead of reaching for a variable when you build a canvas app, ask yourself: **What would I do in Excel?**
 
@@ -32,7 +36,7 @@ Let's review how Excel works. A cell can contain a value, such as a number or a 
 
 In the following example, cell **A3** is set to the formula **A1+A2**. If **A1** or **A2** changes, **A3** automatically recalculates to reflect the change. This behavior requires no coding outside of the formula itself.
 
-![Animation of recalculating the sum of two numbers in Excel](media/working-with-variables/excel-recalc.gif)
+![Animation of recalculating the sum of two numbers in Excel.](media/working-with-variables/excel-recalc.gif)
 
 Excel doesn't have variables. The value of a cell that contains a formula changes based on its input, but there's no way to remember the result of a formula and store it in a cell or anywhere else. If you change a cell's value, the entire spreadsheet may change, and any previously calculated values are lost. An Excel user can copy and paste cells, but that's under the user's manual control and isn't possible with formulas.
 
@@ -42,19 +46,19 @@ Apps that you create in Power Apps behave very much like Excel. Instead of updat
 
 For example, you can replicate the Excel behavior in an app by adding a **[Label](controls/control-text-box.md)** control, named **Label1**, and two **[Text input](controls/control-text-input.md)** controls, named **TextInput1** and **TextInput2**. If you then set the **[Text](controls/properties-core.md)** property of **Label1** to **TextInput1 + TextInput2**, it will always show the sum of whatever numbers are in **TextInput1** and **TextInput2** automatically.
 
-![Calculating the sum of two numbers in Power Apps](media/working-with-variables/recalc1.png)
+![Calculating the sum of two numbers in Power Apps.](media/working-with-variables/recalc1.png)
 
 Notice that the **Label1** control is selected, showing its **[Text](controls/properties-core.md)** formula in the formula bar at the top of the screen. Here we find the formula **TextInput1 + TextInput2**. This formula creates a dependency between these controls, just as dependencies are created between cells in an Excel workbook.  Let's change the value of **TextInput1**:
 
-![Animation of calculating the sum of two numbers in Power Apps](media/working-with-variables/recalc2.gif)
+![Animation of calculating the sum of two numbers in Power Apps.](media/working-with-variables/recalc2.gif)
 
 The formula for **Label1** has been automatically recalculated, showing the new value.
 
-In Power Apps, you can use formulas to determine not only the primary value of a control but also properties such as formatting. In the next example, a formula for the **[Color](controls/properties-color-border.md)** property of the label will automatically show negative values in red. The **[If](functions/function-if.md)** function should look very familiar from Excel:
+In Power Apps, you can use formulas to determine not only the primary value of a control but also properties such as formatting. In the next example, a formula for the **[Color](controls/properties-color-border.md)** property of the label will automatically show negative values in red. The **[If](functions/function-if.md)** function should look familiar from Excel:
 
 `If( Value(Label1.Text) < 0, Red, Black )`
 
-![Animation of conditional formatting](media/working-with-variables/recalc-color.gif)
+![Animation of conditional formatting.](media/working-with-variables/recalc-color.gif)
 
 You can use formulas for a wide variety of scenarios:
 
@@ -78,9 +82,9 @@ Let's change our simple adder to act like an old-fashioned adding machine, with 
 
 | Display | Description |
 |----|----|
-|  ![App with a Text input control, a label, and two buttons](media/working-with-variables/button-changes-state-1.png) | When the app starts, the running total is 0.<br><br>The red dot represents the user's finger in the text-input box, where the user enters **77**. |
-| ![The Text input control contains 77, and the Add button is being pressed](media/working-with-variables/button-changes-state-2.png) | The user selects the **Add** button. |
-| ![The total is 77, and another 77 is being added to it](media/working-with-variables/button-changes-state-3.png) | 77 is added to the running total.<br><br>The user selects the **Add** button again. |
+|  ![App with a Text input control, a label, and two buttons.](media/working-with-variables/button-changes-state-1.png) | When the app starts, the running total is 0.<br><br>The red dot represents the user's finger in the text-input box, where the user enters **77**. |
+| ![The Text input control contains 77, and the Add button is being pressed.](media/working-with-variables/button-changes-state-2.png) | The user selects the **Add** button. |
+| ![The total is 77, and another 77 is being added to it.](media/working-with-variables/button-changes-state-3.png) | 77 is added to the running total.<br><br>The user selects the **Add** button again. |
 | ![The total is 154 before it's cleared.](media/working-with-variables/button-changes-state-4.png) | 77 is again added to the running total, resulting in 154.<br><br>The user selects the **Clear** button. |
 | ![The total is cleared.](media/working-with-variables/button-changes-state-5.png) | The running total is reset to 0. |
 
@@ -116,31 +120,31 @@ Let's rebuild our adding machine by using a global variable:
 
     The first time that a user selects the **Add** button and **[Set](functions/function-set.md)** runs, **RunningTotal** is set to the value **RunningTotal + TextInput1**.
 
-    ![OnSelect property of the Add button is set to Set function](media/working-with-variables/global-variable-1.png)
+    ![OnSelect property of the Add button is set to Set function.](media/working-with-variables/global-variable-1.png)
 
 4. To set the running total to **0** whenever the user selects the **Clear** button, set its **[OnSelect](controls/properties-core.md)** property to this formula:
 
     **Set( RunningTotal, 0 )**
 
-    ![OnSelect property of the Clear button is set to Set function](media/working-with-variables/global-variable-2.png)
+    ![OnSelect property of the Clear button is set to Set function.](media/working-with-variables/global-variable-2.png)
 
 5. Add a **[Label](controls/control-text-box.md)** control, and set its **[Text](controls/properties-core.md)** property to **RunningTotal**.
 
     This formula will automatically be recalculated and show the user the value of **RunningTotal** as it changes based on the buttons that the user selects.
 
-    ![Text property of the label is set to the name of the variable](media/working-with-variables/global-variable-3.png)
+    ![Text property of the label is set to the name of the variable.](media/working-with-variables/global-variable-3.png)
 
 6. Preview the app, and we have our adding machine as described above. Enter a number in the text box and press the **Add** button a few times. When ready, return to the authoring experience using the Esc key.
 
-    ![Text-input control contains a value, and the label contains the running total](media/working-with-variables/global-variable-4.png)
+    ![Text-input control contains a value, and the label contains the running total.](media/working-with-variables/global-variable-4.png)
 
 7. To show the global variable's value, select the **File** menu, and select **Variables** in the left-hand pane.
 
-    ![Variables option in the File menu](media/working-with-variables/global-variable-file-1.png)
+    ![Variables option in the File menu.](media/working-with-variables/global-variable-file-1.png)
 
 8. To show all the places where the variable is defined and used, select it.
 
-    ![List of location where variable is used](media/working-with-variables/global-variable-file-2.png)
+    ![List of location where variable is used.](media/working-with-variables/global-variable-file-2.png)
 
 ## Types of variables
 
@@ -148,7 +152,7 @@ Power Apps has three types of variables:
 
 | Variables type | Scope | Description | Functions that establish |
 | --- | --- | --- | --- |
-| Global variables |App |Simplest to use. Holds a number, text string, Boolean, record, table, etc. that can be references from anywhere in the app. |[**Set**](functions/function-set.md) |
+| Global variables |App |Simplest to use. Holds a number, text string, Boolean, record, table, etc. that can be referenced from anywhere in the app. |[**Set**](functions/function-set.md) |
 | Context variables |Screen |Great for passing values to a screen, much like parameters to a procedure in other languages. Can be referenced from only one screen. |[**UpdateContext**](functions/function-updatecontext.md)<br>[**Navigate**](functions/function-navigate.md) |
 | Collections |App |Holds a table that can be referenced from anywhere in the app. Allows the contents of the table to be modified rather than being set as a whole. Can be saved to the local device for later use. |[**Collect**](functions/function-clear-collect-clearcollect.md)<br>[**ClearCollect**](functions/function-clear-collect-clearcollect.md) |
 
@@ -208,7 +212,7 @@ Let's rebuild our adding machine by using a context variable:
 
     The first time that the user selects the **Add** button and **[UpdateContext](functions/function-updatecontext.md)** runs, **RunningTotal** is set to the value **RunningTotal + TextInput1**.
 
-    ![OnSelect property of the Add button](media/working-with-variables/context-variable-1.png)
+    ![OnSelect property of the Add button with updatecontext.](media/working-with-variables/context-variable-1.png)
 
 4. To set the running total to **0** whenever the user selects the **Clear** button, set its **[OnSelect](controls/properties-core.md)** property to this formula:
 
@@ -216,35 +220,35 @@ Let's rebuild our adding machine by using a context variable:
 
     Again, **[UpdateContext](functions/function-updatecontext.md)** is used with the formula **UpdateContext( { RunningTotal: 0 } )**.
 
-    ![OnSelect property of the Clear button](media/working-with-variables/context-variable-2.png)
+    ![OnSelect property of the Clear button updatecontext.](media/working-with-variables/context-variable-2.png)
 
 5. Add a **[Label](controls/control-text-box.md)** control, and set its **[Text](controls/properties-core.md)** property to **RunningTotal**.
 
     This formula will automatically be recalculated and show the user the value of **RunningTotal** as it changes based on the buttons that the user selects.
 
-    ![Text property of label](media/working-with-variables/context-variable-3.png)
+    ![Text property of label.](media/working-with-variables/context-variable-3.png)
 
 6. Preview the app and we have our adding machine as described above. Enter a number in the text box and press the **Add** button a few times. When ready, return to the authoring experience using the Esc key.
 
-    ![Text-input control shows a value, and label shows running total](media/working-with-variables/context-variable-4.png)
+    ![Text-input control shows a value, and label shows running total.](media/working-with-variables/context-variable-4.png)
 
 7. You can set the value of a context variable while navigating to a screen. This is useful for passing "context" or "parameters" from one screen to another. To demonstrate this technique, insert a screen, insert a button, and set its **OnSelect** property to this formula:
 
     **Navigate( Screen1, None, { RunningTotal: -1000 } )**
 
-    ![OnSelect property of a button](media/working-with-variables/context-variable-5.png)
+    ![OnSelect property of a button.](media/working-with-variables/context-variable-5.png)
 
     Hold down the Alt key while you select this button to both show **Screen1** and set the context variable **RunningTotal** to -1000.
 
-    ![Screen1 is open](media/working-with-variables/context-variable-6.png)
+    ![Screen1 is open.](media/working-with-variables/context-variable-6.png)
 
 8. To show the value of the context variable, select the **File** menu, and then select **Variables** in the left-hand pane.
 
-    ![Variables option on the File menu](media/working-with-variables/context-variable-file-1.png)
+    ![Variables option on the File menu.](media/working-with-variables/context-variable-file-1.png)
 
 9. To show where the context variable is defined and used, select it.
 
-    ![List of where a variable is used](media/working-with-variables/context-variable-file-2.png)
+    ![List of where a variable is used.](media/working-with-variables/context-variable-file-2.png)
 
 ## Use a collection
 
@@ -270,23 +274,23 @@ Let's recreate our adding machine by using a collection:
 
     When this formula runs, it adds the new value to the end of the collection. Because we're adding a single value, **Collect** automatically places it in a single-column table, and the column's name is **Value**, which you'll use later.
 
-    ![OnSelect property of the Add button](media/working-with-variables/papertape-1.png)
+    ![OnSelect property of the Add button with collect.](media/working-with-variables/papertape-1.png)
 
 4. To clear the paper tape when the user selects the **Clear** button, set its **[OnSelect](controls/properties-core.md)** property to this formula:
 
     **Clear( PaperTape )**
 
-    ![OnSelect property of the Clear button](media/working-with-variables/papertape-2.png)
+    ![OnSelect property of the Clear button clear.](media/working-with-variables/papertape-2.png)
 
 5. To display the running total, add a label, and set its **[Text](controls/properties-core.md)** property to this formula:
 
     **Sum( PaperTape, Value )**
 
-    ![Text property of the label](media/working-with-variables/papertape-3.png)
+    ![Text property of the label.](media/working-with-variables/papertape-3.png)
 
 6. To run the adding machine, press F5 to open Preview, enter numbers in the text-input control, and select buttons.
 
-    ![The Text input control shows a value, and the label show the running total](media/working-with-variables/papertape-run-1.png)
+    ![The Text input control shows a value, and the label show the running total.](media/working-with-variables/papertape-run-1.png)
 
 7. To return to the default workspace, press the Esc key.
 
@@ -294,13 +298,13 @@ Let's recreate our adding machine by using a collection:
 
     **PaperTape**
 
-    In the right-hand pane, select the **Value** column to show it.
+    In the right-hand pane, select **Edit fields** and then select **Add field**, select **Value** column and then select **Add** to show it.
 
-    ![Data table that shows the values added to the collection](media/working-with-variables/papertape-4.png)
+    ![Data table that shows the values added to the collection.](media/working-with-variables/papertape-4.png)
 
 9. To see the values in your collection, select **Collections** on the **File** menu.
 
-    ![Preview of the PaperTape collection](media/working-with-variables/papertape-file.png)
+    ![Preview of the PaperTape collection.](media/working-with-variables/papertape-file.png)
 
 10. To store and retrieve your collection, add two additional button controls, and set their **Text** properties to **Load** and **Save**. Set the **OnSelect** property of the **Load** button to this formula:
 
@@ -308,15 +312,18 @@ Let's recreate our adding machine by using a collection:
 
      You need to clear the collection first because **LoadData** will append the stored values to the end of the collection.
 
-     ![OnSelect property of the Load button](media/working-with-variables/papertape-5.png)
+     ![OnSelect property of the Load button.](media/working-with-variables/papertape-5.png)
 
 11. Set the **OnSelect** property of the **Save** button to this formula:
 
      **SaveData( PaperTape, "StoredPaperTape" )**
 
-     ![OnSelect* property of the Save button](media/working-with-variables/papertape-6.png)
+     ![OnSelect* property of the Save button.](media/working-with-variables/papertape-6.png)
 
 12. Preview again by pressing the F5 key, enter numbers in the text-input control, and select buttons. Select the **Save** button. Close and reload the app, and select the **Load** button to reload your collection.
 
 > [!NOTE]
 > **SaveData** and **LoadData** functions work in Power Apps Mobile but not Power Apps Studio or the web player for Power Apps.
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

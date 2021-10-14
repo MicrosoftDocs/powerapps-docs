@@ -1,13 +1,17 @@
 ---
-title: "Create and manage website bindings in portals | MicrosoftDocs"
-description: "Learn how to create and manage website bindings in portals."
+title: Create and manage website bindings
+description: Learn how to create and manage website bindings in portals.
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/12/2019
+ms.date: 04/21/2020
+ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - sandhangitmsft
 ---
 
 # Create and manage website bindings
@@ -64,3 +68,6 @@ For Azure websites and cloud services, the site name and virtual path values are
 
 ### See also
 [Create and manage websites](websites.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

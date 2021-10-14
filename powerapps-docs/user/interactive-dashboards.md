@@ -7,6 +7,7 @@ ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 9/14/2020
+ms.subservice: end-user
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
@@ -21,7 +22,7 @@ search.app:
 
 Use interactive dashboards to filter and view your app data. Charts on an interactive dashboard serve as a simple filtering source. You can select different data points on a chart to filter data based on the filter criteria. 
 
-Interactive dashboards are system dashboards that only an admin can create. To learn more about how to create and configure interactive dashboards, go to [Create and configure model-driven app interactive experience dashboards](https://docs.microsoft.com/powerapps/maker/model-driven-apps/configure-interactive-experience-dashboards).
+Interactive dashboards are system dashboards that only an admin can create. To learn more about how to create and configure interactive dashboards, go to [Create and configure model-driven app interactive experience dashboards](../maker/model-driven-apps/configure-interactive-experience-dashboards.md).
 
 Interactive dashboards come in two forms: multi-stream and single-stream. In addition, multi-stream dashboards can be home page or table-specific dashboards. The multi-stream dashboards display data in real time over multiple data streams. 
 
@@ -70,3 +71,6 @@ The single-stream dashboards display real-time data over one stream based on a t
 
    > [!div class="mx-imgBorder"]
    > ![Clear filters.](media/clear_filter.png "Clear filters")
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

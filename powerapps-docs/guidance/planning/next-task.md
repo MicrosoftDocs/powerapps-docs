@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: guidance
 ms.date: 06/16/2020
+ms.subservice: guidance
 ms.author: thground
 ms.reviewer: kathyos
 
@@ -31,3 +32,6 @@ process&mdash;starting back at [What is the task?](what-is-task.md)&mdash;until 
 
 > [!div class="nextstepaction"]
 > [Next step: Documenting the next task in the process](what-is-task.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

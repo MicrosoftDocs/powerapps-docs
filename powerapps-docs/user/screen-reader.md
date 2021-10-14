@@ -7,6 +7,7 @@ ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 11/16/2018
+ms.subservice: end-user
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
@@ -86,3 +87,6 @@ When a dialog box opens, Narrator announces the title. For dialog boxes with inp
 You can navigate through the controls by using the **Tab** key. The cursor will loop through each element in the dialog box, and you can press **Esc** to close it.
 
 
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

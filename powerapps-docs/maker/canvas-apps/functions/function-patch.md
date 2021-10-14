@@ -1,6 +1,6 @@
 ---
-title: Patch function | Microsoft Docs
-description: Reference information, including syntax and examples, for the Patch function in Power Apps
+title: Patch function in Power Apps
+description: Reference information including syntax and examples for the Patch function in Power Apps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -8,11 +8,15 @@ ms.topic: reference
 ms.custom: canvas
 ms.reviewer: nabuthuk
 ms.date: 09/25/2020
+ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - gregli-msft
+  - nkrb
 ---
 # Patch function in Power Apps
 
@@ -21,6 +25,9 @@ Modifies or creates one or more [records](../working-with-tables.md#records) in 
 Use the **Patch** function to modify records in complex situations. Such as, when you do updates that require no user interaction or use forms that span multiple screens.
 
 To update records in a data source more easily for simple changes, use the **Edit form** control instead. When you add an **Edit form** control, you provide users with a form to fill in and then save the changes to a data source. For more information, see [Understand data forms](../working-with-forms.md).
+
+Watch this video to learn how to use the Patch function:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLgbF]
 
 ## Overview
 Use the **Patch** function to modify one or more records of a data source.  The values of specific [fields](../working-with-tables.md#elements-of-a-table) are modified without affecting other properties. For example, this formula changes the phone number for a customer named Contoso:
@@ -44,9 +51,9 @@ To use this function with a data source, specify the data source, and then speci
 
 Then specify one or more change records, each of which contains new property values that override property values in the base record. Change records are processed in order from the beginning of the argument list to the end, with later property values overriding earlier ones.
 
-The return value of **Patch** is the record that you modified or created.  If you created a record, the return value may include properties that the data source generated automatically. However, the return value doesn't provide a value for fields of a related entity.  
+The return value of **Patch** is the record that you modified or created.  If you created a record, the return value may include properties that the data source generated automatically. However, the return value doesn't provide a value for fields of a related table.  
 
-For example, you use `Set(MyAccount, Patch(Accounts, First(Account), 'Account Name': "Example name");` and then `MyAccount.'Primary Contact'.'Full Name'`. You can't yield a full name in this case. Instead, to access the fields of a related entity, use a separate lookup such as:
+For example, you use `Set(MyAccount, Patch(Accounts, First(Account), 'Account Name': "Example name"));` and then `MyAccount.'Primary Contact'.'Full Name'`. You can't yield a full name in this case. Instead, to access the fields of a related table, use a separate lookup such as:
 
 ```powerapps-dot
 LookUp(Accounts, Account = MyAccount.Account).'Primary Contact'.'Full Name'
@@ -96,7 +103,7 @@ Specify two or more records that you want to merge. Records are processed in the
 #### Modify or create a record (in a data source)
 In these examples, you'll modify or create a record in a data source, named **IceCream**, that contains the data in this [table](../working-with-tables.md) and automatically generates the values in the **ID** [column](../working-with-tables.md#columns):
 
-![Example icecream](media/function-patch/icecream.png "Example icecream")
+![Example icecream.](media/function-patch/icecream.png "Example icecream")
 
 | Formula | Description | Result |
 | --- | --- | --- |
@@ -105,7 +112,7 @@ In these examples, you'll modify or create a record in a data source, named **Ic
 
 After the previous formulas have been evaluated, the data source ends with these values:
 
-![Example icecream after](media/function-patch/icecream-after.png "Example icecream after")
+![Example icecream after.](media/function-patch/icecream-after.png "Example icecream after")
 
 #### Merge records (outside of a data source)
 
@@ -249,3 +256,5 @@ To learn more about the usage of **As** operator and **ThisRecord** see **[Opera
 
 
   
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

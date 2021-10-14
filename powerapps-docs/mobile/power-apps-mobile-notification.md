@@ -1,11 +1,12 @@
 ---
 title: Set up push notification for the Power Apps mobile app| Microsoft Docs
 description: Learn how to send push notifications for Power Apps mobile.
-author: mduelae
+author: anuitz
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 10/23/2020
+ms.date: 3/8/2021
+ms.subservice: mobile
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
@@ -16,12 +17,12 @@ search.app:
   - PowerApps
 ---
 
-# Create push notifications for the Power Apps mobile app
+# Create push notifications for Power Apps mobile
 
 
 Push notifications are used in Power Apps mobile to engage app users and help them prioritize key tasks. In Power Apps, you can create notifications for Power Apps mobile by using the Power Apps Notification connector. You can send notifications to any app that you create in Power Apps. 
  
-![Example of what a push notification looks like](media/pic1-notification-screenshot.png)
+![Example of what a push notification looks like.](media/sample-notification.gif)
 
 Add a push notification to your app if:
 
@@ -38,8 +39,8 @@ Create an app
 
 You need to have **Contributor** permission for a model-driven app or canvas app. If you don't have an app, you can create one. For information, see:
 
-- [Create a model-drive app](https://docs.microsoft.com/powerapps/maker/model-driven-apps/build-first-model-driven-app#create-your-model-driven-app)
-- [Create a canvas app](https://docs.microsoft.com/powerapps/maker/canvas-apps/get-started-test-drive)
+- [Create a model-drive app](../maker/model-driven-apps/build-first-model-driven-app.md#create-your-model-driven-app)
+- [Create a canvas app](../maker/canvas-apps/get-started-test-drive.md)
      
 ## Create a notification from a flow
 
@@ -48,28 +49,28 @@ When you trigger a push notification from a flow, you can send the notification 
 1. Go to [Power Automate](https://flow.microsoft.com) and select **Create**.
 
    > [!div class="mx-imgBorder"] 
-   > ![Select Create](media/create-notification.png)
+   > ![Select Create.](media/create-notification.png)
 
 2. Select **Automated flow**.
 
    > [!div class="mx-imgBorder"] 
-   > ![Select Instant flow](media/create-notification-step2.png)
+   > ![Select Instant flow.](media/create-notification-step2.png)
 
 3. On the **Build an automated flow** screen, choose one of the flow trigger or select **Skip** and manually create one.
 
    > [!div class="mx-imgBorder"] 
-   > ![Select skip](media/create-notification-step3.png)
+   > ![Select skip.](media/create-notification-step3.png)
    
    
  4. From the list of connectors and triggers select **Microsoft Dataverse (current environment)**.  
  
     > [!div class="mx-imgBorder"] 
-    > ![Select Dataverse](media/create-notification-step4.png)
+    > ![Select Dataverse.](media/create-notification-step4.png)
     
  5. Select the action that will trigger the notification. 
  
     > [!div class="mx-imgBorder"] 
-    > ![Choose a trigger for the notification](media/create-notification-step5.png)
+    > ![Choose a trigger for the notification.](media/create-notification-step5.png)
     
     
  6. Enter the trigger condition information and then select **New step**.  
@@ -81,12 +82,12 @@ When you trigger a push notification from a flow, you can send the notification 
     | Scope |Select the scope. |
  
     > [!div class="mx-imgBorder"] 
-    > ![Choose the tigger condition](media/create-notification-step6.png)
+    > ![Choose the tigger condition.](media/create-notification-step6.png)
  
-7. In the **Choose an action** search box, enter **send push notification**. In the list of **Actions** choose **Send push notification V2 (preview)**.
+7. In the **Choose an action** search box, enter **send push notification**. In the list of **Actions** choose **Send push notification V2**.
  
     > [!div class="mx-imgBorder"] 
-    > ![Find Send push notification](media/create-notification-step7.png)
+    > ![Find Send push notification.](media/create-notification-step7.png)
  
  
  6. On the **Send push notification** screen, enter the following information:
@@ -100,21 +101,21 @@ When you trigger a push notification from a flow, you can send the notification 
  
       - **Recipient Items-1**: Select how the flow is triggered.
       - **Message**: Enter the notification message.
-      - **Open app**: Select whether to open the app or not when the user selects the notification.
+      - **Open app**: Select whether to open the model-driven app or not when the user selects the notification.
       - **Table**: Select which table the notification is for.
       - **Form or view**: Select if the notification is for a form or view.
       - **Row ID**: If the notification is for a form, then enter the row ID.
 
-      ![Enter the notification information for the app](media/modelapp-info.png)
+      ![Enter the notification information for the app.](media/modelapp-info.png)
 
 - For a canvas app, enter this information: 
     
      - **Recipient Items-1**: Select how the flow is triggered.
      - **Message**: Enter the notification message.
-     - **Open app**: Select whether to open the app or not when the user selects the notification.
+     - **Open app**: Select whether to open the canvas app or not when the user selects the notification.
      - **Parameters**: Key-value parameters to pass with the notification. Your push notification can pass specific parameters to the app. These can be further processed in the app to open a specific page and load a specific state. For more information, see [Perform an action when a user taps the notification](power-apps-mobile-notification.md#perform-an-action-when-a-user-taps-the-notification).
 	 
-     ![Enter the notification information](media/canvasapp-info.png)
+     ![Enter the notification information.](media/canvasapp-info.png)
 	
 8. When you're done, select **Save**. 
 9. Select **Flow checker** to check for error or warnings.
@@ -127,7 +128,7 @@ When you trigger a push notification from a flow, you can send the notification 
 For canvas apps, you can pass key-value pairs using the **Parameters** field as JSON. For example, if you wanted to pass the CaseID, you would put the following as **Parameters**:
 ` { "CaseID": 42 }`. You can also use dynamic values from earlier steps as shown below.
 
-![Sample parameters](media/para-image.png)
+![Sample parameters.](media/para-image.png)
 
 ### Read parameters
 
@@ -157,7 +158,11 @@ You can set your app to open, for example, the **Case details** page as soon as 
 * Currently, notifications aren't displayed on Power Apps Mobile for Windows Phone.
 * Currently, we don't provide push notifications for users who run apps only in a web browser.
 * Notifications show the generic Power Apps icon instead of a specific app icon.
+* Notifications are not supported in China.
 
-For reference information, see [Power Apps Notification reference](https://docs.microsoft.com/connectors/powerappsnotification/).
+For reference information, see [Power Apps Notification reference](/connectors/powerappsnotification/).
 
 
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

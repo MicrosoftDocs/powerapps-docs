@@ -1,7 +1,8 @@
 ---
 title: Type Group Element | Microsoft Docs
-description: 
+description: The type-group node defines a set of types identified by a single name. This information can be used to identify the data types supported by a specific property.
 keywords:
+ms.subservice: pcf
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
@@ -19,9 +20,9 @@ ms.assetid: ec7c1ad4-b834-4755-8a04-2c8940f75674
 
 ## Available for
 
-Model-driven apps and canvas apps (public preview)
+Model-driven and canvas apps
 
-## Attributes
+## Parameters
 
 |Name|Description|Type|Required|
 |--|--|--|--|
@@ -40,15 +41,41 @@ Model-driven apps and canvas apps (public preview)
 |--|--|--|
 |[type](type.md)|[!INCLUDE [type-description](includes/type-description.md)]|1 or more|
 
+The `type-group` has a limited support for canvas apps. When the type groups can easily resolve to a common type, the "most compatible" type (generally the least specific type) is chosen for the type of the given column. The resolvable type groupings are as follows:
 
-The `type-group` has a limited support for canvas apps in this experimental preview . The following issues occur when you try to import components into Microsoft Dataverse:
-
-1. All the types listed in the in the type-group are of compatible in canvas apps. The types that are compatible are:
    - **Strings**: SingleLine.Text, Multiple, SingleLine.TextArea, SingleLine.Email, SingleLine.Phone, SingleLine.URL, SingleLine.Ticker.
-   - **Numbers**: Decimal, Floating Point, Whole.None, Currency.
+   - **Numbers**: Decimal, FP, Whole.None, Currency.
    - **Dates**: DateAndTime.DateAndTime, DateAndTime.DateOnly.
 
-2. If the types listed in the `type-group` are mix of compatible and non compatible types, then the first compatible type listed in the `type-group` is considered.
+For example, the following type group results in the component receiving the value **Decimal** as the type for the given parameter's type:
+
+```XML
+<type-group name="numeric">
+       <type>FP</type>
+       <type>Decimal</type>
+       <type>Whole.None</type>
+</type-group>
+```
+When a `type-group` includes a value that is not included in any of the above groups, or includes values from more than one group, the first value listed in the `type-group` is  chosen as the type for that parameter.
+
+For example, the following type group results in the component receiving the value **TwoOptions** for the given parameter's type:
+```XML
+<type-group name="example1">
+       <type>TwoOptions</type>
+       <type>Decimal</type>
+       <type>FP</type>
+</type-group>
+```
+While the following would again receive "Decimal":
+
+```XML
+<type-group name="example2">
+       <type>Decimal</type>
+       <type>TwoOptions</type>
+       <type>FP</type>
+</type-group>
+```
+
 
 ### Example
 
@@ -66,3 +93,6 @@ The `type-group` has a limited support for canvas apps in this experimental prev
 [Power Apps component framework manifest schema reference](index.md)<br/>
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

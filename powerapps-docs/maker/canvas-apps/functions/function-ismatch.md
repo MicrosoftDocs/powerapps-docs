@@ -1,6 +1,6 @@
 ---
-title: IsMatch, Match, and MatchAll functions | Microsoft Docs
-description: Reference information, including syntax, for the IsMatch, Match, and MatchAll functions in Power Apps
+title: IsMatch, Match, and MatchAll functions in Power Apps
+description: Reference information including syntax and examples for the IsMatch, Match, and MatchAll functions in Power Apps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -8,11 +8,15 @@ ms.topic: reference
 ms.custom: canvas
 ms.reviewer: nabuthuk
 ms.date: 02/07/2020
+ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - gregli-msft
+  - nkrb
 ---
 # IsMatch, Match, and MatchAll functions in Power Apps
 Tests for a match or extracts portions of a text string based on a pattern.
@@ -106,7 +110,7 @@ The pattern that these functions use is a [regular expression](https://en.wikipe
 
 Regular expressions are very powerful, available in many programming languages, and used for a wide variety of purposes. They can also often look like a random sequence of punctuation marks. This article doesn't describe all aspects of regular expressions, but a wealth of information, tutorials, and tools are available on the web.  
 
-Regular expressions come in different dialects, and Power Apps uses a variant of the JavaScript dialect. See [regular-expression syntax](https://msdn.microsoft.com/library/1400241x.aspx) for an introduction to the syntax. Named sub-matches (sometimes called named capture groups) are supported:
+Regular expressions come in different dialects, and Power Apps uses a variant of the JavaScript dialect. See [regular-expression syntax](/previous-versions/1400241x(v=vs.100)) for an introduction to the syntax. Named sub-matches (sometimes called named capture groups) are supported:
 
 - Named sub-matches: **(?&lt;*name*&gt; ...)**
 - Named backreferences: **\\k&lt;*name*&gt;**
@@ -206,9 +210,9 @@ Set( pangram, "The quick brown fox jumps over the lazy dog." )
 | Formula | Description | Result |
 |---------|-------------|--------|
 | `Match( pangram, "THE", IgnoreCase )` | Find all matches of "THE" in the text string that the **pangram** variable contains. The string contains two matches, but only the first is returned because you're using **Match** and not **MatchAll**. The SubMatches column is empty because no sub-matches were defined.  | {<br>FullMatch: "The",<br>SubMatches: [&nbsp;],<br>StartMatch: 32<br>} |
-| `MatchAll( pangram, "the" )` | Find all matches of "the" in the text string that the **pangram** variable contains. The test is case sensitive, so only the second instance of "the" is found. The SubMatches column is empty because no sub-matches were defined.  |  ![](media/function-ismatch/pangram-the-one.png) |
-| `MatchAll( pangram, "the", IgnoreCase )` | Find all matches of "the" in the text string that the **pangram** variable contains. In this case, the test is case insensitive, so both instances of the word are found. The SubMatches column is empty because no sub-matches were defined.  |  ![](media/function-ismatch/pangram-the-two.png) |
-| `MatchAll( pangram, "\b\wo\w\b" )` | Finds all three-letter words with an "o" in the middle. Note that "brown" is excluded because it's not a three-letter word and, therefore, fails to match "\b" (word boundary).  |  ![](media/function-ismatch/pangram-fox-dog.png) |
+| `MatchAll( pangram, "the" )` | Find all matches of "the" in the text string that the **pangram** variable contains. The test is case sensitive, so only the second instance of "the" is found. The SubMatches column is empty because no sub-matches were defined.  |  ![MatchAll for pangram.](media/function-ismatch/pangram-the-one.png) |
+| `MatchAll( pangram, "the", IgnoreCase )` | Find all matches of "the" in the text string that the **pangram** variable contains. In this case, the test is case insensitive, so both instances of the word are found. The SubMatches column is empty because no sub-matches were defined.  |  ![MatchAll with IgnoreCase.](media/function-ismatch/pangram-the-two.png) |
+| `MatchAll( pangram, "\b\wo\w\b" )` | Finds all three-letter words with an "o" in the middle. Note that "brown" is excluded because it's not a three-letter word and, therefore, fails to match "\b" (word boundary).  |  ![MatchAll for pangram with b, wo, w and b.](media/function-ismatch/pangram-fox-dog.png) |
 | `Match( pangram, "\b\wo\w\b\s\*(?<between>\w.+\w)\s\*\b\wo\w\b" )` | Matches all the characters between "fox" and "dog". | {<br>between:&nbsp;"jumps&nbsp;over&nbsp;the&nbsp;lazy",<br>FullMatch:&nbsp;"fox&nbsp;jumps&nbsp;over&nbsp;the&nbsp;lazy&nbsp;dog",<br>SubMatches: [ "jumps over the lazy" ],<br>StartMatch: 17<br> } |
 
 To see the results of **MatchAll** in a gallery:
@@ -217,7 +221,7 @@ To see the results of **MatchAll** in a gallery:
 
 2. Set the gallery's **Items** property to **MatchAll( pangram, "\w+" )** or **MatchAll( pangram, MultipleLetters )**.
 
-	![](media/function-ismatch/pangram-gallery1.png)
+	![Items gallery.](media/function-ismatch/pangram-gallery1.png)
 
 3. Select "Add an item from the Insert tab" in the middle of the gallery control to select the template of the gallery. 
 
@@ -227,4 +231,7 @@ To see the results of **MatchAll** in a gallery:
  
     The gallery is filled with each word in our example text.  Resize the gallery's template and the label control in order to see all the words on one screen.
 
-	![](media/function-ismatch/pangram-gallery2.png)
+	![Text property.](media/function-ismatch/pangram-gallery2.png)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

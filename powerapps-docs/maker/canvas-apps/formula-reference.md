@@ -1,20 +1,28 @@
 ---
-title: Functions, signals, and enumerations | Microsoft Docs
+title: Formula reference for Power Apps
 description: Reference information for functions, signals, and enumerations in Power Apps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm
-ms.date: 07/17/2020
+ms.reviewer: nkrb
+ms.date: 08/09/2021
+ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - nkrb
+  - gregli-msft
 ---
 # Formula reference for Power Apps
+
+> [!NOTE]
+> Have you checked out new [Microsoft Power Fx](/power-platform/power-fx/overview)?
+
 Formulas combine many elements.  Listed below are:
 
 * **Functions** take parameters, perform an operation, and return a value. For example, **Sqrt(25)** returns **5**. Functions are modeled after Microsoft Excel functions.  Some functions have side effects, such as **SubmitForm**, which are appropriate only in a [behavior formula](working-with-formulas-in-depth.md) such as **Button.OnSelect**.
@@ -49,7 +57,7 @@ Other elements include:
 
 **[As](functions/operators.md#thisitem-thisrecord-and-as-operators)** – Names the current record in gallery, form, and record scope functions such as **ForAll**, **With**, and **Sum**.
 
-**[AsType](functions/function-astype-istype.md)** – Treats a record reference as a specific entity type.
+**[AsType](functions/function-astype-istype.md)** – Treats a record reference as a specific table type.
 
 **[Atan](functions/function-trig.md)** – Returns the arctangent of a number, in radians.
 
@@ -72,6 +80,8 @@ Other elements include:
 **[Clear](functions/function-clear-collect-clearcollect.md)** – Deletes all data from a [collection](working-with-data-sources.md#collections).
 
 **[ClearCollect](functions/function-clear-collect-clearcollect.md)** – Deletes all data from a collection and then adds a set of [records](working-with-tables.md#records).
+
+**[ClearData](functions/function-savedata-loaddata.md)** – Clears a collection or all collections from an app host such as a local device.
 
 **[Clock](functions/function-clock-calendar.md)** – Retrieves information about the clock for the current locale.
 
@@ -179,7 +189,11 @@ Other elements include:
 
 **[in](functions/operators.md#in-and-exactin-operators)** – Checks if a text string is contained within another text string or table, case independent.  Also used to check if a record is in a table.
 
+**[Int](functions/function-round.md)** – Rounds down to the nearest integer.
+
 **[IsBlank](functions/function-isblank-isempty.md)** – Checks for a [blank](functions/function-isblank-isempty.md) value.
+
+**[IsBlankOrError](functions/function-iferror.md)** – Checks for a [blank](functions/function-isblank-isempty.md) value or error.
 
 **[IsEmpty](functions/function-isblank-isempty.md)** – Checks for an empty table.
 
@@ -189,9 +203,11 @@ Other elements include:
 
 **[IsNumeric](functions/function-isnumeric.md)** – Checks for a numeric value.
 
+**[ISOWeekNum](functions/function-weeknum.md)** – Returns the ISO week number of a date/time value.
+
 **[IsToday](functions/function-now-today-istoday.md)** – Checks whether a date/time value is sometime today.
 
-**[IsType](functions/function-astype-istype.md)** – Checks whether a record reference  refers to a specific entity type.
+**[IsType](functions/function-astype-istype.md)** – Checks whether a record reference  refers to a specific table type.
 
 ## J
 **[JSON](functions/function-json.md)** - Generates a JSON text string for a table, a record, or a value.
@@ -211,7 +227,7 @@ Other elements include:
 
 **[Ln](functions/function-numericals.md)** – Returns the natural log.
 
-**[LoadData](functions/function-savedata-loaddata.md)** – Loads a collection from a local device's storage.
+**[LoadData](functions/function-savedata-loaddata.md)** – Loads a collection from an app host such as a local device.
 
 **[Location](functions/signals.md)** – Returns your location as a map coordinate by using the Global Positioning System (GPS) and other information.
 
@@ -270,9 +286,13 @@ Other elements include:
 
 **[Rand](functions/function-rand.md)** – Returns a pseudo-random number.
 
+**[ReadNFC](functions/function-readnfc.md)** – Reads a Near Field Communication (NFC) tag.
+
+**[RecordInfo](functions/function-recordinfo.md)** – Provides information about a record of a data source.
+
 **[Refresh](functions/function-refresh.md)** – Refreshes the records of a data source.
 
-**[Relate](functions/function-relate-unrelate.md)** – Relates records of two entities through a one-to-many or many-to-many relationship.
+**[Relate](functions/function-relate-unrelate.md)** – Relates records of two tables through a one-to-many or many-to-many relationship.
 
 **[Remove](functions/function-remove-removeif.md)** – Removes one or more specific records from a data source.
 
@@ -301,7 +321,7 @@ Other elements include:
 **[RoundUp](functions/function-round.md)** – Rounds up to the smallest next number.
 
 ## S
-**[SaveData](functions/function-savedata-loaddata.md)** – Saves a collection to a local device's storage.
+**[SaveData](functions/function-savedata-loaddata.md)** – Saves a collection to an app host such as a local device.
 
 **[Search](functions/function-filter-lookup.md)** – Finds records in a table that contain a string in one of their columns.  
 
@@ -370,10 +390,12 @@ Other elements include:
 
 **[TrimEnds](functions/function-trim.md)** – Removes extra spaces from the ends of a string of text only.
 
+**[Trunc](functions/function-round.md)** – Truncates the number to only the integer portion by removing any decimal portion.
+
 ## U
 **[Ungroup](functions/function-groupby.md)** – Removes a grouping.
 
-**[Unrelate](functions/function-relate-unrelate.md)** – Unrelates records of two entities from a one-to-many or many-to-many relationship.
+**[Unrelate](functions/function-relate-unrelate.md)** – Unrelates records of two tables from a one-to-many or many-to-many relationship.
 
 **[Update](functions/function-update-updateif.md)** – Replaces a record in a data source.
 
@@ -397,8 +419,13 @@ Other elements include:
 ## W
 **[Weekday](functions/function-datetime-parts.md)** – Retrieves the weekday portion of a date/time value.
 
+**[WeekNum](functions/function-weeknum.md)** – Returns the week number of a date/time value.
+
 **[With](functions/function-with.md)** – Calculates values and performs actions for a single record, including inline records of named values.
 
 ## Y
 **[Year](functions/function-datetime-parts.md)** – Retrieves the year portion of a date/time value.  
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

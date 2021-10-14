@@ -7,6 +7,7 @@ ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
 author: "KumarVivek" # GitHub ID
+ms.subservice: mda-developer
 ms.author: "kvivek" # MSFT alias of Microsoft employees only
 manager: "shilpas" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -172,3 +173,6 @@ td
  [Using Script (JScript) Web Resources](script-jscript-web-resources.md)   
  [Using Data (XML) Web Resources](data-xml-web-resources.md)   
  [Using Image (JPG, PNG, GIF) Web Resources](image-web-resources.md)   
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

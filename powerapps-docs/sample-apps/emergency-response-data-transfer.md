@@ -7,6 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 06/10/2020
+ms.subservice: sample-apps
 ms.author: pankar
 ms.reviewer: kvivek
 
@@ -21,7 +22,7 @@ Microsoft provides you the following solutions for emergency response:
 
 Hospital Emergency Response solution customers can transfer their hospital data to the regional medical organizations that have Regional Government Emergency Response and Monitoring solution.
 
-The out-of-box solution uses the Secure File Transfer Protocol (SFTP) as the data transmission mechanism. Customers can use other ways to transfer data to/from these solutions such as [importing and exporting data as CSV files](/powerapps/maker/common-data-service/data-platform-import-export) and [using web services](/powerapps/developer/common-data-service/work-with-data-cds) to programmatically interact with data in Microsoft Dataverse, which is the underlying data store for these solutions.
+The out-of-box solution uses the Secure File Transfer Protocol (SFTP) as the data transmission mechanism. Customers can use other ways to transfer data to/from these solutions such as [importing and exporting data as CSV files](../maker/data-platform/data-platform-import-export.md) and [using web services](../developer/data-platform/work-with-data.md) to programmatically interact with data in Microsoft Dataverse, which is the underlying data store for these solutions.
 
 This article provides information about how to use SFTP to do the data transfer.
 
@@ -38,7 +39,7 @@ This is how the data transfer happens:
 These are the prerequisites for the data transfer to work successfully.
 
 - **SFTP server**: The regional health organization must have an SFTP server configured with a folder for each hospital on the SFTP server where the hospital can publish their data. The hospital must get the credentials from regional health organization to connect to the folder on the SFTP server.<br/>
-For information about creating an SFTP server, see [SFTP on Azure](https://docs.microsoft.com/samples/azure-samples/sftp-creation-template/sftp-on-azure/)
+For information about creating an SFTP server, see [SFTP on Azure](/samples/azure-samples/sftp-creation-template/sftp-on-azure/)
 
 - **CDC Short Name**: Each **Supply** and **Staffing Type** record must have the **CDC Short Name** value. You can create and manage these records in the **Admin app** of hospital and regional solutions.
 
@@ -73,7 +74,7 @@ This step is required for both hospital and regional solutions.
 1. From the search results, select **+** next to **Common Data Service** connector to add a connection.
 
     > [!div class="mx-imgBorder"] 
-    > ![Common Data Service connector](media/cds-connector.png)
+    > ![Common Data Service connector.](media/cds-connector.png)
 
 1. On the next screen, select **Create**. Select or specify the credentials to create the connector. On successful authentication, your connection will be created.
 
@@ -88,7 +89,7 @@ This step is required for both hospital and regional solutions.
 1. From the search results, select **+** next to **SFTP - SSH** connector to add a connection.
 
     > [!div class="mx-imgBorder"] 
-    > ![SFTP connector](media/sftp-connector.png)
+    > ![SFTP connector.](media/sftp-connector.png)
 
 1. In the **SFTP - SSH** dialog box, provide the credentials to connect to the folder on the SFTP server. These details would have been already provided to you by your regional health organization as mentioned earlier in the **Prerequisites** section.
 
@@ -119,7 +120,7 @@ To enable these flows:
 1.  In the solution, filter on **Flow** to find all the flows.
 
     > [!div class="mx-imgBorder"] 
-    > ![All flows](media/all-flows-hospital.png)
+    > ![All flows.](media/all-flows-hospital.png)
 
 1.  Select a flow name to open the flow definition. For example, select **Publish Bed Census Data**. 
 
@@ -129,7 +130,7 @@ To enable these flows:
 
 1.  Repeat steps 4-6 for other flows listed earlier.
 
-If you face any issues working with flows, try [Troubleshooting a flow](https://docs.microsoft.com/power-automate/fix-flow-failures).
+If you face any issues working with flows, try [Troubleshooting a flow](/power-automate/fix-flow-failures).
 
 ### Step 3: Specify the data publish schedule (Hospital)
 
@@ -142,19 +143,19 @@ The **Publish Data for All Facilities** flow contains the information about the 
 1.  In the solution, search for "Publish Data for". The **Publish Data for All Facilities** flow appears in the search result.
 
     > [!div class="mx-imgBorder"] 
-    > ![Publish Data for All Facilities flow](media/publish-all-data-flow.png)
+    > ![Publish Data for All Facilities flow.](media/publish-all-data-flow.png)
 
 1.  Select the flow name to open the flow definition, and then select **Edit** in the toolbar.
 
 1.  In the flow definition, select **Recurrence** and then select **Edit**.
 
     > [!div class="mx-imgBorder"] 
-    > ![Update the data publish recurrence schedule](media/update-publish-schedule1.png)
+    > ![Update the data publish recurrence schedule.](media/update-publish-schedule1.png)
 
 1. Specify the data publish recurrence schedule. 
 
     > [!div class="mx-imgBorder"] 
-    > ![Update the data publish recurrence schedule](media/update-publish-schedule2.png)
+    > ![Update the data publish recurrence schedule.](media/update-publish-schedule2.png)
 
 1.  Select **Save** to save your changes.
 
@@ -178,7 +179,7 @@ In this step, we will enable the **Create Record when a File is Created in SFTP 
 1.  In the solution, filter on **Flow** to find all the flows.
 
     > [!div class="mx-imgBorder"] 
-    > ![Flows in the app](media/conf-all-flows.png "Flows in the app")
+    > ![Flows in the app.](media/conf-all-flows.png "Flows in the app")
 
 1.  Select the **Create Record when a File is Created in SFTP Location** flow to open the flow definition. 
 
@@ -196,7 +197,7 @@ In this step, we will enable the **Create Record when a File is Created in SFTP 
     
     1. Select **When a file is added or modified**, and select appropriate value in the **Folder** field:
         > [!div class="mx-imgBorder"] 
-        > ![Edit the flow](media/edit-flow.png "Edit the flow")
+        > ![Edit the flow.](media/edit-flow.png "Edit the flow")
 
 1.  Select **Save** to save the changes, and then select **Turn On**.
 
@@ -214,19 +215,19 @@ After your IT admin has configured the solution for data transfer from the hospi
 1. In the app, all the facilities are listed. Select a facility for which you want to review the data and publish. This will open the facility record.
 
     > [!div class="mx-imgBorder"] 
-    > ![Facility review](media/facility-review.png)
+    > ![Facility review.](media/facility-review.png)
 
 1. Scroll down the page to review the following data for your facility: Bed Census, COVID Stats, Equipment Needs, Supply Tracking, and Staff Updates. If necessary, update the data in grids, and then select the save icon to save your changes.
 
     > [!div class="mx-imgBorder"] 
-    > ![Update values](media/update-values.png)
+    > ![Update values.](media/update-values.png)
 
 1. Once reviewed, you can select a row of data, and select **Mark Complete**. Select **OK** in the confirmation dialog box to complete the action.
 
     The record's review status changes to **Completed**.
 
     > [!div class="mx-imgBorder"] 
-    > ![Review completed](media/review-completed.png)
+    > ![Review completed.](media/review-completed.png)
 
 The scheduled flows will pick up the completed items for publishing to the SFTP folder that you configured earlier ([Step 3: Specify the data publish schedule (Hospital)](#step-3-specify-the-data-publish-schedule-hospital)).
 
@@ -237,17 +238,17 @@ The scheduled flow publishes data at a certain time, but what if you want to man
 1.  In the **Review and Publish Data** app, select the record that you want to publish from the **Published History** in the left pane. All the published data for the selected entity are displayed. If you want to view the active records for the entity, use the view selector.
 
     > [!div class="mx-imgBorder"] 
-    > ![Review completed](media/manual-data-publish.png)
+    > ![Review completed.](media/manual-data-publish.png)
 
 1. In this case, we will publish the data that we reviewed in the previous section. So, select the **Active Bed Census** view, select the row that was marked as completed, and then select **Flow** > **Publish Bed Census Data**.
 
     > [!div class="mx-imgBorder"] 
-    > ![Manually run flow](media/manually-run-flow.png)
+    > ![Manually run flow.](media/manually-run-flow.png)
 
 1. On the next screen, review that the connections are valid, and select **Continue**.
 
     > [!div class="mx-imgBorder"]
-    > ![Manually run flow](media/publish-data-flow.png)
+    > ![Manually run flow.](media/publish-data-flow.png)
 
 1. On the next screen select **Run flow**. A message appears stating that the flow run started successfully and how you can monitor the progress.
 
@@ -257,3 +258,6 @@ The scheduled flow publishes data at a certain time, but what if you want to man
 
 - For feedback about the Hospital Emergency Response sample app, visit <https://aka.ms/emergency-response-feedback>.
 
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

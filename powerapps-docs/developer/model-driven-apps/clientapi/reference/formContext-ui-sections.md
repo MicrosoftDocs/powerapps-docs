@@ -7,6 +7,7 @@ ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: e362dfb2-cb64-49f5-b3d4-d77e813325ca
 author: "Nkrb"
+ms.subservice: mda-developer
 ms.author: "nabuthuk"
 manager: "kvivek"
 search.audienceType: 
@@ -49,3 +50,6 @@ var sectionObj = tabObj.sections.get(arg);
 [formcontext.ui.tabs](formcontext-ui-tabs.md)
 
 [formContext](../clientapi-form-context.md)
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

@@ -1,10 +1,12 @@
 ---
 title: "getMin (Client API reference)| MicrosoftDocs"
-ms.date: 01/24/2019
+description: Includes description and supported parameters for the getMin method.
+ms.date: 04/19/2021
 ms.service: powerapps
 ms.topic: "reference"
 ms.assetid: 9a04b52a-2bc7-4572-bd3e-8b9622602092
 author: "Nkrb"
+ms.subservice: mda-developer
 ms.author: "nabuthuk"
 manager: "kvivek"
 search.audienceType: 
@@ -17,9 +19,9 @@ search.app:
 
 
 
-Returns a number indicating the minimum allowed value for an attribute. 
+Returns a number indicating the minimum allowed value for a column. 
 
-## Attribute types supported
+## Column types supported
 
 Decimal, integer, double, money
 
@@ -31,5 +33,8 @@ Decimal, integer, double, money
 
 **Type**: Number. 
 
-**Description**: The minimum allowed value for the attribute.
+**Description**: The minimum allowed value for the column.
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

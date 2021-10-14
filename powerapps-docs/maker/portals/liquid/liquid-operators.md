@@ -1,13 +1,17 @@
 ---
-title: "Use Liquid operators for a portal | MicrosoftDocs"
-description: "Learn about the available liquid operators in a portal."
+title: Understand Liquid operators
+description: Learn about the available liquid operators in a portal.
 author: gitanjalisingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/07/2019
+ms.date: 04/21/2020
+ms.subservice: portals
 ms.author: gisingh
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - GitanjaliSingh33msft
 ---
 
 # Understand Liquid operators
@@ -72,3 +76,5 @@ This is a forum page.
 [Liquid Objects](liquid-objects.md)  
 [Liquid Tags](liquid-tags.md)  
 [Liquid Filters](liquid-filters.md) 
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

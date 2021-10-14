@@ -1,5 +1,6 @@
 ---
 title: "getId (Client API reference) in model-driven apps| MicrosoftDocs"
+description: Returns a string representing the GUID value for the record.
 ms.date: 10/31/2018
 ms.service: powerapps
 ms.topic: "reference"
@@ -24,6 +25,8 @@ search.app:
 
 `formContext.data.entity.getId();`
 
+[!INCLUDE[cc-terminology](../../../../data-platform/includes/cc-terminology.md)]
+
 ## Return Value
 
 **Type**: String.
@@ -32,3 +35,6 @@ search.app:
 
 
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

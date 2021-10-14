@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: guidance
 ms.date: 06/16/2020
+ms.subservice: guidance
 ms.author: thground
 ms.reviewer: kathyos
 
@@ -86,3 +87,6 @@ several escalation methods:
 
 > [!div class="nextstepaction"]
 > [I've documented all the tasks](visually-map-process.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

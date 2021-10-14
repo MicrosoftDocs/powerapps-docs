@@ -1,6 +1,6 @@
 ---
 title: getClient | Microsoft Docs
-description: 
+description: Returns a value to indicate which client the script is executing in.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -25,7 +25,7 @@ ms.assetid: 4b7c18f8-cd00-4f39-8f88-ed9306d6a055
 
 ## Available for 
 
-Model-driven apps and canvas apps (public preview) 
+Model-driven and canvas apps 
 
 
 
@@ -48,3 +48,5 @@ Returns a value to indicate in which client the script is executing.
 [Client](../client.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>
 [Power Apps component framework overview](../../overview.md)
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

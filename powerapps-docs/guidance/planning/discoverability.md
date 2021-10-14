@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: guidance
 ms.date: 06/16/2020
+ms.subservice: guidance
 ms.author: tayoshi
 ms.reviewer: kathyos
 
@@ -62,14 +63,14 @@ to make apps discoverable, as described in the following sections.
 
 ## Featured apps
 
-![Featured apps list](media/featured-apps.png "Featured apps list")
+![Featured apps list.](media/featured-apps.png "Featured apps list")
 
 The [Featured Apps](https://powerapps.microsoft.com/blog/powerapps-discoverability-in-the-enterprise/) list
 is a good way to showcase your app if it was meant to be used
 by the entire company&mdash;for example, for employee search or company news.
 
 For information about how to use PowerShell scripts with Power Apps to set up Featured
-Apps, see [PowerShell support for Power Apps](https://docs.microsoft.com/power-platform/admin/powerapps-powershell#power-apps-cmdlets-for-administrators-preview)
+Apps, see [PowerShell support for Power Apps](/power-platform/admin/powerapps-powershell#power-apps-cmdlets-for-administrators-preview)
 
 ## QR codes
 
@@ -81,7 +82,7 @@ Bing has a QR code generator where you can paste in a URL and it
 will instantly generate a QR code image for you. Right-click the
 QR code image, copy it, and then paste it into your communications as you advertize your app.
 
-![The Bing QR code generator](media/qr-codes.png "The Bing QR code generator")
+![The Bing QR code generator.](media/qr-codes.png "The Bing QR code generator")
 
 ## Deep linking
 
@@ -100,9 +101,9 @@ This is a great way of increasing user satisfaction if this app is to be used in
 scenarios that require going back and forth between Teams and the existing
 process.
 
-![A screenshot of an app embedded in Teams](media/add-app-as-tab.png "A screenshot of an app embedded in Teams")
+![A screenshot of an app embedded in Teams.](media/add-app-as-tab.png "A screenshot of an app embedded in Teams")
 
-More information: [Embed an app in Teams](../../maker/canvas-apps/embed-teams-app.md)
+More information: [Embed an app in Teams](../../teams/embed-teams-app.md)
 
 ## Tie-ins to existing web apps and portals
 
@@ -134,3 +135,6 @@ search results.
 
 > [!div class="nextstepaction"]
 > [Next step: Collect feedback and telemetry](feedback-telemetry.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

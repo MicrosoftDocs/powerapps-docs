@@ -5,15 +5,14 @@ author: kathyos
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: guidance
-ms.date: 07/20/2020
+ms.date: 06/21/2021
+ms.subservice: guidance
 ms.author: kathyos
 ms.reviewer: kathyos
 
 ---
 
 # Pattern: Inspection
-
-![Collage of inspection app screenshots](media/inspection-collage.png "Collage of inspection app screenshots")
 
 There are a variety of reasons why organizations need to perform inspections,
 and Microsoft Power Platform provides a no-code or low-code solution for enabling
@@ -28,7 +27,7 @@ aircraft maintenance to elementary school.
 
 ## How to recognize the inspection pattern
 
-![Illustration of the inspection pattern with record, aggregate, and decide/act/report steps](media/inspection-illustration.png "Illustration of the inspection pattern with record, aggregate, and decide/act/report steps")
+![Illustration of the inspection pattern with record, aggregate, and decide/act/report steps.](media/inspection-illustration.png "Illustration of the inspection pattern with record, aggregate, and decide/act/report steps")
 
 In a typical inspection scenario:
 
@@ -53,6 +52,40 @@ In a typical inspection scenario:
         decide to take it out of service. Or the centralized report might show that daily
         maintenance standards need to be improved in a particular location.
 
+## Template: Inspection solution for Microsoft Teams
+
+The Inspection solution for Microsoft Teams is a general inspection app that can be used to inspect anything from a location (such as a retail store or manufacturing plant) to assets and equipment (such as vehicles and machines). The solution includes an app for performing inspections as well as an app for configuring and managing inspections.
+
+![Screenshot of the Inspection app for Microsoft Teams.](media/review-inspection.png "Screenshot of the Inspection app for Microsoft Teams")
+
+Learn more about the solution:  [Video](https://aka.ms/TeamsInspectionVideo) |  [Documentation](https://aka.ms/TeamsInspectionDocs) |  [Teams app installer](https://aka.ms/TeamsInspection)
+
+## Template: Hospital Emergency Response sample solution
+
+The Hospital Emergency Response sample solution provides a set of capabilities
+for healthcare organizations to collect data for situational awareness of
+available beds and supplies, COVID-19&ndash;related patients, staffing, and pending
+discharges. This solution implements the inspection pattern by collecting an
+inventory of available hospital beds and supplies. It also uses dashboards to
+summarize key data and insights for users to make informed decisions, resulting
+in efficient deployment and usage of resources.
+
+![Screenshots of the Hospital Emergency Response app.](media/hospital-emergency-response-app.png "Screenshots of the Hospital Emergency Response app")
+
+The main components of the Hospital Emergency Response solution are:
+
+- **Mobile app for frontline staff**: Frontline staff, such as nurses and
+    medical practitioners, can use the mobile app to quickly view and enter
+    information as required.
+
+- **Web app for hospital admins**: Hospital admins can use this app to add and
+    manage system data required for the solution to work.
+
+- **Dashboards for healthcare decision makers**: Decision makers can use dashboards to quickly
+    view important data and metrics to help make decisions efficiently.
+
+Learn more about the solution: [Video](https://youtu.be/Dg-i3F9G01I) | [Documentation](../../sample-apps/emergency-response/overview.md) | [Blog post](https://powerapps.microsoft.com/blog/emergency-response-solution-a-microsoft-power-platform-solution-for-healthcare-emergency-response/)
+
 ## How customers are using the inspection pattern
 
 ### Virgin Atlantic safety and compliance app
@@ -70,14 +103,14 @@ highlighted in green to provide a visual aid. Unexpected answers are highlighted
 in red and followed up with a prompt, which the engineer can use to record a finding
 and assign a follow-up task to a manager.
 
-![Screenshots of the Virgin Atlantic safety and compliance audit app](media/virgin-atlantic-aircraft-inspection.png "Screenshots of the Virgin Atlantic safety and compliance audit app")
+![Screenshots of the Virgin Atlantic safety and compliance audit app.](media/virgin-atlantic-aircraft-inspection.png "Screenshots of the Virgin Atlantic safety and compliance audit app")
 
 Engineering compliance managers use a Power Apps canvas app integrated within a
 SharePoint list to review completed inspections and view all inspection
 findings. They can also generate HTML and PDF inspection summaries from the app
 if an inspector or executive requires further information.
 
-![Engineering compliance manager view - Power Apps running embedded in SharePoint](media/virgin-atlantic-audit-summary.jpg "Engineering compliance manager view - Power Apps running embedded in SharePoint")
+![Engineering compliance manager view - Power Apps running embedded in SharePoint.](media/virgin-atlantic-audit-summary.jpg "Engineering compliance manager view - Power Apps running embedded in SharePoint")
 
 ### Standard Bank ATM inspection app
 
@@ -94,7 +127,7 @@ inspection reports each month. The app uses the device GPS capabilities to find
 nearby ATMs and the device camera to take pictures when issues need to be
 reported.
 
-![Standard Bank ATM inspection app](media/standard-bank-atm-app-blurred.png "Standard Bank ATM inspection app")
+![Standard Bank ATM inspection app.](media/standard-bank-atm-app-blurred.png "Standard Bank ATM inspection app")
 
 [Watch a demo of the ATM inspection.](https://youtu.be/-JRUIA8ItWE?t=1469)
 
@@ -104,7 +137,7 @@ which is their central data repository to enable business intelligence to aid in
 future improvements. Power BI dashboards and reports are used to visualize the
 aggregate data.
 
-![Screenshots of the Standard Bank ATM inspection app](media/standard-bank-atm-audit.jpg "Screenshots of the Standard Bank ATM inspection app")
+![Screenshots of the Standard Bank ATM inspection app.](media/standard-bank-atm-audit.jpg "Screenshots of the Standard Bank ATM inspection app")
 
 ### Tacoma Public schools reading assessment
 
@@ -123,42 +156,16 @@ their mobile device or Surface tablets provided by the school. Teachers use the
 app to enter detailed information from each student's reading assessment, such
 as oral reading goals and comprehension goals.
 
-![Screenshots of the Tacoma Public Schools DRA2 app](media/tacoma-schools-dra-app.png "Screenshots of the Tacoma Public Schools DRA2 app")
-
-### Hospital Emergency Response sample solution
-
-The Hospital Emergency Response sample solution provides a set of capabilities
-for healthcare organizations to collect data for situational awareness of
-available beds and supplies, COVID-19&ndash;related patients, staffing, and pending
-discharges. This solution implements the inspection pattern by collecting an
-inventory of available hospital beds and supplies. It also uses dashboards to
-summarize key data and insights for users to make informed decisions, resulting
-in efficient deployment and usage of resources.
-
-![Screenshots of the Hospital Emergency Response app](media/hospital-emergency-response-app.png "Screenshots of the Hospital Emergency Response app")
-
-The main components of the Hospital Emergency Response solution are:
-
-- **Mobile app for frontline staff**: Frontline staff, such as nurses and
-    medical practitioners, can use the mobile app to quickly view and enter
-    information as required.
-
-- **Web app for hospital admins**: Hospital admins can use this app to add and
-    manage system data required for the solution to work.
-
-- **Dashboards for healthcare decision makers**: Decision makers can use dashboards to quickly
-    view important data and metrics to help make decisions efficiently.
-
-
-
-Learn more about the solution: [video](https://youtu.be/Dg-i3F9G01I) | [documentation](https://docs.microsoft.com/powerapps/sample-apps/emergency-response/overview) | [blog post](https://powerapps.microsoft.com/blog/emergency-response-solution-a-microsoft-power-platform-solution-for-healthcare-emergency-response/)
+![Screenshots of the Tacoma Public Schools DRA2 app.](media/tacoma-schools-dra-app.png "Screenshots of the Tacoma Public Schools DRA2 app")
 
 ### Additional stories
 
 - [Pinnacle Group – Helpdesk employee leads transition from paper to digital](https://powerapps.microsoft.com/blog/pinnacle-group/)
 
 - [Kelly Roofing uses Power Apps to capture photos at work sites](https://powerapps.microsoft.com/blog/kellyroofing/)
+- [G & J Pepsi – Transforming in-store merchandising and auditing to achieve targeted business goals](https://customers.microsoft.com/story/gj-pepsi-consumer-goods-powerapps)
 
 ### Microsoft Power Apps Community
 
 - [App sample gallery: Audit](https://powerusers.microsoft.com/t5/forums/searchpage/tab/message?advanced=false&allow_punctuation=false&filter=location&location=forum-board:AppFeedbackGallery&q=audit)
+

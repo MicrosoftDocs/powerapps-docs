@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: guidance
 ms.date: 06/16/2020
+ms.subservice: guidance
 ms.author: thground
 ms.reviewer: kathyos
 
@@ -108,3 +109,6 @@ The SMART goals we decided on are:
 
 > [!div class="nextstepaction"]
 > [Next step: Creating a project plan](defining-app-project-objective.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

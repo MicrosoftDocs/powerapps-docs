@@ -7,7 +7,7 @@ ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "how-to"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -15,6 +15,7 @@ applies_to:
 author: "Mattp123"
 ms.assetid: b4098c96-bce1-4f57-804f-8694e6254e81
 caps.latest.revision: 15
+ms.subservice: mda-maker
 ms.author: "matp"
 manager: "kvivek"
 search.audienceType: 
@@ -81,4 +82,7 @@ In this topic, you use the form navigation pane that is used to add links to rel
 > Installing a solution or publishing customizations can interfere with normal system operation. We recommend that you schedule a solution import when it's least disruptive to users.
   
 ## Next steps  
- [Create and edit table relationships for Microsoft Dataverse](../common-data-service/create-edit-entity-relationships.md)
+ [Create and edit table relationships for Microsoft Dataverse](../data-platform/create-edit-entity-relationships.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

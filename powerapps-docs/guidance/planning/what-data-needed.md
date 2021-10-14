@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: guidance
 ms.date: 06/16/2020
+ms.subservice: guidance
 ms.author: thground
 ms.reviewer: kathyos
 
@@ -73,3 +74,6 @@ report. There's no need to check the information again.
 
 > [!div class="nextstepaction"]
 > [Next step: What data is created?](create-edit-data.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

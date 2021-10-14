@@ -6,6 +6,7 @@ ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: a6646fc8-c2e4-43fe-95f1-51483de38688
 author: "Nkrb"
+ms.subservice: mda-developer
 ms.author: "nabuthuk"
 manager: "kvivek"
 search.audienceType: 
@@ -42,6 +43,9 @@ Provides properties and methods to use Web API to create and manage records and 
 
 ### Related topics
 
-[Use the Microsoft Dataverse Web API](../../../common-data-service/webapi/overview.md)
+[Use the Microsoft Dataverse Web API](../../../data-platform/webapi/overview.md)
 
 [Client API Xrm object](../clientapi-xrm.md)
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

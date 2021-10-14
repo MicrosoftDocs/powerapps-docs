@@ -1,30 +1,31 @@
 ---
-title: Perform portals Web API operations | Microsoft Docs
+title: Portals operations using the Web API
 description: Learn how to perform different Web API operations on Power Apps portals.
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/28/2020
+ms.date: 06/17/2021
+ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: tapanm
+contributors:
+    - neerajnandwana-msft
+    - tapanm-msft
 ---
 
-# Portals operations using the Web API (Preview)
-
-[This article is pre-release documentation and is subject to change.]
+# Portals operations using the Web API
 
 You can perform [available Web API operations](web-api-overview.md#web-api-operations) in portals. Web API operations consist of HTTP requests and responses. This article shows sample operations, methods, URI, and the sample JSON you can use in the HTTP request.
 
 > [!IMPORTANT]
-> - **Your portal version must be 9.2.6.41 or later for this feature to work.**
-> - This feature is in preview. More information: [Understand experimental, preview, and deprecated features in Power Apps](../canvas-apps/working-with-experimental-preview.md)
+> - **Your portal version must be 9.3.3.x or later for this feature to work.**
 
-## Create an entity record
+## Create a record in a table
 
 ### Basic create
 
-<table style="text-align:left">
+<table>
   <tr>
     <th>Operation</th>
     <th>Method</th>
@@ -39,9 +40,9 @@ You can perform [available Web API operations](web-api-overview.md#web-api-opera
   </tr>
 </table>
 
-#### Sample JSON for creating related entity records in one operation
+#### Sample JSON for creating related table records in one operation
 
-For example, the following request body posted to the Account entity set will create a total of four new entities&mdash;including the account&mdash;in the context of creating the account.
+For example, the following request body posted to the Account table set will create a total of four new tables&mdash;including the account&mdash;in the context of creating the account.
 
 - A contact is created because it's defined as an object property of the single-valued navigation property primarycontactid.
 - An opportunity is created because it's defined as an object within an array that's set to the value of a collection-valued navigation property opportunity_customer_accounts.
@@ -68,9 +69,9 @@ For example, the following request body posted to the Account entity set will cr
 }
 ```
 
-### Associate entity records on create
+### Associate table records on create
 
-<table style="text-align:left">
+<table>
   <tr>
     <th>Operation</th>
     <th>Method</th>
@@ -78,7 +79,7 @@ For example, the following request body posted to the Account entity set will cr
     <th>JSON Sample</th>
   </tr>
   <tr>
-    <td>Associate entity records on create</td>
+    <td>Associate table records on create</td>
     <td>POST</td>
     <td><i>[Portal URI]/_api/accounts</i></td>
     <td><code>{"name":"Sample Account","primarycontactid@odata.bind":"/contacts(00000000-0000-0000-0000-000000000001)"}</code></td>
@@ -108,11 +109,11 @@ For example, the following request body posted to the Account entity set will cr
 
 `documentbody` will contain the attachment as a base64 string.
 
-## Update and delete entities by using the Web API
+## Update and delete records by using the Web API
 
 ### Basic update
 
-<table style="text-align:left">
+<table>
   <tr>
     <th>Operation</th>
     <th>Method</th>
@@ -129,7 +130,7 @@ For example, the following request body posted to the Account entity set will cr
 
 ### Update a single property value
 
-<table style="text-align:left">
+<table>
   <tr>
     <th>Operation</th>
     <th>Method</th>
@@ -146,7 +147,7 @@ For example, the following request body posted to the Account entity set will cr
 
 ### Delete a single property value
 
-<table style="text-align:left">
+<table>
   <tr>
     <th>Operation</th>
     <th>Method</th>
@@ -161,7 +162,7 @@ For example, the following request body posted to the Account entity set will cr
 
 ### Basic delete
 
-<table style="text-align:left">
+<table>
   <tr>
     <th>Operation</th>
     <th>Method</th>
@@ -174,11 +175,11 @@ For example, the following request body posted to the Account entity set will cr
   </tr>
 </table>
 
-## Associate and disassociate entities by using the Web API
+## Associate and disassociate tables by using the Web API
 
 ### Add a reference to a collection-valued navigation property
 
-<table style="text-align:left">
+<table>
   <tr>
     <th>Operation</th>
     <th>Method</th>
@@ -193,31 +194,31 @@ For example, the following request body posted to the Account entity set will cr
   </tr>
 </table>
 
-### Remove a reference to an entity
+### Remove a reference to a table
 
-<table style="text-align:left">
+<table>
   <tr>
     <th>Operation</th>
     <th>Method</th>
     <th>URI</th>
   </tr>
   <tr>
-    <td>Remove a reference to an entity</td>
+    <td>Remove a reference to a table</td>
     <td>DELETE</td>
     <td><i>[Portal URI]/_api/accounts(00000000-0000-0000-0000-000000000002)/opportunity_customer_accounts/$ref?$id=[Portal URI]/_api/opportunities(00000000-0000-0000-0000-000000000001)</i></td>
   </tr>
 </table>
 
-### Remove a reference to an entity for a single-valued navigation property
+### Remove a reference to a table for a single-valued navigation property
 For a single-valued navigation property, remove the $id query string parameter.
-<table style="text-align:left">
+<table>
   <tr>
     <th>Operation</th>
     <th>Method</th>
     <th>URI</th>
   </tr>
   <tr>
-    <td>Remove a reference to an entity for a single-valued navigation property</td>
+    <td>Remove a reference to a table for a single-valued navigation property</td>
     <td>DELETE</td>
     <td><i>[Portal URI]/_api/opportunities(00000000-0000-0000-0000-000000000001)/customerid_account/$ref</i></td>
   </tr>
@@ -225,7 +226,7 @@ For a single-valued navigation property, remove the $id query string parameter.
 
 ### Change the reference in a single-valued navigation property
 
-<table style="text-align:left">
+<table>
   <tr>
     <th>Operation</th>
     <th>Method</th>
@@ -240,17 +241,17 @@ For a single-valued navigation property, remove the $id query string parameter.
   </tr>
 </table>
 
-### Associate entities on create
+### Associate tables on create
 
-New entities can be created with relationships by using *deep* insert.
+New tables can be created with relationships by using *deep* insert.
 
-### Associate entities on update by using a single-valued navigation property
+### Associate tables on update by using a single-valued navigation property
 
-You can associate entities on update by using the same message described in [Basic update](#basic-update), earlier in this topic, but you must use the `@odata.bind` annotation to set the value of a single-valued navigation property. The following example changes the account associated to an opportunity by using the customerid_account single-valued navigation property.
+You can associate tables on update by using the same message described in [Basic update](#basic-update), earlier in this topic, but you must use the `@odata.bind` annotation to set the value of a single-valued navigation property. The following example changes the account associated to an opportunity by using the customerid_account single-valued navigation property.
 
-### Associate entities on update by using a single-valued navigation property
+### Associate tables on update by using a single-valued navigation property
 
-<table style="text-align:left">
+<table>
   <tr>
     <th>Operation</th>
     <th>Method</th>
@@ -258,7 +259,7 @@ You can associate entities on update by using the same message described in [Bas
     <th>JSON Sample</th>
   </tr>
   <tr>
-    <td>Associate entities on update by using a single-valued navigation property</td>
+    <td>Associate tables on update by using a single-valued navigation property</td>
     <td>PATCH</td>
     <td><i>[Portal URI]/_api/opportunities(00000000-0000-0000-0000-000000000001)</i></td>
     <td><code>{"customerid_account@odata.bind":"[Portal URI]/_api/accounts(00000000-0000-0000-0000-000000000002)"}</code></td>
@@ -267,7 +268,7 @@ You can associate entities on update by using the same message described in [Bas
 
 ## Web API AJAX samples
 
-This sample demonstrates how to create, update, and delete entity records by using Asynchronous JavaScript and XML (AJAX).
+This sample demonstrates how to create, update, and delete table records by using Asynchronous JavaScript and XML (AJAX).
 
 ### Wrapper AJAX function
 
@@ -312,7 +313,7 @@ This sample demonstrates how to create, update, and delete entity records by usi
 			"name": "Sample Account"
 		}),
 		success: function (res, status, xhr) {
-      //print id of newly created entity record
+      //print id of newly created table record
 			console.log("entityID: "+ xhr.getResponseHeader("entityid"))
 		}
 	});
@@ -356,7 +357,7 @@ You can change the field names, or use a different entity, while following the s
 
 ### Step 1 - Create site settings
 
-Before you can use the portals Web API, you have to enable the required site settings with the Portal Management app. The site settings depend on the entity that you want to use when interacting with the Web API.
+Before you can use the portals Web API, you have to enable the required site settings with the Portal Management app. The site settings depend on the table that you want to use when interacting with the Web API.
 
 1. Go to [Power Apps](https://make.powerapps.com).
 
@@ -364,11 +365,11 @@ Before you can use the portals Web API, you have to enable the required site set
 
 1. Select the **Portal Management** app.
 
-    ![Portal Management app](media/web-api/portal-management.png "Portal Management app")
+    ![Portal Management app.](media/web-api/portal-management.png "Portal Management app")
 
 1. In the **Portal Management** app on the left pane, select **Site Settings**.
 
-    ![Site Settings](media/web-api/site-settings.png "Site Settings")
+    ![Site Settings.](media/web-api/site-settings.png "Site Settings")
 
 1. Select **New**.
 
@@ -378,7 +379,7 @@ Before you can use the portals Web API, you have to enable the required site set
 
 1. In the **Value** box, enter **true**.
 
-   ![Web API contact enabled setting](media/web-api/webapi-contact-enabled.png "Web API contact enabled setting") 
+   ![Web API contact enabled setting.](media/web-api/webapi-contact-enabled.png "Web API contact enabled setting") 
 
 1. Select **Save & Close**.
 
@@ -390,7 +391,7 @@ Before you can use the portals Web API, you have to enable the required site set
 
 1. In the **Value** box, enter<br>**firstname,lastname,fullname,emailaddress1,telephone1**
 
-   ![Web API contact fields](media/web-api/webapi-contact-fields.png "Web API contact fields")
+   ![Web API contact fields.](media/web-api/webapi-contact-fields.png "Web API contact fields")
 
 1. Select **Save & Close**.
 
@@ -402,35 +403,35 @@ Before you can use the portals Web API, you have to enable the required site set
 
 1. In the **Value** box, enter **true**.
 
-   ![Web API error](media/web-api/webapi-error.png "Web API error") 
+   ![Web API error.](media/web-api/webapi-error.png "Web API error") 
 
 1. Select **Save & Close**.
 
 1. Verify the site settings for **Web API**.
 
-    ![Web API Site Settings](media/web-api/site-settings-complete.png "Web API Site Settings") 
+    ![Web API Site Settings.](media/web-api/site-settings-complete.png "Web API Site Settings") 
 
 ### Step 2 - Configure permissions
 
-You'll have to configure permissions so that users are able to use the Web API feature. In this example, you'll enable the Contact entity for entity permissions, create a web role for using the Web API, add the entity permissions for the Contact entity to this web role, and then add the web role to users to allow them to use the Web API.
+You'll have to configure permissions so that users are able to use the Web API feature. In this example, you'll enable the Contact table for table permissions, create a web role for using the Web API, add the table permissions for the Contact table to this web role, and then add the web role to users to allow them to use the Web API.
 
-1. In the **Portal Management** app on the left pane, select **Entity Permissions**.
+1. In the **Portal Management** app on the left pane, select **Table Permissions**.
 
 1. Select **New**.
 
-1. In the **Name** box, enter **Contact Entity Permission**.
+1. In the **Name** box, enter **Contact Table Permission**.
 
-1. In the **Entity Name** list, select **Contact (contact)**.
+1. In the **Table Name** list, select **Contact (contact)**.
 
 1. In the **Website** list, select your website record.
 
-1. In the **Scope** list, select **Global**.
+1. In the **Access Type** list, select **Global**.
 
 1. Select **Read**, **Write**, **Create**, and **Delete** privileges.
 
 1. Select **Save & Close**.
 
-    ![Entity permissions](media/web-api/entity-permissions.png "Entity permissions")
+    ![Table permissions.](media/web-api/entity-permissions.png "Table permissions")
 
 1. On the left pane, select **Web Roles** .
 
@@ -442,25 +443,25 @@ You'll have to configure permissions so that users are able to use the Web API f
 
 1. For **Authenticated Users Role**, select **Yes**.
 
-    ![Web role](media/web-api/web-role.png "Web role")
+    ![Web role.](media/web-api/web-role.png "Web role")
 
 1. Select **Save**.
 
-1. Select **Related** > **Entity Permissions**.
+1. Select **Related** > **Table Permissions**.
 
-    ![Related entity permissions](media/web-api/related-entity-permissions.png "Related entity permissions")
+    ![Related table permissions.](media/web-api/related-entity-permissions.png "Related table permissions")
 
-1. Select **Add Existing Entity Permission**.
+1. Select **Add Existing Table Permission**.
 
-1. Select **Contact Entity Permission**, created earlier.
+1. Select **Contact Table Permission**, created earlier.
 
 1. Select **Add**.
 
-    ![Add Contact Entity Permission to Web API User Web Role](media/web-api/add-contact-entity-permission.png "Add Contact Entity Permission to Web API User Web Role")
+    ![Add Contact Table Permission to Web API User Web Role.](media/web-api/add-contact-entity-permission.png "Add Contact Table Permission to Web API User Web Role")
 
 1. Select **Save & Close**.
 
-    ![Web API User Web Role Entity Permissions](media/web-api/web-api-user-role-entity-permissions.png "Web API User Web Role Entity Permissions")
+    ![Web API User Web Role Table Permissions.](media/web-api/web-api-user-role-entity-permissions.png "Web API User Web Role Table Permissions")
 
 1. On the left pane, select **Contacts**.
 
@@ -471,7 +472,7 @@ You'll have to configure permissions so that users are able to use the Web API f
 
 1. Select **Related** > **Web Roles**.
 
-    ![Web Roles for user](media/web-api/web-roles-for-user.png "Web Roles for user")
+    ![Web Roles for user.](media/web-api/web-roles-for-user.png "Web Roles for user")
 
 1. Select **Add Existing Web Role**.
 
@@ -479,7 +480,7 @@ You'll have to configure permissions so that users are able to use the Web API f
 
 1. Select **Add**.
 
-    ![Web Role added for user](media/web-api/web-role-added-to-user.png "Web Role added for user")
+    ![Web Role added for user.](media/web-api/web-role-added-to-user.png "Web Role added for user")
 
 1. Select **Save & Close**.
 
@@ -505,23 +506,23 @@ Now that you've enabled the Web API and configured user permissions, create a we
 
 1. Select **Save**.
 
-    ![Web page](media/web-api/webpage.png "Web page")
+    ![Web page.](media/web-api/webpage.png "Web page")
 
 1. Select **Related** > **Web Pages**.
 
-    ![Related Web Pages](media/web-api/webpages-related.png "Related Web Pages")
+    ![Related Web Pages.](media/web-api/webpages-related.png "Related Web Pages")
 
 1. From **Web Page Associated View**, select **webapi**.
 
-    ![Web Page Associated View](media/web-api/webpages-related.png "Web Page Associated View")
+    ![Web Page Associated View.](media/web-api/webpage-associated-view.png "Web Page Associated View")
 
 1. Scroll down to the **Content** section, and then go to **Copy (HTML)** (HTML designer).
 
-    ![HTML designer](media/web-api/copy-content.png "HTML designer")
+    ![HTML designer.](media/web-api/copy-content.png "HTML designer")
 
 1. Select the **HTML** tab.
 
-    ![Select the HTML tab](media/web-api/select-html-tab.png "Select the HTML tab")
+    ![Select the HTML tab.](media/web-api/select-html-tab.png "Select the HTML tab")
 
 1. Copy the following sample code snippet and paste it in the HTML designer.
 
@@ -814,7 +815,7 @@ Now that you've enabled the Web API and configured user permissions, create a we
     <div id="dataTable"></div>
     ```
 
-    ![Copy and paste the code](media/web-api/paste-code.png "Copy and paste the code")
+    ![Copy and paste the code.](media/web-api/paste-code.png "Copy and paste the code")
 
 1. Select **Save & Close**.
 
@@ -831,7 +832,7 @@ To clear the cache:
 
 1. Change the URL by appending **/_services/about** at the end. For example, if the portal URL is https://contoso.powerappsportals.com, change it to https://contoso.powerappsportals.com/_services/about.
 
-    ![Portal services about page](media/web-api/portal-clear-cache.png "Portal services about page")
+    ![Portal services about page.](media/web-api/portal-clear-cache.png "Portal services about page")
 
     > [!NOTE]
     > You must be a member of the **Administrators** web role to clear the cache. If you see a blank screen, check the web role assignments.
@@ -850,15 +851,15 @@ To test the Web API functionality:
 
 1. Go to the **webapi** webpage created earlier. For example, *https://contoso.powerappsportals.com/webapi*.
 
-    ![Sample webapi webpage](media/web-api/sample-page.png "Sample webapi webpage")
+    ![Sample webapi webpage.](media/web-api/sample-page.png "Sample webapi webpage")
 
 1. Select **Add Sample Record** to add the sample record from the script.
 
 1. Select a field. In this example, we've selected **Email** to change the email address of a contact.
 
-    ![Edit email](media/web-api/edit-record.png "Edit email")
+    ![Edit email.](media/web-api/edit-record.png "Edit email")
 
-1. Select ![Delete record](media/web-api/delete.png "Delete record") to delete a record.
+1. Select ![Delete record.](media/web-api/delete.png "Delete record") to delete a record.
 
 Now that you've created a webpage with a sample in this example to view, edit, create and delete records, you can customize the forms and layout.
 
@@ -869,3 +870,6 @@ Now that you've created a webpage with a sample in this example to view, edit, c
 ### See also
 
 [Web API overview](web-api-overview.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

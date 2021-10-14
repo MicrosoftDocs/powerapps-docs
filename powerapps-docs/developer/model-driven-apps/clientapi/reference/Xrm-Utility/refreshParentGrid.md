@@ -1,6 +1,7 @@
 ---
 title: "refreshParentGrid (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
+description: Includes description and supported parameters for the refreshParentGrid method.
+ms.date: 04/21/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -30,7 +31,7 @@ search.app:
 
 |Property Name |Type |Required  |Description |
 |---|---|---|---|
-|entityType|String|Yes |Entity type of the record.|
+|entityType|String|Yes |Table type of the record.|
 |id|String|Yes |ID of the record.|
 |name|String|No |Name of the record.|
 
@@ -40,3 +41,6 @@ search.app:
 
 
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

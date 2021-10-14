@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: guidance
 ms.date: 06/16/2020
+ms.subservice: guidance
 ms.author: tayoshi
 ms.reviewer: kathyos
 
@@ -32,7 +33,7 @@ professional developers. Power Apps "democratizes" the custom business app
 building experience by enabling users to build feature-rich, custom business
 apps without writing code.
 
-![Microsoft Power Platform and Azure ecosystem](media/ecosystem.png "Microsoft Power Platform and Azure ecosystem")
+![Microsoft Power Platform and Azure ecosystem.](media/ecosystem.png "Microsoft Power Platform and Azure ecosystem")
 
 ## Differences in development methodology
 
@@ -41,13 +42,13 @@ before a user actually sees the working app. As a result, there's an increased r
 that there will be gaps between what the user initially requested as a requirement and what
 the app developer created.
 
-![Waterfall development: Design, develop, test, and release](media/waterfall.png "Waterfall development: Design, develop, test, and release")
+![Waterfall development: Design, develop, test, and release.](media/waterfall.png "Waterfall development: Design, develop, test, and release")
 
 Even with more modern development approaches such as agile development,
 a significant amount time can pass before the first minimum viable product (MVP) is
 delivered to users.
 
-![Agile development: Design, iterate several times, then release the first MVP](media/agile.png "Agile development: Design, iterate several times, then release the first MVP]")
+![Agile development: Design, iterate several times, then release the first MVP.](media/agile.png "Agile development: Design, iterate several times, then release the first MVP]")
 
 With Power Apps, you can quickly create a usable version of your app, because
 Power Apps provides a WYSIWYG (what you see is what you get) development
@@ -55,4 +56,7 @@ experience. Users experience the actual working app very early in the
 development process, and if new requirements arise, new features can be added to
 the next version.
 
-![Power Apps development: Low code plus WYSIWYG allows for an MVP to be developed right away](media/power-apps-development.png "Power Apps development: Low code plus WYSIWYG allows for an MVP to be developed right away")
+![Power Apps development: Low code plus WYSIWYG allows for an MVP to be developed right away.](media/power-apps-development.png "Power Apps development: Low code plus WYSIWYG allows for an MVP to be developed right away")
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

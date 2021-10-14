@@ -4,6 +4,7 @@ ms.date: 03/04/2020
 ms.service: powerapps
 ms.topic: "reference"
 author: "Nkrb"
+ms.subservice: mda-developer
 ms.author: "nabuthuk"
 manager: "kvivek"
 search.audienceType: 
@@ -27,3 +28,6 @@ Provides app-related methods.
 
 
 
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

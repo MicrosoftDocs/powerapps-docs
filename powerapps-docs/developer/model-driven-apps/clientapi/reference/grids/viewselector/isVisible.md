@@ -1,6 +1,7 @@
 ---
 title: "isVisible (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
+description: Includes description and supported parameters for the isVisible method.
+ms.date: 04/21/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -42,3 +43,6 @@ To get the `viewSelector` object, see [ViewSelector](../viewselector.md).
 
 
 
+
+
+[!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

@@ -1,13 +1,17 @@
 ---
-title: "Create a custom page template by using Liquid and a web template page template for a portal | MicrosoftDocs"
-description: "Instructions to create a custom page template by using Liquid operators."
+title: Create a custom page template
+description: Learn how to create a custom page template by using Liquid operators.
 author: gitanjalisingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/07/2019
+ms.date: 04/21/2020
+ms.subservice: portals
 ms.author: gisingh
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - GitanjaliSingh33msft
 ---
 
 # Create a custom page template
@@ -19,7 +23,7 @@ In this example, we'll create a custom page template by using Liquid and a page 
 First, we'll create our Web Template and write the Liquid template code. We're likely to reuse some common elements of this template in future templates. So, we'll create a common base template that we'll then extend with our specific template. Our base template will provide breadcrumb links and our page title/header, as well as define our one-column layout:
 
 > [!div class=mx-imgBorder]
-![Web template one column layout](../media/web-template-two-column-layout.png "Web template one column layout")
+![Web template one column layout.](../media/web-template-two-column-layout.png "Web template one column layout")
 
 > [!TIP]
 > Read about template inheritance using the block and extends tags: [Template tags](template-tags.md#extends)
@@ -57,7 +61,7 @@ First, we'll create our Web Template and write the Liquid template code. We're l
 Use the navigation web link set associated with the current page for our navigation links to create a new web template that extends our base layout template.
 
 > [!div class=mx-imgBorder]
-![Web template web links left navigation layout](../media/web-template-weblinks-left-navigation-layout.png "Web template web links left navigation layout")  
+![Web template web links left navigation layout.](../media/web-template-weblinks-left-navigation-layout.png "Web template web links left navigation layout")  
 
 > [!TIP]
 > Familiarize yourself on how to load web link sets using the [weblinks](liquid-objects.md#weblinks) object.
@@ -95,19 +99,22 @@ Use the navigation web link set associated with the current page for our navigat
 In this step, we'll create a new page template that is based on the web template we created in the previous step.
 
 > [!div class=mx-imgBorder]
-![Page template weblinks left navigation layout](../media/page-template-weblinks-left-navigation-layout.png "Page template weblinks left navigation layout")  
+![Page template weblinks left navigation layout.](../media/page-template-weblinks-left-navigation-layout.png "Page template weblinks left navigation layout")  
 
 ## Step 4: Create a web page to display content
 
 Now, all that's left to do is to create a web page that uses our page template, and has an associated Web Link Set, and we have our result.
 
 > [!div class=mx-imgBorder]
-![Web page with left navigation](../media/web-page-left-navigation.png "Web page with left navigation")  
+![Web page with left navigation.](../media/web-page-left-navigation.png "Web page with left navigation")  
 
 ### See also
 
 [Create a custom page template to render an RSS feed](render-rss-custom-page-template.md)  
-[Render the entity list associated with the current page](render-entity-list-current-page.md)  
+[Render the list associated with the current page](render-entity-list-current-page.md)  
 [Render a website header and primary navigation bar](render-site-header-primary-navigation.md)  
 [Render up to three levels of page hierarchy by using hybrid navigation](hybrid-navigation-render-page-hierachy.md)  
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

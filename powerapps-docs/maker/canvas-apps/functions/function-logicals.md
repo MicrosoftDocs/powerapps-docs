@@ -1,6 +1,6 @@
 ---
-title: And, Or, and Not functions | Microsoft Docs
-description: Reference information, including syntax and examples, for the And, Or, and Not functions in Power Apps
+title: And, Or, and Not functions in Power Apps
+description: Reference information including syntax and examples for the And, Or, and Not functions in Power Apps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -8,11 +8,15 @@ ms.topic: reference
 ms.custom: canvas
 ms.reviewer: nabuthuk
 ms.date: 05/23/2019
+ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - gregli-msft
+  - nkrb
 ---
 
 # And, Or, and Not functions in Power Apps
@@ -77,3 +81,5 @@ Select the button (by clicking it while you hold down the Alt key), and then set
 | **Len(&nbsp;s&nbsp;)&nbsp;<&nbsp;20 And&nbsp;Not&nbsp;IsBlank(&nbsp;s&nbsp;)** | Tests whether the length of **s** is less than 20 and whether it isn't a **blank** value. The length is less than 20, and the value isn't blank. Therefore, the result is *true*. | *true* |
 | **Or(&nbsp;Len(&nbsp;s&nbsp;)&nbsp;<&nbsp;10, x&nbsp;<&nbsp;100, y&nbsp;<&nbsp;100&nbsp;)** | Tests whether the length of **s** is less than 10, whether **x** is less than 100, and whether **y** is less than 100. The first and third arguments are false, but the second one is true. Therefore, the function returns *true*. | *true* |
 | **Not IsBlank(&nbsp;s&nbsp;)** | Tests whether **s** is *blank*, which returns *false*. **Not** returns the opposite of this result, which is *true*. | *true* |
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

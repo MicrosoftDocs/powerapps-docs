@@ -1,18 +1,22 @@
 ---
-title: 'Check Box control: reference | Microsoft Docs'
-description: Information, including properties and examples, about the Check Box control
+title: Check box control in Power Apps
+description: Learn about the details, properties and examples of the check box control in Power Apps.
 author: chmoncay
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.date: 10/25/2016
+ms.subservice: canvas-maker
 ms.author: chmoncay
 ms.reviewer: tapanm
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - chmoncay
 ---
 # Check box control in Power Apps
 A control that the user can select or clear to set its value to **true** or **false**.
@@ -72,11 +76,11 @@ The user can specify a Boolean value by using this familiar control, which has b
 
 **[Italic](properties-text.md)** – Whether the text in a control is italic.
 
-**OnCheck** – How an app responds when the value of a checkbox or a toggle changes to **true**.
+**OnCheck** – Actions to perform when the value of a checkbox or a toggle changes to **true**.
 
-**[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
+**[OnSelect](properties-core.md)** – Actions to perform when the user taps or clicks a control.
 
-**OnUncheck** – How an app responds when the value of a checkbox or a toggle changes to **false**.
+**OnUncheck** – Actions to perform when the value of a checkbox or a toggle changes to **false**.
 
 **[PaddingBottom](properties-size-location.md)** – The distance between text in a control and the bottom edge of that control.
 
@@ -148,3 +152,6 @@ This is in addition to the [standard color contrast requirements](../accessible-
 * **[TabIndex](properties-accessibility.md)** must be zero or greater so that keyboard users can navigate to it.
 * Focus indicators must be clearly visible. Use **[FocusedBorderColor](properties-color-border.md)** and **[FocusedBorderThickness](properties-color-border.md)** to achieve this.
  
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

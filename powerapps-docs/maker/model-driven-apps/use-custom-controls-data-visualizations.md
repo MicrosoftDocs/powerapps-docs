@@ -7,7 +7,7 @@ ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "how-to"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -15,6 +15,7 @@ applies_to:
 ms.assetid: 0d6064cd-4d38-4fc2-a564-735cb453a4b2
 caps.latest.revision: 8
 author: "Mattp123"
+ms.subservice: mda-maker
 ms.author: "matp"
 manager: "kvivek"
 search.audienceType: 
@@ -37,12 +38,12 @@ Custom controls let you transform app user interface components, such as a colum
 For example, a slider control can be configured on a number column.
 
    > [!div class="mx-imgBorder"] 
-   > ![Custom slider control](media/slider-control.PNG "Slider control for a column")
+   > ![Custom slider control.](media/slider-control.PNG "Slider control for a column")
 
 Or the editable grid control can be configured on a view. 
 
    > [!div class="mx-imgBorder"] 
-   > ![Editable grid control](media/editable-grid-example.png)
+   > ![Editable grid control.](media/editable-grid-example.png)
 
 You can set one type of custom control to appear in the web browser client while having a different custom control appear in your Dynamics 365 phone or  tablet mobile apps. For example, you could use a number input custom control for a column in web browser clients and a slider custom control for the phone app. After the customization is published, users can fully interact with the control to change the value, such as by sliding the control when using the linear slider custom control. Changes are automatically saved when the form is closed just as they are when the user changes a traditional  column on a form.  
   
@@ -62,7 +63,7 @@ You can set one type of custom control to appear in the web browser client while
 5.  On the Add Control page, select the control that you want, such as the **Linear Slider** control shown here, and then select **Add**.  
 
     > [!div class="mx-imgBorder"] 
-    > ![Add linear slider control](media/add-slider.PNG "Add linear slider control")  
+    > ![Add linear slider control.](media/add-slider.PNG "Add linear slider control")  
   
 6.  Choose the client where you want the control to appear.  
   
@@ -73,12 +74,12 @@ You can set one type of custom control to appear in the web browser client while
     - **Tablet**. To make the custom control available on tablet devices running Dynamics 365 for tablets, select the **Tablet** option next to the control.  
   
     > [!div class="mx-imgBorder"] 
-    > ![Choose the client apps to view the custom control](media/choose-client.png "Choose the client apps to view the custom control")  
+    > ![Choose the client apps to view the custom control.](media/choose-client.png "Choose the client apps to view the custom control")  
   
-7.  Select the ![Edit custom control property icon](media/ccf-pencil-icon.png "Edit custom control property icon") pencil icon next to **Min**, **Max**, and **Step**, set the property option described below, and then select **OK**.  
+7.  Select the ![Edit custom control property icon.](media/ccf-pencil-icon.png "Edit custom control property icon") pencil icon next to **Min**, **Max**, and **Step**, set the property option described below, and then select **OK**.  
   
     > [!div class="mx-imgBorder"] 
-    > ![Add custom control properties](media/ccf-add-properties.png "Add custom control properties")
+    > ![Add custom control properties.](media/ccf-add-properties.png "Add custom control properties")
   
    - **Min**. Set the minimum accepted value. You can bind a static value that you enter or bind the value to an existing column. In this example **Bind to static value** is **Currency** and the minimum value that can be entered is *zero*.  
   
@@ -96,7 +97,7 @@ You can set one type of custom control to appear in the web browser client while
        >  The default control is identified with **(default)** following the control name.  
        >   
        > > [!div class="mx-imgBorder"] 
-       > > ![Default control](media/default-control.png "Default control")  
+       > > ![Default control.](media/default-control.png "Default control")  
   
 8.  Select **OK**, to close the **Column Properties** page.  
   
@@ -108,7 +109,7 @@ You can set one type of custom control to appear in the web browser client while
  Open a row that includes the column with the custom control, such as the opportunity form from the previous example, and view how the column is changed.  
   
    > [!div class="mx-imgBorder"] 
-   > ![Slider control rendered on form](media/slider-control.PNG "Slider control rendered on form")  
+   > ![Slider control rendered on form.](media/slider-control.PNG "Slider control rendered on form")  
   
  The column is now rendered as a slider control instead of the text column. 
 
@@ -117,4 +118,7 @@ You can set one type of custom control to appear in the web browser client while
 With editable grids, users can do rich in-line editing directly from views and sub-grids whether they’re using a web app, tablet, or phone. More information: [Make grids (lists) editable using the Editable Grid custom control](make-grids-lists-editable-custom-control.md) 
   
 ## Next steps  
-[Create and edit columns](../common-data-service/create-edit-fields.md)
+[Create and edit columns](../data-platform/create-edit-fields.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

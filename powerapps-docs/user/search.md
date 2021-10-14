@@ -7,6 +7,7 @@ ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 1/27/2020
+ms.subservice: end-user
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
@@ -22,7 +23,7 @@ search.app:
 
 There are three ways to search rows in Dataverse:
 
--   Relevance Search   
+-   Dataverse search   
   
 -   Quick Find (single-table or multi-table)  
 
@@ -33,7 +34,7 @@ There are three ways to search rows in Dataverse:
   
 The following table provides a brief comparison of the three options.
 
-|Functionality|[Relevance Search](relevance-search.md)|[Quick Find](quick-find.md)|[Advanced Find](advanced-find.md)|  
+|Functionality|[Dataverse search](relevance-search.md)|[Quick Find](quick-find.md)|[Advanced Find](advanced-find.md)|  
 |-------------------|---------------------------|----------------|-------------------|  
 |Enabled by default?|No. An administrator must manually enable it.|Yes|Yes|  
 |Single-table search scope|Not available in a table grid. You can filter the search results by a table on the results page.|Available in a table grid.|Available in a table grid.|  
@@ -42,3 +43,6 @@ The following table provides a brief comparison of the three options.
 |Searchable columns|Text columns like Single Line of Text, Multiple Lines of Text, Lookups, and Option Sets. Doesn't support searching in columns of Numeric or Date data type.|All searchable columns.|All searchable columns.|  
 |Search results|Returns the search results in order of their relevance, in a single list.|For single-table, returns the search results in a table grid. For multi-table, returns the search results grouped by categories, such as accounts, contacts, or leads.|Returns search results of the selected row type with the columns you have specified, in the sort order you have configured.|
 |Wildcards (*)|Trailing wildcard supported for word completion.|Leading wildcard supported. Trailing wildcard added by default.|Not supported.|  
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

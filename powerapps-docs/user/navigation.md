@@ -6,7 +6,8 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 10/30/2020
+ms.date: 8/2/2021
+ms.subservice: end-user
 ms.author: mkaur
 ms.reviewer: ""
 ms.assetid: 
@@ -39,7 +40,7 @@ A model-driven app is built out of applications (apps), areas, and tables.
 Select the user menu to view your account information or sign out. Go to your account page by selecting the **View account** hyperlink.
 
 > [!div class="mx-imgBorder"] 
-> ![User menu](media/usermenu_2.png "User menu")   
+> ![User menu.](media/usermenu_2.png "User menu")   
 
 
 ### Move between apps
@@ -50,7 +51,7 @@ Use the app-selector menu to switch between apps.
 2. On the **Apps** page select an app. You will only see apps for your organization.
 
    > [!div class="mx-imgBorder"] 
-   > ![The app-selector menu](media/app-selector2.png "The app-selector menu")   
+   > ![The app-selector menu.](media/app-selector2.png "The app-selector menu")   
 
 
 ### Move between pages and rows
@@ -58,15 +59,26 @@ Use the app-selector menu to switch between apps.
 It's easy to get around and get back to your favorite or most-used rows. The following illustration shows the primary navigation elements.
 
 
-![Navigation controls showing expanded view](media/nav-expanded2.png "Navigation controls showing expanded view")  
+![Navigation controls showing expanded view.](media/nav-expanded2.png "Navigation controls showing expanded view")  
 
 Legend
   
 1. **Click to change app**: Select the current app name to change to a different app. 
-2. **Collapse/expand button**: Select this to collapse the navigator to allow more room for the main part of the page. If the navigator is already collapsed, select this button to expand it again. 
-3. **Recent records**: Expand this entry to view a list of records you were recently using. Select a record here to open it. Select the push-pin icon next to a record listed here to add it to your favorites (pinned records).
-4. **Favorite records**: Expand this entry to view and open your favorite (pinned) records. Use the **Recent records** list to add records here. Select the remove-pin icon next to a record listed here to remove it from this list.
-5.  **Page navigation**: This area lists each entity and dashboard page available for the current work area. Select any entry here to open the named dashboard or list view for that entity.
+2. **Collapse/expand site map**: Select this to collapse the navigator to allow more room for the main part of the page. If the navigator is already collapsed, select this button to expand it again. 
+3. **Recent**: Expand this entry to view a list of rows you were recently using. Select a row here to open it. Select the push-pin icon next to a row listed here to add it to your pinned rows.
+4. **Pinned**: Expand this entry to view and open your favorite pinned rows. Use the **Recent** list to add rows here. Select the remove-pin icon next to a row listed here to remove it from this list.
+5.  **Page navigation**: This area lists each table and dashboard page available for the current work area. Select any entry here to open the named dashboard or list view for that table.
+6.  **Collapsible groups**: If you're on [early access](/power-platform/admin/opt-in-early-access-updates), your app maker can enable collapsible groups. For information on how customize the navigation bar, see [Overview of the model-driven app designer](../maker/model-driven-apps/app-designer-overview.md).
+
+
+### Early access: Hide or show the Home, Pinned, Recent, and collapsible groups
+
+If you're on [early access](/power-platform/admin/opt-in-early-access-updates) your site map might look different. With 2021 release wave 2, the app maker can customize the navigation bar to show or hide the **Home**, **Recent**, **Pinned** buttons in the site map. The app maker can also make groups collapsible. For information on how customize the navigation bar, see [Overview of the model-driven app designer](../maker/model-driven-apps/app-designer-overview.md).
+
+
+![This diagram shows how the site map looks with a app maker customizes it to hide or show the Home, Pinned, Recent, and collapsible groups.](media/hide-show-nav-bar-buttons.gif
+ "This diagram shows how the site map looks with a app maker customizes it to hide or show the Home, Pinned, Recent, and collapsible groups.")  
+
 
 ### Area switcher 
 
@@ -74,7 +86,7 @@ In the left-hand navigation pane, the area switcher appears at the bottom left o
 
 Open this menu to move to another work area. The current work area is named here.
 
-![Area switcher](media/work_area.png "Area switcher")
+![Area switcher.](media/work_area.png "Area switcher")
 
 
 ## Go back 
@@ -83,17 +95,17 @@ Use the back button for form, view, and dashboard pages on the command bar to go
 
 To go back to the previous page, select the **Go back** button.
 
-![Go back to the previous page](media/go_back_button.png "Go back to the previous page") 
+![Go back to the previous page.](media/go_back_button.png "Go back to the previous page") 
 
 ## Working with list views
 
 Usually, when you first open a table, you'll see the list view, which shows a list of rows belonging to that table, formatted as a table. For example, if you open the **Products** table, you'll see a list of accounts.
 
-![A typical list view](media/list-view1.png "A typical list view")
+![A typical list view.](media/list-view1.png "A typical list view")
 
 Legend:
 
-1. **Go back** (For early access): Select to go back to the previous page.
+1. **Go back**: Select to go back to the previous page.
 2. **Select rows**: Select one or more rows by placing a check mark in this column. Depending on where you're working, you might be able to apply a single operation to all the selected rows at once by using buttons in the command bar. Note, when you use the **Email a link** command on the command bar you can only select up to ten rows to send via email. 
 3. **Open a row**: Select any row in the list to open its row view, which shows all the details about the row. Usually you select from the **Name** column to open a row from the current table. Some tables provide links to rows from related tables in other columns (such as a related contact).
 4. **Sort or filter the list**: Select to sort the list by values in that column or filter the list by values in that column. An arrow in the column heading indicates which column is being sorted and in which direction. 
@@ -106,7 +118,7 @@ Legend:
 
 Row views show all the details about a single row and sometimes also provide special features for working with it. Usually you'll open a row view by selecting a row that appears in a list view, but you can also open a row view by following a link from a related row.
 
-![A typical row view](media/form-view1.png "A typical row view")
+![A typical row view.](media/form-view1.png "A typical row view")
 
 Legend:
 
@@ -124,28 +136,19 @@ Navigate through multiple rows by using preset views and queries. The row-focuse
 
 The number of rows that you see in the row set navigation pane is based on the number of rows that your system administrator has defined for the subgrid.
 
-**Current**
-
-1. To use row set navigation in the current release, open a page with a list of rows.
-2. Open a row and then select **Open Row Set** ![Row set navigation](media/openrecordset_1.png "Row set button") and then select a row from the list.  
-
- ![Row set navigation](media/recordsetnav.gif "This show how to use the row set navigation feature")     
-
-**Early Access**
-
-1. To use row set navigation in the early access release, open a page with a list of rows.
-2. Open a row and then select **Open Row Set** ![Row set navigation](media/openrecordset_2.png "Row set button") and then select a row from the list. 
+1. To use row set navigation, open a page with a list of rows.
+2. Open a row and then select **Open Row Set** ![Row set navigation.](media/openrecordset_2.png "Row set button") and then select a row from the list. 
 
 
-![Row set navigation](media/recordsetnav_new.gif "This shows how to use the row set navigation feature")   
 
+![How to use the row set navigation.](media/recordsetnav_new.gif "This shows how to use the row set navigation feature")   
 
 ## Reference panel
 
 The reference panel is a great way to get work done without moving away from the screen you're on. You can look up other related items&mdash;such as reviews or reservations for a product&mdash;within the context of the row you're viewing, without having to navigate to other screens.
 
 
-![Reference panel](media/reference-panel1.png "Reference panel")
+![Reference panel.](media/reference-panel1.png "Reference panel")
 
  Watch this video to learn more about the reference panel:
 
@@ -156,20 +159,27 @@ The reference panel is a great way to get work done without moving away from the
 
 The app message bar shows three types of notifications: informational, warning, and error. 
 
+> [!NOTE]
+> If you're on [early access](/power-platform/admin/opt-in-early-access-updates) there's a new in-app notifications feature. For more information, see [In-app notifications in model-driven apps](notifications.md).
+ 
+
 When you select the error notification, it will take you to the column on the form where the error occurred.
 
-![Example of notifications](media/notifications_1.png "Examples of notifications")   
+![Example of notifications.](media/notifications_1.png "Examples of notifications")   
 
 
 Legend:
 
-1. **Information notifications** ![Info notifications](media/info_icon.png "Info notification icon"): The notification is informational.
-2. **Warning notifications** ![Warning notifications](media/warning_icon.png "Warning notification icon"): The notification is a warning. 
-3. **Error notifications** ![Error notifications](media/error_icon.png "Error notification icon"): The notification is an error. 
+1. **Information notifications** ![Info notifications.](media/info_icon.png "Info notification icon"): The notification is informational.
+2. **Warning notifications** ![Warning notifications.](media/warning_icon.png "Warning notification icon"): The notification is a warning. 
+3. **Error notifications** ![Error notifications.](media/error_icon.png "Error notification icon"): The notification is an error. 
 
 
 ### Multiple notification
 
 If there is only one notification, you'll see a single line. If there are multiple notifications, you'll see chevron button. Select the chevron to view each message.
 
-![Example of multiple notifications](media/multiple_notification_1.png "Example of multiple notifications")
+![Example of multiple notifications.](media/multiple_notification_1.png "Example of multiple notifications")
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

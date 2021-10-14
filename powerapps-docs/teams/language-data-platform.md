@@ -6,12 +6,15 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 11/16/2020
+ms.subservice: teams
 ms.author: nhelgren
 ms.reviewer: matp
+contributors:
+  - mattp123
 ---
 # Dataverse for Teams environment language
 
-A Dataverse for Teams environment is automatically created when a Teams user *either* [creates an app](create-first-app.md) in a team using the Power Apps app for the first time *or* installs an app (created using Power Apps app) in a team for the first time from the Teams app catalog. During the environment creation, the environment’s language is set to the user’s current language.
+A Dataverse for Teams environment is automatically created when a Teams user *either* [creates an app](create-first-app.md) in a team using the Power Apps app for the first time *or* installs an app (created using Power Apps app) in a team for the first time from the Teams app catalog. During the environment creation, the environment’s language is set to the tenant default language.
 
 The language settings for the environment define the language, sorting, and search formats of the tables in the environment. The *default* language set during the automatic creation of the environment can't be changed thereafter. 
 
@@ -103,3 +106,6 @@ The fallback languages are denoted in *italics*.
 [What is Dataverse for Teams?](overview-data-platform.md) <br />
 [Create tables](create-table.md)<br/>
 [About the Dataverse for Teams environment](/power-platform/admin/about-teams-environment)
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

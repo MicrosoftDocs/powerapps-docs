@@ -1,18 +1,22 @@
 ---
-title: DataSourceInfo function | Microsoft Docs
-description: Reference information, including syntax and examples, for the DataSourceInfo function in Power Apps
+title: DataSourceInfo function in Power Apps
+description: Reference information including syntax and examples for the DataSourceInfo function in Power Apps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: nabuthuk
-ms.date: 11/11/2015
+ms.date: 09/30/2021
+ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - gregli-msft
+  - nkrb
 ---
 # DataSourceInfo function in Power Apps
 Provides information about a [data source](../working-with-data-sources.md).
@@ -25,6 +29,9 @@ You can use [column](../working-with-tables.md#columns)-level information to val
 You can use information at the data-source level, for example, to disable or hide **Edit** and **New** buttons for users who don't have permissions to edit and create [records](../working-with-tables.md#records).
 
 Data sources vary in how much information they provide, including not providing any at all.  [Collections](../working-with-data-sources.md#collections) provide no information. If a piece of information isn't provided, a default is used, or *blank* is returned.
+
+> [!NOTE]
+> Currently, the DataSourceInfo function is not supported in SharePoint List.
 
 ## Description
 ### Column information
@@ -51,6 +58,9 @@ You can also use **DataSourceInfo** to obtain information about a data source as
 | **DataSourceInfo.EditPermission** |Boolean |Does the current user have permission to edit records in this data source? If not set by the data source, returns **true**. |
 | **DataSourceInfo.ReadPermission** |Boolean |Does the current user have permission to read records in this data source? If not set by the data source, returns **true**. |
 
+> [!NOTE]
+> **DataSourceInfo** returns *true* if it cannot determine whether the current user has the requested permission.  Permissions will be checked again by the server when the actual operation is carried out and an error is displayed if it was not allowed.  At this time, permissions checking with **DataSourceInfo** is only possible when using Microsoft Dataverse.
+
 ## Syntax
 **DataSourceInfo**( *DataSource*, *Information*, *ColumnName* )
 
@@ -64,7 +74,7 @@ You can also use **DataSourceInfo** to obtain information about a data source as
 ## Examples
 The examples in this section use this data source, named **IceCream**:
 
-![Icecream](media/function-datasourceinfo/icecream.png "Icecream")
+![Icecream example.](media/function-datasourceinfo/icecream.png "Icecream example")
 
 The data source has also provided this information:
 
@@ -88,3 +98,6 @@ The data source has also provided this information:
 | **DataSourceInfo(&nbsp;IceCream, DataSourceInfo.CreatePermission)** |Can the current user create records in the **IceCream** data source? |**false** |
 | **DataSourceInfo(&nbsp;IceCream, DataSourceInfo.DeletePermission)** |Can the current user delete records in the **IceCream** data source? |**false** |
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

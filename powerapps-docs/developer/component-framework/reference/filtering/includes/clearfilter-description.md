@@ -15,4 +15,4 @@ applies_to:
 ms.assetid: a2c13ae9-562d-4a11-8503-394a2758d27f
 ---
 
-Clears the filter associated with the data-set.
+Clears the filter associated with the dataset.

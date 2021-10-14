@@ -1,6 +1,6 @@
 ---
-title: Understand canvas-app forms | Microsoft Docs
-description: In Power Apps, add a form to a canvas app so that you can collect and display information from a data source.
+title: Understand canvas-app forms
+description: Learn about how to add a form to a canvas app so that you can collect and display information from a data source.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -8,13 +8,17 @@ ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 04/27/2016
+ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - gregli-msft
 ---
-# Understand canvas-app forms in Microsoft Power Apps
+# Understand canvas-app forms
 
 Add three types of controls to a canvas app so that the user can browse for a record, display details about that record, and edit or create a record:
 
@@ -26,7 +30,7 @@ Add three types of controls to a canvas app so that the user can browse for a re
 
 Put each control on a different screen to make them easier to distinguish:
 
-![Browse, viewing, and editing records across three screens](./media/working-with-forms/three-screens.png)
+![Browse, viewing, and editing records across three screens.](./media/working-with-forms/three-screens.png)
 
 As this topic describes, combine these controls with formulas to create the overall user experience.
 
@@ -39,7 +43,7 @@ As this topic describes, combine these controls with formulas to create the over
 Power Apps can automatically generate an app based on a data source that you specify. Each app contains three screens with the controls described earlier and formulas that connect them. Run these apps "out of the box," customize them for your specific goals, or examine how they work so that you can learn useful concepts that apply to your own apps. In the following sections, inspect the screens, controls, and formulas that drive a generated app.  
 
 ### Browse screen
-![Browse screen controls](./media/working-with-forms/afd-browse-screen-basic.png)
+![Browse screen.](./media/working-with-forms/afd-browse-screen-basic.png)
 
 This screen features these key formulas:
 
@@ -63,7 +67,7 @@ This formula opens the **Edit and Create** screen, which features an **[Edit for
 
 To examine any control that appears in **BrowseGallery1**, select that control in the first section of that gallery, which serves as a template for all other sections. For example, select the middle **[Label](controls/control-text-box.md)** control on the left edge:
 
-![Browse screen controls](./media/working-with-forms/afd-browse-gallery-controls.png)
+![Browse screen controls.](./media/working-with-forms/afd-browse-gallery-controls.png)
 
 In this example, the control's **[Text](controls/properties-core.md)** property is set to **ThisItem.AssignedTo**, which is a field in the **Assets** data source. The **[Text](controls/properties-core.md)** property of the other three **[Label](controls/control-text-box.md)** controls in the gallery are set to similar formulas, and each control shows a different field in the data source.  
 
@@ -73,7 +77,7 @@ Select the **[Shape](controls/control-shapes-icons.md)** control (the arrow), an
 If the user finds a record in **BrowseGallery1**, the user can select the arrow for that record to show more information about it in **DetailScreen1**. By selecting an arrow, the user changes the value of the **Selected** property of **BrowseGallery1**. In this app, that property determines which record appears in not only **DetailScreen1** but also, if the user decides to update the record, the **Edit and Create** screen.
 
 ### Detail screen
-![Detail screen controls](./media/working-with-forms/afd-detail-screen-basic.png)
+![Detail screen controls.](./media/working-with-forms/afd-detail-screen-basic.png)
 
 This screen features these key formulas:
 
@@ -92,18 +96,18 @@ At the top of the screen, three images sit outside of **DetailForm1** and act as
 
 **DetailForm1** contains several **[Card](controls/control-card.md)** controls. You can select either the **[Card](controls/control-card.md)** control itself or the control that it contains to discover additional information.
 
-![Detail card and card controls selected in the authoring experience](./media/working-with-forms/afd-detail-card-controls.png)
+![Detail card and card controls selected in the authoring experience.](./media/working-with-forms/afd-detail-card-controls.png)
 
 The **[DataField](controls/control-card.md)** property of a **[Card](controls/control-card.md)** control determines which field the card displays. In this case, that property is set to **AssetID**. The card contains a **[Label](controls/control-text-box.md)** control for which the **[Text](controls/properties-core.md)** property is set to **Parent.Default**. This control shows the **Default** value for the card, which is set through the **[DataField](controls/control-card.md)** property.
 
 In a generated app, **[Card](controls/control-card.md)** controls are locked by default. When a card is locked, you can't modify some properties, such as **[DataField](controls/control-card.md)**, and the formula bar is unavailable for those properties. This restriction helps ensure that your customizations don't break the basic functionality of the generated app. However, you can change some properties of a card and its controls in the right-hand pane:
 
-![Detail screen with options pane open](./media/working-with-forms/detail-screen-new.png)
+![Detail screen with options pane open.](./media/working-with-forms/detail-screen-new.png)
 
 In the right-hand pane, you can select which fields to display and in which kind of control each field displays.
 
 ### Edit/Create screen
-![Edit screen controls](./media/working-with-forms/afd-edit-screen-basic.png)
+![Edit screen controls.](./media/working-with-forms/afd-edit-screen-basic.png)
 
 This screen features these key formulas:
 
@@ -129,13 +133,13 @@ If the user changes one or more values in the form and then selects the "checkma
 
 As with a **[Display form](controls/control-form-detail.md)** control, an **[Edit form](controls/control-form-detail.md)** control contains **[Card](controls/control-card.md)** controls, which contain other controls that show different fields in a record:
 
-![Edit card and card controls selected in the authoring experience](./media/working-with-forms/afd-edit-card-controls.png)
+![Edit card and card controls selected in the authoring experience.](./media/working-with-forms/afd-edit-card-controls.png)
 
 In the previous image, the selected card shows the **AssetID** field and  contains a **[Text input](controls/control-text-input.md)** control so that the user can edit the value of that field. (In contrast, the detail screen shows the same field in a **[Label](controls/control-text-box.md)** control, which is read-only.) The **[Text input](controls/control-text-input.md)** control has a **[Default](controls/properties-core.md)** property, which is set to **Parent.Default**. If the user were creating a record instead of editing one, that control would show an initial value that the user can change for the new record.
 
 In the right-hand pane, you can show or hide each card, rearrange them, or configure them to show fields in different types of controls.
 
-![Edit screen with options pane open](./media/working-with-forms/edit-screen.png)
+![Edit screen with options pane open.](./media/working-with-forms/edit-screen.png)
 
 ## Build an app from scratch
 By understanding how Power Apps generates an app, you can build one yourself that uses the same building blocks and formulas discussed earlier in this topic.
@@ -148,7 +152,7 @@ To get the most from this topic, start with a data source with which you can exp
 
 To follow the rest of this topic exactly, create a SharePoint list named "Ice Cream" that contains this data:
 
-![Ice cream SharePoint list](./media/working-with-forms/sharepointlist-icecream.png)
+![Ice cream SharePoint list.](./media/working-with-forms/sharepointlist-icecream.png)
 
 * Create an app from blank, for phones, and [connect it to your data source](add-data-connection.md).
   
@@ -162,18 +166,18 @@ Get a quick piece of information from a record by finding it in a gallery on a b
 
 1. Add a **Vertical** gallery, and change the layout to **Title** only.
    
-    ![Gallery connected to Ice Cream data source](./media/working-with-forms/new-gallery.png)
+    ![Add vertical gallery.](./media/working-with-forms/new-gallery.png)
 2. Set the gallery's **[Items](controls/properties-core.md)** property to **Ice Cream**.
 3. Set the **[Text](controls/properties-core.md)** property of the first label in the gallery to **ThisItem.Title** if it's set to something else.
    
     The label now shows the value in the **Title** field for each record.
    
-    ![Gallery connected to Ice Cream data source](./media/working-with-forms/new-gallery-2.png)
+    ![Updated label.](./media/working-with-forms/new-gallery-2.png)
 4. Resize the gallery to fill the screen, and set its **[TemplateSize](controls/control-gallery.md)** property to **60**.
    
     The screen resembles this example, which shows all records in the data source:
    
-    ![Gallery connected to Ice Cream data source](./media/working-with-forms/new-gallery-icecream.png)
+    ![Gallery connected to Ice Cream data source.](./media/working-with-forms/new-gallery-icecream.png)
 
 ## View details
 If the gallery doesn't show the information that you want, select the arrow for a record to open the details screen. A **[Display form](controls/control-form-detail.md)** control on that screen shows more, possibly all, fields for the record that you selected.
@@ -194,7 +198,7 @@ To add a **[Display form](controls/control-form-detail.md)** control:
 
 In the right-hand pane, you can select the fields to display on your screen and which type of card to display for each field. As you make changes in the right-hand pane, the **[DataField](controls/control-card.md)** property on each **[Card](controls/control-card.md)** control is set to the field that the user will interact with. Your screen should resemble this example:
 
-![Display form for Ice Cream data source](./media/working-with-forms/ice-cream-new.png)
+![Ice cream new screen.](./media/working-with-forms/ice-cream-new.png)
 
 Finally, we need to connect the **[Display form](controls/control-form-detail.md)** control to the **[Gallery](controls/control-gallery.md)** control so that we can look at details for a specific record.  As soon as we complete setting the **[Item](controls/control-form-detail.md)** property, the first record from the gallery will appear in our form.
 
@@ -202,7 +206,7 @@ Finally, we need to connect the **[Display form](controls/control-form-detail.md
    
     The details for the selected item appear in the form.
    
-    ![Display form for Ice Cream data source, connected to the gallery control](./media/working-with-forms/view-form-select-coconut.png)
+    ![Display form for Ice Cream data source, connected to the gallery control.](./media/working-with-forms/view-form-select-coconut.png)
 
 Great!  We now turn to navigation: how a user opens the details screen from the gallery screen and opens the gallery screen from the details screen.
 
@@ -210,7 +214,7 @@ Great!  We now turn to navigation: how a user opens the details screen from the 
    
     This formula returns the user back to the gallery when they finish viewing details.
 
-    ![Display form for Ice Cream data source with back button](./media/working-with-forms/viewform-icecream-back.png)
+    ![Display form for Ice Cream data source with back button.](./media/working-with-forms/viewform-icecream-back.png)
 
 Now, let's return to the **[Gallery](controls/control-gallery.md)** control and add some navigation to our detail screen.
 
@@ -219,7 +223,7 @@ Now, let's return to the **[Gallery](controls/control-gallery.md)** control and 
 2. Set the **[OnSelect](controls/properties-core.md)** property of the shape to this formula:
    <br>**Navigate( Screen2, None )**
    
-    ![Display form for Ice Cream data source with back button](./media/working-with-forms/gallery-icecream-nav-new.png)
+    ![Display form for Ice Cream data source with back button with Navigate update.](./media/working-with-forms/gallery-icecream-nav-new.png)
 
 3. Press F5, and then select an arrow in the gallery to show the details for an item.
 
@@ -240,7 +244,7 @@ To add an **[Edit form](controls/control-form-detail.md)** control:
 
 You can now select the fields to display on your screen. You can also select which type of card to display for each field. As you make changes in the right-hand pane, the **[DataField](controls/control-card.md)** property on each **[Card](controls/control-card.md)** control is set to the field your user will interact with.  Your screen should resemble this example:
 
-![Display form for Ice Cream data source](./media/working-with-forms/icecream-edit.png)
+![Display form for Ice Cream data source.](./media/working-with-forms/icecream-edit.png)
 
 These two properties are the same as the properties on the **[Display form](controls/control-form-detail.md)** control.  And with these alone, we can display the details of a record.  
 
@@ -249,7 +253,7 @@ The **[Edit form](controls/control-form-detail.md)** control goes further by off
 * Add a **[Button](controls/control-button.md)** control, set its **[Text](controls/properties-core.md)** property to show **Save**, and set its **[OnSelect](controls/properties-core.md)** property to this formula:<br>
   **SubmitForm( Form1 )**
 
-![Edit form for Ice Cream data source](./media/working-with-forms/edit-icecream-save.png)
+![Edit form for Ice Cream data source.](./media/working-with-forms/edit-icecream-save.png)
 
 To add navigation to and from this screen:
 
@@ -257,7 +261,7 @@ To add navigation to and from this screen:
    
     This formula discards any unsaved edits and opens the previous screen.
    
-    ![Display form for Ice Cream data source](./media/working-with-forms/edit-icecream-cancel.png)
+    ![Updated screen.](./media/working-with-forms/edit-icecream-cancel.png)
 2. Set the **[OnSuccess](controls/control-form-detail.md)** property of the form to **Back()**.
    
     When updates are successfully saved, the previous screen (in this case, the details screen) opens automatically.
@@ -265,11 +269,11 @@ To add navigation to and from this screen:
     ![Edit form with added "OnSuccess" rule](./media/working-with-forms/edit-icecream-onsuccess.png)
 3. On the **Display** screen, add a button, set its **[Text](controls/properties-core.md)** property to show **Edit**, and set its **[OnSelect](controls/properties-core.md)** property to this formula:<br> **Navigate( Screen3, None )**
    
-    ![Display form with added "Edit" button](./media/working-with-forms/viewform-icecream-edit.png)
+    ![Text property updated.](./media/working-with-forms/viewform-icecream-edit.png)
 
 You've built a basic app with three screens for viewing and entering data.  To try it out, show the gallery screen, and then press F5 (or select the forward arrow "Preview" button near the upper-left corner of the screen). The pink dot indicates where the user clicks or taps the screen at each step.
 
-![Try out the ice cream app](./media/working-with-forms/try-icecream.png)
+![Try out the ice cream app.](./media/working-with-forms/try-icecream.png)
 
 ## Create a record
 The user interacts with the same **Edit** form to both update and create records. When the user wants to create a record, the **[NewForm](functions/function-form.md)** function switches the form to **New** mode.
@@ -286,7 +290,7 @@ On the first screen, you'll add a **New** button:
    
     This formula switches the **[Edit form](controls/control-form-detail.md)** control on **Screen3** to **New** mode and opens that screen so that the user can fill it in.
 
-![Display form with added "Edit" button](./media/working-with-forms/gallery-icecream-new.png)
+![Edit form updated.](./media/working-with-forms/gallery-icecream-new.png)
 
 When the Edit and Create screen opens, the form is empty, ready for the user to add an item. When the user selects the **Save** button, the **[SubmitForm](functions/function-form.md)** function ensures that a record is created instead of being updated. If the user selects the **Cancel** button, the **[ResetForm](functions/function-form.md)** function switches the form back to **Edit** mode, and the **[Back](functions/function-navigate.md)** function opens the screen for browsing the gallery.
 
@@ -295,7 +299,7 @@ When the Edit and Create screen opens, the form is empty, ready for the user to 
 2. Set the button's **[OnSelect](controls/properties-core.md)** property to this formula:
    <br>**Remove( 'Ice Cream', Gallery1.Selected ); Back()**
    
-    ![Display form with added "Edit" button](./media/working-with-forms/viewform-icecream-remove.png)
+    ![Remove a record.](./media/working-with-forms/viewform-icecream-remove.png)
 
 ## Handling errors
 In this app, an error occurs when the value of a field is not valid, a required field is blank, you're disconnected from the network, or any number of other problems pop up.  
@@ -310,9 +314,9 @@ If **[SubmitForm](functions/function-form.md)** fails for any reason, the **Erro
 
 In an app that Power Apps generates from data, the **[AutoHeight](controls/control-text-box.md)** property on this control is set to *true* so that no space is consumed if no error occurs. The **[Height](controls/properties-size-location.md)** and **[Y](controls/properties-size-location.md)** properties of the **[Edit form](controls/control-form-detail.md)** control are also adjusted dynamically to account for this control growing when an error occurs. For more details, generate an app from existing data, and inspect these properties. The text-box control for errors is very short when no error has occurred, you may need to open the **Advanced** view (available on the **View** tab) to select this control.
 
-![App from data edit form with error text control selected](./media/working-with-forms/edit-assets-error1.png)
+![App from data edit form with error text control selected.](./media/working-with-forms/edit-assets-error1.png)
 
-![App from data edit form with form control selected](./media/working-with-forms/edit-assets-error2.png)
+![App from data edit form with form control selected.](./media/working-with-forms/edit-assets-error2.png)
 
 ## Refresh data
 The data source is refreshed whenever the user opens the app, but the user might want to refresh the records in the gallery without closing the app. Add a **Refresh** button so that the user can select it to manually refresh the data:
@@ -321,12 +325,12 @@ The data source is refreshed whenever the user opens the app, but the user might
 
 2. Set the **[OnSelect](controls/properties-core.md)** property of this control to this formula:<br> **Refresh( 'Ice Cream' )**
 
-    ![Refresh the data source](./media/working-with-forms/browse-icecream-refresh.png)
+    ![Refresh the data source.](./media/working-with-forms/browse-icecream-refresh.png)
 
 ## Search and sort the gallery
 In the app that Power Apps generated from data, we neglected to discuss two controls at the top of the Browse screen. By using these controls, the user can search for one or more records, sort the list of records in ascending or descending order, or both.
 
-![Sorting and searching controls on browse screen](./media/working-with-forms/afd-browse-search-sort.png)
+![Sorting and searching controls on browse screen.](./media/working-with-forms/afd-browse-search-sort.png)
 
 When the user selects the sort button, the sort order of the gallery reverses. To create this behavior, we use a *context variable* to track the direction in which the gallery is sorted. When the user selects the button, the variable is updated, and the direction reverses. The **[OnSelect](controls/properties-core.md)** property of the sort button is set to this formula:
 **UpdateContext( {SortDescending1: !SortDescending1} )**
@@ -370,3 +374,6 @@ On a tablet, you can browse, display, and edit/create on two or even one screen.
 If the user is working on the same screen, you need to be careful that the user can't change the selection in the **[Gallery](controls/control-gallery.md)** and potentially lose edits in the **[Edit form](controls/control-form-detail.md)** control.  To keep the user from selecting a different record when changes to another record haven't been saved yet, set the **[Disabled](controls/properties-core.md)** property of the gallery to this formula:<br>
 **EditForm.Unsaved**
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

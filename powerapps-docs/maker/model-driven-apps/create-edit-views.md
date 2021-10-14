@@ -1,13 +1,13 @@
 ---
 title: "Create or edit a model-driven app view in Power Apps | MicrosoftDocs"
 description: "Learn how to create or edit a view"
-ms.custom: ""
+ms.custom: intro-internal
 ms.date: 03/19/2020
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "overview"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -15,6 +15,7 @@ applies_to:
 author: "Mattp123"
 ms.assetid: bd1d393d-16ea-40ac-8136-26643c37dd2a
 caps.latest.revision: 25
+ms.subservice: mda-maker
 ms.author: "matp"
 manager: "kvivek"
 search.audienceType: 
@@ -65,7 +66,7 @@ As a system administrator or system customizer, you can edit system views. Syste
 
 These views are not shown in the view selector and you can't use them in sublists in a form or as a list in a dashboard. You cannot delete or deactivate these views. More information: [Remove views](remove-views.md)
 
-System views are owned by the organization so that everyone can see them. For example, everyone has organization-level access to read rows for the View (savedquery) table. These views are associated with specific tables and are visible within the solution explorer. You can include these views in solutions because they are associated with the table.
+System views are owned by the organization so that everyone can see them. For example, everyone has organization-level access to read rows for the View (savedquery) table. These views are associated with specific tables and are visible within the solution explorer. You can include these views in solutions because they are associated with the table. Unified Interface optimizes for performance by caching system views and does not support running plugins on the savedquery table.
 
 ### Public views
 
@@ -74,18 +75,18 @@ Public views are general purpose views that you can customize as you see fit. Th
 
 |Name  |Type  |
 |---------|---------|
-|Active *entity plural name*     |  Public       |
-|Inactive *entity plural name*    |  Public       |
-|Quick Find Active *entity plural name*     | Quick Find        |
-|*entity name* Advanced Find View     | Advanced Find        |
-|*entity name* Associated View     |  Associated       |
-|*entity name* Lookup View     | Lookup        |
+|Active *table plural name*     |  Public       |
+|Inactive *table plural name*    |  Public       |
+|Quick Find Active *table plural name*     | Quick Find        |
+|*table name* Advanced Find View     | Advanced Find        |
+|*table name* Associated View     |  Associated       |
+|*table name* Lookup View     | Lookup        |
 
 You can create custom public views. You can delete any custom public views you create in an unmanaged solution. You cannot delete any system-defined public views. Custom public views added by importing a managed solution may have managed properties set that can prevent them from being deleted, except by uninstalling the managed solution.
 
 ## Places where you can access the view editor to create or edit views
 
-- Power Apps site: To access the view designer, select **Data** > **Tables**, select a table, and then select the **View** tab. Open an existing view or create a new one. More information: [Create or edit a view](create-and-edit-views.md)
+- Power Apps site: To access the view designer, select **Data** > **Tables**, select a table, and then select the **View** tab. Open an existing view or create a new one. More information: [Create or edit a view](./create-edit-views-app-designer.md)
 - App Designer: If you're working in an app, you may want to use the App Designer, which provides a simple and intuitive UI with drag-and-drop capabilities for created views. More information: [Tutorial: Create and edit public or system views by using the app designer](create-edit-views-app-designer.md)
 - Solution explorer: If you're already experienced with Dynamics 365, you may want to use the solution explorer. More information: [Navigate to advanced app making and customization areas](advanced-navigation.md#solution-explorer)
  
@@ -96,6 +97,11 @@ As a system customizer you can customize the views through controls by making gr
 - Editable Grid: Allows users to do rich in-line editing directly from grids and sub-grids whether they're using a web app, tablet, or phone. More information: [Make grids editable using the Editable Grid custom control](make-grids-lists-editable-custom-control.md)
 - Read Only Grid: Provides users an optimal viewing and interaction experience for any screen size or orientation such as mobiles and tablets by using responsive design principles. More information: [Specify properties for Unified Interface apps](specify-properties-for-unified-interface-apps.md)
 
+
+
 ## Next steps
 
-[Create or edit views](create-and-edit-views.md)
+[Create or edit views](./create-edit-views-app-designer.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -6,17 +6,17 @@
   href: supported-customizations.md
 - name: Design app interface using code
   items:
-  - name: Customize entity forms
+  - name: Customize forms
     href: customize-entity-forms.md
     items:
     - name: Use IFRAME and web resource controls on a form
       href: use-iframe-and-web-resource-controls-on-a-form.md
-  - name: Customize entity views
+  - name: Customize views
     href: customize-entity-views.md
   - name: Open forms, views, dialogs, and reports with a URL
     href: open-forms-views-dialogs-reports-url.md
     items:
-    - name: Set field values using parameters passed to a form
+    - name: Set column values using parameters passed to a form
       href: set-field-values-using-parameters-passed-form.md
     - name: Configure a form to accept custom querystring parameters
       href: configure-form-accept-custom-querystring-parameters.md
@@ -27,7 +27,7 @@
   - name: Query and edit an organization theme
     href: query-and-edit-an-organization-theme.md
   - name: Build code components using Power Apps component framework
-    href: /powerapps/developer/component-framework/overview
+    href: ../component-framework/overview.md
 - name: Apply data visualizations using code
   href: customize-visualizations-dashboards.md
   items:
@@ -75,13 +75,19 @@
     href: clientapi/debug-JavaScript-code.md
   - name: Troubleshoot form issues in Unified Interface
     href: troubleshoot-forms.md
+  - name: Navigating to and from a custom page
+    href: clientapi/navigate-to-custom-page-examples.md
+  - name: Send in-app notifications using client API (preview)
+    href: clientapi/send-in-app-notifications.md
+  - name: Creating side panes using client API
+    href: clientapi/create-app-side-panes.md
   - name: Client API Reference
     href: clientapi/reference.md
     items:
     - name: Client-side events
       href: clientapi/reference/events.md
       items:
-      - name: Attribute OnChange event
+      - name: Column OnChange event
         href: clientapi/reference/events/attribute-onchange.md
       - name: Form OnLoad event
         href: clientapi/reference/events/form-onload.md
@@ -113,6 +119,8 @@
         href: clientapi/reference/events/onstagechange.md
       - name: OnStageSelected event
         href: clientapi/reference/events/onstageselected.md
+      - name: PostSave event
+        href: clientapi/reference/events/postsave.md
       - name: PostSearch event
         href: clientapi/reference/events/postsearch.md
       - name: PreSearch event
@@ -150,21 +158,29 @@
     - name: Save event arguments
       href: clientapi/reference/save-event-arguments.md
       items:
+      - name: getEntityReference
+        href: clientapi/reference/save-event-arguments/getEntityReference.md
+      - name: getIsSaveSuccess
+        href: clientapi/reference/save-event-arguments/getIsSaveSuccess.md
       - name: getSaveMode
         href: clientapi/reference/save-event-arguments/getSaveMode.md
+      - name: getSaveErrorInfo
+        href: clientapi/reference/save-event-arguments/getSaveErrorInfo.md
       - name: isDefaultPrevented
         href: clientapi/reference/save-event-arguments/isDefaultPrevented.md
       - name: preventDefault
         href: clientapi/reference/save-event-arguments/preventDefault.md
+      - name: preventDefaultOnError
+        href: clientapi/reference/save-event-arguments/preventDefaultOnError.md
     - name: Attributes
       href: clientapi/reference/attributes.md
       items:
+      - name: controls collection
+        href: clientapi/reference/attributes/controls-collection.md
       - name: Composite attributes
         href: clientapi/reference/composite-attributes.md
       - name: addOnChange
         href: clientapi/reference/attributes/addOnChange.md
-      - name: controls collection
-        href: clientapi/reference/attributes/controls-collection.md
       - name: fireOnChange
         href: clientapi/reference/attributes/fireOnChange.md
       - name: getAttributeType
@@ -230,6 +246,8 @@
         href: clientapi/reference/controls/addNotification.md
       - name: addOnLookupTagClick
         href: clientapi/reference/controls/addOnLookupTagClick.md
+      - name: addOnPostSave
+        href: clientapi/reference/controls/addOnPostSave.md
       - name: addOnPostSearch
         href: clientapi/reference/controls/addOnPostSearch.md
       - name: addOnResultOpened
@@ -294,6 +312,8 @@
         href: clientapi/reference/controls/refresh.md
       - name: removeOnLookupTagClick
         href: clientapi/reference/controls/removeOnLookupTagClick.md
+      - name: removeOnPostSave
+        href: clientapi/reference/controls/removeOnPostSave.md
       - name: removeOnPostSearch
         href: clientapi/reference/controls/removeOnPostSearch.md
       - name: removeOnResultOpened
@@ -706,6 +726,19 @@
         href: clientapi/reference/xrm-app/addGlobalNotification.md
       - name: clearGlobalNotification
         href: clientapi/reference/xrm-app/clearGlobalNotification.md
+      - name: AppSidePane
+        href: clientapi/reference/xrm-app-appsidepane.md
+      - name: Xrm.App.sidePanes
+        href: clientapi/reference/xrm-app-sidepanes.md
+        items:
+        - name: createPane
+          href: clientapi/reference/Xrm-App/Xrm-App-sidePanes/createPane.md
+        - name: getAllPanes
+          href: clientapi/reference/Xrm-App/Xrm-App-sidePanes/getAllPanes.md
+        - name: getPane
+          href: clientapi/reference/Xrm-App/Xrm-App-sidePanes/getPane.md
+        - name: getSelectedPane
+          href: clientapi/reference/Xrm-App/Xrm-App-sidePanes/getSelectedPane.md
     - name: Xrm.Device
       href: clientapi/reference/xrm-device.md
       items:

@@ -29,11 +29,11 @@ landingContent:
           - text: System and configuration requirements
             url: limits-and-config.md
           - text: Planning a Power Apps project
-            url: /powerapps/guidance/planning/introduction
+            url: ../../guidance/planning/introduction.md
        - linkListType: learn
          links:
           - text: Get started with canvas apps in Power Apps
-            url: https://docs.microsoft.com/learn/modules/get-started-with-powerapps/
+            url: /learn/modules/get-started-with-powerapps/
 
   # Card
   - title: Explore and create
@@ -49,7 +49,7 @@ landingContent:
        - linkListType: learn
          links:
           - text: Create canvas apps in Power Apps
-            url: https://docs.microsoft.com/learn/paths/create-powerapps/
+            url: /learn/paths/create-powerapps/
 
   # Card
   - title: Design the interface
@@ -65,7 +65,7 @@ landingContent:
        - linkListType: learn
          links:
           - text: Use the UI and controls in canvas apps
-            url: https://docs.microsoft.com/learn/paths/ui-controls-canvas-app-powerapps/
+            url: /learn/paths/ui-controls-canvas-app-powerapps/
 
   # Card
   - title: Customize
@@ -119,7 +119,7 @@ landingContent:
           - text: Reuse canvas app components
             url: create-component.md
           - text: ALM with Microsoft Power Platform
-            url: https://docs.microsoft.com/power-platform/alm/overview-alm
+            url: /power-platform/alm/overview-alm
           - text: Integrate with other websites
             url: embed-apps-dev.md
 
@@ -149,7 +149,6 @@ landingContent:
        - linkListType: learn
          links:
           - text: Use advanced data options and connectors
-            url: https://docs.microsoft.com/learn/paths/advanced-data-options-and-connectors/
+            url: /learn/paths/advanced-data-options-and-connectors/
           - text: Master advanced techniques
-            url: https://docs.microsoft.com/learn/paths/understand-advanced-topics/
-
+            url: /learn/paths/understand-advanced-topics/

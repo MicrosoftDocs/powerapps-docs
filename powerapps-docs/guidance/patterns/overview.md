@@ -5,7 +5,8 @@ author: kathyos
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: guidance
-ms.date: 07/20/2020
+ms.date: 1/4/2021
+ms.subservice: guidance
 ms.author: kathyos
 ms.reviewer: kathyos
 
@@ -15,38 +16,92 @@ ms.reviewer: kathyos
 
 With Microsoft Power Platform, you can easily create apps that are tailored to your
 organization's specific needs. Although your needs might be unique, we see some
-common *patterns* among apps most often created by organizations to meet their
+common patterns among apps that organizations typically create to meet their
 most-pressing needs.
 
-Different scenarios, across different industries, often use the basic same
+Different scenarios, across different industries, often use the same basic 
 patterns. For example, an app for doing aircraft inspections, a situational awareness app for hospitals, and an app for tracking kids' reading levels all
 have a similar structure, even though they have very different purposes and
 audiences.
 
-In this set of articles, we've identified some of the uses for Microsoft Power Platform
-we've seen and the patterns that successful makers have used to bring these
-solutions to life. Each article contains links to the real-world
+In this set of articles, we've identified some of the uses we've seen for Microsoft Power Platform
+and the patterns that successful makers have used to bring these
+solutions to life. Each article contains links to real-world
 customer stories that include best practices for structuring data, using the
-elements of Microsoft Power Platform, and integrating into the overall business. 
+elements of Microsoft Power Platform, and integrating into the overall business.
 
 In the list below, look for a scenario that's similar to what you need and then
 select the pattern to learn more.
 
 We'll continue to add patterns over time.
 
+
+:::row:::
+    :::column:::
+       **Approvals**
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
+:::row:::    
+    :::column:::
+       [Read more about the approvals pattern, including real-world use cases](approval-pattern.md)
+    :::column-end:::
+    :::column:::
+        Collect approval from one or more sources
+![Illustration of the approval pattern with request, review, and respond steps.](media/approval-illustration.png?thumbnail "Illustration of the project management pattern with request, review, and respond steps")
+    :::column-end:::
+    :::column:::
+        Example use cases: 
+      - Automated granting of permissions
+      - Employee travel request
+      - Overtime request
+      - Timesheet submission
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+       **Asset management**
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+       [Read more about the asset management pattern, including real-world use cases](asset-management-pattern.md)
+    :::column-end:::
+    :::column:::
+        Manage inventory or other assets
+![Illustration of the asset management pattern with find, reserve, and manage steps.](media/asset-management-illustration.png?thumbnail "Illustration of the asset management pattern with find, reserve, and manage steps")
+    :::column-end:::
+    :::column:::
+        Example use cases: 
+      - Asset check-out
+      - Asset rollout
+      - Inventory management
+      - Supply order management
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+       **Calculation/transformation**
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
 :::row:::
    :::column span="":::
-      **Calculation/transformation**
-    
       [Read more about the calculator pattern, including real-world use cases](calculator-pattern.md)
    :::column-end:::
    :::column span="":::
-      In a typical calculation scenario: 
-      1.  A user inputs data into the app.
-
-      1.  The app returns a calculated result.
-
-      1.  The results are used in real time by the user.
+      Calculate or transform data
+![Illustration of the calculation pattern with input, calculation, and output steps.](media/calculation-illustration.png "Illustration of the calculation pattern with input, calculation, and output steps")
    :::column-end:::
    :::column span="":::
       Example use cases
@@ -61,18 +116,21 @@ We'll continue to add patterns over time.
    :::column-end:::
 :::row-end:::
 :::row:::
+    :::column:::
+       **Communication/announcement**
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
+:::row:::
    :::column span="":::
-      **Communication/announcement**
-
       [Read more about the communication pattern, including real-world use cases](communication-pattern.md)
    :::column-end:::
    :::column span="":::
-      In a typical communication scenario:
-      1.  A communication team creates information to be published to the organization.
-    
-      1.  Information is published to employees.
-      
-      1.  Employees consume the communication.
+      Publish news or information to employees or customers
+![Illustration of the communication pattern with compose, publish, and consume steps.](media/communication-illustration.png?thumbnail "Illustration of the communication pattern with compose, publish, and consume steps")
    :::column-end:::
    :::column span="":::
       Example use cases
@@ -84,19 +142,21 @@ We'll continue to add patterns over time.
    :::column-end:::
 :::row-end:::
 :::row:::
+    :::column:::
+       **Inspection/audit**
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
+:::row:::
    :::column span="":::
-      **Inspection/audit**
-
       [Read more about the inspection pattern, including real-world use cases](inspection-pattern.md)
    :::column-end:::
    :::column span="":::
-      In a typical inspection scenario:
-
-      1.  Someone (for example, an employee or a customer) fills out a standardized checklist or form and submits it. 
-
-      1.  Then, typically in a centralized function, all the answers are aggregated for review or reporting.
-    
-      1. Often, an inspection results in needing to take action.
+      Create standardized questionnaires to be filled out and acted on
+![Illustration of the inspection pattern with record, aggregate, and decide/act/report steps.](media/inspection-illustration.png?thumbnail "Illustration of the inspection pattern with record, aggregate, and decide/act/report steps")
    :::column-end:::
    :::column span="":::
       Example use cases
@@ -112,42 +172,37 @@ We'll continue to add patterns over time.
 :::row-end:::
 :::row:::
     :::column:::
-       **Approvals**
-
-       [Find real-world approvals use cases](more-patterns.md#approvals)
+       **Project management**
     :::column-end:::
     :::column:::
-        Collect approval from one or more sources
     :::column-end:::
     :::column:::
-        Example use cases: 
-      - Automated granting of permissions
-      - Employee travel request
-      - Overtime request
-      - Timesheet submission
     :::column-end:::
 :::row-end:::
 :::row:::
     :::column:::
-       **Asset management**
-
-       [Find real-world asset management use cases](more-patterns.md#asset-management)
+       [Read more about the project management pattern, including real-world use cases](project-management-pattern.md)
     :::column-end:::
     :::column:::
-        Manage inventory or other assets
+        Track a project from inception to completion
+![Illustration of the project management pattern with plan, track, and review steps.](media/project-management-illustration.png?thumbnail "Illustration of the project management pattern with plan, track, and review steps")
     :::column-end:::
     :::column:::
         Example use cases: 
-      - Asset check-out
-      - Asset rollout
-      - Inventory management
-      - Supply order management
+      - Project management
     :::column-end:::
 :::row-end:::
 :::row:::
     :::column:::
        **Event management**
-
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
        [Find real-world event management use cases](more-patterns.md#event-management)
     :::column-end:::
     :::column:::
@@ -164,7 +219,14 @@ We'll continue to add patterns over time.
 :::row:::
     :::column:::
        **Lifecycle or workflow management**
-
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
        [Find real-world workflow management use cases](more-patterns.md#lifecycle-or-workflow-management)
     :::column-end:::
     :::column:::
@@ -177,16 +239,21 @@ We'll continue to add patterns over time.
       - Employee onboarding
       - Employee promotion evaluation
       - Expense reporting process
-      - Project management
       - Request management
       - Service desk tickets
-
     :::column-end:::
 :::row-end:::
 :::row:::
     :::column:::
        **Scheduling**
-
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
        [Find real-world scheduling use cases](more-patterns.md#scheduling)
     :::column-end:::
     :::column:::
@@ -203,3 +270,6 @@ We'll continue to add patterns over time.
       - Book vehicles
     :::column-end:::
 :::row-end:::
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

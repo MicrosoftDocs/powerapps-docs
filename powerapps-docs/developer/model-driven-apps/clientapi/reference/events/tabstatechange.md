@@ -1,6 +1,7 @@
 ---
-title: "TabStateChange Event (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
+title: "TabStateChange event (Client API reference) in model-driven apps| MicrosoftDocs"
+description: Includes description and supported parameters for the TabStateChange event.
+ms.date: 04/19/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -14,7 +15,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# TabStateChange Event (Client API reference)
+# TabStateChange event (Client API reference)
 
 
 
@@ -26,3 +27,6 @@ Use the [addTabStateChange](../formContext-ui-tabs/addTabStateChange.md) method 
 
 
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

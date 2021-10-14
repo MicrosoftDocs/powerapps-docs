@@ -1,13 +1,17 @@
 ---
-title: "Add Azure storage web resource to a form | MicrosoftDocs"
-description: "Steps to add Azure storage web resource to a form to enable uploading attachments to Azure Storage."
+title: Add Azure storage web resource to a form
+description: Steps to add Azure storage web resource to a form to enable uploading attachments to Azure Storage.
 author: gitanjalisingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 08/31/2020
+ms.date: 04/21/2021
+ms.subservice: portals
 ms.author: gisingh
 ms.reviewer: tapanm
+contributors:
+    - gitanjalisingh33msft
+    - tapanm-msft
 ---
 
 # Add the Azure Storage web resource to a form
@@ -17,11 +21,11 @@ Attachments uploaded to Azure Storage (instead of directly to Microsoft Datavers
 To enable attachments from a particular form to be uploaded into Azure Storage, you must add a web resource to that form, and [configure Azure Storage for your organization](enable-azure-storage.md).
 
 > [!NOTE]
-> In this example, the form is added to the Lead form for the Lead entity. We recommend using caution when editing existing forms.
+> In this example, the form is added to the Lead form for the Lead table. We recommend using caution when editing existing forms.
 
-When a file (for example, attachments.zip) is uploaded to Azure Storage by using the portal, it's represented by a note on an entity and a placeholder for the attachment.
+When a file (for example, attachments.zip) is uploaded to Azure Storage by using the portal, it's represented by a note on a table and a placeholder for the attachment.
 
-![Attachment on a form](media/notes-attachment-lead-form.png "Placeholder for the attachment on a form")
+![Attachment on a form.](media/notes-attachment-lead-form.png "Placeholder for the attachment on a form")
 
 The attachment file is now named attachment.zip.txt. By default, Dataverse  has no conception of an Azure file, so this placeholder .txt file is stored in Dataverse  instead. The Azure Storage context for the placeholder file shows details about the file.
 ```
@@ -53,11 +57,11 @@ To see and interact with the file stored in Azure, you must add the web resource
 
 8. Save the form, and then publish the changes.
 
-   ![Add web resource](media/add-web-resource.png "Add a web resource")
+   ![Add web resource.](media/add-web-resource.png "Add a web resource")
 
 The new control will now be rendered on the page, giving you the ability to manage your attachments in Azure Storage.
 
-![Azure file attachment on a form](media/azure-file-attachment-lead-form.png "Azure file attachment on a form")
+![Azure file attachment on a form.](media/azure-file-attachment-lead-form.png "Azure file attachment on a form")
 
 The paper-clip icon has been replaced with a cloud icon to denote that this file is stored in Azure Storage. You can continue to store attachments in Dataverse; those files will be denoted with the paper-clip icon.
 
@@ -69,37 +73,26 @@ The paper-clip icon has been replaced with a cloud icon to denote that this file
 > - **Exposed headers**: Specify the response headers that may be sent in the response to the CORS request and exposed by the browser to the request issuer. Examples - \* or x-ms-meta-\*. For this scenario, you must specify *, otherwise the web resource will not render properly.
 > - **Maximum age (seconds)**: Specify the maximum amount time that a browser should cache the preflight OPTIONS request. For example, 200.
 > 
-> [!include[More information](../../includes/proc-more-information.md)] [CORS support for the Azure Storage Services](https://docs.microsoft.com/rest/api/storageservices/cross-origin-resource-sharing--cors--support-for-the-azure-storage-services).
+> [!include[More information](../../includes/proc-more-information.md)] [CORS support for the Azure Storage Services](/rest/api/storageservices/cross-origin-resource-sharing--cors--support-for-the-azure-storage-services).
 
 If the attached file is an image, the control will display the image as a thumbnail whether it's stored in Dataverse  or Azure Storage.
 
 > [!NOTE]
 > The thumbnail feature is limited to images under 1 MB in size.
 
-![Notes thumbnail](media/notes-thumbnail.png "Notes thumbnail")
+![Notes thumbnail.](media/notes-thumbnail.png "Notes thumbnail")
 
 ## Processes for Azure Blob Storage
 
 Several processes are required to upload attachments to Azure Storage that must be activated: **AzureBlobStorageEnabled**, **Azure Blob Storage Url** and **Generate Shared Access Signature**.
 
-![Blob storage processes](media/blob-storage-processes.png "Blob storage processes")
+![Blob storage processes.](media/blob-storage-processes.png "Blob storage processes")
 
 During migration, the processes may get deactivated. Migration may cause attachments to upload to Dataverse instead of Azure Storage after you follow steps to add web resource. Ensure these processes are activated to upload attachments to Azure Storage.
 
 ## CORS protocol support
 
-The [cross-origin resource sharing (CORS)](https://www.w3.org/TR/cors/) protocol consists of a set of headers that indicates whether a response can be shared with another domain.
-The following site settings are used to configure CORS:
+To learn about CORS protocol support in portals, go to [Configure CORS protocol support](configure/cors-support.md).
 
-| Site Setting | Request Header | Description |
-|-|-|-|
-| HTTP/Access-Control-Allow-Credentials | Access-Control-Allow-Credentials | The only valid value for this header is true (case-sensitive). If you don't need credentials, omit this header entirely (rather than setting its value to false). 
-| HTTP/Access-Control-Allow-Headers | Access-Control-Allow-Headers | A comma-delimited list of the supported HTTP request headers.
-| HTTP/Access-Control-Allow-Methods | Access-Control-Allow-Methods | A comma-delimited list of the allowed HTTP request methods such as GET, POST, OPTIONS.
-| HTTP/Access-Control-Allow-Origin | Access-Control-Allow-Origin | URL of the Dynamics 365 instance, such as https://contoso.crm.dynamics.com. To allow any URI to access your resources, use \*.                 |
-|  HTTP/Access-Control-Expose-Headers | Access-Control-Expose-Headers | A comma-delimited list of HTTP header names other than the simple response headers that the resource might use and can be exposed.
-| HTTP/Access-Control-Max-Age | Access-Control-Max-Age |  Maximum number of seconds the results can be cached.
-| HTTP/Content-Security-Policy | Content-Security-Policy | Controls resources the user agent is allowed to load for a given page.
-| HTTP/Content-Security-Policy-Report-Only | Content-Security-Policy-Report-Only | Allows web developers to experiment with policies by monitoring, but not enforcing, their effects. These violation reports consist of JSON documents sent via an HTTP POST request to the specified URI.
-| HTTP/X-Frame-Options | X-Frame-Options | Indicates whether a browser should be allowed to render a page in a *\<frame\>*, *\<iframe\>*, *\<embed\>* or *\<object\>*.
-| HTTP/X-Content-Type-Options | X-Content-Type-Options | Disables MIME sniffing and forces browser to use the type given in *Content-Type*.
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

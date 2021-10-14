@@ -7,6 +7,7 @@ ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
 author: "KumarVivek" # GitHub ID
+ms.subservice: mda-developer
 ms.author: "kvivek" # MSFT alias of Microsoft employees only
 manager: "shilpas" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -86,4 +87,6 @@ The following is the schema for the data description XML string for charts in vi
  [Customize Visualizations and Dashboards](customize-visualizations-dashboards.md)   
  [Understanding Charts: Underlying Data and Chart Representation](understand-charts-underlying-data-chart-representation.md)   
  [Sample Charts](sample-charts.md)   
- [Use FetchXML to construct a query](../common-data-service/use-fetchxml-construct-query.md)
+ [Use FetchXML to construct a query](../data-platform/use-fetchxml-construct-query.md)
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -1,6 +1,6 @@
 ---
-title: Value function | Microsoft Docs
-description: Reference information, including syntax, for the Value function in Power Apps
+title: Value function in Power Apps
+description: Reference information including syntax and examples for the Value function in Power Apps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -8,11 +8,15 @@ ms.topic: reference
 ms.custom: canvas
 ms.reviewer: nabuthuk
 ms.date: 02/06/2020
+ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - gregli-msft
+  - nkrb
 ---
 # Value function in Power Apps
 Converts a string of text to a number.
@@ -51,3 +55,6 @@ The user running these formulas is located in the United States and has selected
 | **Value( "$ 12.34" )** |The currency symbol for the current language is ignored. |12.34 |
 | **Value( "24e3" )** |Scientific notation for 24 x 10<sup>3</sup>. |24000 |
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

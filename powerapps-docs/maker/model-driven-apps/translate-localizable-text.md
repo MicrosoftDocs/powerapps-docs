@@ -7,7 +7,7 @@ ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "how-to"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -15,6 +15,7 @@ applies_to:
 author: "Mattp123"
 ms.assetid: 3d77d149-819b-45e6-8e70-1fbe54d5c153
 caps.latest.revision: 19
+ms.subservice: mda-maker
 ms.author: "matp"
 manager: "kvivek"
 search.audienceType: 
@@ -35,13 +36,13 @@ The process has the following steps:
 
 ## Enable other languages for your environment
 
-If you haven't already enabled the languages for your environment, use the steps described in [Enable the language](https://docs.microsoft.com/dynamics365/customer-engagement/admin/enable-languages) to enable them.
+If you haven't already enabled the languages for your environment, use the steps described in [Enable the language](/dynamics365/customer-engagement/admin/enable-languages) to enable them.
 
 > [!IMPORTANT]
 > Each language can take several minutes to enable. During this time, other users of the environment may not be able to use your app. You should enable languages at time that will be least disruptive to users.
 
 > [!TIP]
-> While you are enabling the languages, note the LCID values used for each language. This value will represent the language in the exported data for the localizable text. Language codes are four-digit or five-digit locale IDs. Valid locale ID values can be found at [Locale ID (LCID) Chart)](https://go.microsoft.com/fwlink/?LinkId=122128).
+> While you are enabling the languages, note the LCID values used for each language. This value will represent the language in the exported data for the localizable text. Language codes are four-digit or five-digit locale IDs. Valid locale ID values can be found at [Locale ID (LCID) Chart)](/previous-versions/windows/embedded/ms912047(v=winembedded.10)).
 
 ## Export the localizable text
 
@@ -56,7 +57,7 @@ The scope of the localizable text that will be exported is the unmanaged solutio
 3. In the menu bar select **Translations** > **Export Translations**. 
 
     > [!div class="mx-imgBorder"] 
-    > ![Export Translations](media/export-localizable-text.png "Export Translations")
+    > ![Export Translations.](media/export-localizable-text.png "Export Translations")
 
     You could see an alert that says:
     > Exporting customized labels for translation can take several minutes. Do not click the export link again until the first export has finished. Are you sure that you want to export now?
@@ -83,7 +84,7 @@ You can open the CrmTranslations.xml file with Microsoft Office Excel.
 
 When you view the data in Excel, look at the **Localized Labels** tab.
 
-![Exported text for localization](media/localized-labels-tab-exported-languages.png "Exported text for localization")
+![Exported text for localization.](media/localized-labels-tab-exported-languages.png "Exported text for localization")
 
 Any custom tables or columns will have empty cells for the localizable text. Add the localized values for those items.
 
@@ -97,7 +98,7 @@ The **Display Strings** tab contains text that is displayed for other UI element
 If you change the display name for any standard table or table column which is included in any special message, you can update information in the **Display Strings** tab to use the customized name.
 
 > [!TIP]
-> Although the UI exposed to edit system table messages includes many references to table names, it doesn't include all of them. Using this technique may find more. More information: [Edit system table messages](../common-data-service/edit-system-entity-messages.md)
+> Although the UI exposed to edit system table messages includes many references to table names, it doesn't include all of them. Using this technique may find more. More information: [Edit system table messages](../data-platform/edit-system-entity-messages.md)
 
 For example, if you change the display name for the Account table to *Company*, search through the base language column in the  **Display Strings** for the following matches: `account`, `accounts`, `Account`, and `Accounts` then make appropriate replacements to `company`, `companies`, `Company`, and `Companies` respectively.
 
@@ -116,10 +117,10 @@ After changes are made to the `CrmTranslations.xml` file, you must compress the 
 
 From the same unmanaged solution that you exported the translations from, in the menu choose **Translations** > **Import Translations**. 
 
-<!-- ![Import translations](media/import-translations.png) -->
+<!-- ![Import translations.](media/import-translations.png) -->
 
 > [!div class="mx-imgBorder"] 
-> ![Import selected file](media/import-translated-text-dialog.png "Import localized text")
+> ![Import selected file.](media/import-translated-text-dialog.png "Import localized text")
 
 Select the file that contains the compressed translated text and select **Import**.
 
@@ -135,5 +136,8 @@ After the translated text is imported, you should publish all customizations to 
 
 
 ## Next steps
-[Regional and language options for your organization](https://docs.microsoft.com/dynamics365/customer-engagement/admin/enable-languages)<br />
-[Edit system table messages](../common-data-service/edit-system-entity-messages.md)
+[Regional and language options for your organization](/dynamics365/customer-engagement/admin/enable-languages)<br />
+[Edit system table messages](../data-platform/edit-system-entity-messages.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

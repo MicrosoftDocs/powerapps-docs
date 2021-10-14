@@ -1,13 +1,17 @@
 ---
-title: "Redirect to a new URL on a portal | MicrosoftDocs"
-description: "Instructions to create a redirect URL to redirect a user to another page in a site."
+title: Add a redirect URL to a new URL on a portal
+description: Learn how to create a redirect URL to redirect a user to another page in a site.
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/04/2019
+ms.date: 04/21/2021
+ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - sandhangitmsft
 ---
 
 # Add a redirect URL to a new URL on a portal
@@ -36,7 +40,7 @@ Customers frequently want to have a simple URL that redirects to a page deeper i
 
 4. After entering the required fields and specifying a value for at least one of the URL, Web Page, or Site Marker fields, select **Save**.
 
-    ![Redirect a customer survey](../media/redirect-customer-survey.png "Redirect a customer survey")  
+    ![Redirect a customer survey.](../media/redirect-customer-survey.png "Redirect a customer survey")  
 
 ## Use the redirect
 
@@ -50,3 +54,6 @@ results in the browser requesting the following URL:
 
 https://customerportal.contoso.com/surveys/customer-service-survey/
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

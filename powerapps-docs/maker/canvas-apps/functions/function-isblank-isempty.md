@@ -1,6 +1,6 @@
 ---
-title: Blank, Coalesce, IsBlank, and IsEmpty functions | Microsoft Docs
-description: Reference information, including syntax and examples, for the Blank, Coalesce, IsBlank, and IsEmpty functions in Power Apps
+title: Blank, Coalesce, IsBlank, and IsEmpty functions in Power Apps
+description: Reference information including syntax and examples for the Blank, Coalesce, IsBlank, and IsEmpty functions in Power Apps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -8,12 +8,16 @@ ms.topic: reference
 ms.custom: canvas
 ms.reviewer: nabuthuk
 ms.component: canvas
-ms.date: 08/27/2019
+ms.date: 05/24/2021
+ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - gregli-msft
+  - nkrb
 ---
 # Blank, Coalesce, IsBlank, and IsEmpty functions in Power Apps
 Tests whether a value is blank or a [table](../working-with-tables.md) contains no [records](../working-with-tables.md#records), and provides a way to create *blank* values.
@@ -28,20 +32,29 @@ Any property or calculated value in Power Apps can be *blank*.  For example, a B
 In the context of the **IsEmpty** function, *empty* is specific to tables that contain no records. The table structure may be intact, complete with [column](../working-with-tables.md#columns) names, but no data is in the table. A table may start as empty, take on records and no longer be empty, and then have the records removed and again be empty.
 
 > [!NOTE]
-> We are in a period of transition.  Until now, *blank* has also been used to report errors, making it impossible to differentiate a valid "no value" from an error.  For this reason, at this time, storing *blank* values is supported only for local collections.  You can store *blank* values in other data sources if you turn on the "Formula-level error management" experimental feature under the File menu, App settings, Advanced settings, Experimental features.  We are actively working to finish this feature and complete the proper separation of *blank* values from errors.
+> We are in a period of transition.  Until now, *blank* has also been used to report errors, making it impossible to differentiate a valid "no value" from an error.  For this reason, at this time, storing *blank* values is supported only for local collections.  You can store *blank* values in other data sources if you turn on the **Formula-level error management** experimental feature under the **File** > **Settings** > **Upcoming features** > **Experimental**.  We are actively working to finish this feature and complete the proper separation of *blank* values from errors.
 
-## Description
+## Blank
 The **Blank** function returns a *blank* value. Use this to store a NULL value in a data source that supports these values, effectively removing any value from the field.
 
+## IsBlank
 The **IsBlank** function tests for a *blank* value or an empty string.  The test includes empty strings to ease app creation since some data sources and controls use an empty string when there is no value present.  To test specifically for a *blank* value use `if( Value = Blank(), ...` instead of **IsBlank**.
 
-The **Coalesce** function evaluates its arguments in order and returns the first value that isn't *blank* or an empty string.  Use this function to replace a *blank* value or empty string with a different value but leave non-*blank* and non-empty string values unchanged.  If all of the arguments are *blank* or empty strings then the function returns *blank*, making **Coalesce** a good way to convert empty strings to *blank* values.  All arguments to **Coalesce** must be of the same type; for example, you can't mix numbers with text strings.  
+When enabling error handling for existing apps, consider replacing **IsBlank** with [**IsBlankOrError**](function-iferror.md#isblankorerror) to preserve existing app behavior.  Prior to the addition of error handling, a *blank* value was used to represent both null values from databases and error values.  Error handling separates these two interpretations of *blank* which could change the behavior of existing apps that continue to use **IsBlank**.
+
+The return value for **IsBlank** is a boolean **true** or **false**.
+
+## Coalesce
+The **Coalesce** function evaluates its arguments in order and returns the first value that isn't *blank* or an empty string.  Use this function to replace a *blank* value or empty string with a different value but leave non-*blank* and non-empty string values unchanged.  If all the arguments are *blank* or empty strings then the function returns *blank*, making **Coalesce** a good way to convert empty strings to *blank* values.  
 
 `Coalesce( value1, value2 )` is the more concise equivalent of `If( Not IsBlank( value1 ), value1, Not IsBlank( value2 ), value2 )` and doesn't require **value1** and **value2** to be evaluated twice.  The [**If** function](function-if.md) returns *blank* if there is no "else" formula as is the case here.
 
+All arguments to **Coalesce** must be of the same type; for example, you can't mix numbers with text strings.  The return value from **Coalesce** is of this common type.
+
+## IsEmpty
 The **IsEmpty** function tests whether a table contains any records. It's equivalent to using the **[CountRows](function-table-counts.md)** function and checking for zero. You can check for data-source errors by combining **IsEmpty** with the **[Errors](function-errors.md)** function.
 
-The return value for both **IsBlank** and **IsEmpty** is a Boolean **true** or **false**.
+The return value for **IsEmpty** is a Boolean **true** or **false**.
 
 ## Syntax
 **Blank**()
@@ -61,7 +74,7 @@ The return value for both **IsBlank** and **IsEmpty** is a Boolean **true** or *
 ## Examples
 ### Blank
 > [!NOTE]
-> At this time, the following example only works for local collections.  You can store *blank* values in other data sources if you turn on the "Formula-level error management" experimental feature under the File menu, App settings, Advanced settings, Experimental features.  We are actively working to finish this feature and complete the separation of *blank* values from errors.
+> At this time, the following example only works for local collections.  You can store *blank* values in other data sources if you turn on the **Formula-level error management** experimental feature under the **File** > **Settings** > **Upcoming features** > **Experimental**.  We are actively working to finish this feature and complete the separation of *blank* values from errors.
 
 1. Create an app from scratch, and add a **Button** control.
 2. Set the button's **[OnSelect](../controls/properties-core.md)** property to this formula:
@@ -74,7 +87,7 @@ The return value for both **IsBlank** and **IsEmpty** is a Boolean **true** or *
 
      The **Cities** collection appears, showing one record with "Seattle" and "Rainy":
 
-    ![Collection showing Seattle with Rainy weather](./media/function-isblank-isempty/seattle-rainy.png)
+    ![Collection showing Seattle with Rainy weather.](./media/function-isblank-isempty/seattle-rainy.png)
 5. Click or tap the back arrow to return to the default workspace.
 6. Add a **Label** control, and set its **Text** property to this formula:
 
@@ -92,7 +105,7 @@ The return value for both **IsBlank** and **IsEmpty** is a Boolean **true** or *
 
     The **Weather** field of the first record in **Cities** is replaced with a *blank*, removing the "Rainy" that was there previously.
 
-    ![Collection showing Seattle with a blank Weather field](./media/function-isblank-isempty/seattle-blank.png)
+    ![Collection showing Seattle with a blank Weather field.](./media/function-isblank-isempty/seattle-blank.png)
 
     The label shows **true** because the **Weather** field no longer contains a value.
 
@@ -101,8 +114,8 @@ The return value for both **IsBlank** and **IsEmpty** is a Boolean **true** or *
 | Formula | Description | Result |
 | --- | --- | --- |
 | **Coalesce(&nbsp;Blank(),&nbsp;1&nbsp;)** |Tests the return value from the **Blank** function, which always returns a *blank* value. Because the first argument is *blank*, evaluation continues with the next argument until a non-*blank* value and non-empty string is found. |**1** |
-| **Coalesce( "", 2 )** |Tests the first argument which is an empty string. Because the first argument is an empty string, evaluation continues with the next argument until a non-*blank* value and non-empty string is found. |**2** |
-| **Coalesce( Blank(), "", Blank(), "", 3, 4 )** |**Coalesce** starts at the beginning of the argument list and evaluates each argument in turn until a non-*blank* value and non-empty string is found.  In this case, the first four arguments all return *blank* or an empty string, so evaluation continues to the fifth argument. The fifth argument is non-*blank* and non-empty string, so evaluation stops here. The value of the fifth argument is returned, and the sixth argument isn't evaluated. |**3** |
+| **Coalesce( "", "2" )** |Tests the first argument which is an empty string. Because the first argument is an empty string, evaluation continues with the next argument until a non-*blank* value and non-empty string is found. |**2** |
+| **Coalesce( Blank(), "", Blank(), "", "3", "4" )** |**Coalesce** starts at the beginning of the argument list and evaluates each argument in turn until a non-*blank* value and non-empty string is found.  In this case, the first four arguments all return *blank* or an empty string, so evaluation continues to the fifth argument. The fifth argument is non-*blank* and non-empty string, so evaluation stops here. The value of the fifth argument is returned, and the sixth argument isn't evaluated. |**3** |
 | **Coalesce( "" )** | Tests the first argument which is an empty string. Because the first argument is an empty string, and there are no more arguments, the function returns *blank*.   |*blank* |
 
 ### IsBlank
@@ -140,7 +153,7 @@ Other examples:
 
     A collection named **IceCream** is created and contains this data:
 
-    ![](media/function-isblank-isempty/icecream-strawberry-chocolate.png)
+    ![A table with Strawberry and Chocolate flavours with quantity 300 and 100.](media/function-isblank-isempty/icecream-strawberry-chocolate.png)
 
     This collection has two records and isn't empty. **IsEmpty( IceCream )** returns **false**, and **CountRows( IceCream )** returns **2**.
 4. Add a second button, and set its **[OnSelect](../controls/properties-core.md)** property to this formula:
@@ -150,7 +163,7 @@ Other examples:
 
     The collection is now empty:
 
-    ![](media/function-isblank-isempty/icecream-clear.png)
+    ![A collection with Flavor and Quantity as empty collection.](media/function-isblank-isempty/icecream-clear.png)
 
     The **[Clear](function-clear-collect-clearcollect.md)** function removes all the records from a collection, resulting in an empty collection. **IsEmpty( IceCream )** returns **true**, and **CountRows( IceCream )** returns **0**.
 
@@ -162,3 +175,6 @@ You can also use **IsEmpty** to test whether a calculated table is empty, as the
 | **IsEmpty( [&nbsp;] )** |The single-column table contains no records and is empty. |**true** |
 | **IsEmpty( Filter( [&nbsp;1,&nbsp;2,&nbsp;3&nbsp;], Value > 5 ) )** |The single-column table contains no values that are greater than 5.  The result from the filter doesn't contain any records and is empty. |**true** |
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

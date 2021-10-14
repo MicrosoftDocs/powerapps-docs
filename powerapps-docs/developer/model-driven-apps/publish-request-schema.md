@@ -2,11 +2,12 @@
 title: "Publish request schema  (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "The following is the schema definition for the PublishXmlRequest message." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 04/14/2021
 ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
 author: "KumarVivek" # GitHub ID
+ms.subservice: mda-developer
 ms.author: "kvivek" # MSFT alias of Microsoft employees only
 manager: "shilpas" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -17,10 +18,10 @@ search.app:
 ---
 # Publish request schema
 
-<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/publish-request-schema -->
+The following is the schema definition for the <xref:Microsoft.Crm.Sdk.Messages.PublishXmlRequest> message. For more information, see [Publish customizations](publish-customizations.md). [!INCLUDE[schema_download](../../includes/schema-download.md)].  
 
-The following is the schema definition for the <xref:Microsoft.Crm.Sdk.Messages.PublishXmlRequest> message. For more information, see [Publish Customizations](publish-customizations.md). [!INCLUDE[schema_download](../../includes/schema-download.md)].  
-  
+[!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
+
 ## Schema  
   
 ```xml  
@@ -112,5 +113,8 @@ The following is the schema definition for the <xref:Microsoft.Crm.Sdk.Messages.
   
 ### See also  
  <xref:Microsoft.Crm.Sdk.Messages.PublishXmlRequest>   
- [Publish Customizations](publish-customizations.md)   
+ [Publish customizations](publish-customizations.md)   
  
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

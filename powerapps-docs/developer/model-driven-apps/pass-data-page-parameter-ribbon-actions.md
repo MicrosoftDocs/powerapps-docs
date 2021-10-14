@@ -2,11 +2,12 @@
 title: "Pass data from a page as a parameter to Ribbon actions (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "The topic describes options for using the <CrmParameter> element to retrieve these values. " # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 02/15/2019
+ms.date: 04/14/2021
 ms.reviewer: "kvivek"
 ms.service: powerapps
 ms.topic: "article"
 author: "hazhouMSFT"
+ms.subservice: mda-developer
 ms.author: "hazhou" # MSFT alias of Microsoft employees only
 manager: "annbe" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -15,13 +16,15 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Pass data from a page as a parameter to Ribbon Actions
+# Pass data from a page as a parameter to ribbon actions
 
-When you define an action in a ribbon, you frequently have to pass data from the page to either a JavaScript function or a URL. This topic describes options for using the [\<CrmParameter\>](https://msdn.microsoft.com/library/gg309332.aspx) element to retrieve these values.
+When you define an action in a ribbon, you frequently have to pass data from the page to either a JavaScript function or a URL. This article describes options for using the [\<CrmParameter\>](/previous-versions/dynamicscrm-2016/developers-guide/gg309332(v=crm.8)) element to retrieve these values.
 
 ## Form and grid context in ribbon actions
 
 To pass in the execution context (*form context* or *grid context*) information to JavaScript function for your ribbon actions, specify **PrimaryControl** for the form context, or **SelectedControl** for the grid context as the `<CrmParameter>` value in your ribbon definition. **SelectedControl** will pass in the grid context, for both subgrids and homepage grids. The passed in **PrimaryControl** or the **SelectedControl** value is used as an argument in your JavaScript function for *form context* or *grid context* respectively. 
+
+[!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
 
 For example, here is a sample ribbon definition where we pass in the **PrimaryControl** parameter to the JavaScript function:
 
@@ -53,16 +56,16 @@ You can also specify **CommandProperties** as `<CrmParameter>` value in your rib
 
 ## Form values
 
-With a form ribbon, you can use the `data.entity`.[attributes](clientapi/reference/attributes.md) collection and the `ui`.[controls](clientapi/reference/controls.md) collection to retrieve and set values for known fields. 
+With a form ribbon, you can use the `data.entity`.[attributes](clientapi/reference/attributes.md) collection and the `ui`.[controls](clientapi/reference/controls.md) collection to retrieve and set values for known columns. 
 
-For example, the following sample code shows how to retrieve the account name field on the account form, and then set a value in the websiteurl field based on the account name value:
+For example, the following sample code shows how to retrieve the account name column on the account form, and then set a value in the websiteurl column based on the account name value:
 
 ```JavaScript
 function mySampleFunction(primaryControl) {
     var formContext = primaryControl;    
     var accountName = formContext.getControl("name").getAttribute().getValue();    
 
-    // Set the WebSiteURL field if account name contains "Contoso"
+    // Set the WebSiteURL column if account name contains "Contoso"
     if (accountName.toLowerCase().search("contoso") != -1) {
         formContext.getAttribute("websiteurl").setValue("https://www.contoso.com");
     }
@@ -74,7 +77,7 @@ function mySampleFunction(primaryControl) {
 
   
 ## Grid values  
- The majority of the values available for the `<CrmParameter>` element are related to working with data displayed in a grid or hierarchy chart. By using the `Value` attribute enumeration options, you can easily isolate items by:  
+ The majority of the values available for the `<CrmParameter>` element are related to working with data displayed in a grid or hierarchy chart. By using the `Value` parameter enumeration options, you can easily isolate items by:  
   
 - **Selected items**  
   
@@ -105,17 +108,20 @@ function mySampleFunction(primaryControl) {
  
   
 ## Other context information  
- In addition to data values, you can retrieve client context information by using [\<CrmParameter\>](https://msdn.microsoft.com/library/gg309332.aspx).  You can use the following options as the value for the `CrmParameter` element: `OrgName`, `OrgLcid`, and `UserLcid`.
+ In addition to data values, you can retrieve client context information by using [\<CrmParameter\>](/previous-versions/dynamicscrm-2016/developers-guide/gg309332(v=crm.8)).  You can use the following options as the value for the `CrmParameter` element: `OrgName`, `OrgLcid`, and `UserLcid`.
  
- For a `<Url>` action, you can also use the `PassParams` attribute to include contextual information.  
+ For a `<Url>` action, you can also use the `PassParams` to include contextual information.  
   
- The `Value` options `PrimaryEntityTypeName` and `FirstPrimaryItemId` provide information for an entity record. You can use `PrimaryItemIds` for a `HomepageGrid` ribbon to get a list of all the displayed items.
+ The `Value` options `PrimaryEntityTypeName` and `FirstPrimaryItemId` provide information for a table record. You can use `PrimaryItemIds` for a `HomepageGrid` ribbon to get a list of all the displayed items.
   
 ### See also  
- [Customize the Ribbon](customize-commands-ribbon.md)   
- [Passing parameters to a URL using the Ribbon](pass-parameters-url-by-using-ribbon.md)    
- [Define Ribbon actions](define-ribbon-actions.md)   
- [Define custom actions to modify the Ribbon](define-custom-actions-modify-ribbon.md)<br>
+ [Customize the ribbon](customize-commands-ribbon.md)   
+ [Passing parameters to a URL using the ribbon](pass-parameters-url-by-using-ribbon.md)    
+ [Define ribbon actions](define-ribbon-actions.md)   
+ [Define custom actions to modify the ribbon](define-custom-actions-modify-ribbon.md)<br>
  [Client API form context](clientapi/clientapi-form-context.md)<br>
  [Client API grid context](clientapi/clientapi-grid-context.md)<br>
  
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

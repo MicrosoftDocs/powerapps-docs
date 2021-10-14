@@ -1,25 +1,32 @@
 ---
-title: "Use Liquid objects for a portal | MicrosoftDocs"
-description: "Learn about the available liquid objects in a portal."
+title: Available Liquid objects
+description: Learn about the available liquid objects in a portal.
 author: gitanjalisingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/05/2020
+ms.date: 09/27/2021
+ms.subservice: portals
 ms.author: gisingh
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - GitanjaliSingh33msft
 ---
 
 # Available Liquid objects
 
 Liquid objects contain attributes to output dynamic content to the page. For example, the page object has an attribute called title that can be used to output the title of the current page.
 
-To access an object attribute by name, use a dot . To render an object's attribute in a template, wrap it in {{ and }}.
+To access an object attribute by name, use a period (.). To render an object's attribute in a template, wrap it in {{ and }}.
+
+> [!IMPORTANT]
+> To avoid potential cross-site scripting (XSS) issues, always use [escape filter](liquid-filters.md#escape) to HTML encode data whenever using Liquid objects to read untrusted data provided by the user.
 
 ```
 {{ page.title }}
 ```
-Attributes of an object can also be accessed by using a string name and \[\]. This is useful in cases where the desired attribute is determined dynamically, or the attribute name contains characters , spaces, special characters, and so on that would be invalid when using the . syntax.
+Attributes of an object can also be accessed by using a string name and \[\]. This format is useful in cases where the required attribute is determined dynamically, or the attribute name contains characters, spaces, special characters, and so on, that would be invalid when using a period (.) inside the syntax.
 
 ```
 {{ page[title] }}
@@ -34,8 +41,8 @@ The following objects can be used and accessed anywhere, in any template.
 
 |   Object    |                                                                                                                                                                                          Description                                                                                                                                                                                           |
 |-------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|  entities   |                                                                                                 Allows you to load any Power Apps entity by ID. [!INCLUDE[proc-more-information](../../../includes/proc-more-information.md)] [entities](#entities)                                                                                                 |
-|     now     |                                          A date/time object that refers to the current UTC time at the time the template is rendered.<br>**Note**: This value is cached by the portal web app and is not refreshed every time. [!INCLUDE[proc-more-information](../../../includes/proc-more-information.md)] [Date filters](liquid-filters.md#date-filters)                                          |
+|  entities   |                                                                                                 Allows you to load any Power Apps table by ID. [!INCLUDE[proc-more-information](../../../includes/proc-more-information.md)] [entities](#entities)                                                                                                 |
+|     now     |                                          A date/time object that refers to the current UTC time at the time the template is rendered.<br>**Note**: This value is cached by the portal web app and isn't refreshed every time. [!INCLUDE[proc-more-information](../../../includes/proc-more-information.md)] [Date filters](liquid-filters.md#date-filters)                                          |
 |    page     | Refers to the current portal request page. The page object provides access to things like the breadcrumbs for the current page, the title or URL of the current page, and any other attributes or related entities of the underlying Power Apps record. [!INCLUDE[proc-more-information](../../../includes/proc-more-information.md)] [page](#page) |
 |   params    |                                                                                                                             A convenient shortcut for request.params. [!INCLUDE[proc-more-information](../../../includes/proc-more-information.md)] [request](#request)                                                                                                                              |
 |   request   |                                                                                                                        Contains information about the current HTTP request. [!INCLUDE[proc-more-information](../../../includes/proc-more-information.md)] [request](#request)                                                                                                                        |
@@ -86,7 +93,7 @@ The ads object allows you to select a specific ad or ad placement:
 
 ### Ad Placement attributes
 
-An ad placement is an entity object, with all of the same attributes, in addition to those listed below.
+An ad placement is a table object with the same general attributes, and the attributes listed below.
 
 |Attribute   |Description   |
 |---|---|
@@ -98,7 +105,7 @@ An ad placement is an entity object, with all of the same attributes, in additio
 ### Ad attributes
 
 > [!Note]
-> An ad is an entity object, with all of the same attributes in addition to those listed below.
+> An ad is a table object, with all of the same attributes in addition to those listed below.
 
 |Attribute   |Description   |
 |---|---|
@@ -195,7 +202,7 @@ The blogs object allows you to select a specific blog or blog posts.
 
 ### blogs Object
 
-The blogs object allows you to access any specific blog in the portal, or to access all blog posts in the portal (regardless of the blog).
+The blogs object allows you to access any specific blog in the portal, or to access all blog posts in the portal.
 
 The following table explains the attributes associated with the blogs object.
 
@@ -251,19 +258,21 @@ The following table explains various attributes associated with blogpost Object.
 |Attribute   |Description   |
 |---|---|
 | url            | The URL of the post.                                                                |
-| content        | Returns the content field for the post.                                             |
 | content        | Returns the Content field for the post.                                             |
-| author         | Returns the authorf for the post (which is simply a contact entity object.          |
+| author         | Returns the authors for the post (which is simply a contact table object.          |
 | title          | The Title of the post.                                                              |
 | comment\_count | Returns the integer value of the count of how many comments there for a given post. |
 | publish\_date  | The date at which the post was published.                                           |
 
 ## entities
 
-Allows you to load any Power Apps entity by ID. If the entity exists, an entity object will be returned. If an entity with the given ID is not found, [null](liquid-types.md#null) will be returned.  
+> [!CAUTION]
+> To avoid potential cross-site scripting (XSS) issues, always use [escape filter](liquid-filters.md#escape) to HTML encode data whenever using **entities** Liquid object to read data provided by the user that can't be trusted.
+
+Allows you to load any Power Apps table by ID. If the table exists, a table object will be returned. If a table with the given ID isn't found, [null](liquid-types.md#null) will be returned.  
 
 ```
-{% assign account = entities.account['936DA01F-9ABD-4d9d-80C7-02AF85C822A8'] %}
+{% assign account = entities.account['936DA01F-9ABD-4d9d-80C7-02AF85C822A8'] | escape %}
 
 {% if account %}
 
@@ -273,7 +282,7 @@ Allows you to load any Power Apps entity by ID. If the entity exists, an entity 
 
 {% assign entity_logical_name = 'contact' %}
 
-{% assign contact = entities[entity_logical_name][request.params.contactid] %}
+{% assign contact = entities[entity_logical_name][request.params.contactid] | escape %}
 
 {% if contact %}
 
@@ -284,37 +293,37 @@ Allows you to load any Power Apps entity by ID. If the entity exists, an entity 
 
 ### Entity
 
-An entity object provides access to the attributes of a Power Apps entity record.
+A entity object provides access to the attributes of a Power Apps table record.
 
 
 |             Attribute              |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 |------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|                 Id                 |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    The GUID ID of the entity, as a string. For example, 936DA01F-9ABD-4d9d-80C7-02AF85C822A8                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-|           logical\_name            |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   The Power Apps logical name of the entity.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-|               Notes                |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             Loads any notes (annotation) associated with the entity, ordered from oldest to newest (createdon). Notes are returned as note objects.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-|            permissions             |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             Loads Entity Permission assertion results for the entity. Results are returned as a permissions object.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-|                url                 |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    Returns the Power Apps portals content management system URL path for the entity. If the entity has no valid URL in the current website, returns null. Generally, this will only return a value for certain entity types that have been integrated into the portal CMS , unless you have customized the URL Provider in your application.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| \[attribute or relationship name\] | You can access any attribute of the Power Apps entity by logical name. `{{ entity.createdon }}{% assign attribute_name = 'name' %}{{ entity[attribute_name] }}` <br>The values of most entity attributes map directly to [Liquid types](liquid-types.md): Two Option fields map to Booleans, text fields to strings, numeric/currency fields to numbers, date/time fields to date objects. But some attribute types are returned as objects:<ul><li>Lookup (Entity Reference) fields are returned as entity reference objects.</li><li>Option Set/Picklist fields are returned as option set value objects.</li><li>You can also load any related entities by relationship schema name.</li>`{{ page.adx_webpage_entitylist.adx_name }}`In the case that a relationship is reflexive (that is, self-referential), a reflexive relationship object will be returned. (Otherwise, the result would be ambiguous.)`{{ page.adx_webpage_webpage.referencing.adx_name }}` <br>**Note**: Loading large numbers of related entities, or accessing large numbers of relationships in a single template, can have a negative impact on template rendering performance. Avoid loading related entities for each item in an array, within a loop. Where possible, use [Dataverse entity tags](portals-entity-tags.md) to load collections of entities. |
+|                 Id                 |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    The GUID ID of the table, as a string. For example, 936DA01F-9ABD-4d9d-80C7-02AF85C822A8                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+|           logical\_name            |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   The Power Apps logical name of the table.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+|               Notes                |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             Loads any notes (annotation) associated with the table, ordered from oldest to newest (createdon). Notes are returned as note objects.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+|            permissions             |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             Loads Table Permission assertion results for the table. Results are returned as a permissions object.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+|                url                 |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    Returns the Power Apps portals content management system URL path for the table. If the table has no valid URL in the current website, returns null. Generally, this will only return a value for certain table types that have been integrated into the portal CMS, unless you've customized the URL Provider in your application.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| \[attribute or relationship name\] | You can access any attribute of the Power Apps table by logical name. `{{ entity.createdon }}{% assign attribute_name = 'name' %}{{ entity[attribute_name] }}` <br>The values of most table attributes map directly to [Liquid types](liquid-types.md): Two Option fields map to Booleans, text fields to strings, numeric/currency fields to numbers, date/time fields to date objects. But some attribute types are returned as objects:<ul><li>Lookup (Associated Table Reference) fields are returned as associated table reference objects.</li><li>Option Set/Picklist fields are returned as option set value objects.</li><li>You can also load any related entities by relationship schema name.</li>`{{ page.adx_webpage_entitylist.adx_name }}`In the case that a relationship is reflexive (that is, self-referential), a reflexive relationship object will be returned. (Otherwise, the result would be ambiguous.)`{{ page.adx_webpage_webpage.referencing.adx_name }}` <br>**Note**: Loading large numbers of related entities, or accessing large numbers of relationships in a single template, can have a negative impact on template rendering performance. Avoid loading related entities for each item in an array, within a loop. Where possible, use [Dataverse table tags](portals-entity-tags.md) to load collections of entities. |
 
-### Entity Reference
+### Associated Table Reference
 
-Lookup attribute values are returned as entity reference objects, with the following attributes.
+Lookup attribute values are returned as associated table reference objects, with the following attributes.
 
 
 |   Attribute   |                                                Description                                                |
 |---------------|-----------------------------------------------------------------------------------------------------------|
-|      Id       | The GUID ID of the referenced entity, as a string. <br> For example, 936DA01F-9ABD-4d9d-80C7-02AF85C822A8 |
-| logical\_name |  The Power Apps logical name of the referenced entity.   |
-|     Name      |                           The primary name attribute of the referenced entity.                            |
+|      Id       | The GUID ID of the referenced table, as a string. <br> For example, 936DA01F-9ABD-4d9d-80C7-02AF85C822A8 |
+| logical\_name |  The Power Apps logical name of the referenced table.   |
+|     Name      |                           The primary name attribute of the referenced table.                            |
 
 ### Note
 
-A note is an entity object that provides access to the attributes and relationships of an annotation record. In addition to all the attributes of an entity object, a note has the following additional attributes.
+A note is a table object that provides access to the attributes and relationships of an annotation record. In addition to all the attributes of a table object, a note has the following additional attributes.
 
 
 |  Attribute   |                                                                                                                                                                                                                                  Description                                                                                                                                                                                                                                  |
 |--------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| documentbody | Loads the documentbody attribute of the note annotation record, as a Base64-encoded string. Because the content of this attribute may be large, it is not loaded with the rest of the note attributes, it is only loaded on demand. <br> **Note**: Use of the documentbody attribute could have a negative impact on template rendering performance, and should be done with caution.<br>Use the url attribute to provide a link to the note attachment instead, if possible. |
+| documentbody | Loads the documentbody attribute of the note annotation record, as a Base64-encoded string. Because the content of this attribute may be large, it isn't loaded with the rest of the note attributes, it is only loaded on demand. <br> **Note**: Use of the documentbody attribute could have a negative impact on template rendering performance, and should be done with caution.<br>Use the url attribute to provide a link to the note attachment instead, if possible. |
 |     url      |                                                                                                                                   Returns the URL path for the built-in portal annotation attachment handler. If the user has permission, and the note has an attached file, a request to this URL will download the note file attachment.                                                                                                                                    |
 
 >[!Note]
@@ -322,22 +331,22 @@ A note is an entity object that provides access to the attributes and relationsh
 
 ### Option Set Value
 
-Option Set/Picklist attribute values are returned as entity reference objects, with the following attributes.
+Option Set/Picklist attribute values are returned as associated table reference objects, with the following attributes.
 
 | Attribute | Description                                                     |
 |-----------|-----------------------------------------------------------------|
 | Label     | The localized label of the option set/picklist attribute value. For example, Active|
 | Value     | The integer value of the option set/picklist attribute value. For example, 0                                                           |
 
-### Entity Permissions
+### Table Permissions
 
-The Entity Permissions object provides access to aggregated permission assertion results for an entity.
+The Table Permissions object provides access to aggregated permission assertion results for a table.
 
 | Attribute       | Description                                                                                                                                                                                                              |
 |-----------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | can\_append     | Returns true if the current user has permission to append records to relationships of this record. Returns false otherwise.                                                                                              |
-| can\_append\_to | Returns true if the current user has permission to append this record to a relationship of another entity. Returns false otherwise.                                                                                      |
-| can\_create     | Returns true if the current user has permission to create new records of this entity type. Returns false otherwise.                                                                                                      |
+| can\_append\_to | Returns true if the current user has permission to append this record to a relationship of another table. Returns false otherwise.                                                                                      |
+| can\_create     | Returns true if the current user has permission to create new records of this table type. Returns false otherwise.                                                                                                      |
 | can\_delete     | Returns true if the current user has permission to delete this record. Returns false otherwise.                                                                                                                          |
 | can\_read       | Returns true if the current user has permission to read this record. Returns false otherwise.                                                                                                                            |
 | can\_write      | Returns true if the current user has permission to update this record. Returns false otherwise.                                                                                                                          |
@@ -351,14 +360,14 @@ Attempts to load reflexive (that is, self-referential) relationships on entities
 |---------------|---------------------------------------------------------------------------------------------------------------|
 | is\_reflexive | Returns true. Can be used to test whether an object returned by a relationship is a reflexive relationship object. |
 | referenced    | Returns an array of referenced entities for the given relationship.                                           |
-| referencing   | Returns a referencing entity for the given relationship. Returns null if no referencing entity exists. If the relationship is many-to-many (N:N), returns an array of referencing entities.                          
+| referencing   | Returns a referencing table for the given relationship. Returns null if no referencing table exists. If the relationship is many-to-many (N:N), returns an array of referencing entities.                          
 
 ## entitylist
 
-The entitylist object is used within the [Power Apps Dataverse entity tags](portals-entity-tags.md). It provides access to all the attributes of a given entity list.  
+The entitylist object is used within the [Power Apps Dataverse table tags](portals-entity-tags.md). It provides access to all the attributes of a given list.  
 
 > [!Note]                                                       
-> [Render the entity list associated with the current page](render-entity-list-current-page.md)
+> [Render the list associated with the current page](render-entity-list-current-page.md)
 
 ### Attributes
 
@@ -367,43 +376,43 @@ The entitylist object is used within the [Power Apps Dataverse entity tags](port
 
 |               Attribute               |                                                                                                                            Description                                                                                                                            |
 |---------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|            create\_enabled            |                                                                                Returns true if creation of new records is configured for the entity list. Returns false otherwise.                                                                                |
-|              create\_url              |                                                                                          Returns the configured URL path for a creation link/button for the entity list.                                                                                          |
-|            detail\_enabled            |                                                                         Returns true if a detail view for individual records is configured for the entity list. Returns false otherwise.                                                                          |
+|            create\_enabled            |                                                                                Returns true if creation of new records is configured for the list. Returns false otherwise.                                                                                |
+|              create\_url              |                                                                                          Returns the configured URL path for a creation link/button for the list.                                                                                          |
+|            detail\_enabled            |                                                                         Returns true if a detail view for individual records is configured for the list. Returns false otherwise.                                                                          |
 |         detail\_id\_parameter         |               Returns the query string parameter name to use for the record ID when constructing a record detail view URL. See [URL filters](liquid-filters.md#url-filters) for details on using Liquid filters to construct URLs. For example, id                |
-|             detail\_label             |                                                                                     Returns the configured localized label for detail view links/buttons for the entity list.                                                                                     |
-|              detail\_url              |                                                                                       Returns the configured URL path for a detail view links/buttons for the entity list.                                                                                        |
-|           empty\_list\_text           |                                                                                Returns the configured localized text to be displayed when the entity list view returns no results.                                                                                |
-|      enable\_entity\_permissions      |                                                                               Returns true if Entity Permission filtering is enabled for this entity list. Returns false otherwise.                                                                               |
-|         entity\_logical\_name         |                                                 Returns the Power Apps entity logical name for records to be displayed by this entity list. For example, contact                                                 |
+|             detail\_label             |                                                                                     Returns the configured localized label for detail view links/buttons for the list.                                                                                     |
+|              detail\_url              |                                                                                       Returns the configured URL path for a detail view links/buttons for the list.                                                                                        |
+|           empty\_list\_text           |                                                                                Returns the configured localized text to be displayed when the list view returns no results.                                                                                |
+|      enable\_entity\_permissions      |                                                                               Returns true if Table Permission filtering is enabled for this list. Returns false otherwise.                                                                               |
+|         entity\_logical\_name         |                                                 Returns the Power Apps table logical name for records to be displayed by this list. For example, contact                                                 |
 |   filter\_account\_attribute\_name    |                                            Returns the attribute logical name for the lookup to account that will be used to filter result records by the current portal user's parent account. For example, accountid                                            |
-|         filter\_apply\_label          |                                                            Returns the configured localized label to be used for the link/button that applies an advanced attribute filter to the entity list results.                                                            |
-|          filter\_definition           |                      Returns the JSON attribute filter definition for the entity list. See [Entity List filters](liquid-filters.md#entity-list-filters) for details on how to use the metafilters Liquid filter to process this definition.                       |
-|            filter\_enabled            |                                                                               Returns true if advanced attribute filtering is enabled for the entity list. Returns false otherwise.                                                                               |
+|         filter\_apply\_label          |                                                            Returns the configured localized label to be used for the link/button that applies an advanced attribute filter to the list results.                                                            |
+|          filter\_definition           |                      Returns the JSON attribute filter definition for the list. See [List filters](liquid-filters.md#list-filters) for details on how to use the metafilters Liquid filter to process this definition.                       |
+|            filter\_enabled            |                                                                               Returns true if advanced attribute filtering is enabled for the list. Returns false otherwise.                                                                               |
 | filter\_portal\_user\_attribute\_name |                                                 Returns the attribute logical name for the lookup to contact that will be used to filter result records by current portal user's contact. For example, contactid                                                  |
 |   filter\_website\_attribute\_name    |                                              Returns the attribute logical name for the lookup to adx\_website that will be used to filter result records by the current portal website. For example, adx\_websiteid                                              |
-|            language\_code             |                                               Returns the Power Apps integer language code that will be used to select all localized labels for this entity list.                                                |
-|              page\_size               |                                                                                                   Returns the configured result page size for the entity list.                                                                                                    |
-|          primary\_key\_name           |                                                                                  Returns the primary key attribute logical name for records to be displayed by this entity list.                                                                                  |
-|            search\_enabled            |                                                                                         Returns true if search is enabled for this entity list. Returns false otherwise.                                                                                          |
-|          search\_placeholder          |                                                                                        Returns the configured localized text for the entity list search field placeholder.                                                                                        |
-|            search\_tooltip            |                                                                                             Returns the configured localized text for the entity list search tooltip.                                                                                             |
-|                 views                 |                                                                                           Returns the available views for the entity list, as entity list view objects.                                                                                           |
-|      \[attribute logical name\]       | You can access any attribute of the entity list (adx\_entitylist) Power Apps record by logical name, in the same manner as an [entity](liquid-objects.md#entity) object. For example, {{ entitylist.adx\_name }} |
+|            language\_code             |                                               Returns the Power Apps integer language code that will be used to select all localized labels for this list.                                                |
+|              page\_size               |                                                                                                   Returns the configured result page size for the list.                                                                                                    |
+|          primary\_key\_name           |                                                                                  Returns the primary key attribute logical name for records to be displayed by this list.                                                                                  |
+|            search\_enabled            |                                                                                         Returns true if search is enabled for this list. Returns false otherwise.                                                                                          |
+|          search\_placeholder          |                                                                                        Returns the configured localized text for the list search field placeholder.                                                                                        |
+|            search\_tooltip            |                                                                                             Returns the configured localized text for the list search tooltip.                                                                                             |
+|                 views                 |                                                                                           Returns the available views for the list, as list view objects.                                                                                           |
+|      \[attribute logical name\]       | You can access any attribute of the list (adx\_entitylist) Power Apps record by logical name, in the same manner as a [table](liquid-objects.md#entity) object. For example, {{ entitylist.adx\_name }} |
 
-### Entity List View Attributes
+### List View Attributes
 
 |          Attribute          |                                                                                     Description                                                                                     |
 |-----------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|           columns           |                                                         Returns the columns of the view as entity list view column objects.                                                         |
-|    entity\_logical\_name    |               Returns the Power Apps entity logical name for the records included in the view. For example, contact                |
+|           columns           |                                                         Returns the columns of the view as list view column objects.                                                         |
+|    entity\_logical\_name    |               Returns the Power Apps table logical name for the records included in the view. For example, contact                |
 |             Id              |                                                                          Returns the GUID ID of the view.                                                                           |
 |       language\_code        | Returns the Power Apps integer language code that will be used to select all localized labels (column headers, etc.) for the view. |
 |            Name             |                                          Returns the Power Apps display name of the view.                                          |
-| primary\_key\_logical\_name |        Returns the Power Apps entity primary key logical name for the records included in the view. For example, contactid         |
+| primary\_key\_logical\_name |        Returns the Power Apps table primary key logical name for the records included in the view. For example, contactid         |
 |      sort\_expression       |                                               Returns the default sort expression for the view. For example, name ASC, createdon DESC                                               |
 
-### Entity List View Column Attributes
+### List View Column Attributes
 
 |    Attribute     |                                                                                    Description                                                                                    |
 |------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -424,9 +433,9 @@ The entityview object is used within the entityview tag, and provides access to 
 
 |          Attribute          |                                                                               Description                                                                                |
 |-----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|           columns           |                         Returns the columns in the view, as [entity view column objects](liquid-objects.md#entity-list-view-column-attributes).                          |
-| entity\_permission\_denied  | Returns true if access to view results was denied due to insufficient Entity Permissions for the current user. Returns false if read access to view results was granted. |
-|    entity\_logical\_name    |                   The Power Apps entity logical name of the view result records. For example, contact                   |
+|           columns           |                         Returns the columns in the view, as [table view column objects](liquid-objects.md#list-view-column-attributes).                          |
+| entity\_permission\_denied  | Returns true if access to view results was denied due to insufficient Table Permissions for the current user. Returns false if read access to view results was granted. |
+|    entity\_logical\_name    |                   The Power Apps table logical name of the view result records. For example, contact                   |
 |         first\_page         |                 The page number of the first page of view results. This will be 1 unless there were no results returned, in which case it will be null.                  |
 |             Id              |                            The GUID ID of the Power Apps view that defines this entityview.                             |
 |       language\_code        |             The Power Apps integer language code being used to load localized labels for the current view.              |
@@ -437,8 +446,8 @@ The entityview object is used within the entityview tag, and provides access to 
 |            pages            |                                          Returns an array of page numbers containing all pages of results for the current view.                                          |
 |         page\_size          |                                                      The number of results returned per page for the current view.                                                       |
 |       previous\_page        |                              The page number of the next page of view results. If there is no previous page of results, this will be null.                               |
-| primary\_key\_logical\_name |  The Power Apps logical name of the primary key attribute of the result entity for this view. For example, contactid.   |
-|           records           |                                                   The current page of result records for the view, as entity objects.                                                    |
+| primary\_key\_logical\_name |  The Power Apps logical name of the primary key attribute of the result table for this view. For example, contactid.   |
+|           records           |                                                   The current page of result records for the view, as table objects.                                                    |
 |      sort\_expression       |                                             The default sort expression for the view. For example, nameASC, createdon DESC.                                              |
 |        total\_pages         |                                                              The total number of result pages for the view.                                                              |
 |       total\_records        |                                                       The total number of results for the view (across all pages).                                                       |
@@ -455,7 +464,7 @@ The events object has following attributes:
 
 |Attribute   |Description   |
 |---|---|
-|occurences |Returns a eventoccurancessobject containing all event occurrences in the portal |
+|occurences |Returns an eventoccurancessobject containing all event occurrences in the portal |
 |[event name or id] |You can access any event by its Name or Id properties.<br>{% assign event = events[&quot;Event Name&quot;] %}<br>{% assign event = events[&quot;da8b8a92-2ee6-476f-8a21-782b047ff460&quot;] %} |
 
 ### event Object
@@ -466,7 +475,7 @@ The event object has following attributes:
 
 |Attribute   |Description   |
 |---|---|
-| occurrences | Returns a eventoccurrencesobject containing all occurrences for the event. |
+| occurrences | Returns an eventoccurrencesobject containing all occurrences for the event. |
 | name       | The name of the event.                                                     |
 | url        | The URL of the event.                                                      |
 
@@ -554,9 +563,9 @@ This is child page number 3.
 
 ## forums
 
-Provides the ability to access and render Forums and Forum Threads. Note that the ability to use liquid to render forum data extends to posts, but to create a new post or thread, you must use an ASP.NET web forms Page Template with said functionality built in (such as the default Forum Thread and Forum Post Page Templates).
+Provides the ability to access and render Forums and Forum Threads. The ability to use liquid to render forum data extends to posts, but to create a new post or thread, you must use an ASP.NET advanced forms Page Template with said functionality built in (such as the default Forum Thread and Forum Post Page Templates).
 
-The forums object allows you to select a Forum or Forum Threads :
+The forums object allows you to select a Forum or Forum Threads:
 
 ```
 <div class=content-panel panel panel-default>
@@ -662,7 +671,7 @@ The forumposts object allows you to access a collection of forumpost objects.
 |Attribute   |Description   |
 |---|---|
 | posts        | Returns a forumposts object containing all forum posts for the thread.            |
-| author       | Returns the author for the thread (which is simply a contact entity object).      |
+| author       | Returns the author for the thread (which is simply a contact table object).      |
 | latest\_post | Returns the latest post in the thread.                                            |
 | first\_post  | Returns the first post in the thread.                                             |
 | post\_count  | Returns the integer value of the count of how many posts there are in the thread. |
@@ -686,21 +695,21 @@ A Single Forum Post
 
 |Attribute   |Description   |
 |---|---|
-| author     | Returns the author for the post (which is simply a contact entity object). |
+| author     | Returns the author for the post (which is simply a contact table object). |
 | content    | The content of the post.                                                   |
 | is\_answer | Is this post an answer to the thread?                                      |
 
 
 ## knowledge
 
-Provides access to Power Apps knowledgearticle and category entity records to render articles and categories in a portal.
+Provides access to Power Apps knowledgearticle and category table records to render articles and categories in a portal.
 
 ### Attributes
 
 |Attribute|Description|
 |---|---|
-|articles|Returns an articles object containing article objects for the knowledgearticle entity records available in the portal.|
-|categories|Returns a categories object containing category objects for the category entity records available in the portal.|
+|articles|Returns an articles object containing article objects for the knowledgearticle table records available in the portal.|
+|categories|Returns a categories object containing category objects for the category table records available in the portal.|
 |||
 
 ### articles object
@@ -773,7 +782,7 @@ The categories object allows you to access a collection of category objects. You
 |Attribute|Description|
 |---|---|
 |recent |Returns a collection of category objects containing the latest modified date. |
-|top_level |Returns a collection of category objects that do not have a parent category. |
+|top_level |Returns a collection of category objects that don't have a parent category. |
 |||
 
 ### Filters
@@ -788,7 +797,7 @@ The following filters can accept an optional parameter indicating the page size.
 |Attribute|Description|
 |---|---|
 |recent |Returns a collection of category objects containing the latest modified date. You can provide parameters `{% assign recent_categories = knowledge.categories \| recent: 10 %}` |
-|top_level |Returns a collection of category objects that do not have a parent category. `{% assign root_categories = knowledge.categories \| top_level %}` |
+|top_level |Returns a collection of category objects that don't have a parent category. `{% assign root_categories = knowledge.categories \| top_level %}` |
 |||
 
 ### article Object
@@ -827,6 +836,21 @@ category is an [entity](#entity) object, with all of the same attributes, in add
 |name|An alternate alias for the title of the category.|
 |title|The title of the category.|
 |||
+
+## language
+
+Provides the current language name, and language code if  [multiple-language support](../configure/enable-multiple-language-support.md) is enabled.
+
+### Attributes
+
+| Attribute | Description |
+| - | - |
+| url | The current request URL prefixed with the current language code. |
+| url_substitution | The current request URL prefixed with the current language code bypassing the page output cache. |
+| name | Title of the current language. |
+| code | The language code of the language. |
+
+For example, the **Languages Dropdown** web template by default uses this liquid object to list the available languages when multiple-languages are available.
 
 ## page
 
@@ -888,7 +912,7 @@ The page object provides access to things like the breadcrumbs for the current p
 |               parent               |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           Returns the parent site map node of the page. If the page is the Home page, parent will be null.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 |               title                |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                The title of the page.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 |                url                 |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 The URL of the page.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| \[attribute or relationship name\] | You can access any attribute of the page's underlying Power Apps record by logical name.<br>`{{ page.createdon }}`<br>`{% assign attribute_name = 'name' %}`<br>`{{ page[attribute_name] }}`<br>The values of most entity attributes map directly to [Liquid types](liquid-types.md): Two Option fields map to Booleans, text fields to strings, numeric/currency fields to numbers, date/time fields to date objects. But some attribute types are returned as objects:<ul><li>Lookup (Entity Reference) fields are returned as [entity reference objects](#entity-reference).</li><li>Option Set/Picklist fields are returned as [option set value objects](#option-set-value).</li> You can also load any related entities by relationship schema name. <br> `{{ page.adx_webpage_entitylist.adx_name }}`<br>In the case that a relationship is reflexive (that is, self-referential), a [entities](#entities) object will be returned. (Otherwise, the result would be ambiguous.)`{{ page.adx_webpage_webpage.referencing.adx_name }}` <br>**Note**: Loading large numbers of related entities, or accessing large numbers of relationships in a single template, can have a negative impact on template rendering performance. Avoid loading related entities for each item in an array, within a loop. Where possible, prefer use of the [Power Apps Dataverse entity tags](portals-entity-tags.md) to load collections of entities. |
+| \[attribute or relationship name\] | You can access any attribute of the page's underlying Power Apps record by logical name.<br>`{{ page.createdon }}`<br>`{% assign attribute_name = 'name' %}`<br>`{{ page[attribute_name] }}`<br>The values of most table attributes map directly to [Liquid types](liquid-types.md): Two Option fields map to Booleans, text fields to strings, numeric/currency fields to numbers, date/time fields to date objects. But some attribute types are returned as objects:<ul><li>Lookup (Associated Table Reference) fields are returned as [associated table reference objects](#associated-table-reference).</li><li>Option Set/Picklist fields are returned as [option set value objects](#option-set-value).</li> You can also load any related entities by relationship schema name. <br> `{{ page.adx_webpage_entitylist.adx_name }}`<br>In the case that a relationship is reflexive (that is, self-referential), a [entities](#entities) object will be returned. (Otherwise, the result would be ambiguous.)`{{ page.adx_webpage_webpage.referencing.adx_name }}` <br>**Note**: Loading large numbers of related entities, or accessing large numbers of relationships in a single template, can have a negative impact on template rendering performance. Avoid loading related entities for each item in an array, within a loop. Where possible, prefer use of the [Power Apps Dataverse table tags](portals-entity-tags.md) to load collections of entities. |
 
 ## polls
 
@@ -980,14 +1004,15 @@ The polls object allows you to select a specific poll or poll placement:
 Contains information about the current HTTP request.
 
 ```
-{% assign id = request.params['id'] %}
+{% assign id = request.params['id'] | escape %}
 
-<a href={{ request.url | add_query: 'foo', 1 }}>Link</a>
+<a href={{ request.url | add_query: 'foo', 1 | escape }}>Link</a>
 ```
 
 > [!NOTE]
 > - You can build URLs dynamically in Liquid by using URL Filters.
 > - The URL used in request.url can be any requested value, and gets [cached](../configure/enable-header-footer-output-caching.md) for subsequent requests. To ensure correct value in request.url, consider using [substitution tag](../liquid/template-tags.md#substitution), partial URL such as ~\{WebFile path} or storing the portal URL in [Site Settings](../configure/configure-site-settings.md).
+> - Power Apps portals release version [9.3.8.x](/power-platform/released-versions/portals/portalupdate938x) or later will by default have [escape](../liquid/liquid-filters.md#escape) Liquid filter enforced for [user](../liquid/liquid-objects.md#user) and [request](../liquid/liquid-objects.md#request) Liquid objects. To disable this default configuration and allow these Liquid objects without escape Liquid filter, see [portal site settings - Site/EnableDefaultHtmlEncoding](../configure/configure-site-settings.md#portal-site-settings).
 
 ### Attributes
 
@@ -1002,7 +1027,7 @@ Contains information about the current HTTP request.
 
 ## searchindex
 
-The searchindex object is used within the [Power Apps Dataverse entity tags](portals-entity-tags.md), and provides access to the results of a query.  
+The searchindex object is used within the [Power Apps Dataverse table tags](portals-entity-tags.md), and provides access to the results of a query.  
 
 ```
 {% searchindex query: 'support', page: params.page, page_size: 10 %}
@@ -1040,9 +1065,9 @@ The searchindex object is used within the [Power Apps Dataverse entity tags](por
 
 |Attribute   |Description   |
 |---|---|
-| approximate\_total\_hits | Returns an approximate count of total hits matching the index query. Note that due to the way the search index works in regard to security filtering and other design factors, this number is only an approximation, and may not exactly match the total number of results available to the current user in some situations.  |
+| approximate\_total\_hits | Returns an approximate count of total hits matching the index query. Due to the way the search index works in regard to security filtering and other design factors, this number is only an approximation, and may not exactly match the total number of results available to the current user in some situations.  |
 | Page                     | Returns the page number of the current query.                                                                                                                                                                                                           |
-| page\_size               | Returns the maximum page size of the current query. Note that if you want the actual number of results returned for the current page (because this may be less than the specified maximum page size), use results.size.                                                                                           |
+| page\_size               | Returns the maximum page size of the current query. If you want the actual number of results returned for the current page (because this may be less than the specified maximum page size), use results.size.                                                                                           |
 | results                  | Returns the query result page, as search index result objects.                                                                                                                                                                                          |
 
 ### Search Index Results
@@ -1050,9 +1075,9 @@ The searchindex object is used within the [Power Apps Dataverse entity tags](por
 |   Attribute   |                                                                                                                                                Description                                                                                                                                                 |
 |---------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    entity     |                                                                                                                            The underlying [entities](#entities) for the result.                                                                                                                            |
-|   fragment    | A relevant short text fragment for the result, with terms matching the specified query highlighted using the &lt;em&gt; HTML tag. Note that certain types of queries do not support highlighted fragments, such as fuzzy queries (~) and wildcard queries (\*). This property will be null in those cases. |
-|      Id       |                                                             The Power Apps entity ID of the underlying record for the result, as a string. For example, 936DA01F-9ABD-4d9d-80C7-02AF85C822A8                                                              |
-| logical\_name |                                                                           The Power Apps entity logical name of the underlying record for the result. For example, adx\_webpage                                                                           |
+|   fragment    | A relevant short text fragment for the result, with terms matching the specified query highlighted using the &lt;em&gt; HTML tag. Certain types of queries do not support highlighted fragments, such as fuzzy queries (~) and wildcard queries (\*). This property will be null in those cases. |
+|      Id       |                                                             The Power Apps table ID of the underlying record for the result, as a string. For example, 936DA01F-9ABD-4d9d-80C7-02AF85C822A8                                                              |
+| logical\_name |                                                                           The Power Apps table logical name of the underlying record for the result. For example, adx\_webpage                                                                           |
 |    number     |                                                            The number of the result, across all result pages, starting from 1. For example, for the first result of the second page of results, with a page size of 10, this value will be 11.                                                             |
 |     score     |                                                                                                 The Lucene score of the result, as a floating-point value. Results will be returned ordered by this value.                                                                                                 |
 |     title     |                                                                                                                                          The title of the result.                                                                                                                                          |
@@ -1060,7 +1085,7 @@ The searchindex object is used within the [Power Apps Dataverse entity tags](por
 
 ## settings
 
-Allows you to load any [site setting](../configure/configure-site-settings.md) by name. If a setting with the given name is not found, [null](liquid-types.md#null) will be returned.  
+Allows you to load any [site setting](../configure/configure-site-settings.md) by name. If a setting with the given name isn't found, [null](liquid-types.md#null) will be returned.  
 
 > [!Note]
 > Settings are returned as [strings](liquid-types.md#string), but you can use [Type filters](liquid-filters.md#type-filters) to convert them to other types.
@@ -1143,7 +1168,7 @@ It's also possible to load a site map node by URL path:
 | Breadcrumbs           | Returns the breadcrumb site map node objects for the node, starting from the site map root node and ending at parent. |
 | Children              | Returns the child site map node objects of the node.                                                                  |
 | Description           | The description/summary content for the node. (This field may contain HTML.)                                          |
-| Entity                | Returns the underlying [entities](#entities) of the node. If the node has no underlying entity, this value will be null.                                                         |
+| Entity                | Returns the underlying [entities](#entities) of the node. If the node has no underlying table, this value will be null.                                                         |
 | is\_sitemap\_ancestor | Returns true if the sitemap node is an ancestor of the current node, otherwise false.                                                                                                         |
 | is\_sitemap\_current  | Returns true if the sitemap node is the current node, otherwise false.                                                                                                         |
 | Parent                | Returns the parent site map node of the node. If the node is the root node, parent will be null.                                                                     |
@@ -1153,7 +1178,7 @@ It's also possible to load a site map node by URL path:
 
 ## sitemarkers
 
-Allows you to load any site marker by name. If the sitemarker exists, a sitemarker object will be returned. If a sitemarker with the given name is not found, [null](liquid-types.md#null) will be returned.  
+Allows you to load any site marker by name. If the sitemarker exists, a sitemarker object will be returned. If a sitemarker with the given name isn't found, [null](liquid-types.md#null) will be returned.  
 
 ```
 {{ sitemarkers[Login].url }}
@@ -1183,7 +1208,7 @@ Site marker My Site Marker does not exist.
 
 ## snippets
 
-Allows you to load any content snippets by name. If a snippet with the given name is not found, [null](liquid-types.md#null) will be returned.  
+Allows you to load any content snippets by name. If a snippet with the given name isn't found, [null](liquid-types.md#null) will be returned.  
 
 ```
 {{ snippets[Header] }}
@@ -1215,8 +1240,8 @@ Contains properties useful within a [Iteration tags](iteration-tags.md) loop blo
 |---|---|
 | Col        | Returns the index of the current row, starting at 1.                                                       |
 | col0       | Returns the index of the current row, starting at 0.                                                       |
-| col\_first | Returns true if the current column is the first column in a row, returns false if it is not.               |
-| col\_last  | Returns true if the current column is the last column in a row, returns false if it is not.                |
+| col\_first | Returns true if the current column is the first column in a row, returns false if it isn't.               |
+| col\_last  | Returns true if the current column is the last column in a row, returns false if it isn't.                |
 | First      | Returns true if it's the first iteration of the loop. Returns false if it's not the first iteration.       |
 | Index      | The current item's position in the collection, where the first item has a position of 1.                   |
 | index0     | The current item's position in the collection, where the first item has a position of 0.                   |
@@ -1235,15 +1260,18 @@ user is an [entity](#entity) object.
 
 ```
 {% if user %}
-
-Hello, {{ user.fullname }}!
-
+ 
+Hello, {{ user.fullname | escape }}!
+ 
 {% else %}
-
+ 
 Hello, anonymous user!
-
+ 
 {% endif %}
 ```
+
+> [!NOTE]
+> Power Apps portals release version [9.3.8.x](/power-platform/released-versions/portals/portalupdate938x) or later will by default have [escape](../liquid/liquid-filters.md#escape) Liquid filter enforced for [user](../liquid/liquid-objects.md#user) and [request](../liquid/liquid-objects.md#request) Liquid objects. To disable this default configuration and allow these Liquid objects without escape Liquid filter, see [portal site settings - Site/EnableDefaultHtmlEncoding](../configure/configure-site-settings.md#portal-site-settings).
 
 ### Attributes
 
@@ -1260,7 +1288,7 @@ In addition to having all of the attributes of an [entity](#entity) object, user
 
 Allows you to load any weblinks by name or ID.  
 
-If the web link set exists, a [web link set object](#web-link-set-attributes) will be returned. If a web link set with the given name or ID is not found, [null](liquid-types.md#null) will be returned.
+If the web link set exists, a [web link set object](#web-link-set-attributes) will be returned. If a web link set with the given name or ID isn't found, [null](liquid-types.md#null) will be returned.
 
 
 ```
@@ -1369,9 +1397,20 @@ Refers to the portal website, allowing access to all attributes of the Power App
 Community Portal (936DA01F-9ABD-4d9d-80C7-02AF85C822A8)
 ```
 
+### Attributes
+
+The following table lists the attributes for this tag that can be used replacing the defaults to avoid caching.
+
+| Default | Substitute (avoids caching) | Example |
+| - | - | - |
+| sign_in_url  | sign_in_url_substitution | **Default**: *website.sign_in_url*: `/en-US/SignIn?returnUrl=%2Fen-US%2F` <br>  **Substitution (avoids caching)**: *website.sign_in_url_substitution*: `/en-US/SignIn?returnUrl=%2Fen-US%2Fsubstitute-page%2F` <br> ("substitute-page" in this example replaces default cached URL.)
+| sign_out_url | sign_out_url_substitution | **Default**: *website.sign_out_url*: `/en-US/Account/Login/LogOff?returnUrl=%2Fen-US%2F` <br>  **Substitution (avoids caching)**: *website.sign_out_url_substitution*: `/en-US/Account/Login/LogOff?returnUrl=%2Fen-US%2Fsubstitute-page%2F` <br> ("substitute-page" in this example replaces default cached URL.)
 
 ### See also
 
 [Liquid types](liquid-types.md)  
 [Liquid Tags](liquid-tags.md)  
 [Liquid Filters](liquid-filters.md)  
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

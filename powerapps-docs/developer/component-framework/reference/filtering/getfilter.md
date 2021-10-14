@@ -1,6 +1,6 @@
 ---
 title: getFilter | Microsoft Docs
-description: 
+description: Returns the top-most filter associated with the dataset.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -23,7 +23,7 @@ ms.assetid: 63c75c11-540f-4181-a68f-5295ecb75a96
 
 ## Available for 
 
-Model-driven apps
+Model-driven and canvas apps
 
 ## Return Value
 
@@ -35,3 +35,5 @@ Type: [FilterExpression](../filterexpression.md)
 [Filtering](../filtering.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>
 [Power Apps component framework overview](../../overview.md)
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

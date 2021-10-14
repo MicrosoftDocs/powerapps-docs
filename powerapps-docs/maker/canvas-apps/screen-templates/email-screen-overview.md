@@ -1,6 +1,6 @@
 ---
-title: Email-screen template | Microsoft Docs
-description: Understand how the email-screen template for canvas apps works, and extend the screen for your own use cases
+title: Email-screen template for canvas apps
+description: Understand how the email-screen template for canvas apps works, modify the screen, and extend it as part of an app.
 author: emcoope-msft
 manager: kvivek
 ms.service: powerapps
@@ -8,14 +8,18 @@ ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 12/29/2018
+ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - emcoope-msft
 ---
 
-# Overview of the email-screen template for canvas apps
+# Email-screen template for canvas apps
 
 In a canvas app, add an email screen that lets users send an email from their Office 365 Outlook account. Users can search for recipients in their orgs and add external email addresses, too. You can add image-attachment support, change the user data that appears in the search gallery, and make other customizations.
 
@@ -45,7 +49,7 @@ To add an email screen from the template:
 
     By default, the screen looks similar to this:
 
-    ![Email screen](media/email-screen/email-screen-full.png)
+    ![Email screen.](media/email-screen/email-screen-full.png)
 
 A few helpful notes:
 
@@ -132,7 +136,7 @@ This allows users to send a single image with their email as an attachment.
 
 ### Show different data for people
 
-This screen uses the [Office365Users.SearchUser](https://docs.microsoft.com/connectors/office365users/#searchuser) operation to search for users in your org. It provides additional fields for each event beyond what appears in the **PeopleBrowseGallery** control. Adding or changing fields in the gallery is simple:
+This screen uses the [Office365Users.SearchUser](/connectors/office365users/#searchuser) operation to search for users in your org. It provides additional fields for each event beyond what appears in the **PeopleBrowseGallery** control. Adding or changing fields in the gallery is simple:
 
 1. In the **PeopleBrowseGallery** control, select a label to modify (or add one and keep it selected).
 
@@ -160,3 +164,5 @@ Follow the steps outlined in the "Show event attendees" section of [Calendar scr
 * [View the reference documentation for this screen](./email-screen-reference.md).
 * [Learn more about the Office 365 Users connector in Power Apps](../connections/connection-office365-users.md).
 * [See all available connections in Power Apps](../connections-list.md).
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

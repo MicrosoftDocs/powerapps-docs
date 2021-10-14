@@ -1,5 +1,5 @@
 ---
-title: Use drop-down lists with choices from lookup columns in a SharePoint list | Microsoft Docs
+title: Use drop-down lists with choices from lookup columns in a SharePoint list
 description: This article explains how to use the drop-down list in your app to show choices from a lookup column in a SharePoint list.
 author: emcoope-msft
 ms.service: powerapps
@@ -7,11 +7,17 @@ ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 09/01/2020
+ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - navjotm
+  - wimcoor
+  - emcoope-msft
 ---
 # Use drop-down lists with choices from lookup columns in a SharePoint list
 
@@ -43,7 +49,7 @@ To use the choices in a drop-down list, you have to use the function [choices](.
 
 1. Select **Drop down**.
 
-    ![Select Drop down](./media/scenarios-choice-to-lookup/insert-drop-down.png "Select Drop down")
+    ![Select Drop down.](./media/scenarios-choice-to-lookup/insert-drop-down.png "Select Drop down")
 
 1. Update the **Items** property with the following formula:
 
@@ -51,13 +57,16 @@ To use the choices in a drop-down list, you have to use the function [choices](.
 
     Replace **Vehicle registration** with the name of your SharePoint list and **Vehicle type** with the name of the lookup column in the list.
 
-    ![Choices formula](./media/scenarios-choice-to-lookup/choices-formula.png "Choices formula")
+    ![Choices formula.](./media/scenarios-choice-to-lookup/choices-formula.png "Choices formula")
 
 1. Play the app, or press **Alt** on the keyboard and select the drop-down list.
 
-    ![Drop-down choices](./media/scenarios-choice-to-lookup/drop-down-choices.png "Drop-down choices")
+    ![Drop-down choices.](./media/scenarios-choice-to-lookup/drop-down-choices.png "Drop-down choices")
 
 ### See also
 
 - [Formula reference](../formula-reference.md) for Power Apps
 - [Control reference](../reference-properties.md) for Power Apps
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

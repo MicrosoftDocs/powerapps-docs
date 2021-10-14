@@ -1,6 +1,6 @@
 ---
 title: updateRecord | Microsoft Docs
-description: 
+description: Updates a table record.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -38,20 +38,20 @@ Model-driven apps
 <td>entityLogicalName</td>
 <td>String</td>
 <td>Yes</td>
-<td>The entity logical name of the record you want to update. For example: &quot;account&quot;.</td>
+<td>The table logical name of the record you want to update. For example: &quot;account&quot;.</td>
 </tr>
 <tr>
 <td>id</td>
 <td>String</td>
 <td>Yes</td>
-<td>GUID of the entity record you want to update.</td>
+<td>GUID of the table record you want to update.</td>
 </tr>
 <tr>
 <td>data</td>
 <td>Object</td>
 <td>Yes</td>
-<td><p>A JSON object containing <code>key: value</code> pairs, where <code>key</code> is the property of the entity and <code>value</code> is the value of the property you want to update.</p>
-<p>See examples later in this topic to see how you can define the <code>data</code> object for various update scenarios.</td>
+<td><p>A JSON object containing <code>key: value</code> pairs, where <code>key</code> is the property of the table and <code>value</code> is the value of the property you want to update.</p>
+</td>
 </tr>
 <tr>
 <td>successCallback</td>
@@ -59,7 +59,7 @@ Model-driven apps
 <td>No</td>
 <td><p>A function to call when a record is updated. An object with the following properties will be passed to identify the updated record:</p>
 <ul>
-<li><b>entityType</b>: String. The entity type of the updated record.</li>
+<li><b>entityType</b>: String. The table type of the updated record.</li>
 <li><b>id</b>: String. GUID of the updated record.</li>
 </ul></td>
 </tr>
@@ -77,9 +77,7 @@ Model-driven apps
 
 ## Return Value
 
-Type: [Promise](https://developer.mozilla.org/docs/Web/JavaScript/reference/Global_Objects/Promise)<[Entityreference](../entityreference.md)>
-
-Description: On success, returns a promise object containing the attributes specified earlier in the description of the **successCallback** parameter.
+Type: LookupValue[]
 
 
 ### Related topics
@@ -87,3 +85,6 @@ Description: On success, returns a promise object containing the attributes spec
 [Web API](../webapi.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>
 [Power Apps component framework overview](../../overview.md)
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

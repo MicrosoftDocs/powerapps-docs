@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: guidance
 ms.date: 06/16/2020
+ms.subservice: guidance
 ms.author: tayoshi
 ms.reviewer: kathyos
 
@@ -17,7 +18,7 @@ You can retrieve and store data three different ways.
 
 :::row:::
     :::column:::
-        ![New data](media/new-data.png "New data")
+        ![New data.](media/new-data.png "New data")
 
         **New data** If your app is creating data that doesn't already exist anywhere, such
         as in situations where the existing business process was done using paper, we recommend storing
@@ -26,7 +27,7 @@ You can retrieve and store data three different ways.
         We'll discuss this topic in [Data modeling: Designing your data structure](data-modeling.md).
     :::column-end:::
    :::column:::
-        ![Read/write from existing system](media/read-write.png "Read/write from existing system")
+        ![Read/write from existing system.](media/read-write.png "Read/write from existing system")
 
        **Read/write from an existing system** This is a type of data where you need to
        retrieve the latest information from an existing database or system. In these cases,
@@ -34,7 +35,7 @@ You can retrieve and store data three different ways.
         
     :::column-end:::
     :::column:::
-        ![Make a copy of existing data](media/copy-data.png "Make a copy of existing data")
+        ![Make a copy of existing data.](media/copy-data.png "Make a copy of existing data")
 
         **Make a copy of the data** In situations where original data should never be
         modified or overwritten, you can copy the data to another data store such as
@@ -60,7 +61,7 @@ data from another system to Dataverse or Azure Data Lake storage.
 Unlike a connector, it fetches data in a scheduled batch. Instead of just
 retrieving the data as-is from the data source, you can use Power Query
 Online to manipulate, cleanse, and transform data before you store it to the
-target storage. More information: [Self-service data prep with dataflows](../../maker/common-data-service/self-service-data-prep-with-dataflows.md)
+target storage. More information: [Self-service data prep with dataflows](../../maker/data-platform/self-service-data-prep-with-dataflows.md)
 
 The method you choose depends on your use cases and how data needs to be handled. The following table lists some items to use for comparison.
 
@@ -96,3 +97,6 @@ needs:
 
 > [!div class="nextstepaction"]
 > [Next step: Working with enterprise systems](enterprise-systems.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

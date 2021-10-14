@@ -7,6 +7,7 @@ ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
 author: "aengusheaney" # GitHub ID
+ms.subservice: mda-developer
 ms.author: "nabuthuk" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -31,7 +32,10 @@ When a solution is developed with unit testing, developers report greater produc
 
 ### See also
 
-[Testing tools for server-side development](../common-data-service/testing-tools-server.md)<br />
+[Testing tools for server-side development](../data-platform/testing-tools-server.md)<br />
 [Video:  Creating and running UI test](https://youtu.be/ryWgK34Akt0)<br />
 [Blog post: Easy Repro: what is it?](https://www.itaintboring.com/dynamics-crm/easy-repro-what-is-it/)<br />
 [Video: Introduction to DevOps](https://youtu.be/AorM792M8nY)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -5,7 +5,8 @@ author: TGrounds
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: guidance
-ms.date: 06/16/2020
+ms.date: 12/18/2020
+ms.subservice: guidance
 ms.author: thground
 ms.reviewer: kathyos
 
@@ -34,5 +35,12 @@ the project. Nick's sponsorship will ensure that employees adopt the new
 process. Charlotte's sponsorship will provide some funds in addition to permission
 to access key data.
 
-> [!div class="nextstepaction"]
-> [Next step: Design the app](designing-phase.md)
+### Next steps
+
+- If you're designing an app using Power Apps, see [Design the app](designing-phase.md).
+
+- If you're designing an automation using Power Automate, see [Design the automation](/power-automate/guidance/planning/process-design) in Power Automate guidance docs.
+
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

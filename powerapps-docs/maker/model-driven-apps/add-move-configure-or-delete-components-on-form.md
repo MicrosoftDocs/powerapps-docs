@@ -7,12 +7,13 @@ ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+ms.topic: "how-to"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
   - "PowerApps"
 author: "Aneesmsft"
+ms.subservice: mda-maker
 ms.author: "matp"
 manager: "kvivek"
 tags: 
@@ -32,7 +33,7 @@ By using the form designer, makers can easily add and configure popular componen
 To add components to a form, use the **Components** pane. The **Components** pane also lets you search to quickly find components.  
 
 > [!div class="mx-imgBorder"] 
-> ![Components pane](media/FormDesignerComponentsPane.PNG "Components pane")
+> ![Components pane.](media/FormDesignerComponentsPane.PNG "Components pane")
 
 ### Add components to a form using drag and drop
 > [!NOTE]
@@ -119,4 +120,7 @@ You can move components on a form by either drag-and-drop or cut-and-paste actio
 [Add and configure a quick view component on a form](form-designer-add-configure-quickview.md)  
 [Configure a lookup component on a form](form-designer-add-configure-lookup.md)  
 [Using the tree view in the form designer](using-tree-view-on-form.md)  
-[Create and edit columns](../common-data-service/create-edit-field-portal.md)  
+[Create and edit columns](../data-platform/create-edit-field-portal.md)  
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

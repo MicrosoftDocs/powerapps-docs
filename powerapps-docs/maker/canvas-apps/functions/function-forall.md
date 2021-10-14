@@ -1,6 +1,6 @@
 ---
-title: ForAll function | Microsoft Docs
-description: Reference information, including syntax and examples, for the ForEach function in Power Apps
+title: ForAll function in Power Apps
+description: Reference information including syntax and examples for the ForAll function in Power Apps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -8,11 +8,15 @@ ms.topic: reference
 ms.custom: canvas
 ms.reviewer: nabuthuk
 ms.date: 07/17/2020
+ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - gregli-msft
+  - nkrb
 ---
 # ForAll function in Power Apps
 
@@ -62,7 +66,7 @@ Another consideration is that **ForAll** is not delegable while other functions 
 ### Calculations
 The following examples use the **Squares** [data source](../working-with-data-sources.md):
 
-![](media/function-forall/squares.png)
+![Example of squares.](media/function-forall/squares.png)
 
 To create this data source as a collection, set the **OnSelect** property of a **Button** control to this formula, open Preview mode, and then select the button:
 
@@ -70,13 +74,13 @@ To create this data source as a collection, set the **OnSelect** property of a *
 
 | Formula | Description | Result |
 | --- | --- | --- |
-| **ForAll(&nbsp;Squares, Sqrt(&nbsp;Value&nbsp;)&nbsp;)**<br><br>**Sqrt(&nbsp;Squares&nbsp;)** |For all the records of the input table, calculates the square root of the **Value** column.  The **Sqrt** function can also be used with a single-column table, making it possible perform this example without using **ForAll**. | ![](media/function-forall/sqrt.png) |
-| **ForAll(&nbsp;Squares, Power(&nbsp;Value,&nbsp;3&nbsp;)&nbsp;)** |For all the records of the input table, raises the **Value** column to the third power.  The **Power** function does not support single-column tables. Therefore, **ForAll** must be used in this case. | ![](media/function-forall/power3.png) |
+| **ForAll(&nbsp;Squares, Sqrt(&nbsp;Value&nbsp;)&nbsp;)**<br><br>**Sqrt(&nbsp;Squares&nbsp;)** |For all the records of the input table, calculates the square root of the **Value** column.  The **Sqrt** function can also be used with a single-column table, making it possible perform this example without using **ForAll**. | ![Example of Sqrt.](media/function-forall/sqrt.png) |
+| **ForAll(&nbsp;Squares, Power(&nbsp;Value,&nbsp;3&nbsp;)&nbsp;)** |For all the records of the input table, raises the **Value** column to the third power.  The **Power** function does not support single-column tables. Therefore, **ForAll** must be used in this case. | ![Example of Power.](media/function-forall/power3.png) |
 
 ### Using a connection
 The following examples use the **Expressions** [data source](../working-with-data-sources.md):
 
-![](media/function-forall/translate.png)
+![Example of expressions.](media/function-forall/translate.png)
 
 To create this data source as a collection, set the **OnSelect** property of a **Button** control to this formula, open Preview mode, and then select the button:
 
@@ -86,8 +90,8 @@ This example also uses a [Microsoft Translator](../connections/connection-micros
 
 | Formula | Description | Result |
 | --- | --- | --- |
-| **ForAll(Expressions, MicrosoftTranslator.Translate( Value, "es"))** |For all the records in the Expressions table, translate the contents of the **Value** column into Spanish (abbreviated "es"). | ![](media/function-forall/translate-es.png) |
-| **ForAll(Expressions, MicrosoftTranslator.Translate( Value, "fr"))** |For all the records in the Expressions table, translate the contents of the **Value** column into French (abbreviated "fr"). | ![](media/function-forall/translate-fr.png) |
+| **ForAll(Expressions, MicrosoftTranslator.Translate( Value, "es"))** |For all the records in the Expressions table, translate the contents of the **Value** column into Spanish (abbreviated "es"). | ![Example with value "es."](media/function-forall/translate-es.png) |
+| **ForAll(Expressions, MicrosoftTranslator.Translate( Value, "fr"))** |For all the records in the Expressions table, translate the contents of the **Value** column into French (abbreviated "fr"). | ![Example with value "fr."](media/function-forall/translate-fr.png) |
 
 ### Copying a table
 Sometimes you need to filter, shape, sort, and manipulate data.  Power Apps provides many functions for doing this, such as **Filter**, **AddColumns**, and **Sort**.  Power Apps treat each table as a value, allowing it to flow through formulas and be consumed easily.      
@@ -102,7 +106,7 @@ But before you make that copy, think carefully if it is needed.  Many situations
 
 The following examples use the **Products** [data source](../working-with-data-sources.md):
 
-![](media/function-forall/prod.png)
+![Example of products data source.](media/function-forall/prod.png)
 
 To create this data source as a collection, set the **OnSelect** property of a **Button** control to this formula, open Preview mode, and then select the button:
 
@@ -119,7 +123,7 @@ ClearCollect( Products,
 
 Our goal is to work with a derivative table that includes only the items where more has been requested than is available, and for which we need to place an order:
 
-![](media/function-forall/prod-order.png)  
+![Example of derivative table.](media/function-forall/prod-order.png)  
 
 We can perform this task in a couple of different ways, all of which produce the same result, with various pros and cons.
 
@@ -188,7 +192,7 @@ ClearCollect( NewOrder,
                 Product: Product, 
                 'Quantity To Order': 'Quantity Requested' - 'Quantity Available' 
             } 
-        } 
+        ) 
     )
 )
 ```
@@ -216,3 +220,6 @@ Again, the **ForAll** function can't be delegated at this time.  If our **Produc
 
 Note that we are not capturing the result of the **ForAll**.  The **Collect** function calls made from within it will return the **NewOrder** data source for all the records, which could add up to numerous data if we were capturing it.  
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

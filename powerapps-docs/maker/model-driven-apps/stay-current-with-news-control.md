@@ -7,10 +7,11 @@ ms.reviewer: "matp"
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "how-to"
 author: "Mattp123"
 ms.assetid: 15d123e0-b604-45dd-ab34-0b37787a04bb
 caps.latest.revision: 33
+ms.subservice: mda-maker
 ms.author: "matp"
 manager: "kvivek"
 tags: 
@@ -31,7 +32,7 @@ and competitors. Install the news Power Apps component framework control, which
 delivers relevant news from Bing News.
 
 > [!div class="mx-imgBorder"] 
-> ![News control in account form](media/news-control-in-account-form.png)
+> ![News control in account form.](media/news-control-in-account-form.png)
 
 You can customize to support additional news sources, the look and feel
 and the behavior of the PCF control. For more information, see the [readme in the news control GitHub repo](https://github.com/microsoft/companynewspcfcontrol/blob/master/companynews/README.md). 
@@ -48,11 +49,10 @@ contact and competitor.
 The news control requires a news API URL, API key, and more news URL. For Bing
 News, the more news URL is preconfigured in the control to use
 *https://www.bing.com/news/search*. For the News API URL, and API Key, you’ll
-need to provide these by creating a Cognitive Service component under your Azure
-account. Once created, you will get the API key and API URL under the **Keys and Endpoint** section.
+need to provide these by creating a [Bing Search azure resource](https://docs.microsoft.com/en-us/bing/search-apis/bing-web-search/create-bing-search-service-resource) under your Azure account. Once created, you will get the API key and API URL under the **Keys and Endpoint** section.
 
 > [!div class="mx-imgBorder"] 
-> ![Azure Cognitive Services API key and endpoint](media/azure-apikey-endpoint.png)
+> ![Bing Search Services API key and endpoint.](media/azure-bingsearch-apikey-endpoint.png)
 
 ### Import the company news solution 
 
@@ -84,7 +84,7 @@ account. Once created, you will get the API key and API URL under the **Keys and
     b. For both **Display name** and **Name** enter *newsapikey*. Leave the rest of the settings as the default and then select **Save and Close**.
 
       > [!div class="mx-imgBorder"]
-      > ![newsapikey column definition](media/field-definition.png)
+      > ![newsapikey column definition.](media/field-definition.png)
 
     c.  Repeat the previous two steps to create another text column. For both the
     **Display name** and **Name** enter *newsurl*. Leave the rest of the
@@ -95,7 +95,7 @@ account. Once created, you will get the API key and API URL under the **Keys and
 6. To show news by account name, drag and drop the **Account Name** column from the right **Column Explorer** pane to the newly created section.
 
    > [!div class="mx-imgBorder"] 
-   > ![Account name on account form](media/account-name-form.png)
+   > ![Account name on account form.](media/account-name-form.png)
 
 7. Select the section and then select **Change properties.** Enter a descriptive section a **Name**, such as *Company news*. You might want to check **Show the label of this section on the form** to provide heading to the section. Select **OK**.
 
@@ -105,7 +105,7 @@ account. Once created, you will get the API key and API URL under the **Keys and
 
     a.  Select **Configure property** (pencil icon) next to APIKey.
 
-      ![Configure apikey binding](media/apikey-binding.png)
+      ![Configure apikey binding.](media/apikey-binding.png)
 
     b.  From **Bind to value on a column** the dropdown list, select **new_newsapikey
     (SingleLine.Text)**, and then select **OK**.
@@ -115,7 +115,7 @@ account. Once created, you will get the API key and API URL under the **Keys and
     d.  From **Bind to value on a column** the dropdown list, select **new_newsurl
     (SingleLine.Text)**, and then select **OK**.
 
-      ![Configure base URL binding](media/baseurl-binding.png)
+      ![Configure base URL binding.](media/baseurl-binding.png)
 
     e. On the **Column Properties** page, select the **Web**, **Phone**, and **Tablet**, client options.
 
@@ -124,9 +124,9 @@ account. Once created, you will get the API key and API URL under the **Keys and
 
 10. To provide API Key and Base URL default values, use business rules. Select     **Business Rules** from the form editor, and then select **New Business Rule** from the bottom of the right pane.
 
-11. In the business rule designer, select **Condition** on the designer canvas,     set **Column** to **Account Name** and **Operator** to **Contains data,** and     then select **Apply**. Then, select the **Components** tab, drag a **Set Column Value** action, and provide a column value where **Column** is **newsapikey** and the value is the **Key** you copied from the Azure Cognitive Services properties. Create another **Set Column Value** action where **Column** is **newsurl** and add the value as the **Endpoint** you copied from the Azure Cognitive Services properties. Make sure to append *bing/v7.0/news/search* at the end of the news URL. The final URL should look like https://<yourservicename\>.cognitiveservices.azure.com/bing/v7.0/news/search. 
+11. In the business rule designer, select **Condition** on the designer canvas,     set **Column** to **Account Name** and **Operator** to **Contains data,** and     then select **Apply**. Then, select the **Components** tab, drag a **Set Column Value** action, and provide a column value where **Column** is **newsapikey** and the value is the **Key** you copied from the Bing Search properties. Create another **Set Column Value** action where **Column** is **newsurl** and add the value as the **Endpoint** you copied from the Bing Search properties. Make sure to append *bing/v7.0/news/search* at the end of the news URL. The final URL should look like https://api.bing.microsoft.com/v7.0/news/search. 
 
-    ![Create a business rule for the api key and URL](media/business-rule-for-fields.png)
+    ![Create a business rule for the api key and URL.](media/business-rule-for-fields.png)
 
 12. Save and activate the rule. Close the business rule designer.
 
@@ -138,3 +138,5 @@ account. Once created, you will get the API key and API URL under the **Keys and
 
 ### See also 
 [Use custom controls for model-driven app data visualizations](use-custom-controls-data-visualizations.md)
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

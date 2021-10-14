@@ -1,6 +1,6 @@
 ---
-title: 'Radio control: reference | Microsoft Docs'
-description: Information, including properties and examples, about the Radio control
+title: Radio control in Power Apps
+description: Learn about the details, properties and examples of the Radio control in Power Apps.
 author: chmoncay
 manager: kvivek
 ms.service: powerapps
@@ -8,11 +8,15 @@ ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 07/06/2018
+ms.subservice: canvas-maker
 ms.author: chmoncay
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - chmoncay
 ---
 # Radio control in Power Apps
 
@@ -76,9 +80,9 @@ The control can have a horizontal or vertical layout.
 
 **[LineHeight](properties-text.md)** – The distance between, for example, lines of text or items in a list.
 
-**[OnChange](properties-core.md)** – How the app responds when the user changes the value of a control (for example, by adjusting a slider).
+**[OnChange](properties-core.md)** – Actions to perform when the user changes the value of a control (for example, by adjusting a slider).
 
-**[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
+**[OnSelect](properties-core.md)** – Actions to perform when the user taps or clicks a control.
 
 **[PaddingBottom](properties-size-location.md)** – The distance between text in a control and the bottom edge of that control.
 
@@ -164,3 +168,6 @@ In addition to the [standard color contrast requirements](../accessible-apps-col
 
 * Set the **[TabIndex](properties-accessibility.md)** property to zero or greater so that keyboard users can navigate to it.
 * Set the **[FocusedBorderColor](properties-color-border.md)** and **[FocusedBorderThickness](properties-color-border.md)** properties so that focus indicators are clearly visible.
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

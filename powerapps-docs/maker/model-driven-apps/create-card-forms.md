@@ -5,13 +5,14 @@ keywords: ""
 ms.date: 03/05/2019
 ms.service: powerapps
 ms.custom: 
-ms.topic: article
+ms.topic: how-to
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
   - "PowerApps"
 ms.assetid: be93b9d7-f1c2-4ee7-8d7c-0f5c34dfa5f7
 author: "Mattp123"
+ms.subservice: mda-maker
 ms.author: "matp"
 manager: "kvivek"
 ms.reviewer: 
@@ -28,7 +29,7 @@ search.app:
 Card forms are used in views for Unified Interface apps. Card forms are designed to present information in a compact format that is suitable for mobile devices. For example, the default card form for the My Active Accounts view defines the information displayed for each account row. 
 
 > [!div class="mx-imgBorder"] 
-> ![Account card form for my active accounts view](media/account-cardform-for-myactiveaccounts-view.png "Account card form for my active accounts view")
+> ![Account card form for my active accounts view.](media/account-cardform-for-myactiveaccounts-view.png "Account card form for my active accounts view")
 
 Although card forms can be created and edited in the same way as other form types, card forms are added to apps differently. Instead of adding a form as an app component, custom card forms are added to views by using the **Read Only Grid** control. 
 
@@ -50,11 +51,11 @@ Although card forms can be created and edited in the same way as other form type
    > There are two read only grid controls. The default read only grid control that is named **Read-only Grid (default)** doesn’t support custom card forms. 
 
 6. From the **Read Only Grid** properties page configure the following properties, and then select **OK**. 
-   - **Card Form**. Select the pencil icon ![Edit control properties](media/ccf-pencil-icon.png) and then select the card form you want to display in the view. By default, the primary table associated with the view is already selected, but you can change it. 
-   - **Reflow behavior**. If you want to change whether the card form displays when resized, select the pencil icon ![Edit control properties](media/ccf-pencil-icon.png). More information: [Allow grid to reflow into list](specify-properties-for-unified-interface-apps.md#allow-grid-to-reflow-into-list)  
+   - **Card Form**. Select the pencil icon ![Edit control properties.](media/ccf-pencil-icon.png) and then select the card form you want to display in the view. By default, the primary table associated with the view is already selected, but you can change it. 
+   - **Reflow behavior**. If you want to change whether the card form displays when resized, select the pencil icon ![Edit control properties.](media/ccf-pencil-icon.png). More information: [Allow grid to reflow into list](specify-properties-for-unified-interface-apps.md#allow-grid-to-reflow-into-list)  
    - Select the client types, **Web**, **Phone**, or **Tablet**, where you want the **Read Only Grid** control to display.
 
-     ![Read Only Grid for card form](media/read-only-grid-for-cardform.png)
+     ![Read Only Grid for card form.](media/read-only-grid-for-cardform.png)
 
 7. Select **OK** to close the **Custom Controls** properties page. 
 8. On the classic view designer toolbar, select **Save and Close**. 
@@ -64,3 +65,6 @@ Although card forms can be created and edited in the same way as other form type
 
 
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

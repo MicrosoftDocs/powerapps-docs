@@ -2,27 +2,29 @@
 title: Add Geospatial components to apps made with Microsoft Power Apps
 description: Geospatial components let you view and manipulate 3D objects and images in the real world, in augmented reality. 
 author: iaanw
-manager: shellha
+manager: shellyha
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas, ce06122020
 ms.reviewer: tapanm
-ms.date: 6/12/2020
+ms.date: 1/19/2021
+ms.subservice: canvas-maker
 ms.author: iawilt
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
-
+contributors:
+  - iaanw
 ---
 
-# Add geospatial components to your app (Preview)
 
-[!INCLUDE [cc-beta-prerelease-disclaimer.md](../../includes/cc-beta-prerelease-disclaimer.md)]
+# Add geospatial components to your app
+
 
 You can add a number of geospatial components to your canvas app to support scenarios that involve mapping locations and addresses.
 
-Components are groups of controls that can answer the need for a specific scenario. You can read more about components and how to build your own in [the Power Apps developer library](/powerapps/developer/component-framework/custom-controls-overview).
+Components are groups of controls that can answer the need for a specific scenario. You can read more about components and how to build your own in [the Power Apps developer library](../../developer/component-framework/custom-controls-overview.md).
 
 The following prebuilt components can be used for geospatial and mapping scenarios:
 
@@ -33,7 +35,6 @@ The following prebuilt components can be used for geospatial and mapping scenari
 
 1. An admin must [enable the geospatial features in the Power Platform admin center](#enable-the-geospatial-features-for-the-environment) for the environment. This requires reviewing and agreeing to specific terms of service.
 2. An admin must [ensure the geospatial components will not be blocked by the environment's data loss prevention policies](#review-the-environments-data-loss-prevention-policies).
-3. [Enable the geospatial features for each app](#enable-the-geospatial-features-for-each-app).
 
     >[!IMPORTANT]
     >The components require the default **Organizations** data source to be present. This data source is included whenever you insert the components into an app, but if you manually delete it you'll need to add it before the components will work:
@@ -51,15 +52,15 @@ The geospatial features require additional terms of use that must be reviewed an
 
 1. On the **Environments** tab, select the environment you want to use for your apps, and then select **Settings** from the top menu.
 
-    ![Environment selected in the Power Platform admin center](./media/geospatial/ppac-environment.png "Environment selected in the Power Platform admin center")
+    ![Environment selected in the Power Platform admin center.](./media/geospatial/ppac-environment.png "Environment selected in the Power Platform admin center")
 
 1. Expand **Product**, and then select **Features**.
 
-    ![Screenshot of environment settings with Features selection highlighted](./media/geospatial/ppac-settings.png "Screenshot of environment settings with Features selection highlighted")
+    ![Screenshot of environment settings with Features selection highlighted.](./media/geospatial/ppac-settings.png "Screenshot of environment settings with Features selection highlighted")
 
-1. Under **Geospatial services (preview)**, set the toggle switch to **On**. A terms of service notice will appear. Read through the terms of service, and if you agree, select the checkbox **I agree to the terms of service**, and then select **Enable**.
+1. Under **Geospatial services**, set the toggle switch to **On**. A terms of service notice will appear. Read through the terms of service, and if you agree, select the checkbox **I agree to the terms of service**, and then select **Enable**.
 
-    ![Screenshot of the terms of service](./media/geospatial/ppac-tos.png "Screenshot of the terms of service")
+    ![Screenshot of the terms of service.](./media/geospatial/ppac-tos.png "Screenshot of the terms of service")
 
     >[!IMPORTANT]
     >You must read and agree to the terms of service before you can use geospatial features. 
@@ -74,8 +75,6 @@ The geospatial features require additional terms of use that must be reviewed an
     >
     >Additional licensing requirements might be required to enable this feature.  
 
-    ![Screenshot of the geospatial services toggle switch to On](./media/geospatial/ppac-geo-on.png "Screenshot of the geospatial services toggle switch to On")
-    
     >[!NOTE]
     >Requests sent between TomTom(tm) and the Azure Maps service are not exposed over the public Internet.
     >
@@ -84,37 +83,14 @@ The geospatial features require additional terms of use that must be reviewed an
 
 1. Select **Save** at the bottom of the settings page.
 
-    ![Screenshot of the Save button](./media/geospatial/ppac-save.png "Screenshot of the Save button")
+    ![Screenshot of the Save button.](./media/geospatial/ppac-save.png "Screenshot of the Save button")
 
 ### Review the environment's data loss prevention policies
 
-The geospatial components require the Common Data Service and Spatial Services connectors. 
+The geospatial components require the Microsoft Dataverse and Spatial Services connectors. This connector is used by the Power Apps Maps and Address Input components to connect to Microsoft’s Azure Maps service. It is used to fetch map tiles and satellite imagery, geocode addresses, and search for addresses. Thus, it is required for the Interactive Map and Address Input components to function.
 
 For the components to function properly, these connectors must not have conflicting data loss prevention policies. An admin must review the environment's data loss prevention policies and ensure that these connectors are classified under the same data group, typically the **Business** data group. [Learn more about data loss prevention policies for Power Platform](/power-platform/admin/prevent-data-loss). 
 
-### Enable the geospatial features for each app
-
-1. Open the app for editing in Power Apps Studio at [https://create.powerapps.com](https://create.powerapps.com).
-
-2. Select **File** from the top menu.
-
-    ![Select File](./media/augmented-overview/augmented-overview-file.png "Select File")
-
-3. Go to the **Settings** tab, select **Advanced settings**, and scroll down to find the **Geospatial features** option. Set the option to **On**.
-
-    ![Set the Geospatial features switch to on](./media/geospatial/enable-geo.png "Set the Geospatial features switch to on")
-
-4. Return to editing your app by selecting the back arrow icon.
-
-    ![Select the back arrow icon](./media/augmented-overview/augmented-overview-back.png "Select the back arrow icon")
-
-5. Open the **Insert** pane to see the geospatial components:
-    - **Address input** is under **Input**
-    - **Map** is under **Media**
-
-    ![See the address input component under Input](./media/geospatial/insert-address-input.png "See the address input component under Input")  
-
-    ![See the map component under Media](./media/geospatial/insert-map.png "See the map component under Media")
 
 ### Next steps
 
@@ -122,3 +98,6 @@ Start installing the components in your apps:
 
 - Visualize and interpret location data with the **[Interactive map](geospatial-component-map.md)** component.
 - See dynamic address suggestions as you type with the **[Address input](geospatial-component-input-address.md)** component.
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -1,144 +1,179 @@
 ---
-title: "Configure the Azure Active Directory B2C identity provider for Power Apps portals. | MicrosoftDocs"
+title: Configure the Azure Active Directory B2C provider (using interface in preview)
 description: "Learn how to configure the Azure Active Directory B2C identity provider for Power Apps portals."
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/20/2020
+ms.date: 04/21/2021
+ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - sandhangitmsft
+    - dileepsinghmicrosoft
 ---
 
-# Configure the Azure AD B2C provider for portals
+# Configure the Azure Active Directory B2C provider (using interface in preview)
 
-[!include[Azure](../../../includes/pn-azure-shortest.md)] Active Directory (Azure AD) powers Microsoft 365 and Dynamics 365 services for employee or internal authentication. [!include[Azure](../../../includes/pn-azure-shortest.md)] Active Directory B2C (Azure AD B2C) is an extension to that authentication model that enables external customer sign-ins through local credentials and federation with various common social identity providers.
+[This article is pre-release documentation and is subject to change.]
 
-A portal owner can configure the portal to accept [!include[Azure](../../../includes/pn-azure-shortest.md)] AD B2C as an identity provider. [!include[Azure](../../../includes/pn-azure-shortest.md)] AD B2C supports OpenID Connect for federation.
+[!include[Azure](../../../includes/pn-azure-shortest.md)] Active Directory (Azure AD) powers Microsoft 365 and Dynamics 365 services for employee or internal authentication. [!include[Azure](../../../includes/pn-azure-shortest.md)] Active Directory B2C (Azure AD B2C) is an extension to this authentication model that enables external customers to sign in through local credentials and federation with various common social identity providers.
+
+A portal owner can configure the portal [!include[Azure](../../../includes/pn-azure-shortest.md)] AD B2C as an identity provider. [!include[Azure](../../../includes/pn-azure-shortest.md)] AD B2C supports Open ID Connect for federation.
+
+> [!IMPORTANT]
+> This article describes how to configure Azure AD B2C as the identity provider automatically by using a feature in preview. Using these steps, you can create a new Azure AD B2C tenant, register applications, and configure user flows from within Power Apps portals. If you want to configure the Azure AD B2C provider manually using the generally available interface, go to [Configure the Azure AD B2C provider manually](configure-azure-ad-b2c-provider-manual.md).
 
 > [!NOTE]
-> Changes to the authentication settings [might take a few minutes](../admin/clear-server-side-cache.md#caching-changes-for-portals-with-version-926x-or-later) to be reflected on the portal. Restart the portal by using [portal actions](../admin/admin-overview.md) if you want the changes to be reflected immediately.
-<!--markdownlint-disable MD036-->
-**To configure Azure AD B2C as the OpenID Connect provider**
+> Changes to the authentication settings [might take a few minutes](../admin/clear-server-side-cache.md#caching-changes-for-portals-with-version-926x-or-later) to be reflected on the portal. If you want the changes to be reflected immediately, restart the portal by using [portal actions](../admin/admin-overview.md).
 
-1. Select **Configure** for **Azure Active Directory B2C**. More information: [Configure a provider](use-simplified-authentication-configuration.md#add-or-configure-a-provider)
+Follow these steps to configure Azure AD B2C as the OpenID Connect provider.
 
-    ![Azure AD B2C provider name](media/authentication/azure-ad-b2c-name.png "Azure AD B2C provider name")
+> [!IMPORTANT]
+> - This is a preview feature.
+> - [!INCLUDE[cc_preview_features_definition](../../../includes/cc-preview-features-definition.md)]
 
-1. If necessary, update the name.
+## Step 1. Select the provider
+
+1. Go to [Power Apps preview](https://make.preview.powerapps.com).
+
+1. On the left pane, select **Apps**.
+
+    ![Select Apps.](media/use-simplified-authentication-configuration/select-apps.png "Select Apps")
+
+1. Select your portal from the list of available apps.
+
+1. On the command bar, select **Settings**.<br>or<br>Select **More Commands** (**...**), and then select **Settings**.
+
+    ![Select Settings.](media/use-simplified-authentication-configuration/select-settings.png "Select Settings")
+
+1. In **Portal settings** on the right side of your workspace, select **Authentication Settings**.
+
+    ![Authentication Settings.](media/use-simplified-authentication-configuration/portal-settings-right-pane.png "Authentication Settings")
+
+1. For **Azure Active Directory B2C**, select **Configure**.
+
+    ![Configure Azure AD B2C.](media/authentication/configure-adb2c.png "Configure Azure AD B2C")
+
+1. If necessary, update the **Provider name**.
+
+    ![Azure AD B2C provider name.](media/authentication/azure-ad-b2c-name.png "Azure AD B2C provider name")
 
 1. Select **Next**.
 
-1. In this step, create the application and configure the settings with your identity provider.
+## Step 2. Select a tenant
 
-    ![Configure the Azure AD B2C app](media/use-simplified-authentication-configuration/configure-ad-b2c-step1.png "Configure the Azure AD B2C app")
+In this step, you select an existing Azure AD B2C tenant or create a new one.
 
-    1. Sign in to your [Azure portal](https://portal.azure.com/).
+![Select or create an Azure AD B2C tenant.](media/authentication/azure-adb2c-select-tenant.png "Select or create an Azure AD B2C tenant")
 
-    1. [Create an Azure AD B2C tenant](https://docs.microsoft.com/azure/active-directory-b2c/tutorial-create-tenant).
+### Option 1. Existing Azure AD B2C tenant
 
-    1. [Register an application](https://docs.microsoft.com/azure/active-directory-b2c/tutorial-register-applications?tabs=applications#register-a-web-application) in your tenant.
+Select this option if you already have an existing Azure AD B2C tenant. Other details such as the initial domain name, country/region, and location will be automatically updated.
 
-        1. Search for and select **Azure AD B2C**.
+> [!NOTE]
+> Ensure that the account you use to sign in to Power Apps has access to the Azure AD tenant that you want to use for configuring Azure AD B2C authentication. For information about adding different types of user accounts to an Azure AD B2C tenant, go to [Overview of user accounts in Azure Active Directory B2C](/azure/active-directory-b2c/user-overview).
 
-        1. Under **Manage**, select **App registrations**.
+![Select an existing Azure AD B2C tenant.](media/authentication/b2c-tenant-select.png "Select an existing Azure AD B2C tenant")
 
-        1. Select **New registration**.
+Select **Next** to continue.
 
-            ![New app registration](media/authentication/app-registration-new-b2c.png "New app registration")
+### Option 2. New Azure AD B2C tenant
 
-        1. Enter a name.
+Select this option to create a new Azure AD B2C tenant.
 
-        1. Under **Redirect URI**, select **Web** (if it isn't selected already).
+> [!NOTE]
+> - Ensure that the account you use to sign in to Power Apps has been assigned at least the [Contributor role](/azure/role-based-access-control/built-in-roles) for the subscription or for a resource group within the subscription.
+> - Ensure the Azure subscription has the **Microsoft.AzureActiveDirectory** resource provider registered. Otherwise, creating the new Azure AD B2C tenant will fail with this error:
+> <br> `Error occurred while creating Azure AD B2C tenant. The subscription is not registered to use namespace 'Microsoft.AzureActiveDirectory'. See https://aka.ms/rps-not-found for how to register subscriptions.` More information: [Resolve errors for resource provider registration in Azure](/azure/azure-resource-manager/templates/error-register-resource-provider)
 
-        1. In the **Redirect URI** text box, enter the **Reply URL** for your portal. <br> Example: `https://contoso-portal.powerappsportals.com/signin-aad-b2c_1`
+![Create a new Azure AD B2C tenant.](media/authentication/new-b2c-tenant.png "Create a new Azure AD B2C tenant")
+<!--markdownlint-disable MD036-->
+**To create a new Azure AD B2C tenant**
+<!--markdownlint-enable MD036-->
 
-            > [!NOTE]
-            > If you're using the default portal URL, copy and paste the **Reply URL** as shown in the **Create and configure B2C tenant in Azure** step. If you're using a custom domain name for the portal, enter the custom URL. Be sure to use this value when you configure the **Redirect URL** in your portal settings while configuring the Azure AD B2C provider. <br> For example, if you enter the **Reply URL** in Azure portal as `https://contoso-portal.powerappsportals.com/signin-aad-b2c_1`, you must use it as-is for the Azure AD B2C configuration in portals.
+1. Select the Azure AD tenant or directory.
 
-            ![Register application](media/authentication/register-application-b2c.png "Register application")
+1. Select a subscription for the tenant, or&mdash;if you want to create a new subscription from the Azure portal&mdash;select **Add subscription**.
 
-        1. Select **Register**.
+1. Select the resource group for the Azure AD B2C tenant.
 
-        1. On the left pane, under **Manage**, select **Authentication**.
+1. Enter the initial domain name.
 
-            ![Enable implicit grant flow with ID tokens](media/authentication/id-tokens-b2c.png "Enable implicit grant flow with ID tokens")
+1. Select **Country/Region** for the tenant.
 
-        1. Under **Implicit grant**, select the **ID tokens** check box.
+    > [!NOTE]
+    > - You can't change the country/region after you create your directory.
+    > - It's important that you select the correct country/region, because your choice determines the **Datacenter location** for your directory.
+    > - Microsoft doesn't control the location from which you or your users can access or move directory data through apps or services. To see Microsoft's data location commitments for its services, see the [Online Service Terms](https://go.microsoft.com/fwlink?linkid=2009014).
 
-        1. Select **Save**.
+    ![New Azure AD B2C tenant details.](media/authentication/create-new-b2c-tenant.png "New Azure AD B2C tenant details")
 
-    1. [Create a sign-up and sign-in user flow](https://docs.microsoft.com/azure/active-directory-b2c/tutorial-create-user-flows#create-a-sign-up-and-sign-in-user-flow). Optionally, you can [create a password reset user flow](https://docs.microsoft.com/azure/active-directory-b2c/tutorial-create-user-flows#create-a-password-reset-user-flow).
+1. Select **Next**.
 
-    1. [Configure token compatibility](https://docs.microsoft.com/azure/active-directory-b2c/configure-tokens#configure-token-compatibility) by using an **Issuer (iss) claim** URL that includes **tfp**. More information: [Token compatibility](https://docs.microsoft.com/azure/active-directory-b2c/tokens-overview#compatibility)
+## Step 3. Register the application
 
-        ![Configure token compatibility with tfp](media/authentication/token-compatibility.png "Configure token compatibility with tfp") 
+In this step, you register your portal as an application with Azure AD. You can create a new application or select an existing application from Azure AD.
 
-1. In this step, you enter site settings and password reset settings for the portal configuration.
+![Register the application.](media/authentication/register-app-b2c.png "Register the application")
 
-    ![Configure site settings](media/use-simplified-authentication-configuration/configure-ad-b2c-step2.png "Configure site settings")
+> [!NOTE]
+> If you're using a custom domain name for the portal, enter the custom URL as the **Reply URL**.
 
-    1. In the **Configure site settings** section, enter the following values:
+### Option 1. Create a new application
 
-        - **Authority**: Enter the issuer URL defined in the metadata of the sign-up and sign-in policy user flow.​
-        <br>**To get the issuer URL**
+1. Enter the application name.
 
-           1. Open the sign-up and sign-in user flow you created earlier. For this step, you need to go to the Azure AD B2C tenant on the [Azure portal](https://portal.azure.com).
+1. Enter a **Reply URL**.
 
-              ![Select the user flow](media/use-simplified-authentication-configuration/user-flow.png "Select the user flow")
+    ![New application.](media/authentication/new-application-b2c.png "New application")
 
-           1. Select **Run user flow**.
+1. Select **Next**.
 
-              ![Run user flow](media/use-simplified-authentication-configuration/run-user-flow.png "Run user flow")
+### Option 2. Select an existing application
 
-           1. Select the OpenID configuration URL to open in a new browser window or tab.
+1. Select an existing application from the list.
 
-               ![Select the OpenID configuration URL](media/use-simplified-authentication-configuration/select-openid-configuration-url.png "Select the OpenID configuration URL. Format: https://<B2C-tenant-name>.b2clogin.com/tfp/<B2C-tenant-name>.onmicrosoft.com/<user-flow-name>/v2.0/.well-known/openid-configuration")
+1. Select the **Reply URL**.<br>or<br>Select **Create new** to create a new **Reply URL**.
 
-               The URL refers to the OpenID Connect identity provider configuration document, also known as the *OpenID well-known configuration endpoint*.
+    ![Existing application.](media/authentication/existing-application-b2c.png "Existing application")
 
-           1. Copy the URL of the **Issuer** from the new browser window or tab.
+1. Select **Next**.
 
-                ![Copy the Issuer URL](media/use-simplified-authentication-configuration/issuer-url.png "Copy the Issuer URL")
+## Step 4. Configure user flows
 
-                Ensure that you copy only the URL, without the quotation marks (*""*). <br> For example, `https://contosoorg.b2clogin.com/tfp/799f7b50-f7b9-49ec-ba78-67eb67210998/b2c_1_contoso/v2.0/`
+In this step, you configure the **Sign up and sign in** and **Password reset** user flows. The **Sign up and sign in** user flow enables a user to create an account or sign in to their account. The **Password reset** flow enables a user to choose a new password after email verification. More information: [User flow and policy in Azure AD B2C](/azure/active-directory-b2c/user-flow-overview#user-flow-versions)
 
-                > [!TIP]
-                > Ensure that the **Issuer (iss) claim** URL includes **tfp**.
+![Configure user flows.](media/authentication/b2c-user-flows.png "Configure user flows")
 
-        - **Client ID​**: Enter the **Application ID** of the Azure AD B2C application you created earlier.
+- **New policy**: Select this option if you want to create a new policy. You can also change the default name of the policy. This option creates the flow by using the *local account* identity provider with the email address.
+- **Existing policy**: Select this option if you want to select an existing policy from the Azure AD B2C tenant.
 
-        - **Redirect URI**: Enter the portal URL. <br> You only need to change the redirect URI if you're using a custom domain name.
+> [!NOTE]
+> - Only the email claim is configured in these user flows. You can enable more claims&mdash;like *first name* and *last name*&mdash;in the flow's **User attributes** and **Application claims** configuration by using the Azure portal. 
+> - If you enable more claims in addition to *first name* and *last name*, ensure that you [edit the authentication provider](#edit-the-configuration) and add them to the *Registration claims mapping* and *Login claims mapping* in **Additional settings** (this isn't required for *first name* and *last name*). More information: [Step 6 - additional settings for Azure AD B2C provider configuration](configure-azure-ad-b2c-provider-manual.md)
 
-    1. In the **Password reset settings**section, enter the following values:
+Select **Create** to create the identity provider configuration.
 
-        - **Default policy ID**: Enter the name of the sign-up and sign-in user flow you created earlier. The name is prefixed with *B2C_1*.
+## Step 5. Summary
 
-        - **Password reset policy ID**: Enter the name of the password reset user flow you created earlier. The name is prefixed with *B2C_1*.
+The Azure AD B2C provider configuration is complete. You can view the summary of the configuration, and then select **Close** to exit.
 
-        - **Valid issuers**: Enter a comma-delimited list of issuer URLs for the sign-up and sign-in user flow, and password reset user flow, you created earlier. 
-        <br> To get the issuer URLs for the sign-up and sign-in user flow, and the password reset user flow, open each flow and then follow the steps under **Authority**, in step 5a earlier in this article.
+![View summary and close.](media/authentication/b2c-summary.png "View summary and close")
 
-1. In this step, you have the option of configuring additional settings for the Azure AD B2C identity provider.
+## Edit the configuration
 
-    ![Configure additional settings](media/use-simplified-authentication-configuration/configure-ad-b2c-step3.png "Configure additional settings")
+To edit the configuration, select **Edit configuration** for the **Azure Active Directory B2C** identity provider from the providers list. More information: [Edit a provider](use-simplified-authentication-configuration.md#edit-a-provider)
 
-    - **Registration claims mapping​**: Enter a list of logical name/claim pairs to be used to map claim values returned from Azure AD B2C (created during sign-up) to attributes in the contact record. <br> Format: `field_logical_name=jwt_attribute_name`, where `field_logical_name` is the logical name of the field in portals and `jwt_attribute_name` is the attribute with the value returned from the identity provider. <br> 
-     For example, if you've enabled **Job Title (jobTitle)** and **Postal Code (postalCode)** as **User Attributes** in your user flow, and you want to update the corresponding Contact entity fields **Job Title (jobtitle)** and **Address 1: ZIP / Postal Code (address1_postalcode)**, enter the claims mapping as ```jobtitle=jobTitle,address1_postalcode=postalCode```.
+## Delete configuration
 
-    - **Login claims mapping**: Enter a list of logical name/claim pairs to be used to map claim values returned from Azure AD B2C after sign-in to the attributes in the contact record. <br> Format: `field_logical_name=jwt_attribute_name` where `field_logical_name` is the logical name of the field in portals, and `jwt_attribute_name` is the attribute with the value returned from the identity provider. <br> 
-     For example, if you've enabled **Job Title (jobTitle)** and **Postal Code (postalCode)** as **Application Claims** in your user flow, and you want to update the corresponding Contact entity fields **Job Title (jobtitle)** and **Address 1: ZIP / Postal Code (address1_postalcode)**, enter the claims mapping as ```jobtitle=jobTitle,address1_postalcode=postalCode```.
-
-    - **External logout**: Choose whether to enable or disable federated sign-out:
-      - Select **On** to redirect users to the federated sign-out user experience when they sign out from the portal.
-      - Select **Off** to simply sign users out from the portal.
-
-    - **Contact mapping with email**: Specify whether contacts are mapped to a corresponding email. Turn on this toggle to associate a unique contact record with a matching email address and then automatically assign the external identity provider to the contact after the user successfully signs in.
-
-    - **Registration enabled**:- Turn [open registration](configure-portal-authentication.md#open-registration) for your portal on or off. Turning off this toggle disables and hides external account registration.
-
-1. Select **Confirm** to view a summary of your settings and complete the identity provider configuration.
+To delete the configuration, select **Delete** for the **Azure Active Directory B2C** identity provider from the providers list. More information: [Delete a provider](use-simplified-authentication-configuration.md#delete-a-provider)
 
 ### See also
 
 [Migrate identity providers to Azure AD B2C](migrate-identity-providers.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

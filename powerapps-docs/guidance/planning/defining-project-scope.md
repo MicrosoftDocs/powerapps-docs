@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: guidance
 ms.date: 06/16/2020
+ms.subservice: guidance
 ms.author: tayoshi
 ms.reviewer: kathyos
 
@@ -54,7 +55,7 @@ Looking at our business process, we see that it's divided into five main tasks:
 
 5. Auditing
 
-![Business process flowchart with major tasks and task location called out](media/task-chart.png "Business process flowchart with major tasks and task location called out")
+![Business process flowchart with major tasks and task location called out.](media/task-chart.png "Business process flowchart with major tasks and task location called out")
 
 We think we have the expertise to create an expense report app and the approvals
 process. The auditing requirements seem to have quite a bit of overlap with what
@@ -77,3 +78,6 @@ appropriate.
 
 > [!div class="nextstepaction"]
 > [Next step: Prioritzing features](prioritizing-features.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

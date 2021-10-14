@@ -7,6 +7,7 @@ ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
 author: "KumarVivek" # GitHub ID
+ms.subservice: mda-developer
 ms.author: "kvivek" # MSFT alias of Microsoft employees only
 manager: "shilpas" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -24,7 +25,7 @@ While developing and debugging JavaScript web resources, you can use AutoRespond
 1. [Download](https://www.telerik.com/download/fiddler) and install Fiddler.
 1. Open Fiddler and from the menu bar, go to **Tools**, and then select **Options**.
 2. Select the **HTTPS** tab in the dialog box and check the **Capture HTTPS CONNECTS** and **Decrypt HTTPS traffic** checkboxes so that the HTTPS traffic is captured and then decrypted.<br />
- ![Select the marked checkboxes in the HTTP tab](media/fiddler-https-options.png "Select the marked checkboxes in the HTTP tab")</br>
+ ![Select the marked checkboxes in the HTTP tab.](media/fiddler-https-options.png "Select the marked checkboxes in the HTTP tab")</br>
 3. Click **OK** to close the dialog box.
 
 > [!NOTE]
@@ -35,19 +36,19 @@ While developing and debugging JavaScript web resources, you can use AutoRespond
 
 1. Open the page in your Dynamics 365 instance that you want to debug.
 2. Start the Fiddler trace capture by clicking the **Capturing** button in the bottom left corner.
-   ![Click on Capturing button to start capturing HTTPS traffic](media/fiddler-start-capturing.png "Click on Capturing button to start capturing HTTPS traffic")</br>
+   ![Click on Capturing button to start capturing HTTPS traffic.](media/fiddler-start-capturing.png "Click on Capturing button to start capturing HTTPS traffic")</br>
 
    > [!NOTE]
    > If you want to capture HTTPS traffic only from a particular host, on the **Filters** tab, in the **Hosts** area, in the **-No Host Filter-** drop-down select **Show only the following Hosts** from the menu and enter the list of domains from which you wish to see traffic, separated by semi-colon. More information: [Filters reference](https://docs.telerik.com/fiddler/KnowledgeBase/Filters).
-   > ![Filter traffic displayed in Fiddler UI](media/fiddler-filter-traffic.png "Filter traffic displayed in Fiddler UI")
+   > ![Filter traffic displayed in Fiddler UI.](media/fiddler-filter-traffic.png "Filter traffic displayed in Fiddler UI")
 
 3. Perform any operation necessary to load the script you are testing. You can stop the capture by clicking the same **Capturing** button again.
-4. Select the trace log sessions from the left pane and search for the file you want to setup the AutoResponder for.<br /> For example, if the code you want to debug is in a JavaScript web resource named `new_testscript.js`, use the **Find** button to open the  **Find Sessions** dialog box and search for the name of the webresource. <br />![Find a session in fiddler](media/fiddler-find-sessions.PNG)<br />You will see the rows that match with your search criteria highlighted in the left pane.
-5. Select that row. In the right pane, select the **AutoResponder** tab. <br /> ![Select the AutoResponder tab](media/fiddler-auto-responder.png)
+4. Select the trace log sessions from the left pane and search for the file you want to setup the AutoResponder for.<br /> For example, if the code you want to debug is in a JavaScript web resource named `new_testscript.js`, use the **Find** button to open the  **Find Sessions** dialog box and search for the name of the webresource. <br />![Find a session in fiddler.](media/fiddler-find-sessions.PNG)<br />You will see the rows that match with your search criteria highlighted in the left pane.
+5. Select that row. In the right pane, select the **AutoResponder** tab. <br /> ![Select the AutoResponder tab.](media/fiddler-auto-responder.png)
 6. In the **AutoResponder** tab, select the **Enable rules** and **Unmatched requests passthrough** check boxes.<br />
-   ![Select the two highlighted checkboxes](media/fiddler-select-checkbox.png "Select the two highlighted checkboxes")<br />
+   ![Select the two highlighted checkboxes.](media/fiddler-select-checkbox.png "Select the two highlighted checkboxes")<br />
 7. Ensure that you still have the session related to your target file selected and then click on the **Add Rule** button in the **AutoResponder** section. This adds a new entry into the rules table.<br />
-   ![Add new rule](media/fiddler-add-rule.png "Add new rule")
+   ![Add new rule.](media/fiddler-add-rule.png "Add new rule")
 8. When the rule is selected, the **Rule Editor** at the bottom has the top row populated with the Session URL related to your file and prefixed with a string like `EXACT:`.<br />
    You can then edit the string to match to simplify it. With web resources, the URL will contain generated values in the URL or in a query string to make sure that the latest published version is included in the response. You will probably see the `EXACT` value will look something like this:<br />
     ```
@@ -58,7 +59,7 @@ While developing and debugging JavaScript web resources, you can use AutoRespond
     /WebResources/new_testscript.js
     ```<br />
    The bottom row is left blank. Type the path to your local file on your disk on this bottom row and <strong>Save</strong>.<br />
-   ![Add path to your local file in Rule editor](media/fiddler-save-rule.png "Add path to your local file in Rule editor")<br />
+   ![Add path to your local file in Rule editor.](media/fiddler-save-rule.png "Add path to your local file in Rule editor")<br />
 
 
 By following the above steps, Fiddler is configured to listen to the requests and responds with the local file instead of passing the request over the network.
@@ -75,3 +76,6 @@ By following the above steps, Fiddler is configured to listen to the requests an
 
 [Web resources](web-resources.md)<br />
 [Client scripting using JavaScript](client-scripting.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

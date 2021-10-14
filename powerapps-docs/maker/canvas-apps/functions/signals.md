@@ -1,6 +1,6 @@
 ---
-title: Acceleration, App, Compass, Connection, and Location signals | Microsoft Docs
-description: Reference information, including syntax and examples, for the Acceleration, App, Compass, Connection, and Location sensors in Power Apps
+title: Acceleration, App, Compass, Connection, and Location signals in Power Apps
+description: Reference information including syntax and examples for the Acceleration, App, Compass, Connection, and Location signals in Power Apps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -8,11 +8,15 @@ ms.topic: reference
 ms.custom: canvas
 ms.reviewer: nabuthuk
 ms.date: 02/07/2020
+ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - gregli-msft
+  - nkrb
 ---
 # Acceleration, App, Compass, Connection, and Location signals in Power Apps
 
@@ -71,7 +75,7 @@ As the location changes, dependencies on the location will continuously recalcul
 
 | Property | Description |
 | --- | --- |
-| **Location.Altitude** |Returns a number that indicates the altitude, measured in feet, above sea level. |
+| **Location.Altitude** |Returns a number that indicates the altitude, measured in meters, above sea level. |
 | **Location.Latitude** |Returns a number, from –90 to 90, that indicates the latitude, as measured in degrees from the equator. A positive number indicates a location that's north of the equator. |
 | **Location.Longitude** |Returns a number, from –180 to 180, that indicates the longitude, as measured in degrees from Greenwich, England.  A positive number indicates a location that's east of Greenwhich. |
 
@@ -93,3 +97,6 @@ In a baseball field, a pitcher throws a phone from the pitcher's mound to a catc
 | **App.ActiveScreen = PlayBall** |Returns a Boolean value that indicates whether **PlayBall** is displayed. |**true** |
 | **App.ActiveScreen.Fill** |Returns the background color for the displayed screen. |**Color.Green** |
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

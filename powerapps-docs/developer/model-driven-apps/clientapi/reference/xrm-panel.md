@@ -5,6 +5,7 @@ ms.service: powerapps
 ms.topic: "reference"
 ms.assetid: 5bc5295b-0232-4d1b-8583-f20417571c1f
 author: "Nkrb"
+ms.subservice: mda-developer
 ms.author: "nabuthuk"
 manager: "kvivek"
 search.audienceType: 
@@ -29,3 +30,6 @@ Provides a method to display a web page in the side pane of model-driven apps fo
 ### Related topics
 
 [Client API Xrm object](../clientapi-xrm.md)
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

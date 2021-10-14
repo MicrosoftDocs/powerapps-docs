@@ -1,6 +1,6 @@
 ---
-title: Entity | Microsoft Docs
-description: 
+title: Entity in Microsoft Dataverse| Microsoft Docs
+description: Learn how to use different methods and properties available for Entity in Power Apps component framework.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -14,7 +14,7 @@ ms.topic: "article"
 
 # Entity
 
-Defines an entity sent or received from the SDK through the Web API.
+Defines a table sent or received from the SDK through the Web API.
 
 ## Available for
 
@@ -30,3 +30,6 @@ Model-driven apps
 
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

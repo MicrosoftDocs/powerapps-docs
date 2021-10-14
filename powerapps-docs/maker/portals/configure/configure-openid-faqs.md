@@ -1,16 +1,21 @@
 ---
-title: "FAQ about using OpenID Connect providers for authentication in Power Apps portals.  | MicrosoftDocs"
-description: "Learn about frequently asked questions when using OpenID Connect providers for authentication in Power Apps portals."
+title: FAQs for using OpenID Connect in portals
+description: Learn about frequently asked questions when using OpenID Connect providers for authentication in Power Apps portals.
 author: dileepsinghmicrosoft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/20/2020
+ms.date: 04/21/2021
+ms.subservice: portals
 ms.author: dileeps
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - sandhangitmsft
+    - dileepsinghmicrosoft
 ---
 
-# FAQ for using OpenID Connect in portals
+# FAQs for using OpenID Connect in portals
 
 This article includes information about common Power Apps portals scenarios and frequently asked questions for using an authentication provider that conforms to the [OpenID Connect specification](https://openid.net/specs/openid-connect-core-1_0.html).
 
@@ -62,13 +67,11 @@ These claims are processed at in the following order of priority to set as the *
 
 When in use, "emailclaimsmapping" is also used to search for an existing contact (Primary Email Address field in Dataverse).
 
-## Can I get access to tokens (ID or Access) using JavaScript?
-
 ## Can I get access to tokens (ID or access) by using JavaScript?
 
 No. The ID token provided by the identity provider isn't made available through any standard technique on the client side, and is only used for the purpose of authentication. However, if you're using the Implicit Grant flow, you can use the methods provided by your identity provider to get access to ID or access tokens.
 
-For example, Azure AD provides [Microsoft Authentication Library](https://docs.microsoft.com/azure/active-directory/develop/msal-overview) to achieve this scenario in clients.
+For example, Azure AD provides [Microsoft Authentication Library](/azure/active-directory/develop/msal-overview) to achieve this scenario in clients.
 
 ## Can I use a custom OpenID Connect provider instead of Azure AD?
 
@@ -77,3 +80,6 @@ Yes. Portals supports any OpenID Connect provider that supports the standard [Op
 ### See also
 
 [Configure an OpenID Connect provider for portals](configure-openid-provider.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

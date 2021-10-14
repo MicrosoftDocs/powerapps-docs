@@ -1,19 +1,20 @@
 ---
-title: "Privileges required for model-driven app customizing | MicrosoftDocs"
-description: Understand the privileges required to build model-driven apps
+title: "Privileges required for customizing apps build on Dataverse | MicrosoftDocs"
+description: Understand the privileges required to apps built on Dataverse
 ms.custom: ""
 ms.date: 06/18/2018
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "conceptual"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
   - "PowerApps"
 ms.assetid: 43cf7f3a-7e26-4990-8b5a-c817ac6d51bb
 caps.latest.revision: 13
+ms.subservice: mda-maker
 ms.author: "matp"
 manager: "kvivek"
 author: "Mattp123"
@@ -23,18 +24,18 @@ search.app:
   - "PowerApps"
   - D365CE
 ---
-# Privileges required for model-driven app customization
+# Privileges required for Dataverse customization
 
 [!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
 App users can personalize the system and even share some of their customizations with others, but only users with the correct privileges can apply changes for everyone.  
   
 > [!NOTE]
->  This section assumes you know how to work with security roles. For more information about working with security roles, see [Create users and assign security roles](https://docs.microsoft.com/dynamics365/customer-engagement/admin/create-users-assign-online-security-roles).  
+>  This section assumes you know how to work with security roles. For more information about working with security roles, see [Create users and assign security roles](/dynamics365/customer-engagement/admin/create-users-assign-online-security-roles).  
   
 <a name="BKMK_SysAdminAndSysCustomizer"></a>   
 ## System Administrator and System Customizer security roles  
- Anyone who customizes will have the System Administrator or System Customizer security role associated with their account. These security roles give you the permissions you need to customize the app.  
+ Anyone who customizes will have the System Administrator or System Customizer security role associated with their account. These security roles give you the permissions you need to customize in Microsoft Dataverse.  
   
 |System Administrator|System Customizer|  
 |--------------------------|-----------------------|  
@@ -59,3 +60,6 @@ App users can personalize the system and even share some of their customizations
 ## Next steps  
 [Understand model-driven app components](model-driven-app-components.md)
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

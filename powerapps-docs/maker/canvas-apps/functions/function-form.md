@@ -1,18 +1,22 @@
 ---
-title: EditForm, NewForm, SubmitForm, ResetForm, And ViewForm functions | Microsoft Docs
-description: Reference information, including syntax and examples, for the EditForm, NewForm, SubmitForm, ResetForm, and ViewForm functions in Power Apps
+title: EditForm, NewForm, SubmitForm, ResetForm, and ViewForm functions in Power Apps
+description: Reference information including syntax and examples for the EditForm, NewForm, SubmitForm, ResetForm, and ViewForm functions in Power Apps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: nabuthuk
-ms.date: 07/06/2017
+ms.date: 03/22/2021
+ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - gregli-msft
+  - nkrb
 ---
 
 # EditForm, NewForm, SubmitForm, ResetForm, and ViewForm functions in Power Apps
@@ -33,6 +37,8 @@ These functions change the state of the **Edit form** control.  The form control
 These functions are often invoked from the **[OnSelect](../controls/properties-core.md)** formula of a **[Button](../controls/control-button.md)** or **[Image](../controls/control-image.md)** control so that the user can save edits, abandon edits, or create a record. You can [use controls and these functions together](../working-with-forms.md) to create a complete solution.
 
 These functions return no values.
+
+You can use these functions only in [behavior formulas](../working-with-formulas-in-depth.md).
 
 ### SubmitForm
 Use the **SubmitForm** function in the **[OnSelect](../controls/properties-core.md)** property of a Button control to save any changes in a Form control to the data source.
@@ -116,3 +122,6 @@ See [Understand data forms](../working-with-forms.md) for complete examples.
    
     When the user selects the **New** button, the Form control switches to **New** mode, the default values for the Form control's data source populate that control, and the screen that contains the Form control appears. When the **SubmitForm** function runs, a record is created instead of updated.
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

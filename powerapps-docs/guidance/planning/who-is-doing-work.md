@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: guidance
 ms.date: 06/16/2020
+ms.subservice: guidance
 ms.author: thground
 ms.reviewer: kathyos
 
@@ -124,7 +125,7 @@ looked into our expense reporting process.
 
 :::row:::
     :::column:::
-       ![Illustration of Lee in Sales](media/lee-small.png "Illustration of Lee in Sales")
+       ![Illustration of Lee in Sales.](media/lee-small.png "Illustration of Lee in Sales")
 
        **Lee – Salesperson**
 
@@ -137,7 +138,7 @@ looked into our expense reporting process.
        -   Prefers to capture his expenses and receipts as soon as possible after they happen
     :::column-end:::
     :::column:::
-       ![Illustration of Nick the Sales Manager](media/nick-small.png "Illustration of Nick the Sales Manager")
+       ![Illustration of Nick the Sales Manager.](media/nick-small.png "Illustration of Nick the Sales Manager")
 
         **Nick – Sales Manager**
 
@@ -153,7 +154,7 @@ looked into our expense reporting process.
 
 :::row:::
     :::column:::
-       ![Illustration of Shawna in Customer Support](media/shawna-small.png "Illustration of Shawna in Customer Support")
+       ![Illustration of Shawna in Customer Support.](media/shawna-small.png "Illustration of Shawna in Customer Support")
 
         **Shawna – Customer Support**
 
@@ -162,7 +163,7 @@ looked into our expense reporting process.
         -  Usually incurs expenses for team morale, and must identify the employees included
     :::column-end:::
     :::column:::
-       ![Illustration of Rebecca the Auditor](media/rebecca-small.png "Illustration of Rebecca the Auditor")
+       ![Illustration of Rebecca the Auditor.](media/rebecca-small.png "Illustration of Rebecca the Auditor")
        
        **Rebecca – Auditor**
 
@@ -181,7 +182,7 @@ looked into our expense reporting process.
 
 :::row:::
     :::column:::
-        ![Illustration of Abhay in Accounting](media/abhay-small.png "Illustration of Abhay in Accounting")
+        ![Illustration of Abhay in Accounting.](media/abhay-small.png "Illustration of Abhay in Accounting")
 
         **Abhay - Accountant**
 
@@ -195,7 +196,7 @@ looked into our expense reporting process.
 
     :::column-end:::
     :::column:::
-        ![Illustration of Charlotte the CFO](media/charlotte-small.png "Illustration of Charlotte the CFO")
+        ![Illustration of Charlotte the CFO.](media/charlotte-small.png "Illustration of Charlotte the CFO")
 
         **Charlotte - CFO**
 
@@ -233,3 +234,6 @@ expense report), here's what we documented.
 
 > [!div class="nextstepaction"]
 > [Next step: What activities are being done?](what-activities.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

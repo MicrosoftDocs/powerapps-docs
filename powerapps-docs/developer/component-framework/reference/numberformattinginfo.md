@@ -1,6 +1,6 @@
 ---
 title: NumberFormattingInfo | Microsoft Docs
-description: 
+description: The interface for the Organization System Settings Number Format info exposed to a code component.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -184,3 +184,5 @@ Example: "+"
 
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

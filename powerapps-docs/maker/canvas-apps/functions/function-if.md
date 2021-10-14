@@ -1,6 +1,6 @@
 ---
-title: If and Switch functions | Microsoft Docs
-description: Reference information, including syntax and examples, for the If and Switch functions in Power Apps
+title: If and Switch functions in Power Apps
+description: Reference information including syntax and examples for the If and Switch functions in Power Apps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -8,11 +8,15 @@ ms.topic: reference
 ms.custom: canvas
 ms.reviewer: nabuthuk
 ms.date: 04/24/2017
+ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - gregli-msft
+  - nkrb
 ---
 # If and Switch functions in Power Apps
 Determines whether any condition in a set is true (**If**) or the result of a formula matches any value in a set (**Switch**) and then returns a result or executes an action.
@@ -86,3 +90,6 @@ In these examples, a **[Text input](../controls/control-text-input.md)** control
    
     The **Label** control shows the value that you typed because it's more than 40.
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

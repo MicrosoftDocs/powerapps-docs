@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 06/22/2020
+ms.subservice: sample-apps
 ms.author: ramanasr
 ms.reviewer: nkrb
 ---
@@ -31,7 +32,7 @@ Watch a quick overview of the Higher Education Crisis Financial Impact Tracker s
 
 Contact your local Microsoft account representative for questions related to licensing.
 
-More information: [Licensing overview for Power Platform](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus)
+More information: [Licensing overview for Power Platform](/power-platform/admin/pricing-billing-skus)
 
 ## Start here
 
@@ -51,3 +52,5 @@ More information: [Licensing overview for Power Platform](https://docs.microsoft
 ### Disclaimer
 
 This solution is a sample and may be used with Microsoft Power Platform for dissemination of reference information only. This app is not intended or made available for use as a medical device, clinical support, diagnostic tool, or other technology intended to be used in the diagnosis, cure, mitigation, treatment, or prevention of disease or other conditions, and no license or right is granted by Microsoft to use this app for such purposes. This app is not designed or intended to be a substitute for professional medical advice, diagnosis, treatment, or judgement and should not be used as such. Customer bears the sole risk and responsibility for any use of this app. Microsoft does not warrant that the app or any materials provided in connection therewith will be sufficient for any medical purposes or meet the health or medical requirements of any person.
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

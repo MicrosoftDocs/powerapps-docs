@@ -1,6 +1,7 @@
 ---
 title: "getControl (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
+description: Includes description and supported parameters for the getControl method.
+ms.date: 04/19/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -30,6 +31,7 @@ The **formContext.getControl(arg)** method is a shortcut method to access **form
 
 When the `arg` value is not provided, it returns an array of all the controls on the form. If the `arg` name is spelled wrong and is not on the form, it simply returns null value.
 
+[!INCLUDE[cc-terminology](../../../../data-platform/includes/cc-terminology.md)]
 
 ## Return Value
 
@@ -38,8 +40,8 @@ When the `arg` value is not provided, it returns an array of all the controls on
 **Description**: Object if you use the method with parameter; object collection if you use the method without any parameters.
 
 > [!TIP]
-> If you want to modify the all the controls bound to an attribute on a form, use the controls collection inside the attribute type.
-For example, to add notification to each control bound to the `name` attribute, you can do the following:
+> If you want to modify the all the controls bound to a column on a form, use the controls collection inside the column type.
+For example, to add notification to each control bound to the `name` column, you can do the following:
 > ```JavaScript
 >  const notification = {
 >  messages: ['Sample Notification on Name Controls'],
@@ -55,3 +57,6 @@ For example, to add notification to each control bound to the `name` attribute, 
 
 
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

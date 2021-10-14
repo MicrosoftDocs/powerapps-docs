@@ -1,6 +1,7 @@
 ---
 title: "getOptions (Client API reference)| MicrosoftDocs"
-ms.date: 08/13/2019
+description: Includes description and supported parameters for the getOptions method.
+ms.date: 04/19/2021
 ms.service: powerapps
 ms.topic: "reference"
 ms.assetid: 83347491-68d2-4844-bda4-0cd0abde2edf
@@ -19,7 +20,7 @@ Returns an array of option objects representing valid options available for a co
 
 ## Control types supported
 
-OptionSet, MultiSelectOptionSet
+Choice, Choices
 
 ## Syntax
 
@@ -33,3 +34,6 @@ OptionSet, MultiSelectOptionSet
 - **text**: String. Label of the option.
 - **value**: Number. Enumeration value of the option.
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

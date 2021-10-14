@@ -1,6 +1,6 @@
 ---
 title: GetEntityMetadata | Microsoft Docs
-description: 
+description: Returns the table definitions for the specified table.
 keywords:
 ms.author: nabuthuk
 manager: kvivek
@@ -15,4 +15,4 @@ applies_to:
 ms.assetid: 8f615966-77a0-49e9-92d4-2160af03b20d
 ---
 
-Returns the entity metadata for the specified entity.
+Returns the table definitions for the specified table.

@@ -1,25 +1,33 @@
 ---
-title: Overview of the cloud-storage connection | Microsoft Docs
+title: Connect to cloud-storage from Power Apps
 description: See how to connect to a cloud-storage account, and display Excel data in your app
 author: lancedMicrosoft
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.date: 07/12/2016
+ms.date: 03/15/2021
+ms.subservice: canvas-maker
 ms.author: lanced
 ms.reviewer: tapanm
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - lancedmicrosoft
 ---
 # Connect to cloud-storage from Power Apps
+
 Power Apps offers several cloud-storage connections. Using any of these connections, you can store an Excel file and use the information in it throughout your app. These connections include:  
 
-| **Azure Blob** | **Box** | **Dropbox** | **Google Drive** | **OneDrive** | **OneDrive<br>for Business** |
-| --- | --- | --- | --- | --- | --- |
-| ![Icon](./media/cloud-storage-blob-connections/blobicon.png) |![API Icon][boxicon] |![API Icon][dropboxicon] |![API Icon][googledriveicon] |![API Icon][onedriveicon] |![API Icon][onedriveforbusinessicon] |
+[Box](/connectors/box/) | [Dropbox](/connectors/dropbox/) | [Google Drive](/connectors/googledrive/) | [OneDrive](/connectors/onedrive/) | [OneDrive for Business](/connectors/onedriveforbusiness/) |
+| --- | --- | --- | --- | --- |
+| ![Box](media/cloud-storage-blob-connections/boxicon.png "Box") |![Dropbox](media/cloud-storage-blob-connections/dropboxicon.png "Dropbox") |![Google Drive](media/cloud-storage-blob-connections/googledriveicon.png "Google Drive") |![OneDrive](media/cloud-storage-blob-connections/onedrive-icon.png "OneDrive")  |![OneDrive for Business](media/cloud-storage-blob-connections/onedrive-icon.png "OneDrive for Business") |
+
+> [!NOTE]
+> To learn about using Azure Blob Storage with Power Apps, go to [Connect to Azure Blob Storage from Power Apps](connection-azure-blob-storage.md).
 
 [!INCLUDE [connection-requirements](../../../includes/connection-requirements.md)]
 
@@ -33,10 +41,10 @@ Power Apps offers several cloud-storage connections. Using any of these connecti
 ## Connect to the cloud storage connection
 1. At [powerapps.com](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand **Manage**, and select **Connections**:  
    
-    ![Select Connections](./media/cloud-storage-blob-connections/connections.png)
+    ![Select Connections.](./media/cloud-storage-blob-connections/connections.png)
 2. Select **New connection**, and select your cloud storage connection. For example, select **OneDrive**.
 3. You are prompted for the user name and password of your cloud storage account. Enter them, and then select **Sign in**:  
-    ![Enter user name and password](./media/cloud-storage-blob-connections/signin.png)
+    ![Enter user name and password.](./media/cloud-storage-blob-connections/signin.png)
    
     Once you are signed in, this connection is ready to be used within your apps.
 4. In your app, click or tap **Data sources** on the **View** tab of the ribbon. In the right-hand pane, click or tap **Add a data source**, click or tap your cloud-storage connection, and then choose the Excel table.
@@ -44,7 +52,7 @@ Power Apps offers several cloud-storage connections. Using any of these connecti
    
     The table is listed as a data source:
    
-    ![Select the Excel table](./media/cloud-storage-blob-connections/selecttable.png)
+    ![Select the Excel table.](./media/cloud-storage-blob-connections/selecttable.png)
    
     > [!NOTE]
    > Remember, the Excel data must be formatted as a table.
@@ -53,19 +61,19 @@ Power Apps offers several cloud-storage connections. Using any of these connecti
 1. On the **Insert** tab, select **Gallery**, and then select a **With text** gallery control.
 2. Set the **[Items](../controls/properties-core.md)** property of the gallery to your Excel table. For example, if your Excel table is named **Table1**, then set it to Table1:  
    
-    ![Items property](./media/cloud-storage-blob-connections/itemsproperty.png)  
+    ![Items property.](./media/cloud-storage-blob-connections/itemsproperty.png)  
    
     The gallery is automatically updated with information from your Excel table.
 3. In the gallery, select the second or third **Label** control. By default, you see the **Text** property of the second and third labels is automatically set to `ThisItem.something`. You can set these labels to any column in your table.
    
     In the following example, the second label is set to `ThisItem.Name` and the third label is set to `ThisItem.Notes`:  
    
-    ![Second label](./media/cloud-storage-blob-connections/items-secondtextbox.png)  
+    ![Second label.](./media/cloud-storage-blob-connections/items-secondtextbox.png)  
    
-    ![Third label](./media/cloud-storage-blob-connections/items-thirdtextbox.png)  
+    ![Third label.](./media/cloud-storage-blob-connections/items-thirdtextbox.png)  
    
     Sample output:  
-    ![Second and third labels](./media/cloud-storage-blob-connections/secondthirdtextboxes.png)
+    ![Second and third labels.](./media/cloud-storage-blob-connections/secondthirdtextboxes.png)
    
 > [!NOTE]
 > The first box is actually an image control. If you don't have an image in your Excel table, then you can delete the image control, and add a label in its place. [Add and configure controls](../add-configure-controls.md) is a good resource.
@@ -80,9 +88,14 @@ If you're sharing a folder in Dropbox, the shared folder must be attached to the
 There are [certain limitations](#sharing-excel-tables) with connectors involving Excel files.
 
 ## Known limitations
-If **Data type unsupported** or **Not formatted as a table** appears when you try to use an Excel connection in your app, [format the data as a table](https://support.office.com/article/Create-an-Excel-table-in-a-worksheet-E81AA349-B006-4F8A-9806-5AF9DF0AC664).
 
-If your Excel data includes a calculated column, you can't use it to build an app, and you can’t add that data to an existing app.
+- If **Data type unsupported** or **Not formatted as a table** appears when you try to use an Excel connection in your app, [format the data as a table](https://support.office.com/article/Create-an-Excel-table-in-a-worksheet-E81AA349-B006-4F8A-9806-5AF9DF0AC664).
+
+- If your Excel data includes a calculated column, you can't use it to build an app, and you can’t add that data to an existing app.
+
+- Power Apps mobile app for Windows platform doesn't support **Dropbox** connector. A pop-up dialog will show the following message in this situation: <br>
+  `Upgrade browser to use Dropbox`
+<br> When this happens, consider using web player on Windows platform.
 
 ### Sharing Excel tables
 To share data in an Excel file:
@@ -103,3 +116,6 @@ Some additional gallery resources include [Show a list of items](../add-gallery.
 [googledriveicon]: ./media/cloud-storage-blob-connections/googledriveicon.png
 [onedriveicon]: ./media/cloud-storage-blob-connections/onedriveicon.png
 [onedriveforbusinessicon]: ./media/cloud-storage-blob-connections/onedriveforbusinessicon.png
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

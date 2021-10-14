@@ -1,12 +1,13 @@
 ---
-title: "Composite attributes in model-driven apps in model-driven apps| MicrosoftDocs"
-description: "Learn about the attribute addOnchange method to set a function to be called when the attribute value is changed." 
-ms.date: 10/31/2018
+title: "Composite columns in model-driven apps in model-driven apps| MicrosoftDocs"
+description: "Learn about the column addOnchange method to set a function to be called when the column value is changed." 
+ms.date: 04/15/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 9f3b2fed-fde5-46e4-8c59-43aa51aa82df
 author: "Nkrb"
+ms.subservice: mda-developer
 ms.author: "nabuthuk"
 manager: "kvivek"
 search.audienceType: 
@@ -15,20 +16,20 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Composite attributes 
+# Composite columns 
 
+Some columns added to a form can represent multiple items of data. These *composite columns* behave differently from other columns when displayed in the web application and you must write scripts differently to use them properly.
 
+[!INCLUDE[cc-terminology](../../../data-platform/includes/cc-terminology.md)]
 
-Some fields added to a form can represent multiple items of data. These *composite attributes* behave differently from other attributes when displayed in the web application and you must write scripts differently to use them properly.
-
-The following table lists the composite attributes available in model-driven apps:
+The following table lists the composite columns available in model-driven apps:
 
 <table>
     <tbody>
         <tr>
             <th scope="col">
                 <p>
-                    Entity
+                    Table
                 </p>
             </th>
             <th scope="col">
@@ -284,31 +285,32 @@ The following table lists the composite attributes available in model-driven app
     </tbody>
 </table>
 
-## Composite attributes in the web application
+## Composite columns in the web application
 
-When fields for composite attributes are added to a main form, the web application will show just the composite attribute. When someone edits the field, a flyout appears showing the individual attributes that comprise the composite attribute. 
+When composite columns are added to a main form, the web application will show just the composite column. When someone edits the column, a flyout appears showing the individual column that comprise the composite column. 
 
-For example, the **Address** field on a Contact form is a composite attribute. Clicking the **Address** field dispays a flyout with individual attributes that comprise the composite attribute. 
+For example, the **Address** column on a Contact form is a composite column. Selecting the **Address** column displays a flyout with individual columns that comprise the composite column. 
 
-![An example of a composite attribute](../../media/clientapi_compositeattribute.png)
+![An example of a composite column.](../../media/clientapi_compositeattribute.png "An example for composite column")
 
-Although not explicitly added to the form in the form editor, each of the attributes that are part of the attribute are available to the form. Although you can read the value of the composite value using [getValue](attributes/getValue.md), you can’t use [setValue](attributes/setValue.md) to change the value of the composite attribute directly; you must set one or more of the attributes referenced by the composite attribute.
+Although not explicitly added to the form in the form editor, each of the columns that are part of the column are available to the form. Although you can read the value of the composite value using [getValue](attributes/getValue.md), you can’t use [setValue](attributes/setValue.md) to change the value of the composite column directly; you must set one or more of the columns referenced by the composite column.
 
-You can access the individual constituent controls displayed in the flyout by name. These controls use the following naming convention: \<**composite control name**>\_compositionLinkControl_\<**constituent attribute name**>. 
+You can access the individual constituent controls displayed in the flyout by name. These controls use the following naming convention: \<**composite control name**>\_compositionLinkControl_\<**constituent column name**>. 
 
 To access just the **address_line1** control in the **address1_composite** control, you would use: 
 
 `formContext.getControl("address1_composite_compositionLinkControl_address1_line1")`
 
-## Composite attributes in mobile clients
-The mobile client for model-driven apps use the same form definitions used for the entities that have composite attributes but it interprets them differently. If a composite attribute is found in the form definition, it will show all the attributes that are part of the composite attribute in that section of the form. There is no need for a flyout because all the fields are visible. You can write scripts for the form accessing each of the individual attributes just as if they had been individually added to the form.
+## Composite columns in mobile clients
+
+The mobile client for model-driven apps use the same form definitions used for the tables that have composite columns but it interprets them differently. If a composite column is found in the form definition, it will show all the columns that are part of the composite column in that section of the form. There is no need for a flyout because all the columns are visible. You can write scripts for the form accessing each of the individual columns just as if they had been individually added to the form.
 However, the actual composite control will not be present in the model-driven apps mobile clients page.
 
 ## Mitigate the differences
 
-If you want to access the fullname field for the Contact, Lead, or User entities, using the **formContext.data.entity**.[getPrimaryAttributeValue](formContext-data-entity/getPrimaryAttributeValue.md) method is an easy way to get the value for this attribute without referencing it directly. This method works for both the web application and model-driven apps mobile clients.
+If you want to access the fullname column for the Contact, Lead, or User tables, using the **formContext.data.entity**.[getPrimaryAttributeValue](formContext-data-entity/getPrimaryAttributeValue.md) method is an easy way to get the value for this column without referencing it directly. This method works for both the web application and model-driven apps mobile clients.
 
-If you have code that needs to read the value of one of the address composite attributes, to work with both clients, you need to separate the code using the [getClient](Xrm-Utility/getGlobalContext/client.md#getclient) method as shown in the following function that will display the formatted address using the **Xrm.Navigation**.[openAlertDialog](Xrm-Navigation/openAlertDialog.md) method in either the main web application or the mobile apps version of the same form.
+If you have code that needs to read the value of one of the address composite columns, to work with both clients, you need to separate the code using the [getClient](Xrm-Utility/getGlobalContext/client.md#getclient) method as shown in the following function that will display the formatted address using the **Xrm.Navigation**.[openAlertDialog](Xrm-Navigation/openAlertDialog.md) method in either the main web application or the mobile apps version of the same form.
 
 ```JavaScript
 function showAddressDialog(executionContext) {
@@ -362,9 +364,12 @@ function showAddressDialog(executionContext) {
 ```
 
 ### Related topics
-[Attributes](attributes.md)
+[Columns](attributes.md)
 
 
 
 
 
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

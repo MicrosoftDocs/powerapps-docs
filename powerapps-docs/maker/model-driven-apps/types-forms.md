@@ -1,13 +1,13 @@
 ---
 title: "Type of model-driven app forms in Power Apps | MicrosoftDocs"
 description: "Understand the different types of forms"
-ms.custom: ""
+ms.custom: intro-internal
 ms.date: 06/27/2018
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "conceptual"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -15,6 +15,7 @@ applies_to:
 author: "Mattp123"
 ms.assetid: 0eb1b9b7-7b76-435b-ad71-ecf33754d736
 caps.latest.revision: 33
+ms.subservice: mda-maker
 ms.author: "matp"
 manager: "kvivek"
 tags: 
@@ -41,3 +42,6 @@ While each form type has specific needs, when working with forms you use the For
 ## Next steps
 
 [Overview of the form editor user interface](form-editor-user-interface-legacy.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

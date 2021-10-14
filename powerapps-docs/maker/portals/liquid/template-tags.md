@@ -1,13 +1,17 @@
 ---
-title: "Use template tags for a portal | MicrosoftDocs"
-description: "Learn about template tags available in portal"
+title: Template tags
+description: Learn about template tags available in portal.
 author: gitanjalisingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/06/2020
+ms.date: 09/09/2021
+ms.subservice: portals
 ms.author: gisingh
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - GitanjaliSingh33msft
 ---
 
 # Template tags
@@ -16,10 +20,10 @@ Template tags control the output of a template in various ways, and allow the co
 
 ## fetchxml
 
-Allows user to query data from CDS and render the results in a page.
+Allows user to query data from Microsoft Dataverse, and render the results in a page.
 
 > [!NOTE]
-> You can learn more about querying the data using fetchxml at [use FetchXML to query data](https://docs.microsoft.com/powerapps/developer/common-data-service/use-fetchxml-construct-query).
+> You can learn more about querying the data using fetchxml at [use FetchXML to query data](../../../developer/data-platform/use-fetchxml-construct-query.md).
 
 ```
 {% fetchxml resultVariable %}
@@ -27,6 +31,8 @@ Allows user to query data from CDS and render the results in a page.
 ...
 {% endfetchxml %}
 ```
+
+When using fetchxml to query data, ensure you don't use self-closing tags. For example, instead of `<attribute name="title"/>`, use `<attribute name="title"></attribute>` with explicit closure tag `</attribute>`.
 
 ### Results attribute
 
@@ -47,7 +53,7 @@ Results attribute in provided variable (such as 'resultVariable' in above sample
     </table> 
     ```
 
-- *EntityName*
+- *TableName*
 
     Gets the logical name of the entity.
 
@@ -78,7 +84,20 @@ Results attribute in provided variable (such as 'resultVariable' in above sample
 
 ### XML attribute
 
-XML attribute in provided variable (such as 'resultVariable' in above sample) holds the resultant query which can be used to get data from Microsoft Dataverse. This attribute is useful for debugging purpose when you want to understand how entity permission is getting applied on this *fetchxml* tag.  
+XML attribute in provided variable (such as 'resultVariable' in above sample) holds the resultant query which can be used to get data from Microsoft Dataverse. This attribute is useful for debugging purpose when you want to understand how table permission is getting applied on this *fetchxml* tag.  
+
+### Other supported elements and attributes
+
+fetchxml liquid tag supports the following attributes, and child elements.
+
+| Element/Child element | Attributes | Child element |
+| - | - | - |
+| fetch | mapping <br> version <br> count  <br> page  <br> paging-cookie  <br> utc-offset  <br> aggregate  <br> distinct  <br> min-active-row-version  <br> output-format  <br> returntotalrecordcount  <br> no-lock | order <br> entity |
+| order | attribute <br> alias <br> descending | |
+| entity | name <br> all-attributes <br> no-attrs <br> attribute | order <br> filter <br> link-entity |
+| filter | type <br> hint <br> isquickfindfields | condition <br> filter |
+| link-entity | name <br> from <br> to <br> alias <br> link-type <br> visible <br> intersect <br> all-attributes <br> no-attrs <br> attribute | order <br> filter <br> link-entity |
+| condition | column <br> entityname <br> attribute <br> operator <br> aggregate <br> alias <br> uiname <br> uitype <br> uihidden <br> value | value |
 
 ## include
 
@@ -128,7 +147,7 @@ Allows output of Liquid code on a page without having it parsed and executed.
 
 ## substitution
 
-When user has enabled the header and footer caching, and he wants to avoid caching of certain section output, he can use this tag. This tag provides the content block in header or footer where output of the wrapped content block doesn't get cached. This is helpful in the scenarios where user is using an object which can frequently get updated, such as request, page, language, and date. For example, refer to the header and footer web template source code update scenarios when [header and footer caching is enabled](../configure/enable-header-footer-output-caching.md).
+When you enable the header and footer caching, and want to avoid caching of certain section output, you can use this tag. This tag provides the content block in header or footer where output of the wrapped content block doesn't get cached. This is helpful in the scenarios where user is using an object which can frequently get updated, such as request, page, language, and date. For example, refer to the header and footer web template source code update scenarios when [header and footer caching is enabled](../configure/enable-header-footer-output-caching.md).
 
 > [!TIP]
 > The URL used in [request.url](liquid-objects.md#request) can be any requested value, and gets [cached](../configure/enable-header-footer-output-caching.md) for subsequent requests. To ensure correct value in request.url, consider using substitution tag, partial URL such as ~\{WebFile path} or storing the portal URL in [Site Settings](../configure/configure-site-settings.md).
@@ -139,3 +158,6 @@ When user has enabled the header and footer caching, and he wants to avoid cachi
 [Iteration tags](iteration-tags.md)<br>
 [Variable tags](variable-tags.md)<br>
 [Power Apps Dataverse entity tags](portals-entity-tags.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

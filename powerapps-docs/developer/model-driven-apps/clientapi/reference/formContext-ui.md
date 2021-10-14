@@ -1,12 +1,13 @@
 ---
 title: "formContext.ui (Client API reference) in model-driven apps| MicrosoftDocs"
 description: "Learn about working with processes in model-driven apps using client API."
-ms.date: 10/31/2018
+ms.date: 04/15/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: f93e0e21-f911-4681-81b0-82ccf98ee28b
 author: "Nkrb"
+ms.subservice: mda-developer
 ms.author: "nabuthuk"
 manager: "kvivek"
 search.audienceType: 
@@ -17,11 +18,9 @@ search.app:
 ---
 # formContext.ui (Client API reference)
 
+Provides properties and methods to retrieve information about the user interface (UI) as well as collections for several sub components of the form.
 
-
-Provides properties and methods to retrieve information about the user interface (UI) as well as collections for several subcomponents of the form.
-
-![formContext UI object model](../../media/ClientAPI-formContext-ui-Model.png)
+![formContext UI object model.](../../media/ClientAPI-formContext-ui-Model.png)
 
 ## Properties
 
@@ -34,6 +33,7 @@ Provides properties and methods to retrieve information about the user interface
 |quickForms|A collection of all the quick view controls on a form using the new form rendering engine (also called "turbo forms").<br/>More information: [formContext.ui quickForms](formContext-ui-quickforms.md)|
 |tabs|A collection of all the tabs on the page.<br/>See [Collections](collections.md) for information about the collection methods and [formContex.ui tab](formContext-ui-tabs.md)  for information about the items in the collection.|
 
+[!INCLUDE[cc-terminology](../../../data-platform/includes/cc-terminology.md)]
 
 ## Methods 
 
@@ -59,3 +59,6 @@ Provides properties and methods to retrieve information about the user interface
 
 
 
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

@@ -1,6 +1,7 @@
 ---
 title: "deleteRecord (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
+description: Includes description and supported parameters for the deleteRecord method.
+ms.date: 04/21/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -37,13 +38,13 @@ search.app:
 <td>entityLogicalName</td>
 <td>String</td>
 <td>Yes</td>
-<td>The entity logical name of the record you want to delete. For example: "account". </td>
+<td>The table logical name of the record you want to delete. For example: "account". </td>
 </tr>
 <tr>
 <td>id</td>
 <td>String</td>
 <td>Yes</td>
-<td>GUID of the entity record you want to delete.</td>
+<td>GUID of the table record you want to delete.</td>
 </tr>
 <tr>
 <td>successCallback</td>
@@ -51,7 +52,7 @@ search.app:
 <td>No</td>
 <td><p>A function to call when a record is deleted. An object with the following properties will be passed to identify the deleted record:</p>
 <ul>
-<li><b>entityType</b>: String. The entity type of the record.</li>
+<li><b>entityType</b>: String. The table type of the record.</li>
 <li><b>id</b>: String. GUID of the record.</li>
 <li><b>name</b>: String. Name of the record.</li>
 </ul></td>
@@ -66,11 +67,11 @@ search.app:
 
 ## Return Value
 
-On success, returns a promise object containing the attributes specified earlier in the description of the **successCallback** parameter.
+On success, returns a promise object containing the values specified earlier in the description of the **successCallback** parameter.
 
 ## Examples
 
-These examples use some of the same request objects as demonstrated in [Update and delete entities using the Web API](../../../../common-data-service/webapi/update-delete-entities-using-web-api.md) to define the data object for updating an entity record.
+These examples use some of the same request objects as demonstrated in [Update and delete tables using the Web API](../../../../data-platform/webapi/update-delete-entities-using-web-api.md) to define the data object for updating an entity record.
 
 Deletes an account with record ID = 5531d753-95af-e711-a94e-000d3a11e605.
 
@@ -94,3 +95,6 @@ Xrm.WebApi.deleteRecord("account", "5531d753-95af-e711-a94e-000d3a11e605").then(
 
 
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

@@ -1,18 +1,22 @@
 ---
-title: 'Microphone control: reference | Microsoft Docs'
-description: Information, including properties and examples, about the Microphone control
+title: Microphone control in Power Apps
+description: Learn about the details, properties and examples of the Microphone control in Power Apps.
 author: chmoncay
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 09/28/2020
+ms.date: 01/07/2021
+ms.subservice: canvas-maker
 ms.author: chmoncay
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - chmoncay
 ---
 # Microphone control in Power Apps
 
@@ -40,21 +44,13 @@ Captured media is referenced by a text string URI. For more information, read th
 > [!NOTE]
 > The microphone control is supported only on Microsoft Edge based on Chromium, Chrome, and Firefox browsers; and Android and iOS devices. All other browsers and platforms will show a warning that some features of the app won't work.
 
-## Considerations for Teams Mobile
-
-The following conditions apply when using the Microphone control in apps created using Power Apps on Teams Mobile:
-
-1. The audio format for microphone recordings in Teams will always be *AAC* with a file extension of .MP4.
-1. Teams has its own recording experience. Hence, the microphone control inside apps created using Power Apps will be disabled during the recording period.
-1. Microphone recordings are limited to a maximum duration of 10 minutes.
-
 ## Key properties
 
 **Audio** – The audio clip captured when the user records with the device's microphone. 
 
 **Mic** – Numeric ID of the microphone on a device that has more than one microphone.
 
-**OnStop** – How the app responds when the user stops recording with a microphone control.
+**OnStop** – Actions to perform when the user stops recording with a microphone control.
 
 ## Additional properties
 
@@ -94,9 +90,9 @@ The following conditions apply when using the Microphone control in apps created
 
 [ImagePosition](properties-visual.md) – The position (**Fill**, **Fit**, **Stretch**, **Tile**, or **Center**) of an image in a screen or a control if it isn't the same size as the image.
 
-[OnSelect](properties-core.md) – How the app responds when the user selects a control.
+[OnSelect](properties-core.md) – Actions to perform when the user selects a control.
 
-**OnStart** – How the app responds when the user starts to record with a microphone control.
+**OnStart** – Actions to perform when the user starts to record with a microphone control.
 
 [PressedBorderColor](properties-color-border.md) – The color of a control's border when the user selects that control.
 
@@ -206,3 +202,10 @@ Consider adding an alternative form of input for users with speech disabilities 
 ### Screen reader support
 
 - [AccessibleLabel](properties-accessibility.md) must be present.
+
+### See also
+
+[Limitations of controls in Power Apps](../control-limitations.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

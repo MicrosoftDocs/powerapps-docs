@@ -1,6 +1,6 @@
 ---
-title: Language function | Microsoft Docs
-description: Reference information, including syntax and examples, for the Language function in Power Apps
+title: Language function in Power Apps
+description: Reference information including syntax and examples for the Language function in Power Apps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -8,11 +8,15 @@ ms.topic: reference
 ms.custom: canvas
 ms.reviewer: nabuthuk
 ms.date: 10/16/2016
+ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - gregli-msft
+  - nkrb
 ---
 # Language function in Power Apps
 Returns the language tag of the current user.
@@ -59,7 +63,7 @@ A simple approach to localization is to create an Excel spreadsheet mapping an a
 
 1. Create the following table in Excel: 
    
-    ![](media/function-language/loc-table.png)
+    ![Localization table.](media/function-language/loc-table.png)
    
     The entry with *blank* for the **Language** column will be used as the default if there is no specific text string found for a given language. This entry must appear after all other entries for a given **TextID**.
    
@@ -95,3 +99,6 @@ This approach comes with some drawbacks when compared to the previous example wh
 * The translation will take time to complete, requiring a call to a service across the network.  This will result in a lag to see the translated text in your app. 
 * The translation will be mechanical and may not be what you anticipate or be the best choice for the situation within your app.
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

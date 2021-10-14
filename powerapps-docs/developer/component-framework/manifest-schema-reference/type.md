@@ -1,7 +1,8 @@
 ---
 title: Type | Microsoft Docs
-description: 
+description: The type in the type-group node defines the data type in Microsoft Dataverse.
 keywords:
+ms.subservice: pcf
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
@@ -47,3 +48,6 @@ This element contains a `string` with one of the following values:
 [Power Apps component framework manifest schema reference](index.md)<br/>
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

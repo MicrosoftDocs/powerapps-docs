@@ -1,6 +1,6 @@
 ---
-title: DateAdd, DateDiff, and TimeZoneOffset functions | Microsoft Docs
-description: Reference information, including syntax and examples, for the DateAdd, DateDiff, and TimeZoneOffset functions in Power Apps
+title: DateAdd, DateDiff, and TimeZoneOffset functions in Power Apps
+description: Reference information including syntax and examples for the DateAdd, DateDiff, and TimeZoneOffset functions in Power Apps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -8,11 +8,15 @@ ms.topic: reference
 ms.custom: canvas
 ms.reviewer: nabuthuk
 ms.date: 05/23/2017
+ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - gregli-msft
+  - nkrb
 ---
 # DateAdd, DateDiff, and TimeZoneOffset functions in Power Apps
 Adds to or finds the difference in date/time values and converts between local time and UTC.
@@ -20,7 +24,7 @@ Adds to or finds the difference in date/time values and converts between local t
 ## Description
 The **DateAdd** function adds a number of units to a date/time value. The result is a new date/time value. You can also subtract a number of units from a date/time value by specifying a negative value.
 
-The **DateDiff** function returns the difference between two date/time values. The result is a number of units.
+The **DateDiff** function returns the difference between two date/time values. The result is a whole number of units.
 
 For both functions, units can be **Milliseconds**, **Seconds**, **Minutes**, **Hours**, **Days**, **Months**, **Quarters**, or **Years**.  By default, both functions use **Days** as units.
 
@@ -41,7 +45,7 @@ Also see [Date, Time, and DateTime data types](../functions/data-types.md#date-t
 
 * *StartDateTime* - Required. Starting date/time value.
 * *EndDateTime* - Required. Ending date/time value.
-* *Units* - Optional. The type of *Units* to add: **Milliseconds**, **Seconds**, **Minutes**, **Hours**, **Days**, **Months**, **Quarters**, or **Years**.  If not specified, **Days** are used.
+* *Units* - Optional. The type of *Units* to subtract: **Milliseconds**, **Seconds**, **Minutes**, **Hours**, **Days**, **Months**, **Quarters**, or **Years**.  If not specified, **Days** are used.
 
 **TimeZoneOffset**( [ *DateTime* ] )
 
@@ -67,6 +71,16 @@ In all of these examples, assume that the current date and time is **July 15, 20
 | **DateDiff( Now(), DateValue("1/1/2014"), Months )** |Returns the difference between the two values in **Months** |6 |
 | **DateDiff( Now(), Today(), Minutes )** |Returns the difference between the current date/time and the current date only (no time) in minutes.  Since the **Now** is later than **Today** the result will be negative. |-782 |
 
+### Difference of dates with fractional results
+
+The function DateDiff only returns a whole number of the units being subtracted, and the precision is given in the unit specified. To calculate the difference with a higher precision, use a smaller unit, and convert the result appropriately, like in the examples below.
+
+| Formula | Description | Result |
+| --- | --- | --- |
+| **DateDiff( TimeValue("09:45:00"), TimeValue("10:15:36"), Hours )** | The minutes/seconds are ignored, the difference is based on the time up to the hour. | 1 |
+| **DateDiff( TimeValue("09:45:00"), TimeValue("10:15:36"), Minutes )/60** | The minutes are used in the difference, and the result is divided by 60 to have the difference in hours. | 0.5 |
+| **DateDiff( TimeValue("09:45:00"), TimeValue("10:15:36"), Seconds )/3600** | The minutes and seconds are used in the difference; the result is divided by 3600 to have the difference in hours. | 0.51 |
+
 ### Converting to UTC
 To convert to UTC (Coordinated Universal Time), add the **TimeZoneOffset** for the given time.  
 
@@ -89,3 +103,6 @@ Note the negative sign before **TimeZoneOffset** to subtract the offset rather t
 
 To see the result, use the **Text** function with the format *dd-mm-yyyy hh:mm*, which will result in **15-07-2013 13:02** if you're in Pacific Daylight Time.
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

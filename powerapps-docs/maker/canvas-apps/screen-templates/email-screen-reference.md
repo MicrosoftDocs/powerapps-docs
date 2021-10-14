@@ -1,6 +1,6 @@
 ---
-title: Reference for the email-screen template for canvas apps | Microsoft Docs
-description: Understand details of how the email-screen template for canvas apps works in Power Apps
+title: Reference information about the email-screen template in canvas apps
+description: Understand details of how the email-screen template for canvas apps works in Power Apps.
 author: emcoope-msft
 manager: kvivek
 ms.service: powerapps
@@ -8,14 +8,18 @@ ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 12/31/2018
+ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - emcoope-msft
 ---
 
-# Reference information about the email-screen template for canvas apps
+# Reference information about the email-screen template in canvas apps
 
 For canvas apps in Power Apps, understand how each significant control in the email-screen template contributes to the screen's overall default functionality. This deep dive presents the behavior formulas and the values of other properties that determine how the controls respond to user input. For a high-level discussion of this screen's default functionality, see the [email-screen overview](email-screen-overview.md).
 
@@ -33,7 +37,7 @@ Familiarity with how to add and configure screens and other controls as you [cre
 
 ## Text search box
 
-   ![TextSearchBox control](media/email-screen/email-search-box.png)
+   ![TextSearchBox control.](media/email-screen/email-search-box.png)
 
 Several other controls in the screen have a dependency on the **Text search box** control:
 
@@ -43,7 +47,7 @@ Several other controls in the screen have a dependency on the **Text search box*
 
 ## Add icon
 
-   ![AddIcon control](media/email-screen/email-add-icon.png)
+   ![AddIcon control.](media/email-screen/email-add-icon.png)
 
 The **Add icon** control allows app users to add people who don't exist inside their org to the recipient list of the email being composed.
 
@@ -79,7 +83,7 @@ The **Add icon** control allows app users to add people who don't exist inside t
 
 ## People browse gallery
 
-   ![PeopleBrowseGallery control](media/email-screen/email-browse-gall.png)
+   ![PeopleBrowseGallery control.](media/email-screen/email-browse-gall.png)
 
 * Property: **Items**<br>
     Value: The top 15 search results of the search text typed into the **TextSearchBox** control:
@@ -90,13 +94,13 @@ The **Add icon** control allows app users to add people who don't exist inside t
     )
     ```
 
-  The items of this gallery are populated by search results from the [Office365.SearchUser](https://docs.microsoft.com/connectors/office365users/#searchuser) operation. The operation takes the text in `Trim(TextSearchBox)` as its search term and returns the top 15 results based on that search.
+  The items of this gallery are populated by search results from the [Office365.SearchUser](/connectors/office365users/#searchuser) operation. The operation takes the text in `Trim(TextSearchBox)` as its search term and returns the top 15 results based on that search.
   
   **TextSearchBox** is wrapped in a `Trim()` function because a user search on spaces is invalid. The `Office365Users.SearchUser` operation is wrapped in an `If(!IsBlank(Trim(TextSearchBox.Text)) ... )` function, which means that the operation is performed only if the search box contains user-entered text. This improves performance. 
 
 ### People browse gallery Title control
 
-   ![PeopleBrowseGallery Title control](media/email-screen/email-browse-gall-title.png)
+   ![PeopleBrowseGallery Title control.](media/email-screen/email-browse-gall-title.png)
 
 * Property: **Text**<br>
     Value: `ThisItem.DisplayName`
@@ -123,7 +127,7 @@ Selecting this control does three things concurrently:
 
 ## Email people gallery
 
-   ![EmailPeopleGallery control](media/email-screen/email-people-gall.png)
+   ![EmailPeopleGallery control.](media/email-screen/email-people-gall.png)
 
 * Property: **Items**<br>
     Value: `MyPeople`
@@ -152,7 +156,7 @@ Selecting this control does three things concurrently:
 
 ### Email people gallery Title control
 
-   ![EmailPeopleGallery Title control](media/email-screen/email-people-gall-text.png)
+   ![EmailPeopleGallery Title control.](media/email-screen/email-people-gall-text.png)
 
 * Property: **OnSelect**<br>
     Value: `Set(_selectedUser, ThisItem)`
@@ -161,7 +165,7 @@ Selecting this control does three things concurrently:
 
 ### Email people gallery iconRemove control
 
-   ![MonthDayGallery Title control](media/email-screen/email-people-gall-delete.png)
+   ![MonthDayGallery Title control.](media/email-screen/email-people-gall-delete.png)
 
 * Property: **OnSelect**<br>
     Value: `Remove( MyPeople, LookUp( MyPeople, UserPrincipalName = ThisItem.UserPrincipalName ) )`
@@ -188,7 +192,7 @@ Selecting this control does three things concurrently:
   Sending an email message requires a semicolon-separated string of email addresses. In the preceding code:
   1. The first line of code takes the **Mail** field from all the rows in the **MyPeople** collection, concatenates them into a single string of email addresses separated by semicolons, and sets the **_emailRecipientString** variable to that string value.
 
-  1. It then uses the [Office365.SendEmail](https://docs.microsoft.com/connectors/office365/#sendemail) operation to send the email to the recipients.
+  1. It then uses the [Office365.SendEmail](/connectors/office365/#sendemail) operation to send the email to the recipients.
     The operation has three required parameters, **To**, **Subject**, and **Body**, and one optional parameter--**Importance**. In the preceding code, these are **_emailRecipientString**, **TextEmailSubject**.Text, **TextEmailMessage**.Text, and **Normal**, respectively.
   1. Finally, it resets the **TextEmailSubject** and **TextEmailMessage** controls and clears the **MyPeople** collection.
 
@@ -201,3 +205,6 @@ Selecting this control does three things concurrently:
 * [Learn more about this screen](./email-screen-overview.md)
 * [Learn more about the Office 365 Outlook connector in Power Apps](../connections/connection-office365-outlook.md)
 * [Learn more about the Office 365 Users connector in Power Apps](../connections/connection-office365-users.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

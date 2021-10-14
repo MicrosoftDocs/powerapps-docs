@@ -5,13 +5,14 @@ keywords: ""
 ms.date: 11/27/2018
 ms.service: powerapps
 ms.custom: 
-ms.topic: article
+ms.topic: how-to
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
   - "powerapps"
 ms.assetid: 31bfcf18-58c3-491c-91b5-f9b0f5424852
 author: Mattp123
+ms.subservice: mda-maker
 ms.author: matp
 manager: kvivek
 ms.reviewer: 
@@ -59,7 +60,7 @@ search.app:
 2.  Expand **Data**, select **Tables**, select the table that you want, and then select the **Views** tab. 
 
     > [!div class="mx-imgBorder"] 
-    > ![Account view definitions](media/account-view-definitions.png)
+    > ![Account view definitions.](media/account-view-definitions.png)
 
 3. Select an existing view to open it or on the toolbar select **Add view**. 
 
@@ -76,7 +77,7 @@ search.app:
 1.  While creating and editing views, ensure that the **Table columns** panel is open. If it is not, select **View column** on the toolbar. 
 
     > [!div class="mx-imgBorder"] 
-    > ![View editor add columns](media/fields-drawer-view-designer.png)
+    > ![View editor add columns.](media/fields-drawer-view-designer.png)
 
 2.  Select the columns you want to add to the view designer. This adds the column as a column on the right-hand of the view.
 
@@ -118,3 +119,6 @@ Click and drag the column header to the correct position.
   
 ## Next steps
 [Create or edit views](create-edit-views.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

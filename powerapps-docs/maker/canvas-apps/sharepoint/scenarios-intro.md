@@ -1,5 +1,5 @@
 ---
-title: Scenarios for SharePoint integration with canvas apps | Microsoft Docs
+title: Scenarios for integrating SharePoint with Power Apps
 description: This series explains different scenarios when integrating SharePoint with canvas apps.
 author: emcoope-msft
 ms.service: powerapps
@@ -7,14 +7,20 @@ ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 09/01/2020
+ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - navjotm
+  - wimcoor
+  - emcoope-msft
 ---
 
-# SharePoint integration scenarios
+# Scenarios for integrating SharePoint with Power Apps
 
 You can connect a canvas app with sites from SharePoint Online, or on-premises SharePoint farms using the on-premises data gateway. Create different connections for different lists or libraries from the SharePoint sites.
 
@@ -36,7 +42,7 @@ In addition to the SharePoint integration scenarios, refer to the following arti
 
 | Documentation | Description |
 |--|--|
-| [SharePoint Connectors documentation](https://docs.microsoft.com/connectors/sharepointonline/) | SharePoint connector documentation with list of available regions and products. |
+| [SharePoint Connectors documentation](/connectors/sharepointonline/) | SharePoint connector documentation with list of available regions and products. |
 | [Power Apps SharePoint connector documentation](../connections/connection-sharepoint-online.md) | An introduction to the use of SharePoint connector in Power Apps with basic example. |
 | [Create an app from SharePoint](../app-from-sharepoint.md) | Create a canvas app from SharePoint quickly. |
 | [SharePoint list form integration](../customize-list-form.md) | Understand SharePoint list integration and [customization](../sharepoint-form-integration.md). |
@@ -54,3 +60,6 @@ Some additional samples and step-by-step guides available for different SharePoi
 
 - [Formula reference](../formula-reference.md) for Power Apps
 - [Control reference](../reference-properties.md) for Power Apps
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

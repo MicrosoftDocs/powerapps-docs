@@ -18,7 +18,7 @@ Hospital staff are challenged to meet an increase in number of patients while ma
 
 Browse to the Power Apps portal to work with staffing, equipment, supplies, patient, and other areas. The following section walks you through what you can access, submit, or update as the health care user of the portal.
 
-![Portal at glance ](media/portal-user-at-glance.png)
+![Portal at glance .](media/portal-user-at-glance.png)
 
 You can use latest mobile devices and web browsers when using Regional Government Emergency Response and Monitoring portal except Apple iPad.
 
@@ -50,7 +50,7 @@ The Regional Government Emergency Response and Monitoring portal consists of t
 
 Select **Bed capacity** to update patient information, beds, and staffing capacity for the selected location:
 
-![Bed capacity](media/portal-user-bed-capacity.png)
+![Bed capacity.](media/portal-user-bed-capacity.png)
 
 ### Options and description
 
@@ -94,13 +94,13 @@ When you open **Bed capacity**, or any other components such as **Staff**, **Equ
 
 When you select individual field, you can also see the previous value submitted for the field:
 
-![Previous value](media/previous-submissions.png)
+![Previous value.](media/previous-submissions.png)
 
 ## Staff
 
 Submit staff-specific details **Staff update** form:
 
-![Staff details](media/portal-user-staff-details.png)
+![Staff details.](media/portal-user-staff-details.png)
 
 ### Options and description
 
@@ -110,7 +110,7 @@ The staff options depend on your organization requirements. Refer to your organi
 
 Submit the equipment details such as ventilators and NIPPV devices:
 
-![Equipment details](media/portal-user-equipment-details.png)
+![Equipment details.](media/portal-user-equipment-details.png)
 
 ### Options and description
 
@@ -123,7 +123,7 @@ Submit the equipment details such as ventilators and NIPPV devices:
 
 Submit the supplies inventory details such as on-hand supply, usage method (extended use or reuse), and the ability to source the supplies:
 
-![Supplies details](media/portal-user-supplies-details.png)
+![Supplies details.](media/portal-user-supplies-details.png)
 
 ### Options and description
 
@@ -164,7 +164,7 @@ names.
 
 Submit COVID-19 specific details using the **COVID-19 stats** form:
 
-![Stats](media/portal-user-stats.png)
+![Stats.](media/portal-user-stats.png)
 
 ### Options and description
 
@@ -206,3 +206,6 @@ Only available if the facility is enabled for emergency department or overflow l
 - To report an issue with the Regional Government Emergency Response and Monitoring solution, visit <https://aka.ms/rer-issues>.
 
 - For feedback about the Regional Government Emergency Response and Monitoring solution, visit <https://aka.ms/rer-feedback>.
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

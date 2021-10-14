@@ -1,50 +1,79 @@
 ---
-title: System requirements, limits, and configuration values for canvas apps | Microsoft Docs
-description: System requirements, limits, and configuration values for canvas apps built in Power Apps
+title: Canvas app system requirements and limits
+description: Learn about device platform and web browser requirements, limits, and configuration values for canvas apps built in Power Apps.
 author: lancedMicrosoft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 12/01/2020
+ms.date: 07/21/2021
+ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - lancedmicrosoft
+  - alaug
+  - wimcoor
 ---
 # System requirements, limits, and configuration values for canvas apps
-This topic contains device platform and web browser requirements, as well as limits and configuration values for canvas apps.
+This article contains information on supported device platforms, web browser requirements, limits, and configuration values for canvas apps. 
 
 ## Supported platforms for running canvas apps using the Power Apps mobile app
 
 | **Minimum required** | **Recommended** |
 | --- | --- |
-| iOS 12 or later |iOS 12 or later|
+| iOS 13 or later |iOS 13 or later|
 | Android 7 or later |Android 7 or later |
 | Windows 8.1 or later (PC only) |Windows 10 Fall Creators Update with at least 8 GB of RAM)|
 
 > [!NOTE]
-> - On October 16, 2020 we will no longer support iOS 12. After October 16, 2020 iOS 13 or later will be supported. 
-> - We currently don't support new features on Windows platform for [Power Apps mobile app](/powerapps/user/run-app-client). Features such as the Improved Microsoft Dataverse option and guest access are not available on this platform. We recommend using a web player on Windows to leverage the full set of capabilities. Updates to the Power Apps mobile app for Windows platform will be announced in future.
+> - As of October 16, 2020, we no longer support iOS 12. Only iOS 13 or later is supported. 
+> - We currently don't support new features on Windows platform for [Power Apps mobile app](/powerapps/maker/canvas-apps/run-canvas-and-model-apps-on-mobile). Features such as the Improved Microsoft Dataverse option and guest access are not available on this platform. We recommend using a web player on Windows to leverage the full set of capabilities. Updates to the Power Apps mobile app for Windows platform will be announced in future.
+> - Canvas apps running on Windows platform must use the legacy Microsoft Dataverse connector. A [warning is displayed](use-native-cds-connector.md) for apps that still use the legacy connector, but using it for Windows platform is supported.
 
 ## Supported browsers for running canvas apps
 
-| **Browser** | **Operating system** |
+| **Browser** | **Supported Versions** |
 | --- | --- |
-| Google Chrome (latest version)<br>(recommended) |Windows 7 SP1, 8.1, and 10 <br>Android 5 or later <br>iOS 8 or later<br>macOS |
-| Microsoft Edge (latest version)<br>(recommended) |Windows 10 |
-| Microsoft Internet Explorer 11 (with Compatibility View off) |Windows 7 SP1, 8.1, and 10 |
-| Mozilla Firefox (latest version) |Windows 7 SP1, 8.1, and 10 <br> Android 5 or later <br>iOS 8 or later <br>macOS |
-| Apple Safari (latest version) |iOS 8 or later <br>macOS |
+| Google Chrome|Latest three major releases|
+| Microsoft Edge|Latest three major releases|
+| *Microsoft Internet Explorer|11 (with Compatibility View off)|
+| Mozilla Firefox (latest version)|Latest three major releases|
+| Apple Safari|13 and later|
+
+*Microsoft Internet Explorer 11 support for Power Apps is deprecated. We recommend that you use Microsoft Edge. More information: [Deprecation announcement](/power-platform/important-changes-coming#internet-explorer-11-support-for-dynamics-365-and-microsoft-power-platform-is-deprecated)
+
+### Supported platforms for browsers running canvas apps
+
+| **Operating System** | **Supported Versions** |
+| --- | --- |
+| Windows |Windows 8.1 or later|
+| macOS|10.13 or later|
+| iOS |iOS 13 or later|
+| Android |10 or later |
+
+*Microsoft Internet Explorer 11 support for Power Apps is deprecated. We recommend that you use Microsoft Edge. More information: [Deprecation announcement](/power-platform/important-changes-coming#internet-explorer-11-support-for-dynamics-365-and-microsoft-power-platform-is-deprecated)
 
 ## Supported browsers for Power Apps Studio
 
-| **Browser** | **Operating system** |
+| **Browser** | **Supported Versions** |
 | --- | --- |
-| Google Chrome (latest version)<br>(recommended) |Windows 7 SP1, 8.1, and 10 <br>macOS |
-| Microsoft Edge (latest version)<br>(recommended) |Windows 10 |
-| Microsoft Internet Explorer 11 (with Compatibility View off) |Windows 7 SP1, 8.1, and 10 |
+| Google Chrome|Latest three major releases|
+| Microsoft Edge|Latest three major releases|
+| *Microsoft Internet Explorer|11 (with Compatibility View off)|
+
+*Microsoft Internet Explorer 11 support for Power Apps is deprecated. We recommend that you use Microsoft Edge. More information: [Deprecation announcement](/power-platform/important-changes-coming#internet-explorer-11-support-for-dynamics-365-and-microsoft-power-platform-is-deprecated)
+
+### Supported platforms for browsers running Power Apps Studio
+
+| **Operating Systems** | **Supported Versions** |
+| --- | --- |
+| Windows |Windows 8.1 or later|
+| macOS|10.13 or later|
 
 ## Request limits
 These limits apply to each single outgoing request:
@@ -58,11 +87,12 @@ These limits apply to each single outgoing request:
 > The retry value may vary. For certain error conditions, it's not necessary to retry.
 
 ## IP addresses
-Requests from Power Apps use IP addresses that depend on the region of the [environment](../../administrator/environments-overview.md) that the app is in. We don't publish fully qualified domain names available for Power Apps scenarios.
 
-Calls made from an API connected through an app (for example, the SQL API or the SharePoint API) come from the IP address specified later in this topic.
+Requests from Power Apps use IP addresses that depend on the region of the [environment](/power-platform/admin/environments-overview) that the app is in. We don't publish fully qualified domain names available for Power Apps scenarios.
 
-You should use these addresses if, for example, you must allow IP addresses for an Azure SQL database.
+Calls made from an API connected through an app (for example, the SQL API or the SharePoint API) come from the IP address specified later in this article.
+
+For example, use these addresses when you must allow IP addresses for an Azure SQL database.
 
 | Region | Outbound IP |
 | --- | --- |
@@ -76,7 +106,7 @@ You should use these addresses if, for example, you must allow IP addresses for 
 | India | 13.71.127.169, 13.71.30.211, 52.172.211.12, 13.71.125.22, 104.211.189.218, 20.192.184.32 - 20.192.184.63, 40.78.194.240 - 40.78.194.255, 20.38.128.224 - 20.38.128.255, 104.211.146.224 - 104.211.146.239, 20.43.123.0 - 20.43.123.31, 104.211.81.192 - 104.211.81.207 |
 | Japan | 104.215.28.128, 13.71.128.159, 13.71.153.19, 104.215.61.248, 40.74.100.224 - 40.74.100.239, 40.80.180.64 - 40.80.180.95, 13.78.108.0 - 13.78.108.15, 40.79.189.64 - 40.79.189.95 |
 | Switzerland | 51.103.143.163, 51.107.86.217, 51.107.231.190, 51.107.59.16 - 51.107.59.31, 51.107.60.224 - 51.107.60.255, 51.107.155.16 - 51.107.155.31, 51.107.156.224 - 51.107.156.255 |
-| United Arab Emirates | 20.45.67.36, 20.45.67.28, 20.37.74.192 - 20.37.74.207, 40.120.8.0 - 40.120.8.31 |
+| United Arab Emirates | 20.45.67.36, 20.45.67.28, 20.37.74.192 - 20.37.74.207, 40.119.162.44, 40.120.8.0 - 40.120.8.31 |
 | United Kingdom | 51.140.77.227, 51.140.245.29, 51.140.80.51, 51.140.61.124, 51.141.47.105, 51.141.124.13, 51.105.77.96 - 51.105.77.127, 51.140.148.0 - 51.140.148.15, 51.140.211.0 - 51.140.211.15, 51.140.212.224 - 51.140.212.255 |
 | United States (Early Access)  | 13.78.178.187, 52.151.42.172, 52.161.102.22, 13.78.132.82, 52.183.78.157, 13.71.195.32 - 13.71.195.47, 13.71.199.192 - 13.71.199.223, 13.66.140.128 - 13.66.140.143, 13.66.145.96 - 13.66.145.127 |
 | United States | 104.41.132.180, 13.91.93.63, 52.173.245.164, 40.71.249.205, 40.114.40.132, 52.232.188.154, 104.209.247.23, 52.162.242.161, 104.42.122.49, 40.112.195.87, 13.91.97.196, 40.71.193.203, 104.210.14.156, 13.66.130.243, 65.52.197.64, 40.113.242.246, 40.71.11.80 - 40.71.11.95, 40.71.15.160 - 40.71.15.191, 52.162.107.160 - 52.162.107.175, 52.162.111.192 - 52.162.111.223, 13.89.171.80 - 13.89.171.95, 13.89.178.64 - 13.89.178.95, 40.70.146.208 - 40.70.146.223, 40.70.151.96 - 40.70.151.127, 13.86.223.32 - 13.86.223.63, 40.112.243.160 - 40.112.243.175 |
@@ -91,21 +121,32 @@ This list identifies all services to which Power Apps Studio talks and their usa
 | api.bap.microsoft.com<br/>api.businessappdiscovery.microsoft.com | https | Environment permissions management|
 | management.azure.com |https |RP |
 | msmanaged-na.azure-apim.net |https |Runtime of Connectors/Apis |
-| login.microsoft.com<br>login.windows.net<br>login.microsoftonline.com<br>secure.aadcdn.microsoftonline-p.com |https |ADAL |
-| graph.microsoft.com<br>graph.windows.net |https |Azure Graph - For getting user info (e.g., profile photo) |
+| login.microsoft.com<br>login.windows.net<br>login.microsoftonline.com<br>secure.aadcdn.microsoftonline-p.com |https |Microsoft Authentication Library |
+| graph.microsoft.com<br>graph.windows.net |https |Azure Graph - For getting user info (for example, profile photo) |
 | gallery.azure.com |https |Sample and Template apps |
-| \*.azure-apim.net |https |Api Hubs - Different sub-domains for each locale |
-| \*.powerapps.com |https | create.powerapps.com, make.powerapps.com, content.powerapps.com,apps.powerapps.com, and make.powerapps.com |
-| \*.azureedge.net |https | create.powerapps.com, make.powerapps.com, content.powerapps.com, and make.powerapps.com |
+| \*.azure-apim.net |https |Api Hubs - Different subdomains for each locale |
+| \*.powerapps.com |https | create.powerapps.com, content.powerapps.com, apps.powerapps.com, and make.powerapps.com |
+| \*.azureedge.net |https | create.powerapps.com, content.powerapps.com, and make.powerapps.com |
 | \*.blob.core.windows.net |https | Blob storage |
-| \*.flow.microsoft.com | https | create.powerapps.com, make.powerapps.com, content.powerapps.com, and make.powerapps.com |
-| \*.dynamics.com | https | Dataverse |
+| \*.flow.microsoft.com | https | create.powerapps.com, content.powerapps.com, and make.powerapps.com |
+| \*.dynamics.com | https | Microsoft Dataverse |
 | vortex.data.microsoft.com |https |Telemetry |
 | localhost | https | Power Apps Mobile|
 
-
 > [!NOTE]
 > If you're using a VPN, it must be configured to exclude localhost from tunneling for Power Apps Mobile.
+
+## Embedding limits for canvas apps
+
+Power Apps doesn't support the nested embedding of canvas apps in native desktop, mobile, or other non-browser clients.
+
+The following table shows some of the examples where embedding a canvas app isn't supported:
+
+| Canvas apps embedded to | Unsupported client |
+| - | - |
+| A SharePoint page that is added as a tab in a Microsoft Teams channel | <ul> <li> Teams desktop </li> <li> Teams mobile </li> </ul> |
+| A Power BI report that is added to a Teams team, or a SharePoint site | <ul> <li> Teams desktop </li> <li> Teams mobile </li> <li> SharePoint mobile </li> </ul> |
+| A model-driven form that is added to Teams | <ul> <li> Teams desktop </li> <li> Teams mobile </li> </ul> |
 
 ## Size limits
 
@@ -113,4 +154,7 @@ You can find information about size limits on text, hyperlinks, images, and medi
 
 ## Power Apps per app plan
 
-The information is now available in [Power Apps per app plan](/power-platform/admin/signup-for-powerapps-admin#power-apps-per-app-plan) section in the Power Platform admin guide.
+Information is now available in the [Power Apps per app plan](/power-platform/admin/signup-for-powerapps-admin#power-apps-per-app-plan) section in the Power Platform admin guide.
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

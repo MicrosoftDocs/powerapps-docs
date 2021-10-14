@@ -7,6 +7,7 @@ ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 661d084d-744b-44b0-be82-abde6f6e7e90
 author: "Nkrb"
+ms.subservice: mda-developer
 ms.author: "nabuthuk"
 manager: "kvivek"
 search.audienceType: 
@@ -30,3 +31,5 @@ Provides information on how to set the visibility of footer section.
 ### Related topics
 
 [Client API Xrm object](../clientapi-xrm.md)
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

@@ -1,6 +1,7 @@
 ---
 title: "getVisible (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 04/21/2020
+description: Includes description and supported parameters for the getVisible method.
+ms.date: 04/19/2021
 ms.service: powerapps
 ms.topic: "reference"
 ms.assetid: c44ca2a7-e1e0-40fc-a7a4-5ae97eacc204
@@ -31,3 +32,5 @@ search.app:
 ### Related topics
 
 [setVisible](setVisible.md)
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]
