@@ -123,7 +123,13 @@ In addition to creating side panes and showing rows or views within the side pan
 
   `Xrm.App.sidePanes.getSelectedPane().badge = 1;`
 
+### Use with Xrm.App.panels.loadPanel
+
+The Xrm.Panels.loadPanel API is being replaced with Xrm.App.sidePanes.createPane because the former only supports a single pane while later supports multiple panes.  To enable transitioning from loadPanel to createPane, the two can work together with some limitations.  If only loadPanel is used within a model-driven app then the experience remains the same.  However if both loadPanel and createPane are used, the first limitation is that a placeholder icon is shown for the loadPanel.  The second limitation is that when the user switches from the loadPanel to the createPane, the loadPanel content is unloaded to save memory and will be reloaded on switch back without the state.  This tab switch behavior is the same used within the multi-session app mode to manage the memory used by the app.  Most page types will restore correctly however when an external site or web resource is opened the state isn't restored.
+
+By switching to use createPane, both limitations can be avoid by providing an icon and by enabling alwaysRender.  The alwaysRender will keep the pane content when the user switches but does take more memory so should be used sparingly.
 
 ### Related topics
 
 [sidePanes (Client API reference)](reference/xrm-app-sidepanes.md)
+[loadPanel (Client API Reference)](reference/xrm-panel/loadpanel.md)
