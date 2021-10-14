@@ -26,7 +26,7 @@ In [powerapps.com](https://powerapps.com), use a sample app to explore design po
 
 <!-- Be sure to check out documentation specific to each sample app for more details. -->
 
-> [!div class="mx-imgBorder"] 
+> [!div class="mx-imgBorder"]
 > ![Fundraiser Sample App.](media/overview-model-driven-samples/fundraiser-app1.png "Fundraiser sample app")
 
 ## Get sample apps
@@ -34,7 +34,7 @@ In [powerapps.com](https://powerapps.com), use a sample app to explore design po
 The availability of sample apps depends on how an environment database was provisioned.
 
 > [!IMPORTANT]
-> In order to play or edit model-driven sample apps, the apps must first be provisioned in a Microsoft Dataverse database by an administrator that has the Environment Admin role. 
+> In order to play or edit model-driven sample apps, the apps must first be provisioned in a Microsoft Dataverse database by an administrator that has the Environment Admin role.
 
 To install the sample apps and data, create a trial environment and database, and then be sure to select **Deploy sample apps and data**.
 
@@ -134,22 +134,24 @@ Fundraiser provides employees the opportunity to donate time and money towards c
 
 ## Remove sample apps and data
 
-- Deleting a sample app requires deleting the corresponding  [managed solution](/dynamics365/customer-engagement/developer/uninstall-delete-solution). 
+- Deleting a sample app requires deleting the corresponding  [managed solution](/dynamics365/customer-engagement/developer/uninstall-delete-solution).
 - Deleting the solution also deletes any sample data specific to the custom tables for the app.
 - If customizations were made to the sample app, there may be [dependencies](/dynamics365/customer-engagement/developer/dependency-tracking-solution-components), which must be removed before deleting the solution.
 
-### Delete a solution
+## Delete a solution
 
 To delete a solution, follow the steps in this topic: [Delete a model-driven app](delete-model-driven-app.md#delete-a-model-driven-app-that-was-installed-as-part-of-a-managed-solution)
-
 
 ## Install or uninstall Sample Data
 
 To remove sample data, follow the steps in this topic: [Add or remove sample data](/power-platform/admin/add-remove-sample-data)
 
+## Next Steps
 
+[Building a simple model-driven app](build-first-model-driven-app.md) is a great way to start.  You may wish to [Create a solution](../../maker/data-platform/create-solution) before you do so.
 
+If you are new to Power Apps, and want to learn about how to convert your ideas into a fully working solution using Power Apps, start with [Planning a Power Apps project](../../guidance/planning/introduction.md).
 
-
+[Understand model-driven app components](model-driven-app-components.md) will help you to understand some of the elements that make up a model-driven app.
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

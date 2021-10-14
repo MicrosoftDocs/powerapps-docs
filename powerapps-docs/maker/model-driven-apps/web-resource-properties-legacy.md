@@ -20,11 +20,11 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Web resource properties for model-driven app forms
+# Web resource properties for model-driven app forms (Legacy)
 
 [!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-You can add or edit web resources on a form to make it more appealing or useful to app users. Form enabled web resources are images or HTML files controls.
+This article describes how to use the [legacy](model-driven-app-glossary.md#legacy) app authoring interface to add or edit web resources on a form to make it more appealing or useful to app users. Form enabled web resources are images or HTML files controls.
 
 > [!NOTE]
 > Silverlight web resources are deprecated and will not work in the Unified Interface client.

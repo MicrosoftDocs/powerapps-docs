@@ -25,10 +25,25 @@ search.app:
   - D365CE
 ---
 # Add and configure a subgrid component on a form  
-A form that displays the details of a row can use a subgrid component to display a list of related or unrelated rows in a tabular format. Makers can add and configure a subgrid component using the form designer.
+A form that displays the details of a table record can use a subgrid component to display a list of related or unrelated rows in a tabular format. Makers can add and configure a subgrid component using the form designer.
 
 ## Add a subgrid component
-You add a subgrid component the same way as you add any other component. More information: [Add, configure, move, or delete components on a form](add-move-configure-or-delete-components-on-form.md)
+
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
+2. Expand **Data**, select **Tables**, select the table that you want, and then select the **Views** tab.
+   
+> [!note]
+> Many customisations to a table take place within [solutions](../model-driven-apps/model-driven-app-glossary.md#solution).  To update a table within a solution first navigate to your **solution**, then select the **table** followed by the **forms** tab.
+
+3. Select **+Component** in the header menu.  This can also be selected from the side menu.
+4. Drag a **1 column section** from the layout area of the components menu onto the form.
+5. Select **Subgrid** from the Related Data area of the components menu.
+6. Typically app users wish to view related records.  If **Show related records** is selected then only tables for which a relationship is in place will be displayed.
+7. Select the required **table**
+8. Select the **view** from the required table 
+<br> Where a view is not suitable for the application [create or edit a view](create-edit-views.md) for the relevant table. 
+9.  Select **Done**
+10. **Save** and **Publish**
 
 ## Configure a subgrid component
 These are the properties available to configure when using a subgrid component on a form using the form designer.

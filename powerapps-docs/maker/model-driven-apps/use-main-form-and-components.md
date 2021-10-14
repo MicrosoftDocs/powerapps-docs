@@ -24,40 +24,53 @@ search.app:
 
 [!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-Forms in Unified Interface apps provide improved user experience for optimum agent productivity and help maintain context while working on related rows. You can see the forms enlisted in the solution explorer. The form type of the new forms is **Main**.
+Forms in model-driven apps provide the primary means by which users can update records.  Forms associated with a table can be accessed via the table designer.
+
+The most versatile form type of the new form is **Main**, however, in addition to main forms app designers can build quick create, quick view or card forms.  [Learn more about other types of form](types-forms)
 
 This topic explains how to edit a main form, and add or change various elements of the form.
 
+Below is an example of a main form within an app.  It has several tabs, in addition to exposing the timeline component and a quick view form providing more details associated with the primary contact.
+
+:::image type="content" source="../../maker/model-driven-apps/media/create-and-edit-a-model-driven-form/main-form-accounts_2.png" alt-text="Sample model-driven app":::
+
 ## Open the form editor
 
-To edit a form or to add or change elements, use the form editor. The form editor lets you edit forms for all Unified Interface apps.
+To edit a form or to add or change elements, use the form editor. The form editor lets a designer edit forms for all model-driven apps.
 
-Follow the procedures given below to access the form editor. 
-
-> [!NOTE]
-> If you create any new solution components in the process of editing the form, the names of the components will use the solution publisher customization prefix for the default solution and these components will only be included in the default solution. If you want any new solution components to be included in a specific unmanaged solution, open the form editor through that unmanaged solution.
-
-
-### Access the form editor through App designer in Power Apps
-
-1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
-
-2.  On the left navigation pane, select **Apps**, select the app you want, and then on the toolbar select **Edit**.  
-
-3. On the app designer canvas, select the down arrow ![Down arrow for app designer.](media/down-arrow-app-designer.png) next to a table to see the forms available for that table. 
-
-4. Select the open designer button ![open designer.](media/site-map-designer.png)corresponding to the form to edit.
-
-   ![Form editor in app designer.](media/app-designer-forms.png)
- 
-5. In the form designer, make your changes and then select **Save** to save the changes and select **Publish** to publish them for use in the app. 
+Follow the procedures given below to access the form editor.
 
 > [!NOTE]
-> If you have made other changes to the app, publish them using the app level publish option. See [Validate and publish an app using the app designer](validate-app.md) for more information.
+> If you create any new solution components in the process of editing the form, the names of the components will use the solution publisher customization prefix for the default solution and these components will only be included in the **default solution**. If you want any new solution components to be included in a **specific unmanaged solution**, open the form editor through that unmanaged solution.  This will help with the application management lifecycle.
 
-<!-- > [!NOTE]
-> The web client main form is also compatible with the Customer Service Hub and is available to be edited using the app designer. -->
+### Access the form editor for an unmanaged solution
 
+1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. Open [solutions](advanced-navigation.md#solutions).
+2. Click the unmanaged solution you want to work with. The solution type, managed or unmanaged, is displayed in the **Managed externally?** column.
+3. In the list of components, locate the table with the form you want to edit. If the table isn’t there, you’ll need to add it.
+
+#### Add a table to an unmanaged solution
+
+1. With the unmanaged solution opened in solution explorer, select the **Entities** node and, in the toolbar above the list, select **Add Existing**
+
+2. A series of solution components will be offered.  Select Table.
+
+3. All the tables that are from other solutions, or that aren't in solutions already will be offered.  Select a table and then click **next**.
+
+4. The option to include components required to enable the table to function in addition to including table metadata.  Where **include all components** is selected this will select **include table metadata** by default.
+
+4. In the solution explorer expand the table with the form you want to edit and select **Forms**.
+
+5. In the list of forms, open the form of type **Main**.
+
+6. Perform edits as required.
+
+7. Save form.
+
+#### Publish the changes for use in the app
+
+Certain customizations that make changes to the user interface require that they be published before people can use them in the application. To publish your customization, on the solution explorer toolbar, select **Publish All Customizations**.
 
 ### Access the form editor through the default solution
 
@@ -67,40 +80,21 @@ Follow the procedures given below to access the form editor.
 
 3. In the list of forms, open the form of type **Main**.
 
-### Access the form editor for an unmanaged solution
+> [!NOTE]
+> If you have made other changes to the app, publish them using the app level publish option. See [Validate and publish an app using the app designer](validate-app.md) for more information.
 
-1. Open [solutions](advanced-navigation.md#solutions).
-2. Double-click the unmanaged solution you want to work with. The solution type, managed or unmanaged, is displayed in the **Package Type** column.
-3. In the list of components, locate the table with the form you want to edit. If the table isn’t there, you’ll need to add it.
-
-#### Add a table to an unmanaged solution
-
-1. With the unmanaged solution opened in solution explorer, select the **Entities** node and, in the toolbar above the list, select **Add Existing**.
-
-     > [!div class="mx-imgBorder"] 
-     > ![Add existing table.](media/add-existing-entity.png)
-
-2. In the **Select Solution Components** dialog box, with the **Component Type** selector set to **Entity**, select the table you want to add and select **OK**.
-
-3. If the **Missing Required Components** dialog box appears, you can select **No, do not include required components** if you don’t intend to export this unmanaged solution to another organization. If you don’t want to include missing required components at this time, you can add them later. You’ll receive notification again if you export this solution in the future.
-
-4. In the solution explorer expand the table with the form you want to edit and select **Forms**.
-
-5. In the list of forms, open the form of type **Main**.
-
-#### Publish the changes for use in the app
-
-Certain customizations that make changes to the user interface require that they be published before people can use them in the application. To publish your customization, on the solution explorer toolbar, select **Publish All Customizations**.
+<!-- > [!NOTE]
+> The web client main form is also compatible with the Customer Service Hub and is available to be edited using the app designer. -->
 
 ## Form editor user interface
 
-To understand in detail about the form editor user interface, see [Overview of the form editor user interface](form-editor-user-interface-legacy.md).
+To understand in detail about the form editor user interface, see [Overview of the legacy form editor user interface](form-editor-user-interface-legacy.md).
 
 ## Form properties
 
-To know in detail about the form properties, see [Form properties](form-properties-legacy.md).
+To know in detail about the form properties, see [Form properties - legacy](form-properties-legacy.md).
 
-## Visibility options  
+## Visibility options
  Several types of form elements have the option to be shown or hidden by default. Tabs, sections, and columns all provide this option. Using form scripts or business rules, the visibility of these elements can be controlled to create a dynamic form to provide a user interface that adapts to conditions in the form. 
   
 > [!NOTE]
@@ -129,24 +123,24 @@ A section in a form occupies the space available in a tab column. Sections have 
 To know in detail about the common column properties, see [Common column properties](common-field-properties-legacy.md). 
   
 ## Special column properties  
- All columns have the properties listed in [Common column properties](common-field-properties-legacy.md), but certain columns have additional properties. To know more, see [Special Column Properties](special-field-properties-legacy.md).
+ All columns have the properties listed in [Common column properties - legacy](common-field-properties-legacy.md), but certain columns have additional properties. To know more, see [Special Column Properties - legacy](special-field-properties-legacy.md).
 
   
 ## Sub-grid properties  
 
-You can configure a sub-grid on a form to display a list of rows or a chart. To know in detail about the sub-grid properties, see [Sub-grid properties](sub-grid-properties-legacy.md).
+You can configure a sub-grid on a form to display a list of rows or a chart. To know in detail about the sub-grid properties, see [Sub-grid properties - legacy](sub-grid-properties-legacy.md).
 
 ## Quick view control properties  
 
-A quick view control on a form displays data from a row that is selected in a lookup on the form. To explore the quick view control properties, see [Quick view control properties](quick-view-control-properties-legacy.md).
+A quick view control on a form displays data from a row that is selected in a lookup on the form. To explore the quick view control properties, see [Quick view control properties - legacy](quick-view-control-properties-legacy.md).
   
 ## Web resource properties  
 
-You can add or edit web resources on a form to make it more appealing or useful to app users. Form enabled web resources are images, HTML files, or Silverlight controls. Know in detail about the Web resource properties. Go to [Web resource properties](web-resource-properties-legacy.md). 
+You can add or edit web resources on a form to make it more appealing or useful to app users. Form enabled web resources are images, HTML files, or Silverlight controls. Know in detail about the Web resource properties. Go to [Web resource properties - legacy](web-resource-properties-legacy.md). 
   
 ## IFRAME properties  
 
-You can add iFrames to a form to integrate content from another website within a form. To know more about the IFRAME properties, see [IFRAME properties](iframe-properties-legacy.md). 
+You can add iFrames to a form to integrate content from another website within a form. To know more about the IFRAME properties, see [IFRAME properties - legacy](iframe-properties-legacy.md). 
   
 ## Edit navigation  
  Navigation within the form allows people to view lists of related rows. Each table relationship has properties to control whether it should be shown. More information: [Navigation Pane Item for Primary Table](../data-platform/create-edit-1n-relationships-solution-explorer.md#navigation-pane-item-for-primary-table)

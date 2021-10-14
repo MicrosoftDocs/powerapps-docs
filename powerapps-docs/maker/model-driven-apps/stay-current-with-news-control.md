@@ -25,6 +25,8 @@ search.app:
 
 [!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
+[!INCLUDE [cc-classic-interface-control-migration](../../includes/cc-classic-interface-control-migration.md)]
+
 Gain valuable insights from the latest news about your customers, competitors,
 and contacts. Staying on top of the news helps you stay ahead of your
 competition by showing you real-time contextual information about your customers

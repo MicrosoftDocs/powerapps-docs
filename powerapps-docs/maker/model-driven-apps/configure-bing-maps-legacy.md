@@ -28,11 +28,13 @@ search.app:
 
 [!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
+[!INCLUDE [cc-classic-interface-control](../../includes/cc-classic-interface-control-note.md)]
+
 By default, the Bing maps control is configured on the main form for both the account and contact tables, which provides the ability to display a map on table rows. Although not configured by default, the Bing maps control can be added to the system user table. The Bing maps control can also be used with some tables included with Dynamics 365 apps, such as Dynamics 365 Sales and Dynamics 365 Customer Service. For example, the lead, quote, order, invoice, and competitor tables. The Bing maps control can't be used with custom tables.  
 
-When enabled, the map displays the location specified in the address composite columns for the given row. 
+When enabled, the map displays the location specified in the address composite columns for the given row.
 
-> [!div class="mx-imgBorder"] 
+> [!div class="mx-imgBorder"]
 > ![Bing map control in an app.](media/bing-map-example.png "Bing map control in an app")
 
 > [!IMPORTANT]
@@ -41,17 +43,24 @@ When enabled, the map displays the location specified in the address composite c
 You can remove the maps area in the form editor or add it back by using the **Bing Maps** button on the **Insert** tab of the classic form editor.
 
 ## Enable maps for your environment
-1. Open a model driven app and then select **Settings** > **Advanced Settings**. 
-2. Select **Settings** > **Administration** > **System Settings**. 
-3. On the **General** tab, select **Show Bing Maps on forms**, and then select **OK**. 
- 
+
+1. Open a model driven app and then select **Settings** > **Advanced Settings**.
+
+1. Select **Settings** > **Administration** > **System Settings**.
+
+1. On the **General** tab, select **Show Bing Maps on forms**, and then select **OK**.
+
     ![Enable maps on forms.](media/enable-maps.png)
 
-## Configure a map 
-1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
-2. Go to **Data** > **Tables**, and then select the table that you want to configure a map on the main form. 
-3. Select the **Forms** tab, and then select the main form, and then on the command bar select **Switch to classic**. 
-4. On the classic form designer double-click the **Map View** control to view and edit the properties. More information: [View and edit map properties](#view-and-edit-map-properties)
+## Configure a map
+
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+
+1. Go to **Data** > **Tables**, and then select the table that you want to configure a map on the main form.
+
+1. Select the **Forms** tab, and then select the main form, and then on the command bar select **Switch to classic**.
+
+1. On the classic form designer double-click the **Map View** control to view and edit the properties. More information: [View and edit map properties](#view-and-edit-map-properties)
 
     ![Map view control.](media/map-view-control.png)
 

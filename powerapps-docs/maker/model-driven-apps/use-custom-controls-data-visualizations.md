@@ -28,6 +28,8 @@ search.app:
 
 [!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
+[!INCLUDE [cc-classic-interface-control](../../includes/cc-classic-interface-control-note.md)]
+
 In this topic you learn how to configure a custom control for a column.
 
 To add a control using the Power Apps form designer, see [Add components to a form](add-move-configure-or-delete-components-on-form.md#add-components-to-a-form).

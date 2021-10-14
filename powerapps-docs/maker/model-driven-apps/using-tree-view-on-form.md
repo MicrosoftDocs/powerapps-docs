@@ -27,19 +27,22 @@ search.app:
 
 # Using the tree view in the form designer
 
-The **Tree View** pane displays a visual hierarchy of the components on the form. The icons in the tree view help you quickly identify the type of column or component. 
+The **Tree View** pane displays a visual hierarchy of the components on the form. The icons in the tree view help an app designer to quickly identify the type of properties of the column, section, tab or component.
 
-You can also use the tree view to select columns and components present on the form. The tree view is helpful when you want to select hidden elements that are not visible on the form preview. 
+The tree view can also be used to select columns and other components present on the form. The tree view is helpful when you want to select **hidden elements** that are not visible on the form preview.
 
-You can expand or collapse nodes in the tree view to see or hide the elements within a node. When you select an element in the tree view, it becomes highlighted in the form preview, and the property pane displays the properties for the element. 
+You can expand or collapse nodes in the tree view to see or hide the elements within a node. When you select an element in the tree view, it becomes highlighted in the form preview, and the property pane displays the properties for the element.
 
-> [!div class="mx-imgBorder"] 
+> [!div class="mx-imgBorder"]
 > ![Tree view.](media/FormDesignerTreeView.png "Tree view")
 
-### Open the tree view 
-1. Open the form designer to create or edit a form. 
-    - More information: [Create a form](create-and-edit-forms.md#create-a-form) or [Edit a form](create-and-edit-forms.md#edit-a-form)
-2. In the left pane, select **Tree view**.
+### Open the tree view
+
+1.  Open [solution explorer](advanced-navigation.md#solution-explorer), navigate to your solution.
+2.  Select the required table
+3.  Select the **Forms** tab.
+4. Open the form required and the form designer will open to enable creation or editing of a form.
+5. In the left pane, select **Tree view**.
 
 ## See also
 [Overview of the model-driven form designer](form-designer-overview.md)  
@@ -53,6 +56,5 @@ You can expand or collapse nodes in the tree view to see or hide the elements wi
 [Add and configure a quick view component on a form](form-designer-add-configure-quickview.md)  
 [Configure a lookup component on a form](form-designer-add-configure-lookup.md)  
 [Create and edit columns](../data-platform/create-edit-field-portal.md)  
-
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

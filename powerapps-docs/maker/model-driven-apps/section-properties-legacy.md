@@ -30,29 +30,6 @@ search.app:
   
  Headers and footers are similar to sections but cannot be removed. If they don't contain anything they will not be shown.
 
-## Section properties in form designer
-
-1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
-
-2.  Expand **Data**, select **Tables**, select the table that you want, and then select the **Forms** tab. 
-
-3.  In the list of forms, open a form of type **Main**. To open a form in another tab, select **More commands** ![More Commands button.](media/more-commands.gif "More Commands button for Forms"), and then select **Edit form** > **Edit form in new tab**.
-
-4.  Select one of the sections to see the section properties.
-
-    > [!div class="mx-imgBorder"]
-    > ![Section properties in Form designer.](media/new-section-properties.png "Section properties in Form designer")
-
-|Property|Description|  
-|---------|--------------|  
-|**Section label**|**Required**: The localizable label for the section visible to users.|  
-|**Name**|**Required**: The unique name for the section that is used when referencing it in scripts. The name can contain only alphanumeric characters and underscores.|  
-|**Hide label**|Sections are frequently used without labels to control formatting of the columns within them.|
-|**Lock section**|This will prevent the section from accidentally being removed and prevents people from removing the contents.<br /><br /> Removing a section will not only remove the section, but also any columns within it.<br /><br /> Someone wanting to remove this section would need to change this setting before removing it.|  
-|**Hide section**|Showing the section is optional and can be controlled using scripts. More information: [Visibility options](visibility-options-legacy.md)|  
-|**Hide on phone**|Choose if you want the tab to be available on the phone.|  
-|**Formatting**|Specify up to four columns to be in the section.|  
-
 ## Section properties in classic form designer
 
 You can access **Section properties** in solution explorer from the Power Apps site .

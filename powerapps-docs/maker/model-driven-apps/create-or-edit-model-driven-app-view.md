@@ -11,34 +11,19 @@ ms.reviewer: matp
 ---
 # Create and edit public model-driven app views
 
-In Power Apps, views define how records for a specific table are displayed. A view defines the following behavior:
-- The columns, also known as attributes, to display.
-- The width of the columns in the view.
-- How the records are sorted by default.
-- Which filters are applied to determine the records that appear in the list by default.
+In this tutorial, we perform several tasks required to work with views, such as create a public view, add an existing view to an app, and change columns, filters, and sort order for a view.  Note that we will be working with both the classic app designer and the modern app designer experience.
 
-Typically, views are classified into three types:
-- **Personal**: Individual users can create personal views according to their unique requirements. These views are visible only to the user who created them and anyone they choose to share them with.  
-- **Public**: As an app maker, you can create and edit public views to fit your organizational requirements. These views are available in the view selector, and you can use them in subgrids in a form or as a list in a dashboard.
-- **System**: As an app maker, you can also modify system views to meet the requirements of your organization. These are special views that the application depends on: they exist for system tables or are automatically created when you create custom tables. These views are available to some or all users, depending on their privileges.
-
-More information: [Understand model-driven app views](create-edit-views.md)
-
-A drop-down list of views is commonly displayed in an app so that people have options for different views of table data, such as the Donations table in the Fundraiser sample app.
-:::image type="content" source="media/create-or-edit-model-driven-app-view/system-views-picker.png" alt-text="Select a system view from the view picker.":::
-
-The records that are visible in individual views are displayed in a list, sometimes called a grid, which frequently provides options so that people can change the default sorting, column widths, and filters to more easily see the data that's important to them. Views also define the data source for charts that are used in the application.
-
-In this tutorial, we perform several tasks required to work with views, such as create a public view, add an existing view to an app, and change columns, filters, and sort order for a view.
+> [!NOTE]
+   >   Views are tied a given table however we can select this during the process of creating a model driven app.  By default ALL views will be made available.
 
 ## Create a public view in Power Apps
 
 In this exercise, you create a public view for the account entity. You then add this view to an app.
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-    
+
 1. Expand **Data**, select **Tables**, select the **Account** table, and then select the **Views** tab.
-    
+
 1. On the toolbar, select **Add view**.
 
 1. On the **Create a view** dialog box, enter *Accounts with revenue more than 50 K* as the **Name**. Optionally, enter a description, and then select **Create**.
@@ -69,7 +54,12 @@ In this exercise, you create a public view for the account entity. You then add 
 
 1. Select **Save**, and then select **Publish** to make the view available for other users in the environment.
 
-## Add the view in the app designer
+## Display the view in an app
+
+To see your view in the app, on the app designer command bar, select **Play**. Notice that the view is displayed and the additional **Active Accounts** and **Inactive Accounts** views are also available by selecting the view selector.
+:::image type="content" source="media/create-or-edit-model-driven-app-view/view-displayed-in-app.png" alt-text="Views available from an app":::
+
+## Selecting the view using the modern app designer
 
 1. In Power Apps, select **Apps** from the left navigation pane, select **...** next to the unmanaged app you want, and then select **Edit** > **Edit in preview**. If you don't have an app to use, [Build your first model-driven app](build-first-model-driven-app.md).
 
@@ -81,12 +71,7 @@ In this exercise, you create a public view for the account entity. You then add 
    :::image type="content" source="media/create-or-edit-model-driven-app-view/select-view-for-app.png" alt-text="Select the views you want to display":::
 1. Select **Publish** to save and publish the app.
 
-### Display the view in an app
-
-To see your view in the app, on the app designer command bar, select **Play**. Notice that the view is displayed and the additional **Active Accounts** and **Inactive Accounts** views are also available by selecting the view selector.
-:::image type="content" source="media/create-or-edit-model-driven-app-view/view-displayed-in-app.png" alt-text="Views available from an app":::
-
-## Open and add the view in the classic app designer
+## Selecting the view using the classic app designer
 
 1. In Power Apps, select **Apps** from the left navigation pane, select **...** next to the unmanaged app you want, and then select **Edit** . If you don't have an app to use, [Build your first model-driven app](build-first-model-driven-app.md).
     
@@ -103,7 +88,22 @@ To see your view in the app, on the app designer command bar, select **Play**. N
    > [!NOTE]
    > Views are displayed based on the table that you have selected. For example, when you select **Account**, views that are related to the account table are displayed.
 
-### Add a column to your view in the classic app designer
+## Edit an active public or system view in the classic app designer
+
+You can change the way an active public or system view is displayed that's selected for the app by opening it from the app designer canvas.
+
+1. In the **Views** list for a table, select the **Show list of references** down arrow
+ ![Drop Down](media/create-or-edit-model-driven-app-view/edit-a-public-or-system-view-in-app-designer-2.png "Drop Down").
+   > [!NOTE]
+   > The down arrow is only displayed when the table views are not configured to use **All** views.
+
+1. Select the active view ![Open view Designer pencil icon](media/create-or-edit-model-driven-app-view/edit-a-public-or-system-view-in-app-designer-3.png "Open view Designer") that you want to open for editing.
+
+   ![change the way a public or system view is displayed](media/create-or-edit-model-driven-app-view/edit-a-public-or-system-view-in-app-designer-1.png "change the way a public or system view is displayed")
+
+When you edit a public or system view, you must save and publish your changes before they will be visible in the application.
+
+## Add a column to your view in the classic app designer
 
 Views display records from a table that contains rows and columns. Each record is a row, and the columns that are displayed from the record are determined by the columns you add to the view.
 
@@ -118,7 +118,7 @@ Views display records from a table that contains rows and columns. Each record i
 1. Repeat step 3 until you've added all the columns you want to display in your view. As you add columns, you can drag them to any position among existing column headings. You can also move columns around after you add them to your view by dragging the column heading to the column heading where you want to move it.
 1. Select **Save and Close** on the command bar, to save the view and return to the app designer.
 
-### Define filter criteria in the classic app designer
+## Define filter criteria in the classic app designer
 
 You can set filter criteria so that only a subset of the records is displayed in a view. When a user opens the view, only the records that meet the defined filter criteria are displayed. You can select columns from both the primary and related tables to filter on.
 
@@ -135,7 +135,7 @@ You can set filter criteria so that only a subset of the records is displayed in
 1. Enter *TX* as the value to filter by in the third column.
 
    ![Set Filter Criteria Operator](media/create-or-edit-model-driven-app-view/define-filter-criteria-in-app-designer-2.png "Set Filter Criteria Operator")
-   
+    
    Notice how the view now shows accounts with annual revenue greater than $50,000 in the state of Texas (TX).
 1. Select **Save and Close** on the command bar, to save the view and return to the app designer.
 <!-- You can also filter data based on the attributes of related tables in addition to the
@@ -147,7 +147,7 @@ primary table.
 
 More information: [Create and edit relationships between tables](https://docs.microsoft.com/powerapps/maker/data-platform/create-edit-entity-relationships)  -->
 
-#### Group multiple filters in the classic app designer
+### Group multiple filters in the classic app designer
 
 You can add multiple filters to your view if you want to filter records by using more than one column.
 
@@ -161,7 +161,7 @@ You can add multiple filters to your view if you want to filter records by using
 
 To remove the filter from a group, select the group, and then select **Ungroup**.
 
-### Set primary and secondary sort order for columns in the classic app designer
+## Set primary and secondary sort order for columns in the classic app designer
 
 When a view is opened, the records displayed are sorted in the order you set when you created the view. By default, records will be sorted according to the first column in a view when no sort order is selected. You can choose to sort on a single column, or you can choose two columns—one primary and one secondary—to sort by. When the view is opened, the records are first sorted by the column you want to use for primary sort order, and then by the column you want to use for the secondary sort order.
 
@@ -176,22 +176,9 @@ When a view is opened, the records displayed are sorted in the order you set whe
 
 If you remove the column you chose for the primary sort order, the column you chose for the secondary sort order becomes the primary.
 
-### Edit an active public or system view in app designer
-
-You can change the way an active public or system view is displayed that's selected for the app by opening it from the app designer canvas.
-
-1. In the **Views** list for a table, select the **Show list of references** down arrow 
- ![Drop Down](media/create-or-edit-model-driven-app-view/edit-a-public-or-system-view-in-app-designer-2.png "Drop Down").
-   > [!NOTE]
-   > The down arrow is only displayed when the table views are not configured to use **All** views.
-
-1. Select the active view ![Open view Designer pencil icon](media/create-or-edit-model-driven-app-view/edit-a-public-or-system-view-in-app-designer-3.png "Open view Designer") that you want to open for editing.
-
-   ![change the way a public or system view is displayed](media/create-or-edit-model-driven-app-view/edit-a-public-or-system-view-in-app-designer-1.png "change the way a public or system view is displayed")
-
-When you edit a public or system view, you must save and publish your changes before they will be visible in the application.
-
 ### See also
 
+[Working with the new app designer](app-designer-overview.md)
+<br />
 [Create a model-driven app with the app designer](create-model-driven-app.md) <br />
 [Design custom business apps by using the app designer](design-custom-business-apps-using-app-designer.md)

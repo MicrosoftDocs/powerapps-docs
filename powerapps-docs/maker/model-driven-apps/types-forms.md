@@ -31,17 +31,35 @@ search.app:
   
 |Form type|Description|More information|  
 |---------------|-----------------|-----------------|  
-|**Main**|Used in model-driven apps, Dynamics 365 for tablets, and Dynamics 365 for Outlook.<br /><br /> These forms provide the main user interface for interacting with table data.|[Design considerations for main forms](design-considerations-main-forms.md)|    
-|**Quick Create**|Used in model-driven apps, Dynamics 365 for tablets, and Dynamics 365 for Outlook.<br /><br /> For updated tables, these forms provide a basic form optimized for creating new rows.|[Create and edit quick create forms](create-edit-quick-view-forms.md) |  
-|**Quick View**|Used in model-driven apps, Dynamics 365 for tablets, and Dynamics 365 for Outlook.<br /><br /> For updated tables, these forms appear within the main form to display additional data for a row that is referenced by a lookup column in the form.|[Create and edit quick view forms](create-edit-quick-view-forms.md)|  
-|**Card** | Used in views for Power Apps apps. Card forms are designed to present information in a compact format that is suitable for mobile devices. | [Create a card form](create-card-forms.md) |
+|**Main**|Used in model-driven apps, Dynamics 365 for tablets, and Dynamics 365 for Outlook.<br /><br /> These forms provide the **main user interface** for viewing and interacting with table data.|[Design considerations for main forms](design-considerations-main-forms.md)|    
+|**Quick Create**|Used in model-driven apps, Dynamics 365 for tablets, and Dynamics 365 for Outlook.<br /><br /> For updated tables, these forms provide a basic form **optimized for creating new rows**.|[Create and edit quick create forms](create-edit-quick-view-forms.md) |  
+|**Quick View**|Used in model-driven apps, Dynamics 365 for tablets, and Dynamics 365 for Outlook.<br /><br /> For updated tables, these forms appear within the main form to display additional data for a row that is referenced by a lookup column in the form. <br /><br /> They allow us to see data from related tables without having to navigate there. |[Create and edit quick view forms](create-edit-quick-view-forms.md)|  
+|**Card** | Used in views for model-driven apps. Card forms are designed to present information in a compact format that is suitable for mobile devices. | [Create a card form](create-card-forms.md) |
 
-While each form type has specific needs, when working with forms you use the Form Editor. More information: [Overview of the form editor user interface](form-editor-user-interface-legacy.md)
+While each form type has specific needs, when designing forms you use the Form Editor. More information: [Overview of the form editor user interface](form-editor-user-interface-legacy.md)
 
+## Form Examples
+
+### Main Form
+
+:::image type="content" source="../../maker/model-driven-apps/media/main-form-dialog.gif" alt-text="Main Form":::
+
+### Quick Create
+
+:::image type="content" source="../../maker/model-driven-apps/media/quick-create-form.gif" alt-text="Quick create form":::
+
+### Quick View
+
+:::image type="content" source="../../maker/model-driven-apps/media/quick-view-form-control.png" alt-text="Quick view form":::
+
+### Card
+
+:::image type="content" source="../../maker/model-driven-apps/media/card-format.png" alt-text="Quick view form":::
 
 ## Next steps
 
-[Overview of the form editor user interface](form-editor-user-interface-legacy.md)
+Please review links to the further documentation on each of the form types noted above.
 
+[Overview of the form editor user interface](form-editor-user-interface-legacy.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

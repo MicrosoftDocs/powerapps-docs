@@ -25,48 +25,64 @@ search.app:
   - D365CE
 ---
 
+
 # Add an embedded canvas app on a model-driven form
-Display data from a variety of sources right next to data from Microsoft Dataverse. This article explains how to embed a canvas app on a model-driven form.
+
+## Canvas app embedding options
+
+This article explains how to embed a [canvas app](model-driven-app-glossary.md#canvas-app) on a model-driven form.  Canvas apps can be connected to a wide range of data sources and offer designers greater control around the overall user experience.
+
+Two methods of integration are described in this article.  First, a using the modern unified interface experience and secondly using the classic experience.  
+
+There is a third and more recent method of embedding canvas apps inside a modern app which is a tighter integration of the canvas app and the form.  [Learn more about the modern app building experience](app-designer-overview.md).
 
 :::image type="content" source="media/embedded-canvas-app.png" alt-text="Example of an embedded canvas app on a model-driven app main form.":::
 
-Imagine that you want to embed a canvas app on a model-driven app main form, such as the main form for the Accounts table. To do this, follow these steps:
+## Embed a canvas app using the modern experience
+
+In order to embed a canvas app on a model-driven app main form, such as the main form for the Accounts table the following steps are required:
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-1. [Create or edit the main form](create-and-edit-forms.md) of a table. 
-1. In the form designer, select the section on the form where you want the embedded canvas app to appear.
-1. Add a required form field to the section, such as Account Name.
+2. Choose the **environment** in which the solution lies.
+3. Select the **table** which includes the form where the canvas app needs to be shown.
+4. Select **Forms**.
+5. Choose the **main** form.  
+6. In the form designer, select the section on the form where the embedded canvas app needs to appear.
+7. Add a required form field to the section, such as Account Name.
 
    > [!TIP]
    > You may want to change the table column name that you add to something more meaningful, such as the name or a short description of the canvas app that you’re embedding onto the form.
 
-1. On the table column properties pane, expand **Components**, select **+ Component**, and then select **Canvas app**. 
+8. Either select + Component from the top menu, or select the component icon from the left hand menu.  This will open the components pane.  
 
-    :::image type="content" source="media/add-canvas-app-control.png" alt-text="Add the canvas app control to a table column.":::
-1. On the **Add canvas app** pane, enter the following properties, and then select **Done**: 
+:::image type="content" source="media/add-canvas-app-control.png" alt-text="Add the canvas app control to a table column.":::
+
+9.  Select **Canvas app** from the Related Data section.  There are a series of additional items that need to be added to configure the control.
    - The **Entity name** area specifies the table that will provide the data to your embedded canvas app.
 
-       - **Bind to table column**: When you select **Bind to table column**, the list changes to allow you to select what table column to bind to. When you choose to bind to a table column, the column will be defined by the table column value. For example, when you select **Bind to table column** for the **App Name**, at app runtime the value of the app name takes the value of the column, such as the value from a custom text column.
+       - **Bind to table column**: When **Bind to table column** is selected, the list changes to allow you to select what table column to bind to. When you choose to bind to a table column, the column will be defined by the table column value. For example, when **Bind to table column** is selected for the **App Name**, at app runtime the value of the app name takes the value of the column, such as the value from a custom text column.
            > [!IMPORTANT]
            > For most situations, we don’t recommend using the **Bind to table column** option with the canvas app control.
 
-       - **Static value**: Use this to add a name for you to refer to the canvas app. Notice that this value has no effect on the embedded canvas app. It is meant only to serve as a reference for you.
+       - **Static value**: Use this to add a name for you to refer to the canvas app. Notice that this value has no effect on the embedded canvas app. It is meant only to serve as a reference point.
 
    - The **App Name** area specifies the name of the canvas app.
        - **Bind to table column**: When you select **Bind to table column**, the list changes to allow you to select what table column to bind to. When you choose to bind to a table column, the column will be defined by the table column value. For example, when you select **Bind to table column** for the **App Name**, at app runtime the value of the app name takes the value of the column, such as the value from a custom text column.
            > [!IMPORTANT]
-           > For most situations, we don’t recommend using the **Bind to table column** option with the canvas app control. 
+           > For most situations, we don’t recommend using the **Bind to table column** option with the canvas app control.
 
        - **Static value**: Specifies the name of the canvas app to embed. The model-driven form looks for the canvas app with the specified name in the current environment. If a canvas app with that name can't be found in the environment, the canvas app control will use the App ID to load the canvas app. Enter the App Name for an existing canvas app.
 
-   - The App ID area specifies the app ID for the canvas app. 
+   - The App ID area specifies the app ID for the canvas app.
        - **Bind to table column**: When you select **Bind to table column**, the list changes to allow you to select what table column to bind to. When you choose to bind to a table column, the column will be defined by the table column value. For example, when you select **Bind to table column** for the **App Name**, at app runtime the value of the app name takes the value of the column, such as the value from a custom text column.
            > [!IMPORTANT]
-           > For most situations, we don’t recommend using the **Bind to table column** option with the canvas app control. 
+           > For most situations, we don’t recommend using the **Bind to table column** option with the canvas app control as this would require the correct App ID to be shown in a field within the record.
 
        - **Static value**: Enter the app ID for an existing canvas app. The canvas App ID can be found on Power Apps, go to **Apps**, select the canvas app, and then select **Details** on the command bar.
-    - **Show components area**. Specifies the client type to display the embedded canvas app. Choose from **Web**, **Mobile**, and **Tablet**.
-1. Select **Save**. Then, to publish your app to make it available to users select **Publish**.
+  
+  - **Show components area**. Specifies the client type to display the embedded canvas app. Choose from **Web**, **Mobile**, and **Tablet**.
+  
+10. Select **Save**. Then, to publish your app to make it available to users select **Publish**.
 
 After you have published an embedded canvas app to your model-driven form, share your embedded canvas app with other users. More information: [Share an embedded canvas app](share-embedded-canvas-app.md).
 
@@ -74,10 +90,10 @@ When users open a model-driven app that includes the form you have modified, the
 
 This article showed you how to get started with embedding a canvas app in a model-driven form. You can further customize the embedded canvas app to connect and bring in data from various data sources. Use the Filter, Search, and LookUp functions and the context passed in from the host model-driven form to filter or find specific records in those data sources. Use the WYSIWYG canvas app editor to easily design the interface to match your requirements.
 
-## Add an embedded canvas app on a model-driven form using the classic experience
+## Embed a canvas app using the classic experience
 
 1.	Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-2.  [Create or edit the main form](create-and-edit-forms.md) of a table, Accounts table in our example. 
+2.  [Create or edit the main form](create-and-edit-forms.md) of a table, Accounts table in our example.
 3.  In the command bar, select **Switch to classic** to open the form in the classic form designer.
 4.	In the classic form designer, select the section on the form where you want the embedded canvas app to appear.
 5.	Using the column pane, add a required column, such as **Account Name**.
@@ -102,9 +118,9 @@ This article showed you how to get started with embedding a canvas app in a mode
 12.	Go to step 20 if you're adding a completed canvas app. If you are creating a new or editing an existing canvas app, continue to follow these steps. Select **Customize** to create or edit a canvas app. This opens Power Apps Studio in a new tab.
 	   > [!NOTE]
        > If opening Power Apps Studio is blocked due to a web browser pop-up blocker you must enable the make.powerapps.com site or temporarily disable the pop-up blocker and then select **Customize** again.
-13.	Observe the following: 
+13.	Observe the following:
     - In Power Apps Studio notice that there is a special **ModelDrivenFormIntegration** control in the left pane. This control is responsible for bringing contextual data from the host model-driven form to the embedded canvas app.
-    - Observe that a [canvas app form control](../canvas-apps/controls/control-form-detail.md) was automatically added to your embedded canvas app and displays the data being passed to it from the host model-driven form via the ModelDrivenFormIntegration control. 
+    - Observe that a [canvas app form control](../canvas-apps/controls/control-form-detail.md) was automatically added to your embedded canvas app and displays the data being passed to it from the host model-driven form via the ModelDrivenFormIntegration control.
     - Select the **View** tab, and then select **Data sources**. Notice that a data source for the parent table of your host model-driven form, Accounts in this case, was automatically added to your embedded canvas app. - Select the **Form1** control and observe that the **DataSource** property is set to **Accounts**.
     - With the **Form1** control still selected, observe that the **Item** property is set to **ModelDrivenFormIntegration.Item**.
   	> [!NOTE]

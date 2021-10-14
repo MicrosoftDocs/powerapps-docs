@@ -22,15 +22,15 @@ search.app:
 ---
 # Edit related table records directly from another table’s main form
 
-There are multiple ways that you can work with related table records on a table form within a Power App. For example, you can include related tables in read-only mode with a quick view form and create or edit a record using a [main form in a dialog.](../../developer/model-driven-apps/customize-entity-forms.md#open-main-form-in-a-dialog-using-client-api)
+There are multiple ways that you can work with **related table records** on a table form within a Power App. For example, you can include related tables in read-only mode with a [quick view form](create-edit-quick-view-forms.md) and create or edit a record using a [main form in a dialog.](../../developer/model-driven-apps/customize-entity-forms.md#open-main-form-in-a-dialog-using-client-api)
 
-Another way you can work with related table records is by adding a form component control to another table's main form. The form component control lets users edit information of a related table record directly from another table’s form.
+Another way you can work with related table records is by adding a form component control to another table's main form. The **form component control** lets users edit information of a related table record directly from another table’s form.
 
 For example, here's the form component on a separate tab on the main account form, which lets the user edit a contact record without leaving the account form.
 
 :::image type="content" source="media/form-component-tab.png" alt-text="Form component control added to a separate tab.":::
 
-For example, here's the form component on an existing tab on the main account form, which also lets the user edit a contact record without leaving the account form.
+For example, here's the form component on an **existing tab** on the main account form, which also lets the user edit a contact record without leaving the account form.  Notice that we remain on the summary tab.
 
 :::image type="content" source="media/form-component-section.png" alt-text="Form component control added to an existing tab.":::
 
@@ -38,7 +38,11 @@ For example, here's the form component on an existing tab on the main account fo
 
 In this example, the **Contact** standard main form is configured for the form component control that’s added to the account main form.
 
-1. Open [solution explorer](advanced-navigation.md#solution-explorer), expand **Entities**, select the table that you want, select **Forms**, and then open the main form where you want to add the form component.
+1. Navigate to make.powerapps.com
+1. Select **Dataverse** and then **Tables** in the left hand menu.  Alternatively, select a [solution](model-driven-app-glossary.md#solution) from the menu and then select a table, such as **Account**.
+1. Select **Forms** from the components menu.
+1. Select a form with a form type of **Main** from the forms available.  There will be others such as Card and QuickViewForm available.
+1. Select **Switch to classic** and the classic form editor interface will be opened as a tab in your browser.
 1. Select the **Insert** tab. Then, create a new tab and add a new section or add a new section to an existing tab.  
 1. In the new section, add a lookup column, such as the **Primary Contact** lookup column.
 1. Select the lookup column, and then on the **Home** tab, select **Change Properties**.
