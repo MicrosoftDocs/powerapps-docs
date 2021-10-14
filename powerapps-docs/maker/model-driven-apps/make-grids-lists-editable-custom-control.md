@@ -47,9 +47,9 @@ When editable grids are enabled through the Editable Grids control, users can ed
   
 3. In the **Add Control** dialog box, select **Editable Grid**, and then select **Add**.  
   
-4. In the **Editable Grid** row that's added, select the form factor(s) you want to apply the grid to. This makes the editable grid control the default control for the selected form factor(s).  
+4. In the **Editable Grid** row that's added, select the form factor(s) you want to apply the grid to. This makes the editable grid control the default control for the selected form factor(s).  As a minimum in most instances select **Web**.
   
-     ![Editable Grid row with form factor selection.](media/editable-grid-row-wit-factor-selection.png "Editable Grid row with form factor selection")    
+     ![Editable Grid row with form factor selection.](media/editable-grid-row-wit-factor-selection.png "Editable Grid row with form factor selection")
 
    > [!NOTE]
    >  At runtime, users can toggle between editable grids and read-only grids.  
@@ -92,45 +92,61 @@ When editable grids are enabled through the Editable Grids control, users can ed
 > - To save an editable grid change within a sub-grid, the user must explicitly save before navigating out of the form.
 > - If you are using legacy forms (versions prior to Dynamics CRM 2016) and enable an editable grid on a sub-grid, the editable sub-grid will not be rendered. System administrators can turn off legacy forms in system settings, if needed.
   
-1.  Open [solution explorer](advanced-navigation.md#solution-explorer).  
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
   
-2.  Open the form that contains the sub-grid.  
+2. Select **Solutions**, open the solution required. 
   
-3.  Select the appropriate control, and then select **Change Properties** on the ribbon.  
+3. Select the **Table** within the solution, and then navigate to the **Forms** tab.  Select the **Main Form** that contains the subgrid.
+
+4. Select **Switch to Classic**. This will open a new tab in your browser.
   
-4.  In the **Set Properties** dialog box, select **Controls**, select **Add Control**, and then follow the same steps listed above.  
+5. Select the appropriate control, and then select **Change Properties** on the ribbon.  
+
+    :::image type="content" source="media/editable-subgrid-classic.png" alt-text="Editable subgrid - classic view":::
+
+1. In the **Set Properties** dialog box, select **Controls**.
+
+2. Select **Add Control**, then select **Editable Grid**, followed by **Add**.  
+  
+3. In the **Editable Grid** row that's added, select the form factor(s) you want to apply the grid to. This makes the editable grid control the default control for the selected form factor(s).  As a minimum in most instances select **Web**.
+  
+     ![Editable Grid row with form factor selection.](media/editable-grid-row-wit-factor-selection.png "Editable Grid row with form factor selection")
+
+4. Select **Save**.
+
+5.  Select **Publish**.
 
 ## Editable grids support
   
--   In-line editing of rows at the table or sub-grid level (includes custom tables)  
+- In-line editing of rows at the table or sub-grid level (includes custom tables)  
   
--   System views and personal views  
+- System views and personal views  
   
--   Web and mobile clients  
+- Web and mobile clients  
   
--   Navigation with a keyboard or mouse  
+- Navigation with a keyboard or mouse  
   
--   Grouping and sorting (you can group by/sort rows on the client-side by any column in the current view)  
+- Grouping and sorting (you can group by/sort rows on the client-side by any column in the current view)  
   
--   Filtering  
+- Filtering  
   
--   Moving and resizing columns  
+- Moving and resizing columns  
   
--   Pagination  
+- Pagination  
   
--   Saving changes from one session to another for grouping, sorting, filtering, pagination, and moving and resizing columns  
+- Saving changes from one session to another for grouping, sorting, filtering, pagination, and moving and resizing columns  
   
--   Lookup configuration  
+- Lookup configuration  
   
--   Calculated columns and rollup columns  
+- Calculated columns and rollup columns  
   
--   Business rules (Show error message, Set column value, Set business required, Set default value, Lock or unlock column)  
+- Business rules (Show error message, Set column value, Set business required, Set default value, Lock or unlock column)  
   
--   JavaScript events  
+- JavaScript events  
   
--   Enabling or disabling of cells based on security role  
+- Enabling or disabling of cells based on security role  
   
--   Users can continue to use search and charts, and can access the action bar as with read-only grids  
+- Users can continue to use search and charts, and can access the action bar as with read-only grids  
 
 ## Supported standard tables  
 
@@ -147,9 +163,8 @@ Grouping behavior works only on the client side and does not span pages. Group b
 ## Business rules work only if conditional column is a column on the grid
 Business Rules on an editable grid are supported only if the conditional column is also a column on the grid. If the column is not a column the business rules won’t work. Verify that each column referenced in the business rule is also included on the form. Note that business rules on an editable grid do not fire if the editable grid is configured on a dashboard.
 
-## Next steps  
+## Next steps
+
  [Use keyboard shortcuts in editable grids](/dynamics365/customer-engagement/basics/keyboard-shortcuts#editable-grids-views)
-
-
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -185,14 +185,14 @@ landingContent:
           - text: Set chart or list properties (dataviz)
             url: set-properties-chart-list-included-dashboard.md
 
-# Card
+  # Card
   - title: Integration (to remove)
-  linkLists: 
-    - linkListType: how-to-guide
-    links:
-      - text: Embed a canvas app on a model-driven form
+    linkLists: 
+      - linkListType: how-to-guide
+        links:
+          - text: Embed a canvas app on a model-driven form
             url: embed-canvas-app-in-form.md
-      - text: App for Outlook
-          url: app-for-outlook.md
-      - text: Power BI
-          url: add-powerbi-visual.md
+          - text: App for Outlook
+            url: app-for-outlook.md
+          - text: Power BI
+            url: add-powerbi-visual.md
