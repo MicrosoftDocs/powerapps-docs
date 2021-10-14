@@ -132,4 +132,5 @@ By switching to use createPane, both limitations can be avoid by providing an ic
 ### Related topics
 
 [sidePanes (Client API reference)](reference/xrm-app-sidepanes.md)
+
 [loadPanel (Client API Reference)](reference/xrm-panel/loadpanel.md)
