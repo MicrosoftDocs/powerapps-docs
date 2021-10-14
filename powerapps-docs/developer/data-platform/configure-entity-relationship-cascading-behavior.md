@@ -228,9 +228,10 @@ You can set **AlwaysMoveRecordToOwnerBusinessUnit** to false; the user owned rec
 
 > [!NOTE]
 > When **AlwaysMoveRecordToOwnerBusinessUnit** = false
+> 
 > Privilege requirements:
 > - The parent record’s owner privilege is validated. When you update the owner and/or business unit, we validate that the owner has the privilege for the business unit before allowing the updates.
-> - However, the record’s owner privilege for the child records is not validated. You might run into a situation where you updated the parent’s owner and/or business unit and the owner of the child records might not have access to the child records. 
+> - However, the record’s owner privilege for the child records is not validated. You might run into a situation where you updated the parent record’s business unit and the business unit is cascaded down to the child records. In this situation, the owner of the child records might lose access to their record if they don’t have a security role assigned from the updated business unit.
 
 <a name="BKMK_ReparentAction"></a>   
 
