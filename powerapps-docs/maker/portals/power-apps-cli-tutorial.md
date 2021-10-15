@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/11/2021
+ms.date: 10/15/2021
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: tapanm
@@ -106,7 +106,7 @@ directly in Visual Studio Code.
 ## Step 5. Upload the changes
 
 > [!NOTE]
-> If you're using deployment profiles, go to [upload the changes using deployment profile](#upload-the-changes-using-deployment-profile) instead.
+> If you're uploading to multiple environments, see [upload the changes using deployment profile](#upload-the-changes-using-deployment-profile) to learn how to upload changes using deployment profile.
 
 After making the required changes, upload them using the following command:
 
@@ -131,24 +131,7 @@ table.
 
 ![Upload completed only for changed content.](media/power-apps-cli/upload-completed.png "Upload completed only for changed content")
 
-## Step 6. Confirm the changes
-
-To confirm the changes made to the portal webpage:
-
-1.  Clear the [server-side
-    cache](admin/clear-server-side-cache.md),
-    or use [Sync
-    Configuration](portal-designer-anatomy.md)
-    by using Power Apps portals Studio.
-
-2.  Browse to the portal webpage to see the change.
-
-    ![View updated page content.](media/power-apps-cli/changed-page.png "View updated page content")
-
-This concludes the tutorial. You can repeat the above steps and change the
-portals content for other [supported tables](power-apps-cli.md#supported-tables).
-
-## Upload the changes using deployment profile
+### Upload the changes using deployment profile
 
 When working with multiple different environments, you may consider using deployment profiles to ensure the changes are uploaded to the correct environment using deployment profile.
 
@@ -187,9 +170,30 @@ When working with multiple different environments, you may consider using deploy
     > [!NOTE]
     > In the above example, the deployment profile name used is "dev" after following the previous steps to create a dev deployment profile. Change the name from "dev" to any other (such as QA for "qa.deployment.yml", or Test for "test.deployment.yml") if you've used a different filename for your deployment YAML file.
 
-Upon upload, the above YAML snippet will update the value as shown below.
+## Step 6. Confirm the changes
 
-:::image type="content" source="media/power-apps-cli-tutorial/browser-title-suffix.png" alt-text="Browser title suffix from Portal Management app":::
+To confirm the changes made to the portal webpage:
+
+1. Clear the [server-side
+    cache](admin/clear-server-side-cache.md),
+    or use [Sync
+    Configuration](portal-designer-anatomy.md)
+    by using Power Apps portals Studio.
+
+1. Browse to the portal webpage to see the change.
+
+    ![View updated page content.](media/power-apps-cli/changed-page.png "View updated page content")
+
+1. If you've used deployment profile example explained previously, the YAML snippet will update the value as shown below.
+
+    :::image type="content" source="media/power-apps-cli-tutorial/browser-title-suffix.png" alt-text="Browser title suffix from Portal Management app":::
+
+    The browser title suffix updated through the above change shows the change when you open the portal in a browser:
+
+    :::image type="content" source="media/power-apps-cli-tutorial/browser-change.png" alt-text="Browser change ":::
+
+This concludes the tutorial. You can repeat the above steps and change the
+portals content for other [supported tables](power-apps-cli.md#supported-tables).
 
 
 
