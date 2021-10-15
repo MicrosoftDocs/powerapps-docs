@@ -174,17 +174,13 @@ When working with multiple different environments, you may consider using deploy
 
 To confirm the changes made to the portal webpage:
 
-1. Clear the [server-side
-    cache](admin/clear-server-side-cache.md),
-    or use [Sync
-    Configuration](portal-designer-anatomy.md)
-    by using Power Apps portals Studio.
+1. Clear the [server-side cache](admin/clear-server-side-cache.md), or use [Sync Configuration](portal-designer-anatomy.md) by using Power Apps portals Studio.
 
 1. Browse to the portal webpage to see the change.
 
     ![View updated page content.](media/power-apps-cli/changed-page.png "View updated page content")
 
-1. If you've used deployment profile example explained previously, the YAML snippet will update the value as shown below.
+1. If you've used deployment profile example [explained previously](#upload-the-changes-using-deployment-profile), the YAML snippet will update the value as shown below.
 
     :::image type="content" source="media/power-apps-cli-tutorial/browser-title-suffix.png" alt-text="Browser title suffix from Portal Management app":::
 
@@ -194,8 +190,6 @@ To confirm the changes made to the portal webpage:
 
 This concludes the tutorial. You can repeat the above steps and change the
 portals content for other [supported tables](power-apps-cli.md#supported-tables).
-
-
 
 ## Next steps
 
