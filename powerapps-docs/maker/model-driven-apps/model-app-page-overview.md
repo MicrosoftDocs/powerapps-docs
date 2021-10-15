@@ -27,6 +27,25 @@ This new page can be more flexible than a model-driven app form, view, or dashbo
 > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)] 
 > - Custom pages are a new feature with significant product changes and currently have a number of known limitations outlined in [Custom Page Known Issues](model-app-page-issues.md).
 
+The custom page feature base capability has moved to General Availability and there are some specific or new capabilities that are still in public preview.
+
+| Capability | Status | Notes |
+| -- | -- | -- |
+| Runtime for custom pages | General Availability |
+| Solution and ALM for custom pages | General Availability |
+| Connectors in custom pages | General Availability | All Power Apps connectors are supported in custom apges
+| Code components in custom pages | General Availability |
+| Monitor support for custom pages | General Availability |
+| Authoring custom pages | Public Preview | Modern app designer and canvas designer are expected to be used to author custom page that are supported at runtime |
+| Custom Page in Mobile Online | Public Preview |
+| Canvas components in custom pages | Coming soon |
+| String Localization in custom Pages | Coming soon |
+| Data formatting in custom pages | Coming soon |
+| Right to left layout in custom pages | Coming soon |
+
+
+## Examples of custom pages
+
 Below shows the custom page inline within the model-driven app. The model-driven app has the full-page space in the images without the header and navigation.
 
 [Custom page as main page](add-page-to-model-app.md).
