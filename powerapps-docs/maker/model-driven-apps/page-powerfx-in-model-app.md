@@ -108,6 +108,32 @@ The default configuration for a custom page is to have one screen. In this case,
 
 An app maker can enable multiple screens in a custom page. These should be considered like full page controls within the custom page that can be stacked. Opening a custom page has no means of specifying the screen to use.  When a custom page contains multiple screens the maker is responsible for managing the screen stacking.  Calling the **Navigate** function to a screen will add to the screen stack with the custom page.  Each **Back** function call will remove a screen from the screen stack.  When there is only one screen on the screen stack, the custom page is closed.
 
+## Confirm function
+
+The `Confirm` function displays a dialog box on top of the current screen. Two buttons are provided: a confirm button and a cancel button, which default to localized versions of "OK" and "Cancel", respectively. The user must confirm or cancel before the dialog box is dismissed and the function returns. Besides the dialog button, cancel can also be selected with the Esc key or other gestures that are platform specific.
+
+The `Message` parameter is displayed in the body of the dialog box. If the message is very long, it will either be truncated or a scroll bar provided.
+
+Use the `OptionsRecord` parameter to specify options for the dialog box. Not all options are available on every platform and are handled on a "best effort" basis. 
+
+> [!NOTE]
+> The options in the table below aren't currently available with canvas apps.
+
+|Option Field  |Description  |
+|---------|---------|
+|ConfirmButton     |The text to display on the *confirm* button, replacing the default, localized "OK" text.         |
+|CancelButton     |The text to display on the *cancel* button, replacing the default, localized "Cancel" text.         |
+|Title     |The text to display as the *title* of the dialog box. A larger, bolder font than the message font may be used to display this text. If this value is very long, it will be truncated.         |
+|Subtitle     |   The text to display as the *subtitle* of the dialog box. A larger, bolder font than the message font may be used to display this text. If this value is very long, it will be truncated.      |
+
+`Confirm` returns true if the confirm button was selected, false otherwise.
+
+### Syntax
+
+**Confirm**( Message [, OptionsRecord ] )
+- `Message` - Required. Message to display to the user.
+- `OptionsRecord` - Optional. Provide advanced options for the dialog. Not all options are available on every platform and are handled on a best effort basis. At this time, in canvas apps, none of these options are supported.
+
 ### See also
 
 [Navigating to and from a custom page using client API](../../developer/model-driven-apps/clientapi/navigate-to-custom-page-examples.md)
