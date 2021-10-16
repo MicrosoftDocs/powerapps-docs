@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - "PowerApps"
 ---
-# Overview of custom pages for model-driven apps (preview)
+# Overview of custom pages for model-driven apps
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
@@ -23,11 +23,9 @@ The custom page is a new page type within a model-driven app, which brings the p
 This new page can be more flexible than a model-driven app form, view, or dashboard page. It lets you include one or more tables. Then, the maker can define the data and component interactions. The custom page is a separate solution element supporting co-authoring at a page level. Like other model-driven app pages, the page state is either from the parameters passed or retrieved from persisted tables.
 
 > [!IMPORTANT]
-> - This is a preview feature, and isn't available in all regions.
+> - The base functionality of custom pages has moved to General Availability in all regions.  However there are some specific or new capabilities that are still in public preview.
 > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)] 
 > - Custom pages are a new feature with significant product changes and currently have a number of known limitations outlined in [Custom Page Known Issues](model-app-page-issues.md).
-
-The custom page feature base capability has moved to General Availability and there are some specific or new capabilities that are still in public preview.
 
 | Capability | Status | Notes |
 | -- | -- | -- |
@@ -37,9 +35,10 @@ The custom page feature base capability has moved to General Availability and th
 | Code components in custom pages | General Availability |
 | Monitor support for custom pages | General Availability |
 | Authoring custom pages | Public Preview | Modern app designer and canvas designer are expected to be used to author custom page that are supported at runtime |
+| Canvas components in custom pages | Public Preview |
+| Custom Page in Teams model-driven app | Public Preview |
 | Custom Page in Mobile Online | Public Preview |
-| Canvas components in custom pages | Coming soon |
-| String Localization in custom Pages | Coming soon |
+| String localization in custom Pages | Coming soon |
 | Data formatting in custom pages | Coming soon |
 | Right to left layout in custom pages | Coming soon |
 
@@ -65,6 +64,10 @@ Below shows the custom page inline within the model-driven app. The model-driven
   > 
 
 [Custom page as an app side pane](/powerapps/developer/model-driven-apps/clientapi/create-app-side-panes) allows opening a custom page within the new app side pane on the right side of the app.
+
+  > [!div class="mx-imgBorder"]
+  > ![Custom page as app side pane](media/model-app-page-overview/page-app-side-pane-model-app.png "Custom page as app side pane")
+  > 
 
 Custom pages must be created from a solution either from the modern app designer or the **Solution** area in Power Apps using **New** > **Page**. More information: [Add a custom page to your model-driven app](add-page-to-model-app.md)
 
