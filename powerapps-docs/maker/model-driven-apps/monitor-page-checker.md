@@ -18,9 +18,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Use Monitor to troubleshoot custom page behavior in a model-driven app (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+# Use Monitor to troubleshoot custom page behavior in a model-driven app
 
 Monitor can help you debug and diagnose problems, which helps you build faster, more reliable apps. Monitor provides a deep view into how an app runs by providing a log of all activities in your app as it runs.
 

@@ -16,15 +16,13 @@ search.app:
   - "PowerApps"
   - D365CE
 ---
-# Design a custom page for your model-driven app (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+# Design a custom page for your model-driven app
 
 This article provides tips for designing a custom page for use in a model-driven app.
 
-  > [!IMPORTANT]
-  > - This is a preview feature, and isn't available in all regions.
-  > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
+> [!IMPORTANT]
+> - The base functionality of custom pages has moved to General Availability in all regions.  However there are some specific or new capabilities that are still in public preview and are marked with _(preview)_.
+> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)] 
 
 ## Supported controls in a custom page
 
@@ -51,7 +49,7 @@ Custom page authoring currently supports a subset of canvas app controls. The ta
   |Edit Form|Input|
   |Display Form|Input|
   |Code components|Custom| [Add code components to a custom page](page-code-components.md)|
-  |Canvas components|Custom| [Add canvas components to a custom page](page-canvas-components.md)|
+  |Canvas components (preview) |Custom| [Add canvas components to a custom page](page-canvas-components.md)|
   
 <sup>1</sup> Control is a new modern control. The control was introduced for [canvas apps in Teams]( /power-platform-release-plan/2020wave1/microsoft-powerapps/build-apps-teams-modern-controls). The control is based on [Fluent UI library](https://developer.microsoft.com/fluentui#/controls/web) wrapped with  [Power Apps Component Framework](../../developer/component-framework/overview.md).
 
@@ -62,7 +60,7 @@ You can add both low-code (canvas components) and pro-code (code components) cus
 In general, the low-code extensibility approach is simpler to build, test, and has a lower maintenance cost. We recommend evaluating canvas components first and then use code components only if there is a need for more complex and advanced customization.
 
 More information:
-- [Canvas component gallery,](https://powerusers.microsoft.com/t5/Canvas-Apps-Components-Samples/bd-p/ComponentsGallery)
+- [Canvas component gallery](https://powerusers.microsoft.com/t5/Canvas-Apps-Components-Samples/bd-p/ComponentsGallery)
 - [Code components samples](../../developer/component-framework/use-sample-components.md)
 - [Code components community resources](../../developer/component-framework/community-resources.md)
 

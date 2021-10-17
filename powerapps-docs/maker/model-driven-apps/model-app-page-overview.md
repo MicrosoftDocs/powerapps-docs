@@ -16,14 +16,12 @@ search.app:
 ---
 # Overview of custom pages for model-driven apps
 
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
-
 The custom page is a new page type within a model-driven app, which brings the power of canvas apps into model-driven apps. Custom pages increase the convergence of model-driven and canvas apps and can be used to add full pages, dialogs, or panes with the flexibility of the canvas designer. It also includes a low-code page authoring experience with expressions and custom Power Apps component framework controls.  
 
 This new page can be more flexible than a model-driven app form, view, or dashboard page. It lets you include one or more tables. Then, the maker can define the data and component interactions. The custom page is a separate solution element supporting co-authoring at a page level. Like other model-driven app pages, the page state is either from the parameters passed or retrieved from persisted tables.
 
 > [!IMPORTANT]
-> - The base functionality of custom pages has moved to General Availability in all regions.  However there are some specific or new capabilities that are still in public preview.
+> - The base functionality of custom pages has moved to General Availability in all regions.  However there are some specific or new capabilities that are still in public preview and are marked with _(preview)_.
 > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)] 
 > - Custom pages are a new feature with significant product changes and currently have a number of known limitations outlined in [Custom Page Known Issues](model-app-page-issues.md).
 

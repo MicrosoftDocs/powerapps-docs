@@ -1,5 +1,5 @@
 ---
-title: "Use PowerFx in custom page for your model-driven app (preview)" 
+title: "Use PowerFx in custom page for your model-driven app" 
 description: "This article outlines how the common Microsoft Power FX functions work within a custom page."
 ms.custom: ""
 ms.date: 07/06/2021
@@ -16,15 +16,14 @@ search.app:
   - "PowerApps"
   - D365CE
 ---
-# Use PowerFx in a custom page for your model-driven app (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+# Use PowerFx in a custom page for your model-driven app
 
 This article outlines how the common [Microsoft Power FX](../canvas-apps/formula-reference.md) functions work within a custom page. Power Fx formulas in a custom page can be different from Power Fx in a standalone canvas app. This is because custom pages are a component within the model-driven app.
 
-  > [!IMPORTANT]
-  > - This is a preview feature, and isn't available in all regions.
-  > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
+> [!IMPORTANT]
+> - The base functionality of custom pages has moved to General Availability in all regions.  However there are some specific or new capabilities that are still in public preview and are marked with _(preview)_.
+> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)] 
+> - Custom pages are a new feature with significant product changes and currently have a number of known limitations outlined in [Custom Page Known Issues](model-app-page-issues.md).
 
 ## Add notifications to a custom page
 
@@ -86,12 +85,31 @@ To navigate to the default form of the table, pass the record as the first param
 Navigate( Gallery1.Selected )
 ```
 
-### Navigate to the default form of the table in create mode
+### Navigate to a specific form of a table (preview)
+
+To navigate to a specific form for the record, pass the page in the second parameter.
+
+```powerappsfl
+Navigate( Gallery1.Selected, { Page: 'Accounts (Forms)'.Account  } )
+```
+
+### Navigate to the default form of the table in create mode 
 
 To navigate to the default form of the table in create mode, pass a Dataverse record created from the [Defaults](../canvas-apps/functions/function-defaults.md) function. This opens the default form with the record as a new record. The **Defaults** function takes the table name to create the record.
 
 ```powerappsfl
 Navigate( Defaults( Accounts ) )
+```
+
+### Navigate to the default form of the table in create mode with field defaulted (preview)
+
+To navigate to a new record with some fields defaulted, use **Patch** function to set fields on the default record for the table. 
+
+```powerappsfl
+Navigate(
+	Patch(
+		Defaults(Accounts), { 'Account Name': "My company", Phone: "555-3423" } ) 
+  )
 ```
 
 ### Navigate back to the prior page or close a dialog
@@ -133,6 +151,14 @@ Use the `OptionsRecord` parameter to specify options for the dialog box. Not all
 **Confirm**( Message [, OptionsRecord ] )
 - `Message` - Required. Message to display to the user.
 - `OptionsRecord` - Optional. Provide advanced options for the dialog. Not all options are available on every platform and are handled on a best effort basis. At this time, in canvas apps, none of these options are supported.
+
+### Known issues
+
+- Navigate function does not have support for opening a model or custom page to a dialog. All navigation from a custom page opens inline.
+- Navigate function does not support opening:
+    - Dashboard collection or specific dashboard.
+    - Specific model-driven app form. 
+- Custom page can only open into the current session’s current app tab in a multi-session model-driven app.
 
 ### See also
 

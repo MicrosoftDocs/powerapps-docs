@@ -20,9 +20,9 @@ search.app:
 
 This article guides you through creating and editing a custom page for a model-driven app using the modern app designer.
 
-  > [!IMPORTANT]
-  > - This is a preview feature, and may not be available in all regions.
-  > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
+> [!IMPORTANT]
+> - The base functionality of custom pages has moved to General Availability in all regions.  However there are some specific or new capabilities that are still in public preview and are marked with _(preview)_.
+> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)] 
 
 ## Create or edit a model-driven app using modern app designer
 
@@ -152,19 +152,6 @@ Custom pages can be created from two places. The first is while authoring a mode
 1. Select **Play** to run the app in a new browser tab.
 
 1. To close the app designer select **Back** and return to the solution.
-
-<!-- ## Enabling custom page before public preview
-
-By default custom pages are not available in the new app designer until custom page public preview.  These parameters are not needed for internal test.  
-```
-?cds-app-module-designer.isCustomPageEnabled=true&oneCdsDesigner.enableCustomCanvasPage=true
-```
-
-## Upcoming changes in new App Designer
-
-* Adding custom page in app designer without being in the navigation
-
-    * Workaround: add into sitemap which adds to both sitemap and pages collection, then remove from sitemap which leaves in the pages collection  -->
 
 ### See also
 

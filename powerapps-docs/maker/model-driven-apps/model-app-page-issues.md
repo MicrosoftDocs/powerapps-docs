@@ -16,11 +16,13 @@ search.app:
   - "PowerApps"
   - D365CE
 ---
-# Known issues with custom pages in a model-driven app (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+# Known issues with custom pages in a model-driven app
 
 The custom page is a new page type within model-driven apps. Custom pages bring the power of canvas apps into model-driven apps. Below are the known issues to be aware of.
+
+> [!IMPORTANT]
+> - The base functionality of custom pages has moved to General Availability in all regions.  However there are some specific or new capabilities that are still in public preview and are marked with _(preview)_.
+> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)] 
 
 ## Maker-related issues
 

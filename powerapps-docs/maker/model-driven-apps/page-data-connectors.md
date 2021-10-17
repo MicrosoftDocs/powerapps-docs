@@ -1,5 +1,5 @@
 ---
-title: "Add connectors to a custom page for your model-driven app (preview)" 
+title: "Add connectors to a custom page for your model-driven app" 
 description: "Learn how to add a connector to a custom page"
 ms.custom: ""
 ms.date: 07/22/2021
@@ -16,9 +16,7 @@ search.app:
   - "PowerApps"
   - D365CE
 ---
-# Add connectors to a custom page for your model-driven app (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+# Add connectors to a custom page for your model-driven app
 
 This article outlines the use of Power Apps connectors within a custom page. The most common connectors are listed here. This article also includes the known issues for connectors in custom pages.
 
