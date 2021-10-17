@@ -25,7 +25,7 @@ This article outlines the steps to use client API to open a custom page as a ful
 
 > [!IMPORTANT]
 > - The base functionality of custom pages has moved to General Availability in all regions.  However there are some specific or new capabilities that are still in public preview and are marked with _(preview)_.
-> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)] 
+> - [!INCLUDE[cc_preview_features_definition](../../../includes/cc-preview-features-definition.md)] 
 
 ## Navigating from a model page to a custom page
 
