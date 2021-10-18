@@ -35,7 +35,7 @@ This topic describes the basics of creating and editing a model-driven app that 
 
 Verify the following prerequisites before creating an app:
 - A Power Apps [environment](model-driven-app-glossary.md#environment) used for app development must exist within the tenant. More information [Create an environment](/power-platform/admin/create-environment) and [Environment strategy for ALM](/power-platform/alm/environment-strategy-alm).
-- The environment used will need to have a Dataverse database associated with it.  Dataverse environments can exist with or without a database and generally these are provisioned on creation of the environment.  The database holds the tables and other components that will be used by the model-driven app. [Create and manage environments in Dataverse](https://docs.microsoft.com/en-us/learn/modules/create-manage-environments/)
+- The environment used will need to have a Dataverse database associated with it.  Dataverse environments can exist with or without a database and generally these are provisioned on creation of the environment.  The database holds the tables and other components that will be used by the model-driven app. [Create and manage environments in Dataverse](https://docs.microsoft.com/learn/modules/create-manage-environments/)
 - Dataverse [tables](model-driven-app-glossary.md#table) with forms, views will need to exist within the database.  These tables will most likely need to have [relationships](model-driven-app-glossary.md#relationship) configured for them.
 - Within the environment the app developer needs to have an Environment maker, system administrator, or system customizer role. More information: [About predefined security roles](./share-model-driven-app.md#about-predefined-security-roles)
 
@@ -84,7 +84,8 @@ Verify the following prerequisites before creating an app:
   
 3.  A new app is created and is shown in **Draft** status. This is shown in the [App designer](model-driven-app-glossary.md#app-designer).
 
-    :::image type="content" source="media/app-designer-draft.png" alt-text="App designer in draft stage":::
+    :::image type="content" source="media/app-designer-draft.png" alt-text="App designer shown in draft stage":::
+
 
 ## Configure the site map
 
@@ -117,7 +118,7 @@ The site map describes the components that make up our model driven app.
 
    By default, all the account table's forms, views, charts, and dashboards are enabled for the app. From the app designer **Components** tab on the right pane, components can be cleared so that they aren't available in the app at runtime. It is also possible to create new components, such as a custom form. For this app, leave all components enabled.
 
-  :::image type="content" source="media/app-designer-form-component-properties.png" alt-text="App designer in draft stage":::
+  :::image type="content" source="media/app-designer-form-component-properties.png" alt-text="Model-driven App designer in draft stage":::
 
 1. On the app designer toolbar, select **Save**.
 

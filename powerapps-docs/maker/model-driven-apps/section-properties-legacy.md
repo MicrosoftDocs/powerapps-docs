@@ -1,6 +1,6 @@
 ---
-title: Section properties for model-driven app main forms in Power Apps | MicrosoftDocs
-description: Understand the section properties for a main form
+title: Section properties for model-driven app main forms | MicrosoftDocs (Legacy)
+description: Understand the section properties shown in legacy for a main form
 Keywords: Main form; Section properties; Dynamics 365
 author: Mattp123
 applies_to: 
@@ -20,7 +20,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Model-driven app form section properties
+# Model-driven app form section properties (Legacy)
 
 [!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
@@ -45,7 +45,7 @@ You can access **Section properties** in solution explorer from the Power Apps s
 5.  Double-click inside one of the sections to see the section properties. 
 
     > [!div class="mx-imgBorder"]
-    > ![Section properties in solution explorer.](media/section-properties.png "Section properties in solution explorer")
+    > ![Section properties in solution explorer.](media/section-properties.png "Section properties in legacy solution explorer")
   
 |Tab|Property|Description|  
 |---------|--------------|-----------------|  

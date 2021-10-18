@@ -93,6 +93,8 @@ This issue can occur when one or both of the following are true.
 - The **Scale to fit** option isn’t enabled with the canvas app. 
 - The **App Name** property value is missing or is incorrectly defined in the embedded canvas app control.  This might occur when the model-driven app and canvas app have been imported as a solution into another Dataverse environment.
 
+As an alternative to creating apps that scale to the space available apps that are **responsive** to the form factor can be used.  [Learn more about responsive apps](../../maker/canvas-apps/build-responsive-apps)
+
 #### Enable scale to fit
 
 By default, canvas apps have the scale to fit option enabled.

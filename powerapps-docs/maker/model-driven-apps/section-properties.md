@@ -1,5 +1,5 @@
 ---
-title: Section properties for model-driven app main forms in Power Apps | MicrosoftDocs
+title: Section properties for model-driven app main forms | MicrosoftDocs
 description: Understand the section properties for a main form
 Keywords: Main form; Section properties; Dynamics 365
 author: Mattp123
@@ -28,7 +28,7 @@ search.app:
   
  Sections can have up to 4 columns and includes options for displaying how labels for columns in the section are displayed.  
   
- Headers and footers are similar to sections but cannot be removed. If they don't contain anything they will not be shown.
+ Headers and footers are similar to sections but cannot be removed. If they don't contain anything then they will not be shown.
 
 ## Section properties in form designer
 
