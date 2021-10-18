@@ -28,6 +28,7 @@ search.app:
 
 [!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
+
 By default, users can't enter data directly using the read-only view control for views and sub-grids on forms.  Instead they need to navigate to the form associated with the record in order to make and save any changes to the data.
 
 With editable grids, users can do rich **in-line** editing directly from views and sub-grids whether they're using a web app, tablet, or phone.  
