@@ -1107,6 +1107,7 @@
       href: ./canvas-apps/performance-tips.md
     - name: Canvas apps coding standards and guidelines
       href: https://aka.ms/powerappscanvasguidelines
+
 - name: Model-driven apps
   items:
   - name: Model-driven apps
