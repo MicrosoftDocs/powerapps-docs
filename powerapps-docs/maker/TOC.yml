@@ -1165,7 +1165,7 @@
           items:
           - name: Use Monitor to troubleshoot forms
             href: ./model-driven-apps/monitor-form-checker.md
-      - name: Use custom pages within model-driven apps (preview)
+      - name: Use custom pages within model-driven apps
         items:
         - name: Custom pages overview
           href: ./model-driven-apps/model-app-page-overview.md
