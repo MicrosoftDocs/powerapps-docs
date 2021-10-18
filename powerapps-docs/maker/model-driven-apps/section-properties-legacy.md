@@ -1,5 +1,5 @@
 ---
-title: Section properties for model-driven app main forms | MicrosoftDocs (Legacy)
+title: Section properties for model-driven app main forms (Legacy) | MicrosoftDocs
 description: Understand the section properties shown in legacy for a main form
 Keywords: Main form; Section properties; Dynamics 365
 author: Mattp123

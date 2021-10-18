@@ -53,7 +53,7 @@ There are some notable advantages to this method of application development.
 - The user experience is **consistent** across all model-driven apps.  As such once a user is confident with one model-driven app later apps are much easier to adopt within an organization.
 - Migrating apps between Development, Test and Production [Environments](../model-driven-apps/model-driven-app-glossary.md#environment) is relatively straightforward through the use of [solutions](../model-driven-apps/model-driven-app-glossary.md#solution)
 
-[Learn more about the benefits of the mode-driven approach](app-value-proposition.md)
+[Learn more about the benefits of the model-driven approach](app-value-proposition.md)
 
 ## Model-driven and canvas apps compared
 

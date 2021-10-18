@@ -395,7 +395,7 @@ To access the modern interface use the following steps :-
   - Select a [solution](model-driven-app-glossary.md#solution) into which you would like to place a model driven app.  Create a solution if one doesn't already exist.
   - Explore the components of the solution
 
-[Find out more about solutions here](../maker/data-platform/solutions-overview.md)
+[Find out more about solutions here](../../maker/data-platform/solutions-overview.md)
 
 ## Subgrid
 
