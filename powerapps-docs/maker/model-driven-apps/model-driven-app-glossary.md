@@ -186,7 +186,7 @@ Dependencies manifest themselves in numerous ways including when a model-driven 
 
 [Validate an app](validate-app.md)
 
-[Delete a column from a table](../data-platform/delete-fields)
+[Delete a column from a table](../data-platform/delete-fields.md)
 
 ## Dynamics
 
@@ -306,7 +306,7 @@ The process by which we make the latest iteration of the app available to users 
 
 Every solution has a publisher. You specify the publisher when you create a solution.  The solution indicates who developed the app, and will define the prefix (e.g cr8a3_MyNewTable) for all the solution assets.
 
-[Learn more about publishers](../../maker/data-platform/create-solution#solution-publisher)
+[Learn more about publishers](../../maker/data-platform/create-solution.md#solution-publisher)
 
 ## Record
 
@@ -322,7 +322,7 @@ The way in which fields between tables relate to each other.  There are 3 types 
 
 Model driven apps often contain tables with relationships between them.  Where relationships exist we have the ability to navigate to the record within the related table.  For example, when looking at a sale we might navigate to the account table to investigate details relating to the account.
 
-[Learn about creating table relationships](../data-platform/create-edit-entity-relationships)
+[Learn about creating table relationships](../data-platform/create-edit-entity-relationships.md)
 
 ## Responsive Apps
 

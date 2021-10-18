@@ -1,5 +1,5 @@
 ---
-title: Section properties for model-driven app main forms in Power Apps | MicrosoftDocs
+title: Section properties for model-driven app main forms | MicrosoftDocs
 description: Understand the section properties for a main form
 Keywords: Main form; Section properties; Dynamics 365
 author: Mattp123
