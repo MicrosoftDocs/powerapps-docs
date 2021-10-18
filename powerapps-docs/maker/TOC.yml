@@ -2503,7 +2503,10 @@
     - name: Known issues and limitations
       href: ../teams/known-issues-limitations.md
 - name: Access migration
-  href: ../data-platform/migrate-access-to-dataverse.md
+  href: ./data-platform/migrate-access-to-dataverse.md
+  items:
+  - name: Data types and sizes for Access migration
+    href: ./data-platform/migrate-access-datatypes.md
 
 - name: Chatbots
   href: ../chatbots.md

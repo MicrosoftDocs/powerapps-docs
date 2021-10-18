@@ -8,7 +8,7 @@ ms.custom:
   - model
   - intro-internal
 ms.reviewer: matp
-ms.date: 01/09/2021
+ms.date: 10/18/2021
 ms.subservice: teams
 ms.author: NHelgren
 search.audienceType: 
@@ -74,3 +74,6 @@ Total storage capacity is also different. Dataverse and Dataverse for Teams have
 <sup>1</sup> Single base license
 
 For more information, go to [How are Dataverse for Teams and Dataverse different?](../../teams/data-platform-compare.md).
+
+### See also
+[Data types and sizes for Access data migration to Dataverse](migrate-access-datatypes.md)
