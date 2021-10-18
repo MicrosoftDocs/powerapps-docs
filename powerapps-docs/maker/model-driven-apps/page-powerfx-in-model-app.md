@@ -58,7 +58,7 @@ Examples that use a table should be added as a data source in the page.
 To navigate from one custom page to another, pass the display name of the custom page as the first parameter.
 
 ```powerappsfl
-Navigate( '<Name of the custom page>'  )
+Navigate( CustomPage2  )
 ```
 
 ### Navigate to the default view of the table
