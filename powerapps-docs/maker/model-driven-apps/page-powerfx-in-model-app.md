@@ -126,6 +126,13 @@ The default configuration for a custom page is to have one screen. In this case,
 
 An app maker can enable multiple screens in a custom page. These should be considered like full page controls within the custom page that can be stacked. Opening a custom page has no means of specifying the screen to use.  When a custom page contains multiple screens the maker is responsible for managing the screen stacking.  Calling the **Navigate** function to a screen will add to the screen stack with the custom page.  Each **Back** function call will remove a screen from the screen stack.  When there is only one screen on the screen stack, the custom page is closed.
 
+### Enabling multiple screens
+
+By default a custom page uses a single screen to encourage separation of the app into a screen per page.  This can be switched by enabling **Settings** > **Display** > **Enable multiple screens**.
+
+> [!div class="mx-imgBorder"]
+> ![Custom page enable multiple screens](media/page-powerfx-in-model-app/custom-page-enable-multiple-screens.png "Custom page enable multiple screens")
+
 ## Confirm function
 
 The `Confirm` function displays a dialog box on top of the current screen. Two buttons are provided: a confirm button and a cancel button, which default to localized versions of "OK" and "Cancel", respectively. The user must confirm or cancel before the dialog box is dismissed and the function returns. Besides the dialog button, cancel can also be selected with the Esc key or other gestures that are platform specific.
