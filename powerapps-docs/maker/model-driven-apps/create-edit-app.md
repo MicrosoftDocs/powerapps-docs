@@ -86,6 +86,7 @@ Verify the following prerequisites before creating an app:
 
     :::image type="content" source="media/app-designer-draft.png" alt-text="App designer shown in draft stage":::
 
+
 ## Configure the site map
 
 The site map describes the components that make up our model driven app.
