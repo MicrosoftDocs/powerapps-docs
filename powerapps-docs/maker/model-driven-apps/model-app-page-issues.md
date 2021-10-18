@@ -28,18 +28,14 @@ The custom page is a new page type within model-driven apps. Custom pages bring 
 
 * When a custom page is modified, such as saved and published, the model-driven app is not aware of the change and will continue to use the last version of the custom page when the model-driven app was published. A model-driven app publish through app designer or solution explorer will update all custom pages in the model-driven app. This also applies to **Publish all**.
 
-* Deleting a model-driven app with a custom page from the make.powerapps.com **Apps** area fails with an error. The work-around is to delete from the solutions list in the **Solutions** area.
+* Layout or control support for Right to Left (RTL) is currently unavailable but coming soon.
 
-* Layout or control support for Right to Left (RTL) is currently unavailable.
-
-* The ability to get the current users settings including locale and language is currently unavailable.
+* The ability to get the current users settings including locale and language is currently unavailable but coming soon.
 
 * Custom pages use a canvas app hosting session that can time out after 8 hours whereas the Unified Interface session has a longer timeout. When this timeout happens an error message bar appears that prompts the user to refresh the browser.
 
   > [!div class="mx-imgBorder"]
   > ![Custom page session timeout app message bar error](media/model-app-page-overview/page-session-timeout-app-message-error.png "Custom page session timeout app message bar error")
-
-* Deleting a custom page that is referenced by a model-driven app will be blocked until the reference is removed from the model-driven app using the Pages tab and the site map in app designer. More information: [Managing dependencies](/power-platform/alm/removing-dependencies)
 
 * When a custom page with code component is opened for editing, a security dialog is shown. On this dialog, selecting **Go back** doesn't navigate back to the parent context. The user can close the browser tab to leave the canvas app designer.
 
@@ -64,8 +60,6 @@ The custom page is a new page type within model-driven apps. Custom pages bring 
 * When navigating back to a custom page from another page, the page state is not restored so the page appears like a new navigation.
 
 * Native player support is available for iOS and Android in online-only mode. Offline support will come later. The preview Windows player currently reports an error when the custom page is opened.
-
-* When a user running a model-driven app in Teams opens a custom page, an error message will indicate this action isn't supported yet.
 
 * When a user running Internet Explorer opens a custom page, an error message will appear indicating Internet Explorer isn't supported.
 
