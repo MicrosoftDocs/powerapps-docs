@@ -159,7 +159,7 @@ The following illustration shows the flyout dialog with the list of the availabl
 
 ### Enable security roles
 
- Select and enable security roles that will be able to view the interactive dashboards.  
+Select and enable security roles that will be able to view the interactive dashboards.  
   
 #### Enable security roles for interactive dashboards
 
@@ -256,7 +256,7 @@ The following illustration is an example of a fully configured chart panel and s
   
 ### Create a table-specific dashboard
 
- A table-specific dashboard is a multi-stream dashboard. Configuring this dashboard is similar to configuring a home page multi-stream dashboard, but this is performed in the different place in the UI and there are other minor differences.
+A table-specific dashboard is a multi-stream dashboard. Configuring this dashboard is similar to configuring a home page multi-stream dashboard, but this is performed in the different place in the UI and there are other minor differences.
 
 For example, instead of selecting a table, some columns in the table-specific dashboard are preset to the table relevant to the dashboard.  
 
@@ -308,6 +308,7 @@ The color that will appear in the charts and streams for specific column values 
 1.  Select **Save and Close**.  
   
 1.  Select **Publish** for the changes to take effect.  
+
   
 In the following example, we’re changing the color for the **IsEscalated** column. Use the **Edit** button to open the **Modify List Value** dialog box:  
  
