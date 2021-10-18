@@ -29,9 +29,9 @@ Accessibility is a term that is used to refer to the extent to which people with
 
 In the Power Platform admin center is a unified portal for administrators to manage environments and settings for Power Apps, Power Automate and Dynamics customer engagement products.  Please note that it does not cover administration settings and features associated with Power BI.
 
-[Learn more about the Power Platform admin center](https://docs.microsoft.com/en-us/power-platform/admin/admin-documentation)
+[Learn more about the Power Platform admin center](https://docs.microsoft.com/power-platform/admin/admin-documentation)
 
-[Learn about the Power BI admin center](https://docs.microsoft.com/en-us/power-bi/admin/service-admin-administering-power-bi-in-your-organization)
+[Learn about the Power BI admin center](https://docs.microsoft.com/power-bi/admin/service-admin-administering-power-bi-in-your-organization)
 
 ## App Designer
 
@@ -66,15 +66,15 @@ Business Process Flows express themselves as dots spread across the screen and e
 
 At any stage one or more fields are be updated before progression onto later stages.
 
-[Business process flows overview](https://docs.microsoft.com/en-us/power-automate/business-process-flows-overview)
+[Business process flows overview](https://docs.microsoft.com/power-automate/business-process-flows-overview)
 
 ## Business Rule
 
 Business rules are server-side logic that is used with canvas or model-driven apps to set or clear values in one or many columns in a table. They can also be used to validate stored data or show error messages. Model-driven apps can use business rules to show or hide columns, enable or disable columns, and create recommendations based on business intelligence.
 
-[Learn more about business rules](../../maker/model-driven-apps/create-business-rules-recommendations-apply-logic-form)
+[Learn more about business rules](../../maker/model-driven-apps/create-business-rules-recommendations-apply-logic-form.md)
 
-[Business rules - Microsoft Learn content](https://docs.microsoft.com/en-us/learn/modules/define-create-business-rules/1-rules)  
+[Business rules - Microsoft Learn content](https://docs.microsoft.com/learn/modules/define-create-business-rules/1-rules)  
 
 ## Canvas app
 
@@ -185,13 +185,14 @@ Dependencies are created when elements of components are reliant on each other f
 Dependencies manifest themselves in numerous ways including when a model-driven app is validated.  They also become apparent in the most problematic fashion when trying to delete an aspect of a table, form, view or dashboard.  Where this is the case the dependencies can be reviewed by selecting the item to be deleted and then selecting "show dependencies" in the menu.
 
 [Validate an app](validate-app.md)
-[Delete a column from a table](https://docs.microsoft.com/en-us/powerapps/maker/data-platform/delete-fields)
+
+[Delete a column from a table](../data-platform/delete-fields)
 
 ## Dynamics
 
 Microsoft Dynamics is a line of enterprise resource planning (ERP) and customer relationship management (CRM) software applications. Microsoft markets Dynamics applications through a network of reselling partners who provide specialized services.
 
-[Learn more about Microsoft Dynamics](https://docs.microsoft.com/en-us/dynamics365/)
+[Learn more about Microsoft Dynamics](https://docs.microsoft.com/dynamics365/)
 
 ## Entity
 
@@ -209,7 +210,7 @@ Often multiple environments are used to enable application life-cycle management
 
 Environments are tied to a geographical region and can be a means of ensuring that the data physically stays in the correct geographical region.
 
-[Find out more about environments here](https://docs.microsoft.com/en-us/power-platform/admin/environments-overview)
+[Find out more about environments here](https://docs.microsoft.com/power-platform/admin/environments-overview)
 
 ## Flow
 
@@ -229,7 +230,7 @@ More information:
 
 [Learn about creating and designing forms](../../maker/model-driven-apps/create-design-forms.md)
 
-[Add a section to or remove a section from a form](add-move-or-delete-sections-on-form)
+[Add a section to or remove a section from a form](add-move-or-delete-sections-on-form.md)
 
 [Add a tab to or remove a tab from a form](add-move-or-delete-tabs-on-form.md)
 
@@ -285,7 +286,7 @@ A Microsoft product that allows users to streamline repetitive tasks.  Typically
 
 Power Automate flows exist within an environment and can also exist within Power Apps [solutions](model-driven-app-glossary.md#solution).
 
-[Learn more about Power Automate](https://docs.microsoft.com/en-us/power-automate/getting-started)
+[Learn more about Power Automate](https://docs.microsoft.com/power-automate/getting-started)
 
 ## Power BI
 
@@ -295,7 +296,7 @@ Power BI Reports do not live within Dataverse Environments or inside solutions.
 
 [Use Power BI within a model driven app](use-power-bi.md)
 
-[Learn more about Power BI](https://docs.microsoft.com/en-us/power-bi/fundamentals/power-bi-overview)
+[Learn more about Power BI](https://docs.microsoft.com/power-bi/fundamentals/power-bi-overview)
 
 ## Publish
 
@@ -321,7 +322,7 @@ The way in which fields between tables relate to each other.  There are 3 types 
 
 Model driven apps often contain tables with relationships between them.  Where relationships exist we have the ability to navigate to the record within the related table.  For example, when looking at a sale we might navigate to the account table to investigate details relating to the account.
 
-[Learn about creating table relationships](https://docs.microsoft.com/en-us/powerapps/maker/data-platform/create-edit-entity-relationships)
+[Learn about creating table relationships](../data-platform/create-edit-entity-relationships)
 
 ## Responsive Apps
 
@@ -345,11 +346,11 @@ Security roles are created and users are put into security roles either as indiv
 
 We grant access to model-driven apps through security roles.
 
-[Find out more about security roles](https://docs.microsoft.com/en-us/power-platform/admin/security-roles-privileges##%20security-roles)
+[Find out more about security roles](https://docs.microsoft.com/power-platform/admin/security-roles-privileges##%20security-roles)
 
-[General overview of security in Microsoft Dataverse](https://docs.microsoft.com/en-us/power-platform/admin/wp-security)
+[General overview of security in Microsoft Dataverse](https://docs.microsoft.com/power-platform/admin/wp-security)
 
-[Getting started with security roles using content from Microsoft Learn](https://docs.microsoft.com/en-us/learn/modules/get-started-security-roles/)
+[Getting started with security roles using content from Microsoft Learn](https://docs.microsoft.com/learn/modules/get-started-security-roles/)
 
 ## Site Map
 
@@ -419,11 +420,11 @@ Every form has at least 1 tab and these are relevant to how we present table rec
 
 From a site map perspective a tab is a "Group" when using the sitemap designer versus a subarea for tables and an area to hold subareas.
 
-[Learn more about working with tabs](../../maker/model-driven-apps/add-move-or-delete-tabs-on-form.md)
+[Learn more about working with tabs](add-move-or-delete-tabs-on-form.md)
 
 ## Table
 
-A table is a method of storing data in columns (or fields) within Dataverse.  We sometimes refer to them [entities](../model-driven-apps/model-driven-app-glossary.md#entity).
+A table is a method of storing data in columns (or fields) within Dataverse.  We sometimes refer to them [entities](model-driven-app-glossary.md#entity).
 
 Tables, in the context of model-driven apps, only ever exist within a [Dataverse](model-driven-app-glossary.md#dataverse) database.
 
@@ -445,7 +446,7 @@ When we move tables between environments we move all table elements noted along 
 
 The design experience for creating and editing tables.  This allows us to create tables, columns, relationships, business rules and views.
 
-[Create a custom table using the table designer](../../maker/data-platform/data-platform-create-entity)
+[Create a custom table using the table designer](../../maker/data-platform/data-platform-create-entity.md)
 
 ## Unified Interface
 
