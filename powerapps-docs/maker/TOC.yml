@@ -2502,6 +2502,9 @@
           href: ../teams/sample-apps-faqs.md
     - name: Known issues and limitations
       href: ../teams/known-issues-limitations.md
+- name: Access migration
+  href: ../data-platform/migrate-access-to-dataverse.md
+
 - name: Chatbots
   href: ../chatbots.md
 
