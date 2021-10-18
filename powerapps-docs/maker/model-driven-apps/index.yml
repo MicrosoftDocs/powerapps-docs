@@ -180,6 +180,6 @@ landingContent:
           - text: Embed a canvas app on a model-driven form
             url: embed-canvas-app-in-form.md
           - text: App for Outlook
-            url: app-for-outlook.md
-          - text: Power BI
-            url: add-powerbi-visual.md
+            url: app-for-outlook-customize.md
+          - text: Using Power BI
+            url: use-power-bi.md
