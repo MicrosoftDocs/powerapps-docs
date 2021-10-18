@@ -21,13 +21,13 @@ searchScope:
 
 ## Accessibility
 
-Accessibility is a term that is used to refer to the extent to which people with disabilities can use digital products.  In the case of model-driven apps consideration has been paid to matters such as responsive design, how user navigate between fields, how the app behaves in high contrast mode and how screen readers help users to understand the nature of the application.
+Accessibility is a term that is used to refer to the extent to which people with disabilities can use digital products. In the case of model-driven apps consideration has been paid to matters such as responsive design, how user navigate between fields, how the app behaves in high contrast mode and how screen readers help users to understand the nature of the application.
 
 [Using screen readers within model-driven apps](../../user/screen-reader.md)
 
 ## Admin Center
 
-In the Power Platform admin center is a unified portal for administrators to manage environments and settings for Power Apps, Power Automate and Dynamics customer engagement products.  Note that it does not cover administration settings and features associated with Power BI.
+In the Power Platform admin center is a unified portal for administrators to manage environments and settings for Power Apps, Power Automate and Dynamics customer engagement products.  Please note that it does not cover administration settings and features associated with Power BI.
 
 [Learn more about the Power Platform admin center](https://docs.microsoft.com/en-us/power-platform/admin/admin-documentation)
 
