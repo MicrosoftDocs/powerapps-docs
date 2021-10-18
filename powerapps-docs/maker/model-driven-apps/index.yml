@@ -71,7 +71,7 @@ landingContent:
   # Card
   - title: Apply data visualizations
     linkLists:
-      - linkListType: How to guide
+      - linkListType: how-to-guide
         links:
           - text: Table system charts
             url: create-edit-system-chart.md
@@ -83,7 +83,7 @@ landingContent:
   # Card
   - title: Advanced modelling
     linkLists:
-      - linkListType: How to guide
+      - linkListType: how-to-guide
         links:
           - text: Business rules
             url: ../data-platform/data-platform-create-business-rule.md
@@ -171,28 +171,15 @@ landingContent:
             url: https://docs.microsoft.com/en-us/power-platform/alm/solution-concepts-alm
           - text: Dataverse
             url: https://docs.microsoft.com/en-us/powerapps/maker/data-platform/data-platform-intro
-  # Card
-  - title: Work with controls - to remove
-    linkLists:
-      - linkListType: concept
-        links:
-          - text: Custom controls overview
-            url: use-custom-controls-data-visualizations.md
-          - text: Set up the timeline control
-            url: set-up-timeline-control.md
-          - text: Add the rich text editor control
-            url: rich-text-editor-control.md
-          - text: Set chart or list properties (dataviz)
-            url: set-properties-chart-list-included-dashboard.md
 
-# Card
+  # Card
   - title: Integration (to remove)
-  linkLists: 
-    - linkListType: how-to-guide
-    links:
-      - text: Embed a canvas app on a model-driven form
+    linkLists: 
+      - linkListType: how-to-guide
+        links:
+          - text: Embed a canvas app on a model-driven form
             url: embed-canvas-app-in-form.md
-      - text: App for Outlook
-          url: app-for-outlook.md
-      - text: Power BI
-          url: add-powerbi-visual.md
+          - text: App for Outlook
+            url: app-for-outlook.md
+          - text: Power BI
+            url: add-powerbi-visual.md
