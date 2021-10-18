@@ -32,6 +32,7 @@ The **ClearData** function clears the storage under a specific name or clears al
 > * The name shared between **SaveData**, **LoadData**, and **ClearData** is a key, not a file name. It need not be complex as names are unique to each app and there is no danger of name conflict. The name must not contain any of these characters: `*".?:\<>|/`. 
 > * ClearData is currently only supported for Power Apps running in Teams. It is not yet supported for Power Apps running in a mobile player.
 > * SaveData is limited to 1 megabyte of data for Power Apps running in Teams.  There is no fixed limit for Power Apps running in a mobile player but there are practical limits discussed below.
+> * It is not recommended to use **SaveData** to store sensitive data in the web since it will be stored in plain text.
 
 Use these functions to improve app-startup performance by:
 
