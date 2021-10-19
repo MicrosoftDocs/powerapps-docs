@@ -22,6 +22,9 @@ For example, in a simple work scheduling scenario, you may want to use it as a w
 
 In this lesson, we'll walk through changing the app to a work order management app.
 
+Watch this video to learn how to convert Issue reporting app to Work order management app:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLiBX]
+
 1. Open the Power Apps app in Teams. We recommend you right-click on the icon for Power Apps in Teams, and pop out the app so you won’t lose your changes if you go somewhere else in Teams.
 
     ![Pop out Power Apps](media/extend-issue-rename-work-order/pop-out-app.png "Pop out Power Apps")

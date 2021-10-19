@@ -5,13 +5,14 @@ author: gitanjalisingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2021
+ms.date: 08/12/2021
 ms.subservice: portals
 ms.author: gisingh
 ms.reviewer: tapanm
 contributors:
     - tapanm-msft
     - GitanjaliSingh33msft
+    - nageshbhat-msft
 ---
 
 # Configure notes as attachments for basic and advanced forms
@@ -19,6 +20,7 @@ contributors:
 Similar to subgrids, adding notes to your managed forms on the portal is easy. Just add the notes control to the model-drive app forms through the [form designer](../model-driven-apps/create-design-forms.md) and you're done. You can configure the behavior of the notes control by using metadata.
 
 > [!NOTE]
+> - You must enable attachments for the table in Microsoft Dataverse first before using this feature. More information: [Create a table](../data-platform/data-platform-create-entity.md#create-a-table)
 > - Explicit [table permissions](configure/assign-entity-permissions.md) are required for any notes to appear on the portal. For the detailed steps on how to create and assign these, go to [Assign table permissions](#assign-table-permissions).
 > - The description of each note must be prefixed with **\*WEB\*** (*'WEB' keyword with an asterisk sign (\*) before and after*) for the note to appear on the portal page.
 
@@ -180,7 +182,7 @@ Notes, and the **Add**, **Edit**, and **Delete** buttons for the note control wi
 
     For example, add the table permission created in the previous step to the Lead Manager web role.
 
-    ![Add web roles to an table permission.](media/configure-notes/add-webrole-entity-permissions.png "Add web roles to an table permission")
+    ![Add web roles to a table permission.](media/configure-notes/add-webrole-entity-permissions.png "Add web roles to a table permission")
 
 1. Create a table permission for the **Annotation** table with the [Parental access type](configure/assign-entity-permissions.md#parental-access-type) and required privileges as explained in the table below. The **Parent Table Permission** must be set to the same table permissions created in step 2.
 
@@ -197,7 +199,7 @@ Notes, and the **Add**, **Edit**, and **Delete** buttons for the note control wi
 
 ### Notes created with rich-text editor
 
-You can view the notes created using the [rich-text editor in timeline](../model-driven-apps/set-up-timeline-control.md#enable-or-disable-rich-text-editor-for-notes-in-timeline) on your portal webpage. However, when you try to edit, you'll see the text in HTML markup format.
+You can view the notes created using the [Rich text editor control configurations](/model-driven-apps/rich-text-editor-control#rich-text-editor-control-configuration-options) on your portal webpage. However, when you try to edit, you'll see the text in HTML markup format.
 
 For example, this note shows rich-text format in the model-driven app.
 

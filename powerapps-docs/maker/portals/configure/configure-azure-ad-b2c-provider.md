@@ -1,5 +1,5 @@
 ---
-title: Configure the Azure Active Directory B2C provider (Preview)
+title: Configure the Azure Active Directory B2C provider (using interface in preview)
 description: "Learn how to configure the Azure Active Directory B2C identity provider for Power Apps portals."
 author: sandhangitmsft
 ms.service: powerapps
@@ -15,7 +15,7 @@ contributors:
     - dileepsinghmicrosoft
 ---
 
-# Configure the Azure Active Directory B2C provider (Preview)
+# Configure the Azure Active Directory B2C provider (using interface in preview)
 
 [This article is pre-release documentation and is subject to change.]
 
@@ -23,7 +23,8 @@ contributors:
 
 A portal owner can configure the portal [!include[Azure](../../../includes/pn-azure-shortest.md)] AD B2C as an identity provider. [!include[Azure](../../../includes/pn-azure-shortest.md)] AD B2C supports Open ID Connect for federation.
 
-This article describes how to configure Azure AD B2C as the identity provider automatically by using a feature in preview. Using these steps, you can create a new Azure AD B2C tenant, register applications, and configure user flows from within Power Apps portals. If you want to configure the Azure AD B2C provider manually, go to [Configure the Azure AD B2C provider manually](configure-azure-ad-b2c-provider-manual.md).
+> [!IMPORTANT]
+> This article describes how to configure Azure AD B2C as the identity provider automatically by using a feature in preview. Using these steps, you can create a new Azure AD B2C tenant, register applications, and configure user flows from within Power Apps portals. If you want to configure the Azure AD B2C provider manually using the generally available interface, go to [Configure the Azure AD B2C provider manually](configure-azure-ad-b2c-provider-manual.md).
 
 > [!NOTE]
 > Changes to the authentication settings [might take a few minutes](../admin/clear-server-side-cache.md#caching-changes-for-portals-with-version-926x-or-later) to be reflected on the portal. If you want the changes to be reflected immediately, restart the portal by using [portal actions](../admin/admin-overview.md).

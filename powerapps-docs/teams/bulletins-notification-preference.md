@@ -19,6 +19,9 @@ contributors:
 
 The Bulletins sample app for Microsoft Teams provides a central location for all company communication such as broadcasts, memos, announcements, and company news. The app allows you to create, categorize, bookmark, search, and read bulletin posts.
 
+Watch this video to learn how to customize apps for end user to add notification preferences:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLn9F]
+
 The Bulletins app solution consists of two apps:
 
 [Manage bulletins app](bulletins.md#manage-bulletins-app)

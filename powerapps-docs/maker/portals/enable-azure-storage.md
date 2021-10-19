@@ -5,13 +5,14 @@ author: gitanjalisingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2021
+ms.date: 08/12/2021
 ms.subservice: portals
 ms.author: gisingh
 ms.reviewer: tapanm
 contributors:
     - tapanm-msft
     - GitanjaliSingh33msft
+    - nageshbhat-msft
 ---
 
 # Enable Azure Storage
@@ -25,7 +26,8 @@ After the storage account is running, portals require certain global settings th
 Azure storage integration only works with **Notes** configured in Basic Form Metadata. Azure Blob as a storage is not used if you use **Portal Comments** that can be setup using **Timeline**. Though Portal Comments also provide capability for files to be uploaded as attachments, these files are only stored in Microsoft Dataverse.
  
 > [!NOTE]
-> The maximum file upload size is 125 MB.
+> - You must enable attachments for the table in Microsoft Dataverse first before using this feature. More information: [Create a table](../data-platform/data-platform-create-entity.md#create-a-table)
+> - The maximum file upload size is 125 MB.
 
 To locate the value for FileStorage/CloudStorageAccount, you must get a connection string from your [!include[Azure portal](../../includes/pn-azure-portal.md)].
 

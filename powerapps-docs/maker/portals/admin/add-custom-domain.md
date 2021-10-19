@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2021
+ms.date: 08/09/2021
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: tapanm
@@ -46,7 +46,7 @@ To learn about the roles required to perform this task, read [Admin roles requir
 4. Select **Next**.
 
 5. On the **Choose a host name** page, select one of the following options:
-    - **Add a new host name**: Select this option to create a new custom domain. Enter the domain name you want in the **Domain Name** field.
+    - **Add a new host name**: Select this option to create a new custom domain. Enter the CNAME you want in the **Domain Name** field.
     - **Use an existing host name**: Select this option to choose a host name from the drop-down list. 
    
    > [!NOTE]

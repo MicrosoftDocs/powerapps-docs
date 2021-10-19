@@ -1,12 +1,12 @@
 ---
 title: Customize a SharePoint list or library form by using Power Apps
 description: Learn about how to use Power Apps to customize the form with which users create and update entries in a SharePoint list.
-author: emcoope-msft
+author: wimcoor
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 04/26/2021
+ms.date: 08/17/2021
 ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
@@ -16,8 +16,8 @@ search.app:
 contributors:
   - Steven-Jia
   - tapanm-msft
-  - navjotm
-  - emcoope-msft
+  - wimcoor
+  - alaug
 ---
 # Customize a SharePoint list or library form by using Power Apps
 
@@ -30,6 +30,10 @@ To follow the steps in this article, you'll create a list so that you can see ho
 > - Custom forms for lists are only supported in generic lists and generic document libraries. Custom list and library templates are currently not supported; including but not limited to lists such as Announcements, Contacts and Tasks.
 > - Custom forms for document libraries only supports editing custom metadata. Editing or managing file(s) is not supported.
 > - Additional actions are needed when changing the address of a SharePoint site that uses custom forms. More information: [Effects of changing a SharePoint site address on Power Apps](/sharepoint/change-site-address#effects-of-changing-a-site-address).
+> - To access custom form, users must have access to the SharePoint list.
+
+Watch this video to learn how to customize a list form:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLvLK]
 
 ## Create a list
 
@@ -203,7 +207,9 @@ You can configure the **Price**, **Availability**, and **Colors** fields to appe
 
 **Q:** Do I need a Power Apps license to create or use custom list forms?
 
-**A:** Guest users can **use** custom forms. To **create** custom forms, you need an [Office 365 plan that includes Power Apps](/power-platform/admin/pricing-billing-skus#licenses).
+**A:** Guest users can **use** custom forms. To **create** custom forms, you need a [Microsoft 365 plan that includes Power Apps](/power-platform/admin/pricing-billing-skus#licenses).
+- To know about license requirements for members of a tenant, see **Power Apps user rights included with Microsoft 365 licenses** section in [Microsoft Power Apps and Power Automate Licensing Guide](https://go.microsoft.com/fwlink/?linkid=2085130).
+- For more information about license expectations for guest users, see [What license must be assigned to my guest so they can run an app shared with them?](share-app-guests.md#what-license-must-be-assigned-to-my-guest-so-they-can-run-an-app-shared-with-them).
 
 **Q:** What happens when guest users access a list that has a custom form?
 
@@ -227,5 +233,11 @@ You can configure the **Price**, **Availability**, and **Colors** fields to appe
 
     ![List of customized forms.](./media/customize-list-form/customized-forms.png)
 
+### See also
+
+- [Manage who can share canvas apps](/power-platform/admin/admin-manage-apps#manage-who-can-share-canvas-apps)
+- [Assign a security role](/power-platform/admin/create-users#assign-a-security-role)
+- [Licensing overview for Microsoft Power Platform](/power-platform/admin/pricing-billing-skus)
+- [Understand Power Platform environments](/power-platform/admin/environments-overview)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

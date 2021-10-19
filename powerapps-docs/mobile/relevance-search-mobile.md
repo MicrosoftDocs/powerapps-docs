@@ -1,11 +1,11 @@
 ---
-title: Use relevance search on Power Apps Mobile| Microsoft Docs
-description: How to use relevance search for model-driven apps using your mobile app.
+title: Use Dataverse search on Power Apps Mobile| Microsoft Docs
+description: How to use Dataverse search for model-driven apps using your mobile app.
 author: mduelae
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 04/15/2021
+ms.date: 08/10/2021
 ms.subservice: mobile
 ms.author: mkaur
 ms.custom: ""
@@ -20,17 +20,21 @@ searchScope:
   - "Power Apps"
 ---
 
-# Use relevance search for model-driven apps using Power Apps Mobile 
+# Use Dataverse search for model-driven apps using Power Apps Mobile 
 
 
-You can quickly find the information that you're looking for by using relevance search. The relevance search experience delivers fast and comprehensive results across multiple tables, in a single list, sorted by relevance.
+You can quickly find the information that you're looking for by using Dataverse search. The Dataverse search experience delivers fast and comprehensive results across multiple tables, in a single list, sorted by relevance.
 
-Relevance search is already available when you're using a model-driven app in a web browser. The functionality is the same in Power Apps Mobile, but it works a little differently. More information: [Search for tables and rows by using relevance search](../user/relevance-search.md)
+Dataverse search is already available when you're using a model-driven app in a web browser. The functionality is the same in Power Apps Mobile, but it works a little differently. More information: [Search for tables and rows by using Dataverse search](../user/relevance-search.md)
 
-Before you begin using relevance search, the new experience needs to be enabled by the administrator for your organization. More information: [Enable the new relevance search experience](/power-platform/admin/configure-relevance-search-organization#enable-the-new-relevance-search-experience)<!--note from editor: Edit to alt text suggested. This isn't really a "diagram," which is a line drawing such as a conceptual illustration.-->
+Before you begin using Dataverse search, the new experience needs to be enabled by the administrator for your organization. More information: [Enable Dataverse search](/power-platform/admin/configure-relevance-search-organization#enable-relevance-search)
+
+When Dataverse search is turned on, it becomes your default and only global search experience for all of your model-driven apps. You won't be able to switch to [quick find search also known as categorized search](../user/quick-find.md).
 
   > [!div class="mx-imgBorder"]
-  > ![Demonstration of how relevance search works in a model-driven app running on Power Apps Mobile.](media/powerapps-mobile-rel-search.gif "Demonstration of how relevance search works in a model-driven app running on Power Apps Mobile")
+  > ![Demonstration of how Dataverse search works in a model-driven app running on Power Apps Mobile.](media/powerapps-mobile-rel-search.gif "Demonstration of how Dataverse search works in a model-driven app running on Power Apps Mobile")
+
+ 
 
 ## Run a search
 
@@ -50,6 +54,23 @@ View suggested search results inline as you type, minimizing keystrokes and simp
 
    > [!div class="mx-imgBorder"]
    > ![See suggested results as you type.](media/suggested-results.png "See suggested results as you type")
+
+
+
+## Early access: Use the barcode scanner
+
+ [!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
+ 
+ If you're on [early access](/power-platform/admin/opt-in-early-access-updates), you can use the barcode scanner to look up rows. The scanner automatically detects a barcode, a QR code, or a data-matrix code.
+ 
+ You also enter text in the search box such as **contoso** and then use the barcode scanner to scan a barcode, such as **12345**. In this case, the system will search for **contoso12345**.
+ 
+ 1. To use the barcode scanner, select the search button.
+ 2. Select the barcode scanner button and then scan your item.
+
+    > [!div class="mx-imgBorder"]
+    > ![Select the barcode scanner.](media/bar-code-scanner.png "Barcode scanner")
+ 
 
 ## View search results
 

@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: nkrb
-ms.date: 03/23/2021
+ms.date: 08/09/2021
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
@@ -189,6 +189,8 @@ Other elements include:
 
 **[in](functions/operators.md#in-and-exactin-operators)** – Checks if a text string is contained within another text string or table, case independent.  Also used to check if a record is in a table.
 
+**[Int](functions/function-round.md)** – Rounds down to the nearest integer.
+
 **[IsBlank](functions/function-isblank-isempty.md)** – Checks for a [blank](functions/function-isblank-isempty.md) value.
 
 **[IsBlankOrError](functions/function-iferror.md)** – Checks for a [blank](functions/function-isblank-isempty.md) value or error.
@@ -200,6 +202,8 @@ Other elements include:
 **[IsMatch](functions/function-ismatch.md)** – Checks a string against a pattern.  Regular expressions can be used.
 
 **[IsNumeric](functions/function-isnumeric.md)** – Checks for a numeric value.
+
+**[ISOWeekNum](functions/function-weeknum.md)** – Returns the ISO week number of a date/time value.
 
 **[IsToday](functions/function-now-today-istoday.md)** – Checks whether a date/time value is sometime today.
 
@@ -283,6 +287,8 @@ Other elements include:
 **[Rand](functions/function-rand.md)** – Returns a pseudo-random number.
 
 **[ReadNFC](functions/function-readnfc.md)** – Reads a Near Field Communication (NFC) tag.
+
+**[RecordInfo](functions/function-recordinfo.md)** – Provides information about a record of a data source.
 
 **[Refresh](functions/function-refresh.md)** – Refreshes the records of a data source.
 
@@ -384,6 +390,8 @@ Other elements include:
 
 **[TrimEnds](functions/function-trim.md)** – Removes extra spaces from the ends of a string of text only.
 
+**[Trunc](functions/function-round.md)** – Truncates the number to only the integer portion by removing any decimal portion.
+
 ## U
 **[Ungroup](functions/function-groupby.md)** – Removes a grouping.
 
@@ -410,6 +418,8 @@ Other elements include:
 
 ## W
 **[Weekday](functions/function-datetime-parts.md)** – Retrieves the weekday portion of a date/time value.
+
+**[WeekNum](functions/function-weeknum.md)** – Returns the week number of a date/time value.
 
 **[With](functions/function-with.md)** – Calculates values and performs actions for a single record, including inline records of named values.
 

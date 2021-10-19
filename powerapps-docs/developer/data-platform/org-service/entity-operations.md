@@ -2,7 +2,7 @@
 title: "Entity class operations using the Organization service (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about the Entity class used for data operations using the Microsoft Dataverse organization service" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 08/2604/2021
+ms.date: 08/04/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"

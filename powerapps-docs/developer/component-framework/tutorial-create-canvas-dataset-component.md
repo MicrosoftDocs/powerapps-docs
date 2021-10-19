@@ -1,7 +1,7 @@
 ---
 title: "Create canvas app dataset component in Microsoft Dataverse | MicrosoftDocs"
 description: "In this tutorial, learn how to create a canvas app dataset code component, and deploy, add to a screen, and test the component using Visual Studio Code."
-ms.date: 06/30/2021
+ms.date: 09/08/2021
 ms.service: "powerapps"
 ms.custom: "intro-internal"
 ms.topic: "index-page"
@@ -10,7 +10,7 @@ ms.subservice: pcf
 ms.author: "nabuthuk"
 author: Nkrb
 contributors:
-    - v-scottdurow
+  - v-scottdurow
 ---
 
 # Tutorial: Creating a canvas app dataset component
@@ -19,12 +19,12 @@ In this tutorial, you'll create a canvas app dataset code component, and deploy,
 
 In addition to these requirements, you'll also ensure the code component follows best practice guidance:
 
-1. Use of [Microsoft Fluent UI](code-components-best-practices.md#use-microsoft-fluent-ui-react) 
+1. Use of [Microsoft Fluent UI](code-components-best-practices.md#use-microsoft-fluent-ui-react)
 1. Localization of the code component labels at both design and runtime
 1. Assurance that the code component renders at the width and height provided by the parent canvas app screen
 1. Consideration for the app maker to customize the user interface using input properties and external app elements as far as possible
 
-> [!div class="mx-imgBorder"]
+> [!div class="mx-imgBorder"] 
 > ![Canvas Grid Demo.](media/canvas-datagrid-demo.gif "Canvas Grid Demo")
 
 Before you start, make sure you've installed all the [prerequisite components](implementing-controls-using-typescript.md#prerequisites).
@@ -39,7 +39,7 @@ You can download the complete sample from [here](https://github.com/microsoft/Po
 
 1. Create a new folder to use for your code component. For example, `C:\repos\CanvasGrid`.
 
-1. Open **Visual Studio Code** and then **File** > **Open Folder**  and select the `CanvasGrid` folder. If you've added the Windows Explorer extensions during installation of Visual Studio Code, you can use the **Open with Code** context menu option inside the folder. You can also load any folder into Visual Studio Code using `code .` at the command prompt when the current directory is set to that location.
+1. Open **Visual Studio Code** and then **File** > **Open Folder** and select the `CanvasGrid` folder. If you've added the Windows Explorer extensions during installation of Visual Studio Code, you can use the **Open with Code** context menu option inside the folder. You can also load any folder into Visual Studio Code using `code .` at the command prompt when the current directory is set to that location.
 
 1. Inside a new Visual Studio Code PowerShell terminal (**Terminal** > **New Terminal**), use the following command to create a new code component project:
 
@@ -63,11 +63,10 @@ You can download the complete sample from [here](https://github.com/microsoft/Po
    >
    > If you receive the message, `The term 'npm' is not recognized as the name of a cmdlet, function, script file, or operable program.`, make sure you've installed all the prerequisites, specifically [node.js](https://nodejs.org/en/download/) (LTS version is recommended).
 
-   > [!div class="mx-imgBorder"]
+   > [!div class="mx-imgBorder"] 
    > ![Canvas dataset grid.](media/canvas-datagrid-1.gif "Canvas dataset grid")
 
 The template includes an `index.ts` file along with various configuration files. This is the starting point of your code component and contains the lifecycle methods described in [Component implementation](control-implementation-library.md).
-
 
 ### Install Microsoft Fluent UI
 
@@ -128,11 +127,12 @@ To define these three properties, add the following to the `CanvasGrid\ControlMa
 ```shell
 npm run build
 ```
+
 After the component is built, you'll see that:
 
-1. An automatically generated file  `CanvasGrid\generated\ManifestTypes.d.ts` is added to your project. This is generated as part of the build process from the `ControlManifest.Input.xml` and provides the types for interacting with the input/output properties.
+1. An automatically generated file `CanvasGrid\generated\ManifestTypes.d.ts` is added to your project. This is generated as part of the build process from the `ControlManifest.Input.xml` and provides the types for interacting with the input/output properties.
 
-2. The build output is added to the `out` folder. The `bundle.js` is the transpiled JavaScript that runs inside the browser, and the `ControlManifest.xml` is a reformatted version of the `ControlManifest.Input.xml` file that's used during deployment. 
+2. The build output is added to the `out` folder. The `bundle.js` is the transpiled JavaScript that runs inside the browser, and the `ControlManifest.xml` is a reformatted version of the `ControlManifest.Input.xml` file that's used during deployment.
 
    > [!NOTE]
    > Do not modify the contents of the `generated` and `out` folders directly. They'll be overwritten as part of the build process.
@@ -285,7 +285,7 @@ Grid.displayName = 'Grid';
 ```
 
 > [!NOTE]
-> The file has the extension `tsx` which is a TypeScript file that supports XML style syntax used by React. It's compiled into standard JavaScript by the build process. 
+> The file has the extension `tsx` which is a TypeScript file that supports XML style syntax used by React. It's compiled into standard JavaScript by the build process.
 
 From the above code, you'll see that:
 
@@ -294,21 +294,21 @@ From the above code, you'll see that:
 2. You import the Fluent UI components using path-based imports so that your bundle size will be smaller. Instead of:
 
    ```typescript
-   import { DetailsList, Stack } from '@fluentui/react';
+   import { DetailsList, Stack } from "@fluentui/react";
    ```
 
    you'll use:
 
    ```typescript
-   import { DetailsList } from '@fluentui/react/lib/components/DetailsList/DetailsList';
-   import { Stack } from '@fluentui/react/lib/components/Stack/Stack';
+   import { DetailsList } from "@fluentui/react/lib/components/DetailsList/DetailsList";
+   import { Stack } from "@fluentui/react/lib/components/Stack/Stack";
    ```
 
-   An alternative would be to use [tree-shaking](code-components-best-practices.md#use-path-based-imports-from-fluent-to-reduce-bundle-size). 
+   An alternative would be to use [tree-shaking](code-components-best-practices.md#use-path-based-imports-from-fluent-to-reduce-bundle-size).
 
 3. This is a React functional component, but equally, it could be a class component. This is entirely based on your preferred coding style. Class components and functional components can be mixed in the same project. Both functional and class components use the `tsx` XML style syntax used by React.
 
-4. You can use  `React.memo` to wrap your functional component so that it won't render unless any of the input props have changed. 
+4. You can use `React.memo` to wrap your functional component so that it won't render unless any of the input props have changed.
 
 5. `React.useMemo` is used to ensure that the item array created is only mutated when the input props `options` or `configuration` have change. This is a best practice of function components that reduces unnecessary renders of the child components.
 
@@ -337,7 +337,7 @@ initializeIcons(undefined, { disableWarnings: true });
 ```
 
 > [!NOTE]
-> The import of `initializeIcons` is required because you're using the Fluent UI icon set. You call `initializeIcons` to load the icons inside the test harness. Inside canvas apps, they're already initialized. 
+> The import of `initializeIcons` is required because you're using the Fluent UI icon set. You call `initializeIcons` to load the icons inside the test harness. Inside canvas apps, they're already initialized.
 
 Add the following class fields underneath `export class GridCanvas`:
 
@@ -363,7 +363,7 @@ this.container = container;
 this.context = context;
 this.context.mode.trackContainerResize(true);
 this.resources = this.context.resources;
-this.isTestHarness = document.getElementById('control-dimensions') !== null;
+this.isTestHarness = document.getElementById("control-dimensions") !== null;
 ```
 
 The `init` function is called when the code component is first initialized on an app screen. You store a reference to the following:
@@ -384,41 +384,48 @@ Add the following to `updateView`:
 ```typescript
 const dataset = context.parameters.records;
 const paging = context.parameters.records.paging;
-const datasetChanged = context.updatedProperties.indexOf('dataset') > -1;
+const datasetChanged = context.updatedProperties.indexOf("dataset") > -1;
 const resetPaging =
-      datasetChanged && !dataset.loading && !dataset.paging.hasPreviousPage && this.currentPage !== 1;
+  datasetChanged &&
+  !dataset.loading &&
+  !dataset.paging.hasPreviousPage &&
+  this.currentPage !== 1;
 
 if (resetPaging) {
-    this.currentPage = 1;
+  this.currentPage = 1;
 }
 if (resetPaging || datasetChanged || this.isTestHarness) {
-    this.records = dataset.records;
-    this.sortedRecordsIds = dataset.sortedRecordIds;
+  this.records = dataset.records;
+  this.sortedRecordsIds = dataset.sortedRecordIds;
 }
 
 // The test harness provides width/height as strings
-const allocatedWidth = parseInt(context.mode.allocatedWidth as unknown as string);
-const allocatedHeight = parseInt(context.mode.allocatedHeight as unknown as string);
+const allocatedWidth = parseInt(
+  context.mode.allocatedWidth as unknown as string
+);
+const allocatedHeight = parseInt(
+  context.mode.allocatedHeight as unknown as string
+);
 
 ReactDOM.render(
-    React.createElement(Grid, {
-        width: allocatedWidth,
-        height: allocatedHeight,
-        columns: dataset.columns,
-        records: this.records,
-        sortedRecordIds: this.sortedRecordsIds,
-        hasNextPage: paging.hasNextPage,
-        hasPreviousPage: paging.hasPreviousPage,
-        currentPage: this.currentPage,
-        totalResultCount: paging.totalResultCount,
-        sorting: dataset.sorting,
-        filtering: dataset.filtering && dataset.filtering.getFilter(),
-        resources: this.resources,
-        itemsLoading: dataset.loading,
-        highlightValue: this.context.parameters.HighlightValue.raw,
-        highlightColor: this.context.parameters.HighlightColor.raw,
-    }),
-    this.container,
+  React.createElement(Grid, {
+    width: allocatedWidth,
+    height: allocatedHeight,
+    columns: dataset.columns,
+    records: this.records,
+    sortedRecordIds: this.sortedRecordsIds,
+    hasNextPage: paging.hasNextPage,
+    hasPreviousPage: paging.hasPreviousPage,
+    currentPage: this.currentPage,
+    totalResultCount: paging.totalResultCount,
+    sorting: dataset.sorting,
+    filtering: dataset.filtering && dataset.filtering.getFilter(),
+    resources: this.resources,
+    itemsLoading: dataset.loading,
+    highlightValue: this.context.parameters.HighlightValue.raw,
+    highlightColor: this.context.parameters.HighlightColor.raw,
+  }),
+  this.container
 );
 ```
 
@@ -426,8 +433,8 @@ You can see that:
 
 1. You call `React.createElement`, passing the reference to the DOM container you received inside the `init` function.
 2. The `Grid` component is defined inside `Grid.tsx` and is imported at the top of the file.
-3. The `allocatedWidth` and `allocatedHeight` will be provided by the parent context whenever they change (for example, the app resizes the code component or you enter full screen mode), since you made a call to [trackContainerResize(true)](reference\mode\trackcontainerresize.md) inside the `init` function. 
-4. You can detect when there are new rows to display when the [updatedProperties](reference\updatedproperties.md) array contains the `dataset` string. 
+3. The `allocatedWidth` and `allocatedHeight` will be provided by the parent context whenever they change (for example, the app resizes the code component or you enter full screen mode), since you made a call to [trackContainerResize(true)](reference\mode\trackcontainerresize.md) inside the `init` function.
+4. You can detect when there are new rows to display when the [updatedProperties](reference\updatedproperties.md) array contains the `dataset` string.
 5. In the test harness, the `updatedProperties` array is not populated, so you can use the `isTestHarness` flag you set in the `init` function to short-circuit the logic that sets the `sortedRecordId` and `records`. You maintain a reference to the current values until they change, so that you don't mutate these when passed to the child component unless a re-render of the data is required.
 6. Since the code component maintains the state of which page you're displaying, the page number is reset when the parent context resets the records to the first page. You know when you're back on the first page when `hasPreviousPage` is false.
 
@@ -439,9 +446,9 @@ public destroy(): void {
 }
 ```
 
-You can use `npm start watch` to see the simple grid inside the test harness. You need to set the width and height to see the code component grid that's populated using the sample three records. You can then export a set of records into a CSV file from Dataverse and then load it into the test harness using  **Data Inputs** > **Records panel**:
+You can use `npm start watch` to see the simple grid inside the test harness. You need to set the width and height to see the code component grid that's populated using the sample three records. You can then export a set of records into a CSV file from Dataverse and then load it into the test harness using **Data Inputs** > **Records panel**:
 
-> [!div class="mx-imgBorder"]
+> [!div class="mx-imgBorder"] 
 > ![Test Harness.](media/canvas-datagrid-2.gif "Test Harness")
 
 > [!NOTE]
@@ -455,9 +462,9 @@ Add the following to the imports inside `Grid.tsx`:
 
 ```typescript
 import { useConst } from "@fluentui/react-hooks/lib/useConst";
-import { useForceUpdate } from '@fluentui/react-hooks/lib/useForceUpdate';
-import { Selection } from '@fluentui/react/lib/Selection';
-import { SelectionMode } from '@fluentui/react/lib/Utilities';
+import { useForceUpdate } from "@fluentui/react-hooks/lib/useForceUpdate";
+import { Selection } from "@fluentui/react/lib/Selection";
+import { SelectionMode } from "@fluentui/react/lib/Utilities";
 ```
 
 To the `GridProps` interface, inside `Grid.tsx`, add the following:
@@ -469,10 +476,7 @@ setSelectedRecords: (ids: string[]) => void;
 Inside the `Grid.tsx` function component (just below `export const Grid = React.memo((props: GridProps) => {`), update the destructuring of the props to add the new prop `setSelectedRecords` using:
 
 ```typescript
-const {
-    ...
-    setSelectedRecords,
-} = props;
+const { ...setSelectedRecords } = props;
 ```
 
 And then add the following:
@@ -480,21 +484,21 @@ And then add the following:
 ```typescript
 const forceUpdate = useForceUpdate();
 const onSelectionChanged = React.useCallback(() => {
-    const items = selection.getItems() as DataSet[];
-    const selected = selection.getSelectedIndices().map((index: number) => {
-        const item: DataSet | undefined = items[index];
-        return item && items[index].getRecordId();
-    });
+  const items = selection.getItems() as DataSet[];
+  const selected = selection.getSelectedIndices().map((index: number) => {
+    const item: DataSet | undefined = items[index];
+    return item && items[index].getRecordId();
+  });
 
-    setSelectedRecords(selected);
-    forceUpdate();
+  setSelectedRecords(selected);
+  forceUpdate();
 }, [forceUpdate]);
 
 const selection: Selection = useConst(() => {
-    return new Selection({
-        selectionMode: SelectionMode.single,
-        onSelectionChanged: onSelectionChanged,
-    });
+  return new Selection({
+    selectionMode: SelectionMode.single,
+    onSelectionChanged: onSelectionChanged,
+  });
 });
 ```
 
@@ -512,11 +516,11 @@ You need to define the new `setSelectedRecords` callback inside `index.ts` and p
 
 ```typescript
 setSelectedRecords = (ids: string[]): void => {
-    this.context.parameters.records.setSelectedRecordIds(ids);
+  this.context.parameters.records.setSelectedRecordIds(ids);
 };
 ```
 
-> [!NOTE] 
+> [!NOTE]
 > The method is defined as an 'arrow function' to bind it to the current `this` instance of the code component.
 
 The call to [setSelectedRecordIds](reference\dataset\setselectedrecordids.md) informs the canvas app that the selection has changed so that other components referencing `SelectedItems` and `Selected` will be updated.
@@ -533,7 +537,7 @@ ReactDOM.render(
 
 ### Invoking the `OnSelect` event
 
-There's a pattern in canvas apps where if a gallery or grid has an item selection invoked (for example, selecting a chevron icon), it raises the `OnSelect` event. You can implement this pattern using the [openDatasetItem](reference\dataset\opendatasetitem.md) method of the dataset. 
+There's a pattern in canvas apps where if a gallery or grid has an item selection invoked (for example, selecting a chevron icon), it raises the `OnSelect` event. You can implement this pattern using the [openDatasetItem](reference\dataset\opendatasetitem.md) method of the dataset.
 
 As before, you add an additional callback prop on the `Grid` component by adding the following to the `GridProps` interface inside `Grid.tsx`:
 
@@ -547,10 +551,7 @@ export interface GridProps {
 Again, you must add the new prop to the destructuring of the props:
 
 ```typescript
-const {
-    ...
-    onNavigate,
-} = props;
+const { ...onNavigate } = props;
 ```
 
 The `DetailList` has a callback prop called `onItemInvoked` which, in turn, you pass your callback to:
@@ -564,10 +565,12 @@ The `DetailList` has a callback prop called `onItemInvoked` which, in turn, you 
 Add the `onNavigate` method to the `index.ts` just below the `setSelectedRecords` method:
 
 ```typescript
-onNavigate = (item?: ComponentFramework.PropertyHelper.DataSetApi.EntityRecord): void => {
-    if (item) {
-        this.context.parameters.records.openDatasetItem(item.getNamedReference());
-    }
+onNavigate = (
+  item?: ComponentFramework.PropertyHelper.DataSetApi.EntityRecord
+): void => {
+  if (item) {
+    this.context.parameters.records.openDatasetItem(item.getNamedReference());
+  }
 };
 ```
 
@@ -585,7 +588,7 @@ ReactDOM.render(
 
 When you save all files, the test harness will reload. If you use `Ctrl` + `Shift` + `I` (or `F12`) and use **Open File** (`Ctrl` + `P`) searching for `index.ts`, you can place a breakpoint inside the `onNavigate` method. Double-clicking on a row (or highlighting it with the cursor keys and pressing `Enter`) will cause the breakpoint to be hit because the `DetailsList` invokes the `onNavigate` callback.
 
-> [!div class="mx-imgBorder"]
+> [!div class="mx-imgBorder"] 
 > ![Canvas data grids 3.](media/canvas-datagrid-3.png "Canvas data grids 3")
 
 There is a reference to `_this` because the function is defined as an arrow function and has been transpiled into a JavaScript closure to capture the instance of `this`.
@@ -703,7 +706,7 @@ Before you go any further, you need to add resource strings to the code componen
 > [!TIP]
 > It's not recommended to edit `resx` files directly. Instead, use either Visual Studio's resource editor or an extension for Visual Studio Code.
 
-You have resource strings for the `input`/`output` properties and the `dataset` and associated `property-set`. These will be used in Power Apps Studio at design time based on the maker's browser language. You can also add label strings that can be retrieved at runtime using [getString](reference\resources\getstring.md). More information:  [Implementing localization API component](sample-controls\localization-api-control.md).
+You have resource strings for the `input`/`output` properties and the `dataset` and associated `property-set`. These will be used in Power Apps Studio at design time based on the maker's browser language. You can also add label strings that can be retrieved at runtime using [getString](reference\resources\getstring.md). More information: [Implementing localization API component](sample-controls\localization-api-control.md).
 
 This new resource file should be added to the `ControlManifest.Input.xml` file inside the `resources` element:
 
@@ -728,19 +731,17 @@ export interface GridProps {
 Then, add these new props along with the `resources` reference (so you can retrieve localized labels for sorting and filtering) to the props destructuring:
 
 ```typescript
-const {
-    ...
-    onSort,
-    onFilter,
-    resources,
-} = props;
+const { ...onSort, onFilter, resources } = props;
 ```
 
 You need to add some imports to the top of `Grid.tsx` so that you can use the `ContextualMenu` component provided by Fluent UI. You can use path-based imports to reduce the size of the bundle.
 
 ```typescript
-import { DirectionalHint, IContextualMenuProps } from '@fluentui/react/lib/components/ContextualMenu/ContextualMenu.types';
-import { ContextualMenu } from '@fluentui/react/lib/components/ContextualMenu/ContextualMenu';
+import {
+  DirectionalHint,
+  IContextualMenuProps,
+} from "@fluentui/react/lib/components/ContextualMenu/ContextualMenu.types";
+import { ContextualMenu } from "@fluentui/react/lib/components/ContextualMenu/ContextualMenu";
 ```
 
 Now add the context menu rendering functionality to `Grid.tsx` just below the `const [isComponentLoading, setIsLoading] = React.useState<boolean>(false);`:
@@ -829,32 +830,34 @@ You'll see that:
 
 1. The `contextualMenuProps` state is used to control the visibility of the context menu that's rendered using the Fluent UI `ContextualMenu` component.
 2. You're providing a simple filter to show only values where the field doesn't contain any data. You could extend this to provide additional filtering.
-3. You're using `resources.getString` to show labels on the context menu that can be localized. 
+3. You're using `resources.getString` to show labels on the context menu that can be localized.
 4. The `React.useCallback` hook is used (similar to `React.useMemo`), so that the callbacks are only mutated when the dependent values change. This optimizes the rendering of child components.
 
-Now add these new context menu functions to the column select and context menu events.  Update the `const gridColumns` to add the `onColumnContextMenu` and `onColumnClick` callbacks:
+Now add these new context menu functions to the column select and context menu events. Update the `const gridColumns` to add the `onColumnContextMenu` and `onColumnClick` callbacks:
 
 ```typescript
 const gridColumns = React.useMemo(() => {
-    return columns
-        .filter((col) => !col.isHidden && col.order >= 0)
-        .sort((a, b) => a.order - b.order)
-        .map((col) => {
-        const sortOn = sorting && sorting.find((s) => s.name === col.name);
-        const filtered =
-              filtering && filtering.conditions && filtering.conditions.find((f) => f.attributeName == col.name);
-        return {
-            key: col.name,
-            name: col.displayName,
-            fieldName: col.name,
-            isSorted: sortOn != null,
-            isSortedDescending: sortOn?.sortDirection === 1,
-            isResizable: true,
-            isFiltered: filtered != null,
-            data: col,
-            onColumnContextMenu: onColumnContextMenu,
-            onColumnClick: onColumnClick,
-        } as IColumn;
+  return columns
+    .filter((col) => !col.isHidden && col.order >= 0)
+    .sort((a, b) => a.order - b.order)
+    .map((col) => {
+      const sortOn = sorting && sorting.find((s) => s.name === col.name);
+      const filtered =
+        filtering &&
+        filtering.conditions &&
+        filtering.conditions.find((f) => f.attributeName == col.name);
+      return {
+        key: col.name,
+        name: col.displayName,
+        fieldName: col.name,
+        isSorted: sortOn != null,
+        isSortedDescending: sortOn?.sortDirection === 1,
+        isResizable: true,
+        isFiltered: filtered != null,
+        data: col,
+        onColumnContextMenu: onColumnContextMenu,
+        onColumnClick: onColumnClick,
+      } as IColumn;
     });
 }, [columns, sorting, onColumnContextMenu, onColumnClick]);
 ```
@@ -869,38 +872,38 @@ Now that you've added the sorting and filtering UI, you need to add the callback
 
 ```typescript
 onSort = (name: string, desc: boolean): void => {
-    const sorting = this.context.parameters.records.sorting;
-    while (sorting.length > 0) {
-        sorting.pop();
-    }
-    this.context.parameters.records.sorting.push({
-        name: name,
-        sortDirection: desc ? 1 : 0,
-    });
-    this.context.parameters.records.refresh();
+  const sorting = this.context.parameters.records.sorting;
+  while (sorting.length > 0) {
+    sorting.pop();
+  }
+  this.context.parameters.records.sorting.push({
+    name: name,
+    sortDirection: desc ? 1 : 0,
+  });
+  this.context.parameters.records.refresh();
 };
 
 onFilter = (name: string, filter: boolean): void => {
-    const filtering = this.context.parameters.records.filtering;
-    if (filter) {
-        filtering.setFilter({
-            conditions: [
-                {
-                    attributeName: name,
-                    conditionOperator: 12, // Does not contain Data
-                },
-            ],
-        } as ComponentFramework.PropertyHelper.DataSetApi.FilterExpression);
-    } else {
-        filtering.clearFilter();
-    }
-    this.context.parameters.records.refresh();
+  const filtering = this.context.parameters.records.filtering;
+  if (filter) {
+    filtering.setFilter({
+      conditions: [
+        {
+          attributeName: name,
+          conditionOperator: 12, // Does not contain Data
+        },
+      ],
+    } as ComponentFramework.PropertyHelper.DataSetApi.FilterExpression);
+  } else {
+    filtering.clearFilter();
+  }
+  this.context.parameters.records.refresh();
 };
 ```
 
 You'll see that:
 
-1. The sort and filter are applied to the dataset property using the  [`sorting`](reference\sortstatus.md) and [`filtering`](reference\filtering.md).
+1. The sort and filter are applied to the dataset property using the [`sorting`](reference\sortstatus.md) and [`filtering`](reference\filtering.md).
 2. When modifying the sort columns, the existing sort definitions must be removed using pop rather than the sorting array itself being replaced.
 3. [Refresh](reference\dataset\refresh.md) must be called after sorting and filtering is applied. If a filter and sort are applied at the same time, refresh only needs to be called once.
 
@@ -928,12 +931,12 @@ You have already defined an output property called `FilteredRecordCount` in the 
 
 ```typescript
 if (this.filteredRecordCount !== this.sortedRecordsIds.length) {
-    this.filteredRecordCount = this.sortedRecordsIds.length;
-    this.notifyOutputChanged();
+  this.filteredRecordCount = this.sortedRecordsIds.length;
+  this.notifyOutputChanged();
 }
 ```
 
-This updates the `filteredRecordCount`  on the code component class you defined earlier when it/s different to the new data received. After `notifyOutputChanged` is called, you need to ensure the value is returned when `getOutputs` is called, so update the `getOutputs` method to be:
+This updates the `filteredRecordCount` on the code component class you defined earlier when it/s different to the new data received. After `notifyOutputChanged` is called, you need to ensure the value is returned when `getOutputs` is called, so update the `getOutputs` method to be:
 
 ```typescript
 public getOutputs(): IOutputs {
@@ -948,10 +951,10 @@ public getOutputs(): IOutputs {
 For large datasets, canvas apps will split the records across multiple records. You can add a footer that shows page navigation controls. Each button will be rendered using a Fluent UI `IconButton`, so add this to the imports inside `Grid.tsx`:
 
 ```typescript
-import { IconButton } from '@fluentui/react/lib/components/Button/IconButton/IconButton';
+import { IconButton } from "@fluentui/react/lib/components/Button/IconButton/IconButton";
 ```
 
-Again to `Grid.tsx`, add the following `Stack.Item` below the existing `Stack.Item` that contains the `ScrollablePane`: 
+Again to `Grid.tsx`, add the following `Stack.Item` below the existing `Stack.Item` that contains the `ScrollablePane`:
 
 ```react
 <Stack.Item>
@@ -989,24 +992,22 @@ You'll see that:
 
 1. The `Stack` ensures that the footer will stack below the `DetailsList`. The `grow` attribute is used to make sure that the grid expands to fill the available space.
 
-2. You load the format for the page indicator label from the resource strings (`"Page {0} ({1} Selected)"`) and format using a simple function that must be added at the top of `Grid.tsx`. This could equally be in a separate file and shared between your components for convenience: 
+2. You load the format for the page indicator label from the resource strings (`"Page {0} ({1} Selected)"`) and format using a simple function that must be added at the top of `Grid.tsx`. This could equally be in a separate file and shared between your components for convenience:
 
    ```typescript
    function stringFormat(template: string, ...args: string[]): string {
-       for (const k in args) {
-           template = template.replace('{' + k + '}', args[k]);
-       }
-       return template;
+     for (const k in args) {
+       template = template.replace("{" + k + "}", args[k]);
+     }
+     return template;
    }
    ```
-
-   
 
 3. You can provide `alt` text for accessibility on the paging `IconButtons`.
 
 4. The style on the footer could equally be applied using a CSS class name referencing a CSS file added to the code component.
 
-Next, you must add the missing `loadFirstPage`, `loadNextPage`, and `loadPreviousPage` callback props. 
+Next, you must add the missing `loadFirstPage`, `loadNextPage`, and `loadPreviousPage` callback props.
 
 To the `GridProps` interface, add the following:
 
@@ -1022,28 +1023,23 @@ export interface GridProps {
 Then, add these new props, along with the resources, to the props destructuring:
 
 ```typescript
-const {
-    ...
-    loadFirstPage,
-    loadNextPage,
-    loadPreviousPage,
-} = props;
+const { ...loadFirstPage, loadNextPage, loadPreviousPage } = props;
 ```
 
 These callbacks are then added to `index.ts` below the `onFilter` method:
 
 ```typescript
 loadFirstPage = (): void => {
-    this.currentPage = 1;
-    this.context.parameters.records.paging.loadExactPage(1);
+  this.currentPage = 1;
+  this.context.parameters.records.paging.loadExactPage(1);
 };
 loadNextPage = (): void => {
-    this.currentPage++;
-    this.context.parameters.records.paging.loadExactPage(this.currentPage);
+  this.currentPage++;
+  this.context.parameters.records.paging.loadExactPage(this.currentPage);
 };
 loadPreviousPage = (): void => {
-    this.currentPage--;
-    this.context.parameters.records.paging.loadExactPage(this.currentPage);
+  this.currentPage--;
+  this.context.parameters.records.paging.loadExactPage(this.currentPage);
 };
 ```
 
@@ -1067,7 +1063,7 @@ ReactDOM.render(
 Code components offer the ability to show in full screen mode. This is especially useful on small screen sizes or where there's limited space for the code component within a canvas app screen. You can use the Fluent UI `Link` component so it must be added to the imports at the top of `Grid.tsx`:
 
 ```typescript
-import { Link } from '@fluentui/react/lib/components/Link/Link';
+import { Link } from "@fluentui/react/lib/components/Link/Link";
 ```
 
 To add a full screen link, you add the following to the existing `Stack` that contains the paging controls. (Be sure to add this to the nested `Stack`, and not the root `Stack`):
@@ -1098,22 +1094,18 @@ export interface GridProps {
 Add these new props, along with the resources, to the props destructuring:
 
 ```typescript
-const {
-    ...
-    onFullScreen,
-    isFullScreen,
-} = props;
+const { ...onFullScreen, isFullScreen } = props;
 ```
 
 To provide these new props, inside `index.ts`, add the following callback method:
 
 ```typescript
 onFullScreen = (): void => {
-    this.context.mode.setFullScreen(true);
+  this.context.mode.setFullScreen(true);
 };
 ```
 
-The call to [setFullScreen](reference\mode\setfullscreen.md) causes the code component to open the full screen mode and adjust the `allocatedHeight` and `allocatedWidth` accordingly because you've made the call to `trackContainerResize(true)` in the `init` method. Once the full screen mode is open, `updateView` will be called, allowing us to update the rendering of the component with the new size. The `updatedProperties` contains `fullscreen_open` or `fullscreen_close`, depending on the transition that is happening. 
+The call to [setFullScreen](reference\mode\setfullscreen.md) causes the code component to open the full screen mode and adjust the `allocatedHeight` and `allocatedWidth` accordingly because you've made the call to `trackContainerResize(true)` in the `init` method. Once the full screen mode is open, `updateView` will be called, allowing us to update the rendering of the component with the new size. The `updatedProperties` contains `fullscreen_open` or `fullscreen_close`, depending on the transition that is happening.
 
 To store the state of the full screen mode, add a new field to the `CanvaGrid` class inside `index.ts`:
 
@@ -1124,11 +1116,11 @@ isFullScreen = false;
 To the `updateView` method, add the following to track the state:
 
 ```typescript
-if (context.updatedProperties.indexOf('fullscreen_close') > -1) {
-    this.isFullScreen = false;
+if (context.updatedProperties.indexOf("fullscreen_close") > -1) {
+  this.isFullScreen = false;
 }
-if (context.updatedProperties.indexOf('fullscreen_open') > -1) {
-    this.isFullScreen = true;
+if (context.updatedProperties.indexOf("fullscreen_open") > -1) {
+  this.isFullScreen = true;
 }
 ```
 
@@ -1145,14 +1137,14 @@ ReactDOM.render(
 
 ### Highlighting rows
 
-Now you're ready to add the conditional row highlighting functionality. You've already defined the `HighlightValue` and `HighlightColor` input properties, and the `HighlightIndicator` `property-set`. The `property-set` allows the maker to nominate a field to use to compare with the value they provide in `HighlightValue`. 
+Now you're ready to add the conditional row highlighting functionality. You've already defined the `HighlightValue` and `HighlightColor` input properties, and the `HighlightIndicator` `property-set`. The `property-set` allows the maker to nominate a field to use to compare with the value they provide in `HighlightValue`.
 
 Adding custom row rendering in the `DetailsList` requires some additional imports, so add the following to the top of `Grid.tsx`:
 
 ```typescript
-import { IDetailsListProps } from '@fluentui/react/lib/components/DetailsList/DetailsList.types';
-import { IDetailsRowStyles } from '@fluentui/react/lib/components/DetailsList/DetailsRow.types';
-import { DetailsRow } from '@fluentui/react/lib/components/DetailsList/DetailsRow';
+import { IDetailsListProps } from "@fluentui/react/lib/components/DetailsList/DetailsList.types";
+import { IDetailsRowStyles } from "@fluentui/react/lib/components/DetailsList/DetailsRow.types";
+import { DetailsRow } from "@fluentui/react/lib/components/DetailsList/DetailsRow";
 ```
 
 Now, create the custom row renderer by adding the following just below the `const rootContainerStyle` block:
@@ -1180,11 +1172,7 @@ You'll see that:
 You'll see that you need to add some additional props for `highlightColor` and `highlightValue` that will be provided by the rendering inside `updateView`. You've already added to the `GridProps` interface, so you just need to add them to the props destructuring:
 
 ```typescript
-const {
-    ...
-    highlightValue,
-    highlightColor,
-} = props;
+const { ...highlightValue, highlightColor } = props;
 ```
 
 Now, you can pass the `onRenderRow` method into the `DetailsList` props:
@@ -1202,7 +1190,7 @@ Now that you've implemented all the features, you must deploy the code component
 
 1. Inside your Dataverse environment, ensure there's a publisher created with a prefix of `samples`:
 
-   > [!div class="mx-imgBorder"]
+   > [!div class="mx-imgBorder"] 
    > ![Add new publisher.](media/field-component-4.png "Add new publisher")
 
    Equally, this could be your own publisher, provided you update the publisher prefix parameter in the call to `pac pcf push` below.
@@ -1228,16 +1216,16 @@ Now that you've implemented all the features, you must deploy the code component
 
 4. Once completed, this process will have created a small temporary solution named **PowerAppTools_samples** in your environment, and the `CanvasGrid` code component will be added to this solution. You can move the code component into your own solution later if necessary. More information: [Code Component Application Lifecycle Management (ALM)](code-components-alm.md).
 
-   > [!div class="mx-imgBorder"]
+   > [!div class="mx-imgBorder"] 
    > ![PowerAppsTools_samples solution.](media/canvas-datagrid-4.png "PowerAppsTools_samples solution")
 
-5. To use code components inside canvas apps, you must enable the **Power Apps component framework for canvas apps** on the environment you're using. Open the **Admin center** (admin.powerplatform.microsoft.com) and navigate to your environment. 
+5. To use code components inside canvas apps, you must enable the **Power Apps component framework for canvas apps** on the environment you're using. Open the **Admin center** (admin.powerplatform.microsoft.com) and navigate to your environment.
    Navigate to **Settings** > **Product** > **Features** . Ensure **Power Apps component framework for canvas apps** is turned **On**:
 
-   > [!div class="mx-imgBorder"]
+   > [!div class="mx-imgBorder"] 
    > ![Enable Code Components.](media/canvas-datagrid-enable.png "Enable code components")
 
-6. Create a new canvas app using the **Tablet** layout. 
+6. Create a new canvas app using the **Tablet** layout.
 
 7. From the **Insert** panel, select **Get more components**.
 
@@ -1253,9 +1241,9 @@ Now that you've implemented all the features, you must deploy the code component
 
     - **Highlight Value** = `1` - This is the value that `statecode` has when the record is inactive.
     - **Highlight Color** = `#FDE7E9` - This is the color to use when the record is inactive.
-    - **`HighlightIndicator`**  = `"statecode"` - This is the field to compare against. This will be on the **Advanced** panel in the **DATA** section.
+    - **`HighlightIndicator`** = `"statecode"` - This is the field to compare against. This will be on the **Advanced** panel in the **DATA** section.
 
-    > [!div class="mx-imgBorder"]
+    > [!div class="mx-imgBorder"] 
     > ![Properties Panel.](media/canvas-datagrid-5.png "Properties Panel")
 
 13. Add a new `TextInput` component and name it `txtSearch`.
@@ -1288,8 +1276,8 @@ You can easily debug your code component while it's running inside the canvas ap
 
 Select `Ctrl` + `P` and type `Grid.tsx` or `Index.tsx`. You can then set a break point and step through your code.
 
-   > [!div class="mx-imgBorder"]
-   > ![Debug in canvas apps.](media/canvas-datagrid-9.png "Debug in canvas apps")
+> [!div class="mx-imgBorder"] 
+> ![Debug in canvas apps.](media/canvas-datagrid-9.png "Debug in canvas apps")
 
 If you need to make further changes to your component, you don't need to deploy each time. Instead, use the technique described in [Debug code components](debugging-custom-controls.md) to create a Fiddler **AutoResponder** to load the file from your local file system while `npm start watch` is running.
 
@@ -1303,10 +1291,10 @@ REGEX:(.*?)((?'folder'css|html)(%252f|\/))?SampleNamespace\.CanvasGrid[\.\/](?'f
 C:\repos\CanvasGrid\out\controls\CanvasGrid\${folder}\${fname}
 ```
 
-   > [!div class="mx-imgBorder"] 
-   > ![AutoResponder rule.](media/canvas-datagrid-8.png "AutoResponder rule")
+> [!div class="mx-imgBorder"] 
+> ![AutoResponder rule.](media/canvas-datagrid-8.png "AutoResponder rule")
 
-You'll also need to enable the filters to add the `Access-Control-Allow-Origin` header. More information: [Debugging after deploying into Microsoft Dataverse using Fiddler](debugging-custom-controls.md#debugging-after-deploying-into-microsoft-dataverse-using-fiddler).
+You'll also need to enable the filters to add the `Access-Control-Allow-Origin` header. More information: [Debugging after deploying into Microsoft Dataverse](debugging-custom-controls.md#debugging-after-deploying-into-microsoft-dataverse).
 
 You'll need to **Empty cache and hard refresh** on your browser session for the **AutoResponder** file to be picked up. Once loaded, you can simply refresh the browser since Fiddler will add a cache control header to the file to prevent it from being cached.
 
@@ -1326,4 +1314,3 @@ So far, you've deployed a development build, which is not optimized and will run
 [Debug code components](debugging-custom-controls.md)<br/>
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
-

@@ -83,7 +83,7 @@ it.
 
     ![Create a dataflow.](media/create-a-dataflow.png)
 
-4.  On the **New Dataflow** page enter a **Name** for the dataflow. By default, dataflows store tables in Dataverse. Select **Analytical entities only** if you want tables to be stored in your organization's Azure Data Lake storage account. Select **Create**. <!-- On the **Select load target** page, select the destination storage where you want tables to be stored. Dataflows can store tables in Dataverse or in your organization's Azure Data Lake storage account. Once you select a destination to load data to, enter a **Name** for the dataflow, and then select **Create**. -->
+4.  On the **New Dataflow** page enter a **Name** for the dataflow. By default, dataflows store tables in Dataverse. Select **Analytical entities only** if you want tables to be stored in your organization's Azure Data Lake storage account. Select **Create**. 
 
      > [!IMPORTANT]
      > There is only one owner of any dataflow—the person who created it. Only the owner can edit the dataflow. Authorization
@@ -132,8 +132,7 @@ queries step described below, you can map columns from your data source tables t
 table columns as defined by the Common Data Model. Standard tables have a
 known schema defined by the Common Data Model.
 
-For more information about this approach, and about the Common Data Model, see [The Common Data
-Model](/common-data-model/).
+For more information about this approach, and about the Common Data Model, see [The Common Data Model](/common-data-model/).
 
 To leverage the Common Data Model with your dataflow, select the **Map to Standard** transformation in the **Edit Queries** dialog. In the **Map tables** screen that appears, select the standard table that you want to map.
 
@@ -190,7 +189,7 @@ like tables from any other dataset. -->
 ## Using dataflows stored in Azure Data Lake Storage Gen2
 Some organizations might want to use their own storage for creation and management
 of dataflows. You can integrate dataflows with Azure Data Lake Storage Gen2 if
-you follow the requirements to set up the storage account properly. More information: [Connect Azure Data Lake Storage Gen2 for dataflow storage](/power-bi/service-dataflows-connect-azure-data-lake-storage-gen2) 
+you follow the requirements to set up the storage account properly. More information: [Connect Azure Data Lake Storage Gen2 for dataflow storage](/power-query/dataflows/connect-azure-data-lake-storage-for-dataflow) 
 
 ## Troubleshooting data connections
 There might be occasions when connecting to data sources for dataflows runs into
@@ -216,11 +215,11 @@ issues. This section provides troubleshooting tips when issues occur.
 ## Next steps
 The following articles are useful for further information and scenarios when using dataflows:
 
--   [Add data to a table in Dataverse](add-data-power-query.md)
+-   [Add data to a table in Dataverse](/power-query/dataflows/add-data-power-query)
 
--   [Using dataflows with on-premises data sources](using-dataflows-with-on-premises-data.md)
+-   [Using an on-premises data gateway in Power Platform dataflows](/power-query/dataflows/using-dataflows-with-on-premises-data)
 
--   [Connect Azure Data Lake Storage Gen2 for dataflow storage](/power-bi/service-dataflows-connect-azure-data-lake-storage-gen2)
+-   [Connect Azure Data Lake Storage Gen2 for dataflow storage](/power-query/dataflows/connect-azure-data-lake-storage-for-dataflow)
 
 For more information about the Common Data Model:
 

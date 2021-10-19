@@ -2,7 +2,7 @@
 title: "Service protection API limits (Microsoft Dataverse) | Microsoft Docs" 
 description: "Understand the service protection limits for API requests." 
 ms.custom: ""
-ms.date: 03/26/2021
+ms.date: 09/24/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -175,15 +175,17 @@ More information:
 - [Use Task Parallel Library with Web API](#use-task-parallel-library-with-web-api)
 - [Use Task Parallel Library with CrmServiceClient](#use-task-parallel-library-with-crmserviceclient)
 
-### Avoid batching
+### Avoid large batches
 
-In the Organization Service the conventional wisdom has been to employ the <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest> to bundle multiple operations. The main benefit this provides is that it reduces the total amount of SOAP XML payload that must be sent over the wire. This provides some performance benefit when network latency is an issue.
-
-In the past, ExecuteMultiple operations were limited to just 2 at a time because of the impact on performance that this could have. This is no longer the case, because service protection API limits have made that limit redundant.
+*Batching* refers to sending multiple operations in a single request.
 
 Most scenarios will be fastest sending single requests with a high degree of parallelism. If you feel batch size might improve performance, it is best to start with a small batch size of 10 and increase concurrency until you start getting service protection API limit errors that you will retry.
 
-When using the Web API, the smaller JSON payload sent over the wire for individual requests means that network latency is not an issue. The total amount of payload that is sent using $batch is greater than sending individual requests. Only use $batch if you want to manage transactions using changesets. More information: [Execute batch operations using the Web API](webapi/execute-batch-operations-using-web-api.md)
+With the Organization Service SDK this means using <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest>, which typically allows sending up to 1000 operations in a request. The main benefit this provides is that it reduces the total amount of SOAP XML payload that must be sent over the wire. This provides some performance benefit when network latency is an issue. For service protection limits it increases the total execution time per request. Larger sized batches increase the chance you will encounter execution time limits rather than limits on the number of requests.
+
+In the past, `ExecuteMultiple` operations were limited to just 2 at a time because of the impact on performance that this could have. This is no longer the case, because service protection execution time API limits have made that limit redundant.
+
+When using the Web API, the smaller JSON payload sent over the wire for individual requests means that network latency is not an issue. Only use `$batch` if you want to manage transactions using `changesets`. More information: [Execute batch operations using the Web API](webapi/execute-batch-operations-using-web-api.md)
 
 > [!NOTE]
 > Batch operations are not a valid strategy to bypass entitlement limits. Service protection API limits and Entitlement limits are evaluated separately. Entitlement limits are based on CRUD operations and accrue whether or not they are included in a batch operation. More information: [Entitlement limits](../../maker/data-platform/api-limits-overview.md#entitlement-limits)
@@ -350,11 +352,11 @@ This section includes frequently asked questions. If you have questions that are
 
 Work with the ETL application vendor to learn which settings to apply. Make sure you are using a version of the product that supports the Retry-After behavior.
 
-### Do these limits apply to Relevance Search?
+### Do these limits apply to Dataverse search?
 
-No. Relevance search is a different API (`api/search` rather than `api/data`) and has different rules. When using the relevance search API, there is a throttling limit of one request per second for each user.
+No. Dataverse search is a different API (`api/search` rather than `api/data`) and has different rules. When using the Dataverse search API, there is a throttling limit of one request per second for each user.
 
-More information: [Search across table data using relevance search](webapi/relevance-search.md)
+More information: [Search across table data using Dataverse search](webapi/relevance-search.md)
 
 ### How do these limits apply to how many requests a user is entitled to each day?
 

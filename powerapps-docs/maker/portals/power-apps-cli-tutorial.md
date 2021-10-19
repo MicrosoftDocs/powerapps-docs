@@ -1,11 +1,11 @@
 ---
-title: Tutorial on how to use Power Apps CLI with portals
-description: This page provides a walk-through with examples for how to use Power Apps CLI with Power Apps portals for CI/CD (Continuous Integration/Continuous Deployment).
+title: Tutorial on how to use Power Platform CLI with portals
+description: This page provides a walk-through with examples for how to use Power Platform CLI with Power Apps portals for CI/CD (Continuous Integration/Continuous Deployment).
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/27/2021
+ms.date: 10/11/2021
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: tapanm
@@ -16,19 +16,13 @@ contributors:
 
 # Tutorial: Use Microsoft Power Platform CLI with portals
 
-[This article is pre-release documentation and is subject to change.]
-
 In this tutorial example, you’ll see how to get started with Microsoft Power Platform CLI to update sample portals configuration.
 
 > [!NOTE]
 > This tutorial focuses on the required Microsoft Power Platform CLI commands for
-Power Apps portals use. For more information about commands used in Power Apps
+Power Apps portals use. For more information about commands used in Power Platform
 CLI, read [Common
 commands](../../developer/data-platform/powerapps-cli.md#common-commands).
-
-> [!IMPORTANT]
-> - This is a preview feature.
-> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
 
 ## Download and install Visual Studio Code
 
@@ -44,7 +38,7 @@ PowerShell instead.
 Before you connect, list, download, or upload any changes for a Power Apps
 portal, you must authenticate to the Dataverse environment first. For more
 information about authentication using Microsoft Power Platform CLI, go to [Microsoft Power Platform CLI –
-Auth](../../developer/data-platform/powerapps-cli.md#auth).
+Auth](../../developer/data-platform/cli/reference/auth-command.md).
 
 To authenticate, open Windows PowerShell and run the following command using
 your Dataverse environment URL:
@@ -89,7 +83,7 @@ previous step.
 Change the configuration using Visual Studio Code and save your changes.
 
 > [!NOTE]
-> Ensure you update only the supported tables for use with Power Apps
+> Ensure you update only the supported tables for use with Power Platform 
 CLI. For more information, see [Supported tables](power-apps-cli.md#supported-tables).
 
 For example, the default portal page shows text such as this:
@@ -113,7 +107,7 @@ directly in Visual Studio Code.
 
 After making the required changes, upload them using the following command:
 
-`pac paportal --path [Folder-location]`
+`pac paportal upload --path [Folder-location]`
 
 **Example**
 
@@ -158,5 +152,5 @@ portals content for other [supported tables](power-apps-cli.md#supported-tables)
 ### See also
 
 - [Microsoft Power Platform CLI](../../developer/data-platform/powerapps-cli.md)
-- [Use the Visual Studio Code extension (Preview)](vs-code-extension.md)
+- [Use the Visual Studio Code extension (preview)](vs-code-extension.md)
 
