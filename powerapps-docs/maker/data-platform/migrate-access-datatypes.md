@@ -110,7 +110,15 @@ To successfully migrate a choice field from Access, the field must be created in
 1. In the next dialog enter *2* for the number of columns and then select the field below **Col1**.
 1. In **Col1** enter values for three rows by entering *1*, *2*, and *3*. In **Col2** enter values for three rows by entering *red*, *green*, and *blue*.
    :::image type="content" source="media/access-lookup-wizard2.png" alt-text="Create two columns with three rows of data each":::
-1. 
+1. Select the separator between **Col1** and **Col2** and slide it to the left so that only **Col2** appears.
+   :::image type="content" source="media/access-lookup-wizard3.png" alt-text="Move the slider between the columns to the left":::
+1. Select **Next** > **Next** > **Finish** to complete the Lookup Wizard.
+1. Save your changes and return to the **Datasheet View**.
+1. Create a new record to validate the choice field works as expected. It should appear like this if it was configured properly.
+   :::image type="content" source="media/access-lookup-wizard4.png" alt-text="How the choice field should appear in Access":::
+1. Close the table and export to Dataverse.
+1. If everything worked properly, the choice field in Dataverse will appear like this when adding a new record.
+   :::image type="content" source="media/access-lookup-wizard5.png" alt-text="How the choice field should appear in Dataverse after migration from Access":::
 
 ### See also
 
