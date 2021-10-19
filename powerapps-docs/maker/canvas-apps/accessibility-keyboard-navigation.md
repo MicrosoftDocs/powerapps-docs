@@ -1,11 +1,11 @@
 ---
-title: Improved keyboard navigation in canvas apps (Experimental)
-description: Learn about how to use the improved keyboard navigation experience for better accessibility.
+title: Improved canvas keyboard navigation in canvas apps (Experimental)
+description: Learn about how to use the improved canvas keyboard navigation experience for better accessibility.
 author: hemantgaur
 ms.service: powerapps
 ms.topic: article
 ms.custom: canvas
-ms.date: 08/05/2021
+ms.date: 10/19/2021
 ms.subservice: canvas-maker
 ms.author: hemantg
 search.audienceType:
@@ -13,12 +13,12 @@ search.audienceType:
 search.app:
   - PowerApps
 contributors:
-  - tahoon-ms
+  - MSYuey
   - tapanm-msft
   - hemantgaur
 ---
 
-# Improved keyboard navigation in canvas apps (Experimental)
+# Improved canvas keyboard navigation in canvas apps (Experimental)
 
 [This article is pre-release documentation and is subject to change.]
 
@@ -26,7 +26,7 @@ contributors:
 > - This is an experimental feature.
 > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
 
-When you're nesting controls such as containers and component instances, the user input value for [TabIndex](controls/properties-accessibility.md#tabindex) isn't respected sometimes. **Improved keyboard navigation** experimental setting improves the navigation experience in this situation when **Tab** key is pressed on the keyboard helping focus on the desired container or control precisely and predictably.
+When you're nesting controls such as containers and component instances, the user input value for [TabIndex](controls/properties-accessibility.md#tabindex) isn't respected sometimes. **Improved canvas keyboard navigation** experimental setting improves the navigation experience in this situation when **Tab** key is pressed on the keyboard helping focus on the desired container or control precisely and predictably.
 
 This feature also adds support for handling accessibility for keyboard tabs inline with rest of the controls in canvas apps. And addresses manual TabIndex assignments for all controls.
 
@@ -40,9 +40,9 @@ When this feature is turned on, it also enables the following boolean properties
 | **Prioritize child controls** | Determines the order of navigation (**Z-order**) for child controls on canvas when pressing tab key on the keyboard. <ul> <li> **True** (Default): Pressing the tab key on the keyboard will first progress through all child controls before moving the focus outside of the selected container or component instance. This option is recommended for similarly nested HTML elements. </li> <li> **False**: Pressing the tab key on the keyboard will progress through all controls only based on Z-order, ignoring parent-child relationship between controls or containers for keyboard navigation. </li> </ul> **Note**: This property isn't applicable to [responsive or autolayout](create-responsive-layout.md) containers. |
 | **Enable child control focus** | Determines the value of [TabIndex](controls/properties-accessibility.md#tabindex) for child controls on canvas when pressing tab key on the keyboard. <ul> <li> **True** (Default): Pressing the tab key behaves as per TabIndex values defined on each control. </li> <li> **False**: Pressing the tab key doesn't move focus to any child control within the selected container or component instance. Sets the TabIndex value to **-1** for all child controls. </li> </ul> |
 
-## Configure improved keyboard navigation in your app
+## Configure improved canvas keyboard navigation in your app
 
-Follow these steps to enable this feature in your app, and set the properties mentioned earlier.
+If not already enabled, follow these steps to enable this feature in your app, and set the properties mentioned earlier.
 
 1. Sign in to [Power Apps](https://make.poweraps.com).
 
@@ -52,17 +52,21 @@ Follow these steps to enable this feature in your app, and set the properties me
 
 1. In Power Apps Studio, select **File** > **Settings** > **Upcoming features** > **Experimental**.
 
-1. Select **Improved keyboard navigation** to turn on the feature. !![Screenshot to follow]!!
+1. Select **Improved canvas keyboard navigation** to turn on the feature.
+
+    :::image type="content" source="/media/accessibility-keyboard-navigation.png" alt-text="Improved canvas keyboard navigation setting":::
 
 1. Close settings.
 
 Now that you've enabled the experimental feature, you'll see two new properties for controls and containers&mdash;**Prioritize child controls**, and **Enable child control focus**. Change the property values as appropriate.
 
+:::image type="content" source="/media/improved-canvas-keyboard-navigation.png" alt-text="Improved canvas keyboard navigation properties":::
+
 ## Examples
 
-Now that you understand the new feature with improved keyboard navigation, let's take a look at a few examples to understand the behavior when the tab key is pressed.
+Now that you understand the new feature with improved canvas keyboard navigation, let's take a look at a few examples to understand the behavior when the tab key is pressed.
 
-### Default improved keyboard navigation behavior
+### Default improved canvas keyboard navigation behavior
 
 The following example shows multiple Text input controls, and several nesting scenarios. The number displayed in the input represents the value of the [TabIndex](controls/properties-accessibility.md#tabindex) property. There are two nested containers, and component controls overlaid on top of each other.
 
