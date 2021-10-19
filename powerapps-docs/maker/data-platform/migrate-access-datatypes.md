@@ -74,7 +74,7 @@ You'll notice some Dataverse columns don't have the same size capacity as Access
 |Long Text/Multiline Text  | 1 GB   | 1,048,576 characters    |
 |Autonumber   |  2,147,483,647  | 4000 characters    |
 |Date and Time   |  Standard data and time | Standard data and time   |
-|Currency<sup>4</sup>  |  Min/max 922,337,203,685,477     |  min/max 922,337,203,685,477   |
+|Currency<sup>4</sup>  |  Min/max -1,922,337,203,685,477/922,337,203,685,477     |  Min/max -1,922,337,203,685,477/922,337,203,685,477   |
 |Decimal Number  | min/max - 10^28-1 up to 28 decimals   |  Min/max 100,000,000,000 up to 10 decimal places    |
 |Yes/No  |  Boolean   | Boolean   |
 |Int/Whole Number   |  Min/max 2^31   | Min/max 2,147,483,647   |
@@ -100,7 +100,7 @@ Because of these differences, migrating multi-value lookup columns from Access i
 
 ### Creating a valid choice field for export to Dataverse
 
-To successfully migrate a choice field from Access, the field must be created in a similar manner.
+To successfully migrate a choice field from Access, the field must be created in a manner that is similar to the steps described here.
 
 1. Create a new table in Access.
 1. Add a **Number** field to the table. It must be a **Number** field to support export to Dataverse.
@@ -116,7 +116,7 @@ To successfully migrate a choice field from Access, the field must be created in
 1. Save your changes and return to the **Datasheet View**.
 1. Create a new record to validate the choice field works as expected. It should appear like this if it was configured properly.
    :::image type="content" source="media/access-lookup-wizard4.png" alt-text="How the choice field should appear in Access":::
-1. Close the table and export to Dataverse.
+1. Close the table and migrate it to Dataverse.
 1. If everything worked properly, the choice field in Dataverse will appear like this when adding a new record.
    :::image type="content" source="media/access-lookup-wizard5.png" alt-text="How the choice field should appear in Dataverse after migration from Access":::
 
