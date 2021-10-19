@@ -71,6 +71,11 @@ Flows created outside a solution use Connections directly. Flows created in a so
 
 When an action is added to a solution flow, Power Automate will try to reuse existing Connection References from the current solution or other solutions before creating a new Connection Reference. To ensure that the Connection Reference is inside the same solution as the flow, create or add a Connection Reference in the same solution and reference that Connection Reference from the flow.
 
+### Enabling flows containing connections from another user
+
+When a flow is enabled, the enabling user needs to own all the connections. This is usually accomplished by having the flow owner create the connections inside all the connection references that the flow uses. 
+Directly sharing a connection with another is not currently possible, so if a user other than the owner needs to provide the connections, then [an admin account can impersonate that user](https://docs.microsoft.com/en-us/powerapps/developer/data-platform/impersonate-another-user) and then enable the flow. This impersonation mechanism is one that is used to [activate flows in the ALM Accelerator](https://github.com/microsoft/coe-alm-accelerator-templates/blob/main/Pipelines/Templates/activate-flows.yml).
+
 ### See also
 
 [Connectors](/connectors/connectors)
