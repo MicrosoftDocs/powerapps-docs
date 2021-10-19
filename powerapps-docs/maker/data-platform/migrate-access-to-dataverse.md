@@ -81,7 +81,6 @@ Users integrating Access with Dataverse or Dataverse for Teams may find some dif
 
 Unlike Access, Dataverse and Dataverse for Teams are data sources, the user interface layer will depend on what Power Platform feature you are using: Power Apps, Power Automate, Power BI, or Power Virtual Assistant. The lists below encompass naming differences and similarities at the database layer only.
 
-
 |Access  |Dataverse and Dataverse for Teams  |Comments  |
 |---------|---------|---------|
 |Primary Key  | Primary Key   | The usage is the same but the key contents are different    |
