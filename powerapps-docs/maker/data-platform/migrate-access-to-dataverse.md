@@ -73,13 +73,13 @@ Total storage capacity is also different. Dataverse and Dataverse for Teams have
 
 <sup>1</sup> Single base license
 
-For more information, go to [How are Dataverse for Teams and Dataverse different?](../../teams/data-platform-compare.md).
+For more information, go to [How are Dataverse for Teams and Dataverse different?](../../teams/data-platform-compare.md)
 
 ## Comparison of Access and Dataverse Terminology
 
 Users integrating Access with Dataverse or Dataverse for Teams may find some differences in names for general features and functions. This section provides a guide to understand naming differences.
 
-Unlike Access, Dataverse and Dataverse for Teams are data sources, the user interface layer will depend on what Power Platform feature you are using: Power Apps, Power Automate, Power BI, or Power Virtual Assistant. The lists below encompass naming differences and similarities at the database layer only.
+Unlike Access, Dataverse and Dataverse for Teams are data sources. The user interface layer will depend on what Power Platform feature you are using: Power Apps, Power Automate, Power BI, or Power Virtual Agents. The lists below encompass naming differences and similarities at the database layer only.
 
 |Access  |Dataverse and Dataverse for Teams  |Comments  |
 |---------|---------|---------|
@@ -95,7 +95,7 @@ Unlike Access, Dataverse and Dataverse for Teams are data sources, the user inte
 |Yes/No      | Yes/No         |  Supported for migration        |
 |Int      | Whole Number         |  Supported for migration       |
 |Multi-Select Options      | Choices        | Supported for migration         |
-|GUID      | Unique Identifier           |         | In Dataverse and Dataverse for Teams, this is currently only used as a key 
+|GUID      | Unique Identifier           |   In Dataverse and Dataverse for Teams, this is currently only used as a key        |
 |  Hyperlink         |  URL       | Supported for migration         |
 |Unique Index      |  Alternate Key        |         |
 |Multi-Value Lookup      | Choice        | Supported for migration         |
