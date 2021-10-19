@@ -54,13 +54,13 @@ If not already enabled, follow these steps to enable this feature in your app, a
 
 1. Select **Improved canvas keyboard navigation** to turn on the feature.
 
-    :::image type="content" source="/media/accessibility-keyboard-navigation.png" alt-text="Improved canvas keyboard navigation setting":::
+    :::image type="content" source="/media/accessibility-keyboard-navigation/accessibility-keyboard-navigation.png" alt-text="Improved canvas keyboard navigation setting":::
 
 1. Close settings.
 
 Now that you've enabled the experimental feature, you'll see two new properties for controls and containers&mdash;**Prioritize child controls**, and **Enable child control focus**. Change the property values as appropriate.
 
-:::image type="content" source="/media/improved-canvas-keyboard-navigation.png" alt-text="Improved canvas keyboard navigation properties":::
+:::image type="content" source="/media/accessibility-keyboard-navigation/improved-canvas-keyboard-navigation.png" alt-text="Improved canvas keyboard navigation properties":::
 
 ## Examples
 
