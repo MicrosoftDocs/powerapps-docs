@@ -58,3 +58,9 @@ The following columns are included in all tables of Dataverse and Dataverse for 
 - **Time Zone Rule Version**: Internal only used to determine which set of time zone rules apply.
 - **UTC Conversion Time Zone Code**: The time zone offset code that was in use at the time the row was created.
 - **Version Number**: The version number of a row used to track previous changes if auditing is enabled.
+
+### See also
+
+[Migrate Microsoft Access data to Microsoft Dataverse](migrate-access-to-dataverse.md)
+
+[Data types and sizes for Access data migration to Dataverse](migrate-access-datatypes.md)
