@@ -32,26 +32,27 @@ Users can choose to either cancel the migration completely, or to continue to mi
 
 ## Access data types supported by Dataverse
 
-In the table below, you'll find information that will assist you in planning your data migration.
+In the table below, the data type mappings supported can assist you in planning your data migration.
 
 |Access data type |Dataverse data type | Can migrate?  |
 |---------|---------|---------|
-|Short text  | Text     |   Yes    |
-|Long text   | Multiline text   | Yes   |
+|Short Text  | Text     |   Yes    |
+|Long Text   | Multiline text   | Yes   |
 |Autonumber  | Autonumber    |  Yes  |
 |Date/Time  | Date and Time   |  Yes    |
 |Currency  | Currency  | Yes  |
 |Number: Decimal  | Decimal Number  | Yes  |
-|Yes/No  | Two options   |  Yes   |
+|Yes/No  | Yes/No  |  Yes   |
 |Int   | Whole Number   | Yes   |
 |Lookup Wizard  | Lookup   | Yes  |
 |Multi-Value Lookups   | Choice    | Yes<sup>1</sup>        |
-|Hyperlinks  | URL   |  Yes       |
+|Hyperlink  | URL   |  Yes       |
 
-<sup>1</sup>One column multi-value lookups only. Because of the difference in how Dataverse and Access identify these lookups, a manual process is needed in Access before migration.
+<sup>1</sup>One column multi-value lookups only. Because of the difference in how Dataverse and Access identify these lookups, a manual process is needed in Access before migration. More information: [Export multi-value lookup Access Fields to Dataverse choice columns](#export-multi-value-llookup-access-fields-to-dataverse-choice-columns)
 
 ### Access data types not supported for migration to Dataverse
-- OLE
+
+- OLE Object
 - Attachment
 - Number Single<sup>2</sup>
 - Number Double<sup>2</sup>
@@ -59,6 +60,7 @@ In the table below, you'll find information that will assist you in planning you
 - Rich Text
 
 <sup>2</sup>Dataverse includes a float data type, however it has much lower limits than Access, so for now we have chosen not to support to prevent data loss.
+
 <sup>3</sup>When you migrate, the calculated field will be created and the last calculated value will be migrated. Users will need to configure new calculated fields in Dataverse.
 
 ## Access and Dataverse data size comparison 
@@ -82,5 +84,15 @@ You'll notice some Dataverse columns don't have the same size capacity as Access
 
 Calculated fields in Access will currently create a column in Dataverse that stores the calculated value. Dataverse can be used to create calculated fields for future calculations.
 
+## Export multi-value lookup Access Fields to Dataverse choice columns 
+
+Both Access and Dataverse offer users the ability to provide a list of multiple values a user can select from in a row. The ways these are implemented are different.  
+
+<!-- Start here -->
+Access uses a multi-value lookup, which is a lookup that allows the user to enter any number of values which will then be presented as a drop down list to users for selection. Access has the ability to have more than one column of values for this function. 
+
+Dataverse uses Choice which is an enumerated list of values that each have a string label associated to them. Users will see and choose the values in a drop down list using the label values which is stored in the background as an enum selection with a relationship to the table where the labels are stored.
+
 ### See also
+
 [Migrate Microsoft Access data to Microsoft Dataverse](migrate-access-to-dataverse.md)
