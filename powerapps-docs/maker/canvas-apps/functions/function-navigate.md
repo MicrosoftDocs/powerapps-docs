@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: nabuthuk
-ms.date: 05/07/2020
+ms.date: 10/19/2021
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
@@ -30,7 +30,7 @@ Most apps contain multiple screens.  Use the **Back** and **Navigate** function 
 
 [Context variables](../working-with-variables.md#use-a-context-variable) are also preserved when a user navigates between screens. You can use **Navigate** to set one or more context variables for the screen that the formula will display, which is the only way to set a context variable from outside the screen. You can use this approach to pass parameters to a screen. If you've used another programming tool, this approach is similar to passing parameters to procedures.
 
-Use the **App** objectu's [**StartScreen**](object-app.md#startscreen-property) property to control the first screen to be displayed.
+Use the **App** object's [**StartScreen**](object-app.md#startscreen-property) property to control the first screen to be displayed.
 
 You can use either function only within a [behavior formula](../working-with-formulas-in-depth.md).
 
