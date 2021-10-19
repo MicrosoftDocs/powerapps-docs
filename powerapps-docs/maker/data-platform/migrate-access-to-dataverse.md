@@ -60,13 +60,13 @@ Total storage capacity is also different. Dataverse and Dataverse for Teams have
       2 GB storage on local machine
    :::column-end:::
    :::column span="":::
-      - 10GB relational database 
-      - 20GB file and image blob storage
-      - 2GB log storage in non-relational storage
+      - 10 GB relational database 
+      - 20 GB file and image blob storage
+      - 2 GB log storage in non-relational storage
       - You can purchase additional capacity as needed in any of the store types
    :::column-end:::
    :::column span="":::
-      - 2GB storage (up to 1 million records) per Team
+      - 2 GB storage (up to 1 million records) per Team
       - Images, files, and logs stored separately in blob storage (counts towards 2 GB limit)
    :::column-end:::
 :::row-end:::
@@ -76,4 +76,5 @@ Total storage capacity is also different. Dataverse and Dataverse for Teams have
 For more information, go to [How are Dataverse for Teams and Dataverse different?](../../teams/data-platform-compare.md).
 
 ### See also
+
 [Data types and sizes for Access data migration to Dataverse](migrate-access-datatypes.md)
