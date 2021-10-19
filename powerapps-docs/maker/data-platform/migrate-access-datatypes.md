@@ -47,7 +47,7 @@ In the table below, the data type mappings supported can assist you in planning 
 |Multi-Value Lookups   | Choice    | Yes<sup>1</sup>        |
 |Hyperlink  | URL   |  Yes       |
 
-<sup>1</sup>One column multi-value lookups only. Because of the difference in how Dataverse and Access identify these lookups, a manual process is needed in Access before migration. More information: [Export multi-value lookup Access Fields to Dataverse choice columns](#export-multi-value-llookup-access-fields-to-dataverse-choice-columns)
+<sup>1</sup>One column multi-value lookups only. Because of the difference in how Dataverse and Access identify these lookups, a manual process is needed in Access before migration. More information: [Export multi-value lookup Access Fields to Dataverse choice columns](#export-multi-value-lookup-access-fields-to-dataverse-choice-columns)
 
 ### Access data types not supported for migration to Dataverse
 
