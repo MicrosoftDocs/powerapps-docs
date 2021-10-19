@@ -3,13 +3,12 @@ title: Data types and sizes for Access data migration to Dataverse  | Microsoft 
 description: Data types and sizes supported for Microsoft Access data migration to Microsoft Dataverse 
 author: NHelgren
 ms.service: powerapps
-ms.topic: overview
+ms.topic: conceptual
 ms.custom: 
   - model
-  - intro-internal
 ms.reviewer: matp
 ms.date: 10/18/2021
-ms.subservice: teams
+ms.subservice: dataverse-maker
 ms.author: NHelgren
 search.audienceType: 
   - maker
@@ -74,10 +73,10 @@ You'll notice some Dataverse columns don't have the same size capacity as Access
 |Long Text/Multiline Text  | 1 GB   | 1,048,576 characters    |
 |Autonumber   |  2,147,483,647  | 4000 characters    |
 |Date and Time   |  Standard data and time | Standard data and time   |
-|Currency<sup>4</sup>  |  Min/max -1,922,337,203,685,477/922,337,203,685,477     |  Min/max -1,922,337,203,685,477/922,337,203,685,477   |
-|Decimal Number  | min/max - 10^28-1 up to 28 decimals   |  Min/max 100,000,000,000 up to 10 decimal places    |
+|Currency<sup>4</sup>  |  Min/max -1,922,337,203,685,477/+922,337,203,685,477   |  Min/max -1,922,337,203,685,477/+922,337,203,685,477   |
+|Decimal Number  | Min/max -10^28-1/+10^28-1 up to 28 decimals   |  Min/max -100,000,000,000/+100,000,000,000 up to 10 decimal places    |
 |Yes/No  |  Boolean   | Boolean   |
-|Int/Whole Number   |  Min/max 2^31   | Min/max 2,147,483,647   |
+|Int/Whole Number   |  Min/max -2^31/+2^31   | Min/max -2,147,483,647/+2,147,483,647   |
 |Lookup Wizard/ Lookup   | Multiple column return   |  Single column return   |
 
 <sup>4</sup>The migration tool assumes the currency coming from Access is the Dataverse base currency.

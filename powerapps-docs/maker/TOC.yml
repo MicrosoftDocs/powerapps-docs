@@ -2507,7 +2507,8 @@
   items:
   - name: Data types and sizes for Access migration
     href: ./data-platform/migrate-access-datatypes.md
-
+  - name: System columns and tables in Dataverse
+    href: ./data-platform/access-migrate-linked-tables.md
 - name: Chatbots
   href: ../chatbots.md
 
