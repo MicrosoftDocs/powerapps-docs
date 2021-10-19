@@ -1,5 +1,5 @@
 ---
-title: Extend Profile+ app (Preview) with additional org-specific data
+title: Extend Profile+ app (preview) with additional org-specific data
 description: Learn how to extend Profile + to include additional information from your company.
 author: Joel-lindstrom
 ms.service: powerapps
@@ -14,7 +14,7 @@ contributors:
   - tapanm-msft
   - Joel-lindstrom
 ---
-# Extend Profile+ app (Preview) with additional org-specific data
+# Extend Profile+ app (preview) with additional org-specific data
 
 [This article is pre-release documentation and is subject to change.]
 
@@ -24,13 +24,12 @@ But what if you want to add data from another source that has additional informa
 
 In this article, we'll learn how to capture data from a different data source and display in the app. Power Apps can connect to hundreds of different data sources using out of the box connectors. In this tutorial, we'll pull data from a SharePoint list containing information about your employees, and display in the Profile+ app. This source could be any system that has employee data, such as your HR system or training database.
 
+Watch this video to learn how to extend Profile+ app (preview) with additional org-specific data:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLiBQ]
+
 ## Prerequisites
 
 To complete this tutorial, you'll need the ability to sign in to Microsoft Teams, which will be available as part of select Microsoft 365 subscriptions. You'll also need to have the Profile+ sample app for Microsoft Teams installed. This app can be installed from https://aka.ms/TeamsProfilePlus.
-
-> [!IMPORTANT]
-> - This is a preview feature.
-> - [!INCLUDE[cc_preview_features_definition](../includes/cc-preview-features-definition.md)]
 
 ## Log in into the Profile + app
 
@@ -91,7 +90,7 @@ All the changes to the Profile+ app are completed. The app can now be published 
 
 ### See also
 
-- [Profile+ (Preview) sample app](profile-app.md)
+- [Profile+ (preview) sample app](profile-app.md)
 - [Customize sample apps](customize-sample-apps.md)
 - [Sample apps FAQs](sample-apps-faqs.md)
 - [Use sample apps from the Microsoft Teams store](use-sample-apps-from-teams-store.md)

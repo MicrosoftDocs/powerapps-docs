@@ -1,13 +1,13 @@
 ---
 title: "SdkMessageProcessingStep table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the SdkMessageProcessingStep table/entity."
-ms.date: 05/20/2021
+ms.date: 10/05/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -58,6 +58,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 - [AsyncAutoDelete](#BKMK_AsyncAutoDelete)
 - [CanUseReadOnlyConnection](#BKMK_CanUseReadOnlyConnection)
+- [Category](#BKMK_Category)
 - [Configuration](#BKMK_Configuration)
 - [Description](#BKMK_Description)
 - [EventExpander](#BKMK_EventExpander)
@@ -73,6 +74,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [Name](#BKMK_Name)
 - [PluginTypeId](#BKMK_PluginTypeId)
 - [Rank](#BKMK_Rank)
+- [RuntimeIntegrationProperties](#BKMK_RuntimeIntegrationProperties)
 - [SdkMessageFilterId](#BKMK_SdkMessageFilterId)
 - [SdkMessageId](#BKMK_SdkMessageId)
 - [SdkMessageProcessingStepId](#BKMK_SdkMessageProcessingStepId)
@@ -97,8 +99,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### AsyncAutoDelete Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -121,13 +123,32 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### CanUseReadOnlyConnection Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
 **DefaultValue**: False
 
+
+
+### <a name="BKMK_Category"></a> Category
+
+**Added by**: API messages extension solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description|For internal use only.|
+|DisplayName|Category|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|IsValidForUpdate|False|
+|LogicalName|category|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_Configuration"></a> Configuration
@@ -266,11 +287,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### InvocationSource Choices/Options
 
-|Value|Label|
-|-----|-----|
-|-1|Internal|
-|0|Parent|
-|1|Child|
+|Value|Label|Description|
+|-----|-----|--------|
+|-1|Internal||
+|0|Parent||
+|1|Child||
 
 
 
@@ -314,10 +335,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### Mode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Synchronous|
-|1|Asynchronous|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Synchronous||
+|1|Asynchronous||
 
 
 
@@ -365,6 +386,24 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MinValue|-2147483648|
 |RequiredLevel|SystemRequired|
 |Type|Integer|
+
+
+### <a name="BKMK_RuntimeIntegrationProperties"></a> RuntimeIntegrationProperties
+
+**Added by**: RuntimeIntegration Solution
+
+|Property|Value|
+|--------|-----|
+|Description|For internal use only. Holds miscellaneous properties related to runtime integration.|
+|DisplayName|Runtime Integration Properties|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|runtimeintegrationproperties|
+|MaxLength|512|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_SdkMessageFilterId"></a> SdkMessageFilterId
@@ -437,21 +476,21 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### Stage Choices/Options
 
-|Value|Label|
-|-----|-----|
-|5|Initial Pre-operation (For internal use only)|
-|10|Pre-validation|
-|15|Internal Pre-operation Before External Plugins (For internal use only)|
-|20|Pre-operation|
-|25|Internal Pre-operation After External Plugins (For internal use only)|
-|30|Main Operation (For internal use only)|
-|35|Internal Post-operation Before External Plugins (For internal use only)|
-|40|Post-operation|
-|45|Internal Post-operation After External Plugins (For internal use only)|
-|50|Post-operation (Deprecated)|
-|55|Final Post-operation (For internal use only)|
-|80|Pre-Commit stage fired before transaction commit (For internal use only)|
-|90|Post-Commit stage fired after transaction commit (For internal use only)|
+|Value|Label|Description|
+|-----|-----|--------|
+|5|Initial Pre-operation (For internal use only)||
+|10|Pre-validation||
+|15|Internal Pre-operation Before External Plugins (For internal use only)||
+|20|Pre-operation||
+|25|Internal Pre-operation After External Plugins (For internal use only)||
+|30|Main Operation (For internal use only)||
+|35|Internal Post-operation Before External Plugins (For internal use only)||
+|40|Post-operation||
+|45|Internal Post-operation After External Plugins (For internal use only)||
+|50|Post-operation (Deprecated)||
+|55|Final Post-operation (For internal use only)||
+|80|Pre-Commit stage fired before transaction commit (For internal use only)||
+|90|Post-Commit stage fired after transaction commit (For internal use only)||
 
 
 
@@ -512,11 +551,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### SupportedDeployment Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Server Only|
-|1|Microsoft Dynamics 365 Client for Outlook Only|
-|2|Both|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Server Only||
+|1|Microsoft Dynamics 365 Client for Outlook Only||
+|2|Both||
 
 
 <a name="read-only-attributes"></a>
@@ -566,12 +605,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### ComponentState Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Published|
-|1|Unpublished|
-|2|Deleted|
-|3|Deleted Unpublished|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Published||
+|1|Unpublished||
+|2|Deleted||
+|3|Deleted Unpublished||
 
 
 
@@ -728,8 +767,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsManaged Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Managed|
 |0|Unmanaged|
 

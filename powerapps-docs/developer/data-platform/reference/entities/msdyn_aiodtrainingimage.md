@@ -1,13 +1,13 @@
 ---
 title: "msdyn_AIOdTrainingImage table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the msdyn_AIOdTrainingImage table/entity."
-ms.date: 05/20/2021
+ms.date: 10/05/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -22,7 +22,7 @@ search.app:
 
 
 
-**Added by**: AI Solution default templates Solution
+**Added by**: AI Solution deprecated templates Solution
 
 
 ## Messages

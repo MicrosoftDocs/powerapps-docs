@@ -21,6 +21,9 @@ The Milestones sample app allows users to create milestones for a team and track
 
 In this article, we'll learn how to create a Power Automate flow to send a project weekly report to the person who created the project with the work items listed along with their status.
 
+Watch this video to learn how to send weekly report on project status from Milestones app:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLiBU]
+
 ## Prerequisites
 
 To complete this exercise, we'd need the ability to log in into Teams that will be available as part of select Microsoft 365 subscriptions, and will also need to have the Milestones sample app for Teams installed. This app can be installed from <https://aka.ms/TeamsInspection>.

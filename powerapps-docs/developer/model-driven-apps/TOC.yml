@@ -77,7 +77,7 @@
     href: troubleshoot-forms.md
   - name: Navigating to and from a custom page
     href: clientapi/navigate-to-custom-page-examples.md
-  - name: Send in-app notifications using client API
+  - name: Send in-app notifications using client API (preview)
     href: clientapi/send-in-app-notifications.md
   - name: Creating side panes using client API
     href: clientapi/create-app-side-panes.md
@@ -175,12 +175,12 @@
     - name: Attributes
       href: clientapi/reference/attributes.md
       items:
+      - name: controls collection
+        href: clientapi/reference/attributes/controls-collection.md
       - name: Composite attributes
         href: clientapi/reference/composite-attributes.md
       - name: addOnChange
         href: clientapi/reference/attributes/addOnChange.md
-      - name: controls collection
-        href: clientapi/reference/attributes/controls-collection.md
       - name: fireOnChange
         href: clientapi/reference/attributes/fireOnChange.md
       - name: getAttributeType

@@ -1,5 +1,5 @@
 ---
-title: Perspectives (Preview) sample app
+title: Perspectives (preview) sample app
 description: Learn how to use the Perspectives app.
 author: Joel-lindstrom
 ms.service: powerapps
@@ -15,7 +15,7 @@ contributors:
   - tapanm-msft
 ---
 
-# Perspectives (Preview) sample app
+# Perspectives (preview) sample app
 
 [This article is pre-release documentation and is subject to change.]
 
@@ -230,7 +230,7 @@ You can Edit your response using the following steps:
 
 ### See also
 
-- [Understand Perspectives (Preview) sample app architecture](perspectives-architecture.md)
+- [Understand Perspectives (preview) sample app architecture](perspectives-architecture.md)
 - [Customize sample apps](customize-sample-apps.md)
 - [Sample apps FAQs](sample-apps-faqs.md)
 - [Use sample apps from the Microsoft Teams store](use-sample-apps-from-teams-store.md)
