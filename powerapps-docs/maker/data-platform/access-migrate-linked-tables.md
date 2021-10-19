@@ -37,12 +37,12 @@ The following tables are included in environments of Dataverse and Dataverse for
 
 The following columns are included in all tables of Dataverse and Dataverse for Teams and may be visible in Access linked tables. These columns can't be deleted.
 
-- **Primary Name**: A user friendly text string used to identify rows. The name is chosen by the user. In Access you can choose which field you want to use during migration, or it will be picked for you.
+- **Primary Name**: A user-friendly text string used to identify rows. The name is chosen by the user. In Access you can choose which field you want to use during migration, or it will be picked for you.
 - **Primary ID**: A unique identifier string used to identify rows. This is system generated and is the primary key. This column is present and usable but not displayed by default in Dataverse and Dataverse for Teams environments.
 - **CreatedBy**: A lookup column to the users table selecting the user who created the row.
 - **CreatedBy (Delegate)**: A lookup column to the users table selecting the user who created the row as a delegate for another user.
 - **CreatedOn**: A date time column that records the date and time a row was created, stored in UTC format.
-- **Currency**: A lookup to the Currency column (logical name Transactioncurrency) to retrieve the details of a transaction currency for the purposes of calculating against the base currency. This column is visible in Access linked tables only when a currency column is added to the table.
+- **Currency**: A lookup to the Currency column (logical name `Transactioncurrency`) to retrieve the details of a transaction currency for the purposes of calculating against the base currency. This column is visible in Access linked tables only when a currency column is added to the table.
 - **Exchange Rate**: The exchange rate value retrieved from the transaction currency on the currency table at the time the row was created. The column is visible in Access linked tables only when an exchange rate column is added to the table. This column is present and usable but not displayed by default in Dataverse, Dataverse for Teams environments, or Access linked tables.
 - **Import Sequence Number**: The row’s place in the sequence of imported records that added it to the table.
 - **ModifiedBy**: A lookup column to the users table selecting the user who modified the row.

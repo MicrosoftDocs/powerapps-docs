@@ -39,7 +39,7 @@ Dataverse and Dataverse for Teams offer differing features that you can use to b
 |---------|---------|
 | All available data types supported.   |  Relational data, image, and file data support, built on the core of Dataverse.     |
 |Dataverse enterprise-grade capabilities, including advanced Role-Based Access Control, highly extensible business logic, sophisticated reporting, and robust offline      | Use apps, chatbots, and automations backed by Dataverse embedded in Teams on any platform.         |
-|Existing premium connectors to enterprise systems (SAP, Oracle, etc)      |  Some data types are not supported or have minimal functionality (Currency, Date Only, Customer)        |
+|Existing premium connectors to enterprise systems such as SAP, Oracle, and so on.    |  Some data types are not supported or have minimal functionality (Currency, Date Only, Customer)        |
 |Standalone premium apps, bots, and automations outside of Teams      |  Not all controls are available such as, bar code scanner, interface tools, and formulas        |
 
 Total storage capacity is also different. Dataverse and Dataverse for Teams have a heterogenous data storage platform, which allows for storing different types of data in ways that help improve performance and lower cost of maintenance.  
@@ -57,17 +57,17 @@ Total storage capacity is also different. Dataverse and Dataverse for Teams have
 :::row-end:::
 :::row:::
    :::column span="":::
-      2 GB storage on local machine
+      2-GB storage on local machine
    :::column-end:::
    :::column span="":::
-      - 10 GB relational database 
-      - 20 GB file and image blob storage
-      - 2 GB log storage in non-relational storage
+      - 10-GB relational database 
+      - 20-GB file and image blob storage
+      - 2-GB log storage in non-relational storage
       - You can purchase additional capacity as needed in any of the store types
    :::column-end:::
    :::column span="":::
-      - 2 GB storage (up to 1 million records) per Team
-      - Images, files, and logs stored separately in blob storage (counts towards 2 GB limit)
+      - 2-GB storage (up to 1 million records) per Team
+      - Images, files, and logs stored separately in blob storage (counts towards 2-GB limit)
    :::column-end:::
 :::row-end:::
 

@@ -69,7 +69,7 @@ You'll notice some Dataverse columns don't have the same size capacity as Access
 
 |Access/Dataverse data type |Access limit  |Dataverse limit  |
 |---------|---------|---------|
-|Short Text/Text   |  255 characters   | 4000 charaters    |
+|Short Text/Text   |  255 characters   | 4000 characters    |
 |Long Text/Multiline Text  | 1 GB   | 1,048,576 characters    |
 |Autonumber   |  2,147,483,647  | 4000 characters    |
 |Date and Time   |  Standard data and time | Standard data and time   |
@@ -87,15 +87,15 @@ Calculated fields in Access will currently create a column in Dataverse that sto
 
 Both Access and Dataverse offer users the ability to provide a list of multiple values a user can select from in a row. The ways these are implemented are different.  
 
-Access uses a multi-value lookup, which is a lookup that allows the user to enter any number of values which will then be presented as a drop-down list for selection. Access has the ability to have more than one column of values for this function.
+Access uses a multi-value lookup, which is a lookup that allows the user to enter any number of values, which will then be presented as a drop-down list for selection. Access has the ability to have more than one column of values for this function.
 
-Dataverse uses choice columns, which is an enumerated list of values that each have a string label associated to them. Users locate and choose the values in a drop-down list using the label values that are stored in the background as an enum selection with a relationship to the table where the labels are stored.
+Dataverse uses choice columns, which are an enumerated list of values that each have a string label associated to them. Users locate and choose the values in a drop-down list using the label values that are stored in the background as an enum selection with a relationship to the table where the labels are stored.
 
 Because of these differences, migrating multi-value lookup columns from Access into Dataverse presents some challenges. The following process must be followed to migrate:
 
 1. Access can only start with a single column multi-value lookup.
 1. Access users must add a new column to the multi-value lookup to act as the enum value expected by Dataverse.
-1. At export, Dataverse will store this as 2 columns, which allows both Dataverse and Access to use the lookup appropriately in forms.
+1. At export, Dataverse will store this as two columns, which allows both Dataverse and Access to use the lookup appropriately in forms.
 
 ### Creating a valid choice field for export to Dataverse
 
@@ -105,8 +105,8 @@ To successfully migrate a choice field from Access, the field must be created in
 1. Add a **Number** field to the table. It must be a **Number** field to support export to Dataverse.
 1. Go to **Design View** in Access. Select the new field, and then select **Lookup Wizard**.
    :::image type="content" source="media/select-lookup-wizard.png" alt-text="Select Lookup Wizard in Access":::
-1. In the Lookup Wizard select the **I will type in the values that I want** option, and then select **Next**.
-1. In the next dialog enter *2* for the number of columns and then select the field below **Col1**.
+1. In the Lookup Wizard, select the **I will type in the values that I want** option, and then select **Next**.
+1. In the next dialog, enter *2* for the number of columns and then select the field below **Col1**.
 1. In **Col1** enter values for three rows by entering *1*, *2*, and *3*. In **Col2** enter values for three rows by entering *red*, *green*, and *blue*.
    :::image type="content" source="media/access-lookup-wizard2.png" alt-text="Create two columns with three rows of data each":::
 1. Select the separator between **Col1** and **Col2** and slide it to the left so that only **Col2** appears.
