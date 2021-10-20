@@ -5,7 +5,7 @@ author: gitanjalisingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/09/2021
+ms.date: 10/20/2021
 ms.subservice: portals
 ms.author: gisingh
 ms.reviewer: ndoelman
@@ -162,7 +162,7 @@ Allows you to embed code components using a Liquid tag. For example, adding a ma
 `{% codecomponent name: <ID or name> <property1:value> <property2:value>  %}`
 
 > [!NOTE]
-> The component may require multiple properties depending on the component.
+> The properties required might be different depending on the component you choose.
 
 See [Use code components Liquid template tag](../component-framework-liquid.md).
 
