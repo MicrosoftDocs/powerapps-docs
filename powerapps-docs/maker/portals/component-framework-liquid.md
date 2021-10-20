@@ -25,31 +25,38 @@ With this release, we've introduced adding of code components created using Powe
 
 > [!IMPORTANT]
 > - This is a preview feature.
-> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
+> - [Preview Features Definition](../../includes/cc-preview-features-definition.md)
 > - Portals only currently supports [code components that are added to a field](../../developer/component-framework/add-custom-controls-to-a-field-or-entity.md#add-a-code-component-to-a-column) in a model-driven app.
 
 Code components can be added using the **codecomponent** liquid template tag. The key for denoting the code component that needs to be loaded is passed in using the **name** attribute. The key can be the GUID (which is the custom component ID), or the name of the custom component imported in Microsoft Dataverse.
 
 The values of the properties that the code component expects needs to be passed in as a key/value pair separated by "**:**" (colon sign), where key is the property name and the value is the JSON string value.
 
-*{%codecomponent name:&lt;ID or name&gt; &lt;property1:value&gt;%}*
+```html
+{% codecomponent name: <ID or name> <property1:value> %}
+```
+
 
 For example, to add a code component with Liquid template tag expecting an input parameter named "*controlValue*":
+```html
+{% codecomponent name:abc\_SampleNamespace.MapControl controlValue:'Space Needle' controlApiKey:<API Key Value>%}
+```
+**
 
-*{% codecomponent name:abc\_SampleNamespace.MapControl controlValue:'Space Needle' controlApiKey:&lt;API Key Value&gt;%}*
-
-You can use [Sample Map Control](https://docs.microsoft.com/en-us/powerapps/developer/component-framework/sample-controls/map-control) and [package them as solutions](https://docs.microsoft.com/powerapps/developer/component-framework/implementing-controls-using-typescript#packaging-your-code-components) for use with portals.
+You can use [Sample Map Control](../../developer/component-framework/sample-controls/map-control.md) and [package them as solutions](https://docs.microsoft.com/powerapps/developer/component-framework/implementing-controls-using-typescript#packaging-your-code-components) for use with portals.
 
 > [!NOTE]
 > Resources created by the community are not supported by Microsoft. If you have questions or issues with community resources, contact the publisher of the resource. Before using these resources, you must ensure that these community resources meet the Power Apps component framework guidelines and should only be used for reference purpose.
+
+## Tutorial: Use code components on pages with Liquid template tag
+
+In this tutorial, you'll configure Power Apps portals to add the component to a web page and set access for the Web Resource table. And then, you'll visit the portals webpage and interact with the component.
 
 ## Prerequisite
 
 For prerequisites, and to know supported/unsupported code components in portals, see [Use code components in portals (Preview)](https://docs.microsoft.com/powerapps/maker/portals/component-framework).
 
-## Tutorial: Use code components on pages with Liquid template tag
 
-In this tutorial, you'll configure Power Apps portals to add the component to a web page and set access for the Web Resource table. And then, you'll visit the portals webpage and interact with the component.
 
 > [!NOTE]
 > This tutorial uses a sample code component created using Power Apps component framework to demonstrate a three-dimensional view of an equipment. You can also use any existing or new component of your own instead, and any other web page for this tutorial. In this case, ensure to use your component and web page when following the steps in this tutorial. For more information about how to create code components, see [Create your first component](https://docs.microsoft.com/powerapps/developer/component-framework/implementing-controls-using-typescript).
