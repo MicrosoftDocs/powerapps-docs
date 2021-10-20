@@ -87,7 +87,7 @@ For example, if you had a choice column on your table called `approvalstatus`, y
     3|Approved
     4|Rejected
 
-## Choices columns
+### Choices columns
 
 Choices are similar to choice columns with the difference being that users can select multiple items from the list. Choices aren't currently fully supported with the Power BI connector.  When you use the Power BI connector with choices columns, you only receive the integer values, which are comma separated. The item value columns aren't returned. For more information about the Dataverse data types not supported with the Power BI connector, see [Supported operations and data types](../../developer/data-platform/dataverse-sql-query.md#supported-operations-and-data-types).
 
