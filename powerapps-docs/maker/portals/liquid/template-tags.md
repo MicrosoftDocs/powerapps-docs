@@ -155,11 +155,14 @@ When you enable the header and footer caching, and want to avoid caching of cert
 
 ## codecomponent
 
-Allows you to embed a code components created by professional developers on web pages.  
+Allows you to embed code components using a Liquid tag. For example, adding a map display custom control to a web page.  
 
 **Code**
 
-`{% codecomponent name: <ID or name> <property1:value> %}`
+`{% codecomponent name: <ID or name> <property1:value> <property2:value>  %}`
+
+> [!NOTE]
+> The component may require multiple properties depending on the component.
 
 See [Use code components Liquid template tag](../component-framework-liquid.md).
 
@@ -168,7 +171,7 @@ See [Use code components Liquid template tag](../component-framework-liquid.md).
 [Control flow tags](control-flow-tags.md)<br>
 [Iteration tags](iteration-tags.md)<br>
 [Variable tags](variable-tags.md)<br>
-[Power Apps Dataverse entity tags](portals-entity-tags.md)
-
+[Power Apps Dataverse entity tags](portals-entity-tags.md)<br>
+[Use code components Liquid template tag](../component-framework-liquid.md)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

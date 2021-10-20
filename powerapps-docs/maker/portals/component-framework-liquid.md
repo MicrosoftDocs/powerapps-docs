@@ -19,6 +19,9 @@ contributors:
 
 [This article is pre-release documentation and is subject to change.]
 
+> [!IMPORTANT]
+> Requires portals version [9.3.10.x or later](release-updates.md#starter-portal-package-updates)
+
 Power Apps component framework empowers professional developers and app makers to create code components for model-driven and canvas apps. These code components can provide an enhanced experience for users working with data on forms, views, and dashboards. More information: [Use code components in portals (Preview)](component-framework.md)
 
 With this release, we've introduced adding of code components created using Power Apps component framework using [Liquid template tag](liquid/liquid-tags.md) on web pages and enabled components using Web API that are enabled for field-level components on forms in portals.
@@ -32,15 +35,17 @@ Code components can be added using the **codecomponent** liquid template tag. Th
 
 The values of the properties that the code component expects needs to be passed in as a key/value pair separated by "**:**" (colon sign), where key is the property name and the value is the JSON string value.
 
-```html
-{% codecomponent name: <ID or name> <property1:value> %}
+```
+{% codecomponent name: <ID or name> <property1:value> <property2:value> %}
 ```
 
-
-For example, to add a code component with Liquid template tag expecting an input parameter named "*controlValue*":
-```html
+For example, to add a code component with Liquid template tag expecting an input parameter named *controlValue*:
+```
 {% codecomponent name:abc\_SampleNamespace.MapControl controlValue:'Space Needle' controlApiKey:<API Key Value>%}
 ```
+> [!TIP]
+> This example uses parameters called *controlvalue* and *controlApiKey*, the component you use may require different parameter names.
+
 
 You can use [Sample Map Control](../../developer/component-framework/sample-controls/map-control.md) and [package them as solutions](../../developer/component-framework/implementing-controls-using-typescript.md#packaging-your-code-components) for use with portals.
 
@@ -70,9 +75,9 @@ If you're using the sample code component used in this tutorial, ensure you firs
 
 1.  Select **Blank**.
 
-1.  On the right-side property pane, update the webpage name. For example, Map Viewer.
+1.  On the right-side property pane, update the webpage name. For example, "Map Viewer".
 
-1.  Update partial URL. For example, mapviewer.
+1.  Update partial URL. For example, "mapviewer".
 
 1.  Expand **Permissions**.
 
@@ -86,23 +91,23 @@ If you're using the sample code component used in this tutorial, ensure you firs
 
 1. Add control with liquid template tag using the following syntax.
 
-```http
-{% codecomponent name:abc\_SampleNamespace.MapControl controlValue:'Space Needle' controlApiKey:<API Key Value> %}
-```
-
-> [!TIP]
-> To retrieve the details of all imported components, and to search for a component name, refer to [CustomControl](../../developer/data-platform/reference/entities/customcontrol.md) Web API.
-
-For example:
-
--   To search for a component:
-
-`https://contoso.api.crm10.dynamics.com/api/data/v9.2/customcontrols?$select=ContosoCustomControlName`
-
--   To retrieve input parameters for a component:
-
-`https://contoso.api.crm10.dynamics.com/api/data/v9.2/customcontrols?$filter=name eq 'ContosoCustomControlName' &$select=manifest*`
-
+    ```
+    {% codecomponent name:abc\_SampleNamespace.MapControl controlValue:'Space Needle' controlApiKey:<API Key Value> %}
+    ```
+    
+    > [!TIP]
+    > To retrieve the details of all imported components, and to search for a component name, refer to [CustomControl](../../developer/data-platform/reference/entities/customcontrol.md) Web API.
+    
+    For example:
+    
+    -   To search for a component:
+    
+    `https://contoso.api.crm10.dynamics.com/api/data/v9.2/customcontrols?$select=ContosoCustomControlName`
+    
+    -   To retrieve input parameters for a component:
+    
+    `https://contoso.api.crm10.dynamics.com/api/data/v9.2/customcontrols?$filter=name eq 'ContosoCustomControlName' &$select=manifest`
+    
 1. Save and close the code editor.
 
 1. On the top-right corner, select **Browse website**.
@@ -119,6 +124,7 @@ See [Allow Read access to the Web Resource table](component-framework-tutorial.m
 
 ### See also
 
+[Template tags](liquid/template-tags.md#codecomponent) <br>
 [Power Apps component framework overview](../../developer/component-framework/overview.md) <br>
 [Create your first component](../../developer/component-framework/implementing-controls-using-typescript.md) <br>
 [Add code components to a field or table in model-driven apps](../../developer/component-framework/add-custom-controls-to-a-field-or-entity.md)

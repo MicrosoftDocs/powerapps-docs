@@ -1852,7 +1852,7 @@
             href: ./portals/component-framework.md          
           - name: "Tutorial: Use code components in portals"
             href: ./portals/component-framework-tutorial.md            
-          - name: "Tutorial: Use code components Liquid template tag"
+          - name: Use code components Liquid template tag
             href: ./portals/component-framework-liquid.md           
         - name: Use Microsoft Power Platform CLI
           items:
