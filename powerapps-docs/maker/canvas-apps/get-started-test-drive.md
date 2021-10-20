@@ -47,7 +47,7 @@ If you don't have a license for Power Apps, you can [sign up for free](../signup
     :::image type="content" source="media/get-started-test-drive/create-app.png" alt-text="Create app":::
 
     > [!NOTE]
-    > You may be prompted to create, or allow the connection using a connector that app you select is configured to use.
+    > You may be prompted to create or allow connections for connectors that the selected app is configured to use.
 
 ## Run the app
 
