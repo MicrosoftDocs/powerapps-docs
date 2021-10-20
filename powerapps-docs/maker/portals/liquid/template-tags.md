@@ -8,10 +8,11 @@ ms.custom:
 ms.date: 09/09/2021
 ms.subservice: portals
 ms.author: gisingh
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
     - tapanm-msft
     - GitanjaliSingh33msft
+    - nickdoelman
 ---
 
 # Template tags
@@ -151,6 +152,16 @@ When you enable the header and footer caching, and want to avoid caching of cert
 
 > [!TIP]
 > The URL used in [request.url](liquid-objects.md#request) can be any requested value, and gets [cached](../configure/enable-header-footer-output-caching.md) for subsequent requests. To ensure correct value in request.url, consider using substitution tag, partial URL such as ~\{WebFile path} or storing the portal URL in [Site Settings](../configure/configure-site-settings.md).
+
+## codecomponent
+
+Allows you to embed a code components created by professional developers on web pages.  
+
+**Code**
+
+`{% codecomponent name: <ID or name> <property1:value> %}`
+
+See [Use code components Liquid template tag](../component-framework-liquid.md).
 
 ### See also
 
