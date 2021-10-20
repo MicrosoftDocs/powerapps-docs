@@ -1656,6 +1656,8 @@
               href: ./portals/admin/import-metadata-translation.md
             - name: Set up Power BI integration
               href: ./portals/admin/set-up-power-bi-integration.md
+        - name: Manage custom certificates
+          href: ./portals/admin/manage-custom-certificates.md              
         - name: Use Portal Checker
           items:
             - name: Run Portal Checker
