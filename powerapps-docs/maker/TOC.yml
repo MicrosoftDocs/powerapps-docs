@@ -45,7 +45,7 @@
       items:
       - name: Basic navigation
         href: ../user/navigation.md
-      - name: In-app notifications
+      - name: In-app notifications (preview)
         href: ../user/notifications.md
       - name: View your profile
         href: ../user/view-your-user-profile.md
@@ -1447,7 +1447,7 @@
     href: ../mobile/relevance-search-mobile.md  
   - name: Set app display to dark or light mode  
     href: ../mobile/display-mode.md
-  - name: In-app notifications on Power Apps mobile
+  - name: In-app notifications in Power Apps mobile (preview)
     href: ../mobile/mobile-notifications.md
   - name: Configure mobile offline synchronization 
     href: ../mobile/setup-mobile-offline.md 
