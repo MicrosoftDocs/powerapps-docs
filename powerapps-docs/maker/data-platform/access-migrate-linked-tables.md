@@ -37,7 +37,7 @@ The following tables are included in environments of Dataverse and Dataverse for
 
 The following columns are included in all tables of Dataverse and Dataverse for Teams and may be visible in Access linked tables. These columns can't be deleted.
 
-- **Primary Name**: A user-friendly text string used to identify rows. The name is chosen by the user. In Access you can choose which field you want to use during migration, or it will be picked for you.
+- **Primary Name**: A user-friendly text string used to identify rows. The name is chosen by the user. In Access you can choose which field you want to use during migration, or it will be picked for you. If an Access table has no text fields, a text field will be created named Primary Name Placeholder which will be used to fill this need. It will be set to "optional" and will accept null values.
 - **Primary ID**: A unique identifier string used to identify rows. This is system generated and is the primary key. This column is present and usable but not displayed by default in Dataverse and Dataverse for Teams environments.
 - **CreatedBy**: A lookup column to the users table selecting the user who created the row.
 - **CreatedBy (Delegate)**: A lookup column to the users table selecting the user who created the row as a delegate for another user.
