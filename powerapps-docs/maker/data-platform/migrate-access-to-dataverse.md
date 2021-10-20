@@ -97,7 +97,7 @@ Unlike Access, Dataverse and Dataverse for Teams are data sources. The user inte
 |Multi-Select Options      | Choices        | Supported for migration         |
 |GUID      | Unique Identifier           |   In Dataverse and Dataverse for Teams, this is currently only used as a key        |
 |  Hyperlink         |  URL       | Supported for migration         |
-|Unique Index      |  Alternate Key        |         |
+|Unique Index      |  Alternate Key        | Not supported for migration      |
 |Multi-Value Lookup      | Choice        | Supported for migration         |
 
 ### See also

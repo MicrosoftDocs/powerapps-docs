@@ -60,7 +60,7 @@ In the table below, the data type mappings supported can assist you in planning 
 
 <sup>2</sup>Dataverse includes a float data type, however it has much lower limits than Access, so for now we have chosen not to support to prevent data loss.
 
-<sup>3</sup>When you migrate, the calculated field will be created and the last calculated value will be migrated. Users will need to configure new calculated fields in Dataverse.
+<sup>3</sup>When you migrate, the calculated field will be created and the last calculated value will be migrated. Users will need to configure new calculated fields in Dataverse. More information: [Define calculated columns to automate calculations](define-calculated-fields.md)
 
 ## Access and Dataverse data size comparison 
 
@@ -81,7 +81,7 @@ You'll notice some Dataverse columns don't have the same size capacity as Access
 
 <sup>4</sup>The migration tool assumes the currency coming from Access is the Dataverse base currency.
 
-Calculated fields in Access will currently create a column in Dataverse that stores the calculated value. Dataverse can be used to create calculated fields for future calculations.
+Calculated fields in Access will currently create a column in Dataverse that stores the calculated value. Dataverse can be used to create calculated fields for future calculations. 
 
 ## Export multi-value lookup Access Fields to Dataverse choice columns 
 
@@ -110,6 +110,7 @@ To successfully migrate a choice field from Access, the field must be created in
 1. In **Col1** enter values for three rows by entering *1*, *2*, and *3*. In **Col2** enter values for three rows by entering *red*, *green*, and *blue*.
    :::image type="content" source="media/access-lookup-wizard2.png" alt-text="Create two columns with three rows of data each":::
 1. Select the separator between **Col1** and **Col2** and slide it to the left so that only **Col2** appears.
+
    :::image type="content" source="media/access-lookup-wizard3.png" alt-text="Move the slider between the columns to the left":::
 1. Select **Next** > **Next** > **Finish** to complete the Lookup Wizard.
 1. Save your changes and return to the **Datasheet View**.
