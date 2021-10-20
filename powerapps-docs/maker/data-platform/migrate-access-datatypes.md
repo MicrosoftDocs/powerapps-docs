@@ -58,7 +58,7 @@ In the table below, the data type mappings supported can assist you in planning 
 - Calculated<sup>3</sup>
 - Rich Text
 
-<sup>2</sup>Dataverse includes a float data type, however it has much lower limits than Access, so for now we have chosen not to support to prevent data loss.
+<sup>2</sup>Dataverse includes a float data type, however it has much lower limits than Access, so for now we have chosen not to support migration to Dataverse float. However, users can change their float type in Access to Number:Decimal and then migrate their data into Dataverse.
 
 <sup>3</sup>When you migrate, the calculated field will be created and the last calculated value will be migrated. Users will need to configure new calculated fields in Dataverse. More information: [Define calculated columns to automate calculations](define-calculated-fields.md)
 
@@ -73,7 +73,7 @@ You'll notice some Dataverse columns don't have the same size capacity as Access
 |Long Text/Multiline Text  | 1 GB   | 1,048,576 characters    |
 |Autonumber   |  2,147,483,647  | 4000 characters    |
 |Date and Time   |  Standard data and time | Standard data and time   |
-|Currency<sup>4</sup>  |  Min/max -1,922,337,203,685,477/+922,337,203,685,477   |  Min/max -1,922,337,203,685,477/+922,337,203,685,477   |
+|Currency<sup>4</sup>  |  Min/max -922,337,203,685,477/+922,337,203,685,477   |  Min/max -922,337,203,685,477/+922,337,203,685,477   |
 |Decimal Number  | Min/max -10^28-1/+10^28-1 up to 28 decimals   |  Min/max -100,000,000,000/+100,000,000,000 up to 10 decimal places    |
 |Yes/No  |  Boolean   | Boolean   |
 |Int/Whole Number   |  Min/max -2^31/+2^31   | Min/max -2,147,483,647/+2,147,483,647   |
@@ -81,7 +81,7 @@ You'll notice some Dataverse columns don't have the same size capacity as Access
 
 <sup>4</sup>The migration tool assumes the currency coming from Access is the Dataverse base currency.
 
-Calculated fields in Access will currently create a column in Dataverse that stores the calculated value. Dataverse can be used to create calculated fields for future calculations. 
+Calculated fields in Access will currently create a column for the content type in Dataverse that stores the calculated value. This could be text, whole number, decimal, etc. Dataverse can be used to create calculated fields to enable calculations. 
 
 ## Export multi-value lookup Access Fields to Dataverse choice columns 
 
