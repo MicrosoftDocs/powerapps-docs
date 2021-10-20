@@ -40,7 +40,7 @@ If you don't have a license for Power Apps, you can [sign up for free](../signup
     :::image type="content" source="media/get-started-test-drive/start-from-template.png" alt-text="Choose a template.":::
 
     > [!TIP]
-    > Select a template to learn more. If you want to choose another template, use **Cancel** button to return.
+    > Select a template to learn more. If you want to choose another template, select **Cancel** to return.
 
 1. After you select the template you want to use, you can update the app name, and then select **Create** to open the app in Power Apps Studio. For example, the following shows creating an app using the **Power Apps Training for Office** template.
 
