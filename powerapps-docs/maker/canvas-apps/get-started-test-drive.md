@@ -50,7 +50,7 @@ If you don't have a license for Power Apps, you can [sign up for free](../signup
 
 An app from a template opens in Power Apps Studio, where you'll spend most of your time customizing. Before you make any changes to the app, explore how the app works in **Preview** mode.
 
-1. Press F5 to open the app in **Preview** mode. Alternatively, you can also select the play button on the rop-right corner of the screen.
+1. Press F5 to open the app in **Preview** mode. Alternatively, you can also select the play button on the top-right corner of the screen.
 
     :::image type="content" source="media/get-started-test-drive/play-button.png" alt-text="Play the app":::
 
