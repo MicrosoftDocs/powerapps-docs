@@ -71,8 +71,9 @@ To use Power BI with Dataverse, you need the following items:
 
 ## Special column types
 
-### Choices
-Choices are used in tables to provide a drop-down list of values to a user in apps and flows. When using the Power BI connector choice  columns will be presented as two columns to show both the unique value, and the display value.
+### Choice columns
+
+Choice columns are used in tables to provide a drop-down list of items to a user to make a single selection in apps and flows. When using the Power BI connector choice columns will be presented as two columns to show both the unique value, and the display item value.
 
 For example, if you had a choice column on your table called `approvalstatus`, you would see two columns in Power BI:
 
@@ -86,7 +87,12 @@ For example, if you had a choice column on your table called `approvalstatus`, y
     3|Approved
     4|Rejected
 
+## Choices columns
+
+Choices are similar to choice columns with the difference being that users can select multiple items from the list. Choices aren't currently fully supported with the Power BI connector.  When you use the Power BI connector with choices columns, you only receive the integer values, which are comma separated. The item value columns aren't returned. For more information about the Dataverse data types not supported with the Power BI connector, see [Supported operations and data types](../../developer/data-platform/dataverse-sql-query.md#supported-operations-and-data-types).
+
 ### Lookups
+
 Lookup columns use a many-to-one (N:1) table relationship between the table you’re working with and the target row type defined for the lookup. Lookups are presented in Power BI Desktop as two columns, *lookup*id and *lookup*id-name.
 
 ## Navigating relationships
