@@ -2,14 +2,13 @@
 title: Create a canvas app from a template
 description: Step-by-step instructions for creating a canvas app automatically based on a Power Apps template.
 author: tapanm-msft
-manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
   - canvas
   - intro-internal
 ms.reviewer: 
-ms.date: 01/29/2020
+ms.date: 10/20/2021
 ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
@@ -32,33 +31,28 @@ If you don't have a license for Power Apps, you can [sign up for free](../signup
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
-1. Select **Apps** from left navigation. Select the **New app** drop down menu and then select **Canvas**.
+1. Select **+ Create** from the left-pane.
 
-    ![New canvas app.](./media/get-started-test-drive/new-canvas-app.png)
+    :::image type="content" source="media/get-started-test-drive/create-left-pane.png" alt-text="Select + Create from Power Apps.":::
 
-    This opens [Power Apps Studio](../../powerapps-overview.md#power-apps-for-app-makerscreators) in a new tab.
+1. Scroll down to **Start from template** section, and choose the template of your choice for canvas apps.
 
-1. On the **App templates** tile, select **Phone layout** or **Tablet layout**.
+    :::image type="content" source="media/get-started-test-drive/start-from-template.png" alt-text="Choose a template.":::
 
-    ![App from template tile.](./media/get-started-test-drive/template-tile.png)
+1. Update the app name, and then select **Create** to open the app in Power Apps Studio. For example, the following shows creating an app using the **Power Apps Training for Office** template.
 
-1. In the list of templates, select a template, and then select **Use** (near the lower-right corner).
-
-    ![Open a Power Apps template.](./media/get-started-test-drive/open-template.png)
-
-    The Power Apps Studio opens in new tab and the app gets created.
+    :::image type="content" source="media/get-started-test-drive/create-app.png" alt-text="Create app":::
 
     > [!NOTE]
-    > If **Use** button is disabled, ensure you have selected a data source for the app. You can select the data source by selecting **Choose** at the bottom.
-    >
-    > ![Choose data source.](./media/get-started-test-drive/choose-data-source.png)
+    > Depending on the template you select, you may be prompted to create, or allow the connection using a connector that app is configured to use.
 
 ## Run the app
-An app from a template opens in the default workspace, where you'll spend most of your time customizing. Before you make any changes to the app, explore how the app works in **Preview** mode.
 
-1. Press F5 (or click or tap the right arrow in the upper-right corner) to open the app in **Preview** mode.
+An app from a template opens in Power Apps Studio, where you'll spend most of your time customizing. Before you make any changes to the app, explore how the app works in **Preview** mode.
 
-    ![Button to open Preview mode.](./media/get-started-test-drive/open-preview.png)
+1. Press F5 to open the app in **Preview** mode. Alternatively, you can also select the play button on the rop-right corner of the screen.
+
+    :::image type="content" source="media/get-started-test-drive/play-button.png" alt-text="Play the app":::
 
     The app is populated with sample data to demonstrate the functionality of the app. For example, the Cost Estimator app contains data for creating appointments and estimating the cost of installing a specific flooring product in a room of a particular size.
 
