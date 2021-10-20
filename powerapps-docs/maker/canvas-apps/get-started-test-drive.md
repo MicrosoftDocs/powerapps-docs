@@ -44,7 +44,7 @@ If you don't have a license for Power Apps, you can [sign up for free](../signup
     :::image type="content" source="media/get-started-test-drive/create-app.png" alt-text="Create app":::
 
     > [!NOTE]
-    > Depending on the template you select, you may be prompted to create, or allow the connection using a connector that app is configured to use.
+    > You may be prompted to create, or allow the connection using a connector that app you select is configured to use.
 
 ## Run the app
 
@@ -54,21 +54,19 @@ An app from a template opens in Power Apps Studio, where you'll spend most of yo
 
     :::image type="content" source="media/get-started-test-drive/play-button.png" alt-text="Play the app":::
 
-    The app is populated with sample data to demonstrate the functionality of the app. For example, the Cost Estimator app contains data for creating appointments and estimating the cost of installing a specific flooring product in a room of a particular size.
+    The app is populated with sample data to demonstrate the functionality of the app.
 
-4. Explore the app's default behavior by creating, updating, and deleting sample data, and then verify that the data in your cloud-storage account reflects your changes.
+1. Explore the app's default behavior by creating, updating, and deleting sample data, and then verify that the data in your cloud-storage account reflects your changes.
 
-    For example, make an appointment, and create a cost estimate in the Cost Estimator app.
-
-5. Return to the default workspace by pressing Esc (or by clicking or tapping the **X** icon near the upper-right corner).
+1. Return to the default workspace by pressing Esc (or by selecting **X** icon near the upper-right corner).
 
 ## Next steps
-1. Press Ctrl-S, give your app a name, and then click or tap **Save** to save your app to the cloud.
+
+1. Press Ctrl-S, give your app a name, and then select **Save** to save your app to the cloud.
 
 1. [Share your app](share-app.md) with other people in your organization.
 
 > [!IMPORTANT]
 > Before you share an app, make sure that the people with whom you're sharing it have access to the data. For example, you must [share an Excel or other file](share-app-data.md) in a cloud-storage account.
-
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
