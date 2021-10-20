@@ -8,11 +8,12 @@ ms.custom:
 ms.date: 04/21/2021
 ms.subservice: portals
 ms.author: gisingh
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
     - tapanm-msft
     - GitanjaliSingh33msft
     - dileepsinghmicrosoft
+    - nickdoelman    
 ---
 
 # Use OAuth 2.0 implicit grant flow within your portal
