@@ -5,7 +5,7 @@ author: GitanjaliSingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/19/2021
+ms.date: 10/20/2021
 ms.subservice: portals
 ms.author: gisingh
 ms.reviewer: ndoelman
@@ -70,9 +70,9 @@ If you're using the sample code component used in this tutorial, ensure you firs
 
 1.  Select **Blank**.
 
-1.  On the right-side property pane, update the webpage name. For example, 3D viewer.
+1.  On the right-side property pane, update the webpage name. For example, Map Viewer.
 
-1.  Update partial URL. For example, 3Dviewer.
+1.  Update partial URL. For example, mapviewer.
 
 1.  Expand **Permissions**.
 
@@ -91,7 +91,7 @@ If you're using the sample code component used in this tutorial, ensure you firs
 ```
 
 > [!TIP]
-> To retrieve the details of all imported components, and to search for a component name, refer to [CustomControl](../../data-platform/reference/entities/customcontrol.md) Web API.
+> To retrieve the details of all imported components, and to search for a component name, refer to [CustomControl](../../developer/data-platform/reference/entities/customcontrol.md) Web API.
 
 For example:
 
