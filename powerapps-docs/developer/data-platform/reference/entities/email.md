@@ -1,13 +1,13 @@
 ---
 title: "Email table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the Email table/entity."
-ms.date: 05/20/2021
+ms.date: 10/05/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -428,11 +428,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### DeliveryPriorityCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Low|
-|1|Normal|
-|2|High|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Low||
+|1|Normal||
+|2|High||
 
 
 
@@ -450,8 +450,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### DeliveryReceiptRequested Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -489,8 +489,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### DirectionCode Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Outgoing|
 |0|Incoming|
 
@@ -543,11 +543,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### EmailReminderType Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|If I do not receive a reply by|
-|1|If the email is not opened by|
-|2|Remind me anyways at|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|If I do not receive a reply by||
+|1|If the email is not opened by||
+|2|Remind me anyways at||
 
 
 
@@ -596,8 +596,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### FollowEmailUserPreference Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|True|
 |0|False|
 
@@ -650,8 +650,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsBilled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -673,8 +673,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsWorkflowCreated Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -788,11 +788,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### Notifications Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|None|
-|1|The message was saved as a Microsoft Dynamics 365 email record, but not all the attachments could be saved with it. An attachment cannot be saved if it is blocked or if its file type is invalid.|
-|2|Truncated body.|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|None||
+|1|The message was saved as a Microsoft Dynamics 365 email record, but not all the attachments could be saved with it. An attachment cannot be saved if it is blocked or if its file type is invalid.||
+|2|Truncated body.||
 
 
 
@@ -885,11 +885,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### PriorityCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Low|
-|1|Normal|
-|2|High|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Low||
+|1|Normal||
+|2|High||
 
 
 
@@ -920,8 +920,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### ReadReceiptRequested Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -1435,8 +1435,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### Compressed Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Compressed|
 |0|Not compressed|
 
@@ -1492,16 +1492,16 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### CorrelationMethod Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|None|
-|1|Skipped|
-|2|XHeader|
-|3|InReplyTo|
-|4|TrackingToken|
-|5|ConversationIndex|
-|6|SmartMatching|
-|7|CustomCorrelation|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|None||
+|1|Skipped||
+|2|XHeader||
+|3|InReplyTo||
+|4|TrackingToken||
+|5|ConversationIndex||
+|6|SmartMatching||
+|7|CustomCorrelation||
 
 
 
@@ -1626,12 +1626,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### EmailReminderStatus Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|NotSet|
-|1|ReminderSet|
-|2|ReminderExpired|
-|3|ReminderInvalid|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|NotSet||
+|1|ReminderSet||
+|2|ReminderExpired||
+|3|ReminderInvalid||
 
 
 
@@ -1688,8 +1688,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |IsValidForRead|True|
 |LogicalName|exchangerate|
 |MaxValue|100000000000|
-|MinValue|0.0000000001|
-|Precision|10|
+|MinValue|0.000000000001|
+|Precision|12|
 |RequiredLevel|None|
 |Type|Decimal|
 
@@ -1724,8 +1724,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsEmailFollowed Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -1747,8 +1747,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsEmailReminderSet Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -1770,8 +1770,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsRegularActivity Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 

@@ -1,13 +1,13 @@
 ---
-title: "bot table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the bot table/entity."
-ms.date: 05/20/2021
+title: "Chatbot (bot) table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the Chatbot (bot) table/entity."
+ms.date: 10/05/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -15,7 +15,7 @@ search.app:
   - D365CE
 ---
 
-# bot table/entity reference
+# Chatbot (bot) table/entity reference
 
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
@@ -109,11 +109,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### accesscontrolpolicy Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Any|
-|1|Chatbot readers|
-|2|Group membership|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Any|Any signed in user is allowed to interact with the bot.|
+|1|Chatbot readers|Authentication mode must be Integrated or Custom Azure Active Directory. User must have at least Read access to the Chatbot record.|
+|2|Group membership|Authentication mode must be Integrated or Custom Azure Active Directory. To interact with the bot, users must be member of one of the security groups configured in the Authorized Security Groups field OR have Read access to the Chatbot.|
 
 
 
@@ -147,13 +147,13 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### authenticationmode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Unspecified|
-|1|None|
-|2|Integrated|
-|3|Custom Azure Active Directory|
-|4|Generic OAuth2|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Unspecified|Chatbot was created before the introduction of this field. The mode is either 'None' if no authentication was configured, or 'Generic OAuth2' if the bot had an authentication node.|
+|1|None|The chatbot does not require authentication.|
+|2|Integrated|Authentication uses integrated Azure AD configuration. Supports security group access control. The bot has access to the UserId and UserDisplayName variables and will be able to invoke Flows on behalf of the end user. No additional configuration required.|
+|3|Custom Azure Active Directory|Provide a custom Azure AD application. Supports security group access control. The bot has access to the IsLoggedIn, AuthToken, UserId and UserDisplayName variables and will be able to invoke Flows on behalf of the user. Skills can leverage the auth token|
+|4|Generic OAuth2|A custom OAuth provider is configured. The chatbot will have access to the IsLoggedIn and AuthToken variables.|
 
 
 
@@ -171,10 +171,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### authenticationtrigger Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|As Needed|
-|1|Always|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|As Needed|Sign in happens when the bot reaches an authentication node or when an action requires user authentication.|
+|1|Always|Sign-in happens when the conversation starts and any time a token expires.|
 
 
 
@@ -289,28 +289,28 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### Language Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1025|Arabic|
-|1028|Chinese (Traditional)|
-|1030|Danish|
-|1031|German|
-|1033|English|
-|1034|Spanish|
-|1036|French|
-|1040|Italian|
-|1041|Japanese|
-|1042|Korean|
-|1043|Dutch|
-|1044|Norwegian|
-|1045|Polish|
-|1046|Portuguese (Brazilian)|
-|1049|Russian|
-|1053|Swedish|
-|1055|Turkish|
-|1057|Indonesian|
-|1081|Hindi|
-|2052|Chinese (Simplified)|
+|Value|Label|Description|
+|-----|-----|--------|
+|1025|Arabic||
+|1028|Chinese (Traditional)||
+|1030|Danish||
+|1031|German||
+|1033|English||
+|1034|Spanish||
+|1036|French||
+|1040|Italian||
+|1041|Japanese||
+|1042|Korean||
+|1043|Dutch||
+|1044|Norwegian||
+|1045|Polish||
+|1046|Portuguese (Brazilian)||
+|1049|Russian||
+|1053|Swedish||
+|1055|Turkish||
+|1057|Indonesian||
+|1081|Hindi||
+|2052|Chinese (Simplified)||
 
 
 
@@ -567,12 +567,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### ComponentState Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Published|
-|1|Unpublished|
-|2|Deleted|
-|3|Deleted Unpublished|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Published||
+|1|Unpublished||
+|2|Deleted||
+|3|Deleted Unpublished||
 
 
 
@@ -711,8 +711,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsManaged Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Managed|
 |0|Unmanaged|
 
@@ -1272,3 +1272,4 @@ IntersectEntityName: bot_environmentvariabledefinition<br />
 
 [About the table reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+<xref href="Microsoft.Dynamics.CRM.bot?text=bot EntityType" />

@@ -2,7 +2,7 @@
 title: "Quick Start: Web API sample (C#) (Microsoft Dataverse)| Microsoft Docs"
 description: "Walks you through creating a program to authenticate with the Microsoft Dataverse Server and then call a Web API function."
 ms.custom: intro-internal
-ms.date: 09/28/2021
+ms.date: 10/19/2021
 ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
@@ -25,7 +25,7 @@ This program will authenticate and use an <xref:System.Net.Http.HttpClient> to s
 > [!NOTE]
 > This is a very simple example to show how to get connected with a minimum of code. The [Enhanced quick start](enhanced-quick-start.md) will build upon this sample to apply better design patterns.
 
-You can find the complete Visual Studio solution for this project in the [PowerApps-Samples](https://github.com/microsoft/PowerApps-Samples) repo under cds/webapi/C#/QuickStart.
+You can find the complete Visual Studio solution for this (.NET Framework) project in the [PowerApps-Samples](https://github.com/microsoft/PowerApps-Samples) repo under cds/webapi/[C#/QuickStart](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/webapi/C%23/QuickStart). There is also a .NET 5 version of the sample under cds/webapi/[C#-NETx/QuickStart](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/webapi/C%23-NETx/QuickStart).
 
 ## Prerequisites
 

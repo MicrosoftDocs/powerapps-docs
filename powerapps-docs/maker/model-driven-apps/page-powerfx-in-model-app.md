@@ -50,7 +50,7 @@ This section provides examples of navigating from a model-driven app form to a c
 
 ### Navigating from a custom page
 
-The [Navigate function](../canvas-apps/functions/function-navigate.md) allows the users to navigate either from model-driven app forms or custom pages.  This function is only applicable when the custom page is running within a model-driven app.  During custom page authoring or previewing in canvas designer, this function ha no effect.
+The [Navigate function](../canvas-apps/functions/function-navigate.md) allows the users to navigate either from model-driven app forms or custom pages.  This function is only applicable when the custom page is running within a model-driven app.  During custom page authoring or previewing in canvas designer, this function has no effect.
 
 <!-- Examples that use a table should be added as a data source in the page. -->
 

@@ -1,13 +1,13 @@
 ---
 title: "SharePointSite table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the SharePointSite table/entity."
-ms.date: 05/20/2021
+ms.date: 10/05/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -165,8 +165,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsDefault Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -188,8 +188,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsGridPresent Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -211,8 +211,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsPowerBISite Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -351,12 +351,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### ServiceType Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|SharePoint|
-|1|OneDrive|
-|2|Shared with me|
-|3|MS Teams|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|SharePoint||
+|1|OneDrive||
+|2|Shared with me||
+|3|MS Teams||
 
 
 
@@ -476,13 +476,13 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### ValidationStatus Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Not Validated|
-|2|In Progress|
-|3|Invalid|
-|4|Valid|
-|5|Could not validate|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Not Validated||
+|2|In Progress||
+|3|Invalid||
+|4|Valid||
+|5|Could not validate||
 
 
 
@@ -500,15 +500,15 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### ValidationStatusErrorCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|This record's URL has not been validated.|
-|2|This record's URL is valid.|
-|3|This record's URL is not valid.|
-|4|The URL schemes of Microsoft Dynamics 365 and SharePoint are different.|
-|5|The URL could not be accessed because of Internet Explorer security settings.|
-|6|Authentication failure.|
-|7|Invalid certificates.|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|This record's URL has not been validated.||
+|2|This record's URL is valid.||
+|3|This record's URL is not valid.||
+|4|The URL schemes of Microsoft Dynamics 365 and SharePoint are different.||
+|5|The URL could not be accessed because of Internet Explorer security settings.||
+|6|Authentication failure.||
+|7|Invalid certificates.||
 
 
 <a name="read-only-attributes"></a>
@@ -661,8 +661,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |IsValidForRead|True|
 |LogicalName|exchangerate|
 |MaxValue|100000000000|
-|MinValue|0.0000000001|
-|Precision|10|
+|MinValue|0.000000000001|
+|Precision|12|
 |RequiredLevel|None|
 |Type|Decimal|
 
