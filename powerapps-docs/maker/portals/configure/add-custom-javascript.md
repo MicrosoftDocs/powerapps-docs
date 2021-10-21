@@ -8,10 +8,11 @@ ms.custom:
 ms.date: 04/21/2021
 ms.subservice: portals
 ms.author: sandhan
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
     - tapanm-msft
     - sandhangitmsft
+    - nickdoelman
 ---
 
 # Add custom JavaScript
@@ -29,6 +30,9 @@ $(document).ready(function() {
    $("#address1_stateorprovince").val("Saskatchewan");
 });
 ```
+
+> [!Caution]
+> Dropdown on the page is a server control, do not manipulate dropdown control values. Adding new values to control will result in “Invalid postback or callback argument” error on page submission.
 
 ## Additional client-side field validation
 Sometimes you might need to customize the validation of fields on the form. The following example demonstrates adding a custom validator. This example forces the user to specify an email only if the other field for preferred method of contact is set to Email.
