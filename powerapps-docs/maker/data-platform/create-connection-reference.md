@@ -74,7 +74,7 @@ When an action is added to a solution flow, Power Automate will try to reuse exi
 ### Enabling flows containing connections from another user
 
 When a flow is enabled, the enabling user needs to own all the connections. This is usually accomplished by having the flow owner create the connections inside all the connection references that the flow uses. 
-Directly sharing a connection with another is not currently possible, so if a user other than the owner needs to provide the connections, then [an admin account can impersonate that user](https://docs.microsoft.com/en-us/powerapps/developer/data-platform/impersonate-another-user) and then enable the flow. This impersonation mechanism is one that is used to [activate flows in the ALM Accelerator](https://github.com/microsoft/coe-alm-accelerator-templates/blob/main/Pipelines/Templates/activate-flows.yml).
+Directly sharing a connection with someone else is not currently possible. So if a user other than the owner needs to provide the connections, then [an admin account can impersonate that user](/powerapps/developer/data-platform/impersonate-another-user) and then enable the flow. This impersonation mechanism is one that is used to [activate flows in the ALM accelerator](https://github.com/microsoft/coe-alm-accelerator-templates/blob/main/Pipelines/Templates/activate-flows.yml).
 
 ### See also
 
