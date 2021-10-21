@@ -122,9 +122,9 @@ To successfully migrate a choice field from Access, the field must be created in
 
 ## Migrate Number:Single and Number:Double columns to Dataverse
 
-Both Access and Dataverse include the ability to store floating point numbers. Access uses `Number:Single` and `Number:Double` for this. These data types are often used for any number column. Dataverse has a **Floating Point Number** data type, but it has some limitations with how it's implemented. Dataverse only allows a maximum of 5 decimal places. Therefore, there is a danger of losing data when migrating floating point numbers from Access to Dataverse. Because of this possibility of data loss, `Number:Single` and `Number:Double` values can't currently be migrated to Dataverse.
+Both Access and Dataverse include the ability to store floating point numbers. Access uses `Number:Single` and `Number:Double` for this. These data types are often used for any number column. Dataverse has a **Floating Point Number** data type, but it has some limitations with how it's implemented. Dataverse only allows a maximum of five decimal places. Therefore, there is a danger of losing data when migrating floating point numbers from Access to Dataverse. Because of this possibility of data loss, `Number:Single` and `Number:Double` values can't currently be migrated to Dataverse.
 
-However, you can migrate Access data to Dataverse by changing the Access data type. You can use the Access table designer and change the type of `Number:Single` and `Number:Double` columns to **Decimal**. Then any row that does not exceed the minimum/maximum decimal limits can be migrated.
+However, you can migrate Access `Number:Single` and `Number:Double` data to Dataverse by changing the data type in Access. You can use the Access table designer and change the type of `Number:Single` and `Number:Double` columns to **Decimal**. Then any row that does not exceed the minimum/maximum decimal limits can be migrated.
 
 ### See also
 
