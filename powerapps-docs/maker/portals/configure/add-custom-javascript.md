@@ -31,8 +31,8 @@ $(document).ready(function() {
 });
 ```
 
-> [!Caution]
-> Rendering a "choice" control on a form used in Advanced Form step or a Basic Form is a server control. Adding new values (choices) using JavaScript to the control will result in “Invalid postback or callback argument” error on page submission.
+> [!Important]
+> Adding a choice column to model-driven form to be used in an Advanced Form step or a Basic form will appear on the portal page as a drop-down server control. Using custom JavaScript to add additional values to the control will result in an “Invalid postback or callback argument” message on the page submission.
 
 ## Additional client-side field validation
 Sometimes you might need to customize the validation of fields on the form. The following example demonstrates adding a custom validator. This example forces the user to specify an email only if the other field for preferred method of contact is set to Email.
