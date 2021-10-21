@@ -43,7 +43,7 @@ Use the new form designer to configure the header density; the classic form desi
 To configure the header density of a model-driven form, follow these steps:
 1.	Open the form designer to [create or edit a form](create-and-edit-forms.md).
 2.	Select the form header by selecting the header in the form preview or by using the [tree view](using-tree-view-on-form.md).
-3.	In the property pane, there will be an option to use the flyout which allows a user to edit field shown on the header and any additional fields added to the header like a custom control, web resource, multi-line or opiton set, etc. See the next section, **Header flyout** for more information.
+3.	In the property pane, there's an option to use the flyout, which allows a user to edit the column shown on the header and any additional columns added to the header like a custom control, web resource, multi-line or choice. Go to the next section, [Header flyout](form-designer-header-properties.md#header-flyout) for more information.
     > [!div class="mx-imgBorder"] 
     > ![Configure header density.](media/configure-header-density.png "Configure header density")
 4.	In the command bar, select **Save** to save the form, or select **Publish** to save and make your changes visible to users.
