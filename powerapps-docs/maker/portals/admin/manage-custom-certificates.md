@@ -17,7 +17,7 @@ contributors:
 
 # Manage custom certificates
 
-Use custom certificates when using [OAuth 2.0 implicit grant flow](../oauth-implicit-grant-flow.md).
+When extending portals functionality using client-side API call with [OAuth 2.0 implicit grant flow](../oauth-implicit-grant-flow.md) it is recommended best practice to use custom certificates to provide an additional level of security. You can upload you own custom certificates using the portals admin center.
 
 ## Add new certificate
 
