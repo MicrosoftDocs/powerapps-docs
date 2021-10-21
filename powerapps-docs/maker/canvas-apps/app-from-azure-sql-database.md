@@ -1,5 +1,5 @@
 ---
-title: "Preview: Create a canvas app from Azure SQL Database"
+title: Create a canvas app from Azure SQL Database
 description: Describes how to create canvas app from your data in Azure SQL Database
 author: tapanm-msft
 manager: kvivek
@@ -19,15 +19,10 @@ search.app:
 contributors:
   - tapanm-msft
 ---
-# Preview: Create a canvas app from Azure SQL Database
 
-[This article is pre-release documentation and is subject to change.]
+# Create a canvas app from Azure SQL Database
 
 In this article, you'll use data in your Azure SQL Database to create an app with Power Apps in minutes. You'll have a fully functional app with your data that you can customize to fit your business needs and share  on any device.
-
-> [!IMPORTANT]
-> - This is a preview feature.
-> - A preview feature may have limited availability and restricted functionality. A preview feature is available before an official release so that customers can get early access and provide feedback.
 
 ## Prerequisites
 
