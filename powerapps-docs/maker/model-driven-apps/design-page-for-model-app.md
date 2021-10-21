@@ -13,7 +13,7 @@ manager: "kvivek"
 search.audienceType: 
   - maker
 search.app: 
-  - "PowerApps"
+  - PowerApps
   - D365CE
 ---
 # Design a custom page for your model-driven app (preview)
