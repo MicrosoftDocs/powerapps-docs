@@ -62,7 +62,7 @@ Xrm.Navigation.navigateTo(pageInput, navigationOptions)
 
 ### Open as an inline full page with a record context
 
-This example uses the `recordId` parameter within the [NavigateTo](reference/Xrm-Navigation/navigateTo.md) function to provide the custom page with the record to use.  The `Param` function within the custom page retrieves the value and uses the Lookup function to retrieve the record.
+This example uses the `recordId` parameter within the [NavigateTo](reference/Xrm-Navigation/navigateTo.md) function to provide the custom page with the record to use.  
 
 ```javascript
 // Inline Page
@@ -85,6 +85,16 @@ Xrm.Navigation.navigateTo(pageInput, navigationOptions)
             // Handle error
         }
     );
+```
+
+The `Param` function within the custom page retrieves the value and uses the Lookup function to retrieve the record.
+
+```powerappsfl
+App.OnStart=Set(RecordItem, 
+    If(IsBlank(Param("recordId")),
+        First(<entity>),
+        LookUp(<entity>, <entityIdField> = GUID(Param("recordId"))))
+    )
 ```
 
 ### Open as a centered dialog
