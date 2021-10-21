@@ -26,7 +26,7 @@ Power Apps component framework empowers professional developers and app makers t
 
 With this release, we've introduced adding of code components created using Power Apps component framework using [Liquid template tag](liquid/liquid-tags.md) on web pages and enabled components using Web API that are enabled for field-level components on forms in portals.
 
-Code components can be added using the `codecomponent` liquid template tag. The key for denoting the code component that needs to be loaded is passed in using the `name` attribute. The key can be the GUID (which is the custom component ID), or the name of the custom component imported in Microsoft Dataverse.
+Code components can be added using the `codecomponent` liquid template tag. The key for denoting the code component that needs to be loaded is passed in using the `name` attribute. The key can be the GUID (which is the code component ID), or the name of the code component imported in Microsoft Dataverse.
 
 The values of the properties that the code component expects needs to be passed in as a key/value pair separated by "**:**" (colon sign), where key is the property name and the value is the JSON string value.
 
