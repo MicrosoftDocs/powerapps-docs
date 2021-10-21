@@ -18,7 +18,7 @@ contributors:
 ---
 # Data types and sizes for Access data migration to Dataverse
 
-When you migrate from Microsoft Access to Microsoft Dataverse, there are a few differences in the data types that you should be aware of. These differences include supported types, data type names, and column capacity.
+When you migrate from Microsoft Access to Microsoft Dataverse or Microsoft Dataverse for Teams, there are a few differences in the data types that you should be aware of. These differences include supported types, data type names, and column capacity.
 
 When you migrate, a validation will be executed to ensure:
 
@@ -58,11 +58,11 @@ In the table below, the data type mappings supported can assist you in planning 
 - Calculated<sup>3</sup>
 - Rich Text
 
-<sup>2</sup>Dataverse includes a float data type, however it has much lower limits than Access, so for now we have chosen not to support migration to Dataverse float. However, users can change their float type in Access to Number:Decimal and then migrate their data into Dataverse.
+<sup>2</sup>Dataverse includes a float data type, however it has lower limits than Access. More information: [Migrate Number:Single and Number:Double columns to Dataverse](#migrate-numbersingle-and-numberdouble-columns-to-dataverse)
 
 <sup>3</sup>When you migrate, the calculated field will be created and the last calculated value will be migrated. Users will need to configure new calculated fields in Dataverse. More information: [Define calculated columns to automate calculations](define-calculated-fields.md)
 
-## Access and Dataverse data size comparison 
+## Access and Dataverse data size comparison
 
 You'll notice some Dataverse columns don't have the same size capacity as Access. As noted above, if a column contains data too large to be migrated, the migration tool alerts the user that the contents can't be migrated. This is to prevent data loss. This decision is not based on the maximum possible size for the column, but rather the size of the actual data in each row.
 
@@ -83,7 +83,7 @@ You'll notice some Dataverse columns don't have the same size capacity as Access
 
 Calculated fields in Access will currently create a column for the content type in Dataverse that stores the calculated value. This could be text, whole number, decimal, etc. Dataverse can be used to create calculated fields to enable calculations. 
 
-## Export multi-value lookup Access Fields to Dataverse choice columns 
+## Export multi-value lookup Access Fields to Dataverse choice columns
 
 Both Access and Dataverse offer users the ability to provide a list of multiple values a user can select from in a row. The ways these are implemented are different.  
 
@@ -119,6 +119,12 @@ To successfully migrate a choice field from Access, the field must be created in
 1. Close the table and migrate it to Dataverse.
 1. If everything worked properly, the choice field in Dataverse will appear like this when adding a new record.
    :::image type="content" source="media/access-lookup-wizard5.png" alt-text="How the choice field should appear in Dataverse after migration from Access":::
+
+## Migrate Number:Single and Number:Double columns to Dataverse
+
+Both Access and Dataverse include the ability to store floating point numbers. Access uses `Number:Single` and `Number:Double` for this. These data types are often used for any number column. Dataverse has a **Floating Point Number** data type, but it has some limitations with how it's implemented. Dataverse only allows a maximum of 5 decimal places. Therefore, there is a danger of losing data when migrating floating point numbers from Access to Dataverse. Because of this possibility of data loss, `Number:Single` and `Number:Double` values can't currently be migrated to Dataverse.
+
+However, you can migrate Access data to Dataverse by changing the Access data type. You can use the Access table designer and change the type of `Number:Single` and `Number:Double` columns to **Decimal**. Then any row that does not exceed the minimum/maximum decimal limits can be migrated.
 
 ### See also
 
