@@ -42,6 +42,10 @@ Suggestions are quick results based on a search performed on the primary column 
 
 When you navigate to the results page, the search terms are treated as the complete search query and a lot more types of matching are performed to display a more comprehensive set of results.
 
+## Can I configure the order of tables appearing in search results page?
+
+The order of tables in the **Top results** tab and in the horizontal list of tabs is based on the ranking and relevance of search results for that search term. You can make results from a particular table appear at the top by including the table name in the search term. For example, searching for **account fabrikam** would, in most cases, rank result records that have the term **fabrikam** of type **account** higher than result records that have the term **fabrikam** of type other than **account**.
+
 ## Can I see search results from SharePoint files and documents through Dataverse search?
 
 Currently, Dataverse search searches your data in Microsoft Dataverse only. SharePoint files and documents, including the names of the files and the content in the files, aren't searched. Objects of **File** data type in Dataverse are also not searched on.
