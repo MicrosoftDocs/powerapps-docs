@@ -42,7 +42,7 @@ For example, `Choices([@'Vehicle registration'].Vehicle_x0020_type)` uses the Sh
 
 The column **Vehicle type** is a lookup column for the type of the vehicle:
 
-:::image type="content" source="media/scenarios-choice-to-lookup/vehicle-type-lookup.png" alt-text="Vehicle registration list.":::
+:::image type="content" source="media/scenarios-choice-to-lookup/vehicle-type-lookup.png" alt-text="Vehicle type column.":::
 
 ## Example
 
