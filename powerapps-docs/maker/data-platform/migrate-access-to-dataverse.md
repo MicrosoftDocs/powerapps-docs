@@ -88,8 +88,8 @@ Unlike Access, Dataverse and Dataverse for Teams are data sources. The user inte
 |Row    | Row  or record   |  Sometimes referred to as a record in Dataverse and Dataverse for Teams    |
 |Short Text  |  Text    |  Supported for migration       |
 |Long Text  |  Multiline Text    |  Supported for migration       |
-|Number: Small   | Float        |  Currently not supported for migration           |
-|Number: Large     |  Float       | Currently not supported for migration            |
+|Number: Single   | Float        |  Currently not supported for migration - workarouund available           |
+|Number: Double     |  Float       | Currently not supported for migration - workarouund available            |
 |Large Number      |  BitInt       | Currently not supported for migration        |
 |Number: Decimal      | Decimal         | Supported for migration         |
 |Yes/No      | Yes/No         |  Supported for migration        |

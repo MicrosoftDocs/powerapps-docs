@@ -58,9 +58,9 @@ In the table below, the data type mappings supported can assist you in planning 
 - Calculated<sup>3</sup>
 - Rich Text
 
-<sup>2</sup>Dataverse includes a float data type, however it has lower limits than Access. More information: [Migrate Number:Single and Number:Double columns to Dataverse](#migrate-numbersingle-and-numberdouble-columns-to-dataverse)
+<sup>2</sup>Dataverse includes a float data type, however it has lower limits than Access. More information including a workaround: [Migrate Number:Single and Number:Double columns to Dataverse](#migrate-numbersingle-and-numberdouble-columns-to-dataverse)
 
-<sup>3</sup>When you migrate, the calculated field will be created and the last calculated value will be migrated. Users will need to configure new calculated fields in Dataverse. More information: [Define calculated columns to automate calculations](define-calculated-fields.md)
+<sup>3</sup>When you migrate, the calculated field will migrate the last calculated value into a field. Users will need to configure new calculation fields in Dataverse. More information: [Define calculated columns to automate calculations](define-calculated-fields.md)
 
 ## Access and Dataverse data size comparison
 
