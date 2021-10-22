@@ -5,7 +5,7 @@ author: ankitavish
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/21/2021
+ms.date: 10/22/2021
 ms.subservice: portals
 ms.author: avishwakarma
 ms.reviewer: ndoelman
@@ -53,6 +53,8 @@ To configure your portal as PWA, use Power Apps portals Studio. With this featur
 
 1. Select **Enable PWA** to turn on the PWA capability for your portal.
 
+    :::image type="content" source="media/progressive-web-apps/enable-pwa.png" alt-text="Alt text that describes the content of the image." :::
+
 ## Customize PWA settings
 
 You can change the PWA app name, starting page, color, and more using the customization option. To customize PWA settings for your portal:
@@ -69,7 +71,12 @@ You can change the PWA app name, starting page, color, and more using the custom
 | Description | Description for the portal's PWA that will show up on the mobile device and in the app store. |
 | Starting page of the app | Start page for the portal when opened through PWA. |
 | Splashscreen background | Background color for the splash screen when loading PWA. |
-| App icon | Icon for the app that will show up on the mobile device and in the app store.</br>**NOTE:** Icon size must be 512x512 pixel. |
+| App icon | Icon for the app that will show up on the mobile device and in the app store.</br>**Note:** Icon size must be 512x512 pixel. |
+
+:::image type="content" source="media/progressive-web-apps/customize-pwa.png" alt-text="Alt text that describes the content of the image." :::
+
+> [!NOTE]
+> After customizing PWA, you need to select **Browse website** to clear cache. This will start reflecting changes instantly.
 
 ## Manage offline behavior
 
@@ -85,7 +92,11 @@ To configure offline pages for the portal using PWA:
 
 1. Select **Manage offline pages** under **Offline behavior**.
 
+    :::image type="content" source="media/progressive-web-apps/offline-behavior.png" alt-text="Alt text that describes the content of the image." :::
+
 1. Select the pages that you want to enable for offline access using PWA.
+
+    :::image type="content" source="media/progressive-web-apps/manage-offline.png" alt-text="Alt text that describes the content of the image." :::
 
 > [!NOTE]
 > Ensure you consider the storage limitations for the end-user devices when configuring offline access for pages using PWA. Storage requirement for PWA access exceeding the available storage on a device will result in the entire portal to be unavailable for offline access using PWA. We recommend that you test the offline access, and only cache the most important pages that must be available offline. Also, offline pages can only show information. Pages that allow form submissions or run queries won't work for offline access.
@@ -100,14 +111,18 @@ To setup the offline error page:
 
 1. Under **Customization**, select **Offline message page**.
 
+    :::image type="content" source="media/progressive-web-apps/offline-message.png" alt-text="Alt text that describes the content of the image." :::
+
 1. Customize the page like any other portals page.
 
 1. Change page template to suite your business needs.
 
-:::image type="content" source="media/progressive-web-apps/edit-webpage.png" alt-text="Alt text that describes the content of the image." border="false":::
+    :::image type="content" source="media/progressive-web-apps/edit-webpage.png" alt-text="Alt text that describes the content of the image." border="false" :::
 
 > [!NOTE]
-> You can't change the Title, and the Partial URL ("*/default-offline-page*") for offline page. A default offline page will be rendered to end users if the offline page is missing.
+> - You can't change the Title, and the Partial URL ("*/default-offline-page*") for offline page. A default offline page will be rendered to end users if the offline page is missing.
+> - After managing offline experiences of PWA in studio, you need to select **Browse website** to clear cache. This will start reflecting changes instantly.
+
 
 ### Browse your portal in offline mode
 
@@ -119,14 +134,20 @@ To get started with offline browsing:
 
 1. Select **Add to Home screen**, or a similar option. For example, on Android device, the option might be **+ Add to**, and then, **App screen**.
 
-:::image type="content" source="media/progressive-web-apps/add-to-home.png" alt-text="Alt text that describes the content of the image." border="false":::
-
-> [!NOTE]
-> This action downloads portal pages enabled for offline browsing, and may take a while depending on the network bandwidth, and the selected pages for offline browsing.
+    :::image type="content" source="media/progressive-web-apps/add-to-home.png" alt-text="Alt text that describes the content of the image." border="false":::
+    
+    > [!NOTE]
+    > This action downloads portal pages enabled for offline browsing, and may take a while depending on the network bandwidth, and the selected pages for offline browsing.
 
 1. Enable offline mode in your mobile device.
 
 1. Open your portal from the home screen. You'll see a notification on the top reminding the browsing session being in offline mode, and if you select any pages that aren't enabled for offline browsing, the default error page appears.
+
+:::image type="content" source="media/progressive-web-apps/pwa-offline.png" alt-text="Alt text that describes the content of the image." ::: :::image type="content" source="media/progressive-web-apps/not-connected.png" alt-text="Alt text that describes the content of the image." :::
+
+
+
+
 
 ## Create and configure app package
 
@@ -148,9 +169,11 @@ Package created from pwabuilder contains:
 
 For Android platform, you can also update the android certificate using the option **Update android certificate**.
 
-:::image type="content" source="media/progressive-web-apps/image13.png" alt-text="Alt text that describes the content of the image." border="false":::
+:::image type="content" source="media/progressive-web-apps/update-android.png" alt-text="Alt text that describes the content of the image." border="false":::
 
 Update the title and the SHA-256 certificate fingerprint to update digital asset links file (assetlinks.json) that proves ownership of your PWA.
+
+:::image type="content" source="media/progressive-web-apps/android-certificate.png" alt-text="Alt text that describes the content of the image.":::
 
 ## Advanced configuration
 
