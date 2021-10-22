@@ -43,10 +43,8 @@ Use the **[Back](function-navigate.md)** or **[Navigate](function-navigate.md)**
 Nobody wants to lose unsaved changes. Use the **ConfirmExit** and **ConfirmExitMessage** properties to warn the user before they close your app.
 
 > [!NOTE]
-> **ConfirmExit** doesn't work in apps that are embedded in, for example, Power BI and SharePoint.
-
-> [!NOTE]
-> At present, these properties can reference controls on only the first screen if the **Delayed load** preview feature is enabled (which it is by default for new apps). If references are made, Power Apps Studio doesn't show an error, but the resulting published app doesn't open in Power Apps Mobile or a browser. We're actively working to lift this limitation. In the meantime, you can turn off **Delayed load** in **File** > **Settings** > **Upcoming features** (under **Preview**).
+> - **ConfirmExit** doesn't work in apps that are embedded in, for example, Power BI and SharePoint.
+> - At present, these properties can reference controls on only the first screen if the **Delayed load** preview feature is enabled (which it is by default for new apps). If references are made, Power Apps Studio doesn't show an error, but the resulting published app doesn't open in Power Apps Mobile or a browser. We're actively working to lift this limitation. In the meantime, you can turn off **Delayed load** in **File** > **Settings** > **Upcoming features** (under **Preview**).
 
 ### ConfirmExit
 
