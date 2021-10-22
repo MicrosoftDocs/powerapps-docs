@@ -1536,6 +1536,8 @@
               href: ./portals/theme-overview.md
             - name: Edit CSS
               href: ./portals/edit-css.md
+        - name: Build Progressive Web Apps (Preview)
+          href: ./portals/progressive-web-apps.md              
         - name: Supported browsers for portals Studio
           href: ./portals/supported-browser.md
     - name: Configure portals using Portal Management app
