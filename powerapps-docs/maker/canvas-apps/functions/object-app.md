@@ -131,7 +131,7 @@ After you change the **OnStart** property, test it by hovering over the **App** 
 > Using the [**Navigate**](function-navigate.md) function in the **OnStart** property has been retired. Existing apps will continue to work and for a limited time it can still be enabled in the app's settings under **Retired**. Using **Navigate** in this manner can lead to app load delays as it forced the system to complete evaluation of **OnStart** before displaying the first screen. Use the **StartScreen** property instead to calculate the first screen displayed.  
 
 > [!NOTE]
-> If you had an existing app created before March 2021, that did not have a Navigate call in App.OnStart, to which you added Navigate to the OnStart between March and now, then the above switch will be turned off and you will see an error the next time you load the app in Studio.  Please turn the above switch on to clear the error.  
+> If you had an existing app created before March 2021, that did not have a Navigate call in App.OnStart, to which you added Navigate to the OnStart between March and now, then the above switch will be turned off and you may see an error the next time you load the app in Studio.  Please turn the **Retired** switch mentioned above on to clear the error.  
 
 ## StartScreen property
 
