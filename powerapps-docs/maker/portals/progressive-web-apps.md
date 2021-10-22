@@ -15,11 +15,11 @@ contributors:
     - nickdoelman
 ---
 
-# Build Progressive Web Apps from portals
+# Build Progressive Web Apps
 
 ## Overview
 
-Progressive Web Apps (PWA) are built for cross-platform interoperability through browser support that provides users a native app-like experience. PWA brings a seamless experience for users across different <u>web</u> browsers.
+Progressive Web Apps (PWA) are built for cross-platform interoperability through browser support that provides users a native app-like experience. PWA brings a seamless experience for users across different web browsers.
 
 With PWA, you can pin Power Apps portals as an app to the home screen on a mobile device or install it from the app store. This capability enables external and internal customers to use portals as an app for both online and offline scenarios. As a maker, you can choose to enable specific pages in a portal for read-only offline availability.
 
