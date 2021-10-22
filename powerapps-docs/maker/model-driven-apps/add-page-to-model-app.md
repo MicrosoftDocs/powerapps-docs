@@ -153,6 +153,17 @@ Custom pages can be created from two places. The first is while authoring a mode
 
 1. To close the app designer select **Back** and return to the solution.
 
+## Publishing a custom page
+
+> [!IMPORTANT]
+> Model-driven apps must be re-published after a custom page is published.  Otherwise the model-driven app continues to use the previous published custom page.  This limitation is planned to be removed in the future.
+
+After saving changes to a custom page in the canvas designer, the custom page must be first published by the canvas designer. Then all model-driven apps referencing that custom page need to be published. 
+
+1. From canvas designer, select **Publish**
+
+1. From app designer or solution explorer, select **Publish** on each model-driven app referencing the custom page
+
 ### See also
 
 [Model-driven app custom page overview](model-app-page-overview.md)
