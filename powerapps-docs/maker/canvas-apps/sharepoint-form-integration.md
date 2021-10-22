@@ -36,11 +36,17 @@ The default generated form consists of the following controls and their correspo
 
     * **Item** - The selected item from the list. This is set to First() item in the list for your convenience when working in Power Apps Studio.
 
-        **If(IsBlank(SharePointIntegration.Selected) || IsEmpty(SharePointIntegration.Selected),First('*YourListName*'),SharePointIntegration.Selected)**
+        ```powerapps-dot
+        If( IsBlank(SharePointIntegration.Selected) || IsEmpty(SharePointIntegration.Selected),
+            First('*YourListName*'),
+            SharePointIntegration.Selected )
+        ```
+        [!TIP] This formula pattern ( ... SharePointDatasourceName.Selected ) works for  the Item property of a form.  See the customization section below for a formula pattern to set the value of a SharePoint record.
+* **OnSuccess** -  Once the item is created or saved successfully, the form is reset and SharePoint hides the form.
 
-    * **OnSuccess** -  Once the item is created or saved successfully, the form is reset and SharePoint hides the form.
-
-        **ResetForm(SharePointForm1); RequestHide()**
+        ```powerapps-dot
+        ResetForm(SharePointForm1); RequestHide()
+        ```
 
 * **SharePointIntegration** - The control responsible for communicating user actions between SharePoint and Power Apps.
 
@@ -99,7 +105,6 @@ The **SharePointIntegration** control has the following properties:
 ## Customize the default form
 Now that you have a better understanding of the default generated form and the **SharePointIntegration** control, you can change the formulas to further customize the forms. Here are some things to keep in mind when you customize forms:
 
-* To create separate custom experiences for creating, showing, or editing an item, set the **OnNew**, **OnView**, or **OnEdit** formulas of the **SharePointIntegration** control to set variables or navigate to different screens.
 
 * Use the **OnSave** formula of the **SharePointIntegration** control to customize what happens when a user clicks or taps **Save** in SharePoint. If you have multiple forms, make sure to submit the changes only for the form currently being used.
 
@@ -111,6 +116,26 @@ Now that you have a better understanding of the default generated form and the *
 * You can't control the hiding of a form when a user clicks or taps **Cancel** in SharePoint, so make sure you reset your forms in the **OnCancel** formula of the **SharePointIntegration** control.
 
 * The properties for the **SharePointIntegration** control may not be available in **OnStart** or **OnVisible**, and those events execute only once while the list is loaded. You can use **OnNew**, **OnView**, or **OnEdit** formulas to run logic before the form is shown to the user every time. 
+
+## Commonly identified issues in working with the Sharepoint Integration Object
+The SharepointIntegration.Selected value, when set to a Collection on the OnView property, does not show the latest value. The recommended way to fix this is to use the SharepointIntegration.SelectedListItemID and then do a lookup on the table to get the selectedRecord.
+sample:
+
+### OnView:
+
+* Instead of :
+    ```powerapps-dot
+      Set( selectedItem,
+          SharePointIntegration.Selected );
+    ```
+* Use:
+    ```powerapps-dot
+      Set( selectedLookupItem,
+          LookUp( testSharepointIntegrationObject, 
+                 ID=SharePointIntegration.SelectedListItemID ) );
+    ```
+
+Collection Variables are not reset on closing the PowerApp form and the state is persisted for the entire session.  Therefore if there are any use-cases where the variables need to be reset, clear the variables in the OnView property of the sharepointIntegration Object.
 
 ### See also
 
