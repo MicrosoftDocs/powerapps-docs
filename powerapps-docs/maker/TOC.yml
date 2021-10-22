@@ -401,6 +401,8 @@
                 href: ./canvas-apps/geospatial-map-infocards.md
               - name: Draw and insert shapes onto maps
                 href: ./canvas-apps/geospatial-map-draw-shapes.md
+              - name: Insert waypoints as map pins and draw routes between them (preview)
+                href: ./canvas-apps/geospatial-map-routing.md
             - name: Use address lookup
               href: ./canvas-apps/geospatial-component-input-address.md
           - name: Add Power BI data
