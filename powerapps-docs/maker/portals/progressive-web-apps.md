@@ -15,7 +15,7 @@ contributors:
     - nickdoelman
 ---
 
-# Build Progressive Web Apps (Preview)
+# Build Progressive Web Apps (preview)
 
 > [!Important]
 > - This is a preview feature.
