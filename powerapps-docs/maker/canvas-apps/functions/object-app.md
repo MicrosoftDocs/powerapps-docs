@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: nabuthuk
-ms.date: 10/19/2021
+ms.date: 10/21/2021
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -128,16 +128,14 @@ After you change the **OnStart** property, test it by hovering over the **App** 
 > ![App-item shortcut menu for Run OnStart](media/object-app/appobject-runonstart.png "App-item shortcut menu for Run OnStart")
 
 > [!NOTE]
-> Using the [**Navigate**](function-navigate.md) function in the **OnStart** property has been retired. Existing apps will continue to work and for a limited time it can still be enabled in the app's settings under **Retired**. Using **Navigate** in this manner can lead to app load delays as it forced the system to complete evaluation of **OnStart** before displaying the first screen. Use the **StartScreen** property instead to calculate the first screen displayed.  
-
-> [!NOTE]
-> If you had an existing app created before March 2021, that did not have a Navigate call in App.OnStart, to which you added Navigate to the OnStart between March and now, then the above switch will be turned off and you may see an error the next time you load the app in Studio.  Please turn the **Retired** switch mentioned above on to clear the error.  
+> - Using the [**Navigate**](function-navigate.md) function in the **OnStart** property has been retired. Existing apps will continue to work. For a limited time, you can still enable it in the app settings (available under **Retired**). However, using **Navigate** in this manner can lead to app load delays as it forces the system to complete evaluation of **OnStart** before displaying the first screen. Use the **StartScreen** property instead to calculate the first screen displayed.
+> - **Retired** switch will be turned off for apps created before March 2021 where you added **Navigate** to **OnStart** between March 2021 and now. When you edit such apps in Power Apps Studio, you may see an error. Turn **Retired** switch to clear this error.
 
 ## StartScreen property
 
 The **StartScreen** property determines which screen will be displayed first. It's evaluated once when the app is loaded and returns the screen object to be displayed. By default, this property will be empty, and the first screen in the Studio Tree view is shown first.
 
-**StartScreen** is a data flow property that cannot contain behavior functions.  All data flow functions are available, in particular use these functions and signals to determine which screen to show first:
+**StartScreen** is a data flow property that can't contain behavior functions.  All data flow functions are available, in particular use these functions and signals to determine which screen to show first:
 
 - [**Param**](function-param.md) function to read parameters used to start the app.
 - [**User**](function-user.md) function to read information about the current user.
@@ -148,9 +146,9 @@ The **StartScreen** property determines which screen will be displayed first. It
 > [!NOTE]
 > Global variables and collections, including those created in **OnStart**, are not available in **StartScreen**.  There are declarative alternatives for doing this that are on the way. For your feedback on this restriction, go to [Power Apps community forum](https://powerusers.microsoft.com/t5/Power-Apps-Community/ct-p/PowerApps1).
 
-If **StartScreen** returns an error, the first screen in the Studio Tree view will be shown as if **StartScreen** had not been set. Use the **IfError** function to catch any errors and redirect to an appropriate error screen.
+If **StartScreen** returns an error, the first screen in the Studio Tree view will be shown as if **StartScreen** hadn't been set. Use the **IfError** function to catch any errors and redirect to an appropriate error screen.
 
-After changing **StartScreen** in Studio, test it by hovering over the **App** object in the **Tree view** pane, selecting the ellipsis (...), and then selecting **Navigate to StartScreen**. The screen will change as if the app has just been loaded.
+After changing **StartScreen** in Studio, test it by hovering over the **App** object in the **Tree view** pane, selecting the ellipsis (...), and then selecting **Navigate to StartScreen**. The screen will change as if the app has been loaded.
 
 > [!div class="mx-imgBorder"]
 > ![Navigate to StartScreen](media/object-app/appobject-runstartscreen.png "Navigate to StartScreen")
