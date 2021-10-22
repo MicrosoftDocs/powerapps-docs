@@ -21,6 +21,9 @@ contributors:
 # SaveData, LoadData, and ClearData functions in Power Apps
 Saves and reloads a [collection](../working-with-data-sources.md#collections) from the app host's storage.
 
+> [!NOTE]
+> These functions can now be used when playing an app in a web browser as an [experimental feature](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/working-with-experimental-preview).  This feature is disabled by default.  To enable, navigate to **Settings** > **Upcoming features** > **Experimental** > **Enabled SaveData, LoadData, ClearData on web player.**" and turn the switch on.  Feedback is most welcome on the [Power Apps community forum](https://powerusers.microsoft.com/t5/Power-Apps-Community/ct-p/PowerApps1).
+
 ## Description
 The **SaveData** function stores a collection for later use under a name.  
 
@@ -30,8 +33,7 @@ The **ClearData** function clears the storage under a specific name or clears al
 
 > [!NOTE]
 > * The name shared between **SaveData**, **LoadData**, and **ClearData** is a key, not a file name. It need not be complex as names are unique to each app and there is no danger of name conflict. The name must not contain any of these characters: `*".?:\<>|/`. 
-> * ClearData is currently supported for Power Apps running in Teams and Web. It is not yet supported for Power Apps running in a mobile player.
-> * SaveData is limited to 1 megabyte of data for Power Apps running in Teams and Web.  There is no fixed limit for Power Apps running in a mobile player but there are practical limits discussed below.
+> * SaveData is limited to 1 megabyte of data for Power Apps running in Teams and in a web browser.  There is no fixed limit for Power Apps running in a mobile player but there are practical limits discussed below.
 
 Use these functions to improve app-startup performance by:
 
@@ -60,7 +62,7 @@ The loaded data will be appended to the collection. Use the **[Clear](function-c
 
 The device's built in app sandbox facilities are used to isolate saved data from other apps. 
 
-The device may also encrypt the data; or you can use a mobile device management tool such as [Microsoft Intune](https://www.microsoft.com/microsoft-365/enterprise-mobility-security/microsoft-intune).
+The device may also encrypt the data; or you can use a mobile device management tool such as [Microsoft Intune](https://www.microsoft.com/microsoft-365/enterprise-mobility-security/microsoft-intune).  Data stored when playing an app in a web browser is not encrypted.
 
 ## Syntax
 **SaveData**( *Collection*, *Name* )<br>**LoadData**( *Collection*, *Name* [, *IgnoreNonexistentFile* ])
@@ -87,7 +89,8 @@ The device may also encrypt the data; or you can use a mobile device management 
 
 Following simple example captures and stores the names and pictures of everyday items while offline.  It stores the information in the device's local storage for later use. This allows the app to be closed or the device to restart without losing data.  
 
-You must have a device to work through this example as it uses the **LoadData** and **SaveData** functions that don't operate when in a web browser.
+> [!NOTE]
+> This example uses a camera control to capture images.  Since **SaveData** is limited to 1 megabyte of data when running in Teams or a web browser, this example will not work with more than a few images and depending on the camera it may not even work with one image.  Either use a device to work through this full example, or remove the camera control and picture portion of this example to run in Teams or in a web browser.
 
 1. Create a blank canvas app with a tablet layout.  For more details, read [creating an app from a template](../get-started-test-drive.md) and select **Tablet layout** under **Blank app**.  
 
@@ -175,13 +178,5 @@ You must have a device to work through this example as it uses the **LoadData** 
 ### More advanced offline example
 
 For a detailed example, see the article on [simple offline capabilities](../offline-apps.md).
-
-
-
-
-
-
-
-
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
