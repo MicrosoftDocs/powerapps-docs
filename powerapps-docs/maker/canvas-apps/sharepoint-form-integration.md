@@ -43,7 +43,7 @@ The default generated form consists of the following controls and their correspo
             SharePointIntegration.Selected )
         ```
         > [!TIP]
-        > The above formula pattern (using `... SharePointDatasourceName.Selected`) works for the **Item** property of a form. See the [section below](#commonly-issues-with-the-sharepointintegration-object) for a formula pattern to set the value of a SharePoint record.
+        > The above formula pattern (using `... SharePointDatasourceName.Selected`) works for the **Item** property of a form. See the [section below](#common-issues-with-the-sharepointintegration-object) for a formula pattern to set the value of a SharePoint record.
 
 * **OnSuccess** -  Once the item is created or saved successfully, the form is reset and SharePoint hides the form.
 
@@ -120,7 +120,7 @@ Now that you have a better understanding of the default generated form and the *
 
 * The properties for the **SharePointIntegration** control may not be available in **OnStart** or **OnVisible**, and those events execute only once while the list is loaded. You can use **OnNew**, **OnView**, or **OnEdit** formulas to run logic before the form is shown to the user every time. 
 
-## Commonly issues with the SharePointIntegration object
+## Common issues with the SharePointIntegration object
 
 - When the value of `SharepointIntegration.Selected` is set to a collection on the **OnView** property, it doesn't show the latest value. The recommended way to fix this problem is to use `SharepointIntegration.SelectedListItemID`, and then do a lookup on the table to get the selectedRecord.
 
