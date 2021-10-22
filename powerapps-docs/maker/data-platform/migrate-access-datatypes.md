@@ -60,7 +60,7 @@ In the table below, the data type mappings supported can assist you in planning 
 
 <sup>2</sup>Dataverse includes a float data type, however it has lower limits than Access. More information including a workaround: [Migrate Number:Single and Number:Double columns to Dataverse](#migrate-numbersingle-and-numberdouble-columns-to-dataverse)
 
-<sup>3</sup>When you migrate, the calculated field will migrate the last calculated value into a field. Users will need to configure new calculation fields in Dataverse. More information: [Define calculated columns to automate calculations](define-calculated-fields.md)
+<sup>3</sup>When you migrate, the calculated field will migrate the last calculated value into a column. Users will need to configure new calculation columns in Dataverse. More information: [Define calculated columns to automate calculations](define-calculated-fields.md)
 
 ## Access and Dataverse data size comparison
 
@@ -117,8 +117,8 @@ To successfully migrate a choice field from Access, the field must be created in
 1. Create a new record to validate the choice field works as expected. It should appear like this if it was configured properly.
    :::image type="content" source="media/access-lookup-wizard4.png" alt-text="How the choice field should appear in Access":::
 1. Close the table and migrate it to Dataverse.
-1. If everything worked properly, the choice field in Dataverse will appear like this when adding a new record.
-   :::image type="content" source="media/access-lookup-wizard5.png" alt-text="How the choice field should appear in Dataverse after migration from Access":::
+1. If everything worked properly, the choice column in Dataverse will appear like this when adding a new record.
+   :::image type="content" source="media/access-lookup-wizard5.png" alt-text="How the choice column should appear in Dataverse after migration from Access":::
 
 ## Migrate Number:Single and Number:Double columns to Dataverse
 
