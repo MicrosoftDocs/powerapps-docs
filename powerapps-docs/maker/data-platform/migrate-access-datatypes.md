@@ -16,7 +16,9 @@ search.app:
   - PowerApps
 contributors:
 ---
-# Data types and sizes for Access data migration to Dataverse
+# Data types and sizes for Access data migration to Dataverse (preview)
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 When you migrate from Microsoft Access to Microsoft Dataverse or Microsoft Dataverse for Teams, there are a few differences in the data types that you should be aware of. These differences include supported types, data type names, and column capacity.
 
