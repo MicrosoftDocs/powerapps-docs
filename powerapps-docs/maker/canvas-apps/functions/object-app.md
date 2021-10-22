@@ -128,7 +128,10 @@ After you change the **OnStart** property, test it by hovering over the **App** 
 > ![App-item shortcut menu for Run OnStart](media/object-app/appobject-runonstart.png "App-item shortcut menu for Run OnStart")
 
 > [!NOTE]
-> Using the [**Navigate**](function-navigate.md) function in the **OnStart** property has been retired. Existing apps will continue to work and for a limited time it can still be enabled in the app's settings under **Retired**. Using **Navigate** in this manner led to app load delays as it forced the system to complete evaluation of **OnStart** before displaying the first screen. Use the **StartScreen** property instead to specify the first screen displayed.  
+> Using the [**Navigate**](function-navigate.md) function in the **OnStart** property has been retired. Existing apps will continue to work and for a limited time it can still be enabled in the app's settings under **Retired**. Using **Navigate** in this manner can lead to app load delays as it forced the system to complete evaluation of **OnStart** before displaying the first screen. Use the **StartScreen** property instead to calculate the first screen displayed.  
+
+> [!NOTE]
+> If you had an existing app created before March 2021, that did not have a Navigate call in App.OnStart, to which you added Navigate to the OnStart between March and now, then the above switch will be turned off and you will see an error the next time you load the app in Studio.  Please turn the above switch on to clear the error.  
 
 ## StartScreen property
 
