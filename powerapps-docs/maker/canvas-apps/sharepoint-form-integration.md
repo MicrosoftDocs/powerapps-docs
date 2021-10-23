@@ -47,9 +47,9 @@ The default generated form consists of the following controls and their correspo
 
 * **OnSuccess** -  Once the item is created or saved successfully, the form is reset and SharePoint hides the form.
 
-        ```powerapps-dot
-        ResetForm(SharePointForm1); RequestHide()
-        ```
+    ```powerapps-dot
+    ResetForm(SharePointForm1); RequestHide()
+    ```
 
 * **SharePointIntegration** - The control responsible for communicating user actions between SharePoint and Power Apps.
 
