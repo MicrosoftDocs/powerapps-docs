@@ -1,5 +1,6 @@
 ---
 title: "Configure connection roles | MicrosoftDocs"
+description: "With Microsoft Dataverse you can define **connections** between table rows without creating a table relationship. In model-driven apps people can establish a named link between rows to establish less a formal relationship which doesn't justify creating an actual table relationship."
 ms.custom: ""
 ms.date: 02/11/2020
 ms.reviewer: ""

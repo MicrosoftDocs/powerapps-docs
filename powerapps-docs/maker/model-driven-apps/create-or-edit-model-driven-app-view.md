@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.subservice: mda-maker
 ms.topic: tutorial
 author: Joel-Lindstrom
-ms.author: v-ljoel
+ms.author: v-jlindstrom
 ms.reviewer: matp
 ---
 # Create and edit public model-driven app views
