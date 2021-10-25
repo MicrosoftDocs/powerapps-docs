@@ -1455,6 +1455,8 @@
       href: ./common/performance-insights-categories.md
   - name: For developers
     href: ../developer/model-driven-apps/overview.md
+  - name: Glossary of terms
+    href: ../developer/model-driven-apps/model-driven-app-glossary.md    
 - name: Power Apps Mobile  
   items:
   - name: Run apps on Power Apps Mobile
