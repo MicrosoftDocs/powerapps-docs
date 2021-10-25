@@ -35,9 +35,13 @@ When an app user clicks one of these links in a row, the associated view for the
 1. Select **Switch to classic** to edit the form in the classic form designer.
   
 1. To add a link to a related table, on **Home** tab, in the **Select** group, choose **Navigation**.  
-  
+
+    :::image type="content" source="media/form-navigation.png" alt-text="Show form navigation pane":::
+
      The **Relationship Explorer** pane displays on the right side of the form editor.  
-  
+
+
+
 1. In the **Relationship Explorer** pane, in the **Filter** list, select one of the following options:  
   
     - **Available Relationships**. Lists all the tables that can be related to the table the form is associated with.  
@@ -49,22 +53,22 @@ When an app user clicks one of these links in a row, the associated view for the
     > [!NOTE]
     >  If no related tables show up in the **Relationship Explorer** pane, you cannot create a link on this form to a related table.  
   
-1. Select the related table you want to link to, drag it to the Navigation Pane, and then drop it where you want it to be displayed.  
+2. Select the related table you want to link to, drag it to the Navigation Pane, and then drop it where you want it to be displayed.  
   
     > [!TIP]
     >  You can also create a new relationship by choosing **New 1:N** or **New N:N** in the **Relationship Explorer** pane.
   
-1. To edit the properties for this or any other related table link, in the Navigation Pane, select the link, and then on the **Home** tab, choose **Change Properties**.  
-1. In the **Relationship Properties** dialog box, on the **Display** tab, type a new display label.  
-1. On the **Name** tab, choose **Edit** to view or edit the details associated with the relationship row.  
-1. Choose **OK**.
-1. Preview how the main form will appear and how events will function:  
+3. To edit the properties for this or any other related table link, in the Navigation Pane, select the link, and then on the **Home** tab, choose **Change Properties**.  
+4. In the **Relationship Properties** dialog box, on the **Display** tab, type a new display label.  
+5. On the **Name** tab, choose **Edit** to view or edit the details associated with the relationship row.  
+6. Choose **OK**.
+7. Preview how the main form will appear and how events will function:  
   
     1. On the **Home** tab, choose **Preview**, and then select **Create Form**, **Update Form**, or **Read-Only Form**.  
-    1. To close the **Preview** form, on the **File** menu, choose **Close**.  
+    2. To close the **Preview** form, on the **File** menu, choose **Close**.  
   
-1. When you finish editing the form, choose **Save and Close** to close the form.  
-1. When your customizations are complete, publish them:  
+8. When you finish editing the form, choose **Save and Close** to close the form.  
+9. When your customizations are complete, publish them:  
   
     - To publish customizations for only the component that you are currently editing, in the Navigation Pane, choose the table you have been working on, and then choose **Publish**.  
   

@@ -58,7 +58,7 @@ Determines the business processes, rules, and automation the app will have. Powe
 
 |Type of logic  |Description  |Designer  |
 |---------|---------|---------|
-|[Business process flow](model-driven-app-glossary.md#business=process-flow)     | An online process that walks users through a standard business process. For example, use a business process flow if you want everyone to handle customer service requests the same way, or to require staff to gain approval for an invoice before submitting an order.        | Business process flow designer        |
+|[Business process flow](model-driven-app-glossary.md#business-process-flow)     | An online process that walks users through a standard business process. For example, use a business process flow if you want everyone to handle customer service requests the same way, or to require staff to gain approval for an invoice before submitting an order.        | Business process flow designer        |
 |Workflow     |  Workflows automate business processes without a user interface. Designers use workflows to initiate automation that doesn't require any user interaction.       | Workflow designer        |
 |Actions    |  Actions are a type of process that let you manually invoke actions, including custom actions, directly from a workflow.       |  Process designer       |
 |[Business rule](model-driven-app-glossary.md#business-rule)     | Used to apply rule or recommendation logic to a form, such as to set column requirements, hide columns, or validate data. App designers use a simple interface to implement and maintain fast-changing and commonly used rules.         |  Business rule designer       |
