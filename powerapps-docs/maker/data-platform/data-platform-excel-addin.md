@@ -28,7 +28,7 @@ To install the Power Apps Excel add-in, see [Microsoft PowerApps Office Add-in](
 ## Open table data in Excel
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-1. In the left pane, expand the **Data** section, and select **Tables**. All the tables are shown.
+1. In the left pane, expand the **Dataverse** section, and select **Tables**. All the tables are shown.
 
 2. Select the ellipsis (...) to the right of the table that you're interested in, and then select **Edit data in Excel**. 
 

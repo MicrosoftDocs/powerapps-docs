@@ -54,7 +54,7 @@ As an app maker, you can create and edit public views by using Power Apps.
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
-2. Expand **Data**, select **Tables**, select the table that you want, and then select the **Views** tab. 
+2. Expand **Dataverse**, select **Tables**, select the table that you want, and then select the **Views** tab. 
 
 3. On the toolbar, select **Add view**. 
 
