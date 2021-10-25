@@ -714,7 +714,7 @@ The Id or name of the code component.
 
 **property:value**
 
-The property name and value pairs (if required) for the component.
+The values of the properties that the code component expects needs to be passed in as a key/value pair separated by “:” (colon sign), where key is the property name and the value is the JSON string value.
 
 `{% codecomponent name:abc\_SampleNamespace.MapControl controlValue:'Space Needle' controlApiKey:<API Key Value> %}`
 
