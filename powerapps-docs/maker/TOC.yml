@@ -1112,7 +1112,7 @@
   items:
   - name: Model-driven apps
     href: ./model-driven-apps/index.yml
-  - name: Get Started
+  - name: Get started
     items:
     - name: What are model-driven apps?
       href: ./model-driven-apps/model-driven-app-overview.md
@@ -1151,7 +1151,7 @@
       - name: Working with views
         href: 
         items:
-        - name: Views Overview
+        - name: Views overview
           href: ./model-driven-apps/create-edit-views.md
         - name: Opening the view designer
           href: ./model-driven-apps/accessing-view-definitions.md
@@ -1233,7 +1233,9 @@
           - name: Design forms for performance
             href: ./model-driven-apps/design-performant-forms.md
           - name: Design considerations for main forms
-            href: ./model-driven-apps/design-considerations-main-forms.md   
+            href: ./model-driven-apps/design-considerations-main-forms.md
+        - name: Embed a Power BI report on a form
+          href: ./model-driven-apps/embed-powerbi-report-in-system-form.md     
         - name: Embed a canvas app on a model-driven form
           href: ./model-driven-apps/embed-canvas-app-in-form.md
           items:
@@ -1261,7 +1263,7 @@
           items:
           - name: List of controls available
             href: ./model-driven-apps/additional-controls-for-dynamics-365-for-phones-and-tablets.md        
-          - name: Specify properties for Unified Interface apps
+          - name: Specify properties model-driven apps
             href: ./model-driven-apps/specify-properties-for-unified-interface-apps.md      
           - name: Set up the timeline control
             href: ./model-driven-apps/set-up-timeline-control.md
@@ -1453,8 +1455,6 @@
       href: ./common/performance-insights-categories.md
   - name: For developers
     href: ../developer/model-driven-apps/overview.md
-  - name: Embed a Power BI report on a form
-    href: ./model-driven-apps/embed-powerbi-report-in-system-form.md   
 - name: Power Apps Mobile  
   items:
   - name: Run apps on Power Apps Mobile

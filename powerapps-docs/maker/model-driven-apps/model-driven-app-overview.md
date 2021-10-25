@@ -21,7 +21,7 @@ searchScope:
 
 ## Model-driven apps overview
 
-Model-driven app design is an approach that focuses on adding components such as [forms](../model-driven-apps/model-driven-app-glossary.md#Form), [views](../model-driven-apps/model-driven-app-glossary.md#View), and [charts](../model-driven-apps/model-driven-app-glossary.md#Chart) and [dashboards](../model-driven-apps/model-driven-app-glossary.md#Dashboard) to [tables](model-driven-app-glossary.md#table) apps using an app designer tool. Additionally, [relationships](model-driven-app-glossary.md#relationship) tie tables together in a way that permits navigation between them and ensures that data is not repeated unnecessarily.
+Model-driven app design is an approach that focuses on adding components such as [forms](../model-driven-apps/model-driven-app-glossary.md#form), [views](../model-driven-apps/model-driven-app-glossary.md#view), and [charts](../model-driven-apps/model-driven-app-glossary.md#chart) and [dashboards](../model-driven-apps/model-driven-app-glossary.md#dashboard) to [tables](model-driven-app-glossary.md#table) apps using an app designer tool. Additionally, [relationships](model-driven-app-glossary.md#relationship) tie tables together in a way that permits navigation between them and ensures that data is not repeated unnecessarily.
 
 Using the app designer with little or no code, you can build apps that are **simple** or very **complex**.
 
@@ -37,19 +37,19 @@ Whilst we call them model-driven apps it is often easier to think of them as [da
 
 From the perspective of users all model-driven apps offer a very similar **user experience**, that is both [accessible](model-driven-app-glossary.md#accessibility) to many users and to the device used.  The experience is similar to the diagram shown below.  
 
-In this case we have one [dashboard](../model-driven-apps/model-driven-app-glossary.md#Dashboard), containing multiple [charts](../model-driven-apps/model-driven-app-glossary.md#Chart) and [views](../model-driven-apps/model-driven-app-glossary.md#View) in addition to being able to see 3 [tables](../model-driven-apps/model-driven-app-glossary.md#table).  We can navigate between the tables using the menus on the left hand side or via the [dashboard](../model-driven-apps/model-driven-app-glossary.md#Dashboard).
+In this case we have one [dashboard](../model-driven-apps/model-driven-app-glossary.md#dashboard), containing multiple [charts](../model-driven-apps/model-driven-app-glossary.md#chart) and [views](../model-driven-apps/model-driven-app-glossary.md#view) in addition to being able to see 3 [tables](../model-driven-apps/model-driven-app-glossary.md#table).  We can navigate between the tables using the menus on the left hand side or via the [dashboard](../model-driven-apps/model-driven-app-glossary.md#dashboard).
 
 :::image type="content" source="media/model-driven-app-overview/model-app-sample.png" alt-text="Sample model-driven app":::
 
 ## Benefits of the model-driven approach
 
-Unlike [canvas app](../model-driven-apps/model-driven-app-glossary.md#canvas-app) development where the designer has complete control over app layout, with model-driven apps much of the user interface is determined for you and is largely designated by the [components](../model-driven-apps/model-driven-app-glossary.md#Component) you add to the app.
+Unlike [canvas app](../model-driven-apps/model-driven-app-glossary.md#canvas-app) development where the designer has complete control over app layout, with model-driven apps much of the user interface is determined for you and is largely designated by the [components](../model-driven-apps/model-driven-app-glossary.md#component) you add to the app.
 
 There are some notable advantages to this method of application development.  
 
-- Once the [data model](../model-driven-apps/model-driven-app-glossary.md#data-model) and [relationships](../model-driven-apps/model-driven-app-glossary.md#Relationship) have been created the build process is **relatively rapid** due to rich component-focused no-code design environments
+- Once the [data model](../model-driven-apps/model-driven-app-glossary.md#data-model) and [relationships](../model-driven-apps/model-driven-app-glossary.md#relationship) have been created the build process is **relatively rapid** due to rich component-focused no-code design environments
 - Apps have a **similar user interface** across a variety of devices from desktop to mobile
-- The apps are [**accessible**](../model-driven-apps/model-driven-app-glossary.md#Accessibility) and [**responsive**](../model-driven-apps/model-driven-app-glossary.md#Accessibility) automatically
+- The apps are [**accessible**](../model-driven-apps/model-driven-app-glossary.md#accessibility) and [**responsive**](../model-driven-apps/model-driven-app-glossary.md#responsive-apps) automatically
 - The user experience is **consistent** across all model-driven apps.  As such once a user is confident with one model-driven app later apps are much easier to adopt within an organization.
 - Migrating apps between Development, Test and Production [Environments](../model-driven-apps/model-driven-app-glossary.md#environment) is relatively straightforward through the use of [solutions](../model-driven-apps/model-driven-app-glossary.md#solution)
 
@@ -114,16 +114,16 @@ It is regarded as best practice when creating model-driven apps that these are d
 Model-driven apps can be complex, however the minimum requirements for building them are relatively straightforward.  These are as follows :-
 
 - A Microsoft Power Apps [license](https://docs.microsoft.com/en-us/power-platform/admin/pricing-billing-skus)
-- [Capacity](https://docs.microsoft.com/en-us/power-platform/admin/capacity-storage) within the organization to create a Dataverse [Environment](model-driven-app-glossary.md#Environment) (This is a function of the Power Apps and Dynamics licenses held)
+- [Capacity](https://docs.microsoft.com/en-us/power-platform/admin/capacity-storage) within the organization to create a Dataverse [Environment](model-driven-app-glossary.md#environment) (This is a function of the Power Apps and Dynamics licenses held)
 - A Dataverse Environment
 - Rights for the developer to work as an [administrator](https://docs.microsoft.com/en-us/power-platform/admin/database-security) within the environment
-- A Dataverse [Database](model-driven-app-glossary.md#Database) within the environment
+- A Dataverse [Database](model-driven-app-glossary.md#database) within the environment
 - A [table](model-driven-app-glossary.md#table) (There are a number, including account which exist by default)
 - One table [column](model-driven-app-glossary.md#column) (Every table has at least one column, and many system columns)
 - One table [view](model-driven-app-glossary.md#view), to see records (There are a number by default)
-- One table [form](model-driven-app-glossary.md#Form), to enter data (There will be one by default)
+- One table [form](model-driven-app-glossary.md#form), to enter data (There will be one by default)
 
-Beyond this the model-driven app is created, in simple terms, by adding an table to a [site map](model-driven-app-glossary.md#Site-map) using the [app designer](model-driven-app-glossary.md#app-designer), and running through the app validation and publishing process.
+Beyond this the model-driven app is created, in simple terms, by adding an table to a [site map](model-driven-app-glossary.md#site-map) using the [app designer](model-driven-app-glossary.md#app-designer), and running through the app validation and publishing process.
 
 ## Next steps
 

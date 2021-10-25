@@ -30,7 +30,7 @@ search.app:
 
 <a name="BKMK_EditFilterCriteria"></a>   
 
-Along with the [columns](../model-driven-apps/model-driven-app-glossary.md#Column), displayed in a [view](../model-driven-apps/model-driven-app-glossary.md#view), the filter criteria applied to a view is a critical part of the value provided by the view. It is possible to add or edit **filter criteria** and change the **sort order** for the columns included in a view. If a sort order is not set for a view, by default the view is sorted by the **primary column** in the view in ascending order (A to Z).
+Along with the [columns](../model-driven-apps/model-driven-app-glossary.md#column), displayed in a [view](../model-driven-apps/model-driven-app-glossary.md#view), the filter criteria applied to a view is a critical part of the value provided by the view. It is possible to add or edit **filter criteria** and change the **sort order** for the columns included in a view. If a sort order is not set for a view, by default the view is sorted by the **primary column** in the view in ascending order (A to Z).
 
 ## Editing the filter criteria of a view
 
