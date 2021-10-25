@@ -34,7 +34,7 @@ If you create any new solution components in the process of editing the form, fo
 
 1. Sign in to [Power Apps](https://make.powerapps.com/). 
 
-2. Select **Data** > **Tables** > and then select the table you want, such as the account table. 
+2. Select **Dataverse** > **Tables** > and then select the table you want, such as the account table. 
 
 3. Select the **Forms** tab and then open the form you want, such as the **Account** main form.
 

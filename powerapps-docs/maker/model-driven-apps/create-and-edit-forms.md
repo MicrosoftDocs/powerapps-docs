@@ -33,7 +33,7 @@ Use the new form designer to create, edit, or configure forms for model-driven a
 
 ## Create a form 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
-2. On the left navigation pane, expand **Data**, and then select **Tables**. 
+2. On the left navigation pane, expand **Dataverse**, and then select **Tables**. 
 3. Select a table, such as the account table, and then select the **Forms** tab. 
 4. Select **Add form**, and then select one of the following
     - **Main form**  
@@ -44,7 +44,7 @@ Use the new form designer to create, edit, or configure forms for model-driven a
 
 ## Edit a form 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
-2. On the left navigation pane, expand **Data**, and then select **Tables**. 
+2. On the left navigation pane, expand **Dataverse**, and then select **Tables**. 
 3. Select a table, such as the account table, and then select the **Forms** tab.
 4. Select the form name that you want to edit.  
     - You can also select the row for a form, and then in the command bar, select **Edit form**
