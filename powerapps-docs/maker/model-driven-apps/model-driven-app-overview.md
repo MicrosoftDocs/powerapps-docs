@@ -27,7 +27,7 @@ Using the app designer with little or no code, you can build apps that are **sim
 
 ### Process driven apps
 
-Model-driven apps are especially well suited to **process driven** apps that are data dense and make it easy for users to move between related records. For example, if you are building an app to manage a complex process, such as onboarding new employees, managing a sales process, or member relationships in an organization like a bank, a model-driven app is a great choice.
+Model-driven apps are especially well suited to **process driven** apps that are data dense and make it easy for users to move between related records. For example, if you are building an app to manage a complex process, such as onboarding new employees, managing a sales process, or member relationships in an organization such as a bank, a model-driven app is a great choice.
 
 ### Data modelling
 
@@ -127,7 +127,7 @@ Beyond this the model-driven app is created, in simple terms, by adding an table
 
 ## Next steps
 
-[Building a simple model-driven app](build-first-model-driven-app.md) is a great way to start.  You may wish to [Create a solution](../../maker/data-platform/create-solution) before you do so.
+[Building a simple model-driven app](build-first-model-driven-app.md) is a great way to start.  You may wish to [Create a solution](../../maker/data-platform/create-solution.md) before you do so.
 
 To go deeper into creating model-driven apps see [Steps to building a model-driven app](app-building-steps.md).
 
