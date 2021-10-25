@@ -127,7 +127,7 @@ Beyond this the model-driven app is created, in simple terms, by adding an table
 
 ## Next steps
 
-[Building a simple model-driven app](build-first-model-driven-app.md) is a great way to start.  You may wish to [Create a solution](../../maker/data-platform/create-solution) before you do so.
+[Building a simple model-driven app](build-first-model-driven-app.md) is a great way to start.  You may wish to [Create a solution](../../maker/data-platform/create-solution.md) before you do so.
 
 To go deeper into creating model-driven apps see [Steps to building a model-driven app](app-building-steps.md).
 
