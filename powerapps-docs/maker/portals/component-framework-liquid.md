@@ -120,7 +120,8 @@ See [Allow Read access to the Web Resource table](component-framework-tutorial.m
 
 ### See also
 
-[Template tags](liquid/template-tags.md#codecomponent) <br>
+[Codecomponent Dataverse entity tag](liquid/portals-entity-tags.md#codecomponent) <br>
+[Codecomponent Template tag](liquid/template-tags.md#codecomponent) <br>
 [Power Apps component framework overview](../../developer/component-framework/overview.md) <br>
 [Create your first component](../../developer/component-framework/implementing-controls-using-typescript.md) <br>
 [Add code components to a field or table in model-driven apps](../../developer/component-framework/add-custom-controls-to-a-field-or-entity.md)
