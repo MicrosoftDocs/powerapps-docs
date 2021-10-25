@@ -712,7 +712,7 @@ Allows you to embed code components using a Liquid tag. For example, adding a ma
 
 The Id or name of the code component.
 
-**property:value**
+**property**
 
 The values of the properties that the code component expects needs to be passed in as a key/value pair separated by “:” (colon sign), where key is the property name and the value is the JSON string value.
 
