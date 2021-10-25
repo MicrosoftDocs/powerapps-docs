@@ -89,7 +89,7 @@ A large part of the time spent building the app is dedicated to modelling the bu
 
 Documentation has been developed that is dedicated to helping **users** of model driven apps to successfully navigate around them and interact with them in a way that lets them be more productive.
 
-[Learn more about using model-driven apps](https://docs.microsoft.com/en-us/powerapps/user/use-model-driven-apps)
+[Learn more about using model-driven apps](https://docs.microsoft.com/powerapps/user/use-model-driven-apps)
 
 ## Using solutions to assist with Application Lifecycle Management
 
@@ -99,24 +99,24 @@ Documentation has been developed that is dedicated to helping **users** of model
 
 As a minimum a model driven app requires a single table, a site map plus the app itself however they generally include an considerable amount more, and this includes canvas apps, roles, environment variables and much more.  
 
-:::image type="content" source="../../maker/model-driven-apps/media/solution-assets-explorer.png" alt-text="Sample model-driven app":::
+:::image type="content" source="../../maker/model-driven-apps/media/solution-assets-explorer.png" alt-text="Solution explorer":::
 
 Solutions offer the means by which these elements can be migrated between environments.  Consequently, they are an important part of any application lifecycle management strategy.
 
 It is regarded as best practice when creating model-driven apps that these are done so within a solution.
 
-[Learn more about solutions](../../developer/data-platform/introduction-solutions)
+[Learn more about solutions](../../developer/data-platform/introduction-solutions.md)
 
-[Create a solution](../../maker/data-platform/create-solution)
+[Create a solution](../../maker/data-platform/create-solution.md)
 
 ## Minimum requirements for building a model-driven app
 
 Model-driven apps can be complex, however the minimum requirements for building them are relatively straightforward.  These are as follows :-
 
-- A Microsoft Power Apps [license](https://docs.microsoft.com/en-us/power-platform/admin/pricing-billing-skus)
-- [Capacity](https://docs.microsoft.com/en-us/power-platform/admin/capacity-storage) within the organization to create a Dataverse [Environment](model-driven-app-glossary.md#environment) (This is a function of the Power Apps and Dynamics licenses held)
+- A Microsoft Power Apps [license](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus)
+- [Capacity](https://docs.microsoft.com/power-platform/admin/capacity-storage) within the organization to create a Dataverse [Environment](model-driven-app-glossary.md#environment) (This is a function of the Power Apps and Dynamics licenses held)
 - A Dataverse Environment
-- Rights for the developer to work as an [administrator](https://docs.microsoft.com/en-us/power-platform/admin/database-security) within the environment
+- Rights for the developer to work as an [administrator](https://docs.microsoft.com/power-platform/admin/database-security) within the environment
 - A Dataverse [Database](model-driven-app-glossary.md#database) within the environment
 - A [table](model-driven-app-glossary.md#table) (There are a number, including account which exist by default)
 - One table [column](model-driven-app-glossary.md#column) (Every table has at least one column, and many system columns)
@@ -135,6 +135,6 @@ If you are new to Power Apps, and want to learn about how to convert your ideas 
 
 [Understand model-driven app components](model-driven-app-components.md) will help you to understand some of the elements that make up a model-driven app.
 
-[Learn about licensing for the Power Platform](https://docs.microsoft.com/en-us/power-platform/admin/pricing-billing-skus)
+[Learn about licensing for the Power Platform](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

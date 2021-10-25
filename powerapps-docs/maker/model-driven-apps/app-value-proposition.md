@@ -14,7 +14,7 @@ author: "Mattp123"
 ms.assetid: 
 caps.latest.revision: 1
 ms.subservice: 
-ms.author: ""
+ms.author: matp
 manager: ""
 tags: 
 search.audienceType: 
@@ -25,9 +25,8 @@ search.app:
 ---
 # The Model-driven app value proposition
 
-
 ##  Model-driven apps and Dynamics
-Model-driven apps will be very familiar to anyone that has worked with [Dynamics](model-driven-app-glossary.md#Dynamics) but to others they are a very new business productivity tool.
+Model-driven apps will be very familiar to anyone that has worked with [Dynamics](model-driven-app-glossary.md#dynamics) but to others they are a very new business productivity tool.
 
 Dynamics apps are essentially a set of line of buiness apps, such as sales, marketing or service built over [Dataverse](model-driven-app-glossary.md#dataverse).  The utility of the Dynamics model was recognized as being powerful and by making Dataverse fully customizable has enabled more bespoke solutions to be created.
 
