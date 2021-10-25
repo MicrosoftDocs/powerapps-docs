@@ -1456,7 +1456,7 @@
   - name: For developers
     href: ../developer/model-driven-apps/overview.md
   - name: Glossary of terms
-    href: ../developer/model-driven-apps/model-driven-app-glossary.md    
+    href: ./model-driven-apps/model-driven-app-glossary.md    
 - name: Power Apps Mobile  
   items:
   - name: Run apps on Power Apps Mobile
