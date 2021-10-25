@@ -48,7 +48,8 @@ Legend
 6. Shows the form details that can be edited.
 7. Save or cancel your changes. Saved changes are saved for all selected rows.
 
-
+> [!NOTE]
+> Editing multiple records is currently not available in the mobile experience.
 
 
 
