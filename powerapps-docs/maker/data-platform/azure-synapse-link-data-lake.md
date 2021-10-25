@@ -56,7 +56,7 @@ You can use the Azure Synapse Link to connect your Microsoft Dataverse data to A
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select your preferred environment.
 
-2. On the left navigation pane, select **Data**, select **Azure Synapse Link**, and then on the command bar, select **+ New link to data lake**.
+2. On the left navigation pane, select **Dataverse**, select **Azure Synapse Link**, and then on the command bar, select **+ New link to data lake**.
 
     ![Navigate to Power Apps.](media/navigate-to-powerapps.png "Navigate to Power Apps")
 
