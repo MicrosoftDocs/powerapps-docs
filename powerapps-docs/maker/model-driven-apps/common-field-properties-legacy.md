@@ -23,7 +23,10 @@ search.app:
 # Model-driven app common column properties
 
 Common properties of table columns for a model-driven app can be viewed using the Power Apps portal or the Power Apps solution explorer. The Power Apps portal provides an easy way to create and edit table columns with the Microsoft Dataverse.
+
 The portal enables configuring the most common options, but certain options can only be set using solution explorer.
+
+In addition to configuring aspects of the Dataverse column, such as its type and whether or not it is required, it is possible to configure aspects of how the column is used in the context of a [form](model-driven-app-glossary.md#form).  This approach allows for different forms to permit users to have different interactions with the data column.
 
 ## Common column properties in Power Apps portal
 
@@ -59,13 +62,32 @@ In addition to using the Power Apps Portal columns can also be reviewed using th
 
 ### Navigate to a column for a table using the solution explorer
 
-In the solution explorer tables are known as entities and columns are known as fields.
+To update the column the following steps need to be performed.
 
-To navigate to a field for a table expand the **entities** node and then select the required table.  Expand the table required, and then select **Fields**.
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
+1. On the left navigation pane, expand **Data**, and then select **Tables**.
+    > [!note]
+    > Many customisations to a table take place within [solutions](../model-driven-apps/model-driven-app-glossary.md#solution).  To update a form within a solution first navigate to your **Solution**, then select the **Table** followed by the **Forms** tab.
+
+1. Select a table, such as the account table.
+
+1. Select three dots in the command menu and select **switch to classic**.
+
+1. Select **switch to classic**.  The table will open using the classic experience.
+    >[!note]
+    >In the solution explorer tables are known as entities and columns are known as fields.
+
+1. Select the column where an updated experience is required.
+1. Select **change properties** from the top menu or simply double click the field.
+
+   ![Common column properties in solution explorer.](media/common-field-properties.png "Common form data column properties in solution explorer")
+
+1. Make the necessary property changes (see the classic editor field properties options) then select **OK**.
+1. **Save** and **Publish** the form.
+
+## Field properties within the classic editor
 
 There are 6 tabs shown for a field.  Display, Formating, Details, Events, Business Rules and Components.
-
-![Common column properties in solution explorer.](media/common-field-properties.png "Common column properties in solution explorer")
   
 The following table describes properties that all columns have. Certain types of columns have special properties. These are described in [Special column properties](special-field-properties-legacy.md).  
   
@@ -83,6 +105,28 @@ The following table describes properties that all columns have. Certain types of
 ||**Event Handlers**|Configure the functions from the form libraries that should be called for the column `OnChange` event. More information: [Configure Event Handlers](configure-event-handlers-legacy.md)|  
 |**Business Rules**|**Business Rules**|View and manage any business rules that reference this column. More information: [Create business rules and recommendations](create-business-rules-recommendations-apply-logic-form.md)|  
 |**Controls**|**Controls**|Add controls and specify their availability on Web, Phone and Tablet .|  
+
+## Editing form level column properties
+
+In some scenarios it is desirable to be able to render a data column within a form field in one form in a way that differs to the way in which it is presented in another form.  This allows the user experience to be tailored to the individual using the form.
+
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
+2. On the left navigation pane, expand **Data**, and then select **Tables**.
+> [!note]
+> Many customisations to a table take place within [solutions](../model-driven-apps/model-driven-app-glossary.md#solution).  To update a form within a solution first navigate to your **Solution**, then select the **Table** followed by the **Forms** tab.
+
+3. Select a table, such as the account table, and then select the **Forms** tab.
+
+4. Select the form where customisations are required.
+
+5. Select **switch to classic**.  The form will open using the classic experience.
+6. Select the form field where an updated experience is required.
+7. Select **change properties** from the top menu or simply double click the field.
+
+  ![Common column properties in solution explorer.](media/common-field-properties.png "Common form data column properties in solution explorer")
+
+8. Make the necessary changes then select **OK**.
+9. **Save** and **Publish** the form.
 
 ## Next steps
 

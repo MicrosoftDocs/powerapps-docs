@@ -26,7 +26,7 @@ search.app:
 ---
 
 # Create, edit, or configure forms using the form designer 
-Use the new form designer to create, edit, or configure forms for model-driven apps. 
+Use the new form designer to create, edit, or configure forms for model-driven apps.
 
 > [!IMPORTANT]
 > The new model-driven form designer does not currently support editing card forms. More information: [Form types](types-forms.md)
@@ -36,7 +36,9 @@ Use the new form designer to create, edit, or configure forms for model-driven a
 2. On the left navigation pane, expand **Data**, and then select **Tables**.
 > [!note]
 > Many customisations to a table take place within [solutions](../model-driven-apps/model-driven-app-glossary.md#solution).  To update a form within a solution first navigate to your **Solution**, then select the **Table** followed by the **Forms** tab.
-3. Select a table, such as the account table, and then select the **Forms** tab. 
+
+3. Select a table, such as the account table, and then select the **Forms** tab.
+
 4. Select **Add form**, and then select one of the following
     - **Main form**  
     The primary form type for interaction by users with record data.  The contents of the new form are filled using the existing main form definition. If multiple main forms exist, the form at the top of the list in the form order for your app is used to fill the new form.
