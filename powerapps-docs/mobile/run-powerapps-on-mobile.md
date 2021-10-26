@@ -52,13 +52,13 @@ For privileges required to run model-driven apps on Power Apps Mobile app, see [
 
 ## Supported devices 
 
-These are the supported devices for running model-driven apps and canvas apps on Power Apps mobile.
+Since mobile devices are continuously updated, keep the following in mind:
 
-**iOS**: The lastest verion of iOS is always the recommended version to run Power Apps mobile. The previous version is the minimum required version to run Power Apps mobile. 
+- **iOS**: The latest version of iOS is always the recommended version to run Power Apps mobile. The previous version is the minimum required.
 
-**Android**: The lastest verion of Android is always the recommended version to run Power Apps mobile. The previous three versions are the minimum required to run Power Apps mobile. 
+- **Android**: The latest version of Android is always the recommended version to run Power Apps mobile. The previous three versions are the minimum required to run Power Apps mobile.
 
-When a new version of iOS or Android is released, you'll have 60 days to update your device to atleast the minimum required to run Power Apps mobile.
+These are the supported devices for running model-driven apps and canvas apps on Power Apps mobile. When a new version of iOS or Android is released the supported device to run Power Apps mobile will change. You'll have 60 days to update your device to at least the minimum required version to continue to run Power Apps mobile.
 
 | **Minimum required** | **Recommended** |
 | --- | --- |
