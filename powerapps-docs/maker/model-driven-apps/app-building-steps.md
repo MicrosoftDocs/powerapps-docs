@@ -1,17 +1,15 @@
 ---
-title: Understand accessibility app designer, site map designer, and My Apps page in Power Apps | Microsoft Docs
-description: Know about accessibility in model-driven apps with app designer, site map designer, and My Apps page in Power Apps
-keywords: App designer; site map designer; my apps; Dynamics 365
+title: Steps to building a model-driven app
+description: Learn the detailed steps required to build a model driven app.
+keywords: App designer; site map designer; my apps
 author: Mattp123
 ms.subservice: mda-maker
 ms.author: matp
 manager: kvivek
-ms.date: 05/20/2019
+ms.date: 10/26/2021
 ms.service: powerapps
 ms.topic: article
 applies_to: 
-  - Dynamics 365 (online)
-  - Dynamics 365 Version 9.x
   - PowerApps
 ms.assetid: 26c79c20-2987-476e-983a-406e0db13034
 search.audienceType: 
@@ -23,9 +21,12 @@ search.app:
 
 # Steps to building a model-driven app
 
+This page describes in some detail the steps associated with building a model-driven app.  For those that would like a simple walkthrough of building a first app see [building a first model-driven app](build-first-model-driven-app.md).
+
 ## Steps to building and sharing a model driven app
 
 At a fundamental level, model-driven app making consists of the following stages.
+
 |Stage|Purpose|
 |-----|-------|
 |Modeling business data|To ensure that the data constructed in the correct way to address the business problem
@@ -42,7 +43,8 @@ Whilst it may seem strange to have multiple editors these reflect the various te
 
 To model business data you determine what data your app will need and how that data will relate to other data. Model-driven design uses a metadata-driven architecture so that designers can customize the application without writing code. Metadata means “data about data” and it defines the structure of the data stored in the system.
 
->[!NOTE]Model-driven apps **cannot** be created without Dataverse tables, however Dataverse tables can be used by a wide of products including canvas apps and Power Automate.
+>[!NOTE]
+>Model-driven apps **cannot** be created without Dataverse tables, however Dataverse tables can be used by a wide of products including canvas apps and Power Automate.
 
 [Tutorial: Create a custom table that has components in Power Apps](../data-platform/create-custom-entity.md)
 
@@ -54,11 +56,11 @@ Nevertheless, consistent processes help make sure your app users focus on their 
 
 The screenshot below illustrates the impact of having a business process flow in place.
 
-:::image type="content" source="../../user/media/business-process.png" alt-text="Sample model-driven app":::
+:::image type="content" source="../../user/media/business-process.png" alt-text="Sample model-driven app with business process flow":::
 
 Business process flows are created and configured using Power Automate.  
 
-More information: [Business process flows overview](https://docs.microsoft.com/en-us/power-automate/business-process-flows-overview) and [Apply business logic with Microsoft Dataverse](../data-platform/processes.md).
+More information: [Business process flows overview](https://docs.microsoft.com/power-automate/business-process-flows-overview) and [Apply business logic with Microsoft Dataverse](../data-platform/processes.md).
 
 ## Composing the model-driven app
 
@@ -90,8 +92,8 @@ These actions cover Create, Read, Write, Delete, Append, Append To, Assign and S
 
 For more information on understanding, creating and configuring security roles see the following:
 
-- [Power Platform documentation](https://docs.microsoft.com/en-us/power-platform/admin/security-roles-privileges)
-- [Microsoft Learn module](https://docs.microsoft.com/en-us/learn/modules/get-started-security-roles/)
+- [Power Platform documentation](https://docs.microsoft.com/power-platform/admin/security-roles-privileges)
+- [Microsoft Learn module](https://docs.microsoft.com/learn/modules/get-started-security-roles/)
 
 ## Sharing the app
 
@@ -113,7 +115,7 @@ To share an app you need 2 actions are required.
 
 Documentation has been developed that is dedicated to helping **users** of model driven apps to successfully navigate around them and interact with them in a way that lets them be more productive.
 
-[Learn more about using model-driven apps](https://docs.microsoft.com/en-us/powerapps/user/use-model-driven-apps)
+[Learn more about using model-driven apps](https://docs.microsoft.com/powerapps/user/use-model-driven-apps)
 
 ## Next steps
 

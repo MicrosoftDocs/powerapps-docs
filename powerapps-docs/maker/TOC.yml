@@ -1120,10 +1120,10 @@
       href: ./model-driven-apps/overview-model-driven-samples.md
   - name: Design and build an app
     items:
-    - name: Create your first app
-      href: ./model-driven-apps/build-first-model-driven-app.md
     - name: Steps to building a model-driven app
       href: ./model-driven-apps/app-building-steps.md
+    - name: Create your first app
+      href: ./model-driven-apps/build-first-model-driven-app.md
     - name: Understand model-driven app components
       href: ./model-driven-apps/model-driven-app-components.md
     - name: Define the data-model for an app
