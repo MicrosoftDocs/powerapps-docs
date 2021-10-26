@@ -1,8 +1,7 @@
 ---
-title: Work with Experimental Co-authoring
-description: Learn how to use enable expiremental co-authoring in Power Apps Studio.
+title: Co-authoring in canvas apps (experimental)
+description: Learn how to enable co-authoring in Power Apps Studio for canvas apps (experimental)
 author: gregli-msft
-manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
@@ -20,30 +19,37 @@ contributors:
 ---
 # Work with Experimental Co-authoring
 
-> [!IMPORTANT]
-> This is an experimental feature.  As with [all experimental features](working-with-experimental-preview.md), this feature may significantly change or be removed at any time.  In particular, our use of Git is evolving and will likely change.  Please visit the [Collaborative authoring](https://powerusers.microsoft.com/t5/Error-Handling/bd-p/PA_Error_Handling) section of the Power Apps community forum for updates and to provide us feedback.  
+[This article is pre-release documentation and is subject to change.]
 
-Use Git version control to enable more than one person to edit a Canvas app at the same time.  No longer will others be locked out of the app while one person is editing it.  As changes are made and synchronized, they are automatically merged with other changes, and made avaialble to all other editors of the app.  This is a first step toward a Microsoft Office style co-authoring experience.
-
-[Git](https://git-scm.com/) is used as the backing store for this feature.  Someone on your project will need to be Git savvy to setup the initial Git connection, but after this is done, any user can use this feature without needing to know anything about Git (beyond authentication credentials).
-
-Any Git provider can be used with Studio, such as [GitHub](https://github.com/) or [Azure DevOps](https://azure.microsoft.com/en-us/services/devops/).  Use existing Git tools to see version history, create and manage pull requests, and perform other version control tasks.
-
-## Known limitations
-
-This is very much an experimental feature and we welcome your feedback.  Here is a list of known limitations, most of which we plan to eliminate in a future version.
-
-1. This feature is not compatible with [code components](../../developer/component-framework/create-custom-controls-using-pcf). Do not use this feature with apps that make of use of code components.
-1. This feature does not work with public Git repository.  Use a private repo instead until this limitation is relaxed.
-1. This feature does not work with on-premisis Git repositories.  The Git repo must be hosted on the web and accessible via username and personal access token.
-1. Edits to the same property on the same control are not merged.  The last edit made will win.
-
-## Enabling Git version control
+<!---
 
 > [!IMPORTANT]
 > This is an experimental feature.  As with [all experimental features](working-with-experimental-preview.md), this feature may significantly change or be removed at any time.  In particular, our use of Git is evolving and will likely change.  Please visit the [Collaborative authoring](https://powerusers.microsoft.com/t5/Error-Handling/bd-p/PA_Error_Handling) section of the Power Apps community forum for updates and to provide us feedback.  
 
-Git version control is managed on a per app basis.  Each app must be individually addded to Git version control.
+--->
+
+> [!IMPORTANT]
+> - This is an experimental feature.
+> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
+
+You can now use Git version control to enable more than one person to edit a canvas app at the same time. With this feature, others won't get locked out of the app while one person is editing it. As changes are made and synchronized, they're automatically merged with other changes, and made available to all others editing the app. This is a first step towards the Microsoft Office style of co-authoring experience.
+
+[Git](https://git-scm.com/) is used as the backing store for this feature. After the initial setup with the connection to Git, any user can use this feature without any additional configuration steps except to authenticate with Git.
+
+Any Git provider can be used with Power Apps Studio&mdash;such as [GitHub](https://github.com/) or [Azure DevOps](https://azure.microsoft.com/services/devops/). Use existing Git tools to see version history, create and manage pull requests, and perform other version control tasks.
+
+> [!NOTE]
+> - Before you begin, ensure you read [known limitations](#known-limitations) of this feature. Use of Git is evolving and may change how this feature works. For updates and to share your feedback about this feature, go to [Collaborative authoring](https://powerusers.microsoft.com/t5/Error-Handling/bd-p/PA_Error_Handling).
+> - Git version control is managed on a per-app basis. Each app must be individually added to Git version control.
+
+## Step 1. Enable Git version control
+
+<!---
+> [!IMPORTANT]
+> This is an experimental feature.  As with [all experimental features](working-with-experimental-preview.md), this feature may significantly change or be removed at any time.  In particular, our use of Git is evolving and will likely change.  Please visit the [Collaborative authoring](https://powerusers.microsoft.com/t5/Error-Handling/bd-p/PA_Error_Handling) section of the Power Apps community forum for updates and to provide us feedback.
+--->  
+
+Follow these steps to enable Git version control in your app.
 
 1. Create a new app or open an existing app that you would like to add to Git version control.
 1. Open the **Settings** for this app.
@@ -52,29 +58,33 @@ Git version control is managed on a per app basis.  Each app must be individuall
 1. Scroll down to **Show the Git version control setting** and enable the switch below it.
 1. You will immediately see a new **Git version control** item on the left hand side of the settings.
 
-When complete, your screen should look like this:
+    :::image type="content" source="media/working-with-git-version-control/enable-git.png" alt-text="Swtich to enable Git version control.":::
 
-![swtich to enable Git version control](media/working-with-git-version-control/enable-git.png)
+    > [!TIP]
+    > If you don't see the **Show the Git version control setting** experimental feature, your tenant may not have been properly enabled for this feature. In this case, send an email to [PAGit@microsoft.com](mailto:PAGit@microsoft.com) to get this feature listed on your tenant. For any other problem with this feature, go to [Collaborative authoring](https://powerusers.microsoft.com/t5/Error-Handling/bd-p/PA_Error_Handling).
 
-If the **Show the Git version control setting** experimental feature is not shown, it may be that your tenant has not been properly enabled for this feature.  Send mail to [PAGit@microsoft.com](mailto:PAGit@microsoft.com) for help.
+## Step 2. Connect an app to Git
 
-## Connecting an app to Git
+Follow these steps to connect your app to Git.
 
-Select **Git version control** in settings:
+1. Select **Git version control** in settings:
 
-![button to initiate a connection to git for this app](media/working-with-git-version-control/connect-git.png)
+    :::image type="content" source="media/working-with-git-version-control/connect-git.png" alt-text="Button to initiate a connection to git for this app.":::
 
-Press the **Connect** button to fill in Git connection information for this app:  
+1. Select **Connect** to fill in Git connection information for this app.
 
-![text input boxes to provide git connection information](media/working-with-git-version-control/connect-info.png)
+    :::image type="content" source="media/working-with-git-version-control/connect-info.png" alt-text="Text input boxes to provide git connection information.":::
 
-- **Git Repository URL**: The URL you would normally use with Git tools.  For Azure DevOps, be sure to include the **_git/repo** portion of the URL, as in `https://org.visualstudio.com/_git/repo`.  
-- **Branch**: The branch name to use.
-- **Directory**: The directory within the branch to use.  You cannot store a Canvas app at the root of the branch.
+    - **Git Repository URL**: The URL you would normally use with Git tools. For Azure DevOps, be sure to include the **_git/repo** portion of the URL, such as `https://contoso.visualstudio.com/_git/repo`.  
+    - **Branch**: The branch name to use.
+    - **Directory**: The directory within the branch to use. You can't store a canvas app at the root of the branch.
 
-If the branch or directory does not exist, you will be prompted to create them.  If the branch and directory already contains a canvas app, the current app will be closed and the existing app loaded from Git.
+    If the branch or directory doesn't exist, you will be prompted to create them. If the branch and directory already contains a canvas app, the current app will be closed and the existing app loaded from Git.
 
-Once connected, the connection information will be displayed.  At this time, the app cannot be unlinked from Git, but we plan to add that in the future.
+    Once connected, the connection information will be displayed.
+
+    > [!NOTE]
+    > Once connected, the app can't be disconnected from Git currently. The option to disconnect is coming soon.
 
 ## Git authentication
 
@@ -121,6 +131,15 @@ This is the only time a version is stored in Power Apps is if you publish the ap
 At this time, we have no UI in Studio for doing Git operations other that pulling the top commit and pushing a new commit.  Working with pull requets or any other Git operations must be done through other Git tools, including the Git provider's website.
 
 Each save or synchronize which includes changes will result in a commit in Git.  If other changes occured in Git, for example by other makers, then there will be attiional commits made in order to merge the result of all the changes.  No changes will be lost, even if a merge would override an edit, all of the changes by all users is in the commits somewhere.
+
+## Known limitations
+
+This is very much an experimental feature and we welcome your feedback.  Here is a list of known limitations, most of which we plan to eliminate in a future version.
+
+1. This feature is not compatible with [code components](../../developer/component-framework/create-custom-controls-using-pcf). Do not use this feature with apps that make of use of code components.
+1. This feature does not work with public Git repository.  Use a private repo instead until this limitation is relaxed.
+1. This feature does not work with on-premisis Git repositories.  The Git repo must be hosted on the web and accessible via username and personal access token.
+1. Edits to the same property on the same control are not merged.  The last edit made will win.
 
 ## Feedback to the community forum
 
