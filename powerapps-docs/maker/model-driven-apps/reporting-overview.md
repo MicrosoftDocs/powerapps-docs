@@ -1,6 +1,6 @@
 ---
-title: "Add reporting features to your model-driven app" 
-description: Learn how to add reporting to your model-driven app in Power Apps.
+title: "Reporting overview for model-driven apps" 
+description: Learn how reporting can be applied to your model-driven app.
 ms.custom: ""
 ms.date: 10/26/2021
 ms.reviewer: ""
