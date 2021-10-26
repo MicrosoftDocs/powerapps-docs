@@ -61,7 +61,7 @@ The app designer interface has the following areas:
 
 ## Navigation pane options
 
-From the **Navigation** pane, you can set the following navigation bar options.
+From the **Navigation** pane, select **Navigation bar** to set the following options.
 1. **Show Home**. Enabled by default. When selected, displays the Home page link for the app.
 1. **Show Recent**. Enabled by default.When selected, displays the recently viewed pages link. Selecting the link displays all recently viewed pages.
 1. **Show Pinned**. Enabled by default. When selected, displays the pages that have been pinned. App users select the push-pin icon next to a record listed under Recent to add it to their pinned rows.
