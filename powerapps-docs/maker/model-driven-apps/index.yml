@@ -78,7 +78,7 @@ landingContent:
           - text: Table dashboards
             url: create-edit-dashboards.md
           - text: Add a Power BI Dashboard
-            url: add-power-bi-visual.md
+            url: add-powerbi-visual.md
 
   # Card
   - title: Advanced modelling
