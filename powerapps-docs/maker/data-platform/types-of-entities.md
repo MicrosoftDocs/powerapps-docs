@@ -68,10 +68,10 @@ Enable activities to add activities to a table and use the Regarding lookup for 
 1. To enable activities, Sign in to [Power Apps](https://make.powerapps.com).
 
   
-2. On the left nav, select **Data** to expand it and then select **Tables**.  
+2. On the left nav, select **Dataverse** to expand it and then select **Tables**.  
 
-   > [!div class="mx-imgBorder"]
-   >![Go to Tables in maker portal.](media/maker-data-tables.png "Go to Tables in maker portal")
+<!--    > [!div class="mx-imgBorder"]
+   >![Go to Tables in maker portal.](media/maker-data-tables.png "Go to Tables in maker portal")  -->
    
   
 3. Select a table.

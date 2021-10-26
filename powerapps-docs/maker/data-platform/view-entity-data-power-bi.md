@@ -35,7 +35,7 @@ table row data using a Power Apps app.
 1.  Sign into [Power Apps](https://make.powerapps.com/), and then select the
     appropriate environment from the top-right corner.
 
-2.  On the left navigation pane expand **Data**, select **Tables**, and then
+2.  On the left navigation pane expand **Dataverse**, select **Tables**, and then
     select **Analyze in Power BI** on the command bar.
 
     The pbids file for your environment is downloaded to your browser’s default download folder.
@@ -64,7 +64,8 @@ For more information about Power BI Desktop, see [Get started with Power BI Desk
 > SQL options, such as a T-SQL queries aren’t supported.
 
 ### See also
-[Use SQL to query data](../../developer/data-platform/dataverse-sql-query.md)
-
+[Use SQL to query data](../../developer/data-platform/dataverse-sql-query.md)</br>
+[Dataverse SQL](/powerapps/developer/data-platform/how-dataverse-sql-differs-from-transact-sql)</br>
+[Power Query Dataverse connector](/power-query/connectors/dataverse)</br>
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
