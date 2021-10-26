@@ -120,7 +120,7 @@ You can insert a "pop-up" overlay of the selected image so users of the app can 
 
 
 
-## Upload photos to OneDrive with a Power Automate flow
+## Upload photos to Sharepoint with a Power Automate flow
 
 
 1. Go to the **Action** tab and select **Power Automate**, followed by **Create a new flow**. This option opens Power Automate in a new browser tab. You might need to sign in at the top.
@@ -129,9 +129,23 @@ You can insert a "pop-up" overlay of the selected image so users of the app can 
 2. Choose the template for a **PowerApps button**.
 
     ![Select the PowerApps button template.](./media/augmented-upload-photo/create-power-apps-button.png "Select the PowerApps button template")
-3. To make it easier to find later, rename the flow by selecting **PowerApps button** at the top and entering a new name.
+3. To make it easier to find later, rename the flow by selecting **PowerApps button** at the top and entering a new name of "Upload MR Photo".
 
     ![Change the name on the top of the screen.](./media/augmented-upload-photo/rename-flow.png "Change the name on the top of the screen")
+
+4. Click on the "..." button next to the PowerApps trigger then select **Delete** followed by **OK**
+
+:::image type="content" source="./media/augmented-view-mr/delete-powerapps-trigger.gif" alt-text="Deleting the PowerApps trigger":::
+
+5. In the search box type in "PowerApps (V2)" and then select the "PowerApps (V2)" trigger.
+
+:::image type="content" source="./media/augmented-view-mr/select-powerapps-v2-trigger.png" alt-text="Select the PowerApps (V2) trigger":::
+
+6. Click the **Add an input** button and select the type **Text** then change the name from "Input" to "FileName"
+
+7. Click **Add an input** again and select the type **File** then change the name from "File Content" to "Image"
+
+:::image type="content" source="./media/augmented-view-mr/trigger-inputs.png" alt-text="The expected values for the PowerApps (V2) trigger":::
 
 4. Select **+ New step**. Search for **OneDrive create file** and select the **Create file** action that appears in the results.
 
