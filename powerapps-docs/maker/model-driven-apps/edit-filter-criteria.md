@@ -1,6 +1,6 @@
 ---
-title: "Edit filter criteria and change sort order in model-driven app views with Power Apps | MicrosoftDocs"
-description: "Learn how to edit filter criteria and change sort order in views"
+title: "Edit filter criteria in model-driven app views with Power Apps | MicrosoftDocs"
+description: "Learn how to edit filter criteria in views"
 ms.custom: ""
 ms.date: 03/26/2020
 ms.reviewer: ""
