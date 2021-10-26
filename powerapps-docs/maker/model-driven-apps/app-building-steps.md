@@ -1,17 +1,15 @@
 ---
-title: Understand accessibility app designer, site map designer, and My Apps page in Power Apps | Microsoft Docs
-description: Know about accessibility in model-driven apps with app designer, site map designer, and My Apps page in Power Apps
-keywords: App designer; site map designer; my apps; Dynamics 365
+title: Steps to building a model-driven app
+description: Learn the detailed steps required to build a model driven app.
+keywords: App designer; site map designer; my apps
 author: Mattp123
 ms.subservice: mda-maker
 ms.author: matp
 manager: kvivek
-ms.date: 05/20/2019
+ms.date: 10/26/2021
 ms.service: powerapps
 ms.topic: article
 applies_to: 
-  - Dynamics 365 (online)
-  - Dynamics 365 Version 9.x
   - PowerApps
 ms.assetid: 26c79c20-2987-476e-983a-406e0db13034
 search.audienceType: 
@@ -22,6 +20,8 @@ search.app:
 ---
 
 # Steps to building a model-driven app
+
+This page describes in some detail the steps associated with building a model-driven app.  For those that would like a simple walkthrough of building a first app see [building a first model-driven app](build-first-model-driven-app.md).
 
 ## Steps to building and sharing a model driven app
 

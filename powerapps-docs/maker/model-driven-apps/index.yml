@@ -73,6 +73,8 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
+          - text: Reporting overview
+            url: reporting-overview.md
           - text: Table system charts
             url: create-edit-system-chart.md
           - text: Table dashboards
