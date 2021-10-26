@@ -105,6 +105,8 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
+          - text: Reporting overview
+            url: reporting-overview.md
           - text: Create a system chart
             url: create-edit-system-chart.md
           - text: Create or edit dashboards
@@ -172,14 +174,3 @@ landingContent:
           - text: Dataverse
             url: https://docs.microsoft.com/en-us/powerapps/maker/data-platform/data-platform-intro
 
-  # Card
-  - title: Integration (to remove)
-    linkLists: 
-      - linkListType: how-to-guide
-        links:
-          - text: Embed a canvas app on a model-driven form
-            url: embed-canvas-app-in-form.md
-          - text: App for Outlook
-            url: app-for-outlook-customize.md
-          - text: Using Power BI
-            url: use-power-bi.md

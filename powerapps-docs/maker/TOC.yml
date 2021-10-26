@@ -1404,14 +1404,16 @@
     - name: Add reporting to your app
       href: 
       items:
-      - name: Reporting overview
-        href: ./model-driven-apps/add-reporting-to-app.md      
-      - name: Create a Power BI embedded dashboard
-        href: ./model-driven-apps/create-edit-powerbi-embedded-page.md
-      - name: Report considerations
+      - name: Reporting Overview
+        href: ./model-driven-apps/reporting-overview.md          
+      - name: Reporting considerations
         href: ./model-driven-apps/reporting-considerations.md
+      - name: SQL Server reporting services
+        href: ./model-driven-apps/add-reporting-to-app.md      
       - name: Use Power BI
         href: ./model-driven-apps/use-power-bi.md
+      - name: Create a Power BI embedded dashboard
+        href: ./model-driven-apps/create-edit-powerbi-embedded-page.md
     - name: Use Excel and Word templates
       href: ./model-driven-apps/templates-overview.md
     - name: Use themes to apply organization branding
