@@ -94,6 +94,9 @@ Photos you take by selecting the camera icon in the MR view on the app will be l
     > [!TIP]
     > You can load all photos taken across multiple MR components by adding `Collect(AllPhotos,ViewInMR1.Photos)` to the **OnChange** property of each MR component.
 
+    > [!TIP]
+    > While working with the MR controls in the studio you can hold the `Alt` key and click on the MR button to generate sample photos and data.
+
 You can insert a "pop-up" overlay of the selected image so users of the app can see the photo full size.
 
 1. Open the **Insert** tab.
