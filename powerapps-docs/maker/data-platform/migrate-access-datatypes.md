@@ -16,6 +16,10 @@ search.app:
   - PowerApps
 contributors:
 ---
+
+<!-- from editor: I'm unable to see any of the images, in part because I can't access the review page. Please check the review page to make sure the images are present. -->
+
+
 # Data types and sizes for Access data migration to Dataverse (preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
@@ -69,7 +73,7 @@ In the following table, the data type mappings supported can assist you in plann
 You'll notice some Dataverse columns don't have the same size capacity as Access. As noted above, if a column contains data too large to be migrated, the migration tool alerts the user that the contents can't be migrated. This is to prevent data loss. This decision is not based on the maximum possible size for the column, but rather the size of the actual data in each row.
 
 
-<!-- from editor: Just checking - in line 80, is "standard data" correct, or should it be "standard date"? -->
+<!-- from editor: Just checking - in line 84, is "standard data" correct, or should it be "standard date"? -->
 
 
 |Access/Dataverse data type |Access limit  |Dataverse limit  |
