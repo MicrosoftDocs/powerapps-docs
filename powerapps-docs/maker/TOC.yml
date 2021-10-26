@@ -311,6 +311,8 @@
           href: ./canvas-apps/working-with-tables.md
         - name: Understand record references
           href: ./canvas-apps/working-with-references.md
+        - name: Understand experimental co-authoring
+          href: ./canvas-apps/working-with-git-version-control.md
       - name: Design the interface
         items:
           - name: Add and configure controls
