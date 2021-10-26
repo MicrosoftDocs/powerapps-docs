@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 08/23/2021
+ms.date: 10/26/2021
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
@@ -21,7 +21,7 @@ contributors:
 # Work with Experimental Co-authoring
 
 > [!IMPORTANT]
-> This feature is being provided to you as a private preview under a non-disclosure agreement.  Please do not distribute information about this feature to others.  Please send feedback or questions to [PAGit@microsoft.com](mailto:PAGit@microsoft.com).
+> This is an experimental feature.  As with [all experimental features](working-with-experimental-preview.md), this feature may significantly change or be removed at any time.  In particular, our use of Git is evolving and will likely change.  Please visit the [Collaborative authoring](https://powerusers.microsoft.com/t5/Error-Handling/bd-p/PA_Error_Handling) section of the Power Apps community forum for updates and to provide us feedback.  
 
 Use Git version control to enable more than one person to edit a Canvas app at the same time.  No longer will others be locked out of the app while one person is editing it.  As changes are made and synchronized, they are automatically merged with other changes, and made avaialble to all other editors of the app.  This is a first step toward a Microsoft Office style co-authoring experience.
 
@@ -41,7 +41,7 @@ This is very much an experimental feature and we welcome your feedback.  Here is
 ## Enabling Git version control
 
 > [!IMPORTANT]
-> Git version control is an experimental feature.  It is currently being offered through a private preview program and not to all customers yet.  We would like to hear your feedback before making it available to others.  Please send feedback or questions to [PAGit@microsoft.com](mailto:PAGit@microsoft.com).  As with all experimental features, this feature may significantly change or be removed at any time.  See [Understand experimental, preview, and retired features](working-with-experimental-preview.md) for more details.
+> This is an experimental feature.  As with [all experimental features](working-with-experimental-preview.md), this feature may significantly change or be removed at any time.  In particular, our use of Git is evolving and will likely change.  Please visit the [Collaborative authoring](https://powerusers.microsoft.com/t5/Error-Handling/bd-p/PA_Error_Handling) section of the Power Apps community forum for updates and to provide us feedback.  
 
 Git version control is managed on a per app basis.  Each app must be individually addded to Git version control.
 
@@ -122,6 +122,6 @@ At this time, we have no UI in Studio for doing Git operations other that pullin
 
 Each save or synchronize which includes changes will result in a commit in Git.  If other changes occured in Git, for example by other makers, then there will be attiional commits made in order to merge the result of all the changes.  No changes will be lost, even if a merge would override an edit, all of the changes by all users is in the commits somewhere.
 
-## Feedback to PAGit@microsoft.com
+## Feedback to the community forum
 
-**Let us know what you think!**  This is but a first small step in a long journey to enable a great team development experience.  Please send us email at [PAGit@microsoft.com](mailto:PAGit@microsoft.com) with your thoughts.
+**Let us know what you think!**  This is but a first small step in a long journey to enable a great team development experience. Please visit the [Collaborative authoring](https://powerusers.microsoft.com/t5/Error-Handling/bd-p/PA_Error_Handling) section of the Power Apps community forum for updates and to provide us feedback.  
