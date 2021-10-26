@@ -78,7 +78,7 @@ landingContent:
           - text: Table dashboards
             url: create-edit-dashboards.md
           - text: Add a Power BI Dashboard
-            url: add-power-bi-visual.md
+            url: add-powerbi-visual.md
 
   # Card
   - title: Advanced modelling
@@ -105,6 +105,8 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
+          - text: Reporting overview
+            url: reporting-overview.md
           - text: Create a system chart
             url: create-edit-system-chart.md
           - text: Create or edit dashboards
@@ -171,15 +173,3 @@ landingContent:
             url: https://docs.microsoft.com/en-us/power-platform/alm/solution-concepts-alm
           - text: Dataverse
             url: https://docs.microsoft.com/en-us/powerapps/maker/data-platform/data-platform-intro
-
-  # Card
-  - title: Integration (to remove)
-    linkLists: 
-      - linkListType: how-to-guide
-        links:
-          - text: Embed a canvas app on a model-driven form
-            url: embed-canvas-app-in-form.md
-          - text: App for Outlook
-            url: app-for-outlook-customize.md
-          - text: Using Power BI
-            url: use-power-bi.md

@@ -30,13 +30,13 @@ search.app:
 
 ## Model-driven app reporting capabilities
 
-Model-driven apps have a number of capabilities that allow customers to surface business data that helps them drive decisions and interact with their customers more effectively.  
+Model-driven apps have a number of capabilities that allow customers to surface business data that helps them drive decisions and interact with their customers and their data more effectively.  
 
-These include
+These are described in the [reporting overview](reporting-overview.md) and include
 - [views](model-driven-app-glossary.md#view)
 - [charts](model-driven-app-glossary.md#chart)
 - [dashboards](model-driven-app-glossary.md#dashboard)
-- SQL Server Reporting Services reports
+- [SQL Server Reporting Services reports](add-reporting-to-app.md)
 - Microsoft Excel integration that allows users to easily build self-service reports using the Power BI features [PowerView](https://support.office.com/article/power-view-overview-and-learning-5380e429-3ee0-4be2-97b7-64d7930020b6), [PowerPivot](https://support.office.com/article/power-pivot-overview-and-learning-f9001958-7901-4caa-ad80-028a6d2432ed), and [PowerQuery](https://support.office.com/article/power-query-overview-and-learning-ed614c81-4b00-4291-bd3a-55d80767f81d).
 - [Power BI](model-driven-app-glossary.md#power-bi)
   
