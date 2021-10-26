@@ -17,19 +17,25 @@ search.app:
   - PowerApps
 contributors:
 ---
+
+
+<!-- editor's note: I'm unable to see the table in lines 54-82 because I can't access the review page. You'll need to take a look to make sure it is building correctly. -->
+
+
+
 # Migrate Microsoft Access data to Microsoft Dataverse (preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-Microsoft Access users can now choose to migrate their data into Dataverse or Dataverse for Teams to make use of Azure Cloud security and Power Platform functionality. Migrating Access data to Dataverse provides many new opportunities for interaction and management of data.  
+Microsoft Access users can now choose to migrate their data into Dataverse or Dataverse for Teams to make use of Azure cloud security and Microsoft Power Platform functionality. Migrating Access data to Dataverse provides many new opportunities for interaction and management of data.  
 
 Migration is handled in Access using the export feature, and the migration tool that streamlines the process.
 
-Once migrated, Access users are able to continue using their existing desktop client to manage their data. They're also able to use the Power Platform to manage their data and:
+Once migrated, Access users can continue using their existing desktop client to manage their data. They're also able to use Power Platform to manage their data. Plus, they can:
 
 - Create applications for desktop, laptop, phone, and tablet.
 - Create automated processes based on the data and services in Dataverse or Dataverse for Teams.
-- Create AI driven virtual assistants based from the data.
+- Create AI-driven virtual assistants based on the data.
 - Perform deep analysis on the stored data using business intelligence.
 
 Before you migrate, there are a few key factors to consider. Currently, Dataverse and Dataverse for Teams don't support every data type that is in Access. Additionally, some data types in Dataverse and Dataverse for Teams may have different data limits. More information: [Data types and sizes for Access data migration to Dataverse](migrate-access-datatypes.md) 
@@ -40,9 +46,9 @@ Dataverse and Dataverse for Teams offer differing features that you can use to b
 |Dataverse  |Dataverse for Teams  |
 |---------|---------|
 | All available data types supported.   |  Relational data, image, and file data support, built on the core of Dataverse.     |
-|Dataverse enterprise-grade capabilities, including advanced Role-Based Access Control, highly extensible business logic, sophisticated reporting, and robust offline      | Use apps, chatbots, and automations backed by Dataverse embedded in Teams on any platform.         |
-|Existing premium connectors to enterprise systems such as SAP, Oracle, and so on.    |  Some data types are not supported or have minimal functionality (Currency, Date Only, Customer)        |
-|Standalone premium apps, bots, and automations outside of Teams      |  Not all controls are available such as, bar code scanner, interface tools, and formulas        |
+|Dataverse enterprise-grade capabilities, including advanced Role-Based Access Control, highly extensible business logic, sophisticated reporting, and robust offline.      | Use apps, chatbots, and automations backed by Dataverse embedded in Teams on any platform.         |
+|Existing premium connectors to enterprise systems such as SAP, Oracle, and so on.    |  Some data types are not supported or have minimal functionality (Currency, Date Only, Customer).        |
+|Standalone premium apps, bots, and automations outside of Teams.      |  Not all controls are available, such as bar code scanner, interface tools, and formulas.        |
 
 Total storage capacity is also different. Dataverse and Dataverse for Teams have a heterogenous data storage platform, which allows for storing different types of data in ways that help improve performance and lower cost of maintenance.  
 
