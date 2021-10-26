@@ -2,7 +2,7 @@
 title: "Overview of the model-driven app designer | MicrosoftDocs"
 description: Learn about the app designer for model-driven apps.
 ms.custom: ""
-ms.date: 06/17/2021
+ms.date: 10/26/2021
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -46,8 +46,8 @@ The app designer interface has the following areas:
 3. Panes - The left navigation pane consists of the following areas: 
 
    - **Pages**. Displays the components for you app. From the page area you can choose the forms, views, and dashboards you want to add or remove for each table.
-   - **Navigation**. Displays a site map view of your app that is formed using areas, groups, and subareas. Add or remove groups and subareas to structure your app's navigation.
-   - **Data**. Provides a view of all available data that’s currently included in your app or is available to add from your Dataverse environment. 
+   - **Navigation**. Displays a site map view of your app that is formed using areas, groups, and subareas. Add or remove groups and subareas to structure your app's navigation. Select display options for home, recent, and pinned. More information: [Navigation pane options](#navigation-pane-options)
+   - **Data**. Provides a view of all available data that’s currently included in your app or is available to add from your Dataverse environment.
 
 4. Property pane – Displays properties of the selected component, and also allows you to make changes.
 
@@ -58,7 +58,17 @@ The app designer interface has the following areas:
 7. Fit to width - Quick action to fit the app preview to the available width.
 
    :::image type="content" source="media/app-designer-layout.png" alt-text="Layout of the model-driven app designer that has the account and contact tables added.":::
- 
+
+## Navigation pane options
+
+From the **Navigation** pane, you can set the following navigation bar options.
+1. **Show Home**. Enabled by default. When selected, displays the Home page link for the app.
+1. **Show Recent**. Enabled by default.When selected, displays the recently viewed pages link. Selecting the link displays all recently viewed pages.
+1. **Show Pinned**. Enabled by default. When selected, displays the pages that have been pinned. App users select the push-pin icon next to a record listed under Recent to add it to their pinned rows.
+1. **Enable collapsible groups**. Disabled by default. When selected, subareas displayed under groups in the site map can be expanded or collapsed.
+
+   :::image type="content" source="media/navigation-pane-options.png" alt-text="Options available for app navigation":::
+
 ## Known limitations
 
 - You can’t add the following model-driven app components: 
