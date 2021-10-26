@@ -89,13 +89,10 @@ Photos you take by selecting the camera icon in the MR view on the app will be l
     You can also use the expression editor at the top of the window.
     
     ![Screenshot showing the Items property with ViewInMR1.Photos.](./media/augmented-upload-photo/add-gallery-source.png "Screenshot showing the Items property with ViewInMR1.Photos")
-
+4. Hold the `Alt` key and click on the View in MR button to generate sample photos and data. You should now see the gallery populate with a sample picture.
 
     > [!TIP]
     > You can load all photos taken across multiple MR components by adding `Collect(AllPhotos,ViewInMR1.Photos)` to the **OnChange** property of each MR component.
-
-    > [!TIP]
-    > While working with the MR controls in the studio you can hold the `Alt` key and click on the MR button to generate sample photos and data.
 
 You can insert a "pop-up" overlay of the selected image so users of the app can see the photo full size.
 
