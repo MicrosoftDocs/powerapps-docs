@@ -56,9 +56,15 @@ These are the supported devices for running model-driven apps and canvas apps on
 
 | **Minimum required** | **Recommended** |
 | --- | --- |
-| iOS 12 or later |iOS 12 or later|
-| Android 7 or later |Android 7 or later |
+| iOS 14 or later |iOS 15 or later|
+| Android 10 or later |Android 15 or later |
 | Windows 8.1 or later (PC only) |Windows 10 Fall Creators Update with at least 8 GB of RAM)|
+
+
+Ios: When there's a new version of iOS, it's becomes the remmmended version to run Power Apps mobile. The version before that becomes the mimimum version required to run Power Apps mobile. 
+
+Android: The latest version of Android is always the remmended version to run Power Apps mobile, such as 
+
 
 > [!NOTE]
 > - On October 16, 2020 we will no longer support iOS 12. After October 16, 2020 iOS 13 or later will be supported. 
