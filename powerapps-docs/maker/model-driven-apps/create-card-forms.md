@@ -35,14 +35,14 @@ Although card forms can be created and edited in the same way as other form type
 
 ## Create a card form
 1. To create a card form, sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
-2. Expand **Data**, select **Tables**, select the table you want, and then select the **Forms** tab.
+2. Expand **Dataverse**, select **Tables**, select the table you want, and then select the **Forms** tab.
 3. On the toolbar select **Add form**, and then select **Card form**. Alternatively, you can open an existing **Form type** that's a **Card** form to edit it.
 4. Add the columns that you want. We recommend that you limit the number of columns so that the form displays well on small screens. 
 5. Select **Save** and then select **Publish**. 
 
 ## Add a card form to a view 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-2. Expand **Data**, select the table you want, and then select the **Views** tab.
+2. Expand **Dataverse**, select the table you want, and then select the **Views** tab.
 3. Select the view that you want, and then on the view designer toolbar, select **Switch to classic**.
 4. Select **Custom Controls** from the **Common Tasks** pane.
 5. Select **Add Control**, from the list of controls select **Read Only Grid**, and then select **Add**.
