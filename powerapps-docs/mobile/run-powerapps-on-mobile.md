@@ -5,7 +5,7 @@ author: mduelae
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 10/15/2021
+ms.date: 10/26/2021
 ms.subservice: mobile
 ms.author: mkaur
 ms.custom: ""
@@ -54,20 +54,21 @@ For privileges required to run model-driven apps on Power Apps Mobile app, see [
 
 These are the supported devices for running model-driven apps and canvas apps on Power Apps mobile.
 
+
+**iOS**:The lastest verion of iOS is always the recommended version to run Power Apps mobile. The previous version is the minimum required version to run Power Apps mobile.  
+
+**Android**: The lastest verion of Android is always the recommended version to run Power Apps mobile. The previous three versions are the minimum required to run Power Apps mobile.
+
+When a new version of iOS or Android is released, you'll have 60 days to update your device to atleast the minimum required to run Power Apps mobile.
+
 | **Minimum required** | **Recommended** |
 | --- | --- |
 | iOS 14 or later |iOS 15 or later|
-| Android 10 or later |Android 15 or later |
+| Android 9 or later |Android 12 or later |
 | Windows 8.1 or later (PC only) |Windows 10 Fall Creators Update with at least 8 GB of RAM)|
 
 
-Ios: When there's a new version of iOS, it's becomes the remmmended version to run Power Apps mobile. The version before that becomes the mimimum version required to run Power Apps mobile. 
-
-Android: The latest version of Android is always the remmended version to run Power Apps mobile, such as 
-
-
 > [!NOTE]
-> - On October 16, 2020 we will no longer support iOS 12. After October 16, 2020 iOS 13 or later will be supported. 
 > - We currently don't support new features on Windows platform for [Power Apps mobile app](/powerapps/mobile/run-canvas-and-model-apps-on-mobile). Features such as the Improved Microsoft Dataverse option and guest access are not available on this platform. We recommend using a web player on Windows to leverage the full set of capabilities. Updates to Power Apps mobile for Windows platform will be announced in future.
 
 ## Install Power Apps mobile app
