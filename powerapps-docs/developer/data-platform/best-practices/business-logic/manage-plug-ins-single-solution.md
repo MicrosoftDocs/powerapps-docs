@@ -1,5 +1,5 @@
 ---
-title: "Manage plug-ins in single solution | MicrosoftDocs"
+title: "Manage plug-ins in a single solution | MicrosoftDocs"
 description: "The definition of a Plug-in assembly should be maintained within a single solution. You may want to have a separate solution that contains only plug-in definitions to help manage the plugin definitions."
 services: ''
 suite: powerapps
@@ -23,7 +23,7 @@ search.app:
   - D365CE
 ---
 
-# Manage plug-ins in single solution
+# Manage plug-ins in a single solution
 
 **Category**: Maintainability, Design
 

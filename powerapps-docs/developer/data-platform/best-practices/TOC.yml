@@ -18,7 +18,7 @@
         href: business-logic/include-filtering-attributes-plugin-registration.md
       - name: Limit the registration of plug-ins for Retrieve and RetrieveMultiple messages
         href: business-logic/limit-registration-plugins-retrieve-retrievemultiple.md
-      - name: Manage plug-ins in single solution
+      - name: Manage plug-ins in a single solution
         href: business-logic/manage-plug-ins-single-solution.md
       - name: Optimize custom assembly development
         href: business-logic/optimize-assembly-development.md
