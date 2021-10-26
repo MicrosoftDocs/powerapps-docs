@@ -91,7 +91,7 @@ Photos you take by selecting the camera icon in the MR view on the app will be l
     ![Screenshot showing the Items property with ViewInMR1.Photos.](./media/augmented-upload-photo/add-gallery-source.png "Screenshot showing the Items property with ViewInMR1.Photos")
 4. Hold the `Alt` key and click on the View in MR button to generate sample photos and data. You should now see the gallery populate with a sample picture.
 
-:::image type="content" source="./media/augmented-upload-photo/gallery-example.png" alt-text="Example of what the gallery should look like":::
+    :::image type="content" source="./media/augmented-upload-photo/gallery-example.png" alt-text="Example of what the gallery should look like":::
 
     > [!TIP]
     > You can load all photos taken across multiple MR components by adding `Collect(AllPhotos,ViewInMR1.Photos)` to the **OnChange** property of each MR component.
@@ -135,17 +135,17 @@ You can insert a "pop-up" overlay of the selected image so users of the app can 
 
 4. Click on the "..." button next to the PowerApps trigger then select **Delete** followed by **OK**
 
-:::image type="content" source="./media/augmented-view-mr/delete-powerapps-trigger.gif" alt-text="Deleting the PowerApps trigger":::
+    :::image type="content" source="./media/augmented-upload-photo/delete-powerapps-trigger.gif" alt-text="Deleting the PowerApps trigger":::
 
 5. In the search box type in "PowerApps (V2)" and then select the "PowerApps (V2)" trigger.
 
-:::image type="content" source="./media/augmented-view-mr/select-powerapps-v2-trigger.png" alt-text="Select the PowerApps (V2) trigger":::
+    :::image type="content" source="./media/augmented-upload-photo/select-powerapps-v2-trigger.png" alt-text="Select the PowerApps (V2) trigger":::
 
 6. Click the **Add an input** button and select the type **Text** then change the name from "Input" to "FileName"
 
 7. Click **Add an input** again and select the type **File** then change the name from "File Content" to "Image"
 
-:::image type="content" source="./media/augmented-view-mr/trigger-inputs.png" alt-text="The expected values for the PowerApps (V2) trigger":::
+    :::image type="content" source="./media/augmented-upload-photo/trigger-inputs.png" alt-text="The expected values for the PowerApps (V2) trigger":::
 
 4. Select **+ New step**. Search for **OneDrive create file** and select the **Create file** action that appears in the results.
 
