@@ -30,7 +30,6 @@ search.app:
   
  Headers and footers are similar to sections but cannot be removed. If they don't contain anything then they will not be shown.
 
-
 ## Section properties in form designer
 
 1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
