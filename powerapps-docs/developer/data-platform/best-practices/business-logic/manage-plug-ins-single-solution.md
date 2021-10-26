@@ -92,9 +92,9 @@ In both examples above, when the Plug-in Assembly is part of two different solut
 
 ## Additional information
 
-Solutions can contain Plug-ins. Plug-ins consist of PluginAssembly and PluginType records that are associated with each other.
+Solutions can contain Plug-ins. Plug-ins consist of [PluginAssembly](../../reference/entities/pluginassembly.md) and [PluginType](../../reference/entities/plugintype.md) records that are associated with each other.
 
-PluginAssembly contains the binary contents of the assembly. PluginType contains a reference to the class in the assembly that implements the IPlugin interface.
+PluginAssembly contains the binary contents of the assembly. PluginType contains a reference to the class in the assembly that implements the <xref:Microsoft.Xrm.Sdk.IPlugin> interface.
 
 As solution components, plug-ins participate in the solution layering system. If the same assembly is included in two solutions installed on top of each other, the type validations will fail if there are mismatched types within the assemblies. 
 
