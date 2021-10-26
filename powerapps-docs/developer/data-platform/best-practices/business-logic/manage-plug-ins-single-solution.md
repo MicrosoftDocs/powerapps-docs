@@ -47,11 +47,11 @@ This error occurs when a new Plug-in Type is added to an existing assembly in th
 
 ## Guidance
 
-The definition of a Plug-in assembly should be maintained within a single solution. You may want to have a separate solution that contains only plug-in definitions to help manage the plug-ins.
+The definition of a plug-in assembly should be maintained within a single solution. You may want to have a separate solution that contains only plug-in definitions to help manage the plug-ins.
 
 ## Problematic patterns
 
-Below are two examples of the condition for this error may occur. In both examples, there is a Plug-in Assembly representing the BasicPlugin.dll file. Both examples will fail with error: `PluginType [BasicPlugin.CreateAccount] not found in PluginAssembly`.
+Below are two examples of the condition where this error may occur. In both examples, there is a Plug-in Assembly representing the BasicPlugin.dll file. Both examples will fail with error: `PluginType [BasicPlugin.CreateAccount] not found in PluginAssembly`.
 
 
 ### Example 1: Upgrade an existing solution
@@ -68,7 +68,7 @@ In the target (managed) environment, the BasicPlugin.dll assembly has the follow
 
 Then, you update the **PluginSolution**, changing the version to v2.0.0.0, and include a new Plugin Type: `CreateAccount`.
 
-This will fail because the top-level solution component plug-in assembly doesn't contain the new `CreateAccount` Plugin Type.
+This will fail because the top-level (layer 1) solution component plug-in assembly doesn't contain the new `CreateAccount` Plugin Type.
 
 ### Example 2: Install a new solution
 
