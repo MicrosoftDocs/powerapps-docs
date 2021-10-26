@@ -72,7 +72,7 @@ Autonumber columns have a default seed value of 1000, but you may set a custom s
   
 1.  Sign in to the [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
   
-2.  On the left pane expand **Data** and select **Tables**.
+2.  On the left pane expand **Dataverse** and select **Tables**.
   
 3.  Select the table that you would like to add an autonumber column to and then select the **Columns** tab.
   

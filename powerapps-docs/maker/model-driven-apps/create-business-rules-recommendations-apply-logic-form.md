@@ -57,7 +57,7 @@ This topic shows you how to create business rules and recommendations to apply f
 
 1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
-2.  Expand **Data**, select **Tables**, select the table you want, and then select the **Business rules** tab.
+2.  Expand **Dataverse**, select **Tables**, select the table you want, and then select the **Business rules** tab.
 
 3.  On the command bar, select **Add business rule**.
 

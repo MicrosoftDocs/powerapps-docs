@@ -1658,6 +1658,8 @@
               href: ./portals/admin/import-metadata-translation.md
             - name: Set up Power BI integration
               href: ./portals/admin/set-up-power-bi-integration.md
+        - name: Manage custom certificates
+          href: ./portals/admin/manage-custom-certificates.md              
         - name: Use Portal Checker
           items:
             - name: Run Portal Checker
@@ -1854,6 +1856,8 @@
             href: ./portals/component-framework.md          
           - name: "Tutorial: Use code components in portals"
             href: ./portals/component-framework-tutorial.md            
+          - name: Use code components Liquid template tag
+            href: ./portals/component-framework-liquid.md           
         - name: Use Microsoft Power Platform CLI
           items:
           - name: Overview of portals support for Microsoft Power Platform CLI 
