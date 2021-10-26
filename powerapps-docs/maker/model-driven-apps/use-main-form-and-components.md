@@ -63,7 +63,7 @@ Follow the procedures given below to access the form editor.
 
 1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
-2.  Expand **Data**, select **Tables**, select the table that you want, and then select the **Forms** tab.  
+2.  Expand **Dataverse**, select **Tables**, select the table that you want, and then select the **Forms** tab.  
 
 3. In the list of forms, open the form of type **Main**.
 

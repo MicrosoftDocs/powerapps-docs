@@ -21,11 +21,6 @@ contributors:
 
 In this tutorial, you’ll create a sample component using Power Apps component framework. You’ll then package this component to a Dataverse environment and add the component to model-driven app. Then, you’ll configure Power Apps portals to add the component to a basic form, set access for the Web Resource table, and add the basic form to a webpage. Finally, you’ll visit the portals webpage and interact with the component.
 
-> [!IMPORTANT]
-> - This is a preview feature.
-> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
-> - Portals only currently supports [code components that are added to a field](../../developer/component-framework/add-custom-controls-to-a-field-or-entity.md#add-a-code-component-to-a-column) in a model-driven app.
-
 ## Prerequisites
 
 - Your portal version must be [9.3.3.x](versions/version-9.3.3.x.md) or higher.

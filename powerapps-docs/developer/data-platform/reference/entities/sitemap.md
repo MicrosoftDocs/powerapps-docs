@@ -1,13 +1,13 @@
 ---
 title: "SiteMap table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the SiteMap table/entity."
-ms.date: 05/20/2021
+ms.date: 10/05/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -56,10 +56,39 @@ XML data used to control the application navigation pane.
 
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
+- [EnableCollapsibleGroups](#BKMK_EnableCollapsibleGroups)
 - [IsAppAware](#BKMK_IsAppAware)
+- [ShowHome](#BKMK_ShowHome)
+- [ShowPinned](#BKMK_ShowPinned)
+- [ShowRecents](#BKMK_ShowRecents)
 - [SiteMapName](#BKMK_SiteMapName)
 - [SiteMapNameUnique](#BKMK_SiteMapNameUnique)
 - [SiteMapXml](#BKMK_SiteMapXml)
+
+
+### <a name="BKMK_EnableCollapsibleGroups"></a> EnableCollapsibleGroups
+
+**Added by**: PowerAppsUnifiedClientInfraExtensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Enable to allow sitemap groups to be collapsed.|
+|DisplayName|Enable Collapsible Groups|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|enablecollapsiblegroups|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### EnableCollapsibleGroups Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes|
+|0|No|
+
+**DefaultValue**: False
+
 
 
 ### <a name="BKMK_IsAppAware"></a> IsAppAware
@@ -77,12 +106,87 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsAppAware Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
 **DefaultValue**: False
+
+
+
+### <a name="BKMK_ShowHome"></a> ShowHome
+
+**Added by**: PowerAppsUnifiedClientInfraExtensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Enable to show the home button in the sitemap.|
+|DisplayName|Show Home|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|showhome|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### ShowHome Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes|
+|0|No|
+
+**DefaultValue**: True
+
+
+
+### <a name="BKMK_ShowPinned"></a> ShowPinned
+
+**Added by**: PowerAppsUnifiedClientInfraExtensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Enable to show the pinned dropdown in the sitemap.|
+|DisplayName|Show Pinned|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|showpinned|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### ShowPinned Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes|
+|0|No|
+
+**DefaultValue**: True
+
+
+
+### <a name="BKMK_ShowRecents"></a> ShowRecents
+
+**Added by**: PowerAppsUnifiedClientInfraExtensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Enable to show the recents dropdown in the sitemap.|
+|DisplayName|Show Recents|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|showrecents|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### ShowRecents Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes|
+|0|No|
+
+**DefaultValue**: True
 
 
 
@@ -178,12 +282,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### ComponentState Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Published|
-|1|Unpublished|
-|2|Deleted|
-|3|Deleted Unpublished|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Published||
+|1|Unpublished||
+|2|Deleted||
+|3|Deleted Unpublished||
 
 
 
@@ -292,8 +396,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsManaged Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Managed|
 |0|Unmanaged|
 
@@ -456,7 +560,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |FormatName|Text|
 |IsLocalizable|False|
 |IsValidForForm|False|
-|IsValidForRead|False|
+|IsValidForRead|True|
 |LogicalName|sitemapxmlmanaged|
 |MaxLength|1073741823|
 |RequiredLevel|None|
