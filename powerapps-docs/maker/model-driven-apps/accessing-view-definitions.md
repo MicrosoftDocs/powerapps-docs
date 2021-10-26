@@ -37,7 +37,7 @@ In this topic you open a view definition to display properties and options to co
 
 1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
-2.  Expand **Data**, select **Tables**, and then select the table that you want, such as the **Account** table.   
+2.  Expand **Dataverse**, select **Tables**, and then select the table that you want, such as the **Account** table.   
 
 3. Select the **Views** tab.
 

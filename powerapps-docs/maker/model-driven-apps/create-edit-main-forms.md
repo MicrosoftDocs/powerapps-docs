@@ -38,7 +38,7 @@ Make sure that you have the System Administrator or System Customizer security r
   
 1.   Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-2.  Expand **Data**, select **Tables**, select the table that you want, and then select the **Forms** tab. 
+2.  Expand **Dataverse**, select **Tables**, select the table that you want, and then select the **Forms** tab. 
 
 3. To create a new main form, on the toolbar select **Add form** > **Main Form**.  
     \-OR-
