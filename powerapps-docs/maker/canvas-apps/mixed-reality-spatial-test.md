@@ -64,18 +64,19 @@ Next, we’ll set up the **Measure in MR** component to allow users to capture m
 
 4. Select the component by clicking on it to open the **Properties** Panel on the right hand side of the Studio.
 5. Set **Measurement Type** to **Volume** from the drop down menu.
-6. Set **Units of Measurement** to either **Feet** or **Meters**.
+6. Set **Box Draw** to **True**.
+7. Set **Units of Measurement** to either **Feet** or **Meters**.
 
 ![Screenshot showing Measurement Type and Units of Measurement property values.](./media/augmented-measure-fit-test/fit-test-units-and-type.png "Screenshot showing Measurement Type and Units of Measurement property values.")
 
-7. Next we'll define a table with a single expected measurement to provide an interaction hint during each user session. Under either the **Advanced** pane or the drop down menu on the **Formula Bar** at the top of the screen find the Items property and set it to: `Table({label:"Test Volume"})`
-8. Also under the **Advanced** pane or the **Formula Bar** find the **ItemsLabels** property and set it to: `"Value"`
+8. Next we'll define a table with a single expected measurement to provide an interaction hint during each user session. Under either the **Advanced** pane or the drop down menu on the **Formula Bar** at the top of the screen find the Items property and set it to: `Table({label:"Test Volume"})`
+9. Also under the **Advanced** pane or the **Formula Bar** find the **ItemsLabels** property and set it to: `"Value"`
 
 ![Screenshot showing formula bar settings for Items.](./media/augmented-measure-fit-test/fit-test-formula-bar-items.png "Screenshot showing formula bar settings for Items.")
 
 ![Screenshot showing advanced property settings for Items and ItemsLabels.](./media/augmented-measure-fit-test/fit-test-advanced-properties-items.png "Screenshot showing advanced property settings for Items and ItemsLabels.")
 
-9. Finally, in the **Advanced** pane set the OnMixedRealitySelect property to:
+10. Finally, in the **Advanced** pane set the OnMixedRealitySelect property to:
 `Set(testVolume, LookUp(MeasureInMR1.Measurements, Label = "Test Volume"))`;
 
 ![Screenshot showing property setting for OnMixedRealitySelect.](./media/augmented-measure-fit-test/fit-test-on-mixed-reality-select.png "Screenshot showing property setting for OnMixedRealitySelect.")
@@ -116,9 +117,6 @@ If(IsBlankOrError(testVolume), Products,
         ((testVolume.BoundingWidth >= Width && testVolume.BoundingDepth >= Depth) ||
         (testVolume.BoundingWidth >= Depth && testVolume.BoundingDepth >= Width))))
 ```
-
-> [!NOTE]
-> The **BoundingWidth**, **BoundingDepth**, and **Height** properties represent the smallest possible box that can fully encapsulate a measured volume. For irregularly shaped measurements it is possible that this will be an overestimate of the enclosed region, so this approach should be used as an estimate to help validate or narrow down results, but would not guarantee fit in all scenarios.
 
 ## Other mixed-reality controls
 
