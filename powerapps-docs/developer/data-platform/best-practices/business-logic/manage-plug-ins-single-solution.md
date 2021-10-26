@@ -51,11 +51,7 @@ The definition of a Plug-in assembly should be maintained within a single soluti
 
 ## Problematic patterns
 
-Below are two examples of the condition for this error may occur.
-
-In both examples, there is a Plug-in Assembly representing the BasicPlugin.dll file.
-
-Both examples will fail with error: `PluginType [BasicPlugin.CreateAccount] not found in PluginAssembly`.
+Below are two examples of the condition for this error may occur. In both examples, there is a Plug-in Assembly representing the BasicPlugin.dll file. Both examples will fail with error: `PluginType [BasicPlugin.CreateAccount] not found in PluginAssembly`.
 
 
 ### Example 1: Upgrade an existing solution
