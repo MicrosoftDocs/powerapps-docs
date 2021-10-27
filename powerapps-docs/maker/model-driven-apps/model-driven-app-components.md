@@ -101,11 +101,10 @@ To open solution explorer,
 
 More information: [Advanced app making and customization](advanced-navigation.md)
 
-## Related topics
+## Next steps
 
 [Validate and publish your model-driven app](validate-app.md)
 
 [Share your model-driven app](share-model-driven-app.md)
-
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

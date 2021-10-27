@@ -57,6 +57,8 @@ For detailed information about working with these components in Dataverse to def
 
 ## Next steps
 
+[Learn about common column properties](../../maker/model-driven-apps/common-field-properties-legacy.md)
+
 [Learn about configuring tables](../../maker/data-platform/entity-overview.md)
 
 [Learn about creating and designing forms](../../maker/model-driven-apps/create-design-forms.md)

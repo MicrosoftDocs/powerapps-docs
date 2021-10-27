@@ -1116,6 +1116,8 @@
     items:
     - name: What are model-driven apps?
       href: ./model-driven-apps/model-driven-app-overview.md
+    - name: The benefits of the model-driven approach
+      href: ./model-driven-apps/app-value-proposition.md            
     - name: Explore sample apps
       href: ./model-driven-apps/overview-model-driven-samples.md
     - name: Meet the model-driven designers
@@ -1150,6 +1152,8 @@
           href: ./model-driven-apps/create-model-driven-app.md
         - name: Create an app with an account table
           href: ./model-driven-apps/create-a-model-driven-app.md
+        - name: Adding and removing forms, view and dashboards
+          href: ./model-driven-apps/create-add-remove-forms-views-dashboards.md        
       - name: Working with views
         href: 
         items:

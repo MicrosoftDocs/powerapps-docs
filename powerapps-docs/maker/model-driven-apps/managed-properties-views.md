@@ -74,6 +74,9 @@ With this approach the ability for the view to be amended can be set at the leve
     > ![Set managed properties.](media/set-managed-properties.png)
 
 ## Next steps
-[Understand views](create-edit-views.md)
+
+[Specifying a default view](specify-default-views.md)
+
+[Views overview](create-edit-views.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

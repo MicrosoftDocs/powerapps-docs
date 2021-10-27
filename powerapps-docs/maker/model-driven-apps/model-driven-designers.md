@@ -23,7 +23,7 @@ search.app:
   - PowerApps
 
 ---
-# Meet the Model-driven app designers
+# Meet the model-driven app designers
 
 ## Introduction
 
@@ -96,9 +96,11 @@ The site map designer allows a developer to choose the tables used in the app an
 
    :::image type="content" source="media/site-map-designer-demo.png" alt-text="Site map designer":::
 
-[Configure a site map](create-site-map-app.md)
+[Learn about configuring a site map](create-site-map-app.md)
 
 ## Next steps
+
+[Steps to building a model-driven app](app-building-steps.md)
 
 [Build your first model-driven app](build-first-model-driven-app.md)
 

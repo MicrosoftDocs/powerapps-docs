@@ -135,6 +135,6 @@ The following controls are used:
 
 ## Next steps
 
-[Create or edit views](./create-edit-views-app-designer.md)
+[Opening the view designer](./accessing-view-definitions.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

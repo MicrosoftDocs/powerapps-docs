@@ -61,9 +61,6 @@ powerapps-docs\maker\model-driven-apps\media\create-or-edit-model-driven-app-vie
 
 [Table views overview](create-edit-views.md)
 
-[Edit filter criteria](edit-filter-criteria.md)
-
-[Use FetchXML to query data](../../developer/data-platform/use-fetchxml-construct-query.md)
-
+[Setting managed properties for views](managed-properties-views.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

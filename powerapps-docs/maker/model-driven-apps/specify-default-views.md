@@ -56,7 +56,9 @@ Unless someone has 'pinned' a different view in your app as their personal defau
 4.  On the solution explorer toolbar, select **Publish All Customizations**.  
 
 ## Next steps
-[Understand views](create-edit-views.md)
 
+[Delete or deactivate a view](remove-views.md)
+
+[Views overview](create-edit-views.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
