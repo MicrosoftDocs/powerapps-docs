@@ -141,9 +141,7 @@ You can insert a "pop-up" overlay of the selected image so users of the app can 
 
     :::image type="content" source="./media/augmented-upload-photo/select-powerapps-v2-trigger.png" alt-text="Select the PowerApps (V2) trigger":::
 
-6. Click the **Add an input** button and select the type **Text** then change the name from "Input" to "FileName"
-
-7. Click **Add an input** again and select the type **File** then change the name from "File Content" to "Image"
+7. Click the **Add an input** button and select the type **File** then change the name from "File Content" to "Image"
 
     :::image type="content" source="./media/augmented-upload-photo/trigger-inputs.png" alt-text="The expected values for the PowerApps (V2) trigger":::
 
@@ -153,10 +151,9 @@ You can insert a "pop-up" overlay of the selected image so users of the app can 
 
 5. Fill in the following information:
     1. For **Site Address** select the Sharepoint site that you want the photo's uploaded to.
-    1. For the **Folder Path**, click the folder button to browse the sharepoint site and select a folder.
-    2. For the **File Name**, select the text box and then choose **FileName** from the PowerApps (V2) trigger.
-
-    3. For **File Content**, select the text box and then choose **Image** from the PowerApps (V2) trigger.
+    1. For **Folder Path**, click the folder button to browse the sharepoint site and select a folder.
+    2. For **File Name**, copy and paste this value: **@{triggerBody()?['file']?['name']}**
+    3. For **File Content**, copy and paste this value: **@{triggerBody()['file']['contentBytes']}**
        
 6. The complete flow should now look like this:
 
@@ -174,21 +171,21 @@ You can insert a "pop-up" overlay of the selected image so users of the app can 
     ![Screenshot highlighting the OnSelect property, Action tab, Power Automate button, and the flow.](./media/augmented-upload-photo/add-flow-to-button.png "Screenshot highlighting the OnSelect property, Action tab, Power Automate button, and the flow")
 
 
-11. The **OnSelect** method will be populated with `YourFlowName.Run(`. Insert the following code to upload the last photo taken to the **MRPhotos** folder on OneDrive: 
+11. The **OnSelect** method will be populated with `UploadMRPhoto.Run(`. Insert the following code to upload the last photo taken to the **MRPhotos** folder on OneDrive: 
 
     
-    `UploadMRPhoto.Run(GUID() & ".png", {file:{contentBytes:Last(ViewInMR1.Photos).ImageURI, name:""}})`
+    `UploadMRPhoto.Run({file:{name:GUID() & ".png", contentBytes:Last(ViewInMR1.Photos).ImageURI}})`
     
 
     ![Screenshot showing the code in the expression editor.](./media/augmented-upload-photo/button-upload-code.png "Screenshot showing the code in the expression editor")
 
     If you're inside a gallery of the MR photos, instead use the following formula:
     
-    `UploadMRPhoto.Run(GUID() & ".png", {file: {contentBytes:ThisItem.ImageURI, name:""}})`
+    `UploadMRPhoto.Run({file: {name:GUID() & ".png", contentBytes:ThisItem.ImageURI}})`
 
     If you want to create a button that uploads all of the photos taken in the MR session, use this formula: 
 
-    `ForAll(ViewInMR1.Photos, UploadMRPhoto.Run(GUID() & ".png", {file:{contentBytes:ImageURI, name:""}}))`
+    `ForAll(ViewInMR1.Photos, UploadMRPhoto.Run({file:{name:GUID() & ".png", contentBytes:ImageURI}}))`
 12. You can test the new button in the studio by pressing the Play button at the top of the studio and then press the **View in MR** button followed by your button to upload the photo. The sample photo should be uploaded to your sharepoint site.
 
 ## Use SaveData and LoadData functions
