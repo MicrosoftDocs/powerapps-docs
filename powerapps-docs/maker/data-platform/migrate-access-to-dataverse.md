@@ -19,7 +19,7 @@ contributors:
 ---
 
 
-<!-- editor's note: I'm unable to see the table in lines 54-82 because I can't access the review page. You'll need to take a look to make sure it is building correctly. -->
+<!-- editor's note: I'm unable to see how the table in lines 54-82 looks because I can't access the review page. You'll need to take a look to make sure it is building correctly. https://review.docs.microsoft.com/en-us/powerapps/maker/data-platform/migrate-access-to-dataverse?branch=pr-en-us-5435  -->
 
 
 
