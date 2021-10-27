@@ -1118,6 +1118,8 @@
       href: ./model-driven-apps/model-driven-app-overview.md
     - name: Explore sample apps
       href: ./model-driven-apps/overview-model-driven-samples.md
+    - name: Meet the model-driven designers
+      href: ./model-driven-apps/model-driven-designers.md      
   - name: Design and build an app
     items:
     - name: Steps to building a model-driven app
@@ -1389,18 +1391,6 @@
         href: ./model-driven-apps/guide-staff-through-common-tasks-processes.md
       - name: Create a business rule for a form
         href: ./model-driven-apps/create-business-rules-recommendations-apply-logic-form.md        
-    - name: Apply data visualizations in an app
-      items:
-      - name: Create a system chart
-        href: ./model-driven-apps/create-edit-system-chart.md
-      - name: Create or edit dashboards
-        href: ./model-driven-apps/create-edit-dashboards.md
-      - name: Configure interactive experience dashboards
-        href: ./model-driven-apps/configure-interactive-experience-dashboards.md
-      - name: Set properties for a chart or list
-        href: ./model-driven-apps/set-properties-chart-list-included-dashboard.md
-      - name: Add a Power BI visual to an app
-        href: ./model-driven-apps/add-powerbi-visual.md
     - name: Add reporting to your app
       href: 
       items:
@@ -1414,6 +1404,18 @@
         href: ./model-driven-apps/use-power-bi.md
       - name: Create a Power BI embedded dashboard
         href: ./model-driven-apps/create-edit-powerbi-embedded-page.md
+    - name: Apply data visualizations in an app
+      items:
+      - name: Create a system chart
+        href: ./model-driven-apps/create-edit-system-chart.md
+      - name: Create or edit dashboards
+        href: ./model-driven-apps/create-edit-dashboards.md
+      - name: Configure interactive experience dashboards
+        href: ./model-driven-apps/configure-interactive-experience-dashboards.md
+      - name: Set properties for a chart or list
+        href: ./model-driven-apps/set-properties-chart-list-included-dashboard.md
+      - name: Add a Power BI visual to an app
+        href: ./model-driven-apps/add-powerbi-visual.md
     - name: Use Excel and Word templates
       href: ./model-driven-apps/templates-overview.md
     - name: Use themes to apply organization branding
