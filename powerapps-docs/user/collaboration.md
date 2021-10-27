@@ -38,7 +38,7 @@ When you're working on a row such as an **Opportunity**, **Account**, **Contact*
 When you open a row that's owned by another user their picture and online status is displayed.
 
 > [!NOTE]
-> This features works in to user lookups and grid user columns. 
+> This features works in user lookups and grid user columns. 
 
 > [!div class="mx-imgBorder"]
 > ![](media/collob-2.png "")
@@ -46,12 +46,11 @@ When you open a row that's owned by another user their picture and online status
 
 ## Sharing 
 
-Easily share the direct link to a row, be selecting **Share** in command bar. Select **Copy link** and then paste in anyother app to share the link.
-
+Easily share the direct link to a row, by selecting **Share** in command bar. Select **Copy link** and then paste it in another app to share the link. 
+The user's that you share the link with will have read only permission to the row.
 
 > [!div class="mx-imgBorder"]
 > ![](media/collob-2.png "")
 
 
-> [!NOTE]
-> When you share a link it gives the user's that you shared the link with read only to the row.
+
