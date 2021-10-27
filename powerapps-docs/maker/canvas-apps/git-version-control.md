@@ -111,7 +111,7 @@ There's no option to resolve merge conflicts currently. Studio will attempt to m
 
 ## Publish the app
 
-Apps connected to Git continue to work normally for publishing and user experience with no changes to this process. However, when you publish an app, the app version is stored in Power Apps since Power Apps needs a runnable copy of the app to share with users.
+Apps connected to Git continue to work normally for publishing and user experience with no changes to this process. When you publish an app, the app version is stored in Power Apps since Power Apps needs a runnable copy of the app to share with users.
 
 ## Pull requests, viewing history, blaming, and other Git features
 
