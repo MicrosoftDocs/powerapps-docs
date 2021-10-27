@@ -75,11 +75,11 @@ it.
 
     ![Environment switcher.](media/environment-switcher.png)
 
-2.  On the left navigation pane, select the down arrow next to **Dataverse**.
+2.  On the left navigation pane, select the down arrow next to **Data**.
 
     ![Data select.](media/data-select.png)
 
-3.  In the **Dataverse** list, select **Dataflows**, select **New dataflow**, and then select **Start from blank**.
+3.  In the **Data** list, select **Dataflows**, select **New dataflow**, and then select **Start from blank**.
 
     ![Create a dataflow.](media/create-a-dataflow.png)
 
