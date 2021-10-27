@@ -87,8 +87,6 @@ Different version control providers have different methods to generate personal 
 
 While editing apps connected to Git, you're prompted for username and password. Enter your **username** and the **access token** in this dialog to authenticate with Git.
 
-Plug the user name and personal access token when prompted:
-
 :::image type="content" source="media/git-version-control/credentials.png" alt-text="Dialog asks for Git username and access token (as password).":::
 
 > [!NOTE]
