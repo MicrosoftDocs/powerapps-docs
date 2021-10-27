@@ -54,6 +54,9 @@ Follow these steps to enable Git version control in your app.
 
 ## Connect an app to Git
 
+> [!NOTE]
+> Once connected, the app can't be disconnected from Git currently. The option to disconnect is coming soon.
+
 Follow these steps to connect your app to Git.
 
 1. Select **Git version control** in settings:
@@ -71,9 +74,6 @@ Follow these steps to connect your app to Git.
     If the branch or directory doesn't exist, you'll be prompted to create them. If the branch and directory already contain a canvas app, the current app will be closed and the existing app loaded from Git.
 
     Once connected, the connection information will be displayed.
-
-    > [!NOTE]
-    > Once connected, the app can't be disconnected from Git currently. The option to disconnect is coming soon.
 
 ## Authenticate with Git
 
