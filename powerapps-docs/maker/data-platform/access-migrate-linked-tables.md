@@ -20,7 +20,7 @@ contributors:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-Both Dataverse and Dataverse for Teams have several tables and columns that need to be present for data types and features to work properly. These are part of the default organizations and cannot be removed. When migrating from Access to Dataverse, you will see columns added to tables after the migration and additional linked tables added in Access to support the columns. This document will provide an overview of the tables and columns that will be added.
+Both Dataverse and Dataverse for Teams have several tables and columns that need to be present for data types and features to work properly. These are part of the default organizations and cannot be removed. When migrating from Access to Dataverse, you will see columns added to tables after the migration and additional linked tables added in Access to support the columns. This document provides an overview of the tables and columns that will be added.
 
 ## Tables
 
@@ -41,23 +41,23 @@ The following columns are included in all tables of Dataverse and Dataverse for 
 
 - **Primary Name**: A user-friendly text string used to identify rows. The name is chosen by the user. In Access you can choose which field you want to use during migration, or it will be picked for you. If an Access table has no text fields, a text field will be created named Primary Name Placeholder which will be used to fill this need. It will be set to "optional" and will accept null values.
 - **Primary ID**: A unique identifier string used to identify rows. This is system generated and is the primary key. This column is present and usable but not displayed by default in Dataverse and Dataverse for Teams environments.
-- **CreatedBy**: A lookup column to the users table selecting the user who created the row.
-- **CreatedBy (Delegate)**: A lookup column to the users table selecting the user who created the row as a delegate for another user.
-- **CreatedOn**: A date time column that records the date and time a row was created, stored in UTC format.
+- **CreatedBy**: A lookup column to the Users table selecting the user who created the row.
+- **CreatedBy (Delegate)**: A lookup column to the Users table selecting the user who created the row as a delegate for another user.
+- **CreatedOn**: A date-time column that records the date and time a row was created, stored in UTC format.
 - **Currency**: A lookup to the Currency column (logical name `Transactioncurrency`) to retrieve the details of a transaction currency for the purposes of calculating against the base currency. This column is visible in Access linked tables only when a currency column is added to the table.
-- **Exchange Rate**: The exchange rate value retrieved from the transaction currency on the currency table at the time the row was created. The column is visible in Access linked tables only when an exchange rate column is added to the table. This column is present and usable but not displayed by default in Dataverse, Dataverse for Teams environments, or Access linked tables.
+- **Exchange Rate**: The exchange rate value retrieved from the transaction currency on the Currency table at the time the row was created. The column is visible in Access linked tables only when an exchange rate column is added to the table. This column is present and usable but not displayed by default in Dataverse, Dataverse for Teams environments, or Access linked tables.
 - **Import Sequence Number**: The row’s place in the sequence of imported records that added it to the table.
-- **ModifiedBy**: A lookup column to the users table selecting the user who modified the row.
-- **ModifiedBy (Delegate)**: A lookup column to the users table selecting the user who modified the row as a delegate for another user.
-- **ModifiedOn**: A date time column that records the date and time a row was modified, stored in UTC format.
+- **ModifiedBy**: A lookup column to the Users table selecting the user who modified the row.
+- **ModifiedBy (Delegate)**: A lookup column to the Users table selecting the user who modified the row as a delegate for another user.
+- **ModifiedOn**: A date-time column that records the date and time a row was modified, stored in UTC format.
 - **Owner**: The unique OwnerID assigned to the user selected as the Owning User from the Users table. This column is present and usable but not displayed by default in Access linked tables.
-- **Owning Business Unit**. A lookup to the business unit table to select the appropriate business unit that owns the row.
-- **Owning Team**: A lookup to the team table to select the appropriate team that owns the row.
-- **Owning User**: A lookup to the user table to select the appropriate user that owns the row.
+- **Owning Business Unit**: A lookup to the Business Unit table to select the appropriate business unit that owns the row.
+- **Owning Team**: A lookup to the Teams table to select the appropriate team that owns the row.
+- **Owning User**: A lookup to the Users table to select the appropriate user that owns the row.
 - **Record Created On**: Date and time that a row was migrated.
 - **Status**: An option set that allows a user to pick the state of a row.
-- **Status Reason**: An option set related to Status that allows a user to pick the status reason of a row based on the status selected 
-- **Time Zone Rule Version**: Internal only used to determine which set of time zone rules apply.
+- **Status Reason**: An option set related to Status that allows a user to pick the status reason of a row based on the status selected. 
+- **Time Zone Rule Version**: Internal-only used to determine which set of time zone rules apply.
 - **UTC Conversion Time Zone Code**: The time zone offset code that was in use at the time the row was created.
 - **Version Number**: The version number of a row used to track previous changes if auditing is enabled.
 
