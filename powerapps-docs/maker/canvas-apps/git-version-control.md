@@ -107,7 +107,7 @@ After being connected to Git, changes are stored in Git rather than in Power App
 
 ## Merge results
 
-There's no option to resolve merge conflicts currently. Studio will attempt to merge and fix conflicts automatically through semantic knowledge of the app (for example, the types of objects and other app changes. Since all changes are still stored in Git, you can always retrieve the app changes to reapply if automatic merge doesn't meet your business requirement.
+There's no option to resolve merge conflicts currently. Studio will attempt to merge and fix conflicts automatically through semantic knowledge of the app (for example, the types of objects and other app changes). Since all changes are still stored in Git, you can always retrieve the app changes to reapply if automatic merge doesn't meet your business requirement.
 
 ## Publish the app
 
