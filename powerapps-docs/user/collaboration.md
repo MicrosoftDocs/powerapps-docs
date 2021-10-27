@@ -22,39 +22,36 @@ search.app:
 
 [This topic is pre-release documentation and is subject to change.]
 
-Model-driven apps in Power Apps helps you connect with the right people quickly by showing you who’s available and who’s currently working on a row. Collaborate and share the way as you do in other Microsoft Office apps.
-
-
-## Multiplayer apps 
+Collaborate and share information in model-driven Power Apps the same way as you do other Microsoft Office apps.
 
 When you're working on a row such as an **Opportunity**, **Account**, **Contact** or **Case** you can also see other users that are working on the same row. Select a user's picture to see their online status, send an email, or start a Teams chat.
 
 
-  > [!div class="mx-imgBorder"]
-  > ![](media/collob-1.png "")
+> [!div class="mx-imgBorder"]
+> ![](media/collob-1.png "")
 
+> [!NOTE]
+> This feature is only available in the **Opportunity**, **Account**, **Contact** and **Case** tables that are in customer engagement apps such as [Dynamics 365 Sales](/dynamics365/sales-professional/help-hub.md), [Dynamics 365 Customer Service](/dynamics365/customer-service/help-hub.md).
 
-This feature is only available in the **Opportunity**, **Account**, **Contact** and **Case** tables that are in customer engagement apps such as [Dynamics 365 Sales](/dynamics365/sales-professional/help-hub.md), [Dynamics 365 Customer Service](/dynamics365/customer-service/help-hub.md).
+## View a user's status and picture
 
-## Online availability and picture 
+When you open a row that's owned by another user their picture and online status is displayed.
 
-A user who owns a row, are displayed with their picture and online status.
+> [!NOTE]
+> This features works in to user lookups and grid user columns. 
 
-This features works in to user lookups and grid user columns. 
-
-  > [!div class="mx-imgBorder"]
-  > ![](media/collob-2.png "")
+> [!div class="mx-imgBorder"]
+> ![](media/collob-2.png "")
   
 
 ## Sharing 
 
-Links to records can be shared easily via the “Share” button in the top right corner of the command bar: 
+Easily share the direct link to a row, be selecting **Share** in command bar. Select **Copy link** and then paste in anyother app to share the link.
 
 
-  > [!div class="mx-imgBorder"]
-  > ![](media/collob-2.png "")
+> [!div class="mx-imgBorder"]
+> ![](media/collob-2.png "")
 
 
-Copying the link allows you to easily paste it into any app. 
-
-This feature will be expanded during the preview period to allow copy-pasted shared links to give read only access to the row to people who select on the link.   
+> [!NOTE]
+> When you share a link it gives the user's that you shared the link with read only to the row.
