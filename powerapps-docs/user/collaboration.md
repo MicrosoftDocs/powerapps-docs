@@ -22,29 +22,25 @@ search.app:
 
 [This topic is pre-release documentation and is subject to change.]
 
-Efficient communication is the cornerstone of every successful business. Power Apps helps you connect with the right people quickly by showing you who’s available and who’s currently working on a row. Sharing is made simple by aligning the user interface to what Microsoft Office users are accustomed to. 
-his feature is currently available only in Opportunity, Account, Contact and Case entities 
-
-This feature is available in the **Opportunity**, **Account**, **Contact** and **Case** table that are in customer engagement apps such as [Dynamics 365 Sales](/dynamics365/sales-professional/help-hub.md), [Dynamics 365 Customer Service](/dynamics365/customer-service/help-hub.md).
+Model-driven apps in Power Apps helps you connect with the right people quickly by showing you who’s available and who’s currently working on a row. Collaborate and share the way as you do in other Microsoft Office apps.
 
 
 ## Multiplayer apps 
 
-Co-presence lets you know who is currently looking at the record by showing their avatar in the top right corner of the command bar:
+When you're working on a row such as an **Opportunity**, **Account**, **Contact** or **Case** you can also see other users that are working on the same row. Select a user's picture to see their online status, send an email, or start a Teams chat.
 
 
   > [!div class="mx-imgBorder"]
   > ![](media/collob-1.png "")
 
-Clicking on the avatar will allow you to see that person’s on-line presence, as well as start an email or a chat with them. 
 
+This feature is only available in the **Opportunity**, **Account**, **Contact** and **Case** tables that are in customer engagement apps such as [Dynamics 365 Sales](/dynamics365/sales-professional/help-hub.md), [Dynamics 365 Customer Service](/dynamics365/customer-service/help-hub.md).
 
+## Online availability and picture 
 
-## On-line availability and picture 
+A user who owns a row, are displayed with their picture and online status.
 
-App users, such as the record owner, are displayed with their picture and on-line status. 
 This features works in to user lookups and grid user columns. 
-
 
   > [!div class="mx-imgBorder"]
   > ![](media/collob-2.png "")
@@ -61,4 +57,4 @@ Links to records can be shared easily via the “Share” button in the top righ
 
 Copying the link allows you to easily paste it into any app. 
 
-This feature will be expanded during the preview period to allow copy-pasted shared links to give read only access to the record to people who click on the link.   
+This feature will be expanded during the preview period to allow copy-pasted shared links to give read only access to the row to people who select on the link.   
