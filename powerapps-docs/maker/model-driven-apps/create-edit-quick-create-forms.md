@@ -55,7 +55,7 @@ You can enable custom activity tables to support quick create forms, and you can
   
 1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-2.  Expand **Dataverse**, select **Tables**, select the table that you want, and then select the **Forms** tab.  
+2.  Expand **Data**, select **Tables**, select the table that you want, and then select the **Forms** tab.  
 
 3.  On the toolbar, select **Add form** > **Quick Create Form**.  
   
@@ -89,7 +89,7 @@ If you add a composite column to a quick create form, it will be displayed as se
   
 1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
-2. Expand **Dataverse**, select **Tables**, select the table that you want, and then select the **Forms** tab.    
+2. Expand **Data**, select **Tables**, select the table that you want, and then select the **Forms** tab.    
 
 3. In the form list, select a form where the form **Type** is **Quick Create**.  
   

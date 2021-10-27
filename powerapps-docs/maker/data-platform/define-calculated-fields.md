@@ -67,7 +67,7 @@ For example, a salesperson may want to know the weighted revenue for an opportun
 ## Create a calculated column
 
 1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)
-1. Expand **Dataverse** > **Tables**.  
+1. Expand **Data** > **Tables**.  
 1. Open the table you want, select the **Columns** tab, and then select **Add Column**.  
 1. Provide the required information for the column, including the **Display name**, **Name**, and **Data type**.
 1. If the data type is one of the [column types that support calculations](#column-types-that-support-calculations), you can make the column a calculated column by selecting **Add** > **Calculation**.

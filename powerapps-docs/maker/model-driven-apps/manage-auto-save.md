@@ -65,7 +65,7 @@ Auto-save helps app users focus on their work without having to manage saving da
   
 1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
-2.  Expand **Dataverse**, select **Tables**, select the table that you want, and then select the **Forms** tab.  
+2.  Expand **Data**, select **Tables**, select the table that you want, and then select the **Forms** tab.  
   
 3.  Open the form you want to edit.
 

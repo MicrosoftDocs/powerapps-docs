@@ -35,7 +35,7 @@ Power Apps enables configuring the most common options, but certain options can 
 
 ## View alternate keys
 
-1. From the [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Dataverse** > **Tables** and select the table that you want to view.
+1. From the [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Data** > **Tables** and select the table that you want to view.
 2. Select **Keys** to view a list of any alternate keys that are defined.
 
    > [!div class="mx-imgBorder"] 

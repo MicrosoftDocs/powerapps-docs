@@ -37,7 +37,7 @@ Every table has required columns that must exist in your input file. We recommen
     - Copy data from your Excel or CSV file into the template that you just created.
 
 1. Import the file.  
-    a. On [powerapps.com](https://make.powerapps.com/), expand the **Dataverse** section. Select **Tables** in the left navigation pane.  
+    a. On [powerapps.com](https://make.powerapps.com/), expand the **Data** section. Select **Tables** in the left navigation pane.  
     b. Select the table that you want to import data into.  
     c. Select the ellipsis or menu at the top. Select **Get Data**. Select **Get data from Excel**.  
 
@@ -114,7 +114,7 @@ Users can still use primary keys as identifiers after they specify alternate key
 
 You can do a one-time data export from a standard table or custom table. And you can export data from more than one table at a time. If you export data from more than one table, each table is exported into its own Microsoft CSV file.
 
-1. On [powerapps.com](https://make.powerapps.com/), expand the **Dataverse** section. Select **Tables** on the left navigation pane.
+1. On [powerapps.com](https://make.powerapps.com/), expand the **Data** section. Select **Tables** on the left navigation pane.
 1. Select the table that you want to export data from.
 1. Select the ellipsis or menu at the top. Select **Export data**.
 
