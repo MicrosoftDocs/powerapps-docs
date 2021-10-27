@@ -24,7 +24,7 @@ search.app:
 
 Collaborate and share information in model-driven Power Apps the same way as you do other Microsoft Office apps.
 
-When you're working on a record such as an **Opportunity**, **Account**, **Contact** or **Case** you can also see other users that are working on the same row. Select a user's picture to see their online status, send an email, or start a Teams chat.
+When you're working on a row such as an **Opportunity**, **Account**, **Contact** or **Case** you can also see other users that are working on the same row. Select a user's picture to see their online status, send an email, or start a Teams chat.
 
 
 > [!div class="mx-imgBorder"]
