@@ -17,7 +17,7 @@ search.app:
 contributors:
 ---
 
-<!-- from editor: I'm unable to see any of the images, in part because I can't access the review page. Please check the review page to make sure the images are present. -->
+<!-- from editor: I'm unable to see any of the images, in part because I can't access the review page. Please check the review page to make sure the images are present. https://review.docs.microsoft.com/en-us/powerapps/maker/data-platform/migrate-access-datatypes?branch=pr-en-us-5435 -->
 
 
 # Data types and sizes for Access data migration to Dataverse (preview)
