@@ -50,8 +50,8 @@ In this topic a view definition will be opened to display properties and options
 - [Sort rows in a view](configure-sorting.md)
 - [Choose and configure columns in views](choose-and-configure-columns.md)
   
-## Related Articles
+## Next steps
 
-[Understand views](create-edit-views.md)
+[Creating and editing public views](create-or-edit-model-driven-app-view.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

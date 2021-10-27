@@ -130,7 +130,7 @@ In some scenarios it is desirable to be able to render a data column within a fo
 
 ## Next steps
 
-[Use the Main form and its components](use-main-form-and-components.md)
+[Overview of special column properties](special-field-properties-legacy.md)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

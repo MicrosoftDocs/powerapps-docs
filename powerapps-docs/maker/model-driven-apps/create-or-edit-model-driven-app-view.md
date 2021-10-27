@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.subservice: mda-maker
 ms.topic: tutorial
 author: Joel-Lindstrom
-ms.author: v-ljoel
+ms.author: matp
 ms.reviewer: matp
 ---
 # Create and edit public model-driven app views
@@ -176,9 +176,7 @@ When a view is opened, the records displayed are sorted in the order you set whe
 
 If you remove the column you chose for the primary sort order, the column you chose for the secondary sort order becomes the primary.
 
-### See also
+## Next steps
 
-[Working with the new app designer](app-designer-overview.md)
-<br />
-[Create a model-driven app with the app designer](create-model-driven-app.md) <br />
-[Design custom business apps by using the app designer](design-custom-business-apps-using-app-designer.md)
+[Configure columns in model-driven app views](choose-and-configure-columns.md)<br />
+[Creating and editing view filters](create-edit-view-filters.md)

@@ -10,11 +10,11 @@ ms.tgt_pltfrm: ""
 ms.topic: "conceptual"
 applies_to: 
     - "powerapps"
-author: ""
+author: "matp"
 ms.assetid: 
 caps.latest.revision: 1
 ms.subservice: 
-ms.author: ""
+ms.author: "matp"
 manager: ""
 tags: 
 search.audienceType: 
@@ -23,7 +23,7 @@ search.app:
   - PowerApps
 
 ---
-# Meet the Model-driven app designers
+# Meet the model-driven app designers
 
 ## Introduction
 
@@ -37,7 +37,7 @@ Broadly speaking app development breaks down into the following stages
 
 All of the assets created whether they be tables, cloud flows or model-driven apps have the capacity to be held inside [solutions](model-driven-app-glossary.md#solution) to enable secure [application lifecycle management](model-driven-app-glossary.md#application-lifecycle-management).
 
-This article focuses on the first two stages, however you can [learn more about security and security roles here](https://docs.microsoft.com/en-us/power-platform/admin/wp-security)
+This article focuses on the first two stages, however you can [learn more about security and security roles here](https://docs.microsoft.com/power-platform/admin/wp-security)
 
 >[!NOTE]
 > It is not necessary to use all the editors to create a model driven app.  As a minimum, concentrate on the table column editor, form designer and view designer in addition to adding any required relationships and using the app designer to pull the app together.
@@ -61,14 +61,14 @@ The following table describes the designers, what they do, and provide links as 
 
 |Editor|Description|Link|
 |--------------|---------------|---------------|
-|**Table designer**|Tables are hold record metadata in **columns** in a wide range of data types such as Text, Email, Image, Currency and many more. Many standard tables are available. You can **customize** a non-system standard table. You can also create a new custom table from scratch.<br>The table designer is effectively a portal to the other designers, such as view and form.  In many cases the designers are native to the table designer and in others a fresh window will open where editing can take place.<br>The columns area of the table designer allows the developer to define the table columns.|[Create a custom table](../../maker/data-platform/data-platform-create-entity) 
-|**Relationships**|Whilst this is not a full designer, relationships are fundamental to the operation of any model driven app.  Without them all tables are isolated|[Create a relationship](../../maker/data-platform/data-platform-entity-lookup)
-|**Business rule designer**|Accessed via the table designer. Business rules apply rules or recommendation logic to a form to set column requirements, hide columns, validate data, and more. App designers use a simple interface to implement and maintain fast-changing and commonly used rules.|[Create a business rule for a table](../../maker/data-platform/data-platform-create-business-rule)
+|**Table designer**|Tables are hold record metadata in **columns** in a wide range of data types such as Text, Email, Image, Currency and many more. Many standard tables are available. You can **customize** a non-system standard table. You can also create a new custom table from scratch.<br>The table designer is effectively a portal to the other designers, such as view and form.  In many cases the designers are native to the table designer and in others a fresh window will open where editing can take place.<br>The columns area of the table designer allows the developer to define the table columns.|[Create a custom table](../../maker/data-platform/data-platform-create-entity.md)
+|**Relationships**|Whilst this is not a full designer, relationships are fundamental to the operation of any model driven app.  Without them all tables are isolated|[Create a relationship](../../maker/data-platform/data-platform-entity-lookup.md)
+|**Business rule designer**|Accessed via the table designer. Business rules apply rules or recommendation logic to a form to set column requirements, hide columns, validate data, and more. App designers use a simple interface to implement and maintain fast-changing and commonly used rules.|[Create a business rule for a table](../../maker/data-platform/data-platform-create-business-rule.md)
 |**View designer**|Part of the table designer.  Views are tied to the table and present table data in columns by selecting, positioning and filtering them|[Create a view](create-edit-views-app-designer.md)  
-|**Form designer**|Part of the table designer. Forms allow users to interact with data held in table records|[Create a form](create-and-edit-forms)
+|**Form designer**|Part of the table designer. Forms allow users to interact with data held in table records|[Create a form](create-and-edit-forms.md)
 |**Dashboard designer**|A separated designer used to create dashboards presenting different data charts|[Create a dashboard](create-edit-dashboards.md)
-|**Chart designer**|A separated designer used to create table charts|[Create a system chart](create-edit-system-chart)
-|**Business process flow designer**|Business process flows walk users through a standard business process. <br>Whilst they are a part of the solution they are created using Power Automate.|[Create a business process flow](https://docs.microsoft.com/en-us/power-automate/create-business-process-flow)
+|**Chart designer**|A separated designer used to create table charts|[Create a system chart](create-edit-system-chart.md)
+|**Business process flow designer**|Business process flows walk users through a standard business process. <br>Whilst they are a part of the solution they are created using Power Automate.|[Create a business process flow](https://docs.microsoft.com/power-automate/create-business-process-flow)
 
 ## Business logic Development
 
@@ -76,7 +76,7 @@ Business logic can be introduced in the form of business rules and process flows
 
 In addition to this Power Automate cloud flows can be introduced in order to leverage both it's functionality in addition to the fact that it can access hundreds of data connectors, not just Dataverse.
 
-[Learn more about using Power Automate with Dataverse ](https://docs.microsoft.com/en-us/power-automate/dataverse/overview)
+[Learn more about using Power Automate with Dataverse ](https://docs.microsoft.com/power-automate/dataverse/overview)
 
 ## App designer
 
@@ -96,9 +96,11 @@ The site map designer allows a developer to choose the tables used in the app an
 
    :::image type="content" source="media/site-map-designer-demo.png" alt-text="Site map designer":::
 
-[Configure a site map](create-site-map-app.md)
+[Learn about configuring a site map](create-site-map-app.md)
 
 ## Next steps
+
+[Steps to building a model-driven app](app-building-steps.md)
 
 [Build your first model-driven app](build-first-model-driven-app.md)
 

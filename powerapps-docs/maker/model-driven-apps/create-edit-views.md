@@ -40,7 +40,7 @@ A view defines:
 
 Once the view has been made available in the app the user can switch between these.
 
-:::image type="content" source="media/create-or-edit-model-driven-app-view/switch-views.gif" alt-text="Configure views in model-driven apps":::
+:::image type="content" source="media/create-or-edit-model-driven-app-view/switch-views.gif" alt-text="Switch between views":::
 
 When designing an app the developer decides on which of the public views to make available to app users. These decisions are typically based on the types of user such as sales, or marketing, that will be making use of the app.  
 
@@ -135,6 +135,6 @@ The following controls are used:
 
 ## Next steps
 
-[Create or edit views](./create-edit-views-app-designer.md)
+[Opening the view designer](./accessing-view-definitions.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

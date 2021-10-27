@@ -142,11 +142,9 @@ In this topic, you create or edit filters by performing the following tasks:
     > [!div class="mx-imgBorder"] 
     > ![Grouped condition filter.](media/group-conditions-filter.png "Grouped condition filter")
 
-### See also
-[Edit or create personal views using advanced grid filters](../../user/grid-filters-advanced.md)
-[Choose and configure columns](choose-and-configure-columns.md)  
-[Edit filter criteria](edit-filter-criteria.md)  
-[Create 1:N (one-to-many) or N:1 (many-to-one) relationships](../data-platform/create-edit-1n-relationships.md)
+### Next steps
 
+[Configure sorting in views](configure-sorting.md)  <br/>
+[Converting views into editable grids](make-grids-lists-editable-custom-control.md)<br/>
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

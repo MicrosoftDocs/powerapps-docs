@@ -119,8 +119,8 @@ Documentation has been developed that is dedicated to helping **users** of model
 
 ## Next steps
 
-[Review the app editors](model-driven-designers.md)
+[Build your first app](build-first-model-driven-app.md)
 
-[Understand model driven app components](model-driven-app-components.md)
+[Review the app editors](model-driven-designers.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
