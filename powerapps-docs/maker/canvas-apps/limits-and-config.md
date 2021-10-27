@@ -90,7 +90,7 @@ These limits apply to each single outgoing request:
 
 Requests from Power Apps use IP addresses that depend on the region of the [environment](/power-platform/admin/environments-overview) that the app is in. We don't publish fully qualified domain names available for Power Apps scenarios.
 
-Calls made from an API connected through an app (for example, the SQL API or the SharePoint API) come from these [IP addresses](/connectors/common/outbound-ip-addresses.md#power-platform).
+Calls made from an API connected through an app (for example, the SQL API or the SharePoint API) come from these [IP addresses](/connectors/common/outbound-ip-addresses#power-platform).
 
 ## Required services
 This list identifies all services to which Power Apps Studio talks and their usages. Your network must **not** block these services.
