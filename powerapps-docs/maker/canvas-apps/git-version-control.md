@@ -17,7 +17,8 @@ contributors:
   - tapanm-msft
   - gregli-msft
 ---
-# Work with Experimental Co-authoring
+
+# Co-authoring in canvas apps (experimental)
 
 [This article is pre-release documentation and is subject to change.]
 
@@ -46,7 +47,7 @@ Follow these steps to enable Git version control in your app.
 1. Scroll down to **Show the Git version control setting** and enable the switch below it.
 1. You'll see a new **Git version control** item on the left-hand side of the settings.
 
-    :::image type="content" source="media/working-with-git-version-control/enable-git.png" alt-text="Swtich to enable Git version control.":::
+    :::image type="content" source="media/git-version-control/enable-git.png" alt-text="Swtich to enable Git version control.":::
 
     > [!TIP]
     > If you don't see the **Show the Git version control setting** experimental feature, your tenant may not have been properly enabled for this feature. In this case, send an email to [PAGit@microsoft.com](mailto:PAGit@microsoft.com) to get this feature listed on your tenant. For any other problem with this feature, go to [Collaborative authoring](https://powerusers.microsoft.com/t5/Error-Handling/bd-p/PA_Error_Handling).
@@ -57,11 +58,11 @@ Follow these steps to connect your app to Git.
 
 1. Select **Git version control** in settings:
 
-    :::image type="content" source="media/working-with-git-version-control/connect-git.png" alt-text="Button to start a connection to git for this app.":::
+    :::image type="content" source="media/git-version-control/connect-git.png" alt-text="Button to start a connection to git for this app.":::
 
 1. Select **Connect** to fill in Git connection information for this app.
 
-    :::image type="content" source="media/working-with-git-version-control/connect-info.png" alt-text="Text input boxes to provide git connection information.":::
+    :::image type="content" source="media/git-version-control/connect-info.png" alt-text="Text input boxes to provide git connection information.":::
 
     - **Git Repository URL**: The URL you would normally use with Git tools. For Azure DevOps, be sure to include the **_git/repo** portion of the URL, such as `https://contoso.visualstudio.com/_git/repo`.  
     - **Branch**: The branch name to use.
@@ -88,7 +89,7 @@ While editing apps connected to Git, you're prompted for username and password. 
 
 Plug the user name and personal access token when prompted:
 
-:::image type="content" source="media/working-with-git-version-control/credentials.png" alt-text="Dialog asks for Git username and access token (as password).":::
+:::image type="content" source="media/git-version-control/credentials.png" alt-text="Dialog asks for Git username and access token (as password).":::
 
 > [!NOTE]
 > Git credentials are not stored by Power Apps between sessions. If you want, you can use browser settings to save form information for reuse to avoid entering credentials frequently.
@@ -99,7 +100,7 @@ After an app is connected to Git, all you have to do is authenticate with Git cr
 
 Use the new synchronize button at the top of the Studio screen (between the **App Checker** and **Undo** buttons) to merge any current changes with what's in Git, and to bring the result into the Studio for further editing.
 
-:::image type="content" source="media/working-with-git-version-control/sync.png" alt-text="Button to synchronize changes with the Git repo.":::
+:::image type="content" source="media/git-version-control/sync.png" alt-text="Button to synchronize changes with the Git repo.":::
 
 > [!IMPORTANT]
 > The app will need to be loaded each time there is a merge. If the app is large, this load could take some time.
