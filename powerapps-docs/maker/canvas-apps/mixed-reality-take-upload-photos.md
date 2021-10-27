@@ -63,7 +63,6 @@ With an app open for editing in [Power Apps Studio](https://create.powerapps.com
 2. Expand **Mixed reality**.
 3. Select the component **View in MR** to place it in the app screen, or drag it to position it anywhere on the screen.
 
-
     :::image type="content" source="./media/augmented-view-mr/augmented-view-mr.png" alt-text="Insert the View in MR component into the app.":::
 
 1. In the **Properties** panel for the **View in MR** component, on the **Advanced** tab, select the **Source** field and enter `ViewIn3D1.Source` to set the source object as the 3D object you inserted with the **View in 3D** component.  
@@ -92,6 +91,7 @@ Photos you take by selecting the camera icon in the MR view on the app will be l
 4. Hold the `Alt` key and click on the View in MR button to generate sample photos and data. You should now see the gallery populate with a sample picture.
 
     :::image type="content" source="./media/augmented-upload-photo/gallery-example.png" alt-text="Example of what the gallery should look like":::
+
 
     > [!TIP]
     > You can load all photos taken across multiple MR components by adding `Collect(AllPhotos,ViewInMR1.Photos)` to the **OnChange** property of each MR component.
@@ -147,39 +147,20 @@ You can insert a "pop-up" overlay of the selected image so users of the app can 
 
     :::image type="content" source="./media/augmented-upload-photo/trigger-inputs.png" alt-text="The expected values for the PowerApps (V2) trigger":::
 
-4. Select **+ New step**. Search for **OneDrive create file** and select the **Create file** action that appears in the results.
+4. Select **+ New step**. Search for **Sharepoint Create file** and select the **Create file** action that appears in the results.
 
-    ![Screenshot highlighting the Create file action.](./media/augmented-upload-photo/create-onedrive.png "Screenshot highlighting the Create file action")
-
-    Make sure you are signed in to the correct OneDrive account where you want to upload your photos.
+    :::image type="content" source="./media/augmented-upload-photo/sharepoint-create-file-action.png" alt-text="Screenshot highlighting the Create file action":::
 
 5. Fill in the following information:
-    1. For the **Folder Path**, enter **MRPhotos**.
-    2. For the **File Name**, select the text box and then choose the option for **Ask in PowerApps**.
-    
-        ![Screenshot highlighting the file name field.](./media/augmented-upload-photo/file-name-ask.png "Screenshot highlighting the file name field")
+    1. For **Site Address** select the Sharepoint site that you want the photo's uploaded to.
+    1. For the **Folder Path**, click the folder button to browse the sharepoint site and select a folder.
+    2. For the **File Name**, select the text box and then choose **FileName** from the PowerApps (V2) trigger.
 
-    3. For **File Content**:
-       1. Select the text box and then choose **Expression**. Enter `decodeDataUri(replace(triggerBody()?['Createfile_FileContent'], '"', ''))` and then select **OK**. 
+    3. For **File Content**, select the text box and then choose **Image** from the PowerApps (V2) trigger.
+       
+6. The complete flow should now look like this:
 
-           ![Screenshot highlighting the file content field.](./media/augmented-upload-photo/file-content-code.png "Screenshot highlighting the file content field")
-
-       2. Under the **Dynamic content** section, select **See more** and then choose **Ask in PowerApps**.  
-
-           
-           ![Screenshot highlighting the See more button.](./media/augmented-upload-photo/see-more.png "Screenshot highlighting the See more button")
-
-          Adding this content adds a second purple box named **Createfile_FileContent** into the **Create file** task.  
-          
-          Select **X** to remove it. 
-
-          ![Screenshot highlighting the X next to the label to be removed.](./media/augmented-upload-photo/flow-remove-ask-code.png "Screenshot highlighting the X next to the label to be removed")
-
-
-
-6. Your Flow should now have the **Folder Path**, **File Name**, and **File Content** fields filled in:
-    
-    ![Screenshot showing the fields filled in.](./media/augmented-upload-photo/flow-complete.png "Screenshot showing the fields filled in")
+    :::image type="content" source="./media/augmented-upload-photo/flow-complete.png" alt-text="Screenshot showing the completed flow":::
 
 7. Save the flow and return to the browser tab that has your canvas app open. You'll see your flow now shows up in the **Data** pane.
 
@@ -196,18 +177,19 @@ You can insert a "pop-up" overlay of the selected image so users of the app can 
 11. The **OnSelect** method will be populated with `YourFlowName.Run(`. Insert the following code to upload the last photo taken to the **MRPhotos** folder on OneDrive: 
 
     
-    `UploadMRPhoto.Run(Last(ViewInMR1.Photos).ImageURI, JSON(Last(ViewInMR1.Photos).ImageURI, JSONFormat.IncludeBinaryData));`
+    `UploadMRPhoto.Run(GUID() & ".png", {file:{contentBytes:Last(ViewInMR1.Photos).ImageURI, name:""}})`
     
 
     ![Screenshot showing the code in the expression editor.](./media/augmented-upload-photo/button-upload-code.png "Screenshot showing the code in the expression editor")
 
     If you're inside a gallery of the MR photos, instead use the following formula:
     
-    `UploadMRPhoto.Run(ThisItem.ImageURI, JSON(ThisItem.ImageURI, JSONFormat.IncludeBinaryData));`
+    `UploadMRPhoto.Run(GUID() & ".png", {file: {contentBytes:ThisItem.ImageURI, name:""}})`
 
     If you want to create a button that uploads all of the photos taken in the MR session, use this formula: 
 
-    `ForAll(ViewInMR1.Photos, UploadMRPhoto.Run(ImageURI, JSON(ImageURI, JSONFormat.IncludeBinaryData)));`
+    `ForAll(ViewInMR1.Photos, UploadMRPhoto.Run(GUID() & ".png", {file:{contentBytes:ImageURI, name:""}}))`
+12. You can test the new button in the studio by pressing the Play button at the top of the studio and then press the **View in MR** button followed by your button to upload the photo. The sample photo should be uploaded to your sharepoint site.
 
 ## Use SaveData and LoadData functions
 
