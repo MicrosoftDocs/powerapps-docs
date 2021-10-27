@@ -1,5 +1,5 @@
 ---
-title: Improved canvas keyboard navigation in canvas apps (Experimental)
+title: Improved canvas keyboard navigation in canvas apps (experimental)
 description: Learn about how to use the improved canvas keyboard navigation experience for better accessibility.
 author: hemantgaur
 ms.service: powerapps
@@ -18,7 +18,7 @@ contributors:
   - hemantgaur
 ---
 
-# Improved canvas keyboard navigation in canvas apps (Experimental)
+# Improved canvas keyboard navigation in canvas apps (experimental)
 
 [This article is pre-release documentation and is subject to change.]
 
