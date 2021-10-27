@@ -40,7 +40,7 @@ search.app:
 
 1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
-2.  Expand **Data**, select **Tables**, select the table you want, and then select the **Views** tab.
+2.  Expand **Dataverse**, select **Tables**, select the table you want, and then select the **Views** tab.
 
 3.  Select **More commands** ![More Commands button.](media/more-commands.gif "More Commands button for Forms") next to the view you want, and then select **Delete view**. You can also select **Delete view** on the menu bar.
 
@@ -48,7 +48,7 @@ search.app:
 
 1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
-2.  Expand **Data**, select **Tables**, select the table you want, and then select the **Views** tab.
+2.  Expand **Dataverse**, select **Tables**, select the table you want, and then select the **Views** tab.
 
 3.  Select **More commands** ![More Commands button.](media/more-commands.gif "More Commands button for Forms") next to the view you want, and then select either **Deactivate** or **Activate**. You can also select **Deactivate** or **Activate** on the menu bar.
 

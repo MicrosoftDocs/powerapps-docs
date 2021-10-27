@@ -34,7 +34,7 @@ search.app:
 
 1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
-2.  Expand **Data**, select **Tables**, select the table that you want, and then select the **Forms** tab. 
+2.  Expand **Dataverse**, select **Tables**, select the table that you want, and then select the **Forms** tab. 
 
 3.  In the list of forms, open a form of type **Main**. To open a form in another tab, select **More commands** ![More Commands button.](media/more-commands.gif "More Commands button for Forms"), and then select **Edit form** > **Edit form in new tab**.
 
@@ -59,7 +59,7 @@ You can access **Section properties** in solution explorer from the Power Apps s
 
 1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
-2.  Expand **Data**, select **Tables**, select the table that you want, and then select the **Forms** tab. 
+2.  Expand **Dataverse**, select **Tables**, select the table that you want, and then select the **Forms** tab. 
 
 3.  In the list of forms, open the form of type **Main**. 
 

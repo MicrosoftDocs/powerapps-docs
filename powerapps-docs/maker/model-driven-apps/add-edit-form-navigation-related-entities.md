@@ -30,7 +30,7 @@ In this topic, you use the form navigation pane that is used to add links to rel
   
 1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
-2.  Expand **Data**, select **Tables**, select the table that you want, and then select the **Forms** tab. 
+2.  Expand **Dataverse**, select **Tables**, select the table that you want, and then select the **Forms** tab. 
   
 3.  In the list, open a form with the type of **Main** to edit it.
 

@@ -30,7 +30,7 @@ To create a table, you must have either a System Administrator or System Customi
 Sign in to Power Apps at [https://make.powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
 ## Create a table
-1. In the navigation pane, expand **Data**, and then select **Tables**.
+1. In the navigation pane, expand **Dataverse**, and then select **Tables**.
 
 2. On the command bar, select **New table**.
 
