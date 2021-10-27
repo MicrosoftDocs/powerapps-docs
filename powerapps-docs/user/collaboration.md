@@ -33,7 +33,7 @@ When you're working on a row such as an **Opportunity**, **Account**, **Contact*
 > [!NOTE]
 > This feature is only available in the **Opportunity**, **Account**, **Contact** and **Case** tables that are in customer engagement apps such as [Dynamics 365 Sales](/dynamics365/sales-professional/help-hub.md), [Dynamics 365 Customer Service](/dynamics365/customer-service/help-hub.md).
 
-## View a user's status and picture
+### View a user's status and picture
 
 When you open a row that's owned by another user their picture and online status is displayed.
 
@@ -44,7 +44,7 @@ When you open a row that's owned by another user their picture and online status
 > ![](media/collob-2.png "")
   
 
-## Sharing 
+### Sharing 
 
 Easily share the direct link to a row, by selecting **Share** in command bar. Select **Copy link** and then paste it in another app to share the link. 
 The user's that you share the link with will have read only permission to the row.
