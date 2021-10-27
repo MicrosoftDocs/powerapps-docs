@@ -17,7 +17,9 @@ contributors:
 
 # Portals operations using the Web API
 
-You can perform [available Web API operations](web-api-overview.md#web-api-operations) in portals. Web API operations consist of HTTP requests and responses. This article shows sample operations, methods, URI, and the sample JSON you can use in the HTTP request.
+You can perform [available Web API operations](web-api-overview.md#web-api-operations) in portals. Web API operations consist of HTTP requests and responses. This article shows sample write, update, and delete operations, methods, URI, and sample JSON you can use in the HTTP requests.
+
+See also [Portals read operations using the Web API](read-operations.md).
 
 > [!IMPORTANT]
 > - **Your portal version must be 9.3.3.x or later for this feature to work.**

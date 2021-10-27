@@ -17,15 +17,17 @@ contributors:
 
 # Query data using portals Web API (preview)
 
-Web API operations in portals so far were limited to creating, updating, deleting, associating and disassociating tables. With this public preview, we're adding the capability to retrieve data using GET requests through portals Web API.
+You can perform [available Web API operations](web-api-overview.md#web-api-operations) in portals. Web API operations consist of HTTP requests and responses. This article shows sample read operations, methods, URI, and the sample JSON you can use in the HTTP GET request.
+
+See also [Portals write, update and delete operations using the Web API](write-update-delete-operations.md).
 
 ## Prerequisites
 
--   Enable table and field for Web API operations. More information: [Site settings for the Web API](https://docs.microsoft.com/powerapps/maker/portals/web-api-overview#site-settings-for-the-web-api)
+- Enable table and field for Web API operations. More information: [Site settings for the Web API](web-api-overview.md#site-settings-for-the-web-api)
 
--   The portals Web API accesses table records and follows the table permissions given to users through the associated. Ensure you configure table permissions accordingly. More information: [Create web roles](https://docs.microsoft.com/powerapps/maker/portals/configure/create-web-roles)
+- The portals Web API accesses table records and follows the table permissions given to users through the associated web roles. Ensure you configure table permissions accordingly. More information: [Create web roles](../configure/create-web-roles.md)
 
-### Site setting for Web API read operations
+## Site setting for Web API read operations
 
 You must configure the site setting **WebAPI/enableReadOperationPreview** and set its value to **True** to enable read operations using portals Web API.
 
@@ -39,12 +41,10 @@ This example queries account records.
 |-------------------------|-------------------------|-------------------------|
 | Retrieve table records | **GET** | [Portal URI]/_api/accounts</br>**Example:** <em>https://contoso.powerappsportals.com/_api/accounts</em> |
 
-
 **Sample response**
 
 | <em>{</em></br><em>"value": [</em></br><em>{</em></br><em>"@odata.etag": "W/\"1066412\"",</em></br><em>"name": "Fourth Coffee (sample)",</em></br><em>"accountid": "d2e11ba8-92f6-eb11-94ef-000d3a5aa607"</em></br><em>},</em></br><em>{</em></br><em>"@odata.etag": "W/\"1066413\"",</em></br><em>"name": "Litware, Inc. (sample)",</em></br><em>"accountid": "d4e11ba8-92f6-eb11-94ef-000d3a5aa607"</em></br><em>}</em></br><em>]</em></br><em>}</em> |
 |-------------------------|
-
 
 Use **$select** and **$top** system query options to return the name property for the first three accounts:
 
@@ -52,19 +52,16 @@ Use **$select** and **$top** system query options to return the name property fo
 |-------------------------|-------------------------|-------------------------|
 | Retrieve first 3 entity records | **GET** | [Portal URI]/_api/accounts?$select=name,revenue&amp;$top=3</br>**Example:**<br /></br>[https://contoso.powerappsportals.com/_api/accounts?$select=name,revenue&amp;$top=3](https://contoso.powerappsportals.com/_api/accounts?$select=name,revenue&amp;$top=3) |
 
-
 Retrieve account by using account ID:
 
 | **Operation** | **Method** | **URI** |
 |-------------------------|-------------------------|-------------------------|
 | Retrieve specific property for a record | **GET** | [Portal URI]/_api/accounts(e0e11ba8-92f6-eb11-94ef-000d3a5aa607)?$select=name</br>**Example:**</br><em>https://contoso.powerappsportals.com/_api/accounts(e0e11ba8-92f6-eb11-94ef-000d3a5aa607)?$select=name</em> |
 
-
 **Sample response**
 
 | {</br>"@odata.etag": "W/\"1066414\"",</br>"name": "Adventure Works (sample)",</br>"accountid": "d6e11ba8-92f6-eb11-94ef-000d3a5aa607"</br>} |
 |-------------------------|
-
 
 ## Apply system query options
 
@@ -73,7 +70,6 @@ Each of the system query options you append to the URL for the entity set is add
 | **Method** | **URI** |
 |-------------------------|-------------------------|
 | **GET** | [Portal URI]/_api/accounts?$select=name,revenue&amp;$filter=revenue gt 90000&amp;$top=3</br>**Example:**</br><em>https://contoso.powerappsportals.com/_api/accounts?$select=name,revenue&amp;$filter=revenue gt 90000&amp;$top=3</em> |
-
 
 ## Request specific properties
 
@@ -119,7 +115,7 @@ The Web API supports these standard OData string query functions:
 | endswith     | *$filter=endswith(name,'Inc.')*     |
 | startswith   | *$filter=startswith(name,'a')*      |
 
-### Order results
+## Order results
 
 Specify the order in which items are returned using the **$orderby** system query option. Use the **asc** or **desc** suffix to specify ascending or descending order respectively. The default is ascending if the suffix isn't applied. The following example shows retrieving the name and revenue properties of accounts ordered by ascending revenue and by descending name.
 
@@ -127,8 +123,7 @@ Specify the order in which items are returned using the **$orderby** system qu
 |-------------------------|-------------------------|
 | **GET** | [Portal URI]/_api/accounts?$select=name,revenue&amp;$orderby=name asc,revenue desc&amp;$filter=revenue gt 90000</br>**Example:**</br><em>https://contoso.powerappsportals.com/_api/accounts?$select=name,revenue&amp;$orderby=name asc,revenue desc&amp;$filter=revenue gt 90000</em> |
 
-
-### Aggregate and grouping results
+## Aggregate and grouping results
 
 By using **$apply,** you can aggregate and group your data dynamically as seen in the following examples.
 
@@ -143,7 +138,7 @@ By using **$apply,** you can aggregate and group your data dynamically as seen
 | Last created record date and time                            | *accounts?$apply=aggregate(createdon with max as lastCreate)*                                      |
 | First created record date and time                           | *accounts?$apply=aggregate(createdon with min as firstCreate)*                                     |
 
-### Retrieve a count of rows
+## Retrieve a count of rows
 
 Use the **$count** system query option with a value of true to include a count of entities that match the filter criteria up to 5000.
 
@@ -151,12 +146,10 @@ Use the **$count** system query option with a value of true to include a cou
 |-------------------------|-------------------------|
 | **GET** | [Portal URI/_api/accounts?$select=name &amp;$filter=contains(name,'sample') &amp;$count=true</br>**Example:**</br><em>https://contoso.powerappsportals.com/_api/accounts?$select=name &amp;$filter=contains(name,'sample') &amp;$count=true</em> |
 
-
 **Sample response**
 
 | {</br>"@odata.count": 10,</br>"value": [</br>{</br>"@odata.etag": "W/\"1066412\"",</br>"name": "Fourth Coffee (sample)",</br>"accountid": "d2e11ba8-92f6-eb11-94ef-000d3a5aa607"</br>},</br>{</br>"@odata.etag": "W/\"1066413\"",</br>"name": "Litware, Inc. (sample)",</br>"accountid": "d4e11ba8-92f6-eb11-94ef-000d3a5aa607"</br>},</br>{</br>"@odata.etag": "W/\"1066414\"",</br>"name": "Adventure Works (sample)",</br>"accountid": "d6e11ba8-92f6-eb11-94ef-000d3a5aa607"</br>}</br>]</br>} |
 |-------------------------|
-
 
 If you don't want to return any data except for the count, you can apply **$count** to any collection to get just the value.
 
@@ -164,14 +157,13 @@ If you don't want to return any data except for the count, you can apply **$cou
 |-------------------------|-------------------------|
 | **GET** | [Portal URI/_api/accounts/$count</br>**Example:**</br><em>https://contoso.powerappsportals.com/_api/accounts/$count</em> |
 
-
 **Sample response**
 
 |     |
 |-----|
 | 3   |
 
-# Column comparison
+## Column comparison
 
 The following example shows how to compare columns using the Web API:
 
@@ -179,12 +171,11 @@ The following example shows how to compare columns using the Web API:
 |-------------------------|-------------------------|
 | GET | [Portal URI]/_api/contacts?$select=firstname&amp;$filter=firstname eq lastname</br>**Example:**</br><em>https://contoso.powerappsportals.com/_api/contacts?$select=firstname&amp;$filter=firstname eq lastname</em> |
 
-
-### Retrieve related table records with a query
+## Retrieve related table records with a query
 
 Use the **$expand** system query option in the navigation properties to control what data from related entities is returned.
 
-## Retrieve related table records by expanding single-valued navigation properties
+### Retrieve related table records by expanding single-valued navigation properties
 
 The following example demonstrates how to retrieve the contact for all the account records. For the related contact records, we are only retrieving the **contactid** and **fullname**.
 
@@ -192,12 +183,10 @@ The following example demonstrates how to retrieve the contact for all the accou
 |-------------------------|-------------------------|
 | GET | [Portal URI/_api/accounts?$select=name &amp;$expand=primarycontactid($select=contactid,fullname)<br /></br>**Example:**</br><em>https://contoso.powerappsportals.com/_api/accounts?$select=name &amp;$expand=primarycontactid($select=contactid,fullname)</em> |
 
-
 **Sample response**
 
 | {</br>"value": [</br>{</br>"@odata.etag": "W/\"1066412\"",</br>"name": "Fourth Coffee (sample)",</br>"accountid": "d2e11ba8-92f6-eb11-94ef-000d3a5aa607",</br>"primarycontactid": {</br>"contactid": "e6e11ba8-92f6-eb11-94ef-000d3a5aa607",</br>"fullname": "Yvonne McKay (sample)"</br>}</br>},</br>{</br>"@odata.etag": "W/\"1066413\"",</br>"name": "Litware, Inc. (sample)",</br>"accountid": "d4e11ba8-92f6-eb11-94ef-000d3a5aa607",</br>"primarycontactid": {</br>"contactid": "e8e11ba8-92f6-eb11-94ef-000d3a5aa607",</br>"fullname": "Susanna Stubberod (sample)"</br>}</br>}</br>]</br>} |
 |-------------------------|
-
 
 ### Retrieve related tables by expanding collection-valued navigation properties
 
@@ -207,7 +196,6 @@ If you expand on collection-valued navigation parameters to retrieve related ent
 |-------------------------|-------------------------|
 | **GET** | [[Portal URI]/_ api/accounts?$top=5&amp;$select=name&amp;$expand=Account_Tasks($select=subject,scheduledstart)](https://demo-portal-20210805.powerappsportals.com/_api/accounts?$top=5&amp;$select=name&amp;$expand=primarycontactid($select=contactid,fullname),Account_Tasks($select=subject,scheduledstart))</br>**Example:**</br><em>https://contoso.powerappsportals.com/_ api/accounts?$top=5&amp;$select=name&amp;$expand=Account_Tasks($select=subject,scheduledstart)</em> |
 
-
 ### Retrieve related tables by expanding both single-valued and collection-valued navigation properties
 
 The following example demonstrates how you can expand related entities for entity sets using both single and collection-valued navigation properties. 
@@ -215,7 +203,6 @@ The following example demonstrates how you can expand related entities for entit
 | **Method** | **URI** |
 |-------------------------|-------------------------|
 | **GET** | [[Portal URI]/_api/accounts?$top=5&amp;$select=name&amp;$expand=primarycontactid($select=contactid,fullname),Account_Tasks($select=subject,scheduledstart)](https://demo-portal-20210805.powerappsportals.com/_api/accounts?$top=5&amp;$select=name&amp;$expand=primarycontactid($select=contactid,fullname),Account_Tasks($select=subject,scheduledstart))<br /></br>**Example:**</br><em>https://contoso.powerappsportals.com/_api/accounts?$top=5&amp;$select=name&amp;$expand=primarycontactid($select=contactid,fullname),Account_Tasks($select=subject,scheduledstart)</em> |
-
 
 ## Tutorial
 
@@ -239,17 +226,17 @@ Before you can use the portals Web API, you have to enable the required site set
 
 ![](media/read-operations/image3.png)
 
-1.  Select **New**.
+1. Select **New**.
 
-1.  In the **Name** box, enter **WebAPI/enableReadOperationPreview**.
+1. In the **Name** box, enter **WebAPI/enableReadOperationPreview**.
 
-1.  In the **Website** list, select your website record.
+1. In the **Website** list, select your website record.
 
-1.  In the **Value** box, enter **true**.
+1. In the **Value** box, enter **true**.
 
 ![Graphical user interface  text  application  email Description automatically generated](media/read-operations/image1.png)
 
-1.  Select **New**.
+1. Select **New**.
 
 1. In the **Name** box, enter **Webapi/contact/enabled**.
 
@@ -296,21 +283,21 @@ You'll have to configure permissions so that users are able to use the Web API f
 
 1. Select **New**.
 
-1.  In the **Name** box, enter **Contact Table Permission**.
+1. In the **Name** box, enter **Contact Table Permission**.
 
-1.  In the **Table Name** list, select **Contact (contact)**.
+1. In the **Table Name** list, select **Contact (contact)**.
 
-1.  In the **Website** list, select your website record.
+1. In the **Website** list, select your website record.
 
-1.  In the **Access Type** list, select **Global**.
+1. In the **Access Type** list, select **Global**.
 
-1.  Select **Read**, **Write**, **Create**, and **Delete** privileges.
+1. Select **Read**, **Write**, **Create**, and **Delete** privileges.
 
-1.  Select **Save & Close**.
+1. Select **Save & Close**.
 
 ![](media/read-operations/image7.png)
 
-1.  On the left pane, select **Web Roles** .
+1. On the left pane, select **Web Roles** .
 
 1. Select **New**.
 
@@ -360,7 +347,7 @@ You'll have to configure permissions so that users are able to use the Web API f
 
 1. Select **Save & Close**.
 
-## Step 3 - Clear the portals cache
+### Step 3 - Clear the portals cache
 
 You've created a **webapi** sample page to test the Web API functionality. Before you get started, ensure that the Power Apps portals cache has been cleared so that the changes from the Portal Management app are reflected on your portal.
 
@@ -380,17 +367,15 @@ You've created a **webapi** sample page to test the Web API functionality. Bef
 
 More information: [Clear the server-side cache for a portal](https://docs.microsoft.com/en-us/powerapps/maker/portals/admin/clear-server-side-cache)
 
-## Step 4 - Use browser address bar to fire retrieve call
+### Step 4 - Use browser address bar to fire retrieve call
 
 Enter **\[Portal URI\]/\_api/contacts?$select=firstname,lastname** in browser address bar.
 
 ![](media/read-operations/image15.png)
 
-
-
 ### See also
 
 [Web API overview](web-api-overview.md)
-
+[Portals write, update and delete operations using the Web API](write-update-delete-operations.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
