@@ -131,6 +131,8 @@
         href: ../user/add-powerbi-dashboards.md      
     - name: Collaboration
       items:
+      - name: Collaborate with others (preview)
+        href:../user/collaboration.md
       - name: Use OneDrive for Business
         href: ../user/one-drive.md
       - name: Take notes by using OneNote
