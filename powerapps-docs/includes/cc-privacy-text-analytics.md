@@ -38,6 +38,6 @@
   
  The [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Text Analytics API is sent data based on fields that are configured in active Knowledge Search fields or the Topic Model configuration or the Similarity Rule configuration. For example, case entity fields, such as title and description, plus the description field in related notes and activities, are configured in the Knowledge Search Field configuration.  
   
- [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)] Relevance Search  
+ [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)] Dataverse search  
   
- You can use Relevance Search, if it has been enabled by an administrator, to find similar records for cases. The text match fields and exact match fields used in the Similarity rule are used to invoke the Relevance Search API. Refer to the technical content for [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)] Relevance Search for data-handling details.
+ You can use Dataverse search, if it has been enabled by an administrator, to find similar records for cases. The text match fields and exact match fields used in the Similarity rule are used to invoke the Dataverse search API. Refer to the technical content for [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)] Dataverse search for data-handling details.

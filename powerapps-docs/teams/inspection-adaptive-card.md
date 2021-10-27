@@ -99,7 +99,7 @@ You can generate your adaptive card JSON by going to <https://adaptivecards.io>.
     "url": "@{variables('varReviewInspectionsLink')}"
 }
 ],
-    "\$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
     "version": "1.2"
 }
 ```

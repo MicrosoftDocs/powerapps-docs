@@ -1,6 +1,6 @@
 ---
-title: "What is relevance search and its benefits| MicrosoftDocs"
-description: Benefits of relevance search
+title: "What is Dataverse search and its benefits| MicrosoftDocs"
+description: Benefits of Dataverse search
 author: mduelae
 manager: kvivek
 ms.service: powerapps
@@ -19,9 +19,9 @@ search.app:
   - D365CE
 ---
 
-# What is relevance search?
+# What is Dataverse search?
 
-Relevance search for model-driven apps helps you quickly find what you're looking for. It delivers fast and comprehensive results across multiple tables in a single list, sorted by relevance. In addition, relevance search delivers the following benefits:
+Dataverse search for model-driven apps helps you quickly find what you're looking for. It delivers fast and comprehensive results across multiple tables in a single list, sorted by relevance. In addition, Dataverse search delivers the following benefits:
 
 - **Fast and accurate search**: Provides a precise and quick search experience for model-driven apps, and performance that's superior to [categorized search](quick-find.md#multiple-table-quick-find-categorized-search). 
 
@@ -41,8 +41,8 @@ Relevance search for model-driven apps helps you quickly find what you're lookin
 
 ### See also
 
-[Search for tables and rows by using relevance search](relevance-search.md)<br/>
+[Search for tables and rows by using Dataverse search](relevance-search.md)<br/>
 [Configure facets and filters](facets-and-filters.md)<br/>
-[Frequently asked questions about relevance search](relevance-faq.md)
+[Frequently asked questions about Dataverse search](relevance-faq.md)
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
