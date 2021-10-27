@@ -18,15 +18,47 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Collaborate with others in model-driven apps
+# Collaborate with others in model-driven apps (preview)
 
-Efficient communication is the cornerstone of every successful business.  Power Apps helps you connect with the right people quickly by showing you who’s available and who’s currently working on the record.  Sharing is made simple by aligning the UI to what Microsoft Office users are accustomed to. 
+[This topic is pre-release documentation and is subject to change.]
 
-> [!NOTE]
-> Before you can share rows using Access Team, your admin will need to set-up an Access Team template. For more information, see [About team templates](/previous-versions/dynamicscrm-2016/admins-customizers-dynamics-365/mt812239(v%3dcrm.8)). 
+Efficient communication is the cornerstone of every successful business. Power Apps helps you connect with the right people quickly by showing you who’s available and who’s currently working on a row. Sharing is made simple by aligning the user interface to what Microsoft Office users are accustomed to. 
+his feature is currently available only in Opportunity, Account, Contact and Case entities 
 
-1. To give a user permission to access a row, from the site map, select the row type. For example, **Accounts**.
-2. From the list of rows, open the row that you want to provide another user access to.
+This feature is available in the **Opportunity**, **Account**, **Contact** and **Case** table that are in customer engagement apps such as [Dynamics 365 Sales](/dynamics365/sales-professional/help-hub.md), [Dynamics 365 Customer Service](/dynamics365/customer-service/help-hub.md).
+
+
+## Multiplayer apps 
+
+Co-presence lets you know who is currently looking at the record by showing their avatar in the top right corner of the command bar:
+
 
   > [!div class="mx-imgBorder"]
-  > ![My active accounts.](media/AccessTeam1.png "My active accounts")
+  > ![](media/collob-1.png "")
+
+Clicking on the avatar will allow you to see that person’s on-line presence, as well as start an email or a chat with them. 
+
+
+
+## On-line availability and picture 
+
+App users, such as the record owner, are displayed with their picture and on-line status. 
+This features works in to user lookups and grid user columns. 
+
+
+  > [!div class="mx-imgBorder"]
+  > ![](media/collob-2.png "")
+  
+
+## Sharing 
+
+Links to records can be shared easily via the “Share” button in the top right corner of the command bar: 
+
+
+  > [!div class="mx-imgBorder"]
+  > ![](media/collob-2.png "")
+
+
+Copying the link allows you to easily paste it into any app. 
+
+This feature will be expanded during the preview period to allow copy-pasted shared links to give read only access to the record to people who click on the link.   
