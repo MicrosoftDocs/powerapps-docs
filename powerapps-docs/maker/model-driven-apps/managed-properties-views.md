@@ -44,11 +44,11 @@ search.app:
 
 3.  Select the three dots either next to the table or in the top menu, then select **managed properties**.
 
-:::image type="content" source="media/table-managed-properties-navigation.png" alt-text="Sample model-driven app":::
+:::image type="content" source="media/table-managed-properties-navigation.png" alt-text="Selecting managed properties":::
 
 4.  There are a range of options relevant to the current table to either prevent any customizations or to prevent the creation of new views.
 
-:::image type="content" source="media/table-managed-properties.png" alt-text="Sample model-driven app":::
+:::image type="content" source="media/table-managed-properties.png" alt-text="Managed properties options":::
 
 5.  Make any necessary changes and when finished, select **Done**.  
   

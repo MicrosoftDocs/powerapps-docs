@@ -150,7 +150,7 @@ To remove sample data, follow the steps in this topic: [Add or remove sample dat
 
 [Learn about the model-driven app design tools](model-driven-designers.md)
 
-[Building a simple model-driven app](build-first-model-driven-app.md) is a great way to start.  You may wish to [Create a solution](../../maker/data-platform/create-solution) before you do so.
+[Building a simple model-driven app](build-first-model-driven-app.md) is a great way to start.  You may wish to [Create a solution](../../maker/data-platform/create-solution.md) before you do so.
 
 If you are new to Power Apps, and want to learn about how to convert your ideas into a fully working solution using Power Apps, start with [Planning a Power Apps project](../../guidance/planning/introduction.md).
 

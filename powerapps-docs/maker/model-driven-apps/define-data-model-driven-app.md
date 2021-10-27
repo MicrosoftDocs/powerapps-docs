@@ -53,7 +53,7 @@ For detailed information about working with these components in Dataverse to def
 |Business rule| [Create a business rule](create-business-rules-recommendations-apply-logic-form.md)
 |Chart| [Create a chart](add-chart-to-form.md)
 |Dashboard| [Build a dashboard](create-edit-dashboards.md)
-|Business process flow|[Create a business process flow](https://docs.microsoft.com/en-us/power-automate/create-business-process-flow)|Uses Power Automate designer|
+|Business process flow|[Create a business process flow](https://docs.microsoft.com/power-automate/create-business-process-flow)|Uses Power Automate designer|
 
 ## Next steps
 
