@@ -48,8 +48,7 @@ Keep ownership of a row and use the share feature to share the row with another 
 2.  On the share dialog box, do one of the following:
 
     - **First time sharing a row**
-      1.  Select the lookup column under **Add user/team**. Enter the name of the user or team in the [lookup column](lookup-field.md). The lookup will start displaying users or teams based what you typed, or you can select the lookup icon (magnifying glass) and an alphabetical list of names appears that you can select to assign access.
-          > [!NOTE] You can also search for a user that has previous share rights to manage or change access privileges.
+      1. Select the lookup column under **Add user/team**. Enter the name of the user or team in the [lookup column](lookup-field.md). The lookup will start displaying users or teams based what you typed, or you can select the lookup icon (magnifying glass) and an alphabetical list of names appears that you can select to assign access. You can also search for a user that has previous share rights to manage or change access privileges.
 
 
           > [!div class="mx-imgBorder"]
