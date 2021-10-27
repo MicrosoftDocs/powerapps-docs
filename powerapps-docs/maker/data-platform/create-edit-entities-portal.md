@@ -36,7 +36,7 @@ The portal enables configuring the most common options, but certain options can 
 
 ## View tables
 
-1. From the [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Dataverse** > **Tables**.
+1. From the [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Data** > **Tables**.
 
     > [!div class="mx-imgBorder"] 
     > ![View tables.](media/view-entities-portal.png)
