@@ -2,7 +2,7 @@
 title: Use custom connectors with the timeline in Power Apps | MicrosoftDocs
 description: "Learn how to use custom connectors to bring your own data, such as records, to the timeline in Power Apps."
 ms.custom: ""
-ms.date: 10/25/2021
+ms.date: 10/27/2021
 ms.reviewer: "matp"
 ms.service: powerapps
 ms.suite: ""
@@ -21,7 +21,7 @@ search.app:
 ---
 
 
-# Use custom connectors with the timeline
+# Use custom connectors with the timeline control
 
 Custom connectors is a feature that provides a way for developers to surface information, such as records, within the TimelineWallControl component. It allows for a broader set of scenarios in addition to the existing out-of-box notes, posts, and activities.
 
