@@ -19,6 +19,10 @@ contributors:
 
 You can use [available Web API operations](web-api-overview.md#web-api-operations) in portals. Web API operations consist of HTTP requests and responses. This article shows sample read operations, methods, URI, and the sample JSON you can use in the HTTP request.
 
+> [!IMPORTANT]
+> - This is a preview feature.
+> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
+
 See also [Portals write, update, and delete operations using the Web API](write-update-delete-operations.md).
 
 ## Prerequisites
@@ -31,7 +35,10 @@ See also [Portals write, update, and delete operations using the Web API](write-
 
 You must configure the site setting **WebAPI/enableReadOperationPreview** and set its value to **True** to enable read operations using portals Web API.
 
-:::image type="content" source="media/read-operations/enable-read.png" alt-text="Enable WebAPI read operation site setting. " border="true":::
+:::image type="content" source="media/read-operations/enable-read.png" alt-text="Enable Web API read operation site setting. " border="true":::
+
+> [!Important]
+> This site setting is only required during the preview period. Once this feature is GA, Web API read operations will be enabled by default for all portals.
 
 ## Query records
 
@@ -99,7 +106,7 @@ Use the **$select** system query option to limit the properties returned as sh
 | **GET** | `[Portal URI]/_api/accounts?$select=name,revenue&$top=3`</br></br>**Example:**</br>`https://contoso.powerappsportals.com/_api/accounts?$select=name,revenue&$top=3` |
 
 > [!IMPORTANT]
-> This is a performance best practice. If properties aren't specified using $select, all properties will be returned.
+> This is a performance best practice. If properties aren't specified and you have configured the `Webapi/<table name>/fields` site setting value to `*` then all properties will be returned using `$select`. If no properties are specified then an error will be returned.
 
 ## Filter results
 

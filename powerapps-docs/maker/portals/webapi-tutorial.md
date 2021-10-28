@@ -39,7 +39,7 @@ Before you can use the portals Web API, you have to enable the required site set
 
 1. Select **New**.
 
-1. In the **Name** box, enter **WebAPI/enableReadOperationPreview**.
+1. In the **Name** box, enter **WebAPI/enableReadOperationPreview**. This site setting is only required while the Web API read operation is in preview. The setting will be enabled by default when the feature is GA. 
 
 1. In the **Website** list, select your website record.
 
@@ -475,7 +475,6 @@ Now that you've enabled the Web API and configured user permissions, create a we
           deleteHandler: deleteRecord
         });
         loadRecords().done(function(data) {
-          debugger;
           table.data = _.map(data.value, function(record){
             record.id = record.contactid;
             return record;
