@@ -5,13 +5,14 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/11/2021
+ms.date: 10/29/2021
 ms.subservice: portals
 ms.author: nenandw
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
     - neerajnandwana-msft
     - tapanm-msft
+    - nickdoelman
 ---
 
 # Add chatbot to a page (preview)
@@ -74,10 +75,18 @@ You can change the values for the following parameters inside the "window.PvaEmb
 
 | Parameter | Value |
 | - | - |
-| width | Uses variable "chatWidth". To change, update the width in pixels: <br> `let chatWidth = "320px";` |
-| height | Uses variable "chatHeight". To change, update the height in pixels: <br> `let chatHeight =  "480px";` |
-| headerText | Title of the bot. By default, this uses the bot's name. To change, add "headerText" parameter with the bot header value: <br> `"headerText": 'Contoso chatbot';` | 
-| webChatHeaderStyleOptions | Determines header style for the chatbot component, such as color of font and background. To change, update "webChatHeaderStyleOptions" parameter with the values for "fontColor" and "backgroundColor" properties: <br> `"webChatHeaderStyleOptions": {"fontColor":'black',"backgroundColor":'white',}`
+| width | Uses variable "chatWidth". To change, update the width in pixels: </br> `let chatWidth = "320px";` |
+| height | Uses variable "chatHeight". To change, update the height in pixels: </br> `let chatHeight =  "480px";` |
+| headerText | Title of the bot. By default, this uses the bot's name. To change, add "headerText" parameter with the bot header value: </br> `"headerText": 'Contoso chatbot';` | 
+| webChatHeaderStyleOptions | Determines header style for the chatbot component, such as color of font and background. To change, update "webChatHeaderStyleOptions" parameter with the values for "fontColor" and "backgroundColor" properties: </br> `"webChatHeaderStyleOptions": {"fontColor":'black',"backgroundColor":'white'}` |
+| webChatCanvasStyleOptions | Determines the chat canvas style for chatbot component, such as the background and bubble backgrounds from the chatbot and the user. To change, update "webChatCanvasStyleOptions" parameters with the values for "backgroundColor", "bubbleBackgroundcolor", "bubbleTextColor", "bubbleFromUserBackground", and "bubbleFromUserTextColor" properties: </br> `"webChatCanvasStyleOptions": {"backgroundColor": "#123FFF","bubbleBackground":"#2340F0","bubbleTextColor": "#323130","bubbleFromUserBackground": "#412644","bubbleFromUserTextColor": "#F345FF"}` |
+| webChatWidgetStyleOptions | Determines the style for the ChatWidget component, such as color of the icon and background. To change, update "webChatWidgetStyleOptions" parameter with the values for "backgroundColor" and "iconColor" properties:</br>`"webChatWidgetStyleOptions": {"backgroundColor": "#486744","iconColor": "#DF234F"}` |
+
+## How to change the appearance of the chatbot
+
+| Annotation | Parameter | Example |
+| - | - | - |
+| 1 | | |
 
 After changing the web template, ensure you select **Sync configuration** to update the configuration and reflect the changes.
 
