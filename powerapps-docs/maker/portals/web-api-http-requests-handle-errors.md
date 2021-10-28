@@ -217,8 +217,8 @@ Response for unhandled errors with HTTP status code 500 will return the error "A
 
 ### See also
 
-[Web API overview](web-api-overview.md)  
-[Perform Web API operations](web-api-perform-operations.md)
-
+[Web API overview](web-api-overview.md)</br>  
+[Portals write, update and delete operations using the Web API](write-update-delete-operations.md)</br>
+[Portals read operations using the Web API](read-operations.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
