@@ -88,6 +88,8 @@ Optimize the formula in an **OnStart** event. For example, you can move some fun
 
 More information: [Optimize the OnStart property](performance-tips.md#optimize-the-onstart-property)
 
+We recommend using [App.StartScreen](functions/object-app.md#startscreen-property) property since it simplify app launch and boost app performance.
+
 ## Memory pressure at the client side
 
 It's important to check the memory consumption of a canvas app because most of the time, the app runs on mobile devices. Memory exceptions in the heap are the most likely cause behind a canvas app that crashes or freezes ("hangs") on certain devices.
