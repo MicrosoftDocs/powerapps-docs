@@ -245,7 +245,7 @@ Portals Web API can't be used for the following configuration tables.
 
 ## Next step
 
-[Perform Web API operations](web-api-perform-operations.md)
+[Portals write, update and delete operations using the Web API](write-update-delete-operations.md)
 
 ### See also
 

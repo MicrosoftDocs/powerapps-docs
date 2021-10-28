@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2021
+ms.date: 10/31/2021
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
@@ -45,6 +45,7 @@ HTTP requests can use different kinds of methods. However, the portals Web API o
 
 | Method | Usage |
 | - | - |
+| Get    | Use when retrieving data from tables. |
 | Post   | Creating tables and calling actions. |
 | Patch  | Use when updating tables or doing upsert operations. |
 | Delete | Use when deleting tables or individual properties of tables. |
@@ -98,6 +99,19 @@ OData-Version: 4.0
 		}
 		webapi.safeAjax = safeAjax;
 })(window.webapi = window.webapi || {}, jQuery)
+```
+
+### Example: Retrieve table data
+
+```javascript
+	webapi.safeAjax({
+				type: "GET",
+				url: "/_api/contacts?$select=firstname,lastname",
+				contentType: "application/json",
+				success: function (res) {
+						console.log(res);
+				}
+	});
 ```
 
 ### Example: Create table data
