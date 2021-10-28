@@ -40,7 +40,7 @@ Before you can use the portals Web API, you have to enable the required site set
 
 1. Select **New**.
 
-1. In the **Name** box, enter **WebAPI/enableReadOperationPreview**. This site setting is only required while the Web API read operation is in preview. The setting will be enabled by default when the feature is GA. 
+1. In the **Name** box, enter **WebAPI/enableReadOperationPreview**. This site setting is only required while the Web API read operation is in preview.
 
 1. In the **Website** list, select your website record.
 
