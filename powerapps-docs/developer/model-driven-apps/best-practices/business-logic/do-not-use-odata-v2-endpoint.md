@@ -44,7 +44,7 @@ For model-driven apps, you should use the [Xrm.WebApi (Client API reference)](..
 
 The Organization Data Service uses this endpoint: `/XRMServices/2011/OrganizationData.svc`. You should look for any active code using this endpoint.
 
-The Dynamics CRM SDK provided an example JavaScript library as a JavaScript Web Resource named `sample_/Scripts/SDK.REST.js`, which can be found [here](https://docs.microsoft.com/previous-versions/dynamicscrm-2015/developers-guide/gg334427(v=crm.7)#sample_scriptssdkrestjs). The [Xrm.WebApi (Client API reference)](../../clientapi/reference/xrm-webapi.md) provides similar functions to create, update, delete, and retrieve records.
+The Dynamics CRM SDK provided an example JavaScript library as a JavaScript Web Resource named `sample_/Scripts/SDK.REST.js`, which can be found [here](/previous-versions/dynamicscrm-2015/developers-guide/gg334427(v=crm.7)#sample_scriptssdkrestjs). The [Xrm.WebApi (Client API reference)](../../clientapi/reference/xrm-webapi.md) provides similar functions to create, update, delete, and retrieve records.
 
 The Organization Data Service endpoint is also sometimes used by PowerShell scripts using [Invoke-WebRequest](/powershell/module/microsoft.powershell.utility/invoke-webrequest).
 
