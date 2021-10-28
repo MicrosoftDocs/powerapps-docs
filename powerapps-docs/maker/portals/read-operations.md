@@ -1,6 +1,6 @@
 ---
 title: Portals read operations using the Web API
-description: Learn how to perform GET Web API operations on Power Apps portals.
+description: Learn how to create read operations using the portals Web API.
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
@@ -17,15 +17,15 @@ contributors:
 
 # Query data using portals Web API (preview)
 
-You can perform [available Web API operations](web-api-overview.md#web-api-operations) in portals. Web API operations consist of HTTP requests and responses. This article shows sample read operations, methods, URI, and the sample JSON you can use in the HTTP GET request.
+You can use [available Web API operations](web-api-overview.md#web-api-operations) in portals. Web API operations consist of HTTP requests and responses. This article shows sample read operations, methods, URI, and the sample JSON you can use in the HTTP request.
 
-See also [Portals write, update and delete operations using the Web API](write-update-delete-operations.md).
+See also [Portals write, update, and delete operations using the Web API](write-update-delete-operations.md).
 
 ## Prerequisites
 
 - Enable table and field for Web API operations. More information: [Site settings for the Web API](web-api-overview.md#site-settings-for-the-web-api)
 
-- The portals Web API accesses table records and follows the table permissions given to users through the associated web roles. Ensure you configure table permissions accordingly. More information: [Create web roles](../configure/create-web-roles.md)
+- The portals Web API accesses table records and follows the table permissions given to users through the associated web roles. Ensure you configure the correct table permissions. More information: [Create web roles](configure/create-web-roles.md)
 
 ## Site setting for Web API read operations
 
@@ -64,7 +64,7 @@ Use **$select** and **$top** system query options to return the name property fo
 
 | **Operation** | **Method** | **URI** |
 |-------------------------|-------------------------|-------------------------|
-| Retrieve first 3 entity records | **GET** | `[Portal URI]/_api/accounts?$select=name,revenue&$top=3`</br></br>**Example:**</br>`https://contoso.powerappsportals.com/_api/accounts?$select=name,revenue&$top=3` |
+| Retrieve first three entity records | **GET** | `[Portal URI]/_api/accounts?$select=name,revenue&$top=3`</br></br>**Example:**</br>`https://contoso.powerappsportals.com/_api/accounts?$select=name,revenue&$top=3` |
 
 Retrieve account by using account ID:
 
@@ -84,7 +84,7 @@ Retrieve account by using account ID:
 
 ## Apply system query options
 
-Each of the system query options you append to the URL for the entity set is added using the syntax for query strings. The first is appended after \[**?**\] and subsequent query options are separated using \[**&**\]. All query options are case-sensitive as shown in the following example.
+Each of the system query options you append to the URL for the entity set is added using the syntax for query strings. The first is appended after \[**?**\] and the following query options are separated using \[**&**\]. All query options are case-sensitive as shown in the following example.
 
 | **Method** | **URI** |
 |-------------------------|-------------------------|
@@ -215,7 +215,7 @@ Use the **$expand** system query option in the navigation properties to contro
 
 ### Retrieve related table records by expanding single-valued navigation properties
 
-The following example demonstrates how to retrieve the contact for all the account records. For the related contact records, we are only retrieving the **contactid** and **fullname**.
+The following example shows how to retrieve the contact for all the account records. For the related contact records, we're only retrieving the **contactid** and **fullname**.
 
 | **Method** | **URI** |
 |-------------------------|-------------------------|
@@ -250,7 +250,7 @@ The following example demonstrates how to retrieve the contact for all the accou
 
 ### Retrieve related tables by expanding collection-valued navigation properties
 
-If you expand on collection-valued navigation parameters to retrieve related entities for entity sets, only one level of depth is returned if there is data. Otherwise, the collection will return an empty array.
+If you expand on collection-valued navigation parameters to retrieve related entities for entity sets, only one level of depth is returned if there's data. Otherwise, the collection will return an empty array.
 
 | **Method** | **URI** |
 |-------------------------|-------------------------|

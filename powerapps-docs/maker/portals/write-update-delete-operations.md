@@ -15,7 +15,7 @@ contributors:
     - nickdoelman
 ---
 
-# Portals operations using the Web API
+# Use portals Web API write, update, and delete operations
 
 You can perform [available Web API operations](web-api-overview.md#web-api-operations) in portals. Web API operations consist of HTTP requests and responses. This article shows sample write, update, and delete operations, methods, URI, and sample JSON you can use in the HTTP requests.
 

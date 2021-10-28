@@ -1846,7 +1846,7 @@
             href: ./portals/web-api-overview.md
           - name: Perform Write, Update, Delete operations
             displayName: Portals Web API write, update and delete operations
-            href: ./portals/write--update-delete-operations.md
+            href: ./portals/write-update-delete-operations.md
           - name: Perform Read operations
             displayName: Portals Web API read operations
             href: ./portals/read-operations.md            
@@ -1855,7 +1855,7 @@
             href: ./portals/web-api-http-requests-handle-errors.md
           - name: "Tutorial: Use the portals Web API"
             displayName: Tutorial on how to use the portal Web API
-            href: ./portals/web-api-tutorial.md            
+            href: ./portals/webapi-tutorial.md            
         - name: Code components (preview)
           items:
           - name: Overview of code components in portals

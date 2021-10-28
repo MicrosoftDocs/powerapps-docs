@@ -193,7 +193,7 @@ Now that you've enabled the Web API and configured user permissions, create a we
 
 1. Scroll down to the **Content** section, and then go to **Copy (HTML)** (HTML designer).
 
-    :::image type="content" source="media/web-api/copy-content.png" alt-text="Web role associated view. " border="false":::
+    :::image type="content" source="media/web-api/copy-content.png" alt-text="Copy HTML content" border="false":::
 
 1. Select the **HTML** tab.
 
@@ -488,7 +488,7 @@ Now that you've enabled the Web API and configured user permissions, create a we
     <div id="dataTable"></div>
     ```
 
-    :::image type="content" source="media/web-api/paste-code.png" alt-text="Web role associated view. " border="false":::
+    :::image type="content" source="media/web-api/paste-code.png" alt-text="Paste code." border="false":::
 
 1. Select **Save & Close**.
 
@@ -530,7 +530,7 @@ To test the Web API functionality:
 
     :::image type="content" source="media/web-api/edit-record.png" alt-text="Edit email" border="false":::
 
-1. Select :::image type="content" source="media/web-api/delete.png" alt-text="Delete" border="false":::  to delete a record.
+1. Select :::image type="content" source="media/web-api/delete.png" alt-text="Delete button" border="false"::: to delete a record.
 
 Now that you've created a webpage with a sample in this example to read, edit, create and delete records, you can customize the forms and layout.
 
