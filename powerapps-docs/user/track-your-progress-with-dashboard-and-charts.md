@@ -56,9 +56,9 @@ Legend:
 
 Legend:
 
-1. **Expand Chart**: Shows the chart in full screen mode. The chart is still interactive in expanded mode.  
-2. **Refresh**: Refreshes the rows in the chart.
-3. **View Rows**: See the chart and the underlying rows together. This opens the chart for the corresponding rows.
+1. **Refresh**: Refreshes the rows in the chart.
+2. **View Records**: See the chart and the underlying rows together. This opens the chart for the corresponding rows.
+3. **Expand Chart**: Shows the chart in full screen mode. The chart is still interactive in expanded mode.  
 4. **Tool tips**: Hover your mouse over the chart to see a tooltip that provides quick information about that area of the chart.      
 
 
