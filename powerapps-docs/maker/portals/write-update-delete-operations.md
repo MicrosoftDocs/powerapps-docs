@@ -357,10 +357,10 @@ This sample demonstrates how to create, update, and delete table records by usin
 ```
 
 ## Next step
-[Portals read operations using the Web API](read-operations.md)
+[Tutorial: Use portal Web API](webapi-tutorial.md)
 
 ### See also
 [Web API overview](web-api-overview.md)</br>
-[Tutorial: Use portal Web API](webapi-tutorial.md)
+[Portals read operations using the Web API](read-operations.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
