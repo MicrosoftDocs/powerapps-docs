@@ -106,7 +106,7 @@ You'll have to configure permissions so that users are able to use the Web API f
 
 1. Select **Save & Close**.
 
-:::image type="content" source="media/read-operations/table-permissions.png" alt-text="Contact table permissions." border="false":::
+    :::image type="content" source="media/read-operations/table-permissions.png" alt-text="Contact table permissions." border="false":::
 
 1. On the left pane, select **Web Roles** .
 
