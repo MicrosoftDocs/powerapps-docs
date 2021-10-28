@@ -52,7 +52,10 @@ The Organization Data Service endpoint is also sometimes used by PowerShell scri
 
 Organization Data Service is an OData v2.0 endpoint introduced with Dynamics CRM 2011. It was deprecated with Dynamics 365 Customer Engagement v8.0. Also known as the *OData endpoint* or *REST endpoint* when it was released, this endpoint only provides the ability to perform create, retrieve, update, and delete operations on tables.
 
-Both are OData endpoints, but there are some differences in how they are implemented. Some of these differences are described below.
+> [!NOTE]
+> Both are OData endpoints, but there are differences in how they are implemented. Do not expect that existing code will work with only minor changes.
+
+Some of the major differences are described below.
 
 ### Resource names
 
