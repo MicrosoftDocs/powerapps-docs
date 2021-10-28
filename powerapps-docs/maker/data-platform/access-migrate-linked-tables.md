@@ -1,5 +1,5 @@
 ---
-title: System columns and tables in Dataverse and Dataverse for Teams | Microsoft Docs
+title: System tables and columns in Dataverse and Dataverse for Teams | Microsoft Docs
 description: When you migrate from Access to Dataverse, you'll see columns added to tables after the migration and additional linked tables added in Access to support the columns.
 author: NHelgren
 ms.service: powerapps
@@ -16,11 +16,7 @@ search.app:
   - PowerApps
 contributors:
 ---
-
-<!-- editor comment: Maybe change the title to "... tables and columns ... " because that's the order they're presented in the topic. -->
-
-
-# System columns and tables in Dataverse and Dataverse for Teams (preview)
+# System tables and columns in Dataverse and Dataverse for Teams (preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 

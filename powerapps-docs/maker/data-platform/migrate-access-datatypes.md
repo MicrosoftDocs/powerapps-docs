@@ -16,10 +16,6 @@ search.app:
   - PowerApps
 contributors:
 ---
-
-<!-- from editor: I'm unable to see any of the images, in part because I can't access the review page. Please check the review page to make sure the images are present. https://review.docs.microsoft.com/en-us/powerapps/maker/data-platform/migrate-access-datatypes?branch=pr-en-us-5435 -->
-
-
 # Data types and sizes for Access data migration to Dataverse (preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
@@ -72,16 +68,12 @@ In the following table, the data type mappings supported can assist you in plann
 
 You'll notice some Dataverse columns don't have the same size capacity as Access. As noted above, if a column contains data too large to be migrated, the migration tool alerts the user that the contents can't be migrated. This is to prevent data loss. This decision is not based on the maximum possible size for the column, but rather the size of the actual data in each row.
 
-
-<!-- from editor: Just checking - in line 84, is "standard data" correct, or should it be "standard date"? -->
-
-
 |Access/Dataverse data type |Access limit  |Dataverse limit  |
 |---------|---------|---------|
 |Short Text/Text   |  255 characters   | 4,000 characters    |
 |Long Text/Multiline Text  | 1 GB   | 1,048,576 characters    |
 |Autonumber   |  2,147,483,647  | 4,000 characters    |
-|Date and Time   |  Standard data and time | Standard data and time   |
+|Date and Time   |  Standard date and time | Standard data and time   |
 |Currency<sup>4</sup>  |  Min/max -922,337,203,685,477/+922,337,203,685,477   |  Min/max -922,337,203,685,477/+922,337,203,685,477   |
 |Decimal Number  | Min/max -10^28-1/+10^28-1 up to 28 decimals   |  Min/max -100,000,000,000/+100,000,000,000 up to 10 decimal places    |
 |Yes/No  |  Boolean   | Boolean   |
