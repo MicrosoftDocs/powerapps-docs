@@ -124,7 +124,7 @@ You'll have to configure permissions so that users are able to use the Web API f
 
 1. Select **Related** &gt; **Table Permissions**.
 
-:::image type="content" source="media/read-operations/related-table-permissions.png" alt-text="Add related table permissions to web role." border="true":::
+    :::image type="content" source="media/read-operations/related-table-permissions.png" alt-text="Add related table permissions to web role." border="true":::
 
 1. Select **Add Existing Table Permission**.
 
@@ -540,8 +540,8 @@ Now that you've created a webpage with a sample in this example to read, edit, c
 
 ### See also
 
-[Web API overview](web-api-overview.md)
-[Portals write, update and delete operations using the Web API](write-update-delete-operations.md)
+[Web API overview](web-api-overview.md)</br>
+[Portals write, update and delete operations using the Web API](write-update-delete-operations.md)</br>
 [Portals read operations using the Web API](read-operations.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -354,7 +354,6 @@ This sample demonstrates how to create, update, and delete table records by usin
 [Portals read operations using the Web API](read-operations.md)
 
 ### See also
-
 [Web API overview](web-api-overview.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

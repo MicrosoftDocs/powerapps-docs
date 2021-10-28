@@ -270,7 +270,7 @@ The following example demonstrates how you can expand related entities for entit
 
 ### See also
 
-[Web API overview](web-api-overview.md)
+[Web API overview](web-api-overview.md)</br>
 [Portals write, update and delete operations using the Web API](write-update-delete-operations.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
