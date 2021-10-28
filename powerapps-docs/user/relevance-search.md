@@ -70,7 +70,8 @@ View the full results for a search by pressing **Enter** on your keyboard or sel
 
 Search results are ranked based on relevance and grouped by tables. The list of tables that include rows that match the search term are displayed horizontally as tabs along the top of the screen.
 
-To help you understand what terms match your seach results, hover over the icon at the beginning of each row to see the text that matched your search.
+To understand why a row appears in your search results, hover over the icon at the beginning of each row to see the text that matched your search.
+
 
 ![See the text that matched your search query.](media/relevance-search-matched-results.png "See the text that matched your search query")
 
