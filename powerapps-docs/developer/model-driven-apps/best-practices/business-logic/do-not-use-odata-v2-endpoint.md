@@ -1,5 +1,5 @@
 ---
-title: "Do not use OData v2.0 endpoint | MicrosoftDocs"
+title: "Do not use the OData v2.0 endpoint | MicrosoftDocs"
 description: "Describes the requirement to upgrade code to use Web API OData v4.0 endpoint rather than the deprecated OData v2.0 endpoint."
 services: ''
 suite: powerapps
@@ -22,7 +22,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Do not use OData v2.0 endpoint
+# Do not use the OData v2.0 endpoint
 
 **Category**: Supportability
 
