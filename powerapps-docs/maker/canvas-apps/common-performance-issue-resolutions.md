@@ -90,7 +90,7 @@ Optimize the formula in an **OnStart** event. For example, you can move some fun
 More information: [Optimize the OnStart property](performance-tips.md#optimize-the-onstart-property)
 
 > [!TIP]
-> We recommend using [App.StartScreen](functions/object-app.md#startscreen-property) property since it simplifies app launch and boost sapp performance.
+> We recommend using [App.StartScreen](functions/object-app.md#startscreen-property) property since it simplifies app launch and boosts the app's performance.
 
 ## Memory pressure at the client side
 

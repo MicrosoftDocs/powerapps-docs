@@ -73,7 +73,7 @@ With this change, the app fetches the tables in parallel, as shown in the follow
 > For more information about the performance problems and resolutions related to OnStart, read [OnStart event needs tuning](common-performance-issue-resolutions.md#onstart-event-needs-tuning).
 
 > [!TIP]
-> We recommend using [App.StartScreen](functions/object-app.md#startscreen-property) property since it simplifies app launch and boost sapp performance.
+> We recommend using [App.StartScreen](functions/object-app.md#startscreen-property) property since it simplifies app launch and boosts the app's performance.
 
 ## Cache lookup data
 
