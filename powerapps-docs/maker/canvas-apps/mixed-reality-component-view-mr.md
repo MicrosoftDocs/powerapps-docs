@@ -34,7 +34,7 @@ You can also take photos and [upload them to OneDrive](mixed-reality-take-upload
 > 3D content compressed with Draco compression is not supported.
 
 > [!TIP]
-> Consider [optimizing your models for use in mixed reality](/dynamics365/mixed-reality/guides/3d-content-guidelines/optimize-models)
+> If your model has a large file size, it could negatively affect your experience. Consider [optimizing your models for use in mixed reality.](/dynamics365/mixed-reality/guides/3d-content-guidelines/optimize-models)
 
 > [!TIP]
 > The MR components work best in well-lit environments with flat-textured surfaces. When establishing tracking, point the device at the surface you would like to track and slowly pan the device from right to left in broad arm motions. If tracking fails, exit and enter the MR view to reset the tracking and try again.  
