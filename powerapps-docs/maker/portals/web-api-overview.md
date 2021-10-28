@@ -246,10 +246,12 @@ Portals Web API can't be used for the following configuration tables.
 
 ## Next step
 
-[Portals write, update and delete operations using the Web API](write-update-delete-operations.md)
+[Portals read operations using the Web API](read-operations.md)
 
 ### See also
 
-[Compose HTTP requests and handle errors](web-api-http-requests-handle-errors.md)
+[Compose HTTP requests and handle errors](web-api-http-requests-handle-errors.md)</br>
+[Portals write, update and delete operations using the Web API](write-update-delete-operations.md)</br>
+[Tutorial: Use portal Web API](webapi-tutorial.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -22,6 +22,12 @@ You can perform [available Web API operations](web-api-overview.md#web-api-opera
 > [!IMPORTANT]
 > - **Your portal version must be 9.3.3.x or later for this feature to work.**
 
+## Prerequisites
+
+- Enable table and field for Web API operations. More information: [Site settings for the Web API](web-api-overview.md#site-settings-for-the-web-api)
+
+- The portals Web API accesses table records and follows the table permissions given to users through the associated web roles. Ensure you configure the correct table permissions. More information: [Create web roles](configure/create-web-roles.md)
+
 ## Create a record in a table
 
 ### Basic create
@@ -354,6 +360,7 @@ This sample demonstrates how to create, update, and delete table records by usin
 [Portals read operations using the Web API](read-operations.md)
 
 ### See also
-[Web API overview](web-api-overview.md)
+[Web API overview](web-api-overview.md)</br>
+[Tutorial: Use portal Web API](webapi-tutorial.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

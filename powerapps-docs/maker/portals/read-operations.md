@@ -23,8 +23,6 @@ You can use [available Web API operations](web-api-overview.md#web-api-operation
 > - This is a preview feature.
 > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
 
-See also [Portals write, update, and delete operations using the Web API](write-update-delete-operations.md).
-
 ## Prerequisites
 
 - Enable table and field for Web API operations. More information: [Site settings for the Web API](web-api-overview.md#site-settings-for-the-web-api)
@@ -38,7 +36,7 @@ You must configure the site setting **WebAPI/enableReadOperationPreview** and se
 :::image type="content" source="media/read-operations/enable-read.png" alt-text="Enable Web API read operation site setting. " border="true":::
 
 > [!Important]
-> This site setting is only required during the preview period. Once this feature is GA, Web API read operations will be enabled by default for all portals.
+> This site setting is only required during the preview period.
 
 ## Query records
 
@@ -273,11 +271,11 @@ The following example demonstrates how you can expand related entities for entit
 
 ## Next Step
 
-[Tutorial: Use portal Web API](webapi-tutorial.md)
+[Portals write, update and delete operations using the Web API](write-update-delete-operations.md)
 
 ### See also
 
 [Web API overview](web-api-overview.md)</br>
-[Portals write, update and delete operations using the Web API](write-update-delete-operations.md)
+[Tutorial: Use portal Web API](webapi-tutorial.md)</br>
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

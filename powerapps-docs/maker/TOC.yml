@@ -1844,12 +1844,12 @@
           items:
           - name: Portals Web API overview
             href: ./portals/web-api-overview.md
+          - name: Perform Read operations (preview)
+            displayName: Portals Web API read operations
+            href: ./portals/read-operations.md                    
           - name: Perform Write, Update, Delete operations
             displayName: Portals Web API write, update and delete operations
-            href: ./portals/write-update-delete-operations.md
-          - name: Perform Read operations
-            displayName: Portals Web API read operations
-            href: ./portals/read-operations.md            
+            href: ./portals/write-update-delete-operations.md        
           - name: Compose HTTP requests and handle errors
             displayName: Portals Web API handle HTTP requests and errors
             href: ./portals/web-api-http-requests-handle-errors.md
