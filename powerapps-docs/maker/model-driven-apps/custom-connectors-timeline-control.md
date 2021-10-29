@@ -45,14 +45,6 @@ The response from requesting records is persisted to minimize the number of reco
 
 Custom connectors is supported within single-session and multi-session table forms in Unified Interface client model apps.
 
-### Planned improvements
-
-The following are planned improvements to custom connectors. Exact release dates aren't currently available, but incremental improvements are expected before the end of December 2021.
-
-- Current experience: Custom connector records are always be displayed, no matter the selected filters/keyword search. Planned improvement: Pass currently applied filters within the request for pages of records (getRecordsData).
-- Current experience: There isn't a mechanism in place to configure filter information from a record source. Planned improvement: Custom connector records should be able to supply filters, filter options, or filter counts to existing filter options.
-- Current experience: For existing out-of-box records (notes, posts, and activities), it isn't possible to extend or define filters. Planned improvement: Custom connectors will allow you to define just filters instead of an entire record source.
-
 ### Out of scope
 The following functionality isn't available for the custom connectors feature:
 - Offline and offline-by-default scenarios
@@ -61,9 +53,7 @@ The following functionality isn't available for the custom connectors feature:
 
 ## Known limitations
 
-- See the list in [Planned improvements](#planned-improvements).
-
-- The configured web resources aren't formally declared as dependencies to the form. This means that exporting a form won't automatically export the web resources and they'd need to be added to that export manually. In addition, it can be easy to accidentally delete these web resources.
+The configured web resources aren't formally declared as dependencies to the form. This means that exporting a form won't automatically export the web resources and they'd need to be added to that export manually. In addition, it can be easy to accidentally delete these web resources.
 
 ## Develop a Record Source
 
