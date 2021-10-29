@@ -8,10 +8,10 @@ ms.custom: intro-internal
 ms.date: 07/09/2021
 ms.subservice: portals
 ms.author: nenandw
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
     - neerajnandwana-msft
-    - tapanm-msft
+    - nickdoelman
 ---
 
 # Power Apps portals Studio

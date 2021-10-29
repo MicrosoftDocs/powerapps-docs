@@ -8,10 +8,10 @@ ms.custom: intro-internal
 ms.date: 08/03/2021
 ms.subservice: portals
 ms.author: dileeps
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
     - dileepsinghmicrosoft
-    - tapanm-msft
+    - nickdoelman
     - sandhangitmsft
 ---
 
