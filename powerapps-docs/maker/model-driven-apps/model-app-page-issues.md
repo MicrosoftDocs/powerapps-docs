@@ -59,7 +59,7 @@ The custom page is a new page type within model-driven apps. Custom pages bring 
 
 * When navigating back to a custom page from another page, the page state isn't restored so the page appears like a new navigation.
 
-* Native player support is available for iOS and Android in online-only mode. Offline support will come later. The preview Windows player currently reports an error when the custom page is opened.
+* Native player support is available for iOS and Android in online-only mode. Offline support will come later. The preview Dynamics 365 Windows player displays a blank page when a custom page is opened.
 
 * When a user running Internet Explorer opens a custom page, an error message will appear indicating Internet Explorer isn't supported.
 
