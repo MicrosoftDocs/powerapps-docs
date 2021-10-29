@@ -22,6 +22,7 @@ You can use [available Web API operations](web-api-overview.md#web-api-operation
 > [!IMPORTANT]
 > - This is a preview feature.
 > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
+> - Once this feature is enabled, tables and columns configured in the [Site settings for the Web API](web-api-overview.md#site-settings-for-the-web-api) will be available for read operations.
 
 ## Prerequisites
 
