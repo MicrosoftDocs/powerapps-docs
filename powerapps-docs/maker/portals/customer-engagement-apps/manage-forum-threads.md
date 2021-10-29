@@ -10,7 +10,7 @@ ms.subservice: portals
 ms.author: shjais
 ms.reviewer: shjais
 contributors:
-    - tapanm-msft
+    - nickdoelman
     - shjais
 ---
 

@@ -272,7 +272,7 @@ Once you save the app, you can reuse the components of this app using the same m
 
 - You can't save data sources, forms, and data tables with components.
 - Collections in components aren't supported.
-- You can't insert a component into a gallery or a form.
+- You can't insert a component into a gallery or a form (including SharePoint form).
 - A master instance of a component is a local master and scoped to the app. If you change a master instance, only copies of the component within the app will reflect the change. Copies in other apps will remain the same unless you import the component library again. All master instances in those apps will be automatically detected and updated.
 - You can't package media files when you import a component.
 - Components don't support the [**UpdateContext**](./functions/function-updatecontext.md) function, but you can create and update variables in a component by using the [**Set**](functions/function-set.md) function. The scope of these variables is limited to the component, but you can access them from outside the component through custom output properties.
