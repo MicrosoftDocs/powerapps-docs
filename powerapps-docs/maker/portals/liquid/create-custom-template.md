@@ -110,7 +110,7 @@ In this step, we'll create a new page template that is based on the web template
 
     :::image type="content" source="../media/localized-content-page.png" alt-text="Localized content page." border="true":::  
 
-1. Go to the **Miscellaneous** section and select the web link you want to display in the **Navigation** field.
+1. Go to the **Miscellaneous** section and select the web link set you want to display in the **Navigation** field.
 
     :::image type="content" source="../media/navigation-lookup.png" alt-text="Navigation lookup." border="true"::: 
 
