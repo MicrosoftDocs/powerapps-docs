@@ -5,7 +5,7 @@ author: ankitavish
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/22/2021
+ms.date: 10/31/2021
 ms.subservice: portals
 ms.author: avishwakarma
 ms.reviewer: ndoelman
@@ -29,7 +29,7 @@ contributors:
 
 ## Enable your portal as a PWA
 
-Use Power App portals Studio to configure your PWA app. You can enable, disable PWA capability, customize PWA settings, and begin to create an app package for your portal to publish to the respective device store.
+Use Power App portals Studio to configure your Progress Web App (PWA). You can enable, disable PWA capability, customize PWA settings, and begin to create an app package for your portal to publish to the respective device store.
 
 1. Sign in to [Power Apps Preview](https://make.preview.powerapps.com/).
 

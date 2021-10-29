@@ -21,18 +21,18 @@ contributors:
 > - This is a preview feature.
 > - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 
-Convert your functional portal as a progressive web app with native app like look & feel right from portal studio.​
+You can convert your functional portal as a progressive web app with native app like look & feel using the portal Studio.​
 
-Portals can leverage Progress web app technology to provide multi-platform support to create an app that will work on all platforms (android/iOS/windows/chromebooks) and form factors (mobile/desktop/tablet).
+Portals can use Progressive Web App (PWA) technology to provide multi-platform support to create an app that will work on all platforms (android/iOS/windows/chromebooks) and form factors (mobile/desktop/tablet).
 
-Progressive Web Apps (PWA) are built for cross-platform interoperability through browser support that provides users a native app-like experience. PWA brings a seamless experience for users across different web browsers. These Apps can be installed from browser as well as through app stores (Android/Windows/Chrome store). 
+Progressive Web Apps are built for cross-platform interoperability through browser support that provides users a native app-like experience. PWA brings a seamless experience for users across different web browsers. These apps can be installed from the browser or through app stores (Android/Windows/Chrome store). This capability enables external and internal customers to use portals as an app. You can also pin the app directly to your home screen on your mobile device.
 
 > [!Note]
 > The iOS app store is not supported.
 
-With PWA, you can pin Power Apps portals as an app to the home screen on a mobile device or install it from the app store. This capability enables external and internal customers to use portals as an app for both online and offline scenarios. As a maker, you can choose to enable specific pages in a portal for read-only offline availability. 
+PWAs can be used for both online and offline scenarios. As a maker, you can choose to enable specific pages in a portal for read-only offline availability.
 
-The following graphics illustrate the user experience when adding the portal on a home screen using the browser that installs the portal as a PWA. 
+The following graphics illustrate the user experience when adding the portal on a home screen using the browser that installs the portal as a PWA.
 
 :::image type="content" source="media/progressive-web-apps/portal-to-pwa.png" alt-text="Portal configured as a Progressive web app." border="false":::
 
