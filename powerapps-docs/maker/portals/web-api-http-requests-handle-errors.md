@@ -11,7 +11,6 @@ ms.author: nenandw
 ms.reviewer: ndoelman
 contributors:
     - neerajnandwana-msft
-    - tapanm-msft
     - nickdoelman
 ---
 
