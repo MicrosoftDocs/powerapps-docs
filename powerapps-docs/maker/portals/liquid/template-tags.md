@@ -10,7 +10,7 @@ ms.subservice: portals
 ms.author: gisingh
 ms.reviewer: ndoelman
 contributors:
-    - tapanm-msft
+    - nickdoelman
     - GitanjaliSingh33msft
     - nickdoelman
 ---
