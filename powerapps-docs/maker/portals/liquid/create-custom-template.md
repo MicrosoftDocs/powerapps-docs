@@ -98,15 +98,26 @@ Use the navigation web link set associated with the current page for our navigat
 
 In this step, we'll create a new page template that is based on the web template we created in the previous step.
 
-> [!div class=mx-imgBorder]
-![Page template weblinks left navigation layout.](../media/page-template-weblinks-left-navigation-layout.png "Page template weblinks left navigation layout")  
+:::image type="content" source="../media/page-template-weblinks-left-navigation-layout.png" alt-text="Page template weblinks left navigation layout." border="true":::  
 
 ## Step 4: Create a web page to display content
 
-Now, all that's left to do is to create a web page that uses our page template, and has an associated Web Link Set, and we have our result.
+1. Create a web page that uses our page template.
 
-> [!div class=mx-imgBorder]
-![Web page with left navigation.](../media/web-page-left-navigation.png "Web page with left navigation")  
+    :::image type="content" source="../media/web-page-left-navigation.png" alt-text="Web page with left navigation." border="true":::  
+
+1. Go to the localized content web page.
+
+    :::image type="content" source="../media/localized-content-page.png" alt-text="Localized content page." border="true":::  
+
+1. Go to the **Miscellaneous** section and select the web link you want to display in the **Navigation** field.
+
+    :::image type="content" source="../media/navigation-lookup.png" alt-text="Navigation lookup." border="true"::: 
+
+1. When you now view your page you should see side navigation.
+ 
+    :::image type="content" source="../media/left-navigation-webpage.png" alt-text="Left navigation page." border="true"::: 
+  
 
 ### See also
 
