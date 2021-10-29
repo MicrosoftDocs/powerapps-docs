@@ -18,7 +18,7 @@ search.app:
 ---
 # Use PowerFx in a custom page for your model-driven app
 
-This article outlines how the common [Microsoft Power FX](../canvas-apps/formula-reference.md) functions work within a custom page. Power Fx formulas in a custom page can be different from Power Fx in a standalone canvas app. This is because custom pages are a component within the model-driven app.
+This article outlines how the common [Microsoft Power FX](../canvas-apps/formula-reference.md) functions work differently between a standalone canvas apps and a custom page. This is because a custom pages is a component within the model-driven app. Other Microsoft Power FX formulas continue to behave in the same way.
 
 > [!IMPORTANT]
 > - The base functionality of custom pages has moved to General Availability in all regions.  However some specific capabilities or new capabilities are still in public preview and are marked with _(preview)_.
