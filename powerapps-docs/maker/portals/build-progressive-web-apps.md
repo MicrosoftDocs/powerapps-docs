@@ -1,5 +1,5 @@
 ---
-title: Portals as Progressive Web Apps
+title: Build Progressive Web Apps
 description: Configure a portal as a Progressive Web App.
 author: ankitavish
 ms.service: powerapps
