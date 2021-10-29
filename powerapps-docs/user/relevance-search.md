@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 10/04/2021
+ms.date: 10/25/2021
 ms.subservice: end-user
 ms.author: mkaur
 ms.custom: ""
@@ -69,6 +69,11 @@ With suggestions, you can access your information quickly by using minimal keyst
 View the full results for a search by pressing **Enter** on your keyboard or selecting **Show more results**.
 
 Search results are ranked based on relevance and grouped by tables. The list of tables that include rows that match the search term are displayed horizontally as tabs along the top of the screen.
+
+To understand why a row appears in your search results, hover over the icon at the beginning of each row to see the text that matched your search.
+
+
+![See the text that matched your search query.](media/relevance-search-matched-results.png "See the text that matched your search query")
 
 ### Top results tab
 

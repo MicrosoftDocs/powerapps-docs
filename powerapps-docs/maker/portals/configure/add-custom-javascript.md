@@ -10,7 +10,7 @@ ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: ndoelman
 contributors:
-    - tapanm-msft
+    - nickdoelman
     - sandhangitmsft
     - nickdoelman
 ---
