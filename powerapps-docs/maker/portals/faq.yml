@@ -93,15 +93,15 @@ sections:
         answer: |
           Internal users with Azure Active Directory credentials trying to sign-in without a valid license assigned will see this message on the sign-in page: *You don't have a valid license to access this website. Please contact your system administrator*.
           
+          Users could also see this error if [Pay-as-you-go](/power-platform/admin/pay-as-you-go-overview) has not been enabled for this environment. 
+
           ![Portal login error](media/portal-login-error.png "Portal login error")
           
           Depending on the purchased SKU type - such as different *Dynamics 365 SKUs*, *Power Apps per app plan* or *Power Apps per user plan*, an administrator will need to either provide an appropriate license to the users, or have appropriate number of app passes available to the environment. For more information about app passes, go to [Allocate or change capacity in an environment](/power-platform/admin/capacity-add-on#allocate-or-change-capacity-in-an-environment). Once app passes are allocated to the environment, the portal will have to be restarted for changes to take effect.
-          
-          Users could see this error if [Pay-as-you-go](power-platform/admin/pay-as-you-go-overview.md) has not been enabled for this environment.  
 
           For details about licensing of internal users, go to [Portal Licensing FAQ](/power-platform/admin/powerapps-flow-licensing-faq#can-you-share-more-details-regarding-the-new-power-apps-portals-licensing). 
 
-          For details about licensing of internal users using Pay-as-you-go, go to [Pay-as-you-go Meters](power-platform/admin/pay-as-you-go-meters#power-apps-per-app-meter).
+          For details about licensing of internal users using Pay-as-you-go, go to [Pay-as-you-go Meters](/power-platform/admin/pay-as-you-go-meters#power-apps-per-app-meter).
           
           For details about use rights to portals for internal users, go to FAQ [use rights to portals for internal users](/power-platform/admin/powerapps-flow-licensing-faq#can-you-clarify-the-use-rights-to-portals-for-internal-users) and [Licensing Guide](https://go.microsoft.com/fwlink/?linkid=2085130) section **Power Apps Portals – Use rights for Internal users**.
 
