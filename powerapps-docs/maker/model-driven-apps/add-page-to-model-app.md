@@ -21,7 +21,7 @@ search.app:
 This article guides you through creating and editing a custom page for a model-driven app using the modern app designer.
 
 > [!IMPORTANT]
-> - The base functionality of custom pages has moved to General Availability in all regions.  However there are some specific or new capabilities that are still in public preview and are marked with _(preview)_.
+> - The base functionality of custom pages has moved to General Availability in all regions.  However some specific capabilities or new capabilities are still in public preview and are marked with _(preview)_.
 > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)] 
 
 ## Create or edit a model-driven app using modern app designer

@@ -21,7 +21,7 @@ search.app:
 This article provides tips for designing a custom page for use in a model-driven app.
 
 > [!IMPORTANT]
-> - The base functionality of custom pages has moved to General Availability in all regions.  However there are some specific or new capabilities that are still in public preview and are marked with _(preview)_.
+> - The base functionality of custom pages has moved to General Availability in all regions.  However some specific capabilities or new capabilities are still in public preview and are marked with _(preview)_.
 > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)] 
 
 ## Supported controls in a custom page
