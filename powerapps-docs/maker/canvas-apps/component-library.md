@@ -5,7 +5,7 @@ author: hemantgaur
 ms.service: powerapps
 ms.subservice: canvas-developer
 ms.topic: article
-ms.date: 07/23/2021
+ms.date: 10/29/2021
 ms.author: hemantg
 ms.reviewer: tapanm
 search.audienceType:
@@ -78,6 +78,24 @@ The steps to create components inside a component library are the same as creati
 1. A saved component library can be published. Only published component library updates are available for apps that consume a component library. Select **Publish** to publish the component library version:
 
     ![Publish component library version.](./media/component-library/publish-component-library.png "Publish component library version")
+
+## Control component customization
+
+When creating component library, you have the option to allow the component to be customized when used by apps consuming the library components. By default, this setting is turned **On**. Turn this setting to **Off** to remove the ability to customize component while using in other apps.
+
+:::image type="content" source="media/component-library/allow-customization-on.png" alt-text="Option to allow customization to this component when being used by an app.":::
+
+When you add a component that's allows customization, you'll see an option to edit the component for additional customization:
+
+:::image type="content" source="media/component-library/edit-customizable-component.png" alt-text="Edit a component allowed for customization.":::
+
+Selecting **Edit component** prompts you to copy the component locally for customization.
+
+However, when you don't allow the components to be customized, the consuming apps won't show the option to edit the component.
+
+:::image type="content" source="media/component-library/allow-customization-off.png" alt-text="No option to edit component inside consuming app.":::
+
+In this case, the only way to edit the component is to edit the component library where the component is stored.
 
 ## Import from a component library
 
