@@ -78,10 +78,10 @@ To define a custom error, use the content snippet `Portal Generic Error`. The co
 
 When you enable custom errors, the message appears in the following structure on the error page:
 
-<Content Snippet> 
-<Error ID >
-<Date and time>
-<Portal ID>
+\<`Content Snippet`\> <br>
+\<`Error ID` \><br>
+\<`Date and time`\><br>
+\<`Portal ID`\>
 
 Below is an example of a custom error message, using a content snippet of type HTML:
 

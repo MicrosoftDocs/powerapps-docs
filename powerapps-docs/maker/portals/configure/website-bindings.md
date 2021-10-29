@@ -56,7 +56,7 @@ Specify values for these attributes for an application level binding. This bindi
 |Virtual Path|The name of the IIS application under the website.|
 |||
 
-For Azure websites and cloud services, the site name and virtual path values are determined by the <Site> and <VirtualApplication> nodes of the **ServiceDefinition.csdef** file.
+For Azure websites and cloud services, the site name and virtual path values are determined by the \<Site\> and \<VirtualApplication\> nodes of the **ServiceDefinition.csdef** file.
 
 ```
 <ServiceDefinition>
