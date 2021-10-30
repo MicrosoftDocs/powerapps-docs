@@ -129,11 +129,11 @@ headers.Accept.Add(
 var response = client.GetAsync("WhoAmI").Result;
 ```
 
-This simple approach does not represent a good pattern to follow because the `token` will expire in about an hour. ADAL libraries will cache the token for you and will refresh it each time the `AcquireTokenAsync` method is called.
+This simple approach does not represent a good pattern to follow because the `token` will expire in about an hour. ADAL libraries will cache the token for you and will refresh it each time the `AcquireTokenAsync` method is called. However in this simple example, the token is only acquired once.
 
 ### Example demonstrating a delegating message handler
 
-The recommended approach is to implement a class derived from <xref:System.Net.Http.DelegatingHandler> which will be passed to the constructor of the <xref:System.Net.Http.HttpClient>. This handler will allow you to override the <xref:System.Net.Http.HttpClient>.<xref:System.Net.Http.HttpClient.SendAsync*> method so that the access token will be refreshed by the `AcquireTokenAsync` method call with each request sent by the Http client.
+The recommended approach is to implement a class derived from <xref:System.Net.Http.DelegatingHandler> which will be passed to the constructor of the <xref:System.Net.Http.HttpClient>. This handler will allow you to override the <xref:System.Net.Http.HttpClient>.<xref:System.Net.Http.HttpClient.SendAsync*> method so that the access token will be refreshed by the `AcquireToken*` method calls with each request sent by the Http client.
 
 The following is an example of a custom class derived from <xref:System.Net.Http.DelegatingHandler>. This code is taken from the [Enhanced QuickStart](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/webapi/C%23/EnhancedQuickStart) sample which uses the MSAL authentication library.
 
@@ -401,7 +401,8 @@ using (CrmServiceClient svc = new CrmServiceClient(ConnectionStr))
 ### See also
 
 [Authentication with Microsoft Dataverse web services](authentication.md)<br />
-[Authenticating .NET Framework applications](authenticate-dot-net-framework.md)
+[Authenticating .NET Framework applications](authenticate-dot-net-framework.md)<br/>
+[Overview of the Microsoft Authentication Library](/azure/active-directory/develop/msal-overview)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
