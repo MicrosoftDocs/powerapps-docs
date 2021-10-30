@@ -88,6 +88,15 @@
         "master": "master",
         "live": "live"
       }
+    },
+    {
+      "path_to_root": "PowerApps-Samples",
+      "url": "https://github.com/microsoft/PowerApps-Samples",
+      "branch": "master",
+      "branch_mapping": {
+        "master": "master",
+        "live": "master"
+      }
     }
   ],
   "branch_target_mapping": {
