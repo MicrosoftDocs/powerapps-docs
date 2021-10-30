@@ -197,7 +197,7 @@ When you make a connection to a service on Azure a cookie is returned with the r
 > [!NOTE]
 > This strategy should only be used by applications that are seeking to optimize throughput. Interactive client applications benefit from the affinity cookie because it allows for reusing cached data that would otherwise need to be re-created leading to poorer performance.
 
-The following code shows how to disable cookies when initializing an HttpClient with the Web API, assuming you are using a custom HttpMessageHandler to manage authentication. More information: [Example demonstrating a DelegatingHandler](authenticate-oauth.md#example-demonstrating-a-delegatinghandler)
+The following code shows how to disable cookies when initializing an HttpClient with the Web API, assuming you are using a custom HttpMessageHandler to manage authentication. More information: [Example demonstrating a DelegatingHandler](authenticate-oauth.md#example-demonstrating-a-delegating-message-handler)
 
 ```csharp
 HttpMessageHandler messageHandler = new OAuthMessageHandler(
