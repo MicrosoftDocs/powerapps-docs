@@ -2,7 +2,7 @@
 title: "Use OAuth authentication with Microsoft Dataverse (Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to authenticate applications with Microsoft Dataverse using OAuth." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: has-adal-ref
-ms.date: 03/23/2021
+ms.date: 10/29/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -22,10 +22,10 @@ search.app:
 
 Client applications must support the use of OAuth to access data using the Web API. OAuth enables two-factor authentication (2FA) or certificate-based authentication for server-to-server application scenarios.
 
-OAuth requires an identity provider for authentication. For Dataverse, the identity provider is Azure Active Directory (AAD). To authenticate with AAD using a Microsoft work or school account, use the Azure Active Directory Authentication Libraries (ADAL).
+OAuth requires an identity provider for authentication. For Dataverse, the identity provider is Azure Active Directory (AAD). To authenticate with AAD using a Microsoft work or school account, use the Azure Active Directory Authentication Libraries (ADAL) or Microsoft Authentication Library (MSAL).
 
 > [!NOTE]
-> This topic will introduce common concepts related to connecting to Dataverse using OAuth with the ADAL libraries. This content will focus on how a developer can connect to Dataverse but not on the inner workings of OAuth or the ADAL libraries. For complete information related to authentication see the Azure Active Directory documentation. [What is authentication?](/azure/active-directory/develop/authentication-scenarios) is a good place to start.
+> This topic will introduce common concepts related to connecting to Dataverse using OAuth with authentication libraries. This content will focus on how a developer can connect to Dataverse but not on the inner workings of OAuth or the libraries. For complete information related to authentication see the Azure Active Directory documentation. [What is authentication?](/azure/active-directory/develop/authentication-scenarios) is a good place to start.
 >
 >Samples we provide are pre-configured with appropriate registration values so that you can run them without generating your own app registration. When you publish your own apps, you must use your own registration values.
 
@@ -74,197 +74,193 @@ For either application type, you can upload a certificate.
 
 More information: [Connect as an app](#connect-as-an-app)
 
-## Use ADAL Libraries to connect
+## Use authentication libraries to connect
 
-Use one of the Microsoft-supported Azure Active Directory Authentication Libraries (ADAL) client libraries. [Azure Active Directory Authentication Libraries > Microsoft-supported Client Libraries](/azure/active-directory/develop/active-directory-authentication-libraries#microsoft-supported-client-libraries).
-
-These libraries are available for various platforms as shown in the following table:
-
-|Platform|Library|
-|--|--|
-|.NET Client, Windows Store, UWP, Xamarin |ADAL .NET v3|
-|.NET Client, Windows Store, Windows Phone 8.1|ADAL .NET v2|
-|JavaScript|ADAL.js|
-|iOS, macOS|ADAL|
-|Android|ADAL|
-|Node.js|ADAL|
-|Java|ADAL4J|
-|Python|ADAL|
+Use one of the Microsoft-supported Azure Active Directory authentication client libraries to connect to Dataverse. There are two such libraries available from Microsoft: [Azure Active Directory Authentication Library (ADAL)](/azure/active-directory/azuread-dev/active-directory-authentication-libraries), and [Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/reference-v2-libraries). These libraries are available for various platforms as described in the provided links.
 
 > [!NOTE]
-> Currently, all our samples use the .NET Client libraries except for [Use OAuth with Cross-Origin Resource Sharing to connect a Single Page Application](oauth-cross-origin-resource-sharing-connect-single-page-application.md) which uses the JavaScript ADAL.js library.
+> Of the two authentication libraries mentioned, ADAL is no longer actively receiving updates and is scheduled to be supported only until June, 2022. MSAL is the recommended authentication library to use for new projects.<p/>
+> Currently, all our samples use the .NET client libraries except for [Use OAuth with Cross-Origin Resource Sharing to connect a Single Page Application](oauth-cross-origin-resource-sharing-connect-single-page-application.md) which uses the JavaScript ADAL.js library.
 
-## ADAL .NET Client library versions
+For a code sample that demonstrates use of ADAL and MSAL libraries for authentication with Dataverse see [QuickStart sample](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/webapi/C%23/QuickStart).
 
-The Dataverse supports application authentication with the Web API endpoint using the OAuth 2.0 protocol. The Azure Active Directory Authentication Library (ADAL) is the recommended API interface to that protocol for your custom .NET applications. ADAL v2.x has long been supported by our SDK APIs and in fact many SDK code samples use that version of the library. When ADAL v3 was published, a breaking change was introduced such that user credentials could no longer be passed in ADAL API calls to improve application security.
+### ADAL .NET client library versions
 
-For your custom .NET applications, use ADAL v2 or greater for application authentication with the Web API endpoint. When using the XrmTooling APIs found in the [Microsoft.CrmSdk.XrmTooling.CoreAssembly](https://www.nuget.org/packages/Microsoft.CrmSdk.XrmTooling.CoreAssembly/) NuGet package, the correct version of the ADAL library will be imported automatically into your Visual Studio project. Note that the transition from ADAL v2 to ADAL v3 in the XrmTooling APIs occurred in the [v9.1.0.13](https://www.nuget.org/packages/Microsoft.CrmSdk.XrmTooling.CoreAssembly/9.1.0.13) NuGet package. Consult the package's release notes for detailed information.  
-
-For a code sample that uses newer versions of the ADAL library see [QuickStart sample](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/webapi/C%23/QuickStart).
+Dataverse supports application authentication with the Web API endpoint using the OAuth 2.0 protocol. For your custom .NET applications, use ADAL v3.19 or greater for application authentication with the Web API endpoint. When using the XrmTooling APIs (such as [CrmServiceClient](xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient)) found in the [Microsoft.CrmSdk.XrmTooling.CoreAssembly](https://www.nuget.org/packages/Microsoft.CrmSdk.XrmTooling.CoreAssembly/) NuGet package, the correct version of the ADAL library will be imported automatically into your Visual Studio project. Use XrmTooling APIs from the [v9.1.0.13](https://www.nuget.org/packages/Microsoft.CrmSdk.XrmTooling.CoreAssembly/9.1.0.13) (or greater) NuGet package. Consult the package's release notes for the release history.  
 
 ## Use the AccessToken with your requests
 
-The point of using the ADAL libraries is to get a token that you can include with your requests. 
-This only requires a few lines of code, and just a few more lines to configure an HttpClient to execute a request.
+The point of using the authentication libraries is to get an access token that you can include with your requests. 
+This only requires a few lines of code, and just a few more lines to configure an [HttpClient](xref:System.Net.Http.HttpClient) to execute a request.
 
 ### Simple example
 
-The following is the minimum amount of code needed to execute a single Web Api request, but it is not the recommended approach. Note that this is an ADAL v2 sample due to the use of client credentials:
+The following is the minimum amount of code needed to execute a single Web API request, but it is not the recommended approach. Note that this code uses the ADAL library and is taken from the QuickStart sample mentioned above.
 
 ```csharp
-class SampleProgram
+string resource = "https://contoso.api.crm.dynamics.com";
+var clientId = "51f81489-12ee-4a9e-aaae-a2591f45987d";
+var redirectUri = new Uri("app://58145B91-0C36-4500-8554-080854F2AC97");
+
+var authContext = new AuthenticationContext(
+    "https://login.microsoftonline.com/common", false);
+
+var token = authContext.AcquireTokenAsync(
+    resource, clientId, redirectUri,
+    new PlatformParameters(
+        PromptBehavior.SelectAccount   // Prompt the user for a logon account.
+    ),
+    UserIdentifier.AnyUser
+).Result;
+
+var client = new HttpClient
 {
-    private static string serviceUrl = "https://yourorg.crm.dynamics.com"; 
-    private static string clientId = "51f81489-12ee-4a9e-aaae-a2591f45987d"; 
-    private static string userName = "you@yourorg.onmicrosoft.com";
-    private static string password = "yourpassword";
+    BaseAddress = new Uri(resource + "/api/data/v9.2/"),
+    Timeout = new TimeSpan(0, 2, 0)
+};
 
-    static void Main(string[] args)
-    {
+HttpRequestHeaders headers = client.DefaultRequestHeaders;
+headers.Authorization = new AuthenticationHeaderValue("Bearer", token.AccessToken);
+headers.Add("OData-MaxVersion", "4.0");
+headers.Add("OData-Version", "4.0");
+headers.Accept.Add(
+    new MediaTypeWithQualityHeaderValue("application/json"));
 
-        AuthenticationContext authContext = 
-        new AuthenticationContext("https://login.microsoftonline.com/common", false);  
-        UserCredential credential = new UserCredential(userName, password);
-        AuthenticationResult result = authContext.AcquireToken(serviceUrl, clientId, credential);
-        //The access token
-        string accessToken = result.AccessToken;
-
-        using (HttpClient client = new HttpClient()) {
-        client.BaseAddress = new Uri(serviceUrl);
-        client.Timeout = new TimeSpan(0, 2, 0);  //2 minutes  
-        client.DefaultRequestHeaders.Add("OData-MaxVersion", "4.0");
-        client.DefaultRequestHeaders.Add("OData-Version", "4.0");
-        client.DefaultRequestHeaders.Accept.Add(
-            new MediaTypeWithQualityHeaderValue("application/json"));
-        HttpRequestMessage request = 
-            new HttpRequestMessage(HttpMethod.Get, "/api/data/v9.0/WhoAmI");
-        //Set the access token
-        request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", accessToken);
-        HttpResponseMessage response = client.SendAsync(request).Result;
-        if (response.IsSuccessStatusCode)
-        {
-            //Get the response content and parse it.  
-            JObject body = JObject.Parse(response.Content.ReadAsStringAsync().Result);
-            Guid userId = (Guid)body["UserId"];
-            Console.WriteLine("Your system user ID is: {0}", userId);
-        }
-
-    }
-}
+var response = client.GetAsync("WhoAmI").Result;
 ```
 
-This simple approach does not represent a good pattern to follow because the `AccessToken` will expire in about an hour. ADAL libraries will cache the token for you and will refresh it each time the `AcquireToken` method is called.
+This simple approach does not represent a good pattern to follow because the `token` will expire in about an hour. ADAL libraries will cache the token for you and will refresh it each time the `AcquireTokenAsync` method is called.
 
-### Example demonstrating a DelegatingHandler
+### Example demonstrating a delegating message handler
 
-The recommended approach is to implement a class derived from <xref:System.Net.Http.DelegatingHandler> which will be passed to the constructor of the <xref:System.Net.Http.HttpClient>. This handler will allow you to override the <xref:System.Net.Http.HttpClient>.<xref:System.Net.Http.HttpClient.SendAsync*> method so that ADAL will call the `AcquireToken` method with each request sent by the http client.
+The recommended approach is to implement a class derived from <xref:System.Net.Http.DelegatingHandler> which will be passed to the constructor of the <xref:System.Net.Http.HttpClient>. This handler will allow you to override the <xref:System.Net.Http.HttpClient>.<xref:System.Net.Http.HttpClient.SendAsync*> method so that the access token will be refreshed by the `AcquireTokenAsync` method call with each request sent by the Http client.
 
-The following is an example of a custom class derived from <xref:System.Net.Http.DelegatingHandler>
+The following is an example of a custom class derived from <xref:System.Net.Http.DelegatingHandler>. This code is taken from the [Enhanced QuickStart](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/webapi/C%23/EnhancedQuickStart) sample which uses the MSAL authentication library.
 
 ```csharp
-  /// <summary>  
-  ///Custom HTTP message handler that uses OAuth authentication through ADAL.  
-  /// </summary>  
-  class OAuthMessageHandler : DelegatingHandler
-  {
-    private UserCredential _credential;
-    private AuthenticationContext _authContext = 
-      new AuthenticationContext("https://login.microsoftonline.com/common", false);
-    private string _clientId;
-    private string _serviceUrl;
+class OAuthMessageHandler : DelegatingHandler
+{
+    private AuthenticationHeaderValue authHeader;
 
-    public OAuthMessageHandler(string serviceUrl, string clientId, string userName, string password,
+    public OAuthMessageHandler(string serviceUrl, string clientId, string redirectUrl, string username, string password,
             HttpMessageHandler innerHandler)
         : base(innerHandler)
     {
-      _credential = new UserCredential(userName, password);
-      _clientId = clientId;
-      _serviceUrl = serviceUrl;
+
+        string apiVersion = "9.2";
+        string webApiUrl = $"{serviceUrl}/api/data/v{apiVersion}/";
+
+        //Build Microsoft.Identity.Client (MSAL) OAuth Token Request
+        var authBuilder = PublicClientApplicationBuilder.Create(clientId)
+                        .WithAuthority(AadAuthorityAudience.AzureAdMultipleOrgs)
+                        .WithRedirectUri(redirectUrl)
+                        .Build();
+        var scope = serviceUrl + "//.default";
+        string[] scopes = { scope };
+
+        AuthenticationResult authBuilderResult;
+        if (username != string.Empty && password != string.Empty)
+        {
+            //Make silent Microsoft.Identity.Client (MSAL) OAuth Token Request
+            var securePassword = new SecureString();
+            foreach (char ch in password) securePassword.AppendChar(ch);
+            authBuilderResult = authBuilder.AcquireTokenByUsernamePassword(scopes, username, securePassword)
+                        .ExecuteAsync().Result;
+        }
+        else
+        {
+            //Popup authentication dialog box to get token
+            authBuilderResult = authBuilder.AcquireTokenInteractive(scopes)
+                        .ExecuteAsync().Result;
+        }
+
+        //Note that an Azure AD access token has finite lifetime, default expiration is 60 minutes.
+        authHeader = new AuthenticationHeaderValue("Bearer", authBuilderResult.AccessToken);
     }
 
     protected override Task<HttpResponseMessage> SendAsync(
-             HttpRequestMessage request, System.Threading.CancellationToken cancellationToken)
+                HttpRequestMessage request, System.Threading.CancellationToken cancellationToken)
     {
-      try
-      {
-        request.Headers.Authorization =
-        new AuthenticationHeaderValue("Bearer", _authContext.AcquireToken(_serviceUrl, _clientId, _credential).AccessToken);
-      }
-      catch (Exception ex)
-      {
-        throw ex;
-      }      
-      return base.SendAsync(request, cancellationToken);
-    }
-  }
-```
-
-Using this `OAuthMessageHandler` class, the simple program shown above would look like this, with some additional error handling included:
-
-```csharp
-class SampleProgram
-{
-    private static string serviceUrl = "https://yourorg.crm.dynamics.com"; 
-    private static string clientId = "51f81489-12ee-4a9e-aaae-a2591f45987d"; 
-    private static string userName = "you@yourorg.onmicrosoft.com";
-    private static string password = "yourpassword";
-
-    static void Main(string[] args)
-    {
-       HttpMessageHandler messageHandler;
-
-      try
-      {
-        messageHandler = new OAuthMessageHandler(serviceUrl, clientId, userName, password,
-                         new HttpClientHandler());
-        //Create an HTTP client to send a request message to the CRM Web service.  
-        using (HttpClient client = new HttpClient(messageHandler))
-        {
-          //Specify the Web API address of the service and the period of time each request   
-          // has to execute.  
-          client.BaseAddress = new Uri(serviceUrl);
-          client.Timeout = new TimeSpan(0, 2, 0);  //2 minutes
-          client.DefaultRequestHeaders.Add("OData-MaxVersion", "4.0");
-          client.DefaultRequestHeaders.Add("OData-Version", "4.0");
-          client.DefaultRequestHeaders.Accept.Add(
-              new MediaTypeWithQualityHeaderValue("application/json"));
-
-          //Send the WhoAmI request to the Web API using a GET request.   
-          var response = client.GetAsync("api/data/v9.0/WhoAmI",
-                  HttpCompletionOption.ResponseHeadersRead).Result;
-          if (response.IsSuccessStatusCode)
-          {
-            //Get the response content and parse it.  
-            JObject body = JObject.Parse(response.Content.ReadAsStringAsync().Result);
-            Guid userId = (Guid)body["UserId"];
-            Console.WriteLine("Your system user ID is: {0}", userId);
-          }
-          else
-          {
-            throw new Exception(response.ReasonPhrase);
-          }
-        }
-      }
-      catch (Exception ex)
-      {
-        DisplayException(ex);
-      }
-    }
-
-    /// <summary> Displays exception information to the console. </summary>  
-    /// <param name="ex">The exception to output</param>  
-    private static void DisplayException(Exception ex)
-    {
-      Console.WriteLine("The application terminated with an error.");
-      Console.WriteLine(ex.Message);
-      while (ex.InnerException != null)
-      {
-        Console.WriteLine("\t* {0}", ex.InnerException.Message);
-        ex = ex.InnerException;
-      }
+        request.Headers.Authorization = authHeader;
+        return base.SendAsync(request, cancellationToken);
     }
 }
 ```
+
+Using this `OAuthMessageHandler` class, the simple `Main` method would look like this. 
+
+```csharp
+class Program
+{
+    static void Main(string[] args)
+    {
+        try
+        {
+            //Get configuration data from App.config connectionStrings
+            string connectionString = ConfigurationManager.ConnectionStrings["Connect"].ConnectionString;
+
+            using (HttpClient client = SampleHelpers.GetHttpClient(connectionString, SampleHelpers.clientId, 
+                SampleHelpers.redirectUrl))
+            {
+                // Use the WhoAmI function
+                var response = client.GetAsync("WhoAmI").Result;
+
+                if (response.IsSuccessStatusCode)
+                {
+                    //Get the response content and parse it.  
+                    JObject body = JObject.Parse(response.Content.ReadAsStringAsync().Result);
+                    Guid userId = (Guid)body["UserId"];
+                    Console.WriteLine("Your UserId is {0}", userId);
+                }
+                else
+                {
+                    Console.WriteLine("The request failed with a status of '{0}'",
+                                response.ReasonPhrase);
+                }
+                Console.WriteLine("Press any key to exit.");
+                Console.ReadLine();
+            }
+        }
+        catch (Exception ex)
+        {
+            SampleHelpers.DisplayException(ex);
+            Console.WriteLine("Press any key to exit.");
+            Console.ReadLine();
+        }
+    }
+}
+```
+
+The configuration string values have been moved into an App.config file connection string, and the Http client is configured in the `GetHttpClient` method.
+
+```csharp
+public static HttpClient GetHttpClient(string connectionString, string clientId, string redirectUrl, string version = "v9.2")
+{
+    string url = GetParameterValueFromConnectionString(connectionString, "Url");
+    string username = GetParameterValueFromConnectionString(connectionString, "Username");
+    string password = GetParameterValueFromConnectionString(connectionString, "Password");
+    try
+    {
+        HttpMessageHandler messageHandler = new OAuthMessageHandler(url, clientId, redirectUrl, username, password,
+                        new HttpClientHandler());
+
+        HttpClient httpClient = new HttpClient(messageHandler)
+        {
+            BaseAddress = new Uri(string.Format("{0}/api/data/{1}/", url, version)),
+
+            Timeout = new TimeSpan(0, 2, 0)  //2 minutes
+        };
+
+        return httpClient;
+    }
+    catch (Exception)
+    {
+        throw;
+    }
+}
+```
+
+See the [Enhanced QuickStart](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/webapi/C%23/EnhancedQuickStart) sample for the complete code.
 
 Even though this example uses <xref:System.Net.Http.HttpClient>.<xref:System.Net.Http.HttpClient.GetAsync*> rather than the overridden <xref:System.Net.Http.HttpClient.SendAsync*>, it will apply for any of the <xref:System.Net.Http.HttpClient> methods that send a request.
 
@@ -280,7 +276,7 @@ String authorityUrl = ap.Authority;
 String resourceUrl  = ap.Resource;  
 ```  
   
-For the Web API, another way to obtain the authority URL is to send any message request to the web service specifying no access token. This is known as a         *bearer challenge*. The response can be parsed to obtain the authority URL.  
+For the Web API, another way to obtain the authority URL is to send any message request to the web service specifying no access token. This is known as a *bearer challenge*. The response can be parsed to obtain the authority URL.  
   
 ```csharp  
 httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", "");  
