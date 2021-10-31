@@ -169,7 +169,7 @@
         href: org-service/samples/web-access-plugin.md
   - name: Workflow extensions
     href: workflow/workflow-extensions.md
-  - name: Business Events (preview)
+  - name: Business Events
     href: business-events.md
   - name: Scalable customization design
     href: scalable-customization-design/overview.md
