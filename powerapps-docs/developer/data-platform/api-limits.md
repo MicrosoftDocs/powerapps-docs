@@ -2,7 +2,7 @@
 title: "Service protection API limits (Microsoft Dataverse) | Microsoft Docs" 
 description: "Understand the service protection limits for API requests." 
 ms.custom: ""
-ms.date: 09/24/2021
+ms.date: 10/31/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -60,7 +60,7 @@ When a service protection API limit error occurs, it will provide a value indica
 - When a 429 error is returned from the Web API, the response will include a [Retry-After](https://developer.mozilla.org/docs/Web/HTTP/Headers/Retry-After) with number of seconds.
 - With the Organization Service, a [TimeSpan](/dotnet/api/system.timespan) value is returned in the <xref:Microsoft.Xrm.Sdk.OrganizationServiceFault>.<xref:Microsoft.Xrm.Sdk.BaseServiceFault.ErrorDetails> collection with the key `Retry-After`.
 
-### Interactive application re-try 
+### Interactive application re-try
 
 If the client is an interactive application, you should display a message that the server is busy while you re-try the request the user made. You may want to provide an option for the user to cancel the operation. Don't allow users to submit more requests until the previous request you sent has completed.
 
@@ -169,6 +169,8 @@ Don't try to calculate how many requests to send at a time. Each environment can
 ### Use multiple threads
 
 The higher limit on number of concurrent threads is something your application can use to have a significant improvement in performance. This is true if your individual operations are relatively quick. Depending on the nature of the data you are processing, you may need to adjust the number of threads to get optimum throughput.
+
+The `x-ms-dop-hint` response header value provides a hint for the Degree Of Parallelism (DOP) that represents a number of threads that should provide the good results for a given environment. The value of this header will be an integer between 1 and 1024. When using the <xref:Microsoft.Xrm.Tooling.Connector>.<xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient>, the `RecommendedDegreesOfParallelism` property will return this value.
 
 More information:
 
