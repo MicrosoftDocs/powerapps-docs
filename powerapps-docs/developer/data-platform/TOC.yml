@@ -283,7 +283,7 @@
     href: transaction-currency-currency-entity.md
   - name: Category table
     href: use-category-entity.md
-  - name: Catalog & CatalogAssignment (preview)
+  - name: Catalog & CatalogAssignment
     href: catalog-catalogassignment.md
   - name: Feedback table
     href: use-feedback-entity-manage-feedback-ratings-records.md
