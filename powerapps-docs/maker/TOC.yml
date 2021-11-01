@@ -2516,15 +2516,7 @@
           href: ../teams/sample-apps-faqs.md
     - name: Known issues and limitations
       href: ../teams/known-issues-limitations.md
-  - name: Migrate Access data to Dataverse for Teams (preview)
-    href: ../teams/migrate-access-to-dvft.md
-- name: Access migration (preview)
-  href: ./data-platform/migrate-access-to-dataverse.md
-  items:
-  - name: Data types and sizes for Access migration
-    href: ./data-platform/migrate-access-datatypes.md
-  - name: System columns and tables in Dataverse
-    href: ./data-platform/access-migrate-linked-tables.md
+
 - name: Chatbots
   href: ../chatbots.md
 
