@@ -34,7 +34,7 @@ You can now use Git version control to enable more than one person to edit a can
 Any Git provider can be used with Power Apps Studio&mdash;such as [GitHub](https://github.com/) or [Azure DevOps](https://azure.microsoft.com/services/devops/). Use existing Git tools to see version history, create and manage pull requests, and perform other version control tasks.
 
 > [!NOTE]
-> - Before you begin, ensure you read [known limitations](#known-limitations) of this feature. Use of Git is evolving and may change how this feature works. For updates and to share your feedback about this feature, go to [Collaborative authoring](https://powerusers.microsoft.com/t5/Error-Handling/bd-p/PA_Error_Handling) in the Power Apps Community Forum.
+> - Before you begin, ensure you read [known limitations](#known-limitations) of this feature. Use of Git is evolving and may change how this feature works. For updates and to share your feedback about this feature, vist the Power Apps community forum.
 > - Git version control is managed on a per-app basis. Each app must be individually added to Git version control.
 
 ## Enable Git version control
@@ -51,7 +51,7 @@ Follow these steps to enable Git version control in your app.
     :::image type="content" source="media/git-version-control/enable-git.png" alt-text="Swtich to enable Git version control.":::
 
     > [!TIP]
-    > If you don't see the **Show the Git version control setting** experimental feature, this feature is not yet enabled for your tenant, it is slowly rolling out.  For any other problem with this feature, go to [Collaborative authoring](https://powerusers.microsoft.com/t5/Error-Handling/bd-p/PA_Error_Handling) in the Power Apps Community Forum.
+    > If you don't see the **Show the Git version control setting** experimental feature, this feature is not yet enabled for your tenant, it is slowly rolling out.  For any other problem with this feature, visit the Power Apps community forum.
 
 ## Connect an app to Git
 
@@ -81,7 +81,7 @@ Follow these steps to connect your app to Git.
 Power Apps requires you to use a personal access token instead of your version control provider account password.  
 
 > [!NOTE]
-> A personal access token is not the same as your password, either for Power Apps or for your Git provider.
+> A personal access token is not the same as your password, either for Power Apps or for your Git provider.  You must create a personal access token to use this feature.
 
 Different version control providers have different methods to generate personal access tokens. Follow below instructions to obtain personal access token.
 
@@ -134,4 +134,4 @@ Since this feature is experimental, we welcome your feedback. Here's a list of k
 
 ## Feedback to the community forum
 
-**Let us know what you think!**  This feature is a first step in a long journey to enable a great team development experience. Visit the [Collaborative authoring](https://powerusers.microsoft.com/t5/Error-Handling/bd-p/PA_Error_Handling) section of the Power Apps community forum for updates and to provide us feedback.
+**Let us know what you think!**  This feature is a first step in a long journey to enable a great team development experience. Visit the Power Apps community forum for updates and to provide feedback.
