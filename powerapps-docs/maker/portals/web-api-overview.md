@@ -5,13 +5,13 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2021
+ms.date: 10/29/2021
 ms.subservice: portals
 ms.author: nenandw
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
     - neerajnandwana-msft
-    - tapanm-msft
+    - nickdoelman
 ---
 
 # Portals Web API
@@ -31,9 +31,10 @@ The portals Web API offers a subset of capabilities for Dataverse operations tha
 
 ### Web API operations available in portals
 
-- [Create a record in a table](web-api-perform-operations.md#create-a-record-in-a-table)
-- [Update and delete records in a table](web-api-perform-operations.md#update-and-delete-records-by-using-the-web-api) 
-- [Associate and disassociate tables](web-api-perform-operations.md#associate-and-disassociate-tables-by-using-the-web-api)
+- [Read records from a table](read-operations.md)
+- [Create a record in a table](write-update-delete-operations.md#create-a-record-in-a-table)
+- [Update and delete records in a table](write-update-delete-operations.md#update-and-delete-records-by-using-the-web-api) 
+- [Associate and disassociate tables](write-update-delete-operations.md#associate-and-disassociate-tables-by-using-the-web-api)
 
 ## Site settings for the Web API
 
@@ -244,11 +245,12 @@ Portals Web API can't be used for the following configuration tables.
 
 ## Next step
 
-[Perform Web API operations](web-api-perform-operations.md)
+[Portals read operations using the Web API](read-operations.md)
 
 ### See also
 
-[Compose HTTP requests and handle errors](web-api-http-requests-handle-errors.md)
-
+[Compose HTTP requests and handle errors](web-api-http-requests-handle-errors.md)</br>
+[Portals write, update and delete operations using the Web API](write-update-delete-operations.md)</br>
+[Tutorial: Use portal Web API](webapi-tutorial.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -231,7 +231,7 @@ For example, instead of selecting a table, some columns in the table-specific da
   
 1.	Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-2.  Select **Dataverse** > **Tables** > select the table you want. 
+2.  Select **Data** > **Tables** > select the table you want. 
 
 3.  Select the **Dashboards** tab, and then on the toolbar select **Add dashboard**.  
 4.  Choose the layout, either 2, 3, or 4 column width.    
