@@ -1450,13 +1450,13 @@
       href: ./model-driven-apps/distribute-model-driven-app.md
     - name: Enable customizable help
       href: ./model-driven-apps/use-customizable-help.md
-  - name: Use performance insights
+  - name: App performance insights
     items:
     - name: Performance insights overview
       href: ./common/performance-insights-overview.md
     - name: Understand performance insights
       href: ./common/performance-insights-categories.md
-  - name: For developers
+  - name: Developer zone
     href: ../developer/model-driven-apps/overview.md
   - name: Glossary of terms
     href: ./model-driven-apps/model-driven-app-glossary.md    
