@@ -25,13 +25,13 @@ contributors:
 > [!IMPORTANT]
 > - This feature is being rolled out and depending on your region, it may not be available for your tenant yet. Check the experimental switch described in [Enable Git version control](#enable-git-version-control) to know if the feature is available in your tenant.
 > - This is an experimental feature.  It is disabled by default and must be [enabled](#enable-git-version-control) before use.
-> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
+> - Experimental features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 
-You can now use Git version control to enable more than one person to edit a canvas app at the same time. With this feature, others won't get locked out of the app while one person is editing it. As changes are made and synchronized, they're automatically merged with other changes, and made available to all others editing the app. This is a first step towards the Microsoft Office style of co-authoring experience for canvas apps.
+You can now use Git version control to enable more than one person to edit a canvas app at the same time. With this feature, others won't get locked out of the app while one person is editing it. As changes are made and synchronized, they're automatically merged with other changes, and made available to all others editing the app. This feature is a first step towards the Microsoft Office style of co-authoring experience for canvas apps.
 
-[Git](https://git-scm.com/) is used as the backing store for this feature. After the initial setup with the connection to Git, any user can use this feature without any additional configuration steps except to authenticate with Git.
+[Git](https://git-scm.com/) is used as the backing store for this feature. After the initial setup with the connection to Git, any user can use this feature without any extra configuration steps except to authenticate with Git.
 
-Any Git provider can be used with Power Apps Studio&mdash;such as [GitHub](https://github.com/) or [Azure DevOps](https://azure.microsoft.com/services/devops/). Use existing Git tools to see version history, create and manage pull requests, and perform other version control tasks.
+Any Git provider can be used with Power Apps Studio&mdash;such as [GitHub](https://github.com/) or [Azure DevOps](https://azure.microsoft.com/services/devops/). Use existing Git tools to see version history, create and manage pull requests, and do other version control tasks.
 
 > [!NOTE]
 > - Before you begin, ensure you read [known limitations](#known-limitations) of this feature. Use of Git is evolving and may change how this feature works. For updates and to share your feedback about this feature, vist the [Power Apps community forum](https://powerusers.microsoft.com/t5/Power-Apps-Community/ct-p/PowerApps1).
@@ -42,16 +42,17 @@ Any Git provider can be used with Power Apps Studio&mdash;such as [GitHub](https
 Follow these steps to enable Git version control in your app.
 
 1. Create a new app or open an existing app that you would like to add to Git version control.
-1. Select **File** > **Settings** while the app is open for editing in Power Apps Studio.
+1. Select **File** > **Settings** in Power Apps Studio.
 1. Select **Upcoming features**.
 1. Select **Experimental**.
 1. Scroll down to **Show the Git version control setting** and turn it to **On**.
-1. You'll see a new **Git version control** item on the left-hand side of the settings.
+1. You'll see a new **Git version control** item on the left-hand side of the settings pane.
 
     :::image type="content" source="media/git-version-control/enable-git.png" alt-text="Swtich to enable Git version control.":::
 
     > [!TIP]
-    > The experimental feature **Show the Git version control setting** is being rolled out. During the deployment phase, it may not be available in your tenant yet if you don't see this feature listed. For any other problem with this feature, visit the [Power Apps community forum](https://powerusers.microsoft.com/t5/Power-Apps-Community/ct-p/PowerApps1).
+    > - This feature is being rolled out. If you don't see it in your tenant, it may not yet be deployed to your tenant yet. In that case, check again later.
+    > - For any other problem with this feature, visit the [Power Apps community forum](https://powerusers.microsoft.com/t5/Power-Apps-Community/ct-p/PowerApps1).
 
 ## Connect an app to Git
 
@@ -66,7 +67,7 @@ Follow these steps to connect your app to Git.
 
     :::image type="content" source="media/git-version-control/connect-git.png" alt-text="Button to start a connection to git for this app.":::
 
-1. Select **Connect** to fill in Git connection information for this app.
+1. Select **Connect**, and fill-in Git connection information for this app.
 
     :::image type="content" source="media/git-version-control/connect-info.png" alt-text="Text input boxes to provide git connection information.":::
 
@@ -74,7 +75,7 @@ Follow these steps to connect your app to Git.
     - **Branch**: The branch name to use.
     - **Directory**: The directory within the branch to use. You can't store a canvas app at the root of the branch.
 
-    If the branch or directory doesn't exist, you'll be prompted to create them. If the branch and directory already contain a canvas app, the current app will be closed and the existing app will be loaded from Git.
+    You'll be prompted to create the branch or directory if it doesn't exist. If the branch and directory already contains a canvas app, the current app will be closed and the existing app will be loaded from Git.
 
     Once connected, the connection information will be displayed.
 
@@ -89,7 +90,7 @@ Different version control providers have different methods to generate personal 
 
 - **GitHub** - [Creating a personal access token](https://docs.github.com/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
 - **Azure DevOps** - [Use personal access tokens](/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate)
-- **Other version control providers**: Any Git provider can be used with Git version control. Check your provider's help for how to create a personal access token.
+- **Other version control providers**: Any Git provider can be used with Git version control. Check your provider's documentation to learn about how to create a personal access token.
 
 While editing apps connected to Git, you're prompted for username and password. Enter your **username** and the **access token** in this dialog to authenticate with Git.
 
@@ -102,14 +103,14 @@ While editing apps connected to Git, you're prompted for username and password. 
 
 After an app is connected to Git, all you have to do is authenticate with Git credentials to open and edit the app. You don't need to go through Git concepts when using this feature to load, edit, save, publish, and share the app.
 
-Use the new synchronize button at the top of the Studio screen (between the **App Checker** and **Undo** buttons) to merge any current changes with what's in Git, and to bring the result into the Studio for further editing.
+Use the new synchronize button at the top of the Studio screen (between the **App Checker** and **Undo** buttons) to merge any current changes with what's in Git, and to bring the result into Studio for further editing.
 
 :::image type="content" source="media/git-version-control/sync.png" alt-text="Button to synchronize changes with the Git repo.":::
 
 > [!IMPORTANT]
 > The app will need to be loaded each time there is a merge. If the app is large, this load could take some time.
 
-After being connected to Git, changes are stored in Git rather than in Power Apps. Additional versions won't appear in the Power Apps maker portal.
+After being connected to Git, changes are stored in Git rather than in Power Apps. Unpublished versions won't appear in the Power Apps maker portal.
 
 ## Merge results
 
@@ -127,7 +128,7 @@ Each save or synchronize that includes changes will result in a commit in Git. I
 
 ## Known limitations
 
-Since this feature is experimental, we welcome your feedback. Here's a list of known limitations. We plan to remove most of these limitations in future versions.
+Since this feature is experimental, we welcome your feedback. The following lists known limitations. We plan to remove most of these limitations in future versions.
 
 1. This feature isn't compatible with [code components](../../developer/component-framework/create-custom-controls-using-pcf.md). Don't use this feature with apps that make of use of code components.
 1. This feature doesn't work with public Git repository. Use a private repo instead.
