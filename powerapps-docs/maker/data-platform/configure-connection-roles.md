@@ -1,6 +1,5 @@
 ---
 title: "Configure connection roles | MicrosoftDocs"
-description: "With Microsoft Dataverse you can define **connections** between table rows without creating a table relationship. In model-driven apps people can establish a named link between rows to establish less a formal relationship which doesn't justify creating an actual table relationship."
 ms.custom: ""
 ms.date: 02/11/2020
 ms.reviewer: ""
@@ -38,7 +37,7 @@ Anyone with write access to the **Connection Role** table can establish which co
 ## Enable connection roles for a table
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
-2. Expand **Dataverse**, and then select **Tables**. 
+2. Expand **Data**, and then select **Tables**. 
 3. Select the table that you want to enable for connection roles, and then on the command bar select **Settings**. 
 4. In the **Settings** pane expand the **Collaboration** area, and then select **Enable connections**.
     > [!div class="mx-imgBorder"] 

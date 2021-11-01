@@ -169,7 +169,7 @@
         href: org-service/samples/web-access-plugin.md
   - name: Workflow extensions
     href: workflow/workflow-extensions.md
-  - name: Business Events (preview)
+  - name: Business Events
     href: business-events.md
   - name: Scalable customization design
     href: scalable-customization-design/overview.md
@@ -283,7 +283,7 @@
     href: transaction-currency-currency-entity.md
   - name: Category table
     href: use-category-entity.md
-  - name: Catalog & CatalogAssignment (preview)
+  - name: Catalog & CatalogAssignment
     href: catalog-catalogassignment.md
   - name: Feedback table
     href: use-feedback-entity-manage-feedback-ratings-records.md
