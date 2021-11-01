@@ -34,7 +34,7 @@ You can now use Git version control to enable more than one person to edit a can
 Any Git provider can be used with Power Apps Studio&mdash;such as [GitHub](https://github.com/) or [Azure DevOps](https://azure.microsoft.com/services/devops/). Use existing Git tools to see version history, create and manage pull requests, and perform other version control tasks.
 
 > [!NOTE]
-> - Before you begin, ensure you read [known limitations](#known-limitations) of this feature. Use of Git is evolving and may change how this feature works. For updates and to share your feedback about this feature, vist the Power Apps community forum.
+> - Before you begin, ensure you read [known limitations](#known-limitations) of this feature. Use of Git is evolving and may change how this feature works. For updates and to share your feedback about this feature, vist the [Power Apps community forum](https://powerusers.microsoft.com/t5/Power-Apps-Community/ct-p/PowerApps1).
 > - Git version control is managed on a per-app basis. Each app must be individually added to Git version control.
 
 ## Enable Git version control
@@ -51,7 +51,7 @@ Follow these steps to enable Git version control in your app.
     :::image type="content" source="media/git-version-control/enable-git.png" alt-text="Swtich to enable Git version control.":::
 
     > [!TIP]
-    > If you don't see the **Show the Git version control setting** experimental feature, this feature is not yet enabled for your tenant, it is slowly rolling out.  For any other problem with this feature, visit the Power Apps community forum.
+    > If you don't see the **Show the Git version control setting** experimental feature, this feature is not yet enabled for your tenant, it is slowly rolling out.  For any other problem with this feature, visit the [Power Apps community forum](https://powerusers.microsoft.com/t5/Power-Apps-Community/ct-p/PowerApps1).
 
 ## Connect an app to Git
 
@@ -134,4 +134,4 @@ Since this feature is experimental, we welcome your feedback. Here's a list of k
 
 ## Feedback to the community forum
 
-**Let us know what you think!**  This feature is a first step in a long journey to enable a great team development experience. Visit the Power Apps community forum for updates and to provide feedback.
+**Let us know what you think!**  This feature is a first step in a long journey to enable a great team development experience. Visit the [Power Apps community forum](https://powerusers.microsoft.com/t5/Power-Apps-Community/ct-p/PowerApps1) for updates and to provide feedback.
