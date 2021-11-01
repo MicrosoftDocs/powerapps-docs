@@ -23,7 +23,8 @@ contributors:
 [This article is pre-release documentation and is subject to change.]
 
 > [!IMPORTANT]
-> - This is an experimental feature.
+> - This feature is slowly rolling out.  It may not be available for your tenant yet.  You will know it is available if the experimental switch described in [Enable Git version control](#enable-git-version-control) below is listed.
+> - This is an experimental feature.  It is disabled by default and must be enabled before use, see below for directions.
 > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
 
 You can now use Git version control to enable more than one person to edit a canvas app at the same time. With this feature, others won't get locked out of the app while one person is editing it. As changes are made and synchronized, they're automatically merged with other changes, and made available to all others editing the app. This is a first step towards the Microsoft Office style of co-authoring experience.
@@ -33,7 +34,7 @@ You can now use Git version control to enable more than one person to edit a can
 Any Git provider can be used with Power Apps Studio&mdash;such as [GitHub](https://github.com/) or [Azure DevOps](https://azure.microsoft.com/services/devops/). Use existing Git tools to see version history, create and manage pull requests, and perform other version control tasks.
 
 > [!NOTE]
-> - Before you begin, ensure you read [known limitations](#known-limitations) of this feature. Use of Git is evolving and may change how this feature works. For updates and to share your feedback about this feature, go to [Collaborative authoring](https://powerusers.microsoft.com/t5/Error-Handling/bd-p/PA_Error_Handling).
+> - Before you begin, ensure you read [known limitations](#known-limitations) of this feature. Use of Git is evolving and may change how this feature works. For updates and to share your feedback about this feature, go to [Collaborative authoring](https://powerusers.microsoft.com/t5/Error-Handling/bd-p/PA_Error_Handling) in the Power Apps Community Forum.
 > - Git version control is managed on a per-app basis. Each app must be individually added to Git version control.
 
 ## Enable Git version control
@@ -50,7 +51,7 @@ Follow these steps to enable Git version control in your app.
     :::image type="content" source="media/git-version-control/enable-git.png" alt-text="Swtich to enable Git version control.":::
 
     > [!TIP]
-    > If you don't see the **Show the Git version control setting** experimental feature, your tenant may not have been properly enabled for this feature. In this case, send an email to [PAGit@microsoft.com](mailto:PAGit@microsoft.com) to get this feature listed on your tenant. For any other problem with this feature, go to [Collaborative authoring](https://powerusers.microsoft.com/t5/Error-Handling/bd-p/PA_Error_Handling).
+    > If you don't see the **Show the Git version control setting** experimental feature, this feature is not yet enabled for your tenant, it is slowly rolling out.  For any other problem with this feature, go to [Collaborative authoring](https://powerusers.microsoft.com/t5/Error-Handling/bd-p/PA_Error_Handling) in the Power Apps Community Forum.
 
 ## Connect an app to Git
 
@@ -77,7 +78,10 @@ Follow these steps to connect your app to Git.
 
 ## Authenticate with Git
 
-Power Apps requires you to use a personal access token instead of your version control provider account password.
+Power Apps requires you to use a personal access token instead of your version control provider account password.  
+
+> [!NOTE]
+> A personal access token is not the same as your password, either for Power Apps or for your Git provider.
 
 Different version control providers have different methods to generate personal access tokens. Follow below instructions to obtain personal access token.
 
