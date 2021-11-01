@@ -1167,21 +1167,18 @@
           href: ./model-driven-apps/choose-and-configure-columns.md
         - name: Creating and editing view filters
           href: ./model-driven-apps/create-edit-view-filters.md
-        - name: How to guides Views xxx consider if we need this hierarchy xxx
-          href:
-          items:
-          - name: Create and edit views
-            href: ./model-driven-apps/create-edit-views-app-designer.md
-          - name: Converting views into editable grids
-            href: ./model-driven-apps/make-grids-lists-editable-custom-control.md
-          - name: Sorting records within views
-            href: ./model-driven-apps/configure-sorting.md
-          - name: xxx Updating filter criteria duplicate page to delete xxx
-            href: ./model-driven-apps/edit-filter-criteria.md
-          - name: Setting managed properties for views
-            href: ./model-driven-apps/managed-properties-views.md
-          - name: Specifying a default view
-            href: ./model-driven-apps/specify-default-views.md
+        - name: Create and edit views
+          href: ./model-driven-apps/create-edit-views-app-designer.md
+        - name: Converting views into editable grids
+          href: ./model-driven-apps/make-grids-lists-editable-custom-control.md
+        - name: Sorting records within views
+          href: ./model-driven-apps/configure-sorting.md
+        - name: xxx Updating filter criteria duplicate page to delete xxx
+          href: ./model-driven-apps/edit-filter-criteria.md
+        - name: Setting managed properties for views
+          href: ./model-driven-apps/managed-properties-views.md
+        - name: Specifying a default view
+          href: ./model-driven-apps/specify-default-views.md
         - name: Deleting and deactivating views
           href: ./model-driven-apps/remove-views.md
       - name: Working with forms

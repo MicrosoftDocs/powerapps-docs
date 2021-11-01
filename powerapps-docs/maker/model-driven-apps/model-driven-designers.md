@@ -104,6 +104,4 @@ The site map designer allows a developer to choose the tables used in the app an
 
 [Build your first model-driven app](build-first-model-driven-app.md)
 
-[Understanding the benefits of the model-driven approach](app-value-proposition.md)
-
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -27,7 +27,7 @@ search.app:
   - D365CE
 ---
 
-# Create and edit public or system views
+# Create and edit public or system views (legacy)
 
 Model-driven apps can contain a range of views, so that app users can see the most suitably presented and filtered version of the table that they are investigating.  Views can be **Personal**, **System** or **Public**.
 
@@ -49,7 +49,7 @@ Public views are available to users as when reviewing a table.  App makers can c
 
 1. Create a new solution by selecting **New solution** or select **edit** in the ellipses (**...**) menu of an existing solution. For more  information on creating a model-driven app see:
    - [Create a model driven app](create-model-driven-app.md)
-   - [Add a table to a solution](../data-platform/data-platform-create-entity)
+   - [Add a table to a solution](../data-platform/data-platform-create-entity.md)
 
 From within the solution there are two ways to edit views. *App Designer* and Tables
 

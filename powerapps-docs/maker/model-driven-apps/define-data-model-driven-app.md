@@ -65,6 +65,6 @@ For detailed information about working with these components in Dataverse to def
 
 [Discover out more about views here](../../maker/model-driven-apps/create-edit-views.md)
 
-[Use app designer to build an app](design-custom-business-apps-using-app-designer.md)
+[Build your first app](app-building-steps.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

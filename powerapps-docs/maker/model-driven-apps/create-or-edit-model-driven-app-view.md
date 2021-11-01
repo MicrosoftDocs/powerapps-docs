@@ -9,174 +9,65 @@ author: Joel-Lindstrom
 ms.author: matp
 ms.reviewer: matp
 ---
-# Create and edit public model-driven app views
+# Create and edit public or system views
 
-In this tutorial, we perform several tasks required to work with views, such as create a public view, add an existing view to an app, and change columns, filters, and sort order for a view.  Note that we will be working with both the classic app designer and the modern app designer experience.
+Model-driven apps can contain a range of views, so that app users can see the most suitably presented and filtered version of the table that they are investigating.  Views can be **Personal**, **System** or **Public**.
 
 > [!NOTE]
    >   Views are tied a given table however we can select this during the process of creating a model driven app.  By default ALL views will be made available.
 
+:::image type="content" source="media/create-or-edit-model-driven-app-view/switch-views.gif" alt-text="Configure views in model-driven apps":::
+
+> [!TIP]
+> For a general introduction into views please read [Understand views in model-driven apps](create-edit-views.md)
+
 ## Create a public view in Power Apps
-
-In this exercise, you create a public view for the account entity. You then add this view to an app.
-
-1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-
-1. Expand **Data**, select **Tables**, select the **Account** table, and then select the **Views** tab.
-
-1. On the toolbar, select **Add view**.
-
-1. On the **Create a view** dialog box, enter *Accounts with revenue more than 50 K* as the **Name**. Optionally, enter a description, and then select **Create**.
-    
-1. In the view designer, select **+ View column** and add the **Address1: City** column to the view.
-
-   > [!TIP]
-   > The **Default** view in the **Add column** pane displays the commonly used columns. If the column you want isn’t listed, select **All** to display additional columns.
-
-   ![Select All to display all columns](media/create-or-edit-model-driven-app-view/create-a-public-view-in-power-apps-2.png "Select All to display all columns")
-
-1. Repeat the previous step by selecting **Add column** and add the following additional columns to the view: 
-   - **Address 1: Country/Region**
-   - **Address 1: Primary Contact**
-   - **Annual Revenue**
-
-1. Change the column filtering for the **Annual Revenue** field by selecting the header of the column, and then in the dropdown select **Filter by**. Select **Greater than** for the operator and then enter *50000* for the value. Select **Apply**. 
-   :::image type="content" source="media/create-or-edit-model-driven-app-view/accounts-more-50k-rev.png" alt-text="Add a filter for accounts with more than 50,000 revenue.":::
-   Notice the view in the designer reacts to the filter.
-1. Change the column sorting to sort by the most to least revenue. To do this, select the header of the **Annual Revenue** column, and then select **Larger to smaller**. Notice for text-based columns the sort options are **Sort A to Z** and **Sort Z to A**.
-
-1. Explore additional changes you can make to the view.
-   - Increase a column width by selecting just to the right of the column heading you want to increase and drag the column to the right.
-   - Reposition columns by dragging a column to the position you want to move it to. For example, select the **Primary Contact** column header and drag it between the **Account Name** and **Address 1: City** columns.
-
-   > [!NOTE]
-   >    You can also change column order by selecting the column header and then select **Move Right** or **Move Left**.
-
-1. Select **Save**, and then select **Publish** to make the view available for other users in the environment.
-
-## Display the view in an app
-
-To see your view in the app, on the app designer command bar, select **Play**. Notice that the view is displayed and the additional **Active Accounts** and **Inactive Accounts** views are also available by selecting the view selector.
-:::image type="content" source="media/create-or-edit-model-driven-app-view/view-displayed-in-app.png" alt-text="Views available from an app":::
-
-## Selecting the view using the modern app designer
-
-1. In Power Apps, select **Apps** from the left navigation pane, select **...** next to the unmanaged app you want, and then select **Edit** > **Edit in preview**. If you don't have an app to use, [Build your first model-driven app](build-first-model-driven-app.md).
-
-1. In the **Pages** section of app designer, select **Account view**.
-1. In the right **Properties** pane, select **Manage views**, select the following views, and then select **Save**.
-   - **Active Accounts**
-   - **Inactive Accounts**
-   - **Accounts with revenue more than 50K**
-   :::image type="content" source="media/create-or-edit-model-driven-app-view/select-view-for-app.png" alt-text="Select the views you want to display":::
-1. Select **Publish** to save and publish the app.
-
-## Selecting the view using the classic app designer
-
-1. In Power Apps, select **Apps** from the left navigation pane, select **...** next to the unmanaged app you want, and then select **Edit** . If you don't have an app to use, [Build your first model-driven app](build-first-model-driven-app.md).
-    
-1. In the app designer **Entity View** section, select **Views**.
-
-   ![Table View section select Views](media/create-or-edit-model-driven-app-view/open-and-add-a-view-in-the-app-designer-1.png "Table View section select Views")
-
-1. On the right **Components** tab, by default, all views are selected. To select specific views to display in the app, clear the **All** checkbox.
-
-   ![select specific views to display in the app](media/create-or-edit-model-driven-app-view/open-and-add-a-view-in-the-app-designer-2.png "select specific views to display in the app")
-    
-1. To add an existing view to your app, select it from the list of views, or to create a new view from the app designer, select **Create New**.
-
-   > [!NOTE]
-   > Views are displayed based on the table that you have selected. For example, when you select **Account**, views that are related to the account table are displayed.
-
-## Edit an active public or system view in the classic app designer
-
-You can change the way an active public or system view is displayed that's selected for the app by opening it from the app designer canvas.
-
-1. In the **Views** list for a table, select the **Show list of references** down arrow
- ![Drop Down](media/create-or-edit-model-driven-app-view/edit-a-public-or-system-view-in-app-designer-2.png "Drop Down").
-   > [!NOTE]
-   > The down arrow is only displayed when the table views are not configured to use **All** views.
-
-1. Select the active view ![Open view Designer pencil icon](media/create-or-edit-model-driven-app-view/edit-a-public-or-system-view-in-app-designer-3.png "Open view Designer") that you want to open for editing.
-
-   ![change the way a public or system view is displayed](media/create-or-edit-model-driven-app-view/edit-a-public-or-system-view-in-app-designer-1.png "change the way a public or system view is displayed")
-
-When you edit a public or system view, you must save and publish your changes before they will be visible in the application.
-
-## Add a column to your view in the classic app designer
-
-Views display records from a table that contains rows and columns. Each record is a row, and the columns that are displayed from the record are determined by the columns you add to the view.
-
-1. In app designer, select **Views**, then on the right **Components** pane place your mouse cursor over the view, and then select **edit** (pencil button).
-    :::image type="content" source="media/create-or-edit-model-driven-app-view/edit-view.png" alt-text="Edit a view":::
-1. On the **Components** tab in the view designer, select the **Column Attributes** list for the **Primary Entity**.
-
-   ![Add a column](media/create-or-edit-model-driven-app-view/open-and-add-a-view-in-the-app-designer-3.png "Add a column")
-    
-1. From the list of columns, select the column you want, such as the **Address 1: State/Province** column,and drag it to the view heading. You can also add the column by double-clicking it.
-    :::image type="content" source="media/create-or-edit-model-driven-app-view/add-address1-state-column.png" alt-text="Add the Address 1: State/Province column to the view":::
-1. Repeat step 3 until you've added all the columns you want to display in your view. As you add columns, you can drag them to any position among existing column headings. You can also move columns around after you add them to your view by dragging the column heading to the column heading where you want to move it.
-1. Select **Save and Close** on the command bar, to save the view and return to the app designer.
-
-## Define filter criteria in the classic app designer
-
-You can set filter criteria so that only a subset of the records is displayed in a view. When a user opens the view, only the records that meet the defined filter criteria are displayed. You can select columns from both the primary and related tables to filter on.
-
-1. In app designer, select **Views**, then on the right **Components** pane place your mouse cursor over the view, and then select edit (pencil button).
-    :::image type="content" source="media/create-or-edit-model-driven-app-view/edit-view.png" alt-text="Edit a view":::
-1. In the view designer, expand the **Filter Criteria** section, and then select **Add Filter**.
-
-   ![Set Filter Criteria](media/create-or-edit-model-driven-app-view/define-filter-criteria-in-app-designer-1.png "Set Filter Criteria")
-
-1. Select the **Address1: State/Province** column from the drop-down list in the first column.
-
-1. Select the **Equals** operator from the drop-down list in the second column.
-
-1. Enter *TX* as the value to filter by in the third column.
-
-   ![Set Filter Criteria Operator](media/create-or-edit-model-driven-app-view/define-filter-criteria-in-app-designer-2.png "Set Filter Criteria Operator")
-    
-   Notice how the view now shows accounts with annual revenue greater than $50,000 in the state of Texas (TX).
-1. Select **Save and Close** on the command bar, to save the view and return to the app designer.
-<!-- You can also filter data based on the attributes of related tables in addition to the
-primary table.
-
-1. On the **Components** tab, select the **Column Attributes** list for **Related Table**, select a related table from the drop down list, and then choose the table you want. This will add a separate section.
-    
-2.  Repeat steps 2 through 5 from the previous procedure.
-
-More information: [Create and edit relationships between tables](https://docs.microsoft.com/powerapps/maker/data-platform/create-edit-entity-relationships)  -->
-
-### Group multiple filters in the classic app designer
-
-You can add multiple filters to your view if you want to filter records by using more than one column.
-
-1. Select the filters that you want to group. 
-   ![Set Group Filter](media/create-or-edit-model-driven-app-view/group-multiple-filters-in-app-designer-1.png "Set Group Filter")
-
-1. Select **Group And** or **Group Or** to group the filters. 
-   ![Group Filter Selection](media/create-or-edit-model-driven-app-view/group-multiple-filters-in-app-designer-2.png "Group Filter Selection") 
-   
-   When you select **Group And**, only records that meet both criteria are displayed in the view. When you select **Group Or**, records that meet any of the filter criteria are displayed. For example, to show only records that have priority of **High** or **Normal**, and a status of **Active**, select **Group And**.
-
-To remove the filter from a group, select the group, and then select **Ungroup**.
-
-## Set primary and secondary sort order for columns in the classic app designer
-
-When a view is opened, the records displayed are sorted in the order you set when you created the view. By default, records will be sorted according to the first column in a view when no sort order is selected. You can choose to sort on a single column, or you can choose two columns—one primary and one secondary—to sort by. When the view is opened, the records are first sorted by the column you want to use for primary sort order, and then by the column you want to use for the secondary sort order.
+Public views are available to users as when reviewing a table.  App makers can create and configure these using Power Apps.
 
 > [!NOTE]
-> You can only set primary and secondary sort order for column attributes you added from the primary table.
+> Public views created in Power Apps that include **Contains data** or **Does not contain data** filters will not appear in the list of saved views in Advanced Find.
 
-1. In app designer, select **Views**, then on the right **Components** pane place your mouse cursor over the view, and then select edit (pencil button).
-    :::image type="content" source="media/create-or-edit-model-driven-app-view/edit-view.png" alt-text="Edit a view":::
-1. In the **Columns** area of the view designer, select the column heading you want to use for sorting, such as **Business Phone**, select the down arrow, and then choose **Primary Sort** or **Secondary Sort**.
+## Edit public views through tables
 
-   ![Sort Record](media/create-or-edit-model-driven-app-view/set-primary-and-secondary-sort-order-for-columns-in-app-designer-1.png "Sort Record")
+In the solution that we opened earlier create a new table or find an existing table that where the public views need to be edited.
 
-If you remove the column you chose for the primary sort order, the column you chose for the secondary sort order becomes the primary.
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. Select an [environment](model-driven-app-glossary.md#environment)
 
-## Next steps
+   > [!NOTE]
+   > It is best practice to create an tables inside solutions.  Click [here](model-driven-app-glossary.md#solution) to learn more about them and how they help with application lifecycle management
 
-[Configure columns in model-driven app views](choose-and-configure-columns.md)<br />
-[Creating and editing view filters](create-edit-view-filters.md)
+1. Expand **Data**, select **Tables**, select the table required, and then select the **Views** tab.  If using a solution select the solution, then **tables** and **views**.
+1. On the toolbar, select **Add view**.
+:::image type="content" source="media/add-view.png" alt-text="Add view to table":::
+1. On the **Create a view** dialog box, enter a name and, optionally, a description, and then select **Create**.
+:::image type="content" source="media/create-a-view-dialog.png" alt-text="Create a view":::
+1. In the view designer, select **+ View column** to add additional columns needed within the view. Or alternatively, select Table columns in the left navigation and drag the table columns into your view.
+
+   ![Add column.](../data-platform/media/add-column-to-view.png)
+
+   > [!TIP]
+   > The **Default** view in the **Add column** pane displays all columns. If preferred, select **Standard** or **Custom** to display a subset of columns.
+   > :::image type="content" source="media/display-all-columns.png" alt-text="Select All to display all columns":::
+1. In the view designer, the following tasks can be performed:
+
+   - To change the column filtering select the header of the column where the filter is required, and then in the dropdown select **Filter by**.
+   - To change the column sorting select the header of the column where sorting is needed then select **Sort A-Z** or **Sort Z-A** or **Sort descending** or **Sort ascending**.  
+   - Configure column width by clicking and dragging the column to the desired position.
+   - Reorder columns by dragging a column to the desired position.
+    > [!NOTE]
+    > Depending on the data type of the column the term **Sort A-Z**/**Sort Z-A** or **Sort ascending**/**Sort descending** is used
+
+    > [!TIP]
+    > It is also possible to change column order by clicking on the column header and selecting **Move Right** or **Move Left**.
+2. Select **Publish** to save the view and make it available for other users in your organization.
+
+### Next steps
+
+[Learn about sorting within views](configure-sorting.md)
+
+[Learn about filtering views](create-edit-view-filters.md)
+
+[Make views editable using grids](make-grids-lists-editable-custom-control.md)
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]
