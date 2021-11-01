@@ -37,8 +37,10 @@ Once migrated, Access users can continue using their existing desktop client to 
 
 Before you migrate, there are a few key factors to consider. Currently, Dataverse and Dataverse for Teams don't support every data type that is in Access. Additionally, some data types in Dataverse and Dataverse for Teams may have different data limits. More information: [Data types and sizes for Access data migration to Dataverse](migrate-access-datatypes.md) 
 
-Dataverse and Dataverse for Teams offer differing features that you can use to best meet your needs. Dataverse for Teams is targeted at users who want to have Power Platform functionality within the Microsoft Teams application. Dataverse is included with licenses of Dynamics 365 or Power Apps. Organizations that have a Dataverse for Teams environment can choose later to upgrade to Dataverse.
+> [!NOTE]
+> [Join the Microsoft Access beta to start your migration](https://aka.ms/AccessAndPowerPlatform)
 
+Dataverse and Dataverse for Teams offer differing features that you can use to best meet your needs. Dataverse for Teams is targeted at users who want to have Power Platform functionality within the Microsoft Teams application. Dataverse is included with licenses of Dynamics 365 or Power Apps. Organizations that have a Dataverse for Teams environment can choose later to upgrade to Dataverse.
 
 |Dataverse  |Dataverse for Teams  |
 |---------|---------|

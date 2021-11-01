@@ -31,6 +31,9 @@ This validation is done to prevent data loss. If a table has columns that exceed
 
 Users can choose to either cancel the migration completely, or to continue to migrate all supported content and keep the unsupported content in an Access table.
 
+> [!NOTE]
+> [Join the Microsoft Access beta to start your migration](https://aka.ms/AccessAndPowerPlatform)
+
 ## Access data types supported by Dataverse
 
 In the following table, the data type mappings supported can assist you in planning your data migration.
