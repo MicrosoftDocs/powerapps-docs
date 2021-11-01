@@ -23,11 +23,11 @@ contributors:
 [This article is pre-release documentation and is subject to change.]
 
 > [!IMPORTANT]
-> - This feature is slowly rolling out.  It may not be available for your tenant yet.  You will know it is available if the experimental switch described in [Enable Git version control](#enable-git-version-control) below is listed.
-> - This is an experimental feature.  It is disabled by default and must be enabled before use, see below for directions.
+> - This feature is being rolled out and depending on your region, it may not be available for your tenant yet. Check the experimental switch described in [Enable Git version control](#enable-git-version-control) to know if the feature is available in your tenant.
+> - This is an experimental feature.  It is disabled by default and must be [enabled](#enable-git-version-control) before use.
 > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
 
-You can now use Git version control to enable more than one person to edit a canvas app at the same time. With this feature, others won't get locked out of the app while one person is editing it. As changes are made and synchronized, they're automatically merged with other changes, and made available to all others editing the app. This is a first step towards the Microsoft Office style of co-authoring experience.
+You can now use Git version control to enable more than one person to edit a canvas app at the same time. With this feature, others won't get locked out of the app while one person is editing it. As changes are made and synchronized, they're automatically merged with other changes, and made available to all others editing the app. This is a first step towards the Microsoft Office style of co-authoring experience for canvas apps.
 
 [Git](https://git-scm.com/) is used as the backing store for this feature. After the initial setup with the connection to Git, any user can use this feature without any additional configuration steps except to authenticate with Git.
 
@@ -42,16 +42,16 @@ Any Git provider can be used with Power Apps Studio&mdash;such as [GitHub](https
 Follow these steps to enable Git version control in your app.
 
 1. Create a new app or open an existing app that you would like to add to Git version control.
-1. Open the **Settings** for this app.
+1. Select **File** > **Settings** while the app is open for editing in Power Apps Studio.
 1. Select **Upcoming features**.
 1. Select **Experimental**.
-1. Scroll down to **Show the Git version control setting** and enable the switch below it.
+1. Scroll down to **Show the Git version control setting** and turn it to **On**.
 1. You'll see a new **Git version control** item on the left-hand side of the settings.
 
     :::image type="content" source="media/git-version-control/enable-git.png" alt-text="Swtich to enable Git version control.":::
 
     > [!TIP]
-    > If you don't see the **Show the Git version control setting** experimental feature, this feature is not yet enabled for your tenant, it is slowly rolling out.  For any other problem with this feature, visit the [Power Apps community forum](https://powerusers.microsoft.com/t5/Power-Apps-Community/ct-p/PowerApps1).
+    > The experimental feature **Show the Git version control setting** is being rolled out. During the deployment phase, it may not be available in your tenant yet if you don't see this feature listed. For any other problem with this feature, visit the [Power Apps community forum](https://powerusers.microsoft.com/t5/Power-Apps-Community/ct-p/PowerApps1).
 
 ## Connect an app to Git
 
@@ -60,7 +60,9 @@ Follow these steps to enable Git version control in your app.
 
 Follow these steps to connect your app to Git.
 
-1. Select **Git version control** in settings:
+1. Select **File** > **Settings** in Power Apps Studio.
+
+1. Select **Git version control**.
 
     :::image type="content" source="media/git-version-control/connect-git.png" alt-text="Button to start a connection to git for this app.":::
 
@@ -72,7 +74,7 @@ Follow these steps to connect your app to Git.
     - **Branch**: The branch name to use.
     - **Directory**: The directory within the branch to use. You can't store a canvas app at the root of the branch.
 
-    If the branch or directory doesn't exist, you'll be prompted to create them. If the branch and directory already contain a canvas app, the current app will be closed and the existing app loaded from Git.
+    If the branch or directory doesn't exist, you'll be prompted to create them. If the branch and directory already contain a canvas app, the current app will be closed and the existing app will be loaded from Git.
 
     Once connected, the connection information will be displayed.
 
@@ -121,7 +123,7 @@ Apps connected to Git continue to work normally for publishing and user experien
 
 Working with pull requests or any other Git operations must be done through other Git tools, including the Git provider's website. There's no option available to perform such Git operations to pull or push commits.
 
-Each save or synchronize that includes changes will result in a commit in Git. If other changes occurred in Git, for example by other makers, then there will be additional commits made in order to merge the result of all the changes. No changes will be lost, even if a merge would override an edit. Changes by each maker are stored in Git through commits.
+Each save or synchronize that includes changes will result in a commit in Git. If other changes occurred in Git, for example by other makers, then there will be additional commits made in order to merge the results of all the changes. No changes will be lost, even if a merge would override an edit. Changes by each maker are stored in Git through commits.
 
 ## Known limitations
 
