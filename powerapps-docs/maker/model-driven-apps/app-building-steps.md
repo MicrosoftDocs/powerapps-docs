@@ -121,6 +121,6 @@ Documentation has been developed that is dedicated to helping **users** of model
 
 [Build your first app](build-first-model-driven-app.md)
 
-[Review the app editors](model-driven-designers.md)
+[Meet the model-driven app designers](model-driven-designers.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

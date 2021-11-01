@@ -31,7 +31,8 @@ search.app:
 
 Model-driven apps can contain a range of views, so that app users can see the most suitably presented and filtered version of the table that they are investigating.  Views can be **Personal**, **System** or **Public**.
 
-This article describes how to update views through [tables](model-driven-app-glossary.md#table) or the [app designer](model-driven-app-glossary.md#app-designer).
+> [!NOTE]
+   >   Views are tied a given table however we can select this during the process of creating a model driven app.  By default ALL views will be made available.
 
 :::image type="content" source="media/create-or-edit-model-driven-app-view/switch-views.gif" alt-text="Configure views in model-driven apps":::
 

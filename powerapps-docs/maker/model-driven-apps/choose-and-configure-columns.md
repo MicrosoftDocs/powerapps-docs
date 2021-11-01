@@ -108,7 +108,7 @@ Click and drag the column header to the correct position.
 
   
 ### Next steps
-[Create or edit views](create-edit-views.md)
+[Create or edit view filters](create-edit-view-filters.md)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
