@@ -1152,8 +1152,32 @@
           href: ./model-driven-apps/create-model-driven-app.md
         - name: Create an app with an account table
           href: ./model-driven-apps/create-a-model-driven-app.md
-        - name: Adding and removing forms, view and dashboards
-          href: ./model-driven-apps/create-add-remove-forms-views-dashboards.md        
+        - name: Create an app with an account table
+          href: ./model-driven-apps/create-a-model-driven-app.md
+        - name: Understanding app navigation
+          href: ./model-driven-apps/app-navigation.md        
+        - name: Use custom pages within model-driven apps (preview)
+          items:
+          - name: Custom pages overview
+            href: ./model-driven-apps/model-app-page-overview.md
+          - name: Add a custom page to a model-driven app
+            href: ./model-driven-apps/add-page-to-model-app.md
+          - name: Design considerations for a custom page
+            href: ./model-driven-apps/design-page-for-model-app.md
+          - name: Navigating to and from a custom page
+            href: ../developer/model-driven-apps/clientapi/navigate-to-custom-page-examples.md
+          - name: Use Power Fx in a custom page
+            href: ./model-driven-apps/page-powerfx-in-model-app.md
+          - name: Add canvas components to a custom page
+            href: ./model-driven-apps/page-canvas-components.md   
+          - name: Add code components to a custom page
+            href: ./model-driven-apps/page-code-components.md     
+          - name: Add connectors to a custom page
+            href: ./model-driven-apps/page-data-connectors.md
+          - name: Known issues with custom pages
+            href: ./model-driven-apps/model-app-page-issues.md
+          - name: Use monitor to troubleshoot custom pages
+            href: ./model-driven-apps/monitor-page-checker.md
       - name: Working with views
         href: 
         items:
@@ -1161,20 +1185,16 @@
           href: ./model-driven-apps/create-edit-views.md
         - name: Opening the view designer
           href: ./model-driven-apps/accessing-view-definitions.md
-        - name: Creating and editing public views
+        - name: Creating and editing views
           href: ./model-driven-apps/create-or-edit-model-driven-app-view.md
         - name: Configuring view columns
           href: ./model-driven-apps/choose-and-configure-columns.md
         - name: Creating and editing view filters
           href: ./model-driven-apps/create-edit-view-filters.md
-        - name: Create and edit views
-          href: ./model-driven-apps/create-edit-views-app-designer.md
-        - name: Converting views into editable grids
-          href: ./model-driven-apps/make-grids-lists-editable-custom-control.md
         - name: Sorting records within views
           href: ./model-driven-apps/configure-sorting.md
-        - name: xxx Updating filter criteria duplicate page to delete xxx
-          href: ./model-driven-apps/edit-filter-criteria.md
+        - name: Converting views into editable grids
+          href: ./model-driven-apps/make-grids-lists-editable-custom-control.md
         - name: Setting managed properties for views
           href: ./model-driven-apps/managed-properties-views.md
         - name: Specifying a default view
@@ -1303,28 +1323,6 @@
           href: ./model-driven-apps/manage-commands-in-solutions.md
         - name: Command designer limitations
           href: ./model-driven-apps/command-designer-limitations.md       
-      - name: Use custom pages within model-driven apps (preview)
-        items:
-        - name: Custom pages overview
-          href: ./model-driven-apps/model-app-page-overview.md
-        - name: Add a custom page to a model-driven app
-          href: ./model-driven-apps/add-page-to-model-app.md
-        - name: Design considerations for a custom page
-          href: ./model-driven-apps/design-page-for-model-app.md
-        - name: Navigating to and from a custom page
-          href: ../developer/model-driven-apps/clientapi/navigate-to-custom-page-examples.md
-        - name: Use Power Fx in a custom page
-          href: ./model-driven-apps/page-powerfx-in-model-app.md
-        - name: Add canvas components to a custom page
-          href: ./model-driven-apps/page-canvas-components.md   
-        - name: Add code components to a custom page
-          href: ./model-driven-apps/page-code-components.md     
-        - name: Add connectors to a custom page
-          href: ./model-driven-apps/page-data-connectors.md
-        - name: Known issues with custom pages
-          href: ./model-driven-apps/model-app-page-issues.md
-        - name: Use monitor to troubleshoot custom pages
-          href: ./model-driven-apps/monitor-page-checker.md
       - name: Use the classic designers
         items:
         - name: Create your first classic app

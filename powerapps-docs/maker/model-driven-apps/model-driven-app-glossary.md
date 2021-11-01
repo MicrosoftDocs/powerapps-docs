@@ -274,9 +274,11 @@ Also know as the App Monitor.  It allows us to understand aspects of the perform
 
 ## Page
 
-Modern apps contain the concept of pages, which can be either model driven apps or a canvas based page which allows flexible layout, low-code Fx functions, and Power Apps connector data.
+Modern apps contain the concept of pages, which can be either model driven apps or a canvas based page which allows flexible layout, low-code Power Fx functions, and Power Apps connector data.
 
 It is a simpler tool for enabling model-driven apps and canvas apps to live together.
+
+[Working with custom pages](model-app-page-overview.md)
 
 [Learn about creating modern apps](app-designer-overview.md)
 
@@ -326,7 +328,7 @@ Model driven apps often contain tables with relationships between them.  Where r
 
 ## Responsive Apps
 
-An app that is **responsive** will render itself in a way that depends on the nature of the device that is accessing the app.  This may even mean that depending on the device there may even be different controls (e.g. a date picker) whether the user is consuming the app on a computer, tablet or mobile. 
+An app that is **responsive** will render itself in a way that depends on the nature of the device that is accessing the app.  This may even mean that depending on the device there may even be different controls (e.g. a date picker) whether the user is consuming the app on a computer, tablet or mobile.
 
 Additionally, tables and fields will render themselves according to size of the device being used.
 
