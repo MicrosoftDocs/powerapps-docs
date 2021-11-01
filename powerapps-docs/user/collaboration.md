@@ -25,10 +25,8 @@ search.app:
 Collaborate with colleagues and share links in model-driven Power Apps the same way as in Microsoft Office.
 
 > [!NOTE]
-> This is currently a preview feature.  To enable it, the environment adminstrator needs to turn on the Collaboration feature in environment settings, Features.
-
-> [!NOTE]
-> During the preview preriod, these features are only available in the **Opportunity**, **Account**, **Contact** and **Case** tables that are in customer engagement apps such as [Dynamics 365 Sales](/dynamics365/sales-professional/help-hub.md), [Dynamics 365 Customer Service](/dynamics365/customer-service/help-hub.md) or stand-alone Power Apps.
+> - This is currently a preview feature. Your system administrator needs to turn on the **Collaboration** feature your enviroment. For information, see [Manage feature settings](/power-platform/admin/settings-features).
+> - During the preview period, these features are only available in the **Opportunity**, **Account**, **Contact** and **Case** tables that are in customer engagement apps such as [Dynamics 365 Sales](/dynamics365/sales-professional/help-hub.md), [Dynamics 365 Customer Service](/dynamics365/customer-service/help-hub.md) or stand-alone Power Apps.
 
 
 ### Multiplayer apps
@@ -42,7 +40,7 @@ You can also select a user's picture to see their online status, send them an em
 
 ### View a user's status and picture
 
-App users, such as the record owner, are displayed with their picture and on-line status.
+App users, such as the record owner, are displayed with their picture and online status.
 
 > [!div class="mx-imgBorder"]
 > ![VView a user's online status.](media/collob-2.png "View a user's online status")
@@ -51,9 +49,9 @@ App users, such as the record owner, are displayed with their picture and on-lin
 > This feature will be extended to user lookups and grid user columns. 
 
 
-### Sharing 
+### Share 
 
-Easily share direct links, by clicking on the **Share** button. Select **Copy link** and then paste it in another app to share the link. 
+Easily share direct links, by selecting  **Share** > **Copy link** and then paste it in another app to share the link. 
 
 > [!div class="mx-imgBorder"]
 > ![Share row information with soneone else.](media/collob-2.png "Share row information with soneone else")
