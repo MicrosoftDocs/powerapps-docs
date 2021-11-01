@@ -6,15 +6,16 @@ metadata:
   ms.service: powerapps
   ms.topic: conceptual
   ms.custom: 
-  ms.date: 04/27/2021
+  ms.date: 09/13/2021
   ms.author: sandhan
-  ms.reviewer: tapanm
+  ms.reviewer: ndoelman
   contributors:
     - neerajnandwana-msft
-    - tapanm-msft
+    - nickdoelman
     - GitanjaliSingh33msft
     - sandhangitmsft
     - dileepsinghmicrosoft
+    - nageshbhat-msft
     
 title: Power Apps portals FAQs
 summary: |
@@ -32,7 +33,28 @@ sections:
           Does Power Apps portals support TLS 1.2?
         answer: |
           Power Apps portals version 8.3 and later supports [TLS 1.2](https://support.microsoft.com/help/4041984/portal-capabilities-for-microsoft-dynamics-365-version-8-3-2-85-releas).
+
+      - question: |
+          Which TLS 1.2 cipher suites are supported by Power Apps portals?
+        answer: |
+          Power Apps portals supports the following TLS 1.2 cipher suites as per [Microsoft Security Policy](/compliance/assurance/assurance-governance#how-do-microsoft-online-services-implement-the-microsoft-security-policy-msp) to account for multiple clients support. Strongest cipher suites are at the top of the list. This ensures the clients always use the strongest cipher suite that they support from this list while connecting to portals.
+
+          - TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+          - TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+          - TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384
+          - TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256
+          - TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA
+          - TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA
+          - TLS_RSA_WITH_AES_256_GCM_SHA384
+          - TLS_RSA_WITH_AES_128_GCM_SHA256
+          - TLS_RSA_WITH_AES_256_CBC_SHA256
+          - TLS_RSA_WITH_AES_128_CBC_SHA256
+          - TLS_RSA_WITH_AES_256_CBC_SHA
+          - TLS_RSA_WITH_AES_128_CBC_SHA
           
+          > [!NOTE]
+          > You can control the cipher suites when configuring [Azure Front Door with portals](azure-front-door.md) for edge caching and Web Application Firewall (WAF) capabilities. In that case, ensure you only use the [cipher suites supported by Azure Front Door](/azure/frontdoor/front-door-faq#what-are-the-current-cipher-suites-supported-by-azure-front-door-). Also, while [custom domain HTTPS settings using Azure portal](/azure/frontdoor/front-door-faq#can-i-configure-tls-policy-to-control-tls-protocol-versions-) allows you to choose a [default minimum](/azure/frontdoor/front-door-faq#what-tls-versions-are-supported-by-azure-front-door-) TLS version between 1.0 and 1.2, use TLS version 1.2 for strong ciphers. 
+
       - question: |
           How do I redirect a user to a default page after signing in?
         answer: |
@@ -78,7 +100,12 @@ sections:
           For details about licensing of internal users, go to [Portal Licensing FAQ](/power-platform/admin/powerapps-flow-licensing-faq#can-you-share-more-details-regarding-the-new-power-apps-portals-licensing). 
           
           For details about use rights to portals for internal users, go to FAQ [use rights to portals for internal users](/power-platform/admin/powerapps-flow-licensing-faq#can-you-clarify-the-use-rights-to-portals-for-internal-users) and [Licensing Guide](https://go.microsoft.com/fwlink/?linkid=2085130) section **Power Apps Portals – Use rights for Internal users**.
-          
+
+      - question: |
+          Are the guest users treated as internal users for licensing?
+        answer: |  
+          No. Guest users added for [B2B collaboration](/azure/active-directory/b2b/add-users-administrator) in the Azure Active Directory won't be considered as internal users, and will require logins. For more information about portal login licensing model, go to the [Licensing Guide](https://go.microsoft.com/fwlink/?linkid=2085130) section **Per login model**.
+
   - name: Dataverse environment lifecycle
     questions:
       - question: |
@@ -150,9 +177,6 @@ sections:
           Yes. Power Apps portals uses out of the box portal's static assets from Azure CDN that includes default JavaScript and CSS files for presentation that earlier rendered as part of the portal app. You must allow-list the following CDN URL to render portals successfully:
           
           `https://content.powerapps.com/resource/powerappsportal`
-          
-          > [!NOTE]
-          > Power Apps portals hosted in Microsoft Government Cloud don't use CDN.
           
       - question: |
           How do I use a custom login provider on my portal?

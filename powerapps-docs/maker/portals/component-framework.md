@@ -1,5 +1,5 @@
 ---
-title: Use code components in portals (Preview)
+title: Use code components in portals (preview)
 description: Learn about creating code components for model-driven and canvas apps using Power Apps component framework inside Power Apps portals.
 author: sandhangitmsft
 ms.service: powerapps
@@ -8,14 +8,14 @@ ms.custom:
 ms.date: 04/21/2021
 ms.subservice: portals
 ms.author: nenandw
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
-  - tapanm-msft
+  - nickdoelman
   - sandhangitmsft
   - HemantGaur
 ---
 
-# Use code components in portals (Preview)
+# Use code components in portals (preview)
 
 [This article is pre-release documentation and is subject to change.]
 

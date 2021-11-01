@@ -5,7 +5,7 @@ author: joel-lindstrom
 ms.service: powerapps
 ms.topic: article
 ms.custom: canvas
-ms.reviewer:
+ms.reviewer: tapanm
 ms.date: 08/31/2021
 ms.subservice: canvas-maker
 ms.author: emcoope
@@ -23,6 +23,9 @@ contributors:
 Microsoft Power BI is a powerful analysis and visualization tool. Power Apps is great at enabling people to take action on the web and mobile. Canvas apps created using Power Apps can be embedded in a Power BI report. Similarly, a Power BI report tile can be added to a canvas app. The best of both worlds can be achieved at the same place and same time.
 
 In this example, we'll create a quick Power BI report and a canvas app, and then see how we can add the report as a tile in the app.
+
+Watch this video to learn how to create a canvas app with Power BI visual:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLj3t]
 
 ## Prerequisites
 

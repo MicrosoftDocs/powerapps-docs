@@ -2,7 +2,7 @@
 title: "Use Office365 authentication with Microsoft Dataverse (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Describes deprecation of the WS-Trust security protocol and the code changes required in applications that use Office365 authentication."
 ms.custom: ""
-ms.date: 08/29/2021
+ms.date: 09/20/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -83,7 +83,7 @@ the recommended connection interface for authentication with Dataverse.
 
         This will be your fastest way to update the code. Note that LoginPrompt can be set to “never” to simulate the way that the Office365 behavior worked.
 
-        The AppId and RedirectUri provided above are examples of working application registration values. These values work everywhere our online services are deployed. However, they are provided here as examples and you are encouraged to create your own application registration in Azure Active Directory (Azure AD) for applications running in your tenant.<p/>
+        The AppId and RedirectUri provided above are examples of working application registration values. These values work everywhere our online services are deployed. However, they are provided here as examples and you are encouraged to [create your own application registration](walkthrough-register-app-azure-active-directory.md) in Azure Active Directory (Azure AD) for applications running in your tenant. Use your Username, Password, and Dataverse environment URL values in the connection string along with the RedirectUri and AppId you obtain from your Azure app registration.<p/>
 
     - When we announce it, update to the latest [Microsoft.CrmSdk.XrmTooling.CoreAssembly](https://www.nuget.org/packages/Microsoft.CrmSdk.XrmTooling.CoreAssembly/) NuGet package that includes auto redirect support. This library will redirect an authentication type of Office365 to OAuth and use the example AppId and Redirect URI automatically. This capability is planned for the 9.2.x version of the Microsoft.CrmSdk.XrmTooling.CoreAssembly package.
 
@@ -99,5 +99,9 @@ To do this, you must first register the application user (Service Principal) in 
 
 We will be monitoring the Power Apps ALM and ProDev community [forums](https://powerusers.microsoft.com/t5/Power-Apps-Component-Framework/bd-p/pa_component_framework). Please take a look there to get help on how to solve various issues or post a
 question.
+
+### See Also
+
+[Use connection strings in XRM tooling to connect to Microsoft Dataverse](xrm-tooling/use-connection-strings-xrm-tooling-connect.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

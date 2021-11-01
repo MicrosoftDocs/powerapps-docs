@@ -1,5 +1,5 @@
-|Error values|Error name and message|
-|---|---|
+| Error values | Error name and message |
+| --- | --- |
 |0x80072559<br />-2147015335|Name: **AADError**<br />Message: Error from AAD|
 |0x80048350<br />-2147187888|Name: **AadGroupTeamsCanOnlyAssignInheritableRoles**<br />Message: Cannot assign security role with "Team Privileges only" Inheritance to AAD Group or Office Group teams. (TeamId = {0})|
 |0x80048405<br />-2147187707|Name: **AccessDenied**<br />Message: Access is denied.|
@@ -139,6 +139,7 @@
 |0x80050221<br />-2147155423|Name: **AttributeTypeNotSupportedForCalculatedField**<br />Message: Calculated/RollUp Field is not supported for MultiSelectPicklist Attribute Type.|
 |0x80050224<br />-2147155420|Name: **AttributeTypeNotSupportedForGroupByOrderByQuery**<br />Message: GroupBy or OrderBy Query is not supported for MultiSelectPickList Attribute Type.|
 |0x80060463<br />-2147089309|Name: **AttributeUpdateNotAllowed**<br />Message: The Business Process Flow update has failed. The update of attribute "{0}" in workflow "{1}" is not allowed.|
+|0x8005F1FE<br />-2147094018|Name: **AudioCaptureFailed**<br />Message: Audio capture have failed.|
 |0x8004D228<br />-2147167704|Name: **AuthenticateToServerBeforeRequestingProxy**<br />Message: Authenticate to serverType: {0} before requesting a proxy.|
 |0x80091042<br />-2146889662|Name: **AutoDataCaptureAuthorizationFailureException**<br />Message: You don’t have the proper Office 365 license to get untracked emails. Please contact your system administrator.|
 |0x80091041<br />-2146889663|Name: **AutoDataCaptureDisabledError**<br />Message: Auto capture feature is not enabled.|
@@ -158,6 +159,7 @@
 |0x8004A102<br />-2147180286|Name: **BadAuthTicket**<br />Message: The ticket specified for authentication is invalid|
 |0x80090435<br />-2146892747|Name: **BadLinkedAttributeOptionSetId**<br />Message: Invalid option set id found in linked attribute {0} of entity {1}.|
 |0x8005F100<br />-2147094272|Name: **BadRequest**<br />Message: The request could not be understood by the server.|
+|0x8005F1FD<br />-2147094019|Name: **BarCodeCaptureFailed**<br />Message: Barcode capture have failed.|
 |0x80044240<br />-2147204544|Name: **BaseAttributeNameNotPresentError**<br />Message: BaseAttribute name should be present in condition xml.|
 |0x80048cf4<br />-2147185420|Name: **BaseCurrencyCannotBeDeactivated**<br />Message: The base currency cannot be deactivated.|
 |0x80048cff<br />-2147185409|Name: **BaseCurrencyNotDeletable**<br />Message: The base currency of an organization cannot be deleted.|
@@ -516,7 +518,7 @@
 |0x8004F851<br />-2147157935|Name: **CannotEditActiveRule**<br />Message: You can not edit an active routing rule. Deactivate the rule to delete it.|
 |0x8004F860<br />-2147157920|Name: **CannotEditActiveSla**<br />Message: You can't delete active SLA .Please deactivate the SLA to delete or Contact your system administrator.|
 |0x80048421<br />-2147187679|Name: **CannotEnableDuplicateDetection**<br />Message: Duplicate detection cannot be enabled because one or more rules are being published.|
-|0x80060302<br />-2147089662|Name: **CannotEnableEntityForRelevanceSearch**<br />Message: Entity {0} can’t be enabled for relevance search because of the configuration of its managed properties.|
+|0x80060302<br />-2147089662|Name: **CannotEnableEntityForRelevanceSearch**<br />Message: Entity {0} can’t be enabled for Dataverse search because of the configuration of its managed properties.|
 |0x8004027c<br />-2147220868|Name: **CannotExceedFilterLimit**<br />Message: Cannot exceed synchronization filter limit.|
 |0x8004852C<br />-2147187412|Name: **CannotExecuteRequestBecauseHttpsIsRequired**<br />Message: HTTPS protocol is required for this type of request, please enable HTTPS protocol and try again.|
 |0x8004F847<br />-2147157945|Name: **CannotExportRuleOnAnyEntityRoutingRuleFCBOff**<br />Message: Unable to export routing rule set record for entities (except case entity) as the feature control bit for entity records routing is disabled.|
@@ -1309,7 +1311,7 @@
 |0x800608C1<br />-2147088191|Name: **ExportToXlsxFeatureNotEnabled**<br />Message: Export to excel file feature is not enabled.|
 |0x80060004<br />-2147090428|Name: **ExpressionNotSupportedForEditor**<br />Message: Rule contain an expression that is not supported by the editor.|
 |0x80046F8F<br />-2147192945|Name: **ExternalNameExists**<br />Message: An entity with the specified name already exists for data source - {0}. Please specify a new external name.|
-|0x80060300<br />-2147089664|Name: **ExternalSearchAttributeLimitExceeded**<br />Message: The maximum number of indexed fields has been reached. Update the Relevance Search configuration to reduce the total number of indexed fields {1} below {0}.|
+|0x80060300<br />-2147089664|Name: **ExternalSearchAttributeLimitExceeded**<br />Message: The maximum number of indexed fields has been reached. Update the Dataverse search configuration to reduce the total number of indexed fields {1} below {0}.|
 |0x80040316<br />-2147220714|Name: **ExtraPartyInformation**<br />Message: Extra party information should not be provided for this operation.|
 |0x80055007<br />-2147135481|Name: **FailedToAddSLADependency**<br />Message: Failed to add SLA dependency on ApplicableFrom attribute because attribute is not found in applicable entity metadata. Please contact your system administrator.|
 |0x80048411<br />-2147187695|Name: **FailedToAquireLock**<br />Message: PluginSqlLockManager failed to acquire lock|
@@ -1385,6 +1387,7 @@
 |0x8005E211<br />-2147098095|Name: **ForwardMailboxEmailAddressRequired**<br />Message: An e-mail address is a required field in case of forward mailbox.|
 |0x8005E212<br />-2147098094|Name: **ForwardMailboxUnexpectedIncomingDeliveryMethod**<br />Message: Forward mailbox incoming delivery method can only be none or router.|
 |0x8005E213<br />-2147098093|Name: **ForwardMailboxUnexpectedOutgoingDeliveryMethod**<br />Message: Forward mailbox outgoing delivery method can only be none.|
+|0x8005F1FC<br />-2147094020|Name: **GetGeoLocationFailed**<br />Message: Get geo location have failed.|
 |0x80041d37<br />-2147214025|Name: **GenericActiveDirectoryError**<br />Message: Active Directory Error.|
 |0x80041d54<br />-2147213996|Name: **GenericAzureActiveDirectoryError**<br />Message: Azure Active Directory Error.|
 |0x80060752<br />-2147088558|Name: **GenericImportTranslationsError**<br />Message: Errors were encountered while processing the translations import file.|
@@ -2413,6 +2416,7 @@
 |0x80040334<br />-2147220684|Name: **OperationCanBeCalledOnlyOnce**<br />Message: The specified action can be done only one time.|
 |0x80060912<br />-2147088110|Name: **OperationCanceled**<br />Message: Refresh was canceled by user.|
 |0x80154B53<br />-2146088109|Name: **OperationFailedTryAgain**<br />Message: Operation could not be performed at the moment. Please try again.|
+|0x8005F1FF<br />-2147094017|Name: **OperationIsNotSupportedOnThisDevice**<br />Message: Operation is not supported on this device.|
 |0x8004D23a<br />-2147167686|Name: **OperationOrganizationNotFullyDisabled**<br />Message: The {1} operation failed because organization {0} is not fully disabled yet.  Use FORCE to override|
 |0x80072008<br />-2147016696|Name: **OperationReservedForSolutionAwareEntities**<br />Message: This operation is reserved for solution-aware entities only.|
 |0x80044241<br />-2147204543|Name: **OperatorCodeNotPresentError**<br />Message: OperatorCode should be present in condition xml.|
@@ -3732,6 +3736,7 @@
 |0x80048542<br />-2147187390|Name: **VersionedRowNotFoundInTempDB**<br />Message: Required versioned row was not found in TempDB; the TempDB is likely out of space; try again at a later time.|
 |0x8004B020<br />-2147176416|Name: **VersionMismatch**<br />Message: Unsupported version - This is {0} version {1}, but version {2} was requested.|
 |0x80048491<br />-2147187567|Name: **VeryLargeFileInZipImport**<br />Message: One of the files in the compressed (.zip) or .cab file that you're trying to import exceeds the size limit.|
+|0x8005F1FF<br />-2147094017|Name: **VideoCaptureFailed**<br />Message: Video capture have failed.|
 |0x80071130<br />-2147020496|Name: **ViewConditionTypeNotSupportedOffline**<br />Message: The condition {0} is not supported.|
 |0x80048838<br />-2147186632|Name: **ViewForDuplicateDetectionNotDefined**<br />Message: Required view for viewing duplicates of an entity not defined.|
 |0x80160047<br />-2146041785|Name: **ViewIdEmptyOrNull**<br />Message: View Id is null or empty. More Details:{0}|

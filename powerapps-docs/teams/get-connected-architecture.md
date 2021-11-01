@@ -1,5 +1,5 @@
 ---
-title: Understand Get connected sample app architecture (Preview) | Microsoft Docs
+title: Understand Get connected sample app architecture (preview) | Microsoft Docs
 description: Learn about the architecture of the Get connected sample app.
 author: joel-lindstrom
 ms.service: powerapps
@@ -14,7 +14,7 @@ contributors:
     - joel-lindstrom
 ---
 
-# Understand Get connected sample app architecture (Preview)
+# Understand Get connected sample app architecture (preview)
 
 [This article is pre-release documentation and is subject to change.]
 
@@ -24,10 +24,6 @@ In this article, you'll learn about the collections and global variables used by
 - Architecture model of the Get connected solution.
 - List of all collections and variables used.
 - Detailed breakdown of each functionality.
-
-> [!IMPORTANT]
-> - This is a preview feature.
-> - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so  that customers can get early access and provide feedback.
 
 ## Prerequisites
 
@@ -486,7 +482,7 @@ The following variables are used in the about screen:
 
 ### See also
 
-- [Use Get connected sample app (Preview)](get-connected.md)
+- [Use Get connected sample app (preview)](get-connected.md)
 - [Customize sample apps](customize-sample-apps.md)
 - [Sample apps FAQs](sample-apps-faqs.md)
 - [Use sample apps from the Microsoft Teams store](use-sample-apps-from-teams-store.md)

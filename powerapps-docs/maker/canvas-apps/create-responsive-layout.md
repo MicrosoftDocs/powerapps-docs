@@ -236,7 +236,7 @@ You can adjust your layout based on the size of the device. The screen's **Size*
 
 Use these sizes to make decisions about your app's layout. For example, if you want a control to be hidden on a phone-sized device but visible otherwise, you could set the control's **Visible** property to this formula:
 
-`Parent.Size >= ScreenSize.Medium`
+`Parent.Width >= ScreenSize.Medium`
 
 This formula evaluates to **true** when the size is medium or larger and **false** otherwise.
 
@@ -244,7 +244,7 @@ If you want a control to occupy a different fraction of the screen width based o
 
 ```powerapps-dot
 Parent.Width *  
-    Switch(Parent.Size,  
+    Switch(Parent.Width,  
         ScreenSize.Small, 0.5,  
         ScreenSize.Medium, 0.3,  
         0.25)
