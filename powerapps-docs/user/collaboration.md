@@ -37,7 +37,7 @@ When you're working on a record such as an **Opportunity**, **Account**, **Conta
 You can also select a user's picture to see their online status, send them an email, or start a Teams chat.
 
 > [!div class="mx-imgBorder"]
-> ![](media/collob-1.png "")
+> ![View a user's online status.](media/collob-1.png "View a user's online status")
 
 
 ### View a user's status and picture
@@ -45,7 +45,7 @@ You can also select a user's picture to see their online status, send them an em
 App users, such as the record owner, are displayed with their picture and on-line status.
 
 > [!div class="mx-imgBorder"]
-> ![](media/collob-2.png "")
+> ![VView a user's online status.](media/collob-2.png "View a user's online status")
 
 > [!NOTE]
 > This feature will be extended to user lookups and grid user columns. 
@@ -56,7 +56,7 @@ App users, such as the record owner, are displayed with their picture and on-lin
 Easily share direct links, by clicking on the **Share** button. Select **Copy link** and then paste it in another app to share the link. 
 
 > [!div class="mx-imgBorder"]
-> ![](media/collob-2.png "")
+> ![Share row information with soneone else.](media/collob-2.png "Share row information with soneone else")
 
 
 
