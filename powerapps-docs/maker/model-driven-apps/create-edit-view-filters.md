@@ -53,7 +53,7 @@ In this topic, you create or edit filters by performing the following tasks:
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
-2. Expand **Dataverse**, select **Tables**, select the table that you want, and then select the **Views** tab.
+2. Expand **Data**, select **Tables**, select the table that you want, and then select the **Views** tab.
 
 3. Select a view to open it. The view properties panel lists existing filters.
 

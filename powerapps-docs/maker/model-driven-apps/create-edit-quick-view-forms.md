@@ -45,7 +45,7 @@ Quick view controls are associated with a lookup column that is included in a fo
   
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
-2. Expand **Dataverse**, select **Tables**, select the table that you want, and then select the **Forms** tab. 
+2. Expand **Data**, select **Tables**, select the table that you want, and then select the **Forms** tab. 
   
 3. On the toolbar, select **Add form** > **Quick View Form**.  
   
@@ -75,7 +75,7 @@ Quick view controls are associated with a lookup column that is included in a fo
   
 1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
-2.  Expand **Dataverse**, select **Tables**, select the table that you want, and then select the **Forms** tab.  
+2.  Expand **Data**, select **Tables**, select the table that you want, and then select the **Forms** tab.  
 
 3. Select a form, which **Type** is **Main**.
 
