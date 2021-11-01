@@ -39,7 +39,8 @@ In the example shown we can see the module that relates to a given lesson within
   
  Quick view controls are associated with a lookup column that is included in a form. If the lookup column value is not set, the quick view control will not be visible. Data in quick view form controls **cannot be edited** and they do not support form scripts.  
   
- Because quick view forms are viewed using a quick view control in a form, they do not include header, footer, or navigation areas. Security roles cannot be assigned to quick view forms and they cannot be activated or deactivated.  
+> [!NOTE]
+>  Because quick view forms are viewed using a quick view control in a form, they do not include header, footer, or navigation areas. Security roles cannot be assigned to quick view forms and they cannot be activated or deactivated. Subgrids inside quick view forms will also not display a command bar.
   
 <a name="BKMK_CreateQFV"></a>
 

@@ -401,6 +401,8 @@
                 href: ./canvas-apps/geospatial-map-infocards.md
               - name: Draw and insert shapes onto maps
                 href: ./canvas-apps/geospatial-map-draw-shapes.md
+              - name: Insert waypoints as map pins and draw routes between them (preview)
+                href: ./canvas-apps/geospatial-map-routing.md
             - name: Use address lookup
               href: ./canvas-apps/geospatial-component-input-address.md
           - name: Add Power BI data
@@ -959,6 +961,8 @@
             href: ./canvas-apps/accessible-apps.md
           - name: Create a logical app structure
             href: ./canvas-apps/accessible-apps-structure.md
+          - name: Use improved canvas keyboard navigation (experimental)
+            href: ./canvas-apps/accessibility-keyboard-navigation.md
           - name: Use color for accessibility
             href: ./canvas-apps/accessible-apps-color.md
           - name: Show or hide content from assistive technologies
@@ -1678,6 +1682,8 @@
               href: ./portals/admin/import-metadata-translation.md
             - name: Set up Power BI integration
               href: ./portals/admin/set-up-power-bi-integration.md
+        - name: Manage custom certificates
+          href: ./portals/admin/manage-custom-certificates.md              
         - name: Use Portal Checker
           items:
             - name: Run Portal Checker
@@ -1862,18 +1868,26 @@
           items:
           - name: Portals Web API overview
             href: ./portals/web-api-overview.md
-          - name: Perform operations
-            displayName: Portals Web API perform operations
-            href: ./portals/web-api-perform-operations.md
+          - name: Perform Read operations (preview)
+            displayName: Portals Web API read operations
+            href: ./portals/read-operations.md                    
+          - name: Perform Write, Update, Delete operations
+            displayName: Portals Web API write, update and delete operations
+            href: ./portals/write-update-delete-operations.md        
           - name: Compose HTTP requests and handle errors
             displayName: Portals Web API handle HTTP requests and errors
             href: ./portals/web-api-http-requests-handle-errors.md
+          - name: "Tutorial: Use the portals Web API"
+            displayName: Tutorial on how to use the portal Web API
+            href: ./portals/webapi-tutorial.md            
         - name: Code components (preview)
           items:
           - name: Overview of code components in portals
             href: ./portals/component-framework.md          
           - name: "Tutorial: Use code components in portals"
             href: ./portals/component-framework-tutorial.md            
+          - name: Use code components Liquid template tag
+            href: ./portals/component-framework-liquid.md           
         - name: Use Microsoft Power Platform CLI
           items:
           - name: Overview of portals support for Microsoft Power Platform CLI 
@@ -2524,6 +2538,15 @@
           href: ../teams/sample-apps-faqs.md
     - name: Known issues and limitations
       href: ../teams/known-issues-limitations.md
+  - name: Migrate Access data to Dataverse for Teams (preview)
+    href: ../teams/migrate-access-to-dvft.md
+- name: Access migration (preview)
+  href: ./data-platform/migrate-access-to-dataverse.md
+  items:
+  - name: Data types and sizes for Access migration
+    href: ./data-platform/migrate-access-datatypes.md
+  - name: System columns and tables in Dataverse
+    href: ./data-platform/access-migrate-linked-tables.md
 - name: Chatbots
   href: ../chatbots.md
 

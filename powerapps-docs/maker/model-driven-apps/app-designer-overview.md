@@ -2,7 +2,7 @@
 title: "Overview of the model-driven app designer | MicrosoftDocs"
 description: Learn about the app designer for model-driven apps.
 ms.custom: ""
-ms.date: 06/17/2021
+ms.date: 10/26/2021
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -61,7 +61,17 @@ The app designer interface has the following areas:
 7. Fit to screen - Quick action to fit the app preview to the available screen size.
 
    :::image type="content" source="media/app-designer-layout.png" alt-text="Layout of the model-driven app designer that has the account and contact tables added.":::
- 
+
+## Navigation pane options
+
+From the **Navigation** pane, select **Navigation bar** to set the following options.
+1. **Show Home**. Enabled by default. When selected, displays the **Home** page link for the app.
+1. **Show Recent**. Enabled by default.When selected, displays the recently viewed pages link. Selecting the link displays all recently viewed pages.
+1. **Show Pinned**. Enabled by default. When selected, displays the pages that have been pinned. App users select the push-pin icon next to a record listed under **Recent** to add it to their pinned rows.
+1. **Enable collapsible groups**. Disabled by default. When selected, subareas displayed under groups in the site map can be expanded or collapsed.
+
+   :::image type="content" source="media/navigation-pane-options.png" alt-text="Options available for app navigation":::
+
 ## Known limitations
 
 - You can’t add the following model-driven app components:

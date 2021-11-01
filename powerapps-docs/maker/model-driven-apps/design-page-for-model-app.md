@@ -13,7 +13,7 @@ manager: "kvivek"
 search.audienceType: 
   - maker
 search.app: 
-  - "PowerApps"
+  - PowerApps
   - D365CE
 ---
 # Design a custom page for your model-driven app (preview)
@@ -42,14 +42,14 @@ Custom page authoring currently supports a subset of canvas app controls. The ta
   |Radio Group<sup>1</sup>|Input|
   |Slider<sup>1</sup>|Input|
   |Rating<sup>1</sup>|Input|
-  |Vertical Container|Layout|New responsive horizontal layout container|
-  |Horizontal Container|Layout|New responsive horizontal layout container|
-  |Rich Text Editor|Input|
-  |Gallery|List|
-  |Icon|Media|
-  |Image|Media|
-  |Edit Form|Input|
-  |Display Form|Input|
+  |[Vertical Container](../canvas-apps/controls/control-vertical-container.md)|Layout|New responsive horizontal layout container|
+  |[Horizontal Container](../canvas-apps/controls/control-horizontal-container.md)|Layout|New responsive horizontal layout container|
+  |[Rich Text Editor](../canvas-apps/controls/control-richtexteditor.md)|Input|
+  |[Gallery](../canvas-apps/controls/control-gallery.md)|List|
+  |[Icon](../canvas-apps/controls/control-shapes-icons.md)|Media|
+  |[Image](../canvas-apps/controls/control-image.md)|Media|
+  |[Edit Form](../canvas-apps/controls/control-form-detail.md)|Input|
+  |[Display Form](../canvas-apps/controls/control-form-detail.md)|Input|
   |Code components|Custom| [Add code components to a custom page](page-code-components.md)|
   |Canvas components|Custom| [Add canvas components to a custom page](page-canvas-components.md)|
   

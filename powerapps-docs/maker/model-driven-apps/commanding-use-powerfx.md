@@ -87,8 +87,15 @@ Self.ThisContext.SelectedItem.'Account Rating'>20
 ## Navigate
 
 > [!NOTE]
-> Currently, the `Navigate` function isn't available to interact with custom pages using Power Fx. See the client API reference to use JavaScript. More information: [navigateTo (Client API reference)](../../developer/model-driven-apps/clientapi/reference/Xrm-Navigation/navigateTo.md)
+> For additional options, see the client API reference to use JavaScript. More information: [navigateTo (Client API reference)](../../developer/model-driven-apps/clientapi/reference/Xrm-Navigation/navigateTo.md)
 
+### Navigate to a custom page
+
+To navigate to a custom canvas page within a model-driven app, pass the page name as the first argument.
+
+```powerappsfl
+Navigate( myCustomPage )
+```
 ### Navigate to the default view of the table
 
 To navigate to the default view of the table, passed table name as the first argument.
