@@ -78,3 +78,7 @@ The app designer interface has the following areas:
 ## Next steps
 
 [Create a model-driven app using the app designer](create-model-driven-app.md)
+
+[Working with custom pages](model-app-page-overview.md)
+
+[Understanding app navigation](app-navigation.md)
