@@ -9,7 +9,7 @@ author: Joel-Lindstrom
 ms.author: matp
 ms.reviewer: matp
 ---
-# Create and edit public model-driven app views
+# Create and edit public or system views
 
 Model-driven apps can contain a range of views, so that app users can see the most suitably presented and filtered version of the table that they are investigating.  Views can be **Personal**, **System** or **Public**.
 
@@ -27,20 +27,17 @@ Public views are available to users as when reviewing a table.  App makers can c
 > [!NOTE]
 > Public views created in Power Apps that include **Contains data** or **Does not contain data** filters will not appear in the list of saved views in Advanced Find.
 
-1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-1. Select **Solutions** in the left navigation.
-
-1. Create a new solution by selecting **New solution** or select **edit** in the ellipses (**...**) menu of an existing solution. For more  information on creating a model-driven app see:
-   - [Create a model driven app](create-model-driven-app.md)
-   - [Add a table to a solution](../data-platform/data-platform-create-entity)
-
-From within the solution there are two ways to edit views. *App Designer* and Tables
-
 ## Edit public views through tables
 
 In the solution that we opened earlier create a new table or find an existing table that where the public views need to be edited.
 
-1. Expand **Data**, select **Tables**, select the table required, and then select the **Views** tab.
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. Select an [environment](model-driven-app-glossary.md#environment)
+
+   > [!NOTE]
+   > It is best practice to create an tables inside solutions.  Click [here](model-driven-app-glossary.md#solution) to learn more about them and how they help with application lifecycle management
+
+1. Expand **Data**, select **Tables**, select the table required, and then select the **Views** tab.  If using a solution select the solution, then **tables** and **views**.
 1. On the toolbar, select **Add view**.
 :::image type="content" source="media/add-view.png" alt-text="Add view to table":::
 1. On the **Create a view** dialog box, enter a name and, optionally, a description, and then select **Create**.
@@ -65,10 +62,12 @@ In the solution that we opened earlier create a new table or find an existing ta
     > It is also possible to change column order by clicking on the column header and selecting **Move Right** or **Move Left**.
 2. Select **Publish** to save the view and make it available for other users in your organization.
 
-## Next steps
+### Next steps
 
-[Configure columns in model-driven app views](choose-and-configure-columns.md)<br />
-[Creating and editing view filters](create-edit-view-filters.md)<br/>
-[Sorting records within views](configure-sorting.md)
+[Learn about sorting within views](configure-sorting.md)
 
+[Learn about filtering views](create-edit-view-filters.md)
 
+[Make views editable using grids](make-grids-lists-editable-custom-control.md)
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]
