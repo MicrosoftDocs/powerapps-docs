@@ -23,7 +23,7 @@ search.app:
 
 # Use custom connectors with the timeline control
 
-Custom connectors is a feature that provides a way for developers to surface information, such as records, within the TimelineWallControl component. It allows for a broader set of scenarios in addition to the existing out-of-box notes, posts, and activities.
+Custom connectors is a feature that provides a way for developers to surface information such as records, external data sources, and so forth, as record entries within the TimelineWallControl component. It allows for a broader set of scenarios in addition to the existing out-of-box notes, posts, and activities.
 
 For information about configuring and using the timeline, see the following topics:
 
@@ -55,7 +55,7 @@ The following functionality isn't available for the custom connectors feature:
 
 The configured web resources aren't formally declared as dependencies to the form. This means that exporting a form won't automatically export the web resources and they'd need to be added to that export manually. In addition, it can be easy to accidentally delete these web resources.
 
-## Develop a Record Source
+## Develop a record source
 
 When developing a record source, make sure to follow these practices:
 
