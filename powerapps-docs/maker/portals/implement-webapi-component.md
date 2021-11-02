@@ -15,11 +15,11 @@ contributors:
  
 ---
 
-# Implement a portal Web API component in portals (preview)
+# Implement a portal Web API component (preview)
 
 [This article is pre-release documentation and is subject to change.]
 
-The following is an example of implementing a code component that uses the portal Web API to perform create, retrieve, update, and delete actions. The component renders four buttons, which can be clicked to invoke different Web API actions. The result of the Web API call is injected into an HTML `div` element at the bottom of the code component.
+The following is an example of implementing a code component that uses the portal Web API to perform create, retrieve, update, and delete actions. The component renders four buttons, which can be clicked to invoke different Web API actions. The result of the Web API call is injected into an HTML `div` element at the bottom of the code component. 
 
 :::image type="content" source="media/implement-webpi-component/webapi-component.png" alt-text="Example component using the portal Web API.":::
 
@@ -30,7 +30,7 @@ The following is an example of implementing a code component that uses the porta
 
 1. You need to enable the site setting to enable the portals Web API for your portal. [Site settings for the Web API](web-api-overview.md#site-settings-for-the-web-api)
 
-    For example, to expose the Web API for the Account table where authenticated users are allowed to perform create, update, and delete operations, the site settings are shown in the following table will need to be configured.
+    For example, to expose the Web API for the account table where authenticated users are allowed to perform create, update, and delete operations, the site settings are shown in the following table will need to be configured.
 
     | Site setting name                 | Site setting value |
     |-|-|
@@ -74,6 +74,7 @@ On successful retrieve of the records, the code component has logic to count how
 
 ### See also
 
+[Liquid template tag for code components](component-framework-liquid.md) <br>
 [Power Apps component framework overview](../../developer/component-framework/overview.md) <br>
 [Create your first component](../../developer/component-framework/implementing-controls-using-typescript.md) <br>
 [Add code components to a field or table in model-driven apps](../../developer/component-framework/add-custom-controls-to-a-field-or-entity.md)<br>

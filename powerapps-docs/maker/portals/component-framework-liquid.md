@@ -124,4 +124,5 @@ See [Allow Read access to the Web Resource table](component-framework-tutorial.m
 [Codecomponent Template tag](liquid/template-tags.md#codecomponent) <br>
 [Power Apps component framework overview](../../developer/component-framework/overview.md) <br>
 [Create your first component](../../developer/component-framework/implementing-controls-using-typescript.md) <br>
-[Add code components to a field or table in model-driven apps](../../developer/component-framework/add-custom-controls-to-a-field-or-entity.md)
+[Add code components to a field or table in model-driven apps](../../developer/component-framework/add-custom-controls-to-a-field-or-entity.md)<br>
+[Implement a portal Web API component](implement-webapi-component.md)
