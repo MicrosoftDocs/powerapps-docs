@@ -76,7 +76,7 @@ When developing a record source, make sure to follow these practices:
 
 ## Solution sample
 
-You can get started with a [custom connectors solution sample](/powerapps-samples/tree/master/model-driven-apps/custom-connectors/SecondaryRecordSource/solution) that has the "SecondaryRecordSource" web resource, which is configured for "Account for Interactive Experiences" and "Account for Multisession Experiences" forms.
+You can get started with a [custom connectors solution sample](https://github.com/microsoft/PowerApps-Samples/tree/master/model-driven-apps/custom-connectors/SecondaryRecordSource/solution) that has the "SecondaryRecordSource" web resource, which is configured for "Account for Interactive Experiences" and "Account for Multisession Experiences" forms.
 
 ### See also
 
