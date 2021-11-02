@@ -23,7 +23,7 @@ search.app:
 
 # Use custom connectors with the timeline control
 
-Custom connectors is a feature that provides a way for developers to surface information such as records, external data sources, and so forth, as record entries within the TimelineWallControl component. It allows for a broader set of scenarios in addition to the existing out-of-box notes, posts, and activities.
+Custom connectors is a feature that provides a way for developers to surface information such as Dataverse table rows, external data sources, and so forth, as records entries within the TimelineWallControl component. It allows for a broader set of scenarios in addition to the existing out-of-box notes, posts, and activities.
 
 For information about configuring and using the timeline, see the following topics:
 
@@ -76,7 +76,7 @@ When developing a record source, make sure to follow these practices:
 
 ## Solution sample
 
-You can get started with a [custom connectors solution sample]() that has the "SecondaryRecordSource" web resource, which is configured for "Account for Interactive Experiences" and "Account for Multisession Experiences" forms.
+You can get started with a [custom connectors solution sample](/powerapps-samples/tree/master/model-driven-apps/custom-connectors/SecondaryRecordSource/solution) that has the "SecondaryRecordSource" web resource, which is configured for "Account for Interactive Experiences" and "Account for Multisession Experiences" forms.
 
 ### See also
 
