@@ -33,7 +33,7 @@ For information about configuring and using the timeline, see the following topi
 
 Records that are configured within custom connectors are a JavaScript web resource that conforms to the IRecordSource interface. The name of a web resource, along with the constructor (name including namespace), and optional JSON web resource path, can be added as a UClientRecordSourcesJSON parameter configuration within FormXML.
 
-```json
+```
 <UClientRecordSourcesJSON>
   {"recordSources": [{
     "name": "new_SecondaryRecordSource", 
