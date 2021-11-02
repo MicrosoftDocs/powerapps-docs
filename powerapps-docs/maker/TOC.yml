@@ -1138,7 +1138,7 @@
         href: ./model-driven-apps/translate-localizable-text.md
     - name: Design the interface
       items:
-      - name: Use the new app designer
+      - name: Use the new app designer (preview)
         href: ./model-driven-apps/app-designer-overview.md
         items: 
         - name: Create an app
