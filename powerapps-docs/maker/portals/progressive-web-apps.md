@@ -5,7 +5,7 @@ author: ankitavish
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/31/2021
+ms.date: 11/2/2021
 ms.subservice: portals
 ms.author: avishwakarma
 ms.reviewer: ndoelman
@@ -21,7 +21,7 @@ contributors:
 > - This is a preview feature.
 > - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 
-You can convert your functional portal as a progressive web app with native app like look & feel using the portal Studio.​
+You can convert your functional portal as a progressive web app with native app-like look & feel using the portal Studio.​
 
 Portals can use Progressive Web App (PWA) technology to provide multi-platform support to create an app that will work on all platforms (android/iOS/windows/chromebooks) and form factors (mobile/desktop/tablet).
 

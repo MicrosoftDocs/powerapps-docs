@@ -5,7 +5,7 @@ author: ankitavish
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/31/2021
+ms.date: 11/2/2021
 ms.subservice: portals
 ms.author: avishwakarma
 ms.reviewer: ndoelman
@@ -56,19 +56,19 @@ You can change the PWA app name, starting page, color, and more using the custom
 1. Select **Customize PWA** under **Customization**.
 
 1. Update following PWA settings for your portal.
-
-| **Setting** | **Description** |
-|-------------------------|-------------------------|
-| Title | Name of the portal's PWA that will show up on the mobile device and in the app store. |
-| Description | Description for the portal's PWA that will show up on the mobile device and in the app store. |
-| Starting page of the app | Start page for the portal when opened through PWA. |
-| Splash screen background | Background color for the splash screen when loading PWA. |
-| App icon | Icon for the app that will show up on the mobile device and in the app store.</br>**Note:** Icon size must be 512x512 pixel. |
-
-:::image type="content" source="media/progressive-web-apps/customize-pwa.png" alt-text="Customizing PWA settings such as title, description, and color." :::
-
-> [!NOTE]
-> After customizing PWA, you need to select **Browse website** to clear cache. This will start reflecting changes instantly.
+    
+    | **Setting** | **Description** |
+    |-------------------------|-------------------------|
+    | Title | Name of the portal's PWA that will show up on the mobile device and in the app store. |
+    | Description | Description for the portal's PWA that will show up on the mobile device and in the app store. |
+    | Starting page of the app | Start page for the portal when opened through PWA. |
+    | Splash screen background | Background color for the splash screen when loading PWA. |
+    | App icon | Icon for the app that will show up on the mobile device and in the app store.</br>**Note:** Icon size must be 512x512 pixel. |
+    
+    :::image type="content" source="media/progressive-web-apps/customize-pwa.png" alt-text="Customizing PWA settings such as title, description, and color." :::
+    
+    > [!NOTE]
+    > After customizing PWA, you need to select **Browse website** to clear cache. This will start reflecting changes instantly.
 
 ## Manage offline behavior
 
