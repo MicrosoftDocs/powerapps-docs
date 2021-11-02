@@ -25,7 +25,7 @@ search.app:
 
 Microsoft is committed to making its products and services easier for everyone. For more information see, [Microsoft accessibility](https://www.microsoft.com/enable/default.aspx)  
 
-This topic describes the accessibility features for **app makers** available with [model-driven-apps](../../includes/cc-model-driven-apps.md).
+This topic describes the accessibility features for **app makers** available with model-driven-apps.
 
 Learn more about [shortcuts for app users.](../../user/keyboard-shortcuts.md)
   

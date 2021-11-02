@@ -78,12 +78,6 @@ landingContent:
             url: embed-canvas-app-in-form.md
           - text: Advanced app making and customization
             url: advanced-navigation.md
-            
-  # Card
-  - title: Modern apps
-    linkLists:
-      - linkListType: how-to-guide
-        links:
 
   # Card
   - title: Apply data visualizations
