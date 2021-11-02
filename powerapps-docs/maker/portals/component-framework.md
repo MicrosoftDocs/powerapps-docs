@@ -148,27 +148,30 @@ After the code component is added to a field in a model-driven app, you can conf
 
 To add a code component to a basic form:
 
-1.  Open [Portal Management](configure/configure-portal.md) app.
+1. Open [Portal Management](configure/configure-portal.md) app.
 
-2.  On the left pane, select **Basic Forms**.
+1. On the left pane, select **Basic Forms**.
 
-3.  Select the basic form to which you want to add the code component.
+1. Select the basic form to which you want to add the code component.
 
-4.  Select **Related**.
+1. Select **Related**.
 
-5.  Select **Basic Form Metadata**.
+1. Select **Basic Form Metadata**.
 
-6.  Select **New Basic Form Metadata**.
+1. Select **New Basic Form Metadata**.
 
-7.  Select **Type** as **Attribute**.
+1. Select **Type** as **Attribute**.
 
-8.  Select **Attribute Logical Unit Name.**
+1. Select **Attribute Logical Unit Name.**
 
-9.  Enter **Label**.
+1. Enter **Label**.
 
-10. For **Control Style**, select **Code Component.**
+1. For **Control Style**, select **Code Component.**
 
-11. Save and close the form.
+1. Save and close the form.
+
+> [!Important]
+> If the basic form *Auto Generate Steps From Tabs* is selected in the **Miscellaneous** section of the **Form Options** tab, the code component will not be loaded for the attribute on the web page.
 
 ## Allow Read access to a Web Resource table
 
