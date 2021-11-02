@@ -1363,6 +1363,8 @@
           href: ./model-driven-apps/set-up-timeline-control.md
         - name: FAQs for the timeline control
           href: ./model-driven-apps/faqs-timeline-control.md
+        - name: Use custom connectors with the timeline control
+          href: ./model-driven-apps/custom-connectors-timeline-control.md
         - name: Quick view control properties
           href: ./model-driven-apps/quick-view-control-properties-legacy.md
         - name: Timer control overview
