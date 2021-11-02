@@ -28,7 +28,7 @@ contributors:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-Azure Synapse Link offers multiple ways to write and read your data to fit various analytical scenarios. 
+Azure Synapse Link offers multiple ways to write and read your data to fit various analytical scenarios.
 
 > [!NOTE]
 > Azure Synapse Link for Dataverse was formerly known as Export to data lake. The service was renamed effective May 2021 and will continue to export data to Azure Data Lake as well as Azure Synapse Analytics.
@@ -37,7 +37,6 @@ This article covers:
 
 1. In-place updates vs. append-only writes
 2. User-specified partition strategy
-3. Transporting the Azure Synapse Link for Dataverse configuration across environments
 
 ## In-place updates vs. append-only writes
 
@@ -76,38 +75,6 @@ Based on the Dataverse table volume and data distribution, you can choose a more
 Additional details with examples of how data is handled in the lake with yearly or monthly partition strategy:
 
 ![Partition Strategy.](media/export-data-lake-partition-strategy.png "Show advanced configuration")
-
-## Transporting the Azure Synapse Link configuration across environments
-
-In Power Apps, solutions are used to transport apps and components from one environment to another, or to apply a set of customizations to existing apps. To make the Azure Synapse Link configurations solution-aware, import the Azure Synapse Link solution into the environment. This enables basic application lifecycle management (ALM) abilities such as distribution, and backup and restore of the Azure Synapse Link configuration.
-
-### Import the solution
-
-1. From the Power Apps maker portal, select the environment where you want to distribute the Azure Synapse Link for Dataverse configuration.
-2. On the leftmost navigation pane, select **Solutions**, select **Open AppSource**, search for the solution named **Export to Data Lake Core**, and then import the solution.
-3. Repeat above steps in the destination environment. You need the **Export to Data Lake Core** solution in both, the source and destination environments.
-
-### Add an Azure Synapse Link configuration to a solution
-
-> [!IMPORTANT]
-> Before you can add an Azure Synapse Link for Dataverse configuration, you must install the Export to Data Lake Core solution described earlier.
-
-1. From the Power Apps maker portal, select the environment where you want to distribute the Azure Synapse Link for Dataverse configuration, and then on the leftmost navigation pane, select **Solutions**.
-2. Select **New solution**, provide a name, select a publisher, and then specify a version number.  
-3. Open the solution you created in the previous step, select **Add existing** > **Other** > **Export to data lake config**.
-4. Select the link configurations that you want, and then select **Add**.
-5. In the **Solutions** area, select the solution, and then on the command bar, select **Export**.
-6. In the **Before you export** pane, select **Publish** to publish all changes before you export, and then select **Next**.
-
-### Import the solution that contains the Azure Synapse Link configuration
-
-In the environment where you want to import your solution, in the Power Apps maker portal **Solutions** area, import the solution.
-
-#### Verify the Azure Synapse Link configuration
-
-From the Power Apps maker portal in the environment where you imported the Export to Data Lake configuration, verify that you can see your linked data lake in addition to the tables that you transported from your other environment.
-
-![Imported Azure Synapse Link for Dataverse tables.](media/imported-export-entities.png "Imported Azure Synapse Link for Dataverse tables")
 
 ### See also
 

@@ -2218,7 +2218,13 @@
     - name: Advanced Configuration Settings
       href: ./data-platform/azure-synapse-link-advanced-configuration.md
     - name: Azure Synapse Link FAQ
-      href: ./data-platform/export-data-lake-faq.yml      
+      href: ./data-platform/export-data-lake-faq.yml
+    - name: Application Lifecycle Management
+      items:
+      - name: Transport a configuration across environments
+        href: ./data-platform/azure-synapse-link-solution.md
+      - name: Environment Lifecycle Events
+        href: ./data-platform/azure-synapse-link-olc.md     
     - name: Analyze with Azure Synapse Analytics
       items:
       - name: Query data with serverless SQL pool
