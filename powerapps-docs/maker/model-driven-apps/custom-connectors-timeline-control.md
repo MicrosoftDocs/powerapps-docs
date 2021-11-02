@@ -2,7 +2,7 @@
 title: Use custom connectors with the timeline in Power Apps | MicrosoftDocs
 description: "Learn how to use custom connectors to bring your own data, such as records, to the timeline in Power Apps."
 ms.custom: ""
-ms.date: 10/27/2021
+ms.date: 11/2/2021
 ms.reviewer: "matp"
 ms.service: powerapps
 ms.suite: ""
@@ -33,7 +33,14 @@ For information about configuring and using the timeline, see the following topi
 
 Records that are configured within custom connectors are a JavaScript web resource that conforms to the IRecordSource interface. The name of a web resource, along with the constructor (name including namespace), and optional JSON web resource path, can be added as a UClientRecordSourcesJSON parameter configuration within FormXML.
 
-```<UClientRecordSourcesJSON>{"recordSources": [{"name": "new_SecondaryRecordSource", "constructor": "SampleNamespace.SecondaryRecordSource"}]}</UClientRecordSourcesJSON>```
+```
+<UClientRecordSourcesJSON>
+  {"recordSources": [{
+    "name": "new_SecondaryRecordSource", 
+    "constructor": "SampleNamespace.SecondaryRecordSource"}]
+  }
+</UClientRecordSourcesJSON>
+```
 
 TimelineWallControl is expected to load the JavaScript web resource and then create the instance of IRecordSource from the configured constructor.
 
