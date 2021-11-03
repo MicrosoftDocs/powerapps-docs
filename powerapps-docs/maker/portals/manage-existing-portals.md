@@ -94,18 +94,25 @@ Your portal should work anonymously and should be accessible by the external use
 
 ## Settings
 
-Displays the portal settings and allows you to change the name of the portal. You can also do advanced actions such as administering the portal though the Power Apps portals admin center and working with site settings. Settings provide links to the Power Apps portals admin center and Site settings. More information: [Advanced portal administration](admin/admin-overview.md) and [Configure site settings](configure/configure-site-settings.md).  
+Displays the portal settings and allows you to change the name of the portal. You can also go to setup licensing for your portal as well as advanced actions such as administering the portal though the Power Apps portals admin center and working with site settings. 
 
-![portal settings.](media/portal-settings.png "Portal settings")  
+:::image type="content" source="media/portal-settings.png" alt-text="Portal settings.":::  
 
-## Licensing
+### Licensing
 
 For production portals you will see **Licencing for internal users** and **Licencing for external users** section in the portal's settings panel based on your environment licensing setup. Learn more about [Power Apps per app plans](/power-platform/admin/about-powerapps-perapp) and [Pay-as-you-go](/power-platform/admin/pay-as-you-go-set-up#in-power-apps).
 
-:::image type="content" source="media/internaluser-licensing.png" alt-text="Portal licensing settings.":::
-
 > [!Note]
 > **Licensing for internal users** and **Licensing for external users** sections are not visible in portal settings panel when you open it from the portal's detail page tool bar **Settings** item.
+
+### Advanced Options
+
+The advanced options section provides links to configure authentication, go to the Power Apps portals center, and configure Site settings.
+
+More information:<br>
+[Overview of authentication in Power Apps portals](configure/configure-portal-authentication.md)<br>
+[Advanced portal administration](admin/admin-overview.md)<br>
+[Configure site settings](configure/configure-site-settings.md)
 
 ## Delete
 

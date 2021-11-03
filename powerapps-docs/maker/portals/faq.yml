@@ -6,7 +6,7 @@ metadata:
   ms.service: powerapps
   ms.topic: conceptual
   ms.custom: 
-  ms.date: 09/13/2021
+  ms.date: 11/3/2021
   ms.author: sandhan
   ms.reviewer: ndoelman
   contributors:
@@ -101,7 +101,7 @@ sections:
 
           For details about licensing of internal users, go to [Portal Licensing FAQ](/power-platform/admin/powerapps-flow-licensing-faq#can-you-share-more-details-regarding-the-new-power-apps-portals-licensing). 
 
-          For details about licensing of internal users using Pay-as-you-go, go to [Pay-as-you-go Meters](/power-platform/admin/pay-as-you-go-meters#power-apps-per-app-meter).
+          For details about licensing of internal users using Pay-as-you-go, go to [Power Apps per app meter](/power-platform/admin/pay-as-you-go-meters#power-apps-per-app-meter).
           
           For details about use rights to portals for internal users, go to FAQ [use rights to portals for internal users](/power-platform/admin/powerapps-flow-licensing-faq#can-you-clarify-the-use-rights-to-portals-for-internal-users) and [Licensing Guide](https://go.microsoft.com/fwlink/?linkid=2085130) section **Power Apps Portals – Use rights for Internal users**.
 
