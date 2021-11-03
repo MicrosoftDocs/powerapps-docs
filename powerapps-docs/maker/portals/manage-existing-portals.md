@@ -100,14 +100,14 @@ Displays the portal settings and allows you to change the name of the portal. Yo
 
 ### Licensing
 
-For production portals you will see **Licencing for internal users** and **Licencing for external users** section in the portal's settings panel based on your environment licensing setup. Learn more about [Power Apps per app plans](/power-platform/admin/about-powerapps-perapp) and [Pay-as-you-go](/power-platform/admin/pay-as-you-go-set-up#in-power-apps).
+For production portals you will see **Licensing for internal users** and **Licensing for external users** section in the portal's settings panel based on your environment licensing setup. Learn more about [Power Apps per app plans](/power-platform/admin/about-powerapps-perapp) and [Pay-as-you-go](/power-platform/admin/pay-as-you-go-set-up#in-power-apps).
 
 > [!Note]
 > **Licensing for internal users** and **Licensing for external users** sections are not visible in portal settings panel when you open it from the portal's detail page tool bar **Settings** item.
 
 ### Advanced Options
 
-The advanced options section provides links to configure authentication, go to the Power Apps portals center, and configure Site settings.
+The advanced options section provides links to configure authentication, to the Power Apps portals center, and to configure Site settings.
 
 More information:<br>
 [Overview of authentication in Power Apps portals](configure/configure-portal-authentication.md)<br>
