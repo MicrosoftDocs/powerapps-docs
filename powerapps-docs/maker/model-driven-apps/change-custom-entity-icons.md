@@ -80,7 +80,7 @@ The solution explorer is the only approved method of setting table icons.
 
 Once the updates have taken effect the changes can be reviewed by playing the app.  In this case the Courses entity/table has been updated and the icon has changed.  
 
-:::image type="content" source="media/icons-end.png" alt-text="Model-driven apps without icons set":::
+:::image type="content" source="media/icons-end.png" alt-text="Model-driven apps with updated icon set":::
 
 ## Community tools
 

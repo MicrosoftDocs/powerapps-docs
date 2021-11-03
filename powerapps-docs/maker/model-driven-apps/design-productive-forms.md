@@ -49,7 +49,7 @@ A form allows a developer to build around the table data, and often requires tha
 
 ### Use of related data
 
-One of the strengths of model-driven forms is the ease of use with standard (out-of-the-box) controls like lookups, subgrids, and reference panels to quickly view or edit **related** records. Forms also support custom [Power Apps component framework controls](https://docs.microsoft.com/en-us/powerapps/developer/component-framework/overview) to extend functionality beyond the standard controls. Forms primarily support child or secondary data relationships for a record; they don't easily support tertiary or higher-order relationships. For example, if there is an account record that has a one-to-one or one-to-many relationship with contacts, interactions with both the parent and child data can be quickly added with a form by using lookups that interact with other forms, including a main form dialog or embedded forms like a quick view or form component control. Each of these form types will be covered in more detail later in this article.
+One of the strengths of model-driven forms is the ease of use with standard (out-of-the-box) controls like lookups, subgrids, and reference panels to quickly view or edit **related** records. Forms also support custom [Power Apps component framework controls](https://docs.microsoft.com/powerapps/developer/component-framework/overview) to extend functionality beyond the standard controls. Forms primarily support child or secondary data relationships for a record; they don't easily support tertiary or higher-order relationships. For example, if there is an account record that has a one-to-one or one-to-many relationship with contacts, interactions with both the parent and child data can be quickly added with a form by using lookups that interact with other forms, including a main form dialog or embedded forms like a quick view or form component control. Each of these form types will be covered in more detail later in this article.
 
 Working with related data requires configuration, including using a main form dialog to work with related records of the main form dialog or using a custom canvas page. Multiple-entity forms can be created by using main form dialogs or form component controls. However, a main form doesn't directly support tertiary-related records on the main form.
 
@@ -85,7 +85,7 @@ The following scenario demonstrates the best use of a model-driven main form ove
 Imagine a scenario where a salesperson needs to maintain data for an account that also has the following form components:
 
 - A primary contact ([lookup](model-driven-app-glossary.md#lookup)).
-- Additional contacts ([subgrid](model-driven-app-glossary.md#sub-grid)).
+- Additional contacts ([subgrid](model-driven-app-glossary.md#subgrid)).
 - A reference panel where a user can select to see lists of related records with access to read-only views (quick view) in the reference panel. The reference panel includes a a timeline control that's used to quickly access and create activities for that record.
 
 This form is in regular use, so it is worth spending time on the layout to ensure it is simple and efficient to operate.
@@ -204,7 +204,7 @@ When certain components are hidden like the command bar or the tab list, this ma
 
 In this example, the **command bar** has been removed to reduce any unnecessary actions when working with an account. The command bar would ordinarily be shown as follows.
 
-:::image type="content" source="../../developer/model-driven-apps/media/customization-account-grid-command-bar.png" alt-text="Layout for a Unified Interface app.":::
+:::image type="content" source="../../developer/model-driven-apps/media/customization-account-grid-command-bar.png" alt-text="Command bar example layout":::
 
 This form has been designed to not need the command bar, so the maker has removed it to keep the user on task. More information: [setCommandBarVisible (Client API reference)](../../developer/model-driven-apps/clientapi/reference/formContext-ui-headerSection/setCommandBarVisible.md)
 

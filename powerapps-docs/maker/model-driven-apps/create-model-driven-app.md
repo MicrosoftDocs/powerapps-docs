@@ -48,7 +48,7 @@ For more information review the following articles:
 1. Open an unmanaged solution or [create a new solution](../data-platform/create-solution.md)
    > [!NOTE]   
    > Unmanaged solutions can be recognised by the open lock in the **Managed Externally?** column.
-   > :::image type="content" source="media/unmanaged-solutions.png" alt-text="Select the navigation area from the Navigation pane":::
+   > :::image type="content" source="media/unmanaged-solutions.png" alt-text="Viewing solutions within an environment":::
    > Although the **Default Solution** is an unmanaged solution it is in most circumstances not recommmended to edit the default solution.
 1. Select **New** > **App** > **Model-driven app**.
 1. On the **New model-driven app from blank** dialog box, select **Modern app designer**, and then select **Create**. :::image type="content" source="media/new-model-driven-app-from-blank.png" alt-text="New model-driven app from blank":::
@@ -70,7 +70,7 @@ For more information review the following articles:
    > [!NOTE]
    >
    > - A subarea won't appear in the app preview until you add a content type to it.
-   > - By default, all forms and views are included for a table that's added to a page. To remove one or more components, see [Create, add, and remove forms, views, or dashboards](#create-add-and-remove-forms-views-or-dashboards).
+   > - By default, all forms and views are included for a table that's added to a page. To remove one or more components, see [Create, add, and remove forms, views, or dashboards](create-add-remove-forms-views-dashboards.md).
 
 1. On the command bar, select **New page**, select **Table based view and form**, and then select **Next**.
 1. On the **New table view and form pages** dialog box, select **Contact**, leave the **Show in navigation** option selected, and then select **Add**. Note the following: 

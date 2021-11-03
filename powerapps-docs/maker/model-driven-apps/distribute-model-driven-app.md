@@ -77,7 +77,7 @@ On receipt of a solution zip file which contains the app that need to be importe
 
 ## See also
 
-[Learn more about solutions](../maker/data-platform/solutions-overview.md)
+[Learn more about solutions](../../maker/data-platform/solutions-overview.md)
 
 [Change the solution publisher prefix](../data-platform/create-solution.md#solution-publisher)
 
