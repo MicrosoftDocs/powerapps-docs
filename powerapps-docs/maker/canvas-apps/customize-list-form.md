@@ -211,7 +211,7 @@ You can configure the **Price**, **Availability**, and **Colors** fields to appe
 
 | Type of user | Custom form action | License required |
 | - | - | - |
-| Guest | Use | No | - |
+| Guest | Use | No |
 | Guest | Create/Edit | Yes |
 | Organizational user | Use | Yes |
 | Organizational user | Create/Edit | Yes |
