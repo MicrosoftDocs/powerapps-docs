@@ -25,7 +25,7 @@ The following is an example of implementing a code component that uses the porta
 
 ## Prerequisites
 
-- Your portal version must be [9.3.10.x](versions/portalupdate9310x.md) or higher.
+- Your portal version must be [9.3.10.x](/power-platform/released-versions/portals/portalupdate9310x) or higher.
 - Your starter portal package must be [9.2.2103.x](versions/package-version-9.2.2103.md) or higher.
 
 1. You need to enable the site setting to enable the portals Web API for your portal. [Site settings for the Web API](web-api-overview.md#site-settings-for-the-web-api)
