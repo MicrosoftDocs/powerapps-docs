@@ -80,7 +80,7 @@ With an app open for editing in the [Power Apps Studio](https://create.powerapps
     
 4. Select the latest connection of the CGTrader connector.
 
-    :::image type="content" source="media/augmented/mixed-reality-connector-data-source.png" alt-text="Screenshot of the Data Source panel.":::
+    :::image type="content" source="media/augmented/mixed-reality-connector-data-source-2.png" alt-text="Screenshot of the Data Source panel.":::
 
 You can now bind your components to the CGTrader connector actions and browse and load models from CGTrader inside your app.
 
