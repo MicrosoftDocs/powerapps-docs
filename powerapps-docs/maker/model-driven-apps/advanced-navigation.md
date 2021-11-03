@@ -37,29 +37,25 @@ The [solutions](../model-driven-apps/model-driven-app-glossary.md#solution) area
 2. On the top right select the [Environment](../model-driven-apps/model-driven-app-glossary.md#environment) in which your solution is located
 3. On the left navigation pane select **Solutions**.
 
-:::image type="content" source="../../maker/model-driven-apps/media/solution-assets-explorer.png" alt-text="Advanced Settings":::
+:::image type="content" source="../../maker/model-driven-apps/media/solution-assets-explorer.png" alt-text="Reviewing the solution explorer":::
 
 ## Solution explorer
 
 Use solution explorer to perform app making and customization tasks that can’t be completed from the Power Apps home page.
 
-> [!div class="mx-imgBorder"] 
-> ![Solution explorer.](media/model-driven-app-overview/solutionexplorer-entitiescollapsed.png "Solution explorer")
+> [!div class="mx-imgBorder"]
+> ![Solution explorer.](media/model-driven-app-overview/solutionexplorer-entitiescollapsed.png "Classic solution explorer")
 
 1. From a Power Apps model-driven app, select **Settings** ![Settings.](../model-driven-apps/media/powerapps-gear.png) on the app toolbar, and then select **Advanced Settings**.
 
 2. Select **Settings** > **Customizations** > **Customize the System**, and then select the settings area that you want.
 
-:::image type="content" source="../../maker/model-driven-apps/media/settings-areas.png" alt-text="Advanced Settings":::
+:::image type="content" source="../../maker/model-driven-apps/media/settings-areas.png" alt-text="Accessing advanced settings":::
 
 3. Use the settings area to configure environment settings, activate or deactivate processes, and more.
 
-## See also
+## Next steps
 
-[Create or edit a model-driven app by using the app designer](create-edit-app.md)
-
-[Keyboard shortcuts for app users in Power Apps](../../user/keyboard-shortcuts.md)
-
-[Keyboard shortcuts for app designers in Power Apps](../../user/accessibility-app-designer-site-map-designer-my-apps-page.md)
+[Create or edit web resources in model-driven apps](create-edit-web-resources.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

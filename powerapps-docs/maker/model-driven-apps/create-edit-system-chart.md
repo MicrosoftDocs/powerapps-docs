@@ -28,7 +28,8 @@ search.app:
 
 In this article you learn how to create a system chart. System charts are organization-owned charts, which makes them available to anyone with access to read the data running the app. System charts can't be assigned or shared with specific app users.
 
-> [!Note] Model-driven apps not set up to see **all charts** for a given table will need to have newly created charts added to the table within the app.  This is done through the app designer.
+> [!Note]
+> Model-driven apps not set up to see **all charts** for a given table will need to have newly created charts added to the table within the app.  This is done through the app designer.
 
 ## Create a new chart
 
@@ -82,7 +83,8 @@ Use your chart:
 - Refresh the chart to display other data by changing the view.
 - Add the chart to a model-driven app dashboard. More information: [Create or edit model-driven app dashboards](create-edit-dashboards.md)
 
->[!NOTE] If the chart is not visible in the dropdown then the model-driven app has been created with specific charts associated with it.  To resolve this open the model-driven app in design mode, select charts and select your newly created chart.
+>[!NOTE] 
+>If the chart is not visible in the dropdown then the model-driven app has been created with specific charts associated with it.  To resolve this open the model-driven app in design mode, select charts and select your newly created chart.
 > :::image type="content" source="media/add-and-customize-visualizations-in-model-driven apps/add-and-customize-visualizations-in-model-driven-apps-1.png" alt-text="Select Chart from within app":::
 
 ## Known chart creation issues

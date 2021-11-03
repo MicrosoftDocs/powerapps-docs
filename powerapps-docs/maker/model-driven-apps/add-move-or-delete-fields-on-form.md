@@ -111,7 +111,7 @@ You can move a column on a form using drag and drop or cut and paste actions.
 3. Repeat step 2 above if you want to move more columns.
 4. On the command bar, select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to users.
 
-:::image type="content" source="../../maker/model-driven-apps/media/moving-form-columns-drag -and-drop.gif" alt-text="moving-form-columns-drag -and-drop":::
+:::image type="content" source="../../maker/model-driven-apps/media/moving-form-columns-drag -and-drop.gif" alt-text="moving form columns using drag and drop approach":::
 
 ### Move columns on a form using cut and paste
 

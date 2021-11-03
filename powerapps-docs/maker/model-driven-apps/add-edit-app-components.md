@@ -69,7 +69,7 @@ The app designer has two main areas. On the left side is the canvas, where app c
 
 1. Sign in to [Power Apps](https://make.powerapps.com/) and optionally select an environment to work in.
 
-1. Create a new model-driven app or select an existing one. For information about how to create an app, see [Create or edit a model-driven app by using the app designer](create-edit-app.md#create-an-app).
+2. Create a new model-driven app or select an existing one. For information about how to create an app, see [Create or edit a model-driven app by using the app designer](create-edit-app.md).
 
 ## Add or edit a site map
 
@@ -103,19 +103,19 @@ To add a dashboard to an app, follow these steps:
   
      All tables the dashboard uses are also added to the **Entity View** area. For example, when the Customer Service Manager dashboard is added, the **Case**, **Entitlement**, and **Queue Item** tables are added to the **Entity View** area.
 
-     For each table, tiles for its assets are also added. These tiles can be used to add forms, views, and charts. For more information see: [Add or edit app components in the Power Apps app designer](add-edit-app-components.md#bkmk_AddEntityAssets)
+     For each table, tiles for its assets are also added. These tiles can be used to add forms, views, and charts. For more information see: [Add or edit app components in the Power Apps app designer](add-edit-app-components.md#edit-or-remove-components)
   
     > [!div class="mx-imgBorder"]
     > ![Add table to the app designer canvas.](../model-driven-apps/media/add-entity-app-designer-canvas.png "Add a table to the app designer canvas")  
   
-1. If the required dashboard doesn't exist in the default solution then create a dashboard by selecting **Create New** on the **Components** tab to the right of the canvas.  
+2. If the required dashboard doesn't exist in the default solution then create a dashboard by selecting **Create New** on the **Components** tab to the right of the canvas.  
   
      > [!div class="mx-imgBorder"]
      > ![Create New link on the Components tab of app designer.](../model-driven-apps/media/app-designer-components-tab-create-new.png "Create New link on the Components tab of the app designer")  
   
      The dashboard designer opens. For more information see: [Create and edit dashboards](create-edit-dashboards.md)  
   
-1. Complete the above steps by selecting **Save**.
+3. Complete the above steps by selecting **Save**.
 
 ### Add a business process flow
 

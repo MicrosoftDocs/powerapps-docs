@@ -51,7 +51,7 @@ This hierarchical structure is important to enable a good user experience, and t
 
 The same app viewed from within the App designer shows the corresponding areas, groups and tables.  In this case we are looking at tables within the Accounts **Group** and groups within the accounts **Area**.  We can also see that there is another area called **Tasks** that also exists within the app designer.
 
-:::image type="content" source="media/site-map-designer-demo.png" alt-text="simple model-driven app navigation":::
+:::image type="content" source="media/site-map-designer-demo.png" alt-text="Viewing an app from withing the site map designer":::
 
 ## Prerequisites for editing site maps
 
