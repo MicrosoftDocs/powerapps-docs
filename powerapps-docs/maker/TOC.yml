@@ -1398,7 +1398,19 @@
       href: 
       items:
       - name: Reporting Overview
-        href: ./model-driven-apps/reporting-overview.md          
+        href: ./model-driven-apps/reporting-overview.md
+      - name: Apply data visualizations in an app
+        items:
+        - name: Create a system chart
+          href: ./model-driven-apps/create-edit-system-chart.md
+        - name: Create or edit dashboards
+          href: ./model-driven-apps/create-edit-dashboards.md
+        - name: Configure interactive experience dashboards
+          href: ./model-driven-apps/configure-interactive-experience-dashboards.md
+        - name: Set properties for a chart or list
+          href: ./model-driven-apps/set-properties-chart-list-included-dashboard.md
+        - name: Add a Power BI visual to an app
+          href: ./model-driven-apps/add-powerbi-visual.md                  
       - name: Reporting considerations
         href: ./model-driven-apps/reporting-considerations.md
       - name: SQL Server reporting services
@@ -1407,18 +1419,6 @@
         href: ./model-driven-apps/use-power-bi.md
       - name: Create a Power BI embedded dashboard
         href: ./model-driven-apps/create-edit-powerbi-embedded-page.md
-    - name: Apply data visualizations in an app
-      items:
-      - name: Create a system chart
-        href: ./model-driven-apps/create-edit-system-chart.md
-      - name: Create or edit dashboards
-        href: ./model-driven-apps/create-edit-dashboards.md
-      - name: Configure interactive experience dashboards
-        href: ./model-driven-apps/configure-interactive-experience-dashboards.md
-      - name: Set properties for a chart or list
-        href: ./model-driven-apps/set-properties-chart-list-included-dashboard.md
-      - name: Add a Power BI visual to an app
-        href: ./model-driven-apps/add-powerbi-visual.md
     - name: Use Excel and Word templates
       href: ./model-driven-apps/templates-overview.md
     - name: Use themes to apply organization branding

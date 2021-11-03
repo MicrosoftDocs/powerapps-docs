@@ -44,12 +44,9 @@ landingContent:
             url: build-first-model-driven-app.md
           - text: Steps to building a model-driven app
             url: app-building-steps.md
-          
-       - linkListType: concept
-         links:  
-          - text: Create an app site map for navigation
-            url: create-site-map-app.md
-          
+          - text: Building a modern app
+            url: app-designer-overview.md          
+            
   # Card
   - title: Model development
     linkLists:
@@ -79,14 +76,8 @@ landingContent:
             url: https://docs.microsoft.com/en-us/power-automate/business-process-flows-overview
           - text: Embedding canvas apps
             url: embed-canvas-app-in-form.md
-
-  # Card
-  - title: Modern apps
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: Modern app building
-            url: app-designer-overview.md
+          - text: Advanced app making and customization
+            url: advanced-navigation.md
 
   # Card
   - title: Apply data visualizations
