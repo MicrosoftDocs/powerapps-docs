@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: nabuthuk
-ms.date: 10/21/2021
+ms.date: 11/03/2021
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -130,6 +130,9 @@ After you change the **OnStart** property, test it by hovering over the **App** 
 > - **Retired** switch will be turned off for apps created before March 2021 where you added **Navigate** to **OnStart** between March 2021 and now. When you edit such apps in Power Apps Studio, you may see an error. Turn the above mentioned **Retired** switch to clear this error.
 
 ## StartScreen property
+
+> [!NOTE]
+> The **StartScreen** property is not compatible with the retired **Enhanced formula bar**.  **StartScreen** will not appear in the list of properties.  Under **Settings**, **Upcoming features**, **Retired**, turn off the **Enhanced formula bar** switch in order to use **StartScreen**.
 
 The **StartScreen** property determines which screen will be displayed first. It's evaluated once when the app is loaded and returns the screen object to be displayed. By default, this property will be empty, and the first screen in the Studio Tree view is shown first.
 
