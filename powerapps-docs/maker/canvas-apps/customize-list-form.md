@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 08/17/2021
+ms.date: 11/02/2021
 ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
@@ -207,9 +207,21 @@ You can configure the **Price**, **Availability**, and **Colors** fields to appe
 
 **Q:** Do I need a Power Apps license to create or use custom list forms?
 
-**A:** Guest users can **use** custom forms. To **create** custom forms, you need a [Microsoft 365 plan that includes Power Apps](/power-platform/admin/pricing-billing-skus#licenses).
-- To know about license requirements for members of a tenant, see **Power Apps user rights included with Microsoft 365 licenses** section in [Microsoft Power Apps and Power Automate Licensing Guide](https://go.microsoft.com/fwlink/?linkid=2085130).
-- For more information about license expectations for guest users, see [What license must be assigned to my guest so they can run an app shared with them?](share-app-guests.md#what-license-must-be-assigned-to-my-guest-so-they-can-run-an-app-shared-with-them).
+**A:** Refer to the following table for licensing requirements of guests and organizational users when using or creating custom forms.
+
+| Type of user | Custom form action | License required |
+| - | - | - |
+| Guest | Use | No | - |
+| Guest | Create/Edit | Yes |
+| Organizational user | Use | Yes |
+| Organizational user | Create/Edit | Yes |
+
+> [!NOTE]
+> [Microsoft 365 plan that includes Power Apps](/power-platform/admin/pricing-billing-skus#licenses) is sufficient for apps that connect to Office. However, separate licenses may be required for apps that use [Premium connectors](/connectors/connector-reference/connector-reference-premium-connectors).
+
+For more information about license requirements for organizational users, see **Power Apps user rights included with Microsoft 365 licenses** section in [Microsoft Power Apps and Power Automate Licensing Guide](https://go.microsoft.com/fwlink/?linkid=2085130).
+
+For more information about license expectations for guest users, see [What license must be assigned to my guest so they can run an app shared with them?](share-app-guests.md#what-license-must-be-assigned-to-my-guest-so-they-can-run-an-app-shared-with-them).
 
 **Q:** What happens when guest users access a list that has a custom form?
 
