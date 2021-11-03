@@ -51,10 +51,10 @@ App users, such as the record owner, are displayed with their picture and online
 
 ### Share 
 
-Easily share direct links with others. Select **Share** > **Copy link** and then paste the link in another app to share it.
+Easy sharing of direct links with others will be enabled during the preview period.
 
 > [!div class="mx-imgBorder"]
-> ![Share row information with soneone else.](media/collob-2.png "Share row information with soneone else")
+> ![Share row information with soneone else.](media/collob-3.png "Share row information with soneone else")
 
 
 
