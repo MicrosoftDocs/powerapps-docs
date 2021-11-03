@@ -86,20 +86,22 @@ A dialog opens that lists all the available web resources in your solution. To f
 
 If you don't see the RESX web resource with the language you want to add in the dialog, you'll need to add the file to your solution using the steps described earlier in this article. 
 
-After selecting **Add**, the panel closes, and the web resource is listed in the **Resource Pane**.
+After selecting **Add**, the panel closes, and the web resource is listed in the **Resources** pane.
 
 :::image type="content" source="media/page-localization/studio-page-web-resource-add-resource-dialog-resx.png"alt-text="Power Apps Studio custom page web resource with resx file.":::
 
 ## Managing localized web resources
 
-After a web resource language has been added to your page you can quickly and easily manage the file by simply clicking on the ellipses next to the file.  A flyout will open and you can refresh the web resource if it has been changed, updated or you can remove the resource from your page.  You will need to refresh the ResX resources on your page if the display name has changed or any of the string keys have been updated in the resx file and has been published to your solution. Please note that updating the translations in the resx file and publishing the solution does not require the Resx on your page to be refreshed.
+After a web resource language has been added to your page you can quickly and easily manage the file by selecting the **...** ellipses next to the file. A flyout opens where you can refresh the web resource if it has been changed or updated. You can also remove the resource from your page. You'll need to refresh the RESX resources on your page if the display name has changed or any of the string keys have been updated in the RESX file that's been published to your solution. Note that updating the translations in the RESX file and publishing the solution doesn't require the RESX on your page to be refreshed.
+
 :::image type="content" source="media/page-localization/studio-page-web-resource-add-resource-dialog-refresh.png"alt-text="Power Apps Studio custom page web resource with resx file.":::
 
 ## Adding localized string to your label controls
 
-To add localized content to your label control you will need to select the label and set the function to the resource using the text function of the control.  Click on or select the label control and select the text function.
-:::image type="content" source="media/page-localization/studio-page-text-option.png"alt-text="Power Apps Studio custom page text option on a control.":::
+To add localized content to your label control you'll need to select the label and set the function to the resource using the text function of the control. To do this, select the label control and select the **Text** function.
 
+:::image type="content" source="media/page-localization/studio-page-text-option.png"alt-text="Power Apps Studio custom page text option on a control.":::
+<!-- START HERE -->
 Using the text function set the value to the web resource and the value you want that is in your web resource resx file.  After setting the expression the content will show in the preview for the page.
 :::image type="content" source="media/page-localization/studio-page-text-function.png"alt-text="Power Apps Studio custom page text function for a control.":::
 
