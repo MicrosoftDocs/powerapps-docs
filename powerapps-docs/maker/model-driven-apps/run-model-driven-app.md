@@ -1,8 +1,8 @@
 ---
-title: Use the rich text editor control in Power Apps | MicrosoftDocs
-description: "The rich text editor control provides the app user a WYSIWYG editing area for formatting text"
+title: How to run a model-driven app | MicrosoftDocs
+description: "How to run a model-driven power app"
 ms.custom: ""
-ms.date: 08/10/2
+ms.date: 08/10/2021
 ms.reviewer: "matp"
 ms.service: powerapps
 ms.suite: ""

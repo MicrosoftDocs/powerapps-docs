@@ -106,7 +106,7 @@ The following overview provides a detailed breakdown of each timeline feature, w
 
 The **Name** field under the **Properties** tab in **Display options** serves only for administrator reference. 
 
-| Configuration View | | Display View   |
+| Configuration View || Display View   |
 |--------------------|--|---------------|
 |![Configure Timeline component name](media\timeline-component-name-display-options-1a.png "Configure Timeline component name")||  ![Display  Timeline component name](media\timeline-component-name-display-options-1c.png "Display Timeline component name")|
 |The timeline **Name** column allows you to create a unique name as a maker's reference. In this example, we changed the **Name** column to **Timeline_for_ Account**. | | The name, **Timeline_for_Account**, doesn't display on the rendered form. The name is for administrator reference only. |
@@ -225,12 +225,12 @@ You can easily search for records in the timeline. When you search for a phrase 
 
 |Configure View | | Display View |
 |---------------|-|-------------|
-|![Configure search bar](media\timeline-enable-search-bar-display-options-advanced-3a.PNG "Configue search bar")| |![Enable search bar](media\timeline-enable-search-bar-display-options-advanced-2b.PNG "Enable search bar")| 
+|![Configure search bar](media\timeline-enable-search-bar-display-options-advanced-3a.PNG "Configue search bar")| |![Enable search bar](media\timeline-enable-search-bar-display-options-advanced-2b.PNG "Enable search bar")|
 |The **search bar** feature enables the **Search timeline** bar functionality. It is enabled by default.||Enable the **search bar** feature and it will display a **search bar** at the top of the timeline form.<BR><BR>Disable the search bar by unchecking the box next to the feature and the search bar will no longer display on the timeline.| 
 
 ### Expand all records in timeline
 
-**Expand all records by default** displays all activities in an expanded view in timeline. 
+**Expand all records by default** displays all activities in an expanded view in timeline.
 
 |Configure View |  |Display View |
 |---------------|---|------------|

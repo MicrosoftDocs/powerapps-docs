@@ -57,7 +57,7 @@ When the app is validated, the app designer canvas shows details about the asset
 
      Additionally, the required tab will appear on the right side of the canvas and this will provide the opportunity to add the required elements.  The contents of the required tab will depend upon the nature of what is missing.
 
-       :::image type="content" source="media/app-designer-add-dependencies.png" alt-text="validate app":::
+       :::image type="content" source="media/app-designer-add-dependencies.png" alt-text="add dependencies":::
   
 2.  To add the required assets, select the **Required** tab on the right side of the canvas. The **Required** tab is visible when at least one required asset is missing from the app.  
   
@@ -81,7 +81,7 @@ When the app is validated, the app designer canvas shows details about the asset
 
 Publish an app to make it available to users.  
   
- After the components have been added, validated, and saved the app,  on the command bar, select **Publish**. You can also publish the app from the app tile on the [My Apps](advanced-navigation.md#apps) page. In the **Apps Being Edited** view, in the lower right corner of the app tile you want to publish, select the **More options** button (**...**), and then select **Publish**.  
+ After the components have been added, validated, and saved the app,  on the command bar, select **Publish**. In the **Apps Being Edited** view, in the lower right corner of the app tile you want to publish, select the **More options** button (**...**), and then select **Publish**.  
   
  The app status changes to Published. This can be seen in the top-right corner of the app designer. The app moves from the **Apps Being Edited** view to the **Published Apps** view, and the published date is shown on the app tile.  
   

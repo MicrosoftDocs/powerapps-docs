@@ -8,7 +8,7 @@ ms.topic: overview
 ms.component: model
 ms.date: 07/20/2021
 ms.subservice: mda-maker
-ms.author: matp
+ms.author: v-roryneary
 search.audienceType: 
   - maker
 search.app: 

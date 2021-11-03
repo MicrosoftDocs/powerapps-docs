@@ -62,11 +62,11 @@ Depending on the type of view, you can either delete it or deactivate it. Deacti
 
 ## Delete a view in solution explorer  
 
-You can delete any custom public view. Use the steps in [Access view definitions](accessing-view-definitions.md#open-a-view-for-editing-in-solution-explorer) to find the view you want to delete and use the ![Delete button.](media/delete.gif "Delete button")**Delete** command. Once you verify that you really want to delete it, the view will be permanently deleted.  
+You can delete any custom public view. Use the steps in [Access view definitions](accessing-view-definitions.md) to find the view you want to delete and use the ![Delete button.](media/delete.gif "Delete button")**Delete** command. Once you verify that you really want to delete it, the view will be permanently deleted.  
   
 ## Deactivate or activate views in solution explorer
 
-1. Navigate to **System Views** as described in [Access view definitions](accessing-view-definitions.md#open-a-view-for-editing-in-solution-explorer).  
+1. Navigate to **System Views** as described in [Access view definitions](accessing-view-definitions.md).  
   
 2. Select a public view. To see inactive views, use the **Inactive Public Views** view.  
   

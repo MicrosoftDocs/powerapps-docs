@@ -1,4 +1,3 @@
-
 ---
 title: "Community tools and sites related to model-driven apps | MicrosoftDocs"
 description: "Find community driven tools and help"

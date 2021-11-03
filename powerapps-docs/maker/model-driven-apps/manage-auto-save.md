@@ -51,7 +51,7 @@ Auto-save helps app users focus on their work without having to manage saving da
 
 1. Open a model-driven app, and then on the command bar select **Settings** ![Settings.](../model-driven-apps/media/powerapps-gear.png) > **Advanced  Settings**.
 
-2. Go to **[Settings](advanced-navigation.md#settings)** > **Administration**.  
+2. Go to **[Settings](advanced-navigation.md#solution-explorer)** > **Administration**.  
   
 3.  Choose **System Settings**.  
   
@@ -86,7 +86,7 @@ Auto-save helps app users focus on their work without having to manage saving da
   
     4.  Enter the following information in the web resource form:  
   
-        |||  
+        |Title|Reference|  
         |-|-|  
         |**Name**|preventAutoSave|  
         |**Display Name**|Prevent Auto Save|  

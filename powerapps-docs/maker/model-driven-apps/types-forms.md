@@ -54,7 +54,7 @@ While each form type has specific needs, when designing forms you use the Form E
 
 ### Card
 
-:::image type="content" source="../../maker/model-driven-apps/media/card-format.png" alt-text="Quick view form":::
+:::image type="content" source="../../maker/model-driven-apps/media/card-format.png" alt-text="Card form":::
 
 ## Next steps
 
