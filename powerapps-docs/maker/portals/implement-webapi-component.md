@@ -38,9 +38,9 @@ The following is an example of implementing a code component that uses the porta
     | `Webapi/account/fields`             | `attr1,attr2,attr3`  |
     | `Webapi/enableReadOperationPreview` | `true`               |
 
-2. Portals requires Read permission to be set on the Web Resource table before users can see the code component on the webpage. [Allow read access to a web-resource table](component-framework.md#allow-read-access-to-a-web-resource-table)
+1. Portals requires Read permission to be set on the Web Resource table before users can see the code component on the webpage. [Allow read access to a web-resource table](component-framework.md#allow-read-access-to-a-web-resource-table)
 
-3. Configure table security using table permission. [Table permissions using studio](configure/entity-permissions-studio.md)
+1. Configure table security using table permission. [Table permissions using studio](configure/entity-permissions-studio.md)
 
 ## Code
 
