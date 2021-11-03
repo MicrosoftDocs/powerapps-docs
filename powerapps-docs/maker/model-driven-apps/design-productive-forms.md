@@ -75,8 +75,9 @@ The following image shows the layout of a Unified Interface application.
   
   If some data is rarely used you should consider building another form that can be accessed when a user needs to reference that data or information.
 - The form footer displays the form status and commands for saving and displaying the form in a new pop-out window. Only the form footer width can be customized.
+
 > [!IMPORTANT]
-> [Form footers will be deprecated](/power-platform/important-changes-coming#form-footers-in-model-driven-apps-wont-be-supported-with-the-2021-release-wave-2) with the 2021 Release Wave 2 (August 2021 Preview / October 2021 GA). We recommend that you plan to remove any controls you have added out of the footer as it will no longer render on model-driven app forms.
+> [Form footers are deprecated](/power-platform/important-changes-coming#form-footers-in-model-driven-apps-wont-be-supported-with-the-2021-release-wave-2) with the 2021 Release Wave 2 (August 2021 Preview / October 2021 GA). Remove any controls you have added out of the footer.
 
 ## Example scenario of productive form design
 
