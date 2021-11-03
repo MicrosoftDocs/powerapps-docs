@@ -1,12 +1,12 @@
 ---
-title: "Example: Create a model-driven app | MicrosoftDocs"
-description: "Learn how to create a model-driven app that has the account table added to it."
+title: "Build your first modern model-driven app"
+description: "Learn how to build your first model driven app"
 ms.date: 07/05/2021
 ms.service: powerapps
 ms.subservice: mda-maker
 ms.topic: tutorial
 author: joel-lindstrom
-ms.author: v-ljoel
+ms.author: v-roryneary
 ms.reviewer: matp
 ---
 
@@ -17,7 +17,7 @@ ms.reviewer: matp
 In this tutorial, you create a model-driven app by using one of the standard tables that is available in Microsoft Dataverse, the account table.
 
   > [!div class="mx-imgBorder"]
-  > ![Simple account table app.](media/build-first-model-driven-app/accounts-quickstart-app.png "Run the app")
+  > ![Running the app](media/build-first-model-driven-app/accounts-quickstart-app.png "Run the app")
 
 ## Sign in to Power Apps
 
@@ -98,7 +98,7 @@ After publishing the app, it's ready for you to run or share with others.
 
 1. Select the app from the app list. The app opens in your browser.  The chart will be visible based on toggling the show hide chart option.
 
-   ![Simple account table app.](media/create-a-model-driven-app/run-your-app-on-desktop-2.png "Simple account table app")
+   ![Run the app on a desktop](media/create-a-model-driven-app/run-your-app-on-desktop-2.png "Running the app on a desktop")
 
 ## Run your app on mobile
 

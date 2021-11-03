@@ -24,7 +24,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Create or edit a model-driven app main form for a table 
+# Create or edit a model-driven app main form for a table
 
 This article describes how to create or edit a main form for an table.
 
@@ -46,19 +46,19 @@ Each main form is composed of one or more **tabs**. Each tab can have one or mor
     To edit an existing main form, select any form with the **Type** of **Main**.
   
 3.  Change the form design in any of the following ways, as needed:
-    - [Add a column to or remove a column from a form](Add-move-or-delete-fields-on-form)
-    - [Add a section to or remove a section from a form](add-move-or-delete-sections-on-form)
+    - [Add a column to or remove a column from a form](Add-move-or-delete-fields-on-form.md)
+    - [Add a section to or remove a section from a form](add-move-or-delete-sections-on-form.md)
     - [Add a tab to or remove a tab from a form](add-move-or-delete-tabs-on-form.md)
-    - [Add or edit a sub-grid on a form](form-designer-add-configure-subgrid)
-    - [Edit form headers](form-designer-header-properties)
+    - [Add or edit a sub-grid on a form](form-designer-add-configure-subgrid.md)
+    - [Edit form headers](form-designer-header-properties.md)
     - Edit form footers
     
 4.  Edit the properties for parts of the form, as needed:
     
-    - [Edit form properties](create-and-edit-forms.md#configure-a-form)
-    - [Edit form column properties](Add-move-or-delete-fields-on-form#configure-columns-on-a-form)  
+    - [Edit form properties](create-and-edit-forms.md#configure-a-form.md)
+    - [Edit form column properties](Add-move-or-delete-fields-on-form#configure-columns-on-a-form.md)  
     - [Edit tab properties](add-move-or-delete-tabs-on-form.md#configure-tabs-on-a-form)
-    - [Edit section properties](add-move-or-delete-sections-on-form)
+    - [Edit section properties](add-move-or-delete-sections-on-form.md)
 
 5.    When finished editing the form, select **Save** > **Save As**, enter a name for the form, and then select **OK**.
 

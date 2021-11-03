@@ -106,11 +106,11 @@ When we set the default form order this is done at the level of the **table** an
 2. Select **Dataverse** and navigate to the required table.
 3. Select the **Forms** tab, select the ellipses (...) and select **Form settings**
 
-:::image type="content" source="../../maker/model-driven-apps/media/create-and-edit-a-model-driven-form/form-settings-navigation.png" alt-text="select forms settings":::
+:::image type="content" source="../../maker/model-driven-apps/media/create-and-edit-a-model-driven-form/form-settings-navigation.png" alt-text="select forms forms to include in app":::
 
 4. In the form settings dialogue select **form order** and then the **form set**, or form type, you would like to order.
 
-:::image type="content" source="../../maker/model-driven-apps/media/create-and-edit-a-model-driven-form/form-settings-order.png" alt-text="select forms settings":::
+:::image type="content" source="../../maker/model-driven-apps/media/create-and-edit-a-model-driven-form/form-settings-order.png" alt-text="select forms order":::
 
 5. Once in the form order area use the handles to move the order of the forms.
 

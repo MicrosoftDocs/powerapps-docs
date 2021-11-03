@@ -28,7 +28,7 @@ search.app:
   - D365CE
 ---
 
-# Community tools
+# Model-driven apps community tools
 
 **View Layout Replicator** and **View Designer** are tools that XrmToolbox community developed for Power Apps.
 

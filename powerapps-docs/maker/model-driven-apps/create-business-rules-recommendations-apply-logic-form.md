@@ -205,7 +205,7 @@ A business rule may also not execute because a column referenced in the business
 - Yes, a business rule can unlock columns and edit actions on a read-only form.
 
 *How do I troubleshoot a business rule that isn't working?* 
-- See [Is your business rule not firing for a form?](#is-your-business-rule-not-firing-for-a-form) in this topic.
+- See [Is your business rule not firing for a form?](create-business-rules-recommendations-apply-logic-form.md#is-your-business-rule-not-firing-for-a-form) in this topic.
 
 *What do recommendations look like within a form?*
 
