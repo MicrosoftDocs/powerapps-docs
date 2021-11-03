@@ -5,7 +5,7 @@ ms.date: 06/25/2021
 ms.service: powerapps
 ms.topic: tutorial
 author: joel-lindstrom
-ms.author: v-ljoel
+ms.author: v-roryneary
 ms.reviewer: matp
 ---
 

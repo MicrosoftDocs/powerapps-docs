@@ -36,9 +36,8 @@ These fall into 2 major categories natively within model-driven apps.  **Busines
 
 Business rules provide a simple interface to implement and maintain fast-changing and commonly used rules. The *scope* of a business rule defines where the business rule will run:
 
-|||  
+|**If you select this item...**|**The scope is set to...**|
 |-|-|  
-|**If you select this item...**|**The scope is set to...**|  
 |**Table**|All forms and server|  
 |**All Forms**|All forms|  
 |Specific form (**Account** form, for example)|Just that form|

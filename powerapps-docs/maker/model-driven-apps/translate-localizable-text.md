@@ -38,7 +38,7 @@ The process has the following steps:
 
 ## Enable other languages for your environment
 
-If you haven't already enabled the languages for your environment, use the steps described in [Enable the language](../../../admin/enable-languages.md) to enable them.
+If you haven't already enabled the languages for your environment, use the steps described in [Enable the language](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/admin/enable-languages) to enable them.
 
 > [!IMPORTANT]
 > Each language can take several minutes to enable. During this time, other users of the environment may not be able to use your app. You should enable languages at time that will be least disruptive to users.
