@@ -132,7 +132,7 @@ After you change the **OnStart** property, test it by hovering over the **App** 
 ## StartScreen property
 
 > [!NOTE]
-> The **StartScreen** property is not compatible with the retired **Enhanced formula bar**.  **StartScreen** will not appear in the list of properties.  Under **Settings**, **Upcoming features**, **Retired**, turn off the **Enhanced formula bar** switch in order to use **StartScreen**.
+> **StartScreen** property will not appear in the list of properties when the retired option **Enhanced formula bar** is turned on. To turn **Enhanced formula bar** off, go to **Settings** > **Upcoming features** > **Retired** > turn off the **Enhanced formula bar** switch when you want to use **StartScreen** property.
 
 The **StartScreen** property determines which screen will be displayed first. It's evaluated once when the app is loaded and returns the screen object to be displayed. By default, this property will be empty, and the first screen in the Studio Tree view is shown first.
 
