@@ -32,17 +32,17 @@ Content from CGTrader can be browsed and loaded from inside a Power App and then
 
 Connecting to an existing database of 3D content allows makers to build apps with mixed reality without having to create their own 3D models.
 
-# Getting started with a new connector
+## Getting started with a new connector
 
 Like other connectors, the CGTrader connector is a proxy to the CGTrader API. It provides [_actions_](/connectors/connectors#actions) that let users make requests to the CGTrader API and retrieve model data. You may also read the [connectors overview](/connectors/custom-connectors/use-custom-connector-powerapps) to learn more about connectors.
 
-## Request access from CGTrader
+### Request access from CGTrader
 
 Your connector will be linked to your CGTrader account, giving you access to any models you've purchased. To set up that access, contact CGTrader at [https://www.cgtrader.com/developers](https://www.cgtrader.com/developers).
 
 CGTrader will review your information and contact you with an OAuth 2.0 API Key in the form of a **Client ID** and **Client Secret**. Be sure to store these in a secure location.
 
-## Create a new CGTrader connector
+### Create a new CGTrader connector
 
 Once you have your CGTrader API Key, go to the [Power Apps Maker Portal](https://make.powerapps.com/)
 
@@ -66,7 +66,7 @@ You should now have a new CGTrader connection listed on the Connections page.
 
     :::image type="content" source="media/augmented/mixed-reality-connector-new.png" alt-text="Screenshot of the Connections page.":::
 
-# Add the connector to your Power App
+## Add the connector to your Power App
 
 With an app open for editing in the [Power Apps Studio](https://create.powerapps.com):
 
@@ -87,7 +87,7 @@ You can now bind your components to the CGTrader connector actions and browse an
 > [!TIP]
 > A connection is an instance of a connector. You can have multiple connections with different configurations. New connections can also be configured inside of Power Apps Studio from the Data tab.
 
-# Load CGTrader models directly into View in 3D or View in MR
+## Load CGTrader models directly into View in 3D or View in MR
 
 After adding your connector to your app, you may load models directly into your app with the following steps.
 
@@ -107,7 +107,7 @@ After adding your connector to your app, you may load models directly into your 
 
     :::image type="content" source="./media/augmented/mixed-reality-connector-example.png" alt-text="The View in 3D component with a source from CGTrader.":::
 
-# All Connector Actions
+## Connector Actions
 
 For full details on all the connector actions and their parameters and return types, refer to the [CGTrader connector reference](/connectors/cgtrader/#actions).
 
