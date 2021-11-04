@@ -69,7 +69,16 @@ More information:
 
 Responsive custom page layouts are defined by building a hierarchy of **Horizontal layout container** and **Vertical layout container** controls.  These controls are found in the canvas app designer under **Layout** on the **Insert** tab.
 
-Resize the topmost container to fill the entire space with these properties.
+Set the minimum screen height and width on the App object to prevent page level scrollbars and use a vertical body scrollbar.
+
+  ```powerappsfl
+  MinScreenHeight=200
+  MinScreenWidth=200
+  ```
+
+Optionally, the custom page design size can be adjusted in Settings > Display with **Size** set to **Custom**.  Then set the **Width** and **Height** to a more typical desktop custom page size like Width 1080 and Height 768.  Changing this after controls are added to the screen cause some layout properties to be reset.
+
+Set the topmost container to fill the entire space and resize based on available space.  
 
   ```powerappsfl
   X=0
@@ -77,6 +86,36 @@ Resize the topmost container to fill the entire space with these properties.
   Width=Parent.Width
   Height=Parent.Height
   ```
+
+### Horizontal wrapping of a flexible height container 
+
+To support pages adjusting from desktop down to a narrow width, enable these properties on a horizontal container with flexible height.  Without these settings the page will clip controls when the page is narrow.
+
+  ```powerappsfl
+  Direction=Horizontal
+  FlexibleHeight=true
+  Justify=Stretch
+  Align=Stretch
+  VerticalOverflow=Scroll
+  Wrap=True
+  ```
+
+Child containers or controls directly under this container should be set to have a minimum width that allows the page to fit within a 300 px width.  Consider the padding on the container or control as well as parent containers. 
+
+### Vertical wrapping of a flexible width container 
+
+To support pages adjusting from desktop down to a narrow width, enable these properties on a vertical container with flexible width.  Without these settings the page will clip controls when the page is narrow.
+
+  ```powerappsfl
+  Direction=Vertical
+  FlexibleWidth=true
+  Justify=Stretch
+  Align=Stretch
+  HorizontalOverflow=Scroll
+  Wrap=True
+  ```
+
+Child containers or controls directly under this container should be set to have a minimum height that allows the page to fit within a 300 px width.  Consider the padding on the container or control as well as parent containers. 
 
 More information: [Building responsive layout](../canvas-apps/build-responsive-apps.md "Building responsive layout").
 
@@ -93,6 +132,7 @@ More information: [Building responsive layout](../canvas-apps/build-responsive-a
 1. On the parent horizontal container, set **Align (vertical)** to **Stretch**.
 
 1. Insert two **Vertical Container** controls within the parent **Horizontal Container**.
+
 
 ## Styling custom page controls to align to model-driven app controls
 
