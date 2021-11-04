@@ -2,7 +2,7 @@
 title: "CustomAPI table columns (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Describes the table columns (entity attributes) to set when creating a Custom API" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 06/29/2021
+ms.date: 10/31/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -52,7 +52,7 @@ Set the **Execute Privilege Name** (`ExecutePrivilegeName`) property to the name
 
 If you do not set the **Plugin Type** (`PluginTypeId`)  to specify main operation logic the API can still be called. 
 
-You may choose to not include any logic in the plug-in because you are using the Custom API as a business event. More information: [Microsoft Dataverse business events (preview)](business-events.md).
+You may choose to not include any logic in the plug-in because you are using the Custom API as a business event. More information: [Microsoft Dataverse business events](business-events.md).
 
 You might want to do this as a testing step, but any output parameter values will return the default values for the type because there is no code to set them.
 

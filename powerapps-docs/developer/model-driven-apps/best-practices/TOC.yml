@@ -8,6 +8,8 @@
         href: business-logic/avoid-window-top.md
       - name: Consider disabling NavBar when programmatically opening entity forms or views
         href: business-logic/consider-disabling-navbar-programmatically-opening-entity-forms-views.md
+      - name: Do not use the OData v2.0 endpoint
+        href: business-logic/do-not-use-odata-v2-endpoint.md     
       - name: Interact with HTTP and HTTPS resources asynchronously
         href: business-logic/interact-http-https-resources-asynchronously.md
       - name: Remove deactivated or disabled customizations
