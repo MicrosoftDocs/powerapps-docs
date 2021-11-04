@@ -171,6 +171,4 @@ Use the `OptionsRecord` parameter to specify options for the dialog box. Not all
 
 [Navigating to and from a custom page using client API](../../developer/model-driven-apps/clientapi/navigate-to-custom-page-examples.md)
 
-[Microsoft Power FX formula reference](../canvas-apps/formula-reference.md)
-
 [Model-driven app custom page overview](model-app-page-overview.md)
