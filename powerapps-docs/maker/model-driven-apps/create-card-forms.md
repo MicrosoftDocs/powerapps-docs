@@ -27,7 +27,7 @@ search.app:
 ---
 # Create a card form
 
-Card forms are used in views for Unified Interface apps. Card forms are designed to present information in a compact format that is suitable for **mobile devices**. For example, the default card form for the My Active Accounts view defines the information displayed for each account row.
+Card forms are used in views for model-driven apps. Card forms are designed to present information in a compact format that is suitable for **mobile devices**. For example, the default card form for the My Active Accounts view defines the information displayed for each account row.
 
 > [!div class="mx-imgBorder"]
 > ![Account card form for my active accounts view.](media/account-cardform-for-myactiveaccounts-view.png "Account card form for my active accounts view")
@@ -69,8 +69,9 @@ Although card forms can be created and edited in the same way as other form type
 7. Select **OK** to close the **Custom Controls** properties page.
 8. On the classic view designer toolbar, select **Save and Close**.
 
-## See also
+## Next steps
 
-[Use custom controls for model-driven app data visualizations](use-custom-controls-data-visualizations.md)
+  [Form types overview](types-forms.md)
+
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

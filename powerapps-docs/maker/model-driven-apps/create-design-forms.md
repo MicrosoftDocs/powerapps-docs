@@ -227,8 +227,10 @@ There are still a number of tables, referred to here as classic tables, that ret
 ## Main form dialogs
 With the client API, you can use main form dialogs so users can open a related row table on a parent or base form without navigating away from the form. More information: [Open main form in a dialog using client API](../../developer/model-driven-apps/customize-entity-forms.md#open-main-form-in-a-dialog-using-client-api)
 
-### Related topics  
-[Creating custom tables](../../maker/data-platform/create-custom-entity.md)  <br>
+## Next steps
+
+[Understanding the form types available](types-forms.md)
+
 [Assign form order](assign-form-order.md) <br />
 [Control access to forms](control-access-forms.md) <br />
 [How main forms appear in different clients](main-form-presentations.md) <br />

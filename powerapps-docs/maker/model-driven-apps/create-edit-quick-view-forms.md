@@ -93,11 +93,11 @@ In the example shown we can see the module that relates to a given lesson within
 
 2.  Expand **Data**, select **Tables**, select the table that you want, and then select the **Forms** tab.  
 
-3. Select a form, which **Type** is **Main**.
-
+3. Select a form, which **Type** is
 4. In the form designer, from the Components pane from the , select **Quick view**.  
   
 5.  In the **Select quick view forms** dialog box, select the **Lookup** column, and then select the Lookup column value. More information: [Quick view control properties](quick-view-control-properties-legacy.md).  
+ **Main**.
 
     > [!div class="mx-imgBorder"] 
     > ![Add quick view control.](media/add-quick-view-control.png "Add quick view control to main form")
@@ -109,9 +109,11 @@ In the example shown we can see the module that relates to a given lesson within
     > [!IMPORTANT]
     > Be aware of the behavior that occurs when you create a parent relationship with the same table. For example, if Account has a relationship to Account and a lookup is created that is used by a quick create form that creates a parent row, the first row will not be saved with the lookup that has the parent row value. This is because of the circular reference introduced by using the same table. If this issue is experienced it can be resolved by removing the parent row id on the quick create form before saving the row.
 
-## Next steps   
- [Create and design forms](create-design-forms.md)   
- [Create or edit quick create forms](create-edit-quick-create-forms.md)
+## Next steps
+  
+  [Create and edit a card form](create-card-forms.md)
+
+  [Form types overview](types-forms.md)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

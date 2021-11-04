@@ -49,7 +49,7 @@ In this topic a view definition will be opened to display properties and options
 
 - [Sort rows in a view](configure-sorting.md)
 - [Choose and configure columns in views](choose-and-configure-columns.md)
-  
+- [Filtering data within views](create-edit-view-filters.md)  
 ## Next steps
 
 [Creating and editing public views](create-or-edit-model-driven-app-view.md)
