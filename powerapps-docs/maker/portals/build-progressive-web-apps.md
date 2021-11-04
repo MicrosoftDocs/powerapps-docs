@@ -5,7 +5,7 @@ author: ankitavish
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/2/2021
+ms.date: 11/4/2021
 ms.subservice: portals
 ms.author: avishwakarma
 ms.reviewer: ndoelman
@@ -47,9 +47,9 @@ Use Power App portals Studio to configure your Progress Web App (PWA). You can e
 
     :::image type="content" source="media/progressive-web-apps/enable-pwa.png" alt-text="Enable PWA capability from portals Studio." :::
 
-## Customize PWA settings
+## Brand your app
 
-You can change the PWA app name, starting page, color, and more using the customization option. To customize PWA settings for your portal:
+You can create your own branded app by customizing your PWA by changing the app name, starting page, color, and more using the customization option. To customize PWA settings for your portal:
 
 1. In portals Studio, select **Progressive web app**.
 
@@ -115,7 +115,6 @@ To set up the offline message page:
 > - You can't change the Title, and the Partial URL ("*/default-offline-page*") for offline page. A default offline page will be rendered to end users if the offline page is missing.
 > - After managing offline experiences of PWA in studio, you need to select **Browse website** to clear cache. This will start reflecting changes instantly.
 
-
 ### Browse your portal in offline mode
 
 After you've enabled offline pages, you can now use a mobile device in offline mode and browse through different pages enabled for offline access.
@@ -137,7 +136,13 @@ To get started with offline browsing:
 
     :::image type="content" source="media/progressive-web-apps/pwa-offline.png" alt-text="Read-only page in offline mode for a PWA app.":::   :::image type="content" source="media/progressive-web-apps/not-connected.png" alt-text="Not connected to the internet page in PWA app." :::
 
-## Create and configure app package
+## Distribute your app
+
+### Distribute your app using a browser
+
+Once your portal is enabled as a PWA, your users can pin Power Apps portals as an app to the home screen on a their device.  This is supported in all platforms (android/iOS/windows) as well as all form factors (mobile/desktop/tablet).
+
+### Distribute your app through an app store
 
 You can create an app package for your portal's PWA and publish the package to different app stores such as Microsoft Windows Store and Google Play Android Store
 
