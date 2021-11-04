@@ -20,7 +20,9 @@ search.app:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-This article outlines how to add localized content to a custom page by uploading [web resource RESX](/powerapps/developer/model-driven-apps/resx-web-resources) files for each language into your solution and how to use Power Fx to set the content on a label of a form. This functionality also applies to tooltips and any message that uses a text control.
+This article outlines how to add localized content to a custom page by uploading [web resource RESX](/powerapps/developer/model-driven-apps/resx-web-resources) files for each language into your solution. 
+
+This article also shows you how to use Power Fx to set the content on a label of a form. You can use similar steps for tooltips and any messages that use a text control on the custom page.
 
   > [!IMPORTANT]
   > - This is a preview feature, and isn't available in all regions.
@@ -41,9 +43,9 @@ The process has the following steps:
 
 To add languages for your custom page, you need to first enable the languages you want to support in the model-driven app where your custom page will be running.  Make sure you have enabled languages from the Power Platform admin center. More information: [Enable the language](/power-platform/admin/enable-languages#enable-the-language)
 
-After completing the steps to enable language(s) in the environment, you'll need to create a RESX file for each language in the proper format for the strings you want localized on your custom page for your model-driven app.
+After completing the steps to enable languages in the environment, you'll need to create a RESX file for each language in the proper format for the strings you want localized on your custom page for your model-driven app.
 
-After you have the created the RESX files with the localized strings, you can add them into your solution as a web resource. There are two ways to accomplish this task, the first is to open your solution in make.powerapps.com and select the option to add a web resource to your solution in your environment or you can add a web resource while working on a custom page.  Adding while working on a custom page will be covered in the section on adding localized files to your custom page. More information: [RESX web resources](/powerapps/developer/model-driven-apps/resx-web-resources)
+After you have the created the RESX files with the localized strings, you can add them into your solution as a web resource. There are two ways to accomplish this task, the first is to open your solution in make.powerapps.com and select the option to add a web resource to your solution in your environment or you can add a web resource while working on a custom page. More information: [RESX web resources](/powerapps/developer/model-driven-apps/resx-web-resources) Adding a web resource while working on a custom page is covered later in this article in the section [Add localized files to your custom page](#add-localized-files-to-your-custom-page).
 
 ## Add localized RESX Web resource files to your solution
 
@@ -67,7 +69,7 @@ After you have added your web resource to your solution make sure, you publish y
 
 ## Add localized files to your custom page
 
-You can add localized files to your custom page when you're creating or editing a page.  More information: [Overview of custom pages for model-driven apps](/powerapps/maker/model-driven-apps/model-app-page-overview)
+You can add localized files to your custom page when you're creating or editing a page.
 
 To add a language to your page, select the **Resources** icon on the left to open the **Resources** pane.
 
@@ -96,9 +98,9 @@ After a web resource language has been added to your page, you can manage the fi
 
 :::image type="content" source="media/page-localization/studio-page-web-resource-add-resource-dialog-refresh.png"alt-text="Power Apps Studio custom page web resource with resx file.":::
 
-## Add localized string to your label controls
+## Add the localized string to your label controls
 
-To add localized content to your label control, you'll need to select the label and set the function to the resource using the text function of the control. To do this, select the label control, and then select the **Text** function.
+To add localized content to your label control, you'll need to select the label and set the function to the resource using the Power Fx text function of the control. To do this, select the label control, and then select the **Text** function.
 
 :::image type="content" source="media/page-localization/studio-page-text-option.png"alt-text="Power Apps Studio custom page text option on a control.":::
 
@@ -129,3 +131,5 @@ Save and publish your changes to the page.
 ### See also
 
 [Create or edit model-driven app web resources to extend an app](create-edit-web-resources.md)
+
+[Overview of custom pages for model-driven apps](/powerapps/maker/model-driven-apps/model-app-page-overview)
