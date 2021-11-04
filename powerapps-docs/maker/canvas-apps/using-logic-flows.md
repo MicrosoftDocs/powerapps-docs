@@ -105,6 +105,10 @@ In this section, you'll learn about creating an app using Power Apps that uses t
 
     ![Action > Power Automate.](./media/using-logic-flows/action-power-automate.png "Action > Power Automate")
 
+  Alternatively, if you have enabled the "Enable Power Automate Pane" preview feature, you'll have the option to chose your flow from the left-pane inside Studio. 
+  <<TODO: screenshot of adding the Flow>>
+  More information: [Power Automate Pane](#power-automate-pane)
+
 1. Select **FlowInApp**.
 
 1. In the formula bar, remove the formula for the selected **OnVisible** property.
@@ -154,6 +158,21 @@ Now that you have both the flow, and the app created, you'll run the app and ver
     ![Check SharePoint list.](./media/using-logic-flows/check-sharepoint-list.png "Check SharePoint list")
 
 Now that you've created a sample app that runs a flow and adds item inside a SharePoint list, you can create more complex applications that interact with Power Automate and manipulate data inside various data sources.
+
+## Power Automate Pane (preview)
+With the "Enable Power Automate Pane " feature, you can add flows to your canvas app from the left-pane inside Studio.
+
+> [!NOTE]
+> This feature can be enabled on a per-app basis.
+
+To enable the preview feature:
+
+1. Select **Settings** at the top. 
+1. Select **Upcoming Features**. 
+1. Select **Enable Power Automate Pane** to turn this feature on. You may be prompted to close and reopen your canvas app to see the change. 
+  <<TODO: Add screenshot>>:::image type="content" source="/media/folder-with-same-name-as-article-file/service-technology-image-description.png" alt-text="Alt text that describes the content of the image.":::
+1. A Power Automate button is added to the left-pane.
+  <<TODO: Add screenshot>>:::image type="content" source="/media/folder-with-same-name-as-article-file/service-technology-image-description.png" alt-text="Alt text that describes the content of the image.":::
 
 ### See also
 
