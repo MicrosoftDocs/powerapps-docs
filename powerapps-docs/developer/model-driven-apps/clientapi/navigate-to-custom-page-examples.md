@@ -26,7 +26,7 @@ This article outlines the steps to use client API to open a custom page as a ful
 > [!IMPORTANT]
 > - The base functionality of custom pages has moved to General Availability in all regions.  However some specific or new capabilities are still in public preview and are marked with _(preview)_.
 > - [!INCLUDE[cc_preview_features_definition](../../../includes/cc-preview-features-definition.md)] 
-> - Custom pages are a new feature with significant product changes and currently have a number of known limitations outlined in [Custom Page Known Issues](model-app-page-issues.md).
+> - Custom pages are a new feature with significant product changes and currently have a number of known limitations outlined in [Custom Page Known Issues](../../../maker/model-driven-apps/model-app-page-issues.md).
 
 ## Navigating from a model page to a custom page
 
