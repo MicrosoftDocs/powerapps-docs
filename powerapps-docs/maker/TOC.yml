@@ -1207,6 +1207,8 @@
           href: ../developer/model-driven-apps/clientapi/navigate-to-custom-page-examples.md
         - name: Use Power Fx in a custom page
           href: ./model-driven-apps/page-powerfx-in-model-app.md
+        - name: Localize custom page components
+          href: ./model-driven-apps/custom-page-localization.md
         - name: Add canvas components to a custom page
           href: ./model-driven-apps/page-canvas-components.md   
         - name: Add code components to a custom page
