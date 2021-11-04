@@ -73,7 +73,7 @@ To add a language to your page, select the **Resources** icon on the left to ope
 
 :::image type="content" source="media/page-localization/studio-page-resource-pointer.png "alt-text="Power Apps Studio custom page resources.":::
 
-Select**Add resource** in either one of two places.
+Select **Add resource** in either one of two places.
 
 :::image type="content" source="media/page-localization/studio-page-resource-add-resource.png"alt-text="Power Apps Studio custom page add web resource.":::
 
@@ -98,7 +98,7 @@ After a web resource language has been added to your page, you can manage the fi
 
 ## Add localized string to your label controls
 
-To add localized content to your label control, you'll need to select the label and set the function to the resource using the text function of the control. To do this, select the label control and select the **Text** function.
+To add localized content to your label control, you'll need to select the label and set the function to the resource using the text function of the control. To do this, select the label control, and then select the **Text** function.
 
 :::image type="content" source="media/page-localization/studio-page-text-option.png"alt-text="Power Apps Studio custom page text option on a control.":::
 
