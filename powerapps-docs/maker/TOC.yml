@@ -1204,28 +1204,34 @@
       - name: Working with forms
         href: 
         items:
-        - name: Overview
+        - name: Forms overview
           href: ./model-driven-apps/create-design-forms.md
         - name: Form types
           href: 
           items:
-          - name: Overview
+          - name: Form Types Overview
             href: ./model-driven-apps/types-forms.md
-          - name: Create or edit a main form
+          - name: How main forms appear
+            href: ./model-driven-apps/main-form-presentations.md
+          - name: Create or edit a main form overview
             href: ./model-driven-apps/create-edit-main-forms.md
+          - name: Create and edit a main form walkthrough
+            href: ./model-driven-apps/create-and-edit-a-model-driven-form.md
           - name: Create or edit quick create forms
             href: ./model-driven-apps/create-edit-quick-create-forms.md
           - name: Create a quick view form
             href: ./model-driven-apps/create-edit-quick-view-forms.md
           - name: Create a card form
             href: ./model-driven-apps/create-card-forms.md
-        - name: Create and edit a main form
-          href: ./model-driven-apps/create-and-edit-a-model-driven-form.md
+        - name: How to assign form order in model-driven app
+          href: ./model-driven-apps/assign-form-order.md
         - name: Using the form designer
           href: 
           items:
           - name: Form designer overview
             href: ./model-driven-apps/form-designer-overview.md
+          - name: How to open the form editor
+            href: ./model-driven-apps/open-form-editor.md
           - name: Create or edit forms
             href: ./model-driven-apps/create-and-edit-forms.md
           - name: Add, move or delete columns
@@ -1248,6 +1254,9 @@
             href: ./model-driven-apps/form-designer-add-configure-lookup.md
           - name: Using the tree view
             href: ./model-driven-apps/using-tree-view-on-form.md
+          - name: How to assign form order in model-driven app
+            href: ./model-driven-apps/assign-form-order.md
+           
         - name: Designing effective forms
           href: 
           items:
@@ -1255,6 +1264,8 @@
             href: ./model-driven-apps/design-productive-forms.md         
           - name: Design forms for performance
             href: ./model-driven-apps/design-performant-forms.md
+          - name: How to optimize form performance
+            href: ./model-driven-apps/optimize-form-performance.md
           - name: Design considerations for main forms
             href: ./model-driven-apps/design-considerations-main-forms.md
         - name: Embed a Power BI report on a form
@@ -1348,8 +1359,6 @@
             href: ./model-driven-apps/sub-grid-properties-legacy.md
           - name: Tab properties overview
             href: ./model-driven-apps/tab-properties-legacy.md
-          - name: How main forms appear
-            href: ./model-driven-apps/main-form-presentations.md
         - name: Control access to forms
           href: ./model-driven-apps/control-access-forms.md
         - name: Show or hide form elements
@@ -1363,20 +1372,14 @@
           items:
           - name: How to use the main form and its components
             href: ./model-driven-apps/use-main-form-and-components.md
-          - name: How to open the form editor
-            href: ./model-driven-apps/open-form-editor.md
           - name: How to add iFrames to forms
             href: ./model-driven-apps/iframe-properties-legacy.md
-          - name: How to optimize form performance
-            href: ./model-driven-apps/optimize-form-performance.md
           - name: How to work with sections in a form
             href: ./model-driven-apps/section-properties-legacy.md
           - name: How to add a chart to a form
             href: ./model-driven-apps/add-chart-to-form.md
           - name: How to configure Bing maps in a form
             href: ./model-driven-apps/configure-bing-maps-legacy.md
-          - name: How to assign form order
-            href: ./model-driven-apps/assign-form-order.md
           - name: How to configure event handlers in a form
             href: ./model-driven-apps/configure-event-handlers-legacy.md
           - name: How to disable auto-save in a form

@@ -59,6 +59,4 @@ Unless someone has 'pinned' a different view in your app as their personal defau
 
 [Delete or deactivate a view](remove-views.md)
 
-[Views overview](create-edit-views.md)
-
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

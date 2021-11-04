@@ -64,10 +64,12 @@ In the solution that we opened earlier create a new table or find an existing ta
 
 ### Next steps
 
+[How to configure view columns](choose-and-configure-columns.md)
+
 [Learn about sorting within views](configure-sorting.md)
 
 [Learn about filtering views](create-edit-view-filters.md)
 
-[Make views editable using grids](make-grids-lists-editable-custom-control.md)
+[Make views editable using sub-grids](make-grids-lists-editable-custom-control.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
