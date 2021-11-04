@@ -171,6 +171,6 @@ Business Rules on an editable grid are supported only if the conditional column 
 
 [Setting managed properties for views](managed-properties-views.md)
 
-[Use keyboard shortcuts in editable grids](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/basics/keyboard-shortcuts#editable-grids-views)
+[Use keyboard shortcuts in editable grids](https://docs.microsoft.com/dynamics365/customerengagement/on-premises/basics/keyboard-shortcuts#editable-grids-views)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

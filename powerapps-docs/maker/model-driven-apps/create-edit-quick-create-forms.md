@@ -161,7 +161,9 @@ If there is a customization made in a version 9.0 solution to tables where **Ena
 > - If a quick create form exists for a table but is not included in the app, the Unified Interface runtime will still open the quick create form.  This behavior occurs with lookup controls and subgrids. If you don’t want a quick create form to appear in your app you must delete it.
 > - Be aware of the behavior that occurs when a parent relationship is created with the same table. For example, if Account has a relationship to Account and lookup is created that is used by a quick create form that creates a parent row, the first row will not be saved with the lookup that has the parent row value. This is because of the circular reference introduced by using the same table. If you experience this issue you can resolve it by removing the parent row id on the quick create form before saving the row.
 
-### See also  
-[Overview of the form editor user interface](form-editor-user-interface-legacy.md)
+## Next steps  
+[Create quick view form](create-edit-quick-view-forms.md)
+
+[Form types overview](types-forms.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

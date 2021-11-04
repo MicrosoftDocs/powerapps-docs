@@ -26,7 +26,7 @@ search.app:
 
 Forms in model-driven apps provide the primary means by which users can update records.  Forms associated with a table can be accessed via the table designer.
 
-The most versatile form type of the new form is **Main**, however, in addition to main forms app designers can build quick create, quick view or card forms.  [Learn more about other types of form](types-forms)
+The most versatile form type of the new form is **Main**, however, in addition to main forms app designers can build quick create, quick view or card forms.  [Learn more about other types of form](types-forms.md)
 
 This topic explains how to edit a main form, and add or change various elements of the form.
 
