@@ -43,14 +43,14 @@ To add languages for your custom page you need to first enable the languages you
 
 After completing the steps to enable language(s) in the environment, you'll need to create a RESX file for each language in the proper format for the strings you want localized on your custom page for your model-driven app.
 
-After you have the created the RESX files with the localized strings you can add them into your solution as a web resource. There are two ways to accomplish this task, the first is to open your solution in make.powerapps.com and select the option to add a web resource to your solution in your environment or you can add a web resource while working on a custom page.  Adding while working on a custom page will be covered in the section on adding localized files to your custom page. More information: [RESX web resources](https://docs.microsoft.com/en-us/powerapps/developer/model-driven-apps/resx-web-resources)
+After you have the created the RESX files with the localized strings you can add them into your solution as a web resource. There are two ways to accomplish this task, the first is to open your solution in make.powerapps.com and select the option to add a web resource to your solution in your environment or you can add a web resource while working on a custom page.  Adding while working on a custom page will be covered in the section on adding localized files to your custom page. More information: [RESX web resources](/powerapps/developer/model-driven-apps/resx-web-resources)
 
 ## Add localized RESX Web resource files to your solution
 
 1. Go to [make.powerapps.com](https://make.powerapps.com),select the **Solutions** area, and open the solution you want.
 1. On the command bar select **New** > **More** > **Web Resource**. This opens a panel to add your RESX web resource file.
 
-All files added to your solution need to follow a specific format that includes **{filename}.LanguageID.resx**, where the language id is the numeric value for that language. This format is necessary because the framework relies on the naming convention to identify which resource file should be used to associate the appropriate localized string to a label control. 
+All files added to your solution need to follow a specific format that includes **{filename}.LanguageID.resx**, where the [language id](/power-platform/admin/language-collations#language-and-associated-collation-used-with-dataverse) is the numeric value for that language. This format is necessary because the framework relies on the naming convention to identify which resource file should be used to associate the appropriate localized string to a label control.
 
 > [!IMPORTANT]
 > The RESX {filename} *must be the same* for all your files.  
@@ -67,7 +67,7 @@ After you have added your web resource to your solution make sure you publish yo
 
 ## Adding localized files to your custom page
 
-You can add localized files to your custom page when you're creating or editing a page.  More information: [Overview of custom pages for model-driven apps](https://docs.microsoft.com/en-us/powerapps/maker/model-driven-apps/model-app-page-overview)
+You can add localized files to your custom page when you're creating or editing a page.  More information: [Overview of custom pages for model-driven apps](/powerapps/maker/model-driven-apps/model-app-page-overview)
 
 To add a language to your page, select the **Resources** icon on the left to open the **Resources** pane.
 
@@ -106,7 +106,7 @@ Using the text function, set the value to the web resource and the value you wan
 
 :::image type="content" source="media/page-localization/studio-page-text-function.png"alt-text="Power Apps Studio custom page text function for a control.":::
 
-Save and publish your changes to the page. 
+Save and publish your changes to the page.
 
 > [!NOTE]
 > Make sure you also save and publish your changes to the app. Saving and publishing both the page and app are needed to ensure your localized labels render with the appropriate strings at runtime.
@@ -125,3 +125,6 @@ Save and publish your changes to the page.
 1. Then, on the **Languages** tab, set the **User Interface Language** to the language you would like to test.
 
    :::image type="content" source="media/page-localization/studio-page-runtime-3.png"alt-text="Power Apps Studio custom page runtime setting dialog.":::
+
+### See also
+[Create or edit model-driven app web resources to extend an app](create-edit-web-resources.md)
