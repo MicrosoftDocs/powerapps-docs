@@ -101,20 +101,27 @@ After a web resource language has been added to your page you can quickly and ea
 To add localized content to your label control you'll need to select the label and set the function to the resource using the text function of the control. To do this, select the label control and select the **Text** function.
 
 :::image type="content" source="media/page-localization/studio-page-text-option.png"alt-text="Power Apps Studio custom page text option on a control.":::
-<!-- START HERE -->
-Using the text function set the value to the web resource and the value you want that is in your web resource resx file.  After setting the expression the content will show in the preview for the page.
+
+Using the text function, set the value to the web resource and the value you want that is in your web resource RESX file.  After setting the expression the content will appear in the preview for the page.
+
 :::image type="content" source="media/page-localization/studio-page-text-function.png"alt-text="Power Apps Studio custom page text function for a control.":::
 
-Save and publish your changes to the page and make sure you **also save and publish your changes to the app**.  Both are needed to ensure your localized labels will render with the appropriate strings at runtime.
+Save and publish your changes to the page. 
+
+> [!NOTE]
+> Make sure you also save and publish your changes to the app. Saving and publishing both the page and app are needed to ensure your localized labels render with the appropriate strings at runtime.
 
 ## Running your app with localized content
 
-After publishing your page and your app, click on play in app designer to open the app in a browser.
-Click on your custom page on the sitemap.
-:::image type="content" source="media/page-localization/studio-page-runtime-1.png"alt-text="Power Apps Studio custom page runtime.":::
+1. After publishing your page and your app, select **Play** in the app designer to open the app in a separate browser tab.
+1. Select your custom page on the site map.
 
-The label(s) for your control(s) will show the localized content.  You can test all languages added to your app and your page(s) by clicking on Personal settings under the gear icon at the top of the page and setting the User Interface Language to the language you would like to test.
+   :::image type="content" source="media/page-localization/studio-page-runtime-1.png"alt-text="Power Apps Studio custom page runtime.":::
 
-:::image type="content" source="media/page-localization/studio-page-runtime-2.png"alt-text="Power Apps Studio custom page runtime setting options.":::
+1. The labels for your controls display the localized content. Test each language added to your app and pages by selecting **Personalization Settings** under **Settings** (gear icon) at the top of the app.
 
-:::image type="content" source="media/page-localization/studio-page-runtime-3.png"alt-text="Power Apps Studio custom page runtime setting dialog.":::
+   :::image type="content" source="media/page-localization/studio-page-runtime-2.png"alt-text="Power Apps Studio custom page runtime setting options.":::
+
+1. Then, on the **Languages** tab, set the **User Interface Language** to the language you would like to test.
+
+   :::image type="content" source="media/page-localization/studio-page-runtime-3.png"alt-text="Power Apps Studio custom page runtime setting dialog.":::
