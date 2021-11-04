@@ -16,7 +16,7 @@ search.app:
   - D365CE
 ---
 
-# Add code components to a custom page for your model-driven app (preview)
+# Add code components to a custom page for your model-driven app
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
@@ -25,6 +25,7 @@ This article outlines the use of code components built by professional developer
   > [!IMPORTANT]
   > - This is a preview feature, and may not be available in all regions.
   > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
+  > - Custom pages are a new feature with significant product changes and currently have a number of known limitations outlined in [Custom Page Known Issues](model-app-page-issues.md).
 
   > [!NOTE]
   > - Custom pages support all the component framework APIs that are currently supported for canvas apps. 
