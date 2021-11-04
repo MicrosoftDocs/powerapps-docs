@@ -134,7 +134,7 @@ namespace PPTools_Sample_Solution.NotifyPlugin
 At this point you would add your custom plug-in code where indicated by the TODO code comments. For more information, read some of these related topics: [Pass configuration data to your plug-in](../write-plug-in.md#pass-configuration-data-to-your-plug-in), [Understand the execution context](../understand-the-data-context.md#understand-the-execution-context), and [Tracing and logging](../logging-tracing.md).
 
 > [!IMPORTANT]
-> Do not add plug-in classes, and add or delete plug-in or steps registrations, through any means other than using the Power Platform Tools context menus. When you use the context menus, deployment entries in the CrmPackage project's RegisterFile.crmregister file are maintained. It is this information that is used for deployment of assemblies, plug-ins, and steps.
+> Do not add plug-in classes, and add or delete plug-in or step registrations, through any means other than using the Power Platform Tools context menus. When you use the context menus, deployment entries in the CrmPackage project's RegisterFile.crmregister file are maintained. It is this information that is used for deployment of assemblies, plug-ins, and steps.
 
 ## Sign the assembly
 
