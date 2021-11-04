@@ -1,6 +1,36 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/maker/portals/web-api-perform-operations.md",
+      "redirect_url": "write-update-delete-operations",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/teams/extend-milestones-send%20notification.md",
+      "redirect_url": "extend-milestones-send-notification",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/teams/extend-milestones-send notification.md",
+      "redirect_url": "extend-milestones-send-notification",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/maker/data-platform/add-data-power-query.md",
+      "redirect_url": "/power-query/dataflows/add-data-power-query",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/maker/data-platform/connect-azure-data-lake-storage-for-dataflow.md",
+      "redirect_url": "/power-query/dataflows/connect-azure-data-lake-storage-for-dataflow",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/maker/data-platform/using-dataflows-with-on-premises-data.md",
+      "redirect_url": "/power-query/dataflows/using-dataflows-with-on-premises-data",
+      "redirect_document_id": "false"
+    },
+    {
       "source_path": "powerapps-docs/developer/component-framework/reference/lookupoptions.md",
       "redirect_url": "utility/lookupobjects",
       "redirect_document_id": "false"

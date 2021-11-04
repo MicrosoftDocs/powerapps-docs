@@ -5,13 +5,13 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/22/2021
+ms.date: 08/31/2021
 ms.subservice: portals
 ms.author: nenandw
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
     - neerajnandwana-msft
-    - tapanm-msft
+    - nickdoelman
 ---
 
 # Set up Power BI integration
@@ -191,11 +191,9 @@ Customizers can now use the [powerbi Liquid tag](../liquid/portals-entity-tags.m
 
 ## Considerations and limitations
 
-- Power Apps portals doesn't support [Azure Analysis Services live connections](/power-bi/developer/embedded/embedded-row-level-security#working-with-analysis-services-live-connections). You can use Analysis Services in import mode with row-level security (RLS) applied in the report instead of Analysis Services.
-- Portals with version [9.3.4.x](../versions/version-9.3.4.x.md) or later support the following capabilities:
-    - Dashboards and report from Azure Analysis Services using [live connections](/azure/analysis-services/analysis-services-connect-pbi).
+- Portals with version [9.3.4.x](../versions/version-9.3.4.x.md) or later supports the following capabilities:
+    - Dashboards and report from Azure Analysis Services using [live connections](/azure/analysis-services/analysis-services-connect-pbi). Azure Analysis Services on-premises configurations are not supported.
     - Dashboards with [role-based security](/power-bi/admin/service-admin-rls).
-    - Dashboard with different data sources having different role-based security.
     - Single tile with role-based security.
 - For more information about Power BI Embedded service limitations, see [Considerations and limitations](/power-bi/developer/embed-service-principal#considerations-and-limitations).
 

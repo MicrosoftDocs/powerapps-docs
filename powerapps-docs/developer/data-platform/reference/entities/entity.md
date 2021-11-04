@@ -1,13 +1,13 @@
 ---
 title: "Entity table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the Entity table/entity."
-ms.date: 05/20/2021
+ms.date: 10/05/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -348,12 +348,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### ComponentState Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Published|
-|1|Unpublished|
-|2|Deleted|
-|3|Deleted Unpublished|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Published||
+|1|Unpublished||
+|2|Deleted||
+|3|Deleted Unpublished||
 
 
 
@@ -408,8 +408,13 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 Listed by **SchemaName**.
 
 - [entity_solutioncomponentconfiguration](#BKMK_entity_solutioncomponentconfiguration)
-- [entity_entityanalyticsconfig](#BKMK_entity_entityanalyticsconfig)
+- [entity_solutioncomponentbatchconfiguration_PrimaryEntity](#BKMK_entity_solutioncomponentbatchconfiguration_PrimaryEntity)
+- [entity_solutioncomponentbatchconfiguration_RelatedEntity](#BKMK_entity_solutioncomponentbatchconfiguration_RelatedEntity)
 - [catalogassignment_entity](#BKMK_catalogassignment_entity)
+- [entity_entityanalyticsconfig](#BKMK_entity_entityanalyticsconfig)
+- [entity_serviceplanmapping](#BKMK_entity_serviceplanmapping)
+- [virtualentitymetadata_extensionofrecordid](#BKMK_virtualentitymetadata_extensionofrecordid)
+- [entity_appaction_ContextEntity](#BKMK_entity_appaction_ContextEntity)
 
 
 ### <a name="BKMK_entity_solutioncomponentconfiguration"></a> entity_solutioncomponentconfiguration
@@ -429,19 +434,36 @@ Same as solutioncomponentconfiguration table [entity_solutioncomponentconfigurat
 |CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
 
 
-### <a name="BKMK_entity_entityanalyticsconfig"></a> entity_entityanalyticsconfig
+### <a name="BKMK_entity_solutioncomponentbatchconfiguration_PrimaryEntity"></a> entity_solutioncomponentbatchconfiguration_PrimaryEntity
 
-**Added by**: Advanced Analytics Infrastructure Solution
+**Added by**: Solution Component Configuration Solution
 
-Same as entityanalyticsconfig table [entity_entityanalyticsconfig](entityanalyticsconfig.md#BKMK_entity_entityanalyticsconfig) Many-To-One relationship.
+Same as solutioncomponentbatchconfiguration table [entity_solutioncomponentbatchconfiguration_PrimaryEntity](solutioncomponentbatchconfiguration.md#BKMK_entity_solutioncomponentbatchconfiguration_PrimaryEntity) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
-|ReferencingEntity|entityanalyticsconfig|
-|ReferencingAttribute|parententityid|
+|ReferencingEntity|solutioncomponentbatchconfiguration|
+|ReferencingAttribute|primaryentity|
 |IsHierarchical|False|
 |IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|entity_entityanalyticsconfig|
+|ReferencedEntityNavigationPropertyName|entity_solutioncomponentbatchconfiguration_PrimaryEntity|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
+
+
+### <a name="BKMK_entity_solutioncomponentbatchconfiguration_RelatedEntity"></a> entity_solutioncomponentbatchconfiguration_RelatedEntity
+
+**Added by**: Solution Component Configuration Solution
+
+Same as solutioncomponentbatchconfiguration table [entity_solutioncomponentbatchconfiguration_RelatedEntity](solutioncomponentbatchconfiguration.md#BKMK_entity_solutioncomponentbatchconfiguration_RelatedEntity) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|solutioncomponentbatchconfiguration|
+|ReferencingAttribute|relatedentity|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|entity_solutioncomponentbatchconfiguration_RelatedEntity|
 |AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
 |CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
 
@@ -459,6 +481,74 @@ Same as catalogassignment table [catalogassignment_entity](catalogassignment.md#
 |IsHierarchical|False|
 |IsCustomizable|False|
 |ReferencedEntityNavigationPropertyName|CatalogAssignments|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_entity_entityanalyticsconfig"></a> entity_entityanalyticsconfig
+
+**Added by**: Advanced Analytics Infrastructure Solution
+
+Same as entityanalyticsconfig table [entity_entityanalyticsconfig](entityanalyticsconfig.md#BKMK_entity_entityanalyticsconfig) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|entityanalyticsconfig|
+|ReferencingAttribute|parententityid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|entity_entityanalyticsconfig|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
+
+
+### <a name="BKMK_entity_serviceplanmapping"></a> entity_serviceplanmapping
+
+**Added by**: License Enforcement Solution
+
+Same as serviceplanmapping table [entity_serviceplanmapping](serviceplanmapping.md#BKMK_entity_serviceplanmapping) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|serviceplanmapping|
+|ReferencingAttribute|entity|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|entity_serviceplanmapping|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_virtualentitymetadata_extensionofrecordid"></a> virtualentitymetadata_extensionofrecordid
+
+**Added by**: Active Solution Solution
+
+Same as virtualentitymetadata table [virtualentitymetadata_extensionofrecordid](virtualentitymetadata.md#BKMK_virtualentitymetadata_extensionofrecordid) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|virtualentitymetadata|
+|ReferencingAttribute|extensionofrecordid|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|virtualentitymetadata_extensionofrecordid|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
+
+
+### <a name="BKMK_entity_appaction_ContextEntity"></a> entity_appaction_ContextEntity
+
+**Added by**: Power Apps Actions Solution
+
+Same as appaction table [entity_appaction_ContextEntity](appaction.md#BKMK_entity_appaction_ContextEntity) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|appaction|
+|ReferencingAttribute|contextentity|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|entity_appaction_ContextEntity|
 |AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
 |CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 

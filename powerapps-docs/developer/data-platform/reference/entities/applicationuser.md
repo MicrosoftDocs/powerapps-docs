@@ -1,13 +1,13 @@
 ---
 title: "ApplicationUser table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the ApplicationUser table/entity."
-ms.date: 05/20/2021
+ms.date: 10/05/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -117,11 +117,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### ApplicationType Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|First party applications|
-|1|Platform applications|
-|2|External applications|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|First party applications||
+|1|Platform applications||
+|2|External applications||
 
 
 
@@ -167,8 +167,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### CanImpersonateAsSystemUser Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -377,12 +377,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### ComponentState Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Published|
-|1|Unpublished|
-|2|Deleted|
-|3|Deleted Unpublished|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Published||
+|1|Unpublished||
+|2|Deleted||
+|3|Deleted Unpublished||
 
 
 
@@ -521,8 +521,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsManaged Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Managed|
 |0|Unmanaged|
 
@@ -965,3 +965,4 @@ IntersectEntityName: applicationuserprofile<br />
 
 [About the table reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+<xref href="Microsoft.Dynamics.CRM.applicationuser?text=applicationuser EntityType" />

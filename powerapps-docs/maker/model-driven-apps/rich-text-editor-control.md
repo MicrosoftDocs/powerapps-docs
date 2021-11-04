@@ -60,7 +60,7 @@ You can create a new text column and configure the control, or replace an existi
 The rich text editor control comes with a rich set of configuration options that make it possible to customize its appearance, features, and behavior. To configure the rich text editor control, follow these steps:
 
 1. Create a JSON file that includes the defaultSupportedProps structure and configuration with the changes you want. More information: [Sample rich text editor configurations](#sample-rich-text-editor-configurations) and [Rich text editor properties](#rich-text-editor-properties)
-2. In Power Apps, create a JavaScript web resource using the JSON file created in step 1. More information: [Create or edit model-driven app web resources to extend an app](create-edit-web-resources.md)
+2. In Power Apps, create a Script(JScript) type web resource using the JSON file created in step 1. More information: [Create or edit model-driven app web resources to extend an app](create-edit-web-resources.md)
 3. Open the **Column Properties** page for the text column with the rich text editor control, and then next to **RichTextEditorControl_URL** select **Edit**.
    > [!div class="mx-imgBorder"] 
    > ![Rich text editor control URL.](media/richtexteditorcontrol-url.png)
@@ -556,13 +556,13 @@ The following sample rich text editor configuration code sample data can be used
 :::image type="content" source="media/cke-fixed-height.png" alt-text="With a fixed height, the editor remains at the same height. When enough content is added, a scroll bar appears.":::
 
 
-## Create plain text surface that removes all html tag (except for the "br" tag)
+### Create plain text surface that removes all html tag (except for the "br" tag)
 
 `{ "defaultSupportedProps": {     "enterMode": 2 ,     "shiftEnterMode": 2 ,     "allowedContent":"*",     "disallowedContent":"*",     "forcePasteAsPlainText": true ,     "toolbar":[],     "removePlugins":"contextmenu,liststyle,openlink,tableresize,tableselection,tabletools"  },  "disableImages": true}}`
 
 :::image type="content" source="media/rte-plain-text-surface.png" alt-text="Creating a plain text surface makes the strips html.":::
 
-## Remove the context menu so right-clicking will work with the default browser spell check
+### Remove the context menu so right-clicking will work with the default browser spell check
 
 Enabling this functionality removes the contextual right-click editing capability.
 
@@ -756,12 +756,13 @@ The following table outlines a list of accessibility shortcuts available when us
 |Type | Shortcut key | Description |
 |----------------------|-------------------------|-----------------------------|
 | General | Alt+F11 | Toggle full-screen view. |
-| Tab navigation | Alt+Ctrl+0 | Go to menu bar. |
+| Tab navigation | Alt+Ctrl+0 | Go to editor toolbar. |
 | Tab navigation | Alt+1 | Go to the rich-text editor. |
 | Tab navigation | Alt+2 | Go to the HTML editor. |
 | Tab navigation | Alt+3 | Go to the preview view. |
 | General editor commands | Alt+F10 | Navigate to the editor toolbar. Move to the next and previous toolbar group with Tab and Shift+Tab. Move to the next and previous toolbar button with Right Arrow or Left Arrow. Press Space or Enter to activate the toolbar button. |
-| General editor commands | See description. | Editor dialog: Inside a dialog, press Tab to navigate to the next dialog element, press Shift+Tab to move to the previous dialog element, press Enter to submit the dialog, press ESC to cancel the dialog. When a dialog has multiple tabs, the tab list can be reached either with Alt+F10 or with Tab, following the dialog tabbing order. With a tab list focused, move to the next and previous tab with Right and Left Arrow, respectively.. |
+| General editor commands | Alt+- | Expand/Collapse the editor toolbar. |
+| General editor commands | See description. | Editor dialog: Inside a dialog, press Tab to navigate to the next dialog element, press Shift+Tab to move to the previous dialog element, press Enter to submit the dialog, press ESC to cancel the dialog. When a dialog has multiple tabs, the tab list can be reached either with Alt+F10 or with Tab, following the dialog tabbing order. With a tab list focused, move to the next and previous tab with Right and Left Arrow, respectively. |
 | General editor commands | See description. | Editor list box: Inside a list box, move to next list item with Tab or Down Arrow. Move to previous list item with Shift+Tab or Up Arrow. Press Space or Enter to select the list option. Press ESC to close the list box. |
 | Base commands | Ctrl+Z | Undo command. |
 | Base commands | Shift+Ctrl+Z | Redo command. |

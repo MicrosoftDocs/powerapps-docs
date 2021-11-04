@@ -5,7 +5,7 @@ author: mduelae
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 06/29/2021
+ms.date: 10/15/2021
 ms.subservice: mobile
 ms.author: mkaur
 ms.custom: ""
@@ -79,7 +79,7 @@ Choose the download link for your device:
 
 Open Power Apps on your mobile device, and sign in by using your Azure Active Directory credentials.
 
-If you have the Microsoft Authenticator app installed on your mobile device, enter your username when prompted, and then approve the notification sent to your device. If you run into issues signing in, see [Troubleshoot sign in issues](/powerapps/user/powerapps_mobile_troubleshoot#sign-in-issues).
+If you have the Microsoft Authenticator app installed on your mobile device, enter your username when prompted, and then approve the notification sent to your device. If you run into issues signing in, see [Troubleshoot issues for Power Apps mobile app](powerapps-mobile-troubleshoot.md).
 
 ![Sign in to Power Apps.](media/powerapps_mobile_app_signin_screen.png "Sign in to Power Apps")
 
@@ -283,7 +283,7 @@ Select the site map ![Site map icon.](media/pa_mobile_sitemap_icon.png "Site map
 
 
 >[!Note]
-> If you're on [early access](/power-platform/admin/opt-in-early-access-updates) your site map might look different. With 2021 release wave 2, the app maker can customize the navigation bar and show or hide the **Home**, **Recent**, **Pinned** buttons in the site map. The app maker can also make groups collapsible. For more information, see [Hide or show the Home, Pinned, Recent, and collapsible groups](../user/navigation.md#early-access-hide-or-show-the-home-pinned-recent-and-collapsible-groups).
+> An app maker can customize the navigation bar and show or hide the **Home**, **Recent**, **Pinned** buttons in the site map. An app maker can also make groups collapsible. For more information, see [Hide or show the Home, Pinned, Recent, and collapsible groups](../user/navigation.md#hide-or-show-the-home-pinned-recent-and-collapsible-groups).
 
 ## See also
 

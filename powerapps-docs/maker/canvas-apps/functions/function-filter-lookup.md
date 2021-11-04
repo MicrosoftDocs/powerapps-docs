@@ -21,6 +21,9 @@ contributors:
 # Filter, Search, and LookUp functions in Power Apps
 Finds one or more [records](../working-with-tables.md#records) in a [table](../working-with-tables.md).
 
+Watch this video to learn how to use Filter, Search and LookUp functions:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLj3m]
+
 ## Description
 The **Filter** function finds records in a table that satisfy a formula.  Use **Filter** to find a set of records that match one or more criteria and to discard those that don't.
 

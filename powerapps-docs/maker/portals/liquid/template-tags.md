@@ -5,13 +5,14 @@ author: gitanjalisingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 08/17/2021
+ms.date: 10/26/2021
 ms.subservice: portals
 ms.author: gisingh
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
-    - tapanm-msft
+    - nickdoelman
     - GitanjaliSingh33msft
+    - nickdoelman
 ---
 
 # Template tags
@@ -86,6 +87,19 @@ Results attribute in provided variable (such as 'resultVariable' in above sample
 
 XML attribute in provided variable (such as 'resultVariable' in above sample) holds the resultant query which can be used to get data from Microsoft Dataverse. This attribute is useful for debugging purpose when you want to understand how table permission is getting applied on this *fetchxml* tag.  
 
+### Other supported elements and attributes
+
+fetchxml liquid tag supports the following attributes, and child elements.
+
+| Element/Child element | Attributes | Child element |
+| - | - | - |
+| fetch | mapping <br> version <br> count  <br> page  <br> paging-cookie  <br> utc-offset  <br> aggregate  <br> distinct  <br> min-active-row-version  <br> output-format  <br> returntotalrecordcount  <br> no-lock | order <br> entity |
+| order | attribute <br> alias <br> descending | |
+| entity | name <br> all-attributes <br> no-attrs <br> attribute | order <br> filter <br> link-entity |
+| filter | type <br> hint <br> isquickfindfields | condition <br> filter |
+| link-entity | name <br> from <br> to <br> alias <br> link-type <br> visible <br> intersect <br> all-attributes <br> no-attrs <br> attribute | order <br> filter <br> link-entity |
+| condition | column <br> entityname <br> attribute <br> operator <br> aggregate <br> alias <br> uiname <br> uitype <br> uihidden <br> value | value |
+
 ## include
 
 Includes the contents of one template in another, by name. In Power Apps portals, the source of this other template will generally be a [web template](store-content-web-templates.md). This allows for the reuse of common template fragments in multiple places.  
@@ -139,12 +153,16 @@ When you enable the header and footer caching, and want to avoid caching of cert
 > [!TIP]
 > The URL used in [request.url](liquid-objects.md#request) can be any requested value, and gets [cached](../configure/enable-header-footer-output-caching.md) for subsequent requests. To ensure correct value in request.url, consider using substitution tag, partial URL such as ~\{WebFile path} or storing the portal URL in [Site Settings](../configure/configure-site-settings.md).
 
+## codecomponent
+
+See [Understand codecomponent Dataverse entity tag](portals-entity-tags.md#codecomponent), [Use code components Liquid template tag](../component-framework-liquid.md).
+
 ### See also
 
 [Control flow tags](control-flow-tags.md)<br>
 [Iteration tags](iteration-tags.md)<br>
 [Variable tags](variable-tags.md)<br>
-[Power Apps Dataverse entity tags](portals-entity-tags.md)
-
+[Power Apps Dataverse entity tags](portals-entity-tags.md)<br>
+[Use code components Liquid template tag](../component-framework-liquid.md)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

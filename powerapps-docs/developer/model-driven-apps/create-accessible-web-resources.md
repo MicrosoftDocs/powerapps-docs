@@ -55,11 +55,10 @@ However, semantic HTML can only go so far. Modern web applications typically inc
   
  In addition to including support for AT, there are other requirements you have to consider. For example, how does the UI adjust when the user increases the text size? Does your UI require that the user be able to differentiate colors to perform tasks? Can all actions be performed by using a keyboard? For more information, see [Introduction to Web Accessibility](/previous-versions/windows/apps/hh452681(v=win.10)).
   
-<a name="BKMK_SilverlightWebResources"></a>   
 
-## Accessible Silverlight web resources  
+<!--## Accessible Silverlight web resources  
 
- Silverlight web resources are hosted in a form or an HTML web resource and the UI is rendered by the Silverlight browser plug-in. Silverlight is a subset of the Windows Presentation Framework (WPF) and therefore programmatic access and AT are exposed by using UIA that resembles WPF windows applications. For more information, see [Silverlight accessibility for developers](/previous-versions/windows/).  
+ Silverlight web resources are hosted in a form or an HTML web resource and the UI is rendered by the Silverlight browser plug-in. Silverlight is a subset of the Windows Presentation Framework (WPF) and therefore programmatic access and AT are exposed by using UIA that resembles WPF windows applications. For more information, see [Silverlight accessibility for developers](/previous-versions/windows/). -->
   
 <a name="BKMK_AccessiblityTestingTools"></a>   
 
@@ -67,7 +66,7 @@ However, semantic HTML can only go so far. Modern web applications typically inc
 
  The following list provides some publicly available accessibility testing tools:  
   
- [Visual Studio Accessibility Checker](/previous-versions/ms228004(v=vs.140))  <!--TODO No relevant microsoft docs link-->
+ [Visual Studio Accessibility Checker](/previous-versions/ms228004(v=vs.140))  
  If you are using Visual Studio to edit your HTML web resource files, you will find that there are built-in tools to check for issues related to accessibility. In the **Tools** menu, select **Check Accessibility** to see a report that will provide guidance about accessibility related issues.  
   
  [UI Accessibility Checker](https://acccheck.codeplex.com/)  
@@ -87,9 +86,7 @@ However, semantic HTML can only go so far. Modern web applications typically inc
   
 - [Introduction to web accessibility](/previous-versions/windows/apps/hh452681(v=win.10))  
   
-- [Accessibility in Visual Studio and ASP.NET](/previous-versions/ms228004(v=vs.140))  <!--TODO No relevant microsoft docs link-->
-  
-- [Silverlight accessibility for developers](/previous-versions/windows/)  
+- [Accessibility in Visual Studio and ASP.NET](/previous-versions/ms228004(v=vs.140))  
   
 - [Accessibility overview](https://developer.microsoft.com/windows/accessible-apps)  
   

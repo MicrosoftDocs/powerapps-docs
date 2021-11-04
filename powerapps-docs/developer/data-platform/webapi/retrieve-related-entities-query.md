@@ -39,7 +39,7 @@ If you include only the name of the navigation property, you’ll receive all th
 > - Queries which expand collection-valued navigation properties may return cached data for those properties that doesn’t reflect recent changes. It is recommended to use `If-None-Match` header with value `null` to override browser caching. See [HTTP Headers](compose-http-requests-handle-errors.md#bkmk_headers) for more details.
 > 
 
-<a bkmk="bkmk_retrieverelatedentityexpandsinglenavprop"></a>
+<a name="bkmk_retrieverelatedentityexpandsinglenavprop"></a>
 
 ## Retrieve related table records by expanding single-valued navigation properties
 
@@ -203,7 +203,7 @@ OData-Version: 4.0
 }
 ```
 
-<a bkmk="bkmk_retrieverelatedentityexpandcollectionnavprop"></a>
+<a name="bkmk_retrieverelatedentityexpandcollectionnavprop"></a>
 
 ## Retrieve related tables by expanding collection-valued navigation properties
 
@@ -275,7 +275,7 @@ OData-Version: 4.0
  
 ```  
 
-<a bkmk="bkmk_retrieverelatedentitysingleandcollectionnavprop"></a>
+<a name="bkmk_retrieverelatedentitysingleandcollectionnavprop"></a>
   
 ## Retrieve related tables by expanding both single-valued and collection-valued navigation properties
 
@@ -359,7 +359,7 @@ The Web API allows you to use two lambda operators, which are `any` and `all` to
 
 ## See also
 
-[Search across table data using relevance search](relevance-search.md)  
+[Search across table data using Dataverse search](relevance-search.md)  
 [Query data using Web API](query-data-web-api.md)<br />
 [Perform operations using the Web API](perform-operations-web-api.md)<br />
 [Compose Http requests and handle errors](compose-http-requests-handle-errors.md)<br />

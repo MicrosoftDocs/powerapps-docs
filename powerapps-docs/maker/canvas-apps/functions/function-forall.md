@@ -192,7 +192,7 @@ ClearCollect( NewOrder,
                 Product: Product, 
                 'Quantity To Order': 'Quantity Requested' - 'Quantity Available' 
             } 
-        } 
+        ) 
     )
 )
 ```

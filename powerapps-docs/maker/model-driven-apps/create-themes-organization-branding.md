@@ -2,7 +2,7 @@
 title: "Change the color scheme or add a logo to match your brand  | MicrosoftDocs"
 description: Learn how to change the color scheme for your app with Power Apps
 ms.custom: ""
-ms.date: 01/12/2021
+ms.date: 10/04/2021
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -24,10 +24,13 @@ search.app:
 
 [!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-You can create a custom look and feel (a theme), for your app by making changes to the default colors and visual elements provided in the uncustomized system. For example, you can create your personal product branding by adding a company logo and providing table-specific coloring. A theme can be created by using the **Themes** area, without requiring a developer to write code. You can create, clone, change, or delete themes that are used in your environment. 
+You can create a custom look and feel (a theme), for your app by making changes to the default colors and visual elements provided in the uncustomized system. For example, you can create your personal product branding by adding a company logo and providing table-specific coloring. A theme can be created by using the **Themes** area, without requiring a developer to write code. You can create, clone, change, or delete themes that are used in your environment.
+
+Watch this video for a quick overview about how to create a default theme for model-driven apps:
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWLvM4]
 
 > [!NOTE]
-> You can define multiple themes, but only one can be active in the system and is identified as the default theme. To make a theme active, you publish it.
+> You can define multiple themes, but only one can be active in the environment and is identified as the default theme. To make a theme active, you publish it.
   
 <a name="UseThemes"></a>   
 ## Use themes to enhance the user interface and create your product branding

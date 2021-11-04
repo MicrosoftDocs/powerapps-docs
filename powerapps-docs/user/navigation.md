@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 10/30/2020
+ms.date: 10/15/2021
 ms.subservice: end-user
 ms.author: mkaur
 ms.reviewer: ""
@@ -20,8 +20,6 @@ search.app:
 #  Basic navigation in a model-driven app 
 
 [!INCLUDE[cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
-
-[!INCLUDE cc-beta-prerelease-disclaimer]
 
 This introduction explains how to find and open an app, and how to work with its common user interface elements including lists, forms, and business processes.
 
@@ -70,12 +68,12 @@ Legend
 3. **Recent**: Expand this entry to view a list of rows you were recently using. Select a row here to open it. Select the push-pin icon next to a row listed here to add it to your pinned rows.
 4. **Pinned**: Expand this entry to view and open your favorite pinned rows. Use the **Recent** list to add rows here. Select the remove-pin icon next to a row listed here to remove it from this list.
 5.  **Page navigation**: This area lists each table and dashboard page available for the current work area. Select any entry here to open the named dashboard or list view for that table.
-6.  **Collapsible groups**: If you're on [early access](/power-platform/admin/opt-in-early-access-updates), your app maker can enable collapsible groups. For information on how customize the navigation bar, see [Overview of the model-driven app designer](/maker/model-driven-apps/app-designer-overview).
+6.  **Collapsible groups**: Your app maker can enable collapsible groups. For information on how customize the navigation bar, see [Overview of the model-driven app designer](../maker/model-driven-apps/app-designer-overview.md).
 
 
-### Early access: Hide or show the Home, Pinned, Recent, and collapsible groups
+### Hide or show the Home, Pinned, Recent, and collapsible groups
 
-If you're on [early access](/power-platform/admin/opt-in-early-access-updates) your site map might look different. With 2021 release wave 2, the app maker can customize the navigation bar to show or hide the **Home**, **Recent**, **Pinned** buttons in the site map. The app maker can also make groups collapsible. For information on how customize the navigation bar, see [Overview of the model-driven app designer](/maker/model-driven-apps/app-designer-overview).
+Your the site map might look different if it's been customized. Your app maker can customize the navigation bar to show or hide the **Home**, **Recent**, **Pinned** buttons in the site map. An app maker can also make groups collapsible. For information on how customize the navigation bar, see [Overview of the model-driven app designer](../maker/model-driven-apps/app-designer-overview.md).
 
 
 ![This diagram shows how the site map looks with a app maker customizes it to hide or show the Home, Pinned, Recent, and collapsible groups.](media/hide-show-nav-bar-buttons.gif
@@ -142,8 +140,8 @@ The number of rows that you see in the row set navigation pane is based on the n
 2. Open a row and then select **Open Row Set** ![Row set navigation.](media/openrecordset_2.png "Row set button") and then select a row from the list. 
 
 
-![Row set navigation diagram.](media/recordsetnav_new.gif "This shows how to use the row set navigation feature")   
 
+![How to use the row set navigation.](media/recordsetnav_new.gif "This shows how to use the row set navigation feature")   
 
 ## Reference panel
 
@@ -160,6 +158,10 @@ The reference panel is a great way to get work done without moving away from the
 ## App message bar 
 
 The app message bar shows three types of notifications: informational, warning, and error. 
+
+> [!NOTE]
+> If you're on [early access](/power-platform/admin/opt-in-early-access-updates) there's a new in-app notifications feature. For more information, see [In-app notifications in model-driven apps](notifications.md).
+ 
 
 When you select the error notification, it will take you to the column on the form where the error occurred.
 
