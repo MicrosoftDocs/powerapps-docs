@@ -29,7 +29,7 @@ This new page can be more flexible than a model-driven app form, view, or dashbo
 | -- | -- | -- |
 | Runtime for custom pages | General Availability |
 | Solution and ALM for custom pages | General Availability |
-| Connectors in custom pages | General Availability | All Power Apps connectors are supported in custom pages
+| Connectors in custom pages | General Availability | [List of all Power Apps connectors](/connectors/connector-reference/connector-reference-powerapps-connectors) |
 | Code components in custom pages | General Availability |
 | Monitor support for custom pages | General Availability |
 | Authoring custom pages | Public Preview | Modern app designer and canvas designer are expected to be used to author custom page that are supported at runtime |
@@ -94,7 +94,7 @@ To migrate an existing standalone canvas app, first start by identify a mapping 
 
 * What data can the custom page use?
 
-  A custom page can use Microsoft Dataverse and some of the most common connectors for Power Apps. The summary of verified connectors are listed in [Add connectors into custom pages](page-data-connectors.md).
+  A custom page can use Microsoft Dataverse and all of the connectors for Power Apps. More information: [List of all Power Apps connectors](/connectors/connector-reference/connector-reference-powerapps-connectors).
 
 * What interactions can the custom page have with the model-driven app?
 
@@ -124,7 +124,7 @@ To migrate an existing standalone canvas app, first start by identify a mapping 
 
 [Using PowerFx in custom page](page-powerfx-in-model-app.md)
 
-[Add connectors into custom pages](page-data-connectors.md)
+[Add connectors into custom pages](../canvas-apps/add-data-connection.md)
 
 [Use Monitor to troubleshoot custom page](monitor-page-checker.md)
 

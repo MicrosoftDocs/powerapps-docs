@@ -47,6 +47,8 @@ The custom page is a new page type within model-driven apps. Custom pages bring 
 
 * The maker experience for the custom page is currently not enabled in sovereign clouds. If you would like to enable it for a maker session, append "powerappsPortalApps.enableEditInShellAppDesigner=true" as a query parameter to the https://make.powerapps.com/ url.
 
+* Makers can not use cross-environment Dataverse references in a custom page.
+
 ## User-related issues
 
 * When a user with no Power Apps user privileges opens a custom page in the model-driven app, they will see an error mentioning no active entitlements to use PowerApps.  More information: [Licensing overview for Microsoft Power Platform](/power-platform/admin/pricing-billing-skus) and the associated licensing guide.
