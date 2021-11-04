@@ -34,5 +34,3 @@ When you filter on model-driven app custom page-related events in Monitor, you c
 [Model-driven app custom page overview](model-app-page-overview.md)
 
 [Using PowerFx in custom page](page-powerfx-in-model-app.md)
-
-[Add connectors into custom pages](page-data-connectors.md)
