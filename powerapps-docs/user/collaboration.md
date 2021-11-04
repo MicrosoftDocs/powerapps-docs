@@ -25,8 +25,8 @@ search.app:
 Collaborate with colleagues and share links in model-driven Power Apps the same way do you as in Microsoft Office.
 
 > [!NOTE]
-> - This is currently a preview feature. Your system administrator needs to turn on the **Collaboration** feature in your enviroment. For information, see [Manage feature settings](/power-platform/admin/settings-features.md).
-> - During the preview period, these features are only available in the **Opportunity**, **Account**, **Contact**, and **Case** tables that are in customer engagement apps such as [Dynamics 365 Sales](/dynamics365/sales-professional/help-hub.md), [Dynamics 365 Customer Service](/dynamics365/customer-service/help-hub.md) or stand-alone Power Apps.
+> - This is currently a preview feature. Your system administrator needs to turn on the **Collaboration** feature in your enviroment. For information, see [Manage feature settings](/power-platform/admin/settings-features).
+> - During the preview period, these features are only available in the **Opportunity**, **Account**, **Contact**, and **Case** tables that are in customer engagement apps such as [Dynamics 365 Sales](/dynamics365/sales-professional/help-hub), [Dynamics 365 Customer Service](/dynamics365/customer-service/help-hub) or stand-alone Power Apps.
 
 
 ### Multiplayer apps
