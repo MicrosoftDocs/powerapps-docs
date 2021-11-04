@@ -49,7 +49,9 @@ Use Power App portals Studio to configure your Progress Web App (PWA). You can e
 
 ## Brand your app
 
-You can create your own branded app by customizing your PWA by changing the app name, starting page, color, and more using the customization option. To customize PWA settings for your portal:
+You can create your own branded app by customizing your PWA by changing the app name, starting page, color, and more using the customization option.
+
+To customize PWA settings for your portal:
 
 1. In portals Studio, select **Progressive web app**.
 
