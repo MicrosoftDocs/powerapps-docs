@@ -1,5 +1,5 @@
 ---
-title: formatTime | Microsoft Docs
+title: formatUserDateTimeToUTC | Microsoft Docs
 description: Returns a formatted string that represents the datetime value after being formatted.
 keywords:
 ms.author: nabuthuk
@@ -15,11 +15,11 @@ ms.assetid: 148964b5-106e-4f2e-8038-9086d29dc54f
 
 # formatTime
 
-[!INCLUDE [formattime-description](includes/formattime-description.md)]
+[!INCLUDE [formatUserDateTimeToUTC-description](includes/formatUserDateTimeToUTC-description.md)]
 
 ## Syntax
 
-`context.formatting.formatTime(value, behavior);`
+`context.formatting.formatUserDateTimeToUTC(userDateTime, behavior);`
 
 ## Available for
 
@@ -29,8 +29,8 @@ Model-driven and canvas apps
 
 | Parameter Name | Type                                                   | Required | Description                                          |
 | -------------- | ------------------------------------------------------ | -------- | ---------------------------------------------------- |
-| value          | `Date`                                                 | Yes      | The date to be formatted.                            |
-| behavior       | [`DateTimeFieldBehavior`](../DateTimeFieldBehavior.md) | Yes      | The behavior of the datetime object to be formatted. |
+| userDateTime   | `Date`                                                 | Yes      | The date to be formatted.                            |
+| behavior       | [`DateTimeFieldBehavior`](../DateTimeFieldBehavior.md) | No       | The behavior of the datetime object to be formatted. |
 
 ## Return Value
 
