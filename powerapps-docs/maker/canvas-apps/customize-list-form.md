@@ -35,6 +35,24 @@ To follow the steps in this article, you'll create a list so that you can see ho
 Watch this video to learn how to customize a list form:
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLvLK]
 
+## Requirements
+
+Using, creating and editing SharePoint list forms requires the following for organization users and guests.
+
+|User type  |SharePoint custom form action  |Requirements  |
+|---------|---------|---------|
+|Guest     |View         |<ul> <li> View access to SharePoint site hosting the custom form. </li> <li> Power Apps plan that includes use rights to connect to Office. <br> **NOTE:** Separate licenses may be required for custom forms that use Premium capabilities. </li> </ul>          |
+|Guest    |Create/Edit         |<ul> <li> Edit access to SharePoint site hosting the custom form. </li> <li> Power Platform Environment Maker security role in environment hosting the SharePoint site. </li> </ul>           |
+|Organization user    |View        |<ul> <li> View access to SharePoint site hosting the custom form. </li> <li> Power Apps plan that includes use rights to connect to Office. <br> **NOTE:** Separate licenses may be required for custom forms that use Premium capabilities. </li> </ul>          |
+|Organization user     |Create/Edit         |<ul> <li> Edit access to SharePoint site hosting the custom form. </li> <li> Power Platform Environment Maker security role in environment hosting the SharePoint site. </li> </ul>         |
+
+More information:
+
+- [Licensing Guide section: Power Apps user rights included with Microsoft 365](https://go.microsoft.com/fwlink/?linkid=2085130)
+- [What license must be assigned to my guest so they can run an app shared with them?](share-app-guests.md#what-license-must-be-assigned-to-my-guest-so-they-can-run-an-app-shared-with-them)
+- [Microsoft 365 plan that includes Power Apps](/power-platform/admin/pricing-billing-skus#licenses)
+- [Premium connectors](/connectors/connector-reference/connector-reference-premium-connectors)
+
 ## Create a list
 
 On a SharePoint site, create a list, and then add these columns to that list:
@@ -134,24 +152,6 @@ You can configure the **Price**, **Availability**, and **Colors** fields to appe
 1. On the **Form Settings** page, select **Use the default SharePoint form**, and then select **Delete custom form**.
 
     ![Delete the custom form.](./media/customize-list-form/use-default-sharepoint.png)
-
-## Requirements
-
-Using, creating and editing SharePoint list forms requires the following for organization users and guests.
-
-|User type  |SharePoint custom form action  |Requirements  |
-|---------|---------|---------|
-|Guest     |View         |<ul> <li> View access to SharePoint site hosting the custom form. </li> <li> Power Apps plan that includes use rights to connect to Office. <br> **NOTE:** Separate licenses may be required for custom forms that use Premium capabilities. </li> </ul>          |
-|Guest    |Create/Edit         |<ul> <li> Edit access to SharePoint site hosting the custom form. </li> <li> Power Platform Environment Maker security role in environment hosting the SharePoint site. </li> </ul>           |
-|Organization user    |View        |<ul> <li> View access to SharePoint site hosting the custom form. </li> <li> Power Apps plan that includes use rights to connect to Office. <br> **NOTE:** Separate licenses may be required for custom forms that use Premium capabilities. </li> </ul>          |
-|Organization user     |Create/Edit         |<ul> <li> Edit access to SharePoint site hosting the custom form. </li> <li> Power Platform Environment Maker security role in environment hosting the SharePoint site. </li> </ul>         |
-
-More information:
-
-- [Licensing Guide section: Power Apps user rights included with Microsoft 365](https://go.microsoft.com/fwlink/?linkid=2085130)
-- [What license must be assigned to my guest so they can run an app shared with them?](share-app-guests.md#what-license-must-be-assigned-to-my-guest-so-they-can-run-an-app-shared-with-them)
-- [Microsoft 365 plan that includes Power Apps](/power-platform/admin/pricing-billing-skus#licenses)
-- [Premium connectors](/connectors/connector-reference/connector-reference-premium-connectors)
 
 ## Q & A
 
