@@ -105,9 +105,13 @@ In this section, you'll learn about creating an app using Power Apps that uses t
 
     ![Action > Power Automate.](./media/using-logic-flows/action-power-automate.png "Action > Power Automate")
 
-  Alternatively, if you have enabled the "Enable Power Automate Pane" preview feature, you'll have the option to chose your flow from the left-pane inside Studio. 
-  <<TODO: screenshot of adding the Flow>>
-  More information: [Power Automate Pane](#power-automate-pane)
+    Alternatively, if you have enabled the "Enable Power Automate Pane" preview feature, you'll have the option to chose your flow from the left-pane inside Studio. 
+    
+    :::image type="content" source="/media/using-logic-flows/power-automate-pane-add-flow.png" alt-text="A screenshot showing the Power Automate button in the left pane with the Add Flow dialog opened, showing the FlowInApp flow available to add to the app.":::
+    
+   <img width="346" alt="power-automate-pane-add-flow" src="https://user-images.githubusercontent.com/3670127/140553406-23e859a5-d0b5-4d42-9851-562c4647a24b.png">
+   
+   More information: [Power Automate Pane](#power-automate-pane)
 
 1. Select **FlowInApp**.
 
@@ -139,6 +143,7 @@ In this section, you'll learn about creating an app using Power Apps that uses t
 
     ![OnSelect formula for the button.](./media/using-logic-flows/onselect-button.png "OnSelect formula for the button")
 
+
 1. [Save and publish](save-publish-app.md) the app.
 
 ## Test the flow
@@ -160,6 +165,7 @@ Now that you have both the flow, and the app created, you'll run the app and ver
 Now that you've created a sample app that runs a flow and adds item inside a SharePoint list, you can create more complex applications that interact with Power Automate and manipulate data inside various data sources.
 
 ## Power Automate Pane (preview)
+
 With the "Enable Power Automate Pane " feature, you can add flows to your canvas app from the left-pane inside Studio.
 
 > [!NOTE]
@@ -168,11 +174,18 @@ With the "Enable Power Automate Pane " feature, you can add flows to your canvas
 To enable the preview feature:
 
 1. Select **Settings** at the top. 
+
 1. Select **Upcoming Features**. 
-1. Select **Enable Power Automate Pane** to turn this feature on. You may be prompted to close and reopen your canvas app to see the change. 
-  <<TODO: Add screenshot>>:::image type="content" source="/media/folder-with-same-name-as-article-file/service-technology-image-description.png" alt-text="Alt text that describes the content of the image.":::
-1. A Power Automate button is added to the left-pane.
-  <<TODO: Add screenshot>>:::image type="content" source="/media/folder-with-same-name-as-article-file/service-technology-image-description.png" alt-text="Alt text that describes the content of the image.":::
+
+1. Under the Preview tab, select **Enable Power Automate Pane** to turn this feature on. You may be prompted to close and reopen your canvas app to see the change. 
+   
+   :::image type="content" source="/media/using-logic-flows/power-automate-pane-feature.png" alt-text="A screenshot of the Upcoming Features dialog box showing the Enable Power Automate feature toggle.":::   
+    <img width="483" alt="power-automate-pane-feature" src="https://user-images.githubusercontent.com/3670127/140457317-6ae32e0f-fe1b-42bf-bfda-eafe17e721ad.png">
+   
+1. The Power Automate button is added to the left-pane.
+
+   :::image type="content" source="/media/using-logic-flows/power-automate-button.png" alt-text="A screenshow highlighting the Power Automate button in the left pane":::   
+    <img width="483" alt="power-automate-pane-feature" src="https://user-images.githubusercontent.com/3670127/140554794-59544bae-66d1-4796-b690-d200380dd5ec.png">
 
 ### See also
 
@@ -182,3 +195,4 @@ To enable the preview feature:
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
 
  
+
