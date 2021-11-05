@@ -41,9 +41,9 @@ Using, creating and editing SharePoint list forms requires the following for org
 
 |User type  |SharePoint custom form action  |Requirements  |
 |---------|---------|---------|
-|Guest     |View         |<ul> <li> View access to SharePoint site hosting the custom form. </li> <li> Power Apps plan that includes use rights to connect to Office. <br> **NOTE:** Separate licenses may be required for custom forms that use Premium capabilities. </li> </ul>          |
+|Guest     |View         |<ul> <li> View access to SharePoint site hosting the custom form. </li> <li> Power Apps plan that includes use rights to connect to Office. <br> **Note:** Separate licenses may be required for custom forms that use Premium capabilities. </li> </ul>          |
 |Guest    |Create/Edit         |<ul> <li> Edit access to SharePoint site hosting the custom form. </li> <li> Power Platform Environment Maker security role in environment hosting the SharePoint site. </li> </ul>           |
-|Organization user    |View        |<ul> <li> View access to SharePoint site hosting the custom form. </li> <li> Power Apps plan that includes use rights to connect to Office. <br> **NOTE:** Separate licenses may be required for custom forms that use Premium capabilities. </li> </ul>          |
+|Organization user    |View        |<ul> <li> View access to SharePoint site hosting the custom form. </li> <li> Power Apps plan that includes use rights to connect to Office. <br> **Note:** Separate licenses may be required for custom forms that use Premium capabilities. </li> </ul>          |
 |Organization user     |Create/Edit         |<ul> <li> Edit access to SharePoint site hosting the custom form. </li> <li> Power Platform Environment Maker security role in environment hosting the SharePoint site. </li> </ul>         |
 
 More information:
