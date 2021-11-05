@@ -163,6 +163,14 @@ After you are done modifying code and are ready to deploy the plug-in assembly a
 
 After deployment completes, select the refresh icon in **Power Platform Explorer**. Expand the **Plug-in Assemblies** sub-node of your environment node to see your registered assembly. Right-click on the plug-in assembly and step in **Power Platform Explorer** to see what operations are supported. Selecting **Delete Assembly** will un-register the assembly and its related steps.
 
+## Add an entity image
+
+Entity images are snapshots of entity data before or after the core operation (for example: a create or update). You can register entity images on plug-in steps using the **Power Platform Explorer** view. Register an image in the Explorer view on either the Plug-in Assemblies or Event Catalog plug-in step subnode.
+
+:::image type="content" source="../media/tools/devtools-add-image.png" alt-text="Add an image to a step.":::
+
+More information: [Define entity images](../register-plug-in#define-entity-images.md).
+
 ## Next steps
 
 Learn more about plug-in development
