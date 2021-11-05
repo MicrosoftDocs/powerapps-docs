@@ -143,7 +143,19 @@ For example, the **CRM Default Theme** was cloned and changed using mostly varyi
 -   A table can’t be displayed in different colors under different Sitemap nodes.  
   
 -   The Sitemap nodes colors aren’t customizable.  
-  
+
+## Known issues with mobile devices and themes
+
+### The custom theme isn’t applied on devices running the Power Apps mobile app
+
+When you run the Power Apps mobile app with an environment that is using a custom theme as the default theme, the mobile device displays the system CRM Default Theme.  
+
+### Card forms aren’t displayed in table views in a web browser
+
+On a mobile device running the app in a web browser, the view is displayed in the standard view, which isn’t optimized for small screens and is displayed similar to the below image. For more information about card forms, see [Create a card form](create-card-forms.md).
+
+:::image type="content" source="media/standard-view-theme-mobile-browser.png" alt-text="Standard view displayed on a mobile device due to custom theme":::
+
 ## See also  
          
  [Video: Themes](https://go.microsoft.com/fwlink/p/?LinkId=529568) <br />
