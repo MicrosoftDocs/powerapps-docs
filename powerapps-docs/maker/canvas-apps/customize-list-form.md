@@ -224,7 +224,7 @@ Additional information about Power Apps plans:
 
 **Q:** Who can customize forms?
 
-**A:** Anyone with SharePoint permissions to manage, design, or edit the associated list.
+**A:** See [Requirements](#requirements).
 
 **Q:** Do I need a Power Apps license to create or use custom list forms?
 
