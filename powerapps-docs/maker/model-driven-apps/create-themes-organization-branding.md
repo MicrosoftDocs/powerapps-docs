@@ -68,12 +68,12 @@ Watch this video for a quick overview about how to create a default theme for mo
 <a name="Solution"></a>   
 ## Solution awareness
 
-Themes aren't solution aware. The changes made for an organization's theme aren’t included in  solutions exported from the organization. The data is stored in the theme table that can be exported and re-imported in another environment. The imported theme must be published to take effect.  
+Themes aren't solution aware. The changes made for an organization's theme aren’t included in  solutions exported from the organization. The data is stored in the theme table that can be exported and reimported in another environment. The imported theme must be published to take effect.  
   
 <a name="CloneAlter"></a>   
 ## Copy and alter the existing theme
 
- The easiest and quickest way to create a new theme is to clone and alter an existing theme, then save, preview and publish it.
+ The easiest and quickest way to create a new theme is to clone and alter an existing theme. Then save, preview, and publish it.
  
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Settings** ![Settings icon.](../model-driven-apps/media/powerapps-gear.png) (upper right), and then select **Advanced settings**.
 1. Select **Customizations**, and then select **Themes**.
