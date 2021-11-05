@@ -101,7 +101,7 @@ The following table outlines a few core capability differences between Power App
 
 ### Can guests access customized forms in SharePoint?
 
-Yes. Any user who can access a SharePoint list with a customized form can create and edit items in the list by using the form. As long as the custom form only uses standard connectors, the guest isn't required to have any Power Apps license.
+See [Requirements](customize-list-form.md#requirements).
 
 ### Why is a guest who accesses a customized form in SharePoint prompted for a trial?
 

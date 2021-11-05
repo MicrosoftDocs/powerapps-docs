@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 11/02/2021
+ms.date: 11/05/2021
 ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
@@ -34,17 +34,6 @@ To follow the steps in this article, you'll create a list so that you can see ho
 
 Watch this video to learn how to customize a list form:
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLvLK]
-
-## Prerequisites
-
-Creating, editing, and using SharePoint list forms requires the following for organization users and guests.
-
-|User type  |SharePoint custom form action  |Requirements  |
-|---------|---------|---------|
-|Guest     |View         |<ul> <li> View access to SharePoint site hosting the custom form. </li> <li> Power Apps plan that includes use rights to connect to Office. <br> **NOTE:** Separate licenses may be required for custom forms that use Premium capabilities. </li> </ul>          |
-|Guest    |Create/Edit         |<ul> <li> Edit access to SharePoint site hosting the custom form. </li> <li> Power Apps plan that includes use rights to connect to Office. </li> <li> Power Platform Environment Maker security role in environment hosting the SharePoint site. </li> </ul>           |
-|Organization user    |View        |<ul> <li> View access to SharePoint site hosting the custom form. </li> <li> Power Apps plan that includes use rights to connect to Office. <br> **NOTE:** Separate licenses may be required for custom forms that use Premium capabilities. </li> </ul>          |
-|Organization user     |Create/Edit         |<ul> <li> Edit access to SharePoint site hosting the custom form. </li> <li> Power Platform Environment Maker security role in environment hosting the SharePoint site. </li> </ul>         |
 
 ## Create a list
 
@@ -146,6 +135,27 @@ You can configure the **Price**, **Availability**, and **Colors** fields to appe
 
     ![Delete the custom form.](./media/customize-list-form/use-default-sharepoint.png)
 
+## Requirements
+
+Using, creating and editing SharePoint list forms requires the following for organization users and guests.
+
+|User type  |SharePoint custom form action  |Requirements  |
+|---------|---------|---------|
+|Guest     |View         |<ul> <li> View access to SharePoint site hosting the custom form. </li> <li> Power Apps plan that includes use rights to connect to Office. <br> **NOTE:** Separate licenses may be required for custom forms that use Premium capabilities. </li> </ul>          |
+|Guest    |Create/Edit         |<ul> <li> Edit access to SharePoint site hosting the custom form. </li> <li> Power Platform Environment Maker security role in environment hosting the SharePoint site. </li> </ul>           |
+|Organization user    |View        |<ul> <li> View access to SharePoint site hosting the custom form. </li> <li> Power Apps plan that includes use rights to connect to Office. <br> **NOTE:** Separate licenses may be required for custom forms that use Premium capabilities. </li> </ul>          |
+|Organization user     |Create/Edit         |<ul> <li> Edit access to SharePoint site hosting the custom form. </li> <li> Power Platform Environment Maker security role in environment hosting the SharePoint site. </li> </ul>         |
+
+More licensing information:
+
+- Organizational users: **Power Apps user rights included with Microsoft 365 licenses** section in [Microsoft Power Apps and Power Automate Licensing Guide](https://go.microsoft.com/fwlink/?linkid=2085130).
+- Guest users: [What license must be assigned to my guest so they can run an app shared with them?](share-app-guests.md#what-license-must-be-assigned-to-my-guest-so-they-can-run-an-app-shared-with-them)
+
+Additional information about Power Apps plans:
+
+- [Microsoft 365 plan that includes Power Apps](/power-platform/admin/pricing-billing-skus#licenses)
+- [Premium connectors](/connectors/connector-reference/connector-reference-premium-connectors)
+
 ## Q & A
 
 ### Forms vs. apps
@@ -218,25 +228,11 @@ You can configure the **Price**, **Availability**, and **Colors** fields to appe
 
 **Q:** Do I need a Power Apps license to create or use custom list forms?
 
-**A:** Refer to the following table for licensing requirements of guests and organizational users when using or creating custom forms.
-
-| Type of user | Custom form action | License required |
-| - | - | - |
-| Guest | Use | No |
-| Guest | Create/Edit | Yes |
-| Organizational user | Use | Yes |
-| Organizational user | Create/Edit | Yes |
-
-> [!NOTE]
-> [Microsoft 365 plan that includes Power Apps](/power-platform/admin/pricing-billing-skus#licenses) is sufficient for apps that connect to Office. However, separate licenses may be required for apps that use [Premium connectors](/connectors/connector-reference/connector-reference-premium-connectors).
-
-For more information about license requirements for organizational users, see **Power Apps user rights included with Microsoft 365 licenses** section in [Microsoft Power Apps and Power Automate Licensing Guide](https://go.microsoft.com/fwlink/?linkid=2085130).
-
-For more information about license expectations for guest users, see [What license must be assigned to my guest so they can run an app shared with them?](share-app-guests.md#what-license-must-be-assigned-to-my-guest-so-they-can-run-an-app-shared-with-them).
+**A:** See [Requirements](#requirements).
 
 **Q:** What happens when guest users access a list that has a custom form?
 
-**A:** As long as the guest users have permission to access the list, they can access the custom form.
+**A:** See [Requirements](#requirements).
 
 **Q:** As an administrator, how do I get a list of all customized forms in my organization?
 
