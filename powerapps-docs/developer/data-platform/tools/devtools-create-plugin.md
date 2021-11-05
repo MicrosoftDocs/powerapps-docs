@@ -57,6 +57,11 @@ Follow these instructions to register a plug-in step (also known as an SDK messa
 
 1. Right-click on the table type (e.g.; "Account") that the step is to be registered on, then select **Create Plug-in**.
 
+    :::image type="content" source="../media/tools/devtools-create-plugin.png" alt-text="Create a plug-in.":::
+
+    > [!NOTE]
+    > You can also create a plug-in by expanding the **Event Catalog**, right-clicking a business event, and choose **Add Plug-in**.
+
 1. Fill out the **Register New Step** dialog information and choose **Register New Step** when done. <p/>The class name that you specify when filling out the step information will be used to name your new plug-in class. The class will be placed in the plug-in project library specified by the **Handler Assembly** dialog field. If there is only one Plug-in Library project in the solution, the **Handler Assembly** field will be inactive.
 
 A new step registration has been added to the solution. However, you will need to build and deploy your plug-in library before the plug-in assembly and step are added to the specified Dataverse environment and solution.
@@ -80,10 +85,6 @@ You do not need to build and deploy the plug-in project for the step registratio
 ## The PluginBase abstract class
 
 `PluginBase` is automatically generated from the Plug-in Library template. Your custom plug-in class should derive from this base class. The base class implements common plug-in code that helps to make you more productive sooner. Take a look at the `PluginBase` class code in your plug-in project to see what it does.
-
-:::image type="content" source="../media/tools/devtools-class-diagram.png" alt-text="PluginBase class diagram":::
-
-In the above figure, `NotifyAccountCreate` is an example plug-in class that derives from `PluginBase`.
 
 ## The generated plug-in class code
 
@@ -134,7 +135,7 @@ namespace PPTools_Sample_Solution.NotifyPlugin
 At this point you would add your custom plug-in code where indicated by the TODO code comments. For more information, read some of these related topics: [Pass configuration data to your plug-in](../write-plug-in.md#pass-configuration-data-to-your-plug-in), [Understand the execution context](../understand-the-data-context.md#understand-the-execution-context), and [Tracing and logging](../logging-tracing.md).
 
 > [!IMPORTANT]
-> Do not add plug-in classes, and add or delete plug-in or step registrations, through any means other than using the Power Platform Tools context menus. When you use the context menus, deployment entries in the CrmPackage project's RegisterFile.crmregister file are maintained. It is this information that is used for deployment of assemblies, plug-ins, and steps.
+> We encourage you to use the Power Platform Tools context menus. When you use the Power Platform Explorer context menus to add plug-ins, classes are generated using the provided information and deployment entries in the CrmPackage project's RegisterFile.crmregister file are maintained. It is this information that is used for deployment of assemblies, plug-ins, and steps.
 
 ## Sign the assembly
 
