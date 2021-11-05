@@ -35,6 +35,17 @@ To follow the steps in this article, you'll create a list so that you can see ho
 Watch this video to learn how to customize a list form:
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLvLK]
 
+## Prerequisites
+
+Creating, editing, and using SharePoint list forms requires the following for organization users and guests.
+
+|User type  |SharePoint custom form action  |Requirements  |
+|---------|---------|---------|
+|Guest     |View         |<ul> <li> View access to SharePoint site hosting the custom form. </li> <li> Power Apps plan that includes use rights to connect to Office. <br> **NOTE:** Separate licenses may be required for custom forms that use Premium capabilities. </li> </ul>          |
+|Guest    |Create/Edit         |<ul> <li> Edit access to SharePoint site hosting the custom form. </li> <li> Power Apps plan that includes use rights to connect to Office. </li> <li> Power Platform Environment Maker security role in environment hosting the SharePoint site. </li> </ul>           |
+|Organization user    |View        |<ul> <li> View access to SharePoint site hosting the custom form. </li> <li> Power Apps plan that includes use rights to connect to Office. <br> **NOTE:** Separate licenses may be required for custom forms that use Premium capabilities. </li> </ul>          |
+|Organization user     |Create/Edit         |<ul> <li> Edit access to SharePoint site hosting the custom form. </li> <li> Power Platform Environment Maker security role in environment hosting the SharePoint site. </li> </ul>         |
+
 ## Create a list
 
 On a SharePoint site, create a list, and then add these columns to that list:
