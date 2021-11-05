@@ -165,11 +165,15 @@ After deployment completes, select the refresh icon in **Power Platform Explorer
 
 ## Add an entity image
 
-Entity images are snapshots of entity data before or after the core operation (for example: a create or update). You can register entity images on plug-in steps using the **Power Platform Explorer** view. Register an image in the Explorer view on either the Plug-in Assemblies or Event Catalog plug-in step subnode.
+Entity images are snapshots of entity data before or after the core operation (for example: a create or update). You can add entity images on plug-in steps using the **Power Platform Explorer** view. Add an image in the **Power Platform Explorer** view under **Plug-in Assemblies** on a step of a plug-in.
 
 :::image type="content" source="../media/tools/devtools-add-image.png" alt-text="Add an image to a step.":::
 
-More information: [Define entity images](../register-plug-in#define-entity-images.md).
+You can also add an image in the **Power Platform Explorer** view under **Event Catalog** on a step of an event plug-in.
+
+:::image type="content" source="../media/tools/devtools-add-image(2).png" alt-text="Add an image to a event step.":::
+
+More information: [Define entity images](../register-plug-in.md#define-entity-images).
 
 ## Next steps
 
