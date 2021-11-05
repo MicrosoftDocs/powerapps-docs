@@ -68,12 +68,12 @@ Watch this video for a quick overview about how to create a default theme for mo
 <a name="Solution"></a>   
 ## Solution awareness
 
-Themes aren't solution aware. The changes made for an organization's theme aren’t included in  solutions exported from the organization. The data is stored in the theme table that can be exported and re-imported in another environment. The imported theme must be published to take effect.  
+Themes aren't solution aware. The changes made for an organization's theme aren’t included in  solutions exported from the organization. The data is stored in the theme table that can be exported and reimported in another environment. The imported theme must be published to take effect.  
   
 <a name="CloneAlter"></a>   
 ## Copy and alter the existing theme
 
- The easiest and quickest way to create a new theme is to clone and alter an existing theme, then save, preview and publish it.
+ The easiest and quickest way to create a new theme is to clone and alter an existing theme. Then save, preview, and publish it.
  
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Settings** ![Settings icon.](../model-driven-apps/media/powerapps-gear.png) (upper right), and then select **Advanced settings**.
 1. Select **Customizations**, and then select **Themes**.
@@ -143,7 +143,19 @@ For example, the **CRM Default Theme** was cloned and changed using mostly varyi
 -   A table can’t be displayed in different colors under different Sitemap nodes.  
   
 -   The Sitemap nodes colors aren’t customizable.  
-  
+
+## Known issues with mobile devices and themes
+
+### The custom theme isn’t applied on devices running the Power Apps mobile app
+
+When you run the Power Apps mobile app with an environment that is using a custom theme as the default theme, the mobile device displays the system CRM Default Theme.  
+
+### Card forms aren’t displayed in table views in a web browser
+
+On a mobile device running the app in a web browser, the view is displayed in the standard view, which isn’t optimized for small screens and is displayed similar to the below image. For more information about card forms, see [Create a card form](create-card-forms.md).
+
+:::image type="content" source="media/standard-view-theme-mobile-browser.png" alt-text="Standard view displayed on a mobile device due to custom theme":::
+
 ## See also  
          
  [Video: Themes](https://go.microsoft.com/fwlink/p/?LinkId=529568) <br />
