@@ -146,13 +146,10 @@ Using, creating and editing SharePoint list forms requires the following for org
 |Organization user    |View        |<ul> <li> View access to SharePoint site hosting the custom form. </li> <li> Power Apps plan that includes use rights to connect to Office. <br> **NOTE:** Separate licenses may be required for custom forms that use Premium capabilities. </li> </ul>          |
 |Organization user     |Create/Edit         |<ul> <li> Edit access to SharePoint site hosting the custom form. </li> <li> Power Platform Environment Maker security role in environment hosting the SharePoint site. </li> </ul>         |
 
-More licensing information:
+More information:
 
-- Organizational users: **Power Apps user rights included with Microsoft 365 licenses** section in [Microsoft Power Apps and Power Automate Licensing Guide](https://go.microsoft.com/fwlink/?linkid=2085130).
-- Guest users: [What license must be assigned to my guest so they can run an app shared with them?](share-app-guests.md#what-license-must-be-assigned-to-my-guest-so-they-can-run-an-app-shared-with-them)
-
-Additional information about Power Apps plans:
-
+- [Licensing Guide section: Power Apps user rights included with Microsoft 365](https://go.microsoft.com/fwlink/?linkid=2085130)
+- [What license must be assigned to my guest so they can run an app shared with them?](share-app-guests.md#what-license-must-be-assigned-to-my-guest-so-they-can-run-an-app-shared-with-them)
 - [Microsoft 365 plan that includes Power Apps](/power-platform/admin/pricing-billing-skus#licenses)
 - [Premium connectors](/connectors/connector-reference/connector-reference-premium-connectors)
 
