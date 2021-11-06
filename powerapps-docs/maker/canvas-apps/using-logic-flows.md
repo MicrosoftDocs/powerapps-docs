@@ -171,7 +171,7 @@ Now that you've created a sample app that runs a flow and adds item inside a Sha
 With the "Enable Power Automate Pane " feature, you can add flows to your canvas app from the left-pane inside Studio.
 
 > [!NOTE]
-> This feature can be enabled on a per-app basis.
+> This feature must be enabled on a per-app basis.
 
 To enable the preview feature:
 
