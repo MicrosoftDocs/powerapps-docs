@@ -131,6 +131,8 @@
         href: ../user/add-powerbi-dashboards.md      
     - name: Collaboration
       items:
+      - name: Collaborate with others (preview)
+        href: ../user/collaboration.md
       - name: Use OneDrive for Business
         href: ../user/one-drive.md
       - name: Take notes by using OneNote
@@ -1138,7 +1140,7 @@
         href: ./model-driven-apps/translate-localizable-text.md
     - name: Design the interface
       items:
-      - name: Use the new app designer
+      - name: Use the new app designer (preview)
         href: ./model-driven-apps/app-designer-overview.md
         items: 
         - name: Create an app
@@ -1363,6 +1365,8 @@
           href: ./model-driven-apps/set-up-timeline-control.md
         - name: FAQs for the timeline control
           href: ./model-driven-apps/faqs-timeline-control.md
+        - name: Use custom connectors with the timeline control
+          href: ./model-driven-apps/custom-connectors-timeline-control.md
         - name: Quick view control properties
           href: ./model-driven-apps/quick-view-control-properties-legacy.md
         - name: Timer control overview
@@ -2518,7 +2522,15 @@
           href: ../teams/sample-apps-faqs.md
     - name: Known issues and limitations
       href: ../teams/known-issues-limitations.md
-
+  - name: Migrate Access data to Dataverse for Teams (preview)
+    href: ../teams/migrate-access-to-dvft.md
+- name: Access migration (preview)
+  href: ./data-platform/migrate-access-to-dataverse.md
+  items:
+  - name: Data types and sizes for Access migration
+    href: ./data-platform/migrate-access-datatypes.md
+  - name: System columns and tables in Dataverse
+    href: ./data-platform/access-migrate-linked-tables.md
 - name: Chatbots
   href: ../chatbots.md
 
