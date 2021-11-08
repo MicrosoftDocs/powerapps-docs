@@ -204,7 +204,7 @@ Once you add the basic form to a webpage, users assigned to the selected web
 role can now see the code component on the portal page having the selected
 basic form.
 
-## Code Components using portal Web API
+## Code Components using the portal Web API
 
 A code component can be built and added to a web page that can use the [portal Web API](web-api-overview.md) to perform create, retrieve, update, and delete actions. This feature allows greater customization options when developing portal solutions. See [Implement a portal Web API component](implement-webapi-component.md).
 

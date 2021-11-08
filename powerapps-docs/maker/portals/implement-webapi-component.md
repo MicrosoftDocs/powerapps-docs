@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/03/2021
+ms.date: 11/8/2021
 ms.subservice: portals
 ms.author: gisingh
 ms.reviewer: ndoelman
@@ -19,7 +19,7 @@ contributors:
 
 [This article is pre-release documentation and is subject to change.]
 
-The following is an example of implementing a code component that uses the portal Web API to perform create, retrieve, update, and delete actions. The component renders four buttons, which can be clicked to invoke different Web API actions. The result of the Web API call is injected into an HTML `div` element at the bottom of the code component. 
+The following is an example of implementing a code component that uses the portal Web API to perform create, retrieve, update, and delete actions. The component renders four buttons, which can be clicked to invoke different Web API actions. The result of the Web API call is injected into an HTML `div` element at the bottom of the code component.
 
 :::image type="content" source="media/implement-webpi-component/webapi-component.png" alt-text="Example component using the portal Web API.":::
 
