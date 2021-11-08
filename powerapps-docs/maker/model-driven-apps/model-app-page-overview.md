@@ -18,10 +18,10 @@ search.app:
 
 The custom page is a new page type within a model-driven app, which brings the power of canvas apps into model-driven apps. Custom pages increase the convergence of model-driven and canvas apps and can be used to add full pages, dialogs, or panes with the flexibility of the canvas designer. It also includes a low-code page authoring experience with expressions and custom Power Apps component framework controls.  
 
-This new page can be more flexible than a model-driven app form, view, or dashboard page. It lets you include one or more tables. Then, the maker can define the data and component interactions. The custom page is a separate solution element which allows one maker to edit one custom page at a time. Like other model-driven app pages, the page state is either from the parameters passed or retrieved from persisted tables.
+This new page can be more flexible than a model-driven app form, view, or dashboard page. It lets you include one or more tables. Then, the maker can define the data and component interactions. The custom page is a separate solution element, which allows one maker to edit one custom page at a time. Like other model-driven app pages, the page state is either from the parameters passed or retrieved from persisted tables.
 
 > [!IMPORTANT]
-> - The base functionality of custom pages has moved to General Availability in all regions.  However some specific or new capabilities are still in public preview and are marked with _(preview)_.
+> - The base functionality of custom pages has moved to general availability in all regions.  However some specific or new capabilities are still in public preview and are marked with _(preview)_.
 > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)] 
 > - Custom pages are a new feature with significant product changes and currently have a number of known limitations outlined in [Custom Page Known Issues](model-app-page-issues.md).
 
@@ -35,12 +35,8 @@ This new page can be more flexible than a model-driven app form, view, or dashbo
 | Monitor support for custom pages | General Availability |
 | Authoring custom pages | Public Preview | Modern app designer and canvas designer are expected to be used to author custom page that are supported at runtime |
 | Canvas components in custom pages | Public Preview |
-| Custom Page in Teams model-driven app | Public Preview |
-| Custom Page in Mobile Online | Public Preview | iOS must allow enabling “Allow cross site tracking” which can be prevented by device management |
-| String localization in custom Pages | Coming soon |
-| Data formatting in custom pages | Coming soon |
-| Right to left layout in custom pages | Coming soon |
-
+| Custom page in Teams model-driven app | Public Preview |
+| Custom page in mobile online | Public Preview | iOS must allow enabling “Allow cross site tracking” that can be prevented by device management |
 
 ## Examples of custom pages
 

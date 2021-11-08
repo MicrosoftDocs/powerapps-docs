@@ -21,7 +21,7 @@ search.app:
 This article guides you through creating and editing a custom page for a model-driven app using the modern app designer.
 
 > [!IMPORTANT]
-> - The base functionality of custom pages has moved to General Availability in all regions.  However some specific or new capabilities are still in public preview and are marked with _(preview)_.
+> - The base functionality of custom pages has moved to general availability in all regions.  However some specific or new capabilities are still in public preview and are marked with _(preview)_.
 > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)] 
 > - Custom pages are a new feature with significant product changes and currently have a number of known limitations outlined in [Custom Page Known Issues](model-app-page-issues.md).
 
@@ -157,7 +157,7 @@ Custom pages can be created from two places. The first is while authoring a mode
 ## Publishing a custom page
 
 > [!IMPORTANT]
-> Model-driven apps must be re-published after a custom page is published.  Otherwise the model-driven app continues to use the previous published custom page.  This limitation is planned to be removed in the future.
+> Currently, model-driven apps must be re-published after a custom page is published.  Otherwise the model-driven app continues to use the previous published custom page.
 
 After saving changes to a custom page in the canvas designer, the custom page must be first published by the canvas designer. Then all model-driven apps referencing that custom page need to be published. 
 

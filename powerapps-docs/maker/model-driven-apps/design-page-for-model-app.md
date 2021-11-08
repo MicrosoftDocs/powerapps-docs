@@ -21,7 +21,7 @@ search.app:
 This article provides tips for designing a custom page for use in a model-driven app.
 
 > [!IMPORTANT]
-> - The base functionality of custom pages has moved to General Availability in all regions.  However some specific or new capabilities are still in public preview and are marked with _(preview)_.
+> - The base functionality of custom pages has moved to general availability in all regions.  However some specific or new capabilities are still in public preview and are marked with _(preview)_.
 > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)] 
 > - Custom pages are a new feature with significant product changes and currently have a number of known limitations outlined in [Custom Page Known Issues](model-app-page-issues.md).
 
@@ -69,14 +69,14 @@ More information:
 
 Responsive custom page layouts are defined by building a hierarchy of **Horizontal layout container** and **Vertical layout container** controls.  These controls are found in the canvas app designer under **Layout** on the **Insert** tab.
 
-Set the minimum screen height and width on the App object to prevent page level scrollbars and use a vertical body scrollbar.
+Set the minimum screen height and width on the **App** object to prevent page level scrollbars and use a vertical body scrollbar.
 
   ```powerappsfl
   MinScreenHeight=200
   MinScreenWidth=200
   ```
 
-Optionally, the custom page design size can be adjusted in Settings > Display with **Size** set to **Custom**.  Then set the **Width** and **Height** to a more typical desktop custom page size like Width 1080 and Height 768.  Changing this after controls are added to the screen cause some layout properties to be reset.
+Optionally, the custom page design size can be adjusted in **Settings** > **Display** with **Size** set to **Custom**.  Then set the **Width** and **Height** to a more typical desktop custom page size like width 1080 and height 768.  Changing this setting after controls are added to the screen may cause some layout properties to become reset.
 
 Set the topmost container to fill the entire space and resize based on available space.  
 
@@ -89,7 +89,7 @@ Set the topmost container to fill the entire space and resize based on available
 
 ### Horizontal wrapping of a flexible height container 
 
-To support pages adjusting from desktop down to a narrow width, enable these properties on a horizontal container with flexible height.  Without these settings the page will clip controls when the page is narrow.
+To support pages adjusting from desktop down to a narrow width, enable these properties on a horizontal container with flexible height.  Without these settings, the page will clip controls when the page is narrow.
 
   ```powerappsfl
   Direction=Horizontal
@@ -104,7 +104,7 @@ Child containers or controls directly under this container should be set to have
 
 ### Vertical wrapping of a flexible width container 
 
-To support pages adjusting from desktop down to a narrow width, enable these properties on a vertical container with flexible width.  Without these settings the page will clip controls when the page is narrow.
+To support pages adjusting from desktop down to a narrow width, enable these properties on a vertical container with flexible width.  Without these settings, the page will clip controls when the page is narrow.
 
   ```powerappsfl
   Direction=Vertical

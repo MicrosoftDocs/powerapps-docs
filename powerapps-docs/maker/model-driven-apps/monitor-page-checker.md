@@ -23,7 +23,7 @@ search.app:
 Monitor can help you debug and diagnose problems, which helps you build faster, more reliable apps. Monitor provides a deep view into how an app runs by providing a log of all activities in your app as it runs.
 
   > [!IMPORTANT]
-  > Monitor must be run on the model-driven app and not directly on the custom page.
+  > Monitor must be run on the model-driven app and not directly on a custom page.
 
 When you filter on model-driven app custom page-related events in Monitor, you can get information about related tables, tables, controls, and components on a custom page in Monitor as your app runs. More information: [Debug a model-driven app with Monitor](../monitor-modelapps.md)
 

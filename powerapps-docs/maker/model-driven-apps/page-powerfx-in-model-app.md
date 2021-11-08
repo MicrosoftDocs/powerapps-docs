@@ -1,5 +1,5 @@
 ---
-title: "Use PowerFx in custom page for your model-driven app" 
+title: "Use Power Fx in custom page for your model-driven app" 
 description: "This article outlines how the common Microsoft Power FX functions work within a custom page."
 ms.custom: ""
 ms.date: 07/06/2021
@@ -16,12 +16,12 @@ search.app:
   - "PowerApps"
   - D365CE
 ---
-# Use PowerFx in a custom page for your model-driven app
+# Use Power Fx in a custom page for your model-driven app
 
-This article outlines how the common [Microsoft Power FX](../canvas-apps/formula-reference.md) functions work differently between a standalone canvas apps and a custom page. This is because a custom pages is a component within the model-driven app. Other Microsoft Power FX formulas continue to behave in the same way.
+This article outlines how the common [Microsoft Power Fx](../canvas-apps/formula-reference.md) functions work differently between a standalone canvas apps and a custom page. This is because a custom page is a component within the model-driven app. Other Microsoft Power Fx formulas continue to behave in the same way.
 
 > [!IMPORTANT]
-> - The base functionality of custom pages has moved to General Availability in all regions.  However some specific capabilities or new capabilities are still in public preview and are marked with _(preview)_.
+> - The base functionality of custom pages has moved to general availability in all regions.  However some specific capabilities or new capabilities are still in public preview and are marked with _(preview)_.
 > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)] 
 > - Custom pages are a new feature with significant product changes and currently have a number of known limitations outlined in [Custom Page Known Issues](model-app-page-issues.md).
 
@@ -139,7 +139,7 @@ The `Confirm` function displays a dialog box on top of the current screen. Two b
 
 The `Message` parameter is displayed in the body of the dialog box. If the message is very long, it will either be truncated or a scroll bar provided.
 
-Use the `OptionsRecord` parameter to specify options for the dialog box. Not all options are available on every platform and are handled on a "best effort" basis. 
+Use the `OptionsRecord` parameter to specify options for the dialog box. Not all options are available on every platform and are handled on a best effort basis. 
 
 > [!NOTE]
 > The options in the table below aren't currently available with canvas apps.
@@ -161,11 +161,11 @@ Use the `OptionsRecord` parameter to specify options for the dialog box. Not all
 
 ### Known issues
 
-- Navigate function does not have support for opening a model or custom page to a dialog. All navigation from a custom page opens inline.
-- Navigate function does not support opening:
-    - Dashboard collection or specific dashboard.
-    - Specific model-driven app form. 
-- Custom page can only open into the current session’s current app tab in a multi-session model-driven app.
+- The `Navigate` function doesn't have support for opening a model or custom page to a dialog. All navigation from a custom page opens inline.
+- Navigate function doesn't support opening:
+    - A dashboard collection or a specific dashboard.
+    - A specific model-driven app form. 
+- A custom page can only open into the current session’s current app tab in a multi-session model-driven app.
 
 ### See also
 
