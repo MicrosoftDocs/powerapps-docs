@@ -22,7 +22,7 @@ search.app:
   - "PowerApps"
   - D365CE
 ---
-# Overview of the model-driven app designer
+# Overview of the model-driven app designer (preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
