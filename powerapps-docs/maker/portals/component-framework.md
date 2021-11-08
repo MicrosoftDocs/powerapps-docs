@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2021
+ms.date: 11/8/2021
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
@@ -128,8 +128,6 @@ More information: [Attributes list and descriptions](../../developer/component-f
 
     -   [Utility](../../developer/component-framework/reference/utility.md)
 
-    -   [WebAPI](../../developer/component-framework/reference/webapi.md)
-
 -   The [uses-feature](../../developer/component-framework/manifest-schema-reference/uses-feature.md) element must not be set to **true**.
 
 -   [Value elements not supported](../../developer/component-framework/manifest-schema-reference/property.md#value-elements-that-are-not-supported)
@@ -148,27 +146,27 @@ After the code component is added to a field in a model-driven app, you can conf
 
 To add a code component to a basic form:
 
-1.  Open [Portal Management](configure/configure-portal.md) app.
+1. Open [Portal Management](configure/configure-portal.md) app.
 
-2.  On the left pane, select **Basic Forms**.
+1. On the left pane, select **Basic Forms**.
 
-3.  Select the basic form to which you want to add the code component.
+1. Select the basic form to which you want to add the code component.
 
-4.  Select **Related**.
+1. Select **Related**.
 
-5.  Select **Basic Form Metadata**.
+1. Select **Basic Form Metadata**.
 
-6.  Select **New Basic Form Metadata**.
+1. Select **New Basic Form Metadata**.
 
-7.  Select **Type** as **Attribute**.
+1. Select **Type** as **Attribute**.
 
-8.  Select **Attribute Logical Unit Name.**
+1. Select **Attribute Logical Unit Name.**
 
-9.  Enter **Label**.
+1. Enter **Label**.
 
-10. For **Control Style**, select **Code Component.**
+1. For **Control Style**, select **Code Component.**
 
-11. Save and close the form.
+1. Save and close the form.
 
 ## Allow Read access to a Web Resource table
 
@@ -176,35 +174,39 @@ Portals requires **Read** permission to be set on the **Web Resource** table bef
 
 To configure Read access on a Web Resource table:
 
-1.  Open [Portal Management](configure/configure-portal.md) app.
+1. Open [Portal Management](configure/configure-portal.md) app.
 
-2.  On the left pane, select **Table Permission**.
+1. On the left pane, select **Table Permission**.
 
-3.  Select **New**.
+1. Select **New**.
 
-4.  Enter **Name.**
+1. Enter **Name.**
 
-5.  Select *Web Resource (webresource)* for **Table Name**.
+1. Select *Web Resource (webresource)* for **Table Name**.
 
-6.  Select your website record.
+1. Select your website record.
 
-7.  Select *Global* for **Scope.**
+1. Select *Global* for **Scope.**
 
-8.  In **Privileges**, select *Read*.
+1. In **Privileges**, select *Read*.
 
-9.  Select **Save**.
+1. Select **Save**.
 
-10. Under the **Web Roles** section, select **Add Existing Web Role**.
+1. Under the **Web Roles** section, select **Add Existing Web Role**.
 
-11. Select the web role for the users that should see the code component in portals.
+1. Select the web role for the users that should see the code component in portals.
 
     For example, **Anonymous Users** for anonymous users, **Authenticated Users** for users authenticated by portals, or a custom web role.
 
-12. Select **Save & Close**.
+1. Select **Save & Close**.
 
 Once you add the basic form to a webpage, users assigned to the selected web
 role can now see the code component on the portal page having the selected
 basic form.
+
+## Code Components using portal Web API
+
+A code component can be built and added to a web page that can use the [portal Web API](web-api-overview.md) to perform create, retrieve, update, and delete actions. This feature allows greater customization options when developing portal solutions. See [Implement a portal Web API component](implement-webapi-component.md).
 
 ## Next steps
 

@@ -1,6 +1,6 @@
 ---
-title: Implement portals Web API code components (preview)
-description: This page walks you through example steps for creating a code component that uses the portal Web API.
+title: Implement portals Web API code components sample (preview)
+description: This page walks you through a sample code component that uses the portal Web API.
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
