@@ -5,7 +5,7 @@ author: mduelae
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 11/01/2021
+ms.date: 11/08/2021
 ms.subservice: mobile
 ms.author: mkaur
 ms.custom: ""
@@ -52,7 +52,7 @@ For privileges required to run model-driven apps on Power Apps Mobile app, see [
 
 ## Supported devices 
 
-Power Apps mobile runs on iOS and Android devices. The supported versions of iOS and Android are listed below. Remember that new major versions of iOS and Android are released each year. When a new version of iOS or Android is released you'll have 60 days to update your device to at least the minimum required version to continue to run Power Apps mobile.
+New major versions of iOS and Android are released each year. When a new version is released, if you are using the oldest previously supported version, you'll have 60 days to update your device to at least the new minimum supported version to continue to run Power Apps mobile.
 
 - **iOS**: The latest version of iOS is always the recommended version to run Power Apps mobile. The previous version is the minimum required.
 
