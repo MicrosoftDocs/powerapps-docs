@@ -30,12 +30,13 @@ This new page can be more flexible than a model-driven app form, view, or dashbo
 | Runtime for custom pages | General Availability |
 | Solution and ALM for custom pages | General Availability |
 | Connectors in custom pages | General Availability | [List of all Power Apps connectors](/connectors/connector-reference/connector-reference-powerapps-connectors) |
+| Modern controls in custom pages | General Availability | [List of supported controls](design-page-for-model-app.md#supported-controls-in-a-custom-page)
 | Code components in custom pages | General Availability |
 | Monitor support for custom pages | General Availability |
 | Authoring custom pages | Public Preview | Modern app designer and canvas designer are expected to be used to author custom page that are supported at runtime |
 | Canvas components in custom pages | Public Preview |
 | Custom Page in Teams model-driven app | Public Preview |
-| Custom Page in Mobile Online | Public Preview |
+| Custom Page in Mobile Online | Public Preview | iOS must allow enabling “Allow cross site tracking” which can be prevented by device management |
 | String localization in custom Pages | Coming soon |
 | Data formatting in custom pages | Coming soon |
 | Right to left layout in custom pages | Coming soon |
