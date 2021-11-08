@@ -69,7 +69,7 @@ More information:
 
 Responsive custom page layouts are defined by building a hierarchy of **Horizontal layout container** and **Vertical layout container** controls.  These controls are found in the canvas app designer under **Layout** on the **Insert** tab.
 
-Set the minimum screen height and width on the **App** object to prevent page level scrollbars and use a vertical body scrollbar.
+Set the minimum screen height and width on the **App** object to prevent page level scroll bars and use a vertical body scroll bar.
 
   ```powerappsfl
   MinScreenHeight=200
