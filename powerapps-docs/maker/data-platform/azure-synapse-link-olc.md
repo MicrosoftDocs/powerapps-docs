@@ -23,16 +23,16 @@ search.app:
 contributors: ""
 ---
 
-# Read the incremental updates of Dataverse data
+# Managing your Azure Synapse Link for Dataverse
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-When you make changes to your Power Platform Environment, this can affect the state of your Azure Synapse Link for Dataverse.
+Azure Synapse Link for Dataverse provides a continuous pipeline of data from Dataverse to Azure Synapse Analytics and/or Azure Data Lake. Once the link is created it continuously writes all the initial data as well as any incremental data. When you make changes to your Power Platform Environment, this can affect the state of your Azure Synapse Link for Dataverse.
 
 > [!NOTE]
 > Azure Synapse Link for Microsoft Dataverse was formerly known as Export to data lake. The service was renamed effective May 2021 and will continue to export data to Azure Data Lake as well as Azure Synapse Analytics.
 
-This article covers actions you may need to take on your Azure Synapse Link for Dataverse when your Environment is:
+This article explains the behavior of the Azure Synapse Link for Dataverse when your Environment is:
 
 - Deleted
 - Recovered
@@ -41,6 +41,18 @@ This article covers actions you may need to take on your Azure Synapse Link for 
 - Moved
 - Backed Up and Restored
 - Edited
+
+## Environment Lifecycle Events
+
+|Operation  |What happens to the data?  |What happens to the Synapse Link?  |User Action Required  |
+|---------|---------|---------|---------|
+|Delete     |Maintained   |Stops Syncing           |None       |
+|Recover    |Maintained   |Continues Syncing       |None       |
+|Reset      |Maintained   |Deleted                 |Clean up data before recreating the link.        |
+|Copy       |Source is maintained |Source continues syncing  |Use solutions to transport the link across environments     |
+|Move       |Source is maintained | Source stop syncing |Use solutions to transport the link across environments       |
+|Backup and Restore     | Maintained |Stops syncing |Use solutions to transport the link across environments |
+|Edit the Properties     | Unlocks all the functionality of Dataverse services for the environment.         | No        |
 
 ## Delete an Environment
 
