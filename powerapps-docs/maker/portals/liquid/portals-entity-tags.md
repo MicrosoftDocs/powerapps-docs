@@ -702,9 +702,14 @@ The name of the Advanced Form you wish to load.
 
 `{% webform name:My Advanced Form %}`
 
-## codecomponent
+## codecomponent (preview)
 
-Allows you to embed code components using a Liquid tag. For example, adding a map display custom control to a web page.  
+Allows you to embed code components using a Liquid tag. For example, adding a map display custom control to a web page.
+
+> [!important]
+> This is a preview feature.
+Preview features aren’t meant for production use and may have restricted functionality. 
+These features are available before an official release so that customers can get early access and provide feedback.
 
 ### Parameters
 

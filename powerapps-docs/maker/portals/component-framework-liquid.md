@@ -17,7 +17,10 @@ contributors:
 
 # Liquid template tag for code components (preview)
 
-[This article is pre-release documentation and is subject to change.]
+> [!important]
+> This is a preview feature.
+Preview features aren’t meant for production use and may have restricted functionality.
+These features are available before an official release so that customers can get early access and provide feedback.
 
 > [!IMPORTANT]
 > Liquid template tag for code components requires portals version [9.3.10.x or later](/power-platform/released-versions/portals/portalupdate9310x).
