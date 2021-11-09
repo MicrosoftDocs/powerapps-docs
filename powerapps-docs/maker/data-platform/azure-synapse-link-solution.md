@@ -38,7 +38,7 @@ This section describes the prerequisites necessary to transport the Azure Synaps
 
 - **Azure Synapse Link for Dataverse.** This guide assumes that you have already exported data from Dataverse by using the [Azure Synapse Link for Dataverse](export-to-data-lake.md).
 
-## Install the Azure Synapse Link for Dataverse Solution
+## Install the Azure Synapse Link for Dataverse solution
 
 > [!NOTE]
 > The Azure Synapse Link for Dataverse solution must be installed in both the source and the destination environments.
@@ -55,7 +55,7 @@ This section describes the prerequisites necessary to transport the Azure Synaps
 
 4. Repeat above steps in the destination environment. You need the **Azure Synapse Link for Dataverse** solution in both the source and destination environments.
 
-## Add an Azure Synapse Link Configuration to a Solution
+## Add an Azure Synapse Link configuration to a Solution
 
 1. From the Power Apps Maker Portal, select the source environment, and on the leftmost navigation pane, select **Solutions**.
 

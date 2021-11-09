@@ -23,7 +23,7 @@ search.app:
 contributors: ""
 ---
 
-# Manage your Azure Synapse Link with Environment Events
+# Manage your Azure Synapse Link during Environment Life Cycle Events
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
