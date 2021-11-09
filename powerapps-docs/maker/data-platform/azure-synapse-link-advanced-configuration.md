@@ -36,7 +36,7 @@ Azure Synapse Link offers multiple ways to write and read your data to fit vario
 This article covers:
 
 1. In-place updates vs. append-only writes
-2. User-specified partition strategy
+2. User-specified data partitioning
 
 ## In-place updates vs. append-only writes
 
@@ -66,11 +66,11 @@ You can toggle the **Show advanced configuration settings** under **Advanced** i
 
 ![Show advanced configuration.](media/export-data-lake-show-advanced-config.png "Show advanced configuration")
 
-## Data Partition Strategy
+## Data Partitioning
 
-When you Dataverse table data to Azure data lake storage using Azure Synapse Link, the tables are partitioned (instead of a single file) in the lake based on the `createdOn` value on each row in the source. The default partition strategy is by year and data is partitioned in Azure data lake by yearly basis.
+When you Dataverse table data to Azure data lake storage using Azure Synapse Link, the tables are partitioned (instead of a single file) in the lake based on the `createdOn` value on each row in the source. The default partition strategy is by month and data is partitioned in Azure data lake on a monthly basis.
 
-Based on the Dataverse table volume and data distribution, you can choose a more granular partition strategy to partition your data by month. With this option, when Dataverse table data is written to the Azure data lake, it will be partitioned by monthly basis based on the `createdOn` value on each row in the source. This is a per table setting and is available as a checkbox under **Advanced** > **Show advanced configuration settings**.
+Based on the Dataverse table volume and data distribution, you can choose to partition your data by year. With this option, when Dataverse table data is written to the Azure data lake, it will be partitioned on a yearly basis based on the `createdOn` value on each row in the source. For tables without the `createdOn` column, the rows of data are partitioned into a new file every five million records. This is a per table setting and is available as a checkbox under **Advanced** > **Show advanced configuration settings**.
 
 Additional details with examples of how data is handled in the lake with yearly or monthly partition strategy:
 

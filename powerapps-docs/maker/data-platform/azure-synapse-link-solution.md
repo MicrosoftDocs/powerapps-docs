@@ -73,6 +73,9 @@ This section describes the prerequisites necessary to transport the Azure Synaps
 
 6. In the **Before you export** pane, select **Publish** to publish all changes before you export, and then select **Next**.
 
+> [!NOTE]
+> Once the solution has been configured and exported, it is not updated automatically. Any updates you make to the configuration will require you to re-export and re-import the solution.
+
 ## Import the solution that contains the Azure Synapse Link configuration
 
 1. In the destination environment, import the solution under the **Solutions** tab.
