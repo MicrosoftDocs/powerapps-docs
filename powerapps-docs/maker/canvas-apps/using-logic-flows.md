@@ -191,8 +191,7 @@ To enable the preview feature:
 
 ### See also
 
-[Create a rule in canvas apps](working-with-rules.md)
-<br> [Add and configure controls](add-configure-controls.md)
+[Add and configure controls](add-configure-controls.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
 
