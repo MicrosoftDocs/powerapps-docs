@@ -77,7 +77,7 @@ You're now editing the app in the Studio version you've selected. Since the auth
     - Select **Open in new version** to open your app for editing until your environment’s default
     version gets updated to the app’s current version.
 
-    - Select **Restore previous version** to open the app’s [versions](restore-an-app.md) and revert to an older version of the app saved with the default Studio version associated to your environment.
+    - Select **Restore previous version** to see all [versions](restore-an-app.md) for the app, and revert to an older version saved with the default Studio version associated to your environment.
 
         > [!NOTE]
         > If you choose to restore the app to a previous version, you'll lose any changes made between your latest and previous app versions.
