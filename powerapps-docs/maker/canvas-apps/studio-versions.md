@@ -20,7 +20,7 @@ contributors:
 
 # Change authoring version for Power Apps Studio
 
-The default version of Power Apps Studio session is determined based on your environment's location, [refresh cadence](/power-platform/admin/create-environment#setting-an-environment-refresh-cadence). This default version of Studio changes when an update is released for your environment based on configured refresh cadence.
+The default version of Power Apps Studio session is determined based on your environment's location, and [refresh cadence](/power-platform/admin/create-environment#setting-an-environment-refresh-cadence). This default version of Studio changes when an update is released for your environment based on configured refresh cadence.
 
 You can now change the authoring version of your current Studio session to earlier or later versions as available for your environment instead of using the version loaded by default.
 
