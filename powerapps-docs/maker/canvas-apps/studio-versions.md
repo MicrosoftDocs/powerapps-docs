@@ -25,11 +25,11 @@ The default version of Power Apps Studio session is determined based on your env
 You can now change the authoring version of your current Studio session from the version loaded by default, to an earlier or a later version as available for your environment.
 
 > [!IMPORTANT]
-> Change the authoring version of current Power Apps Studio session only when needed, such as a workaround for an issue.
+> Change the authoring version of current Power Apps Studio session only when needed, such as to workaround an issue as instructed by Microsoft support.
 
 ## Check and change Studio authoring version
 
-When you find any issue, and if you're instructed by a support team member, you can temporarily change the Studio version you're using.
+When you find any issue, and if you're instructed by Microsoft support, you can temporarily change the Studio version you're using.
 
 Depending on how you begin, you can check and change authoring version of your current Studio while having an app already open, or not.
 
