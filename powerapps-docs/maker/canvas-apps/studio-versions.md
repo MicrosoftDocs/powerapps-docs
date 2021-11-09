@@ -64,7 +64,7 @@ Depending on how you begin, you can check and change authoring version of your c
 
 1. Select **Open**, or **New** to work with app inside Studio using the version you selected.
 
-You're now editing the app in the Studio version you've selected. When you exit the current Studio session, to work with apps again, repeat the above steps since the authoring version change only persists for the current Studio session.
+You're now editing the app in the Studio version you've selected. Since the authoring version change only persists for the current Studio session, repeat the above steps if you exit the current Studio session and want to work with the same app again.
 
 ## Known limitations and workarounds
 
