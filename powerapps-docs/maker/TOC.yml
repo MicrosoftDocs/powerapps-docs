@@ -1009,6 +1009,8 @@
       href: ./canvas-apps/embed-powerapps-powerbi.md    
   - name: Manage an app
     items:
+    - name: Change app name and tile
+      href: ./canvas-apps/set-name-tile.md
     - name: Edit an app
       href: ./canvas-apps/edit-app.md
     - name: Export and import an app
@@ -1019,8 +1021,8 @@
       href: ./canvas-apps/license-designation.md
     - name: Restore a previous version
       href: ./canvas-apps/restore-an-app.md
-    - name: Change app name and tile
-      href: ./canvas-apps/set-name-tile.md
+    - name: Change Studio version
+      href: ./canvas-apps/studio-versions.md
   - name: Test an app with Test Studio
     items:
     - name: Test Studio Overview
