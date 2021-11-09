@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 11/05/2021
+ms.date: 11/10/2021
 ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
@@ -37,15 +37,12 @@ Watch this video to learn how to customize a list form:
 
 ## Requirements
 
-To **use** a SharePoint list form customized with Power Apps, organization users and guests must have:
-
-- View access to SharePoint site hosting the custom form.
-- A Power Apps plan that includes use rights to connect to Office. Separate licenses may be required for custom forms that use Premium capabilities.
-
-To **customize** SharePoint list form with Power Apps, organization users and guests must have:
-
-- Edit access to SharePoint site hosting the custom form.
-- Membership of **Environment Maker** security role in the Power Platform environment used to customize the SharePoint site.
+| User type | Customized SharePoint list form action | Requirements |
+| - | - | - |
+| Guest | Use | View access to SharePoint site hosting the custom form. |
+| Guest | Customize | <ul> <li> Edit access to SharePoint site hosting the custom form. </li> <li> Membership of **Environment Maker** security role in the Power Platform environment used to customize the SharePoint site. </li> </ul> |
+| Organization user | Use | <ul> <li> View access to SharePoint site hosting the custom form. </li> <li> A Power Apps plan that includes use rights to connect to Office. Separate licenses may be required for custom forms that use Premium capabilities. </li> </ul> |
+| Organization user | Customize | <ul> <li> Edit access to SharePoint site hosting the custom form. </li> <li> Membership of **Environment Maker** security role in the Power Platform environment used to customize the SharePoint site. </li> </ul> |
 
 More information about Power Apps licensing and plans:
 

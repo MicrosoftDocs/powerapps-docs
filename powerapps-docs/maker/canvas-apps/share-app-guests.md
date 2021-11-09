@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 11/05/2021
+ms.date: 11/10/2021
 ms.subservice: canvas-maker
 ms.author: alaug
 search.audienceType: 
@@ -122,7 +122,7 @@ When embedding a canvas app in SharePoint via the iFrame HTML tag, reference the
 As is the case with non-guests, the underlying data sources accessed by the app must also be made accessible to the guest.
 
 ### What license must be assigned to my guest so they can run an app shared with them?
-
+<!---
 You must assign your guest the same license that's required for non-guests to run the app. For instance, if the app uses premium connectors, a Power Apps per app plan or a Power Apps per user plan must be assigned to the guest.  
 
 |    Plan                             | SharePoint customized form | Standalone canvas app using non-premium connectors | Standalone canvas app using premium connectors | Model-driven app |
@@ -131,6 +131,17 @@ You must assign your guest the same license that's required for non-guests to ru
 | Power Apps included with Office    | x                          | x                                                  |                                                |                  |
 | Power Apps per app plan          | x                          | x                                                  | x                                              | x                |
 | Power Apps per user plan         | x                          | x                                                  | x                                              | x                |
+
+--->
+
+The following table explains license requirements for guests to run or use canvas apps, customized SharePoint list forms, and model-driven apps.
+
+|    Plan                             | Canvas app (using non-premium connectors) | Customized SharePoint list form (using non-premium connectors) | Canvas app (using premium connectors) | Customized SharePoint list form (using premium connectors) | Model-driven app |
+|---------------------------------|----------------------------------------------------|------------------------------------------------|------------------| - | - |
+| SharePoint user (no Power Apps license) |  &cross;                                              | &check;                 | &cross; | &cross; | &cross; |
+| Power Apps included with Office    | &check;                                                  | &check;                                               | &cross;                 | &cross; | &cross; | 
+| Power Apps per app plan          | &check;                                                  | &check;                                               | &check;                | &check; | &check; | &check;
+| Power Apps per user plan         | &check;                                                  | &check;                                              | &check;                | &check; | &check; | &check;
 
 For more information about pricing and the capabilities of various plans, go to [Microsoft Power Apps and Power Automate Licensing Guide](https://go.microsoft.com/fwlink/?linkid=2085130).
 
