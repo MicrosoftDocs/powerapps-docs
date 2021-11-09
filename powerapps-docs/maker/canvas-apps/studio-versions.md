@@ -69,7 +69,7 @@ You're now editing the app in the Studio version you've selected. Since the auth
 ## Known limitations and workarounds
 
 - Selecting **Reload + apply version** only changes the current authoring session to the version you choose. This change doesn't persist for future sessions. New Studio sessions always start with the default Studio version for your environment.
-- To update the app with the Studio version you selected, you must save the app with the chosen Studio version.
+- To update the app with the Studio version you selected, you must [save the app](save-publish-app.md#save-changes-to-an-app) with the chosen Studio version.
 - If you save an app using a version newer than the default for your environment, you may not be able to open that app using the default version of Studio. In that case, you'll see the following dialog.
 
     :::image type="content" source="media/studio-versions/saved-new-version.png" alt-text="Open in new version, or restore previous version.":::
