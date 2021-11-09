@@ -140,8 +140,8 @@ The following table explains license requirements for guests to run or use canva
 |---------------------------------|----------------------------------------------------|------------------------------------------------|------------------| - | - |
 | SharePoint user (no Power Apps license) |  &cross;                                              | &check;                 | &cross; | &cross; | &cross; |
 | Power Apps included with Office    | &check;                                                  | &check;                                               | &cross;                 | &cross; | &cross; | 
-| Power Apps per app plan          | &check;                                                  | &check;                                               | &check;                | &check; | &check; | &check;
-| Power Apps per user plan         | &check;                                                  | &check;                                              | &check;                | &check; | &check; | &check;
+| Power Apps per app plan          | &check;                                                  | &check;                                               | &check;                | &check; | &check; |
+| Power Apps per user plan         | &check;                                                  | &check;                                              | &check;                | &check; | &check; |
 
 For more information about pricing and the capabilities of various plans, go to [Microsoft Power Apps and Power Automate Licensing Guide](https://go.microsoft.com/fwlink/?linkid=2085130).
 
