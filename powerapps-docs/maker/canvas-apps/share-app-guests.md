@@ -123,7 +123,7 @@ As is the case with non-guests, the underlying data sources accessed by the app 
 
 ### What license must be assigned to my guest so they can run an app shared with them?
 
-The following table explains license requirements for guests to run or use canvas apps, customized SharePoint list forms, and model-driven apps.
+The following table explains whether the guests can run (use) customized SharePoint list forms, canvas apps, and model-driven apps using the referenced license.
 
 |    Plan                             | Customized SharePoint list form (using non-premium connectors) | Canvas app (using non-premium connectors) | Customized SharePoint list form (using premium connectors) | Canvas app (using premium connectors) | Model-driven app |
 |---------------------------------|----------------------------------------------------|------------------------------------------------|------------------| - | - |
