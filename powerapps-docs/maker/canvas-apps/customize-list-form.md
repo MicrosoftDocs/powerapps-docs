@@ -254,4 +254,4 @@ You can configure the **Price**, **Availability**, and **Colors** fields to appe
 - [Licensing overview for Microsoft Power Platform](/power-platform/admin/pricing-billing-skus)
 - [Understand Power Platform environments](/power-platform/admin/environments-overview)
 
-[!INCLUDE[footer-include](../../includes/footer-banner.md)]
+[!INCLUDE[footer-include](../../includes/footer-banner.md)] 
