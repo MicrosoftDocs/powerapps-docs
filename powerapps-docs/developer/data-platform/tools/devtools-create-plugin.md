@@ -165,7 +165,7 @@ After deployment completes, select the refresh icon in **Power Platform Explorer
 
 ## Add an entity image
 
-Entity images are snapshots of entity data before or after the core operation (for example: a create or update). You can add entity images on plug-in steps using the **Power Platform Explorer** view. Add an image in the **Power Platform Explorer** view under **Plug-in Assemblies** on a step of a plug-in.
+Entity images are snapshots of entity data before or after the core operation (for example: a create or update). You may (optionally) add entity images on plug-in steps using the **Power Platform Explorer** view. To add an image to a step in the **Power Platform Explorer** view,  expand the **Plug-in Assemblies** node tree to display the target plug-in step, and then right-click on the step to display the context menu from which you can choose **Add Image**.
 
 :::image type="content" source="../media/tools/devtools-add-image.png" alt-text="Add an image to a step.":::
 
