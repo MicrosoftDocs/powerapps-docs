@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/maker/model-driven-apps/page-data-connectors.md",
+      "redirect_url": "../canvas-apps/connections-list",
+      "redirect_document_id": "false"
+    },
+    {
       "source_path": "powerapps-docs/maker/portals/web-api-perform-operations.md",
       "redirect_url": "write-update-delete-operations",
       "redirect_document_id": "false"
