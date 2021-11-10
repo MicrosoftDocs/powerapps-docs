@@ -30,7 +30,7 @@ This article also shows you how to use Power Fx to set the content on a label of
 
 ## Localizing labels on a custom page
 
-Providing localized content on a custom page in a model-driven app is vital when building apps that support global users or a multilingual organization.  This can be done by uploading text files in a .resx format as a web resource.  The files will need to contain the translated text that you want to use for labels on your custom pages.
+Providing localized content on a custom page in a model-driven app is vital when building apps that support global users or a multilingual organization. Translation can be done by uploading text files in a .resx format as a web resource. The files contain the translated text that you want to use for labels on your custom pages.
 The process has the following steps:
 1.	Enable languages for your environment.
 2.	Add localized RESX web resource files into your solution.
@@ -41,11 +41,11 @@ The process has the following steps:
 
 ## Enable languages for your environment
 
-To add languages for your custom page, you need to first enable the languages you want to support in the model-driven app where your custom page will be running.  Make sure you have enabled languages from the Power Platform admin center. More information: [Enable the language](/power-platform/admin/enable-languages#enable-the-language)
+To add languages for a custom page, you need to first enable the languages you want to support in the model-driven app where your custom page will run.  Make sure you have enabled languages from the Power Platform admin center. More information: [Enable the language](/power-platform/admin/enable-languages#enable-the-language)
 
 After completing the steps to enable languages in the environment, you'll need to create a RESX file for each language in the proper format for the strings you want localized on your custom page for your model-driven app.
 
-After you have the created the RESX files with the localized strings, you can add them into your solution as a web resource. There are two ways to accomplish this task, the first is to open your solution in make.powerapps.com and select the option to add a web resource to your solution in your environment or you can add a web resource while working on a custom page. More information: [RESX web resources](/powerapps/developer/model-driven-apps/resx-web-resources) Adding a web resource while working on a custom page is covered later in this article in the section [Add localized files to your custom page](#add-localized-files-to-your-custom-page).
+After you have the created the RESX files with the localized strings, add them into your solution as a web resource. There are two ways to accomplish this task, the first is to open your solution in make.powerapps.com and select the option to add a web resource to your solution in your environment or you can add a web resource while working on a custom page. More information: [RESX web resources](/powerapps/developer/model-driven-apps/resx-web-resources) Adding a web resource while working on a custom page is covered later in this article in the section [Add localized files to your custom page](#add-localized-files-to-your-custom-page).
 
 ## Add localized RESX Web resource files to your solution
 
@@ -59,17 +59,17 @@ All files added to your solution need to follow a specific format that includes 
 
 For example, all localized string files might have the name `CustomPageLoc.LanguageID.resx`, which means for English it is `CustomPageLoc.1033.resx`, for French `CustomPageLoc.1036.resx`, and for Arabic `CustomPageLoc.1025.resx`.  The display name for every file added must be the same name.
 
-In the example below all files have `CPLoc` as the display name. *The display name must be the same to ensure all localized content is used properly on a custom page for each language.*  We recommend that you add the corresponding name for the language in the **Description** field to help identify the content when you view the files in the custom page designer. Also, you'll need to add the same language's RESX that you're working in. For example, if you are authoring in English, be sure to add the English RESX file.
+In the example below all files have `CPLoc` as the display name. *The display name must be the same to ensure all localized content is used properly on a custom page for each language.*  We recommend that you add the corresponding name for the language in the **Description** field to help identify the content when you view the files in the custom page designer. Also, you'll need to add the same language's RESX file that you're working in. For example, if you are authoring in English, be sure to add the English RESX file.
 
 :::image type="content" source="media/page-localization/studio-web-resource-dialog.png"alt-text="Power Apps Studio web resource dialog.":::
 
-After you have added your web resource to your solution make sure, you publish your changes to ensure the file is included and available. Then you can add it to your custom page.  Here's a screenshot of the web resource RESX files that have been added to a solution and are now available to add to a custom page.
+After you have added your web resource to your solution, make sure to publish your changes. Publishing ensures the file is available to add to your custom page. Here's a screenshot of the web resource RESX files that have been added to a solution and are now available to add to a custom page.
 
 :::image type="content" source="media/page-localization/studio-web-resource-panel.png"alt-text="Power Apps Studio web resource panel.":::
 
 ## Add localized files to your custom page
 
-You can add localized files to your custom page when you're creating or editing a page.
+Add localized files to your custom page when you're creating or editing a page.
 
 To add a language to your page, select the **Resources** icon on the left to open the **Resources** pane.
 
@@ -84,9 +84,9 @@ A dialog opens that lists all the available web resources in your solution. To f
 :::image type="content" source="media/page-localization/studio-page-web-resource-add-resource-dialog.png" alt-text="Power Apps Studio custom page add web resource dialog.":::
 
 > [!NOTE]
-> It isn't necessary to add every file. You only need to add one. The solution and platform maps the uploaded languages based on the display name to the language web resource files that you added to your solution. When you add multiple files, a dialog is displayed with an error message, which states that files have already been loaded to your page.
+> It isn't necessary to add every file-you only need to add one. The solution and platform maps the uploaded languages based on the display name to the language web resource files that you added to your solution. When you add multiple files, a dialog is displayed with an error message, which states that files have already been loaded to your page.
 
-If you don't see the RESX web resource with the language you want to add in the dialog, you'll need to add the file to your solution using the steps described earlier in this article. 
+If you don't see the RESX web resource with the language you want to add in the dialog, you'll need to add the file to your solution using the steps described earlier in this article.
 
 After selecting **Add**, the panel closes, and the web resource is listed in the **Resources** pane.
 
@@ -100,11 +100,11 @@ After a web resource language has been added to your page, you can manage the fi
 
 ## Add the localized string to your label controls
 
-To add localized content to your label control, you'll need to select the label and set the function to the resource using the Power Fx text function of the control. To do this, select the label control, and then select the **Text** function.
+To add localized content to your label control, select the label and set the function to the resource using the Power Fx text function of the control. To do this, select the label control, and then select the **Text** function.
 
 :::image type="content" source="media/page-localization/studio-page-text-option.png"alt-text="Power Apps Studio custom page text option on a control.":::
 
-Using the text function, set the value to the web resource and the value you want that is in your web resource RESX file.  After setting the expression the content will appear in the preview for the page.
+Using the text function, set the value to the web resource and the value you want that is in your web resource RESX file.  After setting the expression, the content will appear in the preview for the page.
 
 :::image type="content" source="media/page-localization/studio-page-text-function.png"alt-text="Power Apps Studio custom page text function for a control.":::
 
