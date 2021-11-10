@@ -15,7 +15,7 @@ contributors:
  
 ---
 
-# Implement a portal Web API component (preview)
+# Implement a sample portal Web API component (preview)
 
 [This article is pre-release documentation and is subject to change.]
 
@@ -27,20 +27,9 @@ The following is an example of implementing a code component that uses the porta
 
 - Your portal version must be [9.3.10.x](/power-platform/released-versions/portals/portalupdate9310x) or higher.
 - Your starter portal package must be [9.2.2103.x](versions/package-version-9.2.2103.md) or higher.
-
-1. You need to enable the site setting to enable the portals Web API for your portal. [Site settings for the Web API](web-api-overview.md#site-settings-for-the-web-api)
-
-    For example, to expose the Web API for the account table where authenticated users are allowed to perform create, update, and delete operations, the site settings are shown in the following table will need to be configured.
-
-    | Site setting name                 | Site setting value |
-    |-|-|
-    | `Webapi/account/enabled`            | `true`              |
-    | `Webapi/account/fields`             | `attr1,attr2,attr3`  |
-    | `Webapi/enableReadOperationPreview` | `true`               |
-
-1. Portals requires Read permission to be set on the Web Resource table before users can see the code component on the webpage. [Allow read access to a web-resource table](component-framework.md#allow-read-access-to-a-web-resource-table)
-
-1. Configure table security using table permission. [Table permissions using studio](configure/entity-permissions-studio.md)
+- You need to enable the site setting to enable the portals Web API for your portal. [Site settings for the Web API](web-api-overview.md#site-settings-for-the-web-api)
+- Portals requires Read permission to be set on the Web Resource table before users can see the code component on the webpage. [Allow read access to a web-resource table](component-framework.md#allow-read-access-to-a-web-resource-table)
+- Configure table security using table permission. [Table permissions using studio](configure/entity-permissions-studio.md)
 
 ## Code
 

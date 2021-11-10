@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/8/2021
+ms.date: 11/10/2021
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
@@ -206,7 +206,7 @@ basic form.
 
 ## Code Components using the portal Web API
 
-A code component can be built and added to a web page that can use the [portal Web API](web-api-overview.md) to perform create, retrieve, update, and delete actions. This feature allows greater customization options when developing portal solutions. See [Implement a portal Web API component](implement-webapi-component.md).
+A code component can be built and added to a web page that can use the [portal Web API](web-api-overview.md) to perform create, retrieve, update, and delete actions. This feature allows greater customization options when developing portal solutions. See [Implement a sample portal Web API component](implement-webapi-component.md).
 
 ## Next steps
 
