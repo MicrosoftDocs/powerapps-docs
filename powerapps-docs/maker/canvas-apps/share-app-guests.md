@@ -101,7 +101,7 @@ The following table outlines a few core capability differences between Power App
 
 ### Can guests access customized forms in SharePoint?
 
-See [Requirements](customize-list-form.md#requirements).
+See [What license must be assigned to my guest so they can run an app shared with them?](#what-license-must-be-assigned-to-my-guest-so-they-can-run-an-app-shared-with-them)
 
 ### Why is a guest who accesses a customized form in SharePoint prompted for a trial?
 
