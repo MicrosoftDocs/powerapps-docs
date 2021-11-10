@@ -5,7 +5,7 @@ author: GitanjaliSingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/26/2021
+ms.date: 11/9/2021
 ms.subservice: portals
 ms.author: gisingh
 ms.reviewer: ndoelman
@@ -17,12 +17,15 @@ contributors:
 
 # Liquid template tag for code components (preview)
 
-[This article is pre-release documentation and is subject to change.]
+> [!important]
+> This is a preview feature.
+Preview features aren’t meant for production use and may have restricted functionality.
+These features are available before an official release so that customers can get early access and provide feedback.
+
+Power Apps component framework empowers professional developers and app makers to create code components for model-driven and canvas apps. These code components can provide an enhanced experience for users working with data on forms, views, and dashboards. More information: [Use code components in portals (Preview)](component-framework.md)
 
 > [!IMPORTANT]
 > Liquid template tag for code components requires portals version [9.3.10.x or later](/power-platform/released-versions/portals/portalupdate9310x).
-
-Power Apps component framework empowers professional developers and app makers to create code components for model-driven and canvas apps. These code components can provide an enhanced experience for users working with data on forms, views, and dashboards. More information: [Use code components in portals (Preview)](component-framework.md)
 
 With this release, we've introduced adding of code components created using Power Apps component framework using [Liquid template tag](liquid/template-tags.md#codecomponent) on web pages and enabled components using Web API that are enabled for field-level components on forms in portals.
 
