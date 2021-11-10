@@ -177,7 +177,7 @@ After you select **Add Image** in the context menu, fill out the form that appea
 
 :::image type="content" source="../media/tools/devtools-create-image.png" alt-text="Define an entity image.":::
 
-In the form, **Pre Image**/**Post Image** specifies the entity data as it exists before (Pre) or after (Post) the core operation. The **Name** field defines the logical name of the entity that you want data for. "Entity Alias" is the named index that you will use in your code to identify the row in the image table that contains the target entity data. **Parameters** is the list of entity data columns that you want. Specify only the columns that you need since plug-in performance will be reduced the more columns you specify.
+In the form, **Pre Image**/**Post Image** specifies the entity data as it exists before (Pre) or after (Post) the core operation. The **Name** field defines the logical name of the entity that you want data for. **Entity Alias** is the named index that you will use in your code to identify the row in the image table that contains the target entity data. **Parameters** is the list of entity data columns that you want. Specify only the columns that you need since plug-in performance will be reduced the more columns you specify.
 
 More information: [Define entity images](../register-plug-in.md#define-entity-images).
 
