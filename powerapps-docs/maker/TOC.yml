@@ -2155,6 +2155,8 @@
         href: ./data-platform/import-update-export-solutions.md
       - name: Update or upgrade solutions
         href: ./data-platform/update-solutions.md
+      - name: Settings
+        href: ./data-platform/create-edit-configure-settings.md
       - name: Other solution tasks
         items:
         - name: View solution layers
