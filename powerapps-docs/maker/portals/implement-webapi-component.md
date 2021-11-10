@@ -59,7 +59,7 @@ The [FetchXML](/powerapps/developer/data-platform/use-fetchxml-construct-query.m
 
 The OData `retrieveMultiple` method renders a button in the code component. When the `onClick` method of this button is called, an OData string is generated and passed to the `retrieveMultiple` function to retrieve all account records with a name field that is like *code component Web API (Sample)*, which is true for all account records created by this code component.
 
-On successful retrieve of the records, the code component has logic to count how many account records have the revenue field set to 100, 200 or 300, and display this count into an OData status container div on the code component. The callback method from the Web API call injects the result of the call (success or failure) into the custom control's result `div`.
+On successful retrieve of the records, the code component has logic to count how many account records have the revenue field set to 100, 200 or 300, and display this count into an OData status container div on the code component. The callback method from the Web API call injects the result of the call (success or failure) into the custom control's result `div`. 
 
 ### See also
 
