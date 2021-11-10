@@ -125,10 +125,11 @@ As is the case with non-guests, the underlying data sources accessed by the app 
 
 The following table explains whether the guests can run (use) customized SharePoint list forms, canvas apps, and model-driven apps using the referenced license.
 
-|    Plan                             | Customized SharePoint list form (using non-premium connectors) | Canvas app (using non-premium connectors) | Customized SharePoint list form (using premium connectors) | Canvas app (using premium connectors) | Model-driven app |
+|    Plan                             | Customized SharePoint list form (using non-premium connectors) | Customized SharePoint list form (using premium connectors) | Canvas app (using non-premium connectors) | Canvas app (using premium connectors) | Model-driven app |
 |---------------------------------|----------------------------------------------------|------------------------------------------------|------------------| - | - |
-| SharePoint user (no Power Apps license) | &check;                                               | &cross;                 | &cross; | &cross; | &cross; |
-| Power Apps included with Office    | &check;                                                  | &check;                                               | &cross;                 | &cross; | &cross; | 
+| No license | &check;                                               | &cross;                 | &cross; | &cross; | &cross; |
+| SharePoint user (without Power Apps license) | &check;                                               | &check;                 | &cross; | &cross; | &cross; |
+| Power Apps included with Office    | &check;                                                  | &check;                                               | &check;                 | &cross; | &cross; | 
 | Power Apps per app plan          | &check;                                                  | &check;                                               | &check;                | &check; | &check; |
 | Power Apps per user plan         | &check;                                                  | &check;                                              | &check;                | &check; | &check; |
 
