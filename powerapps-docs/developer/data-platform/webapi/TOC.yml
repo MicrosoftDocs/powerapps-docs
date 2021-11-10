@@ -90,7 +90,7 @@
   href: get-started-web-api-client-side-javascript.md
 - name: Web API versions and limitations
   href: web-api-versions.md
-- name: Relevance search, suggestions, and autocomplete
+- name: Dataverse search, suggestions, and autocomplete
   href: relevance-search.md
 - name: Discover the URL for your organization
   items:

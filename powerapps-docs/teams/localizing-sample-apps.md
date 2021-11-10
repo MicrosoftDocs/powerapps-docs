@@ -22,6 +22,9 @@ For example, consider that you use the Russian language. Russian isn't a languag
 
 This article covers the approach used for localization of the sample apps for Teams, and how to extend it to add support for another language (such as Russian). In this example, we'll use the [Milestones app](milestones.md); but this same approach is used consistently across all of the Teams template Power Apps, and you can follow the same approach for localization of your own canvas apps.
 
+Watch this video to learn how to localize sample apps:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWKV6N]
+
 ## Prerequisites
 
 To complete this lesson, we'd need the ability to create Power Apps within Teams, which is available as part of select Microsoft 365 subscriptions.
@@ -209,14 +212,14 @@ Let us add a label to the Loading screen:
 
 ### See also
 
-- [Boards (Preview) sample app](boards.md)
+- [Boards (preview) sample app](boards.md)
 - [Bulletins sample app](bulletins.md)
 - [Employee ideas sample app](employee-ideas.md)  
 - [Inspection sample apps](inspection.md)  
 - [Issue reporting sample apps](issue-reporting.md)
 - [Milestones sample app](milestones.md)
-- [Perspectives (Preview) sample app](perspectives.md)
-- [Profile+ (Preview) sample app](profile-app.md)
+- [Perspectives (preview) sample app](perspectives.md)
+- [Profile+ (preview) sample app](profile-app.md)
 - [Customize sample apps](customize-sample-apps.md)
 - [Sample apps FAQs](sample-apps-faqs.md)
 

@@ -27,6 +27,9 @@ Components are reusable building blocks for canvas apps so that app makers can c
 
 Components are useful in building larger apps that have similar control patterns. If you update a component definition inside the app, all instances in the app reflect your changes. Components also reduce duplication of efforts by eliminating the need to copy/paste controls and improve performance. Components also help create collaborative development and standardizes look-and-feel in an organization when you use a [component library](component-library.md).
 
+Watch this video to learn how to use components in canvas apps:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLlkO]
+
 ## Components in canvas apps
 
 You can create a component from within an app as explained in this article, or by creating a new component inside a [component library](component-library.md). A component library should be used for requirements to use components across multiple app screens. You can also copy the existing components into an existing or a new component library.
@@ -269,7 +272,7 @@ Once you save the app, you can reuse the components of this app using the same m
 
 - You can't save data sources, forms, and data tables with components.
 - Collections in components aren't supported.
-- You can't insert a component into a gallery or a form.
+- You can't insert a component into a gallery or a form (including SharePoint form).
 - A master instance of a component is a local master and scoped to the app. If you change a master instance, only copies of the component within the app will reflect the change. Copies in other apps will remain the same unless you import the component library again. All master instances in those apps will be automatically detected and updated.
 - You can't package media files when you import a component.
 - Components don't support the [**UpdateContext**](./functions/function-updatecontext.md) function, but you can create and update variables in a component by using the [**Set**](functions/function-set.md) function. The scope of these variables is limited to the component, but you can access them from outside the component through custom output properties.

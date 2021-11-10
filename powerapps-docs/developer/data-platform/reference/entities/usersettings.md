@@ -1,13 +1,13 @@
 ---
 title: "UserSettings table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the UserSettings table/entity."
-ms.date: 05/20/2021
+ms.date: 10/05/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -316,10 +316,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### DataValidationModeForExportToExcel Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Full|
-|1|None|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Full||
+|1|None||
 
 
 
@@ -446,12 +446,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### DefaultSearchExperience Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Relevance search|
-|1|Categorized search|
-|2|Use last search|
-|3|Custom search|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Relevance search||
+|1|Categorized search||
+|2|Use last search||
+|3|Custom search||
 
 
 
@@ -469,11 +469,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### EntityFormMode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Organization default|
-|1|Read-optimized|
-|2|Edit|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Organization default||
+|1|Read-optimized||
+|2|Edit||
 
 
 
@@ -507,8 +507,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### GetStartedPaneContentEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -594,8 +594,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IgnoreUnsolicitedEmail Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -617,13 +617,13 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IncomingEmailFilteringMethod Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|All email messages|
-|1|Email messages in response to Dynamics 365 email|
-|2|Email messages from Dynamics 365 Leads, Contacts and Accounts|
-|3|Email messages from Dynamics 365 records that are email enabled|
-|4|No email messages|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|All email messages||
+|1|Email messages in response to Dynamics 365 email||
+|2|Email messages from Dynamics 365 Leads, Contacts and Accounts||
+|3|Email messages from Dynamics 365 records that are email enabled||
+|4|No email messages||
 
 
 
@@ -641,8 +641,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsAppsForCrmAlertDismissed Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -664,8 +664,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsAutoDataCaptureEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -687,8 +687,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsDefaultCountryCodeCheckEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -710,8 +710,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsDuplicateDetectionEnabledWhenGoingOnline Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -733,8 +733,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsEmailConversationViewEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -756,8 +756,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsGuidedHelpEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -780,8 +780,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsResourceBookingExchangeSyncEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Enabled|
 |0|Disabled|
 
@@ -803,8 +803,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsSendAsAllowed Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -1050,11 +1050,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### ReportScriptErrors Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Ask me for permission to send an error report to Microsoft|
-|2|Automatically send an error report to Microsoft without asking me for permission|
-|3|Never send an error report to Microsoft about Microsoft Dynamics 365|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Ask me for permission to send an error report to Microsoft||
+|2|Automatically send an error report to Microsoft without asking me for permission||
+|3|Never send an error report to Microsoft about Microsoft Dynamics 365||
 
 
 
@@ -1102,8 +1102,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### ShowWeekNumber Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -1125,8 +1125,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### SplitViewState Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Expanded|
 |0|Collapsed|
 
@@ -1148,8 +1148,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### SyncContactCompany Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -1567,8 +1567,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### UseCrmFormForAppointment Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -1590,8 +1590,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### UseCrmFormForContact Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -1613,8 +1613,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### UseCrmFormForEmail Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -1636,8 +1636,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### UseCrmFormForTask Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -1659,8 +1659,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### UseImageStrips Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -1698,10 +1698,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### VisualizationPaneLayout Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Top-bottom|
-|1|Side-by-side|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Top-bottom||
+|1|Side-by-side||
 
 
 
@@ -1778,8 +1778,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### AllowEmailCredentials Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 

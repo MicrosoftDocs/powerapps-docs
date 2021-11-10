@@ -5,13 +5,13 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2021
+ms.date: 10/29/2021
 ms.subservice: portals
 ms.author: nenandw
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
     - neerajnandwana-msft
-    - tapanm-msft
+    - nickdoelman
 ---
 
 # Compose HTTP requests and handle errors for the portals Web API
@@ -44,6 +44,7 @@ HTTP requests can use different kinds of methods. However, the portals Web API o
 
 | Method | Usage |
 | - | - |
+| Get    | Use when retrieving data from tables. |
 | Post   | Creating tables and calling actions. |
 | Patch  | Use when updating tables or doing upsert operations. |
 | Delete | Use when deleting tables or individual properties of tables. |
@@ -97,6 +98,19 @@ OData-Version: 4.0
 		}
 		webapi.safeAjax = safeAjax;
 })(window.webapi = window.webapi || {}, jQuery)
+```
+
+### Example: Retrieve table data
+
+```javascript
+	webapi.safeAjax({
+				type: "GET",
+				url: "/_api/contacts?$select=firstname,lastname",
+				contentType: "application/json",
+				success: function (res) {
+						console.log(res);
+				}
+	});
 ```
 
 ### Example: Create table data
@@ -202,8 +216,8 @@ Response for unhandled errors with HTTP status code 500 will return the error "A
 
 ### See also
 
-[Web API overview](web-api-overview.md)  
-[Perform Web API operations](web-api-perform-operations.md)
-
+[Web API overview](web-api-overview.md)</br>  
+[Portals write, update and delete operations using the Web API](write-update-delete-operations.md)</br>
+[Portals read operations using the Web API](read-operations.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

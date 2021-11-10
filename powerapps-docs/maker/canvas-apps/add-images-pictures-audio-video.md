@@ -28,6 +28,9 @@ This article walks you through working with multimedia, streaming, and input con
 
 [Sign up](../signup-for-powerapps.md) for Power Apps, and then [sign in](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) using the same credentials that you used to sign up.
 
+Watch this video to learn how to use multimedia files in canvas apps:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLAk7]
+
 ## Add media from a file or the cloud
 
 You can choose the kind of media file to add (for example, images, video, or audio). You can add images using the media pane, or using the images control.
