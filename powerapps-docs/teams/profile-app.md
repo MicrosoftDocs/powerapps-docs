@@ -1,5 +1,5 @@
 ---
-title: Profile+ sample app (Preview)
+title: Profile+ sample app (preview)
 description: Learn how to use the Profile+ app from Teams store.
 author: navjotm
 ms.service: powerapps
@@ -15,7 +15,7 @@ contributors:
   - joel-lindstrom
 ---
 
-# Profile+ sample app (Preview)
+# Profile+ sample app (preview)
 
 [This article is pre-release documentation and is subject to change.]
 
@@ -166,7 +166,7 @@ Open positions now appear in Profile+ linked to the manager responsible for them
 
 - [Deploy Profile+ app broadly in your organization](deploy-profile-plus-broad-distribution.md)
 - [Profile+ sample app architecture](profile-plus-architecture.md)
-- [Extend Profile+ app (Preview) with additional org-specific data](profile-plus-org-specific.md)
+- [Extend Profile+ app (preview) with additional org-specific data](profile-plus-org-specific.md)
 - [Customize sample apps](customize-sample-apps.md)
 - [Sample apps FAQs](sample-apps-faqs.md)
 - [Use sample apps from the Microsoft Teams store](use-sample-apps-from-teams-store.md)

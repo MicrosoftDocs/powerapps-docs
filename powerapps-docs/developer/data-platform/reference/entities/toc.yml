@@ -20,6 +20,8 @@
   href: annotation.md
 - name: AnnualFiscalCalendar
   href: annualfiscalcalendar.md
+- name: appaction
+  href: appaction.md
 - name: AppConfig
   href: appconfig.md
 - name: AppConfigInstance
@@ -128,8 +130,6 @@
   href: entityanalyticsconfig.md
 - name: EntityDataProvider
   href: entitydataprovider.md
-- name: EntityDataSource
-  href: entitydatasource.md
 - name: EntityImageConfig
   href: entityimageconfig.md
 - name: EntityKey
@@ -148,6 +148,8 @@
   href: exportsolutionupload.md
 - name: Fax
   href: fax.md
+- name: featurecontrolsetting
+  href: featurecontrolsetting.md
 - name: Feedback
   href: feedback.md
 - name: FieldPermission
@@ -270,6 +272,8 @@
   href: msdyn_helppage.md
 - name: msdyn_kalanguagesetting
   href: msdyn_kalanguagesetting.md
+- name: msdyn_kbattachment
+  href: msdyn_kbattachment.md
 - name: msdyn_kmfederatedsearchconfig
   href: msdyn_kmfederatedsearchconfig.md
 - name: msdyn_kmpersonalizationsetting
@@ -300,6 +304,10 @@
   href: msdyn_serviceconfiguration.md
 - name: msdyn_slakpi
   href: msdyn_slakpi.md
+- name: msdyn_solutioncomponentcountdatasource
+  href: msdyn_solutioncomponentcountdatasource.md
+- name: msdyn_solutioncomponentcountsummary
+  href: msdyn_solutioncomponentcountsummary.md
 - name: msdyn_solutioncomponentdatasource
   href: msdyn_solutioncomponentdatasource.md
 - name: msdyn_solutioncomponentsummary
@@ -314,6 +322,8 @@
   href: msdyn_solutionhistory.md
 - name: msdyn_solutionhistorydatasource
   href: msdyn_solutionhistorydatasource.md
+- name: msdyn_tour
+  href: msdyn_tour.md
 - name: msdynce_botcontent
   href: msdynce_botcontent.md
 - name: NavigationSetting
@@ -340,6 +350,8 @@
   href: picklistmapping.md
 - name: PluginAssembly
   href: pluginassembly.md
+- name: pluginpackage
+  href: pluginpackage.md
 - name: PluginTraceLog
   href: plugintracelog.md
 - name: PluginType
@@ -422,6 +434,8 @@
   href: serviceendpoint.md
 - name: ServicePlan
   href: serviceplan.md
+- name: ServicePlanMapping
+  href: serviceplanmapping.md
 - name: SharePointDocumentLocation
   href: sharepointdocumentlocation.md
 - name: SharePointSite
@@ -444,6 +458,8 @@
   href: solutioncomponent.md
 - name: solutioncomponentattributeconfiguration
   href: solutioncomponentattributeconfiguration.md
+- name: solutioncomponentbatchconfiguration
+  href: solutioncomponentbatchconfiguration.md
 - name: solutioncomponentconfiguration
   href: solutioncomponentconfiguration.md
 - name: solutioncomponentrelationshipconfiguration
@@ -498,6 +514,8 @@
   href: userqueryvisualization.md
 - name: UserSettings
   href: usersettings.md
+- name: VirtualEntityMetadata
+  href: virtualentitymetadata.md
 - name: WebResource
   href: webresource.md
 - name: Workflow

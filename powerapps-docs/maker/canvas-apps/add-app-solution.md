@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: article
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 07/07/2021
+ms.date: 10/21/2021
 ms.subservice: canvas-maker
 ms.author: caburk
 search.audienceType: 
@@ -29,11 +29,7 @@ For more information about solutions, see [Solutions overview](../data-platform/
 To follow the steps in this topic, you must switch to an environment that contains a Microsoft Dataverse database.
 
 > [!NOTE]
-> To use or run a flow in a canvas app that is included in a [solution](../data-platform/solutions-overview.md), you must be assigned a Dataverse security role with the following permissions at the minimum:
-> - Read privilege on the [Solution](../../developer/data-platform/reference/entities/solution.md) table
-> - Read privilege on the [Process (Workflow)](../../developer/data-platform/reference/entities/workflow.md) table
->
-> For more information about security roles and privileges in Dataverse, see [Security roles and privileges](/power-platform/admin/security-roles-privileges).
+> To use or run a flow in a canvas app that is included in a [solution](../data-platform/solutions-overview.md), you must be assigned a Dataverse security role with the Read privilege on the [Process (Workflow)](../../developer/data-platform/reference/entities/workflow.md) table. For more information about security roles and privileges in Dataverse, see [Security roles and privileges](/power-platform/admin/security-roles-privileges).
 
 ## Create a solution
 

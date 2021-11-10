@@ -8,9 +8,9 @@ ms.custom:
 ms.date: 05/27/2021
 ms.subservice: portals
 ms.author: ckwan
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
-    - tapanm-msft
+    - nickdoelman
     - ckwan-ms
 ---
 

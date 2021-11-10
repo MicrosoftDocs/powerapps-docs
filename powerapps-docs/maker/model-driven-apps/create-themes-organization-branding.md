@@ -2,7 +2,7 @@
 title: "Change the color scheme or add a logo to match your brand  | MicrosoftDocs"
 description: Learn how to change the color scheme for your app with Power Apps
 ms.custom: ""
-ms.date: 01/12/2021
+ms.date: 10/04/2021
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -24,10 +24,13 @@ search.app:
 
 [!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-You can create a custom look and feel (a theme), for your app by making changes to the default colors and visual elements provided in the uncustomized system. For example, you can create your personal product branding by adding a company logo and providing table-specific coloring. A theme can be created by using the **Themes** area, without requiring a developer to write code. You can create, clone, change, or delete themes that are used in your environment. 
+You can create a custom look and feel (a theme), for your app by making changes to the default colors and visual elements provided in the uncustomized system. For example, you can create your personal product branding by adding a company logo and providing table-specific coloring. A theme can be created by using the **Themes** area, without requiring a developer to write code. You can create, clone, change, or delete themes that are used in your environment.
+
+Watch this video for a quick overview about how to create a default theme for model-driven apps:
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWLvM4]
 
 > [!NOTE]
-> You can define multiple themes, but only one can be active in the system and is identified as the default theme. To make a theme active, you publish it.
+> You can define multiple themes, but only one can be active in the environment and is identified as the default theme. To make a theme active, you publish it.
   
 <a name="UseThemes"></a>   
 ## Use themes to enhance the user interface and create your product branding
@@ -65,12 +68,12 @@ You can create a custom look and feel (a theme), for your app by making changes 
 <a name="Solution"></a>   
 ## Solution awareness
 
-Themes aren't solution aware. The changes made for an organization's theme aren’t included in  solutions exported from the organization. The data is stored in the theme table that can be exported and re-imported in another environment. The imported theme must be published to take effect.  
+Themes aren't solution aware. The changes made for an organization's theme aren’t included in  solutions exported from the organization. The data is stored in the theme table that can be exported and reimported in another environment. The imported theme must be published to take effect.  
   
 <a name="CloneAlter"></a>   
 ## Copy and alter the existing theme
 
- The easiest and quickest way to create a new theme is to clone and alter an existing theme, then save, preview and publish it.
+ The easiest and quickest way to create a new theme is to clone and alter an existing theme. Then save, preview, and publish it.
  
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Settings** ![Settings icon.](../model-driven-apps/media/powerapps-gear.png) (upper right), and then select **Advanced settings**.
 1. Select **Customizations**, and then select **Themes**.
@@ -140,7 +143,19 @@ For example, the **CRM Default Theme** was cloned and changed using mostly varyi
 -   A table can’t be displayed in different colors under different Sitemap nodes.  
   
 -   The Sitemap nodes colors aren’t customizable.  
-  
+
+## Known issues with mobile devices and themes
+
+### The custom theme isn’t applied on devices running the Power Apps mobile app
+
+When you run the Power Apps mobile app with an environment that is using a custom theme as the default theme, the mobile device displays the system CRM Default Theme.  
+
+### Card forms aren’t displayed in table views in a web browser
+
+On a mobile device running the app in a web browser, the view is displayed in the standard view, which isn’t optimized for small screens and is displayed similar to the below image. For more information about card forms, see [Create a card form](create-card-forms.md).
+
+:::image type="content" source="media/standard-view-theme-mobile-browser.png" alt-text="Standard view displayed on a mobile device due to custom theme":::
+
 ## See also  
          
  [Video: Themes](https://go.microsoft.com/fwlink/p/?LinkId=529568) <br />

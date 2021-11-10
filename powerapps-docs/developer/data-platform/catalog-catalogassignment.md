@@ -2,7 +2,7 @@
 title: "Catalog and CatalogAssignment tables (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to use the Catalog and CatalogAssignment tables to expose events in your solution"
 ms.custom: ""
-ms.date: 09/10/2021
+ms.date: 10/31/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -569,7 +569,7 @@ The `catalogassignment` element includes these elements:
 
 ### See also  
 
-[Microsoft Dataverse business events (preview)](business-events.md)<br />
+[Microsoft Dataverse business events](business-events.md)<br />
 [Create an entity record using the Web API](webapi/create-entity-web-api.md)<br />
 [Retrieve an entity record using the Web API](webapi/retrieve-entity-using-web-api.md)<br />
 [Create entities using the Organization Service](org-service/entity-operations-create.md)<br />

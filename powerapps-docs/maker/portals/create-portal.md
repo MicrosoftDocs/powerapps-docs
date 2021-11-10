@@ -5,13 +5,13 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: intro-internal
-ms.date: 04/21/2021
+ms.date: 10/11/2021
 ms.subservice: portals
 ms.author: nenandw
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
     - neerajnandwana-msft
-    - tapanm-msft
+    - nickdoelman
 ---
 
 # Create a Dataverse starter portal
@@ -45,23 +45,28 @@ To create a portal:
 > [!TIP]
 > To learn about the roles required to create a portal, read [Admin roles required for portal administrative tasks](admin/portal-admin-roles.md).
 
-1.  Sign in to [Power Apps](https://make.powerapps.com).  
+1. Sign in to [Power Apps](https://make.powerapps.com).  
 
-2.  Under **Make your own app**, select **Portal from blank**.
+1. Under **Make your own app**, select **Portal from blank**.
 
-3.	If the selected environment doesn't contain portal pre-requisites, a message is displayed in the **Portal from blank** window suggesting you select another environment or create a new one.
+1. If the selected environment doesn't contain portal pre-requisites, a message is displayed in the **Portal from blank** window suggesting you select another environment or create a new one.
 
-    ![create new environment message.](media/create-portal-message.png "Create new environment message")
+    :::image type="content" source="media/create-portal-message.png" alt-text="Create new environment message":::
 
-4.	If you choose to continue with the current environment, enter the required information in the window as mentioned in the following steps. If you choose to create a new environment, see [Create new environment](create-additional-portals.md#create-new-environment).
+1. If you choose to continue with the current environment, enter the required information in the window as mentioned in the following steps. If you choose to create a new environment, see [Create new environment](create-additional-portals.md#create-new-environment).
 
-5.  In the **Portal from blank** window, enter a name for the portal and address for the website, and select a language from the drop-down list. When you're done, select **Create**.
+1. In the **Portal from blank** window, enter a name for the portal and address for the website, and select a language from the drop-down list.
 
     > [!TIP]
     > To create a portal using a different language, you must first [enable the language in the environment](/power-platform/admin/enable-languages#enable-the-language) so that it becomes available in the language drop-down list.
 
-    > [!div class=mx-imgBorder]
-    > ![create new portal.](media/create-new-portal.png "Create new portal")  
+    :::image type="content" source="media/create-new-portal.png" alt-text="Create new portal":::
+
+1. (Optional) To create the portal using an existing website record, check the box **use data from existing website record**, and then select the website record that you want to use. More information: [Create new portal using migrated data](admin/migrate-portal-configuration.md#create-new-portal-using-migrated-data)
+
+    :::image type="content" source="media/reuse-website-record.png" alt-text="Use existing website record":::
+
+1. When you're done, select **Create**.
 
 After you select **Create**, the portal will begin provisioning and the provisioning status is displayed through [notifications](#portal-provisioning-notifications).
 
