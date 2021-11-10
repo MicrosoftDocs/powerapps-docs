@@ -8,9 +8,9 @@ ms.custom:
 ms.date: 07/02/2021
 ms.subservice: portals
 ms.author: dileeps
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributor:
-    - tapanm-msft
+    - nickdoelman
     - dileepsinghmicrosoft
 ---
 
