@@ -42,9 +42,9 @@ The following table explains requirements for user type with actions specific to
 | User type | Customized SharePoint list form action | Requirements |
 | - | - | - |
 | Guest | Use | <ul> <li> View access to SharePoint site hosting the custom form. </li> </ul> |
-| Guest | Customize | <ul> <li> Edit access to SharePoint site hosting the custom form. </li> <li> Membership of **Environment Maker** security role in the Power Platform environment used to customize the SharePoint site. </li> </ul> |
+| Guest | Create or Edit | <ul> <li> Edit access to SharePoint site hosting the custom form. </li> <li> Membership of **Environment Maker** security role in the Power Platform environment used to customize the SharePoint site. </li> </ul> |
 | Organization user | Use | <ul> <li> View access to SharePoint site hosting the custom form. </li> <li> A Power Apps plan that includes use rights to connect to Office. Separate licenses may be required for custom forms that use Premium capabilities. </li> </ul> |
-| Organization user | Customize | <ul> <li> Edit access to SharePoint site hosting the custom form. </li> <li> Membership of **Environment Maker** security role in the Power Platform environment used to customize the SharePoint site. </li> </ul> |
+| Organization user | Create or Edit | <ul> <li> Edit access to SharePoint site hosting the custom form. </li> <li> Membership of **Environment Maker** security role in the Power Platform environment used to customize the SharePoint site. </li> </ul> |
 
 More information about Power Apps licensing and plans:
 
