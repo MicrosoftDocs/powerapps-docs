@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 10/27/2021
+ms.date: 11/03/2021
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
@@ -104,7 +104,7 @@ This list identifies all services to which Power Apps Studio talks and their usa
 | graph.microsoft.com<br>graph.windows.net |https |Azure Graph - For getting user info (for example, profile photo) |
 | gallery.azure.com |https |Sample and Template apps |
 | \*.azure-apim.net |https |Api Hubs - Different subdomains for each locale |
-| \*.powerapps.com |https | create.powerapps.com, content.powerapps.com, apps.powerapps.com, and make.powerapps.com |
+| \*.powerapps.com |https | create.powerapps.com, content.powerapps.com, apps.powerapps.com, make.powerapps.com, and \*gateway.prod.island.powerapps.com |
 | \*.azureedge.net |https | create.powerapps.com, content.powerapps.com, and make.powerapps.com |
 | \*.blob.core.windows.net |https | Blob storage |
 | \*.flow.microsoft.com | https | create.powerapps.com, content.powerapps.com, and make.powerapps.com |

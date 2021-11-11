@@ -131,6 +131,8 @@
         href: ../user/add-powerbi-dashboards.md      
     - name: Collaboration
       items:
+      - name: Collaborate with others (preview)
+        href: ../user/collaboration.md
       - name: Use OneDrive for Business
         href: ../user/one-drive.md
       - name: Take notes by using OneNote
@@ -975,6 +977,8 @@
             href: ./canvas-apps/accessible-apps-limitations.md
       - name: Send notifications from an app
         href: ./canvas-apps/add-notifications.md
+      - name: Use co-authoring in canvas apps (experimental)
+        href: ./canvas-apps/git-version-control.md
       - name: Experimental, preview, and retired features
         href: ./canvas-apps/working-with-experimental-preview.md
   - name: How-to guides
@@ -1136,7 +1140,7 @@
         href: ./model-driven-apps/translate-localizable-text.md
     - name: Design the interface
       items:
-      - name: Use the new app designer
+      - name: Use the new app designer (preview)
         href: ./model-driven-apps/app-designer-overview.md
         items: 
         - name: Create an app
@@ -1193,7 +1197,7 @@
           items:
           - name: Use Monitor to troubleshoot forms
             href: ./model-driven-apps/monitor-form-checker.md
-      - name: Use custom pages within model-driven apps (preview)
+      - name: Use custom pages within model-driven apps
         items:
         - name: Custom pages overview
           href: ./model-driven-apps/model-app-page-overview.md
@@ -1209,8 +1213,6 @@
           href: ./model-driven-apps/page-canvas-components.md   
         - name: Add code components to a custom page
           href: ./model-driven-apps/page-code-components.md     
-        - name: Add connectors to a custom page
-          href: ./model-driven-apps/page-data-connectors.md
         - name: Known issues with custom pages
           href: ./model-driven-apps/model-app-page-issues.md
         - name: Use monitor to troubleshoot custom pages
@@ -1361,6 +1363,8 @@
           href: ./model-driven-apps/set-up-timeline-control.md
         - name: FAQs for the timeline control
           href: ./model-driven-apps/faqs-timeline-control.md
+        - name: Use custom connectors with the timeline control
+          href: ./model-driven-apps/custom-connectors-timeline-control.md
         - name: Quick view control properties
           href: ./model-driven-apps/quick-view-control-properties-legacy.md
         - name: Timer control overview
@@ -1865,7 +1869,9 @@
           - name: "Tutorial: Use code components in portals"
             href: ./portals/component-framework-tutorial.md            
           - name: Use code components Liquid template tag
-            href: ./portals/component-framework-liquid.md           
+            href: ./portals/component-framework-liquid.md
+          - name: Implement a sample portal Web API component
+            href: ./portals/implement-webapi-component.md                        
         - name: Use Microsoft Power Platform CLI
           items:
           - name: Overview of portals support for Microsoft Power Platform CLI 
@@ -2218,7 +2224,13 @@
     - name: Advanced Configuration Settings
       href: ./data-platform/azure-synapse-link-advanced-configuration.md
     - name: Azure Synapse Link FAQ
-      href: ./data-platform/export-data-lake-faq.yml      
+      href: ./data-platform/export-data-lake-faq.yml
+    - name: Application Lifecycle Management
+      items:
+      - name: Transport a configuration across environments
+        href: ./data-platform/azure-synapse-link-solution.md
+      - name: Environment Lifecycle Events
+        href: ./data-platform/azure-synapse-link-olc.md     
     - name: Analyze with Azure Synapse Analytics
       items:
       - name: Query data with serverless SQL pool
@@ -2516,7 +2528,15 @@
           href: ../teams/sample-apps-faqs.md
     - name: Known issues and limitations
       href: ../teams/known-issues-limitations.md
-
+  - name: Migrate Access data to Dataverse for Teams (preview)
+    href: ../teams/migrate-access-to-dvft.md
+- name: Access migration (preview)
+  href: ./data-platform/migrate-access-to-dataverse.md
+  items:
+  - name: Data types and sizes for Access migration
+    href: ./data-platform/migrate-access-datatypes.md
+  - name: System columns and tables in Dataverse
+    href: ./data-platform/access-migrate-linked-tables.md
 - name: Chatbots
   href: ../chatbots.md
 
