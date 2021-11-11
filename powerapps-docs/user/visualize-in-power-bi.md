@@ -19,7 +19,7 @@ search.app:
   - D365CE
 ---
 
-# Visualize your data in a view with Power BI service (preview)
+# Visualize data in a view with Power BI service (preview)
 
 
 [This topic is pre-release documentation and is subject to change.]
