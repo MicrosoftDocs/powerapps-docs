@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2021
+ms.date: 11/11/2021
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
@@ -171,7 +171,7 @@ To add a code component to a basic form:
 1. Save and close the form.
 
 > [!Important]
-> If the basic form *Auto Generate Steps From Tabs* is selected in the **Miscellaneous** section of the **Form Options** tab, the code component will not be loaded for the attribute on the web page.
+> If the basic form *Auto Generate Steps From Tabs* is selected in the **Additional Settings** section of the **Form Options** tab, the code component will not be loaded for the attribute on the web page.
 
 ## Allow Read access to a Web Resource table
 
