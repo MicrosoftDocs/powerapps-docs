@@ -1,5 +1,5 @@
 ---
-title: "Transport Azure Synapse Link for Dataverse Configuration | MicrosoftDocs"
+title: "Transport Azure Synapse Link for Dataverse configuration | MicrosoftDocs"
 description: "Learn to transport Azure Synapse Link for Dataverse configurations across environments."
 ms.custom: ""
 ms.date: 11/01/2021
@@ -23,7 +23,7 @@ search.app:
 contributors: ""
 ---
 
-# Transport the Azure Synapse Link for Dataverse Configuration across Environments
+# Transport the Azure Synapse Link for Dataverse configuration across environments
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
@@ -43,23 +43,23 @@ This section describes the prerequisites necessary to transport the Azure Synaps
 > [!NOTE]
 > The Azure Synapse Link for Dataverse solution must be installed in both the source and the destination environments.
 
-1. From the Power Apps Maker Portal, select the source environment for the Azure Synapse Link for Dataverse configuration.
+1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then select the source environment for the Azure Synapse Link for Dataverse configuration.
 
-2. On the leftmost navigation pane, select **Solutions** and **Open AppSource**.
+2. On the left navigation pane, select **Solutions** > **Open AppSource**.
 
     ![Open App Source](media/open-app-source.png "Open App Source")
 
-3. Search for the solution named **Azure Synapse Link for Dataverse** and **Get it now**.
+3. Select for the solution named **Azure Synapse Link for Dataverse**, and then select **Get it now**.
 
     ![Azure Synapse Link for Dataverse Solution](media/asl-solution.png "Azure Synapse Link for Dataverse Solution")
 
 4. Repeat above steps in the destination environment. You need the **Azure Synapse Link for Dataverse** solution in both the source and destination environments.
 
-## Add an Azure Synapse Link configuration to a Solution
+## Add an Azure Synapse Link configuration to a solution
 
-1. From the Power Apps Maker Portal, select the source environment, and on the leftmost navigation pane, select **Solutions**.
+1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select the source environment, and then on the left navigation pane, select **Solutions**.
 
-2. Select **New solution**, provide a **Name**, **Publisher**, and **Version Number**.  
+2. Select **New solution**. Provide a **Name**, **Publisher**, and **Version Number**.  
 
 3. Open the solution you created in the previous step, select **Add existing** > **More** > **Azure Synapse Link config**.
 

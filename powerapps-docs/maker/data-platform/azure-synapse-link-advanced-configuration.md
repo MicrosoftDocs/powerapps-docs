@@ -35,8 +35,8 @@ Azure Synapse Link offers multiple ways to write and read your data to fit vario
 
 This article covers:
 
-1. In-place updates vs. append-only writes
-2. User-specified data partitioning
+1. In-place updates vs. append-only writes.
+2. User-specified data partitioning.
 
 ## In-place updates vs. append-only writes
 
@@ -66,7 +66,7 @@ You can toggle the **Show advanced configuration settings** under **Advanced** i
 
 ![Show advanced configuration.](media/export-data-lake-show-advanced-config.png "Show advanced configuration")
 
-## Data Partitioning
+## Data partitioning
 
 When you Dataverse table data to Azure data lake storage using Azure Synapse Link, the tables are partitioned (instead of a single file) in the lake based on the `createdOn` value on each row in the source. The default partition strategy is by month and data is partitioned in Azure data lake on a monthly basis.
 

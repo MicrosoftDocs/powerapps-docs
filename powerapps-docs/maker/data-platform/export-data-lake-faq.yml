@@ -40,7 +40,7 @@ sections:
         - Delta sync: After the initial sync of tables are completed, any change on Dataverse for selected tables is added to a common queue in Azure Synapse Link. The queue is processed with a fixed set of parallel listeners. If you add more tables to the queue, Azure Synapse Link will process the messages, but if the number of messages are higher, it will add latency for data to sync to synapse and/or the data lake. 
    - question: How can I access my table relationships?
      answer: |
-        To access Many-to-Many relationships, the relationship will be available as a table to select from the Add tables page for a new link and from the Manage tables for a preexisting link.
+        To access many-to-many relationships, the relationship will be available as a table to select from the Add tables page for a new link and from the Manage tables for a preexisting link.
 
 additionalContent: |
 
