@@ -1,6 +1,6 @@
 ---
-title: "Visualize your data in a view quickly with Power BI servic| MicrosoftDocs"
-description: Visualize your data in a view quickly with Power BI servic.
+title: "Visualize your data in a view quickly with Power BI service| MicrosoftDocs"
+description: Visualize your data in a view quickly with Power BI service.
 author: mduelae
 manager: kvivek
 ms.service: powerapps
@@ -31,7 +31,7 @@ If you're new to Power BI reports and need more information, see [Reports in Po
 If you're using Power BI Desktop, you can also [create a report using data from Dataverse in Power BI Desktop](/powerapps/maker/data-platform/data-platform-powerbi-connector).
 
 > ![IMPORTANT]
-> Your administrator needs to turned on the **Enable Power BI quick report visualization on a table (Preview)** feature setting, to use the capabilities in your model-drive apps that's covered in the topic. For more information, see [Manage feature settings](/power-platform/admin/settings-features).
+> Your administrator needs to enable the **Enable Power BI quick report visualization on a table (Preview)** feature setting, to use the capabilities covered in the topic. For more information, see [Manage feature settings](/power-platform/admin/settings-features).
 
    > [!div class="mx-imgBorder"]
    > ![Enabled Power BI report visualization on a table](media/powerbi-image1.png)
