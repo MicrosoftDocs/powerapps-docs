@@ -163,6 +163,24 @@ After you are done modifying code and are ready to deploy the plug-in assembly a
 
 After deployment completes, select the refresh icon in **Power Platform Explorer**. Expand the **Plug-in Assemblies** sub-node of your environment node to see your registered assembly. Right-click on the plug-in assembly and step in **Power Platform Explorer** to see what operations are supported. Selecting **Delete Assembly** will un-register the assembly and its related steps.
 
+## Add an entity image
+
+Entity images are snapshots of entity data before or after the core operation (for example: a create or update). You may (optionally) add entity images on plug-in steps using the **Power Platform Explorer** view. To add an image to a step in the **Power Platform Explorer** view,  expand the **Plug-in Assemblies** node tree to display the target plug-in step, and then right-click on the step to display the context menu from which you can choose **Add Image**.
+
+:::image type="content" source="../media/tools/devtools-add-image.png" alt-text="Add an image to a step.":::
+
+You can also add an image in the **Power Platform Explorer** view under **Event Catalog** on a step of an event plug-in.
+
+:::image type="content" source="../media/tools/devtools-add-image(2).png" alt-text="Add an image to a event step.":::
+
+After you select **Add Image** in the context menu, fill out the form that appears.
+
+:::image type="content" source="../media/tools/devtools-create-image.png" alt-text="Define an entity image.":::
+
+In the form, **Pre Image**/**Post Image** specifies the entity data as it exists before (Pre) or after (Post) the core operation. The **Name** field defines the logical name of the entity that you want data for. **Entity Alias** is the named index that you will use in your code to identify the row in the image table that contains the target entity data. **Parameters** is the list of entity data columns that you want. Specify only the columns that you need since plug-in performance will be reduced the more columns you specify.
+
+More information: [Define entity images](../register-plug-in.md#define-entity-images).
+
 ## Next steps
 
 Learn more about plug-in development
