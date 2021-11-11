@@ -121,6 +121,8 @@
         href: ../user/grid-filters-advanced.md      
     - name: Charts and dashboards
       items:
+      - name: Visualize data in a view with Power BI service (preview)
+        href: ../user/visualize-in-power-bi.md
       - name: Track your progress with dashboards and charts
         href: ../user/track-your-progress-with-dashboard-and-charts.md
       - name: View charts on a page or in a record
