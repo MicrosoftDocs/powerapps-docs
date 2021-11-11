@@ -24,7 +24,7 @@ search.app:
 
 [This topic is pre-release documentation and is subject to change.]
 
-You can create reports in the Power BI service starting with the data that in a view of your model-driven app. Power BI automatically generates the visuals for you, so you can explore the data with just a few clicks.
+Create reports in the Power BI service using the data that in a view of your model-driven app. Power BI automatically generates the visuals for you, so you can explore the data with just a few clicks.
 
 If you're new to Power BI reports and need more information, see [Reports in Power BI](/power-bi/consumer/end-user-reports).
 
