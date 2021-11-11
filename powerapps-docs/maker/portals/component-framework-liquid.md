@@ -5,7 +5,7 @@ author: GitanjaliSingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/9/2021
+ms.date: 11/10/2021
 ms.subservice: portals
 ms.author: gisingh
 ms.reviewer: ndoelman
@@ -17,10 +17,7 @@ contributors:
 
 # Liquid template tag for code components (preview)
 
-> [!important]
-> This is a preview feature.
-Preview features aren’t meant for production use and may have restricted functionality.
-These features are available before an official release so that customers can get early access and provide feedback.
+[This article is pre-release documentation and is subject to change.]
 
 Power Apps component framework empowers professional developers and app makers to create code components for model-driven and canvas apps. These code components can provide an enhanced experience for users working with data on forms, views, and dashboards. More information: [Use code components in portals (Preview)](component-framework.md)
 
@@ -127,4 +124,5 @@ See [Allow Read access to the Web Resource table](component-framework-tutorial.m
 [Codecomponent Template tag](liquid/template-tags.md#codecomponent) <br>
 [Power Apps component framework overview](../../developer/component-framework/overview.md) <br>
 [Create your first component](../../developer/component-framework/implementing-controls-using-typescript.md) <br>
-[Add code components to a field or table in model-driven apps](../../developer/component-framework/add-custom-controls-to-a-field-or-entity.md)
+[Add code components to a field or table in model-driven apps](../../developer/component-framework/add-custom-controls-to-a-field-or-entity.md)<br>
+[Implement a sample portal Web API component](implement-webapi-component.md)
