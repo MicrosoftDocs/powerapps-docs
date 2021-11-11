@@ -32,21 +32,21 @@ If you use Power BI Desktop, you can also [create a report using data from Data
 
 *IMPORTANT: All the capabilities listed below are available on model-driven apps that have the setting **Enable Power BI quick report visualization on a table (Preview)** enabled.*
 
-![Graphical user interface  text  application Description automatically generated](media/image1.png)
+![Graphical user interface  text  application Description automatically generated](media/powerbi-image1.png)
 
 ## Visualize in Power BI
 
 In a model-driven app, on a table's homepage grid, select Visualize this view from the list of commands at the top of the page.
 
-![Graphical user interface  text  application  email Description automatically generated](media/image2.png)
+![Graphical user interface  text  application  email Description automatically generated](media/power-bi-image2.png)
 
 You can see a Power BI-generated visualization of the data in the view, based on the view definition. That is, the filters acting on the view are automatically applied to the Power BI visualization. A subset of columns that are part of the view are used to auto-generate the Power BI visuals
 
-![Graphical user interface  application Description automatically generated](media/image3.png)
+![Graphical user interface  application Description automatically generated](media/powerbi-image3.png)
 
 The full set of view columns are available in the Power BI report to be used to change the data you see in the report.
 
-![Graphical user interface  application  Word Description automatically generated](media/image4.png)
+![Graphical user interface  application  Word Description automatically generated](media/powerbi-image4.png)
 
 For more information on how you can interact with this visualization please see: Visualize your data quickly from Power Apps and Dynamics 365 apps (Preview) *&lt;Link to be provided by Amanda Rivera&gt;*
 
