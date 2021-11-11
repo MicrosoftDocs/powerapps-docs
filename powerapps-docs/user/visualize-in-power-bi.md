@@ -1,8 +1,28 @@
-﻿---
-title: Visualize your data in a view quickly with Power BI service (preview)
+---
+title: "Visualize your data in a view quickly with Power BI servic| MicrosoftDocs"
+description: Visualize your data in a view quickly with Power BI servic.
+author: mduelae
+manager: kvivek
+ms.service: powerapps
+ms.component: pa-user
+ms.topic: conceptual
+ms.date: 11/11/2021
+ms.subservice: end-user
+ms.author: mkaur
+ms.custom: ""
+ms.reviewer: ""
+ms.assetid: 
+search.audienceType: 
+  - enduser
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 
-\[This topic is pre-release documentation and is subject to change.\]
+# Visualize your data in a view quickly with Power BI service (preview)
+
+
+[This topic is pre-release documentation and is subject to change.]
 
 You can create reports quickly in the Power BI service starting with the data in a view in a model-driven app. Power BI automatically generates the visuals for you, so you can explore your data with just a few clicks.
 
@@ -14,7 +34,7 @@ If you use Power BI Desktop, you can also [create a report using data from Data
 
 ![Graphical user interface  text  application Description automatically generated](media/image1.png)
 
-# Visualize in Power BI
+## Visualize in Power BI
 
 In a model-driven app, on a table's homepage grid, select Visualize this view from the list of commands at the top of the page.
 
@@ -30,11 +50,11 @@ The full set of view columns are available in the Power BI report to be used to 
 
 For more information on how you can interact with this visualization please see: Visualize your data quickly from Power Apps and Dynamics 365 apps (Preview) *&lt;Link to be provided by Amanda Rivera&gt;*
 
-# Licensing considerations
+## Licensing considerations
 
 Anyone can use the **Visualize this view** feature to explore the data in a view, but to enter the full edit experience, publish reports, access reports that others have published, or delete reports, you need a Power BI Pro license. If you don't currently have a Pro license, you can [buy a Power BI Pro license or start a free trial](https://docs.microsoft.com/en-us/power-bi/fundamentals/service-self-service-signup-purchase-for-power-bi).
 
-# Known issues and limitations
+## Known issues and limitations
 
 -   The first time you visualize the data in a view, creating the dataset and report can take some time. We're working to improve the end-to-end performance of this experience.
 
