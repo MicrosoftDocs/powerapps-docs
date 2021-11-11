@@ -1869,7 +1869,9 @@
           - name: "Tutorial: Use code components in portals"
             href: ./portals/component-framework-tutorial.md            
           - name: Use code components Liquid template tag
-            href: ./portals/component-framework-liquid.md           
+            href: ./portals/component-framework-liquid.md
+          - name: Implement a sample portal Web API component
+            href: ./portals/implement-webapi-component.md                        
         - name: Use Microsoft Power Platform CLI
           items:
           - name: Overview of portals support for Microsoft Power Platform CLI 
