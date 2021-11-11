@@ -43,7 +43,7 @@ If you're using Power BI Desktop, you can also [create a report using data from
    > [!div class="mx-imgBorder"]
    > ![Graphical user interface  text  application  email Description automatically generated](media/powerbi-image2.png)
 
-2. You can see a Power BI-generated visualization of the data in the view, based on the view definition. That is, the filters acting on the view are automatically applied to the Power BI visualization. A subset of columns that are part of the view are used to auto-generate the Power BI visuals.
+2. Power BI-generates visuals of the data in your view, based on the view definition. That is, the filters acting on the view are automatically applied to the Power BI visualization. A subset of columns that are part of the view are used to auto-generate the Power BI visuals.
 
    > [!div class="mx-imgBorder"]
    > ![Graphical user interface  application Description automatically generated](media/powerbi-image3.png)
