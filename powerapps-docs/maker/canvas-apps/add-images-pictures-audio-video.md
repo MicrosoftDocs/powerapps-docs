@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 11/10/2021
+ms.date: 11/11/2021
 ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
@@ -16,6 +16,7 @@ search.app:
 contributors:
   - tapanm-msft
   - emcoope-msft
+  - TashasEv
 ---
 # Using multimedia files in canvas apps
 
@@ -236,7 +237,7 @@ In this scenario, you learn how to upload pen drawings to your data source, OneD
 
 ## Remove unused media
 
-You can remove all unused media from the app to clean up or reduce the size of the app using **Media** > **Remove unused media**option.
+You can remove all unused media from the app to clean up or reduce the size of the app using **Media** > **Remove unused media** option.
 
 :::image type="content" source="media\add-images-pictures-audio-video\remove-unused-media.png" alt-text="Remove unused media from the app":::
 
