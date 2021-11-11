@@ -30,7 +30,7 @@ Settings are made up of three sub-components: Setting definition, setting enviro
 |:--------------|:-------------------------|
 |**Setting definition** | A setting definition specifies the base properties of a settings like its name, description, data type and default value. |
 |**Setting environment value** | Setting environment value is used to override the setting's default value for all apps in an environment. |
-|**Setting app value** | Setting app value is used to override the setting's default value and any setting environment value for a specific app. |
+|**Setting app value** | Setting app value is used to override the setting's default value and setting environment value (if one exists) for a specific app. |
 
 > [!NOTE]
 > To follow the steps listed below you need to have **Solution preview on**. From the **Solutions** area in Power Apps, on the command bar, ensure you have **Solution preview on**. If **Solution preview off** is displayed, select the option to enable the preview. More information: [Solution view](solutions-area.md)
@@ -55,7 +55,7 @@ A setting definition specifies the base properties of a setting. The full list o
 1. In the navigation pane, select **Solutions**.
 1. From the list of solutions, open the solution you want to add the setting to.
 1. In the command bar, select **New > More > Setting > Setting definition**.
-1. In the **New setting** dialog, provide values for each of the properties based on your requirements. More information: [Setting definition](#setting-definition)
+1. In the **New setting** dialog, provide values for each of the properties based on your requirements. For detailed information on setting definition properties please refer to: [Setting definition](#setting-definition)
 1. When you are done providing values for the properties, select **Save**.
 
 ### Adding an existing setting definition
