@@ -58,13 +58,13 @@ Let's take a look at some code that demonstrate use of the role templates.
 This Web API request returns a System Administrator role using the template. The parameters in <> are left for you to fill in.
 
 ```http
-http://<env-name>.api.<region>.dynamics.com/api/data/v9.1/roles(_roletemplateid_value=627090FF-40A3-4053-8790-584EDC5BE201,_businessunitid_value=<bu-ID>)
+http://<env-name>.api.<region>.dynamics.com/api/data/v9.1/roles(_roletemplateid_value=627090FF-40A3-4053-8790-584EDC5BE201,_businessunitid_value=<bu-ID>,componentstate=0,overwritetime=1900-01-01T00:00:00Z)
 ```
 
-This HTTP request is returning a role using the template based on the parent root role.
+This HTTP request is returning a role for role IDs that are constant like the EnvironmentMaker role. Use this request for roles not having a role template.
   
 ```http
-http://<env-name>.api.<region>.dynamics.com/api/data/v9.1/roles(_parentrootroleid_value=<role-ID>,_businessunitid_value=<bu-ID>)
+http://<env-name>.api.<region>.dynamics.com/api/data/v9.1/roles(_parentrootroleid_value=<role-ID>,_businessunitid_value=<bu-ID>,componentstate=0,overwritetime=1900-01-01T00:00:00Z)
 ```
 
 ### See also
