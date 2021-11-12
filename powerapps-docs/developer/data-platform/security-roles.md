@@ -55,7 +55,7 @@ public const string KnowledgeMgr = "{B4B40B17-CF37-4EA8-B2C5-B580F2F48654}";
 Let's take a look at some code that demonstrate use of the role templates.
 
 <!-- Web API snippet -->
-This Web API request returns a System Administrator role using the template. THe parameters in <> are left for you to fill in.
+This Web API request returns a System Administrator role using the template. The parameters in <> are left for you to fill in.
 
 ```http
 http://<env-name>.api.<region>.dynamics.com/api/data/v9.1/roles(_roletemplateid_value=627090FF-40A3-4053-8790-584EDC5BE201,_businessunitid_value=<bu-ID>)
@@ -69,4 +69,4 @@ http://<env-name>.api.<region>.dynamics.com/api/data/v9.1/roles(_parentrootrolei
 
 ### See also
 
-[Configure user security to resources in an environment](/power-platform/admin/database-security#environments-with-a-dataverse-database)
+[Configure user security to resources in an environment](/power-platform/admin/database-security)
