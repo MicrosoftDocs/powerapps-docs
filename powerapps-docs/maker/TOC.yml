@@ -389,6 +389,8 @@
                 href: ./canvas-apps/mixed-reality-component-measure-distance.md
               - name: Upload photos from mixed reality
                 href: ./canvas-apps/mixed-reality-take-upload-photos.md
+              - name: Load models from CGTrader into mixed reality components (preview)
+                href: ./canvas-apps/mixed-reality-cgtrader.md
           - name: "Add geospatial components"
             items:
             - name: Geospatial components
@@ -2224,7 +2226,13 @@
     - name: Advanced Configuration Settings
       href: ./data-platform/azure-synapse-link-advanced-configuration.md
     - name: Azure Synapse Link FAQ
-      href: ./data-platform/export-data-lake-faq.yml      
+      href: ./data-platform/export-data-lake-faq.yml
+    - name: Application Lifecycle Management
+      items:
+      - name: Transport a configuration across environments
+        href: ./data-platform/azure-synapse-link-solution.md
+      - name: Environment Lifecycle Events
+        href: ./data-platform/azure-synapse-link-olc.md     
     - name: Analyze with Azure Synapse Analytics
       items:
       - name: Query data with serverless SQL pool
