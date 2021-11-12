@@ -389,6 +389,8 @@
                 href: ./canvas-apps/mixed-reality-component-measure-distance.md
               - name: Upload photos from mixed reality
                 href: ./canvas-apps/mixed-reality-take-upload-photos.md
+              - name: Load models from CGTrader into mixed reality components (preview)
+                href: ./canvas-apps/mixed-reality-cgtrader.md
           - name: "Add geospatial components"
             items:
             - name: Geospatial components
