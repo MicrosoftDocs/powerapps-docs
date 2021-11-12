@@ -29,8 +29,8 @@ Settings are made up of three sub-components: Setting definition, setting enviro
 | Sub-component | Description |
 |:--------------|:-------------------------|
 |**Setting definition** | A setting definition specifies the base properties of a settings like its name, description, data type and default value. |
-|**Setting environment value** | Setting environment value is used to override the setting's default value for all apps in an environment. |
-|**Setting app value** | Setting app value is used to override the setting's default value and setting environment value (if one exists) for a specific app. |
+|**Setting environment value** | Setting environment value can be used to override the default value, as specified in the setting definition. A setting environment value applies to all apps in an environment. |
+|**Setting app value** | Setting app value can be used to override the default value, as specified in the setting definition, and also the setting environment value (if one exists). A setting app value applies to one specific app. |
 
 > [!NOTE]
 > To follow the steps listed below you need to have **Solution preview on**. From the **Solutions** area in Power Apps, on the command bar, ensure you have **Solution preview on**. If **Solution preview off** is displayed, select the option to enable the preview. More information: [Solution view](solutions-area.md)
