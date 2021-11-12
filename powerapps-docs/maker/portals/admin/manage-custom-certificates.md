@@ -35,7 +35,7 @@ When extending portals functionality using a client-side API call with [OAuth 2.
      > [!NOTE]
      > The SSL certificate must meet all of the following requirements:
      > - Signed by a trusted certificate authority
-     > - [Exported](/powershell/module/pkiclient/export-pfxcertificate?view=windowsserver2019-ps) as a password-protected PFX file.
+     > - [Exported](/powershell/module/pki/export-pfxcertificate) as a password-protected PFX file.
      > - Contains private key at least 2048 bits long
      > - Contains all intermediate certificates in the certificate chain
      > - Must be SHA2 enabled; SHA1 support is being removed from popular browsers
