@@ -27,7 +27,7 @@ contributors:
 > - This is a preview feature.
 > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
 
-Microsoft Power Platform offers the [CGTrader connector](/connectors/cgtrader/) for connecting with CGTrader, a large source of free and premium (paid) 3D content with thousands of models. Content from CGTrader can be browsed and loaded from inside a canvas app or portal, and then used within the [View in 3D](mixed-reality-component-view-3d.md) and [View in MR](mixed-reality-component-view-mr.md) components.
+Microsoft Power Platform offers the [CGTrader connector](/connectors/cgtrader/) for connecting with CGTrader, a large source of free and premium (paid) 3D content with thousands of models. Content from CGTrader can be browsed and loaded from inside a canvas app, and then used within the [View in 3D](mixed-reality-component-view-3d.md) and [View in MR](mixed-reality-component-view-mr.md) components.
 
 This connector acts as a proxy to the CGTrader APIs. It provides [_actions_](/connectors/connectors#actions) that allow users to make requests to the CGTrader API and retrieve model data. More information: [Connectors overview](/connectors/custom-connectors/use-custom-connector-powerapps)
 
@@ -76,11 +76,11 @@ A new CGTrader connection is now listed on the **Connections** page.
 
 1. Search for and select **CGTrader**.
 
-    :::image type="content" source="media/augmented/mixed-reality-connector-data-source.png" alt-text="Screenshot of the Data Source panel.":::
+    :::image type="content" source="media/augmented/mixed-reality-connector-data-source.png" alt-text="Screenshot of the Data Source panel searching for CGTrader.":::
 
 1. Select the connection that you created earlier.
 
-    :::image type="content" source="media/augmented/mixed-reality-connector-data-source-2.png" alt-text="Screenshot of the Data Source panel.":::
+    :::image type="content" source="media/augmented/mixed-reality-connector-data-source-2.png" alt-text="Screenshot of the Data Source panel when selecting a CGTrader connection instance":::
 
 You can now bind your components to the CGTrader connector actions, and browse and load models from CGTrader inside your app.
 
