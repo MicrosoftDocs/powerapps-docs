@@ -85,7 +85,7 @@ A new CGTrader connection is now listed on the **Connections** page.
 You can now bind your components to the CGTrader connector actions, and browse and load models from CGTrader inside your app.
 
 > [!TIP]
-> A connection is an instance of a connector. You can have multiple connections with different configurations. You can also create new connections from within Power Apps Studio when adding the connector by selecting **+ Add a connection**
+> A connection is an instance of a connector. You can have multiple connections with different configurations. You can also create new connections from within Power Apps Studio when adding the connector by selecting **+ Add a connection**.
 
 ## Load CGTrader models directly into View in 3D or View in MR
 
