@@ -1,6 +1,6 @@
 ---
 title: "Security roles and templates (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Microsoft Dataverse provides security roles that can be assigned to system users allowing or restricting access to table data. In addition, standard templates provide a means to obtain security roles across environments."
+description: "Microsoft Dataverse provides security roles that can be assigned to system users allowing or restricting access to table data. In addition, standard templates provide a means to obtain security roles that are valid across environments."
 ms.custom: intro-internal
 ms.date: 11/11/2021
 ms.reviewer: "pehecke"
@@ -19,16 +19,16 @@ search.app:
 
 # Security roles and templates
 
-You should use <RoleTemplateId> when you try to lookup or process Microsoft Dataverse security roles.  These role template IDs are unique and constant in all environments.  If you try to use role IDs, a failure can occur because the role IDs are not unique for a given security role.
+You should use <!-- Add xref -->`RoleTemplateId` when you try to lookup or process Microsoft Dataverse security roles.  These role template IDs are unique and constant in all environments.  If you try to use role IDs, a failure can occur because the role IDs are not unique for a given security role.
 
 > [!IMPORTANT]
-> A security role can exist in the root business unit (BU) and replicated to different BU's, and therefore the a role ID is not unique across environments.
+> A security role can exist in the root business unit (BU) and replicated to different BU's, and therefore the role ID is not unique across environments.
 
 More information: [Environments with a Dataverse database](/power-platform/admin/database-security#environments-with-a-dataverse-database)
 
 ## Standard role templates
 
-Below is a list of standard role template GUIDs that exist in all environments. 
+Below is a list of standard role template GUIDs that exist in all environments.
 
 ```csharp
 public const string SystemAdmin = "{627090FF-40A3-4053-8790-584EDC5BE201}";
@@ -50,6 +50,23 @@ public const string Scheduler = "{DCD60B89-421C-44ae-BFF0-DD6323DF885C}";
 public const string KnowledgeMgr = "{B4B40B17-CF37-4EA8-B2C5-B580F2F48654}";
 ```
 
+## Using the role templates
+
+Let's take a look at some code that demonstrate use of the role templates.
+
+<!-- Web API snippet -->
+This Web API request returns a System Administrator role using the template. THe parameters in <> are left for you to fill in.
+
+```http
+http://<env-name>.api.<region>.dynamics.com/api/data/v9.1/roles(_roletemplateid_value=627090FF-40A3-4053-8790-584EDC5BE201,_businessunitid_value=<bu-ID>)
+```
+
+This HTTP request is returning a role using the template based on the parent root role.
+  
+```http
+http://<env-name>.api.<region>.dynamics.com/api/data/v9.1/roles(_parentrootroleid_value=<role-ID>,_businessunitid_value=<bu-ID>)
+```
+
 ### See also
 
-[admin topic]()
+[Configure user security to resources in an environment](/power-platform/admin/database-security#environments-with-a-dataverse-database)
