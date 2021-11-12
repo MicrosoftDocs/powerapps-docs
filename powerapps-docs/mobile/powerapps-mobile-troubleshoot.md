@@ -31,7 +31,7 @@ This troubleshooting article helps fix common issues for the [Power Apps mobile 
 
 There was an intermittent issue with Microsoft Authenticator app version **6.2104.2518** and Company Portal version **5.0.5123.0**, which caused sign-in to fail with no error message in the Power Apps mobile.
 
-The issue has been fixed. Make sure that you're using a version on Authenticator or Company Portal that's later than the following version:
+The issue has been fixed. Make sure that you're using a version of Authenticator or Company Portal that's later than the following version:
 
  - Authenticator that's **later** than version **6.2104.2518**
  - Company portal that's **later** than  version **5.0.5123.0**
@@ -41,7 +41,7 @@ The issue has been fixed. Make sure that you're using a version on Authenticator
 
 There was an intermittent issue with Microsoft Authenticator app version **6.2104.2518** and Company Portal version **5.0.5123.0**, which prevents apps opening in the Power Apps mobile app.
 
-The issue has been fixed. Make sure that you're using a version on Authenticator or Company Portal that's later than the following:
+The issue has been fixed. Make sure that you're using a version of Authenticator or Company Portal that's later than the following:
 
  - Authenticator app that's **later** than version **6.2104.2518**
  - Company portal that's **later** than  version **5.0.5123.0**
