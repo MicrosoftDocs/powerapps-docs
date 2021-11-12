@@ -45,7 +45,7 @@ CGTrader connector links to your CGTrader account, allowing you access to 3D mod
 
 Follow these steps to create a new CGTrader connector after you receive your [CGTrader API key](#request-access-from-cgtrader).
 
-1. Sign in to [Power Apps](https://make.powerapps.com/)
+1. Sign in to [Power Apps](https://make.powerapps.com/).
 
 1. Expand the **Dataverse**.
 
