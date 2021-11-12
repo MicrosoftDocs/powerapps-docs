@@ -22,6 +22,8 @@
     href: security-sharing-assigning.md
   - name: Verifying access in code
     href: security-access-coding.md
+  - name: Security roles and templates
+    href: security-roles.md
 - name: Work with data using code
   href: work-with-data.md
   items:
