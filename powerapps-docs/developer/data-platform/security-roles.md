@@ -69,4 +69,5 @@ http://<env-name>.api.<region>.dynamics.com/api/data/v9.1/roles(_parentrootrolei
 
 ### See also
 
-[Configure user security to resources in an environment](/power-platform/admin/database-security)
+[Security Role (Role) table/entity reference](reference/entities/role.md)  
+[Configure user security to resources in an environment](/power-platform/admin/database-security)[]
