@@ -122,3 +122,4 @@ The below table lists the most common actions and examples. For a complete list 
 
 - [View 3D content in canvas apps](mixed-reality-component-view-3d.md) <br>
 - [View 3D content or images in the real word](mixed-reality-component-view-mr.md)
+
