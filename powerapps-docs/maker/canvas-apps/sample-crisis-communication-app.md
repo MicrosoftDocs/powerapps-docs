@@ -2,7 +2,6 @@
 title: Set up and learn about the Crisis Communication sample app in Power Apps
 description: Learn about how to setup, use and work with the Crisis communication sample app in Power Apps.
 author: matthewbolanos
-manager: kvivek
 ms.service: powerapps
 ms.topic: sample
 ms.custom: canvas
