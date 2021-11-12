@@ -86,9 +86,9 @@ You can now bind your components to the CGTrader connector actions, and browse a
 
 After adding CGTrader connection to your app, you can load models directly into your app with the following steps.
 
-1. On the [CGTrader website](https://www.cgtrader.com/), and find the model you want in your app.
+1. Find the model you want in your app from the [CGTrader website](https://www.cgtrader.com/).
 
-1. On the page of your selected the model, note the **Model ID** and the supported file types.
+1. Select the model, and then note the **Model ID** and the supported file types.
 
     :::image type="content" source="./media/augmented/mixed-reality-connector-model-id.png" alt-text="The model ID listed on the CGTrader model page.":::
 
