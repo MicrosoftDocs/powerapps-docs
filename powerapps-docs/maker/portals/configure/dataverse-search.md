@@ -14,101 +14,88 @@ contributors:
     - sandhangitmsft
 ---
 
-# Walk-through: Configuring Dataverse Search (Preview)
+# Walkthrough: Configuring Dataverse Search (Preview)
+
+[This article is pre-release documentation and is subject to change.]
 
 ## Overview
 
-[Dataverse Search](https://docs.microsoft.com/en-us/powerapps/user/relevance-search-benefits) delivers fast and comprehensive search results sorted by relevance. Same Search service used in Modal Driven Apps and other Power Platform services built on Dataverse. Lucene .Net powered Search will co-exist for certain time and eventually Dataverse powered search will replace it. To enable Dataverse search add site setting Search/EnableDataverseSearch and set to true. Either false or without this setting will enable the Lucene .Net
+[Dataverse Search](../../../user/relevance-search-benefits.md) delivers fast and comprehensive search results sorted by relevance. Same Search service used in Modal Driven Apps and other Power Platform services built on Dataverse. Lucene .Net powered Search will co-exist for certain time and eventually Dataverse powered search will replace it. To enable Dataverse search add site setting Search/EnableDataverseSearch and set to true. Either false or without this setting will enable the Lucene .Net
 
-## Steps to configure search for Dataverse powered Search
+> [!IMPORTANT]
+> - This is a preview feature.
+> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
 
-To configure Dataverse search
+This walkthrough explains how to enable search for the **Order Products** table in the sample database **Northwind**, available with Microsoft Dataverse. For more information about sample databases, see [Install Northwind Traders database and apps](../../canvas-apps/northwind-install.md).
 
-1.  [Enable Dataverse](#step-1-enable-dataverse-search) Search for environment in Power Platform Admin Center
-
-2.  Set Portal to use Dataverse Search for first time by [adding site setting](#step-2-add-or-update-search-site-settings) Enable Dataverse Search setting
-
-3.  [Create Portal Search view](#step-3-create-or-verify-the-portal-search-view) for each additional table with the required filters and columns that needs to be searchable.
-
-4.  [Configure table permissions](#step-3-create-table-permissions) for each additional table with a Web Role to have at least read privilege. Skip this step if you already have the read permissions configured for each table.
-
-5.  [Create a record details page](#step-4-add-record-details-webpage) for each table to show the details of the selected record from the search results page. Skip this step if you already have created separate results record details page for each table.
-
-6.  [Create a site marker](#step-5-add-a-site-marker-for-record-details-webpage) named &lt;entitylogicalname&gt;\_SearchResultPage for each table with the associated record details page.
-
-Note:
-
--   This walkthrough explains how to enable search for the **Order Products** table in the sample database **Northwind**, available with Microsoft Dataverse. For more information about sample databases, see [Install Northwind Traders database and apps](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/northwind-install).
-
--   You can follow the walkthrough with a table of your choice by replacing the *nwind\_products* table name with your table's logical name.
+You can follow the walkthrough with a table of your choice by replacing the *nwind\_products* table name with your table's logical name.
 
 ## Step 1: Enable Dataverse Search
 
-1.  In the [Power Platform admin center](https://admin.powerplatform.microsoft.com/), select an environment.
+1. In the [Power Platform admin center](https://admin.powerplatform.microsoft.com/), select an environment.
 
-2.  Select **Settings** &gt; **Product** &gt; **Features**.
+1. Select **Settings** &gt; **Product** &gt; **Features**.
 
-3.  Under **Search**, set **Dataverse search** to **On**.
+1. Under **Search**, set **Dataverse search** to **On**.
 
-4.  Select **Save**.
+1. Select **Save**.
 
-![Graphical user interface  text  application  Teams Description automatically generated](media/image1.png)
+    :::image type="content" source="media/dataverse-search/enable-dataverse-search.png" alt-text="Power Platform admin center enabling Dataverse search":::
 
 ## Step 2: Add or update search site settings
 
-1.  Sign in to [Power Apps](https://make.powerapps.com).
+1. Sign in to [Power Apps](https://make.powerapps.com).
 
-2.  Ensure that you're in the appropriate environment where your portal exists.
+1. Ensure that you're in the appropriate environment where your portal exists.
 
-3.  Select **Apps** in the left navigation pane, and locate the **Portal Management** model-driven app.  
+1. Select **Apps** in the left navigation pane, and locate the **Portal Management** model-driven app.  
 
-4.  Select to open the **Portal Management** app, and then go to **Site Settings** in the left navigation pane.
+1. Select to open the **Portal Management** app, and then go to **Site Settings** in the left navigation pane.
 
-![Portal Management ](media/image2.png)
+    :::image type="content" source="media/dataverse-search/portal-management-app.png" alt-text="Launching Portal Management app.":::
 
-5.  Create or Update setting, **Search/EnableDataverseSearch**, and set its value to **true**.
+1. Create or Update setting, **Search/EnableDataverseSearch**, and set its value to **true**.
 
-6.  Create or update the **Search/EnableAdditionalEntities** setting, and set its value to **true**..
+1. Create or update the **Search/EnableAdditionalEntities** setting, and set its value to **true**..
 
-7.  Create or update the **search/filters** setting, and add the value **Products:nwind\_products**.
+1. Create or update the **search/filters** setting, and add the value **Products:nwind\_products**.
 
 ## Step 3: Create or verify the Portal Search view
 
-Note
+> [!Note]
+> The following steps require the [Northwind Traders solution](../../../canvas-apps/northwind-install) to be installed. If you want to use another table, use the appropriate solution or use the Default solution.
 
-The following steps require the [Northwind Traders solution](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/northwind-install) to be installed. If you want to use another table, use the appropriate solution or use the Default solution.
+1. Go to [Power Apps](https://make.powerapps.com), and select **Solutions** from the left navigation pane.
 
-1.  Go to [Power Apps](https://make.powerapps.com), and select **Solutions** from the left navigation pane.
+1. Select **Northwind Traders**.
 
-2.  Select **Northwind Traders**.
+    :::image type="content" source="media/dataverse-search/select-solution.png" alt-text="Selecting the Northwind Traders solution.":::
 
-![Select solution ](media/image3.png)
+1. Search for the **Order Product** table.
 
-3.  Search for the **Order Product** table.
+    :::image type="content" source="media/dataverse-search/select-table.png" alt-text="Select order product table.":::
 
-![Order Product table ](media/image4.png)
+1. Select the **Order Product** table, and then select **Views**.
 
-4.  Select the **Order Product** table, and then select **Views**.
+    :::image type="content" source="media/dataverse-search/table-view.png" alt-text="Selecting table views.":::
 
-![Order Product   Views ](media/image5.png)
+1. Ensure that you see **Portal Search** in the views list.
 
-5.  Ensure that you see **Portal Search** in the views list.
+    :::image type="content" source="media/dataverse-search/portal-search-view.png" alt-text="Portal search view in list of views.":::
 
-![Portal Search view ](media/image6.png)
+1. If the Portal Search view doesn't already exist, select **Add view**, enter the name as **Portal Search**, and then select **Create**.
 
-If the Portal Search view doesn't already exist, select **Add view**, enter the name as **Portal Search**, and then select **Create**.
+    :::image type="content" source="media/dataverse-search/add-search-view.png" alt-text="Adding a new portal search view.":::
 
-![Add a view ](media/image7.png)
+    :::image type="content" source="media/dataverse-search/create-portal-search.png" alt-text="Creating portal search view.":::
 
-![Add the Portal Search view ](media/image8.png)
+1. Ensure appropriate columns are added to the view for search.
 
-6.  Ensure appropriate columns are added to the view for search.
+    :::image type="content" source="media/dataverse-search/add-columns.png" alt-text="Add columns to portal search view.":::
 
-![Add columns ](media/image9.png)
+1. If you edited the view, be sure to select **Save**, and then **Publish** before you continue.
 
-7.  If you edited the view, be sure to select **Save**, and then **Publish** before you continue.
-
-![Save and publish ](media/image10.png)
+    :::image type="content" source="media/dataverse-search/publish-view.png" alt-text="Save and publish view.":::
 
 ## Step 3: Create table permissions
 
@@ -120,13 +107,13 @@ If the Portal Search view doesn't already exist, select **Add view**, enter the 
 
 4.  Select **New**.
 
-![New Table Permission record ](media/image11.png)
+![New Table Permission record ](media/dataverse-search/image11.png)
 
 5.  Enter the name as **Northwind Products Read All**, and then select the appropriate **Access Type** and the **Read** privilege.
 
 For this example, the **Global** access type is provided to the **nwind\_products** table.
 
-![Access Type and Read permissions ](media/image12.png)
+![Access Type and Read permissions ](media/dataverse-search/image12.png)
 
 6.  Select **Save & Close**.
 
@@ -134,11 +121,11 @@ For this example, the **Global** access type is provided to the **nwind\_product
 
 8.  Scroll down to the **Web Roles** section, and then select **Add Existing Web Role**.
 
-![Add an existing web role ](media/image13.png)
+![Add an existing web role ](media/dataverse-search/image13.png)
 
 9.  Search for **Authenticated Users**, and then select **Add**:
 
-![Add authenticated users ](media/image14.png)
+![Add authenticated users ](media/dataverse-search/image14.png)
 
 ## Step 4: Add record details webpage
 
@@ -148,13 +135,13 @@ For this example, the **Global** access type is provided to the **nwind\_product
 
 3.  Select **New Page** from the menu in the upper-left corner, and then select the **Blank** layout for the page.
 
-![Graphical user interface  application Description automatically generated](media/image15.png)
+![Graphical user interface  application Description automatically generated](media/dataverse-search/image15.png)
 
 4.  Enter the webpage name as **Order Products**.
 
 5.  Select **Components** in the left navigation pane, and then add a **Form** component to this webpage.
 
-![Graphical user interface  application  Word Description automatically generated](media/image16.png)
+![Graphical user interface  application  Word Description automatically generated](media/dataverse-search/image16.png)
 
 6.  Select the **Use existing** or **Create New** option on the right side of your workspace, choose the **View Products** form for the **nwind\_products** table, and then set **Mode** to **ReadOnly**.
 
@@ -172,7 +159,7 @@ For this example, the **Global** access type is provided to the **nwind\_product
 
     - **Page:** **Order Products**
 
-![New site marker ](media/image17.png)
+![New site marker ](media/dataverse-search/image17.png)
 
 ## Step 7: Verify global search functionality
 
@@ -182,7 +169,7 @@ For this example, the **Global** access type is provided to the **nwind\_product
 
 For example, use the search keyword **Northwind Clam Chowder** to get the results associated with the **nwind\_products** table.
 
-![Search results ](media/image18.png)
+![Search results ](media/dataverse-search/image18.png)
 
 ## 
 
