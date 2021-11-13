@@ -1,5 +1,5 @@
 ---
-title: Tutorial on how to use the portal Web API
+title: Tutorial: How to use the portal Web API
 description: This page walks you through example steps for performing read, write, update, and delete portal Web API requests.
 author: neerajnandwana-msft
 ms.service: powerapps
@@ -17,12 +17,12 @@ contributors:
 
 # Tutorial: Use portal Web API
 
-In this tutorial, you will setup a web page and custom web template that will use the Web API to read, write, update and delete records from the contact table.
+In this tutorial, you'll set up a webpage and custom web template that will use the Web API to read, write, update, and delete records from the contact table.
 
 > [!Note]
 > You can change the column names, or use a different table, while following the steps in this example.
 
-## Step 1 - Create site settings
+## Step 1. Create site settings
 
 Before you can use the portals Web API, you have to enable the required site settings with the Portal Management app. The site settings depend on the table that you want to use when interacting with the Web API.
 
@@ -34,7 +34,7 @@ Before you can use the portals Web API, you have to enable the required site set
 
     :::image type="content" source="media/read-operations/portal-management-app.png" alt-text="Launch Portal Management app." border="false":::
 
-1. In the **Portal Management** app on the left pane, select **Site Settings**.
+1. On the left pane of the **Portal Management** app, select **Site Settings**.
 
     :::image type="content" source="media/read-operations/site-settings.png" alt-text="Open site settings in Portal Management app." border="false":::
 
@@ -87,23 +87,23 @@ Before you can use the portals Web API, you have to enable the required site set
 
 1. Verify the site settings for **Web API**.
 
-## Step 2 - Configure permissions
+## Step 2. Configure permissions
 
-You'll have to configure permissions so that users are able to use the Web API feature. In this example, you'll enable the Contact table for table permissions, create a web role for using the Web API, add the table permissions for the Contact table to this web role, and then add the web role to users to allow them to use the Web API.
+You'll have to configure permissions so that users are able to use the Web API feature. In this example, you'll enable the **Contact** table for table permissions, create a web role using the Web API, add the table permissions for the **Contact** table to this web role, and then add the web role to users in order to allow them to use the Web API.
 
-1. In the **Portal Management** app on the left pane, select **Table Permissions**.
+1. On the left pane of the **Portal Management** app, select **Table Permissions**.
 
 1. Select **New**.
 
 1. In the **Name** box, enter **Contact Table Permission**.
 
-1. In the **Table Name** list, select **Contact (contact)**.
+1. In the **Table Name** list, select **Contact**.
 
 1. In the **Website** list, select your website record.
 
 1. In the **Access Type** list, select **Global**.
 
-1. Select **Read**, **Write**, **Create**, and **Delete** privileges.
+1. Set **Read**, **Write**, **Create**, and **Delete** privileges to **Yes**.
 
 1. Select **Save & Close**.
 
@@ -160,11 +160,11 @@ You'll have to configure permissions so that users are able to use the Web API f
 
 1. Select **Save & Close**.
 
-## Step 3 - Create a webpage
+## Step 3. Create a webpage
 
 Now that you've enabled the Web API and configured user permissions, create a webpage with sample code to view, edit, create, and delete records.
 
-1. In the **Portal Management** app on the left pane, select **Web Pages**.
+1. On the left pane of the **Portal Management** app, select **Web Pages**.
 
 1. Select **New**.
 
@@ -492,7 +492,7 @@ Now that you've enabled the Web API and configured user permissions, create a we
 
 1. Select **Save & Close**.
 
-## Step 4 - Clear the portals cache
+## Step 4. Clear the portals cache
 
 You've created a **webapi** sample page to test the Web API functionality. Before you get started, ensure that the Power Apps portals cache has been cleared so that the changes from the Portal Management app are reflected on your portal.
 
@@ -512,9 +512,9 @@ You've created a **webapi** sample page to test the Web API functionality. Bef
 
 More information: [Clear the server-side cache for a portal](admin/clear-server-side-cache.md)
 
-## Step 5 - Use the Web API to read, view, edit, create, and delete
+## Step 5. Use the Web API to read, view, edit, create, and delete
 
-The sample webpage with the URL **webapi** created earlier in this example is now ready for testing.
+The sample webpage with the URL **webapi** created earlier is now ready for testing.
 
 To test the Web API functionality:
 
@@ -532,7 +532,7 @@ To test the Web API functionality:
 
 1. Select :::image type="content" source="media/web-api/delete.png" alt-text="Delete button" border="false"::: to delete a record.
 
-Now that you've created a webpage with a sample in this example to read, edit, create and delete records, you can customize the forms and layout.
+Now that you've created a webpage with a sample to read, edit, create, and delete records, you can customize the forms and layout.
 
 ## Next step
 
@@ -540,7 +540,7 @@ Now that you've created a webpage with a sample in this example to read, edit, c
 
 ### See also
 
-[Web API overview](web-api-overview.md)</br>
+[Portals Web API overview](web-api-overview.md)</br>
 [Portals write, update and delete operations using the Web API](write-update-delete-operations.md)</br>
 [Portals read operations using the Web API](read-operations.md)
 
