@@ -2,7 +2,6 @@
 title: Microsoft Stream video control in Power Apps
 description: Learn about the details, properties and examples of the Microsoft Stream video control in Power Apps.
 author: fikaradz
-manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
