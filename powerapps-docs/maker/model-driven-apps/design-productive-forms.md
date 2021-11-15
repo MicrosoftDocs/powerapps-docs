@@ -229,6 +229,7 @@ In many scenarios, a form might exist with a tab and a single control, and you w
 
 :::image type="content" source="media/tab-using-entire-space.png" alt-text="Form with full tab layout.":::
 
-### See also
+### Next steps
 
+[Design forms for performance](design-performant-forms.md)<br/>
 [Optimize model-driven app form performance](optimize-form-performance.md)
