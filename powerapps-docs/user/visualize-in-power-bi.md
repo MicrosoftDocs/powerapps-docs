@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 11/11/2021
+ms.date: 11/15/2021
 ms.subservice: end-user
 ms.author: mkaur
 ms.custom: ""
@@ -53,7 +53,7 @@ If you're using Power BI Desktop, you can also [create a report using data from
    > [!div class="mx-imgBorder"]
    > ![Graphical user interface  application  Word Description automatically generated](media/powerbi-image4.png)
 
-For more information on how you can interact with this visualization, see [Visualize your data quickly from Power Apps and Dynamics 365 apps (Preview)](LINK TBD).
+For more information on how you can interact with this visualization, see [Visualize your data quickly from Power Apps and Dynamics 365 apps (preview)](/power-bi/create-reports/dynamics-quick-create-report).
 
 ## Licensing considerations
 
