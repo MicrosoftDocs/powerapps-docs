@@ -121,6 +121,8 @@
         href: ../user/grid-filters-advanced.md      
     - name: Charts and dashboards
       items:
+      - name: Visualize data in a view with Power BI service (preview)
+        href: ../user/visualize-in-power-bi.md
       - name: Track your progress with dashboards and charts
         href: ../user/track-your-progress-with-dashboard-and-charts.md
       - name: View charts on a page or in a record
@@ -389,6 +391,8 @@
                 href: ./canvas-apps/mixed-reality-component-measure-distance.md
               - name: Upload photos from mixed reality
                 href: ./canvas-apps/mixed-reality-take-upload-photos.md
+              - name: Load models from CGTrader into mixed reality components (preview)
+                href: ./canvas-apps/mixed-reality-cgtrader.md
           - name: "Add geospatial components"
             items:
             - name: Geospatial components
@@ -1871,7 +1875,9 @@
           - name: "Tutorial: Use code components in portals"
             href: ./portals/component-framework-tutorial.md            
           - name: Use code components Liquid template tag
-            href: ./portals/component-framework-liquid.md           
+            href: ./portals/component-framework-liquid.md
+          - name: Implement a sample portal Web API component
+            href: ./portals/implement-webapi-component.md                        
         - name: Use Microsoft Power Platform CLI
           items:
           - name: Overview of portals support for Microsoft Power Platform CLI 
@@ -2224,7 +2230,13 @@
     - name: Advanced Configuration Settings
       href: ./data-platform/azure-synapse-link-advanced-configuration.md
     - name: Azure Synapse Link FAQ
-      href: ./data-platform/export-data-lake-faq.yml      
+      href: ./data-platform/export-data-lake-faq.yml
+    - name: Application Lifecycle Management
+      items:
+      - name: Transport a configuration across environments
+        href: ./data-platform/azure-synapse-link-solution.md
+      - name: Environment Lifecycle Events
+        href: ./data-platform/azure-synapse-link-olc.md     
     - name: Analyze with Azure Synapse Analytics
       items:
       - name: Query data with serverless SQL pool

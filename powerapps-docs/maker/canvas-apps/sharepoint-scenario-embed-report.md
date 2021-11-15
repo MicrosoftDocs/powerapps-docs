@@ -2,7 +2,6 @@
 title: Embed the Power BI project report in SharePoint Online
 description: Learn about how to embed Power BI report in SharePoint Online site.
 author: NickWaggoner
-manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
