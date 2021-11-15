@@ -1,5 +1,5 @@
 ---
-title: Tutorial: How to use the portal Web API
+title: "Tutorial: How to use the portal Web API"
 description: This page walks you through example steps for performing read, write, update, and delete portal Web API requests.
 author: neerajnandwana-msft
 ms.service: powerapps
@@ -97,13 +97,13 @@ You'll have to configure permissions so that users are able to use the Web API f
 
 1. In the **Name** box, enter **Contact Table Permission**.
 
-1. In the **Table Name** list, select **Contact**.
+1. In the **Table Name** list, select **Contact (contact)**.
 
 1. In the **Website** list, select your website record.
 
 1. In the **Access Type** list, select **Global**.
 
-1. Set **Read**, **Write**, **Create**, and **Delete** privileges to **Yes**.
+1. Select **Read**, **Write**, **Create**, and **Delete** privileges.
 
 1. Select **Save & Close**.
 
