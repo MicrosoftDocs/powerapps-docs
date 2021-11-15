@@ -1,16 +1,16 @@
 ---
 title: Frequently Asked Questions (FAQs) and answers when using sample apps from Teams store | Microsoft Docs
 description: Learn about the Frequently Asked Questions (FAQs) and answers when using sample apps from Teams store
-author: navjotm
+author: josephshum
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 10/05/2020
 ms.subservice: teams
-ms.author: namarwah
+ms.author: jshum
 ms.reviewer: tapanm
 contributors:
-  - navjotm
+  - josephshum
   - tapanm-msft
 ---
 
@@ -61,14 +61,14 @@ If your inspection forms are loading slowly, reduce the size of images used in t
 ### See also
 
 - [Customize sample apps](customize-sample-apps.md)
-- [Boards (Preview) sample app](boards.md)
+- [Boards (preview) sample app](boards.md)
 - [Bulletins sample app](bulletins.md)
 - [Employee ideas sample app](employee-ideas.md)  
 - [Inspection sample apps](inspection.md)  
 - [Issue reporting sample apps](issue-reporting.md)
 - [Milestones sample app](milestones.md)
-- [Perspectives (Preview) sample app](perspectives.md)
-- [Profile+ (Preview) sample app](profile-app.md)
+- [Perspectives (preview) sample app](perspectives.md)
+- [Profile+ (preview) sample app](profile-app.md)
 - [Use sample apps from the Microsoft Teams store](use-sample-apps-from-teams-store.md)
 
 

@@ -6,11 +6,11 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 08/19/2021
-ms.author: namarwah
+ms.author: jshum
 ms.reviewer: tapanm-msft
 contributors:
   - tapanm-msft
-  - navjotm
+  - josephshum
   - joel-lindstrom
 ---
 
@@ -28,6 +28,9 @@ For example, if there's a table that the users should only be able to modify for
 
 > [!NOTE]
 > Only team owners have the ability to edit table permissions currently.
+
+Watch this video to learn how to configure table permissions:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWKV6P]
 
 ## Understanding team roles
 
@@ -158,15 +161,15 @@ For more details about the recommended table permissions for the sample apps for
 
 ### See also
 
-- [Boards (Preview) sample app](boards.md)
+- [Boards (preview) sample app](boards.md)
 - [Bulletins sample app](bulletins.md)
 - [Employee ideas sample app](employee-ideas.md)
 - [Get connected sample app](get-connected.md)  
 - [Inspection sample apps](inspection.md)  
 - [Issue reporting sample apps](issue-reporting.md)
 - [Milestones sample app](milestones.md)
-- [Perspectives (Preview) sample app](perspectives.md)
-- [Profile+ (Preview) sample app](profile-app.md)
+- [Perspectives (preview) sample app](perspectives.md)
+- [Profile+ (preview) sample app](profile-app.md)
 - [Customize sample apps](customize-sample-apps.md)
 - [Sample apps FAQs](sample-apps-faqs.md)
 

@@ -7,15 +7,15 @@ ms.topic: conceptual
 ms.custom: 
 ms.date: 06/29/2021
 ms.subservice: teams
-ms.author: namarwah
+ms.author: jshum
 ms.reviewer: tapanm
 contributors:
-    - navjotm
+    - josephshum
     - tapanm-msft
     - joel-lindstrom
 ---
 
-# Understand How to app sample app architecture (Preview)
+# Understand How to app sample app architecture (preview)
 
 [This article is pre-release documentation and is subject to change.]
 
@@ -30,10 +30,6 @@ To understand and use information in this article, you'll need to know about dif
 - [Understand canvas-app variables in Power Apps](../maker/canvas-apps/working-with-variables.md)
 - [Add and configure a canvas-app control in Power Apps](../maker/canvas-apps/add-configure-controls.md)
 - [Add a screen to a canvas app and navigate between screens](../maker/canvas-apps/add-screen-context-variables.md)
-
-> [!IMPORTANT]
-> - This is a preview feature.
-> - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 
 ## Data model
 The following diagram shows the tables, columns, and relationships in the How to app solution:
@@ -241,7 +237,7 @@ The following variables are used on the My checkout screen:
 
 ### See also
 
-- [Use How to sample app (Preview)](how-to.md)
+- [Use How to sample app (preview)](how-to.md)
 - [Customize sample apps](customize-sample-apps.md)
 - [Sample apps FAQs](sample-apps-faqs.md)
 - [Use sample apps from the Microsoft Teams store](use-sample-apps-from-teams-store.md)

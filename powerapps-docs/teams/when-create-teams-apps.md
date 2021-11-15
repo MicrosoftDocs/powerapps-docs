@@ -6,10 +6,10 @@ ms.topic: conceptual
 ms.custom: 
 ms.date: 08/05/2021
 author: joel-lindstrom
-ms.author: namarwah
+ms.author: jshum
 ms.reviewer: tapanm
 contributors:
-  - navjotm
+  - josephshum
   - joel-lindstrom
   - tapanm-msft
 ---
@@ -21,6 +21,9 @@ Microsoft Teams is built with the purpose of enabling collaboration. With millio
 Stand-alone apps are great for individual productivity, but if work and communication between people needs to happen in the same place, Teams is a great place for collaborative apps.
 
 The [sample apps for Microsoft Teams](use-sample-apps-from-teams-store.md) are great examples of these types of collaborative apps:
+
+Watch this video to learn when to build canvas apps in Teams:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWKV6X]
 
 ## Apps for collaboration and centralized workload
 
@@ -46,14 +49,14 @@ So if your app relates to how users interact, work, communicate, and collaborate
 
 ### See also
 
-- [Boards (Preview) sample app](boards.md)
+- [Boards (preview) sample app](boards.md)
 - [Bulletins sample app](bulletins.md)
 - [Employee ideas sample app](employee-ideas.md)  
 - [Inspection sample apps](inspection.md)  
 - [Issue reporting sample apps](issue-reporting.md)
 - [Milestones sample app](milestones.md)
-- [Perspectives (Preview) sample app](perspectives.md)
-- [Profile+ (Preview) sample app](profile-app.md)
+- [Perspectives (preview) sample app](perspectives.md)
+- [Profile+ (preview) sample app](profile-app.md)
 - [Customize sample apps](customize-sample-apps.md)
 - [Sample apps FAQs](sample-apps-faqs.md)
 

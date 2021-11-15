@@ -7,11 +7,11 @@ ms.topic: conceptual
 ms.custom: 
 ms.date: 07/09/2021
 ms.subservice: teams
-ms.author: namarwah
+ms.author: jshum
 ms.reviewer: tapanm
 contributors:
   - joel-lindstrom
-  - navjotm
+  - josephshum
   - tapanm-msft
   - sbahl10
 ---
@@ -19,6 +19,9 @@ contributors:
 # Add "Notify me" settings to category
 
 The Bulletins Power App Template for Teams provides a central location for all company communication such as broadcasts, memos, announcements, and company news. The app allows you to create, categorize, bookmark, search, and read bulletin posts.
+
+Watch this video to add "Notify me" settings to category:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLxVs]
 
 The Bulletins app solution consists of two apps:
 

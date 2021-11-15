@@ -7,11 +7,11 @@ ms.topic: conceptual
 ms.custom: 
 ms.subservice: teams
 ms.date: 07/13/2021
-ms.author: namarwah
+ms.author: jshum
 ms.reviewer: tapanm
 contributors:
   - joel-lindstrom
-  - navjotm
+  - josephshum
   - tapanm-msft
   - sbahl10
 ---
@@ -23,6 +23,9 @@ The Bulletins sample app for Microsoft Teams is designed to be a complete app ex
 Before you can customize the app, you must install it from the Teams store. You can get the app at <https://aka.ms/TeamsBulletins>.
 
 Once the app is installed, you can then customize the app using the following steps:
+
+Watch this video to learn how to customize Bulletins app:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLkvS]
 
 ## Open Power Apps app in Teams
 

@@ -1,5 +1,5 @@
-|Error values|Error name and message|
-|---|---|
+| Error values | Error name and message |
+| --- | --- |
 |0x80072559<br />-2147015335|Name: **AADError**<br />Message: Error from AAD|
 |0x80048350<br />-2147187888|Name: **AadGroupTeamsCanOnlyAssignInheritableRoles**<br />Message: Cannot assign security role with "Team Privileges only" Inheritance to AAD Group or Office Group teams. (TeamId = {0})|
 |0x80048405<br />-2147187707|Name: **AccessDenied**<br />Message: Access is denied.|
@@ -518,7 +518,7 @@
 |0x8004F851<br />-2147157935|Name: **CannotEditActiveRule**<br />Message: You can not edit an active routing rule. Deactivate the rule to delete it.|
 |0x8004F860<br />-2147157920|Name: **CannotEditActiveSla**<br />Message: You can't delete active SLA .Please deactivate the SLA to delete or Contact your system administrator.|
 |0x80048421<br />-2147187679|Name: **CannotEnableDuplicateDetection**<br />Message: Duplicate detection cannot be enabled because one or more rules are being published.|
-|0x80060302<br />-2147089662|Name: **CannotEnableEntityForRelevanceSearch**<br />Message: Entity {0} can’t be enabled for relevance search because of the configuration of its managed properties.|
+|0x80060302<br />-2147089662|Name: **CannotEnableEntityForRelevanceSearch**<br />Message: Entity {0} can’t be enabled for Dataverse search because of the configuration of its managed properties.|
 |0x8004027c<br />-2147220868|Name: **CannotExceedFilterLimit**<br />Message: Cannot exceed synchronization filter limit.|
 |0x8004852C<br />-2147187412|Name: **CannotExecuteRequestBecauseHttpsIsRequired**<br />Message: HTTPS protocol is required for this type of request, please enable HTTPS protocol and try again.|
 |0x8004F847<br />-2147157945|Name: **CannotExportRuleOnAnyEntityRoutingRuleFCBOff**<br />Message: Unable to export routing rule set record for entities (except case entity) as the feature control bit for entity records routing is disabled.|
@@ -1311,7 +1311,7 @@
 |0x800608C1<br />-2147088191|Name: **ExportToXlsxFeatureNotEnabled**<br />Message: Export to excel file feature is not enabled.|
 |0x80060004<br />-2147090428|Name: **ExpressionNotSupportedForEditor**<br />Message: Rule contain an expression that is not supported by the editor.|
 |0x80046F8F<br />-2147192945|Name: **ExternalNameExists**<br />Message: An entity with the specified name already exists for data source - {0}. Please specify a new external name.|
-|0x80060300<br />-2147089664|Name: **ExternalSearchAttributeLimitExceeded**<br />Message: The maximum number of indexed fields has been reached. Update the Relevance Search configuration to reduce the total number of indexed fields {1} below {0}.|
+|0x80060300<br />-2147089664|Name: **ExternalSearchAttributeLimitExceeded**<br />Message: The maximum number of indexed fields has been reached. Update the Dataverse search configuration to reduce the total number of indexed fields {1} below {0}.|
 |0x80040316<br />-2147220714|Name: **ExtraPartyInformation**<br />Message: Extra party information should not be provided for this operation.|
 |0x80055007<br />-2147135481|Name: **FailedToAddSLADependency**<br />Message: Failed to add SLA dependency on ApplicableFrom attribute because attribute is not found in applicable entity metadata. Please contact your system administrator.|
 |0x80048411<br />-2147187695|Name: **FailedToAquireLock**<br />Message: PluginSqlLockManager failed to acquire lock|

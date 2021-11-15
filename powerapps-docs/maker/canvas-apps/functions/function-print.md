@@ -2,11 +2,10 @@
 title: Print function in Power Apps
 description: Reference information including syntax and examples for the Print function in Power Apps.
 author: gregli-msft
-manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: nabuthuk
+ms.reviewer: tapanm
 ms.date: 03/29/2021
 ms.subservice: canvas-maker
 ms.author: gregli
@@ -87,6 +86,7 @@ To build out a print for a specific size, you can build a [responsive app](../bu
 ## Known limitations
 
 - The **Print** function currently doesn't work on mobile devices and on SharePoint custom forms.  
+- The **Print** function currently doesn't work on custom pages or embedded scenarios. 
 - In Internet Explorer and classic Edge browsers, there may be undesirable behavior with how the screen scales.  
 - The default browser printers are the ones that will be available to print to.  
 - In some browser print dialogs, a setting called **Background graphics** should be enabled to see all the images and colors in the print.  

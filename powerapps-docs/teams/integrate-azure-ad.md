@@ -6,11 +6,11 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 08/24/2021
-ms.author: namarwah
+ms.author: jshum
 ms.reviewer: tapanm
 contributors:
   - joel-lindstrom
-  - navjotm
+  - josephshum
   - tapanm-msft
 ---
 
@@ -23,6 +23,9 @@ Integration with Azure AD enables many deep capabilities within your organizatio
 This integration can also be used to grant access to app functionality based on their role or group membership, and therefore, be used to control security to sensitive data or functionality.
 
 In this article, we'll create a Power Apps app with a button with administrative access on it. The visibility of the button will depend on whether the user is a member of the admin group or not.
+
+Watch this video to learn how to integrate Power Apps app with Azure Active Directory:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWL0DW]
 
 ## Prerequisites
 
@@ -170,15 +173,15 @@ You can see an example of Azure AD integration in the **Profile+** sample app fo
 
 ### See also
 
-- [Boards (Preview) sample app](boards.md)
+- [Boards (preview) sample app](boards.md)
 - [Bulletins sample app](bulletins.md)
 - [Employee ideas sample app](employee-ideas.md)
-- [Get connected (Preview)](get-connected.md)  
+- [Get connected (preview)](get-connected.md)  
 - [Inspection sample apps](inspection.md)  
 - [Issue reporting sample apps](issue-reporting.md)
 - [Milestones sample app](milestones.md)
-- [Perspectives (Preview) sample app](perspectives.md)
-- [Profile+ (Preview) sample app](profile-app.md)
+- [Perspectives (preview) sample app](perspectives.md)
+- [Profile+ (preview) sample app](profile-app.md)
 - [Customize sample apps](customize-sample-apps.md)
 - [Sample apps FAQs](sample-apps-faqs.md)
 

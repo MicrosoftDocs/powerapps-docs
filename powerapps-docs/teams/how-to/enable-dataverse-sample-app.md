@@ -11,7 +11,7 @@ ms.author: nhelgren
 ms.reviewer: tapanm
 contributors:
   - joel-lindstrom
-  - navjotm
+  - josephshum
   - tapanm-msft
 ---
 
@@ -20,6 +20,9 @@ contributors:
 **Microsoft Dataverse for Teams** is a built-in, low-code data platform for Microsoft Teams that empowers users to build custom apps, bots, and flows in Teams by using Power Apps, Power Virtual Agents, and Power Automate. Dataverse for Teams&mdash;built on Microsoft Dataverse&mdash;provides relational data storage, rich data types, enterprise-grade governance, and one-select solution deployment to the Teams app store. More information: [Dataverse for Teams overview](../overview-data-platform.md).
 
 In this article, we'll cover how to provision Dataverse for Teams and Power Apps in your Teams team.
+
+Watch this video to learn how to enable Power Apps and Dataverse for Teams:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWL2Ur]
 
 ## Provisioning Dataverse for Teams
 

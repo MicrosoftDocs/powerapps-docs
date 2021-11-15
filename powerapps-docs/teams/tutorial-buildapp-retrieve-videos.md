@@ -522,7 +522,7 @@ Select the header of the action to show the title of **Evaluate links to determi
 
 1. Select **Add action** after *Create new record*.
 
-1. Enter **Teams** in the search box, and then select the **Post a message (V3) (Preview)** action.
+1. Enter **Teams** in the search box, and then select the **Post a message (V3) (preview)** action.
 
 1. In the drop-down for the **Team** property, select the team to send the message.
 

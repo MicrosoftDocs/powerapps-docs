@@ -7,11 +7,11 @@ ms.topic: conceptual
 ms.custom: 
 ms.date: 07/12/2021
 ms.subservice: teams
-ms.author: namarwah
+ms.author: jshum
 ms.reviewer: tapanm
 contributors:
   - joel-lindstrom
-  - navjotm
+  - josephshum
   - tapanm-msft
   - sbahl10
 ---
@@ -21,6 +21,9 @@ contributors:
 The Inspections sample app allows users to create and perform inspections in the app. There are three apps, one per persona to perform, manage, and review Inspections. The three apps are&mdash;Inspections, Manage Inspections and Review Inspections.
 
 In this article, we'll learn how to customize inspection steps in the user app. For example, removing the ability to add pictures to checklist steps. This customization is important because just deleting the particular control can cause issues with responsiveness, and the look and feel of the app can get affected.
+
+Watch this video to learn how to customize inspection steps:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLiBT]
 
 ## Prerequisites
 
