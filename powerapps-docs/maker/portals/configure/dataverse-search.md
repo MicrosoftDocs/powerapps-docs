@@ -1,11 +1,11 @@
 ﻿---
 title: Dataverse Search in portals
-description: "Learn how global search works in a portal."
+description: "Learn how Dataverse search works in a portal."
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: intro-internal
-ms.date: 11/11/2021
+ms.date: 11/15/2021
 ms.subservice: portals
 ms.author: nabha
 ms.reviewer: ndoelman
@@ -20,13 +20,13 @@ contributors:
 
 ## Overview
 
-[Dataverse Search](../../../user/relevance-search-benefits.md) delivers fast and comprehensive search results sorted by relevance. Same Search service used in Modal Driven Apps and other Power Platform services built on Dataverse. Lucene .Net powered Search will co-exist for certain time and eventually Dataverse powered search will replace it. To enable Dataverse search add site setting Search/EnableDataverseSearch and set to true. Either false or without this setting will enable the Lucene .Net
+[Dataverse Search](../../../user/relevance-search-benefits.md) delivers fast and comprehensive search results sorted by relevance. Same Search service used in Modal Driven Apps and other Power Platform services built on Dataverse. Lucene .NET powered Search will coexist for certain time and eventually Dataverse powered search will replace it. To enable Dataverse search, add site setting Search/EnableDataverseSearch and set to true. Either false or without this setting will enable the Lucene .NET
 
 > [!IMPORTANT]
 > - This is a preview feature.
-> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
+> - [!INCLUDE[cc_preview_features_definition](../../../includes/cc-preview-features-definition.md)]
 
-This walkthrough explains how to enable search for the **Order Products** table in the sample database **Northwind**, available with Microsoft Dataverse. For more information about sample databases, see [Install Northwind Traders database and apps](../../canvas-apps/northwind-install.md).
+This walkthrough explains how to enable search for the **Order Products** table in the sample database **Northwind**, available with Microsoft Dataverse. For more information about sample databases, see [Install Northwind Traders database and apps](../../../canvas-apps/northwind-install.md).
 
 You can follow the walkthrough with a table of your choice by replacing the *nwind\_products* table name with your table's logical name.
 
@@ -56,7 +56,7 @@ You can follow the walkthrough with a table of your choice by replacing the *nwi
 
 1. Create or Update setting, **Search/EnableDataverseSearch**, and set its value to **true**.
 
-1. Create or update the **Search/EnableAdditionalEntities** setting, and set its value to **true**..
+1. Create or update the **Search/EnableAdditionalEntities** setting, and set its value to **true**.
 
 1. Create or update the **search/filters** setting, and add the value **Products:nwind\_products**.
 
@@ -99,105 +99,98 @@ You can follow the walkthrough with a table of your choice by replacing the *nwi
 
 ## Step 3: Create table permissions
 
-1.  Sign in to [Power Apps](https://make.powerapps.com).
+1. Sign in to [Power Apps](https://make.powerapps.com).
 
-2.  Select **Apps** in the left navigation pane, and then select to open the **Portal Management** model-driven app.  
+1. Select **Apps** in the left navigation pane, and then select to open the **Portal Management** model-driven app.  
 
-3.  Select **Table Permissions** in the left navigation pane.
+1. Select **Table Permissions** in the left navigation pane.
 
-4.  Select **New**.
+1. Select **New**.
 
-![New Table Permission record ](media/dataverse-search/image11.png)
+    :::image type="content" source="media/dataverse-search/table-permission.png" alt-text="Creating a new table permission.":::
 
-5.  Enter the name as **Northwind Products Read All**, and then select the appropriate **Access Type** and the **Read** privilege.
+1. Enter the name as **Northwind Products Read All**, and then select the appropriate **Access Type** and the **Read** privilege.
 
-For this example, the **Global** access type is provided to the **nwind\_products** table.
+    For this example, the **Global** access type is provided to the **nwind\_products** table.
 
-![Access Type and Read permissions ](media/dataverse-search/image12.png)
+    :::image type="content" source="media/dataverse-search/global-read-permission.png" alt-text="Configuring global read permission.":::
 
-6.  Select **Save & Close**.
+1. Select **Save & Close**.
 
-7.  Select and open **Northwind Products Read All**.
+1. Select and open **Northwind Products Read All**.
 
-8.  Scroll down to the **Web Roles** section, and then select **Add Existing Web Role**.
+1. Scroll down to the **Web Roles** section, and then select **Add Existing Web Role**.
 
-![Add an existing web role ](media/dataverse-search/image13.png)
+    :::image type="content" source="media/dataverse-search/add-existing-webrole.png" alt-text="Adding existing webrole to table permission.":::
 
-9.  Search for **Authenticated Users**, and then select **Add**:
+1. Search for **Authenticated Users**, and then select **Add**:
 
-![Add authenticated users ](media/dataverse-search/image14.png)
+    :::image type="content" source="media/dataverse-search/authenticated-users.png" alt-text="Add authenticated users.":::
 
 ## Step 4: Add record details webpage
 
-1.  Go to [Power Apps](https://make.powerapps.com), and select **Apps** in the left navigation pane.
+1. Go to [Power Apps](https://make.powerapps.com), and select **Apps** in the left navigation pane.
 
-2.  Select **More Commands** (…) for the portal, and then select **Edit** to open the portal in Power Apps Studio.
+1. Select **More Commands** (…) for the portal, and then select **Edit** to open the portal in Power Apps Studio.
 
-3.  Select **New Page** from the menu in the upper-left corner, and then select the **Blank** layout for the page.
+1. Select **New Page** from the menu in the upper-left corner, and then select the **Blank** layout for the page.
 
-![Graphical user interface  application Description automatically generated](media/dataverse-search/image15.png)
+    :::image type="content" source="media/dataverse-search/blank-layout.png" alt-text="Select blank-layout template.":::
 
-4.  Enter the webpage name as **Order Products**.
+1. Enter the webpage name as **Order Products**.
 
-5.  Select **Components** in the left navigation pane, and then add a **Form** component to this webpage.
+1. Select **Components** in the left navigation pane, and then add a **Form** component to this webpage.
 
-![Graphical user interface  application  Word Description automatically generated](media/dataverse-search/image16.png)
+    :::image type="content" source="media/dataverse-search/add-form-component.png" alt-text="Save and publish view.":::
 
-6.  Select the **Use existing** or **Create New** option on the right side of your workspace, choose the **View Products** form for the **nwind\_products** table, and then set **Mode** to **ReadOnly**.
+1. Select the **Use existing** or **Create New** option on the right side of your workspace, choose the **View Products** form for the **nwind\_products** table, and then set **Mode** to **ReadOnly**.
 
 ## Step 5: Add a site marker for record details webpage
 
-1.  Sign in to [Power Apps](https://make.powerapps.com).
+1. Sign in to [Power Apps](https://make.powerapps.com).
 
-2.  Select **Apps** in the left navigation pane, and select to open the **Portal Management** model-driven app.  
+1. Select **Apps** in the left navigation pane, and select to open the **Portal Management** model-driven app.  
 
-3.  Select **Site Marker** from the left navigation pane.
+1. Select **Site Marker** from the left navigation pane.
 
-4.  Select **New**, and then create a new site marker by using the following details:
+1. Select **New**, and then create a new site marker by using the following details:
 
     - **Name:** **nwind\_products\_SearchResultPage**
 
     - **Page:** **Order Products**
 
-![New site marker ](media/dataverse-search/image17.png)
+    :::image type="content" source="media/dataverse-search/search-results-page.png" alt-text="Create search results site marker.":::
 
-## Step 7: Verify global search functionality
+## Step 6: Verify global search functionality
 
-1.  Browse to the portal with a user that has *Authenticated* **Web Role** assigned.
+1. Browse to the portal with a user that has *Authenticated* **Web Role** assigned.
 
-2.  Go to the search toolbar or the search page, and search for a known record.
+1. Go to the search toolbar or the search page, and search for a known record.
 
-For example, use the search keyword **Northwind Clam Chowder** to get the results associated with the **nwind\_products** table.
+    For example, use the search keyword **Northwind Clam Chowder** to get the results associated with the **nwind\_products** table.
 
-![Search results ](media/dataverse-search/image18.png)
+    :::image type="content" source="media/dataverse-search/search-results.png" alt-text="Save and publish view.":::
 
-## 
+## Limitations
 
-## Limitation
+- Boosting relevance, searching, or filtering results by Dataverse column name configured in **Search/Query** SiteSettings is not supported.
 
--   Boosting relevance, searching, or filtering results by Dataverse column name configured in **Search/Query** SiteSettings are not supported.
+- **filter** parameter in **searchindex** liquid will not work
 
-- **fileter** parameter in **searchindex** liquid will not work
+    For example: `{% searchindex query: 'support', filter: ' +statecode:0'%}` will not filter matching search results that don't have `statecode:0`.
 
-Ex: {% searchindex query: 'support', filter: ' +statecode:0'%} This will not filter matching search results that doesn't have 'statecode:0'.
+- Although **Portal Search** view can have any operator in filter, only below list of operators is applied to query the search results and others are ignored
 
--   Although **Portal Search** view can have any Operator in filter, only below list of Operators are applied to query the search results and others are ignored
+    - equals
+    - does not equal
+    - is greater than
+    - is greater than or equal to
+    - is less than
+    - is than or equal to
 
-Equals
+- Related fields defined in **Portal Search** view as a **filter column** or **view column** aren't supported by Dataverse search and will be ignored.
 
-Does not equal
-
-Is greater than
-
-Is greater than or equal to
-
-Is less than
-
-Is than or equal to
-
--   Related fields defined in **Portal Search** view as a **filter column** or **view column** are not supported by Dataverse search and hence ignored.
-
--   Attachment content and objects in file data type are not searched
+- Attachment content and objects in file data type are not searched.
 
 ### See also
 
