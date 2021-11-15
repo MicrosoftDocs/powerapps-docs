@@ -69,6 +69,6 @@ One of the fundamental qualities of model-driven apps is that they are responsiv
   
 ## Next steps
 
- [Create or edit a main form overview](create-and-edit-main-forms.md)
+ [Create or edit a main form overview](create-edit-main-forms.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
