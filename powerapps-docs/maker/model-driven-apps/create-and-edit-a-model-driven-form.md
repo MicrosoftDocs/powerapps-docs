@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.subservice: mda-maker
 ms.topic: tutorial
 author: joel-lindstrom
-ms.author: v-ljoel
+ms.author: v-roryneary
 ms.reviewer: matp
 ---
 # Create and customize a model-driven app form
