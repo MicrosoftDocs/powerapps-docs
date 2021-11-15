@@ -1,5 +1,5 @@
 ---
-title: Tutorial: How to use code components in portals
+title: "Tutorial: How to use code components in portals"
 description: Walk through example steps for creating a sample code component and adding it to a model-driven app inside Power Apps portals.
 author: sandhangitmsft
 ms.service: powerapps

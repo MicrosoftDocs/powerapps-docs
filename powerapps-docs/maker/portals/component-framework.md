@@ -41,7 +41,7 @@ After following these steps, your users can now interact with the code component
 
 ## Create and package code component
 
-To learn about creating and packaging code components using Power Apps component framework, go to [Create your first component](../../developer/component-framework/implementing-controls-using-typescript.md).
+To learn about creating and packaging code components created Power Apps component framework, go to [Create your first component](../../developer/component-framework/implementing-controls-using-typescript.md).
 
 ### Supported field types and formats
 
@@ -164,7 +164,7 @@ To add a code component to a basic form:
 
 1. Enter **Label**.
 
-1. For **Control Style**, select **Code component.**
+1. For **Control Style**, select **Code Component.**
 
 1. Save and close the form.
 

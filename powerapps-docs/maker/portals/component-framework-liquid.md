@@ -24,7 +24,7 @@ Power Apps component framework empowers professional developers and app makers t
 > [!IMPORTANT]
 > The Liquid template tag for code components requires portals version [9.3.10.x or later](/power-platform/released-versions/portals/portalupdate9310x).
 
-With this release, we've introduced the ability to add code components using the [Liquid template tag](liquid/template-tags.md#codecomponent) on webpages, and enabled components using Web API that are enabled for field-level components on forms in portals.
+With this release, we've introduced the ability to add code components using a [Liquid template tag](liquid/template-tags.md#codecomponent) on webpages, and enabled components using Web API that are enabled for field-level components on forms in portals.
 
 Code components can be added using the `codecomponent` Liquid template tag. The key for denoting the code component that needs to be loaded is passed in using the `name` attribute. The key can be the GUID (which is the code component ID) or the name of the code component imported into Microsoft Dataverse.
 
