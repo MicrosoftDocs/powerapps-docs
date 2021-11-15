@@ -30,8 +30,7 @@ If you're new to Power BI reports and need more information, see [Reports in Po
 
 If you're using Power BI Desktop, you can also [create a report using data from Dataverse in Power BI Desktop](/powerapps/maker/data-platform/data-platform-powerbi-connector).
 
-> ![IMPORTANT]
-> Your administrator needs to turn on the **Enable Power BI quick report visualization on a table (Preview)** feature setting, to use the capabilities that are covered in this topic. For more information, see [Manage feature settings](/power-platform/admin/settings-features).
+> [!IMPORTANT] Your administrator needs to turn on the **Enable Power BI quick report visualization on a table (Preview)** feature setting, to use the capabilities that are covered in this topic. For more information, see [Manage feature settings](/power-platform/admin/settings-features).
 
    > [!div class="mx-imgBorder"]
    > ![Enabled Power BI report visualization on a table](media/powerbi-image1.png)
