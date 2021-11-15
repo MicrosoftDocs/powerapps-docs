@@ -20,15 +20,15 @@ contributors:
 
 ## Overview
 
-[Dataverse Search](../../../user/relevance-search-benefits.md) delivers fast and comprehensive search results sorted by relevance. This is the same search service used in model-driven apps and other Power Platform services built on Microsoft Dataverse. [Lucene.NET](search.md) powered search will coexist for certain time and eventually Dataverse search will replace it. To enable Dataverse search, add a [site setting](configure-site-settings.md) `Search/EnableDataverseSearch` and set to **true**. Either false or without this setting will instead enable the [Lucene.NET](search.md) search.
+[Dataverse Search](../../../user/relevance-search-benefits.md) delivers fast and comprehensive search results sorted by relevance. This is the same search service used in model-driven apps and other Power Platform services built on Microsoft Dataverse. The [Lucene.NET](search.md) powered search will coexist for certain time and will eventually be replaced by Dataverse search. To enable Dataverse search, add the [site setting](configure-site-settings.md) `Search/EnableDataverseSearch` and set to **true**. Either false or without this setting will instead enable the [Lucene.NET](search.md) search.
 
 > [!IMPORTANT]
 > - This is a preview feature.
 > - [!INCLUDE[cc_preview_features_definition](../../../includes/cc-preview-features-definition.md)]
 
-This walk through explains how to enable search for the **Order Products** table in the sample database **Northwind**, available with Dataverse. For more information about sample databases, see [Install Northwind Traders database and apps](../../canvas-apps/northwind-install.md).
+This walk through explains how to enable search for the **Order Products** table in the **Northwind** sample database, available with Dataverse. For more information about sample databases, see [Install Northwind Traders database and apps](../../canvas-apps/northwind-install.md).
 
-You can follow the walkthrough with a table of your choice by replacing the *nwind\_products* table name with your table's logical name.
+You can follow the walk through with a table of your choice by replacing the *nwind\_products* table name with your table's logical name.
 
 ## Step 1: Enable Dataverse Search
 
@@ -148,7 +148,7 @@ You can follow the walkthrough with a table of your choice by replacing the *nwi
 
 1. Select the **Use existing** or **Create New** option on the right side of your workspace, choose the **View Products** form for the **nwind\_products** table, and then set **Mode** to **ReadOnly**.
 
-## Step 5: Add a site marker for record details webpage
+## Step 5: Add a site marker for the record details webpage
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
