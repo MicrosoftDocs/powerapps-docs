@@ -51,20 +51,20 @@ Depending on how you begin, you can check and change authoring version of your c
 
 ## Change Power Apps Studio version
 
-1. If you're instructed to change the version of your current Studio session, select [Edit](#check-power-apps-studio-version-for-an-open-app) or [Change authoring version](#check-power-apps-studio-version-when-an-app-isnt-open) depending on whether you already have an app open in Power Apps Studio or not.
+1. If you're instructed to change the version of your current Power Apps Studio session, select [Edit](#check-power-apps-studio-version-for-an-open-app) or [Change authoring version](#check-power-apps-studio-version-when-an-app-isnt-open) depending on whether you already have an app open in Power Apps Studio or not.
 
 1. From the list of available authoring versions, choose the version you want, and then select **Reload + apply version**.
 
     :::image type="content" source="media/studio-versions/change-version-reload.png" alt-text="Change authoring version, and reload Studio session.":::
 
     > [!TIP]
-    > The default version for your environment will have **(recommended)** next to the authoring version number.
+    > The default version for your environment will have "**(recommended)**" next to the authoring version number.
 
 1. (Optional) Save the app when you're prompted to save the changes if you had an app already open that wasn't saved.
 
-1. Select **Open**, or **New** to work with app inside Power AppsStudio using the version you selected.
+1. Select **Open**, or **New** to work with app inside Power Apps Studio using the version you selected.
 
-You're now editing the app in the Power Apps Studio version you've selected. Since the authoring version change only persists for the current Studio session, repeat the above steps if you exit the current Power Apps Studio session and want to work with the same app again.
+You're now editing the app in the Power Apps Studio version you've selected. Since the authoring version change only persists for the current Studio session, repeat the above steps when you want to work with the same app again.
 
 ## Known limitations and workarounds
 
