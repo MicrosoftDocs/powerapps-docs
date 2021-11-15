@@ -26,7 +26,7 @@ contributors:
 > - This is a preview feature.
 > - [!INCLUDE[cc_preview_features_definition](../../../includes/cc-preview-features-definition.md)]
 
-This walkthrough explains how to enable search for the **Order Products** table in the sample database **Northwind**, available with Microsoft Dataverse. For more information about sample databases, see [Install Northwind Traders database and apps](../../../canvas-apps/northwind-install.md).
+This walkthrough explains how to enable search for the **Order Products** table in the sample database **Northwind**, available with Microsoft Dataverse. For more information about sample databases, see [Install Northwind Traders database and apps](../../canvas-apps/northwind-install.md).
 
 You can follow the walkthrough with a table of your choice by replacing the *nwind\_products* table name with your table's logical name.
 
@@ -63,7 +63,7 @@ You can follow the walkthrough with a table of your choice by replacing the *nwi
 ## Step 3: Create or verify the Portal Search view
 
 > [!Note]
-> The following steps require the [Northwind Traders solution](../../../canvas-apps/northwind-install) to be installed. If you want to use another table, use the appropriate solution or use the Default solution.
+> The following steps require the [Northwind Traders solution](../../canvas-apps/northwind-install.md) to be installed. If you want to use another table, use the appropriate solution or use the Default solution.
 
 1. Go to [Power Apps](https://make.powerapps.com), and select **Solutions** from the left navigation pane.
 
@@ -141,7 +141,7 @@ You can follow the walkthrough with a table of your choice by replacing the *nwi
 
 1. Select **Components** in the left navigation pane, and then add a **Form** component to this webpage.
 
-    :::image type="content" source="media/dataverse-search/add-form-component.png" alt-text="Save and publish view.":::
+    :::image type="content" source="media/dataverse-search/add-form-component.png" alt-text="Add form component to web page.":::
 
 1. Select the **Use existing** or **Create New** option on the right side of your workspace, choose the **View Products** form for the **nwind\_products** table, and then set **Mode** to **ReadOnly**.
 
@@ -169,7 +169,7 @@ You can follow the walkthrough with a table of your choice by replacing the *nwi
 
     For example, use the search keyword **Northwind Clam Chowder** to get the results associated with the **nwind\_products** table.
 
-    :::image type="content" source="media/dataverse-search/search-results.png" alt-text="Save and publish view.":::
+    :::image type="content" source="media/dataverse-search/search-results.png" alt-text="Search results on web page.":::
 
 ## Limitations
 
