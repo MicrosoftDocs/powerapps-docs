@@ -89,6 +89,6 @@ If you create any new solution components in the process of editing the form, fo
 
 ## Next steps
 
-[Create and design forms](create-design-forms.md)
+[Create or edit forms](create-and-edit-forms.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

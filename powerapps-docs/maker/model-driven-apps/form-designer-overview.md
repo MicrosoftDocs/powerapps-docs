@@ -47,18 +47,8 @@ The form designer interface has the following areas:
 > [!div class="mx-imgBorder"] 
 > ![Form designer layout.](media/FormDesignerOverview.png "Form designer layout")
 
-## See also
-[Create, edit, or configure forms using the form designer](create-and-edit-forms.md)  
-[Add, configure, move, or delete columns on a form](add-move-or-delete-fields-on-form.md)  
-[Add, configure, move, or delete components on a form](add-move-configure-or-delete-components-on-form.md)  
-[Add, configure, move, or delete sections on a form](add-move-or-delete-sections-on-form.md)  
-[Add, configure, move, or delete tabs on a form](add-move-or-delete-tabs-on-form.md)  
-[Configure header properties in the form designer](form-designer-header-properties.md)  
-[Add and configure a sub-grid component on a form](form-designer-add-configure-subgrid.md)  
-[Add and configure a quick view component on a form](form-designer-add-configure-quickview.md)  
-[Configure a lookup component on a form](form-designer-add-configure-lookup.md)  
-[Using the tree view in the form designer](using-tree-view-on-form.md)  
-[Create and edit columns](../data-platform/create-edit-field-portal.md)  
+## Next steps
 
+[How to open the form editor](open-form-editor.md)  
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -69,8 +69,6 @@ One of the fundamental qualities of model-driven apps is that they are responsiv
   
 ## Next steps
 
- [Create and design forms](create-design-forms.md)
- [Create and edit quick create forms](create-edit-quick-create-forms.md)
- [View form types](../../maker/model-driven-apps/types-forms.md)
+ [Create or edit a main form overview](create-and-edit-main-forms.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -62,6 +62,6 @@ search.app:
 
 ## Next steps
 
-[Change navigation within a form](use-the-form-editor-legacy.md)
+[Form designer overview](form-designer-overview.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

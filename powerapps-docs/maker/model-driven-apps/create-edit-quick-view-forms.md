@@ -112,7 +112,6 @@ In the example shown we can see the module that relates to a given lesson within
   
   [Create and edit a card form](create-card-forms.md)
 
-  [Form types overview](types-forms.md)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -55,7 +55,7 @@ search.app:
 
 ## Next steps
 
-[Use the Main form and its components](use-main-form-and-components.md)
+[Add move or delete tabs](add-move-or-delete-tabs-on-form.md)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

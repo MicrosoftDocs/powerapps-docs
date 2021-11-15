@@ -65,10 +65,6 @@ Each main form is composed of one or more **tabs**. Each tab can have one or mor
 6.    When your customizations are complete, these can be [published](model-driven-app-glossary.md#publish): select **Publish**.
  
 ### Next steps  
-[Overview of the model-driven form designer](form-designer-overview.md)
-
-[Overview of the form editor user interface](form-editor-user-interface-legacy.md)
- 
-
+[Create and edit a main form walkthrough](create-and-edit-a-model-driven-form.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

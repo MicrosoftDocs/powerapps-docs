@@ -210,6 +210,6 @@ The image below illustrate the accounts table main form as it would be viewed th
   
 ## Next steps
 
- [Create and design forms](create-design-forms.md)
+ [Create or edit a main form overview](create-edit-main-forms.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

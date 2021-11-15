@@ -1213,6 +1213,8 @@
             href: ./model-driven-apps/types-forms.md
           - name: How main forms appear
             href: ./model-driven-apps/main-form-presentations.md
+          - name: Design considerations for main forms
+            href: ./model-driven-apps/design-considerations-main-forms.md            
           - name: Create or edit a main form overview
             href: ./model-driven-apps/create-edit-main-forms.md
           - name: Create and edit a main form walkthrough
@@ -1232,6 +1234,8 @@
             href: ./model-driven-apps/form-designer-overview.md
           - name: How to open the form editor
             href: ./model-driven-apps/open-form-editor.md
+          - name: Using the tree view
+            href: ./model-driven-apps/using-tree-view-on-form.md
           - name: Create or edit forms
             href: ./model-driven-apps/create-and-edit-forms.md
           - name: Add, move or delete columns
@@ -1252,10 +1256,6 @@
             href: ./model-driven-apps/form-designer-add-configure-quickview.md
           - name: Configure lookup component
             href: ./model-driven-apps/form-designer-add-configure-lookup.md
-          - name: Using the tree view
-            href: ./model-driven-apps/using-tree-view-on-form.md
-          - name: How to assign form order in model-driven app
-            href: ./model-driven-apps/assign-form-order.md
            
         - name: Designing effective forms
           href: 
@@ -1266,8 +1266,6 @@
             href: ./model-driven-apps/design-performant-forms.md
           - name: How to optimize form performance
             href: ./model-driven-apps/optimize-form-performance.md
-          - name: Design considerations for main forms
-            href: ./model-driven-apps/design-considerations-main-forms.md
         - name: Embed a Power BI report on a form
           href: ./model-driven-apps/embed-powerbi-report-in-system-form.md     
         - name: Embed a canvas app on a model-driven form
