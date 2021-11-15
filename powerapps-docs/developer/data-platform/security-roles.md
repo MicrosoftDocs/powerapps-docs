@@ -69,5 +69,11 @@ http://<env-name>.api.<region>.dynamics.com/api/data/v9.1/roles(_parentrootrolei
 
 ### See also
 
-[Security Role (Role) table/entity reference](reference/entities/role.md)  
-[Configure user security to resources in an environment](/power-platform/admin/database-security)[]
+*Web API Reference*
+[roletemplate EntityType](/dynamics365/customer-engagement/web-api/roletemplate)
+
+*Table/Entity Reference*
+[Security Role (Role)](reference/entities/role.md)
+
+*Concepts*
+[Configure user security to resources in an environment](/power-platform/admin/database-security)
