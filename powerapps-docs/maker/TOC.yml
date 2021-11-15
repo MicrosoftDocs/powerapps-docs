@@ -1025,8 +1025,6 @@
       href: ./canvas-apps/license-designation.md
     - name: Restore a previous version
       href: ./canvas-apps/restore-an-app.md
-    - name: Change Studio version
-      href: ./canvas-apps/studio-versions.md
   - name: Test an app with Test Studio
     items:
     - name: Test Studio Overview
@@ -2622,6 +2620,8 @@
     href: ./canvas-apps/common-issues-and-resolutions.md
   - name: Get a session or app ID
     href: ./canvas-apps/get-sessionid.md
+  - name: Change Power Apps Studio version
+    href: ./canvas-apps/studio-versions.md
   - name: Troubleshoot startup issues for Power Apps
     href: ../troubleshooting-startup-issues.md
   - name: Troubleshoot Power Query
