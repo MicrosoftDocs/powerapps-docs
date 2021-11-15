@@ -22,14 +22,14 @@ contributors:
 
 The default version of Power Apps Studio session is determined based on your environment's location, and [refresh cadence](/power-platform/admin/create-environment#setting-an-environment-refresh-cadence). This default version of Studio changes when an update is released for your environment based on configured refresh cadence.
 
-You can now change the authoring version of your current Studio session from the version loaded by default, to an earlier or a later version as available for your environment.
+You can now change the authoring version of your current Power Apps Studio session from the version loaded by default, to an earlier or a later version as available for your environment.
 
 > [!IMPORTANT]
 > Change the authoring version of current Power Apps Studio session only when needed, such as to workaround an issue as instructed by Microsoft support.
 
-Depending on how you begin, you can check and change authoring version of your current Studio while having an app already open, or not.
+Depending on how you begin, you can check and change authoring version of your current Power Apps Studio while having an app already open, or not.
 
-## Check Studio version for an open app
+## Check Power Apps Studio version for an open app
 
 1. Open an [existing](edit-app.md) or a [new app](data-platform-create-app.md) in Power Apps Studio.
 
@@ -41,17 +41,17 @@ Depending on how you begin, you can check and change authoring version of your c
 
     :::image type="content" source="media/studio-versions/authoring-version-edit.png" alt-text="Check authoring version, and choose Edit to change.":::
 
-## Check Studio version when an app isn't open
+## Check Power Apps Studio version when an app isn't open
 
 1. Go to create.powerapps.com.
 
-1. Select **Account** from the left-pane, and review your existing Studio version for the current session.
+1. Select **Account** from the left-pane, and review your existing Power Apps Studio version for the current session.
 
     :::image type="content" source="media/studio-versions/create-power-apps.png" alt-text="Check version using create.powerapps.com, and change authoring version.":::
 
-## Change Studio version
+## Change Power Apps Studio version
 
-1. If you're instructed to change the version of your current Studio session, select [Edit](#check-studio-version-for-an-open-app) or [Change authoring version](#check-studio-version-when-an-app-isnt-open) depending on whether you already have an app open in Studio or not.
+1. If you're instructed to change the version of your current Studio session, select [Edit](#check-power-apps-studio-version-for-an-open-app) or [Change authoring version](#check-power-apps-studio-version-when-an-app-isnt-open) depending on whether you already have an app open in Power Apps Studio or not.
 
 1. From the list of available authoring versions, choose the version you want, and then select **Reload + apply version**.
 
@@ -62,22 +62,22 @@ Depending on how you begin, you can check and change authoring version of your c
 
 1. (Optional) Save the app when you're prompted to save the changes if you had an app already open that wasn't saved.
 
-1. Select **Open**, or **New** to work with app inside Studio using the version you selected.
+1. Select **Open**, or **New** to work with app inside Power AppsStudio using the version you selected.
 
-You're now editing the app in the Studio version you've selected. Since the authoring version change only persists for the current Studio session, repeat the above steps if you exit the current Studio session and want to work with the same app again.
+You're now editing the app in the Power Apps Studio version you've selected. Since the authoring version change only persists for the current Studio session, repeat the above steps if you exit the current Power Apps Studio session and want to work with the same app again.
 
 ## Known limitations and workarounds
 
-- Selecting **Reload + apply version** only changes the current authoring session to the version you choose. This change doesn't persist for future sessions. New Studio sessions always start with the default Studio version for your environment.
-- To update the app with the Studio version you selected, you must [save the app](save-publish-app.md#save-changes-to-an-app) with the chosen Studio version.
-- If you save an app using a version newer than the default for your environment, you may not be able to open that app using the default version of Studio. In that case, you'll see the following dialog.
+- Selecting **Reload + apply version** only changes the current authoring session to the version you choose. This change doesn't persist for future sessions. New Power Apps Studio sessions always start with the default Power Apps Studio version for your environment.
+- To update the app with the Power Apps Studio version you selected, you must [save the app](save-publish-app.md#save-changes-to-an-app) with the chosen Power Apps Studio version.
+- If you save an app using a version newer than the default for your environment, you may not be able to open that app using the default version of Power Apps Studio. In that case, you'll see the following dialog.
 
     :::image type="content" source="media/studio-versions/saved-new-version.png" alt-text="Open in new version, or restore previous version.":::
 
     - Select **Open in new version** to open your app for editing until your environment’s default
     version gets updated to the app’s current version.
 
-    - Select **Restore previous version** to see all [versions](restore-an-app.md) for the app, and revert to an older version saved with the default Studio version associated to your environment.
+    - Select **Restore previous version** to see all [versions](restore-an-app.md) for the app, and revert to an older version saved with the default Power Apps Studio version associated to your environment.
 
         > [!NOTE]
         > If you choose to restore the app to a previous version, you'll lose any changes made between your latest and previous app versions.
@@ -86,4 +86,4 @@ You're now editing the app in the Studio version you've selected. Since the auth
 
 - [Setting an environment refresh cadence](/power-platform/admin/create-environment#setting-an-environment-refresh-cadence)
 - [Restore a canvas app to a previous version](restore-an-app.md)
-
+- [Get session and app ID details](get-sessionid.md)
