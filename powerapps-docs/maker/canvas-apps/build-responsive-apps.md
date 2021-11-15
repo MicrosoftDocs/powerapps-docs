@@ -5,7 +5,7 @@ author: emcoope-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: nabuthuk
+ms.reviewer: tapanm
 ms.date: 05/24/2021
 ms.subservice: canvas-maker
 ms.author: emcoope

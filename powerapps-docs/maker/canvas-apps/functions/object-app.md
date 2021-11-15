@@ -2,11 +2,10 @@
 title: App object in Power Apps
 description: Reference information including syntax and examples for the App object in Power Apps.
 author: gregli-msft
-manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: nabuthuk
+ms.reviewer: tapanm
 ms.date: 11/03/2021
 ms.author: gregli
 search.audienceType: 
