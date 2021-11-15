@@ -1776,6 +1776,8 @@
           href: ./portals/configure/search-file-attachment.md
         - name: Configure progressive search counts
           href: ./portals/configure/progressive-search.md
+        - name: Configure Dataverse search (preview)
+          href: ./portals/configure/dataverse-search.md          
     - name: Configure document storage in portals
       items:
         - name: Configure notes

@@ -14,19 +14,19 @@ contributors:
     - sandhangitmsft
 ---
 
-# Walkthrough: Configuring Dataverse Search (Preview)
+# Configure Dataverse search (preview)
 
 [This article is pre-release documentation and is subject to change.]
 
 ## Overview
 
-[Dataverse Search](../../../user/relevance-search-benefits.md) delivers fast and comprehensive search results sorted by relevance. Same Search service used in Modal Driven Apps and other Power Platform services built on Dataverse. Lucene .NET powered Search will coexist for certain time and eventually Dataverse powered search will replace it. To enable Dataverse search, add site setting Search/EnableDataverseSearch and set to true. Either false or without this setting will enable the Lucene .NET
+[Dataverse Search](../../../user/relevance-search-benefits.md) delivers fast and comprehensive search results sorted by relevance. This is the same search service used in model-driven apps and other Power Platform services built on Microsoft Dataverse. [Lucene.NET](search.md) powered search will coexist for certain time and eventually Dataverse search will replace it. To enable Dataverse search, add a [site setting](configure-site-settings.md) `Search/EnableDataverseSearch` and set to **true**. Either false or without this setting will instead enable the [Lucene.NET](search.md) search.
 
 > [!IMPORTANT]
 > - This is a preview feature.
 > - [!INCLUDE[cc_preview_features_definition](../../../includes/cc-preview-features-definition.md)]
 
-This walkthrough explains how to enable search for the **Order Products** table in the sample database **Northwind**, available with Microsoft Dataverse. For more information about sample databases, see [Install Northwind Traders database and apps](../../canvas-apps/northwind-install.md).
+This walk through explains how to enable search for the **Order Products** table in the sample database **Northwind**, available with Dataverse. For more information about sample databases, see [Install Northwind Traders database and apps](../../canvas-apps/northwind-install.md).
 
 You can follow the walkthrough with a table of your choice by replacing the *nwind\_products* table name with your table's logical name.
 
@@ -54,11 +54,11 @@ You can follow the walkthrough with a table of your choice by replacing the *nwi
 
     :::image type="content" source="media/dataverse-search/portal-management-app.png" alt-text="Launching Portal Management app.":::
 
-1. Create or Update setting, **Search/EnableDataverseSearch**, and set its value to **true**.
+1. Create or update the **Search/EnableDataverseSearch** site setting, and set its value to **true**.
 
-1. Create or update the **Search/EnableAdditionalEntities** setting, and set its value to **true**.
+1. Create or update the **Search/EnableAdditionalEntities** site setting, and set its value to **true**.
 
-1. Create or update the **search/filters** setting, and add the value **Products:nwind\_products**.
+1. Create or update the **search/filters** site setting, and add the value **Products:nwind\_products**.
 
 ## Step 3: Create or verify the Portal Search view
 
@@ -83,7 +83,10 @@ You can follow the walkthrough with a table of your choice by replacing the *nwi
 
     :::image type="content" source="media/dataverse-search/portal-search-view.png" alt-text="Portal search view in list of views.":::
 
-1. If the Portal Search view doesn't already exist, select **Add view**, enter the name as **Portal Search**, and then select **Create**.
+1. If the Portal Search view doesn't already exist:
+    - select **Add view**
+    - enter the name as **Portal Search**
+    - select **Create**
 
     :::image type="content" source="media/dataverse-search/add-search-view.png" alt-text="Adding a new portal search view.":::
 
@@ -155,9 +158,8 @@ You can follow the walkthrough with a table of your choice by replacing the *nwi
 
 1. Select **New**, and then create a new site marker by using the following details:
 
-    - **Name:** **nwind\_products\_SearchResultPage**
-
-    - **Page:** **Order Products**
+    - Enter **nwind\_products\_SearchResultPage** for the **Name**.
+    - Select **Order Products** for the **Page**.
 
     :::image type="content" source="media/dataverse-search/search-results-page.png" alt-text="Create search results site marker.":::
 
@@ -167,19 +169,19 @@ You can follow the walkthrough with a table of your choice by replacing the *nwi
 
 1. Go to the search toolbar or the search page, and search for a known record.
 
-    For example, use the search keyword **Northwind Clam Chowder** to get the results associated with the **nwind\_products** table.
+    For example; use the search keyword **Northwind Clam Chowder** to get the results associated with the **nwind\_products** table.
 
     :::image type="content" source="media/dataverse-search/search-results.png" alt-text="Search results on web page.":::
 
 ## Limitations
 
-- Boosting relevance, searching, or filtering results by Dataverse column name configured in **Search/Query** SiteSettings is not supported.
+- Boosting relevance, searching, or filtering results by Dataverse column name configured in **Search/Query** site setting is not supported.
 
-- **filter** parameter in **searchindex** liquid will not work
+- The **filter** parameter in the **searchindex** Liquid object will not filter search results.
 
     For example: `{% searchindex query: 'support', filter: ' +statecode:0'%}` will not filter matching search results that don't have `statecode:0`.
 
-- Although **Portal Search** view can have any operator in filter, only below list of operators is applied to query the search results and others are ignored
+- Although **Portal Search** view can have any operator in filter, only the below list of operators is applied to query the search results:
 
     - equals
     - does not equal
