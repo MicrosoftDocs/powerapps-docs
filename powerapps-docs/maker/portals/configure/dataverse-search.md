@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: intro-internal
-ms.date: 11/15/2021
+ms.date: 11/16/2021
 ms.subservice: portals
 ms.author: nabha
 ms.reviewer: ndoelman
@@ -20,7 +20,7 @@ contributors:
 
 ## Overview
 
-[Dataverse Search](../../../user/relevance-search-benefits.md) delivers fast and comprehensive search results sorted by relevance. This is the same search service used in model-driven apps and other Power Platform services built on Microsoft Dataverse. The [Lucene.NET](search.md) powered search will coexist for certain time and will eventually be replaced by Dataverse search. To enable Dataverse search, add the [site setting](configure-site-settings.md) `Search/EnableDataverseSearch` and set to **true**. Either false or without this setting will instead enable the [Lucene.NET](search.md) search.
+[Dataverse search](../../../user/relevance-search-benefits.md) delivers fast and comprehensive search results sorted by relevance. This is the same search service used in model-driven apps and other Power Platform services built on Microsoft Dataverse. The [Lucene.NET](search.md) powered search will coexist for certain time and will eventually be replaced by Dataverse search. To enable Dataverse search, add the [site setting](configure-site-settings.md) `Search/EnableDataverseSearch` and set to **true**. Either false or without this setting will instead enable the [Lucene.NET](search.md) search.
 
 > [!IMPORTANT]
 > - This is a preview feature.
@@ -48,11 +48,11 @@ You can follow the walk through with a table of your choice by replacing the *nw
 
 1. Ensure that you're in the appropriate environment where your portal exists.
 
-1. Select **Apps** in the left navigation pane, and locate the **Portal Management** model-driven app.  
+1. Select **Apps** in the left navigation pane, and locate the **Portal Management** model-driven app.
+
+    :::image type="content" source="media/dataverse-search/portal-management-app.png" alt-text="Launching Portal Management app.":::  
 
 1. Select to open the **Portal Management** app, and then go to **Site Settings** in the left navigation pane.
-
-    :::image type="content" source="media/dataverse-search/portal-management-app.png" alt-text="Launching Portal Management app.":::
 
 1. Create or update the **Search/EnableDataverseSearch** site setting, and set its value to **true**.
 
@@ -63,7 +63,7 @@ You can follow the walk through with a table of your choice by replacing the *nw
 ## Step 3: Create or verify the Portal Search view
 
 > [!Note]
-> The following steps require the [Northwind Traders solution](../../canvas-apps/northwind-install.md) to be installed. If you want to use another table, use the appropriate solution or use the Default solution.
+> The following steps require the [Northwind Traders solution](../../canvas-apps/northwind-install.md) to be installed. If you want to use another table, use the appropriate solution or use the **Default solution**.
 
 1. Go to [Power Apps](https://make.powerapps.com), and select **Solutions** from the left navigation pane.
 
@@ -84,9 +84,9 @@ You can follow the walk through with a table of your choice by replacing the *nw
     :::image type="content" source="media/dataverse-search/portal-search-view.png" alt-text="Portal search view in list of views.":::
 
 1. If the Portal Search view doesn't already exist:
-    - select **Add view**
-    - enter the name as **Portal Search**
-    - select **Create**
+    - Select **Add view**
+    - Enter the name as **Portal Search**
+    - Select **Create**
 
     :::image type="content" source="media/dataverse-search/add-search-view.png" alt-text="Adding a new portal search view.":::
 
@@ -134,7 +134,7 @@ You can follow the walk through with a table of your choice by replacing the *nw
 
 1. Go to [Power Apps](https://make.powerapps.com), and select **Apps** in the left navigation pane.
 
-1. Select **More Commands** (…) for the portal, and then select **Edit** to open the portal in Power Apps Studio.
+1. Select **More Commands** (…) for the portal, and then select **Edit** to open the portal in the [Power Apps portals Studio](../portal-designer-anatomy.md).
 
 1. Select **New Page** from the menu in the upper-left corner, and then select the **Blank** layout for the page.
 
@@ -169,7 +169,7 @@ You can follow the walk through with a table of your choice by replacing the *nw
 
 1. Go to the search toolbar or the search page, and search for a known record.
 
-    For example; use the search keyword **Northwind Clam Chowder** to get the results associated with the **nwind\_products** table.
+    For example; use the search term **Northwind Clam Chowder** to get the results associated with the **nwind\_products** table.
 
     :::image type="content" source="media/dataverse-search/search-results.png" alt-text="Search results on web page.":::
 
