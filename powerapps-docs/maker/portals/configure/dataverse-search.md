@@ -14,13 +14,13 @@ contributors:
     - sandhangitmsft
 ---
 
-# Configure Dataverse search (preview)
+# Configure Dataverse search in portals (preview)
 
 [This article is pre-release documentation and is subject to change.]
 
 ## Overview
 
-[Dataverse search](../../../user/relevance-search-benefits.md) delivers fast and comprehensive search results sorted by relevance. This is the same search service used in model-driven apps and other Power Platform services built on Microsoft Dataverse. The [Lucene.NET](search.md) powered search will coexist for certain time and will eventually be replaced by Dataverse search. To enable Dataverse search, add the [site setting](configure-site-settings.md) `Search/EnableDataverseSearch` and set to **true**. Either false or without this setting will instead enable the [Lucene.NET](search.md) search.
+[Dataverse search](../../../user/relevance-search-benefits.md) delivers fast and comprehensive search results sorted by relevance in portals. This is the same search service used in model-driven apps and other Power Platform services built on Microsoft Dataverse. The [Lucene.NET](search.md) powered search will coexist for certain time and will eventually be replaced by Dataverse search. To enable Dataverse search, add the [site setting](configure-site-settings.md) `Search/EnableDataverseSearch` and set to **true**. Either false or without this setting will instead enable the [Lucene.NET](search.md) search.
 
 > [!IMPORTANT]
 > - This is a preview feature.
@@ -163,7 +163,7 @@ You can follow the walk through with a table of your choice by replacing the *nw
 
     :::image type="content" source="media/dataverse-search/search-results-page.png" alt-text="Create search results site marker.":::
 
-## Step 6: Verify global search functionality
+## Step 6: Verify Dataverse search functionality
 
 1. Browse to the portal with a user that has *Authenticated* **Web Role** assigned.
 
