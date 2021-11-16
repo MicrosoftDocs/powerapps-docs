@@ -103,7 +103,7 @@ The Dataverse Web API provides a development experience that can be used across 
 
 Dataverse takes an "API first" approach. This means that the service doesn't just provide a mechanism to query data, it also provides metadata from the service on business rules, constraints, and so on that you can use to build intelligent, responsive apps and services.
 
-The API is secured by using OAuth. OAuth requires an idtable provider for authentication. For Dataverse, the idtable provider is Azure Active Directory (Azure AD). To authenticate with Azure AD by using a Microsoft work or school account, use the Azure AD Authentication Libraries (ADAL).
+The API is secured by using OAuth. OAuth requires an idtable provider for authentication. For Dataverse, the idtable provider is Azure Active Directory (Azure AD). To authenticate with Azure AD by using a Microsoft work or school account, use the Microsoft Authentication Libraries (MSAL).
 
 For more information about getting started with the Dataverse Web API, see [Use the Dataverse Web API](../../developer/data-platform/webapi/overview.md).
 
