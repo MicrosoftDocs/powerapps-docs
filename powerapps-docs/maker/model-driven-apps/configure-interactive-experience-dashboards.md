@@ -323,8 +323,8 @@ Similarly, if the **Priority** column is ued to modify the colors of the case pr
 
  ![Modify the dashboard color.](media/priority-color-modify.png "Change dashboard color for case priority")  
   
-### See also  
+## Next steps  
 
-[Create or edit dashboards](create-edit-dashboards.md)
+[Set properties for a chart or list](set-properties-chart-list-included-dashboard.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

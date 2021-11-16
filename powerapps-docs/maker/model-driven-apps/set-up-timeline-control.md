@@ -588,5 +588,6 @@ You can configure the file types that are blocked from being added as file attac
 
 [FAQs for timeline control](faqs-timeline-control.md) 
 
+[Tutorial: Use custom controls for data visualizations](use-custom-controls-data-visualizations.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

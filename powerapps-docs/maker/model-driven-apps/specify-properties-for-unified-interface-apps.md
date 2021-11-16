@@ -1,5 +1,5 @@
 ---
-title: "Specify properties for model-driven apps| MicrosoftDocs"
+title: "Specify read only grid properties | MicrosoftDocs"
 description: "Learn how to configure the grid control for your app"
 keywords: ""
 ms.date: 06/03/2019
@@ -27,7 +27,7 @@ search.app:
   - D365CE
 ---
 
-# Specify properties for model-driven apps
+# Specify read only grid properties
 
 [!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
@@ -106,6 +106,6 @@ You can display a custom icon instead of a value in a list and establish the log
 
 ## Next steps
 
-[Create or edit a view](create-edit-views.md)
+[Model-driven app views overview](create-edit-views.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

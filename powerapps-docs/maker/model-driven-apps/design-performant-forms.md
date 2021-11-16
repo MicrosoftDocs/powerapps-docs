@@ -237,6 +237,6 @@ Some examples of performance-related issues found with solution checker:
 
 Object checker runs real-time diagnostics on component objects within your solution. If issues are detected, a recommendation is returned that describes how to fix the issue. More information: [Use object checker to diagnose a solution component (preview)](../data-platform/object-checker.md)
 
-### See also
+## Next steps
 
-[Design productive main forms in model-driven apps](design-productive-forms.md)
+[Optimize model-driven app form performance](optimize-form-performance.md)

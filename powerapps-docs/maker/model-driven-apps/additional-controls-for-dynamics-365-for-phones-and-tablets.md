@@ -305,8 +305,7 @@ Provide a timeline of recent, relevant news articles and Twitter tweets for an a
 |CC_Timeline_Footer_Desc|Description for Footer column.|  
 
 ## Next steps
-[Tutorial: Use custom controls for data visualizations](use-custom-controls-data-visualizations.md)</br>
-[Work with rows in the new calendar view](../../user/calendar-view.md)
+[Tutorial: Use custom controls for data visualizations](use-custom-controls-data-visualizations.md)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

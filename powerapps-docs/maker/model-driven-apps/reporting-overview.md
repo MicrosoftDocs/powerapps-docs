@@ -76,6 +76,8 @@ There are 3 techniques for introducing Power BI into your model driven apps.
 Microsoft Excel integration that allows users to easily build self-service reports using the features such as [PowerView](https://support.office.com/article/power-view-overview-and-learning-5380e429-3ee0-4be2-97b7-64d7930020b6), [PowerPivot](https://support.office.com/article/power-pivot-overview-and-learning-f9001958-7901-4caa-ad80-028a6d2432ed), and [PowerQuery](https://support.office.com/article/power-query-overview-and-learning-ed614c81-4b00-4291-bd3a-55d80767f81d).
 
 ## Next Steps
+
+[Create a system chart for a table](create-edit-system-chart.md)<br/>
 [Reporting considerations](reporting-considerations.md)<br/>
 [Working with views](create-edit-views.md)<br/>
 [Working with forms](create-and-edit-forms.md)<br/>
