@@ -19,6 +19,9 @@ In this tutorial, you create a model-driven app by using one of the standard tab
   > [!div class="mx-imgBorder"]
   > ![Running the app](media/build-first-model-driven-app/accounts-quickstart-app.png "Run the app")
 
+>[!NOTE]
+This is the modern method of creating an app.  To build the an app using the classic approach [click here](create-edit-app.md)
+
 ## Sign in to Power Apps
 
 Sign in to [Power Apps](https://make.powerapps.com/). If you don't already have a Power Apps account, select the **Get started free** link.

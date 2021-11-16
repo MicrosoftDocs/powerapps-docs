@@ -1154,6 +1154,8 @@
         href: ./model-driven-apps/translate-localizable-text.md
     - name: Design the app interface
       items:
+      - name: App interface design overview
+        href: ./model-driven-apps/app-interface-design-overview.md
       - name: Using the modern app designer (Preview)
         href: 
         items: 
@@ -1161,8 +1163,6 @@
           href: ./model-driven-apps/app-designer-overview.md
         - name: Create an app
           href: ./model-driven-apps/create-model-driven-app.md
-        - name: Create an app with an account table
-          href: ./model-driven-apps/create-a-model-driven-app.md
         - name: Create an app with an account table
           href: ./model-driven-apps/create-a-model-driven-app.md
         - name: Understanding app navigation
@@ -1364,11 +1364,11 @@
           href: ./model-driven-apps/command-designer-limitations.md       
       - name: Use the classic designers
         items:
-        - name: Create your first classic app
-          href: ./model-driven-apps/build-first-model-driven-app.md
         - name: Design model-driven apps by using the app designer
-          href: ./model-driven-apps/design-custom-business-apps-using-app-designer.md
-        - name: Create an app
+          href: ./model-driven-apps/design-custom-business-apps-using-app-designer.md        
+        - name: Create your first classic app
+          href: ./model-driven-apps/build-first-model-driven-app-classic.md
+        - name: Create an app (classic)
           href: ./model-driven-apps/create-edit-app.md
         - name: Create a site map for an app
           href: ./model-driven-apps/create-site-map-app.md
