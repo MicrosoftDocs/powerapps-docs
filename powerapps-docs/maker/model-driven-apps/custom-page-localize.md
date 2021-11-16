@@ -61,7 +61,9 @@ For example, all localized string files might have the name `CustomPageLoc.Langu
 
 In the example below all files have `CPLoc` as the display name. *The display name must be the same to ensure all localized content is used properly on a custom page for each language.*  We recommend that you add the corresponding name for the language in the **Description** field to help identify the content when you view the files in the custom page designer. Also, you'll need to add the same language's RESX file that you're working in. For example, if you are authoring in English, be sure to add the English RESX file.
 
-:::image type="content" source="media/page-localization/studio-web-resource-dialog.png"alt-text="Power Apps Studio web resource dialog.":::
+<!-- :::image type="content" source="media/page-localization/studio-web-resource-dialog.png"alt-text="Power Apps Studio web resource dialog."::: -->
+
+:::image type="content" source="media/page-localization/add-resx-to-solution.gif" alt-text="Add a RESX file to a solution":::
 
 After you have added your web resource to your solution, make sure to publish your changes. Publishing ensures the file is available to add to your custom page. Here's a screenshot of the web resource RESX files that have been added to a solution and are now available to add to a custom page.
 
