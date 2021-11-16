@@ -30,21 +30,23 @@ search.app:
 
 In this section we will explore how to work with table [views](model-driven-app-glossary.md#view) and [forms](model-driven-app-glossary.md#form) in some detail.  
 
-We will discover that there are 2 experiences available when building apps.  The first, and more recent experience, involves the creation of [pages](model-driven-app-glossary.md#page).  The second experience involved building an app in a more deliberate fashion.  The app building process in this case began when we [created our first model-driven app]()
+We will discover that there are 2 experiences available when building apps.  The first, and more recent experience, involves the creation of [pages](model-driven-app-glossary.md#page).  The second experience involves building an app in a more deliberate fashion.
 
 In both cases the same product is created, a model-driven app with a [site-map](model-driven-app-glossary.md#site-map) associated with it that describes the navigation experience within the app.
+
+Additionally, we will discover a method of changing the command bar menu in our apps.  Finally we retain details on the classic approach to developing apps.  This describes the creation of apps in addition to working with forms, views and other elements.
 
 Before we do this a reminder of the model-driven app design process may be helpful.
 
 ## Model-driven app design recap
 
-Designing a model-app requires a range of skills and their are a range of [design tools](model-driven-designers.md) that enable them to be created.  At times the designer plays the role of a database designer, a user experience customizer and even a process designer.
+Designing a model-driven app requires a range of skills and there are a number of [design tools](model-driven-designers.md) that enable them to be created.  At times the developer plays the role of a **database designer**, a user experience **customizer** and even a **process designer**.
 
-Model-driven apps are essentially a selection of Dataverse [components](model-driven-app-glossary.md#component) (tables, charts, dashboards) that work alongside each other to achieve a business outcome.  These components are delivered in conjunction with the Dataverse [security roles](model-driven-app-glossary.md#security-role) to create a user experience that meets the needs of members of different parts of an organization. 
+Model-driven apps are essentially a selection of Dataverse [components](model-driven-app-glossary.md#component) (tables, charts, dashboards) that work alongside each other to achieve a business outcome.  These components are delivered in conjunction with the Dataverse [security roles](model-driven-app-glossary.md#security-role) to create a user experience that meets the needs of members of different parts of an organization.
 
 This means that the same app can be used by a colleagues different departments.  In some cases users will only wish to review data and may only have interest in specific areas in order to complete their daily objectives.
 
-The design of tables and table columns is specifically covered under a section dedicated to this topic.  [Learn more about creating Dataverse tables](../../maker/data-platform/entity-overview.md).
+The design of tables and table columns is specifically covered under a documentation dedicated to this topic.  [Learn more about creating Dataverse tables](../../maker/data-platform/entity-overview.md).
 
 ## App interface design resources
 
@@ -60,10 +62,8 @@ The following table describes the resources in this section.
 |Customize app commands|Discover how to ensure that the customize the menu in the top rail of a model driven app|[Learn more](command-designer-overview.md)
 |Using the classic designers|Discover the classic method of creating model-driven apps|[Learn more](design-custom-business-apps-using-app-designer.md)
 
-## See also
+### See also
 
 [Learn more about Dataverse security roles](https://docs.microsoft.com/power-platform/admin/security-roles-privileges)
-
-[Build your first model-driven app](build-first-model-driven-app.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
