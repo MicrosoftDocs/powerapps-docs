@@ -57,7 +57,7 @@ The **Calendar Control V2** control displays scheduled activities and their asso
 
 1. Select **Save** to save changes.
 
-1. To publish the changes select **Publish**.
+1. To publish the changes, select **Publish**.
 
 ### See also
 
