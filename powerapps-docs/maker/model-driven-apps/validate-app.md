@@ -47,8 +47,8 @@ When the app is validated, the app designer canvas shows details about the asset
 2.  Select the environment in which the unmanaged model-driven app is located.
 3.  Navigate to the model-driven app using the solution explorer.
 4.  Select the three dots next to the app and edit.  The classic app designer will open.
-  >[!Note]
-  > This experience may change as the maker experience moves from a classic to a modern one.
+    >[!Note]
+    >This experience may change as the maker experience moves from a classic to a modern one.
 5.  In the app designer, select **Validate**.  
   
     :::image type="content" source="media/validate-app.png" alt-text="validate app":::
