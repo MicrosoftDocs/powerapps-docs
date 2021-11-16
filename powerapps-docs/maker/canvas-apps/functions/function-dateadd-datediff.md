@@ -2,11 +2,10 @@
 title: DateAdd, DateDiff, and TimeZoneOffset functions in Power Apps
 description: Reference information including syntax and examples for the DateAdd, DateDiff, and TimeZoneOffset functions in Power Apps.
 author: gregli-msft
-manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: nabuthuk
+ms.reviewer: tapanm
 ms.date: 05/23/2017
 ms.subservice: canvas-maker
 ms.author: gregli

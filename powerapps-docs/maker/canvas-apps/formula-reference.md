@@ -2,7 +2,6 @@
 title: Formula reference for Power Apps
 description: Reference information for functions, signals, and enumerations in Power Apps.
 author: gregli-msft
-manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
@@ -287,6 +286,8 @@ Other elements include:
 **[Rand](functions/function-rand.md)** – Returns a pseudo-random number.
 
 **[ReadNFC](functions/function-readnfc.md)** – Reads a Near Field Communication (NFC) tag.
+
+**[RecordInfo](functions/function-recordinfo.md)** – Provides information about a record of a data source.
 
 **[Refresh](functions/function-refresh.md)** – Refreshes the records of a data source.
 

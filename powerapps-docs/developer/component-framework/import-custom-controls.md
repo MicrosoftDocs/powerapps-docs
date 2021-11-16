@@ -120,6 +120,9 @@ To create a solution project based on an existing solution in Dataverse, run the
 
 More information: [Settings options](/dotnet/api/microsoft.crm.sdk.messages.exportsolutionrequest?view=dynamics-general-ce-9)
 
+> [!NOTE]
+> Manually publish the customizations if you are importing unmanaged solution.
+
 ## Create a plug-in project and add a reference to it in your solution 
 
 > [!NOTE]

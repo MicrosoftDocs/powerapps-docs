@@ -45,7 +45,7 @@ To use Power BI with Dataverse, you need the following items:
 1. Select one of the following connectors, and then select **Connect**.
 
    * **Dataverse**: This connector is the most recent version and uses the tabular data stream (TDS) protocol.
-   * **Common Data Service (Legacy)**: This is the earlier version of the connector. Use this connector for large datasets that are greater than 80 MB. This version also supports paging of the query results and building reports that use the image data type.  
+   * **Common Data Service (Legacy)**: This is the earlier version of the connector. Use this connector when the query results will be greater than 80 MB. This version also supports paging of the query results and building reports that use the image data type.  
 
 1. In the dialog box that appears, paste in your Dataverse environment URL into the **Environment domain** box, in the format *org.crm.dynamics.com*. Don't include the *https://* or ending */*. More information: [Find your Dataverse environment URL](#find-your-dataverse-environment-url)
    
@@ -101,7 +101,7 @@ While some relationships may be automatically created, you can still review and 
 
 ## Troubleshooting 
 
-## Error message: Return records size cannot exceed 83886080
+### Error message: Return records size cannot exceed 83886080
 
 This error can occur with the Dataverse connector when you run or design a report with a result set greater than 80 MB. TDS has a result set size limit of 80 MB. 
 
@@ -114,6 +114,10 @@ When this error message occurs, the connector fails to connect to the TDS endpoi
 
 :::image type="content" source="media/tls-unable-to-connect.png" alt-text="Unable to connect error message.":::
 Remove the https:// and ending forward slash so that the URL is in the form *orgname.crm.dynamics.com*.
+
+### Troubleshooting connection issues
+
+For information about troubleshooting connection issues when using the TDS endpoint, see [Troubleshooting connection problems](/powerapps/developer/data-platform/dataverse-sql-query#troubleshooting-connection-problems).
 
 ### See also
 

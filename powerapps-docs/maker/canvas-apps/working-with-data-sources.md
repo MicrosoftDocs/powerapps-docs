@@ -2,7 +2,6 @@
 title: Understand data sources for canvas apps
 description: Learn about working with connections and data sources for canvas apps.
 author: gregli-msft
-manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
@@ -34,7 +33,7 @@ Data sources can be connected to a cloud service, or they can be local to an app
 
 The most common data sources are **tables**, which you can use to retrieve and store information. You can use **connections** to data sources to read and write data in Microsoft Excel workbooks, SharePoint lists, SQL tables, and many other formats, which can be stored in cloud services such as OneDrive for Business, DropBox, and SQL Server.
 
-Data sources other tha tables include email, calendars, Twitter, and notifications, but this article doesn't discuss these other kinds of data sources.
+Data sources other than tables include email, calendars, Twitter, and notifications, but this article doesn't discuss these other kinds of data sources.
 
 ### Local data sources
 

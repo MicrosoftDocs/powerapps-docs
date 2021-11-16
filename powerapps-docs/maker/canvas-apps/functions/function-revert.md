@@ -2,11 +2,10 @@
 title: Revert function in Power Apps
 description: Reference information including syntax and examples for the Revert function in Power Apps.
 author: gregli-msft
-manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: nabuthuk
+ms.reviewer: tapanm
 ms.date: 10/21/2015
 ms.subservice: canvas-maker
 ms.author: gregli
@@ -44,7 +43,7 @@ In this example, you'll revert the data source named **IceCream**, which starts 
 A user on another device changes the **Quantity** property of the **Strawberry** record to **400**.  At about the same time, you change the same property of the same record to **500**, not knowing about the other change.
 
 You use the **[Patch](function-patch.md)** function to update the record:<br>
-**Patch( IceCream, First( Filter( IceCream, Flavor = "Strawberry" ) ), { Quantity: 500 } )**
+**Patch( IceCream, LookUp( IceCream, Flavor = "Strawberry" ), { Quantity: 500 } )**
 
 You check the **[Errors](function-errors.md)** table and find an error:
 
@@ -53,7 +52,7 @@ You check the **[Errors](function-errors.md)** table and find an error:
 | **{ ID: 1, Flavor: "Strawberry", Quantity: 300 }** |*blank* |**"The record you are trying to modify has been modified by another user.  Please revert the record and try again."** |**ErrorKind.Conflict** |
 
 Based on the **Error** column, you have a **Reload** button for which the **[OnSelect](../controls/properties-core.md)** property to set to this formula:<br>
-**Revert( IceCream, First( Filter( IceCream, Flavor = "Strawberry" ) ) )**
+**Revert( IceCream, LookUp( IceCream, Flavor = "Strawberry" ) )**
 
 After you select the **Reload** button, the **[Errors](function-errors.md)** table is [empty](function-isblank-isempty.md), and the new value for **Strawberry** has been loaded:
 

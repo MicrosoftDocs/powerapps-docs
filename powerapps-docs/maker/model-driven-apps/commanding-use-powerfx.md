@@ -87,8 +87,15 @@ Self.ThisContext.SelectedItem.'Account Rating'>20
 ## Navigate
 
 > [!NOTE]
-> Currently, the `Navigate` function isn't available to interact with custom pages using Power Fx. See the client API reference to use JavaScript. More information: [navigateTo (Client API reference)](../../developer/model-driven-apps/clientapi/reference/Xrm-Navigation/navigateTo.md)
+> For additional options, see the client API reference to use JavaScript. More information: [navigateTo (Client API reference)](../../developer/model-driven-apps/clientapi/reference/Xrm-Navigation/navigateTo.md)
 
+### Navigate to a custom page
+
+To navigate to a custom canvas page within a model-driven app, pass the page name as the first argument.
+
+```powerappsfl
+Navigate( myCustomPage )
+```
 ### Navigate to the default view of the table
 
 To navigate to the default view of the table, passed table name as the first argument.
@@ -166,21 +173,6 @@ Same dialog as the last example, but adds title text.
 If( Confirm( "Are you sure?", {Title: "Delete Confirmation"} ), Remove( ThisItem ) )
 ```
 
-Asks the user for their favorite color, capturing the result into a global variable. The result that will be placed in `FavColor` will be the text string "Red" or "Green." As the confirm choice, "Red" is the default. This only works on platforms that support `ConfirmButton` and `CancelButton` options.
-
-```powerapps-dot
-Set( FavColor, 
-     If( Confirm( "What is your favorite color?", 
-                  { ConfirmButton: "Red", CancelButton: "Green" } 
-         ), 
-         "Red", 
-         "Green" 
-     ) 
-)
-
-
-```
-
 Displays a message much like the `Notify` function does, but is modal and requires the user to select a button to proceed. Use in situations where it is important that the user acknowledge the message before proceeding. In this case, which button was selected isn't important.
 
 ```powerapps-dot
@@ -200,7 +192,7 @@ Notify( "Model-driven app notification message" )
 ### Launch a URL
 
 ```powerappsfl
-Launch("https://www.bing.com"));
+Launch("https://www.bing.com");
 ```
 
 ### Access 1:N property

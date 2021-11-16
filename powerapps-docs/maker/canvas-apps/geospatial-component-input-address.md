@@ -1,21 +1,21 @@
 ---
 title: Enter and resolve address in maps
 description: Use the address input component in your apps to let users search for and find addresses.
-author: iaanw
-manager: shellyha
+author: anuitz
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas, ce06122020
 ms.reviewer: tapanm
 ms.date: 1/19/2021
 ms.subservice: canvas-maker
-ms.author: iawilt
+ms.author: anuitz
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 contributors:
-  - iaanw
+  - tapanm-msft
+  - anuitz
 ---
 
 # Address input component 
@@ -40,7 +40,7 @@ With an app open for editing in [Power Apps Studio](https://create.powerapps.com
 
 2. Expand **Input**.
 
-3. Select the component **Address input (preview)** to place it in the center of the app screen, or drag it to position it anywhere on the screen.
+3. Select the component **Address input** to place it in the center of the app screen, or drag it to position it anywhere on the screen.
 
 You can modify the component by using a number of [properties](#input-properties).
 
@@ -75,8 +75,8 @@ You can save addresses that a user inputs into the address component as a data c
 5. Set the following properties:
 
     - **Items** as *locations*
-    - **ItemLatitudes** as *locations.Latitude*
-    - **ItemsLongitudes** as *locations.Longitude*
+    - **ItemsLatitudes** as *"Latitude"*
+    - **ItemsLongitudes** as *"Longitude"*
 
 Each time a user selects the button, the result from the address input component will be added to the map as a new pin.
 

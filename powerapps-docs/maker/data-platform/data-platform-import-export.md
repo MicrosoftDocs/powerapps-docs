@@ -136,6 +136,7 @@ The following data types aren't currently supported.
 - Timezone
 - Multiselect choice 
 - Image
+- File
 
     > [!NOTE]
     > Get Data from Excel and Export Data features are currently not included in the Power Apps Developer Plan.

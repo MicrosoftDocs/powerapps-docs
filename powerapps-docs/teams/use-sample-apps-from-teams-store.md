@@ -1,13 +1,13 @@
 ---
 title: Use sample apps from teams store | Microsoft Docs
 description: Learn how to use sample apps from Teams store.
-author: navjotm
+author: josephshum
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: intro-internal
-ms.date: 06/25/2021
+ms.date: 10/04/2021
 ms.subservice: teams
-ms.author: namarwah
+ms.author: jshum
 ms.reviewer: tapanm
 contributors:
   - tapanm-msft
@@ -30,7 +30,7 @@ Several sample apps are available from the Teams store that you can add to your 
 
 :::row:::
    :::column span="":::
-      ![Boards app (Preview).](media/app-icons/boards-app-icon.png "Boards app (Preview)") <br> [Boards (Preview)](boards.md) <br> A simple way to connect and share with people in your organization with similar interests.
+      ![Boards app (preview).](media/app-icons/boards-app-icon.png "Boards app (preview)") <br> [Boards (preview)](boards.md) <br> A simple way to connect and share with people in your organization with similar interests.
    :::column-end:::
    :::column span="":::
       ![Bulletins app](media/app-icons/bulletins-app-icon.png "Bulletins app") <br> [Bulletins](bulletins.md) <br> Manager and user apps for company communications.
@@ -41,7 +41,7 @@ Several sample apps are available from the Teams store that you can add to your 
 :::row-end:::
 :::row:::
    :::column span="":::
-      ![How to.](media/app-icons/how-to-app-icon.png "How to app (Preview)") <br> [How to](how-to.md) <br> Learn how to be a Power Apps maker.
+      ![How to.](media/app-icons/how-to-app-icon.png "How to app (preview)") <br> [How to (preview)](how-to.md) <br> Learn how to be a Power Apps maker.
    :::column-end:::
    :::column span="":::
       ![Inspection app](media/app-icons/inspection-app-icon.png "Inspection app") <br> [Inspection](inspection.md) <br> Manager and user apps for area inspections.
@@ -55,15 +55,15 @@ Several sample apps are available from the Teams store that you can add to your 
       ![Milestones app](media/app-icons/milestones-app-icon.png "Milestones app") <br> [Milestones](milestones.md) <br> App to keep track of projects, and initiatives.
    :::column-end:::
     :::column span="":::
-      ![Perspectives app (Preview).](media/app-icons/perspectives-app-icon.png "Perspectives app (Preview)") <br> [Perspectives (Preview)](perspectives.md) <br> A simple way to add topics and extend the topics with Q&A for discussions.
+      ![Perspectives app (preview).](media/app-icons/perspectives-app-icon.png "Perspectives app (preview)") <br> [Perspectives (preview)](perspectives.md) <br> A simple way to add topics and extend the topics with Q&A for discussions.
    :::column-end:::
    :::column span="":::
-      ![Profile+ app](media/app-icons/profile-app-icon.png "Profile+ app") <br> [Profile+ (Preview)](profile-app.md) <br> Quickly find out about people in your organization.
+      ![Profile+ app](media/app-icons/profile-app-icon.png "Profile+ app") <br> [Profile+ (preview)](profile-app.md) <br> Quickly find out about people in your organization.
    :::column-end:::
 :::row-end:::
 :::row:::
    :::column span="":::
-    ![Get connected app](media/app-icons/get-connected-app-icon.png "Get connected app") <br> [Get connected (Preview)](get-connected.md) <br> Connect with people in your organization with similar skills.
+    ![Get connected app](media/app-icons/get-connected-app-icon.png "Get connected app") <br> [Get connected (preview)](get-connected.md) <br> Connect with people in your organization with similar skills.
    :::column-end:::
    :::column span="":::
     :::column-end:::
@@ -91,6 +91,9 @@ The following tutorial shows how to install the Employee ideas app. You can use 
     ![Select Add to a team.](media/sample-app-1.png "Select Add to a team")
 
 1. Search for the team channel that you want to add the app to.
+
+    > [!IMPORTANT]
+    > Teams sample apps can't be installed in private channels. Hence, ensure you select the channel in your team that isn't private.
 
     ![Search for a team channel.](media/sample-app-2.png "Search for a team channel")
 
@@ -168,15 +171,15 @@ For Frequently Asked Questions about sample apps, go to [Sample apps FAQs](sampl
 
 ### See also
 
-- [Boards (Preview) sample app](boards.md)
+- [Boards (preview) sample app](boards.md)
 - [Bulletins sample app](bulletins.md)
 - [Employee ideas sample app](employee-ideas.md)  
 - [Inspection sample apps](inspection.md)  
 - [Issue reporting sample apps](issue-reporting.md)
 - [Milestones sample app](milestones.md)
-- [Perspectives (Preview) sample app](perspectives.md)
-- [Profile+ (Preview) sample app](profile-app.md)
-- [Get Connected (Preview) sample app](get-connected.md)
+- [Perspectives (preview) sample app](perspectives.md)
+- [Profile+ (preview) sample app](profile-app.md)
+- [Get Connected (preview) sample app](get-connected.md)
 - [Customize sample apps](customize-sample-apps.md)
 - [Sample apps FAQs](sample-apps-faqs.md)
 

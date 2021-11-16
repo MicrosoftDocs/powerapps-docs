@@ -1,21 +1,21 @@
 ---
 title: Use the Measure in MR component in Power Apps (Preview)
 description: Digitally measure distances and create areas and shapes in the real world with augmented reality features in Power Apps.
-author: iaanw
-manager: shellyha
+author: anuitz
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 3/25/2021
 ms.subservice: canvas-maker
-ms.author: iawilt
+ms.author: anuitz
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 contributors:
-  - iaanw
+  - tapanm-msft
+  - anuitz
 ---
 # Take measurements in mixed reality
 
@@ -61,11 +61,14 @@ The following properties are on the component's **Measure in MR** pane on the **
 Note that some properties are only available under **More options** in the **Advanced** tab on the **Measure in MR** pane.
 
 Property | Description | Type | Location
-- | - | - | -
+| - | - | - | -
 Unit of measurement | What unit the measurements should be shown and returned in. | Drop-down selection | **Properties** (also in **Advanced**)
 Measurement type | What type of measurement the user can make, whether point-to-point distance, a complete area, or a three-dimensional volume (area plus height or depth). | Drop-down selection | **Properties** (also in **Advanced**)
-Measurements | Table describing the measured volumes and areas, composed of:<ul><li>Units - String describing the base unit of this measurement</li><li>Height - Number representing the height of the captured volume, or 0 if not a completed volume or 2D area</li><li>Length - Number representing the total length of the perimeter or path of the measurement </li><li>BoundingWidth - Number representing minimum width in units that bounds the shape </li><li>BoundingDepth - Number representing the minimum depth in units that bounds the shape  </li><li>Area - Number representing the estimated area of the enclosed shape in units squared </li><li>Volume - Number representing the estimated volume of the enclosed shape in units cubed </li><li>Segments - Table describing all segments in the given measurement object with the following properties:<ul><li>Distance - Number representing the total distance of a given segment in the given units of measure (for example, .52)</li><li>Direction - Vector describing the direction of the segment, normalized</li><li>X - Number specifying the X direction of the segment in world space (for example, 0.5)</li><li>Y - Number specifying the Y direction of the measurement in world space (typically 0)</li><li>Z - Number specifying the Z direction of the measurement in world space (for example, 0.5)</li></ul></li></li> | | Not applicable (output property only)
-Photos | The photos captured during the mixed reality session.<br/>You can [upload the mixed-reality photos to OneDrive and show them in a gallery](mixed-reality-take-upload-photos.md). | | Not applicable (output property only)
+Box Draw | Lock captured measurements to rectangular shapes by specifying only a width and a depth. | Boolean | **Properties** (also in **Advanced**)
+Expected Measurements (Items) | Data source (table) that lists a predefined set of measurements that you want the user to capture during a single session. You can map the labels you want to use for each measurement by using the _ItemsLabels_ property. | Not applicable | **Properties** (also in **Advanced**)
+ItemsLabels  | A column in _Items_ with the strings you want to use as the labels for the measurements you want users to capture. | ColumnName | **Advanced**
+Measurements | Table describing the measured distances, volumes and areas, composed of:<ul><li>Label - String that identifies the given measurement</li><li>Id - Number that uniquely identifies this measurement</li><li>Units - String describing the base unit of this measurement</li><li>Height - Number representing the height of the captured volume, or 0 if not a completed volume or 2D area</li><li>Length - Number representing the total length of the perimeter or path of the measurement </li><li>BoundingWidth - Number representing minimum width in units that bounds the shape </li><li>BoundingDepth - Number representing the minimum depth in units that bounds the shape  </li><li>Area - Number representing the estimated area of the enclosed shape in units squared </li><li>Volume - Number representing the estimated volume of the enclosed shape in units cubed </li><li>Segments - Table describing all segments in the given measurement object with the following properties:<ul><li>Length - Number representing the total distance of a given segment in the given units of measure (for example, .52)</li><li>DirectionX - Number specifying the X direction of the segment in world space (for example, 0.5)</li><li>DirectionY - Number specifying the Y direction of the measurement in world space (typically 0)</li><li>DirectionZ - Number specifying the Z direction of the measurement in world space (for example, 0.5)</li></ul></li></ul> | Table | Not applicable (output property only)
+Photos | The photos captured during the mixed reality session.<br/>You can [upload the mixed-reality photos to OneDrive and show them in a gallery](mixed-reality-take-upload-photos.md). | Not applicable | Not applicable (output property only)
 OnMixedRealitySelect | Behavior that is triggered when exiting the MR experience with new results. | Defined action | **Advanced**
 OnChange | Behavior that is triggered when any property on the button is changed. | Defined action | **Advanced**
 

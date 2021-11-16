@@ -7,11 +7,11 @@ ms.topic: conceptual
 ms.custom: 
 ms.date: 08/25/2021
 ms.subservice: teams
-ms.author: namarwah
+ms.author: jshum
 ms.reviewer: tapanm
 contributors:
   - joel-lindstrom
-  - navjotm
+  - josephshum
   - tapanm-msft
   - sbahl10
 ---
@@ -19,6 +19,9 @@ contributors:
 # Export Ideas data for reporting
 
 This article covers how to export your ideas data from your Microsoft Teams database to another location so you can archive and report on it.
+
+Watch this video to learn how to export ideas for reporting:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLkvT]
 
 ## Prerequisites
 

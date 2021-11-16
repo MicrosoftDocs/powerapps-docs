@@ -22,7 +22,7 @@ search.app:
 ---
 # Design productive main forms in model-driven apps
 
-Building experiences where tasks can be completed quickly and effectively is crucial to user satisfaction. Model-driven apps provide many options to build highly performant experiences, including application-level options, site map organization options, and many form-creation options.
+Building experiences where tasks can be completed quickly and effectively is crucial to user satisfaction. Model-driven apps provide many options to build highly efficient experiences, including application-level options, site map organization options, and many form-creation options.
 
 This article shows you how to design highly efficient and productive forms in a model-driven app, including how to work with main forms, main form dialogs, form component controls, quick create forms, and quick view forms.
 
@@ -50,9 +50,8 @@ The following image shows the layout of a Unified Interface application.
 - The form header is part of the form. It includes the table and record name, the ability to switch to additional forms for the table, four read-only fields of the record, and the tabs included on the form. Forms only appear in the form selector if they've been enabled and added to the application. More information: [Create and design model-driven app forms](create-design-forms.md) 
 - Form headers also have a mode where you can add more than four fields and provide a simple navigation to edit the fields in the header and any additional field you want a user to easily access from the form header. Additional tabs should be used to access information that isn't primary to the task at hand, or to focus the user on data or information that's specific to a given task but isn't primary to the job. Information that's necessary and is primary to working with data should be on the first tab and should never be hidden.
 - The form body is the area on the form that should be used to interact with data of the primary record and any related records that are essential to completing a task. We recommend that you limit the data to the top tasks that need to be done on the first tab and move secondary tasks to additional tabs. You should also consider [building forms based on specific business needs and roles](design-considerations-main-forms.md) when designing your application. Also, if some data is rarely used you should consider building another form that can be accessed when a user needs to reference that data or information. This will help ensure a highly performant form and will help the user stay focused on important tasks that need to be completed.
-- The form footer displays the form status and commands for saving and displaying the form in a new pop-out window. Only the form footer width can be customized.
 > [!IMPORTANT]
-> [Form footers will be deprecated](/power-platform/important-changes-coming#form-footers-in-model-driven-apps-wont-be-supported-with-the-2021-release-wave-2) with the 2021 Release Wave 2 (August 2021 Preview / October 2021 GA). We recommend that you plan to remove any controls you have added out of the footer as it will no longer render on model-driven app forms.
+> [Form footers are deprecated](/power-platform/important-changes-coming#form-footers-in-model-driven-apps-wont-be-supported-with-the-2021-release-wave-2) with the 2021 Release Wave 2 (August 2021 Preview / October 2021 GA). Remove any controls you have added out of the footer.
 
 ## Example scenario of productive form design
 

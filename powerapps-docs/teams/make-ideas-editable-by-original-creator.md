@@ -5,13 +5,13 @@ author: sbahl10
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/02/2021
+ms.date: 10/06/2021
 ms.subservice: teams
-ms.author: namarwah
+ms.author: jshum
 ms.reviewer: tapanm
 contributors:
   - joel-lindstrom
-  - navjotm
+  - josephshum
   - tapanm-msft
   - sbahl10
 ---
@@ -28,6 +28,9 @@ In this article, we'll learn how to enable the editing of an idea by the origina
 
 > [!NOTE]
 > Before starting with the steps in this article, read [Customize the Employee Ideas app](customize-employee-ideas.md).
+
+Watch this video to learn about how to make ideas editable by original creator:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWMToi]
 
 ## Prerequisites
 

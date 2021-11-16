@@ -17,7 +17,7 @@ search.app:
 ---
 # Form OnLoad event (Client API reference)
 
-The form `OnLoad` event occurs after the form has loaded. It also occurs after a record is created, for example by selecting the **Save** button on the main form.  Use the `OnLoad` event to apply logic about how the form should be displayed, to set properties on columns, and interact with other page elements.
+The form `OnLoad` event occurs after the form has loaded. It also occurs after a record is saved on create or update, and on refresh. For example by selecting the **Save** or the **Refresh** button on the main form.  Use the `OnLoad` event to apply logic about how the form should be displayed, to set properties on columns, and interact with other page elements.
 
 You can determine in what context the `OnLoad` event occurs by using [getEventArgs](../executioncontext/getEventArgs.md). By doing so, you can apply logic conditional on the context. 
 
