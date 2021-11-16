@@ -1,5 +1,5 @@
 ---
-title: "Edit multiple rows| MicrosoftDocs"
+title: "Edit multiple rows (Bulk edit)| MicrosoftDocs"
 description: Edit multiple rows in model-driven Power Apps.
 author: mduelae
 manager: kvivek
@@ -19,11 +19,14 @@ search.app:
   - D365CE
 ---
 
- # Edit multiple rows
+ # Edit multiple rows (Bulk edit)
  
  [!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
  
 You can edit multiple rows in model-driven apps and quickly update several columns of data across multiple rows in a single action. This is useful in scenarios when you need to update the same column for multiple rows.
+
+>[!NOTE]
+> Your administrator must grant you the Bulk Edit [miscellaneous privilege](/power-platform/admin/miscellaneous-privileges#:~:text=prvBulkEdit) to edit multiple rows.
 
 Columns such as timeline wall, quick view forms, reference panel, and etc. aren't available when you're editing multiple rows.
 
@@ -33,7 +36,7 @@ Columns such as timeline wall, quick view forms, reference panel, and etc. aren'
    ![Edit multiple rows.](media/bulk-edit.gif "Edit multiple rows")
 
 
-The **Edit (number of rows) records** dialog opens with the default form for the table.
+The **Edit (number of rows) records** dialog opens with your last used form for the table.
 
 > [!div class="mx-imgBorder"]
 > ![How to user bulk edit](media/bulk-edit-legend.png "How to use bulk edit")
@@ -52,5 +55,4 @@ Legend
 > You can't edit multiple rows with Power Apps mobile.
 
 
-
-
+[!INCLUDE[footer-include](../includes/footer-banner.md)]
