@@ -14,18 +14,31 @@ search.audienceType:
 search.app: 
   - "PowerApps"
 ---
-# Overview of custom pages for model-driven apps (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+# Overview of custom pages for model-driven apps
 
 The custom page is a new page type within a model-driven app, which brings the power of canvas apps into model-driven apps. Custom pages increase the convergence of model-driven and canvas apps and can be used to add full pages, dialogs, or panes with the flexibility of the canvas designer. It also includes a low-code page authoring experience with expressions and custom Power Apps component framework controls.  
 
-This new page can be more flexible than a model-driven app form, view, or dashboard page. It lets you include one or more tables. Then, the maker can define the data and component interactions. The custom page is a separate solution element supporting co-authoring at a page level. Like other model-driven app pages, the page state is either from the parameters passed or retrieved from persisted tables.
+This new page can be more flexible than a model-driven app form, view, or dashboard page. It lets you include one or more tables. Then, the maker can define the data and component interactions. The custom page is a separate solution element, which allows one maker to edit one custom page at a time. Like other model-driven app pages, the page state is either from the parameters passed or retrieved from persisted tables.
 
 > [!IMPORTANT]
-> - This is a preview feature, and isn't available in all regions.
+> - The base functionality of custom pages has moved to general availability in all regions.  However some specific or new capabilities are still in public preview and are marked with _(preview)_.
 > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)] 
 > - Custom pages are a new feature with significant product changes and currently have a number of known limitations outlined in [Custom Page Known Issues](model-app-page-issues.md).
+
+| Capability | Status | Notes |
+| -- | -- | -- |
+| Runtime for custom pages | General Availability |
+| Solution and ALM for custom pages | General Availability |
+| Connectors in custom pages | General Availability | [List of all Power Apps connectors](/connectors/connector-reference/connector-reference-powerapps-connectors) |
+| Modern controls in custom pages | General Availability | [List of supported controls](design-page-for-model-app.md#supported-controls-in-a-custom-page)
+| Code components in custom pages | General Availability |
+| Monitor support for custom pages | General Availability |
+| Authoring custom pages | Public Preview | Modern app designer and canvas designer are expected to be used to author custom page that are supported at runtime |
+| Canvas components in custom pages | Public Preview |
+| Custom page in Teams model-driven app | Public Preview |
+| Custom page in mobile online | Public Preview | iOS must allow enabling “Allow cross site tracking” that can be prevented by device management |
+
+## Examples of custom pages
 
 Below shows the custom page inline within the model-driven app. The model-driven app has the full-page space in the images without the header and navigation.
 
@@ -43,6 +56,12 @@ Below shows the custom page inline within the model-driven app. The model-driven
 
   > [!div class="mx-imgBorder"]
   > ![Custom page as side dialog](media/model-app-page-overview/page-side-dialog-model-app.png "Custom page as side dialog")
+  > 
+
+[Custom page as an app side pane](/powerapps/developer/model-driven-apps/clientapi/create-app-side-panes) allows opening a custom page within the new app side pane on the right side of the app.
+
+  > [!div class="mx-imgBorder"]
+  > ![Custom page as app side pane](media/model-app-page-overview/page-app-side-pane-model-app.png "Custom page as app side pane")
   > 
 
 Custom pages must be created from a solution either from the modern app designer or the **Solution** area in Power Apps using **New** > **Page**. More information: [Add a custom page to your model-driven app](add-page-to-model-app.md)
@@ -72,7 +91,7 @@ To migrate an existing standalone canvas app, first start by identify a mapping 
 
 * What data can the custom page use?
 
-  A custom page can use Microsoft Dataverse and some of the most common connectors for Power Apps. The summary of verified connectors are listed in [Add connectors into custom pages](page-data-connectors.md).
+  A custom page can use Microsoft Dataverse and all of the connectors for Power Apps. More information: [List of all Power Apps connectors](/connectors/connector-reference/connector-reference-powerapps-connectors).
 
 * What interactions can the custom page have with the model-driven app?
 
@@ -102,7 +121,7 @@ To migrate an existing standalone canvas app, first start by identify a mapping 
 
 [Using PowerFx in custom page](page-powerfx-in-model-app.md)
 
-[Add connectors into custom pages](page-data-connectors.md)
+[Add connectors into custom pages](../canvas-apps/add-data-connection.md)
 
 [Use Monitor to troubleshoot custom page](monitor-page-checker.md)
 
