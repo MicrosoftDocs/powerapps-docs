@@ -111,6 +111,8 @@ To share an app you need 2 actions are required.
 
 !["Acquiring the link for a model-driven app"](media/share-model-driven-app/app-designer-copy-web-url-process.gif "Acquiring the link for a model-driven app")
 
+Sharing an app and security roles are intrinsically linked.  To properly share an app you need to have a strong understanding of both.  [Discover more about sharing apps and establishing security](share-model-driven-app.md)
+
 ## Using a model-driven app
 
 Documentation has been developed that is dedicated to helping **users** of model driven apps to successfully navigate around them and interact with them in a way that lets them be more productive.
@@ -119,7 +121,7 @@ Documentation has been developed that is dedicated to helping **users** of model
 
 ## Next steps
 
-[Build your first app](build-first-model-driven-app.md)
+[Build your first modern app](build-first-model-driven-app.md)
 
 [Meet the model-driven app designers](model-driven-designers.md)
 
