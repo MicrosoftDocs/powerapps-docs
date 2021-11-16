@@ -30,7 +30,7 @@ Adding a tab on a table main form to display SharePoint documents helps users di
 ![Document files tab.](media/document-files-tab.png)
 
 > [!IMPORTANT]
-> To use this feature document management must be enabled. For more information see: [Manage documents using SharePoint](/dynamics365/customer-engagement/admin/manage-documents-using-sharepoint)
+> To use this feature you must enable document management. More information: [Manage documents using SharePoint](/dynamics365/customer-engagement/admin/manage-documents-using-sharepoint)
 
 ## Add the documents tab in the FormXML
 

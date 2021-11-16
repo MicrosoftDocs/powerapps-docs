@@ -49,9 +49,9 @@ A chart can be added to a form or an existing list to a chart can be updated. Fo
          - **Show All Views**. Provide a full list of views associated with the value set in the **Table** property.
          - **Show Selected Views**. Select this setting to limit the list of views available at runtime. To select the specific views to be displayed, hold down the Ctrl key and tap or select each view that needs to be included.
 
-    - **Display Chart Selection**: When enabled, users can change the type of chart (column, bar, pie, etc.) on the form. If the user changes the type of chart, the settings aren’t saved. The chart type reverts to the **Default Chart** setting when the form is closed.
+    - **Display Chart Selection**: When enabled, users can change the type of chart, such as column, bar, or pie, on the form. If the user changes the type of chart, the settings aren’t saved. The chart type reverts to the **Default Chart** setting when the form is closed.
 
-1. Publish the customization. For more information on publishing see: [Publish changes](../data-platform/create-solution.md#publish-changes)
+1. Publish your customization.More information: [Publish changes](../data-platform/create-solution.md#publish-changes)
 
 ## See also
 

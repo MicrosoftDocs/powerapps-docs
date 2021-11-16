@@ -30,9 +30,6 @@ search.app:
 
 [!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
->[!Note]
->Tables used to be called Entities. The apps designer may still use the term entity in some places. e.g. *Entity assets* rather than *Table assets*.
-
 This tutorial describes how to add components to and remove components from a model-driven app.
 
 A model-driven app is made up of various components. Two types of components can be added to an app:
@@ -43,6 +40,9 @@ A model-driven app is made up of various components. Two types of components can
 Tables, dashboards and business process flows are all artifacts of an app.
 
 Table assets consist of forms, views, charts, and dashboards related to a specific table included in an app.
+
+>[!Note]
+>Tables used to be called entities. The classic app designer uses the term entity in most places. For example, *Entity assets* rather than *Table assets*.
   
 ## App designer layout
 
@@ -56,7 +56,7 @@ The app designer has two main areas. On the left side is the canvas, where app c
  > [!div class="mx-imgBorder"]
  > ![App designer components.](../model-driven-apps/media/app-designer-canvas-components-tab.png "App designer components")  
   
- The canvas includes areas for the **Site Map**, *Business Process Flow**, **Dashboards** and **Tables**.
+ The canvas includes areas for the **Site Map**, *Business Process Flow**, **Dashboards**, and **Tables**.
 
  After the tables are in place, select each table and add the required table assets such as forms, views, and charts to it.
 
@@ -73,7 +73,7 @@ The app designer has two main areas. On the left side is the canvas, where app c
 
 ## Add or edit a site map
 
-Before an app component can be added to a newly created app, a site map must be defined. For more information see: [Create a model-driven app site map using the site map designer](create-site-map-app.md).
+You must define a site map before app components can be added to a newly created app. More information: [Create a model-driven app site map using the site map designer](create-site-map-app.md).
 
 ## Add a component
 
@@ -97,7 +97,7 @@ To add a dashboard to an app, follow these steps:
 
 1. If users need to use only selected dashboard then select the check box for the component that needs to be added. The following types of dashboards are available:
     - **Classic Dashboards** appear on both the web app and the Unified Interface app.
-    - **Interactive Dashboards** appear only on the Unified Interface app. If the client type for the app is selected as web app then the **Interactive Dashboards** option will not be displayed.
+    - **Interactive Dashboards** appear only on the Unified Interface app. If you have selected the client type for the app as web app, then the **Interactive Dashboards** option will not be displayed.
 
      Those dashboards will be added to the **Dashboard** tile on the app designer canvas. The **Dashboard** tile also shows a count of the number of dashboards added to the app. If no dashboard is selected then **All** will appear instead of the dashboard count and all dashboards will be available to users when they use the app.  
   
@@ -108,7 +108,7 @@ To add a dashboard to an app, follow these steps:
     > [!div class="mx-imgBorder"]
     > ![Add table to the app designer canvas.](../model-driven-apps/media/add-entity-app-designer-canvas.png "Add a table to the app designer canvas")  
   
-2. If the required dashboard doesn't exist in the default solution then create a dashboard by selecting **Create New** on the **Components** tab to the right of the canvas.  
+2. If the dashboard you want doesn't exist in the default solution, then create a dashboard by selecting **Create New** on the **Components** tab to the right of the canvas.  
   
      > [!div class="mx-imgBorder"]
      > ![Create New link on the Components tab of app designer.](../model-driven-apps/media/app-designer-components-tab-create-new.png "Create New link on the Components tab of the app designer")  
@@ -125,14 +125,14 @@ To add a business process flow to an app, follow these steps:
   
      On the app designer canvas, the right pane shows dashboards that are available in the default solution.  
 
-1. In the **search** box, type one or more keywords matching the required business process flow name.
+1. In the **Search** box, type one or more keywords that match the business process flow name you want.
   
-     The business process flow list will be filtered to show results that match keywords.
+     The business process flow list is filtered to show results that match keywords.
 
-1. If the required dashboard doesn't exist in the default solution then create a dashboard by selecting **Create New** on the **Components** tab to the right of the canvas.  
+1. If the dashboard you want doesn't exist in the default solution, then create a dashboard by selecting **Create New** on the **Components** tab to the right of the canvas.  
   
     > [!NOTE]
-    > When adding a business process flow the **Create New** option opens the Create Process dialog appears. To learn more about creating business process flows, see [Create a business process flow](/flow/create-business-process-flow)
+    > When adding a business process flow, the **Create New** option opens the **Create Process** dialog. To learn more about creating business process flows, go to [Create a business process flow](/flow/create-business-process-flow)
 
 1. Complete the above steps by selecting **Save**.
 
@@ -144,18 +144,18 @@ To add a table to an app, follow these steps:
   
      On the app designer canvas, the right pane shows dashboards that are available in the default solution.  
 
-1. In the **search** box, type a one or more keywords matching the required table name
+1. In the **Search** box, type a one or more keywords matching the table name you want.
   
-     The table list will be filtered to show results that match the keywords.
+     The table list is filtered to show results that match the keywords.
 
     > [!NOTE]
-    > When adding a table the **Create New** option opens the New Table dialog appears. To learn more about creating tables see [Create a custom table](../data-platform/data-platform-create-entity.md).
+    > When adding a table the **Create New** option opens the **New Table** dialog. To learn more about creating tables go to [Create a custom table](../data-platform/data-platform-create-entity.md).
 
 1. Complete the above steps by selecting **Save**.
   
 ## Add table assets
 
- With the components in place, table assets like forms, views, charts and dashboards can be added to the app.
+ With the components in place, table assets like forms, views, charts, and dashboards can be added to the app.
   
  This section describes the steps for adding a form to the app. Use the same steps to add a view or chart to the app.  
   
@@ -169,7 +169,7 @@ To add a table to an app, follow these steps:
   
      ![Form tile for case table.](../model-driven-apps/media/add-forms-entity.png "Form tile for case table")  
   
-     If none of the forms for a table are selected then all the forms for that table will be displayed to the end users while they use the app. This behavior is similar for views and charts also, if no view or chart is selected. This helps to create apps quickly when all available components are required. There is no need to select each component during app design.  
+     If none of the forms for a table are selected then all the forms for that table will be displayed to the users while they use the app. This behavior is similar for views and charts also, if no view or chart is selected. This helps to create apps quickly when all available components are required. There is no need to select each component during app design.  
 
      If no dashboards or business process flows are selected then all the dashboards and business process flows will be available for users while they use the app.
   
@@ -187,16 +187,16 @@ To add a table to an app, follow these steps:
   
      The form designer opens. More information: [Create and design forms](create-design-forms.md)  
   
-     When adding a view or a chart, the **Create New** option opens the corresponding designer. For more  information see: [Understand views](create-edit-views.md) and [Create or edit a system chart](create-edit-system-chart.md)  
+     When you add a view or a chart, the **Create New** option opens the corresponding designer. For more  information go to: [Understand views](create-edit-views.md) and [Create or edit a system chart](create-edit-system-chart.md)  
   
     > [!NOTE]
-    >  When adding a view, public views can be selected that are listed under the **Views** node in the solution explorer.  
+    >  When you add a view, public views can be selected that are listed under the **Views** node in the solution explorer.  
   
 1. Select the down arrow ![Drop down icon.](../model-driven-apps/media/drop-down-icon.png "down arrow") to expand the tile and see a list of forms that have been added.  
   
      ![Form tile expanded in app designer.](../model-driven-apps/media/app-designer-expanded-form-tile.png "Form tile expanded in the app designer")  
   
-1. Repeat these steps to add table views and charts to the app.  
+1. Repeat the previous steps to add table views and charts to the app.  
   
 1. Select **Save**.  
   
