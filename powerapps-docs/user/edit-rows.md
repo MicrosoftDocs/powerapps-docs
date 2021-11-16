@@ -51,10 +51,8 @@ Legend
 6. Shows the form details that can be edited.
 7. Save or cancel your changes. Saved changes are saved for all selected rows.
 
-### See also
-
-[How to import data](/powerapps/user/import-data)  
-[Remove a large amount of specific, targeted data with bulk deletion](/power-platform/admin/delete-bulk-records)  
+> [!NOTE]
+> You can't edit multiple rows with Power Apps mobile.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

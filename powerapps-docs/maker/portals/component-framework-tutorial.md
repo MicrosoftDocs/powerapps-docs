@@ -1,6 +1,6 @@
 ---
-title: Tutorial on how to use code components in portals (preview)
-description: This page walks you through example steps for creating a sample code component and adding it to a model-driven app inside Power Apps portals.
+title: "Tutorial: How to use code components in portals"
+description: Walk through example steps for creating a sample code component and adding it to a model-driven app inside Power Apps portals.
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
@@ -19,7 +19,7 @@ contributors:
 
 [This article is pre-release documentation and is subject to change.]
 
-In this tutorial, you’ll create a sample component using Power Apps component framework. You’ll then package this component to a Dataverse environment and add the component to model-driven app. Then, you’ll configure Power Apps portals to add the component to a basic form, set access for the Web Resource table, and add the basic form to a webpage. Finally, you’ll visit the portals webpage and interact with the component.
+In this tutorial, you'll create a sample component using Power Apps component framework. You'll package this component to a Dataverse environment and add the component to a model-driven app. You'll then configure Power Apps portals to add the component to a basic form, set access for the **Web Resource** table, and add the basic form to a webpage. Finally, you'll visit the portals webpage and interact with the component.
 
 ## Prerequisites
 
@@ -27,16 +27,16 @@ In this tutorial, you’ll create a sample component using Power Apps component 
 - Your starter portal package must be [9.2.2103.x](versions/package-version-9.2.2103.md) or higher.
 
 > [!NOTE]
-> This tutorial is based on the existing Power Apps component framework tutorial that walks you through creating the [TSLinearInputComponent](../../developer/component-framework/implementing-controls-using-typescript.md) for the **Opportunity** table on the **Main** form. You can also use any existing or new component, and any other table for this tutorial. In this case, ensure to use your component and form when following the steps in this tutorial.
+> This tutorial is based on the existing Power Apps component framework tutorial that walks you through creating the [TSLinearInputComponent](../../developer/component-framework/implementing-controls-using-typescript.md) for the **Opportunity** table on the **Main** form. You can also use any existing or new component, and any other table for this tutorial. In this case, be sure to use your component and form when following the steps in this tutorial.
 
 ## Step 1. Create your first component
 
 To create a sample component, follow the steps in the tutorial [Create your first component](../../developer/component-framework/implementing-controls-using-typescript.md).
-At the end of this tutorial, you’ll have the component named TSLinearInputComponent packaged and uploaded to your Dataverse environment.
+At the end of this tutorial, you'll have the component named TSLinearInputComponent packaged and uploaded to your Dataverse environment.
 
 ## Step 2. Add the code component to a field in a model-driven app
 
-Now that you have the TSLinearInputComponent component uploaded to the Dataverse environment, follow the steps in the tutorial [Add a code component to a field in model-driven apps](../../developer/component-framework/add-custom-controls-to-a-field-or-entity.md) to add the component to the **Opportunity** table on the **Main** form.
+Now that you have the TSLinearInputComponent uploaded to your Dataverse environment, follow the steps in the tutorial [Add a code component to a field in model-driven apps](../../developer/component-framework/add-custom-controls-to-a-field-or-entity.md) to add the component to the **Opportunity** table on the **Main** form.
 
 ## Step 3. Verify the model-driven app with the new component
 
@@ -88,7 +88,7 @@ In this step, you’ll create a new basic form in portals and then add the compo
 
 7.  Select **Type** as **Attribute**.
 
-8.  Select **Attribute Logical Unit Name** as *Budget Amount (budgetamount)*.
+8.  Select **Attribute Logical Name** as *Budget Amount (budgetamount)*.
 
     ![Budget Amount attribute logical name.](media/component-framework/attribute-logical-name.png "Budget Amount attribute logical name")
 
@@ -160,7 +160,7 @@ In this step, you’ll create a new basic form in portals and then add the compo
 13. Under **Name**, select the basic form that you created earlier in this tutorial.
 
     > [!TIP]
-    > If you don’t see the form available, try **Sync Configuration** to synchronize changes from the Dataverse.
+    > If you don’t see the form available, try **Sync Configuration** to synchronize changes from Dataverse.
 
 14. On the top-right corner, select **Browse website**.
 
