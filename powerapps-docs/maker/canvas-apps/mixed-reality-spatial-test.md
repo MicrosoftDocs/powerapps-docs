@@ -1,75 +1,93 @@
 ---
-title: Test for object fit using Measure in MR
-description: Create a spatial test filter in Mixed Reality.
+title: Test measurements in mixed reality
+description: Learn about how to test measurements or fittings of objects with width, depth, and height using mixed reality components in canvas apps.
 author: alex-msft
-manager: jopile
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: iaanw
+ms.reviewer: tapanm-msft
 ms.date: 8/26/2021
 ms.subservice: canvas-maker
-ms.author: iawilt
+ms.author: altran
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 contributors:
-  - iaanw
+  - tapanm-msft
+  - anuitz
+  - alex-msft
 ---
 
-# Test for object fit using Measure in MR
-Using the [Measure in MR](mixed-reality-component-measure-distance.md) control you can create a spatial test filter to validate whether an object with known width, depth, and height dimensions will fit in a space. This topic will guide you through creating a test app that you can use to validate fit including: 
-- Inserting the **Measure In MR** component into an application to measure volumes
-- Setting up **Expected Measurements (Items)** to help users maintain context in the MR experience
-- Creating a spatial test filter using the **Bounding Width**, **Bounding Width**, and **Height** properties from the measurement outputs
+# Test measurements in mixed reality
+
+Using the [Measure in MR](mixed-reality-component-measure-distance.md) control, you can create a spatial test filter to validate whether an object with known width, depth, and height dimensions will fit in a space. This topic will guide you through creating a test app that you can use to validate the collected measurements, including:
+
+- Inserting the **Measure In MR** component into an application to measure volumes.
+- Setting up **Expected Measurements (Items)** to help users maintain context in the mixed reality experience.
+- Creating a spatial test filter using the **Bounding Width**, **Bounding Width**, and **Height** properties from the measurement outputs.
 
 ## Prerequisites
 
-- Create a blank canvas app ready for editing.
-  - Go to the [Power Apps Studio](https://create.powerapps.com) and, under the **Start with a blank canvas or a template** section, select **Phone layout** on the **Blank app** tile.
+Create a blank canvas app using [Power Apps Studio](https://create.powerapps.com) by selecting **Phone layout** under **Blank app** inside **Start with a blank canvas or a template**.
 
 > [!TIP]
-> The MR components work best in well-lit environments with flat-textured surfaces. When establishing tracking, point the device at the surface you would like to track and slowly pan the device from right to left in broad arm motions. If tracking fails, exit and enter the MR view to reset the tracking and try again.
->
-> LIDAR-enabled devices will also result in better tracking.
+> - The MR components work best in well-lit environments with flat-textured surfaces. When establishing tracking, point the device at the surface you would like to track and slowly pan the device from right to left in broad arm motions. If tracking fails, exit and enter the MR view to reset the tracking and try again.
+> - LIDAR-enabled devices will also result in better tracking.
 
 ## Set up minimum dimensions input fields
 
-First, we’ll set up the dimensions to validate for fit.
+First, we’ll set up the dimensions to validate measurements.
 
-1. Open the **Insert** tab, and insert three **Text labels** into the application.
+1. Select the **Insert** tab, and insert three **Text labels** on the canvas.
 
-![Screenshot showing how to insert a text label from the menu.](./media/augmented-measure-fit-test/fit-test-insert-text.png "Screenshot showing how to insert a text label from the menu.")
+    :::image type="content" source="media/augmented-measure-fit-test/fit-test-insert-text.png" alt-text="Screenshot showing how to insert a text label from the menu.":::
 
-2. Change their **Text** properties to `"Minimum Width"`, `"Minimum Depth"`, and `"Minimum Height"` respectively.
+1. Change **Text** properties for the added labels to `"Minimum Width"`, `"Minimum Depth"`, and `"Minimum Height"`.
 
-![Screenshot showing placed text labels.](./media/augmented-measure-fit-test/fit-test-completed-labels.png  "Screenshot showing placed text labels.")
+    :::image type="content" source="media/augmented-measure-fit-test/fit-test-completed-labels.png" alt-text="Screenshot showing placed text labels.":::
 
-3. Open the **Insert** tab again, and insert 3 **Text Input** controls, and position them next to the three labels inserted above.
-5. In the **Properties** pane for each Text Input rename them to `minWidth`, `minDepth`, and `minHeight` respectively.
-6. For each Text Input set the **Format** to **Number** and set the **Default** value to `1.0`
+1. Select the **Insert** tab, insert three **Text Input** controls, and position them next to the three labels inserted in the previous step.
 
-![Screenshot showing text inputs and properties.](./media/augmented-measure-fit-test/fit-test-text-input.png "Screenshot showing text inputs and properties.")
+1. Rename Text Input controls to `minWidth`, `minDepth`, and `minHeight`.
+
+1. For all three Text Input control added in the previous step, set the **Format** property to **Number** and set the **Default** property value to `1.0`.
+
+    :::image type="content" source="media/augmented-measure-fit-test/fit-test-text-input.png" alt-text="Screenshot showing text inputs and properties.":::
 
 ## Insert and bind the Measure in MR component
 
 Next, we’ll set up the **Measure in MR** component to allow users to capture measurements, and bind the output value we will use to validate fit.
 
-1. Open the **Insert** tab.
-2. Expand **Mixed Reality**.
-3. Select the component **Measure in MR** and place it at the bottom of the application.
+1. Select the **Insert** tab.
 
-![Screenshot showing insertion of a Measure in MR control.](./media/augmented-measure-fit-test/fit-test-insert-measure-in-mr.png "Screenshot showing insertion of a Measure in MR control.")
+1. Expand **Mixed Reality**.
 
-4. Select the component by clicking on it to open the **Properties** Panel on the right hand side of the Studio.
-5. Set **Measurement Type** to **Volume** from the drop down menu.
-6. Set **Box Draw** to **True**.
-7. Set **Units of Measurement** to either **Feet** or **Meters**.
+1. Select **Measure in MR**, and place it at the bottom of the application.
 
-![Screenshot showing Measurement Type and Units of Measurement property values.](./media/augmented-measure-fit-test/fit-test-units-and-type.png "Screenshot showing Measurement Type and Units of Measurement property values.")
+    :::image type="content" source="media/augmented-measure-fit-test/fit-test-insert-measure-in-mr.png" alt-text="Screenshot showing insertion of a Measure in MR control.":::
 
-8. Next we'll define a table with a single expected measurement to provide an interaction hint during each user session. Under either the **Advanced** pane or the drop down menu on the **Formula Bar** at the top of the screen find the Items property and set it to: `Table({label:"Test Volume"})`
+1. Update the following properties for **Measure in MR** component.
+
+    | Property name | Value |
+    | - | - |
+    | Units of Measurement | Feet or Meters |    
+    | Measurement Type | Volume |
+    | Box Draw | True |
+
+    :::image type="content" source="media/augmented-measure-fit-test/fit-test-units-and-type.png" alt-text="Screenshot showing Measurement Type and Units of Measurement property values.":::
+
+1. Select the **Items** property from the upper-left side of the screen for the **Measure in MR** component, and update the formula to the following.
+
+    ```powerapps-dot
+    `Table({label:"Test Volume"})`
+    ```
+
+    This formula creates a table with the label of "Test Volume" as a single expected measurement output.
+
+Select the **ItemsLabels** property of the **Measure in MR** component to `"Value"`.
+
+1. Define a table with a single expected measurement to provide an interaction hint during each user session. Under either the **Advanced** pane or the drop down menu on the **Formula Bar** at the top of the screen find the Items property and set it to: `Table({label:"Test Volume"})`
 9. Also under the **Advanced** pane or the **Formula Bar** find the **ItemsLabels** property and set it to: `"Value"`
 
 ![Screenshot showing formula bar settings for Items.](./media/augmented-measure-fit-test/fit-test-formula-bar-items.png "Screenshot showing formula bar settings for Items.")
