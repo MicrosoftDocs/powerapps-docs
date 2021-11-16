@@ -43,7 +43,13 @@ When the app is validated, the app designer canvas shows details about the asset
 
 ## How to validate an app and add in dependencies
 
-1.  In the app designer, select **Validate**.  
+1.  Navigate to the maker portal at make.powerapps.com
+2.  Select the environment in which the unmanaged model-driven app is located.
+3.  Navigate to the model-driven app using the solution explorer.
+4.  Select the three dots next to the app and edit.  The classic app designer will open.
+  >[!Note]
+  > This experience may change as the maker experience moves from a classic to a modern one.
+5.  In the app designer, select **Validate**.  
   
     :::image type="content" source="media/validate-app.png" alt-text="validate app":::
   
@@ -59,13 +65,13 @@ When the app is validated, the app designer canvas shows details about the asset
 
        :::image type="content" source="media/app-designer-add-dependencies.png" alt-text="add dependencies":::
   
-2.  To add the required assets, select the **Required** tab on the right side of the canvas. The **Required** tab is visible when at least one required asset is missing from the app.  
+6.  To add the required assets, select the **Required** tab on the right side of the canvas. The **Required** tab is visible when at least one required asset is missing from the app.  
   
      The tab shows an alternate list of required components.  
   
      ![Required tab showing a list of missing components in the app.](media/app-designer-required-components-tab.png "Required tab showing a list of missing components in the app")  
   
-3.  Select the assets that to be added, and then select **Add Dependencies**. When the required asset has been added, the error count on the tile to which the asset has been added decreases.
+7.  Select the assets that to be added, and then select **Add Dependencies**. When the required asset has been added, the error count on the tile to which the asset has been added decreases.
   
     > [!NOTE]
     >  If a common asset is required across various app components-for example, a form is required for a dashboard and a table-and you add that asset only once from the dashboard dependency tree, the dependency count will decrease only on the dashboard tile, but not on the table tile. However, the dependency will be resolved for both.  

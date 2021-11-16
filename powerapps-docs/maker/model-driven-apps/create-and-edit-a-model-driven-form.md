@@ -25,7 +25,7 @@ Main forms have a default three-column layout. Model-driven form fields and comp
 1. Select **Data** > **Tables** > **Account**.
 1. Select the **Forms** tab.
 1. Select **Add Form** from the command bar, and then select **Main Form**.
-1. The form designer opens for you to configure the properties for the form.
+1. The form designer opens to enable you to configure the properties for the form.
 
 | Property| Description                                                                                                                                                                                                                                                     |
 |----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

@@ -73,11 +73,11 @@ In the example shown we can see the module that relates to a given lesson within
 
 3. Select the table required.
 
-4. Select Forms tab.
+4. Select **Forms** tab.
 
-5. Either select the quick view form, or select the 3 dots next to the form.
+5. Either select the quick view form, or select the 3 dots next to the form and select **Edit form in new tab**.
 
-6. Add or remove columns as required
+6. Add or remove table columns as required
   
   > [!IMPORTANT]
   > Required columns cannot be deleted. If you add a Required column to the form, you cannot delete it. If you do not want the column in the form you have to delete the form and then recreate it.
@@ -92,8 +92,8 @@ In the example shown we can see the module that relates to a given lesson within
 
 2.  Expand **Data**, select **Tables**, select the table that you want, and then select the **Forms** tab.  
 
-3. Select a form, which **Type** is
-4. In the form designer, from the Components pane from the , select **Quick view**.  
+3. Select a form, which **Type** is **Main**
+4. In the form designer, from the Components pane select **Quick view**.  
   
 5.  In the **Select quick view forms** dialog box, select the **Lookup** column, and then select the Lookup column value. More information: [Quick view control properties](quick-view-control-properties-legacy.md).  
  **Main**.
@@ -108,10 +108,21 @@ In the example shown we can see the module that relates to a given lesson within
     > [!IMPORTANT]
     > Be aware of the behavior that occurs when you create a parent relationship with the same table. For example, if Account has a relationship to Account and a lookup is created that is used by a quick create form that creates a parent row, the first row will not be saved with the lookup that has the parent row value. This is because of the circular reference introduced by using the same table. If this issue is experienced it can be resolved by removing the parent row id on the quick create form before saving the row.
 
+## Quick view form properties
+
+When the quick view form is used in a main form the following properties can be set or updated.
+
+|Property|Description|  
+|--------------|-----------------|  
+|**Name**|**Required**: The unique name for the quick view form that is used when referencing it in scripts.|  
+|**Label**|**Required**: A label to display for the quick view form.|  
+|**Display label on the Form**|Displays the label on the form.|  
+|**Lookup Column**|Choose one of the lookup columns included in the form.|  
+|**Related table**|This value depends on the **Lookup Column** chosen. It is usually the primary table for the 1:N table relationship for the lookup.<br /><br /> If the table includes a **Potential Customer** lookup that can accept either an account or contact, in the **Quick View Form** column you can choose a quick view form for both account and contact by changing this value and then choosing another quick view form.|  
+|**Quick View Form**|If the **Related table** has any quick view forms these can be selected here. Otherwise, select **New** to create one.<br />  
+
 ## Next steps
   
-  [Create and edit a card form](create-card-forms.md)
-
-
+[Create and edit a card form](create-card-forms.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

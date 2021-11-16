@@ -89,8 +89,6 @@ Dashboards can be standard or interactive.
   
 ## Next steps
 
-[Create a system table chart](create-edit-system-chart.md).
-
-[Set properties for a chart or list included in a dashboard](set-properties-chart-list-included-dashboard.md)
+[Configure interactive experience dashboards](configure-interactive-experience-dashboards.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

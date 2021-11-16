@@ -38,6 +38,8 @@ Model-driven apps are distributed as solution components. After a model-driven h
 After the solution (.zip file) is successfully imported in the target environment, the packaged app is available for use provided users are in the [security roles](model-driven-app-glossary.md#security-role) relevant to the tables in the app.
 
 The fact that we can move solutions between environments is the basis upon which we can apply [application lifecycle management](model-driven-app-glossary.md#application-lifecycle-management) to the products created.
+
+This page describes how to work with solutions in the most basic fashion.  However you may wish to review [detailed guidance on working with solutions](../../maker/data-platform/solutions-overview.md).
   
 ## Add an app to a solution
 In order to distribute an app, a solution is created so that the app can be packaged for export.
@@ -57,13 +59,15 @@ In order to distribute an app, a solution is created so that the app can be pack
 To distribute an app so it can be imported into other environment or made available on [Microsoft AppSource](https://appsource.microsoft.com/), export the solution to a zip file. Then, the zip file that contains the app and components can be imported into other environments.
 
 1. Go to the **Solutions** area of Power Apps. 
-2. Select the solution required, and then on the toolbar select **Export**. 
+2. Select the solution required, and then on the toolbar select **Export**.
 3. On the **Before you export** pane, we recommend that you **Publish all changes** and **Check for issues**, before selecting **Next**.
 4. On the **Export this solution** pane, accept the incremented version number already provided or enter a different one, select **Unmanaged** or **Managed**, and the select **Export**. For more information about solution package types, see [Solutions overview](../data-platform/solutions-overview.md).
-5. Depending on the browser and settings, a .zip package file is built and copied to the default downloads folder. The file name of the package is based on the unique name of the solution appended with underscores and the solution version number.
+    >[!Note]
+    >We typically export as a **managed solution** as we want to continue to work on the product in the current environment.  Selecting unmanaged would enable the solutions in the two environments to be developed separately.
 
-	> [!NOTE]
-	> When exporting an app by using a solution, the app URL is not exported.
+5. Depending on the browser and settings, a .zip package file is built and copied to the default downloads folder. The file name of the package is based on the unique name of the solution appended with underscores and the solution version number.
+    > [!NOTE]
+	  > When exporting an app by using a solution, the app URL is not exported.
   
 ## Import a solution
 
@@ -73,7 +77,7 @@ On receipt of a solution zip file which contains the app that need to be importe
 
 2. Go to the **Solutions** area, and then on the toolbar select **Import**.
 3. Browse to the zip file, and then choose **Next**.
-4. Select **Import**.
+4. Select **Import** and wait for the solution to be imported.  This will take a varying amount of time based on the complexity of the solution.
 
 ## See also
 

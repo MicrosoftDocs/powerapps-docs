@@ -230,5 +230,4 @@ In many scenarios, a form might exist with a tab and a single control, and you w
 
 ### Next steps
 
-[Design forms for performance](design-performant-forms.md)<br/>
-[Optimize model-driven app form performance](optimize-form-performance.md)
+[Design forms for performance](design-performant-forms.md)

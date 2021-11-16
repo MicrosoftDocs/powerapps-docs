@@ -1107,7 +1107,6 @@
       href: ./canvas-apps/performance-tips.md
     - name: Canvas apps coding standards and guidelines
       href: https://aka.ms/powerappscanvasguidelines
-
 - name: Model-driven apps
   items:
   - name: Model-driven apps
@@ -1182,7 +1181,7 @@
         href: 
         items:
         - name: Views overview
-          href: ./model-driven-apps/create-edit-views.md
+          href: ./model-driven-apps/create-edit-views.md        
         - name: Opening the view designer
           href: ./model-driven-apps/accessing-view-definitions.md
         - name: Creating and editing views
@@ -1197,6 +1196,8 @@
           href: ./model-driven-apps/make-grids-lists-editable-custom-control.md
         - name: Setting managed properties for views
           href: ./model-driven-apps/managed-properties-views.md
+        - name: Specify read only grid properties
+          href: ./model-driven-apps/specify-properties-for-unified-interface-apps.md      
         - name: Specifying a default view
           href: ./model-driven-apps/specify-default-views.md
         - name: Deleting and deactivating views
@@ -1255,8 +1256,7 @@
           - name: Add and configure quick view component
             href: ./model-driven-apps/form-designer-add-configure-quickview.md
           - name: Configure lookup component
-            href: ./model-driven-apps/form-designer-add-configure-lookup.md
-           
+            href: ./model-driven-apps/form-designer-add-configure-lookup.md      
         - name: Designing effective forms
           href: 
           items:
@@ -1295,8 +1295,6 @@
           items:
           - name: List of controls available
             href: ./model-driven-apps/additional-controls-for-dynamics-365-for-phones-and-tablets.md        
-          - name: Specify properties model-driven apps
-            href: ./model-driven-apps/specify-properties-for-unified-interface-apps.md      
           - name: Set up the timeline control
             href: ./model-driven-apps/set-up-timeline-control.md
           - name: FAQs for the timeline control
@@ -1439,8 +1437,10 @@
     - name: Delete an app
       href: ./model-driven-apps/delete-model-driven-app.md
   - name: Advanced app making and customization
-    href: ./model-driven-apps/advanced-navigation.md
+    href: 
     items:
+    - name: Accessing advanced customization and administration areas
+      href: ./model-driven-apps/advanced-navigation.md
     - name: Create or edit web resources
       href: ./model-driven-apps/create-edit-web-resources.md
     - name: Web resource properties
