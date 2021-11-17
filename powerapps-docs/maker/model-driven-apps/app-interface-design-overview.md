@@ -66,6 +66,6 @@ The following table describes the resources in this section.
 
 ### See also
 
-[Learn more about Dataverse security roles](https://docs.microsoft.com/power-platform/admin/security-roles-privileges)
+[Learn more about Dataverse security roles](/power-platform/admin/security-roles-privileges)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

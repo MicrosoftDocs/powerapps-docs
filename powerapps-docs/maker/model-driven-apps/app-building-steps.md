@@ -37,7 +37,7 @@ At a fundamental level, model-driven app making consists of the following stages
 
 Each stage requires a range of [editors](model-driven-designers.md) to ensure that the application can be created, whether the app maker is updating the data model, or going through the process of composing the app.
 
-Whilst it may seem strange to have multiple editors these reflect the various technologies that have been brought to bear within Dataverse.  Often makers will move seamlessly through the editors to construct the app.
+Whilst it may seem strange to have multiple editors these reflect the various technologies that have been brought to bear within Dataverse. Often makers will move seamlessly through the editors to construct the app.
 
 ## Modeling business data
 
@@ -60,7 +60,7 @@ The screenshot below illustrates the impact of having a business process flow in
 
 Business process flows are created and configured using Power Automate.  
 
-More information: [Business process flows overview](https://docs.microsoft.com/power-automate/business-process-flows-overview) and [Apply business logic with Microsoft Dataverse](../data-platform/processes.md).
+More information: [Business process flows overview](/power-automate/business-process-flows-overview) and [Apply business logic with Microsoft Dataverse](../data-platform/processes.md).
 
 ## Composing the model-driven app
 
@@ -91,8 +91,8 @@ These actions cover Create, Read, Write, Delete, Append, Append To, Assign and S
 
 For more information on understanding, creating and configuring security roles go to:
 
-- [Power Platform documentation](https://docs.microsoft.com/power-platform/admin/security-roles-privileges)
-- [Microsoft Learn module](https://docs.microsoft.com/learn/modules/get-started-security-roles/)
+- [Power Platform documentation](/power-platform/admin/security-roles-privileges)
+- [Microsoft Learn module](/learn/modules/get-started-security-roles/)
 
 ## Sharing the app
 
@@ -114,7 +114,7 @@ Sharing an app and security roles are intrinsically linked. To properly share an
 
 ## Using a model-driven app
 
-Documentation has been developed that is dedicated to helping users of model-driven apps successfully navigate around and interact in ways that help make them more productive. [Learn more about using model-driven apps](https://docs.microsoft.com/powerapps/user/use-model-driven-apps)
+Documentation has been developed that is dedicated to helping users of model-driven apps successfully navigate around and interact in ways that help make them more productive. [Learn more about using model-driven apps](/powerapps/user/use-model-driven-apps)
 
 ## Next steps
 
