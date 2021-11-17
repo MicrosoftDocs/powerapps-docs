@@ -191,7 +191,7 @@ Setting app value is used to override the setting's default value and any settin
 1. From the list of solutions, open the solution you want to add the setting app value to.
 1. If the setting definition or setting environment value is not available in the solution, add one of them. See [**Adding an existing setting definition**](create-edit-configure-settings.md#adding-an-existing-setting-definition) or [**Adding an existing setting environment value**](create-edit-configure-settings.md#adding-an-existing-setting-environment-value).
 1. Select the setting definition or setting environment value.
-1. In the **Edit setting value** dialog, in the **Setting app value** section, find the app that you want to add the setting app value for. Note that using the solution explorer you can only add setting app values for apps that are in the current solution.
+1. In the **Edit setting value** dialog, in the **Setting app values** section, find the app that you want to add the setting app value for. Note that using the solution explorer you can only add setting app values for apps that are in the current solution.
 1. Provide the value and select **Save**.
 1. For the app setting value to take effect you will have to re-publish the app using the app designer or solution explorer.
 
@@ -202,7 +202,7 @@ Setting app value is used to override the setting's default value and any settin
 1. From the list of solutions, open the solution you want to delete the setting app value from.
 1. If the setting definition or setting environment value is not available in the solution add one of them. More information: [Adding an existing setting definition](create-edit-configure-settings.md#adding-an-existing-setting-definition) or [Adding an existing setting environment value](create-edit-configure-settings.md#adding-an-existing-setting-environment-value).
 1. Select the setting definition or setting environment value.
-1. In the **Edit setting value** dialog, in the **Setting app value** section, find the app that you want to delete the setting app value for. Note that using the solution explorer you can only remove setting app values for apps that are in the current solution.
+1. In the **Edit setting value** dialog, in the **Setting app values** section, find the app that you want to delete the setting app value for. Note that using the solution explorer you can only remove setting app values for apps that are in the current solution.
 1. Select the ellipsis "***...***" next to the setting app value and then select **Reset to environment**.
 1. Select **Save**.
 1. For the deletion of the setting app value to take effect you will have to re-publish the app using the app designer or solution explorer.
