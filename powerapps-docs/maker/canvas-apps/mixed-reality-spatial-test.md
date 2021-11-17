@@ -107,7 +107,7 @@ Next, we’ll set up the **Measure in MR** component to allow users to capture m
 
     :::image type="content" source="media/augmented-measure-fit-test/fit-test-output-labels.png" alt-text="Screenshot showing four added text labels.":::
 
-1. Set the **Text** property of the labels added in the previous step as following.
+1. Set the **Text** property of the added labels as the following.
 
     1. First label:
     
