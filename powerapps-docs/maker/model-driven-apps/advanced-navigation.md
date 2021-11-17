@@ -34,14 +34,14 @@ This topic describes how to access advanced customization and administration are
 The [solutions](../model-driven-apps/model-driven-app-glossary.md#solution) area is where you can view, edit, create, import, export, and delete managed and unmanaged solutions.
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-2. On the top right select the [Environment](../model-driven-apps/model-driven-app-glossary.md#environment) in which your solution is located
-3. On the left navigation pane select **Solutions**.
+2. On the top right select the [Environment](../model-driven-apps/model-driven-app-glossary.md#environment) where your solution is located.
+3. On the left navigation pane, select **Solutions**.
 
-:::image type="content" source="../../maker/model-driven-apps/media/solution-assets-explorer.png" alt-text="Reviewing the solution explorer":::
+   :::image type="content" source="../../maker/model-driven-apps/media/solution-assets-explorer.png" alt-text="Reviewing the solution explorer":::
 
 ## Solution explorer
 
-Use solution explorer to perform app making and customization tasks that can’t be completed from the Power Apps home page.
+Use solution explorer to perform app making and customization tasks that can’t be completed from the Power Apps website (make.powerapps.com).
 
 > [!div class="mx-imgBorder"]
 > ![Solution explorer.](media/model-driven-app-overview/solutionexplorer-entitiescollapsed.png "Classic solution explorer")
@@ -50,9 +50,9 @@ Use solution explorer to perform app making and customization tasks that can’t
 
 2. Select **Settings** > **Customizations** > **Customize the System**, and then select the settings area that you want.
 
-:::image type="content" source="../../maker/model-driven-apps/media/settings-areas.png" alt-text="Accessing advanced settings":::
+   :::image type="content" source="../../maker/model-driven-apps/media/settings-areas.png" alt-text="Accessing advanced settings":::
 
-3. Use the settings area to configure environment settings, activate or deactivate processes, and more.
+3. Use the settings area to configure email and document management, activate or deactivate processes, and more.
 
 ## Next steps
 

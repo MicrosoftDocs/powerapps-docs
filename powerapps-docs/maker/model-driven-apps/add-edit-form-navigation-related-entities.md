@@ -26,11 +26,11 @@ search.app:
 ---
 # Add model-driven app form navigation for related tables
 
-When an app user clicks one of these links in a row, the associated view for the table is displayed. In this topic the form navigation pane is used to add links to related tables.
+When an app user selects one of these links in a row, the associated view for the table is displayed. In this article, the form navigation pane is used to add links to related tables.
   
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
-1. Expand **Dataverse** in the left hand menu and select **tables**
-1. Select the required table and then select the **Forms** tab.
+1. Expand **Data** in the left-hand menu and select **Tables**
+1. Select the table you want, and then select the **Forms** tab.
 1. In the list, open a form with the type of **Main** to edit it.
 1. Select **Switch to classic** to edit the form in the classic form designer.
   
@@ -39,8 +39,6 @@ When an app user clicks one of these links in a row, the associated view for the
     :::image type="content" source="media/form-navigation.png" alt-text="Show form navigation pane":::
 
      The **Relationship Explorer** pane displays on the right side of the form editor.  
-
-
 
 1. In the **Relationship Explorer** pane, in the **Filter** list, select one of the following options:  
   
@@ -59,7 +57,7 @@ When an app user clicks one of these links in a row, the associated view for the
     >  You can also create a new relationship by choosing **New 1:N** or **New N:N** in the **Relationship Explorer** pane.
   
 3. To edit the properties for this or any other related table link, in the Navigation Pane, select the link, and then on the **Home** tab, choose **Change Properties**.  
-4. In the **Relationship Properties** dialog box, on the **Display** tab, type a new display label.  
+4. In the **Relationship Properties** dialog, on the **Display** tab, type a new display label.  
 5. On the **Name** tab, choose **Edit** to view or edit the details associated with the relationship row.  
 6. Choose **OK**.
 7. Preview how the main form will appear and how events will function:  

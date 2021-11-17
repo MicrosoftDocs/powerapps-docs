@@ -27,11 +27,11 @@ search.app:
 
 # Add, configure, move, or delete components on a form
 
-By using the form designer, makers can easily add and configure popular components such as [sub-grid](form-designer-add-configure-subgrid.md), [quick view](form-designer-add-configure-quickview.md), arc knob, linear slider, and more.
+By using the form designer, makers can easily add and configure popular components such as [subgrid](form-designer-add-configure-subgrid.md), [quick view](form-designer-add-configure-quickview.md), arc knob, linear slider, and more.
 
 ## Add components to a form
 
-To add components to a form, use the **Components** pane. Components can be found easily using the search in the  **Components** pane .  
+To add components to a form, use the **Components** pane. Components can be found easily using the search in the  **Components** pane.  
 
 > [!div class="mx-imgBorder"]
 > ![Components pane.](media/FormDesignerComponentsPane.PNG "Components pane")
@@ -56,7 +56,7 @@ To add components to a form, use the **Components** pane. Components can be foun
 1. In the dialog to configure the properties of the component, under **Show component on**, the **Web**, **Mobile**, and **Tablet** options are selected by default to ensure the component is used when the form is displayed on the web, mobile app, and tablet app. Based on the  requirements some of these options to limit the usage of the component can be cleared.
 1. Select **Done**.
 1. Repeat steps 3-6 above to add more components.
-1. On the command bar, select **Save** to save the form, or select **Publish** if to make the changes visible to users.
+1. On the command bar, select **Save** to save the form, or select **Publish** to make the changes visible to users.
 
 ### Add components for a column on the form
 
@@ -64,7 +64,7 @@ To add components to a form, use the **Components** pane. Components can be foun
 1. In the form preview, select an existing column.
 1. In the property pane, under the **Components** area, select **+ Component**.
 1. The **Add component** dialog displays a list of components that are available for the current column type. Hover over a component in the list to see a preview image, description, and other details of that component.
-1. In the **Add component** dialog, search or scroll to find the required component to add and then select it.
+1. In the **Add component** dialog, search, or scroll to find the required component to add and then select it.
    In most cases, a dialog is displayed to configure the properties of the component. Ensure that all the required properties of the component have been configured.
 1. In the dialog to configure the properties of the component, under **Show component on**, the **Web**, **Mobile**, and **Tablet** options are selected by default to ensure the component is used when the form is displayed on the web, mobile app, and tablet app. Based on the requirements some of these options to limit the usage of the component can be cleared.
 1. Select  **Done**.
@@ -75,8 +75,8 @@ To add components to a form, use the **Components** pane. Components can be foun
 
 1. Open the form designer to create or edit a form. More information: [Create a form](create-and-edit-forms.md#create-a-form) or [Edit a form](create-and-edit-forms.md#edit-a-form)
 1. In the form preview, select an existing column.
-1. In the property pane, under the **Components** area, select the required component to be configured.
-1. A dialog might appear to configure the properties of the component. Change the properties of the component as needed and select **Done**.
+1. In the property pane, under the **Components** area, select the component that you want configured.
+1. A dialog might appear to configure the properties of the component. Change the properties of the component as needed, and then select **Done**.
 1. Repeat steps 2-4 to configure more components on the same or another column.
 1. On the command bar, select **Save** to save the form, or select **Publish** to save and make the changes visible to users.
 
@@ -87,7 +87,7 @@ To move components on a form, either use drag-and-drop or cut-and-paste actions.
 ### Move components on a form using drag and drop
 
 1. Open the form designer to create or edit a form. More information: [Create a form](create-and-edit-forms.md#create-a-form) or [Edit a form](create-and-edit-forms.md#edit-a-form)
-1. In the form preview, select the required component to move and drag and drop it. As the component is dragged onto the form preview, drop targets appear where it can moved to.
+1. In the form preview, select the component to move and drag and drop it. As the component is dragged onto the form preview, drop targets appear where it can be moved.
 
   > [!NOTE]
   >
@@ -96,7 +96,7 @@ To move components on a form, either use drag-and-drop or cut-and-paste actions.
   > - Hover over a tab header while using drag and drop to add the component to a different tab.
 
 1. Repeat steps 2-3 above to move more components.
-1. On the command bar, select **Save** to save the form, or select **Publish**  to save and make the changes visible to users.
+1. On the command bar, select **Save** to save the form, or select **Publish** to save and make the changes visible to users.
 
 ### Move components on a form using cut and paste
 
@@ -118,14 +118,14 @@ To move components on a form, either use drag-and-drop or cut-and-paste actions.
 ## Delete components on a form
 
 1. Open the form designer to create or edit a form. More information: [Create a form](create-and-edit-forms.md#create-a-form) or [Edit a form](create-and-edit-forms.md#edit-a-form)
-2. In the form preview, select the required component  to delete from the form, and then on the command bar, select **Delete**.
+2. In the form preview, select the component that you want to delete from the form, and then on the command bar, select **Delete**.
 3. Repeat step 2 to delete more components.
-4. On the command bar, select **Save** to save the form, or select **Publish** if to save and make he changes visible to users.
+4. On the command bar, select **Save** to save the form, or select **Publish** to save and make the changes visible to users.
 
      > [!NOTE]
      >
-     > - If a component deleted by mistake, select **Undo** on the command bar to revert the form to its previous state.
-     > - A component cannot be deleted when it is locked or  using a required column that is not present anywhere else on the form.
+     > - If a component is deleted by mistake, select **Undo** on the command bar to revert the form to its previous state.
+     > - A component can't be deleted when it is locked or is using a required column that is not present anywhere else on the form.
 
 ### See also
 
@@ -135,7 +135,7 @@ To move components on a form, either use drag-and-drop or cut-and-paste actions.
 [Add, configure, move, or delete sections on a form](add-move-or-delete-sections-on-form.md)  
 [Add, configure, move, or delete tabs on a form](add-move-or-delete-tabs-on-form.md)  
 [Configure header properties in the form designer](form-designer-header-properties.md)  
-[Add and configure a sub-grid component on a form](form-designer-add-configure-subgrid.md)  
+[Add and configure a subgrid component on a form](form-designer-add-configure-subgrid.md)  
 [Add and configure a quick view component on a form](form-designer-add-configure-quickview.md)  
 [Configure a lookup component on a form](form-designer-add-configure-lookup.md)  
 [Using the tree view in the form designer](using-tree-view-on-form.md)  

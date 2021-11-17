@@ -1,5 +1,5 @@
 ---
-title: "Add Add a Power BI visual in a a model-driven app | MicrosoftDocs"
+title: "Add a Power BI visual in a model-driven app | MicrosoftDocs"
 description: "Learn how to add Power BI visuals into model-driven apps"
 ms.date: 06/25/2021
 ms.service: powerapps
@@ -129,7 +129,7 @@ In this section, you create a model-driven app and add the Power BI embedded rep
 
    ![Select the Edit Site Map button to open the Site Map](media/add-a-power-bi-visual-into-a-model-driven-app/create-a-new-model-driven-app-4.png "Select the Edit Site Map button to open the Site Map")
 
-1. Select **New subarea** on the site map. Then select the following **Properties**, and then select select **Save**:
+1. Select **New subarea** on the site map. Then select the following **Properties**, and then select **Save**:
    - **Type**: **Dashboard**
    - **Default Dashboard**: **Test Embedded BI Report**
    - **Title**: **Test Embedded BI**

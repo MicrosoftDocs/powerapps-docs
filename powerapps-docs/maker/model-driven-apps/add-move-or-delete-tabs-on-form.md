@@ -44,7 +44,7 @@ To add tabs to a form, use the **Components** pane.
 1. Open the form designer to create or edit a form. More information: [Create a form](create-and-edit-forms.md#create-a-form) or [Edit a form](create-and-edit-forms.md#edit-a-form)
 2. On the command bar, select **Add component**, or in the left pane, select **Components**. 
 3. In the **Components** pane, select a tab component and drag and drop it onto the form preview.     As you drag the tab on the form preview, you will see drop targets where you can add the tab.
-   Note the following:
+   Note the following behavior:
     - Tabs can be dropped before or after any existing tabs by hovering over the tab headers.
     - Tabs can also be dropped before or after the current tab by hovering over the left or right edge of the current tab.
 4. Repeat step 3 above if you want to add more tabs.
@@ -55,7 +55,7 @@ To add tabs to a form, use the **Components** pane.
 ### Add tabs to a form using selection
 
 1. Open the form designer to create or edit a form. More information: [Create a form](create-and-edit-forms.md#create-a-form) or [Edit a form](create-and-edit-forms.md#edit-a-form)
-2. In the form preview, select another existing tab or the form. Note the following:
+2. In the form preview, select another existing tab or the form. Note the following behavior:
     - When you select an existing tab, the new tab will be added after the existing tab.
     - When you select the form, the new tab will be added as the last tab on the form.
 3. On the command bar, select **Add component**, or in the left pane, select **Components**.  
@@ -85,7 +85,7 @@ You can move a tab on a form using drag and drop or cut and paste actions.
 ### Move tabs on a form using drag and drop
 
 1. Open the form designer to create or edit a form. More information: [Create a form](create-and-edit-forms.md#create-a-form) or [Edit a form](create-and-edit-forms.md#edit-a-form)
-2. In the form preview, select the tab header of the tab that you want to move and drag and drop it. As you drag the tab on the form preview, you will see drop targets where you can move the tab.    Note the following:
+2. In the form preview, select the tab header of the tab that you want to move and drag and drop it. As you drag the tab on the form preview, you will see drop targets where you can move the tab.    Note the following behavior:
     - Tabs can be dropped before or after any existing tabs by hovering over the tab headers.
     - Tabs can also be dropped before or after the current tab by hovering over the left or right edge of the current tab.
 3. Repeat step 2 if you want to move more tabs.
@@ -97,7 +97,7 @@ You can move a tab on a form using drag and drop or cut and paste actions.
 2. In the form preview, select the tab that you want to move.
 3. On the command bar, select **Cut**.
 4. In the form preview, select another existing tab or the form.
-5. On the command bar, select **Paste** or select the chevron, and then select **Paste before**.      Note the following: 
+5. On the command bar, select **Paste** or select the chevron, and then select **Paste before**.      Note the following behavior: 
     - When you select **Paste**, the tab moved is pasted after the existing tab.
     - When you select **Paste before**, the tab moved is pasted before the existing tab.
     - When you select the form, the tab moved is added as the last tab on the form. The **Paste before** action is not applicable and therefore not available in this case.
@@ -127,7 +127,7 @@ You can move a tab on a form using drag and drop or cut and paste actions.
 [Add, configure, move, or delete components on a form](add-move-configure-or-delete-components-on-form.md)  
 [Add, configure, move, or delete sections on a form](add-move-or-delete-sections-on-form.md)  
 [Configure header properties in the form designer](form-designer-header-properties.md)  
-[Add and configure a sub-grid component on a form](form-designer-add-configure-subgrid.md)  
+[Add and configure a subgrid component on a form](form-designer-add-configure-subgrid.md)  
 [Add and configure a quick view component on a form](form-designer-add-configure-quickview.md)  
 [Configure a lookup component on a form](form-designer-add-configure-lookup.md)  
 [Using the tree view in the form designer](using-tree-view-on-form.md)  

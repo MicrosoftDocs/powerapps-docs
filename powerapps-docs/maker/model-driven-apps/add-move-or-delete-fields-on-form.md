@@ -41,7 +41,7 @@ To add columns to a form, use the **Columns** pane. The **Columns** pane lets yo
 > When adding or moving columns using drag and drop be aware that the form preview is responsive and may be rendering multiple section columns as stacked. To ensure that the column being added or moved is in the correct section column, drop or paste it anchored to another column that is already in that section column.
 
 1. Open the form designer to create or edit a form. More information: [Create a form](create-and-edit-forms.md#create-a-form) or [Edit a form](create-and-edit-forms.md#edit-a-form)
-2. In the command bar, select **Add column**, or in the left pane, select **Columns**.  The **Columns** pane is open by default when the form designer is opened.
+2. On the command bar, select **Add column**, or in the left pane, select **Columns**.  The **Columns** pane is open by default when the form designer is opened.
 3. In the **Columns** pane, search, filter, or scroll to find the column you want to add. If you can't find a column, it might already be on the form. Clear **Show only unused columns** to view all columns, including those already added to the form.
 4. In the **Columns** pane, select a column and drag it onto the form preview. As you drag the column on the form preview, you will see drop targets where you can add the column.
 5. Drop the column in the location you want. Note the following:
