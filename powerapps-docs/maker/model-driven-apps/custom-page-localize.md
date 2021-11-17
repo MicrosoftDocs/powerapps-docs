@@ -49,8 +49,8 @@ After you have the created the RESX files with the localized strings, add them i
 
 Localized content will be based on the user or organizational locale for the application the custom page is running.  The language for your application is based on user or admin defined language preferences in the app settings (user) or admin settings(Power Apps Admin Center).  If neither has been set, it will use the base language set when the environment was created.
 
->[NOTE!]
->Content shown in a Power App Control Framework (PCF) control will localize to the applications locale language without additional changes needed on the custom page.  More Information [Localizing PCF Controls](/powerapps/developer/component-framework/sample-controls/localization-api-control)
+> [NOTE!]
+> Content shown in a Power App Control Framework (PCF) control will localize to the applications locale language without additional changes needed on the custom page.  More Information [Localizing PCF Controls](/powerapps/developer/component-framework/sample-controls/localization-api-control)
 
 ## Add localized RESX Web resource files to your solution
 
