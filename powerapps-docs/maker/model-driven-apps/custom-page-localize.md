@@ -36,7 +36,7 @@ The process has the following steps:
 2.	Add localized RESX web resource files into your solution.
 3.	Add the localized files to your custom page.
 4.	Manage localized web resources.
-5.	Add the localized strings to your label controls.
+5.	Add the localized strings to your controls.
 6.	Run your app with localized content.
 
 ## Enable languages for your environment
