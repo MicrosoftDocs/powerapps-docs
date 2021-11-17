@@ -119,6 +119,8 @@ Next, we’ll set up the **Measure in MR** component to allow users to capture m
             "Fit Test Succeeded", "Fit Test Failed"))
         ```
 
+        This formula determines whether the measurement tests succeeded, failed, or not captured depending on the height, width, and depth parameter values.
+
         :::image type="content" source="media/augmented-measure-fit-test/fit-test-spatial-test-formula.png" alt-text="Screenshot showing the formula for the spatial test predicate.":::
 
     1. Second label:
@@ -126,6 +128,8 @@ Next, we’ll set up the **Measure in MR** component to allow users to capture m
         ```powerapps-dot
         Concatenate("Bounding Width: ", Text(testVolume.BoundingWidth))
         ```
+
+        This formula updates the label text and the relevant measurement parameter, in this case width.
 
     1. Third label:
 
@@ -166,9 +170,9 @@ If(IsBlankOrError(testVolume), Products,
 
 ### See also
 
-- [View 3D content with the View in 3D component](mixed-reality-component-view-3d.md)**
-- [Measure distance, area, and volume with the Measure in mixed reality component](mixed-reality-component-measure-distance.md)**
-- [Create and view predefined 3D shapes with the View shape in mixed reality component](mixed-reality-component-view-shape.md)**
+- [View 3D content with the View in 3D component](mixed-reality-component-view-3d.md)
+- [Measure distance, area, and volume with the Measure in mixed reality component](mixed-reality-component-measure-distance.md)
+- [Create and view predefined 3D shapes with the View shape in mixed reality component](mixed-reality-component-view-shape.md)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
