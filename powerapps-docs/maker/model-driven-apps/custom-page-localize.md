@@ -22,7 +22,7 @@ search.app:
 
 This article outlines how to add localized content to a custom page by uploading [web resource RESX](/powerapps/developer/model-driven-apps/resx-web-resources) files for each language into your solution. 
 
-This article also shows you how to use Power Fx to set the content on a label of a form. You can use similar steps for tooltips and any messages that use a text control on the custom page.
+This article also shows you how to use Power Fx to set the content of a control on a custom page. You can use similar steps for tooltips and any messages that use a text control on the custom page.
 
   > [!IMPORTANT]
   > - This is a preview feature, and isn't available in all regions.
@@ -119,7 +119,7 @@ Save and publish your changes to the page.
 > Make sure you also save and publish your changes to the app. Saving and publishing both the page and app are needed to ensure your localized labels render with the appropriate strings at runtime.
 
    > [!IMPORTANT]
-   > When adding form controls you will need to make sure you localize the labels, they do not automatically pull localized labels when you bind the control to a Dataverse table.  This is a known limitation that is in plan to be fixed, until then, you will need to add strings for the labels to your resx files, unlock the form control and set the displayName property to your localizted string using the same expression for your custom labels, text, tooltips, etc.
+   > When adding form controls you will need to make sure you localize the labels, they do not automatically pull localized labels when you bind the control to a Dataverse table.  This is a known limitation that is in plan to be fixed, until then, you will need to add strings for the labels to your resx files, unlock the form control and set the displayName property to your localized string using the same expression for your custom labels, text, tooltips, etc.
    :::image type="content" source="media/page-localization/add-loc-to-edit-form.gif"alt-text="Power Apps Studio custom page edit form label"
 
 
@@ -140,7 +140,7 @@ Save and publish your changes to the page.
    :::image type="content" source="media/page-localization/studio-page-runtime-3.png"alt-text="Power Apps Studio custom page runtime setting dialog.":::
 
    ## Right-To-Left Support for custom pages
-   With localized conent there are several languages that require a right-to-left orientation for content rendered on your page.  Right-To-Left (RTL), is fully supported for languages like Arabic and Hebrew and the page will change at runtime autmatically for these languages.
+   With localized content there are several languages that require a right-to-left orientation for content rendered on your page.  Right-To-Left (RTL), is fully supported for languages like Arabic and Hebrew and the page will change at runtime autmatically for these languages.
 
    To review RTL when building a custom page you will need to go to the page settings, select upcoming features, search for RTL and enable the setting. Setting this option will show a RTL or LTR button in the preview window where you can easily switch between orientation without having to run your app.  If you would like to see your custom page running RTL, you can add also add &flags=isRTL=true to the end of your URL in your browser when running your appl to quickly test RTL for your page.
 
