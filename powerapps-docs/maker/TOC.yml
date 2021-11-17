@@ -387,8 +387,10 @@
                 href: ./canvas-apps/mixed-reality-component-view-shape.md
               - name: View 3D models and 2D images in mixed reality
                 href: ./canvas-apps/mixed-reality-component-view-mr.md
-              - name: Measure in mixed reality
+              - name: Take measurements in mixed reality
                 href: ./canvas-apps/mixed-reality-component-measure-distance.md
+              - name: Test measurements in mixed reality
+                href: ./canvas-apps/mixed-reality-spatial-test.md
               - name: Upload photos from mixed reality
                 href: ./canvas-apps/mixed-reality-take-upload-photos.md
               - name: Load models from CGTrader into mixed reality components (preview)

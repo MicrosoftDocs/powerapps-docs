@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm-msft
-ms.date: 8/26/2021
+ms.date: 11/17/2021
 ms.subservice: canvas-maker
 ms.author: altran
 search.audienceType: 
@@ -57,7 +57,7 @@ First, we’ll set up the dimensions to validate measurements.
 
 ## Insert and bind the Measure in MR component
 
-Next, we’ll set up the **Measure in MR** component to allow users to capture measurements, and bind the output value we will use to validate fit.
+Next, we’ll set up the **Measure in MR** component to allow users to capture measurements, and bind the output value we'll use to validate fit.
 
 1. Select the **Insert** tab.
 
@@ -85,62 +85,90 @@ Next, we’ll set up the **Measure in MR** component to allow users to capture m
 
     This formula creates a table with the label of "Test Volume" as a single expected measurement output.
 
-Select the **ItemsLabels** property of the **Measure in MR** component to `"Value"`.
+    :::image type="content" source="media/augmented-measure-fit-test/fit-test-formula-bar-items.png" alt-text="Screenshot showing formula bar settings for Items.":::
 
-1. Define a table with a single expected measurement to provide an interaction hint during each user session. Under either the **Advanced** pane or the drop down menu on the **Formula Bar** at the top of the screen find the Items property and set it to: `Table({label:"Test Volume"})`
-9. Also under the **Advanced** pane or the **Formula Bar** find the **ItemsLabels** property and set it to: `"Value"`
+1. Set the **ItemsLabels** property of the **Measure in MR** component to `"Value"`.
 
-![Screenshot showing formula bar settings for Items.](./media/augmented-measure-fit-test/fit-test-formula-bar-items.png "Screenshot showing formula bar settings for Items.")
+    :::image type="content" source="media/augmented-measure-fit-test/fit-test-advanced-properties-items.png" alt-text="Screenshot showing advanced property settings for Items and ItemsLabels.":::
 
-![Screenshot showing advanced property settings for Items and ItemsLabels.](./media/augmented-measure-fit-test/fit-test-advanced-properties-items.png "Screenshot showing advanced property settings for Items and ItemsLabels.")
+1. Set the **OnMixedRealitySelect** property to the following formula.
 
-10. Finally, in the **Advanced** pane set the OnMixedRealitySelect property to:
-`Set(testVolume, LookUp(MeasureInMR1.Measurements, Label = "Test Volume"))`;
+    ```powerapps-dot
+    Set(testVolume, LookUp(MeasureInMR1.Measurements, Label = "Test Volume"));
+    ```
 
-![Screenshot showing property setting for OnMixedRealitySelect.](./media/augmented-measure-fit-test/fit-test-on-mixed-reality-select.png "Screenshot showing property setting for OnMixedRealitySelect.")
+    This formula "testVolume" variable with the value of the label looked up from the mixed reality component's measurements property.
 
-## Perform fit test and display result
-1. Open the **Insert** tab, and insert 4 more **Text labels**.
+    :::image type="content" source="media/augmented-measure-fit-test/fit-test-on-mixed-reality-select.png" alt-text="Screenshot showing property setting for OnMixedRealitySelect.":::
 
-![Screenshot showing four added text labels.](./media/augmented-measure-fit-test/fit-test-output-labels.png "Screenshot showing four added text labels.")
+## Perform the measurement test and display the results
 
-2. Set the first label’s **Text** property to:
-```
-If(IsBlankOrError(testVolume), "No Measurement captured",
-    If(testVolume.Height >= Value(minHeight.Text) &&
-        ((testVolume.BoundingWidth >= Value(minWidth.Text) && testVolume.BoundingDepth >= Value(minDepth.Text)) ||
-        (testVolume.BoundingWidth >= Value(minDepth.Text) && testVolume.BoundingDepth >= Value(minWidth.Text))),
-    "Fit Test Succeeded", "Fit Test Failed"))
-```
+1. Select the **Insert** tab, and insert four **Text labels**.
 
-![Screenshot showing the formula for the spatial test predicate.](./media/augmented-measure-fit-test/fit-test-spatial-test-formula.png "Screenshot showing the formula for the spatial test predicate.")
+    :::image type="content" source="media/augmented-measure-fit-test/fit-test-output-labels.png" alt-text="Screenshot showing four added text labels.":::
 
-3. Set the text property for the second label to:
- `Concatenate("Bounding Width: ", Text(testVolume.BoundingWidth))`
-4. Set the text property for the third label to:
- `Concatenate("Bounding Depth: ", Text(testVolume.BoundingDepth))`
-5. Set the text property for the fourth label to:
- `Concatenate("Bounding Height: ", Text(testVolume.Height))`
+1. Set the **Text** property of the labels added in the previous step as following.
 
-![Screenshot showing the final completed application.](./media/augmented-measure-fit-test/fit-test-completed-app.png "Screenshot showing the formula for the spatial test predicate.")
+    1. First label:
+    
+        ```powerapps-dot
+            If(IsBlankOrError(testVolume), "No Measurement captured",
+            If(testVolume.Height >= Value(minHeight.Text) &&
+            ((testVolume.BoundingWidth >= Value(minWidth.Text) && testVolume.BoundingDepth >= Value(minDepth.Text)) ||
+            (testVolume.BoundingWidth >= Value(minDepth.Text) && testVolume.BoundingDepth >= Value(minWidth.Text))),
+            "Fit Test Succeeded", "Fit Test Failed"))
+        ```
 
-## Testing the application
-Now, enter preview mode and click on the MeasureInMR button. You should see the labels above get populated with data. You can test that the bindings are working as expected by changing values in the three text input fields to verify that the filter is updating properly. The values for **Bounding Width** and **Bounding Depth** should be interchangeable and may be swapped when performing the test. After saving and publishing the application you can open it on a Mixed Reality enabled device to test whether an object with the specified dimensions will fit within the bounds of any measurement captured.
+        :::image type="content" source="media/augmented-measure-fit-test/fit-test-spatial-test-formula.png" alt-text="Screenshot showing the formula for the spatial test predicate.":::
+
+    1. Second label:
+ 
+        ```powerapps-dot
+        Concatenate("Bounding Width: ", Text(testVolume.BoundingWidth))
+        ```
+
+    1. Third label:
+
+        ```powerapps-dot
+        Concatenate("Bounding Depth: ", Text(testVolume.BoundingDepth))
+        ```
+
+    1. Fourth label:
+
+        ```powerapps-dot
+          Concatenate("Bounding Height: ", Text(testVolume.Height))
+        ```
+
+    With all four label formulas updated, the screen should look like the following.
+
+    :::image type="content" source="media/augmented-measure-fit-test/fit-test-completed-app.png" alt-text="Screenshot showing the final completed application.":::
+
+## Test the app
+
+Press **F5** on the keyboard, or select the preview button to run the app in preview mode. And then, select **Measure In MR** to get the labels added earlier populated with data.
+
+You can verify that the bindings are working as expected by changing values in the three text input fields to check that the filter is updating properly.
+
+The values for **Bounding Width** and **Bounding Depth** can be swapped when performing the test. After [saving and publishing](save-publish-app.md) the app, you can open it on a mixed reality-enabled device to test whether an object with the specified dimensions will fit within the bounds of any measurement captured.
 
 ## Filtering a data source
-This sample application only tests for a single set of user specified dimensions, but could be expanded to work as a filter for any data source by applying the formula as a **Filter** predicate. For example, let's say our app contains a reference to a Dataverse table named **Products** which includes three columns **Width**, **Depth**, and **Height** corresponding to each product's dimensions. To filter the collection to only those that would fit within a measured volume we can apply the following formula:
-```
+
+This sample application only tests for a single set of user specified dimensions. However, you can extend it to work as a filter for any data source by applying the formula as a **Filter** predicate.
+
+For example, let's say that our app contains a reference to a Dataverse table named **Products** that includes three columns&mdash;**Width**, **Depth**, and **Height** (corresponding to each product's dimensions). To filter the collection to only measurements those that would fit within a measured volume, we can apply the following formula.
+
+```powerapps-dot
 If(IsBlankOrError(testVolume), Products,
     Filter(Products, testVolume.Height >= Height &&
         ((testVolume.BoundingWidth >= Width && testVolume.BoundingDepth >= Depth) ||
         (testVolume.BoundingWidth >= Depth && testVolume.BoundingDepth >= Width))))
 ```
 
-## Other mixed-reality controls
+### See also
 
-- View 3D content with the **[View in 3D](mixed-reality-component-view-3d.md)** component.
-- Measure distance, area, and volume with the **[Measure in mixed reality](mixed-reality-component-measure-distance.md)** component.
-- Create and view predefined 3D shapes with the **[View shape in mixed reality](mixed-reality-component-view-shape.md)** component
+- [View 3D content with the View in 3D component](mixed-reality-component-view-3d.md)**
+- [Measure distance, area, and volume with the Measure in mixed reality component](mixed-reality-component-measure-distance.md)**
+- [Create and view predefined 3D shapes with the View shape in mixed reality component](mixed-reality-component-view-shape.md)**
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
