@@ -47,6 +47,11 @@ After completing the steps to enable languages in the environment, you'll need t
 
 After you have the created the RESX files with the localized strings, add them into your solution as a web resource. There are two ways to accomplish this task, the first is to open your solution in make.powerapps.com and select the option to add a web resource to your solution in your environment or you can add a web resource while working on a custom page. More information: [RESX web resources](/powerapps/developer/model-driven-apps/resx-web-resources) Adding a web resource while working on a custom page is covered later in this article in the section [Add localized files to your custom page](#add-localized-files-to-your-custom-page).
 
+Localized content will be based on the user or organizational locale for the application the custom page is running.  The language for your application is based on user or admin defined language preferrences in the app settings (user) or admin settings(Power Apps Admin Center).  If neither has been set, it will use the base language set when the environment was created.
+
+>[NOTE!]
+>Content shown in a Power App Control Framework (PCF) control will localize to the applications locale language without additional changes needed on the custom page.  More Information [Localizing PCF Controls](https://docs.microsoft.com/powerapps/developer/component-framework/sample-controls/localization-api-control)
+
 ## Add localized RESX Web resource files to your solution
 
 1. Go to [make.powerapps.com](https://make.powerapps.com),select the **Solutions** area, and open the solution you want.
@@ -57,15 +62,13 @@ All files added to your solution need to follow a specific format that includes 
 > [!IMPORTANT]
 > The RESX {filename} *must be the same* for all your files.  
 
-For example, all localized string files might have the name `CustomPageLoc.LanguageID.resx`, which means for English it is `CustomPageLoc.1033.resx`, for French `CustomPageLoc.1036.resx`, and for Arabic `CustomPageLoc.1025.resx`.  The display name for every file added must be the same name.
+For example, all localized string files have the name `CustomPageLoc.LanguageID.resx`, which means for English it is `CustomPageLoc.1033.resx`, for French `CustomPageLoc.1036.resx`, and for Arabic `CustomPageLoc.1025.resx`.  The display name for every file added must also be the same name.
 
 In the example below all files have `CPLoc` as the display name. *The display name must be the same to ensure all localized content is used properly on a custom page for each language.*  We recommend that you add the corresponding name for the language in the **Description** field to help identify the content when you view the files in the custom page designer. Also, you'll need to add the same language's RESX file that you're working in. For example, if you are authoring in English, be sure to add the English RESX file.
 
-<!-- :::image type="content" source="media/page-localization/studio-web-resource-dialog.png"alt-text="Power Apps Studio web resource dialog."::: -->
+:::image type="content" source="media/page-localization/AddResxToSolution.gif"alt-text="Power Apps Studio web resource dialog.":::
 
-:::image type="content" source="media/page-localization/add-resx-to-solution.gif" alt-text="Add a RESX file to a solution":::
-
-After you have added your web resource to your solution, make sure to publish your changes. Publishing ensures the file is available to add to your custom page. Here's a screenshot of the web resource RESX files that have been added to a solution and are now available to add to a custom page.
+After you have added your web resource to your solution, make sure to publish your changes. Publishing ensures the file is available to add to your custom page. Here's an example of the web resource RESX files that have been added to a solution and are now available to add to a custom page.
 
 :::image type="content" source="media/page-localization/studio-web-resource-panel.png"alt-text="Power Apps Studio web resource panel.":::
 
@@ -114,6 +117,10 @@ Save and publish your changes to the page.
 
 > [!NOTE]
 > Make sure you also save and publish your changes to the app. Saving and publishing both the page and app are needed to ensure your localized labels render with the appropriate strings at runtime.
+
+   > [!IMPORTANT]
+   > When adding form controls you will need to make sure you localize the labels, they do not automatically pull localized content from Dataverse.  This is a known limitation that is in plan to be fixed, until then, you will need to add your strings to your resx files, unlock the form control and set the displayName property to your localizted string using the same expression for your custom labels, text, tooltips, etc.
+   :::image type="content" source="media/page-localization/add-loc-to-edit-form.gif"alt-text="Power Apps Studio custom page edit form label"
 
 ## Run your app with the localized content
 
