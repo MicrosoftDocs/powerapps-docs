@@ -389,7 +389,7 @@
                 href: ./canvas-apps/mixed-reality-component-view-mr.md
               - name: Take measurements in mixed reality
                 href: ./canvas-apps/mixed-reality-component-measure-distance.md
-              - name: Test measurements in mixed reality
+              - name: Validate measurements in mixed reality using a spatial test filter
                 href: ./canvas-apps/mixed-reality-spatial-test.md
               - name: Upload photos from mixed reality
                 href: ./canvas-apps/mixed-reality-take-upload-photos.md

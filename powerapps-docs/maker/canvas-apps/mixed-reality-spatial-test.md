@@ -1,6 +1,6 @@
 ---
-title: Test measurements in mixed reality
-description: Learn about how to test measurements or fittings of objects with width, depth, and height using mixed reality components in canvas apps.
+title: Validate measurements in mixed reality using a spatial test filter
+description: Learn about how to validate measurements or fittings of objects with width, depth, and height using mixed reality components in canvas apps.
 author: alex-msft
 ms.service: powerapps
 ms.topic: conceptual
@@ -19,7 +19,7 @@ contributors:
   - alex-msft
 ---
 
-# Test measurements in mixed reality
+# Validate measurements in mixed reality using a spatial test filter
 
 Using the [Measure in MR](mixed-reality-component-measure-distance.md) control, you can create a spatial test filter to validate whether an object with known width, depth, and height dimensions will fit in a space. This topic will guide you through creating a test app that you can use to validate the collected measurements, including:
 
