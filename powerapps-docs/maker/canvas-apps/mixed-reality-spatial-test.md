@@ -170,9 +170,9 @@ If(IsBlankOrError(testVolume), Products,
 
 ### See also
 
-- View 3D content with the [View in 3D component](mixed-reality-component-view-3d.md)
-- Measure distance, area, and volume with the [Measure in mixed reality component](mixed-reality-component-measure-distance.md)
-- Create and view predefined 3D shapes with the [View shape in mixed reality component](mixed-reality-component-view-shape.md)
+- [View in 3D component](mixed-reality-component-view-3d.md)
+- [Measure in MR component](mixed-reality-component-measure-distance.md)
+- [View shape in MR component](mixed-reality-component-view-shape.md) 
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
