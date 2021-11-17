@@ -36,7 +36,7 @@ The app designer interface has the following areas:
 
 1. Command bar – Displays the available actions:
 
-   - **Back**. Leaves the model-driven app designer.
+   - **Back**. Closes the model-driven app designer and returns you to the Power Apps website (make.powerapps.com).
    - **New page**. Creates a new page for one or more table forms and views or table dashboards for the app.
    - **Settings**. Opens the app properties such as name and description. <!-- and whether the app can be used offline-->
    - **Switch to classic**. Opens the app in the classic app designer.
@@ -48,7 +48,7 @@ The app designer interface has the following areas:
 
 3. Panes - The left navigation pane consists of the following areas:
 
-   - **Pages**. Displays the components in your app. From the page area you can choose to add or remove forms, views and dashboards for each table.
+   - **Pages**. Displays the components in your app. From the page area you can choose to add or remove forms, views, and dashboards for each table.
    - **Navigation**. Displays a navigation structure  of your app that is formed using areas, groups, and subareas. You can add or remove groups and subareas to the navigation.
    - **Data**. Provides a view of all available tables that are currently used within your app and a view of all tables that are available in your environment.
 
@@ -66,7 +66,7 @@ The app designer interface has the following areas:
 
 From the **Navigation** pane, select **Navigation bar** to set the following options.
 1. **Show Home**. Enabled by default. When selected, displays the **Home** page link for the app.
-1. **Show Recent**. Enabled by default.When selected, displays the recently viewed pages link. Selecting the link displays all recently viewed pages.
+1. **Show Recent**. Enabled by default. When selected, displays the recently viewed pages link. Selecting the link displays all recently viewed pages.
 1. **Show Pinned**. Enabled by default. When selected, displays the pages that have been pinned. App users select the push-pin icon next to a record listed under **Recent** to add it to their pinned rows.
 1. **Enable collapsible groups**. Disabled by default. When selected, subareas displayed under groups in the site map can be expanded or collapsed.
 
