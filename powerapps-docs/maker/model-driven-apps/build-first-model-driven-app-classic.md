@@ -35,7 +35,7 @@ In this article, you build a straightforward model-driven app that you can use t
 
 2. On the **Home** page, select **Model-driven app from blank**, select the **classic app designer** option and then **Create**.
 
-:::image type="content" source="../../maker/model-driven-apps/media/build-first-model-driven-app/start-from-blank-model-driven.png" alt-text="Start from blank model":::
+   :::image type="content" source="../../maker/model-driven-apps/media/build-first-model-driven-app/start-from-blank-model-driven.png" alt-text="Start from blank model":::
 
 3. On the **Create a New App** page, enter the following details, and then select **Done**:
 
