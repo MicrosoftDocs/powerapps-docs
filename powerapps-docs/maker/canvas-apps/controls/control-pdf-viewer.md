@@ -32,6 +32,8 @@ Show text, graphics, and other content in a PDF file by adding this type of cont
 
 4. You may not be able to view a PDF document in your app if the document resides on a server that has restrictive cross-origin resource sharing (CORS) settings. To resolve this issue, the server that hosts PDF documents must permit cross-origin requests from powerapps.com.
 
+5. Some download managers (for example Internet Download Manager) will try to download the PDF file instead of allowing PowerApps to display the file. To avoid the issue, ether disable your download manager or adjust the relevent settings to avoid detection of PDF files.
+
 App users can work around these limitations by opening PDF documents in an external browser, as prompted if the control can't open a document. This option is also available in the control menu for all external documents.
 
 ## Key properties
