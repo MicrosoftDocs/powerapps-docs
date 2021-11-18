@@ -31,11 +31,12 @@ search.app:
 [!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
 ## Business rules introduction
-Very often it is necessary to add in business logic to ensure that columns in our model-driven apps are either shown or hidden, or are set with the correct values.
 
-This article shows how to create [business rules](model-driven-app-glossary.md#business-rule) and recommendations to apply form logic in a model-driven app without writing JavaScript code or creating plug-ins. Business rules provide a simple interface to implement and maintain fast-changing and commonly used rules. They can be applied to Main and Quick Create forms, and they work in model-driven apps, legacy web apps, Dynamics 365 for tablets, and Dynamics 365 for Outlook (online or offline mode).
+Very often it is necessary to add in business logic to ensure that columns in a model-driven app are shown, hidden, or set with the correct values.
+
+This article shows how to create [business rules](model-driven-app-glossary.md#business-rule) and recommendations to apply form logic in a model-driven app without writing JavaScript code or creating plug-ins. Business rules provide a simple interface to implement and maintain fast-changing and commonly used rules. They can be applied to main and quick create forms. Business rules work in model-driven apps, legacy web apps, Dynamics 365 for tablets, and Dynamics 365 for Outlook (online or offline mode).
  
- By combining conditions and actions, the following actions are possible with business rules:  
+By combining conditions and actions, the following actions are possible with business rules:  
   
 -   Set column values  
   
@@ -61,8 +62,8 @@ This article shows how to create [business rules](model-driven-app-glossary.md#b
 1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
 2.  Expand **Data**, select **Tables**, select the table required, and then select the **Business rules** tab.
-> [!note]
-> Many customisations to a table take place within [solutions](../model-driven-apps/model-driven-app-glossary.md#solution).  To update a table within a solution first navigate to your **solution**, then select the **table** followed by the **business rules** tab.
+   > [!note]
+   > Customizations to a table take should place within a [solution](../model-driven-apps/model-driven-app-glossary.md#solution). To update a table within a solution, open your solution, and then open the table. Then, select the **Business rules** tab.
 
 3.  On the command bar, select **Add business rule**.
 
@@ -70,12 +71,12 @@ This article shows how to create [business rules](model-driven-app-glossary.md#b
 
       :::image type="content" source="media/business-rules-design-window.png" alt-text="Sample model-driven app":::
   
-   > [!TIP]
-> In order to modify an existing business rule, it must be deactivated it before any alterations.
+> [!TIP]
+> To modify an existing business rule, you must deactivate it before you can modify it.
 
 ## Update the business rule properties
 
-1.  Add a description, required, in the description box in the upper-left corner of the window.  
+1.  Optionally, add a description in the description box in the upper-left corner of the window.  
   
 2.  The scope of the business rule tells us forms for which this business rule will be applied.  Set the scope, according to the following:  
   
@@ -107,7 +108,7 @@ This article shows how to create [business rules](model-driven-app-glossary.md#b
     :::row-end:::
     :::row:::
     :::column span="":::
-       Specific form (**Account** form, for example)
+       Specific form (account **Main Form**, for example)
     :::column-end:::
     :::column span="":::
        Just that form
@@ -149,50 +150,56 @@ This article shows how to create [business rules](model-driven-app-glossary.md#b
     3.  To add more actions to the recommendation, drag them from the **Components** tab, and then set properties for each action in the **Properties** tab.  
   
         > [!NOTE]
-        >  When a recommendation is created, a single action is added by default. To see all the actions in a recommendation, select **Details** on the **Recommendation** component.  
+        >  When you create a recommendation, a single action is added by default. To see all the actions in a recommendation, select **Details** on the **Recommendation** component.  
   
-    4.  When finished setting properties, select **Apply**.  
+    4.  When you're finished setting properties, select **Apply**.  
   
 6. To validate the business rule, select **Validate** on the action bar.  
   
 7.  To save the business rule, select **Save** on the action bar.  
   
-8.  To activate the business rule, select it in the Solution Explorer window, and then select **Activate**. it is not possible to activate the business rule from the designer window.  
+8.  To activate the business rule, select it in the Solution Explorer window, and then select **Activate**. It is not possible to activate the business rule from the designer window.  
   
 > [!TIP]
->  Here are a few tips to keep in mind whilst working on business rules in the designer window:  
+>  Here are a few tips to keep in mind as you work on business rules in the designer window:  
 >   
 > - To take a snapshot of everything in the Business Rule window, select **Snapshot** on the action bar. This is useful, for example, when getting feedback from team members.  
 > - Use the mini-map to navigate quickly to different parts of the process. This is useful when working on a complicated process that scrolls off the screen.  
-> - As conditions are added, Actions, and business recommendations to your business rule, code for the business rule is built and appears at the bottom of the designer window. This code is read-only.  
+> - As you add conditions, actions, and business recommendations to your business rule, code for the business rule is built and appears at the bottom of the designer window. This code is read-only.  
   
 <a name="BKMK_LocalizingErrorMessages"></a>   
-## Localize error messages used in business rules  
- If more than one language is provisioned for your organization, it is worth localizing any error messages that been set. Each time a message is set, a label is generated by the system. If the translations in your organization are set, localized versions of your messages can be added and then imported  back into the system.  This enables people using languages other than your base language to view the translated messages.  
+## Localize error messages used in business rules
+
+ If more than one language is provisioned for your environment, it is worth localizing any error messages that have been set. Each time a message is set, a label is generated by the system. If the translations in your environment are set, localized versions of your messages can be added and then imported  back into the system.  This enables people using languages other than your base language to view the translated messages.  
 
 ## Common issues
-This section describes common issues that may occur when using business rules. 
+
+This section describes common issues that may occur when you use business rules. 
 
 ### Full Name column and Address column not supported with Unified Interface apps
+
 Actions or conditions that use a composite column like the **Full Name** (fullname) column or an **Address** column aren't supported in apps based on Unified Interface.  Alternatively, you can use actions or conditions with the constituent columns. For example, for the **Full Name** column, you can use actions or conditions on the  **First Name** (firstname) and **Last Name** (lastname) columns.
 
 ### Business rules don't execute for some users
+
 Make sure that users have a security role that includes, at a minimum, user scope read privileges on the Process table. By default, the Basic User security role has this privilege.
 
 ### Business rules don't fire on editable grid on a dashboard
+
 Entity scoped business rules will not fire on an editable grid when the editable grid is configured on a dashboard page.
 
 ### Is the business rule not firing for a form?
+
 A business rule may not execute because the column referenced in the business rule isn't included with the form. 
-1.    Open solution explorer. Expand the table that required want and then select **Forms**. 
-2.    Open the form required and then on the form designer ribbon select **Business Rules**.
-3.    In the form designer, open the business rule.
-4.    In the business rule designer select each condition and action to verify all the columns referenced in each condition and action. 
+1. Open solution explorer. Expand the table that you want, and then select **Forms**. 
+2. Open the form, and then on the form designer ribbon select **Business Rules**.
+3. In the form designer, open the business rule.
+4. In the business rule designer, select each condition and action to verify all the columns referenced in each condition and action. 
 
         > [!div class="mx-imgBorder"] 
         > ![Field referenced in business rule exists in table.](media/business-rule-field.png "Field referenced in business rule exists in table")
 
- 1.    Verify that each column referenced in the business rule is also included on the form. If not, add the missing column to the form.
+ 1. Verify that each column referenced in the business rule is also included on the form. If not, add the missing column to the form.
 
         > [!div class="mx-imgBorder"] 
         > ![Account name column on form.](media/account-name-on-form.png "Account name column on form")
@@ -215,8 +222,10 @@ Recommendations show a lightbulb next to the column label.
 Select the lightbulb to expand the view and show the recommendation.
 - ![Business rule expanded.](media/recommendation-view2.png "Recommendation lightbulb expanded")  
 
-## See also  
- [Create custom business logic through processes](guide-staff-through-common-tasks-processes.md)   
+## See also
+
+ [Create custom business logic through processes](guide-staff-through-common-tasks-processes.md)
+
  [Create a business process flow](/flow/create-business-process-flow)   
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

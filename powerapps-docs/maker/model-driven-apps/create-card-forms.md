@@ -40,10 +40,10 @@ Although card forms can be created and edited in the same way as other form type
 2. Expand **Data**, select **Tables**, select the table you want, and then select the **Forms** tab.
 3. On the toolbar select **Add form**, and then select **Card form**. Alternatively, you can open an existing **Form type** that's a **Card** form to edit it.
 
-:::image type="content" source="../../maker/model-driven-apps/media/create-card-form.png" alt-text="Create card form":::
+   :::image type="content" source="../../maker/model-driven-apps/media/create-card-form.png" alt-text="Create card form":::
 
 4. Add the columns that you want. We recommend that you limit the number of columns so that the form displays well on small screens.
-5. Select **Save** and then select **Publish**.
+5. Select **Save**, and then select **Publish**.
 
 ## Add a card form to a view
 
@@ -52,7 +52,7 @@ Although card forms can be created and edited in the same way as other form type
 3. Select the view that you want, and then on the view designer toolbar, select **Switch to classic**.
 4. Select **Custom Controls** from the **Common Tasks** pane.
 
-:::image type="content" source="../../maker/model-driven-apps/media/add-custom-control.png" alt-text="Advanced Settings":::
+   :::image type="content" source="../../maker/model-driven-apps/media/add-custom-control.png" alt-text="Advanced Settings":::
 
 5. Select **Add Control**, from the list of controls select **Read Only Grid**, and then select **Add**.
 
@@ -69,9 +69,9 @@ Although card forms can be created and edited in the same way as other form type
 7. Select **OK** to close the **Custom Controls** properties page.
 8. On the classic view designer toolbar, select **Save and Close**.
 
-## Next steps
+## See also
 
-  [Form types overview](types-forms.md)
+[Form types overview](types-forms.md)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
