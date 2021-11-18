@@ -108,7 +108,7 @@ To share an app, two actions are required.
 2. Copy the **Unified Interface URL.**
 3. Paste the app URL in a location so that your users can access it, such as by posting it on a SharePoint site or send via email.
 
-  <!-- !["Acquiring the link for a model-driven app"](media/share-model-driven-app/app-designer-copy-web-url-process.gif "Acquiring the link for a model-driven app") -->
+!["Acquiring the link for a model-driven app"](media/share-model-driven-app/app-designer-copy-web-url-process.gif "Acquiring the link for a model-driven app")
 
 Sharing an app and security roles are intrinsically linked. To properly share an app, you need to have a strong understanding of both.  [Discover more about sharing apps and establishing security](share-model-driven-app.md)
 
