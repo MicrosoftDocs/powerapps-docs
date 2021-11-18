@@ -46,7 +46,7 @@ The following table describes the common properties of columns. Certain types of
  |--|--|
  |**Display Name**|The text to be displayed for the column in the user interface.|
  |**Name**|The unique name across your environment. A name will be generated based on the display name that has been entered. However, this can be edited before saving. Once a column is created the name can't be changed as it may be referenced in your applications or code. The name will have the customization prefix for the **Dataverse Default Publisher** prepended to it.|
- |**Data type**|Controls how values are stored as well as how they are formatted in some applications. Once a column is saved, it is not possible to change the data type with the exception of converting text columns to autonumber columns.|
+ |**Data type**|Controls how values are stored as well as how they are formatted in some applications. Once a column is saved, it is not possible to change the data type except for converting text columns to autonumber columns.|
  |**Required**| A row can't be saved without data in this column. |
  |**Searchable**| This column appears in Advanced Find and is available when customizing views. |
  |**Calculated or Rollup**| Use to automate manual calculations. Use values, dates, or text.|
@@ -62,7 +62,7 @@ In addition to using Power Apps (make.powerapps.com), columns can also be review
 
 ### Navigate to a column for a table using the solution explorer
 
-To update the column the following steps need to be performed.
+To update the column, follow these steps.
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
 1. On the left navigation pane, expand **Data**, and then select **Tables**.
@@ -95,11 +95,11 @@ The following table describes properties that all columns have. Certain types of
 |**Display**|**Label**|**Required**: By default the label will match the display name of the column. The name for the form can be overridden by entering a different label here.|  
 ||**Display label on the form**|This contains the option not to display the label at all.|  
 ||**Field Behavior**|Specify the column level behavior using the check boxes.|  
-||**Locking**|This will prevent the column from being removed from the form accidentally. This will prevent any configuration applied to the column, such as event handlers, from being cleared if the column were removed. To remove this column a customizer would need to clear this setting first.|  
+||**Locking**|This will prevent the column from being removed from the form accidentally. This will prevent any configuration applied to the column, such as event handlers, from being cleared if the column were removed. To remove this column, a customizer would need to clear this setting first.|  
 ||**Visibility**|Showing the column is optional and can be controlled using scripts. More information: [Visibility options](visibility-options-legacy.md)|  
 ||**Availability**|Choose if you want the tab to be available on the phone.|
 |**Formatting**|**Select the number of fields the control occupies**|When the section containing the columns has more than one column this can set the column to occupy up to the number of columns that the section has.|  
-|**Details**|**Display Name**, **Name**, and **Description**|These read-only columns are for reference. Select **Edit** for access to the column definition if you want to edit it.<br /><br /> Each instance of a column in the form has a name property so that they can be referenced in form scripts, but this name is managed by the application. The first instance of the column is the name of the column specified when it was created. More information: [Create and edit columns](../data-platform/create-edit-fields.md)<br /><br /> For each additional time that a column is included in a form, the name appends a number starting with 1 to the end. So if the column name is 'new_cost', the first instance is 'new_cost', the second is 'new_cost1', and so on for each instance of the column in the form.<br /><br />**Note:** The column **Description** value provides tooltip text for the column when people place their cursor over it.|  
+|**Details**|**Display Name**, **Name**, and **Description**|These read-only columns are for reference. Select **Edit** for access to the column definition if you want to edit it.<br /><br /> Each instance of a column in the form has a name property so that they can be referenced in form scripts, but this name is managed by the application. The first instance of the column is the name of the column specified when it was created. More information: [Create and edit columns](../data-platform/create-edit-fields.md)<br /><br /> For each additional time that a column is included in a form, the name appends a number starting with 1 to the end. So if the column name is 'new_cost', the first instance is 'new_cost', the second is 'new_cost1', and so on, for each instance of the column in the form.<br /><br />**Note:** The column **Description** value provides tooltip text for the column when people place their cursor over it.|  
 |**Events**|**Form Libraries**|Specify any JavaScript web resources that will be used in the column `OnChange` event handler.<br /><br />|  
 ||**Event Handlers**|Configure the functions from the form libraries that should be called for the column `OnChange` event. More information: [Configure Event Handlers](configure-event-handlers-legacy.md)|  
 |**Business Rules**|**Business Rules**|View and manage any business rules that reference this column. More information: [Create business rules and recommendations](create-business-rules-recommendations-apply-logic-form.md)|  
