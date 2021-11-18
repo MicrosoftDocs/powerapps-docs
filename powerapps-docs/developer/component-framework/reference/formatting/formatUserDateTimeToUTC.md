@@ -13,7 +13,7 @@ ms.topic: "article"
 ms.assetid: 148964b5-106e-4f2e-8038-9086d29dc54f
 ---
 
-# formatTime
+# formatUserDateTimeToUTC
 
 [!INCLUDE [formatUserDateTimeToUTC-description](includes/formatUserDateTimeToUTC-description.md)]
 
