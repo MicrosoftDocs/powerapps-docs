@@ -218,6 +218,10 @@
           href: reference/formatting/formatlanguage.md
         - name: formatTime
           href: reference/formatting/formattime.md
+        - name: formatUserDateTimeToUTC
+          href: reference/formatting/formatuserdatetimetoutc.md
+        - name: formatUTCDateTimrToUserDate
+          href: reference/formatting/formatutcdatetimetouserdate.md
         - name: getWeekOfYear
           href: reference/formatting/getweekofyear.md
       - name: Linking
