@@ -215,6 +215,10 @@ Load as much code as needed for events for a particular form. If you have code t
 
 Avoid loading libraries in the `OnLoad` event if they are only used for the `OnChange` or `OnSave` events. Instead, load them in those events. This way the platform can defer loading them until after the form loads. More information: [Optimize form performance](/dynamics365/customerengagement/on-premises/customize/optimize-form-performance)
 
+#### Remove usage of Console APIs in production code
+
+Don't use Console APIs such as `console.log` in production code. Logging data to the console can increase memory pressure and doing so may prevent the data from being cleaned up in memory. This can lead to the app becoming slower over time and eventually crashing.
+
 ## Tools you can use to help make apps performant
 
 This section describes the tools that can help you understand performance issues and offer recommendations about how to optimize your customizations in model-driven apps.
