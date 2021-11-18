@@ -94,7 +94,8 @@ You can set a system view or choose one of your views and set it as the default 
 2. From the list of views, select the view that you want to set as the default view.
 3. Select the view again and then select **Set current view as my default**.
 
-   
+   > [!div class="mx-imgBorder"] 
+   > ![Set a default view.](media/default-view.png "Set the current view as your default view")
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
