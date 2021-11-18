@@ -46,7 +46,7 @@ You can access form settings from the **Forms** tab in Power Apps or command bar
 1. Sign into Power Apps, select **Solutions**, open the solution you want, select a table, and then select the **Forms** tab.
 2. Next to the main form you want to configure the security roles for a form, select **...,** and then select **Form settings**.
 
-:::image type="content" source="../../maker/model-driven-apps/media/form-settings.png" alt-text="Advanced Settings":::
+   :::image type="content" source="../../maker/model-driven-apps/media/form-settings.png" alt-text="Advanced Settings":::
 
 3. In the left navigation on the **Form settings** page, select **Security role**.
 4. Choose from the following options:

@@ -35,7 +35,7 @@ Interactive experience dashboards can be a **one-stop workplace** for app users,
 
 ## Dashboard types
 
- The interactive experience dashboards come in two forms: **multi-stream** and **single-stream**. In addition, multi-stream dashboards can be home page or table-specific dashboards. The table-specific dashboards are configured in a different part of the user interface and partially preloaded with the table-specific configuration information.
+ The interactive experience dashboards come in two forms: **multi-stream** and **single-stream**. In addition, multi-stream dashboards can be home page or table-specific dashboards. The table-specific dashboards are configured in a different part of the user interface and are partially preloaded with table-specific configuration information.
 
 ### Multi-stream dashboards
 
@@ -43,7 +43,7 @@ Interactive experience dashboards can be a **one-stop workplace** for app users,
 
 ### Single-stream dashboards
 
- In the table-specific dashboards, all streams are based on the **same table**. The data flows from various views or queues, such as **My Activities**, **My Cases**, or **Cases in the Banking Queue**.
+ In the table-specific dashboards, all streams are based on the same table. The data flows from various views or queues, such as **My Activities**, **My Cases**, or **Cases in the Banking Queue**.
 
 > [!NOTE]
 > The examples described here use the Case table, which is available with the Dynamics 365 Customer Service app.
@@ -52,14 +52,14 @@ Interactive experience dashboards can be a **one-stop workplace** for app users,
 
 ### Dashboard charts  
   
- Multi-stream and single-stream dashboards contain interactive charts that provide a count of relevant rows, such as cases by priority or by status. These charts also act as visual **filters**. The visual filters (interactive charts) are based on multiple tables and in the single-stream dashboards, the table in the data stream defines the visual filter table.   
+ Multi-stream and single-stream dashboards contain interactive charts that provide a count of relevant rows, such as cases by priority or by status. These charts also act as visual filters. The visual filters (interactive charts) are based on multiple tables and in the single-stream dashboards, the table in the data stream defines the visual filter table.
   
  Users can apply additional filtering with global filter and timeframe filter. The global filter works at a column level on all charts, and also on streams and tiles that are based on the filter table (you specify the filter table when you configure the visual filters). 
   
 > [!NOTE]
 >  The interactive dashboards are solution aware and can be exported and then imported into a different environment as a solution. However, the queues that the streams and tiles are based on aren’t solution aware. Before importing the dashboard solution into the target system, the queues have to be manually created in the target system in **Settings** > **Service Management** > **Queues**. After you create the queues, import the dashboard solution to the target system, and then edit the streams or tiles that are based on the queues to assign the newly created queues appropriately.  
   
- The illustrations in this topic show multi-stream and single-stream dashboards with the header pane. Below the header you see visual filters and streams. In the single-stream dashboard, you also see tiles. For each dashboard type, you can choose from several different layouts that are also shown. The dashboard header contains the following controls and select-able icons, from left to right: dashboard picker, refresh, visual filter icon, global filter icon, and timeframe filter.  
+ The illustrations in this topic show multi-stream and single-stream dashboards with the header pane. Below the header you see visual filters and streams. In the single-stream dashboard, you also see tiles. For each dashboard type, you can choose from several different layouts that are also shown. The dashboard header contains the following controls and select-able icons, from left to right: dashboard picker, refresh, visual filter icon, global filter icon, and time frame filter.  
 
 ## Dashboard layouts
 
@@ -128,7 +128,7 @@ In this example there are two interactive dashboard options available in the Cas
 5. In the **General** tab, select the **Appears in global filter in interactive experience** check box. Select **Save and Close**.
 6. Select **Publish All Customizations** for the changes to take effect.
   
- The columns that are enabled for **Appears in global filter in interactive experience** appear in the global filter flyout window when the global filter icon is clicked on the dashboard header. In the flyout window, the service reps can select the columns on which they want to filter globally, in charts, and also in streams and tiles that are based on the filter table.
+ The columns that are enabled for **Appears in global filter in interactive experience** appear in the global filter flyout window when the global filter icon is selected on the dashboard header. In the flyout window, the service reps can select the columns on which they want to filter globally, in charts, and also in streams and tiles that are based on the filter table.
   
  The global filter flyout window is shown here:  
   
@@ -153,7 +153,7 @@ In this example there are two interactive dashboard options available in the Cas
   
 The columns that are configured for sorting appear in the drop-down list on the stream header.
 
-The following illustration shows the flyout dialog with the list of the available columns for sorting, in the drop-down list. The default sort is always set on the **Modified On** column.  
+The following screenshot shows the flyout dialog with the list of the available columns for sorting, in the drop-down list. The default sort is always set on the **Modified On** column.  
   
  ![Sort by drop-down list.](media/sort-field.png "Sort by drop-down list")
 
@@ -167,7 +167,7 @@ Select and enable security roles that will be able to view the interactive dashb
   
 2.  Select **Solutions**, and then open the required solution. 
 
-3.  Select the dashboard and then on the toolbar select **Enable security roles**.  This will open a new tab with a classic interface.
+3.  Select the dashboard and then on the toolbar select **Enable security roles**.  This will open a new tab with the classic interface.
   
     > [!div class="mx-imgBorder"] 
     > ![Enable security roles.](media/dashboard-enable-security-roles.png)
@@ -310,7 +310,7 @@ The color that will appear in the charts and streams for specific column values 
 1.  Select **Publish** for the changes to take effect.  
 
   
-In the following example, we’re changing the color for the **IsEscalated** column. Use the **Edit** button to open the **Modify List Value** dialog box:  
+In the following example, the color for the **IsEscalated** column is changed. Use the **Edit** button to open the **Modify List Value** dialog box:  
  
  > [!div class="mx-imgBorder"] 
  > ![Change color in the dashboard.](media/edit-color.png "Change color in the dashboard")  

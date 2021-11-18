@@ -1191,7 +1191,9 @@
             href: ./model-driven-apps/model-app-page-issues.md
           - name: Use monitor to troubleshoot custom pages
             href: ./model-driven-apps/monitor-page-checker.md
-      - name: Working with views
+        - name: Create, add, or remove forms and views
+          href: ./model-driven-apps/create-add-remove-forms-views-dashboards.md 
+      - name: Work with views
         href: 
         items:
         - name: Views overview
@@ -1216,7 +1218,7 @@
           href: ./model-driven-apps/specify-default-views.md
         - name: Deleting and deactivating views
           href: ./model-driven-apps/remove-views.md
-      - name: Working with forms
+      - name: Work with forms
         href: 
         items:
         - name: Forms overview
@@ -1242,7 +1244,7 @@
             href: ./model-driven-apps/create-card-forms.md
         - name: How to assign form order in model-driven app
           href: ./model-driven-apps/assign-form-order.md
-        - name: Using the form designer
+        - name: Use the form designer
           href: 
           items:
           - name: Form designer overview
@@ -1271,10 +1273,10 @@
             href: ./model-driven-apps/form-designer-add-configure-quickview.md
           - name: Configure lookup component
             href: ./model-driven-apps/form-designer-add-configure-lookup.md      
-        - name: Designing effective forms
+        - name: Design effective forms
           href: 
           items:
-          - name: Designing forms for efficiency
+          - name: Design forms for efficiency
             href: ./model-driven-apps/design-productive-forms.md         
           - name: Design forms for performance
             href: ./model-driven-apps/design-performant-forms.md
@@ -1339,7 +1341,7 @@
           href: ./model-driven-apps/add-page-to-model-app.md
         - name: Design considerations for a custom page
           href: ./model-driven-apps/design-page-for-model-app.md
-        - name: Navigating to and from a custom page
+        - name: Navigate to and from a custom page
           href: ../developer/model-driven-apps/clientapi/navigate-to-custom-page-examples.md
         - name: Use Power Fx in a custom page
           href: ./model-driven-apps/page-powerfx-in-model-app.md
@@ -1473,7 +1475,7 @@
   - name: Advanced app making and customization
     href: 
     items:
-    - name: Accessing advanced customization and administration areas
+    - name: Access advanced customization and administration areas
       href: ./model-driven-apps/advanced-navigation.md
     - name: Create or edit web resources
       href: ./model-driven-apps/create-edit-web-resources.md
