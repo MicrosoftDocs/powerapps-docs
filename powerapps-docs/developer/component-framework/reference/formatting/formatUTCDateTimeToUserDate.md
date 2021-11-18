@@ -13,7 +13,7 @@ ms.topic: "article"
 ms.assetid: 148964b5-106e-4f2e-8038-9086d29dc54f
 ---
 
-# formatTime
+# formatUTCDateTimeToUserDate
 
 [!INCLUDE [formatUTCDateTimeToUserDate-description](includes/formatUTCDateTimeToUserDate-description.md)]
 
@@ -29,7 +29,7 @@ Model-driven and canvas apps
 
 | Parameter Name | Type                                                   | Required | Description                                          |
 | -------------- | ------------------------------------------------------ | -------- | ---------------------------------------------------- |
-| value          | `string`                                               | Yes      | The date to be formatted.                            |
+| utcDateTime         | `string`                                               | Yes      | The date to be formatted.                            |
 | behavior       | [`DateTimeFieldBehavior`](../DateTimeFieldBehavior.md) | No       | The behavior of the datetime object to be formatted. |
 
 ## Return Value
