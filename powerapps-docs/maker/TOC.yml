@@ -1370,9 +1370,9 @@
         items:
         - name: Design model-driven apps using the app designer
           href: ./model-driven-apps/design-custom-business-apps-using-app-designer.md        
-        - name: Create your first classic app
+        - name: Create your first app
           href: ./model-driven-apps/build-first-model-driven-app-classic.md
-        - name: Create an app (classic)
+        - name: Create an app
           href: ./model-driven-apps/create-edit-app.md
         - name: Create a site map for an app
           href: ./model-driven-apps/create-site-map-app.md

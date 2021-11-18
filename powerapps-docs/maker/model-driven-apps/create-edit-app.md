@@ -27,7 +27,7 @@ search.app:
   - D365CE
 ---
 
-# Create a model-driven app using the app designer
+# Create a model-driven app using the classic app designer
 
 This article describes the basics of creating and editing a model-driven app that can be shared and distributed to other environments.
 

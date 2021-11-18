@@ -17,7 +17,7 @@ search.app:
   - D365CE
 ---
 
-# Build your first model-driven app (Classic)
+# Build your first model-driven app using the classic designer
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
