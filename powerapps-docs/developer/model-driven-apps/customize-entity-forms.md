@@ -182,7 +182,7 @@ Xrm.Navigation.navigateTo(pageInput, navigationOptions).then(
 
  [Create and design forms](../../maker/model-driven-apps/create-design-forms.md)   
  [SystemForm table](../data-platform/reference/entities/systemform.md)  
- [Form XML cchema](form-xml-schema.md)<br/>
+ [Form XML schema](form-xml-schema.md)<br/>
  [Xrm.Navigation.navigateTo](./clientapi/reference/xrm-navigation/navigateto.md)
 
 
