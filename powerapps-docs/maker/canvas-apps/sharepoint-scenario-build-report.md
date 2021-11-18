@@ -2,7 +2,6 @@
 title: Create a Power BI report to analyze projects
 description: Learn about how to create a Power BI report based on two SharePoint lists.
 author: fikaradz
-manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas

@@ -2,7 +2,6 @@
 title: Create a canvas app to manage projects
 description: Learn about how to build a canvas app from scratch allowing users to assign a manager to projects and to update project details.
 author: emcoope-msft
-manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas

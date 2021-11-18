@@ -2,7 +2,6 @@
 title: Show a list of items in canvas apps
 description: Use a gallery to show a list of items in your canvas app, and filter the list by specifying a criterion.
 author: emcoope-msft
-manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas

@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 04/28/2021
+ms.date: 11/12/2021
 ms.subservice: mobile
 ms.author: mkaur
 ms.custom: ""
@@ -29,25 +29,22 @@ This troubleshooting article helps fix common issues for the [Power Apps mobile 
 
 ## Unable to sign in on an Android device using Authenticator or Company Portal
 
-There is an intermittent issue with Microsoft Authenticator app version 6.2104.2518 and Company Portal version 5.0.5123.0, which causes sign-in to fail with no error message in the Power Apps mobile app.
+There was an intermittent issue with Microsoft Authenticator app version **6.2104.2518** and Company Portal version **5.0.5123.0**, which caused sign-in to fail with no error message in the Power Apps mobile.
 
-A fix will be released shortly. Regularly check the Authenticator app or the Company Portal mobile app for updates. Until then, try this workaround:
+The issue has been fixed. Make sure that you're using a version of Authenticator or Company Portal that's later than the following version:
 
-1.	Make sure you have a good internet connection.
-2.	Wait for one minute and then try signing in again.
+ - Authenticator that's **later** than version **6.2104.2518**
+ - Company portal that's **later** than  version **5.0.5123.0**
 
-If you still can't sign in after several attempts, try launching your app in the web browser as a temporary solution until the Authenticator or Company Portal apps are updated.
 
 ## Unable to open an app
 
-There is an intermittent issue with Microsoft Authenticator app version 6.2104.2518 and Company Portal version 5.0.5123.0, which prevents apps opening in the Power Apps mobile app.
+There was an intermittent issue with Microsoft Authenticator app version **6.2104.2518** and Company Portal version **5.0.5123.0**, which prevents apps opening in the Power Apps mobile app.
 
-A fix will be released shortly. Regularly check the Authenticator app or the Company Portal mobile app for updates. Until then, try this workaround:
+The issue has been fixed. Make sure that you're using a version of Authenticator or Company Portal that's later than the following:
 
-1.	Make sure you have a good internet connection.
-2.	Wait for one minute and then try opening the app again.
-
-If you still can't open the app after several attempts, try launching your app in the web browser as a temporary solution until the Authenticator or Company Portal apps are updated.
+ - Authenticator app that's **later** than version **6.2104.2518**
+ - Company portal that's **later** than  version **5.0.5123.0**
 
 ## Error: There was a problem signing you in
 

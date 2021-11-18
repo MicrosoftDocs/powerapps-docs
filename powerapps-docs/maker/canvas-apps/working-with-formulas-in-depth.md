@@ -2,7 +2,6 @@
 title: Understand behavior formulas for canvas apps
 description: Reference information about working with behavior formulas, which change the state of a canvas app.
 author: gregli-msft
-manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
