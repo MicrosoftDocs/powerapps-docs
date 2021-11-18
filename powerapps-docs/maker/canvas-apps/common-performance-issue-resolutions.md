@@ -43,7 +43,7 @@ We recommend that you select only the columns that are necessary for the app. Ad
 
 For example, if you use Dataverse as the data source for your app, make sure you've enabled the [explicit column selection](use-native-cds-connector.md) feature. This feature allows Power Apps to restrict data retrieval to only the columns used in the app.
 
-To turn on the explicit column selection feature on the canvas app, go to **File** > **Settings** > **Upcoming features** > **Preview**, and then turn on the **Explicit column selection** toggle.
+To turn on the explicit column selection feature on the canvas app, go to **Settings** > **Upcoming features** > **Preview**, and then turn on the **Explicit column selection** toggle.
 
 ## Unsupported or legacy browsers
 
