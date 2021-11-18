@@ -2,7 +2,6 @@
 title: Export and import canvas app packages
 description: Learn how to export and import canvas apps.
 author: caburk
-manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.date: 08/21/2020

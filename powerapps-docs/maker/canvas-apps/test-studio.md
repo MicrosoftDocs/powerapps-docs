@@ -2,7 +2,6 @@
 title: Test Studio
 description: Describes Test Studio with overview, terminology, best practices, and limitations.
 author: aengusheaney
-manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas

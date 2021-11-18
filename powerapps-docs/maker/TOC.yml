@@ -121,6 +121,8 @@
         href: ../user/grid-filters-advanced.md      
     - name: Charts and dashboards
       items:
+      - name: Visualize data in a view with Power BI service (preview)
+        href: ../user/visualize-in-power-bi.md
       - name: Track your progress with dashboards and charts
         href: ../user/track-your-progress-with-dashboard-and-charts.md
       - name: View charts on a page or in a record
@@ -385,10 +387,14 @@
                 href: ./canvas-apps/mixed-reality-component-view-shape.md
               - name: View 3D models and 2D images in mixed reality
                 href: ./canvas-apps/mixed-reality-component-view-mr.md
-              - name: Measure in mixed reality
+              - name: Take measurements in mixed reality
                 href: ./canvas-apps/mixed-reality-component-measure-distance.md
+              - name: Validate measurements in mixed reality using a spatial test filter
+                href: ./canvas-apps/mixed-reality-spatial-test.md
               - name: Upload photos from mixed reality
                 href: ./canvas-apps/mixed-reality-take-upload-photos.md
+              - name: Load models from CGTrader into mixed reality components (preview)
+                href: ./canvas-apps/mixed-reality-cgtrader.md
           - name: "Add geospatial components"
             items:
             - name: Geospatial components
@@ -1009,6 +1015,8 @@
       href: ./canvas-apps/embed-powerapps-powerbi.md    
   - name: Manage an app
     items:
+    - name: Change app name and tile
+      href: ./canvas-apps/set-name-tile.md
     - name: Edit an app
       href: ./canvas-apps/edit-app.md
     - name: Export and import an app
@@ -1019,8 +1027,6 @@
       href: ./canvas-apps/license-designation.md
     - name: Restore a previous version
       href: ./canvas-apps/restore-an-app.md
-    - name: Change app name and tile
-      href: ./canvas-apps/set-name-tile.md
   - name: Test an app with Test Studio
     items:
     - name: Test Studio Overview
@@ -2224,7 +2230,13 @@
     - name: Advanced Configuration Settings
       href: ./data-platform/azure-synapse-link-advanced-configuration.md
     - name: Azure Synapse Link FAQ
-      href: ./data-platform/export-data-lake-faq.yml      
+      href: ./data-platform/export-data-lake-faq.yml
+    - name: Application Lifecycle Management
+      items:
+      - name: Transport a configuration across environments
+        href: ./data-platform/azure-synapse-link-solution.md
+      - name: Environment Lifecycle Events
+        href: ./data-platform/azure-synapse-link-olc.md     
     - name: Analyze with Azure Synapse Analytics
       items:
       - name: Query data with serverless SQL pool
@@ -2610,6 +2622,8 @@
     href: ./canvas-apps/common-issues-and-resolutions.md
   - name: Get a session or app ID
     href: ./canvas-apps/get-sessionid.md
+  - name: Change Power Apps Studio version
+    href: ./canvas-apps/studio-versions.md
   - name: Troubleshoot startup issues for Power Apps
     href: ../troubleshooting-startup-issues.md
   - name: Troubleshoot Power Query

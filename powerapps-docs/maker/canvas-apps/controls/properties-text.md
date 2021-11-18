@@ -2,7 +2,6 @@
 title: Text properties in Power Apps
 description: Reference information about text properties in Power Apps.
 author: chmoncay
-manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas

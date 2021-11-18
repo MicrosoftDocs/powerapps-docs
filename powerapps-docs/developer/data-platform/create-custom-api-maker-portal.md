@@ -2,7 +2,7 @@
 title: "Create a Custom API in the maker portal (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Create a Custom API definition with the maker portal" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 09/08/2021
+ms.date: 11/14/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -80,7 +80,7 @@ A Custom API that represents an action doesn't require response properties. If t
 > [!IMPORTANT]
 > A Custom API that represents a function requires at least one response property to be valid.
 
-If there is only a single **Entity** or **EntityCollection** response property defined, the response will be of that type. If there are multiple parameters, or one or more parameter of a simple type, the API will return a complex type where each response property will be a property of that complex type. 
+If there is only a single **Entity** or **EntityCollection** response property defined, the response will be of that type. If there are multiple properties, or one or more property of a simple type, the API will return a complex type where each response property will be a property of that complex type.
 
 For example, if your Custom API Unique name is `sample_CustomAPIExample`, it will return a complex type named `sample_CustomAPIExampleResponse` with properties for each response property you define.
 
