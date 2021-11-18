@@ -158,6 +158,9 @@ For each table chosen, select the behavior for importing that table in these set
 
     - Requires a key configuration in the target environment (as the unique identifier columns are not available to modify).
 
+> [!IMPORTANT]
+> The 'delete rows' option is only available when a key is specified. It is possible to have a table without a key, but a key is required when you want to update or delete records since it is the unique identifier the system uses to perform these tasks. You can [add a key directly in the Dataverse table](https://docs.microsoft.com/en-us/powerapps/maker/data-platform/define-alternate-keys-portal) if your table does not have a key and you want to use the delete or update functionality provided by Dataflows.
+
 - **Load to new table (not recommended)**
 
     - Ideally there should be a table predefined in the target environment from the same solution import as the source environment. However, there are cases where this might not be feasible, so this is an option if there is no existing table to load to. 
