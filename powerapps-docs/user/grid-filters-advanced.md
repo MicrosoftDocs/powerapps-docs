@@ -90,7 +90,7 @@ An asterisk next to a view name indicates the view has not been saved.
 
 You can set a system view or choose one of your views and set it as the default view.
 
-1. Select the table that you want to set the view for, such as Accounts.
+1. Select the table that you want to set a view for.
 2. From the list of views, select the view that you want to set as the default view.
 3. Select the view again and then select **Set current view as my default**.
 
