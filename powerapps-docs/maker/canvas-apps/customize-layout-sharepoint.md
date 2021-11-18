@@ -2,7 +2,6 @@
 title: "Tutorial: Customize a gallery in Power Apps"
 description: Learn about how to customize data that appears in gallery and other elements of canvas apps generated automatically.
 author: tapanm-msft
-manager: kvivek
 ms.service: powerapps
 ms.topic: tutorial
 ms.custom: canvas

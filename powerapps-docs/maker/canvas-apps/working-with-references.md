@@ -2,7 +2,6 @@
 title: Understand record references and polymorphic lookups in canvas apps
 description: Learn about how to work with record references and polymorphic lookups in canvas apps.
 author: gregli-msft
-manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas

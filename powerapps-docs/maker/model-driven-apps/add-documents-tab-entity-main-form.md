@@ -88,7 +88,7 @@ Adding a tab on a table main form to display SharePoint documents helps users di
 ```
 
 ## Remove the documents tab
-1.	 Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), in the left pane expand **Dataverse**, and then select **Tables**. 
+1.	 Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), in the left pane expand **Data**, and then select **Tables**. 
 2.	Select the table you want, select the **Forms** tab, and then open the form where the file tab needs to be removed. 
 3. Select the **Files** tab, and then on the form designer toolbar, select **Delete**. 
 

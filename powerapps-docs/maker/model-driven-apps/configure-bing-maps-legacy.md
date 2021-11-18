@@ -49,7 +49,7 @@ You can remove the maps area in the form editor or add it back by using the **Bi
 
 ## Configure a map 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
-2. Go to **Dataverse** > **Tables**, and then select the table that you want to configure a map on the main form. 
+2. Go to **Data** > **Tables**, and then select the table that you want to configure a map on the main form. 
 3. Select the **Forms** tab, and then select the main form, and then on the command bar select **Switch to classic**. 
 4. On the classic form designer double-click the **Map View** control to view and edit the properties. More information: [View and edit map properties](#view-and-edit-map-properties)
 
