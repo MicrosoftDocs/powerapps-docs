@@ -1158,7 +1158,7 @@
       items:
       - name: App interface design overview
         href: ./model-driven-apps/app-interface-design-overview.md
-      - name: Using the modern app designer (Preview)
+      - name: Use the modern app designer (Preview)
         href: 
         items: 
         - name: App designer overview (Preview)
@@ -1251,7 +1251,7 @@
             href: ./model-driven-apps/form-designer-overview.md
           - name: How to open the form editor
             href: ./model-driven-apps/open-form-editor.md
-          - name: Using the tree view
+          - name: Use the tree view
             href: ./model-driven-apps/using-tree-view-on-form.md
           - name: Create or edit forms
             href: ./model-driven-apps/create-and-edit-forms.md
@@ -1368,7 +1368,7 @@
           href: ./model-driven-apps/command-designer-limitations.md       
       - name: Use the classic designers
         items:
-        - name: Design model-driven apps by using the app designer
+        - name: Design model-driven apps using the app designer
           href: ./model-driven-apps/design-custom-business-apps-using-app-designer.md        
         - name: Create your first classic app
           href: ./model-driven-apps/build-first-model-driven-app-classic.md
