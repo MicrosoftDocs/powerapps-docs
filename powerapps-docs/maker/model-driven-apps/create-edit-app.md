@@ -35,7 +35,7 @@ This article describes the basics of creating and editing a model-driven app tha
 
 Verify the following prerequisites before creating an app:
 - A Power Apps [environment](model-driven-app-glossary.md#environment) used for app development must exist within the tenant. More information [Create an environment](/power-platform/admin/create-environment) and [Environment strategy for ALM](/power-platform/alm/environment-strategy-alm).
-- The environment used will need to have a Dataverse database associated with it.  Dataverse environments can exist with or without a database and generally these are provisioned on creation of the environment.  The database holds the tables and other components that will be used by the model-driven app. [Create and manage environments in Dataverse](https://docs.microsoft.com/learn/modules/create-manage-environments/)
+- The environment used will need to have a Dataverse database associated with it.  Dataverse environments can exist with or without a database and generally these are provisioned on creation of the environment.  The database holds the tables and other components that will be used by the model-driven app. [Create and manage environments in Dataverse](/learn/modules/create-manage-environments/)
 - Within the environment the app developer needs to have an environment maker, system administrator, or system customizer security role. More information: [About predefined security roles](./share-model-driven-app.md#about-predefined-security-roles)
 
 ## Create a model-driven app  
