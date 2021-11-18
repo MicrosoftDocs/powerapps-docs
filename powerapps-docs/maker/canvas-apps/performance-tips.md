@@ -2,7 +2,6 @@
 title: Tips and best practices to improve performance of canvas apps
 description: Follow the best practices and tips in this topic to boost the performance of canvas apps.
 author: yingchin
-manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas

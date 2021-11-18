@@ -18,11 +18,12 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Use Monitor to troubleshoot custom page behavior in a model-driven app (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+# Use Monitor to troubleshoot custom page behavior in a model-driven app
 
 Monitor can help you debug and diagnose problems, which helps you build faster, more reliable apps. Monitor provides a deep view into how an app runs by providing a log of all activities in your app as it runs.
+
+  > [!IMPORTANT]
+  > Monitor must be run on the model-driven app and not directly on a custom page.
 
 When you filter on model-driven app custom page-related events in Monitor, you can get information about related tables, tables, controls, and components on a custom page in Monitor as your app runs. More information: [Debug a model-driven app with Monitor](../monitor-modelapps.md)
 
@@ -33,5 +34,3 @@ When you filter on model-driven app custom page-related events in Monitor, you c
 [Model-driven app custom page overview](model-app-page-overview.md)
 
 [Using PowerFx in custom page](page-powerfx-in-model-app.md)
-
-[Add connectors into custom pages](page-data-connectors.md)

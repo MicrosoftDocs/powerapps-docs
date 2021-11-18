@@ -2,7 +2,6 @@
 title: Get started with formulas in canvas apps
 description: Learn about how to use formulas to customize a canvas app.
 author: gregli-msft
-manager: kvivek
 ms.service: powerapps
 ms.custom: 
 - "intro-internal"

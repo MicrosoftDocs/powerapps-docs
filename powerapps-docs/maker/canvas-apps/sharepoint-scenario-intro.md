@@ -2,7 +2,6 @@
 title: Integrate Power Apps, Power Automate, and Power BI with SharePoint Online
 description: In this series of tutorials, we'll explore how to build out a basic canvas app for project management based on SharePoint lists and three key technologies that integrate with SharePoint Online - Power Apps, Power Automate, and Power BI.
 author: NickWaggoner
-manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas

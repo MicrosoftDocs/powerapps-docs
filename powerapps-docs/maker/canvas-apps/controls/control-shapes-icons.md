@@ -2,7 +2,6 @@
 title: Shape and Icon controls in Power Apps
 description: Learn about the details, properties and examples of the Shape and Icon controls in Power Apps.
 author: chmoncay
-manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas

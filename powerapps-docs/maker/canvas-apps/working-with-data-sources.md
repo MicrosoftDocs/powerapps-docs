@@ -2,7 +2,6 @@
 title: Understand data sources for canvas apps
 description: Learn about working with connections and data sources for canvas apps.
 author: gregli-msft
-manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
