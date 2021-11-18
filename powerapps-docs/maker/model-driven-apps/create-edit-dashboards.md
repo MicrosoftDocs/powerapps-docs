@@ -29,9 +29,9 @@ search.app:
 [!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 ## Dashboard types
 
-Dashboards are effectively collections of charts relating to app tables.
+Dashboards are collections of charts relating to Microsoft Dataverse tables.
 
-There are two types of dashboards, user dashboards and system dashboards. An app user can create a dashboard visible only to them in the app areas that to which they have privileges.
+There are two types of dashboards, user dashboards and system dashboards. An app user can create a dashboard visible only to them in the app areas where they have privileges.
 
 An admin or customizer creates or customizes system dashboards that, when published, are visible to all app users. A user can choose to set their user dashboard as their default dashboard and override the system dashboard.
 
@@ -41,7 +41,7 @@ Dashboards can be standard or interactive.
 
 **Standard** dashboards support adding one or more unrelated components such as charts or lists.
 
-**Interactive** dashboards provide the capability for users to act on a particular row directly from the dashboard. This topic focuses on standard system dashboards. For information about interactive dashboards, see [Configure model-driven app interactive experience dashboards](configure-interactive-experience-dashboards.md).
+**Interactive** dashboards provide the capability for users to act on a particular row directly from the dashboard. This article focuses on standard system dashboards. For information about interactive dashboards, see [Configure model-driven app interactive experience dashboards](configure-interactive-experience-dashboards.md).
   
 ## Create a new standard dashboard  
   
@@ -59,12 +59,12 @@ Dashboards can be standard or interactive.
   
     :::image type="content" source="media/create-new-dashboard-layouts.png" alt-text="{alt-text}":::
 
-1. In the **Dashboard: New** page enter a name for the dashboard.
+1. In the **Dashboard: New** page, enter a name for the dashboard.
 1. Select one of the component areas and then select the icon for a chart or a list.  
   
      Up to six components can be included in a dashboard.  
   
-1. For example, to add a chart, select the chart icon on the tile of the dashboard canvas where chart needs to appear. Then, in the **Add Component** dialog box select values for **Row Type**, **View**, and **Chart**, and then select **Add** to add the chart to the dashboard. For information about how to create a chart, see [Create a model-driven app system chart](create-edit-system-chart.md).
+1. For example, to add a chart, select the chart icon on the tile of the dashboard canvas where the chart needs to appear. Then, in the **Add Component** dialog, select values for **Row Type**, **View**, and **Chart**. Then select **Add** to add the chart to the dashboard. For information about how to create a chart, see [Create a model-driven app system chart](create-edit-system-chart.md).
 :::image type="content" source="media/add-dashboard-component-dialog.png" alt-text="Add dashboard component dialog":::  
 
 1. When finished adding components to the dashboard, select **Save** and then **Close**.  

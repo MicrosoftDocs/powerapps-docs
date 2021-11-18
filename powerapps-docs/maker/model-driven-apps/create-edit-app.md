@@ -29,15 +29,14 @@ search.app:
 
 # Create a model-driven app using the app designer
 
-This topic describes the basics of creating and editing a model-driven app that can be shared and distributed to other environments.
+This article describes the basics of creating and editing a model-driven app that can be shared and distributed to other environments.
 
 ## Prerequisites to creating model-driven apps
 
 Verify the following prerequisites before creating an app:
 - A Power Apps [environment](model-driven-app-glossary.md#environment) used for app development must exist within the tenant. More information [Create an environment](/power-platform/admin/create-environment) and [Environment strategy for ALM](/power-platform/alm/environment-strategy-alm).
 - The environment used will need to have a Dataverse database associated with it.  Dataverse environments can exist with or without a database and generally these are provisioned on creation of the environment.  The database holds the tables and other components that will be used by the model-driven app. [Create and manage environments in Dataverse](https://docs.microsoft.com/learn/modules/create-manage-environments/)
-- Dataverse [tables](model-driven-app-glossary.md#table) with forms, views will need to exist within the database.  These tables will most likely need to have [relationships](model-driven-app-glossary.md#relationship) configured for them.
-- Within the environment the app developer needs to have an Environment maker, system administrator, or system customizer role. More information: [About predefined security roles](./share-model-driven-app.md#about-predefined-security-roles)
+- Within the environment the app developer needs to have an environment maker, system administrator, or system customizer security role. More information: [About predefined security roles](./share-model-driven-app.md#about-predefined-security-roles)
 
 ## Create a model-driven app  
 
@@ -60,8 +59,8 @@ Verify the following prerequisites before creating an app:
   
     - **Description**: Type a short description of what the app is or does.  
   
-    > [!div class="mx-imgBorder"]
-    > ![Create a new app.](media/create-new-app.png "Create a new app")
+      > [!div class="mx-imgBorder"]
+      > ![Create a new app.](media/create-new-app.png "Create a new app")
 
      - **Icon**: By default, the **Use Default App** thumbnail check box is checked. To select a different web resource as an icon for the app, clear the check box, and then select an icon from the drop-down list. This icon will be displayed on the preview tile of the app.  
   
@@ -80,7 +79,7 @@ Verify the following prerequisites before creating an app:
      > [!NOTE]
      >  It is not possible to change the unique name and app URL suffix on the **Properties** tab.  
   
-2. Select **Done** or if **Use an existing solution to create the App** is selected select **Next** to select from the available solutions that were imported in the organization, then select **Done**.  
+2. Select **Done** or if **Use an existing solution to create the App** is selected, select **Next** to choose from the available solutions that were imported in the environment, then select **Done**.  
   
 3.  A new app is created and is shown in **Draft** status. This is shown in the [App designer](model-driven-app-glossary.md#app-designer).
 
@@ -89,7 +88,7 @@ Verify the following prerequisites before creating an app:
 
 ## Configure the site map
 
-The site map describes the components that make up our model driven app.
+The site map describes the components that make up a model driven app.
 
 1. Select the **Open the Site Map Designer** edit button (pencil icon) to open the sitemap designer.
 
@@ -116,21 +115,21 @@ The site map describes the components that make up our model driven app.
 
 ## Finalizing the app
 
-   By default, all the account table's forms, views, charts, and dashboards are enabled for the app. From the app designer **Components** tab on the right pane, components can be cleared so that they aren't available in the app at runtime. It is also possible to create new components, such as a custom form. For this app, leave all components enabled.
+By default, all the account table's forms, views, charts, and dashboards are enabled for the app. From the app designer **Components** tab on the right pane, components can be cleared so that they aren't available in the app at runtime. It is also possible to create new components, such as a custom form. For this app, leave all components enabled.
 
-  :::image type="content" source="media/app-designer-form-component-properties.png" alt-text="Model-driven App designer in draft stage":::
+:::image type="content" source="media/app-designer-form-component-properties.png" alt-text="Model-driven App designer in draft stage":::
 
 1. On the app designer toolbar, select **Save**.
 
-6. After your app is saved, on the app designer toolbar, select **Publish** to make it available to run and share.
+1. After your app is saved, on the app designer toolbar, select **Publish** to make it available to run and share.
 
-Much of the rest of design experience revolves around continuing to develop the site map in addition to configuring the app through the app designer. More information: [Add or edit app components](add-edit-app-components.md)
+The rest of the design experience revolves around further developing the site map in addition to configuring the app through the app designer. More information: [Add or edit app components](add-edit-app-components.md)
 
 ## Play your app
 
-On the app designer toolbar, select **Play**.  This will only be available once the app is published.
+On the app designer toolbar, select **Play**. This will only be available once the app is published.
 
-  :::image type="content" source="media/app-designer-play.png" alt-text="App designer in draft stage":::
+:::image type="content" source="media/app-designer-play.png" alt-text="App designer in draft stage":::
 
 - To create a record, select **+ New**.
 - To view a chart, on the app command bar select **Show Chart**. 
@@ -149,7 +148,7 @@ To learn more about how to use your app, see [Basic navigation in a model-driven
 4. Choose the solution that contains the model-driven app where editing is required.
 5. On the left navigation pane select **Apps**, select a model-driven app, and then on the toolbar select **Edit**.
 6. As with creating an app editing experience will center around creating a strong [site map](model-driven-app-glossary.md#site-map)
-7. In the app designer add or edit components to the app, as required. More information: [Add or edit app components](add-edit-app-components.md)  
+7. In the app designer, add or edit components to the app, as required. More information: [Add or edit app components](add-edit-app-components.md)  
 
 ## Next steps
 

@@ -36,37 +36,37 @@ In the default solution or an unmanaged solution, it is possible to create new f
 
 ### Forms inside unmanaged solutions
 
-In an unmanaged solution, it is possible to edit the properties, including columns, views and forms, for an unmanaged custom table that was created for the solution.  Unmanaged solutions are where app developers go to author changes that they require and typically exist in a **development** environment.
+In an unmanaged solution, it is possible to edit the properties, including columns, views, and forms, for an unmanaged custom table that was created for the solution.  Unmanaged solutions are where app makers and developers go to author changes that they require and typically exist in a development environment.
 
 ### Forms inside managed solutions
 
-In managed solution, typically in a **production** environment, it is not possible by default to create new forms or edit existing forms for tables. However, if the managed properties for a table in the managed solution are set to allow customization, it is can add or edit forms for that table.
+In managed solution, typically in a production environment, it is not possible by default to create new forms or edit existing forms for tables. However, if the managed properties for a table in the managed solution are set to allow customization, you can add or edit forms for that table.
 
 [Learn more about solutions](../../maker/data-platform/solutions-overview.md)
 
 <a name="BKMK_TypesOfForms"></a>
-## Form Types
-There are different types of forms, and each type has a specific functionality or use.  These include :-
+## Form types
+There are different types of forms, and each type has a specific functionality or use.  These include:
 
-- main (the main user interface)
-- quick create (rapid data entry)
-- quick view (to see related data)
-- card form (a compact view)
+- Main (the main user interface).
+- Quick create (rapid data entry).
+- Quick view (to see related data).
+- Card form (a compact view).
   
-For more information: [Types of forms in Power Apps](types-forms.md).  
-
+More information: [Types of forms in Power Apps](types-forms.md).  
  
 <a name="BKMK_FormDifferencesByEntity"></a>   
 
 ## Create or edit a form
 
-The fundamentals of building a model-driven app include creating a table, configuring data views in addition to creating and editing forms.
+The fundamentals of building a model-driven app include creating a table, configuring data views, and creating and editing forms.
 
-Before beginning to build forms it is worth deciding whether you have all the columns necessary to solve your business problem, in addition to having a sense at the outset as to how to lay these out in terms of sections and tabs.  Broadly speaking, the complexity of your forms will be a reflection of the number of columns in your table in addition to the complexity of your business process.
+Before you begin to build forms, it is worth determining whether you have all the columns necessary to solve your business problem. Additionally, you should have an understanding how to lay these out in terms of sections and tabs.  Broadly speaking, the complexity of your forms will be a reflection of the number of columns in your table in addition to the complexity of your business process.
 
 [Learn to create, edit, or configure forms using the form designer](create-and-edit-forms.md)
 
 ## Delete a form
+
 To delete a form, sign in to Power Apps and go to **Solutions** > Open the solution you want > select the table that you want > **Forms** tab. Select the form, and then select **Delete** on the command bar.
 
 There are a couple of reasons you may not be able to delete a form.
@@ -78,18 +78,18 @@ There are a couple of reasons you may not be able to delete a form.
 
 ## Controlling the display of a form within an app
 
-Tables can have multiple forms.  The use of the forms is controlled through the model driven app.  This allows for designers to be able to use the same table in different ways depending on the audience by controlling the display.
+Tables can have multiple forms.  The use of a form is controlled through the model-driven app. This allows makers to use the same table in different ways, depending on the audience, by controlling the display.
 
-By default **all** forms are made available to users, however through the app designer the specific form can be restricted.
+By default all forms are made available to users. However, through the app designer a specific form can be restricted.
 
-### Steps to updating the forms displayed in an app
+### Change the forms displayed in an app
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-2. Navigate to the solution to be updated.
-3. Open the model-driven app in app designer.
+2. Select **Solutions**, and then open the solution to be updated.
+3. Edit the model-driven app in app designer.
 4. In the **Table View** area, select **Forms** next to the table.  The components tab will become visible.
 
-:::image type="content" source="../../maker/model-driven-apps/media/create-and-edit-a-model-driven-form/select-forms-to-display-app-app-designer.png" alt-text="select forms to display in the app designer":::
+   :::image type="content" source="../../maker/model-driven-apps/media/create-and-edit-a-model-driven-form/select-forms-to-display-app-app-designer.png" alt-text="select forms to display in the app designer":::
 
 5. On the **Components** tab, verify the main forms that are included for the app. Verify that the form you want to display is checked. If not, select it, save, and then publish the app.
 
@@ -116,7 +116,8 @@ When we set the default form order this is done at the level of the **table** an
 
 6. Select **Save and Publish** to save the form order changes.
 
-## Updated versus classic tables  
+## Updated versus classic tables
+
 Power Apps provides many options for designing forms using the form designer.
   
 There are still a number of tables, referred to here as classic tables, that retain the appearance and capabilities from earlier versions. These tables are used less often. They are listed here:  
