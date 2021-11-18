@@ -29,14 +29,14 @@ search.app:
 In this article you learn how to create a system chart. System charts are organization-owned charts, which makes them available to anyone with access to read the data running the app. System charts can't be assigned or shared with specific app users.
 
 > [!Note]
-> Model-driven apps not set up to see **all charts** for a given table will need to have newly created charts added to the table within the app.  This is done through the app designer.
+> Model-driven apps not configured to display **All** charts for a table will need newly created charts selected for the table within the app designer. More information: [Add table assets](add-edit-app-components.md#add-table-assets)
 
 ## Create a new chart
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 1. On the left navigation pane, select **Dataverse** and then the table which requires a chart.
 
-1. Select **Charts** from the menu and then **Add Chart**.
+1. Select **Charts** from the menu, and then select **Add Chart**.
 
    :::image type="content" source="media/create-table-chart.png" alt-text="Steps to introducing a chart into a table.":::
 
@@ -61,18 +61,18 @@ The **Number of employees by account** chart is now displayed in the app designe
 
 Now that the chart has been created, it can be used to visualize table data in the model-driven app. Follow these steps to view the chart:
 
-1. Navigate to a model-driven app that contains your table via a solution or directly to the app.
-2. Click on the three dots next to the app and select **play**.  The model-driven app will open in a separate tab.
+1. Open a model-driven app that contains your table via a solution or open the app directly from the **Apps** area.
+2. Select **...** next to the app, and then select **Play**. The model-driven app opens in a separate browser tab.
 
 4. On the left navigation pane, select a table such as **Accounts**.
 
-5. On the command bar, select the **Show Chart** toggle
+5. On the command bar, select **Show Chart**.
 
    The chart pane opens.
 
    :::image type="content" source="media/add-and-customize-visualizations-in-model-driven apps/view-your-visualization-in-your-model-driven-app-3.png" alt-text="Chart selector.":::
 
-6. By selecting the dropdown available any one of the system charts in the app will be available as an option.
+6. By selecting the dropdown chart list, any of the system charts in the app will be available to select.
 
    The chart appears in-line with the data view.
 
@@ -83,13 +83,14 @@ Use your chart:
 - Refresh the chart to display other data by changing the view.
 - Add the chart to a model-driven app dashboard. More information: [Create or edit model-driven app dashboards](create-edit-dashboards.md)
 
->[!NOTE] 
->If the chart is not visible in the dropdown then the model-driven app has been created with specific charts associated with it.  To resolve this open the model-driven app in design mode, select charts and select your newly created chart.
+> [!NOTE] 
+> If the chart is not visible in the dropdown chart list then the model-driven app has been created with specific charts associated with it. To resolve this, open the model-driven app in design mode, select charts, and then select your newly created chart. 
 > :::image type="content" source="media/add-and-customize-visualizations-in-model-driven apps/add-and-customize-visualizations-in-model-driven-apps-1.png" alt-text="Select Chart from within app":::
+> Then save and publish your app.
 
 ## Known chart creation issues
 
-In the chart designer, adding a order by on certain calculated columns are not supported and will cause an error. The calculated columns causing this are using another calculated columns, a related table column, or a local column on the table.
+In the chart designer, adding a order by on certain calculated columns are not supported and will cause an error. The calculated columns causing this are using another calculated column, a related table column, or a local column on the table.
 
 ## Next steps
 
