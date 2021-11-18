@@ -29,7 +29,7 @@ Model-driven and canvas apps
 
 | Parameter Name | Type                                                   | Required | Description                                          |
 | -------------- | ------------------------------------------------------ | -------- | ---------------------------------------------------- |
-| utcDateTime         | `string`                                               | Yes      | The date to be formatted.                            |
+| utcDateTime         | `Date`                                               | Yes      | The date to be formatted.                            |
 | behavior       | [`DateTimeFieldBehavior`](../DateTimeFieldBehavior.md) | No       | The behavior of the datetime object to be formatted. |
 
 ## Return Value
