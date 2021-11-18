@@ -1,6 +1,6 @@
 ---
-title: "Use settings to provide tailored app experiences | MicrosoftDocs"
-description: "Use settings to provide tailored app experiences."
+title: "Use settings to provide customized app experiences | MicrosoftDocs"
+description: "Use settings to provide customized app experiences."
 Keywords: settings, settings environment value, settings app value, model-driven app
 author: aneesmsft
 ms.subservice: dataverse-maker
@@ -18,7 +18,7 @@ search.app:
 ---
 # Use settings to provide tailored app experiences
 
-Settings are solution components that enable makers and administrators to quickly configure and customize apps to provide a tailored experience. Settings can be used to enable or disable features or configure feature behavior for one specific app or all apps within an environment.
+Settings are solution components that enable makers and administrators to quickly configure apps to provide a customized experience. Settings can be used to enable or disable features or configure feature behavior for one specific app or all apps within an environment.
 
   > [!IMPORTANT]
   > - This is a preview feature and may not be available in all regions.
