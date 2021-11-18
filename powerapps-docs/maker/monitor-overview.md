@@ -1,7 +1,7 @@
 ---
 title: Monitor overview
 description: Overview of Power Apps Monitor.
-author: tapanm-msft
+author: mattgon
 ms.service: powerapps
 ms.subservice: troubleshoot
 ms.topic: conceptual
@@ -15,6 +15,8 @@ search.app:
   - PowerApps
 contributors:
   - tapanm-msft
+  - mattgon
+  - maustinjones
 ---
 
 # Monitor overview
@@ -50,6 +52,17 @@ Some examples of problems and queries that you can uncover when using Monitor ar
 -   **Errors**
     - Have you configured the required permissions to run the app correctly?
     - Are your requests throttled by the platform?
+
+## Prerequisites
+
+You'll need the following security role membership in the environment to use Monitor.
+
+| App type | Required security role |
+| - | - |
+| Canvas app | Environment Admin or Environment Maker |
+| Model-driven app | System Admin or System Customizer for the Dataverse organization |
+
+More information: [Configure user security to resources in an environment](/power-platform/admin/database-security)
 
 ## Monitor dashboard
 
