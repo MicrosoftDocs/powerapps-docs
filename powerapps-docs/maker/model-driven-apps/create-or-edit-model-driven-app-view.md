@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.subservice: mda-maker
 ms.topic: tutorial
 author: Joel-Lindstrom
-ms.author: v-jlindstrom
+ms.author: v-ljoel
 ms.reviewer: matp
 ---
 # Create and edit public model-driven app views
@@ -37,7 +37,7 @@ In this exercise, you create a public view for the account entity. You then add 
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
     
-1. Expand **Dataverse**, select **Tables**, select the **Account** table, and then select the **Views** tab.
+1. Expand **Data**, select **Tables**, select the **Account** table, and then select the **Views** tab.
     
 1. On the toolbar, select **Add view**.
 

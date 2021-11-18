@@ -56,7 +56,7 @@ You can use the Azure Synapse Link to connect your Microsoft Dataverse data to A
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select your preferred environment.
 
-2. On the left navigation pane, select **Dataverse**, select **Azure Synapse Link**, and then on the command bar, select **+ New link to data lake**.
+2. On the left navigation pane, select **Data**, select **Azure Synapse Link**, and then on the command bar, select **+ New link to data lake**.
 
     ![Navigate to Power Apps.](media/navigate-to-powerapps.png "Navigate to Power Apps")
 
@@ -90,10 +90,12 @@ After you have set up the Azure Synapse Link, you can manage the tables that are
 
 After you have set up the Azure Synapse Link, you can monitor the Azure Synapse Link under the **Tables** tab.
 
+   ![Azure Synapse Link monitoring](media/monitoring.png "Azure Synapse Link monitoring")
+
 - There will be a list of tables that are a part of the selected Azure Synapse Link.
 - There are different stages the sync status will circulate through. **NotStarted** indicates that the table is waiting to be synced. Once the table initial sync has been **Completed**, there will be a post processing stage where incremental updates will not take place. This may take several hours depending on the size of your data. As the incremental updates start taking place, the date for the last sync will be regularly updated.
-- The **Count** column shows the number of changes to the data. It does not show the total number of rows to the data.
-- The **Append only** and **Partition strategy** columns show the usage of different advanced configurations.
+- The **Count** column shows the number rows written. When **Append only** is set to **No**, this is the total number of records. When **Append Only** is set to **Yes**, this is the total number of changes.
+- The  **Append only** and **Partition strategy** columns show the usage of different advanced configurations.
 
 ## Unlinking an Azure Synapse Link
 

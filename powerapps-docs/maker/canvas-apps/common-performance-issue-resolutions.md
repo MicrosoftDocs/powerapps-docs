@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 05/06/2021
+ms.date: 10/27/2021
 ms.subservice: canvas-maker
 ms.author: jiahn
 search.audienceType: 
@@ -16,6 +16,7 @@ search.app:
 contributors:
   - JinManAhn-MSFT
   - lancedMicrosoft
+  - melzoghbi
 ---
 
 # Common canvas app performance issues and resolutions
@@ -87,6 +88,9 @@ Heavy scripts at the **OnStart** event are one of the most common mistakes while
 Optimize the formula in an **OnStart** event. For example, you can move some functions to the [**OnVisible**](controls/control-screen.md#additional-properties) property instead. This way you can let the app start quickly, and other steps can continue while the app opens.
 
 More information: [Optimize the OnStart property](performance-tips.md#optimize-the-onstart-property)
+
+> [!TIP]
+> We recommend using [App.StartScreen](functions/object-app.md#startscreen-property) property since it simplifies app launch and boosts the app's performance.
 
 ## Memory pressure at the client side
 

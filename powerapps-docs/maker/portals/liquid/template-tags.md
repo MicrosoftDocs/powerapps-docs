@@ -5,12 +5,12 @@ author: gitanjalisingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/22/2021
+ms.date: 10/26/2021
 ms.subservice: portals
 ms.author: gisingh
 ms.reviewer: ndoelman
 contributors:
-    - tapanm-msft
+    - nickdoelman
     - GitanjaliSingh33msft
     - nickdoelman
 ---
@@ -155,16 +155,7 @@ When you enable the header and footer caching, and want to avoid caching of cert
 
 ## codecomponent
 
-Allows you to embed code components using a Liquid tag. For example, adding a map display custom control to a web page.  
-
-**Code**
-
-`{% codecomponent name: <ID or name> <property1:value> <property2:value>  %}`
-
-> [!NOTE]
-> The properties required might be different depending on the component you choose.
-
-See [Use code components Liquid template tag](../component-framework-liquid.md).
+See [Understand codecomponent Dataverse entity tag](portals-entity-tags.md#codecomponent), [Use code components Liquid template tag](../component-framework-liquid.md).
 
 ### See also
 

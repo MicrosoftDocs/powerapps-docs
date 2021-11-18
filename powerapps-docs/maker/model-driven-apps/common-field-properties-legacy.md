@@ -27,7 +27,7 @@ The portal enables configuring the most common options, but certain options can 
 
 ## Common column properties in Power Apps portal
 
-1. From the [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Dataverse** > **Tables** and select the table that has the columns you want to view.
+1. From the [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Data** > **Tables** and select the table that has the columns you want to view.
 
 2. Select the column that you want to view.
 

@@ -36,7 +36,7 @@ Along with the columns displayed in a view, the filter criteria applied to a vie
 
 1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
-2.  Expand **Dataverse**, select **Tables**, select the table you want, and then select the **Views** tab.
+2.  Expand **Data**, select **Tables**, select the table you want, and then select the **Views** tab.
 
 3.  Select a view to open it in the view designer.
 
