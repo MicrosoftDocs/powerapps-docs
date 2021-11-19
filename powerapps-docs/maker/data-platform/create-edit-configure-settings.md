@@ -249,7 +249,7 @@ var settingValue = Xrm.Utility.getGlobalContext().saveSettingValue(settingName, 
 |:--------------|:--------------|:--------------|:-------------------------|
 |**settingName** | String | Yes | The name of the setting to update the value of. |
 |**value** | *Number*, *String*, or *Yes/No* | Yes | The value to update the setting to. |
-|**saveSettingOptions** | String | No | Options when updating the value. It contains two parameters <ul><li><b>overrideScope</b<<br>Can be set to 1 to add or update a setting environmennt value or 2 to add or update a setting app value. If not specified it is set to environment.</li><li><b>solutionUniqueName</b><br>The solution to which the setting setting environment value or setting app value should be added. If not specified the default solution is used.</li></ul>|
+|**saveSettingOptions** | String | No | Options when updating the value. It contains two parameters <ul><li><b>overrideScope</b><br>Can be set to 1 to add or update a setting environmennt value or 2 to add or update a setting app value. If not specified it is set to environment.</li><li><b>solutionUniqueName</b><br>The solution to which the setting setting environment value or setting app value should be added. If not specified the default solution is used.</li></ul>|
 |**successCallback** | String | Yes | A function to call if the update is successful. |
 |**errorCallback** | String | Yes | A function to call if the update fails. |
 
