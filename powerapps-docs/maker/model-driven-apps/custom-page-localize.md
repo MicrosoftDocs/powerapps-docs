@@ -138,12 +138,12 @@ Save and publish your changes to the page.
    :::image type="content" source="media/page-localization/studio-page-runtime-3.png"alt-text="Power Apps Studio custom page runtime setting dialog.":::
 
    ## Right-To-Left Support for custom pages
-   With localized content there are several languages that require a right-to-left orientation for content rendered on your page.  Right-To-Left (RTL), is fully supported for languages like Arabic and Hebrew and the page will change at runtime autmatically for these languages.
+   With localized content, there are several languages that require a right-to-left orientation for content rendered on your page.  Right-To-Left (RTL) is fully supported for languages like Arabic and Hebrew and the page will change at runtime automatically for these languages.
 
    >[!IMPORTANT]
-   > Right-to-left orientation for icons, shapes and images are not currently supported in custom pages.  If you add an icon, shape or image it may not behave as expected so please be careful when using these types of controls on your custom page.
+   > Right-to-left orientation for icons, shapes, and images are not currently supported in custom pages.  If you add an icon, shape, or image it may not behave as expected, so please be careful when using these types of controls on your custom page.
 
-   To review RTL when building a custom page you will need to go to the page settings, select upcoming features, search for RTL and enable the setting. Setting this option will show a RTL or LTR button in the preview window where you can easily switch between orientation without having to run your app.  If you would like to see your custom page running RTL, you can add also add &flags=isRTL=true to the end of your URL in your browser when running your appl to quickly test RTL for your page.
+   To review RTL when building a custom page, you will need to go to the page settings, select upcoming features, search for RTL, and enable the setting. Setting this option will show a RTL or LTR button in the preview window where you can easily switch between orientation without having to run your app.  If you would like to see your custom page running RTL, you can also add &flags=isRTL=true to the end of your URL in your browser when running your app to quickly test RTL for your page.
 
       :::image type="content" source="media/page-localization/right-left-preview.gif"alt-text="Power Apps Studio custom page right-to-left.":::
 
