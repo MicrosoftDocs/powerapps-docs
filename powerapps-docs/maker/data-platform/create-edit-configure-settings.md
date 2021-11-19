@@ -32,6 +32,20 @@ Settings are made up of three sub-components: Setting definition, setting enviro
 |**Setting environment value** | Setting environment value can be used to override the default value, as specified in the setting definition. A setting environment value applies to all apps in an environment. |
 |**Setting app value** | Setting app value can be used to override the default value, as specified in the setting definition, and also the setting environment value (if one exists). A setting app value applies to a single app. |
 
+Here's an example to help explain how the three components work together.
+- Setting definition
+  - The Power Apps team has created a setting to allow makers to enable or disable the *Async onload handler* feature for model-driven apps. 
+  - The setting is of type *Yes/No* and the default value of this setting is *No*. 
+  - Therefore, by default, the *Async onload handler* feature will be disabled for all model-driven apps.
+- Setting environment value
+  - An environment administrators in a customer’s organization can add a setting environment value for the "Async onload handler" setting and set it to Yes. 
+  - This setting environment value will override the default value and will apply to all apps in that environment. 
+  - This will enable the "Async onload handler" feature for all model-driven apps in that environment.
+- Setting app value 
+  - An application author authoring an app in that same environment can add a setting app value for the app they are authoring and set it to No. 
+  - The setting app value will override the setting environment value (and also the default value, as specified in the setting definition, if no setting environment value exists). 
+  - The setting app value will apply to only that specific app and disable the *Async onload handler* feature.
+
 > [!NOTE]
 > To follow the steps listed below you need to have **Solution preview on**. From the **Solutions** area in Power Apps, on the command bar, ensure you have **Solution preview on**. If **Solution preview off** is displayed, select the option to enable the preview. More information: [Solution view](solutions-area.md)
 
@@ -239,8 +253,8 @@ Adds or updates the setting app value for the current app or the setting environ
 
 #### Syntax
 ```JavaScript
-var myOverrideScope = 2; // Add or update a setting app value
-var saveSettingOptions = {overrideScope: myOverrideScope, solutionUniqueName: mySolutionName};
+var appOverrideScope = 2; // Add or update a setting app value
+var saveSettingOptions = {overrideScope: appOverrideScope, solutionUniqueName: mySolutionName};
 Xrm.Utility.getGlobalContext().saveSettingValue(settingName, value, saveSettingOptions).then(successCallback, errorCallback);
 ```
 
@@ -249,7 +263,7 @@ Xrm.Utility.getGlobalContext().saveSettingValue(settingName, value, saveSettingO
 |:--------------|:--------------|:--------------|:-------------------------|
 |**settingName** | String | Yes | The name of the setting to update the value of. |
 |**value** | *Number*, *String*, or *Yes/No* | Yes | The value to update the setting to. |
-|**saveSettingOptions** | String | No | Options when updating the value. It contains two parameters <ul><li><b>overrideScope</b><br>Can be set to 1 to add or update a setting environmennt value or 2 to add or update a setting app value. If not specified it is set to environment.</li><li><b>solutionUniqueName</b><br>The solution to which the setting setting environment value or setting app value should be added. If not specified the default solution is used.</li></ul>|
+|**saveSettingOptions** | String | No | Options when updating the value. It contains two parameters <ul><li><b>overrideScope</b><ul><li>Use **1** to add or update a setting environment value</li><li>Use **2** to add or update a setting app value.</li><li>If not specified it is set to environment.</li></ul></li><li><b>solutionUniqueName</b><ul><li>The solution to which the setting setting environment value or setting app value should be added.</li><li>If not specified the default solution is used.</li></ul></li></ul>|
 |**successCallback** | String | Yes | A function to call if the update is successful. |
 |**errorCallback** | String | Yes | A function to call if the update fails. |
 
