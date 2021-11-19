@@ -20,7 +20,7 @@ searchScope:
   - "Power Apps"
 ---
 
-# Configure model-driven apps for offline (preview)
+# Mobile offline overview (preview)
 
 Mobile applications usually require internet connection to work properly. While remote workers need to use their applications to complete their tasks from anywhere, the issue is that network connectivity is often inconsistent throughout their workdays and can even become limited or inexistant.
 
@@ -32,11 +32,12 @@ Internet connections remain needed to sync back and forth data to Dataverse as w
 
 Through the offline profile, the app maker can define the data (tables in Dataverse) needed offline and then the application will automatically keep it in sync between the device and the server.
 
-<u>Note:</u> The following documentation describes the new offline configuration setup available in the modern app designer as well as offline-first available in preview now.
+The following documentation describes the new offline configuration setup available in the modern app designer as well as offline-first available in preview now.
 
--   For documentation about the offline experience currently generally available, please refer to the [**Dynamics 365 documentation**](https://docs.microsoft.com/en-us/dynamics365/mobile-app/setup-mobile-offline).
 
--   For more information on how to set up mobile offline for canvas apps, see [**Develop offline-capable canvas apps**](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/offline-apps).
+> [!IMPORTANT]
+> - For documentation about the offline experience currently generally available, please refer to,  [Configure mobile offline synchronization](/dynamics365/mobile-app/preview-setup-mobile-offline).
+> - For more information on how to set up mobile offline for canvas apps, see [Develop offline-capable canvas apps](../maker/canvas-apps/offline-apps.md).
 
 ## Default roles setup for offline applications
 
