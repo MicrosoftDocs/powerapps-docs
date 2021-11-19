@@ -53,9 +53,9 @@ In this topic, you create or edit filters by performing the following tasks:
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
-2. Expand **Data**, select **Tables**, select the table that you want, and then select the **Views** tab.  
-
-3. You may wish to navigate to the table via the **solution**.  If so navigate to solutions, select your solution and then select the **table** you are interested in, then select the **views** tab.  
+2. Expand **Data**, select **Tables**, select the table that you want, and then select the **Views** tab. 
+   
+   You may want to navigate to the table via the solution. If so, go to **Solutions**, select your solution, select the table, and then select the **Views** tab.  
 
 4. Select a view to open it. The view properties panel lists existing filters.
 
