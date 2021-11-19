@@ -1,6 +1,6 @@
 ---
-title: Configure mobile offline synchronization for the Power Apps mobile app | Microsoft Docs
-description: Set up and configure mobile offline synchronization for the Power Apps mobile app
+title: Configure mobile offline for Power Apps mobile (preview) | Microsoft Docs
+description: Set up and configure mobile offline for the Power Apps mobile.
 author: mduelae
 ms.service: powerapps
 ms.component: pa-user
@@ -18,7 +18,7 @@ search.app:
   - D365CE
 ---
 
-# Configure mobile offline synchronization for Power Apps mobile 
+# Configure mobile offline for Power Apps mobile (preview)
 
 Mobile offline allows users to use the [Power Apps mobile](https://powerapps.microsoft.com/downloads/) app in offline mode. Model-driven app users can interact with their data, even when they don't have internet connection.
 
