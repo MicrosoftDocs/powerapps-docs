@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #556a8a;
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+      }
+
+      .cls-2 {
+        fill: #55d2f6;
+      }
+
+      .cls-3 {
+        fill: #c2c2c2;
+      }
+    </style>
+  </defs>
+  <title>i_library copy 3</title>
+  <g id="ICONS-64x">
+    <rect class="cls-1" x="2" y="7" width="60" height="50"/>
+    <line class="cls-1" x1="2" y1="20" x2="62" y2="20"/>
+    <line class="cls-1" x1="2" y1="33" x2="62" y2="33"/>
+    <line class="cls-1" x1="2" y1="46" x2="62" y2="46"/>
+    <rect class="cls-2" x="3" y="8" width="58" height="11"/>
+    <rect class="cls-3" x="3" y="34" width="58" height="11"/>
+    <line class="cls-1" x1="23" y1="8" x2="23" y2="56"/>
+    <line class="cls-1" x1="41" y1="7" x2="41" y2="56"/>
+    <line class="cls-1" x1="26" y1="26" x2="38" y2="26"/>
+    <line class="cls-1" x1="44" y1="26" x2="59" y2="26"/>
+    <line class="cls-1" x1="5" y1="26" x2="20" y2="26"/>
+    <line class="cls-1" x1="5" y1="13" x2="20" y2="13"/>
+    <line class="cls-1" x1="5" y1="40" x2="20" y2="40"/>
+    <line class="cls-1" x1="26" y1="51" x2="38" y2="51"/>
+    <line class="cls-1" x1="44" y1="51" x2="59" y2="51"/>
+    <line class="cls-1" x1="5" y1="51" x2="20" y2="51"/>
+  </g>
+</svg>
