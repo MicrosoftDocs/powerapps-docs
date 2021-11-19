@@ -20,11 +20,12 @@ searchScope:
   - "Power Apps"
 ---
 
-# Mobile offline overview (preview)
+# Overview of mobile offline (preview)
 
-Mobile applications usually require internet connection to work properly. While remote workers need to use their applications to complete their tasks from anywhere, the issue is that network connectivity is often inconsistent throughout their workdays and can even become limited or inexistant.
+Wouldn't it be great to be able to use apps on your mobile device without worrying about a spotty connectivity? With Power Apps mobile this is possiable. Users that need to work from remote locations can continue working seemlessly without internet connection. 
 
-Enabling mobile applications to be available while offline not only solves this problem but also comes with additional benefits like providing a more responsive, performant experience or saving the device's battery with less connections made to the server.
+
+Enable your mobile applications so that it's available while offline not only solves this problem but also comes with additional benefits like providing a more responsive, performant experience or saving the device's battery with less connections made to the server.
 
 Model-driven applications can be enabled for offline use, so they become always available regardless of the network connectivity. This feature is available through Power Apps and Dynamics (Field Service, Sales) mobile applications.
 
