@@ -7,7 +7,7 @@ ms.subservice: dataverse-maker
 ms.author: aneesa
 ms.reviewer: matp
 manager: kvivek
-ms.date: 09/22/2021
+ms.date: 11/18/2021
 ms.service: powerapps
 ms.topic: how-to
 search.audienceType: 
@@ -208,7 +208,25 @@ Setting app value is used to override the setting's default value and any settin
 1. Select **Save**.
 1. For the deletion of the setting app value to take effect you will have to re-publish the app using the app designer or solution explorer.
 
-### See also
+## Getting or updating a setting value via code
+
+### getCurrentAppSetting
+Gets the value of a setting for the current app (app being used).
+
+#### Parameters
+| Name | Type | Required | Description |
+|:--------------|:--------------|:--------------|:-------------------------|
+|**settingName** | String | Yes | The name of the setting to get the value for. |
+
+#### Return value
+Type: Same as the type of the setting: Number, String, or Yes/No
+Description: 
+If the setting is overridable and 
+Returns the setting app value. If a setting app value does not exist, then returns the setting environment value. If a setting environment value does not exist, then returns the default value as specified in the setting definition. Returns null if the setting name is incorrect or the setting could not be found.
+
+### Add or update a setting value
+
+## See also
 
 [Solutions overview](solutions-overview.md)
 
