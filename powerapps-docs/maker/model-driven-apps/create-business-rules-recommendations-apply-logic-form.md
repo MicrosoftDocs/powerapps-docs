@@ -196,13 +196,13 @@ A business rule may not execute because the column referenced in the business ru
 3. In the form designer, open the business rule.
 4. In the business rule designer, select each condition and action to verify all the columns referenced in each condition and action. 
 
-        > [!div class="mx-imgBorder"] 
-        > ![Field referenced in business rule exists in table.](media/business-rule-field.png "Field referenced in business rule exists in table")
+   > [!div class="mx-imgBorder"] 
+   > ![Field referenced in business rule exists in table.](media/business-rule-field.png "Field referenced in business rule exists in table")
 
- 1. Verify that each column referenced in the business rule is also included on the form. If not, add the missing column to the form.
+5. Verify that each column referenced in the business rule is also included on the form. If not, add the missing column to the form.
 
-        > [!div class="mx-imgBorder"] 
-        > ![Account name column on form.](media/account-name-on-form.png "Account name column on form")
+   > [!div class="mx-imgBorder"] 
+   > ![Account name column on form.](media/account-name-on-form.png "Account name column on form")
 
 A business rule may also not execute because a column referenced in the business rule is a composite column. The constituent columns of the composite column can be used instead.
 

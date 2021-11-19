@@ -29,7 +29,7 @@ For information about configuring and using the timeline, see the following topi
 
 - [Use timeline](/powerapps/user/add-activities)
 - [Configure timeline](set-up-timeline-control.md)
-- [Timeline record card configuration](set-up-timeline-control.md#display-a-custom-table-in-a-timeline)
+- [Timeline record card configuration](set-up-timeline-control.md#create-and-use-card-forms-in-timeline)
 
 Records that are configured within custom connectors are a JavaScript web resource that conforms to the IRecordSource interface. The name of a web resource, along with the constructor (name including namespace), and optional JSON web resource path, can be added as a UClientRecordSourcesJSON parameter configuration within FormXML.
 
@@ -82,7 +82,6 @@ You can get started with a [custom connectors solution sample](https://github.co
 
 [Use timeline](/powerapps/user/add-activities)<br>
 [Configure timeline](set-up-timeline-control.md)<br>
-[Timeline record card configuration](set-up-timeline-control.md#display-a-custom-table-in-a-timeline)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

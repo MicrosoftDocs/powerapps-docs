@@ -30,7 +30,7 @@ Use custom process actions when you want to automate a series of commands in the
 ## Create a custom process action  
   
 > [!IMPORTANT]
-> If you’re creating an custom process action to include as part of a solution that will be distributed, create it in the context of the solution. Go to **[Settings](../model-driven-apps/advanced-navigation.md#settings)** > **Solutions** and locate the unmanaged solution that this action will be part of. Then, in the menu bar, select **New** > **Process**. This ensures that the customization prefix associated with the name of the action will be consistent with other components in the solution. After you create the action, you can’t change the prefix.  
+> If you’re creating an custom process action to include as part of a solution that will be distributed, create it in the context of the solution. Go to **[Settings](../model-driven-apps/advanced-navigation.md#solution-explorer)** > **Solutions** and locate the unmanaged solution that this action will be part of. Then, in the menu bar, select **New** > **Process**. This ensures that the customization prefix associated with the name of the action will be consistent with other components in the solution. After you create the action, you can’t change the prefix.  
   
 Like workflow processes, custom process actions have the following properties in the **Create Process** dialog box:  
   

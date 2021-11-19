@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.subservice: mda-maker
 ms.topic: tutorial
 author: joel-lindstrom
-ms.author: v-ljoel
+ms.author: matp
 ms.reviewer: matp
 ---
 # Create a model-driven app that has an account table page (preview)

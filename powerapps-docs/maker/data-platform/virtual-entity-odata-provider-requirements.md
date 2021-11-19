@@ -70,7 +70,7 @@ The following table lists the OData table Data Model (EDM) data type mappings wi
 
 This procedure shows you how to use the out-of-box OData Data Provider to use as the virtual table data source.   
   
-1. Go to **[Settings](../model-driven-apps/advanced-navigation.md#settings)** > **Administration** > **Virtual Entity Data Sources**.  
+1. Go to **[Settings](../model-driven-apps/advanced-navigation.md#solution-explorer)** > **Administration** > **Virtual Entity Data Sources**.  
 1. On the actions toolbar, click **New**.  
 1. On the **Select Data Provider** dialog box, select from the following data sources, and then click **OK**.  
   
