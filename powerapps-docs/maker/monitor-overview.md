@@ -60,7 +60,7 @@ You'll need the following security role membership in the environment to use Mon
 | App type | Required security role |
 | - | - |
 | Canvas app | Environment Admin or Environment Maker |
-| Model-driven app | System Admin or System Customizer for the Dataverse organization |
+| Model-driven app | System Administrator or System Customizer for the Dataverse organization |
 
 More information: [Configure user security to resources in an environment](/power-platform/admin/database-security)
 
