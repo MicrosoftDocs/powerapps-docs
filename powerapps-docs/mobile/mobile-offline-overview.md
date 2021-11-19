@@ -24,7 +24,7 @@ searchScope:
 
 Wouldn't it be great to use your mobile app without worrying about spotty connectivity? With model-driven Power Apps this is possiable. People that need to work from remote locations can continue to work seamlessly without internet connection. 
 
-When you enable model-driven apps for offline use, you'll also have better device performance, the app is more resonsive, and your save on battery power with less connections made to the server. However, you do need internet connections to sync your data back and forth with Microsoft Dataverse.
+When you enable model-driven apps for offline use, you'll also have better device performance, as app is more resonsive, and you save on battery power with less connections made to the server. However, you do need internet connections to sync your data back and forth with Microsoft Dataverse.
 
 > [!IMPORTANT]
 > This topic covers the new set up offline experience using the [modern app designer](../maker/model-driven-apps/create-model-driven-app) and the [offline first experience](link TBD).
