@@ -16,9 +16,9 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Use settings to provide tailored app experiences
+# Use settings to provide customized app experiences
 
-Settings are solution components that enable makers and administrators to quickly configure apps to provide a customized experience. Settings can be used to enable or disable features or configure feature behavior for one specific app or all apps within an environment.
+Settings are solution components that enable makers and administrators to quickly configure apps to provide a customized experience. Settings can be used to enable or disable features or configure feature behavior for a single app or all apps within an environment.
 
   > [!IMPORTANT]
   > - This is a preview feature and may not be available in all regions.
@@ -30,7 +30,7 @@ Settings are made up of three sub-components: Setting definition, setting enviro
 |:--------------|:-------------------------|
 |**Setting definition** | A setting definition specifies the base properties of a settings like its name, description, data type and default value. |
 |**Setting environment value** | Setting environment value can be used to override the default value, as specified in the setting definition. A setting environment value applies to all apps in an environment. |
-|**Setting app value** | Setting app value can be used to override the default value, as specified in the setting definition, and also the setting environment value (if one exists). A setting app value applies to one specific app. |
+|**Setting app value** | Setting app value can be used to override the default value, as specified in the setting definition, and also the setting environment value (if one exists). A setting app value applies to a single app. |
 
 > [!NOTE]
 > To follow the steps listed below you need to have **Solution preview on**. From the **Solutions** area in Power Apps, on the command bar, ensure you have **Solution preview on**. If **Solution preview off** is displayed, select the option to enable the preview. More information: [Solution view](solutions-area.md)
@@ -45,7 +45,8 @@ A setting definition specifies the base properties of a setting. The full list o
 |**Name** | The unique name of the setting in an environment.<br> Name is automatically generated based on the display name provided but can be changed before the setting is created. Once a setting is created the **Name** can't be changed as it may be referenced in applications or code.<br> **Name** has a prefix that corresponds to the solution [publisher](create-solution.md#solution-publisher). This prefix is intended to give the setting a unique name if you want to import them into another solution or environment in the future (which would have a different prefix). |
 |**Description** | The description helps others understand what the setting is used for in all user interfaces where settings are displayed. |
 |**Release level** | Release level is used to inform the framework and other consumers of the setting about the state of the feature that the setting is used with. Release level can be set to **Generally available** or **Preview**. |
-|**Overridable** | Overridable enables a setting’s default value to be overridden by an environment (setting environment value) or an app (setting app value).<br> A setting that is overridable can be further configured to enable the override behavior for app and environment, environment only or app only.<br> Overridable can't be changed after the setting is created. |
+|**Overridable** | Overridable enables a setting’s default value to be overridden by an environment (setting environment value) or an app (setting app value).<br> Overridable can't be changed after the setting is created. |
+|**Value can be overridden for** | A setting that is overridable can be further configured to enable the override behavior.<ul><li>Environment and app, allows both the setting environment value and setting app values to override the default value.</li><li>Environment only, allows only the setting environment value to override the default value.</li><li>App only, allows only setting app values to override the default value.</li></ul>|
 |**Data type** | The data type of a setting controls how the setting’s value is stored. Data type can be set to **Number**, **String**, or **Yes/No**. Data type can't be changed after the setting is created. |
 |**Default value** | The default value specifies the setting's value that will be used unless it is overridden by a setting environment value or a setting app value. |
 
@@ -163,7 +164,7 @@ Setting environment value is used to override the setting's default value for al
 
 ## Setting app value
 
-Setting app value is used to override the setting's default value and any setting environment value for a specific app. Use a setting app value when the setting environment value is not what you want to be used for your app. If a setting environment value does not exist, use a setting app value when the setting's default value is not what you want to be used for your app.
+Setting app value is used to override the setting's default value and any setting environment value for a single app. Use a setting app value when the setting environment value is not what you want to be used for your app. If a setting environment value does not exist, use a setting app value when the setting's default value is not what you want to be used for your app.
 
 > [!NOTE]
 > To follow the steps listed below you need to use the new [app designer](../model-driven-apps/app-designer-overview.md). Currently the app designer only supports adding, updating, or deleting setting app values for Power Apps framework settings. Custom settings created by you will not appear in the app designer.
@@ -181,7 +182,7 @@ Setting app value is used to override the setting's default value and any settin
 1. Open the app you want to remove the setting app value for in the [app designer](../model-driven-apps/create-model-driven-app.md#create-an-app).
 1. On the command bar, select **Settings**.
 1. In the **Settings** dialog, select the **Features** or **Upcoming** tab.
-1. Select **Reset to environment value** next to the setting app value you want to delete. This makes the setting value fall back to the setting environment value if one exists. If no setting environment value exists, it will fallback to the setting's default value.
+1. Select **Reset to environment value** next to the setting app value you want to delete. This makes the setting value fall back to the setting environment value if one exists. If no setting environment value exists, it will fallback to the setting's default value.<br> Note that the option to **Reset to environment value** is only displayed if a setting app value was previously added for that setting.
 1. Save and publish the app.
 
 ### Adding or updating a setting app value using the solution explorer
