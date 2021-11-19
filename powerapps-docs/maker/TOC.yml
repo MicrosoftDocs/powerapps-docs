@@ -1467,7 +1467,7 @@
     href: ../mobile/power-apps-mobile-notification.md
   - name: Troubleshoot issues for Power Apps Mobile
     href: ../mobile/powerapps-mobile-troubleshoot.md
- - name: 'Mobile offline'
+  - name: 'Mobile offline'
    items:
     - name: Overview
       href: ../mobile/mobile-offline-overview.md
