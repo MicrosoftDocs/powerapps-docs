@@ -7,7 +7,7 @@ ms.topic: conceptual
 ms.custom: 
   - model
 ms.reviewer: matp
-ms.date: 10/18/2021
+ms.date: 11/19/2021
 ms.subservice: dataverse-maker
 ms.author: NHelgren
 search.audienceType: 
@@ -54,6 +54,7 @@ In the following table, the data type mappings supported can assist you in plann
 |Attachment |File | Yes<sup>2</sup>|
 
 <sup>1</sup>One column multi-value lookups only. Because of the difference in how Dataverse and Access identify these lookups, a manual process is needed in Access before migration. More information: [Export multi-value lookup Access Fields to Dataverse choice columns](#export-multi-value-lookup-access-fields-to-dataverse-choice-columns)
+
 <sup>2</sup> Attachments can be migrated for single attachments per column at this time. 
 
 ### Access data types not supported for migration to Dataverse
