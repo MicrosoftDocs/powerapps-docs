@@ -226,8 +226,8 @@ var settingValue = Xrm.Utility.getGlobalContext().getCurrentAppSetting(settingNa
 |**settingName** | String | Yes | The name of the setting to get the value for. |
 
 #### Return value
-Type: Same as the type of the setting: Number, String, or Yes/No
-Description: 
+**Type:** Same as the type of the setting: Number, String, or Yes/No<br>
+**Description:** 
 - If the setting is Overridable and "Value can be overridden" is set to "Environment and app" the setting app value is returned. If a setting app value does not exist, then the setting environment value is returned. If a setting environment value does not exist, the default value as specified in the setting definition is returned.
 - If the setting is Overridable and "Value can be overridden" is set to "Environment only" the setting environment value is returned. If a setting environment value does not exist, the default value as specified in the setting definition is returned.
 - If the setting is Overridable and "Value can be overridden" is set to "App only" the setting app value is returned. If a setting app value does not exist, the default value as specified in the setting definition is returned.
@@ -254,8 +254,8 @@ var settingValue = Xrm.Utility.getGlobalContext().saveSettingValue(settingName, 
 |**errorCallback** | String | Yes | A function to call if the update fails. |
 
 #### Return value
-Type: TBD
-Description: TBD
+**Type:** TBD<br>
+**Description:** TBD
 
 ## See also
 
