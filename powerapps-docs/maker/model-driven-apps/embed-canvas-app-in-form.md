@@ -1,5 +1,6 @@
 ---
 title: "Embed a canvas app on a model-driven form | MicrosoftDocs"
+description: "With embedded canvas apps, app makers can bring the power of canvas apps to their Power Apps model-driven forms." 
 ms.custom: "Steps to embedding a canvas app on a form"
 ms.date: 06/25/2019
 ms.reviewer: ""
