@@ -46,7 +46,7 @@ A setting definition specifies the base properties of a setting. The full list o
 |**Description** | The description helps others understand what the setting is used for in all user interfaces where settings are displayed. |
 |**Release level** | Release level is used to inform the framework and other consumers of the setting about the state of the feature that the setting is used with. Release level can be set to **Generally available** or **Preview**. |
 |**Overridable** | Overridable enables a setting’s default value to be overridden by an environment (setting environment value) or an app (setting app value).<br> Overridable can't be changed after the setting is created. |
-|**Value can be overridden for** | A setting that is overridable can be further configured to enable the override behavior.<ul><li>Environment and app, allows both the setting environment value and setting app values to override the default value.</li><li>Environment only, allows only the setting environment value to override the default value.</li><li>App only, allows only setting app values to override the default value.</li></ul>|
+|**Value can be overridden for** | A setting that is overridable can be further configured to enable the override behavior.<ul><li>**Environment and app**, allows both the setting environment value and setting app values to override the default value.</li><li>**Environment only**, allows only the setting environment value to override the default value.</li><li>**App only**, allows only setting app values to override the default value.</li></ul>|
 |**Data type** | The data type of a setting controls how the setting’s value is stored. Data type can be set to **Number**, **String**, or **Yes/No**. Data type can't be changed after the setting is created. |
 |**Default value** | The default value specifies the setting's value that will be used unless it is overridden by a setting environment value or a setting app value. |
 
@@ -210,8 +210,15 @@ Setting app value is used to override the setting's default value and any settin
 
 ## Getting or updating a setting value via code
 
+The following functions can be used to get or update a setting value via code.
+
 ### getCurrentAppSetting
-Gets the value of a setting for the current app (app being used).
+Gets the value of a setting for the current app.
+
+### Syntax
+```JavaScript
+var settingValue = Xrm.Utility.getGlobalContext().getCurrentAppSetting(settingName);
+```
 
 #### Parameters
 | Name | Type | Required | Description |
@@ -221,10 +228,34 @@ Gets the value of a setting for the current app (app being used).
 #### Return value
 Type: Same as the type of the setting: Number, String, or Yes/No
 Description: 
-If the setting is overridable and 
-Returns the setting app value. If a setting app value does not exist, then returns the setting environment value. If a setting environment value does not exist, then returns the default value as specified in the setting definition. Returns null if the setting name is incorrect or the setting could not be found.
+- If the setting is Overridable and "Value can be overridden" is set to "Environment and app" the setting app value is returned. If a setting app value does not exist, then the setting environment value is returned. If a setting environment value does not exist, the default value as specified in the setting definition is returned.
+- If the setting is Overridable and "Value can be overridden" is set to "Environment only" the setting environment value is returned. If a setting environment value does not exist, the default value as specified in the setting definition is returned.
+- If the setting is Overridable and "Value can be overridden" is set to "App only" the setting app value is returned. If a setting app value does not exist, the default value as specified in the setting definition is returned.
+- If the setting is not Overridable, the default value as specified in the setting definition is returned.
+- If the setting name is incorrect or the setting could not be found, the return value is null.
 
-### Add or update a setting value
+### saveSettingValue
+Adds or updates the setting app value for the current app or the setting environment value for the current environment.
+
+### Syntax
+```JavaScript
+var myOverrideScope = 2; // Add or update a setting app value
+var saveSettingOptions = {overrideScope: myOverrideScope, solutionUniqueName: mySolutionName};
+var settingValue = Xrm.Utility.getGlobalContext().saveSettingValue(settingName, value, saveSettingOptions).then(successCallback, errorCallback);
+```
+
+#### Parameters
+| Name | Type | Required | Description |
+|:--------------|:--------------|:--------------|:-------------------------|
+|**settingName** | String | Yes | The name of the setting to update the value for. |
+|**value** | Number, String, or Yes/No | Yes | The value to update the setting to. |
+|**saveSettingOptions** | String | No | Options when updating the value. It contains two parameters <ul><li>overrideScope<br>Can be set to 1 for environment or 2 for app. If not specified it is set to environment.</li><li>solutionUniqueName<br>The solution in which the setting app value or setting environment value should be added. If not specified the default solution is used.</li></ul>|
+|**successCallback** | String | Yes | A function to call if the update is successful. |
+|**errorCallback** | String | Yes | A function to call if the update fails. |
+
+#### Return value
+Type: TBD
+Description: TBD
 
 ## See also
 
