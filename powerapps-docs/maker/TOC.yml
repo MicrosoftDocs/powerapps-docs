@@ -1471,9 +1471,9 @@
     items:
     - name: Overview
       href: ../mobile/mobile-offline-overview.md
-    - name: Configure mobile offline synchronization 
+    - name: Set up mobile offline
       href: ../mobile/setup-mobile-offline.md 
-    - name: Work offline on your mobile device 
+    - name: Work in offline mode
       href: ../mobile/work-in-offline-mode.md   
 - name: Portals
   items:
