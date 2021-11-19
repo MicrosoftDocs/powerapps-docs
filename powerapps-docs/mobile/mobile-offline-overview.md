@@ -22,7 +22,7 @@ searchScope:
 
 # Overview of mobile offline (preview)
 
-Wouldn't it be great to be able to use apps on your mobile device without worrying about a spotty connectivity? With Power Apps mobile this is possiable. Users that need to work from remote locations can continue working seemlessly without internet connection. 
+Wouldn't it be great to be able to use apps on your mobile device without worrying about spotty connectivity? With Power Apps mobile this is possiable. Users that need to work from remote locations can continue working seemlessly without internet connection. 
 
 
 Enable your mobile applications so that it's available while offline not only solves this problem but also comes with additional benefits like providing a more responsive, performant experience or saving the device's battery with less connections made to the server.
