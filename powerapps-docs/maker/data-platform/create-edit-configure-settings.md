@@ -215,7 +215,7 @@ The following functions can be used to get or update a setting value via code.
 ### getCurrentAppSetting
 Gets the value of a setting for the current app.
 
-### Syntax
+#### Syntax
 ```JavaScript
 var settingValue = Xrm.Utility.getGlobalContext().getCurrentAppSetting(settingName);
 ```
@@ -237,7 +237,7 @@ Description:
 ### saveSettingValue
 Adds or updates the setting app value for the current app or the setting environment value for the current environment.
 
-### Syntax
+#### Syntax
 ```JavaScript
 var myOverrideScope = 2; // Add or update a setting app value
 var saveSettingOptions = {overrideScope: myOverrideScope, solutionUniqueName: mySolutionName};
