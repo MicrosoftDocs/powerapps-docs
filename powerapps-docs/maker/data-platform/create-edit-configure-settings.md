@@ -241,7 +241,7 @@ Adds or updates the setting app value for the current app or the setting environ
 ```JavaScript
 var myOverrideScope = 2; // Add or update a setting app value
 var saveSettingOptions = {overrideScope: myOverrideScope, solutionUniqueName: mySolutionName};
-var settingValue = Xrm.Utility.getGlobalContext().saveSettingValue(settingName, value, saveSettingOptions).then(successCallback, errorCallback);
+Xrm.Utility.getGlobalContext().saveSettingValue(settingName, value, saveSettingOptions).then(successCallback, errorCallback);
 ```
 
 #### Parameters
