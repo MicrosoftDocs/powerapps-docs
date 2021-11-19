@@ -1463,15 +1463,18 @@
     href: ../mobile/display-mode.md
   - name: In-app notifications in Power Apps mobile (preview)
     href: ../mobile/mobile-notifications.md
-  - name: Configure mobile offline synchronization 
-    href: ../mobile/setup-mobile-offline.md 
-  - name: Work offline on your mobile device 
-    href: ../mobile/work-in-offline-mode.md  
   - name: Create push notifications for Power Apps Mobile
     href: ../mobile/power-apps-mobile-notification.md
   - name: Troubleshoot issues for Power Apps Mobile
     href: ../mobile/powerapps-mobile-troubleshoot.md
-    
+ - name: 'Mobile offline'
+   items:
+    - name: Overview
+      href: ../mobile/mobile-offline-overview.md
+    - name: Configure mobile offline synchronization 
+      href: ../mobile/setup-mobile-offline.md 
+    - name: Work offline on your mobile device 
+      href: ../mobile/work-in-offline-mode.md   
 - name: Portals
   items:
     - name: Portals
