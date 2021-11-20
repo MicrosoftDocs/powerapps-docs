@@ -28,23 +28,9 @@ Settings are made up of three sub-components: Setting definition, setting enviro
 
 | Sub-component | Description |
 |:--------------|:-------------------------|
-|**Setting definition** | A setting definition specifies the base properties of a settings like its name, description, data type and default value. |
-|**Setting environment value** | Setting environment value can be used to override the default value, as specified in the setting definition. A setting environment value applies to all apps in an environment. |
-|**Setting app value** | Setting app value can be used to override the default value, as specified in the setting definition, and also the setting environment value (if one exists). A setting app value applies to a single app. |
-
-Here's an example to help explain how the three components work together.
-- Setting definition
-  - The Power Apps team has created a setting to allow makers to enable or disable the *Async onload handler* feature for model-driven apps. 
-  - The setting is of type *Yes/No* and the default value of this setting is *No*. 
-  - Therefore, by default, the *Async onload handler* feature will be disabled for all model-driven apps.
-- Setting environment value
-  - An environment administrators in a customer’s organization can add a setting environment value for the "Async onload handler" setting and set it to Yes. 
-  - This setting environment value will override the default value and will apply to all apps in that environment. 
-  - This will enable the "Async onload handler" feature for all model-driven apps in that environment.
-- Setting app value 
-  - An application author authoring an app in that same environment can add a setting app value for the app they are authoring and set it to No. 
-  - The setting app value will override the setting environment value (and also the default value, as specified in the setting definition, if no setting environment value exists). 
-  - The setting app value will apply to only that specific app and disable the *Async onload handler* feature.
+|**Setting definition** | <ul><li>A setting definition includes properties such as name, description, data type, default value, and more.</li><li>Power Apps teams and partners, who wish to deliver an add-on feature built on the platform to others, can create a setting definition.</li><li>They can then, via code, use the setting’s value to enable or disable or configure the feature they are delivering.</li><li>They can include the setting definition in the solution that is used to deliver the feature to their customers.</li><li>Example<ul><li>The *Async onload handler* for model-driven apps is a feature from Power Apps that uses settings.</li><li>The setting is of type *Yes/No* and the default value of this setting is *No*. </li><li>Therefore, by default, the *Async onload handler* feature will be disabled for all model-driven apps.</li></ul></li></ul> |
+|**Setting environment value** | <ul><li>A setting environment value can be used to override the default value, as specified in the setting definition.</li><li>Example<ul><li>Extending the example above, an environment administrator in a customer’s organization can add a setting environment value for the *Async onload handler* setting and set it to *Yes*.</li><li>This setting environment value will override the default value and will apply to all apps in that environment.</li><li>This will enable the *Async onload handler* feature for all model-driven apps in that environment.</li></ul></li></ul> |
+|**Setting app value** | <ul><li>A setting app value can be used to override the default value, as specified in the setting definition, and also the setting environment value (if one exists).</li><li>Example<ul><li>Once again, extending the example above, an application author in the same environment above, can add a setting app value for the *Async onload handler* setting for an app they are authoring and set it to *No*</li><li>This setting app value will override the setting environment value and apply only to that single app.</li><li>This will enable the *Async onload handler* feature for that single app.</li></ul></li></ul> |
 
 > [!NOTE]
 > To follow the steps listed below you need to have **Solution preview on**. From the **Solutions** area in Power Apps, on the command bar, ensure you have **Solution preview on**. If **Solution preview off** is displayed, select the option to enable the preview. More information: [Solution view](solutions-area.md)
@@ -58,11 +44,12 @@ A setting definition specifies the base properties of a setting. The full list o
 |**Display name** | The name displayed to consumers of the setting in all user interfaces where settings are displayed. |
 |**Name** | The unique name of the setting in an environment.<br> Name is automatically generated based on the display name provided but can be changed before the setting is created. Once a setting is created the **Name** can't be changed as it may be referenced in applications or code.<br> **Name** has a prefix that corresponds to the solution [publisher](create-solution.md#solution-publisher). This prefix is intended to give the setting a unique name if you want to import them into another solution or environment in the future (which would have a different prefix). |
 |**Description** | The description helps others understand what the setting is used for in all user interfaces where settings are displayed. |
-|**Release level** | Release level is used to inform the framework and other consumers of the setting about the state of the feature that the setting is used with. Release level can be set to **Generally available** or **Preview**. |
-|**Overridable** | Overridable enables a setting’s default value to be overridden by an environment (setting environment value) or an app (setting app value).<br> Overridable can't be changed after the setting is created. |
-|**Value can be overridden for** | A setting that is overridable can be further configured to enable the override behavior.<ul><li>**Environment and app**, allows both the setting environment value and setting app values to override the default value.</li><li>**Environment only**, allows only the setting environment value to override the default value.</li><li>**App only**, allows only setting app values to override the default value.</li></ul>|
 |**Data type** | The data type of a setting controls how the setting’s value is stored. Data type can be set to **Number**, **String**, or **Yes/No**. Data type can't be changed after the setting is created. |
 |**Default value** | The default value specifies the setting's value that will be used unless it is overridden by a setting environment value or a setting app value. |
+|**Overridable** | Overridable enables a setting’s default value to be overridden by an environment (setting environment value) or an app (setting app value).<br> Overridable can't be changed after the setting is created. |
+|**Value can be overridden for** | A setting that is overridable can be further configured to enable the override behavior.<ul><li>**Environment and app**, allows both the setting environment value and setting app values to override the default value.</li><li>**Environment only**, allows only the setting environment value to override the default value.</li><li>**App only**, allows only setting app values to override the default value.</li></ul>|
+|**Release level** | Release level is used to inform the framework and other consumers of the setting about the state of the feature that the setting is used with. Release level can be set to **Generally available** or **Preview**. |
+|**Information Url** | A link to documentation to will help consumers of the setting understand the purpose of the setting. Will appear as a *Learn more* link in all user interfaces where settings are displayed.|
 
 ### Adding a new setting definition
 
