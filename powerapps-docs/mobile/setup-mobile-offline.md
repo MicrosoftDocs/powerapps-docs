@@ -1,6 +1,6 @@
 ---
-title: Configure mobile offline for Power Apps mobile (preview) | Microsoft Docs
-description: Set up and configure mobile offline for the Power Apps mobile.
+title: Set up mobile offline (preview) | Microsoft Docs
+description: Set up and configure mobile offline for model-drive Power Apps.
 author: mduelae
 ms.service: powerapps
 ms.component: pa-user
@@ -18,30 +18,33 @@ search.app:
   - D365CE
 ---
 
-# Configure mobile offline for Power Apps mobile (preview)
+# Set up mobile offline (preview)
+
+[This topic is pre-release documentation and is subject to change.]
+
+Use the [modern app designer](../maker/model-driven-apps/app-designer-overview) to set up offline mode for your model-driven app. Once offline mode is set up, model-driven app users can interact with their data, even when they don't have internet connection with [Power Apps mobile](https://powerapps.microsoft.com/downloads/).
 
 
+Unlike the legacy app designer and the Power platform admin center, the modern app designer streamlines experience which removes many steps that were required before through the legacy app designer and the Power platform admin center.
 
 
-## Default roles setup for offline applications
+## Prerequisites 
 
--   The **environment maker, system customizer or system administrator** role is needed to configure offline for model driven apps. These roles have create/read/write/delete and share access on the "mobile offline profile" table.
+Verify the following prerequisites before you start setting up offline mode: 
 
--   Users with the **basic user** role can open and use an offline application. This role has the read access to the "mobile offline profile" table.
+- Environment maker, system administrator, or system customizer role is needed to configure offline mode for model driven apps. These roles have create/read/write/delete and share access on the **mobile offline profile** table. More information: [About predefined security roles](share-model-driven-app.md#about-predefined-security-roles)
+
+- Users with the **basic user** role can open and use an offline application. This role has the read access to the **mobile offline profile** table.
 
 If you need to use a custom security role, you may want to edit it accordingly:
 
-*Edit your security role &gt; Core Records tab &gt; Mobile Offline profile*
+- Edit your security role &gt; Core Records tab &gt; Mobile Offline profile.
 
-![A picture containing calendar Description automatically generated](media/image1.png)
+  > [!div class="mx-imgBorder"] 
+  > ![A picture containing calendar Description automatically generated](media/image1.png)
 
 
 Mobile offline allows users to use the [Power Apps mobile](https://powerapps.microsoft.com/downloads/) app in offline mode. Model-driven app users can interact with their data, even when they don't have internet connection.
-
-
-## Configuring your model-driven app for offline (Preview)
-
-The [modern app designer](https://docs.microsoft.com/en-us/powerapps/maker/model-driven-apps/app-designer-overview) comes with a new way of configuring offline for your model-driven applications. It is a streamlined experience which removes many steps that were required before through the legacy app designer and the Power platform admin center.
 
 ### Create or edit your mobile model-driven application and optimize it for mobile use
 
