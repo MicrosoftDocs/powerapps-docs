@@ -49,7 +49,7 @@ A setting definition specifies the base properties of a setting. The full list o
 |**Overridable** | Overridable enables a setting’s default value to be overridden by an environment (setting environment value) or an app (setting app value).<br> Overridable can't be changed after the setting is created. |
 |**Value can be overridden for** | A setting that is overridable can be further configured to enable the override behavior.<ul><li>**Environment and app**, allows both the setting environment value and setting app values to override the default value.</li><li>**Environment only**, allows only the setting environment value to override the default value.</li><li>**App only**, allows only setting app values to override the default value.</li></ul>|
 |**Release level** | Release level is used to inform the framework and other consumers of the setting about the state of the feature that the setting is used with. Release level can be set to **Generally available** or **Preview**. |
-|**Information Url** | A link to documentation to will help consumers of the setting understand the purpose of the setting. Will appear as a *Learn more* link in all user interfaces where settings are displayed.|
+|**Information Url** | A link to documentation to will help consumers of the setting understand the purpose of the setting. Will be used as a *Learn more* link in all user interfaces where settings are displayed.|
 
 ### Adding a new setting definition
 
