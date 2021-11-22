@@ -43,7 +43,7 @@ If you need to use a custom security role, you may want to edit it accordingly:
 
 ##  Optimize your app for mobile offline 
 
-Before you enable mobile offline for your users, make sure your model-driven app is optimized for offline and mobile use. Mobile apps often run on small screens with limited connectivity. In these conditions, it is critical that the app is is fast and easy to use. To achieved this, it's important to keep the app simple and lightweight and consider the number of user scenarios that you want to cover and the amount of data the aps uses.
+Before you enable mobile offline for your users, make sure your model-driven app is optimized for offline and mobile use. Mobile apps often run on small screens with limited connectivity. In these conditions, it is critical that the app is is fast and easy to use. To achieved this, it's important to keep the app simple and lightweight and consider the number of user scenarios that you want to cover and the amount of data the app uses.
 
 It's recommended to have a separate application for each role in your organization. For example, if you have desktop users and users that work remotely a mobile device then you should create two seperate apps. One online app for your office users and another mobile offline app for remote workers. This way you can build optimal and simpler experiences for both set of users.
 
