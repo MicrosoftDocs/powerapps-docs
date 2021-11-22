@@ -19,6 +19,9 @@ You can use the **View Shape in MR** component in your app to let users see if a
 
 The component creates a button in your app. When app users click the button, it overlays a cube onto the live camera feed of the device. You set up the dimensions of the cube when you edit the component in Power Apps.
 
+Watch this video to learn how to build mobile apps with View Shape in MR component:
+[!VIDEO https://www.microsoft.com/videoplayer/embed/RWLAkb]
+
 In this topic, we will create a screen in an app that will allow users to create a custom cube shape by inputting unit to be used (centimeters, feet, inches, or meters) as well as defining the height, width, and depth of the cube.
 
 ## Prerequisites
