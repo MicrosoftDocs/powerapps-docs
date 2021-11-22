@@ -22,7 +22,7 @@ searchScope:
 
 # Overview of mobile offline (preview)
 
-Wouldn't it be great to use your mobile app without worrying about a spotty internet cnnection? With model-driven Power Apps this is possiable. People that need to work from remote locations can continue to work seamlessly without worrying internet connection. 
+Wouldn't it be great to use your mobile app without worrying about a spotty internet connection? With model-driven Power Apps, it's possiable. People that need to work from remote locations can continue to work seamlessly without worrying connectivity. 
 
 When are model-driven apps enabled for offline use, users will notice better device performance, the app is more resonsive, and you'll save on battery power with less connections made to the server. You will need internet connections to sync your data back and forth with Microsoft Dataverse.
 
