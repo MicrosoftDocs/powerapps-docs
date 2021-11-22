@@ -5,7 +5,7 @@ author: mduelae
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 11/19/2021
+ms.date: 11/22/2021
 ms.subservice: mobile
 ms.author: mkaur
 ms.custom: ""
@@ -24,8 +24,6 @@ search.app:
 
 Use the [modern app designer](../maker/model-driven-apps/app-designer-overview) to set up mobile offline for your model-driven app. Once offline mode is set up, model-driven app users can interact with their data without internet connection on [Power Apps mobile](https://powerapps.microsoft.com/downloads/).
 
-Unlike the legacy app designer and the Power platform admin center, the modern app designer streamlines experience which removes many steps that were required before through the legacy app designer and the Power platform admin center.
-
 
 ## Prerequisites 
 
@@ -40,20 +38,18 @@ If you need to use a custom security role, you may want to edit it accordingly:
 - Edit your security role &gt; Core Records tab &gt; Mobile Offline profile.
 
   > [!div class="mx-imgBorder"] 
-  > ![A picture containing calendar Description automatically generated](media/image1.png)
+  > ![Required security roles to use mobile offline.](media/mobile-offline-image1.png)
 
 
-Mobile offline allows users to use the [Power Apps mobile](https://powerapps.microsoft.com/downloads/) app in offline mode. Model-driven app users can interact with their data, even when they don't have internet connection.
+##  Optimize your app for mobile offline 
 
-### Create or edit your mobile model-driven application and optimize it for mobile use
+Before you enable mobile offline for your users, make sure your model-driven app is optimized for mobile users. Mobile apps often run on small screens with limited connectivity. In these conditions, it is critical that the app is is fast and easy to use. To achieved this, it's important to keep the app simple and lightweight and consider the number of user scenarios that you want to cover and the amount of data the aps uses.
 
-First, you want to optimize your application for mobile offline usage, this is a recommended step for you to ensure your users will have a smooth experience on their devices. Mobile applications often need to run on small screen devices with limited connectivity. In those conditions, it is critical to ensure your application is fast and remains usable. This can be achieved by keeping your application simple and lightweight in terms of number of covered scenarios and amount of data it must deal with.
+It's recommended to have a separate application for each role in your organization. For example, if you have desktop users and users that work remotely a mobile device then you should create two seperate apps. One online app for your office users and another mobile offline app for remote workers. This way you can build optimal and simpler experiences for both set of users.
 
-When possible, it is recommended to have a separate application for each core role in your organization. For instance, if you have desktop/office users as well as remote workers who use mobile devices, you may avoid having them using the same application and have two different applications: one online application for your office users and one mobile offline application for remote workers. This way you can build optimal and simpler experiences for both roles.
+### Good practices for building mobile offline applications
 
-Good practices for building mobile offline applications:
-
-1.  Identify the **on-the-go scenarios** that are functionally related (i.e.: which would be performed by a specific worker on a given day) and need to be completed in the field (not at the office).
+1.  Identify the **on-the-go scenarios** that are functionally related, such as which would be performed by a specific worker on a given day and need to be completed in the field (not at the office).
 
 This step will help you reduce the complexity of your application and limit the amount of application metadata to be downloaded on the device.
 
