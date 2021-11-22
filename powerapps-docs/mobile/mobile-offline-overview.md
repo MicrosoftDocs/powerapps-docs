@@ -24,16 +24,20 @@ searchScope:
 
 Wouldn't it be great to use your mobile app without worrying about a spotty internet connection? With model-driven Power Apps, it's possiable. People that need to work from remote locations can continue to work seamlessly without worrying connectivity. 
 
-When model-driven apps are enabled for mobile offline, you'll have better device performance, a more resonsive app, and it'll save battery power with less connections made to the server. You will need internet connections to sync your data back and forth with Microsoft Dataverse.
+When model-driven apps are enabled for mobile offline, you'll have better device performance, a more resonsive app, and it'll save battery power with less connections made to the server. 
+
+Note, you will need internet connections to sync your data back and forth with Microsoft Dataverse.
+
+You can an enable any of your model-driven apps for offline and run them on [Power Apps mobile](run-powerapps-on-mobile), [Dynamics 365 for Phones and Tablets](/dynamics365/mobile-app/overview), and [Field Service (Dynamics 365) mobile app](/dynamics365/field-service/mobile-2020-power-platform). 
+
+To get started with mobile offline, an app maker will need to define the tables that will be available in offline use in Dataverse. When this is set up, the app automatically syncs data between your device and the server. For more information, see [Configure mobile offline](setup-mobile-offline.md)
+
 
 > [!IMPORTANT]
 > This topic covers the new set up offline experience using the [modern app designer](../maker/model-driven-apps/create-model-driven-app) and the [offline first experience](link TBD).
 >   - For information about the current  mobile offline set up (which will become the previous experience), see  [Configure mobile offline synchronization](/dynamics365/mobile-app/setup-mobile-offline).
 >   - For more information on how to set up mobile offline for canvas apps, see [Develop offline-capable canvas apps](../maker/canvas-apps/offline-apps.md).
 
-You can an enable any of your model-driven apps for offline and run them on [Power Apps mobile](run-powerapps-on-mobile), [Dynamics 365 for Phones and Tablets](/dynamics365/mobile-app/overview), and [Field Service (Dynamics 365) mobile app](/dynamics365/field-service/mobile-2020-power-platform). 
-
-To get started with mobile offline, an app maker will need to define the tables that will be available in offline use in Dataverse. When this is set up, the app automatically syncs data between your device and the server. For more information, see [Configure mobile offline](setup-mobile-offline.md)
 
 
 
