@@ -22,8 +22,7 @@ search.app:
 
 [This topic is pre-release documentation and is subject to change.]
 
-Use the [modern app designer](../maker/model-driven-apps/app-designer-overview) to set up offline mode for your model-driven app. Once offline mode is set up, model-driven app users can interact with their data, even when they don't have internet connection with [Power Apps mobile](https://powerapps.microsoft.com/downloads/).
-
+Use the [modern app designer](../maker/model-driven-apps/app-designer-overview) to set up mobile offline for your model-driven app. Once offline mode is set up, model-driven app users can interact with their data without internet connection on [Power Apps mobile](https://powerapps.microsoft.com/downloads/).
 
 Unlike the legacy app designer and the Power platform admin center, the modern app designer streamlines experience which removes many steps that were required before through the legacy app designer and the Power platform admin center.
 
