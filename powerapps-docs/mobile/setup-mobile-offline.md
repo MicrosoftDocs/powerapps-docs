@@ -22,7 +22,7 @@ search.app:
 
 [This topic is pre-release documentation and is subject to change.]
 
-Use the [modern app designer](../maker/model-driven-apps/app-designer-overview) to set your model-driven app for offline use on a mobile device. Once offline mode is set up, users can interact with their data without internet connection using [Power Apps mobile](https://powerapps.microsoft.com/downloads/).
+Use the [modern app designer](../maker/model-driven-apps/app-designer-overview) to set your model-driven app for offline use on a mobile device. Once offline mode is enabled, users can interact with their data without internet connection on [Power Apps mobile](https://powerapps.microsoft.com/downloads/).
 
 
 ## Prerequisites 
@@ -43,7 +43,7 @@ If you need to use a custom security role, you may want to edit it accordingly:
 
 ##  Optimize your app for mobile offline 
 
-Before you enable mobile offline, make sure your model-driven app is optimized for offline and mobile use. Mobile apps often run on small screens with limited connectivity so it's important that the app is fast and always aviliable. In order to achieved this, remember to keep the app simple and lightweight. Also, consider the number of user scenarios that you want to cover and the amount of data the app uses on a mobile device.
+Before you enable mobile offline, make sure your model-driven app is optimized for offline and mobile use. Mobile apps often run on small screens with limited connectivity so it's important that the app is fast and always aviliable. In order to achieve this, make sure the app simple and lightweight. Also, consider the number of user scenarios that you want to cover and the amount of data the app uses on a mobile device.
 
 It's recommended to create separate apps for each role in your organization. For example, if you have desktop users and remote mobile users then you should create two seperate apps. One online app for your office users and another mobile app  that also works in offline  mode for remote workers. This will allow you to build an optimal experiences for both set of users.
 
