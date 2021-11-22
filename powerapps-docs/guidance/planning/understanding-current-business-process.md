@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: guidance
 ms.date: 06/16/2020
+ms.subservice: guidance
 ms.author: thground
 ms.reviewer: kathyos
 
@@ -41,7 +42,16 @@ Also, consider diverse perspectives in work preferences and constraints.
 
 In our example scenario, we identified these key contributors:
 
-![Lee -Sales, Nick - Sales manager, Gibson - Operations, Rebecca - Auditor, Abhay - Accountant, Charlotte - CFO](media/contributors.png "Lee -Sales, Nick - Sales manager, Gibson - Operations, Rebecca - Auditor, Abhay - Accountant, Charlotte - CFO")
+![Lee -Sales, Nick - Sales manager, Gibson - Operations, Rebecca - Auditor, Abhay - Accountant, Charlotte - CFO.](media/contributors.png "Lee -Sales, Nick - Sales manager, Gibson - Operations, Rebecca - Auditor, Abhay - Accountant, Charlotte - CFO")
+
+## Discover processes to improve on using Process advisor
+If your task is done fully on the desktop, you can discover all the steps 
+different people in your organization are performing to complete the task by 
+using our process discovery functionality called [process advisor](/power-automate/process-advisor-overview.md). 
+Process advisor visualizes your process in a [process map](/power-automate/process-advisor-visualize.md) 
+and reveals bottlenecks and metrics for your process through an analytical report.
+
+![Process map](media/process-map.png "Process advisor process map")
 
 > [!div class="nextstepaction"]
 > [Next step: Documenting the business process](what-is-task.md)

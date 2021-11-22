@@ -2,6 +2,7 @@
 title: Update existing code components using Power Apps component framework tooling| Microsoft Docs
 description: Update components using the Power Apps component framework tooling
 keywords: Power Apps component framework, code component, component Framework
+ms.subservice: pcf
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek

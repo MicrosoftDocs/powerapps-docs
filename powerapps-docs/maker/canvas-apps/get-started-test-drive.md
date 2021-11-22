@@ -2,19 +2,21 @@
 title: Create a canvas app from a template
 description: Step-by-step instructions for creating a canvas app automatically based on a Power Apps template.
 author: tapanm-msft
-manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
   - canvas
   - intro-internal
 ms.reviewer: 
-ms.date: 01/29/2020
+ms.date: 10/20/2021
+ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
 ---
 
 # Create a canvas app from a template
@@ -29,49 +31,45 @@ If you don't have a license for Power Apps, you can [sign up for free](../signup
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
-1. Select **Apps** from left navigation. Select the **New app** drop down menu and then select **Canvas**.
+1. Select **+ Create** from the left-pane.
 
-    ![New canvas app](./media/get-started-test-drive/new-canvas-app.png)
+    :::image type="content" source="media/get-started-test-drive/create-left-pane.png" alt-text="Select + Create from Power Apps.":::
 
-    This opens [Power Apps Studio](../../powerapps-overview.md#power-apps-for-app-makerscreators) in a new tab.
+1. Scroll down to **Start from template** section, and choose the template of your choice for canvas apps.
 
-1. On the **App templates** tile, select **Phone layout** or **Tablet layout**.
+    :::image type="content" source="media/get-started-test-drive/start-from-template.png" alt-text="Choose a template.":::
 
-    ![App from template tile](./media/get-started-test-drive/template-tile.png)
+    > [!TIP]
+    > Select a template to learn more. If you want to choose another template, select **Cancel** to return.
 
-1. In the list of templates, select a template, and then select **Use** (near the lower-right corner).
+1. After you select the template you want to use, you can update the app name, and then select **Create** to open the app in Power Apps Studio. For example, the following shows creating an app using the **Power Apps Training for Office** template.
 
-    ![Open a Power Apps template](./media/get-started-test-drive/open-template.png)
-
-    The Power Apps Studio opens in new tab and the app gets created.
+    :::image type="content" source="media/get-started-test-drive/create-app.png" alt-text="Create app":::
 
     > [!NOTE]
-    > If **Use** button is disabled, ensure you have selected a data source for the app. You can select the data source by selecting **Choose** at the bottom.
-    >
-    > ![Choose data source](./media/get-started-test-drive/choose-data-source.png)
+    > You may be prompted to create or allow connections for connectors that the selected app is configured to use.
 
 ## Run the app
-An app from a template opens in the default workspace, where you'll spend most of your time customizing. Before you make any changes to the app, explore how the app works in **Preview** mode.
 
-1. Press F5 (or click or tap the right arrow in the upper-right corner) to open the app in **Preview** mode.
+An app from a template opens in Power Apps Studio, where you'll spend most of your time customizing. Before you make any changes to the app, explore how the app works in **Preview** mode.
 
-    ![Button to open Preview mode](./media/get-started-test-drive/open-preview.png)
+1. Press F5 to open the app in **Preview** mode. Alternatively, you can also select the play button on the top-right corner of the screen.
 
-    The app is populated with sample data to demonstrate the functionality of the app. For example, the Cost Estimator app contains data for creating appointments and estimating the cost of installing a specific flooring product in a room of a particular size.
+    :::image type="content" source="media/get-started-test-drive/play-button.png" alt-text="Play the app":::
 
-4. Explore the app's default behavior by creating, updating, and deleting sample data, and then verify that the data in your cloud-storage account reflects your changes.
+    The app is populated with sample data to demonstrate the functionality of the app.
 
-    For example, make an appointment, and create a cost estimate in the Cost Estimator app.
+1. Explore the app's default behavior by creating, updating, and deleting sample data, and then verify that the data in your cloud-storage account reflects your changes.
 
-5. Return to the default workspace by pressing Esc (or by clicking or tapping the **X** icon near the upper-right corner).
+1. Return to the default workspace by pressing Esc (or by selecting **X** icon near the upper-right corner).
 
 ## Next steps
-1. Press Ctrl-S, give your app a name, and then click or tap **Save** to save your app to the cloud.
+
+1. Press Ctrl-S, give your app a name, and then select **Save** to save your app to the cloud.
 
 1. [Share your app](share-app.md) with other people in your organization.
 
 > [!IMPORTANT]
 > Before you share an app, make sure that the people with whom you're sharing it have access to the data. For example, you must [share an Excel or other file](share-app-data.md) in a cloud-storage account.
-
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

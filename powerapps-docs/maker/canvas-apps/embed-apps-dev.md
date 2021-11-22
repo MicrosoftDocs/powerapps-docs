@@ -2,8 +2,8 @@
 title: Integrate canvas apps into websites and other services
 description: Learn about how to embed canvas apps in websites and other services.
 author: gregli-msft
-manager: kvivek
 ms.service: powerapps
+ms.subservice: canvas-developer
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
@@ -13,13 +13,16 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - gregli-msft
 ---
 # Integrate canvas apps into websites and other services
 The apps that you build are often most useful when they're available right where people do their work. By embedding canvas apps in an iframe, you can integrate those apps into websites and other services, such as Power BI or SharePoint.
 
 In this topic, we'll show you how to set parameters for app embedding; then we'll embed our Asset Ordering app in a website.
 
-![Power BI dashboard with embedded app](./media/embed-apps-dev/embed-dashboard.png)
+![Power BI dashboard with embedded app.](./media/embed-apps-dev/embed-dashboard.png)
 
 Keep the following restrictions in mind:
 
@@ -60,10 +63,10 @@ The app ID is available on powerapps.com. For the app you want to embed:
 
 1. In [powerapps.com](https://powerapps.microsoft.com), on the **Apps** tab, click or tap the ellipsis ( **. . .** ), then **Details**.
    
-    ![Go to app details](./media/embed-apps-dev/details.png)
+    ![Go to app details.](./media/embed-apps-dev/details.png)
 1. Copy the **App ID**.
    
-    ![Copy app ID from details](./media/embed-apps-dev/app-id.png)
+    ![Copy app ID from details.](./media/embed-apps-dev/app-id.png)
 1. Substitute the `[AppID]` value in the URI. For our Asset Ordering app, the URI looks like this:
    
     ```
@@ -86,7 +89,7 @@ Specify values for the iframe width and height, and substitute the ID of your ap
 
 The following image shows the Asset Ordering app embedded in a Contoso sample website.
 
-![Contoso website with embedded app](./media/embed-apps-dev/contoso-website.png)
+![Contoso website with embedded app.](./media/embed-apps-dev/contoso-website.png)
 
 Keep the following points in mind for authenticating users of your app:
 

@@ -15,6 +15,7 @@ applies_to:
 ms.assetid: 
 caps.latest.revision:
 author: "matthewbolanos"
+ms.subservice: dataverse-maker
 ms.author: "matp"
 manager: "kvivek"
 search.audienceType: 
@@ -28,7 +29,6 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 Use custom help panes and guided tasks to give your Unified Interface application a custom in-product help experience that is tailored to your organization. Use custom help panes to provide table, form, and language-specific help and guidance that includes rich text, content links, images, and video links. 
 
@@ -57,13 +57,13 @@ To use the custom help panes feature, you environment needs the following:
 - [Must have custom help panes enabled.](#enable-custom-help-panes-for-your-environment) 
 
 ### Enable custom help panes for your environment
-1. Open a model-driven app, and then on the command bar select **Settings** ![Settings](../model-driven-apps/media/powerapps-gear.png) > **Advanced  Settings**.
+1. Open a model-driven app, and then on the command bar select **Settings** ![Settings.](../model-driven-apps/media/powerapps-gear.png) > **Advanced  Settings**.
 2. Go to **Settings** > **System** > **Administration**.  
 3. On the **Administration** page, select **System Settings**.
 4. On the **General** tab, under **Set custom Help URL**, select **Yes** for **Enable Custom Help Panes and Guided Tasks**, and then select **OK**.
 
     > [!div class="mx-imgBorder"] 
-    > ![Enable custom help panes](media/enable-custom-help-panes.png "Enable custom help panes")
+    > ![Enable custom help panes.](media/enable-custom-help-panes.png "Enable custom help panes")
 
 > [!IMPORTANT]
 > - You can enable custom help panes or customizable help, but not both at the same time. Confirm that **Use custom Help for customizable tables** and **Append parameters to URL** are both set to **No**.  
@@ -89,10 +89,10 @@ By default, a help pane stays open and on the help content you first opened it w
 ### To author help pane content
 1.	To view the help pane, open a model-driven app, and then on the command bar select **Help**. 
 
-    ![Help](media/help-command.png)   
+    ![Help.](media/help-command.png)   
 2.	On the Help pane, select the vertical ellipsis, and then select **Edit**. 
 
-    ![Edit help](media/help-edit-command.png)
+    ![Edit help.](media/help-edit-command.png)
     
     The help pane is now in edit mode and the cursor is positioned on the help pane title.
 3.	From the edit pane you can perform  the following tasks: 

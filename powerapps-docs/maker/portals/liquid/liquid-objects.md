@@ -5,11 +5,12 @@ author: gitanjalisingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2020
+ms.date: 09/27/2021
+ms.subservice: portals
 ms.author: gisingh
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
-    - tapanm-msft
+    - nickdoelman
     - GitanjaliSingh33msft
 ---
 
@@ -18,6 +19,9 @@ contributors:
 Liquid objects contain attributes to output dynamic content to the page. For example, the page object has an attribute called title that can be used to output the title of the current page.
 
 To access an object attribute by name, use a period (.). To render an object's attribute in a template, wrap it in {{ and }}.
+
+> [!IMPORTANT]
+> To avoid potential cross-site scripting (XSS) issues, always use [escape filter](liquid-filters.md#escape) to HTML encode data whenever using Liquid objects to read untrusted data provided by the user.
 
 ```
 {{ page.title }}
@@ -254,7 +258,6 @@ The following table explains various attributes associated with blogpost Object.
 |Attribute   |Description   |
 |---|---|
 | url            | The URL of the post.                                                                |
-| content        | Returns the content field for the post.                                             |
 | content        | Returns the Content field for the post.                                             |
 | author         | Returns the authors for the post (which is simply a contact table object.          |
 | title          | The Title of the post.                                                              |
@@ -263,10 +266,13 @@ The following table explains various attributes associated with blogpost Object.
 
 ## entities
 
+> [!CAUTION]
+> To avoid potential cross-site scripting (XSS) issues, always use [escape filter](liquid-filters.md#escape) to HTML encode data whenever using **entities** Liquid object to read data provided by the user that can't be trusted.
+
 Allows you to load any Power Apps table by ID. If the table exists, a table object will be returned. If a table with the given ID isn't found, [null](liquid-types.md#null) will be returned.  
 
 ```
-{% assign account = entities.account['936DA01F-9ABD-4d9d-80C7-02AF85C822A8'] %}
+{% assign account = entities.account['936DA01F-9ABD-4d9d-80C7-02AF85C822A8'] | escape %}
 
 {% if account %}
 
@@ -276,7 +282,7 @@ Allows you to load any Power Apps table by ID. If the table exists, a table obje
 
 {% assign entity_logical_name = 'contact' %}
 
-{% assign contact = entities[entity_logical_name][request.params.contactid] %}
+{% assign contact = entities[entity_logical_name][request.params.contactid] | escape %}
 
 {% if contact %}
 
@@ -998,14 +1004,15 @@ The polls object allows you to select a specific poll or poll placement:
 Contains information about the current HTTP request.
 
 ```
-{% assign id = request.params['id'] %}
+{% assign id = request.params['id'] | escape %}
 
-<a href={{ request.url | add_query: 'foo', 1 }}>Link</a>
+<a href={{ request.url | add_query: 'foo', 1 | escape }}>Link</a>
 ```
 
 > [!NOTE]
 > - You can build URLs dynamically in Liquid by using URL Filters.
 > - The URL used in request.url can be any requested value, and gets [cached](../configure/enable-header-footer-output-caching.md) for subsequent requests. To ensure correct value in request.url, consider using [substitution tag](../liquid/template-tags.md#substitution), partial URL such as ~\{WebFile path} or storing the portal URL in [Site Settings](../configure/configure-site-settings.md).
+> - Power Apps portals release version [9.3.8.x](/power-platform/released-versions/portals/portalupdate938x) or later will by default have [escape](../liquid/liquid-filters.md#escape) Liquid filter enforced for [user](../liquid/liquid-objects.md#user) and [request](../liquid/liquid-objects.md#request) Liquid objects. To disable this default configuration and allow these Liquid objects without escape Liquid filter, see [portal site settings - Site/EnableDefaultHtmlEncoding](../configure/configure-site-settings.md#portal-site-settings).
 
 ### Attributes
 
@@ -1253,15 +1260,18 @@ user is an [entity](#entity) object.
 
 ```
 {% if user %}
-
-Hello, {{ user.fullname }}!
-
+ 
+Hello, {{ user.fullname | escape }}!
+ 
 {% else %}
-
+ 
 Hello, anonymous user!
-
+ 
 {% endif %}
 ```
+
+> [!NOTE]
+> Power Apps portals release version [9.3.8.x](/power-platform/released-versions/portals/portalupdate938x) or later will by default have [escape](../liquid/liquid-filters.md#escape) Liquid filter enforced for [user](../liquid/liquid-objects.md#user) and [request](../liquid/liquid-objects.md#request) Liquid objects. To disable this default configuration and allow these Liquid objects without escape Liquid filter, see [portal site settings - Site/EnableDefaultHtmlEncoding](../configure/configure-site-settings.md#portal-site-settings).
 
 ### Attributes
 

@@ -6,11 +6,12 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2021
+ms.subservice: portals
 ms.author: sandhan
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
     - neerajnandwana-msft
-    - tapanm-msft
+    - nickdoelman
 ---
  
 # Portals capacity consumption reports
@@ -33,7 +34,7 @@ The individual reports contain data for a duration of 30 days preceding the date
 
 1. In the **Add-ons** section, select **Download reports**.
 
-    ![Add-ons](media/portal-consumption-reports/summary-add-ons.png "Add-ons")
+    ![Add-ons.](media/portal-consumption-reports/summary-add-ons.png "Add-ons")
 
 1. Select the **Portal Logins** or **Portal Views** report.
 
@@ -41,13 +42,13 @@ The individual reports contain data for a duration of 30 days preceding the date
 
 1. Select **Submit**.
 
-    ![Confirmation for the request](media/portal-consumption-reports/confirmation.png "Confirmation for the request")
+    ![Confirmation for the request.](media/portal-consumption-reports/confirmation.png "Confirmation for the request")
 
     A notification appears that acknowledges your download request.
 
 1. After the generated report becomes available, select **Download** in the notification that appears.
 
-    ![Notification that the report is ready to download](media/portal-consumption-reports/download-notification.png "Notification that the report is ready to download")
+    ![Notification that the report is ready to download.](media/portal-consumption-reports/download-notification.png "Notification that the report is ready to download")
 
     > [!TIP]
     > To quickly regenerate the report for the selected report type and target date, select **Regenerate report** in the notification.

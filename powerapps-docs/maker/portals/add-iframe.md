@@ -6,11 +6,12 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2021
+ms.subservice: portals
 ms.author: nenandw
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
     - neerajnandwana-msft
-    - tapanm-msft
+    - nickdoelman
 ---
 
 # Add IFrame
@@ -25,7 +26,7 @@ To add IFrame component:
 
 3.  Select an editable element on the canvas.
 
-4.  Select **Components** ![components icon](media/components-icon.png "Components icon") from the left side of the screen.  
+4.  Select **Components** ![components icon.](media/components-icon.png "Components icon") from the left side of the screen.  
 
 5.  Under **Portal components**, select **IFrame**. The IFrame placeholder is added to the canvas.
 
@@ -41,7 +42,7 @@ To add IFrame component:
     - **Link**: Enter the URL of the website to be displayed in the IFrame. Only secured links are accepted—that is, https:// is mandatory. By default, <https://www.bing.com> is available as the value.
     
         > [!div class=mx-imgBorder]
-        > ![IFrame properties](media/iframe-props.png "IFrame properties")  
+        > ![IFrame properties.](media/iframe-props.png "IFrame properties")  
 
 > [!NOTE]
 > You can also add [Power Virtual Agent](/power-virtual-agents/fundamentals-what-is-power-virtual-agents) bot to the  IFrame similarly using steps described in [add bot to your web site](/power-virtual-agents/publication-connect-bot-to-web-channels#custom-website).

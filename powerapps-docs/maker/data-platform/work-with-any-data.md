@@ -11,6 +11,7 @@ ms.topic: "article"
 applies_to: 
   - "powerapps"
 author: "mmercuri"
+ms.subservice: dataverse-maker
 ms.author: "mmercuri"
 manager: "kvivek"
 search.audienceType: 
@@ -42,7 +43,7 @@ The Common Data Model schemas can be used to inform the creation of tables in Da
 
 The following image shows some elements of the standard Common Data Model tables. 
 
-![Common Data Model schema](media/common-data-model.png "Common Data Model schema")
+![Common Data Model schema.](media/common-data-model.png "Common Data Model schema")
 
 ## Tables
 
@@ -50,17 +51,17 @@ In Dataverse, tables are used to model and manage business data. To increase pro
 
 A set of tables that are commonly used across industries, such as **User** and **Team**, are included in Dataverse and referred to as *standard tables*. These out-of-the-box tables can also be customized, such as including additional columns. In addition, you can easily create your own custom tables in Dataverse.
 
-![View tables](media/standard-entities.png "View tables")
+![View tables.](media/standard-entities.png "View tables")
 
 ## Columns
 
-Columns define the individual data items that can be used to store data in a table. Fields are sometimes called attributes by developers. An table representing a course at a university might contain columns such as "Name," "Location," "Department," "Registered Students," and so on.
+Columns define the individual data items that can be used to store data in a table. Fields are sometimes called attributes by developers. A table representing a course at a university might contain columns such as "Name," "Location," "Department," "Registered Students," and so on.
 
-Columns might have different types of data such as strings, digital data, images, and files. There's no need to keep relational and non-relational data separated artificially if it's part of the same business process or flow. Dataverse stores the data in the best storage type for the model created.
+Columns might have different types of data such as numerals, strings, digital data, images, and files. There's no need to keep relational and non-relational data separated artificially if it's part of the same business process or flow. Dataverse stores the data in the best storage type for the model created.
 
 Each of these columns can be associated with one of many data types supported by Dataverse.
 
-![Create a column](media/entity-field.png "Create a column")
+![Create a column.](media/entity-field.png "Create a column")
 
 More information: [Types of columns](./types-of-fields.md)
 
@@ -70,7 +71,7 @@ Data in one table often relates to data in another table. table relationships de
 
 Dataverse provides easy-to-use visual designers to define the different types of relationships from one table to another (or between a table and itself). Each table can have a relationship with more than one table, and each table can have more than one relationship to another table.
 
-![Account table relationships](media/entity-relationships.png "Account table relationships")
+![Account table relationships.](media/entity-relationships.png "Account table relationships")
 
 The relationship types are:
 
@@ -95,7 +96,7 @@ Dataverse supports analytics by providing the capability to choose tables for ma
 
 Dataverse provides three ways to query rows:
 
-- Relevance search
+- Dataverse search
 
 - Quick find (single-table or multi-table)
 
@@ -106,11 +107,11 @@ Dataverse provides three ways to query rows:
 
 For more information, see [Compare searches](../../user/search.md).
 
-### Relevance search
+### Dataverse search
 
-Relevance search delivers fast and comprehensive results across multiple tables in a single list, sorted by relevance. It uses a dedicated search service external to Dataverse (powered by Azure) to boost search performance.
+Dataverse search delivers fast and comprehensive results across multiple tables in a single list, sorted by relevance. It uses a dedicated search service external to Dataverse (powered by Azure) to boost search performance.
 
-Relevance search brings the following enhancements and benefits:
+Dataverse search brings the following enhancements and benefits:
 
 - Improves performance by using external indexing and Azure search technology.
 
@@ -122,7 +123,7 @@ Relevance search brings the following enhancements and benefits:
 
 - Highlights matches in the results list. When a search term matches a term in a row, the term appears as bold and italicized text in your search results.
 
-For more information about relevance search, see [Using relevance search to search for rows](../../user/relevance-search.md).
+For more information about Dataverse search, see [Using Dataverse search to search for rows](../../user/relevance-search.md).
 
 ### Quick find
 
@@ -130,7 +131,7 @@ Dataverse includes the ability to find rows quickly and has approaches that will
 
 *Single-table quick find* is used to find rows of only one type. This search option is available from within a view.
 
-![Single-table quick find](media/single-entity-quick-find.png "Single-table quick find")
+![Single-table quick find.](media/single-entity-quick-find.png "Single-table quick find")
 
 *Multiple-table quick find (categorized search)* is also used to find
 rows, but will find them across different types of tables, such as accounts or contacts.
@@ -139,7 +140,7 @@ rows, but will find them across different types of tables, such as accounts or c
 
 Dataverse supports continuous replication of table data to Azure Data Lake Storage, which can then be used to run analytics such as Power BI reporting, machine learning, data warehousing, and other downstream integration processes.
 
-![Dataverse data replication to Azure Data Lake Storage](media/cds-with-data-lake.png "Dataverse data replication to Azure Data Lake Storage")
+![Dataverse data replication to Azure Data Lake Storage.](media/cds-with-data-lake.png "Dataverse data replication to Azure Data Lake Storage")
 
 This feature is designed for enterprise big-data analytics. It's cost-effective, scalable, has high availability and disaster recovery capabilities, and enables best-in-class analytics performance.
 

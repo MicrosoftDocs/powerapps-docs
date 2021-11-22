@@ -6,11 +6,12 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2021
+ms.subservice: portals
 ms.author: nenandw
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
     - neerajnandwana-msft
-    - tapanm-msft
+    - nickdoelman
 ---
 
 # Power Apps portals lifecycle
@@ -25,7 +26,7 @@ The first portal is free to be created in an environment in a tenant. If you nee
 
 The following diagram explains various stages that a Power Apps portals goes through, from creation until deletion.
 
-![Portal lifecycle stages](./media/portal-lifecycle/portal-lifecycle.png "Portal lifecycle stages")
+![Portal lifecycle stages.](./media/portal-lifecycle/portal-lifecycle.png "Portal lifecycle stages")
 
 Let's understand each portal lifecycle stage.
 

@@ -1,18 +1,21 @@
 ---
 title: Use the View in 3D component in Power Apps (Preview)
 description: View 3D models in Power Apps.
-author: iaanw
-manager: shellyha
+author: anuitz
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 3/25/2021
-ms.author: iawilt
+ms.subservice: canvas-maker
+ms.author: anuitz
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - anuitz
 ---
 
 # View 3D content in canvas apps
@@ -25,7 +28,7 @@ You can display a single 3D model, or you can let the user select from a gallery
 
 
 > [!IMPORTANT]
-> Your 3D content must be in the .glb file format.  
+> Your 3D content must be in the .glb, .obj, or .stl file formats.  
 > You can [convert your existing 3D models into the .glb file format](/dynamics365/mixed-reality/guides/3d-content-guidelines/) from a variety of 3D formats.
 
 > [!TIP]

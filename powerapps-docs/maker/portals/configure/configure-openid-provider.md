@@ -6,10 +6,11 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2021
+ms.subservice: portals
 ms.author: sandhan
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
-    - tapanm-msft
+    - nickdoelman
     - sandhangitmsft
     - dileepsinghmicrosoft
 ---
@@ -47,20 +48,20 @@ Similar to all other providers, you have to sign in to [Power Apps](https://make
 
 1. Enter a provider name.
 
-    ![Provider name](media/authentication/select-other-openid.png "Provider name")
+    ![Provider name.](media/authentication/select-other-openid.png "Provider name")
 
 1. Select **Next**.
 
 1. Create the application, and configure the settings with your identity provider.
 
-    ![Create application](media/authentication/step-1-openid.png "Create application")
+    ![Create application.](media/authentication/step-1-openid.png "Create application")
 
     > [!NOTE]
     > The Reply URL is used by the app to redirect users to the portal after the authentication succeeds. If your portal uses a custom domain name, you might have a different URL than the one provided here.
 
 1. Enter the following site settings for portal configuration.
 
-    ![Configure OpenID site settings](media/authentication/openid-site-settings-1.png "Configure OpenID site settings")
+    ![Configure OpenID site settings.](media/authentication/openid-site-settings-1.png "Configure OpenID site settings")
 
     > [!NOTE]
     > Be sure to review&mdash;and if required, change&mdash;the default values.
@@ -78,7 +79,7 @@ Similar to all other providers, you have to sign in to [Power Apps](https://make
 
 1. Configure settings for signing users out.
 
-    ![Logout settings](media/authentication/openid-logout-settings.png "Logout settings")
+    ![Logout settings.](media/authentication/openid-logout-settings.png "Logout settings")
 
     | Name | Description |
     | - | - |
@@ -88,7 +89,7 @@ Similar to all other providers, you have to sign in to [Power Apps](https://make
 
 1. (Optional) Configure additional settings.
 
-    ![Additional settings](media/authentication/openid-additional-settings.png "Additional settings")
+    ![Additional settings.](media/authentication/openid-additional-settings.png "Additional settings")
 
     | Name | Description
     | - | - |

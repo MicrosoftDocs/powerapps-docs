@@ -6,10 +6,11 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 05/13/2021
+ms.subservice: portals
 ms.author: gisingh
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
-    - tapanm-msft
+    - nickdoelman
     - GitanjaliSingh33msft
 ---
 
@@ -33,7 +34,7 @@ To secure these features, table permissions allow granular rights to be granted 
 
 4. Browse for a table permission or select **New Table Permission** to create a new table permission record.
 
-    ![Add table permissions to a web role](../media/add-entity-permission-web-role.png "Add table permissions to a web role")  
+    ![Add table permissions to a web role.](../media/add-entity-permission-web-role.png "Add table permissions to a web role")  
 
 When creating a new Table Permission record, the first step is to determine which table will be secured. The next step is to define access type, as discussed in the following section, and&mdash;for any access type other than Global&mdash;the relationships that define that access type. Finally, determine the rights that are being granted to the role via this permission. Rights are cumulative, so if a user is in one role that grants Read rights and another that grants Read and Update, the user will have Read and Update rights for any records that overlap between the two roles.
 
@@ -98,11 +99,11 @@ This role has a related Table Permission for the Lead table, with a Global acces
 
 Users in this role can access all leads via lists or forms on the portal.
 
-![Grant lobal permissions to a lead](../media/grant-global-permission-leads.png "Grant global permissions to a lead")  
+![Grant lobal permissions to a lead.](../media/grant-global-permission-leads.png "Grant global permissions to a lead")  
 
 We'll now add a Child permission to the Global Lead permission. With the Parent Permission record open, go to the **Child Table Permissions** subgrid and select **New Table Permission** to add a new record.
 
-![Add child permissions to the Global Lead permission](media\assign-entity-permissions\global-lead-child-permissions-new.png "Add child permissions to the Global Lead permission")  
+![Add child permissions to the Global Lead permission.](media\assign-entity-permissions\global-lead-child-permissions-new.png "Add child permissions to the Global Lead permission")  
 
 Select the table as Tasks and the access type as Parental. You can then select the parent relationship (**Lead\_Tasks**). This permission implies that a contact in a web role with the Parent permission will then have Global permission to all tasks that are related to leads.
 
@@ -110,25 +111,25 @@ In order for your list to respect these permissions:
 
 - Table Permissions must be enabled on the list.
     
-    ![Enable Table Permissions on the list](media\assign-entity-permissions\enable-entity-permissions.png "Enable Table Permissions on the list") 
+    ![Enable Table Permissions on the list.](media\assign-entity-permissions\enable-entity-permissions.png "Enable Table Permissions on the list") 
 
 - There must be actions that will actually allow users to do the actions for which their permissions have been granted. 
 
-    ![Actions for which permissions have been granted](media\assign-entity-permissions\form-actions.png "Actions for which permissions have been granted") 
+    ![Actions for which permissions have been granted.](media\assign-entity-permissions\form-actions.png "Actions for which permissions have been granted") 
 
 - Permissions must also be enabled on the [basic form](entity-forms.md) record.
 
-    ![Enabled permissions on the basic form record](media\assign-entity-permissions\enable-entity-permissions.png "Enabled permissions on the basic form record")
+    ![Enabled permissions on the basic form record.](media\assign-entity-permissions\enable-entity-permissions.png "Enabled permissions on the basic form record")
  
 - The form must be surfacing a page that has a subgrid on it for the table that you want to enable with Child permissions. In this case, the table will be Tasks.
 
-    ![Subgrid with the table - Tasks](media\assign-entity-permissions\subgrid-on-form.png "Subgrid with the table - Tasks")
+    ![Subgrid with the table - Tasks.](media\assign-entity-permissions\subgrid-on-form.png "Subgrid with the table - Tasks")
 
 If you want to enable Read or Create permissions for tasks, you'll need to configure those basic forms too, and edit the forms to remove the Regarding lookup field.  
 
 This action then grants permissions for all tasks that are related to leads. If tasks are being surfaced on a list, a filter is added to the list so that only tasks that are related to a lead will appear on the list. In our example, they're being surfaced with a subgrid on a basic form.
 
-![Task example](../media/tasks-example.png "Task example")  
+![Task example.](../media/tasks-example.png "Task example")  
 
 ## Contact access type permissions for tasks
 

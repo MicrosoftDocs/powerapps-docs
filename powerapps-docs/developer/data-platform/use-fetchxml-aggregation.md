@@ -2,11 +2,12 @@
 title: "Use FetchXML aggregation (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about the grouping and aggregation features of FetchXML that let you calculate sum, average min, max and count." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 03/25/2021
+ms.date: 09/27/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
+ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -83,7 +84,7 @@ Client error message: The maximum record limit is exceeded. Reduce the number of
 To avoid this error add appropriate filters to your query to ensure that it will not need to evaluate more than 50,000 records. Then run you query multiple times and combine the results.
 
 > [!TIP]
-> If you want to get a total count of records with no filter, use the `RetrieveTotalRecordCount` message with either the Web API <xref href="Microsoft.Dynamics.CRM.RetrieveTotalRecordCount?text=RetrieveTotalRecordCount Function" /> or with the Organization service <xref:Microsoft.Crm.Sdk.Messages.RetrieveTotalRecordCountRequest> message class.
+> If you want to get a total count of records with no filter, use the `RetrieveTotalRecordCount` message with either the Web API <xref href="Microsoft.Dynamics.CRM.RetrieveTotalRecordCount?text=RetrieveTotalRecordCount Function" /> or with the Organization service <xref:Microsoft.Crm.Sdk.Messages.RetrieveTotalRecordCountRequest> message class. The data retrieved will be from a snapshot within the last 24 hours.
   
 <a name="AVG"></a>
 

@@ -2,17 +2,20 @@
 title: Microsoft Dataverse and the improve data source experience
 description: Learn about upgrading native Microsoft Dataverse connector for improve data source experience.
 author: lancedMicrosoft
-manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 05/24/2021
+ms.subservice: canvas-maker
 ms.author: lanced
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - lancedmicrosoft
 ---
 # Microsoft Dataverse and the improve data source experience
 
@@ -31,7 +34,7 @@ The **Improve data source experience and Microsoft Dataverse views** option has 
 
 The **Improve data source experience and Microsoft Dataverse views** option appears in the general settings section:
 
-![Improve data source experience and Microsoft Dataverse views](media/use-native-cds-connector/improved-data-source-setting.png)
+![Improve data source experience and Microsoft Dataverse views.](media/use-native-cds-connector/improved-data-source-setting.png)
 
 The **Relational data, choices, and other new features for Microsoft Dataverse** now appears in the Deprecated features section.
 
@@ -45,7 +48,7 @@ Either you already converted your canvas app to use this feature, or you started
 
 You may also want to enable the **Explicit Column Selection** feature:
 
-![Explicit column selection](media/use-native-cds-connector/explicit-column-selection.png)
+![Explicit column selection.](media/use-native-cds-connector/explicit-column-selection.png)
 
 > [!NOTE]
 > - **Improve data source experience and Microsoft Dataverse views** is not supported on [Power Apps for Windows](https://www.microsoft.com/p/power-apps/9nblggh5z8f3). You must turn this feature *Off* when using Power Apps for Windows.
@@ -145,11 +148,11 @@ Separate `_myfield` and `_myfield_label` fields were used for choice earlier. No
 
 It's recommended to remove existing data cards and add them back to work with your choice. For example, if you're working with the Account table and the Category choice, you'll see that the *DataField* property of the data card was set to `_accountcategorycode_label`. In the field list you can see that the data card has a type of *String*:
 
-![OptionSet with old style name](./media/use-native-cds-connector/OptionSet-with-old-style-name.png)
+![OptionSet with old style name.](./media/use-native-cds-connector/OptionSet-with-old-style-name.png)
 
 With the new *Improved data source experience and Microsoft Dataverse views* feature, you no longer see `_accountcategorycode_label`. It's replaced by `accountcategorycode`. Your card is now be marked as **custom** and you'll see errors. Remove the old data card and add the *Choice* back. The new data card is *Choice* aware.
 
-![OptionSet with new style name](./media/use-native-cds-connector/OptionSet-with-new-style-name.png)
+![OptionSet with new style name.](./media/use-native-cds-connector/OptionSet-with-new-style-name.png)
 
 #### Editing the Choice Filter expressions to use new syntax
 
@@ -195,11 +198,11 @@ Filter(Accounts, 'Category Code' = [@’Category Code’].'Preferred Customer')
 
 Remove existing data cards and add them back to work with your Yes/No. The data types were earlier recognized as simple boolean - such as true/on and false/off with no labels:
 
-![Yes/No - old style](./media/use-native-cds-connector/TwoOptionSet-Old.png)
+![Yes/No - old style.](./media/use-native-cds-connector/TwoOptionSet-Old.png)
 
 With the new *Improved data source experience and Microsoft Dataverse views* feature, your card will now be marked as **custom** and you'll see errors.  Remove the old data card and add the choice back. You'll see an edit control with two options by default after you add.
 
-![Yes/No - new style](./media/use-native-cds-connector/TwoOptionSet-New.png)
+![Yes/No - new style.](./media/use-native-cds-connector/TwoOptionSet-New.png)
 
 If you prefer the toggle switch for your boolean field, you can unlock the data card and replace the control in the data card with a toggle instead.  You'll also need to set these properties on the Toggle.
 
@@ -212,7 +215,7 @@ DataCard.Value = If( Toggle1.Value,
     ‘Do not allow Bulk Emails (Accounts)’.Allow )
 ```
 
-![Two option Toggle switch](./media/use-native-cds-connector/TwoOption-Toggle.png)
+![Two option Toggle switch.](./media/use-native-cds-connector/TwoOption-Toggle.png)
 
 #### Refining Two Option Patch statements
 
@@ -226,7 +229,7 @@ Following guidelines help to upgrade your application if it referenced [polymorp
 
 For instance, the Owner field in a table can refer to a record in the Users table or the Teams table. The same lookup field in different records could refer to records in different tables.
  
-![Polymorphic Owner field](./media/use-native-cds-connector/Polymorphic1.png)
+![Polymorphic Owner field.](./media/use-native-cds-connector/Polymorphic1.png)
  
 ##### Polymorphic with Filter and Patch
 
@@ -259,7 +262,7 @@ If( IsType( ThisItem.Owner,  [@Teams]),
     AsType( ThisItem.Owner, [@Users]).'Full Name' )
 ```
 
-![Gallery with As Type](./media/use-native-cds-connector/Polymorphic-And-AsType-in-Gallery.png)
+![Gallery with As Type.](./media/use-native-cds-connector/Polymorphic-And-AsType-in-Gallery.png)
 
 Global disambiguation operator for `[@Teams]` and `[@Users]` is used to ensure that you reference the global table type. Though in this case it's not necessary, it's a recommended to always be clear. One-to-many relationships often conflict in the gallery's record scope, and this practice avoids that confusion.
  
@@ -280,7 +283,7 @@ If( IsBlank( ThisItem.Regarding ), "",
     "" )
 ```
 
-![Gallery with Regarding](./media/use-native-cds-connector/Polymorphic-With-Regarding.png)
+![Gallery with Regarding.](./media/use-native-cds-connector/Polymorphic-With-Regarding.png)
  
 Read [Regarding lookup fields](./working-with-references.md#understand-regarding-lookup-columns) and [Regarding relationships](./working-with-references.md#understand-regarding-relationships) for more details.
 
@@ -294,7 +297,7 @@ Each time you add a record to (for example the Tasks table), a record in the Act
 
 The following example shows that as you select an Account, all the Activities associated with that account will be displayed:
  
-![Polymorphic Activities](./media/use-native-cds-connector/Polymorphic-Activities.png) 
+![Polymorphic Activities.](./media/use-native-cds-connector/Polymorphic-Activities.png) 
  
 The records are being displayed from the Activity table. But you can still use the [IsType](./functions/function-astype-istype.md) function to identify which kind of activity they are. Again, before you use IsType with a table type, you must add the necessary data source.
  
@@ -308,13 +311,13 @@ If( IsType( ThisItem, [@Faxes] ), "Fax",
     "Unknown")
 ```
 
- ![New Polymorphic-IsType](./media/use-native-cds-connector/Polymorphic-IsType.png)
+ ![New Polymorphic-IsType.](./media/use-native-cds-connector/Polymorphic-IsType.png)
 
 #### Access the list of Notes for a record
 
 When you create a table, you can enable attachments. If you select the check box for enabling attachments, you'll create a Regarding relationship with the Notes table, as this graphic shows for the Accounts table:
 
-![Notes field](./media/use-native-cds-connector/Notes-Field.png)
+![Notes field.](./media/use-native-cds-connector/Notes-Field.png)
 
 ##### Filtering
 

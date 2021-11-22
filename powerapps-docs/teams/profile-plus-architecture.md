@@ -1,20 +1,21 @@
 ---
-title: Understand Profile+ sample apps architecture (Preview) | Microsoft Docs
+title: Understand Profile+ sample apps architecture (preview) | Microsoft Docs
 description: Learn about the architecture of the Profile Plus sample apps.
 author: joel-lindstrom
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 06/16/2021
-ms.author: v-ljoel
+ms.subservice: teams
+ms.author: jshum
 ms.reviewer: tapanm
 contributors:
     - tapanm-msft
-    - navjotm
+    - josephshum
     - joel-lindstrom
 ---
 
-# Understand Profile+ sample apps architecture (Preview)
+# Understand Profile+ sample apps architecture (preview)
 
 [This article is pre-release documentation and is subject to change.]
 
@@ -37,15 +38,11 @@ To understand and use information in this article, you'll need to know about dif
 You'll also need to know about how to [install](use-sample-apps-from-teams-store.md), and [use](profile-app.md) the
 Profile + sample app.
 
-> [!IMPORTANT]
-> - This is a preview feature.
-> - [!INCLUDE[cc_preview_features_definition](../includes/cc-preview-features-definition.md)]
-
 ## Application Data Flow
 
 The following diagram shows the intersection of users, data, and systems.
 
-![Profile + sample app data model](media/Profile-plus-architecture/architecture-model.png "Profile + sample app data model")
+![Profile + sample app data model.](media/Profile-plus-architecture/architecture-model.png "Profile + sample app data model")
 
 The following connectors are used in the Issue Reporting app:
 
@@ -59,7 +56,7 @@ The following connectors are used in the Issue Reporting app:
 
 ## Data Model
 
-![Profile + app data model](media/profile-plus-architecture/data-model.png "Profile + sample app data model")
+![Profile + app data model.](media/profile-plus-architecture/data-model.png "Profile + sample app data model")
 
 ## Tables
 
@@ -638,7 +635,7 @@ Admin Screen has toggles to change the user language and settings of Dark Mode o
 
 ### See also
 
-- [Profile+ (Preview) sample app](profile-app.md)
+- [Profile+ (preview) sample app](profile-app.md)
 - [Customize sample apps](customize-sample-apps.md)
 - [Sample apps FAQs](sample-apps-faqs.md)
 - [Use sample apps from the Microsoft Teams store](use-sample-apps-from-teams-store.md)

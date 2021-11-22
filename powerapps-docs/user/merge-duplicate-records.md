@@ -7,6 +7,7 @@ ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 10/31/2019
+ms.subservice: end-user
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
@@ -24,32 +25,34 @@ Duplicate rows can creep into your data when you or others enter data manually o
 For example, let's say you enter a contact row, Jim Glynn,  along with a mobile phone number.  The duplicate detection rule discovers that you already have a similar row, and displays this dialog box.  
   
  > [!div class="mx-imgBorder"] 
- > ![Duplicate contact row detected](media/duplicates-detected.png "Duplicate contact row detected")  
+ > ![Duplicate contact row detected.](media/duplicates-detected.png "Duplicate contact row detected")  
   
  You're not sure if this is a new row (one that happens to have the  same name as an existing contact) or a duplicate, so you select **Ignore And Save**.  
   
  Next, you go to the **All Contacts** list and see that now you have two rows with the same name. After reviewing the rows,  you  determine that they're duplicates that need to be merged.  
  
  > [!div class="mx-imgBorder"] 
- > ![Duplicate contact row is detected](media/duplicates-detected_1.png "Duplicate contact row is detected")  
+ > ![Duplicate contact row is detected.](media/duplicates-detected_1.png "Duplicate contact row is detected")  
  
 Dataverse includes duplicate detection rules for accounts and contacts. These rules are automatically turned on, so you don’t have to do anything to set up duplicate detection for these row types.  
   
 > [!NOTE]
 >  If available on your system, you may also be able to check for duplicates of other row types, in addition to contacts and accounts. Check with your system administrator. [Find your administrator or support person](find-admin.md)  
   
-### How to merge duplicate rows  
+### How to merge duplicate rows
+> [!NOTE]
+>  Merging records is only supported for account, contact and lead tables, it does not support any other Dataverse out of box tables or custom tables.  
   
-1. Select the duplicate rows, and then select **Merge**.  
+1. Select the duplicate rows from the view page in your model-driven app, and then select **Merge** in the command bar at the top of the page.  
   
    > [!div class="mx-imgBorder"] 
-   > ![Duplicate row detected](media/duplicates-detected_2.png "Duplicate row detected")  
+   > ![Duplicate row detected.](media/duplicates-detected_2.png "Duplicate row detected")  
   
 2. In the **Merge Rows** dialog box, select the master row (the one you want to keep), and then select any columns in the new row that you want to merge into the master row. Data in these columns may override the existing data in the master row. Select **OK**.  
   
      
    > [!div class="mx-imgBorder"] 
-   > ![Dialog box for merging rows](media/merge-records-dialog.png "Dialog box for merging rows")  
+   > ![Dialog box for merging rows.](media/merge-records-dialog.png "Dialog box for merging rows")  
   
 
 There are a few situations when duplicates may be found:  

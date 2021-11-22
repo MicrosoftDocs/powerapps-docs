@@ -2,17 +2,20 @@
 title: Gallery control in Power Apps
 description: Learn about the details, properties and examples of the gallery control in Power Apps.
 author: chmoncay
-manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 03/11/2021
+ms.subservice: canvas-maker
 ms.author: chmoncay
 search.audienceType:
   - maker
 search.app:
   - PowerApps
+contributors:
+  - tapanm-msft
+  - chmoncay
 ---
 # Gallery control in Power Apps
 
@@ -110,7 +113,7 @@ If a user scrolls the **Flexible height** gallery control before all items are l
 
 - [Show text](control-text-box.md#show-data-in-a-gallery)
 - [Show images](control-image.md#show-a-set-of-images-from-a-data-source)
-- [Filter data by selecting a list option](control-drop-down.md#example)
+- [Filter data by selecting a list option](control-drop-down.md#examples)
 - [Filter data by adjusting a slider](control-slider.md#example)
 
 ### Get data from the user
@@ -157,4 +160,4 @@ If clicking anywhere in a gallery item is meant to select it, there must be adeq
 
 [Use DelayItemLoading and Loading spinner to improve performance in Gallery](../performance-tips.md#use-delayitemloading-and-loading-spinner-to-improve-performance-in-gallery)
 
-[!INCLUDE[footer-include](../../../includes/footer-banner.md)]
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)] 

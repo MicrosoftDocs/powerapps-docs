@@ -1,34 +1,40 @@
 ---
 title: Use the View in MR component in Power Apps (Preview)
 description: View 3D models and 2D images in the real world with augmented reality features in Power Apps.
-author: iaanw
-manager: shellyha
+author: anuitz
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 5/20/2021
-ms.author: iawilt
+ms.subservice: canvas-maker
+ms.author: anuitz
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - anuitz
 ---
 
 # View 3D content or images in the real word
 
 You can use the **View in MR** component in your app to let users see how a particular item might fit within a specified space.
 
-The component creates a button in your app. When app users click the button, it overlays a selected 3D model (in the .glb file format) or image (in .jpg or .png file formats) onto the live camera feed of the device.
+The component creates a button in your app. When app users click the button, it overlays a selected 3D model (in .glb, .stl or .obj file formats) or image (in .jpg or .png file formats) onto the live camera feed of the device.
 
 :::image type="content" source="./media/augmented-overview/view-in-mixed-reality.png" alt-text="Photo showing a 3D model of a forklift being overlaid onto the real world through a mobile device.":::
 
 You can also take photos and [upload them to OneDrive](mixed-reality-take-upload-photos.md).
 
 > [!IMPORTANT]
-> Your 3D content must be in the .glb file format.  
+> Your 3D content must be in the .glb, .stl, or .obj file formats.
 > You can [convert your existing 3D models into the .glb file format](/dynamics365/mixed-reality/guides/3d-content-guidelines/) from a variety of 3D formats.
+> 3D content compressed with Draco compression is not supported.
 
+> [!TIP]
+> If your model has a large file size, it could negatively affect your experience. Consider [optimizing your models for use in mixed reality.](/dynamics365/mixed-reality/guides/3d-content-guidelines/optimize-models)
 
 > [!TIP]
 > The MR components work best in well-lit environments with flat-textured surfaces. When establishing tracking, point the device at the surface you would like to track and slowly pan the device from right to left in broad arm motions. If tracking fails, exit and enter the MR view to reset the tracking and try again.  
@@ -56,7 +62,7 @@ You can modify the component with several properties.
 
 The following properties are on the component's **View in MR** pane on the **Properties** and **Advanced** tabs.
 
-![Properties on the View in MR pane](./media/augmented-view-mr/augmented-view-mr-properties.png "Properties on the View in MR pane")
+![Properties on the View in MR pane.](./media/augmented-view-mr/augmented-view-mr-properties.png "Properties on the View in MR pane")
 
 Some properties are only available under **More options** in the **Advanced** tab on the **View in MR** pane.
 
@@ -65,7 +71,7 @@ Property | Description | Type | Location
 Text | Label for the button. | String | Properties (also in **Advanced**)
 Alternative text | Text to be displayed if the component can't load, or if the app user hovers on the component. | String | **Properties** (also in **Advanced** as **AltText**)
 Display type | Whether the button shows just an icon, text, or both. | Drop-down selection | Properties (also in **Advanced**)
-Source | Data source that identifies the .glb file to display. The **View in MR** component supports loading models from:<br/><ul><li>Publicly accessible, CORS-compliant URLs.</li><li>Base64-encoded URIs.</li><li>Attachments or media content accessed through data connectors.</li></ul><br/>For more information, see [how to define where the 3D content is stored](mixed-reality-component-view-3d-store.md). | Not applicable | **Properties** (also in **Advanced**)
+Source | Data source that identifies the .glb, .stl, or .obj file to display. The **View in MR** component supports loading models from:<br/><ul><li>Publicly accessible, CORS-compliant URLs.</li><li>Base64-encoded URIs.</li><li>Attachments or media content accessed through data connectors.</li></ul><br/>For more information, see [how to define where the 3D content is stored](mixed-reality-component-view-3d-store.md). | Not applicable | **Properties** (also in **Advanced**)
 Object width | Width of the displayed image or 3D content. See also [How object scaling is handled](#how-object-scaling-is-handled). | Integer | **Properties** (also in **Advanced**)
 Object height | Height of the displayed image or 3D content. See also [How object scaling is handled](#how-object-scaling-is-handled). | Integer | **Properties** (also in **Advanced**)
 Object depth | The three-dimensional depth of the 3D content. See also [How object scaling is handled](#how-object-scaling-is-handled). | Integer | **Properties** (also in **Advanced**)
@@ -76,7 +82,7 @@ OnChange | Behavior that is triggered when any property on the button is changed
 
 ### How object scaling is handled
 
-When you insert a model with the **View in MR** component, it will follow the model's inherent dimensions. Alternatively, you can specify some or all of the dimensions - these dimensions are labelled as the **Object width**, **Object height**, and **Object depth** properties.
+When you insert a model with the **View in MR** component, it will follow the model's inherent dimensions. Alternatively, you can specify some or all of the dimensions - these dimensions are labeled as the **Object width**, **Object height**, and **Object depth** properties.
 
 If you want to change the size of the model, we apply certain scaling techniques depending on how many dimensions you change:
 

@@ -5,11 +5,12 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/04/2021
+ms.date: 08/30/2021
+ms.subservice: portals
 ms.author: sandhan
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
-    - tapanm-msft
+    - nickdoelman
     - sandhangitmsft
 ---
 
@@ -59,7 +60,7 @@ When creating or editing a webpage, you can specify a list in the lookup field p
 
 The Options tab on the form contains a text area that you can enter custom [!INCLUDE[pn-javascript](../../../includes/pn-javascript.md)]; if your page includes jQuery library, you can use that here as well. The script block will be added at the bottom of the webpage just before the page’s closing form tag.
 
-![Custom JavaScript example](../media/custom-javascript-example.png "Custom JavaScript example")  
+![Custom JavaScript example.](../media/custom-javascript-example.png "Custom JavaScript example")  
 
 The list gets its data asynchronously, and when it is complete it will trigger an event `loaded` that your custom [!INCLUDE[pn-javascript](../../../includes/pn-javascript.md)] can listen for and do something with items in the grid. The following code is a trivial example:
 ```
@@ -90,7 +91,7 @@ You can easily enable and configure actions (Create, Edit, Delete, and so on) fo
 
 These settings are found in the Configuration section of the list form. By default, only **Basic Settings** are shown. Select **Advanced Settings** to see additional settings.
 
-![Configure a list](../media/configure-entitylist.png "Configure a list")  
+![Configure a list.](../media/configure-entitylist.png "Configure a list")  
 
 **Attributes**
 
@@ -274,7 +275,12 @@ Enabling a **Workflow action** allows a user to run an on-demand workflow agains
 
 ## Securing lists
 
-To secure a list, you must configure Table Permissions for the table for which records are being displayed and also set the **Enable Table Permissions** Boolean value on the list record to true.
+>[!NOTE]
+> This method of securing lists would be deprecated soon. Therefore, it shouldn't be used. Use proper [table permissions](entity-permissions-studio.md), and web role setup to provide access to users for any data instead. More information: [Table permission changes for forms and lists on new portals](../important-changes-deprecations.md#table-permission-changes-for-forms-and-lists-on-new-portals)
+
+To secure a list, you must configure Table Permissions for the table for which records are being displayed and also select the checkbox for **Enable Table Permissions** setting. If you don't, you'll see the following warning:
+
+"Table permissions should be enabled for this record or anyone on the internet can view the data.".
 
 The act of securing a list will ensure that for any user who accesses the page, only records that they have been given permission to are shown. This is achieved by an additional filter being added to the model-driven app views that are being surfaced via the list. This filter will filter only for records that are accessible to the user, via **Read** permission.
 
@@ -294,7 +300,7 @@ This page can be a completely customized page template, perhaps created by using
 
 The important thing to be aware of is that each record listed in the grid will have a hyperlink to the details page, and the link will contain a named Query String parameter with the ID of the record. The name of the Query String parameter depends on the ID Query String Parameter Name specified on the list. The final thing to note is that the targeted details webpage must also be aware of the name of this Query String parameter to get the ID of the record that it needs to query and load its data.
 
-![Add view details page](../media/add-view-details-page.png "Add view details page")  
+![Add view details page.](../media/add-view-details-page.png "Add view details page")  
 
 **Using a basic form to display details**
 
@@ -330,7 +336,7 @@ In the **Metadata Filter** section, select the **Enabled** check box. This will 
 
 You can define how the Filter area on the list will be rendered by using the Orientation setting. The default, Horizontal, renders the Filter area above the list. Vertical orientation renders the Filter area as a box to the left of the list.
 
-![Metadata filter settings](../media/metadata-filter-settings.png "Metadata filter settings")  
+![Metadata filter settings.](../media/metadata-filter-settings.png "Metadata filter settings")  
 
 **Filter types**
 
@@ -350,7 +356,7 @@ The Text filter adds a text box to the list Filter area that is tied to an attri
 
 To add a Text filter, select **+Text Filter**.
 
-![Add a text filter](../media/add-text-filter.png "Add a Text filter")  
+![Add a text filter.](../media/add-text-filter.png "Add a Text filter")  
 
 The Text filter uses the following attributes:
 
@@ -363,7 +369,7 @@ The Text filter uses the following attributes:
 
 The Attribute Filter Set adds a series of options to filter the list by, tied to a single attribute of the list's selected table type. When a user applies the filter, the list only displays those records that exactly match at least one of the selected options.
 
-![Attribute filter settings](../media/set-attribute-filter.png "Attribute filter settings")
+![Attribute filter settings.](../media/set-attribute-filter.png "Attribute filter settings")
 
 The Attribute Filter Set uses the following attributes:
 
@@ -389,7 +395,7 @@ Options have the following attributes:
 
 The Lookup Set adds a series of options to filter the list by, tied to a related table to the list's selected table type. When a user applies the filter, the list only displays those records that exactly match at least one of the selected related records.
 
-![Lookup set](../media/lookup-set.png "Lookup Set")  
+![Lookup set.](../media/lookup-set.png "Lookup Set")  
 
 The Lookup Set uses the following attributes:
 
@@ -414,7 +420,7 @@ Options have the following attributes:
 
 The Range Filter Set adds a series of options, each with one or two conditions, to the Filter area. When a user applies the filter, the list only displays those records that exactly match all conditions on at least one of the selected options.
 
-![Range filter settings](../media/set-range-filter.png "Range filter settings")  
+![Range filter settings.](../media/set-range-filter.png "Range filter settings")  
 
 The Range Filter Set uses the following attributes:
 
@@ -442,7 +448,7 @@ Options have the following attributes:
 
 The Dynamic Picklist Set adds a series of options to filter by that represent all the values of a specified Picklist field. This is different from selecting a Picklist in the Attribute Filter Set. In the Attribute Filter Set, you must specify a set of options that will be made available to the user to filter by; in the Dynamic Picklist Set, you need only specify the Picklist field and the entire set of options will be provided automatically. If you need greater control, we recommend that you use the Attribute Filter Set.
 
-![Dynamic picklist settings](../media/set-dynamic-picklist.png "Dynamic picklist settings")  
+![Dynamic picklist settings.](../media/set-dynamic-picklist.png "Dynamic picklist settings")  
 
 The Dynamic Picklist Set uses the following options:
 
@@ -457,7 +463,7 @@ The Dynamic Lookup Set adds a dynamic series of options to filter the list by, t
 
 This is different from a Lookup Set. In the Lookup Set, you must manually specify the related tables to filter by. In the Dynamic Lookup Set, you need only specify the relationship on which to filter, and a list of options will be generated based on the specified view of related tables.
 
-![Dynamic lookup settings](../media/set-dynamic-lookup.png "Dynamic lookup settings")  
+![Dynamic lookup settings.](../media/set-dynamic-lookup.png "Dynamic lookup settings")  
 
 The Dynamic Lookup Set uses the following options:
 
@@ -473,7 +479,7 @@ The Dynamic Lookup Set uses the following options:
 
 The range filter can create either a simple text box filter like the Text filter or a set of options like the other filter types. It allows you to manually create virtually any type of filter for the list by using FetchXML.
 
-![FetchXML filter settings](../media/set-fetchxml-filter.png "FetchXML filter settings")
+![FetchXML filter settings.](../media/set-fetchxml-filter.png "FetchXML filter settings")
 
 The FetchXML filter uses only one attribute:
 
@@ -499,8 +505,11 @@ To display records by using a calendar, those records need to include at a minim
 
 If enabled, a table can be published to an OData feed. The OData protocol is an application-level protocol for interacting with data via RESTful web services. Data from this feed can be viewed in a web browser, consumed by a client-side web application, or imported into [!INCLUDE[pn-excel-short](../../../includes/pn-excel-short.md)].
 
-> [!CAUTION]
-> Use caution when enabling OData feeds without table permissions for sensitive information. OData feed is accessible anonymously and without authorization checks if **Enable Table Permissions** is disabled.
+> [!NOTE]
+> Lists that have OData feeds enabled require appropriate [table permissions](entity-permissions-studio.md) setup for the feed on these lists to work. Hence, you must enable table permissions on a list that has OData feeds enabled.
+> - Latest portal solutions will show the following error, and won't allow you to save the list without enabling table permissions:
+> <br> "Table permissions must be enabled from the General tab because the OData feed is enabled."
+> - Older portal solutions don't show the above message. However, for the lists with OData feeds enabled, table permissions are always considered enabled even if you save the list without selecting **Enable Table Permissions** setting explicitly.
 
 ## Enhanced view filter for lists
 
@@ -514,7 +523,7 @@ You can use Table Permissions if you want to secure records, but if you want to 
 
 The following image shows an arbitrary contact assigned to a filter condition, this contact happens to be a stub 'dummy' contact but this could be any contact record. The ID of this record will be replaced by the actual value of the ID of the user viewing the page. If the user is not logged in then no records will be returned. This provides greater flexibility in filtering the data based on the user and website contextually.
 
-![Example view filter criteria](media/entity-list-view-filter-criteria.png "Example view filter criteria")
+![Example view filter criteria.](media/entity-list-view-filter-criteria.png "Example view filter criteria")
 
 > [!NOTE]
 > If you are filtering by current portal user's contact or parent account then it is recommended that you associate a [Web Page Access Control Rule](webpage-access-control.md) to the Web Page to force the user to sign in. You would create a [Web Role](create-web-roles.md) with "Authenticated Users Role" checked. Create a Web Page Access Control Rule with "Restrict Read" right and associate the Web Role. This will force users to be signed in to view the page and therefore allow the data to be filled accordingly.

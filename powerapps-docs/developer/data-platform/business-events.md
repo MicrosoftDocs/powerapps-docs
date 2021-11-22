@@ -1,12 +1,13 @@
 ---
-title: Microsoft Dataverse business events (preview)| Microsoft Docs
+title: Microsoft Dataverse business events| Microsoft Docs
 description: Learn about how to use business events to connect and integrate business applications.
 author: JimDaly
 manager: sunilg
 ms.service: powerapps
 ms.component: cds
 ms.topic: conceptual
-ms.date: 06/12/2021
+ms.date: 10/31/2021
+ms.subservice: dataverse-developer
 ms.author: jdaly
 search.audienceType: 
   - maker
@@ -17,14 +18,14 @@ search.app:
   - D365CE
 ---
 
-# Microsoft Dataverse business events (preview)
+# Microsoft Dataverse business events
 
 Automation of business logic and integration with other systems are driven by events. When something interesting happens in a business application, an event occurs and data describing the event becomes available for subscribers to respond to. Microsoft Dataverse provides capabilities to relay event data to subscribers using the following applications and technologies:
 
 - Power Automate Flows
 - Azure Service Bus
 - Azure Event Hub
-- Web Hooks
+- Webhooks
 - Dataverse plug-ins
 
 Dataverse has a robust event framework to capture system events *within* Dataverse. You can respond to events within the system using the Dataverse Event Framework. This isn't changing. More information [Event framework](event-framework.md)
@@ -173,7 +174,7 @@ As business events becomes a common pattern, there will be multiple ways to enab
 
 The first experience where business events are exposed is in Power Automate Dataverse connector using the [When an action is performed (preview)](/connectors/commondataserviceforapps/#when-an-action-is-performed-(preview)) trigger.
 
-:::image type="content" source="media/when-an-action-is-performed-trigger.png" alt-text="When an action is performed trigger":::
+:::image type="content" source="media/when-an-action-is-performed-trigger.png" alt-text="When an action is performed trigger.":::
 
 Within this experience Create, Update, and Delete events are not shown for table events. These events are already available using the [When a row is added, modified or deleted](/connectors/commondataserviceforapps/#when-a-row-is-added,-modified-or-deleted) trigger.
 

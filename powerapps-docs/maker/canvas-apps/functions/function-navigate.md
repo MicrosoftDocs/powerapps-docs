@@ -2,17 +2,20 @@
 title: Back and Navigate functions in Power Apps
 description: Reference information including syntax and examples for the Back and Navigate functions in Power Apps.
 author: gregli-msft
-manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: nabuthuk
-ms.date: 05/07/2020
+ms.reviewer: tapanm
+ms.date: 10/19/2021
+ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - gregli-msft
+  - nkrb
 ---
 # Back and Navigate functions in Power Apps
 
@@ -26,6 +29,8 @@ Most apps contain multiple screens.  Use the **Back** and **Navigate** function 
 
 [Context variables](../working-with-variables.md#use-a-context-variable) are also preserved when a user navigates between screens. You can use **Navigate** to set one or more context variables for the screen that the formula will display, which is the only way to set a context variable from outside the screen. You can use this approach to pass parameters to a screen. If you've used another programming tool, this approach is similar to passing parameters to procedures.
 
+Use the **App** object's [**StartScreen**](object-app.md#startscreen-property) property to control the first screen to be displayed.
+
 You can use either function only within a [behavior formula](../working-with-formulas-in-depth.md).
 
 ## Navigate
@@ -36,12 +41,12 @@ In the first argument, specify the name of the screen to display.
 
 | Transition Argument | Description | Demonstration |
 | --- | --- | --- |
-| **ScreenTransition.Cover** |The new screen slides into view, moving right to left, to cover the current screen. | ![screen transition cover animation](media/function-navigate/cover.gif) |
-| **ScreenTransition.CoverRight** |The new screen slides into view, moving left to right, to cover the current screen. | ![screen transition cover right animation](media/function-navigate/coverright.gif) |
-| **ScreenTransition.Fade** |The current screen fades away to reveal the new screen. | ![screen transition fade animation](media/function-navigate/fade.gif) |
-| **ScreenTransition.None** (Default) |The new screen quickly replaces the current screen. | ![screen transition none animation](media/function-navigate/none.gif) |
-| **ScreenTransition.UnCover** | The current screen slides out of view, moving right to left, to uncover the new screen. | ![screen transition uncover animation](media/function-navigate/uncover.gif) |
-| **ScreenTransition.UnCoverRight** | The current screen slides out of view, moving left to right, to uncover the new screen. | ![screen transition uncover right animation](media/function-navigate/uncoverright.gif) |
+| **ScreenTransition.Cover** |The new screen slides into view, moving right to left, to cover the current screen. | ![screen transition cover animation.](media/function-navigate/cover.gif) |
+| **ScreenTransition.CoverRight** |The new screen slides into view, moving left to right, to cover the current screen. | ![screen transition cover right animation.](media/function-navigate/coverright.gif) |
+| **ScreenTransition.Fade** |The current screen fades away to reveal the new screen. | ![screen transition fade animation.](media/function-navigate/fade.gif) |
+| **ScreenTransition.None** (Default) |The new screen quickly replaces the current screen. | ![screen transition none animation.](media/function-navigate/none.gif) |
+| **ScreenTransition.UnCover** | The current screen slides out of view, moving right to left, to uncover the new screen. | ![screen transition uncover animation.](media/function-navigate/uncover.gif) |
+| **ScreenTransition.UnCoverRight** | The current screen slides out of view, moving left to right, to uncover the new screen. | ![screen transition uncover right animation.](media/function-navigate/uncoverright.gif) |
 
 You can use **Navigate** to create or update [context variables](../working-with-variables.md#use-a-context-variable) of the new screen. As an optional third argument, pass a [record](../working-with-tables.md#records) that contains the context-variable name as a [column](../working-with-tables.md#columns) name and the new value for the context variable.  This record is the same as the record that you use with the **[UpdateContext](function-updatecontext.md)** function.
 

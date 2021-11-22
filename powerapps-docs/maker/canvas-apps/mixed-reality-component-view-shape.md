@@ -1,18 +1,21 @@
 ---
 title: Use the View shape in MR component in Power Apps (Preview)
 description: View a predefined digital 3D shape in the real world with augmented reality features in Power Apps.
-author: iaanw
-manager: shellyha
+author: anuitz
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 3/25/2021
-ms.author: iawilt
+ms.subservice: canvas-maker
+ms.author: anuitz
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - anuitz
 ---
 
 # Create and view predefined 3D shapes in mixed reality

@@ -706,7 +706,7 @@ Preference-Applied: odata.include-annotations="*"
 
 ## Retrieve related tables by expanding navigation properties
  
-<a bkmk="bkmk_retrieverelatedentityexpandcollectionnavprop"></a>
+<a name="bkmk_retrieverelatedentityexpandcollectionnavprop"></a>
 
 ### Retrieve related tables by expanding collection-valued navigation properties
 
@@ -785,7 +785,7 @@ OData-Version: 4.0
  
 ```  
 
-<a bkmk="bkmk_retrieverelatedentitysingleandcollectionnavprop"></a>
+<a name="bkmk_retrieverelatedentitysingleandcollectionnavprop"></a>
   
 ### Retrieve related rows (records) by expanding both single-valued and collection-valued navigation properties
 
@@ -877,7 +877,7 @@ More information: [Use column comparison in queries](../column-comparison.md)
 
 ### See also
 
-[Search across table data using relevance search](relevance-search.md)  
+[Search across table data using Dataverse search](relevance-search.md)  
 [Work with Quick Find’s search item limit](../quick-find-limit.md)  
 [Web API Query Data Sample (C#)](samples/cdswebapiservice-query-data.md)<br />
 [Web API Query Data Sample (Client-side JavaScript)](samples/query-data-client-side-javascript.md)<br />

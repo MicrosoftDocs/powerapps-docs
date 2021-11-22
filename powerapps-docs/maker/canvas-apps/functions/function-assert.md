@@ -2,17 +2,20 @@
 title: Assert function in Power Apps Test Studio
 description: Reference information, including syntax, for the Assert function in Power Apps Test Studio.
 author: tapanm-msft
-manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: nabuthuk
+ms.reviewer: tapanm
 ms.date: 12/19/2018
+ms.subservice: canvas-maker
 ms.author: aheaney
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - gregli-msft
+  - nkrb
 ---
 # Assert function in Power Apps Test Studio
 

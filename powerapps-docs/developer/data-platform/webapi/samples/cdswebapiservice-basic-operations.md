@@ -1,8 +1,8 @@
 ---
 title: "Web API CDSWebApiService Basic Operations Sample (C#) (Microsoft Dataverse)| Microsoft Docs"
-description: "This sample demonstrates how to perform basic CRUD (Create, Retrieve, Update, and Delete) and association and dissociation operations on Microsoft Dataverse entity instances, using the Dataverse Web API with the CDSWebAPIService class"
+description: "This sample demonstrates how to perform basic CRUD (Create, Retrieve, Update, and Delete) and association and dissociation operations on Microsoft Dataverse table rows, using the Dataverse Web API with the CDSWebAPIService class"
 ms.custom: ""
-ms.date: 04/20/2020
+ms.date: 07/15/2021
 ms.service: powerapps
 applies_to: 
   - "Dynamics 365 (online)"
@@ -15,11 +15,12 @@ search.app:
   - PowerApps
   - D365CE
 ---
+
 # Web API CDSWebApiService Basic Operations Sample (C#)
 
-[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+[!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 
-This sample demonstrates how to perform basic CRUD (Create, Retrieve, Update, and Delete) and association and dissociation operations on Microsoft Dataverse entity instances, using the Dataverse Web API.  
+This sample demonstrates how to perform basic CRUD (Create, Retrieve, Update, and Delete) and association and dissociation operations on Microsoft Dataverse table rows (entity records), using the Dataverse Web API.  
   
 > [!NOTE]
 > This sample implements the Dataverse operations and console output detailed in [Web API Basic Operations Sample](../web-api-basic-operations-sample.md) and uses the common C# constructs described in [Web API Samples (C#)](../web-api-samples-csharp.md). 
@@ -420,15 +421,13 @@ namespace PowerApps.Samples
 
 [Use the Dataverse Web API](../overview.md)<br />
 [Web API CDSWebApiService class Sample (C#)](cdswebapiservice.md)<br />
-[Create an entity using the Web API](../create-entity-web-api.md)<br />
-[Update and delete entities using the Web API](../update-delete-entities-using-web-api.md)<br />
-[Retrieve an entity using the Web API](../retrieve-entity-using-web-api.md)<br />
-[Update and delete entities using the Web API](../update-delete-entities-using-web-api.md)<br />
+[Create a table row using the Web API](../create-entity-web-api.md)<br />
+[Update and delete table rows using the Web API](../update-delete-entities-using-web-api.md)<br />
+[Retrieve an table row using the Web API](../retrieve-entity-using-web-api.md)<br />
 [Web API Samples](../web-api-samples.md)<br />
 [Web API Basic Operations Sample](../web-api-basic-operations-sample.md)
 [Web API Query Data Sample (C#)](cdswebapiservice-query-data.md)<br />
 [Web API Conditional Operations Sample (C#)](cdswebapiservice-conditional-operations.md)<br />
 [Web API Functions and Actions Sample (C#)](functions-actions-csharp.md)
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

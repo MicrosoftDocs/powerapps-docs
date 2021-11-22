@@ -2,17 +2,20 @@
 title: Restore your canvas app to a previous version
 description: Learn about how to restore a canvas app to a previous version.
 author: emcoope-msft
-manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 03/05/2020
+ms.date: 11/12/2021
+ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - emcoope-msft
 ---
 # Restore a canvas app to a previous version
 
@@ -22,30 +25,51 @@ This article shows you how to restore a canvas app to a previous version that wa
 > You can only restore app versions created in last six months.
 
 ## Restore an app from your account
-1. Open [powerapps.com](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then click or tap **Apps** in the left navigation bar.
 
-    ![Left navigation bar](./media/restore-an-app/file-apps.png)
+1. Sign in to [Power Apps](https://make.powerapps.com).
 
-2. (optional) Near the upper-left corner, filter the list of apps to show only those apps that you own or only those apps to which you contribute.
+1. Select **Apps** from the left-pane.
 
-    ![Filter on apps you own](./media/restore-an-app/filter-list.png)
+    ![Select Apps](./media/restore-an-app/file-apps.png "Select Apps")
+
+1. Select your app.
 
     > [!NOTE]
-   > If the app that you want to restore doesn't appear, make sure that you're in the right environment.
+    > If the app that you want to restore doesn't appear, make sure that you're in the right environment.
 
-3. Near the right edge, click or tap the info icon for the app that you want to restore.
+1. Select **Details**.
 
-    ![Info icon](./media/restore-an-app/app-options.png)
+    ![Select Details option](./media/restore-an-app/select-details.png "Select Details option")
 
-4. Click or tap the **Versions** tab, and then click or tap **Restore** for the version that you want to restore.
+1. Select **Versions**.
 
-    ![Versions tab](./media/restore-an-app/restore-button-2.png)
+    ![Select Versions](./media/restore-an-app/versions.png "Select Versions")
 
-5. In the confirmation dialog box, click or tap **Restore**.  
+1. Select the app version that you want to restore.
 
-    A new version is added to your list.
+1. Select **Restore**.
 
-    ![Restored version](./media/restore-an-app/versions-added-2.png)
+    ![Select Restore](./media/restore-an-app/restore.png "Select Restore")
+
+    > [!NOTE]
+    > Only the app owner can restore a version of an app. To set a user as the owner of an app, use the [Power Apps cmdlets for administrators](/power-platform/admin/powerapps-powershell).
+
+1. Confirm by selecting **Restore** again.
+
+    ![Confirm restore](./media/restore-an-app/restore-confirm.png "Confirm restore")
+
+    New version is created.
+
+1. (Optional) If you want to publish the restored version, select **Publish this version**, and then select **Publish this version** when prompted to confirm.
+
+    ![Publish restored version](./media/restore-an-app/publish.png "Publish restored version")
+
+    Notice the published restore version that shows up as **Live**.
+    
+    ![Live version](./media/restore-an-app/live.png "Live version")
+
+    > [!NOTE]
+    > **Publish this version** option only appears for the latest unpublished version of an app.
 
 ## More resources
 [Share an app](share-app.md)  

@@ -2,17 +2,20 @@
 title: Remove and RemoveIf functions in Power Apps
 description: Reference information including syntax and examples for the Remove and RemoveIf functions in Power Apps.
 author: gregli-msft
-manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: nabuthuk
+ms.reviewer: tapanm
 ms.date: 05/13/2021
+ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - gregli-msft
+  - nkrb
 ---
 # Remove and RemoveIf functions in Power Apps
 Removes [records](../working-with-tables.md#records) from a [data source](../working-with-data-sources.md).
@@ -55,7 +58,7 @@ You can also use the **[Clear](function-clear-collect-clearcollect.md)** functio
 
 In these examples, you'll remove a record or records in a data source that's named **IceCream** and that starts with the data in this table:
 
-![IceCream example](media/function-remove-removeif/icecream.png)
+![IceCream example.](media/function-remove-removeif/icecream.png)
 
 #### Create a collection with sample records
 
@@ -78,11 +81,11 @@ To create a collection with this data:
 
 | Formula | Description | Result |
 | --- | --- | --- |
-| **Remove(&nbsp;IceCream,<br>First(&nbsp;Filter(&nbsp;IceCream,&nbsp;Flavor="Chocolate"&nbsp;)&nbsp;) )** |Removes the **Chocolate** record from the data source. | ![Result with Vanilla and Strawberry](media/function-remove-removeif/icecream-no-chocolate.png)<br><br>The **IceCream** data source has been modified. |
-| **Remove(&nbsp;IceCream,<br>First(&nbsp;Filter(&nbsp;IceCream,&nbsp;Flavor="Chocolate"&nbsp;)&nbsp;) First(&nbsp;Filter(&nbsp;IceCream,&nbsp;Flavor="Strawberry"&nbsp;)&nbsp;) )** |Removes two records from the data source. |![Result with only Vanilla](media/function-remove-removeif/icecream-only-vanilla.png)<br><br>The **IceCream** data source has been modified. |
-| **RemoveIf(&nbsp;IceCream, Quantity&nbsp;>&nbsp;150 )** |Removes records that have a **Quantity** that's greater than **150**. |![Result with only Chocolate](media/function-remove-removeif/icecream-only-chocolate.png)<br><br>The **IceCream** data source has been modified. |
-| **RemoveIf(&nbsp;IceCream, Quantity&nbsp;>&nbsp;150, Left(&nbsp;Flavor,&nbsp;1&nbsp;) = "S" )** |Removes records that have a **Quantity** that's greater than 150 and **Flavor** starts with an **S**. |![Result with Chocolate and Vanilla](media/function-remove-removeif/icecream-no-strawberry.png)<br><br><br>The **IceCream** data source has been modified. |
-| **RemoveIf(&nbsp;IceCream, true )** |Removes all records from the data source. |![Result with no IceCream](media/function-remove-removeif/icecream-empty.png)<br><br>The **IceCream** data source has been modified. |
+| **Remove(&nbsp;IceCream,<br>First(&nbsp;Filter(&nbsp;IceCream,&nbsp;Flavor="Chocolate"&nbsp;)&nbsp;) )** |Removes the **Chocolate** record from the data source. | ![Result with Vanilla and Strawberry.](media/function-remove-removeif/icecream-no-chocolate.png)<br><br>The **IceCream** data source has been modified. |
+| **Remove(&nbsp;IceCream,<br>First(&nbsp;Filter(&nbsp;IceCream,&nbsp;Flavor="Chocolate"&nbsp;)&nbsp;) First(&nbsp;Filter(&nbsp;IceCream,&nbsp;Flavor="Strawberry"&nbsp;)&nbsp;) )** |Removes two records from the data source. |![Result with only Vanilla.](media/function-remove-removeif/icecream-only-vanilla.png)<br><br>The **IceCream** data source has been modified. |
+| **RemoveIf(&nbsp;IceCream, Quantity&nbsp;>&nbsp;150 )** |Removes records that have a **Quantity** that's greater than **150**. |![Result with only Chocolate.](media/function-remove-removeif/icecream-only-chocolate.png)<br><br>The **IceCream** data source has been modified. |
+| **RemoveIf(&nbsp;IceCream, Quantity&nbsp;>&nbsp;150, Left(&nbsp;Flavor,&nbsp;1&nbsp;) = "S" )** |Removes records that have a **Quantity** that's greater than 150 and **Flavor** starts with an **S**. |![Result with Chocolate and Vanilla.](media/function-remove-removeif/icecream-no-strawberry.png)<br><br><br>The **IceCream** data source has been modified. |
+| **RemoveIf(&nbsp;IceCream, true )** |Removes all records from the data source. |![Result with no IceCream.](media/function-remove-removeif/icecream-empty.png)<br><br>The **IceCream** data source has been modified. |
 
 ## Examples - remove button outside a gallery
 
@@ -98,35 +101,35 @@ In this example, you'll remove an item by using a *button* that is outside the g
 
 1. Create a [new blank canvas app](../data-platform-create-app-scratch.md) using a Phone layout.
 
-    ![A blank canvas app using the phone layout](media/function-remove-removeif/gallery-new.png)
+    ![A blank canvas app using the phone layout.](media/function-remove-removeif/gallery-new.png)
 
 1. Select the **Insert** from the left pane.
 
 1. Select **Vertical gallery**. <br>
     A **Gallery** control is be added to your screen.
 
-    ![Using the Insert tool pane to add a vertical gallery control](media/function-remove-removeif/gallery-add.png)
+    ![Using the Insert tool pane to add a vertical gallery control.](media/function-remove-removeif/gallery-add.png)
 
 1. You're prompted to select a data source where you can select a data source from the available data sources. <br>
     For example, select the **Contacts** table to use *sample data*:  
 
-    ![Selecting the Contacts table to display in the gallery](media/function-remove-removeif/gallery-datasource.png)
+    ![Selecting the Contacts table to display in the gallery.](media/function-remove-removeif/gallery-datasource.png)
 
     The gallery shows items from this table: 
 
-    ![Gallery added showing the Contacts table](media/function-remove-removeif/gallery-data.png)
+    ![Gallery added showing the Contacts table.](media/function-remove-removeif/gallery-data.png)
 
 1. Insert a [**Button**](../controls/control-button.md) control from left pane:
     
-    ![Using the Insert tool pane to add a button control](media/function-remove-removeif/gallery-addbutton.png)
+    ![Using the Insert tool pane to add a button control.](media/function-remove-removeif/gallery-addbutton.png)
 
 1. Move the added button below the gallery items:
 
-    ![Move button](media/function-remove-removeif/move-button-down.png)
+    ![Move button.](media/function-remove-removeif/move-button-down.png)
 
 1. Update button text property to *Remove record*. You can also use text of your choice:
 
-    ![Rename button](media/function-remove-removeif/button-text.png)
+    ![Rename button.](media/function-remove-removeif/button-text.png)
 
 1. Set the **OnSelect** property for this button control to the following formula:
 
@@ -134,21 +137,21 @@ In this example, you'll remove an item by using a *button* that is outside the g
     Remove( Contacts, Gallery1.Selected )
     ```
 
-    ![Setting the OnSelect property of the button control](media/function-remove-removeif/gallery-button-onselect.png)
+    ![Setting the OnSelect property of the button control.](media/function-remove-removeif/gallery-button-onselect.png)
 
     The gallery control makes the currently selected record available using **Selected** property. **Remove** function refers to this selected record to remove it.
 
 1. Preview the app using the *Play* button on the top right, or press *F5* on keyboard:
 
-    ![Preview app](media/function-remove-removeif/preview-app.png)
+    ![Preview app.](media/function-remove-removeif/preview-app.png)
 
 1. Select a record to remove, such as *Nancy*'s record in this example:
 
-    ![Select a record](media/function-remove-removeif/select-nancy-record.png)
+    ![Select a record.](media/function-remove-removeif/select-nancy-record.png)
 
 1. Select **Remove record**:
 
-    ![Gallery of contacts, now without the Nancy record that has been removed](media/function-remove-removeif/gallery-activatebutton.png)
+    ![Gallery of contacts, now without the Nancy record that has been removed.](media/function-remove-removeif/gallery-activatebutton.png)
 
     Selecting the button removes the selected record (in this example, Nancy's record).
 
@@ -187,40 +190,40 @@ Sample collection is created that you can use in the following example.
 
 1. Create a [new blank canvas app](../data-platform-create-app-scratch.md) using a Phone layout.
 
-    ![A blank canvas app using the phone layout](media/function-remove-removeif/gallery-new.png)
+    ![A blank canvas app using the phone layout.](media/function-remove-removeif/gallery-new.png)
 
 1. Select the **Insert** from the left pane.
 
 1. Select **Vertical gallery**. <br>
     A **Gallery** control is be added to your screen.
 
-    ![Using the Insert tool pane to add a vertical gallery control](media/function-remove-removeif/gallery-add.png)
+    ![Using the Insert tool pane to add a vertical gallery control.](media/function-remove-removeif/gallery-add.png)
 
 1. You're prompted to select a data source where you can select a data source from the available data sources. <br>
     For example, select the **Contacts** table to use *sample data*:  
 
-    ![Selecting the Contacts table to display in the gallery](media/function-remove-removeif/gallery-datasource.png)
+    ![Selecting the Contacts table to display in the gallery.](media/function-remove-removeif/gallery-datasource.png)
 
     If you created a [collection](#create-a-collection-with-sample-data), select your collection instead:
 
-    ![Sample contacts collection](media/function-remove-removeif/sample-contacts.png)
+    ![Sample contacts collection.](media/function-remove-removeif/sample-contacts.png)
 
 1. Select a control within the top item in the gallery. <br>
     
     To ensure next step inserts item into gallery's template and not outside the gallery, ensure you follow this step before moving to the next step.
     
-    ![Select top record in a gallery](media/function-remove-removeif/gallery-select-template.png)
+    ![Select top record in a gallery.](media/function-remove-removeif/gallery-select-template.png)
 
 1. Select **Add icon** from left pane. <br>
     
-    ![Using the Insert tool pane to add an icon control](media/function-remove-removeif/gallery-addicon.png)
+    ![Using the Insert tool pane to add an icon control.](media/function-remove-removeif/gallery-addicon.png)
 
     > [!NOTE]
     > **Add icon** inserts a **+** icon on the left side of the gallery, replicated for each item in the gallery. 
 
 1. In the top item, move the icon to the right side of the screen.
 
-    ![Move icon](media/function-remove-removeif/move-icon.png)
+    ![Move icon.](media/function-remove-removeif/move-icon.png)
 
 1. Select the **Icon** property for icon and set it to the following formula to update the icon image as trash icon:
 
@@ -231,7 +234,7 @@ Sample collection is created that you can use in the following example.
     > [!NOTE]
     > The **Icon.** prefix is only shown when you're actively editing the formula.
 
-    ![Changing the icon to the trash can icon](media/function-remove-removeif/gallery-icontrash.png)
+    ![Changing the icon to the trash can icon.](media/function-remove-removeif/gallery-icontrash.png)
 
 1. Set the **OnSelect** property to the following formula:
 
@@ -242,17 +245,17 @@ Sample collection is created that you can use in the following example.
     > [!NOTE]
     > You must use [global disambiguation operator](operators.md#disambiguation-operator) **[@**...**]** in this example with sample data that uses the *Contacts* table to avoid conflict with a *One-to-Many* relationship. If you use data sources such as a SharePoint list or a SQL Server table, using *global disambgulation operator* is not required.
 
-    ![OnSelect for trash icon](media/function-remove-removeif/gallery-onselect.png)
+    ![OnSelect for trash icon.](media/function-remove-removeif/gallery-onselect.png)
 
 1. Preview the app using the *Play* button on the top right, or press *F5* on keyboard.
 
 1. Select the trash icon next to a record, for example *Maria*'s:
 
-    ![Gallery with one of the contacts removed](media/function-remove-removeif/gallery-activateicon.png)
+    ![Gallery with one of the contacts removed.](media/function-remove-removeif/gallery-activateicon.png)
 
     The record is deleted:
 
-    ![Deleted record](media/function-remove-removeif/deleted-record.png)
+    ![Deleted record.](media/function-remove-removeif/deleted-record.png)
 
 1. Close the app preview.
 

@@ -6,7 +6,8 @@ manager: kvivek
 ms.service: powerapps
 ms.component: cds
 ms.topic: article
-ms.date: 08/12/2020
+ms.date: 10/31/2021
+ms.subservice: dataverse-maker
 ms.author: matp
 search.audienceType: 
   - maker
@@ -42,7 +43,7 @@ The Solution checker is enabled by default in every Dataverse environment. A **S
 3. On the toolbar, select **Solution checker** and then select **Install** – this opens the Microsoft AppSource page. You need to allow pop-up windows if your browser blocks the page from opening. 
 
    > [!div class="mx-imgBorder"]
-   > ![Install solution checker](media/solution-checker-install.png "Install solution checker")
+   > ![Install solution checker.](media/solution-checker-install.png "Install solution checker")
 
 4. Select **Free Trial** on the AppSource page. 
 
@@ -57,12 +58,12 @@ The Solution checker is enabled by default in every Dataverse environment. A **S
 3. Next to the unmanaged solution that you want to analyze, select **...**, point to **Solution checker**, and then select **Run**. 
 
    > [!div class="mx-imgBorder"]
-   > ![Run solution checker command](media/solution-checker-run.png "Run solution checker command")
+   > ![Run solution checker command.](media/solution-checker-run.png "Run solution checker command")
 
 4.	The status pane located on the upper right of the **Solutions** page displays **Solution checker running**. 
 
     > [!div class="mx-imgBorder"]
-    > ![Solution checker status](media/solution-checker-status.png "Solution checker status")
+    > ![Solution checker status.](media/solution-checker-status.png "Solution checker status")
    
     Note the following:
     - The solution checker can take a few minutes to complete the analysis. 
@@ -101,7 +102,7 @@ When a solution check is completed, you can view the analysis report in the port
 3. Select an Issue to view the details and guidance on how to resolve.
 
     > [!div class="mx-imgBorder"] 
-    > ![Solution checker view results](media/solution-checker-viewresults.png "Solution checker view results")
+    > ![Solution checker view results.](media/solution-checker-viewresults.png "Solution checker view results")
 
 The solution check results are also available for download. The solution checker zip file is downloaded to the folder specified by your web browser.The download report is in [!INCLUDE [pn-excel-short](../../includes/pn-excel-short.md)] format and contains several visualizations and columns that assist you in identifying the impact, type, and location of each issue detected in your solution. A link to detailed guidance about how to resolve the issue is also provided. 
 
@@ -148,7 +149,7 @@ Here's a summary of each column in the report.
 | Plug-in or workflow activity  | [meta-avoid-retrievemultiple-annotation](../../developer/data-platform/best-practices/index.md?client=PAChecker&error=meta-avoid-retrievemultiple-annotation)  | Avoid registering a plugin on RetrieveMultiple of annotation.  |
 |Web Resources  | [web-use-async](../../developer/model-driven-apps/best-practices/business-logic/interact-http-https-resources-asynchronously.md?client=PAChecker&error=web-use-async&source=featuredocs)  |  Interact with HTTP and HTTPS resources asynchronously.   |
 |Web Resources  | [web-avoid-modals](../../developer/model-driven-apps/clientapi/reference/xrm-navigation.md?client=PAChecker&error=web-avoid-modals&source=featuredocs)  | Avoid using modal dialogs.   |
-|Web Resources  | [web-avoid-crm2011-service-odata](../../developer/data-platform/org-service/overview.md?client=PAChecker&error=web-avoid-crm2011-service-odata&source=featuredocs)   | Don't target the Microsoft Dynamics CRM 2011 OData 2.0 endpoint.     |
+|Web Resources  | [web-avoid-crm2011-service-odata](../../developer/model-driven-apps/best-practices/business-logic/do-not-use-odata-v2-endpoint.md?client=PAChecker&error=web-avoid-crm2011-service-odata&source=featuredocs) | Don't target the Microsoft Dynamics CRM 2011 OData 2.0 endpoint.     |
 |Web Resources  | [web-avoid-crm2011-service-soap](../../developer/data-platform/org-service/overview.md?client=PAChecker&error=web-avoid-crm2011-service-soap&source=featuredocs)  | Don't target the Microsoft Dynamics CRM 2011 SOAP services.   |
 |Web Resources  | [web-avoid-browser-specific-api](../../developer/model-driven-apps/best-practices/index.md?client=PAChecker&error=web-avoid-browser-specific-api&source=featuredocs) | Don't use Internet Explorer legacy APIs or browser plug-ins.   |
 |Web Resources  | [web-avoid-2011-api](../../developer/data-platform/webapi/overview.md?client=PAChecker&error=web-avoid-2011-api&source=featuredocs)  | Don't use the deprecated Microsoft Dynamics CRM 2011 object model.  |

@@ -2,18 +2,21 @@
 title: GUID function in Power Apps
 description: Reference information including syntax and examples for the GUID function in Power Apps.
 author: gregli-msft
-manager: kvivek
 
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: nabuthuk
+ms.reviewer: tapanm
 ms.date: 07/17/2020
+ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - gregli-msft
+  - nkrb
 ---
 # GUID function in Power Apps
 Converts a GUID ([Globally Unique Identifier](https://en.wikipedia.org/wiki/Universally_unique_identifier)) string to a GUID value or creates a new GUID value.
@@ -96,11 +99,11 @@ The **Label** control will show **f9168c5e-ceb2-4faa-b6bf-329bf39fa1e4**.
 
     The data table shows a list of GUIDs:
 
-    ![A screen showing a data table with five different GUID values](media/function-guid/guid-collection-1.png)
+    ![A screen showing a data table with five different GUID values.](media/function-guid/guid-collection-1.png)
 
 1. Select the button again to show a different list of GUIDs:
 
-    ![The same screen showing a data table with a new set of five different GUID values](media/function-guid/guid-collection-2.png)
+    ![The same screen showing a data table with a new set of five different GUID values.](media/function-guid/guid-collection-2.png)
 
 To generate a single GUID instead of a table, use this formula:
 

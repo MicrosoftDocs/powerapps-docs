@@ -6,11 +6,12 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2021
+ms.subservice: portals
 ms.author: gisingh
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
     - gitanjalisingh33msft
-    - tapanm-msft
+    - nickdoelman
 ---
 
 # Add the Azure Storage web resource to a form
@@ -22,9 +23,9 @@ To enable attachments from a particular form to be uploaded into Azure Storage, 
 > [!NOTE]
 > In this example, the form is added to the Lead form for the Lead table. We recommend using caution when editing existing forms.
 
-When a file (for example, attachments.zip) is uploaded to Azure Storage by using the portal, it's represented by a note on an table and a placeholder for the attachment.
+When a file (for example, attachments.zip) is uploaded to Azure Storage by using the portal, it's represented by a note on a table and a placeholder for the attachment.
 
-![Attachment on a form](media/notes-attachment-lead-form.png "Placeholder for the attachment on a form")
+![Attachment on a form.](media/notes-attachment-lead-form.png "Placeholder for the attachment on a form")
 
 The attachment file is now named attachment.zip.txt. By default, Dataverse  has no conception of an Azure file, so this placeholder .txt file is stored in Dataverse  instead. The Azure Storage context for the placeholder file shows details about the file.
 ```
@@ -56,11 +57,11 @@ To see and interact with the file stored in Azure, you must add the web resource
 
 8. Save the form, and then publish the changes.
 
-   ![Add web resource](media/add-web-resource.png "Add a web resource")
+   ![Add web resource.](media/add-web-resource.png "Add a web resource")
 
 The new control will now be rendered on the page, giving you the ability to manage your attachments in Azure Storage.
 
-![Azure file attachment on a form](media/azure-file-attachment-lead-form.png "Azure file attachment on a form")
+![Azure file attachment on a form.](media/azure-file-attachment-lead-form.png "Azure file attachment on a form")
 
 The paper-clip icon has been replaced with a cloud icon to denote that this file is stored in Azure Storage. You can continue to store attachments in Dataverse; those files will be denoted with the paper-clip icon.
 
@@ -79,13 +80,13 @@ If the attached file is an image, the control will display the image as a thumbn
 > [!NOTE]
 > The thumbnail feature is limited to images under 1 MB in size.
 
-![Notes thumbnail](media/notes-thumbnail.png "Notes thumbnail")
+![Notes thumbnail.](media/notes-thumbnail.png "Notes thumbnail")
 
 ## Processes for Azure Blob Storage
 
 Several processes are required to upload attachments to Azure Storage that must be activated: **AzureBlobStorageEnabled**, **Azure Blob Storage Url** and **Generate Shared Access Signature**.
 
-![Blob storage processes](media/blob-storage-processes.png "Blob storage processes")
+![Blob storage processes.](media/blob-storage-processes.png "Blob storage processes")
 
 During migration, the processes may get deactivated. Migration may cause attachments to upload to Dataverse instead of Azure Storage after you follow steps to add web resource. Ensure these processes are activated to upload attachments to Azure Storage.
 

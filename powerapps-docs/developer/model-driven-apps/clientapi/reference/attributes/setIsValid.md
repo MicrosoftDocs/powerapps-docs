@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 author: "Nkrb"
+ms.subservice: mda-developer
 ms.author: "nabuthuk"
 manager: "kvivek"
 search.audienceType: 

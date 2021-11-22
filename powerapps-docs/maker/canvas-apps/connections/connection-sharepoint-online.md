@@ -2,21 +2,24 @@
 title: Connect to SharePoint from a canvas app
 description: See the available functions, responses, and examples for SharePoint.
 author: NickWaggoner
-manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 05/11/2021
+ms.subservice: canvas-maker
 ms.author: niwaggon
 search.audienceType:
   - maker
 search.app:
   - PowerApps
+contributors:
+  - tapanm-msft
+  - lancedmicrosoft
 ---
 # Connect to SharePoint from a canvas app
 
-![SharePoint](./media/connection-sharepoint-online/sharepointicon.png "SharePoint")
+![SharePoint.](./media/connection-sharepoint-online/sharepointicon.png "SharePoint")
 
 Connect to a SharePoint site to generate an app automatically from a custom list, or create a connection before you add data to an existing app or build an app from scratch.
 
@@ -40,30 +43,30 @@ If you want to manage data in a custom list, Power Apps can [generate a three-sc
 
 1. Select **SharePoint**.
 
-    ![Select SharePoint](./media/connection-sharepoint-online/select-sharepoint.png "Select SharePoint")
+    ![Select SharePoint.](./media/connection-sharepoint-online/select-sharepoint.png "Select SharePoint")
 
 1. Perform either of these sets of steps:
 
     - To connect to SharePoint Online, select **Connect directly (cloud services)**, select **Create**, and then provide credentials (if prompted).
 
-        ![To connect to SharePoint Online, select Connect directly (cloud services)](./media/connection-sharepoint-online/select-online.png "Connect to a site")
+        ![To connect to SharePoint Online, select Connect directly (cloud services).](./media/connection-sharepoint-online/select-online.png "Connect to a site")
 
         The connection is created, and you can add a data to an existing app or build an app from scratch.
 
     - To connect to an on-premises site, select **Connect using on-premises data gateway**.
 
-        ![To connect to on-premises site, select **Connect using on-premises data gateway)](./media/connection-sharepoint-online/select-onprem.png "Create a connection to on-premises site")
+        ![To connect to on-premises site, select **Connect using on-premises data gateway).](./media/connection-sharepoint-online/select-onprem.png "Create a connection to on-premises site")
 
         Specify **Windows** as the authentication type, and then specify your credentials. (If your credentials include a domain name, specify it as *domain\alias*.)
 
-        ![Specify credentials](./media/connection-sharepoint-online/specify-creds.png "Specify credentials")
+        ![Specify credentials.](./media/connection-sharepoint-online/specify-creds.png "Specify credentials")
 
         Under **Choose a gateway**, select the gateway that you want to use, and then select **Create**.
 
         > [!NOTE]
         > If you don't have an on-premises data gateway installed, [install one](../gateway-reference.md), and then select the icon to refresh the list of gateways.
 
-        ![Choose gateway](./media/connection-sharepoint-online/choose-gateway.png "Choose gateway")
+        ![Choose gateway.](./media/connection-sharepoint-online/choose-gateway.png "Choose gateway")
 
         The connection is created, and you can add a data to an existing app or build an app from scratch.
 
@@ -71,17 +74,17 @@ If you want to manage data in a custom list, Power Apps can [generate a three-sc
 
 1. In Power Apps Studio, open the app that you want to update, select **Data** on the left-pane.
 
-    ![Select Data on the left-pane](./media/connection-sharepoint-online/view-data-sources.png "Select Data on the left-pane")
+    ![Select Data on the left-pane.](./media/connection-sharepoint-online/view-data-sources.png "Select Data on the left-pane")
 
 1. Select **Add data** > **Connectors** > **SharePoint**.
 
 1. Under **Connect to a SharePoint site**, select an entry in the **Recent sites** list (or type or paste the URL for the site that you want to use), and then select **Connect**.
 
-    ![Select site](./media/connection-sharepoint-online/select-sp-site.png "Select site")
+    ![Select site.](./media/connection-sharepoint-online/select-sp-site.png "Select site")
 
 1. Under **Choose a list**, select the check box for one or more lists that you want to use, and then select **Connect**:
 
-    ![Under Choose a list, select the check box for one or more lists that you want to use, and then select Connect](./media/connection-sharepoint-online/select-sp-tables.png "Select list")
+    ![Under Choose a list, select the check box for one or more lists that you want to use, and then select Connect.](./media/connection-sharepoint-online/select-sp-tables.png "Select list")
 
     Not all types of lists appear by default. Power Apps supports custom lists, not template-based lists. If the name of the list that you want to use doesn't appear, scroll to the bottom, and then type the name of the list in the box that contains **Enter custom table name**.
 
@@ -129,7 +132,7 @@ If you have several images in a SharePoint library, you can add a **Drop down** 
     The file names of the images in your library appear in **ImageList**.
 
     > [!div class="mx-imgBorder"]
-    > ![List of images](./media/connection-sharepoint-online/dropdown-items.png "List of images")
+    > ![List of images.](./media/connection-sharepoint-online/dropdown-items.png "List of images")
 
 1. Add an **Image** control, and set its **Image** property to this expression:
 
@@ -140,7 +143,7 @@ If you have several images in a SharePoint library, you can add a **Drop down** 
     The image that you specified appears.
 
     > [!div class="mx-imgBorder"]
-    > ![Image list](./media/connection-sharepoint-online/golden-honey.png "Image list")
+    > ![Image list.](./media/connection-sharepoint-online/golden-honey.png "Image list")
 
 You can [download a sample app](https://pwrappssamples.blob.core.windows.net/samples/spdoclib_blogapp.msapp) that demonstrates a more complex approach to showing data from a SharePoint library.
 
@@ -158,7 +161,7 @@ In this one-screen app, the list in the lower-left corner shows all files in you
 When you find the file that you want, select it to show it in the **Video**, **Image**, or **Audio** control along the right-hand side.
 
 > [!div class="mx-imgBorder"]
-> ![Sample image](./media/connection-sharepoint-online/library-app.png "Sample image")
+> ![Sample image.](./media/connection-sharepoint-online/library-app.png "Sample image")
 
 ## Known issues
 

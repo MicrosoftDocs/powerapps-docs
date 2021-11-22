@@ -2,12 +2,13 @@
 title: "Column data types in Microsoft Dataverse | MicrosoftDocs"
 description: "Understand the different column data types available for your app"
 keywords: ""
-ms.date: 05/20/2021
+ms.date: 08/13/2021
 ms.service: powerapps
 ms.custom: 
 ms.topic: article
 author: "Mattp123"
 ms.assetid: 734b4ffa-5543-4f88-8517-299589f433f7
+ms.subservice: dataverse-maker
 ms.author: matp
 manager: kvivek
 ms.reviewer: 
@@ -23,8 +24,8 @@ search.app:
 
 The names used for types depend on the designer used. [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) uses a convention that includes the way the data is formatted. The solution explorer type uses a name aligned with the database data type with a format modifier.
 
-Watch this video for a quick overview on how to create a column in Dataverse:
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWEC1G]
+Watch this video for a quick overview about data types in Dataverse:
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWJ4Su]
 
 The following table includes the corresponding `AttributeTypeDisplayName` API type.
 
@@ -176,7 +177,7 @@ Even though a table has an image column, displaying that image in a model-driven
 When image display is enabled for a table, any rows that don’t have an image will display a placeholder image. For example:
 
 > [!div class="mx-imgBorder"] 
-> ![Sample table image for an account row](../data-platform/media/account-record-default-image.png "Default account table image")
+> ![Sample table image for an account row.](../data-platform/media/account-record-default-image.png "Default account table image")
   
 People can choose the default image to upload a picture from their computer. Images must be less than 10 MB and must be in one of the following formats:  
   
@@ -218,14 +219,14 @@ By default,	when an app user adds an image to display to a form or canvas app, t
 6. Complete the remaining columns as appropriate. Notice that the **Name**, **Column Requirement**, and **Searchable** columns can’t be changed. Select **Save and Close**. 
 7. On the table definition next to the **Primary Image** property make sure the value is set to the custom image you created in the previous step. If it's not select it.  
     > [!div class="mx-imgBorder"] 
-    > ![Primary image property selected](media/primary-image-property.png "Primary image property selected")
+    > ![Primary image property selected.](media/primary-image-property.png "Primary image property selected")
 
 8.	Open the form where you want image support, such as the table main form. 
 9.	On the form editor ribbon, select **Form Properties**. 
 10.	On the **Form Properties** page, select the **Display** tab, select **Show image in the form**, and then select **OK**. 
 
     > [!div class="mx-imgBorder"] 
-    > ![Show image in the form setting](media/show-image-on-form.png "Show image in the form setting")
+    > ![Show image in the form setting.](media/show-image-on-form.png "Show image in the form setting")
 
 11.	On the form editor ribbon, select **Save**, and then select **Publish**. Close the form editor. 
 
@@ -242,11 +243,11 @@ Once a table form has an image column, app users can change the image for a give
 
 1. Open the app that includes the table form, and then select the image on the form. 
    > [!div class="mx-imgBorder"] 
-   > ![Default table image](../data-platform/media/default-entity-image-on-form.png "Default table image")
+   > ![Default table image.](../data-platform/media/default-entity-image-on-form.png "Default table image")
 
 2. Select **Upload image**, browse and select the image you want displayed on the table form, and then select **Change**. The image appears on the record. 
    > [!div class="mx-imgBorder"] 
-   > ![Changed image saved to a row](../data-platform/media/custom-entity-icon-record.png "Changed image saved to a row")
+   > ![Changed image saved to a row.](../data-platform/media/custom-entity-icon-record.png "Changed image saved to a row")
 
 
 More information for developers working with image data:
@@ -259,7 +260,7 @@ More information for developers working with image data:
 
 The **File** column is used for storing binary data. The primary intended use of this column is to store a single image, note, or attachment. However, storage of other forms of binary data is also possible. One or more columns of this data type can be added to an existing standard customizable table or a custom table.
 
-The default **Maximum file size** is 32 MB and the largest size you can set is 128 MB. The file size limit can be set individually for each column of file type added to a table. 
+The default **Maximum file size** is 32 MB and the largest size you can set is 10 GB. The file size limit can be set individually for each column of file type added to a table. 
 
 >[!NOTE]
 > Once the maximum file size has been saved, it can't be changed.
@@ -267,7 +268,7 @@ The default **Maximum file size** is 32 MB and the largest size you can set is 1
 To create a file column, on the left pane in Power Apps select **Solutions**, open the solution you want, open the table you want, on the **Columns** tab select **Add Column**, and then in the **Column properties** pane, select **File** as the **Data type**. 
 
 > [!div class="mx-imgBorder"] 
-> ![File data type](media/file-data-type.png)
+> ![File data type.](media/file-data-type.png)
 
 More information for developers working with file data: [File attributes](../../developer/data-platform/file-attributes.md)
 

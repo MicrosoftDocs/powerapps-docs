@@ -6,10 +6,11 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: intro-internal
 ms.date: 04/21/2020
+ms.subservice: portals
 ms.author: sandhan
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
-    - tapanm-msft
+    - nickdoelman
     - sandhangitmsft
     - dileepsinghmicrosoft
 ---
@@ -32,21 +33,21 @@ You can enable, disable, and configure portal identity providers from [Power App
 
 1. On the left pane, select **Apps**.
 
-    ![Select Apps](media/use-simplified-authentication-configuration/select-apps.png "Select Apps")
+    ![Select Apps.](media/use-simplified-authentication-configuration/select-apps.png "Select Apps")
 
 1. Select your portal from the list of available apps.
 
 1. Select **Settings** from the top menu. You can also select **More Commands** (**...**), and then select **Settings**.
 
-    ![Select Settings](media/use-simplified-authentication-configuration/select-settings.png "Select Settings")
+    ![Select Settings.](media/use-simplified-authentication-configuration/select-settings.png "Select Settings")
 
 1. From the settings on the right side of your workspace, select **Authentication Settings**.
 
-    ![Authentication Settings](media/use-simplified-authentication-configuration/portal-settings-right-pane.png "Authentication Settings")
+    ![Authentication Settings.](media/use-simplified-authentication-configuration/portal-settings-right-pane.png "Authentication Settings")
 
 You'll see a list of identity providers that you can configure.
 
-![Identity providers](media/use-simplified-authentication-configuration/portal-authentication-settings.png "Identity providers")
+![Identity providers.](media/use-simplified-authentication-configuration/portal-authentication-settings.png "Identity providers")
 
 <a name="authentication-settings-from-the-portal-details-page"></a>
 **To view identity providers from the portal details page**
@@ -55,11 +56,11 @@ You'll see a list of identity providers that you can configure.
 
 1. Select **Details** from top menu. You can also select **More Commands** (**...**), and then select **Details**.
 
-    ![Select details](media/use-simplified-authentication-configuration/select-details.png "Select details")
+    ![Select details.](media/use-simplified-authentication-configuration/select-details.png "Select details")
 
 The details page displays the **Identity providers** section.
 
-![Portal details](media/use-simplified-authentication-configuration/portal-details.png "Portal details")
+![Portal details.](media/use-simplified-authentication-configuration/portal-details.png "Portal details")
 
 > [!NOTE]
 > Selecting **See all** from the portal details page takes you to the complete list of identity providers.
@@ -69,7 +70,7 @@ The details page displays the **Identity providers** section.
 
 You can configure the following general authentication settings by selecting **Authentication Settings** on the **Identity providers** page.
 
-![General authentication settings](media/authentication/general-authentication-settings.png "General authentication settings")
+![General authentication settings.](media/authentication/general-authentication-settings.png "General authentication settings")
 
 - **External login**: External authentication is provided by the ASP.NET Identity API. Account credentials and password management are handled by third-party identity providers, for example Facebook, LinkedIn, Google, Twitter, and Microsoft. 
   - When set to **On**, users sign up for access to the portal by selecting an external identity to register with the portal. After it's registered, an external identity has access to the same features as a local account. See [Manage external accounts](set-authentication-identity.md#manage-external-accounts) for related site settings. 
@@ -85,13 +86,13 @@ You can configure the following general authentication settings by selecting **A
 
 You can also go to general authentication settings from the portal details page by selecting **Settings** in the upper-right corner of the **Identity providers** section.
 
-![General authentication settings from the details page](media/use-simplified-authentication-configuration/general-settings-from-details.png "General authentication settings from the details page")
+![General authentication settings from the details page.](media/use-simplified-authentication-configuration/general-settings-from-details.png "General authentication settings from the details page")
 
 ## Configure a default identity provider
 
 You can set any identity provider as the default. When an identity provider is set as the default, users signing in to the portal aren't redirected to the portal sign-in page. Instead, the sign-in experience always defaults to signing in by using the selected provider.
 
-![Default identity provider](media/use-simplified-authentication-configuration/set-default.png "Default identity provider")
+![Default identity provider.](media/use-simplified-authentication-configuration/set-default.png "Default identity provider")
 
 > [!IMPORTANT]
 > If you set an identity provider as the default, users won't have the option to choose any other identity provider.
@@ -115,21 +116,21 @@ Several identity providers that you can configure are added by default. You can 
 
 To add an identity provider, select **Add provider** from **Authentication Settings**.
 
-![Add a provider from settings](media/use-simplified-authentication-configuration/add-provider-from-settings.png "Add a provider from settings")
+![Add a provider from settings.](media/use-simplified-authentication-configuration/add-provider-from-settings.png "Add a provider from settings")
 
 > [!TIP]
 > You can also select **Add provider** from the [portal details page](#authentication-settings-from-the-portal-details-page).
 
 Select from the available list of providers, enter a name, and then select **Next** to configure the provider settings.
 
-![Add a new provider](media/use-simplified-authentication-configuration/add-provider.png "Add a new provider")
+![Add a new provider.](media/use-simplified-authentication-configuration/add-provider.png "Add a new provider")
 
 > [!NOTE]
 > The **Provider name** you enter here is displayed on the sign-in page for users as the text on the button they use when selecting this provider.
 
 To configure a provider, select **Configure** (or select **More Commands** (**...**), and then select **Configure**).
 
-![Configure a provider](media/use-simplified-authentication-configuration/configure-provider.png "Configure a provider")
+![Configure a provider.](media/use-simplified-authentication-configuration/configure-provider.png "Configure a provider")
 
 > [!NOTE]
 > You can use **Add provider** or **Configure** to add or configure a provider for the first time. After you configure a provider, you can edit it. You can also select the provider name hyperlink to open the configuration options quickly.
@@ -154,7 +155,7 @@ After you add and configure a provider, you can see the provider in the **Enable
 
 To edit a provider you've configured, select it, select **More Commands** (**...**), and then select **Edit configuration**.
 
-![Edit a provider](media/use-simplified-authentication-configuration/edit-provider.png "Edit a provider")
+![Edit a provider.](media/use-simplified-authentication-configuration/edit-provider.png "Edit a provider")
 
 Refer to the provider-specific articles to edit settings for the provider type you selected.
 
@@ -162,7 +163,7 @@ Refer to the provider-specific articles to edit settings for the provider type y
 
 To delete an identity provider, select **More Commands** (**...**), and then select **Delete**.
 
-![Delete a provider](media/use-simplified-authentication-configuration/delete-provider.png "Delete a provider")
+![Delete a provider.](media/use-simplified-authentication-configuration/delete-provider.png "Delete a provider")
 
 Deleting a provider deletes your provider configuration for the selected provider type, and the provider becomes available again for configuration.
 

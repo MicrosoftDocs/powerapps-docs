@@ -21,7 +21,7 @@ The Power Apps component framework allows you to persist state of component acro
 For example, if your code component is a long list that the user can scroll through, you could leverage the **_SetControlState_** functionality to remember the point in the list the user is looking at when they navigated away from the form. You could then add logic on component initialization to check the stored state and render the component's list at the point where the user was previously reading. 
 
 > [!div class="mx-imgBorder"] 
-> ![Control state API](../media/control-state-api.png "Control state API")
+> ![Control state API.](../media/control-state-api.png "Control state API")
 
 ## Available for
 

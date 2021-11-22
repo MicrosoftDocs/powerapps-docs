@@ -6,13 +6,14 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2021
+ms.subservice: portals
 ms.author: sandhan
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 searchScope:
   - "Power Apps"
 contributors:
     - sandhangitmsft
-    - tapanm-msft
+    - nickdoelman
 ---
 
 # Use the content editor to edit page content
@@ -28,7 +29,7 @@ To modify the content, point to the content to be modified, and then select the 
 
 The editor toolbar has a number of buttons to help with content editing. Move the mouse cursor over a button to see a tool tip for the buttons function. The table below also has more detail about the available buttons, listed in the order they appear in the toolbar.
 
-![Portal content editor](media/content-editor-1.png "Portal content editor")
+![Portal content editor.](media/content-editor-1.png "Portal content editor")
 
 
 |                          Button                          |                                                                                                                  Description                                                                                                                  |
@@ -79,7 +80,7 @@ The editor toolbar has a number of buttons to help with content editing. Move th
 
 4. Enter the properties for the hyperlink and select **OK**.
 
-    ![Insert link using portal content editor](media/content-editor-2.png "Insert link using portal content editor")
+    ![Insert link using portal content editor.](media/content-editor-2.png "Insert link using portal content editor")
 
 5. Select **Save** in the portal content editor to save the changes.
 
@@ -106,7 +107,7 @@ The editor toolbar has a number of buttons to help with content editing. Move th
 
 4. Enter the properties for the image and select **OK**.
 
-    ![Insert image using portal content editor](media/content-editor-3.png "Insert image using portal content editor")
+    ![Insert image using portal content editor.](media/content-editor-3.png "Insert image using portal content editor")
 
 5. Select **Save** in the portal content editor to save the changes.
 

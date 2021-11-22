@@ -1,16 +1,17 @@
 ---
 title: Bulletins sample app
 description: Learn how to use the Bulletins apps from Teams store.
-author: navjotm
+author: josephshum
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/24/2021
-ms.author: namarwah
+ms.date: 08/12/2021
+ms.subservice: teams
+ms.author: jshum
 ms.reviewer: tapanm
 contributors:
   - joel-lindstrom
-  - navjotm
+  - josephshum
   - tapanm-msft
 ---
 
@@ -81,19 +82,19 @@ To open the Manage bulletins app:
 
 1. Select the **Manage Bulletins** tab.
 
-    ![Manage bulletins tab](media/bulletins/manage-bulletins-tab.png "Manage bulletins tab")
+    ![Manage bulletins tab.](media/bulletins/manage-bulletins-tab.png "Manage bulletins tab")
 
 1. Select **Allow** if the app asks for your permissions to use the connectors.
 
 1. You can learn more about extending app capability on the splash screen. Select **Got it** to close the screen, and go to the app. To hide this message while opening this app again, select **Don't show this again** before you select **Got it**.
 
-    ![Splash screen](media/bulletins/splash-screen.png "Splash screen")
+    ![Splash screen.](media/bulletins/splash-screen.png "Splash screen")
 
 ### Understand the Manage bulletins app interface
 
 **Manage bulletins** app consists of the following capabilities.
 
-![Manage bulletins app interface](media/bulletins/manage-bulletins-app-interface.png "Manage bulletins app interface")
+![Manage bulletins app interface.](media/bulletins/manage-bulletins-app-interface.png "Manage bulletins app interface")
 
 1. **Bulletins tab** - Create, edit, and publish posts.
 
@@ -117,13 +118,13 @@ Each bulletin post, FAQ, link, or contact has an associated category. To add, ed
 
 1. Open the **Manage bulletins** app.
 
-1. Select **Settings** (![Settings icon](media/bulletins/settings-icon.png "Settings icon")) from the top-right side of the app.
+1. Select **Settings** (![Settings icon.](media/bulletins/settings-icon.png "Settings icon")) from the top-right side of the app.
 
-    ![Settings option](media/bulletins/settings.png "Settings option")
+    ![Settings option.](media/bulletins/settings.png "Settings option")
 
     - To add a category, select **Add category**.
 
-        ![Add category](media/bulletins/manage-category.png "Add category")
+        ![Add category.](media/bulletins/manage-category.png "Add category")
 
     - To delete a category, select **Delete**.
 
@@ -135,7 +136,7 @@ Each bulletin post, FAQ, link, or contact has an associated category. To add, ed
 
 A bulletin post is visible to users of the Bulletin app with the details that you enter while creating a bulletin.
 
-![New bulletin post](media/bulletins/new-bulletin.png "New bulletin post")
+![New bulletin post.](media/bulletins/new-bulletin.png "New bulletin post")
 
 To create a new bulletin post:
 
@@ -170,8 +171,6 @@ To create a new bulletin post:
 
 1. Select **Save** from the top-right side of the screen.
 
-1. If the post is ready for an approver to review it, toggle **Ready for review** to *On*.
-
 1. To preview what the post will look like to users of the Bulletins app, select **Preview**.
 
 1. When ready to publish the post for all users in the Bulletin app to see, select **Publish.**
@@ -181,7 +180,7 @@ To create a new bulletin post:
 To view the number of people who have viewed and bookmarked a post, open the
 post in **Manage bulletins** app. You'll see statistics about the number of views and bookmarks for the bulletin. You can also change the filter to show the statistics of the last 7 days, 30 days, or 6 months.
 
-![View post statistics](media/bulletins/bulletin-statistics.png "View post statistics")
+![View post statistics.](media/bulletins/bulletin-statistics.png "View post statistics")
 
 ### Edit, delete, or unpublish a post
 
@@ -197,7 +196,7 @@ To modify or delete a bulletin post, or if you want to change a published post t
 
     - To edit a post, select **Edit**.
 
-    ![Edit, delete, or unpublish a bulletin post](media/bulletins/edit-delete-unpublish-bulletin.png "Edit, delete, or unpublish a bulletin post")
+    ![Edit, delete, or unpublish a bulletin post.](media/bulletins/edit-delete-unpublish-bulletin.png "Edit, delete, or unpublish a bulletin post")
 
 ### Create FAQ post
 
@@ -211,7 +210,7 @@ To create an FAQ post:
 
 1. Select **New FAQ**.
 
-    ![FAQ bulletin](media/bulletins/faqs-bulletin.png "FAQ bulletin")
+    ![FAQ bulletin.](media/bulletins/faqs-bulletin.png "FAQ bulletin")
 
 1. Enter FAQ details.
 
@@ -223,11 +222,9 @@ To create an FAQ post:
 
 1. To make this FAQ a featured question in the FAQ section of the Bulletins app, toggle **Make it featured** to *Yes*.
 
-1. If the FAQ is ready for an approver to review it, toggle **Ready for review** to *On*.
-
 1. Select **Save** to save and publish the FAQ.
 
-    ![New FAQ bulletin](media/bulletins/new-faq-bulletin.png "New FAQ bulletin")
+    ![New FAQ bulletin.](media/bulletins/new-faq-bulletin.png "New FAQ bulletin")
 
 ### Edit or delete a FAQ bulletin
 
@@ -245,7 +242,7 @@ To edit or delete a FAQ bulletin post:
 
         1. Select **Delete**.
 
-        ![Edit or delete FAQ](media/bulletins/edit-delete-faq.png "Edit or delete FAQ")
+        ![Edit or delete FAQ.](media/bulletins/edit-delete-faq.png "Edit or delete FAQ")
 
         1. Select **I understand** checkbox.
     
@@ -271,7 +268,7 @@ To add a link to the Bulletins app:
 
 1. Select **Save** to save the link.
 
-    ![Add link](media/bulletins/add-link.png "Add link")
+    ![Add link.](media/bulletins/add-link.png "Add link")
 
 #### Edit, or delete a link
 
@@ -289,7 +286,7 @@ To edit, or delete a link:
 
         1. Select **Delete**.
 
-            ![Edit link](media/bulletins/edit-link.png "Edit link")
+            ![Edit link.](media/bulletins/edit-link.png "Edit link")
 
         1. Select **I understand** checkbox.
     
@@ -319,7 +316,7 @@ To add a contact that is a member of your organization:
 1. Enter **Description**.
     <br> **Preview** section shows the link details as you enter.
 
-    ![New internal contact](media/bulletins/new-contact.png "New internal contact")
+    ![New internal contact.](media/bulletins/new-contact.png "New internal contact")
 
 1. Select **Save**.
 
@@ -344,7 +341,7 @@ To add a contact from outside of your organization:
 1. Enter **Email Address** of contact.
     <br> **Preview** section shows the link details as you enter.
 
-    ![New external contact](media/bulletins/new-external-contact.png "New external contact")
+    ![New external contact.](media/bulletins/new-external-contact.png "New external contact")
 
 1. Select **Save**.
 
@@ -358,7 +355,7 @@ To edit, or delete a contact:
 
 1. Select the contact that you want to edit, or delete.
 
-    ![Edit contact](media/bulletins/edit-contact.png "Edit contact")
+    ![Edit contact.](media/bulletins/edit-contact.png "Edit contact")
 
     - To edit contact, update information, and select **Save.**
 
@@ -392,7 +389,7 @@ In this section, you'll learn about the following capabilities in the Bulletins 
 
 1. Select the **Manage Bulletins** tab.
 
-    ![Bulletins tab](media/bulletins/bulletins-tab.png "Bulletins tab")
+    ![Bulletins tab.](media/bulletins/bulletins-tab.png "Bulletins tab")
 
 1. Select **Allow** if the app asks for your permissions to use the connectors.
 
@@ -400,7 +397,7 @@ In this section, you'll learn about the following capabilities in the Bulletins 
 
 The Bulletins app consists of the following capabilities.
 
-![Bulletins app interface](media/bulletins/bulletins-app-interface.png "Bulletins app interface")
+![Bulletins app interface.](media/bulletins/bulletins-app-interface.png "Bulletins app interface")
 
 1. **App areas** - switch between the different areas of the Bulletins app:
 
@@ -424,7 +421,7 @@ To view a post, select the bulletin post tile. If a link button has been defined
 
 To close the post, select the **Close** button.
 
-![View post](media/bulletins/view-post.png "View post")
+![View post.](media/bulletins/view-post.png "View post")
 
 ### View frequently asked questions (FAQs)
 
@@ -436,7 +433,7 @@ To view FAQs:
 
 1. Select the question. You can also search for the question.
 
-    ![View FAQs](media/bulletins/view-faqs.png "View FAQs")
+    ![View FAQs.](media/bulletins/view-faqs.png "View FAQs")
 
 1. After reading the FAQs details, select **Close**.
 
@@ -452,12 +449,12 @@ To view links, and contacts:
 
 1. Select the link or contact. You can also search use search option.
 
-    ![View links and contacts](media/bulletins/view-links-contacts.png "View links and contacts")
+    ![View links and contacts.](media/bulletins/view-links-contacts.png "View links and contacts")
 
 ### See also
 
 - [Understand Bulletins sample app architecture](bulletins-architecture.md)
-- [Customize sample apps](customize-sample-apps.md)
+- [Customize Bulletins app](customize-bulletins.md)
 - [Sample apps FAQs](sample-apps-faqs.md)
 - [Use sample apps from the Microsoft Teams store](use-sample-apps-from-teams-store.md)
 

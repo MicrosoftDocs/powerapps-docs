@@ -6,10 +6,11 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 06/23/2021
-ms.author: v-ljoel
+ms.subservice: teams
+ms.author: jshum
 ms.reviewer: tapanm
 contributors:
-  - navjotm
+  - josephshum
   - tapanm-msft
   - joel-lindstrom
 ---
@@ -23,17 +24,20 @@ Before you can customize the app, you must install it from the Teams store. You 
 
 Once the app is installed, you can then customize it using the following steps.
 
-## Open Milestones app in Teams
+Watch this video to learn how to customize Milestones sample app:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLiBR]
+
+## Open Power Apps app in Teams
 
 1. Select ellipsis (…), and search for **Power Apps**.
 
-   ![Search for Power Apps](media/customize-milestones/search-app.png "Search for Power Apps")
+   ![Search for Power Apps.](media/customize-milestones/search-app.png "Search for Power Apps")
 
 2. The Power Apps app icon will now appear on the left pane.
 
 3. Right-click on the **Power Apps** icon, and select **Pin** to pin the app to your Teams menu. Pinning will make it appear every time you open Microsoft Teams.
 
-   ![Power Apps button](media/customize-milestones/power-apps-icon.png "Power Apps button")
+   ![Power Apps button.](media/customize-milestones/power-apps-icon.png "Power Apps button")
 
 4. We recommend that you right-click on the Power Apps logo, and select **Pop out app** to open the app in a new window. This way, you won't lose your work when working at other places in Teams.
 
@@ -47,7 +51,7 @@ In this section, we'll explore the data model for Milestones, and understand how
 
 Here's the data model for Milestones app.
 
-![Milestones data model](media/milestones-architecture/data-model.png "Milestones data model")
+![Milestones data model.](media/milestones-architecture/data-model.png "Milestones data model")
 
 Before modifying fields, decide where the fields you want to add should go. What are the users doing when they should see or interact with these fields?
 
@@ -65,7 +69,7 @@ To edit the Milestones app, open it using Power Apps Studio in Teams.
 - Select **Installed apps**.
 - In the **Milestones** tile, select the Milestones app.
 
-    ![Select Milestones in the Milestones tile](media/customize-milestones/milestones-tile.png "Select Milestones in the Milestones tile")
+    ![Select Milestones in the Milestones tile.](media/customize-milestones/milestones-tile.png "Select Milestones in the Milestones tile")
 
 The Milestones app will open in Power Apps Studio. This process may take one to two minutes.
 
@@ -75,7 +79,7 @@ Now that the Milestones App is open in the Studio, let’s explore the app.
 
 1. On left side, select the Tree View.
 
-    ![Select Tree view](media/customize-milestones/tree-view.png "Select Tree view")
+    ![Select Tree view.](media/customize-milestones/tree-view.png "Select Tree view")
 
 1. From the Tree View, you can see the screens included in the app. Selecting the arrow to the left of a screen will expand the contents of the screen, giving you access to the components of the screen, including galleries, buttons, text labels, and text input controls.
 
@@ -87,7 +91,7 @@ Now that the Milestones App is open in the Studio, let’s explore the app.
 
 1. When finished, select **Save**.
 
-1. To preview your changes, select the ![Preview button](media/customize-milestones/preview.png "Preview button") button. 
+1. To preview your changes, select the ![Preview button.](media/customize-milestones/preview.png "Preview button") button. 
 
     The app will launch in preview mode, where you can test the user experience when running the app. To exit preview mode, press **Escape** on your keyboard, or select the **X** in the upper right corner.
 
@@ -95,7 +99,7 @@ Now that the Milestones App is open in the Studio, let’s explore the app.
 
     Publishing the app makes your changes visible to users of the app. A dialog will open confirming that you want to publish.
 
-    ![Publish confirmation](media/customize-milestones/publish-confirm.png "Publish confirmation")
+    ![Publish confirmation.](media/customize-milestones/publish-confirm.png "Publish confirmation")
 
 1. To change app settings, such as icon and background color, select **Edit details**. Or, to publish the app, select **Next**.
 

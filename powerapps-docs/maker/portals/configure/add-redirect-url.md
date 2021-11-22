@@ -6,10 +6,11 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2021
+ms.subservice: portals
 ms.author: sandhan
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
-    - tapanm-msft
+    - nickdoelman
     - sandhangitmsft
 ---
 
@@ -39,7 +40,7 @@ Customers frequently want to have a simple URL that redirects to a page deeper i
 
 4. After entering the required fields and specifying a value for at least one of the URL, Web Page, or Site Marker fields, select **Save**.
 
-    ![Redirect a customer survey](../media/redirect-customer-survey.png "Redirect a customer survey")  
+    ![Redirect a customer survey.](../media/redirect-customer-survey.png "Redirect a customer survey")  
 
 ## Use the redirect
 

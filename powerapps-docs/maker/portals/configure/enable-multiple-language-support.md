@@ -6,10 +6,11 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2021
+ms.subservice: portals
 ms.author: sandhan
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
-    - tapanm-msft
+    - nickdoelman
     - sandhangitmsft
 ---
 
@@ -17,7 +18,7 @@ contributors:
 
 Business is not confined to a single region or a language. A single portal can display content in multiple languages to reach customers around the world. The content of your portal can be translated into multiple languages while maintaining a single content hierarchy.
 
-![Multi-language dropdown](../media/multi-language-dropdown.png "Multiple-language drop-down list")  
+![Multi-language dropdown.](../media/multi-language-dropdown.png "Multiple-language drop-down list")  
 
 To enable multiple languages for a portal, follow these steps:
 
@@ -27,11 +28,11 @@ To enable multiple languages for a portal, follow these steps:
 4. In the **Supported Languages** section under the **General** tab, select **New Website Language**.
 5. Fill in the form, including **Portal Language** (a lookup of languages that are activated in the organization and are supported by portals) and **Publishing State**.
 
-   ![Add a new portal language](../media/add-new-portal-language.png "Add a new portal language")
+   ![Add a new portal language.](../media/add-new-portal-language.png "Add a new portal language")
 
-   ![Set default language for your portal](../media/set-default-language-portal.png "Set default language for your portal")
+   ![Set default language for your portal.](../media/set-default-language-portal.png "Set default language for your portal")
 
-   ![Supported languages](../media/supported-languages.png "Supported languages")
+   ![Supported languages.](../media/supported-languages.png "Supported languages")
 
 > [!Note]
 > If you activate new languages after the portal has been provisioned, you can [import the metadata translations](../admin/import-metadata-translation.md) to get the metadata translated for the newly activated languages.
@@ -93,7 +94,7 @@ The table below shows all the languages currently available out of the box. This
 3. To add a new localization of the page, go to a base page and scroll down to **Localized Content**.
 4. Select **+ New Web Page** on to create a lookup for the localized version.
 
-    ![Add new localized content](../media/add-new-localized-content.png "Add new localized content")  
+    ![Add new localized content.](../media/add-new-localized-content.png "Add new localized content")  
 
 > [!Note]
 > The configuration fields on the home page of a content page is not inherited to the existing content pages. They are used only in creation of new content pages. You must update the content page configurations individually.
@@ -102,7 +103,7 @@ Knowledge articles will only be displayed if they have been translated into the 
 
 Web link sets are the navigation links at the top of the portal. By navigating to **Portals** > **Content** > **Web Link Sets** you can control how this content is translated. When a language is active for the portal, a new set of links are created for the newly activated language.
 
-![Active web link for new language](../media/active-weblink-new-language.png "Active web link for new language")
+![Active web link for new language.](../media/active-weblink-new-language.png "Active web link for new language")
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

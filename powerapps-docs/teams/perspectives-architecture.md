@@ -1,21 +1,22 @@
 ---
-title: Understand Perspectives (Preview) sample app architecture
+title: Understand Perspectives (preview) sample app architecture
 description: Learn about the architecture of the Perspectives sample app.
 author: joel-lindstrom
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 06/02/2021
-ms.author: v-ljoel
+ms.subservice: teams
+ms.author: jshum
 ms.reviewer: tapanm
 contributors:
   - joel-lindstrom
-  - navjotm
+  - josephshum
   - tapanm-msft
 ---
 
 
-# Understand Perspectives sample apps architecture (Preview)
+# Understand Perspectives sample apps architecture (preview)
 
 [This article is pre-release documentation and is subject to change.]
 
@@ -33,16 +34,12 @@ To understand and use information in this article, you'll need to know about dif
 
 You'll also need to know about how to [install](use-sample-apps-from-teams-store.md), and [use](perspectives.md) the Perspectives sample app.
 
-> [!IMPORTANT]
->-   This is a preview feature.
->-   Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
-
 ## Architecture model 
 
 The following diagram illustrates the way that users and systems interact with
 data in this solution.
 
-![Perspectives sample app architecture model](media/perspectives-architecture/architecture-model.png "Inspection sample app architecture model")
+![Perspectives sample app architecture model.](media/perspectives-architecture/architecture-model.png "Inspection sample app architecture model")
 
 ### Connectors
 
@@ -56,7 +53,7 @@ Perspectives app uses the following connectors
 
 The following diagram explains the data model used by the Perspectives sample app.
 
-![Perspectives sample app data model](media/perspectives-architecture/data-model.png "Perspectives sample app data model")
+![Perspectives sample app data model.](media/perspectives-architecture/data-model.png "Perspectives sample app data model")
 
 ### Tables
 
@@ -436,7 +433,7 @@ Variables used from response screen:
 
 ### See also
 
-- [Perspectives (Preview) sample app](perspectives.md)
+- [Perspectives (preview) sample app](perspectives.md)
 - [Customize sample apps](customize-sample-apps.md)
 - [Sample apps FAQs](sample-apps-faqs.md)
 - [Use sample apps from the Microsoft Teams store](use-sample-apps-from-teams-store.md)

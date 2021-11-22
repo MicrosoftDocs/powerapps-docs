@@ -1,6 +1,46 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/maker/model-driven-apps/page-data-connectors.md",
+      "redirect_url": "../canvas-apps/connections-list",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/web-api-perform-operations.md",
+      "redirect_url": "write-update-delete-operations",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/teams/extend-milestones-send%20notification.md",
+      "redirect_url": "extend-milestones-send-notification",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/teams/extend-milestones-send notification.md",
+      "redirect_url": "extend-milestones-send-notification",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/maker/data-platform/add-data-power-query.md",
+      "redirect_url": "/power-query/dataflows/add-data-power-query",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/maker/data-platform/connect-azure-data-lake-storage-for-dataflow.md",
+      "redirect_url": "/power-query/dataflows/connect-azure-data-lake-storage-for-dataflow",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/maker/data-platform/using-dataflows-with-on-premises-data.md",
+      "redirect_url": "/power-query/dataflows/using-dataflows-with-on-premises-data",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/component-framework/reference/lookupoptions.md",
+      "redirect_url": "utility/lookupobjects",
+      "redirect_document_id": "false"
+    },
+    {
       "source_path": "powerapps-docs/maker/dev-community-plan.md",
       "redirect_url": "developer-plan",
       "redirect_document_id": "false"
@@ -6283,6 +6323,51 @@
     {
       "source_path": "powerapps-docs/maker/data-platform/business-events.md",
       "redirect_url": "/powerapps/developer/data-platform/business-events",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/learning-catalog/get-started.md",
+      "redirect_url": "powerapps-docs/learning-catalog/learning-catalog.md",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/learning-catalog/learning-catalog-administrator.md",
+      "redirect_url": "powerapps-docs/learning-catalog/administrator.md",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/learning-catalog/learning-catalog-app-maker.md",
+      "redirect_url": "powerapps-docs/learning-catalog/app-maker.md",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/learning-catalog/learning-catalog-business-user.md",
+      "redirect_url": "powerapps-docs/learning-catalog/app-maker.md",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/learning-catalog/learning-catalog-developer.md",
+      "redirect_url": "powerapps-docs/learning-catalog/developer.md",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/learning-catalog/learning-catalog-functional-consultant.md",
+      "redirect_url": "powerapps-docs/learning-catalog/functional-consultant.md",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/learning-catalog/learning-catalog-solution-architect.md",
+      "redirect_url": "powerapps-docs/learning-catalog/solution-architect.md",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/learning-catalog/learning-catalog-bdm.md",
+      "redirect_url": "powerapps-docs/learning-catalog/bdm.md",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/data-platform/best-practices/index.md",
+      "redirect_url": "/powerapps/developer/data-platform/best-practices/",
       "redirect_document_id": "false"
     }
   ]

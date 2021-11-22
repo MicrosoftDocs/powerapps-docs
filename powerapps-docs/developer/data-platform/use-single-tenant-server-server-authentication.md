@@ -2,11 +2,12 @@
 title: "Use single-tenant server-to-server authentication (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to access Microsoft Dataverse data in a single tenant from an application or service without explicit user authentication." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 03/24/2021
+ms.date: 10/07/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "paulliew" # GitHub ID
+ms.subservice: dataverse-developer
 ms.author: "pehecke" # MSFT alias of Microsoft employees only
 manager: "kvivek" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -55,24 +56,24 @@ To create an application registration in Azure AD, follow these steps.
 5. In the **Register an application** form provide a name for your app, select **Accounts in this organizational directory only**, and choose **Register**. A redirect URI is not needed for this walkthrough and the provided sample code.
 
     > [!div class="mx-imgBorder"]
-    > ![Register an application form](media/S2S-app-registration-started.PNG)
+    > ![Register an application form.](media/S2S-app-registration-started.PNG)
 
 6. On the **Overview** page, select **API permissions**
 
     > [!div class="mx-imgBorder"]
-    > ![App registration permissions](media/S2S-app-registration-completed.PNG)
+    > ![App registration permissions.](media/S2S-app-registration-completed.PNG)
 
 7. Choose **+ Add a permission**
 8. In the **Microsoft APIs** tab, choose **Dynamics CRM**
 9. In the **Request API permission** form, select **Delegated permissions**, check **user_impersonation**, and select **Add permissions**
 
     > [!div class="mx-imgBorder"]
-    > ![Setting API permissions](media/S2S-api-permission-started.PNG)
+    > ![Setting API permissions.](media/S2S-api-permission-started.PNG)
 
 10. On the **API permissions** page select **Grant admin consent for "org-name"** and when prompted choose **Yes**
 
     > [!div class="mx-imgBorder"]
-    > ![Granting API permissions](media/S2S-api-permission-completed.PNG)
+    > ![Granting API permissions.](media/S2S-api-permission-completed.PNG)
 
 11. Select **Overview** in the navigation panel, record the **Display name**, **Application ID**, and **Directory ID** values of the app registration. You will provide these later in the code sample.
 12. In the navigation panel, select **Certificates & secrets**
@@ -83,67 +84,24 @@ To create an application registration in Azure AD, follow these steps.
 
 ## Application user creation
 
-To create an unlicensed "application user" in your environment, follow these steps. This application user will be given access to your environment's data on behalf of the end user who is using your application.
+You can create an unlicensed "application user" in your environment. This application user will be given access to your environment's data on behalf of the end user who is using your application.
 
-1. Navigate to your Dataverse environment (https://*[org]*.crm.dynamics.com).
-2. Navigate to **Settings** > **Security** > **Users**.
-3. Choose **Application Users** in the view filter.
-4. Select **+ New**.
-5. In the **Application User** form, enter the required information. 
+For instructions on creating an application user see [Create an application user](/power-platform/admin/manage-application-users#create-an-application-user).
 
-   1. In the **Application ID** field, enter the application ID of the app you registered earlier in Azure AD.
-
-    > [!div class="mx-imgBorder"]
-    > ![New app user](media/S2S-new-appuser1.png)
-
-6. After selecting **SAVE**, if all goes well, the **User Name**, **Application ID URI**, **Azure AD Object Id**, **Full Name**, and **Primary Email** fields will auto-populate with correct values where:<p/>
-&nbsp;&nbsp;**User Name** == 'Application Name + Application ID'@TenantID.com<br/>
-&nbsp;&nbsp;**Full Name** == 'Application Name'<br/>
-&nbsp;&nbsp;**Primary Email** == **User Name**
-
-    > [!div class="mx-imgBorder"]
-    > ![New app user populated](media/S2S-new-appuser.png)
-
-7. Before exiting the user form, choose **MANAGE ROLES** and assign a security role to this application user so that the application user can access the desired organization data.
+For instructions on managing security roles for an application user see [Manage roles for an application user](/power-platform/admin/manage-application-users#manage-roles-for-an-application-user)
 
 > [!NOTE]
-> In an environment, only one application user for each Azure AD registered application is supported. You will not be able to change the primary email address or username once the application user is created.
-
-> [!IMPORTANT]
+> In an environment, only one application user for each Azure AD registered application is supported. You will not be able to change the primary email address or username once the application user is created.<p/>
 > When developing a real-world application using S2S, you should use a custom security role which can be stored in a solution and distributed along with your application.
 
 ## Enable or disable application users
 
-When application users are created, they are automatically enabled. The default Application User form shows the **Status** in the form footer; the **Status** field can't be updated.  
+When application users are created, they are automatically activated. In the event that an application user’s status is deactivated and you need to activate it, you do so using the Power Platform Admin Center. You can also use the Power Platform Admin Center to deactivate an application user that is no longer used.
 
-In an event that an application user’s status is disabled and you need to enable it, you can perform the following steps to customize the Application User form to allow update to the **Status** field. You can also use these steps to disable an application user that is no longer used.
-
-1. Remove the **Status** field from the Application User form footer.
-    1. Navigate to your Dataverse environment (https://*[org]*.crm.dynamics.com).
-    1. Navigate to **Settings** > **Customizations** > **Customize the System**.
-    1. In the left pane, select **Entities** > **User** > **Forms**.
-    1. Select **Application User** in the list of forms
-    1. Select **Footer** in the actions bar.
-    1. Click on the Status grid, and then select Remove in the actions bar.
-
-    > [!div class="mx-imgBorder"]
-    > ![Remove Status field from the Application User form](media/remove-status-app-user.png "Remove Status field from the Application User form")
-
-1. Add the **Status** field to a new section in the body of the Application User form.
-    1. Select **Body** in the actions bar.
-    1. On the **Insert** tab, select **Section** > **One Column**.
-    1. Under **Field Explorer** locate the **Status** field, and drag and drop the **Status** field into the new section area.
- 
-    > [!div class="mx-imgBorder"]
-    > ![Add Status field to the Application User form](media/add-status-app-user.png "Add Status field to the Application User form")
-
-1. Save and publish the customizations
-
-Now, you can navigate to the application user and update the **Status** field as required to enable or disable the application user.
+More information: [Activate or deactivate an application user](/power-platform/admin/manage-application-users#activate-or-deactivate-an-application-user)
 
 > [!CAUTION]
 > Disabling an application user will break all the integration scenarios that use the application user.
-
 
 <a name="bkmk_coding"></a>
 

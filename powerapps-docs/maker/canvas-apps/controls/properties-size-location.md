@@ -2,17 +2,21 @@
 title: Size and location properties in Power Apps
 description: Reference information about size and location properties in Power Apps.
 author: gregli-msft
-manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 10/25/2016
+ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - chmoncay
+  - gregli-msft
 ---
 # Size and location properties in Power Apps
 ## Overview

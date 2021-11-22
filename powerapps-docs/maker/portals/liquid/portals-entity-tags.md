@@ -5,12 +5,14 @@ author: gitanjalisingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2020
+ms.date: 11/10/2021
+ms.subservice: portals
 ms.author: gisingh
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
-    - tapanm-msft
+    - nickdoelman
     - GitanjaliSingh33msft
+    - nickdoelman
 ---
 
 # Dataverse entity tags
@@ -508,20 +510,6 @@ Loaded entity view with {{ entityview.total_records }} total matching records.
 {% endentityview %}
 ```
 
-**enable\_entity\_permissions**
-
-Specifies whether to apply table permission filtering on view results. This parameter is set to false by default. If entityview is used within an entitylist block, the value of this parameter will be inherited from the list configuration.
-
-This parameter must be passed either an [boolean](liquid-types.md#boolean) value, or a string that can be parsed as a Boolean (true, false). If a value is provided for this parameter, but the value is null or otherwise cannot be parsed as a Boolean, the default of false will be used.  
-
-```
-{% entityview id:request.params.view, enable_entity_permissions:true %}
-
-Loaded entity view with {{ entityview.total_records }} total records to which the user has read permission.
-
-{% endentityview %}
-```
-
 **language\_code**
 
 A Power Apps integer language code to select the entity view localized labels (column header labels, etc.) to be loaded. If no language\_code is provided, the default language of the portal application Power Apps connection will be used.
@@ -702,7 +690,8 @@ The name of the Basic Form you wish to load.
 
 ## webform
 
-Fully renders a Power Apps-configured advanced form, by name or ID. The webform tag is only available for use in content rendered inside a [web template](store-content-web-templates.md) based page template. Attempting to use the tag inside a Rewrite-based Page Template will not render anything. You may only render a single entityform or webform tag per page. entityform or webform tags after the first will not be rendered.                
+Fully renders a Power Apps-configured advanced form, by name or ID. The webform tag is only available for use in content rendered inside a [web template](store-content-web-templates.md) based page template. Attempting to use the tag inside a Rewrite-based Page Template will not render anything. You may only render a single entityform or webform tag per page. entityform or webform tags after the first will not be rendered.
+
 `{% webform name: 'My Advanced Form' %}`
 
 ### Parameters
@@ -713,6 +702,31 @@ The name of the Advanced Form you wish to load.
 
 `{% webform name:My Advanced Form %}`
 
+## codecomponent
+
+Allows you to embed code components using a Liquid tag. For example, adding a map display custom control to a web page.
+
+> [!important]
+> - This is a preview feature.
+> - Preview features aren’t meant for production use and may have restricted functionality. 
+These features are available before an official release so that customers can get early access and provide feedback.
+
+### Parameters
+
+**name**
+
+The Id or name of the code component.
+
+**property**
+
+The values of the properties that the code component expects needs to be passed in as a key/value pair separated by “:” (colon sign), where key is the property name and the value is the JSON string value.
+
+`{% codecomponent name:abc\_SampleNamespace.MapControl controlValue:'Space Needle' controlApiKey:<API Key Value> %}`
+
+> [!NOTE]
+> The properties required might be different depending on the component you choose.
+
+See [Use code components Liquid template tag](../component-framework-liquid.md).
 
 ### See also
 

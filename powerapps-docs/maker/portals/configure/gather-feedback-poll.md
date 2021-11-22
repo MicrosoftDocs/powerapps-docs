@@ -6,10 +6,11 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2020
+ms.subservice: portals
 ms.author: sandhan
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
-    - tapanm-msft
+    - nickdoelman
     - sandhangitmsft
 ---
 
@@ -82,7 +83,7 @@ A new poll can be created in two ways:
 Now that the poll has been created, you must associate one or more poll options with this poll. On the **Options** tab of the poll, select **New Poll Option**.
 
 > [!div class=mx-imgBorder]
-> ![Add poll options](../media/add-poll-options.png "Add poll options")  
+> ![Add poll options.](../media/add-poll-options.png "Add poll options")  
 
 ## Poll options
 
@@ -103,12 +104,12 @@ A poll is a question that is being presented to the user. A poll has two or more
 When a user visits the website, they will be given the opportunity to vote on the poll displayed on the page.
 
 > [!div class=mx-imgBorder]
-> ![Submit a poll](../media/submit-poll.png "Submit a poll")  
+> ![Submit a poll.](../media/submit-poll.png "Submit a poll")  
 
 Users can vote only one time; after this, if the poll is displayed, they will see the results for that poll.
 
 > [!div class=mx-imgBorder]
-> ![Poll votes](../media/poll-votes.png "Poll votes")  
+> ![Poll votes.](../media/poll-votes.png "Poll votes")  
 
 The details of the poll voting results are stored in Dataverse as Poll Submission records. The Poll Submission table contains the following information:
 

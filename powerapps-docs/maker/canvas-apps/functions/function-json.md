@@ -2,17 +2,20 @@
 title: JSON function in Power Apps
 description: Reference information including syntax and examples for the JSON function in Power Apps.
 author: gregli-msft
-manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: nabuthuk
+ms.reviewer: tapanm
 ms.date: 05/24/2021
+ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - gregli-msft
+  - nkrb
 ---
 # JSON function in Power Apps
 
@@ -87,12 +90,12 @@ If a column has both a display name and a logical name, the result contains the 
     The **CitiesByCountry** collection is created with this data structure, which you can show by selecting **Collections** on the **File** menu and then selecting the name of the collection.
 
     > [!div class="mx-imgBorder"]
-    > ![CitiesByCountry collection](media/function-json/cities-grouped.png)
+    > ![CitiesByCountry collection.](media/function-json/cities-grouped.png)
 
     You can also show this collection by selecting **File** > **Settings** > **Upcoming features** > **Enable formula bar result view**, selecting the name of the collection in the formula bar, and then selecting the down arrow next to the name of the collection under the formula bar.
 
     > [!div class="mx-imgBorder"]
-    > ![Collection in the formula bar's result view](media/function-json/cities-grouped-resultview.png)
+    > ![Collection in the formula bar's result view.](media/function-json/cities-grouped-resultview.png)
 
 1. Insert another button, and set its **OnSelect** property to this formula:
 

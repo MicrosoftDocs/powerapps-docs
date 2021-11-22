@@ -2,17 +2,20 @@
 title: Understand tables and records in canvas apps
 description: Reference information about working with tables, columns, and records in canvas apps.
 author: gregli-msft
-manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 05/23/2019
+ms.date: 07/07/2021
+ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - gregli-msft
 ---
 # Understand tables and records in canvas apps
 
@@ -29,7 +32,7 @@ You can build a variety of formulas that take the name of a table as an argument
 * to add, remove, and rename columns in a table by specifying that table as an argument for the **[AddColumns](functions/function-table-shaping.md)**, **[DropColumns](functions/function-table-shaping.md)**, or **[RenameColumns](functions/function-table-shaping.md)** function. None of those functions modifies the original table. Instead, the function returns another table based on the other arguments that you specify.
 
 ## Elements of a table
-![Table elements](media/working-with-tables/elements-of-a-table.png)
+![Table elements.](media/working-with-tables/elements-of-a-table.png)
 
 ### Records
 Each record contains at least one category of information for a person, a place, or a thing. The example above shows a record for each product (**Chocolate**, **Bread**, and **Water**) and a column for each category of information (**Price**, **Quantity on Hand**, and **Quantity on Order**).
@@ -58,7 +61,7 @@ All values within a column are of the same data type. In the above example, the 
 You may have referred to columns as "fields" in other tools.
 
 > [!NOTE]
-> For SharePoint and Excel data sources that contain column names with spaces, Power Apps will replace the spaces with **"\_x0020\_"**. For example, **"Column Name"** in SharePoint or Excel will appear as **"Column_x0020_Name"** in Power Apps when displayed in the data layout or used in a formula.
+> For data sources such as SharePoint, Excel, or Power BI tiles that contain column names with spaces, Power Apps will replace the spaces with **"\_x0020\_"**. For example, **"Column Name"** in SharePoint, Excel, or Power BI tile will appear as **"Column_x0020_Name"** in Power Apps when displayed in the data layout or used in a formula.
 
 ### Table
 A table comprises one or more records, each with multiple fields that have consistent names across the records.
@@ -91,7 +94,7 @@ Let's walk through some simple examples.
 
     By default, the screen shows placeholder text from a table named **CustomGallerySample**. The **[Items](controls/properties-core.md)** property of the screen's **[Gallery](controls/control-gallery.md)** control is automatically set to that table.
 
-    ![Gallery](media/working-with-tables/gallery-items.png)
+    ![Gallery.](media/working-with-tables/gallery-items.png)
 
     > [!NOTE]
     > Some controls have been rearranged and enlarged for illustration purposes.
@@ -102,7 +105,7 @@ Let's walk through some simple examples.
 
     This formula incorporates the **[Sort](functions/function-sort.md)** function, which takes the name of a table as its first argument and the name of a column in that table as its second argument. The function also supports an optional third argument, which stipulates that you want to sort the data in descending order.
 
-    ![Sort for gallery](media/working-with-tables/gallery-items-sort.png)
+    ![Sort for gallery.](media/working-with-tables/gallery-items-sort.png)
 
 3. Set the **[Items](controls/properties-core.md)** property to a formula that takes the formula from the previous step as an argument and returns a table, as in this example:
 
@@ -112,7 +115,7 @@ Let's walk through some simple examples.
 
     The entire formula returns a table that contains the first two records of the **CustomGallerySample** table, sorted by the **SampleHeading** column in descending order.
 
-    ![FirstN for gallery](media/working-with-tables/gallery-items-sort-firstn.png)
+    ![FirstN for gallery.](media/working-with-tables/gallery-items-sort-firstn.png)
 
 ## Table functions and control properties
 
@@ -161,7 +164,7 @@ You can also build a formula that calculates data for an individual record, take
 
 3. In the **File** menu, select **Collections.**
 
-    ![SelectedRecord collection](media/working-with-tables/selected-collection.png)
+    ![SelectedRecord collection.](media/working-with-tables/selected-collection.png)
 
 This formula returns a record that includes not only the data from the record that's currently selected in the gallery but also each control in that gallery. For example, the record contains both a **SampleText** column, which matches the **SampleText** column in the original table, and a **Subtitle1** column, which represents the label that shows the data from that column. Select the table icon in the **Subtitle1** column to drill into that data.
 
@@ -175,7 +178,7 @@ Now that you have the selected record, you can extract individual fields from it
 1. Set the label's **[Text](controls/properties-core.md)** property to this expression:<br>
     **"Selected: " & Gallery1.Selected.SampleHeading**
 
-    ![Text property with updated label](media/working-with-tables/gallery-selected.png)
+    ![Text property with updated label.](media/working-with-tables/gallery-selected.png)
 
 You've taken the **Selected** property, which is a record, and extracted the **SampleHeading** property from it.
 
@@ -218,7 +221,7 @@ Inside these formulas, you can reference the fields of the record being processe
 
 For example, take a table of **Products**:
 
-![Products example](media/working-with-tables/requested.png)
+![Products example.](media/working-with-tables/requested.png)
 
 To create this example table in your app, insert a button, set its **OnSelect** property to this formula, and then select the button (click it while you hold down the Alt key in Power Apps Studio):
 
@@ -239,7 +242,7 @@ To determine whether any of any of these products had more requested than is ava
 
 The first argument to **Filter** is the table of records to operate on, and the second argument is a formula.  **Filter** creates a record scope for evaluating this formula in which the fields of each record are available, in this case **Product**, **Quantity Requested**, and **Quantity Available**.  The result of the comparison determines if each record should be included in the result of the function:
 
-![Filtered table](media/working-with-tables/needed.png)
+![Filtered table.](media/working-with-tables/needed.png)
 
 Adding to this example, we can calculate how much of each product to order:
 
@@ -252,7 +255,7 @@ AddColumns(
 
 Here we are adding a calculated column to the result. **AddColumns** has its own record scope that it uses to calculate the difference between what has been requested and what is available.
 
-![Added columns](media/working-with-tables/toorder.png)
+![Added columns.](media/working-with-tables/toorder.png)
 
 Finally, we can reduce the result table to just the columns that we want:
 
@@ -267,7 +270,7 @@ ShowColumns(
 )
 ```
 
-![Updated table](media/working-with-tables/toorderonly.png)
+![Updated table.](media/working-with-tables/toorderonly.png)
 
 Note that in the above, we used double quotes (") in some places and single quotes (') in other places.  Single quotes are required when referencing the value of an object, such as a field or table, in which the name of the object contains a space.  Double quotes are used when we are not referencing the value of an object but instead talking about it, especially in situations in which the object does not yet exist, as in the case of **AddColumns**.
 
@@ -282,13 +285,13 @@ If the table being operated upon is an expression, such as **Filter(** _Table_**
 
 For example, imagine having a collection **X**:
 
-![Collection X](media/working-with-tables/X.png)
+![Collection X.](media/working-with-tables/X.png)
 
 You can create this collection with **ClearCollect( X, \[1, 2\] )**.
 
 And another collection **Y**:
 
-![Collection Y](media/working-with-tables/Y.png)
+![Collection Y.](media/working-with-tables/Y.png)
 
 You can create this collection with **ClearCollect( Y, ["A", "B"] )**.
 
@@ -309,7 +312,7 @@ Ungroup(
 
 produces this table:
 
-![XY table](media/working-with-tables/XY.png)
+![XY table.](media/working-with-tables/XY.png)
 
 What is going on here?  The outermost **ForAll** function defines a record scope for **X**, allowing access to the **Value** field of each record as it is processed.  It can be accessed by simply using the word **Value** or by using **X[@Value]**.
 
@@ -342,7 +345,7 @@ ShowColumns( Products, "Product" )
 
 This formula produces this single-column table:
 
-![Single column table](media/working-with-tables/single-column.png)
+![Single column table.](media/working-with-tables/single-column.png)
 
 For a shorter alternative, specify *Table.Column*, which extracts the single-column table of just *Column* from *Table*. For example, this formula produces exactly the same result as using **ShowColumns**.
 
@@ -395,7 +398,7 @@ You can create single-column tables by specifying values in square brackets. The
 
 For example, `[ 1, 2, 3, 4 ]` is equivalent to `Table( { Value: 1 }, { Value: 2 }, { Value: 3 }, { Value: 4 } )` and returns this table:
 
-![Inline table](media/working-with-tables/inline-table.png)
+![Inline table.](media/working-with-tables/inline-table.png)
 
 
 

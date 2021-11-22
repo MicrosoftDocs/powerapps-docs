@@ -2,20 +2,26 @@
 title: SaveData, LoadData, and ClearData functions in Power Apps
 description: Reference information including syntax and examples for the SaveData, LoadData, and ClearData functions in Power Apps.
 author: gregli-msft
-manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: nabuthuk
-ms.date: 03/23/2021
+ms.reviewer: tapanm
+ms.date: 10/22/2021
+ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - gregli-msft
+  - nkrb
 ---
 # SaveData, LoadData, and ClearData functions in Power Apps
 Saves and reloads a [collection](../working-with-data-sources.md#collections) from the app host's storage.
+
+> [!NOTE]
+> These functions can now be used when playing an app in a web browser as an [experimental feature](../working-with-experimental-preview.md).  This feature is disabled by default. To enable, navigate to **Settings** > **Upcoming features** > **Experimental** > **Enabled SaveData, LoadData, ClearData on web player.**" and turn the switch on.  To submit feedback regarding this experimental feature, go to [Power Apps community forum](https://powerusers.microsoft.com/t5/Power-Apps-Community/ct-p/PowerApps1).
 
 ## Description
 The **SaveData** function stores a collection for later use under a name.  
@@ -25,7 +31,8 @@ The **LoadData** function reloads a collection by name that was previously saved
 The **ClearData** function clears the storage under a specific name or clears all storage associated with the app if no name is provided.  
 
 > [!NOTE]
-> The name shared between **SaveData**, **LoadData**, and **ClearData** is a key, not a file name. It need not be complex as names are unique to each app and there is no danger of name conflict. The name must not contain any of these characters: `*".?:\<>|/`.
+> * The name shared between **SaveData**, **LoadData**, and **ClearData** is a key, not a file name. It need not be complex as names are unique to each app and there is no danger of name conflict. The name must not contain any of these characters: `*".?:\<>|/`. 
+> * SaveData is limited to 1 MB of data for Power Apps running in Teams and in a web browser. There is no fixed limit for Power Apps running in a mobile player but there are practical limits discussed below.
 
 Use these functions to improve app-startup performance by:
 
@@ -36,8 +43,7 @@ You can also use these functions to add [simple offline capabilities](../offline
 
 You can't use these functions inside a browser when:
 
-- Authoring the app in Power Apps Studio.
-- Running the app in the web player. 
+- Authoring the app in Power Apps Studio. 
 
 To test your app, run it in Power Apps Mobile on an iPhone or Android device.
 
@@ -55,7 +61,7 @@ The loaded data will be appended to the collection. Use the **[Clear](function-c
 
 The device's built in app sandbox facilities are used to isolate saved data from other apps. 
 
-The device may also encrypt the data; or you can use a mobile device management tool such as [Microsoft Intune](https://www.microsoft.com/microsoft-365/enterprise-mobility-security/microsoft-intune).
+The device may also encrypt the data; or you can use a mobile device management tool such as [Microsoft Intune](https://www.microsoft.com/microsoft-365/enterprise-mobility-security/microsoft-intune). Data stored when playing an app in a web browser is not encrypted.
 
 ## Syntax
 **SaveData**( *Collection*, *Name* )<br>**LoadData**( *Collection*, *Name* [, *IgnoreNonexistentFile* ])
@@ -82,13 +88,14 @@ The device may also encrypt the data; or you can use a mobile device management 
 
 Following simple example captures and stores the names and pictures of everyday items while offline.  It stores the information in the device's local storage for later use. This allows the app to be closed or the device to restart without losing data.  
 
-You must have a device to work through this example as it uses the **LoadData** and **SaveData** functions that don't operate when in a web browser.
+> [!NOTE]
+> This example uses a camera control to capture images.  Since **SaveData** is limited to 1 MB of data when running in Teams or a web browser, this example will not work with more than a few images. Also, depending on the camera, it may not work with even one image. Use a device to work through this full example, or remove the camera control and picture part of this example to run in Teams or in a web browser.
 
 1. Create a blank canvas app with a tablet layout.  For more details, read [creating an app from a template](../get-started-test-drive.md) and select **Tablet layout** under **Blank app**.  
 
 1. Add a [**Text input**](../controls/control-text-input.md) control and a [**Camera**](../controls/control-camera.md) control and arrange them roughly as shown:
     > [!div class="mx-imgBorder"]  
-    > ![A text input and camera control added to a blank screen](media/function-savedata-loaddata/simple-text-camera.png)
+    > ![A text input and camera control added to a blank screen.](media/function-savedata-loaddata/simple-text-camera.png)
 
 1. Add a [**Button**](../controls/control-button.md) control.
 
@@ -131,25 +138,25 @@ You must have a device to work through this example as it uses the **LoadData** 
 
 1. When prompted, select the **MyItems** collection as the data source for this gallery.  This will set the **Items** property of the **Gallery** control: 
     > [!div class="mx-imgBorder"] 
-    > ![Gallery selection of data source](media/function-savedata-loaddata/simple-gallery-collection.png)
+    > ![Gallery selection of data source.](media/function-savedata-loaddata/simple-gallery-collection.png)
     The image control in the gallery template should default its **Image** property to **ThisItem.Picture** and the label controls should both default their **Text** properties to **ThisItem.Item**.  Check these formulas if after adding items in the following steps you don't see anything in the gallery. 
 
 1. Position the control to the right of the other controls: 
     > [!div class="mx-imgBorder"] 
-    > ![Gallery repositioned to the right of the screen](media/function-savedata-loaddata/simple-gallery-placed.png)
+    > ![Gallery repositioned to the right of the screen.](media/function-savedata-loaddata/simple-gallery-placed.png)
 
 1. Save your app.  If it's the first time it has been saved, there's no need to publish it. If it's not the first time, publish the app after you save.
 
 1. Open your app on a device such as a phone or tablet.  **SaveData** and **LoadData** can't be used in Studio or in a web browser.  Refresh your app list if you don't see your app immediately, it can take a few seconds for the app to appear on your device.  Signing out and back in to your account can help too.
     > [!div class="mx-imgBorder"] 
-    > ![App running with no items added](media/function-savedata-loaddata/simple-mobile.png) 
+    > ![App running with no items added.](media/function-savedata-loaddata/simple-mobile.png) 
     Once your app has been downloaded, you can disconnect from the network and run the app offline.
 
 1. Enter the name and take a picture of an item.
 
 2. Select the **Add Item** button.  Repeat adding items a couple of times to load up your collection.
     > [!div class="mx-imgBorder"] 
-    > ![App running with three items added](media/function-savedata-loaddata/simple-mobile-with3.png) 
+    > ![App running with three items added.](media/function-savedata-loaddata/simple-mobile-with3.png) 
 
 1. Select the **Save Data** button.  This will save the data in your collection to your local device.
 
@@ -157,26 +164,18 @@ You must have a device to work through this example as it uses the **LoadData** 
 
 1. Launch the app again.  The collection in memory will again show as empty in the gallery.
     > [!div class="mx-imgBorder"] 
-    > ![App again running with no items added](media/function-savedata-loaddata/simple-mobile.png) 
+    > ![App again running with no items added.](media/function-savedata-loaddata/simple-mobile.png) 
 
 1. Select the **Load Data** button.  The collection will be repopulated from the stored data on your device and your items will be back in the gallery.  The collection was empty before this button calls the **LoadData** function; there was no need to call **Collect** or **ClearCollect** before loading the data from storage.
     > [!div class="mx-imgBorder"] 
-    > ![App running with three items restored after calling the LoadData function](media/function-savedata-loaddata/simple-mobile-load1.png) 
+    > ![App running with three items restored after calling the LoadData function.](media/function-savedata-loaddata/simple-mobile-load1.png) 
 
 1. Select the **Load Data** button again.  The stored data will be appended to the end of the collection and a scroll bar will appear on the gallery.  If you would like to replace rather than append, use the **Clear** function first to clear out the collection before calling the **LoadData** function.
     > [!div class="mx-imgBorder"] 
-    > ![App running with six items restored after calling the LoadData function twice](media/function-savedata-loaddata/simple-mobile-load2.png) 
+    > ![App running with six items restored after calling the LoadData function twice.](media/function-savedata-loaddata/simple-mobile-load2.png) 
  
 ### More advanced offline example
 
 For a detailed example, see the article on [simple offline capabilities](../offline-apps.md).
-
-
-
-
-
-
-
-
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
