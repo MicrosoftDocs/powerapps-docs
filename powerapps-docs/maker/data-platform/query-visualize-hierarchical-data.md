@@ -1,6 +1,6 @@
 ---
 title: "Query and visualize hierarchical data with Power Apps | MicrosoftDocs"
-description: "You can get valuable business insights by visualizing hierarchically related data. Learn how to query and visualize hierarchical related data"
+description: "Learn how to query and visualize hierarchical related data"
 ms.custom: ""
 ms.date: 06/20/2018
 ms.reviewer: ""
@@ -59,11 +59,11 @@ For some tables, such as account and user, the visualizations are provided out-o
  To query the data as a hierarchy, you must set one of the table’s one-to-many or many-to-one self-referential relationships as hierarchical. To turn the hierarchy on:  
   
 
-1. On [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand the **Dataverse** section and select **Tables** in the left navigation pane.
+1. On [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand the **Data** section and click or tap **Tables** in the left navigation pane.
 
-2. Select an existing table, or [Create a new table](data-platform-create-entity.md)
+2. Click or tap an existing table, or [Create a new table](data-platform-create-entity.md)
 
-3. Select **Relationships**
+3. Click **Relationships**
 
 4.  Select a self-referential relationship.
 

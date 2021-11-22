@@ -38,7 +38,7 @@ Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium
 
 ## Create a custom table
 
-1. On the left navigation pane expand **Dataverse**, select **Tables**, and then select **New table**.
+1. On the left navigation pane expand **Data**, select **Tables**, and then select **New table**.
 
     > [!div class="mx-imgBorder"] 
     > ![New table.](media/create-custom-entity/create-new-entity.png)
@@ -137,7 +137,7 @@ Skip this step if you only want to use the Pet table in a canvas app.
 
 1. Select **Back** to close the view designer and return to Power Apps.
 
-1. On the left navigation pane, expand **Dataverse**, select **Tables**, and then select **Pet**.
+1. On the left navigation pane, expand **Data**, select **Tables**, and then select **Pet**.
 
 1. In the **Pet** table, select the **Forms** tab, and then select **Information** next to the **Main** form type to open the form designer.
 

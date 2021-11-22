@@ -2,7 +2,6 @@
 title: Show information about a user in a canvas app
 description: Learn about how to display the name and email address of the signed-in user in a canvas app.
 author: gregli-msft
-manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas

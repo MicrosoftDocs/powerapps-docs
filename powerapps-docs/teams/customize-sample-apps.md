@@ -1,13 +1,13 @@
 ---
 title: Customize sample apps installed from teams store | Microsoft Docs
 description: Learn how to customize sample apps installed from teams store.
-author: navjotm
+author: josephshum
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 12/14/2020
 ms.subservice: teams
-ms.author: namarwah
+ms.author: jshum
 ms.reviewer: tapanm
 ---
 

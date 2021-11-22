@@ -53,7 +53,7 @@ In this topic, you create or edit filters by performing the following tasks:
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
-2. Expand **Dataverse**, select **Tables**, select the table that you want, and then select the **Views** tab.
+2. Expand **Data**, select **Tables**, select the table that you want, and then select the **Views** tab.
 
 3. Select a view to open it. The view properties panel lists existing filters.
 
@@ -123,6 +123,9 @@ In this topic, you create or edit filters by performing the following tasks:
 3. Select a column of the related table for the condition.
 
 4. Select a conditional operator.
+
+   > [!NOTE]
+   > **Contains data** is the only conditional operator that can be used with a related table in a view filter.
 
 5. Select or enter a comparison value.
 

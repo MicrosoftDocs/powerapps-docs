@@ -1,13 +1,13 @@
 ---
 title: Use sample apps from teams store | Microsoft Docs
 description: Learn how to use sample apps from Teams store.
-author: navjotm
+author: josephshum
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: intro-internal
 ms.date: 10/04/2021
 ms.subservice: teams
-ms.author: namarwah
+ms.author: jshum
 ms.reviewer: tapanm
 contributors:
   - tapanm-msft
@@ -41,7 +41,7 @@ Several sample apps are available from the Teams store that you can add to your 
 :::row-end:::
 :::row:::
    :::column span="":::
-      ![How to.](media/app-icons/how-to-app-icon.png "How to app (preview)") <br> [How to](how-to.md) <br> Learn how to be a Power Apps maker.
+      ![How to.](media/app-icons/how-to-app-icon.png "How to app (preview)") <br> [How to (preview)](how-to.md) <br> Learn how to be a Power Apps maker.
    :::column-end:::
    :::column span="":::
       ![Inspection app](media/app-icons/inspection-app-icon.png "Inspection app") <br> [Inspection](inspection.md) <br> Manager and user apps for area inspections.

@@ -1,4 +1,4 @@
-- name: Best practices and guidance for the Microsoft Dataverse
+- name: Best practices and guidance for Microsoft Dataverse
   href: index.md
   items: 
   - name: Apply business logic using code
@@ -18,6 +18,8 @@
         href: business-logic/include-filtering-attributes-plugin-registration.md
       - name: Limit the registration of plug-ins for Retrieve and RetrieveMultiple messages
         href: business-logic/limit-registration-plugins-retrieve-retrievemultiple.md
+      - name: Manage plug-ins in a single solution
+        href: business-logic/manage-plug-ins-single-solution.md
       - name: Optimize custom assembly development
         href: business-logic/optimize-assembly-development.md
       - name: Remove unsupported code that uses reflection in custom workflow activities

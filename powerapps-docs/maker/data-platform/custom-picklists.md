@@ -26,7 +26,7 @@ Choices can be created in two ways, either from the **Choices** list within the 
 
 ## Creating a Choice while adding a column
 
-1. On [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand the **Dataverse** section and select **Tables** in the left navigation pane.
+1. On [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand the **Data** section and click or tap **Tables** in the left navigation pane.
 
     ![table Details.](./media/data-platform-cds-create-entity/entitylist.png "table List")
 
@@ -68,7 +68,7 @@ Choices can be created in two ways, either from the **Choices** list within the 
 
 ## Creating n Choice from the Choice list
 
-1. On [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand the **Dataverse** section and select **Choices** in the left navigation pane.
+1. On [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand the **Data** section and click or tap **Choices** in the left navigation pane.
 
     > [!div class="mx-imgBorder"] 
     > ![Choice list.](./media/data-platform-cds-newoptionset/optionsetlist.png "Choice List")

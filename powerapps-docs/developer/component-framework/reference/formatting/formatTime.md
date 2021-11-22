@@ -5,13 +5,12 @@ keywords:
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 10/01/2019
+ms.date: 11/04/2021
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 148964b5-106e-4f2e-8038-9086d29dc54f
-
 ---
 
 # formatTime
@@ -22,21 +21,20 @@ ms.assetid: 148964b5-106e-4f2e-8038-9086d29dc54f
 
 `context.formatting.formatTime(value, behavior);`
 
-## Available for 
+## Available for
 
 Model-driven and canvas apps
 
 ## Parameters
 
-| Parameter Name|Type|Required|Description|
-| ------------- |----|--------|-----------|
-|value|`Date`|Yes|The date to be formatted.|
-|behavior|`DateTimeFieldBehavior`|Yes|The behavior of the datetime object to be formatted. The `DateTimeFieldBehavior` has the following attributes:<br/>- `None =0`: Unknown DateTime behavior <br/>- `UserLocal =1`: Respect user local time. Dates stored as UTC<br/>- `TimeZoneIndependent =3`: Dates and time stored without conversion to UTC|
+| Parameter Name | Type                                                   | Required | Description                                          |
+| -------------- | ------------------------------------------------------ | -------- | ---------------------------------------------------- |
+| value          | `Date`                                                 | Yes      | The date to be formatted.                            |
+| behavior       | [`DateTimeFieldBehavior`](../DateTimeFieldBehavior.md) | Yes      | The behavior of the datetime object to be formatted. |
 
 ## Return Value
 
 Type: `string`
-
 
 ### Related topics
 

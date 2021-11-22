@@ -24,7 +24,7 @@ contributors:
   - sama-zaki
 ---
 
-# Create an Azure Synapse Link for Dataverse with your Azure Synapse Workspace (Preview)
+# Create an Azure Synapse Link for Dataverse with your Azure Synapse Workspace
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
@@ -38,9 +38,7 @@ You can use the Azure Synapse Link to connect your Microsoft Dataverse data to A
 6. View your data in Azure Synapse Analytics.
 
 > [!NOTE]
->
-> - Azure Synapse Link for Microsoft Dataverse was formerly known as Export to data lake. The service was renamed effective May 2021 and will continue to export data to Azure Data Lake as well as Azure Synapse Analytics.
-> - This feature is still in preview and preview features are are not complete, but are made available on a “preview” basis so customers can get early access and provide feedback. Preview features may have limited or restricted functionality, are not meant for production use, and may be available only in selected geographic areas.
+> Azure Synapse Link for Microsoft Dataverse was formerly known as Export to data lake. The service was renamed effective May 2021 and will continue to export data to Azure Data Lake as well as Azure Synapse Analytics.
 
 ## Prerequisites
 
@@ -51,7 +49,7 @@ You can use the Azure Synapse Link to connect your Microsoft Dataverse data to A
 > [!NOTE]
 >
 > - The storage account and Synapse workspace must be created in the same Azure Active Directory (Azure AD) tenant as your Power Apps tenant.
-> - The storage account and Synapse workspace must be created in the same region as the Power Apps environment you will use the feature in.
+> - The storage account and Synapse workspace must be created in the same region as the Power Apps environment you will use the feature in and the same resource group.
 > - You must have **Reader** role access to the resource group with the storage account and Synapse workspace.  
 > - To link the Dataverse environment to Azure Data Lake Storage Gen2, you must have the Dataverse system administrator security role.
 > - Only tables that have change tracking enabled can be exported.
@@ -61,7 +59,7 @@ You can use the Azure Synapse Link to connect your Microsoft Dataverse data to A
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select your preferred environment.
 
-2. On the left navigation pane, select **Dataverse**, select **Azure Synapse Link**, and then on the command bar, select **+ New link to data lake**.
+2. On the left navigation pane, select **Data**, select **Azure Synapse Link**, and then on the command bar, select **+ New link to data lake**.
 
     ![Navigate to Power Apps.](media/navigate-to-powerapps.png "Navigate to Power Apps")
 
@@ -99,10 +97,12 @@ After you have set up the Azure Synapse Link, you can manage the tables that are
 
 After you have set up the Azure Synapse Link, you can monitor the Azure Synapse Link under the **Tables** tab.
 
+   ![Monitor an Azure Synapse Link](media/monitoring.png "Monitor an Azure Synapse Link")
+
 - There will be a list of tables that are a part of the selected Azure Synapse Link.
 - There are different stages the sync status will circulate through. **NotStarted** indicates that the table is waiting to be synced. Once the table initial sync has been **Completed**, there will be a post processing stage where incremental updates will not take place. This may take several hours depending on the size of your data. As the incremental updates start taking place, the date for the last sync will be regularly updated.
-- The **Count** column shows the number of changes to the data. It does not show the total number of rows to the data.
-- The  **Append only** and **Partition strategy** columns show the usage of difference advanced configurations.
+- The **Count** column shows the number rows written. When **Append only** is set to **No**, this is the total number of records. When **Append Only** is set to **Yes**, this is the total number of changes.
+- The  **Append only** and **Partition strategy** columns show the usage of different advanced configurations.
 
 ## Unlinking an Azure Synapse Link
 
