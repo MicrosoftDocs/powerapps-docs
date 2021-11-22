@@ -54,15 +54,14 @@ Here's a list of good practices when building mobile offline app:
 
 2. Reduce the complexity of your appl and limit the amount of application metadata to be downloaded on the device. List then [**only add the tables and views absolutely needed**](https://docs.microsoft.com/en-us/powerapps/maker/model-driven-apps/create-a-model-driven-app#add-pages-to-your-app) in your application.
 
-  Make sure you only keep the needed views and remove the unnecessary ones. For instance, you may want to avoid adding the "All accounts" view and keep the ones like the "My active accounts".
 
-3. Keep your forms lightweight for a smooth and intuitive experience on small screen devices. You have 2 options for having mobile-optimized forms:
+3. Make sure you only keep the needed views and remove the unnecessary ones. For instance, you may want to avoid adding the **All accounts** view and keep the ones like the **My active accounts**. Keep your forms lightweight for a smooth and intuitive experience on small screen devices. You have thse two options for mobile-optimized forms:
 
    - Build dedicated forms for mobile use
 
    - Share forms across mobile and desktop experience while having some fields disabled on mobile
 
-![](media/image2.png)
+    ![](media/image2.png)
 
 
 ## Enable your app for offline use (preview)
