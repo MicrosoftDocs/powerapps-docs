@@ -13,7 +13,7 @@ ms.assetid: 767f39d4-6a8e-48f0-bf7d-69ea1191acef
 caps.latest.revision: 8
 author: "paulliew" # GitHub ID
 ms.author: "paulliew" # MSFT alias of Microsoft employees only
-manager: "sunilg" # MSFT alias of manager or PM counterpart
+manager: "mayadu" # MSFT alias of manager or PM counterpart
 ms.reviewer: "pehecke"
 search.audienceType: 
   - developer
@@ -26,9 +26,19 @@ search.app:
 
 An Azure Active Directory (AAD) group team, similar to an owner team, can own records and can have security roles assigned to the team. To read more about AAD group teams see [Manage group teams](/power-platform/admin/manage-group-teams).
 
-The following sections describe how to work with AAD group teams using the Web API.
+## Just-in-time updates
+Just-in-time updates mean that the actions are taken at run-time to eliminate the need for syncing data from Azure Active Directory and Dataverse. These actions include creating AAD group teams, adding/removing AAD group members from AAD group teams, and adding users into Dataverse.
+
+1. If the AAD group team doesn't exist and a security role is assigned or a record is assigned to the AAD group, the AAD group team is created just-in-time.
+
+2. When an AAD group member accesses Dataverse or via an non-interactive process makes a call on behalf of the user, the group member is added into the AAD group team at run-time. Similarly, when a member who was removed from the AAD group accesses Dataverse or via an non-interactive process, the group member is removed from the AAD group team.
+
+3. When an AAD group member accesses Dataverse or via an non-interactive process makes a call on behalf of the user, and the user doesn't exist in Dataverse, the user is added in Dataverse just-in-time.
+
+The following sections describe how to work with AAD group teams using the Web API. 
 
 ## Create an AAD group team
+AAD group team can be created in Dataverse by making an API call (programmatically) or by just-in-time when a security role is assigned to the AAD group, or when a record is assigned to the AAD group. 
 
 Citizen developers wanting to programmatically create a Microsoft Dataverse AAD group team can do so by providing the object ID of an existing AAD group as shown in the following command.
 
@@ -52,7 +62,7 @@ Where:
 
 ## Assign a security role to an AAD group team
 
-An administrator can assign a security role to an AAD group team after the AAD group team is created.
+An administrator can assign a security role to an AAD group team after the AAD group is created in AAD. The AAD group team is created into Dataverse automatically if it doesn’t exist in Dataverse.
 
 **Request**
 
@@ -79,6 +89,22 @@ Accept: application/json
   "@odata.id":"[Organization URI]/api/data/v9.0/roles(<role ID>)"
 }
 ```
+## Assign a record to an AAD group
+
+An administrator can assign a record to an AAD group.  The AAD group team is created into Dataverse automatically if it doesn’t exist in Dataverse.
+
+The example below shows the syntax for assigning an account record.
+
+**Request**
+
+```http
+PATCH [Organization URI]/api/data/v9.0/accounts(<account ID>)
+Accept: application/json
+
+{ 
+  "ownerid@odata.bind": "[Organization URI]/api/data/v9.0/teams(azureactivedirectoryobjectid=<group object ID>,membershiptype:0)"
+}
+```
 
 ## Assign a record to an AAD group member
 
@@ -96,6 +122,31 @@ Accept: application/json
   "ownerid@odata.bind": "[Organization URI]/api/data/v9.0/systemusers(azureactivedirectoryobjectid=<user object ID>)"
 }
 ```
+<!-- ## Share a record to an AAD group 
+
+“An administrator or a record owner can share a record to an AAD group. The AAD group team is created into Dataverse automatically if it doesn’t exist in Dataverse.
+
+The example below shows the syntax for sharing an account record.
+
+**Request**
+
+```http
+POST [Organization URI]/api/data/v9.0/GrantAccess
+Accept: application/json
+
+{
+  "Target":{
+    "accountid":"<account ID>",
+    "@odata.type":"Microsoft.Dynamics.CRM.account"
+  },
+  "PrincipalAccess":{
+    "Principal":{
+      "@odata.id":"[Organization URI]/api/data/v9.0/teams(azureactivedirectoryobjectid=<group object ID>,membershiptype:0)"
+    },
+    "AccessMask":"ReadAccess"
+  }
+}
+``` -->
 
 <!-- ## Share a record to an AAD group member
 
@@ -176,6 +227,15 @@ GET [Organization URI]/api/data/v9.0/RetrieveAadUserPrivileges(DirectoryObjectId
     …
    ]
 }
+
+```
+## Checking user or team's access rights on a table
+If you have a non-interactive process where your service needs to check if the user has access rights to a table, you can make the following call on behalf of the user by specifying the CallerID.
+
+[RetrievePrincipalAccess function](https://docs.microsoft.com/dynamics365/customer-engagement/web-api/retrieveprincipalaccess?view=dynamics-ce-odata-9)  
+
+[Impersonation call](https://docs.microsoft.com/powerapps/developer/data-platform/impersonate-another-user)
+
 ```
 
 ### See also
