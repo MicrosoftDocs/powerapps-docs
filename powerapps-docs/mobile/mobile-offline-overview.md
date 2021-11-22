@@ -5,7 +5,7 @@ author: mduelae
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 11/19/2021
+ms.date: 11/22/2021
 ms.subservice: mobile
 ms.author: mkaur
 ms.custom: ""
@@ -24,11 +24,11 @@ searchScope:
 
 Wouldn't it be great to use your mobile app without worrying about a spotty internet connection? With model-driven Power Apps, it's possiable. People that need to work from remote locations can continue to work seamlessly without worrying connectivity. 
 
-When model-driven apps are enabled for mobile offline, you'll have better device performance, a more resonsive app, and it'll save battery power with less connections made to the server. 
+When model-driven apps are enabled for mobile offline, not only can you continue doing your work, you'll also have better device performance, a more resonsive app, and it'll save battery power with less connections made to the server. 
 
 Note, you will need internet connections to sync your data back and forth with Microsoft Dataverse.
 
-To get started with mobile offline, an app maker will need to define the tables that will be available in offline use in Dataverse. When this is set up, the app automatically syncs data between your device and the server. For more information, see [Configure mobile offline](setup-mobile-offline.md)
+To get started with mobile offline, an app maker will need to define the tables that will be available in offline use in Dataverse. When this is set up, the app automatically syncs data between your device and the server. For more information, see [Set up mobile offline](setup-mobile-offline.md)
 
 You can an enable any of your model-driven apps for offline and run them on any of the following mobile apps:
 
