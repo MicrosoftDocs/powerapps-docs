@@ -43,11 +43,11 @@ If you need to use a custom security role, you may want to edit it accordingly:
 
 ##  Optimize your app for mobile offline 
 
-Before you enable mobile offline, make sure your model-driven app is optimized for offline and mobile use. Mobile apps often run on small screens with limited connectivity so it's important that the app is fast and always aviliable. In order to achieve this, make sure the app simple and lightweight. Also, consider the number of user scenarios that you want to cover and the amount of data the app uses on a mobile device.
+Before you enable offline mode, make sure your model-driven app is optimized for offline and mobile use. Mobile apps run on smaller screens with limited connectivity so it's important that the app is fast and always aviliable. To ensure a smooth experience for your users, make sure the app is simple and lightweight. Also, consider the number of user scenarios that you want to cover and the amount of data the app will use on a mobile device.
 
-It's recommended to create separate apps for each role in your organization. For example, if you have desktop users and remote mobile users then you should create two seperate apps. One online app for your office users and another mobile app  that also works in offline  mode for remote workers. This will allow you to build an optimal experiences for both set of users.
+If you have two types of users in your organizers such as desktop and remote mobile users then create two seperate apps. Optimize user experience and create an online app for your office users and another app for your mobile users with limited connectivity. 
 
-Here's a list of good practices when building mobile offline app:
+Follow these best practices when building an app for mobile offline use:
 
 1. Identify the **on-the-go scenarios** that are functionally related, such as which would be performed by a specific worker on a given day and need to be completed in the field (not at the office).
 
