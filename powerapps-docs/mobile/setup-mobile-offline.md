@@ -47,23 +47,20 @@ Before you enable mobile offline for your users, make sure your model-driven app
 
 It's recommended to have a separate application for each role in your organization. For example, if you have desktop users and users that work remotely a mobile device then you should create two seperate apps. One online app for your office users and another mobile offline app for remote workers. This way you can build optimal and simpler experiences for both set of users.
 
-### Good practices for building mobile offline applications
+Here's a list of good practices when building mobile offline app:
 
-1.  Identify the **on-the-go scenarios** that are functionally related, such as which would be performed by a specific worker on a given day and need to be completed in the field (not at the office).
+1. Identify the **on-the-go scenarios** that are functionally related, such as which would be performed by a specific worker on a given day and need to be completed in the field (not at the office).
 
-This step will help you reduce the complexity of your application and limit the amount of application metadata to be downloaded on the device.
 
-2.  List then [**only add the tables and views absolutely needed**](https://docs.microsoft.com/en-us/powerapps/maker/model-driven-apps/create-a-model-driven-app#add-pages-to-your-app) in your application.
+2. Reduce the complexity of your appl and limit the amount of application metadata to be downloaded on the device. List then [**only add the tables and views absolutely needed**](https://docs.microsoft.com/en-us/powerapps/maker/model-driven-apps/create-a-model-driven-app#add-pages-to-your-app) in your application.
 
-Make sure you only keep the needed views and remove the unnecessary ones. For instance, you may want to avoid adding the "All accounts" view and keep the ones like the "My active accounts".
+  Make sure you only keep the needed views and remove the unnecessary ones. For instance, you may want to avoid adding the "All accounts" view and keep the ones like the "My active accounts".
 
-3.  Keep your forms lightweight for a smooth and intuitive experience on small screen devices
+3. Keep your forms lightweight for a smooth and intuitive experience on small screen devices. You have 2 options for having mobile-optimized forms:
 
-You have 2 options for having mobile-optimized forms:
+   - Build dedicated forms for mobile use
 
-1.  Build dedicated forms for mobile use
-
-2.  Share forms across mobile and desktop experience while having some fields disabled on mobile
+   - Share forms across mobile and desktop experience while having some fields disabled on mobile
 
 ![](media/image2.png)
 
