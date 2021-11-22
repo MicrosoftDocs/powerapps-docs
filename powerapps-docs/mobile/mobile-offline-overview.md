@@ -38,7 +38,7 @@ You can an enable any of your model-driven apps for offline and run them on any 
 
 
 > [!IMPORTANT]
-> This topic covers the new set up offline experience using the [modern app designer](../maker/model-driven-apps/create-model-driven-app) and the [offline first experience](link TBD).
+> This topic covers the new offline set upexperience using the [modern app designer](../maker/model-driven-apps/create-model-driven-app) and the [offline first experience](link TBD).
 >   - For information about the current  mobile offline set up (which will become the previous experience), see  [Configure mobile offline synchronization](/dynamics365/mobile-app/setup-mobile-offline).
 >   - For more information on how to set up mobile offline for canvas apps, see [Develop offline-capable canvas apps](../maker/canvas-apps/offline-apps.md).
 
