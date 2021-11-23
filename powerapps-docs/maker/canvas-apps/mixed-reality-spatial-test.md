@@ -87,7 +87,7 @@ Next, we’ll set up the **Measure in MR** component to allow users to capture m
 
     :::image type="content" source="media/augmented-measure-fit-test/fit-test-formula-bar-items.png" alt-text="Screenshot showing formula bar settings for Items.":::
 
-1. Set the **ItemsLabels** property of the **Measure in MR** component to `"lebel"`.
+1. Set the **ItemsLabels** property of the **Measure in MR** component to `"label"`.
 
     :::image type="content" source="media/augmented-measure-fit-test/fit-test-advanced-properties-items.png" alt-text="Screenshot showing advanced property settings for Items and ItemsLabels.":::
 
