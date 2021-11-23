@@ -31,11 +31,9 @@ In this article, we'll create a screen in an app that will allow users to create
 
 ## Prerequisites
 
-### Mixed-reality capable devices
-
 To use the component in an app created with Power Apps, the device that runs the app (such as a phone or tablet) needs to have specific hardware and software. The device you use to create the app in the Power Apps studio (such as your PC) doesn't need to have mixed-reality capability.
 
-#### Android devices
+### Android devices
 
 For Android devices, this means you'll need to have the ARCore services installed. ARCore is installed automatically as part of the default set of apps and services on your device if it supports MR. The services are referred to as Google Play Services for AR. If necessary, you can download [Google Play Services for AR from the Google Play Store](https://play.google.com/store/apps/details?id=com.google.ar.core).
 
@@ -43,7 +41,7 @@ For more information on ARCore and supported devices, see the [list of supported
 
 For devices in China, [download ARCore from specific, supported app stores in China](https://developers.google.com/ar/discover/supported-devices#android_china).
 
-#### iOS devices
+### iOS devices
 
 For iOS devices, MR is supported on specific hardware with ARKit. See the [list of iOS devices supported for MR at the bottom of the Apple augmented reality website](https://www.apple.com/augmented-reality/).
 
