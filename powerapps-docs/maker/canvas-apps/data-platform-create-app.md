@@ -53,8 +53,6 @@ By default, the gallery shows an email address, a city, and an account name. As 
 ## Save the app
 You'll probably want to make more changes before you use this app or share it with others. As a best practice, save your work so far before you proceed.
 
-1. Near the upper-left corner, select the **File** menu.
-
 1. Select **Settings**.
 
 1. Set the app name to **AppGen**, change the background color to deep red, and change the icon to a checkmark.
