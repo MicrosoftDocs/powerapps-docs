@@ -70,7 +70,7 @@ Set up the new mobile offline experience in the [modern app designer (preview)](
 
 2. On the left nav, select **Apps** and then select the model-driven app that you want enable for offline.
 
-4. Select ... > **Edit** > **Edit in preview** to open the modern app designer.
+3. Select ... > **Edit** > **Edit in preview** to open the modern app designer.
 
     > [!div class="mx-imgBorder"]
     > ![Edit an app](media/offline-edit-app.png)
@@ -80,34 +80,38 @@ Set up the new mobile offline experience in the [modern app designer (preview)](
     > [!div class="mx-imgBorder"]
     > ![Select setting on the command bar](media/mobile-offline-image4.png)
 
-5. Select the **Upcoming** setting and then set the **Offline setup from the modern app designer** toggle to **On**.
+5. On the **Upcoming** tab, set the **Offline setup from the modern app designer** toggle to **On**.
 
     > [!div class="mx-imgBorder"]
     > ![Set the Offline setup from the modern app designer toggle to on ](media/mobile-offline-image5.png)
 
-6.  Select the **General** setting and then set the **Can be used offline** toggle to **On**.
+6.  On the **General** tab, set the **Can be used offline** toggle to **On**.
 
     > [!div class="mx-imgBorder"]
     > ![Set Can be used offline toggle to on](media/mobile-offline-image6.png)
 
-3.  Select an existing offline profile or select **New profile wiht current app data**. For more information, see [Mobile offline profiles]().
+7.  Select an existing offline profile or select **New profile wiht current app data**. For more information, see [Mobile offline profiles](setup-mobile-offline.md#mobile-offline-profiles).
 
+    > [!div class="mx-imgBorder"]
+    > ![Select a offline profile](media/mobile-offline-image7.png)
 
-4.  Close the Settings dialog, then save and publish your application. You're done, the application is setup for offline.
+8.  Close the **Settings** dialog and then save and publish your app. The app is setup for offline.
 
 ## Mobile offline profiles
 
-The offline profile represents the dataset that will be synced locally on the device and used by the app. It consists of a list of tables with the related filters to be applied when syncing the data on to the device.
+The offline profile represents the data set that will be synced locally on the device and used by the app. It consists of a list of tables with the related filters to be applied when syncing the data on to the device.
 
-**Pre-requisite**: Tables need to be enabled for offline to be able to add them to an offline profile. If you cannot add your table to your offline profile, you should make sure it is correctly enabled through the **Data &gt; Tables &gt; 'Table name' &gt; Settings:**
+### Prerequisite
 
-**Tip**: While an app can only be linked to one single profile, a profile can be shared between multiple apps. This can be useful when different apps share the same dataset to only download it once on the device and have it shared between the apps locally.
+Tables need to be enabled for offline to be able to add them to an offline profile. If you can't add your table to your offline profile, you should make sure it is correctly enabled through the **Data &gt; Tables &gt; 'Table name' &gt; Settings**.
+
+>![NOTE] App can only be linked to one profile but a profile can be shared between multiple apps. This can be useful when different apps share the same data set to only download it once on the device and have it shared between the apps locally.
 
 ### Default profiles
 
 The modern app designer comes with a capability to generate a default offline profile based on the application setup.
 
-**Note**: This option is meant to help you build an offline profile tailored for your application like identifying all the tables needed to be added to your profile but it may not be perfect:
+>![NOTE] This option is meant to help you build an offline profile tailored for your application like identifying all the tables needed to be added to your profile but it may not be perfect:
 
 -   It won't be able to compute the most optimal filters for each of your tables. It is recommended that you review and adjust the proposed filters with the most appropriate ones based on the business needs.
 
