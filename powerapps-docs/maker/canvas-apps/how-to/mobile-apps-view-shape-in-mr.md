@@ -110,7 +110,7 @@ Next, you'll add the View Shape in MR component and configure it to use the cont
 
 ## Insert the View Shape in MR component
 
-Insert the component into your app as you normally would for any other button control or component.
+Insert the component into your app.
 
 1. Open the **Insert** tab.
 
