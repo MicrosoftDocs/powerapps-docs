@@ -23,6 +23,9 @@ search.app:
 
 Any subsequent call to this method will update the displayed message in the existing progress dialog with the message specified in the latest method call.
 
+>[!NOTE]
+>Although the showProgressIndicator function is synchronous, the UI updates asynchronously. This means that any code synchronously executed immediately after calling showProgressIndicator may execute before the progress indicator is shown in the UI.
+
 >[!WARNING]
 >The progress dialog blocks the UI until it is closed using the [closeProgressIndicator](closeProgressIndicator.md) method. So, you must use this method with caution.
 

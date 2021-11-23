@@ -7,11 +7,11 @@ ms.custom:
 ms.date: 09/28/2021
 author: joel-lindstrom	
 ms.subservice: teams
-ms.author: namarwah
+ms.author: jshum
 ms.reviewer: tapanm
 contributors:
   - joel-linkstrom
-  - navjotm
+  - josephshum
   - tapanm-msft
 ---
 

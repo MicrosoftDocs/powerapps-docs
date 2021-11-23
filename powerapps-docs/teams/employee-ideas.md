@@ -5,13 +5,13 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 08/24/2021
-author: navjotm
+author: josephshum
 ms.subservice: teams
-ms.author: namarwah
+ms.author: jshum
 ms.reviewer: tapanm
 contributors:
   - joel-lindstrom
-  - navjotm
+  - josephshum
   - tapanm-msft
 ---
 
