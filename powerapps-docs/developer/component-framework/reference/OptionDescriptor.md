@@ -13,7 +13,7 @@ ms.topic: "article"
 ms.assetid: ad8659f7-f566-43db-bed1-c8484c114a59
 ---
 
-# DateTimeFieldBehavior
+# OptionDescriptor
 
 [!INCLUDE [OptionDescriptor-description](includes/OptionDescriptor-description.md)]
 
