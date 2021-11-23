@@ -47,7 +47,9 @@ For devices in China, the experience is a little different as you'll need to [do
 
 For iOS devices, MR is supported on specific hardware with ARKit. See the [list of iOS devices supported for MR at the bottom of the Apple augmented reality website](https://www.apple.com/augmented-reality/).
 
-## Insert a header and labels and controls to specify the cube’s dimensions and units
+## Add controls for cube’s dimensions and units
+
+Add header and labels to define cube's dimensions and units to the app screen.
 
 ### Header label
 
