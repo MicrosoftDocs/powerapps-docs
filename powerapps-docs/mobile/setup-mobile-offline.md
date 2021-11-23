@@ -168,14 +168,11 @@ Applying an appropriate filter for each of the tables configured in the offline 
 
    4. **Sync interval** defines the sync frequency to be applied on the device to sync the data with the server. If your table data doesn't change frequently like a catalog or product table, you may want to refresh it only once a day and hence focus on only syncing data when necessary.
 
-After having adjusted the filters, you can click on **Add** to add your table and filters to your profile.
+4. Select **Add** to add your table and filters to the profile.
 
-Once all tables are properly configured in your profile, you can click on **Done** and **publish your application** to apply your changes.
+5. When all tables are properly configured for profile, select **Done** > **publish your application**.
 
-Your app is now enabled for offline use and all users having access to your application will be able to use it offline.
-
-
-
+When the app is published, the app will be enabled for offline use. All users who have access to the app can also use it in offline mode.
 
 
 
