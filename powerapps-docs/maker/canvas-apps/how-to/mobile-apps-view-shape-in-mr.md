@@ -134,7 +134,7 @@ Once the component has been added, position it near the bottom of the screen and
 
 ## Test the app
 
-Now that all the controls have been added, save and publish the app. On a mixed-reality capable device (as defined in the Prerequisites section), open the app, and press the **Place a cube** button. This will open the **View Shape in MR** experience, allowing the user to define an area to be measured.
+Now that all the controls have been added, [save and publish](../save-publish-app.md) the app. On a [mixed-reality capable device](#prerequisites), open the app, and press the **Place a cube** button. This will open the **View Shape in MR** experience, allowing the user to define an area to be measured.
 
 Follow the on-screen instructions to calibrate the device by slowly moving it left and right while pointing the camera at a surface to be measured. Once the calibration is complete, you'll see an array of dots on the surface and a circle near the center of the screen. This circle shows where the cube can be placed initially. Once the cube has been placed, it can be moved or rotated by using touch controls.
 
