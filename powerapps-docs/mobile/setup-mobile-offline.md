@@ -5,7 +5,7 @@ author: mduelae
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 11/22/2021
+ms.date: 11/23/2021
 ms.subservice: mobile
 ms.author: mkaur
 ms.custom: ""
@@ -97,63 +97,76 @@ Set up the new mobile offline experience in the [modern app designer (preview)](
 
 8.  Close the **Settings** dialog and then save and publish your app. The app is setup for offline.
 
+
 ## Mobile offline profiles
 
-The offline profile represents the data set that will be synced locally on the device and used by the app. It consists of a list of tables with the related filters to be applied when syncing the data on to the device.
+The mobile offline profile represents the app data set that is synced locally on a user's device. It consists of a list of tables with related filters that are applied when data is synced to a user's device.
 
-### Prerequisite
+### Enable a table for offline
 
-Tables need to be enabled for offline to be able to add them to an offline profile. If you can't add your table to your offline profile, you should make sure it is correctly enabled through the **Data &gt; Tables &gt; 'Table name' &gt; Settings**.
+You need to enable a table for offline in order to add it to a offline profile. Follow these steps to verify a table is enabled for offline.
 
->![NOTE] App can only be linked to one profile but a profile can be shared between multiple apps. This can be useful when different apps share the same data set to only download it once on the device and have it shared between the apps locally.
+1. Sign in to [Power Apps (preview)](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) 
 
-### Default profiles
+2. On the left nav, select **Dataverse** > **Tables**. 
+3. Select the table that you want to add to a offline profile and then on the command bar, select **Settings**
 
-The modern app designer comes with a capability to generate a default offline profile based on the application setup.
+    > [!div class="mx-imgBorder"]
+    > ![Table settings](media/offline-table-settings.png)
+    
+4. In the **Edit table** settings, select **Advanced options**, and in the **Rows in this table** section select **Can be take offline**.
 
->![NOTE] This option is meant to help you build an offline profile tailored for your application like identifying all the tables needed to be added to your profile but it may not be perfect:
+   > ![NOTE] 
+   > App can only be linked to one profile but a profile can be shared between multiple apps. This can be useful when different apps share the same data set to only download it once on the device and have it shared between the apps locally.
 
--   It won't be able to compute the most optimal filters for each of your tables. It is recommended that you review and adjust the proposed filters with the most appropriate ones based on the business needs.
+    > [!div class="mx-imgBorder"]
+    > ![Enable table for offline use](media/mobile-offline-image8.png)
 
--   If your application is too complex, the auto-generation may be partially successful (i.e.: Only a part of the application would be properly setup for offline) and you would need to tweak the profile or the app accordingly.
 
-To generate a default profile for your application, you can select the "**+ New profile with current app data**" option. This action will open the new offline profile panel and will trigger the profile creation based on your application setup (e.g.: Tables and views setup in your application).
+### Default profile
 
-![Graphical user interface  application Description automatically generated](media/image9.png)
+The modern app designer comes with the capability to generate a default offline profile based how your app is setup.
 
-**Important**: Review and tweak the different proposed filters for each table to make sure the data downloaded on users' devices is limited to just the necessary. You can focus on the mostly used tables in your application (these have a filter which is likely set to "Organization rows").
+The default offline profile is a starting point to help you quickly build an offline profile. The default profile won't be able to compute the most optimal filters for each table. If your app is too complex, the auto generation profile might be partially successful as only a part of the app is might be setup for offline. It's recommended that you review and adjust the proposed filters based on your organization needs.
 
-The tables which have been added to the profile and have a "Related rows only" are the ones that are used in some views and need to have related information available, you may not need to modify them.
+1. To generate a default profile for your app, select **New profile with current app data**. 
+
+    > [!div class="mx-imgBorder"]
+    > ![Create a new profile](media/mobile-offline-image7-1.png)
+
+2. Review the proposed filters for each table. Make sure the data that is downloaded on users' devices is limited to what is absolutely necessary. Focus on the most used tables in your app, which in most cases have the **Organization rows** filter set.
+
+    > [!div class="mx-imgBorder"]
+    > ![Default auto generated profile](media/mobile-offline-image9.png)
+
+
+  The tables that are added to the profile, also have the **Related rows only** filter set. They are the tables that are used in some views and need to have related information available, you may not need to modify them.
 
 ### Add a table to an offline profile and apply filters
 
 Applying an appropriate filter for each of the tables configured in the offline profile is critical to limit the amount of data downloaded on users' devices.
 
-You can add a table to a profile by selecting the "**Add table**" option:
+1. To add a table to a profile select the **Add table**.
 
-![Graphical user interface  text  application  email Description automatically generated](media/image10.png)
+    > [!div class="mx-imgBorder"]
+    > ![Add a table](media/mobile-offline-image9-2.png)
 
-Once the table is selected, you can define the right filters.
+2. Select a table and then define the right filters. 
+ 
+    > [!div class="mx-imgBorder"]
+    > ![Choose a table](media/image10.png)
 
-The first section is meant to define the set of needed records. It can be one of the following options:
+3. Set the following filters:
 
--   Organization records (user, team or business unit)
+   1. Choose the row that you want to make avaliable offline. For the **Custom** option, use the [expression builder](../maker/model-driven-apps/create-edit-view-filters) which allows advanced conditions setup. 
+   2. **Relationships** lists the different relationships available between the current table and other tables added in the offline profile. Selecting a relationship will ensure related rows following that relationship will be downloaded and made available offline.
+   
+      > [!div class="mx-imgBorder"]
+      >![Graphical user interface  application Description automatically generated](media/image11.png)
 
--   All records
+   3. **Files** and **Images** lets you to define what table columns of type file or image need to be downloaded offline. For images, each column can be selected granularl  but not for files it's all or nothing.
 
--   Related records only
-
--   Custom (this option relies on the expression builder which allows advanced conditions setup)
-
-The second section (relationships) lists the different relationships available between the current table and other tables added in the offline profile.
-
-Selecting a relationship will ensure related records following that relationship will be downloaded and made available offline.
-
-![Graphical user interface  application Description automatically generated](media/image11.png)
-
-The third section (Files / Images) allows you to define what table columns of type file or image need to be downloaded offline. For images, each column can be selected granularly but not for files (it's all or nothing).
-
-The last section (Sync interval) defines the sync frequency to be applied on the device to sync the data with the server. If your table data doesn't change frequently like a catalog or product table, you may want to refresh it only once a day and hence focus on only syncing data when necessary.
+   4. **Sync interval** defines the sync frequency to be applied on the device to sync the data with the server. If your table data doesn't change frequently like a catalog or product table, you may want to refresh it only once a day and hence focus on only syncing data when necessary.
 
 After having adjusted the filters, you can click on **Add** to add your table and filters to your profile.
 
