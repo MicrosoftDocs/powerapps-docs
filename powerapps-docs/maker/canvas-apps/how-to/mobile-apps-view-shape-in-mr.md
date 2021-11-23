@@ -55,18 +55,18 @@ With an app open for editing in [Power Apps Studio](https://create.powerapps.com
 
 | Property       | Value               |
 |----------------|---------------------|
-| Text           | "Place A Cube"      |
-| Font size      | 24                  |
-| Font weight    | FontWeight.Semibold |
-| Text alignment | Align.Center        |
-| Width          | Parent.Width        |
+| Text           | `"Place A Cube"`      |
+| Font size      | `24`                  |
+| Font weight    | `FontWeight.Semibold` |
+| Text alignment | `Align.Center`        |
+| Width          | `Parent.Width`        |
 
 Then in the Advanced tab, modify the following properties:
 
 | Property | Value                  |
 |----------|------------------------|
-| Color    | RGBA(255, 255, 255, 1) |
-| Fill     | RGBA(56, 96, 178, 1)   |
+| Color    | `RGBA(255, 255, 255, 1)` |
+| Fill     | `RGBA(56, 96, 178, 1)`   |
 
 This change will provide a header for the screen.
 
@@ -75,10 +75,10 @@ This change will provide a header for the screen.
 1. Add four text labels to the screen. These will be the labels to identify the
 controls we'll add later. For each label, modify the **Text** property to one of the following:
 
-    - “Unit Type”
-    - “Width”
-    - “Height”
-    - “Depth”
+    - `Unit Type`
+    - `Width`
+    - `Height`
+    - `Depth`
 
 1. Set the **Width** property of these labels to 160 and position them so they're stacked vertically in the order described above, near the top of the screen and to the left side.
 
@@ -88,9 +88,9 @@ controls we'll add later. For each label, modify the **Text** property to one of
 
     | Property | Value                                       |
     |----------|---------------------------------------------|
-    | Items    | ["Centimeters", "Feet", "Inches", "Meters"] |
-    | Default  | "Feet"                                      |
-    | Width    | 280                                         |
+    | Items    | `["Centimeters", "Feet", "Inches", "Meters"]` |
+    | Default  | `"Feet"`                                      |
+    | Width    | `280`                                         |
 
 1. Position the control to the right of the Unit Type label.
 
@@ -98,9 +98,9 @@ controls we'll add later. For each label, modify the **Text** property to one of
 
     | Property | Value             |
     |----------|-------------------|
-    | Default  | 2                 |
-    | Format   | TextFormat.Number |
-    | Width    | 144               |
+    | Default  | `2`                 |
+    | Format   | `TextFormat.Number` |
+    | Width    | `144`               |
 
 1. Position the text input control named *txtShapeWidth* to the right of the Width label. Likewise, position the controls named *txtShapeHeight* and *txtShapeDepth* to the right of the Height and Depth labels, respectively.
 
@@ -121,12 +121,12 @@ Once the component has been added, position it near the bottom of the screen and
 
 | Property    | Value                      |
 |-------------|----------------------------|
-| Text        | "Place a cube"             |
-| ShapeWidth  | txtShapeWidth.Text         |
-| ShapeHeight | txtShapeHeight.Text        |
-| ShapeDepth  | txtShapeDepth.Text         |
-| Units       | drpUnitType.Selected.Value |
-| Width       | 280                        |
+| Text        | `"Place a cube"`             |
+| ShapeWidth  | `txtShapeWidth.Text`         |
+| ShapeHeight | `txtShapeHeight.Text`        |
+| ShapeDepth  | `txtShapeDepth.Text`         |
+| Units       | `drpUnitType.Selected.Value` |
+| Width       | `280`                        |
 
 :::image type="content" source="media/build-mobile-apps-view-shape-in-mr/view-in-shape.png" alt-text="View shape in mixed-reality component on a screen.":::
 
