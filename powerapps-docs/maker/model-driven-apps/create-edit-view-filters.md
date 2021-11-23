@@ -124,6 +124,9 @@ In this topic, you create or edit filters by performing the following tasks:
 
 4. Select a conditional operator.
 
+   > [!NOTE]
+   > **Contains data** is the only conditional operator that can be used with a related table in a view filter.
+
 5. Select or enter a comparison value.
 
     > [!div class="mx-imgBorder"] 
