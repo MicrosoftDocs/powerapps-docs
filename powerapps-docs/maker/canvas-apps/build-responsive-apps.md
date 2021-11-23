@@ -54,7 +54,7 @@ Before you start using the responsive layouts, you need to do the following:
 
 1. Go to [Power Apps](https://make.powerapps.com).
 1. Open the app where you want to use the responsive layout.
-1. Go to **File** > **Settings** > **Display** to disable **Scale to fit**, **Lock aspect ratio**, and **Lock orientation** and select **Apply**.
+1. Go to **Settings** > **Display** to disable **Scale to fit**, **Lock aspect ratio**, and **Lock orientation** and select **Apply**.
 
    ![Settings disable lock orientation.](media/create-responsive-layout/settings-disable-lock-orientation.png "Settings disable lock orientation")
 
@@ -110,7 +110,7 @@ To build a responsive screen:
 1. Sign in to [Power Apps](https://make.powerapps.com).
 1. Select **Apps** from left navigation. Select the **New app** drop-down menu and then select **Canvas**.
 1. On the **Blank app** tile, select **Tablet layout**.
-1. Select **File** > **Settings** > **Display** and disable **Scale to fit**, **Lock aspect ratio**, and **Lock orientation** and select **Apply**. 
+1. Select **Settings** > **Display** and disable **Scale to fit**, **Lock aspect ratio**, and **Lock orientation** and select **Apply**. 
 1. Now from the **Insert** panes in the left sidebar, under **Layout** tab, select **Horizontal container**. 
 
    > [!div class="mx-imgBorder"]

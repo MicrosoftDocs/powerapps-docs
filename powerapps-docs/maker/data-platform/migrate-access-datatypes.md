@@ -7,7 +7,7 @@ ms.topic: conceptual
 ms.custom: 
   - model
 ms.reviewer: matp
-ms.date: 10/18/2021
+ms.date: 11/19/2021
 ms.subservice: dataverse-maker
 ms.author: NHelgren
 search.audienceType: 
@@ -51,21 +51,23 @@ In the following table, the data type mappings supported can assist you in plann
 |Lookup Wizard  | Lookup   | Yes  |
 |Multi-Value Lookups   | Choice    | Yes<sup>1</sup>        |
 |Hyperlink  | URL   |  Yes       |
+|Attachment |File | Yes<sup>2</sup>|
 
 <sup>1</sup>One column multi-value lookups only. Because of the difference in how Dataverse and Access identify these lookups, a manual process is needed in Access before migration. More information: [Export multi-value lookup Access Fields to Dataverse choice columns](#export-multi-value-lookup-access-fields-to-dataverse-choice-columns)
+
+<sup>2</sup> Attachments can be migrated for single attachments per column at this time. 
 
 ### Access data types not supported for migration to Dataverse
 
 - OLE Object
-- Attachment
-- Number Single<sup>2</sup>
-- Number Double<sup>2</sup>
-- Calculated<sup>3</sup>
+- Number Single<sup>3</sup>
+- Number Double<sup>3</sup>
+- Calculated<sup>4</sup>
 - Rich Text
 
-<sup>2</sup>Dataverse includes a float data type; however, it has lower limits than Access. More information including a workaround: [Migrate Number:Single and Number:Double columns to Dataverse](#migrate-numbersingle-and-numberdouble-columns-to-dataverse)
+<sup>3</sup>Dataverse includes a float data type; however, it has lower limits than Access. More information including a workaround: [Migrate Number:Single and Number:Double columns to Dataverse](#migrate-numbersingle-and-numberdouble-columns-to-dataverse). You can change these types to decimal in Access and then migrate without data loss.
 
-<sup>3</sup>When you migrate, the calculated field will migrate the last calculated value into a column. Users will need to configure new calculation columns in Dataverse. More information: [Define calculated columns to automate calculations](define-calculated-fields.md)
+<sup>4</sup>When you migrate, the calculated field will migrate the last calculated value into a column. Users will need to configure new calculation columns in Dataverse. More information: [Define calculated columns to automate calculations](define-calculated-fields.md)
 
 ## Access and Dataverse data size comparison
 
@@ -77,13 +79,13 @@ You'll notice some Dataverse columns don't have the same size capacity as Access
 |Long Text/Multiline Text  | 1 GB   | 1,048,576 characters    |
 |Autonumber   |  2,147,483,647  | 4,000 characters    |
 |Date and Time   |  Standard date and time | Standard data and time   |
-|Currency<sup>4</sup>  |  Min/max -922,337,203,685,477/+922,337,203,685,477   |  Min/max -922,337,203,685,477/+922,337,203,685,477   |
+|Currency<sup>5</sup>  |  Min/max -922,337,203,685,477/+922,337,203,685,477   |  Min/max -922,337,203,685,477/+922,337,203,685,477   |
 |Decimal Number  | Min/max -10^28-1/+10^28-1 up to 28 decimals   |  Min/max -100,000,000,000/+100,000,000,000 up to 10 decimal places    |
 |Yes/No  |  Boolean   | Boolean   |
 |Int/Whole Number   |  Min/max -2^31/+2^31   | Min/max -2,147,483,647/+2,147,483,647   |
 |Lookup Wizard/ Lookup   | Multiple column return   |  Single column return   |
 
-<sup>4</sup>The migration tool assumes the currency coming from Access is the Dataverse base currency.
+<sup>5</sup>The migration tool assumes the currency coming from Access is the Dataverse base currency.
 
 Calculated fields in Access will currently create a column for the content type in Dataverse that stores the calculated value. This could be text, whole number, decimal, and so on. Dataverse can be used to create calculated fields to enable calculations. 
 

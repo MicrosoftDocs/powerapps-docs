@@ -62,9 +62,9 @@ If you don't have a license for Power Apps, you can [sign up for a free 30-day t
 
 ## Save the app
 
-1. Near the upper-left corner, select the **File** tab.
+1. Select **Settings** and review the default settings.
 
-1. In the **Settings** page, review the default settings.
+1. Select **File**.
 
 1. Select **Save as**.
 

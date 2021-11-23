@@ -214,7 +214,7 @@ Components in a component library can never have access to app scope, as there's
 > [!NOTE]
 > This feature is retired. [Component libraries](component-library.md) are the recommended way to reuse the components across the apps. When using component library, an app maintains dependencies on the components it uses. The app maker will be alerted when the updates to dependent components become available. Hence, all new reusable components should be created within the component libraries instead.
 
-The ability to import and export of components is disabled by default since this feature is retired. While recommended method to work with components is to use [component libraries](component-library.md), you can still enable this feature on a per-app basis as an exception until the feature is removed. To do this, [edit your app](edit-app.md) in Power Apps Studio and then, go to **File** > **Settings** > **Upcoming features** > **Retired** > Set **Export and import components** to On.
+The ability to import and export of components is disabled by default since this feature is retired. While recommended method to work with components is to use [component libraries](component-library.md), you can still enable this feature on a per-app basis as an exception until the feature is removed. To do this, [edit your app](edit-app.md) in Power Apps Studio and then, go to **Settings** > **Upcoming features** > **Retired** > Set **Export and import components** to On.
 
 ![Enable export and import of components.](./media/create-component/settings-enable-import-export.png "Enable export and import of components")
 
