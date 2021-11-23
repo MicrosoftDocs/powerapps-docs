@@ -33,9 +33,7 @@ Verify the following prerequisites before you enable mobile offline:
 
 - Users with the **basic user** role can open and use an offline application. This role has the read access to the **mobile offline profile** table.
 
-If you need to use a custom security role, edit it accordingly:
-
-- Edit your security role &gt; Core Records tab &gt; Mobile Offline profile.
+   If you have a custom security role, make sure **Mobile Offline profile** with **Read** privilege. For more information, see [Miscellaneous privileges - Core Records tab](/power-platform/admin/miscellaneous-privileges).
 
   > [!div class="mx-imgBorder"] 
   > ![Required security roles to use mobile offline.](media/mobile-offline-image1.png)
