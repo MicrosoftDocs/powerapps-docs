@@ -129,7 +129,7 @@ Aggregate functions can also cause confusion. Take **Average** over a column of 
 ## Changing the limit
 500 is the default number of records, but you can change this number for an entire app:
 
-1. On the **File** tab, select **Settings**.
+1. Select **Settings**.
 1. Under **General**, change the **Data row limit** setting from 1 to 2000.
 
 In some cases, you'll know that 2,000 (or 1,000 or 1,500) will satisfy the needs of your scenario. With care, you can increase this number to fit your scenario. As you increase this number, your app's performance may degrade, especially for wide tables with lots of columns. Still, the best answer is to delegate as much as you can.
