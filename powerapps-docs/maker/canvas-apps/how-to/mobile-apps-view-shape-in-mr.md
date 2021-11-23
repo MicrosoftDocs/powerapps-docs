@@ -20,7 +20,7 @@ contributors:
 
 # Create an app to view a shape in mixed reality
 
-You can use the **View Shape in MR** component in your app to let users see if a simple cube might fit within a specified space. They might want to do this to see how a certain object that you provide would fit in their space. If you have a 3D model or head-on picture for the object, you'd like to fit test consider using the [View in MR](../mixed-reality-component-view-mr.md) instead.
+You can use the **View Shape in MR** component in your app to let users see if a simple cube might fit within a specified space. They might want to do this to see how a certain object that you provide would fit in their space. If you have a 3D model or a head-on picture for the object, you'd like to fit test consider using the [View in MR](../mixed-reality-component-view-mr.md) instead.
 
 The component creates a button in your app. When app users select the button, it overlays a cube onto the live camera feed of the device. You set up the dimensions of the cube when you edit the component in Power Apps.
 
@@ -35,7 +35,7 @@ In this article, we'll create a screen in an app that will allow users to create
 
 To use the component in an app created with Power Apps, the device that runs the app (such as a phone or tablet) needs to have specific hardware and software. The device you use to create the app in the Power Apps studio (such as your PC) doesn't need to have mixed-reality capability.
 
-### For Android devices
+#### Android devices
 
 For Android devices, this means you'll need to have the ARCore services installed. ARCore is installed automatically as part of the default set of apps and services on your device if it supports MR. The services are referred to as Google Play Services for AR. If necessary, you can download [Google Play Services for AR from the Google Play Store](https://play.google.com/store/apps/details?id=com.google.ar.core).
 
@@ -43,7 +43,7 @@ For more information on ARCore and supported devices, see the [list of supported
 
 For devices in China, [download ARCore from specific, supported app stores in China](https://developers.google.com/ar/discover/supported-devices#android_china).
 
-### For iOS devices
+#### iOS devices
 
 For iOS devices, MR is supported on specific hardware with ARKit. See the [list of iOS devices supported for MR at the bottom of the Apple augmented reality website](https://www.apple.com/augmented-reality/).
 
@@ -74,7 +74,7 @@ This change will provide a header for the screen.
 
 ### Labels and controls to specify cube properties
 
-1. Add four text labels to the screen. These will be the labels to identify the
+1. Add four text labels to the screen. These labels will be used to identify the
 controls we'll add later. For each label, modify the **Text** property to one of the following:
 
     - `Unit Type`
@@ -96,7 +96,7 @@ controls we'll add later. For each label, modify the **Text** property to one of
 
 1. Position the control to the right of the Unit Type label.
 
-1. Add three text input controls, renaming each *txtShapeHeight*, *txtShapeWidth*, and *txtShapeDepth*. Change the following properties for all three controls:
+1. Add three text input controls, and rename them to *txtShapeHeight*, *txtShapeWidth*, and *txtShapeDepth*. Change the following properties for all three controls:
 
     | Property | Value             |
     |----------|-------------------|
@@ -106,7 +106,7 @@ controls we'll add later. For each label, modify the **Text** property to one of
 
 1. Position the text input control named *txtShapeWidth* to the right of the Width label. Likewise, position the controls named *txtShapeHeight* and *txtShapeDepth* to the right of the Height and Depth labels, respectively.
 
-Next, you'll add the View Shape in MR component and configure it to use the controls that were created to provide dynamic dimensions to the MR cube it will generate.
+Next, you'll add the View Shape in MR component and configure it to use the controls that were created to provide dynamic dimensions to the MR cube it'll generate.
 
 ## Insert the View Shape in MR component
 
@@ -119,18 +119,18 @@ Insert the component into your app.
 1. Select the component **View Shape in MR** to place it in the center of the
     app screen, or drag and drop it to position it anywhere on the screen.
 
-Once the component has been added, position it near the bottom of the screen and change the following properties:
+1. Once the component has been added, position it near the bottom of the screen and change the following properties:
 
-| Property    | Value                      |
-|-------------|----------------------------|
-| Text        | `"Place a cube"`             |
-| ShapeWidth  | `txtShapeWidth.Text`         |
-| ShapeHeight | `txtShapeHeight.Text`        |
-| ShapeDepth  | `txtShapeDepth.Text`         |
-| Units       | `drpUnitType.Selected.Value` |
-| Width       | `280`                        |
-
-:::image type="content" source="media/build-mobile-apps-view-shape-in-mr/view-in-shape.png" alt-text="View shape in mixed-reality component on a screen.":::
+    | Property    | Value                      |
+    |-------------|----------------------------|
+    | Text        | `"Place a cube"`             |
+    | ShapeWidth  | `txtShapeWidth.Text`         |
+    | ShapeHeight | `txtShapeHeight.Text`        |
+    | ShapeDepth  | `txtShapeDepth.Text`         |
+    | Units       | `drpUnitType.Selected.Value` |
+    | Width       | `280`                        |
+    
+    :::image type="content" source="media/build-mobile-apps-view-shape-in-mr/view-in-shape.png" alt-text="View shape in mixed-reality component on a screen.":::
 
 ## Test the app
 
@@ -138,7 +138,7 @@ Now that all the controls have been added, [save and publish](../save-publish-ap
 
 Follow the on-screen instructions to calibrate the device by slowly moving it left and right while pointing the camera at a surface to be measured. Once the calibration is complete, you'll see an array of dots on the surface and a circle near the center of the screen. This circle shows where the cube can be placed initially. Once the cube has been placed, it can be moved or rotated by using touch controls.
 
-To move the cube, press on it and slide it to where you would like it to be placed. To rotate the cube, press one finger to the screen then swipe with another finger right or left.
+To move the cube, press on it and slide it to where you would like it to be placed. To rotate the cube, press one finger to the screen, and then swipe with another finger right or left.
 
 Use the back button in the top-left corner to return to the app screen and change one or more of the width, height, depth, or unit type settings. Select the **Place a cube** button and place the new cube.
 
