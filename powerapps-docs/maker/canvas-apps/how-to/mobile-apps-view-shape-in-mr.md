@@ -41,7 +41,7 @@ For Android devices, this means you'll need to have the ARCore services installe
 
 For more information on ARCore and supported devices, see the [list of supported devices on the Google ARCore support site](https://developers.google.com/ar/discover/supported-devices#android_play).
 
-For devices in China, the experience is a little different as you'll need to [download ARCore from specific, supported app stores in China](https://developers.google.com/ar/discover/supported-devices#android_china).
+For devices in China, [download ARCore from specific, supported app stores in China](https://developers.google.com/ar/discover/supported-devices#android_china).
 
 ### For iOS devices
 
