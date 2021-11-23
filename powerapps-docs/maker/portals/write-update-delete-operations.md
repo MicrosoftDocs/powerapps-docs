@@ -1,6 +1,6 @@
 ---
-title: Portals write, update and delete operations using the Web API
-description: Learn how to perform write, update and delete Web API operations on Power Apps portals.
+title: Portals Web API write, update, and delete operations
+description: Learn how to perform Web API write, update, and delete operations in Power Apps portals.
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
@@ -17,7 +17,7 @@ contributors:
 
 # Use portals Web API write, update, and delete operations
 
-You can perform [available Web API operations](web-api-overview.md#web-api-operations) in portals. Web API operations consist of HTTP requests and responses. This article shows sample write, update, and delete operations, methods, URI, and sample JSON you can use in the HTTP requests.
+You can perform [available Web API operations](web-api-overview.md#web-api-operations) in portals. Web API operations consist of HTTP requests and responses. This article provides sample write, update, and delete operations, methods, URI, and sample JSON you can use in the HTTP requests.
 
 > [!IMPORTANT]
 > - **Your portal version must be 9.3.3.x or later for this feature to work.**
@@ -49,11 +49,11 @@ You can perform [available Web API operations](web-api-overview.md#web-api-opera
 
 #### Sample JSON for creating related table records in one operation
 
-For example, the following request body posted to the Account table set will create a total of four new tables&mdash;including the account&mdash;in the context of creating the account.
+As an example, the following request body posted to the **Account** table set will create a total of four new tables—including the account—in the context of creating the account.
 
-- A contact is created because it's defined as an object property of the single-valued navigation property primarycontactid.
-- An opportunity is created because it's defined as an object within an array that's set to the value of a collection-valued navigation property opportunity_customer_accounts.
-- A task is created because it's defined as an object within an array that's set to the value of a collection-valued navigation property Opportunity_Tasks.
+- A contact is created because it's defined as an object property of the single-valued navigation property `primarycontactid`.
+- An opportunity is created because it's defined as an object within an array that's set to the value of a collection-valued navigation property `opportunity_customer_accounts`.
+- A task is created because it's defined as an object within an array that's set to the value of a collection-valued navigation property `Opportunity_Tasks`.
 
 ```json
 {
@@ -217,7 +217,7 @@ For example, the following request body posted to the Account table set will cre
 </table>
 
 ### Remove a reference to a table for a single-valued navigation property
-For a single-valued navigation property, remove the $id query string parameter.
+For a single-valued navigation property, remove the **$id** query string parameter.
 <table>
   <tr>
     <th>Operation</th>
@@ -254,7 +254,7 @@ New tables can be created with relationships by using *deep* insert.
 
 ### Associate tables on update by using a single-valued navigation property
 
-You can associate tables on update by using the same message described in [Basic update](#basic-update), earlier in this topic, but you must use the `@odata.bind` annotation to set the value of a single-valued navigation property. The following example changes the account associated to an opportunity by using the customerid_account single-valued navigation property.
+You can associate tables on update by using the same message described in [Basic update](#basic-update) earlier in this topic, but you must use the `@odata.bind` annotation to set the value of a single-valued navigation property. The following example changes the account associated to an opportunity by using the `customerid_account` single-valued navigation property.
 
 ### Associate tables on update by using a single-valued navigation property
 
@@ -360,7 +360,7 @@ This sample demonstrates how to create, update, and delete table records by usin
 [Tutorial: Use portal Web API](webapi-tutorial.md)
 
 ### See also
-[Web API overview](web-api-overview.md)</br>
+[Portals Web API overview](web-api-overview.md)</br>
 [Portals read operations using the Web API](read-operations.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

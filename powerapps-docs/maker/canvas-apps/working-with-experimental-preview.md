@@ -2,7 +2,6 @@
 title: Understand experimental, preview, and retired features in Power Apps
 description: Learn about experimental, preview, and retired features.
 author: gregli-msft
-manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas

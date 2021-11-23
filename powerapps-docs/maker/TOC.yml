@@ -121,6 +121,8 @@
         href: ../user/grid-filters-advanced.md      
     - name: Charts and dashboards
       items:
+      - name: Visualize data in a view with Power BI service (preview)
+        href: ../user/visualize-in-power-bi.md
       - name: Track your progress with dashboards and charts
         href: ../user/track-your-progress-with-dashboard-and-charts.md
       - name: View charts on a page or in a record
@@ -131,6 +133,8 @@
         href: ../user/add-powerbi-dashboards.md      
     - name: Collaboration
       items:
+      - name: Collaborate with others (preview)
+        href: ../user/collaboration.md
       - name: Use OneDrive for Business
         href: ../user/one-drive.md
       - name: Take notes by using OneNote
@@ -383,10 +387,14 @@
                 href: ./canvas-apps/mixed-reality-component-view-shape.md
               - name: View 3D models and 2D images in mixed reality
                 href: ./canvas-apps/mixed-reality-component-view-mr.md
-              - name: Measure in mixed reality
+              - name: Take measurements in mixed reality
                 href: ./canvas-apps/mixed-reality-component-measure-distance.md
+              - name: Validate measurements in mixed reality using a spatial test filter
+                href: ./canvas-apps/mixed-reality-spatial-test.md
               - name: Upload photos from mixed reality
                 href: ./canvas-apps/mixed-reality-take-upload-photos.md
+              - name: Load models from CGTrader into mixed reality components (preview)
+                href: ./canvas-apps/mixed-reality-cgtrader.md
           - name: "Add geospatial components"
             items:
             - name: Geospatial components
@@ -991,6 +999,8 @@
       href: ./canvas-apps/how-to/create-app-barcode-scanner.md
     - name: Create an app that uses mobile sensors
       href: ./canvas-apps/how-to/mobile-sensors.md
+    - name: Create an app to view a shape in mixed reality
+      href: ./canvas-apps/how-to/mobile-apps-view-shape-in-mr.md
   - name: Save and publish an app
     href: ./canvas-apps/save-publish-app.md
   - name: Share an app and its dependencies
@@ -1007,6 +1017,8 @@
       href: ./canvas-apps/embed-powerapps-powerbi.md    
   - name: Manage an app
     items:
+    - name: Change app name and tile
+      href: ./canvas-apps/set-name-tile.md
     - name: Edit an app
       href: ./canvas-apps/edit-app.md
     - name: Export and import an app
@@ -1017,8 +1029,6 @@
       href: ./canvas-apps/license-designation.md
     - name: Restore a previous version
       href: ./canvas-apps/restore-an-app.md
-    - name: Change app name and tile
-      href: ./canvas-apps/set-name-tile.md
   - name: Test an app with Test Studio
     items:
     - name: Test Studio Overview
@@ -1195,7 +1205,7 @@
           items:
           - name: Use Monitor to troubleshoot forms
             href: ./model-driven-apps/monitor-form-checker.md
-      - name: Use custom pages within model-driven apps (preview)
+      - name: Use custom pages within model-driven apps
         items:
         - name: Custom pages overview
           href: ./model-driven-apps/model-app-page-overview.md
@@ -1211,8 +1221,6 @@
           href: ./model-driven-apps/page-canvas-components.md   
         - name: Add code components to a custom page
           href: ./model-driven-apps/page-code-components.md     
-        - name: Add connectors to a custom page
-          href: ./model-driven-apps/page-data-connectors.md
         - name: Known issues with custom pages
           href: ./model-driven-apps/model-app-page-issues.md
         - name: Use monitor to troubleshoot custom pages
@@ -1875,7 +1883,9 @@
           - name: "Tutorial: Use code components in portals"
             href: ./portals/component-framework-tutorial.md            
           - name: Use code components Liquid template tag
-            href: ./portals/component-framework-liquid.md           
+            href: ./portals/component-framework-liquid.md
+          - name: Implement a sample portal Web API component
+            href: ./portals/implement-webapi-component.md                        
         - name: Use Microsoft Power Platform CLI
           items:
           - name: Overview of portals support for Microsoft Power Platform CLI 
@@ -2228,7 +2238,13 @@
     - name: Advanced Configuration Settings
       href: ./data-platform/azure-synapse-link-advanced-configuration.md
     - name: Azure Synapse Link FAQ
-      href: ./data-platform/export-data-lake-faq.yml      
+      href: ./data-platform/export-data-lake-faq.yml
+    - name: Application Lifecycle Management
+      items:
+      - name: Transport a configuration across environments
+        href: ./data-platform/azure-synapse-link-solution.md
+      - name: Environment Lifecycle Events
+        href: ./data-platform/azure-synapse-link-olc.md     
     - name: Analyze with Azure Synapse Analytics
       items:
       - name: Query data with serverless SQL pool
@@ -2614,6 +2630,8 @@
     href: ./canvas-apps/common-issues-and-resolutions.md
   - name: Get a session or app ID
     href: ./canvas-apps/get-sessionid.md
+  - name: Change Power Apps Studio version
+    href: ./canvas-apps/studio-versions.md
   - name: Troubleshoot startup issues for Power Apps
     href: ../troubleshooting-startup-issues.md
   - name: Troubleshoot Power Query

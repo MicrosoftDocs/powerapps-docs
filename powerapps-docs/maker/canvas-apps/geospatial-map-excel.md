@@ -1,21 +1,21 @@
 ---
 title: Insert pins from data source
 description: Add customized pins to your map component in Power Apps by using a dataset.
-author: iaanw
-manager: shellyha
+author: anuitz
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas, ce06122020
 ms.reviewer: tapanm
 ms.date: 3/2/2021
 ms.subservice: canvas-maker
-ms.author: iawilt
+ms.author: anuitz
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 contributors:
-  - iaanw
+  - tapanm-msft
+  - anuitz
 ---
 
 

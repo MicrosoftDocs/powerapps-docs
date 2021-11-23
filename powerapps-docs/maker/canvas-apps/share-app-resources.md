@@ -2,7 +2,6 @@
 title: Share resources used by canvas apps
 description: Understand how you share resources that your canvas app uses.
 author: lancedMicrosoft
-manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas

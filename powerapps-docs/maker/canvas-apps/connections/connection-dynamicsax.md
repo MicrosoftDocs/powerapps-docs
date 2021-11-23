@@ -2,7 +2,6 @@
 title: Connect to Dynamics AX from Power Apps
 description: See the available Dynamics AX functions, responses, and examples.
 author: lancedMicrosoft
-manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
