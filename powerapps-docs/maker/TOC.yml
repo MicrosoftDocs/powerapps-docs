@@ -999,8 +999,8 @@
       href: ./canvas-apps/how-to/create-app-barcode-scanner.md
     - name: Create an app that uses mobile sensors
       href: ./canvas-apps/how-to/mobile-sensors.md
-    - name: Build mobile apps with View Shape in MR component
-      href: ./canvas-apps/how-to/build-mobile-apps-view-shape-in-mr.md
+    - name: Create an app to view a shape in mixed reality
+      href: ./canvas-apps/how-to/mobile-apps-view-shape-in-mr.md
   - name: Save and publish an app
     href: ./canvas-apps/save-publish-app.md
   - name: Share an app and its dependencies

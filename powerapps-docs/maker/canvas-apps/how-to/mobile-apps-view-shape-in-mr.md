@@ -1,5 +1,5 @@
 ---
-title: Build mobile apps with View Shape in MR component
+title: Create an app to view a shape in mixed reality
 description: Learn how to use the view shape in MR component in your Power Apps.
 author: joel-lindstrom
 ms.service: powerapps
@@ -18,7 +18,7 @@ contributors:
   - anuitz
 ---
 
-# Build mobile apps with View Shape in MR component
+# Create an app to view a shape in mixed reality
 
 You can use the **View Shape in MR** component in your app to let users see if a simple cube might fit within a specified space. They might want to do this to see how a certain object that you provide would fit in their space. If you have a 3D model or head-on picture for the object, you'd like to fit test consider using the [View in MR](../mixed-reality-component-view-mr.md) instead.
 
