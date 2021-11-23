@@ -22,18 +22,18 @@ search.app:
 
 [This topic is pre-release documentation and is subject to change.]
 
-Use the [modern app designer](../maker/model-driven-apps/app-designer-overview) to set your model-driven app for offline use on a mobile device. Once offline mode is enabled, users can interact with their data without internet connection on [Power Apps mobile](https://powerapps.microsoft.com/downloads/).
+Use the [modern app designer](../maker/model-driven-apps/app-designer-overview) to enable your model-driven apps for offline use on a mobile device. When offline mode is enabled, users can interact with their data without internet connection on [Power Apps mobile](https://powerapps.microsoft.com/downloads/).
 
 
 ## Prerequisites 
 
-Verify the following prerequisites before you start set up mobile offline: 
+Verify the following prerequisites before you enable mobile offline: 
 
 - Environment maker, system administrator, or system customizer role is needed to configure offline mode for model driven apps. These roles have create/read/write/delete and share access on the **mobile offline profile** table. More information: [About predefined security roles](share-model-driven-app.md#about-predefined-security-roles)
 
 - Users with the **basic user** role can open and use an offline application. This role has the read access to the **mobile offline profile** table.
 
-If you need to use a custom security role, you may want to edit it accordingly:
+If you need to use a custom security role, edit it accordingly:
 
 - Edit your security role &gt; Core Records tab &gt; Mobile Offline profile.
 
@@ -43,34 +43,40 @@ If you need to use a custom security role, you may want to edit it accordingly:
 
 ##  Optimize your app for mobile offline 
 
-Before you enable offline mode, make sure your model-driven app is optimized for offline and mobile use. Mobile apps run on smaller screens with limited connectivity so it's important that the app is fast and always aviliable. To ensure a smooth experience for your users, make sure the app is simple and lightweight. Also, consider the number of user scenarios that you want to cover and the amount of data the app will use on a mobile device.
+Before you enable offline mode, make sure your model-driven app is optimized for offline and mobile use. Mobile apps run on smaller screens with limited connectivity so it's important that the app is fast and always aviliable. Create an app that is simple and lightweight. Also, consider the number of user scenarios that you want to cover and the amount of data the app will use.
 
-If you have two types of users in your organizers such as desktop and remote mobile users then create two seperate apps. Optimize user experience and create an online app for your office users and another app for your mobile users with limited connectivity. 
+If you have two types of users in your organizers such as desktop and remote mobile users then create two seperate apps. Optimize the user experience and create an online app for your office users and another app for your mobile users that may have limited connectivity. 
 
 Follow these best practices when building an app for mobile offline use:
 
-1. Identify the **on-the-go scenarios** that are functionally related, such as which would be performed by a specific worker on a given day and need to be completed in the field (not at the office).
-
-
-2. Reduce the complexity of your appl and limit the amount of application metadata to be downloaded on the device. List then [**only add the tables and views absolutely needed**](https://docs.microsoft.com/en-us/powerapps/maker/model-driven-apps/create-a-model-driven-app#add-pages-to-your-app) in your application.
-
-
-3. Make sure you only keep the needed views and remove the unnecessary ones. For instance, you may want to avoid adding the **All accounts** view and keep the ones like the **My active accounts**. Keep your forms lightweight for a smooth and intuitive experience on small screen devices. You have thse two options for mobile-optimized forms:
+- Identify the on-the-go scenarios that are functionally related, such as which would be performed by a specific user on a given day and need to be completed in the field.
+- Reduce the complexity of your app and limit the amount of application metadata that will be downloadeded on the device. Only add the tables and views absolutely needed in a mobile scenario. For more information, see [Add pages to your app](../maker/model-driven-apps/create-a-model-driven-app#add-pages-to-your-app).
+- Only keep the needed views and remove the unnecessary ones. For instance, you may want to avoid adding the **All accounts** view and keep the ones like the **My active accounts**. Keep your forms lightweight for a smooth and intuitive experience on small screen devices. You have the following options for mobile-optimized forms:
 
    - Build dedicated forms for mobile use
 
    - Share forms across mobile and desktop experience while having some fields disabled on mobile
 
-    ![](media/image2.png)
+    
+      > [!div class="mx-imgBorder"]
+      > ![](media/image2.png)
 
 
 ## Enable your app for offline use (preview)
 
-The new offline configuration experience in the modern app designer is a preview feature and needs to be enabled first.
+The new offline configuration experience in the [modern app designer](../maker/model-driven-apps/[modern app designer](../maker/model-driven-apps/app-designer-overview)) is a preview feature and needs to be enabled first.
 
-1. **Open** your application using the modern app designer.
+1. Sign in to [Power Apps (preview)](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) 
 
-2.  Select **Settings** &gt; **Upcoming** tab.
+2. On the left nav, select **Apps** and select the model-driven app that you want to edit.
+
+3. Select ... > **Edit** > **Edit in preview** to open the modern app designer.
+
+   > [!div class="mx-imgBorder"]
+   > ![Edit an app](media/offline-edit-app.png)
+
+
+6.    **Settings** &gt; **Upcoming** tab.
 
 3.  Go to the **Upcoming** tab and set the "**Offline setup from the modern app designer**" toggle to On
 
