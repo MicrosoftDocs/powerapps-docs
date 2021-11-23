@@ -68,29 +68,24 @@ The new offline configuration experience in the [modern app designer](../maker/m
 
 1. Sign in to [Power Apps (preview)](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) 
 
-2. On the left nav, select **Apps** and select the model-driven app that you want to edit.
+2. On the left nav, select **Apps** and then select the model-driven app that you want to edit.
 
 3. Select ... > **Edit** > **Edit in preview** to open the modern app designer.
 
-   > [!div class="mx-imgBorder"]
-   > ![Edit an app](media/offline-edit-app.png)
+    > [!div class="mx-imgBorder"]
+    > ![Edit an app](media/offline-edit-app.png)
+ 
+4. On the command bar, select **Settings**.
 
+    > [!div class="mx-imgBorder"]
+    > ![Select setting on the command bar](media/mobile-offline-image4.png)
 
-6.    **Settings** &gt; **Upcoming** tab.
+5. Select the **Upcoming** setting and set the **Offline setup from the modern app designer** toggle to **On**.
 
-3.  Go to the **Upcoming** tab and set the "**Offline setup from the modern app designer**" toggle to On
+    > [!div class="mx-imgBorder"]
+    > ![Graphical user interface  application  Teams Description automatically generated](media/mobile-offline-image5.png)
 
-![Graphical user interface  application  Teams Description automatically generated](media/image5.png)
-
-4.  You should then see the Offline configuration displayed in the **General** tab.
-
-![](media/image6.png)
-
-## Enable offline for your application
-
-1.  From **Settings &gt; General**
-
-2.  Set the **"Can be used offline"** toggle to On
+6.  Select the **General** setting and set the **Can be used offline** toggle to **On**.
 
 3.  Select an existing or create a new offline profile (more information in the <u>mobile offline profiles</u> section)
 
