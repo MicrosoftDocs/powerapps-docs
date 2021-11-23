@@ -147,4 +147,4 @@ Use the back button in the top-left corner to return to the app screen and chang
 - [View shape in MR component](../mixed-reality-component-view-shape.md) 
 
 
-[!INCLUDE[footer-include](../../includes/footer-banner.md)]
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]
