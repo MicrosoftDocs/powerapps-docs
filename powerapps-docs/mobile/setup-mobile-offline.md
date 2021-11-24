@@ -88,21 +88,21 @@ Set up the new mobile offline experience in the [modern app designer (preview)](
     > [!div class="mx-imgBorder"]
     > ![Set Can be used offline toggle to on](media/mobile-offline-image6.png)
 
-7.  Select an existing offline profile or select **New profile with current app data**. To set up a offline profile, go to the [set up a mobile offline profile](setup-mobile-offline.md#mobile-offline-profiles) section below.
+7.  Select an existing offline profile or select **New profile with current app data**. To set up a offline profile, go to the [Set up a mobile offline profile](setup-mobile-offline.md#mobile-offline-profiles) section.
 
     > [!div class="mx-imgBorder"]
     > ![Select a offline profile](media/mobile-offline-image7.png)
 
-8.  Close the **Settings** dialog and then save and publish your app. The app is setup for offline.
+8.  Close the **Settings** dialog and then save and publish your app. When you're done, the app will be set up for offline use.
 
 
-## Mobile offline profiles
+## Set up a mobile offline profile
 
-The mobile offline profile represents the app data set that is synced locally on a user's device. It consists of a list of tables with related filters that are applied when data is synced to a user's device.
+The mobile offline profile represents the data set in the app that is synced locally on a user's device. It consists of the list of tables with related filters that are applied when data is synced to a user's device.
 
 ### Enable a table for offline
 
-You need to enable a table for offline in order to add it to a offline profile. Follow these steps to verify a table is enabled for offline.
+A table needs to be enabled for offline in order to add it to a offline profile. Follow these steps to verify a table is enabled for offline.
 
 1. Sign in to [Power Apps (preview)](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) 
 
@@ -114,8 +114,8 @@ You need to enable a table for offline in order to add it to a offline profile. 
     
 4. In the **Edit table** settings, select **Advanced options**, and in the **Rows in this table** section select **Can be take offline**.
 
-   > ![NOTE] 
-   > App can only be linked to one profile but a profile can be shared between multiple apps. This can be useful when different apps share the same data set to only download it once on the device and have it shared between the apps locally.
+  > [!NOTE]
+  > App can only be linked to one profile but a profile can be shared between multiple apps. This can be useful when different apps share the same data set to only download it once on the device and have it shared between the apps locally.
 
     > [!div class="mx-imgBorder"]
     > ![Enable table for offline use](media/mobile-offline-image8.png)
