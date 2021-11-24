@@ -123,9 +123,9 @@ A table needs to be enabled for offline in order to add it to a offline profile.
 
 ### Default profile
 
-The modern app designer comes with the capability to generate a default offline profile based how your app is setup.
+The modern app designer comes with the capability to generate a default offline profile based how your app is configured.
 
-The default offline profile is a starting point to help you quickly build an offline profile. The default profile won't be able to compute the most optimal filters for each table. If you have a complex, the auto generation profile might be partially successful as only a part of the app might be setup for offline. It's recommended that you review and adjust the proposed filters based on your organization needs.
+The default offline profile is a starting point to help you quickly build an offline profile. The default profile probably won't compute the most optimal filters for each table. If you have a complex app, the auto generation profile might be partially successful as only part of the app might be set up correctly for offline use. With this in mind, it's important that you review and adjust the proposed filters based on your organization needs.
 
 1. To generate a default profile for your app, select **New profile with current app data**. 
 
@@ -138,21 +138,21 @@ The default offline profile is a starting point to help you quickly build an off
     > ![Default auto generated profile](media/mobile-offline-image9.png)
 
 
-  The tables that are added to the profile, also have the **Related rows only** filter set. They are the tables that are used in some views and need to have related information available, you may not need to modify them.
+  The tables that are added to the profile, also have the **Related rows only** filter. These are tables that are used in some views and need to have related information available so you may not need to modify these based on your organization needs.
 
 ### Add a table to an offline profile and apply filters
 
 Applying an appropriate filter for each of the tables configured in the offline profile is critical to limit the amount of data downloaded on users' devices.
 
-1. To add a table to a profile select **Add table**.
+1. To add a table to a profile, select **Add table**.
 
     > [!div class="mx-imgBorder"]
     > ![Add a table](media/mobile-offline-image9-2.png)
 
-2. Select a table and then define the filters. 
+2. Choose a table and then define the filters. 
  
     > [!div class="mx-imgBorder"]
-    > ![Choose a table](media/image10.png)
+    > ![Choose a table](media/mobile-offline-image10.png)
 
 3. Set the following filters:
 
