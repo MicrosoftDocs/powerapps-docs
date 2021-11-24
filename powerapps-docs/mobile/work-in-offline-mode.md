@@ -28,10 +28,12 @@ This topic covers the new offline-first user experience. Once [offline is enable
 
 Depending on the app you’re using and your set up, your offline experience may be different. 
 
+## Understanding offline-first vs. classic offline
+
 For your app to be available offline, it needs to download the app and user data on the device first. This process is called initial offline sync.
 The app data includes all the resources needed for the app to run properly and the user data configured in the offline profile and stored in Microsoft Dataverse tables.
 
-With offline-first, during the initial offline sync, you'll get a notification stating that your app is syncing the offline data. This can take a few minutes or even more depending on what has been configured in the offline profile.
+With offline-first, during the initial offline sync, you'll get a notification stating that your app is syncing the offline data. This can take a few minutes or even more depending on what has been configured in the offline profile. The initial offline sync is triggered everything when the app is launched.
 
 > [!div class="mx-imgBorder"]
 > ![Initail offline sync.](media/offline-first-1.png)
