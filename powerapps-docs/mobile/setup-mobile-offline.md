@@ -29,11 +29,11 @@ Use the [modern app designer](../maker/model-driven-apps/app-designer-overview) 
 
 Verify the following prerequisites before you enable mobile offline: 
 
-- Environment maker, system administrator, or system customizer role is needed to configure offline mode for model driven apps. These roles have create/read/write/delete and share access on the **mobile offline profile** table. More information: [About predefined security roles](share-model-driven-app.md#about-predefined-security-roles)
+- Environment maker, system administrator, or system customizer role is needed to configure offline mode for model driven apps. These roles have create/read/write/delete and share privilege on the **mobile offline profile** table. More information: [About predefined security roles](share-model-driven-app.md#about-predefined-security-roles)
 
-- Users with the **basic user** role can open and use an offline application. This role has the read access to the **mobile offline profile** table.
+- Users with the **basic user** role can open and use an offline application. This role has the read privilege to the **mobile offline profile** table.
 
-   If you have a custom security role, make sure **Mobile Offline profile** with **Read** privilege. For more information, see [Miscellaneous privileges - Core Records tab](/power-platform/admin/miscellaneous-privileges).
+   If you have a custom security role, make sure **Mobile Offline profile** has **Read** privilege. For more information, see [Miscellaneous privileges - Core Records tab](/power-platform/admin/miscellaneous-privileges).
 
   > [!div class="mx-imgBorder"] 
   > ![Required security roles to use mobile offline.](media/mobile-offline-image1.png)
@@ -43,7 +43,7 @@ Verify the following prerequisites before you enable mobile offline:
 
 Before you enable offline mode, make sure your model-driven app is optimized for offline and mobile use. Mobile apps run on smaller screens with limited connectivity so it's important that the app is fast and always aviliable. Create an app that is simple and lightweight. Also, consider the number of user scenarios that you want to cover and the amount of data the app will use.
 
-If you have two types of users in your organizers such as desktop and remote mobile users then create two seperate apps. Optimize the user experience and create an online app for your office users and another app for your mobile users that may have limited connectivity. 
+If you have two types of users in your organization such as desktop and remote mobile users then create two seperate apps. Optimize the user experience and create an online app for your office users and another app for your mobile users that may have limited connectivity. 
 
 Follow these best practices when building an app for mobile offline use:
 
