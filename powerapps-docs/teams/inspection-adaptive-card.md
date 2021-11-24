@@ -134,7 +134,9 @@ Once you've verified that the flow is working properly, you can add it to the In
 
 1. You'll now see the **Inspection Adaptive Card To Teams** flow in the Available flows section. Select it to add it to the button.
 
-1. You'll now need to edit the pasted code. Find and remove the following portion of the formula:
+1. You'll now need to edit the pasted code. Find and replace the following portion of the formula as shown below.
+
+    **Remove section from formula:**
 
     ```powerapps-dot
     MicrosoftTeams.PostMessageToChannelV3(
@@ -191,7 +193,7 @@ Once you've verified that the flow is working properly, you can add it to the In
                 )
     ```
 
-1. Replace the following code with the removed formula portion earlier:
+    **Add section to formula:**
 
     ```powerapps-dot
     InspectionAdaptiveCardToTeams.Run(gblLastInspection.Name,
