@@ -5,7 +5,7 @@ author: mustlaz
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 11/19/2021
+ms.date: 11/24/2021
 ms.subservice: mobile
 ms.author: mkaur
 ms.custom: ""
@@ -18,9 +18,33 @@ search.app:
   - D365CE
 ---
 
-# Work offline mode on your mobile device (preview)
+# Offline-first (preview)
 
-Use Power Apps mobile in offline mode when you don't have internet access. Once the initial sync is finished, the app can be used offline. While it is transparent with offline-first, the user must handle offline explicitly when in classic offline.
+This topic covers the new offline-first user experience. Once [offline is enabled](setup-mobile-offline.md) for your model-driven app, you can run it one of the following mobile apps:
+
+- [Power Apps mobile](run-powerapps-on-mobile)
+- [Dynamics 365 for Phones and Tablets](/dynamics365/mobile-app/overview)
+- [Field Service (Dynamics 365) mobile app](/dynamics365/field-service/mobile-2020-power-platform)
+
+Depending on the app you’re using and your set up, your offline experience may be different. 
+
+For your app to be available offline, it needs to download the app and user data on the device first. This process is called initial offline sync.
+The app data includes all the resources needed for the app to run properly and the user data configured in the offline profile and stored in Microsoft Dataverse tables.
+
+With offline-first, during the initial offline sync, you'll get a notification stating that your app is syncing the offline data. This can take a few minutes or even more depending on what has been configured in the offline profile.
+
+> [!div class="mx-imgBorder"]
+> ![Initail offline sync.](media/offline-first-1.png)
+
+
+
+
+ This is the new preview experience.
+2. **Class offline**: This is the [currect released offline experience](/dynamics365/mobile-app/work-in-offline-mode).
+
+
+
+
 
 | Classic offline (when online)                                                                                                                                                                                                       | Classic offline (when no network)                                                                                                          | Offline-first                                                                                                                |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
