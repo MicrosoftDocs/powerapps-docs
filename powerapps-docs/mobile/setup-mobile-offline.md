@@ -57,7 +57,7 @@ Follow these best practices when building an app for mobile offline use:
 
     
       > [!div class="mx-imgBorder"]
-      > ![](media/image2.png)
+      > ![Form properties](media/mobile-offline-image2.png)
 
 
 ## Enable your app for offline use (preview)
@@ -159,12 +159,13 @@ Applying an appropriate filter for each of the tables configured in the offline 
    1. Choose the row that you want to make avaliable offline. For the **Custom** option, use the [expression builder](../maker/model-driven-apps/create-edit-view-filters) which allows advanced conditions setup. 
    2. **Relationships** lists the different relationships available between the current table and other tables added in the offline profile. Selecting a relationship will ensure related rows following that relationship will be downloaded and made available offline.
    
-      > [!div class="mx-imgBorder"]
-      >![Graphical user interface  application Description automatically generated](media/image11.png)
 
    3. **Files** and **Images** lets you to define what table columns of type file or image need to be downloaded offline. For images, each column can be selected granularl  but not for files it's all or nothing.
 
    4. **Sync interval** defines the sync frequency to be applied on the device to sync the data with the server. If your table data doesn't change frequently like a catalog or product table, you may want to refresh it only once a day and hence focus on only syncing data when necessary.
+      
+      > [!div class="mx-imgBorder"]
+      >![Graphical user interface  application Description automatically generated](media/mobile-offline-image11.png)
 
 4. Select **Add** to add your table and filters to the profile.
 
