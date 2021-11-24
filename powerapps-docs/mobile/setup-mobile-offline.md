@@ -48,12 +48,12 @@ If you have two types of users in your organization such as desktop and remote m
 Follow these best practices when building an app for mobile offline use:
 
 - Identify the on-the-go scenarios that are functionally related, such as which would be performed by a specific user on a given day and need to be completed in the field.
-- Reduce the complexity of your app and limit the amount of application metadata that will be downloadeded on the device. Only add the tables and views absolutely needed in a mobile scenario. For more information, see [Add pages to your app](../maker/model-driven-apps/create-a-model-driven-app#add-pages-to-your-app).
-- Only keep the needed views and remove the unnecessary ones. For instance, you may want to avoid adding the **All accounts** view and keep the ones like the **My active accounts**. Keep your forms lightweight for a smooth and intuitive experience on small screen devices. You have the following options for mobile-optimized forms:
+- Reduce the complexity of your app and limit the amount of appl metadata that will be downloadeded on the device. Only add the tables and views that are needed in a mobile scenario. For more information, see [Add pages to your app](../maker/model-driven-apps/create-a-model-driven-app#add-pages-to-your-app).
+- Keep view that are absolutely necessary and remove any view that aren't needed on a day-to-day basis. For example, avoid adding the **All accounts** view and keep views such as  **My active accounts**. Keep your forms lightweight for a smooth and intuitive experience on small screen devices. The following are options for mobile-optimized forms:
 
-   - Build dedicated forms for mobile use
+   - Build dedicated forms for mobile use.
 
-   - Share forms across mobile and desktop experience while having some fields disabled on mobile
+   - Share forms across mobile and desktop experience while having some fields disabled on mobile.
 
     
       > [!div class="mx-imgBorder"]
@@ -88,7 +88,7 @@ Set up the new mobile offline experience in the [modern app designer (preview)](
     > [!div class="mx-imgBorder"]
     > ![Set Can be used offline toggle to on](media/mobile-offline-image6.png)
 
-7.  Select an existing offline profile or select **New profile wiht current app data**. For more information, see [Mobile offline profiles](setup-mobile-offline.md#mobile-offline-profiles).
+7.  Select an existing offline profile or select **New profile wiht current app data**. For information on how to [set up a mobile offline profile](setup-mobile-offline.md#mobile-offline-profiles) go to the next section in this topic.
 
     > [!div class="mx-imgBorder"]
     > ![Select a offline profile](media/mobile-offline-image7.png)
