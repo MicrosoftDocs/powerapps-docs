@@ -1,6 +1,6 @@
 ---
 title: MoneyPrecisionSource in Microsoft Dataverse| Microsoft Docs
-description: Enumeration for money precision source
+description: Enumeration for money precision source.
 keywords:
 ms.author: nabuthuk
 manager: kvivek
@@ -15,7 +15,7 @@ ms.assetid: ad8659f7-f566-43db-bed1-c8484c114a59
 
 # MoneyPrecisionSource
 
-[!INCLUDE [MoneyPrecisionSource-description](includes/MoneyPrecisionSource-description.md)]
+[!INCLUDE [MoneyPrecisionSource-description](includes/moneyprecisionsource-description.md)]
 
 ## Available for
 
@@ -23,11 +23,11 @@ Model-driven and canvas apps
 
 ## Values
 
-| Value | Description                                                                                    |
-| ----- | ---------------------------------------------------------------------------------------------- |
-| `0`   | None: Precision comes from "accuracy" attribute of properties xml                              |
-| `1`   | Organization: Precision comes from the PricingDecimalPrecision field in the organization table |
-| `2`   | Currency: Precision comes from the currency                                                    |
+| Value | Description  |
+| ----- | ------------ |
+| `0`   | None: Precision comes from "accuracy" attribute of properties XML. |
+| `1`   | Organization: Precision comes from the PricingDecimalPrecision column in the organization table. |
+| `2`   | Currency: Precision comes from the currency. |
 
 ### Related topics
 

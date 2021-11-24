@@ -15,7 +15,7 @@ ms.assetid: 148964b5-106e-4f2e-8038-9086d29dc54f
 
 # formatUserInput
 
-[!INCLUDE [formatUserInput-description](includes/formatUserInput-description.md)]
+[!INCLUDE [formatUserInput-description](includes/formatuserinput-description.md)]
 
 ## Syntax
 
@@ -27,10 +27,10 @@ Model-driven and canvas apps
 
 ## Parameters
 
-| Parameter Name | Type                                           | Required | Description                                                |
-| -------------- | ---------------------------------------------- | -------- | ---------------------------------------------------------- |
-| input          | `unknown`                                      | Yes      | User input.                                                |
-| behavior       | [`ControlAttributes`](../ControlAttributes.md) | Yes      | controlAttributes control attributes used by the formatter |
+| Parameter Name | Type   | Required | Description   |
+| -------------- | ----------------- | -------- | ---------------- |
+| input          | `unknown`  | Yes      | User input. |
+| behavior       | [`ControlAttributes`](../Controlattributes.md) | Yes | `controlAttributes`  used by the formatter. |
 
 ## Return Value
 

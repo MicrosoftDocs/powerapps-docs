@@ -1,6 +1,6 @@
 ---
 title: ControlAttributesType in Microsoft Dataverse| Microsoft Docs
-description: Enumeration of control attribute type
+description: Enumeration of control attribute type.
 keywords:
 ms.author: nabuthuk
 manager: kvivek
@@ -15,7 +15,7 @@ ms.assetid: ad8659f7-f566-43db-bed1-c8484c114a59
 
 # ControlAttributesType
 
-[!INCLUDE [ControlAttributesType-description](includes/ControlAttributesType-description.md)]
+[!INCLUDE [ControlAttributesType-description](includes/controlattributestype-description.md)]
 
 ## Available for
 
@@ -31,14 +31,14 @@ Model-driven and canvas apps
 | 'float'               | float               |
 | 'datetime'            | datetime            |
 | 'integer'             | integer             |
-| 'picklist'            | picklist            |
+| 'picklist'            | picklist/choice           |
 | 'state'               | state               |
 | 'status'              | status              |
 | 'boolean'             | boolean             |
 | 'string'              | string              |
 | 'lookup'              | lookup              |
 | 'memo'                | memo                |
-| 'multiselectpicklist' | multiselectpicklist |
+| 'multiselectpicklist' | multiselectpicklist/choices |
 
 ### Related topics
 

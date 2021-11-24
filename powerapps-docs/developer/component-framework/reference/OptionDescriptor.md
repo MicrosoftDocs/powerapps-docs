@@ -1,6 +1,6 @@
 ---
 title: OptionDescriptor in Microsoft Dataverse| Microsoft Docs
-description: Optionset object of the attribute
+description: Optionset object of the attribute.
 keywords:
 ms.author: nabuthuk
 manager: kvivek
@@ -15,7 +15,7 @@ ms.assetid: ad8659f7-f566-43db-bed1-c8484c114a59
 
 # OptionDescriptor
 
-[!INCLUDE [OptionDescriptor-description](includes/OptionDescriptor-description.md)]
+[!INCLUDE [OptionDescriptor-description](includes/optiondescriptor-description.md)]
 
 ## Available for
 
@@ -25,43 +25,43 @@ Model-driven and canvas apps
 
 ### Color
 
-Indicates the color of the Picklist/OptionSet attribute
-**Type**: `string?`
+Indicates the color of the picklist/choice column.
+**Type**: `string`
 
 ### Label
 
-Indicates the label of the Picklist/OptionSet attribute
-**Type**: `string?`
+Indicates the label of the picklist/choice column.
+**Type**: `string`
 
 ### Value
 
-Indicates the value of the Picklist/OptionSet attribute
+Indicates the value of the picklist/choice column.
 **Type**: `number`
 
 ### DefaultStatus
 
-Indicates the DefaultStatus of the Picklist/OptionSet attribute
-**Type**: `number?`
+Indicates the default status of the picklist/choice column.
+**Type**: `number`
 
 ### State
 
-Indicates the State of the Picklist/OptionSet attribute
-**Type**: `number?`
+Indicates the state of the picklist/choice column.
+**Type**: `number`
 
 ### TransitionData
 
-Indicates the TransitionData of the Picklist/OptionSet attribute
-**Type**: `number[]?`
+Indicates the transition data of the picklist/choice column.
+**Type**: `number[]`
 
 ### InvariantName
 
-Indicates the language invariant name of the Picklist/OptionSet attribute
-**Type**: `string?`
+Indicates the language invariant name of the picklist/choice column.
+**Type**: `string`
 
 ### ParentValues
 
-Indicates the values of the parent optionset (if child) of the Picklist/OptionSet attribute
-**Type**: `number[]?`
+Indicates the values of the parent choice (if child) of the picklist/choice column.
+**Type**: `number[]`
 
 ### Related topics
 

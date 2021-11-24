@@ -35,7 +35,7 @@ Model-driven and canvas apps
 | [formatInteger](formatting/formatinteger.md)                                 | [!INCLUDE [formatinteger-description](formatting/includes/formatinteger-description.md)]                                 |
 | [formatLanguage](formatting/formatlanguage.md)                               | [!INCLUDE [formatlanguage-description](formatting/includes/formatlanguage-description.md)]                               |
 | [formatUserDateTimeToUTC](formatting/formatUserDateTimeToUTC.md)             | [!INCLUDE [formatUserDateTimeToUTC-description](formatting/includes/formatUserDateTimeToUTC-description.md)]             |
-| [formatUserInput](formatting/formatUserInput.md)                             | [!INCLUDE [formatUserInput-description](formatting/includes/formatUserInput-description.md)]                             |
+| [formatUserInput](formatting/formatUserInput.md)                             | [!INCLUDE [formatUserInput-description](formatting/includes/formatuserinput-description.md)]                             |
 | [formatUTCDateTimeToUserDate](formatting/formatUTCDateTimeToUserDate.md)     | [!INCLUDE [formatUTCDateTimeToUserDate-description](formatting/includes/formatUTCDateTimeToUserDate-description.md)]     |
 | [formatTime](formatting/formattime.md)                                       | [!INCLUDE [formattime-description](formatting/includes/formattime-description.md)]                                       |
 | [getWeekOfYear](formatting/getweekofyear.md)                                 | [!INCLUDE [getweekofyear-description](formatting/includes/getweekofyear-description.md)]                                 |
