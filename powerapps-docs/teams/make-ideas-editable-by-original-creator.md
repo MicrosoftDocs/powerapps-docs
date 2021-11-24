@@ -5,7 +5,7 @@ author: sbahl10
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/06/2021
+ms.date: 11/23/2021
 ms.subservice: teams
 ms.author: jshum
 ms.reviewer: tapanm
@@ -335,98 +335,54 @@ Now, we'll add a container that will include the idea details section on our ide
 
     ```powerapps-dot
     With(
-    
-    {varRecord: ThisItem},
-    
-    Table(
-    
-    {
-    
-    appRefNo: 1,
-    
-    appRef: varRecord.appRef,
-    
-    appRatingValue: varRecord.'Response Rating',
-    
-    appRatingTextLow: varRecord.'Rating Text (Low)',
-    
-    appRatingTextHigh: varRecord.'Rating Text (High)'
-    
-    },
-    
-    {
-    
-    appRefNo: 2,
-    
-    appRef: varRecord.appRef,
-    
-    appRatingValue: varRecord.'Response Rating',
-    
-    appRatingTextLow: varRecord.'Rating Text (Low)',
-    
-    appRatingTextHigh: varRecord.'Rating Text (High)'
-    
-    },
-    
-    {
-    
-    appRefNo: 3,
-    
-    appRef: varRecord.appRef,
-    
-    appRatingValue: varRecord.'Response Rating',
-    
-    appRatingTextLow: varRecord.'Rating Text (Low)',
-    
-    appRatingTextHigh: varRecord.'Rating Text (High)'
-    
-    },
-    
-    {
-    
-    appRefNo: 4,
-    
-    appRef: varRecord.appRef,
-    
-    appRatingValue: varRecord.'Response Rating',
-    
-    appRatingTextLow: varRecord.'Rating Text (Low)',
-    
-    appRatingTextHigh: varRecord.'Rating Text (High)'
-    
-    },
-    
-    {
-    
-    appRefNo: 5,
-    
-    appRef: varRecord.appRef,
-    
-    appRatingValue: varRecord.'Response Rating',
-    
-    appRatingTextLow: varRecord.'Rating Text (Low)',
-    
-    appRatingTextHigh: varRecord.'Rating Text (High)'
-    
-    }
-    
-    )
-    
-    )
-    
+        {varRecord: ThisItem},
+        Table(
+            {
+            appRefNo: 1,
+            appRef: varRecord.'Employee Idea Response',
+            appRatingValue: varRecord.'Response Rating',
+            appRatingTextLow: varRecord.'Rating Text (Low)',
+            appRatingTextHigh: varRecord.'Rating Text (High)'
+            },
+            {
+            appRefNo: 2,
+            appRef: varRecord.'Employee Idea Response',
+            appRatingValue: varRecord.'Response Rating',
+            appRatingTextLow: varRecord.'Rating Text (Low)',
+            appRatingTextHigh: varRecord.'Rating Text (High)'
+            },
+            {
+            appRefNo: 3,
+            appRef: varRecord.'Employee Idea Response',
+            appRatingValue: varRecord.'Response Rating',
+            appRatingTextLow: varRecord.'Rating Text (Low)',
+            appRatingTextHigh: varRecord.'Rating Text (High)'
+            },
+            {
+            appRefNo: 4,
+            appRef: varRecord.'Employee Idea Response',
+            appRatingValue: varRecord.'Response Rating',
+            appRatingTextLow: varRecord.'Rating Text (Low)',
+            appRatingTextHigh: varRecord.'Rating Text (High)'
+            },
+            {
+            appRefNo: 5,
+            appRef: varRecord.'Employee Idea Response',
+            appRatingValue: varRecord.'Response Rating',
+        appRatingTextLow: varRecord.'Rating Text (Low)',
+        appRatingTextHigh: varRecord.'Rating Text (High)'
+        }
+        )
+    )    
     ```
 
 1. Update the **OnSelect** Property of **imgIdeaResponseRating_Select_1**:
 
     ```powerapps-dot
     UpdateIf(
-    
-    colResponses,
-    
-    colResponses[@appRef] = ThisItem.appRef,
-    
-    {msft_responserating: ThisItem.appRefNo}
-    
+        colResponses,
+        colResponses[@'Employee Idea Response'] = ThisItem.appRef,
+        {msft_responserating: ThisItem.appRefNo}
     );
     ```
 
