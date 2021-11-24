@@ -43,17 +43,17 @@ Verify the following prerequisites before you enable mobile offline:
 
 Before you enable offline mode, make sure your model-driven app is optimized for offline and mobile use. Mobile apps run on smaller screens with limited connectivity so it's important that the app is always aviliable. Create an app that is simple and lightweight. Also, consider the number of user scenarios that you want to cover and the amount of data the app will use.
 
-If you have two types of users in your organization such as desktop and remote mobile users then create two seperate apps. Optimize the user experience and create an online app for your office users and another app for your mobile users that may have limited connectivity. 
+If you have desktop and remote mobile users then create two seperate apps. Optimize the user experience and create an online app for your office users and another app for your mobile users who may have limited connectivity. 
 
 Follow these best practices when building an app for mobile offline use:
 
-- Identify the on-the-go scenarios that are functionally related, such as which would be performed by a specific user on a given day and need to be completed in the field.
-- Reduce the complexity of your app and limit the amount of appl metadata that will be downloadeded on the device. Only add the tables and views that are needed in a mobile scenario. For more information, see [Add pages to your app](../maker/model-driven-apps/create-a-model-driven-app#add-pages-to-your-app).
+- Identify the on-the-go scenarios that are functionally related, such as which tasks are performed by users in the field on any given day.
+- Reduce the complexity of your app and limit the amount of app metadata that needs to be downloadeded on a user's device. Only add the tables and views that are needed in a mobile scenario. For more information, see [Add pages to your app](../maker/model-driven-apps/create-a-model-driven-app#add-pages-to-your-app).
 - Keep view that are absolutely necessary and remove any view that aren't needed on a day-to-day basis. For example, avoid adding the **All accounts** view and keep views such as  **My active accounts**. Keep your forms lightweight for a smooth and intuitive experience on small screen devices. The following are options for mobile-optimized forms:
 
    - Build dedicated forms for mobile use.
 
-   - Share forms across mobile and desktop experience while having some fields disabled on mobile.
+   - Share forms across mobile and desktop experience but disable some fields on mobile.
 
     
       > [!div class="mx-imgBorder"]
@@ -88,7 +88,7 @@ Set up the new mobile offline experience in the [modern app designer (preview)](
     > [!div class="mx-imgBorder"]
     > ![Set Can be used offline toggle to on](media/mobile-offline-image6.png)
 
-7.  Select an existing offline profile or select **New profile wiht current app data**. For information on how to [set up a mobile offline profile](setup-mobile-offline.md#mobile-offline-profiles) go to the next section in this topic.
+7.  Select an existing offline profile or select **New profile with current app data**. To set up a offline profile, go to the [set up a mobile offline profile](setup-mobile-offline.md#mobile-offline-profiles) section below.
 
     > [!div class="mx-imgBorder"]
     > ![Select a offline profile](media/mobile-offline-image7.png)
