@@ -18,12 +18,9 @@ search.app:
   - D365CE
 ---
 
-# Work offline on your mobile device using Power Apps mobile (preview)
+# Work offline mode on your mobile device (preview)
 
-Use Power Apps mobile in offline mode when you don't have internet access. 
-
-
-Once the initial sync is finished, the app can be used offline. While it is transparent with offline-first, the user must handle offline explicitly when in classic offline.
+Use Power Apps mobile in offline mode when you don't have internet access. Once the initial sync is finished, the app can be used offline. While it is transparent with offline-first, the user must handle offline explicitly when in classic offline.
 
 | Classic offline (when online)                                                                                                                                                                                                       | Classic offline (when no network)                                                                                                          | Offline-first                                                                                                                |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
