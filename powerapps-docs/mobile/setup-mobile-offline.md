@@ -117,8 +117,8 @@ A table needs to be enabled for offline in order to add it to a offline profile.
   > [!NOTE]
   > App can only be linked to one profile but a profile can be shared between multiple apps. This can be useful when different apps share the same data set to only download it once on the device and locally  between the apps.
 
-    > [!div class="mx-imgBorder"]
-    > ![Enable table for offline use](media/mobile-offline-image8.png)
+   > [!div class="mx-imgBorder"]
+   > ![Enable table for offline use](media/mobile-offline-image8.png)
 
 
 ### Default profile
@@ -156,13 +156,10 @@ Applying an appropriate filter for each of the tables configured in the offline 
 
 3. Set the following filters:
 
-   1. Choose the row that you want to make avaliable offline. For the **Custom** option, use the [expression builder](../maker/model-driven-apps/create-edit-view-filters) which allows advanced conditions set up. 
+   1. Choose the row that you want to make avaliable offline. For the **Custom** option, use the [expression builder](../maker/model-driven-apps/create-edit-view-filters) which allows advanced conditions set up.
    2. **Relationships** lists the different relationships available between the current table and other tables added in the offline profile. Selecting a relationship will ensure related rows following that relationship will be downloaded and made available offline.
-   
-
-   3. **Files** and **Images** lets you to define what table columns of type file or image need to be downloaded offline. For images, each column can be selected granularl  but not for files it's all or nothing.
-
-   4. **Sync interval** defines the sync frequency to be applied on the device to sync the data with the server. If your table data doesn't change frequently like a catalog or product table, you may want to refresh it only once a day and hence focus on only syncing data when necessary.
+   3. **Files** and **Images** lets you to define what table columns for a file or image need to be downloaded offline. For images, each column can be selected granularly but not for files it's all or nothing.
+   4. **Sync interval** defines the sync frequency to be applied on the device to sync the data with the server. If your table data doesn't change frequently like a catalog or product table, you may want to refresh it only once a day and focus on only syncing data when necessary.
       
       > [!div class="mx-imgBorder"]
       >![Graphical user interface  application Description automatically generated](media/mobile-offline-image11.png)
