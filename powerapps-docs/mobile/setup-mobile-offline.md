@@ -125,7 +125,7 @@ You need to enable a table for offline in order to add it to a offline profile. 
 
 The modern app designer comes with the capability to generate a default offline profile based how your app is setup.
 
-The default offline profile is a starting point to help you quickly build an offline profile. The default profile won't be able to compute the most optimal filters for each table. If your app is too complex, the auto generation profile might be partially successful as only a part of the app is might be setup for offline. It's recommended that you review and adjust the proposed filters based on your organization needs.
+The default offline profile is a starting point to help you quickly build an offline profile. The default profile won't be able to compute the most optimal filters for each table. If you have a complex, the auto generation profile might be partially successful as only a part of the app might be setup for offline. It's recommended that you review and adjust the proposed filters based on your organization needs.
 
 1. To generate a default profile for your app, select **New profile with current app data**. 
 
@@ -144,19 +144,19 @@ The default offline profile is a starting point to help you quickly build an off
 
 Applying an appropriate filter for each of the tables configured in the offline profile is critical to limit the amount of data downloaded on users' devices.
 
-1. To add a table to a profile select the **Add table**.
+1. To add a table to a profile select **Add table**.
 
     > [!div class="mx-imgBorder"]
     > ![Add a table](media/mobile-offline-image9-2.png)
 
-2. Select a table and then define the right filters. 
+2. Select a table and then define the filters. 
  
     > [!div class="mx-imgBorder"]
     > ![Choose a table](media/image10.png)
 
 3. Set the following filters:
 
-   1. Choose the row that you want to make avaliable offline. For the **Custom** option, use the [expression builder](../maker/model-driven-apps/create-edit-view-filters) which allows advanced conditions setup. 
+   1. Choose the row that you want to make avaliable offline. For the **Custom** option, use the [expression builder](../maker/model-driven-apps/create-edit-view-filters) which allows advanced conditions set up. 
    2. **Relationships** lists the different relationships available between the current table and other tables added in the offline profile. Selecting a relationship will ensure related rows following that relationship will be downloaded and made available offline.
    
 
@@ -169,9 +169,9 @@ Applying an appropriate filter for each of the tables configured in the offline 
 
 4. Select **Add** to add your table and filters to the profile.
 
-5. When all tables are properly configured for profile, select **Done** > **publish your application**.
+5. When all tables are properly configured for the profile, select **Done** > **publish your application**.
 
-When the app is published, the app will be enabled for offline use. All users who have access to the app can also use it in offline mode.
+When the app is published, the app will be enabled for offline use. All your users who have access to the app can also use it in offline mode.
 
 
 
