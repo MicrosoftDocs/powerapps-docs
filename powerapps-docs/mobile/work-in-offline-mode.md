@@ -39,10 +39,17 @@ With offline-first, during the initial offline sync, you'll get a notification s
 > ![Initail offline sync.](media/offline-first-1.png)
 
 
-You can also select the **Offline status** button see more information about sync progress.
+You can also select the **Offline status** button to see more information about sync progress.
 
 > [!div class="mx-imgBorder"]
 > ![Offline status screen.](media/offline-first-2.png)
+
+
+Once the sync is complete, you can start using your application offline.
+
+
+> [!div class="mx-imgBorder"]
+> ![Offline status completed.](media/offline-first-3.png)
 
 
 
