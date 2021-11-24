@@ -369,9 +369,9 @@ Now, we'll add a container that will include the idea details section on our ide
             appRefNo: 5,
             appRef: varRecord.'Employee Idea Response',
             appRatingValue: varRecord.'Response Rating',
-        appRatingTextLow: varRecord.'Rating Text (Low)',
-        appRatingTextHigh: varRecord.'Rating Text (High)'
-        }
+            appRatingTextLow: varRecord.'Rating Text (Low)',
+            appRatingTextHigh: varRecord.'Rating Text (High)'
+            }
         )
     )    
     ```
