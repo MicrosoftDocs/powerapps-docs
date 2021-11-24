@@ -33,18 +33,18 @@ To get started with mobile offline, an app maker will need to enable and define 
 
 ## Offline-first
 
-Once offline is configured anyone that uses [Power Apps mobile](run-powerapps-on-mobile) can also use it in offline mode. The Power Apps mobile always runs offline-first, both with and without internet connection. This functionality optimizes performance and creates a consistent experience for users as they move through areas with and without internet connection. 
+Once offline is configured anyone that uses [Power Apps mobile](run-powerapps-on-mobile) can also use it in offline mode. Power Apps mobile always runs offline-first, both with and without internet connection. This functionality optimizes performance and creates a consistent experience for users as they move through areas with and without internet connection. 
 
 1.	**Online**: Occurs when there is internet but and offline isn't set up. When internet is lost, the mobile app is unusable. Not recommended.
 2.	**Offline-first without internet connection**: Data is downloaded to the device and all changes are saved locally to your mobile device. When internet is restored, the changes are automatically synced to the server.
 3. **Offline-first with internet connection**: Data is downloaded to the device and all changes are saved locally; but because there is internet connection the app will automatically attempt to sync every few minutes.
 
-
+For more information, see [Offline-first](work-in-offline-mode.md).
 
 > [!IMPORTANT]
-> This topic covers the new offline set up experience using the [modern app designer](../maker/model-driven-apps/create-model-driven-app) and the new [offline-first experience](work-in-offline-mode.md).
->   - You can run all your model-driven apps on [Power Apps mobile](run-powerapps-on-mobile) including customer engagement apps (such as [Dynamics 365 Sales](/dynamics365/sales-professional/help-hub.md), [Dynamics 365 Customer Service](/dynamics365/customer-service/help-hub.md), and [Dynamics 365 Marketing](/dynamics365/marketing/help-hub.md)). However, the new experience also works on [Dynamics 365 for Phones and Tablets](/dynamics365/mobile-app/overview) and [Field Service (Dynamics 365) mobile app](/dynamics365/field-service/mobile-2020-power-platform). 
->   For information about the classic mobile offline set up, see  [Configure mobile offline synchronization](/dynamics365/mobile-app/setup-mobile-offline).
+> This topic covers the new offline set up experience using the [modern app designer](../maker/model-driven-apps/create-model-driven-app) and the new [offline-first](work-in-offline-mode.md) experience.
+>   - You can run all your model-driven apps on [Power Apps mobile](run-powerapps-on-mobile) including customer engagement apps (such as [Dynamics 365 Sales](/dynamics365/sales-professional/help-hub.md), [Dynamics 365 Customer Service](/dynamics365/customer-service/help-hub.md), and [Dynamics 365 Marketing](/dynamics365/marketing/help-hub.md)). However, you can run the new offline-first experience on [Dynamics 365 for Phones and Tablets](/dynamics365/mobile-app/overview) and [Field Service (Dynamics 365) mobile app](/dynamics365/field-service/mobile-2020-power-platform). 
+>   - For information about the classic mobile offline set up, see  [Configure mobile offline synchronization](/dynamics365/mobile-app/setup-mobile-offline).
 >   - For more information on how to set up mobile offline for canvas apps, see [Develop offline-capable canvas apps](../maker/canvas-apps/offline-apps.md).
 
 
