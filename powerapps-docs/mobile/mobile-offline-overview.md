@@ -28,7 +28,7 @@ When model-driven apps are enabled for mobile offline, not only can you continue
 
 Note, internet connection is required to sync data between your mobile device and Microsoft Dataverse.
 
-To get started with mobile offline, an app maker will need to enable and define the tables that will be available for offline use in Dataverse. For more information, see [Set up mobile offline](setup-mobile-offline.md)
+To get started with mobile offline, an app maker will need to enable and define the tables that will be available for offline using the [modern app designer](../maker/model-driven-apps/app-designer-overview). For more information, see [Set up mobile offline](setup-mobile-offline.md)
 
 
 ## Offline first
