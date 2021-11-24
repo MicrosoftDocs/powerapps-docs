@@ -42,7 +42,7 @@ Any Git provider can be used with Power Apps Studio&mdash;such as [GitHub](https
 Follow these steps to enable Git version control in your app.
 
 1. Create a new app or open an existing app that you would like to add to Git version control.
-1. Select **File** > **Settings** in Power Apps Studio.
+1. Select **Settings** in Power Apps Studio.
 1. Select **Upcoming features**.
 1. Select **Experimental**.
 1. Scroll down to **Show the Git version control setting** and turn it to **On**.
@@ -61,7 +61,7 @@ Follow these steps to enable Git version control in your app.
 
 Follow these steps to connect your app to Git.
 
-1. Select **File** > **Settings** in Power Apps Studio.
+1. Select **Settings** in Power Apps Studio.
 
 1. Select **Git version control**.
 
