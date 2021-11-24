@@ -41,7 +41,7 @@ Verify the following prerequisites before you enable mobile offline:
 
 ##  Optimize your app for mobile offline 
 
-Before you enable offline mode, make sure your model-driven app is optimized for offline and mobile use. Mobile apps run on smaller screens with limited connectivity so it's important that the app is fast and always aviliable. Create an app that is simple and lightweight. Also, consider the number of user scenarios that you want to cover and the amount of data the app will use.
+Before you enable offline mode, make sure your model-driven app is optimized for offline and mobile use. Mobile apps run on smaller screens with limited connectivity so it's important that the app is always aviliable. Create an app that is simple and lightweight. Also, consider the number of user scenarios that you want to cover and the amount of data the app will use.
 
 If you have two types of users in your organization such as desktop and remote mobile users then create two seperate apps. Optimize the user experience and create an online app for your office users and another app for your mobile users that may have limited connectivity. 
 
