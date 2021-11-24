@@ -100,7 +100,7 @@ Set up the new mobile offline experience in the [modern app designer (preview)](
 
 The mobile offline profile represents the data set in the app that is synced locally on a user's device. It consists of the list of tables with related filters that are applied when data is synced to a user's device.
 
-### Enable a table for offline
+### Prerequisite: Enable a table for offline
 
 A table needs to be enabled for offline in order to add it to a offline profile. Follow these steps to verify a table is enabled for offline.
 
@@ -115,7 +115,7 @@ A table needs to be enabled for offline in order to add it to a offline profile.
 4. In the **Edit table** settings, select **Advanced options**, and in the **Rows in this table** section select **Can be take offline**.
 
   > [!NOTE]
-  > App can only be linked to one profile but a profile can be shared between multiple apps. This can be useful when different apps share the same data set to only download it once on the device and have it shared between the apps locally.
+  > App can only be linked to one profile but a profile can be shared between multiple apps. This can be useful when different apps share the same data set to only download it once on the device and locally  between the apps.
 
     > [!div class="mx-imgBorder"]
     > ![Enable table for offline use](media/mobile-offline-image8.png)
