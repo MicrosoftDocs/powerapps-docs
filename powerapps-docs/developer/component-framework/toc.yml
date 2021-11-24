@@ -139,6 +139,12 @@
           href: reference/dataset/refresh.md
         - name: setSelectedRecordIds
           href: reference/dataset/setselectedrecordids.md
+      - name: ControlAttributes
+        href: reference/controlattributes.md
+      - name: ControlAttributesType
+        href: reference/controlattributestype.md
+      - name: DateTimeFieldBehavior
+        href: reference/datetimefieldbehavior.md
       - name: Device
         href: reference/device.md
         items:
@@ -220,6 +226,8 @@
           href: reference/formatting/formattime.md
         - name: formatUserDateTimeToUTC
           href: reference/formatting/formatuserdatetimetoutc.md
+        - name: formatUserInput
+          href: reference/formatting/formatUserInput.md
         - name: formatUTCDateTimeToUserDate
           href: reference/formatting/formatutcdatetimetouserdate.md
         - name: getWeekOfYear
@@ -242,6 +250,8 @@
           href: reference/mode/setfullscreen.md
         - name: trackContainerResize
           href: reference/mode/trackcontainerresize.md
+      - name: MoneyPrecisionSource
+        href: reference/moneyprecisionsource.md
       - name: Navigation
         href: reference/navigation.md
         items:
@@ -261,6 +271,8 @@
           href: reference/navigation/openwebresource.md
       - name: NumberFormattingInfo
         href: reference/numberformattinginfo.md
+      - name: OptionDescriptor
+        href: reference/optiondescriptor.md
       - name: Paging
         href: reference/paging.md
         items:
