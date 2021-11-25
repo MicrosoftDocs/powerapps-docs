@@ -20,7 +20,7 @@ searchScope:
   - "Power Apps"
 ---
 
-# Overview of mobile offline (preview)
+# Mobile offline overview (preview)
 
 [This topic is pre-release documentation and is subject to change.]
 
