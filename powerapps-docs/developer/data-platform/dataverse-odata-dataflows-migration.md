@@ -158,8 +158,8 @@ For each table chosen, select the behavior for importing that table in these set
 
     - Requires a key configuration in the target environment (as the unique identifier columns are not available to modify).
 
-> [!IMPORTANT]
-> The 'delete rows' option is only available when a key is specified. It is possible to have a table without a key, but a key is required when you want to update or delete records since it is the unique identifier the system uses to perform these tasks. You can add a key directly in the Dataverse table if your table does not have a key and you want to use the delete or update functionality provided by Dataflows.<p/>More information: [Define alternate keys using Power Apps portal]((../../maker/data-platform/define-alternate-keys-portal.md)
+  > [!IMPORTANT]
+  > The 'delete rows' option is only available when a key is specified. It is possible to have a table without a key, but a key is required when you want to update or delete records since it is the unique identifier the system uses to perform these tasks. You can add a key directly in the Dataverse table if your table does not have a key and you want to use the delete or update functionality provided by Dataflows.<p/>More information: [Define alternate keys using Power Apps portal](../../maker/data-platform/define-alternate-keys-portal.md)
 
 - **Load to new table (not recommended)**
 
