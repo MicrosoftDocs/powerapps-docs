@@ -18,11 +18,11 @@ search.app:
   - D365CE
 ---
 
-# Offline-first (preview)
+# Set up and use mobile offline-first (preview)
 
 [This topic is pre-release documentation and is subject to change.]
 
-This topic covers the new offline-first user experience. Once [offline is enabled](setup-mobile-offline.md) for your model-driven app, you can run it one of the following mobile apps:
+This topic covers the new mobile offline-first set up and user experience. Once [offline is enabled](setup-mobile-offline.md) for your model-driven app, you can run it one of the following mobile apps:
 
 - [Power Apps mobile](run-powerapps-on-mobile)
 - [Dynamics 365 for Phones and Tablets](/dynamics365/mobile-app/overview)
