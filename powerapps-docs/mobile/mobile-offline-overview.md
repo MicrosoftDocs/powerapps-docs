@@ -43,11 +43,10 @@ Once offline is configured anyone that uses [Power Apps mobile](run-powerapps-on
 
 For more information, see [Set up and use mobile offline-first](work-in-offline-mode.md).
 
-> [!IMPORTANT]
-> This topic covers the new offline set up experience using the [modern app designer](../maker/model-driven-apps/create-model-driven-app) and the new [offline-first](work-in-offline-mode.md) experience.
->   - You can run all your model-driven apps on [Power Apps mobile](run-powerapps-on-mobile) including customer engagement apps (such as [Dynamics 365 Sales](/dynamics365/sales-professional/help-hub.md), [Dynamics 365 Customer Service](/dynamics365/customer-service/help-hub.md), and [Dynamics 365 Marketing](/dynamics365/marketing/help-hub.md)). However, you can run the new offline-first experience on [Dynamics 365 for Phones and Tablets](/dynamics365/mobile-app/overview) and [Field Service (Dynamics 365) mobile app](/dynamics365/field-service/mobile-2020-power-platform). 
->   - For information about the classic mobile offline set up, see  [Configure mobile offline synchronization](/dynamics365/mobile-app/setup-mobile-offline).
->   - For more information on how to set up mobile offline for canvas apps, see [Develop offline-capable canvas apps](../maker/canvas-apps/offline-apps.md).
+> [!IMPORTANT] 
+>   - For information about the classic mobile offline set up, see [Configure mobile offline synchronization](/dynamics365/mobile-app/setup-mobile-offline).
+>   - For more information on how to set up mobile offline for canvas apps, see [Develop offline-capable canvas apps](../maker/canvas-apps/offline-apps.md)
+>   - For information on how to use the Field Service mobile app using offline-first, see [Field Service (Dynamics 365) mobile app](/dynamics365/field-service/mobile-2020-power-platform).
 
 
 
