@@ -114,11 +114,11 @@ A table needs to be enabled for offline in order to add it to a offline profile.
     
 4. In the **Edit table** settings, select **Advanced options**, and in the **Rows in this table** section select **Can be take offline**.
 
-  > [!NOTE]
-  > App can only be linked to one profile but a profile can be shared between multiple apps. This can be useful when different apps share the same data set to only download it once on the device and locally  between the apps.
+   > [!NOTE]
+   > App can only be linked to one profile but a profile can be shared between multiple apps. This can be useful when different apps share the same data set to only download it once on the device and locally  between the apps.
 
-   > [!div class="mx-imgBorder"]
-   > ![Enable table for offline use](media/mobile-offline-image8.png)
+    > [!div class="mx-imgBorder"]
+    > ![Enable table for offline use](media/mobile-offline-image8.png)
 
 
 ### Default profile
