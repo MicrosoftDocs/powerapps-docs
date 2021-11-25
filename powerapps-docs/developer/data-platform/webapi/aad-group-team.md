@@ -27,18 +27,18 @@ search.app:
 An Azure Active Directory (AAD) group team, similar to an owner team, can own records and can have security roles assigned to the team. To read more about AAD group teams see [Manage group teams](/power-platform/admin/manage-group-teams).
 
 ## Just-in-time updates
-Just-in-time updates mean that the actions are taken at run-time to eliminate the need for syncing data from Azure Active Directory and Dataverse. These actions include creating AAD group teams, adding/removing AAD group members from AAD group teams, and adding users into Dataverse.
+Just-in-time updates mean that the actions are taken at run-time to eliminate the need for syncing data from Azure Active Directory and Microsoft Dataverse. These actions include creating AAD group teams, adding/removing AAD group members from AAD group teams, and adding users into Dataverse.
 
 1. If the AAD group team doesn't exist and a security role is assigned or a record is assigned to the AAD group, the AAD group team is created just-in-time.
 
-2. When an AAD group member accesses Dataverse or via an non-interactive process makes a call on behalf of the user, the group member is added into the AAD group team at run-time. Similarly, when a member who was removed from the AAD group accesses Dataverse or via an non-interactive process, the group member is removed from the AAD group team.
+2. When an AAD group member accesses Dataverse interactively or through a non-interactive process makes a call on behalf of the user, the group member is added into the AAD group team at run-time. Similarly, when a member who was removed from the AAD group accesses Dataverse interactively or by a non-interactive process call, the group member is removed from the AAD group team.
 
-3. When an AAD group member accesses Dataverse or via an non-interactive process makes a call on behalf of the user, and the user doesn't exist in Dataverse, the user is added in Dataverse just-in-time.
+3. When an AAD group member accesses Dataverse interactively or through a non-interactive process makes a call on behalf of the user, and the user doesn't exist in Dataverse, the user is added in Dataverse just-in-time.
 
 The following sections describe how to work with AAD group teams using the Web API. 
 
 ## Create an AAD group team
-AAD group team can be created in Dataverse by making an API call (programmatically) or by just-in-time when a security role is assigned to the AAD group, or when a record is assigned to the AAD group. 
+An AAD group team can be created in Dataverse by making an API call (programmatically) or by just-in-time when a security role is assigned to the AAD group, or when a record is assigned to the AAD group. 
 
 Citizen developers wanting to programmatically create a Microsoft Dataverse AAD group team can do so by providing the object ID of an existing AAD group as shown in the following command.
 
