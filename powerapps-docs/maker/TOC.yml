@@ -1471,11 +1471,11 @@
     href: ../mobile/powerapps-mobile-troubleshoot.md
   - name: 'Mobile offline'
     items:
-    - name: Overview
+    - name: Mobile offline overview (preview)
       href: ../mobile/mobile-offline-overview.md
-    - name: Set up mobile offline
+    - name: Set up mobile offline (preview)
       href: ../mobile/setup-mobile-offline.md 
-    - name: Work in offline mode
+    - name: Set up and use offline-first (preview)
       href: ../mobile/work-in-offline-mode.md   
 - name: Portals
   items:
