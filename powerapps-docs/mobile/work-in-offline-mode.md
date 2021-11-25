@@ -58,10 +58,7 @@ To use offline-first, you need to enable it for each of your model-driven. It's 
     > [!div class="mx-imgBorder"]
     > ![Select setting on the command bar](media/mobile-offline-image4.png)
 
-5. On the **Upcoming** tab, set the "**Disable classic offline** toggle to **On**.
-
-    > [!div class="mx-imgBorder"]
-    > ![Set the Offline setup from the modern app designer toggle to on ](media/mobile-offline-image5.png)
+5. On the **Upcoming** tab, set the **Disable classic offline** toggle to **On**.
 
 6. Close the **Settings** dialog and then save and publish the app.
 
