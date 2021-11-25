@@ -41,7 +41,7 @@ Once offline is configured anyone that uses [Power Apps mobile](run-powerapps-on
 2.	**Offline-first without internet connection**: Data is downloaded to the device and all changes are saved locally to your mobile device. When internet is restored, the changes are automatically synced to the server.
 3. **Offline-first with internet connection**: Data is downloaded to the device and all changes are saved locally; but because there is internet connection the app will automatically attempt to sync every few minutes.
 
-For more information, see [Offline-first](work-in-offline-mode.md).
+For more information, see [Set up and use mobile offline-first](work-in-offline-mode.md).
 
 > [!IMPORTANT]
 > This topic covers the new offline set up experience using the [modern app designer](../maker/model-driven-apps/create-model-driven-app) and the new [offline-first](work-in-offline-mode.md) experience.
