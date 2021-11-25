@@ -28,7 +28,27 @@ This topic covers the new offline-first user experience. Once [offline is enable
 
 Depending on the app you’re using and your set up, your offline experience may be different. 
 
-## Understanding offline-first vs. classic offline
+
+## Offline-first vs. classic offline
+
+With the new offline-first experience it's important to understand the key benifits of the new vs. the [classic offline experience](/dynamics365/mobile-app/work-in-offline-mode). 
+
+
+**Classic offline with internet connection**
+
+Users have the options to skip the initial offline sync and stay online which means user in your organization won't have the same experiences.
+
+
+|Offline-first| Classic offoine  |
+|---------|---------|
+| <ol><li>Your data is always the same regardless of your network connection </lo> <div></div> <div></div> !![Download offline data.](media/offline-first-classic-1.png)     |   <ol> <li> Users have the options to skip the initial offline sync and stay online which means user in your organization won't have the same experiences. <div></div> !![Download offline data.](media/offline-first-classic-1.png) </li> <li> The Work in offline mode toggle is something a user has to remember to disable to sync back all your changes with the server. <div></div> !![Download offline data.](media/offline-first-classic-2.png) </li> <div></div> <div></div>  ![The app-selector menu](media/app-selector2.png "The app-selector menu")   |
+
+
+
+ser  listed from the server but if connection is lost while editing an online mode the row and suddenly losing connection. In that case, I may lose all my changes if I try to save them while not having connection
+
+1. **Offline-first**: Your data is always the same regardless of your network connection. Th
+ 
 
 For your app to be available offline, it needs to download the app and user data on the device first. This process is called initial offline sync.
 The app data includes all the resources needed for the app to run properly and the user data configured in the offline profile and stored in Microsoft Dataverse tables.
@@ -45,7 +65,7 @@ You can also select the **Offline status** button to see more information about 
 > ![Offline status screen.](media/offline-first-2.png)
 
 
-Once the sync is complete, you can start using your application offline.
+When the sync is complete, you can start using your application offline. Depending on the sync intervals set up in the offline profile, all subsequent syncs will happen automatically.
 
 
 > [!div class="mx-imgBorder"]
@@ -53,6 +73,18 @@ Once the sync is complete, you can start using your application offline.
 
 
 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  This is the new preview experience.
 2. **Class offline**: This is the [currect released offline experience](/dynamics365/mobile-app/work-in-offline-mode).
 
@@ -60,10 +92,10 @@ Once the sync is complete, you can start using your application offline.
 
 
 
-| Classic offline (when online)                                                                                                                                                                                                       | Classic offline (when no network)                                                                                                          | Offline-first                                                                                                                |
-|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
-| ![](media/image20.png)                                                                                                                                                            | ![](media/image21.png)                                                                    | ![](media/image21.png)                                                      |
-| User see records listed from the server and may be facing weird situations like editing an online record and suddenly losing connection. In that case, I may lose all my changes if I try to save them while not having connection. | When no network available, the records are listed from the local database and hence wouldn't be the same as when connected to the network. | With Offline-first, my data is always the same regardless of my network connectivity and relies on my offline profile setup. |
+                                                                                             |
+ User see records listed from the server and may be facing weird situations like editing an online record and suddenly losing connection. In that case, I may lose all my changes if I try to save them while not having connection.
+ 
+ When no network available, the records are listed from the local database and hence wouldn't be the same as when connected to the network. | With Offline-first, my data is always the same regardless of my network connectivity and relies on my offline profile setup. |
 
 One option to avoid the confusing experience described above with classic offline between **with** and **without** network connectivity is to force the app to work offline (e.g.: Only access the local database).
 
@@ -94,8 +126,6 @@ Offline limitations cleanup
 
 
 
-> [!IMPORTANT]
-> The [Work offline on your mobile device](/dynamics365/mobile-app/work-in-offline-mode) topic covers how to work in offline for both Power Apps mobile and the Dynamics 365 phones and tablet app. The process is the same for both apps. 
 
 
 
