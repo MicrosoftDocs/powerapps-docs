@@ -230,11 +230,9 @@ GET [Organization URI]/api/data/v9.0/RetrieveAadUserPrivileges(DirectoryObjectId
 ```
 
 ## Checking user or team's access rights on a table
-If you have a non-interactive process where your service needs to check if the user has access rights to a table, you can make the following call on behalf of the user by specifying the CallerID.
+If you have a non-interactive process where your service needs to check if the user has access rights to a table, you can make a [RetrievePrincipalAccess function](/dynamics365/customer-engagement/web-api/retrieveprincipalaccess) call on behalf of the user by specifying the `CallerID`.
 
-[RetrievePrincipalAccess function](/dynamics365/customer-engagement/web-api/retrieveprincipalaccess)  
-
-[Impersonate another user](../impersonate-another-user.md)
+More information: [Impersonate another user](../impersonate-another-user.md)
 
 ### See also
 
