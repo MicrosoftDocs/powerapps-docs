@@ -33,7 +33,7 @@ Note, internet connection is required to sync data between your mobile device an
 To get started with mobile offline, an app maker will need to enable and define the tables that will be available for offline using the [modern app designer](../maker/model-driven-apps/app-designer-overview). For more information, see [Set up mobile offline](setup-mobile-offline.md)
 
 
-## Offline-first
+## Mobile offline-first
 
 Once offline is configured anyone that uses [Power Apps mobile](run-powerapps-on-mobile) can also use it in offline mode. Power Apps mobile always runs offline-first, both with and without internet connection. This functionality optimizes performance and creates a consistent experience for users as they move through areas with and without internet connection. 
 
