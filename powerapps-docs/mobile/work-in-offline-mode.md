@@ -34,21 +34,41 @@ Depending on the app you’re using and your set up, your offline experience may
 With the new offline-first experience it's important to understand the key benifits of the new vs. the [classic offline experience](/dynamics365/mobile-app/work-in-offline-mode). 
 
 
-**Classic offline with internet connection**
-
-Users have the options to skip the initial offline sync and stay online which means user in your organization won't have the same experiences.
-
 
 |Offline-first| Classic offline  |
 |---------|---------|
-| <ol><li>Your data is always the same regardless of your network connection. </lo> <div></div> <div></div> !![Download offline data.](media/offline-first-classic-3.png) <li> There no toggle for users to switch form offline to online mode. A user will never forget to sync their changes back to the server because the app will do it automatically. <div></div> ![Sync data back to server.](media/offline-first-classic-4.png) </li>     |   <ol> <li> Users have the options to skip the initial offline sync and stay online which means user in your organization won't have the same experiences. <div></div> ![Download offline data.](media/offline-first-classic-1.png) </li> <li> The Work in offline mode toggle is something a user has to remember to disable to sync back all your changes with the server. <div></div> ![Download offline data.](media/offline-first-classic-2.png) </li> <div></div>  |
+| <ol><li>Your data is always the same regardless of your network connection. </lo> <div></div> <div></div> !![Download offline data.](media/offline-first-classic-3.png) <li> There no toggle for users to switch form offline to online mode. A user will never forget to sync their changes back to the server because the app will do it automatically. <div></div> ![Sync data back to server.](media/offline-first-classic-4.png) </li>     |   <ol> <li> Users have the options to skip the initial offline sync and stay online which means user in your organization won't have the same experiences. <div></div> ![Download offline data.](media/offline-first-classic-1.png) </li> <li> The Work in offline mode toggle is something a user has to remember to disable to sync back all your changes with the server. <div></div> ![Download offline data.](media/offline-first-classic-2.png) </li> <div></div> </li> <li> When there's no network, the rows are listed from the local database so they won't be the same when you connect back to the server. If you lose internet connection while editing an online mode and suddenly lose connection then you will also lose your changes when you tro to save them while offline. </li>  |
 
 
+## Enable offline-first
 
-ser  listed from the server but if connection is lost while editing an online mode the row and suddenly losing connection. In that case, I may lose all my changes if I try to save them while not having connection
+To use offline-first, you need to enable it for each of your model-driven. It's separate app setting for each app.
 
-1. **Offline-first**: Your data is always the same regardless of your network connection. Th
+1. Sign in to [Power Apps (preview)](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) 
+
+2. On the left nav, select **Apps** and then select the model-driven app that you want enable for offline.
+
+3. Select ... > **Edit** > **Edit in preview** to open the modern app designer.
+
+    > [!div class="mx-imgBorder"]
+    > ![Edit an app](media/offline-edit-app.png)
  
+4. On the command bar, select **Settings**.
+
+    > [!div class="mx-imgBorder"]
+    > ![Select setting on the command bar](media/mobile-offline-image4.png)
+
+5. On the **Upcoming** tab, set the "**Disable classic offline** toggle to **On**.
+
+    > [!div class="mx-imgBorder"]
+    > ![Set the Offline setup from the modern app designer toggle to on ](media/mobile-offline-image5.png)
+
+6. Close the **Settings** dialog and then save and publish the app.
+
+
+Some of the features such as dashboards, charts, multi-table business process flows, and server-side sync are only available when you're online. Be sure to validate your app and make sure that it's fully functional be you deploy it. 
+
+## Use offline-first
 
 For your app to be available offline, it needs to download the app and user data on the device first. This process is called initial offline sync.
 The app data includes all the resources needed for the app to run properly and the user data configured in the offline profile and stored in Microsoft Dataverse tables.
@@ -73,41 +93,6 @@ When the sync is complete, you can start using your application offline. Dependi
 
 
 
-
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- This is the new preview experience.
-2. **Class offline**: This is the [currect released offline experience](/dynamics365/mobile-app/work-in-offline-mode).
-
-
-
-
-
-                                                                                             |
- User see records listed from the server and may be facing weird situations like editing an online record and suddenly losing connection. In that case, I may lose all my changes if I try to save them while not having connection.
- 
- When no network available, the records are listed from the local database and hence wouldn't be the same as when connected to the network. | With Offline-first, my data is always the same regardless of my network connectivity and relies on my offline profile setup. |
-
-One option to avoid the confusing experience described above with classic offline between **with** and **without** network connectivity is to force the app to work offline (e.g.: Only access the local database).
-
-| Classic offline                                                                                                                                                                                 | Offline first                                                                      |
-|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------|
-| ![](media/image22.png)                                                                                                                        | ![](media/image23.png)           |
-| Enabling the **Work in offline mode** toggle is an option to have a consistent experience but you have to remember to disable at some point to sync back all your changes since you enabled it. | No toggle to handle anymore, I never forget to sync back my changes to the server. |
-
-**Note:** Some of the experiences (like Dashboards/Charts, multi-table BPFs or server-side plugins) which are only available online may not be available when enabling the offline-first (preview) feature. You need to validate that your app is fully functional before deploying to your end users.
-
-## Enabling offline-first for your application (Preview)
-
 Once you're ready to test offline-first, you can enable offline-first for each of your apps separately as it is an app setting.
 
 1.  Open your application using the **modern app designer**
@@ -116,13 +101,9 @@ Once you're ready to test offline-first, you can enable offline-first for each o
 
 3.  Go to the **Upcoming** tab and set the "**Disable classic offline**" toggle to On
 
-4.  
 
-Offline limitations cleanup
 
-![Graphical user interface  application  Teams Description automatically generated](media/image24.png)
 
-![Graphical user interface  text  application Description automatically generated](media/image25.png)
 
 
 
