@@ -90,16 +90,6 @@ When the sync is complete, you can start using your application offline. Dependi
 
 
 
-Once you're ready to test offline-first, you can enable offline-first for each of your apps separately as it is an app setting.
-
-1.  Open your application using the **modern app designer**
-
-2.  Select **Settings** &gt; **Upcoming** tab.
-
-3.  Go to the **Upcoming** tab and set the "**Disable classic offline**" toggle to On
-
-
-
 
 
 
