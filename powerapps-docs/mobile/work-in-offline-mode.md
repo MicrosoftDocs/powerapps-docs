@@ -39,7 +39,7 @@ With the new offline-first experience it's important to understand the key benif
 Users have the options to skip the initial offline sync and stay online which means user in your organization won't have the same experiences.
 
 
-|Offline-first| Classic offoine  |
+|Offline-first| Classic offline  |
 |---------|---------|
 | <ol><li>Your data is always the same regardless of your network connection </lo> <div></div> <div></div> !![Download offline data.](media/offline-first-classic-1.png)     |   <ol> <li> Users have the options to skip the initial offline sync and stay online which means user in your organization won't have the same experiences. <div></div> ![Download offline data.](media/offline-first-classic-1.png) </li> <li> The Work in offline mode toggle is something a user has to remember to disable to sync back all your changes with the server. <div></div> ![Download offline data.](media/offline-first-classic-2.png) </li> <div></div> <div></div>  ![The app-selector menu](media/app-selector2.png "The app-selector menu")   |
 
