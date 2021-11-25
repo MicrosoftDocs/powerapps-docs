@@ -20,6 +20,8 @@ search.app:
 
 # Offline-first (preview)
 
+[This topic is pre-release documentation and is subject to change.]
+
 This topic covers the new offline-first user experience. Once [offline is enabled](setup-mobile-offline.md) for your model-driven app, you can run it one of the following mobile apps:
 
 - [Power Apps mobile](run-powerapps-on-mobile)
