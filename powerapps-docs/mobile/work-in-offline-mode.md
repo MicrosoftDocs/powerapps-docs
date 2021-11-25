@@ -42,7 +42,7 @@ With the new offline-first experience it's important to understand the key benif
 | <ol><li>Your data is always the same regardless of your network connection. </lo> <div></div> <div></div> !![Download offline data.](media/offline-first-classic-3.png) <li> There no toggle for users to switch form offline to online mode. A user will never forget to sync their changes back to the server because the app will do it automatically. <div></div> ![Sync data back to server.](media/offline-first-classic-4.png) </li>     |   <ol> <li> Users have the options to skip the initial offline sync and stay online which means user in your organization won't have the same experiences. <div></div> ![Download offline data.](media/offline-first-classic-1.png) </li> <li> The Work in offline mode toggle is something a user has to remember to disable to sync back all your changes with the server. <div></div> ![Download offline data.](media/offline-first-classic-2.png) </li> <div></div> </li> <li> When there's no network, the rows are listed from the local database so they won't be the same when you connect back to the server. If you lose internet connection while editing an online mode and suddenly lose connection then you will also lose your changes when you tro to save them while offline. </li>  |
 
 
-## Enable offline-first
+## Enable mobile offline-first
 
 To use offline-first, you need to enable it for each of your model-driven. It's separate app setting for each app.
 
@@ -67,7 +67,7 @@ To use offline-first, you need to enable it for each of your model-driven. It's 
 
 Some of the features such as dashboards, charts, multi-table business process flows, and server-side sync are only available when you're online. Be sure to validate your app and make sure that it's fully functional be you deploy it. 
 
-## Use offline-first
+## Use mobile offline-first
 
 For your app to be available offline, it needs to download the app and user data on the device first. This process is called initial offline sync.
 The app data includes all the resources needed for the app to run properly and the user data configured in the offline profile and stored in Microsoft Dataverse tables.
