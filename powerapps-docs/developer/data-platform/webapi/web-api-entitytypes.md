@@ -29,7 +29,7 @@ Within the [CSDL $metadata document](web-api-service-documents.md#csdl-metadata-
 |Name     |The name of the type|
 |BaseType |The EntityType that the type inherits from.|
 
-For example, For example, this is the `EntityType` element for the `account` entity, excluding properties and navigation properties.
+For example, this is the `EntityType` element for the `account` entity, excluding properties and navigation properties.
 
 ```xml
 <EntityType Name="account" BaseType="mscrm.crmbaseentity">  
@@ -46,8 +46,8 @@ Except for three exceptions, all entity types will have the following child elem
 |Element  |Description  |
 |---------|---------|
 |`Key`|Contains a `<PropertyRef>` element where the `Name` attribute represents the primary key for the table.|
-|`Property`|Contains details about a property of the EntityType. See Properties.|
-|`NavigationProperty`|Contains details about a relationship with this EntityType. See Navigation Properties|
+|`Property`|Contains details about a property of the EntityType. See [Web API Properties](web-api-properties.md).|
+|`NavigationProperty`|Contains details about a relationship with this EntityType. See [Web API Navigation Properties](web-api-navigation-properties.md)|
 
 ## Special entity types
 

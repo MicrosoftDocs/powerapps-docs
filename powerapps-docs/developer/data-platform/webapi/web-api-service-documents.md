@@ -55,7 +55,7 @@ You should see results like this:
 The service document provides a list of all the *EntitySets* available in your environment. An EntitySet is the name of a resource that refers to a table in Dataverse. You will use the entity set name in the URL to perform operations on the data in a specific table.
 
 > [!TIP]
-> Use `Ctrl+F` on the results of this to find the correct entity set name rather than trying to guess.
+> Use `Ctrl+F` on the results of this to find the correct entity set name.
 
 ## Entity set name
 
