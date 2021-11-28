@@ -61,6 +61,9 @@ For more information, see these documents:
 [Web API EntityTypes](web-api-entitytypes.md)<br />
 [Web API Properties](web-api-properties.md)<br />
 [Web API Navigation Properties](web-api-navigation-properties.md)<br />
+[Web API Actions](web-api-actions.md)<br />
+[Web API Functions](web-api-functions.md)<br />
+[Web API Complex and Enumeration types](web-api-complex-enum-types.md)<br />
 [Authenticate to Dataverse with the Web API](authenticate-web-api.md)<br />
 [Perform operations using the Web API](perform-operations-web-api.md)<br/>
 

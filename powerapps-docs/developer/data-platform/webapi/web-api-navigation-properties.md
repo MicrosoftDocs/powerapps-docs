@@ -56,49 +56,50 @@ This single-valued navigation property connects multiple `account` records to a 
 
 ### Lookup properties
 
-Single-valued navigation properties will also have a `ReferentialConstraint` with a `Property` attribute that refers to a ***lookup property*** using the following naming convention: `_<name>_value`. 
+Single-valued navigation properties will also have a `ReferentialConstraint` with a `Property` attribute that refers to a lookup property. You can recognize lookup properties because they use the following naming convention: `_<name>_value`. 
 
 The `ReferentialConstraint` will also have a `ReferencedProperty` attribute that identifies the primary key name of the related entity type.
 
-With [Metadata annotations](web-api-service-documents.md#metadata-annotations) enabled, a lookup property looks like this:
+In most cases the `<name>` found in the lookup property will match the name of the navigation property. However, when the single-valued navigation property is part of a multi-table (or polymorphic) lookup there may be a single lookup property which is the `ReferentialConstraint` for more than one single-valued navigation property.
+
+An entity type may have something like the following combination where a single `_customerid_value` lookup property supports  multiple single-valued navigation properties that represent a multi-table lookup. There will be one single-valued navigation property for each type of table supported by the multi-table lookup.
 
 ```xml
-<Property Name="_createdby_value" Type="Edm.Guid">
-    <Annotation Term="Org.OData.Core.V1.Description" String="Shows who created the record." />
-    <Annotation Term="Org.OData.Core.V1.Computed" Bool="true" />
-    <Annotation Term="Org.OData.Core.V1.Permissions">
-        <EnumMember>Org.OData.Core.V1.PermissionType/Read</EnumMember>
-    </Annotation>
-</Property>
-```
-
-These lookup properties are computed, read-only properties that have an `Edm.Guid` value. You can use these lookup properties in a query filter to match all the records associated to the single record in the many-to-one relationship.
-
-In most cases the `<name>` will match the name of the navigation property. However, when the single-valued navigation property is part of a multi-table (or polymorphic) lookup there may be a single lookup property which is the `ReferentialConstraint` for more than one single-valued navigation property. 
-
-An entity type may have something like the following combination of a `_customerid_value` lookup property and a multiple single-valued navigation properties that represent a multi-table lookup. There will be one single-valued navigation property for each type of table supported by the multi-table lookup.
-
-```xml
-<EntityType Name="socialprofile" BaseType="mscrm.crmbaseentity">
+<EntityType 
+    Name="socialprofile" 
+    BaseType="mscrm.crmbaseentity">
     <Key>
         <PropertyRef Name="socialprofileid" />
     </Key>
-    <Property Name="_customerid_value" Type="Edm.Guid">
-        <Annotation Term="Org.OData.Core.V1.Description" String="Shows the customer that this social profile belongs to." />
+    <Property 
+        Name="_customerid_value" 
+        Type="Edm.Guid">
+        <Annotation 
+            Term="Org.OData.Core.V1.Description" 
+            String="Shows the customer that this social profile belongs to." />
     </Property>
-    <NavigationProperty Name="customerid_contact" Type="mscrm.contact" Nullable="false" Partner="Socialprofile_customer_contacts">
-        <ReferentialConstraint Property="_customerid_value" ReferencedProperty="contactid" />
+    <NavigationProperty 
+        Name="customerid_contact" 
+        Type="mscrm.contact" 
+        Nullable="false" 
+        Partner="Socialprofile_customer_contacts">
+        <ReferentialConstraint 
+            Property="_customerid_value" 
+            ReferencedProperty="contactid" />
     </NavigationProperty>
-    <NavigationProperty Name="customerid_account" Type="mscrm.account" Nullable="false" Partner="Socialprofile_customer_accounts">
-        <ReferentialConstraint Property="_customerid_value" ReferencedProperty="accountid" />
+    <NavigationProperty 
+        Name="customerid_account" 
+        Type="mscrm.account" 
+        Nullable="false" 
+        Partner="Socialprofile_customer_accounts">
+        <ReferentialConstraint 
+            Property="_customerid_value" 
+            ReferencedProperty="accountid" />
     </NavigationProperty>
 </EntityType>
 ```
 
-In these cases, setting the value of any of the single-valued navigation properties will set all the other participating single-valued navigation properties to null.
-
-When you include lookup properties in a query, you can request annotations to be included that provide additional information about the data that is set for those underlying attributes which aren’t represented by a single-valued navigation property. More information: [Retrieve data about lookup properties](query-data-web-api.md#retrieve-data-about-lookup-properties).
-
+In these cases, setting the value of any of the single-valued navigation properties will set all the other participating single-valued navigation properties to null. The corresponding lookup property GUID value will change, but you will need to retrieve specific annotations available to know which table it now refers to. More information: [Retrieve data about lookup properties](query-data-web-api.md#retrieve-data-about-lookup-properties).
 
 ## Collection-valued navigation properties
 
@@ -112,15 +113,15 @@ When a navigation property `Type` refers to a collection value, it represents a 
 />
 ```
 
-This navigation property connects an account record to many task records. Each task has a single-valued navigation property named `regardingobjectid_account_task` that refers to the account as the regarding object.
+This navigation property connects an `account` record to many `task` records. Each `task` has a single-valued navigation property named `regardingobjectid_account_task` that refers to the `account` as the regarding object.
 
 When the `Name` and the `Partner` of the collection-valued navigation property are the same, it represents a many-to-many relationship.
 
 ### Many-to-Many Relationships
 
-The way you work with collection-valued navigation properties using the Web API is the same regardless of whether the relationship is a one-to-many or many-to-many relationship. Both are considered collections, but many-to-many relationships have some implementation details you can find in the service documents. For most use cases, you can ignore them.
+The way you work with collection-valued navigation properties using OData is the same regardless of whether the relationship is a one-to-many or many-to-many relationship. Both are considered collections, but many-to-many relationships have some implementation details you can find in the service documents. For most use cases, you can ignore them.
 
-For example, every many-to-many relationship has an ***intersect table*** which supports it. These intersect tables have entity types that typically have just 4 read-only properties. The following is an example of an entity type for an intersect table that supports a many-to-many relationship between customer and product tables.
+For example, every many-to-many relationship has an *intersect table* which supports it. These intersect tables have entity types that typically have just 4 read-only properties. The following is an example of an entity type for an intersect table that supports a many-to-many relationship between `customer` and `product` tables.
 
 ```xml
 <EntityType Name="new_customer_product" BaseType="mscrm.crmbaseentity">
@@ -143,7 +144,11 @@ You can't work with entity types that represent intersect tables directly becaus
 [Web API types and operations](web-api-types-operations.md)<br />
 [Web API Service Documents](web-api-service-documents.md)<br />
 [Web API EntityTypes](web-api-entitytypes.md)<br />
-[Web API Properties](web-api-properties.md)
+[Web API Properties](web-api-properties.md)<br />
+[Web API Actions](web-api-actions.md)<br />
+[Web API Functions](web-api-functions.md)<br />
+[Web API Complex and Enumeration types](web-api-complex-enum-types.md)<br />
+[OData Version 4.0. Part 3: Common Schema Definition Language (CSDL) Plus Errata 03 7.1 Element edm:NavigationProperty](https://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part3-csdl/odata-v4.0-errata03-os-part3-csdl-complete.html#_Toc453752537)<br />
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

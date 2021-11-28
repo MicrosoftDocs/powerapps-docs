@@ -77,6 +77,16 @@ The following are primitive types currently used by Dataverse.
 |Edm.Int64|Signed 64-bit integer|
 |Edm.String|Sequence of UTF-8 characters<br />This type may include the `Unicode="false"` facet.<br /><br />When this facet exists, the string property will only contain and accept string values with characters limited to the ASCII character set.<br /><br />If no value is specified, the Unicode facet defaults to true.|
 
+## Lookup properties
+
+You can find properties which use the following naming convention: `_<name>_value`. These are called *lookup properties*.
+
+Lookup properties are computed, read-only properties that have an `Edm.Guid` value. You can use these lookup properties in a query filter to match all the records associated to the single record in the many-to-one relationship.
+
+To change the value of a lookup property, you must change the single-valued navigation property that it represents. More information: [Lookup properties](web-api-navigation-properties.md#lookup-properties)
+
+When you include lookup properties in a query, you can request annotations to be included that provide additional information about the data that is set for those underlying attributes which aren’t represented by a single-valued navigation property. More information: [Retrieve data about lookup properties](query-data-web-api.md#retrieve-data-about-lookup-properties).
+
 ### See also  
 
 [Use the Dataverse Web API](overview.md)<br />

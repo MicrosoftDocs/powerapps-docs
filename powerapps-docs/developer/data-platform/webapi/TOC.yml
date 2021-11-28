@@ -33,6 +33,12 @@
     href: web-api-properties.md
   - name: Navigation Properties
     href: web-api-navigation-properties.md
+  - name: Action definitions
+    href: web-api-actions.md
+  - name: Function definitions
+    href: web-api-functions.md
+  - name: Complex & Enum types
+    href: web-api-complex-enum-types.md
 - name: Perform Web API operations
   items:
   - name: Get started with performing operations
