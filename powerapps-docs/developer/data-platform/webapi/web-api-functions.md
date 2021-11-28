@@ -96,7 +96,7 @@ A function bound to the `account` EntitySet with a single integer `Number` param
 
 ## Overloaded functions
 
-Usually, each function you find in the $metadata will be the only function with that name. However bound functions can have multiple definitions when bound to different types. The system <xref href="Microsoft.Dynamics.CRM.RetrieveUnpublished?text=RetrieveUnpublished Function" /> and <xref href="Microsoft.Dynamics.CRM.RetrievedUnpublishedMultple?text=RetrievedUnpublishedMultple Function" /> functions are some examples. You cannot create an overloaded function using Custom API.
+Usually, each function you find in the $metadata will be the only function with that name. However bound functions can have multiple definitions when bound to different types. The system <xref href="Microsoft.Dynamics.CRM.RetrieveUnpublished?text=RetrieveUnpublished Function" /> and <xref href="Microsoft.Dynamics.CRM.RetrieveUnpublishedMultple?text=RetrieveUnpublishedMultple Function" /> functions are some examples. You cannot create an overloaded function using Custom API.
 
 More information: [OData Version 4.0. Part 3: Common Schema Definition Language (CSDL) Plus Errata 03:12.2.1.1 Function Overload Rules](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part3-csdl/odata-v4.0-errata03-os-part3-csdl-complete.html#_Function_Overload_Rules)
 

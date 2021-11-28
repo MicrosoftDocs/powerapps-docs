@@ -20,7 +20,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Web API types and operations
+# Web API types and operations old
 
 
 In order to use the Web API you need to find information about what is available for you to use. The service describes itself via service and metadata documents that you can access. This topic will introduce important concepts and describe how you can find the information you need using documentation generated from the service and metadata documents as well as the documentation of the system entity types, functions, and actions.
