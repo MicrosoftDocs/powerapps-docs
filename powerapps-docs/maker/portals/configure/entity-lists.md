@@ -87,9 +87,9 @@ $(document).ready(function (){
 ```
 ## List configuration
 
-You can easily enable and configure actions (Create, Edit, Delete, and so on) for records in a list. It is also possible to override default labels, sizes, and other attributes so that the list will be displayed exactly the way you want.
+You can easily enable and configure actions (create, edit, delete, and so on) for records in a list. It is also possible to override default labels, sizes, and other attributes so that the list will be displayed exactly the way you want.
 
-These settings are found in the Configuration section of the list form. By default, only **Basic Settings** are shown. Select **Advanced Settings** to see additional settings.
+These settings are found on the **Options** tab in the **Grid Configuration** section of the list form. By default, only **Basic Settings** are shown. Select **Advanced Settings** to see additional settings.
 
 ![Configure a list.](../media/configure-entitylist.png "Configure a list")  
 
