@@ -33,7 +33,7 @@ App designer pages are containers for one or more tables or dashboards. You can 
 To create a page follow these steps:
 1. Select **New page** in the app designer.
 1. Select the page type of either **Table based view and form** or **Dashboard**, and then select **Next**.
-1. If you don't want your page to appear in the app's site map, clear **Show in navigation** option.
+1. If you don't want your page to appear in the app's site map, clear the **Show in navigation** option.
   :::image type="content" source="media/add-table-view-and-form-pages.png" alt-text="Add table view and form pages":::
 1. Select the components you want.
 1. Select **Add**.
@@ -44,3 +44,11 @@ To remove a page complete the following steps:
 
 1. Select a page.
 1. In the ellipses (**...**) select **Remove** *'Pagename'*.
+
+## Next steps
+
+[Create and customize a model-driven app form](create-and-edit-a-model-driven-form.md)
+
+[Create or edit model-driven app dashboards](create-edit-dashboards.md)
+
+[Add a custom page to your model-driven app (preview)](add-page-to-model-app.md)

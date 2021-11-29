@@ -1158,17 +1158,19 @@
       items:
       - name: App interface design overview
         href: ./model-driven-apps/app-interface-design-overview.md
-      - name: Use the modern app designer (Preview)
+      - name: Use the modern app designer (preview)
         href: 
         items: 
-        - name: App designer overview (Preview)
+        - name: App designer overview (preview)
           href: ./model-driven-apps/app-designer-overview.md
         - name: Create an app
           href: ./model-driven-apps/create-model-driven-app.md
         - name: Create an app with an account table
           href: ./model-driven-apps/create-a-model-driven-app.md
         - name: Understanding app navigation
-          href: ./model-driven-apps/app-navigation.md        
+          href: ./model-driven-apps/app-navigation.md
+        - name: Create and remove pages
+          href: ./model-driven-apps/create-remove-pages.md        
         - name: Use custom pages within model-driven apps (preview)
           items:
           - name: Custom pages overview
