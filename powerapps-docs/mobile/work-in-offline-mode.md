@@ -74,8 +74,8 @@ The app data includes all the resources needed for the app to run properly and t
 
 With offline-first, during the initial offline sync, you'll get a notification stating that your app is syncing the offline data. This can take a few minutes or even more depending on what has been configured in the offline profile. The initial offline sync is triggered every time when the app is launched. Select **See details** to open the offline status page.
 
-> [!div class="mx-imgBorder"]
-> ![Initail offline sync.](media/offline-first-1.png)
+:::image type="content" source="media/offline-first-1.png" alt-text="Initail offline sync." lightbox="media/offline-first-1.png":::
+
 
 
 You can also select the **Offline status** button to see more information about sync progress.
