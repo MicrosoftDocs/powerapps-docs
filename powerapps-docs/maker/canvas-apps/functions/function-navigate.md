@@ -121,8 +121,6 @@ When the **Back** function runs, the inverse transition is used by default. For 
 
 1. Select the button on each screen repeatedly to bounce back and forth.
 
-[Another example](../add-screen-context-variables.md)
-
 ### See also
 
 [Using context variables](../working-with-variables.md#use-a-context-variable)
