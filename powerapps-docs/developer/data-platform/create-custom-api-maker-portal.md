@@ -2,7 +2,7 @@
 title: "Create a Custom API in the maker portal (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Create a Custom API definition with the maker portal" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 03/13/2021
+ms.date: 11/14/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -51,14 +51,6 @@ When creating a Custom API it is expected that you will use a solution. Your sol
 >
 > We recommend that you set the **IsCustomizable** managed property to false for all Custom API components. This property is not available in the form. For more information see [Managed properties](/power-platform/alm/managed-properties-alm)
 
-### Known issue: Add your Custom API to your solution
-
-Known issue: [A custom API created is not added to the current solution in the maker portal](custom-api.md#a-custom-api-created-is-not-added-to-the-current-solution-in-the-maker-portal)
-After you create your Custom API, it will not appear in your solution. In your solution you must select **Add existing** and then select **Custom API** from the drop-down.
-
-Then add your Custom API to your solution.
-
-:::image type="content" source="media/add-existing-customapi.png" alt-text="Select your custom api and add it to the existing solution.":::
 
 ## Create any Request Parameters
 
@@ -79,8 +71,6 @@ A Custom API doesn't require parameters. Create as many parameters as you need t
     :::image type="content" source="media/customapi-request-parameter-form.png" alt-text="Example of a Custom API Request Parameter Form.":::
 
 > [!NOTE]
-> As noted earlier in [Known issue: Add your Custom API to your solution](#known-issue-add-your-custom-api-to-your-solution) you will have to manually add this request parameter record to your solution.
->
 > As noted earlier, we recommend that you set the **IsCustomizable** managed property to false for all Custom API components. This property is not available in the form. For more information see [Managed properties](/power-platform/alm/managed-properties-alm)
 
 ## Create any Response Properties
@@ -90,7 +80,7 @@ A Custom API that represents an action doesn't require response properties. If t
 > [!IMPORTANT]
 > A Custom API that represents a function requires at least one response property to be valid.
 
-If there is only a single **Entity** or **EntityCollection** response property defined, the response will be of that type. If there are multiple parameters, or one or more parameter of a simple type, the API will return a complex type where each response property will be a property of that complex type. 
+If there is only a single **Entity** or **EntityCollection** response property defined, the response will be of that type. If there are multiple properties, or one or more property of a simple type, the API will return a complex type where each response property will be a property of that complex type.
 
 For example, if your Custom API Unique name is `sample_CustomAPIExample`, it will return a complex type named `sample_CustomAPIExampleResponse` with properties for each response property you define.
 
@@ -102,8 +92,6 @@ For example, if your Custom API Unique name is `sample_CustomAPIExample`, it wil
     :::image type="content" source="media/customapi-response-property-form.png" alt-text="Custom API Response Property Form.":::
 
 > [!NOTE]
-> As noted earlier in [Known issue: Add your Custom API to your solution](#known-issue-add-your-custom-api-to-your-solution) you will have to manually add this response property record to your solution.
->
 > As noted earlier, we recommend that you set the **IsCustomizable** managed property to false for all Custom API components. This property is not available in the form. For more information see [Managed properties](/power-platform/alm/managed-properties-alm)
 
 ## Observe the result in the service document

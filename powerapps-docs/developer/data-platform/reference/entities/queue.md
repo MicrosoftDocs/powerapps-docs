@@ -1,13 +1,13 @@
 ---
 title: "Queue table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the Queue table/entity."
-ms.date: 05/20/2021
+ms.date: 10/05/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -147,12 +147,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### EmailRouterAccessApproval Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Empty|
-|1|Approved|
-|2|Pending Approval|
-|3|Rejected|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Empty||
+|1|Approved||
+|2|Pending Approval||
+|3|Rejected||
 
 
 
@@ -186,8 +186,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IgnoreUnsolicitedEmail Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Only specific Emails|
 |0|All incoming Emails|
 
@@ -226,11 +226,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IncomingEmailDeliveryMethod Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|None|
-|2|Server-Side Synchronization or Email Router|
-|3|Forward Mailbox|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|None||
+|2|Server-Side Synchronization or Email Router||
+|3|Forward Mailbox||
 
 
 
@@ -248,13 +248,13 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IncomingEmailFilteringMethod Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|All email messages|
-|1|Email messages in response to Dynamics 365 email|
-|2|Email messages from Dynamics 365 Leads, Contacts and Accounts|
-|3|Email messages from Dynamics 365 records that are email enabled|
-|4|No email messages|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|All email messages||
+|1|Email messages in response to Dynamics 365 email||
+|2|Email messages from Dynamics 365 Leads, Contacts and Accounts||
+|3|Email messages from Dynamics 365 records that are email enabled||
+|4|No email messages||
 
 
 
@@ -288,10 +288,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### OutgoingEmailDeliveryMethod Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|None|
-|2|Server-Side Synchronization or Email Router|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|None||
+|2|Server-Side Synchronization or Email Router||
 
 
 
@@ -380,10 +380,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### QueueViewType Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Public|
-|1|Private|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Public||
+|1|Private||
 
 
 
@@ -505,8 +505,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### AllowEmailCredentials Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -753,8 +753,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |IsValidForRead|True|
 |LogicalName|exchangerate|
 |MaxValue|100000000000|
-|MinValue|0.0000000001|
-|Precision|10|
+|MinValue|0.000000000001|
+|Precision|12|
 |RequiredLevel|None|
 |Type|Decimal|
 
@@ -773,8 +773,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsEmailAddressApprovedByO365Admin Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -796,8 +796,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsFaxQueue Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Fax Queue|
 |0|Non-fax Queue|
 
@@ -1094,9 +1094,9 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### QueueTypeCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Default Value|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Default Value||
 
 
 

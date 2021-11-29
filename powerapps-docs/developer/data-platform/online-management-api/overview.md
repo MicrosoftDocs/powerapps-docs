@@ -1,6 +1,6 @@
 ---
-title: "Online Management API for Microsoft Dataverse| MicrosoftDocs"
-description: "Describes a REST API that lets you create and manage Dataverse environments in your Microsoft 365 tenant."
+title: "Online Management API for Microsoft Dataverse (Deprecated)| MicrosoftDocs"
+description: "This API is deprecated effective August 26, 2020."
 ms.date: 03/24/2021
 ms.service: powerapps
 ms.topic: conceptual
@@ -13,7 +13,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Online Management API for Microsoft Dataverse
+# Online Management API for Microsoft Dataverse (Deprecated)
 
 > [!NOTE]
 > Effective August 26, 2020, the Online Management API is [deprecated](/power-platform/important-changes-coming#online-management-api-powershell-module-and-rest-api-are-deprecated).

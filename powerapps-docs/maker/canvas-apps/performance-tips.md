@@ -2,12 +2,11 @@
 title: Tips and best practices to improve performance of canvas apps
 description: Follow the best practices and tips in this topic to boost the performance of canvas apps.
 author: yingchin
-manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 03/11/2020
+ms.date: 10/27/2021
 ms.subservice: canvas-maker
 ms.author: yingchin
 search.audienceType: 
@@ -18,6 +17,7 @@ contributors:
   - yingchin
   - tapanm-msft
   - chmoncay
+  - melzoghbi
 ---
 # Tips and best practices to improve performance of canvas apps
 
@@ -70,6 +70,9 @@ With this change, the app fetches the tables in parallel, as shown in the follow
 
 > [!NOTE]
 > For more information about the performance problems and resolutions related to OnStart, read [OnStart event needs tuning](common-performance-issue-resolutions.md#onstart-event-needs-tuning).
+
+> [!TIP]
+> We recommend using [App.StartScreen](functions/object-app.md#startscreen-property) property since it simplifies app launch and boosts the app's performance.
 
 ## Cache lookup data
 

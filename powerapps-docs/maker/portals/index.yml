@@ -13,7 +13,7 @@ metadata:
   ms.collection: collection
   author: kumarvivek
   ms.author: kvivek
-  ms.date: 06/01/2021 
+  ms.date: 10/22/2021 
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -24,20 +24,20 @@ landingContent:
     linkLists:
        - linkListType: whats-new
          links:
-          - text: Use the Visual Studio Code extension (Preview)
-            url: vs-code-extension.md
-          - text: Add chatbot to a page (Preview)
-            url: add-chatbot.md
-          - text: Table permissions using portals Studio (Preview)
-            url: configure/entity-permissions-studio.md
-          - text: "Tutorial: Configure table permissions using portals Studio (Preview)"
-            url: configure/entity-permissions-studio-walkthrough.md
+          - text: Liquid template tag for code components (preview)
+            url: component-framework-liquid.md         
+          - text: Create multiple portals of same type
+            url: create-additional-portals.md
+          - text: Set up Azure Front Door with portals
+            url: azure-front-door.md
+          - text: Embed a portal in another website by using an iframe
+            url: embed-portal-website.md
        - linkListType: reference
          links:
-          - text: Portals version 9.3.6.x released
-            url: versions/version-9.3.6.x.md
-          - text: Starter Portal package version 9.2.2103.x released
-            url: versions/package-version-9.2.2103.md
+          - text: Latest released version of portals
+            url: /power-platform/released-versions/portals
+          - text: Starter Portal package version 9.3.2109.x released
+            url: versions/package-version-9.3.2109.md
 
   # Card 
   - title: Get started

@@ -7,11 +7,11 @@ ms.topic: conceptual
 ms.custom: 
 ms.date: 07/12/2021
 ms.subservice: teams
-ms.author: namarwah
+ms.author: jshum
 ms.reviewer: tapanm
 contributors:
   - joel-lindstrom
-  - navjotm
+  - josephshum
   - tapanm-msft
   - sbahl10
 ---
@@ -23,6 +23,9 @@ The Inspections sample app allows users to create and perform inspections in the
 By default, the Inspections app is designed for a single store. But what if you perform inspections on multiple stores? You'll want to add a table for stores to the app and let the user select the store in which they are performing inspections so that you can track at which store the inspection was performed.
 
 In this article, we'll learn how to update the app to add a hierarchy of stores so that inspections can be performed for different stores.
+
+Watch this video to learn how to add hierarchy to inspection location:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLkvW]
 
 ## Prerequisites
 

@@ -2,7 +2,6 @@
 title: Connect to Microsoft Translator from Power Apps
 description: See how to connect to Microsoft Translator, step through some examples, and see all the functions.
 author: lancedMicrosoft
-manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas

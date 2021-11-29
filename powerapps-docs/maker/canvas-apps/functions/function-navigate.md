@@ -2,12 +2,11 @@
 title: Back and Navigate functions in Power Apps
 description: Reference information including syntax and examples for the Back and Navigate functions in Power Apps.
 author: gregli-msft
-manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: nabuthuk
-ms.date: 05/07/2020
+ms.reviewer: tapanm
+ms.date: 10/19/2021
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
@@ -29,6 +28,8 @@ Most apps contain multiple screens.  Use the **Back** and **Navigate** function 
 **Back** and **Navigate** change only which screen is displayed. Screens that aren't currently displayed continue to operate behind the scenes. You can build formulas that refer to properties of controls on other screens. For example, a user can change the value of a slider on one screen, navigate to a different screen that uses that value in a formula, and determine how it affects what happens in the new screen. The user can then navigate back to the original screen and confirm that the slider has kept its value.
 
 [Context variables](../working-with-variables.md#use-a-context-variable) are also preserved when a user navigates between screens. You can use **Navigate** to set one or more context variables for the screen that the formula will display, which is the only way to set a context variable from outside the screen. You can use this approach to pass parameters to a screen. If you've used another programming tool, this approach is similar to passing parameters to procedures.
+
+Use the **App** object's [**StartScreen**](object-app.md#startscreen-property) property to control the first screen to be displayed.
 
 You can use either function only within a [behavior formula](../working-with-formulas-in-depth.md).
 

@@ -1,13 +1,13 @@
 ---
 title: "solutioncomponentattributeconfiguration table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the solutioncomponentattributeconfiguration table/entity."
-ms.date: 05/20/2021
+ms.date: 10/05/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -64,6 +64,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [FileExtension](#BKMK_FileExtension)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [IsCustomizable](#BKMK_IsCustomizable)
+- [IsEnabledForDependencyExtraction](#BKMK_IsEnabledForDependencyExtraction)
 - [IsExportDisabled](#BKMK_IsExportDisabled)
 - [IsExportedAsFile](#BKMK_IsExportedAsFile)
 - [name](#BKMK_name)
@@ -106,11 +107,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### EncodingFormat Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|None|
-|1|Base64|
-|2|UTF8|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|None||
+|1|Base64||
+|2|UTF8||
 
 
 
@@ -165,6 +166,29 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|ManagedProperty|
 
 
+### <a name="BKMK_IsEnabledForDependencyExtraction"></a> IsEnabledForDependencyExtraction
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName|Enabled for Dependency Extraction|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|isenabledfordependencyextraction|
+|RequiredLevel|None|
+|Type|Boolean|
+
+#### IsEnabledForDependencyExtraction Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes|
+|0|No|
+
+**DefaultValue**: False
+
+
+
 ### <a name="BKMK_IsExportDisabled"></a> IsExportDisabled
 
 |Property|Value|
@@ -179,8 +203,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsExportDisabled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -203,8 +227,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsExportedAsFile Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -427,12 +451,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### ComponentState Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Published|
-|1|Unpublished|
-|2|Deleted|
-|3|Deleted Unpublished|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Published||
+|1|Unpublished||
+|2|Deleted||
+|3|Deleted Unpublished||
 
 
 
@@ -571,8 +595,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsManaged Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Managed|
 |0|Unmanaged|
 

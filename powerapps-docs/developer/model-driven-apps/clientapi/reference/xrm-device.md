@@ -1,6 +1,7 @@
 ---
 title: "Xrm.Device| MicrosoftDocs"
-ms.date: 10/31/2018
+description: Provides methods to use native device capabilities via Xrm.Device.
+ms.date: 09/08/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -29,7 +30,7 @@ Provides methods to use native device capabilities.
 | [getCurrentPosition](xrm-device/getCurrentPosition.md) | [!INCLUDE[xrm-device/includes/getCurrentPosition-description.md](xrm-device/includes/getCurrentPosition-description.md)] |
 | [pickFile](xrm-device/pickFile.md)                     | [!INCLUDE[xrm-device/includes/pickFile-description.md](xrm-device/includes/pickFile-description.md)]                     |
 
-### Related topics
+### Related articles
 
 [Client API Xrm object](../clientapi-xrm.md)
 

@@ -6,11 +6,11 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 08/16/2021
-ms.author: namarwah
+ms.author: jshum
 ms.reviewer: tapanm
 contributors:
   - joel-lindstrom
-  - navjotm
+  - josephshum
   - tapanm-msft
   - sbahl10
 ---
@@ -20,6 +20,9 @@ contributors:
 In this article, you'll be changing the inspection notifications that come from the Inspections app from HTML-based messages to adaptive cards in Microsoft Teams.
 
 Adaptive cards make notifications more interactive. Posts to channels are great, but they're a one-way communication. Adaptive cards offer more interactive notifications, allowing customization of the message, and the ability to hyperlink to the app or provide the ability to update the app data from the card.
+
+Watch this video to learn how to update inspection notification to use an adaptive card:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLn9H]
 
 ## Prerequisites
 
@@ -96,7 +99,7 @@ You can generate your adaptive card JSON by going to <https://adaptivecards.io>.
     "url": "@{variables('varReviewInspectionsLink')}"
 }
 ],
-    "\$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
     "version": "1.2"
 }
 ```
