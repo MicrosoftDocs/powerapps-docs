@@ -1,78 +1,39 @@
----
-title: Set up and manage forums
-description: Learn how to create and manage forums on a portal.
-author: sbmjais
-ms.service: powerapps
-ms.topic: conceptual
-ms.custom: 
-ms.date: 04/21/2020
-ms.subservice: portals
-ms.author: shjais
-ms.reviewer: shjais
-contributors:
-    - nickdoelman
-    - shjais
----
+Electrical Safety for Electric Vehicle Charging
+  ----- Magtron RCMUs short introduction
 
-# Set up and manage forums
+In now days, electric vehicles are more and more popular in our daily life. A data from IEA (International Energy Agency), the global stock of electric vehicle (EV) and the plug-in hybrid electric vehicle (PHEV) has reached more than 10 millions units in 2020, with the rapid global development from 2017. More and more car manufacturers pay attention to and devote themselves to the development and production of electric vehicles. IEA estimates that that by 2030, the number of the EVs and the PHEVs will exceed 125 millions, and the sales of EVs and PHEVs will reach 20% of the world's vehicle sales.
+[img]https://i.loli.net/2021/11/17/BSMhiKxtuPVbqTJ.jpg[/img][/url]                                           
+Bellowing is the rapid increase in the number of EV chargers. As the data shows below from IEA, the global EV chargers have grown rapidly since 2018, and the growth of charging chargers for the whole year of 2020 has exceeded 1.3 million.                                                                                <a href="https://sm.ms/image/uq9tJ2zKFyOHjfi" target="_blank"><img src="https://i.loli.net/2021/11/17/uq9tJ2zKFyOHjfi.jpg" ></a>                                                                       In order to make the electric vehicle safe charging, the International Electro technical Committee (IEC) defined a set of standards, covering devices for protection and electrical installation standards, especially for residual current protection.
 
-A forum is an online discussion that allows users to hold conversations in the form of posted messages. A discussion forum is hierarchical or tree-like in structure: a forum can contain a number of topics, also known as threads, and can be replied to by many users.
+In IEC61851-1-2017 ( Electric vehicle conductive charging system –Part 1: General requirements ) E3.0
+In IEC62752 – 2018 ( In-cable control and protection device for mode 2 charging of electric road vehicles (IC-CPD) ) E1.1                                                                                                                                         In IEC62955 - 2018 ( Residual direct current detecting device (RDC-DD) to be used for mode 3 charging of electric vehicles ) E1.0                                                                                                                   <a href="https://sm.ms/image/6k8vpeFw7DhnKRi" target="_blank"><img src="https://i.loli.net/2021/11/17/6k8vpeFw7DhnKRi.jpg" ></a>                                                             After studied the three IEC Standards, we found that TYPE A Residual Current plus A Smooth DC Residual Current Protection is requested.
 
-## Manage forums in Dynamics 365 Portals
+Magtron – All type Current Sensitive Residual Current monitoring Unit (RCMU Series Sensor) both for AC and DC.
 
-Forums can be created, edited and deleted within Dynamics 365 Portals.
+Magtron RCMU Series Residual Current sensor specifically developed for EV-Charging Providing all-current sensitivity. The sensor can trigger an automatic shut-off (Trip) signal in case of hazardous electrical faults ( DC and AC ) according to IEC 62752 or IEC 62955.
 
-1. Sign in to Dynamics 365 Portals.
+	Benefits:
+	Protects against hazardous situations with fault currents, Preserving RCCB type A from saturation in case a smooth DC component in the circuit
+	Small volume and footprint for integration into compact IC-CPD and AC Charging Wall-box and Charging Piles
+	Robust mechanical and electrical design suitable for harsh environmental conditions
+	Electrical safety at low cost ( compared to TYPE B RCCB)
+	Integrated self- check functions
 
-2. Go to **Community** > **Forums**.
+	Applications (EV Charging Mode 2 and Mode 3)
+	IC-CPD in charging Cables for electric vehicles (EV) and plug-in hybrid electric vehicles (PHEV).
+	AC Charging Wall-box for EV and PHEV.
+	AC Charging piles for EV and PHEV
 
-3. To create a new forum, select **New**.
-
-4. To edit an existing forum, select the name of the forum.
-
-5. Enter appropriate values in the fields.
-
-6. Select **Save & Close**.
-
-## Manage forums from the portal content editor
-
-For portal users with content management permissions, a limited set of properties of forums can be managed by using the [content editor](../use-content-editor.md). If your user account has been assigned the necessary permission set, the inline editing interface will appear automatically when you sign in to the portal.  
-
-1. Navigate to the forums parent page within the portal.
-
-2. On the portal inline editing toolbar, select **New**. 
-
-3. Select **Child forum**. 
-
-4. Specify values for the fields provided, and then select **Save**.
-
-    ![Create a new child forum.](media/create-new-child-forum.png "Create a new child forum")  
-
-### Forum attributes used by portals
-
-The table below explains many of the Forum attributes used by portals. It is important to note that the way many of the content and display-oriented attributes are rendered is controlled by the page template used, and thus by the portal developer.
-
-
-|         Name         |                                                                                                                                                                                                                                                Description                                                                                                                                                                                                                                                |
-|----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|         Name         |                                                                                                                                                                  The descriptive name of the table. This value will be used as the page title in most templates, particularly if a Title value is not provided. This field is required.                                                                                                                                                                  |
-|       Website        |                                                                                                                                                                                                                     The website to which the table belongs. This field is required.                                                                                                                                                                                                                      |
-|     Parent Page      |                                                                                                                                                                                                                    The parent webpage of the table in the website content hierarchy.                                                                                                                                                                                                                     |
-|     Partial URL      | The URL path segment used to build the portal URL of this forum. Partial URL values are used as URL path segments. As such, they should not contain illegal URL path characters, such as ?, \#, !, %. Because portal URLs are generated by joining together partial URL values with slashes (/), they should also not contain slashes. We recommend you restrict Partial URL values to letters, numbers, and hyphens or underscores. For example: press-releases, Users\_Guide, product1. |
-|    Display Order     |                                                                                                                                                                                              An integer value indicating the order in which the forum will be placed relative to other forums in a listing.                                                                                                                                                                                               |
-|   Publishing State   |                                                              The current publishing workflow state of the forum, which may dictate whether the forum is visible on the site. The most common use of this feature is to control whether content is in a published or draft state. Users with content management permissions may be granted the ability to use Preview Mode, which allows these users to see (preview) unpublished content.                                                               |
-| Hidden From Sitemap  |                                                                                                                       Controls whether the forum is visible as part of the portal site map. If this value is selected, the forum will still be available on the site at its URL, and can be linked to, but standard navigational elements such as menus will not include the forum.                                                                                                                       |
-| Forum Page Template  |                                                         The page template to be used to render the page listing the forums on the portal. This field is required. The page template assigned should be a template that a developer has specifically created to provide the details of a forum. Selecting a template other than the one developed for the forum page may produce erroneous results when viewing the forum's webpage in the portal.                                                         |
-| Thread Page Template |                                                   The page template to be used to render each forum thread page on the portal. This field is required. The page template assigned should be a template that a developer has specifically created to provide the forum thread details. Selecting a template other than the one developed for the forum thread page may produce erroneous results when viewing the forum thread's webpage in the portal.                                                    |
-|     Description      |                                                                                                                                                                                                                                       Information about the forum.                                                                                                                                                                                                                                        |
-|     Thread Count     |                                                                                                                                                                                                                   Number of [forum threads](manage-forum-threads.md) within the forum.                                                                                                                                                                                                                    |
-|      Post Count      |                                                                                                                                                                                                       Number of [forum posts](create-forum-posts.md) created on the forum threads within the forum.                                                                                                                                                                                                       |
-|      Last Post       |                                                                                                                                                                                                               The most recently created [forum posts on the portal](create-forum-posts.md).                                                                                                                                                                                                               |
-|                      |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-
-### See also
-
-[Manage forum threads](manage-forum-threads.md)  
-[Create forum posts on the portal](create-forum-posts.md)  
-[Moderate forums](moderate-forums.md)  
-[Subscribe to alerts](subscribe-alerts.md)
+	Specifications
+	SM Series
+<a href="https://sm.ms/image/hk5lcPezfOb3vRM" target="_blank"><img src="https://i.loli.net/2021/11/17/hk5lcPezfOb3vRM.jpg" ></a>                                                                    <a href="https://sm.ms/image/1yj4Ew5NZGqoUYl" target="_blank"><img src="https://i.loli.net/2021/11/17/1yj4Ew5NZGqoUYl.png" ></a>                                                                    	SN-MINI and SN Series                                                                                                                               <a href="https://sm.ms/image/4u2zmqgDtWJ7xyp" target="_blank"><img src="https://i.loli.net/2021/11/17/4u2zmqgDtWJ7xyp.jpg" ></a>                                                                 
+<a href="https://sm.ms/image/qSIHQKy3gCmeahA" target="_blank"><img src="https://i.loli.net/2021/11/17/qSIHQKy3gCmeahA.png" ></a>                                                                 	Certification
+	TUV SUV Mark: B 1135980001
+	TUV Rheinland: 505140000001                                                                                                                   	DEKRA Attestation Of Conformity : 6097030.01                                                                                   <a href="https://sm.ms/image/BAkf7FTMHcqhIrl" target="_blank"><img src="https://i.loli.net/2021/11/17/BAkf7FTMHcqhIrl.jpg" ></a>                                                                       	Reference Applications Cases
+Magtron RCMU has been widely used in European standard EV charging mode 2 (IC-CPD) and mode 3 (AC Charging Pile and Wallbox)
+	EV charging mode 2 (IC-CPD) 
+<a href="https://sm.ms/image/Ybksp94LQE5CFgu" target="_blank"><img src="https://i.loli.net/2021/11/17/Ybksp94LQE5CFgu.jpg" ></a>                                                                    	EV charging mode 3 (AC Charging Pile and Wallbox)                                                                       <a href="https://sm.ms/image/sWfgqTKEQkuvonX" target="_blank"><img src="https://i.loli.net/2021/11/17/sWfgqTKEQkuvonX.jpg" ></a>                                                                    
+	If you need more product information, PLS contact bellow:
+	E-mail: morgan.wang@magtron.com.cn
+	Website:  www.magtronworld.com
+	Tel: +86-573-82660100
