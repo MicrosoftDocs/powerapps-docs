@@ -26,16 +26,16 @@ search.app:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-In this article you learn the basics of how to create a model-driven app that can be shared and distributed to other environments.
+In this article, you learn the basics of how to create a model-driven app that can be shared and distributed to other environments.
 
 ## Prerequisites
 
 Verify the availability of the following prerequisites before you start to create a model-driven app:
 
 - A Power Platform environment used for app development.
-- An environment maker, system administrator or system customizer use role.
+- An environment maker, system administrator, or system customizer security role.
 
-For more information review the following articles:
+For more information, go to the following articles:
 
 - [Create an environment](/power-platform/admin/create-environment).
 - [Environment strategy for ALM](/power-platform/alm/environment-strategy-alm).
@@ -47,21 +47,21 @@ For more information review the following articles:
 
 1. Open an unmanaged solution or [create a new solution](../data-platform/create-solution.md)
    > [!NOTE]   
-   > Unmanaged solutions can be recognised by the open lock in the **Managed Externally?** column.
+   > Unmanaged solutions can be recognized by the open lock in the **Managed Externally?** column.
    > :::image type="content" source="media/unmanaged-solutions.png" alt-text="Viewing solutions within an environment":::
-   > Although the **Default Solution** is an unmanaged solution it is in most circumstances not recommmended to edit the default solution.
+   > Although the **Default Solution** is an unmanaged solution, it is in most circumstances not recommended to create or edit customizations in the default solution.
 1. Select **New** > **App** > **Model-driven app**.
 1. On the **New model-driven app from blank** dialog box, select **Modern app designer**, and then select **Create**. :::image type="content" source="media/new-model-driven-app-from-blank.png" alt-text="New model-driven app from blank":::
 1. On the **New model-driven app** dialog box, enter a **Name** and optionally, a **Description**, and then select **Create**.
 1. On the left navigation pane, select **Navigation** to display the navigation tree. 
 
-   :::image type="content" source="media/navigation-area.png" alt-text="Select the navigation area from the Navigation pane":::
+   :::image type="content" source="media/navigation-area.png" alt-text="Select the navigation area from the navigation pane":::
    > [!TIP]
    > Use the menu toggle to show or hide the names of the menu options. :::image type="content" source="media/menu-toggle.png" alt-text="Toggle the menu to show or hide the name of the menu options":::
 1. Notice that a basic navigation structure is already created for you. Expand **Area1**, and then expand **Group1**.
    :::image type="content" source="media/default-site-map.png" alt-text="Default site map is created for you":::
-1. Select **Group1** and change the title in the property pane to for example *Accounts and Contacts*. :::image type="content" source="media/edit-navigation-group-title.png" alt-text="edit the group's title in the property pane":::
-1. Select **Subarea1**, and make for example the following changes:
+1. Select **Group1** and change the title in the property pane to, for example, *Accounts and Contacts*. :::image type="content" source="media/edit-navigation-group-title.png" alt-text="edit the group's title in the property pane":::
+1. Select **Subarea1**, and make changes such as the following:
 
    - **Content type**: Table
    - **Table**: Account
@@ -96,7 +96,7 @@ In the app designer, the anchors, which are what comments attach to, are all of 
 
 ### Edit or delete a comment
 
-You can edit your comments or or remove existing comments from appearing in the app.
+You can edit your comments or remove existing comments from appearing in the app.
 
 In the **Comments** pane, next to a comment, select **...**, and then select **Edit comment** or **Delete comment**.
 
@@ -108,7 +108,7 @@ Comments are commonly questions, feedback, or ideas that are important context t
 1. The comment thread appears as **Resolved**.
 1. To reopen select <img src = "media/reopen-thread-button.png" alt = "reopen comment thread button" width = "20" height = "20"> **Reopen thread** or <img src = "media/delete-thread-button.png" alt = "Delete comment thread button" width = "20" height = "20"> **Delete thread** to remove the comment.
 
-### Next Steps
+## Next steps
 
 - [Create, add and remove forms, views or dashboards](create-add-remove-forms-views-dashboards.md)
 - [Create and remove pages](create-remove-pages.md)

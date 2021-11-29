@@ -35,7 +35,7 @@ search.app:
 
 The filters in a Power Apps view define the records that a user will be able to see when selecting the view for the current table. You can add or edit a filter for the columns that you include in a view by selecting the column and selecting **Filter by**. You can also use the expression builder in the view designer. Use the expression builder to add or edit filters for any columns of the table in the current view or any columns in a related table.
 
-In this topic, you create or edit filters by performing the following tasks:
+In this article, you create or edit filters by performing the following tasks:
 
 -   [Edit or remove a filter condition](create-edit-view-filters.md#edit-or-remove-a-filter-condition)
 
