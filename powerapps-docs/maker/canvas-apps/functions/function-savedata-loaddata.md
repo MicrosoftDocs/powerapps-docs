@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 10/22/2021
+ms.date: 11/29/2021
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
@@ -16,6 +16,7 @@ search.app:
 contributors:
   - gregli-msft
   - tapanm-msft
+  - melzoghbi
 ---
 # SaveData, LoadData, and ClearData functions in Power Apps
 Saves and reloads a [collection](../working-with-data-sources.md#collections) from the app host's storage.
@@ -33,6 +34,7 @@ The **ClearData** function clears the storage under a specific name or clears al
 > [!NOTE]
 > * The name shared between **SaveData**, **LoadData**, and **ClearData** is a key, not a file name. It need not be complex as names are unique to each app and there is no danger of name conflict. The name must not contain any of these characters: `*".?:\<>|/`. 
 > * SaveData is limited to 1 MB of data for Power Apps running in Teams and in a web browser. There is no fixed limit for Power Apps running in a mobile player but there are practical limits discussed below.
+> * Don't use **SaveData** to store sensitive data in the web since it'll be stored in plain text.
 
 Use these functions to improve app-startup performance by:
 
