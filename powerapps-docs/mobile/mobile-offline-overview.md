@@ -5,7 +5,7 @@ author: mduelae
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 11/23/2021
+ms.date: 11/29/2021
 ms.subservice: mobile
 ms.author: mkaur
 ms.custom: ""
@@ -24,7 +24,7 @@ searchScope:
 
 [This topic is pre-release documentation and is subject to change.]
 
-Wouldn't it be great to use your mobile app without worrying about a spotty internet connection? With model-driven Power Apps with the new mobile offline-first experience, it's possiable. People that need to work from remote locations can continue to work seamlessly without worrying connectivity. 
+Wouldn't it be great to use your mobile app without worrying about a spotty internet connection? With model-driven Power Apps and the new mobile offline-first experience, it's possiable. People that need to work from remote locations can continue to work seamlessly without worrying connectivity. 
 
 When model-driven apps are enabled for mobile offline, not only can you continue doing your work, you'll also have better device performance, a more resonsive app, and it'll save battery power with less connections made to the server. 
 
@@ -35,7 +35,7 @@ To get started with mobile offline, an app maker will need to enable and define 
 
 ## Mobile offline-first
 
-Once offline is configured anyone that uses [Power Apps mobile](run-powerapps-on-mobile) can also use it in offline mode. Power Apps mobile always runs offline-first, both with and without internet connection. This functionality optimizes performance and creates a consistent experience for users as they move through areas with and without internet connection. 
+Once offline is configured anyone that uses [Power Apps mobile](run-powerapps-on-mobile) can also use the app in offline mode. Power Apps mobile always runs offline-first, both with and without internet connection. This functionality optimizes performance and creates a consistent experience for users as they move through areas with and without internet connection. 
 
 1.	**Online**: Occurs when there is internet but and offline isn't set up. When internet is lost, the mobile app is unusable. Not recommended.
 2.	**Offline-first without internet connection**: Data is downloaded to the device and all changes are saved locally to your mobile device. When internet is restored, the changes are automatically synced to the server.
