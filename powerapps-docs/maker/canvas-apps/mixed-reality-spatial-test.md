@@ -1,6 +1,6 @@
 ---
 title: Validate measurements in mixed reality using a spatial test filter
-description: Learn about how to validate measurements or fittings of objects with width, depth, and height using mixed reality components in canvas apps.
+description: Learn how to validate measurements or fittings of objects with width, depth, and height using mixed-reality components in canvas apps.
 author: alex-msft
 ms.service: powerapps
 ms.topic: conceptual
@@ -23,16 +23,16 @@ contributors:
 
 Using the [Measure in MR](mixed-reality-component-measure-distance.md) control, you can create a spatial test filter to validate whether an object with known width, depth, and height dimensions will fit in a space. This topic will guide you through creating a test app that you can use to validate the collected measurements, including:
 
-- Inserting the **Measure In MR** component into an application to measure volumes.
-- Setting up **Expected Measurements (Items)** to help users maintain context in the mixed reality experience.
+- Inserting the **Measure in MR** component into an application to measure volumes.
+- Setting up **Expected Measurements (Items)** to help users maintain context in the mixed-reality experience.
 - Creating a spatial test filter using the **Bounding Depth**, **Bounding Width**, and **Height** properties from the measurement outputs.
 
 ## Prerequisites
 
-Create a blank canvas app using [Power Apps Studio](https://create.powerapps.com) by selecting **Phone layout** under **Blank app** inside **Start with a blank canvas or a template** section.
+Create a blank canvas app using [Power Apps Studio](https://create.powerapps.com) by selecting **Phone layout** under **Blank app** inside the **Start with a blank canvas or a template** section.
 
 > [!TIP]
-> - The MR components work best in well-lit environments with flat-textured surfaces. When establishing tracking, point the device at the surface you would like to track and slowly pan the device from right to left in broad arm motions. If tracking fails, exit and enter the MR view to reset the tracking and try again.
+> - The mixed-reality components work best in well-lit environments with flat-textured surfaces. When establishing tracking, point the device at the surface you want to track and slowly pan the device from right to left in broad arm motions. If tracking fails, exit and enter the mixed-reality view to reset the tracking and try again.
 > - LIDAR-enabled devices will also result in better tracking.
 
 ## Set up minimum dimensions input fields
@@ -43,7 +43,7 @@ First, we’ll set up the dimensions to validate measurements.
 
     :::image type="content" source="media/augmented-measure-fit-test/fit-test-insert-text.png" alt-text="Screenshot showing how to insert a text label from the menu.":::
 
-1. Change **Text** properties for the added labels to `"Minimum Width"`, `"Minimum Depth"`, and `"Minimum Height"`.
+1. Change **Text** properties for the added labels to `Minimum Width`, `Minimum Depth`, and `Minimum Height`.
 
     :::image type="content" source="media/augmented-measure-fit-test/fit-test-completed-labels.png" alt-text="Screenshot showing placed text labels.":::
 
@@ -51,9 +51,14 @@ First, we’ll set up the dimensions to validate measurements.
 
 1. Rename Text Input controls to `minWidth`, `minDepth`, and `minHeight`.
 
-1. For all three Text Input control added in the previous step, set the **Format** property to **Number** and set the **Default** property value to `1.0`.
+1. For all three Text Input controls added in the previous step, set the **Format** property to **Number** and set the **Default** property value to `1.0`.
 
     :::image type="content" source="media/augmented-measure-fit-test/fit-test-text-input.png" alt-text="Screenshot showing text inputs and properties.":::
+
+
+
+
+
 
 ## Insert and bind the Measure in MR component
 
