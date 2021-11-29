@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 contributors:
   - gregli-msft
-  - nkrb
+  - tapanm-msft
 ---
 # DateAdd, DateDiff, and TimeZoneOffset functions in Power Apps
 Adds to or finds the difference in date/time values and converts between local time and UTC.

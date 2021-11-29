@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 contributors:
   - gregli-msft
-  - nkrb
+  - tapanm-msft
 ---
 # JSON function in Power Apps
 
@@ -92,7 +92,7 @@ If a column has both a display name and a logical name, the result contains the 
     > [!div class="mx-imgBorder"]
     > ![CitiesByCountry collection.](media/function-json/cities-grouped.png)
 
-    You can also show this collection by selecting **File** > **Settings** > **Upcoming features** > **Enable formula bar result view**, selecting the name of the collection in the formula bar, and then selecting the down arrow next to the name of the collection under the formula bar.
+    You can also show this collection by selecting **Settings** > **Upcoming features** > **Enable formula bar result view**, selecting the name of the collection in the formula bar, and then selecting the down arrow next to the name of the collection under the formula bar.
 
     > [!div class="mx-imgBorder"]
     > ![Collection in the formula bar's result view.](media/function-json/cities-grouped-resultview.png)

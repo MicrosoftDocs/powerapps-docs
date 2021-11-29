@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - nkrb
+  - tapanm-msft
   - emcoope-msft
 ---
 # Vertical container control in Power Apps
@@ -81,7 +81,7 @@ Vertical container control determines the position of the child components so th
 1. Sign in to [Power Apps](https://make.powerapps.com).
 1. Select **Apps** from left navigation. Select the **New app** drop-down menu and then select **Canvas**.
 1. On the **Blank app** tile, select **Tablet layout**.
-1. Select **File** > **Settings** > **Screen size + orientation** and disable **Scale to fit**, **Lock aspect ratio**, and **Lock orientation** and select **Apply**. 
+1. Select **Settings** > **Display** and disable **Scale to fit**, **Lock aspect ratio**, and **Lock orientation** and select **Apply**. 
 1. Now from the **Insert** panes in the left sidebar, under **Layout** tab, select **Vertical container**. 
 
    > [!div class="mx-imgBorder"]

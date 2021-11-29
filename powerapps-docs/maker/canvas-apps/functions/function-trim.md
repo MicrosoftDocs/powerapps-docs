@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 contributors:
   - gregli-msft
-  - nkrb
+  - tapanm-msft
 ---
 # Trim and TrimEnds functions in Power Apps
 Removes extra spaces from a string of text.
