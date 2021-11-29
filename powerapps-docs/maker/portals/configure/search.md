@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: intro-internal
-ms.date: 09/09/2021
+ms.date: 11/29/2021
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: ndoelman
@@ -61,11 +61,13 @@ By default, the following tables can be searched within a portal website provide
 > [!NOTE]
 > You can configure additional tables for search. For more information, read [configuring additional tables for search](search-additional-entities.md).
 
-## Fields searchable in global search
+## Columns searchable in global search
 
-All the fields available in the view defined by the Search/IndexQueryName site setting for any table are indexed in global search and are searchable. 
+All the columns available in the view defined by the Search/IndexQueryName site setting for any table are indexed in global search and are searchable. 
 
 Default value for Search/IndexQueryName is "Portal Search".
+
+The first column in the "Portal Search" view will show as the title of search result. Modify the column order in the “Portal Search” view to get a desired search result title.
 
 If the view is not available for any table, it's not indexed and the results are not displayed in global search.
 
