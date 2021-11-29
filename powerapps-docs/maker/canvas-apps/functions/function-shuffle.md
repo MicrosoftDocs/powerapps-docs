@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 contributors:
   - gregli-msft
-  - nkrb
+  - tapanm-msft
 ---
 # Shuffle function in Power Apps
 Randomly reorders the [records](../working-with-tables.md#records) of a [table](../working-with-tables.md).

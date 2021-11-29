@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 contributors:
   - gregli-msft
-  - nkrb
+  - tapanm-msft
 ---
 # SaveData, LoadData, and ClearData functions in Power Apps
 Saves and reloads a [collection](../working-with-data-sources.md#collections) from the app host's storage.

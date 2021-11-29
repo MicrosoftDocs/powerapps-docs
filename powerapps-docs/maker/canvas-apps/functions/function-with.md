@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 contributors:
   - gregli-msft
-  - nkrb
+  - tapanm-msft
 ---
 # With function in Power Apps
 Calculates values and performs actions for a single [record](../working-with-tables.md#records), including inline records of named values.

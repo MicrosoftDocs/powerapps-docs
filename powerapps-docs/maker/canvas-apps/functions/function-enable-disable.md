@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 contributors:
   - gregli-msft
-  - nkrb
+  - tapanm-msft
 ---
 # Enable and Disable functions in Power Apps
 Turns a [signal](signals.md) on or off.
