@@ -5,7 +5,7 @@ author: mduelae
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 11/23/2021
+ms.date: 11/29/2021
 ms.subservice: mobile
 ms.author: mkaur
 ms.custom: ""
@@ -31,9 +31,9 @@ Verify the following prerequisites before you enable mobile offline:
 
 - Environment maker, system administrator, or system customizer role is needed to configure offline mode for model driven apps. These roles have create/read/write/delete and share privilege on the **mobile offline profile** table. More information: [About predefined security roles](share-model-driven-app.md#about-predefined-security-roles)
 
-- Users with the **basic user** role can open and use an offline application. This role has the read privilege to the **mobile offline profile** table.
+- Users with the **basic user** role can open and use an offline application. This role has the read privilege for the **mobile offline profile** table.
 
-   If you have a custom security role, make sure you ave **Read** privilege for **Mobile Offline profile**. For more information, see [Miscellaneous privileges - Core Records tab](/power-platform/admin/miscellaneous-privileges).
+   If you have a custom security role, make sure you have **Read** privilege for **Mobile Offline profile**. For more information, see [Miscellaneous privileges - Core Records tab](/power-platform/admin/miscellaneous-privileges).
 
   > [!div class="mx-imgBorder"] 
   > ![Required security roles to use mobile offline.](media/mobile-offline-image1.png)
@@ -49,7 +49,7 @@ Follow these best practices when building an app for mobile offline use:
 
 - Identify the on-the-go scenarios that are functionally related, such as which tasks are performed by users in the field on any given day.
 - Reduce the complexity of your app and limit the amount of app metadata that needs to be downloadeded on a user's device. Only add the tables and views that are needed in a mobile scenario. For more information, see [Add pages to your app](../maker/model-driven-apps/create-a-model-driven-app#add-pages-to-your-app).
-- Keep view that are absolutely necessary and remove any view that aren't needed on a day-to-day basis. For example, avoid adding the **All accounts** view and keep views such as  **My active accounts**. Keep your forms lightweight for a smooth and intuitive experience on small screen devices. The following are options for mobile-optimized forms:
+- Keep views that are absolutely necessary and remove any view that isn't needed on a day-to-day basis. For example, avoid adding the **All accounts** view and keep views such as  **My active accounts**. Keep your forms lightweight for a smooth and intuitive experience on small screen devices. The following are options for mobile-optimized forms:
 
    - Build dedicated forms for mobile use.
 
@@ -88,7 +88,7 @@ Set up the new mobile offline experience in the [modern app designer (preview)](
     > [!div class="mx-imgBorder"]
     > ![Set Can be used offline toggle to on](media/mobile-offline-image6.png)
 
-7.  Select an existing offline profile or select **New profile with current app data**. To set up a offline profile, go to the [Set up a mobile offline profile](setup-mobile-offline.md#mobile-offline-profiles) section.
+7.  Select an existing offline profile or select **New profile with current app data**. To set up a new offline profile, go to the [Set up a mobile offline profile](setup-mobile-offline.md#mobile-offline-profiles) section below.
 
     > [!div class="mx-imgBorder"]
     > ![Select a offline profile](media/mobile-offline-image7.png)
