@@ -22,14 +22,14 @@ search.app:
 
 [This topic is pre-release documentation and is subject to change.]
 
-Use the [modern app designer](../maker/model-driven-apps/app-designer-overview) to enable your model-driven apps for offline use on a mobile device. When offline mode is enabled, users can interact with their data without internet connection on [Power Apps mobile](https://powerapps.microsoft.com/downloads/).
+Use the [modern app designer](../maker/model-driven-apps/app-designer-overview.md) to enable your model-driven apps for offline use on a mobile device. When offline mode is enabled, users can interact with their data without internet connection on [Power Apps mobile](https://powerapps.microsoft.com/downloads/).
 
 
 ## Prerequisites 
 
 Verify the following prerequisites before you enable mobile offline: 
 
-- Environment maker, system administrator, or system customizer role is needed to configure offline mode for model driven apps. These roles have create/read/write/delete and share privilege on the **mobile offline profile** table. More information: [About predefined security roles](share-model-driven-app.md#about-predefined-security-roles)
+- Environment maker, system administrator, or system customizer role is needed to configure offline mode for model driven apps. These roles have create/read/write/delete and share privilege on the **mobile offline profile** table. More information: [About predefined security roles](../maker/model-driven-apps/share-model-driven-app.md#about-predefined-security-roles)
 
 - Users with the **basic user** role can open and use an offline application. This role has the read privilege for the **mobile offline profile** table.
 
@@ -48,7 +48,7 @@ If you have desktop and remote mobile users then create two seperate apps. Optim
 Follow these best practices when building an app for mobile offline use:
 
 - Identify the on-the-go scenarios that are functionally related, such as which tasks are performed by users in the field on any given day.
-- Reduce the complexity of your app and limit the amount of app metadata that needs to be downloadeded on a user's device. Only add the tables and views that are needed in a mobile scenario. For more information, see [Add pages to your app](../maker/model-driven-apps/create-a-model-driven-app#add-pages-to-your-app).
+- Reduce the complexity of your app and limit the amount of app metadata that needs to be downloadeded on a user's device. Only add the tables and views that are needed in a mobile scenario. For more information, see [Add pages to your app](../maker/model-driven-apps/create-a-model-driven-app.md#add-pages-to-your-app).
 - Keep views that are absolutely necessary and remove any view that isn't needed on a day-to-day basis. For example, avoid adding the **All accounts** view and keep views such as  **My active accounts**. Keep your forms lightweight for a smooth and intuitive experience on small screen devices. The following are options for mobile-optimized forms:
 
    - Build dedicated forms for mobile use.
@@ -88,7 +88,7 @@ Set up the new mobile offline experience in the [modern app designer (preview)](
     > [!div class="mx-imgBorder"]
     > ![Set Can be used offline toggle to on](media/mobile-offline-image6.png)
 
-7.  Select an existing offline profile or select **New profile with current app data**. To set up a new offline profile, go to the [Set up a mobile offline profile](setup-mobile-offline.md#mobile-offline-profiles) section below.
+7.  Select an existing offline profile or select **New profile with current app data**. To set up a new offline profile, go to the [Set up a mobile offline profile](setup-mobile-offline.md#set-up-a-mobile-offline-profile) section below.
 
     > [!div class="mx-imgBorder"]
     > ![Select a offline profile](media/mobile-offline-image7.png)
@@ -156,7 +156,7 @@ Applying an appropriate filter for each of the tables configured in the offline 
 
 3. Set the following filters:
 
-   1. Choose the row that you want to make avaliable offline. For the **Custom** option, use the [expression builder](../maker/model-driven-apps/create-edit-view-filters) which allows advanced conditions set up.
+   1. Choose the row that you want to make avaliable offline. For the **Custom** option, use the [expression builder](../maker/model-driven-apps/create-edit-view-filters.md) which allows advanced conditions set up.
    2. **Relationships** lists the different relationships available between the current table and other tables added in the offline profile. Selecting a relationship will ensure related rows following that relationship will be downloaded and made available offline.
    3. **Files** and **Images** lets you to define what table columns for a file or image need to be downloaded offline. For images, each column can be selected granularly but not for files it's all or nothing.
    4. **Sync interval** defines the sync frequency to be applied on the device to sync the data with the server. If your table data doesn't change frequently like a catalog or product table, you may want to refresh it only once a day and focus on only syncing data when necessary.
