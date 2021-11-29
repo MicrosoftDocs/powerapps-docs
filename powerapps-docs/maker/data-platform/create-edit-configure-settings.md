@@ -255,8 +255,7 @@ Xrm.Utility.getGlobalContext().saveSettingValue(settingName, value, saveSettingO
 |**errorCallback** | String | Yes | A function to call if the update fails. |
 
 #### Return value
-**Type:** TBD<br><br>
-**Description:** TBD
+On success, returns a promise object.
 
 ## See also
 
