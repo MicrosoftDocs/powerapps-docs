@@ -33,33 +33,33 @@ search.app:
 
 ## Site maps overview
 
-Site maps define the manner by which we move between tables in a model-driven app, which is a fundamental aspect of the user experience when performing tasks within the app.  We call this the **navigation**.
+Site maps define the manner by which users move between tables in a model-driven app. This is called **navigation**. App navigation is a fundamental aspect of the user experience when performing tasks within the app.
 
-To understand site maps we need to introduce some concepts, so that we can understand the relationship between the site map designer and the way in which we intend to use the app.
+To understand site maps it helps to introduce some concepts, so that you can understand the relationship between the site map designer and the way users intend to use the app.
 
 The screenshot below illustrates a number of features.
 
-1. An **Area**.  Model-driven apps can have multiple areas.  We can toggle between these.
-2. A **Group**.  Areas can have multiple groups.  Essentially these allow us to group our entities in a logical fashion.
-3. A **Table (or entity)**.  This allows us to see views of the tables that we have selected.
+1. An **Area**.  Model-driven apps can have multiple areas. Users toggle between these to access different groups.
+2. A **Group**.  Areas can have multiple groups. Essentially these allow you to group tables, custom pages, and other components, in a logical fashion.
+3. A **Table (or entity)**.  This allows users to see views of the tables that have been selected in the app designer.
 
-:::image type="content" source="media/default-sitemap.png" alt-text="simple model-driven app navigation":::
+   :::image type="content" source="media/default-sitemap.png" alt-text="simple model-driven app navigation":::
 
 This hierarchical structure is important to enable a good user experience, and the terminology used allows better understanding of the app designer.
 
-## Viewing an app from within the App Designer
+## Viewing an app from within the app designer
 
-The same app viewed from within the App designer shows the corresponding areas, groups and tables.  In this case we are looking at tables within the Accounts **Group** and groups within the accounts **Area**.  We can also see that there is another area called **Tasks** that also exists within the app designer.
+The same app viewed from within the site map designer shows the corresponding areas, groups and tables.  In this case you are viewing tables within the accounts **Group** and groups within the accounts **Area**.  You can also notice there is another area called **Tasks** that also exists within the app designer.
 
 :::image type="content" source="media/site-map-designer-demo.png" alt-text="Viewing an app from withing the site map designer":::
 
 ## Prerequisites for editing site maps
 
-Users need to have the System Administrator or System Customizer security role or equivalent permissions.  Specifically, any user with the following privileges can also create apps:  
+Users need to have the System Administrator or System Customizer security role or equivalent permissions. Specifically, any user with the following privileges can also create apps:  
 
-- Create, Read, and Write privileges for the App table  
-- Read and Write privileges for the Customizations table  
-- Read privileges for the Solution table
+- Create, Read, and Write privileges for the App table.
+- Read and Write privileges for the Customizations table.
+- Read privileges for the Solution table.
 
 These privileges can be viewed or set on the **Customization** tab of a security role.
 
@@ -74,9 +74,9 @@ A default site map is created automatically as part of the a model driven app cr
 ## Create a site map for an app  
   
 1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-1. Select **Solutions**, open the solution required.
+1. Select **Solutions**, open the solution you want.
 1. Select **New** - **App** - **Model-driven app**.
-1. From the 2 options available select **Classic App Designer**.
+1. From the two options available select **Classic App Designer**.
 1. On the app designer canvas, in the **Site Map** area, select the pencil icon![Open Site Map Designer button.](media/dynamics365-open-designer.PNG "Open Site Map Designer button")next to **Site Map** to **Open the Site Map Designer** .  
 
    ![Open the site map designer.](media/app-designer-sitemap-location.png "Open the site map designer")
@@ -101,7 +101,7 @@ A default site map is created automatically as part of the a model driven app cr
   
 ## Review the model-driven app
 
-From that App designer select **Save** - **Validate** -  **Play**. this will run the app with the latest changes and is an important part of the app building process.
+From that app designer select **Save** > **Validate** > **Play**. This runs the app with the latest changes and is an important part of the app building process.
 
 :::image type="content" source="media/site-map-play-updated-app.gif" alt-text="Play updated model-driven app":::
 
@@ -112,7 +112,7 @@ From that App designer select **Save** - **Validate** -  **Play**. this will run
   
      or  
   
-     From the **Components** tab, drag the **Area** tile to the empty box on the canvas. An empty box is visible when tile is moved to the correct place on the canvas.  
+     From the **Components** tab, drag the **Area** tile to the empty box on the canvas. An empty box is visible you move the tile the correct place on the canvas.  
   
 2.  Select the area that has just been added. The **Properties** tab highlighted in the pane to the right of the canvas.  
   
@@ -132,13 +132,13 @@ From that App designer select **Save** - **Validate** -  **Play**. this will run
   
     - **More Titles**: If your organization uses multiple languages, select a language (Locale) for the title, enter the title, and then select **Add** ![Add button in the site map designer.](media/add-icon-sitemap-designer.png "Add button in the site map designer"). Titles can be created, edited, or deleted for as many languages as your organization uses. However, it is only possible to have one title per language.  
   
-    - **More Description**: If an organization uses multiple languages, select a language for the description, enter the description, and then select **Add** ![Add button in the site map designer.](media/add-icon-sitemap-designer.png "Add button in the site map designer"). Descriptions can be created, edited, or deleted descriptions for as many languages as your organization uses. However, it is only possible to have one description per language.  
+    - **More Description**: If an organization uses multiple languages, select a language for the description, enter the description, and then select **Add** ![Add button in the site map designer.](media/add-icon-sitemap-designer.png "Add button in the site map designer"). Descriptions can be created, edited, or deleted for as many languages as your organization uses. However, it is only possible to have one description per language.  
   
     - **URL**: Enter the URL to render for the Dynamics 365 for Outlook folder that represents the area.  
   
 ## Creating and editing Groups, Subareas and Areas
 
-The following sections provide instructions describing how to work with Groups, Subareas and Areas in addition to reviewing their properties.
+The following sections provide instructions describing how to work with Groups, Subareas, and Areas in addition to reviewing their properties.
 
 <a name="bkmk_AddGroup"></a>   
 ## Add a group to the site map  
@@ -148,7 +148,7 @@ The following sections provide instructions describing how to work with Groups, 
   
      or  
   
-     From the **Components** tab, drag the **Group** tile to an empty box under the **Area** in the canvas. An empty box is visible when the tile is moved to the correct place in the canvas.  
+     From the **Components** tab, drag the **Group** tile to an empty box under the **Area** in the canvas. An empty box is visible when you move the tile to the correct place in the canvas.  
   
 3.  Select the group just added.  
   
@@ -220,8 +220,9 @@ The following sections provide instructions describing how to work with Groups, 
   
     - **Offline Availability**: Select this check box to make this subarea available to users when they are offline in Dynamics 365 for Outlook.  
 <a name="bkmk_OrganizeSite"></a>  
-## Organize areas, groups, and subareas  
- Areas, groups, and subareas can be organized by dragging them to new positions. A container box appears where you can drop the tiles. Here are some options:  
+## Organize areas, groups, and subareas
+
+ Organize areas, groups, and subareas by dragging them to new positions. A container box appears where you can drop the tiles. Here are some options:  
   
 -   Move a subarea to a new position within the same group or a different group under the same area.  
   
