@@ -62,7 +62,7 @@ Follow these best practices when building an app for mobile offline use:
 
 ## Enable your app for offline use (preview)
 
-Set up the new mobile offline experience in the [modern app designer (preview)](../maker/model-driven-apps/app-designer-overview).
+Set up the new mobile offline experience in the [modern app designer (preview)](../maker/model-driven-apps/app-designer-overview.md).
 
 1. Sign in to [Power Apps (preview)](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) 
 
