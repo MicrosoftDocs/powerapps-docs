@@ -24,7 +24,7 @@ search.app:
 
 This topic covers the new mobile offline-first set up and user experience. Once [offline is enabled](setup-mobile-offline.md) for your model-driven app, you can run it one of the following mobile apps:
 
-- [Power Apps mobile](run-powerapps-on-mobile)
+- [Power Apps mobile](run-powerapps-on-mobile.md)
 - [Dynamics 365 for Phones and Tablets](/dynamics365/mobile-app/overview)
 - [Field Service (Dynamics 365) mobile app](/dynamics365/field-service/mobile-2020-power-platform)
 
@@ -39,7 +39,7 @@ With the new offline-first experience it's important to understand the key benif
 
 |Offline-first| Classic offline  |
 |---------|---------|
-| <ol><li>Your data is always the same regardless of your network connection. </lo> <div></div> <div></div> ![Download offline data.](media/offline-first-classic-3.png) <li> There no toggle for users to switch form offline to online mode. A user will never forget to sync their changes back to the server because the app will do it automatically. <div></div> ![Sync data back to server.](media/offline-first-classic-4.png) </li>     |   <ol> <li> Users have the options to skip the initial offline sync and stay online which means users in your organization won't have the same experience. <div></div> ![Download offline data.](media/offline-first-classic-1.png) </li> <li> The Work in offline mode toggle is something a user has to remember to disable to sync back all your changes with the server. <div></div> ![Download offline data.](media/offline-first-classic-2.png) </li> <div></div> </li> <li> When there's no network, the rows are listed from the local database so they won't be the same when you connect back to the server. If you lose internet connection while editing an online mode and suddenly lose connection then you will also lose your changes when you try to save them while offline. </li>  |
+| <ol><li>Your data is always the same regardless of your network connection. </lo> <div></div> <div></div> ![Offline-first on mobile.](media/offline-first-classic-3.png) <li> There no toggle for users to switch form offline to online mode. A user will never forget to sync their changes back to the server because the app will do it automatically. <div></div> ![Sync data back to server.](media/offline-first-classic-4.png) </li>     |   <ol> <li> Users have the options to skip the initial offline sync and stay online which means users in your organization won't have the same experience. <div></div> ![Skip download offline data.](media/offline-first-classic-1.png) </li> <li> The Work in offline mode toggle is something a user has to remember to disable to sync back all your changes with the server. <div></div> ![User must turn off work offline toggle to synce data.](media/offline-first-classic-2.png) </li> <div></div> </li> <li> When there's no network, the rows are listed from the local database so they won't be the same when you connect back to the server. If you lose internet connection while editing an online mode and suddenly lose connection then you will also lose your changes when you try to save them while offline. </li>  |
 
 
 ## Enable mobile offline-first
