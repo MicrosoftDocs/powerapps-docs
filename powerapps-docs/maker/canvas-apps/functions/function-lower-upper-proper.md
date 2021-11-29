@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 contributors:
   - gregli-msft
-  - nkrb
+  - tapanm-msft
 ---
 # Lower, Upper, and Proper functions in Power Apps
 Converts letters in a string of text to all lowercase, all uppercase, or proper case.

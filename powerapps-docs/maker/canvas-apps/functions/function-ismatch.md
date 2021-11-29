@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 contributors:
   - gregli-msft
-  - nkrb
+  - tapanm-msft
 ---
 # IsMatch, Match, and MatchAll functions in Power Apps
 Tests for a match or extracts portions of a text string based on a pattern.

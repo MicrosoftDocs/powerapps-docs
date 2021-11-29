@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 contributors:
   - gregli-msft
-  - nkrb
+  - tapanm-msft
 ---
 # Refresh function in Power Apps
 Refreshes the [records](../working-with-tables.md#records) of a [data source](../working-with-data-sources.md).

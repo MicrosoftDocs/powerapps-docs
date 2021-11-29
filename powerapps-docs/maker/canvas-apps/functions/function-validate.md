@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 contributors:
   - gregli-msft
-  - nkrb
+  - tapanm-msft
 ---
 # Validate function in Power Apps
 The **Validate** function checks whether the value of a single [column](../working-with-tables.md#columns) or a complete [record](../working-with-tables.md#records) is valid for a [data source](../working-with-data-sources.md).  
