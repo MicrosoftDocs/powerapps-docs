@@ -41,15 +41,15 @@ Verify the following prerequisites before you enable mobile offline:
 
 ##  Optimize your app for mobile offline 
 
-Before you enable offline mode, make sure your model-driven app is optimized for offline and mobile use. Mobile apps run on smaller screens with limited connectivity so it's important that the app is always aviliable. Create an app that is simple and lightweight. Also, consider the number of user scenarios that you want to cover and the amount of data the app will use.
+Before you enable offline mode, make sure your model-driven app is optimized for offline and mobile use. Mobile apps run on smaller screens with limited connectivity so it's important that the app is always available. Create an app that is simple and lightweight. Also, consider the number of user scenarios that you want to cover and the amount of data the app will use.
 
-If you have desktop and remote mobile users then create two seperate apps. Optimize the user experience and create an online app for your office users and another app for your mobile users who may have limited connectivity. 
+If you have desktop and remote mobile users, then create two separate apps. Optimize the user experience and create an online app for your office users and another app for your mobile users who may have limited connectivity. 
 
 Follow these best practices when building an app for mobile offline use:
 
 - Identify the on-the-go scenarios that are functionally related, such as which tasks are performed by users in the field on any given day.
-- Reduce the complexity of your app and limit the amount of app metadata that needs to be downloadeded on a user's device. Only add the tables and views that are needed in a mobile scenario. For more information, see [Add pages to your app](../maker/model-driven-apps/create-a-model-driven-app.md#add-pages-to-your-app).
-- Keep views that are absolutely necessary and remove any view that isn't needed on a day-to-day basis. For example, avoid adding the **All accounts** view and keep views such as  **My active accounts**. Keep your forms lightweight for a smooth and intuitive experience on small screen devices. The following are options for mobile-optimized forms:
+- Reduce the complexity of your app and limit the amount of app metadata that needs to be downloaded on a user's device. Only add the tables and views that are needed in a mobile scenario. For more information, see [Add pages to your app](../maker/model-driven-apps/create-a-model-driven-app.md#add-pages-to-your-app).
+- Keep views that are necessary and remove any view that isn't needed on a day-to-day basis. For example, avoid adding the **All accounts** view and keep views such as  **My active accounts**. Keep your forms lightweight for a smooth and intuitive experience on small screen devices. The following are options for mobile-optimized forms:
 
    - Build dedicated forms for mobile use.
 
@@ -132,7 +132,7 @@ The default offline profile is a starting point to help you quickly build an off
     > [!div class="mx-imgBorder"]
     > ![Create a new profile](media/mobile-offline-image7-1.png)
 
-2. Review the proposed filters for each table. Make sure the data that is downloaded on users' devices is limited to what is absolutely necessary. Focus on the most used tables in your app, which in most cases have the **Organization rows** filter set.
+2. Review the proposed filters for each table. Make sure the data that is downloaded on users' devices is limited to what is necessary. Focus on the most used tables in your app, which in most cases have the **Organization rows** filter set.
 
     > [!div class="mx-imgBorder"]
     > ![Default auto generated profile](media/mobile-offline-image9.png)
@@ -156,9 +156,9 @@ Applying an appropriate filter for each of the tables configured in the offline 
 
 3. Set the following filters:
 
-   1. Choose the row that you want to make avaliable offline. For the **Custom** option, use the [expression builder](../maker/model-driven-apps/create-edit-view-filters.md) which allows advanced conditions set up.
+   1. Choose the row that you want to make available offline. For the **Custom** option, use the [expression builder](../maker/model-driven-apps/create-edit-view-filters.md) which allows advanced conditions set up.
    2. **Relationships** lists the different relationships available between the current table and other tables added in the offline profile. Selecting a relationship will ensure related rows following that relationship will be downloaded and made available offline.
-   3. **Files** and **Images** lets you to define what table columns for a file or image need to be downloaded offline. For images, each column can be selected granularly but not for files it's all or nothing.
+   3. **Files** and **Images** lets you define what table columns for a file or image need to be downloaded offline. For images, each column can be selected granularly but not for files it's all or nothing.
    4. **Sync interval** defines the sync frequency to be applied on the device to sync the data with the server. If your table data doesn't change frequently like a catalog or product table, you may want to refresh it only once a day and focus on only syncing data when necessary.
       
       > [!div class="mx-imgBorder"]
