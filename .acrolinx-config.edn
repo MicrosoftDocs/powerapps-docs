@@ -1,4 +1,4 @@
-{:allowed-branchname-matches ["^master$"]
+{:allowed-branchname-matches ["^main$"]
  :allowed-filename-matches ["powerapps-docs"]
  :guidance-profile "dc59e3ef-24fd-46d7-9156-0491aaae6bef" ;; Profile ID for "BAG-specific" 
  :use-skip-label true
