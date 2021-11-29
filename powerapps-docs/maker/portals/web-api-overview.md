@@ -242,6 +242,11 @@ Portals Web API can't be used for the following configuration tables:
 :::column:::
 	adx_webtemplate
 :::row-end:::
+
+## Unsupported tables
+
+Portals Web API can't be currently used for the following tables:
+
 :::row:::
 :::column:::
 	adx_portalcomment
