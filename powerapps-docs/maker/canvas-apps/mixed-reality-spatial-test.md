@@ -19,6 +19,11 @@ contributors:
   - alex-msft
 ---
 
+
+<!-- I added a hyphen to "mixed reality" when it's used as an adjective, based on this style guide entry: https://styleguides.azurewebsites.net/Styleguide/Read?id=2700&topicid=44623. Also, in line 51, I removed the quotation marks from around those three labels because it looked like the marks were being used only to highlight the names, and that didn't seem necessary. Please review and re-add if I misjudged that. -->
+
+
+
 # Validate measurements in mixed reality using a spatial test filter
 
 Using the [Measure in MR](mixed-reality-component-measure-distance.md) control, you can create a spatial test filter to validate whether an object with known width, depth, and height dimensions will fit in a space. This topic will guide you through creating a test app that you can use to validate the collected measurements, including:
@@ -55,11 +60,6 @@ First, we’ll set up the dimensions to validate measurements.
 
     :::image type="content" source="media/augmented-measure-fit-test/fit-test-text-input.png" alt-text="Screenshot showing text inputs and properties.":::
 
-
-
-
-
-
 ## Insert and bind the Measure in MR component
 
 Next, we’ll set up the **Measure in MR** component to allow users to capture measurements, and bind the output value we'll use to validate the measurement.
@@ -72,15 +72,15 @@ Next, we’ll set up the **Measure in MR** component to allow users to capture m
 
     :::image type="content" source="media/augmented-measure-fit-test/fit-test-insert-measure-in-mr.png" alt-text="Screenshot showing insertion of a Measure in MR control.":::
 
-1. Update the following properties for **Measure in MR** component.
+1. Update the following properties for the **Measure in MR** component.
 
     | Property name | Value |
     | - | - |
-    | Units of measurement | Feet or Meters |    
+    | Unit of measurement | Feet or Meters |    
     | Measurement type | Volume |
     | Box Draw | True |
 
-    :::image type="content" source="media/augmented-measure-fit-test/fit-test-units-and-type.png" alt-text="Screenshot showing Measurement Type and Units of Measurement property values.":::
+    :::image type="content" source="media/augmented-measure-fit-test/fit-test-units-and-type.png" alt-text="Screenshot showing Measurement type and Unit of measurement property values.":::
 
 1. Select the **Items** property from the upper-left side of the screen for the **Measure in MR** component, and update the formula to the following.
 
@@ -102,7 +102,7 @@ Next, we’ll set up the **Measure in MR** component to allow users to capture m
     Set(testVolume, LookUp(MeasureInMR1.Measurements, Label = "Test Volume"));
     ```
 
-    This formula sets the "testVolume" variable with the value of the label looked up from the mixed reality component's measurements property.
+    This formula sets the "testVolume" variable with the value of the label looked up from the mixed-reality component's measurements property.
 
     :::image type="content" source="media/augmented-measure-fit-test/fit-test-on-mixed-reality-select.png" alt-text="Screenshot showing property setting for OnMixedRealitySelect.":::
 
@@ -154,15 +154,15 @@ Next, we’ll set up the **Measure in MR** component to allow users to capture m
 
 ## Test the app
 
-Press **F5** on the keyboard, or select the preview button to run the app in preview mode. And then, select **Measure In MR** to get the labels populated with data.
+Press **F5** on the keyboard, or select the preview button to run the app in preview mode. Then, select **Measure in MR** to get the labels populated with data.
 
 You can verify that the bindings are working as expected by changing values in the three text input fields to check that the filter is updating properly.
 
-The values for **Bounding Width** and **Bounding Depth** can be swapped when performing the test. After [saving and publishing](save-publish-app.md) the app, you can open it on a mixed reality-enabled device to test whether an object with the specified dimensions will fit within the bounds of any measurement captured.
+The values for **Bounding Width** and **Bounding Depth** can be swapped when performing the test. After [saving and publishing](save-publish-app.md) the app, you can open it on a mixed-reality–enabled device to test whether an object with the specified dimensions will fit within the bounds of any measurement captured.
 
 ## Filtering a data source
 
-This sample application only tests for a single set of user specified dimensions. However, you can extend it to work as a filter for any data source by applying the formula as a **Filter** predicate.
+This sample application only tests for a single set of user-specified dimensions. However, you can extend it to work as a filter for any data source by applying the formula as a **Filter** predicate.
 
 For example, let's say that our app contains a reference to a Dataverse table named **Products** that includes three columns&mdash;**Width**, **Depth**, and **Height** (corresponding to each product's dimensions). To filter the collection to only those measurements that would fit within a measured volume, we can apply the following formula.
 
