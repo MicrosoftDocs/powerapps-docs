@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 contributors:
   - gregli-msft
-  - nkrb
+  - tapanm-msft
 ---
 # Sort and SortByColumns functions in Power Apps
 Sorts a [table](../working-with-tables.md).
