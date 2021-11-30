@@ -34,9 +34,9 @@ You can cancel the save action by using the preventDefault method within the eve
 
 The OnSave event has ability to wait for promises returned by event handlers to settle before saving, allowing the `OnSave` event to be asynchronous ("async").
 
-The `OnSave` event becomes async when a promise is returned by an `OnSave` event handler and support is enabled. Enable the support by updating the `customization.xml` file for the app you want. More information: [Enable Async OnSave](#enable-async-onsave-using-app-setting).
+The `OnSave` event becomes async when a promise is returned by an `OnSave` event handler, async OnSave events are enabled by default, if you wish to disable async operations for your `OnSave` handlers, go to [PowerApps](https://powerapps.microsoft.com), select **Solutions** tab , select the solution that has the app and then select **Settings**, and look for “Async onsave handler”, make sure the check box is unchecked.  After disabling the option make sure you publish customizations.
 
-Saving of the record happens when each promise returned by a handler are resolved. For any promises that are returned, there is a 10-second limit for each promise, after that the platform considers promises to be timed out. This timeout is applied per promise. For example, if we have five promises returned, the total wait time is 50 seconds.  
+Saving of the record happens when each promise returned by a handler is resolved. For any promises that are returned, there is a 10-second limit for each promise, after that the platform considers promises to be timed out. This timeout is applied per promise. For example, if we have five promises returned, the total wait time is 50 seconds.  
 
 If the promise is rejected or timed out, the save operation continues to behave similarly to the current script errors. Use the [preventDefault](../save-event-arguments/preventDefault.md) method within the event arguments object in that particular handler if you want to prevent the save event to happen if there is a script error/rejected promise or handler times out.
 
@@ -62,11 +62,11 @@ In this scenario, since there are multiple async processes and both calls return
   > }
   >```
 
-### Enable Async OnSave using app setting 
+### Disable Async OnSave using app setting 
 
 An app setting is a platform component that allows you to override a setting on an app. App setting should have a unique name and must be in the format `solutionpublisherprefix_appname_settingname`.
 
-To enable the async `OnSave` event handlers for a specific app:
+To disable the async `OnSave` event handlers for a specific app:
 
 - Create a new unmanaged solution. 
 - Open the newly created solution. Select **Add existing** > **App** > **Model-driven app**.
@@ -74,7 +74,7 @@ To enable the async `OnSave` event handlers for a specific app:
 - Publish all customizations. 
 - Again from the list of solutions in the solution explorer, select the solution where you have added the model-driven app and then select **Export**. A zip file is downloaded to your local machine.
 - Extract the downloaded  zip file. Open the **Customizations.xml** file in your preferred editing tool. 
-- Add the following code `AppModule` node in the `customization.xml` file. Setting the `<value>true</value>` enables async `OnSave` event handler support for that specific app. Any form within this app will be able to get access to the async OnSave functionality.
+- Add the following code `AppModule` node in the `customization.xml` file. Setting the `<value>false</value>` to disable async `OnSave` event handler support for that specific app. Any form within this app will be able to get access to the async OnSave functionality.
 
    ```XML
    <appsettings>
