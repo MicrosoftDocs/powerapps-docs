@@ -96,7 +96,7 @@ To configure offline pages for the portal using PWA:
     :::image type="content" source="media/progressive-web-apps/manage-offline.png" alt-text="Managing offline pages." :::
 
 > [!NOTE]
-> Ensure you consider the storage limitations for the end-user devices when configuring offline access for pages using PWA. Storage requirement for PWA access exceeding the available storage on a device will result in the entire portal to be unavailable for offline access. We recommend that you test the offline access, and only cache the most important pages that must be available offline. Offline pages can only show information. Pages that allow form submissions or run queries won't work for offline access.
+> Ensure you consider the storage limitations for the end-user devices when configuring offline access for pages using PWA. Storage requirement for PWA access exceeding the available storage on a device will result in the entire portal to be unavailable for offline access. We recommend that you test the offline access, and only cache the most important pages that must be available offline. Offline pages can only show information. Pages that allow form submissions or run queries won't work while offline.
 
 ### Set up offline error page
 
