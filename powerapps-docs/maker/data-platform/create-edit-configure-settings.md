@@ -259,8 +259,8 @@ On success, returns a promise object.
 
 ### Web APIs
 You can also use the following Web APIs to get or update a setting value
-- [RetrieveSetting Function](../../../dynamics365/customer-engagement/web-api/retrievesetting)
-- [SaveSettingValue Action](../../../dynamics365/customer-engagement/web-api/savesettingvalue)
+- [RetrieveSetting Function](../../../dynamics365/customer-engagement/web-api/retrievesetting.md)
+- [SaveSettingValue Action](../../../dynamics365/customer-engagement/web-api/savesettingvalue.md)
 
 ## See also
 
