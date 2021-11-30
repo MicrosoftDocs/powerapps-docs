@@ -91,7 +91,7 @@ You can easily enable and configure actions (create, edit, delete, and so on) fo
 
 These settings are found on the **Options** tab in the **Grid Configuration** section of the list form. By default, only **Basic Settings** are shown. Select **Advanced Settings** to see additional settings.
 
-![Configure a list.](../media/configure-entitylist.png "Configure a list")  
+:::image type="content" source="media/lists/configure-entitylist.png" alt-text="Configure a list."::: 
 
 **Attributes**
 
