@@ -145,11 +145,11 @@ To get started with offline browsing:
 
 ### Distribute your app using a browser
 
-Once your portal is enabled as a PWA, your users can pin Power Apps portals as an app to the home screen on a their device.  This is supported in all platforms (android/iOS/windows) as well as all form factors (mobile/desktop/tablet).
+Once your portal is enabled as a PWA, your users can pin Power Apps portals as an app to the home screen on a their device. This is supported in all platforms (android/iOS/windows) as well as all form factors (mobile/desktop/tablet).
 
 ### Distribute your app through an app store
 
-You can create an app package for your portal's PWA and publish the package to different app stores such as Microsoft Windows Store, Google Play Android Store, and the iOS app store.
+You can create an app package for your portal's PWA and publish the package to different app stores such as Microsoft Windows Store, and Google Play Android Store.
 
 To create app package, select **Create app package** under **App package** in **Progressive web app** in portals Studio.
 
@@ -159,9 +159,7 @@ You'll be taken to [PWA builder](https://www.pwabuilder.com/) where you can crea
 
 Package created from pwabuilder contains:
 
-- .apk file to test the app
-
-- .aab file that can be published in app store.
+- App package for PWA of respective app store.
 
 - Step-by-step document to publish app.
 

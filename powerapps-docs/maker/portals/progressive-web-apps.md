@@ -35,6 +35,9 @@ The following graphics illustrate the user experience when adding the portal on 
 
 Users can also install the portal from the store if you choose to create an app package and publish the app to the device store.
 
+> [!Note]
+> The iOS app store is currently not supported.
+
 :::image type="content" source="media/progressive-web-apps/app-store.png" alt-text="Mobile device app store." border="false":::
 
 ## Next step
