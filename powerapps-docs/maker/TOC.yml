@@ -2157,8 +2157,6 @@
         href: ./data-platform/import-update-export-solutions.md
       - name: Update or upgrade solutions
         href: ./data-platform/update-solutions.md
-      - name: Use settings (preview)
-        href: ./data-platform/create-edit-configure-settings.md
       - name: Other solution tasks
         items:
         - name: View solution layers
@@ -2169,6 +2167,8 @@
           href: ./data-platform/view-component-dependencies.md
         - name: Use environment variables
           href: ./data-platform/EnvironmentVariables.md
+        - name: Use settings (preview)
+          href: ./data-platform/create-edit-configure-settings.md
         - name: Use a connection reference
           href: ./data-platform/create-connection-reference.md  
         - name: Translate customized component text
