@@ -6364,6 +6364,11 @@
       "source_path": "powerapps-docs/learning-catalog/learning-catalog-bdm.md",
       "redirect_url": "powerapps-docs/learning-catalog/bdm.md",
       "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/data-platform/best-practices/index.md",
+      "redirect_url": "/powerapps/developer/data-platform/best-practices/",
+      "redirect_document_id": "false"
     }
   ]
 }

@@ -16,7 +16,7 @@ search.app:
   - D365CE
 ---
 
-# Multi-table Lookups
+# Multi-table lookups
 
 Multi-table lookup type columns allow a user to use a specific table that has
 multiple one-to-many (1:M) relationships to other tables in the environment. A single lookup
@@ -71,7 +71,7 @@ records stored in specific tables.
 | \<video1\>    | Content3        | wmv             |
 | \<video2\>    | Content2        | avi             |
 
-The Media look up can return records across all the tables in the polymorphic
+The Media lookup can return records across all the tables in the polymorphic
 lookup.
 
 - A lookup on Media with the name Content1 would retrieve records for

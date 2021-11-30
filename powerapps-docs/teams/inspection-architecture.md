@@ -1,17 +1,17 @@
 ---
 title: Understand Inspection sample apps architecture
 description: Learn about the architecture of the Inspection sample apps.
-author: navjotm
+author: josephshum
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 06/02/2021
 ms.subservice: teams
-ms.author: namarwah
+ms.author: jshum
 ms.reviewer: tapanm
 contributors:
     - tapanm-msft
-    - navjotm
+    - josephshum
     - joel-lindstrom
 ---
 

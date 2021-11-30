@@ -5,12 +5,12 @@ author: sbahl10
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 08/16/2021
-ms.author: namarwah
+ms.date: 11/24/2021
+ms.author: jshum
 ms.reviewer: tapanm
 contributors:
   - joel-lindstrom
-  - navjotm
+  - josephshum
   - tapanm-msft
   - sbahl10
 ---
@@ -134,19 +134,73 @@ Once you've verified that the flow is working properly, you can add it to the In
 
 1. You'll now see the **Inspection Adaptive Card To Teams** flow in the Available flows section. Select it to add it to the button.
 
-1. You'll now need to edit the pasted code. Find and remove the following portion of the formula:
+1. You'll now need to edit the pasted code. Find and replace the following portion of the formula as shown below.
+
+    **Remove section from formula:**
 
     ```powerapps-dot
-    MicrosoftTeams.PostMessageToChannelV3(gblPlannerGroupId,gblRecordSettings.'Parameter (Notification Channel Id)',// gblParamChannelId,{content: Concatenate(With({varDefault: "A new " & Lower(gblWorkType) & " has been submitted!",
-    varOOBTextId: "\_translateCommon\__" & gblWorkType & "Submitted"},With({varLocalizedText: LookUp(colLocalization,OOBTextID = varOOBTextId,LocalizedText)},Coalesce(varLocalizedText,varDefault))),//"A new " & Lower(gblWorkType) & " has been submitted!","\<br\>\</br\>","\<b\>" & With({varDefault: "For the Location:",varOOBTextId:"\_translateCommon\_\_InspectionForLocation"},With({varLocalizedText: LookUp(colLocalization,OOBTextID = varOOBTextId,LocalizedText)},Coalesce(varLocalizedText,varDefault))) & " " & "\</b\>",//"\<b\>For the Location: \</b\>",gblLastInspection.Location.Name),contentType: "html"},{subject: gblLastInspection.Name})
+    MicrosoftTeams.PostMessageToChannelV3(
+                    gblPlannerGroupId,
+                    gblRecordSettings.'Parameter (Notification Channel Id)',// gblParamChannelId,
+                    {
+                        content: Concatenate(
+                            With(
+                                {
+                                    varDefault: "A new " & Lower(gblWorkType) & " has been submitted!",
+                                    varOOBTextId: "_translateCommon__" & gblWorkType & "Submitted"
+                                },
+                                With(
+                                    {
+                                        varLocalizedText: LookUp(
+                                            colLocalization,
+                                            OOBTextID = varOOBTextId,
+                                            LocalizedText
+                                        )
+                                    },
+                                    Coalesce(
+                                        varLocalizedText,
+                                        varDefault
+                                    )
+                                )
+                            ),
+                    //"A new " & Lower(gblWorkType) & " has been submitted!",
+                            "<br></br>",
+                            "<b>" & With(
+                                {
+                                    varDefault: "For the Location:",
+                                    varOOBTextId: "_translateCommon__InspectionForLocation"
+                                },
+                                With(
+                                    {
+                                        varLocalizedText: LookUp(
+                                            colLocalization,
+                                            OOBTextID = varOOBTextId,
+                                            LocalizedText
+                                        )
+                                    },
+                                    Coalesce(
+                                        varLocalizedText,
+                                        varDefault
+                                    )
+                                )
+                            ) & " " & "</b>",
+                    //"<b>For the Location: </b>",
+                            gblLastInspection.Location.Name
+                        ),
+                        contentType: "html"
+                    },
+                    {subject: gblLastInspection.Name}
+                )
     ```
 
-1. Replace the following code with the removed formula portion earlier:
+    **Add section to formula:**
 
     ```powerapps-dot
     InspectionAdaptiveCardToTeams.Run(gblLastInspection.Name,
     gblLastInspection.Location.Name, Lower(gblWorkType))
     ```
+
+    :::image type="content" source="media\inspection\inspection-submit-flow.png" alt-text="Submit inspection formula updated.":::
 
     This formula contains the reference to the flow we just added and the variables to pass to Power Automate.
 

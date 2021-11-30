@@ -2,7 +2,6 @@
 title: "Preview: Embed canvas apps in your applications"
 description: Learn about how to embed canvas apps in your applications using the new embedding SDK in Power Apps.
 author: nkrb
-manager: kvivek
 ms.service: powerapps
 ms.subservice: canvas-developer
 ms.topic: article
@@ -15,6 +14,7 @@ search.app:
   - PowerApps
 contributors:
   - nkrb
+  - tapanm-msft
 ---
 
 # Preview: Embed canvas apps in your applications

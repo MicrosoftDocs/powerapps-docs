@@ -2,11 +2,10 @@
 title: Collect, Clear, and ClearCollect functions in Power Apps
 description: Reference information including syntax and examples for the Collect, Clear, and ClearCollect functions in Power Apps.
 author: gregli-msft
-manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: nabuthuk
+ms.reviewer: tapanm
 ms.date: 05/04/2020
 ms.subservice: canvas-maker
 ms.author: gregli
@@ -16,7 +15,7 @@ search.app:
   - PowerApps
 contributors:
   - gregli-msft
-  - nkrb
+  - tapanm-msft
 ---
 # Collect, Clear, and ClearCollect functions in Power Apps
 
