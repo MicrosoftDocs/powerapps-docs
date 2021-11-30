@@ -27,7 +27,7 @@ A component can receive input values to emit or process data using custom input 
 
 ## Map columns
 
-Function [RenameColumns()](functions/function-table-shaping.md) can be used to rename one or more columns of a table
+Use the [RenameColumns()](functions/function-table-shaping.md) function to rename one or more columns of a table
 to match the input property schema for input column selection.
 
 For example, consider a component that expects a table input with the following format:
@@ -74,23 +74,17 @@ selected with matching field names.
 | Strawberry | 1.99          | 20               |
 | Chocolate  | 2.99          | 45               |
 
-With/Forall
------------
+## Map tables or records
 
-The **With** function evaluates a formula for a single record. The formula can
-modify data to achieve the same selection purpose. Use
-the [ForAll function](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/functions/function-forall) can
-be used for a table of records. *Learn more about the With function and ForAll*.
-(<https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/functions/function-with>
-https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/functions/function-forall)
+Use [With()](functions/function-with.md) function to map a single record, and [ForAll()](functions/function-forall.md) function for a table of records.
 
 For example, a component custom input takes a record and the schema is:
 
->   CustomProperty1 = {Flavor: "Strawbetter",UnitPrice: 1.99, QuantitySold: 20}
+>   CustomProperty1 = {Flavor: "Strawberry",UnitPrice: 1.99, QuantitySold: 20}
 
 The data source in the app which I want to input to the component is:
 
-IceCreamRecord = {FlavorName:"Strawbetter",Price: 1.99, SaleNumber: 20, Proft:
+IceCreamRecord = {FlavorName:"Strawberry",Price: 1.99, SaleNumber: 20, Proft:
 5)
 
 To select fields to map to the component input, use **With** function to select
