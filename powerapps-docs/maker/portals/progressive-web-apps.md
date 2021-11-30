@@ -25,10 +25,7 @@ You can enable your functional portal as a progressive web app with native app-l
 
 Portals is using Progressive Web App (PWA) technology to provide multi-platform support to create an app that will work on all platforms (android/iOS/windows/chromebooks) and form factors (mobile/desktop/tablet).
 
-Progressive Web Apps are built for cross-platform interoperability through browser support that provides users a native app-like experience. PWA brings a seamless experience for users across different web browsers. These apps can be installed from the browser or through app stores (Android/Windows/Chrome store). This capability enables external and internal customers to use portals as an app. You can also pin the app directly to your home screen on your mobile device.
-
-> [!Note]
-> The iOS app store is not supported.
+Progressive Web Apps are built for cross-platform interoperability through browser support that provides users a native app-like experience. PWA brings a seamless experience for users across different web browsers. These apps can be installed from the browser or through app stores (Android/Windows/Chrome/iOS store). This capability enables external and internal customers to use portals as an app. You can also pin the app directly to your home screen on your mobile device.
 
 PWAs can be used for both online and offline scenarios. As a maker, you can choose to enable specific pages in a portal for read-only offline availability.
 

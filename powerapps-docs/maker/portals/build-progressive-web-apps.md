@@ -51,6 +51,9 @@ Use Power App portals Studio to configure your Progress Web App (PWA). You can e
 
 You can create your own branded app by customizing your PWA by changing the app name, starting page, color, and more using the customization option.
 
+> [!Note]
+> For iOS devices, icons for PWA will shown as thumbnails and the devices will not display the customized splash screen.
+
 To customize PWA settings for your portal:
 
 1. In portals Studio, select **Progressive web app**.
@@ -146,7 +149,7 @@ Once your portal is enabled as a PWA, your users can pin Power Apps portals as a
 
 ### Distribute your app through an app store
 
-You can create an app package for your portal's PWA and publish the package to different app stores such as Microsoft Windows Store and Google Play Android Store
+You can create an app package for your portal's PWA and publish the package to different app stores such as Microsoft Windows Store, Google Play Android Store, and the iOS app store.
 
 To create app package, select **Create app package** under **App package** in **Progressive web app** in portals Studio.
 
@@ -161,6 +164,8 @@ Package created from pwabuilder contains:
 - .aab file that can be published in app store.
 
 - Step-by-step document to publish app.
+
+- For more details, go to the [PWA resource hub](https://blog.pwabuilder.com/).
 
 For Android platform, you can also update the android certificate using the option **Update android certificate**.
 
