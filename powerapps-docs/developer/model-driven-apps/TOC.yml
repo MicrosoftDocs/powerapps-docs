@@ -81,6 +81,8 @@
     href: clientapi/send-in-app-notifications.md
   - name: Creating side panes using client API
     href: clientapi/create-app-side-panes.md
+  - name: Get or update settings value using client API
+    href: clientapi/get-update-setting-value-using-code.md
   - name: Client API Reference
     href: clientapi/reference.md
     items:
