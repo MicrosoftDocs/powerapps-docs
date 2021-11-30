@@ -7,7 +7,7 @@ ms.subservice: dataverse-maker
 ms.author: aneesa
 ms.reviewer: matp
 manager: kvivek
-ms.date: 11/29/2021
+ms.date: 11/30/2021
 ms.service: powerapps
 ms.topic: how-to
 search.audienceType: 
@@ -256,6 +256,11 @@ Xrm.Utility.getGlobalContext().saveSettingValue(settingName, value, saveSettingO
 
 #### Return value
 On success, returns a promise object.
+
+### Web APIs
+You can also use the following Web APIs to get or update a setting value
+- [RetrieveSetting Function](https://docs.microsoft.com/dynamics365/customer-engagement/web-api/retrievesetting)
+- [SaveSettingValue Action](https://docs.microsoft.com/dynamics365/customer-engagement/web-api/savesettingvalue)
 
 ## See also
 
