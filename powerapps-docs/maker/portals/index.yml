@@ -13,7 +13,7 @@ metadata:
   ms.collection: collection
   author: kumarvivek
   ms.author: kvivek
-  ms.date: 10/22/2021 
+  ms.date: 11/30/2021 
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -24,14 +24,14 @@ landingContent:
     linkLists:
        - linkListType: whats-new
          links:
+          - text: Portals as Progressive Web Apps (preview)
+            url: progressive-web-apps.md         
           - text: Liquid template tag for code components (preview)
             url: component-framework-liquid.md         
           - text: Create multiple portals of same type
             url: create-additional-portals.md
           - text: Set up Azure Front Door with portals
             url: azure-front-door.md
-          - text: Embed a portal in another website by using an iframe
-            url: embed-portal-website.md
        - linkListType: reference
          links:
           - text: Latest released version of portals
