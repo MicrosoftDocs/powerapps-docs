@@ -168,7 +168,7 @@ A setting environment value is used to override the setting's default value for 
 Setting app value is used to override the setting's default value and any setting environment value for a single app. Use a setting app value when the setting environment value is not what you want to be used for your app. If a setting environment value does not exist, use a setting app value when the setting's default value is not what you want to be used for your app.
 
 > [!NOTE]
-> To follow the steps listed below you need to use the new [app designer](../model-driven-apps/app-designer-overview.md). Currently the app designer only supports adding, updating, or deleting setting app values for Power Apps platform settings. Non-platform settings will not appear in the app designer. For these settings please use the solution explorer as outlined below.
+> To follow the steps listed below you need to use the new [app designer](../model-driven-apps/app-designer-overview.md). Currently the app designer only displays Power Apps platform settings. For non-platform settings please use the solution explorer as outlined below.
 
 ### Adding or updating a setting app value using the app designer
 
@@ -259,8 +259,8 @@ On success, returns a promise object.
 
 ### Web APIs
 You can also use the following Web APIs to get or update a setting value
-- [RetrieveSetting Function](https://docs.microsoft.com/dynamics365/customer-engagement/web-api/retrievesetting)
-- [SaveSettingValue Action](https://docs.microsoft.com/dynamics365/customer-engagement/web-api/savesettingvalue)
+- [RetrieveSetting Function](../../../dynamics365/customer-engagement/web-api/retrievesetting)
+- [SaveSettingValue Action](../../../dynamics365/customer-engagement/web-api/savesettingvalue)
 
 ## See also
 
