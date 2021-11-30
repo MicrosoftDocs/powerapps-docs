@@ -20,7 +20,7 @@ search.app:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
 
-Settings are solution components that enable makers and administrators to quickly configure apps to provide a customized experience. Settings can be used to enable or disable features or configure feature behavior for a single app or all apps within an environment. More information: [Use settings to provide customized app experiences (preview)](../../../maker/data-platform/create-edit-configure-settings.md)
+Settings are solution components that enable developers to quickly configure apps to provide a customized experience. Settings can be used to enable or disable features or configure feature behavior for a single app or all apps within an environment. More information: [Use settings to provide customized app experiences (preview)](../../../maker/data-platform/create-edit-configure-settings.md)
 
   > [!IMPORTANT]
   > - This is a preview feature and may not be available in all regions.
