@@ -195,7 +195,7 @@ Setting app value is used to override the setting's default value and any settin
 1. Select the setting definition or setting environment value.
 1. In the **Edit setting value** dialog, in the **Setting app values** section, find the app that you want to add the setting app value for. Note that using the solution explorer you can only add setting app values for apps that are in the current solution.
 1. Provide the value and select **Save**.
-1. For the app setting value to take effect you will have to republish the app using the app designer or solution explorer.
+1. For the setting app value to take effect you will have to republish the app using the app designer or solution explorer.
 
 ### Deleting a setting app value using the solution explorer
 
