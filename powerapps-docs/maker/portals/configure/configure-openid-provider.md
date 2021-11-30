@@ -105,7 +105,7 @@ Similar to all other providers, you have to sign in to [Power Apps](https://make
     | Contact mapping with email | Specify whether the contacts are mapped to a corresponding email. <br> When set to **On**, a unique contact record is associated with a matching email address, assigning the external identity provider to the contact after a successful user sign-in. |
 
     > [!Note]
-    > *UI_Locales* attribute will now be sent automatically in the authorize request and will be set to the language selected on the portal.
+    > *UI_Locales* request parameter will now be sent automatically in the authentication request and will be set to the language selected on the portal.
 
 ## Edit an OpenID Connect provider
 
@@ -115,6 +115,5 @@ To edit a configured OpenID Connect provider, see [Edit a provider](use-simplifi
 
 [Configure an OpenID Connect provider for portals with Azure AD](configure-openid-settings.md)  
 [FAQ for using OpenID Connect in portals](configure-openid-faqs.md)
-
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
