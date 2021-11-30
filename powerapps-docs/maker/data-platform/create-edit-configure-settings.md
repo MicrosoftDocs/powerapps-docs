@@ -16,7 +16,9 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Use settings to provide customized app experiences
+# Use settings to provide customized app experiences (preview)
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 Settings are solution components that enable makers and administrators to quickly configure apps to provide a customized experience. Settings can be used to enable or disable features or configure feature behavior for a single app or all apps within an environment.
 
@@ -28,9 +30,9 @@ Settings are made up of three subcomponents: Setting definition, setting environ
 
 | Subcomponent | Description |
 |:--------------|:-------------------------|
-|**Setting definition** | <ul><li>Application authors, administrators, or partners can create a setting definition that includes properties such as name, description, data type, default value, and more.</li><li>They can then, via code, use the setting’s value to enable or disable or configure the feature they are delivering.</li><li>They can include the setting definition in the solution that is used to deliver the feature to their customers.</li><li>Example<ul><li>The [*Async save handler*](../../developer/model-driven-apps/clientapi/reference/events/form-onsave.md) for model-driven apps is a feature from Power Apps that uses settings.</li><li>The setting is of type *Yes/No* and the default value of this setting is *No*. </li><li>Therefore, by default, the *Async save handler* feature will be disabled for all model-driven apps.</li></ul></li></ul> |
-|**Setting environment value** | <ul><li>A setting environment value can be used to override the default value, as specified in the setting definition.</li><li>Example<ul><li>Extending the example above, an environment administrator in a customer’s organization can add a setting environment value for the *Async save handler* setting and set it to *Yes*.</li><li>This setting environment value will override the default value and will apply to all apps in that environment.</li><li>This will enable the *Async save handler* feature for all model-driven apps in that environment.</li></ul></li></ul> |
-|**Setting app value** | <ul><li>A setting app value can be used to override the default value, as specified in the setting definition, and the setting environment value (if one exists).</li><li>Example<ul><li>Once again, extending the example above, an application author in the same environment above, can add a setting app value for the *Async save handler* setting for an app they are authoring and set it to *No*</li><li>This setting app value will override the setting environment value and apply only to that single app.</li><li>This will enable the *Async save handler* feature for that single app.</li></ul></li></ul> |
+|**Setting definition** | <ul><li>Application authors, administrators, or partners can create a setting definition that includes properties such as name, description, data type, default value, and more.</li><li>They can then, via code, use the setting’s value to enable or disable or configure the feature they are delivering.</li><li>They can include the setting definition in the solution that is used to deliver the feature to their customers.</li><li>Example:<ul><li>The [*Async save handler*](../../developer/model-driven-apps/clientapi/reference/events/form-onsave.md) for model-driven apps is a feature from Power Apps that uses settings.</li><li>The setting is of type *Yes/No* and the default value of this setting is *No*. </li><li>Therefore, by default, the *Async save handler* feature will be disabled for all model-driven apps.</li></ul></li></ul> |
+|**Setting environment value** | <ul><li>A setting environment value can be used to override the default value, as specified in the setting definition.</li><li>Example:<ul><li>Extending the example above, an environment administrator in a customer’s organization can add a setting environment value for the *Async save handler* setting and set it to *Yes*.</li><li>This setting environment value will override the default value and will apply to all apps in that environment.</li><li>This will enable the *Async save handler* feature for all model-driven apps in that environment.</li></ul></li></ul> |
+|**Setting app value** | <ul><li>A setting app value can be used to override the default value, as specified in the setting definition, and the setting environment value (if one exists).</li><li>Example:<ul><li>Once again, extending the example above, an application author in the same environment above, can add a setting app value for the *Async save handler* setting for an app they are authoring and set it to *No*</li><li>This setting app value will override the setting environment value and apply only to that single app.</li><li>This will enable the *Async save handler* feature for that single app.</li></ul></li></ul> |
 
 > [!NOTE]
 > To follow the steps listed below you need to have **Solution preview on**. From the **Solutions** area in Power Apps, on the command bar, ensure you have **Solution preview on**. If **Solution preview off** is displayed, select the option to enable the preview. More information: [Solution view](solutions-area.md)
@@ -202,10 +204,10 @@ Setting app value is used to override the setting's default value and any settin
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 1. In the navigation pane, select **Solutions**.
 1. From the list of solutions, open the solution you want to delete the setting app value from.
-1. If the setting definition or setting environment value is not available in the solution add one of them. More information: [Adding an existing setting definition](create-edit-configure-settings.md#adding-an-existing-setting-definition) or [Adding an existing setting environment value](create-edit-configure-settings.md#adding-an-existing-setting-environment-value).
+1. If the setting definition or setting environment value is not available in the solution, add one of them. More information: [Adding an existing setting definition](create-edit-configure-settings.md#adding-an-existing-setting-definition) or [Adding an existing setting environment value](create-edit-configure-settings.md#adding-an-existing-setting-environment-value).
 1. Select the setting definition or setting environment value.
 1. In the **Edit setting value** dialog, in the **Setting app values** section, find the app that you want to delete the setting app value for. Note that using the solution explorer you can only remove setting app values for apps that are in the current solution.
-1. Select the ellipsis "***...***" next to the setting app value and then select **Reset to environment**.
+1. Select ***...*** next to the setting app value, and then select **Reset to environment**.
 1. Select **Save**.
 1. For the deletion of the setting app value to take effect you will have to republish the app using the app designer or solution explorer.
 
@@ -229,7 +231,7 @@ var settingValue = Xrm.Utility.getGlobalContext().getCurrentAppSetting(settingNa
 #### Return value
 **Type:** Same as the type of the setting: *Number*, *String*, or *Yes/No*<br><br>
 **Description:** 
-- If the setting is *Overridable* and *"Value can be overridden"* is set to *"Environment and app"* the setting app value is returned. If a setting app value does not exist, then the setting environment value is returned. If a setting environment value does not exist, the default value as specified in the setting definition is returned.
+- If the setting is *Overridable* and *Value can be overridden* is set to *Environment and app* the setting app value is returned. If a setting app value does not exist, then the setting environment value is returned. If a setting environment value does not exist, the default value as specified in the setting definition is returned.
 - If the setting is *Overridable* and *"Value can be overridden"* is set to *"Environment only"* the setting environment value is returned. If a setting environment value does not exist, the default value as specified in the setting definition is returned.
 - If the setting is *Overridable* and *"Value can be overridden"* is set to *"App only"* the setting app value is returned. If a setting app value does not exist, the default value as specified in the setting definition is returned.
 - If the setting is not *Overridable*, the default value as specified in the setting definition is returned.
