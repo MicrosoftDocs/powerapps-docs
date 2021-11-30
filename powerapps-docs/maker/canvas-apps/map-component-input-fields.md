@@ -20,6 +20,8 @@ contributors:
 
 # Map input fields of a component
 
+[This article is pre-release documentation and is subject to change.]
+
 A component can receive input values to emit or process data using custom input properties. In this article, you'll learn about working with such components that expect one or more input properties with a specific schema for the given table or record.
 
 > [!TIP]
@@ -74,24 +76,36 @@ selected with matching field names.
 | Strawberry | 1.99          | 20               |
 | Chocolate  | 2.99          | 45               |
 
-## Map tables or records
+## Map records
 
-Use [With()](functions/function-with.md) function to map a single record, and [ForAll()](functions/function-forall.md) function for a table of records.
+Use [With()](functions/function-with.md) function to map a single record.
 
-For example, a component custom input takes a record and the schema is:
+For example, continuing from the [earlier example](#map-columns) for mapping columns, a component custom input takes a record and the schema is:
 
->   CustomProperty1 = {Flavor: "Strawberry",UnitPrice: 1.99, QuantitySold: 20}
+```powerapps-dot
+{Flavor: "Strawberry",UnitPrice: 1.99, QuantitySold: 20}
+```
 
-The data source in the app which I want to input to the component is:
+:::image type="content" source="media/map-component-input-fields/custom-record-property.png" alt-text="Custom input property formula defined as record and sample values.":::
 
-IceCreamRecord = {FlavorName:"Strawberry",Price: 1.99, SaleNumber: 20, Proft:
-5)
+Since the **IceCreams** data source expects column names as **FlavorName**, **Price**, and **SaleNumber**, we'll need to change the mapping for the record once the component is added to the app.
 
-To select fields to map to the component input, use **With** function to select
-fields of the IceCreamRecord without change the data source:
+Use **With()** function to select the fields of the **IceCreams** table and map them to the component input:
 
->   ComponentInstance.CustomProperty1 = With(IceCreamRecord, { Flavor:
->   FlavorName, UnitPrice: Price, QuantitySold: SaleNumber })
+```powerapps-dot
+With(Gallery3.Selected,{Flavor:FlavorName,UnitPrice:Price,QuantitySold:SaleNumber})
+```
+
+:::image type="content" source="media/map-component-input-fields/app-component-record.png" alt-text="Component record in app mapped to the data source schema.":::
+
+Below animation shows the example of component added to the app that shows the selected record from the gallery (above the component):
+
+:::image type="content" source="media/map-component-input-fields/component-selected-record.gif" alt-text="Animation that shows selection of a record from gallery above changing the component instance text below.":::
+
+## Map tables
+
+, and [ForAll()](functions/function-forall.md) function for a table of records.
+
 
 Not recommended method
 ----------------------

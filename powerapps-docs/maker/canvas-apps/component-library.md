@@ -19,8 +19,7 @@ contributors:
 
 # Component library
 
-> [!IMPORTANT]
-> This feature is still in public preview. For more information, see [Experimental and preview features](./working-with-experimental-preview.md).
+[This article is pre-release documentation and is subject to change.]
 
 In the [overview](create-component.md) article for creating components, you are introduced to components inside canvas app. As you create components inside an app, you can also create a library of components that can be reused. By creating a component library, app makers easily share and update one or more components with other makers.
 
