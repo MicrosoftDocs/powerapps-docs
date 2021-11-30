@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 contributors:
   - gregli-msft
-  - nkrb
+  - tapanm-msft
 ---
 # Select function in Power Apps
 Simulates a select action on a control, causing the **OnSelect** formula to be evaluated.

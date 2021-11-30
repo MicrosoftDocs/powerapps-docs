@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 contributors:
   - gregli-msft
-  - nkrb
+  - tapanm-msft
 ---
 # Abs, Exp, Ln, Power, and Sqrt functions in Power Apps
 Calculates absolute values, natural logarithms, square roots, and the results of raising *e* or any number to specified powers.
