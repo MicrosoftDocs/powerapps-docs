@@ -48,7 +48,7 @@ If you have desktop and remote mobile users, then create two separate apps. Opti
 Follow these best practices when building an app for mobile offline use:
 
 - Identify the on-the-go scenarios that are functionally related, such as which tasks are performed by users in the field on any given day.
-- Reduce the complexity of your app and limit the amount of app metadata that needs to be downloaded on a user's device. Only add the tables and views that are needed in a mobile scenario. For more information, see [Add pages to your app](../maker/model-driven-apps/create-a-model-driven-app.md#add-pages-to-your-app).
+- Reduce the complexity of your app and limit the amount of app metadata that needs to be downloaded on a user's device. Only add the tables and views that are needed for your mobile users. For more information, see [Add pages to your app](../maker/model-driven-apps/create-a-model-driven-app.md#add-pages-to-your-app).
 - Keep views that are necessary and remove any view that isn't needed on a day-to-day basis. For example, avoid adding the **All accounts** view and keep views such as  **My active accounts**. Keep your forms lightweight for a smooth and intuitive experience on small screen devices. The following are options for mobile-optimized forms:
 
    - Build dedicated forms for mobile use.
