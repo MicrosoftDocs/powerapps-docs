@@ -34,7 +34,7 @@ You can cancel the save action by using the preventDefault method within the eve
 
 The OnSave event has ability to wait for promises returned by event handlers to settle before saving, allowing the `OnSave` event to be asynchronous ("async").
 
-The `OnSave` event becomes async when a promise is returned by an `OnSave` event handler, Async OnSave events are enabled by default, if you wish to disable async operations for your onsave handlers, go to your app settings at powerapps.microsoft.com, select your solution, select your app, select settings, and look for “Async onsave handler”, make sure the check box is unchecked.  After disabling the option make sure you publish customizations.
+The `OnSave` event becomes async when a promise is returned by an `OnSave` event handler, async OnSave events are enabled by default, if you wish to disable async operations for your `OnSave` handlers, go to [PowerApps](https://powerapps.microsoft.com), select **Solutions** tab , select the solution that has the app and then select **Settings**, and look for “Async onsave handler”, make sure the check box is unchecked.  After disabling the option make sure you publish customizations.
 
 Saving of the record happens when each promise returned by a handler is resolved. For any promises that are returned, there is a 10-second limit for each promise, after that the platform considers promises to be timed out. This timeout is applied per promise. For example, if we have five promises returned, the total wait time is 50 seconds.  
 
