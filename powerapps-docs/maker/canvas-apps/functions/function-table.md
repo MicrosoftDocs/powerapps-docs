@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 contributors:
   - gregli-msft
-  - nkrb
+  - tapanm-msft
 ---
 # Table function in Power Apps
 Creates a temporary [table](../working-with-tables.md).

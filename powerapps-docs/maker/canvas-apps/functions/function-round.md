@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 contributors:
   - gregli-msft
-  - nkrb
+  - tapanm-msft
 ---
 # Int, Round, RoundDown, RoundUp, and Trunc functions in Power Apps
 

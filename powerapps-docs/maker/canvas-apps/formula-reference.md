@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - nkrb
+  - tapanm-msft
   - gregli-msft
 ---
 # Formula reference for Power Apps
