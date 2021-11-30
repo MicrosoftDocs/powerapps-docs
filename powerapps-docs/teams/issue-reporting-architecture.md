@@ -43,8 +43,7 @@ The following connectors are used in the Issue Reporting app:
 
 - **Microsoft Dataverse** - used to read and write data in Dataverse.
 - **Office 365 Users** - used to read Microsoft 365 user profile data.
-- **Location** - Used to capture the user's location for Planner tasks.
-- **Microsoft Planner** - Used to create tasks for issues.
+- **Microsoft Stream** - used to display user profile video in Stream control.
 
 ## Data model
 
