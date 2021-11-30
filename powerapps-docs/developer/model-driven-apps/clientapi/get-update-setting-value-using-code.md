@@ -18,13 +18,13 @@ search.app:
 ---
 # Get or update a setting value using client API (preview)
 
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
 
 Settings are solution components that enable makers and administrators to quickly configure apps to provide a customized experience. Settings can be used to enable or disable features or configure feature behavior for a single app or all apps within an environment. More information: [Use settings to provide customized app experiences (preview)](../../../maker/data-platform/create-edit-configure-settings.md)
 
   > [!IMPORTANT]
   > - This is a preview feature and may not be available in all regions.
-  > - [!INCLUDE[cc_preview_features_definition](../../../includes/cc-preview-features-definition.md)
+  > - [!INCLUDE[cc_preview_features_definition](../../../includes/cc-preview-features-definition.md)]
 
 The following functions can be used to get or update a setting value using client API.
 
