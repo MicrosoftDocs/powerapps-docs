@@ -30,16 +30,16 @@ search.app:
 
 <a name="BKMK_EditFilterCriteria"></a>   
 
-Along with the [columns](../model-driven-apps/model-driven-app-glossary.md#column), displayed in a [view](../model-driven-apps/model-driven-app-glossary.md#view), the filter criteria applied to a view is a critical part of the value provided by the view. It is possible to add or edit **filter criteria** and change the **sort order** for the columns included in a view. If a sort order is not set for a view, by default the view is sorted by the **primary column** in the view in ascending order (A to Z).
+Along with the [columns](../model-driven-apps/model-driven-app-glossary.md#column), displayed in a [view](../model-driven-apps/model-driven-app-glossary.md#view), the filter criteria applied to a view is a critical part of the value provided by the view. It is possible to add or edit filter criteria and change the sort order for the columns included in a view. If a sort order is not set for a view, by default the view is sorted by the primary column in the view in ascending order (A to Z).
 
-## Editing the filter criteria of a view
+## Edit the filter criteria of a view
 
 1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
-2.  Expand **Data**, select **Tables**, select the table required, and then select the **Views** tab.
+2.  Expand **Data**, select **Tables**, select the table you want, and then select the **Views** tab.
 
 > [!note]
-> Many customisations to a table take place within [solutions](../model-driven-apps/model-driven-app-glossary.md#solution).  To update a table within a solution first navigate to your **solution**, then select the **table** followed by the **views** tab.
+> Customizations to a table should take place within a [solution](../model-driven-apps/model-driven-app-glossary.md#solution). To update a table within a solution open your solution from the **Solutions** area, select the table, and then select the **Views** tab.
 
 3.  Select a column, and from the column menu, select **Filter by**.
 
@@ -58,9 +58,9 @@ Along with the [columns](../model-driven-apps/model-driven-app-glossary.md#colum
 
 8.  To remove a filter expression, select the **X** button.
 
-## Working with the filter expression builder
+## Work with the filter expression builder
 
-The expression builder in the view designer can be used to add, edit filters or remove for any columns of the table in the current view or any columns in a related table.
+The expression builder in the view designer can be used to add, edit filters, or remove for any columns of the table in the current view or any columns in a related table.
 
 ### Edit or remove a filter condition with the expression builder
 
@@ -82,7 +82,7 @@ The expression builder in the view designer can be used to add, edit filters or 
 
 6. To remove a condition, select **Close**. The condition is removed without confirmation.
 
-### Working with multiple filter conditions
+### Work with multiple filter conditions
 
 1. In the expression builder, select **Add** > **Add row**.
 
@@ -110,7 +110,7 @@ The expression builder in the view designer can be used to add, edit filters or 
 
 3. Specify the first clause of the grouped condition. Select the column, conditional operator, and comparison value.
 
-4. Select **Add** > **Add group**
+4. Select **Add** > **Add group**.
 
 5. Specify the second clause of the grouped condition.
 
@@ -150,9 +150,9 @@ The expression builder in the view designer can be used to add, edit filters or 
 
 ### Change the filter criteria for a view.
 
-1.  When creating or editing the view in the view designer, in the **Common Tasks** pane, select **Edit Filter Criteria**.  
+1.  To create or edit a view in the view designer, in the **Common Tasks** pane, select **Edit Filter Criteria**.  
   
-2.  The dialog shows a user interface similar to **Advanced Find**. You can use **AND** and **OR** clauses to specify and group criteria by selecting the filter claus and then selecting **Group AND** or **Group OR**.  
+2.  The dialog shows a user interface similar to **Advanced Find**. Use **AND** and **OR** clauses to specify and group criteria by selecting the filter clause and then select **Group AND** or **Group OR**.  
 
 3.  Select **OK** to save and the filter criteria.  
   

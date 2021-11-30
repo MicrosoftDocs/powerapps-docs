@@ -32,19 +32,18 @@ With Power Apps, model-driven apps are comprised of components such as [tables](
 
 As the model-driven apps have evolved so too have the ways in which the various elements are edited.  This article describes the method of creating an app using the classic app designer.
 
-
 > [!TIP]
 > Use the modern app designer to build your apps. More information: [Create a model-driven app using the app designer](create-model-driven-app.md)
   
 The [app designer](model-driven-app-glossary.md#app-designer) helps all these components to be brought together quickly. Its tile-based information structure and simplified interface make the process of building an app much easier, and apps that are specific to business roles and functions can be brought together without having to write any code.  
   
- Each app that created can have its own [site map](model-driven-app-glossary.md#site-map) with the integrated and easy-to-use site map designer.  Just drag and drop [areas](model-driven-app-glossary.md#area), [group](model-driven-app-glossary.md#group), and [subareas](model-driven-app-glossary.md#subarea) to the canvas. Components that selected in the site map are also added as tables in the app designer.  
+Each app that you create can have its own [site map](model-driven-app-glossary.md#site-map) with the integrated and easy-to-use site map designer.  Just drag and drop [areas](model-driven-app-glossary.md#area), [group](model-driven-app-glossary.md#group), and [subareas](model-driven-app-glossary.md#subarea) to the canvas. Components that you select in the site map are also added as tables in the app designer.  
   
- [Tables](model-driven-app-glossary.md#table) can be added and removed as necessary, and also add other components.  
+[Tables](model-driven-app-glossary.md#table) can be added and removed as necessary, and also add other components.  
   
- Once [components](model-driven-app-glossary.md#component) have been added, the app can be validated to confirm that all components have been added correctly.
+Once [components](model-driven-app-glossary.md#component) have been added, the app can be validated to confirm that all components have been added correctly.
   
- The following table shows the steps required to create an app and assumes that all the necessary [tables](model-driven-app-glossary.md#table), [forms](model-driven-app-glossary.md#form), [views](model-driven-app-glossary.md#view), [dashboards](model-driven-app-glossary.md#dashboard) and [relationships](model-driven-app-glossary.md#relationship) have been created within the environment in advance.
+The following table shows the steps required to create an app and assumes that all the necessary [tables](model-driven-app-glossary.md#table), [forms](model-driven-app-glossary.md#form), [views](model-driven-app-glossary.md#view), [dashboards](model-driven-app-glossary.md#dashboard) and [relationships](model-driven-app-glossary.md#relationship) have been created within the environment in advance.
   
 |Step|Description|Related topics|  
 |----------|-----------------|--------------------|  
@@ -56,7 +55,7 @@ The [app designer](model-driven-app-glossary.md#app-designer) helps all these co
   
 ## Supported web browsers
 
- For information about the supported web browsers to use with the app designer and site map designer, see [Supported web browsers and mobile devices](/power-platform/admin/supported-web-browsers-and-mobile-devices).  
+For information about the supported web browsers to use with the app designer and site map designer, see [Supported web browsers and mobile devices](/power-platform/admin/supported-web-browsers-and-mobile-devices).  
   
 ### Next steps
 

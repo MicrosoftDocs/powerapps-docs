@@ -31,18 +31,17 @@ search.app:
 
 [!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-## The purpose of solutions
-
-Model-driven apps are distributed as solution components. After a model-driven has been created, it can be made available for other [environments](model-driven-app-glossary.md#environment) to use by packaging the app into a **solution** and then exporting it into a zip file.
+Model-driven apps are distributed as solution components. After a model-driven has been created, it can be made available for other [environments](model-driven-app-glossary.md#environment) to use by packaging the app into a [solution](model-driven-app-glossary.md#solution) and then exporting it into a zip file.
 
 After the solution (.zip file) is successfully imported in the target environment, the packaged app is available for use provided users are in the [security roles](model-driven-app-glossary.md#security-role) relevant to the tables in the app.
 
-The fact that we can move solutions between environments is the basis upon which we can apply [application lifecycle management](model-driven-app-glossary.md#application-lifecycle-management) to the products created.
+The fact that you can move solutions between environments is the basis for how you can apply [application lifecycle management](model-driven-app-glossary.md#application-lifecycle-management) to the products created.
 
-This page describes how to work with solutions in the most basic fashion.  However you may wish to review [detailed guidance on working with solutions](../../maker/data-platform/solutions-overview.md).
+This article describes how to work with solutions in a basic fashion. Go to this article for [detailed guidance on working with solutions](../../maker/data-platform/solutions-overview.md).
   
 ## Add an app to a solution
-In order to distribute an app, a solution is created so that the app can be packaged for export.
+
+In order to distribute an app, you create a solution so that the app can be packaged for export.
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
@@ -61,9 +60,9 @@ To distribute an app so it can be imported into other environment or made availa
 1. Go to the **Solutions** area of Power Apps. 
 2. Select the solution required, and then on the toolbar select **Export**.
 3. On the **Before you export** pane, we recommend that you **Publish all changes** and **Check for issues**, before selecting **Next**.
-4. On the **Export this solution** pane, accept the incremented version number already provided or enter a different one, select **Unmanaged** or **Managed**, and the select **Export**. For more information about solution package types, see [Solutions overview](../data-platform/solutions-overview.md).
+4. On the **Export this solution** pane, accept the incremented version number already provided or enter a different one, select **Unmanaged** or **Managed**, and then select **Export**. For more information about solution package types, see [Solutions overview](../data-platform/solutions-overview.md).
     >[!Note]
-    >We typically export as a **managed solution** as we want to continue to work on the product in the current environment.  Selecting unmanaged would enable the solutions in the two environments to be developed separately.
+    >You typically export a solution as **Managed** because you want to continue to work on the project in the current environment. Unmanaged versions of your solutions should be considered your source for Microsoft Power Platform assets and checked into your source control system. We don't recommend that you import unmanaged solutions into non-development environments.
 
 5. Depending on the browser and settings, a .zip package file is built and copied to the default downloads folder. The file name of the package is based on the unique name of the solution appended with underscores and the solution version number.
     > [!NOTE]
@@ -71,13 +70,13 @@ To distribute an app so it can be imported into other environment or made availa
   
 ## Import a solution
 
-On receipt of a solution zip file which contains the app that need to be imported, open the solutions component page and import the solution. When the solution has been successfully imported, the app will be available in the environment.
+When you receive a solution zip file which contains the app that you want to import, open the solutions component page and import the solution. When the solution has been successfully imported, the app will be available in the environment.
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
 2. Go to the **Solutions** area, and then on the toolbar select **Import**.
 3. Browse to the zip file, and then choose **Next**.
-4. Select **Import** and wait for the solution to be imported.  This will take a varying amount of time based on the complexity of the solution.
+4. Select **Import** and wait for the solution to be imported. This will take a varying amount of time based on the complexity of the solution.
 
 ## See also
 
