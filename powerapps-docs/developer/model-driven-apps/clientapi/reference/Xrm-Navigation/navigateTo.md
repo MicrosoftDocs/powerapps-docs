@@ -100,6 +100,7 @@ search.app:
 </table>
 </li>
 <li><b>selectedStageId</b>: (Optional) String. ID of the selected stage in business process instance.</li>
+ <li><b>tabName</b>: (Optional) String. Sets the focus on the tab of the form.</li>
 </ul>
 
 <p>----------------------------------------------------------------</p>
