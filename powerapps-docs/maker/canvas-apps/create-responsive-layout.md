@@ -2,7 +2,6 @@
 title: Create responsive layouts in canvas apps
 description: Learn about configuring Height, Width, X, and Y properties of controls in canvas apps.
 author: emcoope-msft
-manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
@@ -22,7 +21,7 @@ contributors:
 
 Before you build a canvas app in Power Apps, you specify whether to tailor the app for a phone or a tablet. This choice determines the size and shape of the canvas on which you'll build your app.
 
-After you make that choice, you can make a few more choices if you select **File** > **Settings** > **Display**. You can choose portrait or landscape orientation and screen size (tablet only). You can also lock or unlock the aspect ratio and support device rotation (or not).
+After you make that choice, you can make a few more choices if you select **Settings** > **Display**. You can choose portrait or landscape orientation and screen size (tablet only). You can also lock or unlock the aspect ratio and support device rotation (or not).
 
 Those choices underlie every other choice you make as you design screen layouts. If your app runs on a device of a different size or on the web, your entire layout scales to fit the screen where the app is running. If an app designed for a phone runs in a large browser window, for example, the app scales to compensate and looks oversized for its space. The app can't take advantage of the additional pixels by showing more controls or more content.
 

@@ -1,20 +1,22 @@
 ---
 title: Advanced Monitor concepts
 description: Learn about advanced monitoring concepts related to Monitor.
-author: tapanm-msft
+author: mattgon
 ms.service: powerapps
 ms.subservice: troubleshoot
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: austinj
+ms.reviewer: tapanm
 ms.date: 11/19/2020
-ms.author: hasharaf
+ms.author: austinj
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 contributors:
   - tapanm-msft
+  - mattgon
+  - maustinjones
 ---
 
 # Advanced monitoring concepts

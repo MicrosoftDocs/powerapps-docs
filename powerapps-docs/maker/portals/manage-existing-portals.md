@@ -5,12 +5,12 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/13/2021
+ms.date: 11/3/2021
 ms.subservice: portals
 ms.author: sandhan
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
-    - tapanm-msft
+    - nickdoelman
     - sandhangitmsft
 ---
 
@@ -94,9 +94,24 @@ Your portal should work anonymously and should be accessible by the external use
 
 ## Settings
 
-Displays the portal settings and allows you to change the name of the portal. You can also do advanced actions such as administering the portal though the Power Apps portals admin center and working with site settings. Settings provide links to the Power Apps portals admin center and Site settings. More information: [Advanced portal administration](admin/admin-overview.md) and [Configure site settings](configure/configure-site-settings.md).  
+Displays the portal settings and allows you to change the name of the portal. You can also go to setup licensing for your portal as well as advanced actions such as administering the portal though the Power Apps portals admin center and working with site settings. 
 
-![portal settings.](media/portal-settings.png "Portal settings")  
+:::image type="content" source="media/portal-settings.png" alt-text="Portal settings.":::  
+
+### Licensing
+
+For production portals you will see **Licensing for internal users** and **Licensing for external users** section in the portal's settings panel based on your environment licensing setup. Learn more about [Power Apps per app plans](/power-platform/admin/about-powerapps-perapp),  [Pay-as-you-go](/power-platform/admin/pay-as-you-go-set-up#in-power-apps).
+
+> [!Note]
+> **Licensing for internal users** and **Licensing for external users** sections are not visible in portal settings panel when you open it from the portal's detail page tool bar **Settings** item.
+
+### Advanced Options
+
+The advanced options section provides links to configure authentication, to the Power Apps portals center, and to configure site settings.
+
+* [Authentication settings](configure/configure-portal-authentication.md)
+* [Administration](admin/admin-overview.md)
+* [Site settings](configure/configure-site-settings.md)
 
 ## Delete
 

@@ -2,7 +2,6 @@
 title: Set up and learn about the Crisis Communication sample app in Power Apps
 description: Learn about how to setup, use and work with the Crisis communication sample app in Power Apps.
 author: matthewbolanos
-manager: kvivek
 ms.service: powerapps
 ms.topic: sample
 ms.custom: canvas
@@ -525,7 +524,7 @@ Complete all the fields as shown in the following table, and then select **Save*
 | Admin email | AdminContactEmail | This is where email requests are sent. They should be set to your email address. If you'd like to send notifications to another inbox, see [optional shared inbox configuration](#optional-configure-shared-inbox), earlier in this article. | admin@contoso.com |
 | Logo URL | Logo | The logo of your app that appears in the upper-left corner. | https://contoso.com/logo.png |
 | AAD group ID | AADGroupID | Used to send notifications to users about internal company updates via the **Notify users on new crisis communication news** flow. Follow the instructions below to get the Azure Active Directory (Azure AD) ID of your group. | c0ddf873-b4fe-4602-b3a9-502dd944c8d5 |
-| APP URL | AppURL | The location of the user app, so that the **Notify users on new crisis communication news** flow can redirect users there after they select **Read more**. | https://apps.preview.powerapps.com/play/<app URL>?tenantId=<tenant ID>
+| APP URL | AppURL | The location of the user app, so that the **Notify users on new crisis communication news** flow can redirect users there after they select **Read more**. | https://apps.preview.powerapps.com/play/\<app URL\>?tenantId=\<tenant ID\>
 | Government RSS Feed | GovernmentRSSFeed | Used to populate the world news feature in the app. Useful if you want to provide additional information to your employees from a trusted source. | https://www.who.int/rss-feeds/news-english.xml |
 | Notification method | PreferredSentNotification | Used by the **Notify users on new crisis communication news** flow to determine which distribution channel it should use when sending out notifications. This field is required. | Email, Teams notification, push notification |
 | Feature flags | Feature1...8 | Used to disable or enable each feature in the application. |  |

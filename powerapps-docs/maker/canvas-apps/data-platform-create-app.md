@@ -2,7 +2,6 @@
 title: Create a canvas app with data from Microsoft Dataverse
 description: Learn about how to automatically create a canvas app to manage data in Microsoft Dataverse.
 author: tapanm-msft
-manager: kvivek
 ms.service: powerapps
 ms.topic: quickstart
 ms.custom: 
@@ -53,8 +52,6 @@ By default, the gallery shows an email address, a city, and an account name. As 
 
 ## Save the app
 You'll probably want to make more changes before you use this app or share it with others. As a best practice, save your work so far before you proceed.
-
-1. Near the upper-left corner, select the **File** menu.
 
 1. Select **Settings**.
 

@@ -2,11 +2,10 @@
 title: Text function in Power Apps
 description: Reference information including syntax and examples for the Text function in Power Apps.
 author: gregli-msft
-manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: nabuthuk
+ms.reviewer: tapanm
 ms.date: 11/14/2018
 ms.subservice: canvas-maker
 ms.author: gregli
@@ -16,7 +15,7 @@ search.app:
   - PowerApps
 contributors:
   - gregli-msft
-  - nkrb
+  - tapanm-msft
 ---
 # Text function in Power Apps
 Converts any value and formats a number or date/time value to a string of text.
@@ -184,7 +183,7 @@ Unless otherwise specified, the user running these formulas is located in the Un
 | --- | --- | --- |
 | **Text(1234567.89, "[$-fr-FR]# ###,## &euro;", "fr-FR")** | Shows a space as a grouping separator, the comma as a decimal separator, and **&euro;** as the currency symbol. |"1&nbsp;234&nbsp;567,89 &euro;" |
 | **Text(1234567,89; "[$-fr-FR]# ###,## &euro;")** | If the source data follows the French custom of using a comma as the decimal separator, you must change your locale to French and separate the arguments with a semi-colon instead of a comma to get the same result as above. |"1&nbsp;234&nbsp;567,89 &euro;" |
-| **Text( Date(2016,1,31), "dddd mmmm d" )** |Returns the weekday, month, and day of the month in the language of the current user. Because none of the placeholders are language dependent, there is no need for a format text language tag. |"Saturday&nbsp;January&nbsp;31" |
+| **Text( Date(2016,1,31), "dddd mmmm d" )** |Returns the weekday, month, and day of the month in the language of the current user. Because none of the placeholders are language dependent, there is no need for a format text language tag. |"Sunday&nbsp;January&nbsp;31" |
 | **Text( Date(2016,1,31), "dddd mmmm d", "es-ES" )** |Returns the weekday, month, and day of the month in the "es-ES" language. |"domingo&nbsp;enero&nbsp;31" |
 
 ### Converting values to text

@@ -2,11 +2,10 @@
 title: UpdateContext function in Power Apps
 description: Reference information including syntax and examples for the UpdateContext function in Power Apps.
 author: gregli-msft
-manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: nabuthuk
+ms.reviewer: tapanm
 ms.date: 11/08/2015
 ms.subservice: canvas-maker
 ms.author: gregli
@@ -16,7 +15,7 @@ search.app:
   - PowerApps
 contributors:
   - gregli-msft
-  - nkrb
+  - tapanm-msft
 ---
 # UpdateContext function in Power Apps
 Creates or updates [context variables](../working-with-variables.md#use-a-context-variable) of the current screen.
@@ -97,9 +96,6 @@ Every context variable is scoped to a screen. If you want to define a context va
 1. Open the canvas app where you want to use this formula. 
 1. Add a new blank screen by selecting **New screen** from the command bar.
 1. Add a button, and set its **[OnSelect](../controls/properties-core.md)** property to this formula: <br> **UpdateContext( { Name: "Lily", Score: 10 } )**
-   
-[Another example](../add-screen-context-variables.md)
-
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

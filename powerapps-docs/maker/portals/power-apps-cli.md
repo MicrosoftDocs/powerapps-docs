@@ -8,10 +8,10 @@ ms.custom:
 ms.date: 10/11/2021
 ms.subservice: portals
 ms.author: nenandw
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
     - neerajnandwana-msft
-    - tapanm-msft
+    - nickdoelman
 ---
 
 # Portals support for Microsoft Power Platform CLI
@@ -295,7 +295,7 @@ You can also use VS Code extension **Power Platform VS Code Extension** to benef
 
 ## Additional considerations
 
-- An error is reported if your file path exceeds the maximum path length limitation. More information: [Maximum path length limitation in Windows](\windows\win32\fileio\maximum-file-path-limitation)
+- An error is reported if your file path exceeds the maximum path length limitation. More information: [Maximum path length limitation in Windows](/windows/win32/fileio/maximum-file-path-limitation)
 - For duplicate records such as a duplicate web page name, Microsoft Power Platform CLI creates two different folders&mdash;one with the name of the web page, and the other with the same name prefixed with a hash code. For example, "My-page" and "My-page-**hash-code**".
 
 ## Next steps
