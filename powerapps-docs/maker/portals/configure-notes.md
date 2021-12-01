@@ -5,7 +5,7 @@ author: gitanjalisingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 08/12/2021
+ms.date: 12/02/2021
 ms.subservice: portals
 ms.author: gisingh
 ms.reviewer: ndoelman
@@ -75,7 +75,7 @@ After adding the configuration, the note control will be rendered by using the a
 |File Attachment Location | Select the location of the file attachment:<ul><li>Note attachment</li><li>Azure Blob Storage</li></ul>|
 |Accept MIME Type(s) | Allows you to specify a list of accepted MIME types. |
 |Restrict MIME Types | Select whether to allow or restrict MIME types.|
-|Maximum File Size (in KB) |Allows you to specify the maximum size of a file that can be attached. |
+|Maximum File Size (in KB) |Allows you to specify the maximum size of a file that can be attached. The maximum size of files that can be uploaded is determined by the *Maximum file size* setting in the [System settings email tab](/power-platform/admin/system-settings-dialog-box-email-tab) in the environment's system settings dialog box. |
 | **Advanced settings** |                                                                                                                                                              |
 | List Title            | Overrides the title over the Notes area.                                                                                                                     |
 | Add Note Button Label | Overrides the label on the Add Notes button.                                                                                                                 |
