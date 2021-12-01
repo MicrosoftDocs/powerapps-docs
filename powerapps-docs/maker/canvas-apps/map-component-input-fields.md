@@ -116,10 +116,11 @@ For example, the following animation shows the formula being updated to rename c
 
 :::image type="content" source="media/map-component-input-fields/deprecated-dropdown.gif" alt-text="Deprecated method to select field mapping using dropdown in advanced property section of a component added to an app.":::
 
-This method of selecting the mapping using the dropdown has been deprecated. Instead, use the [column](#map-columns), [record](#map-records), or [table](#map-tables) mapping methods as described earlier in this article.
+This method of selecting the mapping using the dropdown has been [deprecated](important-changes-deprecations.md#map-component-fields-using-dropdown-option). Instead, use the [column](#map-columns), [record](#map-records), or [table](#map-tables) mapping methods as described earlier in this article.
 
 You can still use the dropdown option to choose mapping for existing apps, though not recommended. For new apps, this option will be unavailable by default. To turn this deprecated capability on or off, go to **Settings** > **Upcoming features** > **Retired**, and choose **Name**.
 
 ### See also
 
-[Behavior formulas for components](component-behavior.md)
+- [Behavior formulas for components](component-behavior.md)
+- [Deprecated: Map component fields using dropdown option](important-changes-deprecations.md#map-component-fields-using-dropdown-option)
