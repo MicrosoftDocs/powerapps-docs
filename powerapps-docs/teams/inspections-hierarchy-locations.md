@@ -5,7 +5,7 @@ author: sbahl10
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/23/2021
+ms.date: 12/01/2021
 ms.subservice: teams
 ms.author: jshum
 ms.reviewer: tapanm
@@ -313,7 +313,7 @@ Update the formula for the following controls to allow the Items screen to show 
 
 1. Go to **Checklist Steps** screen.
 
-1. Select the **OnSelect** property of the screen, and update the patch function for updating the **Area Inspections** app to add the store value in the formula.
+1. Select the **OnVisible** property of the screen, and update the patch function for updating the **Area Inspections** app to add the store value in the formula.
 
     ```powerapps-dot
     , Store: gblSelectedStore
