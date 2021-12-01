@@ -20,7 +20,7 @@ metadata:
 landingContent:
 
   # Card 
-  - title: Getting Started
+  - title: Get started
     linkLists:
        - linkListType: overview
          links:
@@ -48,7 +48,7 @@ landingContent:
             url: app-designer-overview.md          
             
   # Card
-  - title: Model development
+  - title: App development
     linkLists:
        - linkListType: concept
          links:
@@ -66,7 +66,7 @@ landingContent:
             url: model-driven-app-glossary.md#relationship
       
   # Card
-  - title: Advanced modelling
+  - title: Advanced modeling
     linkLists:
       - linkListType: how-to-guide
         links:
@@ -90,11 +90,11 @@ landingContent:
             url: create-edit-system-chart.md
           - text: Create or edit dashboards
             url: create-edit-dashboards.md
-          - text: Working with Power BI
+          - text: Work with Power BI
             url: use-power-bi.md
 
   # Card
-  - title: Distribute, share and use
+  - title: Distribute, share, and use
     linkLists:
       - linkListType: deploy
         links:

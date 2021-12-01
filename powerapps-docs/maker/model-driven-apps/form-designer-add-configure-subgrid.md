@@ -30,22 +30,24 @@ A form that displays the details of a table record can use a subgrid component t
 ## Add a subgrid component
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
-2. Expand **Data**, select **Tables**, select the table that you want, and then select the **Views** tab.
+2. Expand **Data**, select **Tables**, select the table that you want, select the **Forms** tab, and then edit the form you want.
    
-> [!note]
-> Many customisations to a table take place within [solutions](../model-driven-apps/model-driven-app-glossary.md#solution).  To update a table within a solution first navigate to your **solution**, then select the **table** followed by the **forms** tab.
+   > [!note]
+   > Customizations to a table should take place within a [solution](../model-driven-apps/model-driven-app-glossary.md#solution). To update a table within a solution, open your solution from the **Solutions** area, select the table, select the **Forms** tab, and then edit the form you want.
 
-3. Select **+Component** in the header menu.  This can also be selected from the side menu.
+3. Select **+Component** on the command bar. This can also be selected from the left pane.
 4. Drag a **1 column section** from the layout area of the components menu onto the form.
-5. Select **Subgrid** from the Related Data area of the components menu.
-6. Typically app users wish to view related records.  If **Show related records** is selected then only tables for which a relationship is in place will be displayed.
-7. Select the required **table**
-8. Select the **view** from the required table 
-<br> Where a view is not suitable for the application [create or edit a view](create-edit-views.md) for the relevant table. 
-9.  Select **Done**
-10. **Save** and **Publish**
+5. Select **Subgrid** from the **Related Data** area of the components menu.
+
+6. On the **Select subgrid views** pane:
+   - Typically app users want to view related records. When **Show related records** is selected, only tables with a relationship are displayed.
+   - Select the **Table** you want.
+   - Select the **Default view** from the table. When an existing view is not suitable for the app, [create or edit a view](create-edit-views.md) for the table.
+7. Select **Done**.
+8. Select **Save**, and then select **Publish**.
 
 ## Configure a subgrid component
+
 These are the properties available to configure when using a subgrid component on a form using the form designer.
 
 

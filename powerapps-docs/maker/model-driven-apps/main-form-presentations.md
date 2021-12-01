@@ -26,13 +26,13 @@ search.app:
 ---
 # How model-driven app main forms appear on different devices
 
-There are 4 types of form.  Main, Quick View, Quick Create and Card.
+There are four types of form.  Main, quick view, quick create, and card.
 
-The **main form** is a fundamental building block of any model-driven app and is used by all devices used to deliver them.
+The main form is a fundamental building block of any model-driven app and is used by all devices used to run them.
 
-This form can be rendered using a web browser,  Dynamics 365 for phones, Dynamics 365 for tablets, or Dynamics 365 for Outlook and its design will adjust to accommodate the device used.  This responsive design is one of the most important features of any model-driven app.
+A main form can be rendered using a web browser, Dynamics 365 for phones, Dynamics 365 for tablets, or Dynamics 365 for Outlook, and its design adjusts to accommodate the device. This responsive design is an important feature of model-driven apps.
 
-Additionally, the main form is an intrinsic part of the table and it travels with the table as part of any solution.  This helps with the [application lifecycle management](model-driven-app-glossary.md#application-lifecycle-management)
+Additionally, the main form is an intrinsic part of the table and it travels with the table as part of any solution. This helps with [application lifecycle management](model-driven-app-glossary.md#application-lifecycle-management).
 
 [Learn more about all the form types](types-forms.md)
 
@@ -42,11 +42,11 @@ Additionally, the main form is an intrinsic part of the table and it travels wit
 
 ## Main form presentation options
 
- Any main forms that exist for a table may be displayed differently depending on the factors in the following table below. When designing a main form, consider how it works in each presentation tool.  
+ Any main forms that exist for a table may be displayed differently depending on the factors in the following table below. When you design a main form, consider how it works in each presentation tool.  
   
 |Presentation|Description|  
 |------------------|-----------------|  
-|**Updated**|For the [Updated tables and classic tables](create-design-forms.md#updated-versus-classic-tables) and any custom tables in Dynamics 365 (online) and Dynamics 365 on-premises, the updated form provides a new user experience. These forms have the newer command bar design, and enable additional features such as auto-save and business process flows.|  
+|**Updated**|For the [Updated tables and classic tables](create-design-forms.md#updated-versus-classic-tables) and any custom tables in Dynamics 365 (online) and Dynamics 365 on-premises, the updated form provides a new user experience. These forms have the newer command bar design, and enable additional features such as AutoSave and business process flows.|  
 |**Dynamics 365 for tablets**| Dynamics 365 for tablets presents the content of the main form in a manner optimized for a tablet.|  
 |**Dynamics 365 for phones**| Dynamics 365 for phones presents the content of the main form in a manner optimized for a phone.|  
 |**Classic**|These forms are for the tables that haven't been updated. They use the ribbon rather than the command bar and the navigation pane on the left side of the form.<br /><br /> These forms have a two-column layout.|  
@@ -79,7 +79,7 @@ The image below illustrate the accounts table main form as it would be viewed th
 |**Sections**|A section occupies the space available in a tab column. Sections have a label that can be displayed and a line may be shown below the label.<br /><br /> Sections can have up to four columns and include options for displaying how labels for columns in the section are displayed.|  
 |**Columns**|Columns display controls people use to view or edit data in a table row. Columns can be formatted to occupy up to four columns within a section.|  
 |**Spacer**|A spacer allows for an empty space to be added to a section column.|  
-|**Sub-grids**|Sub-grids allow for the display of a list within the form. The ability to display charts using a sub-grid isn’t available in forms for updated tables.|  
+|**Sub-grids**|Subgrids allow for the display of a list within the form. The ability to display charts using a subgrid isn’t available in forms for updated tables.|  
 |**Quick View Form**|A quick view form displays data from a row referenced by a lookup column on the form. The table that is the target of the lookup must have a quick view form before one can be added to the form. More information: [Create and edit quick view forms](create-edit-quick-view-forms.md)|  
 |**Web Resources**|HTML and Microsoft Silverlight web resources can be added to main forms but they won’t be displayed when using Dynamics 365 for phones and tablets.|  
 |**iFrame**|An inline-frame that you configure to show a webpage from another website. **Important:**  <ul><li>When the page displayed in an iFrame is on another domain, browsers apply a higher level of security. This may complicate the requirements for the contents of an iFrame to interact with data in the form.</li><li>Displaying a table form within an iFrame embedded in another table form is not supported. 
@@ -122,7 +122,7 @@ The image below illustrate the accounts table main form as it would be viewed th
  The home button takes users to the dashboard that is the starting page for Dynamics 365  for phones and tablets.  
   
  **Process Control**  
- If the table has a business process enabled, it will appear in the top right corner next to the search control in Dynamics 365 for tablets, and at the top of the screen in Dynamics 365 for phones.  
+ If the table has a business process enabled, it will appear in the top-right corner next to the search control in Dynamics 365 for tablets, and at the top of the screen in Dynamics 365 for phones.  
   
  **Search**  
  People can tap the search control to open the screen to search for rows.  
@@ -158,7 +158,7 @@ The image below illustrate the accounts table main form as it would be viewed th
   
  The remaining panels of the form contain the contents of the tabs in the form. Any subgrids found display as a separate panel.  
   
- The Dynamics 365 for phones and tablets form always displays the labels for tabs and sub-grids. The **Display Label on the Form** setting is not applied.  
+ The Dynamics 365 for phones and tablets form always displays the labels for tabs and subgrids. The **Display Label on the Form** setting is not applied.  
   
 > [!NOTE]
 >  To optimize performance on mobile devices, the number of objects is limited to 5 tabs or 75 columns and 10 subgrids.  
@@ -204,7 +204,7 @@ The image below illustrate the accounts table main form as it would be viewed th
   
  The forms for updated tables have inherited many components from the classic forms, but there are significant differences.  
   
- Forms using the classic presentation don’t include the navigation bar and the ribbon is used instead of the command bar. These forms don’t support table images, the process control, quick view forms, auto-save, or Bing Maps. Columns in the header aren’t editable.  
+ Forms using the classic presentation don’t include the navigation bar and the ribbon is used instead of the command bar. These forms don’t support table images, the process control, quick view forms, AutoSave, or Bing Maps. Columns in the header aren’t editable.  
   
  The form assistant is exposed for certain tables, such as `Article`.  
   
