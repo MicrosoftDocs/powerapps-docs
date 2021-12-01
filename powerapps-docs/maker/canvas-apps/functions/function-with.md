@@ -119,6 +119,9 @@ This example extracts the hours, minutes, and seconds from an ISO 8601 duration 
 
 Note that although the sub-matches contain numbers they are still in a text string.  Use the [**Value**](function-value.md) function to convert to a number before performing mathematical operations.  
 
+### Map a record in a component
+
+See [Map record](../map-component-input-fields.md#map-records).
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

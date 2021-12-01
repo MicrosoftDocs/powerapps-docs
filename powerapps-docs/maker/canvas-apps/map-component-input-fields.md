@@ -22,10 +22,10 @@ contributors:
 
 [This article is pre-release documentation and is subject to change.]
 
-A component can receive input values to emit or process data using custom input properties. In this article, you'll learn about working with such components that expect one or more input properties with a specific schema for the given table or record.
+A component can receive input values to emit or process data using custom input properties. In this article, you'll learn about working with such components expecting one or more input properties with a specific schema for the given table or record, and how to map the component input fields to the columns of the data source.
 
 > [!TIP]
-> To learn more about using custom input and output properties in components, go to [Custom properties in components](create-component.md#custom-properties).
+> To learn about what the custom input and output properties in components are, see [Custom properties in components](create-component.md#custom-properties).
 
 ## Map columns
 
@@ -51,7 +51,7 @@ Table({Flavor: "Strawberry",UnitPrice: 1.99, QuantitySold:20})
 
 :::image type="content" source="media/map-component-input-fields/custom-property-formula.png" alt-text="Custom input property formula defined as table and sample values.":::
 
-The app consuming this component has the following "IceCreams" table that doesn’t match with the component schema:
+The app consuming this component has the following **IceCreams** table that doesn’t match with the component schema:
 
 | **FlavorName** | **Price** | **SaleNumber** |
 |----------------|-----------|----------------|
@@ -68,19 +68,13 @@ RenameColumns(IceCreams,"cra56_flavorname","Flavor","cra56_price","UnitPrice","c
 
 :::image type="content" source="media/map-component-input-fields/app-custom-input-property.png" alt-text="App using component that uses custom input property mapping with the correct columns using RenameColumns function.":::
 
-**IceCreams** table now looks like the following and the input fields are
-selected with matching field names.
-
-| **FlavorName** | **Price** | **SaleNumber** |
-|------------|---------------|------------------|
-| Strawberry | 1.99          | 20               |
-| Chocolate  | 2.99          | 45               |
+The input fields that the component expects are now mapped with the matching columns from the data source.
 
 ## Map records
 
 Use [With()](functions/function-with.md) function to map a single record.
 
-For example, continuing from the [earlier example](#map-columns) for mapping columns, a component custom input takes a record and the schema is:
+For example, continuing from the [earlier example](#map-columns) for mapping columns, the custom input property of a component inside an app expects a record type with the following schema:
 
 ```powerapps-dot
 {Flavor: "Strawberry",UnitPrice: 1.99, QuantitySold: 20}
@@ -90,7 +84,7 @@ For example, continuing from the [earlier example](#map-columns) for mapping col
 
 Since the **IceCreams** data source expects column names as **FlavorName**, **Price**, and **SaleNumber**, we'll need to change the mapping for the record once the component is added to the app.
 
-Use **With()** function to select the fields of the **IceCreams** table and map them to the component input:
+Use **With()** function to select the columns of the **IceCreams** table, and map them to the input fields of the component:
 
 ```powerapps-dot
 With(Gallery3.Selected,{Flavor:FlavorName,UnitPrice:Price,QuantitySold:SaleNumber})
@@ -98,13 +92,13 @@ With(Gallery3.Selected,{Flavor:FlavorName,UnitPrice:Price,QuantitySold:SaleNumbe
 
 :::image type="content" source="media/map-component-input-fields/app-component-record.png" alt-text="Component record in app mapped to the data source schema.":::
 
-Below animation shows the example of component added to the app that shows the selected record from the gallery (above the component):
+The following animation shows the example of a component added to the app that shows the selected record from the gallery (above the component):
 
 :::image type="content" source="media/map-component-input-fields/component-selected-record.gif" alt-text="Animation that shows selection of a record from gallery above changing the component instance text below.":::
 
 ## Map tables
 
-Use [ForAll()](functions/function-forall.md) function to map a table of records with the component.
+Use [ForAll()](functions/function-forall.md) function to map a table of records with the records expected by the component added to the app.
 
 For example, at the end of the [map columns](#map-columns) example, you can use the **ForAll()** function to map the entire table with the specific columns to point to the fields from the component for each row:
 
@@ -116,9 +110,9 @@ ForAll(IceCreams,{Flavor:FlavorName,UnitPrice:Price,QuantitySold:SaleNumber})
 
 ## Map using dropdown (deprecated)
 
-You can use the **Advanced** tab for a component added to an app that expects input property of table or record type and select the field mappings using the dropdown option. This mapping is assigned by default, and unless you manually select the appropriate mapping fields, the mapping may yield unexpected results.
+You can use the **Advanced** tab for a component added to an app that expects input property of table or record type, and select the field mappings using the dropdown option. This mapping is assigned by default, and unless you manually select the appropriate mapping fields, the mapping might not yield expected results.
 
-For example, in the following illustration, the formula is updated to rename columns. The component on screen doesn't change field mapping since the default field selection using this dropdown needs to be updated manually.
+For example, the following animation shows the formula being updated to rename columns. The component on screen doesn't change the field mapping since the default field selection using this dropdown needs to be updated manually.
 
 :::image type="content" source="media/map-component-input-fields/deprecated-dropdown.gif" alt-text="Deprecated method to select field mapping using dropdown in advanced property section of a component added to an app.":::
 

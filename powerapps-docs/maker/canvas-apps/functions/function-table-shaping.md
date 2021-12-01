@@ -137,5 +137,8 @@ Let's try some of the examples from earlier in this topic.
 
 	![Collection viewer showing three records of the First Example collection that includes a new Revenue column.](media/function-table-shaping/first-example-collection.png)
 
+### Map columns in a component
+
+See [Map columns](../map-component-input-fields.md#map-columns).
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
