@@ -386,7 +386,7 @@ All the changes to the Inspections app are completed. The app can now be publish
                 ),
             Today(),
             Hours
-                ) \> 0,
+                ) > 0,
         galInspections.Selected.Store.Name & " | Submitted by " &
         galInspections.Selected.createdby.'Full Name' & ", " & DateDiff(
         Date(
