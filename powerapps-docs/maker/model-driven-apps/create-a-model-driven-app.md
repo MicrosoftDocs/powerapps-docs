@@ -9,7 +9,9 @@ author: joel-lindstrom
 ms.author: v-ljoel
 ms.reviewer: matp
 ---
-# Create a model-driven app that has an account table page
+# Create a model-driven app that has an account table page (preview)
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 Model-driven app design is a component-focused approach to app development. Model-driven apps are especially well suited for process driven apps that are data dense and make it easy for users to move between related records. For example, if you are building an app to manage a complex process, such as onboarding new employees, managing a sales process, or member relationships in an organization like a bank, a model-driven app is a great choice. Model-driven apps also allow you to quickly build an app by combining components like forms, views, charts, and dashboards.
 

@@ -2,7 +2,7 @@
 title: "Register a plug-in (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to register a plug-in in a step of the Microsoft Dataverse event pipeline." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 09/13/2021
+ms.date: 11/05/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -254,7 +254,9 @@ When you configure an entity image it is important that you recognize that the t
 
 #### Add an entity image
 
-See [Add an image](tutorial-update-plug-in.md#add-an-image) step in the [Tutorial: Update a plug-in](tutorial-update-plug-in.md) for the steps to add an entity image.
+Use the [Power Platform Tools](tools/devtools-install.md) extension for Visual Studio to [add an entity image](tools/devtools-create-plugin.md#add-an-entity-image) to a plug-in step.
+
+Alternately, you can use the Plug-in Registration Tool to add an entity image to a step by following the instructions in [Tutorial: Update a plug-in](tutorial-update-plug-in.md) under the section [Add an image](tutorial-update-plug-in.md#add-an-image).
 
 ### Add step to solution
 

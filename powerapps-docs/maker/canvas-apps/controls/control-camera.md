@@ -2,7 +2,6 @@
 title: Camera control in Power Apps
 description: Learn about the details, properties and examples of the camera control in Power Apps.
 author: chmoncay
-manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas

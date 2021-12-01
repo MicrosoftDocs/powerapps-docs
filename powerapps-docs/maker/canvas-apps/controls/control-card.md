@@ -2,7 +2,6 @@
 title: Card control in Power Apps
 description: Learn about the details, properties and examples of the card control in Power Apps.
 author: gregli-msft
-manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.component: canvas

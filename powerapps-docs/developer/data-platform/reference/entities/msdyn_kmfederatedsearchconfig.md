@@ -1,13 +1,13 @@
 ---
 title: "msdyn_kmfederatedsearchconfig table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the msdyn_kmfederatedsearchconfig table/entity."
-ms.date: 05/20/2021
+ms.date: 10/05/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -239,11 +239,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### SearchType Choices/Options
 
-|Value|Label|
-|-----|-----|
-|100000000|Cross-Organizational Search|
-|100000001|Sharepoint|
-|100000002|Microsoft Search Connector|
+|Value|Label|Description|
+|-----|-----|--------|
+|100000000|Cross-Organizational Search||
+|100000001|Sharepoint||
+|100000002|Microsoft Graph Connector||
 
 
 

@@ -1,13 +1,13 @@
 ---
 title: "MailMergeTemplate table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the MailMergeTemplate table/entity."
-ms.date: 05/20/2021
+ms.date: 10/05/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -147,10 +147,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### DocumentFormat Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|2003|
-|2|2007|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|2003||
+|2|2007||
 
 
 
@@ -214,8 +214,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsPersonal Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Individual|
 |0|Organization|
 
@@ -267,14 +267,14 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### MailMergeType Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Letter|
-|2|Email Message|
-|3|Envelope|
-|4|Labels|
-|5|Quotes|
-|6|Fax|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Letter||
+|2|Email Message||
+|3|Envelope||
+|4|Labels||
+|5|Quotes||
+|6|Fax||
 
 
 
@@ -490,12 +490,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### ComponentState Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Published|
-|1|Unpublished|
-|2|Deleted|
-|3|Deleted Unpublished|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Published||
+|1|Unpublished||
+|2|Deleted||
+|3|Deleted Unpublished||
 
 
 
@@ -616,8 +616,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |IsValidForRead|True|
 |LogicalName|exchangerate|
 |MaxValue|100000000000|
-|MinValue|0.0000000001|
-|Precision|10|
+|MinValue|0.000000000001|
+|Precision|12|
 |RequiredLevel|None|
 |Type|Decimal|
 
@@ -652,8 +652,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsManaged Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Managed|
 |0|Unmanaged|
 

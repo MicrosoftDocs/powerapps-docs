@@ -1,13 +1,13 @@
 ---
-title: "AppModule table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the AppModule table/entity."
-ms.date: 05/20/2021
+title: "Model-driven App (AppModule) table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the Model-driven App (AppModule) table/entity."
+ms.date: 10/05/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -15,7 +15,7 @@ search.app:
   - D365CE
 ---
 
-# AppModule table/entity reference
+# Model-driven App (AppModule) table/entity reference
 
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
@@ -34,6 +34,7 @@ A role-based, modular business app that provides task-based functionality for a 
 |Retrieve|GET [*org URI*]/api/data/v9.0/appmodules(*appmoduleid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
 |RetrieveAppComponents|<xref href="Microsoft.Dynamics.CRM.RetrieveAppComponents?text=RetrieveAppComponents Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveAppComponentsRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/appmodules<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|RetrieveUnpublished|<xref href="Microsoft.Dynamics.CRM.RetrieveUnpublished?text=RetrieveUnpublished Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveUnpublishedRequest>|
 |RetrieveUnpublishedMultiple|<xref href="Microsoft.Dynamics.CRM.RetrieveUnpublishedMultiple?text=RetrieveUnpublishedMultiple Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveUnpublishedMultipleRequest>|
 |Update|PATCH [*org URI*]/api/data/v9.0/appmodules(*appmoduleid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 |ValidateApp|<xref href="Microsoft.Dynamics.CRM.ValidateApp?text=ValidateApp Function" />|<xref:Microsoft.Crm.Sdk.Messages.ValidateAppRequest>|
@@ -274,8 +275,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsDefault Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -297,8 +298,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsFeatured Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -336,10 +337,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### NavigationType Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Single session|
-|1|Multi session|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Single session||
+|1|Multi session||
 
 
 
@@ -554,12 +555,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### ComponentState Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Published|
-|1|Unpublished|
-|2|Deleted|
-|3|Deleted Unpublished|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Published||
+|1|Unpublished||
+|2|Deleted||
+|3|Deleted Unpublished||
 
 
 
@@ -684,8 +685,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsManaged Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Managed|
 |0|Unmanaged|
 
@@ -894,6 +895,7 @@ Listed by **SchemaName**.
 - [appmodule_appconfig](#BKMK_appmodule_appconfig)
 - [appmodule_appmodulecomponent](#BKMK_appmodule_appmodulecomponent)
 - [appmodule_appnotification_app](#BKMK_appmodule_appnotification_app)
+- [appmodule_appaction_appmoduleid](#BKMK_appmodule_appaction_appmoduleid)
 
 
 ### <a name="BKMK_appmodule_appconfig"></a> appmodule_appconfig
@@ -940,7 +942,24 @@ Same as appnotification table [appmodule_appnotification_app](appnotification.md
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|appmodule_appnotification_app|
 |AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_appmodule_appaction_appmoduleid"></a> appmodule_appaction_appmoduleid
+
+**Added by**: Power Apps Actions Solution
+
+Same as appaction table [appmodule_appaction_appmoduleid](appaction.md#BKMK_appmodule_appaction_appmoduleid) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|appaction|
+|ReferencingAttribute|appmoduleid|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|appmodule_appaction_appmoduleid|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 <a name="manytoone"></a>
 

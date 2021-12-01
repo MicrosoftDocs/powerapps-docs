@@ -1,13 +1,13 @@
 ---
 title: Use sample apps from teams store | Microsoft Docs
 description: Learn how to use sample apps from Teams store.
-author: navjotm
+author: josephshum
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: intro-internal
-ms.date: 06/25/2021
+ms.date: 10/04/2021
 ms.subservice: teams
-ms.author: namarwah
+ms.author: jshum
 ms.reviewer: tapanm
 contributors:
   - tapanm-msft
@@ -41,7 +41,7 @@ Several sample apps are available from the Teams store that you can add to your 
 :::row-end:::
 :::row:::
    :::column span="":::
-      ![How to.](media/app-icons/how-to-app-icon.png "How to app (preview)") <br> [How to](how-to.md) <br> Learn how to be a Power Apps maker.
+      ![How to.](media/app-icons/how-to-app-icon.png "How to app (preview)") <br> [How to (preview)](how-to.md) <br> Learn how to be a Power Apps maker.
    :::column-end:::
    :::column span="":::
       ![Inspection app](media/app-icons/inspection-app-icon.png "Inspection app") <br> [Inspection](inspection.md) <br> Manager and user apps for area inspections.
@@ -91,6 +91,9 @@ The following tutorial shows how to install the Employee ideas app. You can use 
     ![Select Add to a team.](media/sample-app-1.png "Select Add to a team")
 
 1. Search for the team channel that you want to add the app to.
+
+    > [!IMPORTANT]
+    > Teams sample apps can't be installed in private channels. Hence, ensure you select the channel in your team that isn't private.
 
     ![Search for a team channel.](media/sample-app-2.png "Search for a team channel")
 

@@ -7,7 +7,7 @@ ms.topic: sample
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.subservice: canvas-maker
-ms.date: 09/21/2021
+ms.date: 10/06/2021
 ms.author: anuitz
 search.audienceType: 
   - maker
@@ -290,7 +290,7 @@ To begin, add a **Button** control to the screen, renaming it to **btnCircleLeve
 
 The result of these changes should produce a circular button in the center of the screen that cannot be pressed due to being disabled.
 
-Next, add a **Circle** shape and change the following properties in the **Advanced** pane:
+Next, add a **Circle** shape, set it's Border Radius to 400 and change the following properties in the **Advanced** pane:
 
 | Property               | Value                                                                                                            |
 |------------------------|------------------------------------------------------------------------------------------------------------------|
@@ -299,8 +299,6 @@ Next, add a **Circle** shape and change the following properties in the **Advanc
 | Y                      | (Parent.Height - Self.Height) / 2 - (Round(Acceleration.Y / 9.81 \* 90, 0) / 90 \* btnCircleLevel.Width / 2) |
 | Width                  | 42                                                                                                               |
 | Height                 | Self.Width                                                                                                       |
-| X                      | (Parent.Width - Self.Width) / 2                                                                                  |
-| Y                      | (Parent.Height - Self.Height) / 2                                                                                |
 | Width                  | 400                                                                                                              |
 | Height                 | Self.Width                                                                                                       |
 

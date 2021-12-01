@@ -5,13 +5,13 @@ author: sbahl10
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/12/2021
+ms.date: 11/23/2021
 ms.subservice: teams
-ms.author: namarwah
+ms.author: jshum
 ms.reviewer: tapanm
 contributors:
   - joel-lindstrom
-  - navjotm
+  - josephshum
   - tapanm-msft
   - sbahl10
 ---
@@ -49,7 +49,7 @@ To complete this lesson, we'd need the ability to log in into Microsoft Teams th
 
 1. Select the **+ Create new table**.
 
-1. Enter table name Store and select **Create**.
+1. Enter table name "Store" and select **Create**.
 
 1. Select the **Add Column** button to add a new column.
 
@@ -58,6 +58,193 @@ To complete this lesson, we'd need the ability to log in into Microsoft Teams th
 1. Add a few sample records in the table, and select **Close.**
 
     ![Store Table](media/extend-inspections-add-hierarchy-to-locations/store-table.png "Store Table")
+
+### Update Items screen
+
+Update the formula for the following controls to allow the Items screen to show inspections.
+
+1. Search for and select **lblIssues_Header** label in the **Tree view**.
+
+1. Select the **Text** property.
+
+1. Replace the following section of the formula.
+
+    **Remove formula section:**
+    ```powerapps-dot
+    With(
+    {
+        varDefault: "Issues reported (" & CountRows(
+            Filter(
+                locSelectedInspection,
+                Outcome = 'Inspection Outcome'.Issue
+            )
+        ) & ")",
+        varOOBTextId: "_translateVariable_IssuesHeader",
+        varParam0: "(" & CountRows(
+            Filter(
+                locSelectedInspection,
+                Outcome = 'Inspection Outcome'.Issue
+            )
+        ) & ")"
+    },
+    ```
+    **Add formula section:**
+    ```powerapps-dot
+    With(
+    {
+        varDefault: "Issues reported (" & CountRows(
+            Filter(
+                galInspections.Selected.'Area Inspection Steps',
+                Outcome = 'Inspection Outcome'.Issue
+            ).'Area Inspection Step'
+        ) & ")",
+        varOOBTextId: "_translateVariable_IssuesHeader",
+        varParam0: "(" & CountRows(
+            Filter(
+                galInspections.Selected.'Area Inspection Steps',
+                Outcome = 'Inspection Outcome'.Issue
+            ).'Area Inspection Step'
+        ) & ")"
+    },
+    ```
+
+1. Search for and select **lblNoIssues_Header** label in the **Tree view**.
+
+1. Select the **Text** property.
+
+1. Replace the following section of the formula.
+
+    **Remove formula section:**
+    ```powerapps-dot
+    With(
+    {
+        varDefault: "No issues (" & CountRows(
+            Filter(
+                locSelectedInspection,
+                Outcome = 'Inspection Outcome'.OK || Outcome = 'Inspection Outcome'.'N/A'
+            )
+        ) & ")",
+        varOOBTextId: "_translateVariable_NoIssuesHeader",
+        varParam0: "(" & CountRows(
+            Filter(
+                locSelectedInspection,
+                Outcome = 'Inspection Outcome'.OK || Outcome = 'Inspection Outcome'.'N/A'
+            )
+        ) & ")"
+    },
+    ```
+
+    **Add formula section:**
+    ```powerapps-dot
+    With(
+    {
+        varDefault: "No issues (" & CountRows(
+            Filter(
+                galInspections.Selected.'Area Inspection Steps',
+                Outcome = 'Inspection Outcome'.OK || Outcome = 'Inspection Outcome'.'N/A'
+            ).'Area Inspection Step'
+        ) & ")",
+        varOOBTextId: "_translateVariable_NoIssuesHeader",
+        varParam0: "(" & CountRows(
+            Filter(
+                galInspections.Selected.'Area Inspection Steps',
+                Outcome = 'Inspection Outcome'.OK || Outcome = 'Inspection Outcome'.'N/A'
+            ).'Area Inspection Step'
+        ) & ")"
+    },
+    ```
+
+1. Search for and select **galNoIssuesAttachments** gallery in the **Tree view**.
+
+1. Select the **Items** property.
+
+1. Replace the following section of the formula.
+
+    **Remove formula section:**
+    ```powerapps-dot
+    ThisItem.'Area Inspection Images'
+    ```
+
+    **Add formula section:**
+    ```powerapps-dot
+    LookUp('Area Inspection Steps','Area Inspection Step'=ThisItem.'Area Inspection Step').'Area Inspection Images'
+    ```
+
+1. Search for and select **galIssuesAttachments** gallery in the **Tree view**.
+
+1. Select the **Items** property.
+
+1. Replace the following section of the formula.
+
+    **Remove formula section:**
+    ```powerapps-dot
+    ThisItem.'Area Inspection Images'
+    ```
+
+    **Add formula section:**
+    ```powerapps-dot
+    LookUp('Area Inspection Steps','Area Inspection Step'=ThisItem.'Area Inspection Step').'Area Inspection Images'
+    ```
+
+1. Search for and select **galNoIssues** gallery in the **Tree view**.
+
+1. Select the **Items** property.
+
+1. Replace the following section of the formula.
+
+    **Remove formula section:**
+    ```powerapps-dot
+    Sort(
+    Filter(
+        locSelectedInspection,
+        Outcome = 'Inspection Outcome'.OK || Outcome = 'Inspection Outcome'.'N/A'
+    ),
+    Value(Sequence),
+    Ascending
+    )
+    ```
+
+    **Add formula section:**
+    ```powerapps-dot
+    Sort(
+    Filter(
+        galInspections.Selected.'Area Inspection Steps',
+        Outcome = 'Inspection Outcome'.OK || Outcome = 'Inspection Outcome'.'N/A'
+    ),
+    Sequence,
+    Ascending
+    )
+    ```
+
+1. Search for and select **galIssues** gallery in the **Tree view**.
+
+1. Select the **Items** property.
+
+1. Replace the following section of the formula.
+
+    **Remove formula section:**
+    ```powerapps-dot
+    Sort(
+    Filter(
+        locSelectedInspection,
+        Outcome = 'Inspection Outcome'.OK || Outcome = 'Inspection Outcome'.'N/A'
+    ),
+    Value(Sequence),
+    Ascending
+    )
+    ```
+
+    **Add formula section:**
+    ```powerapps-dot
+    Sort(
+    Filter(
+        galInspections.Selected.'Area Inspection Steps',
+        Outcome = 'Inspection Outcome'.OK || Outcome = 'Inspection Outcome'.'N/A'
+    ),
+    Sequence,
+    Ascending
+    )
+    ```
 
 ### Add a column to capture Store in the Area Inspections table
 

@@ -5,39 +5,34 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2021
+ms.date: 10/11/2021
 ms.subservice: portals
 ms.author: nenandw
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
     - neerajnandwana-msft
-    - tapanm-msft
+    - nickdoelman
 ---
 
 # Create additional portals in an environment
 
-An environment can have one portal of each type and for each language. Environments with Dataverse have [starter portal template](portal-templates.md#environment-with-dataverse) available. If you already have a starter portal for such an environment, you can't create another starter portal for the same language. Similarly, environments with customer engagement apps (Dynamics 365 Sales, Dynamics 365 Customer Service, Dynamics 365 Field Service, Dynamics 365 Marketing, or Dynamics 365 Project Service Automation) have several [portal templates](portal-templates.md#environment-with-customer-engagement-apps) available. If you have a portal from one of the templates already created in a language, you can't create a new portal with the same template type and language. New portal must have either a different portal type, or a different language.
+The ability to create additional environments is determined by the template chosen for the new portal. The following table explains the limits for creating additional portals in an environment.
 
-For example, consider a scenario where you have a Dataverse environment without the Dynamics 365 Apps. In this environment, you have a portal with *English* language created with the template type of *Starter portal*. You want to create a new portal in this environment.
+| Environment type | Template | Limit | Additional information |
+| - | - | - | - |
+| [Environment with Dataverse](portal-templates.md#environment-with-dataverse) | Dataverse starter portal | 50 portals\* | No limits for language. For example, more than one or all portals can use same language. |
+| [Environment with customer engagement apps](portal-templates.md#environment-with-customer-engagement-apps) | Portal from blank | 50 portals\* | No limits for language. For example, more than one or all portals can use same language. |
+| [Environment with customer engagement apps](portal-templates.md#environment-with-customer-engagement-apps) | All templates except "Portal from blank" | 1 portal for each language | For example, 1 English language portal for "Community portal" template allowed. |
 
-In this scenario, the following table explains which additional portal template and language combination is allowed when creating additional portals:
+\* Requires Starter portal package version [9.3.2109.x or later](release-updates.md#starter-portal-package-updates)
 
-| Template type and language of existing portal  | Template type and language of the new portal that you want to create | Allowed |
-| - | - | - |
-| *Starter portal* in English | *Starter portal* in English | &cross; |
-| *Starter portal* in English | *Starter portal* in French | &check; |
+When an [environment with customer engagement apps](portal-templates.md#environment-with-customer-engagement-apps) already has a portal of the available template type (all templates except "Portal from blank") created, and if the environment doesn't have any additional languages enabled, you'll see this error message:
 
-Similarly, the following table explains the allowed template type and language combination for a portal that can be created if you have a Dataverse environment with Dynamics 365 Apps. In this example, you have a portal with the template *Portal from blank* created in *English* language. You want to create a new portal in this environment.
+"You have reached the maximum limit of 1 portal(s) on this environment. Please choose another environment or create new environment."
 
-| Template type and language of existing portal | Template type and language of the new portal that you want to create | Allowed |
-| - | - | - |
-| *Portal from blank* in English | *Portal from blank* in English | &cross; |
-| *Portal from blank* in English | *Community portal* in English | &check; |
-| *Portal from blank* in English | *Portal from blank* in French | &check; |
+When an [environment with Dataverse](portal-templates.md#environment-with-dataverse) exceeds the maximum limit, you'll see this error message:
 
-When an environment already has a portal of the available template type created, and if the environment doesn't have any additional languages enabled, you'll see this error message: *You have reached the maximum limit of 1 portal(s) on this environment. Please choose another environment or create new environment.*
-
-![Error when creating additional portal.](media/create-additional-portal-error.png "Error when creating additional portal")
+"You have exceeded the maximum number of portals possible for this environment. Choose another environment or create a new environment."
 
 For more information about enabling languages in an environment, go to [Enable language for an environment](/power-platform/admin/enable-languages#enable-the-language).
 

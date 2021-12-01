@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 05/06/2021
+ms.date: 10/27/2021
 ms.subservice: canvas-maker
 ms.author: jiahn
 search.audienceType: 
@@ -16,6 +16,7 @@ search.app:
 contributors:
   - JinManAhn-MSFT
   - lancedMicrosoft
+  - melzoghbi
 ---
 
 # Common canvas app performance issues and resolutions
@@ -42,7 +43,7 @@ We recommend that you select only the columns that are necessary for the app. Ad
 
 For example, if you use Dataverse as the data source for your app, make sure you've enabled the [explicit column selection](use-native-cds-connector.md) feature. This feature allows Power Apps to restrict data retrieval to only the columns used in the app.
 
-To turn on the explicit column selection feature on the canvas app, go to **File** > **Settings** > **Upcoming features** > **Preview**, and then turn on the **Explicit column selection** toggle.
+To turn on the explicit column selection feature on the canvas app, go to **Settings** > **Upcoming features** > **Preview**, and then turn on the **Explicit column selection** toggle.
 
 ## Unsupported or legacy browsers
 
@@ -87,6 +88,9 @@ Heavy scripts at the **OnStart** event are one of the most common mistakes while
 Optimize the formula in an **OnStart** event. For example, you can move some functions to the [**OnVisible**](controls/control-screen.md#additional-properties) property instead. This way you can let the app start quickly, and other steps can continue while the app opens.
 
 More information: [Optimize the OnStart property](performance-tips.md#optimize-the-onstart-property)
+
+> [!TIP]
+> We recommend using [App.StartScreen](functions/object-app.md#startscreen-property) property since it simplifies app launch and boosts the app's performance.
 
 ## Memory pressure at the client side
 

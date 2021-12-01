@@ -2,7 +2,7 @@
 title: "Sample: Task Parallel Library with CrmServiceClient (Microsoft Dataverse)| Microsoft Docs"
 description: "Task Parallel Library (TPL) makes developers more productive by simplifying the process of adding parallelism and concurrency to applications. This sample demonstrates using this with CrmServiceClient"
 ms.custom: ""
-ms.date: 04/12/2021
+ms.date: 11/04/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.suite: ""
@@ -50,15 +50,6 @@ Then it will use that technique again to delete the tables created.
 **NOTE**:
 > By default, this sample will create only 10 records, which is not enough to hit the service protection api limit errors. If you raise the `numberOfRecords` variable value to 10000, you can use Fiddler to observe how some of the requests will be rejected and re-tried.
 
-This sample is not configured to disable the Azure Affinity cookies, which is another recommendation to improve throughput. To enable this, add the following to the App.config of your application:
-
-```xml
-  <appSettings>
-    <add key="PreferConnectionAffinity"
-         value="false" />
-  </appSettings>
-```
-
 ## Code listing
 
 Code for this sample is split between two files that define different parts of the same partial class.
@@ -76,15 +67,27 @@ namespace PowerApps.Samples
 {
     public partial class SampleProgram
     {
-        // Limit on the max degree of parallelism
-        private static int maxDegreeOfParallelism = 10;
-
+       
         //How many records to create with this sample.
         private static readonly int numberOfRecords = 10;
 
         [STAThread] // Added to support UX
         private static void Main()
         {
+
+            #region Optimize Connection settings
+
+            //Change max connections from .NET to a remote service default: 2
+            System.Net.ServicePointManager.DefaultConnectionLimit = 65000;
+            //Bump up the min threads reserved for this app to ramp connections faster - minWorkerThreads defaults to 4, minIOCP defaults to 4
+            System.Threading.ThreadPool.SetMinThreads(100, 100);
+            //Turn off the Expect 100 to continue message - 'true' will cause the caller to wait until it round-trip confirms a connection to the server
+            System.Net.ServicePointManager.Expect100Continue = false;
+            //Can decreas overall transmission overhead but can cause delay in data packet arrival
+            System.Net.ServicePointManager.UseNagleAlgorithm = false;
+
+            #endregion Optimize Connection settings
+
             CrmServiceClient service = null;
 
             try
@@ -94,6 +97,8 @@ namespace PowerApps.Samples
                 {
                     #region Sample Code
 
+                    ////////////////////////////////////
+
                     #region Set up
 
                     SetUpSample(service);
@@ -102,18 +107,7 @@ namespace PowerApps.Samples
 
                     #region Demonstrate
 
-                    #region Optimize Connection settings
 
-                    //Change max connections from .NET to a remote service default: 2
-                    System.Net.ServicePointManager.DefaultConnectionLimit = 65000;
-                    //Bump up the min threads reserved for this app to ramp connections faster - minWorkerThreads defaults to 4, minIOCP defaults to 4
-                    System.Threading.ThreadPool.SetMinThreads(100, 100);
-                    //Turn off the Expect 100 to continue message - 'true' will cause the caller to wait until it round-trip confirms a connection to the server
-                    System.Net.ServicePointManager.Expect100Continue = false;
-                    //Can decreas overall transmission overhead but can cause delay in data packet arrival
-                    System.Net.ServicePointManager.UseNagleAlgorithm = false;
-
-                    #endregion Optimize Connection settings
 
                     // Generate a list of account entities to create.
 
@@ -210,7 +204,7 @@ private static ConcurrentBag<EntityReference> CreateEntities(CrmServiceClient sv
     var createdEntityReferences = new ConcurrentBag<EntityReference>();
 
     Parallel.ForEach(entities,
-        new ParallelOptions() { MaxDegreeOfParallelism = maxDegreeOfParallelism },
+        new ParallelOptions() { MaxDegreeOfParallelism = svc.RecommendedDegreesOfParallelism },
         () =>
         {
             //Clone the CrmServiceClient for each thread
@@ -250,7 +244,7 @@ private static ConcurrentBag<EntityReference> CreateEntities(CrmServiceClient sv
 private static void DeleteEntities(CrmServiceClient svc, List<EntityReference> entityReferences)
 {
     Parallel.ForEach(entityReferences,
-        new ParallelOptions() { MaxDegreeOfParallelism = maxDegreeOfParallelism },
+        new ParallelOptions() { MaxDegreeOfParallelism = svc.RecommendedDegreesOfParallelism },
         () =>
         {
             //Clone the CrmServiceClient for each thread

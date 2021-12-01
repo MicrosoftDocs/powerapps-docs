@@ -2,7 +2,7 @@
 title: "Embed a Power BI report in a model-driven app main form | MicrosoftDocs"
 description: Learn how to embed a Power BI report in a model-driven app form
 ms.custom: ""
-ms.date: 09/16/2021
+ms.date: 10/12/2021
 ms.service: powerapps
 ms.topic: "how-to"
 author: "adrianorth"
@@ -89,7 +89,7 @@ You can make the Power BI reports and tiles more meaningful by applying contextu
 > [!div class="mx-imgBorder"] 
 > ![Embedded Power BI report with contextual filtering.](media/embed-powerbi/embed-powerbi-report-in-system-form-filtered.png "Embedded Power BI report with contextual filtering")
 
-The filtering is done by adding a `<PowerBIFilter>` element in the `<parameter>` block as shown here. You can use any attribute of the form's table to construct the filter expression. More information: [Constructing Filters](https://github.com/Microsoft/PowerBI-JavaScript/wiki/Filters#contructingfilters) to understand how to create your own filters.
+The filtering is done by adding a `<PowerBIFilter>` element in the `<parameter>` block as shown here. You can use any attribute of the form's table to construct the filter expression. More information: [Constructing Filters](/javascript/api/overview/powerbi/control-report-filters) to understand how to create your own filters.
 	
 ```xml
 <control id="filteredreport" classid="{8C54228C-1B25-4909-A12A-F2B968BB0D62}">
@@ -106,9 +106,9 @@ Note that this uses the same control as the unfiltered report embedding, and hen
 
 This table describes any additional properties used in the previous XML sample.
 
-|                                                 Property                                                  |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-|-----------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|                         **PowerBIFilter**                          |        The filter expression that contextualizes the Power BI report by passing the form attributes as parameters. To make it more readable, the filter is constructed as shown here. 	|
+|  Property  |    Description  |
+|------------|------|
+|   **PowerBIFilter**   |  The filter expression that contextualizes the Power BI report by passing the form attributes as parameters. To make it more readable, the filter is constructed as shown here. The filter expression can't be a comma separated list of values.	|
 
 ```json
 	{
@@ -131,7 +131,7 @@ This table describes any additional properties used in the previous XML sample.
 
 The target part of the previous expression identifies the table and the column to apply the filters on. The operator identifies the logic and values identify the data passed from the Power Apps model-driven app. To parameterize in a generic way, the values are constructed by aliasing. In the previous expression, the value of an account's **firstname** and **lastname** are passed, and either of them is searched in the **Account Name** column in the Power BI report. Note that **firstname** and **lastname** are the unique names of attributes of the account table, whose value will be passed here. 
 
-You can create more complex filter expressions by looking at examples from [Constructing Filters](https://github.com/Microsoft/PowerBI-JavaScript/wiki/Filters#contructingfilters) and providing the appropriate values for $schema and filterType. Be sure to escape every literal in the filter part using *\"*, so that the JSON is generated correctly.
+You can create more complex filter expressions by looking at examples from [Constructing Filters](/javascript/api/overview/powerbi/control-report-filters) and providing the appropriate values for $schema and filterType. Be sure to escape every literal in the filter part using *\"*, so that the JSON is generated correctly.
 
 ## Remove unmodified attribute before import
 

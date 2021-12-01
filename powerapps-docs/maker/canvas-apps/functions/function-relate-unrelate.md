@@ -2,11 +2,10 @@
 title: Relate and Unrelate functions in Power Apps
 description: Reference information including syntax and examples for the Relate and Unrelate functions in Power Apps.
 author: gregli-msft
-manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: nabuthuk
+ms.reviewer: tapanm
 ms.date: 05/24/2021
 ms.subservice: canvas-maker
 ms.author: gregli
@@ -16,7 +15,7 @@ search.app:
   - PowerApps
 contributors:
   - gregli-msft
-  - nkrb
+  - tapanm-msft
 ---
 # Relate and Unrelate functions in Power Apps
 
@@ -37,7 +36,7 @@ These functions never create or delete a record. They only relate or unrelate tw
 You can use these functions only in [behavior formulas](../working-with-formulas-in-depth.md).
 
 > [!NOTE]
-> These functions are part of a preview feature, and their behavior is available only when the **Relational data, option sets, and other new features for CDS** feature is enabled. This is an app-level setting that's enabled by default for new apps. To find this feature switch, open the **File** menu, select **Settings**, and then select **Upcoming features**. Your feedback is very valuable to us - please let us know what you think in the [Power Apps community forums](https://powerusers.microsoft.com/t5/Expressions-and-Formulas/bd-p/How-To).
+> These functions are part of a preview feature, and their behavior is available only when the **Relational data, option sets, and other new features for CDS** feature is enabled. This is an app-level setting that's enabled by default for new apps. To find this feature switch, select **Settings**, and then select **Upcoming features**. Your feedback is very valuable to us - please let us know what you think in the [Power Apps community forums](https://powerusers.microsoft.com/t5/Expressions-and-Formulas/bd-p/How-To).
 
 ## Syntax
 

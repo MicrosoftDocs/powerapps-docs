@@ -645,7 +645,7 @@ Xrm.WebApi.online.execute(deleteRequest)
 ```
 
 ### Associate a record
-The following code sample demonstrates how to perform an Associate operation on collection-valued navigation properties (Many-To-One and Many-To-Many relationships). For single-valued navigation properties (One-To-Many relationships a.k.a Lookup columns), you can perform an Update operation as shown above or use [Xrm.WebApi.updateRecord](../updateRecord.md).
+The following code sample demonstrates how to perform an Associate operation on collection-valued navigation properties (One-To-Many and Many-To-Many relationships). For single-valued navigation properties (Many-To-One relationships a.k.a Lookup columns), you can perform an Update operation as shown above or use [Xrm.WebApi.updateRecord](../updateRecord.md).
 
 ```JavaScript
 var Sdk = window.Sdk || {};
@@ -711,7 +711,7 @@ Xrm.WebApi.online.execute(manyToManyAssociateRequest)
 ```
 
 ### Disassociate a record
-The following code sample demonstrates how to perform a Disassociate operation on collection-valued navigation properties (Many-To-One and Many-To-Many relationships). For single-valued navigation properties (One-To-Many relationships a.k.a Lookup columns), you can perform an Update operation as shown above or use [Xrm.WebApi.updateRecord](../updateRecord.md).
+The following code sample demonstrates how to perform a Disassociate operation on collection-valued navigation properties (One-To-Many and Many-To-Many relationships). For single-valued navigation properties (Many-To-One relationships a.k.a Lookup columns), you can perform an Update operation as shown above or use [Xrm.WebApi.updateRecord](../updateRecord.md).
 
 > [!NOTE]
 > Unlike the Associate operation which allows associating the target entity record with multiple related entity records in a single operation, the Disassociate operation is limited to only disassociating one entity record from the target entity record per operation.

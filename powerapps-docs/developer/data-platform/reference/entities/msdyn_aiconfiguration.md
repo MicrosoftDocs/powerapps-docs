@@ -1,13 +1,13 @@
 ---
 title: "msdyn_AIConfiguration table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the msdyn_AIConfiguration table/entity."
-ms.date: 05/20/2021
+ms.date: 10/05/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -77,6 +77,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [IsCustomizable](#BKMK_IsCustomizable)
 - [msdyn_AIConfigurationId](#BKMK_msdyn_AIConfigurationId)
 - [msdyn_AIModelId](#BKMK_msdyn_AIModelId)
+- [msdyn_ConnectionReferenceId](#BKMK_msdyn_ConnectionReferenceId)
 - [msdyn_CreatedFromConfigurationId](#BKMK_msdyn_CreatedFromConfigurationId)
 - [msdyn_CustomConfiguration](#BKMK_msdyn_CustomConfiguration)
 - [msdyn_DataBinding](#BKMK_msdyn_DataBinding)
@@ -180,6 +181,20 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|msdyn_aimodelid|
 |RequiredLevel|SystemRequired|
 |Targets|msdyn_aimodel|
+|Type|Lookup|
+
+
+### <a name="BKMK_msdyn_ConnectionReferenceId"></a> msdyn_ConnectionReferenceId
+
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier for Connection Reference associated with AIConfiguration.|
+|DisplayName|Connection Reference Id|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|msdyn_connectionreferenceid|
+|RequiredLevel|None|
+|Targets|connectionreference|
 |Type|Lookup|
 
 
@@ -496,10 +511,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### msdyn_Type Choices/Options
 
-|Value|Label|
-|-----|-----|
-|190690000|TrainingConfiguration|
-|190690001|RunConfiguration|
+|Value|Label|Description|
+|-----|-----|--------|
+|190690000|TrainingConfiguration||
+|190690001|RunConfiguration||
 
 
 
@@ -663,6 +678,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [ModifiedOnBehalfByYomiName](#BKMK_ModifiedOnBehalfByYomiName)
 - [msdyn_AIConfigurationIdUnique](#BKMK_msdyn_AIConfigurationIdUnique)
 - [msdyn_AIModelIdName](#BKMK_msdyn_AIModelIdName)
+- [msdyn_ConnectionReferenceIdName](#BKMK_msdyn_ConnectionReferenceIdName)
 - [msdyn_CreatedFromConfigurationIdName](#BKMK_msdyn_CreatedFromConfigurationIdName)
 - [msdyn_Model_Name](#BKMK_msdyn_Model_Name)
 - [msdyn_TrainedModelAIConfigurationPareIdName](#BKMK_msdyn_TrainedModelAIConfigurationPareIdName)
@@ -691,12 +707,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### ComponentState Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Published|
-|1|Unpublished|
-|2|Deleted|
-|3|Deleted Unpublished|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Published||
+|1|Unpublished||
+|2|Deleted||
+|3|Deleted Unpublished||
 
 
 
@@ -833,8 +849,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsManaged Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Managed|
 |0|Unmanaged|
 
@@ -986,6 +1002,22 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |IsValidForRead|True|
 |LogicalName|msdyn_aimodelidname|
 |MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
+
+
+### <a name="BKMK_msdyn_ConnectionReferenceIdName"></a> msdyn_ConnectionReferenceIdName
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|msdyn_connectionreferenceidname|
+|MaxLength|200|
 |RequiredLevel|None|
 |Type|String|
 
@@ -1333,7 +1365,7 @@ Same as msdyn_aiconfiguration table [msdyn_createdfromconfiguration_msdyn_toconf
 
 ### <a name="BKMK_msdyn_aiconfiguration_msdyn_aiodtrainingimage"></a> msdyn_aiconfiguration_msdyn_aiodtrainingimage
 
-**Added by**: AI Solution default templates Solution
+**Added by**: AI Solution deprecated templates Solution
 
 Same as msdyn_aiodtrainingimage table [msdyn_aiconfiguration_msdyn_aiodtrainingimage](msdyn_aiodtrainingimage.md#BKMK_msdyn_aiconfiguration_msdyn_aiodtrainingimage) Many-To-One relationship.
 
@@ -1350,7 +1382,7 @@ Same as msdyn_aiodtrainingimage table [msdyn_aiconfiguration_msdyn_aiodtrainingi
 
 ### <a name="BKMK_msdyn_msdyn_aiconfiguration_msdyn_aifptrainingdocument_AIConfigurationId"></a> msdyn_msdyn_aiconfiguration_msdyn_aifptrainingdocument_AIConfigurationId
 
-**Added by**: AI Solution default templates Solution
+**Added by**: AI Solution deprecated templates Solution
 
 Same as msdyn_aifptrainingdocument table [msdyn_msdyn_aiconfiguration_msdyn_aifptrainingdocument_AIConfigurationId](msdyn_aifptrainingdocument.md#BKMK_msdyn_msdyn_aiconfiguration_msdyn_aifptrainingdocument_AIConfigurationId) Many-To-One relationship.
 
@@ -1378,6 +1410,7 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [team_msdyn_aiconfiguration](#BKMK_team_msdyn_aiconfiguration)
 - [business_unit_msdyn_aiconfiguration](#BKMK_business_unit_msdyn_aiconfiguration)
 - [msdyn_aiconfiguration_msdyn_aiconfiguration](#BKMK_msdyn_aiconfiguration_msdyn_aiconfiguration)
+- [msdyn_AIConfiguration_ConnectionReference](#BKMK_msdyn_AIConfiguration_ConnectionReference)
 - [msdyn_createdfromconfiguration_msdyn_toconfiguration](#BKMK_msdyn_createdfromconfiguration_msdyn_toconfiguration)
 - [msdyn_aimodel_msdyn_aiconfiguration](#BKMK_msdyn_aimodel_msdyn_aiconfiguration)
 
@@ -1427,6 +1460,12 @@ See businessunit Table [business_unit_msdyn_aiconfiguration](businessunit.md#BKM
 ### <a name="BKMK_msdyn_aiconfiguration_msdyn_aiconfiguration"></a> msdyn_aiconfiguration_msdyn_aiconfiguration
 
 See msdyn_aiconfiguration Table [msdyn_aiconfiguration_msdyn_aiconfiguration](msdyn_aiconfiguration.md#BKMK_msdyn_aiconfiguration_msdyn_aiconfiguration) One-To-Many relationship.
+
+### <a name="BKMK_msdyn_AIConfiguration_ConnectionReference"></a> msdyn_AIConfiguration_ConnectionReference
+
+**Added by**: Power Platform Connection References Solution
+
+See connectionreference Table [msdyn_AIConfiguration_ConnectionReference](connectionreference.md#BKMK_msdyn_AIConfiguration_ConnectionReference) One-To-Many relationship.
 
 ### <a name="BKMK_msdyn_createdfromconfiguration_msdyn_toconfiguration"></a> msdyn_createdfromconfiguration_msdyn_toconfiguration
 

@@ -114,6 +114,10 @@ The Calendar Control V2 control displays scheduled activities and their associat
 
  The choice control presents a set of options for your users to choose from when entering data. More information: [Choices](../data-platform/types-of-fields.md#choices) 
 
+## Power Apps grid control
+
+The Power Apps grid control provides a read-only list of records that lets app users view and open records from views and sub-grids. The control supports the latest Microsoft accessibility standards and is built to be performant and easily extensible for the future. The Power Apps grid control will eventually replace the read-only grid control in both model-driven and canvas apps. More information: [Power Apps grid control (preview)](power-apps-grid-control.md)
+
 ## Editable grid
 
 With editable grids, users can do rich in-line editing directly from views and sub-grids whether they're using a web app, tablet, or phone. More information: [Make model-driven app grids (lists) editable using the editable grid control](make-grids-lists-editable-custom-control.md)

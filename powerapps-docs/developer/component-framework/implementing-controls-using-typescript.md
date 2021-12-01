@@ -383,6 +383,9 @@ Follow these steps to create and import a [solution](../../maker/data-platform/s
 
 7. Manually [import the solution into Dataverse](../../maker/data-platform/import-update-export-solutions.md) using the web portal once the zip file is ready or automatically using the [Microsoft Power Platform Build Tools](https://marketplace.visualstudio.com/items?itemName=microsoft-IsvExpTools.PowerPlatform-BuildTools).
 
+> [!NOTE]
+> Manually publish the customizations if you are importing unmanaged solution.
+
 ## Adding code components in model-driven apps
 
 To add a code component like a linear input component, follow the steps mentioned in the article [Add components to columns and tables](add-custom-controls-to-a-field-or-entity.md).

@@ -1,22 +1,20 @@
 ---
-title: Portals support for Power Platform CLI (preview)
+title: Portals support for Power Platform CLI
 description: Learn how to work with Power Platform CLI for CI/CD (Continuous Integration/Continuous Deployment) improvements of a portal.
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/09/2021
+ms.date: 10/11/2021
 ms.subservice: portals
 ms.author: nenandw
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
     - neerajnandwana-msft
-    - tapanm-msft
+    - nickdoelman
 ---
 
-# Portals support for Microsoft Power Platform CLI (preview)
-
-[This article is pre-release documentation and is subject to change.]
+# Portals support for Microsoft Power Platform CLI
 
 Microsoft Power Platform CLI(Command Line Interface) is a simple, single-stop
 developer command-line interface that empowers developers and app makers to
@@ -25,8 +23,7 @@ create code components.
 Microsoft Power Platform CLI tooling is the first step toward a comprehensive application
 life-cycle management (ALM) story where the enterprise developers and ISVs can
 create, build, debug, and publish their extensions and customizations quickly
-and efficiently. For more information, see [What is Microsoft Power Apps
-CLI?](../../developer/data-platform/powerapps-cli.md)
+and efficiently. For more information, see [What is Microsoft Power Platform CLI?](../../developer/data-platform/powerapps-cli.md)
 
 With this feature, Microsoft Power Apps portals
 supports Microsoft Power Platform CLI to enable CI/CD (Continuous Integration/Continuous
@@ -34,9 +31,8 @@ Deployment) of portal configuration. You can now check in the portal
 configuration to source control and move portal configuration to any environment
 using Microsoft Power Platform CLI.
 
-> [!IMPORTANT]
-> - This is a preview feature.
-> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
+> [!NOTE]
+> This feature is generally available starting with Power Platform CLI version 1.9.8. To learn about installing the latest version, see [Install Microsoft Power Platform CLI](../../developer/data-platform/powerapps-cli.md#standalone-power-platform-cli).
 
 ### Why use Microsoft Power Platform CLI for portals development?
 
@@ -299,7 +295,7 @@ You can also use VS Code extension **Power Platform VS Code Extension** to benef
 
 ## Additional considerations
 
-- An error is reported if your file path exceeds the maximum path length limitation. More information: [Maximum path length limitation in Windows](\windows\win32\fileio\maximum-file-path-limitation)
+- An error is reported if your file path exceeds the maximum path length limitation. More information: [Maximum path length limitation in Windows](/windows/win32/fileio/maximum-file-path-limitation)
 - For duplicate records such as a duplicate web page name, Microsoft Power Platform CLI creates two different folders&mdash;one with the name of the web page, and the other with the same name prefixed with a hash code. For example, "My-page" and "My-page-**hash-code**".
 
 ## Next steps

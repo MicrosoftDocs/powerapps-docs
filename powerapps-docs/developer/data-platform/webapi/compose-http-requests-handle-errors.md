@@ -2,7 +2,7 @@
 title: "Compose HTTP requests and handle errors (Microsoft Dataverse)| Microsoft Docs"
 description: "Read about the HTTP methods and headers that form a part of HTTP requests for the Web API, and then learn how to identify and handle errors returned in the response"
 ms.custom: ""
-ms.date: 09/25/2021
+ms.date: 10/15/2021
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -44,7 +44,7 @@ To access the Web API you must compose a URL using the parts in the following ta
 |Version|    The version is expressed this way: `v[Major_version].[Minor_version][PatchVersion]/`. The valid version for this release is `v9.1`.|
 |Resource|The name of the entity (table), function, or action you want to use.|
 
-The URL you will use will be composed with these parts: Protocol + Environment Name + Region + Base URL + Web API path + Version + Resource.
+The URL you will use will be composed with these parts: Protocol + Environment Name + Region + Base URL + Web API path + Version + Resource. You can find these values mentioned in the above table by navigating your browser to the Power Apps [portal](https://make.powerapps.com), selecting the settings (gear) icon in the top toolbar, and choosing **Developer resources** in the menu.
 
 <a name="version_compatiblity"></a>
 

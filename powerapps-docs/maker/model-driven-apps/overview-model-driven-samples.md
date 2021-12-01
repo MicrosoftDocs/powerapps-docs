@@ -22,7 +22,7 @@ search.app:
 
 # Model-driven sample apps
 
-In [powerapps.com](https://powerapps.com), use a sample app to explore design possibilities and discover concepts that you can apply as you develop your own apps. Each sample app uses fictitious data to showcase a real-world scenario. 
+In [Power Apps](https://make.powerapps.com), use a sample app to explore design possibilities and discover concepts that you can apply as you develop your own apps. Each sample app uses fictitious data to showcase a real-world scenario. 
 
 <!-- Be sure to check out documentation specific to each sample app for more details. -->
 
