@@ -23,6 +23,12 @@ The component returns the address as structured data, allowing the application t
 
 To use the component, you need to enable geospatial features for the environment.
 
+- Watch this video to learn how to use the map control:
+    > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLAkd]
+
+- Watch this video to learn how to use the address input control:
+    > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLPQg]
+
 In this topic we will learn how to use the address input component in our canvas app.
 
 ## Prerequisites
@@ -53,7 +59,7 @@ We are going to create a trial environment that will include a Dataverse databas
 
 7.  Click **Next**
 
-    ![Create a trial environment](media/build-mobile-apps-with-address-input-and-map-components/create-a-trial-environment-1.png)
+    ![Create a trial environment](media/mobile-apps-address-map/create-a-trial-environment-1.png)
 
 8.  Toggle **Deploy Sample Apps and Data** to **Yes**
 
@@ -73,22 +79,22 @@ The geospatial features require additional terms of use that must be reviewed an
 2.  On the **Environments** tab, select the environment you want to use for your
     apps, and then select **Settings** from the top menu
 
-![Enable the geospatial features](media/build-mobile-apps-with-address-input-and-map-components/enable-the-geospatial-features-for-the-environment-1.png)
+![Enable the geospatial features](media/mobile-apps-address-map/enable-the-geospatial-features-for-the-environment-1.png)
 
-![Select settings](media/build-mobile-apps-with-address-input-and-map-components/enable-the-geospatial-features-for-the-environment-2.png)
+![Select settings](media/mobile-apps-address-map/enable-the-geospatial-features-for-the-environment-2.png)
 
 3.  Expand **Product**, and then select **Features**
 
-![Select features](media/build-mobile-apps-with-address-input-and-map-components/enable-the-geospatial-features-for-the-environment-3.png)
+![Select features](media/mobile-apps-address-map/enable-the-geospatial-features-for-the-environment-3.png)
 
 4.  Under **Geospatial services,** set the toggle switch to **On** – a terms of
     service notice will appear – Read through the terms of service, and if you
     agree, select the checkbox **I agree to the terms of service**, and then
     select **Enable**
 
-![Toggle Geospatial services off](media/build-mobile-apps-with-address-input-and-map-components/enable-the-geospatial-features-for-the-environment-4.png)
+![Toggle Geospatial services off](media/mobile-apps-address-map/enable-the-geospatial-features-for-the-environment-4.png)
 
-![Accept the TOS](media/build-mobile-apps-with-address-input-and-map-components/enable-the-geospatial-features-for-the-environment-5.png)
+![Accept the TOS](media/mobile-apps-address-map/enable-the-geospatial-features-for-the-environment-5.png)
 
 Thus, the geospatial services are enabled for the environment
 
@@ -100,36 +106,36 @@ In this lesson we will start with creating an app and then create a Header Compo
 
 2.  Select the Dataverse Trial environment in the upper right corner
 
-    ![Select your environment](media/build-mobile-apps-with-address-input-and-map-components/build-a-canvas-app-1.png)
+    ![Select your environment](media/mobile-apps-address-map/build-a-canvas-app-1.png)
 
 3.  Under **Build business apps – Make your own app, fast** click the button for
     **Canvas app from blank**
 
-    ![Build an app from blank](media/build-mobile-apps-with-address-input-and-map-components/build-a-canvas-app-2.png)
+    ![Build an app from blank](media/mobile-apps-address-map/build-a-canvas-app-2.png)
 
 4.  Give the app a name and select Format – Tablet and select Create
 
-    ![Name your app](media/build-mobile-apps-with-address-input-and-map-components/build-a-canvas-app-3.png)
+    ![Name your app](media/mobile-apps-address-map/build-a-canvas-app-3.png)
 
 5.  An App with Screen1 gets created
 
-![App with screen 1](media/build-mobile-apps-with-address-input-and-map-components/build-a-canvas-app-4.png)
+![App with screen 1](media/mobile-apps-address-map/build-a-canvas-app-4.png)
 
 6.  Select **Insert** -\> **New Screen** -\> **Scrollable** to add a new screen
 
-![Select scrollable](media/build-mobile-apps-with-address-input-and-map-components/build-a-canvas-app-5.png)
+![Select scrollable](media/mobile-apps-address-map/build-a-canvas-app-5.png)
 
 7.  New screen gets added – change the label text to New Account
 
-![Header](media/build-mobile-apps-with-address-input-and-map-components/build-a-canvas-app-6.png)
+![Header](media/mobile-apps-address-map/build-a-canvas-app-6.png)
 
 8.  Select Insert -\> Forms -\> Edit to add a form to the screen
 
-![Select edit](media/build-mobile-apps-with-address-input-and-map-components/build-a-canvas-app-7.png)
+![Select edit](media/mobile-apps-address-map/build-a-canvas-app-7.png)
 
 9.  The form control gets added
 
-![Form control is added](media/build-mobile-apps-with-address-input-and-map-components/build-a-canvas-app-8.png)
+![Form control is added](media/mobile-apps-address-map/build-a-canvas-app-8.png)
 
 10.  Update the following properties of the form:
 
@@ -156,11 +162,11 @@ In this lesson we will start with creating an app and then create a Header Compo
   
 - Address 1: Longitude
 
-![Address properties](media/build-mobile-apps-with-address-input-and-map-components/build-a-canvas-app-10.png)
+![Address properties](media/mobile-apps-address-map/build-a-canvas-app-10.png)
 
 12.  The fields are added to the form – adjust the order as shown below
 
-![Reorder fields](media/build-mobile-apps-with-address-input-and-map-components/build-a-canvas-app-11.png)
+![Reorder fields](media/mobile-apps-address-map/build-a-canvas-app-11.png)
 
 ## Address Input Component
 
@@ -169,12 +175,12 @@ In this section, we will add the Address component to the app
 1.  Select Insert -\> Input -\> Address Input to add an Address Input component
     to the screen
 
-![Select address input control](media/build-mobile-apps-with-address-input-and-map-components/address-input-component-1.png)
+![Select address input control](media/mobile-apps-address-map/address-input-component-1.png)
 
 2.  The Address Input box gets added – place it on the top right side of the
     screen as shown below
 
-![Address input box is added](media/build-mobile-apps-with-address-input-and-map-components/address-input-component-2.png)
+![Address input box is added](media/mobile-apps-address-map/address-input-component-2.png)
 
 ### Features
 
@@ -182,7 +188,7 @@ In this section we will go over various properties of the address component and
 set them – there are a few Address Input specific properties as highlighted
 below
 
-![Address input components](media/build-mobile-apps-with-address-input-and-map-components/address-input-component-3.png)
+![Address input components](media/mobile-apps-address-map/address-input-component-3.png)
 
 | **Property**         | **Description**                                                                                                                                                                                                                |
 |----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -224,7 +230,7 @@ The following table lists the output properties available.
 
 Now, when we run the app and start typing an address, it will show addresses that match the entered value and are located only within 100000 meters of the current location. Also, notice that it does not show more than 5 address suggestions at a time when you start typing in the address.
 
-![Address entry](media/build-mobile-apps-with-address-input-and-map-components/address-input-component-4.gif)
+![Address entry](media/mobile-apps-address-map/address-input-component-4.gif)
 
 Using the above component, we will capture the address in the address fields of our form to create a new account – this is useful so that the user does not have to type in each of the address elements individually.
 
@@ -232,12 +238,12 @@ We will set the Datacard values to the appropriate property value from the addre
 
 NOTE: The default values of the datacards could be locked. To unlock them, select the data card and go to the Advanced properties and select **Unlock to change properties**
 
-![Unlock the control](media/build-mobile-apps-with-address-input-and-map-components/address-input-component-5.png)
+![Unlock the control](media/mobile-apps-address-map/address-input-component-5.png)
 
 1.  Set the Address 1: Street 1 Datacard Default to AddressInput1.StreetNumber &
     " " & AddressInput1.StreetName
 
-![Address formula](media/build-mobile-apps-with-address-input-and-map-components/address-input-component-6.png)
+![Address formula](media/mobile-apps-address-map/address-input-component-6.png)
 
 2.  Set the Address 1: City Datacard Default to AddressInput1.Municipality
 
@@ -258,7 +264,7 @@ NOTE: The default values of the datacards could be locked. To unlock them, selec
 8.  Thus, the form gets populated with all the address fields when an address is
     selected in the Address Input component
 
-![Final form](media/build-mobile-apps-with-address-input-and-map-components/address-input-component-7.png)
+![Final form](media/mobile-apps-address-map/address-input-component-7.png)
 
 ## Map component
 
@@ -283,19 +289,19 @@ ClearCollect(
 )
 ```
 
-![Map component formula](media/build-mobile-apps-with-address-input-and-map-components/map-component-1.png)
+![Map component formula](media/mobile-apps-address-map/map-component-1.png)
 
 3.  Now, click outside of the address input and select **Insert** -\> **Media** -\> **Map** to add the map component to the screen
 
-![Select map](media/build-mobile-apps-with-address-input-and-map-components/map-component-2.png)
+![Select map](media/mobile-apps-address-map/map-component-2.png)
 
 4.  Select the collection as the data source
 
-![Select the component](media/build-mobile-apps-with-address-input-and-map-components/map-component-3.png)
+![Select the component](media/mobile-apps-address-map/map-component-3.png)
 
 5.  Place the Map below the Address input as shown below
 
-![Placew the map on the screen](media/build-mobile-apps-with-address-input-and-map-components/map-component-4.png)
+![Placew the map on the screen](media/mobile-apps-address-map/map-component-4.png)
 
 ### Features
 
@@ -371,7 +377,7 @@ To drop a Pin on the address entered in our address input, we will use the colle
 | ItemsLatitudes | colSelectedAddress.Latitude  |
 | ItemsLongitude | colSelectedAddress.Longitude |
 
-![Map component properties](media/build-mobile-apps-with-address-input-and-map-components/map-component-5.png)
+![Map component properties](media/mobile-apps-address-map/map-component-5.png)
 
 Some of the properties of the pin can be customized per location pin are as follows:
 
@@ -413,8 +419,8 @@ ClearCollect(
 
 After adding these to the collection, go to the Advanced tab of the Map component and update the ItemsColors, ItemsLabels and ItemsIcons properties as shown below
 
-![Map component advanced properties](media/build-mobile-apps-with-address-input-and-map-components/map-component-6.png)
+![Map component advanced properties](media/mobile-apps-address-map/map-component-6.png)
 
 Run the app in preview mode to test it – the map shows the location selected in the address input with a triangle icon and the address shows up as a label on the map
 
-![Map component update address](media/build-mobile-apps-with-address-input-and-map-components/map-component-7.gif)
+![Map component update address](media/mobile-apps-address-map/map-component-7.gif)
