@@ -2,17 +2,20 @@
 title: "What is an on-premises data gateway?"
 description: Learn about on-premises data gateways when working with canvas apps in Power Apps.
 author: arthiriyer
-manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 10/16/2019
+ms.subservice: canvas-maker
 ms.author: arthii
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - arthiriyer
 ---
 
 # What is an on-premises data gateway?
@@ -21,7 +24,7 @@ The on-premises data gateway acts as a bridge to provide quick and secure data t
 
 ## How the gateway works
 
-![Gateway overview](media/gateway-reference/on-premises-data-gateway.png)
+![Gateway overview.](media/gateway-reference/on-premises-data-gateway.png)
 
 For more information on how the gateway works, see [On-premises data gateway architecture](/data-integration/gateway/service-gateway-onprem-indepth).
 

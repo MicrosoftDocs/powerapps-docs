@@ -38,7 +38,7 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 1. Checks for the current version of the org. 
 2. The `CreateImportMapping` method creates the import mapping record.
 3. The `RetrieveMappingXML` method exports the mapping that is created.
-4. The `ChangeMappingName` method parse the xml to change the name attribute.
+4. The `ChangeMappingName` method parse the xml to change the name column.
 
 ### Clean up
 

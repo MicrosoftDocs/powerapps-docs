@@ -15,6 +15,7 @@ applies_to:
 author: "Mattp123"
 ms.assetid: 477f9792-8207-49ef-8968-45274b5355a8
 caps.latest.revision: 19
+ms.subservice: mda-maker
 ms.author: "matp"
 manager: "kvivek"
 tags: 
@@ -60,7 +61,7 @@ You must use solution explorer to set table icons.
 
 1. On the command bar, select **Update Icons**.  
   
-2. In the **Select New Icons** dialog box, in the **Web Client** tab, under **Icon in Web application** or **Icon for Entity Forms**, to the right of **New Icon**, select the **Browse** button ![Lookup button](media/lookup-button-4.gif).
+2. In the **Select New Icons** dialog box, in the **Web Client** tab, under **Icon in Web application** or **Icon for Entity Forms**, to the right of **New Icon**, select the **Browse** button ![Lookup button.](media/lookup-button-4.gif).
 3. Select or create the appropriate web resource, and then select **OK**. 
 4. In the **Unified Interface** tab, do the same for the **New Icon** column.
 5. Select **OK** to close the **Select New Icons** dialog

@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.component: pa-user
 ms.topic: overview
 ms.date: 2/1/2021
+ms.subservice: end-user
 ms.author: mkaur
 manager: "kvivek"
 ms.custom: ""

@@ -7,11 +7,15 @@ ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 05/11/2021
+ms.subservice: canvas-maker
 ms.author: lanced
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - lancedmicrosoft
 ---
 # Connect to an Oracle database from Power Apps
 
@@ -19,7 +23,7 @@ List tables, and create, read, update, and delete table rows in an Oracle databa
 
 ## Prerequisites
 * Oracle 9 and later
-* Oracle client software 8.1.7 and later
+* Oracle Data Access Client (ODAC) software 11.2 and later
 * Installation of an on-premises data gateway
 * Installation of the Oracle client SDK
 
@@ -29,7 +33,7 @@ To install a gateway, follow the steps in [this tutorial](../gateway-management.
 An on-premises data gateway acts as a bridge, providing quick and secure data transfer between on-premises data (data that isn't in the cloud) and the Power BI, Power Automate, Logic Apps, and Power Apps services. You can use the same gateway with multiple services and multiple data sources. For more information, see [Understand gateways](../gateway-reference.md).
 
 ### Install Oracle client
-On the same computer as the on-premises data gateway, install the [64-bit ODAC 12c Release 4 (12.1.0.2.4) for Windows x64](https://www.oracle.com/technetwork/database/windows/downloads/index-090165.html). Otherwise, an error will appear if you try to create or use the connection, as the list of known issues describes.
+On the same computer as the on-premises data gateway, install the [64-bit ODAC 12c Release 4 (12.1.0.2.4) for Windows x64](https://www.oracle.com/technetwork/database/windows/downloads/index-090165.html). You must choose a windows installer version since xcopy version does not work with on-premises data gateway.  Otherwise, an error will appear if you try to create or use the connection, as the list of known issues describes.
 
 ## Create an app from a table in an Oracle database
 
@@ -37,43 +41,43 @@ On the same computer as the on-premises data gateway, install the [64-bit ODAC 1
 
 1. Under **Start from data** section, select **Other data sources**.
 
-    ![Other data sources](./media/connection-oracledb/other-data-sources.png "Other data sources")
+    ![Other data sources.](./media/connection-oracledb/other-data-sources.png "Other data sources")
 
 1. Select **New connection**.
 
-   ![New connection](./media/connection-oracledb/new-connection.png "New connection")
+   ![New connection.](./media/connection-oracledb/new-connection.png "New connection")
 
 1. In the list of connections, select **Oracle Database**.
 
-   ![New database](./media/connection-oracledb/oracle-db.png)
+   ![New database.](./media/connection-oracledb/oracle-db.png)
 
 1. Specify the name of an Oracle server, a username, and a password.
 
     Specify a server in this format if an SID is required: <br> `ServerName/SID`
 
-   ![Connection parameters](./media/connection-oracledb/connection-params.png "Connection parameters")
+   ![Connection parameters.](./media/connection-oracledb/connection-params.png "Connection parameters")
 
 1. Select the gateway that you want to use, or install one.
 
     If your gateway doesn't appear after you install it, select **Refresh gateway list**.
 
-   ![New gateway](./media/connection-oracledb/choose-gateway.png "New gateway")
+   ![New gateway.](./media/connection-oracledb/choose-gateway.png "New gateway")
 
 1. Select **Create** to create the connection.
 
-   ![Create connection](./media/connection-oracledb/create-button.png "Create connection")
+   ![Create connection.](./media/connection-oracledb/create-button.png "Create connection")
 
 1. Select **default** dataset.
 
-   ![Select dataset](./media/connection-oracledb/choose-dataset.png "Select dataset")
+   ![Select dataset.](./media/connection-oracledb/choose-dataset.png "Select dataset")
 
 1. In the list of tables, select the table that you want to use.
 
-   ![Select table](./media/connection-oracledb/choose-table.png "Select table")
+   ![Select table.](./media/connection-oracledb/choose-table.png "Select table")
 
 1. Select **Connect** to create the app.
     
-    ![Connect to the table and create app](./media/connection-oracledb/connect-button.png "Connect to the table and create app")
+    ![Connect to the table and create app.](./media/connection-oracledb/connect-button.png "Connect to the table and create app")
 
 Power Apps creates an app that has three screens and shows data from the table that you selected:
 
@@ -81,7 +85,7 @@ Power Apps creates an app that has three screens and shows data from the table t
 * **DetailScreen1**, which provides more info about a single entry.
 * **EditScreen1**, in which users can update an entry or create an entry.
 
-![Different app screens](./media/connection-oracledb/afd-app.png "Different app screens")
+![Different app screens.](./media/connection-oracledb/afd-app.png "Different app screens")
 
 ## Next steps
 

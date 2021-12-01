@@ -1,20 +1,21 @@
 ---
-title: Understand Boards sample app architecture (Preview)
+title: Understand Boards sample app architecture (preview)
 description: Learn about the architecture of the Boards sample app.
 author: joel-lindstrom
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 06/02/2021
-ms.author: v-ljoel
+ms.subservice: teams
+ms.author: jshum
 ms.reviewer: tapanm
 contributors:
   - joel-lindstrom
-  - navjotm
+  - josephshum
   - tapanm-msft
 ---
 
-# Understand Boards sample app architecture (Preview)
+# Understand Boards sample app architecture (preview)
 
 [This article is pre-release documentation and is subject to change.]
 
@@ -41,16 +42,12 @@ different controls, features, and capabilities of canvas apps.
 You'll also need to know about how to [install](use-sample-apps-from-teams-store.md), and [use](boards.md)
 Boards sample app.
 
-> [!IMPORTANT]
->-   This is a preview feature.
->-   Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
-
 ## Architecture model
 
 The following diagram illustrates the way that users and systems interact with
 data in the Boards solution
 
-![Boards sample app architecture model](media/boards-architecture/architecture-model.png "Boards sample app architecture model")
+![Boards sample app architecture model.](media/boards-architecture/architecture-model.png "Boards sample app architecture model")
 
 ### Connectors
 
@@ -64,7 +61,7 @@ The following connectors are used in the Boards app:
 
 The following diagram explains the data model used by the Boards sample app.
 
-![Boards sample app data model](media/boards-architecture/data-model.png "Boards sample app data model")
+![Boards sample app data model.](media/boards-architecture/data-model.png "Boards sample app data model")
 
 ### Tables
 
@@ -697,7 +694,7 @@ Selecting the back button on the **conNavigtion_About** container navigates back
 
 ### See also
 
-[Boards sample app (Preview)](boards.md) <br>
+[Boards sample app (preview)](boards.md) <br>
 [Use sample apps from the Microsoft Teams store](use-sample-apps-from-teams-store.md) <br>
 [Customize sample apps installed from Teams store](customize-sample-apps.md) <br>
 [Frequently Asked Questions (FAQs) for sample apps](sample-apps-faqs.md)

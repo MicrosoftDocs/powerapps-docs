@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.component: cds
 ms.topic: quickstart
 ms.date: 07/20/2020
+ms.subservice: dataverse-maker
 ms.author: matp
 search.audienceType: 
   - maker

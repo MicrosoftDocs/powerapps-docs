@@ -10,6 +10,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.component: model
 ms.date: 10/22/2020
+ms.subservice: mda-maker
 ms.author: matp
 search.audienceType: 
   - maker

@@ -7,6 +7,7 @@ ms.reviewer: "pehecke"
 ms.service: "powerapps"
 ms.topic: "article"
 author: "omarcdoc" 
+ms.subservice: dataverse-developer
 ms.author: "omarc" 
 manager: "AnnBe" 
 search.audienceType: 

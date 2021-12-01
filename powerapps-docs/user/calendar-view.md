@@ -3,6 +3,7 @@ title: "Work with rows in the new calendar view in model-driven apps | Microsoft
 description: "Learn how to view, create, and delete activities in the new calendar view."
 ms.date: 01/13/2021
 author: mduelae
+ms.subservice: end-user
 ms.author: mkaur
 ms.service: powerapps
 ms.custom: ""
@@ -22,13 +23,13 @@ The calendar view displays scheduled activities and their associated details. Yo
 By default, rows are displayed in a read-only grid. 
 
 > [!div class="mx-imgBorder"]
-> ![Default grid view](media/default-grid-view-1.png "Default grid view") 
+> ![Default grid view.](media/default-grid-view-1.png "Default grid view") 
 
 
 When the **Calendar Control V2** control is added to a table and then the default view is changed to the calendar view. Rows associated with the table are displayed in an interactive calendar.
 
 > [!div class="mx-imgBorder"]
-> ![Default calendar view](media/cal-view.png "Default calendar view") 
+> ![Default calendar view.](media/cal-view.png "Default calendar view") 
 
 > [!NOTE]
 > The **Calendar Control V2** control is not supported in mobile offline. For more information about mobile offline, see [Work offline on your mobile device](/dynamics365/mobile-app/work-in-offline-mode).
@@ -40,17 +41,17 @@ When the calendar view is turned on, it is the default view for the table. Howev
 1. To switch between views, on the left navigation pane, select the table that has the calendar view turned on.
 
    > [!div class="mx-imgBorder"]
-   > ![Select a table](media/cal-view-1.png "Select a table") 
+   > ![Select a table.](media/cal-view-1.png "Select a table") 
 
 2.  On the command bar, select the **More commands** icon, and then select **Show As** and choose either **Calendar Control V2** or **Read Only Grid**.
 
     > [!div class="mx-imgBorder"]
-    > ![Switch to calendar view](media/switch-calendar-view-1.png "Switch to calendar view") 
+    > ![Switch to calendar view.](media/switch-calendar-view-1.png "Switch to calendar view") 
 
     When you select the **Calendar Control V2** view activities are displayed in a calendar view.
 
     > [!div class="mx-imgBorder"]
-    > ![Default calendar view](media/cal-view.png "Default calendar view") 
+    > ![Default calendar view.](media/cal-view.png "Default calendar view") 
 
 ## View the calendar by Day, Week, or Month
 
@@ -63,7 +64,7 @@ You can choose from these calendar views:
 To change the calendar format, on the calendar select the drop-down menu and then select **Day**, **Week**, or **Month**.
 
  > [!div class="mx-imgBorder"]
- > ![Select the current calendar view](media/cal-nav-bar-1.png "Select the current calendar view") 
+ > ![Select the current calendar view.](media/cal-nav-bar-1.png "Select the current calendar view") 
 
 
 If you want to set a calendar view as the default view, you can do this through personalization settings. For more information, see [Set personal options](./set-personal-options.md#activities-tab-options).
@@ -77,7 +78,7 @@ You can view a summary of a row by selecting it in the calendar. A pop-up window
 - To delete the row, select **Delete** in the pop-up window.
 
   > [!div class="mx-imgBorder"]
-  > ![Details of a calendar item](media/details-pop-up-1.png "Details of a calendar item") 
+  > ![Details of a calendar item.](media/details-pop-up-1.png "Details of a calendar item") 
 
 > [!NOTE]
 > This view is not customizable. If you would like to customize this view, add your suggestion [here](https://ideas.powerapps.com).
@@ -91,22 +92,22 @@ The calendar view allows you to easily create a new row.
     - On the **Month** view, double-click a date tile, in which you want to create a new row.
     
       > [!div class="mx-imgBorder"]
-      > ![Select a date tile in the Month view](media/date-tile-1.png "Select a date tile in the Month view")
+      > ![Select a date tile in the Month view.](media/date-tile-1.png "Select a date tile in the Month view")
 
     - On the **Day** or **Week** view, select a date and time in which you want to create a row.
    
       > [!div class="mx-imgBorder"]
-      > ![Select a time slot in the Day or Week view](media/time-slot-1.png "Select a time slot in the Day or Week view") 
+      > ![Select a time slot in the Day or Week view.](media/time-slot-1.png "Select a time slot in the Day or Week view") 
     
     - You can also create a new row by selecting and dragging across time slots in **Day** or **Week** view.
     
        > [!div class="mx-imgBorder"]
-       > ![Drag to select a time slot in the Day or Week view](media/new-calendar-item.gif "Drag to select a time slot in the Day or Week view") 
+       > ![Drag to select a time slot in the Day or Week view.](media/new-calendar-item.gif "Drag to select a time slot in the Day or Week view") 
 
 2. A new form will open. In this example, a **New Reservation** form is opened. Enter the details, and then select **Save** or **Save & Close**. 
 
     > [!div class="mx-imgBorder"]
-    > ![Save new row](media/save-new-res.png "Save new row") 
+    > ![Save new row.](media/save-new-res.png "Save new row") 
 
     > [!NOTE]
     > - If your form has start and end times columns, they are filled-in automatically as per the selected date tile or time slots. By default, the duration is set to 30 minutes.
@@ -118,7 +119,7 @@ The calendar view allows you to easily create a new row.
 You can use the search box to search for data in the view you're in. For example, when you enter the keyword **laptop**, it refreshes the calendar view to show only the rows where the title begins with **laptop**. For more information, see [Use search on a grid](./grid-filters.md#use-search-on-a-grid).
 
 > [!div class="mx-imgBorder"]
-> ![Use a search term to filter calendar rows](media/search-cal.png "Use a search term to filter calendar rows")
+> ![Use a search term to filter calendar rows.](media/search-cal.png "Use a search term to filter calendar rows")
 
 ### See also
 

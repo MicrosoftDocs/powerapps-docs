@@ -6,10 +6,11 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2021
+ms.subservice: portals
 ms.author: sandhan
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
-    - tapanm-msft
+    - nickdoelman
     - sandhangitmsft
 ---
 
@@ -20,7 +21,7 @@ You add a chart to a webpage by using a Liquid tag named [Chart](../liquid/porta
 - The **Copy** field on a webpage.
 - In the **Source** field on a [Web template](../liquid/store-content-web-templates.md).
 
-![Chart example](../media/dynamics365-chart-example.png "Chart example")
+![Chart example.](../media/dynamics365-chart-example.png "Chart example")
 
 For example, to show leads by source and filtered for only open leads view:
 
@@ -39,12 +40,12 @@ For example, to show leads by source and filtered for only open leads view:
 3.	Choose the chart you want.
 4.	Select **More Commands**, and then select **Export Chart**.
 
-    ![Export a chart](../media/export-dynamics365-chart.png "Export a chart")
+    ![Export a chart.](../media/export-dynamics365-chart.png "Export a chart")
 
 5. Open the XML file of the exported chart in a text editor.
 6. Copy the value of the `<visualizationid>` tag.
 
-    ![Get chartid for a chart](../media/dynamics365-chart-chartid.png "Get the chart ID for a chart")
+    ![Get chartid for a chart.](../media/dynamics365-chart-chartid.png "Get the chart ID for a chart")
 
 7. Paste the `visualizationid` value into your Liquid chart tag declaration for the chart ID parameter, for example:
 
@@ -65,7 +66,7 @@ You must open the view editor to get the view ID to be used with the Liquid char
 1. You can see the list of views. Go to options (...) and select 'Edit View'.
 1. Copy the id value from the View window's address bar.
 
-    ![View ID of the form](../media/dynamics365-chart-viewid.png)
+    ![View ID of the form.](../media/dynamics365-chart-viewid.png)
 
 1. Paste this ID into your Liquid chart tag declaration for the viewid parameter, for example:
 

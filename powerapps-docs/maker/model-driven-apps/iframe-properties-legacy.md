@@ -7,6 +7,7 @@ applies_to:
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
   - "powerapps"
+ms.subservice: mda-maker
 ms.author: matp
 manager: kvivek
 ms.date: 03/18/2020
@@ -38,7 +39,7 @@ To view IFrame properties, follow these steps.
 4.  On the **Insert** tab, select IFRAME to view IFRAME properties.
 
       > [!div class="mx-imgBorder"] 
-      > ![iframe properties](media/iframe-properties.png)
+      > ![iframe properties.](media/iframe-properties.png)
 
 
 > [!NOTE]

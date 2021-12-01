@@ -1,13 +1,13 @@
 ---
 title: "Contact table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the Contact table/entity."
-ms.date: 05/20/2021
+ms.date: 10/05/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -237,11 +237,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### AccountRoleCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Decision Maker|
-|2|Employee|
-|3|Influencer|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Decision Maker||
+|2|Employee||
+|3|Influencer||
 
 
 
@@ -272,12 +272,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### Address1_AddressTypeCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Bill To|
-|2|Ship To|
-|3|Primary|
-|4|Other|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Bill To||
+|2|Ship To||
+|3|Primary||
+|4|Other||
 
 
 
@@ -359,10 +359,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### Address1_FreightTermsCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|FOB|
-|2|No Charge|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|FOB||
+|2|No Charge||
 
 
 
@@ -524,15 +524,15 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### Address1_ShippingMethodCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Airborne|
-|2|DHL|
-|3|FedEx|
-|4|UPS|
-|5|Postal Mail|
-|6|Full Load|
-|7|Will Call|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Airborne||
+|2|DHL||
+|3|FedEx||
+|4|UPS||
+|5|Postal Mail||
+|6|Full Load||
+|7|Will Call||
 
 
 
@@ -659,9 +659,9 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### Address2_AddressTypeCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Default Value|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Default Value||
 
 
 
@@ -743,9 +743,9 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### Address2_FreightTermsCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Default Value|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Default Value||
 
 
 
@@ -907,9 +907,9 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### Address2_ShippingMethodCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Default Value|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Default Value||
 
 
 
@@ -1036,9 +1036,9 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### Address3_AddressTypeCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Default Value|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Default Value||
 
 
 
@@ -1120,9 +1120,9 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### Address3_FreightTermsCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Default Value|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Default Value||
 
 
 
@@ -1284,9 +1284,9 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### Address3_ShippingMethodCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Default Value|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Default Value||
 
 
 
@@ -1574,8 +1574,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### CreditOnHold Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -1597,9 +1597,9 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### CustomerSizeCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Default Value|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Default Value||
 
 
 
@@ -1617,9 +1617,9 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### CustomerTypeCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Default Value|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Default Value||
 
 
 
@@ -1669,8 +1669,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### DoNotBulkEMail Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Do Not Allow|
 |0|Allow|
 
@@ -1692,8 +1692,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### DoNotBulkPostalMail Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -1715,8 +1715,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### DoNotEMail Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Do Not Allow|
 |0|Allow|
 
@@ -1738,8 +1738,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### DoNotFax Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Do Not Allow|
 |0|Allow|
 
@@ -1761,8 +1761,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### DoNotPhone Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Do Not Allow|
 |0|Allow|
 
@@ -1784,8 +1784,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### DoNotPostalMail Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Do Not Allow|
 |0|Allow|
 
@@ -1807,8 +1807,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### DoNotSendMM Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Do Not Send|
 |0|Send|
 
@@ -1830,9 +1830,9 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### EducationCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Default Value|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Default Value||
 
 
 
@@ -1946,12 +1946,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### FamilyStatusCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Single|
-|2|Married|
-|3|Divorced|
-|4|Widowed|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Single||
+|2|Married||
+|3|Divorced||
+|4|Widowed||
 
 
 
@@ -2001,8 +2001,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### FollowEmail Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Allow|
 |0|Do Not Allow|
 
@@ -2040,10 +2040,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### GenderCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Male|
-|2|Female|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Male||
+|2|Female||
 
 
 
@@ -2077,9 +2077,9 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### HasChildrenCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Default Value|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Default Value||
 
 
 
@@ -2130,8 +2130,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsBackofficeCustomer Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -2216,9 +2216,9 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### LeadSourceCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Default Value|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Default Value||
 
 
 
@@ -2268,8 +2268,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### MarketingOnly Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -2441,8 +2441,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### ParticipatesInWorkflow Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -2464,12 +2464,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### PaymentTermsCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Net 30|
-|2|2% 10, Net 30|
-|3|Net 45|
-|4|Net 60|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Net 30||
+|2|2% 10, Net 30||
+|3|Net 45||
+|4|Net 60||
 
 
 
@@ -2487,15 +2487,15 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### PreferredAppointmentDayCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Sunday|
-|1|Monday|
-|2|Tuesday|
-|3|Wednesday|
-|4|Thursday|
-|5|Friday|
-|6|Saturday|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Sunday||
+|1|Monday||
+|2|Tuesday||
+|3|Wednesday||
+|4|Thursday||
+|5|Friday||
+|6|Saturday||
 
 
 
@@ -2513,11 +2513,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### PreferredAppointmentTimeCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Morning|
-|2|Afternoon|
-|3|Evening|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Morning||
+|2|Afternoon||
+|3|Evening||
 
 
 
@@ -2535,13 +2535,13 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### PreferredContactMethodCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Any|
-|2|Email|
-|3|Phone|
-|4|Fax|
-|5|Mail|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Any||
+|2|Email||
+|3|Phone||
+|4|Fax||
+|5|Mail||
 
 
 
@@ -2602,9 +2602,9 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### ShippingMethodCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Default Value|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Default Value||
 
 
 
@@ -2786,9 +2786,9 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### TerritoryCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Default Value|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Default Value||
 
 
 
@@ -3427,8 +3427,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |IsValidForRead|True|
 |LogicalName|exchangerate|
 |MaxValue|100000000000|
-|MinValue|0.0000000001|
-|Precision|10|
+|MinValue|0.000000000001|
+|Precision|12|
 |RequiredLevel|None|
 |Type|Decimal|
 
@@ -3463,8 +3463,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsAutoCreate Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -3486,8 +3486,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsPrivate Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -3555,8 +3555,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### Merged Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 

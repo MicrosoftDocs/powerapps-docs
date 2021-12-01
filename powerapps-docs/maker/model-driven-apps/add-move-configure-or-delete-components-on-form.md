@@ -13,6 +13,7 @@ applies_to:
   - "Dynamics 365 Version 9.x"
   - "PowerApps"
 author: "Aneesmsft"
+ms.subservice: mda-maker
 ms.author: "matp"
 manager: "kvivek"
 tags: 
@@ -32,7 +33,7 @@ By using the form designer, makers can easily add and configure popular componen
 To add components to a form, use the **Components** pane. The **Components** pane also lets you search to quickly find components.  
 
 > [!div class="mx-imgBorder"] 
-> ![Components pane](media/FormDesignerComponentsPane.PNG "Components pane")
+> ![Components pane.](media/FormDesignerComponentsPane.PNG "Components pane")
 
 ### Add components to a form using drag and drop
 > [!NOTE]

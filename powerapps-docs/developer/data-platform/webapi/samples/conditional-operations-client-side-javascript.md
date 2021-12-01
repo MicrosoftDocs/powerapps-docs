@@ -1,8 +1,8 @@
 ---
 title: "Web API Conditional Operations Sample (Client-side JavaScript) (Microsoft Dataverse)| Microsoft Docs"
-description: "This sample demonstrates how to perform conditional operations using Microsoft Dataverse Web API and client-side JavaScript"
+description: "This sample demonstrates how to perform conditional operations using Microsoft Dataverse Web API and client-side JavaScript."
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 07/16/2021
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -21,22 +21,23 @@ search.app:
   - PowerApps
   - D365CE
 ---
+
 # Web API Conditional Operations Sample (Client-side JavaScript)
 
-[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+[!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 
 This sample demonstrates how to perform conditional operations using Microsoft Dataverse  Web API using client-side JavaScript.  
   
 > [!NOTE]
->  This sample implements the operations detailed in the [Web API Conditional Operations Sample](../web-api-conditional-operations-sample.md) and uses the common client-side JavaScript constructs described in [Web API Samples (Client-side JavaScript)](../web-api-samples-client-side-javascript.md)  
+> This sample implements the operations detailed in the [Web API Conditional Operations Sample](../web-api-conditional-operations-sample.md) and uses the common client-side JavaScript constructs described in [Web API Samples (Client-side JavaScript)](../web-api-samples-client-side-javascript.md)  
 
 <a name="bkmk_prerequisites"></a>
- 
+
 ## Prerequisites
 
  To run this sample, the following is required:  
   
--   Access to Dataverse online version 8.0 or higher.  
+-   Access to Dataverse environment.  
   
 -   A user account with privileges to import solutions and perform CRUD operations, typically a system administrator or system customizer security role.  
   
@@ -44,7 +45,7 @@ This sample demonstrates how to perform conditional operations using Microsoft D
  
 ## Run this sample
 
-To run this sample, go to  [Microsoft CRM Web API Conditional Operations Sample (Client-side JavaScript)](/samples/browse/) and download the Microsoft CRM Web API Conditional Operations Sample (Client-side JavaScript).zip sample file. Extract the contents and locate the WebAPIConditionalOperations_1_0_0_0_managed.zip managed solution. Import the managed solution into your Dataverse organization and view the solution configuration page to run the sample. For instructions on how to import the sample solution, see [Web API Samples (Client-side JavaScript)](../web-api-samples-client-side-javascript.md).  
+To run this sample, download the solution package from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/webapi/JS/WebAPIConditionalOperations), extract the contents, and locate the `WebAPIConditionalOperations_1_0_0_0_managed.zip` managed solution. Import the managed solution into your Dataverse environment and view the solution configuration page to run the sample. For instructions on how to import the sample solution, see [Web API Samples (Client-side JavaScript)](../web-api-samples-client-side-javascript.md).  
   
 <a name="bkmk_sampleCode"></a>
 
@@ -452,6 +453,5 @@ Sdk.startSample = function () {
 [Web API Basic Operations Sample (Client-side JavaScript)](basic-operations-client-side-javascript.md)<br />
 [Web API Query Data Sample (Client-side JavaScript)](query-data-client-side-javascript.md)<br />
 [Web API Functions and Actions Sample (Client-side JavaScript)](functions-actions-client-side-javascript.md)
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

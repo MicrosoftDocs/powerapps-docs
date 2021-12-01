@@ -49,7 +49,7 @@ Xrm.Navigation.openErrorDialog({ errorCode:1234 }).then(
 
 This displays an error dialog with the default message:
 
-![Error dialog with default message](../../../media//clientapi_sampleerrordialog.png)
+![Error dialog with default message.](../../../media//clientapi_sampleerrordialog.png)
 
 ### Related topics
 

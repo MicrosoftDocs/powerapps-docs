@@ -2,17 +2,21 @@
 title: Set up lists for SharePoint Online integration with Power Apps, Power Automate, and Power BI
 description: Learn about how to set up SharePoint lists to use as a data source for apps, flows, reports, and dashboards.
 author: NickWaggoner
-manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 06/18/2020
+ms.date: 09/10/2021
+ms.subservice: canvas-maker
 ms.author: niwaggon
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - navjotm
+  - wimcoor
 ---
 # Set up lists for SharePoint Online integration with Power Apps, Power Automate, and Power BI
 > [!NOTE]
@@ -60,21 +64,21 @@ To continue with the scenario, you need to create the two SharePoint lists and p
 
 1. In Microsoft Edge, in your SharePoint site, click or tap **New**, then **List**.
    
-    ![Create new SharePoint list](./media/sharepoint-scenario-setup/01-01-01-new-list.png)
+    ![Create new SharePoint list.](./media/sharepoint-scenario-setup/01-01-01-new-list.png)
 
 2. Enter the name "Project Requests", then click or tap **Create**.
    
-    ![Specify name for new list](./media/sharepoint-scenario-setup/01-01-02-create-list.png)
+    ![Specify name for new list.](./media/sharepoint-scenario-setup/01-01-02-create-list.png)
    
     The **Project Requests** list is created, with the default **Title** field.
    
-    ![Project Requests list](./media/sharepoint-scenario-setup/01-01-03-initial-list.png)
+    ![Project Requests list.](./media/sharepoint-scenario-setup/01-01-03-initial-list.png)
 
 ### Add columns to the list
 
-1. Click or tap ![New item icon](./media/sharepoint-scenario-setup/icon-new.png), then **Single line of text**.
+1. Click or tap ![New item icon.](./media/sharepoint-scenario-setup/icon-new.png), then **Single line of text**.
    
-    ![Add single line of text field](./media/sharepoint-scenario-setup/01-01-04-add-column.png)
+    ![Add single line of text field.](./media/sharepoint-scenario-setup/01-01-04-add-column.png)
 
 2. Enter the name "Description", then click or tap **Save**.
    
@@ -89,17 +93,17 @@ To continue with the scenario, you need to create the two SharePoint lists and p
 ### Copy data into the list
 1. Click or tap **Quick edit**.
    
-    ![Quick edit for list](./media/sharepoint-scenario-setup/01-01-06-quick-edit.png)
+    ![Quick edit for list.](./media/sharepoint-scenario-setup/01-01-06-quick-edit.png)
 2. Select the cells in the grid.
    
-    ![List with all columns](./media/sharepoint-scenario-setup/01-01-07-empty-grid.png)
+    ![List with all columns.](./media/sharepoint-scenario-setup/01-01-07-empty-grid.png)
 3. Open the [downloaded workbook](https://download.microsoft.com/download/d/f/6/df6682e2-c625-47f2-9627-b78a86217cd8/project-requests.xlsx) and select all the data (not the headings).
    
-    ![Project Requests Excel table](./media/sharepoint-scenario-setup/01-01-08-excel-table.png)
+    ![Project Requests Excel table.](./media/sharepoint-scenario-setup/01-01-08-excel-table.png)
 4. Copy the data and paste it into the grid in SharePoint, then click or tap **Done**.
    
-    ![Completed list with data](./media/sharepoint-scenario-setup/01-01-09-full-grid.png)
-5. Repeat the list creation and copy process for the "Project Details" list, using the project-details.xlsx workbook. Refer to the Project Details table in [Step 1: Understand the lists](#step-1-understand-the-lists) for the column names and data types.
+    ![Completed list with data.](./media/sharepoint-scenario-setup/01-01-09-full-grid.png)
+5. Repeat the list creation and copy process for the "Project Details" list, using the [project-details.xlsx](https://download.microsoft.com/download/8/1/b/81bae8d5-e408-4f05-bc2d-04afb4312ec8/project-details.xlsx) workbook. Refer to the Project Details table in [Step 1: Understand the lists](#step-1-understand-the-lists) for the column names and data types.
 
 ## Next steps
 The next step in this tutorial series is to [generate an app to handle project requests](sharepoint-scenario-generate-app.md).

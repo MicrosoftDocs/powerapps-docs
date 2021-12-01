@@ -1,12 +1,13 @@
 ---
 title: Customize a SharePoint list or library form by using Power Apps
 description: Learn about how to use Power Apps to customize the form with which users create and update entries in a SharePoint list.
-author: emcoope-msft
+author: wimcoor
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 04/26/2021
+ms.date: 11/10/2021
+ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
   - maker
@@ -15,8 +16,8 @@ search.app:
 contributors:
   - Steven-Jia
   - tapanm-msft
-  - navjotm
-  - emcoope-msft
+  - wimcoor
+  - alaug
 ---
 # Customize a SharePoint list or library form by using Power Apps
 
@@ -29,6 +30,28 @@ To follow the steps in this article, you'll create a list so that you can see ho
 > - Custom forms for lists are only supported in generic lists and generic document libraries. Custom list and library templates are currently not supported; including but not limited to lists such as Announcements, Contacts and Tasks.
 > - Custom forms for document libraries only supports editing custom metadata. Editing or managing file(s) is not supported.
 > - Additional actions are needed when changing the address of a SharePoint site that uses custom forms. More information: [Effects of changing a SharePoint site address on Power Apps](/sharepoint/change-site-address#effects-of-changing-a-site-address).
+> - To access custom form, users must have access to the SharePoint list.
+
+Watch this video to learn how to customize a list form:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLvLK]
+
+## Requirements
+
+The following table explains requirements for user type with actions specific to SharePoint list form customized using Power Apps.
+
+| User type | Customized SharePoint list form action | Requirements |
+| - | - | - |
+| Guest | Use | <ul> <li> View access to SharePoint site hosting the custom form. </li> </ul> |
+| Guest | Create or Edit | <ul> <li> Edit access to SharePoint site hosting the custom form. </li> <li> Membership of **Environment Maker** security role in the Power Platform environment used to customize the SharePoint site. </li> </ul> |
+| Organization user | Use | <ul> <li> View access to SharePoint site hosting the custom form. </li> <li> A Power Apps plan that includes use rights to connect to Office. Separate licenses may be required for custom forms that use Premium capabilities. </li> </ul> |
+| Organization user | Create or Edit | <ul> <li> Edit access to SharePoint site hosting the custom form. </li> <li> Membership of **Environment Maker** security role in the Power Platform environment used to customize the SharePoint site. </li> </ul> |
+
+More information about Power Apps licensing and plans:
+
+- [Microsoft 365 plan that includes Power Apps](/power-platform/admin/pricing-billing-skus#licenses)
+- [What license must be assigned to my guest so they can run an app shared with them?](share-app-guests.md#what-license-must-be-assigned-to-my-guest-so-they-can-run-an-app-shared-with-them)
+- [Power Apps user rights included with Microsoft 365](https://go.microsoft.com/fwlink/?linkid=2085130)
+- [Premium connectors](/connectors/connector-reference/connector-reference-premium-connectors)
 
 ## Create a list
 
@@ -118,7 +141,7 @@ You can configure the **Price**, **Availability**, and **Colors** fields to appe
 
     You can toggle back and forth between options, as needed.
 
-    ![Form Settings options](./media/customize-list-form/form-settings.png)
+    ![Form Settings options.](./media/customize-list-form/form-settings.png)
 
 ## Delete the custom form
 
@@ -128,7 +151,7 @@ You can configure the **Price**, **Availability**, and **Colors** fields to appe
 
 1. On the **Form Settings** page, select **Use the default SharePoint form**, and then select **Delete custom form**.
 
-    ![Delete the custom form](./media/customize-list-form/use-default-sharepoint.png)
+    ![Delete the custom form.](./media/customize-list-form/use-default-sharepoint.png)
 
 ## Q & A
 
@@ -198,15 +221,15 @@ You can configure the **Price**, **Availability**, and **Colors** fields to appe
 
 **Q:** Who can customize forms?
 
-**A:** Anyone with SharePoint permissions to manage, design, or edit the associated list.
+**A:** See [Requirements](#requirements).
 
 **Q:** Do I need a Power Apps license to create or use custom list forms?
 
-**A:** Guest users can **use** custom forms. To **create** custom forms, you need an [Office 365 plan that includes Power Apps](/power-platform/admin/pricing-billing-skus#licenses).
+**A:** See [Requirements](#requirements).
 
 **Q:** What happens when guest users access a list that has a custom form?
 
-**A:** As long as the guest users have permission to access the list, they can access the custom form.
+**A:** See [Requirements](#requirements).
 
 **Q:** As an administrator, how do I get a list of all customized forms in my organization?
 
@@ -224,7 +247,13 @@ You can configure the **Price**, **Availability**, and **Colors** fields to appe
 
     If the app type is SharePoint Form, the app is a customized form.
 
-    ![List of customized forms](./media/customize-list-form/customized-forms.png)
+    ![List of customized forms.](./media/customize-list-form/customized-forms.png)
 
+### See also
 
-[!INCLUDE[footer-include](../../includes/footer-banner.md)]
+- [Manage who can share canvas apps](/power-platform/admin/admin-manage-apps#manage-who-can-share-canvas-apps)
+- [Assign a security role](/power-platform/admin/create-users#assign-a-security-role)
+- [Licensing overview for Microsoft Power Platform](/power-platform/admin/pricing-billing-skus)
+- [Understand Power Platform environments](/power-platform/admin/environments-overview)
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)] 

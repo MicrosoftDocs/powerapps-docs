@@ -7,6 +7,7 @@ ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
 author: "nkrb" # GitHub ID
+ms.subservice: mda-developer
 ms.author: "nabuthuk" # MSFT alias of Microsoft employees only
 manager: "kvivek" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -58,7 +59,7 @@ Create a web resource to change the default behavior. In the following example, 
 4. Open the solution, and then select **New** > **Other** > **Web resource**.
  
    > [!div class="mx-imgBorder"]
-   > ![Create a web resource](media/create-new-web-resources.png "Create a web resource")
+   > ![Create a web resource.](media/create-new-web-resources.png "Create a web resource")
 
 5. Enter the name of the web resource,  and select the **Type** as **Script(JScript)**.
 
@@ -81,29 +82,26 @@ Create a custom button on the form where you want to change the default behavior
 
 1. Open the solution that you created in step 1, and add the table where you want to create the button. It is not required to include all table components and metadata.
 
-1. Select **Add existing** > **Other** > **Site map** to add the site map. 
+1. Select **Add existing** > **Table**  
 
-    > [!div class="mx-imgBorder"]
-    > ![Add the site map](media/add-existing-site-map-to-solution.png "Add the site map")
-
-1. From the list, select **Site Map**.
+1. From the list, select **Contact**.
 
 1. Save and publish the solution. 
 
 1. Select **Export** to make edits to the customization.xml file. 
 
     > [!div class="mx-imgBorder"]
-    > ![Export solution](media/export-solution-from-command-bar.png "Export solution")
+    > ![Export solution.](media/export-solution-from-command-bar.png "Export solution")
 
 1. If you've made recent changes that haven't yet been published, select **Publish**, select **Run** to check whether the solution has any issues or dependencies, and then select **Next**.
 
     > [!div class="mx-imgBorder"]
-    > ![Publish the solution](media/publish-check-issues-before-exporting-solution.png "Publish the solution")
+    > ![Publish the solution.](media/publish-check-issues-before-exporting-solution.png "Publish the solution")
 
 1. With the **Unmanaged** option selected, select **Export**.
 
    > [!div class="mx-imgBorder"]
-   > ![Unmanaged solution](media/export-as-unmanaged-solution.png "Unmanaged solution")
+   > ![Unmanaged solution.](media/export-as-unmanaged-solution.png "Unmanaged solution")
 
 1. In the **Download** dialog box, select **Save**, and in the **Download complete** dialog box, select **Open Folder**.
 
@@ -158,7 +156,7 @@ Create a custom button on the form where you want to change the default behavior
 4. On the command bar, select **Import**.  
 
     > [!div class="mx-imgBorder"]  
-    > ![Import solution](media/import-solution-from-command-bar.png "Import solution") 
+    > ![Import solution.](media/import-solution-from-command-bar.png "Import solution") 
   
 5. On the **Select Solution Package** page, select **Browse** to locate the compressed (.zip or .cab) file that contains the solution you want to import. 
   

@@ -14,6 +14,7 @@ applies_to:
   - "PowerApps"
 ms.assetid: d88677fa-2caf-47b0-aec6-10a25a7ec9c3
 caps.latest.revision: 55
+ms.subservice: dataverse-maker
 ms.author: "matp"
 manager: "kvivek"
 author: "Mattp123"

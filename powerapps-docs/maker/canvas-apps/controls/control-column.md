@@ -2,17 +2,20 @@
 title: Column control in Power Apps
 description: Learn about the details, properties and examples of the column control in Power Apps.
 author: chmoncay
-manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 06/05/2017
+ms.subservice: canvas-maker
 ms.author: chmoncay
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - chmoncay
 ---
 # Column control in Power Apps
 Provides the display experience for a single field in a [**Data table**](control-data-table.md) control.
@@ -53,10 +56,10 @@ The [**Data table**](control-data-table.md) control shows a dataset in a tabular
     The **Data table** control is initialized and shows a set of default fields.
 6. Click or tap the **Full name** column.
    
-    ![Column control selected](./media/control-column/pre-resize-column.png)
+    ![Column control selected.](./media/control-column/pre-resize-column.png)
 7. Drag the adorner on the right side to resize the field.
    
-    ![Column control resized](./media/control-column/post-resize-column.png)
+    ![Column control resized.](./media/control-column/post-resize-column.png)
 
 
 ## Accessibility guidelines

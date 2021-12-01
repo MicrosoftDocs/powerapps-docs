@@ -7,6 +7,7 @@ ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
 author: "KumarVivek" # GitHub ID
+ms.subservice: mda-developer
 ms.author: "kvivek" # MSFT alias of Microsoft employees only
 manager: "shilpas" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -22,7 +23,11 @@ IFRAME and web resource controls embed content from another location in pages by
 > [!NOTE]
 >  The designs you choose for the form are also used for the Dynamics 365 for Outlook reading pane and forms used by Dynamics 365 tablets. Web resources and IFRAMEs aren’t displayed using the Dynamics 365 for Outlook reading pane, however, they are supported in Dynamics 365 for tablets. If your IFRAME depends on access to the `Xrm` object of the page or any form event handlers, you should configure the IFRAME so that it's not visible by default.  
 
- You can use an IFRAME to display the contents from another website in a form, for example, in an ASP.NET page. Displaying a form within an IFrame embedded in another form is not supported.  
+You can use an IFRAME to display the contents from another website in a form, for example, in an ASP.NET page. 
+
+It is recommended to use [Power Apps component framework components](../component-framework/custom-controls-overview.md) if you're considering to use a web resource to show content that users will interact with.
+ 
+Displaying a form within an IFrame embedded in another form is not supported.  
 
  You can use one of the following web resources to display the contents of web resources in a form:  
 

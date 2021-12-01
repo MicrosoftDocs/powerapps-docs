@@ -1,18 +1,21 @@
 ---
 title: Insert pins from data source
 description: Add customized pins to your map component in Power Apps by using a dataset.
-author: iaanw
-manager: shellyha
+author: anuitz
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas, ce06122020
 ms.reviewer: tapanm
 ms.date: 3/2/2021
-ms.author: iawilt
+ms.subservice: canvas-maker
+ms.author: anuitz
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - anuitz
 ---
 
 
@@ -71,11 +74,11 @@ Coho Winery (sample) | -116.97751 | 32.87466 | |
 
 1. Select one of the cells, and then on the Home tab in the ribbon, select **Format as Table** and choose any style, and then **OK**.
 
-    ![Screenshot highlighting the format as table option in Excel](./media/geospatial/convert-table.png)
+    ![Screenshot highlighting the format as table option in Excel.](./media/geospatial/convert-table.png)
 
 1. Select the table, and then go to the **Table Design** tab on the ribbon. Enter a name for the table under **Table Name:**, for example *TestData*.
 
-    ![Screenshot highlighting the table name in Excel](./media/geospatial/table-name.png)
+    ![Screenshot highlighting the table name in Excel.](./media/geospatial/table-name.png)
 
 1. Save the workbook.
 
@@ -88,7 +91,7 @@ Coho Winery (sample) | -116.97751 | 32.87466 | |
 
 1. Locate the Excel workbook and then select **Open**. Select the table that contains the information, **TestData**, and then **Connect**.
 
-    ![Screenshot of the table selection panel](./media/geospatial/select-table.png)
+    ![Screenshot of the table selection panel.](./media/geospatial/select-table.png)
 
 1. On the **Properties** pane, go to the **Advanced** tab, and select **More options**.
 

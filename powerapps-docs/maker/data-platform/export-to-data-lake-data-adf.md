@@ -1,6 +1,6 @@
 ---
-title: "Ingest Microsoft Dataverse data with Azure Data Factory | MicrosoftDocs"
-description: Learn how to use Azure Data Factory to create dataflows, transform, and run analysis on Dataverse data
+title: "Ingest Dataverse data with Azure Data Factory | MicrosoftDocs"
+description: Learn how to use Azure Data Factory to create dataflows, transform, and run analysis on Microsoft Dataverse data
 ms.custom: ""
 ms.date: 03/22/2021
 ms.reviewer: "matp"
@@ -12,6 +12,7 @@ ms.topic: "article"
 applies_to: 
   - "powerapps"
 ms.assetid: 
+ms.subservice: dataverse-maker
 ms.author: "matp"
 manager: "kvivek"
 search.audienceType: 
@@ -22,11 +23,11 @@ search.app:
 contributors:
   - sama-zaki
 ---
-# Ingest exported Microsoft Dataverse data with Azure Data Factory
+# Ingest exported Dataverse data with Azure Data Factory
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-After exporting data from Dataverse to Azure Data Lake Storage Gen2 with Azure Synapse Link for Dataverse, you can use Azure Data Factory to create dataflows, transform your data, and run analysis.
+After exporting data from Microsoft Dataverse to Azure Data Lake Storage Gen2 with Azure Synapse Link for Dataverse, you can use Azure Data Factory to create dataflows, transform your data, and run analysis.
 
 > [!NOTE]
 > Azure Synapse Link for Dataverse was formerly known as Export to data lake. The service was renamed effective May 2021 and will continue to export data to Azure Data Lake as well as Azure Synapse Analytics.
@@ -45,20 +46,12 @@ This article shows you how to perform the following tasks:
 
 This section describes the prerequisites necessary to ingest exported Dataverse data with Data Factory.
 
-### Azure roles
+- **Azure roles.** The user account that's used to sign in to Azure must be a member of the
+*contributor* or *owner* role, or an *administrator* of the Azure subscription. To view the permissions that you have in the subscription, go to the [Azure portal](https://portal.azure.com/), select your username in the upper-right corner, select **...**, and then select **My permissions**. If you have access to multiple subscriptions, select the appropriate one. To create and manage child resources for Data Factory in the Azure portal&mdash;including datasets, linked services, pipelines, triggers, and integration runtimes&mdash;you must belong to the *Data Factory Contributor* role at the resource group level or above.
 
-The user account that's used to sign in to Azure must be a member of the
-*contributor* or *owner* role, or an *administrator* of the Azure subscription.
-To view the permissions that you have in the subscription, go to the [Azure portal](https://portal.azure.com/), select your username in the upper-right corner, select **...**, and then select **My permissions**. If you have access to multiple subscriptions, select the appropriate one. To create and manage child resources for Data Factory in the Azure portal&mdash;including datasets, linked services, pipelines, triggers, and integration runtimes&mdash;you must belong to the *Data Factory Contributor* role at the resource group level or above.
+- **Azure Synapse Link for Dataverse.** This guide assumes that you've already exported Dataverse data by using [Azure Synapse Link for Dataverse](export-to-data-lake.md). In this example, the account table data is exported to the data lake.
 
-### Azure Synapse Link for Dataverse
-This guide assumes that you've already exported Dataverse data by using [Azure Synapse Link for Dataverse](export-to-data-lake.md).
-
-In this example, the account table data is exported to the data lake.
-
-### Azure Data Factory
-
-This guide assumes that you've already created a data factory under the same subscription and resource group as the storage account containing the exported Dataverse data.
+- **Azure Data Factory.** This guide assumes that you've already created a data factory under the same subscription and resource group as the storage account containing the exported Dataverse data.
 
 ## Set the Data Lake Storage Gen2 storage account as a source
 
@@ -66,11 +59,11 @@ This guide assumes that you've already created a data factory under the same sub
 
 2. Turn on **Data flow debug** mode and select your preferred time to live. This might take up to 10 minutes, but you can proceed with the following steps.
 
-    ![Dataflow debug mode](media/data-flow-debug.png "Dataflow debug mode")
+    ![Dataflow debug mode.](media/data-flow-debug.png "Dataflow debug mode")
 
 3. Select **Add Source.**
 
-    ![Add source](media/add-source.png "Add source")
+    ![Add source.](media/add-source.png "Add source")
 
 4. Under **Source settings**, do the following:
 
@@ -85,7 +78,7 @@ This guide assumes that you've already created a data factory under the same sub
     - **Root location**: Enter the container name in the first box (**Container**) or **Browse** for the container name and select **OK**.
     - **Entity**: Enter the table name or **Browse** for the table.
 
-  ![Source options](media/source-options.png "Source options")
+      ![Source options.](media/source-options.png "Source options")
   
 6. Check the **Projection** tab to ensure that your schema has been imported successfully. If you do not see any columns, select **Schema options** and check the **Infer drifted column types** option. Configure the formatting options to match your data set then select **Apply**.
 
@@ -106,7 +99,7 @@ Follow these instructions to create a rank for the each row by the *revenue* fie
      - **Rank column**: Enter the name of the rank column generated.
      - **Sort conditions**: Select the *revenue* column and sort by *Descending* order.
 
-       ![Configure the Rank settings tab](media/configure-rank.png "Configure the Rank settings tab")
+       :::image type="content" source="media/configure-rank.png" alt-text="Configure the Rank settings tab":::
 
 3. You can view your data in the **data preview** tab where you will find the new *revenueRank* column at the right-most position.
 
@@ -123,7 +116,7 @@ Ultimately, you must set a sink for your dataflow. Follow these instructions to 
     - **Sink type**: Select **DelimitedText**.
     - **Linked service**: Select your Data Lake Storage Gen2 storage container that has the data you exported by using the Azure Synapse Link for Dataverse service.
 
-      ![Configure the Sink tab](media/configure-sink.png "Configure the Sink tab")
+      :::image type="content" source="media/configure-sink.png" alt-text="Configure the Sink tab":::
 
 3. On the **Settings** tab, do the following:
 
@@ -132,7 +125,7 @@ Ultimately, you must set a sink for your dataflow. Follow these instructions to 
     - **Output to single file**: Enter a file name, such as *ADFOutput*
     - Leave all other default settings.
 
-      ![Configure the sink Settings tab](media/configure-settings.png "Configure the sink Settings tab")
+      :::image type="content" source="media/configure-settings.png" alt-text="Configure the sink Settings tab":::
 
 4. On the **Optimize** tab, set the **Partition option** to **Single partition**.
 
@@ -142,7 +135,7 @@ Ultimately, you must set a sink for your dataflow. Follow these instructions to 
 
 1. In the left pane under **Factory Resources**, select **+**, and then select **Pipeline**.
 
-     ![Create a new pipeline](media/create-pipeline.png "Create a new pipeline")
+     ![Create a new pipeline.](media/create-pipeline.png "Create a new pipeline")
 
 2. Under **Activities**, select **Move & Transform**, and then drag **Data flow** to the workspace.
 

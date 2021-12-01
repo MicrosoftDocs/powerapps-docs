@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 06/22/2020
+ms.subservice: sample-apps
 ms.author: ramanasr
 ms.reviewer: nkrb
 ---

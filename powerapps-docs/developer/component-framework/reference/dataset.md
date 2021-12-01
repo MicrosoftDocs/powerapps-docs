@@ -156,7 +156,8 @@ IDs of the records in the dataset, order by the query response result. This is s
 The sorting status for the current query. This is supported in both model-driven and canvas apps. Sorting can be configured for a dataset by setting `context.parameters.[dataset_property_name].sorting = [SortStatus]`. Once sorting is configured, calling `context.parameters.[dataset_property_name].refresh()` retrieves the sorted data from the data source.  
 
 > [!NOTE]
-> Filtering feature is only available to Dataverse data source. 
+> Sorting feature is only available to Dataverse data source.
+> Also, if sorting is re-configured it will reset the filter `context.parameters.[dataset_property_name].filtering`
 
 **Type**: [SortStatus](sortstatus.md)
 

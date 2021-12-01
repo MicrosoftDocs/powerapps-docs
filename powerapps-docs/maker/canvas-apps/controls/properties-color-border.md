@@ -1,18 +1,22 @@
 ---
 title: Color and border properties in Power Apps
 description: Reference information about the color and border properties in Power Apps.
-author: gregli-msft
-manager: kvivek
+author: chmoncay
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 10/25/2016
-ms.author: gregli
+ms.date: 09/01/2021
+ms.subservice: canvas-maker
+ms.author: chmoncay
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - chmoncay
+  - gregli-msft
 ---
 # Color and border properties in Power Apps
 
@@ -135,5 +139,15 @@ These properties are in effect when the user selects an item in a control.
 **SelectionFill** – The background color of a selected item or items in a list or a selected area of a pen control.
 
 - Applies to **[Drop down](control-drop-down.md)** and **[List Box](control-list-box.md)** controls.
+
+## Order of color
+
+A control can be in multiple states.  For example: focused and hovered.  Only one color is used, in this order:
+
+1. Disabled
+1. Pressed
+1. Hover
+1. Focus 
+1. Normal
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

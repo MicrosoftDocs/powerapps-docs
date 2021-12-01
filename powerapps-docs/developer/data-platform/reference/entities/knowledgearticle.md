@@ -1,13 +1,13 @@
 ---
 title: "KnowledgeArticle table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the KnowledgeArticle table/entity."
-ms.date: 05/20/2021
+ms.date: 10/05/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -220,11 +220,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### ExpiredReviewOptions Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Needs Updating|
-|1|Republish|
-|2|Archive|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Needs Updating||
+|1|Republish||
+|2|Archive||
 
 
 
@@ -259,8 +259,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsInternal Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -282,8 +282,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsLatestVersion Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -305,8 +305,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsPrimary Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -329,8 +329,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsRootArticle Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -448,8 +448,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### msdyn_isingestedarticle Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -601,8 +601,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### ReadyForReview Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Completed|
 |0|Mark Complete|
 
@@ -624,10 +624,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### Review Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Approved|
-|1|Rejected|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Approved||
+|1|Rejected||
 
 
 
@@ -675,8 +675,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### SetCategoryAssociations Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Completed|
 |0|Mark as Complete|
 
@@ -847,8 +847,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### UpdateContent Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Content Updated|
 |0|Mark When Completed|
 
@@ -1034,8 +1034,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |IsValidForRead|True|
 |LogicalName|exchangerate|
 |MaxValue|100000000000|
-|MinValue|0.0000000001|
-|Precision|10|
+|MinValue|0.000000000001|
+|Precision|12|
 |RequiredLevel|None|
 |Type|Decimal|
 
@@ -1544,6 +1544,7 @@ Listed by **SchemaName**.
 - [KnowledgeArticle_Phonecalls](#BKMK_KnowledgeArticle_Phonecalls)
 - [KnowledgeArticle_Emails](#BKMK_KnowledgeArticle_Emails)
 - [msdyn_knowledgearticle_feedback_context](#BKMK_msdyn_knowledgearticle_feedback_context)
+- [msdyn_knowledgearticleimage_parentknowledgearticleid](#BKMK_msdyn_knowledgearticleimage_parentknowledgearticleid)
 
 
 ### <a name="BKMK_knowledgearticle_connections1"></a> knowledgearticle_connections1
@@ -2042,6 +2043,23 @@ Same as feedback table [msdyn_knowledgearticle_feedback_context](feedback.md#BKM
 |AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
 |CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
+
+### <a name="BKMK_msdyn_knowledgearticleimage_parentknowledgearticleid"></a> msdyn_knowledgearticleimage_parentknowledgearticleid
+
+**Added by**: Knowledge Management Online Features Solution
+
+Same as msdyn_knowledgearticleimage table [msdyn_knowledgearticleimage_parentknowledgearticleid](msdyn_knowledgearticleimage.md#BKMK_msdyn_knowledgearticleimage_parentknowledgearticleid) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_knowledgearticleimage|
+|ReferencingAttribute|msdyn_parentknowledgearticleid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|msdyn_knowledgearticleimage_parentknowledgearticleid|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
 <a name="manytoone"></a>
 
 ## Many-To-One Relationships
@@ -2130,6 +2148,9 @@ See transactioncurrency Table [TransactionCurrency_knowledgearticle](transaction
 
 Relationship details provided where the KnowledgeArticle table is the first table in the relationship. Listed by **SchemaName**.
 
+- [knowledgearticle_category](#BKMK_knowledgearticle_category)
+- [msdyn_msdyn_kbattachment_knowledgearticle](#BKMK_msdyn_msdyn_kbattachment_knowledgearticle)
+
 
 ### <a name="BKMK_knowledgearticle_category"></a> knowledgearticle_category
 
@@ -2153,6 +2174,10 @@ IntersectEntityName: knowledgearticlescategories<br />
 |NavigationPropertyName|knowledgearticle_category|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 
+
+### <a name="BKMK_msdyn_msdyn_kbattachment_knowledgearticle"></a> msdyn_msdyn_kbattachment_knowledgearticle
+
+See msdyn_kbattachment Table [msdyn_msdyn_kbattachment_knowledgearticle](msdyn_kbattachment.md#BKMK_msdyn_msdyn_kbattachment_knowledgearticle) Many-To-Many Relationship.
 
 ### See also
 

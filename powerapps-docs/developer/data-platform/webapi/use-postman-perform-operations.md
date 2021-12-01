@@ -43,7 +43,7 @@ Use a `GET` request to retrieve a set of records. The following example retrieve
 
 `GET` `{{webapiurl}}accounts?$select=name,accountnumber&$top=3`
 
-![Retrieve multiple records using Postman](media/postman-retrieve-multiple.png "Retrieve multiple records using Postman")
+![Retrieve multiple records using Postman.](media/postman-retrieve-multiple.png "Retrieve multiple records using Postman")
 
 The body of the response looks like this:
 
@@ -82,7 +82,7 @@ Use a `GET` request to retrieve a record. The following example retrieves two pr
 
 `GET` `{{webapiurl}}accounts(`*&lt;accountid&gt;*`)?$select=name,accountnumber&$expand=primarycontactid($select=fullname)`
 
-![Retrieve a record using Postman](media/postman-retrieve-record.png "Retrieve a record using Postman")
+![Retrieve a record using Postman.](media/postman-retrieve-record.png "Retrieve a record using Postman")
 
 The body of the response looks like this:
 
@@ -108,11 +108,11 @@ Use a `POST` request to send data to create a record. Set the URL to the entity 
 
 `POST` `{{webapiurl}}accounts`
 
-![Create a new record using Web API](media/postman-create-records.png "Create a new record using Web API")
+![Create a new record using Web API.](media/postman-create-records.png "Create a new record using Web API")
 
 Set the body of the request with information about the account to create.
 
-![Body of the request to create a record using Web API](media/postman-create-record-body.png "Body of the request to create a record using Web API")
+![Body of the request to create a record using Web API.](media/postman-create-record-body.png "Body of the request to create a record using Web API")
 
 When you send this request, the body will be empty, but the ID of the created account will be in the `OData-EntityId` header value.
 
@@ -124,7 +124,7 @@ Use the `PATCH` method to update a table record, as shown here.
 
 `PATCH` `{{webapiurl}}accounts(`*&lt;accountid&gt;*`)`
 
-![Update a record using Web API](media/postman-update-record.png "Update a record using Web API")
+![Update a record using Web API.](media/postman-update-record.png "Update a record using Web API")
 
 When you send this request, the response body will be empty, but the ID of the updated account will be in the `OData-EntityId` header value.
 
@@ -136,7 +136,7 @@ Use the `DELETE` method to delete an existing record.
 
 `DELETE` `{{webapiurl}}accounts(`*&lt;accountid&gt;*`)`
 
-![Delete a record using Web API](media/postman-delete-record.png "Delete a record using Web API")
+![Delete a record using Web API.](media/postman-delete-record.png "Delete a record using Web API")
 
 When you send this request, the account record with the given `accountid` gets deleted.
 
@@ -150,7 +150,7 @@ Use a `GET` request with the functions listed in [Web API Function Reference](/d
 |----|----|
 |`GET`|`{{webapiurl}}RetrieveDuplicates(BusinessEntity=@p1,MatchingEntityName=@p2,PagingInfo=@p3)?@p1={'@odata.type':'Microsoft.Dynamics.CRM.account','accountid':'`*&lt;accountid&gt;*`'}&@p2='account'&@p3={'PageNumber':1,'Count':50}`|
 
-![Create a Web API request that uses functions](media/postman-use-function.png "Create a Web API request that uses functions")
+![Create a Web API request that uses functions.](media/postman-use-function.png "Create a Web API request that uses functions")
 
 Functions return either a collection or a complex type. The response from the preceding <xref href="Microsoft.Dynamics.CRM.RetrieveDuplicates?text=RetrieveDuplicates function" /> should look like this:
 
@@ -175,7 +175,7 @@ This example shows how to use <xref href="Microsoft.Dynamics.CRM.BulkDetectDupli
 
 `POST` `{{webapiurl}}BulkDetectDuplicates`
 
-![Create a Web API request that uses actions](media/postman-use-action.png "Create a Web API request that uses actions")
+![Create a Web API request that uses actions.](media/postman-use-action.png "Create a Web API request that uses actions")
 
 The request in the example just shown submits an asynchronous duplicate detection job that runs in the background. The duplicates are detected according to the published duplicate rules for the table type. <xref href="Microsoft.Dynamics.CRM.BulkDetectDuplicatesResponse?text=BulkDetectDuplicatesResponse ComplexType" /> is returned as a response from <xref href="Microsoft.Dynamics.CRM.BulkDetectDuplicates?text=BulkDetectDuplicates action" />. The response includes the `JobId` property, which contains the GUID of the asynchronous duplicate detection job that detects and logs duplicate records.
 

@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: guidance
 ms.date: 08/10/2020
+ms.subservice: guidance
 ms.author: thground
 ms.reviewer: kathyos
 

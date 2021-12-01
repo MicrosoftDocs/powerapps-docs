@@ -7,6 +7,7 @@ ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: f93e0e21-f911-4681-81b0-82ccf98ee28b
 author: "Nkrb"
+ms.subservice: mda-developer
 ms.author: "nabuthuk"
 manager: "kvivek"
 search.audienceType: 
@@ -19,7 +20,7 @@ search.app:
 
 Provides properties and methods to retrieve information about the user interface (UI) as well as collections for several sub components of the form.
 
-![formContext UI object model](../../media/ClientAPI-formContext-ui-Model.png)
+![formContext UI object model.](../../media/ClientAPI-formContext-ui-Model.png)
 
 ## Properties
 

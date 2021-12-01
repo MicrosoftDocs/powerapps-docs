@@ -6,10 +6,11 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2021
+ms.subservice: portals
 ms.author: sandhan
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
-    - tapanm-msft
+    - nickdoelman
     - sandhangitmsft
     - dileepsinghmicrosoft
 ---
@@ -33,24 +34,24 @@ Complete the change password workflow, and the necessary fields will be automati
 3.	Select **Task Flow** on the toolbar at the top.
 
     > [!div class="mx-imgBorder"]
-    > ![Task flow icon](../media/task-flow.png "Task flow icon")
+    > ![Task flow icon.](../media/task-flow.png "Task flow icon")
 
 4.	Select the **Change password for portal contact** task flow.
 
 5.	In the **Change password for portal contact** pane, select or create a contact to change the password, and then select **Next**.
 
     > [!div class="mx-imgBorder"]
-    > ![Select a contact to change the password](../media/change-password-select-contact.png "Select a contact to change the password")
+    > ![Select a contact to change the password.](../media/change-password-select-contact.png "Select a contact to change the password")
 
 6.	In the **New password** field, enter a new password, and then select **Next**.
 
     > [!div class="mx-imgBorder"]
-    > ![Enter new password for the contact](../media/change-password-new-password.png "Enter new password for the contact")
+    > ![Enter new password for the contact.](../media/change-password-new-password.png "Enter new password for the contact")
 
     If you do not enter a password and select **Next**, you'll be asked whether you want to remove password for the selected contact.
 
     > [!div class="mx-imgBorder"]
-    > ![Remove password for the contact](../media/change-password-remove-password.png "Remove password for the contact")
+    > ![Remove password for the contact.](../media/change-password-remove-password.png "Remove password for the contact")
 
 7.	After making the changes, select **Done**.
 

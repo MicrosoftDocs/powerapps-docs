@@ -6,10 +6,11 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2021
+ms.subservice: portals
 ms.author: sandhan
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
-    - tapanm-msft
+    - nickdoelman
     - sandhangitmsft
 ---
 
@@ -49,7 +50,7 @@ To use the document management capabilities of [!INCLUDE[pn-sharepoint-short](..
 2.	Go to **Set up [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] integration** > **Enable [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] integration**.
 
     > [!div class=mx-imgBorder]
-    > ![Enable SharePoint integration](media/enable-sharepoint-integration.png "Enable SharePoint integration")
+    > ![Enable SharePoint integration.](media/enable-sharepoint-integration.png "Enable SharePoint integration")
 
 3.	Select **Enable** in the confirmation window. This will enable the portal to communicate with [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)]. While the [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] integration is being enabled, the portal restarts and will be unavailable for a few minutes. A message appears when [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] integration is enabled.
 
@@ -58,12 +59,12 @@ When [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] inte
 - **Disable [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] integration**: Allows you to disable the [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] integration with your portal. While the [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] integration is being disabled, the portal restarts and will be unavailable for a few minutes. A message appears when [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] integration is disabled.
 
     > [!div class=mx-imgBorder]
-    > ![Disable SharePoint integration](media/disable-sharepoint-integration.png "Disable SharePoint integration")
+    > ![Disable SharePoint integration.](media/disable-sharepoint-integration.png "Disable SharePoint integration")
 
 Enabling or disabling the [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] integration will update the [!INCLUDE[pn-azure-active-directory](../../includes/pn-azure-active-directory.md)] ([!INCLUDE[pn-azure-shortest](../../includes/pn-azure-shortest.md)] AD) application for the portal and add or remove the required [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] permissions, respectively. You'll also be redirected to provide your consent for the changes to be made in the [!INCLUDE[pn-azure-shortest](../../includes/pn-azure-shortest.md)] AD application. 
 
 > [!div class=mx-imgBorder]
-> ![Disable SharePoint integration consent screen](media/sharepoint-integration-consent.png "Disable SharePoint integration consent screen")
+> ![Disable SharePoint integration consent screen.](media/sharepoint-integration-consent.png "Disable SharePoint integration consent screen")
 
 If you don't provide your consent:
 
@@ -108,11 +109,11 @@ Apart from the standard configuration required for basic form or advanced form, 
 Two table permission records are required to establish the necessary access to view and upload documents.
 
 - Permissions on the table of the table or advanced form: 
-    - Create an **Table Permission** record specifying the **Table Name** as the table of the basic form or advanced form configured previously. 
+    - Create a **Table Permission** record specifying the **Table Name** as the table of the basic form or advanced form configured previously. 
     - Select a **Access Type** and access type relationship that is appropriate to the behavior of the form that you want.
     - Enable **Read** and **Append To** privileges to allow read access to documents and optionally enable **Write** privilege to allow document uploads. Ignore the **Child Table Permissions** section for now since it will be populated by the next step.
 - Permissions on the **Document Location** with **Parent access type** referring to the previous permission record: 
-    - Create an **Table Permission** record specifying the **Table Name** as **Document Location** table with **Access Type** set to **Parent**. 
+    - Create a **Table Permission** record specifying the **Table Name** as **Document Location** table with **Access Type** set to **Parent**. 
     - Select the Parent Table Permission to the table permission record created in previous step. 
     - Privileges 
         - The minimum privileges to allow read access to documents are **Read**, **Create**, and **Append**. 
@@ -151,12 +152,12 @@ The below example demonstrates configuration using the Case table which needs th
         c. Open the **Web – Edit Case** in form editor.
 
          > [!div class=mx-imgBorder]
-         > ![Web - Edit Case form](media/web-edit-case-form.png "Web - Edit Case form")
+         > ![Web - Edit Case form.](media/web-edit-case-form.png "Web - Edit Case form")
     
         d. Select the **Created On** field on the form, and on the **Insert** tab, select **Sub-Grid**.
 
          > [!div class=mx-imgBorder]
-         > ![Add a subgrid to the Web - Edit Case form](media/add-sub-grid.png "Add a subgrid to the Web - Edit Case form")
+         > ![Add a subgrid to the Web - Edit Case form.](media/add-sub-grid.png "Add a subgrid to the Web - Edit Case form")
     
         e. In the **Set Properties** dialog box, set the following properties, and select **OK**:
 
@@ -169,7 +170,7 @@ The below example demonstrates configuration using the Case table which needs th
          - **Default View**: Active Document Locations
 
          > [!div class=mx-imgBorder]
-         > ![Subgrid properties](media/sub-grid-properties.png "Subgrid properties")
+         > ![Subgrid properties.](media/sub-grid-properties.png "Subgrid properties")
 
         f. In the form editor, select **Save** and then select **Publish**.
 
@@ -196,7 +197,7 @@ The below example demonstrates configuration using the Case table which needs th
 
    1. Go to the **Web Role** record that is associated to the user. For this sample, we’ll assume that the user has an Administrator web role.
 
-   2. Ensure that an Table Permission record exists by the name of **Customer Service - Cases where contact is customer**. 
+   2. Ensure that a Table Permission record exists by the name of **Customer Service - Cases where contact is customer**. 
 
       > [!NOTE]
       > Ensure that your web role has this table permission added. If your user is already an Administrator, then the above table permission need not be explicitly assigned.
@@ -220,12 +221,12 @@ The below example demonstrates configuration using the Case table which needs th
       a. Go to the **Support** page.
 
       > [!div class=mx-imgBorder]
-      > ![Portal support page](media/portal-support-page.png "Portal support page")
+      > ![Portal support page.](media/portal-support-page.png "Portal support page")
 
       b. Select an existing Case record from the list. Go to the **Case Documents** section on the page and see the document list added.
 
       > [!div class=mx-imgBorder]
-      > ![Case document](media/case-document.png "Case document")
+      > ![Case document.](media/case-document.png "Case document")
 
 ### See also
 

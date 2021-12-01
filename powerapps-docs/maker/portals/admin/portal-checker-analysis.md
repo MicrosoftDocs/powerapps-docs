@@ -5,17 +5,102 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/18/2021
+ms.date: 09/09/2021
+ms.subservice: portals
 ms.author: nenandw
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
     - neerajnandwana-msft
-    - tapanm-msft
+    - nickdoelman
+    - dileepsinghmicrosoft
 ---
 
 # Analyze and resolve Portal Checker diagnostics results
 
 In this article, you'll learn about Portal Checker diagnostics results, and how to resolve any issues or problems found.
+
+## An active Search site marker isn't available for this portal
+
+This issue occurs when the **Search** site marker isn't available in your portal configuration. To fix this issue:
+
+1. Open the [Portal Management app](../configure/configure-portal.md).
+1. In the left pane, select **Site Markers**.
+1. If a site marker named **Search** is available and deactivated, activate it.
+1. If not available, create a new site marker with following values:
+    - **Name**: Search
+    - **Website**: Select the website of your portal host.
+    - **Page**: Select the webpage record that is set as the search page of your portal.
+1. Select **Save & Close**.
+
+## Anonymous access to Basic/Advanced forms and Lists
+
+Basic Forms, Advanced Forms and Lists in portals can be excluded from enforcing table permissions by not selecting **Enable Table Permission** checkbox while creating or modifying these controls as explained in [Secure your Lists](../configure/entity-lists.md#securing-lists) and [Secure your forms](../configure/entity-forms.md#secure-your-forms) articles.
+
+While this method is useful for quickly testing your configurations during development of portal, not securing Lists and Forms on portal can have unintended consequences including unauthorized access to data. That's why we don't advise this method to be used outside a secure dev or test environment.
+
+To fix this issue for List/Basic forms:
+
+1. Open the [Portal Management app](../configure/configure-portal.md).
+
+1. On the left-pane, select **List** or **Basic forms** as appropriate.
+
+1. Find the record mentioned in the Portal checker rule.
+
+1. Update the property "Enable Table Permissions" for [List](../configure/entity-lists.md#securing-lists) or [Basic forms](../configure/entity-forms.md#secure-your-forms).
+
+To fix this issue for Advanced forms:
+
+> [!IMPORTANT]
+> Portal checker rule doesn't mention Advanced form steps that might have similar configuration.
+
+1. Open the [Portal Management app](../configure/configure-portal.md).
+
+1. On the left-pane, select **Advanced form**.
+
+1. Open each advanced form and go to **Advanced Form Steps**.
+
+1. Go through each step, and update the **Enable Table Permission** property to be enabled.
+
+Once these changes are made, appropriate table permissions would need to be created and assigned to appropriate web roles to ensure that all the users can access these components.
+
+> [!NOTE]
+> This method of disabling **Table Permissions** would be deprecated soon. Therefore, it shouldn't be used. Use proper [table permissions](../configure/entity-permissions-studio.md), and web role setup to provide access to users for any data instead. More information: [Table permission changes for forms and lists on new portals](../important-changes-deprecations.md#table-permission-changes-for-forms-and-lists-on-new-portals)
+
+## Anonymous access available to OData feed
+
+> [!NOTE]
+> Starting with release [9.3.7.x](/power-platform/released-versions/portals/portalupdate1), lists on all portals (new or existing) that have [OData feed](../configure/entity-lists.md#list-odata-feeds) enabled will require appropriate [table permissions](../configure/entity-permissions-studio.md) setup for the feed on these lists to work.
+
+List component in portal can be enabled for OData feed by enabling [OData feed configuration](../configure/entity-lists.md#list-odata-feeds) on lists. 
+
+To find anonymous OData feeds enabled on your portal:
+
+1. Go to '{Portal Url}/_odata' (for example, `https://contoso.powerappsportals.com/_odata`) in InPrivate mode without authenticating to the portal.
+
+1. In the UI, you'll see a list of all OData feeds enabled on your portal.
+
+    ![Enabled OData feeds](media/portal-checker-analysis/enabled-odata-feeds.png "Enabled OData feeds")
+
+    > [!NOTE]
+    > The list of OData feeds on this page might be available anonymously depending on your security configuration. The next steps will help you verify the anonymous access of these feeds.
+
+1. Go to each of OData feed by browsing to the URL format {Portal URL}/_odata/{collection href value} (for example, `https://contoso.powerappsportals.com/_odata/accounts`) where collection href value is highlighted below.
+
+    ![Browse to OData feed](media/portal-checker-analysis/browse-to-enabled-odata-feeds.png "Browse to OData feed")
+
+1. If the OData field is available anonymously, it will return the data with HTTP 200 response. If the feed isn't enabled anonymously, it will return HTTP 403 response with a message “Access to OData, with the entity set name of '{table set name}', has been denied.”
+
+If you've unintended OData feed enabled on your portal anonymous, it could be because of one of these possibilities:
+
+1. By not securing list on which OData feed is enabled as described in [Secure your Lists](../configure/entity-lists.md#securing-lists) article.
+
+    - To fix this problem, secure the list as described in the [Secure your Lists](../configure/entity-lists.md#securing-lists) article, and use appropriate table permissions and web roles to provide access to users.
+
+    - You can also find the lists that aren't secured through Portal Checker as described in the above mentioned article.
+
+1. By securing lists, creating appropriate table permissions to the tables used in lists, and assigning those table permissions to anonymous web role.
+
+    - To fix this problem, ensure that the table permissions assigned to **Anonymous** web role are updated to ensure that only intended data is made available anonymously.
 
 ## Portal doesn't load and displays a generic error page (Server Error in "/" application) 
 
@@ -119,7 +204,7 @@ Apart from each table being enabled for change tracking, organizations on a whol
 
 You may see a *Page Not Found* error message that appears different from the default error page content on the **Page Not Found** site marker and webpage.
 
-![Page Not Found](media/page-not-found.png "Page Not Found")
+![Page Not Found.](media/page-not-found.png "Page Not Found")
 
 This *Page Not Found* error appears if: 
 

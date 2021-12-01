@@ -7,6 +7,7 @@ ms.service: powerapps
 ms.custom: "intro-internal"
 ms.topic: "article"
 author: "KumarVivek" # GitHub ID
+ms.subservice: mda-developer
 ms.author: "kvivek" # MSFT alias of Microsoft employees only
 manager: "shilpas" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -21,7 +22,7 @@ Web resources are *virtual files* that are stored in the Microsoft Dataverse dat
 
 > [!NOTE]
 > IFRAMEing content that is behind an authentication boundary is not supported through web resources or Power Apps component framework. Some embedded IFRAMEs might work in a browser client if the user directly logs into the external service, but this is not supported in mobile or tablet applications.
-The specific scenario of embedding a form within an IFRAME, embedded in another form, is not supported. We recommend the use of [form as a component](../../maker/model-driven-apps/form-component-control.md) for such scenarios.<p/>Use of [Power Apps component framework](../component-framework/overview.md) is encouraged to build reusable and more tighter external IFRAME based integrations. More information: [IFRAME component](../component-framework/sample-controls/iframe-control.md)
+The specific scenario of embedding a form within an IFRAME, embedded in another form, is not supported. We recommend the use of [form as a component](../../maker/model-driven-apps/form-component-control.md) for such scenarios.<p/>In general, use of [Power Apps component framework](../component-framework/overview.md) and [custom pages](../../maker/model-driven-apps/model-app-page-overview.md) is encouraged to build configurable, reusable and more tighter external ntegrations. More information: [IFRAME component](../component-framework/sample-controls/iframe-control.md)
 
 
 <a name="BKMK_CapabilitiesOfWebResources"></a>   

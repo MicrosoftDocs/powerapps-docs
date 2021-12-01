@@ -5,6 +5,7 @@ author: mduelae
 ms.service: powerapps
 ms.topic: overview
 ms.date: 11/16/2018
+ms.subservice: end-user
 ms.author: mkaur
 manager: "kvivek"
 ms.custom: ""

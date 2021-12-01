@@ -7,6 +7,7 @@ ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 10/25/2019
+ms.subservice: end-user
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
@@ -35,7 +36,7 @@ You may occasionally run across issues that require consultation with your admin
 6. Enter **System Administrator** in the box that says **Enter Text**. At this point, your screen should look like this:  
      
    > [!div class="mx-imgBorder"]
-   > ![Advanced Find dialog box](media/find-admnistrator-advanced-find-complete.png "Advanced Find dialog box")  
+   > ![Advanced Find dialog box.](media/find-admnistrator-advanced-find-complete.png "Advanced Find dialog box")  
   
 7. Choose the **Results** button on the ribbon.  
   

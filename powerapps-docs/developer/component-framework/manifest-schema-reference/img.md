@@ -2,6 +2,7 @@
 title: Image Element | Microsoft Docs
 description: The img web resource allows you to add images for the code components.
 keywords:
+ms.subservice: pcf
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek

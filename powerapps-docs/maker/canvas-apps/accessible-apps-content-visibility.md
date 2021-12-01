@@ -5,7 +5,8 @@ author: tahoon-ms
 ms.service: powerapps
 ms.topic: article
 ms.custom: canvas
-ms.date: 02/18/2021
+ms.date: 08/12/2021
+ms.subservice: canvas-maker
 ms.author: tahoon
 search.audienceType:
   - maker
@@ -27,7 +28,7 @@ In most cases, all users should be able to access all content, but you might occ
 
 ## Hide content from sighted users and show it to screen-reader users
 
-Use any of these techniques:
+Use one or more techniques listed below:
 
 * Set **[Size](controls/properties-text.md)** to 0.
 * Set **[Width](controls/properties-size-location.md)** and **[Height](controls/properties-size-location.md)** to 1.

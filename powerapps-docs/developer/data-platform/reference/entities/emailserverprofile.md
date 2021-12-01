@@ -1,13 +1,13 @@
 ---
 title: "EmailServerProfile table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the EmailServerProfile table/entity."
-ms.date: 05/20/2021
+ms.date: 10/05/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -246,14 +246,14 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### ExchangeVersion Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Exchange 2007|
-|1|Exchange 2007 SP1|
-|2|Exchange 2010|
-|3|Exchange 2010 SP1|
-|4|Exchange 2010 SP2|
-|5|Exchange 2013|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Exchange 2007||
+|1|Exchange 2007 SP1||
+|2|Exchange 2010||
+|3|Exchange 2010 SP1||
+|4|Exchange 2010 SP2||
+|5|Exchange 2013||
 
 
 
@@ -271,13 +271,13 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IncomingAuthenticationProtocol Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Auto Detect|
-|1|Negotiate|
-|2|NTLM|
-|3|Basic|
-|4|OAuth|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Auto Detect||
+|1|Negotiate||
+|2|NTLM||
+|3|Basic||
+|4|OAuth||
 
 
 
@@ -295,16 +295,16 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IncomingCredentialRetrieval Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Credentials Specified by a User or Queue|
-|1|Credentials Specified in Email Server Profile|
-|2|Server to Server Authentication|
-|3|Windows Integrated Authentication|
-|4|Without Credentials (Anonymous)|
-|5|Gmail OAuth|
-|6|Exchange Hybrid Modern Auth (HMA)|
-|7|Azure Active Directory OAuth|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Credentials Specified by a User or Queue||
+|1|Credentials Specified in Email Server Profile||
+|2|Server to Server Authentication||
+|3|Windows Integrated Authentication||
+|4|Without Credentials (Anonymous)||
+|5|Gmail OAuth||
+|6|Exchange Hybrid Modern Auth (HMA)||
+|7|Azure Active Directory OAuth||
 
 
 
@@ -370,8 +370,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IncomingUseImpersonation Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -409,8 +409,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IncomingUseSSL Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -448,10 +448,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### LastAuthorizationStatus Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Failure|
-|1|Success|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Failure||
+|1|Success||
 
 
 
@@ -485,11 +485,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### LastTestExecutionStatus Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Failure|
-|1|Success|
-|2|Warning|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Failure||
+|1|Success||
+|2|Warning||
 
 
 
@@ -569,10 +569,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### LastTestValidationStatus Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Failure|
-|1|Success|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Failure||
+|1|Success||
 
 
 
@@ -638,8 +638,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### MoveUndeliveredEmails Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -709,13 +709,13 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### OutgoingAuthenticationProtocol Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Auto Detect|
-|1|Negotiate|
-|2|NTLM|
-|3|Basic|
-|4|OAuth|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Auto Detect||
+|1|Negotiate||
+|2|NTLM||
+|3|Basic||
+|4|OAuth||
 
 
 
@@ -733,8 +733,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### OutgoingAutoGrantDelegateAccess Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -756,16 +756,16 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### OutgoingCredentialRetrieval Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Credentials Specified by a User or Queue|
-|1|Credentials Specified in Email Server Profile|
-|2|Server to Server Authentication|
-|3|Windows Integrated Authentication|
-|4|Without Credentials (Anonymous)|
-|5|Gmail OAuth|
-|6|Exchange Hybrid Modern Auth (HMA)|
-|7|Azure Active Directory OAuth|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Credentials Specified by a User or Queue||
+|1|Credentials Specified in Email Server Profile||
+|2|Server to Server Authentication||
+|3|Windows Integrated Authentication||
+|4|Without Credentials (Anonymous)||
+|5|Gmail OAuth||
+|6|Exchange Hybrid Modern Auth (HMA)||
+|7|Azure Active Directory OAuth||
 
 
 
@@ -831,8 +831,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### OutgoingUseImpersonation Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -870,8 +870,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### OutgoingUseSSL Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -951,8 +951,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### SendEmailAlert Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -974,13 +974,13 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### ServerType Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Exchange Server|
-|1|Other (POP3/SMTP)|
-|2|Exchange Server (Hybrid)|
-|3|Exchange Online (Hybrid)|
-|4|IMAP/SMTP|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Exchange Server||
+|1|Other (POP3/SMTP)||
+|2|Exchange Server (Hybrid)||
+|3|Exchange Online (Hybrid)||
+|4|IMAP/SMTP||
 
 
 
@@ -1041,8 +1041,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### TimeoutMailboxConnection Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -1096,8 +1096,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### UseAutoDiscover Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -1119,8 +1119,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### UseDefaultTenantId Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -1142,8 +1142,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### UseSameSettingsForOutgoingConnections Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -1421,8 +1421,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsIncomingPasswordSet Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -1444,8 +1444,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsOauthClientSecretSet Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -1467,8 +1467,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsOutgoingPasswordSet Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 

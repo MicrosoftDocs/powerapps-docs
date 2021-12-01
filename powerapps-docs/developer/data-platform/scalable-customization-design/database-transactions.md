@@ -47,7 +47,7 @@ Let’s consider SQL Server database locking and the impact of separate requests
  
 The example shows the consequences  when an account update process has complex post processing while other activity also interacts with the same account record. If an asynchronous workflow is processed while the account update transaction is still in progress, this workflow could be blocked waiting to obtain an update lock to change the same account record, which is still locked.
 
-![locking and transactions example](media/locking-and-transactions-example.png)
+![locking and transactions example.](media/locking-and-transactions-example.png)
 
 It should be noted that transactions are only held within the lifetime of a particular request to the platform. 
 Locks aren’t held at a user session level or while information is being shown in the user interface. As soon as the platform has completed the request, it releases the database connection, the related transaction, and any locks it has taken. 
@@ -61,7 +61,7 @@ For example, when each account is given a unique reference number it may lead to
 
 While the first request to grab the auto-number resource lock can easily be completed, the second request will need to wait for the first to complete before it can check what the next unique reference number is. The third request will have to wait for both the first and second requests to complete. The more requests there are, the longer blocking will occur. If there are enough requests, and each request takes long enough, this can push the later requests to the point that they time out, even though individually they may complete correctly.
 
-![blocking example](media/blocking.png)
+![blocking example.](media/blocking.png)
 
 ## Lock release
 
@@ -75,7 +75,7 @@ As will be shown later, this also includes related customizations that work with
 
 In the following example, the write lock on a custom entity in the pre create plug-in for an account is locked until all logic tied to the creation of the account is completed.
 
-![lock release](media/lock-release.png)
+![lock release.](media/lock-release.png)
 
 ## Intermittent errors: timing
 
@@ -102,13 +102,13 @@ Before understanding how customizations interact with the platform, it is useful
 |Forms (Retrieve)|&bull; Takes a read lock on the record shown.<br />&bull; Low impact on other uses.|
 |Create|&bull; Performs a create request through the platform<br />&bull; Low impact on other activities, as a new record nothing else blocking on it<br />&bull; Can potentially block locking queries to the whole table until it is complete.<br />&bull; Often can trigger related actions in customization which can have an impact.|
 |Update|&bull; Performs an update request through the platform.<br />&bull; More likely to have conflicts. An update lock will block anything else updating or reading that record. Also blocks anything taking a broad read lock on that table.<br />&bull; Often triggers other activities.|
-|View (RetrieveMultiple)|&bull; Would think this would block lots of other activity.<br />&bull; But deliberately passes `nolock` hints to queries<br />&bull; So typically does not lock other activities.<br />&bull; Although poor query optimization can affect DB resource usage and possibly hit timeouts.|
+|View (RetrieveMultiple)|&bull; Would think this would block lots of other activity.<br />&bull; Although poor query optimization can affect DB resource usage and possibly hit timeouts.|
 
 ## Event pipeline: platform step
 
 When an event pipeline is initiated, a SQL transaction is created to include the platform step. This ensures that all database activity performed by the platform is acted on consistently. The transaction is created at the start of the event pipeline and either committed or aborted when the processing is completed, depending on whether it was successful. 
 
-![event pipeline platform step](media/event-pipeline-platform-step.png)
+![event pipeline platform step.](media/event-pipeline-platform-step.png)
 
 ## Customization requests
 
@@ -130,13 +130,13 @@ It’s also possible to participate in the platform initiated transaction within
 
 When plug-ins are registered for an event, they can be registered against a **PreOperation** or **PostOperation** stage that is within the transaction. Any message requests from the plug-in will be performed within the transaction. This means the lifetime of the transaction, and any locks taken, will be extended.
 
-![Sync plug-ins (pre or post operation: in transaction context)](media/sync-plug-ins-pre-or-post-operation-in-transaction-context.png)
+![Sync plug-ins (pre or post operation: in transaction context).](media/sync-plug-ins-pre-or-post-operation-in-transaction-context.png)
 
 ### Sync plug-ins (pre and post operation: in transaction context)
 
 Plug-ins can be registered against both the **PreOperation** and **PostOperation** stages. In this case the transaction can extend even further because it will extend from the start of the **PreOperation** plug-in until the **PostOperation** plug-in completes.
 
-![Sync plug-ins (pre and post operation: in transaction context)](media/sync-plug-ins-pre-and-post-operation-in-transaction-context.png)
+![Sync plug-ins (pre and post operation: in transaction context).](media/sync-plug-ins-pre-and-post-operation-in-transaction-context.png)
 
 ### Sync plug-ins (**PreValidation**: outside transaction context)
 
@@ -145,7 +145,7 @@ A plug-in can also be registered to act outside of the platform transaction by b
 > [!NOTE]
 > It does NOT create its own transaction. As a result, each message request within the plug-in is acted upon independently within the database.
 
-![Sync plug-ins (**PreValidation**: outside transaction context)](media/sync-plug-ins-pre-validation-outside-transaction-context.png)
+![Sync plug-ins (**PreValidation**: outside transaction context).](media/sync-plug-ins-pre-validation-outside-transaction-context.png)
 
 This scenario only applies when the **PreValidation** is called as the first stage of a pipeline event . Even though the plug-in is registered on the **PreValidation** stage, it is possible it will participate in a transaction as the next section describes. It can’t be assumed that a **PreValidation** plug-in doesn’t participate in a transaction, although it is possible to check from the execution context if this is the case.
 
@@ -157,7 +157,7 @@ As the following diagram shows, creating an account can cause a **PreValidation*
 
 In that case, the **PreValidation** plug-in will discover that a transaction already exists and so will participate in that transaction even though it’s registered on the **PreValidation** stage. 
 
-![Sync plug-ins (**PreValidation**: in transaction context)](media/sync-plug-ins-pre-validation-in-transaction-context.png)
+![Sync plug-ins (**PreValidation**: in transaction context).](media/sync-plug-ins-pre-validation-in-transaction-context.png)
 
 As previously mentioned, the plug-in can check the execution context for the <xref:Microsoft.Xrm.Sdk.IExecutionContext.IsInTransaction> property, which will indicate if this plug-in is performing within a transaction or not.
 
@@ -168,7 +168,7 @@ A plug-in can also be registered to act asynchronously. In this case, the plug-i
 > [!NOTE]
 > The plug-in doesn’t create its own transaction; each message request within the plug-in is acted upon independently.
 
-![foo](media/async-plug-ins.png)
+![foo.](media/async-plug-ins.png)
 
 
 ### Plug-in transaction use summary
@@ -190,7 +190,7 @@ To summarize:
 
 From the perspective of transactions, synchronous workflows act as pre/post operation plug-ins. They therefore act within the platform pipeline transaction and can have the same effect on the length of the overall transaction.
 
-![Synchronous workflows](media/synchronous-workflows.png)
+![Synchronous workflows.](media/synchronous-workflows.png)
 
 ### Asynchronous workflows
 
@@ -201,7 +201,7 @@ Asynchronous workflows are triggered outside of the platform transaction.
 
 The following diagram shows the asynchronous workflow acting outside of the platform transaction and each step initiating its own independent transaction.
 
-![Asynchronous workflows](media/asynchronous-workflows.png)
+![Asynchronous workflows.](media/asynchronous-workflows.png)
 
 ### Custom workflow activity
 
@@ -212,7 +212,7 @@ Custom workflow activities act within the parent workflow context.
 
 The following diagram shows custom activities first acting within a synchronous workflow and then within an asynchronous workflow.
 
-![Custom workflow activity](media/custom-workflow-activity.png)
+![Custom workflow activity.](media/custom-workflow-activity.png)
 
 ### Custom actions
 
@@ -224,7 +224,7 @@ Custom actions can create their own transactions. This is a key feature. A custo
 - Enable Rollback not set
     - The custom action won’t act within a transaction.
 
-![custom actions](media/custom-actions.png)
+![custom actions.](media/custom-actions.png)
 
 ### Web service requests
 
