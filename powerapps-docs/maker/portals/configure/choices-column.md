@@ -1,11 +1,11 @@
 ﻿---
 title: Configure choices column for portal
-description: Learn how to add and configure Dataverse choices column on portal lists, forms and templates.
+description: Learn how to add and configure Dataverse choices column on portal lists, forms, and templates.
 author: GitanjaliSingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/18/2021
+ms.date: 12/01/2021
 ms.subservice: portals
 ms.author: nabha
 ms.reviewer: ndoelman
@@ -15,7 +15,9 @@ contributors:
 
 # Configure choices column on portals (preview)
 
-Makers can design [basic forms](entity-forms.md) and [advanced forms](web-form-properties.md) to include [choices columns](../../data-platform/types-of-fields#choices) defined in Microsoft Dataverse to provide ability for portal users to select multiple options while submitting data, and display views with choices columns through [lists](entity-lists.md).
+Makers can design [basic forms](entity-forms.md) and [advanced forms](web-form-properties.md) to include [choices columns](../../data-platform/types-of-fields#choices) defined in Microsoft Dataverse to provide the ability for portal users to select multiple options while submitting data, and display views with choices columns through [lists](entity-lists.md).
+
+<!-- ND - Do we have a screen shot to add here? -->
 
 ## Allow Read access to a Web Resource table
 
@@ -45,7 +47,7 @@ To configure read access on the web resource table:
 
 1. Select the web role for the users that should see the code component in portals.
 
-For example, **Anonymous Users** for anonymous users, **Authenticated Users** for users authenticated by portals, or a custom web role.
+    For example, **Anonymous Users** for anonymous users, **Authenticated Users** for users authenticated by portals, or a custom web role.
 
 1. Select **Save & Close**.
 
@@ -53,18 +55,18 @@ Once you add the basic form to a webpage, users assigned to the selected web rol
 
 ## Basic forms and advanced forms
 
-Maker can design the advanced form step in portal website using Dataverse form having the choices column to support selection of multiple option. Portal users can insert, modify, or clear the selection. More details on [basic forms](entity-forms.md) and [advanced forms](web-form-properties.md) configuration available in respective documentation
+Maker can design the advanced form step in portal website using Dataverse form having the choices column to support selection of multiple options. Portal users can insert, modify, or clear the selection. More details on [basic forms](entity-forms.md) and [advanced forms](web-form-properties.md) configuration available in respective documentation
 
 ## List
 
-Choices column defined in Dataverse view to display the multiple option selected for the record in a list. Choices column support quick search by typing keyword to filter the list.
+Choices column defined in Dataverse view to display the multiple options selected for the record in a list. Choices column support quick search by typing keyword to filter the list.
 
-> [!Note]
+> [!NOTE]
 > Sorting [list](entity-lists.md) by choices column is not supported.
 
 ## Liquid
 
-Pro-Dev user can design the website using liquid script to retrieve the records from Dataverse table. Choices column support available while querying the data using fetchXML and entity view.
+Developers can design the website using Liquid to retrieve the records from a Dataverse table. Choices column support available while querying the data using fetchXML and entity view.
 
 ```html
 {% for choice in record.ChoicesColumn %}
@@ -99,15 +101,44 @@ Contact table values
 
 Retrieve Selected Options using FetchXML
 
-| {% fetchxml contacts %}</br>&lt;fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="false"&gt;</br>&lt;entity name="contact"&gt;</br>&lt;attribute name="firstname" /&gt;</br>&lt;attribute name="lastname" /&gt;</br>&lt;attribute name="sample_outdooractivities " /&gt;</br>&lt;/entity&gt;</br>&lt;/fetch&gt;</br>{% endfetchxml %}</br>{% for item in contacts.results.entities %}</br>{</br>"First Name":"{{ item.firstname }}",</br>"Last Name":"{{ item.lastname }}",</br>"Outdoor Activities": [</br>{% for choice in item. sample_outdooractivities %}</br>{{choice.Label}},</br>{% endfor %}</br>]</br>}</br>{% endfor %} |
-|-------------------------|
-
-
+```html
+{% fetchxml contacts %}
+    <fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="false">
+        <entity name="contact">
+            <attribute name="firstname" >
+            <attribute name="lastname" >
+            <attribute name="sample_outdooractivities" >
+        </entity>
+    </fetch>
+{% endfetchxml %}
+{% for item in contacts.results.entities %}
+{
+    "First Name":"{{ item.firstname }}",
+    "Last Name":"{{ item.lastname }}",
+    "Outdoor Activities": [
+        {% for choice in item.sample_outdooractivities %}
+            {{choice.Label}},
+        {% endfor %}
+    ]
+}
+{% endfor %}
+```
 Retrieve Selected Options using Entity View
 
-| {% entitylist id:page.adx_entitylist.id %}</br>{% for e in entityview.records -%}</br>{</br>"First Name":"{{ e.firstname }}",</br>"Last Name":"{{ e.lastname }}",</br>"Outdoor Activities": [</br>{% for choice in e. sample_outdooractivities %}</br>{{choice.Label}},</br>{% endfor %}</br>]</br>}</br>{% endfor -%} |
-|-------------------------|
-
+```html
+{% entitylist id:page.adx_entitylist.id %}
+{% for e in entityview.records -%}
+    {
+    "First Name":"{{ e.firstname }}",
+    "Last Name":"{{ e.lastname }}",
+    "Outdoor Activities": [
+    {% for choice in e. sample_outdooractivities %}
+        {{choice.Label}},
+    {% endfor %}
+    ]
+    }
+{% endfor -%}
+```
 
 ## Web api 
 
@@ -115,45 +146,38 @@ Choices column supports [Web API](https://docs.microsoft.com/en-us/powerapps/mak
 
 <u>Read</u>
 
-GET \[Portal URI\]/\_api/contacts?$select=fullname,sample\_outdooractivities &$top=1
+`GET \[Portal URI\]/\_api/contacts?$select=fullname,sample\_outdooractivities &$top=1`
 
 Response –
 
+```html
 {
-
 "value": \[
-
-{
-
-"@odata.etag": "W/\\"1066412\\"",
-
-"fullname":" Quinn Yarborough ",
-
-"sample\_outdooractivities ":"1,9",
-
-"sample\_outdooractivities @OData.Community.Display.V1.FormattedValue":"Swimming, Camping"
-
+    {
+    "@odata.etag": "W/\\"1066412\\"",
+    "fullname":" Quinn Yarborough ",
+    "sample\_outdooractivities ":"1,9",
+    "sample\_outdooractivities @OData.Community.Display.V1.FormattedValue":"Swimming, Camping"
+    }
+    \]
 }
-
-\]
-
-}
+```
 
 <u>Create / Edit</u>
 
 Method – PATCH / PUT
 
-\[Portal URI\]/\_api/contacts (guid)
+`\[Portal URI\]/\_api/contacts (guid)`
 
 Body –
 
+```html
 {
-
 "sample\_outdooractivities": "1,4,8",
-
 }
+```
 
-> [!Note]
-> Choices control on basic and advanced form support default theme. If you are using any of the [preset theme](../theme-overview.md) defined in Portal studio, your starter portal package must be 9.2.2112.x or higher
+> [!NOTE]
+> Choices control on basic and advanced form support default theme. If you are using any of the [preset theme](../theme-overview.md) defined in portals Studio, your starter portal package must be 9.2.2112.x or higher
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
