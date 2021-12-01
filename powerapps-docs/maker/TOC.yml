@@ -1125,6 +1125,8 @@
       href: ./canvas-apps/performance-tips.md
     - name: Canvas apps coding standards and guidelines
       href: https://aka.ms/powerappscanvasguidelines
+  - name: Important changes and deprecations
+    href: ./canvas-apps/important-changes-deprecations.md
 - name: Model-driven apps
   items:
   - name: Model-driven apps
