@@ -5,13 +5,12 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/26/2021
+ms.date: 11/29/2021
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
 contributors:
     - neerajnandwana-msft
-    - nickdoelman
     - nickdoelman
 ---
 
@@ -89,7 +88,7 @@ CLI. For more information, see [Supported tables](power-apps-cli.md#supported-ta
 
 For example, the default portal page shows text such as this:
 
-![Sample portals page text.](media/power-apps-cli/sample-page.png "Sample portals page text")
+:::image type="content" source="media/power-apps-cli/sample-section.png" alt-text="Sample portals page text":::
 
 This text is visible from the webpage html:
 
@@ -179,7 +178,7 @@ To confirm the changes made to the portal webpage:
 
 1. Browse to the portal webpage to see the change.
 
-    ![View updated page content.](media/power-apps-cli/changed-page.png "View updated page content")
+    :::image type="content" source="media/power-apps-cli/changed-section.png" alt-text="View updated page content.":::
 
 1. If you've used deployment profile example [explained previously](#upload-the-changes-using-deployment-profile), the YAML snippet will update the value as shown below.
 
