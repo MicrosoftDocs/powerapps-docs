@@ -27,9 +27,9 @@ search.app:
 
 # Configure a lookup component on a form  
 
-Lookups helps a user to choose row(s) from a **related** table and is automatically added when a lookup column is added to a form.
+Lookups help a user choose records from a **related** table. A lookup component is automatically added when a lookup column is added to a form.
 
-For example we might pick the account that relates to a sales invoice.
+For example, using a lookup component, you can open an account record that relates to a sales invoice record.
 
 :::image type="content" source="../../user/media/automatically-populate-matching-records.png" alt-text="Using a lookup column":::
 
@@ -37,7 +37,7 @@ For example we might pick the account that relates to a sales invoice.
 
 ## Configure a lookup component
 
-Makers can configure a lookup component using the form designer.
+Makers configure a lookup component using the form designer.
 
 These are the properties available to configure when using a lookup component on a form using the form designer.
 
@@ -49,7 +49,7 @@ These are the properties available to configure when using a lookup component on
 | **Display options** | **Show all views** |  When selected, app users can change from the **Default view** to all other views of the table selected in the **Table** property. <br /><br />This property is only available when **Allow users to change view** is selected. |
 | **Display options** | **Selected views** |  A list of views of the table selected in the **Table** property that app users can change to from the **Default view**. <br /><br />This property is only available when **Allow users to change view** is selected and **Show all views** is unselected. |
 
-The options manifest themselves within the app designer in the following way.
+Options for a lookup component as they appear in the form designer. 
 
 :::image type="content" source="../../maker/model-driven-apps/media/configure-lookup-component.png" alt-text="Advanced Settings":::
 
