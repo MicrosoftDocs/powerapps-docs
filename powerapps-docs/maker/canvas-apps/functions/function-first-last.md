@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 contributors:
   - gregli-msft
-  - nkrb
+  - tapanm-msft
 ---
 # First, FirstN, Last, and LastN functions in Power Apps
 Returns a table's first or last set of [records](../working-with-tables.md#records).

@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 contributors:
   - gregli-msft
-  - nkrb
+  - tapanm-msft
 ---
 # RecordInfo function in Power Apps
 Provides information about a [record](../working-with-tables.md#elements-of-a-table) of a [data source](../working-with-data-sources.md).

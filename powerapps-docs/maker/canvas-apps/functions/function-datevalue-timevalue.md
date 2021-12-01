@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 contributors:
   - gregli-msft
-  - nkrb
+  - tapanm-msft
 ---
 # DateValue, TimeValue, and DateTimeValue functions in Power Apps
 

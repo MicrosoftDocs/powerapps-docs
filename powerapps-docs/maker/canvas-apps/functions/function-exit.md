@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 contributors:
   - gregli-msft
-  - nkrb
+  - tapanm-msft
 ---
 # Exit function in Power Apps
 Exits the currently running app and optionally signs out the current user.

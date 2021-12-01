@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 contributors:
   - gregli-msft
-  - nkrb
+  - tapanm-msft
 ---
 # Update and UpdateIf functions in Power Apps
 Updates [records](../working-with-tables.md#records) in a [data source](../working-with-data-sources.md).
