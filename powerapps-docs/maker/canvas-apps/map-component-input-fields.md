@@ -104,29 +104,28 @@ Below animation shows the example of component added to the app that shows the s
 
 ## Map tables
 
-, and [ForAll()](functions/function-forall.md) function for a table of records.
+Use [ForAll()](functions/function-forall.md) function to map a table of records with the component.
 
+For example, at the end of the [map columns](#map-columns) example, you can use the **ForAll()** function to map the entire table with the specific columns to point to the fields from the component for each row:
 
-Not recommended method
-----------------------
+```powerapps-dot
+ForAll(IceCreams,{Flavor:FlavorName,UnitPrice:Price,QuantitySold:SaleNumber})
+```
 
-The data field selection dropdown is for mapping input fields with the
-definition schema. When there is a component which has a record or table type of
-input property in the screen and your input a record or table for the input, you
-can find the data field selection dropdowns in the advanced property pane shown
-below.
+:::image type="content" source="media/map-component-input-fields/map-table-forall.png" alt-text="Map table using ForAll() function for all records.":::
 
-Few people have used it. By default, the selection assigns fields quietly. This
-has caused confusions. As the example below, it assigned the same field to each
-expected field by default. Not knowing where to change it and why it’s assigned
-by default both are very frustrating behaviors. In this blog, we also have some
-recommendations of how to do the input mapping whiling giving the input.
+## Map using dropdown (deprecated)
 
-![Graphical user interface, application Description automatically generated](media/54d4845b50a0339ac3d457ac356006b1.png)
+You can use the **Advanced** tab for a component added to an app that expects input property of table or record type and select the field mappings using the dropdown option. This mapping is assigned by default, and unless you manually select the appropriate mapping fields, the mapping may yield unexpected results.
 
-The current implementation of the feature will be phased out. This starts by
-introducing the switch in Settings \> Upcoming features \> Retired \> XXXX. For
-now, all new apps will have this set to *off by default*. All existing apps will
-have this switch set to *on by default*. The apps with this feature will
-continue to work. You will be able to turn on the feature again for new apps,
-however this is discouraged at this time. 
+For example, in the following illustration, the formula is updated to rename columns. The component on screen doesn't change field mapping since the default field selection using this dropdown needs to be updated manually.
+
+:::image type="content" source="media/map-component-input-fields/deprecated-dropdown.gif" alt-text="Deprecated method to select field mapping using dropdown in advanced property section of a component added to an app.":::
+
+This method of selecting the mapping using the dropdown has been deprecated. Instead, use the [column](#map-columns), [record](#map-records), or [table](#map-tables) mapping methods as described earlier in this article.
+
+You can still use the dropdown option to choose mapping for existing apps, though not recommended. For new apps, this option will be unavailable by default. To turn this deprecated capability on or off, go to **Settings** > **Upcoming features** > **Retired**, and choose **Name**.
+
+### See also
+
+[Behavior formulas for components](component-behavior.md)
