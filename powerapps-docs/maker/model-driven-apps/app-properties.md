@@ -26,11 +26,13 @@ search.app:
   - D365CE
 ---
 
-# Manage model-driven app properties in the app designer
+# Manage model-driven app properties in the app designer (preview)
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 App properties define important details about the app, like its title. You define app properties when you create an app. If you want to change those properties later, you can do that in the app designer.  
   
-1. In the app designer, on the left side, select the **App** in the pages section. Or alternatively, select **Settings** in the command bar.
+1. In the app designer, on the left pane, select **App** under the **Pages** section. Or alternatively, select **Settings** on the command bar.
 
     > [!div class="mx-imgBorder"]
     > ![App designer Properties pane](media/model-driven-app-properties.png "App designer Properties pane")  
@@ -44,9 +46,9 @@ App properties define important details about the app, like its title. You defin
 
 3. Save the app.  
 
-## Known Limitations
+## Known limitations
 
-The following app properties cannot be edited in the app designer:
+The following app properties can't be edited in the app designer:
 
 - Icon
 - Unique Name
@@ -57,7 +59,7 @@ The following app properties cannot be edited in the app designer:
 - Mobile Offline Profiles
 
 > [!TIP]
-> Select **Switch to classic** to use the [classic designer to change the app design properties](manage-app-properties.md) that aren't currently available in the designer.
+> Select **Switch to classic** to use the [classic designer to change the app design properties](manage-app-properties.md) that aren't currently available in the modern app designer.
   
 ## Next steps
 
