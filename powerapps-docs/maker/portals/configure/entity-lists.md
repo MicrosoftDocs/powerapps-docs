@@ -300,7 +300,7 @@ This page can be a completely customized page template, perhaps created by using
 
 The important thing to be aware of is that each record listed in the grid will have a hyperlink to the details page, and the link will contain a named query string parameter with the ID of the record. The name of the query string parameter depends on the **ID Query String Parameter Name** value specified on the list. The final thing to note is that the targeted details webpage must also be aware of the name of this query string parameter to get the ID of the record that it needs to query and load its data.
 
-> [!Note]
+> [!NOTE]
 > The **Web Page for Details view** is a default setting configured for a list. The hyperlink on the grid will navigate to the default web page if the list is not configured using the **View** or **Edit** action settings in the **Grid Configuration** section on the **Options** tab. If either of the **View** or **Edit** action settings are configured with target type as a basic form, clicking the hyperlink in the list grid will open a dialog.
 
 ![Add view details page.](../media/add-view-details-page.png "Add view details page")  
