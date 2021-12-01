@@ -165,6 +165,18 @@ conceptualContent:
         url: /powerapps/learning-catalog/learning-catalog
         text: More
 
+    - title: Power Apps mobile
+      links:
+        - text: Run apps on Power Apps mobile
+          url: /powerapps/mobile/run-powerapps-on-mobile
+          itemType: overview
+        - text: User guide for model-driven app running on Power Apps mobile
+          url: /powerapps/mobile/use-custom-model-driven-app-on-mobile
+          itemType: how-to-guide 
+        - text: Configure mobile offline
+          url: /powerapps/mobile/setup-mobile-offline
+          itemType: how-to-guide     
+
 # additionalContent section (optional)
 # Card with summary style
 additionalContent:
