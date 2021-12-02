@@ -129,14 +129,13 @@ If an environment variable is used in a flow and the display name of the environ
 
 - SharePoint Online is currently the only data source supported for environment variables of type "data source" within canvas apps. However, the Dataverse connector will be updated soon for when connectivity is required to Dataverse environments other than the current environment. Other types of environment variables may be used within canvas apps by retrieving them as you would record data via a Dataverse connection.
 - If you’re using environment variables for storing SharePoint data source parameters in canvas apps, ensure you use **Display Name** (instead of logical name, or ID) when using "Lookup" or "Person or group" column types.
-- Using environment variables within triggers in Power Automate is currently only supported for a limited set of connectors. Supported connecters for triggers are SharePoint, Dataverse, and SQL server.
 - When environment variable values are changed directly within an environment instead of through an ALM operation like solution import, flows will continue using the previous value until the flow is either saved or turned off and turned on again.  
 - Validation of environment variable values happens within the user interfaces and within the components that use them, but not within Dataverse. Therefore ensure proper values are set if they're being modified through code. 
 - [Power Platform Build Tools tasks](/power-platform/alm/devops-build-tool-tasks) are not yet available for managing data source environment variables. However, this does not block their usage within Microsoft provided tooling and within source control systems.
 - Interacting with environment variables via custom code requires an API call to fetch the values; there is not a cache exposed for 3rd party code to leverage. 
 <!--  Azure Key Vault integration for secret management. While on our roadmap, currently environment variables shouldn't be used to store secure data such as passwords and keys.
  -->
-- When editing a cloud flow, the environment variables are shown in the dynamic content selector under a heading of **Parameters** but will be under a heading of **Environment Variables** in the near future. 
+
 - When editing a cloud flow, the environment variables shown in the dynamic content selector are unfiltered, but will be filtered by data type in the future. 
 - When editing a cloud flow, if an environment variable is added in another browser tab, the flow needs to be reopened in the flow designer to refresh the dynamic content selector.
 

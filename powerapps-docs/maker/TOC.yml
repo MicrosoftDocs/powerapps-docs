@@ -1453,21 +1453,25 @@
     href: ../developer/model-driven-apps/overview.md
     # href: ../developer/model-driven-apps/TOC.yml For authoring I find having developer content buried so deep is awkward
 
-- name: Power Apps Mobile  
+- name: Power Apps mobile  
   items:
-  - name: Run apps on Power Apps Mobile
+  - name: Get started with Power Apps mobile
     href: ../mobile/run-powerapps-on-mobile.md
-  - name: Use model-driven apps on mobile
+  - name: Use model-driven apps on Power Apps mobile
     href: ../mobile/use-custom-model-driven-app-on-mobile.md
-  - name: Use Dataverse search on Power Apps Mobile  
+  - name: Use Dataverse search on Power Apps mobile  
     href: ../mobile/relevance-search-mobile.md  
   - name: Set app display to dark or light mode  
     href: ../mobile/display-mode.md
   - name: In-app notifications in Power Apps mobile (preview)
     href: ../mobile/mobile-notifications.md
-  - name: Create push notifications for Power Apps Mobile
+  - name: Configure mobile offline synchronization 
+    href: ../mobile/setup-mobile-offline.md 
+  - name: Work offline on your mobile device 
+    href: ../mobile/work-in-offline-mode.md  
+  - name: Create push notifications for Power Apps mobile
     href: ../mobile/power-apps-mobile-notification.md
-  - name: Troubleshoot issues for Power Apps Mobile
+  - name: Troubleshoot issues for Power Apps mobile
     href: ../mobile/powerapps-mobile-troubleshoot.md
   - name: 'Mobile offline'
     items:
@@ -2184,6 +2188,8 @@
           href: ./data-platform/view-component-dependencies.md
         - name: Use environment variables
           href: ./data-platform/EnvironmentVariables.md
+        - name: Use settings (preview)
+          href: ./data-platform/create-edit-configure-settings.md
         - name: Use a connection reference
           href: ./data-platform/create-connection-reference.md  
         - name: Translate customized component text
