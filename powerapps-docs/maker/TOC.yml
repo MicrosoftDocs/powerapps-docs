@@ -1473,7 +1473,14 @@
     href: ../mobile/power-apps-mobile-notification.md
   - name: Troubleshoot issues for Power Apps mobile
     href: ../mobile/powerapps-mobile-troubleshoot.md
-    
+  - name: 'Mobile offline'
+    items:
+    - name: Mobile offline overview (preview)
+      href: ../mobile/mobile-offline-overview.md
+    - name: Set up mobile offline (preview)
+      href: ../mobile/setup-mobile-offline.md 
+    - name: Set up and use offline-first (preview)
+      href: ../mobile/work-in-offline-mode.md   
 - name: Portals
   items:
     - name: Portals
