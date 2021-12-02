@@ -1,5 +1,5 @@
 ---
-title: Use Dataverse search on Power Apps Mobile| Microsoft Docs
+title: Use Dataverse search on Power Apps mobile| Microsoft Docs
 description: How to use Dataverse search for model-driven apps using your mobile app.
 author: mduelae
 ms.service: powerapps
@@ -20,7 +20,7 @@ searchScope:
   - "Power Apps"
 ---
 
-# Use Dataverse search for model-driven apps using Power Apps Mobile 
+# Use Dataverse search for model-driven apps using Power Apps mobile 
 
 
 You can quickly find the information that you're looking for by using Dataverse search. The Dataverse search experience delivers fast and comprehensive results across multiple tables, in a single list, sorted by relevance.
