@@ -139,6 +139,7 @@ The following limitations apply to the use of canvas apps, flows, and custom con
 - Flows in solutions don't support delegated authentication. For example, access to a flow is not automatically granted based on having access to the SharePoint list the flow was created from.
 - Custom connectors created outside solutions cannot be added to solutions at this time.
 - Canvas apps shared with 'Everyone' that go through environment backup and environment restore operations aren't shared with 'Everyone' in the restored environment. Notice that, the canvas app can be shared with a security group and the app in the restored environment will be shared with that security group.  
+- Flows using [connectors](https://docs.microsoft.com/en-us/connectors/connector-reference/) that are 'indexed' cannot be added into solutions. Indexing enables the quick retrieval of those flows to display in a menu or list. Indexed connectors: instant/button flows, Power Apps, Teams, SharePoint, Dynamics 365 Customer Voice, Microsoft Forms. To work around this, create a new flow in a solution.
 
 For details about customizing the individual components in a solution, see the following topics:  
   
