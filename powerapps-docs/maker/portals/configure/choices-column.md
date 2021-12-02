@@ -5,7 +5,7 @@ author: GitanjaliSingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 12/01/2021
+ms.date: 12/02/2021
 ms.subservice: portals
 ms.author: nabha
 ms.reviewer: ndoelman
@@ -15,7 +15,7 @@ contributors:
 
 # Configure choices column on portals (preview)
 
-Makers can design [basic forms](entity-forms.md) and [advanced forms](web-form-properties.md) to include [choices columns](../../data-platform/types-of-fields#choices) defined in Microsoft Dataverse to provide the ability for portal users to select multiple options while submitting data, and display views with choices columns through [lists](entity-lists.md).
+Makers can design [basic forms](entity-forms.md) and [advanced forms](web-form-properties.md) to include [choices columns](../../../data-platform/types-of-fields#choices) defined in Microsoft Dataverse to provide the ability for portal users to select multiple options while submitting data, and display views with choices columns through [lists](entity-lists.md).
 
 <!-- ND - Do we have a screen shot to add here? -->
 
@@ -142,7 +142,7 @@ Retrieve Selected Options using Entity View
 
 ## Web api 
 
-Choices column supports [Web API](https://docs.microsoft.com/en-us/powerapps/maker/portals/web-api-overview) read, create, update operations
+Choices column supports [Web API](../web-api-overview.md) read, create, update operations
 
 <u>Read</u>
 
