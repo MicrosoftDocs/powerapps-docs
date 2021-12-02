@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/29/2021
+ms.date: 12/02/2021
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
@@ -241,19 +241,6 @@ Portals Web API can't be used for the following configuration tables:
 :::column-end:::
 :::column:::
 	adx_webtemplate
-:::row-end:::
-
-## Unsupported tables
-
-Portals Web API can't be currently used for the following tables:
-
-:::row:::
-:::column:::
-	adx_portalcomment
-:::column-end:::
-:::column:::
-:::column-end:::
-:::column:::
 :::row-end:::
 
 ## Next step
