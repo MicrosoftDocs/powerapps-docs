@@ -1614,6 +1614,8 @@
           href: ./portals/configure/cors-support.md
         - name: Configure advertisements
           href: ./portals/configure/create-run-advertisement.md
+        - name: Configure choices column (preview)
+          href: ./portals/configure/choices-column.md          
         - name: Configure content snippets
           href: ./portals/configure/customize-content-snippets.md
         - name: Configure header and footer output caching

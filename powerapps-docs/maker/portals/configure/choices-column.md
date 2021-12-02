@@ -17,8 +17,6 @@ contributors:
 
 Makers can design [basic forms](entity-forms.md) and [advanced forms](web-form-properties.md) to include [choices columns](../../data-platform/types-of-fields.md#choices) defined in Microsoft Dataverse to provide the ability for portal users to select multiple options while submitting data, and display views with choices columns through [lists](entity-lists.md).
 
-<!-- ND - Do we have a screen shot to add here? -->
-
 ## Allow Read access to a Web Resource table
 
 Displaying choices control on form requires **read** permission to be set on the **Web Resource** table.
@@ -146,20 +144,20 @@ Choices column supports [Web API](../web-api-overview.md) read, create, update o
 
 <u>Read</u>
 
-`GET \[Portal URI\]/\_api/contacts?$select=fullname,sample\_outdooractivities &$top=1`
+`GET \[Portal URI]\_api/contacts?$select=fullname,sample\_outdooractivities &$top=1`
 
 Response –
 
 ```html
 {
-"value": \[
+"value": [
     {
     "@odata.etag": "W/\\"1066412\\"",
     "fullname":" Quinn Yarborough ",
     "sample\_outdooractivities ":"1,9",
     "sample\_outdooractivities @OData.Community.Display.V1.FormattedValue":"Swimming, Camping"
     }
-    \]
+    ]
 }
 ```
 
@@ -167,7 +165,7 @@ Response –
 
 Method – PATCH / PUT
 
-`\[Portal URI\]/\_api/contacts (guid)`
+`\[Portal URI]\_api/contacts (guid)`
 
 Body –
 
