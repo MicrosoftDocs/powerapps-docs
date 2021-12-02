@@ -22,7 +22,10 @@ search.app:
 
 Data Export is an add-on service made available as a Microsoft Dataverse solution that adds the ability to replicate Dataverse data to a Microsoft Azure SQL Database store in a customer-owned Microsoft Azure subscription. The supported target destinations are Microsoft Azure SQL Database and Microsoft Azure SQL Server on Microsoft Azure virtual machines. Data Export intelligently synchronizes the entire Dataverse schema and data initially and thereafter synchronizes on a continuous basis as changes occur (delta changes) in Dataverse.  
   
-The Data Export service provides an interface for managing configuration and ongoing administration of this service from within Dataverse.  For more information, see [Replicate data to Azure SQL Database](/power-platform/admin/replicate-data-microsoft-azure-sql-database). This topic explains the corresponding programmatic interface and issues for this service.  
+The Data Export service provides an interface for managing configuration and ongoing administration of this service from within Dataverse.  For more information, see [Replicate data to Azure SQL Database](/power-platform/admin/replicate-data-microsoft-azure-sql-database). This topic explains the corresponding programmatic interface and issues for this service.
+
+> [!IMPORTANT]
+> Effective November 2021, Data Export Service was deprecated. Data Export Service will continue to work and will be fully supported until it reaches end-of-support and end-of-life in November 2022. More information: [https://aka.ms/DESDeprecationBlog](https://aka.ms/DESDeprecationBlog)
   
 ## Prerequisites for using the Data Export Service  
 
