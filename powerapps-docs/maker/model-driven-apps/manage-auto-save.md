@@ -70,7 +70,7 @@ Auto-save helps app users focus on their work without having to manage saving da
 
 2.  Expand **Data**, select **Tables**, select the table that you want, and then select the **Forms** tab.
    
-    You can also make adjustments to the tables from with a [solution](../model-driven-apps/model-driven-app-glossary.md#solution).  To do this navigate to **solutions** in the side bar, then select the **table**, followed by the **forms** tab.
+    You can also make adjustments to the tables from within a [solution](../model-driven-apps/model-driven-app-glossary.md#solution).  To do this, select **Solutions** on the side pane, select the table, and then select the **Forms** tab.
   
 3.  Open the form you want to edit.
 
@@ -137,7 +137,7 @@ Auto-save helps app users focus on their work without having to manage saving da
   
     8.  If there are any other event handlers for the `OnSave` event, use the green arrows to move this one to the top.  
 
-        The **Form Properties** should display as follows.  Note in the case show below the update has taken place from within a solution and as a result the customisation prefix (dspin_) is not the same as the one provided by the default pubisher (new_) as we are using an alternate [publisher](../model-driven-apps/model-driven-app-glossary.md#publisher) for the solution.
+        The **Form Properties** should display as follows. Note in the example shown below, the update has taken place from within a solution and as a result the publisher prefix (dspin_) is not the same as the one provided by the default pubisher (new_). This is because a different [publisher](../model-driven-apps/model-driven-app-glossary.md#publisher) is used for the solution.
 
     :::image type="content" source="../../maker/model-driven-apps/media/disable-autosave-handler-complete.png" alt-text="Advanced Settings":::
   
