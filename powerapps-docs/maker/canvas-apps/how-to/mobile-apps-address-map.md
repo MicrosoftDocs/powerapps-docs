@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm-msft
-ms.date: 12/01/2021
+ms.date: 12/02/2021
 ms.author: anuitz
 search.audienceType:
   - maker
@@ -15,12 +15,12 @@ search.app:
 contributors:
     - joel-lindstrom
     - tapanm-msft
-    - 
+    - anuitz
 ---
 
 # Create an app with address input and map controls
 
-There are many scenarios where users are expected to enter addresses in an app. Historically, there have been multiple fields capturing each element of an address where the user types in the street address, city and the postal code and can select state. Entering addresses can be frustrating and error-prone, particularly in mobile scenarios.
+There are many scenarios where users are expected to enter addresses in an app. Historically, there have been multiple fields capturing each element of an address where the user types in the street address, city and the postal code, and can select state. Entering addresses can be frustrating and error-prone, particularly in mobile scenarios.
 
 The address input control presents the user with dynamic address suggestions as they type. Using fuzzy matching logic, the control suggests multiple potential address matches from which the user can select—making it quicker and easier to enter accurate addresses.
 
@@ -35,7 +35,7 @@ To use the control, you need to enable the [Geospatial Services](/../geospatial-
 - Watch this video to learn how to use the map control:
     > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLAkd]
 
-In this topic we will learn how to use the address input control in our canvas app.
+In this article, we'll learn how to use the address input control in this canvas app.
 
 ## Prerequisites
 
@@ -75,9 +75,9 @@ Your trial environment will now be created, including a Dataverse database and s
 
 ## Enable the Geospatial Services for the environment
 
-Before we can use the Geospatial Services in our apps, an admin must enable access to the features for the environment where we want to create our app.
+Before we can use the Geospatial Services in canvas apps, an admin must enable access to the features for the environment where we want to create the app.
 
-Geospatial Services require additional terms of use that must be reviewed and agreed to.
+Geospatial Services requires additional terms of use that must be reviewed and agreed to.
 
 To learn about how to enable **Geospatial services** in your environment, see [Enable the geospatial features for the environment](../geospatial-overview.md#enable-the-geospatial-features-for-the-environment).
 
@@ -144,37 +144,33 @@ In this lesson, we'll start with creating an app and then, we'll create a header
 
 ## Address Input control
 
-In this section, we will add the Address control to the app
+In this section, we'll add the **Address Input** control to the app.
 
-1.  Select Insert -\> Input -\> Address Input to add an Address Input control
-    to the screen
+1. Select **Insert** > **Input** > **Address Input** to add the control to the screen.
 
-![Select address input control](media/mobile-apps-address-map/address-input-component-1.png)
+    ![Select address input control](media/mobile-apps-address-map/address-input-component-1.png)
 
-2.  The Address Input box gets added – place it on the top right side of the
-    screen as shown below
+1. Move the control on the top-right side of the screen.
 
-![Address input box is added](media/mobile-apps-address-map/address-input-component-2.png)
+    ![Address input box is added](media/mobile-apps-address-map/address-input-component-2.png)
 
-### Features
+### Configure properties for the Address Input control
 
-In this section we will go over various properties of the address control and
-set them – there are a few Address Input specific properties as highlighted
-below
+In this section, we'll review and if necessary, set various properties of the address control. There are a few **Address Input** control-specific properties.
 
 ![Address input controls](media/mobile-apps-address-map/address-input-component-3.png)
 
 | **Property**         | **Description**                                                                                                                                                                                                                |
 |----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Search result limit  | The number of suggested addresses the control displays – we set it to 5 in our example, so not more than 5 addresses will show up in our search                                                                              |
-| Search within radius | Whether the control should suggest addresses within the user-defined **Radius** of the **Latitude** and **Longitude –** we set it to Yes in our example                                                                      |
-| Latitude             | The latitude of the center point used to geo-bias address suggestions. Requires **Search within radius** to be on – we set it to the formula Location.Latitude in our example to return the latitude of the current location   |
-| Longitude            | The longitude of the center point used to geo-bias address suggestions. Requires **Search within radius** to be on – we set it to the formula Location.Longitude in our example to return the latitude of the current location |
-| Radius               | The radius, in meters, around **Latitude** and **Longitude** to constrain the address suggestions. Requires **Search within radius** to be on – we set that to 100000 in our example                                           |
-| Language             | The language the address suggestions are returned in – we left it as the defaulted English (United States) option                                                                                                              |
-| Country set          | Comma-separated list of countries to constrain the address suggestions to, in ISO 3166 alpha-2 country codes. For example, **US, FR, KW – we set it as US in our example**                                                     |
+| Search result limit  | The number of suggested addresses the control displays. We've set it to 5 in this example, so not more than five addresses will show up in search.                                                                              |
+| Search within radius | Whether the control should suggest addresses within the user-defined **Radius** of the **Latitude** and **Longitude**. We've set it to **Yes** in this example.                                                                      |
+| Latitude             | The latitude of the center point used to geo-bias address suggestions. Requires **Search within radius** to be on. We've set it to the formula `Location.Latitude` in this example to return the latitude of the current location.   |
+| Longitude            | The longitude of the center point used to geo-bias address suggestions. Requires **Search within radius** to be on. We've set it to the formula `Location.Longitude` in this example to return the latitude of the current location. |
+| Radius               | The radius, in meters, around **Latitude** and **Longitude** to constrain the address suggestions. Requires **Search within radius** to be **On**. We've set it to 100000 in this example.                                           |
+| Language             | The language the address suggestions are returned in. We've left it with the default - "English (United States)" option.                                                                                                              |
+| Country set          | Comma-separated list of countries to constrain the address suggestions to, in ISO 3166 alpha-2 country codes. For example, US, FR, KW. We've it as US in this example.                                                     |
 
-### Output properties
+### Configure output properties for the Address Input control
 
 The control outputs various properties when a user interacts with it inside an app. You can use these outputs in other controls or to customize the experience.
 
@@ -187,7 +183,7 @@ The following table lists the output properties available.
 | SelectedLongitude           | Longitude of the user-selected address in the input field.                                                                                                                              |
 | SearchResultJson            | The search result (based on the UserInput property), displayed as a string in JSON format.                                                                                              |
 | FreeformAddress             | Selected address from the list of suggested addresses.                                                                                                                                  |
-| LocalName                   | An address control which represents the name of a geographic area or locality that groups multiple addressable objects for addressing purposes, without being an administrative unit. |
+| LocalName                   | An address control that represents the name of a geographic area or locality that groups multiple addressable objects for addressing purposes, without being an administrative unit. |
 | PostalCode                  | Postal code.                                                                                                                                                                            |
 | ExtendedPostalCode          | Extended Postal Code.                                                                                                                                                                   |
 | CountryCode                 | Country code.                                                                                                                                                                           |
@@ -202,90 +198,83 @@ The following table lists the output properties available.
 | CountrySecondarySubdivision | Country secondary subdivision.                                                                                                                                                          |
 | CountrySubdivision          | Country subdivision.                                                                                                                                                                    |
 
-Now, when we run the app and start typing an address, it will show addresses that match the entered value and are located only within 100000 meters of the current location. Also, notice that it does not show more than 5 address suggestions at a time when you start typing in the address.
+When you run the app and start typing an address, it will show addresses that match the entered value and are located only within 100,000 meters of the current location. Also, notice that it doesn't show more than five address suggestions at a time when you start typing in the address.
 
 ![Address entry](media/mobile-apps-address-map/address-input-component-4.gif)
 
-Using the above control, we will capture the address in the address fields of our form to create a new account – this is useful so that the user does not have to type in each of the address elements individually.
+Using the above control, we'll capture the address in the address fields of the form to create a new account. This step is useful so that the user doesn't have to type in each of the address elements individually.
 
-We will set the Datacard values to the appropriate property value from the address input.
+We'll set the data card values to the appropriate property value from the address input.
 
-NOTE: The default values of the datacards could be locked. To unlock them, select the data card and go to the Advanced properties and select **Unlock to change properties**
+> [!TIP]
+> The default values of the data card might be locked. To unlock them, select the data card and go to the **Advanced properties**, and then select **Unlock to change properties**.
 
 ![Unlock the control](media/mobile-apps-address-map/address-input-component-5.png)
 
-1.  Set the Address 1: Street 1 Datacard Default to AddressInput1.StreetNumber &
-    " " & AddressInput1.StreetName
+|Data card  |Value  |
+|---------|---------|
+|Address 1: Street 1     |  `AddressInput1.StreetNumber & " " & AddressInput1.StreetName`       |
+|Address 1: City     |   `AddressInput1.Municipality`      |
+|Address 1: State/Province     |   `AddressInput1.CountrySubdivision`      |
+|Address 1: Zip/Postal Code     |   `AddressInput1.PostalCode`      |
+|Address 1: Country/Region Datacard     |   `AddressInput1.Country`      |
+|Address 1: Latitude     |   `AddressInput1.SelectedLatitude`      |
+|Address 1: Longitude     |   `AddressInput1.SelectedLongitude`      |
+
+Example for **Address 1: Street 1** data card:
 
 ![Address formula](media/mobile-apps-address-map/address-input-component-6.png)
 
-2.  Set the Address 1: City Datacard Default to AddressInput1.Municipality
-
-3.  Set the Address 1: State/Province address property Default to
-    AddressInput1.CountrySubdivision
-
-4.  Set the Address 1: Zip/Postal Code Datacard Default to
-    AddressInput1.PostalCode
-
-5.  Set the Address 1: Country/Region Datacard Default to AddressInput1.Country
-
-6.  Set the Address 1: Latitude Datacard Default to
-    AddressInput1.SelectedLatitude
-
-7.  Set the Address 1: Longitude Datacard Default to
-    AddressInput1.SelectedLongitude
-
-8.  Thus, the form gets populated with all the address fields when an address is
-    selected in the Address Input control
+The form gets populated with all the address fields when an address is selected in the **Address Input** control
 
 ![Final form](media/mobile-apps-address-map/address-input-component-7.png)
 
 ## Map control
 
-In this section we will see how we can add the Map control to our app to show the selected location on the map
+In this section, we'll see how to add the **Map** control on the app to show the selected location on the map
 
-1.  Before adding the Map control, we need to create a collection to capture the address from the Address Input – this collection will be used as the data source for the Map
-    
-2.  On the OnAddressSelect property of the Address Input, enter the following formula to create a collection that captures the address data
+1. Before adding the **Map** control, we need to create a collection to capture the address from the Address Input – this collection will be used as the data source for the map.
 
-```   
-ClearCollect(
-    colSelectedAddress,
-    {
-        Street: AddressInput1.StreetNumber & " " & AddressInput1.StreetName,
-        City: AddressInput1.Municipality,
-        State: AddressInput1.CountrySubdivision,
-        Zip: AddressInput1.PostalCode,
-        Country: AddressInput1.Country,
-        Latitude: AddressInput1.SelectedLatitude,
-        Longitude: AddressInput1.SelectedLongitude
-    }
-)
-```
+    On the **OnAddressSelect** property of the **Address Input** control, enter the following formula to create a collection that captures the address data.
 
-![Map control formula](media/mobile-apps-address-map/map-component-1.png)
+    ```powerapps-dot   
+    ClearCollect(
+        colSelectedAddress,
+        {
+            Street: AddressInput1.StreetNumber & " " & AddressInput1.StreetName,
+            City: AddressInput1.Municipality,
+            State: AddressInput1.CountrySubdivision,
+            Zip: AddressInput1.PostalCode,
+            Country: AddressInput1.Country,
+            Latitude: AddressInput1.SelectedLatitude,
+            Longitude: AddressInput1.SelectedLongitude
+        }
+    )
+    ```
 
-3.  Now, click outside of the address input and select **Insert** -\> **Media** -\> **Map** to add the map control to the screen
+    ![Map control formula](media/mobile-apps-address-map/map-component-1.png)
 
-![Select map](media/mobile-apps-address-map/map-component-2.png)
+1. Select an area outside of the address input control, and select **Insert** > **Media** > **Map** to add the map control to the screen.
 
-4.  Select the collection as the data source
+    ![Select map](media/mobile-apps-address-map/map-component-2.png)
 
-![Select the control](media/mobile-apps-address-map/map-component-3.png)
+1. Select the collection as the data source.
 
-5.  Place the Map below the Address input as shown below
+    ![Select the control](media/mobile-apps-address-map/map-component-3.png)
 
-![Placew the map on the screen](media/mobile-apps-address-map/map-component-4.png)
+1. Move the map below the address input section.
 
-### Features
+    ![Place the map on the screen](media/mobile-apps-address-map/map-component-4.png)
 
-In this section we will go over the various properties of the map control and set them
+### Configure properties for the Map control
 
-Below is a list of all the input and output properties available for the Map control:
+In this section, we'll review and if necessary, set various properties of the map control.
+
+The following table lists the properties available.
 
 | **Property**                            | **Description**                                                                                                                                                                                                                                       |
 |-----------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Data source(Items)                      | Data source (table) that lists a predefined set of longitudes and latitudes to display as map pin on the map when it's loaded. Map each of the columns in your data by using the *ItemAddresses*, *ItemLongitudes*, *ItemLatitudes*, and *ItemLabels* |
+| Data source(Items)                      | Data source (table) that lists a predefined set of longitudes and latitudes to display as map pin on the map when it's loaded. Map each of the columns in your data by using the *ItemAddresses*, *ItemLongitudes*, *ItemLatitudes*, and *ItemLabels*. |
 | Use default location                    | Whether the map initializes at a default location set by the user.                                                                                                                                                                                    |
 | Default longitude                       | Longitude the map would go to when it's loaded if Use default location is enabled.                                                                                                                                                                    |
 | Default latitude                        | Latitude the map would go to when it's loaded if Use default location is enabled.                                                                                                                                                                     |
@@ -306,7 +295,7 @@ Below is a list of all the input and output properties available for the Map con
 | ItemsColors                             | Color of the pins                                                                                                                                                                                                                                     |
 | ItemsIcons                              | Icon of the pins                                                                                                                                                                                                                                      |
 | Items                                   | Name of the table in your data source that contains all the records that you want to plot in the map by using pins. Each row must have an entry for the label, longitude, and latitude for each row.                                                  |
-| OnMapClick                              | How the map responds when any location is clicked.                                                                                                                                                                                                    |
+| OnMapClick                              | How the map responds when any location is selected.                                                                                                                                                                                                    |
 | OnSelect                                | How the app responds when a map pin is selected.                                                                                                                                                                                                      |
 | OnLoad                                  | How the app responds when the map finishes loading.                                                                                                                                                                                                   |
 | OnItemsChange                           | How the app responds when the map pins change.                                                                                                                                                                                                        |
@@ -315,16 +304,16 @@ Below is a list of all the input and output properties available for the Map con
 | Show shape labels                       | Whether the labels appear on the shapes of the map.                                                                                                                                                                                                   |
 | Enable shape drawing                    | Whether the drawing tools control appears on the map.                                                                                                                                                                                               |
 | Enable shape deleting and label editing | Whether shapes can be deleted and their labels can be edited on the map.                                                                                                                                                                              |
-| Shapes_Items                            | Name of the table in your data source that contains all the records with GeoJSON objects that you want to show in the map as shapes.                                                                                                                  |
+| Shapes_Items                            | Name of the table in your data source that contains all the records with the GeoJSON objects that you want to show in the map as shapes.                                                                                                                  |
 | ShapeGeoJSONObjects                     | Name of the column in the table in your data source with strings that represent the GeoJSON objects of the shapes.                                                                                                                                    |
-| ShapeLabels                             | A column in Shapes_Items with the strings you want to use as labels for the shapes.                                                                                                                                                                   |
+| ShapeLabels                             | A column in *Shapes_Items* with the strings you want to use as labels for the shapes.                                                                                                                                                                   |
 | ShapeColors                             | Color of the shapes.                                                                                                                                                                                                                                  |
 | OnShapeSelected                         | How the app responds when a shape on the map is selected.                                                                                                                                                                                             |
 | OnShapeCreated                          | How the app responds when a shape on the map is created.                                                                                                                                                                                              |
 | OnShapeEdited                           | How the app responds when a shape on the map is edited.                                                                                                                                                                                               |
 | OnShapeDeleted                          | How the app responds when a shape on the map is deleted.                                                                                                                                                                                              |
 
-### Output properties
+### Configure output properties for the Map control
 
 The control outputs various properties when a user interacts with it inside an app. You can use these outputs in other controls or to customize the experience.
 
@@ -332,69 +321,64 @@ The following table lists the output properties available.
 
 | **Property**         | **Description**                                                                                                                                                                               |
 |----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| CenterLocation       | Center location of the map as either .Latitude or .Longitude. The output will be an integer. For example, calling Map1.CenterLocation.Latitude will output a single integer such as 47.60357. |
+| CenterLocation       | Center location of the map as either `.Latitude` or `.Longitude`. The output will be an integer. For example, calling `Map1.CenterLocation.Latitude` will output a single integer such as "47.60357". |
 | Selected             | The selected pin on the map.                                                                                                                                                                  |
 | SelectedItems        | The selected pin or pins of the selected cluster on the map.                                                                                                                                  |
-| GeocodedItems        | The geocoded locations of the pins on the map.                                                                                                                                                |
-| ClickedLocation      | The last clicked location on the map as either .Latitude or .Longitude.                                                                                                                       |
+| GeocodedItems        | The geo-coded locations of the pins on the map.                                                                                                                                                |
+| ClickedLocation      | The last clicked location on the map as either `.Latitude` or `.Longitude`.                                                                                                                       |
 | Shapes_Selected      | The record of the selected shape from **Shapes_Items**.                                                                                                                                       |
 | Shapes_SelectedItems | The records of the selected overlapping shapes from **Shapes_Items**.                                                                                                                         |
-| SelectedShape        | The selected shape on the map with .Perimeter and .Area.                                                                                                                                      |
-| DeletedShape         | The last deleted shape on the map with .Perimeter and .Area\`.                                                                                                                                |
+| SelectedShape        | The selected shape on the map with `.Perimeter` and `.Area`.                                                                                                                                      |
+| DeletedShape         | The last deleted shape on the map with `.Perimeter` and `.Area`.                                                                                                                                |
 | GeoJSON              | The list of shapes on the map in Feature Collection GeoJSON format.                                                                                                                           |
 
-To drop a Pin on the address entered in our address input, we will use the collection we created on the OnAddressSelect property and use that in the map control
+To drop a Pin on the address entered in the address input, we'll use the collection we created on the **OnAddressSelect** property and use that in the map control.
 
 | Property       | Value                        |
 |----------------|------------------------------|
-| Items          | colSelectedAddress           |
-| ItemsLatitudes | colSelectedAddress.Latitude  |
-| ItemsLongitude | colSelectedAddress.Longitude |
+| Items          | `colSelectedAddress`           |
+| ItemsLatitudes | `colSelectedAddress.Latitude`  |
+| ItemsLongitude | `colSelectedAddress.Longitude` |
 
 ![Map control properties](media/mobile-apps-address-map/map-component-5.png)
 
-Some of the properties of the pin can be customized per location pin are as follows:
+Some of the properties of the pin can be customized per location pin are explained below:
 
-1.  **ItemsColors**: To update the color of the pin to a different color for
-    each location – add a column to the collection Color: Red and use that in
-    the **ItemsColors** DATA property of the Map control
+1. **ItemsColors** - To update the color of the pin to a different color for each location, add a column to the collection **Color: Red** and use that in the **ItemsColors** data property of the **Map** control.
 
-2.  **ItemsLabels**: To update the label of the pin to a different label showing
-    the address for each location – add a column to the collection Label:
-    AddressInput1.FreeformAddress and use that in the **ItemsLabels** DATA
-    property of the Map control
+1. **ItemsLabels** - To update the label of the pin to a different label showing the address for each location, add a column to the collection **Label:AddressInput1.FreeformAddress** and use that in the **ItemsLabels** data property of the **Map** control.
 
-3.  **ItemsIcons**: To update the Icon of the pin to a different icon for each
-    location – add a column to the collection and use that in the **ItemsIcons**
-    DATA property of the Map control – for our example lets add a triangle icon
-    thus the formula will be Icon: triangle
+1. **ItemsIcons** - To change the icon of the pin for each location, add a column to the collection and use that in the **ItemsIcons** data property of the **Map** control. In this example, we'll add a triangle icon with the formula as `Icon: triangle`.
 
-    NOTE: For a list of icons, please refer the following link:
+    > [!TIP]
+    > For the complete list of icons, go to [List of image templates](/azure/azure-maps/how-to-use-image-templates-web-sdk#list-of-image-templates).
 
-    https://docs.microsoft.com/azure/azure-maps/how-to-use-image-templates-web-sdk\#list-of-image-templates
+    ```powerapps-dot
+    ClearCollect(
+        colSelectedAddress,
+        {
+            Street: AddressInput1.StreetNumber & " " & AddressInput1.StreetName,
+            City: AddressInput1.Municipality,
+            State: AddressInput1.CountrySubdivision,
+            Zip: AddressInput1.PostalCode,
+            Country: AddressInput1.Country,
+            Latitude: AddressInput1.SelectedLatitude,
+            Longitude: AddressInput1.SelectedLongitude,
+            Label: AddressInput1.FreeformAddress,
+            Color: Red,
+            Icon: Triangle
+        }
+    );
+    ```
 
-```
-ClearCollect(
-    colSelectedAddress,
-    {
-        Street: AddressInput1.StreetNumber & " " & AddressInput1.StreetName,
-        City: AddressInput1.Municipality,
-        State: AddressInput1.CountrySubdivision,
-        Zip: AddressInput1.PostalCode,
-        Country: AddressInput1.Country,
-        Latitude: AddressInput1.SelectedLatitude,
-        Longitude: AddressInput1.SelectedLongitude,
-        Label: AddressInput1.FreeformAddress,
-        Color: Red,
-        Icon: Triangle
-    }
-);
-```
-
-After adding these to the collection, go to the Advanced tab of the Map control and update the ItemsColors, ItemsLabels and ItemsIcons properties as shown below
+After adding these to the collection, go to the **Advanced** tab of the **Map** control, and update the **ItemsColors**, **ItemsLabels** and **ItemsIcons** properties.
 
 ![Map control advanced properties](media/mobile-apps-address-map/map-component-6.png)
 
-Run the app in preview mode to test it – the map shows the location selected in the address input with a triangle icon and the address shows up as a label on the map
+Run the app in preview mode to test. The map shows the location selected in the address input with a triangle icon and the address shows up as a label on the map.
 
 ![Map control update address](media/mobile-apps-address-map/map-component-7.gif)
+
+### See also
+
+[Interactive map component](../geospatial-component-map.md)
