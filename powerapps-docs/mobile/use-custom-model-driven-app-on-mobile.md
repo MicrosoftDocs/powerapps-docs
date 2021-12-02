@@ -18,7 +18,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# User guide for model-driven apps running on Power Apps mobile
+# Use model-driven apps on Power Apps mobile
 
 Use Power Apps mobile to run model-driven apps on your mobile device. For more information about how to install and get started with an app, see [Run model-driven apps and canvas apps on Power Apps mobile](run-powerapps-on-mobile.md).
 
