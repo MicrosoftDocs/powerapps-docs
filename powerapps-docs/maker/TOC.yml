@@ -1503,13 +1503,13 @@
     href: ../developer/model-driven-apps/overview.md
   - name: Glossary of terms
     href: ./model-driven-apps/model-driven-app-glossary.md    
-- name: Power Apps Mobile  
+- name: Power Apps mobile  
   items:
-  - name: Run apps on Power Apps Mobile
+  - name: Get started with Power Apps mobile
     href: ../mobile/run-powerapps-on-mobile.md
-  - name: Use model-driven apps on mobile
+  - name: Use model-driven apps on Power Apps mobile
     href: ../mobile/use-custom-model-driven-app-on-mobile.md
-  - name: Use Dataverse search on Power Apps Mobile  
+  - name: Use Dataverse search on Power Apps mobile  
     href: ../mobile/relevance-search-mobile.md  
   - name: Set app display to dark or light mode  
     href: ../mobile/display-mode.md
@@ -1519,9 +1519,9 @@
     href: ../mobile/setup-mobile-offline.md 
   - name: Work offline on your mobile device 
     href: ../mobile/work-in-offline-mode.md  
-  - name: Create push notifications for Power Apps Mobile
+  - name: Create push notifications for Power Apps mobile
     href: ../mobile/power-apps-mobile-notification.md
-  - name: Troubleshoot issues for Power Apps Mobile
+  - name: Troubleshoot issues for Power Apps mobile
     href: ../mobile/powerapps-mobile-troubleshoot.md
 - name: Portals
   items:
