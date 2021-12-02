@@ -169,7 +169,7 @@ conceptualContent:
       links:
         - text: Run apps on Power Apps mobile
           url: /powerapps/mobile/run-powerapps-on-mobile
-          itemType: overview
+          itemType: how-to-guide
         - text: User guide for model-driven apps running on Power Apps mobile
           url: /powerapps/mobile/use-custom-model-driven-app-on-mobile
           itemType: how-to-guide 
