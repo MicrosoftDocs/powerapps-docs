@@ -25,7 +25,7 @@ Customize a canvas app by changing its name and icon.
 
 1. Create an app, or open one for editing.
 
-2. On the **File** menu, select **Settings**.
+2. Select **Settings**.
 
 ## Rename an app
 

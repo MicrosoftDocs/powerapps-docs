@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 contributors:
   - gregli-msft
-  - nkrb
+  - tapanm-msft
 ---
 # EncodeUrl and PlainText functions in Power Apps
 Encodes and decodes strings.

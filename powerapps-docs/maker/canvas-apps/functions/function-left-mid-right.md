@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 contributors:
   - gregli-msft
-  - nkrb
+  - tapanm-msft
 ---
 # Left, Mid, and Right functions in Power Apps
 Extracts the left, middle, or right portion of a string of text.

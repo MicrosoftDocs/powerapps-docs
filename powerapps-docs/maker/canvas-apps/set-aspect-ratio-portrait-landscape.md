@@ -25,7 +25,6 @@ Customize a canvas app by changing its screen size and orientation.
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 1. Open the app to [edit](edit-app.md).
-1. Select **File** menu.
 1. Select **Settings**.
 1. Select **Display**.
 1. Under **Orientation** list, select **Portrait** or **Landscape**. <br> 
