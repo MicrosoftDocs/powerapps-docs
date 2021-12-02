@@ -27,11 +27,13 @@ search.app:
   - D365CE
 ---
 
-# Model-driven apps community tools
+# Dataverse community tools
 
-**View Layout Replicator** and **View Designer** are tools that XrmToolbox community developed for Power Apps.
-
-More information: [Developer tools](../../developer/data-platform/developer-tools.md).
+View Layout Replicator and View Designer are a couple of the many tools available in a Power Platform community developed app named XrmToolBox. XrmToolBox is a Windows application that connects to Microsoft Dataverse.
 
 > [!NOTE]
 > These tools are provided by XrmToolBox and are not supported by Microsoft. If you have questions pertaining to the tool, please contact the publisher. More information: [XrmToolBox](https://www.xrmtoolbox.com/).
+
+For more information about XrmToolBox and other Dataverse community tools, go to [Developer tools](../../developer/data-platform//community-tools.md).
+
+

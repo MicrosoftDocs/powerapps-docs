@@ -25,16 +25,16 @@ These frequently asked questions (FAQ) can help you resolve issues that might oc
 
 In order to play an app you need to have a security role assigned to you and the URL to the app.
 
-To share the app simply navigate to the app as a designer and share it as shown below by assigning a [security role](../model-driven-apps/model-driven-app-glossary.md#security-role).
+To share the app, select the app, and then on the command bar select **...** > **Share**. The app sharing page as shown below appears for you to assign a [security role](../model-driven-apps/model-driven-app-glossary.md#security-role).
 
 !["Sharing a model driven app"](media/share-model-driven-app/share-app.png "Sharing a model driven app")
 
-You can find the URL using the process below.
+You can find the app URL using the process below.
 
 !["Acquiring the link for a model-driven app"](media/share-model-driven-app/app-designer-copy-web-url-process.gif "Acquiring the link for a model-driven app")
-To play the app simply navigate the URL into your browser.
+To play the app, open the URL in your browser.
 
-For more details see [sharing model-driven apps](share-model-driven-app.md)
+For more information, see [sharing model-driven apps](share-model-driven-app.md)
 
 ## Why can't I create a model-driven app?
 
@@ -106,7 +106,7 @@ This value specifies the changes in the current layer with respect to the previo
 
 ## What is an app module?
 
-The term *app module* has been used to describe model-driven apps, and *appmodule* is the name referenced in the Microsoft Dataverse and customer engagement apps schema. **Model-Driven App** is included in the display names for some of the tables referenced in Power Apps. For information about the `appmodule` table, go to [AppModule entity reference](../../developer/data-platform/reference/entities/appmodule.md). For information about using the `appmodule` table API, go to [Create, manage, and publish model-driven apps using code](../../developer/model-driven-apps/create-manage-model-driven-apps-using-code.md).
+The term *app module* has been used to describe model-driven apps, and `appmodule` is the name referenced in the Microsoft Dataverse and customer engagement apps schema. **Model-Driven App** is included in the display names for some of the tables referenced in Power Apps. For information about the `appmodule` table, go to [AppModule entity reference](../../developer/data-platform/reference/entities/appmodule.md). For information about using the `appmodule` table API, go to [Create, manage, and publish model-driven apps using code](../../developer/model-driven-apps/create-manage-model-driven-apps-using-code.md).
 
 App modules, which are referred to as model-driven apps in Power Apps, are created and customized within a solution. Solutions are used for application lifecycle management, and you can use them to migrate customizations from one environment to another. It's beneficial to be familiar with the [solution layering](/power-platform/alm/solution-layers-alm) concepts.
 

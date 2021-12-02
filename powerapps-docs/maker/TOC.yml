@@ -2330,8 +2330,9 @@
     href: ./data-platform/api-limits-overview.md
   - name: For developers
     href: ../developer/data-platform/overview.md
-    # href: ../developer/data-platform/TOC.yml  changing this to have developer TOC rather than buried in maker toc
-
+  - name: Community tools for Dataverse
+    href: ./model-driven-apps/model-driven-app-community.md
+ 
 - name: Teams integration
   items:
   - name: Overview
