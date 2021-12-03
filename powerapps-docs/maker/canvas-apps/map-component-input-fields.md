@@ -122,6 +122,8 @@ You can still use the dropdown option to choose mapping for existing apps, thoug
 
 :::image type="content" source="media/map-component-input-fields/setting-feature.png" alt-text="Allow automatic field assignment for component inputs setting.":::
 
+When turning the setting on, ensure you save and reopen the app in Power Apps Studio. Once reopened, update the input property formula to trigger formula validation so that the dropdown options start to appear in the Advanced properties pane.
+
 ### See also
 
 - [Behavior formulas for components](component-behavior.md)
