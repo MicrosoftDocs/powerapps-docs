@@ -2,7 +2,7 @@
 title: "Data export service (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Capabilities, prerequisites, API, and programming of the Data Export Service." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 07/23/2021
+ms.date: 12/02/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -20,12 +20,12 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
+> [!NOTE]
+> Effective November 2021, Data Export Service was deprecated. Data Export Service will continue to work and will be fully supported until it reaches end-of-support and end-of-life in November 2022. More information: [https://aka.ms/DESDeprecationBlog](https://aka.ms/DESDeprecationBlog)
+
 Data Export is an add-on service made available as a Microsoft Dataverse solution that adds the ability to replicate Dataverse data to a Microsoft Azure SQL Database store in a customer-owned Microsoft Azure subscription. The supported target destinations are Microsoft Azure SQL Database and Microsoft Azure SQL Server on Microsoft Azure virtual machines. Data Export intelligently synchronizes the entire Dataverse schema and data initially and thereafter synchronizes on a continuous basis as changes occur (delta changes) in Dataverse.  
   
 The Data Export service provides an interface for managing configuration and ongoing administration of this service from within Dataverse.  For more information, see [Replicate data to Azure SQL Database](/power-platform/admin/replicate-data-microsoft-azure-sql-database). This topic explains the corresponding programmatic interface and issues for this service.
-
-> [!IMPORTANT]
-> Effective November 2021, Data Export Service was deprecated. Data Export Service will continue to work and will be fully supported until it reaches end-of-support and end-of-life in November 2022. More information: [https://aka.ms/DESDeprecationBlog](https://aka.ms/DESDeprecationBlog)
   
 ## Prerequisites for using the Data Export Service  
 
