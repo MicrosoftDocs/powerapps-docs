@@ -15,6 +15,7 @@ applies_to:
 author: "Mattp123"
 ms.assetid: ef4ba8df-9ba9-4066-b40d-def9761c7de2
 caps.latest.revision: 21
+ms.subservice: mda-maker
 ms.author: "matp"
 manager: "kvivek"
 search.audienceType: 
@@ -62,7 +63,7 @@ Part of the name of any web resource you create is the solution publisher prefix
 2. Open an unmanaged solution, on the command bar select **New**, point to **Other**, and then select **Web resource**. 
 3. Complete the form to create the web resource:
 
-    ![Create a web resource](media/new-web-resource-form.png)
+    ![Create a web resource.](media/new-web-resource-form.png)
   
 |Column|Description|  
 |-----------|-----------------|  

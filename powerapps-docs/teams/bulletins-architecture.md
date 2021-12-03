@@ -6,11 +6,12 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 05/27/2021
-ms.author: namarwah
+ms.subservice: teams
+ms.author: jshum
 ms.reviewer: tapanm
 contributors:
   - joel-lindstrom
-  - navjotm
+  - josephshum
   - tapanm-msft
 ---
 
@@ -34,7 +35,7 @@ You'll also need to know about how to [install](use-sample-apps-from-teams-store
 
 The following diagram illustrates the way that users and systems interact with data in the Bulletins solution
 
-![Bulletins sample app architecture model](media/bulletins-architecture/architecture-model.png "Bulletins sample app architecture model")
+![Bulletins sample app architecture model.](media/bulletins-architecture/architecture-model.png "Bulletins sample app architecture model")
 
 ### Connectors
 
@@ -47,7 +48,7 @@ The following connectors are used in the Bulletins app:
 
 The following diagram explains the data model used by the Bulletins sample app.
 
-![Bulletins sample app data model](media/bulletins-architecture/data-model.png "Bulletins sample app data model")
+![Bulletins sample app data model.](media/bulletins-architecture/data-model.png "Bulletins sample app data model")
 
 ### Tables
 
@@ -914,7 +915,7 @@ More information: [View links and contacts](bulletins.md#view-links-and-contacts
 
 ### See also
 
-[Bulletins sample app (Preview)](bulletins.md) <br>
+[Bulletins sample app (preview)](bulletins.md) <br>
 [Use sample apps from the Microsoft Teams store](use-sample-apps-from-teams-store.md) <br>
 [Customize sample apps installed from Teams store](customize-sample-apps.md) <br>
 [Frequently Asked Questions (FAQs) for sample apps](sample-apps-faqs.md)

@@ -7,6 +7,7 @@ ms.service: powerapps
 ms.topic: article
 ms.assetid: cf68e0a9-c240-59e7-c501-68cbfa0df455
 author: JimDaly # GitHub ID
+ms.subservice: dataverse-developer
 ms.author: jdaly # MSFT alias of Microsoft employees only
 manager: ryjones # MSFT alias of manager or PM counterpart
 ms.reviewer: "pehecke"

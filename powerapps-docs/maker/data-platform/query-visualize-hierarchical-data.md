@@ -15,6 +15,7 @@ applies_to:
 author: "Mattp123"
 ms.assetid: 0cf62817-5ff5-40bb-ad17-e1f6b0921720
 caps.latest.revision: 42
+ms.subservice: dataverse-maker
 ms.author: "matp"
 manager: "kvivek"
 search.audienceType: 
@@ -45,15 +46,15 @@ For some tables, such as account and user, the visualizations are provided out-o
   
  Query account hierarchy  
   
- ![Query accounts in the account hierarchy](media/query-accounts.png "Query accounts in the account hierarchy")  
+ ![Query accounts in the account hierarchy.](media/query-accounts.png "Query accounts in the account hierarchy")  
   
  Query account hierarchy, including related activities  
   
- ![Query account's related activities](media/query-account-related-activities.png "Query account's related activities")  
+ ![Query account's related activities.](media/query-account-related-activities.png "Query account's related activities")  
   
  Query account hierarchy, including related opportunities  
   
- ![Query account's related opportunities](media/query-account-related-opportunities.png "Query account's related opportunities")  
+ ![Query account's related opportunities.](media/query-account-related-opportunities.png "Query account's related opportunities")  
   
  To query the data as a hierarchy, you must set one of the table’s one-to-many or many-to-one self-referential relationships as hierarchical. To turn the hierarchy on:  
   
@@ -77,12 +78,12 @@ For some tables, such as account and user, the visualizations are provided out-o
  The system tables that have visualizations available out-of-the-box include `Account`, `Position`, `Product`, and `User`. In the grid view of these tables, you can see the icon depicting the hierarchy chart, to the left of the row name. The hierarchy icon isn’t present for all rows by default. The icon is shown for the rows that have a parent row, a child row, or both.  
  
  > [!div class="mx-imgBorder"] 
- > ![Active accounts](media/cust-hs-active-account.png "Active accounts")  
+ > ![Active accounts.](media/cust-hs-active-account.png "Active accounts")  
   
  If you select the hierarchy icon, you can view the hierarchy, with the tree view on the left and the tile view on the right, as shown below:  
   
 > [!div class="mx-imgBorder"] 
-> ![Account tree and tile view](media/hierachy-security-accounts-tile-view.png "Account tree and tile view")  
+> ![Account tree and tile view.](media/hierachy-security-accounts-tile-view.png "Account tree and tile view")  
   
  A few other out-of the-box system tables can be enabled for a hierarchy. These tables include `Case`, `Contact`, `Opportunity`, `Order`, `Quote`, `Campaign`, and `Team`. All custom tables can be enabled for a hierarchy.  
   
@@ -102,19 +103,19 @@ For some tables, such as account and user, the visualizations are provided out-o
  Let’s look at an example of creating the visualization for a custom table. We created a custom table called new_Widget, created a self-referential relationship and marked it as hierarchical, as shown here.  
  
 > [!div class="mx-imgBorder"] 
-> ![Widget relationship definition](media/widget-relationship-definition.png "Widget relationship definition")  
+> ![Widget relationship definition.](media/widget-relationship-definition.png "Widget relationship definition")  
    
  Next, in the **Hierarchy Settings** grid view, we selected the **Widget_new_Widget_new_Widget** hierarchical relationship. In the form, we filled in the required columns. If you haven’t yet marked the relationship as hierarchical, the link on the form will take you to the classic table editor, where you can also mark the relationship as hierarchical.  
   
  For the **Quick View Form**, we created a Quick Form called **Widget Hierarchy Tile Form**. In this form, we added four columns to display in each tile.  
   
 > [!div class="mx-imgBorder"] 
-> ![Create quick form for widget](media/create-quickf-orm.png "Create quick form for widget")  
+> ![Create quick form for widget.](media/create-quickf-orm.png "Create quick form for widget")  
   
  After we completed the setup, we created two rows: Standard Widget and Premium Widget. After making the Premium Widget a parent of the Standard Widget by using the lookup column, the new_Widget grid view depicted the hierarchy icons, as shown below:  
   
 > [!div class="mx-imgBorder"] 
-> ![Widget's hierarchy grid](media/widget-hierarchy-grid.png "Widget's hierarchy grid")  
+> ![Widget's hierarchy grid.](media/widget-hierarchy-grid.png "Widget's hierarchy grid")  
   
 > [!TIP]
 >  The hierarchy icons don’t appear in the row grid view until the rows are paired in the parent – child relationship.  
@@ -122,11 +123,7 @@ For some tables, such as account and user, the visualizations are provided out-o
  Choosing the hierarchy icon displays the new_Widget hierarchy with the tree view on the left and the tile view on the right, showing two rows. Each tile contains four columns that we provided in the **Widget Hierarchy Tile Form**.  
  
  > [!div class="mx-imgBorder"] 
- > ![Widget's tree and tiles views](media/widget-tree-tiles.png "Widget's tree and tiles views")  
+ > ![Widget's tree and tiles views.](media/widget-tree-tiles.png "Widget's tree and tiles views")  
   
-## See also  
- [Video: Hierarchical Security Modelling](https://www.youtube.com/watch?v=kx5So32DrCo&index=10&list=PLC3591A8FE4ADBE07)   
- [Video: Hierarchy Visualization](https://www.youtube.com/watch?v=_dGBE6icLNw&index=9&list=PLC3591A8FE4ADBE07)
-
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

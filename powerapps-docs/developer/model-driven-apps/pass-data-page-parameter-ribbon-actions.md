@@ -7,6 +7,7 @@ ms.reviewer: "kvivek"
 ms.service: powerapps
 ms.topic: "article"
 author: "hazhouMSFT"
+ms.subservice: mda-developer
 ms.author: "hazhou" # MSFT alias of Microsoft employees only
 manager: "annbe" # MSFT alias of manager or PM counterpart
 search.audienceType: 

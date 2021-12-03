@@ -6,10 +6,11 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2021
+ms.subservice: portals
 ms.author: sandhan
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
-    - tapanm-msft
+    - nickdoelman
     - sandhangitmsft
     - dileepsinghmicrosoft
 ---
@@ -409,7 +410,7 @@ For a complete list of other CORS settings, see [CORS protocol support](../add-w
 
 1. Sign in to Azure portal.
 
-1. From the top-left corner of the Azure portal, select ![Show portal menu](media/authentication/show-portal-menu.png "Show portal menu").
+1. From the top-left corner of the Azure portal, select ![Show portal menu.](media/authentication/show-portal-menu.png "Show portal menu").
 
 1. Select **All resources**.
 
@@ -433,7 +434,7 @@ Your Azure AD B2C tenant is now configured to use the custom page for sign-up an
 
 ### See also
 
-[Configure the Azure Active Directory B2C provider (Preview)](configure-azure-ad-b2c-provider.md) <br>
+[Configure the Azure Active Directory B2C provider (preview)](configure-azure-ad-b2c-provider.md) <br>
 [Configure the Azure Active Directory B2C provider manually](configure-azure-ad-b2c-provider-manual.md) <br>
 [Customize the user interface with HTML templates in Azure Active Directory B2C](/azure/active-directory-b2c/customize-ui-with-html)
 

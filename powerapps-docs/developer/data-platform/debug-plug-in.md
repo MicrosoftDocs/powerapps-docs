@@ -7,6 +7,7 @@ ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
+ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -102,17 +103,17 @@ After you have installed the Plug-in profiler and captured some profiles, you ca
 
 You can view this data using the Plug-in Registration tool by selecting the **View Plug-in Profile** command. This will open the Plugin Profile dialog
 
-![Open plug-in profile](media/view-plug-in-profile.png)
+![Open plug-in profile.](media/view-plug-in-profile.png)
 
-Select the ![download icon](media/prt-down-arrow-icon.png) icon and in the **Select Profile from CRM** dialog, specify the log item to use.
+Select the ![download icon.](media/prt-down-arrow-icon.png) icon and in the **Select Profile from CRM** dialog, specify the log item to use.
 
-![Select profile from CRM](media/prt-select-profile-from-crm.png)
+![Select profile from CRM.](media/prt-select-profile-from-crm.png)
 
 And then select **View** in the **Plugin Profile** dialog.
 
 This will download an open an XML file with the profile information. The `Context` element represents the execution context passed to the plug-in.
 
-![example profile data](media/prt-example-profile-data.png)
+![example profile data.](media/prt-example-profile-data.png)
 
 ### More information
 

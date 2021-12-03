@@ -5,12 +5,13 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/07/2021
+ms.date: 10/11/2021
+ms.subservice: portals
 ms.author: nenandw
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
     - neerajnandwana-msft
-    - tapanm-msft
+    - nickdoelman
 ---
 
 # Migrate portal configuration
@@ -64,12 +65,12 @@ You can export portal configuration data from a source system by using portal-sp
 `<your_folder>\Tools\ConfigurationMigration` folder to run the Configuration Migration tool, choose **Export data** in the main screen, and then select **Continue**.
     
     > [!div class=mx-imgBorder]
-    > ![Export configuration data](../media/export-config-data.png "Export configuration data")
+    > ![Export configuration data.](../media/export-config-data.png "Export configuration data")
 
 4.	On the **Login** screen, provide authentication details to connect to your Dataverse environment from where you want to export data. If you have multiple organizations on the Dataverse environment from where to export the data, select the **Display list of available organizations** check box, and then select **Login**.
 
     > [!div class=mx-imgBorder]
-    > ![Provide authentication details to connect to your Dataverse environment from where you want to export data](../media/export-config-login.png "Provide authentication details to connect to your Dataverse environment from where you want to export data")
+    > ![Provide authentication details to connect to your Dataverse environment from where you want to export data.](../media/export-config-login.png "Provide authentication details to connect to your Dataverse environment from where you want to export data")
 
 5.	If you have multiple organizations, and you had selected the **Display list of available organizations** check box in the previous step, the next screen allows you to choose the organization that you want to connect to. Select a Dataverse environment to connect to. 
 
@@ -81,12 +82,12 @@ You can export portal configuration data from a source system by using portal-sp
 7.	In **Save to data file**, specify the name and location of the data file to be exported.
 
     > [!div class=mx-imgBorder]
-    > ![Specify schema and target files](../media/export-config-file-name.png "Specify schema and target files")
+    > ![Specify schema and target files.](../media/export-config-file-name.png "Specify schema and target files")
 
 8.	Select **Export Data**. The screen displays the export progress status and the location of the exported file at the bottom of the screen once the export is complete.
 
     > [!div class=mx-imgBorder]
-    > ![Progress of configuration data export](../media/export-config-status.png "Progress of configuration data export")
+    > ![Progress of configuration data export.](../media/export-config-status.png "Progress of configuration data export")
 
 9.	Select **Exit** to close the tool.
 
@@ -95,7 +96,7 @@ You can export portal configuration data from a source system by using portal-sp
 1.	Run the Configuration Migration tool and choose **Import data** in the main screen, and then select **Continue**.
 
     > [!div class=mx-imgBorder]
-    > ![Import configuration data](../media/import-config-data.png "Import configuration data")
+    > ![Import configuration data.](../media/import-config-data.png "Import configuration data")
 
 2.	On the **Login** screen, provide authentication details to connect to your Dataverse environment from where you want to export data. If you have multiple organizations on the Dataverse environment from where to export the data, select the **Display list of available organizations** check box, and then select **Login**.
 
@@ -108,11 +109,15 @@ You can export portal configuration data from a source system by using portal-sp
 4.	The next screen prompts you to provide the data file (.zip) to be imported. Browse to the data file, select it, and then select **Import Data**. 
 
     > [!div class=mx-imgBorder]
-    > ![Progress of configuration data import](../media/import-config-status.png "Progress of configuration data import")
+    > ![Progress of configuration data import.](../media/import-config-status.png "Progress of configuration data import")
 
 5.	The next screen displays the import status of your records. The data import is done in multiple passes to first import the foundation data while queuing up the dependent data, and then import the dependent data in the subsequent passes to handle any data dependencies or linkages. This action ensures clean and consistent data import. 
 
 6.	Select **Exit** to close the tool. 
+
+### Create new portal using migrated data
+
+After importing the configuration data, you can now create a new portal for the imported website record by using the option **Use data from existing website record**. More information: [Create portal](../create-portal.md)
 
 ## Tenant to tenant migration
 

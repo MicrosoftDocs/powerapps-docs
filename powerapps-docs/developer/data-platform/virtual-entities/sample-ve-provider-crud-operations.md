@@ -1,12 +1,9 @@
 ---
 title: "Sample: Custom virtual table provider with CRUD operations (Microsoft Dataverse) | Microsoft Docs"
 description: "Sample demonstrates how to implement a generic custom virtual table that supports CRUD operations.."
-ms.custom: ""
 ms.date: 04/09/2021
 ms.reviewer: "nabuthuk"
 ms.service: powerapps
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: "samples"
 ms.assetid: d329dade-16c5-46e9-8dec-4b8efb996d24
 author: "Nkrb" # GitHub ID
@@ -328,19 +325,19 @@ There are four steps to enable a custom data provider to create a virtual table.
 1. Compile and build the solution. You will now have an assembly file (.dll) that you can use to register in your Dataverse environment. You will find this file in the  ***solution folder/bin/Debug*** directory.
 
     > [!div class="mx-imgBorder"]
-    > ![Assembly dll](../media/custom-ve-assembly-dll.png "Assembly dll")
+    > ![Assembly dll.](../media/custom-ve-assembly-dll.png "Assembly dll")
 
 1. Register the assembly using the Plugin Registration Tool. You can get the latest Plugin Registration Tool package from [NuGet](https://www.nuget.org/packages/Microsoft.CrmSdk.XrmTooling.PluginRegistrationTool).
 
 1. Open the Plugin Registration Tool. You need to have system administration privileges to register the assembly.Select **CREATE NEW CONNECTION** to connect to your Dataverse environment. Select the **Register** drop-down  and then select **Register New Assembly**.
 
    > [!div class="mx-imgBorder"]
-   > ![Register new step](../media/custom-ve-register-plugin-step.png "Register new step")
+   > ![Register new step.](../media/custom-ve-register-plugin-step.png "Register new step")
 
 1. Select the assembly file and register the plug-ins. Make sure that you have selected all the plug-ins (Create, Update, Delete, Retrieve, and RetrieveMultiple plug-ins).
 
     > [!div class="mx-imgBorder"]
-    > ![Register new assembly](../media/custom-ve-register-assembly-step.png "Register new assembly")
+    > ![Register new assembly.](../media/custom-ve-register-assembly-step.png "Register new assembly")
 
 ## Step 2: Creating data provider and adding plug-ins to the provider
 
@@ -362,12 +359,12 @@ There are four steps to enable a custom data provider to create a virtual table.
     5. Register the new data provider.
 
         > [!div class="mx-imgBorder"]
-        > ![Register data provider](../media/custom-ve-register-new-data-provider.png "Register data provider")
+        > ![Register data provider.](../media/custom-ve-register-new-data-provider.png "Register data provider")
 
 1. In the Plugin Registration Tool, you'll see the new data source record and the associated data provider. Selecting the data source will display the details which include the plug-ins and their registered GUID.
 
     > [!div class="mx-imgBorder"]
-    > ![Registered data provider](../media/custom-ve-registered-data-provider.png "Registered data provider")
+    > ![Registered data provider.](../media/custom-ve-registered-data-provider.png "Registered data provider")
 
 ## Step 3: Creating a virtual table in Dataverse environment
 
@@ -395,7 +392,7 @@ There are four steps to enable a custom data provider to create a virtual table.
 7. Select **Save and Close.**
 
     > [!div class="mx-imgBorder"]
-    > ![Create new record](../media/custom-ve-create-new-record.png "Create new record")
+    > ![Create new record.](../media/custom-ve-create-new-record.png "Create new record")
 
 8. In the left navigation pane, select and expand on the virtual table you created.
 
@@ -406,7 +403,7 @@ There are four steps to enable a custom data provider to create a virtual table.
 11. Update the **External Name** column to match the column name in your external data source. In this example, the external column name is **TicketID**.
 
     > [!div class="mx-imgBorder"]
-    > ![Create new table](../media/custom-ve-create-new-entity.png "Create new table")
+    > ![Create new table.](../media/custom-ve-create-new-entity.png "Create new table")
 
 12. Select **Save and Close**.
 
@@ -415,7 +412,7 @@ There are four steps to enable a custom data provider to create a virtual table.
 14. Update the **External Name** field to match the field name in your external data source. In this example, the external column name is **Name**.
 
     > [!div class="mx-imgBorder"]
-    > ![Create new name field](../media/custom-ve-create-new-name-field.png "Create new name field")
+    > ![Create new name field.](../media/custom-ve-create-new-name-field.png "Create new name field")
 
 15. Select **Save and Close**.
 
@@ -432,7 +429,7 @@ There are four steps to enable a custom data provider to create a virtual table.
     | Data Type         | Whole Number      |
 
     > [!div class="mx-imgBorder"]
-    > ![Create new severity field](../media/custom-ve-create-new-severity-field.png "Create new severity field")
+    > ![Create new severity field.](../media/custom-ve-create-new-severity-field.png "Create new severity field")
 
 18. Select **Save and Close**.
 
@@ -441,7 +438,7 @@ There are four steps to enable a custom data provider to create a virtual table.
 Create a model-driven app and add the virtual table to the site map. Then select the virtual table main form and the Advanced field view. Publish the app. More information: [Build your first model-driven app from scratch](../../../maker/model-driven-apps/build-first-model-driven-app.md?branch=matp-2190993)
 
 > [!div class="mx-imgBorder"]
-> ![Create model-driven app](../media/custom-ve-create-new-model-driven-app.png "Create model-driven app")
+> ![Create model-driven app.](../media/custom-ve-create-new-model-driven-app.png "Create model-driven app")
 
 Application users can perform read, create, update, delete operations using the virtual table just like any other table in Microsoft Dataverse.
 

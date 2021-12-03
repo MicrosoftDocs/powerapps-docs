@@ -12,6 +12,7 @@ applies_to:
   - "powerapps"
 author: "Mattp123"
 ms.assetid: 2461bd71-6cb4-46b7-8d1f-6a0aa3dca809
+ms.subservice: mda-maker
 ms.author: "matp"
 manager: kvivek
 ms.reviewer: 
@@ -48,14 +49,14 @@ You can view or set these privileges on the **Customization** tab of a security 
   
 ## Create a site map for an app  
   
-1. On the app designer canvas, in the **Site Map** area, select the pencil icon![Open Site Map Designer button](media/dynamics365-open-designer.PNG "Open Site Map Designer button")next to **Site Map** to **Open the Site Map Designer** .  
+1. On the app designer canvas, in the **Site Map** area, select the pencil icon![Open Site Map Designer button.](media/dynamics365-open-designer.PNG "Open Site Map Designer button")next to **Site Map** to **Open the Site Map Designer** .  
 
-   ![Open the site map designer](media/app-designer-sitemap-location.png "Open the site map designer")
+   ![Open the site map designer.](media/app-designer-sitemap-location.png "Open the site map designer")
   
     The site map designer opens a canvas that is prepopulated with one area, one group, and one subarea. Select the area, group, or subarea tile to change its properties.
  
     > [!NOTE]
-    >  Selecting **Open the Site Map Designer** ![Open Site Map Designer button](media/dynamics365-open-designer.PNG "Open Site Map Designer button") from the app designer canvas automatically creates a new site map (if there's no existing site map), and gives the new site map the same name as the app name and the same unique name as the app unique name. 
+    >  Selecting **Open the Site Map Designer** ![Open Site Map Designer button.](media/dynamics365-open-designer.PNG "Open Site Map Designer button") from the app designer canvas automatically creates a new site map (if there's no existing site map), and gives the new site map the same name as the app name and the same unique name as the app unique name. 
 
 2.  [Add an area to the site map](create-site-map-app.md#bkmk_AddArea).  
   
@@ -99,7 +100,7 @@ You can view or set these privileges on the **Customization** tab of a security 
 <a name="bkmk_AddArea"></a>   
 ## Add an area to the site map  
   
-1.  Select **Add** ![Add button on the designer](media/dynamics365-designer-addbutton.PNG "Add button on the designer") on the site map designer canvas, and then select **Area**.  
+1.  Select **Add** ![Add button on the designer.](media/dynamics365-designer-addbutton.PNG "Add button on the designer") on the site map designer canvas, and then select **Area**.  
   
      or  
   
@@ -121,9 +122,9 @@ You can view or set these privileges on the **Customization** tab of a security 
   
      Under **Advanced**, do the following:  
   
-    - **More Titles**: If your organization uses multiple languages, select a language (Locale) for the title, enter the title, and then select **Add** ![Add button in the site map designer](media/add-icon-sitemap-designer.png "Add button in the site map designer"). You can create, edit, or delete titles for as many languages as your organization uses. However, you can have only one title per language.  
+    - **More Titles**: If your organization uses multiple languages, select a language (Locale) for the title, enter the title, and then select **Add** ![Add button in the site map designer.](media/add-icon-sitemap-designer.png "Add button in the site map designer"). You can create, edit, or delete titles for as many languages as your organization uses. However, you can have only one title per language.  
   
-    - **More Description**: If your organization uses multiple languages, select a language for the description, enter the description, and then select **Add** ![Add button in the site map designer](media/add-icon-sitemap-designer.png "Add button in the site map designer"). You can create, edit, or delete descriptions for as many languages as your organization uses. However, you can have only one description per language.  
+    - **More Description**: If your organization uses multiple languages, select a language for the description, enter the description, and then select **Add** ![Add button in the site map designer.](media/add-icon-sitemap-designer.png "Add button in the site map designer"). You can create, edit, or delete descriptions for as many languages as your organization uses. However, you can have only one description per language.  
   
     - **URL**: Enter the URL to render for the Dynamics 365 for Outlook folder that represents the area.  
   
@@ -131,7 +132,7 @@ You can view or set these privileges on the **Customization** tab of a security 
 ## Add a group to the site map  
   
 1.  On the site map designer canvas, select the area you want to add the group to.  
-2.  Select **Add** ![Add button on the designer](media/dynamics365-designer-addbutton.PNG "Add button on the designer"), and then select **Group**.  
+2.  Select **Add** ![Add button on the designer.](media/dynamics365-designer-addbutton.PNG "Add button on the designer"), and then select **Group**.  
   
      or  
   
@@ -149,9 +150,9 @@ You can view or set these privileges on the **Customization** tab of a security 
   
      Under **Advanced**, do the following:  
   
-    - **More Titles**: If your organization uses multiple languages, select a language (Locale) for the title, enter the title for the group, and then select **Add** ![Add button in the site map designer](media/add-icon-sitemap-designer.png "Add button in the site map designer"). You can create, edit, or delete titles for as many languages as your organization uses. However, you can have only one title per language.  
+    - **More Titles**: If your organization uses multiple languages, select a language (Locale) for the title, enter the title for the group, and then select **Add** ![Add button in the site map designer.](media/add-icon-sitemap-designer.png "Add button in the site map designer"). You can create, edit, or delete titles for as many languages as your organization uses. However, you can have only one title per language.  
   
-    - **More Descriptions**: If your organization uses multiple languages, select a language for the description, enter the description for the group, and then select **Add** ![Add button in the site map designer](media/add-icon-sitemap-designer.png "Add button in the site map designer"). You can create, edit, or delete descriptions for as many languages as your organization uses. However, you can have only one description per language.  
+    - **More Descriptions**: If your organization uses multiple languages, select a language for the description, enter the description for the group, and then select **Add** ![Add button in the site map designer.](media/add-icon-sitemap-designer.png "Add button in the site map designer"). You can create, edit, or delete descriptions for as many languages as your organization uses. However, you can have only one description per language.  
   
     - **URL**: Enter the URL to render for the Dynamics 365 for Outlook folder that represents the group.  
 
@@ -160,7 +161,7 @@ You can view or set these privileges on the **Customization** tab of a security 
 <a name="bkmk_AddSubarea"></a>   
 ## Add a subarea to a group in the site map  
   
-1.  Select **Add** ![Add button on the designer](media/dynamics365-designer-addbutton.PNG "Add button on the designer") on the site map designer canvas, and then select **Subarea**.  
+1.  Select **Add** ![Add button on the designer.](media/dynamics365-designer-addbutton.PNG "Add button on the designer") on the site map designer canvas, and then select **Subarea**.  
   
      or  
   

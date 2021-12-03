@@ -12,6 +12,7 @@ applies_to:
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
   - "PowerApps"
+ms.subservice: dataverse-maker
 ms.author: "matp"
 manager: "kvivek"
 author: "Mattp123"
@@ -137,7 +138,7 @@ Once you have set the **Display Name**, **Name** and **Data type** properties yo
 
 You can continue to edit the table and add additional columns or return and continue editing this column. The columns will not be created until you select **Save Table** to save all the changes to the table.
 
-![Save Table button](media/save-entity-button.png)
+![Save Table button.](media/save-entity-button.png)
 
 You can also select **Discard** to discard the changes you have made.
  
@@ -223,11 +224,11 @@ With the system administrator security role, you can delete any custom columns t
 
 While [viewing columns](#view-columns), if you select a custom column that can be deleted in the list, the **Delete column** command appears and is enabled.
 
-![Delete a column using the portal](media/delete-field-portal.png)
+![Delete a column using the portal.](media/delete-field-portal.png)
 
 Use the **Delete column** command to delete the column. After deleting the column you must save the changes to the table.
 
-![Save table after deleting column](media/delete-field-portal-save-entity.png)
+![Save table after deleting column.](media/delete-field-portal-save-entity.png)
 
 > [!NOTE]
 > If you get an error related to dependencies, you must use solution explorer to detect dependencies. More information: [Check column dependencies](create-edit-field-solution-explorer.md#check-column-dependencies)

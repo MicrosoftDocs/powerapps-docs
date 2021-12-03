@@ -6,11 +6,12 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: intro-internal
 ms.date: 04/21/2021
+ms.subservice: portals
 ms.author: nenandw
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
     - neerajnandwana-msft
-    - tapanm-msft
+    - nickdoelman
 ---
 
 # Power Apps portals admin center
@@ -23,7 +24,7 @@ The Power Apps portals admin center allows you perform advanced administrative a
 
 1. From the right-upper corner, select the **Environment** drop-down to verify, or choose the environment for your portal.
 
-    ![Choose environment](media/admin-overview/select-environment.png "Portal settings option")
+    ![Choose environment.](media/admin-overview/select-environment.png "Portal settings option")
 
 1. From the left pane, select **Apps**.
 
@@ -31,15 +32,15 @@ The Power Apps portals admin center allows you perform advanced administrative a
 
 1. Select **Settings**.
 
-    ![Portal settings](media/admin-overview/settings.png "Portal settings")
+    ![Portal settings.](media/admin-overview/settings.png "Portal settings")
 
 1. In the **Portal settings** pane, select **Administration**.
 
-    ![Portal administration](media/admin-overview/administration.png "Portal administration")
+    ![Portal administration.](media/admin-overview/administration.png "Portal administration")
 
 Power Apps portals admin center is now open.
 
-![Power Apps portals admin center](media/admin-overview/admin-center.png "Power Apps portals admin center")
+![Power Apps portals admin center.](media/admin-overview/admin-center.png "Power Apps portals admin center")
 
 ## Add yourself as an owner of the Azure AD application
 
@@ -50,7 +51,7 @@ If you are not a global administrator and you try to manage a portal that has al
 2. Copy the value from the **Application ID** field.
 
     > [!div class=mx-imgBorder]
-    > ![Portal Details tab](../media/portal-details-admin.png "Portal Details tab")
+    > ![Portal Details tab.](../media/portal-details-admin.png "Portal Details tab")
 
 3. Go to Azure AD associated with your tenant. [!include[](../../../includes/proc-more-information.md)] [Take over an unmanaged directory as administrator in Azure Active Directory](/azure/active-directory/active-directory-manage-o365-subscription)
 

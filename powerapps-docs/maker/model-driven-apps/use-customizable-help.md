@@ -6,6 +6,7 @@ ms.date: 10/22/2019
 ms.service: powerapps
 ms.topic: how-to
 author: Mattp123
+ms.subservice: mda-maker
 ms.author: matp
 manager: kvivek
 topic-status: Drafting
@@ -31,7 +32,7 @@ Customizable Help can be set at the global and table levels.
 
 ### Set customizable Help at the global level
 People with the system administrator security role can use the settings to override default Help at the global level. 
-1. Open a model-driven app, and then on the command bar select **Settings** ![Settings](../model-driven-apps/media/powerapps-gear.png) > **Advanced  Settings**.
+1. Open a model-driven app, and then on the command bar select **Settings** ![Settings.](../model-driven-apps/media/powerapps-gear.png) > **Advanced  Settings**.
 2. Go to **Settings** > **Administration**.
 3. Select **System Settings**, and then select the **General** tab. 
 4. Under **Set custom Help URL**, select and define the following customizable Help global settings: 
@@ -40,7 +41,7 @@ People with the system administrator security role can use the settings to overr
      - **Append Parameters to URL**. Select **Yes** to allow for parameters such as language code or table name to be appended to the **Help URL** that you specify in the table definition. More information: [Append parameters to URL](#append-parameters-to-url)  
 
     > [!div class="mx-imgBorder"] 
-    > ![Customizable help global setting](media/customizable-help-global-setting.png)
+    > ![Customizable help global setting.](media/customizable-help-global-setting.png)
 
 5. Select **OK**.
 
@@ -52,7 +53,7 @@ After you enable custom Help at the global level, system customizers can overrid
 3. On the **General** tab under the **Help** section of the table definition, in the **Help URL** box enter the URL of your custom Help page. 
 
     > [!div class="mx-imgBorder"] 
-    > ![Customizable help table setting](media/customizable-help-entity-setting.png)
+    > ![Customizable help table setting.](media/customizable-help-entity-setting.png)
 
 #### Append parameters to URL
 As described previously, to allow for the appending of parameters to the **Help URL** for the table definition, set **Append Parameters to URL** in the **System Settings** > **General** tab to **Yes**. 

@@ -27,6 +27,7 @@ From within a web resource script registered to the onPreStageChange event, a de
 When you invoke `preventDefault`:
 
 - The stage navigation will not be processed. The process instance will remain on the original stage.
+- In a cross-table navigation, the form of the table of the destination stage will not open.
 - The save of the main form will not be processed. If the main form was in a dirty state, it would remain in a dirty state.
 - Any web resources that registered onStageChange will not be invoked.
 

@@ -6,10 +6,11 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2021
+ms.subservice: portals
 ms.author: sandhan
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
-    - tapanm-msft
+    - nickdoelman
     - sandhangitmsft
 ---
 
@@ -88,7 +89,7 @@ The following example uses a Microsoft Dataverse database with [sample data](/po
 
     Replace the GUID of the record with an account table record from your Dataverse database.
 
-    ![Create content snippet](./media/customize-content-snippets/new-content-snippet-html-liquid.png)
+    ![Create content snippet.](./media/customize-content-snippets/new-content-snippet-html-liquid.png)
 
 1. Save content snippet.
 
@@ -106,7 +107,7 @@ The following example uses a Microsoft Dataverse database with [sample data](/po
 
     If different, update the value for *snippet_name* with your snippet name.
 
-    ![Web template](./media/customize-content-snippets/web-template.png)
+    ![Web template.](./media/customize-content-snippets/web-template.png)
 
 1. Select Save.
 
@@ -124,13 +125,13 @@ The following example uses a Microsoft Dataverse database with [sample data](/po
 
 1. Select Save.
 
-    ![Page template](./media/customize-content-snippets/page-template.png)
+    ![Page template.](./media/customize-content-snippets/page-template.png)
 
 1. [Edit](../manage-existing-portals.md#edit) your portal.
 
 1. Select **New** > **Blank** page.
 
-    ![New blank page](./media/customize-content-snippets/new-blank-page.png)
+    ![New blank page.](./media/customize-content-snippets/new-blank-page.png)
 
 1. Enter name for the page. For example, Accounts Data.
 
@@ -138,11 +139,11 @@ The following example uses a Microsoft Dataverse database with [sample data](/po
 
 1. Select the **Page Template** created earlier. In this example, it's Account Data Snippet.
 
-    ![Web page metadata](./media/customize-content-snippets/webpage-metadata.png)
+    ![Web page metadata.](./media/customize-content-snippets/webpage-metadata.png)
 
 1. Select **Browse website** from upper-right corner to view the page in browser.
 
-    ![Browse portal](./media/customize-content-snippets/browse-portal.png)
+    ![Browse portal.](./media/customize-content-snippets/browse-portal.png)
 
 You can follow the same steps with content snippet of **Text** type instead of HTML, for example:
 

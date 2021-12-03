@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 06/22/2020
+ms.subservice: sample-apps
 ms.author: ramanasr
 ms.reviewer: nkrb
 ---
@@ -26,14 +27,14 @@ To get started with the mobile app, you need to download the Power Apps Mobile a
 
 -   Ensure that your organization has [deployed](deploy-solution.md) and [configured](configure-data.md) the Higher Education Crisis Financial Impact Tracker app.<
 
-After you install Power Apps Mobile, open the app from your device and sign in with your company's Azure Active Directory account. You can view all apps shared with you by your organization after you sign in. More information: [Power Apps mobile device sign-in](/powerapps/user/run-app-client#open-power-apps-and-sign-in)
+After you install Power Apps Mobile, open the app from your device and sign in with your company's Azure Active Directory account. You can view all apps shared with you by your organization after you sign in. More information: [Power Apps mobile device sign-in](/powerapps/mobile/run-powerapps-on-mobile#sign-in)
 
 ## Using the mobile app
 
 Open the Higher Education Crisis Financial Impact Tracker app from Power Apps Mobile, review the welcome message, and then select **Let's get Started**.
 
 > [!div class="mx-imgBorder"]
-> ![Welcome message](./media/welcome-cfit-app-message.png "Welcome message")
+> ![Welcome message.](./media/welcome-cfit-app-message.png "Welcome message")
 
 > [!NOTE]
 > When you open the app for the first time, it displays the welcome message configured in the admin app of the solution. If you don't want to see it again, select **Don't show this message again**.
@@ -53,18 +54,18 @@ The Higher Education Crisis Financial Impact Tracker app consists of the followi
 On the **Sponsored Program** tab, you can review the list of sponsored programs associated with you as a co-principal investigator. You can enter text in the search box to find a specific program.
 
 > [!div class="mx-imgBorder"]
-> ![Sponsored Programs](./media/list-of-sponsored-programs-records.png "Sponsored Programs")
+> ![Sponsored Programs.](./media/list-of-sponsored-programs-records.png "Sponsored Programs")
 
 Select **>** to view details about the sponsored program.
 
-You can select **Grants** to view [grant details](#grant-details) and, similarly, **Employees** to view [employee details](#employee-details). You can also select the information symbol ![information](./media/information-icon.png) in the upper-right corner to view [frequently asked questions](#frequently-asked-questions).
+You can select **Grants** to view [grant details](#grant-details) and, similarly, **Employees** to view [employee details](#employee-details). You can also select the information symbol ![information.](./media/information-icon.png) in the upper-right corner to view [frequently asked questions](#frequently-asked-questions).
 
 ### Sponsored Program details
 
 You can use the **Sponsored Programs** details form to review the summary of the sponsored program and report the effort loss for each employee.
 
 > [!div class="mx-imgBorder"]
-> ![Sponsored Program details](./media/sponsored-programs-record-with-details.png "Sponsored Program details")
+> ![Sponsored Program details.](./media/sponsored-programs-record-with-details.png "Sponsored Program details")
 
 Enter the **Pay Period**, **Loss Percentage**, and **Loss Reason**. Select the employees you're reporting the effort loss for, and then select **Submit** to report the effort loss.
 
@@ -91,18 +92,18 @@ Select **<** in the upper-left corner to go back to the sponsored program list w
 On the **Grants** tab, you can review the list of grants associated with you as a co-principal investigator.
 
 > [!div class="mx-imgBorder"]
-> ![List of grants](./media/list-of-grants-records.png "List of grants")
+> ![List of grants.](./media/list-of-grants-records.png "List of grants")
 
 Select **>** next to the grant record to view details about the grant.
 
-You can select **Sponsored Programs** to view [sponsored program details](#sponsored-program-details) and, similarly, **Employees** to view [employee details](#employee-details). You can select the information symbol ![information](./media/information-icon.png) in the upper-right corner to view [frequently asked questions](#frequently-asked-questions).
+You can select **Sponsored Programs** to view [sponsored program details](#sponsored-program-details) and, similarly, **Employees** to view [employee details](#employee-details). You can select the information symbol ![information.](./media/information-icon.png) in the upper-right corner to view [frequently asked questions](#frequently-asked-questions).
 
 ### Grant details
 
 You can use the **Grants** details form to review the summary of the grants and sponsored programs associated with the selected grant.
 
 > [!div class="mx-imgBorder"]
-> ![Grant details](./media/grant-records-with-details.png "Grant details")
+> ![Grant details.](./media/grant-records-with-details.png "Grant details")
 
 Select **<** in the upper-left corner to go back to the **Grants** list page.
 
@@ -131,18 +132,18 @@ Select **<** in the upper-left corner to go back to the **Grants** list page.
 On the **Employees** tab, you can review the list of employees associated with the sponsored programs list.
 
 > [!div class="mx-imgBorder"]
-> ![List of employees](./media/list-of-employee-records.png "List of employees")
+> ![List of employees.](./media/list-of-employee-records.png "List of employees")
 
 Select **>** next to the employee record to view details about the employee.
 
-You can select **Sponsored Programs** to view [sponsored program details](#sponsored-program-details) and, similarly, select **Grants** to see [grant details](#grant-details). You can also select the information symbol ![information](./media/information-icon.png) in the upper-right corner to view [frequently asked questions](#frequently-asked-questions).
+You can select **Sponsored Programs** to view [sponsored program details](#sponsored-program-details) and, similarly, select **Grants** to see [grant details](#grant-details). You can also select the information symbol ![information.](./media/information-icon.png) in the upper-right corner to view [frequently asked questions](#frequently-asked-questions).
 
 ### Employee details
 
 You can use the **Employees** details form to review the summary of the employee and effort impact associated with the employee.
 
 > [!div class="mx-imgBorder"]
-> ![Employee details](./media/employee-record-with-details.png "Employee details")
+> ![Employee details.](./media/employee-record-with-details.png "Employee details")
 
 Select **<** in the upper-left corner to go back to the employee list page.
 
@@ -167,10 +168,10 @@ Select **<** in the upper-left corner to go back to the employee list page.
 
 ### Frequently Asked Questions
 
-You can review frequently asked questions by selecting the information symbol ![information](./media/information-icon.png) on any screen. These frequently asked questions are configured in the Higher Education Crisis Financial Impact Tracker admin app based on your organization's rules and guidelines. If you need additional information, reach out to your system administrator. Select **<** in the upper-left corner to go back to the previous page.
+You can review frequently asked questions by selecting the information symbol ![information.](./media/information-icon.png) on any screen. These frequently asked questions are configured in the Higher Education Crisis Financial Impact Tracker admin app based on your organization's rules and guidelines. If you need additional information, reach out to your system administrator. Select **<** in the upper-left corner to go back to the previous page.
 
 > [!div class="mx-imgBorder"]
-> ![Frequently Asked Questions details](./media/frequently-asked-questions-record-with-details.png "Frequently Asked Questions details")
+> ![Frequently Asked Questions details.](./media/frequently-asked-questions-record-with-details.png "Frequently Asked Questions details")
 
 ## Issues and feedback 
 

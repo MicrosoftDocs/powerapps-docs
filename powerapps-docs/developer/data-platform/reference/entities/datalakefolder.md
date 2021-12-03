@@ -1,13 +1,13 @@
 ---
 title: "datalakefolder table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the datalakefolder table/entity."
-ms.date: 05/20/2021
+ms.date: 10/05/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -65,6 +65,8 @@ A folder is a place to store data in Azure Data Lake.
 
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
+- [containerendpoint](#BKMK_containerendpoint)
+- [ContributorSecurityGroupId](#BKMK_ContributorSecurityGroupId)
 - [datalakefolder_UniqueName](#BKMK_datalakefolder_UniqueName)
 - [datalakefolderId](#BKMK_datalakefolderId)
 - [extendedproperties](#BKMK_extendedproperties)
@@ -72,14 +74,49 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [iscustomercapacity](#BKMK_iscustomercapacity)
 - [IsCustomizable](#BKMK_IsCustomizable)
 - [isdeepcopyenabled](#BKMK_isdeepcopyenabled)
+- [IsExternalLake](#BKMK_IsExternalLake)
+- [IsExternalLakeReadOnly](#BKMK_IsExternalLakeReadOnly)
 - [isprivate](#BKMK_isprivate)
 - [name](#BKMK_name)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
 - [owningappid](#BKMK_owningappid)
+- [path](#BKMK_path)
+- [ReaderSecurityGroupId](#BKMK_ReaderSecurityGroupId)
+- [statecode](#BKMK_statecode)
+- [statuscode](#BKMK_statuscode)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
+
+
+### <a name="BKMK_containerendpoint"></a> containerendpoint
+
+|Property|Value|
+|--------|-----|
+|Description|Azure Data Lake container endpoint for this folder.|
+|DisplayName|Container Endpoint|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|containerendpoint|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
+
+
+### <a name="BKMK_ContributorSecurityGroupId"></a> ContributorSecurityGroupId
+
+|Property|Value|
+|--------|-----|
+|Description|The security group for contributor access.|
+|DisplayName|Contributor Security Group Id|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|contributorsecuritygroupid|
+|RequiredLevel|None|
+|Type|Uniqueidentifier|
 
 
 ### <a name="BKMK_datalakefolder_UniqueName"></a> datalakefolder_UniqueName
@@ -163,8 +200,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### iscustomercapacity Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -201,8 +238,55 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### isdeepcopyenabled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes|
+|0|No|
+
+**DefaultValue**: False
+
+
+
+### <a name="BKMK_IsExternalLake"></a> IsExternalLake
+
+|Property|Value|
+|--------|-----|
+|Description|Indicates whether lake is managed or external.|
+|DisplayName|Is External Lake|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|IsValidForUpdate|False|
+|LogicalName|isexternallake|
+|RequiredLevel|None|
+|Type|Boolean|
+
+#### IsExternalLake Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes|
+|0|No|
+
+**DefaultValue**: False
+
+
+
+### <a name="BKMK_IsExternalLakeReadOnly"></a> IsExternalLakeReadOnly
+
+|Property|Value|
+|--------|-----|
+|Description|Indicates whether external lake is read only.|
+|DisplayName|Is External Lake Read Only|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|isexternallakereadonly|
+|RequiredLevel|None|
+|Type|Boolean|
+
+#### IsExternalLakeReadOnly Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -224,8 +308,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### isprivate Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -310,6 +394,79 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Uniqueidentifier|
 
 
+### <a name="BKMK_path"></a> path
+
+|Property|Value|
+|--------|-----|
+|Description|Folder path in the Azure Data Lake container.|
+|DisplayName|Path|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|path|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
+
+
+### <a name="BKMK_ReaderSecurityGroupId"></a> ReaderSecurityGroupId
+
+|Property|Value|
+|--------|-----|
+|Description|The security group for reader access.|
+|DisplayName|Reader Security Group Id|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|readersecuritygroupid|
+|RequiredLevel|None|
+|Type|Uniqueidentifier|
+
+
+### <a name="BKMK_statecode"></a> statecode
+
+|Property|Value|
+|--------|-----|
+|Description|Status of the Data Lake Folder|
+|DisplayName|Status|
+|IsValidForCreate|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|statecode|
+|RequiredLevel|SystemRequired|
+|Type|State|
+
+#### statecode Choices/Options
+
+|Value|Label|DefaultStatus|InvariantName|
+|-----|-----|-------------|-------------|
+|0|Active|1|Active|
+|1|Inactive|2|Inactive|
+
+
+
+### <a name="BKMK_statuscode"></a> statuscode
+
+|Property|Value|
+|--------|-----|
+|Description|Reason for the status of the Data Lake Folder|
+|DisplayName|Status Reason|
+|IsValidForCreate|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|statuscode|
+|RequiredLevel|None|
+|Type|Status|
+
+#### statuscode Choices/Options
+
+|Value|Label|State|
+|-----|-----|-----|
+|1|Active|0|
+|2|Inactive|1|
+
+
+
 ### <a name="BKMK_TimeZoneRuleVersionNumber"></a> TimeZoneRuleVersionNumber
 
 |Property|Value|
@@ -349,7 +506,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 - [ComponentIdUnique](#BKMK_ComponentIdUnique)
 - [ComponentState](#BKMK_ComponentState)
-- [containerendpoint](#BKMK_containerendpoint)
 - [CreatedBy](#BKMK_CreatedBy)
 - [CreatedByName](#BKMK_CreatedByName)
 - [CreatedByYomiName](#BKMK_CreatedByYomiName)
@@ -371,10 +527,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
-- [path](#BKMK_path)
 - [SolutionId](#BKMK_SolutionId)
-- [statecode](#BKMK_statecode)
-- [statuscode](#BKMK_statuscode)
 - [SupportingSolutionId](#BKMK_SupportingSolutionId)
 - [VersionNumber](#BKMK_VersionNumber)
 
@@ -410,29 +563,13 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### ComponentState Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Published|
-|1|Unpublished|
-|2|Deleted|
-|3|Deleted Unpublished|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Published||
+|1|Unpublished||
+|2|Deleted||
+|3|Deleted Unpublished||
 
-
-
-### <a name="BKMK_containerendpoint"></a> containerendpoint
-
-|Property|Value|
-|--------|-----|
-|Description|Azure Data Lake container endpoint for this folder.|
-|DisplayName|Container Endpoint|
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|containerendpoint|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
 
 
 ### <a name="BKMK_CreatedBy"></a> CreatedBy
@@ -570,8 +707,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsManaged Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Managed|
 |0|Unmanaged|
 
@@ -799,22 +936,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Type|Lookup|
 
 
-### <a name="BKMK_path"></a> path
-
-|Property|Value|
-|--------|-----|
-|Description|Folder path in the Azure Data Lake container.|
-|DisplayName|Path|
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|path|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
 ### <a name="BKMK_SolutionId"></a> SolutionId
 
 **Added by**: Basic Solution Solution
@@ -828,48 +949,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |LogicalName|solutionid|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
-
-
-### <a name="BKMK_statecode"></a> statecode
-
-|Property|Value|
-|--------|-----|
-|Description|Status of the Data Lake Folder|
-|DisplayName|Status|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|statecode|
-|RequiredLevel|SystemRequired|
-|Type|State|
-
-#### statecode Choices/Options
-
-|Value|Label|DefaultStatus|InvariantName|
-|-----|-----|-------------|-------------|
-|0|Active|1|Active|
-|1|Inactive|2|Inactive|
-
-
-
-### <a name="BKMK_statuscode"></a> statuscode
-
-|Property|Value|
-|--------|-----|
-|Description|Reason for the status of the Data Lake Folder|
-|DisplayName|Status Reason|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|statuscode|
-|RequiredLevel|None|
-|Type|Status|
-
-#### statuscode Choices/Options
-
-|Value|Label|State|
-|-----|-----|-----|
-|1|Active|0|
-|2|Inactive|1|
-
 
 
 ### <a name="BKMK_SupportingSolutionId"></a> SupportingSolutionId
@@ -1131,3 +1210,4 @@ See businessunit Table [business_unit_datalakefolder](businessunit.md#BKMK_busin
 
 [About the table reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+<xref href="Microsoft.Dynamics.CRM.datalakefolder?text=datalakefolder EntityType" />

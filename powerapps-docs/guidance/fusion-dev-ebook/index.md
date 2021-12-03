@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: ebook
 ms.date: 04/26/2021
+ms.subservice: guidance
 ms.author: shboyer
 ms.reviewer: kvivek
 
@@ -13,7 +14,7 @@ ms.reviewer: kvivek
 
 # Ebook: Fusion development approach to building apps using Power Apps
 
-![cover image](./media/cover/power-apps-ebook-monitor.svg)
+![cover image.](./media/cover/power-apps-ebook-monitor.svg)
 
 **EDITION v1.0**
 

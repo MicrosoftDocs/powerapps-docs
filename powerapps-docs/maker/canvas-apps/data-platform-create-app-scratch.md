@@ -2,17 +2,20 @@
 title: Create a canvas app from scratch using Microsoft Dataverse
 description: Learn about how to create a canvas app to add, update, and delete records in Microsoft Dataverse.
 author: tapanm-msft
-manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
 ms.date: 05/21/2019
+ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - lancedmicrosoft
 ---
 # Create a canvas app from scratch using Microsoft Dataverse
 
@@ -32,7 +35,7 @@ When you build an app from Dataverse, you don't need to create a connection from
 
 1. Under **Make your own app**, select **Canvas app from blank**.
 
-    ![Blank-app tile](./media/data-platform-create-app-scratch/blank-app.png)
+    ![Blank-app tile.](./media/data-platform-create-app-scratch/blank-app.png)
 
 1. Specify a name for your app, select **Phone**, and then select **Create**.
 
@@ -50,7 +53,7 @@ When you build an app from Dataverse, you don't need to create a connection from
 
 1. On the **Home** tab, select the down arrow for **New screen**, and then select **List**.
 
-    ![Add a list screen](./media/data-platform-create-app-scratch/list-screen.png)
+    ![Add a list screen.](./media/data-platform-create-app-scratch/list-screen.png)
 
 1. In the left navigation bar, select **BrowseGallery1**, and then set the value of the **Items** property to this formula:
 
@@ -64,11 +67,11 @@ When you build an app from Dataverse, you don't need to create a connection from
 
      You can use [these and many other functions](formula-reference.md) to specify how your app appears and behaves.
 
-     ![Set the gallery's Items property](./media/data-platform-create-app-scratch/gallery-items.png)
+     ![Set the gallery's Items property.](./media/data-platform-create-app-scratch/gallery-items.png)
 
 1. Set the gallery's layout to show only the name of each account, and configure the title bar to show the word **Browse**, as [Customize a gallery](customize-layout-sharepoint.md) describes.
 
-    ![Browse screen](./media/data-platform-create-app-scratch/final-browse.png)
+    ![Browse screen.](./media/data-platform-create-app-scratch/final-browse.png)
 
 1. In the left navigation bar, hover over **Screen1**, select the ellipsis icon (...), and then select **Delete**.
 
@@ -76,7 +79,7 @@ When you build an app from Dataverse, you don't need to create a connection from
 
 1. Type or paste **BrowseScreen**, and then rename the gallery in that screen as **BrowseGallery**.
 
-    ![Rename Browse screen, gallery](./media/data-platform-create-app-scratch/rename-browse.png)
+    ![Rename Browse screen, gallery.](./media/data-platform-create-app-scratch/rename-browse.png)
 
 ## Add a form screen
 
@@ -84,7 +87,7 @@ When you build an app from Dataverse, you don't need to create a connection from
 
 1. Set the form's **DataSource** property to **Accounts** and its **Item** property to **BrowseGallery.Selected**, as the **Advanced** tab of the right-hand pane shows.
 
-    ![Set the form's Datasource and Item property](./media/data-platform-create-app-scratch/form-datasource.png)
+    ![Set the form's Datasource and Item property.](./media/data-platform-create-app-scratch/form-datasource.png)
 
 1. On the **Properties** tab of the right-hand pane, select **Edit Fields** to open the **Fields** pane.
 
@@ -98,7 +101,7 @@ When you build an app from Dataverse, you don't need to create a connection from
     - **Annual Revenue**
 
     > [!NOTE]
-    > Outside of this scenario, you can create a custom field by selecting **New field**, providing the required information, and then selecting **Done**. More information: [Create a column](../data-platform/create-edit-field-portal.md#create-a-column).<br><br>![Select and add a column](media/data-platform-create-app-scratch/choose-or-add-fields.png "Select and add a column")
+    > Outside of this scenario, you can create a custom field by selecting **New field**, providing the required information, and then selecting **Done**. More information: [Create a column](../data-platform/create-edit-field-portal.md#create-a-column).<br><br>![Select and add a column.](media/data-platform-create-app-scratch/choose-or-add-fields.png "Select and add a column")
 
 1. Select **Add**.
 
@@ -106,7 +109,7 @@ When you build an app from Dataverse, you don't need to create a connection from
 
     The screen reflects your changes.
 
-    ![Screen after the changes](./media/data-platform-create-app-scratch/field-list.png)
+    ![Screen after the changes.](./media/data-platform-create-app-scratch/field-list.png)
 
 1. Rename this screen **FormScreen**.
 
@@ -116,31 +119,31 @@ When you build an app from Dataverse, you don't need to create a connection from
 
     `Refresh(Accounts)`
 
-    ![Refresh icon](./media/data-platform-create-app-scratch/refresh-icon.png)
+    ![Refresh icon.](./media/data-platform-create-app-scratch/refresh-icon.png)
 
 1. Set the **OnSelect** property of the plus icon to this formula:
 
     `NewForm(EditForm1); Navigate(FormScreen, ScreenTransition.None)`
 
-    ![Add icon](./media/data-platform-create-app-scratch/plus-icon.png)
+    ![Add icon.](./media/data-platform-create-app-scratch/plus-icon.png)
 
 1. Set the **OnSelect** property of the first arrow pointing to the right to this formula:
 
     `EditForm(EditForm1); Navigate(FormScreen, ScreenTransition.None)`
 
-    ![Next icon](./media/data-platform-create-app-scratch/next-icon.png)
+    ![Next icon.](./media/data-platform-create-app-scratch/next-icon.png)
 
 1. On the **FormScreen**, set the **OnSelect** property of the cancel icon to this formula:
 
     `ResetForm(EditForm1);Navigate(BrowseScreen, ScreenTransition.None)`
 
-    ![Cancel icon](./media/data-platform-create-app-scratch/cancel-icon.png)
+    ![Cancel icon.](./media/data-platform-create-app-scratch/cancel-icon.png)
 
 1. Set the **OnSelect** property of the checkmark icon to this formula:
 
     `SubmitForm(EditForm1); Navigate(BrowseScreen, ScreenTransition.None)`
 
-    ![Checkmark icon](./media/data-platform-create-app-scratch/checkmark-icon.png)
+    ![Checkmark icon.](./media/data-platform-create-app-scratch/checkmark-icon.png)
 
 1. On the **Insert** tab, select **Icons**, and then select the **Trash** icon.
 
@@ -148,13 +151,13 @@ When you build an app from Dataverse, you don't need to create a connection from
 
     `Remove(Accounts, BrowseGallery.Selected); Navigate(BrowseScreen, ScreenTransition.None)`
 
-    ![Trash icon](./media/data-platform-create-app-scratch/trash-icon.png)
+    ![Trash icon.](./media/data-platform-create-app-scratch/trash-icon.png)
 
 ## Test the app
 
 1. In the left navigation bar, select **BrowseScreen**, and then open Preview by pressing F5 (or by selecting the play icon near the upper-right corner).
 
-    ![Open Preview](./media/data-platform-create-app-scratch/open-preview.png)
+    ![Open Preview.](./media/data-platform-create-app-scratch/open-preview.png)
 
 1. Toggle the list between ascending and descending sort orders, and filter the list by one or more characters in the account name.
 

@@ -46,7 +46,7 @@ Use these steps to create a Postman environment that you can use to connect with
 1. Select the **Environment Options** gear icon in the top-right corner. 
 1. In the **Manage Environments** dialog box, select the **Add** button to add a new environment.
   
-  ![Click on Add button to add a new Postman environment](media/postman-manage-env.png "Click on Add button to add a new Postman environment")<br>
+  ![Click on Add button to add a new Postman environment.](media/postman-manage-env.png "Click on Add button to add a new Postman environment")<br>
   
 1. In the dialog box that opens, type a name for the environment. Then add the following key-value pairs into the editing space.<br>
 
@@ -59,9 +59,9 @@ Use these steps to create a Postman environment that you can use to connect with
     |`callback`|`https://callbackurl`|
     |`authurl`|`https://login.microsoftonline.com/common/oauth2/authorize?resource={{url}}`|
     > [!NOTE]
-    > For [relevance search](relevance-search.md), specify a version of 1.0 and a webapiurl of {{url}}/api/search/v{{version}}/.
+    > For [Dataverse search](relevance-search.md), specify a version of 1.0 and a webapiurl of {{url}}/api/search/v{{version}}/.
 
-    ![Create a new Postman environment to connect with Online instance](media/postman-add-online-env.png "Create a new Postman environment to connect with Online instance")
+    ![Create a new Postman environment to connect with Online instance.](media/postman-add-online-env.png "Create a new Postman environment to connect with Online instance")
 
 2. Replace the instance URL placeholder value with the URL of your Dataverse environment, and select **Add** to save the environment.
 
@@ -77,13 +77,13 @@ To connect using **OAuth 2.0**, you must have an access token. Use the following
 1. Verify that you have selected the environment that you created.
 1. Select **Get New Access Token**
 
-    ![In Authorization tab, set Type to OAuth 2.0](media/postman-set-type.png)<br>
+    ![In Authorization tab, set Type to OAuth 2.0.](media/postman-set-type.png)<br>
 1. Set the following values in the dialog box. Select `Implicit` from the **Grant Type** drop-down menu. You can set the **Token Name** to whatever you like, and leave other keys set to default values.<br>
 
-    ![Get new Access Token](media/postman-access-token.png "Get new Access Token")<br>
+    ![Get new Access Token.](media/postman-access-token.png "Get new Access Token")<br>
 
     > [!NOTE]
-    > If you are configuring environments in Postman for multiple Dataverse instances using different user credentials, you might need to delete the cookies cached by Postman. Select the **Cookies** link, which can be found under the **Send** button, and remove the saved cookies from the **Manage Cookies** dialog box.<br>![Remove Cookies](media/postman-cookies.png "Remove Cookies")<br>
+    > If you are configuring environments in Postman for multiple Dataverse instances using different user credentials, you might need to delete the cookies cached by Postman. Select the **Cookies** link, which can be found under the **Send** button, and remove the saved cookies from the **Manage Cookies** dialog box.<br>![Remove Cookies.](media/postman-cookies.png "Remove Cookies")<br>
     > Some of these cookies are very persistent. You can delete some of them in groups, but you might have to delete others individually.   You might need to do this twice to ensure that no cookies remain.
 
 1. Select **Request Token**. When you do this, an Azure Active Directory sign-in page appears. Enter your username and password.
@@ -96,7 +96,7 @@ See [Test your connection](#test-your-connection) for steps to verify your conne
 
 Create a new Web API request to test the connection with your Dataverse instance. Use the <xref href="Microsoft.Dynamics.CRM.WhoAmI?text=WhoAmI function" />:
 1. Select `GET` as the HTTP method and add `{{webapiurl}}WhoAmI` in the editing space.
-  ![WhoAmI function request](media/postman-whoami-request.png "WhoAmI function request")
+  ![WhoAmI function request.](media/postman-whoami-request.png "WhoAmI function request")
 2. Select **Send** to send this request.
 3. If your request is successful, you see the data from the <xref href="Microsoft.Dynamics.CRM.WhoAmIResponse?text=WhoAmIResponse ComplexType" /> that is returned by the <xref href="Microsoft.Dynamics.CRM.WhoAmI?text=WhoAmI Function" />.
 

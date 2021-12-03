@@ -1,13 +1,13 @@
 ---
 title: "CustomAPI table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the CustomAPI table/entity."
-ms.date: 05/20/2021
+ms.date: 10/05/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -105,11 +105,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### AllowedCustomProcessingStepType Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|None|
-|1|Async Only|
-|2|Sync and Async|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|None||
+|1|Async Only||
+|2|Sync and Async||
 
 
 
@@ -128,11 +128,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### BindingType Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Global|
-|1|Entity|
-|2|Entity Collection|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Global||
+|1|Entity||
+|2|Entity Collection||
 
 
 
@@ -264,8 +264,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsFunction Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -287,8 +287,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsPrivate Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -495,8 +495,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### WorkflowSdkStepEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -570,12 +570,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### ComponentState Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Published|
-|1|Unpublished|
-|2|Deleted|
-|3|Deleted Unpublished|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Published||
+|1|Unpublished||
+|2|Deleted||
+|3|Deleted Unpublished||
 
 
 
@@ -714,8 +714,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsManaged Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Managed|
 |0|Unmanaged|
 
@@ -1261,3 +1261,4 @@ See plugintype Table [plugintype_customapi](plugintype.md#BKMK_plugintype_custom
 
 [About the table reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+<xref href="Microsoft.Dynamics.CRM.customapi?text=customapi EntityType" />

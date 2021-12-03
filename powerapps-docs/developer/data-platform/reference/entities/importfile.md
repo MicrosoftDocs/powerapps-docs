@@ -1,13 +1,13 @@
 ---
-title: "ImportFile table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the ImportFile table/entity."
-ms.date: 05/20/2021
+title: "Import Source File (ImportFile) table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the Import Source File (ImportFile) table/entity."
+ms.date: 10/05/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -15,7 +15,7 @@ search.app:
   - D365CE
 ---
 
-# ImportFile table/entity reference
+# Import Source File (ImportFile) table/entity reference
 
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
@@ -123,11 +123,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### DataDelimiterCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|DoubleQuote|
-|2|None|
-|3|SingleQuote|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|DoubleQuote||
+|2|None||
+|3|SingleQuote||
 
 
 
@@ -145,8 +145,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### EnableDuplicateDetection Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -181,12 +181,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### FieldDelimiterCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Colon|
-|2|Comma|
-|3|Tab|
-|4|Semicolon|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Colon||
+|2|Comma||
+|3|Tab||
+|4|Semicolon||
 
 
 
@@ -204,12 +204,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### FileTypeCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|CSV|
-|1|XML Spreadsheet 2003|
-|2|Attachment|
-|3|XLSX|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|CSV||
+|1|XML Spreadsheet 2003||
+|2|Attachment||
+|3|XLSX||
 
 
 
@@ -269,8 +269,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsFirstRowHeader Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -335,11 +335,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### ProcessCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Process|
-|2|Ignore|
-|3|Internal|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Process||
+|2|Ignore||
+|3|Internal||
 
 
 
@@ -527,11 +527,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### UpsertModeCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Create|
-|1|Update|
-|2|Ignore|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Create||
+|1|Update||
+|2|Ignore||
 
 
 
@@ -549,8 +549,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### UseSystemMap Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -1076,20 +1076,20 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### ProcessingStatus Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Not Started|
-|2|Parsing|
-|3|Parsing Complete|
-|4|Complex Transformation|
-|5|Lookup Transformation|
-|6|Picklist Transformation|
-|7|Owner Transformation|
-|8|Transformation Complete|
-|9|Import Pass 1|
-|10|Import Pass 2|
-|11|Import Complete|
-|12|Primary Key Transformation|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Not Started||
+|2|Parsing||
+|3|Parsing Complete||
+|4|Complex Transformation||
+|5|Lookup Transformation||
+|6|Picklist Transformation||
+|7|Owner Transformation||
+|8|Transformation Complete||
+|9|Import Pass 1||
+|10|Import Pass 2||
+|11|Import Complete||
+|12|Primary Key Transformation||
 
 
 

@@ -20,7 +20,7 @@ This sample component demonstrates how to leverage the multi select option set t
 [!INCLUDE[cc-terminology](../../data-platform/includes/cc-terminology.md)]
 
 > [!div class="mx-imgBorder"]
-> ![Multi select option set component](../media/multi-select-option-set-control.png "Multi select option set component")
+> ![Multi select option set component.](../media/multi-select-option-set-control.png "Multi select option set component")
 
 ## Available for
 

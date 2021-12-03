@@ -1,5 +1,5 @@
 ---
-title: "Sample: Retrieve field permissions(Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Sample: Retrieve field permissions (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample shows how to retrieve secured columns for a user" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
@@ -53,7 +53,7 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 1. The `FieldSecurityProfile` method creates field security profile.
 1. The `AssociateRequest` method adds team and user to the profile.
 1. The `CreateEntityRequest` method creates a new custom activity table for the sample.
-1. The `RolePrivilege` method adds privileges for the new custom entity.
+1. The `RolePrivilege` method adds privileges for the new custom table.
 1. The `AddPrivilegeRoleRequest` method creates and execute the `RolePrivilege` method.
 1. The `FieldPermission` method creates field permission object for identity.
 

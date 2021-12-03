@@ -7,6 +7,7 @@ ms.service: powerapps
 ms.topic: article
 ms.assetid: e6a25bbe-e484-cfe9-9ad9-20ac6f19336a
 author: Nkrb # GitHub ID
+ms.subservice: mda-developer
 ms.author: nabuthuk # MSFT alias of Microsoft employees only
 manager: shilpas # MSFT alias of manager or PM counterpart
 ms.reviewer: 
@@ -107,7 +108,7 @@ Xrm.Navigation.navigateTo(pageInput, navigationOptions);
 ```
 
 > [!div class="mx-imgBorder"]
-> ![Open a new record](media/open-new-record-mfd.png "Open a new record")
+> ![Open a new record.](media/open-new-record-mfd.png "Open a new record")
 
 ### Open an existing record
 
@@ -128,7 +129,7 @@ var navigationOptions = {
 Xrm.Navigation.navigateTo(pageInput, navigationOptions);
 ```
 > [!div class="mx-imgBorder"]
-> ![Open an existing record](media/open-existing-record-mfd.png "Open an existing record")
+> ![Open an existing record.](media/open-existing-record-mfd.png "Open an existing record")
 
 ### Open a new record on the side pane
 
@@ -148,7 +149,7 @@ var navigationOptions = {
 Xrm.Navigation.navigateTo(pageInput, navigationOptions);
 ```
 > [!div class="mx-imgBorder"]
-> ![Open an existing record on side pane](media/open-record-side-pane-mfd.png "Open an existing record on side pane")
+> ![Open an existing record on side pane.](media/open-record-side-pane-mfd.png "Open an existing record on side pane")
 
 ### Open main form in a dialog with callback method
 
@@ -181,7 +182,7 @@ Xrm.Navigation.navigateTo(pageInput, navigationOptions).then(
 
  [Create and design forms](../../maker/model-driven-apps/create-design-forms.md)   
  [SystemForm table](../data-platform/reference/entities/systemform.md)  
- [Form XML cchema](form-xml-schema.md)<br/>
+ [Form XML schema](form-xml-schema.md)<br/>
  [Xrm.Navigation.navigateTo](./clientapi/reference/xrm-navigation/navigateto.md)
 
 

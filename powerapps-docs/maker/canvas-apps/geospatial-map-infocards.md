@@ -1,18 +1,21 @@
 ---
 title: Display information about map pins
 description: Insert info cards that display information about each pin in your map.
-author: iaanw
-manager: shellyha
+author: anuitz
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas, ce06122020
 ms.reviewer: tapanm
 ms.date: 1/19/2021
-ms.author: iawilt
+ms.subservice: canvas-maker
+ms.author: anuitz
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - anuitz
 ---
 
 

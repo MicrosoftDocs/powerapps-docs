@@ -26,7 +26,7 @@ Model-driven and canvas apps
 
 ### coords
 
-Contains a set of geographic coordinates along with the associated currency as well as a set of other optional columns such as altitude and speed.
+Contains a set of geographic coordinates along with the associated accuracy as well as a set of other optional columns such as altitude and speed.
 
 ### timestamp
 

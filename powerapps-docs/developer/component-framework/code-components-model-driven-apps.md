@@ -2,6 +2,7 @@
 title: Code components for model-driven apps  | Microsoft Docs
 description: Learn how to create code components using Power Apps component framework for model-driven apps
 keywords:
+ms.subservice: pcf
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
@@ -31,10 +32,10 @@ The [create your first code component](implementing-controls-using-typescript.md
 To add code components to a column or a table in model-driven apps, see [Add code components to model-driven apps](add-custom-controls-to-a-field-or-entity.md).
 
 > [!div class="mx-imgBorder"] 
-> ![Add linear slider control](../../maker/model-driven-apps/media/add-slider.PNG "Add linear slider control")
+> ![Add linear slider control.](../../maker/model-driven-apps/media/add-slider.PNG "Add linear slider control")
 
 > [!div class="mx-imgBorder"]
-> ![Data Set Grid component](media/add-dataset-component.png "Data Set Grid component")
+> ![Data Set Grid component.](media/add-dataset-component.png "Data Set Grid component")
 
 ## Update existing code components
 

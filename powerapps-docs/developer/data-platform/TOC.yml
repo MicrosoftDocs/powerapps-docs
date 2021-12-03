@@ -7,6 +7,8 @@
   items:
   - name: Supported customizations
     href: supported-customizations.md
+  - name: Learn about developer tools
+    href: developer-tools.md
 - name: Understand terminology
   href: understand-terminology.md
 - name: Security and data access
@@ -20,6 +22,8 @@
     href: security-sharing-assigning.md
   - name: Verifying access in code
     href: security-access-coding.md
+  - name: Security roles and templates
+    href: security-roles.md
 - name: Work with data using code
   href: work-with-data.md
   items:
@@ -137,12 +141,20 @@
       href: debug-plug-in.md
     - name: Tracing and logging
       href: logging-tracing.md
+    - name: Application Insights with ILogger (Preview)
+      href: application-insights-ilogger.md
     - name: Analyze performance
       href: analyze-performance.md
     - name: Troubleshoot plug-ins
       href: troubleshoot-plug-in.md
     - name: Access external web resources
       href: access-web-services.md
+    - name: Quickstarts
+      items:
+      - name: Create a project using Power Platform Tools
+        href: tools/devtools-create-project.md
+      - name: Create a plug-in using Power Platform Tools
+        href: tools/devtools-create-plugin.md
     - name: Tutorials
       items:
       - name: Write and register a plug-in
@@ -159,7 +171,7 @@
         href: org-service/samples/web-access-plugin.md
   - name: Workflow extensions
     href: workflow/workflow-extensions.md
-  - name: Business Events (preview)
+  - name: Business Events
     href: business-events.md
   - name: Scalable customization design
     href: scalable-customization-design/overview.md
@@ -254,7 +266,7 @@
         href: create-recurring-appointment-series-instance-exception.md
       - name: Update a recurring appointment
         href: update-recurring-appointment.md
-      - name: Link custom attributes of the recurring appointment master and appointment entities
+      - name: Link custom columns of the recurring appointment master and appointment tables
         href: link-custom-attributes-recurring-master-appointment-entities.md
   - name: Annotation (note) table
     href: annotation-note-entity.md
@@ -273,7 +285,7 @@
     href: transaction-currency-currency-entity.md
   - name: Category table
     href: use-category-entity.md
-  - name: Catalog & CatalogAssignment (preview)
+  - name: Catalog & CatalogAssignment
     href: catalog-catalogassignment.md
   - name: Feedback table
     href: use-feedback-entity-manage-feedback-ratings-records.md
@@ -343,6 +355,14 @@
     href: customize-labels-support-multiple-languages.md
   - name: Best Practices
     href: best-practices/work-with-metadata/index.md
+- name: Work with columns
+  items:
+  - name: Data type format conversions
+    href: data-type-format-conversions.md
+  - name: Format and FormatName columns
+    href: format-and-formatname-columns.md
+  - name: Format validations
+    href: format-validations.md
 - name: Introduction to solutions
   href: introduction-solutions.md
 - name: Publish and monitor your (ISV) app
@@ -434,8 +454,34 @@
     items:
     - name: Download tools from NuGet 
       href: download-tools-nuget.md
-    - name: Microsoft Power Platform CLI 
-      href: powerapps-cli.md
+    - name: Microsoft Power Platform CLI
+      items:
+      - name: Overview
+        href: powerapps-cli.md
+      - name: CLI reference
+        items:
+        - name: admin 
+          href: cli/reference/admin-command.md
+        - name: auth
+          href: cli/reference/auth-command.md
+        - name: canvas 
+          href: cli/reference/canvas-command.md
+        - name: org 
+          href: cli/reference/org-command.md
+        - name: package
+          href: cli/reference/package-command.md
+        - name: paportal 
+          href: cli/reference/paportal-command.md
+        - name: pcf
+          href: cli/reference/pcf-command.md
+        - name: plugin 
+          href: cli/reference/plugin-command.md
+        - name: solution 
+          href: cli/reference/solution-command.md
+        - name: telemetry
+          href: cli/reference/telemetry-command.md
+    - name: Power Platform Tools for Visual Studio
+      href: ./tools/devtools-install.md
   - name: Community Tools
     href: community-tools.md
   - name: Testing tools

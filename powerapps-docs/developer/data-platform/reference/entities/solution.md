@@ -1,13 +1,13 @@
 ---
 title: "Solution table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the Solution table/entity."
-ms.date: 05/20/2021
+ms.date: 10/05/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -176,11 +176,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### SolutionType Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|None|
-|1|Snapshot|
-|2|Internal|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|None||
+|1|Snapshot||
+|2|Internal||
 
 
 
@@ -430,8 +430,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsApiManaged Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -453,8 +453,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsInternal Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -476,8 +476,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsManaged Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Managed|
 |0|Unmanaged|
 
@@ -499,8 +499,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsVisible Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 

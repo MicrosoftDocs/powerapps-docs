@@ -1,7 +1,7 @@
 ---
 title: "getGlobalContext.organizationSettings (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the getGlobalContext.organizationSettings method.
-ms.date: 04/21/2021
+ms.date: 07/13/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -17,13 +17,11 @@ search.app:
 ---
 # getGlobalContext.organizationSettings (Client API reference)
 
-
-
 Returns information about the current organization settings. 
 
 `var organizationSettings = Xrm.Utility.getGlobalContext().organizationSettings`
 
-The **organizationSettings** object provides following properties.
+The **organizationSettings** object has the following properties.
 
 ## attributes
 
@@ -185,6 +183,28 @@ Indicates whether the Skype protocol is used for the current organization.
 
 **Description**: **true** if Skype protocol is used; **false** otherwise.
 
+## fullNameConventionCode 
+
+Returns the FullNameConventionCode setting of the current organization.
+
+### Syntax
+
+`organizationSettings.fullNameConventionCode`
+
+### Return Value
+
+**Type**: Number
+
+**Description**: Returns a number denoting the full name format selected in the system settings. Below are the possible values and the corresponding format:
+
+0: LastName, FirstName <br/>
+1: FirstName LastName <br/>
+2: LastName, FirstName MiddleInitial <br/>
+3: FirstName MiddleInitial LastName <br/>
+4: LastName, FirstName MiddleName <br/>
+5: FirstNamet MiddleName LastName <br/>
+6: LastName FirstName <br/>
+7: LastNameFirstName 
 
 ## Related topics
 

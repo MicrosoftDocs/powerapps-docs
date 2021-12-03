@@ -6,10 +6,11 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2020
+ms.subservice: portals
 ms.author: shjais
 ms.reviewer: shjais
 contributors:
-    - tapanm-msft
+    - nickdoelman
     - shjais
 ---
 

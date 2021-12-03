@@ -5,11 +5,12 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/13/2021
+ms.date: 11/3/2021
+ms.subservice: portals
 ms.author: sandhan
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
-    - tapanm-msft
+    - nickdoelman
     - sandhangitmsft
 ---
 
@@ -17,17 +18,17 @@ contributors:
 
 Once you've created a portal, it's visible when you sign in to [Power Apps](https://make.powerapps.com), and then select **Apps**.
 
-![recent apps](media/recent-apps.png "Recent apps")  
+![recent apps.](media/recent-apps.png "Recent apps")  
 
 To manage an app, select **More Commands** (**…**) for the portal and choose an action from the context menu. Alternatively, you can also select action from the menu at the top.
 
-![portal app options](media/portal-app-options.png "Portal app options")  
+![portal app options.](media/portal-app-options.png "Portal app options")  
 
 ## Edit
 
 Opens the [Power Apps portals Studio](portal-designer-anatomy.md) to edit the content and components of the portal.  
 
-![portal maker](media/portal-maker.png "Portal maker")  
+![portal maker.](media/portal-maker.png "Portal maker")  
 
 Portals Studio requires a contact record with the email address `portaluser@powerappsportals.com` for some of its functionality to work. This contact record is automatically created when you edit the portal for the first time.
 
@@ -43,7 +44,7 @@ When you see this error message, create a contact record manually with the email
 Opens the portal to browse the website. This option helps you to see the portal as it will look to your customers.
 
 > [!div class=mx-imgBorder]
-> ![portal website](media/portal-website.png "Portal website")  
+> ![portal website.](media/portal-website.png "Portal website")  
 
 Alternately, you can also open the portal to browse the website by selecting **Browse website** in the [Power Apps portals Studio](portal-designer-anatomy.md) to view the changes you have made to the website. The website opens in a new tab with URL of the website.
 
@@ -51,7 +52,7 @@ Alternately, you can also open the portal to browse the website by selecting **B
 
 Share your portal with internal or external users. Follow the steps mentioned in the **Share this portal** pane.
 
-![share portal](media/share-portal.png "Share portal")  
+![share portal.](media/share-portal.png "Share portal")  
 
 ### Share with internal users
 
@@ -93,9 +94,24 @@ Your portal should work anonymously and should be accessible by the external use
 
 ## Settings
 
-Displays the portal settings and allows you to change the name of the portal. You can also do advanced actions such as administering the portal though the Power Apps portals admin center and working with site settings. Settings provide links to the Power Apps portals admin center and Site settings. More information: [Advanced portal administration](admin/admin-overview.md) and [Configure site settings](configure/configure-site-settings.md).  
+Displays the portal settings and allows you to change the name of the portal. You can also go to setup licensing for your portal as well as advanced actions such as administering the portal though the Power Apps portals admin center and working with site settings. 
 
-![portal settings](media/portal-settings.png "Portal settings")  
+:::image type="content" source="media/portal-settings.png" alt-text="Portal settings.":::  
+
+### Licensing
+
+For production portals you will see **Licensing for internal users** and **Licensing for external users** section in the portal's settings panel based on your environment licensing setup. Learn more about [Power Apps per app plans](/power-platform/admin/about-powerapps-perapp),  [Pay-as-you-go](/power-platform/admin/pay-as-you-go-set-up#in-power-apps).
+
+> [!Note]
+> **Licensing for internal users** and **Licensing for external users** sections are not visible in portal settings panel when you open it from the portal's detail page tool bar **Settings** item.
+
+### Advanced Options
+
+The advanced options section provides links to configure authentication, to the Power Apps portals center, and to configure site settings.
+
+* [Authentication settings](configure/configure-portal-authentication.md)
+* [Administration](admin/admin-overview.md)
+* [Site settings](configure/configure-site-settings.md)
 
 ## Delete
 
@@ -115,7 +131,7 @@ To learn about how to delete a portal completely, go to [Delete a portal](admin/
 
 Displays details such as owner of the portal, date, and time when it was created and last modified, the URL of the portal, and identity provider settings.
 
-![portal details](media/portal-details.png "Portal details")  
+![portal details.](media/portal-details.png "Portal details")  
 
 ## Next steps
 

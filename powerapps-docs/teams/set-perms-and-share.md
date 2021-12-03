@@ -6,8 +6,11 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/07/2021
+ms.subservice: teams
 ms.author: mabolan
 ms.reviewer: tapanm
+contributors:
+  - tapanm-msft
 ---
 
 # Set permission and share apps with colleagues
@@ -26,7 +29,7 @@ access** role.
 Once you’re done sharing your apps, they’ll appear in the [Built for your
 colleagues](/microsoftteams/manage-power-platform-apps) section within the Teams app store. If you’re a Teams admin, you can also pin apps for users in the Teams app bar for even easier discovery.
 
-![Built by your colleagues](media/built-for-your-colleagues.png "Built by your colleagues")
+![Built by your colleagues.](media/built-for-your-colleagues.png "Built by your colleagues")
 
 > [!NOTE]
 > - If your app doesn't appear in the **Built by your colleagues** section, your Teams app might be caching information. If this happens, try signing out, and sign back in if you're using the Teams desktop app. If you're using Teams web app, try refreshing your browser.
@@ -62,13 +65,13 @@ To set the permissions of a table:
 
 1. Select the table you want to share.  
 
-    ![Manage permissions](media/manage-permissions.png "Manage permissions")
+    ![Manage permissions.](media/manage-permissions.png "Manage permissions")
 
 1. Select the **Manage permissions** in the command bar.
 
 1. Under the **Colleagues with access** role, and select the permission set that you want to grant this role.  
 
-    ![Colleagues with access](media/colleagues-with-access.png "Colleagues with access")
+    ![Colleagues with access.](media/colleagues-with-access.png "Colleagues with access")
 
     > [!TIP]
     > After you assign a security group to the **Colleagues with access** role, you'll see the name of the security group reflected in
@@ -97,15 +100,15 @@ To share an app:
 
 1. In the top-right, select the **Share with colleagues**.
 
-    ![Share with colleagues](media/share-with-colleagues.png "Share with colleagues")
+    ![Share with colleagues.](media/share-with-colleagues.png "Share with colleagues")
 
 1. Search for, and select the security group you want to share the apps and tables with.
 
-    ![Search and select group](media/select-group-to-share.png "Search and select group")
+    ![Search and select group.](media/select-group-to-share.png "Search and select group")
 
 1. Set **Colleague can use** toggle to **On** for the apps and tables that you want to share with the security group selected in the previous step.
 
-    ![Set On for apps and tables](media/toggle-on.png "Set On for apps and tables")
+    ![Set On for apps and tables.](media/toggle-on.png "Set On for apps and tables")
 
 1. Select **Save**.
 

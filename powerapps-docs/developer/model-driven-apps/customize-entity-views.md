@@ -7,6 +7,7 @@ ms.service: powerapps
 ms.topic: article
 ms.assetid: da2a9b57-fcd2-38c5-c670-63acf1767efa
 author: Nkrb # GitHub ID
+ms.subservice: mda-developer
 ms.author: nabuthuk # MSFT alias of Microsoft employees only
 manager: shilpas # MSFT alias of manager or PM counterpart
 ms.reviewer: 
@@ -331,7 +332,7 @@ function displayIconTooltip(rowData, userLCID) {
   
  This results in displaying the values in the `Rating` column with appropriate icons depending on the value, and icon tooltip text when you hover over the icons.  
   
- ![Custom icons displayed for a column in a view](media/customiconsinviews.png "Custom icons displayed for a column in a view")  
+ ![Custom icons displayed for a column in a view.](media/customiconsinviews.png "Custom icons displayed for a column in a view")  
   
 <a name="BKMK_SetAsDefault"></a>   
 ## Set as default  

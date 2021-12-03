@@ -2,13 +2,14 @@
 title: "Guidelines and troubleshooting when working with embedded canvas apps | MicrosoftDocs"
 description: Understand the recommended ways to work with embedded canvas apps in Power Apps
 ms.custom: ""
-ms.date: 06/17/2021
+ms.date: 09/02/2021
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "troubleshooting"
 author: "RichdiMSFT"
+ms.subservice: mda-maker
 ms.author: "matp"
 manager: "kvivek"
 tags: 
@@ -19,7 +20,6 @@ search.app:
   - PowerApps
   - D365CE
 ---
-
 # Guidelines and troubleshooting for embedded canvas apps
 
 [!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
@@ -97,7 +97,7 @@ By default, canvas apps have the scale to fit option enabled.
 1. Open the canvas app that you’re embedding on a model-driven app form for editing.
 1. In Power Apps studio, select **File** > **Settings** > **Screen size + orientation**. 
 1. Under **Advanced Settings**, set **Scale to fit** to **On**.
-   :::image type="content" source="media/scale-to-fit-canvas-app.png" alt-text="Scale to fit canvas app setting":::
+   :::image type="content" source="media/scale-to-fit-canvas-app.png" alt-text="Scale to fit canvas app setting.":::
 
 #### The App Name property value is missing or is incorrectly defined
 
@@ -105,12 +105,34 @@ To resolve this issue, choose the correct option:
 - Managed solutions: If the solution was imported into an environment as a managed solution, follow these steps: 
    1. Sign into Power Apps and go to the development environment where you originally created your embedded canvas app. This is also the environment where the solution was exported.
    1. Open the unmanaged solution that includes the canvas app, and then find the canvas app in the list of solution components. Copy the canvas app **Name** exactly as it appears in the components list. For example, *contoso_flooringestimatesapp_624d7*.
-   :::image type="content" source="media/copy-canvas-app-name.png" alt-text="Copy the canvas app unique name":::
+   :::image type="content" source="media/copy-canvas-app-name.png" alt-text="Copy the canvas app unique name.":::
 
    1. In the same solution, edit the model-driven app that has the embedded canvas app control, and then set the canvas **App Name** to the embedded canvas app control using the value from the previous step. More information: [Add an embedded canvas app on a model-driven form](embedded-canvas-app-add-classic-designer.md)
    1. Export the solution from the development environment and then import the solution into your target environment.
 
 - Unmanaged solutions: If the solution was imported into an environment as an unmanaged solution, edit the model-driven app, that has the embedded canvas app control, and then follow similar steps as described for a managed solution to set the canvas **App Name** property.
+
+#### Embedded canvas app control loads the canvas app from a different environment
+
+When a solution that contains a model-driven app with an embedded canvas app is imported into a target environment, the control loads the canvas app from the source environment (where the solution was exported). The control should load the canvas app from the target (current) environment.
+
+This issue occurs because the app user doesn't have read access to the CanvasApp Extended Metadata table in the target (current) environment. To resolve this issue, add the user to a security role used for the app that has read access to the CanvasApp Extended Metadata table. More information: [Grant read privileges for the CanvasApp Extended Metadata table](#grant-read-privileges-for-the-canvasapp-extended-metadata-table)
+
+#### Error message: "You don’t have read privileges for the Canvas App entity. Please contact your administrator"
+
+The error message is displayed on the model-driven app form where the embedded canvas app should appear.
+
+This issue occurs because the app user doesn't have read access to the CanvasApp Extended Metadata table. To resolve this issue, add the user to a security role used for the app that has read access to the CanvasApp Extended Metadata table.
+
+##### Grant read privileges for the CanvasApp Extended Metadata table
+
+1. In Power Apps, select the environment, and then on the left navigation pane select **Apps**.
+1. Select the app you want, select **…**, and then select **Share**.
+1. On the left pane, select the app, and then select **Manage security roles**.
+1. Open the security role assigned to the app, such as the Basic User security role.
+1. Select the **Custom Entities** tab, and set organization scope read privileges for the **CanvasApp Extended Metadata** table.
+   :::image type="content" source="media/read-priv-canvasapp-ext-meta.png" alt-text="Set organization scope read privilege on the CanvasApp Extended Metadata table":::
+1. Select **Save and Close** to close the security role window.
 
 ### See also
 

@@ -4,6 +4,7 @@ description: "Understand various components of a model-driven app such as data, 
 Keywords: columns, attributes, model-driven app
 ms.custom: intro-internal
 author: Mattp123
+ms.subservice: mda-maker
 ms.author: matp
 manager: kvivek
 ms.date: 05/26/2020
@@ -42,9 +43,10 @@ These components determine how users interact with the app.
 |Site map     | Specifies the navigation for your app.        | Site map designer        |
 |Form     | A set of data-entry columns for a given table that matches the items that your organization tracks for the table. For example, a set of data-entry columns that where user's input relevant information to track a customer's previous orders along with specific requested reorder dates.        | Form designer        |
 |View     | Views define how a list of rows for a specific table is displayed in your application. A view defines the columns to display, width of each column, sort behavior, and the default filters.   |  View designer       |
+|Custom page (preview) | A canvas based page which allows flexible layout, low-code Fx functions, and Power Apps connector data.  For more information, see [Model-driven app custom page overview (preview)](model-app-page-overview.md) | Canvas designer |
 
 > [!div class="mx-imgBorder"] 
-> ![App designer and form designer](media/model-driven-app-overview/app-and-form-designers.png "App designer and form designer")
+> ![App designer and form designer.](media/model-driven-app-overview/app-and-form-designers.png "App designer and form designer")
 
 ## Logic
 Determines the business processes, rules, and automation the app will have. Power Apps makers use a designer that is specific to the type of process or rule. 
@@ -59,7 +61,7 @@ Determines the business processes, rules, and automation the app will have. Powe
 |Flow     | Power Automate is a cloud-based service that lets you create automated flows between apps and services to get notifications, synchronize files, collect data, and more.        | Power Automate        |
 
 > [!div class="mx-imgBorder"]
-> ![Workflow, action, and business process flow designers](media/model-driven-app-overview/designer-mash.png "Workflow, action, and business process flow designers")
+> ![Workflow, action, and business process flow designers.](media/model-driven-app-overview/designer-mash.png "Workflow, action, and business process flow designers")
 
 More information: [Apply business logic in your model-driven app](guide-staff-through-common-tasks-processes.md) 
 
@@ -78,13 +80,13 @@ Determines what type of data visualizations and reporting the app will have avai
 |Embedded Power BI     | Add embedded Power BI tiles and dashboards to your app. Power BI is a cloud-based service that provides business intelligence insight.        |  Combination of chart designer, dashboard designer, and Power BI       |
 
 > [!div class="mx-imgBorder"] 
-> ![Sample dashboard](media/model-driven-app-overview/dashboard-designer.png "Sample dashboard")
+> ![Sample dashboard.](media/model-driven-app-overview/dashboard-designer.png "Sample dashboard")
 
 ## Advanced model-driven app making
 The solution explorer is a comprehensive tool used for advanced model-driven app building. Within the solution explorer you can navigate through a hierarchy that consists of all app components using the navigation pane on the left side of the tool.
 
 > [!div class="mx-imgBorder"] 
-> ![Solution explorer](media/model-driven-app-overview/solutionexplorer-entitiescollapsed.png "Solution explorer")
+> ![Solution explorer.](media/model-driven-app-overview/solutionexplorer-entitiescollapsed.png "Solution explorer")
 
 To open solution explorer, 
 
@@ -93,7 +95,7 @@ To open solution explorer,
 2. On the Dynamics 365 Business Management page, select **Settings**, select **Customizations**, and then select **Customize the System**.
 
   > [!div class="mx-imgBorder"] 
-  > ![Open solution explorer](media/model-driven-app-overview/app-settings-solutions-explorer.png "Open the solution explorer")
+  > ![Open solution explorer.](media/model-driven-app-overview/app-settings-solutions-explorer.png "Open the solution explorer")
 
 More information: [Advanced app making and customization](advanced-navigation.md)
 

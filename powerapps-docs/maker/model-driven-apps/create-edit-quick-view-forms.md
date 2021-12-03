@@ -15,6 +15,7 @@ applies_to:
 author: "Mattp123"
 ms.assetid: 9b101734-cc11-4d05-bd45-eb611eae9931
 caps.latest.revision: 14
+ms.subservice: mda-maker
 ms.author: "matp"
 manager: "kvivek"
 search.audienceType: 
@@ -29,10 +30,14 @@ search.app:
 In this topic you learn how to create a quick view form and how to add a quick view control to a main form. 
 
 A quick view form can be added to another form as a quick view control. It provides a template to view information about a related table row within a form for another table row. This means your app users do not need to navigate to a different row to see the information needed to do their work.  
+
+> [!NOTE]
+> All controls on a quick view form cannot be edited and data will not change. Any control on a form will be disabled and the form won't run any events or JavaScript that updates data on a control on a quick view form.
   
- Quick view controls are associated with a lookup column that is included in a form. If the lookup column value is not set, the quick view control will not be visible. Data in quick view controls cannot be edited and quick view forms do not support form scripts.  
+Quick view controls are associated with a lookup column that is included in a form. If the lookup column value is not set, the quick view control will not be visible. Data in quick view controls cannot be edited and quick view forms do not support form scripts.  
   
- Because quick view forms are viewed using a quick view control in a form, they do not include header, footer, or navigation areas. Security roles cannot be assigned to quick view forms and they cannot be activated or deactivated.  
+> [!NOTE]
+>  Because quick view forms are viewed using a quick view control in a form, they do not include header, footer, or navigation areas. Security roles cannot be assigned to quick view forms and they cannot be activated or deactivated. Subgrids inside quick view forms will also not display a command bar.
   
 <a name="BKMK_CreateQFV"></a>   
 ## Create a quick view form  
@@ -79,7 +84,7 @@ A quick view form can be added to another form as a quick view control. It provi
 5.  In the **Select quick view forms** dialog box, select the **Lookup** column, and then select the Lookup column value. More information: [Quick view control properties](quick-view-control-properties-legacy.md).  
 
     > [!div class="mx-imgBorder"] 
-    > ![Add quick view control](media/add-quick-view-control.png "Add quick view control to main form")
+    > ![Add quick view control.](media/add-quick-view-control.png "Add quick view control to main form")
 
 6.  Select **Done** to close the **Select quick View forms** dialog box. The quick view form appears on the form.
 

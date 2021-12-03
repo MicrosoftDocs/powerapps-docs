@@ -6,18 +6,19 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2021
+ms.subservice: portals
 ms.author: nenandw
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
     - neerajnandwana-msft
-    - tapanm-msft
+    - nickdoelman
 ---
 
 # Portals connectivity to a Microsoft Dataverse environment
 
 A portal connects to a Dataverse environment using an Azure Active Directory application. The application is created in the same tenant where the portal is provisioned. The application is registered with the Dataverse environment during the portal provisioning process.
 
-![Connecting a portal with Dataverse environment](../media/connect-with-dynamics.png "Connecting a portal with Dataverse environment")
+![Connecting a portal with Dataverse environment.](../media/connect-with-dynamics.png "Connecting a portal with Dataverse environment")
 
 Each portal has a separate Azure Active Directory application associated with it, whether it's connected to the same Dataverse environment or not. The default Azure Active Directory authentication provider created for a portal uses the same Azure Active Directory application to authenticate the portal. Authorization is enforced by web roles assigned to the user accessing the portal.
 

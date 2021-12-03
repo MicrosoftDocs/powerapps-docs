@@ -8,6 +8,7 @@ ms.reviewer: "matp"
 ms.service: powerapps
 author: "Mattp123"
 ms.assetid: 
+ms.subservice: dataverse-maker
 ms.author: "matp"
 manager: "kvivek"
 search.audienceType: 
@@ -19,9 +20,6 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-> [!IMPORTANT]
-> This feature has been re-enabled in the majority of regions. Please resume testing, and provide feedback. We thank you for your patience and feedback.
-
 You can use Power BI Desktop to view tables in Microsoft Dataverse. The table
 row data that you can access from your environment is read-only. Data access
 uses the Dataverse security model that is the same used to access
@@ -29,7 +27,7 @@ table row data using a Power Apps app.
 
 ## Prerequisites
 
-* Enable the Tabular Data Stream (TDS) endpoint. More information: [Manage feature settings](/power-platform/admin/settings-features).
+* Enable the Tabular Data Stream (TDS) endpoint (on by default). More information: [Manage feature settings](/power-platform/admin/settings-features).
 * Power BI Desktop. [Get it now](https://powerbi.microsoft.com/downloads/)
           
 ## View table data
@@ -47,7 +45,7 @@ table row data using a Power Apps app.
 4.  The pbids file is loaded in Power BI Desktop. In the dialog box, select **Organizational account**, select **Sign in**, and then in the browser window that appears select or enter your credentials.
 
     > [!div class="mx-imgBorder"] 
-    > ![Sign in to connect to your environment](media/power-bi-environment-signin.png "Sign in to connect to your environment")
+    > ![Sign in to connect to your environment.](media/power-bi-environment-signin.png "Sign in to connect to your environment")
 
 5.  In the dialog box in Power BI Desktop, select **Connect**.
 
@@ -56,7 +54,7 @@ table row data using a Power Apps app.
     its data.
 
     > [!div class="mx-imgBorder"] 
-    > ![table rows displayed example](media/entity-record-data-displayed.png "table rows displayed example" )
+    > ![table rows displayed example.](media/entity-record-data-displayed.png "table rows displayed example" )
 
 6. After you're finished selecting the tables you want to analyze, select **Load** to build a report.
 
@@ -66,7 +64,8 @@ For more information about Power BI Desktop, see [Get started with Power BI Desk
 > SQL options, such as a T-SQL queries aren’t supported.
 
 ### See also
-[Use SQL to query data](../../developer/data-platform/dataverse-sql-query.md)
-
+[Use SQL to query data](../../developer/data-platform/dataverse-sql-query.md)</br>
+[Dataverse SQL](/powerapps/developer/data-platform/how-dataverse-sql-differs-from-transact-sql)</br>
+[Power Query Dataverse connector](/power-query/connectors/dataverse)</br>
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

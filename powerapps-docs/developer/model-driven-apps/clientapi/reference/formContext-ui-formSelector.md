@@ -7,6 +7,7 @@ ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 32e8d1d0-4093-4588-a517-2930eec34dce
 author: "Nkrb"
+ms.subservice: mda-developer
 ms.author: "nabuthuk"
 manager: "kvivek"
 search.audienceType: 
@@ -20,6 +21,9 @@ search.app:
 The **formContext.ui.formSelector** property lets you work with form items where a form item represents a form that is available to a user because it is associated with a security role that the user is also associated to. Often there will be only one form. When more than one form is available, methods for a form item can be used to change the form the user is viewing.
 
 [!INCLUDE[cc-terminology](../../../data-platform/includes/cc-terminology.md)]
+
+> [!NOTE]
+> The `formContext.ui.formSelector`is not supported for quick create forms.
 
 Form Items are available through any of the following:
 

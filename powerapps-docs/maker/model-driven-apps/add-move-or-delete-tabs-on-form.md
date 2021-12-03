@@ -13,6 +13,7 @@ applies_to:
   - "Dynamics 365 Version 9.x"
   - "PowerApps"
 author: "Aneesmsft"
+ms.subservice: mda-maker
 ms.author: "matp"
 manager: "kvivek"
 tags: 
@@ -31,7 +32,7 @@ Add, move, or delete tabs on a form using the form designer.
 To add tabs to a form, use the **Components** pane.  
 
 > [!div class="mx-imgBorder"] 
-> ![Layout components](media/FormDesignerComponentsLayout.png "Layout components")
+> ![Layout components.](media/FormDesignerComponentsLayout.png "Layout components")
    
   > [!NOTE]
   >  Tabs can only be added on main forms. More information: [Form types](types-forms.md)

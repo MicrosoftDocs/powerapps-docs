@@ -15,11 +15,12 @@ search.app:
   - PowerApps
   - D365CE
 ---
+
 # Query Data sample (C#)
 
-[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+[!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 
-This sample demonstrates how to perform data queries of Microsoft Dataverse entity instances, using the Dataverse Web API. Those query operations include:
+This sample demonstrates how to perform data queries of Microsoft Dataverse table rows (entity records), using the Dataverse Web API. Those query operations include:
 
 - Selecting specific properties
 - Using Query Functions
@@ -54,7 +55,7 @@ The following is required to build and run the sample:
 
 This sample depends on the assembly built from in the CDSWebApiService project. For information on the methods this class provides see [CDSWebApiService class](cdswebapiservice.md).
 
-The following is the code from the Program.cs file: 
+The following is the code from the Program.cs file:
 
 ```csharp
 using Newtonsoft.Json.Linq;
@@ -837,6 +838,5 @@ namespace PowerApps.Samples
 [Query Data using the Web API](../query-data-web-api.md)  
 [Web API Query Data Sample](../web-api-query-data-sample.md)  
 [Use the Dataverse Web API](../overview.md)
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

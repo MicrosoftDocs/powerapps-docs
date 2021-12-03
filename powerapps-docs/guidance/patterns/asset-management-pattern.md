@@ -6,13 +6,14 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: guidance
 ms.date: 1/4/2021
+ms.subservice: guidance
 ms.author: kathyos
 ms.reviewer: kathyos
 
 ---
 # Pattern: Asset management
 
-<!--![Collage of asset management app screenshots](media/asset-management-collage.jpg "Collage of asset management app screenshots")-->
+<!--![Collage of asset management app screenshots.](media/asset-management-collage.jpg "Collage of asset management app screenshots")-->
 
 Power Apps provides a great platform for managing your company's physical
 assets.
@@ -29,7 +30,7 @@ own asset reservation or checkout projects.
 
 ## How to recognize the asset check-out pattern
 
-![Illustration of the asset management pattern with find, reserve, and manage steps](media/asset-management-illustration.png "Illustration of the asset management pattern with find, reserve, and manage steps")
+![Illustration of the asset management pattern with find, reserve, and manage steps.](media/asset-management-illustration.png "Illustration of the asset management pattern with find, reserve, and manage steps")
 
 In a typical asset management scenario:
 
@@ -72,11 +73,11 @@ your workforce.
 
 - Facilities managers use the [Facility Safety Management app](/dynamics365/industry/return-to-workplace/app-for-facility-manager) to set up facilities available for booking and see a dashboard of bookings.
 
-  ![Screenshot of the Facility Safety Management app](media/RTW-facility-safety-management-app.png "Screenshot of the Facility Safety Management app")
+  ![Screenshot of the Facility Safety Management app.](media/RTW-facility-safety-management-app.png "Screenshot of the Facility Safety Management app")
 
 - Employees use the [Employee Return to the Workplace app](/dynamics365/industry/return-to-workplace/app-for-employee) to book a space.
 
-  ![Screenshot of an employee pass](media/RTW-facility-pass.png "Screenshot of a employee pass")
+  ![Screenshot of an employee pass.](media/RTW-facility-pass.png "Screenshot of a employee pass")
 
 ### Additional apps and templates
 
@@ -111,7 +112,7 @@ Certified Partner.
 The mobile app gives every staff member fast, accurate information about what space is available and a reservation capability enhanced with Microsoft Outlook, Office 365 Users, and
 SQL Server connectors.
 
-![Screenshot of Armanino Workplace Scheduler mobile app](media/armanino-mobile-app.png "Screenshot of Armanino Workplace Scheduler mobile app")
+![Screenshot of Armanino Workplace Scheduler mobile app.](media/armanino-mobile-app.png "Screenshot of Armanino Workplace Scheduler mobile app")
 
 Now every Armanino worker who's willing to share office space can indicate when their
 space is free on Workspace Scheduler, and any worker on the road can find and
@@ -169,7 +170,7 @@ rooms, we built functions that would provide meeting organizers with a list of
 rooms and time slots. It was important that the app be as user-friendly as
 possible. Power Apps made the development process quick and easy."
 
-![Screenshot of Eneco's RoomFinder app](media/eneco-room-finder-app.jpg "Screenshot of Eneco's RoomFinder app")
+![Screenshot of Eneco's RoomFinder app.](media/eneco-room-finder-app.jpg "Screenshot of Eneco's RoomFinder app")
 
 ### Virgin Atlantic
 
@@ -185,7 +186,7 @@ cutting down the time that would have otherwise been spent manually writing down
 serial numbers and crew payroll numbers. On some days volunteers were handing
 out as many as 250 iPads per day.
 
-![Screenshot of Crew iPad Asset Management app](media/virgin-atlantic-crew-ipad-app.png "Screenshot of Crew iPad Asset Management app")
+![Screenshot of Crew iPad Asset Management app.](media/virgin-atlantic-crew-ipad-app.png "Screenshot of Crew iPad Asset Management app")
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

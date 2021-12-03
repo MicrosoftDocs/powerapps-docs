@@ -6,7 +6,8 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 05/06/2021
+ms.date: 10/27/2021
+ms.subservice: canvas-maker
 ms.author: jiahn
 search.audienceType: 
   - maker
@@ -15,6 +16,7 @@ search.app:
 contributors:
   - JinManAhn-MSFT
   - lancedMicrosoft
+  - melzoghbi
 ---
 
 # Common canvas app performance issues and resolutions
@@ -41,7 +43,7 @@ We recommend that you select only the columns that are necessary for the app. Ad
 
 For example, if you use Dataverse as the data source for your app, make sure you've enabled the [explicit column selection](use-native-cds-connector.md) feature. This feature allows Power Apps to restrict data retrieval to only the columns used in the app.
 
-To turn on the explicit column selection feature on the canvas app, go to **File** > **Settings** > **Upcoming features** > **Preview**, and then turn on the **Explicit column selection** toggle.
+To turn on the explicit column selection feature on the canvas app, go to **Settings** > **Upcoming features** > **Preview**, and then turn on the **Explicit column selection** toggle.
 
 ## Unsupported or legacy browsers
 
@@ -87,6 +89,9 @@ Optimize the formula in an **OnStart** event. For example, you can move some fun
 
 More information: [Optimize the OnStart property](performance-tips.md#optimize-the-onstart-property)
 
+> [!TIP]
+> We recommend using [App.StartScreen](functions/object-app.md#startscreen-property) property since it simplifies app launch and boosts the app's performance.
+
 ## Memory pressure at the client side
 
 It's important to check the memory consumption of a canvas app because most of the time, the app runs on mobile devices. Memory exceptions in the heap are the most likely cause behind a canvas app that crashes or freezes ("hangs") on certain devices.
@@ -99,7 +104,7 @@ If client-heavy operations like **JOIN** or **Group By** happened at the client 
 
 Developer tools for most browsers allow you to profile memory. It helps you visualize heap size, documents, nodes, and listeners. Profile the app's performance by using a browser, as described in [Microsoft Edge (Chromium) Developer Tools overview](/microsoft-edge/devtools-guide-chromium/). Check the scenarios that exceed the memory threshold of the JS heap. More information: [Fix memory problems](/microsoft-edge/devtools-guide-chromium/memory-problems/)
 
-![An example of memory pressure for an app as seen from the developer tools of a browser](media/common-perf-issue-fixes/memory-pressure.png "An example of memory pressure for an app as seen from the developer tools of a browser")
+![An example of memory pressure for an app as seen from the developer tools of a browser.](media/common-perf-issue-fixes/memory-pressure.png "An example of memory pressure for an app as seen from the developer tools of a browser")
 
 ## Performance considerations for the SQL Server connector
 

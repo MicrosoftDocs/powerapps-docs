@@ -12,6 +12,7 @@ applies_to:
   - "powerapps"
 author: "Mattp123"
 ms.assetid: 5a9ec120-9ddc-4d92-b48c-0fee8c57d3c3
+ms.subservice: mda-maker
 ms.author: matp
 manager: kvivek
 ms.reviewer: 
@@ -40,26 +41,26 @@ When you validate the app, the app designer canvas shows you details about the a
   
      A notification bar appears and shows you whether the app has any errors or warnings. The notification bar shows warnings in cases where, for example, a table has no forms or views, or the app doesn’t contain any components. An error might appear if a site map isn't configured for the app. You can publish an app without addressing warnings, but errors must be fixed before you can publish.  
   
-     ![Notification bar showing warnings in the app](media/app-designer-warning-notification.png "Notification bar showing warnings in the app")  
+     ![Notification bar showing warnings in the app.](media/app-designer-warning-notification.png "Notification bar showing warnings in the app")  
   
      The app designer also shows a warning symbol with the number of dependencies on each artifact or asset tile that is missing a required asset.  
   
-     ![Missing component warning on the app designer tile](media/warning--button-on-app-designer-tile.png "Missing component warning on the app designer tile")  
+     ![Missing component warning on the app designer tile.](media/warning--button-on-app-designer-tile.png "Missing component warning on the app designer tile")  
   
 2.  To add the required assets, select the **Required** tab on the right side of the canvas. The **Required** tab is visible when at least one required asset is missing from the app.  
   
      The tab shows a list of required components.  
   
-     ![Required tab showing a list of missing components in the app](media/app-designer-required-components-tab.png "Required tab showing a list of missing components in the app")  
+     ![Required tab showing a list of missing components in the app.](media/app-designer-required-components-tab.png "Required tab showing a list of missing components in the app")  
   
 3.  Select the assets that you want to add, and then select **Add Dependencies**. When you add a required asset, the count on the tile to which you've added the asset decreases.  
   
     > [!NOTE]
     >  If a common asset is required across various app components-for example, a form is required for a dashboard and a table-and you add that asset only once from the dashboard dependency tree, the dependency count will decrease only on the dashboard tile, but not on the table tile. However, the dependency will be resolved for both.  
     >   
-    >  Select **Get Latest Dependencies** ![Get Latest Dependencies button in the app designer](media/app-designer-get-latest-dependencies.png "Get Latest Dependencies button in the app designer") or select **Validate** again to get the latest set of dependencies. You'll only see these buttons after you save your app.  
+    >  Select **Get Latest Dependencies** ![Get Latest Dependencies button in the app designer.](media/app-designer-get-latest-dependencies.png "Get Latest Dependencies button in the app designer") or select **Validate** again to get the latest set of dependencies. You'll only see these buttons after you save your app.  
   
-     Select **Hide Dependencies** if you don't want to add the suggested required components. Any unresolved warnings will appear again when you open the app in the app designer and select **Validate** or **Get Latest Dependencies** ![Get Latest Dependencies button in the app designer](media/app-designer-get-latest-dependencies.png "Get Latest Dependencies button in the app designer").  
+     Select **Hide Dependencies** if you don't want to add the suggested required components. Any unresolved warnings will appear again when you open the app in the app designer and select **Validate** or **Get Latest Dependencies** ![Get Latest Dependencies button in the app designer.](media/app-designer-get-latest-dependencies.png "Get Latest Dependencies button in the app designer").  
   
     > [!NOTE]
     >  If you hide dependencies now and want to export this app later, all of these dependencies will appear again.  

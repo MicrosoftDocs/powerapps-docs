@@ -12,6 +12,7 @@ applies_to:
 ms.assetid: fc3ade34-9c4e-4c33-88a4-aa3842c5eee1
 caps.latest.revision: 78
 author: "pnghub"
+ms.subservice: dataverse-developer
 ms.author: "gned"
 ms.reviewer: "pehecke"
 manager: "mayadumesh"

@@ -11,7 +11,8 @@ ms.topic: "article"
 applies_to: 
   - "powerapps"
 author: "mmercuri"
-ms.author: "mmercuri"
+ms.subservice: dataverse-maker
+ms.author: "matp"
 manager: "kvivek"
 search.audienceType: 
   - maker
@@ -29,7 +30,7 @@ In some cases, integration with an app can be achieved by using business logic c
 
 ## Defining business logic
 
-tables in Dataverse can use rich server-side logic and validation to ensure data quality and reduce repetitive code in each app that creates and uses data in a table.
+Tables in Dataverse can use rich server-side logic and validation to ensure data quality and reduce repetitive code in each app that creates and uses data in a table.
 
 - **Business rules**: Validate data across multiple columns and tables, and provide warning and error messages, regardless of the app used to create the data. More information: [Create a business rule for a table](./data-platform-create-business-rule.md)
 
@@ -47,7 +48,7 @@ This interactivity can also occur in the opposite direction&mdash;an update in a
 
 The most popular approaches in Dataverse involve webhooks, Azure messaging (Service Bus, Event Hubs), Azure Logic Apps, or Power Automate.
 
-![Events in Dataverse](media/cds-events.png "Events in Dataverse")
+![Events in Dataverse.](media/cds-events.png "Events in Dataverse")
 
 ### Webhooks
 
@@ -84,7 +85,7 @@ More information: [Service Bus](https://azure.microsoft.com/services/service-bu
 
 Logic Apps, offered via Azure, and Power Automate, offered via Microsoft Power Platform, can trigger a workflow that can be used to integrate with application events and data on a schedule or by activity in a database, system, service, or SaaS.
 
-![Logic Apps and Power Automate with Dataverse](media/logic-apps-and-power-automate.png "Logic Apps and Power Automate with Dataverse")
+![Logic Apps and Power Automate with Dataverse.](media/logic-apps-and-power-automate.png "Logic Apps and Power Automate with Dataverse")
 
 These workflows can execute logic and interact with these systems using the hundreds of connectors to databases, PaaS, and SaaS.
 
@@ -96,13 +97,13 @@ With the ability to create custom connectors by using Open API (formerly known a
 
 All popular programming languages support a form of integration with REST-based APIs.
 
-![Dataverse with the OData API](media/cds-with-odata.png "Dataverse with the OData API")
+![Dataverse with the OData API.](media/cds-with-odata.png "Dataverse with the OData API")
 
 The Dataverse Web API provides a development experience that can be used across a wide variety of programming languages, platforms, and devices. The Web API implements the OData (Open Data Protocol), version 4.0, an OASIS standard for building and consuming RESTful APIs over rich data sources. You can learn more about this protocol at [www.odata.org](https://www.odata.org/). For more information about this standard, see [www.oasis-open.org](https://www.oasis-open.org/standards#odatav4.0).
 
-Dataverse takes an "API first" approach. This means that the service doesn't just provide a mechanism to query data, it also provides metadata from the service on business rules, constraints, and so on that you can use to build intelligent, responsive apps and services.
+Dataverse takes an "API first" approach. This means that the service doesn't just provide a mechanism to query data, it also provides metadata from the service on business rules, constraints, and so on, that you can use to build intelligent, responsive apps and services.
 
-The API is secured by using OAuth. OAuth requires an idtable provider for authentication. For Dataverse, the idtable provider is Azure Active Directory (Azure AD). To authenticate with Azure AD by using a Microsoft work or school account, use the Azure AD Authentication Libraries (ADAL).
+The API is secured by using OAuth. OAuth requires an `idtable` provider for authentication. For Dataverse, the `idtable` provider is Azure Active Directory (Azure AD). To authenticate with Azure AD by using a Microsoft work or school account, use the Microsoft Authentication Libraries (MSAL).
 
 For more information about getting started with the Dataverse Web API, see [Use the Dataverse Web API](../../developer/data-platform/webapi/overview.md).
 
@@ -144,9 +145,9 @@ One constraint with plug-ins is that they must be self-contained. If integration
 
 Azure Functions provides a serverless code execution option for business and integration logic.
 
-![Dataverse with Azure Functions](media/azure-functions.png "Dataverse with Azure Functions")
+![Dataverse with Azure Functions.](media/azure-functions.png "Dataverse with Azure Functions")
 
-Functions are triggered by a call from an external system, service, or code. For Dataverse, that trigger can come directly from Dataverse using Service Bus, a webhook, or a call from a plug-in. Additionally, the Azure Functions call can be initiated via a flow in either Logic Apps or Power Automate that involves the Common Data Service connector.
+Functions are triggered by a call from an external system, service, or code. For Dataverse, that trigger can come directly from Dataverse using Service Bus, a webhook, or a call from a plug-in. Additionally, the Azure Functions call can be initiated via a flow in either Logic Apps or Power Automate that involves the Dataverse connector.
 
 More information:
 [Use plug-ins to extend business processes](../../developer/data-platform/plug-ins.md)

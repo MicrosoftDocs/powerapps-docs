@@ -14,6 +14,7 @@ ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.date: 09/23/2019
+ms.subservice: dataverse-developer
 ms.author: jdaly
 search.audienceType: 
   - developer

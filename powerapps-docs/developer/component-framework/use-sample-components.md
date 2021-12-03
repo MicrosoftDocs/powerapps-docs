@@ -3,6 +3,7 @@ title: How to use the sample components that are built using Power Apps componen
 description: Provides information on how you can use the sample components created using Power Apps Component Framework in your model-driven and canvas apps
 keywords:
 author: Nkrb
+ms.subservice: pcf
 ms.author: nabuthuk
 manager: kvivek
 ms.date: 06/08/2021

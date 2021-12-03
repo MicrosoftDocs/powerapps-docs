@@ -8,6 +8,7 @@ ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "nhelgren" # GitHub ID
+ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -54,7 +55,7 @@ var widgetSerialNumberAttributeRequest = new CreateAttributeRequest
         RequiredLevel = new AttributeRequiredLevelManagedProperty(AttributeRequiredLevel.None),
         MaxLength = 100, // The MaxLength defined for the string column must be greater than the length of the AutoNumberFormat value, that is, it should be able to fit in the generated value.
         DisplayName = new Label("Serial Number", 1033),
-        escription = new Label("Serial Number of the widget.", 1033)
+        Description = new Label("Serial Number of the widget.", 1033)
       }
   };
     _serviceProxy.Execute(widgetSerialNumberAttributeRequest);

@@ -7,6 +7,7 @@ ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 9/14/2020
+ms.subservice: end-user
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
@@ -30,7 +31,7 @@ A dashboard is made up of a collection of easy-to-read charts and graphs that pr
 Dashboards are available for all row types. Charts are available on the Dashboard page, Grid page, Associated Home page, and Edit Form page. 
 
 > [!div class="mx-imgBorder"]
-> ![Dashboard](media/dashboard_sample.png "Sample Dashboard") 
+> ![Dashboard.](media/dashboard_sample.png "Sample Dashboard") 
 
 
 ## View dashboards
@@ -55,9 +56,9 @@ Legend:
 
 Legend:
 
-1. **Expand Chart**: Shows the chart in full screen mode. The chart is still interactive in expanded mode.  
-2. **Refresh**: Refreshes the rows in the chart.
-3. **View Rows**: See the chart and the underlying rows together. This opens the chart for the corresponding rows.
+1. **Refresh**: Refreshes the rows in the chart.
+2. **View Records**: See the chart and the underlying rows together. This opens the chart for the corresponding rows.
+3. **Expand Chart**: Shows the chart in full screen mode. The chart is still interactive in expanded mode.  
 4. **Tool tips**: Hover your mouse over the chart to see a tooltip that provides quick information about that area of the chart.      
 
 

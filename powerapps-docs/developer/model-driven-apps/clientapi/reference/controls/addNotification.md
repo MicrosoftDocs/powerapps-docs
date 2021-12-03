@@ -110,7 +110,7 @@ function addTickerSymbolRecommendation(executionContext) {
 This how the notification appears in model-driven apps:
 
 > [!div class="mx-imgBorder"]
-> ![Example add notification](../../../media/clientapi_addnotification.png "Example add notification")
+> ![Example add notification.](../../../media/clientapi_addnotification.png "Example add notification")
 
 ### Related topics
 

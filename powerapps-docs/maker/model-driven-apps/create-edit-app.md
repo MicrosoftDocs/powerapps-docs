@@ -12,6 +12,7 @@ applies_to:
   - "powerapps"
 author: "Mattp123"
 ms.assetid: 2a44229e-44f0-4c4e-ba21-a476210d0a12
+ms.subservice: mda-maker
 ms.author: "matp"
 manager: "kvivek"
 ms.reviewer: 
@@ -62,7 +63,7 @@ Verify the following prerequisites before you start creating an app:
       > By selecting **Default Solution** when you add a site map, the components that are associated with that site map are automatically added to the app.  
 
       > [!div class="mx-imgBorder"] 
-      > ![Use existing solution to create the app page](media/use-existing-solution-to-create-the-app.png "Use an existing solution to create the app") 
+      > ![Use existing solution to create the app page.](media/use-existing-solution-to-create-the-app.png "Use an existing solution to create the app") 
 
     - **Choose a welcome page**: This option allows you to select from the web resources available in your organization. The welcome pages you create can contain information that's useful to users, such as links to videos, upgrade instructions, or getting started information. The welcome page is displayed when an app is opened. Users can select **Do not show this Welcome Screen next time** on the welcome page to disable the page so it doesn't appear the next time the app starts. Notice that the **Do not show this Welcome Screen next time** option is a user-level setting and can't be controlled by administrators or app makers. More information about how to create a web resource, such as an HTML file that you can use as a welcome page: [Create and edit web resources to extend the web application](create-edit-web-resources.md)  
       

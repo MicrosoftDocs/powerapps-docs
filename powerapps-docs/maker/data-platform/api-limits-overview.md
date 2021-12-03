@@ -7,6 +7,7 @@ ms.reviewer: "kvivek"
 ms.service: powerapps
 ms.topic: "conceptual"
 author: "JimDaly" 
+ms.subservice: dataverse-maker
 ms.author: "jdaly" 
 manager: "ryjones" 
 search.audienceType: 

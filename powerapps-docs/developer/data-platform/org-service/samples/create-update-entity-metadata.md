@@ -20,7 +20,7 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
 
-This topic shows how to programmatically create a custom user-owned table called **Bank Account** and add four different types of attributes to it.
+This topic shows how to programmatically create a custom user-owned table called **Bank Account** and add four different types of columns to it.
 
 You can also create organization-owned custom tables. More information: [Table ownership](/dynamics365/customerengagement/on-premises/developer/introduction-entities#entity-ownership). You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/CreateUpdateEntityMetadata).
 

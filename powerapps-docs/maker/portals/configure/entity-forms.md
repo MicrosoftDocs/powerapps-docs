@@ -5,11 +5,12 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/11/2021
+ms.date: 10/04/2021
+ms.subservice: portals
 ms.author: sandhan
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
-    - tapanm-msft
+    - nickdoelman
     - sandhangitmsft
 ---
 
@@ -17,7 +18,7 @@ contributors:
 
 A data-driven configuration to allow end users to add a form to collect data in the portal without the need for a developer to surface the form in the portal, basic forms are created in Microsoft Dataverse and then placed into webpages in the portal or used in conjunction with subgrids and lists to build out complete web applications. [!INCLUDE[proc-more-information](../../../includes/proc-more-information.md)] [About lists](entity-lists.md) 
 
-![Contact us form](../media/contact-us-form.png "Contact us form")  
+![Contact us form.](../media/contact-us-form.png "Contact us form")  
 
 ## Add a form to your portal
 
@@ -28,13 +29,7 @@ To view existing basic forms or to create new basic forms, open the [Portal Mana
 When creating a new basic form, the first step is to decide the **Table** and **Form Name** that you will be rendering, in addition to the **mode: Insert, Edit, or Read Only**. The mode selected will determine if you are creating a new record from the portal, editing an existing record, or just displaying information about a record on the portal.
 
 > [!NOTE]
-> - An **Basic Form** must be associated with a webpage for a given website for the form to be viewable within the site.
-> - The Connection table subgrids aren't supported in basic forms. If you add a Connection table subgrid to the form using Form designer, error messages are displayed when you render the form on the portal and use the Connection table.
-> - Duplicate fields, multi-select option set, custom controls, Party List fields and business rules aren't supported in basic forms.
-> - [Image attributes](../../../developer/data-platform/image-attributes.md), [file attributes](../../../developer/data-platform/file-attributes.md) and [table images](/dynamics365/customerengagement/on-premises/developer/sample-set-retrieve-entity-images) aren't supported in [basic forms](entity-forms.md), [advanced forms](web-form-properties.md) or when using liquid template tags, such as [fetchxl](../liquid/template-tags.md).
-> - Business rules and client API can enable locked fields on a read-only form.
-> - If you create a basic form in the Insert mode, you can't change a button's alignment or place an action button above the basic form.
-> - If you render a lookup control as a dropdown list on the form, the related records filter does not work.
+> Before you continue, ensure you review [considerations](#considerations) for basic forms.
 
 The webpages associated with the basic form can be viewed by selecting the **Web Pages** link listed in the **Related** navigation links in the leftmost menu.
 
@@ -44,7 +39,14 @@ The various master pages used by the portal contain declarations of the **TableF
 
 ## Secure your forms
 
-To secure your forms, you must create table permissions that determine access and ownership of the records according to web roles. If a user lands on a basic form and does not have permissions, they will receive an error message. To enable permissions for a basic form, set **Enable Table Permissions** to true. [!INCLUDE[proc-more-information](../../../includes/proc-more-information.md)] [Create web roles for portals](create-web-roles.md).  
+>[!NOTE]
+> This method of securing forms would be deprecated soon. Therefore, it shouldn't be used. Use proper [table permissions](entity-permissions-studio.md), and web role setup to provide access to users for any data instead. More information: [Table permission changes for forms and lists on new portals](../important-changes-deprecations.md#table-permission-changes-for-forms-and-lists-on-new-portals)
+
+To secure your forms, you must create table permissions that determine access and ownership of the records according to web roles. If a user lands on a basic form and does not have permissions, they will receive an error message. In addition, you'll also see a warning when a form is configured with table permissions not enabled:
+
+"Table permissions should be enabled for this record or anyone on the internet can view the data."
+
+To enable permissions for a basic form, select the checkbox to **Enable Table Permissions**. [!INCLUDE[proc-more-information](../../../includes/proc-more-information.md)] [Create web roles for portals](create-web-roles.md).  
 
 ## Basic form attributes and relationships
 
@@ -59,20 +61,20 @@ To secure your forms, you must create table permissions that determine access an
 |Record ID Parameter Name|    A parameter name provided in the query string of the URL to the Web Page containing this Basic Form.|
 |Relationship Name|    Required when Record Source Type is Record Associated to Current Portal User. The logical name of the relationship between the current portal user record and the target record. This must return the same table type specified by the Table Name field.|
 |Allow Create If Null|    An optional boolean value available when Record Source Type is Record Associated to Current Portal User. Indicates that if the related record does not exist, allow the user to create it the first time, otherwise an exception will be thrown if the record does not already exist as the form needs a record to data bind to.|
-|Enable Table Permissions|    Will Cause the form to respect Table Permissions. The default is false for backwards compatibility reasons. If set to true, explicit permissions are REQUIRED for any user wanting to access the form.|
+|Enable Table Permissions|    Will Cause the form to respect Table Permissions. The default is false for backwards compatibility reasons. If set to true, explicit permissions are REQUIRED for any user wanting to access the form. <br> **NOTE**: This method of securing forms would be deprecated soon. Therefore, it shouldn't be used. Use proper [table permissions](entity-permissions-studio.md), and web role setup to provide access to users for any data instead. More information: [Table permission changes for forms and lists on new portals](../important-changes-deprecations.md#table-permission-changes-for-forms-and-lists-on-new-portals) |
 |||
 
 ### Form Options
 
 |Name|Description|
 |----|---------|
-|Add Captcha|    Displays captcha.|
+|Add Captcha|    Displays captcha. <br> **NOTE:** Captcha control is currently limited to only English language for audio, and Latin characters for image.|
 |Show Captcha for Authenticated users|    Displays captcha for authenticated users.|
 |Validation Group|    The group name assigned to input controls for evaluating valid input of named groups.|
 |Auto Generate Steps From Tabs|    Indicates that multiple tabs on a basic form will be displayed with each tab as a sequential step starting with the first tab and continue until all tabs have been navigated to and upon final submission a record is inserted. By default, it is not selected. The default value indicates that only one tab or form is to be rendered for the current step. If the Tab Name is not specified, then the first tab is displayed.|
 |Render Web Resources Inline|    Eliminates the iframe that encompasses a web resource in a basic form.|
 |ToolTips Enabled|    The tooltip is set using the description of the attribute on the target table.|
-|Show Unsupported Fields|    All fields are currently supported. This is reserved for potential changes Dataverse may make to field types.|
+|Show Unsupported Fields|    Show or hide column names with unsupported Dataverse column types. |
 |Set Recommended Fields as Required|     Makes all attributes required that have the field requirement level set to 'Business Recommended'.|
 |Make All Fields Required|     Makes all fields required regardless of the field requirement level.|
 |Validation Summary CSS Class|    CSS Class name assigned to the validation summary. Default is 'validation-summary alert alert-error alert-block'|
@@ -180,7 +182,7 @@ A managed form can be configured to display a map control to either display an e
 
 The form's map control requires additional configuration to tell it what the IDs of the various location fields are, to assign values to them or retrieve values from them. The basic form record has a configuration section that defines these field mappings that you must specify. The field names will vary depending on the schema you have created.
 
-![Geolocation data in basic form](../media/geolocation-managed-form.png "Geolocation data in basic form") 
+![Geolocation data in basic form.](../media/geolocation-managed-form.png "Geolocation data in basic form") 
 
 > [!Note]
 > - The address field in a read-only basic form is replaced with the map when geolocation is enabled.
@@ -212,6 +214,18 @@ To disable request validation, follow these steps:
 
 > [!CAUTION]
 > When request validation is disabled, content can be submitted to a page. You must ensure that content is properly encoded or processed.
+
+## Considerations
+
+- A **Basic Form** must be associated with a webpage for a given website for the form to be viewable within the site.
+- The Connection table subgrids aren't supported in basic forms. If you add a Connection table subgrid to the form using Form designer, error messages are displayed when you render the form on the portal and use the Connection table.
+- Duplicate fields, multi-select option set, Party List fields and business rules aren't supported in basic forms.
+- Field level code components are in public preview, and can be added to forms. More information: [Add a code component to a field in a model-driven app](../component-framework.md#add-a-code-component-to-a-field-in-a-model-driven-app) 
+- [Image attributes](../../../developer/data-platform/image-attributes.md), [file attributes](../../../developer/data-platform/file-attributes.md) and [table images](/dynamics365/customerengagement/on-premises/developer/sample-set-retrieve-entity-images) aren't supported in [basic forms](entity-forms.md), [advanced forms](web-form-properties.md) or when using liquid template tags, such as [fetchxl](../liquid/template-tags.md).
+- Business rules and client API can enable locked fields on a read-only form.
+- If you create a basic form in the Insert mode, you can't change a button's alignment or place an action button above the basic form.
+- If you render a lookup control as a dropdown list on the form, the related records filter does not work.
+- Rollup columns on portal forms may sometimes show up as editable although they're intended to be read-only. To ensure that these columns remain read-only, mark the column as **Read-only**  on the model-driven app form.
 
 ### See also
 

@@ -25,7 +25,7 @@ search.app:
 
 There is a template for Visual Studio that enables you to use the common login control in your client applications. The code for Microsoft Dataverse authentication, credential storage and retrieval, and diagnostic logging is built into the template so that you can quickly leverage these capabilities in your Windows client applications for Dataverse. The common login control is an implementation of the <xref:Microsoft.Xrm.Tooling.CrmConnectControl>, and the control resembles the following image.  
   
-![XRM Tooling common login control](../media/crm-sdk-v6-commonlogincontrol.png "XRM Tooling common login control")
+![XRM Tooling common login control.](../media/crm-sdk-v6-commonlogincontrol.png "XRM Tooling common login control")
   
 <a name="Prereq"></a>
 
@@ -49,7 +49,7 @@ Here is a quick way to create a **Windows Presentation Foundation (WPF)** applic
     4.  Specify the name and location of the project, and click **OK**.  
   
      > [!div class="mx-imgBorder"]
-     > ![WPF Application for Dataverse template](../media/crm-sdk-v6-xrm-tooling-newproject.png "WPF Application for Dataverse template")   
+     > ![WPF Application for Dataverse template.](../media/crm-sdk-v6-xrm-tooling-newproject.png "WPF Application for Dataverse template")   
 
 > [!NOTE]
 > **Known Issue with Visual Studio 2015**
@@ -85,18 +85,18 @@ Here is a quick way to create a **Windows Presentation Foundation (WPF)** applic
     2.  In the **Add New Item** dialog box, from the list of installed templates, expand **Visual C#**, and select **Dataverse SDK Templates**. Click **Dataverse Login Form for WPF Applications**, and click **OK**.  
 
           > [!div class="mx-imgBorder"]
-          > ![Add the common login control template](../media/crm-sdk-v6-xrmtooling-addtemplate01.png "Add the common login control template")
+          > ![Add the common login control template.](../media/crm-sdk-v6-xrmtooling-addtemplate01.png "Add the common login control template")
   
 3. The newly added `CrmLoginForm1.xaml` login control is displayed in the XAML designer area. If it isn’t displayed, double-click the `CrmLoginForm1.xaml` file in the **Solution Explorer** pane.  
   
     > [!div class="mx-imgBorder"]
-    > ![Verify that the login control renders properly](../media/crm-sdk-v6-xrmtooling-addtemplate03.png "Verify that the login control renders properly")
+    > ![Verify that the login control renders properly.](../media/crm-sdk-v6-xrmtooling-addtemplate03.png "Verify that the login control renders properly")
   
 
 4.  You must now call the newly added login control from your application. To do this, add a **Button** control on your `MainWindow.xaml` file, and set the name and content to **btnSignIn** and **Sign in to Dataverse** respectively.  
  
      > [!div class="mx-imgBorder"]
-     > ![Add a control to call the login form](../media/crm-sdk-v6-xrmtooling-addtemplate02.png "Add a control to call the login form")
+     > ![Add a control to call the login form.](../media/crm-sdk-v6-xrmtooling-addtemplate02.png "Add a control to call the login form")
   
 5. Double-click the button to add code for the click event of the **btnSignIn** button in the `MainWindow.xaml.cs` file.  
   
@@ -145,7 +145,7 @@ Here is a quick way to create a **Windows Presentation Foundation (WPF)** applic
 8. This is how your `MainWindow.xaml.cs` file appears after adding code from the previous two steps:
 
     > [!div class="mx-imgBorder"]
-    > ![Sample code](../media/crm-sdk-v6-xrmtooling-addtemplate04.png "Sample code")
+    > ![Sample code.](../media/crm-sdk-v6-xrmtooling-addtemplate04.png "Sample code")
   
 9. To test the project:  
   
@@ -155,13 +155,13 @@ Here is a quick way to create a **Windows Presentation Foundation (WPF)** applic
   
  
     > [!div class="mx-imgBorder"]
-    > ![Project test results](../media/crm-sdk-v6-xrmtooling-addtemplate05.png "Project test results") 
+    > ![Project test results.](../media/crm-sdk-v6-xrmtooling-addtemplate05.png "Project test results") 
 
   
     3. If you click **Sign In to Dynamics 365** again, the application prompts you to either choose the saved credentials from the last sign-in activity, or to re-enter the new credentials.  
   
         > [!div class="mx-imgBorder"]
-        > ![Stored credentials](../media/crm-sdk-v6-xrmtooling-addtemplate06.png "Stored credentials")
+        > ![Stored credentials.](../media/crm-sdk-v6-xrmtooling-addtemplate06.png "Stored credentials")
   
 ### See also  
 
