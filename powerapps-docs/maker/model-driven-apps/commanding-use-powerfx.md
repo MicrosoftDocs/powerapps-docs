@@ -231,6 +231,7 @@ The following Power Fx functions are currently not supported with commanding in 
 - ScanBarcode()
 - Set()
 - SubmitForm()
+- UpdateContext()
 - ViewForm()
 
 ### See also
