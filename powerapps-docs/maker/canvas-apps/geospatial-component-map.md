@@ -242,3 +242,7 @@ To see dynamic address suggestions as you type, use the **[Address input](geospa
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
+
+### See also
+
+[Create an app with address input and map controls](how-to/mobile-apps-address-map.md)
