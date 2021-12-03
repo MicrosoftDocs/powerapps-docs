@@ -20,11 +20,12 @@ search.app:
 
 ## Model-driven app components overview
 
-A well designed model-driven app consists of several components you select using the designer to build the appearance and functionality of the finished app. The components and component properties that designers use to make up an app become the metadata.
+A well designed model-driven app consists of several components you select using the designer to build the appearance and functionality of the finished app. The components and component properties that makers use to create an app become the metadata.
 
 To understand how each of these components relates to app design, they're separated here into *data*, *UI*, *logic*, and *visualization* categories.
 
-## Data Components
+## Data components
+
 These components determine what data the app will be based upon and what designer is used to create or edit the component.
 
 Data components are either designed at a table level within an environment, or within a solution contained within the environment.
@@ -38,7 +39,8 @@ Data components are either designed at a table level within an environment, or w
 
 More information: [Define data for your model-driven app](define-data-model-driven-app.md) 
 
-## UI Components
+## UI components
+
 These components determine how users interact with the app. 
 
 |Component  |Description  |Designer  |
@@ -52,7 +54,8 @@ These components determine how users interact with the app.
 > [!div class="mx-imgBorder"] 
 > ![App designer and form designer.](media/model-driven-app-overview/app-and-form-designers.png "App designer and form designer")
 
-## Logic Components
+## Logic components
+
 Determines the business processes, rules, and automation the app will have. Power Apps makers use a designer that is specific to the type of process or rule. 
 
 
@@ -85,7 +88,8 @@ Determines what type of data visualizations and reporting the app will have avai
 > ![Sample dashboard.](media/model-driven-app-overview/dashboard-designer.png "Sample dashboard")
 
 ## Advanced model-driven app making
-The **solution explorer** is a comprehensive tool used for advanced model-driven app building. Within the solution explorer you can navigate through a hierarchy that consists of all app components using the navigation pane on the left side of the tool.
+
+The solution explorer is a comprehensive tool used for advanced model-driven app building. Within the solution explorer you can navigate through a hierarchy that consists of all app components using the navigation pane on the left side of the tool.
 
 > [!div class="mx-imgBorder"] 
 > ![Solution explorer.](media/model-driven-app-overview/solutionexplorer-entitiescollapsed.png "Solution explorer")
