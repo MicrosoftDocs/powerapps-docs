@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 12/01/2021
+ms.date: 12/03/2021
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: ndoelman
@@ -503,6 +503,25 @@ With lists, it is possible to enable and configure a Map view of the data, power
 Use the List Calendar view to render a list as a calendar, with each individual record configured to act as a single event.
 
 To display records by using a calendar, those records need to include at a minimum a date field. For events to have exact start and end times, the appropriate fields need to be in place, and so on. Assuming these fields are configured, a List Calendar view will appear on the portal.
+
+| Entity Field Mappings | Details |
+| - | - |
+| Start Date Field Name | A datetime column representing the start date of a calendar event. |
+| End Date Field Name | A datetime column representing the end date of a calendar event. |
+| Summary Field Name | A text column that will show the summary of a calendar event. |
+| Description Field Name | A text column that will display a description of the calendar event. |
+| Organizer Field Name | A text or lookup column that will display the organizer of the calendar event. |
+| Location Field Name | A text column describing the location of the calendar event.| 
+| Is All Day Field Name | A yes/no column indicating if the calendar event is all day. |
+
+| Setting | Details |
+| - | - |
+| Initial View | Initial view of the calendar; year, month, week, or day. Default value is month. |
+| Initial Date | The initial start date when the calendar is rendered. Default (blank) will the be the current date. |
+| Time Zone Display Mode | The time zone the calendar will be displayed in. The *User Local Time Zone* will display events in the calender using the time zone of the user viewing the portal. *Specific Time Zone* will display the calendar events with a specified time zone. |
+| Display Time Zone | If the **Time Zone Display Mode** is set to *Specific Time Zone* this value will determine the time zone the calendar events are displayed. |
+| Style | The setting displays the calendar in either a *Full Calendar* format or as an *Event List* | 
+
 
 ## List OData feeds
 
