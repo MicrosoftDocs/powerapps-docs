@@ -120,7 +120,7 @@ This method of selecting the mapping using the dropdown has been [deprecated](im
 
 You can still use the dropdown option to choose mapping for existing apps, though not recommended. For new apps, this option will be unavailable by default. To turn this deprecated capability on or off, go to **Settings** > **Upcoming features** > **Retired**, and choose **Allow automatic field assignment for component inputs**.
 
-:::image type="content" source="media/map-component-input-fields/setting-feature.png" alt-text="Allow automatic field assignment for component inputs setting.".":::
+:::image type="content" source="media/map-component-input-fields/setting-feature.png" alt-text="Allow automatic field assignment for component inputs setting.":::
 
 ### See also
 
