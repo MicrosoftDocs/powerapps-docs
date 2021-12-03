@@ -5,7 +5,7 @@ author: hemantgaur
 ms.service: powerapps
 ms.subservice: canvas-developer
 ms.topic: article
-ms.date: 11/29/2021
+ms.date: 12/03/2021
 ms.author: hemantg
 ms.reviewer: tapanm
 search.audienceType:
@@ -118,7 +118,9 @@ For example, the following animation shows the formula being updated to rename c
 
 This method of selecting the mapping using the dropdown has been [deprecated](important-changes-deprecations.md#map-component-fields-using-dropdown-option). Instead, use the [column](#map-columns), [record](#map-records), or [table](#map-tables) mapping methods as described earlier in this article.
 
-You can still use the dropdown option to choose mapping for existing apps, though not recommended. For new apps, this option will be unavailable by default. To turn this deprecated capability on or off, go to **Settings** > **Upcoming features** > **Retired**, and choose **Name**.
+You can still use the dropdown option to choose mapping for existing apps, though not recommended. For new apps, this option will be unavailable by default. To turn this deprecated capability on or off, go to **Settings** > **Upcoming features** > **Retired**, and choose **Allow automatic field assignment for component inputs**.
+
+:::image type="content" source="media/map-component-input-fields/setting-feature.png" alt-text="Allow automatic field assignment for component inputs setting.".":::
 
 ### See also
 
