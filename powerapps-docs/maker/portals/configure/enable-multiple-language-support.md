@@ -32,11 +32,11 @@ To enable multiple languages for a portal, follow these steps:
 1. In the **Supported Languages** section under the **General** tab, select **New Website Language**.
 1. Fill in the form, including **Portal Language** (a lookup of languages that are activated in the organization and are supported by portals) and **Publishing State**.
 
-   ![Add a new portal language.](../media/add-new-portal-language.png "Add a new portal language")
+    :::image type="content" source="media/multi-language/add-new-portal-language.png" alt-text="Add a new portal language.":::
 
    ![Set default language for your portal.](../media/set-default-language-portal.png "Set default language for your portal")
 
-   ![Supported languages.](../media/supported-languages.png "Supported languages")
+    :::image type="content" source="media/multi-language/supported-languages.png" alt-text="Supported languages.":::
 
 > [!Note]
 > If you activate new languages after the portal has been provisioned, you can [import the metadata translations](../admin/import-metadata-translation.md) to get the metadata translated for the newly activated languages.
