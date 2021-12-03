@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2021
+ms.date: 12/6/2021
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: ndoelman
@@ -22,11 +22,15 @@ Business is not confined to a single region or a language. A single portal can d
 
 To enable multiple languages for a portal, follow these steps:
 
-1. [Enable languages in a Microsoft Dataverse environment.](/power-platform/admin/enable-languages)  
-2. Go to **Portals** > **Website** > **Websites**.
-3. Select the website to add language support to.
-4. In the **Supported Languages** section under the **General** tab, select **New Website Language**.
-5. Fill in the form, including **Portal Language** (a lookup of languages that are activated in the organization and are supported by portals) and **Publishing State**.
+1. [Enable languages in a Microsoft Dataverse environment.](/power-platform/admin/enable-languages)
+
+    > [!NOTE]
+    > Make sure that the process to enable a language on Dataverse completes before continuing to the next step.
+  
+1. Go to **Portals** > **Website** > **Websites**.
+1. Select the website to add language support to.
+1. In the **Supported Languages** section under the **General** tab, select **New Website Language**.
+1. Fill in the form, including **Portal Language** (a lookup of languages that are activated in the organization and are supported by portals) and **Publishing State**.
 
    ![Add a new portal language.](../media/add-new-portal-language.png "Add a new portal language")
 
