@@ -1,6 +1,6 @@
 ---
-title: Building mobile apps with View in 3D and Mixed Reality components
-description: Learn about how to use 3D and MR components.
+title: Create apps with View in 3D and mixed reality components
+description: Learn about how to use 3D and mixed reality components.
 author: Joel-lindstrom
 ms.service: powerapps
 ms.topic: conceptual
@@ -13,9 +13,9 @@ search.audienceType:
 search.app:
   - PowerApps
 ---
-# Build mobile apps with View in 3D & Mixed Reality components
+# Create apps with View in 3D and mixed reality components
 
-You can use the **View in MR** component in your app to let users see how a particular item might fit within a specified space.
+You can use the View in MR** component in your app to let users see how a particular item might fit within a specified space.
 
 The component creates a button in your app. When app users click the button, it overlays a selected 3D model (in the .glb file format) or image (in .jpg or .png file formats) onto the live camera feed of the device.
 
