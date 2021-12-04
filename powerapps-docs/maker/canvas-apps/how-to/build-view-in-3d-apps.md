@@ -15,7 +15,7 @@ search.app:
 ---
 # Create apps with View in 3D and mixed reality components
 
-You can use the View in MR** component in your app to let users see how a particular item might fit within a specified space.
+You can use the [View in MR](../mixed-reality-component-view-mr.md) component in your app to let users see how a particular item might fit within a specified space.
 
 The component creates a button in your app. When app users click the button, it overlays a selected 3D model (in the .glb file format) or image (in .jpg or .png file formats) onto the live camera feed of the device.
 
