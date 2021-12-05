@@ -237,7 +237,7 @@ In this section, you'll create a table to store the details for the videos store
 
 1. For **Type**, select **Text** from the list.
 
-1. Select **Advanced options** and then change the value for **Max length** to *2000*.
+1. Select **Advanced options** and then change the value for **Max length** to *2500*.
 
 1. Select **Create**.
 
