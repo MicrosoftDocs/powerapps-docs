@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/10/2021
+ms.date: 12/06/2021
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
@@ -33,6 +33,7 @@ A webpage is a document that is identified by a unique URL in a website. It is o
     > [!NOTE]
     > - Creating a page using **Layouts** gives you the flexibility to edit the complete page. **Fixed layouts** contains the page templates that are installed as part of portal provisioning and the custom page templates created using the [Portal Management app](configure/configure-portal.md).
     > - For the pages to be created using the **Layouts** option, a new **Default studio template** page template is installed.
+    > - If no fixed layouts are visible when adding webpages in the portals Studio, they can be [added using the Portal Management app](configure\add-fixed-layouts.md).
 
 3.  In the properties pane on the right side of the screen, enter the following information:
 
