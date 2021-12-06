@@ -3,7 +3,7 @@ title: getColumnInfo | Microsoft Docs
 description:
 keywords:
 manager: kvivek
-ms.date: 14/19/2021
+ms.date: 06/12/2021
 ms.service: "powerapps"
 ms.reviewer: ""
 ms.service: "crm-online"

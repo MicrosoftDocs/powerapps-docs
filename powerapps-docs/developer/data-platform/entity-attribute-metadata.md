@@ -13,7 +13,7 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 14/19/2021
+ms.date: 06/12/2021
 ms.subservice: dataverse-developer
 ms.author: jdaly
 search.audienceType:
