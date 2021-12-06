@@ -94,7 +94,7 @@ The `Param` function within the custom page retrieves the value and uses the Loo
 App.OnStart=Set(RecordItem, 
     If(IsBlank(Param("recordId")),
         First(<entity>),
-        LookUp(<entity>, <entityIdField> = GUID(Param("recordId"))))
+        LookUp(<entity>, <entityIdField> = GUID(Mid(Param("recordId"), 2, 36))))
     )
 ```
 
