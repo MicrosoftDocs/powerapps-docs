@@ -25,11 +25,11 @@ search.app:
   - D365CE
 ---
 
-# Open the model-driven app form editor 
+# Open the model-driven app form editor
 
-Model-driven app Forms allow a user to update the data within columns, or fields, associated with a given table record.
+Model-driven app forms allow a user to update the data within columns, or fields, associated with a given table record.
 
-The form editor is where you design forms by dropping components such as sections, tabs, columns, and controls onto the form editor canvas. In this topic you learn how several different ways to access the form editor.
+The form editor is where you design forms by dropping components such as sections, tabs, columns, and controls onto the form editor canvas. In this article, you learn how several different ways to access the form editor.
 
 :::image type="content" source="../../maker/model-driven-apps/media/add-columns-drag-and-drop.gif" alt-text="Advanced Settings":::
 
@@ -47,9 +47,9 @@ If you create any new solution components in the process of editing the form, fo
   
 1.  Open [solution explorer](advanced-navigation.md#solution-explorer).
   
-2.  Under **Components**, expand **Tables**, and then the table you want, and click **Forms**.  
+2.  Under **Components**, expand **Tables**, and then the table you want, and select **Forms**.  
   
-3.  In the list of forms, click the form you want to edit.  
+3.  In the list of forms, select the form you want to edit.  
   
 ## Access the form editor through the command bar within a model-driven app
   
@@ -77,13 +77,13 @@ If you create any new solution components in the process of editing the form, fo
   
 ### Add a table to an unmanaged solution  
   
-1.  Select the **Tables** node and, in the toolbar above the list, click **Add Existing**.  
+1.  Select the **Tables** node and, in the toolbar above the list, select **Add Existing**.  
   
-2.  In the **Select Solution Components** dialog box, with the **Component Type** selector set to **Table**, select the table you want to add and click **OK**.  
+2.  In the **Select Solution Components** dialog box, with the **Component Type** selector set to **Table**, select the table you want to add and select **OK**.  
   
-3.  If the **Missing Required Components** dialog box appears, you can click **No, do not include required components** if you don't intend to export this unmanaged solution to another environment. If you choose not to include missing required components at this time, you can add them later. You'll receive notification again if you export this solution in the future.  
+3.  If the **Missing Required Components** dialog box appears, you can select **No, do not include required components** if you don't intend to export this unmanaged solution to another environment. If you choose not to include missing required components at this time, you can add them later. You'll receive notification again if you export this solution in the future.  
   
-5.  In the solution explorer expand the table with the form you want to edit and select **Forms**.  
+5.  In the solution explorer, expand the table with the form you want to edit and select **Forms**.  
   
 6.  In the list of forms, double-click the form you want to edit.  
 

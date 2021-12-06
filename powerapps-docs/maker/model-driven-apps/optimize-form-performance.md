@@ -24,17 +24,13 @@ search.app:
 
 [!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-Forms that load slowly can reduce productivity and user adoption. 
-
-This article describes recommendations to maximize how quickly forms will load. Many of these recommendations are about how a developer may implement form scripts for an organization.
+Forms that load slowly can reduce productivity and user adoption. This article describes recommendations to maximize how quickly forms will load. Many of these recommendations are about how a developer may implement form scripts for an organization.
 
 It is worth discussing these recommendations with developers who create form scripts for forms used in model-driven apps.
 
 ## Power Apps Monitor tool
 
-Before looking at how to rectify any issues we can begin by considering how to detect them.
-
-The monitor tool can help diagnose problems with apps and can be used as part of the app testing process. [Learn more about the monitor tool](../monitor-modelapps.md)
+Before correcting issues, you can begin by considering how to detect them. The Monitor tool can help diagnose problems with apps and can be used as part of the app testing process. [Learn more about the monitor tool](../monitor-modelapps.md)
 
 :::image type="content" source="../media/monitor-right-pane.png" alt-text="Power Apps Monitor tool":::
   
@@ -53,7 +49,7 @@ The monitor tool can help diagnose problems with apps and can be used as part of
 
 ## Form scripts
 
- When there are customizations using form scripts make sure that the developer understands these strategies to improve performance.
+ When there are customizations using form scripts, make sure that the developer understands these strategies to improve performance.
 
 **Minimize the number of network requests and the amount of data requested in the OnLoad event**  
 The higher the number of network requests made during a form load, and the more amount of data downloaded from those requests, the more time it will take for a form to load. Only request the minimum amount of data needed. Also, consider caching the data when possible to avoid requesting data unnecessarily on future page loads.

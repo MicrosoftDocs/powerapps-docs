@@ -89,7 +89,7 @@ A large part of the time spent building the app is dedicated to modeling the bus
 
 Documentation has been developed that helps users of successfully navigate around and interact with model-driven apps in a way that lets them be more productive.
 
-[Learn more about using model-driven apps](https://docs.microsoft.com/powerapps/user/use-model-driven-apps)
+[Learn more about using model-driven apps](../../user/use-model-driven-apps.md)
 
 ## Using solutions to assist with Application Lifecycle Management
 
@@ -136,6 +136,6 @@ If you are new to Power Apps, and want to learn about how to convert your ideas 
 
 [Understand model-driven app components](model-driven-app-components.md) will help you to understand some of the elements that make up a model-driven app.
 
-[Learn about licensing for the Power Platform](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus)
+[Learn about licensing for the Power Platform](/power-platform/admin/pricing-billing-skus)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -25,14 +25,15 @@ search.app:
   - D365CE
 ---
 
-# Pass a list of relatedrecords as data context to an embedded canvas app
+# Pass a list of related records as data context to an embedded canvas app
+
 > [!IMPORTANT]
 > Canvas apps embedded on model-driven forms are now out of preview and generally available. The steps listed below are outdated and applicable only to the public preview release of canvas apps embedded on model-driven forms.
->  For the updated list of steps for the latest release, please see: [Add an embedded canvas app on a model-driven form](embedded-canvas-app-add-classic-designer.md)
+>  For the updated list of steps for the latest release, go to: [Add an embedded canvas app on a model-driven form](embedded-canvas-app-add-classic-designer.md)
 
 ## Overview
 
-This topic explains how to add an embedded canvas app and pass a list of records related to the current (main form) record as a data context to the embedded canvas app.
+This article explains how to add an embedded canvas app and pass a list of records related to the current (main form) record as a data context to the embedded canvas app.
 
 ## Procedure
 
@@ -76,14 +77,14 @@ Let's say you want to add an embedded canvas app on an account main form and pas
      - 	The form editor has been listening for the App ID to be sent to it.
      - 	The App ID was sent to it when the app was saved.
 22. In the **Set Properties** dialog box, select the **Display** tab, clear **Display label on the form**, and then select **OK**.
-     - If you already have a canvas app embedded on this form, a message is displayed that “Only one canvas app can be enabled on a form.” To add the new canvas app you must first [disable the current embedded canvas app](embedded-canvas-app-guidelines.md#disable-an-embedded-canvas-app). Then, [enable the new embedded canvas app](embedded-canvas-app-guidelines.md#enable-an-embedded-canvas-app).
+     - If you already have a canvas app embedded on this form, a message is displayed that “Only one canvas app can be enabled on a form.” To add the new canvas app, you must first [disable the current embedded canvas app](embedded-canvas-app-guidelines.md#disable-an-embedded-canvas-app). Then, [enable the new embedded canvas app](embedded-canvas-app-guidelines.md#enable-an-embedded-canvas-app).
 23. On the **Home** tab, select **Save**, and then select **Publish**.
 
 After you have added an embedded canvas app to your model-driven form, share your embedded canvas app with other users. More information: [Share an embedded canvas app](share-embedded-canvas-app.md).
 
 When users open a model-driven app (Unified Interface only) that includes the form you have modified, they see the embedded canvas app on the form. Changing the record displayed on the main form changes the data context that is passed to the form and the embedded app refreshes to show the relevant data.
 
-This topic showed you how to get started with the embedding a canvas app in a model-driven form. You can further customize the embedded canvas app to connect and bring in data from a variety of data sources. Use the Filter, Search, and LookUp functions and the context passed in from the host model-driven form to filter or find specific records in those data sources. Use the WYSIWYG canvas app editor to easily design the interface to match your requirements.
+This topic showed you how to get started with the embedding a canvas app in a model-driven form. You can further customize the embedded canvas app to connect and bring in data from various data sources. Use the Filter, Search, and LookUp functions and the context passed in from the host model-driven form to filter or find specific records in those data sources. Use the WYSIWYG canvas app editor to easily design the interface to match your requirements.
 
 ## See also
 
