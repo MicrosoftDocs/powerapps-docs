@@ -162,7 +162,7 @@ The sorting status for the current query. This is supported in both model-driven
 | [newRecord](dataset/newRecord.md)                           | [!INCLUDE [newRecord-description](dataset/includes/newRecord-description.md)]                           | Canvas apps                  |
 | [openDatasetItem](dataset/openDatasetItem.md)               | [!INCLUDE [opendatasetitem-description](dataset/includes/openDatasetItem-description.md)]               | Model-driven and Canvas apps |
 | [refresh](dataset/refresh.md)                               | [!INCLUDE [refresh-description](dataset/includes/refresh-description.md)]                               | Model-driven and Canvas apps |
-| [retrieveRecordCommand](dataset/retrieveRecordCommand.md)   | [!INCLUDE [retrieveRecordCommand-description](dataset/includes/retrieveRecordCommand-description.md)]   | Model-driven and Canvas apps |
+| [retrieveRecordCommand](dataset/retrieveRecordCommand.md)   | [!INCLUDE [retrieveRecordCommand-description](dataset/includes/retrieveRecordCommand-description.md)]   | Model-driven                 |
 | [setSelectedRecordIds](dataset/setselectedrecordids.md)     | [!INCLUDE [setselectedrecordids-description](dataset/includes/setselectedrecordids-description.md)]     | Model-driven and Canvas apps |
 
 ## Lookup columns
