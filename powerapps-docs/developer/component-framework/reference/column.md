@@ -33,7 +33,7 @@ The alias of the column.
 
 **Type**: `[AttributeMetadata](./attributemetadata.md)`
 
-### cellType ((Available for Model-driven apps only)
+### cellType (Available for Model-driven apps only)
 
 Cell type.
 
@@ -45,7 +45,7 @@ The data type of the column's values.
 
 **Type**: `string`
 
-### disableSorting ((Available for Model-driven apps only)
+### disableSorting (Available for Model-driven apps only)
 
 Prevents the UI from making the column sortable.
 
@@ -57,7 +57,7 @@ Localized display name for the column
 
 **Type**: `string`
 
-### isHidden ((Available for Model-driven apps only)
+### isHidden (Available for Model-driven apps only)
 
 The column visibility state.
 

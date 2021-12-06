@@ -19,7 +19,7 @@ Provides access to all the properties of a file.
 
 ## Available for
 
-Model-driven apps
+Canvas apps
 
 ## Properties
 

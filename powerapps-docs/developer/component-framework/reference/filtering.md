@@ -21,22 +21,13 @@ ms.assetid: e4673628-28d9-432c-92f4-24d1fcb44e21
 
 Model-driven and canvas apps
 
-## Properties
-
-### aliasMap (Model-driven apps)
-
-Mapping between dataset columns and entity columns.
-
-**Type**: `{ [key: string]: any }`
-
 ## Methods
 
-| Method                                  | Description                                                                         | Available for                |
-| --------------------------------------- | ----------------------------------------------------------------------------------- | ---------------------------- |
-| canDisableRelationshipFilter            | Returns true if relationship filtering can be disabled                              | Model-driven apps            |
-| [clearFilter](filtering/clearfilter.md) | [!INCLUDE [clearfilter-description](filtering/includes/clearfilter-description.md)] | Model-driven and canvas apps |
-| [getFilter](filtering/getfilter.md)     | [!INCLUDE [getfilter-description](filtering/includes/getfilter-description.md)]     | Model-driven and canvas apps |
-| [setFilter](filtering/setfilter.md)     | [!INCLUDE [setfilter-description](filtering/includes/setfilter-description.md)]     | Model-driven and canvas apps |
+| Method                                  | Description                                                                         |
+| --------------------------------------- | ----------------------------------------------------------------------------------- |
+| [clearFilter](filtering/clearfilter.md) | [!INCLUDE [clearfilter-description](filtering/includes/clearfilter-description.md)] |
+| [getFilter](filtering/getfilter.md)     | [!INCLUDE [getfilter-description](filtering/includes/getfilter-description.md)]     |
+| [setFilter](filtering/setfilter.md)     | [!INCLUDE [setfilter-description](filtering/includes/setfilter-description.md)]     |
 
 ### Related topics
 
