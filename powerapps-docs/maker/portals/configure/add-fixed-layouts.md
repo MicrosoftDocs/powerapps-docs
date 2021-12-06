@@ -39,7 +39,7 @@ A new portal is provisioned with many fixed layout web templates. Both the provi
 
     | Page Template setting | Value |
     | - | - |
-    | Name | *add a name, or choose suggest value, for example; Page with title* |
+    | Name | *add a name, or choose suggested value, for example; Page with title* |
     | Website | *choose the corresponding website.* |
     | Type | Web Template |
     | Web Template | *choose corresponding provided or custom web template, for example; Full Page without Child Links* |
@@ -49,6 +49,8 @@ A new portal is provisioned with many fixed layout web templates. Both the provi
     | Description | Optional |
 
     :::image type="content" source="media/add-fixed-layouts/page-with-title.png" alt-text="No fixed layouts available.":::
+
+1. In the portals Studio, select **Sync configuration**.
 
 1. The fixed layouts should now be available when creating web pages using the portals Studio.
 
