@@ -33,7 +33,7 @@ The example web page is composed of three sections;
 - A section with an [IFrame component](add-iframe.md) linked to Bing maps.
 
 > [!NOTE]
-> The Bing maps link does not have any functionality of geo-location enabled. It is provided as an example IFrame component.
+> The Bing maps link does not have any functionality or geo-location enabled. It is provided as an example IFrame component.
 
 :::image type="content" source="media/contact-us-sample/contact-us-portalstudio.png" alt-text="Contact Us page in the portal Studio.":::
 
