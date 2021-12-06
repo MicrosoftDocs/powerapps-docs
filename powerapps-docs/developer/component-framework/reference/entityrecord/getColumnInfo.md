@@ -15,8 +15,6 @@ ms.assetid: 74992f97-89b7-401e-ac95-9c8a47f990d1
 
 # getColumnInfo
 
-TODO: this API basically gets security roles that can be setup here: https://docs.microsoft.com/en-us/power-platform/admin/set-up-security-permissions-field
-
 [!INCLUDE[./includes/getColumnInfo-description.md](./includes/getColumnInfo-description.md)]
 
 ## Available for
@@ -53,5 +51,6 @@ readonly error: boolean;
 [Entityrecord](../entityrecord.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>
 [Power Apps component framework overview](../../overview.md)
+[Set up security permissions for a field](https://docs.microsoft.com/en-us/power-platform/admin/set-up-security-permissions-field)
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]
