@@ -25,7 +25,6 @@ Model-driven and Canvas apps
 
 | Methods                                                | Description                                                                                        | Available for                |
 | ------------------------------------------------------ | -------------------------------------------------------------------------------------------------- | ---------------------------- |
-| [getChanges](entityrecord/getChanges.md)               | [!INCLUDE [getChanges-description](entityrecord/includes/getChanges-description.md)]               | Canvas apps                  |
 | [getColumnInfo](entityrecord/getColumnInfo.md)         | [!INCLUDE [getColumnInfo-description](entityrecord/includes/getColumnInfo-description.md)]         | Canvas apps                  |
 | [getFormattedValue](entityrecord/getformattedvalue.md) | [!INCLUDE [getformattedvalue-description](entityrecord/includes/getformattedvalue-description.md)] | Model-driven and canvas apps |
 | [getNamedReference](entityrecord/getnamedreference.md) | [!INCLUDE [getnamedreference-description](entityrecord/includes/getnamedreference-description.md)] | Canvas apps                  |

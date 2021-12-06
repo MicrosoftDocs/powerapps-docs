@@ -149,7 +149,7 @@ The sorting status for the current query. This is supported in both model-driven
 
 | Method                                                      | Description                                                                                             | Available for                |
 | ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ---------------------------- |
-| [addColumn](dataset/addColumn.md)                           | [!INCLUDE [addColumn-description](dataset/includes/addColumn-description.md)]                           | Model-driven and Canvas apps |
+| [addColumn](dataset/addColumn.md)                           | [!INCLUDE [addColumn-description](dataset/includes/addColumn-description.md)]                           | Model-driven apps            |
 | [clearSelectedRecordIds](dataset/clearselectedrecordids.md) | [!INCLUDE [clearselectedrecordids-description](dataset/includes/clearselectedrecordids-description.md)] | Model-driven and Canvas apps |
 | [delete](dataset/delete.md)                                 | [!INCLUDE [delete-description](dataset/includes/delete-description.md)]                                 | Canvas apps                  |
 | [getCommands](dataset/getCommands.md)                       | [!INCLUDE [getCommands-description](dataset/includes/getCommands-description.md)]                       | Canvas apps                  |
@@ -163,7 +163,6 @@ The sorting status for the current query. This is supported in both model-driven
 | [openDatasetItem](dataset/openDatasetItem.md)               | [!INCLUDE [opendatasetitem-description](dataset/includes/openDatasetItem-description.md)]               | Model-driven and Canvas apps |
 | [refresh](dataset/refresh.md)                               | [!INCLUDE [refresh-description](dataset/includes/refresh-description.md)]                               | Model-driven and Canvas apps |
 | [retrieveRecordCommand](dataset/retrieveRecordCommand.md)   | [!INCLUDE [retrieveRecordCommand-description](dataset/includes/retrieveRecordCommand-description.md)]   | Model-driven and Canvas apps |
-| [saveMultipleRecords](dataset/saveMultipleRecords.md)       | [!INCLUDE [saveMultipleRecords-description](dataset/includes/saveMultipleRecords-description.md)]       | Canvas apps                  |
 | [setSelectedRecordIds](dataset/setselectedrecordids.md)     | [!INCLUDE [setselectedrecordids-description](dataset/includes/setselectedrecordids-description.md)]     | Model-driven and Canvas apps |
 
 ## Lookup columns
