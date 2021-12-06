@@ -28,9 +28,9 @@ Canvas apps
 
 ## Parameters
 
-| Parameter Name | Type       | Required | description |
-| -------------- | ---------- | -------- | ----------- |
-| ids            | `string[]` | Yes      |             |
+| Parameter Name | Type       | Required | description                                      |
+| -------------- | ---------- | -------- | ------------------------------------------------ |
+| ids            | `string[]` | Yes      | Array of ids for which to command should be run. |
 
 ## Return value
 

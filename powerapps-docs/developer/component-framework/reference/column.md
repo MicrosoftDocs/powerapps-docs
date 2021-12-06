@@ -29,11 +29,11 @@ The alias of the column.
 
 **Type**: `string`
 
-### attributes (Canvas apps)
+### attributes (Available for Canvas apps only)
 
 **Type**: `[AttributeMetadata](./attributemetadata.md)`
 
-### cellType (Model driven apps)
+### cellType ((Available for Model-driven apps only)
 
 Cell type.
 
@@ -45,7 +45,7 @@ The data type of the column's values.
 
 **Type**: `string`
 
-### disableSorting (Model driven apps)
+### disableSorting ((Available for Model-driven apps only)
 
 Prevents the UI from making the column sortable.
 
@@ -57,7 +57,7 @@ Localized display name for the column
 
 **Type**: `string`
 
-### isHidden (Model driven apps)
+### isHidden ((Available for Model-driven apps only)
 
 The column visibility state.
 
@@ -84,7 +84,6 @@ The column order for the layout.
 
 ### visualSizeFactor
 
-Model-driven Only
 Customized column width ratios.
 
 **Type**: `number`

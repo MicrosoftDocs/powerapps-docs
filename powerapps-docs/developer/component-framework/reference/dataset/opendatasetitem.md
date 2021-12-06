@@ -1,6 +1,6 @@
 ---
 title: openDatasetItem | Microsoft Docs
-description: Open dataset item for a given EntityReference. It checks if there is a command with command button id Mscrm.OpenRecordItem. 
+description: Open dataset item for a given EntityReference. It checks if there is a command with command button id Mscrm.OpenRecordItem.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -17,9 +17,9 @@ ms.assetid: ec4d6f14-d08b-410f-aad7-6a040c2b1c6a
 
 [!INCLUDE[./includes/opendatasetitem-description.md](./includes/opendatasetitem-description.md)]
 
-## Available for 
+## Available for
 
-Model-driven and canvas apps
+Model-driven and Canvas apps
 
 ## Syntax
 
@@ -28,7 +28,6 @@ Model-driven and canvas apps
 ## Return Value
 
 **Type**: [Entityreference](../entityreference.md)
-
 
 ### Related topics
 

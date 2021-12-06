@@ -17,9 +17,9 @@ ms.assetid: 96fa69f3-38d2-4e95-bb25-02d92aa6296c
 
 [!INCLUDE[./includes/getselectedrecordids-description.md](./includes/getselectedrecordids-description.md)]
 
-## Available for 
+## Available for
 
-Model-driven and canvas apps
+Model-driven and Canvas apps
 
 ## Syntax
 
@@ -28,7 +28,6 @@ Model-driven and canvas apps
 ## Return Value
 
 **Type**: `string[]`
-
 
 ### Related topics
 

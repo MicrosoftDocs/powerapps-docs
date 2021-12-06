@@ -17,9 +17,9 @@ ms.assetid: 4027f62f-1cc7-4eb6-aae8-a05d1a5fc722
 
 [!INCLUDE[./includes/gettargetentitytype-description.md](./includes/gettargetentitytype-description.md)]
 
-## Available for 
+## Available for
 
-Model-driven and canvas apps
+Model-driven and Canvas apps
 
 ## Syntax
 
@@ -28,7 +28,6 @@ Model-driven and canvas apps
 ## Return Value
 
 **Type**: `string`
-
 
 ### Related topics
 

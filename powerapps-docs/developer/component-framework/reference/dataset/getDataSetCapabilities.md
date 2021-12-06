@@ -28,35 +28,7 @@ Canvas apps
 
 ## Return value
 
-Type: `[DataProviderCapabilities]()`
-
-ADD TYPE DataProviderCapabilities {
-/\*\*
-_ If the dataprovider has edit capabilities
-_/
-isEditable: boolean;
-
-    /**
-     * If the dataset can be filtered
-     */
-    isFilterable: boolean;
-
-    /**
-     * If the dataset can be sorted
-     */
-    isSortable: boolean;
-
-    /**
-     * If the dataset records can be paged.
-     */
-    canPaginate: boolean;
-
-    /**
-     * Whether adding new records is supported or not
-     */
-    canCreateNewRecords: boolean;
-
-}
+**Type**: `[DataProviderCapabilities](./../DataProviderCapabilities.md)`
 
 ### Related topics
 

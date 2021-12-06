@@ -17,9 +17,9 @@ ms.assetid: d8fde7bd-6e69-46cb-a644-d3c527726169
 
 [!INCLUDE[./includes/refresh-description.md](./includes/refresh-description.md)]
 
-## Available for 
+## Available for
 
-Model-driven and canvas apps
+Model-driven and Canvas apps
 
 ## Syntax
 

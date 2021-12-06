@@ -17,9 +17,9 @@ ms.assetid: 52c0cd68-5558-4985-a56c-21dc8a1f55de
 
 [!INCLUDE[./includes/getviewid-description.md](./includes/getviewid-description.md)]
 
-## Available for 
+## Available for
 
-Model-driven apps
+Model-driven and Canvas apps
 
 ## Syntax
 
@@ -28,7 +28,6 @@ Model-driven apps
 ## Return Value
 
 **Type**: `string`
-
 
 ### Related topics
 

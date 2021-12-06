@@ -17,9 +17,9 @@ ms.assetid: 61989422-7745-4a0b-9606-37c16a04eab9
 
 [!INCLUDE[./includes/setselectedrecordids-description.md](./includes/setselectedrecordids-description.md)]
 
-## Available for 
+## Available for
 
-Model-driven and canvas apps
+Model-driven and Canvas apps
 
 ## Syntax
 
@@ -27,10 +27,9 @@ Model-driven and canvas apps
 
 ## Parameters
 
-|Parameter Name|Type|Required|description|
-|----|----|----|----|
-|ids|`string`|Yes|List of record id's|
-
+| Parameter Name | Type     | Required | description         |
+| -------------- | -------- | -------- | ------------------- |
+| ids            | `string` | Yes      | List of record id's |
 
 ### Related topics
 
