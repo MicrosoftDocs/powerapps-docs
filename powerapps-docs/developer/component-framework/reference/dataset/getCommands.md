@@ -20,7 +20,7 @@ ms.assetid: 35d94cf8-eab3-4dee-82af-336f6b33b789
 
 ## Available for
 
-Model-driven and canvas apps
+Canvas apps
 
 ## Syntax
 
@@ -34,14 +34,7 @@ Model-driven and canvas apps
 
 ## Return value
 
-Type: `[ICommand]()`
-
-ADD TYPE COMMAND
-/\*\*
-
-- A command button control
-  \*/
-  export type ICommand = ButtonControl | FlyoutControl | SplitButtonControl;
+Type: `[ICommand](./../ICommand.md)`
 
 ### Related topics
 

@@ -149,24 +149,24 @@ The sorting status for the current query. This is supported in both model-driven
 
 ## Methods
 
-| Method                                                      | Description                                                                                             |
-| ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| [addColumn](dataset/addColumn.md)                           | [!INCLUDE [addColumn-description](dataset/includes/addColumn-description.md)]                           |
-| [clearSelectedRecordIds](dataset/clearselectedrecordids.md) | [!INCLUDE [clearselectedrecordids-description](dataset/includes/clearselectedrecordids-description.md)] |
-| [delete](dataset/delete.md)                                 | [!INCLUDE [delete-description](dataset/includes/delete-description.md)]                                 |
-| [getCommands](dataset/getCommands.md)                       | [!INCLUDE [getCommands-description](dataset/includes/getCommands-description.md)]                       |
-| [getDataSetCapabilities](dataset/getDataSetCapabilities.md) | [!INCLUDE [getDataSetCapabilities-description](dataset/includes/getDataSetCapabilities-description.md)] |
-| [getRelatedDataSet](dataset/getRelatedDataSet.md)           | [!INCLUDE [getRelatedDataSet-description](dataset/includes/getRelatedDataSet-description.md)]           |
-| [getSelectedRecordIds](dataset/getSelectedRecordIds.md)     | [!INCLUDE [getselectedrecordids-description](dataset/includes/getSelectedRecordIds-description.md)]     |
-| [getTargetEntityType](dataset/getTargetEntityType.md)       | [!INCLUDE [getTargetEntityType-description](dataset/includes/getTargetEntityType-description.md)]       |
-| [getTitle](dataset/getTitle.md)                             | [!INCLUDE [gettitle-description](dataset/includes/getTitle-description.md)]                             |
-| [getViewId](dataset/getViewId.md)                           | [!INCLUDE [getviewid-description](dataset/includes/getViewId-description.md)]                           |
-| [newRecord](dataset/newRecord.md)                           | [!INCLUDE [newRecord-description](dataset/includes/newRecord-description.md)]                           |
-| [openDatasetItem](dataset/openDatasetItem.md)               | [!INCLUDE [opendatasetitem-description](dataset/includes/openDatasetItem-description.md)]               |
-| [refresh](dataset/refresh.md)                               | [!INCLUDE [refresh-description](dataset/includes/refresh-description.md)]                               |
-| [retrieveRecordCommand](dataset/retrieveRecordCommand.md)   | [!INCLUDE [retrieveRecordCommand-description](dataset/includes/retrieveRecordCommand-description.md)]   |
-| [saveMultipleRecords](dataset/saveMultipleRecords.md)       | [!INCLUDE [saveMultipleRecords-description](dataset/includes/saveMultipleRecords-description.md)]       |
-| [setSelectedRecordIds](dataset/setselectedrecordids.md)     | [!INCLUDE [setselectedrecordids-description](dataset/includes/setselectedrecordids-description.md)]     |
+| Method                                                      | Description                                                                                             | Available for                |
+| ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ---------------------------- |
+| [addColumn](dataset/addColumn.md)                           | [!INCLUDE [addColumn-description](dataset/includes/addColumn-description.md)]                           | Model-driven and canvas apps |
+| [clearSelectedRecordIds](dataset/clearselectedrecordids.md) | [!INCLUDE [clearselectedrecordids-description](dataset/includes/clearselectedrecordids-description.md)] | Model-driven and canvas apps |
+| [delete](dataset/delete.md)                                 | [!INCLUDE [delete-description](dataset/includes/delete-description.md)]                                 | Canvas apps                  |
+| [getCommands](dataset/getCommands.md)                       | [!INCLUDE [getCommands-description](dataset/includes/getCommands-description.md)]                       | Canvas apps                  |
+| [getDataSetCapabilities](dataset/getDataSetCapabilities.md) | [!INCLUDE [getDataSetCapabilities-description](dataset/includes/getDataSetCapabilities-description.md)] | Canvas apps                  |
+| [getRelatedDataSet](dataset/getRelatedDataSet.md)           | [!INCLUDE [getRelatedDataSet-description](dataset/includes/getRelatedDataSet-description.md)]           | Canvas apps                  |
+| [getSelectedRecordIds](dataset/getSelectedRecordIds.md)     | [!INCLUDE [getselectedrecordids-description](dataset/includes/getSelectedRecordIds-description.md)]     | Model-driven and canvas apps |
+| [getTargetEntityType](dataset/getTargetEntityType.md)       | [!INCLUDE [getTargetEntityType-description](dataset/includes/getTargetEntityType-description.md)]       | Model-driven and canvas apps |
+| [getTitle](dataset/getTitle.md)                             | [!INCLUDE [gettitle-description](dataset/includes/getTitle-description.md)]                             | Model-driven and canvas apps |
+| [getViewId](dataset/getViewId.md)                           | [!INCLUDE [getviewid-description](dataset/includes/getViewId-description.md)]                           | Model-driven and canvas apps |
+| [newRecord](dataset/newRecord.md)                           | [!INCLUDE [newRecord-description](dataset/includes/newRecord-description.md)]                           | Canvas apps                  |
+| [openDatasetItem](dataset/openDatasetItem.md)               | [!INCLUDE [opendatasetitem-description](dataset/includes/openDatasetItem-description.md)]               | Model-driven and canvas apps |
+| [refresh](dataset/refresh.md)                               | [!INCLUDE [refresh-description](dataset/includes/refresh-description.md)]                               | Model-driven and canvas apps |
+| [retrieveRecordCommand](dataset/retrieveRecordCommand.md)   | [!INCLUDE [retrieveRecordCommand-description](dataset/includes/retrieveRecordCommand-description.md)]   | Model-driven and canvas apps |
+| [saveMultipleRecords](dataset/saveMultipleRecords.md)       | [!INCLUDE [saveMultipleRecords-description](dataset/includes/saveMultipleRecords-description.md)]       | Canvas apps                  |
+| [setSelectedRecordIds](dataset/setselectedrecordids.md)     | [!INCLUDE [setselectedrecordids-description](dataset/includes/setselectedrecordids-description.md)]     | Model-driven and canvas apps |
 
 ## Lookup columns
 
