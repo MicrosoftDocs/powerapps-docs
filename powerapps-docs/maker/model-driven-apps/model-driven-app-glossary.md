@@ -32,9 +32,9 @@ Accessibility is a term that is used to refer to the extent to which people with
 
 The Power Platform admin center is a unified portal for administrators to manage environments and settings for Power Apps, Power Automate, and Dynamics 365 apps. Power Platform admin center doesn't cover administration settings and features associated with Power BI.
 
-[Learn more about the Power Platform admin center](https://docs.microsoft.com/power-platform/admin/admin-documentation)
+[Learn more about the Power Platform admin center](/power-platform/admin/admin-documentation)
 
-[Learn about the Power BI admin center](https://docs.microsoft.com/power-bi/admin/service-admin-administering-power-bi-in-your-organization)
+[Learn about the Power BI admin center](/power-bi/admin/service-admin-administering-power-bi-in-your-organization)
 
 ## App designer
 
@@ -78,7 +78,7 @@ Business rules are server-side logic that is used with canvas or model-driven ap
 
 [Learn more about business rules](../../maker/model-driven-apps/create-business-rules-recommendations-apply-logic-form.md)
 
-[Business rules - Microsoft Learn content](https://docs.microsoft.com/learn/modules/define-create-business-rules/1-rules)  
+[Business rules - Microsoft Learn content](/learn/modules/define-create-business-rules/1-rules)  
 
 ## Canvas app
 
@@ -214,7 +214,7 @@ Often multiple environments are used to enable application lifecycle management.
 
 Environments exist within a geographical region and can be a means of ensuring that the data physically stays in the correct geographical region.
 
-[Find out more about environments here](https://docs.microsoft.com/power-platform/admin/environments-overview)
+[Find out more about environments here](/power-platform/admin/environments-overview)
 
 ## Flow
 
@@ -287,7 +287,7 @@ Model-driven app [business process flows](model-driven-app-glossary.md#business-
 
 Power Automate flows exist within an environment and can also exist within Power Apps [solutions](model-driven-app-glossary.md#solution).
 
-[Learn more about Power Automate](https://docs.microsoft.com/power-automate/getting-started)
+[Learn more about Power Automate](/power-automate/getting-started)
 
 ## Power BI
 
@@ -296,7 +296,7 @@ A data visualization tool that has the capacity to be embedded within model-driv
 Power BI Reports don't exist within Dataverse environments or inside solutions.
 
 - [Use Power BI within a model driven app](use-power-bi.md)
-- [Learn more about Power BI](https://docs.microsoft.com/power-bi/fundamentals/power-bi-overview)
+- [Learn more about Power BI](/power-bi/fundamentals/power-bi-overview)
 
 ## Publish
 
@@ -344,9 +344,9 @@ Security roles are created and users are put into security roles either as indiv
 
 You grant access to model-driven apps through security roles.
 
-- [Find out more about security roles](https://docs.microsoft.com/power-platform/admin/security-roles-privileges##%20security-roles)
-- [General overview of security in Microsoft Dataverse](https://docs.microsoft.com/power-platform/admin/wp-security)
-- [Getting started with security roles using content from Microsoft Learn](https://docs.microsoft.com/learn/modules/get-started-security-roles/)
+- [Find out more about security roles](/power-platform/admin/security-roles-privileges##%20security-roles)
+- [General overview of security in Microsoft Dataverse](/power-platform/admin/wp-security)
+- [Getting started with security roles using content from Microsoft Learn](/learn/modules/get-started-security-roles/)
 
 ## Site map
 
