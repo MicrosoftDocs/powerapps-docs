@@ -57,7 +57,7 @@ A new portal is provisioned with many fixed layout web templates. Both the provi
 ### See also
 
 [Create and manage webpages](../create-manage-webpages.md) <br>
-[Work with templates](work-with-templates.md)
+[Work with templates](../work-with-templates.md)
 
 
-[!INCLUDE[footer-include](../../includes/footer-banner.md)]
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]
