@@ -19,7 +19,7 @@ Provides information on what has changed in the `updateView` method. The informa
 
 ## Available for
 
-Model-driven apps and Canvas
+Model-driven and Canvas apps
 
 ## Example
 

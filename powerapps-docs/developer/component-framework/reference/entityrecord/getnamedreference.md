@@ -19,7 +19,7 @@ ms.assetid: f879cb97-34d2-49ed-bef3-4df0af972b19
 
 ## Available for
 
-Model-driven apps and Canvas (Not working for activitypointer, Working for other entities, but missing name)
+Canvas apps, however, does not working for `activitypointer`.
 
 ## Syntax
 

@@ -67,14 +67,13 @@ Total number of results on the server for the current query.
 
 ## Methods
 
-| Method                                         | Description                                                                                                                                                                |
-| ---------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [loadExactPage](paging/loadExactPage.md)       | [!INCLUDE [loadExactPage-description](paging/includes/loadExactPage-description.md)]                                                                                       |
-| [loadNextPage](paging/loadnextpage.md)         | [!INCLUDE [loadnextpage-description](paging/includes/loadnextpage-description.md)]                                                                                         |
-| [loadPreviousPage](paging/loadpreviouspage.md) | [!INCLUDE [loadpreviouspage-description](paging/includes/loadpreviouspage-description.md)]                                                                                 |
-| [reset](paging/reset.md)                       | [!INCLUDE [reset-description](paging/includes/reset-description.md)]                                                                                                       |
-| [setPageSize](paging/setpagesize.md)           | [!INCLUDE [setpagesize-description](paging/includes/setpagesize-description.md)]                                                                                           |
-| pageSize                                       | The number of records to return per dataset page. On forms, dataset pageSize goes with the formatting (Number of rows) and on others you can choose your personal options. |
+| Method                                         | Description                                                                                |
+| ---------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| [loadExactPage](paging/loadExactPage.md)       | [!INCLUDE [loadExactPage-description](paging/includes/loadExactPage-description.md)]       |
+| [loadNextPage](paging/loadnextpage.md)         | [!INCLUDE [loadnextpage-description](paging/includes/loadnextpage-description.md)]         |
+| [loadPreviousPage](paging/loadpreviouspage.md) | [!INCLUDE [loadpreviouspage-description](paging/includes/loadpreviouspage-description.md)] |
+| [reset](paging/reset.md)                       | [!INCLUDE [reset-description](paging/includes/reset-description.md)]                       |
+| [setPageSize](paging/setpagesize.md)           | [!INCLUDE [setpagesize-description](paging/includes/setpagesize-description.md)]           |
 
 ### Related topics
 

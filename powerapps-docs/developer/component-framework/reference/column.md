@@ -29,9 +29,15 @@ The alias of the column.
 
 **Type**: `string`
 
-### attributes
+### attributes (Canvas apps)
 
 **Type**: `[AttributeMetadata](./attributemetadata.md)`
+
+### cellType (Model driven apps)
+
+Cell type.
+
+**Type**: `string`
 
 ### dataType
 
@@ -39,9 +45,8 @@ The data type of the column's values.
 
 **Type**: `string`
 
-### disableSorting
+### disableSorting (Model driven apps)
 
-Model-driven Only
 Prevents the UI from making the column sortable.
 
 **Type**: `boolean`<br />
@@ -52,9 +57,8 @@ Localized display name for the column
 
 **Type**: `string`
 
-### isHidden
+### isHidden (Model driven apps)
 
-Model-driven Only
 The column visibility state.
 
 **Type**: `boolean`<br />

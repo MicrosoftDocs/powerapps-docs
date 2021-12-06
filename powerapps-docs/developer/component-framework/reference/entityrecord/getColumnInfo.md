@@ -21,7 +21,7 @@ TODO: this API basically gets security roles that can be setup here: https://doc
 
 ## Available for
 
-Model-driven apps and Canvas
+Canvas apps
 
 ## Syntax
 
