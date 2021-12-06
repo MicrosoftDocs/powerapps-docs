@@ -16,11 +16,11 @@ contributors:
 
 # Add fixed layouts
 
-When you add a new web page to a portal using the portals Studio, you can choose either **Layouts** or **Fixed Layouts**. If there are no existing fixed layouts available in the portals Studio, you can add existing web templates as fixed layouts using the [Portal Management app](configure-portal.md).
+When you add a new web page to a portal using the [portals Studio](../portal-designer-anatomy.md), you can choose either **Layouts** or **Fixed Layouts**. If there are no existing fixed layouts available in the portals Studio, you can add existing web templates as fixed layouts by creating page template records using the [Portal Management app](configure-portal.md).
 
 :::image type="content" source="media/add-fixed-layouts/no-fixed-layouts.png" alt-text="No fixed layouts.":::
 
-## Add Page Templates
+## Add fixed layouts using page templates
 
 A new portal is provisioned with many fixed layout web templates. Both the provided and [custom web templates](../liquid/create-custom-template.md) can be added to the portals Studio by creating corresponding [page template](page-templates.md) records.
 
