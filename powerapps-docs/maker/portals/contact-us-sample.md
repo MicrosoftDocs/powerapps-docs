@@ -16,7 +16,7 @@ contributors:
 
 # Contact Us sample
 
-When you provision a new portal using the *portal from blank* template it will create an example web page called *Contact Us*. This example page provides a working example of how portal users can enter information into a form that will be stored in a Dataverse table.
+When you create a new portal using the *portal from blank* template, it will create an example web page called *Contact Us*. This web page provides a working example of how portal users can enter information into a form that will be stored in a Dataverse table.
 
 :::image type="content" source="media/contact-us-sample/contact-us-page.png" alt-text="Contact Us page.":::
 
@@ -39,7 +39,7 @@ The example web page is composed of three sections;
 
 ## Table permissions
 
-In order for portal users to be able to insert records to the feedback table, [table permissions](/configure/assign-entity-permissions.md) were configured to provide create, read, write and delete permissions for the Administrators, Anonymous Users, and Authenticated Users [webroles](/configure/create-web-roles.md).
+To allow portal users to be able to insert records to the feedback table, [table permissions](/configure/assign-entity-permissions.md) are configured to provide *create*, *read*, *write*, and *delete* permissions for the *Administrators*, *Anonymous Users*, and *Authenticated Users* [webroles](/configure/create-web-roles.md).
 
 :::image type="content" source="media/contact-us-sample/feedback-tablepermissions.png" alt-text="Feedback table permissions.":::
 
@@ -48,7 +48,7 @@ In order for portal users to be able to insert records to the feedback table, [t
 
 ## Basic form metadata
 
-To make all the contact us form fields required, [basic form metadata](/configure/configure-basic-form-metadata.md) records were added to the basic form using the [Portal Management app](/configure/configure-portal.md).
+To make all the form fields required, [basic form metadata](/configure/configure-basic-form-metadata.md) records were added to the basic form using the [Portal Management app](/configure/configure-portal.md).
 
 :::image type="content" source="media/contact-us-sample/basicform-metadata.png" alt-text="Basic form metadata.":::
 
