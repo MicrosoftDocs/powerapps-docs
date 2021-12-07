@@ -1,8 +1,8 @@
 ---
 title: How to run a model-driven app | MicrosoftDocs
-description: "How to run a model-driven power app"
+description: "How to run a Power Apps model-driven app"
 ms.custom: ""
-ms.date: 08/10/2021
+ms.date: 12/07/2021
 ms.reviewer: "matp"
 ms.service: powerapps
 ms.suite: ""
@@ -10,7 +10,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "how-to"
 author: "Mattp123"
 ms.subservice: mda-maker
-ms.author: "craigm"
+ms.author: "matp"
 manager: "kvivek"
 tags: 
 search.audienceType: 
@@ -23,32 +23,28 @@ search.app:
 
 [!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-## Running an app in a browser
+## Run an app in a browser
 
-To run an app the user you need to have a had a [security role](../model-driven-apps/model-driven-app-glossary.md#security-role) assigned to you in addition to having the URL for the app.
+To run a model-driven app in a web browser, the user must have a [security role](../model-driven-apps/model-driven-app-glossary.md#security-role) assigned in addition to having the URL for the app.
 
 Learn how to create a [custom security role](../model-driven-apps/share-model-driven-app.md#create-a-custom-security-role)
 
 To get the direct link to an app:
 
-1. Go to make.powerapps.com
-2. Select  the **environment** in which the app is located
-3. Select Apps, or select the **solution** in which the App is located.
-4. Select the three dots next to the app.
-5. Select edit.  The classic app designer will open.
-6. Select the **Properties** tab.
-7. Scroll down until the **Unified Interface URL** is visible.
-8. Copy the **Unified Interface URL**.
-Paste the app URL in a location so that your users can access it, such as by posting it on a SharePoint site or send via email.
-6. To play the app simply navigate the URL in a web browser.
+1. Go to make.powerapps.com.
+1. Select  the **Environment** where the app is located.
+1. On the left navigation pane, select **Apps**, or select **Solutions** and open the solution where the app is located.
+1. Select the **...** next to the model-driven app, and then select **Edit**. The classic app designer opens.
+1. Select the **Properties** tab, and then scroll down to **Unified Interface URL**. Copy the **Unified Interface URL**.
 
-!["Acquiring the link for a model-driven app"](media/unified-interface-url.png "Acquiring the link for a model-driven app")
+   !["Acquiring the link for a model-driven app"](media/unified-interface-url.png "Acquiring the link for a model-driven app")
+1. Paste the app URL in a location so that your users can access it, such as by posting it on a SharePoint site or send via email.
 
-## Running an app on a tablet or mobile
+To play the app, enter the URL in a web browser.
 
-Whilst it is possible to use a URL to run a model-driven app on a mobile device or a tablet the broad guidance consists of downloading the app from the relevant app store, signing into the app using your credentials and then navigating to the specific app required.
+## Run an app on a tablet or phone
 
-[Run a model-driven app on a mobile device](/dynamics365/customerengagement/on-premises/basics/dynamics-365-phones-tablets-users-guide-onprem)
+It is possible to use the app URL to run a model-driven app on a mobile device's web browser. However, users can also download the Power Apps mobile app from the relevant app store. Then, sign into the app, and then select the specific app. More information: [Get started with Power Apps mobile](../../mobile/run-powerapps-on-mobile.md)
 
 ### See also
 

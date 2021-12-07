@@ -24,31 +24,29 @@ search.audienceType:
 search.app: 
   - D365CE
 ---
-# Reporting considerations
+# Model-driven app reporting capabilities and considerations
 
 [!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-## Model-driven app reporting capabilities
-
-Model-driven apps have a number of capabilities that allow customers to surface business data that helps them drive decisions and interact with their customers and their data more effectively.  
+Model-driven apps have many capabilities that allow customers to surface business data that helps them drive decisions and interact with their customers and their data more effectively.  
 
 These are described in the [reporting overview](reporting-overview.md) and include
-- [views](model-driven-app-glossary.md#view)
-- [charts](model-driven-app-glossary.md#chart)
-- [dashboards](model-driven-app-glossary.md#dashboard)
-- [SQL Server Reporting Services reports](add-reporting-to-app.md)
+- [Views](model-driven-app-glossary.md#view).
+- [Charts](model-driven-app-glossary.md#chart).
+- [Dashboards](model-driven-app-glossary.md#dashboard).
+- [SQL Server Reporting Services reports](add-reporting-to-app.md).
 - Microsoft Excel integration that allows users to easily build self-service reports using the Power BI features [PowerView](https://support.office.com/article/power-view-overview-and-learning-5380e429-3ee0-4be2-97b7-64d7930020b6), [PowerPivot](https://support.office.com/article/power-pivot-overview-and-learning-f9001958-7901-4caa-ad80-028a6d2432ed), and [PowerQuery](https://support.office.com/article/power-query-overview-and-learning-ed614c81-4b00-4291-bd3a-55d80767f81d).
-- [Power BI](model-driven-app-glossary.md#power-bi)
+- [Power BI](model-driven-app-glossary.md#power-bi).
   
 As the volume of data held in the app's database continues to grow it becomes more important than ever to think about your BI strategy and determine the most effective mechanisms for reporting and visualizing large datasets.  
 
 ## Reporting infrastructure
 
-In an environment, the reporting infrastructure is shared and separate from the database. In this architecture, although customers share the resources required to run the report, each report runs against the customers’ individual database instances.  Additionally, users can run as many reports as they need whenever they want to run them to meet business goals.  We do not place time restrictions on reports.  
+In an environment, the reporting infrastructure is shared and separate from the database. In this architecture, although customers share the resources required to run the report, each report runs against the customers’ individual database instance. Additionally, users can run as many reports as they need whenever they want to run them to meet business goals.  We do not place time restrictions on reports.  
   
- The reporting capabilities built in to Microsoft Dataverse are designed to let users run reports on datasets that span shorter periods of time. Considering this, note the following fixed settings:  
+The reporting capabilities built in to Microsoft Dataverse are designed to let users run reports on datasets that span shorter periods of time. Considering this, note the following fixed settings:  
   
-- Reports and queries can execute for up to five minutes. When the maximum period is reached, the report will time out and a message is returned to the user. Within the five-minute duration, reports and queries are allowed to span large datasets that are beyond 50,000 rows, which provides significant flexibility to satisfy most operational reporting needs.  
+- Reports and queries can execute for up to five minutes. When the maximum period is reached, the report will time out and a message is returned to the user. Within the five-minute duration, reports and queries are allowed to span large datasets that are beyond 50,000 rows, which provide significant flexibility to satisfy most operational reporting needs.  
   
 - To improve query response, we recommend that detailed reports minimize the display of large numbers of rows. To do this, apply suitable filtering to reduce the number of rows that are returned. When you create aggregated or summarized reports, queries should push the aggregation to the query rather than fetch detailed rows to perform aggregation in the report.  This can be done by using Fetch XML aggregation. <!-- More information: [Use FetchXML aggregation](../developer/use-fetchxml-aggregation.md)  -->
   
@@ -63,13 +61,13 @@ In an environment, the reporting infrastructure is shared and separate from the 
   
 - Limit the number of tables that are needed to return the result. This helps reduce the time required to run the query and return the result set.  
   
-- Rows shown in detailed reports. Suitable filtering can be used to reduce the number of rows returned by the query to reduce timeouts.  
+- Reduce the rows in detailed reports. Suitable filtering can be used to reduce the number of rows returned by the query to reduce timeouts.  
   
-- For **aggregated** or **summarized** reports, queries must be used to push the aggregation to the database and not fetch detailed rows and perform aggregation in the SQL Server Reporting Services report.  
+- For aggregated or summarized reports, queries must be used to push the aggregation to the database and not fetch detailed rows and perform aggregation in the SQL Server Reporting Services report.  
   
 - When appropriate for your business, users should run the default (out-of-the-box) reports and dashboards. These reports and dashboards are typically designed to query per user datasets, so in most cases will not exceed the dataset limit.  
   
-If users must run reports that exceed these settings, we recommend that the following options are reviewed for assistance with complex reporting needs. Both options effectively offload reporting workloads from Dataverse to another datastore by using a data integration solution.  
+If users must run reports that exceed these settings, we recommend that you review the following options for assistance with complex reporting needs. Both options effectively offload reporting workloads from Dataverse to another datastore by using a data integration solution.  
   
 - [Adapters](reporting-considerations.md#BKMK_ThirdPartyAdapt) are used in conjunction with SQL Server Integration Services (SSIS) to extend the capabilities for integration with your apps data.  
   

@@ -20,48 +20,46 @@ search.app:
 
 [!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-## Introduction
-
-[Dataverse](model-driven-app-glossary.md#dataverse) as a platform supports interaction with many millions of records, filtered down to the relevant security roles, and as such presenting data in a way that permits the correct record to be found in a reliable fashion is an important feature.
+[Microsoft Dataverse](model-driven-app-glossary.md#dataverse) as a platform supports interaction with many millions of records, filtered down to the relevant security roles. Dataverse presents data in a way that permits the correct record to be found in a reliable fashion.
 
 Model-driven apps provide a range of reporting options to enable users to understand the data associated with their business area more easily.  
 
-Some types of reporting are very straightforward to implement, and others require more advanced techniques.
+Some types of reporting are straightforward to implement, and others require more advanced techniques.
 
 ## Simple reporting techniques
 
-All of the techniques below are native to Dataverse, and as such they provide a very simple method by which application lifecycle management can be applied.
+All of the techniques described below are native to Dataverse. They provide a simple method by which application lifecycle management can be applied.
 
 ### Table views
 
-At the most basic level table [views](model-driven-app-glossary.md#view) offer a very straightforward native experience in which records are presented in a tabular fashion.  It is easy to overlook the power of views, however the fact that a table can have **multiple views** all of which have individual sorting and filtering applied to them can offer a very simple set of review options.
+At the most basic level, table [views](model-driven-app-glossary.md#view) offer a straightforward native experience in which records are presented in a tabular format. It is easy to overlook the power of views. A table can have multiple views, all of which have individual sorting and filtering applied to them, which offers a simple set of review options to the user.
 
 ### Charts
 
-[Charts](model-driven-app-glossary.md#chart) allow app users to view the data presented in a view in a range of ways, which include bar, pie and line charts.  Once again, a table can have multiple charts associated with it, and the charts themselves provide interactivity that enables a user to select a bar and the view will filter accordingly.
+[Charts](model-driven-app-glossary.md#chart) allow app users to view the data presented in a view in a range of ways, which include bar, pie, and line charts.  Once again, a table can have multiple charts associated with it, and the charts themselves provide interactivity that enables a user to select a bar and the view will filter accordingly.
 
-The extract below shows views and charts being used to create a straightforward user experience.
+The extract below shows views and charts used to create an efficient user experience.
 
 :::image type="content" source="../../maker/model-driven-apps/media/reporting-charts-and-views.gif" alt-text="Solution explorer":::
 
 ### Forms
 
-[Forms](model-driven-app-glossary.md#form) can often be thought of as a method of entering data for a [record](model-driven-app-glossary.md#record), however they are an excellent way of providing the user columns of metadata associated with a record.  Similar to views, a table can have multiple forms.  This permits forms to be developed that are most suited to the business needs of the individual concerned.
+[Forms](model-driven-app-glossary.md#form) can often be thought of as a method of entering data for a [record](model-driven-app-glossary.md#record). However, forms are an excellent way of providing the user columns of metadata associated with a record.  Similar to views and charts, a table can have multiple forms. This permits forms to be developed that are most suited to the business needs of the individual.
 
 ## Working with SQL Server Reporting style reports
 
-SSRS reports allow pixel perfect paginated reports to be created that can be rendered on screen and distributed in a range of ways such as PDF, CSV, Excel and so on. They are introduced using the classic editor and are solution aware, which helps with application lifecycle management.  [Learn more about SSRS reports](add-reporting-to-app.md)
+SQL Server Reporting Services (SSRS) reports allow pixel perfect paginated reports to be created that can be rendered on screen and distributed in a range of ways such as PDF, CSV, Excel, and so on. The reports are created using the classic editor and are solution aware, which helps with application lifecycle management.  [Learn more about SSRS reports](add-reporting-to-app.md)
 
 > [!div class="mx-imgBorder"] 
 > ![Progress against goals standard report.](media/progress-against-goals-report.png "Progress against goals standard report")
 
 ## Power BI Reporting
 
-Power BI is a trememdously powerful and interactive reporting tool. Power BI dashboards and reports can be introduced into model-driven apps in a range of ways.  Unlike some of the other techniques suggested Power BI reports are not themselves solution aware, so a little more effort is required to ensure that development, test and production scenarios can be maintained.
+Power BI is a powerful and interactive reporting tool. Power BI dashboards and reports can be introduced into model-driven apps in a range of ways. Unlike some of the other techniques suggested, Power BI reports are not solution aware. So there are more tasks required to ensure that development, test, and production scenarios are maintained.
 
-Additionally, unless direct query techniques are used record level security will need to be re-introduced into any reporting.
+Additionally, unless direct query techniques are used, record-level security must be reconfigured into the Power BI reports.
 
-There are 3 techniques for introducing Power BI into your model driven apps.
+There are three techniques for adding Power BI into your model driven apps.
 
 |Technique|Notes|Power BI Object|
 |---------|--------------|------------|
@@ -73,7 +71,7 @@ There are 3 techniques for introducing Power BI into your model driven apps.
 
 ## Excel integration
 
-Microsoft Excel integration that allows users to easily build self-service reports using the features such as [PowerView](https://support.office.com/article/power-view-overview-and-learning-5380e429-3ee0-4be2-97b7-64d7930020b6), [PowerPivot](https://support.office.com/article/power-pivot-overview-and-learning-f9001958-7901-4caa-ad80-028a6d2432ed), and [PowerQuery](https://support.office.com/article/power-query-overview-and-learning-ed614c81-4b00-4291-bd3a-55d80767f81d).
+Microsoft Excel integration lets users easily build self-service reports using, [PowerView](https://support.office.com/article/power-view-overview-and-learning-5380e429-3ee0-4be2-97b7-64d7930020b6), [PowerPivot](https://support.office.com/article/power-pivot-overview-and-learning-f9001958-7901-4caa-ad80-028a6d2432ed), and [PowerQuery](https://support.office.com/article/power-query-overview-and-learning-ed614c81-4b00-4291-bd3a-55d80767f81d).
 
 ## Next Steps
 

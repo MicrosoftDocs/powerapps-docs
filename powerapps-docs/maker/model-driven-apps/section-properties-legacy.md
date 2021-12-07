@@ -1,6 +1,6 @@
 ---
-title: Section properties for model-driven app main forms (Legacy) | MicrosoftDocs
-description: Understand the section properties shown in legacy for a main form
+title: Section properties for model-driven app main forms (classic) | MicrosoftDocs
+description: Understand the section properties using the classic form designer for a main form
 Keywords: Main form; Section properties; Dynamics 365
 author: Mattp123
 applies_to: 
@@ -20,19 +20,19 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Model-driven app form section properties (Legacy)
+# Model-driven app form section properties (classic)
 
 [!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
- A section in a form occupies the space available in a tab column. Sections have a label that can be displayed and a line may be shown below the label.  
+A section in a form occupies the space available in a tab column. Sections have a label that can be displayed and a line might be shown below the label.  
   
- Sections can have up to 4 columns and includes options for displaying how labels for columns in the section are displayed.  
+Sections can have up to four columns and includes options for displaying how labels for columns in the section are displayed.  
   
- Headers and footers are similar to sections but cannot be removed. If they don't contain anything they will not be shown.
+Headers and footers are similar to sections but cannot be removed. If they don't contain anything they will not be shown.
 
 ## Section properties in classic form designer
 
-You can access **Section properties** in solution explorer from the Power Apps site .
+You can access **Section properties** in solution explorer from Power Apps (make.powerapps.com).
 
 1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
