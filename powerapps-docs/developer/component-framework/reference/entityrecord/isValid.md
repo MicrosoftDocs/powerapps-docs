@@ -1,6 +1,6 @@
 ---
 title: isValid | Microsoft Docs
-description:
+description: Whether this record is valid
 keywords:
 ms.author: nabuthuk
 author: Nkrb

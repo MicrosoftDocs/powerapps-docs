@@ -33,7 +33,7 @@ Model-driven and Canvas apps
 | [isDirty](entityrecord/isDirty.md)                     | [!INCLUDE [isDirty-description](entityrecord/includes/isDirty-description.md)]                     | Model-driven and Canvas apps |
 | [isValid](entityrecord/isValid.md)                     | [!INCLUDE [isValid-description](entityrecord/includes/isValid-description.md)]                     | Model-driven and Canvas apps |
 | [save](entityrecord/save.md)                           | [!INCLUDE [save-description](entityrecord/includes/save-description.md)]                           | Model-driven and Canvas apps |
-| [setValue](entityrecord/setValue.md)                   | [!INCLUDE [setValue-description](entityrecord/setValue/save-description.md)]                       | Model-driven and Canvas apps |
+| [setValue](entityrecord/setValue.md)                   | [!INCLUDE [setValue-description](entityrecord/includes/setValue-description.md)]                   | Model-driven and Canvas apps |
 
 ### Related topics
 
