@@ -1,16 +1,16 @@
 ---
 title: Notify a manager on completion of an inspection
 description: Learn about the changes that would be required to notify the manager on completion of an inspection.
-author: navjotm
+author: josephshum
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 08/16/2021
-ms.author: namarwah
+ms.author: jshum
 ms.reviewer: tapanm
 contributors:
   - joel-lindstrom
-  - navjotm
+  - josephshum
   - tapanm-msft
   - sbahl10
 ---

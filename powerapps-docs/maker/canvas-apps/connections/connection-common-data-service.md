@@ -2,7 +2,6 @@
 title: Connect to Microsoft Dataverse
 description: Learn how to connect to Microsoft Dataverse and use it for building apps in Power Apps.
 author: tapanm-msft
-manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
@@ -88,11 +87,7 @@ Dataverse for processing (rather than processing locally within Power Apps).
 > [!NOTE]
 > Choices, Guids, and Aggregate functions for Dataverse are supported only with
 the new version of the connector. Depending on the version of Power Apps that
-you're using, enable this connector with either the Preview switch titled:
-> - **Relational data, choices, and other new features for Dataverse**  
-> or this Experimental switch:
-> - **Use the Dataverse connector**  
-> To find these switches, open the **File menu**, and then select **App settings** \> **Advanced settings**.
+you're using, enable this connector with either the **Preview** switch titled **Relational data, choices, and other new features for Dataverse** or **Experimental** switch **Use the Dataverse connector**. To find these switches, select **Settings** > **Upcoming features** > **Preview** or **Experimental**.
 
 ## Dataverse and the improved data source experience
 

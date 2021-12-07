@@ -226,7 +226,7 @@ System.Net.ServicePointManager.DefaultConnectionLimit = 65000;
 System.Threading.ThreadPool.SetMinThreads(100, 100);
 //Turn off the Expect 100 to continue message - 'true' will cause the caller to wait until it round-trip confirms a connection to the server 
 System.Net.ServicePointManager.Expect100Continue = false;
-//Can decreas overall transmission overhead but can cause delay in data packet arrival
+//Can decrease overall transmission overhead but can cause delay in data packet arrival
 System.Net.ServicePointManager.UseNagleAlgorithm = false;
 ```
 More information: [Managing Connections](/dotnet/framework/network-programming/managing-connections)

@@ -5,7 +5,7 @@ author: gitanjalisingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/9/2021
+ms.date: 11/10/2021
 ms.subservice: portals
 ms.author: gisingh
 ms.reviewer: ndoelman
@@ -707,8 +707,8 @@ The name of the Advanced Form you wish to load.
 Allows you to embed code components using a Liquid tag. For example, adding a map display custom control to a web page.
 
 > [!important]
-> This is a preview feature.
-Preview features aren’t meant for production use and may have restricted functionality. 
+> - This is a preview feature.
+> - Preview features aren’t meant for production use and may have restricted functionality. 
 These features are available before an official release so that customers can get early access and provide feedback.
 
 ### Parameters

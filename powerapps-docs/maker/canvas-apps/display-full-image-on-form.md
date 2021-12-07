@@ -12,7 +12,6 @@ author: "Mattp123"
 ms.assetid: 
 ms.subservice: canvas-maker
 ms.author: matp
-manager: kvivek
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 

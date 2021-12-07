@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/13/2021
+ms.date: 11/23/2021
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
@@ -114,6 +114,7 @@ The following list explains Power BI access types in brief and lists access type
 - If you [reset a portal](../portals/admin/reset-portal.md) and provision a new portal, you must add the portal application ID of the new portal to the **Portal Power BI Embedded service** Azure AD security group. For more information, go to [Set up Power BI integration](../portals/admin/set-up-power-bi-integration.md#create-security-group-and-add-to-power-bi-account).
 - If you make a change in the Power Apps portals admin center, you must reload the portals Studio if you already have it open.
 - Adding users to Power BI dashboards and reports may take a while to reflect in the portals Studio.
+- Power BI dashboards and reports connected to a shared dataset present on a different workspace are not supported.
 
 ### Power BI performance and optimization considerations
 

@@ -1,6 +1,6 @@
 ---
 title: "InteractionForEmail table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the InteractionForEmail table/entity."
+description: "For internal use only."
 ms.date: 10/05/2021
 ms.service: "powerapps"
 ms.topic: "reference"
@@ -20,7 +20,7 @@ search.app:
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
-
+For internal use only.
 
 
 ## Messages

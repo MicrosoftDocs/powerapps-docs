@@ -1,5 +1,5 @@
 ---
-title: Compose HTTP requests and handle errors for the portals Web API
+title: Compose HTTP requests and handle errors for portals Web API
 description: Learn how to construct HTTP requests, headers, and handle errors for the portals Web API.
 author: neerajnandwana-msft
 ms.service: powerapps
@@ -36,16 +36,16 @@ For example, use this format when referring a case:
 
 `https://contoso.powerappsportals.com/_api/case`
 
-All Web API resources will follow the respective [portal table permissions](/dynamics365/portals/assign-entity-permissions) in context with Web Roles.
+All Web API resources will follow the respective [portal table permissions](/dynamics365/portals/assign-entity-permissions) in context with web roles.
 
 ## HTTP methods
 
-HTTP requests can use different kinds of methods. However, the portals Web API only supports the methods in the following table.
+HTTP requests can use different kinds of methods. However, the portals Web API only supports the methods in the following table:
 
 | Method | Usage |
 | - | - |
 | Get    | Use when retrieving data from tables. |
-| Post   | Creating tables and calling actions. |
+| Post   | Use when creating tables and calling actions. |
 | Patch  | Use when updating tables or doing upsert operations. |
 | Delete | Use when deleting tables or individual properties of tables. |
 | Put    | Use in limited situations to update individual properties of tables. |
@@ -58,7 +58,7 @@ The Web API only supports JSON. Each HTTP header must include:
 - If the request includes JSON data in the request body, you must include a
 *Content-Type* header with a value of `application/json`.
 
-The current OData version is 4.0, but future versions might allow for new capabilities. Use the following syntax to ensure that there's no ambiguity about the OData version that will be applied to your code in the future.
+The current OData version is 4.0, but future versions might allow for new capabilities. Use the following syntax to ensure there's no ambiguity about the OData version that will be applied to your code in the future:
 
 ### Syntax
 
@@ -160,7 +160,7 @@ OData-Version: 4.0
 
 ## Identify status codes
 
-Each HTTP request response includes a status code. Status codes returned by the portals Web API include the following.
+Each HTTP request response includes a status code. Status codes returned by the portals Web API include the following:
 
 | Code | Description | Type |
 | - | - | - |
@@ -177,7 +177,7 @@ Each HTTP request response includes a status code. Status codes returned by the 
 
 ## Parse errors from the response
 
-Consider the following example HTTP response that still includes the inner error.
+Consider the following example HTTP response that still includes the inner error:
 
 ```json
 {
@@ -216,8 +216,6 @@ Response for unhandled errors with HTTP status code 500 will return the error "A
 
 ### See also
 
-[Web API overview](web-api-overview.md)</br>  
-[Portals write, update and delete operations using the Web API](write-update-delete-operations.md)</br>
-[Portals read operations using the Web API](read-operations.md)
+[Portals Web API overview](web-api-overview.md)</br>[Portals write, update and delete operations using the Web API](write-update-delete-operations.md)</br>[Portals read operations using the Web API](read-operations.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

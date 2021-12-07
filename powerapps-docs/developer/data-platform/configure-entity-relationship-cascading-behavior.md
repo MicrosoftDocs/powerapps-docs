@@ -13,7 +13,7 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 10/18/2021
+ms.date: 11/10/2021
 ms.subservice: dataverse-developer
 ms.author: jdaly
 search.audienceType: 
@@ -253,6 +253,27 @@ You can set **AlwaysMoveRecordToOwnerBusinessUnit** to false; the user owned rec
 
 > [!NOTE]
 > When performing a merge between two custom tables, DateTime values will not merge. The DateTime of the target record will remain unchanged.
+
+## Cascade notification
+
+You can use two cascade async notification helper messages to provide notification to a user or log when a cascading asynchronous job fails or succeeds. This is accomplished by writing and registering a custom plug-in that executes when those messages are processed and provides success or failure notification.
+
+The two notification messages are:
+
+- ``cascadeAsync_FailureAPI`` <br/>This message is processed (executed) when an asynchronous cascade job is paused due to multiple failures. This can be used to inform users they need to review their dataset for issues with existing plug-ins, data issues, or workflow problems.
+- ``cascadeAsync_SuccessAPI`` <br/>This message is processed (executed) when the asynchronous cascade job is successfully completed. This is helpful to let users know when longer running jobs are finished.
+
+The custom plug-in must be registered during the post-operation stage and must be set to asynchronous mode. The following figure shows an example plug-in registration using the Plug-in Registration tool.
+
+:::image type="content" source="media/plugin-cascade-notification.png" alt-text="Register a plug-in for cascade notification":::
+
+Some examples of the kind of notifications that your custom plug-in can provide is as follows:
+
+- On success, add an entry to a run-time log
+-	On failure, add an entry to a run-time log, and then send an email (or other communication) to the administrator indicating the date/time and nature of the failure
+- Display a message to the interactive user
+
+More information: [Create and use Custom APIs](custom-api.md); [Write a Plug-in for your Custom API](custom-api.md#write-a-plug-in-for-your-custom-api)
 
 ### See also
 
