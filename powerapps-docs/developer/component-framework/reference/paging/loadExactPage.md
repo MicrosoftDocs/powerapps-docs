@@ -1,6 +1,6 @@
 ---
 title: loadExactPage | Microsoft Docs
-description: Request the next page of results to be loaded.
+description: Request the exact page of results to be loaded.
 keywords:
 ms.author: nabuthuk
 author: lesyk
@@ -15,7 +15,7 @@ ms.assetid: e119c1e1-e35f-47cf-9437-e7376657bbc0
 
 # loadExactPage
 
-[!INCLUDE [loadnextpage-description](includes/loadnextpage-description.md)]
+[!INCLUDE [loadexactpage-description](includes/loadexactpage-description.md)]
 
 ## Available for
 
