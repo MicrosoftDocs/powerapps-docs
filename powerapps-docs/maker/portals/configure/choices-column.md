@@ -1,63 +1,47 @@
 ﻿---
 title: Configure choices column for portal
 description: Learn how to add and configure Dataverse choices column on portal lists, forms, and templates.
-author: GitanjaliSingh33msft
+author: nageshbhat-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 12/02/2021
+ms.date: 12/07/2021
 ms.subservice: portals
 ms.author: nabha
 ms.reviewer: ndoelman
 contributors:
+    - nageshbhat-msft
     - nickdoelman
 ---
 
 # Configure choices column on portals (preview)
 
-Makers can design [basic forms](entity-forms.md) and [advanced forms](web-form-properties.md) to include [choices columns](../../data-platform/types-of-fields.md#choices) defined in Microsoft Dataverse to provide the ability for portal users to select multiple options while submitting data, and display views with choices columns through [lists](entity-lists.md).
+> [!Important]
+> - This is a preview feature.
+> - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 
-## Allow Read access to a Web Resource table
+Makers can design [basic forms](entity-forms.md) and [advanced forms](web-form-properties.md) to include [choices columns](../../data-platform/types-of-fields.md#choices) defined in Microsoft Dataverse. This feature provides the ability for portal users to select multiple options while submitting data, and display views with choices columns through [lists](entity-lists.md).
 
-Displaying choices control on form requires **read** permission to be set on the **Web Resource** table.
+## Enable choices control
 
-To configure read access on the web resource table:
+You need to create a new [site setting](configure-site-settings.md) with the name **Control/EnableChoices** and set the value to **true** to enable **choices** controls on portal forms.
 
-1. Open the [Portal Management](configure-portal.md) app.
+:::image type="content" source="media/choices-column/site-setting.png" alt-text="Control/EnableChoices site setting.":::
 
-1. On the left pane, select **Table Permission**.
-
-1. Select **New**.
-
-1. Enter **Name.**
-
-1. Select *Web Resource (webresource)* for **Table Name**.
-
-1. Select your website record.
-
-1. Select *Global* for **Scope.**
-
-1. In **Privileges**, select *Read*.
-
-1. Select **Save**.
-
-1. Under the **Web Roles** section, select **Add Existing Web Role**.
-
-1. Select the web role for the users that should see the code component in portals.
-
-    For example, **Anonymous Users** for anonymous users, **Authenticated Users** for users authenticated by portals, or a custom web role.
-
-1. Select **Save & Close**.
-
-Once you add the basic form to a webpage, users assigned to the selected web role can now see the **Choices** control on the portal page.
+> [!IMPORTANT]
+> This site setting is only required during the preview period.
 
 ## Basic forms and advanced forms
 
-Maker can design the advanced form step in portal website using Dataverse form having the choices column to support selection of multiple options. Portal users can insert, modify, or clear the selection. More details on [basic forms](entity-forms.md) and [advanced forms](web-form-properties.md) configuration available in respective documentation
+Maker can design the advanced form step in portal website using Dataverse form having the choices column to support selection of multiple options. Portal users can insert, modify, or clear the selection. More details on [basic forms](entity-forms.md) and [advanced forms](web-form-properties.md) configuration available in respective documentation.
+
+:::image type="content" source="media/choices-column/choices-form.gif" alt-text="Choices column on a form.":::
 
 ## List
 
 Choices column defined in Dataverse view to display the multiple options selected for the record in a list. Choices column support quick search by typing keyword to filter the list.
+
+:::image type="content" source="media/choices-column/choices-list.png" alt-text="Choices column on a list.":::
 
 > [!NOTE]
 > Sorting [list](entity-lists.md) by choices column is not supported.
@@ -176,6 +160,6 @@ Body –
 ```
 
 > [!NOTE]
-> Choices control on basic and advanced form support default theme. If you are using any of the [preset theme](../theme-overview.md) defined in portals Studio, your starter portal package must be 9.2.2112.x or higher
+> The choices control on basic and advanced forms currently only support the default theme. If you are using any of the [preset themes](../theme-overview.md) defined in portals Studio, your starter portal package must be [9.2.2201.x](/power-platform/released-versions/portals) or higher.
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
