@@ -28,18 +28,18 @@ search.app:
 
 [!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
+Views allow the data in tables to be presented in a way that meets a business need at a given time.
+
 ## Why we need to maintain table views
 
-Views allow the data in our tables to be presented in a way that meets our business need at a given time.
-
-However, the views that are required in an organization may change over time, and it is good practice for us to maintain them in order to keep our application as simple as possible to use and to maintain from a developer perspective.
+The views that are required in an organization may change over time, and it is good practice to maintain them in order to keep your app as simple as possible to use and maintain.
 
 ## System views versus public views
 
 Depending on the type of view, you can either delete it or deactivate it. Deactivated views can be reactivated, while the deletion of a view is permanent.
 
 - Custom public views can both be deleted and deactivated, including public views that the system created.
-- [system views](create-edit-views.md#system-views) however cannot be  delete nor deactivated. This included public views created by the system.
+- [System views](create-edit-views.md#system-views) can't be  delete or deactivated. This includes public views created by the system.
 
 ## Delete a view
 

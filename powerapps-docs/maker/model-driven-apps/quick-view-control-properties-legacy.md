@@ -29,23 +29,25 @@ A quick view control on a model-driven app form displays data from a row that is
 > [!div class="mx-imgBorder"] 
 > ![Contact quick view form on the account form.](media/quick-view-form-contact.png "Contact quick view form on the account form")  
 
+## Add a quick view form
+
 1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
-2.  Select a **solution** from the left hand navigation
-3.  Select the **Table** required, then select the **Forms** tab.  
+2.  Select **Solution** from the left navigation pane, and then open the solution you want.
+3.  Open the table you want, and then select the **Forms** tab.  
 
 4.  Select a form, which **Type** is **Main**.
 
-5.  In the form designer, select **Add Component**.
+5.  In the form designer, select **+ Component**, and then in the left navigation pane, select **Quick view**.
 
-6.  In the left navigation pane, select **Quick view**.
-
-7.  In the **Select quick view forms** dialog box, select a **Lookup** column included in the form, and then select a quick view form for the related tables. The related tables shown depend on the **Lookup** column chosen.  
+6.  In the **Select quick view forms** dialog box, select a **Lookup** column included in the form, and then select a quick view form for the related tables. The related tables shown depend on the **Lookup** column chosen.  
 
     > [!div class="mx-imgBorder"] 
     > ![Add quick view control.](media/select-quick-view-form.png "Add quick view control to main form")
 
-8.  Select **Done** to close the **Select quick View forms** dialog box. The quick view form appears on the form, and the properties of the quick view appear in the Properties pane.
+8.  Select **Done** to close the **Select quick view forms** dialog box. The quick view form appears on the form, and the properties of the quick view appear in the properties pane.
+
+## Quick view form properties
 
 |Property|Description|  
 |--------------|-----------------|  
@@ -60,7 +62,7 @@ A quick view control on a model-driven app form displays data from a row that is
 
 1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
-2.  Expand **Data**, select **Tables**, select the table required, and then select the **Forms** tab.
+2.  Expand **Data**, select **Tables**, select the table you want, and then select the **Forms** tab.
 
 3.  In the list of forms, open the form of type **Main**.
 
