@@ -1480,6 +1480,8 @@
       href: ./model-driven-apps/deactivate-app.md
     - name: Delete an app
       href: ./model-driven-apps/delete-model-driven-app.md
+    - name: Run an app
+      href: ./model-driven-apps/run-model-driven-app.md  
   - name: Advanced app making and customization
     href: 
     items:
