@@ -2,8 +2,8 @@
 title: loadExactPage | Microsoft Docs
 description:
 keywords:
-ms.author: vilesyk
-author: vilesyk
+ms.author: lesyk
+author: lesyk
 manager: kvivek
 ms.date: 06/12/2021
 ms.service: "powerapps"

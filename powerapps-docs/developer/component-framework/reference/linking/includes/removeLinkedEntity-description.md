@@ -2,7 +2,7 @@
 title: removeLinkedEntity | Microsoft Docs
 description:
 keywords:
-ms.author: vilesyk
+ms.author: lesyk
 manager: kvivek
 ms.date: 06/12/2021
 ms.service: "powerapps"

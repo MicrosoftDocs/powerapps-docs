@@ -1,6 +1,6 @@
 ---
-title: getValue | Microsoft Docs
-description:
+title: setValue | Microsoft Docs
+description: Set value for the column
 keywords:
 ms.author: nabuthuk
 author: Nkrb

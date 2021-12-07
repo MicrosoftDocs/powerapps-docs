@@ -2,7 +2,7 @@
 title: retrieveRecordCommand | Microsoft Docs
 description:
 keywords:
-ms.author: vilesyk
+ms.author: lesyk
 author: Nkrb
 manager: kvivek
 ms.date: 06/12/2021

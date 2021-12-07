@@ -1,6 +1,6 @@
 ---
 title: getColumnInfo | Microsoft Docs
-description:
+description: Gets the current state of the column for the record
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -51,6 +51,6 @@ readonly error: boolean;
 [Entityrecord](../entityrecord.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>
 [Power Apps component framework overview](../../overview.md)
-[Set up security permissions for a field](https://docs.microsoft.com/en-us/power-platform/admin/set-up-security-permissions-field)
+[Set up security permissions for a field](/power-platform/admin/set-up-security-permissions-field)
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]
