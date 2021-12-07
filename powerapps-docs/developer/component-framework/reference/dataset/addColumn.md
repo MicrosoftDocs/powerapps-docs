@@ -1,6 +1,6 @@
 ---
 title: addColumn | Microsoft Docs
-description:
+description: Adds column to the column set
 keywords:
 ms.author: nabuthuk
 author: Nkrb

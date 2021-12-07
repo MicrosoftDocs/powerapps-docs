@@ -1,6 +1,6 @@
 ---
 title: clear | Microsoft Docs
-description:
+description: Removes all linked entities from the list
 keywords:
 ms.author: nabuthuk
 author: Nkrb

@@ -1,6 +1,6 @@
 ---
 title: removeLinkedEntity | Microsoft Docs
-description:
+description: Removes a linked entity from the list
 keywords:
 ms.author: nabuthuk
 author: Nkrb

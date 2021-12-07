@@ -1,6 +1,6 @@
 ---
 title: getRelatedDataSet | Microsoft Docs
-description:
+description: Gets the related dataset for this column (only if this is related entity column like lookup)
 keywords:
 manager: kvivek
 ms.date: 06/12/2021

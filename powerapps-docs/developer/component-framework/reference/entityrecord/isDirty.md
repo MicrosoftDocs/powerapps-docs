@@ -1,6 +1,6 @@
 ---
 title: isDirty | Microsoft Docs
-description:
+description: Whether this record is dirty
 keywords:
 ms.author: nabuthuk
 author: Nkrb

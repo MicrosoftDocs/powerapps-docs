@@ -1,6 +1,6 @@
 ---
 title: retrieveRecordCommand | Microsoft Docs
-description:
+description: Retrieve Record's Associated Commands
 keywords:
 ms.author: nabuthuk
 author: Nkrb

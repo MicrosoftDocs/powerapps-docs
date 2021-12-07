@@ -1,6 +1,6 @@
 ---
 title: save | Microsoft Docs
-description:
+description: Saves the record
 keywords:
 ms.author: nabuthuk
 author: Nkrb

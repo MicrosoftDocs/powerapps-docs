@@ -1,6 +1,6 @@
 ---
 title: newRecord | Microsoft Docs
-description:
+description: Initialize a local record object for control to set the value. The control will need to invoke save() on the newly created record to persist the change
 keywords:
 manager: kvivek
 ms.date: 06/12/2021

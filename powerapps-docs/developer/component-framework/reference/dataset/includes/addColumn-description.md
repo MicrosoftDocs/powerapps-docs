@@ -15,4 +15,4 @@ applies_to:
 ms.assetid: e8c9f86c-55cd-45ad-92a7-985d61040b34
 ---
 
-dds column to the columnset
+Adds column to the column set

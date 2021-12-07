@@ -1,6 +1,6 @@
 ---
 title: getCommands | Microsoft Docs
-description:
+description: The commands for this dataset
 keywords:
 manager: kvivek
 ms.date: 06/12/2021

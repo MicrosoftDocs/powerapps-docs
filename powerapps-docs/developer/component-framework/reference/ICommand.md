@@ -1,6 +1,6 @@
 ---
 title: ICommand | Microsoft Docs
-description:
+description: A command button control types.
 keywords:
 ms.author: nabuthuk
 author: Nkrb

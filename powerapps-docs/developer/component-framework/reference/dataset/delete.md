@@ -1,6 +1,6 @@
 ---
 title: delete | Microsoft Docs
-description:
+description: Delete the records from data source
 keywords:
 manager: kvivek
 ms.date: 06/12/2021
