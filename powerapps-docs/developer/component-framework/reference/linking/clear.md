@@ -2,7 +2,7 @@
 title: clear | Microsoft Docs
 description:
 keywords:
-ms.author: lesyk
+ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
 ms.date: 06/12/2021

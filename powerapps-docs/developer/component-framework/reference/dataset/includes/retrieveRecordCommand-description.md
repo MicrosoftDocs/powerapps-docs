@@ -3,7 +3,7 @@
 title: retrieveRecordCommand | Microsoft Docs
 description:
 keywords:
-ms.author: lesyk
+ms.author: nabuthuk
 manager: kvivek
 ms.date: 06/12/2021
 ms.service: "powerapps"

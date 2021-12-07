@@ -6,7 +6,7 @@ manager: kvivek
 ms.date: 06/12/2021
 ms.service: "powerapps"
 ms.reviewer: "nabuthuk"
-ms.author: lesyk
+ms.author: nabuthuk
 author: Nkrb
 ms.suite: ""
 ms.tgt_pltfrm: ""
