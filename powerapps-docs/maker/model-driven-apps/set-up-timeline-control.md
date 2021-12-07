@@ -24,29 +24,25 @@ search.app:
 
 [!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-The timeline helps agents see all customer interaction history across channels, personnel, and the support lifecycle. The timeline is used across Dynamics 365 applications to capture activities like notes, appointments, emails, tasks, and more, to ensure that all interactions with the customer are tracked and visible over time. You can use the timeline to quickly catch up on all of the latest activity details with the customer to provide the most personalized support experience.  
+The timeline helps app users see all customer interaction history across channels, personnel, and the support lifecycle. You can use the timeline to quickly catch up on all of the latest activity details with the customer to provide the most personalized support experience.  
 
-The timeline control provides an easy and immersive experience to view information related to a table, such as cases, accounts, or contacts, which gives users a better understanding and helps them deliver more personalized service in an efficient and effective manner.
+The timeline control provides an easy and immersive experience to view information related to a table, such as accounts or contacts, which gives users a better understanding and helps them deliver more personalized service in an efficient and effective manner.
 
-This experience gives system administrators the ability to configure the information displayed on the timeline to help users access information and create new activity records, such as emails and tasks directly from the timeline quickly so they can deliver more personalized service.
+This experience gives system makers the ability to configure the information displayed on the timeline to help users access information and create new activity records, such as emails and tasks directly from the timeline quickly so they can deliver more personalized service.
 
 ## Navigate to timeline configurations
 
-Timelines are located on forms within tables. To access timeline configurations, you must start with the table list. You can access the table list in a couple of ways, depending on the model-driven app you are using.	
+A timeline is located on a form within a table. To access timeline configurations, you must start with the table list. You can access the table list in a couple of ways, depending on the model-driven app you are using.
 
 ### Access the tables list via Power Apps
 
-Steps:
-1. Go to **Power Apps** URL: [make.powerapps.com](https://make.powerapps.com "make.powerapps.com")
+1. Go to [Power Apps](https://make.powerapps.com "make.powerapps.com")
 2. Go to **Data** section.
-3. Select **Tables**
-
-> [!Important]
-> When accessing the timeline, if the new form designer experience isn't displayed in Power Apps, you aren't using the latest experience.
+3. Select **Tables**.
 
 ### Select a table form for the timeline configuration
 
-Every instance of the timeline that’s applied on a form can be configured. For example, an Account table will have forms, and each form can have a timeline that can be configured. However, there’s only one timeline per form.  
+Every instance of the timeline that’s applied on a form can be configured. For example, an account table will have forms, and each form can have a timeline that can be configured. However, there’s only one timeline per form.  
 
 To begin, select the table and form where you want to add and configure your timeline. 
 
@@ -54,7 +50,7 @@ To begin, select the table and form where you want to add and configure your tim
 
 Use the following steps to add or remove a timeline from a table form:
 
-1. Go to **Power Apps**. URL: [make.powerapps.com](https://make.powerapps.com "make.powerapps.com")
+1. Go to [Power Apps](https://make.powerapps.com "make.powerapps.com").
 2. Select **Components** > **Main**. A landing page is displayed.
 3. Scroll down to the **Timeline** component on the left side, then drag and drop it into a section on the form. 
 <ul><li> If the <b>Timeline</b> component is greyed out, it means a timeline already exists on the form. You can only have one timeline per form. </li>
@@ -71,6 +67,7 @@ Use the following steps to add or remove a timeline from a table form:
 In the body of the table form located in the center, there is an area titled **TIMELINE**. Within this section is another area titled **Timeline**. The following outlines and clarifies the different between these two sections.
 
 #### Timeline component section resides in the Maker App
+
 ![Understand the timeline component on the form.](media\timeline-component-1a.png "Understand the timeline component on the form")
 1. The outside section (titled **TIMELINE**) is what houses the **Timeline** component. 
 2. When **TIMELINE** is selected, the **Display options** under the **Properties** tab in the right nav change to support the **Maker App**.

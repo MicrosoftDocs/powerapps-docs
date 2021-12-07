@@ -26,24 +26,22 @@ search.app:
 ---
 # Set properties for a model-driven app chart or list included in a dashboard
 
-## Setting chart properties
-
 [!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 2. Select an [environment](model-driven-app-glossary.md#environment) with an unmanaged solution.
-3. Select **Solutions**, open the solution required, and then on the tree menu select **dashboards** followed by the dashboard where settings need to be updated.  This will open a new tab in your browser.
+3. On the left navigation pane, select **Solutions**, open the solution you want, on the tree menu select **Dashboards**, and then select the dashboard you want to update. This opens a new tab in your browser.
 
 4. To edit a chart or list component from the dashboard designer, select the chart or list you want and then select **Edit Component** on the dashboard designer toolbar.
-  > [!div class="mx-imgBorder"] 
-  > ![Dashboard designer chart edit component.](media/dashboard-chart-select.png)
+   > [!div class="mx-imgBorder"] 
+   > ![Dashboard designer chart edit component.](media/dashboard-chart-select.png)
 
-  This opens the **Set Properties** dialog box.
+   The **Set Properties** dialog opens.
 
-  > [!div class="mx-imgBorder"]
-  > ![Chart set properties.](media/set-properties-chart.png)  
- 
-5. You can set the following **chart** properties from the **Set Properties** dialog box:  
+   > [!div class="mx-imgBorder"]
+   > ![Chart set properties.](media/set-properties-chart.png)  
+
+5. You can set the following chart properties from the **Set Properties** dialog:  
       
     - **Name**. Unique name for the chart. The system suggests a value, but you can change it.  
       
@@ -84,8 +82,9 @@ search.app:
         - **Show All Views**. Provide a full list of views associated with the value set in the Table property.  
       
         - **Show Selected Views**. Select this setting to limit the list of views available at runtime. To select the specific views to be displayed, hold down the Ctrl key and tap or select each view you want to include.  
-    
-## Next steps  
+
+## Next steps
+
  [Create or customize dashboards](create-edit-dashboards.md)
 
 
