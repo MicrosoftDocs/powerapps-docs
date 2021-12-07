@@ -52,7 +52,7 @@ For details, go to [Transform natural language to Power Fx formulas](power-apps-
 With method 1, you can transform natural language to formulas. However, we know that not all requirements are easy to describe even in our daily language. One of the typical use cases is data manipulation.
 
 Let’s say you want to change a date field’s display format from the default to another format, and you don’t know how to describe that format. With Power Apps Ideas, you can now simply select that field, then in the ideas pane, enter your desired format, and press enter. One or a few formula suggestions will be popped out for you to select from.
-Make sure your selection is a label within a Gallery field. Unlike method 1, method 2 doesn’t require you to use Dataverse specifically.
+Make sure your selection is a label within a Gallery field.
 
 For details, go to [Transform examples to Power Fx formulas](power-apps-ideas-train-examples.md).
 
