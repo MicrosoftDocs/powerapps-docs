@@ -33,22 +33,22 @@ You need to create a new [site setting](configure-site-settings.md) with the nam
 
 ## Basic forms and advanced forms
 
-Maker can design the advanced form step in portal website using Dataverse form having the choices column to support selection of multiple options. Portal users can insert, modify, or clear the selection. More details on [basic forms](entity-forms.md) and [advanced forms](web-form-properties.md) configuration available in respective documentation.
+Makers can design a [basic form](entity-forms.md) or an the [advanced form](web-form-properties.md) step in the portal website using a Dataverse form having the choices column to support selection of multiple options. Portal users can insert, modify, or clear the selection. 
 
 :::image type="content" source="media/choices-column/choices-form.gif" alt-text="Choices column on a form.":::
 
 ## List
 
-Choices column defined in Dataverse view to display the multiple options selected for the record in a list. Choices column support quick search by typing keyword to filter the list.
+You can define a choices column in a Dataverse view to display the multiple options selected for the record in a list. The choices column supports quick search by typing a keyword to filter the list.
 
 :::image type="content" source="media/choices-column/choices-list.png" alt-text="Choices column on a list.":::
 
 > [!NOTE]
-> Sorting [list](entity-lists.md) by choices column is not supported.
+> Sorting a [list](entity-lists.md) by choices column is not supported.
 
 ## Liquid
 
-Developers can design the website using Liquid to retrieve the records from a Dataverse table. Choices column support available while querying the data using fetchXML and entity view.
+Developers can design the website using Liquid to retrieve the records from a Dataverse table. Choices columns can be retrieved while querying the data using fetchXML and entity view.
 
 ```html
 {% for choice in record.ChoicesColumn %}
@@ -81,7 +81,7 @@ Contact table values
 | Yuri Maple            | 4                                      |
 | Ravi Mundy            | 2,3,8,9                                |
 
-Retrieve Selected Options using FetchXML
+### Retrieve selected options using fetchXML
 
 ```html
 {% fetchxml contacts %}
@@ -105,7 +105,7 @@ Retrieve Selected Options using FetchXML
 }
 {% endfor %}
 ```
-Retrieve Selected Options using Entity View
+### Retrieve selected options using an entity view
 
 ```html
 {% entitylist id:page.adx_entitylist.id %}
@@ -124,7 +124,7 @@ Retrieve Selected Options using Entity View
 
 ## Web api 
 
-Choices column supports [Web API](../web-api-overview.md) read, create, update operations
+Developers can use choices columns with the [Web API](../web-api-overview.md) read, create, and update operations.
 
 <u>Read</u>
 
