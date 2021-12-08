@@ -1,11 +1,11 @@
 ---
-title: Add fixed layouts
+title: Add fixed page layouts
 description: Instructions to add fixed layouts to be available within the portals Studio.
 author: ankitavish
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 12/6/2021
+ms.date: 12/08/2021
 ms.subservice: portals
 ms.author: avishwakarma
 ms.reviewer: ndoelman
@@ -14,9 +14,9 @@ contributors:
     - nickdoelman
 ---
 
-# Add fixed layouts
+# Add fixed page layouts
 
-When you add a new web page to a portal using the [portals Studio](../portal-designer-anatomy.md), you can choose either **Layouts** or **Fixed Layouts**. If there are no existing fixed layouts available in the portals Studio, you can add existing web templates as fixed layouts by creating page template records using the [Portal Management app](configure-portal.md).
+When you add a new web page to a portal using the [portals Studio](../portal-designer-anatomy.md), you can choose either **Layouts** or **Fixed Layouts**. If there are no existing fixed layouts available in the portals Studio, you can add existing web templates as fixed page layouts by creating page template records using the [Portal Management app](configure-portal.md).
 
 :::image type="content" source="media/add-fixed-layouts/no-fixed-layouts.png" alt-text="No fixed layouts.":::
 

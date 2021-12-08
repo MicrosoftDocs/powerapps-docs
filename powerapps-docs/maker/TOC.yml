@@ -1604,7 +1604,7 @@
               href: ./portals/configure/walkthrough-get-data-on-portal.md
         - name: Add chart on a web page in portal
           href: ./portals/configure/add-chart.md
-        - name: Add fixed layouts
+        - name: Add fixed page layouts
           href: ./portals/configure/add-fixed-layouts.md          
         - name: Enable multiple languages
           items:
