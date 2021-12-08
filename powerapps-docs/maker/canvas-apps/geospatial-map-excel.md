@@ -1,6 +1,6 @@
 ---
 title: Insert pins from data source
-description: Add customized pins to your map component in Power Apps by using a dataset.
+description: Add customized pins to your map control in Power Apps by using a dataset.
 author: anuitz
 ms.service: powerapps
 ms.topic: conceptual
@@ -21,7 +21,7 @@ contributors:
 
 # Use a data source to insert pins
 
-You can load a table that contains existing data into the map component. The component will then plot each row in your table as a map pin.
+You can load a table that contains existing data into the map control. The control will then plot each row in your table as a map pin.
 
 ## Prerequisites
 1. Create a Canvas app and make sure it meets the [Geospatial prerequisites](geospatial-overview.md#prerequisites). 
@@ -30,7 +30,7 @@ You can load a table that contains existing data into the map component. The com
 
 ## Add pin data from an Excel workbook
 
-Your data source needs to contain a named table with the following columns that should then be mapped to the associated property in the component's **Advanced** pane.
+Your data source needs to contain a named table with the following columns that should then be mapped to the associated property in the control's **Advanced** pane.
 
 Column description | Maps to property | Required
 -- | -- | --
@@ -82,7 +82,7 @@ Coho Winery (sample) | -116.97751 | 32.87466 | |
 
 1. Save the workbook.
 
-1. Open or create a new app in Power Apps, and insert the map component.
+1. Open or create a new app in Power Apps, and insert the map control.
 
 1. On the **Properties** pane, select the **Locations(Items)** field and then search for *excel* and select **Import from Excel**.
 
@@ -103,18 +103,18 @@ Coho Winery (sample) | -116.97751 | 32.87466 | |
     - (Optional) **ItemsColors** as *"Colors"*
     - (Optional) **ItemsIcons** as *"Icons"*
 
-1. The map component will now show each row in the table as a pin, labeled with its *Name* as defined in the Excel table, and using the provided icons and colors. If an icon or color isn't provided, then the component will use the default icon and color.
+1. The map control will now show each row in the table as a pin, labeled with its *Name* as defined in the Excel table, and using the provided icons and colors. If an icon or color isn't provided, then the control will use the default icon and color.
 
-    ![A screenshot of the map component with custom icons and different colors.](./media/geospatial/pins-map.png)
+    ![A screenshot of the map control with custom icons and different colors.](./media/geospatial/pins-map.png)
 
  >[!NOTE]
- > Each map component has a pin limitation of 5000 pins where it prioritizes latitude and longitude columns over the address column. Within the 5000 pin limitation, up to 50 addresses can be geocoded for each map component. Therefore, for pins with both latitude/longtude and an address bound, the map component will prioritize using the latitude/longitude to avoid geocoding the address. 
+ > Each map control has a pin limitation of 5000 pins where it prioritizes latitude and longitude columns over the address column. Within the 5000 pin limitation, up to 50 addresses can be geocoded for each map control. Therefore, for pins with both latitude/longtude and an address bound, the map control will prioritize using the latitude/longitude to avoid geocoding the address. 
 
 
 
-## Save geocoded addresses from map component to data source
+## Save geocoded addresses from map control to data source
 
-To avoid geocoding the same set of addresses every time the map component is launched, you can save the geocoded addresses back to the original data source, such that when the map relaunches, it will use the latitude and longitude instead of geocoding the addresses again. 
+To avoid geocoding the same set of addresses every time the map control is launched, you can save the geocoded addresses back to the original data source, such that when the map relaunches, it will use the latitude and longitude instead of geocoding the addresses again. 
 
 To do so, add a button to save the geocoded address back to the original data source with the following formula: 
 
@@ -133,9 +133,9 @@ To do so, add a button to save the geocoded address back to the original data so
 - [Draw and insert shapes onto maps](geospatial-map-draw-shapes.md)
 
 
-## Other geospatial components
+## Other geospatial controls
 
-To see dynamic address suggestions as you type, use the **[Address input](geospatial-component-input-address.md)** component.
+To see dynamic address suggestions as you type, use the **[Address input](geospatial-component-input-address.md)** control.
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

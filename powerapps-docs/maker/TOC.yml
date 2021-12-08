@@ -369,15 +369,15 @@
             href: ./canvas-apps/use-line-pie-bar-chart.md
           - name: Add multimedia
             href: ./canvas-apps/add-images-pictures-audio-video.md
-          - name: "Add mixed reality components"
+          - name: "Add mixed reality controls"
             items:
-            - name: Mixed reality components
+            - name: Mixed reality controls
               href: ./canvas-apps/mixed-reality-overview.md
             - name: View and manipulate 3D models
               items:
               - name: View 3D models in Power Apps
                 href: ./canvas-apps/mixed-reality-component-view-3d.md
-              - name: Load models with the View in 3D component
+              - name: Load models with the View in 3D control
                 href: ./canvas-apps/mixed-reality-component-view-3d-store.md
               - name: Add pins to 3D models
                 href: ./canvas-apps/mixed-reality-add-pins-3d-model.md
@@ -393,11 +393,11 @@
                 href: ./canvas-apps/mixed-reality-spatial-test.md
               - name: Upload photos from mixed reality
                 href: ./canvas-apps/mixed-reality-take-upload-photos.md
-              - name: Load models from CGTrader into mixed reality components (preview)
+              - name: Load models from CGTrader into mixed reality controls (preview)
                 href: ./canvas-apps/mixed-reality-cgtrader.md
-          - name: "Add geospatial components"
+          - name: "Add geospatial controls"
             items:
-            - name: Geospatial components
+            - name: Geospatial controls
               href: ./canvas-apps/geospatial-overview.md
             - name: Use interactive maps
               items: 

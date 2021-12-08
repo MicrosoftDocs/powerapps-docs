@@ -1,6 +1,6 @@
 ---
 title: Create an app to view a shape in mixed reality
-description: Learn how to use the view shape in MR component in your Power Apps.
+description: Learn how to use the view shape in MR control in your Power Apps.
 author: joel-lindstrom
 ms.service: powerapps
 ms.subservice: canvas-maker
@@ -20,18 +20,18 @@ contributors:
 
 # Create an app to view a shape in mixed reality
 
-You can use the **View Shape in MR** component in your app to let users see if a simple cube might fit within a specified space. They might want to do this to see how a certain object that you provide would fit in their space. If you have a 3D model or a head-on picture for the object, you'd like to fit test consider using the [View in MR](../mixed-reality-component-view-mr.md) instead.
+You can use the **View Shape in MR** control in your app to let users see if a simple cube might fit within a specified space. They might want to do this to see how a certain object that you provide would fit in their space. If you have a 3D model or a head-on picture for the object, you'd like to fit test consider using the [View in MR](../mixed-reality-component-view-mr.md) instead.
 
-The component creates a button in your app. When app users select the button, it overlays a cube onto the live camera feed of the device. You set up the dimensions of the cube when you edit the component in Power Apps.
+The control creates a button in your app. When app users select the button, it overlays a cube onto the live camera feed of the device. You set up the dimensions of the cube when you edit the control in Power Apps.
 
-Watch this video to learn how to build mobile apps with View Shape in MR component:
+Watch this video to learn how to build mobile apps with View Shape in MR control:
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLAkb]
 
 In this article, we'll create a screen in an app that will allow users to create a custom cube shape by inputting unit to be used (centimeters, feet, inches, or meters), and defining the height, width, and depth of the cube.
 
 ## Prerequisites
 
-To use the component in an app created with Power Apps, the device that runs the app (such as a phone or tablet) needs to have specific hardware and software. The device you use to create the app in the Power Apps studio (such as your PC) doesn't need to have mixed-reality capability.
+To use the control in an app created with Power Apps, the device that runs the app (such as a phone or tablet) needs to have specific hardware and software. The device you use to create the app in the Power Apps studio (such as your PC) doesn't need to have mixed-reality capability.
 
 ### Android devices
 
@@ -104,20 +104,20 @@ controls we'll add later. For each label, modify the **Text** property to one of
 
 1. Position the text input control named *txtShapeWidth* to the right of the Width label. Likewise, position the controls named *txtShapeHeight* and *txtShapeDepth* to the right of the Height and Depth labels, respectively.
 
-Next, you'll add the View Shape in MR component and configure it to use the controls that were created to provide dynamic dimensions to the MR cube it'll generate.
+Next, you'll add the View Shape in MR control and configure it to use the controls that were created to provide dynamic dimensions to the MR cube it'll generate.
 
-## Insert the View Shape in MR component
+## Insert the View Shape in MR control
 
-Insert the component into your app.
+Insert the control into your app.
 
 1. Open the **Insert** tab.
 
 1. Expand **Mixed Reality**.
 
-1. Select the component **View Shape in MR** to place it in the center of the
+1. Select the control **View Shape in MR** to place it in the center of the
     app screen, or drag and drop it to position it anywhere on the screen.
 
-1. Once the component has been added, position it near the bottom of the screen and change the following properties:
+1. Once the control has been added, position it near the bottom of the screen and change the following properties:
 
     | Property    | Value                      |
     |-------------|----------------------------|
@@ -128,7 +128,7 @@ Insert the component into your app.
     | Units       | `drpUnitType.Selected.Value` |
     | Width       | `280`                        |
     
-    :::image type="content" source="media/build-mobile-apps-view-shape-in-mr/view-in-shape.png" alt-text="View shape in mixed-reality component on a screen.":::
+    :::image type="content" source="media/build-mobile-apps-view-shape-in-mr/view-in-shape.png" alt-text="View shape in mixed-reality control on a screen.":::
 
 ## Test the app
 
@@ -142,9 +142,9 @@ Use the back button in the top-left corner to return to the app screen and chang
 
 ### See also
 
-- [View in 3D component](../mixed-reality-component-view-3d.md)
-- [Measure in MR component](../mixed-reality-component-measure-distance.md)
-- [View shape in MR component](../mixed-reality-component-view-shape.md) 
+- [View in 3D control](../mixed-reality-component-view-3d.md)
+- [Measure in MR control](../mixed-reality-component-measure-distance.md)
+- [View shape in MR control](../mixed-reality-component-view-shape.md) 
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
