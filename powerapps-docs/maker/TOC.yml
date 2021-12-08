@@ -999,6 +999,8 @@
       href: ./canvas-apps/how-to/create-app-barcode-scanner.md
     - name: Create an app that uses mobile sensors
       href: ./canvas-apps/how-to/mobile-sensors.md
+    - name: Create an app with 3D and mixed reality controls
+      href: ./canvas-apps/how-to/build-view-in-mr-3d-apps.md
     - name: Create an app to view a shape in mixed reality
       href: ./canvas-apps/how-to/mobile-apps-view-shape-in-mr.md
     - name: Create an app with address input and map controls
