@@ -34,7 +34,7 @@ Inserting pre-defined shapes is useful to highlight specific regions or areas of
 ## Prerequisites
 1. Create a Canvas app and make sure it meets the [Geospatial prerequisites](geospatial-overview.md#prerequisites). 
 
-2. In your app, [insert a map](geospatial-component-map.md#use-the-component). 
+2. In your app, [insert a map](geospatial-component-map.md#use-the-control). 
 
 ## Draw and label shapes on interactive maps
 To draw and label shapes on maps, you first need to enable the following settings:

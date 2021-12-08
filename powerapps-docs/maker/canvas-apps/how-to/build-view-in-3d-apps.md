@@ -118,7 +118,7 @@ Also from the **Insert** tab, drag and drop a **Text label** into the gallery. C
 | Y        | 5                   |
 | Width    | 540                 |
 
-From the **Mixed Reality** section of the **Insert** tab, drag and drop the **View in 3D** control into the gallery. Then change the following properties:
+From the **Media** section of the **Insert** tab, drag and drop the **View in 3D** control into the gallery. Then change the following properties:
 
 | Property     | Value                                 |
 |--------------|---------------------------------------|

@@ -33,7 +33,7 @@ The control has options to reorder the waypoints or rearrange the route to impro
 ## Prerequisites
 
 - Create a canvas app, and make sure it meets the [Geospatial prerequisites](geospatial-overview.md#prerequisites).
-- In your app, [insert a map](geospatial-component-map.md#use-the-component).
+- In your app, [insert a map](geospatial-component-map.md#use-the-control).
 
 ## Add waypoint data from an Excel workbook
 

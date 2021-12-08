@@ -28,7 +28,7 @@ Any column you add to the table in the data source (for example, the Excel table
 
 ## Prerequisites
 1. Create a Canvas app and make sure it meets the [Geospatial prerequisites](geospatial-overview.md#prerequisites). 
-2. In your app, [insert a map](geospatial-component-map.md#use-the-component). 
+2. In your app, [insert a map](geospatial-component-map.md#use-the-control). 
 
 
 **To add informational cards to pins:**
