@@ -62,7 +62,7 @@ In above scenario, if you wanted to include the first word of the account name a
 
 For example, "Alpine Ski House" becomes "Alpine S" whereas to have last word's initial, it should be "Alpine H".
 
-To achieve this scenario, use **Train with examples** by providing such examples using the Ideas pane:
+To achieve this scenario, use **Train with examples** by providing such examples using the **Ideas** tab:
 
 1. Select **Train with examples** under the **Answers** pane, and give more examples in the side pane. In this example, we've given "Alpine H" as an example for "Alpine Ski House".
 
@@ -70,6 +70,9 @@ To achieve this scenario, use **Train with examples** by providing such examples
     > You don’t need to fill in all the boxes. Enter a few different examples for Power Apps Ideas to learn. 
 
     ![Train with examples](media/power-apps-ideas/Train-with-examples-c7.png "Provide more examples for Ideas to learn")
+
+    > [!TIP]
+    > Ensure you've selected the label text inside the gallery on the canvas to see the **Answers** section in the **Ideas** tab.
 
 1. (Optional) If you have an example that’s not listed, you can also select **Add custom example** on the top.
 
