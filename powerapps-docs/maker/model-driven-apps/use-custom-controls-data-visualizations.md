@@ -28,7 +28,7 @@ search.app:
 
 [!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-In this article you learn how to configure a custom control for a column.
+In this article, you learn how to configure a custom control for a column.
 
 To add a control using the Power Apps form designer, see [Add components to a form](add-move-configure-or-delete-components-on-form.md#add-components-to-a-form).
 
@@ -61,9 +61,9 @@ You can set one type of custom control to appear in the web browser client while
   
 3. Open a form such as the **Main** form for the **Opportunity** table.
 
-4. Once in the form select **switch to classic**.  This will open the classic editor in a separate tab.
+4. Once in the form, select **switch to classic**.  This will open the classic editor in a separate tab.
   
-5.  In the form editor, double-click the column where you want to add a custom control, such as the **Budget Amount** column on the account main form. This is column of a number type.Alternatively, you can create a custom column.
+5.  In the form editor, double-click the column where you want to add a custom control, such as the **Budget Amount** column on the account main form. This is column of a number type. Alternatively, you can create a custom column.
   
 6.  On the **Column Properties** page, select the **Controls** tab, and then select **Add Control**.  
   
@@ -120,9 +120,9 @@ You can set one type of custom control to appear in the web browser client while
   
  The column is now rendered as a slider control instead of the text column.
 
-## Use the editable grid control on a view or sub-grid
+## Use the editable grid control on a view or subgrid
 
-With editable grids, users can do rich in-line editing directly from views and sub-grids whether they’re using a web app, tablet, or phone. More information: [Make grids (lists) editable using the Editable Grid custom control](make-grids-lists-editable-custom-control.md) 
+With editable grids, users can do rich in-line editing directly from views and subgrids whether they’re using a web app, tablet, or phone. More information: [Make grids (lists) editable using the Editable Grid custom control](make-grids-lists-editable-custom-control.md) 
   
 ## Next steps  
 [Create and edit columns](../data-platform/create-edit-fields.md)
