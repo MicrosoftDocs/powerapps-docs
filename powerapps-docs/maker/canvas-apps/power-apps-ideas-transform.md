@@ -43,7 +43,7 @@ You can follow the steps mentioned in [Create a canvas app from Microsoft Datave
 
 1. Select one of the default suggestions to check how it works, or start to type in your own query in natural language such as English (en-us).
 
-    ![Get started with Power Apps Ideas.](media/power-apps-ideas/power-apps-ideas.png "Get started with Power Apps Ideas")
+    ![Get started with Power Apps Ideas.](media/power-apps-ideas/power-apps-ideas-c7-marked.png "Get started with Power Apps Ideas")
 
 1. When typing, you can describe your requirements in your preferred way. But remember, more precise input will always yield to more accurate formula suggestions.
 
