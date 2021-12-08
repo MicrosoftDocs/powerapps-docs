@@ -29,9 +29,9 @@ For example, instead of figuring out how to write the following formula:
 Filter('Table1', StartsWith('fullname', "Yvonne"))
 ```
 
-You can type in `'fullname' starts with Yvonne`.
+You can type in `'fullname' starts with Yvonne` instead.
 
-![Power Apps Ideas demo.](media/power-apps-ideas/NL2FX C7 blog_updated.gif "Animation that shows how Power Apps Ideas work")
+![Power Apps Ideas demo.](media/power-apps-ideas/NL2FX-C7.gif "Animation that shows how Power Apps Ideas work")
 
 To begin, let’s take a look at a simple app to see how we can use the Power Apps Ideas to help write formulas.
 
