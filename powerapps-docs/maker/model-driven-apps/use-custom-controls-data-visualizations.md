@@ -28,29 +28,32 @@ search.app:
 
 [!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-[!INCLUDE [cc-classic-interface-control](../../includes/cc-classic-interface-control-note.md)]
-
-In this topic you learn how to configure a custom control for a column.
+In this article you learn how to configure a custom control for a column.
 
 To add a control using the Power Apps form designer, see [Add components to a form](add-move-configure-or-delete-components-on-form.md#add-components-to-a-form).
 
 ## Use a custom control using the classic form designer
 
 Custom controls let you transform app user interface components, such as a column or view that traditionally contain text, into visualizations. Custom controls can be configured on columns, forms, dashboards, views, and grids. 
-For example, a slider control can be configured on a number column.
+For example, a star rating can be configured on a whole number column.
 
    > [!div class="mx-imgBorder"] 
-   > ![Custom slider control.](media/slider-control.PNG "Slider control for a column")
+   > ![Star rating control.](media/star-rating-control-example.png "Star rating control for a column")
 
 Or the editable grid control can be configured on a view. 
 
    > [!div class="mx-imgBorder"] 
    > ![Editable grid control.](media/editable-grid-example.png)
 
-You can set one type of custom control to appear in the web browser client while having a different custom control appear in your Dynamics 365 phone or  tablet mobile apps. For example, you could use a number input custom control for a column in web browser clients and a slider custom control for the phone app. After the customization is published, users can fully interact with the control to change the value, such as by sliding the control when using the linear slider custom control. Changes are automatically saved when the form is closed just as they are when the user changes a traditional  column on a form.  
+You can set one type of custom control to appear in the web browser client while having a different custom control appear in your Dynamics 365 phone or  tablet mobile apps. For example, you could use a standard yes/no choice column in web browser clients and a toggle control for tablet and phone clients. After the customization is published, users can fully interact with the control to change the value, such as by tapping the control when using the toggle control. Changes are automatically saved when the form is closed just as they are when the user changes a traditional  column on a form.  
   
-### Use a custom control to add visualizations to a column  
- Following the steps in this procedure will change the default label and text box column  of the **Budget Amount** column to the slider custom control on the Opportunity table. You can use similar steps to replace an existing column with a custom control or configure a custom control for a custom column.  
+### Use a custom control to add visualizations to a column
+
+ Following the steps in this procedure will change the default label and text box column  of the **Budget Amount** column to the slider custom control on the opportunity table. You can use similar steps to replace an existing column with a custom control or configure a custom control for a custom column.
+
+[!INCLUDE [cc-classic-interface-control-note](../../includes/cc-classic-interface-control-note.md)]
+> 
+> The opportunity table requires a Dynamics 365 app, such as Dynamics 365 Service.
   
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
