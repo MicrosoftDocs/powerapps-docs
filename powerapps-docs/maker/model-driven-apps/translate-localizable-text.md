@@ -1,6 +1,6 @@
 ---
 title: "Translate localizable text for model-driven apps | MicrosoftDocs"
-description: "Learn how to get localizeable text translated to support multiple languages"
+description: "Learn how to get localizable text translated to support multiple languages"
 ms.custom: ""
 ms.date: 03/05/2020
 ms.reviewer: ""
@@ -38,7 +38,7 @@ The process has the following steps:
 
 ## Enable other languages for your environment
 
-If you haven't already enabled the languages for your environment, use the steps described in [Enable the language](https://docs.microsoft.com/dynamics365/customerengagement/on-premises/admin/enable-languages) to enable them.
+If you haven't already enabled the languages for your environment, use the steps described in [Enable the language](/power-platform/admin/enable-languages#enable-the-language) to enable them.
 
 > [!IMPORTANT]
 > Each language can take several minutes to enable. During this time, other users of the environment may not be able to use your app. You should enable languages at time that will be least disruptive to users.
@@ -50,13 +50,11 @@ If you haven't already enabled the languages for your environment, use the steps
 
 The scope of the localizable text that will be exported is the unmanaged solution that contains the localizable text.
 
-<!-- [!INCLUDE [cc_navigate-solution-from-powerapps-portal](../../includes/cc_navigate-solution-from-powerapps-portal.md)] -->
+1. From [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Solutions**.
 
-1. From the Power Apps portal select **Solutions**.
+2. In the **All Solutions** list, select the unmanaged solution that contains the localizable text you want.
 
-2. In the **All Solutions** list select the unmanaged solution that contains the localizable text you want.
-
-3. In the menu bar select **Translations** > **Export Translations**.
+3. On the command bar, select **Translations** > **Export Translations**.
 
     > [!div class="mx-imgBorder"]
     > ![Export Translations.](media/export-localizable-text.png "Export Translations")
@@ -65,7 +63,7 @@ The scope of the localizable text that will be exported is the unmanaged solutio
 
     > Exporting customized labels for translation can take several minutes. Do not click the export link again until the first export has finished. Are you sure that you want to export now?
     >
-    > Click **OK** if you want to continue.
+    > Select **OK** if you want to continue.
 
 When the export is completed, save the translations zip file. The file is named something like `CrmTranslations_{0}_{1}.zip`, where `{0}` is the unique name of the solution and `{1}` is the version number of the solution.
 
@@ -99,10 +97,10 @@ The **Display Strings** tab contains text that is displayed for other UI element
 
 ### Updating localizable text in the base language
 
-If you change the display name for any standard table or table column which is included in any special message, you can update information in the **Display Strings** tab to use the customized name.
+If you change the display name for any standard table or table column, which is included in any special message, you can update information in the **Display Strings** tab to use the customized name.
 
 > [!TIP]
-> Although the UI exposed to edit system table messages includes many references to table names, it doesn't include all of them. Using this technique may find more. For more information see: [Edit system table messages](../data-platform/edit-system-entity-messages.md)
+> Although the UI exposed to edit system table messages includes many references to table names, it doesn't include all of them. Using this technique may find more. More information: [Edit system table messages](../data-platform/edit-system-entity-messages.md)
 
 For example, if you change the display name for the Account table to *Company*, search through the base language column in the  **Display Strings** for the following matches: `account`, `accounts`, `Account`, and `Accounts` then make appropriate replacements to `company`, `companies`, `Company`, and `Companies` respectively.
 
@@ -115,13 +113,11 @@ Importing the text requires compressing the files and importing them into the sy
 
 ### Compress the files
 
-After changes are made to the `CrmTranslations.xml` file, you must compress the file together with the `[Content_Types].xml` file into the zip format. Just select *both files* and then click with the right mouse button to open the context menu. In the context menu, choose **Send to** > **Compressed (zipped) folder**.
+After changes are made to the `CrmTranslations.xml` file, you must compress the file together with the `[Content_Types].xml` file into the zip format. Just select *both files* and then right-click to open the context menu. In the context menu, choose **Send to** > **Compressed (zipped) folder**.
 
 ### Import the files
 
 From the same unmanaged solution that you exported the translations from, in the menu choose **Translations** > **Import Translations**.
-
-<!-- ![Import translations.](media/import-translations.png) -->
 
 > [!div class="mx-imgBorder"]
 > ![Import selected file.](media/import-translated-text-dialog.png "Import localized text")

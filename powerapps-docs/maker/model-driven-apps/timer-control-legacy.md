@@ -28,20 +28,15 @@ search.app:
 
 [!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-
-[!INCLUDE [cc-classic-interface-control](../../includes/cc-classic-interface-control-note.md)]
-
-## When to use timer controls
-
 Use a timer control with forms where rows need to meet a specific **time-based milestone**. A timer control shows people how much time is available to complete an action in the resolution of an active row or how much time has passed since the time to complete the action has passed. 
 
-### Minimum configuration settings
+[!INCLUDE [cc-classic-interface-control](../../includes/cc-classic-interface-control-note.md)]
 
 At a minimum, timer controls must be configured to show success or failure in completing the action. In addition, they can be configured to display warnings when the conditions are approaching failure.  
 
 ## How to add a timer control
 
-A timer control can be added to a form for any table, but they are most frequently used for the **case** table, especially when linked to columns that track service level agreements. Multiple timer controls can be added in the **body** of a form. These cannot be added to the header or footer.
+A timer control can be added to a form for any table, but they are most frequently used for the case table, especially when linked to columns that track service level agreements. Multiple timer controls can be added in the body of a form. These cannot be added to the header.
 
 To add a timer control to a form:
 
@@ -51,7 +46,7 @@ To add a timer control to a form:
 
 3.  Select a table, such as the account table, and then select the **Forms** tab.
 
-4.  Select the form that required.
+4.  Select the form that you want.
 
 5.  In the form designer, on the command menu, select **Switch to classic**.
   
@@ -60,7 +55,7 @@ To add a timer control to a form:
     > [!div class="mx-imgBorder"]
     > ![Insert timer control.](media/insert-timer-control.png)
 
-7.  On the Timer Control properties page, enter or select the properties that required, and then select **OK**.
+7.  On the **Timer Control** properties page, enter or select the properties that you want, and then select **OK**.
 
 Timer control **Data Source** properties use columns for the table.  
   
@@ -70,7 +65,8 @@ Timer control **Data Source** properties use columns for the table.
 
 <a name="BKMK_TimerControlProperties"></a>
 
-## Timer control properties  
+## Timer control properties
+
  The following table describes the properties of a timer control.  
   
 |Group|Name|Description|  

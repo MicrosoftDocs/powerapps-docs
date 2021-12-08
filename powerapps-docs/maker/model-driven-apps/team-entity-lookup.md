@@ -29,27 +29,23 @@ search.app:
 [!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
 ## Lookup functionality
-With model-driven apps, for a table to be available in a lookup it must be added to the app. 
-
-For example, contact rows have the ability to be assigned to a user or a team.  Both of these tables have a relationship with the contacts table.
+With model-driven apps, for a table to be available in a lookup it must be added to the app. For example, contact records have the ability to be assigned to a user or a team.  Both of these tables have a relationship with the contacts table.
 
 > [!div class="mx-imgBorder"] 
 > ![Entity lookup with both users and teams available.](media/entity-lookup-teams.png "Entity lookup with both users and teams available")
 
-However, if the **user** table is included in the app but the **team** table is not, only user rows will appear in a lookup.
+However, if the **User** table is included in the app but the **Team** table is not, only user rows will appear in a lookup.
 
 > [!div class="mx-imgBorder"] 
 > ![Entity lookup with users only.](media/entity-lookup-user-only.png "Entity lookup with users only")
 
-This can be easily resolved by adding the table to the app using the [App Designer](model-driven-app-glossary.md#app-designer).
+This can be resolved by adding the **Team** table to the app using the [App Designer](model-driven-app-glossary.md#app-designer).
 
 ## Add a related table to an app to enable the lookup
 
-1. Navigate to the Power Apps portal found at [make.powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)
-1. Select **Solutions**
-1. Select the required solution
-1. Select the model-driven app.  This will open the app in the **App Designer**.
-1. Select the **Components** tab, select **Entities** (these are in effect tables), and then select **Team**.
+1. Go to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then select **Solutions**.
+1. Open the solution you want, and then select the model-driven app. This opens the app in the app designer.
+1. Select the **Components** tab, select **Entities** (tables), and then select **Team**.
 
     > [!div class="mx-imgBorder"]
     > ![Add the team table to the app.](media/add-team-entity-app.png "Add the team table to the app")
