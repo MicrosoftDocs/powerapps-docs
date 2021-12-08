@@ -1496,7 +1496,7 @@
       items:
         - name: Available portal templates
           href: ./portals/portal-templates.md
-        - name: Create a starter portal
+        - name: Starter portal
           items:                  
             - name: Create a starter portal
               href: ./portals/create-portal.md

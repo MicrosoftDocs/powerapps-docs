@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/19/2021
+ms.date: 12/08/2021
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
@@ -26,6 +26,7 @@ If you select an environment that contains Microsoft Dataverse, you can create a
 - Default studio template
 - Page with title
 - Page with child links
+- [Contact Us](contact-us-sample.md)
 
 To create a portal in an environment with Dataverse, go to [Create a Dataverse starter portal](create-portal.md).
 
