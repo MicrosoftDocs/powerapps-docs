@@ -58,9 +58,13 @@ To work with text display in a gallery using Power Apps Ideas:
 
 ## Use Train with examples in your app
 
-In above scenario, if you wanted to include the first name plus last name's initial, the above formula will not work as it takes only the second word's initial in the name. To correct that you can follow below steps.
+In above scenario, if you wanted to include the first word of the account name along with the last word's initial, the above formula will not work for all scenarios. This is because the above formula takes only the second word's initial in the name. And some account names have three or more words.
 
-1. Select **Train with examples** under the **Answers** pane, and give more examples in the side pane.
+For example, "Alpine Ski House" becomes "Alpine S" whereas to have last word's initial, it should be "Alpine H".
+
+To achieve this scenario, use **Train with examples** by providing such examples using the Ideas pane:
+
+1. Select **Train with examples** under the **Answers** pane, and give more examples in the side pane. In this example, we've given "Alpine H" as an example for "Alpine Ski House".
 
     > [!NOTE]
     > You don’t need to fill in all the boxes. Enter a few different examples for Power Apps Ideas to learn. 
@@ -78,7 +82,7 @@ In above scenario, if you wanted to include the first name plus last name's init
     ```
 
     You've just used **Transform examples to Power Fx formulas** capability and generated formula using Power Apps Ideas for the specific requirement that couldn't be achieved using the natural language alone.
-   
+
 ## Supported and unsupported capabilities
 
 The following capabilities are supported:
