@@ -1496,8 +1496,12 @@
       items:
         - name: Available portal templates
           href: ./portals/portal-templates.md
-        - name: Create a starter portal
-          href: ./portals/create-portal.md
+        - name: Starter portal
+          items:                  
+            - name: Create a starter portal
+              href: ./portals/create-portal.md
+            - name: Contact us sample
+              href: ./portals/contact-us-sample.md              
         - name: Create a portal with Dynamics 365 environment
           href: ./portals/create-dynamics-portal.md
         - name: Create a portal using the older portal add-on
@@ -1543,7 +1547,7 @@
                 - name: Add Power BI
                   href: ./portals/add-powerbi.md
                 - name: Add a chatbot (preview)
-                  href: ./portals/add-chatbot.md
+                  href: ./portals/add-chatbot.md                 
         - name: Work with templates
           href: ./portals/work-with-templates.md
         - name: Work with themes
