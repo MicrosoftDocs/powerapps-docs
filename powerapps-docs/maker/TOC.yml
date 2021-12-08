@@ -1500,7 +1500,7 @@
           items:                  
             - name: Create a starter portal
               href: ./portals/create-portal.md
-            - name: Contact Us sample
+            - name: Contact us sample
               href: ./portals/contact-us-sample.md              
         - name: Create a portal with Dynamics 365 environment
           href: ./portals/create-dynamics-portal.md

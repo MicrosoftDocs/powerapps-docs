@@ -1,6 +1,6 @@
 ---
-title: Contact Us sample
-description: Overview of the Contact Us sample page that is part of the portal starter template.
+title: Contact us sample
+description: Overview of the Contact us sample page that is part of the portal starter template.
 author: ankitavish
 ms.service: powerapps
 ms.topic: conceptual
@@ -14,19 +14,19 @@ contributors:
     - nickdoelman
 ---
 
-# Contact Us sample
+# Contact us sample
 
-When you create a new portal using the *portal from blank* template, it will create an example web page called *Contact Us*. This web page provides a working example of how portal users can enter information into a form that will be stored in a Dataverse table.
+When you create a new portal using the *portal from blank* template, it will create an example web page called *Contact us*. This web page provides a working example of how portal users can enter information into a form that will be stored in a Dataverse table.
 
 :::image type="content" source="media/contact-us-sample/contact-us-page.png" alt-text="Contact Us page.":::
 
-## Contact Us web page
+## Contact us web page
 
-The contact us web page can be viewed in the [portals Studio](portal-designer-anatomy.md) by selecting **Pages and navigation** from the toolbelt and choosing **Contact Us**. 
+The contact us web page can be viewed in the [portals Studio](portal-designer-anatomy.md) by selecting **Pages and navigation** from the toolbelt and choosing **Contact us**. 
 
 The example web page is composed of three sections;
 
-- A section with a [text component](add-text.md) for the page title, set to "Contact Us".
+- A section with a [text component](add-text.md) for the page title, set to "Contact us".
 
 - A section with a [basic form component](add-form.md) named *simple contact us form* linked to the Dataverse table *feedback* set to *Insert* mode.
 
@@ -35,7 +35,7 @@ The example web page is composed of three sections;
 > [!NOTE]
 > The Bing maps link does not have any functionality or geo-location enabled. It is provided as an example IFrame component.
 
-:::image type="content" source="media/contact-us-sample/contact-us-portalstudio.png" alt-text="Contact Us page in the portal Studio.":::
+:::image type="content" source="media/contact-us-sample/contact-us-portalstudio.png" alt-text="Contact us page in the portal Studio.":::
 
 ## Table permissions
 

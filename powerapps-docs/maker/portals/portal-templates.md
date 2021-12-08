@@ -26,7 +26,7 @@ If you select an environment that contains Microsoft Dataverse, you can create a
 - Default studio template
 - Page with title
 - Page with child links
-- [Contact Us](contact-us-sample.md)
+- [Contact us](contact-us-sample.md)
 
 To create a portal in an environment with Dataverse, go to [Create a Dataverse starter portal](create-portal.md).
 
