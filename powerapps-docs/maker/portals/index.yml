@@ -24,6 +24,8 @@ landingContent:
     linkLists:
        - linkListType: whats-new
          links:
+          - text: Configure choices column for portals (preview)
+            url: configure/choices-column.md         
           - text: Portals as Progressive Web Apps (preview)
             url: progressive-web-apps.md         
           - text: Liquid template tag for code components (preview)

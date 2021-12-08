@@ -1,11 +1,11 @@
 ﻿---
-title: Configure choices column for portal
+title: Configure choices column for portals
 description: Learn how to add and configure Dataverse choices column on portal lists, forms, and templates.
 author: nageshbhat-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 12/07/2021
+ms.date: 12/08/2021
 ms.subservice: portals
 ms.author: nabha
 ms.reviewer: ndoelman
@@ -122,7 +122,7 @@ Contact table values
 {% endfor -%}
 ```
 
-## Web api 
+## Web API 
 
 Developers can use choices columns with the [Web API](../web-api-overview.md) read, create, and update operations.
 
@@ -159,7 +159,9 @@ Body –
 }
 ```
 
-> [!NOTE]
-> The choices control on basic and advanced forms currently only support the default theme. If you are using any of the [preset themes](../theme-overview.md) defined in portals Studio, your starter portal package must be [9.2.2201.x](/power-platform/released-versions/portals) or higher.
+## Known issues
 
+The choices control on basic and advanced forms currently only support the default theme. If you are using any of the [preset themes](../theme-overview.md) defined in portals Studio, the choices control will not be available.
+
+ 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
