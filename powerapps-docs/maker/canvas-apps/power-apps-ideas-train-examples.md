@@ -32,38 +32,38 @@ To work with and manipulate dates in a gallery using Power Apps Ideas:
 
 1. Select your target label. For this example, we'll use **Created On**. Select the Ideas pane on the right-side of the screen, and you'll see a screen like the following:
 
-    ![Power Apps Ideas demo.](media/power-apps-ideas/PROSE-entrypoint.png "Find example to formula in Ideas pane")
+    ![Power Apps Ideas demo.](media/power-apps-ideas/Prose-entrypoint-c7.png "Find example to formula in Ideas pane")
 
-1. Enter your desired output in the text box. For example, change "May 25, 2021 3:33 PM" to "May", so it will only show the month, and then press Enter. <br> Select the generated formula.  
+1. Enter your desired output in the text box. For example, change "October 19, 2021 1:42 PM" to "October 19", and then press Enter. <br> Select the generated formula.  
 
     ```powerapps-dot
-    TrimEnds(Left(Text(ThisItem.'Created On'), Match(Text(ThisItem.'Created On'), "\p{Zs}*\ \p{Zs}*").StartMatch + Len(Match(Text(ThisItem.'Created On'), "\p{Zs}*\ \p{Zs}*").FullMatch) - 1)) 
+    Text(DateTimeValue(ThisItem.'Created On'), "mmmm d", "en-US")
     ```
 
     The formula is updated in the formula bar. You can now check the rest of the items in your gallery to see if the formula did the manipulation that you wanted.
 
 ## Work with text display in a gallery
 
-1. Select your target label, such as **email**, and then select the Ideas pane.
+1. Select your target label, such as **Account Name**, and then select the Ideas pane.
 
-1. Enter your desired output in the text box. For example, change email address from "someone@example.com" to "someone@", and press Enter. <br> Select the generated formula.
+1. Enter your desired output in the text box. For example, change the Account Name from "Fourth Coffee (sample)" to "Fourth C", and press Enter. <br> Select the generated formula.
 
     ```powerapps-dot
-    TrimEnds(Left(ThisItem.Email, Match(ThisItem.Email, "\p{Zs}*@\p{Zs}*").StartMatch + Len(Match(ThisItem.Email, "\p{Zs}*@\p{Zs}*").FullMatch) - 1)) 
+    Left(ThisItem.'Account Name', Find(" ", ThisItem.'Account Name') + 1) 
     ```
 
     The formula is updated in the formula bar, and you can check the rest of the items in your gallery to see if the formula did the manipulation that you wanted.
 
 ## Use Train with examples in your app
 
-In this date scenario, if you try to change the date display to only the first three letters of the month, and you provided one example, it may not give you a result.
+In above scenario, if you intend to include the first name plus last name's intitial then the above formula will not work as it takes only the second word's initial in the name. To correct that you can follow below steps.
 
 1. Select **Train with examples** under the **Answers** pane, and give more examples in the side pane.
 
     > [!NOTE]
     > You don’t need to fill in all the boxes. Enter a few different examples for Power Apps Ideas to learn. 
 
-    ![Train with examples](media/power-apps-ideas/Train-with-examples.png "Provide more examples for Ideas to learn")
+    ![Train with examples](media/power-apps-ideas/Train-with-examples-c7.png "Provide more examples for Ideas to learn")
 
 1. (Optional) If you have an example that’s not listed, you can also select **Add custom example** on the top.
 
@@ -72,7 +72,7 @@ In this date scenario, if you try to change the date display to only the first t
 1. Select and apply to see if it meets your needs.
 
     ```powerapps-dot
-    Mid(Left(Text(ThisItem.'Created On'), 3), Match(Text(ThisItem.'Created On'), "[\p{Lu}\p{Ll}]+").StartMatch) 
+    First(Split(ThisItem.'Account Name', " ")).Result & Mid(Left(ThisItem.'Account Name', First(LastN(MatchAll(ThisItem.'Account Name', "\ "), 2)).StartMatch + 1), First(LastN(MatchAll(ThisItem.'Account Name', "\ "), 2)).StartMatch) 
     ```
 
     You've just used **Transform examples to Power Fx formulas** capability and generated formula using Power Apps Ideas for the specific requirement that couldn't be achieved using the natural language alone.
@@ -83,12 +83,13 @@ The following capabilities are supported:
 
 - Converting a single date field in a table to a different format
 - Converting a single text field in a table to a different format
+- Converting a single number field in a table to different format
 - Works only for label text in a gallery
 - All available languages and data connectors as supported by Power Apps regions
 
 The following capabilities aren't supported:
 
-- Number manipulation
+- Math functions on number fields
 - Manipulating text from multiple columns
 - Scenarios that include:
     - Branching
