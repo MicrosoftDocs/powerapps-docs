@@ -31,29 +31,28 @@ search.app:
 
 [!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-## Responsive design principles
+Model-driven apps use responsive design principles to provide an optimal viewing and interaction experience for any screen size or orientation. As the size of the screen or the container decreases—for example, on phones and smaller viewports—the grid is transformed into a list.
 
-Model driven apps use responsive design principles to provide an optimal viewing and interaction experience for any screen size or orientation. As the size of the screen or the container decreases—for example, on phones and smaller viewports—the grid is transformed into a list.
-
-The Read Only Grid control specifies how a grid should respond to different screen sizes. As an app maker, if you’re working with a model-driven app, you can configure the Read Only Grid control and its properties for custom grids and lists.
+The Read Only Grid control specifies how a grid should respond to different screen sizes. As an app maker working with a model-driven app, you can configure the Read Only Grid control and its properties for custom grids and lists.
 
 - **Card Form** property: Use a card form for lists instead of the default list template. Card forms provide more information for list items than the default list template.
 - **Reflow behavior** property: Use this parameter to specify a grid to reflow in to a list or not.
 
 ## Allow grid to reflow into list
 
-Adding the **Read Only Grid** control to the list of controls list associated with a table allows you to  configure the following features:
+Configure the following features after you add the Read Only Grid control to a table:
 
 - Allow a grid to reflow into a list on small displays such as mobile.
 - Specify the rendering mode as grid-only or list-only.  
 
-1. Navigate to make.powerapps.com
+1. Go to [Power Apps](https://make.powerapps.com)
 
-1. Select **Dataverse** and then **Tables** in the left hand menu.  Alternatively, select a [solution](model-driven-app-glossary.md#solution) from the menu and then select a table, such as **Account**.
+1. Select **Dataverse** on the left navigation pane, and then select **Tables** .  Alternatively, select **Solutions**, open the [solution](model-driven-app-glossary.md#solution), and then open the table, such as **Account**.
 
-1. Select **Switch to classic** and the classic form editor interface will be opened as a tab in your browser.  This will be available in the horizontal menu at the top after selecting the three dots denoting **more commands**.
+1. Select the **Forms** tab, and open the select the form that you want to edit.
+1. Select **Switch to classic**. The classic form editor opens as a new tab in your browser. (You may need to select **...** before selecting **Switch to classic**.)
 
-1. In navigation pane expand **Entities**, select the appropriate table (such as **Account** or **Contact**), and then on the **Controls** tab, select **Add Control**.
+1. In the navigation pane expand **Entities**, select the table (such as **Account** or **Contact**), and then on the **Controls** tab, select **Add Control**.
 
     ![Open add control.](media/UnifiedInterface_ReadOnlyGrid_AddControl.png "Open Add Control")
 

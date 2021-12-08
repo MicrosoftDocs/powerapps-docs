@@ -24,7 +24,7 @@ search.app:
 
 [!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-Model-driven Power apps use role-based security for sharing. The fundamental concept in role-based security is that a security role contains privileges that define a set of actions that can be performed on tables within the app.  This approach means that while two people are able to use the app, one user might only be able to read records, or records that they themselves created. The other user might be able to see all records and have the rights to delete those records.
+Model-driven apps use role-based security for sharing. The fundamental concept in role-based security is that a security role contains privileges that define a set of actions that can be performed on tables within the app.  This approach means that while two people are able to use the app, one user might only be able to read records, or records that they themselves created. The other user might be able to see all records and have the rights to delete those records.
 
 All app users must be assigned one or more predefined or custom security roles. Or, security roles can be assigned to teams. When a user or team is assigned to one of these roles, the person or team members are granted the set of privileges associated with that role.
 
@@ -36,14 +36,14 @@ There are a few key environment and licensing prerequisites required when sharin
 
 - A Microsoft 365 user with Power Platform administrator rights or global admin rights must exist within the organization. [Learn how to assign Power Platform Administrator rights](/power-platform/admin/use-service-admin-role-manage-tenant).  This provides the user with administrator rights over all environments.
 - The app sharer must have admin privileges to the specific environment (or be a Power Platform administrator). The app sharer must have a [security role](/power-platform/admin/security-roles-privileges) with equal or greater privileges than the security role they're assigning to the app and to other users. Usually, this takes the form of the app sharer having the Dataverse **System Administrator** or **System Customizer** security role.  These roles can be assigned by Power Platform administrators (who have rights over all Dataverse environments). The system administrator and system customizer security roles are standard roles that exist within all Dataverse environments.
-- The user must exist as a user within the environment. It is not enough to simply be a Microsoft 365 user. This is because all users in an environment are accounted for and described within tables in the environment. [Learn how to add a user to an environment](/power-platform/admin/add-users-to-environment)
+- The user must exist as a user within the environment. It is not enough to only be a Microsoft 365 user. This is because all users in an environment are accounted for and described within tables in the environment. [Learn how to add a user to an environment](/power-platform/admin/add-users-to-environment)
 - The user must have the correct [license](/power-platform/admin/pricing-billing-skus) to be able to use the app. This may be assigned through a per app plan pass, a per user license, or a pay as you go license.
 
 Once the app sharing prerequisites are in place, you can [Share a model-driven app](#share-a-model-driven-app).
 
 ## Create a security role for your app
 
-Model-driven apps often contain custom tables and other custom configuration. It is important to first create a security role with the required level of permission for all the components used in your app.
+Model-driven apps often contain custom tables and other custom configuration. It is important to first create a security role with the required level of privilege for all the components used in your app.
 
 > [!NOTE]
 > This step can be skipped if existing roles grant access to the data in your app.
@@ -54,8 +54,8 @@ Power Platform [!INCLUDE [powerapps](../../includes/powerapps.md)] environments 
 
 Custom tables, or tables that are new to the environment, will not have any privileges associated with them, by default. The privileges for custom table must be explicitly specified before users can work with it. To do this, you can choose to do one of the following.
 
-- Copy an existing security role and edit the privileges accordingly. This is preferred to creating a security role from blank as there are a range of privileges that must be set to create a valid role that go beyond setting permissions on specific tables.
-- Create a new custom security role for the purpose of managing privileges for users of the app and configure this for all tables relevant to the role.
+- Copy an existing security role and edit the privileges accordingly. Copying is preferred to creating a security role from blank as there are a range of privileges that must be set to create a valid role that goes beyond setting privileges on specific tables.
+- Create a new custom security role for the purpose of managing privileges for users of the app. Configure the new role for all tables in the app relevant for the user.
 - Update an existing predefined security role, such as **Basic User**, so that it includes privileges (to read, write, delete, and so on) on records based on the custom table.
 
 For more information about access and scope privileges, see [Security roles](/dynamics365/customer-engagement/admin/security-roles-privileges#security-roles).
@@ -121,13 +121,13 @@ The following steps describe how to create a new security role from a copy of an
    > [!TIP]
    > You can also create a new blank role instead of copying an existing role.
 
-6. In the **Role Name** box provide a descriptive role such as *My custom app access*. Select **Ok.**
+6. In the Role Name box, provide a descriptive role such as *My custom app access*. Select **Ok.**
 
 7. From the security role designer, you select the actions, such as read, write, or delete, and the [access levels](/power-platform/admin/security-roles-privileges#security-roles). Access levels determine how deep or high within the environments hierarchy the user can perform a particular action. 
 
 8. Select the **Custom Tables** tab, and then locate the custom table used in your app.
 
-9.  On the row for your custom table, set access levels for each permission.  
+9.  On the row for your custom table, set access levels for each privilege.  
 
 10. Repeat for other tables used in your app.
 

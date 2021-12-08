@@ -1,5 +1,5 @@
 ---
-title: Sub-grid properties for model-driven app main forms in Power Apps | MicrosoftDocs
+title: Subgrid properties for model-driven app main forms in Power Apps | MicrosoftDocs
 description: Understand the Sub-Grid properties for main forms
 Keywords: Main form; Sub-Grid properties; Dynamics 365
 author: Mattp123
@@ -24,9 +24,9 @@ search.app:
 
 This article describes the classic form editor.
 
-It is recommended that the **modern form designer** is used to create and edit subgrids for Dataverse forms. More information: [Add and configure a subgrid component on a form](form-designer-add-configure-subgrid.md)
+We recommend that you use the **modern form designer** to create and edit subgrids for model-driven app forms. More information: [Add and configure a subgrid component on a form](form-designer-add-configure-subgrid.md)
 
-Subgrids exist within a main form and allow app users to view data within dataverse tables, typically related to the record currently being reviewed.
+A subgrid exists within a main form and let app users view data within a Dataverse table, typically related to the record currently being reviewed.
 
 :::image type="content" source="media/sub-grid-form.png" alt-text="Form sub-grid":::
 
@@ -43,7 +43,7 @@ These are the properties available to configure when using a subgrid component o
 ||**Label**|**Required**: The localizable label for the subgrid visible to users.|  
 ||**Display label on the Form**|Whether the label should be displayed on the form. This is required if you enable **Display Search Box**. You can also choose to have the panel header color.|  
 ||**Records**|Choose from two options:<br /><br /> - **Only Related Records**: Subgrid will display only rows related to the current row.<br />- **All Row Types**: Subgrid will display rows filtered only by the default view or, if the view selector is enabled, any views the user chooses.<br /><br /> The option you choose will affect the behavior of the show list control. More information: [Show list behavior](#show-list-behavior) |  
-||**Table**|Depending on the option you choose for **Records**, this list displays either:<br /><br /> - **Only Related Records**: A list of tables that are related to this table with the name of the lookup column on that table which defines the relationship in parentheses.<br />- **All Row Types**: A list of all tables.|  
+||**Table**|Depending on the option you choose for **Records**, this list displays either:<br /><br /> - **Only Related Records**: A list of tables that are related to this table with the name of the lookup column on that table, which defines the relationship in parentheses.<br />- **All Row Types**: A list of all tables.|  
 ||**Default View**|Choose the view that will be applied by default. If you do not enable any other views using the **View Selector** property. This will be the only view.<br /><br /> Use the **Edit** button to open the default view for editing. Use the **New** button to create a new view to use for this subgrid.|  
 ||**Display Search Box**|Display the search box. When this option is chosen the **Display Label on the Form** option is required.|  
 ||**Display Index**|Only forms using the [Classic forms](main-form-presentations.md#classic-forms) support display index.<br /><br /> Select this check box if you want the alphabetical index to be available with the list. This lets you jump to rows starting with a particular letter or number.|  
@@ -52,9 +52,9 @@ These are the properties available to configure when using a subgrid component o
 ||**Show Chart Only**|Rather than a list of rows a chart will be displayed.|  
 ||**Display Chart Selection**|If **Show Chart Only** is selected, allow people to choose different charts.|  
 ||**Availability**|Specify whether the section should be available on phone.|
-|**Formatting**|**Layout**|**Select the number of columns the control occupies**.<br /><br /> When the section containing the subgrid has more than one column you can set the column to occupy up to the number of columns that the section has.|  
+|**Formatting**|**Layout**|**Select the number of columns the control occupies**.<br /><br /> When the section containing the subgrid has more than one column, you can set the column to occupy up to the number of columns that the section has.|  
 ||**Row Layout**|**Number of Rows** will determine how many rows are shown on a page of a subgrid.<br /><br /> If **Automatically expand to use available space** is chosen the form will allow space for two rows and will expand the space as the number of rows increases. If the number exceeds the **Number of Rows**, people can navigate to additional pages to view the rows.<br /><br /> If **Automatically expand to use available space** is not chosen the form will provide space for the number of rows defined by **Number of Rows** and people can navigate to additional pages to view any additional rows.|  
-|**Controls**|**Controls**|Choose to add controls and select the radio button to have them for Web, Phone or Tablet.|
+|**Controls**|**Controls**|Choose to add controls and select the radio button to have them for Web, Phone, or Tablet.|
   
  In forms using the [Classic forms](main-form-presentations.md#classic-forms), actions performed on a subgrid were available in the ribbon. Developers can customize the behavior of these actions or add additional actions by customizing the ribbon.  
   
@@ -62,14 +62,14 @@ These are the properties available to configure when using a subgrid component o
   
 
 ## Show list behavior  
- When displaying a list in forms with the [Updated forms](main-form-presentations.md#updated-forms), each subgrid displays the **Open View** button ![Open view button.](media/crm-itpro-cust-openview.PNG "Open view button") in the top right corner when the table is also displayed as one of the tables included in the navigation area of the form editor. Choosing this button will open the view. The behavior will change depending on the option chosen for the **Rows** property.  
+ When displaying a list in forms with the [Updated forms](main-form-presentations.md#updated-forms), each subgrid displays the **Open View** button ![Open view button.](media/crm-itpro-cust-openview.PNG "Open view button") in the top-right when the table is also displayed as one of the tables included in the navigation area of the form editor. Choosing this button will open the view. The behavior will change depending on the option chosen for the **Rows** property.  
   
  When you select **Only Related Rows** the view will open using one of the associated views in the same window. To return to the form, use the back button or choose the current row primary name value in the navigation bar.  
   
  When you select **All Row Types** the view will open in a new window.  
 
 ## Add row behavior  
- When displaying a list in forms with the [Updated forms](main-form-presentations.md#updated-forms), each subgrid displays the **Add row** button ![Add button.](media/crm-itpro-cust-subgridadd.PNG "Add button") in the top right side of the subgrid. Choosing this button will allow you to add a row. This behavior will change depending on the option chosen for the **Rows** property and if the lookup is for activity rows.  
+ When displaying a list in forms with the [Updated forms](main-form-presentations.md#updated-forms), each subgrid displays the **Add row** button ![Add button.](media/crm-itpro-cust-subgridadd.PNG "Add button") in the top-right side of the subgrid. Choosing this button will allow you to add a row. This behavior will change depending on the option chosen for the **Rows** property and if the lookup is for activity rows.  
   
  When you select **Only Related Rows** the default behavior is the behavior to add existing rows. People see an in-line lookup to search for an existing row first. This helps prevent creating duplicate rows.  If they can't find an existing row, they can choose the **New** option. When a new row is created any of the column mappings defined in the relationship will be applied. More information: [Map table columns](../data-platform/map-entity-fields.md)   
   
