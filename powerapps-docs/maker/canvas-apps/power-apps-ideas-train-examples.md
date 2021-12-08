@@ -95,7 +95,7 @@ The following capabilities aren't supported:
 - Manipulating text from multiple columns
 - Scenarios that include:
     - Branching
-    - If/else patterns (function [If](functions/function-if.md))
+    - If/else patterns ([function If()](functions/function-if.md))
 
 ### See also
 
