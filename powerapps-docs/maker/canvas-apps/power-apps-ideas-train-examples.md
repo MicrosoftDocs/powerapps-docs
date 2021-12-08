@@ -44,6 +44,8 @@ To work with and manipulate dates in a gallery using Power Apps Ideas:
 
 ## Work with text display in a gallery
 
+To work with text display in a gallery using Power Apps Ideas:
+
 1. Select your target label, such as **Account Name**, and then select the Ideas pane.
 
 1. Enter your desired output in the text box. For example, change the Account Name from "Fourth Coffee (sample)" to "Fourth C", and press Enter. <br> Select the generated formula.
@@ -56,7 +58,7 @@ To work with and manipulate dates in a gallery using Power Apps Ideas:
 
 ## Use Train with examples in your app
 
-In above scenario, if you intend to include the first name plus last name's intitial then the above formula will not work as it takes only the second word's initial in the name. To correct that you can follow below steps.
+In above scenario, if you wanted to include the first name plus last name's initial, the above formula will not work as it takes only the second word's initial in the name. To correct that you can follow below steps.
 
 1. Select **Train with examples** under the **Answers** pane, and give more examples in the side pane.
 
