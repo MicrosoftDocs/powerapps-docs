@@ -53,8 +53,6 @@ You can follow the steps mentioned in [Create a canvas app from Microsoft Datave
 
     1. The formula suggestion in this scenario is `Search('Accounts', TextSearchBox1.Text, "name")`.
 
-        ![Graphical user interface, text, application, letter, email Description automatically generated.](media/power-apps-ideas/Ideas_example_c7.png)
-
         :::image type="content" source="media/power-apps-ideas/Ideas_example_c7.png" alt-text="Suggested formula based on entered search scenario.":::
 
 1. When you select any suggested idea for a formula, the formula gets updated automatically and runs so you can check the result in your app. You can then decide whether to keep the selected formula, or modify it.

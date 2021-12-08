@@ -48,7 +48,7 @@ To work with text display in a gallery using Power Apps Ideas:
 
 1. Select your target label, such as **Account Name**, and then select the Ideas pane.
 
-1. Enter your desired output in the text box. For example, change the Account Name from "Fourth Coffee (sample)" to "Fourth C", and press Enter. <br> Select the generated formula.
+1. Enter your desired output in the text box. For example, change the Account Name from "Fourth Coffee (sample)" to "Fourth C", press Enter, and then select the generated formula.
 
     ```powerapps-dot
     Left(ThisItem.'Account Name', Find(" ", ThisItem.'Account Name') + 1) 
