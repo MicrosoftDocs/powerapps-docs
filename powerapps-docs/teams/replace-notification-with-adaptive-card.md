@@ -1,5 +1,5 @@
 ---
-title: Replace notification with adaptive card
+title: Replace notification with adaptive card (Video)
 description: Learn about how to replace notification with adaptive card to increase collaboration
 author: sbahl10
 ms.service: powerapps

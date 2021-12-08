@@ -1,5 +1,5 @@
 ---
-title: Send notification to the Team when work item status is updated in the Milestones sample app
+title: Send notification to the Team when work item status is updated in the Milestones sample app (Video)
 description: Learn how to send an adaptive card when a work item status is updated in the Milestones Power Apps template for Microsoft Teams.
 ms.service: powerapps
 ms.topic: conceptual

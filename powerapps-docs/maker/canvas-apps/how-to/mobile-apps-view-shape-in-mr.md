@@ -1,5 +1,5 @@
 ---
-title: Create an app to view a shape in mixed reality
+title: Create an app to view a shape in mixed reality (Video)
 description: Learn how to use the view shape in MR component in your Power Apps.
 author: joel-lindstrom
 ms.service: powerapps

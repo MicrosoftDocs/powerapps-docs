@@ -1,5 +1,5 @@
 ---
-title: Deploy Milestones sample app broad distribution app
+title: Deploy Milestones sample app broad distribution app (Video)
 description: Learn how to share the Milestones Power Apps sample app for Teams with colleagues outside of your team.
 author: joel-lindstrom
 ms.service: powerapps

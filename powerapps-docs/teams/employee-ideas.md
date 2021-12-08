@@ -1,5 +1,5 @@
 ---
-title: Use Employee Ideas app from teams store | Microsoft Docs
+title: Use Employee Ideas app from teams store (Video) | Microsoft Docs
 description: Learn how to use the Employee Ideas app from Teams store.
 ms.service: powerapps
 ms.topic: conceptual

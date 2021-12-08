@@ -1,5 +1,5 @@
 ---
-title: "Add Add a Power BI visual in a a model-driven app | MicrosoftDocs"
+title: "Add Add a Power BI visual in a a model-driven app (Video) | MicrosoftDocs"
 description: "Learn how to add Power BI visuals into model-driven apps"
 ms.date: 10/04/2021
 ms.service: powerapps

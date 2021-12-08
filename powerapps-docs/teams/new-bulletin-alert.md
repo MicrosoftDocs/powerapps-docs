@@ -1,5 +1,5 @@
 ---
-title: Send an alert when a new bulletin is posted
+title: Send an alert when a new bulletin is posted (Video)
 description: Learn about how to send an alert when a new bulletin is posted.
 author: sbahl10
 ms.service: powerapps
