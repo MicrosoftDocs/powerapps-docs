@@ -19,7 +19,7 @@ contributors:
 ---
 
 
-# Draw and insert shapes in the map control (Preview)
+# Draw and insert shapes in the map control (preview)
 
 [!INCLUDE[Preview disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
@@ -30,6 +30,10 @@ You can also create and label shapes on maps you insert into your Power Apps app
 Inserting pre-defined shapes is useful to highlight specific regions or areas of interest, such as a sales district or shipping zone.
 
 :::image type="content" source="media/geospatial/custom-geojson-shape-example.png" alt-text="Screenshot of map with example shapes drawn and labeled.":::
+
+> [!IMPORTANT]
+> - This is a preview feature.
+> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
 
 ## Prerequisites
 1. Create a Canvas app and make sure it meets the [Geospatial prerequisites](geospatial-overview.md#prerequisites). 
@@ -116,7 +120,7 @@ The map will now highlight four counties in Washington state in the US, with dif
 :::image type="content" source="media/geospatial/cusotm-geojson-counties.png" alt-text="Screenshot of an app with a map that highlights the various counties of Washington state in the US.":::
 
 
-## Measurement outputs from shapes drawn (Preview)
+## Measurement outputs from shapes drawn (preview)
 
 You can show the length of the perimeter (in feet) and volume of the area (square feet) of a selected shape in your app.
 
