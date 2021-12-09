@@ -36,7 +36,7 @@ Additionally, the main form is an intrinsic part of the table and it travels wit
 
 [Learn more about all the form types](types-forms.md)
 
-[Notes on Microsoft Dynamics 365](model-driven-app-glossary.md#dynamics)
+[Notes on Microsoft Dynamics 365](model-driven-app-glossary.md#dynamics-365)
   
 <a name="BKMK_MainFormPresentations"></a>
 

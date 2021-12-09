@@ -25,7 +25,7 @@ search.app:
 ---
 # The benefits of the model-driven approach
 
-Model-driven apps are familiar to anyone who has worked with [Dynamics 365](model-driven-app-glossary.md#dynamics) apps. To others, they're a new business productivity tool.
+Model-driven apps are familiar to anyone who has worked with [Dynamics 365](model-driven-app-glossary.md#dynamics-365) apps. To others, they're a new business productivity tool.
 
 Dynamics 365 apps, such as Dynamics 365 Sales, Dynamics 365 Marketing, or Dynamics 365 Customer Service, are essentially a set of line-of-business apps, built on [Dataverse](model-driven-app-glossary.md#dataverse). The utility of the Dynamics 365 model was recognized as being powerful and by making Dataverse fully customizable, has enabled more bespoke solutions to be created.
 
