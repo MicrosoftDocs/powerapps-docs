@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 contributors:
   - gregli-msft
-  - nkrb
+  - tapanm-msft
 ---
 # Remove and RemoveIf functions in Power Apps
 Removes [records](../working-with-tables.md#records) from a [data source](../working-with-data-sources.md).

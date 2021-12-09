@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 contributors:
   - gregli-msft
-  - nkrb
+  - tapanm-msft
 ---
 # Now, Today, and IsToday functions in Power Apps
 Returns the current date and time, and tests whether a date/time value is today.

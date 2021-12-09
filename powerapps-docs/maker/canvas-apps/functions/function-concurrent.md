@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 contributors:
   - gregli-msft
-  - nkrb
+  - tapanm-msft
 ---
 # Concurrent function in Power Apps
 Evaluates multiple formulas concurrently with one another.
