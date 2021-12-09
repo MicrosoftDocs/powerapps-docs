@@ -19,9 +19,11 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Overview of the model-driven app form editor user interface
+# Classic form editor overview
 
-This article describes the classic form editor. We recommend that you use the modern form designer to create and edit your model-driven app forms. More information: [Overview of the model-driven form designer](form-designer-overview.md)
+This article describes the [classic](model-driven-app-glossary.md#classic) form editor.
+
+We recommend that you use the modern form designer to create and edit your model-driven app forms. More information: [Overview of the model-driven form designer](form-designer-overview.md)
 
 The form editor displays commands in three tabs: **File**, **Home**, and **Insert**.  
 
