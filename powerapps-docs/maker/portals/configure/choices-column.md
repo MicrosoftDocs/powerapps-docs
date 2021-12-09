@@ -24,7 +24,7 @@ Makers can design [basic forms](entity-forms.md) and [advanced forms](web-for
 
 ## Prerequisites
 
-- Your portal must be version [9.3.11.x](../portalupdate9311x.md) or later to use this feature.
+- Your portal must be version [9.3.11.x](/power-platform/released-versions/portals/portalupdate9311x) or later to use this feature.
 
 ## Enable choices control
 
