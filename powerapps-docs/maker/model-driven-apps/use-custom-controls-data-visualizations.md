@@ -112,8 +112,9 @@ You can set one type of custom control to appear in the web browser client while
   
 10. Select **Save and Close** to close the form editor.  
   
-### See the custom control in action  
- Open a row that includes the column with the custom control, such as the opportunity form from the previous example, and view how the column is changed.  
+### See the custom control in action
+
+ Open a record that includes the column with the custom control, such as the opportunity form from the previous example, and view how the column is changed.  
   
    > [!div class="mx-imgBorder"] 
    > ![Slider control rendered on form.](media/slider-control.PNG "Slider control rendered on form")  
@@ -124,7 +125,8 @@ You can set one type of custom control to appear in the web browser client while
 
 With editable grids, users can do rich in-line editing directly from views and subgrids whether they’re using a web app, tablet, or phone. More information: [Make grids (lists) editable using the Editable Grid custom control](make-grids-lists-editable-custom-control.md) 
   
-## Next steps  
+## Next steps
+
 [Create and edit columns](../data-platform/create-edit-fields.md)
 
 
