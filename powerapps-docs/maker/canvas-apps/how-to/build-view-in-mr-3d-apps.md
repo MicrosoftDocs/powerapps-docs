@@ -24,7 +24,7 @@ You can use the [View in 3D](../mixed-reality-component-view-3d.md) and [View in
 
 In this article, you'll learn how to use the 3D and mixed reality controls in Power Apps.
 
-Watch this video to learn how to build mobile apps with View in 3D control:
+Watch this video to learn how to build mobile apps with View in MR control:
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLAk9]
 
 ## Prerequisites
