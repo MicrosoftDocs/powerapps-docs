@@ -5,7 +5,7 @@ author: nageshbhat-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 12/08/2021
+ms.date: 12/09/2021
 ms.subservice: portals
 ms.author: nabha
 ms.reviewer: ndoelman
@@ -21,6 +21,10 @@ contributors:
 > - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 
 Makers can design [basic forms](entity-forms.md) and [advanced forms](web-form-properties.md) to include [choices columns](../../data-platform/types-of-fields.md#choices) defined in Microsoft Dataverse. This feature provides the ability for portal users to select multiple options while submitting data, and display views with choices columns through [lists](entity-lists.md).
+
+## Prerequisites
+
+- Your portal must be version [9.3.11.x](../portalupdate9311x.md) or later to use this feature.
 
 ## Enable choices control
 
