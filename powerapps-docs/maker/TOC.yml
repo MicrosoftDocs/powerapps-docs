@@ -407,7 +407,7 @@
                 href: ./canvas-apps/geospatial-map-excel.md
               - name: Add info cards to pins
                 href: ./canvas-apps/geospatial-map-infocards.md
-              - name: Draw and insert shapes onto maps
+              - name: Draw and insert shapes onto maps (preview)
                 href: ./canvas-apps/geospatial-map-draw-shapes.md
               - name: Insert waypoints as map pins and draw routes between them (preview)
                 href: ./canvas-apps/geospatial-map-routing.md
