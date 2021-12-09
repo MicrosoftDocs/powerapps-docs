@@ -358,7 +358,7 @@ If multiple updates are happening to a control's value, an `Update Sequence` wil
 > [!div class="mx-imgBorder"]
 > ![Control value before](media/control-default-value-after.png "Control value before")
 
-There are scenarios where columns are populated based on a relationship column mapping, in which case the event will show that.
+There are scenarios where columns are populated based on a relationship column mapping, in which case the event will show "Relationship field mapping".
 
 > [!div class="mx-imgBorder"]
 > ![Control value after](media/control-default-value-update-sequence.png "Control value after")
@@ -369,7 +369,7 @@ Verify where the value is coming from and take action based on the below table:
 |--|--|
 | Client API script | Contact the script owner. |
 | Default value | Check the control's configuration. |
-| Relationship column mapping | Check the relationship configuration and update the column mapping. |
+| Relationship field mapping | Check the relationship configuration and update the column mapping. See [Map table columns](https://docs.microsoft.com/en-us/powerapps/maker/data-platform/map-entity-fields) to understand what these are. |
 | Value passed by page input data passed via URL | Check the API that opens the specific form with the issue, it is passing the value. |
 
 
