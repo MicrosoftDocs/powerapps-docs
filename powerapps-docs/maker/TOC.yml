@@ -1545,8 +1545,12 @@
       items:
         - name: Available portal templates
           href: ./portals/portal-templates.md
-        - name: Create a starter portal
-          href: ./portals/create-portal.md
+        - name: Starter portal
+          items:                  
+            - name: Create a starter portal
+              href: ./portals/create-portal.md
+            - name: Contact us sample
+              href: ./portals/contact-us-sample.md              
         - name: Create a portal with Dynamics 365 environment
           href: ./portals/create-dynamics-portal.md
         - name: Create a portal using the older portal add-on
@@ -1592,7 +1596,7 @@
                 - name: Add Power BI
                   href: ./portals/add-powerbi.md
                 - name: Add a chatbot (preview)
-                  href: ./portals/add-chatbot.md
+                  href: ./portals/add-chatbot.md                 
         - name: Work with templates
           href: ./portals/work-with-templates.md
         - name: Work with themes
@@ -1653,6 +1657,8 @@
               href: ./portals/configure/walkthrough-get-data-on-portal.md
         - name: Add chart on a web page in portal
           href: ./portals/configure/add-chart.md
+        - name: Add fixed page layouts
+          href: ./portals/configure/add-fixed-layouts.md          
         - name: Enable multiple languages
           items:
             - name: Enable multiple-language support
@@ -1665,6 +1671,8 @@
           href: ./portals/configure/cors-support.md
         - name: Configure advertisements
           href: ./portals/configure/create-run-advertisement.md
+        - name: Configure choices column (preview)
+          href: ./portals/configure/choices-column.md          
         - name: Configure content snippets
           href: ./portals/configure/customize-content-snippets.md
         - name: Configure header and footer output caching
