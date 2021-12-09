@@ -124,7 +124,7 @@ In this section, we will build a screen in an app that will allow a user to view
 
 1. Select **Edit gallery** to edit the gallery.
 
-    :::image type="content" source="media/build-view-in-mr-3d-apps/edit-gallery.png" alt-text="Edit gallery.":::
+    :::image type="content" source="media/build-view-in-mr-3d-apps/edit-gallery.png" alt-text="Edit gallery for MR.":::
 
 1. Insert a **Text label** into the gallery.
 
@@ -212,7 +212,7 @@ In this section, we will build a screen in an app that will allow a user to view
 
 1. Select **Edit gallery** to edit the gallery.
 
-    :::image type="content" source="media/build-view-in-mr-3d-apps/edit-gallery-3d.png" alt-text="Edit gallery.":::
+    :::image type="content" source="media/build-view-in-mr-3d-apps/edit-gallery-3d.png" alt-text="Edit gallery for 3D.":::
 
 1. Insert a **Text label** into the gallery.
 
@@ -243,7 +243,7 @@ This change will provide a gallery that has a list of 3D objects that you can vi
 
 Now that all the controls have been added, [save and publish](../save-publish-app.md) the app. On a mixed-reality capable device, open the app, touch the screen to zoom in, zoom out, or turn the object being viewed in 3D.
 
-:::image type="content" source="media/build-view-in-mr-3d-apps/view-in-3d.png" alt-text="View in MR.":::
+:::image type="content" source="media/build-view-in-mr-3d-apps/view-in-3d.png" alt-text="View in 3D.":::
 
 Since the gallery contains several objects in 3D, swipe down on the screen to see other objects and use the zoom or turn capabilities to work with the objects in 3D.
 
