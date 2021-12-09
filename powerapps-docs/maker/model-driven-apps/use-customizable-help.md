@@ -36,7 +36,7 @@ People with the system administrator security role can use the settings to overr
 2. Go to **Settings** > **Administration**.
 3. Select **System Settings**, and then select the **General** tab.
 
-:::image type="content" source="../../maker/model-driven-apps/media/set-customizable-help.gif" alt-text="Setting customizable help":::
+   :::image type="content" source="../../maker/model-driven-apps/media/set-customizable-help.gif" alt-text="Setting customizable help":::
 
 4. Under **Set custom Help URL**, select and define the following customizable Help global settings: 
      - **Use custom Help for customizable tables**. Select to enable.  
@@ -66,6 +66,6 @@ Examples of the parameters that can be appended to the URL:
 - User Language Code: userlcid
 - Table Name: table
 - Entry Point: hierarchy chart or form
-- Form Id: formid
+- Form ID: formid
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

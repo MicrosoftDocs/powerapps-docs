@@ -20,7 +20,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Web resource properties for model-driven app forms (Legacy)
+# Web resource properties for model-driven app forms (classic)
 
 [!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 

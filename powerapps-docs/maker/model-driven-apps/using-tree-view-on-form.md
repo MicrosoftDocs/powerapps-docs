@@ -27,24 +27,25 @@ search.app:
 
 # Using the tree view in the form designer
 
-The **Tree View** pane displays a visual hierarchy of the components on the form. The icons in the tree view help an app designer to quickly identify the type of properties of the column, section, tab or component.
+The **Tree View** pane displays a visual hierarchy of the components on the form. The icons in the tree view help an app maker to quickly identify the type of properties of the column, section, tab, or component.
 
-The tree view can also be used to select columns and other components present on the form. The tree view is helpful when you want to select **hidden elements** that are not visible on the form preview.
+Use the tree view to select columns and other components present on the form. The tree view is helpful when you want to select hidden elements that are not visible on the form preview.
 
 You can expand or collapse nodes in the tree view to see or hide the elements within a node. When you select an element in the tree view, it becomes highlighted in the form preview, and the property pane displays the properties for the element.
 
 > [!div class="mx-imgBorder"]
 > ![Tree view.](media/FormDesignerTreeView.png "Tree view")
 
-### Open the tree view
+## Open the tree view
 
-1.  Open [solution explorer](advanced-navigation.md#solution-explorer), navigate to your solution.
-2.  Select the required table
-3.  Select the **Forms** tab.
-4. Open the form required and the form designer will open to enable creation or editing of a form.
-5. In the left pane, select **Tree view**.
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
+1. Select **Solutions** from the left navigation pane, and then open the solution you want.
+1. Select the table you want, and then select the **Forms** tab.
+1. Open the form you want. The form designer opens to enable creation or editing of a form.
+1. In the left pane, select **Tree view**.
 
 ## See also
+
 [Overview of the model-driven form designer](form-designer-overview.md)  
 [Create, edit, or configure forms using the form designer](create-and-edit-forms.md)  
 [Add, configure, move, or delete columns on a form](add-move-or-delete-fields-on-form.md)  
