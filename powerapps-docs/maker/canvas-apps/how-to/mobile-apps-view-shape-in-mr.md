@@ -31,7 +31,7 @@ In this article, we'll create a screen in an app that will allow users to create
 
 ## Prerequisites
 
-See [Mixed Reality prerequisites](mixed-reality-overview.md#prerequisites).
+See [prerequisites for mixed-reality capable devices](../mixed-reality-overview.md#prerequisites).
 
 ## Add controls for cube’s dimensions and units
 

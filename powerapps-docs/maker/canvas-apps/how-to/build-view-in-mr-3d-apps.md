@@ -29,7 +29,7 @@ Watch this video to learn how to build mobile apps with View in MR control:
 
 ## Prerequisites
 
-See [Mixed Reality prerequisites](mixed-reality-overview.md#prerequisites).
+See [prerequisites for mixed-reality capable devices](../mixed-reality-overview.md#prerequisites).
 
 ## Create an app with View in MR control
 
