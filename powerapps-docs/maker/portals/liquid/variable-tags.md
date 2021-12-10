@@ -8,9 +8,9 @@ ms.custom:
 ms.date: 04/21/2020
 ms.subservice: portals
 ms.author: gisingh
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
-    - tapanm-msft
+    - nickdoelman
     - GitanjaliSingh33msft
 ---
 

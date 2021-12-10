@@ -30,9 +30,7 @@ contributors: ""
 After creating a continuous pipeline of data from Microsoft Dataverse to your Synapse workspace with Azure Synapse Link for Dataverse, you can read the incremental updates of a specified time interval. Every Dataverse table exported with Azure Synapse Link for Dataverse contains a *SinkModifiedOn* column which can be used to get the incremental updates.
 
 > [!NOTE]
->
-> - Azure Synapse Link for Microsoft Dataverse was formerly known as Export to data lake. The service was renamed effective May 2021 and will continue to export data to Azure Data Lake as well as Azure Synapse Analytics.
-> - This feature is still in preview and preview features are are not complete, but are made available on a “preview” basis so customers can get early access and provide feedback. Preview features may have limited or restricted functionality, are not meant for production use, and may be available only in selected geographic areas.
+> Azure Synapse Link for Microsoft Dataverse was formerly known as Export to data lake. The service was renamed effective May 2021 and will continue to export data to Azure Data Lake as well as Azure Synapse Analytics.
 
 ## Prerequisites
 

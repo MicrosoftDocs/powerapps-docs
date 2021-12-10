@@ -7,10 +7,10 @@ ms.topic: conceptual
 ms.custom: 
 ms.date: 09/13/2021
 ms.author: dileeps
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
     - dileepsinghmicrosoft
-    - tapanm-msft
+    - nickdoelman
 ---
 
 # Set up Azure Front Door with portals

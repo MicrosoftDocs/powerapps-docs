@@ -70,9 +70,4 @@ search.app:
 ### Multiple lines of text column properties  
  Multiple lines of text and single line of text columns that use the `Text Area` format have a **Row Layout** property. With this property you can specify a value for **Number of Rows** or select **Automatically expand to use available space**.  
 
-## Next steps
-
-[Use the Main form and its components](use-main-form-and-components.md)
-
-
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

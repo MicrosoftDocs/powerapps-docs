@@ -2,7 +2,6 @@
 title: Core properties in Power Apps
 description: Reference information about the core properties in Power Apps.
 author: gregli-msft
-manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas

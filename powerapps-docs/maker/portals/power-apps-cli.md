@@ -8,10 +8,10 @@ ms.custom:
 ms.date: 10/11/2021
 ms.subservice: portals
 ms.author: nenandw
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
     - neerajnandwana-msft
-    - tapanm-msft
+    - nickdoelman
 ---
 
 # Portals support for Microsoft Power Platform CLI
@@ -256,7 +256,7 @@ The following sections provide more details about different properties of the â€
 |-------------|-----------|-------|
 |list|Lists all portal websites from the current Dataverse environment. |`pac paportal list`|
 |download|Download portal website content from the current Dataverse environment. It has the following parameters: <br/> - *path*: Path where the website content will be downloaded (alias: -p)<br/> - *webSiteId*: Portal website ID to download (alias: -id)<br/> - *overwrite*: (Optional) true - to overwrite existing content; false - to fail if the folder already has website content (alias: -o)|`pac paportal download --path "C:\portals" --webSiteId f88b70cc-580b-4f1a-87c3-41debefeb902`|
-|upload|Upload portal website content to the current Dataverse environment. It has the following parameter: <br/> - *path*: Path where the website content is stored (alias: -p) <br/> -*deploymentProfile*: Upload portal data with environment details defined through [profile variables](#use-deployment-profile) in *deployment-profiles/[profile-name].depoyment.yaml* file  |`pac paportal upload --path "C:\portals\starter-portal" --deploymentProfile "profile-name"`|
+|upload|Upload portal website content to the current Dataverse environment. It has the following parameter: <br/> - *path*: Path where the website content is stored (alias: -p) <br/> -*deploymentProfile*: Upload portal data with environment details defined through [profile variables](#use-deployment-profile) in *deployment-profiles/[profile-name].deployment.yaml* file  |`pac paportal upload --path "C:\portals\starter-portal" --deploymentProfile "profile-name"`|
 
 ##### Use deployment profile
 
@@ -295,7 +295,7 @@ You can also use VS Code extension **Power Platform VS Code Extension** to benef
 
 ## Additional considerations
 
-- An error is reported if your file path exceeds the maximum path length limitation. More information: [Maximum path length limitation in Windows](\windows\win32\fileio\maximum-file-path-limitation)
+- An error is reported if your file path exceeds the maximum path length limitation. More information: [Maximum path length limitation in Windows](/windows/win32/fileio/maximum-file-path-limitation)
 - For duplicate records such as a duplicate web page name, Microsoft Power Platform CLI creates two different folders&mdash;one with the name of the web page, and the other with the same name prefixed with a hash code. For example, "My-page" and "My-page-**hash-code**".
 
 ## Next steps

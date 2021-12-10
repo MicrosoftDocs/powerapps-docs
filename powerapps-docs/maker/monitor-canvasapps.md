@@ -1,7 +1,7 @@
 ---
 title: Debugging canvas apps with Monitor
 description: Learn about debugging canvas apps by using Monitor.
-author: tapanm-msft
+author: mattgon
 ms.service: powerapps
 ms.subservice: troubleshoot
 ms.topic: conceptual
@@ -15,7 +15,8 @@ search.app:
   - PowerApps
 contributors:
   - tapanm-msft
-  - wimcoor
+  - mattgon
+  - maustinjones
 ---
 
 # Debugging canvas apps with Monitor

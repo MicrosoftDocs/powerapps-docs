@@ -62,8 +62,8 @@ To install standalone Power Platform CLI:
 
     ```
 > [!NOTE]
-> - Currently, Microsoft Power Platform CLI is supported only on Windows 10.
-> - Power Platform Extension for VS Code is in public preview, and works on both Windows 10 and macOS. 
+> - Currently, Microsoft Power Platform CLI is supported only on Windows 10 and Windows 11.
+> - Power Platform Extension for VS Code is in public preview, and works on Windows 10, Windows 11, Linux, and MacOS.
 
 ## Common commands
 

@@ -8,10 +8,10 @@ ms.custom:
 ms.date: 04/21/2021
 ms.subservice: portals
 ms.author: gisingh
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
     - gitanjalisingh33msft
-    - tapanm-msft
+    - nickdoelman
 ---
 
 # Add the Azure Storage web resource to a form

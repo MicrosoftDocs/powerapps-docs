@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 10/04/2021
+ms.date: 10/25/2021
 ms.subservice: end-user
 ms.author: mkaur
 ms.custom: ""
@@ -69,6 +69,11 @@ With suggestions, you can access your information quickly by using minimal keyst
 View the full results for a search by pressing **Enter** on your keyboard or selecting **Show more results**.
 
 Search results are ranked based on relevance and grouped by tables. The list of tables that include rows that match the search term are displayed horizontally as tabs along the top of the screen.
+
+To understand why a row appears in your search results, hover over the icon at the beginning of each row to see the text that matched your search.
+
+
+![See the text that matched your search query.](media/relevance-search-matched-results.png "See the text that matched your search query")
 
 ### Top results tab
 
@@ -170,6 +175,9 @@ Dataverse search has a powerful set of capabilities to help you put Microsoft Da
 > - Dataverse search is text-based, and can search only on columns of type **Single line of text**, **Multiple lines of text**, **Choice**, or **Lookup**. Columns of type **Numeric**, **Date**, and **File** aren't searched on.
 > - Dataverse search enables you to search for rows that are shared with you and rows that you own. Hierarchical security models aren't supported. This means that even if you see a row in Dataverse because you have access to it through hierarchical security, you won't see that row matched by Dataverse search unless you own it or it was shared with you.
 > - Dataverse search supports column level security. This means that a user with access to a restricted column can search for the column and will see it in the search results. A user that doesn't have permission to the restricted column won't be able to search or see results for the column.
+
+> [!TIP]
+> The order of tables in the **Top results** tab and in the horizontal list of tabs is based on the ranking and relevance of search results for that search term. You can make results from a particular table appear at the top by including the table name in the search term. For example, searching for **account fabrikam** would, in most cases, rank result records that have the term **fabrikam** of type **account** higher than result records that have the term **fabrikam** of type other than **account**.
 
 - **Boosted search results**  
   Use important attributes as keywords to "boost" your search for information. Entering a table type to boost search results is an easy way to indicate which results you prefer. For example, searching for **Susan Adatum** indicates that you're looking for a contact **Susan** related to the account **Adatum**.

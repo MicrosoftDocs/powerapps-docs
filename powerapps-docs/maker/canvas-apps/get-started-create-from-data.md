@@ -2,7 +2,6 @@
 title: Create a canvas app with data from an Excel file
 description: Learn about how to use Power Apps to automatically create a canvas app using data stored in an Excel file in a cloud-storage account.
 author: tapanm-msft
-manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 

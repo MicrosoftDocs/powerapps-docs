@@ -1,17 +1,17 @@
 ---
 title: Inspection sample apps | Microsoft Docs
 description: Learn how to use the Inspection apps from Teams store.
-author: navjotm
+author: josephshum
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 08/12/2021
 ms.subservice: teams
-ms.author: namarwah
+ms.author: jshum
 ms.reviewer: tapanm
 contributors:
   - joel-lindstrom
-  - navjotm
+  - josephshum
   - tapanm-msft
 ---
 

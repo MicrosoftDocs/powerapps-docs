@@ -8,10 +8,10 @@ ms.custom:
 ms.date: 10/01/2021
 ms.subservice: portals
 ms.author: nenandw
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
     - neerajnandwana-msft
-    - tapanm-msft
+    - nickdoelman
 ---
 
 # Use the Visual Studio Code extension (preview)

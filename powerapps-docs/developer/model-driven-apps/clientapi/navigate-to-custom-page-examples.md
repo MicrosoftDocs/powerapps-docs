@@ -1,5 +1,5 @@
 ---
-title: "Navigating to and from a custom page in your model-driven app using client API (preview)" 
+title: "Navigating to and from a custom page in your model-driven app using client API" 
 description: "This article provides examples of navigating from a model-driven app page using the client API to a custom page."
 ms.date: 08/17/2021
 ms.reviewer: ""
@@ -17,18 +17,16 @@ search.app:
   - D365CE
 ---
 
-# Navigating to and from a custom page using client API (preview)
+# Navigating to and from a custom page using client API
 
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
-
-This article provides examples of navigating from a model-driven app page to a custom page using [Client API](../client-scripting.md). This article also includes examples of navigating from a custom page to other custom pages and also from custom page to model-driven app form.
+This article provides examples of navigating from a model-driven app page to a custom page using [Client API](../client-scripting.md).
 
 This article outlines the steps to use client API to open a custom page as a full-page, dialog, or pane.  It provides examples of **custom** as a `pageType` value in [navigateTo (Client API reference)](reference/xrm-navigation/navigateto.md).
 
-  > [!IMPORTANT]
-  > - This is a preview feature, and isn't available in all regions.
-  > - [!INCLUDE[cc_preview_features_definition](../../../includes/cc-preview-features-definition.md)]
-
+> [!IMPORTANT]
+> - The base functionality of custom pages has moved to general availability in all regions.  However some specific or new capabilities are still in public preview and are marked with _(preview)_.
+> - [!INCLUDE[cc_preview_features_definition](../../../includes/cc-preview-features-definition.md)] 
+> - Custom pages are a new feature with significant product changes and currently have a number of known limitations outlined in [Custom Page Known Issues](../../../maker/model-driven-apps/model-app-page-issues.md).
 
 ## Navigating from a model page to a custom page
 
@@ -65,7 +63,7 @@ Xrm.Navigation.navigateTo(pageInput, navigationOptions)
 
 ### Open as an inline full page with a record context
 
-This example uses the `recordId` parameter within the [NavigateTo](reference/Xrm-Navigation/navigateTo.md) function to provide the custom page with the record to use.  The `Param` function within the custom page retrieves the value and uses the Lookup function to retrieve the record.
+This example uses the `recordId` parameter within the [NavigateTo](reference/Xrm-Navigation/navigateTo.md) function to provide the custom page with the record to use.  
 
 ```javascript
 // Inline Page
@@ -88,6 +86,16 @@ Xrm.Navigation.navigateTo(pageInput, navigationOptions)
             // Handle error
         }
     );
+```
+
+The `Param` function within the custom page retrieves the value and uses the Lookup function to retrieve the record.
+
+```powerappsfl
+App.OnStart=Set(RecordItem, 
+    If(IsBlank(Param("recordId")),
+        First(<entity>),
+        LookUp(<entity>, <entityIdField> = GUID(Param("recordId"))))
+    )
 ```
 
 ### Open as a centered dialog
@@ -267,15 +275,6 @@ Editable grid can be used to trigger [OnRecordSelect](reference/events/grid-onre
     EditForm.Datasource=<datasource name>
     EditForm.Item=RecordItem
     ```
-
-### Known issues
-
-- Navigate function does not have support for opening a model or custom page to a dialog. All navigation from a custom page opens inline.
-- Navigate function does not support opening:
-    - Dashboard collection or specific dashboard.
-    - Specific model-driven app form. 
-- Custom page can only open into the current session’s current app tab in a multi-session model-driven app.
-
 
 ## Related articles
 

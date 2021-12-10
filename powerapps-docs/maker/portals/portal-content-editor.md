@@ -8,11 +8,11 @@ ms.custom:
 ms.date: 04/21/2021
 ms.subservice: portals
 ms.author: sandhan
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 searchScope:
   - "Power Apps"
 contributors:
-    - tapanm-msft
+    - nickdoelman
     - sandhangitmsft
 ---
 

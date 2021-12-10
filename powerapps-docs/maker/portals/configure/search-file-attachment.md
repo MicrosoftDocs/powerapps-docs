@@ -8,9 +8,9 @@ ms.custom:
 ms.date: 10/04/2020
 ms.subservice: portals
 ms.author: sandhan
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
-    - tapanm-msft
+    - nickdoelman
     - sandhangitmsft
 ---
 
