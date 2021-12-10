@@ -26,18 +26,22 @@ search.app:
 ---
 # Change navigation within a model-driven app form
 
+## Navigation within forms
+
  Navigation within a form allows app users to view lists of related rows. Each table relationship has properties to control whether it should be shown. More information: [Navigation pane item for primary table](../data-platform/create-edit-1n-relationships-solution-explorer.md#navigation-pane-item-for-primary-table)  
   
- Any table relationships that are configured to be displayed can be overridden within the form editor. You can also include navigation links to display web resources or other web sites via form navigation.  
-  
+ Any table relationships that are configured to be displayed can be overridden within the form editor. Navigation links can also be included to display web resources or other web sites via form navigation.  
+
  For step-by-step instructions, see [Create and edit table relationships for Microsoft Dataverse](../data-platform/create-edit-entity-relationships.md)  
-  
- To enable editing navigation you must first select **Navigation** from the **Select** group on the **Home** tab of the form designer.  
+
+ ## Steps to creating navigation using the legacy experience
+
+ To enable editing navigation first select **Navigation** from the **Select** group on the **Home** tab of the form designer.  
  
 > [!div class="mx-imgBorder"] 
 > ![Navigation command.](media/navigation-command.png)
  
- In the right pane, from **Relationship Explorer** you can filter by 1:N (one-to-many) or N:N (many-to-many) relationships, or view all available relationships. The **Only show unused relationships checkbox** is disabled and selected. So you can only add each relationship one time.  
+ In the right pane, from **Relationship Explorer** you can filter by 1:N (one-to-many) or N:N (many-to-many) relationships, or view all available relationships. The **Only show unused relationships checkbox** is disabled and selected. Relationships are added one at a time. 
  
  > [!div class="mx-imgBorder"] 
  > ![Relationship explorer.](media/relationship-explorer.png)

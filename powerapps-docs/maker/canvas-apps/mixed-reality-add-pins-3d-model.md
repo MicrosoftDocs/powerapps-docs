@@ -21,7 +21,7 @@ contributors:
 # Add pins to 3D models in Power Apps
 
 
-You can add pins (shown as circular markers) to specific points on 3D models that you display with the [View in 3D](mixed-reality-component-view-3d.md) component. 
+You can add pins (shown as circular markers) to specific points on 3D models that you display with the [View in 3D](mixed-reality-component-view-3d.md) control. 
 
 
 This topic will guide you through creating a test app with a 3D model that you can insert pins onto. It will show you how to:
@@ -40,16 +40,16 @@ First, insert a 3D model:
 
 1. Open the **Insert** tab.
 2. Expand **Media**.
-3. Select the component **View in 3D** to place it in the center of the app screen, or drag it to position it anywhere on the screen.  
+3. Select the control **View in 3D** to place it in the center of the app screen, or drag it to position it anywhere on the screen.  
 
-    :::image type="content" source="./media/augmented-3d/augmented-3d-insert.png" alt-text="Insert the View in 3D component into the app.":::
+    :::image type="content" source="./media/augmented-3d/augmented-3d-insert.png" alt-text="Insert the View in 3D control into the app.":::
 
-    A default shape is included in the component. You can change this shape to another by altering the **Source** property. For more information, see how to [define where the 3D content is stored](mixed-reality-component-view-3d-store.md). In this example, we'll use the URL *https://raw.githubusercontent.com/microsoft/experimental-pcf-control-assets/master/chair.glb*.
+    A default shape is included in the control. You can change this shape to another by altering the **Source** property. For more information, see how to [define where the 3D content is stored](mixed-reality-component-view-3d-store.md). In this example, we'll use the URL *https://raw.githubusercontent.com/microsoft/experimental-pcf-control-assets/master/chair.glb*.
 
 > [!NOTE]
-> This component will be named `ViewIn3D1` by default, and is how it will be referenced throughout this guide. If you add multiple versions of this component, you'll need to adjust your references.  
+> This control will be named `ViewIn3D1` by default, and is how it will be referenced throughout this guide. If you add multiple versions of this control, you'll need to adjust your references.  
 >
-> For example, if you insert a second copy of the component, by default it will be called `ViewIn3D1_1` and any code references will need to be changed to refer to it.
+> For example, if you insert a second copy of the control, by default it will be called `ViewIn3D1_1` and any code references will need to be changed to refer to it.
 
 
 Now you'll need to connect a set of predefined pins to your model.
@@ -57,7 +57,7 @@ Now you'll need to connect a set of predefined pins to your model.
 You can connect predefined pins in a few ways, but the easiest is to use a table in an Excel workbook.
 
 
-Your workbook needs to contain a named table with the following columns that should then be mapped to the associated property in the component's **Advanced** pane.
+Your workbook needs to contain a named table with the following columns that should then be mapped to the associated property in the control's **Advanced** pane.
 
 Column description | Maps to property
 -- | -- 
@@ -121,7 +121,7 @@ X Point | 0.00 | 0.72 | -0.20
     - **PinsY** as "Y Pins"
     - **PinsZ** as "Z Pins"
 
-1. The 3D component will now show each row in the table as a pin.
+1. The 3D control will now show each row in the table as a pin.
 
 
 
@@ -185,7 +185,7 @@ You can [create a collection](create-update-collection.md) within the app so use
       }
     )
     ```
-6. Select the view in 3D component and change the **Pins(Items)** property to `PinsCollection`.
+6. Select the view in 3D control and change the **Pins(Items)** property to `PinsCollection`.
 
     ![In the Pins(Items) field, select the PinsCollection option.](./media/augmented/pins-collect-connect.png "In the Pins(Items) field, select the PinsCollection option")
 
@@ -213,9 +213,9 @@ As users add pins with the **Add pin** button, they will display in the table be
 
 ## Other MR controls
 
-- View 3D content in mixed reality with the **[View in MR](mixed-reality-component-view-mr.md)** component.
-- Measure distance, area, and volume with the **[Measure in MR](mixed-reality-component-measure-distance.md)** component.
-- Create and view predefined 3D shapes with the **[View shape in MR](mixed-reality-component-view-shape.md)** component
+- View 3D content in mixed reality with the **[View in MR](mixed-reality-component-view-mr.md)** control.
+- Measure distance, area, and volume with the **[Measure in MR](mixed-reality-component-measure-distance.md)** control.
+- Create and view predefined 3D shapes with the **[View shape in MR](mixed-reality-component-view-shape.md)** control
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
