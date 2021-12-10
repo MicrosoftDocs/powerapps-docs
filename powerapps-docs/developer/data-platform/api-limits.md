@@ -76,8 +76,8 @@ The service protection API limits are evaluated per user. Each authenticated use
 
 Service protection API limits are enforced based on three facets:
 
-- The number of requests were sent by a user.
-- The combined execution time was required to process requests sent by a user.
+- The number of requests sent by a user.
+- The combined execution time required to process requests sent by a user.
 - The number of concurrent requests sent by a user.
 
 If the only limit was on the number of requests sent by a user, it would be possible to bypass it. The other facets were added to counter these attempts. For example:
@@ -170,7 +170,7 @@ Don't try to calculate how many requests to send at a time. Each environment can
 
 The higher limit on number of concurrent threads is something your application can use to have a significant improvement in performance. This is true if your individual operations are relatively quick. Depending on the nature of the data you are processing, you may need to adjust the number of threads to get optimum throughput.
 
-The `x-ms-dop-hint` response header value provides a hint for the Degree Of Parallelism (DOP) that represents a number of threads that should provide the good results for a given environment. The value of this header will be an integer between 1 and 1024. When using the <xref:Microsoft.Xrm.Tooling.Connector>.<xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient>, the `RecommendedDegreesOfParallelism` property will return this value.
+The `x-ms-dop-hint` response header value provides a hint for the Degree Of Parallelism (DOP) that represents a number of threads that should provide good results for a given environment. The value of this header will be an integer between 1 and 1024. When using the <xref:Microsoft.Xrm.Tooling.Connector>.<xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient>, the `RecommendedDegreesOfParallelism` property will return this value.
 
 More information:
 
