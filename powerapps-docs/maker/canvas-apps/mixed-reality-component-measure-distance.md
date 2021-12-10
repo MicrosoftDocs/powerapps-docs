@@ -1,60 +1,60 @@
 ---
-title: Use the Measure in MR component in Power Apps (Preview)
+title: Use the Measure in MR control in Power Apps
 description: Digitally measure distances and create areas and shapes in the real world with augmented reality features in Power Apps.
-author: iaanw
-manager: shellyha
+author: anuitz
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 3/25/2021
 ms.subservice: canvas-maker
-ms.author: iawilt
+ms.author: anuitz
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 contributors:
-  - iaanw
+  - tapanm-msft
+  - anuitz
 ---
 # Take measurements in mixed reality
 
-You can use the **Measure in MR** component in your app to let users measure distance, area, and volume. During measurement, you create two-dimensional and three-dimensional polygons that can be used to confirm how a certain-sized object would fit within a space.
+You can use the **Measure in MR** control in your app to let users measure distance, area, and volume. During measurement, you create two-dimensional and three-dimensional polygons that can be used to confirm how a certain-sized object would fit within a space.
 
-The component creates a button in your app. When app users click the button, it shows a live camera feed of the device. App users can then identify a starting point and then individual points to measure from. The distances of measured segments are shown directly on the live camera feed.
+The control creates a button in your app. When app users click the button, it shows a live camera feed of the device. App users can then identify a starting point and then individual points to measure from. The distances of measured segments are shown directly on the live camera feed.
 
 
 :::image type="content" source="./media/augmented-overview/measure-in-mixed-reality.png" alt-text="Photo showing a corner between two construction walls being measured with a mobile device.":::
 
-When the user exits the component, the measurements that were taken are captured in the **Measurements** and **MeasurementsDetailed** properties so they can be saved or stored.
+When the user exits the control, the measurements that were taken are captured in the **Measurements** and **MeasurementsDetailed** properties so they can be saved or stored.
 
 Screenshots taken during the mixed reality experience are stored in the **Photos** property for viewing within the app.
 
 
 > [!TIP]
-> The mixed-reality components work best in well-lit environments with flat-textured surfaces. When establishing tracking, point the device at the surface you would like to track and slowly pan the device from right to left in broad arm motions. If tracking fails, exit and enter the mixed-reality view to reset the tracking and try again.  
+> The mixed-reality controls work best in well-lit environments with flat-textured surfaces. When establishing tracking, point the device at the surface you would like to track and slowly pan the device from right to left in broad arm motions. If tracking fails, exit and enter the mixed-reality view to reset the tracking and try again.  
 >
 > LIDAR-enabled devices will also result in better tracking.
 
-## Use the component
+## Use the control
 
-Insert the component into your app as you normally would for any other button component.
+Insert the control into your app as you normally would for any other button control.
 
 With an app open for editing in [Power Apps Studio](https://create.powerapps.com):
 
 1. Open the **Insert** tab.
 2. Expand **Mixed reality**.
-3. Select the component **Measure in MR** to place it in the center of the app screen, or drag and drop it to position it anywhere on the screen.
+3. Select the control **Measure in MR** to place it in the center of the app screen, or drag and drop it to position it anywhere on the screen.
 
 :::image type="content" source="./media/augmented-measure/augmented-measure.png" alt-text="Select Measure in MR.":::
 
 
-You can modify the component with a number of properties.
+You can modify the control with a number of properties.
 
 
 ### Properties
 
-The following properties are on the component's **Measure in MR** pane on the **Properties** and **Advanced** tabs.
+The following properties are on the control's **Measure in MR** pane on the **Properties** and **Advanced** tabs.
 
 :::image type="content" source="./media/augmented-measure/augmented-measure-properties.png" alt-text="The Measure in MR pane.":::
 
@@ -95,7 +95,7 @@ OnChange | Behavior that is triggered when any property on the button is changed
 
 **[Font](./controls/properties-text.md)** – The name of the family of fonts in which text appears.
 
-**[FontStyle](./controls/properties-text.md)** – The style of the text in the component: **None**, **Strikethrough**, **Underline**, or **Italic**.
+**[FontStyle](./controls/properties-text.md)** – The style of the text in the control: **None**, **Strikethrough**, **Underline**, or **Italic**.
 
 **[FontSize](./controls/properties-text.md)** – The font size of the text that appears on a control.
 
@@ -139,11 +139,11 @@ OnChange | Behavior that is triggered when any property on the button is changed
 
 **[Y](./controls/properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (or the screen if there's no parent container).
 
-## Other mixed reality components
+## Other mixed reality controls
 
-- View 3D content with the **[View in 3D](mixed-reality-component-view-3d.md)** component.
-- View images and 3D content in the real world with the **[View in mixed reality](mixed-reality-component-view-mr.md)** component.
-- Create and view predefined 3D shapes with the **[View shape in mixed reality](mixed-reality-component-view-shape.md)** component
+- View 3D content with the **[View in 3D](mixed-reality-component-view-3d.md)** control.
+- View images and 3D content in the real world with the **[View in mixed reality](mixed-reality-component-view-mr.md)** control.
+- Create and view predefined 3D shapes with the **[View shape in mixed reality](mixed-reality-component-view-shape.md)** control
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

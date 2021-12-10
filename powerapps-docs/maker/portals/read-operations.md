@@ -17,7 +17,7 @@ contributors:
 
 # Query data using portals Web API (preview)
 
-You can use [available Web API operations](web-api-overview.md#web-api-operations) in portals. Web API operations consist of HTTP requests and responses. This article shows sample read operations, methods, URI, and the sample JSON you can use in the HTTP request.
+You can use [available Web API operations](web-api-overview.md#web-api-operations) in portals. Web API operations consist of HTTP requests and responses. This article provides sample read operations, methods, URI, and the sample JSON you can use in the HTTP request.
 
 > [!IMPORTANT]
 > - This is a preview feature.
@@ -41,7 +41,7 @@ You must configure the site setting **WebAPI/enableReadOperationPreview** and se
 
 ## Query records
 
-This example queries account records.
+The following example queries account records:
 
 | **Operation** | **Method** | **URI** |
 |-------------------------|-------------------------|-------------------------|
@@ -90,7 +90,7 @@ Retrieve account by using account ID:
 
 ## Apply system query options
 
-Each of the system query options you append to the URL for the entity set is added using the syntax for query strings. The first is appended after \[**?**\] and the following query options are separated using \[**&**\]. All query options are case-sensitive as shown in the following example.
+Each of the system query options you append to the URL for the entity set is added using the syntax for query strings. The first is appended after \[**?**\] and the following query options are separated using \[**&**\]. All query options are case-sensitive as shown in the following example:
 
 | **Method** | **URI** |
 |-------------------------|-------------------------|
@@ -98,14 +98,14 @@ Each of the system query options you append to the URL for the entity set is add
 
 ## Request specific properties
 
-Use the **$select** system query option to limit the properties returned as shown in the following example.
+Use the **$select** system query option to limit the properties returned as shown in the following example:
 
 | **Method** | **URI** |
 |-------------------------|-------------------------|
 | **GET** | `[Portal URI]/_api/accounts?$select=name,revenue&$top=3`</br></br>**Example:**</br>`https://contoso.powerappsportals.com/_api/accounts?$select=name,revenue&$top=3` |
 
 > [!IMPORTANT]
-> This is a performance best practice. If properties aren't specified and you have configured the `Webapi/<table name>/fields` site setting value to `*` then all properties will be returned using `$select`. If no properties are specified then an error will be returned.
+> This is a performance best practice. If properties aren't specified and you have configured the `Webapi/<table name>/fields` site setting value to `*`, then all properties will be returned using `$select`. If no properties are specified, then an error will be returned.
 
 ## Filter results
 
@@ -113,7 +113,7 @@ Use the **$filter** system query option to set criteria for which rows will be
 
 ### Standard filter operators
 
-The Web API supports the standard OData filter operators listed in the following table.
+The Web API supports the standard OData filter operators listed in the following table:
 
 | **Operator**             | **Description**       | **Example**                                                              |
 |--------------------------|-----------------------|--------------------------------------------------------------------------|
@@ -151,7 +151,7 @@ Specify the order in which items are returned using the **$orderby** system qu
 
 ## Aggregate and grouping results
 
-By using **$apply,** you can aggregate and group your data dynamically as seen in the following examples.
+By using **$apply,** you can aggregate and group your data dynamically as seen in the following examples:
 
 | **Scenarios**                                                | **Example**                                                                                        |
 |--------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
@@ -166,7 +166,7 @@ By using **$apply,** you can aggregate and group your data dynamically as seen
 
 ## Retrieve a count of rows
 
-Use the **$count** system query option with a value of true to include a count of entities that match the filter criteria up to 5000.
+Use the **$count** system query option with a value of true to include a count of entities that match the filter criteria up to 5,000.
 
 | **Method** | **URI** |
 |-------------------------|-------------------------|
@@ -256,7 +256,7 @@ The following example shows how to retrieve the contact for all the account reco
 
 ### Retrieve related tables by expanding collection-valued navigation properties
 
-If you expand on collection-valued navigation parameters to retrieve related entities for entity sets, only one level of depth is returned if there's data. Otherwise, the collection will return an empty array.
+If you expand on collection-valued navigation parameters to retrieve related tables for entity sets, only one level of depth is returned if there's data. Otherwise, the collection will return an empty array.
 
 | **Method** | **URI** |
 |-------------------------|-------------------------|
@@ -276,7 +276,7 @@ The following example demonstrates how you can expand related entities for entit
 
 ### See also
 
-[Web API overview](web-api-overview.md)</br>
+[Portals Web API overview](web-api-overview.md)</br>
 [Tutorial: Use portal Web API](webapi-tutorial.md)</br>
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

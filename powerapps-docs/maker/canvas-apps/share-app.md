@@ -28,7 +28,7 @@ After you build a canvas app that addresses a business need, specify which users
 
 Before you share an app, you must [save it to the cloud](save-publish-app.md#save-changes-to-an-app) (not locally) and then [publish](save-publish-app.md#publish-an-app) it.
 
-- Give your app a meaningful name and a clear description, so that people know what your app does and they can easily find it in a list. On the **File** menu in Power Apps Studio, select **App settings**, specify a name, and then enter a description.
+- Give your app a meaningful name and a clear description, so that people know what your app does and they can easily find it in a list. Select **Settings** > specify a name, and then enter a description.
 
 - Whenever you make changes, you must save and publish the app again if you want others to see those changes.
 

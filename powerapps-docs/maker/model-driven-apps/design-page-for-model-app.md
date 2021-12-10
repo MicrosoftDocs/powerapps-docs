@@ -18,13 +18,12 @@ search.app:
 ---
 # Design a custom page for your model-driven app (preview)
 
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
-
 This article provides tips for designing a custom page for use in a model-driven app.
 
-  > [!IMPORTANT]
-  > - This is a preview feature, and isn't available in all regions.
-  > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
+> [!IMPORTANT]
+> - The base functionality of custom pages has moved to general availability in all regions.  However some specific or new capabilities are still in public preview and are marked with _(preview)_.
+> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)] 
+> - Custom pages are a new feature with significant product changes and currently have a number of known limitations outlined in [Custom Page Known Issues](model-app-page-issues.md).
 
 ## Supported controls in a custom page
 
@@ -51,7 +50,7 @@ Custom page authoring currently supports a subset of canvas app controls. The ta
   |[Edit Form](../canvas-apps/controls/control-form-detail.md)|Input|
   |[Display Form](../canvas-apps/controls/control-form-detail.md)|Input|
   |Code components|Custom| [Add code components to a custom page](page-code-components.md)|
-  |Canvas components|Custom| [Add canvas components to a custom page](page-canvas-components.md)|
+  |Canvas components (preview) |Custom| [Add canvas components to a custom page](page-canvas-components.md)|
   
 <sup>1</sup> Control is a new modern control. The control was introduced for [canvas apps in Teams]( /power-platform-release-plan/2020wave1/microsoft-powerapps/build-apps-teams-modern-controls). The control is based on [Fluent UI library](https://developer.microsoft.com/fluentui#/controls/web) wrapped with  [Power Apps Component Framework](../../developer/component-framework/overview.md).
 
@@ -62,7 +61,7 @@ You can add both low-code (canvas components) and pro-code (code components) cus
 In general, the low-code extensibility approach is simpler to build, test, and has a lower maintenance cost. We recommend evaluating canvas components first and then use code components only if there is a need for more complex and advanced customization.
 
 More information:
-- [Canvas component gallery,](https://powerusers.microsoft.com/t5/Canvas-Apps-Components-Samples/bd-p/ComponentsGallery)
+- [Canvas component gallery](https://powerusers.microsoft.com/t5/Canvas-Apps-Components-Samples/bd-p/ComponentsGallery)
 - [Code components samples](../../developer/component-framework/use-sample-components.md)
 - [Code components community resources](../../developer/component-framework/community-resources.md)
 
@@ -70,7 +69,16 @@ More information:
 
 Responsive custom page layouts are defined by building a hierarchy of **Horizontal layout container** and **Vertical layout container** controls.  These controls are found in the canvas app designer under **Layout** on the **Insert** tab.
 
-Resize the topmost container to fill the entire space with these properties.
+Set the minimum screen height and width on the **App** object to prevent page level scroll bars and use a vertical body scroll bar.
+
+  ```powerappsfl
+  MinScreenHeight=200
+  MinScreenWidth=200
+  ```
+
+Optionally, the custom page design size can be adjusted in **Settings** > **Display** with **Size** set to **Custom**.  Then set the **Width** and **Height** to a more typical desktop custom page size like width 1080 and height 768.  Changing this setting after controls are added to the screen may cause some layout properties to become reset.
+
+Set the topmost container to fill the entire space and resize based on available space.  
 
   ```powerappsfl
   X=0
@@ -78,6 +86,36 @@ Resize the topmost container to fill the entire space with these properties.
   Width=Parent.Width
   Height=Parent.Height
   ```
+
+### Horizontal wrapping of a flexible height container 
+
+To support pages adjusting from desktop down to a narrow width, enable these properties on a horizontal container with flexible height.  Without these settings, the page will clip controls when the page is narrow.
+
+  ```powerappsfl
+  Direction=Horizontal
+  FlexibleHeight=true
+  Justify=Stretch
+  Align=Stretch
+  VerticalOverflow=Scroll
+  Wrap=True
+  ```
+
+Child containers or controls directly under this container should be set to have a minimum width that allows the page to fit within a 300 px width.  Consider the padding on the container or control as well as parent containers. 
+
+### Vertical wrapping of a flexible width container 
+
+To support pages adjusting from desktop down to a narrow width, enable these properties on a vertical container with flexible width.  Without these settings, the page will clip controls when the page is narrow.
+
+  ```powerappsfl
+  Direction=Vertical
+  FlexibleWidth=true
+  Justify=Stretch
+  Align=Stretch
+  HorizontalOverflow=Scroll
+  Wrap=True
+  ```
+
+Child containers or controls directly under this container should be set to have a minimum height that allows the page to fit within a 300 px width.  Consider the padding on the container or control as well as parent containers. 
 
 More information: [Building responsive layout](../canvas-apps/build-responsive-apps.md "Building responsive layout").
 
@@ -94,6 +132,7 @@ More information: [Building responsive layout](../canvas-apps/build-responsive-a
 1. On the parent horizontal container, set **Align (vertical)** to **Stretch**.
 
 1. Insert two **Vertical Container** controls within the parent **Horizontal Container**.
+
 
 ## Styling custom page controls to align to model-driven app controls
 

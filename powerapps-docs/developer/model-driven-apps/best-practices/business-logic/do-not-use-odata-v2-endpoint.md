@@ -13,7 +13,7 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 10/28/2021
+ms.date: 11/10/2021
 ms.subservice: mda-developer
 ms.author: jdaly
 search.audienceType: 
@@ -32,7 +32,7 @@ search.app:
 
 There are no immediate symptoms, but code using this endpoint will stop working when the deprecated endpoint is removed.
 
-There will be announcements before this endpoint is removed.
+We plan to remove this endpoint on November 11, 2022. [OData v2.0 Service removal date announcement](https://aka.ms/DataverseODataV2EndpointRemoval)
 
 ## Guidance
 

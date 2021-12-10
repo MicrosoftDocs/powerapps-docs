@@ -2,7 +2,6 @@
 title: Set up lists for SharePoint Online integration with Power Apps, Power Automate, and Power BI
 description: Learn about how to set up SharePoint lists to use as a data source for apps, flows, reports, and dashboards.
 author: NickWaggoner
-manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
