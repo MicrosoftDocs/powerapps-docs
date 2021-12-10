@@ -89,7 +89,7 @@ For example, if you had a choice column on your table called `approvalstatus`, y
 
 #### Performance impact and choice name columns
 
-When retrieving the name/label column, Dataverse makes a join with the internal stringmap table (where localized labels are stored). This is executed for each label/name column. Note that, this join and doing filters against the label/name column, rather than the value column, can significantly impact report query performance.
+When retrieving the name/label for a choice column, Dataverse makes a join with the internal stringmap table (where localized labels are stored). This is executed for each label/name column. Note that, this join and doing filters against the label/name column, rather than the value column, can significantly impact report query performance.
 
 ### Choices columns
 
