@@ -19,7 +19,7 @@ contributors:
 ---
 
 
-# Interactive map component 
+# Interactive map control 
 
 Easily bring dynamic mapping capabilities into your canvas apps by viewing the physical position of objects from a data source, or by inputting new physical locations.
 
@@ -27,36 +27,36 @@ Pan, tilt, zoom, and drag to center your map view. As you zoom out, the markers 
 
 The current location of the user can also be represented on the map on mobile devices or web experiences. 
 
-The map component also supports road and satellite views.
+The map control also supports road and satellite views.
 
-![Map component.](./media/augmented-geospatial/geospatial-map-component.png "Map component")
+![Map control.](./media/augmented-geospatial/geospatial-map-component.png "Map control")
 
-To use the component, you need to [enable geospatial features for the environment](geospatial-overview.md#enable-the-geospatial-features-for-the-environment).
+To use the control, you need to [enable geospatial features for the environment](geospatial-overview.md#enable-the-geospatial-features-for-the-environment).
 
-Make sure you also [review the prerequisites for using geospatial components](geospatial-overview.md#prerequisites).
+Make sure you also [review the prerequisites for using geospatial controls](geospatial-overview.md#prerequisites).
 
-## Use the component
+## Use the control
 
-Insert the component into your app as you normally would for any other control or component.
+Insert the control into your app as you normally would for any other control or control.
 
 With an app open for editing in the [Power Apps studio](https://create.powerapps.com):
 
 1. Open the **Insert** tab.
 2. Expand **Media**.
-3. Select the component **Map** to place it in the center of the app screen, or drag it to position it anywhere on the screen.
+3. Select the control **Map** to place it in the center of the app screen, or drag it to position it anywhere on the screen.
 4. To show the user's current location, 
 	- Toggle **Show current location** to **On**. 
 	- Under the property **Current location latitude**, insert **Location.Latitude**. 
 	- Under the property **Current location longitude**, insert **Location.Longitude**. 
 	- The current location pin should now appear on the map.
 	
-You can modify the component by using a number of [properties](#input-properties).
+You can modify the control by using a number of [properties](#input-properties).
 
-### Use the map component with data from Excel
+### Use the map control with data from Excel
 
-You can load a table that contains existing data from an Excel workbook into the map component. The component will then plot each row in your table as a map pin.
+You can load a table that contains existing data from an Excel workbook into the map control. The control will then plot each row in your table as a map pin.
 
-Your workbook needs to contain a named table with the following columns that should then be mapped to the associated property in the component's **Advanced** pane.
+Your workbook needs to contain a named table with the following columns that should then be mapped to the associated property in the control's **Advanced** pane.
 
 Column description | Maps to property | Required
 -- | -- | --
@@ -108,7 +108,7 @@ Coho Winery (sample) | -116.97751 | 32.87466 | |
 
 1. Save the workbook.
 
-1. Open or create a new app in Power Apps, and insert the map component.
+1. Open or create a new app in Power Apps, and insert the map control.
 
 1. On the **Properties** pane, select the **Locations(Items)** field and then search for *excel* and select **Import from Excel**.
 
@@ -129,13 +129,13 @@ Coho Winery (sample) | -116.97751 | 32.87466 | |
 
 ## Properties
 
-There are multiple properties that can be defined for the map component.
+There are multiple properties that can be defined for the map control.
 
 ### Input properties
 
-The following properties can be defined and configured in the component's **Properties** pane.
+The following properties can be defined and configured in the control's **Properties** pane.
 
-![Map component displayed next to its Properties pane.](./media/augmented-geospatial/geospatial-controls.png "Map component displayed next to its Properties pane")
+![Map control displayed next to its Properties pane.](./media/augmented-geospatial/geospatial-controls.png "Map control displayed next to its Properties pane")
 
 Some properties are only available on the **Advanced** tab in the **Properties** pane, in the **More options** section.
 
@@ -151,9 +151,9 @@ Some properties are only available on the **Advanced** tab in the **Properties**
 | Current location longitude | The longitude of the current location of the user if **Show Current Location** is enabled. | Floating point number | Properties | 
 | Satellite view | Whether the style of the map is a satellite view or a road view. | Boolean | Properties |
 | Cluster pins | Whether the map pins are clustered. | Boolean | Properties |
-| Zoom control | Whether the zoom component appears on the map. | Boolean | Properties |
-| Compass control | Whether the compass component appears on the map. | Boolean | Properties |
-| Pitch control | Whether the pitch component appears on the map. | Boolean | Properties |
+| Zoom control | Whether the zoom control appears on the map. | Boolean | Properties |
+| Compass control | Whether the compass control appears on the map. | Boolean | Properties |
+| Pitch control | Whether the pitch control appears on the map. | Boolean | Properties |
 | Pin color | The color of the pins. | Color picker | Properties |
 | ItemsLabels | A column in Items with the strings you want to use as labels for the pins. | ColumnName | Advanced |
 | ItemsAddresses | A column in Items with the strings that represent the location of the pins. | ColumnName | Advanced |
@@ -169,7 +169,7 @@ Some properties are only available on the **Advanced** tab in the **Properties**
 | Show info cards | Whether informational cards appear on the pins of the map. | Enum | Properties |
 | Show shapes | Whether the shapes in **Shapes_Items** appear on the map. | Boolean | Properties |
 | Show shape labels | Whether the labels appear on the shapes of the map. | Boolean | Properties |
-| Enable shape drawing | Whether the drawing tools component appears on the map. | Boolean | Properties |
+| Enable shape drawing | Whether the drawing tools control appears on the map. | Boolean | Properties |
 | Enable shape deleting and label editing | Whether shapes can be deleted and their labels can be edited on the map. | Boolean | Properties |
 | Shapes_Items | Name of the table in your data source that contains all the records with GeoJSON objects that you want to show in the map as shapes. | TableName | Advanced |
 | ShapeGeoJSONObjects | Name of the column in the table in your data source with strings that represent the GeoJSON objects of the shapes. | ColumnName | Advanced |
@@ -182,7 +182,7 @@ Some properties are only available on the **Advanced** tab in the **Properties**
 
 ### Output properties
 
-The component outputs various properties when a user interacts with it inside an app. You can use these outputs in other components or to customize the experience. 
+The control outputs various properties when a user interacts with it inside an app. You can use these outputs in other controls or to customize the experience. 
 
 The following table lists the output properties available.
 
@@ -223,7 +223,7 @@ The following table lists the output properties available.
 
 **[Tooltip](./controls/properties-core.md)** - Explanatory text that appears when the user hovers over a control.
 
-**Transparency** - How transparent the component is, as a percentage.
+**Transparency** - How transparent the control is, as a percentage.
 
 **[Visible](./controls/properties-core.md)** - Whether a control appears or is hidden.
 
@@ -236,9 +236,9 @@ The following table lists the output properties available.
 
 
 
-## Other geospatial components
+## Other geospatial controls
 
-To see dynamic address suggestions as you type, use the **[Address input](geospatial-component-input-address.md)** component.
+To see dynamic address suggestions as you type, use the **[Address input](geospatial-component-input-address.md)** control.
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
