@@ -19,22 +19,26 @@ contributors:
 ---
 
 
-# Draw and insert shapes in the map component (Preview)
+# Draw and insert shapes in the map control (preview)
 
 [!INCLUDE[Preview disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 You can add a drawing panel to your interactive maps that lets your users draw and label shapes in the app.
 
-You can also create and label shapes on maps you insert into your Power Apps app with the interactive map component.
+You can also create and label shapes on maps you insert into your Power Apps app with the interactive map control.
 
 Inserting pre-defined shapes is useful to highlight specific regions or areas of interest, such as a sales district or shipping zone.
 
 :::image type="content" source="media/geospatial/custom-geojson-shape-example.png" alt-text="Screenshot of map with example shapes drawn and labeled.":::
 
+> [!IMPORTANT]
+> - This is a preview feature.
+> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
+
 ## Prerequisites
 1. Create a Canvas app and make sure it meets the [Geospatial prerequisites](geospatial-overview.md#prerequisites). 
 
-2. In your app, [insert a map](geospatial-component-map.md#use-the-component). 
+2. In your app, [insert a map](geospatial-component-map.md#use-the-control). 
 
 ## Draw and label shapes on interactive maps
 To draw and label shapes on maps, you first need to enable the following settings:
@@ -48,13 +52,13 @@ To draw and label shapes on maps, you first need to enable the following setting
  
     :::image type="content" source="media/geospatial/enable-feature.png" alt-text="Screenshot of the properties pane the features turned to On.":::
 
-You will now see the drawing panel on the top left corner of the map component. The panel consists of three tools:
+You will now see the drawing panel on the top left corner of the map control. The panel consists of three tools:
 
 - A polygon drawing tool that allows you to create freeform custom shapes, indicated by a square icon with a broken top.
 - A square drawing tool that lets you draw squares and rectangles, indicated by a square icon.
 - A circle drawing tool that lest you draw circles and ovals, indicated by a circle icon.
 
-:::image type="content" source="media/geospatial/drawing-panel.png" alt-text="Screenshot of the map component, with the drawing panel highlighted.":::
+:::image type="content" source="media/geospatial/drawing-panel.png" alt-text="Screenshot of the map control, with the drawing panel highlighted.":::
 
 >[!NOTE]
 >When you've finished drawing a freeform custom shape, double-click to indicate the last point in the shape.
@@ -63,15 +67,15 @@ Drawn shapes are automatically labeled. To change the labels, enter the new name
 
 To delete a shape, select it, then select the Delete button, indicated by a trashcan icon, in the drawing panel. 
  
-:::image type="content" source="media/geospatial/example-shapes.png" alt-text="Screenshot of the map component with sample shapes and labels, with the trashcan icon and label panel highlighted.":::
+:::image type="content" source="media/geospatial/example-shapes.png" alt-text="Screenshot of the map control with sample shapes and labels, with the trashcan icon and label panel highlighted.":::
 
-## Import GeoJSON shapes into the map component
+## Import GeoJSON shapes into the map control
 
 If you already have shapes defined in GeoJSON format, you can import them directly into your map. For example, you might have an existing shape that defines a specific geographical area or sales district that you want to highlight on the map.
 
 The GeoJSON string for each shape in the dataset needs to be in [the correct format](https://en.wikipedia.org/wiki/GeoJSON), within a single cell.
 
-To import shapes, you first connect your dataset in the map component, and then refer to the appropriate dataset columns, as in the following screenshot example:
+To import shapes, you first connect your dataset in the map control, and then refer to the appropriate dataset columns, as in the following screenshot example:
 
 :::image type="content" source="media/geospatial/custom-geojson-shape.png" alt-text="Screenshot of the advanced properties pane showing dataset fields filled in and the resulting custom shapes on the map.":::
 
@@ -105,7 +109,7 @@ You can copy the following sample data into an Excel workbook to test this featu
 
 1. Bind the columns in the dataset as indicated in this table:
 
-    Map component field | Column in sample data
+    Map control field | Column in sample data
     -- | --
     ShapeGeoJSONObjects | GeoJSON
     ShapeLabels | County
@@ -116,15 +120,15 @@ The map will now highlight four counties in Washington state in the US, with dif
 :::image type="content" source="media/geospatial/cusotm-geojson-counties.png" alt-text="Screenshot of an app with a map that highlights the various counties of Washington state in the US.":::
 
 
-## Measurement outputs from shapes drawn (Preview)
+## Measurement outputs from shapes drawn (preview)
 
 You can show the length of the perimeter (in feet) and volume of the area (square feet) of a selected shape in your app.
 
 1. In your app, open the **Insert** tab, and expand **Display**.
 
-2. Select the **Text label** component to insert a label. Adjust the size as you see fit.
+2. Select the **Text label** control to insert a label. Adjust the size as you see fit.
 
-3.	On the **Properties** pane, add *[Map].SelectedShape.Area* or *[Map].SelectedShape.Perimeter* in the **Text** field to display the area and perimeter of selected shape in the map component. 
+3.	On the **Properties** pane, add *[Map].SelectedShape.Area* or *[Map].SelectedShape.Perimeter* in the **Text** field to display the area and perimeter of selected shape in the map control. 
 
 
 In the following example we used multiple text labels to display both the area and perimeter of the selected shape.
@@ -141,9 +145,9 @@ In the following example we used multiple text labels to display both the area a
 - [Add info cards to pins](geospatial-map-infocards.md)
 
 
-## Other geospatial components
+## Other geospatial controls
 
-To see dynamic address suggestions as you type, use the **[Address input](geospatial-component-input-address.md)** component.
+To see dynamic address suggestions as you type, use the **[Address input](geospatial-component-input-address.md)** control.
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
