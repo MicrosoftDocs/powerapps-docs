@@ -2,11 +2,10 @@
 title: Download function in Power Apps
 description: Reference information including syntax and examples for the Download function in Power Apps.
 author: gregli-msft
-manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: nabuthuk
+ms.reviewer: tapanm
 ms.date: 05/04/2020
 ms.subservice: canvas-maker
 ms.author: gregli
@@ -16,7 +15,7 @@ search.app:
   - PowerApps
 contributors:
   - gregli-msft
-  - nkrb
+  - tapanm-msft
 ---
 
 # Download function in Power Apps
@@ -29,7 +28,7 @@ The **Download** function downloads a file from the web to the local device.
 
 In native players (Windows, Android, and iOS), the user is prompted for a location to save the file.  
 
-When used on the web, **Download** is dependent on the browser's settings to determine what happens with the file. For images, videos, and other file types that the browser natively supports, a new browser tab is opened to display the file.b Many browsers support saving the contents to the local file system.
+When used on the web, **Download** is dependent on the browser's settings to determine what happens with the file. For images, videos, PDFs, and other file types that the browser natively supports, a new browser tab is opened to display the file. Many browsers support saving the contents to the local file system.
 
 Only on Windows, **Download** returns the location where the file was stored locally as a text string.
 

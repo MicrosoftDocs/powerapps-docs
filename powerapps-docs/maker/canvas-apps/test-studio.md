@@ -1,22 +1,22 @@
 ---
 title: Test Studio
 description: Describes Test Studio with overview, terminology, best practices, and limitations.
-author: aengusheaney
-manager: kvivek
+author: maustinjones
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 04/24/2020
 ms.subservice: canvas-maker
-ms.author: aheaney
+ms.author: austinj
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 contributors:
   - tapanm-msft
-  - aengusheaney
+  - mattgon
+  - maustinjones
 ---
 
 # Test Studio

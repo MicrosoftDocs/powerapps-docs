@@ -5,12 +5,12 @@ author: dileepsinghmicrosoft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2021
+ms.date: 11/29/2021
 ms.subservice: portals
 ms.author: dileeps
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
-    - tapanm-msft
+    - nickdoelman
     - sandhangitmsft
     - dileepsinghmicrosoft
 ---
@@ -28,20 +28,21 @@ If your identity provider doesn't provide this document, you can create it manua
 > [!NOTE]
 > Similar to the discovery document, portals also requires the identity provider to provide a public *JWKS URI* endpoint where the public keys are available to verify the signature of the ID token. This endpoint needs to be specified in the discovery document as the *jwks_uri* key.
 
-## Does portals support *acr_values*, or *ui_locales* request parameters in the authentication requests?
+## Does portals support *acr_values* request parameters in the authentication requests?
 
-No. Portals doesn't support *acr_values* or *ui_locales* request parameters in authorization requests. However, the portals feature does support all the required&mdash;and recommended&mdash;request parameters defined in the [OpenID Connect specification](https://openid.net/specs/openid-connect-core-1_0.html#AuthRequest).
+No. Portals doesn't support *acr_values* request parameters in authorization requests. However, the portals feature does support all the required&mdash;and recommended&mdash;request parameters defined in the [OpenID Connect specification](https://openid.net/specs/openid-connect-core-1_0.html#AuthRequest).
 
 The following optional parameters are supported:
 
 - Response_mode
 - Nonce
+- UI_Locales
 
 ## Does portals support custom scope parameters in authentication requests?
 
 Yes. Custom scope parameters can be specified by using the scope option during configuration.
 
-## Why does the username value in a contact, or an external identity record in Common Data Service, show a different value compared to what the user entered on the sign-in page?
+## Why does the username value in a contact, or an external identity record in Dataverse, show a different value compared to what the user entered on the sign-in page?
 
 The username field on a contact record and an external identity record will show the value sent in either the sub-claim or object ID (OID) claim (for Azure AD&ndash;based providers). This is because the sub-claim represents the identifier for the end user and is guaranteed by the identity provider to be unique. An OID claim (where the object ID is a unique identifier for all users in a tenant) is supported when used with single-tenant Azure AD&ndash;based providers.
 

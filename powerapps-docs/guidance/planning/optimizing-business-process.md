@@ -5,7 +5,7 @@ author: TGrounds
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: guidance
-ms.date: 06/16/2020
+ms.date: 10/12/2021
 ms.subservice: guidance
 ms.author: thground
 ms.reviewer: kathyos
@@ -70,6 +70,13 @@ Some key questions to ask:
 
   - [Using AI](/ai-builder/overview) to replace
         human attention
+
+> [!NOTE]
+> If your task is done fully on the desktop, you can use [process advisor](/power-automate/process-advisor-overview.md)
+to automatically optimize the process. 
+Process advisor has capabilities to [analyze your process](/power-automate/process-advisor-analyze), 
+and visualize it in a [process map](/power-automate/process-advisor-visualize.md).
+Process map reveals bottlenecks and metrics for your process through an analytical report.
 
 ## Example: Optimizing the expense report process
 

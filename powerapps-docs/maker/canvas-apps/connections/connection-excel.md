@@ -65,14 +65,14 @@ If you want a **Start from Data** app but with the newer version of the connecto
 
 You can create a blank application (or you can modify an existing one) and then choose to add a new Excel data source.
 
-The Excel Online (Business) Connector allows users to work with Excel files in document libraries that are supported by Microsoft Graph (OneDrive for Business, SharePoint sites (Preview), and Microsoft 365 Groups).
+The Excel Online (Business) Connector allows users to work with Excel files in document libraries that are supported by Microsoft Graph (OneDrive for Business, SharePoint sites (preview), and Microsoft 365 Groups).
 
 > [!NOTE]
 > The ability to connect to Excel files on SharePoint sites is still in Preview. Connecting to Excel files on OneDrive is supported.
 
-There were several limitations of the old Excel connector including the fact that only a single user could work with the Excel file at a time and you couldn't access files on a SharePoint site (Preview).
+There were several limitations of the old Excel connector including the fact that only a single user could work with the Excel file at a time and you couldn't access files on a SharePoint site (preview).
 
-The updated Excel Online (Business) Connector is faster, more robust, allows for multiple users, and can work with all standard document libraries (OneDrive for Business, SharePoint sites (Preview), and Microsoft 365 Groups.)
+The updated Excel Online (Business) Connector is faster, more robust, allows for multiple users, and can work with all standard document libraries (OneDrive for Business, SharePoint sites (preview), and Microsoft 365 Groups.)
 
 To add Excel as a data source, find the **Excel Online (Business)** connector in the list of connectors.
 

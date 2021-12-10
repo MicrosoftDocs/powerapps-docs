@@ -7,10 +7,10 @@ ms.topic: conceptual
 ms.custom: 
 ms.date: 06/23/2021
 ms.subservice: teams
-ms.author: namarwah
+ms.author: jshum
 ms.reviewer: tapanm
 contributors:
-  - navjotm
+  - josephshum
   - tapanm-msft
   - joel-lindstrom
 ---
@@ -23,6 +23,9 @@ We'll go over how to customize the Milestones app using Power Apps Studio in Mic
 Before you can customize the app, you must install it from the Teams store. You can get the app at <https://aka.ms/teamsmilestones>.
 
 Once the app is installed, you can then customize it using the following steps.
+
+Watch this video to learn how to customize Milestones sample app:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLiBR]
 
 ## Open Power Apps app in Teams
 

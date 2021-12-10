@@ -25,12 +25,6 @@ search.app:
   - PowerApps
   - D365CE
 ---
-
-
-<!--note from editor: I think "dataflows" should be lowercase based on this entry in the Microsoft style guide (scroll down to find dataflows): https://styleguides.azurewebsites.net/Styleguide/Read?id=2696&topicid=42299 -->
-
-
-
 # Self-service data prep with dataflows
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
@@ -108,10 +102,7 @@ section, you get a tour of how dataflows can be used in an organization.
 Dataflows can be used to populate tables in the [Common Data
 Service](./data-platform-intro.md)
 that are then used in Power Apps applications. With a few clicks, you can
-integrate data from online and on-premises sources data sources.
-
-<!--from editor: In the last sentence above, should it change to "...on-premises data sources." ? -->
-
+integrate data from online and on-premises data sources.
 
 ### Extend the Common Data Model for your business needs
 For organizations that want to extend and build upon the Common Data Model,
@@ -129,7 +120,7 @@ Databricks, Azure Data Factory, and more.
 
 For more information about Azure Data Lake Storage Gen2 and dataflows
 integration, including how to create dataflows that reside in your
-organization's Azure Data Lake, see [Connect Azure Data Lake Storage Gen2 for dataflow storage](connect-azure-data-lake-storage-for-dataflow.md).
+organization's Azure Data Lake, see [Connect Azure Data Lake Storage Gen2 for dataflow storage](/power-query/dataflows/connect-azure-data-lake-storage-for-dataflow).
 
 ## Summary of self-service data prep for big data in Power Apps
 There are multiple scenarios and examples where dataflows can enable you to get
@@ -167,11 +158,11 @@ common usage scenarios for dataflows:
 
 -   [Creating and using dataflows in Power Apps](./create-and-use-dataflows.md)
 
--   [Add data to a table in Dataverse](./add-data-power-query.md)
+-   [Add data to a table in Dataverse](/power-query/dataflows/add-data-power-query)
 
--   [Connect Azure Data Lake Storage Gen2 for dataflow storage](./connect-azure-data-lake-storage-for-dataflow.md)
+-   [Connect Azure Data Lake Storage Gen2 for dataflow storage](/power-query/dataflows/connect-azure-data-lake-storage-for-dataflow)
 
--   [Using dataflows with on-premises data sources](./using-dataflows-with-on-premises-data.md)
+-   [Using an on-premises data gateway in Power Platform dataflows](/power-query/dataflows/using-dataflows-with-on-premises-data)
 
 For more information about Power Query and scheduled refresh, you can read these
 articles:

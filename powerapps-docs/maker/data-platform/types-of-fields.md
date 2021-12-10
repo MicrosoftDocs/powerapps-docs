@@ -2,7 +2,7 @@
 title: "Column data types in Microsoft Dataverse | MicrosoftDocs"
 description: "Understand the different column data types available for your app"
 keywords: ""
-ms.date: 05/20/2021
+ms.date: 08/13/2021
 ms.service: powerapps
 ms.custom: 
 ms.topic: article
@@ -24,8 +24,8 @@ search.app:
 
 The names used for types depend on the designer used. [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) uses a convention that includes the way the data is formatted. The solution explorer type uses a name aligned with the database data type with a format modifier.
 
-Watch this video for a quick overview on how to create a column in Dataverse:
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWEC1G]
+Watch this video for a quick overview about data types in Dataverse:
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWJ4Su]
 
 The following table includes the corresponding `AttributeTypeDisplayName` API type.
 
@@ -260,7 +260,7 @@ More information for developers working with image data:
 
 The **File** column is used for storing binary data. The primary intended use of this column is to store a single image, note, or attachment. However, storage of other forms of binary data is also possible. One or more columns of this data type can be added to an existing standard customizable table or a custom table.
 
-The default **Maximum file size** is 32 MB and the largest size you can set is 128 MB. The file size limit can be set individually for each column of file type added to a table. 
+The default **Maximum file size** is 32 MB and the largest size you can set is 10 GB. The file size limit can be set individually for each column of file type added to a table. 
 
 >[!NOTE]
 > Once the maximum file size has been saved, it can't be changed.

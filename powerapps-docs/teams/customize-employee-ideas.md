@@ -7,11 +7,11 @@ ms.topic: conceptual
 ms.custom: 
 ms.date: 07/02/2021
 ms.subservice: teams
-ms.author: namarwah
+ms.author: jshum
 ms.reviewer: tapanm
 contributors:
   - joel-lindstrom
-  - navjotm
+  - josephshum
   - tapanm-msft
   - sbahl10
 ---
@@ -23,6 +23,9 @@ The Employee Ideas sample app for Microsoft Teams is designed to be a complete a
 Before you can customize the app, you must install it from the Teams store. You can get the app at <https://aka.ms/TeamsEmployeeIdeas> .
 
 Once the app is installed, follow the steps in this article to customize the app.
+
+Watch this video to learn how to customize the Employee Ideas app:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWL2Uu]
 
 ## Opening Power Apps app in Teams
 

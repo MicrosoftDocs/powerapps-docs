@@ -5,12 +5,12 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 08/05/2021
+ms.date: 12/01/2021
 ms.subservice: portals
 ms.author: sandhan
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
-    - tapanm-msft
+    - nickdoelman
     - sandhangitmsft
 ---
 
@@ -87,11 +87,11 @@ $(document).ready(function (){
 ```
 ## List configuration
 
-You can easily enable and configure actions (Create, Edit, Delete, and so on) for records in a list. It is also possible to override default labels, sizes, and other attributes so that the list will be displayed exactly the way you want.
+You can easily enable and configure actions (create, edit, delete, and so on) for records in a list. It is also possible to override default labels, sizes, and other attributes so that the list will be displayed exactly the way you want.
 
-These settings are found in the Configuration section of the list form. By default, only **Basic Settings** are shown. Select **Advanced Settings** to see additional settings.
+These settings are found on the **Options** tab in the **Grid Configuration** section of the list form. By default, only **Basic Settings** are shown. Select **Advanced Settings** to see additional settings.
 
-![Configure a list.](../media/configure-entitylist.png "Configure a list")  
+:::image type="content" source="media/lists/configure-entitylist.png" alt-text="Configure a list."::: 
 
 **Attributes**
 
@@ -278,8 +278,9 @@ Enabling a **Workflow action** allows a user to run an on-demand workflow agains
 >[!NOTE]
 > This method of securing lists would be deprecated soon. Therefore, it shouldn't be used. Use proper [table permissions](entity-permissions-studio.md), and web role setup to provide access to users for any data instead. More information: [Table permission changes for forms and lists on new portals](../important-changes-deprecations.md#table-permission-changes-for-forms-and-lists-on-new-portals)
 
+To secure a list, you must configure Table Permissions for the table for which records are being displayed and also select the checkbox for **Enable Table Permissions** setting. If you don't, you'll see the following warning:
 
-To secure a list, you must configure Table Permissions for the table for which records are being displayed and also set the **Enable Table Permissions** Boolean value on the list record to true.
+"Table permissions should be enabled for this record or anyone on the internet can view the data.".
 
 The act of securing a list will ensure that for any user who accesses the page, only records that they have been given permission to are shown. This is achieved by an additional filter being added to the model-driven app views that are being surfaced via the list. This filter will filter only for records that are accessible to the user, via **Read** permission.
 
@@ -293,37 +294,40 @@ If the **EntityList/ShowRecordLevelActions** site setting is set to **false** an
 
 ## Adding a view details page
 
-By setting the Web Page for Details View lookup to a webpage, the details of a record listed in the grid can be viewed as read-only or edited, depending on the configuration of the associated form or page.
+By setting the **Web Page for Details View** lookup to a webpage, the details of a record listed in the grid can be viewed as read-only or editable, depending on the configuration of the associated form or page.
 
-This page can be a completely customized page template, perhaps created by using Liquid. The most common scenario is probably to have the details page be a webpage that either contains a basic form or Advanced form.
+This page can be a completely customized page template, perhaps created by using Liquid. The most common scenario is probably to have the details page be a webpage that either contains a basic form or advanced form.
 
-The important thing to be aware of is that each record listed in the grid will have a hyperlink to the details page, and the link will contain a named Query String parameter with the ID of the record. The name of the Query String parameter depends on the ID Query String Parameter Name specified on the list. The final thing to note is that the targeted details webpage must also be aware of the name of this Query String parameter to get the ID of the record that it needs to query and load its data.
+The important thing to be aware of is that each record listed in the grid will have a hyperlink to the details page, and the link will contain a named query string parameter with the ID of the record. The name of the query string parameter depends on the **ID Query String Parameter Name** value specified on the list. The final thing to note is that the targeted details webpage must also be aware of the name of this query string parameter to get the ID of the record that it needs to query and load its data.
+
+> [!NOTE]
+> The **Web Page for Details view** is a default setting configured for a list. The hyperlink on the grid will navigate to the default web page if the list is not configured using the **View** or **Edit** action settings in the **Grid Configuration** section on the **Options** tab. If either of the **View** or **Edit** action settings are configured with target type as a basic form, clicking the hyperlink in the list grid will open a dialog.
 
 ![Add view details page.](../media/add-view-details-page.png "Add view details page")  
 
-**Using a basic form to display details**
+### Using a basic form to display details
 
 To create a basic form please refer the instructions found on the [basic form](entity-forms.md) page.
 
 The following are the important settings to be aware of for ensuring that the record from the list is loaded in the basic form.
 
-The Record ID Parameter Name on Basic Form must match the ID Query String Parameter Name on List.
+The **Record ID Parameter Name** on the basic form must match the **ID Query String Parameter Name** on the list.
 
-The Mode can be either Edit or ReadOnly, depending on your needs.
+The **Mode** can be either *Edit* or *ReadOnly*, depending on your needs.
 
-**Using advanced form to display details**
+### Using advanced form to display details
 
-The following are the important settings to be aware of for ensuring that the record from the list is loaded in the Advanced form.
+The following are the important settings to be aware of for ensuring that the record from the list is loaded in the advanced form.
 
-The Primary Key Query String Parameter Name on Advanced Form Step must match the ID Query String Parameter Name on List.
+The **Primary Key Query String Parameter Name** on the advanced form step must match the **ID Query String Parameter Name** on the list.
 
-The Mode can be either Edit or ReadOnly, depending on your needs.
+The **Mode** can be either *Edit* or *ReadOnly*, depending on your needs.
 
-**Using a details page for the Create function**
+### Using a details page for creating a new record
 
-You can use a custom page, basic form, or Advanced form in the same fashion for the Create function. This is an alternative to defining a Create action on the form. You cannot define both a Create action *and* a custom page for Create: defining a custom action takes precedence.
+You can use a custom page, basic form, or advanced form in the same fashion for creating a new record. This is an alternative to defining a **Create** action on the list on the **Grid Configuration** section under the **Options** tab. You cannot define both a **Create** action *and* a custom page for create: defining a **Create** action takes precedence.
 
-If you assign a webpage to the Create Lookup on the list and do not specify a Create action by using Configuration, a Create button will be rendered on the list; this button will link the user to the custom page you have designated for Create.
+If you assign a webpage to the **Web Page for Create** lookup on the list and do not specify a **Create** action in the **Grid Configuration** section, a create button will be rendered on the list; this button will link the user to the custom page you have designated.
 
 ## List filter configuration
 
@@ -504,8 +508,11 @@ To display records by using a calendar, those records need to include at a minim
 
 If enabled, a table can be published to an OData feed. The OData protocol is an application-level protocol for interacting with data via RESTful web services. Data from this feed can be viewed in a web browser, consumed by a client-side web application, or imported into [!INCLUDE[pn-excel-short](../../../includes/pn-excel-short.md)].
 
-> [!CAUTION]
-> Use caution when enabling OData feeds without table permissions for sensitive information. OData feed is accessible anonymously and without authorization checks if **Enable Table Permissions** is disabled.
+> [!NOTE]
+> Lists that have OData feeds enabled require appropriate [table permissions](entity-permissions-studio.md) setup for the feed on these lists to work. Hence, you must enable table permissions on a list that has OData feeds enabled.
+> - Latest portal solutions will show the following error, and won't allow you to save the list without enabling table permissions:
+> <br> "Table permissions must be enabled from the General tab because the OData feed is enabled."
+> - Older portal solutions don't show the above message. However, for the lists with OData feeds enabled, table permissions are always considered enabled even if you save the list without selecting **Enable Table Permissions** setting explicitly.
 
 ## Enhanced view filter for lists
 

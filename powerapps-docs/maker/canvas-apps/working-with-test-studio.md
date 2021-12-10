@@ -2,7 +2,6 @@
 title: Working with Test Studio
 description: Describes how to use Test Studio with example for testing canvas apps.
 author: aengusheaney
-manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
@@ -22,6 +21,9 @@ contributors:
 # Working with Test Studio
 
 In this quickstart, you'll create tests for a canvas app called Kudos. You can also explore and discover testing concepts and apply them to writing tests for your own canvas apps. The sample Kudos app is part of a suite of employee engagement apps available to download from [Employee Experience Starter Kit](https://powerapps.microsoft.com/en-us/blog/powerapps-employee-experience-starter-kit).
+
+Watch this video to learn how to work with Test Studio:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLvMa]
 
 ## Open Test Studio
 

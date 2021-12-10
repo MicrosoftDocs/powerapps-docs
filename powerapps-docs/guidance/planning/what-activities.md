@@ -5,7 +5,7 @@ author: TGrounds
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: guidance
-ms.date: 06/16/2020
+ms.date: 10/12/2021
 ms.subservice: guidance
 ms.author: thground
 ms.reviewer: kathyos
@@ -53,6 +53,13 @@ When we spoke to Lee, Shawna, and Rebecca, they told us the steps were:
     report form. (Often they'll make copies (photo or photocopy) for their own records.)
 
 10. Get the form and receipts to the manager (either by walking to their desk, interoffice mail, or postal mail).
+
+> [!NOTE]
+> If your task is done fully on the desktop, you can discover all the steps 
+different people in your organization are performing to complete the task by 
+using our process discovery functionality called [process advisor](/power-automate/process-advisor-overview.md). 
+Process advisor visualizes your process in a [process map](/power-automate/process-advisor-visualize.md) 
+and reveals bottlenecks and metrics for your process through an analytical report.
 
 > [!div class="nextstepaction"]
 > [Next step: What data is needed?](what-data-needed.md)

@@ -7,17 +7,20 @@ ms.topic: conceptual
 ms.custom: 
 ms.date: 06/29/2021
 ms.subservice: teams
-ms.author: namarwah
+ms.author: jshum
 ms.reviewer: tapanm
 contributors:
   - joel-lindstrom
-  - navjotm
+  - josephshum
   - tapanm-msft
   - sbahl10
 ---
 # Replace notification with adaptive card to increase collaboration
 
 In this article, we'll be changing the notifications that come from the Employee Ideas app from HTML-based messages in Teams to adaptive cards in Teams. Currently, Teams notifications are started from within the app and are sent as a message posted to the Teams channel. We'll replace this Teams channel notification with an adaptive card notification that will be initiated using a Power Automate flow.
+
+Watch this video to learn how to replace notifications with adaptive card:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLn9C]
 
 ## Prerequisites
 

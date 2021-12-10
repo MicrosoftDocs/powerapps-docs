@@ -5,7 +5,7 @@ author: emcoope-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/07/2021
+ms.date: 08/16/2021
 ms.subservice: teams
 ms.author: emcoope
 ms.reviewer: tapanm
@@ -355,6 +355,9 @@ To get started with visual editor, select **Create a table** and enter
 the table name. You can also expand the *Advanced settings* to update the table's plural name. For example, a table name can be *Shape*, and the plural table name can be *Shapes*.
 
 ![Create table.](media/studio-create-table.png "Create table")
+
+Watch this video that shows you how to quickly create table and columns.
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWJ4MI]
 
 > [!NOTE]
 > You can use visual editor in Power Apps Studio to quickly create a table while authoring an app. However, you can also use the [Build tab](edit-delete-table.md) to edit or delete the tables you create by using Power Apps Studio. Go to [Create tables in Microsoft Teams](create-table.md) for more information about creating tables by using the **Build** tab.

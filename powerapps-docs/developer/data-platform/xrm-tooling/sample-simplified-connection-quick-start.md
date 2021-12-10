@@ -7,7 +7,7 @@ author: Nkrb
 ms.service: powerapps
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: samples
+ms.topic: sample
 applies_to: 
   - Microsoft Dataverse (online)
 ms.assetid: a4fb3634-948e-4bac-a32f-f626c78d83a0

@@ -2,7 +2,7 @@
 title: "Auditing overview (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Read how the auditing capability of Microsoft Dataverse can be used to record column and table data changes over time for use in analysis and reporting purposes." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 03/26/2021
+ms.date: 11/01/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -48,7 +48,9 @@ Organizations often need to be in compliance with various regulations to ensure 
  The following lists what cannot be audited for Dataverse:  
   
 * Audit of read operations
-* Audit of table and column definition changes 
+* Audit of table and column definition changes
+
+However, you can enable audit of read operations from the Power Platform admin center (PPAC). More information: [Enable auditing](/power-platform/admin/enable-use-comprehensive-auditing#enable-auditing)
   
 ## Key concepts  
  The following bullets identify some key auditing concepts:  

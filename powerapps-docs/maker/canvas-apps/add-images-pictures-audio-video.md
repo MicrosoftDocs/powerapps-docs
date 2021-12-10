@@ -2,12 +2,11 @@
 title: Using multimedia files in canvas apps
 description: Show multimedia files in a canvas app, and upload them to a data source.
 author: emcoope-msft
-manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 05/21/2020
+ms.date: 11/11/2021
 ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
@@ -17,6 +16,7 @@ search.app:
 contributors:
   - tapanm-msft
   - emcoope-msft
+  - TashasEv
 ---
 # Using multimedia files in canvas apps
 
@@ -27,6 +27,9 @@ This article walks you through working with multimedia, streaming, and input con
 ## Prerequisites
 
 [Sign up](../signup-for-powerapps.md) for Power Apps, and then [sign in](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) using the same credentials that you used to sign up.
+
+Watch this video to learn how to use multimedia files in canvas apps:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLAk7]
 
 ## Add media from a file or the cloud
 
@@ -231,6 +234,12 @@ In this scenario, you learn how to upload pen drawings to your data source, OneD
 1. [Save](save-publish-app.md#save-changes-to-an-app) and [Publish](save-publish-app.md#publish-an-app) you app.
 
 1. [Share app](share-app.md) with others.
+
+## Remove unused media
+
+You can remove all unused media from the app to clean up or reduce the size of the app using **Media** > **Remove unused media** option.
+
+:::image type="content" source="media\add-images-pictures-audio-video\remove-unused-media.png" alt-text="Remove unused media from the app":::
 
 ## Known limitations
 

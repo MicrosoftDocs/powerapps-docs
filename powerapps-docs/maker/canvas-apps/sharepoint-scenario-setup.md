@@ -2,12 +2,11 @@
 title: Set up lists for SharePoint Online integration with Power Apps, Power Automate, and Power BI
 description: Learn about how to set up SharePoint lists to use as a data source for apps, flows, reports, and dashboards.
 author: NickWaggoner
-manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 06/18/2020
+ms.date: 09/10/2021
 ms.subservice: canvas-maker
 ms.author: niwaggon
 search.audienceType: 
@@ -104,7 +103,7 @@ To continue with the scenario, you need to create the two SharePoint lists and p
 4. Copy the data and paste it into the grid in SharePoint, then click or tap **Done**.
    
     ![Completed list with data.](./media/sharepoint-scenario-setup/01-01-09-full-grid.png)
-5. Repeat the list creation and copy process for the "Project Details" list, using the project-details.xlsx workbook. Refer to the Project Details table in [Step 1: Understand the lists](#step-1-understand-the-lists) for the column names and data types.
+5. Repeat the list creation and copy process for the "Project Details" list, using the [project-details.xlsx](https://download.microsoft.com/download/8/1/b/81bae8d5-e408-4f05-bc2d-04afb4312ec8/project-details.xlsx) workbook. Refer to the Project Details table in [Step 1: Understand the lists](#step-1-understand-the-lists) for the column names and data types.
 
 ## Next steps
 The next step in this tutorial series is to [generate an app to handle project requests](sharepoint-scenario-generate-app.md).

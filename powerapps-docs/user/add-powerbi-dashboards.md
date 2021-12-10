@@ -86,7 +86,9 @@ To show the features available with a [!INCLUDE[pn_power_bi_for_office_365_short
   
 1. Select the **Refresh** button ![Refresh button.](media/embed-pbi-tile-refresh-button.png "Refresh button") to refresh the tile’s underlying report data.  
   
-2. Select the **Open in Power BI** button ![Open in Power BI button](media/open-in-power-bi.png "Open in Power BI button") to open the [!INCLUDE[pn_power_bi_for_office_365_short](../includes/pn-power-bi-for-office-365-short.md)] dashboard that contains the visualization  in a new browser tab.  
+2. Select the **Open in Power BI** button ![Open in Power BI button](media/open-in-power-bi.png "Open in Power BI button") to open the [!INCLUDE[pn_power_bi_for_office_365_short](../includes/pn-power-bi-for-office-365-short.md)] dashboard that contains the visualization  in a new browser tab.
+> [!NOTE]
+   > Power BI options to open a report in Power BI is not supported on mobile devices.
   
 3. Select the **Enlarge** button ![Enlarge tile.](media/embed-pbi-tile-enlarge-button.png "Enlarge tile") to expand the visualization and increase the viewing area for the visualization, like the Sales Pipeline tile displayed here.  
   

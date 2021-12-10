@@ -1,13 +1,13 @@
 ---
 title: "msdyn_solutionhistory table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the msdyn_solutionhistory table/entity."
-ms.date: 05/20/2021
+ms.date: 10/05/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -67,6 +67,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [msdyn_ismanaged](#BKMK_msdyn_ismanaged)
 - [msdyn_isoverwritecustomizations](#BKMK_msdyn_isoverwritecustomizations)
 - [msdyn_ispatch](#BKMK_msdyn_ispatch)
+- [msdyn_maxretries](#BKMK_msdyn_maxretries)
 - [msdyn_name](#BKMK_msdyn_name)
 - [msdyn_operation](#BKMK_msdyn_operation)
 - [msdyn_packagename](#BKMK_msdyn_packagename)
@@ -74,6 +75,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [msdyn_publisherid](#BKMK_msdyn_publisherid)
 - [msdyn_publishername](#BKMK_msdyn_publishername)
 - [msdyn_result](#BKMK_msdyn_result)
+- [msdyn_retrycount](#BKMK_msdyn_retrycount)
 - [msdyn_solutionhistoryId](#BKMK_msdyn_solutionhistoryId)
 - [msdyn_solutionid](#BKMK_msdyn_solutionid)
 - [msdyn_solutionversion](#BKMK_msdyn_solutionversion)
@@ -192,8 +194,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### msdyn_ismanaged Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -215,8 +217,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### msdyn_isoverwritecustomizations Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -238,13 +240,29 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### msdyn_ispatch Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
 **DefaultValue**: False
 
+
+
+### <a name="BKMK_msdyn_maxretries"></a> msdyn_maxretries
+
+|Property|Value|
+|--------|-----|
+|Description|Maximum number of retries.|
+|DisplayName|Maximum Retries|
+|Format|None|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|msdyn_maxretries|
+|MaxValue|2147483647|
+|MinValue|0|
+|RequiredLevel|None|
+|Type|Integer|
 
 
 ### <a name="BKMK_msdyn_name"></a> msdyn_name
@@ -277,18 +295,18 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### msdyn_operation Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Import|
-|1|Uninstall|
-|2|Export|
-|3|Publish|
-|4|PublishAll|
-|5|LanguageProvision|
-|6|ImportTranslation|
-|7|RibbonMetadataGeneration|
-|8|WorkflowSetState|
-|9|None|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Import||
+|1|Uninstall||
+|2|Export||
+|3|Publish||
+|4|PublishAll||
+|5|LanguageProvision||
+|6|ImportTranslation||
+|7|RibbonMetadataGeneration||
+|8|WorkflowSetState||
+|9|None||
 
 
 
@@ -370,13 +388,29 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### msdyn_result Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Success|
 |0|Failure|
 
 **DefaultValue**: False
 
+
+
+### <a name="BKMK_msdyn_retrycount"></a> msdyn_retrycount
+
+|Property|Value|
+|--------|-----|
+|Description|Retry count|
+|DisplayName|Retry count|
+|Format|None|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|msdyn_retrycount|
+|MaxValue|2147483647|
+|MinValue|0|
+|RequiredLevel|None|
+|Type|Integer|
 
 
 ### <a name="BKMK_msdyn_solutionhistoryId"></a> msdyn_solutionhistoryId
@@ -454,10 +488,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### msdyn_status Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Started|
-|1|Completed|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Started||
+|1|Completed||
 
 
 
@@ -475,13 +509,13 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### msdyn_suboperation Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|None|
-|1|New|
-|2|Upgrade|
-|3|Update|
-|4|Delete|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|None||
+|1|New||
+|2|Upgrade||
+|3|Update||
+|4|Delete||
 
 
 

@@ -2,7 +2,6 @@
 title: Common issues and resolutions for Power Apps
 description: A list of common issues and resolutions within Power Apps.
 author: KumarVivek
-manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas

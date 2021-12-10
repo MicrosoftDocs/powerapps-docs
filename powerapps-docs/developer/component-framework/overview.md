@@ -48,9 +48,10 @@ Developers can bundle all the HTML, CSS, and TypeScript files into a single [sol
 - Optimized for performance
 - Reusability
 - Ability to bundle all files into a single solution file.
+- Ability to handle being destroyed and reloaded for performance reasons while preserving state.
 
 ## Licensing
-<!--note from editor: I stopped here, in case this content is direct from CELA, except I turned "is" into "are" in the first sentence. Also made a couple of changes to the Note.-->
+
 Power Apps component framework licensing requirements are inline with existing connectors and components and are based on the type of data and connections used in your app. More information: [Power Apps pricing](https://powerapps.microsoft.com/pricing/). To align with the licensing requirements, we will be classifying code components into two types:
 
 - Code components that connect to external services or data directly via the user's browser client and not through connectors are considered as premium. When these components are used in an app, the app becomes premium, and end-users are required to have **Power Apps** licenses.

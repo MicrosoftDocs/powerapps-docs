@@ -5,19 +5,32 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 08/05/2021
+ms.date: 09/09/2021
 ms.subservice: portals
 ms.author: nenandw
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
     - neerajnandwana-msft
-    - tapanm-msft
+    - nickdoelman
     - dileepsinghmicrosoft
 ---
 
 # Analyze and resolve Portal Checker diagnostics results
 
 In this article, you'll learn about Portal Checker diagnostics results, and how to resolve any issues or problems found.
+
+## An active Search site marker isn't available for this portal
+
+This issue occurs when the **Search** site marker isn't available in your portal configuration. To fix this issue:
+
+1. Open the [Portal Management app](../configure/configure-portal.md).
+1. In the left pane, select **Site Markers**.
+1. If a site marker named **Search** is available and deactivated, activate it.
+1. If not available, create a new site marker with following values:
+    - **Name**: Search
+    - **Website**: Select the website of your portal host.
+    - **Page**: Select the webpage record that is set as the search page of your portal.
+1. Select **Save & Close**.
 
 ## Anonymous access to Basic/Advanced forms and Lists
 
@@ -55,7 +68,10 @@ Once these changes are made, appropriate table permissions would need to be crea
 
 ## Anonymous access available to OData feed
 
-List component in portal can be enabled for OData feed by enabling [OData feed configuration](/configure/entity-lists.md#list-odata-feeds) on lists.
+> [!NOTE]
+> Starting with release [9.3.7.x](/power-platform/released-versions/portals/portalupdate1), lists on all portals (new or existing) that have [OData feed](../configure/entity-lists.md#list-odata-feeds) enabled will require appropriate [table permissions](../configure/entity-permissions-studio.md) setup for the feed on these lists to work.
+
+List component in portal can be enabled for OData feed by enabling [OData feed configuration](../configure/entity-lists.md#list-odata-feeds) on lists. 
 
 To find anonymous OData feeds enabled on your portal:
 

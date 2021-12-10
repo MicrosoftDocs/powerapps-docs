@@ -15,7 +15,7 @@ sections:
     questions:
       - question: Where can I find some good examples of code components?
         answer: |
-          Lots of great examples from the community are available on the [Power Apps Community Forums](https://powerusers.microsoft.com/t5/Power-Apps-Component-Framework/Community-content-sample-components-blogs-etc-Link-to-this-page/td-p/280710).
+          We have published set of [basic components](https://docs.microsoft.com/powerapps/developer/component-framework/use-sample-components) which showcase usage of various component capabilities and APIs. Lots of great examples from the community are available on the [Power Apps Community Forums](https://powerusers.microsoft.com/t5/Power-Apps-Component-Framework/Community-content-sample-components-blogs-etc-Link-to-this-page/td-p/280710).
 
       - question: How to use rich data types in code components such as Collections?
         answer: |
@@ -48,9 +48,20 @@ sections:
       - question: Can I access form context like I can in model-driven apps event handlers?
         answer: |
           Accessing form context directly in a control is not supported. Code components are expected to work across various products like model-driven apps, canvas apps, dashboards, and hence they cannot have dependency on the form context. A work around is to make the code component bound to a column and add an `OnChange` event handler to that column. The code component can update the column value, and the `OnChange` event handler can access the form context. Column not bound to a table could be used, or a column bound to a table with `submitMode` set to `never` can be used. We will add support for the custom events in future which can be used for communicating changes outside of a control without adding a column configuration.
+
+      - question: Cannot add/remove properties from code component once it is imported
+        answer: |
+          The optional properties can be added in the newer component version, but existing properties cannot be removed. As a workaround, you can make the properties optional and hidden. Additionally, code components cannot add required properties in the newer version, and you need to create a code component with a new name and reconfigure it in the target system.
+
+      - question: Can I access Window object from the component?
+        answer: |
+          Currently, accessing [Window object](https://developer.mozilla.org/docs/Web/API/Window) from the control is not supported.
      
 additionalContent: |
   ## See also
 
   [Power Apps component framework API reference](reference/index.md)<br/>
   [Power Apps component framework overview](overview.md)
+
+
+

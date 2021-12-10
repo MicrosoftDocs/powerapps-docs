@@ -2,7 +2,6 @@
 title: Show, sort, and filter data in a canvas app gallery
 description: Learn about how to use a gallery to display images and text, and how to sort and filter the images in canvas apps.
 author: adrianorth
-manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas

@@ -1,68 +1,68 @@
 ---
-title: Use the View shape in MR component in Power Apps (Preview)
+title: Use the View shape in MR control in Power Apps
 description: View a predefined digital 3D shape in the real world with augmented reality features in Power Apps.
-author: iaanw
-manager: shellyha
+author: anuitz
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 3/25/2021
 ms.subservice: canvas-maker
-ms.author: iawilt
+ms.author: anuitz
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 contributors:
-  - iaanw
+  - tapanm-msft
+  - anuitz
 ---
 
 # Create and view predefined 3D shapes in mixed reality
 
-You can use the **View shape in MR** component in your app to let users see if a simple cube might fit within a specified space. They might want to do this to see how a certain object that you provide would fit in their space. If you have a 3D model of your object, you might like to use [the **View in MR** component](mixed-reality-component-view-mr.md) instead.
+You can use the **View shape in MR** control in your app to let users see if a simple cube might fit within a specified space. They might want to do this to see how a certain object that you provide would fit in their space. If you have a 3D model of your object, you might like to use [the **View in MR** control](mixed-reality-component-view-mr.md) instead.
 
-The component creates a button in your app. When app users click the button, it overlays a cube onto the live camera feed of the device. You set up the dimensions of the cube when you edit the component in Power Apps.
+The control creates a button in your app. When app users click the button, it overlays a cube onto the live camera feed of the device. You set up the dimensions of the cube when you edit the control in Power Apps.
 
 :::image type="content" source="./media/augmented-overview/view-shape-in-mixed-reality.png" alt-text="Photo showing a 3D shape being overlaid onto the real world through a mobile device.":::
 
 
 > [!TIP]
-> The MR components work best in well-lit environments with flat-textured surfaces. When establishing tracking, point the device at the surface you would like to track and slowly pan the device from right to left in broad arm motions. If tracking fails, exit and enter the MR view to reset the tracking and try again.  
+> The MR controls work best in well-lit environments with flat-textured surfaces. When establishing tracking, point the device at the surface you would like to track and slowly pan the device from right to left in broad arm motions. If tracking fails, exit and enter the MR view to reset the tracking and try again.  
 >
 > LIDAR-enabled devices will also result in better tracking.
 
 
 > [!TIP]
-> The MR components in Power Apps leverage Babylon and Babylon React Native. As a result of this shared MR platform, 3D content that works in the [Babylon sandbox](https://sandbox.babylonjs.com/) should work in Power Apps. 
+> The MR controls in Power Apps leverage Babylon and Babylon React Native. As a result of this shared MR platform, 3D content that works in the [Babylon sandbox](https://sandbox.babylonjs.com/) should work in Power Apps. 
 
 
-## Use the component
+## Use the control
 
-Insert the component into your app as you normally would for any other button control or component.
+Insert the control into your app as you normally would for any other button control or control.
 
 With an app open for editing in [Power Apps Studio](https://create.powerapps.com):
 
 1. Open the **Insert** tab.
 2. Expand **Mixed reality**.
-3. Select the component **View shape in MR** to place it in the center of the app screen, or drag and drop it to position it anywhere on the screen.
+3. Select the control **View shape in MR** to place it in the center of the app screen, or drag and drop it to position it anywhere on the screen.
 
    :::image type="content" source="./media/augmented-view-shape/augmented-view-shape.png" alt-text="Select View shape in MR.":::
 
-You can modify the component with a number of properties.
+You can modify the control with a number of properties.
 
 ### Properties
 
-The following properties are on the component's **View shape in MR** pane on the **Properties** and **Advanced** tabs.
+The following properties are on the control's **View shape in MR** pane on the **Properties** and **Advanced** tabs.
 
-:::image type="content" source="./media/augmented-view-shape/augmented-view-shape-properties.png" alt-text="Properties on the component's View shape in MR pane.":::
+:::image type="content" source="./media/augmented-view-shape/augmented-view-shape-properties.png" alt-text="Properties on the control's View shape in MR pane.":::
 
 Note that some properties are only available in the **Advanced** tab on the **View in MR** pane.
 
 Property | Description | Type | Location
 - | - | - | -
 Text | Label for the button. | String | Properties (also in **Advanced**)
-Alternative text | Text to be displayed if the component can't load, or if the app user hovers on the component. | String | **Properties** (also in **Advanced** as **AltText**)
+Alternative text | Text to be displayed if the control can't load, or if the app user hovers on the control. | String | **Properties** (also in **Advanced** as **AltText**)
 Display type | Whether the button shows just an icon, text, or both. | Drop-down selection | Properties (also in **Advanced**)
 Shape width | Width of the cube. | Integer | **Properties** (also in **Advanced**)
 Shape height | Height of the cube. | Integer | **Properties** (also in **Advanced**)
@@ -94,7 +94,7 @@ OnChange | Behavior that is triggered when any property on the button is changed
 
 **[Font](./controls/properties-text.md)** – The name of the family of fonts in which text appears.
 
-**[FontStyle](./controls/properties-text.md)** – The style of the text in the component: **None**, **Strikethrough**, **Underline**, or **Italic**.
+**[FontStyle](./controls/properties-text.md)** – The style of the text in the control: **None**, **Strikethrough**, **Underline**, or **Italic**.
 
 **[FontSize](./controls/properties-text.md)** – The font size of the text that appears on a control.
 
@@ -140,9 +140,9 @@ OnChange | Behavior that is triggered when any property on the button is changed
 
 ## Other mixed reality controls
 
-- View 3D content with the **[View in 3D](mixed-reality-component-view-3d.md)** component.
-- View images and 3D content in the real world with the **[View in mixed reality](mixed-reality-component-view-mr.md)** component.
-- Measure distance, area, and volume with the **[Measure in mixed reality](mixed-reality-component-measure-distance.md)** component.
+- View 3D content with the **[View in 3D](mixed-reality-component-view-3d.md)** control.
+- View images and 3D content in the real world with the **[View in mixed reality](mixed-reality-component-view-mr.md)** control.
+- Measure distance, area, and volume with the **[Measure in mixed reality](mixed-reality-component-measure-distance.md)** control.
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -2,7 +2,6 @@
 title: Create and update a collection in a canvas app
 description: Create a collection, add items to the collection, and remove one or all items from a collection in a canvas app.
 author: tapanm-msft
-manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
@@ -27,6 +26,9 @@ Use a collection to store data that users can manage in your app. A collection i
 - [Sign up](../signup-for-powerapps.md) for Power Apps, and then [sign in](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) by providing the same credentials that you used to sign up.
 - Create an app or open an existing app in Power Apps.
 - Learn how to [configure a control](add-configure-controls.md) in Power Apps.
+
+Watch this video to learn how to create and update a collection:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLvLS]
 
 ## Create a multicolumn collection
 

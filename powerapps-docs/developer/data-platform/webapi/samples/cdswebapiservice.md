@@ -2,7 +2,7 @@
 title: "CDSWebApiService class library (C#) (Microsoft Dataverse) | Microsoft Docs"
 description: "This .NET Framework class library provides an easier to use API for HTTP messaging with the the Microsoft Dataverse Web API."
 ms.custom: ""
-ms.date: 07/14/2021
+ms.date: 10/17/2021
 ms.service: powerapps
 applies_to: 
   - "Dynamics 365 (online)"
@@ -29,7 +29,10 @@ This class library demonstrates how to:
 - Manage Service Protection Limit API [429 Too Many Requests](https://developer.mozilla.org/docs/Web/HTTP/Status/429) errors that a client application should expect.
     - More information: [Service Protection API Limits](../../api-limits.md)
 
-Using the provided Visual Studio project, you can build a class library and include this functionality in your own application code. You can find the CDSWebApiService class library source code and Visual Studio solution at [PowerApps-Samples](https://github.com/microsoft/PowerApps-Samples)/cds/webapi/C#/CDSWebApiService.
+> [!NOTE]
+> This sample class library is a helper used by other samples. It is not intended to be a re-usable component for any kind of project.
+
+You can find the CDSWebApiService class library source code and Visual Studio solution at [PowerApps-Samples](https://github.com/microsoft/PowerApps-Samples)/cds/webapi/C#/CDSWebApiService.
 
 ## Example
 
@@ -260,7 +263,7 @@ The copy of the request is available because of the custom <xref:System.Net.Http
 
 When the internal <xref:System.Net.Http.HttpClient> is initialized in the CDSWebApiService constructor, an instance of this class is set as an <xref:System.Net.Http.HttpMessageHandler>. This class works with the ADAL libraries to ensure that the `accessToken` will be refreshed each time a request is sent. If the `accessToken` expires, the ADAL library methods will automatically refresh it.
 
-More information: [Example demonstrating a DelegatingHandler](../../authenticate-oauth.md#example-demonstrating-a-delegatinghandler)
+More information: [Example demonstrating a DelegatingHandler](../../authenticate-oauth.md#example-demonstrating-a-delegating-message-handler)
 
 ## ServiceConfig
 

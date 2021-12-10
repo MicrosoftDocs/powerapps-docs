@@ -39,7 +39,11 @@ Find the right online training, in person workshops, and events for your role as
 
     [App Creation](app-maker.md#app-creation)
 
-      :::column-end:::
+    [Flow Creation](app-maker.md#flow-creation)
+
+    [Exam](app-maker.md#exam)
+
+    :::column-end:::
 :::row-end:::
 :::row:::
     :::column:::
@@ -80,6 +84,8 @@ Find the right online training, in person workshops, and events for your role as
 
     [App creation](functional-consultant.md#app-creation)
 
+    [Flow creation](functional-consultant.md#flow-creation)
+
     [Exam](functional-consultant.md#exam)
 
         :::column-end:::
@@ -97,7 +103,5 @@ Find the right online training, in person workshops, and events for your role as
 
     :::column-end:::
 :::row-end:::
-
-
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -7,11 +7,11 @@ ms.topic: conceptual
 ms.custom: 
 ms.date: 05/27/2021
 ms.subservice: teams
-ms.author: namarwah
+ms.author: jshum
 ms.reviewer: tapanm
 contributors:
   - joel-lindstrom
-  - navjotm
+  - josephshum
   - tapanm-msft
 ---
 
@@ -915,7 +915,7 @@ More information: [View links and contacts](bulletins.md#view-links-and-contacts
 
 ### See also
 
-[Bulletins sample app (Preview)](bulletins.md) <br>
+[Bulletins sample app (preview)](bulletins.md) <br>
 [Use sample apps from the Microsoft Teams store](use-sample-apps-from-teams-store.md) <br>
 [Customize sample apps installed from Teams store](customize-sample-apps.md) <br>
 [Frequently Asked Questions (FAQs) for sample apps](sample-apps-faqs.md)

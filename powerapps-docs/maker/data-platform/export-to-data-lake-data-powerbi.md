@@ -45,9 +45,9 @@ This article shows you how to perform the following tasks:
 
 This section describes the prerequisites necessary to consume Dataverse data with Power BI by using the Azure Synapse Link for Dataverse service.
 
-- **Power BI Desktop**. [Get it now](https://powerbi.microsoft.com/downloads/)
+- **Power BI Desktop.** [Get it now](https://powerbi.microsoft.com/downloads/)
 
-- **Azure Synapse Link for Dataverse:** This guide assumes that you have already exported data from Dataverse by using the [Azure Synapse Link for Dataverse](export-to-data-lake.md). In this example, the account table data is exported to the data lake and will generate a report by using the account table columns.
+- **Azure Synapse Link for Dataverse.** This guide assumes that you have already exported data from Dataverse by using the [Azure Synapse Link for Dataverse](export-to-data-lake.md). In this example, the account table data is exported to the data lake and will generate a report by using the account table columns.
 
 - **Storage Account Access.** You must be granted one of the following roles for the storage account: Storage Blob Data Reader, Storage Blob Data Contributor, or Storage Blob Data Owner.
 

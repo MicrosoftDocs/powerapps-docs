@@ -1,6 +1,6 @@
 ---
 title: Build an app in Teams using Power Apps and Dataverse for Teams to retrieve Power Platform videos for readiness | Microsoft Docs
-description: Tutorial on how to build an app in Teams using Power Apps and Datverse for Teams that retrieves, lists, and displays content to used for readiness.
+description: Tutorial on how to build an app in Teams using Power Apps and Dataverse for Teams that retrieves, lists, and displays content to used for readiness.
 author: mmercuri
 ms.service: powerapps
 ms.topic: conceptual
@@ -13,7 +13,7 @@ contributors:
   - tapanm-msft
 ---
 
-# Tutorial: Build an app to retrieve Power Platform videos for readiness
+# Build an app to retrieve Power Platform videos for readiness
 
 In this tutorial, you’ll build a solution that retrieves, lists, and displays content that can be used for readiness.
 
@@ -522,7 +522,7 @@ Select the header of the action to show the title of **Evaluate links to determi
 
 1. Select **Add action** after *Create new record*.
 
-1. Enter **Teams** in the search box, and then select the **Post a message (V3) (Preview)** action.
+1. Enter **Teams** in the search box, and then select the **Post a message (V3) (preview)** action.
 
 1. In the drop-down for the **Team** property, select the team to send the message.
 
