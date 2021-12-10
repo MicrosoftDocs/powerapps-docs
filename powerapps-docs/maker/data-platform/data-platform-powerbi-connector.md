@@ -73,7 +73,7 @@ To use Power BI with Dataverse, you need the following items:
 
 ### Choice columns
 
-Choice columns are used in tables to provide a drop-down list of items to a user to make a single selection in apps and flows. When using the Power BI connector choice columns will be presented as two columns to show both the unique value, and the display item value.
+Choice columns are used in tables to provide a drop-down list of items to a user to make a single selection in apps and flows. When using the Dataverse connector, choice columns will be presented as two columns to show both the unique value, and the display item value.
 
 For example, if you had a choice column on your table called `approvalstatus`, you would see two columns in Power BI:
 
@@ -87,9 +87,13 @@ For example, if you had a choice column on your table called `approvalstatus`, y
     3|Approved
     4|Rejected
 
+#### Performance impact and choice name columns
+
+When retrieving the name/label column, Dataverse makes a join with the internal stringmap table (where localized labels are stored). This is executed for each label/name column. Note that, this join and doing filters against the label/name column, rather than the value column, can significantly impact report query performance.
+
 ### Choices columns
 
-Choices are similar to choice columns with the difference being that users can select multiple items from the list. Choices aren't currently fully supported with the Power BI connector.  When you use the Power BI connector with choices columns, you only receive the integer values, which are comma separated. The item value columns aren't returned. For more information about the Dataverse data types not supported with the Power BI connector, see [Supported operations and data types](../../developer/data-platform/dataverse-sql-query.md#supported-operations-and-data-types).
+Choices are similar to choice columns with the difference being that users can select multiple items from the list. Choices aren't currently fully supported with the Dataverse connector.  When you use the Dataverse connector with choices columns, you only receive the integer values, which are comma separated. The item label name columns aren't returned. For more information about the Dataverse data types not supported with the Dataverse connector, see [Supported operations and data types](../../developer/data-platform/dataverse-sql-query.md#supported-operations-and-data-types).
 
 ### Lookups
 
