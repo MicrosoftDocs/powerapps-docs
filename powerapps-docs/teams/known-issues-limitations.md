@@ -100,6 +100,10 @@ It's currently not possible to change your Studio version.
 
 Currency, Duration, Language, Ticker, and Timezone fields can't be added using visual editor. To create these fields, use the experience to work with tables as available using [solution explorer](create-table.md).
 
+## App Runtime
+
+Apps embedded in Teams are required to load within 30 seconds per Teams requirements. If apps exceed this 30 second limit, Teams will assume that the app has timed out and display an error screen. If your app is encountering this 30 second timeout, please review this document to learn how you can boost your app’s performance: [Tips to improve performance](../maker/canvas-apps/performance-tips.md)
+
 ## Theme
 
 Power Apps Studio and apps currently don't support **Dark theme**.
