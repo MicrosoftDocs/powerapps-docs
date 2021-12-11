@@ -1,6 +1,6 @@
 ---
-title: Use Find and Replace capability in the formula bar
-description: Learn how to use the find and Replace capability to search for strings and make changes to one or more matches.
+title: Use Find and Replace in the formula bar
+description: Learn how to use the find and Replace to search for strings and make changes to one or more matches.
 author: TashasEv
 ms.service: powerapps
 ms.topic: conceptual
@@ -18,7 +18,7 @@ contributors:
   - TashasEv
 ---
 
-# Use Find and Replace capability in the formula bar
+# Use Find and Replace in the formula bar
 
 In complex Power Apps, formulas can get lengthy. Locating and replacing portions of large formulas can become difficult. You can now use the **Find and Replace** capability for the selected control or property to easily find and replace the specified word or sequence of characters.
 
