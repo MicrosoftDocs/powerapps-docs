@@ -63,7 +63,7 @@ To get started, [create a new app](get-started-test-drive.md), or [edit an exist
 
     :::image type="content" source="media/formula-bar-find-replace/shortcut-keys.gif" alt-text="An animation showing the Find and Replace control launching by pressing Ctrl + F to launch Find and pressing Ctrl + H to launch Find and Replace":::
 
-### (Optional) Launch Find and Replace with text pre-selected
+### (Optional) Launch Find and Replace with text already selected
 
 You can also launch the control pre-populated with text from your formula that you wish to search for.
 
