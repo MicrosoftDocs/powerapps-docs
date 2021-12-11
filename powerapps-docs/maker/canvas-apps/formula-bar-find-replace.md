@@ -71,7 +71,7 @@ You can also launch the control pre-populated with text from your formula that y
 
 To do this, select or keep the cursor inside the formula bar over the text section that you want to find or replace. And then, use **Find and replace** button, or the shortcut keys as described earlier to launch **Find and Replace** control.
 
-:::image type="content" source="media/formula-bar-find-replace/select-find-replace.png" alt-text="Cursor placed on the portion of the formula to find and replce, and next screen with Find and replace control open.":::
+:::image type="content" source="media/formula-bar-find-replace/select-find-replace.png" alt-text="Cursor placed on the portion of the formula to find and replace, and another screen with the Find and Replace control open.":::
 
 ## Working with Find and Replace
 
@@ -79,17 +79,19 @@ When working with **Find**, you have three options to search the formula. When w
 
 ### Find
 
-Add text or characters to search for into the provided input area. You can then use the icons on the right hand side of the input area to help refine your search:
+Add text or characters to search for into the provided input area. 
+
+And then, use the icons on the right-hand side of the input area to help refine your search:
 
 - **Match case** returns only matches with the specified case.
 
-    In the example below, instances of *TicketList* will appear as a match, but *ticketlist* would not.
+    In the example below, instances of `TicketList` will appear as a match, but `ticketlist` wouldn't.
 
     :::image type="content" source="media/formula-bar-find-replace/match-case.png" alt-text="The Match Case refiner icon on the Find and Replace control":::
 
 - **Match Whole Word** returns only exact matches of the entire sequence of characters.
 
-    In the example below, instances of *Ticket* returns no matches although the word *Ticket* appears within names several times in the formula.
+    In the example below, instances of `Ticket` returns no matches although the word `Ticket` appears within names several times in the formula.
 
     :::image type="content" source="media/formula-bar-find-replace/match-whole-word.png" alt-text="The Match Whole Word refiner icon on the Find and Replace control":::
 
@@ -99,7 +101,7 @@ Add text or characters to search for into the provided input area. You can then 
 
     :::image type="content" source="media/formula-bar-find-replace/regex-highlighting.png" alt-text="The formula in the formula bar with matching results highlighted for the regular expression shown in the Find and Replace control":::
 
-- Use the **Previous match** and **Next match** arrow icons to move forward and backward through any matches the search returns. As you move through the matches, the match position updates and the row containing the match is highlighted to let you know which match you are currently working with.
+- Use the **Previous match** and **Next match** arrow icons to move forward and backward through any matches the search returns. As you move through the matches, the match position updates and the row containing the match is highlighted to let you know which match you're currently working with.
 
     :::image type="content" source="media/formula-bar-find-replace/match-highlighting.png" alt-text="The formula in the formula bar with a line highlighted for the match currently in focus from using the previous match and next match arrow icons":::
 
