@@ -142,8 +142,8 @@ Use the **Replace** or **Replace all** icons to update one or all matches return
 
 ### See also
 
-[Get started with formulas in canvas apps](working-with-formulas.md)
-[Add and configure controls](add-configure-controls.md)
+- [Get started with formulas in canvas apps](working-with-formulas.md)
+- [Add and configure controls](add-configure-controls.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
  
