@@ -27,7 +27,7 @@ With **Find and Replace** capability, you can search for combinations of letters
 ## Prerequisites
 
 - [Sign up](../signup-for-powerapps.md) for Power Apps.
-- [Create an app](get-started-test-drive.md.md) or [open an existing app](edit-app.md.md) in Power Apps.
+- [Create an app](get-started-test-drive.md) or [open an existing app](edit-app.md) in Power Apps.
 - Learn how to [configure a control](add-configure-controls.md).
 
 ## Launch Find and Replace
