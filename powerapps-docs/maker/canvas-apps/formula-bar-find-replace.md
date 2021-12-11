@@ -87,7 +87,7 @@ Add text or characters to search for into the provided input area. And then, use
 
 - **Match whole word** returns only exact matches of the entire sequence of characters.
 
-    In the example below, instances of `Ticket` returns no matches although the word `Ticket` appears within names several times in the formula.
+    In the example below, instances of `Ticket` returns no matches although the word `Ticket` appears within the names several times in the formula.
 
     :::image type="content" source="media/formula-bar-find-replace/match-whole-word.png" alt-text="The Match Whole Word refiner icon on the Find and Replace control":::
 
