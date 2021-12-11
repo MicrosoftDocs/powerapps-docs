@@ -1,13 +1,12 @@
 ---
-title: Find and Replace in the formula bar
-description: Learn how to use the formula bar Find and Replace capability to search for words and character sequences and make changes to one or more matches.
-author: tashas-msft
-manager: kvivek
+title: Use Find and Replace capability in the formula bar
+description: Learn how to use the find and Replace capability to search for strings and make changes to one or more matches.
+author: TashasEv
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 05/12/2021
+ms.date: 12/10/2021
 ms.subservice: canvas-maker
 ms.author: tashas
 search.audienceType: 
@@ -16,11 +15,16 @@ search.app:
   - PowerApps
 contributors:
   - tapanm-msft
-  - tashas-msft
+  - TashasEv
 ---
-# Using Find and Replace in the formula bar
 
-You can search for combinations of letters, numbers, words, and phrases within a formula in the formula bar using Find and Replace capability. In complex Power Apps, formulas can get lengthy and using Find and Replace can help you locate all instances of the specified word or sequence of characters, replace one or more matches, or replace all matches at once.
+# Use Find and Replace capability in the formula bar
+
+In complex Power Apps, formulas can get lengthy. Locating and replacing portions of large formulas can become difficult. You can now use the **Find and Replace** capability to locate all instances of the specified word or sequence of characters, replace one or more matches, or replace all matches at once.
+
+With **Find and Replace**, you can search for combinations of letters, numbers, words, and phrases within a formula in the formula bar. This capability also allows you to use text casing, whole words, and regular expressions to find and replace text inside formulas.
+
+In this article, you'll learn how to find and replace text, numbers, and phrases within a formula inside the formula bar.
 
 ## Prerequisites
 
@@ -28,80 +32,76 @@ You can search for combinations of letters, numbers, words, and phrases within a
 - Create an app or open an existing app in Power Apps.
 - Learn how to [configure a control](add-configure-controls.md).
 
+## Launch Find and Replace
 
-## Launch the Find and Replace control
+You can open the **Find and Replace** option in the formula bar using the **Find and replace** button, or shortcut keys. You can also pre-populate text in the search input.
 
-You can launch the Find and Replace control in the formula bar using the Find and Replace button or quick keys. Additionally, you can pre-populate text in the search input.
+To get started, [create a new app](get-started-test-drive.md), or [edit an existing app](edit-app.md) in Power Apps Studio. Once open, use any of the following methods to launch the **Find and Replace** control.
 
-### Using the Find and Replace button
+### Method 1: Use the Find and Replace button
 
-1. Sign in to [Power Apps](https://make.powerapps.com).
+1. Select the control or property that you want to edit.
 
-1. Open an existing app, or select a sample app under Create > Start from template. The formula bar appears near the top of the screen.
-
-1. Select the Expand button to expand the formula bar.
+1. Select the drop-down on the right-side of the formula bar to show the **Find and Replace** control.
 
     :::image type="content" source="media/formula-bar-find-replace/expand-button.png" alt-text="The expand button on the right hand side of the formula bar":::
 
-1. Options appear beneath the formula bar, including the **Find and Replace** button.
+    > [!TIP]
+    > You can also drag the formula bar down to expand the formula bar making it easier to read the formula.
+
+1. Select **Find and replace** from the bottom of the formula bar.
 
     :::image type="content" source="media/formula-bar-find-replace/find-replace-button.png" alt-text="The Find and Replace button underneath the formula bar":::
 
-1. Selecting the Find and Replace button launches the Find and Replace control on the right hand side of the formula bar.
+    **Find and Replace** control appears on the upper-right hand side of the formula bar.
 
     :::image type="content" source="media/formula-bar-find-replace/find-replace-formula-bar.png" alt-text="The Find and Replace control appears inside the formula bar":::
 
-### Using Quick Keys
+### Method 2: Use shortcut keys
 
-While your cursor is within the formula bar:
+1. Select the control or property that you want to edit.
 
-- Press **Ctrl+F** as a shortcut to find a specified word or sequence of characters in the current formula.
-- Press **Ctrl+H** as a shortcut to find and replace a specified word or sequence of characters in the current formula.
+1. While your cursor is within the formula bar, press **Ctrl+F** to find, or **Ctrl+H** to find and replace the specified word or sequence of characters in the formula.
 
-    :::image type="content" source="media/formula-bar-find-replace/quick-keys.gif" alt-text="An animation showing the Find and Replace control launching by pressing Ctrl + F to launch Find and pressing Ctrl + H to launch Find and Replace":::
+    :::image type="content" source="media/formula-bar-find-replace/shortcut-keys.gif" alt-text="An animation showing the Find and Replace control launching by pressing Ctrl + F to launch Find and pressing Ctrl + H to launch Find and Replace":::
 
-### Launch Find and Replace with text pre-selected
+### (Optional) Launch Find and Replace with text pre-selected
 
 You can also launch the control pre-populated with text from your formula that you wish to search for.
 
-1. Select the desired text within the formula. The text will be highlighted to indicate it is selected.
+To do this, select or keep the cursor inside the formula bar over the text section that you want to find or replace. And then, use **Find and replace** button, or the shortcut keys as described earlier to launch **Find and Replace** control.
 
-    :::image type="content" source="media/formula-bar-find-replace/select-text.png" alt-text="The selected text inside the formula bar with highlighting":::
-
-1. Select the Find and Replace button beneath the formula bar, or press Ctrl + F or Ctrl + H on your keyboard to launch the control with the desired text already populated in the search input field.
-
-    :::image type="content" source="media/formula-bar-find-replace/prepopulated-text.png" alt-text="The search input field on the Find and Replace control is pre-populated with the previously selected text":::
+:::image type="content" source="media/formula-bar-find-replace/select-find-replace.png" alt-text="Cursor placed on the portion of the formula to find and replce, and next screen with Find and replace control open.":::
 
 ## Working with Find and Replace
 
-There are several ways you can use the Find and Replace Control to work with a formula.
+When working with **Find**, you have three options to search the formula. When working with **Replace**, you have two options to choose from. We'll take a look at the options for both **Find** and **Replace**.
 
 ### Find
 
 Add text or characters to search for into the provided input area. You can then use the icons on the right hand side of the input area to help refine your search:
 
 - **Match case** returns only matches with the specified case.
-In the example below, instances of *TicketList* will appear as a match, but *ticketlist* would not.
+
+    In the example below, instances of *TicketList* will appear as a match, but *ticketlist* would not.
 
     :::image type="content" source="media/formula-bar-find-replace/match-case.png" alt-text="The Match Case refiner icon on the Find and Replace control":::
 
 - **Match Whole Word** returns only exact matches of the entire sequence of characters.
-In the example below, instances of *Ticket* returns no matches although the word *Ticket* appears within names several times in the formula.
+
+    In the example below, instances of *Ticket* returns no matches although the word *Ticket* appears within names several times in the formula.
 
     :::image type="content" source="media/formula-bar-find-replace/match-whole-word.png" alt-text="The Match Whole Word refiner icon on the Find and Replace control":::
 
-- **Use regular expression (RegEx)** returns only matches conforming to the regular expression specified within the input area. See [regular-expression syntax](/previous-versions/1400241x(v=vs.100)) for an introduction to the syntax.
-In the example below, using the Regular Expression search capability with *Screen(Priority|Task)* returns matches for Screen when it appears together with either Priority or Task as in the control names shown below.
+- **Use regular expression (RegEx)** returns only matches conforming to the regular expression specified within the input area. See [regular-expression syntax](/dotnet/standard/base-types/regular-expressions) for an introduction to the syntax.
+
+    In the example below, using the Regular Expression search capability with `Screen(Priority|Task)` returns matches for Screen when it appears together with either Priority or Task as in the control names shown below.
 
     :::image type="content" source="media/formula-bar-find-replace/regex-highlighting.png" alt-text="The formula in the formula bar with matching results highlighted for the regular expression shown in the Find and Replace control":::
 
-    :::image type="content" source="media/formula-bar-find-replace/use-regular-expression.png" alt-text="The Use Regular Expression refiner icon on the Find and Replace control":::
-
-- Use the **Previous Match** and **Next Match** arrow icons to move forward and backward through any matches the search returns. As you move through the matches, the match position updates and the row containing the match is highlighted to let you know which match you are currently working with.
+- Use the **Previous match** and **Next match** arrow icons to move forward and backward through any matches the search returns. As you move through the matches, the match position updates and the row containing the match is highlighted to let you know which match you are currently working with.
 
     :::image type="content" source="media/formula-bar-find-replace/match-highlighting.png" alt-text="The formula in the formula bar with a line highlighted for the match currently in focus from using the previous match and next match arrow icons":::
-
-    :::image type="content" source="media/formula-bar-find-replace/previous-next-arrow.png" alt-text="The previous match arrow and next match arrow icons in the center of the Find and Replace control":::
 
 - **Find in selection** limits the search area within a formula to only the selected portion of a formula. To select part of the formula, Select and hold at the beginning of the desired searching area and then drag your cursor to highlight the entire desired area. To select using the keyboard, move cursor focus to the beginning of the desired search area, then hold shift and use the arrow keys to highlight the desired search area.  
 
@@ -109,21 +109,38 @@ In the example below, using the Regular Expression search capability with *Scree
 
     :::image type="content" source="media/formula-bar-find-replace/selection-highlighting.png" alt-text="The formula in the formula bar showing a selected block of text":::
 
-    :::image type="content" source="media/formula-bar-find-replace/find-in-selection.png" alt-text="The Find in Selection icon near the right hand side of the Find and Replace control":::
-
 ### Replace
 
-By default, the Find and Replace control opens in collapsed format and only displays the Find capability. To expand the control and show the Replace capability, select the icon to the left of the search input box, or press Ctrl + H on your keyboard. To collapse again, select the rotated icon.
+By default, the **Find and replace** control opens in collapsed format and only displays the Find capability. To expand the control and show the Replace capability, select the icon to the left of the search input box, or press **Ctrl+H** on your keyboard. To collapse again, select the rotated icon.
 
-  :::image type="content" source="media/formula-bar-find-replace/toggle-replace-mode.png" alt-text="The Toggle Replace Mode icon on the left hand side of the Find and Replace control, before the text input areas":::
+Collapsed replace mode:
 
-  :::image type="content" source="media/formula-bar-find-replace/collapse-replace-mode.png" alt-text="The Collapse Replace Mode icon on the left hand side of the Find and Replace control, before the text input areas":::
+:::image type="content" source="media/formula-bar-find-replace/toggle-replace-mode.png" alt-text="The Toggle Replace Mode icon on the left hand side of the Find and Replace control, before the text input areas":::
+
+Expanded replace mode:
+
+:::image type="content" source="media/formula-bar-find-replace/collapse-replace-mode.png" alt-text="The Collapse Replace Mode icon on the left hand side of the Find and Replace control, before the text input areas":::
 
 In the Replace input area, specify the word or sequence of characters you’d like to replace the search text.
 
 Use the Replace or Replace All icons to update one or all matches returned with the specified word/characters.
 
-  :::image type="content" source="media/formula-bar-find-replace/replace-one-replace-all.png" alt-text="The Replace and Replace All icons on the right hand side of the Find and Replace control, after the Replace text input field. The Replace icon is first, Replace All icon is second":::
+:::row:::
+   :::column span="":::
+
+        **Replace**
+
+      :::image type="content" source="media/formula-bar-find-replace/replace-one.png" alt-text="The Replace icon on the right-hand side of the Find and Replace control, after the Replace text input field.":::
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+
+        **Replace all**
+
+      :::image type="content" source="media/formula-bar-find-replace/replace-all.png" alt-text="The Replace All icon on the right-hand side of the Find and Replace control, after the Replace text input field.":::
+   :::column-end:::
+:::row-end:::
 
 ### See also
 
