@@ -545,6 +545,8 @@
           href: ./canvas-apps/working-with-variables.md
         - name: Understand behavior formulas
           href: ./canvas-apps/working-with-formulas-in-depth.md
+        - name: Use Find and Replace in the formula bar
+          href: ./canvas-apps/formula-bar-find-replace.md
         - name: Show dates and times
           href: ./canvas-apps/show-text-dates-times.md
         - name: Create a collection
