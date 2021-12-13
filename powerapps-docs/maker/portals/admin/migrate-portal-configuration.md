@@ -18,16 +18,39 @@ contributors:
 
 Portal development involves several configurations and customizations to achieve a desired experience for portal end users.
 
-After you have completed development or configuration of your portal instance, you might want to migrate your latest portal configuration from development to testing or the production environments. Migration involves exporting the existing configuration from the source Microsoft Dataverse environment, and then importing it into the target Dataverse environment.
+After you have completed development or configuration of your portal instance, you might want to migrate your latest portal configuration from development to testing or the production environments. 
+
+Migration involves exporting the existing configuration from the source Microsoft Dataverse environment, and then importing it into the target Dataverse environment.
+
+## Prepare the target environment
+
+1. If this is the first portal on the target environment, you will first need to provision a new portal in your target environment.
+
+1. On the target environment, using the Portal Management app, delete the newly created website record.
+
+1. Transfer the portal metadata from the source environment using the Power Apps CLI or the Configuration Migration Tool.
+
+1. On the target environment, provision a new portal but use existing portal website.
+
+> [!NOTE] 
+> You do not need to repeat these steps for any further updates from the original source to target environments.
 
 # [Power Apps CLI](#tab/CLI)
 
-Power Apps CLI here.
+Power Apps CLI steps here.
 
+1. export data
 
----
+1. make updates
+
+1. Use deployment profiles
+
+1. upload portal metadata
 
 # [Configuration Migration Tool](#tab/CMT)
+
+>[!NOTE]
+> THe preferred method is to use the Power Apps CLI to transfer portal metadata.
 
 To export configuration data, you would need to use the Configuration Migration tool and a portal-specific configuration schema file. For more information about this tool, see [Manage configuration data](/dynamics365/customer-engagement/admin/manage-configuration-data).
 
