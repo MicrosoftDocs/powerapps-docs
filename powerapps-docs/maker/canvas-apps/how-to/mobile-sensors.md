@@ -362,5 +362,5 @@ Save and publish the app. On a mobile device with the necessary sensors, open th
 ### See also
 
 - [Acceleration, App, Compass, Connection, and Location signals in Power Apps](../functions/signals.md)
-- [Mixed reality components in Power Apps](../mixed-reality-overview.md)
-- [Geospatial components in Power Apps](../geospatial-overview.md)
+- [Mixed reality controls in Power Apps](../mixed-reality-overview.md)
+- [Geospatial controls in Power Apps](../geospatial-overview.md)

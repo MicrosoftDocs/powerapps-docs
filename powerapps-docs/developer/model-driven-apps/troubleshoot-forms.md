@@ -340,6 +340,8 @@ Finally, if the control passes all the above checks, the record state determines
 > [!NOTE]
 > The difference between `FormControls` and `ControlStateChange` is that the `FormControls` operation reflects the initial control state when the form is loaded, while the `ControlStateChange`operation reflects the state change at any time on the form, whether it's during form load, in OnChange or OnSave events after the form is loaded.
 
+> [!IMPORTANT]
+> A control's disabled and hidden state can change multiple times when a form is first loaded. To know the reason why a control is hidden or disabled, make sure to check the **last** operation logged in the monitor. For example, if there are no `ControlStateChange.visible/ControlStateChange.hidden` operations for the control being investigated, the value and reasoning will be in the `FormControls` operation. Otherwise, it will be the value and reason in the **last** `ControlStateChange.visible/ControlStateChange.hidden` operation. You can order logs by timestamp to search for the last operation. 
 
 ## Why a control has a certain value on form load
 

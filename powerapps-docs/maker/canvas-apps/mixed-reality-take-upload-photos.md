@@ -21,7 +21,7 @@ contributors:
 
 # Take and upload mixed-reality photos in Power Apps
 
-You can add a control to take photos of the mixed-reality (MR) experience in your apps that use the following components:
+You can add a control to take photos of the mixed-reality (MR) experience in your apps that use the following controls:
 - [View in MR](mixed-reality-component-view-mr.md)
 - [View shape in MR](mixed-reality-component-view-shape.md)
 - [Measure in MR](mixed-reality-component-measure-distance.md)
@@ -29,10 +29,10 @@ You can add a control to take photos of the mixed-reality (MR) experience in you
 
 This topic will guide you through creating a test app that you can use to take and upload photos from within an MR session, including:
 
-- Inserting a **View in 3D** component with the default sample 3D object included so you can see and manipulate a 3D object.
-- Connecting the **View in 3D** component to a **View in MR** component button so you can view the 3D object in MR.
-- Testing the components using an MR-capable device.
-- Inserting a gallery to view recorded photos taken from the **View in MR** component on the MR-capable device.
+- Inserting a **View in 3D** control with the default sample 3D object included so you can see and manipulate a 3D object.
+- Connecting the **View in 3D** control to a **View in MR** control button so you can view the 3D object in MR.
+- Testing the controls using an MR-capable device.
+- Inserting a gallery to view recorded photos taken from the **View in MR** control on the MR-capable device.
 - Uploading photos to OneDrive with a Power Automate flow.
 
 ## Prerequisites
@@ -41,25 +41,25 @@ This topic will guide you through creating a test app that you can use to take a
 - Create a OneDrive folder called **MRPhotos** to store your photos when testing the upload feature.
 
 > [!TIP]
-> - The MR components work best in well-lit environments with flat-textured surfaces. When establishing tracking, point the device at the surface you would like to track and slowly pan the device from right to left in broad arm motions. If tracking fails, exit and enter the MR view to reset the tracking and try again.
+> - The MR controls work best in well-lit environments with flat-textured surfaces. When establishing tracking, point the device at the surface you would like to track and slowly pan the device from right to left in broad arm motions. If tracking fails, exit and enter the MR view to reset the tracking and try again.
 > - LIDAR-enabled devices will also result in better tracking.
 
-## Insert and connect a 3D object to the View in MR component and test your app
+## Insert and connect a 3D object to the View in MR control and test your app
 
-With an app open for editing in [Power Apps Studio](https://create.powerapps.com), you can insert and connect the **View in 3D** and **View in MR** components. Using these components lets you overlay a sample 3D object (which looks like a box's frame) into the real world using your device's camera.
+With an app open for editing in [Power Apps Studio](https://create.powerapps.com), you can insert and connect the **View in 3D** and **View in MR** controls. Using these controls lets you overlay a sample 3D object (which looks like a box's frame) into the real world using your device's camera.
 
 1. Open the **Insert** tab.
 1. Expand **Media**.
-1. Select the component **View in 3D** to place it in the center of the app screen, or drag it to position it anywhere on the screen.  
+1. Select the control **View in 3D** to place it in the center of the app screen, or drag it to position it anywhere on the screen.  
 
-    A default shape is included in the component. You can change this shape to another by altering the **Source** property. For more information, see [how to define where the 3D content is stored](mixed-reality-component-view-3d-store.md). In this example, we'll use the URL *https://raw.githubusercontent.com/microsoft/experimental-pcf-control-assets/master/robot_arm.glb*.
+    A default shape is included in the control. You can change this shape to another by altering the **Source** property. For more information, see [how to define where the 3D content is stored](mixed-reality-component-view-3d-store.md). In this example, we'll use the URL *https://raw.githubusercontent.com/microsoft/experimental-pcf-control-assets/master/robot_arm.glb*.
 1. Open the **Insert** tab.
 1. Expand **Mixed reality**.
-1. Select the component **View in MR** to place it in the app screen, or drag it to position it anywhere on the screen.
+1. Select the control **View in MR** to place it in the app screen, or drag it to position it anywhere on the screen.
 
-    :::image type="content" source="./media/augmented-view-mr/augmented-view-mr.png" alt-text="Insert the View in MR component into the app.":::
+    :::image type="content" source="./media/augmented-view-mr/augmented-view-mr.png" alt-text="Insert the View in MR control into the app.":::
 
-1. In the **Properties** panel for the **View in MR** component, on the **Advanced** tab, select the **Source** field and enter `ViewIn3D1.Source` to set the source object as the 3D object you inserted with the **View in 3D** component.  
+1. In the **Properties** panel for the **View in MR** control, on the **Advanced** tab, select the **Source** field and enter `ViewIn3D1.Source` to set the source object as the 3D object you inserted with the **View in 3D** control.  
 
     You can also use the expression editor at the top of the window: type `ViewIn3D1.Source`.
 
@@ -73,7 +73,7 @@ With an app open for editing in [Power Apps Studio](https://create.powerapps.com
 
 You can now insert a gallery control into your app. The gallery control lets users of the app take and view photos from within the app.
 
-Photos you take by selecting the camera icon in the MR view on the app will be loaded into the gallery component on the app. If you exit the MR view to see the gallery, reentering the MR view and taking more photos will overwrite the photos.
+Photos you take by selecting the camera icon in the MR view on the app will be loaded into the gallery control on the app. If you exit the MR view to see the gallery, reentering the MR view and taking more photos will overwrite the photos.
 
 1. Open the **Insert** tab.
 1. Select the **Vertical gallery** control to place it in the center of the app screen, or drag it to position it anywhere on the screen.
@@ -88,7 +88,7 @@ Photos you take by selecting the camera icon in the MR view on the app will be l
 
 
     > [!TIP]
-    > You can load all photos taken across multiple MR components by adding `Collect(AllPhotos,ViewInMR1.Photos)` to the **OnChange** property of each MR component.
+    > You can load all photos taken across multiple MR controls by adding `Collect(AllPhotos,ViewInMR1.Photos)` to the **OnChange** property of each MR control.
 
 You can insert a "pop-up" overlay of the selected image so users of the app can see the photo full size.
 
@@ -188,14 +188,14 @@ You can insert a "pop-up" overlay of the selected image so users of the app can 
 
 ## Use SaveData and LoadData functions
 
-You can use the **SaveData** and **LoadData** functions In Power Apps with the MR components.
+You can use the **SaveData** and **LoadData** functions In Power Apps with the MR controls.
 
 See the [SaveData, LoadData, and ClearData functions in Power Apps](./functions/function-savedata-loaddata.md) topic for how to use these functions.
 
 ### See also
 
-- [View in 3D component](mixed-reality-component-view-3d.md)
-- [Measure in MR component](mixed-reality-component-measure-distance.md)
-- [View shape in MR component](mixed-reality-component-view-shape.md) 
+- [View in 3D control](mixed-reality-component-view-3d.md)
+- [Measure in MR control](mixed-reality-component-measure-distance.md)
+- [View shape in MR control](mixed-reality-component-view-shape.md) 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
