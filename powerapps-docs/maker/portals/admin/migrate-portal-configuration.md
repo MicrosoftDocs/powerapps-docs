@@ -35,6 +35,8 @@ Migration involves exporting the existing configuration from the source Microsof
 > [!NOTE] 
 > You do not need to repeat these steps for any further updates from the original source to target environments.
 
+## Transfer portal metadata
+
 # [Power Apps CLI](#tab/CLI)
 
 Power Apps CLI steps here.
