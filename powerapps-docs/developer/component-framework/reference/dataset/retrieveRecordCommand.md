@@ -1,6 +1,6 @@
 ---
 title: retrieveRecordCommand | Microsoft Docs
-description: Retrieve Record's Associated Commands
+description: Retrieve record's associated commands.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -15,11 +15,11 @@ ms.assetid: ec4d6f14-d08b-410f-aad7-6a040c2b1c6a
 
 # retrieveRecordCommand
 
-[!INCLUDE[./includes/retrieveRecordCommand-description.md](./includes/retrieveRecordCommand-description.md)]
+[!INCLUDE[./includes/retrieveRecordCommand-description.md](./includes/retrieverecordcommand-description.md)]
 
 ## Available for
 
-Model-driven
+Model-driven apps
 
 ## Syntax
 

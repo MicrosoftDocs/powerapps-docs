@@ -19,7 +19,7 @@ A command button control types.
 
 ## Available for
 
-Model-driven and Canvas Apps
+Model-driven and canvas apps
 
 ## Values
 

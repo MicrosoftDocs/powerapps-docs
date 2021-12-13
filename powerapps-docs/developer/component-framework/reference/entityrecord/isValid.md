@@ -1,6 +1,6 @@
 ---
 title: isValid | Microsoft Docs
-description: Whether this record is valid
+description: Whether this record is valid.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -15,11 +15,11 @@ ms.assetid: 5928055f-784f-496d-bd96-6921d9574d2f
 
 # isValid
 
-[!INCLUDE[./includes/isValid-description.md](./includes/isValid-description.md)]
+[!INCLUDE[./includes/isValid-description.md](./includes/isvalid-description.md)]
 
 ## Available for
 
-Model-driven and Canvas apps
+Model-driven and canvas apps
 
 ## Syntax
 

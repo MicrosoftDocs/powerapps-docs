@@ -1,6 +1,6 @@
 ---
 title: delete | Microsoft Docs
-description: Delete the records from data source
+description: Delete the records from data source.
 keywords:
 manager: kvivek
 ms.date: 06/12/2021
@@ -30,7 +30,7 @@ Canvas apps
 
 | Parameter Name | Type       | Required | description                 |
 | -------------- | ---------- | -------- | --------------------------- |
-| ids            | `string[]` | Yes      | Array of ids to be deleted. |
+| ids            | `string[]` | Yes      | Array of IDs to be deleted. |
 
 ## Return value
 

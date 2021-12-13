@@ -19,7 +19,7 @@ ms.assetid: 0202d51f-e9a9-4a2e-b3e9-0bfd7f6afb86
 
 ## Available for
 
-Model-driven and Canvas apps.
+Model-driven and canvas apps.
 
 ## Properties
 
@@ -100,7 +100,7 @@ The column filtering for the current query. This is supported in both model-driv
 
 **Type**: [Filtering](filtering.md)
 
-### linking (Model-driven apps)
+### linking 
 
 Defines the linked table information. This is supported only in model-driven apps.
 
@@ -149,20 +149,20 @@ The sorting status for the current query. This is supported in both model-driven
 
 | Method                                                      | Description                                                                                             | Available for                |
 | ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ---------------------------- |
-| [addColumn](dataset/addColumn.md)                           | [!INCLUDE [addColumn-description](dataset/includes/addColumn-description.md)]                           | Model-driven apps            |
+| [addColumn](dataset/addcolumn.md)                           | [!INCLUDE [addcolumn-description](dataset/includes/addcolumn-description.md)]                           | Model-driven apps            |
 | [clearSelectedRecordIds](dataset/clearselectedrecordids.md) | [!INCLUDE [clearselectedrecordids-description](dataset/includes/clearselectedrecordids-description.md)] | Model-driven and Canvas apps |
 | [delete](dataset/delete.md)                                 | [!INCLUDE [delete-description](dataset/includes/delete-description.md)]                                 | Canvas apps                  |
-| [getCommands](dataset/getCommands.md)                       | [!INCLUDE [getCommands-description](dataset/includes/getCommands-description.md)]                       | Canvas apps                  |
-| [getDataSetCapabilities](dataset/getDataSetCapabilities.md) | [!INCLUDE [getDataSetCapabilities-description](dataset/includes/getDataSetCapabilities-description.md)] | Canvas apps                  |
-| [getRelatedDataSet](dataset/getRelatedDataSet.md)           | [!INCLUDE [getRelatedDataSet-description](dataset/includes/getRelatedDataSet-description.md)]           | Canvas apps                  |
-| [getSelectedRecordIds](dataset/getSelectedRecordIds.md)     | [!INCLUDE [getselectedrecordids-description](dataset/includes/getSelectedRecordIds-description.md)]     | Model-driven and Canvas apps |
-| [getTargetEntityType](dataset/getTargetEntityType.md)       | [!INCLUDE [getTargetEntityType-description](dataset/includes/getTargetEntityType-description.md)]       | Model-driven and Canvas apps |
-| [getTitle](dataset/getTitle.md)                             | [!INCLUDE [gettitle-description](dataset/includes/getTitle-description.md)]                             | Model-driven and Canvas apps |
-| [getViewId](dataset/getViewId.md)                           | [!INCLUDE [getviewid-description](dataset/includes/getViewId-description.md)]                           | Model-driven and Canvas apps |
-| [newRecord](dataset/newRecord.md)                           | [!INCLUDE [newRecord-description](dataset/includes/newRecord-description.md)]                           | Canvas apps                  |
-| [openDatasetItem](dataset/openDatasetItem.md)               | [!INCLUDE [opendatasetitem-description](dataset/includes/openDatasetItem-description.md)]               | Model-driven and Canvas apps |
+| [getCommands](dataset/getCommands.md)                       | [!INCLUDE [getcommands-description](dataset/includes/getcommands-description.md)]                       | Canvas apps                  |
+| [getDataSetCapabilities](dataset/getDataSetCapabilities.md) | [!INCLUDE [getcatasetcapabilities-description](dataset/includes/getdatasetcapabilities-description.md)] | Canvas apps                  |
+| [getRelatedDataSet](dataset/getRelatedDataSet.md)           | [!INCLUDE [getrelateddataset-description](dataset/includes/getrelateddataset-description.md)]           | Canvas apps                  |
+| [getSelectedRecordIds](dataset/getSelectedRecordIds.md)     | [!INCLUDE [getselectedrecordids-description](dataset/includes/getselectedrecordids-description.md)]     | Model-driven and Canvas apps |
+| [getTargetEntityType](dataset/getTargetEntityType.md)       | [!INCLUDE [gettargetentitytype-description](dataset/includes/gettargetentitytype-description.md)]       | Model-driven and Canvas apps |
+| [getTitle](dataset/getTitle.md)                             | [!INCLUDE [gettitle-description](dataset/includes/gettitle-description.md)]                             | Model-driven and Canvas apps |
+| [getViewId](dataset/getViewId.md)                           | [!INCLUDE [getviewid-description](dataset/includes/getviewId-description.md)]                           | Model-driven and Canvas apps |
+| [newRecord](dataset/newRecord.md)                           | [!INCLUDE [newrecord-description](dataset/includes/newrecord-description.md)]                           | Canvas apps                  |
+| [openDatasetItem](dataset/openDatasetItem.md)               | [!INCLUDE [opendatasetitem-description](dataset/includes/opendatasetitem-description.md)]               | Model-driven and Canvas apps |
 | [refresh](dataset/refresh.md)                               | [!INCLUDE [refresh-description](dataset/includes/refresh-description.md)]                               | Model-driven and Canvas apps |
-| [retrieveRecordCommand](dataset/retrieveRecordCommand.md)   | [!INCLUDE [retrieveRecordCommand-description](dataset/includes/retrieveRecordCommand-description.md)]   | Model-driven                 |
+| [retrieveRecordCommand](dataset/retrieveRecordCommand.md)   | [!INCLUDE [retrieverecordcommand-description](dataset/includes/retrieverecordcommand-description.md)]   | Model-driven                 |
 | [setSelectedRecordIds](dataset/setselectedrecordids.md)     | [!INCLUDE [setselectedrecordids-description](dataset/includes/setselectedrecordids-description.md)]     | Model-driven and Canvas apps |
 
 ## Lookup columns

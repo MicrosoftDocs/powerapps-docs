@@ -18,4 +18,4 @@ applies_to:
 
 ---
 
-Retrieve Record's Associated Commands
+Retrieve record's associated commands.

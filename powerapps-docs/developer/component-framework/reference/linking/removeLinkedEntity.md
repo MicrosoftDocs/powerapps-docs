@@ -1,6 +1,6 @@
 ---
 title: removeLinkedEntity | Microsoft Docs
-description: Removes a linked entity from the list
+description: Removes a linked table from the list.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -15,7 +15,7 @@ ms.assetid: feb4e449-935f-452e-a67a-d3cf3c2bdcfb
 
 # removeLinkedEntity
 
-[!INCLUDE [removeLinkedEntity-description](includes/removeLinkedEntity-description.md)]
+[!INCLUDE [removeLinkedEntity-description](includes/removelinkedentity-description.md)]
 
 ## Available for
 

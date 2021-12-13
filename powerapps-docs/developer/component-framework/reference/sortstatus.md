@@ -19,13 +19,13 @@ ms.assetid: 09f6d0a7-a95a-421e-a413-281d1d0d0e19
 
 ## Available for
 
-Model-driven and Canvas apps
+Model-driven and canvas apps
 
 ## Properties
 
 ### name
 
-The name of the column
+The name of the column.
 
 **Type**: `string`
 
@@ -35,7 +35,7 @@ The current sort direction for the column.
 
 **Type**: `enum`
 
-The `sortDirection` value is an enum with the following possible values
+The `sortDirection` value is an enum with the following possible values.
 
 | Value | Member     |
 | ----- | ---------- |

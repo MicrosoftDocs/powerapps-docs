@@ -29,13 +29,15 @@ The alias of the column.
 
 **Type**: `string`
 
-### attributes (Available for Canvas apps only)
+### attributes 
+
+This is available only for canvas apps. 
 
 **Type**: `[AttributeMetadata](./attributemetadata.md)`
 
-### cellType (Available for Model-driven apps only)
+### cellType
 
-Cell type.
+Cell type. This is available only for canvas apps. 
 
 **Type**: `string`
 
@@ -45,28 +47,27 @@ The data type of the column's values.
 
 **Type**: `string`
 
-### disableSorting (Available for Model-driven apps only)
+### disableSorting 
 
-Prevents the UI from making the column sortable.
+Prevents the UI from making the column sortable. This is available only for canvas apps. 
 
 **Type**: `boolean`<br />
 
 ### displayName
 
-Localized display name for the column
+Localized display name for the column.
 
 **Type**: `string`
 
-### isHidden (Available for Model-driven apps only)
+### isHidden 
 
-The column visibility state.
+The column visibility state. This is available only for canvas apps. 
 
 **Type**: `boolean`<br />
 
 ### isPrimary
 
-Model-driven Only
-Is specific column the primary column of the view's table.
+Is specific column the primary column of the view's table. This is available only for model-driven apps. 
 
 **Type**: `boolean`<br />
 

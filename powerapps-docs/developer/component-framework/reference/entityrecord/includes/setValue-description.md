@@ -15,4 +15,4 @@ applies_to:
 ms.assetid: 9ce70427-e789-46be-b9c7-35466a430b0f
 ---
 
-Set value for the column
+Set value for the column.

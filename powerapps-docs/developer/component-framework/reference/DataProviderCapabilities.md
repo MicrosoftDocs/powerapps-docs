@@ -1,11 +1,11 @@
 ---
 title: DataProviderCapabilities | Microsoft Docs
-description: Dataset Capabilities
+description: Provides methods to use dataset capabilities.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 10/01/2019
+ms.date: 12/13/2021
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -25,19 +25,19 @@ Canvas apps
 
 ### isEditable
 
-If the dataprovider has edit capabilities
+If the data provider has edit capabilities.
 
 **Type**: `boolean`
 
 ### isFilterable
 
-If the dataset can be filtered
+If the dataset can be filtered.
 
 **Type**: boolean
 
 ### isSortable
 
-If the dataset can be sorted
+If the dataset can be sorted.
 
 **Type**: `boolean`
 
@@ -48,7 +48,7 @@ If the dataset records can be paged.
 
 ### canCreateNewRecords
 
-Whether adding new records is supported or not
+Whether adding new records is supported or not.
 **Type** `boolean`
 
 ## Related topics

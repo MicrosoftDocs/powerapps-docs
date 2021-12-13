@@ -1,6 +1,6 @@
 ---
 title: newRecord | Microsoft Docs
-description: Initialize a local record object for control to set the value. The control will need to invoke save() on the newly created record to persist the change
+description: Initialize a local record object for control to set the value. The control will need to invoke save() on the newly created record to persist the change.
 keywords:
 manager: kvivek
 ms.date: 06/12/2021
@@ -16,7 +16,7 @@ ms.assetid: 35d94cf8-eab3-4dee-82af-336f6b33b789
 
 # newRecord
 
-[!INCLUDE[./includes/newRecord-description.md](./includes/newRecord-description.md)]
+[!INCLUDE[./includes/newRecord-description.md](./includes/newrecord-description.md)]
 
 ## Available for
 

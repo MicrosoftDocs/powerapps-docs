@@ -1,6 +1,6 @@
 ---
 title: isDirty | Microsoft Docs
-description: Whether this record is dirty
+description: Whether this record is dirty.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -15,11 +15,11 @@ ms.assetid: 5928055f-784f-496d-bd96-6921d9574d2f
 
 # isDirty
 
-[!INCLUDE[./includes/isDirty-description.md](./includes/isDirty-description.md)]
+[!INCLUDE[./includes/isDirty-description.md](./includes/isdirty-description.md)]
 
 ## Available for
 
-Model-driven and Canvas apps
+Model-driven and canvas apps
 
 ## Syntax
 

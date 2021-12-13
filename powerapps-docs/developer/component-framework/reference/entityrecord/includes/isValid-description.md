@@ -15,5 +15,4 @@ applies_to:
 ms.assetid: 9ce70427-e789-46be-b9c7-35466a430b0f
 ---
 
-Whether this record is valid
-Only applicable if the dataset is editable and this record invalid values
+Whether this record is valid. Only applicable if the dataset is editable and this record has invalid values.

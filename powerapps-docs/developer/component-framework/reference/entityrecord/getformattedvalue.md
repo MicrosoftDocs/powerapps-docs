@@ -19,7 +19,7 @@ ms.assetid: 74992f97-89b7-401e-ac95-9c8a47f990d1
 
 ## Available for
 
-Model-driven and Canvas apps
+Model-driven and canvas apps
 
 ## Syntax
 
@@ -29,7 +29,7 @@ Model-driven and Canvas apps
 
 | Parameter Name | Type     | Required | Description               |
 | -------------- | -------- | -------- | ------------------------- |
-| `columnName`   | `string` | Yes      | Column name of the record |
+| `columnName`   | `string` | Yes      | Name of the column. |
 
 ## Return Value
 

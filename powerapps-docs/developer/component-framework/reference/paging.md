@@ -25,7 +25,7 @@ Model-driven and canvas apps
 
 ## firstPageNumber
 
-Number of first page
+First page number.
 
 **Type**: `number`
 
@@ -43,7 +43,7 @@ Whether the result set can be paged backwards.
 
 ### lastPageNumber
 
-Number of last page
+Last page number. 
 
 **Type**: `number`
 
@@ -55,7 +55,7 @@ Page Number. Same as firstPageNumber. Used in exposed interfaces where firstPage
 
 ### pageSize
 
-The pageSize of the paging
+The pageSize of the paging.
 
 **Type**: `number`
 
@@ -69,7 +69,7 @@ Total number of results on the server for the current query.
 
 | Method                                         | Description                                                                                |
 | ---------------------------------------------- | ------------------------------------------------------------------------------------------ |
-| [loadExactPage](paging/loadExactPage.md)       | [!INCLUDE [loadExactPage-description](paging/includes/loadExactPage-description.md)]       |
+| [loadExactPage](paging/loadExactPage.md)       | [!INCLUDE [loadexactpage-description](paging/includes/loadexactpage-description.md)]       |
 | [loadNextPage](paging/loadnextpage.md)         | [!INCLUDE [loadnextpage-description](paging/includes/loadnextpage-description.md)]         |
 | [loadPreviousPage](paging/loadpreviouspage.md) | [!INCLUDE [loadpreviouspage-description](paging/includes/loadpreviouspage-description.md)] |
 | [reset](paging/reset.md)                       | [!INCLUDE [reset-description](paging/includes/reset-description.md)]                       |

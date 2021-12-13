@@ -15,4 +15,4 @@ applies_to:
 ms.assetid: e8c9f86c-55cd-45ad-92a7-985d61040b34
 ---
 
-Initialize a local record object for control to set the value. The control will need to invoke save() on the newly created record to persist the change
+Initialize a local record object for control to set the value. The control needs to invoke the `save()` method on the newly created record to persist the change.

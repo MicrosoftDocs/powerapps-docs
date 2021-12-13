@@ -1,6 +1,6 @@
 ---
 title: addColumn | Microsoft Docs
-description: Adds column to the column set
+description: Adds column to the column set.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -15,7 +15,7 @@ ms.assetid: ec4d6f14-d08b-410f-aad7-6a040c2b1c6a
 
 # addColumn
 
-[!INCLUDE[./includes/addColumn-description.md](./includes/addColumn-description.md)]
+[!INCLUDE[./includes/addColumn-description.md](./includes/addcolumn-description.md)]
 
 ## Available for
 
@@ -29,8 +29,8 @@ Model-driven apps
 
 | Parameter Name | Type     | Required | description |
 | -------------- | -------- | -------- | ----------- |
-| name           | `string` | Yes      |             |
-| columnAlias    | `string` | No       |             |
+| name           | `string` | Yes      | Name of the column.          |
+| columnAlias    | `string` | No       | Alias of the column.         |
 
 ## Return value
 

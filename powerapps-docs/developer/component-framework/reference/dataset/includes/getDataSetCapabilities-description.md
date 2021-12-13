@@ -1,6 +1,6 @@
 ---
 title: getDataSetCapabilities | Microsoft Docs
-description:
+description: 
 keywords:
 ms.author: nabuthuk
 manager: kvivek
@@ -15,4 +15,4 @@ applies_to:
 ms.assetid: e8c9f86c-55cd-45ad-92a7-985d61040b34
 ---
 
-The capabilities for this dataset
+The capabilities for the dataset.

@@ -15,4 +15,4 @@ applies_to:
 ms.assetid: 6b2e8a67-f90b-42a7-af2b-4b8cbda9d149
 ---
 
-Removes a linked entity from the list
+Removes a linked table from the list.
