@@ -131,7 +131,7 @@ landingContent:
           - text: Designing productive forms
             url: design-productive-forms.md
           - text: Optimize forms for performance
-            url: optimize-form-performance.md
+            url: design-performant-forms.md
 
   # Card
   - title: Resources
