@@ -1,33 +1,37 @@
 ---
-title: loadNextPage | Microsoft Docs
-description: Request the next page of results to be loaded.
+title: save | Microsoft Docs
+description: Saves the record
 keywords:
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 10/01/2019
+ms.date: 06/12/2021
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-ms.assetid: e119c1e1-e35f-47cf-9437-e7376657bbc0
+ms.assetid: 5928055f-784f-496d-bd96-6921d9574d2f
 ---
 
-# loadNextPage
+# save
 
-[!INCLUDE [loadnextpage-description](includes/loadnextpage-description.md)]
+[!INCLUDE[./includes/save-description.md](./includes/save-description.md)]
 
 ## Available for
 
-Model-driven and canvas apps
+Model-driven and Canvas apps
 
 ## Syntax
 
-`loadNextPage()`
+`save()`
+
+## Return Value
+
+Type: `Promise`
 
 ### Related topics
 
-[Paging](../paging.md)<br/>
+[Entityrecord](../entityrecord.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>
 [Power Apps component framework overview](../../overview.md)
 

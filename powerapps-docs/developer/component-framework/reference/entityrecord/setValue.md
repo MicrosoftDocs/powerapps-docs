@@ -1,6 +1,6 @@
 ---
-title: EntityRecord.getValue | Microsoft Docs
-description: Gets the value of the record's column.
+title: setValue | Microsoft Docs
+description: Set value for the column.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -13,9 +13,9 @@ ms.topic: "article"
 ms.assetid: 5928055f-784f-496d-bd96-6921d9574d2f
 ---
 
-# EntityRecord.getValue
+# setValue
 
-[!INCLUDE[./includes/getvalue-description.md](./includes/getvalue-description.md)]
+[!INCLUDE[./includes/setValue-description.md](./includes/setValue-description.md)]
 
 ## Available for
 
@@ -23,17 +23,18 @@ Model-driven and canvas apps
 
 ## Syntax
 
-`getValue(columnName)`
+`setValue(columnName, value)`
 
 ## Parameters
 
 | Parameter Name | Type     | Required | Description               |
 | -------------- | -------- | -------- | ------------------------- |
-| `columnName`   | `string` | Yes      | Name of the column.|
+| `columnName`   | `string` | Yes      | Name of the column. |
+| `value`        | `string  | Date     | number | number[] | boolean | EntityReference | EntityReference[] | FileObject | ImageObject` | Yes | New value for the record. |
 
 ## Return Value
 
-Type: `string`
+Type: `Promise`
 
 ### Related topics
 

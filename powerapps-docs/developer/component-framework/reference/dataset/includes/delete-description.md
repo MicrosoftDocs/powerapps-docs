@@ -1,18 +1,18 @@
 ---
-title: GetSelectedRecordIds | Microsoft Docs
-description: 
+title: delete | Microsoft Docs
+description:
 keywords:
 ms.author: nabuthuk
 manager: kvivek
-ms.date: 10/01/2019
+ms.date: 06/12/2021
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
+applies_to:
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
-ms.assetid: b360d5aa-4cfb-4504-a404-62a7913c803f
+ms.assetid: e8c9f86c-55cd-45ad-92a7-985d61040b34
 ---
 
-Retrieves all the selected record IDs.
+Delete the records from data source.

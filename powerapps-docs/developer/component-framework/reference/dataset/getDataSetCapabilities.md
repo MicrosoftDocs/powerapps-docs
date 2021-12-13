@@ -1,12 +1,12 @@
 ---
-title: clearSelectedRecordIds | Microsoft Docs
-description: Clears the selected record ids list.
+title: getDataSetCapabilities | Microsoft Docs
+description: The capabilities for this dataset.
 keywords:
 manager: kvivek
-ms.date: 10/01/2019
+ms.date: 06/12/2021
 ms.service: "powerapps"
 ms.reviewer: "nabuthuk"
-ms.author: "nabuthuk"
+ms.author: nabuthuk
 author: Nkrb
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -14,17 +14,21 @@ ms.topic: "article"
 ms.assetid: 35d94cf8-eab3-4dee-82af-336f6b33b789
 ---
 
-# clearSelectedRecordIds
+# getDataSetCapabilities
 
-[!INCLUDE[./includes/clearselectedrecordids-description.md](./includes/clearselectedrecordids-description.md)]
+[!INCLUDE[./includes/getDataSetCapabilities-description.md](./includes/getdatasetcapabilities-description.md)]
 
 ## Available for
 
-Model-driven and canvas apps
+Canvas apps
 
 ## Syntax
 
-`context.parameters.dataset.clearSelectedRecordIds()`
+`context.parameters.dataset.getDataSetCapabilities()`
+
+## Return value
+
+**Type**: [DataProviderCapabilities](../dataprovidercapabilities.md)
 
 ### Related topics
 

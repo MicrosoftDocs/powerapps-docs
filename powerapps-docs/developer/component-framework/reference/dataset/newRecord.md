@@ -1,12 +1,12 @@
 ---
-title: clearSelectedRecordIds | Microsoft Docs
-description: Clears the selected record ids list.
+title: newRecord | Microsoft Docs
+description: Initialize a local record object for control to set the value. The control will need to invoke save() on the newly created record to persist the change.
 keywords:
 manager: kvivek
-ms.date: 10/01/2019
+ms.date: 06/12/2021
 ms.service: "powerapps"
 ms.reviewer: "nabuthuk"
-ms.author: "nabuthuk"
+ms.author: nabuthuk
 author: Nkrb
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -14,17 +14,21 @@ ms.topic: "article"
 ms.assetid: 35d94cf8-eab3-4dee-82af-336f6b33b789
 ---
 
-# clearSelectedRecordIds
+# newRecord
 
-[!INCLUDE[./includes/clearselectedrecordids-description.md](./includes/clearselectedrecordids-description.md)]
+[!INCLUDE[./includes/newRecord-description.md](./includes/newrecord-description.md)]
 
 ## Available for
 
-Model-driven and canvas apps
+Canvas apps
 
 ## Syntax
 
-`context.parameters.dataset.clearSelectedRecordIds()`
+`context.parameters.dataset.newRecord()`
+
+## Return value
+
+Type: [EntityRecord](../entityrecord.md)
 
 ### Related topics
 
