@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/11/2021
+ms.date: 12/13/2021
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
@@ -19,6 +19,15 @@ contributors:
 Portal development involves several configurations and customizations to achieve a desired experience for portal end users.
 
 After you have completed development or configuration of your portal instance, you might want to migrate your latest portal configuration from development to testing or the production environments. Migration involves exporting the existing configuration from the source Microsoft Dataverse environment, and then importing it into the target Dataverse environment.
+
+# [Power Apps CLI](#tab/CLI)
+
+Power Apps CLI here.
+
+
+---
+
+# [Configuration Migration Tool](#tab/CMT)
 
 To export configuration data, you would need to use the Configuration Migration tool and a portal-specific configuration schema file. For more information about this tool, see [Manage configuration data](/dynamics365/customer-engagement/admin/manage-configuration-data).
 
@@ -114,6 +123,8 @@ You can export portal configuration data from a source system by using portal-sp
 5.	The next screen displays the import status of your records. The data import is done in multiple passes to first import the foundation data while queuing up the dependent data, and then import the dependent data in the subsequent passes to handle any data dependencies or linkages. This action ensures clean and consistent data import. 
 
 6.	Select **Exit** to close the tool. 
+
+---
 
 ### Create new portal using migrated data
 
