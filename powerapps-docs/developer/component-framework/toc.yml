@@ -131,7 +131,7 @@
           href: reference/dataset/clearselectedrecordids.md
         - name: delete
           href: reference/dataset/delete.md
-        - nme: getCommands
+        - name: getCommands
           href: reference/dataset/getcommands.md
         - name: getDataSetCapabilities
           href: reference/dataset/getdatasetcapabilities.md

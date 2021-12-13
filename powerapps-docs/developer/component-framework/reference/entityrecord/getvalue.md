@@ -13,7 +13,7 @@ ms.topic: "article"
 ms.assetid: 5928055f-784f-496d-bd96-6921d9574d2f
 ---
 
-# getValue
+# EntityRecord.getValue
 
 [!INCLUDE[./includes/getvalue-description.md](./includes/getvalue-description.md)]
 
