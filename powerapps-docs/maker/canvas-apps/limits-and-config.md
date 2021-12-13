@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 11/03/2021
+ms.date: 12/13/2021
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
@@ -112,6 +112,7 @@ This list identifies all services to which Power Apps Studio talks and their usa
 | vortex.data.microsoft.com |https |Telemetry |
 | localhost | https | Power Apps Mobile|
 | 127.0.0.1 | http | Power Apps Mobile|
+| \*.api.powerplatform.com | https | Required for Power Platform API connectivity used internally by Microsoft products as well as admin automation scenarios as  [documented here](https://aka.ms/ProgrammabilityExtensibilityHome).|
 
 > [!NOTE]
 > If you're using a VPN, it must be configured to exclude localhost from tunneling for Power Apps Mobile.
