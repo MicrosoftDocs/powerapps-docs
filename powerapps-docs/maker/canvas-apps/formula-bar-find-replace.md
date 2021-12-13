@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 12/10/2021
+ms.date: 12/13/2021
 ms.subservice: canvas-maker
 ms.author: tashas
 search.audienceType: 
@@ -91,7 +91,7 @@ Add text or characters to search for into the provided input area. And then, use
 
     :::image type="content" source="media/formula-bar-find-replace/match-whole-word.png" alt-text="The Match Whole Word refiner icon on the Find and Replace control":::
 
-- **Use regular expression** (RegEx) returns only matches conforming to the regular expression specified within the input area. More information: [How regular expressions work](/dotnet/standard/base-types/regular-expressions#how-regular-expressions-work)
+- **Use regular expression** (RegEx) returns only matches conforming to the regular expression specified within the input area. More information: [Regular expressions](functions/function-ismatch.md#regular-expressions)
 
     In the example below, using the Regular Expression search capability with `Screen(Priority|Task)` returns matches for `Screen` when it appears together with either `Priority` or `Task` as shown below.
 
