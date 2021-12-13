@@ -243,4 +243,4 @@ Object checker runs real-time diagnostics on component objects within your solut
 
 ## Next steps
 
-[Optimize model-driven app form performance](optimize-form-performance.md)
+[Design productive main forms in model-driven apps](design-productive-forms.md)
