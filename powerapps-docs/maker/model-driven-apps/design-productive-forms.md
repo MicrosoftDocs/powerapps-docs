@@ -38,7 +38,7 @@ This article shows how to design highly efficient and productive forms in a mode
 
 Form layout and design are important to building better forms. However, it's also important to build forms that load quickly and allow for fast navigation within the form and across tabs.
 
-We also recommend an understanding of best practices for optimizing form performance and how to make forms load fast in your model-driven app. More information: [Optimize model-driven app form performance](optimize-form-performance.md)
+We also recommend an understanding of best practices for optimizing form performance and how to make forms load fast in your model-driven app. More information: [Design forms for performance in model-driven apps](design-performant-forms.md)
 
 ## Working with main forms
 
