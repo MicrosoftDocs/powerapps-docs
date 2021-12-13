@@ -37,8 +37,7 @@ Model-driven apps
 
 ## Return value
 
-TODO ADD NEW TYPE
-Type: [`ICommandObjectWrapper`]
+Type: `ICommandObjectWrapper`
 
 ### Related topics
 

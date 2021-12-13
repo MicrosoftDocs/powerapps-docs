@@ -44,11 +44,13 @@ If the dataset can be sorted.
 ### canPaginate
 
 If the dataset records can be paged.
+
 **Type**: `boolean`
 
 ### canCreateNewRecords
 
 Whether adding new records is supported or not.
+
 **Type** `boolean`
 
 ## Related topics

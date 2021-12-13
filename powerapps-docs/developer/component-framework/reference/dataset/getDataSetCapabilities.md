@@ -28,7 +28,7 @@ Canvas apps
 
 ## Return value
 
-**Type**: `[DataProviderCapabilities](./../DataProviderCapabilities.md)`
+**Type**: [DataProviderCapabilities](../dataprovidercapabilities.md)
 
 ### Related topics
 

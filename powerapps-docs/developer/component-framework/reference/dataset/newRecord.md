@@ -28,7 +28,7 @@ Canvas apps
 
 ## Return value
 
-Type: `[EntityRecord](../entityrecord.md)`
+Type: [EntityRecord](../entityrecord.md)
 
 ### Related topics
 

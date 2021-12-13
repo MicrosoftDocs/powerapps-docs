@@ -34,7 +34,7 @@ Canvas apps
 
 ## Return value
 
-Type: `[ICommand](./../ICommand.md)`
+Type: [ICommand](../icommand.md)
 
 ### Related topics
 

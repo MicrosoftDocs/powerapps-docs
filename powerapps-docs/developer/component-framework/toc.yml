@@ -120,7 +120,7 @@
         href: reference/conditionexpression.md
       - name: Context
         href: reference/context.md
-      - name: DataPRoviderCapabilities
+      - name: DataProviderCapabilities
         href: reference/dataprovidercapabilities.md
       - name: DataSet
         href: reference/dataset.md

@@ -29,7 +29,7 @@ Model-driven apps
 
 | Parameter Name | Type                                                                 | Required | description |
 | -------------- | -------------------------------------------------------------------- | -------- | ----------- |
-| expression     | `[ILinkEntityExposedExpression](../ilinkentityexposedexpression.md)` | Yes      |             |
+| expression     | [ILinkEntityExposedExpression](../ilinkentityexposedexpression.md) | Yes      |             |
 
 ## Return Value
 

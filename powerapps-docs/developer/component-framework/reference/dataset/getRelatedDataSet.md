@@ -36,7 +36,7 @@ Canvas apps
 
 ## Return value
 
-Type: `[Dataset](../../dataset.md)`
+Type: [Dataset](../dataset.md)
 
 ### Related topics
 

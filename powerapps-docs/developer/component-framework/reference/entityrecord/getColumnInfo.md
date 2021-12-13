@@ -29,13 +29,13 @@ Canvas apps
 
 | Parameter Name | Type     | Required | description |
 | -------------- | -------- | -------- | ----------- |
-| columnName     | `string` | Yes      |  Name of the column.           |
+| columnName     | `string` | Yes      |  Name of the column.|
 
 ## Return Value
 
 **Type**: `ColumnInfo`
 
-```
+```Typescript
 ColumnInfo{
 readonly error: boolean;
 	readonly errorMessage?: string;
