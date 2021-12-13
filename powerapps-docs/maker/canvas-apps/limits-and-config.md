@@ -112,7 +112,7 @@ This list identifies all services to which Power Apps Studio talks and their usa
 | vortex.data.microsoft.com |https |Telemetry |
 | localhost | https | Power Apps Mobile|
 | 127.0.0.1 | http | Power Apps Mobile|
-| \*.api.powerplatform.com | https | Required for Power Platform API connectivity used internally by Microsoft products as well as admin automation scenarios as  [documented here](https://aka.ms/ProgrammabilityExtensibilityHome).|
+| \*.api.powerplatform.com | https | Required for Power Platform API connectivity used internally by Microsoft products, and Power Platform [programmability and extensibility](/power-platform/admin/programmability-extensibility-overview).|
 
 > [!NOTE]
 > If you're using a VPN, it must be configured to exclude localhost from tunneling for Power Apps Mobile.
