@@ -1,5 +1,5 @@
 ---
-title: getValue | Microsoft Docs
+title: EntityRecord.getValue | Microsoft Docs
 description: Gets the value of the record's column.
 keywords:
 ms.author: nabuthuk
