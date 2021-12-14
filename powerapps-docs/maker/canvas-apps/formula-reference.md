@@ -228,6 +228,8 @@ Other elements include:
 
 **[LoadData](functions/function-savedata-loaddata.md)** – Loads a collection from an app host such as a local device.
 
+**[Log](functions/function-numericals.md)** – Returns the logarithm in any base of a number.
+
 **[Location](functions/signals.md)** – Returns your location as a map coordinate by using the Global Positioning System (GPS) and other information.
 
 **[LookUp](functions/function-filter-lookup.md)** – Looks up a single record in a table based on one or more criteria.
