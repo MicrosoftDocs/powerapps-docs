@@ -52,7 +52,7 @@ Migration involves exporting the existing configuration from the source Microsof
 
 # [Power Platform CLI](#tab/CLI)
 
-## Transfer portal configuration using Power Platform CLI
+### Transfer portal configuration using Power Platform CLI
 
 The Microsoft Power Platform CLI provides a number of features specifically for [portals](../power-apps-cli.md). These commands allow you to download portal configuration from a source environment and transfer it to a target environment. These commands can also be incorporated into your ALM processes.
 
@@ -96,7 +96,7 @@ The Microsoft Power Platform CLI provides a number of features specifically for 
 
     :::image type="content" source="media/migrate-portal-config/portal-list.png" alt-text="List of portals.":::
 
-1. Download the portal configuration data to your local workstation. Use the --overwrite option set to *true* if you have previous downloaded portal configuration to the same path.
+1. Download the portal configuration data to your local workstation. Use the *--overwrite* option set to *true* if you have previous downloaded portal configuration to the same path.
 
     ```powershell
     pac paportal download --path [path] --webSiteId [website id]
@@ -138,10 +138,10 @@ The Microsoft Power Platform CLI provides a number of features specifically for 
 
 # [Configuration Migration Tool](#tab/CMT)
 
-## Transfer portal configuration using the Configuration Migration Tool
+### Transfer portal configuration using the Configuration Migration Tool
 
 >[!NOTE]
-> THe preferred method is to use the Power Apps CLI to transfer portal metadata.
+> THe preferred method is to use the [Power Platform CLI](#transfer-portal-configuration-using-power-platform-cli) to transfer portal metadata.
 
 To export configuration data, you would need to use the Configuration Migration tool and a portal-specific configuration schema file. For more information about this tool, see [Manage configuration data](/dynamics365/customer-engagement/admin/manage-configuration-data).
 
@@ -252,7 +252,7 @@ Power Apps portals doesn't support tenant to tenant migration. To migrate a port
 
 1. Provision a new portal in an environment [with Dataverse](../create-portal.md) or [containing customer engagement apps](../create-dynamics-portal.md).
 
-1. Migrate portal configurations and customizations using the steps explained in this article earlier.
+1. Migrate portal configurations and customizations using the [steps](#transfer-portal-metadata) explained in this article earlier.
 
 ### See also
 
