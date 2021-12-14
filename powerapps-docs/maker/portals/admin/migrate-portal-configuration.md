@@ -242,7 +242,7 @@ You can export portal configuration data from a source system by using portal-sp
 
 ### Create new portal using migrated data
 
-After importing the configuration data, you can now create a new portal for the imported website record by using the option **Use data from existing website record**. More information: [Create portal](../create-portal.md)
+If the migration process is updating an existing portal, the updates should now be visible in the target environment. If the migration is for a new portal, you can now create the new portal for the imported website record by using the option **Use data from existing website record**. More information: [Create portal](../create-portal.md)
 
 ## Tenant to tenant migration
 
