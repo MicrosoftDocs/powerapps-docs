@@ -24,30 +24,81 @@ Migration involves exporting the existing configuration from the source Microsof
 
 ## Prepare the target environment
 
-1. If this is the first portal on the target environment, you will first need to provision a new portal in your target environment.
+> [!NOTE]
+> Preparing the target environment is a one-time process. You will need to provision a new portal in order to install the managed portal solutions on Dataverse as well as configure the portal web application. The process also installs portal metadata which will be replaced with portal metadata from your source environment.
 
-1. On the target environment, using the Portal Management app, delete the newly created website record.
+1. [Provision a new portal](../create-portal.md) in your target environment. Use the same [portal template](../create-dynamics-portal.md) as you provisioned on your source environment. For example, if you provisioned the Dynamics 365 Customer Self-Service portal on your source environment, provision the Dynamics 365 Customer Self-Service portal on your target environment.
+
+1. On the *target* environment, using the [Portal Management app](../configure/configure-portal.md), delete the newly created website record.
+
+    :::image type="content" source="media/migrate-portal-config/delete-website.png" alt-text="Delete website record.":::
+
+1. On the *target* environment, delete the portal app.
+
+    > [!NOTE]
+    > Do not delete the Portal Management app!
+
+    :::image type="content" source="media/migrate-portal-config/delete-portal.png" alt-text="Delete portal app.":::
 
 1. Transfer the portal metadata from the source environment using the Power Apps CLI or the Configuration Migration Tool.
 
-1. On the target environment, provision a new portal but use existing portal website.
+1. On the target environment, provision a new portal using existing portal website. This process will configure a portal using the portal configuration you transferred from the source environment.
 
-> [!NOTE] 
-> You do not need to repeat these steps for any further updates from the original source to target environments.
+    :::image type="content" source="media/migrate-portal-config/provision-portal.png" alt-text="Provision new portal.":::
+
+1. The portal updates from the source environment should be reflected in this new target environment. Going forward, you should be able to transfer configuration from your source to target environments by simply transferring portal configuration data.
 
 ## Transfer portal metadata
 
 # [Power Apps CLI](#tab/CLI)
 
-Power Apps CLI steps here.
+The Microsoft Power Platform CLI provides a number of features specifically for [portals](../power-apps-cli.md). These commands allow you to download portal configuration from a source environment and transfer it to a target environment.
 
-1. export data
+1. Create Power Platform CLI authentication profiles to connect to both your source and target environments.
 
-1. make updates
+    ```powershell
+    pac auth create --name <<name>> --url <environment url>
+    ```
 
-1. Use deployment profiles
+1. When the authentication profiles are created, they will have an associated index that can be determined using the list command.
 
-1. upload portal metadata
+    ```powershell
+    pac auth list
+    ```
+
+1. Select the Power Platform CLI authentication profile connected to the source environment.
+
+    ```powershell
+    pac auth select --index <<source environment index>>
+    ```
+
+1. Determine the website id for the source portal.
+
+    ```powershell
+    pac paportal list
+    ```
+
+1. Download the portal configuration data to your local workstation. Use the --overwrite option set to *true* if you have previous downloaded portal configuration to the same path.
+
+    ```powershell
+    pac paportal download --path c:\paportals\ --webSiteId db9db518-ea5c-ec11-8f8f-00224804e6cd
+    ```
+
+1. Select the Power Platform CLI authentication profile connected to the target environment.
+
+    ```powershell
+    pac auth select --index <<target environment index>>
+    ```
+
+1. Upload the portal configuration data to the target environment.
+
+    ```powershell
+    pac paportal upload --path "C:\paportals\portaldev"
+    ```
+
+> [!NOTE]
+> The Power Platform CLI tool does not migrate tables or table schema. Migration may fail with missing elements such as tables and fields when configuration data has mismatch with selected schema.
+> During import, ensure the destination environment contains the same portal type already installed with any additional customizations such as tables, fields, forms or views imported separately as solutions.
 
 # [Configuration Migration Tool](#tab/CMT)
 
