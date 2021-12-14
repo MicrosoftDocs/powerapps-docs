@@ -188,14 +188,14 @@ To confirm the changes made to the portal webpage:
 
     :::image type="content" source="media/power-apps-cli-tutorial/browser-change.png" alt-text="Browser change ":::
     
-## Step 7. Update Website and Website Binding
+## Step 7. Update Website Binding
 
-Earlier portals (of the same type) website id used to be the same. However, as per recent updates now you can have [multiple portals installed in your Dataverse environment](create-additional-portals.md). Therefore, portal website ids can not be the same. That means, the 'Starter Portal' installed in the Development environment will have the different website id from the Starter Portal installed on UAT environment. So now, you need to perform the following steps once you succesfully deployed the portal configuration to the target environment (SIT, UAT, PROD, etc):
+Earlier portals (of the same type) website ids used to be the same. However, as per recent updates now you can have [multiple portals installed in your Dataverse environment](create-additional-portals.md). Therefore, portal website ids can not be the same. That means, the 'Starter Portal' installed in the Development environment will have the different website id from the Starter Portal installed on UAT environment. So now, you need to perform the following steps once you succesfully deployed the portal configuration to the target environment (SIT, UAT, PROD, etc):
 
-1. Delete the existing **Website** and its associated **Website Binding** record from the target environment that got created after portal installation. Let say, you are deploying **Starter Portal** from your Development environment to UAT environment. Then after migrating the portal configuration, you will see two website records. One, that got created after portal installation and the another one is just created after portal deployment. Hence, you need to delete the existing **Starter Portal** website and its associated **Website Binding** from the UAT environment. This will delete all portal configurations associated with that website record. And then, you'll see only one website record that is just created through deployment.
-2. Delete the portal app (that was created after installing a portal in your target environment) from the PowerApps maker portal (https://make.powerapps.com).
-3. Create a new Portal > choose option **Use data from existing website record** and then select the website record that is created through deployment. This will link your new portal website with the one which got created through deployment.
-4. Wait for 5-10 mins, your portal will be up and running.
+1. Delete the existing **Website** record from the target environment that got created after portal installation. Let say, you are deploying **Starter Portal** from your Development environment to UAT environment. Then after migrating the portal configuration, you will see two website records. One, that got created after portal installation and the another one is just created after portal deployment.
+2. Navigate to [Power Apps Portal Admin Center](/admin/admin-overview.md)
+3. Under Portal Details, Update Portal Binding by choosing newly deployed website.
+4. Wait for few seconds, your portal will be up and running.
 
 **Note:** This is an only one-time activity that needs to be performed on each target environment after portal deployment. From next time onwards, the subsequent deployment will update the portal configuration in the target environment.
 
