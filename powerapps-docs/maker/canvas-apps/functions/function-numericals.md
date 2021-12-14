@@ -47,6 +47,11 @@ If an argument would result in an undefined valued, the result is *blank*.  This
 * *Base* - Required. Base number to raise.
 * *Exponent* - Required. The exponent to which the base number is raised.
 
+**Log**( *Number*, *Base* )
+
+* *Number* - Required. Number to calculate the logarithm.
+* *Base* - Optional. The base of the logarithm to calculate. If omitted, the base 10 will be used.
+
 **Abs**( *SingleColumnTable* )<br>**Exp**( *SingleColumnTable* )<br>**Ln**( *SingleColumnTable* )<br>**Sqrt**( *SingleColumnTable* )
 
 * *SingleColumnTable* - Required. A single-column table of numbers to operate on.
