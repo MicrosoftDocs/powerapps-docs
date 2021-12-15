@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2021
+ms.date: 12/15/2021
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: ndoelman
@@ -49,6 +49,15 @@ contributors:
 - If you keep the portal settings pane open in Power Apps home page while resetting the portal from Power Apps portals admin center, a user will see the "Something went wrong" error message in the portal settings pane, as portal isn't available.
 
 - In certain cases, when you create a portal, the styles aren't applied properly to the portal, and the website is displayed without the styles when opened through **Browse website**. This behavior rarely happens and styles can be recovered by restarting the portal from Power Apps portals admin center.
+
+- Users may get an error when viewing the **Access Denied** webpage.
+
+    To resolve this issue:
+    
+    1. Using the [Portals Management app](../configure/configure-portal.md), go to the **Web Pages** section and select the **Access Denied** webpage.
+    1. Update the *Page Template* lookup field from *Default studio template* to *Access Denied*.
+    1. Select **Save**.
+    1. [Clear the portal cache](../admin/clear-server-side-cache.md#steps-to-clear-portal-server-side-cache).
 
 ## Power Apps portals Studio issues
 
