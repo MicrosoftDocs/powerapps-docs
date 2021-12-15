@@ -18,22 +18,17 @@ contributors:
   - anuitz
 ---
 
-
-
-
-
-
 # Add informational cards to pins
 
 You can add informational cards to each pin on the map. 
 
-When a user selects the pin (either by hovering over it or selecting it directly), a small card will pop-up with information taken from the dataset you bound to the component, as described in the topic [Use data from Excel to insert pins](geospatial-map-excel.md#add-pin-data-from-an-excel-workbook).
+When a user selects the pin (either by hovering over it or selecting it directly), a small card will pop-up with information taken from the dataset you bound to the control, as described in the topic [Use data from Excel to insert pins](geospatial-map-excel.md#add-pin-data-from-an-excel-workbook).
 
 Any column you add to the table in the data source (for example, the Excel table) will be available as a field to show on the card.
 
 ## Prerequisites
 1. Create a Canvas app and make sure it meets the [Geospatial prerequisites](geospatial-overview.md#prerequisites). 
-2. In your app, [insert a map](geospatial-component-map.md#use-the-component). 
+2. In your app, [insert a map](geospatial-component-map.md#use-the-control). 
 
 
 **To add informational cards to pins:**
@@ -52,7 +47,7 @@ Any column you add to the table in the data source (for example, the Excel table
 
 5. Each pin will now show the fields associated with that pin in an informational card.
 
-    :::image type="content" source="media/geospatial/map-info-card-example.png" alt-text="Screenshot of the map component with an info card on top of a pin, showing information such as Name, Occupancy, and Phone.":::
+    :::image type="content" source="media/geospatial/map-info-card-example.png" alt-text="Screenshot of the map control with an info card on top of a pin, showing information such as Name, Occupancy, and Phone.":::
 
 
 
@@ -63,9 +58,9 @@ Any column you add to the table in the data source (for example, the Excel table
 - [Draw and insert shapes onto maps](geospatial-map-draw-shapes.md)
 
 
-## Other geospatial components
+## Other geospatial controls
 
-To see dynamic address suggestions as you type, use the **[Address input](geospatial-component-input-address.md)** component.
+To see dynamic address suggestions as you type, use the **[Address input](geospatial-component-input-address.md)** control.
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

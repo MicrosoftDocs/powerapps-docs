@@ -4,7 +4,7 @@ description: "Sample demonstrates how to implement a generic custom virtual tabl
 ms.date: 04/09/2021
 ms.reviewer: "nabuthuk"
 ms.service: powerapps
-ms.topic: "samples"
+ms.topic: sample
 ms.assetid: d329dade-16c5-46e9-8dec-4b8efb996d24
 author: "Nkrb" # GitHub ID
 ms.author: "nabuthuk"

@@ -1,6 +1,6 @@
 ---
 title: Insert waypoints as map pins and draw routes between them (preview)
-description: Learn about how to add waypoints to your map component as pins and draw routes between them.
+description: Learn about how to add waypoints to your map control as pins and draw routes between them.
 author: anuitz
 ms.service: powerapps
 ms.topic: conceptual
@@ -22,9 +22,9 @@ contributors:
 
 [!INCLUDE[Preview disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-You can load a table that contains a dataset of waypoints into the map component. The component will then place pins on the map for each waypoint, and it can draw routes between the waypoints.
+You can load a table that contains a dataset of waypoints into the map control. The control will then place pins on the map for each waypoint, and it can draw routes between the waypoints.
 
-The component has options to reorder the waypoints or rearrange the route to improve travel time or travel distance.
+The control has options to reorder the waypoints or rearrange the route to improve travel time or travel distance.
 
 > [!IMPORTANT]
 > - This is a preview feature.
@@ -33,11 +33,11 @@ The component has options to reorder the waypoints or rearrange the route to imp
 ## Prerequisites
 
 - Create a canvas app, and make sure it meets the [Geospatial prerequisites](geospatial-overview.md#prerequisites).
-- In your app, [insert a map](geospatial-component-map.md#use-the-component).
+- In your app, [insert a map](geospatial-component-map.md#use-the-control).
 
 ## Add waypoint data from an Excel workbook
 
-Your data source needs to contain a named table with the following columns that should then be mapped to the associated property in the component's **Advanced** pane.
+Your data source needs to contain a named table with the following columns that should then be mapped to the associated property in the control's **Advanced** pane.
 
 | Column description | Maps to property | Required |
 | -- | -- | -- |
@@ -80,7 +80,7 @@ After you have the Excel workbook created, follow the steps below to add waypoin
 
 1. Save the workbook.
 
-1. Open or create a new app in Power Apps, and insert the map component.
+1. Open or create a new app in Power Apps, and insert the map control.
 
 1. On the **Properties** pane, select the **Route waypoints(Items)** field and then search for *excel* and select **Import from Excel**.
 
@@ -106,7 +106,7 @@ After you have the Excel workbook created, follow the steps below to add waypoin
     > [!NOTE]
     > Address is interchangeable with Latitude and Longitude. If Latitude and Longitude are provided, then Address will not be used. If only Address is provided, then Latitude and Longitude are not necessary.
 
-1. The map component will now show each row in the table as a pin, labeled with its *Name* as defined in the Excel table, and numbered in the same order as the given dataset.
+1. The map control will now show each row in the table as a pin, labeled with its *Name* as defined in the Excel table, and numbered in the same order as the given dataset.
 
     :::image type="content" source="media/geospatial/map-routing-pins.png" alt-text="Screenshot of the map with the waypoints as pins.":::
 
@@ -118,12 +118,12 @@ To draw routes between the waypoints on the map and customize how the route is c
 
 1. Switch **Enable routing** to **On**.
 
-1. The component will now draw routes between the waypoints on the map.
+1. The control will now draw routes between the waypoints on the map.
 
     :::image type="content" source="media/geospatial/map-routing-directions.png" alt-text="Screenshot of the map with routes.":::
 
     >[!NOTE]
-    >By default, the component will reorder the middle waypoints to decrease travel time or travel distance. The first and last waypoints are considered the origin and destination and cannot be reordered. Waypoint order can be kept locked by switching the **Maintain waypoint order** toggle to **On**.
+    >By default, the control will reorder the middle waypoints to decrease travel time or travel distance. The first and last waypoints are considered the origin and destination and cannot be reordered. Waypoint order can be kept locked by switching the **Maintain waypoint order** toggle to **On**.
 
 ### Properties
 
@@ -132,13 +132,13 @@ The following properties can configure how the route is calculated or:
 | Property | Description | Type | Location |
 | - | - | - | - |
 | Enable routing | Whether routes are drawn between waypoints | Boolean | **Properties** (also in **Advanced** as **UseRouting**) |
-| Maintain waypoint order | If true, the component will reorder the waypoints to optimize the route based on the **Optimize route** setting. If false, the component will maintain the order that the waypoints have in the dataset, and the **Optimize route** setting will only affect the drawn route. | Boolean | **Properties** (also in **Advanced** as **RouteMaintainOrder**) |
+| Maintain waypoint order | If true, the control will reorder the waypoints to optimize the route based on the **Optimize route** setting. If false, the control will maintain the order that the waypoints have in the dataset, and the **Optimize route** setting will only affect the drawn route. | Boolean | **Properties** (also in **Advanced** as **RouteMaintainOrder**) |
 | Optimize route | Whether to optimize the route to decrease travel time or decrease travel distance. | Enumeration (None, Distance, Time) | **Properties** (also in **Advanced** as **RouteOptimization**) |
 | Route travel mode | Whether the route will be traveled by car or by truck. | Enumeration (Car, Truck) | **Properties** (also in **Advanced** as **RouteTravelMode**) |
 
 ### Output Properties
 
-The component outputs various properties when the route changes. These properties are all placed in the **RouteDirection** object. The **OnRouteDirectionChange** event is a recommended way to use the output in other components or to customize the experience.
+The control outputs various properties when the route changes. These properties are all placed in the **RouteDirection** object. The **OnRouteDirectionChange** event is a recommended way to use the output in other controls or to customize the experience.
 
 | Property | Description | Type | Location |
 | - | - | - | - |
@@ -147,4 +147,4 @@ The component outputs various properties when the route changes. These propertie
 
 ### See also
 
-[Interactive map component](geospatial-component-map.md)
+[Interactive map control](geospatial-component-map.md)

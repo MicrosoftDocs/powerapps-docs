@@ -160,4 +160,8 @@ As you type a formula in the formula bar, different syntax elements appear in di
 
 ![syntax highlighting.](./media/working-with-formulas/syntax-highlighting.png)
 
+### See also
+
+[Use Find and Replace capability in the formula bar](formula-bar-find-replace.md)
+
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
