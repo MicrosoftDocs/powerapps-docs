@@ -7,6 +7,7 @@ ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 5/22/2019
+ms.subservice: end-user
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
@@ -32,7 +33,7 @@ Connect with Power Automate from your app to manage your flows.
 1. On the command bar, select **Flow**.  
   
    > [!div class="mx-imgBorder"]
-   > ![Power Automate menu](media/flow.png "Power Automate menu") 
+   > ![Power Automate menu.](media/flow.png "Power Automate menu") 
   
 2. The following options appear:  
   

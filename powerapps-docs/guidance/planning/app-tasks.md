@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: guidance
 ms.date: 06/16/2020
+ms.subservice: guidance
 ms.author: thground
 ms.reviewer: kathyos
 
@@ -35,7 +36,7 @@ We considered the tasks done by people who will be creating and viewing the
 expense reports. We'll separately consider the tasks for approvals and for
 weekly budget reporting.
 
-![Business process flowchart with tasks for the expense report creating and viewing app](media/app-tasks.png "Business process flowchart with tasks for the expense report creating and viewing app")
+![Business process flowchart with tasks for the expense report creating and viewing app.](media/app-tasks.png "Business process flowchart with tasks for the expense report creating and viewing app")
 
 Based on the above, we think the expense report create/view app needs these
 screens and components:

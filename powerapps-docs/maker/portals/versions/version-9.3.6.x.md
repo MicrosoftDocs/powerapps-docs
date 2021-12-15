@@ -5,11 +5,12 @@ author: dileepsinghmicrosoft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/01/2021
+ms.date: 07/02/2021
+ms.subservice: portals
 ms.author: dileeps
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributor:
-    - tapanm-msft
+    - nickdoelman
     - dileepsinghmicrosoft
 ---
 
@@ -26,10 +27,11 @@ This release includes only an updated portal host, and no solution package updat
 Portal host version 9.3.6.5 resolves the following issues:
 
 - Sorting isn't enabled on related table columns in a list. After this release, sorting can be enabled on related table columns by creating a site setting named **Site/EnableSortingOnLinkedEntities**, and setting its value as **true**.
-- Calendar Control - "Specific Time Zone" option in the "Time Zone Display Mode" dropdown isn't honored, and the time is displayed according to the default browser time zone of the portal user. After this release, this setting will be honored.
-- Custom plug-in error doesn't show when the error occurs on a referenced table, for example when uploading a file to an annotation table on a basic form.
-- Code components - Sometimes when the value of a control is changed, the updated value isn't shown on the form.
-- Advanced form - Configuration to set a target for **New** button in lookup dialog points to active advanced form instead of basic form, and doesn't work when set. This change will also require the portal package/solution version to be upgraded to 9.2.2103 or later.
+- Calendar Control - "Specific Timezone" option in the "Time Zone Display Mode" dropdown isn't honored, and the time is displayed according to default browser timezone of the portal user. After this release, this setting will be honored.
+- Custom plugin error doesn't show when the error occurs on a referenced table. For example, when uploading a file to annotation table on a basic form.
+- Code components - Sometimes when the value of a control is changed, updated value isn't shown on the form.
+- Advanced form - Configuration to set a target for **New** button in lookup dialog points to active advanced form instead of basic form; and doesn't work when set. This change will also require the portal package/solution version to be upgraded to 9.2.2103 or later.
+- Advanced form - Added check for use of only unique advanced form steps in an Advanced Form.
 - Power BI integration - Azure AD guest users aren't able to access embedded Power BI components.
 - Captcha control - No alternative text is available for Captcha image, leading to screen readers being unable to inform users about using a shortcut for playing audio. After this release, the Captcha image will have an alternative text that will inform users to use a keyboard shortcut to play the audio describing the image.
 - Accessibility - Sorting dropdown on search page isn't visible at 400% zoom.

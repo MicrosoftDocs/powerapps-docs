@@ -2,13 +2,14 @@
 title: "Create and use Custom APIs (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Custom API is a new code-first way to define custom messages for the Microsoft Dataverse" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 03/22/2021
+ms.date: 10/31/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
+ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
+manager: "sunilg" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
@@ -17,26 +18,22 @@ search.app:
 ---
 # Create and use Custom APIs 
 
-Use Custom APIs to create your own APIs in Dataverse. With a Custom API you can consolidate a group of operations into an API that you and other developers can call in their code. The Common Data Service (current environment) connector enables calling Custom APIs actions in Power Automate.
+Use Custom APIs to create your own APIs in Dataverse. With a Custom API you can consolidate a group of operations into an API that you and other developers can call in their code. The Microsoft Dataverse connector enables calling Custom APIs actions in Power Automate. Custom API also can be used as business events to enable creating new integration capabilities such as exposing a new type of trigger event in the Microsoft Dataverse connector. More information: [Microsoft Dataverse business events](business-events.md)
 
 Operations in Dataverse are defined as *messages*. Custom APIs offer a code-first way to define messages that you can add to Dataverse web services. Custom APIs are an alternative to Custom Process Actions that provide a no-code way to include custom messages.
 
-Custom APIs provide a capabilities specifically for developers to define their logic in code. For a full comparison of Custom Process Action and Custom API, see [Compare Custom Process Action and Custom API](custom-actions.md#compare-custom-process-action-and-custom-api).
+Custom APIs provide capabilities specifically for developers to define their logic in code. For a full comparison of Custom Process Action and Custom API, see [Compare Custom Process Action and Custom API](custom-actions.md#compare-custom-process-action-and-custom-api).
 
 ## Create a custom API
 
-Because a Custom API requires a plug-in to implement any logic to be defined by the main operation, you can approach the development of your custom API by:
+A Custom API may or may not include logic implemented with a plug-in. Using Dataverse business events, you may create a Custom API without a plug-in to pass data about an event that other subscribers will respond to.
+
+However, in other cases it is expected that the message you create performs some kind of logic using a plug-in. You can approach the development of your custom API by:
 
 - Write the plug-in first, and then define the Custom API for it.
 - Define the Custom API first, then write the plug-in to implement it.
 
-Your Custom API will be completed when the data defining the Custom API is saved and linked to the Plug-in type to define the main operation. In either case, you should understand the data that drives the Custom API.
-
-> [!TIP]
-> You may also use a Custom API without a main operation plug-in to send a notification to Dataverse when immediate processing is not required. You can register a `PostOperation` asynchronous plug-in to the message created by the Custom API. The plug-in can read the payload to initiate some logic in Dataverse to respond to events that occurred in another system. Configure the external system to call this Dataverse API when those events occur.
-> 
-> Custom APIs used for this purpose should not have any Custom API Response Properties, only Custom API Request Parameters. With no synchronous logic to process or response properties to return, the operations should not fail and will serve as a trigger for the logic in the asynchronous plug-in.
-
+A custom API with a plug-in will be complete when the data defining the Custom API is saved and linked to the Plug-in type to define the main operation. In either case, you should understand the data that drives the Custom API.
 
 There are several different ways to create a custom API:
 
@@ -46,6 +43,11 @@ There are several different ways to create a custom API:
 
 > [!NOTE]
 > Although Custom API data is stored in tables, we do not support creating a model-driven app for these tables. A designer is planned for a future release.
+> 
+> There are several tools created and supported by the community to work with Custom API:
+> - [Dataverse Custom API Manager](https://www.xrmtoolbox.com/plugins/XTB.CustomApiManager/)
+> - [Custom API Tester](https://www.xrmtoolbox.com/plugins/Rappen.XrmToolBox.CustomAPITester/)
+> - [Custom Action to Custom API Converter](https://www.xrmtoolbox.com/plugins/MarkMpn.CustomActionToApiConverter/)
 
 ### Custom API Customization
 
@@ -70,38 +72,18 @@ See the following topics for detailed information about the columns/attributes y
 - [CustomAPIRequestParameter Table Columns](customapirequestparameter-table-columns.md)
 - [CustomAPIResponseProperty Table Columns](customapiresponseproperty-table-columns.md)
 
+This diagram shows how the tables are related to these tables as well as others:
+
+:::image type="content" source="media/custom-api-data-model.png" alt-text="Diagram showing relationships between tables.":::
+
 
 ## Invoking Custom APIs
 
-A Custom API creates a new message which can be invoked via the SDK or Web API.
-
-### Invoking Custom APIs from the Organization Service
-
-You can choose to use either early-bound or late-bound code to invoke your custom API. Use the [CrmSvcUtil](./org-service/generate-early-bound-classes.md) tool to generate helper request and response classes to mirror the request and response properties of your custom API.
-
-For late-bound code, or for a Custom API that you have marked as private, create an `OrganizationRequest` with the unique name of your custom API and add parameters with names matching the unique names of the request properties.
-
-Entity-bound custom APIs have an implicit request property named `Target` that should be set to an `EntityReference` of the record to invoke the API on.
-
-You can access response properties from the parameters of the returned response.
-
-```csharp
-var req = new OrganizationRequest("myapi_EscalateCase")
-{
-  ["Target"] = new EntityReference("incident", guid),
-  ["Priority"] = new OptionSetValue(1)
-};
-
-var resp = svc.Execute(req);
-
-var newOwner = (EntityReference) resp["AssignedTo"];
-```
-
-More information: [Use messages with the Organization service](org-service/use-messages.md).
+A Custom API creates a new message which can be invoked via the Web API or Organization Service SDK.
 
 ### Invoking Custom APIs from the Web API
 
-You can invoke your API using PostMan. Use the steps described in [Set up a Postman environment](webapi/setup-postman-environment.md) to set up a PostMan environment that will generate the access token you will need. Then, apply the steps described in [Use Web API actions](webapi/use-web-api-actions.md) if your API is an action. If it is a function, use the steps in [Use Web API functions](webapi/use-web-api-functions.md).
+While testing, you can invoke your API using PostMan. Use the steps described in [Set up a Postman environment](webapi/setup-postman-environment.md) to set up a PostMan environment that will generate the access token you will need. Then, apply the steps described in [Use Web API actions](webapi/use-web-api-actions.md) if your API is an action. If it is a function, use the steps in [Use Web API functions](webapi/use-web-api-functions.md).
 
 This is an example invoking a Custom API Action named `myapi_CustomUnboundAPI` which has a single string request parameter named `InputParameter`:
 
@@ -138,6 +120,32 @@ Content-Type: application/json; charset=utf-8
 More information:
  - [Use Web API actions](webapi/use-web-api-actions.md)
  - [Use Web API functions](webapi/use-web-api-functions.md)
+
+
+
+### Invoking Custom APIs from the Organization Service
+
+You can choose to use either early-bound or late-bound code to invoke your custom API. Use the [CrmSvcUtil](./org-service/generate-early-bound-classes.md) tool to generate helper request and response classes to mirror the request and response properties of your custom API.
+
+For late-bound code, or for a Custom API that you have marked as private, create an `OrganizationRequest` with the unique name of your custom API and add parameters with names matching the unique names of the request properties.
+
+Entity-bound custom APIs have an implicit request property named `Target` that should be set to an `EntityReference` of the record to invoke the API on.
+
+You can access response properties from the parameters of the returned response.
+
+```csharp
+var req = new OrganizationRequest("myapi_EscalateCase")
+{
+  ["Target"] = new EntityReference("incident", guid),
+  ["Priority"] = new OptionSetValue(1)
+};
+
+var resp = svc.Execute(req);
+
+var newOwner = (EntityReference) resp["AssignedTo"];
+```
+
+More information: [Use messages with the Organization service](org-service/use-messages.md).
 
 
 ## Write a Plug-in for your Custom API
@@ -225,7 +233,8 @@ GET [Organization URI]/api/data/v9.1/customapis?$select=
     executeprivilegename,
     iscustomizable,
     isfunction,
-    isprivate
+    isprivate,
+    workflowsdkstepenabled
   &$expand=
   CustomAPIRequestParameters($select=
     uniquename,
@@ -269,6 +278,7 @@ More information: [Use FetchXML to construct a query](use-fetchxml-construct-que
     <attribute name='boundentitylogicalname' />
     <attribute name='bindingtype' />
     <attribute name='uniquename' />
+    <attribute name='workflowsdkstepenabled' />
     <link-entity name='customapirequestparameter' from='customapiid' to='customapiid' link-type='outer' alias='req' >
       <attribute name='description' />
       <attribute name='displayname' />
@@ -315,6 +325,7 @@ SELECT api.customapiid,
        api.iscustomizable,
        api.isfunction,
        api.isprivate,
+       api.workflowsdkstepenabled,
        req.customapirequestparameterid,
        req.uniquename,
        req.name,
@@ -356,7 +367,7 @@ This process involves exporting a file that contains the base language values an
 
 The following example shows editing the Excel worksheet to add Japanese translations for the English values.
 
-:::image type="content" source="media/solution-strings-for-translation.png" alt-text="Shows how labels are localized":::
+:::image type="content" source="media/solution-strings-for-translation.png" alt-text="Shows how labels are localized.":::
 
 > [!TIP]
 > If you are editing the solution files to create your Custom APIs, you can provide the localized labels directly. More information: [Providing Localized Labels with the solution](create-custom-api-solution.md#providing-localized-labels-with-the-solution)
@@ -490,16 +501,6 @@ Custom API is now generally available, but there are still some related capabili
 To debug using the Plug-in Registration tool and the Plug-in profiler solution, you need to be able to select a specific plug-in step. The main stage implementation for the plug-in is not currently available in the Plug-in Registration tool.
 
 **Workaround**: Register the plug-in type on the `PostOperation` stage of the message created for the Custom API.
-
-### A custom API cannot be called from a workflow
-
-A Custom Process Action can be called from another workflow. Currently, Custom APIs cannot.
-
-### A custom API created is not added to the current solution in the maker portal
-
-When you create a Custom API in the maker portal ([https://make.powerapps.com/](https://make.powerapps.com/)), you should do so in the context of a solution. However, due to the current dependency on the legacy web application designer, the Custom API or any of the Custom API Request Parameters or Custom API Response Properties do not get added to the solution automatically. You must still manually add each part to the solution by selecting the **Add Existing** button.
-
-This will be fixed when a modern designer is provided, or you may want to define your Custom APIs by writing code or with solution files. 
 
 ### Private messages cannot be used in plug-ins
 

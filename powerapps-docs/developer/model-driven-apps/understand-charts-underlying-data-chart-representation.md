@@ -2,11 +2,12 @@
 title: "Understand charts: Underlying data and chart representation (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Charts display data visually by mapping textual values on two axes: horizontal (x) and vertical (y). The x axis is called the category axis and the y axis is called the series axis." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 04/15/2021
+ms.date: 07/15/2021
 ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
 author: "Nkrb" # GitHub ID
+ms.subservice: mda-developer
 ms.author: "nabuthuk" # MSFT alias of Microsoft employees only
 manager: "kvivek" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -156,6 +157,10 @@ Gets or sets the X-axis type of the series.
 |Title|Gets or sets the title of the axis.|
 |TitleForeColor|Gets or sets the text color of an axis title.  More information: [Supported color format](#supported-color-format-in-unified-interface)|
 
+
+> [!TIP]
+> - When there are too many `LABELS`, `HighCharts` omits every second label and tries to render again. A quick work around is to either remove the records, or zoom out the browser.
+
 **Example**
 
 ```xml
@@ -168,13 +173,13 @@ Gets or sets the X-axis type of the series.
 
 ### AxisY
 
-Gets or sets the Y-axis type of the series.
+Gets or sets the Y-axis type of the series. 
 
 **Properties**
 
 |Property Name| Description|
 |-------------|------------|
-|AxisY2|Gets or sets an Axis object that represents the secondary Y-axis.<br/> - Second Yaxis only applies to multiple series chart. <br/> - If you create multiple series chart with the chart editor, by default, the `YAxisType=Secondary` property will be added to the 2nd series of your chart, and a `AxisY2` node is added to the XML.<br/> - If you want another series to be measured by second Y axis, you can move the `YAxisType=Secondary` to that series node. <br/> - If you don't want a second Y axis, you can delete the `YAxisType=Secondary`.<br/> - If a Y Axis (either primary or secondary) measures more than 1 series, title will not be added to that Y Axis, because Y Axis title doesn't know which series to display.|
+|AxisY2|Gets or sets an Axis object that represents the secondary Y-axis.<br/> - Second Y-axis only applies to multiple series chart. <br/> - If you create multiple series chart with the chart editor, by default, the `YAxisType=Secondary` property will be added to the 2nd series of your chart, and a `AxisY2` node is added to the XML.<br/> - If you want another series to be measured by second Y axis, you can move the `YAxisType=Secondary` to that series node. <br/> - If you don't want a second Y axis, you can delete the `YAxisType=Secondary`.<br/> - If a Y Axis (either primary or secondary) measures more than 1 series, title will not be added to that Y Axis, because Y Axis title doesn't know which series to display.|
 |Enabled|Gets or sets a value that indicates whether an axis is enabled.|
 |Interval|Gets or sets the interval of an axis.|
 |LabelStyle Enabled|Gets or sets a flag that indicates whether the label is enabled.|
@@ -229,7 +234,7 @@ Represents a chart area on the chart image.
 
 |Property Name| Description|
 |-------------|------------|
-|Area3DStyle Enable3D|Gets or sets a value that indicates whether the flag toggles the 3D on and off for a chart area.|
+|Area3DStyle Enable3D|Gets or sets a value that indicates whether the flag toggles the 3D on and off for a chart area. It supports the following 3D chart types:<br/> - 3D Column <br/> - 3D Bar <br/> - 3D StackedColumn <br/> - 3D StackedBar <br/> - 3D StackedColumn100 <br/> - 3D StackedBar100 <br/> - 3D Pie|
 |BackColor|Allow users to set the plot background to either a solid or a gradient color.  More information: [Supported color format](#supported-color-format-in-unified-interface)|
 |BackSecondaryColor|Allow users to set the plot background to either a solid or a gradient color.  More information: [Supported color format](#supported-color-format-in-unified-interface)|
 |BackGradientStyle|Allow users to set the plot background to either a solid or a gradient color.|
@@ -279,6 +284,10 @@ Stores data points and series.
 |LabelFormat|Gets or sets the format of the data point label. More information: [Supported numeric format for charts](#supported-numeric-format-for-charts-in-unified-interface)|
 |LegendText|Gets or sets the text of the item in the legend. For funnel and pie charts, the legend displays each data point's value in a series. Instead of displaying the series name as a whole.|
 |YAxisType|Gets or sets the Y-axis type of a series. Only the second Y-axis is supported, not second X-axis.|
+
+> [!NOTE]
+> - Currently, we partially support `#PERCENT`. `#VAL` and `#TOTAL` are not supported in Unified Interface. 
+> - For non comparison charts, we support a maximum of 5 series (1 category). For comparison charts, we only support 1 series and 2 categories. 
 
 **Example**
 

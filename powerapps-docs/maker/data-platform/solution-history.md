@@ -8,6 +8,7 @@ ms.custom:
 ms.topic: article
 ms.assetid: 
 author: Mattp123
+ms.subservice: dataverse-maker
 ms.author: matp
 manager: kvivek
 ms.reviewer: 
@@ -34,7 +35,7 @@ You can view details about solution operations from the **Solutions** area of Po
     The history is displayed. 
 
     > [!div class="mx-imgBorder"] 
-    > ![Solution history](media/solution-history.png "Solution history")
+    > ![Solution history.](media/solution-history.png "Solution history")
 
 Select a solution operation to display the **Information page**. Each solution history row is read-only and includes the following in the **Details** area:
 -	**Name**. The solution unique name. 
@@ -47,7 +48,7 @@ Select a solution operation to display the **Information page**. Each solution h
 -	**Result**. The result of the operation, such as Success or Failure.
 
  > [!div class="mx-imgBorder"] 
- > ![Solution history details](media/solution-history-details.png "Solution history details")
+ > ![Solution history details.](media/solution-history-details.png "Solution history details")
 
 ### View solution operation error details 
 Below the **Details** area is the **More details** area that has additional information about the solution and, when a solution operation has a failure, the information includes: 

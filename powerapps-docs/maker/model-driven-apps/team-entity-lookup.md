@@ -15,6 +15,7 @@ applies_to:
 author: "Mattp123"
 ms.assetid: 
 caps.latest.revision: 25
+ms.subservice: mda-maker
 ms.author: "matp"
 manager: "kvivek"
 search.audienceType: 
@@ -27,26 +28,31 @@ search.app:
 
 [!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-With Unified Interface apps, for a table to be available in a lookup it must be added to the app. For example, contact rows have the ability to be assigned to a user or a team.  
+## Lookup functionality
+With model-driven apps, for a table to be available in a lookup it must be added to the app. For example, contact records have the ability to be assigned to a user or a team.  Both of these tables have a relationship with the contacts table.
 
 > [!div class="mx-imgBorder"] 
-> ![Entity lookup with both users and teams available](media/entity-lookup-teams.png "Entity lookup with both users and teams available")
+> ![Entity lookup with both users and teams available.](media/entity-lookup-teams.png "Entity lookup with both users and teams available")
 
-However, if the user table is included in the app but the team table is not, only user rows will appear in a lookup. 
+However, if the **User** table is included in the app but the **Team** table is not, only user rows will appear in a lookup.
 
 > [!div class="mx-imgBorder"] 
-> ![Entity lookup with users only](media/entity-lookup-user-only.png "Entity lookup with users only")
+> ![Entity lookup with users only.](media/entity-lookup-user-only.png "Entity lookup with users only")
 
-## Add the team table to an app
+This can be resolved by adding the **Team** table to the app using the [App Designer](model-driven-app-glossary.md#app-designer).
 
-1. Open the app in the App Designer. 
-2. Select the **Components** tab, select **Entities**, and then select **Team**.    
+## Add a related table to an app to enable the lookup
 
-    > [!div class="mx-imgBorder"] 
-    > ![Add the team table to the app](media/add-team-entity-app.png "Add the team table to the app")
+1. Go to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then select **Solutions**.
+1. Open the solution you want, and then select the model-driven app. This opens the app in the app designer.
+1. Select the **Components** tab, select **Entities** (tables), and then select **Team**.
 
-3. Select **Save**, and then select **Publish** to make your change available to app users.   
+    > [!div class="mx-imgBorder"]
+    > ![Add the team table to the app.](media/add-team-entity-app.png "Add the team table to the app")
 
+1. Select **Save**, and then select **Publish** to make the change available to app users within the organization.
 
+## Next Steps
+[Share a model driven app](share-model-driven-app.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

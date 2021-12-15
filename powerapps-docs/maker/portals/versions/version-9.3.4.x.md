@@ -6,10 +6,11 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 06/15/2021
+ms.subservice: portals
 ms.author: dileeps
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributor:
-    - tapanm-msft
+    - nickdoelman
     - dileepsinghmicrosoft
 ---
 

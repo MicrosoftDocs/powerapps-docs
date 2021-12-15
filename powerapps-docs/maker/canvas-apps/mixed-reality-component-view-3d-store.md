@@ -1,31 +1,34 @@
 ---
 title: Connect 3D models to Power Apps
-description: Load 3D models into Power Apps by connecting the View in 3D component to existing files as attachments, media content, with direct URLs, or as base64-encoded URIs.
-author: iaanw
-manager: shellyha
+description: Load 3D models into Power Apps by connecting the View in 3D control to existing files as attachments, media content, with direct URLs, or as base64-encoded URIs.
+author: anuitz
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 5/22/2020
-ms.author: iawilt
+ms.subservice: canvas-maker
+ms.author: anuitz
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - anuitz
 ---
 
-# Load models with the View in 3D component
+# Load models with the View in 3D control
 
 You can set the source for 3D content as attachments or media content, as a direct URL to a .glb file, or as a base64-encoded URI.
 
-For situations where you want to have a gallery of 3D models, you should put the **View in 3D** component outside of the gallery, and then set its source to the gallery's selected property. This process is described in the [Loading models from common connectors](#loading-models-from-common-connectors) section.
+For situations where you want to have a gallery of 3D models, you should put the **View in 3D** control outside of the gallery, and then set its source to the gallery's selected property. This process is described in the [Loading models from common connectors](#loading-models-from-common-connectors) section.
 
 To help reduce load times, make sure your 3D models are [optimized for use with Power Apps](/dynamics365/mixed-reality/guides/3d-content-guidelines/optimize-models).
 
 ## Loading models from common connectors
 
-Loading models as attachments or media content works through the binary storage associated with Power Apps. To check if a data connector uses binary storage, add a label and set the **Text** property to the data source. If the label starts with `appres://`, then that data source should work with the **View in 3D** component.
+Loading models as attachments or media content works through the binary storage associated with Power Apps. To check if a data connector uses binary storage, add a label and set the **Text** property to the data source. If the label starts with `appres://`, then that data source should work with the **View in 3D** control.
 
 > [!TIP]
 > You can rename a .glb file extension to .jpg and directly upload it to the app.
@@ -46,17 +49,17 @@ Loading models as attachments or media content works through the binary storage 
 
 1. Create an Excel Online workbook on OneDrive where you've also stored your .glb files.
 
-    ![Using OneDrive to share .glb file](./media/augmented-3d/augmented-3d-onedrive-list.png "Using OneDrive to share .glb file")
+    ![Using OneDrive to share .glb file.](./media/augmented-3d/augmented-3d-onedrive-list.png "Using OneDrive to share .glb file")
 
 1. In the workbook, create a table with columns titled **3DModel [image]** and **Name**.
 1. Add a row for each .glb file, inserting the relative file path to the .glb file in the **3DModel [image]** column.
 
-    ![Using Excel Online to share .glb file](./media/augmented-3d/augmented-3d-excel-list.png "Using Excel Online to share .glb file")
+    ![Using Excel Online to share .glb file.](./media/augmented-3d/augmented-3d-excel-list.png "Using Excel Online to share .glb file")
 
 1. Close the excel workbook.
 1. In a canvas-based app, add a **Gallery**.
 1. Set the gallery data source to the Excel Online workbook through the OneDrive connector.
-1. In the **Advanced** properties tab for the **View in 3D** component, set the **Source** property to **Gallery1.Selected.'3DModel'**.
+1. In the **Advanced** properties tab for the **View in 3D** control, set the **Source** property to **Gallery1.Selected.'3DModel'**.
 
 ### Load models from a URL
 
@@ -101,9 +104,9 @@ Power Automate can convert files to base64 using the dataUri(base64(*file conten
     concat('data:model/gltf-binary;base64,', Last(split(dataUri(base64(body('Get_file_content'))), ',')))
     ```
 
-    ![Convert files with SharePoint](./media/augmented-3d/augmented-3d-convert-flow.png "Convert files with SharePoint")
+    ![Convert files with SharePoint.](./media/augmented-3d/augmented-3d-convert-flow.png "Convert files with SharePoint")
 
-When you add .glb files to the **Document Library**, they'll be converted to a base64-encoded data URI, which you can set to the **Source** property of the **View in 3D** component, using the SharePoint data connector to access the list.
+When you add .glb files to the **Document Library**, they'll be converted to a base64-encoded data URI, which you can set to the **Source** property of the **View in 3D** control, using the SharePoint data connector to access the list.
 
 **To use Microsoft Dataverse**
 

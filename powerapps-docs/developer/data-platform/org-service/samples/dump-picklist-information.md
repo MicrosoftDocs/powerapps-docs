@@ -1,11 +1,11 @@
 ---
-title: " Dump choices information to a file (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: " Dump choices/picklist information to a file (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample showcases how to dump choices information to a file." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 06/17/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
-ms.topic: "samples"
+ms.topic: sample
 author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
@@ -16,7 +16,7 @@ search.app:
   - D365CE
 ---
 
-# Dump attribute choices information to a file
+# Dump choices/picklist information to a file
 
 [!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
 

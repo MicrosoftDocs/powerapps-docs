@@ -328,11 +328,11 @@ This sample comes with two custom actions. They both require parameters but one 
 - `sample_AddNoteToContact`: A bound custom action that takes two parameters. One is a `NoteTitle` and the other is a `NoteText`. This custom action adds a note to a <xref href="Microsoft.Dynamics.CRM.contact?text=contact EntityType" />. Below is a screen shot of the **Information** page for this custom action.  
   
  <!-- TODO:
- ![Custom Action &#45; AddNoteToContact information](../media/custom-action-add-note-contact.PNG "Custom Action - AddNoteToContact information")   -->
+ ![Custom Action &#45; AddNoteToContact information.](../media/custom-action-add-note-contact.PNG "Custom Action - AddNoteToContact information")   -->
   
 - `sample_CreateCustomer`: An unbound custom action that require different parameters depending on what type of customer is being created. For example, when the `AccountType` is "account" then it only requires `AccountName` parameter. When the `AccountType` is "contact", a `ContactFirstName` and `ContactLastName` parameters are required. Below is a screen shot of the **Information** page for this custom action.  
 <!-- TODO:  
- ![Custom Action &#45; CreateCustomer information](../media/custom-action-create-customer.PNG "Custom Action - CreateCustomer information")  
+ ![Custom Action &#45; CreateCustomer information.](../media/custom-action-create-customer.PNG "Custom Action - CreateCustomer information")  
    -->
 <a name="bkmk_boundCustomActionWithParams"></a>
    

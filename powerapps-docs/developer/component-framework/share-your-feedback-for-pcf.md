@@ -2,6 +2,7 @@
 title: Share your feedback for Power Apps component framework  | Microsoft Docs
 description: Capabilities and limitations for canvas apps
 keywords:
+ms.subservice: pcf
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek

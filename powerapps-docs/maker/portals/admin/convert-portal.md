@@ -5,17 +5,21 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2021
+ms.date: 09/14/2021
+ms.subservice: portals
 ms.author: nenandw
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
     - neerajnandwana-msft
-    - tapanm-msft
+    - nickdoelman
 ---
 
 # Convert a portal
 
 As explained in the [portal lifecycle](portal-lifecycle.md) article earlier, a Power Apps portals goes through different stages. You can convert a portal from one stage to another, depending on what conversion is allowed, and whether the environment has the required license, or capacity.
+
+> [!IMPORTANT]
+> The [table permission changes for forms and lists](../important-changes-deprecations.md#table-permission-changes-for-forms-and-lists-on-new-portals) introduced with the portals release version [9.3.7.x](/power-platform/released-versions/portals/portalupdate1) also take effect on a portal that's converted from trial to production.
 
 ## Convert a portal from trial to production
 
@@ -25,17 +29,18 @@ You can convert a trial portal to a production portal from the notifications dis
 > You must be assigned one of the following roles to convert a portal from trial to production:
 > - Global administrator
 > - System administrator
-> <br> More information: [Admin roles required for portal administrative tasks](portal-admin-roles.md)
+>
+> More information: [Admin roles required for portal administrative tasks](portal-admin-roles.md)
 
 When you open the [Power Apps Portals admin center](admin-overview.md) and go to the **[Portal Details](portal-details.md)** tab, you'll see the notification about the trial expiration displayed below the **Type** field.
 
 > [!div class=mx-imgBorder]
-> ![Trial notification on the Portal Details tab](../media/admin-center-convert-notif.png "Trial notification on the Portal Details tab")
+> ![Trial notification on the Portal Details tab.](../media/admin-center-convert-notif.png "Trial notification on the Portal Details tab")
 
 On other pages in the admin center, the notification is displayed at the top of the page.
 
 > [!div class=mx-imgBorder]
-> ![Trial notification on other pages](../media/admin-center-convert-notif-all.png "Trial notification on other pages")
+> ![Trial notification on other pages.](../media/admin-center-convert-notif-all.png "Trial notification on other pages")
 
 To convert your portal from trial to production:
 
@@ -44,7 +49,7 @@ To convert your portal from trial to production:
 2.	Select **Confirm**.
 
     > [!div class=mx-imgBorder]
-    > ![Trial to production confirmation](../media/trial-to-prod-confirm.png "Trial to production confirmation")
+    > ![Trial to production confirmation.](../media/trial-to-prod-confirm.png "Trial to production confirmation")
 
 ## Convert an existing portal to capacity-based model
 
@@ -56,7 +61,7 @@ You can convert your existing portal license to [capacity-based licensing model]
 1. Go to [Portal details](portal-details.md).
 1. Select **Change License**.
 
-    ![Convert an existing portal to a capacity-based model](media/portal-lifecycle/convert-to-capacity-based-licensing.gif "Convert an existing portal to a capacity-based model")
+    ![Convert an existing portal to a capacity-based model.](media/portal-lifecycle/convert-to-capacity-based-licensing.gif "Convert an existing portal to a capacity-based model")
 
 Consider the following before changing your portal license:
 

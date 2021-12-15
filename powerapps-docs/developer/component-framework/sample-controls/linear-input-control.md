@@ -19,7 +19,7 @@ This sample component changes the user experience of interacting with numeric ty
 To implement this component, first you need to define the [Manifest](../manifest-schema-reference/manifest.md) file, and them implement the custom logic in TypeScript. 
 
 > [!div class="mx-imgBorder"]
-> ![Linear Input component](../media/linear-input-control.png "Linear Input component")
+> ![Linear Input component.](../media/linear-input-control.png "Linear Input component")
 
 ## Available for 
 

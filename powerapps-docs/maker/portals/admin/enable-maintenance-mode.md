@@ -6,11 +6,12 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2021
+ms.subservice: portals
 ms.author: nenandw
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
     - neerajnandwana-msft
-    - tapanm-msft
+    - nickdoelman
 ---
 
 # Maintenance mode for a portal
@@ -20,7 +21,7 @@ There might be times when your website is under scheduled maintenance or is down
 As a portal administrator, you can configure your portal to display a proper message to customers whenever a maintenance activity is going on (for example, "Solution packages are being upgraded.") You can benefit from this capability by enabling the maintenance mode on your portal. When the maintenance mode is enabled, a message is displayed, and the customers are restricted from browsing any webpages except the `<portal URL>/_services/about` page.
 
 > [!div class=mx-imgBorder]
-> ![Default maintenance mode page](../media/default-maint-page.png "Default maintenance mode page")
+> ![Default maintenance mode page.](../media/default-maint-page.png "Default maintenance mode page")
 
 ## Enable maintenance mode
 
@@ -31,7 +32,7 @@ You can enable maintenance mode on your portal to provide a consistent message, 
 3. Go to **Portal Actions** > **Enable maintenance mode**.
 
     > [!div class=mx-imgBorder]
-    > ![Enable maintenance mode](../media/enable-maint-mode-button.png "Enable maintenance mode")
+    > ![Enable maintenance mode.](../media/enable-maint-mode-button.png "Enable maintenance mode")
 
 4. In the **Enable maintenance mode** window, enter the following values:
     - **Select page to be used when maintenance mode is enabled**: Select one of the following values:
@@ -48,7 +49,7 @@ You can enable maintenance mode on your portal to provide a consistent message, 
 5. Select **Enable**. While maintenance mode is being enabled, the portal restarts and is unavailable for a few minutes. 
 
     > [!div class=mx-imgBorder]
-    > ![Enable maintenance mode settings](../media/enable-maint-mode.png "Enable maintenance mode settings")
+    > ![Enable maintenance mode settings.](../media/enable-maint-mode.png "Enable maintenance mode settings")
 
 ### Considerations for custom maintenance page
 
@@ -70,14 +71,14 @@ You can also choose to disable maintenance mode on your portal when the schedule
 2. Go to **Portal Actions** > **Configure or disable maintenance mode**.
 
     > [!div class=mx-imgBorder]
-    > ![Configure maintenance mode](../media/configure-maint-mode-button.png "Configure maintenance mode")
+    > ![Configure maintenance mode.](../media/configure-maint-mode-button.png "Configure maintenance mode")
 
 3. Modify the settings as required, and select **Update**. For example, you might choose to display the default page if you've selected to display the custom page earlier.
 
 4. To disable maintenance mode, select **Disable**. While maintenance mode is being updated or disabled, the portal restarts and is unavailable for a few minutes.
 
     > [!div class=mx-imgBorder]
-    > ![Update maintenance mode settings](../media/configure-maint-mode.png "Update maintenance mode settings")
+    > ![Update maintenance mode settings.](../media/configure-maint-mode.png "Update maintenance mode settings")
 
 ### See also
 

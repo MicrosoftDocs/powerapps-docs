@@ -1,13 +1,13 @@
 ---
-title: "Audit table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the Audit table/entity."
-ms.date: 05/20/2021
+title: "Auditing (Audit) table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the Auditing (Audit) table/entity."
+ms.date: 10/05/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -15,7 +15,7 @@ search.app:
   - D365CE
 ---
 
-# Audit table/entity reference
+# Auditing (Audit) table/entity reference
 
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
@@ -145,82 +145,82 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### Action Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Unknown|
-|1|Create|
-|2|Update|
-|3|Delete|
-|4|Activate|
-|5|Deactivate|
-|11|Cascade|
-|12|Merge|
-|13|Assign|
-|14|Share|
-|15|Retrieve|
-|16|Close|
-|17|Cancel|
-|18|Complete|
-|20|Resolve|
-|21|Reopen|
-|22|Fulfill|
-|23|Paid|
-|24|Qualify|
-|25|Disqualify|
-|26|Submit|
-|27|Reject|
-|28|Approve|
-|29|Invoice|
-|30|Hold|
-|31|Add Member|
-|32|Remove Member|
-|33|Associate Entities|
-|34|Disassociate Entities|
-|35|Add Members|
-|36|Remove Members|
-|37|Add Item|
-|38|Remove Item|
-|39|Add Substitute|
-|40|Remove Substitute|
-|41|Set State|
-|42|Renew|
-|43|Revise|
-|44|Win|
-|45|Lose|
-|46|Internal Processing|
-|47|Reschedule|
-|48|Modify Share|
-|49|Unshare|
-|50|Book|
-|51|Generate Quote From Opportunity|
-|52|Add To Queue|
-|53|Assign Role To Team|
-|54|Remove Role From Team|
-|55|Assign Role To User|
-|56|Remove Role From User|
-|57|Add Privileges to Role|
-|58|Remove Privileges From Role|
-|59|Replace Privileges In Role|
-|60|Import Mappings|
-|61|Clone|
-|62|Send Direct Email|
-|63|Enabled for organization|
-|64|User Access via Web|
-|65|User Access via Web Services|
-|100|Delete Entity|
-|101|Delete Attribute|
-|102|Audit Change at Entity Level|
-|103|Audit Change at Attribute Level|
-|104|Audit Change at Org Level|
-|105|Entity Audit Started|
-|106|Attribute Audit Started|
-|107|Audit Enabled|
-|108|Entity Audit Stopped|
-|109|Attribute Audit Stopped|
-|110|Audit Disabled|
-|111|Audit Log Deletion|
-|112|User Access Audit Started|
-|113|User Access Audit Stopped|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Unknown||
+|1|Create||
+|2|Update||
+|3|Delete||
+|4|Activate||
+|5|Deactivate||
+|11|Cascade||
+|12|Merge||
+|13|Assign||
+|14|Share||
+|15|Retrieve||
+|16|Close||
+|17|Cancel||
+|18|Complete||
+|20|Resolve||
+|21|Reopen||
+|22|Fulfill||
+|23|Paid||
+|24|Qualify||
+|25|Disqualify||
+|26|Submit||
+|27|Reject||
+|28|Approve||
+|29|Invoice||
+|30|Hold||
+|31|Add Member||
+|32|Remove Member||
+|33|Associate Entities||
+|34|Disassociate Entities||
+|35|Add Members||
+|36|Remove Members||
+|37|Add Item||
+|38|Remove Item||
+|39|Add Substitute||
+|40|Remove Substitute||
+|41|Set State||
+|42|Renew||
+|43|Revise||
+|44|Win||
+|45|Lose||
+|46|Internal Processing||
+|47|Reschedule||
+|48|Modify Share||
+|49|Unshare||
+|50|Book||
+|51|Generate Quote From Opportunity||
+|52|Add To Queue||
+|53|Assign Role To Team||
+|54|Remove Role From Team||
+|55|Assign Role To User||
+|56|Remove Role From User||
+|57|Add Privileges to Role||
+|58|Remove Privileges From Role||
+|59|Replace Privileges In Role||
+|60|Import Mappings||
+|61|Clone||
+|62|Send Direct Email||
+|63|Enabled for organization||
+|64|User Access via Web||
+|65|User Access via Web Services||
+|100|Delete Entity||
+|101|Delete Attribute||
+|102|Audit Change at Entity Level||
+|103|Audit Change at Attribute Level||
+|104|Audit Change at Org Level||
+|105|Entity Audit Started||
+|106|Attribute Audit Started||
+|107|Audit Enabled||
+|108|Entity Audit Stopped||
+|109|Attribute Audit Stopped||
+|110|Audit Disabled||
+|111|Audit Log Deletion||
+|112|User Access Audit Started||
+|113|User Access Audit Stopped||
 
 
 
@@ -371,12 +371,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### Operation Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Create|
-|2|Update|
-|3|Delete|
-|4|Access|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Create||
+|2|Update||
+|3|Delete||
+|4|Access||
 
 
 

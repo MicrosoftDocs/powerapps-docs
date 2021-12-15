@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: "pehecke"
 ms.service: powerapps
-ms.topic: "samples"
+ms.topic: sample
 author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
@@ -45,11 +45,11 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 
 1. Retrieves the contact records that are created in the [Setup](#setup). 
 2. Creates the activity party records for each contact.
-3. Also creates Letter activity and set **From** and **To** fields to the respective Activity Party entities.
+3. Also creates Letter activity and set **From** and **To** columns to the respective Activity Party tables.
 
 ### Clean up
 
-Display an option to delete the records created during [Setup](#setup). The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the records to achieve the same result.
+Display an option to delete the records created during [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the records to achieve the same result.
 
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

@@ -1,13 +1,13 @@
 ---
 title: "Goal table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the Goal table/entity."
-ms.date: 05/20/2021
+ms.date: 10/05/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -183,11 +183,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### AmountDataType Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Money|
-|1|Decimal|
-|2|Integer|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Money||
+|1|Decimal||
+|2|Integer||
 
 
 
@@ -205,8 +205,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### ConsiderOnlyGoalOwnersRecords Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Owned by goal owner|
 |0|All|
 
@@ -293,40 +293,40 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### FiscalPeriod Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Quarter 1|
-|2|Quarter 2|
-|3|Quarter 3|
-|4|Quarter 4|
-|101|January|
-|102|February|
-|103|March|
-|104|April|
-|105|May|
-|106|June|
-|107|July|
-|108|August|
-|109|September|
-|110|October|
-|111|November|
-|112|December|
-|201|Semester 1|
-|202|Semester 2|
-|301|Annual|
-|401|P1|
-|402|P2|
-|403|P3|
-|404|P4|
-|405|P5|
-|406|P6|
-|407|P7|
-|408|P8|
-|409|P9|
-|410|P10|
-|411|P11|
-|412|P12|
-|413|P13|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Quarter 1||
+|2|Quarter 2||
+|3|Quarter 3||
+|4|Quarter 4||
+|101|January||
+|102|February||
+|103|March||
+|104|April||
+|105|May||
+|106|June||
+|107|July||
+|108|August||
+|109|September||
+|110|October||
+|111|November||
+|112|December||
+|201|Semester 1||
+|202|Semester 2||
+|301|Annual||
+|401|P1||
+|402|P2||
+|403|P3||
+|404|P4||
+|405|P5||
+|406|P6||
+|407|P7||
+|408|P8||
+|409|P9||
+|410|P10||
+|411|P11||
+|412|P12||
+|413|P13||
 
 
 
@@ -344,77 +344,77 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### FiscalYear Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1970|FY1970|
-|1971|FY1971|
-|1972|FY1972|
-|1973|FY1973|
-|1974|FY1974|
-|1975|FY1975|
-|1976|FY1976|
-|1977|FY1977|
-|1978|FY1978|
-|1979|FY1979|
-|1980|FY1980|
-|1981|FY1981|
-|1982|FY1982|
-|1983|FY1983|
-|1984|FY1984|
-|1985|FY1985|
-|1986|FY1986|
-|1987|FY1987|
-|1988|FY1988|
-|1989|FY1989|
-|1990|FY1990|
-|1991|FY1991|
-|1992|FY1992|
-|1993|FY1993|
-|1994|FY1994|
-|1995|FY1995|
-|1996|FY1996|
-|1997|FY1997|
-|1998|FY1998|
-|1999|FY1999|
-|2000|FY2000|
-|2001|FY2001|
-|2002|FY2002|
-|2003|FY2003|
-|2004|FY2004|
-|2005|FY2005|
-|2006|FY2006|
-|2007|FY2007|
-|2008|FY2008|
-|2009|FY2009|
-|2010|FY2010|
-|2011|FY2011|
-|2012|FY2012|
-|2013|FY2013|
-|2014|FY2014|
-|2015|FY2015|
-|2016|FY2016|
-|2017|FY2017|
-|2018|FY2018|
-|2019|FY2019|
-|2020|FY2020|
-|2021|FY2021|
-|2022|FY2022|
-|2023|FY2023|
-|2024|FY2024|
-|2025|FY2025|
-|2026|FY2026|
-|2027|FY2027|
-|2028|FY2028|
-|2029|FY2029|
-|2030|FY2030|
-|2031|FY2031|
-|2032|FY2032|
-|2033|FY2033|
-|2034|FY2034|
-|2035|FY2035|
-|2036|FY2036|
-|2037|FY2037|
-|2038|FY2038|
+|Value|Label|Description|
+|-----|-----|--------|
+|1970|FY1970||
+|1971|FY1971||
+|1972|FY1972||
+|1973|FY1973||
+|1974|FY1974||
+|1975|FY1975||
+|1976|FY1976||
+|1977|FY1977||
+|1978|FY1978||
+|1979|FY1979||
+|1980|FY1980||
+|1981|FY1981||
+|1982|FY1982||
+|1983|FY1983||
+|1984|FY1984||
+|1985|FY1985||
+|1986|FY1986||
+|1987|FY1987||
+|1988|FY1988||
+|1989|FY1989||
+|1990|FY1990||
+|1991|FY1991||
+|1992|FY1992||
+|1993|FY1993||
+|1994|FY1994||
+|1995|FY1995||
+|1996|FY1996||
+|1997|FY1997||
+|1998|FY1998||
+|1999|FY1999||
+|2000|FY2000||
+|2001|FY2001||
+|2002|FY2002||
+|2003|FY2003||
+|2004|FY2004||
+|2005|FY2005||
+|2006|FY2006||
+|2007|FY2007||
+|2008|FY2008||
+|2009|FY2009||
+|2010|FY2010||
+|2011|FY2011||
+|2012|FY2012||
+|2013|FY2013||
+|2014|FY2014||
+|2015|FY2015||
+|2016|FY2016||
+|2017|FY2017||
+|2018|FY2018||
+|2019|FY2019||
+|2020|FY2020||
+|2021|FY2021||
+|2022|FY2022||
+|2023|FY2023||
+|2024|FY2024||
+|2025|FY2025||
+|2026|FY2026||
+|2027|FY2027||
+|2028|FY2028||
+|2029|FY2029||
+|2030|FY2030||
+|2031|FY2031||
+|2032|FY2032||
+|2033|FY2033||
+|2034|FY2034||
+|2035|FY2035||
+|2036|FY2036||
+|2037|FY2037||
+|2038|FY2038||
 
 
 
@@ -585,8 +585,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsAmount Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Amount|
 |0|Count|
 
@@ -608,8 +608,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsFiscalPeriodGoal Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Fiscal Period|
 |0|Custom Period|
 
@@ -631,8 +631,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsOverridden Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -654,8 +654,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsOverride Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -796,8 +796,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### RollupOnlyFromChildGoals Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -1492,8 +1492,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |IsValidForRead|True|
 |LogicalName|exchangerate|
 |MaxValue|100000000000|
-|MinValue|0.0000000001|
-|Precision|10|
+|MinValue|0.000000000001|
+|Precision|12|
 |RequiredLevel|None|
 |Type|Decimal|
 

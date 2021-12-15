@@ -20,6 +20,16 @@
     items:
     - name: Create your first component
       href: implementing-controls-using-typescript.md
+    - name: Creating model-driven app field type component
+      href: tutorial-create-model-driven-field-component.md
+    - name: Creating model-driven app dataset type component
+      href: tutorial-create-model-driven-app-dataset-component.md
+    - name: Creating canvas app dataset type component
+      href: tutorial-create-canvas-dataset-component.md
+  - name: Code components ALM
+    href: code-components-alm.md
+  - name: Best practices
+    href: code-components-best-practices.md
   - name: How-to guides
     items:
     - name: Create and build a code component 
@@ -42,8 +52,6 @@
     items:
     - name: Common issues and workarounds
       href: issues-and-workarounds.md
-    - name: Limitations
-      href: limitations.md
   - name: FAQs
     href: faq.yml
   - name: Sample components
@@ -52,12 +60,14 @@
       href: use-sample-components.md
     - name: Angular Flip component
       href: sample-controls/angular-flip-control.md
+    - name: Canvas app grid component
+      href: tutorial-create-canvas-dataset-component.md
+    - name: Choice picker component
+      href: tutorial-create-model-driven-field-component.md
     - name: Control State API component
       href: sample-controls/control-state-api.md
-    - name: Data Set Grid component for model-driven apps
+    - name: Data Set Grid component
       href: sample-controls/data-set-grid-control.md
-    - name: Data Set component for canvas apps
-      href: sample-controls/data-set-component-canvas.md
     - name: Formatting API component
       href: sample-controls/formatting-api-control.md
     - name: IFRAME component
@@ -74,10 +84,14 @@
       href: sample-controls/lookup-control.md
     - name: Map component
       href: sample-controls/map-control.md
+    - name: Model-driven app grid component
+      href: tutorial-create-model-driven-app-dataset-component.md
     - name: Choices (Multi select option set) component
       href: sample-controls/multi-select-option-set-control.md
     - name: Navigation API component
       href: sample-controls/navigation-api-control.md
+    - name: Property set table component
+      href: sample-controls/data-set-component-canvas.md
     - name: React Facepile component
       href: sample-controls/react-facepile-control.md
     - name: Table component
@@ -106,11 +120,23 @@
         href: reference/conditionexpression.md
       - name: Context
         href: reference/context.md
+      - name: DataProviderCapabilities
+        href: reference/dataprovidercapabilities.md
       - name: DataSet
         href: reference/dataset.md
         items:
+        - name: addColumn
+          href: reference/dataset/addcolumn.md
         - name: clearSelectedRecordIds
           href: reference/dataset/clearselectedrecordids.md
+        - name: delete
+          href: reference/dataset/delete.md
+        - name: getCommands
+          href: reference/dataset/getcommands.md
+        - name: getDataSetCapabilities
+          href: reference/dataset/getdatasetcapabilities.md
+        - name: getRelatedDataSet
+          href: reference/dataset/getrelateddataset.md
         - name: getSelectedRecordIds
           href: reference/dataset/getselectedrecordids.md
         - name: getTargetEntityType
@@ -119,12 +145,22 @@
           href: reference/dataset/gettitle.md
         - name: getViewId
           href: reference/dataset/getviewid.md
+        - name: newRecord
+          href: reference/dataset/newrecord.md
         - name: openDatasetItem
           href: reference/dataset/opendatasetitem.md
         - name: refresh
           href: reference/dataset/refresh.md
+        - name: retrieveRecordCommand
+          href: reference/dataset/retrieverecordcommand.md
         - name: setSelectedRecordIds
           href: reference/dataset/setselectedrecordids.md
+      - name: ControlAttributes
+        href: reference/controlattributes.md
+      - name: ControlAttributesType
+        href: reference/controlattributestype.md
+      - name: DateTimeFieldBehavior
+        href: reference/datetimefieldbehavior.md
       - name: Device
         href: reference/device.md
         items:
@@ -149,6 +185,8 @@
       - name: EntityRecord
         href: reference/entityrecord.md
         items:
+        - name: getColumnInfo
+          href: reference/entityrecord/getcolumninfo.md
         - name: getFormattedValue 
           href: reference/entityrecord/getformattedvalue.md
         - name: getNamedReference
@@ -157,6 +195,12 @@
           href: reference/entityrecord/getrecordid.md
         - name: getValue
           href: reference/entityrecord/getvalue.md
+        - name: isDirty
+          href: reference/entityrecord/isdirty.md
+        - name: isValid
+          href: reference/entityrecord/isvalid.md
+        - name: save
+          href: reference/entityrecord/save.md
       - name: EntityMetadata
         href: reference/entitymetadata.md
       - name: EntityReference
@@ -204,17 +248,27 @@
           href: reference/formatting/formatlanguage.md
         - name: formatTime
           href: reference/formatting/formattime.md
+        - name: formatUserDateTimeToUTC
+          href: reference/formatting/formatuserdatetimetoutc.md
+        - name: formatUserInput
+          href: reference/formatting/formatUserInput.md
+        - name: formatUTCDateTimeToUserDate
+          href: reference/formatting/formatutcdatetimetouserdate.md
         - name: getWeekOfYear
           href: reference/formatting/getweekofyear.md
+      - name: ICommand
+        href: reference/icommand.md
       - name: Linking
         href: reference/linking.md
         items:
+        - name: clear
+          href: reference/linking/clear.md
         - name: addLinkedEntity
           href: reference/linking/addlinkedentity.md
         - name: getLinkedEntity
           href: reference/linking/getlinkedentities.md
-      - name: LookupOptions
-        href: reference/lookupoptions.md
+        - name: removeLinkedEntity
+          href: reference/linking/removelinkedentity.md
       - name: Metadata
         href: reference/metadata.md
       - name: Mode
@@ -226,6 +280,8 @@
           href: reference/mode/setfullscreen.md
         - name: trackContainerResize
           href: reference/mode/trackcontainerresize.md
+      - name: MoneyPrecisionSource
+        href: reference/moneyprecisionsource.md
       - name: Navigation
         href: reference/navigation.md
         items:
@@ -245,9 +301,13 @@
           href: reference/navigation/openwebresource.md
       - name: NumberFormattingInfo
         href: reference/numberformattinginfo.md
+      - name: OptionDescriptor
+        href: reference/optiondescriptor.md
       - name: Paging
         href: reference/paging.md
         items:
+        - name: loadExactPage
+          href: reference/paging/loadexactpage.md
         - name: loadNextPage
           href: reference/paging/loadnextpage.md
         - name: loadPreviousPage

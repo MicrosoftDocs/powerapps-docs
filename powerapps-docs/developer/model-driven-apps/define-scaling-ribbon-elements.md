@@ -9,6 +9,7 @@ ms.custom:
 ms.topic: article
 ms.assetid: c2cc39d2-e540-0800-f04f-3fa66df21191
 author: Nkrb # GitHub ID
+ms.subservice: mda-developer
 ms.author: nabuthuk # MSFT alias of Microsoft employees only
 manager: shilpas # MSFT alias of manager or PM counterpart
 ms.reviewer: 
@@ -45,12 +46,12 @@ Each `<Tab>` element must contain one `<MaxSize>` in the `<Scaling>`. The `MaxSi
   
 The following diagram shows how `MaxSize`, `Scale`, `Group`, `Layout` and `OverflowSection` elements must reference each other to enable scaling when you are using a `<OverflowSection>` element.  
   
- ![Element relationships with OverflowSection](media/ribbon-ui-definition.png "Element relationships with OverflowSection")  
+ ![Element relationships with OverflowSection.](media/ribbon-ui-definition.png "Element relationships with OverflowSection")  
   
  The following diagram shows how `MaxSize`, `Scale`, `Group`, `Layout` and `ControlRef` elements must reference each other to enable scaling when you 
  are using a `<Section>` element.  
   
- ![Element Relationships with Section](media/ui-definition.png "Element Relationships with Section") 
+ ![Element Relationships with Section.](media/ui-definition.png "Element Relationships with Section") 
   
 ### Use existing group templates  
  When creating a new group, instead of defining new group templates, you can re-use existing `GroupTemplate` elements.  

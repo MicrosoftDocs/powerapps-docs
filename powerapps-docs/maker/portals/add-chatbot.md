@@ -1,19 +1,20 @@
 ---
-title: Add a chatbot to a page (Preview)
+title: Add a chatbot to a page (preview)
 description: "Learn how to add a Power Virtual Agents chatbot to a Power Apps portals page to automatically answer questions posted by a visitor in a chat conversation."
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 06/11/2021
+ms.subservice: portals
 ms.author: nenandw
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
     - neerajnandwana-msft
-    - tapanm-msft
+    - nickdoelman
 ---
 
-# Add chatbot to a page (Preview)
+# Add chatbot to a page (preview)
 
 [This article is pre-release documentation and is subject to change.]
 
@@ -48,11 +49,11 @@ Once you have a chatbot created, you can add this component to a portals page wi
 
 1. Select **Chatbot** component.
 
-    ![Add chatbot component to a page](media/add-chatbot/add-chatbot.png "Add chatbot component to a page")
+    ![Add chatbot component to a page.](media/add-chatbot/add-chatbot.png "Add chatbot component to a page")
 
 1. Select your bot.
 
-    ![Select your bot](media/add-chatbot/select-your-bot.png "Select your bot")
+    ![Select your bot.](media/add-chatbot/select-your-bot.png "Select your bot")
 
     > [!NOTE]
     > If you don't have a bot already created, or want to create a new bot to use in portals, select **Power Virtual Agents**. After you create your bot, select **Sync configuration** inside portals Studio to reflect the bot changes.
@@ -67,7 +68,7 @@ You can add more bots from your environment across different pages in a portal. 
 
 The chatbot component is rendered using a web template called **Power Virtual Agents**.
 
-![Chatbot web template](media/add-chatbot/pva-web-template.png "Chatbot web template")
+![Chatbot web template.](media/add-chatbot/pva-web-template.png "Chatbot web template")
 
 You can change the values for the following parameters inside the "window.PvaEmbeddedWebChat.renderWebChat()" function.
 

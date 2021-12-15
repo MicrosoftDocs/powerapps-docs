@@ -2,17 +2,21 @@
 title: Edit form and Display form controls in Power Apps
 description: Learn about the details, properties and examples of the Edit form and Display form controls in Power Apps.
 author: aneesmsft
-manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 07/06/2017
+ms.subservice: canvas-maker
 ms.author: aneesa
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - chmoncay
+  - aneesmsft
 ---
 # Edit form and Display form controls in Power Apps
 Display, edit, and create a record in a data source.
@@ -20,7 +24,7 @@ Display, edit, and create a record in a data source.
 ## Description
 If you add a **Display form** control, the user can display all fields of a record or only the fields that you specify. If you add an **Edit form** control, the user can edit those fields, create a record, and save those changes to a data source.
 
-![Example form and form view controls](./media/control-form-detail/form-detail-intro.png)
+![Example form and form view controls.](./media/control-form-detail/form-detail-intro.png)
 
 If you add a **[Gallery](control-gallery.md)** control, you can configure it to show a table in a data source and then configure a form to show whichever record the user selects in the gallery. You can also add one or more **[Button](control-button.md)** controls that the user can select to save edits, cancel edits, and create a record. By using controls together, you can [create a complete solution](../working-with-forms.md).
 
@@ -125,15 +129,15 @@ The form switches from **New** mode to **Edit** mode when any of these changes o
 * The **[EditForm](../functions/function-form.md)** function runs.
 * The **[ResetForm](../functions/function-form.md)** function runs. For example, the user might select a **Cancel** button that's been configured with this function.
 
-**OnFailure** – How an app responds when a data operation has been unsuccessful.
+**OnFailure** – Actions to perform when a data operation has been unsuccessful.
 
 * This property applies only to the **Edit form** control.
 
-**OnReset** – How an app responds when an **Edit form** control is reset.
+**OnReset** – Actions to perform when an **Edit form** control is reset.
 
 * This property applies only to the **Edit form** control.
 
-**OnSuccess** – How an app responds when a data operation has been successful.
+**OnSuccess** – Actions to perform when a data operation has been successful.
 
 * This property applies only to the **Edit form** control.
 

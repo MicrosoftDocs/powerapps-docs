@@ -46,11 +46,11 @@ The following sections describe different approaches that can be taken within Da
 The simplest approach is to realize that any use of a commonly required resource would introduce the potential for blocking. Since this has an impact on scalability you may decide you want to avoid a platform transaction when generating an auto number.
 Let’s consider the scenario for auto numbering generation outside of the pipeline transaction in a pre-validation plug-in.
 
-![Approach 1: Out of a transaction](media/autonumber-approach-1.png)
+![Approach 1: Out of a transaction.](media/autonumber-approach-1.png)
 
 When you run this in isolation it works fine. It doesn’t, however, actually protect against concurrency errors. As the following diagram shows, if two requests in parallel both request the latest number and then both increment and update the value, you’ll end up with duplicate numbers. Because there is no locking held against the retrieved number, it is possible for a race condition to occur and both threads to end up with the same value. 
 
-![race condition](media/autonumber-approach-1-a.png)
+![race condition.](media/autonumber-approach-1-a.png)
 
 In many cases, even though multiple requests may be occurring, due to the limited window for overlapping this could work fine, but it is relying on luck rather than good design to prevent the duplication.
 
@@ -58,15 +58,15 @@ In many cases, even though multiple requests may be occurring, due to the limite
 
 If you do the auto numbering from a plug-in registered within the transaction (txn), surely this works….right?
 
-![Approach 2: In a plug-in transaction](media/autonumber-approach-2.png)
+![Approach 2: In a plug-in transaction.](media/autonumber-approach-2.png)
 
 In the same circumstances of overlapping requests trying to generate numbers at the same time, it would be possible for both requests to be granted a shared read lock on the auto numbering table. Unfortunately, at the point the application tries to upgrade this to an exclusive lock, this would not be possible as there would be another shared read lock preventing this.
 
-![shared read lock prevents access](media/autonumber-approach-2-a.png)
+![shared read lock prevents access.](media/autonumber-approach-2-a.png)
 
 Depending on how the queries are being generated, the exact behavior can vary, but relying on those conditions and not being certain of the outcome where the uniqueness is essential isn’t ideal. Even if this does not generate a failure, the shared read ability could allow a duplicate number to be generated if the isolation modes aren’t correct. As the following diagram shows, both records end up with the same auto number value of 8.
 
-![both records end up with the same auto number value](media/autonumber-approach-2-b.png)
+![both records end up with the same auto number value.](media/autonumber-approach-2-b.png)
 
 ## Approach 3: Pre-lock in a plug-in transaction
 
@@ -76,7 +76,7 @@ In this approach, from the start of the transaction, a placeholder update is per
 
 This then allows you to safely increment and write back the updated auto number without any other process being able to interfere. 
 
-![Approach 3: Pre-lock in a plug-in transaction](media/autonumber-approach-3.png)
+![Approach 3: Pre-lock in a plug-in transaction.](media/autonumber-approach-3.png)
 
 It does have the implication that this will serialize not only the auto numbering updates but also the account creation requests as both these steps occur in the same platform transaction. If the creation of accounts are quick actions then that may be a perfectly good approach and it ensures that account creation and auto numbering are performed consistently; if one fails they both fail and roll back.
  
@@ -84,7 +84,7 @@ In fact, where the other actions within the transaction are quick, this is the m
 
 If however, you also introduce other synchronous plug-ins or workflows that each take extended amounts of time to complete, serialization can become a real scalability challenge, as the auto numbering process not only blocks itself but blocks waiting for the other activities to complete. 
 
-![auto numbering process not only blocks itself but blocks waiting for the other activities to complete](media/autonumber-approach-3-a.png)
+![auto numbering process not only blocks itself but blocks waiting for the other activities to complete.](media/autonumber-approach-3-a.png)
 
 Normally, generation of the auto number would be done in a pre-event plug-in. You include the number in the input parameters to the create step and avoid a second update in the post processing to record the generated auto number against the account.
 
@@ -92,7 +92,7 @@ With the scalability implications in mind, if there is other complex processing 
 
 The tradeoff here would be the need to perform an additional update to account, while reducing the overall length of time blocking waiting for the auto numbering record.
 
-![move the auto number generation to a post create process](media/autonumber-approach-3-b.png)
+![move the auto number generation to a post create process.](media/autonumber-approach-3-b.png)
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

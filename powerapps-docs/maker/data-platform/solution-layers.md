@@ -8,6 +8,7 @@ ms.custom:
 ms.topic: article
 ms.assetid: 
 author: Mattp123
+ms.subservice: dataverse-maker
 ms.author: matp
 manager: kvivek
 ms.reviewer: 
@@ -30,7 +31,7 @@ Managed and unmanaged solutions exist at different levels within a Microsoft Dat
 - Unmanaged layer. All imported unmanaged solutions and unmanaged customizations exist at this layer. The unmanaged layer is a single layer.  
 - Managed layers. All imported managed solutions and the system solution exist at this level. When multiple managed solutions are installed, the last one installed is above the managed solution installed previously. This means that the second solution installed can customize the one installed before it. When two managed solutions have conflicting definitions, the runtime behavior is either “Last one wins” or a merge logic is implemented.  If you uninstall a managed solution, the managed solution below it takes effect. If you uninstall all managed solutions, the default behavior defined within the system solution is applied. At the base of the managed layers level is the system layer. The system layer contains the tables and components that are required for the platform to function. 
 
-![Solution layers](media/solution-layers.png)
+![Solution layers.](media/solution-layers.png)
 
 ## Solution merge behavior
 When you prepare your managed solution for distribution, remember that an environment may have multiple solutions installed or that other solutions may be installed in the future. Construct a solution that follows best practices so that your solution will not interfere with other solutions.
@@ -50,16 +51,16 @@ The see solution layers feature:
 2. The solution layer page appears. It displays each layer for the component, such as the **Account** table displayed here, with the most recent layer at the top, which is typically indicated as the **Active** layer. The active layer determines the runtime behavior of the component. To view the details for a solution layer, select it. 
 
    > [!div class="mx-imgBorder"] 
-   > ![Solution layers list](media/solution-layers-list.png "Solution layers list")
+   > ![Solution layers list.](media/solution-layers-list.png "Solution layers list")
 
 3. In the **Solution Layer** dialog box, the **Updated** tab displays only those properties that were modified as part of the specific solution layer. Select the **All Properties** tab to view all properties, including changed and unchanged properties, for the solution layer.
 
    > [!div class="mx-imgBorder"] 
-   > ![Solution layer changed properties](media/solution-layers-change-prop.png "Solution layer changed properties")
+   > ![Solution layer changed properties.](media/solution-layers-change-prop.png "Solution layer changed properties")
 
 5. If the component includes translations that have been imported, select the **LocalizedLabels** tab to display information for components that have label columns in the solution layer. The base language and any imported translation text are displayed as indicated in the **languageid** column. Note that if no labels exist the tab isn't displayed.  
    > [!div class="mx-imgBorder"] 
-   > ![Solution layer localized labels](media/localized-labels.png "Solution layer localized labels")
+   > ![Solution layer localized labels.](media/localized-labels.png "Solution layer localized labels")
 
     Select a label to see its full layering.
 
@@ -81,7 +82,7 @@ Unmanaged customizations reside at the top layer for a component and subsequentl
 1. If an unmanaged layer exists, **Unmanaged layer** is displayed in the **Solution** column for the layer.
 1. Select the layer, and then on the command bar, select **Remove unmanaged layer**.
     > [!div class="mx-imgBorder"] 
-    > ![Remove unmanaged layer](media/remove-unmanaged-layer.png)
+    > ![Remove unmanaged layer.](media/remove-unmanaged-layer.png)
 
 ### See also
 [Translate localizable text for model-driven apps](../model-driven-apps/translate-localizable-text.md) <br />

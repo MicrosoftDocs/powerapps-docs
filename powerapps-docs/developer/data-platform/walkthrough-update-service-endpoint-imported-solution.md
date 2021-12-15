@@ -7,6 +7,7 @@ ms.service: powerapps
 ms.topic: article
 ms.assetid: 66795838-3b15-bfb3-6f59-68cfe2fe988e
 author: JimDaly # GitHub ID
+ms.subservice: dataverse-developer
 ms.author: jdaly # MSFT alias of Microsoft employees only
 manager: ryjones # MSFT alias of manager or PM counterpart
 ms.reviewer: "pehecke"
@@ -33,7 +34,7 @@ Follow these steps to set the SAS Key for each service endpoint after solution i
   
 1. Select **Update**. You should see the following form with the fields already filled in.  
   
-    ![Update service endpoint SAS key value](media/sas-key.PNG "Update service endpoint SAS key value")  
+    ![Update service endpoint SAS key value.](media/sas-key.PNG "Update service endpoint SAS key value")  
   
 1. The **SAS Key** field is displayed with a value of "*******".  Replace that value with the correct SAS key value. You can obtain the SAS Key for your Azure messaging entity (queue, topic, etc.) from the [Azure portal](https://portal.azure.com).  
   

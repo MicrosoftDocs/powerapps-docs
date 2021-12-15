@@ -6,12 +6,16 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.date: 01/28/2021
+ms.subservice: canvas-maker
 ms.author: chmoncay
 ms.reviewer: tapanm
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - chmoncay
 ---
 # Button control in Power Apps
 A control that the user can click or tap to interact with the app.
@@ -20,7 +24,7 @@ A control that the user can click or tap to interact with the app.
 Configure the **[OnSelect](properties-core.md)** property of a **Button** control to run one or more formulas when the user clicks or taps the control.
 
 ## Key properties
-**[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
+**[OnSelect](properties-core.md)** – Actions to perform when the user taps or clicks a control.
 
 **[Text](properties-core.md)** – Text that appears on a control or that the user types into a control.
 

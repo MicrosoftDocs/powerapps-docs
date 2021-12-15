@@ -17,9 +17,9 @@ ms.assetid: 4e35efbc-4557-41c6-9821-6198bda9a32a
 
 [!INCLUDE[./includes/gettitle-description.md](./includes/gettitle-description.md)]
 
-## Available for 
+## Available for
 
-Model-driven apps
+Model-driven and canvas apps
 
 ## Syntax
 
@@ -28,7 +28,6 @@ Model-driven apps
 ## Return Value
 
 **Type**: `string`
-
 
 ### Related topics
 

@@ -11,6 +11,7 @@ ms.topic: "how-to"
 author: "Mattp123"
 ms.assetid: 21a166a0-d25e-4260-a1e4-2ddc528787c2
 caps.latest.revision: 17
+ms.subservice: mda-maker
 ms.author: "matp"
 manager: "kvivek"
 search.audienceType: 
@@ -64,14 +65,14 @@ You can create a custom look and feel (a theme), for your app by making changes 
 <a name="Solution"></a>   
 ## Solution awareness
 
-Themes aren't solution aware. The changes made for an organization's theme aren’t included in  solutions exported from the organization. The data is stored in the theme table that can be exported and re-imported in another environment. The imported theme must be published to take effect.  
+Themes aren't solution aware. The changes made for an organization's theme aren’t included in  solutions exported from the organization. The data is stored in the theme table that can be exported and reimported in another environment. The imported theme must be published to take effect.  
   
 <a name="CloneAlter"></a>   
 ## Copy and alter the existing theme
 
- The easiest and quickest way to create a new theme is to clone and alter an existing theme, then save, preview and publish it.
+ The easiest and quickest way to create a new theme is to clone and alter an existing theme. Then save, preview, and publish it.
  
-1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Settings** ![Settings icon](../model-driven-apps/media/powerapps-gear.png) (upper right), and then select **Advanced settings**.
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Settings** ![Settings icon.](../model-driven-apps/media/powerapps-gear.png) (upper right), and then select **Advanced settings**.
 1. Select **Customizations**, and then select **Themes**.
 1. Under **All themes**, select the theme you want to clone, such as the **CRM Default Theme**. Select **Clone** on the command bar.
 1. Replace an existing UI item's hexadecimal number, such as the **Title Text Color**, with the hexadecimal value that represents the color you want.
@@ -79,15 +80,15 @@ Themes aren't solution aware. The changes made for an organization's theme aren�
 For example, the **CRM Default Theme** was cloned and changed using mostly varying shades of green color. The following screenshots show the new colors for navigation and highlighting. A custom logo was also added that will appear in the upper left corner of an app.  
  
  > [!div class="mx-imgBorder"] 
- > ![Gentle green theme colors for navigation bar](media/theme-gentle-green.png "Gentle green theme colors for navigation bar")
+ > ![Gentle green theme colors for navigation bar.](media/theme-gentle-green.png "Gentle green theme colors for navigation bar")
 
  > [!div class="mx-imgBorder"] 
- > ![Gentle green theme colors for UI elements](media/theme-gentle-green2.png "Gentle green theme colors for UI elements")  
+ > ![Gentle green theme colors for UI elements.](media/theme-gentle-green2.png "Gentle green theme colors for UI elements")  
   
  The following image shows an app account view with the new colors and logo.
 
  > [!div class="mx-imgBorder"] 
- > ![Gentle green theme account grid](media/themes-gentle-green-account-grid.png "Gentle green theme account grid")  
+ > ![Gentle green theme account grid.](media/themes-gentle-green-account-grid.png "Gentle green theme account grid")  
 
 > [!IMPORTANT]
 > Logos that are too large won't display. The image used in the example is 156 pixels wide x 48 pixels height.
@@ -102,7 +103,7 @@ For example, the **CRM Default Theme** was cloned and changed using mostly varyi
   
  The following screenshot shows the buttons on the command bar for preview and publishing.  
   
- ![Use preview buttons to enter&#47;exit the preview mode](media/themes-preview-buttons.PNG "Use preview buttons to enter/exit the preview mode")  
+ ![Use preview buttons to enter&#47;exit the preview mode.](media/themes-preview-buttons.PNG "Use preview buttons to enter/exit the preview mode")  
   
 <a name="BestPracticies"></a>   
 ## Best practices
@@ -139,7 +140,19 @@ For example, the **CRM Default Theme** was cloned and changed using mostly varyi
 -   A table can’t be displayed in different colors under different Sitemap nodes.  
   
 -   The Sitemap nodes colors aren’t customizable.  
-  
+
+## Known issues with mobile devices and themes
+
+### The custom theme isn’t applied on devices running the Power Apps mobile app
+
+When you run the Power Apps mobile app with an environment that is using a custom theme as the default theme, the mobile device displays the system CRM Default Theme.  
+
+### Card forms aren’t displayed in table views in a web browser
+
+On a mobile device running the app in a web browser, the view is displayed in the standard view, which isn’t optimized for small screens and is displayed similar to the below image. For more information about card forms, see [Create a card form](create-card-forms.md).
+
+:::image type="content" source="media/standard-view-theme-mobile-browser.png" alt-text="Standard view displayed on a mobile device due to custom theme":::
+
 ## See also  
          
  [Video: Themes](https://go.microsoft.com/fwlink/p/?LinkId=529568) <br />

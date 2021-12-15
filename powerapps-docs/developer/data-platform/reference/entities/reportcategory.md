@@ -1,13 +1,13 @@
 ---
-title: "ReportCategory table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the ReportCategory table/entity."
-ms.date: 05/20/2021
+title: "Report Related Category (ReportCategory) table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the Report Related Category (ReportCategory) table/entity."
+ms.date: 10/05/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -15,7 +15,7 @@ search.app:
   - D365CE
 ---
 
-# ReportCategory table/entity reference
+# Report Related Category (ReportCategory) table/entity reference
 
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
@@ -79,12 +79,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### CategoryCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Sales Reports|
-|2|Service Reports|
-|3|Marketing Reports|
-|4|Administrative Reports|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Sales Reports||
+|2|Service Reports||
+|3|Marketing Reports||
+|4|Administrative Reports||
 
 
 
@@ -241,12 +241,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### ComponentState Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Published|
-|1|Unpublished|
-|2|Deleted|
-|3|Deleted Unpublished|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Published||
+|1|Unpublished||
+|2|Deleted||
+|3|Deleted Unpublished||
 
 
 
@@ -367,8 +367,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |IsValidForRead|True|
 |LogicalName|exchangerate|
 |MaxValue|100000000000|
-|MinValue|0.0000000001|
-|Precision|10|
+|MinValue|0.000000000001|
+|Precision|12|
 |RequiredLevel|None|
 |Type|Decimal|
 
@@ -387,8 +387,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsManaged Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Managed|
 |0|Unmanaged|
 

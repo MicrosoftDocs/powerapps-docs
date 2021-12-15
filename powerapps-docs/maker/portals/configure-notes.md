@@ -5,12 +5,14 @@ author: gitanjalisingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2021
+ms.date: 08/12/2021
+ms.subservice: portals
 ms.author: gisingh
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
-    - tapanm-msft
+    - nickdoelman
     - GitanjaliSingh33msft
+    - nageshbhat-msft
 ---
 
 # Configure notes as attachments for basic and advanced forms
@@ -18,6 +20,7 @@ contributors:
 Similar to subgrids, adding notes to your managed forms on the portal is easy. Just add the notes control to the model-drive app forms through the [form designer](../model-driven-apps/create-design-forms.md) and you're done. You can configure the behavior of the notes control by using metadata.
 
 > [!NOTE]
+> - You must enable attachments for the table in Microsoft Dataverse first before using this feature. More information: [Create a table](../data-platform/data-platform-create-entity.md#create-a-table)
 > - Explicit [table permissions](configure/assign-entity-permissions.md) are required for any notes to appear on the portal. For the detailed steps on how to create and assign these, go to [Assign table permissions](#assign-table-permissions).
 > - The description of each note must be prefixed with **\*WEB\*** (*'WEB' keyword with an asterisk sign (\*) before and after*) for the note to appear on the portal page.
 
@@ -27,31 +30,31 @@ Similar to subgrids, adding notes to your managed forms on the portal is easy. J
 
 1. Select **Basic Forms** under **Content** on the left pane.
 
-    ![Basic forms](media/configure-notes/entity-forms.png)
+    ![Basic forms.](media/configure-notes/entity-forms.png)
 
 1. From the list of forms, select to open a record of the form to which you want to add note configuration.
 
 1. From the available tabs in form settings, select **Basic Form Metadata**.
 
-    ![Basic form metadata](media/configure-notes/entity-form-metadata.png)
+    ![Basic form metadata.](media/configure-notes/entity-form-metadata.png)
 
 1. Select **New Basic Form Metadata**.
 
-    ![New basic form metadata](media/configure-notes/new-entity-form-metadata.png)
+    ![New basic form metadata.](media/configure-notes/new-entity-form-metadata.png)
 
 1. Select **Type** as **Note**.
 
-    ![Type as Note](media/configure-notes/type-notes.png)
+    ![Type as Note.](media/configure-notes/type-notes.png)
 
 1. The notes configuration settings are displayed. Most of the settings are collapsed by default. You can expand a section to see more settings.
 
-    ![Notes options](media/configure-notes/notes-options.png)
+    ![Notes options.](media/configure-notes/notes-options.png)
 
 1. Fill in the fields by entering appropriate values. These settings are explained in more detail below under [Attributes](#attributes), [Create dialog options](#create-dialog-options), [Edit dialog options](#edit-dialog-options), and [Delete dialog options](#delete-dialog-options).
 
 1. (Optional) If you created a custom form and added the notes section to it, be sure to select **Notes** as the default tab you want to be visible.
 
-    ![Notes in a custom form](media/notes-activities-tab.png "Notes in a custom form")
+    ![Notes in a custom form.](media/notes-activities-tab.png "Notes in a custom form")
 
 1. Save the form.
 
@@ -81,7 +84,7 @@ After adding the configuration, the note control will be rendered by using the a
 | Error Message         | Overrides the message shown when an error occurs while trying to load the list of notes.                                                                     |
 | Access Denied Message | Overrides the message shown when the user doesn't have sufficient permissions to view the list of notes.                                                    |
 | Empty Message         | Overrides the message shown when the current table doesn't have any notes that can be viewed.                                                              |
-| List Orders           | Allows you to set the order in which notes will be displayed. The List Orders setting allows you to set the following options: <ul><li>Attribute: The logical name of the column by which you wish to sort</li><li>Alias: The alias for the attribute in the query</li><li>Direction: Ascending (smallest to largest, or first to last), or Descending (largest to smallest, or last to first).</li></ul>  ![Set attributes for list orders](media/set-attributes-list-orders.png "Set attributes for list orders") <br>  To add a sorting rule, select "Column" (4) and fill in the details. List Orders will be processed in order from the top of the list having highest priority.|
+| List Orders           | Allows you to set the order in which notes will be displayed. The List Orders setting allows you to set the following options: <ul><li>Attribute: The logical name of the column by which you wish to sort</li><li>Alias: The alias for the attribute in the query</li><li>Direction: Ascending (smallest to largest, or first to last), or Descending (largest to smallest, or last to first).</li></ul>  ![Set attributes for list orders.](media/set-attributes-list-orders.png "Set attributes for list orders") <br>  To add a sorting rule, select "Column" (4) and fill in the details. List Orders will be processed in order from the top of the list having highest priority.|
 ||
 
 #### Create dialog options
@@ -167,19 +170,19 @@ Notes, and the **Add**, **Edit**, and **Delete** buttons for the note control wi
 
 1. Ensure the **Enable Table Permissions** checkbox is selected on the form for which you want notes to appear.
 
-    ![Enable table permissions on a basic form](media/configure-notes/enable-entity-permissions-form.png "Enable table permissions on a basic form")
+    ![Enable table permissions on a basic form.](media/configure-notes/enable-entity-permissions-form.png "Enable table permissions on a basic form")
 
 1. For the table that has the notes control enabled, create a table permission with the required privileges. The scope should be appropriately set depending on the level of access required to end users.
 
     For example, create a table permission for a Lead table that shows notes on the basic form, with privileges including Read, Write, Create, Append, and Append To.
 
-    ![Create new table permissions](media/configure-notes/new-entity-permission.png "Create new table permissions")
+    ![Create new table permissions.](media/configure-notes/new-entity-permission.png "Create new table permissions")
 
 1. [Associate the table permission with a web role](configure/assign-entity-permissions.md#add-table-permissions-to-a-web-role) for the user.
 
     For example, add the table permission created in the previous step to the Lead Manager web role.
 
-    ![Add web roles to an table permission](media/configure-notes/add-webrole-entity-permissions.png "Add web roles to an table permission")
+    ![Add web roles to a table permission.](media/configure-notes/add-webrole-entity-permissions.png "Add web roles to a table permission")
 
 1. Create a table permission for the **Annotation** table with the [Parental access type](configure/assign-entity-permissions.md#parental-access-type) and required privileges as explained in the table below. The **Parent Table Permission** must be set to the same table permissions created in step 2.
 
@@ -192,23 +195,23 @@ Notes, and the **Add**, **Edit**, and **Delete** buttons for the note control wi
 
     For example, create a table permission for the Annotation table, with the Leads table permission created in the previous steps set as the parent table.
     
-    ![Add table permissions](media/configure-notes/entity-permission.png "Add table permissions")
+    ![Add table permissions.](media/configure-notes/entity-permission.png "Add table permissions")
 
 ### Notes created with rich-text editor
 
-You can view the notes created using the [rich-text editor in timeline](../model-driven-apps/set-up-timeline-control.md#enable-or-disable-rich-text-editor-for-notes-in-timeline) on your portal webpage. However, when you try to edit, you'll see the text in HTML markup format.
+You can view the notes created using the [Rich text editor control configurations](/model-driven-apps/rich-text-editor-control#rich-text-editor-control-configuration-options) on your portal webpage. However, when you try to edit, you'll see the text in HTML markup format.
 
 For example, this note shows rich-text format in the model-driven app.
 
-![Dynamics 365 form](media/configure-notes/dynamics-365-form.png)
+![Dynamics 365 form.](media/configure-notes/dynamics-365-form.png)
 
 The portal webpage shows the note in rich-text format.
 
-![Portals form](media/configure-notes/portals-form.png)
+![Portals form.](media/configure-notes/portals-form.png)
 
 However, when editing the note from the portal webpage, you see the note in HTML markup format.
 
-![Portals form in HTML when editing](media/configure-notes/portals-form-edit.png)
+![Portals form in HTML when editing.](media/configure-notes/portals-form-edit.png)
 
 > [!IMPORTANT]
 > If you try to save a note with HTML markup using the portal, you'll receive this error: *We're sorry, but something went wrong. Please try again, and if this persists, contact the website administrator.* To save the notes with HTML markup using the portal, you'll have to disable the request validation. However, disabling request validation applies to the entire website. For the steps to disable the request validation, and to understand its impact, go to [request validation](configure/entity-forms.md#request-validation).
@@ -227,13 +230,13 @@ To enable attachment on a basic form:
 
 1. Select **Basic Forms** under **Content** on the left pane.
 
-    ![Basic forms](media/configure-notes/entity-forms.png)
+    ![Basic forms.](media/configure-notes/entity-forms.png)
 
 1. From the list of forms, select to open a record of the form to which you want to add note configuration.
 
 1. Select **Additional Settings** for the form. Configure the additional settings as per the fields explained in the section below.
 
-    ![Additional settings - attach file](media/configure-notes/additional-settings.png)
+    ![Additional settings - attach file.](media/configure-notes/additional-settings.png)
 
 ### Additional settings for file attachment
 
@@ -251,5 +254,5 @@ To enable attachment on a basic form:
 
 After you configure the notes and enable notes attachments, you can see the **Attach File** option on the form.
 
-![Attach file option](media/configure-notes/attach-file-option.png)
+![Attach file option.](media/configure-notes/attach-file-option.png)
 

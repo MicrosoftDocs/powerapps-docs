@@ -7,6 +7,7 @@ ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID
+ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
@@ -22,7 +23,7 @@ In Microsoft Dataverse, activities are tasks that you or your teams perform when
   
  Activities involve one or more participants, called activity parties in Dataverse. For a meeting activity, the participants are those contacts or users attending the meeting. For a telephone call or fax activity, the parties are the caller and the person who is called. The following diagram shows the entity relationships for activities.  
   
- ![Activity diagram](media/entity-model-activity.gif "Activity diagram")  
+ ![Activity diagram.](media/entity-model-activity.gif "Activity diagram")  
   
  To support the communication needs of the modern-day business, such as instant messaging (IM) and SMS, you can create custom activities in Dataverse.  
   

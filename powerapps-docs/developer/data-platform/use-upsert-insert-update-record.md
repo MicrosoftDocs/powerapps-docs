@@ -7,6 +7,7 @@ ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
+ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -66,7 +67,7 @@ You can reduce the complexity involved with data integration scenarios by using 
   
    The following illustration shows the process that unfolds when an <xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest> is received.  
   
-   ![upsert process flow](media/upsert-flowchart-dynamics-crm-2015.png "upsert process flow")  
+   ![upsert process flow.](media/upsert-flowchart-dynamics-crm-2015.png "upsert process flow")  
   
 <a name="BKMK_SampleCode"></a>   
 

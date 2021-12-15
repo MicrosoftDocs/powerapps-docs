@@ -1,13 +1,13 @@
 ---
 title: "solutioncomponentrelationshipconfiguration table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the solutioncomponentrelationshipconfiguration table/entity."
-ms.date: 05/20/2021
+ms.date: 10/05/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -60,12 +60,15 @@ search.app:
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [AddRelatedComponents](#BKMK_AddRelatedComponents)
+- [CascadeRemoveComponents](#BKMK_CascadeRemoveComponents)
 - [EntityRelationshipId](#BKMK_EntityRelationshipId)
+- [ForceAddingManagedRelatedComponents](#BKMK_ForceAddingManagedRelatedComponents)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [IsCustomizable](#BKMK_IsCustomizable)
 - [name](#BKMK_name)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [PrimaryEntityDependencyType](#BKMK_PrimaryEntityDependencyType)
+- [RespectParentRootComponentBehavior](#BKMK_RespectParentRootComponentBehavior)
 - [SecondaryEntityDependencyType](#BKMK_SecondaryEntityDependencyType)
 - [solutioncomponentrelationshipconfigurationId](#BKMK_solutioncomponentrelationshipconfigurationId)
 - [statecode](#BKMK_statecode)
@@ -88,8 +91,31 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### AddRelatedComponents Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes|
+|0|No|
+
+**DefaultValue**: True
+
+
+
+### <a name="BKMK_CascadeRemoveComponents"></a> CascadeRemoveComponents
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName|Cascade Remove Components|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|cascaderemovecomponents|
+|RequiredLevel|None|
+|Type|Boolean|
+
+#### CascadeRemoveComponents Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -110,6 +136,29 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|SystemRequired|
 |Targets|entityrelationship|
 |Type|Lookup|
+
+
+### <a name="BKMK_ForceAddingManagedRelatedComponents"></a> ForceAddingManagedRelatedComponents
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName|Force Adding Managed Related Components|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|forceaddingmanagedrelatedcomponents|
+|RequiredLevel|None|
+|Type|Boolean|
+
+#### ForceAddingManagedRelatedComponents Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes|
+|0|No|
+
+**DefaultValue**: False
+
 
 
 ### <a name="BKMK_ImportSequenceNumber"></a> ImportSequenceNumber
@@ -192,10 +241,33 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### PrimaryEntityDependencyType Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Hard Dependency|
-|1|Soft Dependency|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Hard Dependency||
+|1|Soft Dependency||
+
+
+
+### <a name="BKMK_RespectParentRootComponentBehavior"></a> RespectParentRootComponentBehavior
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName|Respect Parent Root Component Behavior|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|respectparentrootcomponentbehavior|
+|RequiredLevel|None|
+|Type|Boolean|
+
+#### RespectParentRootComponentBehavior Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes|
+|0|No|
+
+**DefaultValue**: False
 
 
 
@@ -213,10 +285,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### SecondaryEntityDependencyType Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Hard Dependency|
-|1|Soft Dependency|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Hard Dependency||
+|1|Soft Dependency||
 
 
 
@@ -371,12 +443,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### ComponentState Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Published|
-|1|Unpublished|
-|2|Deleted|
-|3|Deleted Unpublished|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Published||
+|1|Unpublished||
+|2|Deleted||
+|3|Deleted Unpublished||
 
 
 
@@ -531,8 +603,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsManaged Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Managed|
 |0|Unmanaged|
 

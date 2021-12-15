@@ -1,20 +1,20 @@
-By enabling Relevance Search, data in participating entities and attributes in your [!INCLUDE[pn_dynamics_crm_online](pn-dynamics-crm-online.md)] instance will begin syncing to and be stored in an [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Search index.  
+By enabling Dataverse search, data in participating entities and attributes in your [!INCLUDE[pn_dynamics_crm_online](pn-dynamics-crm-online.md)] instance will begin syncing to and be stored in an [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Search index.  
   
- Relevance Search is not enabled by default. The system administrator must enable the functionality within a [!INCLUDE[pn_dynamics_crm_online](pn-dynamics-crm-online.md)] instance. After Relevance Search is enabled, system administrators and customizers have full control over the data that will be synchronized to the [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Search index.  
+ Dataverse search is not enabled by default. The system administrator must enable the functionality within a [!INCLUDE[pn_dynamics_crm_online](pn-dynamics-crm-online.md)] instance. After Dataverse search is enabled, system administrators and customizers have full control over the data that will be synchronized to the [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Search index.  
   
- System customizers can use the **Configure Relevance Search** dialog box in **Customization Tools** to enable specific entities for search and then configure Quick Find views on enabled entities to select the searchable attributes. Data changes are synchronized continuously between [!INCLUDE[pn_dynamics_crm_online](pn-dynamics-crm-online.md)] and [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Search through a secure connection.  Configuration data is encrypted and the required secrets are stored in [!INCLUDE[pn_azure_key_vault](pn-azure-key-vault.md)].  
+ System customizers can use the **Configure Dataverse search** dialog box in **Customization Tools** to enable specific entities for search and then configure Quick Find views on enabled entities to select the searchable attributes. Data changes are synchronized continuously between [!INCLUDE[pn_dynamics_crm_online](pn-dynamics-crm-online.md)] and [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Search through a secure connection.  Configuration data is encrypted and the required secrets are stored in [!INCLUDE[pn_azure_key_vault](pn-azure-key-vault.md)].  
   
- Azure components and services that are involved with Relevance Search functionality are detailed in the following sections.  
+ Azure components and services that are involved with Dataverse search functionality are detailed in the following sections.  
   
  [!INCLUDE[cc_privacy_note_azure_trust_center](cc_privacy_note_azure_trust_center.md)]  
   
  [Azure Search Services](https://azure.microsoft.com/services/search/)  
   
- An [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Search index is used to provide high-quality search results with quick response times.  [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Search adds powerful and sophisticated next-generation search capabilities to [!INCLUDE[pn_dynamics_crm_online](pn-dynamics-crm-online.md)].  This is a dedicated search service external to [!INCLUDE[pn_dynamics_crm_online](pn-dynamics-crm-online.md)] provided by [!INCLUDE[pn_Windows_Azure](pn-windows-azure.md)]. All new [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Search indexes are encrypted at rest.  If you opted in before January 24, 2018, you'll need to reindex your data by opting out of Relevance Search, waiting an hour, and opting back in.  
+ An [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Search index is used to provide high-quality search results with quick response times.  [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Search adds powerful and sophisticated next-generation search capabilities to [!INCLUDE[pn_dynamics_crm_online](pn-dynamics-crm-online.md)].  This is a dedicated search service external to [!INCLUDE[pn_dynamics_crm_online](pn-dynamics-crm-online.md)] provided by [!INCLUDE[pn_Windows_Azure](pn-windows-azure.md)]. All new [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Search indexes are encrypted at rest.  If you opted in before January 24, 2018, you'll need to reindex your data by opting out of Dataverse search, waiting an hour, and opting back in.  
   
  [Azure SQL Database](https://azure.microsoft.com/services/sql-database/)  
   
- Relevance Search uses the [!INCLUDE[pn_Azure_SQL_Database_long](pn-azure-sql-database-long.md)] to store:  
+ Dataverse search uses the [!INCLUDE[pn_Azure_SQL_Database_long](pn-azure-sql-database-long.md)] to store:  
   
 -   Configuration data related to the organization and the corresponding index  
   
@@ -52,7 +52,7 @@ Changes to customer data are stored for up to 2 days in [!INCLUDE[pn_azure_blob_
   
 [Azure Load Balancer](https://azure.microsoft.com/services/load-balancer/)  
   
-The [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Load Balancer is used to distribute incoming traffic among healthy service instances in cloud services or virtual machines defined in a load balancer set. Relevance Search uses it to load balance the end points in a deployment.  
+The [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Load Balancer is used to distribute incoming traffic among healthy service instances in cloud services or virtual machines defined in a load balancer set. Dataverse search uses it to load balance the end points in a deployment.  
   
 [Azure Virtual Networks](https://azure.microsoft.com/documentation/articles/virtual-networks-overview/)  
   

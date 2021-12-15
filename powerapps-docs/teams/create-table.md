@@ -6,10 +6,12 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 11/09/2020
+ms.subservice: teams
 ms.author: nhelgren
 ms.reviewer: matp
+contributors:
+  - mattp123
 ---
-
 # Create tables in Microsoft Teams
 
 In Teams, data is defined by *tables*. To create a table, you must be a member of a team.
@@ -23,20 +25,21 @@ You define the type of table by selecting **More settings** when you create a ta
 There are four different types of table ownership. When you create a table, the only options are **user**, **team owned**, or **organization-owned**, but you should be aware that other tables have different ownership types. More information: [Types of tables in Dataverse](../maker/data-platform/types-of-entities.md)
 
 ## Create a table
+
 Watch this video for a quick overview about how to create a table in Dataverse for Teams:
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4NNw1]
 
 1. Sign in to Teams, and then select the link for **Power Apps**.
    > [!div class="mx-imgBorder"] 
-   > ![Sign in to Power Apps](media/create-table1.png "Sign in to Power Apps")
+   > ![Sign in to Power Apps.](media/create-table1.png "Sign in to Power Apps")
 
 2. Select the **Build** tab, and then select **See all**.
    > [!div class="mx-imgBorder"] 
-   > ![The Build tab](media/create-table2.png "The Build tab")
+   > ![The Build tab.](media/create-table2.png "The Build tab")
 
 3. Select **New**, and then select **Table**.
     > [!div class="mx-imgBorder"] 
-    > ![New table menu option](media/create-table3.png "New table menu option")
+    > ![New table menu option.](media/create-table3.png "New table menu option")
 
 4. In the **New table** pane, enter the following information. Required columns are designated with an asterisk (*) next to the column label.
     - **Display name**: The name of the table to be displayed. For example, **Product**.

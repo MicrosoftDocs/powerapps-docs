@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: 12/20/2019
 ms.reviewer: "pehecke"
 ms.service: powerapps
-ms.topic: "samples"
+ms.topic: sample
 author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
@@ -46,7 +46,7 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 ### Demonstrate
 
 1. The `Retrieve` method retrieves the account records created in the setup(#setup).
-1. The `Update` message updates the `ownerid` attribute to the user who you want to own the record. 
+1. The `Update` message updates the `ownerid` column to the user who you want to own the record. 
 
 ### Clean up
 

@@ -17,7 +17,7 @@ ms.assetid: 094978b8-971b-41ac-89e9-1f578447c689
 
 [!INCLUDE [setpagesize-description](includes/setpagesize-description.md)]
 
-## Available for 
+## Available for
 
 Model-driven and canvas apps
 
@@ -27,10 +27,9 @@ Model-driven and canvas apps
 
 ## Parameters
 
-| Parameter Name|Type|Required|Description|
-| ------------- |----|--------|-----------|
-|pageSize|`Number`|Yes|Pagesize to be set.|
-
+| Parameter Name | Type     | Required | Description         |
+| -------------- | -------- | -------- | ------------------- |
+| pageSize       | `Number` | Yes      | Pagesize to be set. |
 
 ### Related topics
 

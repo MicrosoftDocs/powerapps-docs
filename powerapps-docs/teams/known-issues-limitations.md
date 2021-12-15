@@ -5,7 +5,8 @@ author: matthewbolanos
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/22/2021
+ms.date: 08/02/2021
+ms.subservice: teams
 ms.author: mabolan
 ms.reviewer: tapanm
 contributors:
@@ -39,7 +40,11 @@ To learn about the limitations of controls in Dataverse for Teams environments, 
 
 ## Government Community Cloud (GCC)
 
-Dataverse for Teams currently isn't available in [Power Apps Government Community Cloud (GCC)](/power-platform/admin/powerapps-us-government).
+Dataverse for Teams currently isn't available in:
+
+- Power Apps Government Community Cloud – High (GCC High)
+- Power Apps Department of Defense (DoD)
+- Power Apps operated by 21Vianet in China
 
 ## Hidden membership groups
 
@@ -72,7 +77,7 @@ The Fluent UI date picker control doesn't yet support format string.  If you nee
 
 You may see red errors while using the modern controls in canvas components. These errors won't functionally impact your app, and you can ignore them.
 
-![Canvas components](media/canvas-components.png "Canvas components")
+![Canvas components.](media/canvas-components.png "Canvas components")
 
 ### New connections
 

@@ -1,13 +1,13 @@
 ---
 title: "ManagedIdentity table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the ManagedIdentity table/entity."
-ms.date: 05/20/2021
+ms.date: 10/05/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -20,7 +20,7 @@ search.app:
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
-ManagedIdentity entity
+Contains data to represent an Azure Active Directory Application used to connect to secure web-hosted resources.
 
 **Added by**: ManagedIdentityExtensions Solution
 
@@ -49,7 +49,7 @@ ManagedIdentity entity
 |--------|-----|
 |CollectionSchemaName|ManagedIdentities|
 |DisplayCollectionName|Managed Identities|
-|DisplayName|ManagedIdentity|
+|DisplayName|Managed Identity|
 |EntitySetName|managedidentities|
 |IsBPFEntity|False|
 |LogicalCollectionName|managedidentities|
@@ -100,7 +100,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description|Client Secret|
+|Description|Contains a secret for the Azure Active Directory application. Once set, it cannot be read except by Dataverse.|
 |DisplayName|Client Secret|
 |FormatName|Text|
 |IsLocalizable|False|
@@ -117,8 +117,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description||
-|DisplayName|CredentialSource|
+|Description|Where the Managed Identity will get the credentials to use.|
+|DisplayName|Credential Source|
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|credentialsource|
@@ -127,11 +127,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### CredentialSource Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|ClientSecret|
-|1|KeyVault|
-|2|IsManaged|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|ClientSecret||
+|1|KeyVault||
+|2|IsManaged||
+|3|MicrosoftFirstPartyCertificate||
 
 
 
@@ -201,7 +202,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description|Name|
+|Description|The name assigned to this Managed Identity.|
 |DisplayName|Name|
 |FormatName|Text|
 |IsLocalizable|False|
@@ -264,7 +265,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description|Status of the ManagedIdentity|
+|Description|Status of the Managed Identity|
 |DisplayName|Status|
 |IsValidForCreate|False|
 |IsValidForForm|True|
@@ -286,7 +287,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description|Reason for the status of the ManagedIdentity|
+|Description|Reason for the status of the Managed Identity|
 |DisplayName|Status Reason|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -307,7 +308,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description|TenantId|
+|Description|The Id of the Azure Active Directory Tenant that the Application is part of.|
 |DisplayName|TenantId|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -414,12 +415,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### ComponentState Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Published|
-|1|Unpublished|
-|2|Deleted|
-|3|Deleted Unpublished|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Published||
+|1|Unpublished||
+|2|Deleted||
+|3|Deleted Unpublished||
 
 
 
@@ -558,8 +559,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsManaged Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Managed|
 |0|Unmanaged|
 
@@ -1129,3 +1130,4 @@ See keyvaultreference Table [keyvaultreference_ManagedIdentity](keyvaultreferenc
 
 [About the table reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+<xref href="Microsoft.Dynamics.CRM.managedidentity?text=managedidentity EntityType" />

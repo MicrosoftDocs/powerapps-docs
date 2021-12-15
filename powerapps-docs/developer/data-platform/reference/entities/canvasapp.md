@@ -1,13 +1,13 @@
 ---
 title: "CanvasApp table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the CanvasApp table/entity."
-ms.date: 05/20/2021
+ms.date: 10/05/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -163,8 +163,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### AdminControlBypassConsent Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|True|
 |0|False|
 
@@ -282,8 +282,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### BypassConsent Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|True|
 |0|False|
 
@@ -305,8 +305,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### CanConsumeAppPass Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|True|
 |0|False|
 
@@ -341,12 +341,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### CanvasAppType Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Classic Canvas App|
-|1|App Component Library|
-|2|Custom Canvas Page|
-|3|Unified App|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Classic Canvas App||
+|1|App Component Library||
+|2|Custom Canvas Page||
+|3|Unified App||
 
 
 
@@ -540,8 +540,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsCdsUpgraded Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|True|
 |0|False|
 
@@ -578,8 +578,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsFeaturedApp Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|True|
 |0|False|
 
@@ -601,8 +601,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsHeroApp Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|True|
 |0|False|
 
@@ -624,8 +624,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsHidden Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|True|
 |0|False|
 
@@ -861,12 +861,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### ComponentState Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Published|
-|1|Unpublished|
-|2|Deleted|
-|3|Deleted Unpublished|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Published||
+|1|Unpublished||
+|2|Deleted||
+|3|Deleted Unpublished||
 
 
 
@@ -902,8 +902,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsManaged Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Managed|
 |0|Unmanaged|
 
@@ -1129,6 +1129,49 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |MaxLength|200|
 |RequiredLevel|None|
 |Type|String|
+
+<a name="onetomany"></a>
+
+## One-To-Many Relationships
+
+Listed by **SchemaName**.
+
+- [canvasapp_appaction_onclickeventformulacomponentlibraryid](#BKMK_canvasapp_appaction_onclickeventformulacomponentlibraryid)
+- [canvasapp_appaction_visibilityformulacomponentlibraryid](#BKMK_canvasapp_appaction_visibilityformulacomponentlibraryid)
+
+
+### <a name="BKMK_canvasapp_appaction_onclickeventformulacomponentlibraryid"></a> canvasapp_appaction_onclickeventformulacomponentlibraryid
+
+**Added by**: Power Apps Actions Solution
+
+Same as appaction table [canvasapp_appaction_onclickeventformulacomponentlibraryid](appaction.md#BKMK_canvasapp_appaction_onclickeventformulacomponentlibraryid) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|appaction|
+|ReferencingAttribute|onclickeventformulacomponentlibraryid|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|canvasapp_appaction_onclickeventformulacomponentlibraryid|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_canvasapp_appaction_visibilityformulacomponentlibraryid"></a> canvasapp_appaction_visibilityformulacomponentlibraryid
+
+**Added by**: Power Apps Actions Solution
+
+Same as appaction table [canvasapp_appaction_visibilityformulacomponentlibraryid](appaction.md#BKMK_canvasapp_appaction_visibilityformulacomponentlibraryid) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|appaction|
+|ReferencingAttribute|visibilityformulacomponentlibraryid|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|canvasapp_appaction_visibilityformulacomponentlibraryid|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 <a name="manytoone"></a>
 

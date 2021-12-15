@@ -1,13 +1,13 @@
 ---
 title: "KeyVaultReference table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the KeyVaultReference table/entity."
-ms.date: 05/20/2021
+ms.date: 10/05/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -20,7 +20,7 @@ search.app:
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
-KeyVaultReference entity
+Contains data that refers to an Azure Key Vault containing credentials used to connect to secure web-hosted resources.
 
 **Added by**: ManagedIdentityExtensions Solution
 
@@ -49,7 +49,7 @@ KeyVaultReference entity
 |--------|-----|
 |CollectionSchemaName|KeyVaultReferences|
 |DisplayCollectionName|KeyVault References|
-|DisplayName|KeyVaultReference|
+|DisplayName|Key Vault Reference|
 |EntitySetName|keyvaultreferences|
 |IsBPFEntity|False|
 |LogicalCollectionName|keyvaultreferences|
@@ -121,8 +121,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description||
-|DisplayName||
+|Description|For internal use only.|
+|DisplayName|Is Validated|
 |IsValidForForm|True|
 |IsValidForRead|False|
 |IsValidForUpdate|False|
@@ -132,8 +132,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsValidated Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -161,8 +161,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description||
-|DisplayName|KeyType|
+|Description|The type of key to use.|
+|DisplayName|Key Type|
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|keytype|
@@ -171,11 +171,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### KeyType Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Secret|
-|1|Certificate|
-|2|CertificateWithX5c|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Secret||
+|1|Certificate||
+|2|CertificateWithX5c||
 
 
 
@@ -197,8 +197,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description|Keyvault URI|
-|DisplayName|Keyvault URI|
+|Description|The Uri for the Key Vault.|
+|DisplayName|Key Vault Uri|
 |FormatName|Text|
 |IsLocalizable|False|
 |IsValidForForm|True|
@@ -274,8 +274,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description||
-|DisplayName|PreAuthorizedApplicationType|
+|Description|The type of pre-authorized application.|
+|DisplayName|Pre-Authorized Application Type|
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|preauthorizedapplicationtype|
@@ -284,10 +284,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### PreAuthorizedApplicationType Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|MicrosoftDataverseFirstParty|
-|1|Other|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|MicrosoftDataverseFirstParty||
+|1|Other||
 
 
 
@@ -295,7 +295,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description|Status of the KeyVaultReference|
+|Description|Status of the Key Vault Reference|
 |DisplayName|Status|
 |IsValidForCreate|False|
 |IsValidForForm|True|
@@ -317,7 +317,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description|Reason for the status of the KeyVaultReference|
+|Description|Reason for the status of the Key Vault Reference|
 |DisplayName|Status Reason|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -431,12 +431,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### ComponentState Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Published|
-|1|Unpublished|
-|2|Deleted|
-|3|Deleted Unpublished|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Published||
+|1|Unpublished||
+|2|Deleted||
+|3|Deleted Unpublished||
 
 
 
@@ -575,8 +575,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsManaged Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Managed|
 |0|Unmanaged|
 
@@ -1133,3 +1133,4 @@ See managedidentity Table [managedidentity_KeyVaultReference](managedidentity.md
 
 [About the table reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+<xref href="Microsoft.Dynamics.CRM.keyvaultreference?text=keyvaultreference EntityType" />

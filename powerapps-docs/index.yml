@@ -12,7 +12,7 @@ metadata:
   ms.topic: hub-page # Required
   author: KumarVivek #Required; your GitHub user alias, with correct capitalization.
   ms.author: kvivek #Required; microsoft alias of author; optional team alias.
-  ms.date: 04/06/2021 #Required; mm/dd/yyyy format.
+  ms.date: 07/16/2021 #Required; mm/dd/yyyy format.
   hide_bc: false
 
 
@@ -129,6 +129,18 @@ conceptualContent:
           url: /powerapps/maker/canvas-apps/dev-enterprise-intro
           itemType: reference    
     
+    - title: Power Apps mobile
+      links:
+        - text: Get started with Power Apps mobile
+          url: /powerapps/mobile/run-powerapps-on-mobile
+          itemType: get-started
+        - text: Use model-driven apps on Power Apps mobile
+          url: /powerapps/mobile/use-custom-model-driven-app-on-mobile
+          itemType: how-to-guide 
+        - text: Configure mobile offline
+          url: /powerapps/mobile/setup-mobile-offline
+          itemType: how-to-guide
+    
     - title: Sample apps and solutions
       links:
         - text: Hospital Emergency Response
@@ -141,6 +153,7 @@ conceptualContent:
           url: /powerapps/sample-apps/crisis-financial-impact-tracker/overview
           itemType: overview
     
+       
     - title: Best practices guidance
       links:
         - text: Power Apps patterns
@@ -162,8 +175,9 @@ conceptualContent:
           url: /powerapps/learning-catalog/developer
           itemType: learn     
       footerLink:
-        url: /powerapps/learning-catalog/get-started
+        url: /powerapps/learning-catalog/learning-catalog
         text: More
+         
 
 # additionalContent section (optional)
 # Card with summary style

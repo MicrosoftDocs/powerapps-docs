@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: guidance
 ms.date: 06/16/2020
+ms.subservice: guidance
 ms.author: tayoshi
 ms.reviewer: kathyos
 
@@ -129,7 +130,7 @@ reports (but not change them).
 
 > We need an Auditors security group. We need to give it and the Approvers security group access to all records, and we need to give the All Employees group access only to "records I create."
 
-![Diagram of expense report security groups](media/expense-report-security.png "Diagram of expense report security groups")
+![Diagram of expense report security groups.](media/expense-report-security.png "Diagram of expense report security groups")
 
 More information: [Security in Dataverse](/power-platform/admin/wp-security)
 

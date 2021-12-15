@@ -1,13 +1,13 @@
 ---
 title: "PublisherAddress table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the PublisherAddress table/entity."
-ms.date: 05/20/2021
+ms.date: 10/05/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -116,12 +116,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### AddressTypeCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Bill To|
-|2|Ship To|
-|3|Primary|
-|4|Other|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Bill To||
+|2|Ship To||
+|3|Primary||
+|4|Other||
 
 
 
@@ -203,10 +203,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### FreightTermsCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|FOB|
-|2|No Charge|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|FOB||
+|2|No Charge||
 
 
 
@@ -426,9 +426,9 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### ShippingMethodCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Default|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Default||
 
 
 

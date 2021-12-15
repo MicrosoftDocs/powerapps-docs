@@ -12,6 +12,8 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - mattp123
 ---
 # Find the apps, templates, and information you need
 
@@ -34,7 +36,7 @@ Choose any suggestion to go directly to that item.
 
 > [!NOTE]
 > By default, search only displays items from your environment, which are apps and templates. Users can select the **See web results** option to expand their search to external web content.
-> :::image type="content" source="data-platform/media/search-see-web-results.png" alt-text="See web results ":::
+> :::image type="content" source="data-platform/media/search-see-web-results.png" alt-text="See web results .":::
 
 > [!WARNING]
 > Do not send personal data or confidential/proprietary information as part of your search when you choose this option.
@@ -49,9 +51,9 @@ By default, all search providers are enabled. The following search providers can
 
 |Search provider namespace |Description  |
 |---------|---------|
-|`PowerPlatform.UniversalSearch.disableDocsSearch`  |  When this provider is disabled, users in the environment will see a message that Microsoft Learn and Documentation search categories have been turned off by the administrator in the search results page.   |
-|`PowerPlatform.UniversalSearch.disableCommunitySearch`     | When this provider is disabled, users in the environment will see a message that Community and Blog search categories have been turned off by the administrator in the search results page.   |
-| `PowerPlatform.UniversalSearch.disableBingVideoSearch`    | When this provider is disabled, users in the environment will see a message that Video search categories have been turned off by the administrator in the search results page.   |
+|`PowerPlatform.Search.disableDocsSearch`  |  When this provider is disabled, users in the environment will see a message that Microsoft Learn and Documentation search categories have been turned off by the administrator in the search results page.   |
+|`PowerPlatform.Search.disableCommunitySearch`     | When this provider is disabled, users in the environment will see a message that Community and Blog search categories have been turned off by the administrator in the search results page.   |
+| `PowerPlatform.Search.disableBingVideoSearch`    | When this provider is disabled, users in the environment will see a message that Video search categories have been turned off by the administrator in the search results page.   |
 
 To return the current settings including which search providers are enabled or disabled, run this cmdlet:
 `Get-TenantSettings`
@@ -63,14 +65,14 @@ Members of the Power Platform admin role can disable or enable a search provider
 For example, to disable the Microsoft Learn and Documentation search provider, run this cmdlet:
 
 ```powershell
-$requestBody = @{PowerPlatform.UniversalSearch.disableDocsSearch = $true}
+$requestBody = @{PowerPlatform.Search.disableDocsSearch = $true}
 Set-TenantSettings -RequestBody $requestBody
 ```
 
 To enable the Microsoft Learn and Documentation search provider, run this cmdlet:
 
 ```powershell
-$requestBody = @{PowerPlatform.UniversalSearch.disableDocsSearch = $false}
+$requestBody = @{PowerPlatform.Search.disableDocsSearch = $false}
 Set-TenantSettings -RequestBody $requestBody
 ```
 

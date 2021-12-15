@@ -6,11 +6,12 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: intro-internal
 ms.date: 04/21/2021
+ms.subservice: portals
 ms.author: nenandw
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
     - neerajnandwana-msft
-    - tapanm-msft
+    - nickdoelman
 ---
 
 # Provision a portal using the older portal add-on
@@ -28,27 +29,27 @@ To provision a portal:
 
 1. Sign in to [Power Platform admin center](https://admin.powerplatform.microsoft.com).
 
-    ![Power Platform admin center](media/power-platform-admin-center.png "Power Platform admin center") 
+    ![Power Platform admin center.](media/power-platform-admin-center.png "Power Platform admin center") 
 
 1. Select and expand **Resources** from the left pane.
 
-    ![Power Platform admin center - Resources](media/ppac-resources.png "Power Platform admin center - Resources") 
+    ![Power Platform admin center - Resources.](media/ppac-resources.png "Power Platform admin center - Resources") 
 
 1. Select **Portals**.
 
-    ![Power Platform admin center - Portals](media/ppac-portals.png "Power Platform admin center - Portals") 
+    ![Power Platform admin center - Portals.](media/ppac-portals.png "Power Platform admin center - Portals") 
 
 1. Select a **Portal Add-on** with the status of *Not configured*.
 
-1. Select **Manage** from the top menu. <br> You can also select **More portal options** (![More portal actions](media/ellipsis.png "More portal actions")), and then select **Manage** instead.
+1. Select **Manage** from the top menu. <br> You can also select **More portal options** (![More portal actions.](media/ellipsis.png "More portal actions")), and then select **Manage** instead.
 
-    ![Manage portals](media/manage-portals.png "Manage portals")
+    ![Manage portals.](media/manage-portals.png "Manage portals")
 
     A new browser tab opens to fill in the portal details. 
 
 1. In the **General Settings** section, enter a **Name** for your portal. The **Name** will help to identify the portal and can be changed later.
 
-    ![Enter portal name](media/enter-name.png "Enter portal name")
+    ![Enter portal name.](media/enter-name.png "Enter portal name")
 
 1. The **Type** field represents the type of portal subscription (**Trial** or **Production**). This is a system field, and it **can't be changed**.
 
@@ -57,7 +58,7 @@ To provision a portal:
 
 1. Enter portal URL of your choice.
 
-    ![Enter portal URL](media/portal-url.png "Enter portal URL")
+    ![Enter portal URL.](media/portal-url.png "Enter portal URL")
 
     > [!NOTE]
     > - The domain `microsoftcrmportals.com` has been deprecated. Hence, ensure that you select `powerappsportals.com`. For more information, go to [Update Power Apps portals domain](admin/update-portal-domain.md).
@@ -66,14 +67,14 @@ To provision a portal:
 
 1. Select the **Dynamics 365 instance** for this portal.
 
-    ![Select Dynamics 365 instance](media/select-dynamics-365-instance.png "Select Dynamics 365 instance")
+    ![Select Dynamics 365 instance.](media/select-dynamics-365-instance.png "Select Dynamics 365 instance")
 
     > [!NOTE]
     > You must be a member of the **System Administrator** or **System Customizer** role in the instance to be able to select an instance.
 
 1. Select the portal language. The available languages will depend on the languages that are installed in your instance.
     
-    ![Select the portal language](media/select-portal-language.png "Select the portal language")
+    ![Select the portal language.](media/select-portal-language.png "Select the portal language")
 
     > [!NOTE]
     > Sample data is only provided in one language, so choosing a default language will also decide how the sample data is translated. Arabic and Hebrew are not supported and will not appear in the list.
@@ -109,27 +110,27 @@ To provision a portal:
 
 1. Select the checkbox if you want to **enable the portal for early upgrade**.
 
-    ![Select early upgrade](media/enable-for-early-upgrade.png "Select early upgrade")
+    ![Select early upgrade.](media/enable-for-early-upgrade.png "Select early upgrade")
 
     More information: [Upgrade a portal](admin/upgrade-portal.md).
 
 1. Verify all the information, and then select **Submit**.
 
-    ![Select Submit](media/submit.png "Select Submit")
+    ![Select Submit.](media/submit.png "Select Submit")
 
 1. Select **Accept** to accept the *Terms of Service*.
 
 After you accept the Terms of Service, the portal will begin provisioning. Provisioning usually takes 30 minutes but can take a few hours depending on the system load. You can also check the status using the link on the request submission page.
 
-![Create portal request](media/portal-creation.png "Create portal request")
+![Create portal request.](media/portal-creation.png "Create portal request")
 
 After the portal is provisioned, the **Portal Details** page is displayed with the required details.
 
-![Portal details](media/portal-details-prov.png "Portal details") 
+![Portal details.](media/portal-details-prov.png "Portal details") 
 
 The Power Platform admin center now shows the portal in **Configured** state.
 
-![Admin center update](media/status-configured.png "Admin center update") 
+![Admin center update.](media/status-configured.png "Admin center update") 
 
 > [!NOTE]
 > When a portal user signs in to the portal for the first time by using an Azure AD credential, a consent page is displayed to all users irrespective of the user or portal type.

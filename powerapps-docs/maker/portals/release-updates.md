@@ -5,11 +5,12 @@ author: dileepsinghmicrosoft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/01/2021
+ms.date: 10/11/2021
+ms.subservice: portals
 ms.author: dileeps
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
-    - tapanm-msft
+    - nickdoelman
     - dileepsinghmicrosoft
 ---
 
@@ -29,6 +30,7 @@ For information about the roadmap and new features releasing over the next few m
 
 The following articles provide details about the portals version updates:
 
+- [Power Apps portals version 9.3.7.x and later](/power-platform/released-versions/portals)
 - [Power Apps portals version 9.3.6.x](versions/version-9.3.6.x.md)
 - [Power Apps portals version 9.3.4.x](versions/version-9.3.4.x.md)
 - [Power Apps portals version 9.3.3.x](versions/version-9.3.3.x.md)
@@ -38,6 +40,8 @@ The following articles provide details about the portals version updates:
 
 The following articles provide details about the starter portal package updates:
 
+- [Starter portal package version version 9.3.2109.x](versions/package-version-9.3.2109.md)
+- [Starter portal package version version 9.2.2108.x](versions/package-version-9.2.2108.md)
 - [Starter portal package version version 9.2.2103.x](versions/package-version-9.2.2103.md)
 - [Starter portal package version 9.2.2006.10](https://support.microsoft.com/topic/power-portal-packages-version-9-2-2006-10-release-b8357265-5148-c1a0-fdb0-d5ad7db30e10)
 - [Starter portal package version 9.2.2005.0](https://support.microsoft.com/topic/dynamics-365-service-portal-solution-packages-release-9-2-2005-0-a0c176d0-d9dc-6236-87ea-243b92cd87b0)
