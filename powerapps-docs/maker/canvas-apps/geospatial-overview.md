@@ -1,6 +1,6 @@
 ---
-title: Add Geospatial components to apps made with Microsoft Power Apps
-description: Geospatial components let you view and manipulate 3D objects and images in the real world, in augmented reality. 
+title: Add Geospatial controls to apps made with Microsoft Power Apps
+description: Geospatial controls let you view and manipulate 3D objects and images in the real world, in augmented reality. 
 author: anuitz
 ms.service: powerapps
 ms.topic: conceptual
@@ -19,14 +19,14 @@ contributors:
 ---
 
 
-# Add geospatial components to your app
+# Add geospatial controls to your app
 
 
-You can add a number of geospatial components to your canvas app to support scenarios that involve mapping locations and addresses.
+You can add a number of geospatial controls to your canvas app to support scenarios that involve mapping locations and addresses.
 
-Components are groups of controls that can answer the need for a specific scenario. You can read more about components and how to build your own in [the Power Apps developer library](../../developer/component-framework/custom-controls-overview.md).
+Components are groups of controls that can answer the need for a specific scenario. You can read more about controls and how to build your own in [the Power Apps developer library](../../developer/component-framework/custom-controls-overview.md).
 
-The following prebuilt components can be used for geospatial and mapping scenarios:
+The following prebuilt controls can be used for geospatial and mapping scenarios:
 
 - [Interactive map](geospatial-component-map.md)
 - [Address input](geospatial-component-input-address.md)
@@ -34,13 +34,13 @@ The following prebuilt components can be used for geospatial and mapping scenari
 ## Prerequisites
 
 1. An admin must [enable the geospatial features in the Power Platform admin center](#enable-the-geospatial-features-for-the-environment) for the environment. This requires reviewing and agreeing to specific terms of service.
-2. An admin must [ensure the geospatial components will not be blocked by the environment's data loss prevention policies](#review-the-environments-data-loss-prevention-policies).
+2. An admin must [ensure the geospatial controls will not be blocked by the environment's data loss prevention policies](#review-the-environments-data-loss-prevention-policies).
 
     >[!IMPORTANT]
-    >The components require the default **Organizations** data source to be present. This data source is included whenever you insert the components into an app, but if you manually delete it you'll need to add it before the components will work:
+    >The controls require the default **Organizations** data source to be present. This data source is included whenever you insert the controls into an app, but if you manually delete it you'll need to add it before the controls will work:
     >
-    >1. With the component selected, go to the **Data sources** tab on the side navigation menu.
-    >2. In the search field, enter **Organizations**, and then select the data source that appears. This will add it to the component.
+    >1. With the control selected, go to the **Data sources** tab on the side navigation menu.
+    >2. In the search field, enter **Organizations**, and then select the data source that appears. This will add it to the control.
 
 ### Enable the geospatial features for the environment
 
@@ -78,7 +78,7 @@ The geospatial features require additional terms of use that must be reviewed an
     >[!NOTE]
     >Requests sent between TomTom(tm) and the Azure Maps service are not exposed over the public Internet.
     >
-    >Requests between apps you create with the component and the Azure Maps service are sent over HTTPS.
+    >Requests between apps you create with the control and the Azure Maps service are sent over HTTPS.
     
 
 1. Select **Save** at the bottom of the settings page.
@@ -87,17 +87,17 @@ The geospatial features require additional terms of use that must be reviewed an
 
 ### Review the environment's data loss prevention policies
 
-The geospatial components require the Microsoft Dataverse and Spatial Services connectors. This connector is used by the Power Apps Maps and Address Input components to connect to Microsoft’s Azure Maps service. It is used to fetch map tiles and satellite imagery, geocode addresses, and search for addresses. Thus, it is required for the Interactive Map and Address Input components to function.
+The geospatial controls require the Microsoft Dataverse and Spatial Services connectors. This connector is used by the Power Apps Maps and Address Input controls to connect to Microsoft’s Azure Maps service. It is used to fetch map tiles and satellite imagery, geocode addresses, and search for addresses. Thus, it is required for the Interactive Map and Address Input controls to function.
 
-For the components to function properly, these connectors must not have conflicting data loss prevention policies. An admin must review the environment's data loss prevention policies and ensure that these connectors are classified under the same data group, typically the **Business** data group. [Learn more about data loss prevention policies for Power Platform](/power-platform/admin/prevent-data-loss). 
+For the controls to function properly, these connectors must not have conflicting data loss prevention policies. An admin must review the environment's data loss prevention policies and ensure that these connectors are classified under the same data group, typically the **Business** data group. [Learn more about data loss prevention policies for Power Platform](/power-platform/admin/prevent-data-loss). 
 
 
 ### Next steps
 
-Start installing the components in your apps:
+Start installing the controls in your apps:
 
-- Visualize and interpret location data with the **[Interactive map](geospatial-component-map.md)** component.
-- See dynamic address suggestions as you type with the **[Address input](geospatial-component-input-address.md)** component.
+- Visualize and interpret location data with the **[Interactive map](geospatial-component-map.md)** control.
+- See dynamic address suggestions as you type with the **[Address input](geospatial-component-input-address.md)** control.
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
