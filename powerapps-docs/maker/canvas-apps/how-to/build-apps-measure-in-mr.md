@@ -57,12 +57,16 @@ See [prerequisites for mixed-reality capable devices](../mixed-reality-overview.
     | Unit of measurement | Feet         |
     | Measurement type    | Area         |
 
+    :::image type="content" source="media\build-apps-measure-in-mr\button-properties.png" alt-text="Measure Area button properties.":::
+
 1. Select the Advanced tab and change the **OnMixedRealitySelect** property to the following formula:
 
     ```powerapps-dot
     ClearCollect(colMRMeasurements, Self.Measurements);  
     ClearCollect(colMRPhotos, Self.Photos)  
     ```
+
+    :::image type="content" source="media\build-apps-measure-in-mr\onmixedrealityselect-formula.png" alt-text="OnMixedRealitySelect formula.":::
 
     This formula will allow the user to define areas to be measured in square feet and store the most recent results of the measurements in a collection named **colMRMeasurements**, and the most recent photos in a collection named **colMRPhotos**.
 
@@ -79,6 +83,8 @@ See [prerequisites for mixed-reality capable devices](../mixed-reality-overview.
     | Width          | Parent.Width |
     | Color    | RGBA(255, 255, 255, 1) |
     | Fill     | RGBA(56, 96, 178, 1)   |
+
+    :::image type="content" source="media\build-apps-measure-in-mr\header-label.png" alt-text="Header label.":::
 
     This label provides a header for the screen.
 
@@ -100,6 +106,8 @@ See [prerequisites for mixed-reality capable devices](../mixed-reality-overview.
     ```powerapps-dot
     "Area: " & If(IsEmpty(colMRMeasurements), "no area measured", First(colMRMeasurements).Area & " sq. " & First(colMRMeasurements).Unit)
     ```
+
+    :::image type="content" source="media\build-apps-measure-in-mr\completed-app.png" alt-text="Completed app.":::
 
     This label will display the first area measurement and unit type that is collected from the **Measure in MR** control. If there is no measurement to be returned, the text will show **Area: no area measured** to let the user know that no value is present.
 
