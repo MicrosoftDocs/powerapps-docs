@@ -77,11 +77,6 @@ See [prerequisites for mixed-reality capable devices](../mixed-reality-overview.
     | Font weight    | Semibold     |
     | Text alignment | Center       |
     | Width          | Parent.Width |
-
-1. In the Advanced tab of the label, change the following properties:
-
-    | Property | Value                  |
-    |----------|------------------------|
     | Color    | RGBA(255, 255, 255, 1) |
     | Fill     | RGBA(56, 96, 178, 1)   |
 
@@ -93,7 +88,7 @@ See [prerequisites for mixed-reality capable devices](../mixed-reality-overview.
 
     | Property         | Value                       |
     |------------------|-----------------------------|
-    | Image            | First(colMRPhotos).ImageURI |
+    | Image            | `First(colMRPhotos).ImageURI` |
     | Border Thickness | 2                           |
 
     The image control will display the first image taken from the **Measure in MR** control.
@@ -109,6 +104,9 @@ See [prerequisites for mixed-reality capable devices](../mixed-reality-overview.
     This label will display the first area measurement and unit type that is collected from the **Measure in MR** control. If there is no measurement to be returned, the text will show **Area: no area measured** to let the user know that no value is present.
 
 ## Test the app
+
+> [!TIP]
+> Watch the video embedded at the top of this article to see how the app works.
 
 Now that all the controls have been added, [save and publish](../save-publish-app.md) the app. On a mixed-reality capable device (as defined in the Prerequisites section), open the app, and press the **Measure Area** button. This will open the **Measure in MR** experience, allowing the user to define an area to be measured.
 
