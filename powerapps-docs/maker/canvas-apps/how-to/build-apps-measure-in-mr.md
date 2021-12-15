@@ -109,24 +109,24 @@ See [prerequisites for mixed-reality capable devices](../mixed-reality-overview.
 
     :::image type="content" source="media\build-apps-measure-in-mr\completed-app.png" alt-text="Completed app.":::
 
-    This label will display the first area measurement and unit type that is collected from the **Measure in MR** control. If there is no measurement to be returned, the text will show **Area: no area measured** to let the user know that no value is present.
+    This label will display the first area measurement and unit type that is collected from the **Measure in MR** control. If there's no measurement to be returned, the text will show **Area: no area measured** to let the user know that no value is present.
 
 ## Test the app
 
 > [!TIP]
 > Watch the video embedded at the top of this article to see how the app works.
 
-Now that all the controls have been added, [save and publish](../save-publish-app.md) the app. On a mixed-reality capable device (as defined in the Prerequisites section), open the app, and press the **Measure Area** button. This will open the **Measure in MR** experience, allowing the user to define an area to be measured.
+Now that all the controls have been added, [save and publish](../save-publish-app.md) the app. On a mixed-reality capable device (as defined in the Prerequisites section), open the app, and press the **Measure Area** button. This action will open the **Measure in MR** experience, allowing the user to define an area to be measured.
 
 Follow the on-screen instructions to calibrate the device by slowly moving it left and right while pointing the camera at a surface to be measured. Once the calibration is complete, you'll see an array of dots on the surface as well as a circle and dot reticle in the center of the screen. This reticle is used to define lengths, areas, and volumes by using the + button to add points and line segments.
 
 Photos can be captured using the camera button. These photos will show the lengths, areas, and volumes defined by the user.
 
-There is an undo button to undo any placed points.
+There's an undo button to undo any placed points.
 
-Begin by placing a point using the **+** button. You'll notice that an orange line and measurement now appear connected to the point you just placed. Place a second point and notice how a line with measurement appears between the two points you place. Continue placing points until the desired shape has been fully defined. To close a shape, place the reticle on the first point made and use the **+** button. You'll notice that the center point of the reticle changes color from white to green, indicating that the shape can be closed. If two of the sides of the shape intersect, or you try to close a shape using any other point than the first one, You'll notice that the center point of the reticle changes from white to red, indicating that a point cannot be placed there.
+Begin by placing a point using the **+** button. You'll notice that an orange line and measurement now appear connected to the point you placed. Place a second point and notice how a line with measurement appears between the two points you place. Continue placing points until the desired shape has been fully defined. To close a shape, place the reticle on the first point made and use the **+** button. You'll notice that the center point of the reticle changes color from white to green, indicating that the shape can be closed. If two of the sides of the shape intersect, or you try to close a shape using any other point than the first one. You'll notice that the center point of the reticle changes from white to red, indicating that a point cannot be placed there.
 
-Once an area has been fully defined, position the device so that a picture can be taken of the area you just defined and use the camera button to do so. The select the **Submit** button. A confirmation dialog will appear, asking if you have finished with your measurements. If you have more measurements to enter, select **Cancel** to return to the MR environment. If you are finished, select **Submit** to be taken back to the app screen.
+Once an area has been fully defined, position the device so that a picture can be taken of the area you defined and use the camera button to do so. The select the **Submit** button. A confirmation dialog will appear, asking if you've finished with your measurements. If you have more measurements to enter, select **Cancel** to return to the MR environment. If you're finished, select **Submit** to be taken back to the app screen.
 
 You'll see the first picture taken as well as the calculated area of the shape you defined as well as the units, in this case square-feet.
 
