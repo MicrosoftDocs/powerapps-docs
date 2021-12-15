@@ -1,5 +1,5 @@
 ---
-title: Create apps with 3D and mixed reality controls
+title: Create an app with 3D and mixed reality controls
 description: Learn about how to use 3D and mixed reality controls.
 author: Joel-lindstrom
 ms.service: powerapps
@@ -18,7 +18,7 @@ contributors:
     - anuitz
 ---
 
-# Create apps with 3D and mixed reality controls
+# Create an app with 3D and mixed reality controls
 
 You can use the [View in 3D](../mixed-reality-component-view-3d.md) and [View in MR](../mixed-reality-component-view-mr.md) controls to view items in 3D, or to see how a particular item might fit within a specified space.
 
