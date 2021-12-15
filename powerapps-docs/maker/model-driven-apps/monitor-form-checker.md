@@ -49,13 +49,13 @@ There are two ways to open a Monitor session.
 
 **Option 2:**
 
-1. Play your model-driven app
-2. Add `&monitor=true` to the URL and refresh the page
-3. Click on the "Monitor" button in the global command bar
+1. Play your model-driven app.
+2. Add `&monitor=true` to the end of the URL in your web browser, and then refresh the page.
+3. Select **Monitor** on the command bar.
 
     > ![Location of Monitor button in global command bar](https://user-images.githubusercontent.com/69216748/146047014-b9428da5-138a-4ccf-b74c-b45a0a0685b9.png)
 
-### Step 2: Connect app to Monitor session
+### Step 2: Connect your app to the Monitor session
 
 1. Once in the monitor, select **Play model-driven app** from the menu on the command bar. This opens the app and begins the monitoring.
 1. Perform actions within the model-driven app consistent with normal use of the app. For example, open and change data using a table form.
