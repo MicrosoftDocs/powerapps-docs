@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/maker/model-driven-apps/optimize-form-performance.md",
+      "redirect_url": "design-performant-forms",
+      "redirect_document_id": "false"
+    },
+    {
       "source_path": "powerapps-docs/maker/model-driven-apps/page-data-connectors.md",
       "redirect_url": "../canvas-apps/connections-list",
       "redirect_document_id": "false"
