@@ -29,7 +29,7 @@ This article helps you fix some of the common issues you might encounter while w
 > - Most of the tools are available in all the production environments. Some of them mentioned in the article might not have been deployed to your organization yet; new tools are added periodically.
 > - Tools listed in this article are written in a scenario-driven way. You can use them independently to troubleshoot different types of issues. 
 > - [Use URL parameters to disable various form components](#use-url-parameters-to-disable-various-form-components) and [View registered form event handlers and libraries in Monitor](#view-registered-form-event-handlers-and-libraries-in-monitor) are critical and fundamental tools you'll frequently use to troubleshoot many scenarios. 
-> - For more information on how to use Monitor, see [Use Monitor to troubleshoot model-driven app form behavior](https://docs.microsoft.com/en-us/powerapps/maker/model-driven-apps/monitor-form-checker)
+> - For more information on how to use Monitor, see [Use Monitor to troubleshoot model-driven app form behavior](../../maker/model-driven-apps/monitor-form-checker.md)
 
 ## Use URL parameters to disable various form components
 
