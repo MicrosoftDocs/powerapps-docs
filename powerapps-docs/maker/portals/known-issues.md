@@ -54,10 +54,10 @@ contributors:
 
     To resolve this issue:
     
-    1. Using the [Portals Management app](../configure/configure-portal.md), go to the **Web Pages** section and select the **Access Denied** webpage.
-    1. Update the *Page Template* lookup field from *Default studio template* to *Access Denied*.
+    1. Using the [Portals Management app](/configure/configure-portal.md), go to the **Web Pages** section and select the **Access Denied** webpage.
+    1. Update the *Page Template* lookup field to *Access Denied*.
     1. Select **Save**.
-    1. [Clear the portal cache](../admin/clear-server-side-cache.md#steps-to-clear-portal-server-side-cache).
+    1. [Clear the portal cache](/admin/clear-server-side-cache.md#steps-to-clear-portal-server-side-cache).
 
 ## Power Apps portals Studio issues
 
