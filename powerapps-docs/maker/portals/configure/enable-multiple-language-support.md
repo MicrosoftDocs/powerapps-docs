@@ -107,7 +107,7 @@ The table below shows all the languages currently available out of the box. This
 
 Knowledge articles will only be displayed if they have been translated into the language the user sets the portal to be displayed in. However, forums and blogs allow for more control over how they are presented in other languages. Specifying a language for a forum or blog is optional. If a language is not specified, the forum or blog will be displayed in the primary language of the organization. If you want the forum or blog specific to a language, you must create it and assign the language to it.
 
-Web link sets are the navigation links at the top of the portal. In the Portal Management app go to **Content** > **Web Link Sets** to update the translated text of the menu items. When a language is active for the portal, a new set of links are created for the newly activated language.
+Web link sets are the navigation links at the top of the portal. In the **Portal Management** app go to **Content** > **Web Link Sets** to update the translated text of the menu items. When a language is active for the portal, a new set of links are created for the newly activated language.
 
 :::image type="content" source="media/multi-language/active-weblink-new-language.png" alt-text="Active web link for new language":::
 
