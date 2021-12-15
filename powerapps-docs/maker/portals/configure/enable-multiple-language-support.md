@@ -18,14 +18,14 @@ contributors:
 
 Business is not confined to a single region or a language. A single portal can display content in multiple languages to reach customers around the world. The content of your portal can be translated into multiple languages while maintaining a single content hierarchy.
 
-:::image type="content" source="../media/multi-language-dropdown.png" alt-text="Multiple-language drop-down list":::  
+:::image type="content" source="media/multi-language/multi-language-dropdown.png" alt-text="Multiple-language drop-down list":::  
 
 To enable multiple languages for a portal, follow these steps:
 
 1. [Enable languages in a Microsoft Dataverse environment.](/power-platform/admin/enable-languages)
 
     > [!NOTE]
-    > Make sure that the process to enable a language on Dataverse completes before continuing to the next step.
+    > Make sure that the process to enable a language on Dataverse completes before continuing to the next step. It may take an hour or more to provision the languages.
   
 1. Go to **Portals** > **Website** > **Websites**.
 1. Select the website to add language support to.
@@ -34,9 +34,11 @@ To enable multiple languages for a portal, follow these steps:
 
     :::image type="content" source="media/multi-language/add-new-portal-language.png" alt-text="Add a new portal language.":::
 
-   ![Set default language for your portal.](../media/set-default-language-portal.png "Set default language for your portal")
-
     :::image type="content" source="media/multi-language/supported-languages.png" alt-text="Supported languages.":::
+
+You can set the default language of your portal by changing the *Default Language* lookup to one of the enabled portal languages.
+
+:::image type="content" source="../media/set-default-language-portal.png" alt-text="Set default language for your portal":::
 
 > [!Note]
 > If you activate new languages after the portal has been provisioned, you can [import the metadata translations](../admin/import-metadata-translation.md) to get the metadata translated for the newly activated languages.
@@ -98,16 +100,16 @@ The table below shows all the languages currently available out of the box. This
 3. To add a new localization of the page, go to a base page and scroll down to **Localized Content**.
 4. Select **+ New Web Page** on to create a lookup for the localized version.
 
-    ![Add new localized content.](../media/add-new-localized-content.png "Add new localized content")  
+    :::image type="content" source="media/multi-language/add-new-localized-content.png" alt-text="Add new localized content":::
 
 > [!Note]
 > The configuration fields on the home page of a content page is not inherited to the existing content pages. They are used only in creation of new content pages. You must update the content page configurations individually.
 
 Knowledge articles will only be displayed if they have been translated into the language the user sets the portal to be displayed in. However, forums and blogs allow for more control over how they are presented in other languages. Specifying a language for a forum or blog is optional. If a language is not specified, the forum or blog will be displayed in the primary language of the organization. If you want the forum or blog specific to a language, you must create it and assign the language to it.
 
-Web link sets are the navigation links at the top of the portal. By navigating to **Portals** > **Content** > **Web Link Sets** you can control how this content is translated. When a language is active for the portal, a new set of links are created for the newly activated language.
+Web link sets are the navigation links at the top of the portal. In the Portal Management app go to **Content** > **Web Link Sets** to update the translated text of the menu items. When a language is active for the portal, a new set of links are created for the newly activated language.
 
-![Active web link for new language.](../media/active-weblink-new-language.png "Active web link for new language")
+:::image type="content" source="media/multi-language/active-weblink-new-language.png" alt-text="Active web link for new language":::
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
