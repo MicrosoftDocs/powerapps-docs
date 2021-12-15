@@ -99,5 +99,8 @@ Start installing the controls in your apps:
 - Visualize and interpret location data with the **[Interactive map](geospatial-component-map.md)** control.
 - See dynamic address suggestions as you type with the **[Address input](geospatial-component-input-address.md)** control.
 
+### See also
+
+[Create an app that uses mobile sensors](how-to/mobile-sensors.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
