@@ -7,7 +7,7 @@ ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "samples"
+ms.topic: sample
 applies_to: 
   - "Dynamics 365 (online)"
 ms.assetid: 060d45bb-b7fd-48bd-ab8f-629c1b8bc1dc

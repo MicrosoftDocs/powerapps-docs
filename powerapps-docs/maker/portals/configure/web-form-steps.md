@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/12/2021
+ms.date: 12/09/2021
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: ndoelman
@@ -34,6 +34,9 @@ Each Advanced Form will be presented on the portal has one or more steps. These 
 | Target Table Logical Name | The logical name of the table associated with the form.                                                                                                                                               |
 | Move Previous Permitted    | Indicates whether the user is given an option to navigate to the previous step in a multiple step advanced form. Default is true. Uncheck to prevent the user from being able to move to the previous step. |
 ||
+
+> [!NOTE]
+> The step type of **Load User Control** is retired and no longer supported.
 
 ## Considerations for advanced form steps
 

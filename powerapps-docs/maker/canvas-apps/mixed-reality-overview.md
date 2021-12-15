@@ -1,5 +1,5 @@
 ---
-title: Use mixed reality components in Power Apps (Preview)
+title: Use mixed reality controls in Power Apps
 description: Use augmented reality features in Power Apps to view and manipulate 3D models and 2D images in the real world, take measurements, and create and view 3D digital shapes.
 author: anuitz
 ms.service: powerapps
@@ -17,23 +17,23 @@ contributors:
   - tapanm-msft
   - anuitz
 ---
-# Add mixed reality components to your canvas app
+# Add mixed reality controls to your canvas app
 
-You can add a number of mixed reality (MR) components to your canvas app to support multiple 3D and MR scenarios.
+You can add a number of mixed reality (MR) controls to your canvas app to support multiple 3D and MR scenarios.
 
-Components are groups of controls that can answer the need for a specific scenario. For example, you can use these MR components to:
+Components are groups of controls that can answer the need for a specific scenario. For example, you can use these MR controls to:
 
 - View and manipulate 3D content.
 - Overlay 3D content and 2D images onto the feed from the camera.
 - Measure distance, area, and volume using your device with MR.
 - Identify spaces in the real world through an MR overlay.
 
-:::image type="content" source="./media/augmented-overview/mixed-reality-overview.png" alt-text="A photo showing the Power Apps editor portal with the view in 3D component next to the app on a mobile device.":::
+:::image type="content" source="./media/augmented-overview/mixed-reality-overview.png" alt-text="A photo showing the Power Apps editor portal with the view in 3D control next to the app on a mobile device.":::
 
-You can read more about components and how to build your own in [Power Apps component framework docs](../../developer/component-framework/custom-controls-overview.md).
+You can read more about controls and how to build your own in [Power Apps control framework docs](../../developer/component-framework/custom-controls-overview.md).
 
 
-The following prebuilt components can be used for MR scenarios:
+The following prebuilt controls can be used for MR scenarios:
 
 
 - [View in 3D](mixed-reality-component-view-3d.md)
@@ -43,11 +43,11 @@ The following prebuilt components can be used for MR scenarios:
 
 You can insert them into your apps from the **Insert** pane, under **Media** and **Mixed Reality**:
 
-:::image type="content" source="./media/augmented-overview/augmented-overview-insert-all.png" alt-text="See the mixed reality components under Media and Mixed Reality.":::
+:::image type="content" source="./media/augmented-overview/augmented-overview-insert-all.png" alt-text="See the mixed reality controls under Media and Mixed Reality.":::
   
 
 > [!TIP]
-> The MR components in Power Apps leverage Babylon and Babylon React Native. As a result of this shared MR platform, 3D content that works in the [Babylon sandbox](https://sandbox.babylonjs.com/) should work in Power Apps. 
+> The MR controls in Power Apps leverage Babylon and Babylon React Native. As a result of this shared MR platform, 3D content that works in the [Babylon sandbox](https://sandbox.babylonjs.com/) should work in Power Apps. 
 >  
 > If you encounter problems with content that works in Babylon but not in Power Apps, submit a question to the [Power Apps community forum](https://powerusers.microsoft.com/t5/Get-Help-with-Power-Apps/ct-p/PA_General).
 >  
@@ -58,7 +58,7 @@ You can insert them into your apps from the **Insert** pane, under **Media** and
 
 ### Mixed-reality capable devices
 
-To use the components in an app created with Power Apps, the device that runs the app (such as a phone or tablet) needs to have specific hardware and software. The device you use to create the app in the Power Apps studio (such as your PC) does not need to be MR-capable.
+To use the controls in an app created with Power Apps, the device that runs the app (such as a phone or tablet) needs to have specific hardware and software. The device you use to create the app in the Power Apps studio (such as your PC) does not need to be MR-capable.
 
 #### For Android devices
 
@@ -74,14 +74,14 @@ For iOS devices, MR is supported on specific hardware with ARKit. See the [list 
 
 
 
-## Mixed reality components
+## Mixed reality controls
 
-Start installing the components in your apps:
+Start installing the controls in your apps:
 
-- View 3D content with the **[View in 3D](mixed-reality-component-view-3d.md)** component.
-- View images and 3D content in the real world with the **[View in mixed reality](mixed-reality-component-view-mr.md)** component.
-- Measure distance, area, and volume with the **[Measure in mixed reality](mixed-reality-component-measure-distance.md)** component.
-- Create and view predefined 3D shapes with the **[View shape in mixed reality](mixed-reality-component-view-shape.md)** component.
+- View 3D content with the **[View in 3D](mixed-reality-component-view-3d.md)** control.
+- View images and 3D content in the real world with the **[View in mixed reality](mixed-reality-component-view-mr.md)** control.
+- Measure distance, area, and volume with the **[Measure in mixed reality](mixed-reality-component-measure-distance.md)** control.
+- Create and view predefined 3D shapes with the **[View shape in mixed reality](mixed-reality-component-view-shape.md)** control.
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

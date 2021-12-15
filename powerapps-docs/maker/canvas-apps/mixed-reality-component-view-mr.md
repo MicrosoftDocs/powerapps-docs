@@ -1,5 +1,5 @@
 ---
-title: Use the View in MR component in Power Apps (Preview)
+title: Use the View in MR control in Power Apps
 description: View 3D models and 2D images in the real world with augmented reality features in Power Apps.
 author: anuitz
 ms.service: powerapps
@@ -20,9 +20,9 @@ contributors:
 
 # View 3D content or images in the real word
 
-You can use the **View in MR** component in your app to let users see how a particular item might fit within a specified space.
+You can use the **View in MR** control in your app to let users see how a particular item might fit within a specified space.
 
-The component creates a button in your app. When app users click the button, it overlays a selected 3D model (in .glb, .stl or .obj file formats) or image (in .jpg or .png file formats) onto the live camera feed of the device.
+The control creates a button in your app. When app users click the button, it overlays a selected 3D model (in .glb, .stl or .obj file formats) or image (in .jpg or .png file formats) onto the live camera feed of the device.
 
 :::image type="content" source="./media/augmented-overview/view-in-mixed-reality.png" alt-text="Photo showing a 3D model of a forklift being overlaid onto the real world through a mobile device.":::
 
@@ -37,30 +37,30 @@ You can also take photos and [upload them to OneDrive](mixed-reality-take-upload
 > If your model has a large file size, it could negatively affect your experience. Consider [optimizing your models for use in mixed reality.](/dynamics365/mixed-reality/guides/3d-content-guidelines/optimize-models)
 
 > [!TIP]
-> The MR components work best in well-lit environments with flat-textured surfaces. When establishing tracking, point the device at the surface you would like to track and slowly pan the device from right to left in broad arm motions. If tracking fails, exit and enter the MR view to reset the tracking and try again.  
+> The MR controls work best in well-lit environments with flat-textured surfaces. When establishing tracking, point the device at the surface you would like to track and slowly pan the device from right to left in broad arm motions. If tracking fails, exit and enter the MR view to reset the tracking and try again.  
 >
 > LIDAR-enabled devices will also result in better tracking.
 
 > [!TIP]
-> The MR components in Power Apps leverage Babylon and Babylon React Native. As a result of this shared MR platform, 3D content that works in the [Babylon sandbox](https://sandbox.babylonjs.com/) should work in Power Apps. 
+> The MR controls in Power Apps leverage Babylon and Babylon React Native. As a result of this shared MR platform, 3D content that works in the [Babylon sandbox](https://sandbox.babylonjs.com/) should work in Power Apps. 
 
-## Use the component
+## Use the control
 
-Insert the component into your app as you normally would for any other button control or component.
+Insert the control into your app as you normally would for any other button control or control.
 
 With an app open for editing in [Power Apps Studio](https://create.powerapps.com):
 
 1. Open the **Insert** tab.
 2. Expand **Mixed reality**.
-3. Select the component **View in MR** to place it in the center of the app screen, or drag and drop it to position it anywhere on the screen.
+3. Select the control **View in MR** to place it in the center of the app screen, or drag and drop it to position it anywhere on the screen.
 
-   :::image type="content" source="./media/augmented-view-mr/augmented-view-mr.png" alt-text="Insert the View in MR component into the app.":::
+   :::image type="content" source="./media/augmented-view-mr/augmented-view-mr.png" alt-text="Insert the View in MR control into the app.":::
 
-You can modify the component with several properties.
+You can modify the control with several properties.
 
 ### Properties
 
-The following properties are on the component's **View in MR** pane on the **Properties** and **Advanced** tabs.
+The following properties are on the control's **View in MR** pane on the **Properties** and **Advanced** tabs.
 
 ![Properties on the View in MR pane.](./media/augmented-view-mr/augmented-view-mr-properties.png "Properties on the View in MR pane")
 
@@ -69,9 +69,9 @@ Some properties are only available under **More options** in the **Advanced** ta
 Property | Description | Type | Location
 - | - | - | -
 Text | Label for the button. | String | Properties (also in **Advanced**)
-Alternative text | Text to be displayed if the component can't load, or if the app user hovers on the component. | String | **Properties** (also in **Advanced** as **AltText**)
+Alternative text | Text to be displayed if the control can't load, or if the app user hovers on the control. | String | **Properties** (also in **Advanced** as **AltText**)
 Display type | Whether the button shows just an icon, text, or both. | Drop-down selection | Properties (also in **Advanced**)
-Source | Data source that identifies the .glb, .stl, or .obj file to display. The **View in MR** component supports loading models from:<br/><ul><li>Publicly accessible, CORS-compliant URLs.</li><li>Base64-encoded URIs.</li><li>Attachments or media content accessed through data connectors.</li></ul><br/>For more information, see [how to define where the 3D content is stored](mixed-reality-component-view-3d-store.md). | Not applicable | **Properties** (also in **Advanced**)
+Source | Data source that identifies the .glb, .stl, or .obj file to display. The **View in MR** control supports loading models from:<br/><ul><li>Publicly accessible, CORS-compliant URLs.</li><li>Base64-encoded URIs.</li><li>Attachments or media content accessed through data connectors.</li></ul><br/>For more information, see [how to define where the 3D content is stored](mixed-reality-component-view-3d-store.md). | Not applicable | **Properties** (also in **Advanced**)
 Object width | Width of the displayed image or 3D content. See also [How object scaling is handled](#how-object-scaling-is-handled). | Integer | **Properties** (also in **Advanced**)
 Object height | Height of the displayed image or 3D content. See also [How object scaling is handled](#how-object-scaling-is-handled). | Integer | **Properties** (also in **Advanced**)
 Object depth | The three-dimensional depth of the 3D content. See also [How object scaling is handled](#how-object-scaling-is-handled). | Integer | **Properties** (also in **Advanced**)
@@ -82,7 +82,7 @@ OnChange | Behavior that is triggered when any property on the button is changed
 
 ### How object scaling is handled
 
-When you insert a model with the **View in MR** component, it will follow the model's inherent dimensions. Alternatively, you can specify some or all of the dimensions - these dimensions are labeled as the **Object width**, **Object height**, and **Object depth** properties.
+When you insert a model with the **View in MR** control, it will follow the model's inherent dimensions. Alternatively, you can specify some or all of the dimensions - these dimensions are labeled as the **Object width**, **Object height**, and **Object depth** properties.
 
 If you want to change the size of the model, we apply certain scaling techniques depending on how many dimensions you change:
 
@@ -125,7 +125,7 @@ If you want to change the size of the model, we apply certain scaling techniques
 
 **[Font](./controls/properties-text.md)** – The name of the family of fonts in which text appears.
 
-**[FontStyle](./controls/properties-text.md)** – The style of the text in the component: **None**, **Strikethrough**, **Underline**, or **Italic**.
+**[FontStyle](./controls/properties-text.md)** – The style of the text in the control: **None**, **Strikethrough**, **Underline**, or **Italic**.
 
 **[FontSize](./controls/properties-text.md)** – The font size of the text that appears on a control.
 
@@ -171,9 +171,9 @@ If you want to change the size of the model, we apply certain scaling techniques
 
 ## Other mixed reality controls
 
-- View 3D content with the **[View in 3D](mixed-reality-component-view-3d.md)** component.
-- Measure distance, area, and volume with the **[Measure in mixed reality](mixed-reality-component-measure-distance.md)** component.
-- Create and view predefined 3D shapes with the **[View shape in mixed reality](mixed-reality-component-view-shape.md)** component
+- View 3D content with the **[View in 3D](mixed-reality-component-view-3d.md)** control.
+- Measure distance, area, and volume with the **[Measure in mixed reality](mixed-reality-component-measure-distance.md)** control.
+- Create and view predefined 3D shapes with the **[View shape in mixed reality](mixed-reality-component-view-shape.md)** control
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
