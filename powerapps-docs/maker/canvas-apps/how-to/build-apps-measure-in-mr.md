@@ -81,8 +81,8 @@ See [prerequisites for mixed-reality capable devices](../mixed-reality-overview.
     | Font weight    | Semibold     |
     | Text alignment | Center       |
     | Width          | Parent.Width |
-    | Color    | RGBA(255, 255, 255, 1) |
-    | Fill     | RGBA(56, 96, 178, 1)   |
+    | Color    | `RGBA(255, 255, 255, 1)` |
+    | Fill     | `RGBA(56, 96, 178, 1)`   |
 
     :::image type="content" source="media\build-apps-measure-in-mr\header-label.png" alt-text="Header label.":::
 
