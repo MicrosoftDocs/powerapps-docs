@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: nkrb
-ms.date: 08/09/2021
+ms.date: 12/14/2021
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 

@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 09/13/2016
+ms.date: 12/14/2021
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
@@ -50,7 +50,7 @@ If an argument would result in an undefined valued, the result is *blank*.  This
 **Log**( *Number*, *Base* )
 
 * *Number* - Required. Number to calculate the logarithm.
-* *Base* - Optional. The base of the logarithm to calculate. If omitted, the base 10 will be used.
+* *Base* - Optional. The base of the logarithm to calculate. By default, 10 (when not specified).
 
 **Abs**( *SingleColumnTable* )<br>**Exp**( *SingleColumnTable* )<br>**Ln**( *SingleColumnTable* )<br>**Sqrt**( *SingleColumnTable* )
 
