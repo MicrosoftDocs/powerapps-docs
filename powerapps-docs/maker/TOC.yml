@@ -1007,6 +1007,8 @@
       href: ./canvas-apps/how-to/mobile-apps-view-shape-in-mr.md
     - name: Create an app with address input and map controls
       href: ./canvas-apps/how-to/mobile-apps-address-map.md
+    - name: Create an app using the Measure in MR control
+      href: ./canvas-apps/how-to/build-apps-measure-in-mr.md
   - name: Save and publish an app
     href: ./canvas-apps/save-publish-app.md
   - name: Share an app and its dependencies
