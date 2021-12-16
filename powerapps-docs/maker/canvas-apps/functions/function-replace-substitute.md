@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 contributors:
   - gregli-msft
-  - nkrb
+  - tapanm-msft
 ---
 # Replace and Substitute functions in Power Apps
 Replace a portion of a string of text with another string.

@@ -1,5 +1,5 @@
 ---
-title: Use the View in 3D component in Power Apps (Preview)
+title: Use the View in 3D control in Power Apps
 description: View 3D models in Power Apps.
 author: anuitz
 ms.service: powerapps
@@ -18,9 +18,9 @@ contributors:
   - anuitz
 ---
 
-# View 3D content in canvas apps
+# View 3D content in Power Apps
 
-Add 3D content to your canvas apps. Use the **View in 3D** component to rotate and zoom into the model with simple gestures.
+Add 3D content to your canvas apps. Use the **View in 3D** control to rotate and zoom into the model with simple gestures.
 
 You can display a single 3D model, or you can let the user select from a gallery [by connecting to a **Gallery** control](mixed-reality-component-view-3d-store.md).
 
@@ -32,47 +32,47 @@ You can display a single 3D model, or you can let the user select from a gallery
 > You can [convert your existing 3D models into the .glb file format](/dynamics365/mixed-reality/guides/3d-content-guidelines/) from a variety of 3D formats.
 
 > [!TIP]
-> The MR components in Power Apps leverage Babylon and Babylon React Native. As a result of this shared MR platform, 3D content that works in the [Babylon sandbox](https://sandbox.babylonjs.com/) should work in Power Apps. For troubleshooting and help, submit a ticket in the Admin Center for Mixed Reality, or [post a question on the Power Apps community forum](https://powerusers.microsoft.com/t5/Get-Help-with-Power-Apps/ct-p/PA_General) (be sure to tag it with "mixed reality".)
+> The MR controls in Power Apps leverage Babylon and Babylon React Native. As a result of this shared MR platform, 3D content that works in the [Babylon sandbox](https://sandbox.babylonjs.com/) should work in Power Apps. For troubleshooting and help, submit a ticket in the Admin Center for Mixed Reality, or [post a question on the Power Apps community forum](https://powerusers.microsoft.com/t5/Get-Help-with-Power-Apps/ct-p/PA_General) (be sure to tag it with "mixed reality".)
 
 
-## Use the component
+## Use the control
 
-Insert the component into your app as you normally would for any other control or component.
+Insert the control into your app as you normally would for any other control or control.
 
 With an app open for editing in [Power Apps Studio](https://create.powerapps.com):
 
 1. Open the **Insert** tab.
 2. Expand **Media**.
-3. Select the component **View in 3D** to place it in the center of the app screen, or drag and drop it to position it anywhere on the screen.
+3. Select the control **View in 3D** to place it in the center of the app screen, or drag and drop it to position it anywhere on the screen.
 
 
-    :::image type="content" source="./media/augmented-3d/augmented-3d-insert.png" alt-text="Insert the View in 3D component into the app.":::
+    :::image type="content" source="./media/augmented-3d/augmented-3d-insert.png" alt-text="Insert the View in 3D control into the app.":::
 
-See the [Load models with the View in 3D component](mixed-reality-component-view-3d-store.md) topic for details on how to connect existing and external models with URLs, as media attachments, or as encoded URIs.
+See the [Load models with the View in 3D control](mixed-reality-component-view-3d-store.md) topic for details on how to connect existing and external models with URLs, as media attachments, or as encoded URIs.
 
-You can modify the component with a number of properties.
+You can modify the control with a number of properties.
 
 ### Properties
 
-The following properties are on the component's **View in 3D** pane on the **Properties** and **Advanced** tabs.
+The following properties are on the control's **View in 3D** pane on the **Properties** and **Advanced** tabs.
 
 
 
-:::image type="content" source="./media/augmented-3d/augmented-3d-viewer-controls.png" alt-text="Properties on the component's View in 3D pane.":::
+:::image type="content" source="./media/augmented-3d/augmented-3d-viewer-controls.png" alt-text="Properties on the control's View in 3D pane.":::
 
 Some properties are only available in the **Advanced** tab on the **View in 3D** pane.
 
 Property | Description | Type | Location
 - | - | - | -
-Source | Data source that identifies the .glb file to display. The **View in 3D** component supports loading models from:<br/><ul><li>Publicly accessible, CORS-compliant URLs</li><li>Base64-encoded URIs</li><li>Attachments or media content accessed through data connectors</li></ul>See the [Loading external 3D models topic](mixed-reality-component-view-3d-store.md) for more details. | Not applicable | **Properties** (also in **Advanced**)
+Source | Data source that identifies the .glb file to display. The **View in 3D** control supports loading models from:<br/><ul><li>Publicly accessible, CORS-compliant URLs</li><li>Base64-encoded URIs</li><li>Attachments or media content accessed through data connectors</li></ul>See the [Loading external 3D models topic](mixed-reality-component-view-3d-store.md) for more details. | Not applicable | **Properties** (also in **Advanced**)
 Alternative text | Text to be displayed if the model can't load, or if the app user hovers on the model. | String | **Properties** (also in **Advanced** as **AltText**)
-Background fill | Set the background color for the component. | Color picker | **Properties** (also in **Advanced** as **BackgroundFill**, where it accepts RGBA or HTML hexadecimal color codes)
+Background fill | Set the background color for the control. | Color picker | **Properties** (also in **Advanced** as **BackgroundFill**, where it accepts RGBA or HTML hexadecimal color codes)
 Pins(Items) | [Add pins to specific coordinates on the 3D model](mixed-reality-add-pins-3d-model.md). | Data table | **Properties** (also in **Advanced** and the formula bar as **Items**)
 Show pins | Show the pins defined in **Pins(Items)**. | Toggle | **Properties** (also in **Advanced** as **ShowPins**)
 Show reset button | Enables or disables the reset button, which resets the camera view onto the model. | Toggle | **Properties** (also in **Advanced** as **ShowReset**)
-OnModelLoad | Behavior that is triggered when a model is loaded into the component. | Defined action | **Advanced**
-OnChange | Behavior that is triggered when any property of the component is changed. | Defined action | **Advanced**
-OnSelect | Behavior that is triggered when a pin is selected or the user focuses on the component | Defined action | **Advanced**
+OnModelLoad | Behavior that is triggered when a model is loaded into the control. | Defined action | **Advanced**
+OnChange | Behavior that is triggered when any property of the control is changed. | Defined action | **Advanced**
+OnSelect | Behavior that is triggered when a pin is selected or the user focuses on the control | Defined action | **Advanced**
 
 ### Additional properties
 
@@ -94,15 +94,18 @@ OnSelect | Behavior that is triggered when a pin is selected or the user focuses
 
 ## Performance considerations
 
-Having multiple instances of the **View in 3D** component on one screen can lead to poor performance, as each version of the component will try to load the 3D models at the same time. 
+Having multiple instances of the **View in 3D** control on one screen can lead to poor performance, as each version of the control will try to load the 3D models at the same time. 
 
 
 
-## Other mixed reality components
+## Other mixed reality controls
 
-- View 3D content and images in the real world with the **[View in mixed reality](mixed-reality-component-view-mr.md)** component.
-- Measure distance, area, and volume with the **[Measure in mixed reality](mixed-reality-component-measure-distance.md)** component.
-- Create and view predefined 3D shapes with the **[View shape in mixed reality](mixed-reality-component-view-shape.md)** component.
+- View 3D content and images in the real world with the **[View in mixed reality](mixed-reality-component-view-mr.md)** control.
+- Measure distance, area, and volume with the **[Measure in mixed reality](mixed-reality-component-measure-distance.md)** control.
+- Create and view predefined 3D shapes with the **[View shape in mixed reality](mixed-reality-component-view-shape.md)** control.
 
+### See also
+
+[Create an app with 3D and mixed reality controls](how-to/build-view-in-mr-3d-apps.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -43,7 +43,7 @@ With that review out of the way, let's start building an app.
 1. In Power Apps Studio, click or tap **New**, then under **Blank app**, click or tap **Phone Layout**.
    
     ![Blank app - phone layout.](./media/sharepoint-scenario-build-app/04-01-01-blank-phone-app.png)
-2. Click or tap **File**, which opens to an **App settings** tab. Enter the name "Project Management app".
+2. Click or tap **Settings** and enter the name "Project Management app".
    
     ![App name.](./media/sharepoint-scenario-build-app/04-01-02-app-name.png)
 3. Click or tap **Save as**, verify that the app will save to the cloud, then click **Save** in the lower right corner.

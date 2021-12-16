@@ -14,6 +14,7 @@ search.app:
   - PowerApps
 contributors:
   - nkrb
+  - tapanm-msft
 ---
 
 # Preview: Embed canvas apps in your applications
