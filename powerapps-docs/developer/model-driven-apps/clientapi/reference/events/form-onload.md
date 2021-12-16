@@ -1,6 +1,6 @@
 ---
 title: "Form data OnLoad event (Client API reference) in model-driven apps| MicrosoftDocs"
-description: Includes description and supported parameters for the form data OnLoad event.
+description: Includes description and supported parameters for the OnLoad event.
 ms.date: 12/16/2021
 ms.service: powerapps
 ms.topic: "reference"
@@ -15,7 +15,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Form data OnLoad event (Client API reference)
+# Form data OnLoad event (Client API reference) in model-driven apps
 
 This event occurs whenever form data is loaded, specifically:
 
