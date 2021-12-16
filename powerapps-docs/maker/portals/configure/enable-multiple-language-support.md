@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 12/15/2021
+ms.date: 12/16/2021
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: ndoelman
@@ -110,6 +110,10 @@ Knowledge articles will only be displayed if they have been translated into the 
 Web link sets are the navigation links at the top of the portal. In the **Portal Management** app go to **Content** > **Web Link Sets** to update the translated text of the menu items. When a language is active for the portal, a new set of links are created for the newly activated language.
 
 :::image type="content" source="media/multi-language/active-weblink-new-language.png" alt-text="Active web link for new language":::
+
+## View portal in a different language
+
+After you have enabled to the portal to use multiple languages, you will also need to update the [language text for any custom labels for Dataverse tables and columns](/powerapps/maker/data-platform/translate-entity-label-text) to appear on forms and lists on portal web pages.
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
