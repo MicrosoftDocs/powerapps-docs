@@ -15,7 +15,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Form data OnLoad event (Client API reference) in model-driven apps
+# Form data OnLoad event
 
 This event occurs whenever form data is loaded, specifically:
 
