@@ -58,9 +58,9 @@ By default, events handlers aren't called when a form is in bulk edit mode.
 
 To enable an event handler in bulk edit mode, modify the Form XML by finding the relevant `event` element and creating/setting the `BehaviorInBulkEditForm` attribute to `Enabled`.
 
-For more information on Form XML customization see [When to edit the customizations file](../when-edit-customization-file.md), [Customize entity forms](../customize-entity-forms.md), and the [Form XML schema](../form-xml-schema.md).
+For more information on Form XML customization, see [When to edit the customizations file](../when-edit-customization-file.md), [Customize forms](../customize-entity-forms.md), and the [Form XML schema](../form-xml-schema.md).
 
-To determine when an event handler is called on a form in bulk edit mode use [`getFormType`](reference/formContext-ui/getFormType.md).
+To determine when an event handler is called on a form in bulk edit mode use [`getFormType`](reference/formContext-ui/getFormType.md) method.
 
 ## Add or remove event handler function to event using code
 
