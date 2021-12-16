@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: intro-internal
-ms.date: 12/1/2021
+ms.date: 12/16/2021
 ms.subservice: portals
 ms.author: nabha
 ms.reviewer: ndoelman
@@ -20,15 +20,15 @@ contributors:
 
 ## Overview
 
-[Dataverse search](../../../user/relevance-search-benefits.md) delivers fast and comprehensive search results sorted by relevance in portals. This is the same search service used in model-driven apps and other Power Platform services built on Microsoft Dataverse. The [Lucene.NET](search.md) powered search will coexist for certain time and will eventually be replaced by Dataverse search. To enable Dataverse search, add the [site setting](configure-site-settings.md) `Search/EnableDataverseSearch` and set to **true**. Either false or without this setting will instead enable the [Lucene.NET](search.md) search.
+[Dataverse search](../../../user/relevance-search-benefits.md) delivers fast and comprehensive search results sorted by relevance in portals. Dataverse search is the same search service used in model-driven apps and other Power Platform services built on Microsoft Dataverse. The [Lucene.NET](search.md) powered search will coexist for certain time and will eventually be replaced by Dataverse search. To enable Dataverse search, add the [site setting](configure-site-settings.md) `Search/EnableDataverseSearch` and set to **true**. Either false or without this setting will instead enable the [Lucene.NET](search.md) search.
 
 > [!IMPORTANT]
 > - This is a preview feature.
 > - [!INCLUDE[cc_preview_features_definition](../../../includes/cc-preview-features-definition.md)]
 
-This walk through explains how to enable search for the **Order Products** table in the **Northwind** sample database, available with Dataverse. For more information about sample databases, see [Install Northwind Traders database and apps](../../canvas-apps/northwind-install.md).
+This walk-through explains how to enable search for the **Order Products** table in the **Northwind** sample database, available with Dataverse. For more information about sample databases, see [Install Northwind Traders database and apps](../../canvas-apps/northwind-install.md).
 
-You can follow the walk through with a table of your choice by replacing the *nwind\_products* table name with your table's logical name.
+You can follow the walk-through with a table of your choice by replacing the *nwind\_products* table name with your table's logical name.
 
 ## Step 1: Enable Dataverse Search
 
@@ -169,7 +169,7 @@ You can follow the walk through with a table of your choice by replacing the *nw
 
 1. Go to the search toolbar or the search page, and search for a known record.
 
-    For example; use the search term **Northwind Clam Chowder** to get the results associated with the **nwind\_products** table.
+    For example, use the search term **Northwind Clam Chowder** to get the results associated with the **nwind\_products** table.
 
     :::image type="content" source="media/dataverse-search/search-results.png" alt-text="Search results on web page.":::
 
@@ -179,7 +179,7 @@ You can follow the walk through with a table of your choice by replacing the *nw
 
 - The **filter** parameter in the **searchindex** Liquid object will not filter search results.
 
-    For example: `{% searchindex query: 'support', filter: ' +statecode:0'%}` will not filter matching search results that don't have `statecode:0`.
+    For example: `{% searchindex query: 'support', filter: ' +statecode:0'%}` won't filter matching search results that don't have `statecode:0`.
 
 - Although **Portal Search** view can have any operator in filter, only the below list of operators is applied to query the search results:
 
@@ -193,6 +193,10 @@ You can follow the walk through with a table of your choice by replacing the *nw
 - Related fields defined in **Portal Search** view as a **filter column** or **view column** aren't supported by Dataverse search and will be ignored.
 
 - Attachment content and objects in file data type are not searched.
+
+## Known Issues
+
+- If you switch the site setting **Search/EnableDataverseSearch** from *true* to *false* in order to disable Dataverse search and re-enable the Lucene.NET search, you will need to go to the [Portal Admin Center](../admin/admin-overview.md) and choose **Actions** > **Restart** to restart the portal. If you miss this step, you will see an error page when attempting to [rebuild the search index](search.md#rebuild-full-search-index) and users will not see any search results.  
 
 ### See also
 
