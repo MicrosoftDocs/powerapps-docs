@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 06/24/2020
+ms.date: 11/18/2021
 ms.subservice: end-user
 ms.author: mkaur
 ms.reviewer: ""
@@ -86,8 +86,16 @@ An asterisk next to a view name indicates the view has not been saved.
    > [!div class="mx-imgBorder"] 
    > ![Save a personal view.](media/save_personal_view.gif "This image demonstrates how to save a personal view")
 
+## Set a default view
 
-   
+You can set a system view or choose one of your views and set it as the default view.
+
+1. Select the table that you want to set a view for.
+2. From the list of views, select the view that you want to set as the default view.
+3. Select the view again and then select **Set current view as my default**.
+
+   > [!div class="mx-imgBorder"] 
+   > ![Set a default view.](media/default-view.png "Set the current view as your default view")
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

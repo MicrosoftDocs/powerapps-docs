@@ -2,7 +2,6 @@
 title: Get started with formulas in canvas apps
 description: Learn about how to use formulas to customize a canvas app.
 author: gregli-msft
-manager: kvivek
 ms.service: powerapps
 ms.custom: 
 - "intro-internal"
@@ -160,5 +159,9 @@ Initially, this view shows the most important properties.  To reveal all the pro
 As you type a formula in the formula bar, different syntax elements appear in different colors to improve readability and help you understand long formulas. Here is the color code list in Power Apps.
 
 ![syntax highlighting.](./media/working-with-formulas/syntax-highlighting.png)
+
+### See also
+
+[Use Find and Replace capability in the formula bar](formula-bar-find-replace.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

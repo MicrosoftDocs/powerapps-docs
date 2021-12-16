@@ -2,12 +2,11 @@
 title: Formula reference for Power Apps
 description: Reference information for functions, signals, and enumerations in Power Apps.
 author: gregli-msft
-manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: nkrb
-ms.date: 08/09/2021
+ms.date: 12/14/2021
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
@@ -15,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - nkrb
+  - tapanm-msft
   - gregli-msft
 ---
 # Formula reference for Power Apps
@@ -230,6 +229,8 @@ Other elements include:
 **[LoadData](functions/function-savedata-loaddata.md)** – Loads a collection from an app host such as a local device.
 
 **[Location](functions/signals.md)** – Returns your location as a map coordinate by using the Global Positioning System (GPS) and other information.
+
+**[Log](functions/function-numericals.md)** – Returns the logarithm in any base of a number.
 
 **[LookUp](functions/function-filter-lookup.md)** – Looks up a single record in a table based on one or more criteria.
 

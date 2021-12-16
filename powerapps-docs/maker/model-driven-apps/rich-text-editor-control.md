@@ -23,7 +23,9 @@ search.app:
 
 [!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-The rich text editor control provides the app user a WYSIWYG editing area for formatting text. The control's input and output format is HTML. The control allows copied rich text, such as from a web browser or Word, to be pasted into the control. 
+[!INCLUDE [cc-classic-interface-control-note](../../includes/cc-classic-interface-control-note.md)]
+
+The rich text editor control provides the app user a WYSIWYG editing area for formatting text. The control's input and output format is HTML. The control allows copied rich text, such as from a web browser or Word, to be pasted into the control.
 
 Some of the format options available are:
 
@@ -37,14 +39,13 @@ Some of the format options available are:
 
 For a full list of default options, see [Use the rich text editor toolbar](#use-the-rich-text-editor-toolbar).<br></br>
 
-
 <img src="media/rich-text-control.png" alt="Rich text control editor in a model-driven app"> 
 
 ## Add or replace a text column for rich text editing
 
 You can create a new text column and configure the control, or replace an existing text column. The rich text editor control can be used with single or multi-line text columns.
 
-1. Sign in to Power Apps. Go to **Solutions**, open the solution that you want, open the table that you want, and then select the **Forms** tab. 
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). On the left navigation pane, select **Solutions**, open the solution that you want, open the table that you want, and then select the **Forms** tab.
 2. Select the form, and then select **Edit form**.
 3. In the form designer on the command bar, select **Switch to classic**.
 4. On the legacy form designer canvas, add or create a text column or select an existing text column, such as the account table **Description** column. On the **Home** tab, select **Change Properties**.
@@ -744,7 +745,7 @@ The following table describes the different formatting features and functionalit
 |![Redo Typing.](media/redo-typing.png "Redo Typing")| Redo Typing |  | Redo changes you made to the content. |
 |![Clear All Formatting.](media/clear-formatting.png "Clear All Formatting")| Clear All Formatting |  | Remove all formatting from a selection of text, leaving only the normal, unformatted text. |
 |![Add a Table.](media/add-table.png "Add a Table")| Add a Table |  | Add a table to your content. <br /><br />After adding a table, you can do any of the following:<br /><br /><ul><li>Resize table columns by clicking and dragging your mouse to resize to the columns to the desired width.</li><li>Select one or several cells within a table and apply specific formatting, add links to the selection, or cut, copy, or paste entire rows or columns.</li><li>Right-click to access the properties. This supports features such as cell type, width and height, word wrapping, alignment, merging and splitting cells horizontally and vertically, inserting or deleting rows and columns, row and column span, and cell and border color.</li></ul>|
-|![Expand Toolbar.](media/show-more.png "Expand Toolbar")| Expand Toolbar |  | Displays when the toolbar is collapsed and not all options appear. Click to expand the toolbar and make all options visible. |
+|![Expand Toolbar.](media/show-more.png "Expand Toolbar")| Expand Toolbar |  | Displays when the toolbar is collapsed and not all options appear. Select to expand the toolbar and make all options visible. |
 
 > [!Note]
 > You can access your browser's context menu by pressing **Ctrl** + right-click. This is useful if you need to use your browser's built-in spell checker. Otherwise, you can use the right-click to provide contextual formatting for any element you might be using.

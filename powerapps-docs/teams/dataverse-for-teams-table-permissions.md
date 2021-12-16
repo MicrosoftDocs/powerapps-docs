@@ -6,11 +6,11 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 08/19/2021
-ms.author: namarwah
+ms.author: jshum
 ms.reviewer: tapanm-msft
 contributors:
   - tapanm-msft
-  - navjotm
+  - josephshum
   - joel-lindstrom
 ---
 

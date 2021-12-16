@@ -199,7 +199,4 @@ Before you import the solution into the target environment, make sure the unmodi
 
 [Use Power BI with Dynamics 365 apps](/power-platform/admin/use-power-bi)
 
-[Import, update, and export solutions](../data-platform/import-update-export-solutions.md)
-
-
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

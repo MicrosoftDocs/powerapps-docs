@@ -2,7 +2,6 @@
 title: Customize a card in a canvas app
 description: Change the default control that appears in a card on a Details or Edit form in a canvas app.
 author: tapanm-msft
-manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
@@ -34,7 +33,7 @@ For an overview, see [Understand data cards](working-with-cards.md).
 
 ## Customize a locked card
 
-In this procedure, you'll replace a **[Text-input](controls/control-text-input.md)** control with a **[Slider](controls/control-slider.md** control without unlocking the card.
+In this procedure, you'll replace a **[Text-input](controls/control-text-input.md)** control with a **[Slider](controls/control-slider.md)** control without unlocking the card.
 
 1. In the app that you generated and customized, select **EditForm1** in the left navigation bar, and then select **Edit fields** on the **Properties** tab of the right-hand pane.
 

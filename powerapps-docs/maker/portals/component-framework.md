@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/10/2021
+ms.date: 11/18/2021
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
@@ -30,18 +30,18 @@ After following these steps, your users can now interact with the code component
 > [!IMPORTANT]
 > - This is a preview feature.
 > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
-> - Portals only currently supports [code components that are added to a field](../../developer/component-framework/add-custom-controls-to-a-field-or-entity.md#add-a-code-component-to-a-column) in a model-driven app.
+> - Portals only currently support [code components that are added to a field](../../developer/component-framework/add-custom-controls-to-a-field-or-entity.md#add-a-code-component-to-a-column) in a model-driven app.
 
 ## Prerequisites
 
--   User must have a valid Power Apps license. More information: [Power Apps component framework licensing](../../developer/component-framework/overview.md#licensing)
--   System Administrator privileges are required to enable the Power Apps component feature in the environment.
+-   You must have a valid Power Apps license. More information: [Power Apps component framework licensing](../../developer/component-framework/overview.md#licensing)
+-   You must have System Administrator privileges to enable the Power Apps component feature in the environment.
 - Your portal version must be [9.3.3.x](versions/version-9.3.3.x.md) or higher.
 - Your starter portal package must be [9.2.2103.x](versions/package-version-9.2.2103.md) or higher.
 
 ## Create and package code component
 
-To learn about creating and packaging code components created using Power Apps component framework, go to [Create your first component](../../developer/component-framework/implementing-controls-using-typescript.md).
+To learn about creating and packaging code components created Power Apps component framework, go to [Create your first component](../../developer/component-framework/implementing-controls-using-typescript.md).
 
 ### Supported field types and formats
 
@@ -135,14 +135,14 @@ More information: [Attributes list and descriptions](../../developer/component-f
 
 ## Add a code component to a field in a model-driven app
 
-To learn about how to add a code component to a field in model-driven app, go to [Add a code component to a field](../../developer/component-framework/add-custom-controls-to-a-field-or-entity.md#add-a-code-component-to-a-column).
+To learn how to add a code component to a field in model-driven app, go to [Add a code component to a field](../../developer/component-framework/add-custom-controls-to-a-field-or-entity.md#add-a-code-component-to-a-column).
 
 > [!IMPORTANT]
 > Code components for portals are available for web browsers using the client option of **Web**.
 
 ## Configure portal for code component
 
-After the code component is added to a field in a model-driven app, you can configure portals to use the code component in the basic form. Once you configure the code component on a basic form, ensure you configure table permission to allow portal users **Read** access to the **Web Resource** table before they can see the component on the portal page.
+After the code component is added to a field in a model-driven app, you can configure portals to use the code component on a basic form. Once you configure the code component on a basic form, be sure to configure the table permission to allow portal users **Read** access to the **Web Resource** table before they can see the component on the portal page.
 
 To add a code component to a basic form:
 
@@ -160,7 +160,7 @@ To add a code component to a basic form:
 
 1. Select **Type** as **Attribute**.
 
-1. Select **Attribute Logical Unit Name.**
+1. Select **Attribute Logical Name.**
 
 1. Enter **Label**.
 
@@ -168,11 +168,14 @@ To add a code component to a basic form:
 
 1. Save and close the form.
 
+> [!Important]
+> If the basic form *Auto Generate Steps From Tabs* is selected in the **Additional Settings** section of the **Form Options** tab, the code component will not be loaded for the attribute on the web page.
+
 ## Allow Read access to a Web Resource table
 
 Portals requires **Read** permission to be set on the **Web Resource** table before users can see the code component on the webpage with the basic form.
 
-To configure Read access on a Web Resource table:
+To configure Read access on a **Web Resource** table:
 
 1. Open [Portal Management](configure/configure-portal.md) app.
 
@@ -200,13 +203,11 @@ To configure Read access on a Web Resource table:
 
 1. Select **Save & Close**.
 
-Once you add the basic form to a webpage, users assigned to the selected web
-role can now see the code component on the portal page having the selected
-basic form.
+Once you add the basic form to a webpage, users assigned to the selected web role will be able to see the code component on the portal page having the selected basic form.
 
-## Code Components using the portal Web API
+## Code components using the portal Web API
 
-A code component can be built and added to a web page that can use the [portal Web API](web-api-overview.md) to perform create, retrieve, update, and delete actions. This feature allows greater customization options when developing portal solutions. See [Implement a sample portal Web API component](implement-webapi-component.md).
+A code component can be built and added to a webpage that can use the [portal Web API](web-api-overview.md) to perform create, retrieve, update, and delete actions. This feature allows greater customization options when developing portal solutions. For more information, go to [Implement a sample portal Web API component](implement-webapi-component.md).
 
 ## Next steps
 
@@ -216,5 +217,5 @@ A code component can be built and added to a web page that can use the [portal W
 
 [Power Apps component framework overview](../../developer/component-framework/overview.md) <br>
 [Create your first component](../../developer/component-framework/implementing-controls-using-typescript.md) <br>
-[Add code components to a field or table in model-driven apps](../../developer/component-framework/add-custom-controls-to-a-field-or-entity.md)
+[Add code components to a column or table in model-driven apps](../../developer/component-framework/add-custom-controls-to-a-field-or-entity.md)
 

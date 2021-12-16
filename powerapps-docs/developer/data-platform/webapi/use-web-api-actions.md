@@ -2,7 +2,7 @@
 title: "Use Web API actions (Microsoft Dataverse)| Microsoft Docs"
 description: "Actions are reusable operations that can be performed using the Web API. These are used with a POST request to modify data on Microsoft Dataverse"
 ms.custom: ""
-ms.date: 05/04/2021
+ms.date: 11/14/2021
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -24,15 +24,13 @@ search.app:
 
 # Use Web API actions
 
-[!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
-
 Actions and functions represent re-usable operations you can perform using the Web API. Use a POST request with actions listed in <xref:Microsoft.Dynamics.CRM.ActionIndex> to perform operations that have side effects. You can also define custom actions and they’ll be available for you to use.
 
 <a name="bkmk_unboundActions"></a>
 
 ## Unbound actions
 
-Actions are defined in [CSDL metadata document](web-api-types-operations.md#bkmk_csdl). As an example, the following is the definition of the <xref href="Microsoft.Dynamics.CRM.WinOpportunity?text=WinOpportunity Action" /> represented in the metadata document.
+Actions are defined in [CSDL $metadata document](web-api-types-operations.md#bkmk_csdl). As an example, the following is the definition of the <xref href="Microsoft.Dynamics.CRM.WinOpportunity?text=WinOpportunity Action" /> represented in the metadata document.
 
 ```xml
 <Action Name="WinOpportunity">
@@ -41,13 +39,13 @@ Actions are defined in [CSDL metadata document](web-api-types-operations.md#bkmk
 </Action>
 ```
 
-The <xref href="Microsoft.Dynamics.CRM.WinOpportunity?text=WinOpportunity Action" /> corresponds to the <xref:Microsoft.Crm.Sdk.Messages.WinOpportunityRequest> using the organization service. Use this action to set the state of an opportunity to Won and create an <xref href="Microsoft.Dynamics.CRM.opportunityclose?text=opportunityclose EntityType" /> to record the event. This action doesn’t include a return value. If it succeeds, the operation is complete.
+The <xref href="Microsoft.Dynamics.CRM.WinOpportunity?text=WinOpportunity Action" /> corresponds to the <xref:Microsoft.Crm.Sdk.Messages.WinOpportunityRequest> using the organization service. Use this action to set the state of an opportunity to **Won** and create an <xref href="Microsoft.Dynamics.CRM.opportunityclose?text=opportunityclose EntityType" /> to record the event. This action doesn’t include a return value. If it succeeds, the operation is complete.
 
-The `OpportunityClose` parameter requires a JSON representation of the opportunityclose entity to create in the operation. This entity must be related to the opportunity issuing the opportunityid single-valued navigation property. In the JSON this is set using the `@odata.bind` annotation as explained in [Associate tables on create](create-entity-web-api.md#bkmk_associateOnCreate).
+The `OpportunityClose` parameter requires a JSON representation of the `opportunityclose` entity to create in the operation. This entity must be related to the opportunity issuing the `opportunityid` single-valued navigation property. In the JSON this is set using the `@odata.bind` annotation as explained in [Associate tables on create](create-entity-web-api.md#bkmk_associateOnCreate).
 
-The `Status` parameter must be set to the status to for the opportunity when it is closed. You can find the default value for this in the <xref href="Microsoft.Dynamics.CRM.opportunity?text=opportunity EntityType" /> statuscode property. The **Won** option has a value of 3. You may ask yourself, why is it necessary to set this value when there is only one status reason option that represents **Won**? The reason is because you may define custom status options to represent a win, such as **Big Win** or **Small Win**, so the value could potentially be different from 3 in that situation.
+The `Status` parameter must be set to the status to for the opportunity when it is closed. You can find the default value for this in the <xref href="Microsoft.Dynamics.CRM.opportunity?text=opportunity EntityType" /> `statuscode` property. The **Won** option has a value of `3`. You may ask yourself, why is it necessary to set this value when there is only one status reason option that represents **Won**? The reason is because you may define custom status options to represent a win, such as **Big Win** or **Small Win**, so the value could potentially be different from `3` in that situation.
 
-The following example is the HTTP request and response to call the `WinOpportunity` action for an opportunity with an opportunityid value of `b3828ac8-917a-e511-80d2-00155d2a68d2`.
+The following example is the HTTP request and response to call the `WinOpportunity` action for an opportunity with an `opportunityid` value of `b3828ac8-917a-e511-80d2-00155d2a68d2`.
 
  **Request**
 
@@ -81,7 +79,7 @@ OData-Version: 4.0
 
 There are two ways that an action can be bound. The most common way is for the action to be bound by an entity. Less frequently, it can also be bound to an entity collection.
 
-In the [CSDL metadata document](web-api-types-operations.md#bkmk_csdl), when an `Action` element represents a bound action, it has an `IsBound` attribute with the value `true`. The first `Parameter` element defined within the action represents the entity that the operation is bound to. When the `Type` attribute of the parameter is a collection, the operation is bound to a collection of entities.
+In the [CSDL $metadata document](web-api-types-operations.md#bkmk_csdl), when an `Action` element represents a bound action, it has an `IsBound` attribute with the value `true`. The first `Parameter` element defined within the action represents the entity that the operation is bound to. When the `Type` attribute of the parameter is a collection, the operation is bound to a collection of entities.
 
 When invoking a bound function, you must include the full name of the function including the `Microsoft.Dynamics.CRM` namespace. If you do not include the full name, you will get the following error: `Status Code:400 Request message has unresolved parameters`.
 
@@ -196,10 +194,9 @@ OData-Version: 4.0
 
 ## Use a custom action
 
-<!-- TODO: 
-If you define custom actions for your organization or solution these will also be included in the [CSDL metadata document](web-api-types-operations.md#bkmk_csdl). For information about creating actions using the customization tools in the application, see the TechNet topic [Actions](/dynamics365/customer-engagement/customize/actions). For information about creating and using your own custom actions, see [Create your own actions](../create-own-actions.md). -->
+A custom action may be a Custom API or Custom Process Action. Either way it is created, there will be a corresponding operation that you can use. With Custom API, the operation may be a function. More information: [Create your own messages](../custom-actions.md)
 
-Regardless of whether the operations included in your custom action have side effects, they can potentially modify data and therefore are considered actions rather than functions. There is no way to create a custom function.
+The following example is for a custom process action.
 
 ### Custom action example: Add a note to a contact
 
@@ -274,7 +271,7 @@ OData-Version: 4.0
 
 <a name="bkmk_specifyentityparametertype"></a>
 
-## Specify table type parameter
+## Specify the table type parameter
 
 When an action requires an entity as a parameter and the type of entity is ambiguous, you must use the `@odata.type` property to specify the type of entity. The value of this property is the fully qualified name of the entity, which follows this pattern:
 `Microsoft.Dynamics.CRM.`+*\<entity logical name>*.
