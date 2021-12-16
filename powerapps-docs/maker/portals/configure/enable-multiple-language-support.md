@@ -42,6 +42,7 @@ You can set the default language of your portal by changing the *Default Languag
 
 > [!Note]
 > If you activate new languages after the portal has been provisioned, you can [import the metadata translations](../admin/import-metadata-translation.md) to get the metadata translated for the newly activated languages.
+> You will also need to update the [language text for any custom labels on Dataverse tables and columns](/powerapps/maker/data-platform/translate-entity-label-text) to appear on forms and lists on portal web pages.
 
 ## Supported languages
 
@@ -113,7 +114,9 @@ Web link sets are the navigation links at the top of the portal. In the **Portal
 
 ## View portal in a different language
 
-After you have enabled to the portal to use multiple languages, you will also need to update the [language text for any custom labels for Dataverse tables and columns](/powerapps/maker/data-platform/translate-entity-label-text) to appear on forms and lists on portal web pages.
+Once the languages have been enabled, by default, users will see a drop-down on portal pages which will allow them to switch the currently viewed content to different enabled portal languages.
+
+:::image type="content" source="media/multi-language/multi-language-dropdown.png" alt-text="Multiple-language drop-down list":::  
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
