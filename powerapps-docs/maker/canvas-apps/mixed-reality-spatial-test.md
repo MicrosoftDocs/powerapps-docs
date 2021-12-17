@@ -1,6 +1,6 @@
 ---
 title: Validate measurements in mixed reality using a spatial test filter
-description: Learn how to validate measurements or fittings of objects with width, depth, and height using mixed-reality components in canvas apps.
+description: Learn how to validate measurements or fittings of objects with width, depth, and height using mixed-reality  controls in canvas apps.
 author: alex-msft
 ms.service: powerapps
 ms.topic: conceptual
@@ -23,7 +23,7 @@ contributors:
 
 Using the [Measure in MR](mixed-reality-component-measure-distance.md) control, you can create a spatial test filter to validate whether an object with known width, depth, and height dimensions will fit in a space. This topic will guide you through creating a test app that you can use to validate the collected measurements, including:
 
-- Inserting the **Measure in MR** component into an application to measure volumes.
+- Inserting the **Measure in MR** control into an application to measure volumes.
 - Setting up **Expected Measurements (Items)** to help users maintain context in the mixed-reality experience.
 - Creating a spatial test filter using the **Bounding Depth**, **Bounding Width**, and **Height** properties from the measurement outputs.
 
@@ -32,7 +32,7 @@ Using the [Measure in MR](mixed-reality-component-measure-distance.md) control, 
 Create a blank canvas app using [Power Apps Studio](https://create.powerapps.com) by selecting **Phone layout** under **Blank app** inside the **Start with a blank canvas or a template** section.
 
 > [!TIP]
-> - The mixed-reality components work best in well-lit environments with flat-textured surfaces. When establishing tracking, point the device at the surface you want to track and slowly pan the device from right to left in broad arm motions. If tracking fails, exit and enter the mixed-reality view to reset the tracking and try again.
+> - The mixed-reality  controls work best in well-lit environments with flat-textured surfaces. When establishing tracking, point the device at the surface you want to track and slowly pan the device from right to left in broad arm motions. If tracking fails, exit and enter the mixed-reality view to reset the tracking and try again.
 > - LIDAR-enabled devices will also result in better tracking.
 
 ## Set up minimum dimensions input fields
@@ -55,9 +55,9 @@ First, we’ll set up the dimensions to validate measurements.
 
     :::image type="content" source="media/augmented-measure-fit-test/fit-test-text-input.png" alt-text="Screenshot showing text inputs and properties.":::
 
-## Insert and bind the Measure in MR component
+## Insert and bind the Measure in MR control
 
-Next, we’ll set up the **Measure in MR** component to allow users to capture measurements, and bind the output value we'll use to validate the measurement.
+Next, we’ll set up the **Measure in MR** control to allow users to capture measurements, and bind the output value we'll use to validate the measurement.
 
 1. Select the **Insert** tab.
 
@@ -67,7 +67,7 @@ Next, we’ll set up the **Measure in MR** component to allow users to capture m
 
     :::image type="content" source="media/augmented-measure-fit-test/fit-test-insert-measure-in-mr.png" alt-text="Screenshot showing insertion of a Measure in MR control.":::
 
-1. Update the following properties for the **Measure in MR** component.
+1. Update the following properties for the **Measure in MR** control.
 
     | Property name | Value |
     | - | - |
@@ -77,7 +77,7 @@ Next, we’ll set up the **Measure in MR** component to allow users to capture m
 
     :::image type="content" source="media/augmented-measure-fit-test/fit-test-units-and-type.png" alt-text="Screenshot showing Measurement type and Unit of measurement property values.":::
 
-1. Select the **Items** property from the upper-left side of the screen for the **Measure in MR** component, and update the formula to the following.
+1. Select the **Items** property from the upper-left side of the screen for the **Measure in MR** control, and update the formula to the following.
 
     ```powerapps-dot
     Table({label:"Test Volume"})
@@ -87,7 +87,7 @@ Next, we’ll set up the **Measure in MR** component to allow users to capture m
 
     :::image type="content" source="media/augmented-measure-fit-test/fit-test-formula-bar-items.png" alt-text="Screenshot showing formula bar settings for Items.":::
 
-1. Set the **ItemsLabels** property of the **Measure in MR** component to `"label"`.
+1. Set the **ItemsLabels** property of the **Measure in MR** control to `"label"`.
 
     :::image type="content" source="media/augmented-measure-fit-test/fit-test-advanced-properties-items.png" alt-text="Screenshot showing advanced property settings for Items and ItemsLabels.":::
 
@@ -97,7 +97,7 @@ Next, we’ll set up the **Measure in MR** component to allow users to capture m
     Set(testVolume, LookUp(MeasureInMR1.Measurements, Label = "Test Volume"));
     ```
 
-    This formula sets the "testVolume" variable with the value of the label looked up from the mixed-reality component's measurements property.
+    This formula sets the "testVolume" variable with the value of the label looked up from the mixed-reality control's measurements property.
 
     :::image type="content" source="media/augmented-measure-fit-test/fit-test-on-mixed-reality-select.png" alt-text="Screenshot showing property setting for OnMixedRealitySelect.":::
 
@@ -170,9 +170,9 @@ If(IsBlankOrError(testVolume), Products,
 
 ### See also
 
-- [View in 3D component](mixed-reality-component-view-3d.md)
-- [Measure in MR component](mixed-reality-component-measure-distance.md)
-- [View shape in MR component](mixed-reality-component-view-shape.md) 
+- [View in 3D control](mixed-reality-component-view-3d.md)
+- [Measure in MR control](mixed-reality-component-measure-distance.md)
+- [View shape in MR control](mixed-reality-component-view-shape.md) 
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

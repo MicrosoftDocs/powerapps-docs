@@ -161,7 +161,7 @@ Now that you have both the flow, and the app created, you'll run the app and ver
 
 Now that you've created a sample app that runs a flow and adds item inside a SharePoint list, you can create more complex applications that interact with Power Automate and manipulate data inside various data sources.
 
-## Power Automate Pane (preview)
+## Power Automate pane (preview)
 
 > [!IMPORTANT]
 > - This feature is being rolled out and depending on your region, it may not be available for your tenant yet.
@@ -179,7 +179,7 @@ To enable the preview feature:
 
 1. Select **Upcoming Features**. 
 
-1. Under the Preview tab, select **Enable Power Automate Pane** to turn on this feature. You may be prompted to close and reopen your canvas app to see the change. 
+1. Under the Preview tab, select **Enable Power Automate pane** to turn on this feature. You may be prompted to close and reopen your canvas app to see the change. 
    
    :::image type="content" source="media/using-logic-flows/power-automate-pane-feature.png" alt-text="A screenshot of the Upcoming Features dialog box showing the Enable Power Automate feature toggle.":::
    
