@@ -1,5 +1,5 @@
 ---
-title: Send a weekly report on project status from the Milestones sample app
+title: Send a weekly report on project status from the Milestones sample app (contains video)
 description: Learn how to extend the Milestones sample app for Microsoft Teams to send a weekly summary of the status of work items for a project.
 ms.service: powerapps
 ms.topic: conceptual

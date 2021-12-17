@@ -1,5 +1,5 @@
 ---
-title: Create an app that uses mobile sensors
+title: Create an app that uses mobile sensors (contains video)
 description: Learn how to use mobile sensors in Power Apps - including NFC, accelerometer, and location.
 author: joel-lindstrom
 ms.service: powerapps
