@@ -1,5 +1,5 @@
 ---
-title: Customize Inspection Steps (Video)
+title: Customize Inspection Steps (contains video)
 description: Learn about how the steps followed in the Inspection sample apps can be customized
 author: sbahl10
 ms.service: powerapps

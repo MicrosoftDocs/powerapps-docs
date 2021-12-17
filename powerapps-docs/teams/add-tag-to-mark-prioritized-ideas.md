@@ -1,5 +1,5 @@
 ---
-title: How to add tag to mark prioritized ideas in the Employee ideas app (Video)
+title: How to add tag to mark prioritized ideas in the Employee ideas app (contains video)
 description: Learn about how to customize the employee ideas app to mark prioritized ideas.
 author: sbahl10
 ms.service: powerapps

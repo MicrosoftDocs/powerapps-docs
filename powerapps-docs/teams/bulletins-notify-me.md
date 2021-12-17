@@ -1,5 +1,5 @@
 ---
-title: Add "Notify me" settings to category in Bulletins app (Video)
+title: Add "Notify me" settings to category in Bulletins app (contains video)
 description: Learn about how to customize the Bulletins app to add "Notify me" settings to category
 author: sbahl10
 ms.service: powerapps

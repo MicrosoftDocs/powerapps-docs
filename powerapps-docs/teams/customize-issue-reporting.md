@@ -1,5 +1,5 @@
 ---
-title: Customize the Issue reporting sample app (Video)
+title: Customize the Issue reporting sample app (contains video)
 description: Learn how to customize the Issue reporting sample app installed from teams store.
 author: joel-lindstrom
 ms.service: powerapps

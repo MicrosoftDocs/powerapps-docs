@@ -1,5 +1,5 @@
 ---
-title: Work with Dataverse for Teams table columns (Video) | Microsoft Docs
+title: Work with Dataverse for Teams table columns (contains video) | Microsoft Docs
 description: Explains how to create and use Dataverse for Teams table columns.
 author: NHelgren
 ms.service: powerapps

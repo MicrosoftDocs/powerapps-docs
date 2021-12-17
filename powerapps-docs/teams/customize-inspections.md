@@ -1,5 +1,5 @@
 ---
-title: Customize the Inspection app (Video)
+title: Customize the Inspection app (contains video)
 description: Learn about how the Inspection sample apps can be customized.
 author: sbahl10
 ms.service: powerapps

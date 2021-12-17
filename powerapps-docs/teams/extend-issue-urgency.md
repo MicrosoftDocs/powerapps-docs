@@ -1,5 +1,5 @@
 ---
-title: Add urgency flag to reported issues (Video)
+title: Add urgency flag to reported issues (contains video)
 description: Learn how to add an urgency flag to the Issue reporting template Power Apps for Teams so you can act on urgent issues.
 author: joel-lindstrom
 ms.service: powerapps

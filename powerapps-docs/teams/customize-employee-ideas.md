@@ -1,5 +1,5 @@
 ---
-title: Customize the Employee Ideas app (Video)
+title: Customize the Employee Ideas app (contains video)
 description: Learn about how the Employee Ideas sample apps can be customized
 author: sbahl10
 ms.service: powerapps

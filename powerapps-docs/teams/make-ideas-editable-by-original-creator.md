@@ -1,5 +1,5 @@
 ---
-title: Make ideas editable by original creator (Video)
+title: Make ideas editable by original creator (contains video)
 description: Learn about how to make ideas editable by original creator.
 author: sbahl10
 ms.service: powerapps

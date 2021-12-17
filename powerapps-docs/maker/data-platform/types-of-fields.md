@@ -1,5 +1,5 @@
 ---
-title: "Column data types in Microsoft Dataverse (Video) | MicrosoftDocs"
+title: "Column data types in Microsoft Dataverse (contains video) | MicrosoftDocs"
 description: "Understand the different column data types available for your app"
 keywords: ""
 ms.date: 08/13/2021

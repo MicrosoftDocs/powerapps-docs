@@ -1,5 +1,5 @@
 ---
-title: Customize the Profile+ sample app (preview) (Video)
+title: Customize the Profile+ sample app (preview) (contains video)
 description: Learn how to customize the Profile+ app.
 author: joel-lindstrom
 ms.service: powerapps
