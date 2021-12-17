@@ -5,13 +5,14 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 12/16/2021
+ms.date: 12/17/2021
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: ndoelman
 contributors:
     - nickdoelman
     - sandhangitmsft
+    - nageshbhat-msft
 ---
 
 # Enable multiple-language portal support
