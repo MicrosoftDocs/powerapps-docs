@@ -5,7 +5,7 @@ author: nageshbhat-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: intro-internal
-ms.date: 12/16/2021
+ms.date: 12/17/2021
 ms.subservice: portals
 ms.author: nabha
 ms.reviewer: ndoelman
@@ -20,7 +20,7 @@ contributors:
 
 ## Overview
 
-[Dataverse search](../../../user/relevance-search-benefits.md) delivers fast and comprehensive search results sorted by relevance in portals. Dataverse search is the same search service used in model-driven apps and other Power Platform services built on Microsoft Dataverse. The [Lucene.NET](search.md) powered search will coexist for certain time and will eventually be replaced by Dataverse search. To enable Dataverse search, add the [site setting](configure-site-settings.md) `Search/EnableDataverseSearch` and set to **true**. Either false or without this setting will instead enable the [Lucene.NET](search.md) search.
+[Dataverse search](../../../user/relevance-search-benefits.md) delivers fast and comprehensive search results sorted by relevance in portals. Dataverse search is the same search service used in model-driven apps and other Power Platform services built on Microsoft Dataverse. To enable Dataverse search, add the [site setting](configure-site-settings.md) `Search/EnableDataverseSearch` and set to **true**. Either false or without this setting will instead enable the [Lucene.NET](search.md) search.
 
 > [!IMPORTANT]
 > - This is a preview feature.
@@ -197,6 +197,8 @@ You can follow the walk-through with a table of your choice by replacing the *nw
 ## Known Issues
 
 - If you switch the site setting **Search/EnableDataverseSearch** from *true* to *false* in order to disable Dataverse search and re-enable the Lucene.NET search, you will need to go to the [Portal Admin Center](../admin/admin-overview.md) and choose **Actions** > **Restart** to restart the portal. If you miss this step, you will see an error page when attempting to [rebuild the search index](search.md#rebuild-full-search-index) and users will not see any search results.  
+
+- When searching for a keyword and you continuously encounter the message saying *There was a problem performing the search. Try again*, restart the portal by opening the [Portal Admin Center](../admin/admin-overview.md) and choose **Actions** > **Restart**.
 
 ### See also
 
