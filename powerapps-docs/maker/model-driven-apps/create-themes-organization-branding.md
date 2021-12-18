@@ -1,5 +1,5 @@
 ---
-title: "Change the color scheme or add a logo to match your brand  | MicrosoftDocs"
+title: "Change the color scheme or add a logo to match your brand  (contains video) | MicrosoftDocs"
 description: Learn how to change the color scheme for your app with Power Apps
 ms.custom: ""
 ms.date: 01/12/2021
