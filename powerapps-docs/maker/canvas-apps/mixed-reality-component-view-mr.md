@@ -175,5 +175,8 @@ If you want to change the size of the model, we apply certain scaling techniques
 - Measure distance, area, and volume with the **[Measure in mixed reality](mixed-reality-component-measure-distance.md)** control.
 - Create and view predefined 3D shapes with the **[View shape in mixed reality](mixed-reality-component-view-shape.md)** control
 
+### See also
+
+[Create an app with 3D and mixed reality controls](how-to/build-view-in-mr-3d-apps.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

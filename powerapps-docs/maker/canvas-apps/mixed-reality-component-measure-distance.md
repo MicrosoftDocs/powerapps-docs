@@ -145,5 +145,8 @@ OnChange | Behavior that is triggered when any property on the button is changed
 - View images and 3D content in the real world with the **[View in mixed reality](mixed-reality-component-view-mr.md)** control.
 - Create and view predefined 3D shapes with the **[View shape in mixed reality](mixed-reality-component-view-shape.md)** control
 
+### See also
+
+[Create an app using the Measure in MR control](how-to/build-apps-measure-in-mr.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
