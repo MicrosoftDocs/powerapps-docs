@@ -6,7 +6,7 @@ manager: annbe
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/14/2021
+ms.date: 12/21/2021
 ms.author: kvivek
 ms.reviewer: kvivek
 searchScope:
@@ -129,6 +129,18 @@ by Natalie Pienkowska and Greg Hurlman
 **Citizen Development 101: APIM, Power Platform and Teams**  
 by Geetha Sivasailam and April Dunnam  
 [Register and watch now](https://info.microsoft.com/ww-landing-citdev101powerplatformteams.html?LCID=EN-US)
+
+**Power Apps How-To: Creating Enterprise IoT Solutions on Azure IoT Central**  
+by Eric Cheng  
+[Register and watch now](https://info.microsoft.com/ww-landing-EnterpriseSolutionsIoTCentral.html?lcid=en-us)
+
+**Developers Roundtable with Power Apps Experts**  
+by Charles Lamanna, Ryan Cunningham, Per Mikkelsen, Kartik Kanakasabesan, and April Dunnam  
+[Register and watch now](https://info.microsoft.com/ww-ondemand-Live-Event-Developers-Roundtable-with-Power-Apps-Experts.html?LCID=EN-US)
+
+**Data visualization in Power Apps**  
+by Srihari Srinivasa  
+[Register and watch now](https://info.microsoft.com/ww-landing-datavisualization15minutes.html?lcid=en-us)
 
 ### See also
 
