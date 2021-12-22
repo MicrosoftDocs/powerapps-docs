@@ -1,5 +1,5 @@
 ---
-title: Update inspection notification to use an adaptive card
+title: Update inspection notification to use an adaptive card (contains video)
 description: Learn about how to update Inspection notification to use adaptive card.
 author: sbahl10
 ms.service: powerapps
