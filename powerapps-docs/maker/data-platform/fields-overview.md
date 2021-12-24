@@ -1,5 +1,5 @@
 ---
-title: "Fields overview in Power Apps | MicrosoftDocs"
+title: "Fields overview in Power Apps (contains video) | MicrosoftDocs"
 description: "Learn about columns in Power Apps portal"
 ms.custom: intro-internal
 ms.date: 08/13/2021

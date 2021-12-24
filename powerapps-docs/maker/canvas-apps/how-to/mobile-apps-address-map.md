@@ -1,5 +1,5 @@
 ---
-title: Create an app with address input and map controls
+title: Create an app with address input and map controls (contains video)
 description: Learn about how to create apps using address input and map controls in canvas apps.
 author: joel-lindstrom
 ms.service: powerapps
@@ -378,4 +378,4 @@ Run the app in preview mode to test. The map shows the location selected in the 
 
 ### See also
 
-[Interactive map component](../geospatial-component-map.md)
+[Interactive map control](../geospatial-component-map.md)
