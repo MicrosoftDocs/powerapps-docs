@@ -1,6 +1,6 @@
 ﻿---
-title: Configure choices column for portals
-description: Learn how to add and configure Dataverse choices column on portal lists, forms, and templates.
+title: Configure a choices column for portals
+description: Learn how to add and configure a Dataverse choices column on portal lists, forms, and templates.
 author: nageshbhat-msft
 ms.service: powerapps
 ms.topic: conceptual
@@ -14,13 +14,13 @@ contributors:
     - nickdoelman
 ---
 
-# Configure choices column on portals (preview)
+# Configure a choices column on portals (preview)
 
 > [!Important]
 > - This is a preview feature.
-> - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
+> - Preview features aren't meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 
-Makers can design [basic forms](entity-forms.md) and [advanced forms](web-form-properties.md) to include [choices columns](../../data-platform/types-of-fields.md#choices) defined in Microsoft Dataverse. This feature provides the ability for portal users to select multiple options while submitting data, and display views with choices columns through [lists](entity-lists.md).
+Makers can design [basic forms](entity-forms.md) and [advanced forms](web-form-properties.md) to include [choices columns](../../data-platform/types-of-fields.md#choices) defined in Microsoft Dataverse. This feature provides the ability for portal users to select multiple options while submitting data, and display views that include choices columns through [lists](entity-lists.md).
 
 ## Prerequisites
 
@@ -28,7 +28,7 @@ Makers can design [basic forms](entity-forms.md) and [advanced forms](web-for
 
 ## Enable choices control
 
-You need to create a new [site setting](configure-site-settings.md) with the name **Control/EnableChoices** and set the value to **true** to enable **choices** controls on portal forms.
+To enable choices controls on forms in your portal, you need to create a new [site setting](configure-site-settings.md) with the name **Control/EnableChoices** and set the value to **true**.
 
 :::image type="content" source="media/choices-column/site-setting.png" alt-text="Control/EnableChoices site setting.":::
 
@@ -37,22 +37,24 @@ You need to create a new [site setting](configure-site-settings.md) with the nam
 
 ## Basic forms and advanced forms
 
-Makers can design a [basic form](entity-forms.md) or an the [advanced form](web-form-properties.md) step in the portal website using a Dataverse form having the choices column to support selection of multiple options. Portal users can insert, modify, or clear the selection. 
+You can design a [basic form](entity-forms.md) or an [advanced form](web-form-properties.md) step in the portal website by using a Dataverse form that has a choices column to support the selection of multiple options. Portal users can insert, modify, or clear the selection.<!--note from editor: The animated GIF needs a long description that describes it for a reader with low vision - below I've taken a stab at it. By the way, there doesn't seem to be a pause after the page is loaded, so the image immediately begins its animation. The Docs Contributor Guide says "Animated GIFs require a pause before autoplay.This pause capability is in place on docs.microsoft.com. Writers should make sure the pause is working after their article is published." But I don't know how you can fix this. Maybe Vivek knows?-->
 
-:::image type="content" source="media/choices-column/choices-form.gif" alt-text="Choices column on a form.":::
+:::image type="complex" source="media/choices-column/choices-form.gif" alt-text="Choices column on a form.":::
+Screen showing a list of outdoor activities being created. The user expands the Select or search options box and selects some activities from the list that appears. The selected activities appear at the top of the window. The user enters the letters C a m in the box, and then selects the option Camping when it appears. At the top of the window in the list of activities, the user selects the Close button next to one of the options to deselect it.
+:::image-end:::
 
 ## List
 
-You can define a choices column in a Dataverse view to display the multiple options selected for the record in a list. The choices column supports quick search by typing a keyword to filter the list.
+You can define a choices column in a Dataverse view to display the multiple options that are available<!--note from editor: Suggested.--> for the record in a list. The choices column supports quick search when a user enters a keyword to filter the list.<!--note from editor: Is this what "by typing a keyword" meant here? Seemed to be a misplaced modifier. Also, can you verify that the names in the following image are either part of sample data or allowed on our team's fictitious names list? If they are, I'll make a note so I don't keep asking this question.-->
 
 :::image type="content" source="media/choices-column/choices-list.png" alt-text="Choices column on a list.":::
 
 > [!NOTE]
-> Sorting a [list](entity-lists.md) by choices column is not supported.
+> Sorting a [list](entity-lists.md) by the choices column isn't supported.
 
 ## Liquid
 
-Developers can design the website using Liquid to retrieve the records from a Dataverse table. Choices columns can be retrieved while querying the data using fetchXML and entity view.
+Developers can design the website by using Liquid to retrieve the records from a Dataverse table. Choices columns can be retrieved while the data is being queried by using fetchXML or an entity view.
 
 ```html
 {% for choice in record.ChoicesColumn %}
@@ -60,9 +62,8 @@ Developers can design the website using Liquid to retrieve the records from a Da
     {{ choice.Value }}
 {% endfor %} 
 ```
-Example:
 
-Choices *sample\_outdooractivities* values
+Examples of choices for *sample\_outdooractivities* values are shown in the following table.
 
 | **Value** | **Label**         |
 |-----------|-------------------|
@@ -76,7 +77,7 @@ Choices *sample\_outdooractivities* values
 | 8         | Skiing            |
 | 9         | Camping           |
 
-Contact table values
+Examples of contact table values are shown in the following table.<!--note from editor: Is it okay that "fullname" isn't used in the fetchXML or entity view examples?-->
 
 | **'fullname' column** | **'Sample\_outdooractivities' column** |
 |-----------------------|----------------------------------------|
@@ -85,7 +86,7 @@ Contact table values
 | Yuri Maple            | 4                                      |
 | Ravi Mundy            | 2,3,8,9                                |
 
-### Retrieve selected options using fetchXML
+### Retrieve selected options by using fetchXML
 
 ```html
 {% fetchxml contacts %}
@@ -109,7 +110,8 @@ Contact table values
 }
 {% endfor %}
 ```
-### Retrieve selected options using an entity view
+
+### Retrieve selected options by using an entity view
 
 ```html
 {% entitylist id:page.adx_entitylist.id %}
@@ -128,7 +130,7 @@ Contact table values
 
 ## Web API 
 
-Developers can use choices columns with the [Web API](../web-api-overview.md) read, create, and update operations.
+Developers can use choices columns by using the [Web API](../web-api-overview.md) read, create, and update operations.
 
 <u>Read</u>
 
@@ -165,7 +167,7 @@ Body –
 
 ## Known issues
 
-The choices control on basic and advanced forms currently only support the default theme. If you are using any of the [preset themes](../theme-overview.md) defined in portals Studio, the choices control will not be available.
+The choices control on basic and advanced forms currently only supports the default theme. If you're using any of the [preset themes](../theme-overview.md) defined in Power Apps portals Studio, the choices control won't be available.
 
  
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
