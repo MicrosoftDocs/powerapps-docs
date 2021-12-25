@@ -88,7 +88,7 @@ Power Apps requires you to use a personal access token instead of your version c
 
 Different version control providers have different methods to generate personal access tokens. Follow below instructions to obtain personal access token.
 
-- **GitHub** - [Creating a personal access token](https://docs.github.com/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
+- **GitHub** - [Creating a personal access token](https://docs.github.com/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) with *Scope = repo*.
 - **Azure DevOps** - [Use personal access tokens](/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate)
 - **Other version control providers**: Any Git provider can be used with Git version control. Check your provider's documentation to learn about how to create a personal access token.
 
