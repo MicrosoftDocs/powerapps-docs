@@ -157,6 +157,10 @@ The Power Apps Checker application user in the Dataverse organization containing
 
 ![Enable user from form.](media/solution-checker-enable-application-user-form.png)
 
+## Solution Checker remains in a Running state for more than thirty minutes
+
+Solution checker may remain in a running state indefinitely if the analyzed solution contains plugin components developed using .NET Standard 2.0. Plugins using .NET Standard 2.0 are not currently supported in Solution checker and should be excluded from analysis. This can be done by either removing the plugin components from the target solution, or by using the ExcludedFileNamePattern parameter in the Power Apps Checker PowerShell module.
+
 ## Common plugin conditions that cause solution checker to fail
 
 When solution checker receives and processes analysis requests, it must call the Dataverse endpoint to retrieve/update relevant job data and export the selected solution(s). Each interaction made by the solution checker service with the Dataverse could potentially trigger one or more plugin steps that have been registered on message submitted in the request. These plugins may in turn introduce conditions that prevent the message from being handled as expected by the Dataverse and interrupt the ability of solution checker to process the requested analysis job. Similar situations can occur when downloading solution checker job results or canceling an in-progress analysis job.
