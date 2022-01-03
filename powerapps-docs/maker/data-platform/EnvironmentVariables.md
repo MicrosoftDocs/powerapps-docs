@@ -131,7 +131,9 @@ Ensure environment variable names are unique so they can be referenced accuratel
 The names **$authentication** and **$connection** are specially reserved parameters for flows and should be avoided. Flow save will be blocked if environment variables with those names are used.
 If an environment variable is used in a flow and the display name of the environment variable is changed, then the designer will show both the old and new display name tokens to help with identification. When updating the flow, it is recommended to remove the environment variable reference and add it again.
 
-## Use Azure Key Vault secrets
+## Use Azure Key Vault secrets (preview)
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 Environment variables allow for referencing secrets stored in Azure Key Vault. These secrets are then made available for use with Power Platform components, such as Power Automate and custom connectors.  The actual secrets are only stored in Azure Key Vault and the environment variable simply references the secrets.  Using Azure Key Vault secrets with environment variables require that you configure Azure Key Vault so that Power Platform can read the specific secrets you want to reference.
 
@@ -146,9 +148,31 @@ To use Azure Key Vault secrets with Power Platform, the Azure subscription that 
    :::image type="content" source="media/env-var-secret1.png" alt-text="Register the Power Platform provider in Azure":::
 
 1. Create an Azure Key Vault vault. Consider using a separate vault for every Power Platform environment to minimize the threat in case of a breach. Go to [Best practices for using Azure Key Vault](/azure/key-vault/general/best-practices#use-separate-key-vaults) for more information. For more information about how to create a key vault, go to [Quickstart - Create an Azure Key Vault with the Azure portal](/azure/key-vault/general/quick-create-portal)
-1.	The user who creates the environment variable must have read permission on the specific vault. You can verify permission using the **Access Control** > **Check access** tab of the Azure Key Vault on the Azure portal. If the user does not have access to the vault, grant access to this resource via the Key Vault Reader or other appropriate role.
+1.	The user who creates the environment variable must have read permission on the specific vault. You can verify permission using **View my access** on the **Access Control** > **Check access** tab of the Azure Key Vault on the Azure portal. If the user doesn't have access to the vault, grant access to this resource via the Key Vault Reader or other appropriate role.
 
-1. 
+      :::image type="content" source="media/env-var-secret2.png" alt-text="View my access in Azure":::
+
+1. Azure Key Vault must have **Get** secret access policy set for the Dataverse service principal. If it doesn't exist for this vault, add a new access policy.  Select **Add Access Policy** and then select **Get** as the access policy. Next to **Select principal**, select **None selected** and then search for **Dataverse**. Select the Dataverse service principal with the **00000007-0000-0000-c000-000000000000** identity and then select **Add**. Once added, the access policy should look like this.
+
+      :::image type="content" source="media/env-var-secret3.png" alt-text="Get access policy for Dataverse security principal in Azure":::
+
+1. If you haven't done so already, add a secret to your new vault. More information: [Azure Quickstart - Set and retrieve a secret from Key Vault using Azure portal](/azure/key-vault/secrets/quick-create-portal#add-a-secret-to-key-vault)
+
+### Create a new environment variable for the Key Vault secret
+
+Once Azure Key Vault is configured and you have a secret registered in your vault, you can now go back to reference it within Power Apps using an environment variable.
+
+1.	In the **Solutions** area in Power Apps (make.powerapps.com), open your unmanaged solution you're using for development and select **New** > **Environment variable**.
+1.	Select the **Data Type** as **Secret** and **Secret Store** as **Azure Key Vault**.
+1. Enter the default value or create a new value with the full Azure Key Vault secret path. The path format is */subscriptions/[subscriptionId]/resourcegroups/[resourceGroupName]/providers/Microsoft.KeyVault/[keyVaultName]/secrets/[secretName]*.
+4.	Select **Save**.
+
+> [!NOTE]
+> User access validation for the secret is performed in the background. If the user doesn’t have at least read permission, this validation error is displayed.
+>
+> **This variable didn't save properly. User is not authorized to read secrets from 'Azure Key Vault path'.**
+
+
 ## Current limitations
 
 - SharePoint Online is currently the only data source supported for environment variables of type "data source" within canvas apps. However, the Dataverse connector will be updated soon for when connectivity is required to Dataverse environments other than the current environment. Other types of environment variables may be used within canvas apps by retrieving them as you would record data via a Dataverse connection.
