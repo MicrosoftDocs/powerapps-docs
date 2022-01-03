@@ -110,7 +110,7 @@ On the **Properties** tab, you'll notice the code component properties are displ
 Whenever you update the code components and want to see the runtime changes, you need to change<!--note from editor: I don't think "bump" is going to necessarily be well-understood by non-native English readers. Maybe this should be "increase"?--> the `version` property in the manifest file. We recommend that you change the version of the component whenever you make changes.
 
 > [!NOTE]
-> Existing code components are updated only when the app is closed or reopened in Power Apps Studio. When you reopen the app, it asks you to update the code components. Simply deleting or adding code components back into the app won't update the components.
+> Existing code components are updated only when the app is closed or reopened in Power Apps Studio. When you reopen the app, it asks you to update the code components. Simply deleting or adding code components back into the app won't update the components. Remember to publish all customizations in updated Solution first, Otherwise update the code component won't appear.
 
 ### See also
 
