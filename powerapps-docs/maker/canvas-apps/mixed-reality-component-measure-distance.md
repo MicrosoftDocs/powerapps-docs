@@ -20,9 +20,9 @@ contributors:
 ---
 # Take measurements in mixed reality
 
-You can use the **Measure in MR** control in your app to let users measure distance, area, and volume. During measurement, you create two-dimensional and three-dimensional polygons that can be used to confirm how a certain-sized object would fit within a space.
+You can use the **Measure in MR** control in your app to let users measure distance, area, and volume. During the measurement, you create two-dimensional and three-dimensional polygons that can be used to confirm how a certain-sized object would fit within a space.
 
-The control creates a button in your app. When app users click the button, it shows a live camera feed of the device. App users can then identify a starting point and then individual points to measure from. The distances of measured segments are shown directly on the live camera feed.
+The control creates a button in your app. When app users select the button, it shows a live camera feed of the device. App users can then identify a starting point and then individual points to measure from. The distances of measured segments are shown directly on the live camera feed.
 
 
 :::image type="content" source="./media/augmented-overview/measure-in-mixed-reality.png" alt-text="Photo showing a corner between two construction walls being measured with a mobile device.":::
@@ -50,7 +50,7 @@ With an app open for editing in [Power Apps Studio](https://create.powerapps.com
 :::image type="content" source="./media/augmented-measure/augmented-measure.png" alt-text="Select Measure in MR.":::
 
 
-You can modify the control with a number of properties.
+You can modify the control with many properties.
 
 
 ### Properties
@@ -59,7 +59,7 @@ The following properties are on the control's **Measure in MR** pane on the **Pr
 
 :::image type="content" source="./media/augmented-measure/augmented-measure-properties.png" alt-text="The Measure in MR pane.":::
 
-Note that some properties are only available under **More options** in the **Advanced** tab on the **Measure in MR** pane.
+Some properties are only available under **More options** in the **Advanced** tab on the **Measure in MR** pane.
 
 Property | Description | Type | Location
 | - | - | - | -
@@ -70,8 +70,8 @@ Expected Measurements (Items) | Data source (table) that lists a predefined set 
 ItemsLabels  | A column in _Items_ with the strings you want to use as the labels for the measurements you want users to capture. | ColumnName | **Advanced**
 ItemsMeasurementType  | (Optional) A column in _Items_ with strings that specify the measurement type overrides (distance, area, volume, freeform, or blank)  for the measurements you want users to capture.  | ColumnName | **Advanced**
 ItemsBoxDraw	| (Optional) A column in _Items_ that specifies the Box Draw overrides (true, false, or blank) for the measurements you want users to capture. 	| ColumnName | **Advanced**
-Measurements | Table describing the measured distances, volumes and areas, composed of:<ul><li>Label - String that identifies the given measurement</li><li>Id - Number that uniquely identifies this measurement</li><li>Units - String describing the base unit of this measurement</li><li>Height - Number representing the height of the captured volume, or 0 if not a completed volume or 2D area</li><li>Length - Number representing the total length of the perimeter or path of the measurement </li><li>BoundingWidth - Number representing minimum width in units that bounds the shape </li><li>BoundingDepth - Number representing the minimum depth in units that bounds the shape  </li><li>Area - Number representing the estimated area of the enclosed shape in units squared </li><li>Volume - Number representing the estimated volume of the enclosed shape in units cubed </li><li>Segments - Table describing all segments in the given measurement object with the following properties:<ul><li>Length - Number representing the total distance of a given segment in the given units of measure (for example, .52)</li><li>DirectionX - Number specifying the X direction of the segment in world space (for example, 0.5)</li><li>DirectionY - Number specifying the Y direction of the measurement in world space (typically 0)</li><li>DirectionZ - Number specifying the Z direction of the measurement in world space (for example, 0.5)</li></ul></li></ul> | Table | Not applicable (output property only)
-Photos | The photos captured during the mixed reality session.<ul><li>ImageURI - String indicating the uniform resource identifier (URI) where the saved photo is stored.</li><li>MimeType - String describing the Multipurpose Internet Mail Extensions (MIME) type for the photo (always image/jpeg).</li><li>FileSize - Number describing size of the photo in bytes.</li><li>Label - String which identifies the measurement associated with this photo or "" if unassociated.  This corresponds to the Label property in the returned Measurements Data Set.</li><br/>You can [upload the mixed-reality photos to OneDrive and show them in a gallery](mixed-reality-take-upload-photos.md). | Not applicable | Not applicable (output property only)
+Measurements | Table describing the measured distances, volumes, and areas, composed of:<ul><li>Label - String that identifies the given measurement</li><li>Id - Number that uniquely identifies this measurement</li><li>Units - String describing the base unit of this measurement</li><li>Height - Number representing the height of the captured volume, or 0 if not a completed volume or 2D area</li><li>Length - Number representing the total length of the perimeter or path of the measurement </li><li>BoundingWidth - Number representing minimum width in units that bounds the shape </li><li>BoundingDepth - Number representing the minimum depth in units that bounds the shape  </li><li>Area - Number representing the estimated area of the enclosed shape in units squared </li><li>Volume - Number representing the estimated volume of the enclosed shape in units cubed </li><li>Segments - Table describing all segments in the given measurement object with the following properties:<ul><li>Length - Number representing the total distance of a given segment in the given units of measure (for example, .52)</li><li>DirectionX - Number specifying the X direction of the segment in world space (for example, 0.5)</li><li>DirectionY - Number specifying the Y direction of the measurement in world space (typically 0)</li><li>DirectionZ - Number specifying the Z direction of the measurement in world space (for example, 0.5)</li></ul></li></ul> | Table | Not applicable (output property only)
+Photos | The photos captured during the mixed reality session.<ul><li>ImageURI - String indicating the uniform resource identifier (URI) where the saved photo is stored.</li><li>MimeType - String describing the Multipurpose Internet Mail Extensions (MIME) type for the photo (always image/jpeg).</li><li>FileSize - Number describing size of the photo in bytes.</li><li>Label - String that identifies the measurement associated with this photo or "" if unassociated.  This corresponds to the Label property in the returned Measurements Data Set.</li><br/>You can [upload the mixed-reality photos to OneDrive and show them in a gallery](mixed-reality-take-upload-photos.md). | Not applicable | Not applicable (output property only)
 OnMixedRealitySelect | Behavior that is triggered when exiting the MR experience with new results. | Defined action | **Advanced**
 OnChange | Behavior that is triggered when any property on the button is changed. | Defined action | **Advanced**
 
@@ -120,11 +120,11 @@ OnChange | Behavior that is triggered when any property on the button is changed
 
 **[PaddingTop](./controls/properties-size-location.md)** – The distance between text in a control and the top edge of that control.
 
-**[PressedBorderColor](./controls/properties-color-border.md)** – The color of a control's border when the user taps or clicks that control.
+**[PressedBorderColor](./controls/properties-color-border.md)** – The color of a control's border when the user selects that control.
 
-**[PressedColor](./controls/properties-color-border.md)** – The color of text in a control when the user taps or clicks that control.
+**[PressedColor](./controls/properties-color-border.md)** – The color of text in a control when the user selects that control.
 
-**[PressedFill](./controls/properties-color-border.md)** – The background color of a control when the user taps or clicks that control.
+**[PressedFill](./controls/properties-color-border.md)** – The background color of a control when the user selects that control.
 
 **[TabIndex](./controls/properties-accessibility.md)** – Keyboard navigation order.
 
@@ -132,7 +132,7 @@ OnChange | Behavior that is triggered when any property on the button is changed
 
 **[Tooltip](./controls/properties-core.md)** – Explanatory text that appears when the user hovers over a control.
 
-**[VerticalAlign](./controls/properties-text.md)** – The location of text on a control in relation to the vertical center of that control: **Middle**, **Top**, or **Bottom**
+**[VerticalAlign](./controls/properties-text.md)** – The location of text on a control in relation to the vertical center of that control: **Middle**, **Top**, or **Bottom**.
 
 **[Visible](./controls/properties-core.md)** – Whether a control appears or is hidden.
 
