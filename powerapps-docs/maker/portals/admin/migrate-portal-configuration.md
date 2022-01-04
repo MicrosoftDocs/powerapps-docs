@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 12/14/2021
+ms.date: 1/4/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
@@ -46,7 +46,7 @@ Migration involves exporting the existing configuration from the source Microsof
 
     :::image type="content" source="media/migrate-portal-config/provision-portal.png" alt-text="Provision new portal.":::
 
-1. The portal updates from the source environment should be reflected in this new target environment. Going forward, you should be able to transfer configuration from your source to target environments by simply transferring portal configuration data.
+1. The portal updates from the source environment should be reflected in this new target environment. Going forward, you should be able to transfer configuration from your source to target environments by transferring the portal configuration data.
 
 ## Transfer portal metadata
 
@@ -54,7 +54,7 @@ Migration involves exporting the existing configuration from the source Microsof
 
 ### Transfer portal configuration using Power Platform CLI
 
-The Microsoft Power Platform CLI provides a number of features specifically for [portals](../power-apps-cli.md). These commands allow you to download portal configuration from a source environment and transfer it to a target environment. These commands can also be incorporated into your ALM processes.
+The Microsoft Power Platform CLI provides many features specifically for [portals](../power-apps-cli.md). These commands allow you to download portal configuration from a source environment and transfer it to a target environment. These commands can also be incorporated into your ALM processes.
 
 1. Create Power Platform CLI authentication profiles to connect to both your source and target environments. You can give them a name to easily identify the target and source environments.
 
@@ -68,7 +68,7 @@ The Microsoft Power Platform CLI provides a number of features specifically for 
     pac auth create --name PORTALDEV --url https://contoso-org.crm.dynamics.com
     ```
 
-1. When the authentication profiles are created, they will have an associated index that can be determined using the list command.
+1. When the authentication profiles are created, they'll have an associated index that can be determined using the list command.
 
     ```powershell
     pac auth list
@@ -88,7 +88,7 @@ The Microsoft Power Platform CLI provides a number of features specifically for 
     pac auth select --index 1
     ```
 
-1. Determine the website id for the source portal.
+1. Determine the website ID for the source portal.
 
     ```powershell
     pac paportal list
@@ -133,7 +133,7 @@ The Microsoft Power Platform CLI provides a number of features specifically for 
     ```
 
 > [!NOTE]
-> The Power Platform CLI tool does not migrate tables or table schema. Migration may fail with missing elements such as tables and fields when configuration data has mismatch with selected schema.
+> The Power Platform CLI tool does not migrate tables or table schema. Migration may fail with missing elements such as tables and fields when configuration data is mismatched with selected schema.
 > During import, ensure the destination environment contains the same portal type already installed with any additional customizations such as tables, fields, forms or views imported separately as solutions.
 
 # [Configuration Migration Tool](#tab/CMT)
@@ -141,7 +141,7 @@ The Microsoft Power Platform CLI provides a number of features specifically for 
 ### Transfer portal configuration using the Configuration Migration Tool
 
 >[!NOTE]
-> THe preferred method is to use the [Power Platform CLI](#transfer-portal-configuration-using-power-platform-cli) to transfer portal metadata.
+> The preferred method is to use the [Power Platform CLI](#transfer-portal-configuration-using-power-platform-cli) to transfer portal metadata.
 
 To export configuration data, you would need to use the Configuration Migration tool and a portal-specific configuration schema file. For more information about this tool, see [Manage configuration data](/dynamics365/customer-engagement/admin/manage-configuration-data).
 
@@ -244,9 +244,9 @@ You can export portal configuration data from a source system by using portal-sp
 
 If the migration process is updating an existing portal, the updates should now be visible in the target environment. If the migration is for a new portal, you can now create the new portal for the imported website record by using the option **Use data from existing website record**. More information: [Create portal](../create-portal.md)
 
-## Tenant to tenant migration
+## Tenant-to-tenant migration
 
-Power Apps portals doesn't support tenant to tenant migration. To migrate a portal from one tenant to another, you must follow these steps:
+Power Apps portals doesn't support tenant-to-tenant migration. To migrate a portal from one tenant to another, you must follow these steps:
 
 1. [Reset](reset-portal.md) your portal in the source tenant.
 
@@ -258,8 +258,8 @@ Power Apps portals doesn't support tenant to tenant migration. To migrate a port
 
 - [Track changes to Power Apps portals configuration](../faq.yml#how-do-i-track-changes-to-power-apps-portals-configuration-).
 - [Portals support for Microsoft Power Platform CLI](../power-apps-cli.md).
-- Tenant to tenant migration of a [Power Platform environment](/power-platform/admin/move-environment-tenant).
-- Tenant to tenant migration of [model-driven apps](/dynamics365/admin/move-instance-tenant) in Dynamics 365 such as Sales, Customer Service, Marketing, Field Service, and Project Service Automation.
+- Tenant-to-tenant migration of a [Power Platform environment](/power-platform/admin/move-environment-tenant).
+- Tenant-to-tenant migration of [model-driven apps](/dynamics365/admin/move-instance-tenant) in Dynamics 365 such as Sales, Customer Service, Marketing, Field Service, and Project Service Automation.
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
