@@ -188,12 +188,12 @@ A simple scenario to demonstrate how to use a secret obtained from Azure Key Vau
 1. Select **...** > **Settings** to display the **GetSecret** action settings.
 1. Enable the **Secure Outputs** option in the settings, and then select **Done**. This is to prevent the output of the action getting exposed in the flow run history.
 
-   :::image type="content" source="media/env-var-secret5.png" alt-text=Enable secure outputs setting for the action":::
+   :::image type="content" source="media/env-var-secret5.png" alt-text="Enable secure outputs setting for the action":::
 1. Select **New step**, search and select the **HTTP** connector.
 1. Select the **Method** as **GET** and enter the URI of the service.
 1. Select the authentication as **Basic**, and enter the username. The password value is added as an expression `body('GetSecret')['EnvironmentVariableSecretValue']` to use the secret value retrieved from the previous action.
 
-   :::image type="content" source="media/env-var-secret6.png" alt-text=Create a new step using the HTTP connector":::
+   :::image type="content" source="media/env-var-secret6.png" alt-text="Create a new step using the HTTP connector":::
 1. Select **Save** to create the flow.
 1. Manually run the flow to test it.
 
