@@ -172,6 +172,34 @@ Once Azure Key Vault is configured and you have a secret registered in your vaul
 >
 > **This variable didn't save properly. User is not authorized to read secrets from 'Azure Key Vault path'.**
 
+### Create a Power Automate flow to test the environment variable secret
+
+A simple scenario to demonstrate how to use a secret obtained from Azure Key Vault is to create a Power Automate flow to use the secret to authenticate against a web service. 
+
+1.	Sign into [PowerApps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Solutions**, and then open the unmanaged solution you want.
+1. Select **New** > **Automation** > **Cloud flow** > **Instant**.
+1. Select **Manually trigger a flow** and then select **Create**.
+1.	Select **New step**, select the **Microsoft Dataverse** connector, and then on the **Actions** tab select **Perform an unbound action**.
+1.	Select the action named **RetrieveEnvironmentVariableSecretValue** from the dropdown list.
+1. Provide the environment variable name added in the previous section, for this example *new_TestSecret* is used.
+1. Select **...** > **Rename** to rename the action so that it can be more easily referred in subsequent actions. In the below screenshot, it has been renamed to **GetSecret**.
+
+   :::image type="content" source="media/env-var-secret4.png" alt-text="Instant flow configuration for testing an environment variable secret":::
+1. Select **...** > **Settings** to display the **GetSecret** action settings.
+1. Enable the **Secure Outputs** option in the settings, and then select **Done**. This is to prevent the output of the action getting exposed in the flow run history.
+
+   :::image type="content" source="media/env-var-secret5.png" alt-text=Enable secure outputs setting for the action":::
+1. Select **New step**, search and select the **HTTP** connector.
+1. Select the **Method** as **GET** and enter the URI of the service.
+1. Select the authentication as **Basic**, and enter the username. The password value is added as an expression `body('GetSecret')['EnvironmentVariableSecretValue']` to use the secret value retrieved from the previous action.
+
+   :::image type="content" source="media/env-var-secret6.png" alt-text=Create a new step using the HTTP connector":::
+1. Select **Save** to create the flow.
+1. Manually run the flow to test it.
+
+Using the run history of the flow, the outputs can be verified.
+
+:::image type="content" source="media/env-var-secret7.png" alt-text="Flow output":::
 
 ## Current limitations
 
@@ -181,9 +209,6 @@ Once Azure Key Vault is configured and you have a secret registered in your vaul
 - Validation of environment variable values happens within the user interfaces and within the components that use them, but not within Dataverse. Therefore ensure proper values are set if they're being modified through code. 
 - [Power Platform Build Tools tasks](/power-platform/alm/devops-build-tool-tasks) are not yet available for managing data source environment variables. However, this does not block their usage within Microsoft provided tooling and within source control systems.
 - Interacting with environment variables via custom code requires an API call to fetch the values; there is not a cache exposed for 3rd party code to leverage. 
-<!--  Azure Key Vault integration for secret management. While on our roadmap, currently environment variables shouldn't be used to store secure data such as passwords and keys.
- -->
-
 - When editing a cloud flow, the environment variables shown in the dynamic content selector are unfiltered, but will be filtered by data type in the future. 
 - When editing a cloud flow, if an environment variable is added in another browser tab, the flow needs to be reopened in the flow designer to refresh the dynamic content selector.
 
