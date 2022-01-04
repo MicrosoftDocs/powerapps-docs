@@ -77,7 +77,7 @@ Examples of choices for *sample\_outdooractivities* values are shown in the foll
 | 8         | Skiing            |
 | 9         | Camping           |
 
-Examples of contact table values are shown in the following table.<!--note from editor: Is it okay that "fullname" isn't used in the fetchXML or entity view examples?-->
+Examples of contact table values are shown in the following table.
 
 | **'fullname' column** | **'Sample\_outdooractivities' column** |
 |-----------------------|----------------------------------------|
