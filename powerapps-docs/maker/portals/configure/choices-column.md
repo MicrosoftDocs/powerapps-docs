@@ -37,7 +37,7 @@ To enable choices controls on forms in your portal, you need to create a new [si
 
 ## Basic forms and advanced forms
 
-You can design a [basic form](entity-forms.md) or an [advanced form](web-form-properties.md) step in the portal website by using a Dataverse form that has a choices column to support the selection of multiple options. Portal users can insert, modify, or clear the selection.<!--note from editor: The animated GIF needs a long description that describes it for a reader with low vision - below I've taken a stab at it. By the way, there doesn't seem to be a pause after the page is loaded, so the image immediately begins its animation. The Docs Contributor Guide says "Animated GIFs require a pause before autoplay.This pause capability is in place on docs.microsoft.com. Writers should make sure the pause is working after their article is published." But I don't know how you can fix this. Maybe Vivek knows?-->
+You can design a [basic form](entity-forms.md) or an [advanced form](web-form-properties.md) step in the portal website by using a Dataverse form that has a choices column to support the selection of multiple options. Portal users can insert, modify, or clear the selection.
 
 :::image type="complex" source="media/choices-column/choices-form.gif" alt-text="Choices column on a form.":::
 Screen showing a list of outdoor activities being created. The user expands the Select or search options box and selects some activities from the list that appears. The selected activities appear at the top of the window. The user enters the letters C a m in the box, and then selects the option Camping when it appears. At the top of the window in the list of activities, the user selects the Close button next to one of the options to deselect it.
@@ -45,7 +45,7 @@ Screen showing a list of outdoor activities being created. The user expands the 
 
 ## List
 
-You can define a choices column in a Dataverse view to display the multiple options that are available<!--note from editor: Suggested.--> for the record in a list. The choices column supports quick search when a user enters a keyword to filter the list.<!--note from editor: Is this what "by typing a keyword" meant here? Seemed to be a misplaced modifier. Also, can you verify that the names in the following image are either part of sample data or allowed on our team's fictitious names list? If they are, I'll make a note so I don't keep asking this question.-->
+You can define a choices column in a Dataverse view to display the multiple options that are available for the record in a list. The choices column supports quick search by typing a keyword to filter the list.
 
 :::image type="content" source="media/choices-column/choices-list.png" alt-text="Choices column on a list.":::
 
