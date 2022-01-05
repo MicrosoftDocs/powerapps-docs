@@ -178,7 +178,7 @@ A simple scenario to demonstrate how to use a secret obtained from Azure Key Vau
 
 1.	Sign into [PowerApps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Solutions**, and then open the unmanaged solution you want.
 1. Select **New** > **Automation** > **Cloud flow** > **Instant**.
-1. Select **Manually trigger a flow** and then select **Create**.
+1. Enter a name for the flow, select **Manually trigger a flow**, and then select **Create**.
 1.	Select **New step**, select the **Microsoft Dataverse** connector, and then on the **Actions** tab select **Perform an unbound action**.
 1.	Select the action named **RetrieveEnvironmentVariableSecretValue** from the dropdown list.
 1. Provide the environment variable name added in the previous section, for this example *new_TestSecret* is used.
