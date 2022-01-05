@@ -1,6 +1,6 @@
 ---
 title: parseDateFromInput | Microsoft Docs
-description: Returns parsed string as Date.
+description: Returns parsed string as date.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
