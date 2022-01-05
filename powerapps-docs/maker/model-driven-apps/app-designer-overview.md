@@ -69,6 +69,7 @@ From the **Navigation** pane, select **Navigation bar** to set the following opt
 1. **Show Recent**. Enabled by default. When selected, displays the recently viewed pages link. Selecting the link displays all recently viewed pages.
 1. **Show Pinned**. Enabled by default. When selected, displays the pages that have been pinned. App users select the push-pin icon next to a record listed under **Recent** to add it to their pinned rows.
 1. **Enable collapsible groups**. Disabled by default. When selected, subareas displayed under groups in the site map can be expanded or collapsed.
+1. **Enable Areas**. Disabled by default. When selected, new areas can be added to the app. For apps with existing multiple areas, this setting is enabled by default. You can't disable this setting while the app has multiple areas.
 
    :::image type="content" source="media/navigation-pane-options.png" alt-text="Options available for app navigation":::
 
@@ -78,7 +79,6 @@ From the **Navigation** pane, select **Navigation bar** to set the following opt
    - URLs
    - Business process flows
    - Charts
-- You can’t add more than one area to the app’s navigation.
 - You can’t change the app’s icon.
 - You can’t specify the app’s URL.
 

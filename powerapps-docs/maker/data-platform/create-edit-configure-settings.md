@@ -25,6 +25,7 @@ Settings are solution components that enable makers and administrators to quickl
   > [!IMPORTANT]
   > - This is a preview feature and may not be available in all regions.
   > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
+  > - This feature is currently available for model-driven apps only.
 
 Settings are made up of three subcomponents: Setting definition, setting environment value, and setting app value.
 

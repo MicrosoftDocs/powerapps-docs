@@ -110,8 +110,8 @@ Comments are commonly questions, feedback, or ideas that are important context t
 
 ## Next steps
 
+- [Add areas, groups, and subareas for app navigation](app-navigation.md)
 - [Create, add and remove forms, views or dashboards](create-add-remove-forms-views-dashboards.md)
 - [Create and remove pages](create-remove-pages.md)
-- [Overview of the model-driven app designer](app-designer-overview.md)
 - [Configure app properties (Preview)](app-properties.md)
 - [Configure app properties](manage-app-properties.md)
