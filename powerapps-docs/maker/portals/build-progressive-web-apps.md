@@ -182,7 +182,7 @@ The PWA capability for portals uses the following configurations that you can up
 
 ### See also
 
-[Overview of portals as progressive web apps](progressive-web-apps.md)
+[Overview of portals as progressive web apps](progressive-web-apps.md)</br>
 [Overview of Progressive Web Apps (PWAs)](/microsoft-edge/progressive-web-apps-chromium/)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
