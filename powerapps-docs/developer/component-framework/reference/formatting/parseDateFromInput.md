@@ -27,9 +27,9 @@ Model-driven and canvas apps
 
 ## Parameters
 
-| Parameter Name | Type                                           | Required | Description                                                   |
-| -------------- | ---------------------------------------------- | -------- | ------------------------------------------------------------- |
-| input          | `string`                                       | Yes      | User input.                                                   |
+| Parameter Name | Type                                           | Required | Description   |
+| -------------- | ------------------ | -------- | ------------------------------- |
+| input          | `string`                                       | Yes      | User input.  |
 | behavior       | [`ControlAttributes`](../Controlattributes.md) | Yes      | `controlAttributes` control attributes used by the formatter. |
 
 ## Return Value
