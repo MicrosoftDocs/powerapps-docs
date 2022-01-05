@@ -1,1 +1,1 @@
-Returns parsed string as Date.
+Returns parsed string as date.
