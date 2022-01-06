@@ -39,6 +39,7 @@ Model-driven and canvas apps
 | [formatUTCDateTimeToUserDate](formatting/formatUTCDateTimeToUserDate.md)     | [!INCLUDE [formatUTCDateTimeToUserDate-description](formatting/includes/formatUTCDateTimeToUserDate-description.md)]     |
 | [formatTime](formatting/formattime.md)                                       | [!INCLUDE [formattime-description](formatting/includes/formattime-description.md)]                                       |
 | [getWeekOfYear](formatting/getweekofyear.md)                                 | [!INCLUDE [getweekofyear-description](formatting/includes/getweekofyear-description.md)]                                 |
+| [parseDateFromInput](formatting/parseDateFromInput.md)                       | [!INCLUDE [parseDateFromInput-description](formatting/includes/parseDateFromInput-description.md)]                       |
 
 ## Example
 
