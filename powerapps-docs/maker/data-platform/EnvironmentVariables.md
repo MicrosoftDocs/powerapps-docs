@@ -158,13 +158,14 @@ To use Azure Key Vault secrets with Power Platform, the Azure subscription that 
 
 ### Create a new environment variable for the Key Vault secret
 
-Once Azure Key Vault is configured and you have a secret registered in your vault, you can now go back to reference it within Power Apps using an environment variable.
+Once Azure Key Vault is configured and you have a secret registered in your vault, you can now reference it within Power Apps using an environment variable.
 
-1.	In the **Solutions** area in Power Apps (make.powerapps.com), open your unmanaged solution you're using for development and select **New** > **Environment variable**.
+1.	Sign on to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and in the **Solutions** area, open the unmanaged solution you're using for development.
+1. Select **New** > **Environment variable**.
 1.	Enter a **Display name** and optionally, a **Description** for the environment variable.
 1. Select the **Data Type** as **Secret** and **Secret Store** as **Azure Key Vault**.
 1. Choose from the following options:
-   - Leave all additional fields blank and select **Save** to save only an environment variable *definition* record that doesn't include any secret reference or default demarcation values.
+   - Leave all additional fields blank and select **Save** to save only an environment variable *definition* record that doesn't include any secret reference or default demarcation values. When you select this option you don't need to continue to the next steps.
    - Select **New Azure Key Vault value reference**. After the information is added in the next step and saved, an environment variable *value* record is created.
    - Expand **Show default value**, to display the fields to create a **Default Azure Key Vault secret**. After the information is added in the next step and saved, the default value demarcation is added to the environment variable *definition* record.
 1. Enter the following information:
@@ -181,7 +182,7 @@ Once Azure Key Vault is configured and you have a secret registered in your vaul
 > [!NOTE]
 > User access validation for the secret is performed in the background. If the user doesn’t have at least read permission, this validation error is displayed.
 >
-> **This variable didn't save properly. User is not authorized to read secrets from 'Azure Key Vault path'.**
+>     **This variable didn't save properly. User is not authorized to read secrets from 'Azure Key Vault path'.**
 > 
 > Currently, Azure Key Vault is the only secret store that is supported with environment variables.
 
@@ -198,7 +199,7 @@ A simple scenario to demonstrate how to use a secret obtained from Azure Key Vau
 1.	Select **New step**, select the **Microsoft Dataverse** connector, and then on the **Actions** tab select **Perform an unbound action**.
 1.	Select the action named **RetrieveEnvironmentVariableSecretValue** from the dropdown list.
 1. Provide the environment variable unique name (not the display name) added in the previous section, for this example *new_TestSecret* is used.
-1. Select **...** > **Rename** to rename the action so that it can be more easily referred in subsequent actions. In the below screenshot, it has been renamed to **GetSecret**.
+1. Select **...** > **Rename** to rename the action so that it can be more easily referenced in the next action. In the below screenshot, it has been renamed to **GetSecret**.
 
    :::image type="content" source="media/env-var-secret4.png" alt-text="Instant flow configuration for testing an environment variable secret":::
 1. Select **...** > **Settings** to display the **GetSecret** action settings.
