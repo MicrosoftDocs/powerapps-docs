@@ -2,7 +2,7 @@
 title: "Use connection strings in XRM tooling to connect to Microsoft Dataverse (Dataverse)| Microsoft Docs"
 description: "XRM tooling enables you to connect to your Microsoft Dataverse environment by using connection strings"
 ms.custom: ""
-ms.date: 11/13/2019
+ms.date: 1/6/2022
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -60,7 +60,7 @@ CrmServiceClient svc = new CrmServiceClient(ConnectionString);
 |`UserName`, `User Name`, `UserId`, or `User Id`|Specifies the user's identification name associated with the credentials.|  
 |`Password`|Specifies the password for the user name associated with the credentials.|  
 |`HomeRealmUri` or `Home Realm Uri`|Specifies the Home Realm Uri.|  
-|`AuthenticationType` or `AuthType`|Specifies the authentication type to connect to Dataverse environment. Valid values are: `AD`, `IFD` (AD FS enabled), `OAuth`, `Certificate`, `ClientSecret`, or `Office365`. However,  only `OAuth`, `Certificate`, `ClientSecret` and `Office365` are permitted values for Dataverse environments.|  
+|`AuthenticationType` or `AuthType`|Specifies the authentication type to connect to Dataverse environment. Valid values are: `AD`, `IFD` (AD FS enabled), `OAuth`, `Certificate`, `ClientSecret`, or `Office365`. However,  only `OAuth`, `Certificate`, `ClientSecret` and `Office365` are permitted values for Dataverse environments.<br/><br/>**NOTE**: `Office365` authentication type is deprecated, and we recommend to use `OAuth` as the preferred authentication type. More information: [What should I do to fix my application code if affected?](/powerapps/developer/data-platform/authenticate-office365-deprecation#what-should-i-do-to-fix-my-application-code-if-affected)|  
 |`RequireNewInstance`|Specifies whether to reuse an existing connection if recalled while the connection is still active. If set to `true`, will force the system to create a unique connection. If set to `false` the existing connection can be reused.|  
 |`ClientId`, `AppId` or `ApplicationId`|Specifies the `ClientID` assigned when you registered your application in Azure Active Directory or Active Directory Federation Services (AD FS).|
 |`ClientSecret` or `Secret` |Required when Auth Type is set to `ClientSecret`. Client Secret string to use for authentication.|
@@ -86,7 +86,10 @@ The following examples show how you can use connection strings for connecting to
 
 ### Named account using Office365  
 
-Create a new connection to Dataverse using a UserName or Password via Office365. This `AuthType` is deprecated and we recommend to use `OAuth` as the preferred authentication type. More information: [Authenticate using Office365](/power-platform/important-changes-coming#deprecation-of-office365-authentication-type-and-organizationserviceproxy-class-for-connecting-to-dataverse)
+Create a new connection to Dataverse using a UserName or Password via Office365. 
+
+> [!NOTE]
+> This `AuthType` is deprecated and we recommend to use `OAuth` as the preferred authentication type. More information: [Authenticate using Office365](/power-platform/important-changes-coming#deprecation-of-office365-authentication-type-and-organizationserviceproxy-class-for-connecting-to-dataverse)
 
 ```xml
 <add name="MyCDSServer" 
