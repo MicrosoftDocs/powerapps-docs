@@ -131,9 +131,7 @@ Ensure environment variable names are unique so they can be referenced accuratel
 The names **$authentication** and **$connection** are specially reserved parameters for flows and should be avoided. Flow save will be blocked if environment variables with those names are used.
 If an environment variable is used in a flow and the display name of the environment variable is changed, then the designer will show both the old and new display name tokens to help with identification. When updating the flow, it is recommended to remove the environment variable reference and add it again.
 
-## Use Azure Key Vault secrets (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+## Use Azure Key Vault secrets
 
 Environment variables allow for referencing secrets stored in Azure Key Vault. These secrets are then made available for use with Power Platform components, such as Power Automate and custom connectors.  The actual secrets are only stored in Azure Key Vault and the environment variable simply references the secrets.  Using Azure Key Vault secrets with environment variables require that you configure Azure Key Vault so that Power Platform can read the specific secrets you want to reference.
 
@@ -208,7 +206,7 @@ A simple scenario to demonstrate how to use a secret obtained from Azure Key Vau
 
    :::image type="content" source="media/env-var-secret5.png" alt-text="Enable secure outputs setting for the action":::
 1. Select **New step**, search and select the **HTTP** connector.
-1. Select the **Method** as **GET** and enter the **URI** for the web service. In this screenshot, the fictitious web service *httpbin.org* is used as an example.
+1. Select the **Method** as **GET** and enter the **URI** for the web service. In this example, the fictitious web service *httpbin.org* is used.
 1. Select **Show advanced options**, select the **Authentication** as **Basic**, and then enter the **Username**.
 1. Select the **Password** field, and then on the **Dynamic content** tab under the flow step name above (*GetSecret* in this example) select **RetrieveEnvironmentVariableSecretValueResponse EnvironmentVariableSecretValue**, which is then added as an expression `outputs('GetSecretTest')?['body/EnvironmentVariableSecretValue']` or `body('GetSecretTest')['EnvironmentVariableSecretValue']`.
 
