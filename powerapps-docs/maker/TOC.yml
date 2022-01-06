@@ -428,7 +428,7 @@
             - name: Add picture
               href: ./canvas-apps/controls/control-add-picture.md
             - name: Address input
-              href: ./canvas-apps/geospatial-component-input-address.md.md
+              href: ./canvas-apps/geospatial-component-input-address.md
             - name: Attachments
               href: ./canvas-apps/controls/control-attachments.md
             - name: Audio
@@ -520,11 +520,11 @@
             - name: Video
               href: ./canvas-apps/controls/control-audio-video.md
             - name: View in 3D
-              href: ./canvas-apps/controls/mixed-reality-component-view-3d.md
+              href: ./canvas-apps/mixed-reality-component-view-3d.md
             - name: View in MR
-              href: ./canvas-apps/controls/mixed-reality-component-view-mr.md
+              href: ./canvas-apps/mixed-reality-component-view-mr.md
             - name: View shape in MR
-              href: ./canvas-apps/controls/mixed-reality-component-view-shape.md
+              href: ./canvas-apps/mixed-reality-component-view-shape.md
             - name: Web barcode scanner (experimental)
               href: ./canvas-apps/controls/control-barcodescanner.md
           - name: Common properties
