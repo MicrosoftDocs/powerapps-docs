@@ -26,7 +26,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Add picture](controls/control-add-picture.md)** – Load images from the local device, for upload to a data source.
 
-**[Address input](geospatial-component-input-address.md)** - Allows you to see dynamic address suggestions as you type.
+**[Address input](geospatial-component-input-address.md)** - See dynamic address suggestions as you type.
 
 **[Attachments](controls/control-attachments.md)** – Download and upload files from the local device to a data source.
 
@@ -78,9 +78,9 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[List box](controls/control-list-box.md)** – Select one or more items in a list.
 
-**[Map](geospatial-component-map.md)** - Brings dynamic mapping capabilities into your canvas apps by viewing the physical position of objects from a data source, or by inputting new physical locations.
+**[Map](geospatial-component-map.md)** - View the physical position of objects from a data source, or by inputting new physical locations.
 
-**[Measure in MR](mixed-reality-component-measure-distance.md)** - Allows you to measure distance, area, and volume in mixed reality.
+**[Measure in MR](mixed-reality-component-measure-distance.md)** - Measure distance, area, and volume in mixed reality.
 
 **[Microphone](controls/control-microphone.md)** – Record and save sounds in the app or to a data source.
 
@@ -116,11 +116,11 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Video](controls/control-audio-video.md)** – Play a video clip from a local file, a data source, or YouTube.
 
-**[View in 3D](mixed-reality-component-view-3d.md)** - Rrotate and zoom into the model with simple gestures in 3D.
+**[View in 3D](mixed-reality-component-view-3d.md)** - Rotate and zoom into the model with simple gestures in 3D.
 
-**[View in MR](mixed-reality-component-view-mr.md)** - Allows you to see how a particular item might fit within a specified space in mixed reality.
+**[View in MR](mixed-reality-component-view-mr.md)** - See how a particular item might fit within a specified space in mixed reality.
 
-**[View shape in MR](mixed-reality-component-view-shape.md)** - Allows you to see if a simple cube might fit within a specified space in mixed reality.
+**[View shape in MR](mixed-reality-component-view-shape.md)** - See if a simple cube might fit within a specified space in mixed reality.
 
 **[Web barcode scanner (experimental)](controls/control-barcodescanner.md)** – The legacy barcode scanner, which is obsolete but might be useful for scanning codes in a web browser.
 
