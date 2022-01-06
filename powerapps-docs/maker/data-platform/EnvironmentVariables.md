@@ -199,7 +199,7 @@ A simple scenario to demonstrate how to use a secret obtained from Azure Key Vau
 1. Enter a name for the flow, select **Manually trigger a flow**, and then select **Create**.
 1.	Select **New step**, select the **Microsoft Dataverse** connector, and then on the **Actions** tab select **Perform an unbound action**.
 1.	Select the action named **RetrieveEnvironmentVariableSecretValue** from the dropdown list.
-1. Provide the environment variable name added in the previous section, for this example *new_TestSecret* is used.
+1. Provide the environment variable unique name (not the display name) added in the previous section, for this example *new_TestSecret* is used.
 1. Select **...** > **Rename** to rename the action so that it can be more easily referred in subsequent actions. In the below screenshot, it has been renamed to **GetSecret**.
 
    :::image type="content" source="media/env-var-secret4.png" alt-text="Instant flow configuration for testing an environment variable secret":::
@@ -208,8 +208,9 @@ A simple scenario to demonstrate how to use a secret obtained from Azure Key Vau
 
    :::image type="content" source="media/env-var-secret5.png" alt-text="Enable secure outputs setting for the action":::
 1. Select **New step**, search and select the **HTTP** connector.
-1. Select the **Method** as **GET** and enter the URI of the web service. In this screenshot, the fictitious web service *httpbin.org* is used as an example.
-1. Select the authentication as **Basic**, and enter the username. The password value is added as an expression `body('GetSecret')['EnvironmentVariableSecretValue']` to use the secret value retrieved from the previous action.
+1. Select the **Method** as **GET** and enter the **URI** for the web service. In this screenshot, the fictitious web service *httpbin.org* is used as an example.
+1. Select **Show advanced options**, select the **Authentication** as **Basic**, and then enter the **Username**.
+1. Select the **Password** field, and then on the **Dynamic content** tab under the flow step name above (*GetSecret* in this example) select **RetrieveEnvironmentVariableSecretValueResponse EnvironmentVariableSecretValue**, which is then added as an expression `outputs('GetSecretTest')?['body/EnvironmentVariableSecretValue']` or `body('GetSecretTest')['EnvironmentVariableSecretValue']`.
 
    :::image type="content" source="media/env-var-secret6.png" alt-text="Create a new step using the HTTP connector":::
 1. Select **Save** to create the flow.
