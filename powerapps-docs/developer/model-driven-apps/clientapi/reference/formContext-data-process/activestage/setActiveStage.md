@@ -1,7 +1,7 @@
 ---
 title: "setActiveStage (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Sets a completed stage as the active stage.
-ms.date: 04/15/2021
+ms.date: 09/10/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -71,6 +71,10 @@ search.app:
 <tr>
 <td>dirtyForm</td>
 <td>This value will be returned if the data in the page is not saved.</td>
+</tr>
+<tr>
+<td>preventDefault</td>
+<td>This value will be returned if an `OnPreStageChange` event handler invokes preventDefault.</td>
 </tr>
 </table>
 </td>

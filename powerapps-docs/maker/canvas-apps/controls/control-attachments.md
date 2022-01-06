@@ -5,7 +5,7 @@ author: chmoncay
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.date: 07/06/2021
+ms.date: 08/06/2021
 ms.subservice: canvas-maker
 ms.author: chmoncay
 ms.reviewer: tapanm
@@ -37,7 +37,7 @@ An **Attachments** control lets you open, add, and delete files from a SharePoin
 
 **MaxAttachments** – The maximum number of files the control will accept.
 
-**MaxAttachmentSize** – The maximum allowed file size in MB of each new attachment.  Currently there is a limit of 50 MB.
+**MaxAttachmentSize** – The maximum allowed file size in MB of each new attachment.
 
 **OnAddFile** – Actions to perform when the user adds a new file attachment.
 

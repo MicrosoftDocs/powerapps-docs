@@ -98,14 +98,14 @@ When working with a multi-language app, the first step is to create a reusable c
                 Language: "en-us",
                 Labels: {
                     Title: "UI Tips for building canvas apps",
-                    JobTitle: "Power Platform Specialist",
+                    JobTitle: "Power Platform Specialist"
                 }
             },
             {
                 Language: "pt-br",
                 Labels: {
                     Title: "Dicas de UI para construir canvas apps",
-                    JobTitle: "Especialista de Power Platform",
+                    JobTitle: "Especialista de Power Platform"
                 }
             }
         )
@@ -120,7 +120,7 @@ When working with a multi-language app, the first step is to create a reusable c
 
     ![Labels property for the component.](media/multi-language-apps/labels.png "Labels property for the component")
 
-1. Copy and pate the following formula in the formula bar for the **OnReset** property.
+1. Copy and pate the following formula in the formula bar for the **Labels** property.
 
     ```powerapps-dot
        LookUp(

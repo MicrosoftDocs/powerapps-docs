@@ -29,6 +29,10 @@ TDS (SQL) endpoint applications support for Power BI and SQL Server Management S
 
 ### SQL Server Management Studio (Preview)
 
+> [!NOTE]
+> A compatibility issue has been found with the SQL Server Management Studio 18.9.2 build. A fix is being investigated. Until the fix is available please use build [18.9.1 of SQL Server Management Studio](/sql/ssms/release-notes-ssms?view=sql-server-ver15#1891).
+> This note will be updated once a fix is available.
+
 You can also use [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms) (SSMS) version 18.4 or later with the Dataverse endpoint SQL connection. Examples of using SSMS with the SQL data connection are provided below.
 
 ![Expanded account table.](media/ssms-table-expanded.PNG)
@@ -71,8 +75,7 @@ You can use the **Analyze in Power BI** option (**Data** > **Tables** > **Analyz
 
 Any operation that attempts to modify data (that is, INSERT, UPDATE) will not work with this read-only SQL data connection. For a detailed list of supported SQL operations on the Dataverse endpoint, see [How Dataverse SQL differs from Transact-SQL](how-dataverse-sql-differs-from-transact-sql.md).
 
-The following Dataverse datatypes are not supported with the SQL connection: `binary`, `image`,
-`ntext`, `sql_variant`, `varbinary`, `virtual`, `HierarchyId`, `managedproperty`, `file`, `xml`, `partylist`, `timestamp`, `choices`.
+The following Dataverse datatypes are not supported with the SQL connection: `binary`, `image`, `sql_variant`, `varbinary`, `virtual`, `HierarchyId`, `managedproperty`, `file`, `xml`, `partylist`, `timestamp`, `choices`.
 
 > [!TIP]
 > `partylist` attributes can instead be queried by joining to the `activityparty` table as shown below.
@@ -95,6 +98,9 @@ Dataverse choice columns are represented as \<choice\>Name and \<choice\>Label i
 ## Limitations
 
 There is an 80-MB maximum size limit for query results returned from the Dataverse endpoint. Consider using data integration tools such as [Azure Synapse Link for Dataverse](../../maker/data-platform/export-to-data-lake.md) and [dataflows](/power-bi/transform-model/dataflows/dataflows-introduction-self-service) for large data queries that return over 80 MB of data. More information: [Importing and exporting data](../../maker/data-platform/import-export-data.md)
+
+> [!TIP]
+> To help keep the size of the returned data within acceptable limits, use as few multi-line text columns and choice columns as possible.
 
 Dates returned in query results are formatted as Universal Time Coordinated (UTC). Previously, dates were returned in local time.
 
@@ -137,9 +143,16 @@ A blocked port error may look something like the following.
 
 ![Error message.](media/TDS-SQL-blocked-port-error.png)
 
-The solution is to verify the TCP ports 1433 or 5558 from the client are unblocked. One possible method to do that is described below.
+The solution is to verify the TCP ports 1433 or 5558 from the client are unblocked. Use one of the following methods to do that is described below.
 
-#### Establish a telnet session to the TDS service listener
+#### Use PowerShell to validate connection with TDS endpoint
+
+1. Open a PowerShell command window.
+2. Run the Test-connection command. <br> `Test-NetConnection -ComputerName <environment>.crm.dynamics.com -port 1433`
+
+If the connection is successful a line "TcpTestSucceeded : True" will be returned.
+
+#### Establish a telnet session to the TDS endpoint
 
 1. On a Microsoft Windows computer, install/enable telnet.
     1. Choose **Start**.
@@ -152,7 +165,7 @@ The solution is to verify the TCP ports 1433 or 5558 from the client are unblock
 
 If the connection is successful, you will be in an active telnet session. If unsuccessful, you will receive the error:
 
-“Connecting to <environmentname>.crm.dynamics.com… Could not open connection to the host, on port 1433: connect failed”. 
+“Connecting to \<environmentname>.crm.dynamics.com… Could not open connection to the host, on port 1433: connect failed”. 
 
 This means the port has been blocked at the client.
 

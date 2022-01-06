@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 09/25/2020
+ms.date: 10/15/2021
 ms.subservice: mobile
 ms.author: mkaur
 ms.custom: ""
@@ -18,9 +18,9 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# User guide for model-driven apps running on Power Apps mobile
+# Use model-driven apps on Power Apps mobile
 
-Use Power Apps mobile to run model-driven apps on your mobile device. For more information about how to install and get started with an app, see [Run model-driven apps and canvas apps on Power Apps mobile](run-powerapps-on-mobile.md).
+Use Power Apps mobile to run model-driven apps on your mobile device. For more information about how to install and get started with an app, see [Get started with Power Apps mobile](run-powerapps-on-mobile.md).
 
 > [!IMPORTANT]
 > Model-driven apps for Dynamics 365 Sales, Dynamics 365 Customer Service, and Dynamics 365 Field Service don't run in Power Apps mobile. Instead, you use the Dynamics 365 for phones and tablets app. For more information, see [User Guide for Dynamics 365 for phones and tablets](/dynamics365/mobile-app/user-guide-mobile-app).
@@ -42,6 +42,7 @@ Legend:
 
 From the Home screen, select the site map ![Site map icon.](media/pa_mobile_sitemap_icon.png "Site map icon") to access tables, favorite or most-used rows, other apps, and settings.
 
+Your site map might look different if your app maker has customized the navigation bar to show or hide the **Home**, **Recent**, **Pinned** buttons in the site map. An app maker can also make groups collapsible. For more information, see [Hide or show the Home, Pinned, Recent, and collapsible groups](../user/navigation.md#hide-or-show-the-home-pinned-recent-and-collapsible-groups).
  
    > [!div class="mx-imgBorder"]
    > ![Site map screen.](media/go_to_sitemap_iphone.gif "This image demonstrates how to get to the site map screen")
@@ -49,6 +50,7 @@ From the Home screen, select the site map ![Site map icon.](media/pa_mobile_site
 
 
 The following illustration shows the primary navigation elements on the site map screen. 
+
 
 ![Site map and navigation.](media/site_map_iphone.png "Site map and navigation")
 

@@ -5,12 +5,12 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2020
+ms.date: 10/04/2020
 ms.subservice: portals
 ms.author: sandhan
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
-    - tapanm-msft
+    - nickdoelman
     - sandhangitmsft
 ---
 
@@ -38,7 +38,7 @@ When you search for a term, the search results also include attachments. If the 
 ![Download attachment.](../media/search-attachment-content.png "Download attachment") 
 
 > [!NOTE]
-> - To use this functionality, you must [enable relevance search](/dynamics365/customer-engagement/admin/configure-relevance-search-organization). More information: [Relevance search](/dynamics365/customer-engagement/basics/relevance-search-results)
+> [Dataverse search](/power-platform/admin/configure-relevance-search-organization) must be enabled in your environment to use this functionality.
  
 ## Update portal configurations
 

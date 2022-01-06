@@ -286,7 +286,7 @@ The following screenshot shows the Entity Relationship Diagram in the Model view
 
 ## Configure a Power BI report by using a Power BI template<a name="using-power-bi-template"></a>
 
-The Power BI template contains sample data and interactive graphics in a .pbix file format that you can further edit and update in Power BI Desktop. Download the template from [GitHub](https://github.com/microsoft/powerapps-tools/blob/master/Apps/CrisisFinancialImpactTracker/PBITemplate.pbix).
+The Power BI template contains sample data and interactive graphics in a .pbix file format that you can further edit and update in Power BI Desktop. Download the template as part of the overall solution from [GitHub](https://github.com/microsoft/powerapps-tools/blob/master/Apps/HigherEducationCrisisFinancialImpactTracker/HECFIT.zip).
 
 ### Open the Power BI template
 

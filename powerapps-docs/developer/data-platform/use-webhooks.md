@@ -1,6 +1,6 @@
 ---
-title: "Use WebHooks to create external handlers for server events (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn how to send data about events that occur on the server to a web application using WebHooks." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Use Webhooks to create external handlers for server events (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Learn how to send data about events that occur on the server to a web application using Webhooks." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: intro-internal
 ms.date: 03/21/2021
 ms.reviewer: "pehecke"
@@ -16,7 +16,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Use WebHooks to create external handlers for server events
+# Use Webhooks to create external handlers for server events
 
 With Microsoft Dataverse, you can send data about events that occur on the server to a web application using webhooks. Webhooks is a lightweight HTTP pattern for connecting Web APIs and services with a publish/subscribe model. Webhook senders notify receivers about events by making requests to receiver endpoints with some information about the events.
 
@@ -28,12 +28,12 @@ When deciding between the WebHook model and the Azure Service Bus integration, h
 - Webhooks can only scale to the point at which your hosted web service can handle the messages.
 - Webhooks enables synchronous and asynchronous steps. Azure Service Bus only allows for asynchronous steps.
 - Webhooks send POST requests with JSON payload and can be consumed by any programming language or web application hosted anywhere.
-- Both WebHooks and Azure Service Bus can be invoked from a plug-in or custom workflow activity.
+- Both Webhooks and Azure Service Bus can be invoked from a plug-in or custom workflow activity.
 
 
 ## Get Started
 
-There are three parts to using WebHooks:
+There are three parts to using Webhooks:
 
 - Creating or configuring a service to consume WebHook requests.
 - Registering WebHook step on the Dataverse service, or
@@ -54,7 +54,7 @@ When you have registered an example WebHook you can use a request logging site t
 
 Webhooks are simply a pattern that can be applied using a wide range of technologies. There are no required frameworks, platforms, or programming languages you must use. Use the skills and knowledge you have to deliver the appropriate solution.
 
-[Azure Functions](https://azure.microsoft.com/services/functions/) provide an excellent way to deliver a solution using WebHooks, but it is not a requirement. This section will not provide guidance towards a specific solution but will instead describe the data that will be passed to your service that will enable your service to add value.
+[Azure Functions](https://azure.microsoft.com/services/functions/) provide an excellent way to deliver a solution using Webhooks, but it is not a requirement. This section will not provide guidance towards a specific solution but will instead describe the data that will be passed to your service that will enable your service to add value.
 
 As demonstrated in [Test WebHook registration with request logging site](test-WebHook-registration.md), you can register a test WebHook step and use the request logging site to capture the specific kinds of data that your application can process.
 
@@ -343,11 +343,11 @@ The timeout is 60 seconds. Generally, if no response is returned before the time
 
 These errors indicate a networking issue that might be resolved with another attempt. The WebHook service will make one more attempt only when these error codes are returned.
 
-### Asynchronous WebHooks
+### Asynchronous Webhooks
 
 If your web hook is registered to run asynchronously, you can examine the System Job for details on the error. More information: [Query failed asynchronous jobs for a given step](register-web-hook.md#query-failed-asynchronous-jobs-for-a-given-step)
 
-### Synchronous WebHooks
+### Synchronous Webhooks
 
 [!INCLUDE [synchronous-WebHook-error](includes/synchronous-WebHook-error.md)]
 

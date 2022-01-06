@@ -2,7 +2,7 @@
 title: "Catalog and CatalogAssignment tables (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to use the Catalog and CatalogAssignment tables to expose events in your solution"
 ms.custom: ""
-ms.date: 07/22/2021
+ms.date: 10/31/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -30,8 +30,7 @@ The first level catalog must represent your solution. Use multiple second-level 
 For each second-level catalog that represents the categories within your solution, you will use the `CatalogAssignment` table to specify any Tables, Custom API, or Custom Process actions you want to be available as events.
 
 > [!IMPORTANT]
-> In order for people to use Catalogs and Catalog Assignments, they must be given read access to these these tables. Currently only the System Administrator has full access to the Catalog and Catalog Assignment tables.
-> You must grant **Read** access to the security roles assigned to any users who will need to use these tables. These tables are found within the **Custom Entities** tab when you edit a security role.
+> Users with the **Environment Maker** security role can view the Catalog data in the Power Automate Dataverse connector **When an action is performed** trigger. Other security roles must have an appropriate access level **Read** privilege to these these tables: **Custom API**, **Process**, **SDK Message**.
 > 
 > More information: 
 > - [Edit a security role](/power-platform/admin/create-edit-security-role#edit-a-security-role)
@@ -107,8 +106,10 @@ With this catalog, the following events will be available:
 Most tables will support **Create**, **Update**, and **Delete** events. There are some exceptions.
 User-owned tables will expose events for changes to sharing: **GrantAccess**, **ModifyAccess**, and **RevokeAccess**
 
-
-Any Custom API or Custom Process Actions, even if they are bound to a table, must be explicitly assigned.
+> [!NOTE]
+> Any Custom API or Custom Process Actions, that are bound to the table will also be included.
+> 
+> Custom Process Actions that are disabled will be shown, but the event will never occur until they are enabled and used.
 
 ## Create a Catalog in Power Apps
 
@@ -132,14 +133,6 @@ You should always create a catalog as part of a solution. Use the following inst
 
 1. Save and close the form.
 
-> [!IMPORTANT]
-> There is a known issue where the catalog will not be added to the solution. Until this is fixed, you must manually add the catalog to your solution.
-
-### Add a catalog to your solution
-
-1. While viewing your solution, click **Add existing**.
-1. Select the catalog you want to add, and click **Add**.
-
 
 ## Create a Catalog Assignment in Power Apps
 
@@ -160,14 +153,6 @@ Using the same solution that contains the catalog in [Power Apps](https://make.p
     > The catalog you select must be a second-level catalog representing a category.
 
 1. Save and close the form
-
-> [!IMPORTANT]
-> There is a known issue where the catalog assignment will not be added to the solution. Until this is fixed, you must manually add the catalog assignement to your solution.
-
-### Add a catalog assignment to your solution
-
-1. While viewing your solution, click **Add existing**.
-1. Select the catalog assignment you want to add, and click **Add**.
 
 ## Block customization of catalog items in your managed solution
 
@@ -584,7 +569,7 @@ The `catalogassignment` element includes these elements:
 
 ### See also  
 
-[Microsoft Dataverse business events (preview)](business-events.md)<br />
+[Microsoft Dataverse business events](business-events.md)<br />
 [Create an entity record using the Web API](webapi/create-entity-web-api.md)<br />
 [Retrieve an entity record using the Web API](webapi/retrieve-entity-using-web-api.md)<br />
 [Create entities using the Organization Service](org-service/entity-operations-create.md)<br />

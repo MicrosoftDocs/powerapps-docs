@@ -1,5 +1,5 @@
 ---
-title: Develop offline-capable canvas apps
+title: Develop offline-capable canvas apps (contains video)
 description: Learn about how to develop offline-capable canvas apps so that your users are productive whether they are online or offline.
 author: mustlaz
 ms.service: powerapps
@@ -30,6 +30,9 @@ Mobile users often need to be productive even when they have limited or no conne
 > Offline capability for canvas apps is only available while running the apps using [Power Apps Mobile](https://powerapps.microsoft.com/downloads/). Canvas apps running in web browsers can't run offline, even when using a web browser on a mobile device.
 
 This article includes an example using Twitter data.  An even simpler example that doesn't require a connection is included in the [**LoadData** and **SaveData** function reference](functions/function-savedata-loaddata.md).
+
+Watch this video to learn how to create offline enabled canvas apps:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLAka]
 
 ## Limitations
 

@@ -27,7 +27,8 @@ For example, you might search for the name **Adrian Dumitrascu**. When you type 
   > ![Automatically populates matching rows.](media/automatically-populate-matching-records.png "Automatically populates matching rows")
   
 >[!NOTE] 
->An administrator can define the criteria that lookup uses for resolving partial search text.
+> - An administrator can define the criteria that lookup uses for resolving partial search text.
+> - To enable search on multiple columns, see [Configure searchable fields](/power-platform/admin/configure-relevance-search-organization#configure-searchable-fields-for-relevance-search).
 
 Also, you can create a new row by selecting the **New** button. You must have sufficient permissions to view the **New** button and create a row. When you select the lookup column, the five most recently used rows are displayed along with five favorite rows. Which rows are displayed depends on your view history and the favorites you’ve pinned. 
 

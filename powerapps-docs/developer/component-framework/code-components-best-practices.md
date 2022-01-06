@@ -35,7 +35,7 @@ Code components can be built in [production or development mode](code-components
 
 #### Avoid using unsupported framework methods
 
-These include using undocumented internal methods that exist on the `ComponentFramework.Context`. These methods may work but, because they're not supported, they may stop working in future versions.
+These include using undocumented internal methods that exist on the `ComponentFramework.Context`. These methods may work but, because they're not supported, they may stop working in future versions. Use of control script that accesses host application HTML Document Object Model (DOM) is not supported. Any parts of the host application DOM which are outside the code component boundary, are subject to change without notice. 
 
 #### Use `init` method to request network required resources
 

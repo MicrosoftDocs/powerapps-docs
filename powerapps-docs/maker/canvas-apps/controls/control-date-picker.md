@@ -163,6 +163,7 @@ Difference between **OnChange** and **OnSelect**: OnSelect and OnChange trigger 
 
 ### Screen reader support
 * **[AccessibleLabel](properties-accessibility.md)** must be present.
+* If **IsEditable** is true and **Format** is not what users expect, add a **[Label](control-text-box.md)** to explain accepted date formats.
 
 ### Keyboard support
 * **[TabIndex](properties-accessibility.md)** must be zero or greater so that keyboard users can navigate to it.

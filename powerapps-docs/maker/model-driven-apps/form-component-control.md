@@ -2,7 +2,7 @@
 title: "Edit table records directly from another table’s main form | MicrosoftDocs"
 description: Learn how to design a main form that can be used to edit a related table record.
 ms.custom: ""
-ms.date: 06/15/2021
+ms.date: 08/15/2021
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -22,7 +22,7 @@ search.app:
 ---
 # Edit related table records directly from another table’s main form
 
-There are multiple ways that you can work with related table records on a table form within a Power App. For example, you can include related tables in read-only mode with a quick view form and create or edit a record using a [main form in a dialog.](../../developer/model-driven-apps/customize-entity-forms.md#open-main-form-in-a-dialog-using-client-api)
+There are multiple ways that you can work with related table records on a table form within a Power App. For example, you can include related tables in read-only mode with a [quick view form](create-edit-quick-view-forms.md) and create or edit a record using a [main form in a dialog.](../../developer/model-driven-apps/customize-entity-forms.md#open-main-form-in-a-dialog-using-client-api)
 
 Another way you can work with related table records is by adding a form component control to another table's main form. The form component control lets users edit information of a related table record directly from another table’s form.
 
@@ -30,7 +30,7 @@ For example, here's the form component on a separate tab on the main account for
 
 :::image type="content" source="media/form-component-tab.png" alt-text="Form component control added to a separate tab.":::
 
-For example, here's the form component on an existing tab on the main account form, which also lets the user edit a contact record without leaving the account form.
+For example, here's the form component on an **existing tab** on the main account form, which also lets the user edit a contact record without leaving the account form **Summary** tab.
 
 :::image type="content" source="media/form-component-section.png" alt-text="Form component control added to an existing tab.":::
 
@@ -38,7 +38,11 @@ For example, here's the form component on an existing tab on the main account fo
 
 In this example, the **Contact** standard main form is configured for the form component control that’s added to the account main form.
 
-1. Open [solution explorer](advanced-navigation.md#solution-explorer), expand **Entities**, select the table that you want, select **Forms**, and then open the main form where you want to add the form component.
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. Select **Dataverse**, and then select **Tables** in the left pane. Alternatively, select a [solution](model-driven-app-glossary.md#solution) from the menu and then select a table, such as **Account**.
+1. Select **Forms** from the components menu.
+1. Select a form with a form type of **Main** from the forms available.
+1. Select **Switch to classic**. The classic form editor interface opens as a tab in your browser.
 1. Select the **Insert** tab. Then, create a new tab and add a new section or add a new section to an existing tab.  
 1. In the new section, add a lookup column, such as the **Primary Contact** lookup column.
 1. Select the lookup column, and then on the **Home** tab, select **Change Properties**.
@@ -65,6 +69,7 @@ In this example, the **Contact** standard main form is configured for the form c
 This section describes form component behavior when used in a model-driven app.
 
 ### Record selection
+
 In order for the form component control to show a form, the lookup column it is bound to needs to have a value. Otherwise, the control will show the message **Source record not selected**. One way to set the value is to add to the form a lookup control that is bound to the same lookup column as the form component control. When you use the lookup control to change the lookup column value, the form component control will show a form with the data for the new lookup column value.
 
 ### Column validation
@@ -88,6 +93,10 @@ If there are multiple errors during save, only one error will be shown to the us
 ### Changing records with unsaved changes
 
 If there are unsaved changes in a form for a form component and a user tries to change the lookup column the form component is bound to, the user will be alerted about this change.
+
+### Client API
+
+A [form context](../../developer/model-driven-apps/clientapi/clientapi-form-context.md) is available for the form component control. It can be accessed via the main form's form context by accessing the control via an API, such as [getControl](../../developer/model-driven-apps/clientapi/reference/controls/getControl.md). Before you access data for the related table in the form component control, event handlers should wait for the [isLoaded API](../../developer/model-driven-apps/clientapi/reference/formContext-ui-quickForms/isLoaded.md) for the control to return true.
 
 ## Limitations
 

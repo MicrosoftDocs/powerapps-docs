@@ -23,6 +23,7 @@ This section covers aspects of Power Fx that are specific to commanding. Many ot
 - All existing data flow functions are supported.
 - Imperative functions that work with data are supported.
 - Imperative functions for simple Confirm and Notify are supported.
+- For a list of functions not supported, go to [Power Fx functions not supported](#power-fx-functions-not-supported).
 
   > [!IMPORTANT]
   > - This is a preview feature, and may not be available in all regions.
@@ -87,8 +88,15 @@ Self.ThisContext.SelectedItem.'Account Rating'>20
 ## Navigate
 
 > [!NOTE]
-> Currently, the `Navigate` function isn't available to interact with custom pages using Power Fx. See the client API reference to use JavaScript. More information: [navigateTo (Client API reference)](../../developer/model-driven-apps/clientapi/reference/Xrm-Navigation/navigateTo.md)
+> For additional options, see the client API reference to use JavaScript. More information: [navigateTo (Client API reference)](../../developer/model-driven-apps/clientapi/reference/Xrm-Navigation/navigateTo.md)
 
+### Navigate to a custom page
+
+To navigate to a custom canvas page within a model-driven app, pass the page name as the first argument.
+
+```powerappsfl
+Navigate( myCustomPage )
+```
 ### Navigate to the default view of the table
 
 To navigate to the default view of the table, passed table name as the first argument.
@@ -99,7 +107,7 @@ Navigate( Accounts )
 
 ### Navigate to specific system view of the table
 
-To navigate to a specific system view of the table,pass the table's Views enum.
+To navigate to a specific system view of the table, pass the table's Views enum.
 
 ```powerappsfl
 Navigate( 'Accounts (Views)'.'My Active Accounts' )
@@ -123,7 +131,7 @@ Navigate( Defaults( Accounts ) )
 
 ## Confirm function
 
-The `Confirm` function displays a dialog box on top of the current screen. Two buttons are provided: a confirm button and a cancel button, which default to localized versions of "OK" and "Cancel", respectively. The user must confirm or cancel before the dialog box is dismissed and the function returns. Besides the dialog button, cancel can also be selected with the Esc key or other gestures that are platform specific.
+The `Confirm` function displays a dialog box on top of the current screen. Two buttons are provided: a confirm button and a cancel button, which default to localized versions of "OK" and "Cancel", respectively. The user must confirm or cancel before the dialog box is dismissed and the function returns. Besides the dialog button, cancel can also be selected with the Esc key or other gestures that are platform-specific.
 
 The `Message` parameter is displayed in the body of the dialog box. If the message is very long, it will either be truncated or a scroll bar provided.
 
@@ -166,21 +174,6 @@ Same dialog as the last example, but adds title text.
 If( Confirm( "Are you sure?", {Title: "Delete Confirmation"} ), Remove( ThisItem ) )
 ```
 
-Asks the user for their favorite color, capturing the result into a global variable. The result that will be placed in `FavColor` will be the text string "Red" or "Green." As the confirm choice, "Red" is the default. This only works on platforms that support `ConfirmButton` and `CancelButton` options.
-
-```powerapps-dot
-Set( FavColor, 
-     If( Confirm( "What is your favorite color?", 
-                  { ConfirmButton: "Red", CancelButton: "Green" } 
-         ), 
-         "Red", 
-         "Green" 
-     ) 
-)
-
-
-```
-
 Displays a message much like the `Notify` function does, but is modal and requires the user to select a button to proceed. Use in situations where it is important that the user acknowledge the message before proceeding. In this case, which button was selected isn't important.
 
 ```powerapps-dot
@@ -200,7 +193,7 @@ Notify( "Model-driven app notification message" )
 ### Launch a URL
 
 ```powerappsfl
-Launch("https://www.bing.com"));
+Launch("https://www.bing.com");
 ```
 
 ### Access 1:N property
@@ -215,11 +208,37 @@ Self.Selected.Item.'Recurring Appointments'
 Self.Selected.Item.'Parent Account'.'Account Name'="parent"
 ```
 
+## Power Fx functions not supported
+
+The following Power Fx functions are currently not supported with commanding in model-driven apps.
+
+- Back()
+- Clear()
+- Collect()
+- Disable()
+- EditForm()
+- Enable()
+- Exit()
+- InvokeControl()
+- LoadData()
+- NewForm()
+- Param()
+- ReadNFC()
+- RequestHide()
+- Revert()
+- SaveData()
+- ResetForm()
+- ScanBarcode()
+- Set()
+- SubmitForm()
+- UpdateContext()
+- ViewForm()
+
 ### See also
 
-[Understand behavioral formulas](/maker/canvas-apps/working-with-formulas-in-depth.md)
+[Understand behavioral formulas](../canvas-apps/working-with-formulas-in-depth.md)
 
-[Formula reference](/maker/canvas-apps/formula-reference.md)
+[Formula reference](../canvas-apps/formula-reference.md)
 
-[Overview of Power Fx](/power-platform/power-fx/overview.md)
+[Overview of Power Fx](/power-platform/power-fx/overview)
 

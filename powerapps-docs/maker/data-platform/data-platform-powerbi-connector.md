@@ -45,7 +45,7 @@ To use Power BI with Dataverse, you need the following items:
 1. Select one of the following connectors, and then select **Connect**.
 
    * **Dataverse**: This connector is the most recent version and uses the tabular data stream (TDS) protocol.
-   * **Common Data Service (Legacy)**: This is the earlier version of the connector. Use this connector for large datasets that are greater than 80 MB. This version also supports paging of the query results and building reports that use the image data type.  
+   * **Common Data Service (Legacy)**: This is the earlier version of the connector. Use this connector when the query results will be greater than 80 MB. This version also supports paging of the query results and building reports that use the image data type.  
 
 1. In the dialog box that appears, paste in your Dataverse environment URL into the **Environment domain** box, in the format *org.crm.dynamics.com*. Don't include the *https://* or ending */*. More information: [Find your Dataverse environment URL](#find-your-dataverse-environment-url)
    
@@ -71,8 +71,9 @@ To use Power BI with Dataverse, you need the following items:
 
 ## Special column types
 
-### Choices
-Choices are used in tables to provide a drop-down list of values to a user in apps and flows. When using the Power BI connector choice  columns will be presented as two columns to show both the unique value, and the display value.
+### Choice columns
+
+Choice columns are used in tables to provide a drop-down list of items to a user to make a single selection in apps and flows. When using the Dataverse connector, choice columns will be presented as two columns to show both the unique value, and the display item value.
 
 For example, if you had a choice column on your table called `approvalstatus`, you would see two columns in Power BI:
 
@@ -86,7 +87,16 @@ For example, if you had a choice column on your table called `approvalstatus`, y
     3|Approved
     4|Rejected
 
+#### Performance impact and choice name columns
+
+When retrieving the label name for a choice column, Dataverse makes a join with the internal stringmap table (where localized labels are stored). This is executed for each label/name column. Note that, this join and doing filters against the label name column, rather than the value column, can significantly impact report query performance.
+
+### Choices columns
+
+Choices are similar to choice columns with the difference being that users can select multiple items from the list. Choices aren't currently fully supported with the Dataverse connector.  When you use the Dataverse connector with choices columns, you only receive the integer values, which are comma separated. The item label name columns aren't returned. For more information about the Dataverse data types not supported with the Dataverse connector, see [Supported operations and data types](../../developer/data-platform/dataverse-sql-query.md#supported-operations-and-data-types).
+
 ### Lookups
+
 Lookup columns use a many-to-one (N:1) table relationship between the table you’re working with and the target row type defined for the lookup. Lookups are presented in Power BI Desktop as two columns, *lookup*id and *lookup*id-name.
 
 ## Navigating relationships
@@ -101,7 +111,7 @@ While some relationships may be automatically created, you can still review and 
 
 ## Troubleshooting 
 
-## Error message: Return records size cannot exceed 83886080
+### Error message: Return records size cannot exceed 83886080
 
 This error can occur with the Dataverse connector when you run or design a report with a result set greater than 80 MB. TDS has a result set size limit of 80 MB. 
 
@@ -114,6 +124,10 @@ When this error message occurs, the connector fails to connect to the TDS endpoi
 
 :::image type="content" source="media/tls-unable-to-connect.png" alt-text="Unable to connect error message.":::
 Remove the https:// and ending forward slash so that the URL is in the form *orgname.crm.dynamics.com*.
+
+### Troubleshooting connection issues
+
+For information about troubleshooting connection issues when using the TDS endpoint, see [Troubleshooting connection problems](/powerapps/developer/data-platform/dataverse-sql-query#troubleshooting-connection-problems).
 
 ### See also
 

@@ -41,8 +41,8 @@ This method will return one of the following **string** values:
 - lookup
 - memo
 - money
-- choices
-- choice
+- multiselectoptionset (choices)
+- optionset (choice)
 - string
 
 

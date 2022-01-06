@@ -1,22 +1,25 @@
 ---
-title: Remove the Planner dependency for task creation in the Issue reporting sample app.
+title: Remove the Planner dependency for task creation in the Issue reporting sample app. (contains video)
 description: Learn how to remove the requirement for Microsoft Planner access in the Issue reporting template Power App for Teams.
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 07/19/2021
 author: joel-lindstrom
-ms.author: v-ljoel
+ms.author: jshum
 ms.reviewer: tapanm
 contributors:
   - joel-lindstrom
-  - navjotm
+  - josephshum
   - tapanm-msft
 ---
 
 # Remove the Planner dependency for task creation in the Issue reporting sample app
 
 In the Issue reporting sample app, you can share the app for broad distribution. When you do this, the users outside of the Microsoft Teams team may not have access to the Planner. If this case is true, creation of tasks will fail because the users submitting the issue.
+
+Watch this video to learn how to remove the Planner dependency for task creation in the Issue reporting sample app:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLiBZ]
 
 Issue reporting is heavily dependent on Planner, and the users of the app must have access to the Planner that the app uses to create issues. Planner is referenced in multiple places in the app:
 

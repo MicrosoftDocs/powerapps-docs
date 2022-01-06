@@ -71,8 +71,8 @@ The *connections* provide a flexible way to connect and describe the relationshi
   
 ### See also  
  [Describe a relationship between tables with connection roles](describe-relationship-entities-connection-roles.md)   
- [Connection table](/reference/entities/connection.md)   
- [ConnectionRole table](/reference/entities/connectionrole.md)   
+ [Connection table](reference/entities/connection.md)   
+ [ConnectionRole table](reference/entities/connectionrole.md)   
  [Sample Code for connection tables](/dynamics365/customer-engagement/developer/sample-code-connection-entities)   
  [Business Management tables](/dynamics365/customer-engagement/developer/business-management-entities)   
  [View and Analyze Data with Visualizations and Dashboards in Dynamics 365](/dynamics365/customer-engagement/developer/customize-dev/customize-visualizations-dashboards)   

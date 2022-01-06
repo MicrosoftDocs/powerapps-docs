@@ -2,11 +2,10 @@
 title: Concat and Concatenate functions in Power Apps
 description: Reference information including syntax and examples for the Concat and Concatenate functions in Power Apps.
 author: gregli-msft
-manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: nabuthuk
+ms.reviewer: tapanm
 ms.date: 05/23/2019
 ms.subservice: canvas-maker
 ms.author: gregli
@@ -16,7 +15,7 @@ search.app:
   - PowerApps
 contributors:
   - gregli-msft
-  - nkrb
+  - tapanm-msft
 ---
 # Concat and Concatenate functions in Power Apps
 
@@ -34,10 +33,11 @@ Use the [**Split**](function-split.md) or [**MatchAll**](function-ismatch.md) fu
 
 ## Syntax
 
-**Concat**( *Table*, *Formula* )
+**Concat**( *Table*, *Formula*, *separator*)
 
 - *Table* - Required.  Table to operate on.
 - *Formula* - Required.  Formula to apply across the records of the table.
+- *Separator* - Optional. A text value to be inserted between concatenated rows of the table.
 
 **Concatenate**( *String1* [, *String2*, ...] )
 
