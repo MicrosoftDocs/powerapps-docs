@@ -16,7 +16,7 @@ contributors:
 
 # Contact us sample
 
-When you create a new portal by using the **Portal from blank** template, it creates an example webpage called **Contact us**. This webpage provides a working example of how portal users can enter information into a form that will be stored in a Dataverse table.
+When you create a new portal by using the **Portal from blank** template, it creates an example page called **Contact us**. This page provides a working example of how portal users can enter information into a form that will be stored in a Dataverse table.
 
 :::image type="content" source="media/contact-us-sample/contact-us-page.png" alt-text="Contact Us page.":::
 
@@ -42,11 +42,11 @@ To allow portal users to be able to insert records into the feedback table, [tab
 :::image type="content" source="media/contact-us-sample/feedback-tablepermissions.png" alt-text="Feedback table permissions.":::
 
 > [!NOTE]
-> It's good practice to review your security requirements before providing access to Dataverse tables through<!--note from editor: Suggested.--> portals.
+> It's good practice to review your security requirements before providing access to Dataverse tables through portals.
 
 ## Basic form metadata
 
-All the form fields that the **Contact us** form requires were created by using [basic form metadata](/configure/configure-basic-form-metadata.md).<!--note from editor: Does the reader need to do anything here? I can't tell who the agent of action is in the phrase "by using the [Portal Management app](/configure/configure-portal.md)". If the reader does need to do something, can you describe it or provide a link to a relevant topic?-->.
+All the form fields that the **Contact us** form requires have been created using [basic form metadata](/configure/configure-basic-form-metadata.md). These settings can be viewed and modified using the [Portal Management app](/configure/configure-portal.md).
 
 :::image type="content" source="media/contact-us-sample/basicform-metadata.png" alt-text="Basic form metadata.":::
 
@@ -54,7 +54,7 @@ All the form fields that the **Contact us** form requires were created by using 
 
 To view the feedback data that was collected by the sample webpage, go to the [Power Apps maker portal](https://make.powerapps.com). 
 
-1. On the left pane, expand **Dataverse**, and then select **Tables**.<!--note from editor: Edited to match the image. If **Dataverse** were a tab, you could say "On the **Dataverse** tab, select **Tables** > **Feedback** > **Data**." but based on the image that doesn't seem to be how this UI behaves.-->
+1. On the left pane, expand **Dataverse**, and then select **Tables**.
 
 1. Select **Feedback**, and then select **Data**.
 
