@@ -163,18 +163,36 @@ To use Azure Key Vault secrets with Power Platform, the Azure subscription that 
 Once Azure Key Vault is configured and you have a secret registered in your vault, you can now go back to reference it within Power Apps using an environment variable.
 
 1.	In the **Solutions** area in Power Apps (make.powerapps.com), open your unmanaged solution you're using for development and select **New** > **Environment variable**.
-1.	Select the **Data Type** as **Secret** and **Secret Store** as **Azure Key Vault**.
-1. Enter the default value or create a new value with the full Azure Key Vault secret path. The path format is */subscriptions/[subscriptionId]/resourcegroups/[resourceGroupName]/providers/Microsoft.KeyVault/[keyVaultName]/secrets/[secretName]*.
-4.	Select **Save**.
+1.	Enter a **Display name** and optionally, a **Description** for the environment variable.
+1. Select the **Data Type** as **Secret** and **Secret Store** as **Azure Key Vault**.
+1. Choose from the following options:
+   - Leave all additional fields blank and select **Save** to save only an environment variable *definition* record that doesn't include any secret reference or default demarcation values.
+   - Select **New Azure Key Vault value reference**. After the information is added in the next step and saved, an environment variable *value* record is created.
+   - Expand **Show default value**, to display the fields to create a **Default Azure Key Vault secret**. After the information is added in the next step and saved, the default value demarcation is added to the environment variable *definition* record.
+1. Enter the following information:
+   - **Azure Subscription ID**: The Azure subscription ID associated with the key vault. 
+   - **Resource Group Name**: The Azure resource group where the key vault that contains the secret is located.
+   - **Azure Key Vault Name**: The name of the key vault that contains the secret.
+   - **Secret Name**: The name of the secret located in Azure Key Vault.
+
+   > [!TIP]
+   > The subscription ID, resource group name, and key vault name can be found on the Azure portal **Overview** page of the key vault. The secret name can be found on the key vault page in the Azure portal by selecting **Secrets** under **Settings**.
+
+1. Select **Save**.
 
 > [!NOTE]
 > User access validation for the secret is performed in the background. If the user doesn’t have at least read permission, this validation error is displayed.
 >
 > **This variable didn't save properly. User is not authorized to read secrets from 'Azure Key Vault path'.**
+> 
+> Currently, Azure Key Vault is the only secret store that is supported with environment variables.
 
 ### Create a Power Automate flow to test the environment variable secret
 
-A simple scenario to demonstrate how to use a secret obtained from Azure Key Vault is to create a Power Automate flow to use the secret to authenticate against a web service. 
+A simple scenario to demonstrate how to use a secret obtained from Azure Key Vault is to create a Power Automate flow to use the secret to authenticate against a web service.
+
+> [!NOTE]
+> The URI for the web service in this example is not a functioning web service.
 
 1.	Sign into [PowerApps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Solutions**, and then open the unmanaged solution you want.
 1. Select **New** > **Automation** > **Cloud flow** > **Instant**.
@@ -190,7 +208,7 @@ A simple scenario to demonstrate how to use a secret obtained from Azure Key Vau
 
    :::image type="content" source="media/env-var-secret5.png" alt-text="Enable secure outputs setting for the action":::
 1. Select **New step**, search and select the **HTTP** connector.
-1. Select the **Method** as **GET** and enter the URI of the service.
+1. Select the **Method** as **GET** and enter the URI of the web service. In this screenshot, the fictitious web service *httpbin.org* is used as an example.
 1. Select the authentication as **Basic**, and enter the username. The password value is added as an expression `body('GetSecret')['EnvironmentVariableSecretValue']` to use the secret value retrieved from the previous action.
 
    :::image type="content" source="media/env-var-secret6.png" alt-text="Create a new step using the HTTP connector":::
