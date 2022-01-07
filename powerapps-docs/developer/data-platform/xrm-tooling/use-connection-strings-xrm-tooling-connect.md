@@ -100,7 +100,7 @@ Create a new connection to Dataverse using a UserName or Password via Office365.
   Url=https://contoso.crm.dynamics.com"/>  
 ```  
   
-### OAuth using named account in Office365 with UX to prompt for authentication  
+### OAuth using named account in Microsoft 365 with UX to prompt for authentication  
 
 Create a new connection to Dataverse using a UserID or Password via OAuth.
 

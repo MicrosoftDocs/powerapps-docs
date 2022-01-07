@@ -1,8 +1,8 @@
 ---
-title: "Use Office365 authentication with Microsoft Dataverse (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Use of Office365 authentication with Microsoft Dataverse (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Describes deprecation of the WS-Trust security protocol and the code changes required in applications that use Office365 authentication."
 ms.custom: ""
-ms.date: 09/20/2021
+ms.date: 01/06/2022
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -17,18 +17,17 @@ search.app:
   - D365CE
 ---
 
-# Use Office365 authentication with Microsoft Dataverse
+# Use of Office365 authentication with Microsoft Dataverse
 
-Use of the WS-Trust authentication security protocol when connecting to Microsoft Dataverse is no longer recommended and has been deprecated; see the [announcement](/power-platform/important-changes-coming#deprecation-of-office365-authentication-type-and-organizationserviceproxy-class-for-connecting-to-dataverse).
+> [!IMPORTANT]
+> Use of the WS-Trust (Office365) authentication security protocol when connecting to Microsoft Dataverse is no longer recommended and has been deprecated; see the [announcement](/power-platform/important-changes-coming#deprecation-of-office365-authentication-type-and-organizationserviceproxy-class-for-connecting-to-dataverse).<p/>
+> Additionally, the WS-Trust protocol does not support modern forms of multi-factor authentication and Azure AD Conditional Access controls to customer data.
 
-Additionally, the WS-Trust protocol does not support modern forms of multi-factor authentication and Azure AD Conditional Access controls to customer data.
-
-This change impacts custom client applications that use “Office365” authentication and the
+This document describes the impact to and required authentication code changes for custom client applications that use “Office365” authentication and the
 [Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy](/dotnet/api/microsoft.xrm.sdk.client.organizationserviceproxy) or
 [Microsoft.Xrm.Tooling.Connector.CrmServiceClient](/dotnet/api/microsoft.xrm.tooling.connector.crmserviceclient)
 classes. If your applications use this type of authentication protocol and API,
-continue reading below to learn more about the recommended authentication
-changes to be made to your application’s code.
+continue reading below to learn more about the recommended authentication changes to be made to your application’s code.
 
 ## How do I know if my code or application is using WS-Trust?
 
@@ -50,9 +49,9 @@ using (OrganizationServiceProxy organizationServiceProxy =
 { ... }
 ```
 
-- If you are using the `OrganizationServiceProxy` class at all in your code, you are using WS-Trust.
+- If your code uses the `OrganizationServiceProxy` class at all, you are using WS-Trust.
 
-- If you are using [CrmServiceClient](/dotnet/api/microsoft.xrm.tooling.connector.crmserviceclient).`OrganizationServiceProxy` in your code, you are using WS-Trust.
+- If your code is using [CrmServiceClient](/dotnet/api/microsoft.xrm.tooling.connector.crmserviceclient).`OrganizationServiceProxy`, you are using WS-Trust.
 
 ## What should I do to fix my application code if affected?
 
@@ -71,7 +70,7 @@ the recommended connection interface for authentication with Dataverse.
 
     `connectionString = "AuthType=Office365;Username=jsmith@contoso.onmicrosoft.com;Password=passcode;Url=https://contoso.crm.dynamics.com"`
 
-    Similarly, you could also use a `CrmServiceClient` constructor and pass in `AuthType.Office365`.
+    Similarly, you could also be using a `CrmServiceClient` constructor and pass in `AuthType.Office365`.
 
     You have two options for dealing with this.<p/>
 
@@ -85,7 +84,7 @@ the recommended connection interface for authentication with Dataverse.
 
         The AppId and RedirectUri provided above are examples of working application registration values. These values work everywhere our online services are deployed. However, they are provided here as examples and you are encouraged to [create your own application registration](walkthrough-register-app-azure-active-directory.md) in Azure Active Directory (Azure AD) for applications running in your tenant. Use your Username, Password, and Dataverse environment URL values in the connection string along with the RedirectUri and AppId you obtain from your Azure app registration.<p/>
 
-    - When we announce it, update to the latest [Microsoft.CrmSdk.XrmTooling.CoreAssembly](https://www.nuget.org/packages/Microsoft.CrmSdk.XrmTooling.CoreAssembly/) NuGet package that includes auto redirect support. This library will redirect an authentication type of Office365 to OAuth and use the example AppId and Redirect URI automatically. This capability is planned for the 9.2.x version of the Microsoft.CrmSdk.XrmTooling.CoreAssembly package.
+    - When we announce it, update to the latest [Microsoft.CrmSdk.XrmTooling.CoreAssembly](https://www.nuget.org/packages/Microsoft.CrmSdk.XrmTooling.CoreAssembly/) NuGet package that includes auto redirect support. This library will redirect an authentication type of "Office365" to "OAuth" and use the example AppId and Redirect URI automatically. This capability is planned for the 9.2.x version of the Microsoft.CrmSdk.XrmTooling.CoreAssembly package.
 
 - If you are accessing the [CrmServiceClient](/dotnet/api/microsoft.xrm.tooling.connector.crmserviceclient).`OrganizationServiceProxy` property:
 
@@ -93,7 +92,7 @@ the recommended connection interface for authentication with Dataverse.
 
 > [!IMPORTANT]
 > Regarding not being able to login using User ID/Password even if using OAuth: if your tenant and user is configured in Azure Active Directory for conditional access and/or Multi-Factor Authentication is required, you will not be able to use user ID/password flows in a non-interactive form at all. For those situations, you must use a Service Principal user to authenticate with Dataverse.<p/>
-To do this, you must first register the application user (Service Principal) in Azure Active Directory. You can find out how to do this [here](/azure/active-directory/develop/howto-create-service-principal-portal). During application registration you will need to create that user in Dataverse and grant permissions. Those permissions can either be granted directly or indirectly by adding the application user to a team which has been granted permissions in Dataverse. You can find more information on how to set up an application user to authenticate with Dataverse [here](./use-single-tenant-server-server-authentication.md).
+To do this, you must first register the application user (Service Principal) in Azure Active Directory. You can find out how to do this [here](/azure/active-directory/develop/howto-create-service-principal-portal). During application registration you will need to create that user in Dataverse and grant permissions. Those permissions can either be granted directly or indirectly by adding the application user to a team which has been granted permissions in Dataverse. You can find more information on how to set up an unlicensed "application user" to authenticate with Dataverse [here](./use-single-tenant-server-server-authentication.md).
 
 ## Need help?
 
