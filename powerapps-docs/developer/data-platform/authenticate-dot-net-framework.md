@@ -23,7 +23,7 @@ This topic provides guidance when developing applications coded and built using 
 
 ## .NET Framework applications
 
-If you are using the .NET Framework when developing your application you can use classes within the [Xrm.Tooling](/dotnet/api/?view=dynamics-xrmtooling-ce-9) namespace to easily authenticate and connect to the Microsoft Dataverse web services.
+If you are using the .NET Framework when developing your application you can use classes within the [Xrm.Tooling](/dotnet/api/) namespace to easily authenticate and connect to the Microsoft Dataverse web services.
 
 `Xrm.Tooling` classes in the SDK assemblies use the <xref:Microsoft.Xrm.Sdk.IOrganizationService> interface methods. This is the same style of programming used by plug-ins and workflow activities, making it one style that you can use everywhere for .NET Framework applications. We recommend using the <xref:Microsoft.Xrm.Tooling.Connector>.<xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> class for web service connection.
 
