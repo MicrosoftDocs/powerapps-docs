@@ -45,7 +45,7 @@ Environment variables can be created and modified within the modern solution int
 
 1. Sign in to Power Apps (make.powerapps.com), and then on the left pane select **Solutions**.
 1. Open the solution you want or create a new one.
-1. On the command bar, select **New** and then select **Environment variable**. 
+1. On the command bar, select **New** > **More**, and then select **Environment variable**. 
 1. On the right pane, complete the following columns, and then select **Save**:  
    - **Display name**. Enter a name for the environment variable. 
    - **Name**. The unique name is automatically generated from the **Display name**, but you can change it. 
@@ -137,7 +137,7 @@ Environment variables allow for referencing secrets stored in Azure Key Vault. T
 
 ### Configure Azure Key Vault
 
-To use Azure Key Vault secrets with Power Platform, the Azure subscription that has the vault must have the `PowerPlatform` resource provider registered and the user who creates the environment variable must have appropriate permissions on the secret resource record.
+To use Azure Key Vault secrets with Power Platform, the Azure subscription that has the vault must have the `PowerPlatform` resource provider registered and the user who creates the environment variable must have appropriate permissions to the Azure Key Vault resource.
 
 #### Prerequisites
 
@@ -161,11 +161,10 @@ To use Azure Key Vault secrets with Power Platform, the Azure subscription that 
 Once Azure Key Vault is configured and you have a secret registered in your vault, you can now reference it within Power Apps using an environment variable.
 
 1.	Sign on to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and in the **Solutions** area, open the unmanaged solution you're using for development.
-1. Select **New** > **Environment variable**.
+1. Select **New** > **More** > **Environment variable**.
 1.	Enter a **Display name** and optionally, a **Description** for the environment variable.
 1. Select the **Data Type** as **Secret** and **Secret Store** as **Azure Key Vault**.
 1. Choose from the following options:
-   - Leave all additional fields blank and select **Save** to save only an environment variable *definition* record that doesn't include any secret reference or default demarcation values. When you select this option you don't need to continue to the next steps.
    - Select **New Azure Key Vault value reference**. After the information is added in the next step and saved, an environment variable *value* record is created.
    - Expand **Show default value**, to display the fields to create a **Default Azure Key Vault secret**. After the information is added in the next step and saved, the default value demarcation is added to the environment variable *definition* record.
 1. Enter the following information:
