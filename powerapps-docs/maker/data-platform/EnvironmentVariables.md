@@ -179,11 +179,9 @@ Once Azure Key Vault is configured and you have a secret registered in your vaul
 1. Select **Save**.
 
 > [!NOTE]
-> User access validation for the secret is performed in the background. If the user doesn’t have at least read permission, this validation error is displayed.
->
->     **This variable didn't save properly. User is not authorized to read secrets from 'Azure Key Vault path'.**
+> - User access validation for the secret is performed in the background. If the user doesn’t have at least read permission, this validation error is displayed: **This variable didn't save properly. User is not authorized to read secrets from 'Azure Key Vault path'.**
 > 
-> Currently, Azure Key Vault is the only secret store that is supported with environment variables.
+> - Currently, Azure Key Vault is the only secret store that is supported with environment variables.
 
 ### Create a Power Automate flow to test the environment variable secret
 
