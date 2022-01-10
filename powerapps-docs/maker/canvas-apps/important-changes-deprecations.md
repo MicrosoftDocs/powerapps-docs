@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 01/10/2022
-ms.subservice: portals
+ms.subservice: canvas-maker
 ms.author: tapanm
 ms.reviewer: tapanm-msft
 contributors:
