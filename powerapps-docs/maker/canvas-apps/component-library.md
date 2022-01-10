@@ -1,5 +1,5 @@
 ---
-title: Component library
+title: Component library (preview)
 description: Learn about working with a library of reusable components for canvas apps.
 author: hemantgaur
 ms.service: powerapps
@@ -17,7 +17,7 @@ contributors:
   - tapanm-msft
 ---
 
-# Component library
+# Component library (preview)
 
 [This article is pre-release documentation and is subject to change.]
 

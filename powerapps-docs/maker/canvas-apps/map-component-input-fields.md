@@ -1,5 +1,5 @@
 ---
-title: Map input fields of a component
+title: Map input fields of a component (preview)
 description: Learn about how to map input fields of a component to the table or record.
 author: hemantgaur
 ms.service: powerapps
@@ -18,7 +18,7 @@ contributors:
   - gregli-msft
 ---
 
-# Map input fields of a component
+# Map input fields of a component (preview)
 
 [This article is pre-release documentation and is subject to change.]
 
