@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 01/04/2022
+ms.date: 01/10/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
@@ -493,6 +493,36 @@ To fix this issue, add the CSS file with entire content in the notes section of 
 ## MIME type of file isn't text/CSS
 
 To fix this issue, ensure that there are no plug-ins or flows that override the MIME type of the CSS file(s).
+
+<!--Placeholder New Items-->
+
+## Web page without Page Template
+
+This issue occurs when a [web page](../configure/web-page.md) record does not have a corresponding [page template](../configure/page-templates.md). To fix this issue:
+
+1. Open the [Portal Management app](../configure/configure-portal.md).
+1. In the left pane, select **Web Pages**.
+1. Select the affected web page record.
+1. Update the **Page Template** field to point to an active page template record.
+
+## Disabled Parent Web Page
+
+This issue occurs when a parent [web page](../configure/web-page.md) record is inactive. To fix this issue:
+
+1. Open the [Portal Management app](../configure/configure-portal.md).
+1. In the left pane, select **Web Pages**.
+1. Select the affected web page record.
+1. Select the **Parent Page** record to navigate to the record.
+1. Select **Activate** from the command bar.
+
+## Cyclic Parent Web Page
+
+## Web Page belong to different Website
+
+
+
+
+
 
 ### See also
 
