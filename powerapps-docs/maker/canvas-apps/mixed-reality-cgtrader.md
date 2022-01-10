@@ -1,6 +1,6 @@
 ---
-title: Load models from CGTrader into mixed reality components (preview)
-description: Learn how to load models from CGTrader into mixed reality components
+title: Load models from CGTrader into mixed reality controls (preview)
+description: Learn how to load models from CGTrader into mixed reality controls
 author: tapanm-msft
 ms.service: powerapps
 ms.topic: conceptual
@@ -19,7 +19,7 @@ contributors:
   - anuitz
 ---
 
-# Load models from CGTrader into mixed reality components (preview)
+# Load models from CGTrader into mixed reality controls (preview)
 
 [This article is pre-release documentation and is subject to change.]
 
@@ -27,7 +27,7 @@ contributors:
 > - This is a preview feature.
 > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
 
-Microsoft Power Platform offers the [CGTrader connector](/connectors/cgtrader/) for connecting with CGTrader, a large source of free and premium (paid) 3D content with thousands of models. Content from CGTrader can be browsed and loaded from inside a canvas app, and then used within the [View in 3D](mixed-reality-component-view-3d.md) and [View in MR](mixed-reality-component-view-mr.md) components.
+Microsoft Power Platform offers the [CGTrader connector](/connectors/cgtrader/) for connecting with CGTrader, a large source of free and premium (paid) 3D content with thousands of models. Content from CGTrader can be browsed and loaded from inside a canvas app, and then used within the [View in 3D](mixed-reality-component-view-3d.md) and [View in MR](mixed-reality-component-view-mr.md) controls.
 
 This connector acts as a proxy to the CGTrader APIs. It provides [_actions_](/connectors/connectors#actions) that allow users to make requests to the CGTrader API and retrieve model data. More information: [Connectors overview](/connectors/custom-connectors/use-custom-connector-powerapps)
 
@@ -82,7 +82,7 @@ A new CGTrader connection is now listed on the **Connections** page.
 
     :::image type="content" source="media/augmented/mixed-reality-connector-data-source-2.png" alt-text="Screenshot of the Data Source panel when selecting a CGTrader connection instance":::
 
-You can now bind your components to the CGTrader connector actions, and browse and load models from CGTrader inside your app.
+You can now bind your controls to the CGTrader connector actions, and browse and load models from CGTrader inside your app.
 
 > [!TIP]
 > A connection is an instance of a connector. You can have multiple connections with different configurations. You can also create new connections from within Power Apps Studio when adding the connector by selecting **+ Add a connection**.
@@ -99,13 +99,13 @@ After adding a CGTrader connection to your app, you can load models directly int
 
 1. Open your app in Power Apps Studio.
 
-1. Select and drag a **View in 3D** or **View in MR** component to the canvas screen.
+1. Select and drag a **View in 3D** or **View in MR** control to the canvas screen.
 
-    :::image type="content" source="./media/augmented/mixed-reality-connector-components.png" alt-text="Insert the View in 3D or View in MR component into the app.":::
+    :::image type="content" source="./media/augmented/mixed-reality-connector-components.png" alt-text="Insert the View in 3D or View in MR control into the app.":::
 
-1. Set the **Source** property of the component (View in 3D/View in MR) to `CGTrader.GetModel(model_id, "file_type")`, where **model_id** is the ID of your selected model, and **file_type** is one of the supported file types.
+1. Set the **Source** property of the control (View in 3D/View in MR) to `CGTrader.GetModel(model_id, "file_type")`, where **model_id** is the ID of your selected model, and **file_type** is one of the supported file types.
 
-    :::image type="content" source="./media/augmented/mixed-reality-connector-example.png" alt-text="The View in 3D component with a source from CGTrader.":::
+    :::image type="content" source="./media/augmented/mixed-reality-connector-example.png" alt-text="The View in 3D control with a source from CGTrader.":::
 
 ## Connector actions
 

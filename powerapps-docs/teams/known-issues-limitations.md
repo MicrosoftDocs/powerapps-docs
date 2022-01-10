@@ -5,7 +5,7 @@ author: matthewbolanos
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 08/02/2021
+ms.date: 12/15/2021
 ms.subservice: teams
 ms.author: mabolan
 ms.reviewer: tapanm
@@ -13,6 +13,7 @@ contributors:
   - tapanm-msft
   - matthewbolanos
   - msftman
+  - amchern
 ---
 # Known issues and limitations
 
@@ -99,6 +100,10 @@ It's currently not possible to change your Studio version.
 ### Visual editor
 
 Currency, Duration, Language, Ticker, and Timezone fields can't be added using visual editor. To create these fields, use the experience to work with tables as available using [solution explorer](create-table.md).
+
+## Load time limit
+
+Apps embedded in Teams are required to load within 30 seconds as per Teams requirements. If an app exceeds this 30 seconds limit, Teams assumes that the app has timed-out, and will display an error screen. If your app is encountering this 30 second timeout, review [tips to improve performance](../maker/canvas-apps/performance-tips.md) for boosting your app’s performance.
 
 ## Theme
 
