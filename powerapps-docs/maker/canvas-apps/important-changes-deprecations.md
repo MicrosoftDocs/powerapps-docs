@@ -5,7 +5,7 @@ author: tapanm-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/30/2021
+ms.date: 01/10/2022
 ms.subservice: portals
 ms.author: tapanm
 ms.reviewer: tapanm-msft
