@@ -12,7 +12,7 @@ author: jowells1 # GitHub ID
 ms.subservice: dataverse-maker
 ms.author: jowells # MSFT alias of Microsoft employees only
 manager: austinj # MSFT alias of manager or PM counterpart
-ms.reviewer: 
+ms.reviewer: matp
 robots: noindex,nofollow
 search.audienceType: 
   - developer
@@ -45,9 +45,9 @@ Selecting the portal notification will link to this page of common issues for fu
 ![Failure notification.](media/solution-checker-failure-notification.png)
 
 
-## Solution Checker fails to check Default solution
+## Solution checker fails to check Default solution
 
-Solution checker exports the solution from the Microsoft Dataverse environment for analysis. Exporting the Default Solution is not supported and the check may not complete successfully. More information: [Solution Checker fails to export large solutions](#solution-checker-fails-to-export-large-solutions).
+Solution checker exports the solution from the Microsoft Dataverse environment for analysis. Exporting the Default solution is not supported and the check may not complete successfully. More information: [Solution Checker fails to export large solutions](#solution-checker-fails-to-export-large-solutions).
 
 
 ## Solution checker fails due to unsupported version of Power Apps Checker
@@ -100,10 +100,10 @@ To disable administration mode for an organization instance:
 
 ## Solution checker fails due to missing security roles
 
-The application user for Solution Checker requires two security roles assigned in order to provide the necessary privileges to communicate with the Dataverse organization. If either of these roles are not assigned to the user **'Power Apps Checker'**,  attempts to run analysis, download results, and run cancelation will fail. This occurs most often when customers have automation in place that removes security roles from unexpected users. The following security roles contain minimum required permissions:
+The application user for solution checker requires two security roles assigned in order to provide the necessary privileges to communicate with the Dataverse organization. If either of these roles are not assigned to the user **'Power Apps Checker'**,  attempts to run analysis, download results, and run cancelation will fail. This occurs most often when customers have automation in place that removes security roles from unexpected users. The following security roles contain minimum required permissions:
 
-- Export Customizations
-- Solution Checker
+- Export customizations
+- Solution checker
 
 ### How to assign missing security roles
 
@@ -157,9 +157,9 @@ The Power Apps Checker application user in the Dataverse organization containing
 
 ![Enable user from form.](media/solution-checker-enable-application-user-form.png)
 
-## Solution Checker remains in a Running state for more than thirty minutes
+## Solution checker remains in a Running state for more than thirty minutes
 
-Solution checker may remain in a running state indefinitely if the analyzed solution contains plugin components developed using .NET Standard 2.0. Plugins using .NET Standard 2.0 are not currently supported in Solution checker and should be excluded from analysis. This can be done by either removing the plugin components from the target solution, or by using the ExcludedFileNamePattern parameter in the Power Apps Checker PowerShell module.
+Solution checker may remain in a running state indefinitely if the analyzed solution contains plugin components developed using .NET Standard 2.0. Plugins using .NET Standard 2.0 are not currently supported in solution checker and should be excluded from analysis. Exclude the plugin component by either removing it from the target solution, or by using the 'ExcludedFileNamePattern' parameter in the Power Apps Checker PowerShell module.
 
 ## Common plugin conditions that cause solution checker to fail
 
@@ -220,29 +220,29 @@ To verify and/or modify the enabled status of the PowerApps-Advisor enterprise a
 > [!IMPORTANT]
 > You must have administrator privileges in Azure Active Directory (AAD) in order to edit enterprise applications.
 
-## Solution checker fails to export solutions with draft Business Process Flow components
+## Solution checker fails to export solutions with draft business process flow components
 
-If a solution contains a business process flow component in draft state that has never been previously activated, then Solution Checker will fail to export the solution for analysis. This error is not unique to Solution Checker and is caused by the business process flow having a dependency on a backing (custom) table component that doesn't get created until the business process flow is activated for the first time. This issue can also occur if a business process flow is activated from within Solution Explorer.
+If a solution contains a business process flow component in draft state that has never been previously activated, then solution checker will fail to export the solution for analysis. This error is not unique to solution checker and is caused by the business process flow having a dependency on a backing (custom) table component that doesn't get created until the business process flow is activated for the first time. This issue can also occur if a business process flow is activated from within solution explorer.
 
 Reference [KB Article #4337537: Invalid Export - Business Process table Missing](https://support.microsoft.com/en-hk/help/4337537/invalid-export-business-process-table-missing) for details about the issue and steps to resolve.
 
 ## Solution checker fails to export solutions with model-driven app components
 
-If a solution contains a model-driven app, Solution Checker might fail to export the solution for analysis. This error is caused by role-based security for sharing of apps. If the Power Apps Checker application user does not have appropriate access to model-driven apps, any solutions containing them will fail to export with solution checker.
+If a solution contains a model-driven app, solution checker might fail to export the solution for analysis. This error is caused by role-based security for sharing of apps. If the Power Apps Checker application user does not have appropriate access to model-driven apps, any solutions containing them will fail to export with solution checker.
 
 To resolve this issue, grant the **Environment Maker** security role to the Power Apps Checker application user.
 
 ## Solution checker fails to export patched solutions
 
-If a solution has had a [patch](/power-platform/alm/create-patches-simplify-solution-updates) applied, Solution Checker will fail to export the solution for analysis. When a solution has had a patch applied, the original solution becomes locked and it can't be changed or exported as long as there are dependent patches that exist in the organization that identify the solution as the parent solution.
+If a solution has had a [patch](/power-platform/alm/create-patches-simplify-solution-updates) applied, solution checker will fail to export the solution for analysis. When a solution has had a patch applied, the original solution becomes locked and it can't be changed or exported as long as there are dependent patches that exist in the organization that identify the solution as the parent solution.
 
 To resolve this issue, clone the solution so that all patches related to the solution are rolled into the newly created solution. This unlocks the solution and allows the solution to be exported from the system.  For more information, see  [Clone a Solution](/power-platform/alm/update-solutions-alm#clone-a-solution).
 
 ## Solution checker will not analyze empty solutions
 
-If Solution Checker exports a solution that contains no components to analyze, it will terminate further processing and consider the run a failure. Ensure that the selected solution submitted for a Solution Checker analysis contains at least one component.
+If solution checker exports a solution that contains no components to analyze, it will terminate further processing and consider the run a failure. Ensure that the selected solution submitted for a solution checker analysis contains at least one component.
 
-## Solution Checker fails to export large solutions
+## Solution checker fails to export large solutions
 
 The primary scenario for failure to export a large solution from the Dataverse environment involves a timeout exception on the export request. This will occur if the request exceeds 20 minutes. Large solutions, such as the Default Solution, may fail to get exported within this time frame, and the check will not complete successfully. If solution checker encounters a timeout during export, it will retry three times before it fails to process the job, so it may take over an hour before you receive a failure notification.
 
