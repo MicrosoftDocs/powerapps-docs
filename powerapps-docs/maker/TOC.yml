@@ -1121,12 +1121,14 @@
       href: ./canvas-apps/embed-apps-dev.md
     - name: Develop offline-capable apps
       href: ./canvas-apps/offline-apps.md
-    - name: Create a component
+    - name: Create a component (preview)
       items:
         - name: Components overview
           href: ./canvas-apps/create-component.md
         - name: Component library
           href: ./canvas-apps/component-library.md
+        - name: Map input fields
+          href: ./canvas-apps/map-component-input-fields.md
         - name: Behavior formulas
           href: ./canvas-apps/component-behavior.md
     - name: Embed canvas apps in your applications
@@ -1143,6 +1145,8 @@
       href: ./canvas-apps/performance-tips.md
     - name: Canvas apps coding standards and guidelines
       href: https://aka.ms/powerappscanvasguidelines
+  - name: Important changes and deprecations
+    href: ./canvas-apps/important-changes-deprecations.md
 - name: Model-driven apps
   items:
   - name: Model-driven apps
