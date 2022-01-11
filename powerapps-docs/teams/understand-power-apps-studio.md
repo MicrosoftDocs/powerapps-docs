@@ -1,5 +1,5 @@
 ---
-title: Understand Power Apps Studio | Microsoft Docs
+title: Understand Power Apps Studio (contains video) | Microsoft Docs
 description: Learn the components inside Power Apps Studio.
 author: emcoope-msft
 ms.service: powerapps

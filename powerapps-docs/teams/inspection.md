@@ -1,5 +1,5 @@
 ---
-title: Inspection sample apps | Microsoft Docs
+title: Inspection sample apps (contains video) | Microsoft Docs
 description: Learn how to use the Inspection apps from Teams store.
 author: josephshum
 ms.service: powerapps
@@ -108,7 +108,7 @@ To configure the app:
     - To continue app configuration without Planner integration, select **I'll set up later**.
 
         > [!IMPORTANT]
-        > Without Planer integration, the app will still work, but the tasks will not be created during the inspections.    
+        > Without Planner integration, the app will still work, but the tasks will not be created during the inspections.    
 
     - To set up the Planner tab first, go back to the Teams channel, set up the Planner tab, and reopen the **Manage inspections** tab.
 

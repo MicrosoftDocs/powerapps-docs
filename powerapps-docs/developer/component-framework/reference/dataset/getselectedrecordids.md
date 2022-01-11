@@ -1,6 +1,6 @@
 ---
 title: getSelectedRecordIds | Microsoft Docs
-description: Retrieves all the selected record ids.
+description: Retrieves all the selected record IDs.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -17,7 +17,7 @@ ms.assetid: 96fa69f3-38d2-4e95-bb25-02d92aa6296c
 
 [!INCLUDE[./includes/getselectedrecordids-description.md](./includes/getselectedrecordids-description.md)]
 
-## Available for 
+## Available for
 
 Model-driven and canvas apps
 
@@ -28,7 +28,6 @@ Model-driven and canvas apps
 ## Return Value
 
 **Type**: `string[]`
-
 
 ### Related topics
 
