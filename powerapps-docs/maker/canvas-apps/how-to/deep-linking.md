@@ -21,41 +21,48 @@ contributors:
 
 # Create a canvas app with deep link to a specific screen
 
-A common scenario when building apps is the need to share a "deep link" to a specific screen. This is useful to get someone straight to a specific screen and data rather than asking them to navigate from the "home" screen of your app.
+A common scenario when building apps is the need to share a "deep link" to a specific screen. Deep links are useful when you want to get users straight to a specific screen and data rather than asking them to navigate from the "home" screen of your app.
 
-To deep link into a Power Apps app, you'll use the URL format: https://web.powerapps.com/apps/{*AppID*}?*query*.
+To deep link into a Power Apps app, you'll use this URL format: `https://web.powerapps.com/apps/{AppID}?query`.
 
--   AppID can be found on the make.powerapps.com Detail page for the app.
+- To find the **AppID**, go to [Power Apps](https://make.powerapps.com) > **Apps** > Select your app > **Details**.
+- The query text allows you to designate the data to deep link to. You'll need to make some code changes to your canvas app to use the provided parameters to open the app using the query URL.
 
--   The query allows you to designate the data to deep link to. You'll need to make some code changes to your canvas app to use the provided parameter(s) when the app is opened using the URL.
+In this article, you'll learn about how to:
 
-The example scenario below shows how to set up a canvas app to handle the query parameter and how to create a UI for emailing a deep link directly from a screen of your app.
+- Set up a canvas app to handle the query parameter.
+- Create a UI for emailing a deep link directly from a screen of your app.
 
-## Example
+## Prerequisites
 
-### Create the app
+- [Power Apps license](/power-platform/admin/pricing-billing-skus)
+- If you're new to Power Apps, familiarize yourself with Power Apps basics by [generating an app](../get-started-test-drive.md) and then customizing that app's [controls](../add-configure-controls.md), [gallery](../add-gallery.md), [forms](../working-with-forms.md), and [cards](../working-with-cards.md).
+- To create an app, you must be assigned to the [Environment Maker](/power-platform/admin/database-security) security role.
+- This example scenario uses tables from [Northwind sample data](northwind-install.md). If you use different Dataverse tables, ensure you select the correct table names while configuring the app.
 
-This example is built using Microsoft Dataverse as the data source and can be customized to use any other data source. More information: Create a canvas app with data from Microsoft Dataverse
+## Create the app
 
-1.  Sign in to Power Apps and, if necessary, switch environments.
+1. Sign in to [Power Apps](https://make.powerapps.com).
 
-2.  Under **Start from data**, select **Dataverse**.
+1. Verify and if necessary, switch environments using the environments list from the top-right side of the screen.
+
+1. Under **Start from data**, select **Dataverse**.
 
     :::image type="content" source="media/deep-linking/start-from-dataverse.png" alt-text="Start from data - Microsoft Dataverse." border="false":::
 
-3.  If this is your first time, you're prompted to create a connection to Dataverse. Select **Create** this connection. Otherwise, under **Choose a table**, select **Accounts**, and then select **Connect**.
+1. If this is your first time, you're prompted to create a connection to Dataverse. Select **Create** this connection.
 
-4.  If the **Welcome to Power Apps Studio** dialog box appears, select **Skip**.
+1. Under **Choose a table**, select **Accounts**, and then select **Connect**.
 
-Your app opens to the **BrowseScreen**, which shows a list of accounts in a gallery. On the BrowseScreen, by default, the gallery shows an email address, a city, and an account name. The app also contains a **DetailScreen** and **EditScreen**.
+Your app opens to the **BrowseScreen**, that shows a list of accounts in a gallery. By default, this gallery shows an email address, a city, and an account name. The app also contains **DetailScreen** and **EditScreen**.
 
-### Set the navigation to use a context variable
+## Set the navigation to use a context variable
 
-1.  On BrowseScreen, select Layout under gallery Properties and change the **Layout** to **"Title, subtitle and body"**
+1. On **BrowseScreen** screen, select **Layout** under gallery properties, and select **Title, subtitle and body**
 
     :::image type="content" source="media/deep-linking/account-list.png" alt-text="Accounts list view." border="false":::
 
-2.  Select first record of BrowseGallery and under **OnSelect**, enter the following:
+1. Select first record of **BrowseGallery** gallery. And then, under **OnSelect**, enter the following:
 
     ```powerapps-dot
     Navigate(DetailScreen, Fade, {accountVal:ThisItem})
@@ -63,52 +70,42 @@ Your app opens to the **BrowseScreen**, which shows a list of accounts in a gal
 
     :::image type="content" source="media/deep-linking/account-val.png" alt-text="Set AccountVal." border="false":::
 
-    This creates a context variable called *accountVal*. This value is populated anytime a record is selected from the Gallery. The user is navigated to the DetailScreen with the selected account stored in *accountVal*.
+    The [Navigate()](../functions/function-navigate.md) function creates a context variable called **accountVal**. This variable is populated whenever you select a record from the gallery. Upon selecting record, you'll be taken to the **DetailScreen** with the selected value (in this example, account) in **accountVal**.
 
-3.  In the DetailScreen, select **Edit fields** under **Properties**, and add **Account**, **Primary Contact**, and **Email** fields.
+1. In the **DetailScreen**, select **Edit fields** under **Properties**, and add **Account**, **Primary Contact**, and **Email** fields.
 
     :::image type="content" source="media/deep-linking/account-detail.png" alt-text="Accounts Detail view.":::
 
-4.  Select DetailForm, and set **Item** to *accountVal*.
+1. Select **DetailForm**, and set **Item** to **accountVal**.
 
     :::image type="content" source="media/deep-linking/set-account-detail.png" alt-text="AccountVal.":::
 
+1. [Save](../save-publish-app.md#save-changes-to-an-app) with the name "Account Deep linking".
 
-### Save the app
+## Get the App ID
 
-1.  Select **Settings**.
-
-2.  Set the app name to **Account Deep linking** and select **Save**.
-
-3.  Close the settings dialog.
-
-4.  Near the left edge, select **Save as** and then, in the lower-right corner, select **Save**.
-
-### Retrieve the App ID
-
-The App ID is a unique GUID representing a given app. It is generated when you save the app to cloud. You can get the app details, including App ID by navigating to your maker portal and looking at the Details tab.
-
-In make.powerapps.com, on the **Apps** tab, select the ellipsis ( **. . .** ), then **Details** to view app details.
+**App ID** is a unique GUID representing a given app, and generated when you save the app to cloud. To get the **App ID**, go to [Power Apps](https://make.powerapps.com) > **Apps** > Select your app > **Details**. More information: [Get an App ID](../get-sessionid.md#get-an-app-id)
 
   :::image type="content" source="media/deep-linking/app-detail.png" alt-text="App details.":::
 
-Make a note of the 'App ID' which will be used in the next set of steps. Our example App ID is eb355244-8241-4f2f-bf83-e0760caffd99.
+### Enable deep link within the canvas app
 
-### Enable deep linking within the canvas app
+The objective of this example is to take users to the **DetailsScreen** when the app is launched with the **accountId** query parameter as part of the app URL. For this purpose, we'll use [Param()](../functions/function-param.md) function that retrieves the query string parameter supplied while launching the app.
 
-The next set of steps navigate to the DetailScreen if the app is launched with the accountId parameter as part of the URL.
+1. Select **App** from the **Tree view** on the left-side of the screen.
 
-The [Param](https://powerapps.microsoft.com/en-us/tutorials/function-param/) function retrieves the query string parameter if one was supplied when launching the app.
+1. Select **OnStart** property from the list of properties.
 
-Select **App**
-
-1.  On **OnStart**, store the retrieved App ID value.
+1. To store the **App ID** value, update the **OnStart** property formula as below.
 
     ```powerapps-dot
     Set(AppID, eb355244-8241-4f2f-bf83-e0760caffd99);
     ```
 
-2. Add the following formula
+    > [!NOTE]
+    > Ensure you update the **App ID** (GUID) in the above formula for your app as appropriate.
+
+2. Add the following formula --> ?
 
     ```powerapps-dot
     If(Not(IsBlank(Param("accountId"))),Set(accountId,Param("accountId")));
