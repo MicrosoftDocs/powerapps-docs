@@ -193,7 +193,7 @@ Using **IsBlankOrError** will prevent any further processing of the error.
 | Formula | Description | Result |
 | --- | --- | --- | 
 | **IsBlankOrError( 1 )** | The argument isn't an error or a blank.  | *false* | 
-| **IsBlankOrErrro( Blank() )** | The argument is a blank.  | *true* |
+| **IsBlankOrError( Blank() )** | The argument is a blank.  | *true* |
 | **IsBlankOrError( 1/0 )** | The argument is an error.  | *true* | 
 
 ### Step by step
