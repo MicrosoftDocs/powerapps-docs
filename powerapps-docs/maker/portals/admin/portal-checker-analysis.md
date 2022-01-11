@@ -517,12 +517,84 @@ This issue occurs when a parent [web page](../configure/web-page.md) record is i
 
 ## Cyclic Parent Web Page
 
+<!--check how this is possible -->
+
 ## Web Page belong to different Website
 
+This issue occurs when a parent [web page](../configure/web-page.md) is associated with a different [website](../configure/websites.md). To fix this issue:
 
+1. Open the [Portal Management app](../configure/configure-portal.md).
+1. In the left pane, select **Web Pages**.
+1. Select either the parent web page record or each child web page record, depending on which site the web pages should belong to.
+1. Update the **Web site** field to point the appropriate website.
 
+## Web Page Publishing is hidden
 
+This issue occurs when the [publishing state](../configure/publishing-states.md) **IsVisible** field is not checked. To fix this issue:
 
+1. Open the [Portal Management app](../configure/configure-portal.md).
+1. In the left pane, select **Web Pages**.
+1. Select one of the affected web pages.
+1. Select the **Publishing State** record to navigate to the record.
+1. Select the **IsVisible** field and make sure that it is checked (set to true). 
+
+## Web Page does not have minimum 1 Language content Page
+
+This issue occurs when the [web page](../configure/web-page.md) does not have at least one [language content page](../configure/enable-multiple-language-support.md#create-content-in-multiple-languages). To fix this issue:
+
+1. Open the [Portal Management app](../configure/configure-portal.md).
+1. In the left pane, select **Web Pages**.
+1. Select one of the affected web pages.
+1. Scroll down to the **Localized Content** section.
+1. Select **+ New Web Page** to create a new language content page. 
+
+## Web page with disabled Page template 
+
+This issue occurs when the [page template](../configure/page-templates.md) record is inactive. To fix this issue:
+
+1. Open the [Portal Management app](../configure/configure-portal.md).
+1. In the left pane, select **Web Pages**.
+1. Select the affected web page records.
+1. Select the **Page Template** record to navigate to the record.
+1. Select **Activate** from the command bar.
+1. Alternatively, update the **Page Template** to point to an active page template.
+
+## Web Page having a Page template belongs to different web site
+
+This issue occurs when a [page template](../configure/page-templates.md) is associated with a different [website](../configure/websites.md). To fix this issue:
+
+1. Open the [Portal Management app](../configure/configure-portal.md).
+1. In the left pane, select **Web Pages**.
+1. Select the affected web page records.
+1. Update the **Web site** field to point the appropriate website.
+1. Alternatively, update the **Page Template** to point to a page template in the same website.
+
+## Web Page without a Publishing state
+
+This issue occurs when a [web page](../configure/web-page.md) record does not have a corresponding [publishing state](../configure/publishing-states.md). To fix this issue:
+
+1. Open the [Portal Management app](../configure/configure-portal.md).
+1. In the left pane, select **Web Pages**.
+1. Select the affected web page record.
+1. Update the **Publishing State** field to point to an publishing state record. 
+
+## Web Page having a Publishing State belong to different web site
+
+This issue occurs when a [publishing state](../configure/publishing-states.md) is associated with a different [website](../configure/websites.md). To fix this issue:
+
+1. Open the [Portal Management app](../configure/configure-portal.md).
+1. In the left pane, select **Web Pages**.
+1. Select the affected web page records.
+1. Update the **Publishing State** field to point to an publishing state record in the same website. 
+
+## Web Page associated to a Localized Content Page as a Parent Web Page  
+
+This issue occurs when a [web page](../configure/web-page.md) record has it's **Parent Web Page** associated to a [language content page](../configure/enable-multiple-language-support.md#create-content-in-multiple-languages). To fix this issue:
+
+1. Open the [Portal Management app](../configure/configure-portal.md).
+1. In the left pane, select **Web Pages**.
+1. Select the affected web page record.
+1. Update the **Parent Page** field to point to a valid web page record that is not a content page.
 
 ### See also
 
