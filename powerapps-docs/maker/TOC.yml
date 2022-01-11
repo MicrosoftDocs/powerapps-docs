@@ -427,6 +427,8 @@
               href: ./canvas-apps/control-limitations.md
             - name: Add picture
               href: ./canvas-apps/controls/control-add-picture.md
+            - name: Address input
+              href: ./canvas-apps/geospatial-component-input-address.md
             - name: Attachments
               href: ./canvas-apps/controls/control-attachments.md
             - name: Audio
@@ -477,6 +479,10 @@
               href: ./canvas-apps/controls/control-column-line-chart.md
             - name: List box
               href: ./canvas-apps/controls/control-list-box.md
+            - name: Map
+              href: ./canvas-apps/geospatial-component-map.md
+            - name: Measure in MR
+              href: ./canvas-apps/mixed-reality-component-measure-distance.md
             - name: Microphone
               href: ./canvas-apps/controls/control-microphone.md
             - name: PDF viewer (experimental)
@@ -513,6 +519,12 @@
               href: ./canvas-apps/controls/control-vertical-container.md
             - name: Video
               href: ./canvas-apps/controls/control-audio-video.md
+            - name: View in 3D
+              href: ./canvas-apps/mixed-reality-component-view-3d.md
+            - name: View in MR
+              href: ./canvas-apps/mixed-reality-component-view-mr.md
+            - name: View shape in MR
+              href: ./canvas-apps/mixed-reality-component-view-shape.md
             - name: Web barcode scanner (experimental)
               href: ./canvas-apps/controls/control-barcodescanner.md
           - name: Common properties
@@ -1109,12 +1121,14 @@
       href: ./canvas-apps/embed-apps-dev.md
     - name: Develop offline-capable apps
       href: ./canvas-apps/offline-apps.md
-    - name: Create a component
+    - name: Create a component (preview)
       items:
         - name: Components overview
           href: ./canvas-apps/create-component.md
         - name: Component library
           href: ./canvas-apps/component-library.md
+        - name: Map input fields
+          href: ./canvas-apps/map-component-input-fields.md
         - name: Behavior formulas
           href: ./canvas-apps/component-behavior.md
     - name: Embed canvas apps in your applications
@@ -1131,6 +1145,8 @@
       href: ./canvas-apps/performance-tips.md
     - name: Canvas apps coding standards and guidelines
       href: https://aka.ms/powerappscanvasguidelines
+  - name: Important changes and deprecations
+    href: ./canvas-apps/important-changes-deprecations.md
 - name: Model-driven apps
   items:
   - name: Model-driven apps
