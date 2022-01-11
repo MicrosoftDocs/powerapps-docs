@@ -87,30 +87,35 @@ Now you'll set the navigation to use a context that we'll use to take the user t
 
     :::image type="content" source="media/deep-linking/set-account-detail.png" alt-text="AccountVal.":::
 
-1. [Save](../save-publish-app.md#save-changes-to-an-app) with the name "Account Deep linking".
+1. [Save](../save-publish-app.md#save-changes-to-an-app) with the name "Account deep linking".
 
 ## Get the App ID
 
-**App ID** is a unique GUID representing a given app, and generated when you save the app to cloud. To get the **App ID**, go to [Power Apps](https://make.powerapps.com) > **Apps** > Select your app > **Details**. More information: [Get an App ID](../get-sessionid.md#get-an-app-id)
+**App ID** is a unique GUID representing a given app, and generated when you save the app to cloud.
+
+To get the **App ID**, open a new tab and go to [Power Apps](https://make.powerapps.com) > **Apps** > Select your app > **Details**. More information: [Get an App ID](../get-sessionid.md#get-an-app-id)
 
   :::image type="content" source="media/deep-linking/app-detail.png" alt-text="App details.":::
 
-### Enable deep link within the canvas app
+## Deep link to a screen
 
-The objective of this example is to take users to the **DetailsScreen** when the app is launched with the **accountId** query parameter as part of the app URL. For this purpose, we'll use [Param()](../functions/function-param.md) function that retrieves the query string parameter supplied while launching the app.
+The objective of this example is to take users to the **DetailsScreen1** when the app is launched with the **accountId** query parameter as part of the app URL. For this purpose, we'll use [Param()](../functions/function-param.md) function that retrieves the query string parameter supplied while launching the app.
 
 1. Select **App** from the **Tree view** on the left-side of the screen.
+
+    > [!TIP]
+    > If you've closed the Power Apps Studio, reopen the saved "Account deep linking" app by [editing](../edit-app.md) the app.
 
 1. Select **OnStart** property from the list of properties.
 
 1. To store the **App ID** value, update the **OnStart** property formula as below.
 
     ```powerapps-dot
-    Set(AppID, b76abea1-e888-409e-8fb6-630be198fa65);
+    Set(AppID, "b76abea1-e888-409e-8fb6-630be198fa65");
     ```
 
     > [!NOTE]
-    > Ensure you update the **App ID** (GUID) in the above formula for your app as appropriate.
+    > Ensure you replace the **App ID** (GUID) in the above example formula to your App ID as appropriate.
 
 2. Add the following formula --> ?
 
@@ -145,6 +150,8 @@ The App URL uses this format: [https://web.powerapps.com/apps/{*AppID*}?*query*
 Our example App ID is eb355244-8241-4f2f-bf83-e0760caffd99.
 
 The query can be an arbitrary key-value pair. We'll use **accountId**=***x*** where *x* is the GUID of the account we want to link to. For example, here is the URL for the Account with accountId = 68f1f132-9e6c-eb11-b0b0-000d3a1a1100, https://web.powerapps.com/apps/eb355244-8241-4f2f-bf83-e0760caffd99?accountId=68f1f132-9e6c-eb11-b0b0-000d3a1a1100
+
+Example: https://apps.powerapps.com/play/061b64cd-e5a0-4a7a-a77f-b6f8586dd6c7?accountId=01e5bf81-7d44-ec11-8c60-002248094566
 
 ### Email a deep link from the detail screen
 
