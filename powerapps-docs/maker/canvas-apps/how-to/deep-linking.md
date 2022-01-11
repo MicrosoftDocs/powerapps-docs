@@ -38,7 +38,6 @@ In this article, you'll learn about how to:
 - [Power Apps license](/power-platform/admin/pricing-billing-skus)
 - If you're new to Power Apps, familiarize yourself with Power Apps basics by [generating an app](../get-started-test-drive.md) and then customizing that app's [controls](../add-configure-controls.md), [gallery](../add-gallery.md), [forms](../working-with-forms.md), and [cards](../working-with-cards.md).
 - To create an app, you must be assigned to the [Environment Maker](/power-platform/admin/database-security) security role.
-- This example scenario uses tables from [Northwind sample data](northwind-install.md). If you use different Dataverse tables, ensure you select the correct table names while configuring the app.
 
 ## Create the app
 
@@ -56,23 +55,31 @@ In this article, you'll learn about how to:
 
 Your app opens to the **BrowseScreen**, that shows a list of accounts in a gallery. By default, this gallery shows an email address, a city, and an account name. The app also contains **DetailScreen** and **EditScreen**.
 
-## Set the navigation to use a context variable
+## Update navigation
+
+Now you'll set the navigation to use a context that we'll use to take the user to another screen.
 
 1. On **BrowseScreen** screen, select **Layout** under gallery properties, and select **Title, subtitle and body**
 
-    :::image type="content" source="media/deep-linking/account-list.png" alt-text="Accounts list view." border="false":::
+    :::image type="content" source="media/deep-linking/account-list.png" alt-text="Accounts list view.":::
 
 1. Select first record of **BrowseGallery** gallery. And then, under **OnSelect**, enter the following:
 
     ```powerapps-dot
-    Navigate(DetailScreen, Fade, {accountVal:ThisItem})
+    Navigate(DetailScreen1, Fade, {accountVal:ThisItem})
     ```
 
-    :::image type="content" source="media/deep-linking/account-val.png" alt-text="Set AccountVal." border="false":::
+    :::image type="content" source="media/deep-linking/onselect-accountval.png" alt-text="Set AccountVal." border="false":::
+
+    <!--->:::image type="content" source="media/deep-linking/account-val.png" alt-text="Set AccountVal." border="false":::--->
 
     The [Navigate()](../functions/function-navigate.md) function creates a context variable called **accountVal**. This variable is populated whenever you select a record from the gallery. Upon selecting record, you'll be taken to the **DetailScreen** with the selected value (in this example, account) in **accountVal**.
 
-1. In the **DetailScreen**, select **Edit fields** under **Properties**, and add **Account**, **Primary Contact**, and **Email** fields.
+1. From the **Tree view** on the left-side of the screen, expand **DetailScreen1**, and select **DetailForm1**.
+
+    :::image type="content" source="media/deep-linking/select-detailform1.png" alt-text="Select DetailForm1 from Tree view.":::
+
+1. From the properties pane on the right-side of the screen, select **Edit fields**, and add **Account**, **Primary Contact**, and **Email** fields.
 
     :::image type="content" source="media/deep-linking/account-detail.png" alt-text="Accounts Detail view.":::
 
@@ -99,7 +106,7 @@ The objective of this example is to take users to the **DetailsScreen** when the
 1. To store the **App ID** value, update the **OnStart** property formula as below.
 
     ```powerapps-dot
-    Set(AppID, eb355244-8241-4f2f-bf83-e0760caffd99);
+    Set(AppID, b76abea1-e888-409e-8fb6-630be198fa65);
     ```
 
     > [!NOTE]
