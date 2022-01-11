@@ -72,7 +72,7 @@ Some features such as dashboards, charts, multi-table business process flows, an
 For the app to be available in offline mode, app and user data must be downloaded on your device. This process is called initial offline sync.
 The app data includes all the resources needed for the app to run properly and user data that is configured for the offline profile and stored in Microsoft Dataverse tables.
 
-With offline-first, during the initial offline sync, you'll get a notification stating that your app is syncing the offline data. This can take a few minutes or longer depending on what has been configured in the offline profile. The initial offline sync is triggered every time the app is launched. Select **See details** to open the offline status page.
+With offline-first, during the initial offline sync, you'll get a notification stating that your app is syncing the offline data. This can take a few minutes or longer depending on what has been configured in the offline profile. If the initial offline sync hasn't completed, it'll be triggered every time the app is launched. Select **See details** to open the offline status page.
 
 > [!div class="mx-imgBorder"]
 > ![Offline status screen.](media/offline-first-1.png)
