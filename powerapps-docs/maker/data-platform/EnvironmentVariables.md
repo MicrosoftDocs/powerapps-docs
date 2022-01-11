@@ -141,7 +141,7 @@ To use Azure Key Vault secrets with Power Platform, the Azure subscription that 
 
 #### Prerequisites
 
-1. The `Microsoft.PowerPlatform` resource provider must be registered in your Azure subscription.  More information: [Resource providers and resource types](/azure/azure-resource-manager/management/resource-providers-and-types)
+1. Register the `Microsoft.PowerPlatform` resource provider in your Azure subscription.  Follow these steps to verify and configure: [Resource providers and resource types](/azure/azure-resource-manager/management/resource-providers-and-types)
 
    :::image type="content" source="media/env-var-secret1.png" alt-text="Register the Power Platform provider in Azure":::
 
