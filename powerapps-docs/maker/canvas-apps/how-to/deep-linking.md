@@ -155,9 +155,7 @@ To invoke app with the parameter value, we have to use the following syntax:
 
 In the above syntax, we have to add the **App ID** and the query that contains **accountId** variable with its value.
 
-For example, when you enter the following URL in a browser, you'll see the app **Account deep linking** open with the supplied **accountId** parameter value (in this case, "A. Datum Corporation (Sample)"):
-
-`https://apps.powerapps.com/play/061b64cd-e5a0-4a7a-a77f-b6f8586dd6c7?accountId=01e5bf81-7d44-ec11-8c60-002248094566`
+For example, when the following URL was entered in a browser for the sample tenant, the app **Account deep linking** opened directly with the supplied **accountId** parameter value (in this example, "A. Datum Corporation (Sample)"): `https://apps.powerapps.com/play/061b64cd-e5a0-4a7a-a77f-b6f8586dd6c7?accountId=01e5bf81-7d44-ec11-8c60-002248094566`
 
 :::image type="content" source="media/deep-linking/sample-link.png" alt-text="Sample link with A. Datum Corporation (Sample) details open.":::
 
