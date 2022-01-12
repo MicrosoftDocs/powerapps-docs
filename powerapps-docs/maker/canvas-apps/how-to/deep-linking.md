@@ -191,7 +191,7 @@ For this purpose, we'll create a button and add the ability to invoke an email f
 
 1. [Save and publish](../save-publish-app.md) the app.
 
-### Test the app
+## Test the app
 
 Run the app, and go to the details screen for any account. And then, select the button **Share account**. The **OnSelect** button formula triggers an email to the recipient with the subject and body configured earlier. Here's a sample email sent by the configured app:
 
