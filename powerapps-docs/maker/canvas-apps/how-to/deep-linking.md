@@ -72,7 +72,7 @@ Now you'll set the navigation to use a context that we'll use to take the user t
     Navigate(DetailScreen1, Fade, {accountVal:ThisItem})
     ```
 
-    :::image type="content" source="media/deep-linking/onselect-accountval.png" alt-text="Set AccountVal." border="false":::
+    :::image type="content" source="media/deep-linking/onselect-accountval.png" alt-text="Set AccountVal.":::
 
     The [Navigate()](../functions/function-navigate.md) function creates a context variable called **accountVal**. This variable is populated whenever you select a record from the gallery. Upon selecting record, you'll be taken to the **DetailScreen** with the selected value (in this example, account) in **accountVal**.
 
@@ -187,7 +187,7 @@ For this purpose, we'll create a button and add the ability to invoke an email f
     > [!NOTE]
     > Replace **Recipient**, **Subject**, and **AppID** in the above formula with the email address of the recipient, subject for the email, and the ID of the app.
 
-    :::image type="content" source="media/deep-linking/share-account-button.png" alt-text="Share Account button." border="false":::
+    :::image type="content" source="media/deep-linking/share-account-button.png" alt-text="Share Account button.":::
 
 1. [Save and publish](../save-publish-app.md) the app.
 
@@ -195,11 +195,11 @@ For this purpose, we'll create a button and add the ability to invoke an email f
 
 Run the app, and go to the details screen for any account. And then, select the button **Share account**. The **OnSelect** button formula triggers an email to the recipient with the subject and body configured earlier. Here's a sample email sent by the configured app:
 
-:::image type="content" source="media/deep-linking/sent-email.png" alt-text="Email sent using button Share account." border="false":::
+:::image type="content" source="media/deep-linking/sent-email.png" alt-text="Email sent using button Share account.":::
 
 Open the email, and copy the deep link that points to the selected account, and you'll be taken directly to the account details screen in the **Account deep linking** app, instead of the default browse screen.
 
-:::image type="content" source="media/deep-linking/app-opened-from-email.png" alt-text="App opened using the link from the email." border="false":::
+:::image type="content" source="media/deep-linking/app-opened-from-email.png" alt-text="App opened using the link from the email.":::
 
 ### See also
 
