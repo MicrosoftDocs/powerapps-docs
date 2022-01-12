@@ -604,6 +604,14 @@ This issue occurs when a [web page](../configure/web-page.md) record has it's **
 1. Select the affected web page record.
 1. Update the **Parent Page** field to point to a valid web page record that is not a content page.
 
+## Portal is inaccessible
+
+This issue may occur when the authentication certificate for the site needs to be renewed.
+
+When portal is created, a new authentication key is generated. Portal uses this authentication key to connect to the Microsoft Dataverse environment. When authentication key is expired portal users will see message that the portal is inaccessible. 
+
+To fix this issue, [renew the authentication key](manage-auth-key.md#renew-authentication-key) for this site. 
+
 ### See also
 
 [Run Portal Checker](portal-checker.md)
