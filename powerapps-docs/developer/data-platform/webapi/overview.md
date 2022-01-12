@@ -1,12 +1,12 @@
 ---
 title: "Use the Microsoft Dataverse Web API (Dataverse)| Microsoft Docs"
 description: "The Microsoft Dataverse Web API implements the OData v4 protocol and provides a development experience that can be used across a wide variety of programming languages, platforms, and devices"
-ms.custom: intro-internal
+ms.custom: 
 ms.date: 04/15/2021
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: overview
 applies_to: 
   - "Dynamics 365 (online)"
 ms.assetid: 15c4039e-a3ca-4116-ba1d-3ac88cba3ae1

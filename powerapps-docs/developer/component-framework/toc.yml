@@ -364,7 +364,7 @@
         - name: updateView
           href: reference/control/updateview.md
       - name: updatedProperties
-        hred: reference/context.md
+        href: reference/updatedproperties.md
       - name: UserSettings
         href: reference/usersettings.md
       - name: Utility
