@@ -24,10 +24,11 @@ contributors:
 
 A common scenario when building apps is the need to share a "deep link" to a specific screen. Deep links are useful when you want to get users straight to a specific screen and data rather than asking them to navigate from the "home" screen of your app.
 
-To deep link into a Power Apps app, you'll use this URL format: `https://web.powerapps.com/apps/{AppID}?query`.
+To deep link into a Power Apps app, you'll use this URL syntax: `https://web.powerapps.com/apps/{AppID}?query`.
 
-- To find the **AppID**, go to [Power Apps](https://make.powerapps.com) > **Apps** > Select your app > **Details**.
-- The query text allows you to supply the data to deep link to. You'll need to make some code changes to your canvas app to use the provided parameters to open the app using the query URL.
+In this syntax:
+- **AppID**&mdash;ID of the app. Go to [Power Apps](https://make.powerapps.com) > **Apps** > Select your app > **Details**.
+- Query&mdash;The query text allows you to supply the data to deep link to. You'll need to make some code changes to your canvas app to use the provided parameters to open the app using the query URL.
 
 In this article, you'll learn about how to:
 
@@ -180,7 +181,7 @@ For this purpose, we'll create a button and add the ability to invoke an email f
 1. On the button's **OnSelect** property, enter the following:
 
     ```powerapps-dot
-    Office365Outlook.SendEmailV2("Recipient", "Subject*, "Here's the deep link to the selected account - https://web.powerapps.com/apps/[App ID]?accountId=" & accountVal.Account)
+    Office365Outlook.SendEmailV2("Recipient", "Subject", "Here's the deep link to the selected account - https://web.powerapps.com/apps/[App ID]?accountId=" & accountVal.Account)
     ```
 
     This formula uses the Microsoft 365 connector for Outlook to send an email using the [SendEmailV2](/connectors/office365/#send-an-email-(v2)) operation.
@@ -198,7 +199,7 @@ Run the app, and go to the details screen for any account. And then, select the 
 
 :::image type="content" source="media/deep-linking/sent-email.png" alt-text="Email sent using button Share account." border="false":::
 
-Open the email, and copy the deep link to the selected account and you'll be taken directly to the account details screen in the **Account deep linking** app, instead of the default browse screen.
+Open the email, and copy the deep link that points to the selected account, and you'll be taken directly to the account details screen in the **Account deep linking** app, instead of the default browse screen.
 
 :::image type="content" source="media/deep-linking/app-opened-from-email.png" alt-text="App opened using the link from the email." border="false":::
 
