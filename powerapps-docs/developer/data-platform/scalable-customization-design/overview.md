@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: 9/13/2020
 ms.reviewer: "pehecke"
 ms.service: powerapps
-ms.topic: "article"
+ms.topic: overview
 author: "rogergilchrist" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
