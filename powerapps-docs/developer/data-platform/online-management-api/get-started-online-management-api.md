@@ -3,7 +3,8 @@ title: "Get started with Online Management API for Microsoft Dataverse| Microsof
 description: "Provides basic information to help you get started with the Online Admin API for Microsoft Dataverse."
 ms.date: 10/23/2020
 ms.service: powerapps
-ms.topic: intro-internal
+ms.topic: conceptual
+ms.custom: intro-internal
 ms.assetid: c292c148-01f0-41f6-a2fe-7ed05a01a733
 author: KumarVivek
 ms.author: kvivek
