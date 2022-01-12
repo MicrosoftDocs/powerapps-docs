@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 08/24/2021
+ms.date: 01/12/2022
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: ndoelman
@@ -65,7 +65,7 @@ To enable permissions for an advanced form, select the checkbox to **Enable Tabl
 
 | Name                      | Description                                                                                                                                                                       |
 |---------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Add Captcha               | Portal uses RadCaptcha by Telerik to prevent malicious spam attacks. The service requires a unique key to authenticate requests for your portal application. <br> **NOTE:** Captcha control is currently limited to only English language for audio, and Latin characters for image. |
+| Add Captcha               | Portal uses RadCaptcha by Telerik to prevent malicious spam attacks. The service requires a unique key to authenticate requests for your portal application. |
 | Validation Group          | The group name assigned to input controls for evaluating valid input of named groups.                                                                                             |
 | Previous Button CSS Class | CSS Class name assigned to the Previous button.                                                                                                                                   |
 | Previous Button Text      | Label on the previous button.                                                                                                                                                     |
