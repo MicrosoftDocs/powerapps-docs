@@ -601,7 +601,7 @@ This issue occurs when a [web page](../configure/web-page.md) record has it's **
 
 1. Open the [Portal Management app](../configure/configure-portal.md).
 1. In the left pane, select **Web Pages**.
-1. Select the affected web page record.
+1. Select the web pages listed in the portal checker diagnostic results.
 1. Update the **Parent Page** field to point to a valid web page record that is not a content page.
 
 ## Portal is inaccessible
