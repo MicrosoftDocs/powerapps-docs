@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 01/10/2022
+ms.date: 01/12/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
@@ -496,98 +496,106 @@ To fix this issue, ensure that there are no plug-ins or flows that override the 
 
 <!--Placeholder New Items-->
 
-## Web page without Page Template
+## Web page without a page template
 
 This issue occurs when a [web page](../configure/web-page.md) record does not have a corresponding [page template](../configure/page-templates.md). To fix this issue:
 
 1. Open the [Portal Management app](../configure/configure-portal.md).
 1. In the left pane, select **Web Pages**.
-1. Select the affected web page record.
+1. Select the web pages listed in the portal checker diagnostic results.
 1. Update the **Page Template** field to point to an active page template record.
 
-## Disabled Parent Web Page
+## Disabled parent web page
 
 This issue occurs when a parent [web page](../configure/web-page.md) record is inactive. To fix this issue:
 
 1. Open the [Portal Management app](../configure/configure-portal.md).
 1. In the left pane, select **Web Pages**.
-1. Select the affected web page record.
+1. Select the web pages listed in the portal checker diagnostic results.
 1. Select the **Parent Page** record to navigate to the record.
 1. Select **Activate** from the command bar.
 
-## Cyclic Parent Web Page
+## Cyclic parent web page
 
-<!--check how this is possible -->
-
-## Web Page belong to different Website
-
-This issue occurs when a parent [web page](../configure/web-page.md) is associated with a different [website](../configure/websites.md). To fix this issue:
+This issue occurs when a [web page](../configure/web-page.md) references itself as a parent page. To fix this issue:
 
 1. Open the [Portal Management app](../configure/configure-portal.md).
 1. In the left pane, select **Web Pages**.
-1. Select either the parent web page record or each child web page record, depending on which site the web pages should belong to.
+1. Select the web pages listed in the portal checker diagnostic results.
+1. Update the **Parent Page** field to point to a valid web page record that is not referencing itself.
+
+## Web page belongs to different Website
+
+This issue occurs when a parent [web page](../configure/web-page.md) is associated with a different [website](../configure/websites.md) than a child web page. To fix this issue:
+
+1. Open the [Portal Management app](../configure/configure-portal.md).
+1. In the left pane, select **Web Pages**.
+1. Select the web pages (either parent web page or children web pages) listed in the portal checker diagnostic results.
 1. Update the **Web site** field to point the appropriate website.
 
-## Web Page Publishing is hidden
+## Web page publishing is hidden
 
 This issue occurs when the [publishing state](../configure/publishing-states.md) **IsVisible** field is not checked. To fix this issue:
 
 1. Open the [Portal Management app](../configure/configure-portal.md).
 1. In the left pane, select **Web Pages**.
-1. Select one of the affected web pages.
+1. Select the web pages listed in the portal checker diagnostic results.
 1. Select the **Publishing State** record to navigate to the record.
-1. Select the **IsVisible** field and make sure that it is checked (set to true). 
+1. Select the **IsVisible** field and make sure that it is checked (set to true).
 
-## Web Page does not have minimum 1 Language content Page
+## Web page does not have minimum of one language content page
 
 This issue occurs when the [web page](../configure/web-page.md) does not have at least one [language content page](../configure/enable-multiple-language-support.md#create-content-in-multiple-languages). To fix this issue:
 
 1. Open the [Portal Management app](../configure/configure-portal.md).
 1. In the left pane, select **Web Pages**.
-1. Select one of the affected web pages.
+1. Select the web pages listed in the portal checker diagnostic results.
 1. Scroll down to the **Localized Content** section.
-1. Select **+ New Web Page** to create a new language content page. 
+1. Select **+ New Web Page** to create a new language content page.
 
-## Web page with disabled Page template 
+    > [!Note]
+    > The configuration fields on the home page of a content page is not inherited to the existing content pages. They are used only in creation of new content pages. You must update the content page configurations individually.
+
+## Web page with disabled page template 
 
 This issue occurs when the [page template](../configure/page-templates.md) record is inactive. To fix this issue:
 
 1. Open the [Portal Management app](../configure/configure-portal.md).
 1. In the left pane, select **Web Pages**.
-1. Select the affected web page records.
+1. Select the web pages listed in the portal checker diagnostic results.
 1. Select the **Page Template** record to navigate to the record.
 1. Select **Activate** from the command bar.
-1. Alternatively, update the **Page Template** to point to an active page template.
+1. Alternatively, update the **Page Template** to point to an active page template in the web page.
 
-## Web Page having a Page template belongs to different web site
+## Web Page having a page template belongs to different web site
 
 This issue occurs when a [page template](../configure/page-templates.md) is associated with a different [website](../configure/websites.md). To fix this issue:
 
 1. Open the [Portal Management app](../configure/configure-portal.md).
 1. In the left pane, select **Web Pages**.
-1. Select the affected web page records.
+1. Select the web pages listed in the portal checker diagnostic results.
 1. Update the **Web site** field to point the appropriate website.
 1. Alternatively, update the **Page Template** to point to a page template in the same website.
 
-## Web Page without a Publishing state
+## Web page without a publishing state
 
 This issue occurs when a [web page](../configure/web-page.md) record does not have a corresponding [publishing state](../configure/publishing-states.md). To fix this issue:
 
 1. Open the [Portal Management app](../configure/configure-portal.md).
 1. In the left pane, select **Web Pages**.
-1. Select the affected web page record.
+1. Select the web pages listed in the portal checker diagnostic results.
 1. Update the **Publishing State** field to point to an publishing state record. 
 
-## Web Page having a Publishing State belong to different web site
+## Web page having a publishing state belong to different web site
 
 This issue occurs when a [publishing state](../configure/publishing-states.md) is associated with a different [website](../configure/websites.md). To fix this issue:
 
 1. Open the [Portal Management app](../configure/configure-portal.md).
 1. In the left pane, select **Web Pages**.
-1. Select the affected web page records.
+1. Select the web pages listed in the portal checker diagnostic results.
 1. Update the **Publishing State** field to point to an publishing state record in the same website. 
 
-## Web Page associated to a Localized Content Page as a Parent Web Page  
+## Web page associated to a localized content page as a parent web page  
 
 This issue occurs when a [web page](../configure/web-page.md) record has it's **Parent Web Page** associated to a [language content page](../configure/enable-multiple-language-support.md#create-content-in-multiple-languages). To fix this issue:
 
