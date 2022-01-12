@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: 11/01/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
-ms.topic: "article"
+ms.topic: "overview"
 author: "Bluebear73" # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: "munzinge" # MSFT alias of Microsoft employees only
