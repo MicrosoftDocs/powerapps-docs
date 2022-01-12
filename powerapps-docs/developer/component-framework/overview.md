@@ -9,8 +9,7 @@ ms.service: "powerapps"
 ms.custom:
   - "dyn365-a11y"
   - "dyn365-developer"
-  - "intro-internal"
-ms.topic: article
+ms.topic: overview
 ms.assetid: 7923e36d-3640-49f7-9f2f-c97358a632db
 ms.subservice: pcf
 ms.author: nabuthuk
