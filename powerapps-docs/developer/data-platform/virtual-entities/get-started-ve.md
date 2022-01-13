@@ -3,7 +3,8 @@ title: "Get started with virtual tables (entities) (Microsoft Dataverse) | Micro
 description: "Virtual tables enable the integration of data residing in external systems by seamlessly representing that data as tables in Microsoft Dataverse, without replication of data and often without custom coding."
 ms.date: 04/08/2021
 ms.service: powerapps
-ms.topic: intro-internal
+ms.topic: conceptual
+ms.custom: intro-internal
 applies_to: 
   - "Dynamics 365 (online)"
 ms.assetid: 14c5fbbc-98db-4e49-b245-2c84c1cd11cd
@@ -38,7 +39,7 @@ A data provider is a particular type of Dataverse plug-in, which is registered a
 The following data providers ship with Dataverse:
 
 - An [OData v4](https://www.odata.org/documentation/) provider is included with the service and is installed by default. This provider supports create, read (retrieve, retrieve multiple), update and delete operations.
-- An [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db) (formerly *Microsoft Document DB*) provider is available from [AppSource](https://appsource.microsoft.com).
+- An [Azure Cosmos DB](/azure/cosmos-db) (formerly *Microsoft Document DB*) provider is available from [AppSource](https://appsource.microsoft.com).
 
 
 If a data provider cannot be found for your external data source, you can develop a *custom virtual table data provider*; for more information, see [Virtual table data providers](custom-ve-data-providers.md). Full CRUD operation is now supported for custom virtual table data provider. Developers can implement plug-ins and register them using the Plug-in Registration tool for each of the CRUD operation supporting the virtual table.
