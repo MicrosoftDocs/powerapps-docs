@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 01/12/2022
+ms.date: 01/13/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
@@ -494,7 +494,16 @@ To fix this issue, add the CSS file with entire content in the notes section of 
 
 To fix this issue, ensure that there are no plug-ins or flows that override the MIME type of the CSS file(s).
 
-<!--Placeholder New Items-->
+## Identifying web pages listed in diagnostic results
+
+The portal checker diagnostic results could list multiple web pages with the same name. To identify the specific page affected, you can utilize the id of the page.
+
+1. Open the [Portal Management app](../configure/configure-portal.md).
+1. In the left pane, select **Web Pages**.
+1. Open any web page.
+1. Replace the id in the URL with the guid specified in the portal checker diagnostic results.
+
+    :::image type="content" source="media/portal-checker-analysis/webpage-by-id.png" alt-text="Replacing the web page id the URL.":::
 
 ## Web page without a page template
 
