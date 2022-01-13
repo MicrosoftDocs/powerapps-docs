@@ -410,11 +410,11 @@
   - name: Authenticate apps and services with Microsoft Dataverse
     href: authentication.md
     items:
-    - name: .NET Framework applications
+    - name: Authenticating .NET applications
       href: authenticate-dot-net-framework.md
-    - name: Use OAuth
+    - name: Use OAuth authentication
       href: authenticate-oauth.md
-    - name: Use Office365 (WS-Trust)
+    - name: Use of Office365 (WS-Trust) authentication
       href: authenticate-office365-deprecation.md
   - name: "Tutorial: Register an app with Azure Active Directory"
     href: walkthrough-register-app-azure-active-directory.md

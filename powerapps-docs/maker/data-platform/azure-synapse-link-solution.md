@@ -11,7 +11,8 @@ ms.topic: "conceptual"
 applies_to: 
   - "powerapps"
 author: "sama-zaki"
-ms.assetid: 
+ms.assetid:
+keywords: transporting; azure synapse link configuration
 ms.subservice: dataverse-maker
 ms.author: "matp"
 manager: "kvivek"

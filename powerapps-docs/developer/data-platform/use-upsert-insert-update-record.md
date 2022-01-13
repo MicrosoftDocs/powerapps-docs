@@ -55,7 +55,7 @@ You can reduce the complexity involved with data integration scenarios by using 
   
 4. If the record doesn’t exist:  
   
-   1.  Copy any alternate key values into the target table columns.  
+   1.  Copy any alternate key values that the target does not already have in its attributes collection, into the target table columns.  
   
    2.  Call `Create`.  
   
