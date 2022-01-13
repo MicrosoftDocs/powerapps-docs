@@ -247,6 +247,8 @@
         href: ./canvas-apps/customize-card.md
   - name: Create an app from scratch
     items:
+    - name: With a blank app
+      href: ./canvas-apps/create-blank-app.md
     - name: From Dataverse
       href: ./canvas-apps/data-platform-create-app-scratch.md
     - name: From Excel
