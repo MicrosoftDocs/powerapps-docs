@@ -496,7 +496,7 @@ To fix this issue, ensure that there are no plug-ins or flows that override the 
 
 ## Identifying web pages listed in diagnostic results
 
-The portal checker diagnostic results could list multiple web pages with the same name. To identify the specific page affected, you can utilize the id of the page.
+The portal checker diagnostic results could list web pages that have the same name as other pages in the portal. If there are multiple web pages with the same name, you can identify the specific page affected using the unique guid of the page.
 
 1. Open the [Portal Management app](../configure/configure-portal.md).
 1. In the left pane, select **Web Pages**.
@@ -511,7 +511,7 @@ This issue occurs when a [web page](../configure/web-page.md) record does not ha
 
 1. Open the [Portal Management app](../configure/configure-portal.md).
 1. In the left pane, select **Web Pages**.
-1. Select the web pages listed in the portal checker diagnostic results.
+1. Select the web page [listed](#identifying-web-pages-listed-in-diagnostic-results) in the portal checker diagnostic results.
 1. Update the **Page Template** field to point to an active page template record.
 
 ## Disabled parent web page
@@ -520,7 +520,7 @@ This issue occurs when a parent [web page](../configure/web-page.md) record is i
 
 1. Open the [Portal Management app](../configure/configure-portal.md).
 1. In the left pane, select **Web Pages**.
-1. Select the web pages listed in the portal checker diagnostic results.
+1. Select the web page [listed](#identifying-web-pages-listed-in-diagnostic-results) in the portal checker diagnostic results.
 1. Select the **Parent Page** record to navigate to the record.
 1. Select **Activate** from the command bar.
 
@@ -530,7 +530,7 @@ This issue occurs when a [web page](../configure/web-page.md) references itself 
 
 1. Open the [Portal Management app](../configure/configure-portal.md).
 1. In the left pane, select **Web Pages**.
-1. Select the web pages listed in the portal checker diagnostic results.
+1. Select the web pages [listed](#identifying-web-pages-listed-in-diagnostic-results) in the portal checker diagnostic results.
 1. Update the **Parent Page** field to point to a valid web page record that is not referencing itself.
 
 ## Web page belongs to different Website
@@ -539,7 +539,7 @@ This issue occurs when a parent [web page](../configure/web-page.md) is associat
 
 1. Open the [Portal Management app](../configure/configure-portal.md).
 1. In the left pane, select **Web Pages**.
-1. Select the web pages (either parent web page or children web pages) listed in the portal checker diagnostic results.
+1. Select the web pages (either parent web page or children web pages) [listed](#identifying-web-pages-listed-in-diagnostic-results) in the portal checker diagnostic results.
 1. Update the **Web site** field to point the appropriate website.
 
 ## Web page publishing is hidden
@@ -548,7 +548,7 @@ This issue occurs when the [publishing state](../configure/publishing-states.md)
 
 1. Open the [Portal Management app](../configure/configure-portal.md).
 1. In the left pane, select **Web Pages**.
-1. Select the web pages listed in the portal checker diagnostic results.
+1. Select the web pages [listed](#identifying-web-pages-listed-in-diagnostic-results) in the portal checker diagnostic results.
 1. Select the **Publishing State** record to navigate to the record.
 1. Select the **IsVisible** field and make sure that it is checked (set to true).
 
@@ -558,7 +558,7 @@ This issue occurs when the [web page](../configure/web-page.md) does not have at
 
 1. Open the [Portal Management app](../configure/configure-portal.md).
 1. In the left pane, select **Web Pages**.
-1. Select the web pages listed in the portal checker diagnostic results.
+1. Select the web pages [listed](#identifying-web-pages-listed-in-diagnostic-results) in the portal checker diagnostic results.
 1. Scroll down to the **Localized Content** section.
 1. Select **+ New Web Page** to create a new language content page.
 
@@ -571,7 +571,7 @@ This issue occurs when the [page template](../configure/page-templates.md) recor
 
 1. Open the [Portal Management app](../configure/configure-portal.md).
 1. In the left pane, select **Web Pages**.
-1. Select the web pages listed in the portal checker diagnostic results.
+1. Select the web pages [listed](#identifying-web-pages-listed-in-diagnostic-results) in the portal checker diagnostic results.
 1. Select the **Page Template** record to navigate to the record.
 1. Select **Activate** from the command bar.
 1. Alternatively, update the **Page Template** to point to an active page template in the web page.
@@ -582,7 +582,7 @@ This issue occurs when a [page template](../configure/page-templates.md) is asso
 
 1. Open the [Portal Management app](../configure/configure-portal.md).
 1. In the left pane, select **Web Pages**.
-1. Select the web pages listed in the portal checker diagnostic results.
+1. Select the web pages [listed](#identifying-web-pages-listed-in-diagnostic-results) in the portal checker diagnostic results.
 1. Update the **Web site** field to point the appropriate website.
 1. Alternatively, update the **Page Template** to point to a page template in the same website.
 
@@ -592,7 +592,7 @@ This issue occurs when a [web page](../configure/web-page.md) record does not ha
 
 1. Open the [Portal Management app](../configure/configure-portal.md).
 1. In the left pane, select **Web Pages**.
-1. Select the web pages listed in the portal checker diagnostic results.
+1. Select the web pages [listed](#identifying-web-pages-listed-in-diagnostic-results) in the portal checker diagnostic results.
 1. Update the **Publishing State** field to point to an publishing state record. 
 
 ## Web page having a publishing state belong to different web site
@@ -601,7 +601,7 @@ This issue occurs when a [publishing state](../configure/publishing-states.md) i
 
 1. Open the [Portal Management app](../configure/configure-portal.md).
 1. In the left pane, select **Web Pages**.
-1. Select the web pages listed in the portal checker diagnostic results.
+1. Select the web pages [listed](#identifying-web-pages-listed-in-diagnostic-results) in the portal checker diagnostic results.
 1. Update the **Publishing State** field to point to an publishing state record in the same website. 
 
 ## Web page associated to a localized content page as a parent web page  
@@ -610,7 +610,7 @@ This issue occurs when a [web page](../configure/web-page.md) record has it's **
 
 1. Open the [Portal Management app](../configure/configure-portal.md).
 1. In the left pane, select **Web Pages**.
-1. Select the web pages listed in the portal checker diagnostic results.
+1. Select the web pages [listed](#identifying-web-pages-listed-in-diagnostic-results) in the portal checker diagnostic results.
 1. Update the **Parent Page** field to point to a valid web page record that is not a content page.
 
 ## Portal is inaccessible
