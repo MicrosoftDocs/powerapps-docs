@@ -71,7 +71,7 @@ Legend
 6.  **Collapsible groups**: Your app maker can enable collapsible groups. For information on how customize the navigation bar, see [Overview of the model-driven app designer](../maker/model-driven-apps/app-designer-overview.md).
 
 
-If your screen is zoomed in or out too much, then you won't see your current app name which lets you change apps. To access the change app button, select **Site map** > **Apps**. 
+If your screen is zoomed in too much or is very narrow, then you won't see your current app name which lets you change apps. To access the change app button, select **Site map** > **Apps**. 
 
 ![Select the site map button to access the app switcher.](media/zoom-app.png "Select site map to access app switcher")
 
