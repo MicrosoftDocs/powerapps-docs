@@ -61,7 +61,7 @@ Anyone can use the **Visualize this view** feature to explore the data in a vie
 
 ## Known issues and limitations
 
-1. The first time you visualize the data in a view, creating the dataset and report can take some time. We're working to improving this performance experience.
+1. The first time you visualize the data in a view, creating the dataset and report can take some time. We're working to improve this performance experience.
 
 2. Columns are indicated by their logical names rather than the display name. We're working on updating this experience, so the columns' display names are in the Power BI report.
 
