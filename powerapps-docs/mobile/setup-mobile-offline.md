@@ -98,7 +98,7 @@ Set up the new mobile offline experience in the [modern app designer (preview)](
 
 ## Set up a mobile offline profile
 
-The mobile offline profile represents the data set that is synced on a user's device. It consists the list of tables including related filters that are applied when data is synced to a user's device.
+The mobile offline profile represents the data set that is synced on a user's device. The profile contains the tables including related filters that are applied when data is synced to a user's device.
 
 ### Prerequisite: Enable a table for offline
 
@@ -123,7 +123,7 @@ A table needs to be enabled for offline in order to add it to a offline profile.
 
 ### Default profile
 
-The modern app designer can generate a default offline profile based how your app is configured.
+The modern app designer can generate a default offline profile which is based on how the app is configured.
 
 The default offline profile is a starting point to help you quickly build an offline profile. The default profile won't compute the optimal filters for each table. If you have a complex app, the auto generated profile might be partially successful as only part of the app might be set up correctly for offline use. With this in mind, it's important that you review and adjust the proposed filters based on your organization needs.
 
