@@ -10,7 +10,7 @@ editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
+ms.topic: overview
 ms.reviewer: nabuthuk
 ms.workload: na
 ms.date: 04/11/2021

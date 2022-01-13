@@ -3,7 +3,7 @@ title: "Online Management API for Microsoft Dataverse (Deprecated)| MicrosoftDoc
 description: "This API is deprecated effective August 26, 2020."
 ms.date: 03/24/2021
 ms.service: powerapps
-ms.topic: conceptual
+ms.topic: overview
 ms.assetid: b9ee3048-7065-48e6-87fc-7728c51bdd4e
 author: KumarVivek
 ms.author: kvivek
