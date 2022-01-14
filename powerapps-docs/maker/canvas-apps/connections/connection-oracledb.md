@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 05/11/2021
+ms.date: 01/14/2022
 ms.subservice: canvas-maker
 ms.author: lanced
 search.audienceType: 
@@ -39,13 +39,11 @@ On the same computer as the on-premises data gateway, install the [64-bit ODAC 1
 
 1. Go to [Power Apps](https://make.powerapps.com).
 
-1. Under **Start from data** section, select **Other data sources**.
+1. Select **Create** from the left-pane.
 
-    ![Other data sources.](./media/connection-oracledb/other-data-sources.png "Other data sources")
+1. Under **Start from**, select **More data sources**.
 
 1. Select **New connection**.
-
-   ![New connection.](./media/connection-oracledb/new-connection.png "New connection")
 
 1. In the list of connections, select **Oracle Database**.
 
