@@ -8,7 +8,7 @@ ms.custom:
   - canvas
   - intro-internal
 ms.reviewer: 
-ms.date: 05/06/2021
+ms.date: 01/13/2022
 ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
@@ -48,35 +48,39 @@ Watch this video to learn how to create a canvas app from a list:
 
 1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-1. Under **Start from data**, select **SharePoint**.
+1. Under **Start from**, select **SharePoint**.
 
-    ![Select SharePoint under "Start from data."](./media/app-from-sharepoint/sharepoint.png)
+    :::image type="content" source="media/app-from-sharepoint/sharepoint.png" alt-text="Select SharePoint under "Start from".":::
+
+1. If you don't have a SharePoint connection already created, you'll be prompted to. In that case, select **Create SharePoint Connection**.
 
 1. With the **Connect directly** option selected, select **Create**.
 
-    ![Create SharePoint connection.](./media/app-from-sharepoint/create-connection.png "Create SharePoint connection")
+    :::image type="content" source="media/app-from-sharepoint/create-connection.png" alt-text="Create SharePoint connection.":::
 
-1. Under **Connect to a SharePoint site**, type or paste the URL for your SharePoint Online site, and then select **Go**.
+1. Enter an app name.
 
-    Include only the site URL (not the name of the list), for example:<br>`https://contoso.sharepoint.com/teams/sales`
+1. Select your SharePoint site, and list.
 
-1. Under **Choose a list**, select **SimpleApp**, and then select **Connect**.
+1. Select **Create**.
+
+    :::image type="content" source="media/app-from-sharepoint/select-create.png" alt-text="Create app.":::
 
     After a few minutes, your app opens to the browse screen, which shows the items that you created in your list. If your list has data in more columns than just **Title**, the app will show that data. Near the top of the screen, a title bar shows icons for refreshing the list, sorting the list, and creating an item in the list. Under the title bar, a search box provides the option to filter the list based on text that you type or paste. 
-
+    
     ![Browse screen.](./media/app-from-sharepoint/browse-screen.png)
-
+    
     You'll probably want to make more changes before you use this app or share it with others. As a best practice, save your work so far by pressing Ctrl-S before you proceed. Give your app a name, and then select **Save**.
 
 ## Create an app from within SharePoint Online
 
 If you create an app of a custom list from the SharePoint Online command bar, the app appears as a view of that list. You can also run the app on an iOS or Android device, in addition to a web browser.
 
-1. In SharePoint Online, open a custom list, and then select **Integrate** -> **Power Apps** -> **Create an app**.
+1. In SharePoint Online, open a custom list, and then select **Integrate** > **Power Apps** > **Create an app**.
 
-    ![Create an app.](./media/app-from-sharepoint/generate-new-app.png)
+    s![Create an app.](./media/app-from-sharepoint/generate-new-app.png)
 
-2. In the panel that appears, type a name for your app, and then select **Create**.
+1. In the panel that appears, type a name for your app, and then select **Create**.
 
     ![Name the app.](./media/app-from-sharepoint/app-name.png "Name the app")
 
@@ -84,7 +88,7 @@ If you create an app of a custom list from the SharePoint Online command bar, th
 
     ![Default app.](./media/app-from-sharepoint/default-app.png "Default app")
 
-3. (optional) Refresh the browser tab for your SharePoint list (by selecting it and then, for example, pressing F5), and then follow these steps to run or manage your app:
+1. (optional) Refresh the browser tab for your SharePoint list (by selecting it and then, for example, pressing F5), and then follow these steps to run or manage your app:
 
     - To run the app (in a separate browser tab), select **Open**.
     - To let others in your organization run the app, select **Make this view public**.
