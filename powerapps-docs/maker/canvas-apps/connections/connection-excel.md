@@ -5,7 +5,7 @@ author: lancedMicrosoft
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.date: 06/30/2021
+ms.date: 01/14/2022
 ms.subservice: canvas-maker
 ms.author: lanced
 ms.reviewer: tapanm
@@ -39,14 +39,12 @@ There are currently two ways to add the Excel table as a data source in your app
 > - When you add Excel as a data source, it may create a column called **\_PowerAppsId_**, with a unique ID for each row of your Excel table. This column helps Power Apps know which rows to change. If you already have a unique identifier for each row, you may identify it for Power Apps as part of this process.
 > - This article explains different methods to start creating an app using Excel, and how the different methods use different versions of the connector. However, for a detailed step-by-step instructions to create an app using Excel, see [Create a canvas app from scratch based on Excel data](../get-started-create-from-blank.md).
 
-### Method 1 - Start from Data
+### Method 1 - Start from Excel
 
 > [!IMPORTANT]
 > If you choose this method, you'll use an older version of the connector.
 
-You can automatically add Excel and create a 3 screen application by choosing **Start from Data**.
-
-![Select Excel Online.](./media/connection-excel/start-from-data.png "Select Excel Online")
+You can automatically add Excel and create a 3 screen application by [creating a canvas app with data from an Excel file](../get-started-create-from-data.md)
 
 When you're finished, you'll have an application and in the Data Source window, you'll see your data source has been added with a **OneDrive** connector.
 
