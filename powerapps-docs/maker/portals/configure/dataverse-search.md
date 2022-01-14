@@ -93,9 +93,9 @@ You can follow the walkthrough with a table of your choice by replacing **nwind\
  
        :::image type="content" source="media/dataverse-search/create-portal-search.png" alt-text="Creating portal search view.":::
 
-1. Ensure that the view includes the appropriate columns that you want to use for search.<!--note from editor: Should this step add something like "If it doesn't, add the columns."? I can't quite picture whether this step will include any action other than ensuring. Please verify the alt text edit in the following image.-->
+1. Ensure that the view includes the appropriate columns that you want to use for search. Add additional columns if required.
 
-    :::image type="content" source="media/dataverse-search/add-columns.png" alt-text="Screenshot showing the portal search view with Product Name, Product Code, and List Price columns.":::
+    :::image type="content" source="media/dataverse-search/add-columns.png" alt-text="Screenshot showing the portal search view with Product Name, Product Code, and List Price columns. As well as option to add columns.":::
 
 1. If you edited the view, be sure to select **Save**, and then select **Publish** before you continue.
 
@@ -177,7 +177,7 @@ You can follow the walkthrough with a table of your choice by replacing **nwind\
 
 ## Limitations
 
-- Boosting relevance, searching, or filtering results by the Dataverse column name configured in the **Search/Query** site setting aren't supported.<!--note from editor: I don't know what this means at all, but it does sound like three separate things so the plural verb seems to be called for. Is this saying "It isn't possible to boost relevance, search, or filter results by a Dataverse column name that has been configured in the **Search/Query** site setting"?-->
+- It isn't possible to boost relevance, search, or filter results by a Dataverse column name that has been configured in the **Search/Query** site setting.
 
 - The **filter** parameter in the **searchindex** Liquid object won't filter search results.
 
@@ -194,7 +194,7 @@ You can follow the walkthrough with a table of your choice by replacing **nwind\
 
 - Related fields defined in the Portal Search view as a filter column or view column aren't supported by Dataverse search and will be ignored.
 
-- The content of attachments and objects in file data type<!--note from editor: What does "objects in file data type" mean?--> aren't searched.
+- The content of attachments and objects specified in a file type column aren't searched.
 
 ## Known issues
 
