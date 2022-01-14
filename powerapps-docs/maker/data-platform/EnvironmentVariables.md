@@ -133,7 +133,10 @@ If an environment variable is used in a flow and the display name of the environ
 
 ## Use Azure Key Vault secrets
 
-Environment variables allow for referencing secrets stored in Azure Key Vault. These secrets are then made available for use with Power Platform components, such as Power Automate and custom connectors.  The actual secrets are only stored in Azure Key Vault and the environment variable simply references the secrets.  Using Azure Key Vault secrets with environment variables require that you configure Azure Key Vault so that Power Platform can read the specific secrets you want to reference.
+Environment variables allow for referencing secrets stored in Azure Key Vault. These secrets are then made available for use with Power Platform components, such as Power Automate.  The actual secrets are only stored in Azure Key Vault and the environment variable simply references the secrets.  Using Azure Key Vault secrets with environment variables require that you configure Azure Key Vault so that Power Platform can read the specific secrets you want to reference. 
+
+> [!NOTE]
+> Environment variable support in custom connectors isn't available yet. For information about when this will be available, see [Release plan: Environment variable support in custom connectors](/power-platform-release-plan/2021wave2/data-integration/environment-variable-support-custom-connector).
 
 ### Configure Azure Key Vault
 
