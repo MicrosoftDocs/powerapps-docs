@@ -5,7 +5,7 @@ author: mduelae
 manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
-ms.topic: conceptual
+ms.topic: overview
 ms.date: 06/22/2021
 ms.subservice: end-user
 ms.author: mkaur

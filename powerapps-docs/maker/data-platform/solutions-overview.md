@@ -1,11 +1,11 @@
 ---
 title: "Solutions in Power Apps | MicrosoftDocs"
 description: "Provides an overview of solutions in Power Apps"
-ms.custom: intro-internal
+
 ms.date: 06/22/2021
 ms.reviewer: ""
 ms.service: powerapps
-ms.topic: "article"
+ms.topic: overview
 author: "Mattp123"
 ms.assetid: ece68f5f-ad40-4bfa-975a-3e5bafb854aa
 caps.latest.revision: 55

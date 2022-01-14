@@ -9,7 +9,7 @@ ms.reviewer: matp
 manager: kvivek
 ms.date: 01/03/2022
 ms.service: powerapps
-ms.topic: conceptual
+ms.topic: overview
 search.audienceType: 
   - maker
 search.app: 

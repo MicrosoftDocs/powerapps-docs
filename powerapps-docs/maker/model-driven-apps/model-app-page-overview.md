@@ -5,7 +5,7 @@ ms.date: 06/20/2021
 ms.reviewer: "matp"
 ms.service: powerapps
 ms.subservice: mda-maker
-ms.topic: "overview"
+ms.topic: overview
 author: "adrianorth"
 ms.author: "aorth"
 manager: "kvivek"
