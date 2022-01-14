@@ -8,7 +8,7 @@ ms.custom:
   - canvas
   - intro-internal
 ms.reviewer: 
-ms.date: 08/16/2021
+ms.date: 01/13/2022
 ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
@@ -36,11 +36,13 @@ To follow this quickstart, you must be assigned to the [Environment Maker](/powe
 
 1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and, if necessary, [switch environments](/power-platform/admin/working-with-environments).
 
-1. Under **Start from data**, and select **Microsoft Dataverse**.
+1. Under **Start from**, select **Dataverse**.
 
-    ![Start from data - Microsoft Dataverse.](media/data-platform-create-app/start-from-data.png "Start from data - Microsoft Dataverse")
+    :::image type="content" source="media/data-platform-create-app/start-from-data.png" alt-text="Start from Dataverse.":::
 
-1. If this is you first time, you're prompted to create a connection to Microsoft Dataverse. Select **Create** this connection. Otherwise, under **Choose a table**, select **Accounts**, and then select **Connect**.
+1. If this is you first time, you're prompted to create a connection to Dataverse. Select **Create** this connection.
+
+1. Under **Choose a table**, select your table (such as **Accounts** for this example), and then select **Connect**.
 
 1. If the **Welcome to Power Apps Studio** dialog box appears, select **Skip**.
 
