@@ -50,7 +50,7 @@ Watch this video to learn how to create a canvas app from a list:
 
 1. Under **Start from**, select **SharePoint**.
 
-    :::image type="content" source="media/app-from-sharepoint/sharepoint.png" alt-text="Select SharePoint under "Start from".":::
+    :::image type="content" source="media/app-from-sharepoint/sharepoint.png" alt-text="Select SharePoint under Start from.":::
 
 1. If you don't have a SharePoint connection already created, you'll be prompted to. In that case, select **Create SharePoint Connection**.
 
