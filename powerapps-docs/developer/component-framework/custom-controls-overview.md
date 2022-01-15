@@ -4,8 +4,8 @@ description: "Use the Power Apps component framework to create code components t
 manager: kvivek
 ms.date: 09/05/2019
 ms.service: "powerapps"
-ms.custom: "intro-internal"
-ms.topic: "article"
+
+ms.topic: overview
 ms.assetid: 135481cd-4583-4e49-8f58-02f32a9b054a
 ms.subservice: pcf
 ms.author: "nabuthuk"

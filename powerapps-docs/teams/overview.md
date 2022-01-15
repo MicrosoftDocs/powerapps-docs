@@ -3,8 +3,8 @@ title: Power Apps and Microsoft Teams integration - Overview | Microsoft Docs
 description: Provides an overview of using Power Apps with Microsoft Teams.
 author: KumarVivek
 ms.service: powerapps
-ms.topic: conceptual
-ms.custom: intro-internal
+ms.topic: overview
+
 ms.date: 11/16/2020
 ms.subservice: teams
 ms.author: kvivek

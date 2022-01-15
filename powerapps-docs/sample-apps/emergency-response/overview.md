@@ -4,7 +4,7 @@ description: Provides an overview of Hospital Emergency Response Solution.
 author: pankajarora-msft
 manager: annbe
 ms.service: powerapps
-ms.topic: conceptual
+ms.topic: overview
 ms.custom: 
 ms.date: 04/23/2020
 ms.subservice: sample-apps
