@@ -16,6 +16,7 @@ contributors:
   - hemantgaur
   - tapanm-msft
   - gregli-msft
+ms.custom: intro-internal
 ---
 
 # Create a component for canvas apps (preview)

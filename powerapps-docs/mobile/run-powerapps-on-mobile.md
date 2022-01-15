@@ -8,7 +8,6 @@ ms.topic: quickstart
 ms.date: 01/13/2022
 ms.subservice: mobile
 ms.author: mkaur
-ms.custom: ""
 ms.reviewer: ""
 ms.assetid: 
 search.audienceType: 
@@ -18,6 +17,7 @@ search.app:
   - D365CE
 searchScope:
   - "Power Apps"
+ms.custom: intro-internal
 ---
 
 #  Get started with Power Apps mobile

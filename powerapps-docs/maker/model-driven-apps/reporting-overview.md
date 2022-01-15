@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: 10/26/2021
 ms.reviewer: ""
 ms.service: powerapps
-ms.topic: "how-to"
+ms.topic: overview
 author: "Mattp123"
 ms.assetid: b4098c96-bce1-4f57-804f-8694e6254e81
 ms.subservice: mda-maker

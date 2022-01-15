@@ -4,7 +4,7 @@ description: Provides an overview of Regional Government Emergency Response an
 author: pankajarora-msft
 manager: annbe
 ms.service: powerapps
-ms.topic: conceptual
+ms.topic: overview
 ms.custom: 
 ms.date: 05/06/2020
 ms.author: pankar

@@ -3,7 +3,7 @@ title: Work with Liquid templates
 description: Learn how to use Liquid, an open-source template language, into your portals.
 author: gitanjalisingh33msft
 ms.service: powerapps
-ms.topic: conceptual
+ms.topic: overview
 ms.custom: 
 ms.date: 04/21/2020
 ms.subservice: portals
