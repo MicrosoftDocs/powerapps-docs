@@ -3,7 +3,7 @@ title: Overview of portals Web API
 description: Learn how to use the portals Web API to create, read, update, and delete Microsoft Dataverse tables from your portals pages.
 author: neerajnandwana-msft
 ms.service: powerapps
-ms.topic: conceptual
+ms.topic: overview
 ms.custom: 
 ms.date: 12/02/2021
 ms.subservice: portals

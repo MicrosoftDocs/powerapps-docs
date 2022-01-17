@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: 06/15/2021
 ms.reviewer: ""
 ms.service: powerapps
-ms.topic: "overview"
+ms.topic: overview
 author: "Mattp123"
 ms.subservice: common
 ms.author: "matp"
