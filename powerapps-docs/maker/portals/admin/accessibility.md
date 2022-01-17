@@ -22,7 +22,7 @@ Microsoft is committed to make products and services accessible to everyone. For
 
 Power Apps portals conforms to global accessibility standards to ensure the accessibility to everyone. The following accessibility standards and conformance reports provide more details about accessibility with portals.
 
-For more details on each of the follow accessibility standards, you can download the related documents from [The Microsoft Accessibility Conformance Reports](https://cloudblogs.microsoft.com/industry-blog/government/2018/09/11/accessibility-conformance-reports/).
+For more details on each of the follow accessibility standards, you can download the related documents from [Microsoft Accessibility Conformance Reports](https://cloudblogs.microsoft.com/industry-blog/government/2018/09/11/accessibility-conformance-reports/).
 
 Enter *power apps portals* in the **Search by Online Services** and then download the corresponding reports.
 
@@ -32,19 +32,19 @@ Enter *power apps portals* in the **Search by Online Services** and then downloa
 
 [Web Content Accessibility Guidelines (WCAG) 2.1](https://www.w3.org/TR/WCAG21/) covers a wide range of recommendations for making web content more accessible. Following the guidelines will make content more accessible to a wider range of people with disabilities, including accommodations for blindness and low vision, deafness and hearing loss, limited movement, speech disabilities, photo sensitivity, and combinations of these, and some accommodation for learning disabilities and cognitive limitations; but will not address every user need for people with these disabilities. These guidelines address accessibility of web content on desktops, laptops, tablets, and mobile devices. Following these guidelines will also often make Web content more usable to users in general.
 
-Power Apps portals conforms to the WCAG 2.1 accessibility standard. For more details, download the [W3C Web Content Accessibility Guidelines (WCAG) 2.1 Conformance Statement for Power Apps portals](https://cloudblogs.microsoft.com/industry-blog/government/2018/09/11/accessibility-conformance-reports) from Microsoft Accessibility Conformance reports.
+Power Apps portals conforms to the WCAG 2.1 accessibility standard. For more details, download the [W3C Web Content Accessibility Guidelines (WCAG) 2.1 Conformance Statement for Power Apps portals](https://cloudblogs.microsoft.com/industry-blog/government/2018/09/11/accessibility-conformance-reports) from the Microsoft Accessibility Conformance reports.
 
 ### US Section 508
 
 The U.S. General Services Administration (GSA) Office of Government-wide Policy (OGP) is tasked under [Section 508](https://www.section508.gov/) of the Rehabilitation Act to provide technical assistance to help Federal agencies comply with these requirements, and ensure that covered ICT is accessible to, and usable by, individuals with disabilities.
 
-Power Apps portals conforms to the Section 508 guidelines defined by the U.S. GSA. For more details, download the [Section 508 report for portals](https://cloudblogs.microsoft.com/industry-blog/government/2018/09/11/accessibility-conformance-reports) from Microsoft Accessibility Conformance reports.
+Power Apps portals conforms to the Section 508 guidelines defined by the U.S. GSA. For more details, download the [Section 508 report for portals](https://cloudblogs.microsoft.com/industry-blog/government/2018/09/11/accessibility-conformance-reports) from the Microsoft Accessibility Conformance reports.
 
 ### EN 301 549
 
 [EN 301 549](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/02.01.02_60/en_301549v020102p.pdf) from ETSI provides an open, inclusive and collaborative environment. This environment supports the timely development, ratification and testing of globally applicable standards for ICT-enabled systems, applications and services.
 
-Power Apps portals conforms to the ETSI. For more details, download the [EN 301 549 Accessibility Declaration of Conformance for portals](https://cloudblogs.microsoft.com/industry-blog/government/2018/09/11/accessibility-conformance-reports) from Microsoft Accessibility Conformance reports.
+Power Apps portals conforms to the ETSI. For more details, download the [EN 301 549 Accessibility Declaration of Conformance for portals](https://cloudblogs.microsoft.com/industry-blog/government/2018/09/11/accessibility-conformance-reports) from the Microsoft Accessibility Conformance reports.
 
 ## Create accessible portal
 
