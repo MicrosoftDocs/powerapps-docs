@@ -81,7 +81,7 @@ In this step, you'll create a new basic form in portals and then add the control
 
 1. For **Control Style**, select *Code component*.
 
-    :::image type="content" source="media/component-rte-tutorial/basic-form-metadata-controlstyle.png" alt-text="Basic form metadata configuration.":::
+    :::image type="content" source="media/component-rte-tutorial/basic-form-metadata-controlstyle.png" alt-text="Basic form metadata configuration setting the control style to 'code component'.":::
 
 ## Step 4. Create a webpage in portals with the basic form
 
