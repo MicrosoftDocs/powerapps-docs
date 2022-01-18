@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: article
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 08/31/2021
+ms.date: 01/18/2022
 ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
@@ -64,19 +64,7 @@ Your trial environment will now be created, including a Dataverse database and s
 
 In this lesson, we'll create an app to search, view, and create customer accounts using the **Accounts** table in Dataverse.
 
-1. Sign in to [Power Apps](https://make.powerapps.com).
-
-1. Select the **Dataverse Trial** environment.
-
-    ![Select the Dataverse Trial environment](media/trigger-flow/build-a-canvas-app-1.png "Select the Dataverse Trial environment")
-
-1. Select the button for **Canvas app from blank**
-
-    ![Select the button for Canvas app from blank](media/trigger-flow/build-a-canvas-app-2.png "Select the button for Canvas app from blank")
-
-1. Enter a name, select **Format** as **Phone**, and then select **Create**.
-
-    ![Give the app a name](media/trigger-flow/build-a-canvas-app-3.png "Give the app a name")
+1. Start by creating a [blank canvas app](../create-blank-app.md).
 
 1. Select **Create a gallery**.
 
