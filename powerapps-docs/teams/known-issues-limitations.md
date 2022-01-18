@@ -69,10 +69,6 @@ Localization of [Power Apps Studio](understand-power-apps-studio.md) isn't suppo
 
 There's no enforcement of user-created required table fields. Rows that have empty values in those fields can be saved successfully. System required fields are enforced and cannot be saved without a value.
 
-## Solution export and import
-
-Solution export and import isn't supported.
-
 ## Studio
 
 ### Classic controls

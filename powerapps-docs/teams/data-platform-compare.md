@@ -51,7 +51,6 @@ This table describes the differences between Dataverse for Teams and Dataverse b
 |Professional developer     | API access       |  No     |  Yes     |
 |      |  Plug-ins       |   No      |  Yes       |
 |      |  Power Apps component framework       |   No      |  Yes       |
-|      |  Solution export and import       |   No      |  Yes       |
 
 ## Environments
 
