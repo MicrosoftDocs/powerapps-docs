@@ -3,8 +3,8 @@ title:  What are Power Apps portals?
 description: "Design and build websites using Power Apps that allow external users to interact with the data stored in the Microsoft Dataverse."
 author: sandhangitmsft
 ms.service: powerapps
-ms.topic: conceptual
-ms.custom: intro-internal
+ms.topic: overview
+
 ms.date: 06/11/2021
 ms.subservice: portals
 ms.author: sandhan

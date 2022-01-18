@@ -3,7 +3,7 @@ title: Overview of building canvas apps
 description: Get an introduction to designing and building canvas apps in Power Apps so that users can manage line-of-business data in a browser or on mobile devices.
 author: tapanm-msft
 ms.service: powerapps
-ms.topic: overview
+ms.topic: conceptual
 ms.custom: 
   - canvas
   - intro-internal
