@@ -28,7 +28,7 @@ Canvas apps
 
 ## Parameters
 
-| Parameter Name   | Type                       | Required | description |
+| Parameter Name   | Type                       | Required | Description |
 | ---------------- | -------------------------- | -------- | ----------- |
 | columnName       | `string`                   | Yes      |             |
 | updateCallback   | `onDataSetUpdatedCallback` | Yes      |             |

@@ -4,8 +4,8 @@ description: Learn how end users, app makers, admins, and developers can use Pow
 author: KumarVivek
 manager: annbe
 ms.service: powerapps
-ms.topic: conceptual
-ms.custom: intro-internal
+ms.topic: overview
+
 ms.date: 10/19/2021
 ms.author: kvivek
 ms.reviewer: kvivek
