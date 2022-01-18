@@ -61,7 +61,7 @@ The Expense Report sample app includes a lot of the functionality commonly used 
 
 You can also enable the capability to send emails or approval routing using [Power Automate flow](using-logic-flows.md) or [Approvals connector](/connectors/approvals).
 
-Additionally, you can also read [Microsoft Learn: Create an expense report app from start to finish in Power Apps](https://docs.microsoft.com/learn/paths/expense-canvas-app-start-finish/) to create a custom expense report app.
+Additionally, you can also read [Microsoft Learn: Create an expense report app from start to finish in Power Apps](/learn/paths/expense-canvas-app-start-finish/) to create a custom expense report app.
 
 ## Next steps
 
@@ -69,7 +69,7 @@ Additionally, you can also read [Microsoft Learn: Create an expense report app f
 
 ### See also
 
-[Microsoft Learn: Create an expense report app from start to finish in Power Apps](https://docs.microsoft.com/learn/paths/expense-canvas-app-start-finish/)  <br>
+[Microsoft Learn: Create an expense report app from start to finish in Power Apps](/learn/paths/expense-canvas-app-start-finish/)  <br>
 [Canvas apps connectors for Power Apps](connections-list.md) <br>
 [Formula reference](formula-reference.md) <br>
 [Controls reference](reference-properties.md) <br>
