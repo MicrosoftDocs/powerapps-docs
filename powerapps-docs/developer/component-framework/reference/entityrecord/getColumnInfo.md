@@ -27,9 +27,9 @@ Canvas apps
 
 ## Parameters
 
-| Parameter Name | Type     | Required | description |
-| -------------- | -------- | -------- | ----------- |
-| columnName     | `string` | Yes      |  Name of the column.|
+| Parameter Name | Type     | Required | Description         |
+| -------------- | -------- | -------- | ------------------- |
+| columnName     | `string` | Yes      | Name of the column. |
 
 ## Return Value
 
