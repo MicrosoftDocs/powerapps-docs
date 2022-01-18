@@ -101,21 +101,21 @@ In this lesson, we'll create an app to search, view, and create customer account
 
 1. Update the title of the form to **New Account**, and select the data source as **Accounts** from the pane on the right-side of the screen.
 
-![Update title and select data source](media/trigger-flow/build-a-canvas-app-9.png "Update title and select data source")
+    ![Update title and select data source](media/trigger-flow/build-a-canvas-app-9.png "Update title and select data source")
 
 1. Select **Edit fields** on the right-pane.
 
-    ![Select edit fields](media/trigger-flow/build-a-canvas-app-10.png "Select edit fields")
+    :::image type="content" source="media/trigger-flow/build-a-canvas-app-10.png" alt-text="Select edit fields.":::
 
 1. Select **Add field** and add **Email** to the form.
 
-    ![Add email field](media/trigger-flow/build-a-canvas-app-11.png "Add email field")
+    :::image type="content" source="media/trigger-flow/build-a-canvas-app-11.png" alt-text="Add email field.":::
 
     The email field gets added to the form.
 
-    ![The email field gets added](media/trigger-flow/build-a-canvas-app-12.png "The email field gets added")
+    :::image type="content" source="media/trigger-flow/build-a-canvas-app-12.png" alt-text="The email field gets added.":::
 
-1. et the default mode of the form to **New**.
+1. Set the default mode of the form to **New**.
 
     ![Default form mode](media/trigger-flow/build-a-canvas-app-13.png "Default form mode")
 
