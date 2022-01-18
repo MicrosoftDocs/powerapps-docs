@@ -57,15 +57,15 @@ sections:
    - question: What date and time formats can be expected in exported Dataverse tables?
      answer: |
         There are three date and time formats that can be expected in the exported Dataverse tables:
-        - table1:
+        - first:
           columnname: **SinkCreatedOn** and **SinkModifiedOn**
           format: M/d/yyyy H:mm:ss tt
           example:  6/28/2021 4:34:35 PM
-        - table2:
+        - second:
           columnname: **CreatedOn** 
           format: yyyy-MM-dd'T'HH:mm:ss.sssssssXXX
           example: 2018-05-25T16:21:09.0000000+00:00  
-        - table3:
+        - third:
           columnname: All Other Columns
           format: yyyy-MM-dd'T'HH:mm:ss'Z'
           example: 2021-06-25T16:21:12Z
