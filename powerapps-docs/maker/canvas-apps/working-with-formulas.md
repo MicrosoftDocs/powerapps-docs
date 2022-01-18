@@ -62,7 +62,7 @@ In Excel, you can enter a specific piece of data, such as the number **42** or t
 
 1. Set the value of the **[Text](controls/properties-core.md)** property to **"Hello World"** by typing that string, surrounded by double quotes, into the formula bar:
 
-    :::image type="content" source="media/working-with-formulas/label-hello-world.png" alt-text="Using the label "Hello World.":::
+    :::image type="content" source="media/working-with-formulas/label-hello-world.png" alt-text="Using the label Hello World.":::
 
     The label reflects this new value as you type it.  The screen may show yellow exclamation-point icons while you type. These icons indicate errors, but they'll go away when you finish entering a valid value. For example, a string without double quotation marks on both ends isn't valid.
 
@@ -73,7 +73,7 @@ In Excel, you can enter a specific piece of data, such as the number **42** or t
 
 1. In the **[Text](controls/properties-core.md)** property of the label, replace **"Hello World"** with **Sum(1,2,3)**.
 
-    :::image type="content" source="media/working-with-formulas/label-sum-partial.png" alt-text="Using the label "Typing the partial function without a closing parenthesis shows errors.":::
+    :::image type="content" source="media/working-with-formulas/label-sum-partial.png" alt-text="Using the label - typing the partial function without a closing parenthesis shows errors.":::
 
     While you type, the formula bar helps you by showing the description and the expected arguments for this function.  As with the final double quotation mark in **"Hello World"**, the screen shows red cross to indicate an error until you type the final parenthesis of this formula:
 

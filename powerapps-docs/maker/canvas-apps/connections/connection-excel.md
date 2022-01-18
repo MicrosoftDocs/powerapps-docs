@@ -61,7 +61,7 @@ If you want to start with data from Excel, but with the newer version of the con
 > [!IMPORTANT]
 > If you choose this method, you'll use updated version of the connector.
 
-You can create a [blank canvas app](create-blank-app.md) (or you can modify an existing one) and then choose to add a new Excel data source.
+You can create a [blank canvas app](../create-blank-app.md) (or you can modify an existing one) and then choose to add a new Excel data source.
 
 The Excel Online (Business) Connector allows users to work with Excel files in document libraries that are supported by Microsoft Graph (OneDrive for Business, SharePoint sites (preview), and Microsoft 365 Groups).
 
