@@ -15,4 +15,4 @@ applies_to:
 ms.assetid: e8c9f86c-55cd-45ad-92a7-985d61040b34
 ---
 
-Gets the related dataset for this column (only if this is related table column like lookup),
+Gets the related dataset for this column (only if this is related table column like lookup).
