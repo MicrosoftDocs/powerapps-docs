@@ -5,10 +5,9 @@ author: mduelae
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 11/08/2021
+ms.date: 01/13/2022
 ms.subservice: mobile
 ms.author: mkaur
-ms.custom: ""
 ms.reviewer: ""
 ms.assetid: 
 search.audienceType: 
@@ -18,6 +17,7 @@ search.app:
   - D365CE
 searchScope:
   - "Power Apps"
+ms.custom: intro-internal
 ---
 
 #  Get started with Power Apps mobile
@@ -241,7 +241,7 @@ Select the ellipsis (...) on the app tile, select **Pin to Home**, and then foll
 
 By default, only production model-driven apps are shown in the list of apps.
 
-To see model-driven apps from non-production environments, select the **Settings** menu (**Current**: ![Settings icon.](media/settings_icon.png)    **Early access**: ![Settings button](media/settings_icon-1.png)), and then turn on **Show non-production apps**. Follow the instructions that appear.
+To see model-driven apps from non-production environments, select the **Settings** menu ![Settings button](media/settings_icon-1.png), and then turn on **Show non-production apps**. Follow the instructions that appear.
 
 ![Non-production apps toggle.](media/non_prod_toggle.png "Non-production apps toggle")
 

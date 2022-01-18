@@ -1,13 +1,13 @@
 ---
 title: "Model-driven app interface design overview | MicrosoftDocs"
 description: "An overview of the elements that influence the app design interface"
-ms.custom: intro-internal
+
 ms.date: 11/16/2021
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "conceptual"
+ms.topic: overview
 applies_to: 
     - "powerapps"
 author: "v-roryneary"
