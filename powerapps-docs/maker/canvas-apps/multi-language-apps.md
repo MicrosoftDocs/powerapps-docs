@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 06/08/2021
+ms.date: 01/18/2021
 ms.subservice: canvas-maker
 ms.author: lunune
 search.audienceType: 
@@ -148,13 +148,7 @@ Your translation component library is created, saved, and published for use.
 
 Previously, you created the translation component library for reuse. In this section, you'll create an app that uses the translation component library and demonstrate the language translation based on the selected language.
 
-1. Sign in to [Power Apps](https://make.powerapps.com).
-
-1. On the left pane, select **Apps**.
-
-1. Select **New app** -> **Canvas app**.
-
-1. Select the **Blank app** template with **Phone layout**.
+1. Start by creating a [blank canvas app](create-blank-app.md) with **Phone** layout.
 
 1. On the left-side of the screen, select **+** (Insert).
 
