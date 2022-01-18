@@ -50,8 +50,8 @@ This table describes the differences between Dataverse for Teams and Dataverse b
 |      |   Paginated reports (SQL Server Reporting Services)   |  No    |  Yes     |
 |Professional developer     | API access       |  No     |  Yes     |
 |      |  Plug-ins       |   No      |  Yes       |
-|      |  Solution export and import       |   No      |  Yes       |
 |      |  Power Apps component framework       |   No      |  Yes       |
+|      |  Solution export and import       |   No      |  Yes       |
 
 ## Environments
 
