@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 11/15/2021
+ms.date: 01/18/2022
 ms.subservice: canvas-maker
 ms.author: tashas
 search.audienceType: 
@@ -82,13 +82,7 @@ In this section, you'll create a flow using Power Automate that creates an item 
 
 In this section, you'll learn about creating an app using Power Apps that uses the flow created in the earlier section. The app uses text entered in a text box when the button is selected to trigger the flow to create an item in the selected SharePoint list.
 
-1. Go to [Power Apps](https://make.powerapps.com), or select **Home** in Power Apps.
-
-1. Under **Make your own app**, select **Canvas app from blank**.
-
-1. Enter an app name, such as **AppWithFlow**. You can also select or change layout between phone and tablet.
-
-1. Select **Create**.
+1. Create a [blank canvas app](create-blank-app.md) with a name such as **AppWithFlow**.
 
 1. Select **+** (Insert) on the left-pane.
 
