@@ -36,7 +36,7 @@ After creating a continuous pipeline of data from Microsoft Dataverse to your Sy
 
 This section describes the prerequisites necessary to read the incremental updates of your exported Dataverse data.
 
-- **Azure Synapse Link for Dataverse.** This guide assumes that you have already exported data from Dataverse by using the [Azure Synapse Link for Dataverse](export-to-data-lake.md).
+- **Azure Synapse Link for Dataverse.** This guide assumes that you have already exported data from Dataverse by using the [Azure Synapse Link for Dataverse](export-to-data-lake.md) and that all tables are syncing with **Append-only** mode.
 
 - **Storage Account Access.** You must be granted one of the following roles for the storage account: Storage Blob Data Reader, Storage Blob Data Contributor, or Storage Blob Data Owner.
 
