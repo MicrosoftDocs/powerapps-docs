@@ -10,7 +10,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "how-to"
 applies_to: 
   - "powerapps"
-author: "sabinn-msft"
+author: "sama-zaki"
 ms.assetid: 
 ms.subservice: dataverse-maker
 ms.author: "matp"
@@ -20,7 +20,7 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
-contributors: "sama-zaki"
+contributors: ""
 ---
 
 # Query Azure Synapse Link for Dataverse data with serverless SQL pool
