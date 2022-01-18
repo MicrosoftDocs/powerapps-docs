@@ -5,7 +5,7 @@ author: matthewbolanos
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 12/15/2021
+ms.date: 01/18/2022
 ms.subservice: teams
 ms.author: mabolan
 ms.reviewer: tapanm
@@ -14,6 +14,7 @@ contributors:
   - matthewbolanos
   - msftman
   - amchern
+  - hemantgaur
 ---
 # Known issues and limitations
 
@@ -59,6 +60,10 @@ The group may have hidden membership enabled by your administrator. Try using Da
 ## Localization
 
 Localization of [Power Apps Studio](understand-power-apps-studio.md) isn't supported.
+
+## Power Apps component framework
+
+[Power Apps component framework](/powerapps/developer/component-framework/overview) isn't supported.
 
 ## Required fields
 
