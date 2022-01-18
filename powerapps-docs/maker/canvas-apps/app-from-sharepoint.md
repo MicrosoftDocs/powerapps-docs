@@ -78,7 +78,7 @@ If you create an app of a custom list from the SharePoint Online command bar, th
 
 1. In SharePoint Online, open a custom list, and then select **Integrate** > **Power Apps** > **Create an app**.
 
-    s![Create an app.](./media/app-from-sharepoint/generate-new-app.png)
+    ![Create an app.](./media/app-from-sharepoint/generate-new-app.png)
 
 1. In the panel that appears, type a name for your app, and then select **Create**.
 
