@@ -84,7 +84,7 @@ The individual configuration settings allow you to change how your editor behave
 
 ### Visualization of the rich text editor configuration file
 
-The following two images visually identify the two configuration sections. For the full configuration file, see [Use the web resource for organization-wide changes](#use-the-webresource-for-organization-wide-changes).
+The following two images visually identify the two configuration sections. For the full configuration file, go to [Use the web resource for organization-wide changes](#use-the-web-resource-for-organization-wide-changes).
 
 **defaultSupportedProps**
 
