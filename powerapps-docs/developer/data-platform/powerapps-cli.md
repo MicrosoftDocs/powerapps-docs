@@ -10,7 +10,7 @@ ms.date: 06/14/2021
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: overview
 ms.assetid: f393f227-7a88-4f25-9036-780b3bf14070
 ---
 

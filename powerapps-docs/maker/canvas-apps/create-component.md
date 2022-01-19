@@ -1,5 +1,5 @@
 ---
-title: Create a component for canvas apps
+title: Create a component for canvas apps (preview) (contains video)
 description: Learn about how to create reusable components for canvas apps.
 author: hemantgaur
 ms.service: powerapps
@@ -16,12 +16,16 @@ contributors:
   - hemantgaur
   - tapanm-msft
   - gregli-msft
+ms.custom: intro-internal
 ---
 
-# Create a component for canvas apps
+# Create a component for canvas apps (preview)
+
+[This article is pre-release documentation and is subject to change.]
 
 > [!IMPORTANT]
-> This feature is still in public preview. For more information, see [Experimental and preview features](./working-with-experimental-preview.md).
+> - This is a preview feature.
+> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)] More information: [Understand experimental, preview, and retired features in Power Apps](working-with-experimental-preview.md)
 
 Components are reusable building blocks for canvas apps so that app makers can create custom controls to use inside an app, or across apps using a [component library](component-library.md). Components can use advanced features such as custom properties and enable complex capabilities. This article introduces component concepts and some examples.
 

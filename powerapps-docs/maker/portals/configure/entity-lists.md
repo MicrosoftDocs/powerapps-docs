@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 12/15/2021
+ms.date: 1/06/2022
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: ndoelman
@@ -535,7 +535,7 @@ If enabled, a table can be published to an OData feed. The OData protocol is an 
 
 ## Enhanced view filter for lists
 
-You can use Table Permissions if you want to secure records, but if you want to simply provide a filter as part of the set of filter options that is relevant to the current portal user, you can use the List feature. This feature supports filtering of the current user, user's parent account, or website at any depth. Simply build the view filter to match any single contact record and the code will replace its value with the actual value at runtime&mdash;no need to assign values to fields in the Filter Conditions section.
+You can use Table Permissions if you want to secure records, but if you want to simply filter records based on the current portal user’s context, you can configure a filter on the underlying model-driven view definition used by the List using the [Dataverse view designer](../../model-driven-apps/create-edit-view-filters.md). This feature supports filtering of the current user, user's parent account, or website at any depth. Simply build the view filter to match any single contact record and the code will replace its value with the actual value at runtime&mdash;no need to assign values to fields in the Filter Conditions section.
 
 - The control will find all condition elements where uitype="contact" and set the value to the actual value of the current portal user's contact ID.
 - The control will find all condition elements where uitype="account" and set the value to the actual value of the current portal user's parent account ID.

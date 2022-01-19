@@ -24,6 +24,8 @@ landingContent:
     linkLists:
        - linkListType: whats-new
          links:
+          - text: Configure Dataverse search in portals (preview)
+            url: configure/dataverse-search.md         
           - text: Configure choices column for portals (preview)
             url: configure/choices-column.md         
           - text: Portals as Progressive Web Apps (preview)
@@ -32,8 +34,6 @@ landingContent:
             url: component-framework-liquid.md         
           - text: Create multiple portals of same type
             url: create-additional-portals.md
-          - text: Set up Azure Front Door with portals
-            url: azure-front-door.md
        - linkListType: reference
          links:
           - text: Latest released version of portals

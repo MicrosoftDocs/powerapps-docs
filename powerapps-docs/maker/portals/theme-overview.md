@@ -3,7 +3,7 @@ title: Themes overview
 description: Overview of themes and basic themes in Power Apps portals.
 author: neerajnandwana-msft
 ms.service: powerapps
-ms.topic: conceptual
+ms.topic: overview
 ms.custom: 
 ms.date: 05/10/2021
 ms.subservice: portals

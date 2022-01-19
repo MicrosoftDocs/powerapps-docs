@@ -1,5 +1,5 @@
 ---
-title: Notify a manager on completion of an inspection
+title: Notify a manager on completion of an inspection (contains video)
 description: Learn about the changes that would be required to notify the manager on completion of an inspection.
 author: josephshum
 ms.service: powerapps
