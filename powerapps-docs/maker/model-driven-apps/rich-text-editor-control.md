@@ -2,7 +2,7 @@
 title: Use the rich text editor control in Power Apps | MicrosoftDocs
 description: "The rich text editor control provides the app user a WYSIWYG editing area for formatting text"
 ms.custom: ""
-ms.date: 08/10/2021
+ms.date: 01/19/2022
 ms.reviewer: "matp"
 ms.service: powerapps
 ms.suite: ""
@@ -23,8 +23,6 @@ search.app:
 
 [!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-[!INCLUDE [cc-classic-interface-control-note](../../includes/cc-classic-interface-control-note.md)]
-
 The rich text editor control provides the app user a WYSIWYG editing area for formatting text. The control's input and output format is HTML. The control allows copied rich text, such as from a web browser or Word, to be pasted into the control.
 
 Some of the format options available are:
@@ -43,31 +41,28 @@ For a full list of default options, see [Use the rich text editor toolbar](#use-
 
 ## Add or replace a text column for rich text editing
 
-You can create a new text column and configure the control, or replace an existing text column. The rich text editor control can be used with single or multi-line text columns.
+Create a new text column and configure the control, or replace an existing text column. The rich text editor control can be used with single or multi-line text columns.
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). On the left navigation pane, select **Solutions**, open the solution that you want, open the table that you want, and then select the **Forms** tab.
-2. Select the form, and then select **Edit form**.
-3. In the form designer on the command bar, select **Switch to classic**.
-4. On the legacy form designer canvas, add or create a text column or select an existing text column, such as the account table **Description** column. On the **Home** tab, select **Change Properties**.
-5. On the **Column Properties** page, select the **Controls** tab, and then select **Add control**.
-6. Select **Rich Text Editor Control**, and then select **Add**.
-7. Select **Web**, **Phone**, and **Tablet** if you want all client apps to have the ability to use rich text in the column. Then select **OK** to use the default rich text editor control configuration. If you want to change the rich text editor control configuration, see [Rich text editor control configuration options](#rich-text-editor-control-configuration-options).
+1. Select the form, and then select **Edit form** > **Edit form in new tab**.
+1. On the form designer canvas, add or create a text column or select an existing text column, such as the custom multi-line text column used in this article.
+1. On the right column properties pane, expand the **Components** section, select **+ Component**, and then select **Rich Text Editor Control**.
+1. On the **Add rich text editor control** pane, select from the following options, and then select **Done**:  
+   - **Bind to table column**: We don’t recommend that you enable this option because this property doesn’t support binding to a different table column.
+   - **Static value**: If you want to customize the rich text editor appearance, features, and behavior, enter the relative URL to the JavaScript web resource that contains the properties you want. More information: [Rich text editor control configuration options](#rich-text-editor-control-configuration-options)
+   - **Web**, **Phone**, and **Tablet**: Enable all if you want all client apps to have the ability to use rich text in the column.
 
-    <img src="media/rich-text-control2.png" alt="Rich text control editor configuration" height="497" width="485">
-8. Save and then publish the form.
+      <img src="media/rich-text-control2.png" alt="Rich text control editor configuration" height="497" width="485">
+1. **Save**, and then **Publish** the form.
 
-## Rich text editor control configuration options
+## Configure the rich text editor control
 
 The rich text editor control comes with a rich set of configuration options that make it possible to customize its appearance, features, and behavior. To configure the rich text editor control, follow these steps:
 
-1. Create a JSON file that includes the defaultSupportedProps structure and configuration with the changes you want. More information: [Sample rich text editor configurations](#sample-rich-text-editor-configurations) and [Rich text editor properties](#rich-text-editor-properties)
-2. In Power Apps, create a Script(JScript) type web resource using the JSON file created in step 1. More information: [Create or edit model-driven app web resources to extend an app](create-edit-web-resources.md)
-3. Open the **Column Properties** page for the text column with the rich text editor control, and then next to **RichTextEditorControl_URL** select **Edit**.
-   > [!div class="mx-imgBorder"] 
-   > ![Rich text editor control URL.](media/richtexteditorcontrol-url.png)
-4. Select **Bind to static value**, enter the relative URL to the JavaScript web resource in the box next to **SingleLine.URL**, and then select **OK**. The relative URL is located on the web resource definition.
-5. Select **OK** to close the **Column Properties** page.
-6. On the form editor command bar, select **Publish**.
+1. Create a JSON file that includes the `defaultSupportedProps` structure and configuration with the changes you want. More information: [Sample rich text editor configurations](#sample-rich-text-editor-configurations) and [Rich text editor properties](#rich-text-editor-properties)
+1. In Power Apps, create a **Script(JScript)** type web resource using the JSON file created in step 1. More information: [Create or edit model-driven app web resources to extend an app](create-edit-web-resources.md)
+1. Add the relative URL for the JavaScript web resource in the **Static value** field. The web resource relative URL is located on the web resource definition you created in the previous step.
+1. **Save**, and then **Publish** the form.
 
 ## Best practices for using the rich text editor
 
