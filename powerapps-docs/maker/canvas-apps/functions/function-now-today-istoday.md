@@ -49,7 +49,7 @@ When used in a [behavior formula](../working-with-formulas-in-depth.md), volatil
 
 ## Syntax
 
-### Using the user's local time
+#### Using the user's local time
 
 **Now**()
 
@@ -59,7 +59,7 @@ When used in a [behavior formula](../working-with-formulas-in-depth.md), volatil
 
 * *DateTime* - Required.  The date/time value to test.
 
-### Using Coodinated Universal Time (UTC)
+#### Using Coodinated Universal Time (UTC)
 
 **UTCNow**()
 
