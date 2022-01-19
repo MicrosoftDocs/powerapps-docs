@@ -48,22 +48,26 @@ The function will be reevaluated if it is part of a formula in which something e
 When used in a [behavior formula](../working-with-formulas-in-depth.md), volatile functions will be evaluated each time the behavior formula is evaluated.  See below for an example.
 
 ## Syntax
+
+### Using the user's local time
+
 **Now**()
 
-**UTCNow**()
-
 **Today**()
-
-**UTCToday**()
 
 **IsToday**( *DateTime* )
 
 * *DateTime* - Required.  The date/time value to test.
 
+### Using Coodinated Universal Time (UTC)
+
+**UTCNow**()
+
+**UTCToday**()
+
 **IsUTCToday**( *TimeZoneIndependentTime* )
 
 * *TimeZoneIndependentDateTime* - Required.  The time zone indepdenent date/time value to test.
-
 
 ## Examples
 For the examples in this section, the current time is **8:58 PM** on **July 11, 2021** in the Pacific Time Zone (UTC-8) and the language is **en-us**.
