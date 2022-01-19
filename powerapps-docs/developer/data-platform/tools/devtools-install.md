@@ -83,4 +83,6 @@ You can find a few Power Platform Tools options in Visual Studio by choosing **T
 
 [Quickstart: Create a Power Platform Tools project](devtools-create-project.md)
 
+[Power Platform Tools on the Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=microsoft-IsvExpTools.PowerPlatformTools)
+
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
