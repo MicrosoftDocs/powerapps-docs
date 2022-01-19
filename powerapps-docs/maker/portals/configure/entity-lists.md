@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 1/06/2022
+ms.date: 01/19/2022
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: ndoelman
@@ -498,11 +498,11 @@ With lists, it is possible to enable and configure a Map view of the data, power
 > - This option is not supported in the German Sovereign Cloud environment. The Map view section will not be visible in this environment.
 > - Only Bing maps are supported as the **Map type**.
 
-## List Calendar view
+## List calendar view
 
-Use the List Calendar view to render a list as a calendar, with each individual record configured to act as a single event.
+Use the **list calendar** view to render a list as a calendar, with each individual record configured to act as a single event.
 
-To display records by using a calendar, those records need to include at a minimum a date field. For events to have exact start and end times, the appropriate fields need to be in place, and so on. Assuming these fields are configured, a List Calendar view will appear on the portal.
+To display records by using a calendar, those records need to include at a minimum a date field. For events to have exact start and end times, the appropriate fields need to be in place, and so on. Assuming these fields are configured, a list calendar view will appear on the portal.
 
 | Entity Field Mappings | Details |
 | - | - |
@@ -522,6 +522,7 @@ To display records by using a calendar, those records need to include at a minim
 | Display Time Zone | If the **Time Zone Display Mode** is set to *Specific Time Zone* this value will determine the time zone the calendar events are displayed. |
 | Style | The setting displays the calendar in either a *Full Calendar* format or as an *Event List* | 
 
+<!--screenshot of calendar view-->
 
 ## List OData feeds
 
