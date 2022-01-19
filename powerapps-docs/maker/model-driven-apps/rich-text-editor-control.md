@@ -49,7 +49,7 @@ Create a new text column and configure the control, or replace an existing text 
 1. On the right column properties pane, expand the **Components** section, select **+ Component**, and then select **Rich Text Editor Control**.
 1. On the **Add rich text editor control** pane, select from the following options, and then select **Done**:  
    - **Bind to table column**: We don’t recommend that you enable this option because this property doesn’t support binding to a different table column.
-   - **Static value**: If you want to customize the rich text editor appearance, features, and behavior, enter the relative URL to the JavaScript web resource that contains the properties you want. More information: [Rich text editor control configuration options](#rich-text-editor-control-configuration-options)
+   - **Static value**: If you want to customize the rich text editor appearance, features, and behavior, enter the relative URL to the JavaScript web resource that contains the properties you want. More information: [Configure the rich text editor control](#configure-the-rich-text-editor-control)
    - **Web**, **Phone**, and **Tablet**: Enable all if you want all client apps to have the ability to use rich text in the column.
 
       <img src="media/rich-text-control2.png" alt="Rich text control editor configuration" height="497" width="485">
@@ -70,30 +70,29 @@ Consider the following when using the rich text editor:
 
 - The best performance is achieved when the HTML content size is 1 MB or less. When your HTML content size exceeds 1 MB, you may notice slower response times for loading and editing content. By default, image content is referenced from the content HTML but isn't stored as part of the HTML content, so in the default configuration, images don't negatively impact performance. 
 
-- Rich text fields will store HTML tags which are required for formatting along with user entered data. When setting the maximum size for your field, make sure to assign a large enough size for both the HTML tags and user-entered data. 
+- Rich text fields will store HTML tags, which are required for formatting along with user entered data. When setting the maximum size for your field, make sure to assign a large enough size for both the HTML tags and user-entered data. 
 
-- By default, the rich text editor will upload images to the Azure Blob storage store and they won’t be stored as part of the field. Images will be stored in the same field as base64 when the submitter doesn’t have permissions to the msdyn_richtextfiles entity. Base64 content is extremely large, so you generally don't want to store images as base64. 
+- By default, the rich text editor will upload images to the Azure Blob storage store and they won’t be stored as part of the field. Images will be stored in the same field as base64 when the submitter doesn’t have permissions to the `msdyn_richtextfiles` entity. Base64 content is large, so you generally don't want to store images as base64. 
 
 ## Rich text editor properties
 
-The JSON file is comprised of properties set as name and value pairs. There are two types of configurations: the defaultSupportedProps section, and individual configuration settings that provide various functionality. 
+The JSON file is comprised of properties set as name and value pairs. There are two types of configurations: the `defaultSupportedProps` section, and individual configuration settings that provide various functionality. 
 
-The defaultSupportedProps is a set of properties for the plugins, and includes support for all the the CKEditor configurations. For more information, see defaultSupportProps. The defaultSupportedProps isn’t limited to only plugin properties documented from CKEditor, but also allows you to set properties for additional plugins you add or create. For more information about plug-ins, see Use plug-ins to extend business processes. 
+The `defaultSupportedProps` is a set of properties for the plugins, and includes support for all the CKEditor configurations. For more information, see defaultSupportProps. The `defaultSupportedProps` isn’t limited to only plugin properties documented from CKEditor, but also allows you to set properties for additional plugins you add or create. For more information about plug-ins, see Use plug-ins to extend business processes. 
 
 The individual configuration settings allow you to change how your editor behaves and functions.
 
 ### Visualization of the rich text editor configuration file
 
-The following two images visually identify the two configuration sections. For the full configuration file, see [Use the webresource for organization-wide changes](#use-the-webresource-for-organization-wide-changes).
+The following two images visually identify the two configuration sections. For the full configuration file, see [Use the web resource for organization-wide changes](#use-the-webresource-for-organization-wide-changes).
 
 **defaultSupportedProps**
 
-:::image type="content" source="media/defaultsupportedprops-visualization.png" alt-text="defaultsupportedprops configuration visualation.":::
+:::image type="content" source="media/defaultsupportedprops-visualization.png" alt-text="defaultsupportedprops configuration visualization.":::
 
 **Individual configuration settings**
 
 :::image type="content" source="media/individual-config-visualization.png" alt-text="Individual configuration settings visualization.":::
-
 
 ### defaultSupportedProps
 
@@ -485,7 +484,7 @@ Depends on showAsTabControl and showPreview set to true.
 
 ## Sample rich text editor configurations
 
-The following sample rich text editor configuration code sample data can be used to enable specific types of rich text experiences. For each sample, you create a JSON web resource. More information: [Rich text editor control configuration options](#rich-text-editor-control-configuration-options)
+The following sample rich text editor configuration code sample data can be used to enable specific types of rich text experiences. For each sample, you create a JSON web resource. More information: [Configure the rich text editor control](#configure-the-rich-text-editor-control)
 
 ### Add the full screen expander
 
@@ -535,7 +534,7 @@ The following sample rich text editor configuration code sample data can be used
 
 :::image type="content" source="media/cke-toolbar-top.png" alt-text="Toolbar positioned at the top of the rich text editor.":::
 
-### Start the editor at 30 px height and then auto-grow to fit content
+### Start the editor at 30-px height and then autogrow to fit content
 
  ```
  { "defaultSupportedProps": { "autoGrow_onStartup": false , "autoGrow_maxHeight": 0 , "autoGrow_minHeight": 30 , "height": 30  }}
@@ -566,9 +565,9 @@ Enabling this functionality removes the contextual right-click editing capabilit
 
 :::image type="content" source="media/rte-right-click-config.png" alt-text="Remove the context menu so right-clicking will work with the default browser spell check.":::
 
-## Use the webresource for organization-wide changes
+## Use the web resource for organization-wide changes
 
-The default RTE webresource is available with the display name RTEGlobalConfiguration.json. This configuration is used for all instances of the RTE control and can be used to make organization wide changes. This includes RTE used in timeline rich-text notes, knowledge management, and single and multi-line fields that are configured to use the RTE control.
+The default RTE webresource is available with the display name RTEGlobalConfiguration.json. This configuration is used for all instances of the RTE control and can be used to make organization-wide changes. This includes RTE used in timeline rich-text notes, knowledge management, and single and multi-line fields that are configured to use the RTE control.
 
 ```json
 {
@@ -730,8 +729,8 @@ The following table describes the different formatting features and functionalit
 |![Align Right.](media/align-right.png "Align Right")| Align Right | Ctrl+R | Align your content with the right margin. (Commonly used for a formal appearance.) |
 |![Link.](media/format-link.png "Link")| Link |  | Create a link in your document for quick access to web pages and files.<br /><br />Pasted or typed URL text is converted into a link. For example, "http://myexample.com" will become "<a href="http://myexample.com">http://myexample.com</a>".<br /><br /> In the **Link** dialog box, choose the type of link you'd like to insert.<br /><br />The **Link Info** tab allows you to choose the link type as well as set the link protocol and URL.<br /><br />The **Target** tab is only available for the URL link type. It specifies the location where the link will open after you select it. |
 |![Remove Link.](media/remove-link.png "Unlink")| Unlink |  | Delete a link in your email or document.<br /><br />When you place the cursor on a link, the **Unlink** button on the toolbar becomes active. Select the button to remove the link and make it plain text. |
-|![Superscript.](media/format-superscript.png "Superscript")| Superscript |  | Type very small letters just above the line of text. |
-|![Subscript.](media/format-subscript.png "Subscript")| Subscript |  | Type very small letters just below the line of text. |
+|![Superscript.](media/format-superscript.png "Superscript")| Superscript |  | Type small letters just above the line of text. |
+|![Subscript.](media/format-subscript.png "Subscript")| Subscript |  | Type small letters just below the line of text. |
 |![Strikethrough.](media/format-strikethrough.png "Strikethrough")| Strikethrough |  | Cross out text by drawing a line through it. |
 |![Insert Image.](media/insert-picture.png "Insert Image")| Insert Image|	|You can insert an image by directly copying and pasting it inline in the editor, dragging and dropping it from your desktop or local folder directly into the editor, or by typing a URL. The following formats are supported: .PNG, .JPG., or .GIF.<br /><br />To insert an image inline in your article: <br />1. Drag and drop the image or copy and paste it directly into the article. <br />2. Drag any corner of the image to resize it.<br /><br />To insert an image using a URL or navigating to the local image:<br />1. Choose Insert Image.<br />2. In the **Image** property dialog, choose from the following options:<br /><ul><li>Select **Browse** to navigate to the image on your computer.</li><li>Or specify the web address of the image, and properties to define how the image will appear in the email or article.</li><br />**Note:**<ul><li>If the image is located on the external server, use the full absolute path. </li><li>If the image is located on a local server, you can use a relative path. </li><li>If you want the image to be linked to a target, add a URL for the image.</li><li>You can also specify if you want the targeted page to open in a new window, topmost window, same window, or parent window.</li></ul>
 |![Left to Right.](media/left-to-right.png "Left to Right")| Left to Right |  | Change the text to left-to-right for content such as a paragraph, header, table, or list. Commonly used for bi-directional language content. This is the default setting.|
@@ -739,7 +738,7 @@ The following table describes the different formatting features and functionalit
 |![Undo Typing.](media/undo-typing.png "Undo Typing")| Undo Typing |  | Undo changes you made to the content. |
 |![Redo Typing.](media/redo-typing.png "Redo Typing")| Redo Typing |  | Redo changes you made to the content. |
 |![Clear All Formatting.](media/clear-formatting.png "Clear All Formatting")| Clear All Formatting |  | Remove all formatting from a selection of text, leaving only the normal, unformatted text. |
-|![Add a Table.](media/add-table.png "Add a Table")| Add a Table |  | Add a table to your content. <br /><br />After adding a table, you can do any of the following:<br /><br /><ul><li>Resize table columns by clicking and dragging your mouse to resize to the columns to the desired width.</li><li>Select one or several cells within a table and apply specific formatting, add links to the selection, or cut, copy, or paste entire rows or columns.</li><li>Right-click to access the properties. This supports features such as cell type, width and height, word wrapping, alignment, merging and splitting cells horizontally and vertically, inserting or deleting rows and columns, row and column span, and cell and border color.</li></ul>|
+|![Add a Table.](media/add-table.png "Add a Table")| Add a Table |  | Add a table to your content. <br /><br />After adding a table, you can do any of the following:<br /><br /><ul><li>Resize table columns by clicking and dragging your mouse to resize to the columns to the desired width.</li><li>Select one or several cells within a table and apply specific formatting, add links to the selection, or cut, copy, or paste entire rows or columns.</li><li>Right-click to access the properties. This supports features such as cell type, width and height, word wrapping, alignment, merging, and splitting cells horizontally and vertically, inserting or deleting rows and columns, row and column span, and cell and border color.</li></ul>|
 |![Expand Toolbar.](media/show-more.png "Expand Toolbar")| Expand Toolbar |  | Displays when the toolbar is collapsed and not all options appear. Select to expand the toolbar and make all options visible. |
 
 > [!Note]
