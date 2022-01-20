@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: article
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 01/10/2022
+ms.date: 01/20/2022
 ms.subservice: canvas-maker
 ms.author: vabhavir
 search.audienceType: 
@@ -112,14 +112,14 @@ The goal of this example is to take users to the **DetailsScreen1** when the app
 1. To store the **App ID** value, update the **OnStart** property formula as below.
 
     ```powerapps-dot
-    Set(AppID, "b76abea1-e888-409e-8fb6-630be198fa65");
+    Set(AppID, "GUID");
     If(Not(IsBlank(Param("accountId"))),Set(accountId,Param("accountId")));
     ```
 
     In this formula, function [Set()](../functions/function-set.md) sets the **App ID** to the GUID of the app. And function [Param()](../functions/function-param.md) stores the value in the **accountId** variable, when not blank.
 
     > [!NOTE]
-    > Ensure you replace the **App ID** (GUID) in the above example formula to your App ID as appropriate.
+    > Ensure you replace "GUID" in the above formula to your App ID as appropriate.
 
     :::image type="content" source="media/deep-linking/app-onstart.png" alt-text="App OnStart formula with Set and Param functions.":::
 
