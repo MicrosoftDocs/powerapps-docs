@@ -59,11 +59,14 @@ Create a new text column and configure the control, or replace an existing text 
 
 The rich text editor control comes with a rich set of configuration options that make it possible to customize its appearance, features, and behavior. To configure the rich text editor control, follow these steps:
 
-1. Create a JavaScript (.js) file tha contains the JSON format text file with the `defaultSupportedProps` structure and configuration you want. More information: [Sample rich text editor configurations](#sample-rich-text-editor-configurations) and [Rich text editor properties](#rich-text-editor-properties)
-1. In Power Apps, create a **JavaScript (JS))** type web resource using the JSON file created in step 1. More information: [Create or edit model-driven app web resources to extend an app](create-edit-web-resources.md)
-1. Add the absolute URL for the JavaScript web resource in the **Static value** field. The web resource URL is located next to the **URL** field on the web resource definition you created in the previous step.
+1. Create a JavaScript (.js) file that contains the JSON format text file with the `defaultSupportedProps` structure and configuration you want. More information: [Sample rich text editor configurations](#sample-rich-text-editor-configurations) and [Rich text editor properties](#rich-text-editor-properties)
+1. In Power Apps, create a **JavaScript (JS)** type web resource using the JSON file created in step 1. More information: [Create or edit model-driven app web resources to extend an app](create-edit-web-resources.md)
+1. Add the absolute URL for the JavaScript web resource in the form designer **Static value** field on the **Add rich text editor control** pane . More information: [Configure the rich text editor control](#configure-the-rich-text-editor-control)
 
-   :::image type="content" source="media/web-resource-url.png" alt-text="URL for JavaScript web resource":::
+   > [!TIP]
+   > The web resource URL is located next to the **URL** field on the web resource definition you created in the previous step.
+   > 
+   > :::image type="content" source="media/web-resource-url.png" alt-text="URL for JavaScript web resource":::
 1. **Save**, and then **Publish** the form.
 
 ## Best practices for using the rich text editor
