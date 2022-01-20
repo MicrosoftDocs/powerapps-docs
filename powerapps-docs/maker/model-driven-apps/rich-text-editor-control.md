@@ -63,6 +63,7 @@ The rich text editor control comes with a rich set of configuration options that
 1. In Power Apps, create a **JavaScript (JS))** type web resource using the JSON file created in step 1. More information: [Create or edit model-driven app web resources to extend an app](create-edit-web-resources.md)
 1. Add the absolute URL for the JavaScript web resource in the **Static value** field. The web resource URL is located next to the **URL** field on the web resource definition you created in the previous step.
 
+   :::image type="content" source="media/web-resource-url.png" alt-text="URL for JavaScript web resource":::
 1. **Save**, and then **Publish** the form.
 
 ## Best practices for using the rich text editor
