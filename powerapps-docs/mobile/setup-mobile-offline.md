@@ -78,7 +78,7 @@ Set up the new mobile offline experience in the [modern app designer](../maker/m
     > [!div class="mx-imgBorder"]
     > ![Select Settings on the command bar.](media/mobile-offline-image4.png)
 
-5. On the **Features** tab, set the **Easily configure your app for offline from this app designer** toggle to **On**.
+5. On the **Features** tab, set the **Offline setup from the app designer** toggle to **Yes**.
 
     > [!div class="mx-imgBorder"]
     > ![Turn on the Offline setup from the modern app designer toggle.](media/mobile-offline-image5.png)
