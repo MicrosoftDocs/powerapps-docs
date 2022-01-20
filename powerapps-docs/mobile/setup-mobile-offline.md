@@ -5,7 +5,7 @@ author: mduelae
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 01/11/2022
+ms.date: 01/24/2022
 ms.subservice: mobile
 ms.author: mkaur
 ms.custom: ""
@@ -43,7 +43,7 @@ Verify the following prerequisites before you enable mobile offline:
 
 Mobile apps run on smaller screens with limited connectivity. Before you enable offline mode, make sure your model-driven app is optimized for offline and mobile use. Consider the number of user scenarios that you want to cover and the amount of data the app will use. Create an app that's simple and lightweight.
 
-If you have desktop and remote mobile users, optimize the user experience by creating two separate apps. Create an online app for your office users and another app for your mobile users who might have limited connectivity.<!--note from editor: Suggested.-->
+If you have desktop and remote mobile users, optimize the user experience by creating two separate apps. Create an online app for your office users and another app for your mobile users who might have limited connectivity.
 
 Follow these best practices when building an app for mobile offline use:
 
@@ -62,7 +62,7 @@ Follow these best practices when building an app for mobile offline use:
 
 ## Enable your app for offline use (preview)
 
-Set up the new mobile offline experience in the [modern app designer](../maker/model-driven-apps/app-designer-overview.md).<!--note from editor: Other references to the app designer don't include the "(preview)" string, and I think that's okay. If you disagree, I guess they all should include this string.-->
+Set up the new mobile offline experience in the [modern app designer](../maker/model-driven-apps/app-designer-overview.md).
 
 1. Sign in to [Power Apps (preview)](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) 
 
@@ -114,14 +114,15 @@ A table needs to be enabled for offline to add it to a offline profile. Some tab
 4. In the **Edit table** settings, select **Advanced options**, and in the **Rows in this table** section, select **Can be taken offline**.
 
    > [!NOTE]
-   > An app can only be linked to one profile, but a profile can be shared between multiple apps. This can be useful when different apps share the same dataset, which then only needs to be downloaded once on the device and between the apps.<!--note from editor: Edit okay? I couldn't tell who the agent of action was here.-->
-
+   > An app can only be linked to one profile, but a profile can be shared between multiple apps. This can be useful when different apps share the same dataset, which then only needs to be downloaded once on the device and between the apps.
+   
     > [!div class="mx-imgBorder"]
     > ![Enable a table for offline use.](media/mobile-offline-image8.png)
 
 
 ### Generate a default profile
-<!--note from editor: Edit to this heading is suggested so it's parallel with the next H3. If it's worded this way, you don't need to say "To generate a default profile" in step 1. Also, I suggest using the Note format -->
+
+
 The modern app designer can generate a default offline profile that's based on how the app is configured.
 
 > [!NOTE]
@@ -132,7 +133,7 @@ The modern app designer can generate a default offline profile that's based on h
     > [!div class="mx-imgBorder"]
     > ![Create a new profile.](media/mobile-offline-image7-1.png)
 
-2. Review the proposed filters for each table. Make sure that the data downloaded on the users' devices is limited to only what's necessary.<!--note from editor: Suggested.--> Focus on the most-often-used tables in your app, which in most cases have the **Organization rows** filter set.
+2. Review the proposed filters for each table. Make sure that the data downloaded on the users' devices is limited to only what's necessary. Focus on the most-often-used tables in your app, which in most cases have the **Organization rows** filter set.
 
     > [!div class="mx-imgBorder"]
     > ![Default auto-generated profile.](media/mobile-offline-image9.png)
@@ -153,19 +154,19 @@ Applying an appropriate filter for each of the tables configured in the offline 
     > [!div class="mx-imgBorder"]
     > ![Choose a table.](media/mobile-offline-image10.png)
 
-3. Set the following filters:<!--note from editor: I tried to avoid "lets" and "allows" in the following paragraphs.-->
+3. Set the following filters:
 
    1. Choose the row that you want to make available offline. For the **Custom** option, use the [expression builder](../maker/model-driven-apps/create-edit-view-filters.md) to set up advanced conditions.
    2. **Relationships** lists the different relationships available between the current table and other tables added in the offline profile. Selecting a relationship will ensure that related rows following that relationship will be downloaded and made available offline.
-   3. **Files** and **Images** define which columns for a file or image need to be downloaded offline. For files, you can choose to download every column or none at all. For images, you can select each column you want to download granularly.<!--note from editor: Suggested. I couldn't picture what "all or nothing" meant.-->
-   4. **Sync interval** defines the sync frequency to be applied on the device to sync the data with the server. If a table's data doesn't change frequently—like a catalog or a product table—you might want to focus on only syncing data when necessary, for example refreshing only once a day.<!--note from editor: Edit okay? I couldn't see where "focus only on syncing data when necessary" fit in. Also, please check the following alt text.-->
+   3. **Files** and **Images** define which columns for a file or image need to be downloaded offline. For files, you can choose to download every column or none at all. For images, you can select each column you want to download granularly.
+   4. **Sync interval** defines the sync frequency to be applied on the device to sync the data with the server. If a table's data doesn't change frequently—like a catalog or a product table—you might want to focus on only syncing data when necessary, for example refreshing only once a day.
       
       > [!div class="mx-imgBorder"]
       >![Screenshot showing the filters available for an offline table.](media/mobile-offline-image11.png)
 
 4. Select **Add** to add your table and filters to the profile.
 
-5. When all tables are properly configured for the profile, select **Done** > **Publish your application**.<!--note from editor: I assume title case is correct?-->
+5. When all tables are properly configured for the profile, select **Done** > **Publish your application**.
 
 When the app is published, the app will be enabled for offline use. All your users who have access to the app can also use it in offline mode.
 
