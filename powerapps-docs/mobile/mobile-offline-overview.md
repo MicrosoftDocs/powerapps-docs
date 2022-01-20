@@ -5,7 +5,7 @@ author: mduelae
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 01/11/2022
+ms.date: 01/24/2022
 ms.subservice: mobile
 ms.author: mkaur
 ms.custom: ""
@@ -24,9 +24,9 @@ searchScope:
 
 [This topic is pre-release documentation and is subject to change.]
 
-Wouldn't it be great to use your mobile app without worrying about spotty internet connections?<!--note from editor: Suggested. Alternatively, could be "...without worrying whether you have a spotty internet connection", or simply "...without worrying about spotty internet connectivity" (in which case, you'd want to change the last phrase of the paragraph to something like "...seamlessly without worrying about their internet connections").--> With model-driven apps made with Power Apps and the new mobile offline-first experience, it's possible. People who need to work from remote locations can continue to work seamlessly without worrying about connectivity. 
+Wouldn't it be great to use your mobile app without worrying about spotty internet connectivity? With model-driven apps made with Power Apps and the new mobile offline-first experience, it's possible. People who need to work from remote locations can continue to work seamlessly without worrying about their internet connections
 
-With the new mobile offline experience enabled for your model-driven apps, not only can you continue working in offline mode, you'll also have better device performance and a more responsive app, and you'll save battery power by attempting fewer connections to the server.<!--note from editor: Suggested. If you don't like, it could maybe be "...you'll also have better device performance, a more responsive app, and less drain on the battery because fewer connections are being made to the server." -->
+With the new mobile offline experience enabled for your model-driven apps, not only can you continue working in offline mode, you'll also have better device performance, a more responsive app, and less drain on the battery because fewer connections are being made to the serve.
 
 Note, an internet connection is required to sync data between your mobile device and Microsoft Dataverse.
 
@@ -35,10 +35,10 @@ To get started with mobile offline, an app maker needs to enable and define the 
 
 ## Mobile offline-first
 
-After offline is configured, anyone who uses the [Power Apps mobile app](run-powerapps-on-mobile.md) can also use the app in offline mode. The Power Apps mobile app always runs offline-first, either with or without an internet connection. This new functionality optimizes offline performance and creates a consistent experience for users as they change locations:<!--note from editor: The wording changes in the previous sentence are suggested. I added a colon to the end because the list (which I don't think really needs to be an ordered list?) needs an introduction. I'm not sure that this is the best way to introduce the list because as noted below, I'm not sure what these list items are referring to.-->
+After offline is configured, anyone who uses the [Power Apps mobile app](run-powerapps-on-mobile.md) can also use the app in offline mode. The Power Apps mobile app always runs offline-first, either with or without an internet connection. This new functionality optimizes offline performance and creates a consistent experience for users as they change locations:
 
--	**Online**: Occurs when an internet connection is available, but offline mode isn't set up. The mobile app functions similar to using the app with an internet connection on your PC. When the internet connection is lost, the mobile app is unusable. Not recommended.<!--note from editor: I'm not sure what "Occurs" and "Not recommended" refer to here. I assume this isn't a setting that the user chooses anywhere, so I'm not sure what the user is meant to do with this statement.-->
--	**Offline-first without an internet connection**: Data is downloaded, and all changes are saved to your mobile device.<!--note from editor: Is this saying the same thing as the next paragraph? ("Data is downloaded to the device, and all changes are saved locally") If so, can they be worded exactly the same? If not, can you specify where data is downloaded to?--> When the internet connection is restored, the changes are automatically synced to the server.
+-	**Online**: Occurs when an internet connection is available, but offline mode isn't set up. The mobile app functions similar to using the app with an internet connection on your PC. When the internet connection is lost, the mobile app is unusable. Not recommended.
+-	**Offline-first without an internet connection**: Data is downloaded, and all changes are saved to your mobile device. When the internet connection is restored, the changes are automatically synced to the server.
 - **Offline-first with an internet connection**: Data is downloaded to the device, and all changes are saved locally. Because there's an internet connection, the app will automatically attempt to sync every few minutes.
 
 For more information, go to [Set up and use mobile offline-first](work-in-offline-mode.md).
