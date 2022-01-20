@@ -58,11 +58,12 @@ Part of the name of any web resource you create is the solution publisher prefix
    The list of web resources available are displayed. 
 3. To add a web resource to the unmanaged solution, select the web resource, and then select **Add**. To close the list without adding a web resource select **Cancel**.
 
-## Create a web resource
+## Create or edit a web resource
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then on the left navigation pane select **Solutions**. 
-2. Open an unmanaged solution, on the command bar select **New**, point to **More**, and then select **Web resource**.
-3. Complete the fields on the right **New web resource** pane to create the web resource:
+1. Open an unmanaged solution.
+1. To edit an existing web resource that is part of the unmanaged solution, select it to display the **Edit web resource** pane. To create a new one, on the command bar select **New**, point to **More**, and then select **Web resource**.
+1. Complete the fields on the right web resource pane to create the web resource:
 
     :::image type="content" source="media/new-web-resource-form.png" alt-text="Create a web resource":::
   
@@ -75,9 +76,12 @@ Part of the name of any web resource you create is the solution publisher prefix
 |**Description**|A description of the web resource.|  
 |**Advanced options**| Expand **Advanced options** to reveal the **Language** field, which allows for a selection of a language. This option just tags the row that stores the web resource data. It doesn’t change the behavior of the web resource.|  
 
-4. After you have added your changes, select **Save** and then select **Publish**.  After you save the web resource, the **URL** to the web resource is displayed in the web resource definition. Select this link to view the web resource in your browser.|  
+4. After you have added your changes, select **Save** and then select **Publish**.  After you save the web resource, the **URL** to the web resource is displayed in the web resource definition. Select this link to view the web resource in your browser.
 
-## Add or edit a web resource using the classic solution explorer
+   > [!NOTE]
+   > Changes to a web resource will not be visible in the application until you publish it.
+
+## Edit a web resource using the classic solution explorer
 
 1. Open an unmanaged solution and select the web resource.
 1. Select the vertical ellipsis > **Edit** > **Edit in classic**.
@@ -91,15 +95,11 @@ Part of the name of any web resource you create is the solution publisher prefix
 |**Type**|*Required*. This is the type of web resource. You can’t change this after you save the web resource.|  
 |**Text Editor**|When the type of web resource represents a kind of text file, select this button to open a page to edit the content using the text editor.<br />More information: [Use the text editor appropriately](#use-the-text-editor-appropriately)| 
 |**Language**|Allows for a selection of a language. This option just tags the row that stores the web resource data. It doesn’t change the behavior of the web resource.|  
-|**Upload File**|Select the **Browse…** button to choose a file to upload as a web resource.<br />&bull; You can upload a file when creating a new web resource or to overwrite an existing web resource.<br />&bull; The file name extension of the file must match allowed extensions.<br />&bull; By default the maximum size file that can be uploaded as a web resource is 5MB. This value can be modified by using the **System Settings** > **Email** tab > **Set file size limit for attachments** setting. More information: [System Settings dialog box - Email tab](/dynamics365/customer-engagement/admin/system-settings-dialog-box-email-tab) |  
+|**Upload File**|Select the **Choose File** button to choose a file to upload as a web resource.<br />&bull; You can upload a file when creating a new web resource or to overwrite an existing web resource.<br />&bull; The file name extension of the file must match allowed extensions.<br />&bull; By default the maximum size file that can be uploaded as a web resource is 5MB. This value can be modified by using the **System Settings** > **Email** tab > **Set file size limit for attachments** setting. More information: [System Settings dialog box - Email tab](/dynamics365/customer-engagement/admin/system-settings-dialog-box-email-tab) |  
 |**URL**|After you save the web resource, the URL to the web resource will be displayed here. Select this link to view the web resource in your browser.|  
   
 4. After you have added your changes, select **Save** and then select **Publish**.  
 
-
-> [!NOTE]
-> Changes to a web resource will not be visible in the application until you publish it.
-  
 ### Use the text editor appropriately
 
 The text editor provided in the application for web resources should only be used for simple edits of text files. You can use it to create and edit HTML web resources, but you should only edit HTML web resources that were created using the text editor. The text editor is designed for very simple HTML content. 
@@ -110,35 +110,36 @@ The text editor provided in the application for web resources should only be use
   
 We recommend that you use an external editor to edit text files and then save them locally before uploading them with the **Upload File** button. This way you can preserve a copy of the web resource if you need to return to an earlier version. You can use a simple editor like Notepad, but a text editor with more advanced capabilities is highly recommended. [Visual Studio Community](https://www.visualstudio.com/vs/community/) and [Visual Studio Code](https://code.visualstudio.com/) are free and provide powerful capabilities for editing the text-based files used by web resources.  
 
-## Create and edit a web resource on a form using solution explorer
+### Create and edit a web resource on a form using solution explorer
 
-You can add or edit web resources on a form to make it more appealing or useful to users. 
+Add or edit web resources on a form to make it more appealing or useful to users. 
 
 > [!NOTE]
 > You can’t include a web resource in a form header or footer.  
 
 [!INCLUDE [cc_navigate-solution-from-powerapps-portal](../../includes/cc_navigate-solution-from-powerapps-portal.md)]
 
-### Navigate to a form
+#### Navigate to a form
+
 With solution explorer open, under **Components**, expand **Entities**, and then expand the table you want to work with.
 
 Choose **Forms**, in the list locate a form of type Main, and then double-click or tap the entry to open and edit the form.
 
-### Add or edit web resource in a form
+#### Add or edit web resource in a form
 
 See [Web resource properties](web-resource-properties-legacy.md) for information about the properties you can set for web resources in a form.
 
-### Preview
+#### Preview
 
 To preview how the main form will appear and how events will function:
 - On the **Home** tab, select **Preview**, and then select **Create Form**, **Update Form**, or **Read-Only Form**.
 - To close the Preview form, on the **File** menu, select **Close**.
 
-### Save
+#### Save
 
 When you finish editing the form, on the **Home** tab, select **Save and Close** to close the form. 
 
-### Publish
+#### Publish
 
 When your customizations are complete, publish them:
 - To publish customizations for only the component that you are currently editing, in the navigation pane, select the table you have been working on, and then select **Publish**.
