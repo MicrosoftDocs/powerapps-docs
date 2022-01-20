@@ -34,6 +34,10 @@ Model-driven and canvas apps
 | -------------- | ------------ | -------- | ---------------------------------------------------- |
 | state          | `Dictionary` | Yes      | Data that persists in one session for a single user. |
 
+## Example
+
+Sample control: [Implementing control state API component](../../sample-controls/control-state-api).
+
 ## Return Value
 
 Type: `boolean`
