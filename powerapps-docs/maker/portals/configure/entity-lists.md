@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 01/19/2022
+ms.date: 01/20/2022
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: ndoelman
@@ -511,7 +511,7 @@ To display records by using a calendar, those records need to include at a minim
 | Summary Field Name | A text column that will show the summary of a calendar event. |
 | Description Field Name | A text column that will display a description of the calendar event. |
 | Organizer Field Name | A text or lookup column that will display the organizer of the calendar event. |
-| Location Field Name | A text column describing the location of the calendar event.| 
+| Location Field Name | A text column describing the location of the calendar event.|
 | Is All Day Field Name | A yes/no column indicating if the calendar event is all day. |
 
 | Setting | Details |
@@ -520,7 +520,7 @@ To display records by using a calendar, those records need to include at a minim
 | Initial Date | The initial start date when the calendar is rendered. Default (blank) will the be the current date. |
 | Time Zone Display Mode | The time zone the calendar will be displayed in. The *User Local Time Zone* will display events in the calender using the time zone of the user viewing the portal. *Specific Time Zone* will display the calendar events with a specified time zone. |
 | Display Time Zone | If the **Time Zone Display Mode** is set to *Specific Time Zone* this value will determine the time zone the calendar events are displayed. |
-| Style | The setting displays the calendar in either a *Full Calendar* format or as an *Event List* | 
+| Style | The setting displays the calendar in either a *Full Calendar* format or as an *Event List* |
 
 <!--screenshot of calendar view-->
 
