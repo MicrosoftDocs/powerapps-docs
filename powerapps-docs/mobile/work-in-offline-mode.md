@@ -60,9 +60,9 @@ To use offline-first, you need to enable it for each of your model-driven apps. 
     > [!div class="mx-imgBorder"]
     > ![Select Settings on the command bar.](media/mobile-offline-image4.png)
 
-5. On the **Upcoming** tab, set the **Disable classic offline** toggle to **On**.
+5. On the **Upcoming** tab, set the **Choose the offline mode to apply to your app** toggle to **Yes** and then select **Save**.
 
-6. Close the **Settings** dialog, and then save and publish the app.
+6. Select **Save** and then **Publish** the app.
 
 
 Some features—such as dashboards, charts, multiple-table business process flows, and server-side sync—are only available when you're online. Be sure to validate your app and verify that it's fully functional before it's deployed. 
