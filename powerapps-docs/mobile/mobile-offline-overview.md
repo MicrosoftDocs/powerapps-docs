@@ -24,7 +24,7 @@ searchScope:
 
 [This topic is pre-release documentation and is subject to change.]
 
-Wouldn't it be great to use your mobile app without worrying about spotty internet connectivity? With model-driven apps made with Power Apps and the new mobile offline-first experience, it's possible. People who need to work from remote locations can continue to work seamlessly without worrying about their internet connections
+Wouldn't it be great to use your mobile app without worrying about spotty internet connectivity? With model-driven apps made with Power Apps and the new mobile offline-first experience, it's possible. People who need to work from remote locations can continue to work seamlessly without worrying about their internet connection.
 
 With the new mobile offline experience enabled for your model-driven apps, not only can you continue working in offline mode, you'll also have better device performance, a more responsive app, and less drain on the battery because fewer connections are being made to the serve.
 
