@@ -5,7 +5,7 @@ author: mustlaz
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 01/11/2022
+ms.date: 01/14/2022
 ms.subservice: mobile
 ms.author: mkaur
 ms.custom: ""
@@ -39,7 +39,7 @@ With the new offline-first experience, it's important to understand the key bene
 
 |Offline-first| Classic offline  |
 |---------|---------|
-| <ul><li>Your data is always the same, regardless of your network connection. </li> <div></div> <div></div> ![Offline-first on mobile.](media/offline-first-classic-3.png) <li> There's no toggle for users to switch from offline to online mode. A user will never forget to sync their changes back to the server because the app will do it automatically. <div></div> ![Sync data back to the server.](media/offline-first-classic-4.png) </li></ul>    |   <ul> <li> Users have the option to skip the initial offline sync and stay online, which means that users in your organization might not<!--note from editor: Edit okay?--> have the same experience. <div></div> ![Skip downloading offline data.](media/offline-first-classic-1.png) </li> <li> Users have to remember to disable the **Work in offline mode** toggle before they can sync changes with the server.<!--note from editor: Suggested. The style guide wants us to use "to" rather than "in order to," but that didn't work so well.--> <div></div> ![A user must turn off the work offline toggle to sync data.](media/offline-first-classic-2.png) </li> <div></div> </li> <li> When there's no network, the rows are listed from the local database so they won't be the same when you connect back to the server. When you're editing and lose internet connectivity, your changes will be lost because you can't save changes in offline mode without a connection. </li></ul>  |
+| <ul><li>Your data is always the same, regardless of your network connection. </li> <div></div> <div></div> ![Offline-first on mobile.](media/offline-first-classic-3.png) <li> There's no toggle for users to switch from offline to online mode. A user will never forget to sync their changes back to the server because the app will do it automatically. <div></div> ![Sync data back to the server.](media/offline-first-classic-4.png) </li></ul>    |   <ul> <li> Users have the option to skip the initial offline sync and stay online, which means that users in your organization might not have the same experience. <div></div> ![Skip downloading offline data.](media/offline-first-classic-1.png) </li> <li> Users have to remember to disable the **Work in offline mode** toggle before they can sync changes with the server. <div></div> ![A user must turn off the work offline toggle to sync data.](media/offline-first-classic-2.png) </li> <div></div> </li> <li> When there's no network, the rows are listed from the local database so they won't be the same when you connect back to the server. When you're editing and lose internet connectivity, your changes will be lost because you can't save changes in offline mode without a connection. </li></ul>  |
 
 
 ## Enable mobile offline-first
@@ -65,7 +65,7 @@ To use offline-first, you need to enable it for each of your model-driven apps. 
 6. Close the **Settings** dialog, and then save and publish the app.
 
 
-Some features—such as dashboards, charts, multiple-table business process flows, and server-side sync—are only available when you're online. Be sure to validate your app and verify<!--note from editor: Suggested.--> that it's fully functional before it's deployed. 
+Some features—such as dashboards, charts, multiple-table business process flows, and server-side sync—are only available when you're online. Be sure to validate your app and verify that it's fully functional before it's deployed. 
 
 ## Use mobile offline-first
 
@@ -73,7 +73,7 @@ For the app to be available in offline mode, app and user data must be downloade
 
 The app data includes all the resources needed for the app to run properly. User data includes that is configured for the offline profile and stored in Microsoft Dataverse tables.
 
-With offline-first, during the initial offline sync, you'll get a notification stating that your app is syncing the offline data. This can take a few minutes or longer, depending on what has been configured in the offline profile. If the initial offline sync isn't complete, it will<!--note from editor: Via Writing Style Guide.--> be triggered every time the app is opened. Select **See details** to open the offline status page.
+With offline-first, during the initial offline sync, you'll get a notification stating that your app is syncing the offline data. This can take a few minutes or longer, depending on what has been configured in the offline profile. If the initial offline sync isn't complete, it will be triggered every time the app is opened. Select **See details** to open the offline status page.
 
 > [!div class="mx-imgBorder"]
 > ![Offline status screen.](media/offline-first-1.png)
