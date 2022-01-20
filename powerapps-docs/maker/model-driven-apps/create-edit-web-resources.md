@@ -63,7 +63,7 @@ Part of the name of any web resource you create is the solution publisher prefix
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then on the left navigation pane select **Solutions**. 
 1. Open an unmanaged solution.
 1. To edit an existing web resource that is part of the unmanaged solution, select it to display the **Edit web resource** pane. To create a new one, on the command bar select **New**, point to **More**, and then select **Web resource**.
-1. Complete the fields on the right web resource pane to create the web resource:
+1. Complete the fields on the right web resource pane to create or edit the web resource:
 
     :::image type="content" source="media/new-web-resource-form.png" alt-text="Create a web resource":::
   
