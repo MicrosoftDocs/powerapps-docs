@@ -44,17 +44,7 @@ In this article, you'll learn about how to:
 
 ## Create the app
 
-1. Sign in to [Power Apps](https://make.powerapps.com).
-
-1. Verify and if necessary, switch environments using the environments list from the top-right side of the screen.
-
-1. Under **Start from data**, select **Dataverse**.
-
-    :::image type="content" source="media/deep-linking/start-from-dataverse.png" alt-text="Start from data - Microsoft Dataverse." border="false":::
-
-1. If you don't have an existing connection to Microsoft Dataverse, you'll be prompted to create it. Select **Create** this connection.
-
-1. Under **Choose a table**, select **Accounts**, and then select **Connect**.
+[Create an app using Microsoft Dataverse](../data-platform-create-app.md), and use the **Accounts** table.
 
 Your app opens to the **BrowseScreen**, that shows a list of accounts in a gallery. By default, this gallery shows an email address, a city, and an account name. The app also contains **DetailScreen** and **EditScreen**.
 
