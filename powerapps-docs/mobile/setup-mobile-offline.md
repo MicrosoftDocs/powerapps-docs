@@ -105,7 +105,7 @@ A table needs to be enabled for offline to add it to a offline profile. Some tab
 
 1. Sign in to [Power Apps (preview)](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) 
 
-2. On the left pane, select **Dataverse** > **Tables**. 
+2. On the left pane, select **Data** > **Tables**. 
 3. Select the table that you want to add to an offline profile, and then on the command bar, select **Settings**
 
     > [!div class="mx-imgBorder"]
