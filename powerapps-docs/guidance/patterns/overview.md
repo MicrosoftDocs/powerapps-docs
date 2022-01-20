@@ -3,7 +3,7 @@ title: "Power Apps patterns: Overview | Microsoft Docs"
 description: Learn about some of the most common enterprise uses for Microsoft Power Platform and the patterns that successful makers have used to bring these solutions to life.
 author: kathyos
 ms.service: powerapps
-ms.topic: conceptual
+ms.topic: overview
 ms.custom: guidance
 ms.date: 1/4/2021
 ms.subservice: guidance

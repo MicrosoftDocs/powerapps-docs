@@ -4,7 +4,6 @@ description: Step-by-step instructions for adding and configuring canvas-app con
 author: tapanm-msft
 ms.service: powerapps
 ms.topic: conceptual
-ms.custom: canvas
 ms.reviewer: 
 ms.date: 01/25/2019
 ms.subservice: canvas-maker
@@ -16,6 +15,9 @@ search.app:
 contributors:
   - tapanm-msft
   - chmoncay
+ms.custom:
+  - intro-internal
+  - canvas
 ---
 # Add and configure controls in canvas apps
 

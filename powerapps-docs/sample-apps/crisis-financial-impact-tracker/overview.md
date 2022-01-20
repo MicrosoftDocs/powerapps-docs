@@ -3,7 +3,7 @@ title: Overview of Higher Education Crisis Financial Impact Tracker - Sample sol
 description: Provides an overview of Higher Education Financial Crisis Impact Tracker - Sample solution.
 author: ramanasridhar
 ms.service: powerapps
-ms.topic: conceptual
+ms.topic: overview
 ms.custom: 
 ms.date: 06/22/2020
 ms.subservice: sample-apps
