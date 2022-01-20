@@ -164,7 +164,7 @@ Applying an appropriate filter for each of the tables configured in the offline 
       > [!div class="mx-imgBorder"]
       >![Screenshot showing the filters available for an offline table.](media/mobile-offline-image11.png)
 
-4. Select **Add** to add your table and filters to the profile.
+4. Select **Add + save** to add your table and filters to the profile.
 
 5. When all tables are properly configured for the profile, select **Done** > **Publish your application**.
 
