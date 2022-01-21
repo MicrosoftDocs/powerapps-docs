@@ -7,7 +7,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 03/12/2021
+ms.date: 01/03/2022
 ms.subservice: end-user
 ms.author: mkaur
 ms.reviewer: ""
@@ -20,7 +20,7 @@ search.app:
 ---
 # How to import data
 
-Import data that's stored somewhere else into your model-drvien app using the import feature in Power Apps. 
+Import data that's stored somewhere else into your model-driven app using the import feature in Power Apps. 
 
 Every table has required columns that must exist in your input file. It's recommended that you download an Excel template, add your data, and then import the file to your app. The template saves time and effort. Don't add or modify columns in the template to avoid issues during the import.
 
@@ -133,6 +133,9 @@ After import, the import wizard will add all mapped values in your app, but will
 
 >[!NOTE]
 >You can also map a column in your source file to a column of type "Two Options" and "Multiselect Option Set" (where a column can have multiple values). You must map each **Source Option Values** to the items in the **Dynamics 365 Option Values** list. When mapping to a column of type "Multiselect Option Set," if your source file includes values that aren't available in your app, new values won't be created in your app.
+
+
+### Map lookup columns
 
 If some data in your source file references other existing rows in your app, you must map the column in the source file to a lookup column in your app.
 

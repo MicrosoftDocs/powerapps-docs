@@ -4,6 +4,7 @@ description: "Provides basic information to help you get started with the Online
 ms.date: 10/23/2020
 ms.service: powerapps
 ms.topic: conceptual
+ms.custom: intro-internal
 ms.assetid: c292c148-01f0-41f6-a2fe-7ed05a01a733
 author: KumarVivek
 ms.author: kvivek
@@ -39,7 +40,7 @@ For example, you can pass in the following URL with a **GET** request to retriev
 
 `https://admin.services.crm.dynamics.com/api/v1.2/instances`
 
-For a list service URLs, see [Service URL](/powershell/powerapps/overview?view=pa-ps-latest#service-url).
+For a list service URLs, see [Service URL](/powershell/powerapps/overview#service-url).
 
 <!--
 The following table lists the service URLs of Online Management API for worldwide Microsoft 365 data centers.

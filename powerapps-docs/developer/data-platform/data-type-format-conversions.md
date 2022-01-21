@@ -2,13 +2,13 @@
 title: "Data type format conversions (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about data type format conversions in Microsoft Dataverse." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 07/30/2021
+ms.date: 09/9/2021
 ms.reviewer: "nabuthuk"
 ms.service: powerapps
 ms.topic: "article"
-author: "nkrb" # GitHub ID
+author: "NHelgren" # GitHub ID
 ms.subservice: dataverse-developer
-ms.author: "pehecke" # MSFT alias of Microsoft employees only
+ms.author: "nabuthuk" # MSFT alias of Microsoft employees only
 manager: "kvivek" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
@@ -18,7 +18,7 @@ search.app:
 ---
 # Data type format conversions
 
-Microsoft Dataverse has several [data types](/powerapps/maker/data-platform/types-of-fields) that can be configured with different formats. You can specify the format of the column using either the [solution explorer](/powerapps/maker/data-platform/create-edit-fields)  or by API operations. The following sections provides additional details about data type formats, including:
+Microsoft Dataverse has several [data types](/powerapps/maker/data-platform/types-of-fields) that can be configured with different formats. You can specify the format of the column using either the [solution explorer](/powerapps/maker/data-platform/create-edit-fields)  or by API operations. The following sections provide more details about data type formats, including:
 
 - [Supported formats by data type](#supported-formats-by-data-type)
 
@@ -28,7 +28,7 @@ Microsoft Dataverse has several [data types](/powerapps/maker/data-platform/type
 
 ## Supported formats by data type
 
-The format column specifies the UI on how to display the content. Some formats available in the UI are Phone, Email, or Duration. Suppose you have experimented with these formats before. In that case, you know that the formats applied do not perform any validation on context, domains, or any other values. They instruct the UI which control to use for that type.
+The format column specifies the UI on how to display the content. Some formats available in the UI are Phone, Email, or Duration. Suppose you have experimented with these formats before. In that case, you know that the applied formats do not validate context, domains, or any other values. They instruct the UI, which control to use for that type.
 
 ### Formats
 
@@ -38,15 +38,15 @@ The following table provides information about the formats available for each da
 |-----------------------|--------------------|----------------------------|-------------------------|-----------------|
 | Text                  | Text               | Basic text column that contains text characters.  | Yes   | Default format value for the text column.  |
 |                       | Text Area          | Text column that contains text characters and also allows line breaks.   | Yes |      |
-|                       | Email              | The text provides a mailto link to open the user’s email application.    | Yes |   |
+|                       | Email              | The text provides a link to open the user’s email application.    | Yes |   |
 |                       | URL                | The text provides a hyperlink to open the page specified. Any text that does not begin with a valid protocol will have “https://” prepended to it.    | Yes  |       |
 |                       | Ticker Symbol      | For most languages, the text will be enabled as a link to open the [MSN Money](https://money.msn.com/) website to show details about the stock price represented by the ticker symbol. | Yes     |   |
 |                       | Phone              | Columns will be click-enabled to initiate calls.  | Yes |         |
 |                       | JSON               | Stores text using JSON formatting   | Yes (API only)   | Only in non-SQL stores like Audit. |
 |                       | Rich Text          | Allows rich text formatting, including HTML markup.   | Yes (API only) |   |
 |                       | Version Number     | Stores the version number for rows.   | No  | System use only.  |
-|                       | Text               | Basic text column that contains text characters.  | Yes   |        |
-| Multiline Text (Memo) | Text Area          | Text column that contains text characters and also allows line breaks. | Yes | |
+| Multiline Text (Memo) | Text               | Basic text column that contains text characters.  | Yes   |        |
+|                       | Text Area          | Text column contains text characters and allows line breaks. | Yes | |
 |                       | Email              | For internal use only.   | No  |  |
 |                       | JSON               |   Stores text using JSON formatting  | Yes (API Only) | Only in non-SQL stores like Log. |
 |                       | RichText           | Allows for rich text formatting, including HTML markup.   | Y (API Only)  |      |
@@ -63,22 +63,21 @@ The duration must be entered in the following format: “x minutes”, “x hour
 
 ## Format conversion
 
-You can change the format of the data type to any of the compatible formats that data type supports. Changing the format retains your previous table definitions (maxsize) if they exist in the new target format. If an inbound payload does not include a format, Dataverse assumes the format shouldn't be changed. You can convert the format by an API call with the desired payload in the `FormatName` column. It is recommended not change the value in `Format` column as any newly added `Format` selections are ignored.
+You can change the data type format to any of the compatible formats that data type supports. Changing the format retains your previous table definitions (maxsize) if they exist in the new target format. If an inbound payload does not include a format, Dataverse assumes the format shouldn't be changed. You can convert the format by an API call with the desired payload in the `FormatName` column. Changing the value in the `Format` column is recommended as any newly added `Format` selections are ignored.
 
 > [!NOTE] 
 > At this time, format conversions are only done by performing API operations. 
-
 Changing Formats doesn't change any data present in the column. Due to this, you may notice some unexpected formatting issues that need to be resolved after the conversion.
 
 As mentioned in the table above, there are some restrictions for format conversions:
 
-- JSON can only be used if a table is part of non-SQL storage (i.e., Log).
+- JSON can only be used if a table is part of non-SQL storage (that is, Log).
 
-- You cannot convert columns with the formats of type `emailbody`, `internalextentdata` to other formats. Any conversion for these are ignored and no error message is provided.
+- You cannot convert columns with the formats of type `emailbody`, `internalextentdata` to other formats. Any conversion for these are ignored, and no error message is provided.
 
 - You cannot convert a column to the formats of `emailbody`, `internalextentdata` to other formats. If attempted, an error will occur.
 
-- Date only cannot be converted to DateTime, but Date with a behavior of **User Local** or **Time-Zone Independent** can be changed to DateTime.
+- Date only cannot be converted to DateTime, but Date with the behavior of **User Local** or **Time-Zone Independent** can be changed to DateTime.
 
 
 If you change the data type to an incompatible format, the following error is displayed:
@@ -89,7 +88,10 @@ To change the format of a data type, you need to add the new format details into
 
 ```http
 PUT [Organization URI]/api/data/v9.0/EntityDefinitions(<<entity name>>)/Attributes(<<attribute name>>)
-HTTP/1.1
+To set or change the format of a data type, you need to add the new format details into an OData API **POST** for a new column or **PUT** call to update an existing column:
+
+> [!NOTE]
+> For more samples on how to use the API, see https://github.com/microsoft/PowerApps-Samples
 
 Accept: application/json
 Content-Type: application/json; charset=utf-8

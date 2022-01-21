@@ -12,7 +12,7 @@ ms.author: matp
 manager: kvivek
 ms.date: 06/06/2018
 ms.service: powerapps
-ms.topic: conceptual
+ms.topic: overview
 ms.assetid: 6ad7e43c-b6a1-48c4-9dfb-ed830142a841
 search.audienceType: 
   - maker
@@ -69,10 +69,5 @@ search.app:
 
 ### Multiple lines of text column properties  
  Multiple lines of text and single line of text columns that use the `Text Area` format have a **Row Layout** property. With this property you can specify a value for **Number of Rows** or select **Automatically expand to use available space**.  
-
-## Next steps
-
-[Use the Main form and its components](use-main-form-and-components.md)
-
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

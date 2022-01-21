@@ -55,10 +55,10 @@ To create a new `pcfproj`:
    pac pcf init -ns SampleNamespace -n ChoicesPicker -t field
    ```
 
-This adds a new `pcfproj` and related files to the current folder, including a `packages.json` that defines the required modules. To install the necessary modules, use:
+This adds a new `pcfproj` and related files to the current folder, including a `packages.json` that defines the required modules. The above command will also run `npm install` command for you to install the necessary modules.
 
-```CLI
-npm install
+```
+Running 'npm install' for you...
 ```
 
 > [!NOTE]

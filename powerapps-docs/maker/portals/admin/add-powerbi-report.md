@@ -5,13 +5,13 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/11/2021
+ms.date: 08/09/2021
 ms.subservice: portals
 ms.author: nenandw
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
     - neerajnandwana-msft
-    - tapanm-msft
+    - nickdoelman
 ---
 
 # Add a Power BI report or dashboard to a webpage in a portal
@@ -117,28 +117,26 @@ Below is a sample JavaScript to update the report settings or to handle events. 
 > Use powerbi-client JavaScript library to disable or enable filter pane. However, if you want to restrict access to data or configure security, use [Row-level security (RLS) with Power BI](/power-bi/admin/service-admin-rls). Disabling filter pane doesn't restrict data access, and it can be re-enabled using JavaScript library code.
 
 ```javascript
-$(window).load(function(){
+$(document).ready(function () {
     var embedContainer = $(".powerbi")[0];
-    var report = powerbi.get(embedContainer);
-    report.on("loaded", function(){
-        report.updateSettings({
-            panes: {
-                filters :{
-                    visible: false
-                },
-                pageNavigation:{
-                    visible: false
+    if (embedContainer) {
+        var report = powerbi.get(embedContainer);
+        report.on("loaded", function () {
+            report.updateSettings({
+                panes: {
+                    filters: {
+                        visible: false
+                    },
+                    pageNavigation: {
+                        visible: false
+                    }
                 }
-            }
-        }).catch(function (errors) {
-            console.log(errors);
-        });
-    })
-    report.on('dataSelected', function(event){
-        console.log('Event - dataSelected:');
-        console.log(event.detail);
-    })
-})
+            }).catch(function (errors) {
+                console.log(errors);
+            });
+        })
+    }
+});
 ```
 
 To add custom JavaScript to a webpage:

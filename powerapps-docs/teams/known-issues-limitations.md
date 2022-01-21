@@ -5,7 +5,7 @@ author: matthewbolanos
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/22/2021
+ms.date: 01/18/2022
 ms.subservice: teams
 ms.author: mabolan
 ms.reviewer: tapanm
@@ -13,6 +13,8 @@ contributors:
   - tapanm-msft
   - matthewbolanos
   - msftman
+  - amchern
+  - hemantgaur
 ---
 # Known issues and limitations
 
@@ -40,7 +42,11 @@ To learn about the limitations of controls in Dataverse for Teams environments, 
 
 ## Government Community Cloud (GCC)
 
-Dataverse for Teams currently isn't available in [Power Apps Government Community Cloud (GCC)](/power-platform/admin/powerapps-us-government).
+Dataverse for Teams currently isn't available in:
+
+- Power Apps Government Community Cloud – High (GCC High)
+- Power Apps Department of Defense (DoD)
+- Power Apps operated by 21Vianet in China
 
 ## Hidden membership groups
 
@@ -54,6 +60,10 @@ The group may have hidden membership enabled by your administrator. Try using Da
 ## Localization
 
 Localization of [Power Apps Studio](understand-power-apps-studio.md) isn't supported.
+
+## Power Apps component framework
+
+[Power Apps component framework](/powerapps/developer/component-framework/overview) isn't supported.
 
 ## Required fields
 
@@ -95,6 +105,10 @@ It's currently not possible to change your Studio version.
 ### Visual editor
 
 Currency, Duration, Language, Ticker, and Timezone fields can't be added using visual editor. To create these fields, use the experience to work with tables as available using [solution explorer](create-table.md).
+
+## Load time limit
+
+Apps embedded in Teams are required to load within 30 seconds as per Teams requirements. If an app exceeds this 30 seconds limit, Teams assumes that the app has timed-out, and will display an error screen. If your app is encountering this 30 second timeout, review [tips to improve performance](../maker/canvas-apps/performance-tips.md) for boosting your app’s performance.
 
 ## Theme
 

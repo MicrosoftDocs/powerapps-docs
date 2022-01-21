@@ -39,9 +39,11 @@ Dataverse includes duplicate detection rules for accounts and contacts. These ru
 > [!NOTE]
 >  If available on your system, you may also be able to check for duplicates of other row types, in addition to contacts and accounts. Check with your system administrator. [Find your administrator or support person](find-admin.md)  
   
-### How to merge duplicate rows  
+### How to merge duplicate rows
+> [!NOTE]
+>  Merging records is only supported for account, contact and lead tables, it does not support any other Dataverse out of box tables or custom tables.  
   
-1. Select the duplicate rows, and then select **Merge**.  
+1. Select the duplicate rows from the view page in your model-driven app, and then select **Merge** in the command bar at the top of the page.  
   
    > [!div class="mx-imgBorder"] 
    > ![Duplicate row detected.](media/duplicates-detected_2.png "Duplicate row detected")  

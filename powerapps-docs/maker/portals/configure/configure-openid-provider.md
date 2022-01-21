@@ -5,12 +5,12 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2021
+ms.date: 11/29/2021
 ms.subservice: portals
 ms.author: sandhan
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
-    - tapanm-msft
+    - nickdoelman
     - sandhangitmsft
     - dileepsinghmicrosoft
 ---
@@ -104,6 +104,9 @@ Similar to all other providers, you have to sign in to [Power Apps](https://make
     | Use token lifetime | Indicates that the authentication session lifetime (such as cookies) should match that of the authentication token. If specified, this value will override the **Application Cookie Expire Timespan** value in the **Authentication/ApplicationCookie/ExpireTimeSpan** site setting. |
     | Contact mapping with email | Specify whether the contacts are mapped to a corresponding email. <br> When set to **On**, a unique contact record is associated with a matching email address, assigning the external identity provider to the contact after a successful user sign-in. |
 
+    > [!Note]
+    > *UI_Locales* request parameter will now be sent automatically in the authentication request and will be set to the language selected on the portal.
+
 ## Edit an OpenID Connect provider
 
 To edit a configured OpenID Connect provider, see [Edit a provider](use-simplified-authentication-configuration.md#edit-a-provider).
@@ -112,6 +115,5 @@ To edit a configured OpenID Connect provider, see [Edit a provider](use-simplifi
 
 [Configure an OpenID Connect provider for portals with Azure AD](configure-openid-settings.md)  
 [FAQ for using OpenID Connect in portals](configure-openid-faqs.md)
-
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

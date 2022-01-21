@@ -363,7 +363,7 @@ You can also create your own dashboards and customize to suite your needs. To cr
 > [!div class="mx-imgBorder"]
 > ![Create new dashboards.](media/select-new-dynamics-dashboard.png)
 
-For more information about creating a new dashboard, read [create new dashboard](../../maker/model-driven-apps/create-edit-dashboards.md#create-a-new-dashboard).
+For more information about creating a new dashboard, read [create new dashboard](../../maker/model-driven-apps/create-edit-dashboards.md#create-a-new-standard-dashboard).
 
 ## View Power BI dashboard
 

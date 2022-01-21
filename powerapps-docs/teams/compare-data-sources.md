@@ -33,7 +33,7 @@ Using the answers to the questions above, use the table below to help identify t
 
 |Considerations  |Lists  |Dataverse for Teams  |Dataverse  |
 |- |- |- |- |
-|Types of data  |Lists, File, Image  |Relational, File, or Image  |Relational, File, Image, Lake, Log, Relevance Search<br/>Virtual tables  |
+|Types of data  |Lists, File, Image  |Relational, File, or Image  |Relational, File, Image, Lake, Log, Dataverse Search<br/>Virtual tables  |
 |Number of data types  |15  |23 (Currency is basic version)  |24 (Currency is advanced version)  |
 |Common Data Model  |N/A  |User table only  |Full support  |
 |Capacity  |Up to 30M rows<br/>([considerations](/office365/servicedescriptions/sharepoint-online-service-description/sharepoint-online-limits) for lists > 100k)  |Up to 1M rows<br/><br/>Small number of files or images<br/><br/>2000 API calls per day per user | No specified limit on rows. <br/><br/>No specified limit of files or images.<br/><br/> 2,000 API requests per day with option of capacity add-ons. More information: [Request limits based on user licenses](/power-platform/admin/api-request-limits-allocations#request-limits-based-on-user-licenses)  |

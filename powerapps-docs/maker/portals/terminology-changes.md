@@ -8,11 +8,11 @@ ms.custom:
 ms.date: 06/11/2021
 ms.subservice: portals
 ms.author: gisingh
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 searchScope:
   - "Power Apps"
 contributors:
-    - tapanm-msft
+    - nickdoelman
     - GitanjaliSingh33msft
 ---
 

@@ -2,9 +2,8 @@
 title: People-screen template in canvas apps
 description: Understand how the people-screen template for canvas apps works, modify the screen, and extend it as part of an app.
 author: emcoope-msft
-manager: kvivek
 ms.service: powerapps
-ms.topic: conceptual
+ms.topic: overview
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 03/29/2021

@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 09/01/2020
+ms.date: 10/21/2021
 ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
@@ -34,7 +34,15 @@ You can use lookup columns in SharePoint that consume values from other lists or
 
 When using such columns as a field in a canvas app, you can use a drop-down list with choices.
 
-To use the choices in a drop-down list, you have to use the function [choices](../functions/function-choices.md). For example, `Choices([@'Vehicle registration'].Vehicle_x0020_type)` uses the SharePoint list **Vehicle Registration** and the column **Vehicle type** for the lookup of the type of the vehicle.
+To use the choices in a drop-down list, you have to use the function [choices](../functions/function-choices.md).
+
+For example, `Choices([@'Vehicle registration'].Vehicle_x0020_type)` uses the SharePoint list **Vehicle Registration**:
+
+:::image type="content" source="media/scenarios-choice-to-lookup/vehicle-registration-list.png" alt-text="Vehicle registration list.":::
+
+The column **Vehicle type** is a lookup column for the type of the vehicle:
+
+:::image type="content" source="media/scenarios-choice-to-lookup/vehicle-type-lookup.png" alt-text="Vehicle type column.":::
 
 ## Example
 
@@ -59,6 +67,10 @@ To use the choices in a drop-down list, you have to use the function [choices](.
 
     ![Choices formula.](./media/scenarios-choice-to-lookup/choices-formula.png "Choices formula")
 
+1. Refresh the data source by selecting the SharePoint data source > ellipsis (**...**) > **Refresh**.
+
+    :::image type="content" source="media/scenarios-choice-to-lookup/refresh-data-source.png" alt-text="Refresh data source.":::
+
 1. Play the app, or press **Alt** on the keyboard and select the drop-down list.
 
     ![Drop-down choices.](./media/scenarios-choice-to-lookup/drop-down-choices.png "Drop-down choices")
@@ -67,6 +79,5 @@ To use the choices in a drop-down list, you have to use the function [choices](.
 
 - [Formula reference](../formula-reference.md) for Power Apps
 - [Control reference](../reference-properties.md) for Power Apps
-
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

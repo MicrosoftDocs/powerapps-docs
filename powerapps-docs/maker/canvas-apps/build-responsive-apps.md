@@ -5,7 +5,7 @@ author: emcoope-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: nabuthuk
+ms.reviewer: tapanm
 ms.date: 05/24/2021
 ms.subservice: canvas-maker
 ms.author: emcoope
@@ -14,17 +14,13 @@ search.audienceType:
 search.app:
   - PowerApps
 contributors:
-  - nkrb
+  - tapanm-msft
   - emcoope-msft
 ---
 
 # Building responsive canvas apps  
 
 Responsiveness refers to the ability of an app to automatically align to different screen sizes and form factors to use the available screen space sensibly, providing great UI and UX in every device, form factor, and screen size. 
-
-> [!IMPORTANT]
-> - This feature is in public preview. For more information, see [Experimental and preview features](working-with-experimental-preview.md).
-> - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 
 Responsiveness allows different elements of the app to specify how they: 
 
@@ -58,7 +54,7 @@ Before you start using the responsive layouts, you need to do the following:
 
 1. Go to [Power Apps](https://make.powerapps.com).
 1. Open the app where you want to use the responsive layout.
-1. Go to **File** > **Settings** > **Display** to disable **Scale to fit**, **Lock aspect ratio**, and **Lock orientation** and select **Apply**.
+1. Go to **Settings** > **Display** to disable **Scale to fit**, **Lock aspect ratio**, and **Lock orientation** and select **Apply**.
 
    ![Settings disable lock orientation.](media/create-responsive-layout/settings-disable-lock-orientation.png "Settings disable lock orientation")
 
@@ -114,7 +110,7 @@ To build a responsive screen:
 1. Sign in to [Power Apps](https://make.powerapps.com).
 1. Select **Apps** from left navigation. Select the **New app** drop-down menu and then select **Canvas**.
 1. On the **Blank app** tile, select **Tablet layout**.
-1. Select **File** > **Settings** > **Display** and disable **Scale to fit**, **Lock aspect ratio**, and **Lock orientation** and select **Apply**. 
+1. Select **Settings** > **Display** and disable **Scale to fit**, **Lock aspect ratio**, and **Lock orientation** and select **Apply**. 
 1. Now from the **Insert** panes in the left sidebar, under **Layout** tab, select **Horizontal container**. 
 
    > [!div class="mx-imgBorder"]

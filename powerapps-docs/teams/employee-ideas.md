@@ -1,17 +1,17 @@
 ---
-title: Use Employee Ideas app from teams store | Microsoft Docs
+title: Use Employee Ideas app from teams store (contains video) | Microsoft Docs
 description: Learn how to use the Employee Ideas app from Teams store.
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/15/2020
-author: navjotm
+ms.date: 08/24/2021
+author: josephshum
 ms.subservice: teams
-ms.author: namarwah
+ms.author: jshum
 ms.reviewer: tapanm
 contributors:
   - joel-lindstrom
-  - navjotm
+  - josephshum
   - tapanm-msft
 ---
 
@@ -169,7 +169,7 @@ To duplicate an idea campaign:
 
     ![Duplicate an idea campaign.](media/employee-ideas/duplicate-idea-campaign.png "Delete an idea campaign")
 
-    A copy of the selected campaign is created, with the name suffix "(COPY)".
+    A copy of the selected campaign is created, with the name suffix "(1)".
 
 1. Select **Add** to save the campaign, or **Cancel** to discard the changes.
 

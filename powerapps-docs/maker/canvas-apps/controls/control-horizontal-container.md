@@ -2,11 +2,10 @@
 title: Horizontal container control in Power Apps
 description: Learn about the details, properties and examples of the horizontal container control in Power Apps.
 author: emcoope-msft
-manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: nabuthuk
+ms.reviewer: tapanm
 ms.date: 10/30/2020
 ms.subservice: canvas-maker
 ms.author: emcoope
@@ -15,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - nkrb
+  - tapanm-msft
   - emcoope-msft
 ---
 # Horizontal container control in Power Apps

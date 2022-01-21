@@ -2,11 +2,10 @@
 title: ForAll function in Power Apps
 description: Reference information including syntax and examples for the ForAll function in Power Apps.
 author: gregli-msft
-manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: nabuthuk
+ms.reviewer: tapanm
 ms.date: 07/17/2020
 ms.subservice: canvas-maker
 ms.author: gregli
@@ -16,7 +15,7 @@ search.app:
   - PowerApps
 contributors:
   - gregli-msft
-  - nkrb
+  - tapanm-msft
 ---
 # ForAll function in Power Apps
 
@@ -63,6 +62,7 @@ Another consideration is that **ForAll** is not delegable while other functions 
 * *Formula* - Required.  The formula to evaluate for all records of the *Table*.
 
 ## Examples
+
 ### Calculations
 The following examples use the **Squares** [data source](../working-with-data-sources.md):
 
@@ -192,7 +192,7 @@ ClearCollect( NewOrder,
                 Product: Product, 
                 'Quantity To Order': 'Quantity Requested' - 'Quantity Available' 
             } 
-        } 
+        ) 
     )
 )
 ```
@@ -220,6 +220,8 @@ Again, the **ForAll** function can't be delegated at this time.  If our **Produc
 
 Note that we are not capturing the result of the **ForAll**.  The **Collect** function calls made from within it will return the **NewOrder** data source for all the records, which could add up to numerous data if we were capturing it.  
 
+### Map table in a component
 
+See [Map tables](../map-component-input-fields.md#map-tables).
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

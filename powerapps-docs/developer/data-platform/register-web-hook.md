@@ -37,7 +37,7 @@ When you register a WebHook you must provide three items of information:
 
 ## Authentication options
 
-The correct WebHook registration authentication option and values to use depend on what the endpoint expects.  The owner of the endpoint must tell you what to use. To use WebHooks with Microsoft Dataverse, the endpoint must allow one of the three authentication options described below:
+The correct WebHook registration authentication option and values to use depend on what the endpoint expects.  The owner of the endpoint must tell you what to use. To use Webhooks with Microsoft Dataverse, the endpoint must allow one of the three authentication options described below:
 
 |Type  |Description  |
 |---------|---------|
@@ -56,7 +56,7 @@ Any request to the endpoint configured should fail when the authentication optio
 
 Webhook registrations are stored in the [ServiceEndpoint Table](reference/entities/serviceendpoint.md) and have a [Contract](reference/entities/serviceendpoint.md#BKMK_Contract) value of `8`.
 
-You can find details about the registered WebHooks by querying the **ServiceEndpoint** table.
+You can find details about the registered Webhooks by querying the **ServiceEndpoint** table.
 
 **Web API:**
 
@@ -101,7 +101,7 @@ Your choice in registering the WebHook changes the experience you will have when
 #### Asynchronous mode
 When you use asynchronous execution mode a System Job (asyncoperation) will be created to capture the success or failure of the operation. Choosing to delete the System Job when it succeeds will save you database space.
 
-Any errors that occur will be recorded in System Jobs. In the web application you can go to **Settings > System > System Jobs** to review the status of any WebHooks. There will be a **Status Reason** value of **Failed**. Open the failed System Job to find details that describe why the job failed.
+Any errors that occur will be recorded in System Jobs. In the web application you can go to **Settings > System > System Jobs** to review the status of any Webhooks. There will be a **Status Reason** value of **Failed**. Open the failed System Job to find details that describe why the job failed.
 
 <a name="query-failed-asynchronous-jobs-for-a-given-step"></a>
 
@@ -143,11 +143,11 @@ More information: [Use FetchXML with FetchExpression](org-service/entity-operati
 [!INCLUDE [synchronous-webhook-error](includes/synchronous-webhook-error.md)]
 
 > [!NOTE]
-> You should use synchronous mode when it is important that the operation triggered by the WebHook occur immediately or if you want the entire transaction to fail unless the WebHook payload is received by the service. A simple WebHook step registration provides limited options to manage failure, but you can also invoke WebHooks using plug-ins and workflow activities if you require more control. More information: [Invoke a WebHook from a plug-in or workflow activity](use-WebHooks.md#invoke-a-webhook-from-a-plug-in-or-workflow-activity).
+> You should use synchronous mode when it is important that the operation triggered by the WebHook occur immediately or if you want the entire transaction to fail unless the WebHook payload is received by the service. A simple WebHook step registration provides limited options to manage failure, but you can also invoke Webhooks using plug-ins and workflow activities if you require more control. More information: [Invoke a WebHook from a plug-in or workflow activity](use-webhooks.md#invoke-a-webhook-from-a-plug-in-or-workflow-activity).
 
 ## Query steps registered for a WebHook
 
-Data for registered WebHooks is in the [SdkMessageProcessingStep Table](reference/entities/sdkmessageprocessingstep.md).
+Data for registered Webhooks is in the [SdkMessageProcessingStep Table](reference/entities/sdkmessageprocessingstep.md).
 
 You can query the steps registered for a specific WebHook when you know the `serviceendpointid` for the WebHook. See [Query WebHook registrations](#query-WebHook-registrations) for a query to get the ID for a registered WebHook.
 
@@ -197,6 +197,6 @@ You can use this FetchXML to get the same information in one query where *&lt;se
 ## Next steps
 
 [Test WebHook registration with request logging site](test-WebHook-registration.md)<br />
-[Use WebHooks to create external handlers for server events](use-WebHooks.md)
+[Use Webhooks to create external handlers for server events](use-webhooks.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

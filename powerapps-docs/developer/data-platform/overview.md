@@ -4,12 +4,12 @@ description: Introducing the Developer Guide for Microsoft Dataverse.
 author: JimDaly
 manager: annbe
 ms.service: powerapps
-ms.topic: article
+ms.topic: overview
 ms.date: 03/11/2021
 ms.subservice: dataverse-developer
 ms.author: jdaly
 ms.reviewer: "pehecke"
-ms.custom: intro-internal
+ms.custom: 
 search.audienceType: 
   - developer
 search.app: 
@@ -41,7 +41,7 @@ For a developer who will contribute to projects it is important that they unders
 
 ## Content for on-premises deployments
 
-Dataverse is not available for on-premise deployments at this time. Content in this guide does not include information about options that are only available for on-premises or internet facing deployments (IFD). For information related to these options, see the [Developer Guide for Dynamics 365 Customer Engagement (on-premises)](/dynamics365/customerengagement/on-premises/developer/overview).
+Dataverse is not available for on-premises deployments at this time. Content in this guide does not include information about options that are only available for on-premises or internet facing deployments (IFD). For information related to these options, see the [Developer Guide for Dynamics 365 Customer Engagement (on-premises)](/dynamics365/customerengagement/on-premises/developer/overview).
 
 > [!div class="nextstepaction"]
 > [Get started](get-started-developers.md)

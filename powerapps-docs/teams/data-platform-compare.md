@@ -5,12 +5,14 @@ author: mmercuri
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: intro-internal
-ms.date: 03/19/2021
+ms.date: 01/18/2022
 ms.subservice: teams
 ms.author: mmercuri
 ms.reviewer: matp
 contributors:
   - mattp123
+  - hemantgaur
+  - tapanm-msft
 ---
 # How are Dataverse for Teams and Dataverse different?
 
@@ -32,7 +34,7 @@ Following are the differences between a Dataverse for Teams and Dataverse table 
 |Managed data lake      |  No       | Yes        |
 |File and image support     | Yes        |  Yes       |
 |Find, filter, sort     |   Yes      |  Yes       |
-|Advanced and relevance search      |   No      | Yes        |
+|Advanced and Dataverse search      |   No      | Yes        |
 |Mobile offline     |  No       |  Yes       |
 
 Note that most of the standard tables that are provided with a Dataverse environment won't be present as part of Dataverse for Teams.
@@ -48,6 +50,7 @@ This table describes the differences between Dataverse for Teams and Dataverse b
 |      |   Paginated reports (SQL Server Reporting Services)   |  No    |  Yes     |
 |Professional developer     | API access       |  No     |  Yes     |
 |      |  Plug-ins       |   No      |  Yes       |
+|      |  Power Apps component framework       |   No      |  Yes       |
 
 ## Environments
 

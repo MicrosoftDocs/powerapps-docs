@@ -100,6 +100,7 @@ search.app:
 </table>
 </li>
 <li><b>selectedStageId</b>: (Optional) String. ID of the selected stage in business process instance.</li>
+<li><b>tabName</b>: (Optional) String. Sets the focus on the tab of the form.</li>
 </ul>
 
 <p>----------------------------------------------------------------</p>
@@ -109,7 +110,7 @@ search.app:
 <li><strong>pageType</strong>: String. Specify "custom".</li>
 <li><strong>name</strong>: String. The logical name of the custom page to open.</li>
 <li><strong>entityName</strong>: (Optional) String. The logical name of the table to be made available in the custom page via Param("entityName").</li>
-<li><strong>entityId</strong>: (Optional) String. ID of the table record to be made available in the custom page via Param("recordId").</li>
+<li><strong>recordId</strong>: (Optional) String. ID of the table record to be made available in the custom page via Param("recordId").</li>
 </ul>
 
 <p>----------------------------------------------------------------</p>

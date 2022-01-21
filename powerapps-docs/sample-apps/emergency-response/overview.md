@@ -1,10 +1,10 @@
 ---
-title: Overview of Hospital Emergency Response sample solution for Power Platform | Microsoft Docs
+title: Overview of Hospital Emergency Response sample solution for Power Platform (contains video) | Microsoft Docs
 description: Provides an overview of Hospital Emergency Response Solution.
 author: pankajarora-msft
 manager: annbe
 ms.service: powerapps
-ms.topic: conceptual
+ms.topic: overview
 ms.custom: 
 ms.date: 04/23/2020
 ms.subservice: sample-apps
@@ -50,7 +50,7 @@ See also: [Licensing overview for Power Platform](/power-platform/admin/pricing-
 |--|--|--|
 |Download and deploy the sample app and dashboard|IT admin|[Deploy the Hospital Emergency Response app](deploy-configure.md)|
 |Use the admin app to add/manage master data|Business admin|[Configure and manage master data for your organization](configure-data-reporting.md#configure-and-manage-master-data-for-your-organization)|
-|Use dashboards for insights and decision making|Business admin|[View Microsoft Dataverse dashboards](configure-data-reporting.md#view-common-data-service-dashboards)<br/><br/>[View Power BI dashboard](configure-data-reporting.md#view-power-bi-dashboard)|
+|Use dashboards for insights and decision making|Business admin|[View Microsoft Dataverse dashboards](configure-data-reporting.md#view-microsoft-dataverse-dashboards)<br/><br/>[View Power BI dashboard](configure-data-reporting.md#view-power-bi-dashboard)|
 |Use the mobile app to track data for ventilators, staffing, pending discharges, and COVID-19 related patients|Frontline staff|[Use the Hospital Emergency Response mobile app](use.md)
 |Use the admin app to track feedback from mobile app|Business/IT admin|[View and manage app feedback](configure-data-reporting.md#view-and-manage-app-feedback)|
 

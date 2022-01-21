@@ -3,7 +3,8 @@ title: "Get started with virtual tables (entities) (Microsoft Dataverse) | Micro
 description: "Virtual tables enable the integration of data residing in external systems by seamlessly representing that data as tables in Microsoft Dataverse, without replication of data and often without custom coding."
 ms.date: 04/08/2021
 ms.service: powerapps
-ms.topic: "get-started-article"
+ms.topic: conceptual
+ms.custom: intro-internal
 applies_to: 
   - "Dynamics 365 (online)"
 ms.assetid: 14c5fbbc-98db-4e49-b245-2c84c1cd11cd
@@ -38,7 +39,7 @@ A data provider is a particular type of Dataverse plug-in, which is registered a
 The following data providers ship with Dataverse:
 
 - An [OData v4](https://www.odata.org/documentation/) provider is included with the service and is installed by default. This provider supports create, read (retrieve, retrieve multiple), update and delete operations.
-- An [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db) (formerly *Microsoft Document DB*) provider is available from [AppSource](https://appsource.microsoft.com).
+- An [Azure Cosmos DB](/azure/cosmos-db) (formerly *Microsoft Document DB*) provider is available from [AppSource](https://appsource.microsoft.com).
 
 
 If a data provider cannot be found for your external data source, you can develop a *custom virtual table data provider*; for more information, see [Virtual table data providers](custom-ve-data-providers.md). Full CRUD operation is now supported for custom virtual table data provider. Developers can implement plug-ins and register them using the Plug-in Registration tool for each of the CRUD operation supporting the virtual table.
@@ -60,7 +61,8 @@ Following are the limitations in virtual tables that must be considered.
     - You must be able to model any table relationships in Dataverse.
     - A column on a virtual table cannot be calculated or rollup.  Any desired calculations must be done on the external side, possibly within or directed by the data provider.
     - Although you can add virtual table columns as a lookup on a grid or other UI views, you cannot filter or sort based on this virtual table lookup column.
-- Auditing and change tracking is not supported.
+- Auditing is not supported.
+- Search functionality is not support for virtual tables as they do not persist data.
 - Charts and dashboards are not supported for virtual tables.
 - Virtual tables cannot be enabled for queues.
 - Offline caching of values is not supported for virtual tables.

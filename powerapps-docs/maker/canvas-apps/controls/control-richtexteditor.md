@@ -1,13 +1,12 @@
 ---
 title: Rich text editor control in Power Apps
-description: Learn about the details, properties and examples of the Rich text editor control in Power Apps.
+description: Learn about the details, properties, and examples of the Rich text editor control in Power Apps.
 author: chmoncay
-manager: kvivek
 ms.service: powerapps
 ms.topic: article
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 05/24/2018
+ms.date: 09/23/2021
 ms.subservice: canvas-maker
 ms.author: chmoncay
 search.audienceType: 
@@ -17,6 +16,7 @@ search.app:
 contributors:
   - tapanm-msft
   - chmoncay
+  - tahoon-ms
 ---
 # Rich text editor control in Power Apps
 Allows end users to format text inside a WYSIWYG editing area.  Output format is HTML.
@@ -26,7 +26,7 @@ The **Rich text editor** control provides the app user a WYSIWYG editing area fo
 
 Control allows copied rich text (i.e from web browser or Word) to be pasted into the control.  
 
-Control's intended use is to format text and does not guarantee to preserve the integrity of the input HTML.  All script, style, object and other potentially compromising tags will be removed by the editor.  This means that if rich text was created outside of Power Apps, it may not look the same as in the product where it was created.
+Control's intended use is to format text and doesn't guarantee to preserve the integrity of the input HTML.  All script, style, object, and other potentially compromising tags will be removed by the editor.  This means that if rich text was created outside of Power Apps, it may not look the same as in the product where it was created.
 
 Currently supported features include:
 - Bold, Italic, Underline
@@ -49,7 +49,7 @@ To use the control inside a form, select the "Edit multi-line text" card, and cu
 
 **[DisplayMode](properties-core.md)** – Whether the control allows adding and deleting files (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
 
-**EnableSpellCheck** – Whether the browser spell checker is enabled. Note that the this functionality will provide spell checking only in the default language of the browser.  Power Apps for Windows doesn't support this property.
+**EnableSpellCheck** – Whether the browser spell checker is enabled. This functionality will provide spell checking only in the default language of the browser.  Power Apps for Windows doesn't support this property.
 
 **[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
 
@@ -74,5 +74,7 @@ To use the control inside a form, select the "Edit multi-line text" card, and cu
 > [!TIP]
 > Use **Alt+0** while the editor is focused to learn about other keyboard shortcuts.
 
+> [!NOTE]
+> When the toolbar is focused, **Tab** and **Shift+Tab** keys will navigate between toolbar groups. But you can't cycle back from the last group to the first group and vice versa.
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -2,7 +2,7 @@
 title: "Import solutions | MicrosoftDocs"
 description: "Learn how to import a solution in Power Apps"
 ms.custom: ""
-ms.date: 10/22/2020
+ms.date: 08/02/2021
 ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
@@ -54,6 +54,8 @@ To import a solution:
 
 1. If your solution contains [environment variables](EnvironmentVariables.md), you will be prompted to enter values. You will not see this screen if value(s) are already present in your solution or the target environment. 
 
+1. If missing dependencies are detected in the target environment, a list of the dependencies is presented. In environments where the required package version is available for import in the target environment, a link to resolve the dependency is presented. Selecting the link takes you to the Power Platform admin center where you can install the application update. After the application update is completed, you can start the solution import again.
+
 1. Select **Import**.
 
 Your solution imports in the background and may take a few moments.  
@@ -79,7 +81,7 @@ During export of unmanaged solutions, some forms that aren't modified get export
 
 ### *Microsoft.Crm.CrmInvalidOperationException: full formXml is expected to create a form <formid>* message during solution import
 
-This error can occur when the form you are importing doesn’t exist in the target environment and the form is imported for the first time. The solution you are importing has only form changes (diff) in the form XML when it should have the full form XML. A solution should only import a diff form XML when the form is already present in the environment and you’re importing the changes.  To verify, open your solution’s customizations.xml file and search for the FormXml node using the form ID that appears in the error message. If the form XML contains an attribute named `solutionaction`, then the form XML is a diff. To resolve this scenario the form XML must be a full form XML (should not contain the solutionaction attribute) and can be obtained from the instance this form was originally created in as unmanaged.
+This error can occur when the form you are importing doesn’t exist in the target environment and the form is imported for the first time. The solution you are importing has only form changes (diff) in the form XML when it should have the full form XML. A solution should only import a diff form XML when the form is already present in the environment and you’re importing the changes.  To verify, open your solution’s customizations.xml file and search for the FormXml node using the form ID that appears in the error message. If the form XML contains an attribute named `solutionaction`, then the form XML is a diff. To resolve this scenario the form XML must be a full form XML (should not contain the `solutionaction` attribute) and can be obtained from the instance this form was originally created in as unmanaged.
 
 ### *Microsoft.Crm.CrmException: You cannot delete this form because it is the only fallback form of type main for the 'table' table. Each table must have at least one fallback form for each form type* message during solution upgrade or uninstall
 

@@ -20,7 +20,7 @@ search.app:
 
 [!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
-Before you create or configure a service to consume WebHooks, you should test what kind of data the service will receive so that you can know what kind of data you will need to process. For this purpose, you can use one of several request logging sites. For the purpose of this example, we will use [WebHook Tester](https://WebHook.site) to configure a target for the WebHook requests.
+Before you create or configure a service to consume Webhooks, you should test what kind of data the service will receive so that you can know what kind of data you will need to process. For this purpose, you can use one of several request logging sites. For the purpose of this example, we will use [WebHook Tester](https://WebHook.site) to configure a target for the WebHook requests.
 
 Use the following steps:
 
@@ -42,7 +42,7 @@ Use the following steps:
 
 ## Next steps
 
-[Use WebHooks to create external handlers for server events](use-WebHooks.md)
+[Use Webhooks to create external handlers for server events](use-webhooks.md)
 
 ### See also
 [Register a WebHook](register-web-hook.md)

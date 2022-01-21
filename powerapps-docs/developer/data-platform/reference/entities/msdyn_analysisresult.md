@@ -1,13 +1,13 @@
 ---
 title: "msdyn_analysisresult table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the msdyn_analysisresult table/entity."
-ms.date: 05/20/2021
+ms.date: 10/05/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -146,10 +146,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### msdyn_AnalysisComponentType Choices/Options
 
-|Value|Label|
-|-----|-----|
-|192350000|Organization Health|
-|192350001|Component Health|
+|Value|Label|Description|
+|-----|-----|--------|
+|192350000|Organization Health||
+|192350001|Component Health||
 
 
 
@@ -195,17 +195,17 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### msdyn_Category Choices/Options
 
-|Value|Label|
-|-----|-----|
-|192350000|Performance|
-|192350001|Upgrade Readiness|
-|192350002|Usage|
-|192350003|Security|
-|192350004|Design|
-|192350005|Online Migration|
-|192350006|Maintainability|
-|192350007|Supportability|
-|192350008|Accessibility|
+|Value|Label|Description|
+|-----|-----|--------|
+|192350000|Performance||
+|192350001|Upgrade Readiness||
+|192350002|Usage||
+|192350003|Security||
+|192350004|Design||
+|192350005|Online Migration||
+|192350006|Maintainability||
+|192350007|Supportability||
+|192350008|Accessibility||
 
 
 
@@ -223,11 +223,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### msdyn_ComponentType Choices/Options
 
-|Value|Label|
-|-----|-----|
-|192350000|Web Resources|
-|192350001|Plug-In|
-|192350002|Configuration|
+|Value|Label|Description|
+|-----|-----|--------|
+|192350000|Web Resources||
+|192350001|Plug-In||
+|192350002|Configuration||
 
 
 
@@ -277,8 +277,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### msdyn_HasResolution Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 |1|Yes|
 |0|No|
 
@@ -316,10 +316,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### msdyn_Level Choices/Options
 
-|Value|Label|
-|-----|-----|
-|192350000|Error|
-|192350001|Warning|
+|Value|Label|Description|
+|-----|-----|--------|
+|192350000|Error||
+|192350001|Warning||
 
 
 
@@ -466,15 +466,15 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### msdyn_ReturnStatus Choices/Options
 
-|Value|Label|
-|-----|-----|
-|192350000|Pass|
-|192350001|Fail|
-|192350002|Config Error|
-|192350003|Resolved|
-|192350004|Warning|
-|192350005|Error|
-|192350006|Suggestion|
+|Value|Label|Description|
+|-----|-----|--------|
+|192350000|Pass||
+|192350001|Fail||
+|192350002|Config Error||
+|192350003|Resolved||
+|192350004|Warning||
+|192350005|Error||
+|192350006|Suggestion||
 
 
 
@@ -524,12 +524,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### msdyn_Severity Choices/Options
 
-|Value|Label|
-|-----|-----|
-|192350000|Low|
-|192350001|Medium|
-|192350002|High|
-|192350003|Critical|
+|Value|Label|Description|
+|-----|-----|--------|
+|192350000|Low||
+|192350001|Medium||
+|192350002|High||
+|192350003|Critical||
 
 
 
