@@ -237,7 +237,7 @@ The following scalar functions are available with formula columns.
       [Switch](../maker/canvas-apps/functions/function-if.md)
    :::column-end:::
    :::column span="":::
-      [Text *](../maker/canvas-apps/functions/function-text.md)
+      [Text](../maker/canvas-apps/functions/function-text.md) \*
    :::column-end:::
    :::column span="":::
       [Trim](../maker/canvas-apps/functions/function-trim.md)
@@ -262,7 +262,7 @@ The following scalar functions are available with formula columns.
       [UTCToday](../maker/canvas-apps/functions/function-now-today-istoday.md)
    :::column-end:::
    :::column span="":::
-      [Value *](../maker/canvas-apps/functions/function-value.md)
+      [Value](../maker/canvas-apps/functions/function-value.md) \*
    :::column-end:::
 :::row-end:::
 :::row:::
