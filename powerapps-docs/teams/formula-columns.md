@@ -86,67 +86,67 @@ The following scalar functions are available with formula columns.
       [And](../maker/canvas-apps/functions/function-logicals.md)
    :::column-end:::
    :::column span="":::
-      [Average](../maker/canvas-apps/function/function-aggregates.md)
+      [Average](../maker/canvas-apps/functions/function-aggregates.md)
    :::column-end:::
 :::row-end:::
 :::row:::
    :::column span="":::
-      [Blank](../maker/canvas-apps/function/function-isblank-isempty.md)
+      [Blank](../maker/canvas-apps/functions/function-isblank-isempty.md)
    :::column-end:::
    :::column span="":::
-      [Char](../maker/canvas-apps/function/function-char.md)
+      [Char](../maker/canvas-apps/functions/function-char.md)
    :::column-end:::
    :::column span="":::
-      [Concatenate](../maker/canvas-apps/function/function-concatenate.md)
-   :::column-end:::
-:::row-end:::
-:::row:::
-   :::column span="":::
-      [DateAdd](../maker/canvas-apps/function/function-dateadd-datediff.md)
-   :::column-end:::
-   :::column span="":::
-      [DateDiff](../maker/canvas-apps/function/function-dateadd-datediff.md)
-   :::column-end:::
-   :::column span="":::
-      [Day](../maker/canvas-apps/function/function-datetime-parts.md)
+      [Concatenate](../maker/canvas-apps/functions/function-concatenate.md)
    :::column-end:::
 :::row-end:::
 :::row:::
    :::column span="":::
-      [EndsWith](../maker/canvas-apps/function/function-startswith.md)
+      [DateAdd](../maker/canvas-apps/functions/function-dateadd-datediff.md)
+   :::column-end:::
+   :::column span="":::
+      [DateDiff](../maker/canvas-apps/functions/function-dateadd-datediff.md)
+   :::column-end:::
+   :::column span="":::
+      [Day](../maker/canvas-apps/functions/function-datetime-parts.md)
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      [EndsWith](../maker/canvas-apps/functions/function-startswith.md)
    :::column-end:::
    :::column span="":::
       [Exp](../maker/canvas-apps/functions/function-numericals.md)
    :::column-end:::
    :::column span="":::
-      [Hour](../maker/canvas-apps/function/function-datetime-parts.md)
+      [Hour](../maker/canvas-apps/functions/function-datetime-parts.md)
    :::column-end:::
 :::row-end:::
 :::row:::
    :::column span="":::
-      [If](../maker/canvas-apps/function/function-if.md)
+      [If](../maker/canvas-apps/functions/function-if.md)
    :::column-end:::
    :::column span="":::
-      [IfError](../maker/canvas-apps/function/function-iferror.md)
+      [IfError](../maker/canvas-apps/functions/function-iferror.md)
    :::column-end:::
    :::column span="":::
-      [Int](../maker/canvas-apps/function/function-round.md)
-   :::column-end:::
-:::row-end:::
-:::row:::
-   :::column span="":::
-      [IsBlank](../maker/canvas-apps/function/function-isblank-isempty.md)
-   :::column-end:::
-   :::column span="":::
-      [IsError](../maker/canvas-apps/function/function-iferror.md)
-   :::column-end:::
-   :::column span="":::
-      [ISOWeekNum](../maker/canvas-apps/function/function-weeknum.md)
+      [Int](../maker/canvas-apps/functions/function-round.md)
    :::column-end:::
 :::row-end:::
 :::row:::
    :::column span="":::
-      [IsUTCToday](../maker/canvas-apps/function/function-now-today-istoday.md)
+      [IsBlank](../maker/canvas-apps/functions/function-isblank-isempty.md)
+   :::column-end:::
+   :::column span="":::
+      [IsError](../maker/canvas-apps/functions/function-iferror.md)
+   :::column-end:::
+   :::column span="":::
+      [ISOWeekNum](../maker/canvas-apps/functions/function-weeknum.md)
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      [IsUTCToday](../maker/canvas-apps/functions/function-now-today-istoday.md)
    :::column-end:::
    :::column span="":::
       [Left](../maker/canvas-apps/functions/function-left-mid-right.md)
@@ -160,10 +160,10 @@ The following scalar functions are available with formula columns.
       [Ln](../maker/canvas-apps/functions/function-numericals.md)
    :::column-end:::
    :::column span="":::
-      [Lower](../maker/canvas-apps/function/function-lower-upper-proper.md)
+      [Lower](../maker/canvas-apps/functions/function-lower-upper-proper.md)
    :::column-end:::
    :::column span="":::
-      [Max](../maker/canvas-apps/function/function-aggregates.md)
+      [Max](../maker/canvas-apps/functions/function-aggregates.md)
    :::column-end:::
 :::row-end:::
 :::row:::
@@ -171,18 +171,18 @@ The following scalar functions are available with formula columns.
       [Mid](../maker/canvas-apps/functions/function-left-mid-right.md)
    :::column-end:::
    :::column span="":::
-      [Min](../maker/canvas-apps/function/function-aggregates.md)
+      [Min](../maker/canvas-apps/functions/function-aggregates.md)
    :::column-end:::
    :::column span="":::
-      [Minute](../maker/canvas-apps/function/function-datetime-parts.md)
+      [Minute](../maker/canvas-apps/functions/function-datetime-parts.md)
    :::column-end:::
 :::row-end:::
 :::row:::
    :::column span="":::
-      [Mod](../maker/canvas-apps/function/function-mod.md)
+      [Mod](../maker/canvas-apps/functions/function-mod.md)
    :::column-end:::
    :::column span="":::
-      [Month](../maker/canvas-apps/function/function-datetime-parts.md)
+      [Month](../maker/canvas-apps/functions/function-datetime-parts.md)
    :::column-end:::
    :::column span="":::
       [Not](../maker/canvas-apps/functions/function-logicals.md)
@@ -204,18 +204,18 @@ The following scalar functions are available with formula columns.
       [Right](../maker/canvas-apps/functions/function-left-mid-right.md)
    :::column-end:::
    :::column span="":::
-      [Round](../maker/canvas-apps/function/function-round.md)
+      [Round](../maker/canvas-apps/functions/function-round.md)
    :::column-end:::
    :::column span="":::
-      [RoundDown](../maker/canvas-apps/function/function-round.md)
+      [RoundDown](../maker/canvas-apps/functions/function-round.md)
    :::column-end:::
 :::row-end:::
 :::row:::
    :::column span="":::
-      [RoundUp](../maker/canvas-apps/function/function-round.md)
+      [RoundUp](../maker/canvas-apps/functions/function-round.md)
    :::column-end:::
    :::column span="":::
-      [Second](../maker/canvas-apps/function/function-datetime-parts.md)
+      [Second](../maker/canvas-apps/functions/function-datetime-parts.md)
    :::column-end:::
    :::column span="":::
       [Sqrt](../maker/canvas-apps/functions/function-numericals.md)
@@ -223,7 +223,7 @@ The following scalar functions are available with formula columns.
 :::row-end:::
 :::row:::
    :::column span="":::
-      [StartsWith](../maker/canvas-apps/function/function-startswith.md)
+      [StartsWith](../maker/canvas-apps/functions/function-startswith.md)
    :::column-end:::
    :::column span="":::
       [Substitute](../maker/canavs-apps/functions/function-replace-substitute.md)
@@ -237,43 +237,43 @@ The following scalar functions are available with formula columns.
       [Switch](../maker/canvas-apps/functions/function-if.md)
    :::column-end:::
    :::column span="":::
-      [Text *](../maker/canvas-apps/function/function-text.md)
+      [Text *](../maker/canvas-apps/functions/function-text.md)
    :::column-end:::
    :::column span="":::
-      [Trim](../maker/canvas-apps/function/function-trim.md)
-   :::column-end:::
-:::row-end:::
-:::row:::
-   :::column span="":::
-      [Trunc](../maker/canvas-apps/function/function-round.md)
-   :::column-end:::
-   :::column span="":::
-      [TrimEnds](../maker/canvas-apps/function/function-trim.md)
-   :::column-end:::
-   :::column span="":::
-      [Upper](../maker/canvas-apps/function/function-lower-upper-proper.md)
+      [Trim](../maker/canvas-apps/functions/function-trim.md)
    :::column-end:::
 :::row-end:::
 :::row:::
    :::column span="":::
-      [UTCNow](../maker/canvas-apps/function/function-now-today-istoday.md)
+      [Trunc](../maker/canvas-apps/functions/function-round.md)
    :::column-end:::
    :::column span="":::
-      [UTCToday](../maker/canvas-apps/function/function-now-today-istoday.md)
+      [TrimEnds](../maker/canvas-apps/functions/function-trim.md)
    :::column-end:::
    :::column span="":::
-      [Value *](../maker/canvas-apps/function/function-value.md)
+      [Upper](../maker/canvas-apps/functions/function-lower-upper-proper.md)
    :::column-end:::
 :::row-end:::
 :::row:::
    :::column span="":::
-      [Weekday](../maker/canvas-apps/function/function-datetime-parts.md)
+      [UTCNow](../maker/canvas-apps/functions/function-now-today-istoday.md)
    :::column-end:::
    :::column span="":::
-      [WeekNum](../maker/canvas-apps/function/function-weeknum.md)
+      [UTCToday](../maker/canvas-apps/functions/function-now-today-istoday.md)
    :::column-end:::
    :::column span="":::
-      [Year](../maker/canvas-apps/function/function-datetime-parts.md)
+      [Value *](../maker/canvas-apps/functions/function-value.md)
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      [Weekday](../maker/canvas-apps/functions/function-datetime-parts.md)
+   :::column-end:::
+   :::column span="":::
+      [WeekNum](../maker/canvas-apps/functions/function-weeknum.md)
+   :::column-end:::
+   :::column span="":::
+      [Year](../maker/canvas-apps/functions/function-datetime-parts.md)
    :::column-end:::
 :::row-end:::
 
