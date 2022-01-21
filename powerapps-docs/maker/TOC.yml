@@ -1619,8 +1619,8 @@
                   href: ./portals/use-code-editor.md
                 - name: Add Power BI
                   href: ./portals/add-powerbi.md
-                - name: Add a chatbot (preview)
-                  href: ./portals/add-chatbot.md                 
+                - name: Add a chatbot
+                  href: ./portals/add-chatbot.md
         - name: Work with templates
           href: ./portals/work-with-templates.md
         - name: Work with themes
