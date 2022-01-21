@@ -6,7 +6,7 @@ reviewer: mattp123
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/09/2021
+ms.date: 01/21/2022
 ms.subservice: teams
 ms.author: rechauha
 ms.reviewer: matp
