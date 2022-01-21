@@ -1,6 +1,6 @@
 ﻿---
-title: Working with Power Automate flows in Power Apps
-description: Learn about how to create, edit, and use Power Automate flows in Power Apps
+title: Using Power Automate pane (preview)
+description: Learn about how to use Power Automate pane to work with flows in Power Apps
 author: TashasEv
 ms.service: powerapps
 ms.topic: conceptual
@@ -18,24 +18,53 @@ contributors:
   - TashasEv
 ---
 
-# Working with Power Automate flows in Power Apps
+# Using Power Automate pane (preview)
 
-## Enabling the Power Automate pane feature
+[This article is pre-release documentation and is subject to change.]
 
-1.  Click on Settings&gt;&gt; Upcoming Features and scroll to the "Enable Power Automate Pane" toggle. Select the toggle to turn it on.  
-    ![Graphical user interface  text  application  email Description automatically generated](media/work-with-flows/image1.png)
+> [!IMPORTANT]
+> - This feature is being rolled out and depending on your region, it may not be available for your tenant yet.
+> - This is a preview feature.
+> - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 
-2.  You will now see the Power Automate logo in the left pane. Select it to see the Power Automate Pane. If no flows have been added to your app, the pane appears as below:  
-    ![Graphical user interface  application  Teams Description automatically generated](media/work-with-flows/image2.png)
+With this feature, you can create new flows, or add existing flows, and even edit existing flows using Power Automate pane within Power Apps Studio. You don't have to browse to Power Automate to work with flows and return to Power Apps Studio any longer.
 
-## Creating a new Flow
+> [!NOTE]
+> This feature must be enabled on a per-app basis.
 
-1.  In the Power Automate Pane, select "Create New Flow." The "Create your flow" modal opens.  
-    ![Graphical user interface  application  Teams Description automatically generated](media/work-with-flows/image3.png)
+## Enable Power Automate pane
 
-## Start with a template
+Power Automate pane needs to be enabled manually through the feature switch. To enable the pane:
 
-2.  The new modal allows you to choose from available Power Apps templates or to create a new flow from blank. For this example, select the "Click a button in Power Apps to send an email."
+1. Open a [new](data-platform-create-app.md) or [existing](edit-app.md) an app in Power Apps Studio.
+
+1. Select **Settings** at the top. 
+
+1. Select **Upcoming Features**. 
+
+1. Under the **Preview** tab, select **Enable Power Automate pane** to turn on this feature. You may be prompted to close and reopen your canvas app to see the change. 
+   
+   :::image type="content" source="media/work-with-flows/power-automate-pane-feature.png" alt-text="A screenshot of the Upcoming Features dialog box showing the Enable Power Automate feature toggle.":::
+   
+    The Power Automate option is added to the left-pane.
+
+   :::image type="content" source="media/work-with-flows/power-automate-button.png" alt-text="A screenshow highlighting the Power Automate option in the left pane":::   
+
+## Creating a new flow
+
+To start with flows inside Power Apps Studio, select **Create new flow** in Power Automate pane.
+
+   :::image type="content" source="media/work-with-flows/create-new-flow.png" alt-text="A screenshow showing Create your flow screen having several options to choose a flow template from.":::
+
+This action opens the **Create your flow** modal dialog within Power Apps Studio. You can choose to create the flow from several available templates, or start with a blank template.
+
+### Start with a template
+
+Power Automate provides several flow templates that you can choose from by default. This section explains how to create a flow using such available templates from within Power Apps Studio.
+
+1. From the list of available templates, select a template of your choice. For this example, we'll use **Click a button in Power Apps to send an email**.
+
+   :::image type="content" source="media/work-with-flows/selected-flow-template.png" alt-text="A screenshow showing Click a button in Power Apps to send an email template.":::
 
 3.  The next step shows the connections required to create a flow based on the template selected. &lt;&lt;Learn more about connections&gt;&gt;  
     ![Graphical user interface  text  application  email Description automatically generated](media/work-with-flows/image4.png)
@@ -50,7 +79,7 @@ contributors:
     ![Graphical user interface Description automatically generated with medium confidence](media/work-with-flows/image7.png)  
     ![Graphical user interface  text  application  email Description automatically generated](media/work-with-flows/image8.png)
 
-7.  Upon successfully saving the flow, it has been added to the app and appears under "In your app" in the Power Automate Pane:  
+7.  Upon successfully saving the flow, it has been added to the app and appears under "In your app" in the Power Automate pane:  
     ![Graphical user interface  text  application Description automatically generated](media/work-with-flows/image9.png)
 
 ## Create from blank
@@ -93,14 +122,14 @@ Note: the following criteria determine whether flows are eligible for adding to 
 
 2.  Hovering over the flow shows details about the flow. Select one to add it to your app
 
-3.  Upon successfully adding the flow, it appears under "In your app" in the Power Automate Pane:  
+3.  Upon successfully adding the flow, it appears under "In your app" in the Power Automate pane:  
     ![Graphical user interface  text  application Description automatically generated](media/work-with-flows/image15.png)
 
 ## Editing an existing Flow
 
 You can now edit flows added to your app without leaving the context of your app. To edit a flow:
 
-1.  Under the "In your app" section of the Power Automate Pane, click the ellipsis to the right of a flow to open the context menu. Select "Edit"
+1.  Under the "In your app" section of the Power Automate pane, click the ellipsis to the right of a flow to open the context menu. Select "Edit"
 
 ![Graphical user interface  application  Teams Description automatically generated](media/work-with-flows/image16.png)
 
@@ -116,7 +145,7 @@ You can now edit flows added to your app without leaving the context of your app
 
 If you make changes to your flow in Power Automate instead of Power Apps while the app is open, you will need to refresh your flow to get the changes. To refresh the flow:
 
-1.  Under the "In your app" section of the Power Automate Pane, click the ellipsis to the right of a flow to open the context menu. Select "Refresh"  
+1.  Under the "In your app" section of the Power Automate pane, click the ellipsis to the right of a flow to open the context menu. Select "Refresh"  
     ![Graphical user interface  application  Teams Description automatically generated](media/work-with-flows/image17.png)
 
 2.  A loading spinner appears and the flow is refreshed
@@ -125,7 +154,7 @@ If you make changes to your flow in Power Automate instead of Power Apps while t
 
 To remove a flow from your app:
 
-1.  Under the "In your app" section of the Power Automate Pane, click the ellipsis to the right of a flow to open the context menu. Select "Remove from app"  
+1.  Under the "In your app" section of the Power Automate pane, click the ellipsis to the right of a flow to open the context menu. Select "Remove from app"  
     ![Graphical user interface  application  Teams Description automatically generated](media/work-with-flows/image18.png)
 
 2.  The flow is removed from the app. The flow is not deleted from the environment; however, so you can re-add the flow to your app or another app as required.
