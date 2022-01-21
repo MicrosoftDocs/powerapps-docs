@@ -79,7 +79,7 @@ The following scalar functions are available with formula columns.
 
 :::row:::
    :::column span="":::
-      Abs
+      [Abs](../maker/canvas-apps/functions/function-numericals.md)
    :::column-end:::
    :::column span="":::
       And
@@ -137,10 +137,10 @@ The following scalar functions are available with formula columns.
       IsError
    :::column-end:::
    :::column span="":::
-      IsToday
+      ISOWeekNum
    :::column-end:::
    :::column span="":::
-      ISOWeekNum
+      IsUTCToday
    :::column-end:::
 :::row-end:::
 :::row:::
@@ -184,81 +184,81 @@ The following scalar functions are available with formula columns.
       Not
    :::column-end:::
    :::column span="":::
-      Now
+      Or
    :::column-end:::
 :::row-end:::
 :::row:::
-   :::column span="":::
-      Or
-   :::column-end:::
    :::column span="":::
       Power
    :::column-end:::
    :::column span="":::
       Replace
    :::column-end:::
-:::row-end:::
-:::row:::
    :::column span="":::
       Right
    :::column-end:::
+:::row-end:::
+:::row:::
    :::column span="":::
       Round
    :::column-end:::
    :::column span="":::
       RoundDown
    :::column-end:::
-:::row-end:::
-:::row:::
    :::column span="":::
       RoundUp
    :::column-end:::
+:::row-end:::
+:::row:::
    :::column span="":::
       Second
    :::column-end:::
    :::column span="":::
       Sqrt
    :::column-end:::
-:::row-end:::
-:::row:::
    :::column span="":::
       StartsWith
    :::column-end:::
+:::row-end:::
+:::row:::
    :::column span="":::
       Substitute
    :::column-end:::
    :::column span="":::
       Sum
    :::column-end:::
-:::row-end:::
-:::row:::
    :::column span="":::
       Switch
    :::column-end:::
+:::row-end:::
+:::row:::
    :::column span="":::
       Text
    :::column-end:::
    :::column span="":::
       TimeZoneOffset
    :::column-end:::
-:::row-end:::
-:::row:::
-   :::column span="":::
-      Today
-   :::column-end:::
    :::column span="":::
       Trim
    :::column-end:::
+:::row-end:::
+:::row:::
    :::column span="":::
       Trunc
    :::column-end:::
-:::row-end:::
-:::row:::
    :::column span="":::
       TrimEnds
    :::column-end:::
    :::column span="":::
       Upper
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      UTCNow
+   :::column-end:::
+   :::column span="":::
+      UTCToday
    :::column-end:::
    :::column span="":::
       Value
