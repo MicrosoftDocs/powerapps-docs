@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 10/27/2021
+ms.date: 01/21/2022
 ms.subservice: canvas-maker
 ms.author: yingchin
 search.audienceType: 
@@ -25,13 +25,13 @@ In the previous articles, you learned about the [execution phases and data call 
 
 ## Limit data connections
 
-**Don't connect to more than 30 data sources from the same app**. Apps prompt new users to sign in to each connector, so every extra connector increases the amount of time that the app needs to start. As an app runs, each connector requires CPU resources, memory, and network bandwidth when the app requests data from that source.
+**Don't add more than 30 connections in one app**. Apps prompt new users to sign in to each connector, so every extra connector increases the amount of time that the app needs to start. As an app runs, each connector requires CPU resources, memory, and network bandwidth when the app requests data from that source.
 
-You can quickly measure your app's performance by turning on Developer Tools in [Microsoft Edge](/microsoft-edge/devtools-guide/network) or [Google Chrome](https://developers.google.com/web/tools/chrome-devtools/network-performance/) while running the app. Your app is more likely to take longer than 15 seconds to return data if it frequently requests data from more than 30 data sources, such as Microsoft Dataverse, Azure SQL, SharePoint, and Excel on OneDrive.  
+You can quickly measure your app's performance by turning on Developer Tools in [Microsoft Edge](/microsoft-edge/devtools-guide/network) or [Google Chrome](https://developers.google.com/web/tools/chrome-devtools/network-performance/) while running the app. Your app is more likely to take longer than 15 seconds to return data if it frequently requests data from more than 30 connections (connecting to data sources&mdash;such as Microsoft Dataverse, Azure SQL, SharePoint, and Excel on OneDrive).  
 
 ## Limit the number of controls
 
-**Don't add more than 500 controls to the same app**. Power Apps generates an HTML document object model to render each control. The more controls you add, the more generation time Power Apps needs.
+**Don't add more than 500 controls in one app**. Power Apps generates an HTML document object model to render each control. The more controls you add, the more generation time Power Apps needs.
 
 You can, in some cases, achieve the same result and have the app start faster if you use a gallery instead of individual controls. In
 addition, you might want to reduce the number of control types on the same screen. Some controls (such as PDF viewer, data table, and
