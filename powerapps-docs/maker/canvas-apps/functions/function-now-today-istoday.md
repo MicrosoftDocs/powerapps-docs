@@ -32,7 +32,7 @@ The **IsToday** function tests whether a date/time value is between midnight tod
 **UTCNow**, **UTCToday**, and **IsUTCToday** functions are the same as their non-UTC countrparts but work with time zone independent values and use Coordinated Universal Time (UTC).
 
 > [!NOTE]
-> **UTCNow**, **UTCToday**, and **IsUTCToday** are only avaiable in Dataverse formula columns at this time, and only on time indepdnent values.  **Now**, **Today**, and **IsToday** are not available in Dataverse formula columns as evaluations are done without knowledge of the current user's local time zone.  For more information, see [Work with formula table columns](../../../teams/formula-columns.md).
+> **UTCNow**, **UTCToday**, and **IsUTCToday** are only avaiable in Dataverse formula columns at this time, and only for time independent fields and values.  **Now**, **Today**, and **IsToday** are not available in Dataverse formula columns as evaluations are done without knowledge of the current user's local time zone.  For more information, see [Work with formula table columns](../../../teams/formula-columns.md).
 
 See [Date, Time, and DateTime in the data types documentation](data-types.md#date-time-and-datetime) and [working with dates and times](../show-text-dates-times.md) for more information.
 
