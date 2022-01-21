@@ -44,7 +44,7 @@ For example, if you create an HTML page as a web resource named “new_myWebReso
 `<base URL>/WebResources/new_myWebResource.htm`
   
 where *\<base URL>* is the part of the URL you use to view apps that ends in `dynamics.com`. Because the web resource is data in the system, only licensed users for your organization can access them this way. Normally, web resources are included in forms rather than referenced directly. The most common usage is to provide JavaScript libraries for form scripts.  
-    
+
 Because web resources are data in the system and are solution aware, you can move them to different organizations by exporting them as part of a solution and importing the solution into a different organization. You must use solution explorer to work with web resources.
   
 ## Solution publisher prefix

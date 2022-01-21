@@ -49,7 +49,7 @@ Create a new text column and configure the control, or replace an existing text 
 1. On the right column properties pane, expand the **Components** section, select **+ Component**, and then select **Rich Text Editor Control**.
 1. On the **Add rich text editor control** pane, select from the following options, and then select **Done**:  
    - **Bind to table column**: We don’t recommend that you enable this option because this property doesn’t support binding to a different table column.
-   - **Static value**: If you want to customize the rich text editor appearance, features, and behavior, enter the absolute URL to the JavaScript web resource that contains the properties you want. More information: [Configure the rich text editor control](#configure-the-rich-text-editor-control)
+   - **Static value**: If you want to customize the rich text editor appearance, features, and behavior, enter the relative URL to the JavaScript web resource that contains the properties you want. More information: [Configure the rich text editor control](#configure-the-rich-text-editor-control)
    - **Web**, **Phone**, and **Tablet**: Enable all if you want all client apps to have the ability to use rich text in the column.
 
       <img src="media/rich-text-control2.png" alt="Rich text control editor configuration" height="497" width="485">
@@ -61,11 +61,11 @@ The rich text editor control comes with a rich set of configuration options that
 
 1. Create a JavaScript (.js) file that contains the JSON format text file with the `defaultSupportedProps` structure and configuration you want. More information: [Sample rich text editor configurations](#sample-rich-text-editor-configurations) and [Rich text editor properties](#rich-text-editor-properties)
 1. In Power Apps, create a **JavaScript (JS)** type web resource using the JSON file created in step 1. More information: [Create or edit model-driven app web resources to extend an app](create-edit-web-resources.md)
-1. Add the absolute URL for the JavaScript web resource in the form designer **Static value** field on the **Add rich text editor control** pane . More information: [Configure the rich text editor control](#configure-the-rich-text-editor-control)
+1. Add the relative URL for the JavaScript web resource, for example /*WebResources/Activities/SystemLibraries/msdyn_EmailRTEconfig.js*, in the **Static value** field on the **Add rich text editor control** pane . More information: [Configure the rich text editor control](#configure-the-rich-text-editor-control)
 
    > [!TIP]
-   > The web resource URL is located next to the **URL** field on the web resource definition you created in the previous step.
-   > 
+   > - The web resource URL is located next to the **URL** field on the web resource definition you created in the previous step.
+   > - Although you can use the absolute URL for the **Static value**, by using the relative URL the web resource will continue to work after it has been imported into another environment as a solution.
    > :::image type="content" source="media/web-resource-url.png" alt-text="URL for JavaScript web resource":::
 1. **Save**, and then **Publish** the form.
 
