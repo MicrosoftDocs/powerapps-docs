@@ -237,7 +237,7 @@ The following scalar functions are available with formula columns.
       [Switch](../maker/canvas-apps/functions/function-if.md)
    :::column-end:::
    :::column span="":::
-      [Text](../maker/canvas-apps/function/function-text.md)
+      [Text *](../maker/canvas-apps/function/function-text.md)
    :::column-end:::
    :::column span="":::
       [Trim](../maker/canvas-apps/function/function-trim.md)
@@ -262,7 +262,7 @@ The following scalar functions are available with formula columns.
       [UTCToday](../maker/canvas-apps/function/function-now-today-istoday.md)
    :::column-end:::
    :::column span="":::
-      [Value](../maker/canvas-apps/function/function-value.md)
+      [Value *](../maker/canvas-apps/function/function-value.md)
    :::column-end:::
 :::row-end:::
 :::row:::
@@ -276,6 +276,8 @@ The following scalar functions are available with formula columns.
       [Year](../maker/canvas-apps/function/function-datetime-parts.md)
    :::column-end:::
 :::row-end:::
+
+\* The **Text** and **Value** functions only work with whole numbers, where no decimal separator is involved.  Since the decimal separator varies across locales, and formula columns are evlauted without locale knowledge, there is no way to properly interpret or generate the decimal separator.
 
 ### See also
 
