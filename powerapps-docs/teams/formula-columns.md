@@ -196,7 +196,7 @@ The following scalar functions are available with formula columns.
       [Power](../maker/canvas-apps/functions/function-numericals.md)
    :::column-end:::
    :::column span="":::
-      [Replace](../maker/canavs-apps/functions/function-replace-substitute.md)
+      [Replace](../maker/canvas-apps/functions/function-replace-substitute.md)
    :::column-end:::
 :::row-end:::
 :::row:::
@@ -226,7 +226,7 @@ The following scalar functions are available with formula columns.
       [StartsWith](../maker/canvas-apps/functions/function-startswith.md)
    :::column-end:::
    :::column span="":::
-      [Substitute](../maker/canavs-apps/functions/function-replace-substitute.md)
+      [Substitute](../maker/canvas-apps/functions/function-replace-substitute.md)
    :::column-end:::
    :::column span="":::
       [Sum](../maker/canvas-apps/functions/function-aggregates.md)
