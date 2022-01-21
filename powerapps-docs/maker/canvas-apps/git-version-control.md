@@ -134,6 +134,7 @@ Since this feature is experimental, we welcome your feedback. The following list
 1. This feature doesn't work with public Git repository. Use a private repo instead.
 1. This feature doesn't work with on-premises Git repositories. The Git repo must be hosted on the web and accessible with username and personal access token.
 1. Edits to the same property on the same control aren't merged. The last edit made will win.
+1. Editing custom properties on components is not supported and will result in an error.
 
 ## Feedback to the community forum
 
