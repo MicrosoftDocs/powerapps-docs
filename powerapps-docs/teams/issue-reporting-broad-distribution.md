@@ -1,16 +1,16 @@
 ---
-title: Deploy Issue reporting sample app as a broad distribution app.
+title: Deploy Issue reporting sample app as a broad distribution app. (contains video)
 description: Learn how to share the Issue reporting sample app for Teams with users outside of your Team.
 author: joel-lindstrom
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 06/13/2021
-ms.author: namarwah
+ms.author: jshum
 ms.reviewer: tapanm
 contributors:
   - joel-lindstrom
-  - navjotm
+  - josephshum
   - tapanm-msft
 ---
 

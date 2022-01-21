@@ -104,6 +104,7 @@ When an error occurs for a request within a batch, the error for that request wi
 
 You can use the `Prefer: odata.continue-on-error` request header to specify that additional requests be processed when errors occur. The batch request will return `200 OK` and individual response errors will be returned in the batch response body.
 
+More information: [Enable/Disable continue-on-error in Batch Request](/odata/webapi/batch#enabledisable-continue-on-error-in-batch-request)
 
 <a name="bkmk_Example"></a>
 

@@ -1,5 +1,5 @@
 ---
-title: Create a canvas app from a SharePoint list
+title: Create a canvas app from a SharePoint list (contains video)
 description: In Power Apps, automatically create a canvas app to manage data in a SharePoint list.
 author: tapanm-msft
 ms.service: powerapps
@@ -58,7 +58,7 @@ Watch this video to learn how to create a canvas app from a list:
 
 1. Under **Connect to a SharePoint site**, type or paste the URL for your SharePoint Online site, and then select **Go**.
 
-    Include only the site URL (not the name of the list), as in this example:<br>`https://microsoft.sharepoint.com/teams/Contoso`
+    Include only the site URL (not the name of the list), for example:<br>`https://contoso.sharepoint.com/teams/sales`
 
 1. Under **Choose a list**, select **SimpleApp**, and then select **Connect**.
 

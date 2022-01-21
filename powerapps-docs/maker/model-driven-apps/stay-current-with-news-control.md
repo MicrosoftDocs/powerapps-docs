@@ -25,6 +25,8 @@ search.app:
 
 [!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
+[!INCLUDE [cc-classic-interface-control-migration](../../includes/cc-classic-interface-control-migration.md)]
+
 Gain valuable insights from the latest news about your customers, competitors,
 and contacts. Staying on top of the news helps you stay ahead of your
 competition by showing you real-time contextual information about your customers
@@ -49,12 +51,12 @@ contact and competitor.
 The news control requires a news API URL, API key, and more news URL. For Bing
 News, the more news URL is preconfigured in the control to use
 *https://www.bing.com/news/search*. For the News API URL, and API Key, you’ll
-need to provide these by creating a [Bing Search azure resource](https://docs.microsoft.com/en-us/bing/search-apis/bing-web-search/create-bing-search-service-resource) under your Azure account. Once created, you will get the API key and API URL under the **Keys and Endpoint** section.
+need to provide these by creating a [Bing Search azure resource](/bing/search-apis/bing-web-search/create-bing-search-service-resource) under your Azure account. Once created, you will get the API key and API URL under the **Keys and Endpoint** section.
 
-> [!div class="mx-imgBorder"] 
+> [!div class="mx-imgBorder"]
 > ![Bing Search Services API key and endpoint.](media/azure-bingsearch-apikey-endpoint.png)
 
-### Import the company news solution 
+### Import the company news solution
 
 1. Go to the [news control GitHub repo](https://github.com/microsoft/companynewspcfcontrol).
 
@@ -124,7 +126,7 @@ need to provide these by creating a [Bing Search azure resource](https://docs.mi
 
 10. To provide API Key and Base URL default values, use business rules. Select     **Business Rules** from the form editor, and then select **New Business Rule** from the bottom of the right pane.
 
-11. In the business rule designer, select **Condition** on the designer canvas,     set **Column** to **Account Name** and **Operator** to **Contains data,** and     then select **Apply**. Then, select the **Components** tab, drag a **Set Column Value** action, and provide a column value where **Column** is **newsapikey** and the value is the **Key** you copied from the Bing Search properties. Create another **Set Column Value** action where **Column** is **newsurl** and add the value as the **Endpoint** you copied from the Bing Search properties. Make sure to append *bing/v7.0/news/search* at the end of the news URL. The final URL should look like https://api.bing.microsoft.com/v7.0/news/search. 
+11. In the business rule designer, select **Condition** on the designer canvas,     set **Column** to **Account Name** and **Operator** to **Contains data,** and     then select **Apply**. Then, select the **Components** tab, drag a **Set Column Value** action, and provide a column value where **Column** is **newsapikey** and the value is the **Key** you copied from the Bing Search properties. Create another **Set Column Value** action where **Column** is **newsurl** and add the value as the **Endpoint** you copied from the Bing Search properties. Make sure to append */v7.0/news/search* at the end of the news URL. The final URL should look like https://api.bing.microsoft.com/v7.0/news/search. 
 
     ![Create a business rule for the api key and URL.](media/business-rule-for-fields.png)
 

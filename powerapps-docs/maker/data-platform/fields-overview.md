@@ -1,13 +1,13 @@
 ---
-title: "Fields overview in Power Apps | MicrosoftDocs"
+title: "Fields overview in Power Apps (contains video) | MicrosoftDocs"
 description: "Learn about columns in Power Apps portal"
-ms.custom: intro-internal
+
 ms.date: 08/13/2021
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: overview
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"

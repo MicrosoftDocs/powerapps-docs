@@ -1,5 +1,5 @@
 ---
-title: Customize the Bulletins app
+title: Customize the Bulletins app (contains video)
 description: Learn about how the Bulletins sample apps can be customized.
 author: sbahl10
 ms.service: powerapps
@@ -7,11 +7,11 @@ ms.topic: conceptual
 ms.custom: 
 ms.subservice: teams
 ms.date: 07/13/2021
-ms.author: namarwah
+ms.author: jshum
 ms.reviewer: tapanm
 contributors:
   - joel-lindstrom
-  - navjotm
+  - josephshum
   - tapanm-msft
   - sbahl10
 ---

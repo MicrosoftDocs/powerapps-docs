@@ -1,24 +1,25 @@
 ---
-title: getValue | Microsoft Docs
-description: Gets the raw value of the record's column.
+title: EntityRecord.getValue | Microsoft Docs
+description: Gets the value of the record's column.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 10/01/2019
+ms.date: 06/12/2021
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 5928055f-784f-496d-bd96-6921d9574d2f
 ---
-# getValue
+
+# EntityRecord.getValue
 
 [!INCLUDE[./includes/getvalue-description.md](./includes/getvalue-description.md)]
 
-## Available for 
+## Available for
 
-Model-driven apps
+Model-driven and canvas apps
 
 ## Syntax
 
@@ -26,10 +27,9 @@ Model-driven apps
 
 ## Parameters
 
-| Parameter Name|Type|Required|Description|
-| ------------- |----|--------|-----------|
-|`columnName`|`string`|Yes|Column name of the record|
-
+| Parameter Name | Type     | Required | Description               |
+| -------------- | -------- | -------- | ------------------------- |
+| `columnName`   | `string` | Yes      | Name of the column.|
 
 ## Return Value
 
@@ -40,6 +40,5 @@ Type: `string`
 [Entityrecord](../entityrecord.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>
 [Power Apps component framework overview](../../overview.md)
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

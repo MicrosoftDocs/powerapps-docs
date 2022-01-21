@@ -2,9 +2,8 @@
 title: Overview of connectors for canvas apps
 description: Overview of all the available connections that you can use to build canvas apps.
 author: lancedMicrosoft
-manager: kvivek
 ms.service: powerapps
-ms.topic: conceptual
+ms.topic: overview
 ms.custom: 
   - canvas
   - intro-internal

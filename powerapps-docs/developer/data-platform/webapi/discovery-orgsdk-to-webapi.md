@@ -40,7 +40,7 @@ GET https://globaldisco.crm.dynamics.com/api/discovery/v2.0/Instances
 ```  
 -    Get all instances for the user in a specific region.
 ```http  
-GET  https://globaldisco.crm.dynamics.com/api/discovery/v2.0/Instances(Region={region})
+GET  https://globaldisco.crm.dynamics.com/api/discovery/v2.0/Instances(Region='{region}')
 ```
 Response
 ```JSON

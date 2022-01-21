@@ -1,12 +1,12 @@
 ---
-title: Microsoft Dataverse business events (preview)| Microsoft Docs
+title: Microsoft Dataverse business events| Microsoft Docs
 description: Learn about how to use business events to connect and integrate business applications.
 author: JimDaly
 manager: sunilg
 ms.service: powerapps
 ms.component: cds
 ms.topic: conceptual
-ms.date: 06/12/2021
+ms.date: 10/31/2021
 ms.subservice: dataverse-developer
 ms.author: jdaly
 search.audienceType: 
@@ -18,7 +18,7 @@ search.app:
   - D365CE
 ---
 
-# Microsoft Dataverse business events (preview)
+# Microsoft Dataverse business events
 
 Automation of business logic and integration with other systems are driven by events. When something interesting happens in a business application, an event occurs and data describing the event becomes available for subscribers to respond to. Microsoft Dataverse provides capabilities to relay event data to subscribers using the following applications and technologies:
 
