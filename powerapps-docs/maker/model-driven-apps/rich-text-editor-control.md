@@ -61,7 +61,7 @@ The rich text editor control comes with a rich set of configuration options that
 
 1. Create a JavaScript (.js) file that contains the JSON format text file with the `defaultSupportedProps` structure and configuration you want. More information: [Sample rich text editor configurations](#sample-rich-text-editor-configurations) and [Rich text editor properties](#rich-text-editor-properties)
 1. In Power Apps, create a **JavaScript (JS)** type web resource using the JSON file created in step 1. More information: [Create or edit model-driven app web resources to extend an app](create-edit-web-resources.md)
-1. Add the relative URL for the JavaScript web resource, for example /*WebResources/Activities/SystemLibraries/msdyn_EmailRTEconfig.js*, in the **Static value** field on the **Add rich text editor control** pane . More information: [Configure the rich text editor control](#configure-the-rich-text-editor-control)
+1. Add the relative URL for the JavaScript web resource, for example */WebResources/contoso_toolbartoprte*, in the **Static value** field on the **Add rich text editor control** pane . More information: [Add or replace a text column for rich text editing](#add-or-replace-a-text-column-for-rich-text-editing)
 
    > [!TIP]
    > - The web resource URL is located next to the **URL** field on the web resource definition you created in the previous step.
