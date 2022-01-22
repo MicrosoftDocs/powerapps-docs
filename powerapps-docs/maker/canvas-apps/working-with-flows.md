@@ -30,7 +30,8 @@ contributors:
 With this feature, you can create new flows, or add existing flows, and even edit existing flows using Power Automate pane within Power Apps Studio. You don't have to browse to Power Automate to work with flows and return to Power Apps Studio any longer.
 
 > [!NOTE]
-> This feature must be enabled on a per-app basis.
+> - This feature must be enabled on a per-app basis.
+> - Flows that you create or edit, and save from inside Power Apps Studio are also visible and available using Power Automate interface. Saving the canvas app that you use to work with such flows only saves the app, and the app integration with the flow. The saved changes to the flows will still remain even if you close the canvas app without saving.
 
 ## Enable Power Automate pane
 
@@ -38,19 +39,19 @@ Power Automate pane needs to be enabled manually through the feature switch. To 
 
 1. Open a [new](data-platform-create-app.md) or [existing](edit-app.md) an app in Power Apps Studio.
 
-1. Select **Settings** at the top. 
+1. Select **Settings** at the top.
 
-1. Select **Upcoming Features**. 
+1. Select **Upcoming Features**.
 
-1. Under the **Preview** tab, select **Enable Power Automate pane** to turn on this feature. You may be prompted to close and reopen your canvas app to see the change. 
-   
+1. Under the **Preview** tab, select **Enable Power Automate pane** to turn on this feature. You may be prompted to close and reopen your canvas app to see the change.
+
    :::image type="content" source="media/working-with-flows/power-automate-pane-feature.png" alt-text="A screenshot of the Upcoming Features dialog box showing the Enable Power Automate feature toggle.":::
-   
+
     Save the app and relaunch Power Apps Studio. The Power Automate option is now added to the left-pane.
 
-   :::image type="content" source="media/working-with-flows/power-automate-button.png" alt-text="A screenshot highlighting the Power Automate option in the left pane":::   
+   :::image type="content" source="media/working-with-flows/power-automate-button.png" alt-text="A screenshot highlighting the Power Automate option in the left pane":::
 
-## Creating a new flow
+## Create a new flow
 
 To start with flows inside Power Apps Studio, select **Create new flow** in Power Automate pane.
 
@@ -96,7 +97,7 @@ Instead of using the available templates, you can also create a flow from scratc
     > [!TIP]
     > For more information about customizing and configuring cloud flows, see **How-to** articles starting from [Add multiple actions and advanced options to a cloud flow](/power-automate/multi-step-logic-flow).
 
-## Adding an existing flow
+## Add an existing flow
 
 You may have access to the existing flows in the environment where you're creating your app. To add and use these flows in your app, select **Add flow**, and then choose the flow from the **Add a flow from this environment** section.
 
@@ -111,15 +112,24 @@ You must meet the following requirements to be able to add an existing flow to a
 - If the canvas app is part of a solution, you'll only see the flows that are part of the same solution.
 - Flows must have a Power Apps trigger.
 
-After added, the flow will appear under **In your app** section.
+After added, the flow will appear under **In your app** section inside the Power Automate pane.
 
-## Editing an existing Flow
+## Edit an existing flow
 
-You can now edit flows added to your app without leaving the context of your app. To edit a flow:
+You can now edit flows added to your app without leaving Power Apps Studio.
 
-1.  Under the "In your app" section of the Power Automate pane, click the ellipsis to the right of a flow to open the context menu. Select "Edit"
+**To edit a flow:**
 
-![Graphical user interface  application  Teams Description automatically generated](media/working-with-flows/image16.png)
+1. Under the **In your app** section of the Power Automate pane, select **..** (ellipsis) to the right of a flow.
+
+1. Select **Edit**.
+
+    :::image type="content" source="media/working-with-flows/edit-flow.png" alt-text="A screenshot showing the option to edit an existing flow.":::
+
+    Flow opens in the editor for you to make changes.
+
+    :::image type="content" source="media/working-with-flows/edit-flow-editor.png" alt-text="A screenshot showing the flow open in editor for customization.":::
+
 
 2.  The flow designer opens, allowing you to edit and save your flow. &lt;&lt;TODO: Add screen capture&gt;&gt;
 
