@@ -27,7 +27,7 @@ You can now create new flows, or add existing flows, and even edit existing flow
 > [!NOTE]
 > - This feature must be enabled on a per-app basis.
 > - Flows that you create or edit, and save from inside Power Apps Studio are also visible and available in [Power Automate](https://flow.microsoft.com).
-> - Saved changes to the flows using Power Apps Studio will remain intact even if you close the canvas app without saving.
+> - Saved changes to the flows using Power Apps Studio will remain intact even if you close Power Apps Studio without saving changes to the app.
 > - Removing a flow from a canvas app doesn't delete the flow from [Power Automate](https://flow.microsoft.com).
 
 ## Enable Power Automate pane
