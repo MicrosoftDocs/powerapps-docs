@@ -31,7 +31,9 @@ With this feature, you can create new flows, or add existing flows, and even edi
 
 > [!NOTE]
 > - This feature must be enabled on a per-app basis.
-> - Flows that you create or edit, and save from inside Power Apps Studio are also visible and available using Power Automate interface. Saving the canvas app that you use to work with such flows only saves the app, and the app integration with the flow. The saved changes to the flows will still remain even if you close the canvas app without saving.
+> - Flows that you create or edit, and save from inside Power Apps Studio are also visible and available in [Power Automate](https://flow.microsoft.com).
+> - Saved changes to the flows using Power Apps Studio will remain intact even if you close the canvas app without saving.
+> - Removing a flow from a canvas app doesn't delete the flow from [Power Automate](https://flow.microsoft.com).
 
 ## Enable Power Automate pane
 
@@ -130,38 +132,32 @@ You can now edit flows added to your app without leaving Power Apps Studio.
 
     :::image type="content" source="media/working-with-flows/edit-flow-editor.png" alt-text="A screenshot showing the flow open in editor for customization.":::
 
+1. Make the changes to the flow, and then select **Save**.
 
-2.  The flow designer opens, allowing you to edit and save your flow. &lt;&lt;TODO: Add screen capture&gt;&gt;
+    > [!TIP]
+    > You'll be prompted to save your changes if you try to close the flow editor without saving them.
 
-3.  If you attempt to close the designer without saving, you'll be prompted that you may lose unsaved changes if you continue &lt;&lt;TODO: Add screen capture&gt;&gt;
+## Refresh a flow
 
-4.  Save the changes, and close the designer
+If you've made changes to your flow in [Power Automate](https://flow.microsoft.com) (instead of using Power Apps Studio) while the app is open, you'll need to refresh your flow to get the latest changes.
 
-5.  The flow refreshes to include the new changes
+To refresh the flow and pull the latest changes, select **...** (ellipsis) to the right of your flow, and then, select **Refresh**.
 
-## Refresh a Flow
+:::image type="content" source="media/working-with-flows/refresh-flow.png" alt-text="A screenshot showing the option to refresh the flow and pull in the latest changes.":::
 
-If you make changes to your flow in Power Automate instead of Power Apps while the app is open, you will need to refresh your flow to get the changes. To refresh the flow:
-
-1.  Under the "In your app" section of the Power Automate pane, click the ellipsis to the right of a flow to open the context menu. Select "Refresh"  
-    ![Graphical user interface  application  Teams Description automatically generated](media/working-with-flows/image17.png)
-
-2.  A loading spinner appears and the flow is refreshed
+A loading spinner will appear, and the flow will be refreshed.
 
 ## Remove a Flow
 
-To remove a flow from your app:
+To remove a flow from your app, select **...** (ellipsis) to the right of your flow, and then, select **Remove from app**.
 
-1.  Under the "In your app" section of the Power Automate pane, click the ellipsis to the right of a flow to open the context menu. Select "Remove from app"  
-    ![Graphical user interface  application  Teams Description automatically generated](media/working-with-flows/image18.png)
+:::image type="content" source="media/working-with-flows/remove-flow.png" alt-text="A screenshot showing the option to remove the flow from the app.":::
 
-2.  The flow is removed from the app. The flow is not deleted from the environment; however, so you can re-add the flow to your app or another app as required.
+This action only removes flow from the app, while the flow remains intact in the environment. You can add the flow again to the same, or use in other canvas apps.
 
 ### See also
 
-[Add and configure controls](add-configure-controls.md)
+- [Start a flow in a canvas app](using-logic-flows.md)
+- [Add and configure controls](add-configure-controls.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
-
- 
-

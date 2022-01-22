@@ -108,7 +108,7 @@ In this section, you'll learn about creating an app using Power Apps that uses t
     
     :::image type="content" source="media/using-logic-flows/power-automate-pane-add-flow.png" alt-text="A screenshot showing the Power Automate button in the left pane with the Add Flow dialog opened, showing the FlowInApp flow available to add to the app.":::
 
-   More information: [Power Automate Pane](#power-automate-pane-preview)
+   More information: [Use Power Automate Pane (preview)](working-with-flows.md)
 
 1. Select **FlowInApp**.
 
@@ -163,7 +163,8 @@ Now that you've created a sample app that runs a flow and adds item inside a Sha
 
 ### See also
 
-[Add and configure controls](add-configure-controls.md)
+- [Use Power Automate pane (preview)](working-with-flows.md)
+- [Add and configure controls](add-configure-controls.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
 
