@@ -41,27 +41,27 @@ Power Automate pane needs to be enabled manually through the feature switch.
 
 **To enable the pane:**
 
-1. Open a [new](data-platform-create-app.md) or [existing](edit-app.md) an app in Power Apps Studio.
+1. Open a [new](data-platform-create-app.md) or an [existing](edit-app.md) app in Power Apps Studio.
 
 1. Select **Settings** at the top.
 
-1. Select **Upcoming Features**.
+1. Select **Upcoming features**.
 
 1. Under the **Preview** tab, select **Enable Power Automate pane** to turn on this feature. You may be prompted to close and reopen your canvas app to see the change.
 
    :::image type="content" source="media/working-with-flows/power-automate-pane-feature.png" alt-text="A screenshot of the Upcoming Features dialog box showing the Enable Power Automate feature toggle.":::
 
-    Save the app and relaunch Power Apps Studio. The Power Automate option is now added to the left-pane.
+    Save the app and relaunch Power Apps Studio. The Power Automate pane now appears in Power Apps Studio.
 
    :::image type="content" source="media/working-with-flows/power-automate-button.png" alt-text="A screenshot highlighting the Power Automate option in the left pane":::
 
 ## Create a new flow
 
-To start with flows inside Power Apps Studio, select **Create new flow** in Power Automate pane.
+To start with flows inside Power Apps Studio, select **Create new flow** in the Power Automate pane.
 
    :::image type="content" source="media/working-with-flows/create-new-flow.png" alt-text="A screenshot showing Create your flow screen having several options to choose a flow template from.":::
 
-This action opens the **Create your flow** modal dialog within Power Apps Studio. You can choose to create the flow from available templates, or start with a blank template.
+This action opens the **Create your flow** modal dialog within Power Apps Studio. You can choose to create the flow from the available templates, or create a flow from scratch.
 
 ### Start with a template
 
@@ -108,7 +108,7 @@ You may have access to the existing flows in the environment where you're creati
 :::image type="content" source="media/working-with-flows/add-existing-flow.png" alt-text="A screenshot showing the option to add existing flows from the current environment.":::
 
 > [!TIP]
-> You can hover over the flow to see more details about the flow before adding to your app.
+> You can hover over the flow to see more details before adding to your app.
 
 You must meet the following requirements to be able to add an existing flow to a canvas app:
 
@@ -122,26 +122,24 @@ After added, the flow will appear under **In your app** section inside the Power
 
 You can now edit flows added to your app without leaving Power Apps Studio.
 
-**To edit a flow:**
-
 1. Under the **In your app** section of the Power Automate pane, select **..** (ellipsis) to the right of a flow.
 
 1. Select **Edit**.
 
     :::image type="content" source="media/working-with-flows/edit-flow.png" alt-text="A screenshot showing the option to edit an existing flow.":::
 
-    Flow opens in the editor for you to make changes.
+    Flow opens inside the editor.
 
     :::image type="content" source="media/working-with-flows/edit-flow-editor.png" alt-text="A screenshot showing the flow open in editor for customization.":::
 
-1. Make the changes to the flow, and then select **Save**.
+1. Make your changes, and then select **Save**.
 
     > [!TIP]
-    > You'll be prompted to save your changes if you try to close the flow editor without saving them.
+    > You'll be prompted to save the unsaved changes if you try to close the editor.
 
 ## Refresh a flow
 
-If you've made changes to your flow in [Power Automate](https://flow.microsoft.com) (instead of using Power Apps Studio) while the app is open, you'll need to refresh your flow to get the latest changes.
+If any changes are made to the flow in [Power Automate](https://flow.microsoft.com) (instead of using Power Apps Studio) while you're editing the app, you'll need to refresh your flow to get the latest changes.
 
 To refresh the flow and pull the latest changes, select **...** (ellipsis) to the right of your flow, and then, select **Refresh**.
 
@@ -155,7 +153,7 @@ To remove a flow from your app, select **...** (ellipsis) to the right of your f
 
 :::image type="content" source="media/working-with-flows/remove-flow.png" alt-text="A screenshot showing the option to remove the flow from the app.":::
 
-This action only removes flow from the app, while the flow remains intact in the environment. You can add the flow again to the same, or use in other canvas apps.
+This action only removes flow from the app, while the flow remains intact in the environment. You can add the flow again to the same app, or use in other apps.
 
 ### See also
 
