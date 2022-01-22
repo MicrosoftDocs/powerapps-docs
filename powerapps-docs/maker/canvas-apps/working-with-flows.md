@@ -22,12 +22,7 @@ contributors:
 
 [This article is pre-release documentation and is subject to change.]
 
-> [!IMPORTANT]
-> - This feature is being rolled out and depending on your region, it may not be available for your tenant yet.
-> - This is a preview feature.
-> - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
-
-With this feature, you can create new flows, or add existing flows, and even edit existing flows using Power Automate pane within Power Apps Studio. You don't have to browse to Power Automate to work with flows and return to Power Apps Studio any longer.
+You can now create new flows, or add existing flows, and even edit existing flows using Power Automate pane within Power Apps Studio. You don't have to browse to [Power Automate](https://flow.microsoft.com) to work with flows and then return to Power Apps Studio for app editing. In order to use this capability, you'll have to enable the **Power Automate pane** setting.
 
 > [!NOTE]
 > - This feature must be enabled on a per-app basis.
@@ -36,6 +31,11 @@ With this feature, you can create new flows, or add existing flows, and even edi
 > - Removing a flow from a canvas app doesn't delete the flow from [Power Automate](https://flow.microsoft.com).
 
 ## Enable Power Automate pane
+
+> [!IMPORTANT]
+> - This feature is being rolled out and depending on your region, it may not be available for your tenant yet.
+> - This is a preview feature.
+> - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 
 Power Automate pane needs to be enabled manually through the feature switch. To enable the pane:
 
