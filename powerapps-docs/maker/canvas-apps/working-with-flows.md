@@ -90,7 +90,7 @@ Instead of using the available templates, you can also create a flow from scratc
 
 1. Select **Create from blank**.
 
-1. Add and customize the flow with steps and actions, as showin in the below example.
+1. Add and customize the flow with steps and actions, as shown in the below example.
 
     :::image type="content" source="media/working-with-flows/customize-blank-flow.png" alt-text="A screenshot showing example workflow.":::
 
