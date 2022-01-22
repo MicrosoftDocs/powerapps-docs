@@ -37,7 +37,9 @@ You can now create new flows, or add existing flows, and even edit existing flow
 > - This is a preview feature.
 > - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 
-Power Automate pane needs to be enabled manually through the feature switch. To enable the pane:
+Power Automate pane needs to be enabled manually through the feature switch.
+
+**To enable the pane:**
 
 1. Open a [new](data-platform-create-app.md) or [existing](edit-app.md) an app in Power Apps Studio.
 
