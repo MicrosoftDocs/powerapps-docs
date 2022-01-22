@@ -1,5 +1,5 @@
 ﻿---
-title: Using Power Automate pane (preview)
+title: Use Power Automate pane (preview)
 description: Learn about how to use Power Automate pane to work with flows in Power Apps
 author: TashasEv
 ms.service: powerapps
@@ -18,7 +18,7 @@ contributors:
   - TashasEv
 ---
 
-# Using Power Automate pane (preview)
+# Use Power Automate pane (preview)
 
 [This article is pre-release documentation and is subject to change.]
 
