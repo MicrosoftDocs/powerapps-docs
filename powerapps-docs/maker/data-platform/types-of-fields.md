@@ -86,8 +86,7 @@ Text columns can contain text characters. This column type has several format op
 Watch this video for a quick overview about text columns:
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWE7j0]
 
-There are three basic text column types.
-
+There are three basic text column types. All values indicated below are in number of characters.
 
 |Column type name  |Default value  |Maximum value |Description  |
 |---------|---------|---------|---------|
