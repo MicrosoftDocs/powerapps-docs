@@ -27,7 +27,7 @@ Model-driven apps
 
 ## Parameters
 
-| Parameter Name   | Type       | Required | description |
+| Parameter Name   | Type       | Required | Description |
 | ---------------- | ---------- | -------- | ----------- |
 | recordIds        | `string[]` | Yes      |             |
 | specificCommands | `string[]` | No       |             |
