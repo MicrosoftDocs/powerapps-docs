@@ -5,7 +5,7 @@ author: GitanjaliSingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 01/20/2022
+ms.date: 01/24/2022
 ms.subservice: portals
 ms.author: gisingh
 ms.reviewer: ndoelman
@@ -15,7 +15,7 @@ contributors:
 
 ---
 
-# Tutorial: Configure rich text editor control on portals (preview)
+# Tutorial: Configure the rich text editor control on portals (preview)
 
 [This article is pre-release documentation and is subject to change.]
 
@@ -29,9 +29,12 @@ Your portal version must be [9.4.1.x](/power-platform/released-versions/portals/
 
 Follow the steps in the tutorial [Add or replace a text column for rich text editing](../model-driven-apps/rich-text-editor-control.md#add-or-replace-a-text-column-for-rich-text-editing) to add the component to a table on a model-driven form.
 
+> [!NOTE]
+> Rich text columns will require additional characters to store the rich text metadata.
+
 ## Step 2. Verify the model-driven app with the new control
 
-You can [update an existing model-driven app](../model-driven-apps/design-custom-business-apps-using-app-designer.md) or [create a new app](../model-driven-apps/build-first-model-driven-app.md) with the form to which you added the component. For example, the following image shows the feedback table main form using the rich text editor control.
+You can [update an existing model-driven app](../model-driven-apps/design-custom-business-apps-using-app-designer.md) or [create a new app](../model-driven-apps/build-first-model-driven-app.md) with the form to which you added the component. For example, the following image shows the feedback table *simple contact us form* using the rich text editor control in a model-driven app.
 
 :::image type="content" source="media/component-rte-tutorial/rich-text-editor-mda.png" alt-text="Rich text editor for feedback table.":::
 
@@ -83,7 +86,7 @@ In this step, you'll create a new basic form in portals and then add the control
 
     :::image type="content" source="media/component-rte-tutorial/basic-form-metadata-controlstyle.png" alt-text="Basic form metadata configuration setting the control style to 'code component'.":::
 
-## Step 4. Create a webpage in portals with the basic form
+## Step 4. Create a web page in portals with the basic form
 
 1. Open your portal in the [Power Apps portals Studio](portal-designer-anatomy.md).
 
@@ -94,12 +97,6 @@ In this step, you'll create a new basic form in portals and then add the control
 1. On the right-side property pane, update the webpage name. For example, *Feedback*.
 
 1. Update the **Partial URL**. For example, *feedback*.
-
-1. Expand Permissions.
-
-1. Disable Page available to everyone.
-
-1. Select the web roles that should be allowed access to this page.
 
 1. Inside the page editor, below the **Header** section, select the **Column** section.
 
@@ -114,13 +111,24 @@ In this step, you'll create a new basic form in portals and then add the control
     > [!TIP]
     > If you don't see the form, try **Sync Configuration** to synchronize changes from Dataverse.
 
+1. Under **Permissions**, select **Manage table permissions** and make sure you have the appropriate [table permissions](/configure/assign-entity-permissions.md) and [web roles](/configure/create-web-roles.md) configured for the Dataverse table associated to the form.
+    
+    > [!NOTE]
+    > By default, the **feedback** table has **create** permissions configured for the default web roles. See the (contact us sample)[contact-us-sample.md] for more information.
+
 1. On the top-right corner, select **Browse website**.
 
-The web page will now show the basic form for the feedback table with the rich text editor control, similar to how it appears while using the model-driven app.
+    The web page will now show the basic form for the feedback table with the rich text editor control, similar to how it appears while using the model-driven app.
+
+    :::image type="content" source="media/component-rte-tutorial/basic-form-portal.png" alt-text="Basic form showing rich text component on a web page.":::
 
 ## Limitations
 
-Image is added in the Dataverse table form where image upload is available, loading the same table form in portals using the rich text editor will not show the image.
+If an image is uploaded using the rich text editor control in a model-driven app using the **From File** option, the image will not render on the portal. You can use the **Web Address (URL)** option to specify an image that can appear on the portal basic form.
+
+:::image type="content" source="media/component-rte-tutorial/image-webaddress.png" alt-text="Uploading an image using the web address option in a model-driven app.":::
+
+Images uploaded using the rich text editor control on forms in portal pages will appear both in portal pages and model-driven apps.
 
 ### See also
 
