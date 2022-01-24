@@ -24,6 +24,8 @@ landingContent:
     linkLists:
        - linkListType: whats-new
          links:
+          - text: "Configure the rich text editor control on portals (preview)"
+            url: component-rte-tutorial.md                 
           - text: Configure Dataverse search in portals (preview)
             url: configure/dataverse-search.md         
           - text: Configure choices column for portals (preview)
@@ -32,8 +34,6 @@ landingContent:
             url: progressive-web-apps.md         
           - text: Liquid template tag for code components (preview)
             url: component-framework-liquid.md         
-          - text: Create multiple portals of same type
-            url: create-additional-portals.md
        - linkListType: reference
          links:
           - text: Latest released version of portals

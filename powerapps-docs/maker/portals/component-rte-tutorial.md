@@ -19,7 +19,7 @@ contributors:
 
 [This article is pre-release documentation and is subject to change.]
 
-In this tutorial, you'll configure Power Apps portals to add the [rich text editor control](../model-driven-apps/rich-text-editor-control.md) to a basic form and then add the basic form to a web page. Portal users will be able interact with the rich text editor control on a web page.
+In this tutorial, you'll configure Power Apps portals to add the [rich text editor control](../model-driven-apps/rich-text-editor-control.md) to a basic form and then add the basic form to a web page. Portal users will be able interact with the rich text editor control to format text on the.
 
 ## Prerequisites
 
@@ -28,9 +28,6 @@ Your portal version must be [9.4.1.x](/power-platform/released-versions/portals/
 ## Step 1. Add the rich text editor control to a field in a model-driven app
 
 Follow the steps in the tutorial [Add or replace a text column for rich text editing](../model-driven-apps/rich-text-editor-control.md#add-or-replace-a-text-column-for-rich-text-editing) to add the component to a table on a model-driven form.
-
-> [!NOTE]
-> Rich text columns will require additional characters to store the rich text metadata.
 
 ## Step 2. Verify the model-driven app with the new control
 
@@ -54,7 +51,7 @@ In this step, you'll create a new basic form in portals and then add the control
 
 1. Select *Feedback (feedback)* as the **Table Name**.
 
-1. Select the name of the model-driven app form that you added the rich text control. For example *Feedback*.
+1. Select the name of the model-driven app form that you added the rich text control. For example, *simple contact us form*.
 
 1. Select your portal website.
 
@@ -64,7 +61,7 @@ In this step, you'll create a new basic form in portals and then add the control
 
 ### Step 3.2. Add the rich text editor control to the basic form
 
-1. Open Portal Management app.
+1. Open the [Portal Management app](/configure/configure-portal.md).
 
 1. On the left pane, under **Content**, select **Basic Forms**.
 
@@ -76,7 +73,7 @@ In this step, you'll create a new basic form in portals and then add the control
 
 1. Select *Attribute* as the **Type**.
 
-1. Select the name of the column for which the rich text control is enabled as the Attribute Logical Name. For example, Comments (comments).
+1. Select the name of the column for which the rich text control is enabled as the **Attribute Logical Name**. For example, *Comments (comments)*.
 
     :::image type="content" source="media/component-rte-tutorial/basic-form-metadata.png" alt-text="Basic form metadata configuration.":::
 
@@ -86,6 +83,8 @@ In this step, you'll create a new basic form in portals and then add the control
 
     :::image type="content" source="media/component-rte-tutorial/basic-form-metadata-controlstyle.png" alt-text="Basic form metadata configuration setting the control style to 'code component'.":::
 
+1. Select Save & Close.
+
 ## Step 4. Create a web page in portals with the basic form
 
 1. Open your portal in the [Power Apps portals Studio](portal-designer-anatomy.md).
@@ -94,7 +93,7 @@ In this step, you'll create a new basic form in portals and then add the control
 
 1. Select the **Blank** layout.
 
-1. On the right-side property pane, update the webpage name. For example, *Feedback*.
+1. On the right-side property pane, update the web page name. For example, *Feedback*.
 
 1. Update the **Partial URL**. For example, *feedback*.
 
@@ -114,17 +113,17 @@ In this step, you'll create a new basic form in portals and then add the control
 1. Under **Permissions**, select **Manage table permissions** and make sure you have the appropriate [table permissions](/configure/assign-entity-permissions.md) and [web roles](/configure/create-web-roles.md) configured for the Dataverse table associated to the form.
     
     > [!NOTE]
-    > By default, the **feedback** table has **create** permissions configured for the default web roles. See the (contact us sample)[contact-us-sample.md] for more information.
+    > By default, the **feedback** table has **create** permissions configured for the default web roles. For more information, see the [contact us sample](contact-us-sample.md).
 
 1. On the top-right corner, select **Browse website**.
 
-    The web page will now show the basic form for the feedback table with the rich text editor control, similar to how it appears while using the model-driven app.
+    The web page will now show the basic form for the feedback table with the rich text editor control, similar to how the form appears while using the model-driven app.
 
     :::image type="content" source="media/component-rte-tutorial/basic-form-portal.png" alt-text="Basic form showing rich text component on a web page.":::
 
 ## Limitations
 
-If an image is uploaded using the rich text editor control in a model-driven app using the **From File** option, the image will not render on the portal. You can use the **Web Address (URL)** option to specify an image that can appear on the portal basic form.
+If you upload an image using the rich text editor control in a model-driven app using the **From File** option, the image will not render on the portal. You can use the **Web Address (URL)** option to specify an image that can appear on the portal basic form.
 
 :::image type="content" source="media/component-rte-tutorial/image-webaddress.png" alt-text="Uploading an image using the web address option in a model-driven app.":::
 
