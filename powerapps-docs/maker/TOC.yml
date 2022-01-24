@@ -751,6 +751,8 @@
             href: ./canvas-apps/functions/function-now-today-istoday.md
           - name: IsType
             href: ./canvas-apps/functions/function-astype-istype.md
+          - name: IsUTCToday
+            href: ./canvas-apps/functions/function-now-today-istoday.md            
           - name: JSON
             href: ./canvas-apps/functions/function-json.md
           - name: Language
@@ -943,6 +945,10 @@
             href: ./canvas-apps/functions/function-lower-upper-proper.md
           - name: User
             href: ./canvas-apps/functions/function-user.md
+          - name: UTCNow
+            href: ./canvas-apps/functions/function-now-today-istoday.md
+          - name: UTCToday
+            href: ./canvas-apps/functions/function-now-today-istoday.md            
           - name: Validate
             href: ./canvas-apps/functions/function-validate.md
           - name: Value
