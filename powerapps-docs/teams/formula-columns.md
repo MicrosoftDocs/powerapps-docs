@@ -8,7 +8,7 @@ ms.topic: conceptual
 ms.custom: 
 ms.date: 01/24/2022
 ms.subservice: teams
-ms.author: rechauha
+ms.author: matp
 ms.reviewer: matp
 contributors:
   - mattp123
