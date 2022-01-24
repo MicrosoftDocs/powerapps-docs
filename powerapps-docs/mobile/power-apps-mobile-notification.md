@@ -159,7 +159,7 @@ You can set your app to open, for example, the **Case details** page as soon as 
 * Currently, we don't provide push notifications for users who run apps only in a web browser.
 * Notifications show the generic Power Apps icon instead of a specific app icon.
 * Notifications are not supported in China.
-* Battery optimization settings on an Android can interfere with the Power Apps mobile receiving notifications. To receive notifications for Power Apps mobile, turn off battery optimization.
+* Battery optimization settings on an Android device can interfere with receiving notifications for Power Apps mobile . To receive notifications for Power Apps mobile, turn off battery optimization.
 
 
 For reference information, see [Power Apps Notification reference](/connectors/powerappsnotification/).
