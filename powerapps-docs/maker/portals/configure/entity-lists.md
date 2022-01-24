@@ -523,7 +523,7 @@ The following field mappings can be configured to display list records as dated 
 | - | - |
 | Initial View | Initial view of the calendar; year, month, week, or day. Default value is month. |
 | Initial Date | The initial start date when the calendar is rendered. Default (blank) will the be the current date. |
-| Time Zone Display Mode | The time zone the calendar will be displayed in. No option selected will display the events using the configuration of how the date column was configured in Dataverse. The *User Local Time Zone* will display events in the calendar using the time zone of the user viewing the portal. *Specific Time Zone* will display the calendar events with a specified time zone. |
+| Time Zone Display Mode | The time zone the calendar will be displayed in. No option selected will display the events based on how the date column was configured in Dataverse. The *User Local Time Zone* will display events in the calendar using the time zone of the user viewing the portal. *Specific Time Zone* will display the calendar events with a specified time zone. |
 | Display Time Zone | If the **Time Zone Display Mode** is set to *Specific Time Zone* this value will determine the time zone the calendar events are displayed. |
 | Style | The setting displays the calendar in either a *Full Calendar* format or as an *Event List* |
 
