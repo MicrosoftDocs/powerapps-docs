@@ -5,8 +5,8 @@ author: gregli-msft
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: nkrb
-ms.date: 12/14/2021
+ms.reviewer: tapanm-msft
+ms.date: 01/24/2022
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
