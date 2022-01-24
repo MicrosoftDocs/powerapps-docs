@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 12/20/2021
+ms.date: 01/24/2022
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: ndoelman
@@ -58,6 +58,8 @@ contributors:
     1. Update the *Page Template* lookup field to *Access Denied*.
     1. Select **Save**.
     1. [Clear the portal cache](/admin/clear-server-side-cache.md#steps-to-clear-portal-server-side-cache).
+
+- When configuring a [basic form](configure/entity-forms.md), the incorrect model-driven form is displayed when rendered as a basic form on a page. This may happen when a model-driven form name is duplicated across different form types (**Main**, **Card**, and **QuickViewform**). Only one form name appears when configuring or creating a basic form for the portal. To resolve the issue, rename or create a copy (with a unique name) of the model-driven form to use when configuring the basic form.
 
 ## Power Apps portals Studio issues
 
