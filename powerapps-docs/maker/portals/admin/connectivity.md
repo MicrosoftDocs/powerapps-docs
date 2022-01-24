@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 01/17/2021
+ms.date: 01/24/2021
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
@@ -25,7 +25,8 @@ Each portal has a separate Azure Active Directory application associated with it
 You can see the associated portal application in Azure Active Directory. The name of this application will be **Power Apps portals** with the name of the portal concatenated. For example, a portal named *contoso portal* will be **Power Apps portals - contoso portal**. 
 
 > [!NOTE]
-> If the portal name contains special characters or the full application name string exceeds 120 characters, the name will simply be **Power Apps portals**. Portals created earlier will appear as **Microsoft CRM Portals**.
+> If the portal name contains special characters or the full application name string exceeds 120 characters, the portal application name will simply be **Power Apps portals**. Portals created earlier than 2022 will appear as **Microsoft CRM Portals**. 
+> Changing the portal name will not update the portal application name in Azure Active Directory.
 
 The portal ID is in the **App ID URI** field in the Azure Active Directory application. The person who provisions the portal owns this application. Don't delete or modify this application, or you might break the portal functionality. You must be the application owner to manage a portal from the Power Apps Portals admin center.
 
