@@ -277,7 +277,7 @@ The following scalar functions are available with formula columns.
    :::column-end:::
 :::row-end:::
 
-\* The **Text** and **Value** functions only work with whole numbers, where no decimal separator is involved.  Since the decimal separator varies across locales, and formula columns are evlauted without locale knowledge, there is no way to properly interpret or generate the decimal separator.
+\* The **Text** and **Value** functions only work with whole numbers, where no decimal separator is involved. Since the decimal separator varies across locales, and formula columns are evaluated without locale knowledge, there's no way to properly interpret or generate the decimal separator.
 
 ### See also
 
