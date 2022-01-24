@@ -62,17 +62,17 @@ The following function types are supported with the formulas used in a formula c
 - Boolean
 - Option Set
 - DateTime (TZI)
-- DateTime (User local), but limited to copmarisons with other user local values and the DateAdd function.
-- DateTime (Date only), but limited to comparisons with other date only values and the DateAdd function.
+- DateTime (User local) (limited to comparisons with other user local values and the DateAdd function)
+- DateTime (Date only) (limited to comparisons with other date-only values, and the DateAdd function)
 - Currency
 - Whole Number, promoted to Decimal
 
 ## Operators
 
-These operators are supported with the formulas used in a formula column: <br />
+These operators are supported with the formulas used in a formula column: <br>
 +, -, \*, /, %, ^, in, exactin, &
 
-Details can be found with the [documentation for all Power Fx operators](../maker/canvas-apps/functions/operators.md).
+More information: [Operators in Power Apps](../maker/canvas-apps/functions/operators.md)
 
 ## Available functions 
 
@@ -277,7 +277,7 @@ The following scalar functions are available with formula columns.
    :::column-end:::
 :::row-end:::
 
-\* The **Text** and **Value** functions only work with whole numbers, where no decimal separator is involved. Since the decimal separator varies across locales, and formula columns are evaluated without locale knowledge, there's no way to properly interpret or generate the decimal separator.
+\* The **Text** and **Value** functions only work with whole numbers, where no decimal separator is involved. Since the decimal separator varies across locales, and the formula columns are evaluated without locale knowledge, there's no way to properly interpret or generate the decimal separator.
 
 ### See also
 

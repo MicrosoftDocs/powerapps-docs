@@ -385,7 +385,7 @@ Other elements include:
 
 **[TimeZoneOffset](functions/function-dateadd-datediff.md)** – Returns the difference between UTC and the user's local time in minutes.
 
-**[Today](functions/function-now-today-istoday.md)** – Returns the current date only value.
+**[Today](functions/function-now-today-istoday.md)** – Returns the current date-only value.
 
 **[Trace](functions/function-trace.md)** - Provide additional information in your test results.
 
@@ -412,7 +412,7 @@ Other elements include:
 
 **[UTCNow](functions/function-now-today-istoday.md)** – Returns the current date/time value in Coordinated Universal Time (UTC).
 
-**[UTCToday](functions/function-now-today-istoday.md)** – Returns the current date only value in Coordinated Universal Time (UTC).
+**[UTCToday](functions/function-now-today-istoday.md)** – Returns the current date-only value in Coordinated Universal Time (UTC).
 
 ## V
 **[Validate](functions/function-validate.md)** – Checks whether the value of a single column or a complete record is valid for a data source.

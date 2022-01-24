@@ -39,7 +39,7 @@ The **IsToday** function tests whether a date/time value is between midnight tod
 See [Date, Time, and DateTime in the data types documentation](data-types.md#date-time-and-datetime) and [working with dates and times](../show-text-dates-times.md) for more information.
 
 ## Volatile Functions
-**Now**, **Today**, **UTCNow**, and **UTCToday** are volatile functions.  Each time one of these functions is evaluated it returns a different value.  
+**Now**, **Today**, **UTCNow**, and **UTCToday** are volatile functions. These functions return a different value for each evaluation.
 
 When used in a data flow formula, a volatile function will only return a different value if the formula in which it appears is reevaluated.  If nothing else changes in the formula then it will have the same value throughout the execution of your app.
 
