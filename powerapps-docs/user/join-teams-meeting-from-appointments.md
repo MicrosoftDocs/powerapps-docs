@@ -26,7 +26,7 @@ You can now create and then join a Teams meeting from an appointment in your mod
 
 > [!NOTE]
 > - This is a preview feature. Your system administrator needs to turn on the Collaboration feature called **End users can add and join Teams meeting from appointments in model-driven apps**  in your environment. For information, see [Manage feature settings](/power-platform/admin/settings-features).
-> - When this feature is enabled, the description field in an appointment also supports editing and viewing in rich-text.
+> - When this feature is enabled, the description field in an appointment also supports editing and viewing in rich text.
 
 
 ## Add a Teams meeting to an appointment activity
@@ -38,8 +38,8 @@ You can now create and then join a Teams meeting from an appointment in your mod
 
 ## Join a Teams meeting from an appointment
 
-1. Open an appointment activity. 
-2. On the command bar select **Join Teams Meeting** or in the details section, select the **Join Teams Meeting** link. You can also scroll down the **Description** section of the appointmnet and then select **Click here to join the meeting**.
+1. Open a appointment activity. 
+2. On the command bar select **Join Teams Meeting** or in the details section, select the **Join Teams Meeting** link. You can also scroll down the **Description** section of the appointment and then select **Click here to join the meeting**.
 3. Select how you want to the Teams meeting.
 
 
