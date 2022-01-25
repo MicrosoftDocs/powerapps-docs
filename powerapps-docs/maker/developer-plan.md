@@ -182,3 +182,6 @@ No. However, users may start a Power Automate trial including RPA use rights to 
 
 ### Does the Power Apps Developer plan include AI Builder use rights? 
 No. However, users may start an AI Builder trial to try out the AI Builder capabilities.
+
+### Why does a banner appear with apps running in the developer environment?
+Power Apps played in the developer environment display a banner that appears temporarily to remind makers an app is running in the developer environment. The developer environment is not intended to support production scenarios. Note, an app built in a developer environment which is moved to a non-developer environment will not display developer environment banner when running in a non-developer environment.  
