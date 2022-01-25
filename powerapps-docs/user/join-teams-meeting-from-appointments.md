@@ -38,7 +38,7 @@ You can now create and then join a Teams meeting from an appointment in your mod
 
 ## Join a Teams meeting from an appointment
 
-1. Open the appointment activity. 
+1. Open an appointment activity. 
 2. On the command bar select **Join Teams Meeting** or in the details section, select the **Join Teams Meeting** link. You can also scroll down the **Description** section of the appointmnet and then select **Click here to join the meeting**.
 3. Select how you want to the Teams meeting.
 
