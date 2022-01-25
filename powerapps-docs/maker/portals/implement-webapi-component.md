@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/10/2021
+ms.date: 01/25/2022
 ms.subservice: portals
 ms.author: gisingh
 ms.reviewer: ndoelman
@@ -28,7 +28,6 @@ The following is an example of implementing a code component that uses the porta
 - Your portal version must be [9.3.10.x](/power-platform/released-versions/portals/portalupdate9310x) or higher.
 - Your starter portal package must be [9.2.2103.x](versions/package-version-9.2.2103.md) or higher.
 - You need to enable the site setting to enable the portals Web API for your portal. [Site settings for the Web API](web-api-overview.md#site-settings-for-the-web-api)
-- Portals requires Read permission to be set on the Web Resource table before users can see the code component on the webpage. [Allow read access to a web-resource table](component-framework.md#allow-read-access-to-a-web-resource-table)
 - Configure table security using table permission. [Table permissions using studio](configure/entity-permissions-studio.md)
 
 ## Code
