@@ -751,6 +751,8 @@
             href: ./canvas-apps/functions/function-now-today-istoday.md
           - name: IsType
             href: ./canvas-apps/functions/function-astype-istype.md
+          - name: IsUTCToday
+            href: ./canvas-apps/functions/function-now-today-istoday.md            
           - name: JSON
             href: ./canvas-apps/functions/function-json.md
           - name: Language
@@ -943,6 +945,10 @@
             href: ./canvas-apps/functions/function-lower-upper-proper.md
           - name: User
             href: ./canvas-apps/functions/function-user.md
+          - name: UTCNow
+            href: ./canvas-apps/functions/function-now-today-istoday.md
+          - name: UTCToday
+            href: ./canvas-apps/functions/function-now-today-istoday.md            
           - name: Validate
             href: ./canvas-apps/functions/function-validate.md
           - name: Value
@@ -1021,6 +1027,8 @@
       href: ./canvas-apps/how-to/mobile-apps-address-map.md
     - name: Create an app using the Measure in MR control
       href: ./canvas-apps/how-to/build-apps-measure-in-mr.md
+    - name: Create a canvas app with deep link to a specific screen
+      href: ./canvas-apps/how-to/deep-linking.md
   - name: Save and publish an app
     href: ./canvas-apps/save-publish-app.md
   - name: Share an app and its dependencies
@@ -1217,6 +1225,8 @@
             href: ./model-driven-apps/page-code-components.md     
           - name: Add connectors to a custom page
             href: ./model-driven-apps/page-data-connectors.md
+          - name: Localize text for a custom page
+            href: ./model-driven-apps/custom-page-localize.md
           - name: Known issues with custom pages
             href: ./model-driven-apps/model-app-page-issues.md
           - name: Use monitor to troubleshoot custom pages
@@ -1615,8 +1625,8 @@
                   href: ./portals/use-code-editor.md
                 - name: Add Power BI
                   href: ./portals/add-powerbi.md
-                - name: Add a chatbot (preview)
-                  href: ./portals/add-chatbot.md                 
+                - name: Add a chatbot
+                  href: ./portals/add-chatbot.md
         - name: Work with templates
           href: ./portals/work-with-templates.md
         - name: Work with themes
