@@ -86,7 +86,7 @@ Power Apps trial licenses are only available in the Azure commercial cloud. Powe
 
 ### What happens when my trial expires?
 
-You'll be prompted to request an extension of the trial or purchase a plan 30 days after the trial starts. You can find details about all plans on the [pricing page](https://powerapps.microsoft.com/pricing/).
+You'll be prompted to request an extension of the trial or purchase a plan 30 days after the trial starts. Power Apps trials allows users to renew the trial two more times after the initial 30 day trial ended, for a full trial period of up to 90 days. You can find details about all plans on the [pricing page](https://powerapps.microsoft.com/pricing/).
 
 If you don't extend the trial or purchase a plan but you still have another kind of license, you can use all the features of Power Apps that your other license provides. Any data in Dataverse will remain as it is, and any app or flow that uses Dataverse will continue to run as it did if your license supports them. If you try to use premium Power Apps features but your existing license doesn't support them (for example, modify a schema or entities in Dataverse), you'll be prompted to purchase a plan.
 
