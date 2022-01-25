@@ -5,7 +5,7 @@ author: GitanjaliSingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/10/2021
+ms.date: 01/25/2022
 ms.subservice: portals
 ms.author: gisingh
 ms.reviewer: ndoelman
@@ -109,10 +109,6 @@ For prerequisites, and to learn about supported/unsupported code components in p
 1. On the top-right corner, select **Browse website**.
 
 1. The webpage will now show the control added on it.
-
-### Step 2. Allow Read access to the Web Resource table
-
-Follow the steps outlined in [Allow Read access to the Web Resource table](component-framework-tutorial.md#step-5-allow-read-access-to-the-web-resource-table).
 
 ## Next steps
 

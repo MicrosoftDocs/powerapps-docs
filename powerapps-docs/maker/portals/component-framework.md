@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/18/2021
+ms.date: 01/25/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
@@ -170,40 +170,6 @@ To add a code component to a basic form:
 
 > [!Important]
 > If the basic form *Auto Generate Steps From Tabs* is selected in the **Additional Settings** section of the **Form Options** tab, the code component will not be loaded for the attribute on the web page.
-
-## Allow Read access to a Web Resource table
-
-Portals requires **Read** permission to be set on the **Web Resource** table before users can see the code component on the webpage with the basic form.
-
-To configure Read access on a **Web Resource** table:
-
-1. Open [Portal Management](configure/configure-portal.md) app.
-
-1. On the left pane, select **Table Permission**.
-
-1. Select **New**.
-
-1. Enter **Name.**
-
-1. Select *Web Resource (webresource)* for **Table Name**.
-
-1. Select your website record.
-
-1. Select *Global* for **Scope.**
-
-1. In **Privileges**, select *Read*.
-
-1. Select **Save**.
-
-1. Under the **Web Roles** section, select **Add Existing Web Role**.
-
-1. Select the web role for the users that should see the code component in portals.
-
-    For example, **Anonymous Users** for anonymous users, **Authenticated Users** for users authenticated by portals, or a custom web role.
-
-1. Select **Save & Close**.
-
-Once you add the basic form to a webpage, users assigned to the selected web role will be able to see the code component on the portal page having the selected basic form.
 
 ## Code components using the portal Web API
 
