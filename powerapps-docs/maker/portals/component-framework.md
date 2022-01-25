@@ -168,9 +168,6 @@ To add a code component to a basic form:
 
 1. Save and close the form.
 
-> [!Important]
-> If the basic form *Auto Generate Steps From Tabs* is selected in the **Additional Settings** section of the **Form Options** tab, the code component will not be loaded for the attribute on the web page.
-
 ## Code components using the portal Web API
 
 A code component can be built and added to a webpage that can use the [portal Web API](web-api-overview.md) to perform create, retrieve, update, and delete actions. This feature allows greater customization options when developing portal solutions. For more information, go to [Implement a sample portal Web API component](implement-webapi-component.md).
