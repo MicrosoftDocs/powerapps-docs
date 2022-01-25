@@ -14,7 +14,7 @@ ms.reviewer: kathyos
 # Determining which type of app to make
 
 In Power Apps, you have two options when creating apps: model-driven apps and canvas apps.
-
+Test sentence
 The following is a basic, high-level comparison. For much more detail about these two types of apps, see  [Overview of creating apps in Power Apps](../../maker/index.md).
 
 :::row:::
