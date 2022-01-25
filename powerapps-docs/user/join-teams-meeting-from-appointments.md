@@ -20,24 +20,24 @@ search.app:
 ---
 # Create and join a Teams meeting from an appointment (preview)
 
-Now you can create and join a Teams meeting from an appointment in your model-driven app.
+You can now create and then join a Teams meeting from an appointment in your model-driven app.
 
 > [!NOTE]
 > - This is a preview feature. Your system administrator needs to turn on the Collaboration feature called **End users can add and join Teams meeting from appointments in model-driven apps**  in your environment. For information, see [Manage feature settings](/power-platform/admin/settings-features).
-> When this feature is enabled, the description field for an appointment will support editing and viewing in rich-text.
+> When this feature is enabled, the description field in an appointment also supports editing and viewing in rich-text.
 > ![Graphical user interface Description automatically generated](media/image3.png)
 
 ## Add a Teams meeting to an appointment activity
 
-1. Open or create an new appointment. For a new appointment, enter a **Subject** for the appointment.
+1. Open or create an new appointment. 
 2. In the **Details** section set the **Teams meeting** toggle to **Yes**.
-3. Select the other required fields and when you're done, select **Save**.
+3. Select the other required fields and then select **Save**.
 
 
 ## Join a Teams meeting from an appointment
 
 1. Open the appointment activity. 
-2. On the command bar select **Join Teams Meeting** or in the details section, select the **Join Teams Meeting** link. You can also scroll down the **Description** section of the appointmnet and then select **Click her to join the meeting**.
+2. On the command bar select **Join Teams Meeting** or in the details section, select the **Join Teams Meeting** link. You can also scroll down the **Description** section of the appointmnet and then select **Click here to join the meeting**.
 3. Select how you want to the Teams meeting.
 
 
