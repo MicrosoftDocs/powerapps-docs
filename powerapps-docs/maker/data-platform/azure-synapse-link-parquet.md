@@ -2,7 +2,7 @@
 title: "Transform Dataverse data from CSV to Parquet | MicrosoftDocs"
 description: "Learn how to transform Dataverse data to from CSV to Parquet with a Pipeline Template."
 ms.custom: ""
-ms.date: 08/06/2021
+ms.date: 01/24/2021
 ms.reviewer: "Mattp123"
 ms.service: powerapps
 ms.suite: ""
@@ -61,15 +61,19 @@ This section describes the prerequisites necessary to transform Dataverse data t
 
     ![Pipeline Template Parquet](media/parquet-template.png "Pipeline Template Parquet")
 
-4. Input the Azure SQL database in the first entry and the Azure Data Lake Storage Gen2 account in the second entry and select **Use this template**.
+4. Input the Azure Data Lake Storage Gen2 account containing the exported Dataverse data for the first entry and the destination Azure Data Lake Storage Gen2 account where the parquet files will be created for the second entry. Select **Use this template**.
 
-    ![Configure Template SQL](media/configure-template.png "Configure Template SQL")
+    ![Configure Template Parquet](media/configure-parquet-template.png "Configure Template Parquet")
 
-5. Open the data flow and select **ADLS** > **Source options**. Replace the container in the **Root location** with your container containing the exported Dataverse data. Replace the **entity** with the Dataverse table name you wish to copy to Azure SQL database.
+5. Select the data flow **Settings** tab and replace *ContainerName* and *TableName*.
 
-    ![Configure Source Options](media/source-options-template.png "Configure Source Options")
+    ![Configure Parquet Settings](media/parquet-settings.png "Configure Parquet Settings")
 
-6. Navigate to the pipeline and run it. Optionally, **Add trigger** to copy the data at specific time intervals.
+6. Select the data flow **Parameters** tab and replace *ContainerName* and *TableName*.
+
+    ![Configure Parquet Parameters](media/parquet-parameters.png "Configure Parquet Parameters")
+
+7. Navigate to the pipeline and run it. Optionally, **Add trigger** to transform the data at specific time intervals.
 
 ### See also
 
