@@ -1,8 +1,8 @@
 ---
-title: "Query Azure Synapse Link for Dataverse data with serverless SQL pool | MicrosoftDocs"
-description: "Learn how to query exported Dataverse table data with serverless SQL pool"
+title: "Run Synapse Pipelines with your Azure Synapse Link for Dataverse data | MicrosoftDocs"
+description: "Learn how to run Synapse Pipelines with your exported Dataverse table data"
 ms.custom: ""
-ms.date: 08/06/2021
+ms.date: 01/24/2021
 ms.reviewer: "Mattp123"
 ms.service: powerapps
 ms.suite: ""
@@ -10,7 +10,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "how-to"
 applies_to: 
   - "powerapps"
-author: "sama-zaki"
+author: "sabinn-msft"
 ms.assetid: 
 ms.subservice: dataverse-maker
 ms.author: "matp"
@@ -20,14 +20,14 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
-contributors: ""
+contributors: "sama-zaki"
 ---
 
-# Query Azure Synapse Link for Dataverse data with serverless SQL pool
+# Run Synapse Pipelines with your Azure Synapse Link for Dataverse data
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-You can use the Azure Synapse Link to connect your Microsoft Dataverse data to Azure Synapse Analytics to explore your data and accelerate time to insight. This article shows you how to query your Dataverse data with built-in serverless SQL pool in your Azure Synapse Analytics workspace.
+You can use the Azure Synapse Link to connect your Microsoft Dataverse data to Azure Synapse Analytics to explore your data and accelerate time to insight. This article shows you how to run Synapse Pipelines utilizing the Workspace DB connector in Data Flow activities.
 
 > [!NOTE]
 > Azure Synapse Link for Microsoft Dataverse was formerly known as Export to data lake. The service was renamed effective May 2021 and will continue to export data to Azure Data Lake as well as Azure Synapse Analytics.
@@ -42,7 +42,7 @@ This section describes the prerequisites necessary to query your Dataverse data 
 
 - **Synapse administrator.** You must be granted the **Synapse Administrator** role access within Synapse studio.
 
-## Query your Dataverse data with serverless SQL pool
+## Create a data flow with and connect to your Dataverse data with the Workspace DB connector
 
 > [!NOTE]
 > Azure Synapse Link for Dataverse does not support the use of dedicated SQL pools at this time.
@@ -51,34 +51,31 @@ This section describes the prerequisites necessary to query your Dataverse data 
 
     ![Go to workspace.](media/go-to-workspace.png "Go to workspace")
 
-2. Expand **Databases**, select your Dataverse container. Your exported tables are displayed under the **Tables** directory on the left sidebar.
+2. Select **Develop** > **+** > **Data flow** to create a new data flow.
 
-    ![Find tables in Synapse.](media/find-tables-synapse.png "Find tables in Synapse")
+    ![Develop data flow.](media/develop-data-flow.png "Develop data flow")
 
-3. Right-click the desired table and select **New SQL script** > **Select TOP 100 rows**.
+3. Select **Add Source** from the workspace area and set the **Source type** to **Workspace DB**. Select the Dataverse database and a table to use in the pipeline.
 
-    ![Select top rows.](media/select-top-rows.png "Select top rows")
+    ![Workspace DB Connector.](media/workspace-db-connector.png "Workspace DB Connector")
 
-4. Select **Run**. Your query results are displayed on the **Results** tab. Alternatively, you can edit the script to your needs.
+4. Optionally, add other transformation steps.
 
-    ![Run query.](media/run-query.png "Run query")
+5. Add a sink to your data flow.
 
-## Query multiple Dataverse databases with serverless SQL pool
+## Create and run a Synapse Pipelines
 
-> [!NOTE]
-> Querying multiple Dataverse databases requires that both Dataverse environments are in the same region.
+1. Select **Integrate** > **+** > **Pipeline**.
 
-1. Add another Azure Data Lake Storage Gen2 account as a Linked service to the same Azure Synapse Analytics workspace where the current link resides.
+    ![Create Synapse Pipeline.](media/create-synapse-pipeline.png "Create Synapse Pipeline")
 
-2. Follow the configuration steps to create a new Azure Synapse Link with the new Azure Synapse Analytics and Azure Data Lake combination.
+2. Expand **Move & Transform**, then drag and drop a **Data flow** activity to the workspace.
 
-3. Navigate to the shared Synapse workspace and expand **Databases**. Select one of the Dataverse containers. Your exported tables are displayed under the **Tables** directory on the left sidebar.
+3. Under Settings, select the name of the data flow created in the previous section.
 
-4. Right-click a table, and then select **New SQL script** > **Select TOP 100 rows**.
+    ![Run Synapse Pipeline.](media/run-synapse-pipeline.png "Run Synapse Pipeline")
 
-5. Edit the query to combine the two datasets. For instance, you can join the datasets based on a unique ID value.
-
-6. Select **Run**. Your query results are displayed on the **Results** tab.
+4. Run the pipeline by selecting **Debug**. Optionally **Add trigger** to run the pipeline on a schedule.
 
 ### See also
 

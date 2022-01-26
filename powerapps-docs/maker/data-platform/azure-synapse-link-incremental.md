@@ -44,7 +44,7 @@ This section describes the prerequisites necessary to read the incremental updat
 
 ## Read the Incremental Updates of your Dataverse data
 
-1. Navigate to you Azure Synapse Analytics workspace.
+1. Navigate to your Azure Synapse Analytics workspace.
 
 2. Select **Develop** from the left side panel, then select **+** > **SQL script**.
 

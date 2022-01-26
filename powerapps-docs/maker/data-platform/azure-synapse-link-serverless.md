@@ -51,7 +51,7 @@ This section describes the prerequisites necessary to query your Dataverse data 
 
     ![Go to workspace.](media/go-to-workspace.png "Go to workspace")
 
-2. Expand **Databases**, select your Dataverse container. Your exported tables are displayed under the **Tables** directory on the left sidebar.
+2. Expand **Lake database**, select your Dataverse container. Your exported tables are displayed under the **Tables** directory on the left sidebar.
 
     ![Find tables in Synapse.](media/find-tables-synapse.png "Find tables in Synapse")
 
