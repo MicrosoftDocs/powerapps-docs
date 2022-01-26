@@ -1,5 +1,5 @@
 ---
-title: "Access Copy Dataverse data to Azure SQL | MicrosoftDocs"
+title: "Copy Dataverse data to Azure SQL | MicrosoftDocs"
 description: "Learn how to copy Dataverse data to Azure SQL with a Pipeline Template."
 ms.custom: ""
 ms.date: 08/06/2021
