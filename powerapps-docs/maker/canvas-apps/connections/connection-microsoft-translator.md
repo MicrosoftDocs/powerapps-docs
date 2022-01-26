@@ -5,7 +5,7 @@ author: lancedMicrosoft
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.date: 01/18/2022
+ms.date: 01/27/2022
 ms.subservice: canvas-maker
 ms.author: lanced
 ms.reviewer: tapanm

@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: tutorial
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 01/14/2022
+ms.date: 01/27/2022
 ms.subservice: canvas-maker
 ms.author: denisem
 search.audienceType: 

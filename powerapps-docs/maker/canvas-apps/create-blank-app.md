@@ -8,7 +8,7 @@ ms.custom:
   - canvas
   - intro-internal
 ms.reviewer: 
-ms.date: 01/13/2022
+ms.date: 01/27/2022
 ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
@@ -54,7 +54,7 @@ Once created, the app opens in Power Apps Studio for you to start configuring th
 
 :::image type="content" source="media/create-blank-app/power-apps-studio.png" alt-text="Configure app functionality using Power Apps Studio..":::
 
-Choose **Create a form** to start configuring the app with a form, or **Create a gallery** to add a gallery. Select **Skip** to close the help, and start configuring app using Power Apps Studio with the next steps.
+Choose **Create a form** to start configuring the app with a form, or **Create a gallery** to add a gallery. Otherwise, select **Skip** to close the help, and start configuring app using Power Apps Studio.
 
 ## Next steps
 

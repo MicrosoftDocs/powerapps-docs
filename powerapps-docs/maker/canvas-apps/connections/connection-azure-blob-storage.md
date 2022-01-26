@@ -5,7 +5,7 @@ author: vasavib
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.date: 01/14/2022
+ms.date: 01/27/2022
 ms.subservice: canvas-maker
 ms.author: vabhavir
 ms.reviewer: tapanm
@@ -71,7 +71,7 @@ Now that you have the connection with Azure Blob Storage created, let's create a
 
 1. Create a [blank canvas app](../create-blank-app.md) with the name "Sample app for Azure Blob Storage" and **Phone** layout.
 
-1. Inside the Power Apps Studio, on the left-pane, select ![Data.](./media/connection-azure-blob-storage/select-data.png "Data").
+1. Inside Power Apps Studio, on the left-pane, select ![Data](./media/connection-azure-blob-storage/select-data.png "Data").
 
 1. Select **Add data**.
 
@@ -122,7 +122,8 @@ Now that you have the app connected to Azure Blob Storage, let's add galleries t
     ```powerapps-dot
     AzureBlobStorage.ListFolderV2(Gallery1.Selected.Id).value
     ```
-    This operation lists blobs in a container. More information: [List blobs](/connectors/azureblob#list-blobs) <br>
+
+    This operation lists blobs in a container. More information: [List blobs](/connectors/azureblob#list-blobs)
     
     > [!NOTE]
     > *Gallery1* in this formula is the reference to the gallery added earlier that lists all containers in the storage account. Update the formula with the gallery name if different.
