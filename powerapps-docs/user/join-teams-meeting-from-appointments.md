@@ -26,7 +26,7 @@ You can now create a Teams meeting and then join the meeting from the appointmen
 
 > [!NOTE]
 > - This is a preview feature. Your system administrator needs to turn on the Collaboration feature called **End users can add and join Teams meeting from appointments in model-driven apps**  in your environment. For information, see [Manage feature settings](/power-platform/admin/settings-features).
-> - When this feature is enabled, the description field in an appointment also supports editing and viewing in rich text.
+> - When this feature is enabled, the **Description** field in a appointment also supports editing and viewing in rich text.
 
 
 ## Add a Teams meeting to an appointment activity
