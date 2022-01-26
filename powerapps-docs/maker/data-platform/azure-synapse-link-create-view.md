@@ -42,7 +42,7 @@ This section describes the prerequisites necessary to create a view of your Data
 
 - **Synapse administrator.** You must be granted the **Synapse Administrator** role access within Synapse studio.
 
-- **SQL Database.** This guide assumes you have created an additional SQL database (Serverless or Dedicated) in your Azure Synapse Analytics workspace to save the view.
+- **SQL Database.** This guide assumes you have created an additional SQL database (Serverless Pool or Dedicated Pool) in your Azure Synapse Analytics workspace to save the view.
 
 ## Create a view your Dataverse data
 
@@ -50,34 +50,23 @@ This section describes the prerequisites necessary to create a view of your Data
 
     ![Go to workspace.](media/go-to-workspace.png "Go to workspace")
 
-2. Expand **Databases**, select your Dataverse container. Your exported tables are displayed under the **Tables** directory on the left sidebar.
+2. Expand **SQL database**, and select the **...** next to the database where you will store your view. The select **New SQL script** > **Empty script**.
 
-    ![Find tables in Synapse.](media/find-tables-synapse.png "Find tables in Synapse")
+    ![New empty script.](media/new-empty-script.png "New empty script")
 
-3. Right-click the desired table and select **New SQL script** > **Select TOP 100 rows**.
+3. Run a create view script by specifying a view name, the column names, Dataverse database name, and the exported table name.
 
-    ![Select top rows.](media/select-top-rows.png "Select top rows")
+```sql
+CREATE VIEW [VIEW NAME] 
+AS
+SELECT [COLUMN NAMES]
+FROM [DATAVERSE DATABASE NAME].[dbo].[TABLE NAME]
 
-4. Select **Run**. Your query results are displayed on the **Results** tab. Alternatively, you can edit the script to your needs.
+```
 
-    ![Run query.](media/run-query.png "Run query")
+4. Find the new view under the **Views** directory in the SQL Database.
 
-## Query multiple Dataverse databases with serverless SQL pool
-
-> [!NOTE]
-> Querying multiple Dataverse databases requires that both Dataverse environments are in the same region.
-
-1. Add another Azure Data Lake Storage Gen2 account as a Linked service to the same Azure Synapse Analytics workspace where the current link resides.
-
-2. Follow the configuration steps to create a new Azure Synapse Link with the new Azure Synapse Analytics and Azure Data Lake combination.
-
-3. Navigate to the shared Synapse workspace and expand **Databases**. Select one of the Dataverse containers. Your exported tables are displayed under the **Tables** directory on the left sidebar.
-
-4. Right-click a table, and then select **New SQL script** > **Select TOP 100 rows**.
-
-5. Edit the query to combine the two datasets. For instance, you can join the datasets based on a unique ID value.
-
-6. Select **Run**. Your query results are displayed on the **Results** tab.
+    ![Create view result.](media/create-view-result.png "Create view result")
 
 ### See also
 
