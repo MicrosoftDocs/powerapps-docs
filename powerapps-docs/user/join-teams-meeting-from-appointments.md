@@ -40,7 +40,7 @@ You can now create a Teams meeting and join it from an appointment in your model
 
 1. Open a appointment activity. 
 2. Choose one of the following ways to join the meeting:
-     - On the command bar select, **Join Teams Meeting**
+     - On the command bar select, **Join Teams Meeting**.
      - From the **Details** section, select the **Join Teams Meeting** link. 
      - Scroll down the **Description** section of the appointment and select, **Click here to join the meeting**.
 3. Select how you want to the Teams meeting.
