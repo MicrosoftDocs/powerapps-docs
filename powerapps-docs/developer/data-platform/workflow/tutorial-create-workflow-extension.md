@@ -17,7 +17,7 @@ search.app:
 ---
 # Tutorial: Create workflow extension
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 
 This tutorial will show you the process to extend the workflow designer to add custom activities and logic using a workflow assembly, sometimes known as a workflow activity. The extensions you create this way can be used within a workflow, a custom action, or a dialog.
 

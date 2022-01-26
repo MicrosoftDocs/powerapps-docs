@@ -19,7 +19,7 @@ search.app:
 
 # Build your first model-driven app using the classic designer
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 In this article, you build a straightforward model-driven app that you can use to create, update, and delete account records as well as view data in one of the standard charts for the account table.
 

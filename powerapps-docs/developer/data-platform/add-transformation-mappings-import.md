@@ -18,7 +18,7 @@ search.app:
 ---
 # Add transformation mappings for import
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 Use transformation mapping to modify data before importing it. For example, split a full name that is contained in the source file into a first name and a last name to match the target columns for a table.  
   

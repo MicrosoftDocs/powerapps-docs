@@ -25,7 +25,7 @@ search.app:
 
 # Solution layers
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 Managed and unmanaged solutions exist at different levels within a Microsoft Dataverse environment. In Dataverse, there are two distinct layer levels:  
 - Unmanaged layer. All imported unmanaged solutions and unmanaged customizations exist at this layer. The unmanaged layer is a single layer.  

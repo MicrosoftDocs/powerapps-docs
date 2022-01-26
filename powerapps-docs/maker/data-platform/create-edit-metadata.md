@@ -21,7 +21,7 @@ search.app:
 
 # Tables and metadata in Microsoft Dataverse
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 Dataverse is designed so that you can quickly and easily create a data model for your application. Normally, you shouldn't have to concern yourself with some of the details about metadata that this topic will introduce. But if you want to develop a deeper understanding about how apps that use Dataverse work or you are evaluating what is possible, understanding the metadata used by Dataverse may provide you insight.
 

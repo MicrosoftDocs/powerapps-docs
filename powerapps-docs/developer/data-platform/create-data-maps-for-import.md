@@ -18,7 +18,7 @@ search.app:
 ---
 # Create data maps for import
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 To import data into Microsoft Dataverse, you must provide the appropriate data maps.  
   
