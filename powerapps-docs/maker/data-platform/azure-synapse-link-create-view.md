@@ -1,8 +1,8 @@
 ---
-title: "Query Azure Synapse Link for Dataverse data with serverless SQL pool | MicrosoftDocs"
-description: "Learn how to query exported Dataverse table data with serverless SQL pool"
+title: "Create a view of your Azure Synapse Link for Dataverse data | MicrosoftDocs"
+description: "Learn how to create a view of your exported Dataverse table data"
 ms.custom: ""
-ms.date: 08/06/2021
+ms.date: 01/24/2022
 ms.reviewer: "Mattp123"
 ms.service: powerapps
 ms.suite: ""
@@ -23,18 +23,18 @@ search.app:
 contributors: "sama-zaki"
 ---
 
-# Query Azure Synapse Link for Dataverse data with serverless SQL pool
+# Create a view of your Azure Synapse Link for Dataverse data
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-You can use the Azure Synapse Link to connect your Microsoft Dataverse data to Azure Synapse Analytics to explore your data and accelerate time to insight. This article shows you how to query your Dataverse data with built-in serverless SQL pool in your Azure Synapse Analytics workspace.
+You can use the Azure Synapse Link to connect your Microsoft Dataverse data to Azure Synapse Analytics to explore your data and accelerate time to insight. This article shows you how to create a view of your Dataverse data in your Azure Synapse Analytics workspace.
 
 > [!NOTE]
 > Azure Synapse Link for Microsoft Dataverse was formerly known as Export to data lake. The service was renamed effective May 2021 and will continue to export data to Azure Data Lake as well as Azure Synapse Analytics.
 
 ## Prerequisites
 
-This section describes the prerequisites necessary to query your Dataverse data after using the Azure Synapse Link for Dataverse service.
+This section describes the prerequisites necessary to create a view of your Dataverse data after using the Azure Synapse Link for Dataverse service.
 
 - **Azure Synapse Link for Dataverse.** This guide assumes that you have already exported data from Dataverse by using the [Azure Synapse Link for Dataverse](export-to-data-lake.md).
 
@@ -42,10 +42,9 @@ This section describes the prerequisites necessary to query your Dataverse data 
 
 - **Synapse administrator.** You must be granted the **Synapse Administrator** role access within Synapse studio.
 
-## Query your Dataverse data with serverless SQL pool
+- **SQL Database.** This guide assumes you have created an additional SQL database (Serverless or Dedicated) in your Azure Synapse Analytics workspace to save the view.
 
-> [!NOTE]
-> Azure Synapse Link for Dataverse does not support the use of dedicated SQL pools at this time.
+## Create a view your Dataverse data
 
 1. In Power Apps, select your desired Azure Synapse Link from the list, and then select **Go to Azure Synapse workspace**.
 
