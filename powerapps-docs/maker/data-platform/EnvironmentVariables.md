@@ -131,12 +131,11 @@ Ensure environment variable names are unique so they can be referenced accuratel
 The names **$authentication** and **$connection** are specially reserved parameters for flows and should be avoided. Flow save will be blocked if environment variables with those names are used.
 If an environment variable is used in a flow and the display name of the environment variable is changed, then the designer will show both the old and new display name tokens to help with identification. When updating the flow, it is recommended to remove the environment variable reference and add it again.
 
-## Use Azure Key Vault secrets
+## Use Azure Key Vault secrets (preview)
 
 Environment variables allow for referencing secrets stored in Azure Key Vault. These secrets are then made available for use with Power Platform components, such as Power Automate.  The actual secrets are only stored in Azure Key Vault and the environment variable simply references the secrets.  Using Azure Key Vault secrets with environment variables require that you configure Azure Key Vault so that Power Platform can read the specific secrets you want to reference. 
 
-> [!NOTE]
-> Environment variable support in custom connectors is now available. For information, see [Environment variable support in custom connectors](/connectors/custom-connectors/environment-variables).
+Environment variables referencing secrets are not currently available from the dynamic content selector for use in flows, but that support is planned.
 
 ### Configure Azure Key Vault
 
@@ -286,14 +285,17 @@ To remove the value, follow these steps:
 1. Under **Current Value**, select **...** > **Remove from this solution**.
    :::image type="content" source="media/remove-value-env-var.png" alt-text="Remove the value from an environment variable":::
 
+### Can I use environment variables in custom connectors?
+
+Yes. [Environment variable support in custom connectors](/connectors/custom-connectors/environment-variables)
+
 ### See also
 [Power Apps Blog: Environment variables available in preview!](https://powerapps.microsoft.com/blog/environment-variables-available-in-preview/) </BR>
 [EnvironmentVariableDefinition table/entity reference](/powerapps/developer/data-platform/reference/entities/environmentvariabledefinition) </BR>
 [Web API samples](/powerapps/developer/data-platform/webapi/web-api-samples) </BR>
-
 [Create Canvas app from scratch using Dataverse.](/powerapps/maker/canvas-apps/data-platform-create-app-scratch) </BR>
-[Create a flow with Dataverse](/flow/connection-cds)
-
+[Create a flow with Dataverse](/flow/connection-cds)</BR>
+[Environment variable support in custom connectors](/connectors/custom-connectors/environment-variables)</BR>
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)] 
