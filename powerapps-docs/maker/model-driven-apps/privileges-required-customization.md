@@ -26,7 +26,7 @@ search.app:
 ---
 # Privileges required for Dataverse customization
 
-[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 App users can personalize the system and even share some of their customizations with others, but only users with the correct privileges can apply changes for everyone.  
   

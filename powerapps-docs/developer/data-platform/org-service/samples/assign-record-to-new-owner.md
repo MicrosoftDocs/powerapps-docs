@@ -18,7 +18,7 @@ search.app:
 
 # Assign a record to a new owner
 
-[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 
 This sample shows how to assign an account to another user by using the [IOrganizationService.Update](/dotnet/api/microsoft.xrm.sdk.iorganizationservice.update?view=dynamics-general-ce-9) message.
 

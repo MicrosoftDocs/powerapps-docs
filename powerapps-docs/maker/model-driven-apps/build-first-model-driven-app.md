@@ -12,7 +12,7 @@ ms.reviewer: matp
 
 # Build your first model-driven app
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 In this tutorial, you create a model-driven app by using one of the standard tables that is available in Microsoft Dataverse, the account table.
 

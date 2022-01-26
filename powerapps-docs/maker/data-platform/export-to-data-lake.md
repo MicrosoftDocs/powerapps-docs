@@ -26,7 +26,7 @@ contributors:
 
 # What is Azure Synapse Link for Dataverse?
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 Azure Synapse Link for Dataverse enables you to get near real-time insights over your data in Microsoft Dataverse. With a tight seamless integration between Dataverse and Azure Synapse Analytics, Azure Synapse Link enables you to run analytics, business intelligence and machine learning scenarios on your data.
 

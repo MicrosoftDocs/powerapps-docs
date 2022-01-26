@@ -26,7 +26,7 @@ search.audienceType:
 ---
 # Monitor and manage real-time workflow processes
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 To monitor and manage processes, you must locate the process, evaluate the status, and perform any actions necessary to address problems.  
   

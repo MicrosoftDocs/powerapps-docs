@@ -27,7 +27,7 @@ search.app:
 
 # Create and configure model-driven app interactive experience dashboards
 
-[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 ## Introducing interactive dashboards
 

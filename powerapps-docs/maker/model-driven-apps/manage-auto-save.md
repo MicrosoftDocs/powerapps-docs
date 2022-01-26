@@ -25,7 +25,7 @@ search.app:
 ---
 # Disable auto-save in a model-driven app
 
-[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 Auto-save helps app users focus on their work without having to manage saving data in the form. Most people will appreciate not having to explicitly save data each time they update a row, but some organizations may have customizations that were designed expecting an explicit save. For these organizations there are options to manage how auto-save is applied.  
   

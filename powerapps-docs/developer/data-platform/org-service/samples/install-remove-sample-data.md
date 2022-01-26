@@ -18,7 +18,7 @@ search.app:
 
 # Install or remove sample data
 
-[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 
 This sample shows how to install or uninstall the sample data for an organization by using the [InstallSampleDataRequest](/dotnet/api/microsoft.crm.sdk.messages.installsampledatarequest?view=dynamics-general-ce-9) message.
 

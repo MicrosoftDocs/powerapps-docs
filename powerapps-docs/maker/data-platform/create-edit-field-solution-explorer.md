@@ -24,7 +24,7 @@ search.app:
 ---
 # Create and edit columns for Microsoft Dataverse using Power Apps solution explorer
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 Solution explorer provides one way to create and edit columns for Dataverse.
 

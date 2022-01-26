@@ -26,7 +26,7 @@ search.app:
 ---
 # Autonumber columns
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 Autonumber columns are columns that automatically generate alphanumeric strings whenever they are created. Makers can customize the format of these columns to their liking, and then rely on the system to generate matching values that automatically fill them in at runtime.
 

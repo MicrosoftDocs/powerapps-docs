@@ -18,7 +18,7 @@ search.app:
 
 # Create and retrieve table relationships
 
-[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 
 This sample shows how to create and retrieve table relationships. The following methods are used to create and retrieve the relationships:
 

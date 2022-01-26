@@ -17,7 +17,7 @@ search.app:
 ---
 # Sample: Retrieve currency exchange rate
 
-[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 
 <!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/sample-retrieve-currency-exchange-rate -->
 
