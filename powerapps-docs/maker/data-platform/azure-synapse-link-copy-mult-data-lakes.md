@@ -61,15 +61,19 @@ This section describes the prerequisites necessary to copy exported Dataverse da
 
     ![Pipeline Template Data Lake](media/data-lake-template.png "Pipeline Template Data Lake")
 
-4. Under the **Source** tab, replace the *SourceContainerName* with the source Dataverse data lake.
+4. Select a Linked Service for the *SourceDataLake* and the *DestinationDataLake*. Parameterize the *SourceDataLake* Linked Service to iterate through multiple data lakes. More information [here](https://docs.microsoft.com/azure/data-factory/parameterize-linked-services?tabs=data-factory).
+
+5. Select **Use this template**.
+
+6. Under the **Source** tab, replace the *SourceContainerName* with the source Dataverse data lake.
 
     ![Source data lake](media/source-data-lake.png "Source data lake")
 
-5. Under the **Sink** tab, replace the *DestinationContainerName* with the destination container name for your copied Dataverse data.
+7. Under the **Sink** tab, replace the *DestinationContainerName* with the destination container name for your copied Dataverse data.
 
     ![Destination data lake](media/dest-data-lake.png "Destination data lake")
 
-6. To run the pipeline, select **Debug** from the top bar. **Add trigger** to iterate through different source data lakes. More information [here](https://docs.microsoft.com/azure/data-factory/how-to-use-trigger-parameterization).
+8. To run the pipeline, select **Debug** from the top bar and optionally **Add trigger** to copy data on a schedule.
 
 ### See also
 
