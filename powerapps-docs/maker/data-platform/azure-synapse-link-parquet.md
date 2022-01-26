@@ -1,6 +1,6 @@
 ---
-title: "Access Copy Dataverse data to Azure SQL | MicrosoftDocs"
-description: "Learn how to copy Dataverse data to Azure SQL with a Pipeline Template."
+title: "Transform Dataverse data from CSV to Parquet | MicrosoftDocs"
+description: "Learn how to transform Dataverse data to from CSV to Parquet with a Pipeline Template."
 ms.custom: ""
 ms.date: 08/06/2021
 ms.reviewer: "Mattp123"
@@ -23,7 +23,7 @@ search.app:
 contributors: "sama-zaki"
 ---
 
-# Copy Dataverse data to Azure SQL with a Pipeline Template
+# Transform Dataverse data from CSV to Parquet with a Pipeline Template
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
@@ -42,26 +42,24 @@ This article shows you how to perform the following tasks:
 
 ## Prerequisites
 
-This section describes the prerequisites necessary to copy exported Dataverse data to Azure SQL.
+This section describes the prerequisites necessary to transform Dataverse data to from CSV to Parquet.
 
 - **Azure roles.** The user account that's used to sign in to Azure must be a member of the
-*contributor* or *owner* role, or an *administrator* of the Azure subscription. To view the permissions that you have in the subscription, go to the [Azure portal](https://portal.azure.com/), select your username in the upper-right corner, select **...**, and then select **My permissions**. If you have access to multiple subscriptions, select the appropriate one. To create and manage child resources for Data Factory in the Azure portal&mdash;including datasets, linked services, pipelines, triggers, and integration runtimes&mdash;you must belong to the *Data Factory Contributor* role at the resource group level or above.
+*contributor* or *owner* role, or an *administrator* of the Azure subscription. To view the permissions that you have in the subscription, go to the [Azure portal](https://portal.azure.com/), select your username in the upper-right corner, select **...**, and then select **My permissions**. If you have access to multiple subscriptions, select the appropriate one. To create and manage child resources for Data Factory in the Azure portal&mdash;including datasets, linked services, pipelines, triggers, and integration runtimes&mdash;you must belong to the *Data Factory Contributor* role at the resource group level or above.
 
-- **Azure Synapse Link for Dataverse.**This guide assumes that you've already exported Dataverse data by using [Azure Synapse Link for Dataverse](export-to-data-lake.md). In this example, the account table data is exported to the data lake.
+- **Azure Synapse Link for Dataverse.** This guide assumes that you've already exported Dataverse data by using [Azure Synapse Link for Dataverse](export-to-data-lake.md). In this example, the account table data is exported to the data lake.
 
 - **Azure Data Factory.** This guide assumes that you've already created a data factory under the same subscription and resource group as the storage account containing the exported Dataverse data.
 
-- **Azure SQL.** This guide assumes that you've already created an Azure SQL database under the same subscription and resource group as the storage account containing the exported Dataverse data.
+## Transform Dataverse data from CSV to Parquet with a Pipeline Template
 
-## Copy Dataverse data to Azure SQL with a Pipeline Template
-
-1. Open [Azure Data Factory](https://ms-adf.azure.com/en-us/datafactories) and select the data factory that is on the same subscription and resource group as the storage account containing your exported Dataverse data. Then select **Author** from the left panel.
+1. Open [Azure Data Factory](https://ms-adf.azure.com/datafactories) and select the data factory that is on the same subscription and resource group as the storage account containing your exported Dataverse data. Then select **Author** from the left panel.
 
 2. Select **+** and add a **Pipeline from template**.
 
-3. Search for and select the **Copy Dataverse data from Azure Data Lake to Azure SQL** template created by Microsoft.
+3. Search for and select the **Transform Dataverse data from CSV to Parquet** template created by Microsoft.
 
-    ![Pipeline Template SQL](media/sql-template.png "Pipeline Template SQL")
+    ![Pipeline Template Parquet](media/parquet-template.png "Pipeline Template Parquet")
 
 4. Input the Azure SQL database in the first entry and the Azure Data Lake Storage Gen2 account in the second entry and select **Use this template**.
 
