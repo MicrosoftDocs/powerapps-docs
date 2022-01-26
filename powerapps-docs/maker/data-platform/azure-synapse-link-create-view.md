@@ -54,7 +54,7 @@ This section describes the prerequisites necessary to create a view of your Data
 
     ![New empty script.](media/new-empty-script.png "New empty script")
 
-3. Run a create view script by specifying a view name, the column names, Dataverse database name, and the exported table name.
+3. Run a create view script by specifying a **view name**, the **column names**, **Dataverse database name**, and the exported **table name**.
 
 ```sql
 CREATE VIEW [VIEW NAME] 
