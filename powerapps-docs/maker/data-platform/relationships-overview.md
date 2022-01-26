@@ -27,7 +27,7 @@ search.app:
 
 # Table relationships overview
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 Table relationships define the ways that table rows can be associated with rows from other tables or the same table. There are two types of table relationships.
 - **One-to-many relationships**. In a one-to-many table relationship, many referencing (related) table rows can be associated with a single referenced (primary) table row. The referenced table row is sometimes referred to as the ”parent” and rows of the referencing table are referred to as ”children.”  A many-to-one relationship is just the child perspective of a one-to-many relationship.

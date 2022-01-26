@@ -19,7 +19,7 @@ search.app:
 
 # SharePoint, OneNote, and OneDrive integration with Microsoft Dataverse
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 Dataverse provides support for SharePoint, OneDrive, and OneNote integration. Integration with these services requires that you first enable SharePoint integration.   
 

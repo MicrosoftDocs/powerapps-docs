@@ -26,7 +26,7 @@ search.app:
 ---
 # Model-driven app reporting capabilities and considerations
 
-[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 Model-driven apps have many capabilities that allow customers to surface business data that helps them drive decisions and interact with their customers and their data more effectively.  
 

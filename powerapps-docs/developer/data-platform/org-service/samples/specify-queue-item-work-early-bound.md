@@ -17,7 +17,7 @@ search.app:
 ---
 # Sample: Specify a queue item to work on
 
-[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 
 <!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/sample-specify-queue-item-work-early-bound -->
 

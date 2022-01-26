@@ -18,7 +18,7 @@ search.app:
 ---
 # Customize labels to support multiple languages
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 When you create customizations in Microsoft Dataverse, you can support multiple languages by using labels.  
 

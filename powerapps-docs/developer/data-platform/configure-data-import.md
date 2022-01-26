@@ -18,7 +18,7 @@ search.app:
 ---
 # Configure data import
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 <!-- 
 Was Mike Carter's
