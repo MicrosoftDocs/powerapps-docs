@@ -20,7 +20,7 @@ search.app:
 ---
 # Create and join a Teams meeting from an appointment (preview)
 
-You can now create a Teams meeting and join it from an appointment in your model-driven app.
+You can now create a Teams meeting and then join the meeting from the appointment.
 
 ![The diagram shows how to add a Teams meeting to an appointment and then join the meeting.](media/teams-meeting.gif)
 
