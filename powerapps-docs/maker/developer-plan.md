@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.subservice: canvas-developer
 ms.topic: conceptual
 ms.custom: intro-internal
-ms.date: 09/21/2021
+ms.date: 01/25/2022
 ms.author: evlew
 ms.reviewer: tapanm
 contributors:
@@ -148,7 +148,7 @@ Currently, no. You can only have one developer environment, which is created for
 
 The ability to create more environments to support ALM scenarios is coming soon. Stay tuned for more details.
 
-### What's the difference between the Power Apps Plan Trial and Power Apps Developer Plan. Which one should I sign up for?
+### What's the difference between the Power Apps Plan Trial and Power Apps Developer Plan? Which one should I sign up for?
 
 Both Power Apps Plan Trial and Power Apps Developer Plan are free, but are created for different purposes:
 
@@ -182,3 +182,8 @@ No. However, users may start a Power Automate trial including RPA use rights to 
 
 ### Does the Power Apps Developer plan include AI Builder use rights? 
 No. However, users may start an AI Builder trial to try out the AI Builder capabilities.
+
+### Why does a banner appear with apps running in the developer environment?
+Since developer environments aren't intended to support production scenarios, apps display a temporary banner to remind makers about them running in a developer environment. This banner will no longer appear if you move the app from a developer environment to a non-developer environment.
+
+:::image type="content" source="media/developer-plan/power_apps_dev_env_app_banner.png" alt-text="Power Apps Developer Environment app banner.":::
