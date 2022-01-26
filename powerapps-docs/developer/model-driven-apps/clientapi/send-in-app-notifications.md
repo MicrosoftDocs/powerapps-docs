@@ -33,37 +33,25 @@ This topic outlines the steps for how to send in-app notifications to a specific
 
 ## Enable the in-app notification feature
 
-To use the in-app notification feature, you need to enable the `AllowNotificationsEarlyAccess` app setting in a model-driven app.
-
-1. Sign in to your model-driven app.
-
-1. Select the app where you want to use this feature.
-1. Copy the following code:
-
-   ```javascript
-   fetch(window.origin + "/api/data/v9.1/SaveSettingValue()",{
-    method: "POST", 
-	  headers: {'Content-Type': 'application/json'},
-	  body: JSON.stringify({AppUniqueName: "Your app unique name", SettingName:"AllowNotificationsEarlyAccess", Value: "true"})
-	  });
-   ```
-
-1. Select **F12** on your keyboard to open the browser console.
-
-1. In the browser console, paste the code that you copied in step 3. Enter the name of your app in the `AppUniqueName` parameter, and then select **Enter**.
-
-   > [!TIP]
-   > You can find the logical name of your model-driven app in the solution explorer in the **Name** column. 
+To use the in-app notification feature, you need to enable the **In-app notifications (Preview)** setting.  This setting is stored within the model-driven app.
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
-1. On the left pane, select **Solutions** > **New solution**. Enter the details, and then select **Create**. 
+1. Open the solution that contains the model-driven app.  
 
-1. Open the solution that you created. Select **Add** > **App** > **Model-driven app**. From the list of apps, select the model-driven app where you want to see the notifications feature.
+1. Select the model-driven app and click **Edit in preview** under the **Edit** split menu to open using the modern app designer
 
-1. For development, select **Publish all customizations**, and then refresh the model-driven app. You'll see a bell icon in the upper-right corner.
+1. Open **Settings** and switch to **Upcoming**
 
-1. For production, package the app setting within a managed solution to be deployed in production with a publish.
+1. Enable "In-app notifications (Preview)"
+
+    > [!div class="mx-imgBorder"]
+    > ![Custom page as main page](media/send-in-app-notifications/app-designer-settings-enable-in-app-notifications.png "Custom page as main page")
+
+1. Click **Save** to save the settings change
+
+1. Click **Publish** on the model-driven app
+
 
 ## Send basic in-app notifications
 
