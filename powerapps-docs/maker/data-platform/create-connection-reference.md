@@ -41,7 +41,7 @@ You can add a connection reference to a solution in a few different ways:
 1. Create a new or open an existing solution.
 1. On the command bar select **New**, and then in the list of components select **Connection Reference**.
 1. On the **New Connection Reference** pane, enter the following information. Required columns are denoted with an asterisk (*).
-   - **Display name**: Enter a friendly name to help differentiate this connection reference from others.
+   - **Display name**: Enter a unique and useful name to help differentiate this connection reference from others.
    - **Add a description**: Enter text that describes the connection.
    - **Connector**: Select an existing connector from the list such as in the screenshot here. You can also select **New** to create a new connection for this connection reference. Once your finished creating a new connection, select **Refresh** to select your connection from the list.  
    - **Connection**: Based on the **Connector** you selected, select an existing connection or select **New connection** to create one.
@@ -75,6 +75,10 @@ When an action is added to a solution flow, Power Automate will try to reuse exi
 
 When a flow is enabled, the enabling user needs to own all the connections. This is usually accomplished by having the flow owner create the connections inside all the connection references that the flow uses. 
 Directly sharing a connection with someone else is not currently possible. So if a user other than the owner needs to provide the connections, then [an admin account can impersonate that user](/powerapps/developer/data-platform/impersonate-another-user) and then enable the flow. This impersonation mechanism is one that is used to [activate flows in the ALM accelerator](https://github.com/microsoft/coe-alm-accelerator-templates/blob/main/Pipelines/Templates/activate-flows.yml).
+
+### Connection Reference naming
+
+The display name of a connection reference should be unique so different connection references can be differentiated by name alone. By default, a connection reference name mentions the target connector, includes the current solution name for context, and includes a random suffix to ensure uniqueness. Consider adjusting the connection reference name to something unique and something that explains what it should be used for.
 
 ### See also
 
