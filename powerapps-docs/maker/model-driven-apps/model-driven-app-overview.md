@@ -91,7 +91,7 @@ Documentation has been developed that helps users successfully navigate around a
 
 [Learn more about using model-driven apps](../../user/use-model-driven-apps.md)
 
-You can use model-driven apps on a mobile device and run them in offlince mode.
+You can use model-driven apps on a mobile device and run them in offline mode.
 
 - [Get started with Power Apps mobile](../../mobile/run-powerapps-on-mobile.md)
 
