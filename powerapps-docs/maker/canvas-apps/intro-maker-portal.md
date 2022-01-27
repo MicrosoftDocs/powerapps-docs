@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: intro-internal
 ms.reviewer: 
-ms.date: 08/23/2021
+ms.date: 01/27/2022
 ms.subservice: canvas-maker
 ms.author: alaug
 search.audienceType: 
@@ -33,7 +33,7 @@ You can select options in three general areas:
 
 - The large icons that feature prominently in the middle of the page
 
-    ![Center area of the home page.](media/intro-maker-portal/center-area.png)
+    :::image type="content" source="media/intro-maker-portal/center-area.png" alt-text="Center area of the home page.":::
 
 For best results, start by ensuring that the home page is set to the right environment.
 

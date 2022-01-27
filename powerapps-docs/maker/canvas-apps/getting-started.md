@@ -8,7 +8,7 @@ ms.custom:
   - canvas
   - intro-internal
 ms.reviewer: 
-ms.date: 06/16/2020
+ms.date: 01/27/2022
 ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
@@ -36,7 +36,7 @@ To get started, you can automatically generate an app from one of these sources,
 - [SharePoint](app-from-sharepoint.md)
 - [Excel](get-started-create-from-data.md)
 
-[Sign in](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) to Power Apps and then select **Start from data** or a sample app, such as **Service Desk** or **Budget Tracker**.
+[Sign in](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) to Power Apps, select **Create** from the left-pane, and under **Start from template**, choose a sample app from the list of sample apps&mdash;such as **Meeting Capture** or **Onboarding Tasks**.
 
 ![Power Apps site.](./media/getting-started/create-page-samples.png)
 
