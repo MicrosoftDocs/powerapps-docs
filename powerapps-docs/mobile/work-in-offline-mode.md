@@ -1,6 +1,6 @@
 ---
-title: Work offline on your mobile device using the Power Apps mobile app (preview) | Microsoft Docs
-description: Work offline on your mobile device using the Power Apps mobile app.
+title: Enable and use mobile offline-first (preview) | Microsoft Docs
+description: Enable and use mobile offline-first.
 author: mustlaz
 ms.service: powerapps
 ms.component: pa-user
