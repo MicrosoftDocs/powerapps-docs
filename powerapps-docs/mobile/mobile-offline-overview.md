@@ -5,7 +5,7 @@ author: mduelae
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 01/20/2022
+ms.date: 02/01/2022
 ms.subservice: mobile
 ms.author: mkaur
 ms.custom: ""
@@ -32,6 +32,8 @@ Note, an internet connection is required to sync data between your mobile device
 
 To get started with mobile offline, an app maker needs to enable and define the tables that are available for offline by using the [modern app designer](../maker/model-driven-apps/app-designer-overview.md). For more information, go to [Set up mobile offline](setup-mobile-offline.md).
 
+> [!IMPORTANT] 
+> The mobile offline experiece is not available for canvas apps.
 
 ## Mobile offline-first
 
