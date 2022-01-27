@@ -17,7 +17,7 @@ search.app:
 ---
 # Sample: Synchronize data with external systems using change tracking
 
-[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 
 <!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/sample-synchronize-data-external-systems-using-change-tracking -->
 

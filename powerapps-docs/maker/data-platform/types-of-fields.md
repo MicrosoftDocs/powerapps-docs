@@ -20,7 +20,7 @@ search.app:
 ---
 # Types of columns
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 The names used for types depend on the designer used. [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) uses a convention that includes the way the data is formatted. The solution explorer type uses a name aligned with the database data type with a format modifier.
 
@@ -85,6 +85,14 @@ Text columns can contain text characters. This column type has several format op
 
 Watch this video for a quick overview about text columns:
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWE7j0]
+
+There are three basic text column types. All values indicated below are in number of characters.
+
+|Column type name  |Default value  |Maximum value |Description  |
+|---------|---------|---------|---------|
+|Text    |    100     |  4000       |  Accepts a single line of text.       |
+|Text Area   | 100        |  4000       |  Accepts multiple lines of text. The number of rows displayed for the column can be configured. Use for smaller amounts of text.       |
+|Multiline Text   | 150        |  1048576       |  Accepts multiple lines of text. The number of rows displayed for the column can be configured. Use when large amounts of text are needed.       |
 
 ## Choices
 

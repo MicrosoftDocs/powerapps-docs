@@ -27,7 +27,7 @@ search.app:
 
 # Use Power BI with Microsoft Dataverse data
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 Power BI is a comprehensive collection of services and  tools that you use to visualize your business data.  The following connector, templates, and features are available that make it easy to visualize and analyze Dataverse data or the Dynamics 365 Sales and Dynamics 365 Customer Service apps data with Power BI. 
 - **Common Data Service connector**: Dataverse allows you to connect directly to your data using Power BI Desktop to create reports and publish them to Power BI. From Power BI, reports can be used in dashboards, shared to other users and accessed cross platform on Power BI mobile apps. More information: [Create a Power BI report](../data-platform/data-platform-powerbi-connector.md) 

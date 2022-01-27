@@ -18,7 +18,7 @@ search.app:
 ---
 # Outlook Client
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 <!-- A higher level topic to make information about outlook client discoverable since otherwise it may be hidden?
 

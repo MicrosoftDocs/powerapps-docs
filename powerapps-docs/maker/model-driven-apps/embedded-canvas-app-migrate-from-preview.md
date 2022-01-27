@@ -27,7 +27,7 @@ search.app:
 
 # Migrate embedded canvas apps on model-driven forms created using the public preview release
 
-[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 > [!IMPORTANT]
 > With the latest release, embedded canvas apps on model-driven forms are generally available. Any embedded canvas apps on model-driven forms created using the public preview release should be migrated to new embedded canvas apps created using the latest release.

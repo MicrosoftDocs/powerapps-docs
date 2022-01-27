@@ -22,7 +22,7 @@ search.audienceType:
 ---
 # Configure real-time workflow stages and steps
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 When you design workflows, you have the option to contain the logic you want to perform in stages and steps.  
   

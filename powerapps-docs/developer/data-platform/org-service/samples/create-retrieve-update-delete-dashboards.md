@@ -18,7 +18,7 @@ search.app:
 
 # Sample: Create, retrieve, update, and delete a dashboard
 
-[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 
 This sample shows how to create, retrieve, update, and delete an user-owned dashboard using the following methods:
 
