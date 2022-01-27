@@ -18,7 +18,7 @@ search.app:
 ---
 # Prepare source files for import
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 Before you can import data into Microsoft Dataverse, you must create the source data files.  
   

@@ -18,7 +18,7 @@ search.app:
 ---
 # Community tools for Microsoft Dataverse
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 The Power Apps community creates tools! 
 

@@ -17,7 +17,7 @@ search.app:
 ---
 # Scalable Customization Design: Transaction design patterns
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 
 > [!NOTE]
 > This is the fourth in a series of topics about scalable customization design. To start at the beginning, see [Scalable Customization Design in Microsoft Dataverse](overview.md).

@@ -17,7 +17,7 @@ search.app:
 ---
 # Sample: Release a queue item to the queue
 
-[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 
 <!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/sample-release-queue-item-queue-early-bound
 Couldn't each of the operations in this series of samples be added to just one sample?
