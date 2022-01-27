@@ -18,7 +18,7 @@ search.app:
   - D365CE
 ---
 
-# Set up and use mobile offline-first (preview)
+# Enable and use mobile offline-first (preview)
 
 [This topic is pre-release documentation and is subject to change.]
 
