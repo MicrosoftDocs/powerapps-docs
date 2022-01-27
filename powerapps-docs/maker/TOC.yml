@@ -1557,7 +1557,7 @@
       href: ../mobile/mobile-offline-overview.md
     - name: Set up mobile offline (preview)
       href: ../mobile/setup-mobile-offline.md 
-    - name: Set up and use offline-first (preview)
+    - name: Enable and use offline-first (preview)
       href: ../mobile/work-in-offline-mode.md   
 - name: Portals
   items:
