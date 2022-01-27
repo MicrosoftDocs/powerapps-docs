@@ -5,7 +5,7 @@ author: mustlaz
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 01/20/2022
+ms.date: 02/01/2022
 ms.subservice: mobile
 ms.author: mkaur
 ms.custom: ""
