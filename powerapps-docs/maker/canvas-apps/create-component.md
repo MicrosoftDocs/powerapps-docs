@@ -5,7 +5,7 @@ author: hemantgaur
 ms.service: powerapps
 ms.subservice: canvas-developer
 ms.topic: article
-ms.date: 08/18/2021
+ms.date: 01/27/2022
 ms.author: hemantg
 ms.reviewer: tapanm
 search.audienceType:
@@ -74,11 +74,7 @@ In this example, you'll create a menu component that resembles the following gra
 
 ### Create a new component
 
-1. Sign in to [Power Apps](https://make.powerapps.com).
-
-1. Select **Apps** and select **Canvas app from blank**.
-
-1. Provide an app name, select any layout, and then select **Create**.
+1. Create a [blank canvas app](create-blank-app.md).
 
 1. In the **Tree View**, select **Components** and then select **New component** to create a new component.
 
