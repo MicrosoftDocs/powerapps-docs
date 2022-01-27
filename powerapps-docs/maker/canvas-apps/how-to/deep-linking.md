@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: article
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 01/20/2022
+ms.date: 01/27/2022
 ms.subservice: canvas-maker
 ms.author: vabhavir
 search.audienceType: 
@@ -44,7 +44,7 @@ In this article, you'll learn about how to:
 
 ## Create the app
 
-[Create an app using Microsoft Dataverse](../data-platform-create-app.md), and use the **Accounts** table.
+[Create an app](../data-platform-create-app.md) using the **Accounts** table in Microsoft Dataverse.
 
 Your app opens to the **BrowseScreen**, that shows a list of accounts in a gallery. By default, this gallery shows an email address, a city, and an account name. The app also contains **DetailScreen** and **EditScreen**.
 

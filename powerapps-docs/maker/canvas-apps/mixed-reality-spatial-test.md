@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm-msft
-ms.date: 01/18/2022
+ms.date: 01/27/2022
 ms.subservice: canvas-maker
 ms.author: altran
 search.audienceType: 

@@ -8,7 +8,7 @@ ms.custom:
   - canvas
   - intro-internal
 ms.reviewer: 
-ms.date: 01/14/2022
+ms.date: 01/27/2022
 ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 

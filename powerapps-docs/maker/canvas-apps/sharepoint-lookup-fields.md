@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 01/18/2022
+ms.date: 01/27/2022
 ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
@@ -103,7 +103,7 @@ You do this first, so that when you add data to the **Assets** list, **RepairSho
 
 ## Create an app from the Assets list
 
-Create a [canvas app](app-from-sharepoint.md) from the [Assets list](#define-the-assets-list) created earlier. 
+Create a [canvas app](app-from-sharepoint.md) from the [Assets list](#define-the-assets-list) created earlier.
 
 ## Add data to the Assets list
 

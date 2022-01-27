@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: article
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 01/18/2022
+ms.date: 01/27/2022
 ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
@@ -93,7 +93,7 @@ In this lesson, we'll create an app to search, view, and create customer account
 
 1. Add an **Add** icon to the top-right of the screen by selecting **Insert** > **Icon** > **Add**. And then, update the properties of the icon to color white and padding of 5 from all sides.
 
-    ![Add an **Add** icon](media/trigger-flow/build-a-canvas-app-7.png "Add an **Add** icon")
+    ![Add an Add icon](media/trigger-flow/build-a-canvas-app-7.png "Add an Add icon")
 
 1. From the top-left side of the screen, select **New screen** > **Form**.
 

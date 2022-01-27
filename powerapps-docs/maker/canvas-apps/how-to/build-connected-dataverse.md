@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.subservice: canvas-maker
-ms.date: 01/18/2022
+ms.date: 01/27/2022
 ms.author: tapanm
 ms.reviewer: tapanm
 search.app: 
