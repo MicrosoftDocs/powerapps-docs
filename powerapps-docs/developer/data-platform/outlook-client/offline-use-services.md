@@ -18,7 +18,7 @@ search.app:
 
 # Offline use of services
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 
 Dynamics 365 for Outlook with Offline Access enables you to continue your work when you are disconnected from the server.  
   

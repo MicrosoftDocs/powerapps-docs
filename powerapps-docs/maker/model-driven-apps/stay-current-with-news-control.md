@@ -23,7 +23,7 @@ search.app:
 ---
 # Set up and use the news control
 
-[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 [!INCLUDE [cc-classic-interface-control-migration](../../includes/cc-classic-interface-control-migration.md)]
 

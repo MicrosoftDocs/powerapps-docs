@@ -17,7 +17,7 @@ search.app:
 
 # Complex tables and licensing
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 > [!IMPORTANT]
 > *This topic is applicable only for older Power Apps Plan 1 and Plan 2 licenses.*

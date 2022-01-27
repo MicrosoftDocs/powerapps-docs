@@ -17,7 +17,7 @@ search.app:
 ---
 # Sample: Export and import a data map
 
-[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 
 This sample shows how to create an import map (data map) in Microsoft Dataverse, export it as an XML formatted data, import modified mappings, and create a new import map Dataverse based on the imported mappings. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/ExportImportDataMap).
 

@@ -9,7 +9,7 @@ ms.reviewer: matp
 manager: kvivek
 ms.date: 01/03/2022
 ms.service: powerapps
-ms.topic: conceptual
+ms.topic: overview
 search.audienceType: 
   - maker
 search.app: 
@@ -20,7 +20,7 @@ contributors:
 ---
 # Environment variables overview
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 Applications often require different configuration settings or input parameters when deployed to different environments. Environment variables store the parameter keys and values, which then serve as input to various other application objects. Separating the parameters from the consuming objects allows you to change the values within the same environment or when you migrate solutions to other environments. The alternative is leaving hard-coded parameter values within the components that use them. This is often problematic; especially when the values need to be changed during application lifecycle management (ALM) operations. Because environment variables are solution components, you can transport the references (keys) and change the values when solutions are migrated to other environments.
 
@@ -133,7 +133,10 @@ If an environment variable is used in a flow and the display name of the environ
 
 ## Use Azure Key Vault secrets
 
-Environment variables allow for referencing secrets stored in Azure Key Vault. These secrets are then made available for use with Power Platform components, such as Power Automate and custom connectors.  The actual secrets are only stored in Azure Key Vault and the environment variable simply references the secrets.  Using Azure Key Vault secrets with environment variables require that you configure Azure Key Vault so that Power Platform can read the specific secrets you want to reference.
+Environment variables allow for referencing secrets stored in Azure Key Vault. These secrets are then made available for use with Power Platform components, such as Power Automate.  The actual secrets are only stored in Azure Key Vault and the environment variable simply references the secrets.  Using Azure Key Vault secrets with environment variables require that you configure Azure Key Vault so that Power Platform can read the specific secrets you want to reference. 
+
+> [!NOTE]
+> Environment variable support in custom connectors is now available. For information, see [Environment variable support in custom connectors](/connectors/custom-connectors/environment-variables).
 
 ### Configure Azure Key Vault
 

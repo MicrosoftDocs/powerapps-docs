@@ -1,11 +1,11 @@
 ---
 title: "Solutions in Power Apps | MicrosoftDocs"
 description: "Provides an overview of solutions in Power Apps"
-ms.custom: intro-internal
+
 ms.date: 06/22/2021
 ms.reviewer: ""
 ms.service: powerapps
-ms.topic: "article"
+ms.topic: overview
 author: "Mattp123"
 ms.assetid: ece68f5f-ad40-4bfa-975a-3e5bafb854aa
 caps.latest.revision: 55
@@ -21,7 +21,7 @@ search.app:
    
 # Solutions overview  
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 Solutions are used to transport apps and components from one environment to another or to apply a set of customizations to existing apps. A solution can contain one or more apps as well as other components such as site maps, tables, processes, web resources, choices, flows, and more.
 

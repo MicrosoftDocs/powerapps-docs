@@ -27,7 +27,7 @@ search.app:
 ---
 # Map table columns
  
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 You can map attributes between tables that have a table relationship. This lets you set default values for a row that is created in the context of another row. 
 

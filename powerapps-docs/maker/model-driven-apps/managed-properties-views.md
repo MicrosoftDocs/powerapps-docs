@@ -26,7 +26,7 @@ search.app:
 ---
 # Model-driven app managed properties for views
 
-[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 <a name="BKMK_ManagedProperties"></a>   
  

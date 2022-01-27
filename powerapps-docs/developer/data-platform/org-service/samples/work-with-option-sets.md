@@ -18,7 +18,7 @@ search.app:
 
 # Work with choices
 
-[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 
 This sample shows how to work with choices. Typically, you use choices to set columns so that different columns can share the same set of options, which are maintained in one location. Unlike local options sets which are defined only for a specific column, you can reuse choices. You will also see them used in request parameters in a manner similar to an enumeration.
 
