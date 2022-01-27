@@ -28,7 +28,7 @@ search.app:
 
 # Create and use dataflows in Power Apps
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 With advanced data preparation available in Power Apps, you can create a
 collection of data called a dataflow, which you can then use to connect with

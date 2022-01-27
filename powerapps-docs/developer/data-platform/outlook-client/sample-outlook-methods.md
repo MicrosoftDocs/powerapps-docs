@@ -17,7 +17,7 @@ search.app:
 ---
 # Sample: Use Dynamics 365 for Outlook methods
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 
 This sample code is for Microsoft Dataverse. To download the sample, refer [Sample: Use Dynamics 365 for Outlook methods](/previous-versions/dynamicscrm-2016/developers-guide/gg309513(v=crm.8)).
 

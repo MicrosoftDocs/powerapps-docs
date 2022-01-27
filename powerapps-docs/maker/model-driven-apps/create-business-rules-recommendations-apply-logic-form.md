@@ -28,7 +28,7 @@ search.app:
 ---
 # Create business rules and recommendations to apply logic in a model-driven app form
 
-[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 ## Business rules introduction
 

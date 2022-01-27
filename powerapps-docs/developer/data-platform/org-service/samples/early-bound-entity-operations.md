@@ -17,7 +17,7 @@ search.app:
 ---
 # Sample: Early-bound table operations
 
-[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 
 This sample shows how to create, retrieve, update, and delete operations on an account using the early bound class. This sample uses the following common methods:
 

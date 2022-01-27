@@ -22,7 +22,7 @@ search.app:
 ---
 # Use a theme to create a custom look for your app
 
-[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 You can create a custom look and feel (a theme), for your app by making changes to the default colors and visual elements provided in the uncustomized system. For example, you can create your personal product branding by adding a company logo and providing table-specific coloring. A theme can be created by using the **Themes** area, without requiring a developer to write code. You can create, clone, change, or delete themes that are used in your environment. 
 

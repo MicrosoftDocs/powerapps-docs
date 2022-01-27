@@ -21,7 +21,7 @@ search.app:
 ---
 # How to run a model-driven app
 
-[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 ## Run an app in a browser
 
