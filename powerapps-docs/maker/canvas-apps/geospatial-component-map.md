@@ -1,12 +1,12 @@
 ---
-title: Insert interactive maps into apps
+title: Interactive map control
 description: Insert maps, and add customized pins, in Power Apps.
 author: anuitz
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas, ce06122020
 ms.reviewer: tapanm
-ms.date: 1/19/2021
+ms.date: 1/26/2021
 ms.subservice: canvas-maker
 ms.author: anuitz
 search.audienceType: 
@@ -18,21 +18,23 @@ contributors:
   - anuitz
 ---
 
-
 # Interactive map control
 
 You can easily add an interactive map to your canvas apps. Plot markers from a data source containing addresses or latitude and longitude pairs. As you zoom out, the markers will optionally cluster to condense groups of data. On mobile devices and web experiences, a map can show the user's current position. Maps can be switched between road and satellite views.
 
 ![A map control shown in Power Apps Studio.](./media/augmented-geospatial/geospatial-map-component.png "Map control in Power Apps Studio")
 
-You'll need to [enable geospatial features](geospatial-overview.md#enable-the-geospatial-features-for-the-environment) before you can add a map control to your apps. You should also [review the prerequisites for using geospatial controls](geospatial-overview.md#prerequisites).
+## Prerequisites
 
-## Add a map to an app screen
+See [prerequisites](geospatial-overview.md#prerequisites).
 
-With your app open for editing in [Power Apps Studio](https://create.powerapps.com):
+## Add map control
 
-1. Open the **Insert** tab and expand **Media**.
-3. Select **Map** to place a map in the app screen, or drag the control to the screen to position it more precisely.
+To add a map control to an app:
+
+1. [Edit](edit-app.md) an app.
+1. Select the **Insert** tab, and expand **Media**.
+1. Select **Map** to place a map in the app screen, or drag the control to the screen to position it more precisely.
 
 Use the [Properties](#input-properties) tab to modify the map's appearance and behavior.
 
@@ -44,11 +46,11 @@ For example, to show the user's current location:
 
 The current location pin should appear on the map.
 
-### Show locations from an Excel workbook
+### Show locations from an Excel file
 
 Your map can take location data from an Excel table. Each row is plotted as a pin on the map.
 
-Create a named table with the following columns. The columns determine the placement and appearance of the pins and correspond to properties on the **Advanced** tab.
+Create a table with the following columns, and give it a name. The columns determine the placement and appearance of the pins and correspond to properties on the **Advanced** tab.
 
 | Column name | Corresponds to | Required |
 | -- | -- | -- |
@@ -60,42 +62,55 @@ Create a named table with the following columns. The columns determine the place
 
 Specify the color using a name or a CSS string as defined in [Color enumeration and ColorFade, ColorValue, and RGBA functions in Power Apps](/functions/function-colors). For example, "Blue" and "ffefcd" are equally valid.
 
-You can find icon names in the [List of image templates](/azure/azure-maps/how-to-use-image-templates-web-sdk#list-of-image-templates) in the Azure maps documentation.
+> [!TIP]
+> You can find icon names in the [List of image templates](/azure/azure-maps/how-to-use-image-templates-web-sdk#list-of-image-templates).
 
 Here's an example of a table named "TestData" that contains location information for a company's top customers:
 
 :::image type="content" source="media/geospatial/sample-excel.png" alt-text="Example Excel worksheet with a table named TestData that contains Name, Longitude, Latitude, Color, and Icon columns":::
 
-To try this example, first create a table in Excel that contains the location data.
+The following example shows how to use a table from an Excel file to plot pins on the map.
 
-1. Copy the sample data in the following table and paste it in cell A1 of a new Excel worksheet.
+1. [Create a table](https://support.microsoft.com/office/create-and-format-tables-e81aa349-b006-4f8a-9806-5af9df0ac664) in an Excel file with the following data, and name the table "TestData".
 
-| Name | Longitude | Latitude | Color | Icon |
-| -- | -- | -- | -- | -- |
-| Fourth Coffee (sample) | -98.29277 | 26.2774 | Blue | marker-flat |
-| Litware, Inc. (sample) | -96.85572 | 32.55253 | #ffefcd| hexagon-thick |
-| Adventure Works (sample) | -96.99952 | 32.72058 | | car |
-| Fabrikam, Inc. (sample) | -118.30746 | 34.86543 | |
-| Blue Yonder Airlines (sample) | -118.66184 | 34.17553 | |
-| City Power & Light (sample) | -113.46184 | 37.15363 | |
-| Contoso Pharmaceuticals (sample) | -80.26711 | 40.19918 | |
-| Alpine Ski House (sample) | -102.63908 | 35.20919 | |
-| A Datum Corporation (sample) | -89.39433 | 40.71025 | |
-| Coho Winery (sample) | -116.97751 | 32.87466 | |
+    | Name | Longitude | Latitude | Color | Icon |
+    | -- | -- | -- | -- | -- |
+    | Fourth Coffee (sample) | -98.29277 | 26.2774 | Blue | marker-flat |
+    | Litware, Inc. (sample) | -96.85572 | 32.55253 | #ffefcd| hexagon-thick |
+    | Adventure Works (sample) | -96.99952 | 32.72058 | | car |
+    | Fabrikam, Inc. (sample) | -118.30746 | 34.86543 | |
+    | Blue Yonder Airlines (sample) | -118.66184 | 34.17553 | |
+    | City Power & Light (sample) | -113.46184 | 37.15363 | |
+    | Contoso Pharmaceuticals (sample) | -80.26711 | 40.19918 | |
+    | Alpine Ski House (sample) | -102.63908 | 35.20919 | |
+    | A Datum Corporation (sample) | -89.39433 | 40.71025 | |
+    | Coho Winery (sample) | -116.97751 | 32.87466 | |
 
-2. Select one of the pasted cells. On the **Home** tab, select **Format as Table**, choose a style, and then select **OK**.
-3. On the **Table Design** tab under **Table Name**, enter a name such as *TestData*.
-4. Save the workbook and close it.
+1. [Create a blank app](create-blank-app.md).
 
-Next, add the table as a data source for your map. You can add a data source when you create a map or modify an existing map.
- 
-1. Add a map or select an existing map in Power Apps Studio.
-2. Type *excel* in the search box under **Select a data source**, and then select **Import from Excel**.
-3. Locate the Excel workbook you saved earlier and open it.
-4. Select the name you gave the table in Excel and then select **Connect**.
-5. On the **Advanced** tab, find **ItemsLabels**, **ItemsLatitudes**, **ItemsLongitudes**, **ItemsColors**, and **ItemsIcons** and enter the name of the corresponding column in the table. (In this example, enter *Name* in **ItemsLabels**, *Latitude* in **ItemsLatitude**, and so on.) Enclose the column name in quotation marks.
+1. Add a [map control](#add-map-control).
 
-Pins will appear on the map at the locations described by the coordinates in the table. Depending on the pins' locations and the map's zoom level, you may see numbered clusters of pins. The number indicates how many pins are represented in a cluster. Zoom in to see the individual pins.
+1. Select **Excel Online (Business)** as the data source.
+
+    :::image type="content" source="media/geospatial/select-data-source.png" alt-text="A screenshot with Excel Online - Business data source selected.":::
+
+1. Create a connection if prompted, and follow the wizard to locate the Excel file.
+
+1. Select the name you gave to the table in the Excel file ("TestData" in this example), and then select **Connect** without changing auto generated ID column.
+
+1. On the **Advanced** tab, find **ItemsLabels**, **ItemsLatitudes**, **ItemsLongitudes**, **ItemsColors**, and **ItemsIcons** and enter the name of the corresponding column in the table. (In this example, enter *Name* in **ItemsLabels**, *Latitude* in **ItemsLatitude**, and so on.) Enclose the column name in quotation marks.
+
+    :::image type="content" source="media/geospatial/advanced-properties.png" alt-text="A screenshot with Advanced properties listing ItemsLabels, ItemsLatitudes, and ItemsLongitudes values.":::
+
+    Pins will appear on the map at the locations described by the coordinates in the table.
+
+    :::image type="content" source="media/geospatial/map-with-pins.png" alt-text="A screenshot with the map that shows pins as available in the Excel table used as the data source.":::
+
+     Depending on the pins' locations and the map's zoom level, you may see numbered clusters of pins. The number indicates how many pins are represented in a cluster.
+
+1. Preview the app, or press **F5** on the keyboard, and zoom in to see the individual pins.
+
+1. [Save and publish](save-publish-app.md) the app.
 
 ## Interactive map features
 
