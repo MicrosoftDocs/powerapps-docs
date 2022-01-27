@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 05/24/2021
+ms.date: 01/27/2022
 ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType:
@@ -107,9 +107,7 @@ You can use auto-layout containers in the following scenarios:
 
 To build a responsive screen:
 
-1. Sign in to [Power Apps](https://make.powerapps.com).
-1. Select **Apps** from left navigation. Select the **New app** drop-down menu and then select **Canvas**.
-1. On the **Blank app** tile, select **Tablet layout**.
+1. Create a [blank canvas app](create-blank-app.md) with **Tablet** layout.
 1. Select **Settings** > **Display** and disable **Scale to fit**, **Lock aspect ratio**, and **Lock orientation** and select **Apply**. 
 1. Now from the **Insert** panes in the left sidebar, under **Layout** tab, select **Horizontal container**. 
 

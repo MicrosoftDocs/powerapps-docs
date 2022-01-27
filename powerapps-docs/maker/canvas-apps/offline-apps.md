@@ -7,7 +7,7 @@ ms.subservice: canvas-developer
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 01/28/2021
+ms.date: 01/27/2022
 ms.author: mustlaz
 search.audienceType: 
   - maker
@@ -73,8 +73,7 @@ At a high level, the app performs these tasks:
 
 ### Step 1: Add Twitter to a blank phone app
 
-1. In Power Apps Studio, select **File** > **New**.
-1. On the **Blank app** tile, select **Phone layout**.
+1. Create a [blank canvas app](create-blank-app.md) with **Phone** layout.
 1. On the **View** tab, select **Data sources**.
 1. In the **Data** pane, select **Add data source**.
 1. Select **New Connection** > **Twitter** > **Create**.
