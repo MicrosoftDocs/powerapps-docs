@@ -22,7 +22,7 @@ search.app:
 ---
 # Guidelines and troubleshooting for embedded canvas apps
 
-[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 ## Guidance on embedding canvas apps
 

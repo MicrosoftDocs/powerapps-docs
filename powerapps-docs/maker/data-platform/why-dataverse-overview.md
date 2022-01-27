@@ -23,7 +23,7 @@ search.app:
 
 # Why choose Microsoft Dataverse?
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 Data is at the center of everything a business does today and powers the
 insights that can drive what it should do tomorrow. To thrive and grow,

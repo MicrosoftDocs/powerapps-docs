@@ -25,7 +25,7 @@ search.app:
 
 # Create N:N (many-to-many) table relationships in Microsoft Dataverse using solution explorer
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 Solution explorer provides one way to create and edit N:N (many-to-many) for Dataverse.
 

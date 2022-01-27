@@ -24,7 +24,7 @@ search.app:
 ---
 # Implement all types of queries when filtering results using PreOperation RetrieveMultiple
 
-[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 
 **Category**: Design, Performance, Security, Supportability
 

@@ -18,7 +18,7 @@ search.app:
 
 # Work with Discovery Service
 
-[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 
 This sample code shows how to use the discovery service with SDK assemblies. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/Nava_samplecode/cds/orgsvc/C%23/DiscoveryService).
 

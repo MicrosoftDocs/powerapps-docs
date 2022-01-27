@@ -18,7 +18,7 @@ search.app:
 ---
 # On-premises deployment options
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 <!-- 
 

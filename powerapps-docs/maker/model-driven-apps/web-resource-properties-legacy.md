@@ -22,7 +22,7 @@ search.app:
 ---
 # Web resource properties for model-driven app forms (classic)
 
-[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 This article describes how to use the [legacy](model-driven-app-glossary.md#legacy) app authoring interface to add or edit web resources on a form to make it more appealing or useful to app users. Form enabled web resources are images or HTML files controls.
 

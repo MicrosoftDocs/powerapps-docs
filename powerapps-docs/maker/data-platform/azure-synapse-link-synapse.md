@@ -26,7 +26,7 @@ contributors:
 
 # Create an Azure Synapse Link for Dataverse with your Azure Synapse Workspace
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 You can use the Azure Synapse Link to connect your Microsoft Dataverse data to Azure Synapse Analytics to explore your data and accelerate time to insight. This article shows you how to perform the following tasks:
 

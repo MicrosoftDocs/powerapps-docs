@@ -25,7 +25,7 @@ search.app:
 ---
 # List of controls available for model-driven apps
 
-[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 Controls allow us to visualize data within our table columns in addition to enabling us to interact with them.
 

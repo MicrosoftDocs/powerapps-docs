@@ -29,7 +29,7 @@ search.app:
 
 # Distribute a model-driven app using a solution
 
-[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 Model-driven apps are distributed as solution components. After a model-driven has been created, it can be made available for other [environments](model-driven-app-glossary.md#environment) to use by packaging the app into a [solution](model-driven-app-glossary.md#solution) and then exporting it into a zip file.
 

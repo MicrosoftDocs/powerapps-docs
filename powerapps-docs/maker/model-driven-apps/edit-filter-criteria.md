@@ -26,7 +26,7 @@ search.app:
 ---
 # Edit filter criteria for a table view
 
-[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 <a name="BKMK_EditFilterCriteria"></a>   
 
