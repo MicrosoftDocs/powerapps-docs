@@ -17,7 +17,7 @@ search.app:
 ---
 # Sample: Dump table definitions to a file
 
-[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 
 This sample shows how to write out all table definitions  to an `XML` file. It uses the [RetrieveAllEntitiesRequest](/dotnet/api/microsoft.xrm.sdk.messages.retrieveallentitiesrequest?view=dynamics-general-ce-9) message.
 

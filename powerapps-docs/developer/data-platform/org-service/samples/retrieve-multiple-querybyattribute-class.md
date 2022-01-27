@@ -18,7 +18,7 @@ search.app:
 
 # Sample: Retrieve multiple with the QueryByAttribute class
 
-[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 
 <!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/org-service/sample-retrieve-multiple-querybyattribute-class -->
 

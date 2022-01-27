@@ -26,7 +26,7 @@ search.app:
 ---
 # How to create and edit columns
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 In Microsoft Dataverse columns define the individual data items that can be used to store data in a table. Columns are sometimes called *attributes* by developers. 
 

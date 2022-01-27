@@ -18,7 +18,7 @@ search.app:
 ---
 # Data Synchronization
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 Sometimes you’ll need to synchronize and integrate Microsoft Dataverse data with data that is stored in other systems. The common data integration patterns include taking data from an external system and pushing it into Dataverse, taking data from Dataverse and synchronizing it to some external data store, or updating Dataverse with external data. You can now use several new capabilities to make it easier to write code to achieve these scenarios.  
 

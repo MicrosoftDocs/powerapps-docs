@@ -27,7 +27,7 @@ search.app:
 ---
 # Create one-to-many or many-to-one table relationships overview
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 In Microsoft Dataverse 1:N (one-to-many) or N:1 (many-to-one) relationships define how two tables are related to each other.
   

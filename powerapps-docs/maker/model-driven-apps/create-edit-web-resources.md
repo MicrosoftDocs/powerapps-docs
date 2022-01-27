@@ -26,7 +26,7 @@ search.app:
 ---
 # Create or edit model-driven app web resources to extend an app
 
-[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 Web resources are typically used by developers to extend an app using files that are used in web development. App users may need to manage web resources provided by a developer or designer.  
 

@@ -26,7 +26,7 @@ search.app:
 ---
 # Display custom icons alongside values in list views
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 Power Apps environment administrators and customizers can add graphics to a view and establish the logic used to select a graphic based on the column value using JavaScript. The capability lets you customize list views that display icons alongside text or numerical values. 
 

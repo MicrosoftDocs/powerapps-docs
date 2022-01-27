@@ -24,7 +24,7 @@ search.app:
 
 # Virtual table walkthrough using the OData v4 Data Provider
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 Imagine that you want to access, create, update, and delete some personal information about a contact from an external data source within your model-driven app. In this simple walkthrough, you will model a virtual table named *Person* with columns mapped to the external schema to these operations at runtime from an OData web service.
 

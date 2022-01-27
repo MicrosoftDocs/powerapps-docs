@@ -16,7 +16,7 @@ search.app:
 ---
 # Import or export data from Microsoft Dataverse
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 To bulk import and export data from Microsoft Excel or CSV files, use the Get Data from Excel file and Export Data features for updated Dataverse environments.
 
