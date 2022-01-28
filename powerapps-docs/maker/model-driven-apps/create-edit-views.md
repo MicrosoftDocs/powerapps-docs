@@ -26,7 +26,7 @@ search.app:
 ---
 # Understand model-driven app views
 
-[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 Model-driven apps use views to define how a list of rows for a specific table are displayed in the application.
 

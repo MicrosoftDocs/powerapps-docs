@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 03/01/2021
+ms.date: 01/27/2022
 ms.subservice: canvas-maker
 ms.author: lanced
 search.audienceType: 
@@ -43,17 +43,7 @@ Before you begin building a canvas app using the Text Analytics API, you must pr
 
 Create a blank app and add a connection with the **Text Analytics** connector.
 
-1. Go to [Power Apps](https://make.powerapps.com).
-
-1. Select **Canvas app from blank**.
-
-    ![Create an app from blank.](./media/cognitive-services-api/app-from-blank.png "Create an app from blank")
-
-1. Enter app name.
-
-1. Choose a layout for the app, and select **Create**. For this demo, we'll use **Tablet** layout.
-
-    ![Name the app, choose the layout, and select Create.](./media/cognitive-services-api/app-name-create.png "Name the app, choose the layout, and select Create")
+1. Start by creating a [blank canvas app](create-blank-app.md) with **Tablet** layout, and a name like "Demo app with Text Analytics API".
 
 1. Select **Data** from the left pane.
 

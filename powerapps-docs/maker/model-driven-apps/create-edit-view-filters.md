@@ -29,7 +29,7 @@ search.app:
 
 # Create or edit filters in model-driven app views
 
-[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 <a name="BKMK_CreateOrEditViewFilters"></a>   
 

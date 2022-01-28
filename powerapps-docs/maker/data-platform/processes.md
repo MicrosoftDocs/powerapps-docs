@@ -25,7 +25,7 @@ search.app:
   - D365CE
 ---
 # Apply business logic in Microsoft Dataverse
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 There are several choices available for applying business logic in Dataverse. 
 

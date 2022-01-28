@@ -17,7 +17,7 @@ search.app:
 ---
 # Sample: Retrieve email attachments for an email template
 
-[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 
 <!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/sample-retrieve-email-attachments-email-template -->
 

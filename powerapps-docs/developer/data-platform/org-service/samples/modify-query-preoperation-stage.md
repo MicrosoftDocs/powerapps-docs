@@ -17,7 +17,7 @@ search.app:
 ---
 # Sample: Modify query in PreOperation stage
 
-[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 
 This sample shows how to write a plug-in that modifies a query defined within the `PreOperation` stage of a `RetrieveMultiple` request.
 

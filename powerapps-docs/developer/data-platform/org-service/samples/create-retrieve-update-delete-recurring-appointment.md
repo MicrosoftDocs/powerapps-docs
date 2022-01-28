@@ -17,7 +17,7 @@ search.app:
 ---
 # Sample: Create, retrieve, update, and delete a recurring appointment
 
-[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 
 This sample shows how to create, retrieve, update, and delete a recurring appointment series. This sample uses the following common methods:
 

@@ -19,7 +19,7 @@ search.app:
 ---
 #  Basic navigation in a model-driven app 
 
-[!INCLUDE[cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 This introduction explains how to find and open an app, and how to work with its common user interface elements including lists, forms, and business processes.
 

@@ -27,7 +27,7 @@ search.app:
 ---
 # Set managed properties for columns
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 <a name="BKMK_SettingManagedProperties"></a>   
 

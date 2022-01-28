@@ -26,7 +26,7 @@ search.app:
 ---
 # Define rollup columns that aggregate values
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 Rollup columns help users obtain insights into data by monitoring key business metrics. A rollup column contains an aggregate value computed over the rows related to a specified row. This includes regular tables and activity tables such as emails and appointments.
 
