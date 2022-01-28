@@ -249,6 +249,8 @@
         href: ./canvas-apps/customize-card.md
   - name: Create an app from scratch
     items:
+    - name: With a blank app
+      href: ./canvas-apps/create-blank-app.md
     - name: From Dataverse
       href: ./canvas-apps/data-platform-create-app-scratch.md
     - name: From Excel
@@ -361,6 +363,8 @@
               href: ./canvas-apps/working-with-form-layout.md
             - name: Understand cards
               href: ./canvas-apps/working-with-cards.md
+            - name: Work with full-sized image on a form
+              href: ./canvas-apps/display-full-image-on-form.md
           - name: Add a list
             items:
             - name: Add a list box, a drop-down list, or radio buttons

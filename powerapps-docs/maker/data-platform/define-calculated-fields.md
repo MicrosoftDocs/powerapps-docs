@@ -26,7 +26,7 @@ search.app:
 ---
 # Define calculated columns to automate calculations
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 Use calculated columns to automate otherwise manual calculations used in your business processes.
 

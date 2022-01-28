@@ -26,7 +26,7 @@ search.app:
 ---
 # Types of tables
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 A table defines information that you want to track in the form of records, which typically include properties such as company name, location, products, email, and phone.
 

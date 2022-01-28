@@ -25,7 +25,7 @@ search.app:
 
 # Create and edit 1:N (one-to-many) or N:1 (many-to-one) table relationships using solution explorer 
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 Solution explorer provides one way to create and edit 1:N (one-to-many) or N:1 (many-to-one) table relationships for Microsoft Dataverse.
 

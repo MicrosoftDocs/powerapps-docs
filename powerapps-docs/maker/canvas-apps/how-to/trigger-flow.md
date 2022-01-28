@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: article
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 08/31/2021
+ms.date: 01/27/2022
 ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
@@ -64,19 +64,7 @@ Your trial environment will now be created, including a Dataverse database and s
 
 In this lesson, we'll create an app to search, view, and create customer accounts using the **Accounts** table in Dataverse.
 
-1. Sign in to [Power Apps](https://make.powerapps.com).
-
-1. Select the **Dataverse Trial** environment.
-
-    ![Select the Dataverse Trial environment](media/trigger-flow/build-a-canvas-app-1.png "Select the Dataverse Trial environment")
-
-1. Select the button for **Canvas app from blank**
-
-    ![Select the button for Canvas app from blank](media/trigger-flow/build-a-canvas-app-2.png "Select the button for Canvas app from blank")
-
-1. Enter a name, select **Format** as **Phone**, and then select **Create**.
-
-    ![Give the app a name](media/trigger-flow/build-a-canvas-app-3.png "Give the app a name")
+1. Start by creating a [blank canvas app](../create-blank-app.md).
 
 1. Select **Create a gallery**.
 
@@ -105,7 +93,7 @@ In this lesson, we'll create an app to search, view, and create customer account
 
 1. Add an **Add** icon to the top-right of the screen by selecting **Insert** > **Icon** > **Add**. And then, update the properties of the icon to color white and padding of 5 from all sides.
 
-    ![Add an **Add** icon](media/trigger-flow/build-a-canvas-app-7.png "Add an **Add** icon")
+    ![Add an Add icon](media/trigger-flow/build-a-canvas-app-7.png "Add an Add icon")
 
 1. From the top-left side of the screen, select **New screen** > **Form**.
 
@@ -113,21 +101,21 @@ In this lesson, we'll create an app to search, view, and create customer account
 
 1. Update the title of the form to **New Account**, and select the data source as **Accounts** from the pane on the right-side of the screen.
 
-![Update title and select data source](media/trigger-flow/build-a-canvas-app-9.png "Update title and select data source")
+    ![Update title and select data source](media/trigger-flow/build-a-canvas-app-9.png "Update title and select data source")
 
 1. Select **Edit fields** on the right-pane.
 
-    ![Select edit fields](media/trigger-flow/build-a-canvas-app-10.png "Select edit fields")
+    :::image type="content" source="media/trigger-flow/build-a-canvas-app-10.png" alt-text="Select edit fields.":::
 
 1. Select **Add field** and add **Email** to the form.
 
-    ![Add email field](media/trigger-flow/build-a-canvas-app-11.png "Add email field")
+    :::image type="content" source="media/trigger-flow/build-a-canvas-app-11.png" alt-text="Add email field.":::
 
     The email field gets added to the form.
 
-    ![The email field gets added](media/trigger-flow/build-a-canvas-app-12.png "The email field gets added")
+    :::image type="content" source="media/trigger-flow/build-a-canvas-app-12.png" alt-text="The email field gets added.":::
 
-1. et the default mode of the form to **New**.
+1. Set the default mode of the form to **New**.
 
     ![Default form mode](media/trigger-flow/build-a-canvas-app-13.png "Default form mode")
 

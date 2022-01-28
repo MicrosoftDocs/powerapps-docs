@@ -26,7 +26,7 @@ search.app:
 ---
 # Create or edit model-driven app dashboards
 
-[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 ## Dashboard types
 
 Dashboards are collections of charts relating to Microsoft Dataverse tables.

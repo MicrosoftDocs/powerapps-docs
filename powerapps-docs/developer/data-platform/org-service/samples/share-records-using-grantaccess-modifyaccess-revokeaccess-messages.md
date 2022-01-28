@@ -17,7 +17,7 @@ search.app:
 ---
 # Sample: Share records using GrantAccess, ModifyAccess and RevokeAccess messages
 
-[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 
 <!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/sample-share-records-using-grantaccess-modifyaccess-revokeaccess-messages 
 

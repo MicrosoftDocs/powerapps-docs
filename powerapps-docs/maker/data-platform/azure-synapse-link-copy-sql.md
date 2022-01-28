@@ -25,7 +25,7 @@ contributors: ""
 
 # Copy Dataverse data to Azure SQL with a Pipeline Template
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 After exporting data from Dataverse to Azure Data Lake Storage Gen2 with Azure Synapse Link for Dataverse, you can use Azure Data Factory to create a pipeline that copies data from the data lake to Azure SQL.
 

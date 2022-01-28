@@ -28,7 +28,7 @@ search.app:
 
 # Add or edit model-driven app components in the Power Apps app designer
 
-[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 This tutorial describes how to add components to and remove components from a model-driven app.
 

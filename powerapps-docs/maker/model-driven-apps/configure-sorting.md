@@ -26,7 +26,7 @@ search.app:
 ---
 # Sort rows in a model-driven app view
 
-[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 When you create or edit a view, you can configure the sort order for either ascending or descending.
 
