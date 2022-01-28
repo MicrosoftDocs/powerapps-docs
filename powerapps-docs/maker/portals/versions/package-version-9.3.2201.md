@@ -40,7 +40,9 @@ The package update includes the following enhancements to extend the capabilitie
 
 - Web Notification solution is deprecated.
 
-- Website record configuration in Portal Management app to include additional information such as website version. Website configuration reorganized for easier navigation to related website metadata:
+- Website record configuration in Portal Management app to include additional information such as website version. 
+
+- Website configuration reorganized for easier navigation to related website metadata:
     - Tabs promoted:
         - Basic Forms
         - Lists
