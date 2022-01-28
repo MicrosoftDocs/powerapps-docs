@@ -33,9 +33,13 @@ For more information about creating a portal with starter portal package, go to 
 The package update includes the following enhancements to extend the capabilities of portals:
 
 - Within the Portal Management app, portal user passwords can be updated using a metadata driven dialog.
+
 - Column permission configuration added to the Portal Management app.
+
 - Ability to disable the legacy runtime CMS editor popup for starter templates.
+
 - Web Notification solution is deprecated.
+
 - Website record configuration in Portal Management app to include additional information such as website version. Website configuration reorganized for easier navigation to related website metadata:
     - Tabs promoted:
         - Basic Forms
@@ -45,8 +49,11 @@ The package update includes the following enhancements to extend the capabilitie
         - Site Markers
         - Publishing States
         - Website Access Permissions
+
 - Filetype attribute added.
+
 - Adx_pagenotification workflow will be removed from MicrosoftCrmPortalBaseWorkflows solution.
+
 - Handlebar.js updated to latest version
 
 ## Fixes

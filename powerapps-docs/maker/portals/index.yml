@@ -38,8 +38,8 @@ landingContent:
          links:
           - text: Latest released version of portals
             url: /power-platform/released-versions/portals
-          - text: Starter Portal package version 9.3.2109.x released
-            url: versions/package-version-9.3.2109.md
+          - text: Starter Portal package version 9.3.2201.x released
+            url: versions/package-version-9.3.2201.md
 
   # Card 
   - title: Get started
