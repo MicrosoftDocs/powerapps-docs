@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 06/29/2021
+ms.date: 01/28/2022
 ms.subservice: canvas-maker
 ms.author: lanced
 search.audienceType: 
@@ -24,7 +24,7 @@ There are different ways to [connect](../connections-list.md#security-and-types-
 connect to SQL Server with a security approach that matches requirements for your app.
 
 > [!IMPORTANT]
-> This article also applies to other relational databases such as Oracle.
+> This article applies to all relational databases, and implicit connections.
 
 ## Difference between explicit and implicit connections
 
