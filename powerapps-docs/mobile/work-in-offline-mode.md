@@ -90,12 +90,11 @@ When the initial sync is complete, you can start using the app in offline mode.
 
 ## Offline notifications
 
-When you use Power Apps mobile in offline mode, data is downloaded in the background. In the past, the only way to check the status of the download was to manually go to the offline status page. 
+When you use Power Apps mobile in offline mode, you'll receive notifications that shows the status of the download. Notifications appear in the following scenarios:
 
-With the new notification feature, users can easily tell when the app is ready to use in offline mode. Notifications appear in the following scenarios:
-
-- During the initial sync, you'll get a notification that tells you the number of rows downloaded and how much disk space is used. You will also get the same notification when the app is used after some time.
+- During the initial sync, you'll get a notification showing the number of rows downloaded and how much disk space is used. The same notification appears when you use the app after some time.
 - When you refresh the data on a grid view, you'll get a notification stating, **Refreshing you data**.
+
 
 
 
