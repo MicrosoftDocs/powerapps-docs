@@ -5,7 +5,7 @@ author: lancedMicrosoft
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.date: 06/30/2021
+ms.date: 01/27/2022
 ms.subservice: canvas-maker
 ms.author: lanced
 ms.reviewer: tapanm
@@ -39,22 +39,20 @@ There are currently two ways to add the Excel table as a data source in your app
 > - When you add Excel as a data source, it may create a column called **\_PowerAppsId_**, with a unique ID for each row of your Excel table. This column helps Power Apps know which rows to change. If you already have a unique identifier for each row, you may identify it for Power Apps as part of this process.
 > - This article explains different methods to start creating an app using Excel, and how the different methods use different versions of the connector. However, for a detailed step-by-step instructions to create an app using Excel, see [Create a canvas app from scratch based on Excel data](../get-started-create-from-blank.md).
 
-### Method 1 - Start from Data
+### Method 1 - Start from Excel
 
 > [!IMPORTANT]
 > If you choose this method, you'll use an older version of the connector.
 
-You can automatically add Excel and create a 3 screen application by choosing **Start from Data**.
-
-![Select Excel Online.](./media/connection-excel/start-from-data.png "Select Excel Online")
+You can automatically add Excel and create a 3 screen application by [creating a canvas app with data from an Excel file](../get-started-create-from-data.md)
 
 When you're finished, you'll have an application and in the Data Source window, you'll see your data source has been added with a **OneDrive** connector.
 
 ![OneDrive connector for Excel file.](./media/connection-excel/onedrive-connector.png "OneDrive connector for Excel file")
 
-#### Start from Data with new connector
+#### Start from Excel with new connector
 
-If you want a **Start from Data** app but with the newer version of the connector, use the basic **Start from Data** process to create the application. Then, drop the OneDrive Excel data source, and then readd the Excel data source using the new connector. Because the names of the tables are the same and the file is the same, the Power Apps will  connect to the updated data source and work without any more changes required.
+If you want to start with data from Excel, but with the newer version of the connector, [create an app from scratch from Excel](../get-started-create-from-blank.md) first. Then, drop the OneDrive or any other cloud data source that stores your Excel file, and then readd the Excel data source using the new connector (**Excel Online (Business)**). Because the names of the tables are the same and the file is the same, the Power Apps will  connect to the updated data source and work without any more changes required.
 
 ![Using Start from Data with new connector.](./media/connection-excel/excel-data-source-with-app.png "Using Start from Data with new connector")
 
@@ -63,7 +61,7 @@ If you want a **Start from Data** app but with the newer version of the connecto
 > [!IMPORTANT]
 > If you choose this method, you'll use updated version of the connector.
 
-You can create a blank application (or you can modify an existing one) and then choose to add a new Excel data source.
+You can create a [blank canvas app](../create-blank-app.md) (or you can modify an existing one) and then choose to add a new Excel data source.
 
 The Excel Online (Business) Connector allows users to work with Excel files in document libraries that are supported by Microsoft Graph (OneDrive for Business, SharePoint sites (preview), and Microsoft 365 Groups).
 

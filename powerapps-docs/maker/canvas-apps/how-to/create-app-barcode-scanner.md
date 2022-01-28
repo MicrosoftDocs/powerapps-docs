@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: article
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 09/01/2021
+ms.date: 01/27/2022
 ms.subservice: canvas-maker
 ms.author: vipare
 search.audienceType: 
@@ -42,13 +42,7 @@ Watch this video to learn how to create an app with barcode scanner:
 
 ## Open a blank app
 
-1. Sign in to [Power Apps](https://make.powerapps.com).
-
-1. Under **Make your own app**, select **Canvas app from blank**.
-
-1. Enter a name for your app, select **Phone**, and then select **Create**.
-
-    ![Name the app](media/ceate-app-barcode-scanner/open-a-blank-app-1.png)
+Create a [blank canvas app](../create-blank-app.md).
 
 ## Add barcode scanner
 
