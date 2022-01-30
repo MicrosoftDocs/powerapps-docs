@@ -30,7 +30,7 @@ Accessibility is a term that is used to refer to the extent to which people with
 
 ## Admin center
 
-The Power Platform admin center is a unified portal for administrators to manage environments and settings for Power Apps, [Power Automate](#power-automate), and [Dynamics 365](dynamics-365) apps. Power Platform admin center doesn't cover administration settings and features associated with [Power BI](#power-bi).
+The Power Platform admin center is a unified portal for administrators to manage environments and settings for Power Apps, [Power Automate](#power-automate), and [Dynamics 365](#dynamics-365) apps. Power Platform admin center doesn't cover administration settings and features associated with [Power BI](#power-bi).
 
 [Learn more about the Power Platform admin center](/power-platform/admin/admin-documentation)
 
