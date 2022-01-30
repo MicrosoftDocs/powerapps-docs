@@ -62,6 +62,10 @@ The way in which we manage the lifecycle of an application from conception to en
 
 [App navigation in model-driven apps](app-navigation.md)
 
+## Attribute
+
+A attribute is where data are stored in [table](#table). The Attributes and Fields are common used, but the are renamed so read more on new name [Column](#column).
+
 ## Business process flow
 
 Logic built into a given table to ensure that users complete records by updating fields in the correct order.  
