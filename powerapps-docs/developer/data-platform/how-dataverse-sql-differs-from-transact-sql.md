@@ -94,7 +94,6 @@ More information: [Transact-SQL statements](/sql/t-sql/statements/statements)
   - Union
   - [GROUP BY](#select-group-by)/Having
 - General
-  - IF THEN ELSE
   - DECLARE variable
 
 ### [Not supported](#tab/not-supported)
