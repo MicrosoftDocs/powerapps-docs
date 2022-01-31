@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.subservice: canvas-developer
 ms.topic: conceptual
 ms.custom: intro-internal
-ms.date: 01/25/2022
+ms.date: 01/31/2022
 ms.author: evlew
 ms.reviewer: tapanm
 contributors:
@@ -187,3 +187,6 @@ No. However, users may start an AI Builder trial to try out the AI Builder capab
 Since developer environments aren't intended to support production scenarios, apps display a temporary banner to remind makers about them running in a developer environment. This banner will no longer appear if you move the app from a developer environment to a non-developer environment.
 
 :::image type="content" source="media/developer-plan/power_apps_dev_env_app_banner.png" alt-text="Power Apps Developer Environment app banner.":::
+
+### Are Dynamics 365 apps available in a developer environment?
+No. Power Apps Developer plan doesn't include Dynamics 365 apps. Refer to the app-specific documentation to learn about free trials, or deployment.
