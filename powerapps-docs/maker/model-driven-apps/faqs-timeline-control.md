@@ -16,9 +16,9 @@ search.app:
   - D365CE
 ---
 
-# FAQs for timeline control
+# FAQs for timeline control (classic)
 
-[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 There aren't currently any FAQs. As new FAQs are raised, we will update this topic.
 

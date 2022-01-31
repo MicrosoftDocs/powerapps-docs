@@ -24,7 +24,7 @@ search.app:
 ---
 # Define alternate keys using solution explorer
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 Solution explorer provides one way to view and create alternate keys for Microsoft Dataverse.
 

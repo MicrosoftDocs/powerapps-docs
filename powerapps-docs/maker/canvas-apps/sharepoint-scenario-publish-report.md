@@ -2,7 +2,6 @@
 title: Publish the Power BI project report and create a dashboard
 description: Learn about how to publish our dataset and report to the Power BI service; and then create a dashboard based on the report.
 author: NickWaggoner
-manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas

@@ -7,7 +7,7 @@ ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "samples"
+ms.topic: sample
 applies_to: 
   - "Dynamics 365 (online)"
 ms.assetid: 9cb7eb41-1a73-44a8-ae58-14120e84243f
@@ -23,7 +23,7 @@ search.app:
 ---
 # Sample: Calculate a credit score with a custom workflow activity
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 
 This sample code is for Microsoft Dataverse. Download the complete sample here: [WorkflowActivities](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/WorkflowActivities).
 

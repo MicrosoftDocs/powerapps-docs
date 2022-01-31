@@ -16,7 +16,7 @@ search.app:
   - D365CE
 ---
 # Open table data in Excel
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 By opening table data in Microsoft Excel, you can quickly and easily view and edit data by using the Microsoft Power Apps Excel Add-in. 
 

@@ -2,14 +2,13 @@
 title: Create a canvas app from scratch based on Excel data
 description: In this tutorial, you'll create a two-screen canvas app so that users can create, edit, and delete records in an Excel file.
 author: tapanm-msft
-manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
   - canvas
   - intro-internal
 ms.reviewer: 
-ms.date: 12/05/2019
+ms.date: 01/27/2022
 ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
@@ -49,23 +48,7 @@ To follow the steps in this tutorial exactly, first create an Excel file using t
 
 ## Open a blank app
 
-1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-
-1. Under **Make your own app**, select **Canvas app from blank**.
-
-    > [!div class="mx-imgBorder"]
-    >![Create blank canvas app.](./media/get-started-create-from-blank/blank-app.png)
-
-1. Specify a name for your app, select **Phone**, and then select **Create**.
-
-    You can design an app from scratch for phones or for other devices (such as tablets). This topic focuses on designing an app for phones.
-
-    > [!div class="mx-imgBorder"]
-    >![Specify name and format of app.](./media/get-started-create-from-blank/excel-demo.png)
-
-    Power Apps Studio creates a blank app for phones.
-
-1. If the **Welcome to Power Apps Studio** dialog box opens, select **Skip**.
+Create a [blank canvas app](create-blank-app.md) with **Phone** layout.
 
 ## Connect to data
 

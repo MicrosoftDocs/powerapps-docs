@@ -26,7 +26,7 @@ search.app:
 ---
 # Edit a table
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 You can edit any custom table that you create. Standard tables or managed custom tables may have limitations about changes you can make.  
 

@@ -6,7 +6,7 @@ ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "overview"
+ms.topic: overview
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -25,7 +25,7 @@ search.app:
 ---
 # Create and edit global choices overview 
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 A choice (picklist) is a type of column that can be included in a table. It defines a set of options. When a choice is displayed in a form it uses a drop-down list control. When displayed in **Advanced Find** it uses a *picklist control*. Sometimes choices are called picklists by developers.  
   

@@ -7,7 +7,7 @@ ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "samples"
+ms.topic: sample
 applies_to: 
   - "Dynamics 365 (online)"
 ms.assetid: 6d498e86-8702-43ed-bf76-96d1b4246dfd
@@ -23,7 +23,7 @@ search.app:
 ---
 # Sample: Create a custom workflow activity
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 
 Download the complete sample here: [WorkflowActivities](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/WorkflowActivities).
 

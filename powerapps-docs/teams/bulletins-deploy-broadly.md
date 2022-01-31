@@ -1,5 +1,5 @@
 ---
-title: Deploy Bulletins app broadly in your organization
+title: Deploy Bulletins app broadly in your organization (contains video)
 description: Learn about how to deploy Bulletins app broadly in your organization.
 author: sbahl10
 ms.service: powerapps
@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.custom: 
 ms.date: 07/09/2021
 ms.subservice: teams
-ms.author: namarwah
+ms.author: jshum
 ms.reviewer: tapanm
 contributors:
   - sbahl10
   - joel-lindstrom
-  - navjotm
+  - josephshum
   - tapanm-msft
 ---
 

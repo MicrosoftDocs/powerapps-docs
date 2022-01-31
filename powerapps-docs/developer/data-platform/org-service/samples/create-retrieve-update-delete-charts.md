@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: 06/17/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
-ms.topic: "samples"
+ms.topic: sample
 author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
@@ -18,7 +18,7 @@ search.app:
 
 # Create, retrieve, update, and delete a chart
 
-[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 
 This sample shows how to create, retrieve, update, and delete an user-owned visualization using the following methods:
 

@@ -1,13 +1,12 @@
 ---
-title: Now, Today, and IsToday functions in Power Apps
-description: Reference information including syntax and examples for the Now, Today, and IsToday functions in Power Apps.
+title: Now, Today, IsToday, UTCNow, and UTCToday functions in Power Apps
+description: Reference information including syntax and examples for the Now, Today, IsToday, UTCNow, and UTCToday functions in Power Apps.
 author: gregli-msft
-manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: nabuthuk
-ms.date: 06/09/2018
+ms.reviewer: tapanm
+ms.date: 01/24/2022
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
@@ -16,9 +15,9 @@ search.app:
   - PowerApps
 contributors:
   - gregli-msft
-  - nkrb
+  - tapanm-msft
 ---
-# Now, Today, and IsToday functions in Power Apps
+# Now, Today, IsToday, UTCNow, UTCToday, IsUTCToday functions in Power Apps
 Returns the current date and time, and tests whether a date/time value is today.
 
 ## Description
@@ -28,12 +27,19 @@ The **Today** function returns the current date as a date/time value. The time p
 
 The **IsToday** function tests whether a date/time value is between midnight today and midnight tomorrow. This function returns a Boolean (**true** or **false**) value.
 
-All these functions work with the local time of the current user.
+**Now**, **Today**, and **IsToday** functions work with the local time of the current user.
 
-See [working with dates and times](../show-text-dates-times.md) for more information.
+**UTCNow**, **UTCToday**, and **IsUTCToday** functions are the same as their non-UTC countrparts but work with time zone independent values and use Coordinated Universal Time (UTC).
+
+> [!NOTE]
+> - **UTCNow**, **UTCToday**, and **IsUTCToday** are only available in Microsoft Dataverse for Teams formula columns, and only for time-independent fields and values.
+> - **Now**, **Today**, and **IsToday** are not available in Dataverse for Teams formula columns as evaluations are done without the knowledge of the current user's local time zone.
+> <br> More information: [Work with formula table columns in Dataverse for Teams](../../../teams/formula-columns.md)
+
+See [Date, Time, and DateTime in the data types documentation](data-types.md#date-time-and-datetime) and [working with dates and times](../show-text-dates-times.md) for more information.
 
 ## Volatile Functions
-**Now** and **Today** are volatile functions.  Each time one of these functions is evaluated it returns a different value.  
+**Now**, **Today**, **UTCNow**, and **UTCToday** are volatile functions. These functions return a different value for each evaluation.
 
 When used in a data flow formula, a volatile function will only return a different value if the formula in which it appears is reevaluated.  If nothing else changes in the formula then it will have the same value throughout the execution of your app.
 
@@ -44,6 +50,9 @@ The function will be reevaluated if it is part of a formula in which something e
 When used in a [behavior formula](../working-with-formulas-in-depth.md), volatile functions will be evaluated each time the behavior formula is evaluated.  See below for an example.
 
 ## Syntax
+
+#### Using the user's local time
+
 **Now**()
 
 **Today**()
@@ -52,19 +61,33 @@ When used in a [behavior formula](../working-with-formulas-in-depth.md), volatil
 
 * *DateTime* - Required.  The date/time value to test.
 
+#### Using Coodinated Universal Time (UTC)
+
+**UTCNow**()
+
+**UTCToday**()
+
+**IsUTCToday**( *TimeZoneIndependentTime* )
+
+* *TimeZoneIndependentDateTime* - Required.  The time zone indepdenent date/time value to test.
+
 ## Examples
-For the examples in this section, the current time is **3:59 AM** on **February 12, 2015**, and the language is **en-us**.
+For the examples in this section, the current time is **8:58 PM** on **July 11, 2021** in the Pacific Time Zone (UTC-8) and the language is **en-us**.
 
 | Formula | Description | Result |
 | --- | --- | --- |
-| **Text( Now(), "mm/dd/yyyy hh:mm:ss" )** |Retrieves the current date and time, and displays it as a string. |"02/12/2015 03:59:00" |
-| **Text( Today(), "mm/dd/yyyy hh:mm:ss" )** |Retrieves the current date only, leaving the time portion as midnight, and displays it as a string. |"02/12/2015 00:00:00" |
+| **Text( Now(), "mm/dd/yyyy hh:mm:ss" )** |Retrieves the current date and time in the user's time zone, and displays it as a string. |"07/11/2021 20:58:00" |
+| **Text( Today(), "mm/dd/yyyy hh:mm:ss" )** |Retrieves the current date only, leaving the time portion as midnight, and displays it as a string. |"07/12/2021 00:00:00" |
 | **IsToday( Now() )** |Tests whether the current date and time is between midnight today and midnight tomorrow. |**true** |
 | **IsToday( Today() )** |Tests whether the current date is between midnight today and midnight tomorrow. |**true** |
-| **Text( DateAdd( Now(), 12 ), "mm/dd/yyyy hh:mm:ss" )** |Retrieves the current date and time, adds 12 days to the result, and displays it as a string. |"02/24/2015 03:59:00" |
-| **Text( DateAdd( Today(), 12 ), "mm/dd/yyyy hh:mm:ss" )** |Retrieves the current date, adds 12 days to the result, and displays it as a string. |"02/24/2015 00:00:00" |
+| **Text( DateAdd( Now(), 12 ), "mm/dd/yyyy hh:mm:ss" )** |Retrieves the current date and time, adds 12 days to the result, and displays it as a string. |"07/23/2021 20:58:00" |
+| **Text( DateAdd( Today(), 12 ), "mm/dd/yyyy hh:mm:ss" )** |Retrieves the current date, adds 12 days to the result, and displays it as a string. |"07/23/2021 00:00:00" |
 | **IsToday( DateAdd( Now(), 12 ) )** |Tests whether the current date and time, plus 12 days, is between midnight today and midnight tomorrow. |**false** |
 | **IsToday( DateAdd( Today(), 12 ) )** |Tests whether the current date, plus 12 days, is between midnight today and midnight tomorrow. |**false** |
+| **Hour( UTCNow() )** | Retrieves the current date and time in UTC and extracts the hour only, which is 8 hours ahead of local time. | 4 |
+| **Day( UTCToday() )** | Retrives the current date only in UTC and extracts the day, which is 1 day ahead of local time.  | 12 |
+| **IsUTCToday( UTCNow() )** | Tests whether the current date and time is between midnight today and midnight tomorrow, all in UTC time. |**true** |
+| **IsUTCToday( UTCToday() )** |Tests whether the current date is between midnight today and midnight tomorrow, all in UTC time. |**true** |
 
 #### Display a clock that updates in real time
 

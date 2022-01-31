@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2021
+ms.date: 01/25/2022
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: ndoelman
@@ -49,6 +49,17 @@ contributors:
 - If you keep the portal settings pane open in Power Apps home page while resetting the portal from Power Apps portals admin center, a user will see the "Something went wrong" error message in the portal settings pane, as portal isn't available.
 
 - In certain cases, when you create a portal, the styles aren't applied properly to the portal, and the website is displayed without the styles when opened through **Browse website**. This behavior rarely happens and styles can be recovered by restarting the portal from Power Apps portals admin center.
+
+- Users may get an error when viewing the **Access Denied** webpage.
+
+    To resolve this issue:
+    
+    1. Using the [Portals Management app](/configure/configure-portal.md), go to the **Web Pages** section and select the **Access Denied** webpage.
+    1. Update the *Page Template* lookup field to *Access Denied*.
+    1. Select **Save**.
+    1. [Clear the portal cache](/admin/clear-server-side-cache.md#steps-to-clear-portal-server-side-cache).
+
+- When configuring a [basic form](configure/entity-forms.md), the incorrect model-driven form is displayed when rendered as a basic form on a page. This may happen when a model-driven form name is duplicated across different form types (**Main**, **Card**, and **QuickViewform**). Only one form name appears when configuring or creating a basic form for the portal. To resolve the issue, rename or create a copy (with a unique name) of the model-driven form to use when configuring the basic form.
 
 ## Power Apps portals Studio issues
 

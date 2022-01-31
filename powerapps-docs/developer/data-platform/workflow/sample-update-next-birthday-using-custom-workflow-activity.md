@@ -7,7 +7,7 @@ ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "samples"
+ms.topic: sample
 applies_to: 
   - "Dynamics 365 (online)"
 ms.assetid: 1cff83b0-1f7b-4ddb-a2af-b85f9f785529
@@ -23,7 +23,7 @@ search.app:
 ---
 # Sample: Update next birthday using a custom workflow activity
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 
 Download the complete sample here: [WorkflowActivities](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/WorkflowActivities).
 

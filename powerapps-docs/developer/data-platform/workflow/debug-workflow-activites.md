@@ -17,7 +17,7 @@ search.app:
 ---
 # Debug Workflow Activities
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 
 Because custom workflow extensions are .NET Framework assemblies you can debug them using methods very similar to how you debug plug-ins. 
 

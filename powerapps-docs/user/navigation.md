@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 10/15/2021
+ms.date: 01/13/2022
 ms.subservice: end-user
 ms.author: mkaur
 ms.reviewer: ""
@@ -19,7 +19,7 @@ search.app:
 ---
 #  Basic navigation in a model-driven app 
 
-[!INCLUDE[cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 This introduction explains how to find and open an app, and how to work with its common user interface elements including lists, forms, and business processes.
 
@@ -69,6 +69,11 @@ Legend
 4. **Pinned**: Expand this entry to view and open your favorite pinned rows. Use the **Recent** list to add rows here. Select the remove-pin icon next to a row listed here to remove it from this list.
 5.  **Page navigation**: This area lists each table and dashboard page available for the current work area. Select any entry here to open the named dashboard or list view for that table.
 6.  **Collapsible groups**: Your app maker can enable collapsible groups. For information on how customize the navigation bar, see [Overview of the model-driven app designer](../maker/model-driven-apps/app-designer-overview.md).
+
+
+If your screen is zoomed in too much or is very narrow, then you won't see your current app name which lets you change apps. To access the change app button, select **Site map** > **Apps**. 
+
+![Select the site map button to access the app switcher.](media/zoom-app.png "Select site map to access app switcher")
 
 
 ### Hide or show the Home, Pinned, Recent, and collapsible groups

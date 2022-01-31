@@ -2,12 +2,11 @@
 title: Create an order gallery in a canvas app
 description: Learn about how to create an order gallery in a canvas app to manage data for Northwind Traders.
 author: gregli-msft
-manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 05/13/2021
+ms.date: 01/27/2021
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType:
@@ -36,20 +35,7 @@ Follow step-by-step instructions to create an order gallery in a canvas app for 
 
 ## Create a blank app
 
-1. [Sign in to Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then create a blank tablet app.
-
-    > [!div class="mx-imgBorder"]
-    > ![Canvas app from blank tile.](media/northwind-orders-canvas-part1/start-01.png)
-
-1. Name your app whatever you like, and then select **Create**.
-
-    > [!div class="mx-imgBorder"]
-    > ![Canvas app from blank dialog box.](media/northwind-orders-canvas-part1/start-02.png)
-
-    Power Apps Studio opens so that you can add data sources and controls to your app:
-
-    > [!div class="mx-imgBorder"]
-    > ![Power Apps Studio.](media/northwind-orders-canvas-part1/start-03.png)
+Create a [blank canvas app](create-blank-app.md), and give it a name such as "My Northwind Orders (Canvas app)".
 
 ## Add the data
 

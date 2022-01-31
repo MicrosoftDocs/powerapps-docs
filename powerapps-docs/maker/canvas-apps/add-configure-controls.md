@@ -2,12 +2,10 @@
 title: Add and configure controls in canvas apps
 description: Step-by-step instructions for adding and configuring canvas-app controls directly, from the toolbar, in the Properties tab, or in the formula bar.
 author: tapanm-msft
-manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
-ms.custom: canvas
 ms.reviewer: 
-ms.date: 01/25/2019
+ms.date: 01/27/2022
 ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
@@ -17,6 +15,9 @@ search.app:
 contributors:
   - tapanm-msft
   - chmoncay
+ms.custom:
+  - intro-internal
+  - canvas
 ---
 # Add and configure controls in canvas apps
 
@@ -25,8 +26,7 @@ Add a variety of UI elements to your canvas app, and configure aspects of their 
 ## Prerequisites
 
 1. If you don't already have a Power Apps license, [sign up](../signup-for-powerapps.md), and then [sign in](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-1. Under **Make your own app**, hover over **Canvas app from blank**, and then select **Make this app**.
-1. If you're prompted to take the intro tour, select **Next** to get familiar with key areas of the Power Apps interface (or select **Skip**).
+1. Create a [blank canvas app](create-blank-app.md).
 
     You can always take the tour later by selecting the question-mark icon near the upper-right corner of your screen and then selecting **Take the intro tour**.
 

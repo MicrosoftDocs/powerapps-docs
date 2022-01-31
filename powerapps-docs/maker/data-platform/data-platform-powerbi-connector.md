@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 ---
 # Create a Power BI report using data from Dataverse
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 Microsoft Dataverse allows you to connect directly to your data using Power BI Desktop to create reports and publish them to Power BI. From Power BI, reports can be used in dashboards, shared to other users, and accessed cross platform on Power BI mobile apps.
 
@@ -71,8 +71,9 @@ To use Power BI with Dataverse, you need the following items:
 
 ## Special column types
 
-### Choices
-Choices are used in tables to provide a drop-down list of values to a user in apps and flows. When using the Power BI connector choice  columns will be presented as two columns to show both the unique value, and the display value.
+### Choice columns
+
+Choice columns are used in tables to provide a drop-down list of items to a user to make a single selection in apps and flows. When using the Dataverse connector, choice columns will be presented as two columns to show both the unique value, and the display item value.
 
 For example, if you had a choice column on your table called `approvalstatus`, you would see two columns in Power BI:
 
@@ -86,7 +87,16 @@ For example, if you had a choice column on your table called `approvalstatus`, y
     3|Approved
     4|Rejected
 
+#### Performance impact and choice name columns
+
+When retrieving the label name for a choice column, Dataverse makes a join with the internal stringmap table (where localized labels are stored). This is executed for each label/name column. Note that, this join and doing filters against the label name column, rather than the value column, can significantly impact report query performance.
+
+### Choices columns
+
+Choices are similar to choice columns with the difference being that users can select multiple items from the list. Choices aren't currently fully supported with the Dataverse connector.  When you use the Dataverse connector with choices columns, you only receive the integer values, which are comma separated. The item label name columns aren't returned. For more information about the Dataverse data types not supported with the Dataverse connector, see [Supported operations and data types](../../developer/data-platform/dataverse-sql-query.md#supported-operations-and-data-types).
+
 ### Lookups
+
 Lookup columns use a many-to-one (N:1) table relationship between the table you’re working with and the target row type defined for the lookup. Lookups are presented in Power BI Desktop as two columns, *lookup*id and *lookup*id-name.
 
 ## Navigating relationships

@@ -1,5 +1,5 @@
 ---
-title: Enable Power Apps and Dataverse for Teams in Microsoft Teams
+title: Enable Power Apps and Dataverse for Teams in Microsoft Teams (contains video)
 description: Learn about how to provision Power Apps in Microsoft Teams and create a Microsoft Dataverse for Teams 
 author: joel-lindstrom
 ms.service: powerapps
@@ -11,7 +11,7 @@ ms.author: nhelgren
 ms.reviewer: tapanm
 contributors:
   - joel-lindstrom
-  - navjotm
+  - josephshum
   - tapanm-msft
 ---
 

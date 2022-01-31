@@ -1,5 +1,5 @@
 ---
-title: "Create 1:N (one-to-many) or N:1 (many-to-one) table relationships in Power Apps overview | MicrosoftDocs"
+title: "Create 1:N (one-to-many) or N:1 (many-to-one) table relationships in Power Apps overview (contains video) | MicrosoftDocs"
 description: "Learn how to create one-to-many or many-to-one table relationships"
 ms.custom: ""
 ms.date: 10/04/2021
@@ -7,7 +7,7 @@ ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "overview"
+ms.topic: overview
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -27,7 +27,7 @@ search.app:
 ---
 # Create one-to-many or many-to-one table relationships overview
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 In Microsoft Dataverse 1:N (one-to-many) or N:1 (many-to-one) relationships define how two tables are related to each other.
   

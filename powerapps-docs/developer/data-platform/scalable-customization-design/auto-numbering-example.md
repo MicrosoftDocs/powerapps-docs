@@ -17,7 +17,7 @@ search.app:
 ---
 # Scalable Customization Design: Auto-numbering example
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 
 > [!NOTE]
 > This example supports a series of topics about scalable customization design. To start at the beginning, see [Scalable Customization Design in Microsoft Dataverse](overview.md).

@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 10/25/2021
+ms.date: 12/16/2021
 ms.subservice: end-user
 ms.author: mkaur
 ms.custom: ""
@@ -21,7 +21,7 @@ search.app:
 
 # Search for tables and rows by using Dataverse search
 
-[!INCLUDE[cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 With Dataverse search, the search box is always available at the top of every page in your app. You can start a new search and quickly find the information that you're looking for. 
 
@@ -66,7 +66,7 @@ With suggestions, you can access your information quickly by using minimal keyst
 
 ## Search results page
 
-View the full results for a search by pressing **Enter** on your keyboard or selecting **Show more results**.
+View the full results for a search by pressing **Enter** on your keyboard or selecting **Show more results**. Dataverse search will append "\*" to the search if two or less characters are entered.
 
 Search results are ranked based on relevance and grouped by tables. The list of tables that include rows that match the search term are displayed horizontally as tabs along the top of the screen.
 

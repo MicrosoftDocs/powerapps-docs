@@ -1,5 +1,5 @@
 ---
-title: Enable users to discuss ideas
+title: Enable users to discuss ideas (contains video)
 description: Explains how to extend the Employee Ideas sample app for Microsoft Teams to take users to a discussion about an idea in Teams.
 author: joel-lindstrom
 ms.service: powerapps
@@ -7,11 +7,11 @@ ms.topic: conceptual
 ms.custom: 
 ms.date: 08/26/2021
 ms.subservice: teams
-ms.author: namarwah
+ms.author: jshum
 ms.reviewer: tapanm
 contributors:
   - joel-lindstrom
-  - navjotm
+  - josephshum
   - tapanm-msft
   - sbahl10
 ---

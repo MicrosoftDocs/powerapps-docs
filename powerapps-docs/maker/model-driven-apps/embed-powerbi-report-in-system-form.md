@@ -18,7 +18,7 @@ search.app:
 ---
 # Embed a Power BI report in a model-driven app main form
 
-[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 You can use Power BI reports in Power Apps model-driven apps to bring rich reporting and analytics to your main forms and empower your users to accomplish more. This unlocks the power to aggregate data across systems, and tailor it down to the context of a single record.
  
@@ -198,8 +198,5 @@ Before you import the solution into the target environment, make sure the unmodi
 [Embed a Power BI dashboard in a Power Apps model-driven personal dashboard](../../user/add-powerbi-dashboards.md)
 
 [Use Power BI with Dynamics 365 apps](/power-platform/admin/use-power-bi)
-
-[Import, update, and export solutions](../data-platform/import-update-export-solutions.md)
-
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -1,5 +1,5 @@
 ---
-title: Deploy Employee Ideas sample app as a broad distribution app.
+title: Deploy Employee Ideas sample app as a broad distribution app. (contains video)
 description: Learn how to share Employee Ideas with colleagues that aren't members of the team where the app is installed.
 author: joel-lindstrom
 ms.service: powerapps
@@ -7,10 +7,10 @@ ms.topic: conceptual
 ms.custom: 
 ms.date: 07/02/2021
 ms.subservice: teams
-ms.author: namarwah
+ms.author: jshum
 ms.reviewer: tapanm
 contributors:
-  - navjotm
+  - josephshum
   - joel-lindstrom
   - tapanm-msft
 ---

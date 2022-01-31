@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: intro-internal
-ms.date: 10/11/2021
+ms.date: 01/27/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
@@ -47,7 +47,11 @@ To create a portal:
 
 1. Sign in to [Power Apps](https://make.powerapps.com).  
 
-1. Under **Make your own app**, select **Portal from blank**.
+1. Under **Create your app**, select **Blank app**.
+
+1. Select **Create** from the **Blank website** option.
+
+    :::image type="content" source="media/create-portal/create-portal.png" alt-text="Create new blank website.":::
 
 1. If the selected environment doesn't contain portal pre-requisites, a message is displayed in the **Portal from blank** window suggesting you select another environment or create a new one.
 
@@ -130,7 +134,8 @@ Once the provisioning request is successfully placed, a confirmation email notif
 [Control portal creation in a tenant](control-portal-creation.md) <br>
 [Create additional portals in an environment](create-additional-portals.md) <br>
 [Microsoft Learn: Administer Power Apps portals](/learn/paths/administer-portals/) <br>
-[Microsoft Learn: Access Dataverse in Power Apps portals](/learn/modules/portals-access-data-platform/)
+[Microsoft Learn: Access Dataverse in Power Apps portals](/learn/modules/portals-access-data-platform/) <br>
+[Contact us sample](contact-us-sample.md)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

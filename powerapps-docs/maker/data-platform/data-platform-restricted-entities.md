@@ -16,7 +16,7 @@ search.app:
 
 # Restricted tables requiring Dynamics 365 licenses
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 App makers, who are building custom apps, can use all of the Microsoft Dataverse tables available within [Common Data Model](/common-data-model/) to create apps and flows for users who have any version of Power Apps and Power Automate license.  
 
@@ -29,14 +29,15 @@ Tables may be restricted to a Dynamics 365 app license for the following reasons
 If an app or flow only reads information from a table, a Dynamics 365 app license is not required and an appropriate Power Apps or Power Automate license is all that's needed.
 
 ## Restricted tables for create, update, and delete operations
+
 The following table lists the restricted tables and the associated Dynamics 365 license requirements for users who create, update, or delete data stored within these tables. 
 
 |Table  |Logical name  |License required  |
 |---------|---------|---------|
 Actual |msdyn_actual |Dynamics 365 for Field Service <br> **or** Dynamics 365 for Project Service Automation<br>**or** Dynamics 365 Customer Engagement plan <br> **or** Dynamics 365 plan
-Agreement Business Process |msdyn_bpf_baa0a411a239410cb8bded8b5fdd88e3 |Dynamics 365 for Field Service<br>**or** Dynamics 365 Customer Engagement plan <br> **or** Dynamics 365 plan
+Agreement Business Process |msdyn_bpf_baa0a411a239410cb8bded8b5fdd88e3 |Dynamics 365 for Field Service<br> **or** Dynamics 365 Customer Engagement plan <br> **or** Dynamics 365 plan
 Booking journal | msdyn_bookingjournal|Dynamics 365 for Field Service<br>**or** Dynamics 365 Customer Engagement plan <br> **or** Dynamics 365 plan
-Booking Setup Metadata | msdyn_bookingsetupmetadata|Dynamics 365 for Field Service <br> **or** Dynamics 365 for Project Service Automation<br>**or** Dynamics 365 Customer Engagement plan <br> **or** Dynamics 365 plan
+Booking Setup Metadata | msdyn_bookingsetupmetadata|Dynamics 365 for Field Service <br> **or** Dynamics 365 for Project Service Automation<br>**or** Dynamics 365 for Customer Service Enterprise edition <br> **or** Dynamics 365 Customer Engagement plan <br> **or** Dynamics 365 plan
 Booking timestamp | msdyn_bookingtimestamp|Dynamics 365 for Field Service<br> **or** Dynamics 365 Customer Engagement plan<br> **or** Dynamics 365 plan
 Case<sup>1</sup> | incident | Dynamics 365 for Customer Service Professional edition <br>**or** Dynamics 365 for Customer Service Enterprise edition <br>**or** Dynamics 365 Customer Engagement plan <br> **or** Dynamics 365 plan
 Case to Work Order Business Process |msdyn_bpf_989e9b1857e24af18787d5143b67523b |Dynamics 365 for Field Service<br>**or** Dynamics 365 Customer Engagement plan <br> **or** Dynamics 365 plan
