@@ -24,7 +24,7 @@ This article shows how to debug your code components using the test harness and 
     - [Test code components with mock data](#test-code-components-with-mock-data)
     - [Common limitations when using the test harness](#common-limitations-when-using-the-test-harness)
   - [Using browser developer tools to debug your code component](#using-browser-developer-tools-to-debug-your-code-component)
-    - [Bundling using web pack](#bundling-using-web-pack)
+    - [Bundling using web pack](#bundling-using-webpack)
     - [Using developer tools with code components](#using-developer-tools-with-code-components)
     - [ES5 vs ES6](#es5-vs-es6)
   - [Debugging after deploying into Microsoft Dataverse](#debugging-after-deploying-into-microsoft-dataverse)
