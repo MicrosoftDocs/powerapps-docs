@@ -2232,7 +2232,9 @@
       - name: Create a view on your Dataverse data
         href: ./data-platform/azure-synapse-link-create-view.md
       - name: Transform data with Apache Spark
-        href: ./data-platform/azure-synapse-link-spark.md 
+        href: ./data-platform/azure-synapse-link-spark.md
+      - name: Run Azure Synapse pipelines
+        href: ./data-platform/azure-synapse-link-pipelines.md
       - name: Visualize data with Power BI
         href: ./data-platform/azure-synapse-link-powerbi.md
       - name: Copy data to Dedicated SQL
