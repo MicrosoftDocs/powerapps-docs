@@ -170,7 +170,7 @@ This section describes how to debug your code component inside the Microsoft Edg
 
 ### ES5 vs ES6
 
-Currently, by default, code components are configured to transpile into ES5 JavaScript so that older browsers are supported (Internet Explorer 11). In the future, this will change once Internet Explorer 11 support for Power Apps is removed, enabling newer language features to be used in supported browsers. You can change the target to ES6 if you do not need to support older browsers by setting the `target` in your projects `tsconfig.json` to `ES6`:
+Currently, by default, code components are configured to transpile into ES5 JavaScript so that older browsers are supported. You can change the target to ES6 if you do not need to support older browsers by setting the `target` in your projects `tsconfig.json` to `ES6`:
 
 ```json
 {
