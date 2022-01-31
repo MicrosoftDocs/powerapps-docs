@@ -73,7 +73,7 @@ This section describes the prerequisites necessary to copy exported Dataverse da
 
 6. Open the data flow and replace the *ContainerName* and the *TableName* parameters.
 
-    ![Data flow parameters](media/data-flow-params-2.png "Data flow parameters")
+    ![Data flow parameters for data flow](media/data-flow-params-2.png "Data flow parameters for data flow")
 
 7. Navigate to the pipeline and run it. Optionally, **Add trigger** to copy the data at specific time intervals.
 
