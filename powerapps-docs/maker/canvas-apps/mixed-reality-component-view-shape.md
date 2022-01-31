@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 3/28/2022
+ms.date: 1/28/2022
 ms.subservice: canvas-maker
 ms.author: anuitz
 search.audienceType: 
