@@ -76,6 +76,7 @@ The app data includes all the resources needed for the app to run properly. User
 With offline-first, during the initial offline sync, you'll get a notification stating that your app is syncing the offline data with the number of rows downloaded and how much disk space is used. This can take a few minutes or longer, depending on what has been configured in the offline profile. If the initial offline sync isn't complete, it will be triggered every time the app is opened. You will also get the same notification when you resume the app after a long period of inactivity.
 
 
+> [!div class="mx-imgBorder"]
 > ![Offline status screen.](media/offline-first-1.png)
 
 You can also select the **Offline status** button to see more information about sync progress.
