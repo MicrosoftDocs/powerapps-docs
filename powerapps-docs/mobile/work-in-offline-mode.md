@@ -73,7 +73,7 @@ For the app to be available in offline mode, app and user data must be downloade
 
 The app data includes all the resources needed for the app to run properly. User data includes that is configured for the offline profile and stored in Microsoft Dataverse tables.
 
-With offline-first, during the initial offline sync, you'll get a notification stating that your app is syncing the offline data. This can take a few minutes or longer, depending on what has been configured in the offline profile. If the initial offline sync isn't complete, it will be triggered every time the app is opened. Select **See details** to open the offline status page.
+With offline-first, during the initial offline sync, you'll get a notification stating that your app is syncing the offline data with the number of rows downloaded and how much disk space is used. This can take a few minutes or longer, depending on what has been configured in the offline profile. If the initial offline sync isn't complete, it will be triggered every time the app is opened.  Select **See details** to open the offline status page.
 
 > [!div class="mx-imgBorder"]
 > ![Offline status screen.](media/offline-first-1.png)
@@ -88,12 +88,12 @@ When the initial sync is complete, you can start using the app in offline mode.
 > [!div class="mx-imgBorder"]
 > ![Offline status completed.](media/offline-first-3.png)
 
-## Offline notifications
 
-When you use Power Apps mobile in offline mode, you'll receive notifications that shows the status of the download. Notifications appear in the following scenarios:
+You will get the same notification when you resume the app after a long period of inactivity.
 
-- During the initial sync, you'll get a notification showing the number of rows downloaded and how much disk space is used. The same notification appears when you use the app after some time.
-- When you refresh the data on a grid view, you'll get a notification stating, **Refreshing you data**.
+
+
+When you refresh the data on a grid view, you'll get a notification stating, **Refreshing you data**.
 
 
 
