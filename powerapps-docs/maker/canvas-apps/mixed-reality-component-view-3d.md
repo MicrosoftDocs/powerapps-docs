@@ -22,7 +22,7 @@ contributors:
 
 Easily add interactive 3D content to your canvas apps. Users can [select from a gallery of 3D content](mixed-reality-component-view-3d-store.md) and rotate and zoom 3D models using simple gestures.
 
-:::image type="content" source="./media/augmented-overview/view-in-3d.png" alt-text="A photo of a 3D model of a forklift, shown in two different apps on a mobile device.":::
+:::image type="content" source="./media/augmented-overview/view-in-3d.png" alt-text="A photo of two phones side by side, both of which show a 3D model of a forklift viewed in two mobile apps.":::
 
 > [!IMPORTANT]
 > Your 3D content must be in the .glb, .obj, or .stl file formats. You can [convert your existing 3D models into the .glb file format](/dynamics365/mixed-reality/guides/3d-content-guidelines/) from a variety of 3D formats.
@@ -32,7 +32,7 @@ Easily add interactive 3D content to your canvas apps. Users can [select from a 
 
 ## Add a 3D control to an app screen
 
-With your app open for editing in [Power Apps Studio](https://create.powerapps.com):
+With your app open for [editing](edit-app.md) in [Power Apps Studio](https://create.powerapps.com):
 
 1. Open the **Insert** tab and expand **Media**.
 2. Select **View in 3D** to place a 3D control in the app screen, or drag the control to the screen to position it more precisely.
@@ -51,20 +51,20 @@ Change a 3D control's behavior and appearance using properties. Some properties 
 | Pins(Items) | [Shows pins on the model at specific coordinates](mixed-reality-add-pins-3d-model.md), provided in a data source (**Items**). If *None*, no pins are shown. | Data table | Properties; Advanced: **Items** |
 | Show pins | Shows the pins described in **Items**. | Boolean | Properties; Advanced: **ShowPins** |
 | Show reset button | Shows or hides a button that resets the model to its initial state. | Boolean | Properties; Advanced; **ShowReset** |
-| **[Visible](./controls/properties-core.md)** | Shows or hides the control. | Boolean | Properties; Advanced: **[Visible](./controls/properties-core.md)** |
+| [Visible](./controls/properties-core.md) | Shows or hides the control. | Boolean | Properties; Advanced: **Visible** |
 | Position | Places the upper-left corner of the control at the screen coordinates specified in *x* and *y*. | Floating point number | Properties; Advanced: **[X](./controls/properties-size-location.md)**, **[Y](./controls/properties-size-location.md)** |
 | Size | Determines the size of the control using the pixel values provided in *Width* and *Height*. | Integer | Properties; Advanced: **[Width](./controls/properties-size-location.md)**, **[Height](./controls/properties-size-location.md)** |
-| OnModelLoad | NEEDS DESCRIPTION OF WHAT HAPPENS when a model is loaded in the control.| ? | Advanced |
-| OnChange | NEEDS DESCRIPTION OF WHAT HAPPENS when any property of the control is changed. | ? | Advanced |
-| OnSelect | NEEDS DESCRIPTION OF WHAT HAPPENS when a pin is selected or the user focuses on the control. | ? | Advanced |
+| OnModelLoad | Contains code that runs when a model is loaded.| Event | Advanced |
+| OnChange | Contains code that runs when any property of the control is changed. | Event | Advanced |
+| OnSelect | Contains code that runs when the user selects a pin or the control. | Event | Advanced |
 | MaxPins | Specifies the maximum number of pins that can be shown on the model. | Integer | Advanced |
 | PinsX | Specifies the location of pins on the X axis in 3D coordinate space. | Floating point number | Advanced |
 | PinsY | Specifies the location of pins on the Y axis in 3D coordinate space. | Floating point number | Advanced |
 | PinsZ | Specifies the location of pins on the Z axis in 3D coordinate space. | Floating point number | Advanced |
-| **[Tooltip](./controls/properties-core.md)** | Determines the text to display when the user hovers over a visual. BRIEFLY, WHERE DOES THIS COME FROM? | ? | Advanced |
-| ContentLanguage | Determines the display language of the control, if it's different from the language used in the app. | ? | Advanced |
-| **[DisplayMode](./controls/properties-core.md)** |  Determines whether the control allows user input (*Edit*), only displays data (*View*), or is disabled (*Disabled*). | Enum | Advanced |
-| **[TabIndex](./controls/properties-accessibility.md)** | Specifies the order the control is selected if the user navigates the app using the Tab key. | Integer |  Advanced |
+| [Tooltip](./controls/properties-core.md) | Determines the text to display when the user hovers over a pin. | String | Advanced |
+| ContentLanguage | Determines the display language of the control, if it's different from the language used in the app. | String | Advanced |
+| [DisplayMode](./controls/properties-core.md) |  Determines whether the control allows user input (*Edit*), only displays data (*View*), or is disabled (*Disabled*). | Dropdown list | Advanced |
+| [TabIndex](./controls/properties-accessibility.md) | Specifies the order the control is selected if the user navigates the app using the Tab key. | Integer |  Advanced |
 
 ## Performance considerations
 
