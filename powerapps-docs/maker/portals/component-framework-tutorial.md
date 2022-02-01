@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 01/25/2022
+ms.date: 02/01/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
@@ -15,11 +15,9 @@ contributors:
   - HemantGaur
 ---
 
-# Tutorial: Use code components in portals (preview)
+# Tutorial: Use code components in portals
 
-[This article is pre-release documentation and is subject to change.]
-
-In this tutorial, you'll create a sample component using Power Apps component framework. You'll package this component to a Dataverse environment and add the component to a model-driven app. You'll then configure Power Apps portals to add the component to a basic form, set access for the **Web Resource** table, and add the basic form to a webpage. Finally, you'll visit the portals webpage and interact with the component.
+In this tutorial, you'll create a sample component using Power Apps component framework. You'll package this component to a Dataverse environment and add the component to a model-driven app. You'll then configure Power Apps portals to add the component to a basic form and add the basic form to a webpage. Finally, you'll visit the portals webpage and interact with the component.
 
 ## Prerequisites
 
@@ -147,3 +145,4 @@ The webpage will now show the basic form for the **Opportunities** table with th
 [Create your first component](../../developer/component-framework/implementing-controls-using-typescript.md) <br>
 [Add code components to a field or table in model-driven apps](../../developer/component-framework/add-custom-controls-to-a-field-or-entity.md)
 
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]
