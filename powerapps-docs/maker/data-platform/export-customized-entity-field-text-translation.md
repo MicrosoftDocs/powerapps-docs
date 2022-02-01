@@ -25,7 +25,7 @@ search.app:
   - D365CE
 ---
 # Translate customized table, form, and column text into other languages
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 After you create customized table and column text in your unmanaged solution, you may want to translate it into other languages.  
 

@@ -17,7 +17,7 @@ search.app:
 ---
 # Sample: Validate and execute a saved query
 
-[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 
 <!-- Needs supporting conceptual topic 
 https://docs.microsoft.com/dynamics365/customer-engagement/developer/org-service/sample-validate-execute-saved-query

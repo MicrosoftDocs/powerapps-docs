@@ -22,7 +22,7 @@ search.app:
 ---
 # Use the model-driven app main form and its components
 
-[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 Forms in model-driven apps provide the primary means by which users can update records.  Forms associated with a table can be accessed via the table designer.
 

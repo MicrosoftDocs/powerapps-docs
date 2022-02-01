@@ -26,7 +26,7 @@ search.app:
 ---
 # Opening the view designer
 
-[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 In this article, a view definition will be opened to display properties and options to configure the view.
 

@@ -18,7 +18,7 @@ search.app:
 
 # Detect Duplicate Data using the Web API
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 
 <!-- 
 Related topics

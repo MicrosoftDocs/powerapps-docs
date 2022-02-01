@@ -17,7 +17,7 @@ search.app:
 ---
 
 # Manage custom columns in a table
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 You can create and update one or more custom columns in any table. When you create a custom column, you specify a set of properties, such as the column's name, its display name, and the type of data that it will contain. For more information, see [table attribute metadata](../../developer/data-platform/entity-attribute-metadata.md).
 

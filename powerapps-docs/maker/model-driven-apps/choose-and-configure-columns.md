@@ -29,7 +29,7 @@ search.app:
 
 # Choose and configure columns in model-driven app views
 
-[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 <a name="BKMK_ChooseAndConfigureColumns"></a>   
 

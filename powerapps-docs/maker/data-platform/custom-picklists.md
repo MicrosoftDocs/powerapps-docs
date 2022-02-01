@@ -18,7 +18,7 @@ search.app:
 
 # Create a choice
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 Choices allow you to include drop down lists of fixed values to a user within your app to ensure data consistency, sometimes referred to as picklists or choice columns in other applications. Similar to tables, there are both standard choices, and the ability to create custom Choices to use within your app.
 

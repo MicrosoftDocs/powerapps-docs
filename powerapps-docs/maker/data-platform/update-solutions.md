@@ -25,7 +25,7 @@ search.app:
 ---
 
 # Upgrade or update a solution  
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 There are times when you need to update an existing managed solution. To update the solution, follow these steps:
 
