@@ -44,7 +44,7 @@ The following table explains requirements for user type with actions specific to
 | User type | Customized SharePoint list form action | Requirements |
 | - | - | - |
 | Guest | Use | <ul> <li> View access to SharePoint site hosting the custom form. </li> </ul> |
-| Guest | Create | See [Power Apps support for B2B guest maker (preview)](/power-platform/admin/invite-users-azure-active-directory-b2b-collaboration#power-apps-support-for-b2b-guest-maker-preview) |
+| Guest | Create | <ul> <li> Edit access to SharePoint site hosting the custom form. </li> <li> Membership of **Environment Maker** security role in the Power Platform environment used to customize the SharePoint site. <br> More information: [Power Apps support for B2B guest maker (preview)](/power-platform/admin/invite-users-azure-active-directory-b2b-collaboration#power-apps-support-for-b2b-guest-maker-preview) </li> </ul> |
 | Organization user | Use | <ul> <li> View access to SharePoint site hosting the custom form. </li> <li> A Power Apps plan that includes use rights to connect to Office. Separate licenses may be required for custom forms that use Premium capabilities. </li> </ul> |
 | Organization user | Create or Edit | <ul> <li> Edit access to SharePoint site hosting the custom form. </li> <li> Membership of **Environment Maker** security role in the Power Platform environment used to customize the SharePoint site. </li> </ul> |
 
