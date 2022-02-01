@@ -1871,6 +1871,8 @@
               href: ./portals/configure/entity-permissions-studio.md
             - name: "Tutorial: Configure table permissions using portals Studio"
               href: ./portals/configure/entity-permissions-studio-walkthrough.md
+            - name: Configure column permissions
+              href: ./portals/configure/column-permissions.md              
             - name: Manage page permissions
               href: ./portals/configure/webpage-access-control.md
             - name: Create website access permissions
