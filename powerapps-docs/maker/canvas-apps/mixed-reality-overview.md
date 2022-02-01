@@ -1,6 +1,6 @@
 ---
 title: Use mixed reality controls in Power Apps
-description: Use augmented reality features in Power Apps to view and manipulate 3D models and 2D images in the real world, take measurements, and create and view 3D digital shapes.
+description: Use augmented reality features in Power Apps to view and manipulate 3D models in the real world, take measurements, and create and view 3D shapes.
 author: anuitz
 ms.service: powerapps
 ms.topic: overview
@@ -28,7 +28,7 @@ You can use MR controls to:
 - Measure distance, area, and volume
 - Identify spaces and locations
 
-:::image type="content" source="./media/augmented-overview/mixed-reality-overview.png" alt-text="A photo of a mobile app with a 3D control in Power Apps Studio shown next to the app on a mobile device.":::
+:::image type="content" source="./media/augmented-overview/mixed-reality-overview.png" alt-text="A screenshot of a phone app with a 3D control under construction in Microsoft Power Apps Studio, alongside a photo that shows the app in use.":::
 
 [Build your own controls](../../developer/component-framework/custom-controls-overview.md) or use prebuilt controls for MR applications:
 
@@ -39,12 +39,10 @@ You can use MR controls to:
 
 You'll find the controls on the **Insert** pane, under **Media** and **Mixed Reality**:
 
-:::image type="content" source="./media/augmented-overview/augmented-overview-insert-all.png" alt-text="A screenshot of the Insert pane in Power Apps Studio showing the mixed reality controls under Media and Mixed Reality.":::
+:::image type="content" source="./media/augmented-overview/augmented-overview-insert-all.png" alt-text="A screenshot of the Insert pane in Microsoft Power Apps Studio.":::
   
 > [!TIP]
-> The MR controls in Power Apps use Babylon and Babylon React Native. Mixed reality content that works in the [Babylon sandbox](https://sandbox.babylonjs.com/) should work in Power Apps through this shared MR platform.
->  
-> If your content works in Babylon but not in Power Apps, ask a question in the [Power Apps community forum](https://powerusers.microsoft.com/t5/Get-Help-with-Power-Apps/ct-p/PA_General).
+> The MR controls in Power Apps use Babylon and Babylon React Native. Mixed reality content that works in the [Babylon sandbox](https://sandbox.babylonjs.com/) should work in Power Apps through this shared MR platform. If your content works in Babylon but not in Power Apps, ask a question in the [Power Apps community forum](https://powerusers.microsoft.com/t5/Get-Help-with-Power-Apps/ct-p/PA_General).
 >  
 > [Read more about our integration with Babylon](https://babylonjs.medium.com/babylon-react-native-bringing-3d-and-xr-to-react-native-applications-7928b55acc85).
 
@@ -73,4 +71,4 @@ Start installing the controls in your apps:
 - Measure distance, area, and volume with the **[Measure in mixed reality](mixed-reality-component-measure-distance.md)** control.
 - Create and view 3D shapes with the **[View shape in mixed reality](mixed-reality-component-view-shape.md)** control.
 
-[!INCLUDE[footer-include](../../includes/footer-banner.md)
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]
