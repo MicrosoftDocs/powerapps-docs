@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 01/31/2022
+ms.date: 02/01/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
@@ -20,6 +20,8 @@ contributors:
 You can use [available Web API operations](web-api-overview.md#web-api-operations) in portals. Web API operations consist of HTTP requests and responses. This article provides sample read operations, methods, URI, and the sample JSON you can use in the HTTP request.
 
 ## Prerequisites
+
+- Your portal version must be [9.4.1.x](/power-platform/released-versions/portals/portalupdate941x) or higher.
 
 - Enable table and field for Web API operations. More information: [Site settings for the Web API](web-api-overview.md#site-settings-for-the-web-api)
 
