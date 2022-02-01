@@ -5,7 +5,7 @@ author: chmoncay
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.date: 10/25/2016
+ms.date: 01/31/2022
 ms.subservice: canvas-maker
 ms.author: chmoncay
 ms.reviewer: tapanm
@@ -122,7 +122,7 @@ A **Video** control plays a video clip from a file or from YouTube or Azure Medi
 * **ShowControls** must be true so that users can listen or watch multimedia at their own pace. This also allows users to toggle closed captions and full-screen mode on video players.
 * Closed captions must be provided for videos.
   *  For YouTube videos, use authoring tools provided by YouTube to add captions.
-  *  For other videos, create captions in WebVTT format, upload them, and set **ClosedCaptionsUrl** to the url location. There are several limitations. Server(s) hosting video and captions needs to be CORS-enabled and serve them using HTTPS protocol. Captioning does not work on Internet Explorer.
+  *  For other videos, create captions in WebVTT format, upload them, and set **ClosedCaptionsUrl** to the url location. There are several limitations. Server(s) hosting video and captions needs to be CORS-enabled and serve them using HTTPS protocol.
 * Consider providing an audio or video transcript using one of these methods:
   1. Put the text in a **[Label](control-text-box.md)** and position it adjacent to the multimedia player. Optionally, create a **[Button](control-button.md)** to toggle the display of the text.
   2. Put the text in a different screen. Create a **[Button](control-button.md)** that navigates to the screen and position the button adjacent to the multimedia player.

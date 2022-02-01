@@ -7,7 +7,7 @@ ms.subservice: troubleshoot
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 08/16/2021
+ms.date: 01/31/2022
 ms.author: namarwah
 search.audienceType: 
   - maker
@@ -78,14 +78,12 @@ To resolve the issues listed above, read [Resolutions for common errors](#resolu
 
 ## Resolutions for common errors
 
-| Error | Microsoft Edge | Google Chrome | Microsoft Internet Explorer 11* |  Safari (iOS) |
+| Error | Microsoft Edge | Google Chrome | Safari (iOS) |
 | - | - | - | - | - |
-| <ul> <li> Sign in required </li> <li> UserInterventionNeeded_CookiesBlocked </li> <li> UserInterventionNeeded_StorageBlocked </li> </ul> | [Enable third-party cookies and local data](#instructions-for-microsoft-edge) | [Enable third-party cookies and local data](#instructions-for-google-chrome) | [Enable third-party cookies and local data](#instructions-for-internet-explorer-11) | [Enable third-party cookies and local data](#instructions-for-safari-ios) |
-| <ul> <li> UserInterventionNeeded_NavigateToAadTimeout </li> </ul> | Possible network problem | Possible network problem | Possible network problem | Possible network problem |
-| <ul> <li> UserInterventionNeeded_NavigateToAadDenied </li> <li> UserInterventionNeeded_StorageLost </li> </ul> | Not applicable | Not applicable | [Configure Trust Zones](#configure-trust-zones-for-internet-explorer) | Not applicable |
-| <ul> <li> AadError </li> </ul> | [Azure Active Directory Errors](#azure-active-directory-errors) | [Azure Active Directory Errors](#azure-active-directory-errors) | [Azure Active Directory Errors](#azure-active-directory-errors) | [Azure Active Directory Errors](#azure-active-directory-errors) |
-
-*Microsoft Internet Explorer 11 support for Power Apps is deprecated. We recommend that you use Microsoft Edge. More information: [Deprecation announcement](/power-platform/important-changes-coming#internet-explorer-11-support-for-dynamics-365-and-microsoft-power-platform-is-deprecated)
+| <ul> <li> Sign in required </li> <li> UserInterventionNeeded_CookiesBlocked </li> <li> UserInterventionNeeded_StorageBlocked </li> </ul> | [Enable third-party cookies and local data](#instructions-for-microsoft-edge) | [Enable third-party cookies and local data](#instructions-for-google-chrome) | [Enable third-party cookies and local data](#instructions-for-safari-ios) |
+| <ul> <li> UserInterventionNeeded_NavigateToAadTimeout </li> </ul> | Possible network problem | Possible network problem | Possible network problem |
+| <ul> <li> UserInterventionNeeded_NavigateToAadDenied </li> <li> UserInterventionNeeded_StorageLost </li> </ul> | Not applicable | Not applicable | Not applicable |
+| <ul> <li> AadError </li> </ul> | [Azure Active Directory Errors](#azure-active-directory-errors) | [Azure Active Directory Errors](#azure-active-directory-errors) | [Azure Active Directory Errors](#azure-active-directory-errors) |
 
 ## Enable storage of third-party cookies and local data in your browser or app
 
@@ -179,81 +177,6 @@ To enable this setting for the Power Apps and Dynamics 365 mobile apps for iOS y
 1. On iOS, select **Settings**.
 1. Scroll down to **Edge**. 
 1. Toggle on **Allow Cross-Website Tracking**.
-
-### Instructions for Internet Explorer 11
-
-- **Option 1: Enable local data for all sites**
-
-    1. Close all Internet Explorer and Microsoft Edge windows.
-    2. Select **OK** to close the **Internet Options** dialog box.
-    3. Select **OK**.
-    4. Remove any entries for `powerapps.com`.
-    5. In the **Settings** section, select **Sites**.
-    6. Select **OK**.
-    7. Select **Accept** for third-party cookies.
-    8. Select **Accept** for first-party cookies.
-    9. In the **Settings** section, select **Advanced**.
-    10. Select the **Privacy** tab.
-    11. Select **Internet Options**.
-    12. On the browser toolbar, select the gear icon.
-    13. Open Internet Explorer.
-
-- **Option 2: Create exceptions to enable local data for Power Apps and associated services**
-    1. Open Internet Explorer.
-    2. On the browser toolbar, select the gear icon.
-    3. Select **Internet Options**.
-    4. Select the **Privacy** tab.
-    5. In the **Settings** section, select **Sites**.
-    6. Add an entry to “Allow” `powerapps.com`.
-    7. Select **OK**.
-    8. Select **OK** to close the Internet Options dialog box.
-    9. Close all Internet Explorer and Microsoft Edge windows.
-
-## Configure Trust Zones for Internet Explorer
-
-Internet Explorer uses *Trust Zones*. Problems can occur if services on which Power Apps relies are in different Trust Zones in your browser settings.  (You might need assistance from your IT administrator to change some of these settings.)
-
-> [!NOTE]
-> Microsoft Internet Explorer 11 support for Power Apps is deprecated. We recommend that you use Microsoft Edge. More information: [Deprecation announcement](/power-platform/important-changes-coming#internet-explorer-11-support-for-dynamics-365-and-microsoft-power-platform-is-deprecated)
-
-- **Option 1: Add the required Power Apps domains to the Trusted Sites zone**
-    1. On the browser toolbar, select the gear icon.
-    1. Select **Internet Options**.
-    1. Select the **Security** tab.
-    1. Select **Trusted sites**.
-    1. Select **Sites**.
-    1. Add the following sites by typing the address and selecting **Add** for each:
-        - `https://create.powerapps.com`
-        - `https://*.create.powerapps.com`
-        - `https://make.*.powerapps.com`
-        - `https://make.powerapps.com`
-        - `https://login.microsoftonline.com`
-        - `https://apps.*.powerapps.com`
-        - `https://apps.powerapps.com`
-        - `https://*.powerapps.com`
-        - (Only for sovereign clouds) [US Government version URLs](/power-platform/admin/powerapps-us-government#power-apps-us-government-service-urls).
-    1. Select **Close**.
-    1. Select **OK**.
-    1. Close all Internet Explorer windows.
-
-- **Option 2: Remove all the Power Apps domains from the Trusted Sites zone**
-    1. On the browser toolbar, select the gear icon.
-    1. Select **Internet Options**.
-    1. Select the **Security** tab.
-    1. Select **Trusted sites**.
-    1. Select **Sites**.
-    1. Remove all existing entries for the following sites:
-        - `https://create.powerapps.com`
-        - `https://*.create.powerapps.com`
-        - `https://make.*.powerapps.com`
-        - `https://make.powerapps.com`
-        - `https://login.microsoftonline.com`
-        - `https://apps.*.powerapps.com`
-        - `https://apps.powerapps.com`
-        - `https://*.powerapps.com`
-        - Any other address that ends in `powerapps.com` or `create.powerapps.com`.
-        - (Only for sovereign clouds) [US Government version URLs](/power-platform/admin/powerapps-us-government#power-apps-us-government-service-urls).
-    1. Select **Close**.
 
 ## Azure Active Directory Errors
 
