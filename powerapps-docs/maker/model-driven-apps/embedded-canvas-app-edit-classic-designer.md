@@ -27,7 +27,7 @@ search.app:
 
 # Edit a canvas app embedded on a model-driven form
 
-[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 This topic explains how to edit a canvas app embedded on a model-driven form.
 

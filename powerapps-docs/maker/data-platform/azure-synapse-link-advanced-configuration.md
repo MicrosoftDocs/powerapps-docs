@@ -26,7 +26,7 @@ contributors:
 
 # Advanced Configuration Options in Azure Synapse Link
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 Azure Synapse Link offers multiple ways to write and read your data to fit various analytical scenarios.
 

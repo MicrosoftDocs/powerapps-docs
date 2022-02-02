@@ -360,10 +360,7 @@ Finally, you can click on **Logout** button to logout.
 
 ## Debugging the application  
   
-1.  Set the browser to use Microsoft Edge or Google Chrome.  
-  
-    > [!NOTE]
-    > Internet Explorer will not work for debugging in this situation.  
+1.  Set the browser to use Microsoft Edge or Google Chrome.   
   
 2.  Press F5 to start debugging. You should expect the behavior described in [Goal of this walkthrough](walkthrough-registering-configuring-simplespa-application-adal-js.md#bkmk_goal).  
   

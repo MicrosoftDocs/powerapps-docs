@@ -27,7 +27,7 @@ search.app:
 
 # Define status reason transitions for the Case or custom tables
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 You can specify status reason transitions for the Incident (**Case**) table or a custom table.
 

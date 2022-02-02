@@ -9,7 +9,7 @@ manager: kvivek
 ms.date: 07/26/2021
 ms.service: powerapps
 ms.subservice: mda-maker
-ms.topic: conceptual
+ms.topic: overview
 search.audienceType: 
   - maker
 search.app: 

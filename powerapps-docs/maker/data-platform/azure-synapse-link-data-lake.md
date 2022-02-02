@@ -26,7 +26,7 @@ contributors:
 
 # Create an Azure Synapse Link for Dataverse with Azure Data Lake
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 You can use the Azure Synapse Link to connect your Microsoft Dataverse data to Azure Data Lake Storage Gen2 to enable various analytics scenarios. This article shows you how to perform the following tasks:
 

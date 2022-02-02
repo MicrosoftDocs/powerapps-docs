@@ -18,7 +18,7 @@ search.app:
 ---
 # Run data import
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 Data import runs directly on the Microsoft Dataverse server. To run data import, set up asynchronous jobs to run in the background that do the following, in this order:  
   

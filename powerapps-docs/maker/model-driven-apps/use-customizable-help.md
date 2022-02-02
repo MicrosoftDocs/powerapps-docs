@@ -18,7 +18,7 @@ search.app:
 
 # Enable and use customizable help
 
-[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 Customizable help lets you provide your own contextual information to model-driven app users filling in forms.
 

@@ -17,7 +17,7 @@ search.app:
 ---
 # Sample: Azure aware custom plug-in
 
-[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 
 <!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/sample-azure-aware-custom-plugin -->
 

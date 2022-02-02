@@ -1,11 +1,11 @@
 ---
 title: "Microsoft Dataverse real-time workflows | MicrosoftDocs"
 description: "Microsoft Dataverse real-time workflows"
-ms.custom: intro-internal
+
 ms.date: 07/27/2020
 ms.reviewer: "matp"
 ms.service: powerapps
-ms.topic: "article"
+ms.topic: overview
 ms.assetid: 1f3c9780-26ad-49ec-a3fb-fc226def19c5
 author: msftman
 ms.subservice: dataverse-maker
@@ -19,7 +19,7 @@ search.audienceType:
 ---
 # Microsoft Dataverse real-time workflows 
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 Workflows automate business processes without a user interface. People usually use workflow processes to initiate automation that doesn’t require any user interaction.
 

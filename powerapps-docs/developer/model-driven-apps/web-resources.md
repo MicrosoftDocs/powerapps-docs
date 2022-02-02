@@ -4,8 +4,7 @@ description: "Web resources are virtual files that are stored in the Microsoft D
 ms.date: 04/15/2021
 ms.reviewer: ""
 ms.service: powerapps
-ms.custom: "intro-internal"
-ms.topic: "article"
+ms.topic: overview
 author: "KumarVivek" # GitHub ID
 ms.subservice: mda-developer
 ms.author: "kvivek" # MSFT alias of Microsoft employees only
@@ -25,7 +24,7 @@ Web resources are *virtual files* that are stored in the Microsoft Dataverse dat
 The specific scenario of embedding a form within an IFRAME, embedded in another form, is not supported. We recommend the use of [form as a component](../../maker/model-driven-apps/form-component-control.md) for such scenarios.<p/>In general, use of [Power Apps component framework](../component-framework/overview.md) and [custom pages](../../maker/model-driven-apps/model-app-page-overview.md) is encouraged to build configurable, reusable and more tighter external ntegrations. More information: [IFRAME component](../component-framework/sample-controls/iframe-control.md)
 
 
-<a name="BKMK_CapabilitiesOfWebResources"></a>   
+<a name="BKMK_CapabilitiesOfWebResources"></a>
 
 ## Capabilities of web resources  
 

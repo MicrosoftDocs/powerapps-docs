@@ -23,7 +23,7 @@ search.app:
 ---
 # Sample: Calculate a credit score with a custom workflow activity
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 
 This sample code is for Microsoft Dataverse. Download the complete sample here: [WorkflowActivities](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/WorkflowActivities).
 

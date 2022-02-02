@@ -22,7 +22,7 @@ search.app:
 ---
 # Model-driven app form section properties (classic)
 
-[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 A section in a form occupies the space available in a tab column. Sections have a label that can be displayed and a line might be shown below the label.  
   

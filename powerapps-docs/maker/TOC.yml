@@ -247,6 +247,8 @@
         href: ./canvas-apps/customize-card.md
   - name: Create an app from scratch
     items:
+    - name: With a blank app
+      href: ./canvas-apps/create-blank-app.md
     - name: From Dataverse
       href: ./canvas-apps/data-platform-create-app-scratch.md
     - name: From Excel
@@ -359,6 +361,8 @@
               href: ./canvas-apps/working-with-form-layout.md
             - name: Understand cards
               href: ./canvas-apps/working-with-cards.md
+            - name: Work with full-sized image on a form
+              href: ./canvas-apps/display-full-image-on-form.md
           - name: Add a list
             items:
             - name: Add a list box, a drop-down list, or radio buttons
@@ -751,6 +755,8 @@
             href: ./canvas-apps/functions/function-now-today-istoday.md
           - name: IsType
             href: ./canvas-apps/functions/function-astype-istype.md
+          - name: IsUTCToday
+            href: ./canvas-apps/functions/function-now-today-istoday.md            
           - name: JSON
             href: ./canvas-apps/functions/function-json.md
           - name: Language
@@ -943,6 +949,10 @@
             href: ./canvas-apps/functions/function-lower-upper-proper.md
           - name: User
             href: ./canvas-apps/functions/function-user.md
+          - name: UTCNow
+            href: ./canvas-apps/functions/function-now-today-istoday.md
+          - name: UTCToday
+            href: ./canvas-apps/functions/function-now-today-istoday.md            
           - name: Validate
             href: ./canvas-apps/functions/function-validate.md
           - name: Value
@@ -1021,6 +1031,8 @@
       href: ./canvas-apps/how-to/mobile-apps-address-map.md
     - name: Create an app using the Measure in MR control
       href: ./canvas-apps/how-to/build-apps-measure-in-mr.md
+    - name: Create a canvas app with deep link to a specific screen
+      href: ./canvas-apps/how-to/deep-linking.md
   - name: Save and publish an app
     href: ./canvas-apps/save-publish-app.md
   - name: Share an app and its dependencies
@@ -1217,6 +1229,8 @@
             href: ./model-driven-apps/page-code-components.md     
           - name: Add connectors to a custom page
             href: ./model-driven-apps/page-data-connectors.md
+          - name: Localize text for a custom page
+            href: ./model-driven-apps/custom-page-localize.md
           - name: Known issues with custom pages
             href: ./model-driven-apps/model-app-page-issues.md
           - name: Use monitor to troubleshoot custom pages
@@ -1537,14 +1551,18 @@
     href: ../mobile/display-mode.md
   - name: In-app notifications in Power Apps mobile (preview)
     href: ../mobile/mobile-notifications.md
-  - name: Configure mobile offline synchronization 
-    href: ../mobile/setup-mobile-offline.md 
-  - name: Work offline on your mobile device 
-    href: ../mobile/work-in-offline-mode.md  
   - name: Create push notifications for Power Apps mobile
     href: ../mobile/power-apps-mobile-notification.md
   - name: Troubleshoot issues for Power Apps mobile
     href: ../mobile/powerapps-mobile-troubleshoot.md
+  - name: 'Mobile offline'
+    items:
+    - name: Mobile offline overview (preview)
+      href: ../mobile/mobile-offline-overview.md
+    - name: Set up mobile offline (preview)
+      href: ../mobile/setup-mobile-offline.md 
+    - name: Enable and use offline-first (preview)
+      href: ../mobile/work-in-offline-mode.md   
 - name: Portals
   items:
     - name: Portals
@@ -1615,8 +1633,8 @@
                   href: ./portals/use-code-editor.md
                 - name: Add Power BI
                   href: ./portals/add-powerbi.md
-                - name: Add a chatbot (preview)
-                  href: ./portals/add-chatbot.md                 
+                - name: Add a chatbot
+                  href: ./portals/add-chatbot.md
         - name: Work with templates
           href: ./portals/work-with-templates.md
         - name: Work with themes
@@ -1853,6 +1871,8 @@
               href: ./portals/configure/entity-permissions-studio.md
             - name: "Tutorial: Configure table permissions using portals Studio"
               href: ./portals/configure/entity-permissions-studio-walkthrough.md
+            - name: Configure column permissions
+              href: ./portals/configure/column-permissions.md              
             - name: Manage page permissions
               href: ./portals/configure/webpage-access-control.md
             - name: Create website access permissions
@@ -2069,6 +2089,8 @@
                 href: ./portals/versions/versions-before-9.3.3.x.md
          - name: Starter portal package updates
            items:
+              - name: Package 9.3.2201.x
+                href: ./portals/versions/package-version-9.3.2201.md           
               - name: Package 9.3.2109.x
                 href: ./portals/versions/package-version-9.3.2109.md
               - name: Package 9.2.2108.x
@@ -2332,8 +2354,12 @@
       items:
       - name: Query data with serverless SQL pool
         href: ./data-platform/azure-synapse-link-serverless.md
+      - name: Create a view on your Dataverse data
+        href: ./data-platform/azure-synapse-link-create-view.md
       - name: Transform data with Apache Spark
-        href: ./data-platform/azure-synapse-link-spark.md 
+        href: ./data-platform/azure-synapse-link-spark.md
+      - name: Run Azure Synapse pipelines
+        href: ./data-platform/azure-synapse-link-pipelines.md
       - name: Visualize data with Power BI
         href: ./data-platform/azure-synapse-link-powerbi.md
       - name: Copy data to Dedicated SQL
@@ -2348,6 +2374,10 @@
         href: ./data-platform/export-to-data-lake-data-adf.md
       - name: Copy data to Azure SQL with Azure Data Factory
         href: ./data-platform/azure-synapse-link-copy-sql.md
+      - name: Copy data from multiple data lakes to single data lake
+        href: ./data-platform/azure-synapse-link-copy-mult-data-lakes.md
+      - name: Transform data from CSV to Parquet
+        href: ./data-platform/azure-synapse-link-parquet.md
       - name: Analyze exported data with Power BI
         href: ./data-platform/export-to-data-lake-data-powerbi.md
       - name: Access Dataverse choices with Azure Data Factory

@@ -10,7 +10,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "conceptual"
 applies_to: 
   - "powerapps"
-author: "sama-zaki"
+author: "sabinn-msft"
 ms.assetid: 
 ms.subservice: dataverse-maker
 ms.author: "matp"
@@ -20,12 +20,12 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
-contributors: ""
+contributors: "sama-zaki"
 ---
 
 # Manage your Azure Synapse Link during environment lifecycle events
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 Azure Synapse Link for Dataverse provides a continuous pipeline of data from Dataverse to Azure Synapse Analytics and/or Azure Data Lake. Once the link is created it continuously writes all the initial data as well as any incremental data. When you make changes to your Power Platform environment, this can affect the state of your Azure Synapse Link for Dataverse. This article explains the behavior  of the Azure Synapse Link for Dataverse and possible user action during environment lifecycle events.
 

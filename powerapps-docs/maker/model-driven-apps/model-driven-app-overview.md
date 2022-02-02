@@ -1,12 +1,12 @@
 ---
 title: Overview of building a model-driven app with Power Apps | Microsoft Docs
 description: Step-by-step instructions for creating and configuring a table to use with a Power Apps model-driven app.
-ms.custom: intro-internal
+
 author: Mattp123
 ms.service: powerapps
 ms.topic: overview
 ms.component: model
-ms.date: 06/16/2020
+ms.date: 02/01/2022
 ms.subservice: mda-maker
 ms.author: v-roryneary
 search.audienceType: 
@@ -87,9 +87,15 @@ A large part of the time spent building the app is dedicated to modeling the bus
 
 ## Using a model-driven app
 
-Documentation has been developed that helps users of successfully navigate around and interact with model-driven apps in a way that lets them be more productive.
+Documentation has been developed that helps users successfully navigate around and interact with model-driven apps in a way that lets them be more productive.
 
 [Learn more about using model-driven apps](../../user/use-model-driven-apps.md)
+
+You can use model-driven apps on a mobile device and run them in offline mode.
+
+- [Get started with Power Apps mobile](../../mobile/run-powerapps-on-mobile.md)
+
+- [Mobile offline overview (preview)](../../mobile/mobile-offline-overview.md)
 
 ## Using solutions to assist with Application Lifecycle Management
 

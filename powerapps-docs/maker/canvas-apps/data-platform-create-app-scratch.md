@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 05/21/2019
+ms.date: 01/27/2022
 ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
@@ -31,15 +31,7 @@ When you build an app from Dataverse, you don't need to create a connection from
 
 ## Open a blank app
 
-1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-
-1. Under **Make your own app**, select **Canvas app from blank**.
-
-    ![Blank-app tile.](./media/data-platform-create-app-scratch/blank-app.png)
-
-1. Specify a name for your app, select **Phone**, and then select **Create**.
-
-    You can build an app from scratch for tablets, but this topic shows building an app for phones.
+To create an app from scratch that uses data from Dataverse, the first step is to [create a blank app](create-blank-app.md). For this exercise, when you create the blank app, ensure you choose **Phone** layout.
 
 ## Specify a table
 

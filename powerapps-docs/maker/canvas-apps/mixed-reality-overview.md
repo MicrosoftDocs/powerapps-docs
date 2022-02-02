@@ -3,7 +3,7 @@ title: Use mixed reality controls in Power Apps
 description: Use augmented reality features in Power Apps to view and manipulate 3D models and 2D images in the real world, take measurements, and create and view 3D digital shapes.
 author: anuitz
 ms.service: powerapps
-ms.topic: conceptual
+ms.topic: overview
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 3/25/2021

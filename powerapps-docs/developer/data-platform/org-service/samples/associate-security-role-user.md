@@ -18,7 +18,7 @@ search.app:
 
 # Sample: Associate security role to a user
 
-[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 
 This sample shows how to assign a security role to a user by using the [IOrganizationService.Associate](/dotnet/api/microsoft.xrm.sdk.iorganizationservice?view=dynamics-general-ce-9) message. 
 

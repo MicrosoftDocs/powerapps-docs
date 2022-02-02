@@ -3,9 +3,9 @@ title: Overview of portals Web API
 description: Learn how to use the portals Web API to create, read, update, and delete Microsoft Dataverse tables from your portals pages.
 author: neerajnandwana-msft
 ms.service: powerapps
-ms.topic: conceptual
+ms.topic: overview
 ms.custom: 
-ms.date: 12/02/2021
+ms.date: 02/01/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
@@ -60,6 +60,8 @@ users are allowed to perform create, update, and delete operations on this entit
 ## Security with the portals Web API
 
 You can configure record-based security to individual records in portals by using [table permissions](configure/assign-entity-permissions.md). The portals Web API accesses table (entity) records and follows the table permissions given to users through the associated [web role](configure/create-web-roles.md).
+
+You can configure [column permissions](configure/column-permissions.md) to further define privileges to individual columns within a table while using the portals Web API. 
 
 ![Portals Web API security.](media/web-api/portals-Webapi-security.png "Portals Web API security architecture")
 

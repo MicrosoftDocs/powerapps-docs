@@ -10,7 +10,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "how-to"
 applies_to: 
   - "powerapps"
-author: "sama-zaki"
+author: "sabinn-msft"
 ms.assetid: 
 ms.subservice: dataverse-maker
 ms.author: "matp"
@@ -20,12 +20,12 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
-contributors: ""
+contributors: "sama-zaki"
 ---
 
 # Transform Azure Synapse Link for Dataverse data with Apache Spark
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 You can use the Azure Synapse Link to connect your Microsoft Dataverse data to Azure Synapse Analytics to explore your data and accelerate time to insight. This article shows you how to transform your Dataverse data using the Apache Spark engine available in your Synapse workspace.
 

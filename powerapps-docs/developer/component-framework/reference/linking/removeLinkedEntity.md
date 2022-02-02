@@ -27,8 +27,8 @@ Model-driven apps
 
 ## Parameters
 
-| Parameter Name | Type                                                                 | Required | description |
-| -------------- | -------------------------------------------------------------------- | -------- | ----------- |
+| Parameter Name | Type                                                               | Required | Description |
+| -------------- | ------------------------------------------------------------------ | -------- | ----------- |
 | expression     | [ILinkEntityExposedExpression](../ilinkentityexposedexpression.md) | Yes      |             |
 
 ## Return Value
