@@ -5,7 +5,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 03/31/2020
+ms.date: 02/2/2022
 ms.subservice: end-user
 ms.author: mkaur
 ms.reviewer: ""
@@ -87,9 +87,9 @@ Use the filter editor on the grid page to see the set of conditions in the curre
 
 ## Grid search
 
-The search box on a grid page can have two different searches experience that is configured by your administrator.
+The search box on a grid page can have two different searches experience which is configured by your administrator.
 
-### Search this view (default experience)
+### Option 1: Search this view (default experience)
 
 When you use the **Search this view** option on a grid page, the system searches for data in the view that you're currently in. In the following example, you perform a search on the **Contacts** grid.
 
@@ -108,13 +108,13 @@ The system searches for data in the **My Active Contacts** view and displays sea
    > [!div class="mx-imgBorder"]
    > ![Search view.](media/search-view2.png "Search results from the Search this view command")
 
-### Quick find
+### Option 2: Quick find 
 
-If your administrator has enabled the use of quick find view of a table for searching on grids and sub-grids, you will see the **Quick find** search option on the grid page. When you use it, the system searches for data in the quick find view of the table and displays results in the columns of the quick find view and not of the current view. 
+If your administrator has enabled quick find view for a table, then you will see the **Quick find** search option on the grid page. When you run a quick find search, the system searches for data in the quick find view of the table. The search results are displayed in the columns of the quick find view and not in the current view. 
 
 ## Column filters
   
-You can choose from many different filtering options for a column in a grid. The type of data in the column determines what filter options are available. For example, the **Full Name** column in the **Contacts** grid page has different filter options than the **Activity Type** column in the **Activities** grid page.
+You can choose from many different filter options for a column in a grid. The type of data in the column determines what filter options are available. For example, the **Full Name** column in the **Contacts** grid page has different filter options than the **Activity Type** column in the **Activities** grid page.
  
 > [!IMPORTANT]
 > In Unified Interface, grids don't prepopulate column filters based on the current view definition.
@@ -124,7 +124,7 @@ You can choose from many different filtering options for a column in a grid. The
 
 ### Filtering on a lookup column
  
-When you filter on a lookup column, you can select from a list of rows to filter by rather than manually typing in the data. For example, on a **Primary Contact** lookup column, you can select the contact name from the list of rows to filter by.
+When you filter data on a lookup column, you can select from a list of rows to filter by rather than manually typing in the information. For example, on a **Primary Contact** lookup column, you can select the contact name from the list of rows to filter by.
 
 The filter on a lookup column helps you complete the search by suggesting results inline. These results are based the table being looked up and will include all rows with no filter.
 
@@ -140,14 +140,13 @@ The robust **Date** filter includes many different values to choose from, such a
   
 ### Filtering activities
 
-You can filter the list of activities to see only the ones you're interested in. For example, you can further limit the activities you are seeing in a view by using the activity type filter. The activity type filter allows you to filter activities based on the type, such as email, task, phone call, and so on.
-
+You can filter the list of activities to only the ones you're interested in. For example, you can limit the activities that you see in a view by using the activity type filter. The activity type filter allows you to filter activities based on the type, such as email, task, and phone call.
 
    > [!div class="mx-imgBorder"]
    > ![Activities filter.](media/activity_filter.png "Activities filter")
 
 ## Jump bar
-The jump bar on a grid page can be used to access rows beginning with a particular character easily. The jump bar acts on the first sorted column in the view. If no change has been made to the sort order, the jump bar uses the primary column.
+The jump bar on a grid page lets you access rows whose name start with a particular letter. The jump bar acts on the first sorted column in the view. If no change has been made to the sort order, the jump bar uses the primary column.
  
    > [!div class="mx-imgBorder"]
    > ![Select a filter on the jump bar.](media/jumpbar-filter-on-sorted-column.gif "Select a filter on the jump bar")
