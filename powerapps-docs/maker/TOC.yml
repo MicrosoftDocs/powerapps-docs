@@ -1551,14 +1551,18 @@
     href: ../mobile/display-mode.md
   - name: In-app notifications in Power Apps mobile (preview)
     href: ../mobile/mobile-notifications.md
-  - name: Configure mobile offline synchronization 
-    href: ../mobile/setup-mobile-offline.md 
-  - name: Work offline on your mobile device 
-    href: ../mobile/work-in-offline-mode.md  
   - name: Create push notifications for Power Apps mobile
     href: ../mobile/power-apps-mobile-notification.md
   - name: Troubleshoot issues for Power Apps mobile
     href: ../mobile/powerapps-mobile-troubleshoot.md
+  - name: 'Mobile offline'
+    items:
+    - name: Mobile offline overview (preview)
+      href: ../mobile/mobile-offline-overview.md
+    - name: Set up mobile offline (preview)
+      href: ../mobile/setup-mobile-offline.md 
+    - name: Enable and use offline-first (preview)
+      href: ../mobile/work-in-offline-mode.md   
 - name: Portals
   items:
     - name: Portals
@@ -1867,6 +1871,8 @@
               href: ./portals/configure/entity-permissions-studio.md
             - name: "Tutorial: Configure table permissions using portals Studio"
               href: ./portals/configure/entity-permissions-studio-walkthrough.md
+            - name: Configure column permissions
+              href: ./portals/configure/column-permissions.md              
             - name: Manage page permissions
               href: ./portals/configure/webpage-access-control.md
             - name: Create website access permissions
@@ -2083,6 +2089,8 @@
                 href: ./portals/versions/versions-before-9.3.3.x.md
          - name: Starter portal package updates
            items:
+              - name: Package 9.3.2201.x
+                href: ./portals/versions/package-version-9.3.2201.md           
               - name: Package 9.3.2109.x
                 href: ./portals/versions/package-version-9.3.2109.md
               - name: Package 9.2.2108.x

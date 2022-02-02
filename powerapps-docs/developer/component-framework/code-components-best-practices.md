@@ -98,7 +98,7 @@ This section contains best practices and guidance relating to TypeScript and Jav
 
 #### ES5 vs ES6
 
-By default, code components target ES5 to support older browsers (for example, Internet Explorer 11). If you don't want to support these older browsers, you can change the target to ES6 inside your `pcfproj` folder's `tsconfig.json`. More information: [ES5 vs ES6](debugging-custom-controls.md#es5-vs-es6).
+By default, code components target ES5 to support older browsers. If you don't want to support these older browsers, you can change the target to ES6 inside your `pcfproj` folder's `tsconfig.json`. More information: [ES5 vs ES6](debugging-custom-controls.md#es5-vs-es6).
 
 #### Module imports
 
@@ -246,7 +246,7 @@ When making network calls, never use a synchronous blocking request since this c
 
 #### Write code for multiple browsers
 
-Model-driven apps, canvas apps, and portals all support multiple browsers. Be sure to only use techniques that are supported on all modern browsers, and test with a representative set of browsers for your intended audience. Support for Internet Explorer 11 is set for removal, however at this time, it still may be in use by some users.
+Model-driven apps, canvas apps, and portals all support multiple browsers. Be sure to only use techniques that are supported on all modern browsers, and test with a representative set of browsers for your intended audience.
 
 - [Limits and configurations](/powerapps/maker/canvas-apps/limits-and-config)
 - [Supported web browsers](/power-platform/admin/supported-web-browsers-and-mobile-devices)

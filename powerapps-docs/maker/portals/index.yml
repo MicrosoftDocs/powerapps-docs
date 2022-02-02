@@ -24,6 +24,8 @@ landingContent:
     linkLists:
        - linkListType: whats-new
          links:
+          - text: Configure column permissions for portals
+            url: configure/column-permissions.md             
           - text: Configure Dataverse search in portals (preview)
             url: configure/dataverse-search.md         
           - text: Configure choices column for portals (preview)
@@ -32,14 +34,12 @@ landingContent:
             url: progressive-web-apps.md         
           - text: Liquid template tag for code components (preview)
             url: component-framework-liquid.md         
-          - text: Create multiple portals of same type
-            url: create-additional-portals.md
        - linkListType: reference
          links:
           - text: Latest released version of portals
             url: /power-platform/released-versions/portals
-          - text: Starter Portal package version 9.3.2109.x released
-            url: versions/package-version-9.3.2109.md
+          - text: Starter Portal package version 9.3.2201.x released
+            url: versions/package-version-9.3.2201.md
 
   # Card 
   - title: Get started
