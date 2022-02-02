@@ -18,15 +18,27 @@ search.app:
 ---
 # Explore data in a view on a grid page
 
-In model-driven apps, the read-only grid is the default control used to represent rows of data in tabular form. When a model-driven app has a table as a subarea in the sitemap the default layout of the page, called the grid page, has a command bar, a view selector, and a grid.
+In model-driven apps, the read-only grid is the default control used to represent rows of data in tabular form. 
 
-_Picture of grid page with command bar, view selector, edit columns, edit filters, search, grid and jump bar highlighted_
+In the sitemap, when there'a a table in the subarea, the default layout of that subarea is called the grid page. 
+
+
+   > [!div class="mx-imgBorder"]
+   > ![Grid page view.](media/grid-page-1.png "Grid page")
+
+Legend
+
+1. **Command bar**: Shows the commands available for the grid page.
+2. **View selector**: Select to change views.
+3. **Edit columns**: Select to edit the view by adding, removing, or recording columns in the grid view.
+4. **Edit filters**: Select to edit the view with advanced filter queries.
+5. **Search this view**: Enter text in the search column above the list to show only those rows in the current view that contain your text.
 
 ## Navigation
 
-You can choose a cell in the primary column to navigate to the record page from the grid page.
+From the grid page, you can select a cell in the primary column to navigate to the record page.
 
-When you filter data on a grid, the grid page remembers the filter, sort order, and the page state when you navigate away and then return to the page. This works the same way when data is filtered through search, column filtering or pagination.
+When you filter data on a grid, the grid page remembers the filter, sort order, and the page state when you navigate away and then return to the page. This works the same way when data is filtered through search, column filtering, or pagination.
 
    > [!div class="mx-imgBorder"]
    > ![Navigating back to the page opens it in the same state.](media/grid-remember-state-on-back-navigate.gif "Navigating back to the page opens it in the same state")
@@ -39,13 +51,15 @@ On grids of tables that support hierarchy relationships, you can select the hier
 You can also right-click a cell value in the primary column or a lookup column to open in a new tab or window.
 
    > [!div class="mx-imgBorder"]
-   > ![Open in a new window.](media/newtab.png "[Open in a new window")
+   > ![Open in a new window.](media/newtab.png "Open in a new window")
 
 ## View selector
   
 The view selector at the top of the page contains all the views of the table you have access to. By default, the list of views is grouped by personal views and system views, with each of the groups listing views ordered alphabetically by view name.
 
-_PIC of view selector_
+   > [!div class="mx-imgBorder"]
+   > ![View selector showing the different views.](media/view-selector.png "View selector")
+
 
 ### Modern advanced find
 
@@ -59,15 +73,17 @@ _GIF of view selector_
 
 ## Column editor
 
-You can use the column editor by selecting the **Edit columns** option. This enables you to add, remove and re-order columns, so you have all the right columns for reviewing your data. For more information, see https://docs.microsoft.com/en-us/powerapps/user/grid-filters-advanced >> Column editor
+Use the column editor to add, remove, or re-order columns. For more information, see [Column editor](grid-filters-advanced.md#column-editor).
 
-_PIC of Edit columns_
+   > [!div class="mx-imgBorder"]
+   > ![Select the column editor to edit columns.](media/colum-editor.gif "Columns editor")
 
 ## Filter editor
 
-When you select the **Edit filters** option on the grid page, you can see the set of conditions in the current view. You can add more conditions or remove conditions to filter data. This enables you to apply the right filters on your data. For more information, see https://docs.microsoft.com/en-us/powerapps/user/grid-filters-advanced >> Filter editor
+Select **Edit filters**  on the grid page, to see the set of conditions in the current view. You can also add more conditions or remove conditions in filter data For more information, see https://docs.microsoft.com/en-us/powerapps/user/grid-filters-advanced >> Filter editor
 
-_PIC of Edit filters_
+   > [!div class="mx-imgBorder"]
+   > ![Select to edit the filters.](media/edit-filters.gif "Edit filters")
 
 ## Grid search
 
