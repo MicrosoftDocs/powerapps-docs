@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 08/16/2021
+ms.date: 01/31/2022
 ms.subservice: canvas-maker
 ms.author: jiahn
 search.audienceType: 
@@ -49,8 +49,6 @@ When these problems occur, tune the back-end data source to avoid slowing the ap
 ## Client browsers, devices, and locations
 
 Canvas apps can be used on different devices, browsers, and locations with varying network conditions. As the Power Apps client is executed, be sure to use modern, updated, and [supported browsers](limits-and-config.md#supported-browsers-for-running-canvas-apps).
-
-If some users are using legacy, unsupported, or deprecated browsers like Internet Explorer 11, their experience might be affected.
 
 ## Geographical location of the on-premises data gateway and environment
 
