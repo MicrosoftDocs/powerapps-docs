@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.subservice: canvas-developer
 ms.topic: conceptual
 ms.custom: intro-internal
-ms.date: 01/31/2022
+ms.date: 02/02/2022
 ms.author: evlew
 ms.reviewer: tapanm
 contributors:
@@ -188,19 +188,8 @@ Since developer environments aren't intended to support production scenarios, ap
 
 :::image type="content" source="media/developer-plan/power_apps_dev_env_app_banner.png" alt-text="Power Apps Developer Environment app banner.":::
 
-<!--
-
 ### Are Dynamics 365 apps available in a developer environment?
 No. Dynamics 365 apps can't be installed in a developer environment. You'll see the following message when you try to install them:
-
-"Installing Dynamics 365 apps such as Dynamics 365 Sales and Dynamics 365 Customer Service is only supported on environments that have been created with a database with the option to Enable Dynamics 365 apps set to “Yes”. Try installing this application in an environment with a database and Enable Dynamics 365 apps enabled on it."
-
-If you want to explore Dynamics 365 apps, refer to the app-specific documentation for free trials, or to install them on existing environments.
--->
-### Are Dynamics 365 apps available in a developer environment?
-No. Dynamics 365 apps can't be installed in a developer environment.
-
-Since developer environments are created with the [Enable Dynamics 365 app](/power-platform/admin/create-environment#create-an-environment-with-a-database) setting set to **No**, you'll see the following message when you try installing Dynamics 365 apps:
 
 "Installing Dynamics 365 apps such as Dynamics 365 Sales and Dynamics 365 Customer Service is only supported on environments that have been created with a database with the option to Enable Dynamics 365 apps set to “Yes”. Try installing this application in an environment with a database and Enable Dynamics 365 apps enabled on it."
 
