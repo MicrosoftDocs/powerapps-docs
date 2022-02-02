@@ -100,7 +100,6 @@ This article itemizes the keyboard shortcuts for Power Apps.
   
 |Browser|Jaws|Narrator|Voice Over|  
 |-------------|----------|--------------|----------------|  
-|Internet Explorer 11|Yes|Yes|No|  
 |Google Chrome|Yes|No|No|  
 |Firefox|Yes|No|No|  
 |Safari|No|No|Yes|  
