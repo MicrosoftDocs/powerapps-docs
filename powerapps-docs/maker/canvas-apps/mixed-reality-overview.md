@@ -83,7 +83,7 @@ Start installing the controls in your apps:
 - Measure distance, area, and volume with the **[Measure in mixed reality](mixed-reality-component-measure-distance.md)** control.
 - Create and view predefined 3D shapes with the **[View shape in mixed reality](mixed-reality-component-view-shape.md)** control.
 
-## See also
+### See also
 
 [Microsoft Learn: Build a 3D mobile app with Power Apps in mixed reality](/learn/modules/power-apps-tutorial/)
 
