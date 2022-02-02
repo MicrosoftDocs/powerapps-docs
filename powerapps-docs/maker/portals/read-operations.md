@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/29/2021
+ms.date: 02/01/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
@@ -15,29 +15,17 @@ contributors:
     - nickdoelman
 ---
 
-# Query data using portals Web API (preview)
+# Query data using portals Web API
 
 You can use [available Web API operations](web-api-overview.md#web-api-operations) in portals. Web API operations consist of HTTP requests and responses. This article provides sample read operations, methods, URI, and the sample JSON you can use in the HTTP request.
 
-> [!IMPORTANT]
-> - This is a preview feature.
-> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
-> - Once this feature is enabled, tables and columns configured in the [Site settings for the Web API](web-api-overview.md#site-settings-for-the-web-api) will be available for read operations.
-
 ## Prerequisites
+
+- Your portal version must be [9.4.1.x](/power-platform/released-versions/portals/portalupdate941x) or higher.
 
 - Enable table and field for Web API operations. More information: [Site settings for the Web API](web-api-overview.md#site-settings-for-the-web-api)
 
 - The portals Web API accesses table records and follows the table permissions given to users through the associated web roles. Ensure you configure the correct table permissions. More information: [Create web roles](configure/create-web-roles.md)
-
-## Site setting for Web API read operations
-
-You must configure the site setting **WebAPI/enableReadOperationPreview** and set its value to **True** to enable read operations using portals Web API.
-
-:::image type="content" source="media/read-operations/enable-read.png" alt-text="Enable Web API read operation site setting. " border="true":::
-
-> [!Important]
-> This site setting is only required during the preview period.
 
 ## Query records
 
@@ -278,5 +266,6 @@ The following example demonstrates how you can expand related entities for entit
 
 [Portals Web API overview](web-api-overview.md)</br>
 [Tutorial: Use portal Web API](webapi-tutorial.md)</br>
+[Configure column permissions](configure/column-permissions.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
