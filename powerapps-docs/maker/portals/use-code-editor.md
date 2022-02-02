@@ -30,7 +30,7 @@ The source code is displayed in the **Code Editor** pane at the bottom of the sc
 > You can also add Liquid tags in source code editor for advanced configuration. More information: [Work with Liquid templates](liquid/liquid-overview.md)
 
 > [!IMPORTANT]
-> Using `<script></script>` tags in the source code editor can result in unexpected results. It is recommended to add custom code to the **Custom JavaScript** section under the **Advanced** tab in the [web page](configure/web-page.md) record using the [Portal Management app](configure/configure-portal.md) or by editing the web page custom javascript file using [Visual Studio Code](vs-code-extension.md).  
+> Using `<script></script>` tags in the source code editor can lead to unexpected results. It is recommended to add custom code to the **Custom JavaScript** section under the **Advanced** tab in the [web page](configure/web-page.md) record using the [Portal Management app](configure/configure-portal.md) or by editing the web page custom javascript file using [Visual Studio Code](vs-code-extension.md). Custom code can also be added using `<script></script>` tags in [web templates](liquid/store-content-web-templates.md).  
 
 ### See also
 
