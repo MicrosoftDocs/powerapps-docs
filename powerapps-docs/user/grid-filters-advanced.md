@@ -1,6 +1,6 @@
 ---
-title: "Create a personal view using advanced grid filters  | MicrosoftDocs"
-description: Edit or create personal views using advanced grid filters in model-driven Power Apps.
+title: "Create and manage personal views on a grid page  | MicrosoftDocs"
+description: Create and manage personal views on a grid page in model-driven Power Apps.
 author: mduelae
 manager: kvivek
 ms.service: powerapps
@@ -27,75 +27,182 @@ searchScope:
 ---
 
 
-# Edit or create personal views using advanced grid filters 
+# Create and manage personal views on a grid page
 
-Use the advanced filter options to create a personal view to see the rows that are important to you. The advanced filter options let you create a wide range of views from simple to complex. It also lets you add grouped and nested conditions to the filters.
+The grid page in a model-driven app displays data in a view using the read-only grid control. Views are used to define how rows of a table are displayed in the application.
 
+A view definition has:
+1. Columns to display, including the order and width
+2. Default sort order
+3. Filter conditions to show records that match the conditions
 
-> [!NOTE]
-> - The advanced filter option is available only in English language versions. We plan to support more languages in future releases.
-> - The advanced filter option on the Queues table does not work and displays this error message: We are unable to display the filter conditions for this view.
-> - In Unified Interface, grids do not prepopulate column filters based on the current view definition.
-> - Public views created in Power Apps that include **Contains data** or **Does not contain data** filters will not appear in the list of saved views in Advanced Find.
+To understand views in model-driven apps see <Create or edit a model-driven app view in Power Apps - Power Apps | Microsoft Docs>
 
-When you create and save a personal view, it appears in your list of personal views under **My Views**.
-
-> [!div class="mx-imgBorder"]
-> ![Personal views.](media/my_peronsal_view.png "Personal views")
+You can create and manage personal views on a grid page by editing any of the three elements of a view listed above.
 
 
-## See the current view definition
+## Column editor
 
-To see which filters were applied to the current view, select a view and then select **Filter** ![Filter icon.](media/commandbar_filter_icon.png "Filter icon"). This opens expression builder and displays the default view definition.
+You can use the column editor by selecting the **Edit columns** option on a grid page. This enables you to add, remove and re-order columns, so you have the right set of columns for reviewing your data. 
 
-> [!div class="mx-imgBorder"] 
-> ![Current view definition.](media/current_view_def.gif "This image demonstrates how to see the filters for the view the view")
+On the grid page in a model-driven app, select **Edit columns** option.
 
-## Add conditions to filters
+<GIF of Edit columns pane>
 
-1. To edit the current view and add more filters, select a view and then select **Filter** ![Filter icon.](media/commandbar_filter_icon.png "Filter icon").
-2. On the **Advanced filters** screen, use the expression builder to add conditions to filters. For more information on how to add conditions, see [Add conditions to a filter](../maker/model-driven-apps/create-edit-view-filters.md#add-conditions-to-a-filter).
-3. When you're done, select **Apply**. 
+On the Edit columns pane, you can see the list of columns in the order they appear in the current view.
 
-   > [!div class="mx-imgBorder"] 
-   > ![Add filters.](media/add_filters.gif "This image demonstrates how to add filters using expression builder")
+1. You can remove columns by selecting the **…** next to column name and choosing **Remove**. 
 
-### Add grouped or nested conditions
+2. You can change the order of the columns either by dragging and dropping a column to the desired position or by selecting the … next to column name and choosing **Move up** / **Move down**.
 
-To drill down further into your data, you can add grouped or nested conditions to the filters. For more information, see [Add a group condition to a filter](../maker/model-driven-apps/create-edit-view-filters.md#add-a-group-condition-to-a-filter).
+3. You can add columns to the view by selecting the **Add columns** option. This brings up a pane that lists columns of the table that you can add to the view.
 
-   > [!div class="mx-imgBorder"] 
-   > ![Add a group or nested condition.](media/group_condition.gif "This image demonstrates how to add a grouped or nested condition to a filter")
+   By default, you will see the set of system columns of the table indicated by the filter value **Default**. You can choose to view all columns or only the set of custom columns to browse.
+   
+   <PIC>
+   
+   - You can also search for a column name to easily find the columns you want to add.
+   
+     <PIC>
+	 
+   - Selecting a column in the list will append the column to the list of columns of the view.
+   
+   - You can also select a column from a related table by selecting the **Related** tab. The **Related** tab has the list of columns with the related table indicated in parentheses. You can browse the related table columns by expanding a list item and then selecting the related table column to be added to the view.
+   
+     <GIF>
 
-### Clear filters
+   Close the Add columns panel to review the list of columns added.
+   
+4. At any point, you can reset the list of columns to the ones in the view definition by choosing the **Reset to default** option.
 
-To clear filters that were applied and reset the view back to the original definition, select **Clear filter** ![Clear filter icon.](media/clear_filter_icon.png "Clear filter icon").
+When you have reviewed the changes you made, select **Apply** to see the changes to the view on the grid page.
 
-### Save your personal view
 
-An asterisk next to a view name indicates the view has not been saved. 
+## Filter editor
+When you select the **Edit filters** option on the grid page, you can see the set of filter conditions in the current view. You can add more conditions or remove conditions to filter data.
 
-   > [!div class="mx-imgBorder"] 
-   > ![Unsaved view.](media/unsaved_view.png "Unsaved view")
+1. You can remove a condition by selecting the **…** next to a row and choosing **Delete**.
 
-1. To save a personal view, on the command bar select **More** ![More icon.](media/commandbar_more_icon.png "More icon"). 
-2. Select **Create view** > **Save filter as new view**.
-3. On the **Save as new view** dialog box, type in a name and description for the view and then select **Save**.
-4. The view will appear in your list of personal views under **My Views**.
 
-   > [!div class="mx-imgBorder"] 
-   > ![Save a personal view.](media/save_personal_view.gif "This image demonstrates how to save a personal view")
+2. You can add a condition by choosing **Add** and selecting one of the options:
 
-## Set a default view
+   - *Add row**: To add a single row of condition, select **Add row**. You can then select a column, an operator, and a value to create a condition.
+     
+	 <GIF>
 
-You can set a system view or choose one of your views and set it as the default view.
+   - **Add group**: To add a group of conditions, select **Add group**. You can create multiple sub-conditions and group them using AND or OR operators to create an expression.
 
-1. Select the table that you want to set a view for.
-2. From the list of views, select the view that you want to set as the default view.
-3. Select the view again and then select **Set current view as my default**.
+     <GIF>
 
-   > [!div class="mx-imgBorder"] 
-   > ![Set a default view.](media/default-view.png "Set the current view as your default view")
+   - **Add related entity**: To add a condition on a column of a related table, choose **Add related entity**, which allows you to choose the related table you want to filter on and then add condition(s) under it.
+   
+     <GIF>
+
+   > [!NOTE]
+   > **Contains data** is the only conditional operator that can be used with a related table in a view filter.
+
+3. You can group conditions by first selecting a condition using the check box and then selecting the **…** next to a row and choosing **Make group**.
+
+   <GIF>
+   
+4. At any point, you can reset the conditional expression back to original state by choosing the **Reset to default** option.
+
+When you have reviewed the changes you made, select **Apply** to see changes to the view data on the grid page.
+
+
+## Create personal views
+
+When you have edited a view by editing any of the three elements of the view definition, you will see an asterisk next to the view name indicating unsaved changes to the view. You have the following options to save the changes as a personal view:
+
+- If you made changes to a system view, or a personal view on which you don’t have Write permission, you can save the changes as a personal view by choosing the **Save as new view** option in the command bar.
+
+  <PIC>
+
+- If you made changes to a personal view on which you have Write permission, you will have the additional option **Save changes to current view** to save the changes to the current view in the command bar.
+
+  <PIC>
+
+### Modern advanced find
+
+If your administrator has enabled the modern advanced find experience then you will find the options to create a personal view in the view selector:
+
+- If you made changes to a system view, or a personal view on which you don’t have Write permission, you can save the changes as a personal view by choosing the **Save as new view** option at the bottom of the view selector.
+
+  <GIF>
+
+- If you made changes to a personal view on which you have Write permission, you will have the additional option **Save changes to current view** to save the changes to the current view at the bottom of the view selector.
+ 
+  <GIF>
+
+
+## Set default view
+
+Each table in the model-driven app has a default view set by the system administrator. The default view for a table is indicated by the **Default** label in the view selector.
+
+- You can make any view the default view selecting the **Set as default view** option at the bottom of the view selector.
+
+   > [!NOTE]
+   > **Set as default view** option in view selector appears only when the currently selected view is not the default view and when there are no unsaved changes.
+
+  <GIF>
+  
+- You can reset the default view of a table by selecting the **Reset default view** option at the bottom of the view selector.
+
+   > [!NOTE]
+   > **Reset default view** option in view selector appears only when the default view for the table is not the one set by the system administrator.
+
+  <GIF>
+
+   > [!TIP]
+   > The options at the bottom of the view selector are always visible, even if the list of views is longer than the available vertical screen space.
+   
+## Manage and share personal views
+
+If your administrator has enabled the modern advanced find experience then you will see **Manage and share views** option at the bottom of the view selector. By selecting it, you can perform the following view management tasks on the grid page.
+
+### Change sort order
+
+By default, the list of views in view selector are grouped by personal views and system views, with each of the groups listing views ordered alphabetically by view name. You can set the order of views to one of three preset sorting options:
+
+- **Personal before system, A to Z** (Default): All personal views ordered alphabetically appear above all system views ordered alphabetically.
+
+- **System before personal, A to Z** (Default): All system views ordered alphabetically appear above all personal views ordered alphabetically.
+
+- **A to Z**: All views (system and personal) appear alphabetically in the view selector.
+
+   > [!NOTE]
+   > Personal views are indicated by the <user> icon. You can also hover over the info icon to understand whether a view is a personal view or a system view.
+
+### Hide views
+
+You can hide views from appearing in the view selector by using the **Hide** option in the view management panel. You can select the <eye> icon that appears on hover or select the **Hide** option by choosing the **...** next to view name.
+
+#### What is view hiding?
+
+Hiding a view is a way to personalize the view list and reduce clutter by making views not be visible in the view selector. A view may be needed for a specific purpose periodically or a view could be shared with you that you may not need it anymore. In such instances, hiding enables you to manage your view list by seeing only the views that are most important for you.
+
+Once a view is hidden, it will not appear in the view list for that table in all model-driven apps on all devices for you. If a view is shared with you and other team members, hiding that view will only hide the view for you in the view selector; it will not be hidden for everyone else who has access to the view.
+
+   > [!NOTE]
+   > - By default personal views can be hidden. You can hide system views only if the administrator has enabled the setting in Power Platform Admin Center.
+   
+   > - The default view of a table cannot be hidden.
+
+   > - A view that is hidden cannot be set as default.
+
+If a view is hidden, then you will see the option to toggle it back to make it visible. You can select the <eye> icon that appears on hover or select the **Show** option by choosing the **...** next to view name.
+
+### Other view management tasks
+
+| Option | Use |
+| - | - |
+| **Set as default** | <ul> <li> Make a view the default view for that table across all model-driven apps in the environment. </li> <li> **Set as default view** option does not appear on a hidden view or on a view that is already default.</li></ul> |
+| **Reset default** | Reset the default view of a table across all model-driven apps in the environment. |
+| **Share** | <ul> <li>Share the view with other members of your organization by selecting the team/user to share it with and defining permissions. For more information, see https://docs.microsoft.com/en-us/powerapps/user/share-row. </li> <li> Appears only on personal views for which you have share permission. </li></ul>|
+| **Edit info** | <ul> <li>Edit the name and description of the view </li> <li> Appears only on personal views for which you have Write permission. </li></ul>|
+| **Assign** | <ul> <li>Assign view ownership to another user to team in your organization </li> <li> Appears only on personal views that you own. </li></ul>|
+| **Delete** | <ul> <li>Delete the view </li> <li> Appears only on personal views for which you have Delete permission.</li> <li> Deleting a personal view will delete the view for all users who have shared access to it.</li></ul>|
+| **Deactivate/Activate** | <ul> <li>Deactivate/activate the view </li> <li> Appears only on personal views for which you have Write permission.</li> <li> Deactivating/activating a personal view will make it inactive/active for all users who have shared access to it.</li></ul>|
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
