@@ -41,7 +41,7 @@ The following components aren't supported:
 
 To learn about the limitations of controls in Dataverse for Teams environments, go to [Limitations of controls in Power Apps](../maker/canvas-apps/control-limitations.md).
 
-## Government Community Cloud (GCC)
+## Region availability
 
 Dataverse for Teams currently isn't available in:
 
