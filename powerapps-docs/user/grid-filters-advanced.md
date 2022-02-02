@@ -41,50 +41,40 @@ You can create and manage personal views on a grid page by editing any of these 
 
 For more information, see [Understand model-driven app views](../maker/model-driven-apps/create-edit-views.md)
 
-
 ## Column editor
 
 Use the column editor to add, remove, or re-order columns to see the right set of columns to help you get a clear view of your data. 
 
-1. To edit a column on the grid page, select **Edit columns**.
+To edit a column on the grid page, select **Edit columns**.
 
-   > [!div class="mx-imgBorder"]
-   > ![Select the column editor to edit columns.](media/colum-editor.gif "Columns editor")
+ > [!div class="mx-imgBorder"]
+ > ![Select the column editor to edit columns.](media/colum-editor.gif "Columns editor")
    
-2. The **Edit columns** pane appears and shows the list of columns in the order they appear in the current view. Follow these step to, edit the columns:
+The **Edit columns** pane appears and shows the list of columns in the order they appear in the current view. Follow these step to, edit the columns:
 
-    - To remove colums,  select the **…** next to column name and choosing **Remove**. 
-
-
+- To remove colums, select the More button (**…**) next to column name and then select, **Remove**. 
+    
+- To change the order of the columns, select the More button (**…**) next to column name and then select, **Move up** or **Move down**. Or, drag and drop a column to the desired position 
 
    > [!div class="mx-imgBorder"]
    > ![Edit columns.](media/edit-colums.png "Columns editor")
 
 
-Legend:
+To add columns to the view, select **Add columns**. This brings up the **Add columns** pane that lists all the columns in the table that you can add to the view.
 
-
-You can remove columns by selecting the **…** next to column name and choosing **Remove**. 
-
-- You can change the order of the columns either by dragging and dropping a column to the desired position or by selecting the … next to column name and choosing **Move up** / **Move down**.
-
-- You can add columns to the view by selecting the **Add columns** option. This brings up a pane that lists columns of the table that you can add to the view.
-
-   By default, you will see the set of system columns of the table indicated by the filter value **Default**. You can choose to view all columns or only the set of custom columns to browse.
+1. By default, you'll see the **Default** set of system columns in the table. Select the drop-down list, see **All** or **Custom** columns to choose from.
+2. Use the **Search** to find a speicific column.
    
-   _PIC_
+      > [!div class="mx-imgBorder"]
+      > ![Edit and add columns.](media/edit-colums-1.png "Edit and add columns")
    
-   - You can also search for a column name to easily find the columns you want to add.
+Select a column from the list to append it to the list of columns for the view.
    
-     _PIC_
-	 
-   - Selecting a column in the list will append the column to the list of columns of the view.
-   
-   - You can also select a column from a related table by selecting the **Related** tab. The **Related** tab has the list of columns with the related table indicated in parentheses. You can browse the related table columns by expanding a list item and then selecting the related table column to be added to the view.
-   
-     _GIF_
+To add, colums from related tables, select the **Related** tab. You'll see the columns from  related table is in parentheses. Browse and expand the list and choose related table column to add to the view.
 
-   Close the Add columns panel to review the list of columns added.
+ ![Edit related column filter.](media/edit-related-column-filter.gif "Edit related columns filter")
+
+Close the Add columns panel to review the list of columns added.
    
 - At any point, you can reset the list of columns to the ones in the view definition by choosing the **Reset to default** option.
 
