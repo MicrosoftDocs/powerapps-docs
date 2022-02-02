@@ -80,16 +80,16 @@ Use the column editor to add, remove, or re-order columns. For more information,
 
 ## Filter editor
 
-Use the filter edito on the grid page to see the set of conditions in the current view. You can also add more conditions or remove conditions in filter data For more information, see [Filter editor](grid-filters-advanced.md#filter-editor)
+Use the filter editor on the grid page to see the set of conditions in the current view. You can also add more conditions or remove conditions in filter data For more information, see [Filter editor](grid-filters-advanced.md#filter-editor)
 
    > [!div class="mx-imgBorder"]
    > ![Select to edit the filters.](media/edit-filters.gif "Edit filters")
 
 ## Grid search
 
-The search box on a grid page may have one of two types of searches as configured by your administrator.
+The search box on a grid page can have two different searches experience that is configured by your administrator.
 
-### 1. Search this view (_Default_)
+### Search this view (default experience)
 
 When you use the **Search this view** option on a grid page, the system searches for data in the view that you're currently in. In the following example, you perform a search on the **Contacts** grid.
 
@@ -108,7 +108,7 @@ The system searches for data in the **My Active Contacts** view and displays sea
    > [!div class="mx-imgBorder"]
    > ![Search view.](media/search-view2.png "Search results from the Search this view command")
 
-### 2. Quick find
+### Quick find
 
 If your administrator has enabled the use of quick find view of a table for searching on grids and sub-grids, you will see the **Quick find** search option on the grid page. When you use it, the system searches for data in the quick find view of the table and displays results in the columns of the quick find view and not of the current view. 
 
