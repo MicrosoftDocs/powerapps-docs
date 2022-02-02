@@ -20,11 +20,11 @@ search.app:
 
 In model-driven apps, the read-only grid is the default control used to represent rows of data in tabular form. When a model-driven app has a table as a subarea in the sitemap the default layout of the page, called the grid page, has a command bar, a view selector, and a grid.
 
-<Picture of grid page with command bar, view selector, edit columns, edit filters, search, grid and jump bar highlighted>
+_Picture of grid page with command bar, view selector, edit columns, edit filters, search, grid and jump bar highlighted_
 
 ## Navigation
 
-You can choose a cell under the primary column to navigate to the record page from the grid page.
+You can choose a cell in the primary column to navigate to the record page from the grid page.
 
 When you filter data on a grid, the grid page remembers the filter, sort order, and the page state when you navigate away and then return to the page. This works the same way when data is filtered through search, column filtering or pagination.
 
@@ -36,43 +36,44 @@ On grids of tables that support hierarchy relationships, you can select the hier
    > [!div class="mx-imgBorder"]
    > ![Hierarchy icon.](media/grid-row-hierarchy-icon.png "Hierarchy icon")
 
-You can also right-click like a cell value in the primary column or a lookup column to open in a new tab or window.
+You can also right-click a cell value in the primary column or a lookup column to open in a new tab or window.
 
    > [!div class="mx-imgBorder"]
    > ![Open in a new window.](media/newtab.png "[Open in a new window")
 
 ## View selector
   
-The view selector at the top of the page contains all the views of the table you have access to, so you can see the data in the view. By default, the list of views is grouped by personal views and system views, with each of the groups listing views ordered alphabetically by view name.
+The view selector at the top of the page contains all the views of the table you have access to. By default, the list of views is grouped by personal views and system views, with each of the groups listing views ordered alphabetically by view name.
 
-<PIC of view selector>
+_PIC of view selector_
 
 ### Modern advanced find
 
-If your administrator has enabled the modern advanced find experience, you will see a flat list of views with personal views indicated by the <user> icon. You can hover over the info icon to understand whether a view is a personal view or a system view. The ordering of views in the list depends on the preset sort order you have chosen, with personal views (ordered alphabetically) over system views (ordered alphabetically) the default. For more information on how you can change the sort order, see <Link to section>
+If your administrator has enabled the modern advanced find experience, you will see a single ungrouped list of views with personal views indicated by the _user_ icon. You can hover over the _info_ icon to understand whether a view is a personal view or a system view. The ordering of views in the list depends on the preset sort order you have chosen, with personal views (ordered alphabetically) over system views (ordered alphabetically) the default. For more information on how you can change the sort order, see https://docs.microsoft.com/en-us/powerapps/user/grid-filters-advanced >> sorting.
 
 You can use the search box at the top of the view selector to quickly search for a view.
 
-The default view for a table is set by the administrator and is indicated by the Default label in the view list. You can set a view to be the default view or reset the default to the one chosen by the administrator at any time. For more information, see <Link to section>
+The default view for a table is set by the administrator and is indicated by the Default label in the view list. You can choose a view to be the default view or reset the default to the one chosen by the administrator at any time. For more information, see https://docs.microsoft.com/en-us/powerapps/user/grid-filters-advanced >> manage default view.
 
-<GIF of view selector>
+_GIF of view selector_
 
 ## Column editor
 
-You can use the column editor by selecting the Edit columns option. This enables you to add, remove and re-order columns, so you have all the right columns for reviewing your data. For more information, see <Link to section>
+You can use the column editor by selecting the **Edit columns** option. This enables you to add, remove and re-order columns, so you have all the right columns for reviewing your data. For more information, see https://docs.microsoft.com/en-us/powerapps/user/grid-filters-advanced >> Column editor
 
-<PIC of Edit columns>
+_PIC of Edit columns_
 
 ## Filter editor
-When you select the Edit filters option on the grid page, you can see the set of conditions in the current view. You can add more conditions or remove conditions to filter data. This enables you to apply the right filters on your data. For more information, see <Link to section>
 
-<PIC of Edit filters>
+When you select the **Edit filters** option on the grid page, you can see the set of conditions in the current view. You can add more conditions or remove conditions to filter data. This enables you to apply the right filters on your data. For more information, see https://docs.microsoft.com/en-us/powerapps/user/grid-filters-advanced >> Filter editor
+
+_PIC of Edit filters_
 
 ## Grid search
 
-Teh search box on a grid page may have one of two types of searches as configured by your administrator.
+The search box on a grid page may have one of two types of searches as configured by your administrator.
 
-### 1. Search this view
+### 1. Search this view (_Default_)
 
 When you use the **Search this view** option on a grid page, the system searches for data in the view that you're currently in. In the following example, you perform a search on the **Contacts** grid.
 
@@ -93,7 +94,7 @@ The system searches for data in the **My Active Contacts** view and displays sea
 
 ### 2. Quick find
 
-If your administrator has enabled the use of quick find view of a table for searching on grids and sub-grids, you will see the **Quick find** option on the grid page. When you use it, the system searches for data in the quick find view of the table and displays results in the columns of the quick find view and not of the current view. 
+If your administrator has enabled the use of quick find view of a table for searching on grids and sub-grids, you will see the **Quick find** search option on the grid page. When you use it, the system searches for data in the quick find view of the table and displays results in the columns of the quick find view and not of the current view. 
 
 ## Column filters
   
