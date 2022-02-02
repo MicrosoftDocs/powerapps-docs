@@ -18,9 +18,9 @@ search.app:
 ---
 # Explore data in a view on a grid page
 
-In model-driven apps, the read-only grid is the default control used to represent rows of data in tabular form. When a model-driven app has a table as a subarea in the sitemap the default layout of the page, called the grid page, has a command bar, a view switcher, and a grid.
+In model-driven apps, the read-only grid is the default control used to represent rows of data in tabular form. When a model-driven app has a table as a subarea in the sitemap the default layout of the page, called the grid page, has a command bar, a view selector, and a grid.
 
-<Picture of grid page with command bar, view switcher, edit columns, edit filters, search, grid and jump bar highlighted>
+<Picture of grid page with command bar, view selector, edit columns, edit filters, search, grid and jump bar highlighted>
 
 ## Navigation
 
@@ -41,21 +41,21 @@ You can also right-click like a cell value in the primary column or a lookup col
    > [!div class="mx-imgBorder"]
    > ![Open in a new window.](media/newtab.png "[Open in a new window")
 
-## View switcher
+## View selector
   
-The view switcher at the top of the page contains all the views of the table you have access to, so you can see the data in the view. By default, the list of views is grouped by personal views and system views, with each of the groups listing views ordered alphabetically by view name.
+The view selector at the top of the page contains all the views of the table you have access to, so you can see the data in the view. By default, the list of views is grouped by personal views and system views, with each of the groups listing views ordered alphabetically by view name.
 
-<PIC of view switcher>
+<PIC of view selector>
 
 ### Modern advanced find
 
 If your administrator has enabled the modern advanced find experience, you will see a flat list of views with personal views indicated by the <user> icon. You can hover over the info icon to understand whether a view is a personal view or a system view. The ordering of views in the list depends on the preset sort order you have chosen, with personal views (ordered alphabetically) over system views (ordered alphabetically) the default. For more information on how you can change the sort order, see <Link to section>
 
-You can use the search box at the top of the view switcher to quickly search for a view.
+You can use the search box at the top of the view selector to quickly search for a view.
 
 The default view for a table is set by the administrator and is indicated by the Default label in the view list. You can set a view to be the default view or reset the default to the one chosen by the administrator at any time. For more information, see <Link to section>
 
-<GIF of view switcher>
+<GIF of view selector>
 
 ## Column editor
 
