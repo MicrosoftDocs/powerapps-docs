@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 11/18/2021
+ms.date: 2/2/2022
 ms.subservice: end-user
 ms.author: mkaur
 ms.reviewer: ""
@@ -29,29 +29,42 @@ searchScope:
 
 # Create and manage personal views on a grid page
 
-The grid page in a model-driven app displays data in a view using the read-only grid control. Views are used to define how rows of a table are displayed in the application.
+The grid page in a model-driven app displays data in a view using the read-only grid control. Views are used to define how rows of a table are displayed in the app.
 
-A view definition has:
+A view definition has the following elements:
+
 - Columns to display, including the order and width
 - Default sort order
 - Filter conditions to show records that match the conditions
 
-To understand views in model-driven apps see https://docs.microsoft.com/en-us/powerapps/maker/model-driven-apps/create-edit-views
+You can create and manage personal views on a grid page by editing any of these three elements of a view.
 
-You can create and manage personal views on a grid page by editing any of the three elements of a view listed above.
+For more information, see [Understand model-driven app views](../maker/model-driven-apps/create-edit-views.md)
 
 
 ## Column editor
 
-You can use the column editor by selecting the **Edit columns** option on a grid page. This enables you to add, remove and re-order columns, so you have the right set of columns for reviewing your data. 
+Use the column editor to add, remove, or re-order columns to see the right set of columns to help you get a clear view of your data. 
 
-On the grid page in a model-driven app, select **Edit columns** option.
+1. To edit a column on the grid page, select **Edit columns**.
 
-_GIF of Edit columns pane_
+   > [!div class="mx-imgBorder"]
+   > ![Select the column editor to edit columns.](media/colum-editor.gif "Columns editor")
+   
+2. The **Edit columns** pane appears and shows the list of columns in the order they appear in the current view. Follow these step to, edit the columns:
 
-On the Edit columns pane, you can see the list of columns in the order they appear in the current view.
+    - To remove colums,  select the **…** next to column name and choosing **Remove**. 
 
-- You can remove columns by selecting the **…** next to column name and choosing **Remove**. 
+
+
+   > [!div class="mx-imgBorder"]
+   > ![Edit columns.](media/edit-colums.png "Columns editor")
+
+
+Legend:
+
+
+You can remove columns by selecting the **…** next to column name and choosing **Remove**. 
 
 - You can change the order of the columns either by dragging and dropping a column to the desired position or by selecting the … next to column name and choosing **Move up** / **Move down**.
 
