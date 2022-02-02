@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 08/30/2021
+ms.date: 02/02/2022
 ms.subservice: canvas-maker
 ms.author: chmoncay
 search.audienceType: 
@@ -16,6 +16,7 @@ search.app:
 contributors:
   - tapanm-msft
   - chmoncay
+  - miglisic
 ---
 # Power BI tile control in Power Apps
 
