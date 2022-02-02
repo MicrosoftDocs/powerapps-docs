@@ -18,4 +18,4 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# FAQ for girds and views
+# FAQ for grids and views
