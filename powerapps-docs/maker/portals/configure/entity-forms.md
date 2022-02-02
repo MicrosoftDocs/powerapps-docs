@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/04/2021
+ms.date: 02/02/2022
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: ndoelman
@@ -68,7 +68,7 @@ To enable permissions for a basic form, select the checkbox to **Enable Table Pe
 
 |Name|Description|
 |----|---------|
-|Add Captcha|    Displays captcha. <br> **NOTE:** Captcha control is currently limited to only English language for audio, and Latin characters for image.|
+|Add Captcha|    Displays captcha. |
 |Show Captcha for Authenticated users|    Displays captcha for authenticated users.|
 |Validation Group|    The group name assigned to input controls for evaluating valid input of named groups.|
 |Auto Generate Steps From Tabs|    Indicates that multiple tabs on a basic form will be displayed with each tab as a sequential step starting with the first tab and continue until all tabs have been navigated to and upon final submission a record is inserted. By default, it is not selected. The default value indicates that only one tab or form is to be rendered for the current step. If the Tab Name is not specified, then the first tab is displayed.|
