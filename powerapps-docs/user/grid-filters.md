@@ -71,8 +71,8 @@ The view selector shows the views in the order type that you have selected. By d
 
 You can use the search box at the top of the view selector to quickly search for a view.
 
-    > [!div class="mx-imgBorder"]
-    > ![Search view.](media/search-view.png "Search views")
+> [!div class="mx-imgBorder"]
+> ![Search view.](media/search-view.png "Search views")
 
 Each table in the model-driven app has a default view set that's set your administrator. The default view for a table is indicated by the Default label in the view selector. For more information, see [Set default view](powerapps/user/grid-filters-advanced.md#set-default-view).
 
