@@ -70,13 +70,13 @@ To add columns to the view, select **Add columns**. This brings up the **Add col
    
 Select a column from the list to append it to the list of columns for the view.
    
-To add, colums from related tables, select the **Related** tab. You'll see the columns from  related table is in parentheses. Browse and expand the list and choose related table column to add to the view.
+To add colums from related tables, select the **Related** tab. You'll see the columns from  related table is in parentheses. Browse and expand the list and choose a related table column to add to the view.
 
  ![Edit related column filter.](media/edit-related-column-filter.gif "Edit related columns filter")
 
 Close the Add columns panel to review the list of columns added.
    
-- At any point, you can reset the list of columns to the ones in the view definition by choosing the **Reset to default** option.
+At any point, you can reset the list of columns to the ones in the view definition by choosing the **Reset to default** option.
 
 When you have reviewed the changes you made, select **Apply** to see the changes to the view on the grid page.
 
