@@ -185,9 +185,12 @@ If your administrator has enabled the modern advanced find experience then you w
 
 ### Change sort order
 
-By default, the list of views in view selector are grouped by personal views and system views, with each of the groups listing views ordered alphabetically by view name. You can set the order of views to one of three preset sorting options:
+By default, the list of views in the view selector are grouped by personal views and system views. Eeach list in the group is ordered alphabetically by the name of the view. To change the sort order, in the view selector select, **Manage and share views** and choose one of the following option:
 
-- **Personal before system, A to Z** (_Default_): All personal views ordered alphabetically appear above all system views ordered alphabetically.
+![Manage views.](media/manage-views.gif "Manage views")
+
+
+- **Personal before system, A to Z**: This is the default. All personal views ordered alphabetically appear above all system views ordered alphabetically.
 
 - **System before personal, A to Z**: All system views ordered alphabetically appear above all personal views ordered alphabetically.
 
