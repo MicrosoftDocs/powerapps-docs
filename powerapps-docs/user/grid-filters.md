@@ -63,13 +63,19 @@ The view selector at the top of the page contains all the views of the table you
 
 ### Modern advanced find
 
-If your administrator has enabled the modern advanced find experience, you will see a single ungrouped list of views with personal views indicated by the _user_ icon. You can hover over the _info_ icon to understand whether a view is a personal view or a system view. The ordering of views in the list depends on the preset sort order you have chosen, with personal views (ordered alphabetically) over system views (ordered alphabetically) the default. Learn more about [how you can change the sort order of views in the view selector.](powerapps/user/grid-filters-advanced.md#change-sort-order)
+If your administrator has enabled the modern advanced find experience, you will see a single ungrouped list of views with indicated by the user icon ![Persona view icon.](media/user-icon.png "Personal view icon")
+
+To see if the view is a personal view or a system view, hover over the info icon, ![Information button.](media/info-icon.png "Informatoin").
+
+The view selector shows the views in the order type that you have selected. By defualt, the views that you will see are your personal views (ordered alphabetically) over system views (ordered alphabetically) the default. For more information, see [Change sort order.](grid-filters-advanced.md#change-sort-order)
 
 You can use the search box at the top of the view selector to quickly search for a view.
 
-The default view for a table is set by the administrator and is indicated by the Default label in the view list. You can choose a view to be the default view or reset the default to the one chosen by the administrator at any time. Learn more about [how you can set and reset default view.](powerapps/user/grid-filters-advanced.md#set-default-view)
+    > [!div class="mx-imgBorder"]
+    > ![Search view.](media/search-view.png "Search views")
 
-_GIF of view selector_
+Each table in the model-driven app has a default view set that's set your administrator. The default view for a table is indicated by the Default label in the view selector. For more information, see [Set default view](powerapps/user/grid-filters-advanced.md#set-default-view).
+
 
 ## Column editor
 
