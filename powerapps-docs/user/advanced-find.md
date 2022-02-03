@@ -1,6 +1,6 @@
 ---
-title: "Advanced Find| MicrosoftDocs"
-description: How to use advanced find search
+title: "Advanced find | MicrosoftDocs"
+description: How to use advanced find search in model-driven apps
 author: mduelae
 manager: kvivek
 ms.service: powerapps 
@@ -18,12 +18,44 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Create, edit, or save an Advanced Find search
+# Advanced find in model-driven apps
 
-Find the rows you want in your app by using the Advanced Find search option. You can also use Advanced Find to prepare data for export to Office Excel so that you analyze, summarize, or aggregate data, or create PivotTables to view your data from different perspectives.  
+## Search for rows and create personal views with modern advanced find
 
+If your administrator has enabled the modern advanced find experience you can search for rows and create personal views easily in model-driven apps.
+
+- **Dataverse search enabled**: If your administrator has enabled Dataverse search, you will see a search bar at the top center of the navigation bar. When you select the search box you will see the option to **Search for rows in a table using advanced filters**. Once you choose **Search for rows in a table using advanced filters** option, you will see a list of tables to select from.
+
+_GIF_
+
+>[!TIP]
+> **Search for rows in a table using advanced filters** option appears at the bottom of the search drop down only when you have not entered the search term. Once you start typing, you will see results for the search term, with an option to see more search results.
+
+- **Dataverse search disabled**: If your administrator has not enabled Dataverse search, you will see the search icon in the navigation bar. You will also see **Advanced Find** button ![Advanced find button.](media/advanced_filter_icon.png "Advanced find button") in that area. Once you select **Advanced Find** button, you will see a list of tables to select from.
+
+_GIF_
+
+The list of tables that are available to filter on must be:
+
+- [Part of the model-driven app](../maker/model-driven-apps/add-edit-app-components.md#add-a-table)
+
+- Enabled for Unified Interface
+
+- Valid for advanced find
+
+Select a table and choose **Continue** to access the table.
+
+You will be navigated to the table's grid page, with the default view for the table selected and the rows displayed in a read-only grid. The  [**Edit filters**](powerapps/user/grid-filters-advanced#filter-editor) panel will be opened, so you can filter the data on that table.
+
+_GIF_
+
+On this page, you can [create and manage personal views for that table.](powerapps/user/grid-filters-advanced)
+
+## Create, edit, or save a view using legacy advanced find
+
+If your administrator has not enabled the modern advanced find experience, you can find the rows you want by using the legacy Advanced Find search option. You can also use Advanced Find to prepare data for export to Office Excel so that you analyze, summarize, or aggregate data, or create PivotTables to view your data from different perspectives. 
   
-1. On the command bar, the select **Advanced Find** button ![Advanced find button.](media/advanced_filter_icon.png "Advanced find button").
+1. On the command bar, select **Advanced Find** button ![Advanced find button.](media/advanced_filter_icon.png "Advanced find button").
   
 2. Specify what to search for.  
   
