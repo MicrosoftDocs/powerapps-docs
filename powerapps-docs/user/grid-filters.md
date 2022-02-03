@@ -74,7 +74,7 @@ You can use the search box at the top of the view selector to quickly search for
 > [!div class="mx-imgBorder"]
 > ![Search view.](media/search-view.png "Search views")
 
-Each table in the model-driven app has a default view set that's set your administrator. The default view for a table is indicated by the Default label in the view selector. For more information, see [Set default view](powerapps/user/grid-filters-advanced.md#set-default-view).
+Each table in the model-driven app has a default view set that's set your administrator. The default view for a table is indicated by the Default label in the view selector. For more information, see [Set default view](grid-filters-advanced.md#set-default-view).
 
 
 ## Column editor
