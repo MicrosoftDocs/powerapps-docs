@@ -2,7 +2,7 @@
 title: "Add, configure, move, or delete columns on a form | MicrosoftDocs"
 description: Learn how to work with columns on a form using Power Apps.
 ms.custom: ""
-ms.date: 05/04/2020
+ms.date: 02/03/2022
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -25,7 +25,7 @@ search.app:
   - D365CE
 ---
 
-# Add, configure, move, or delete columns on a form
+# Add, move, configure, or delete columns on a form
 
 Add, configure, move, or delete columns using the form designer.
 
@@ -67,7 +67,7 @@ To add columns to a form, use the **Columns** pane. The **Columns** pane lets yo
 
 :::image type="content" source="../../maker/model-driven-apps/media/add-form-columns-using-selection.gif" alt-text="Add form columns using selection":::
 
-## Configure columns on a form
+## Configure column properties on a form
 
 The properties and events can be configured for column when you create or edit a form using the form designer.
 
@@ -91,6 +91,17 @@ The **Properties** tab displays the following properties.
 > In Unified Interface, the label size setting is ignored because the form adjusts width for all columns to ensure proper rendering for screen sizes from very small to extra-large.
 
 :::image type="content" source="../../maker/model-driven-apps/media/app-designer-form-column-properties.png" alt-text="view  column properties":::
+
+### Edit a column and view column names
+
+To view column names, such as schema name or to change additional column properties, such as required, searchable, description, and size, follow these steps:
+
+1. Select the column, and then in the right column properties pane select the information icon ![Information icon](../data-platform/media/data-platform-import-export/information-icon-inline.png) next to the column name.
+
+   :::image type="content" source="../data-platform/media/data-platform-import-export/column-actions-form-designer.png" alt-text="Select the column information icon.":::
+1. The display and unique names appear. Select **Edit table column** to display the **Edit Table Column** pane where you can make the changes you want.
+1. When you're finished making your changes, select **Done**.
+1. Select **Save** and then select **Publish** to make your changes available to app users.
 
 ## Column events
 
