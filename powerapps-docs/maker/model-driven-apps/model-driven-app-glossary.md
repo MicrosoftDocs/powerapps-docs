@@ -6,7 +6,7 @@ author: Mattp123
 ms.service: powerapps
 ms.topic: overview
 ms.component: model
-ms.date: 07/20/2021
+ms.date: 02/03/2022
 ms.subservice: mda-maker
 ms.author: matp
 ms.reviewer: v-roryneary
@@ -62,6 +62,10 @@ The way in which we manage the lifecycle of an application from conception to en
 
 [App navigation in model-driven apps](app-navigation.md)
 
+## Attribute
+
+An attribute is another name for a [column](#column) and is a term commonly used by Power Apps developers. Each [table](#table) in Power Apps corresponds to a database table and each table column in Power Apps corresponds to a column in the database table. 
+
 ## Business process flow
 
 Logic built into a given table to ensure that users complete records by updating fields in the correct order.  
@@ -114,11 +118,11 @@ The modern app designer will soon be the default designer for model-driven apps.
 
 ## Column
 
-A field within a Dataverse table (formerly called an entity). Columns are similar to fields in databases and have different data types such as text, number, date, as well as data types less familiar to databases such as phone, email, file, and image.
+A column (formerly called a field), is a field within a Dataverse table (formerly called an entity). Columns are similar to fields in databases and have different data types such as text, number, date, as well as data types less familiar to databases such as phone, email, file, and image.
 
-The field type defines the kind of data required by the column and also the controls, such as date picker or text box, that will be available when using the control.
+The column type defines the kind of data required by the column and also the controls, such as date picker or text box, that will be available when using the control.
 
-Columns also appear when creating forms. Form tabs also have columns, and this defines where you can put sections.  Additionally, form sections have columns, and these define where you can place table columns (fields in this case).
+Columns also appear when creating forms. Form tabs also have columns, and this defines where you can put sections. Additionally, form sections have columns, and these define where you can place table columns (form fields in this case).
 
 [How to create and edit columns](../../maker/data-platform/create-edit-fields.md)
 
