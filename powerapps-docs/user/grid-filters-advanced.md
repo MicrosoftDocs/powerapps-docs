@@ -176,7 +176,12 @@ To reset the default view back to the orginial view that is set by your administ
    
 ## Manage and share personal views
 
-If your administrator has enabled the modern advanced find experience then you will see **Manage and share views** option at the bottom of the view selector. By selecting it, you can perform the following view management tasks on the grid page.
+If your administrator has enabled the modern advanced find experience then you will see **Manage and share views** option at the bottom of the view selector. The **Manage and share views** options let you share views with your organization and manage your view list by hiding, renaming, and deleting views.
+
+
+> [!div class="mx-imgBorder"]
+> ![Manage and share views.](media/manage-share-views.png "Manage and share views")
+
 
 ### Change sort order
 
@@ -216,7 +221,7 @@ If a view is hidden, then you will see the option to toggle it back to make it v
 | - | - |
 | **Set as default** | <ul> <li> Make a view the default view for that table across all model-driven apps in the environment. </li> <li> **Set as default view** option does not appear on a hidden view or on a view that is already default.</li></ul> |
 | **Reset default** | Reset the default view of a table across all model-driven apps in the environment. |
-| **Share** | <ul> <li>Share the view with other members of your organization by selecting the team/user to share it with and defining permissions. For more information, see https://docs.microsoft.com/en-us/powerapps/user/share-row. </li> <li> Appears only on personal views for which you have share permission. </li></ul>|
+| **Share** | <ul> <li>Share the view with other members of your organization by selecting the team/user to share it with and defining permissions. For information: [Share rows with a user or team](share-row.md). </li> <li> Appears only on personal views for which you have share permission.  </li></ul>|
 | **Edit info** | <ul> <li>Edit the name and description of the view </li> <li> Appears only on personal views for which you have Write permission. </li></ul>|
 | **Assign** | <ul> <li>Assign view ownership to another user to team in your organization </li> <li> Appears only on personal views that you own. </li></ul>|
 | **Delete** | <ul> <li>Delete the view </li> <li> Appears only on personal views for which you have Delete permission.</li> <li> Deleting a personal view will delete the view for all users who have shared access to it.</li></ul>|
