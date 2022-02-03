@@ -150,12 +150,18 @@ If your administrator has enabled the modern advanced find experience then you w
 
 ## Set default view
 
-Each table in the model-driven app has a default view set by the system administrator. The default view for a table is indicated by the **Default** label in the view selector.
+Each table in the model-driven app has a default view set that's set your administrator. The default view for a table is indicated by the **Default** label in the view selector.
 
-- You can make any view the default view selecting the **Set as default view** option at the bottom of the view selector.
+> [!div class="mx-imgBorder"]
+> ![Default view.](media/default-system-view.png "Default view")
 
-   > [!NOTE]
-   > **Set as default view** option in view selector appears only when the currently selected view is not the default view and when there are no unsaved changes.
+To make another view as your default view, select the view that you want to make as your default and then select, **Set as default view**.
+
+> [!div class="mx-imgBorder"]
+> ![Set as default view.](media/set-default-view.png "Set as default view")
+
+> [!NOTE]
+> **Set as default view** option in view selector appears only when the currently selected view is not the default view and when there are no unsaved changes.
 
   _GIF_
   
