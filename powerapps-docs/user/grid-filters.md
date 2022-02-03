@@ -63,11 +63,11 @@ The view selector at the top of the page contains all the views of the table you
 
 ### Modern advanced find
 
-If your administrator has enabled the modern advanced find experience, you will see a single ungrouped list of views with personal views indicated by the _user_ icon. You can hover over the _info_ icon to understand whether a view is a personal view or a system view. The ordering of views in the list depends on the preset sort order you have chosen, with personal views (ordered alphabetically) over system views (ordered alphabetically) the default. For more information on how you can change the sort order, see https://docs.microsoft.com/en-us/powerapps/user/grid-filters-advanced >> sorting.
+If your administrator has enabled the modern advanced find experience, you will see a single ungrouped list of views with personal views indicated by the _user_ icon. You can hover over the _info_ icon to understand whether a view is a personal view or a system view. The ordering of views in the list depends on the preset sort order you have chosen, with personal views (ordered alphabetically) over system views (ordered alphabetically) the default. Learn more about [how you can change the sort order of views in the view selector.](powerapps/user/grid-filters-advanced.md#change-sort-order)
 
 You can use the search box at the top of the view selector to quickly search for a view.
 
-The default view for a table is set by the administrator and is indicated by the Default label in the view list. You can choose a view to be the default view or reset the default to the one chosen by the administrator at any time. For more information, see https://docs.microsoft.com/en-us/powerapps/user/grid-filters-advanced >> manage default view.
+The default view for a table is set by the administrator and is indicated by the Default label in the view list. You can choose a view to be the default view or reset the default to the one chosen by the administrator at any time. Learn more about [how you can set and reset default view.](powerapps/user/grid-filters-advanced.md#set-default-view)
 
 _GIF of view selector_
 
