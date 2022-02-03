@@ -155,25 +155,24 @@ Each table in the model-driven app has a default view set that's set your admini
 > [!div class="mx-imgBorder"]
 > ![Default view.](media/default-system-view.png "Default view")
 
-To make another view as your default view, select the view that you want to make as your default and then select, **Set as default view**.
+To make another view your default view, select the view that you want to set as the default and then select, **Set as default view**.
+
+> [!NOTE]
+> You will only see the **Set as default view** option when the currect selected is not already set as the default view and when there's no unsaved changes.
 
 > [!div class="mx-imgBorder"]
 > ![Set as default view.](media/set-default-view.png "Set as default view")
 
+
+To reset the default view back to the orginial view that is set by your administrator, select **Reset default view**.
+
 > [!NOTE]
-> **Set as default view** option in view selector appears only when the currently selected view is not the default view and when there are no unsaved changes.
+> - You'll see teh **Reset default view** option only when the current default view for the table is not the one set by the system administrator.
+> - The options at the bottom of the view selector are always visible, even if the list of views is longer than the available vertical screen space.
 
-  _GIF_
-  
-- You can reset the default view of a table by selecting the **Reset default view** option at the bottom of the view selector.
+> [!div class="mx-imgBorder"]
+> ![Reset to the default view.](media/reset-default-view.png "Reset to the default view")
 
-   > [!NOTE]
-   > **Reset default view** option in view selector appears only when the default view for the table is not the one set by the system administrator.
-
-  _GIF_
-
-   > [!TIP]
-   > The options at the bottom of the view selector are always visible, even if the list of views is longer than the available vertical screen space.
    
 ## Manage and share personal views
 
