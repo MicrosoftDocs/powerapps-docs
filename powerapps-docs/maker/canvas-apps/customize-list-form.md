@@ -5,7 +5,7 @@ author: wimcoor
 ms.service: powerapps
 ms.topic: conceptual
 ms.reviewer: tapanm
-ms.date: 01/31/2022
+ms.date: 02/04/2022
 ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
