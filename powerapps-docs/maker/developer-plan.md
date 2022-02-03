@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.subservice: canvas-developer
 ms.topic: conceptual
 ms.custom: intro-internal
-ms.date: 01/25/2022
+ms.date: 02/02/2022
 ms.author: evlew
 ms.reviewer: tapanm
 contributors:
@@ -187,3 +187,10 @@ No. However, users may start an AI Builder trial to try out the AI Builder capab
 Since developer environments aren't intended to support production scenarios, apps display a temporary banner to remind makers about them running in a developer environment. This banner will no longer appear if you move the app from a developer environment to a non-developer environment.
 
 :::image type="content" source="media/developer-plan/power_apps_dev_env_app_banner.png" alt-text="Power Apps Developer Environment app banner.":::
+
+### Are Dynamics 365 apps available in a developer environment?
+No. Dynamics 365 apps can't be installed in a developer environment. You'll see the following message when you try to install them:
+
+"Installing Dynamics 365 apps such as Dynamics 365 Sales and Dynamics 365 Customer Service is only supported on environments that have been created with a database with the option to Enable Dynamics 365 apps set to “Yes”. Try installing this application in an environment with a database and Enable Dynamics 365 apps enabled on it."
+
+If you want to explore Dynamics 365 apps, refer to the app-specific documentation for free trials, or to install them on existing environments.
