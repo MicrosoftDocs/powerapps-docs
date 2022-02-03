@@ -71,7 +71,7 @@ If you are still considering using jQuery despite the risks, consider the follow
 
 ## Write your code for multiple browsers
 
-Model-driven apps support multiple browsers. Make sure that any scripts that you use will work with all supported browsers. Most of the significant differences between Internet Explorer and other browser have to do with HTML and XML DOM manipulation. Because HTML DOM manipulation is not supported, if script logic is only performing supported actions and using the [Xrm object model](understand-clientapi-object-model.md), the changes required to support other browsers could be small. 
+Model-driven apps support multiple browsers. Make sure that any scripts that you use will work with all supported browsers. If script logic is only performing supported actions and using the [Xrm object model](understand-clientapi-object-model.md), the changes required to support different browsers could be small.
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
