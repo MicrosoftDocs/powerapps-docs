@@ -75,15 +75,13 @@ _GIF of view selector_
 
 Use the column editor to add, remove, or re-order columns. For more information, see [Column editor](grid-filters-advanced.md#column-editor).
 
-   > [!div class="mx-imgBorder"]
-   > ![Select the column editor to edit columns.](media/colum-editor.gif "Columns editor")
+![Select the column editor to edit columns.](media/colum-editor.gif "Columns editor")
 
 ## Filter editor
 
 Use the filter editor on the grid page to see the set of conditions in the current view. You can also add more conditions or remove conditions in filter data For more information, see [Filter editor](grid-filters-advanced.md#filter-editor)
 
-   > [!div class="mx-imgBorder"]
-   > ![Select to edit the filters.](media/edit-filters.gif "Edit filters")
+![Select to edit the filters.](media/edit-filters.gif "Edit filters")
 
 ## Grid search
 
