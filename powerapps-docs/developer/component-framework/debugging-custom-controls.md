@@ -24,7 +24,7 @@ This article shows how to debug your code components using the test harness and 
     - [Test code components with mock data](#test-code-components-with-mock-data)
     - [Common limitations when using the test harness](#common-limitations-when-using-the-test-harness)
   - [Using browser developer tools to debug your code component](#using-browser-developer-tools-to-debug-your-code-component)
-    - [Bundling using web pack](#bundling-using-web-pack)
+    - [Bundling using web pack](#bundling-using-webpack)
     - [Using developer tools with code components](#using-developer-tools-with-code-components)
     - [ES5 vs ES6](#es5-vs-es6)
   - [Debugging after deploying into Microsoft Dataverse](#debugging-after-deploying-into-microsoft-dataverse)
@@ -170,7 +170,7 @@ This section describes how to debug your code component inside the Microsoft Edg
 
 ### ES5 vs ES6
 
-Currently, by default, code components are configured to transpile into ES5 JavaScript so that older browsers are supported (Internet Explorer 11). In the future, this will change once Internet Explorer 11 support for Power Apps is removed, enabling newer language features to be used in supported browsers. You can change the target to ES6 if you do not need to support older browsers by setting the `target` in your projects `tsconfig.json` to `ES6`:
+Currently, by default, code components are configured to transpile into ES5 JavaScript so that older browsers are supported. You can change the target to ES6 if you do not need to support older browsers by setting the `target` in your projects `tsconfig.json` to `ES6`:
 
 ```json
 {
