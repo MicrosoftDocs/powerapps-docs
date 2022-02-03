@@ -140,14 +140,14 @@ Follow these steps to save the view:
 If your administrator has enabled the modern advanced find experience then you'll see an option to create a personal view in the view selector.
 
 
-- If you made changes to a system view or a personal view that you don't have *Write* permission to, then you can save the view as a personal view. Select the view selector and then choose **Save as a new view**.
+If you made changes to a system view or a personal view that you don't have *Write* permission to, then you can save the view as a personal view. Select the view selector and then choose **Save as a new view**.
 
  ![Save as new view.](media/save-as-new-view.gif "Save as new view")
 
-- To save changes to a personal view that you have write permission to, select the view selector and then choose **Save changes to current view**. 
+To save changes to a personal view that you have write permission to, select the view selector and then choose **Save changes to current view**. 
 
  
-
+ ![Save changes to current view.](media/save-current-view.gif "Save changes to current view")
 
 
 ## Set default view
