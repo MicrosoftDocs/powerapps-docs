@@ -5,21 +5,20 @@ author: GitanjaliSingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/10/2021
+ms.date: 02/02/2022
 ms.subservice: portals
 ms.author: gisingh
 ms.reviewer: ndoelman
 contributors:
   - nickdoelman
   - GitanjaliSingh33msft
-  - nickdoelman
 ---
 
-# Liquid template tag for code components (preview)
+# Liquid template tag for code components
 
 [This article is pre-release documentation and is subject to change.]
 
-Power Apps component framework empowers professional developers and app makers to create code components for model-driven and canvas apps. These code components can provide an enhanced experience for users working with data on forms, views, and dashboards. More information: [Use code components in portals (preview)](component-framework.md)
+Power Apps component framework empowers professional developers and app makers to create code components for model-driven and canvas apps. These code components can provide an enhanced experience for users working with data on forms, views, and dashboards. More information: [Use code components in portals](component-framework.md)
 
 > [!IMPORTANT]
 > The Liquid template tag for code components requires portals version [9.3.10.x or later](/power-platform/released-versions/portals/portalupdate9310x).
@@ -50,7 +49,7 @@ You can use the [sample map control](../../developer/component-framework/sample-
 
 ## Tutorial: Use code components on pages with Liquid template tag
 
-In this tutorial, you'll configure Power Apps portals to add the component to a webpage and set access for the **Web Resource** table. You'll then visit the portals webpage and interact with the component.
+In this tutorial, you'll configure Power Apps portals to add the component to a webpage. You'll then visit the portals webpage and interact with the component.
 
 ### Before you begin
 
@@ -58,7 +57,7 @@ If you're using the sample code component used in this tutorial, ensure that you
 
 ### Prerequisites
 
-For prerequisites, and to learn about supported/unsupported code components in portals, go to [Use code components in portals (preview)](component-framework.md).
+For prerequisites, and to learn about supported/unsupported code components in portals, go to [Use code components in portals](component-framework.md).
 
 > [!NOTE]
 > This tutorial uses a sample code component created using Power Apps component framework to demonstrate a map control on a webpage. You can also use any existing or new component of your own, and any other webpage for this tutorial. In this case, be sure to use your component and webpage when following the steps in this tutorial. For more information about how to create code components, go to [Create your first component](../../developer/component-framework/implementing-controls-using-typescript.md).
@@ -110,10 +109,6 @@ For prerequisites, and to learn about supported/unsupported code components in p
 
 1. The webpage will now show the control added on it.
 
-### Step 2. Allow Read access to the Web Resource table
-
-Follow the steps outlined in [Allow Read access to the Web Resource table](component-framework-tutorial.md#step-5-allow-read-access-to-the-web-resource-table).
-
 ## Next steps
 
 [Overview: Use code components in portals](component-framework.md)
@@ -126,3 +121,5 @@ Follow the steps outlined in [Allow Read access to the Web Resource table](compo
 [Create your first component](../../developer/component-framework/implementing-controls-using-typescript.md) <br>
 [Add code components to a column or table in model-driven apps](../../developer/component-framework/add-custom-controls-to-a-field-or-entity.md)<br>
 [Implement a sample portal Web API component](implement-webapi-component.md)
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

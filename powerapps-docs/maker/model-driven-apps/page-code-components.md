@@ -18,13 +18,9 @@ search.app:
 
 # Add code components to a custom page for your model-driven app
 
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
-
 This article outlines the use of code components built by professional developers using [Power Apps component framework](../../developer/component-framework/overview.md) within a custom page. For low-code custom UX extensibility, see [add canvas components to a custom page for your model-driven app.](/powerapps/maker/model-driven-apps/page-canvas-components) 
 
   > [!IMPORTANT]
-  > - This is a preview feature, and may not be available in all regions.
-  > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
   > - Custom pages are a new feature with significant product changes and currently have a number of known limitations outlined in [Custom Page Known Issues](model-app-page-issues.md).
 
   > [!NOTE]
