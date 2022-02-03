@@ -73,7 +73,7 @@ If you don't specify dimensions when you place a model, the **View in MR** contr
 
 Change the **View in MR** button's behavior and appearance using properties. Some properties are only available on the **Advanced** tab.
 
-:::image type="content" source="./media/augmented-view-mr/augmented-view-mr-properties.png" alt-text="A screenshot of the View in MR button next to its properties in Power Apps Studio.":::
+:::image type="content" source="./media/augmented-view-mr/augmented-view-mr-properties.png" alt-text="A screenshot of a View in MR button under construction in Microsoft Power Apps Studio, shown alongside its properties.":::
 
 | Property | Description | Type | Location |
 | - | - | - | - |
