@@ -42,12 +42,12 @@ You can easily navigate to a record from the grid page by selecting a cell in th
    > [!div class="mx-imgBorder"]
    > ![Navigating back to the page opens it in the same state.](media/grid-remember-state-on-back-navigate.gif "Navigating back to the page opens it in the same state")
 
-On a table's grid page that also support a hierarchy relationship, you can select the hierarchy icon to navigate to the hierarchy view.
+On a table's grid page that support a hierarchy relationship, you can select the hierarchy icon to navigate to the hierarchy view.
 
    > [!div class="mx-imgBorder"]
    > ![Hierarchy icon.](media/grid-row-hierarchy-icon.png "Hierarchy icon")
 
-You can also right-click a cell value in the primary column or a lookup column to open it in a new tab or window.
+You can also right-click a cell value in the primary column or a lookup column and open it in a new tab or window.
 
    > [!div class="mx-imgBorder"]
    > ![Open in a new window.](media/newtab.png "Open in a new window")
@@ -64,9 +64,9 @@ The view selector contains all the views for the table, that you have access to.
 
 When your administrator enables the [modern advanced find experience](/power-platform/admin/settings-features), the list of views in the view selector aren't grouped, by your personal views vs. system views. So, how do you tell what type of view you're looking at? To easily differentiate between the two types of views, personal views have a user icon ![Persona view icon.](media/user-icon.png "Personal view icon"). You can also hover over the info icon, ![Information button.](media/info-icon.png "Informatoin") to see the view type.
 
-By default, personal views are listed first and then system views. Both views are ordered alphabetically. You can also change the order hat the views are listed in. For more information, see [Change sort order.](grid-filters-advanced.md#change-sort-order). 
+By default, personal views are listed first and then system views. Both views are ordered alphabetically. You can also change the order that the views are listed in. For more information, see [Change sort order](grid-filters-advanced.md#change-sort-order).
 
-Use the search box at the top of the view selector to quickly search for a view. 
+Use the search box at the top of the view selector to quickly find a view. 
 
 > [!div class="mx-imgBorder"]
 > ![Search a view.](media/search-view.png "Search a views")
