@@ -119,6 +119,8 @@ The Segments table has the following columns:
 - **DirectionY:** A number that represents the Y direction of the segment in world(3D) space (typically 0)
 - **DirectionZ:** A number that represents the Z direction of the segment in world (3D) space
 
+Learn more about how to use output properties of the **Measure in MR** control in your apps: [Validate measurements in mixed reality using a spatial test filter](./mixed-reality-spatial-test.md)
+
 ## Other mixed reality controls
 
 - View 3D content with the **[View in 3D](mixed-reality-component-view-3d.md)** control.
