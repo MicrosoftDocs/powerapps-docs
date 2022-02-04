@@ -116,7 +116,7 @@ The calendar view allows you to easily create a new row.
 
 ## Search through rows
 
-You can use the search box to search for data in the view you're in. For example, when you enter the keyword **laptop**, it refreshes the calendar view to show only the rows where the title begins with **laptop**. For more information, see [Use search on a grid](./grid-filters.md#use-search-on-a-grid).
+You can use the search box to search for data in the view you're in. For example, when you enter the keyword **laptop**, it refreshes the calendar view to show only the rows where the title begins with **laptop**. For more information, see [Explore data in a view on a grid page](grid-filters.md).
 
 > [!div class="mx-imgBorder"]
 > ![Use a search term to filter calendar rows.](media/search-cal.png "Use a search term to filter calendar rows")
