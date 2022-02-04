@@ -49,7 +49,7 @@ Model-driven and canvas apps
 
 ## Sample controls
 
-[Device API component](../sample-controls/device-api-control.md)
+[Device API component](../sample-controls/device-api-control.md)  
 [Image Upload component](../sample-controls/image-upload-control.md)
 
 ### Related topics
