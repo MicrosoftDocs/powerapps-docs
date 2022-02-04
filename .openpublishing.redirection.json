@@ -392,7 +392,7 @@
     },
     {
       "source_path": "powerapps-docs/maker/canvas-apps/working-with-environments.md",
-      "redirect_url": "/power-platform/admin/working-with-environments",
+      "redirect_url": "/powerapps/maker/canvas-apps/intro-maker-portal",
       "redirect_document_id": "false"
     },
     {
@@ -512,7 +512,7 @@
     },
     {
       "source_path": "powerapps-docs/administrator/environments-administration.md",
-      "redirect_url": "/power-platform/admin/environments-administration",
+      "redirect_url": "/power-platform/admin/create-environment",
       "redirect_document_id": "false"
     },
     {
@@ -712,7 +712,7 @@
     },
     {
       "source_path": "powerapps-docs/environments-administration.md",
-      "redirect_url": "/powerapps/administrator/environments-administration",
+      "redirect_url": "/power-platform/admin/create-environment",
       "redirect_document_id": "false"
     },
     {
@@ -1812,7 +1812,7 @@
     },
     {
       "source_path": "powerapps-docs/working-with-environments.md",
-      "redirect_url": "/powerapps/maker/canvas-apps/working-with-environments",
+      "redirect_url": "/powerapps/maker/canvas-apps/intro-maker-portal",
       "redirect_document_id": "false"
     },
     {
