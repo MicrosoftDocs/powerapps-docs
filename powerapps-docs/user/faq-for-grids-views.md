@@ -43,7 +43,7 @@ To fix the issue, set the display format for number, currency, time, and date ba
      > [!div class="mx-imgBorder"] 
      > ![Format settings.](media/default-format.png "Format settings")
     
- We're working on this issue, please check back for information about the availability of a fix.
+ We're working on this issue, check back for information about the availability of a fix.
 
 - The advanced filter option on the Queues table does not work and displays this error message: _We are unable to display the filter conditions for this view._
 - Public views created in Power Apps that include **Contains data** or **Does not contain data** filters will not appear in the list of saved views in legacy Advanced Find.
