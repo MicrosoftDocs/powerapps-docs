@@ -102,7 +102,7 @@ Choices can be used with read-only grids, editable grids, and most forms. Multi-
 - Workflows, business process flows, actions, dialogs, business rules, charts, rollup columns, or calculated columns.
 - Reports, SLA<sup>1</sup>, and routing rules<sup>1</sup>.
 
-<sup>1</sup>table requires Dynamics 365 Customer Service.
+<sup>1</sup>Table requires Dynamics 365 Customer Service.
 
 ### Forms
 
