@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: overview
 ms.custom: canvas, ce06122020
 ms.reviewer: tapanm
-ms.date: 1/19/2021
+ms.date: 02/04/2022
 ms.subservice: canvas-maker
 ms.author: anuitz
 search.audienceType: 
@@ -42,7 +42,7 @@ The following prebuilt controls can be used for geospatial and mapping scenarios
     >1. With the control selected, go to the **Data sources** tab on the side navigation menu.
     >2. In the search field, enter **Organizations**, and then select the data source that appears. This will add it to the control.
 
-### Enable the geospatial features for the environment
+## Enable the geospatial features for the environment
 
 Before you can use geospatial features in your apps, an admin must enable access to the features for the environment where you want to create your app.
 
@@ -67,21 +67,21 @@ The geospatial features require additional terms of use that must be reviewed an
 
     ![Screenshot of the Save button.](./media/geospatial/ppac-save.png "Screenshot of the Save button")
 
-### Review the environment's data loss prevention policies
+## Review the environment's data loss prevention policies
 
 The geospatial controls require the Microsoft Dataverse and Spatial Services connectors. This connector is used by the Power Apps Maps and Address Input controls to connect to Microsoft’s Azure Maps service. It is used to fetch map tiles and satellite imagery, geocode addresses, and search for addresses. Thus, it is required for the Interactive Map and Address Input controls to function.
 
-For the controls to function properly, these connectors must not have conflicting data loss prevention policies. An admin must review the environment's data loss prevention policies and ensure that these connectors are classified under the same data group, typically the **Business** data group. [Learn more about data loss prevention policies for Power Platform](/power-platform/admin/prevent-data-loss). 
+For the controls to function properly, these connectors must not have conflicting data loss prevention policies. An admin must review the environment's data loss prevention policies and ensure that these connectors are classified under the same data group, typically the **Business** data group. [Learn more about data loss prevention policies for Power Platform](/power-platform/admin/prevent-data-loss).
 
-### Privacy
+## Privacy and security considerations
 
 - Power Apps doesn't associate any user data with the search query.
 - Power Apps doesn't send any user identifiers or tracking data to TomTom.
 - Azure Maps doesn't store the request information sent by you. For more information about Azure Maps compliance, see [Azure global compliance](https://azure.microsoft.com/blog/new-azure-maps-make-identifying-local-compliance-options-easy/)
-- Requests sent between TomTom(tm) and Azure Maps are not exposed over the public Internet.
+- Requests sent between TomTom and Azure Maps are not exposed over the public Internet.
 - Requests sent between apps you create with the geospatial controls and Azure Maps are sent over HTTPS.
 
-### Next steps
+## Next steps
 
 Start installing the controls in your apps:
 
