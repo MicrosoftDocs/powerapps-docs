@@ -24,7 +24,7 @@ search.app:
 
 ## How many levels of related table columns can I add to a view using **Edit columns** option on a grid page?
 
-Currently, you can explore and add **one** level of related table columns using the [**Edit columns**](powerapps/user/grid-filters-advanced.md#column-editor) option on a grid page.
+Currently, you can explore and add **one** level of related table columns using the [**Edit columns**](grid-filters-advanced.md#column-editor) option on a grid page.
 
 ## How many levels of related table columns can I use to add nested conditions to a view using **Edit filters** option on a grid page?
 
