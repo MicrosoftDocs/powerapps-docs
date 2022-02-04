@@ -6,6 +6,8 @@
     href: signup-for-powerapps.md
   - name: Sign up for Developer Plan
     href: developer-plan.md
+  - name: Power Apps preview program
+    href: powerapps-preview-program.md
   - name: "What's new?"
     href: ../whats-new.md
   - name: "Learning catalog"
@@ -1299,7 +1301,7 @@
             href: ./model-driven-apps/using-tree-view-on-form.md
           - name: Create or edit forms
             href: ./model-driven-apps/create-and-edit-forms.md
-          - name: Add, move or delete columns
+          - name: Manage columns
             href: ./model-driven-apps/add-move-or-delete-fields-on-form.md
           - name: Add, move or delete components
             href: ./model-driven-apps/add-move-configure-or-delete-components-on-form.md
