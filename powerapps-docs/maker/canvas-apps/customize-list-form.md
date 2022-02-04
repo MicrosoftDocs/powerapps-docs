@@ -28,7 +28,7 @@ You can easily customize the form for a SharePoint list or SharePoint document l
 To follow the steps in this article, you'll create a list so that you can see how customization works, and then you can apply the same concepts to your own list.
 
 > [!NOTE]
-> - If the **Customize forms** option isn't available or doesn't work correctly for your list, it might contain data types that [Power Apps doesn't support](connections/connection-sharepoint-online.md#known-issues). Also, you can't move your form to a different list or [environment](/power-platform/admin/working-with-environments). 
+> - If the **Customize forms** option isn't available or doesn't work correctly for your list, it might contain data types that [Power Apps doesn't support](connections/connection-sharepoint-online.md#known-issues). Also, you can't move your form to a different list or [environment](intro-maker-portal.md#choose-an-environment). 
 > - Custom forms for lists are only supported in generic lists and generic document libraries. Custom list and library templates are currently not supported; including but not limited to lists such as Announcements, Contacts and Tasks.
 > - Custom forms for document libraries only supports editing custom metadata. Editing or managing file(s) is not supported.
 > - Additional actions are needed when changing the address of a SharePoint site that uses custom forms. More information: [Effects of changing a SharePoint site address on Power Apps](/sharepoint/change-site-address#effects-of-changing-a-site-address).
