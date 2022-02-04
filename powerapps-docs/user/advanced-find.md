@@ -37,8 +37,8 @@ When your administrator enables the [modern advanced find experience](/power-pla
      > [!div class="mx-imgBorder"] 
      > ![Advanced find search enabled.](media/advanced-find-enabled.gif "Advanced find enabled search")
 
-   > [!TIP]
-   > **Search for rows in a table using advanced filters** option appears at the bottom of the search drop-down menu, only when you have not entered a search term. Once you start typing, you will see results for the search term, with an option to see more search results.
+     > [!TIP]
+     > **Search for rows in a table using advanced filters** option appears at the bottom of the search drop-down menu, only when you have not entered a search term. Once you start typing, you will see results for the search term, with an option to see more search results.
 
    - **Dataverse search disabled**: If your administrator has not enabled Dataverse search, then you will see the **Search** button and the **Advanced Find** button ![Advanced find button.](media/advanced_filter_icon.png "Advanced find button") on the command bar. Select the **Advanced Find** button, to see the list of tables to choose from.
 
