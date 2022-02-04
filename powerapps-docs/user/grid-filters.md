@@ -19,9 +19,7 @@ search.app:
 ---
 # Explore data in a view on a grid page
 
-In model-driven apps, the read-only grid is the default control used to represent rows of data in tabular form. 
-
-In the sitemap, when there'a a table in the subarea, the default layout of that subarea is called the grid page. 
+In model-driven apps, the read-only grid is the default control used to represent rows of data in tabular form. In the sitemap, when there'a a table in the subarea, the default layout of that subarea is referred as, the grid page. 
 
 
    > [!div class="mx-imgBorder"]
@@ -37,26 +35,24 @@ Legend
 
 ## Navigation
 
-From the grid page, you can select a cell in the primary column to navigate to the record page.
-
-When you filter data on a grid, the grid page remembers the filter, sort order, and the page state when you navigate away and then return to the page. This works the same way when data is filtered through search, column filtering, or pagination.
+You can easily navigate to a record from the grid page by selecting a cell in the primary column. The grid page also remembers your filters including sort order and the state the page was in when you navigate away and come back to the page. A grid page also works the same way when data is filtered through search, column filtering, or pagination.
 
    > [!div class="mx-imgBorder"]
    > ![Navigating back to the page opens it in the same state.](media/grid-remember-state-on-back-navigate.gif "Navigating back to the page opens it in the same state")
 
-On grids of tables that support hierarchy relationships, you can select the hierarchy icon to navigate to the hierarchy view.
+On grids of tables that support a hierarchy relationship, select the hierarchy icon to navigate to the hierarchy view.
 
    > [!div class="mx-imgBorder"]
    > ![Hierarchy icon.](media/grid-row-hierarchy-icon.png "Hierarchy icon")
 
-You can also right-click a cell value in the primary column or a lookup column to open in a new tab or window.
+You can also right-click a cell value in the primary column or a lookup column to open it in a new tab or window.
 
    > [!div class="mx-imgBorder"]
    > ![Open in a new window.](media/newtab.png "Open in a new window")
 
 ## View selector
   
-The view selector at the top of the page contains all the views of the table you have access to. By default, the list of views is grouped by personal views and system views, with each of the groups listing views ordered alphabetically by view name.
+The view selector at the top of the page shows all the views for the table. These are the views that you have access to. By default, the list of views is grouped by **My Views** which are your personal views that you can create. The **System Views** are the views created by your administrator. Each view type is ordered alphabetically by the name of the view.
 
    > [!div class="mx-imgBorder"]
    > ![View selector showing the different views.](media/view-selector.png "View selector")
@@ -64,23 +60,23 @@ The view selector at the top of the page contains all the views of the table you
 
 ### Modern advanced find
 
-If your administrator has enabled the modern advanced find experience, you will see a single ungrouped list of views with indicated by the user icon ![Persona view icon.](media/user-icon.png "Personal view icon")
+When your administrator enables the modern advanced find experience, the list of views are not grouped by your personal views vs. system views.
 
-To see if the view is a personal view or a system view, hover over the info icon, ![Information button.](media/info-icon.png "Informatoin").
+To easily differentiate between the two, personal views have a user icon ![Persona view icon.](media/user-icon.png "Personal view icon"). You can also hover over the info icon, ![Information button.](media/info-icon.png "Informatoin") to see the view type.
 
-The view selector shows the views in the order type that you have selected. By defualt, the views that you will see are your personal views (ordered alphabetically) over system views (ordered alphabetically) the default. For more information, see [Change sort order.](grid-filters-advanced.md#change-sort-order)
+By defualt, personal views are listed first and then system views. Both views are ordered alphabetically. You can also change the order in which the views are listed. For more information, see [Change sort order.](grid-filters-advanced.md#change-sort-order). 
 
-You can use the search box at the top of the view selector to quickly search for a view.
+Use the search box at the top of the view selector to quickly search for a view. 
 
 > [!div class="mx-imgBorder"]
 > ![Search a view.](media/search-view.png "Search a views")
 
-Each table in the model-driven app has a default view set that's set your administrator. The default view for a table is indicated by the Default label in the view selector. For more information, see [Set default view](grid-filters-advanced.md#set-default-view).
+Each table in your app has a default view, which your administrator sets. The default view is indicated by the **Default** label in the view selector. For more information, see [Set default view](grid-filters-advanced.md#set-default-view).
 
 
 ## Column editor
 
-Use the column editor to add, remove, or re-order columns. For more information, see [Column editor](grid-filters-advanced.md#column-editor).
+Use the column editor to add, remove, or reorder columns. For more information, see [Column editor](grid-filters-advanced.md#column-editor).
 
 ![Select the column editor to edit columns.](media/colum-editor.gif "Columns editor")
 
@@ -92,7 +88,7 @@ Use the filter editor on the grid page to see the set of conditions in the curre
 
 ## Grid search
 
-The search box on a grid page can have two different searches experience which is configured by your administrator.
+The search box on a grid page can have two different searches experience, which is configured by your administrator.
 
 ### Option 1: Search this view (default experience)
 
