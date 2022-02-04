@@ -22,32 +22,40 @@ search.app:
 
 ## Search for rows and create personal views with modern advanced find
 
-When you administrator enables the modern advanced find experience, you can search for rows and create personal views easily in your app.
+When your administrator enables the modern advanced find experience, it lets you search for rows and create personal views in your app.
 
-**Dataverse search enabled**: If your administrator has enabled Dataverse search, you will see a search bar at the top center of the navigation bar. Select the search box and then select **Search for rows in a table using advanced filters** to view a list of tables to choose from.
+## Dataverse search enabled
 
-![Advanced find search enabled.](media/advanced-find-enabled.gif "Advanced find enabled search")
+If your administrator has enabled Dataverse search, you will see a search bar at the top.
 
-> [!TIP]
-> **Search for rows in a table using advanced filters** option appears at the bottom of the search drop down only when you have not entered the search term. Once you start typing, you will see results for the search term, with an option to see more search results.
+- Select the search box and then select **Search for rows in a table using advanced filters** to see the list of tables to choose from.
 
-**Dataverse search disabled**: If your administrator has not enabled Dataverse search, then you will see the **Search** button and the **Advanced Find** button ![Advanced find button.](media/advanced_filter_icon.png "Advanced find button") on the command bar. When you select the **Advanced Find** button, you will see a list of tables to choose from.
+   > [!div class="mx-imgBorder"] 
+   > ![Advanced find search enabled.](media/advanced-find-enabled.gif "Advanced find enabled search")
 
-![Dataverse search disabled.](media/advanced-find-off.gif "Dataverse search disabled")
+   > [!TIP]
+   > **Search for rows in a table using advanced filters** option appears at the bottom of the search drop-down menu, only when you have not entered a search term. Once you start typing, you will see results for the search term, with an option to see more search results.
 
-The tables that are available to filter on must be:
+## Dataverse search disabled
 
-- [Part of the model-driven app](../maker/model-driven-apps/add-edit-app-components.md#add-a-table)
+If your administrator has not enabled Dataverse search, then you will see the **Search** button and the **Advanced Find** button ![Advanced find button.](media/advanced_filter_icon.png "Advanced find button") on the command bar.
 
-- Enabled for Unified Interface
+1. Select the **Advanced Find** button, to see the list of tables to choose from.
 
-- Valid for advanced find
+   > [!div class="mx-imgBorder"] 
+   > ![Dataverse search disabled.](media/advanced-find-off.gif "Dataverse search disabled")
 
-Select a table and choose **Continue** to access the table.
+   The tables in the filter must meet the following requirements: 
 
-You will be navigated to the table's grid page, with the default view for the table selected and the rows displayed in a read-only grid. The  [**Edit filters**](grid-filters-advanced.md) panel will be opened, so you can filter the data on that table.
+    - [Part of the model-driven app](../maker/model-driven-apps/add-edit-app-components.md#add-a-table)
 
-For more information, see [create and manage personal views for that table.](grid-filters-advanced.md)
+    - Enabled for Unified Interface
+
+    - Valid for advanced find
+
+2. Select a table and choose **Continue** to access the table.
+
+    You will be navigated to the table's grid page, with the default view for the table selected and the rows displayed in a read-only grid. The  [**Edit filters**](grid-filters-advanced.md) panel will be opened, so you can filter the data on that table. For more information, see [create and manage personal views for that table.](grid-filters-advanced.md)
 
 ## Create, edit, or save a view using legacy advanced find
 
