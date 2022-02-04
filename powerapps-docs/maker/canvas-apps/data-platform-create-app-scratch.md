@@ -26,7 +26,7 @@ When you build an app from Dataverse, you don't need to create a connection from
 ## Prerequisites
 
 - Before you create an app from scratch, familiarize yourself with Power Apps basics by [generating an app](data-platform-create-app.md) and then customizing that app's [gallery](customize-layout-sharepoint.md), [forms](customize-forms-sharepoint.md), and [cards](customize-card.md).
-- [Switch to an environment](/power-platform/admin/working-with-environments) in which a database has been created with sample data. If you have an appropriate license, you can [create an environment](/power-platform/admin/create-environment) to meet this need.
+- [Switch to an environment](intro-maker-portal.md#choose-an-environment) in which a database has been created with sample data. If you have an appropriate license, you can [create an environment](/power-platform/admin/create-environment) to meet this need.
 - To create an app, you must be assigned to the [Environment Maker](/power-platform/admin/database-security#predefined-security-roles) security role.
 
 ## Open a blank app

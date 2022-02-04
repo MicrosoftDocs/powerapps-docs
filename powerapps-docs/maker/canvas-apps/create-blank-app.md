@@ -32,7 +32,7 @@ To follow this quickstart, you must be assigned to the [Environment Maker](/powe
 
 ## Create a blank canvas app
 
-1. Sign in to [Power Apps](https://make.powerapps.com) and, if necessary, [switch environments](/power-platform/admin/working-with-environments).
+1. Sign in to [Power Apps](https://make.powerapps.com) and, if necessary, [switch environments](intro-maker-portal.md#choose-an-environment).
 
 1. Select **Blank app**.
 
