@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 2/02/2022
+ms.date: 2/04/2022
 ms.subservice: end-user
 ms.author: mkaur
 ms.custom: ""
@@ -21,6 +21,7 @@ search.app:
 
 # FAQs and known issues about grids and views
 
+[!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
 
 ## How many levels of related table columns can I add to a view using **Edit columns** option on a grid page?
 
