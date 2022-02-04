@@ -28,7 +28,7 @@ Currently, you can explore and add **one** level of related table columns using 
 
 ## How many levels of related table columns can I use to add nested conditions to a view using **Edit filters** option on a grid page?
 
-Currently, you can add up to 10 levels of related table conditions using the [**Edit filters**](powerapps/user/grid-filters-advanced.md#filter-editor) option on a grid page.
+Currently, you can add up to 10 levels of related table conditions using the [**Edit filters**](grid-filters-advanced.md#filter-editor) option on a grid page.
 
 ## Known issues
 
