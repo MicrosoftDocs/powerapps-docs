@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 02/2/2022
+ms.date: 02/3/2022
 ms.subservice: end-user
 ms.author: mkaur
 ms.reviewer: ""
@@ -19,7 +19,7 @@ search.app:
 ---
 # Explore data in a view on a grid page
 
-In model-driven apps, the read-only grid is the default control used to represent rows of data in tabular form. In the sitemap, when there'a a table in the subarea, the default layout of that subarea is referred as, the grid page. 
+In model-driven apps, the read-only grid is the default control used to represent rows of data in tabular form. In the sitemap, when there'a a table in the subarea, the default layout of that subarea is called, **the grid page**. 
 
 
    > [!div class="mx-imgBorder"]
@@ -35,12 +35,12 @@ Legend
 
 ## Navigation
 
-You can easily navigate to a record from the grid page by selecting a cell in the primary column. The grid page also remembers your filters including sort order and the state the page was in when you navigate away and come back to the page. A grid page also works the same way when data is filtered through search, column filtering, or pagination.
+You can easily navigate to a record from the grid page by selecting a cell in the primary column. The grid page also remembers your filters, including the sort order and the state the page was in, when you navigate away and come back to the page. A grid page also works the same way when data is filtered through search, column filtering, or pagination.
 
    > [!div class="mx-imgBorder"]
    > ![Navigating back to the page opens it in the same state.](media/grid-remember-state-on-back-navigate.gif "Navigating back to the page opens it in the same state")
 
-On grids of tables that support a hierarchy relationship, select the hierarchy icon to navigate to the hierarchy view.
+On a table's grid page that also support a hierarchy relationship, you can select the hierarchy icon to navigate to the hierarchy view.
 
    > [!div class="mx-imgBorder"]
    > ![Hierarchy icon.](media/grid-row-hierarchy-icon.png "Hierarchy icon")
@@ -52,7 +52,7 @@ You can also right-click a cell value in the primary column or a lookup column t
 
 ## View selector
   
-The view selector at the top of the page shows all the views for the table. These are the views that you have access to. By default, the list of views is grouped by **My Views** which are your personal views that you can create. The **System Views** are the views created by your administrator. Each view type is ordered alphabetically by the name of the view.
+The view selector contains all the views for the table which you have access to. By default, the list of views is grouped by **My Views** which are your personal views, created by you. The **System Views** are the views created by your administrator. Each view type is ordered alphabetically.
 
    > [!div class="mx-imgBorder"]
    > ![View selector showing the different views.](media/view-selector.png "View selector")
@@ -60,18 +60,16 @@ The view selector at the top of the page shows all the views for the table. Thes
 
 ### Modern advanced find
 
-When your administrator enables the modern advanced find experience, the list of views are not grouped by your personal views vs. system views.
+When your administrator enables the [modern advanced find experience](/power-platform/admin/settings-features), the list of views in the view selector aren't grouped, by your personal views vs. system views. So, how do you tell what type of view you're looking at? To easily differentiate between the two types of views, personal views have a user icon ![Persona view icon.](media/user-icon.png "Personal view icon"). You can also hover over the info icon, ![Information button.](media/info-icon.png "Informatoin") to see the view type.
 
-To easily differentiate between the two, personal views have a user icon ![Persona view icon.](media/user-icon.png "Personal view icon"). You can also hover over the info icon, ![Information button.](media/info-icon.png "Informatoin") to see the view type.
-
-By defualt, personal views are listed first and then system views. Both views are ordered alphabetically. You can also change the order in which the views are listed. For more information, see [Change sort order.](grid-filters-advanced.md#change-sort-order). 
+By defualt, personal views are listed first and then system views. Both views are ordered alphabetically. You can also change the order in that the views are listed in. For more information, see [Change sort order.](grid-filters-advanced.md#change-sort-order). 
 
 Use the search box at the top of the view selector to quickly search for a view. 
 
 > [!div class="mx-imgBorder"]
 > ![Search a view.](media/search-view.png "Search a views")
 
-Each table in your app has a default view, which your administrator sets. The default view is indicated by the **Default** label in the view selector. For more information, see [Set default view](grid-filters-advanced.md#set-default-view).
+Each table in your app has a default view, that your administrator sets. The default view is indicated by the **Default** label in the view selector. For more information, see [Set default view](grid-filters-advanced.md#set-default-view).
 
 
 ## Column editor
@@ -82,13 +80,13 @@ Use the column editor to add, remove, or reorder columns. For more information, 
 
 ## Filter editor
 
-Use the filter editor on the grid page to see the set of conditions in the current view. You can also add more conditions or remove conditions in filter data. For more information, see [Filter editor](grid-filters-advanced.md#filter-editor)
+Use the filter editor on the grid page to see the set of conditions in the current view. You can also add more conditions or remove conditions in the filtered data. For more information, see [Filter editor](grid-filters-advanced.md#filter-editor)
 
 ![Select to edit the filters.](media/edit-filters.gif "Edit filters")
 
 ## Grid search
 
-The search box on a grid page can have two different searches experience, which is configured by your administrator.
+The search box on a grid page can have two different searches experience, depending on how it's configured by your administrator.
 
 ### Option 1: Search this view (default experience)
 
