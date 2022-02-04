@@ -204,7 +204,7 @@ When an image is uploaded, it will be resized as a "thumbnail" image to a maximu
 1. Open the table, and then select the **Columns** tab.
 1. On the command bar, select **Add column**.
 1. Enter or select values for the following properties, and then select **Done**.
-   - **Display Name**, such as *Upload an image*. 
+   - **Display Name**, such as *Recipe image*. 
    - **Name**. This is the unique name that includes the solution publisher prefix and can't be changed once saved.
    - **Data Type**. Select **Image**.
    - **Primary Image**. Image columns that are set as the primary image are displayed in the upper right corner of the form. You can have only one primary image for each table.
