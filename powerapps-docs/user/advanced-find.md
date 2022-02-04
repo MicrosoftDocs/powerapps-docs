@@ -18,9 +18,15 @@ search.app:
   - PowerApps
   - D365CE
 ---
+
 # Advanced find in model-driven apps
 
+
+The topic covers the various different ways to use the advanced find experience.
+
 ## Search for rows and create personal views with modern advanced find
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
 
 When your administrator enables the [modern advanced find experience](/power-platform/admin/settings-features), it lets you search for rows and create personal views in your app. Depending on how search is setup for your app, the search experience might look a little different. Your administrator can turn on Dataverse search or disable it.
 
@@ -29,8 +35,8 @@ When your administrator enables the [modern advanced find experience](/power-pla
 
    - **Dataverse search enabled**: If your administrator has enabled Dataverse search, you will see a search bar at the top. Select the search box and then select **Search for rows in a table using advanced filters** to see the list of tables to choose from.
 
-    > [!div class="mx-imgBorder"] 
-    > ![Advanced find search enabled.](media/advanced-find-enabled.gif "Advanced find enabled search")
+     > [!div class="mx-imgBorder"] 
+     > ![Advanced find search enabled.](media/advanced-find-enabled.gif "Advanced find enabled search")
 
    > [!TIP]
    > **Search for rows in a table using advanced filters** option appears at the bottom of the search drop-down menu, only when you have not entered a search term. Once you start typing, you will see results for the search term, with an option to see more search results.
@@ -40,17 +46,16 @@ When your administrator enables the [modern advanced find experience](/power-pla
      > [!div class="mx-imgBorder"] 
      > ![Dataverse search disabled.](media/advanced-find-off.gif "Dataverse search disabled")
  
- 2. The tables in the filter must meet the following requirements: 
+ 2.  Select a table and choose **Continue** to access the table. The tables in the filter must meet the following requirements: 
 
-    - [Part of the model-driven app](../maker/model-driven-apps/add-edit-app-components.md#add-a-table)
+     - [Part of the model-driven app](../maker/model-driven-apps/add-edit-app-components.md#add-a-table)
 
-    - Enabled for Unified Interface
+     - Enabled for Unified Interface
 
-    - Valid for advanced find
+     - Valid for advanced find
 
-3. Select a table and choose **Continue** to access the table.
 
-4. You will be navigated to the table's grid page, with the default view for the table selected and the rows displayed in a read-only grid. The  [**Edit filters**](grid-filters-advanced.md) panel will be opened, so you can filter the data on that table. For more information, see [create and manage personal views for that table.](grid-filters-advanced.md)
+3. You will be navigated to the table's grid page, with the default view for the table selected and the rows displayed in a read-only grid. The  [**Edit filters**](grid-filters-advanced.md) panel will be opened, so you can filter the data on that table. For more information, see [create and manage personal views for that table.](grid-filters-advanced.md)
 
 ## Create, edit, or save a view using legacy advanced find
 
