@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 02/3/2022
+ms.date: 02/4/2022
 ms.subservice: end-user
 ms.author: mkaur
 ms.reviewer: ""
@@ -18,6 +18,8 @@ search.app:
   - D365CE
 ---
 # Explore data in a view on a grid page
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
 
 In model-driven apps, the read-only grid is the default control used to represent rows of data in tabular form. In the sitemap, when there'a a table in the subarea, the default layout of that subarea is called, **the grid page**. 
 
@@ -52,7 +54,7 @@ You can also right-click a cell value in the primary column or a lookup column t
 
 ## View selector
   
-The view selector contains all the views for the table which you have access to. By default, the list of views is grouped by **My Views** which are your personal views, created by you. The **System Views** are the views created by your administrator. Each view type is ordered alphabetically.
+The view selector contains all the views for the table, that you have access to. By default, the list of views are grouped by **My Views**, these are your personal views that you created. The **System Views** are views that your administrator has created. Each view type is ordered alphabetically.
 
    > [!div class="mx-imgBorder"]
    > ![View selector showing the different views.](media/view-selector.png "View selector")
@@ -62,7 +64,7 @@ The view selector contains all the views for the table which you have access to.
 
 When your administrator enables the [modern advanced find experience](/power-platform/admin/settings-features), the list of views in the view selector aren't grouped, by your personal views vs. system views. So, how do you tell what type of view you're looking at? To easily differentiate between the two types of views, personal views have a user icon ![Persona view icon.](media/user-icon.png "Personal view icon"). You can also hover over the info icon, ![Information button.](media/info-icon.png "Informatoin") to see the view type.
 
-By defualt, personal views are listed first and then system views. Both views are ordered alphabetically. You can also change the order in that the views are listed in. For more information, see [Change sort order.](grid-filters-advanced.md#change-sort-order). 
+By default, personal views are listed first and then system views. Both views are ordered alphabetically. You can also change the order hat the views are listed in. For more information, see [Change sort order.](grid-filters-advanced.md#change-sort-order). 
 
 Use the search box at the top of the view selector to quickly search for a view. 
 
