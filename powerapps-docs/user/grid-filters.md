@@ -57,7 +57,7 @@ You can also open primary column and lookup columns in a new tab or window.
 
 When you filter on a lookup column, you can select from a list of rows to filter by rather than manually typing in the data. For example, on a **Primary Contact** lookup column, you can select the contact name from the list of rows to filter by.
 
-The filter on a lookup column helps you complete the search by suggesting results inline. These results are based the table being looked up and will include all rows with no filter.
+The filter on a lookup column helps you complete the search by suggesting results inline. These results are based on the table being looked up and will include all rows with no filter.
 
    > [!div class="mx-imgBorder"]
    > ![Lookup filtering.](media/lookup-filter.png "Lookup filtering")
