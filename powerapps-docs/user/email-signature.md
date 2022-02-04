@@ -61,7 +61,7 @@ You can view and manage email signatures you have created to make edits, change 
    4. Email signatures can only be **Viewable By** the individual user.
 
 ## Change the default email signature setting
-While you can create multiple email signatures depending on you needs, only one can be set as your default email.   
+While you can create multiple email signatures depending on your needs, only one can be set as your default email.   
 
    ![Change email signature default setting.](media\email-change-email-signature-default-setting-1a.png "Change email signature default setting")
 
