@@ -21,7 +21,7 @@ search.app:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
 
-In model-driven apps, the read-only grid is the default control used to represent rows of data in tabular form. In the sitemap, when there'a a table in the subarea, the default layout of that subarea is called, **the grid page**. 
+In model-driven apps, the read-only grid is the default control used to represent rows of data in tabular form. In the sitemap, when there's a table in the subarea, the default layout of that subarea is called, **the grid page**. 
 
 
    > [!div class="mx-imgBorder"]
@@ -62,7 +62,7 @@ The view selector contains all the views for the table, that you have access to.
 
 ### Modern advanced find
 
-When your administrator enables the [modern advanced find experience](/power-platform/admin/settings-features), the list of views in the view selector aren't grouped, by your personal views vs. system views. So, how do you tell what type of view you're looking at? To easily differentiate between the two types of views, personal views have a user icon ![Persona view icon.](media/user-icon.png "Personal view icon"). You can also hover over the info icon, ![Information button.](media/info-icon.png "Informatoin") to see the view type.
+When your administrator enables the [modern advanced find experience](/power-platform/admin/settings-features), the list of views in the view selector aren't grouped, by your personal views vs. system views. So, how do you tell what type of view you're looking at? To easily differentiate between the two types of views, personal views have a user icon ![Persona view icon.](media/user-icon.png "Personal view icon"). You can also hover over the info icon, ![Information button.](media/info-icon.png "Information") to see the view type.
 
 By default, personal views are listed first and then system views. Both views are ordered alphabetically. You can also change the order that the views are listed in. For more information, see [Change sort order](grid-filters-advanced.md#change-sort-order).
 
