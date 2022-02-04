@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps 
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 1/27/2020
+ms.date: 2/3/2022
 ms.subservice: end-user
 ms.author: mkaur
 ms.custom: ""
@@ -22,20 +22,20 @@ search.app:
 
 ## Search for rows and create personal views with modern advanced find
 
-If your administrator has enabled the modern advanced find experience you can search for rows and create personal views easily in model-driven apps.
+When you administrator enables the modern advanced find experience, you can search for rows and create personal views easily in your app.
 
-- **Dataverse search enabled**: If your administrator has enabled Dataverse search, you will see a search bar at the top center of the navigation bar. When you select the search box you will see the option to **Search for rows in a table using advanced filters**. Once you choose **Search for rows in a table using advanced filters** option, you will see a list of tables to select from.
+**Dataverse search enabled**: If your administrator has enabled Dataverse search, you will see a search bar at the top center of the navigation bar. Select the search box and then select **Search for rows in a table using advanced filters** to view a list of tables to choose from.
 
-_GIF_
+![Advanced find search enabled.](media/advanced-find-enabled.gif "Advanced find enabled search")
 
->[!TIP]
+> [!TIP]
 > **Search for rows in a table using advanced filters** option appears at the bottom of the search drop down only when you have not entered the search term. Once you start typing, you will see results for the search term, with an option to see more search results.
 
-- **Dataverse search disabled**: If your administrator has not enabled Dataverse search, you will see the search icon in the navigation bar. You will also see **Advanced Find** button ![Advanced find button.](media/advanced_filter_icon.png "Advanced find button") in that area. Once you select **Advanced Find** button, you will see a list of tables to select from.
+**Dataverse search disabled**: If your administrator has not enabled Dataverse search, then you will see the **Search** button and the **Advanced Find** button ![Advanced find button.](media/advanced_filter_icon.png "Advanced find button") on the command bar. When you select the **Advanced Find** button, you will see a list of tables to choose from.
 
-_GIF_
+![Dataverse search disabled.](media/advanced-find-off.gif "Dataverse search disabled")
 
-The list of tables that are available to filter on must be:
+The tables that are available to filter on must be:
 
 - [Part of the model-driven app](../maker/model-driven-apps/add-edit-app-components.md#add-a-table)
 
@@ -45,11 +45,9 @@ The list of tables that are available to filter on must be:
 
 Select a table and choose **Continue** to access the table.
 
-You will be navigated to the table's grid page, with the default view for the table selected and the rows displayed in a read-only grid. The  [**Edit filters**](powerapps/user/grid-filters-advanced#filter-editor) panel will be opened, so you can filter the data on that table.
+You will be navigated to the table's grid page, with the default view for the table selected and the rows displayed in a read-only grid. The  [**Edit filters**](grid-filters-advanced.md) panel will be opened, so you can filter the data on that table.
 
-_GIF_
-
-On this page, you can [create and manage personal views for that table.](powerapps/user/grid-filters-advanced)
+For more information, see [create and manage personal views for that table.](grid-filters-advanced.md)
 
 ## Create, edit, or save a view using legacy advanced find
 
