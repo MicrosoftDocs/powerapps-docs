@@ -52,7 +52,7 @@ Use the column editor to add, remove, or reorder columns to help get a clear vie
    
 2. The **Edit columns** pane appears and shows the list of columns in the order they appear in the current view. Follow these steps, to edit the columns:
 
-    - To remove colums, select the More commands button (**…**) next to column name and then select, **Remove**. 
+    - To remove columns, select the More commands button (**…**) next to column name and then select, **Remove**. 
     
     - To change the order of the columns, select the More commands button (**…**) next to column name and then select, **Move up** or **Move down**. Or, drag and drop a column to the desired position 
 
@@ -69,7 +69,7 @@ Use the column editor to add, remove, or reorder columns to help get a clear vie
    
 6. Select a column from the list to append it to the list of columns for the view.
    
-7. To add colums from related tables, select the **Related** tab. You'll see the columns from  related table is in parentheses. Browse and expand the list and choose a related table column to add to the view. When you're done, select **Close** to review the list of added columns.
+7. To add columns from related tables, select the **Related** tab. You'll see the columns from  related table is in parentheses. Browse and expand the list and choose a related table column to add to the view. When you're done, select **Close** to review the list of added columns.
   
     > [!div class="mx-imgBorder"]
     > ![Edit related column filter.](media/edit-related-column-filter.gif "Edit related columns filter")
@@ -77,7 +77,7 @@ Use the column editor to add, remove, or reorder columns to help get a clear vie
 8. At any point, you can reset the list of columns to the ones in the view definition by choosing the **Reset to default** option. When you have reviewed the changes you made, select **Apply** to see the changes to the view on the grid page.
 
    > [!div class="mx-imgBorder"]
-   > ![Resest or apply column filters.](media/edit-colums-2.png "Reset or apply column filters")
+   > ![Reset or apply column filters.](media/edit-colums-2.png "Reset or apply column filters")
 
 
 ## Filter editor
@@ -100,7 +100,7 @@ Use the filter editor on the grid page to view the set of conditions in the curr
 
      ![Add a group condition.](media/add-group-condition.gif "Add group condition")
 
-   - To add condition on a column from a related table selet, **Add related entity**. Then choose the related table you want to filter on and add conditions to it.
+   - To add condition on a column from a related table select, **Add related entity**. Then choose the related table you want to filter on and add conditions to it.
 
      > [!div class="mx-imgBorder"]
      > ![Add a related entity.](media/add-related-table.png "Add related entity")
@@ -139,12 +139,12 @@ To save a view, follow these steps:
 
 When your administrator has enabled the [modern advanced find experience](/power-platform/admin/settings-features), then you can create a personal view directly from the view selector.
 
-- If you made changes to a system view or a personal view that you don't have *Write* permission to, then you can only save the view as a personal view. To save the view select the view selector and then choose **Save as a new view**.
+- If you made changes to a system view or a personal view that you don't have *Write* permission to, then you can only save the view as a personal view. To save the view, select the view selector and then choose, **Save as a new view**.
 
   > [!div class="mx-imgBorder"]
   > ![Save as new view.](media/save-as-new-view.gif "Save as new view")
 
-- To save changes to a personal view that you have *Write* permission to, select the view selector and then choose **Save changes to current view**. 
+- To save changes to a personal view that you have *Write* permission to, select the view selector, and then choose **Save changes to current view**. 
 
   > [!div class="mx-imgBorder"]
   > ![Save changes to current view.](media/save-current-view.gif "Save changes to current view")
@@ -157,12 +157,12 @@ Each table in your app has a default view that's set by your administrator. The 
 > [!div class="mx-imgBorder"]
 > ![Default view.](media/default-system-view.png "Default view")
 
-To make another view your default view, select the view and then select, **Set current view as my default**. You will only see the **Set current view as my default** option when the view is saved and when the currect selected view isn't already the default view.
+To make another view your default view, select the view and then select, **Set current view as my default**. You will only see the **Set current view as my default** option when the view is saved when the selected view isn't already set as the default view.
 
 > [!div class="mx-imgBorder"]
 > ![Set as default view.](media/set-default-view.png "Set as default view")
 
-To reset the default view to the orginial view which was set by your administrator, select **Reset default view**.
+To reset the default view to the original view set by your administrator, select **Reset default view**.
 
 > [!NOTE]
 > - You'll see the **Reset default view** option only when the current default view for the table is not the one set by the system administrator.
@@ -184,21 +184,21 @@ When your administrator has enabled the [modern advanced find experience](/power
 
 By default, the list of views in the view selector is grouped by personal views and system views. Both view type are listed in alphabetical order. 
 
-1. To change the sort order, select the view selector and then select, **Manage and share views**. Then choose one of these sort options:
+1. To change the sort order, select the view selector and then select, **Manage and share views**. Then choose from one of these sort options:
 
    > [!div class="mx-imgBorder"]
    > ![Manage views.](media/manage-views.gif "Manage views")
 
 
-    - **Personal before system, A to Z**: This is the default. All personal views ordered alphabetically appear above all system views ordered alphabetically.
+    - **Personal before system, A to Z**: This is the default. All personal views are ordered alphabetically and appear above all system views that are also ordered alphabetically.
 
-    - **System before personal, A to Z**: All system views ordered alphabetically appear above all personal views ordered alphabetically.
+    - **System before personal, A to Z**: All system views are ordered alphabetically appear above all personal views that are also ordered alphabetically.
 
-    - **A to Z**: All views (system and personal) appear alphabetically in the view selector.
+    - **A to Z**: All views (system and personal) appear in alphabetic in the view selector.
 
       > [!NOTE]
-      > - Personal views are indicateds by a user icon: ![Persona view icon.](media/user-icon.png "Personal view icon") 
-      > - To see if the view is a personal view or a system view, hover over the info icon: ![Information button.](media/info-icon.png "Informatoin") 
+      > - Personal views have a user user icon next to the view name: ![Persona view icon.](media/user-icon.png "Personal view icon") 
+      > - To see if the view is a personal view or a system view, hover over the info icon: ![Information button.](media/info-icon.png "Information") 
 
 ### Hide views
 
