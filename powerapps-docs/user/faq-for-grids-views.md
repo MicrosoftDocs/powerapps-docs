@@ -32,18 +32,18 @@ Currently, you can add up to 10 levels of related table conditions using the [**
 
 ## Known issues
 
-If you change the default display format for number, currency, time, or date and then filter data on a grid, the filter won't show your selected display format. The filters will still be displayed in the system default format, and in some cases filtering might not work at all. 
+- If you change the default display format for number, currency, time, or date and then filter data on a grid, the filter won't show your selected display format. The filters will still be displayed in the system default format, and in some cases filtering might not work at all. 
 
-To fix the issue, set the display format for number, currency, time, and date back to the default setting. 
+  To fix the issue, set the display format for number, currency, time, and date back to the default setting. 
 
- 1. In the upper-right corner, select the gear icon ![Gear icon.](media/selection-rule-gear-button.png), and then select **Personalization Settings**.
+   1. In the upper-right corner, select the gear icon ![Gear icon.](media/selection-rule-gear-button.png), and then select **Personalization Settings**.
 
- 2. On the **Formats** tab, change the number, currency, time, and date value back to the default setting.
+   2. On the **Formats** tab, change the number, currency, time, and date value back to the default setting.
 
-     > [!div class="mx-imgBorder"] 
-     > ![Format settings.](media/default-format.png "Format settings")
+      > [!div class="mx-imgBorder"] 
+      > ![Format settings.](media/default-format.png "Format settings")
     
- We're working on this issue, check back for information about the availability of a fix.
+   We're working on this issue, check back for information about the availability of a fix.
 
 - The advanced filter option on the Queues table does not work and displays this error message: _We are unable to display the filter conditions for this view._
 - Public views created in Power Apps that include **Contains data** or **Does not contain data** filters will not appear in the list of saved views in legacy Advanced Find.
