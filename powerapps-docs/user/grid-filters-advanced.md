@@ -39,7 +39,7 @@ A view definition has the following elements:
 - Default sort order
 - Filter conditions to show rows that match the conditions
 
-You can create and manage personal views on a grid page by editing any of these three elements of a view. For more information, see [Understand model-driven app views](../maker/model-driven-apps/create-edit-views.md)
+You can create and manage personal views on a grid page by editing any of these three elements of a view. For more information, see [Understand model-driven app views](../maker/model-driven-apps/create-edit-views.md).
 
 ## Column editor
 
