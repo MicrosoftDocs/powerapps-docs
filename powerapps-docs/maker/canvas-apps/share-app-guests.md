@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 11/10/2021
+ms.date: 02/04/2022
 ms.subservice: canvas-maker
 ms.author: alaug
 search.audienceType: 
@@ -33,10 +33,12 @@ Watch this video to learn how to share an app with guests:
 
 - Access to an account that can add guest users to an Azure AD tenant. Admins and users with the Guest Inviter role can add guests to a tenant.
 
-- The guest user must have a license with Power Apps use rights that matches the capability of the app assigned through one of the following tenants:
+- To access an app that doesn't connect to Dataverse, the guest user must have a license with Power Apps use rights that matches the capability of the app assigned through one of the following tenants:
 
   - The tenant hosting the app being shared
   - The home tenant of the guest user
+
+- To access an app that connects to Dataverse, the guest user must have a license with Power Apps use rights that matches the capability of the app. And it must be assigned in the tenant hosting the app. The exception to this prerequisite is when an app is hosted in a [Microsoft Dataverse for Teams environment](/power-platform/admin/about-teams-environment).
 
 ## Steps to grant guest access
 
