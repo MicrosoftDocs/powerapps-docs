@@ -1,5 +1,6 @@
 ---
 title: "Explore data in a view on a grid page | MicrosoftDocs"
+description: Explore data in a view on a grid page.
 author: mduelae
 manager: kvivek
 ms.service: powerapps
@@ -72,7 +73,7 @@ The view selector shows the views in the order type that you have selected. By d
 You can use the search box at the top of the view selector to quickly search for a view.
 
 > [!div class="mx-imgBorder"]
-> ![Search view.](media/search-view.png "Search views")
+> ![Search a view.](media/search-view.png "Search a views")
 
 Each table in the model-driven app has a default view set that's set your administrator. The default view for a table is indicated by the Default label in the view selector. For more information, see [Set default view](grid-filters-advanced.md#set-default-view).
 
@@ -105,12 +106,12 @@ When you use the **Search this view** option on a grid page, the system searches
 2. Select **Search this view** to search for data in the view you're in.
 
     > [!div class="mx-imgBorder"]
-    > ![Search view.](media/search-view.png "Search this view")
+    > ![Search this view.](media/search-view.png "Search this view")
 
 The system searches for data in the **My Active Contacts** view and displays search results by using the same set of columns that are used in your current view.
 
    > [!div class="mx-imgBorder"]
-   > ![Search view.](media/search-view2.png "Search results from the Search this view command")
+   > ![Search views.](media/search-view2.png "Search results from the Search this view command")
 
 ### Option 2: Quick find 
 
