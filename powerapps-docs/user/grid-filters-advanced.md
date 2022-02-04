@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 2/3/2022
+ms.date: 2/4/2022
 ms.subservice: end-user
 ms.author: mkaur
 ms.reviewer: ""
@@ -28,6 +28,8 @@ searchScope:
 
 
 # Create and manage personal views on a grid page
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
 
 The grid page in a model-driven app displays data in a view using the read-only grid control. Views are used to define how rows of a table are displayed in an app.
 
@@ -60,7 +62,7 @@ Use the column editor to add, remove, or reorder columns to help get a clear vie
 
 3. To add columns to the view, select **Add columns**. This brings up the **Add columns** pane that lists all the columns in the table that you can add to the view.
 4. By default, you'll see the **Default** set of system columns in the table. Select the drop-down list, see **All** or **Custom** columns to choose from.
-5. Use the **Search** to find a speicific column.
+5. Use the **Search** to find a specific column.
    
    > [!div class="mx-imgBorder"]
    > ![Edit and add columns.](media/edit-colums-1.png "Edit and add columns")
@@ -80,14 +82,14 @@ Use the column editor to add, remove, or reorder columns to help get a clear vie
 
 ## Filter editor
 
-Use the filter editor on the grid page to view the set of conditions in the current view. You can also add more or remove conditions from the filter data.
+Use the filter editor on the grid page to view the set of conditions in the current view. You can also add more or remove conditions from the filtered data.
 
 > [!div class="mx-imgBorder"]
 >![Select to edit the filters.](media/edit-filters.gif "Edit filters")
 
 1. To remove a condition, select the More commands button (**…**) next to a row and then select, **Delete**.
 
-2. Follow these step to add a conditions:
+2. Follow these steps to add a conditions:
 
    - To add a single condition, select **Add row**. Select a column, an operator, and a value to create a condition.
      
@@ -116,7 +118,7 @@ Use the filter editor on the grid page to view the set of conditions in the curr
 
 ## Create personal views
 
-When you edit a view definition and haven't save it yet, you'll see asterisk next to the view name indicationg the view isn't saved.
+When you edit a view definition and haven't save it yet, you'll see asterisk next to the view name indicating the view isn't saved.
 
 > [!div class="mx-imgBorder"]
 > ![Unsaved view.](media/unsaved-view.png "Unsaved view")
@@ -135,7 +137,7 @@ To save a view, follow these steps:
 
 ### Modern advanced find
 
-When administrator enables the modern advanced find experience, then you can create a personal view directly from the view selector.
+When your administrator has enabled the [modern advanced find experience](/power-platform/admin/settings-features), then you can create a personal view directly from the view selector.
 
 - If you made changes to a system view or a personal view that you don't have *Write* permission to, then you can only save the view as a personal view. To save the view select the view selector and then choose **Save as a new view**.
 
@@ -150,12 +152,12 @@ When administrator enables the modern advanced find experience, then you can cre
 
 ## Set default view
 
-Each table in your app has a default view that's set your administrator. The default view for a table is indicated by the **Default** label in the view selector.
+Each table in your app has a default view that's set by your administrator. The default view for a table is indicated by the **Default** label in the view selector.
 
 > [!div class="mx-imgBorder"]
 > ![Default view.](media/default-system-view.png "Default view")
 
-To make another view your default view, select the view and then select, **Set as default view**. You will only see the **Set as default view** option when the view is saved and when the currect selected view isn't already the default view.
+To make another view your default view, select the view and then select, **Set current view as my default**. You will only see the **Set current view as my default** option when the view is saved and when the currect selected view isn't already the default view.
 
 > [!div class="mx-imgBorder"]
 > ![Set as default view.](media/set-default-view.png "Set as default view")
@@ -163,7 +165,7 @@ To make another view your default view, select the view and then select, **Set a
 To reset the default view to the orginial view which was set by your administrator, select **Reset default view**.
 
 > [!NOTE]
-> - You'll see teh **Reset default view** option only when the current default view for the table is not the one set by the system administrator.
+> - You'll see the **Reset default view** option only when the current default view for the table is not the one set by the system administrator.
 > - The options at the bottom of the view selector are always visible, even if the list of views is longer than the available vertical screen space.
 
 > [!div class="mx-imgBorder"]
@@ -172,7 +174,7 @@ To reset the default view to the orginial view which was set by your administrat
    
 ## Manage and share personal views
 
-When your administrator has enables the modern advanced find experience then you will see the **Manage and share views** option in the view selector. The **Manage and share views** options lets you share views with your organization and manage your views.
+When your administrator has enabled the [modern advanced find experience](/power-platform/admin/settings-features), then you will see the **Manage and share views** option in the view selector. The **Manage and share views** options lets you share views with your organization and manage your views.
 
 > [!div class="mx-imgBorder"]
 > ![Manage and share views.](media/manage-share-views.png "Manage and share views")
