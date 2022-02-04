@@ -202,7 +202,7 @@ By default, the list of views in the view selector is grouped by personal views 
 
 ### Hide views
 
-You can hide views from showing in the view selector by using the **Hide** option in the view management panel. Hover over the view and then selecet **Hide**. You can also select **View commands** and then select **Hide**.
+You can hide views from showing in the view selector by using the **Hide** option in the view management panel. Hover over the view and then select **Hide**. You can also select **View commands** and then select **Hide**.
 
 > [!div class="mx-imgBorder"]
 > ![Hide views.](media/hide-command.png "Hide views")
@@ -215,12 +215,11 @@ Once a view is hidden, it will not appear in the view list for that table in all
 
    > [!NOTE]
    > - By default personal views can be hidden. You can hide system views only if the administrator has enabled the setting in Power Platform Admin Center.
-   
    > - The default view of a table cannot be hidden.
-
    > - A view that is hidden cannot be set as default.
 
-If a view is hidden, then you will see the option to toggle it back to make it visible. You can select the _eye_ icon that appears on hover or select the **Show** option by choosing the **...** next to view name.
+If a view is hidden, then you will see the option to make it visible. Hover over the view and then select **Show**. You can also select **View commands** and then select **Show**.
+
 
 ### Other view management tasks
 
