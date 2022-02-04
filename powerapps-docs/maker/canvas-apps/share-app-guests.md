@@ -128,8 +128,8 @@ The following table explains whether the guests can run (use) customized SharePo
 |    Plan                             | Customized SharePoint list form (using non-premium connectors) | Customized SharePoint list form (using premium connectors) | Canvas app (using non-premium connectors) | Canvas app (using premium connectors) | Model-driven app |
 |---------------------------------|----------------------------------------------------|------------------------------------------------|------------------| - | - |
 | No license | &check;                                               | &cross;                 | &cross; | &cross; | &cross; |
-| SharePoint user (without Power Apps license) | &check;                                               | &check;                 | &cross; | &cross; | &cross; |
-| Power Apps included with Office    | &check;                                                  | &check;                                               | &check;                 | &cross; | &cross; | 
+| SharePoint user (without Power Apps license) | &check;                                               | &cross;                 | &cross; | &cross; | &cross; |
+| Power Apps included with Office    | &check;                                                  | &cross;                                               | &check;                 | &cross; | &cross; | 
 | Power Apps per app plan          | &check;                                                  | &check;                                               | &check;                | &check; | &check; |
 | Power Apps per user plan         | &check;                                                  | &check;                                              | &check;                | &check; | &check; |
 
