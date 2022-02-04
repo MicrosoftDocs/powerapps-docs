@@ -73,9 +73,9 @@ Business rules work with most column types including text, number, choice, date,
   
     |**If you select this item...**|**The scope is set to...**|  
     |-|-|  
-    |**Entity**|Model-driven forms and server|  
-    |**All Forms**|Model Driven forms|  
-    |Specific form (**Account** form, for example)|Just that Model Driven form|  
+    |**Entity**|Model-driven app forms and server|  
+    |**All Forms**|Model-driven app forms|  
+    |Specific form (**Account** form, for example)|Just that model-driven app form|  
 
     > [!TIP]
     > If you're building a Canvas app, you must use table as the scope.
@@ -104,7 +104,7 @@ Business rules work with most column types including text, number, choice, date,
   
     3. When you're done setting properties, select **Apply**.  
   
-9. **Add a business recommendation. (Model Driven only)** To add a business recommendation:  
+9. **Add a business recommendation (model-driven apps only)**. To add a business recommendation:  
   
     1. Drag the **Recommendation** component from the **Components** tab to a plus sign next to a **Condition** component. Drag the **Recommendation** component to a plus sign next to a check mark if you want the business rule to take that action when the condition is met, or to a plus sign next to an  x if you want the business rule to take that action if the condition is not met.  
   
