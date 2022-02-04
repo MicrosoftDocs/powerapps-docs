@@ -196,9 +196,9 @@ By default, the list of views in the view selector is grouped by personal views 
 
     - **A to Z**: All views (system and personal) appear in alphabetic in the view selector.
 
-      > [!NOTE]
-      > - Personal views have a user user icon next to the view name: ![Persona view icon.](media/user-icon.png "Personal view icon") 
-      > - To see if the view is a personal view or a system view, hover over the info icon: ![Information button.](media/info-icon.png "Information") 
+     > [!NOTE]
+     > - Personal views have a user user icon next to the view name: ![Persona view icon.](media/user-icon.png "Personal view icon") 
+     > - To see if the view is a personal view or a system view, hover over the info icon: ![Information button.](media/info-icon.png "Information") 
 
 ### Hide views
 
