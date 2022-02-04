@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps 
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 2/3/2022
+ms.date: 2/4/2022
 ms.subservice: end-user
 ms.author: mkaur
 ms.custom: ""
@@ -20,7 +20,6 @@ search.app:
 ---
 
 # Advanced find in model-driven apps
-
 
 The topic covers the various different ways to use the advanced find experience.
 
