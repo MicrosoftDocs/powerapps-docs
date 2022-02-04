@@ -82,7 +82,7 @@ Use the column editor to add, remove, or reorder columns. For more information, 
 
 ## Filter editor
 
-Use the filter editor on the grid page to see the set of conditions in the current view. You can also add more conditions or remove conditions in the filtered data. For more information, see [Filter editor](grid-filters-advanced.md#filter-editor)
+Use the filter editor on the grid page to see the set of conditions in the current view. You can also add more conditions or remove conditions in the filtered data. For more information, see [Filter editor](grid-filters-advanced.md#filter-editor).
 
 ![Select to edit the filters.](media/edit-filters.gif "Edit filters")
 
