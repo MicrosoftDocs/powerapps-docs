@@ -2,7 +2,7 @@
 title: "Retrieve and delete the history of audited data changes (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Programmatically retrieve the audit change history or delete audit records." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 03/26/2021
+ms.date: 02/05/2022
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -31,7 +31,7 @@ Refer to the sample link at the end of this topic for sample code that demonstra
 > [!IMPORTANT]
 > Large column values, such as [Email.Description](reference/entities/email.md#BKMK_Description) or [Annotation](reference/entities/annotation.md) are limited (capped) to 5KB or ~5,000 characters in length. A capped column value can be recognized by three dots at the end of the text, for example “lorem ipsum, lorem ip…”.
 >
-> Going forward, [Audit](reference/entities/audit.md) table records will be stored in Microsoft Dataverse’s log storage. Linking audit records with other table records using FetchXML will no longer be possible.
+> Going forward, [Audit](reference/entities/audit.md) table records will be stored in Microsoft Dataverse’s log storage. Linking audit records with other table records using FetchXML or <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> will no longer be possible.
 
 ## Delete the change history for a record
 
