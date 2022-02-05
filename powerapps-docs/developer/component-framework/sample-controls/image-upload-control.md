@@ -52,7 +52,7 @@ The `device.pickFile` method opens a dialog box to select files for the upload. 
 ### Related topics
 [Download sample components](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework)<br/>
 [How to use the sample components](../use-sample-components.md)<br/>
-[Device API component](./image-upload-control.md)<br/>
+[Device API component](./device-api-control.md)<br/>
 [Device API](../reference/device.md)<br/>
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework manifest schema reference](../manifest-schema-reference/index.md)
