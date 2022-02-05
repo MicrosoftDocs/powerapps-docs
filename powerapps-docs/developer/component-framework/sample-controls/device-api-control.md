@@ -7,7 +7,7 @@ ms.date: 02/02/2022
 ms.service: "powerapps"
 ms.topic: "article"
 ms.author: "vilesyk"
-author: vilesyk
+author: lesyk
 ---
 
 # Implementing a Device API component
