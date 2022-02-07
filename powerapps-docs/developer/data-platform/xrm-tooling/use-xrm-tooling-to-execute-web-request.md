@@ -68,4 +68,6 @@ using (CrmServiceClient svc = new CrmServiceClient(conn))
 }
 ```
 
+To learn more about using Dataverse Web API requests and responses, and handling errors, see [Use the Microsoft Dataverse Web API](../webapi/overview.md).
+
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

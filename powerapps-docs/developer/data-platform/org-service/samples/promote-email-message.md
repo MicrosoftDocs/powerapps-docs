@@ -17,7 +17,7 @@ search.app:
 ---
 # Sample: Promote an email message
 
-[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 
 <!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/sample-promote-email-message -->
 

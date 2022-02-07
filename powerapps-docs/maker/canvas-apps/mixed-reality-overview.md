@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: overview
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 1/25/2022
+ms.date: 02/02/2022
 ms.subservice: canvas-maker
 ms.author: anuitz
 search.audienceType: 
@@ -70,5 +70,9 @@ Start installing the controls in your apps:
 - View images and 3D content in the real world with the **[View in mixed reality](mixed-reality-component-view-mr.md)** control.
 - Measure distance, area, and volume with the **[Measure in mixed reality](mixed-reality-component-measure-distance.md)** control.
 - Create and view 3D shapes with the **[View shape in mixed reality](mixed-reality-component-view-shape.md)** control.
+
+### See also
+
+[Microsoft Learn: Build a 3D mobile app with Power Apps in mixed reality](/learn/modules/power-apps-tutorial/)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

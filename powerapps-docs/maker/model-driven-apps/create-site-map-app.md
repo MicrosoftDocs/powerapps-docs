@@ -29,7 +29,7 @@ search.app:
 
 # Create a model-driven app site map using the site map designer
 
-[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 ## Site maps overview
 

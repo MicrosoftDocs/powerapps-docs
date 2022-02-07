@@ -13,7 +13,7 @@ manager: shujoshi
 
 # Add the calendar control to tables
 
-[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 [!INCLUDE [cc-classic-interface-control-migration](../../includes/cc-classic-interface-control-migration.md)]
 

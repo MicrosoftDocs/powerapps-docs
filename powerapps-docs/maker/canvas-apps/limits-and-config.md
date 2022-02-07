@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 12/13/2021
+ms.date: 01/31/2022
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
@@ -41,11 +41,8 @@ This article contains information on supported device platforms, web browser req
 | --- | --- |
 | Google Chrome|Latest three major releases|
 | Microsoft Edge|Latest three major releases|
-| *Microsoft Internet Explorer|11 (with Compatibility View off)|
 | Mozilla Firefox (latest version)|Latest three major releases|
 | Apple Safari|13 and later|
-
-*Microsoft Internet Explorer 11 support for Power Apps is deprecated. We recommend that you use Microsoft Edge. More information: [Deprecation announcement](/power-platform/important-changes-coming#internet-explorer-11-support-for-dynamics-365-and-microsoft-power-platform-is-deprecated)
 
 ### Supported platforms for browsers running canvas apps
 
@@ -56,17 +53,12 @@ This article contains information on supported device platforms, web browser req
 | iOS |iOS 13 or later|
 | Android |10 or later |
 
-*Microsoft Internet Explorer 11 support for Power Apps is deprecated. We recommend that you use Microsoft Edge. More information: [Deprecation announcement](/power-platform/important-changes-coming#internet-explorer-11-support-for-dynamics-365-and-microsoft-power-platform-is-deprecated)
-
 ## Supported browsers for Power Apps Studio
 
 | **Browser** | **Supported Versions** |
 | --- | --- |
-| Google Chrome|Latest three major releases|
 | Microsoft Edge|Latest three major releases|
-| *Microsoft Internet Explorer|11 (with Compatibility View off)|
-
-*Microsoft Internet Explorer 11 support for Power Apps is deprecated. We recommend that you use Microsoft Edge. More information: [Deprecation announcement](/power-platform/important-changes-coming#internet-explorer-11-support-for-dynamics-365-and-microsoft-power-platform-is-deprecated)
+| Google Chrome|Latest three major releases|
 
 ### Supported platforms for browsers running Power Apps Studio
 

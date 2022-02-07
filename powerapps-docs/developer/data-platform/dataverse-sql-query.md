@@ -44,7 +44,7 @@ Only Azure Active Directory authentication is supported. SQL authentication and 
 ![Connec dialog.](media/ssms-connect-dialog.PNG)
 
 > [!NOTE]
-> Ports 1433 and/or 5558 need to be enabled to use the TDS endpoint from a client application such as SSMS. If you only enable port 5558, the user must append that port number to the server name in the **Connect to Server** dialog of SSMS - for example: myorgname.crm.dynamics.com;5558.
+> Ports 1433 and/or 5558 need to be enabled to use the TDS endpoint from a client application such as SSMS. If you only enable port 5558, the user must append that port number to the server name in the **Connect to Server** dialog of SSMS - for example: myorgname.crm.dynamics.com,5558.
 
 #### Example table data queries
 
@@ -113,7 +113,7 @@ Queries using the TDS endpoint execute under the service protection API limits.
 Below are some know error conditions and how to resolve them.
 
 > [!NOTE]
-> Ports 1433 and/or 5558 need to be enabled to use the TDS endpoint from a client application such as SSMS. If you only enable port 5558, the user must append that port number to the server name in the **Connect to Server** dialog of SSMS - for example: myorgname.crm.dynamics.com;5558.
+> Ports 1433 and/or 5558 need to be enabled to use the TDS endpoint from a client application such as SSMS. If you only enable port 5558, the user must append that port number to the server name in the **Connect to Server** dialog of SSMS - for example: myorgname.crm.dynamics.com,5558.
 
 ### Authentication
 

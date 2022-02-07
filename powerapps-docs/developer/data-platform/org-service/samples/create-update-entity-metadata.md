@@ -18,7 +18,7 @@ search.app:
 
 # Create and update table definitions
 
-[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 
 This topic shows how to programmatically create a custom user-owned table called **Bank Account** and add four different types of columns to it.
 

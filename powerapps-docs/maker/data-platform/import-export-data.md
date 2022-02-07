@@ -22,7 +22,7 @@ search.app:
 
 # Importing and exporting data
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 There are multiple ways to import and export data into Microsoft Dataverse. You can use dataflows, Power Query, Azure Data Factory, Azure Logic Apps, and Power Automate.
 

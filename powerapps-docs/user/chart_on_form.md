@@ -66,7 +66,7 @@ When a chart is shown together with grid, the grid filter option that you select
 Legend:
 
 1. **Sort**: Sorts rows. Use **Filter by** to filter both grid and chart data based on the filter criteria.
-2. **Open advanced filtering panel**: See which filters were applied to the current view. For more information, go to [See the current view definition](./grid-filters-advanced.md#see-the-current-view-definition).
+2. **Open advanced filtering panel**: See which filters were applied to the current view. For more information, go to [Create and manage personal views on a grid page](./grid-filters-advanced.md).
 3. **Search this view**: Search for data in the view you're in.
 4. **Jump bar**: The page jump bar uses the first sorted column. If no change has been made to the sort order, the jump bar uses the primary column.
 

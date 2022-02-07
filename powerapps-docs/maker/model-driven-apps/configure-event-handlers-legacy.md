@@ -17,7 +17,7 @@ search.app:
 ---
 # Configure model-driven app form event handlers
 
-[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 Form event handlers for Power Apps forms can be configured for the following areas in a form:  
   

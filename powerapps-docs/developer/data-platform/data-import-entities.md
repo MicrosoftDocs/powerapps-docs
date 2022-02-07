@@ -18,7 +18,7 @@ search.app:
 ---
 # Data import tables
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 The Microsoft Dataverse data import tables are used to create data maps, configure and run data imports, and log failure information.  
 

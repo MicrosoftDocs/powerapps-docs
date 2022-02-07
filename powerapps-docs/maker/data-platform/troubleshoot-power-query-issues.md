@@ -17,7 +17,7 @@ search.app:
 ---
 
 # Troubleshoot Power Query
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 When you use Power Query for Excel to create a custom table that contains data from external sources, this error might appear:
 

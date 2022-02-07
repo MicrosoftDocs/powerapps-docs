@@ -112,7 +112,7 @@ Note the following limitations when you add the form component control to a tabl
 
 - Using the same form for different form component controls isn't supported.
 
-- The form that you use with a form component must be included in your app. More information: [Add a component](add-edit-app-components.md#add-a-component).
+- The form that you use with a form component must be included in your app. If it isn't, or if the current user does not have access to the form, it will fallback to the top-most main form that is included in the app and available to the user (based on form order). More information: [Add a component](add-edit-app-components.md#add-a-component).
 
 - You may notice that the timeline wall may not update when a column that is used to set the timeline wall has changed in the form component. When the page is refreshed the timeline wall will update as expected.
 

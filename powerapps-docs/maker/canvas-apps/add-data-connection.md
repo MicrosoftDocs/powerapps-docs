@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 05/11/2021
+ms.date: 01/27/2022
 ms.subservice: canvas-maker
 ms.author: lanced
 search.audienceType: 
@@ -34,11 +34,7 @@ Your [next step](#next-steps) after this article is to display and manage data f
 
 ## Open a blank app
 
-1. On the **Home** tab, select **Canvas app from blank**.
-
-1. Specify a name for your app, and then select **Create**.
-
-1. If the **Welcome to Power Apps Studio** dialog box appears, select **Skip**.
+Create a [blank canvas app](create-blank-app.md).
 
 ## Add data source
 

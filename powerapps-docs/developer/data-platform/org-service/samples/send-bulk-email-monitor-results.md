@@ -17,7 +17,7 @@ search.app:
 ---
 # Sample: Send bulk email and monitor results
 
-[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 
 <!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/sample-send-bulk-email-monitor-results -->
 

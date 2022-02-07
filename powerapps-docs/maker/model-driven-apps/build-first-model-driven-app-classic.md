@@ -19,7 +19,7 @@ search.app:
 
 # Build your first model-driven app using the classic designer
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 In this article, you build a straightforward model-driven app that you can use to create, update, and delete account records as well as view data in one of the standard charts for the account table.
 
@@ -33,9 +33,9 @@ In this article, you build a straightforward model-driven app that you can use t
 
 1. Sign in to [Power Apps](https://make.powerapps.com/). If you don't already have a [!INCLUDE [powerapps](../../includes/powerapps.md)] account, you can [get started free](https://powerapps.microsoft.com/#).
 
-2. On the **Home** page, select **Model-driven app from blank**, select the **classic app designer** option and then **Create**.
+2. On the **Home** page, select **Blank app**, under **Blank app based on Dataverse** select **Create**. Select the **classic app designer** option and then **Create**.
 
-   :::image type="content" source="../../maker/model-driven-apps/media/build-first-model-driven-app/start-from-blank-model-driven.png" alt-text="Start from blank model":::
+   :::image type="content" source="../../maker/model-driven-apps/media/build-first-model-driven-app/start-from-blank-model-driven.png" alt-text="Select blank app and then select create under blank app based on Dataverse":::
 
 3. On the **Create a New App** page, enter the following details, and then select **Done**:
 
