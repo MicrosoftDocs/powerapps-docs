@@ -171,7 +171,6 @@ formParameters["description"] = "Default values for this record were set program
 // Set lookup column
 formParameters["preferredsystemuserid"] = "3493e403-fc0c-eb11-a813-002248e258e0"; // ID of the user.
 formParameters["preferredsystemuseridname"] = "Admin user"; // Name of the user.
-formParameters["preferredsystemuseridtype"] = "systemuser"; // Table name. 
 // End of set lookup column
 
 // Open the form.
@@ -184,7 +183,36 @@ Xrm.Navigation.openForm(entityFormOptions, formParameters).then(
     });
 ```
 
-### Example 3: Open a quick create form
+### Example 3: Open a form for new record (complex lookup)
+
+The following sample code opens a activity form with some pre-populated values (including a complex lookup) to create a new record:
+
+```JavaScript
+var entityFormOptions = {};
+entityFormOptions["entityName"] = "email";
+
+// Set default values for the Contact form
+var formParameters = {};
+formParameters["subject"] = "Sample";
+formParameters["description"] = "Default values for this record were set programmatically.";
+
+// Set lookup column
+formParameters["regardingobjectid"] = "3493e403-fc0c-eb11-a813-002248e258e0"; // ID of the user.
+formParameters["regardingobjectidname"] = "Admin user"; // Name of the user.
+formParameters["regardingobjectidtype"] = "systemuser"; // Table name. 
+// End of set lookup column
+
+// Open the form.
+Xrm.Navigation.openForm(entityFormOptions, formParameters).then(
+    function (success) {
+        console.log(success);
+    },
+    function (error) {
+        console.log(error);
+    });
+```
+
+### Example 4: Open a quick create form
 
 The following sample code opens a quick create contact form with some pre-populated values:
 
