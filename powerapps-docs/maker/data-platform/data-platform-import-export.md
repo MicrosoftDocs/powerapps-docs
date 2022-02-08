@@ -16,20 +16,20 @@ search.app:
 ---
 # Import or export data from Dataverse
 
-To import (get) data into Microsoft Dataverse tables, use an Excel worksheet file, a comma separated (CSV) file, or a on of the many connectors available.
+To get (import)) data into Microsoft Dataverse tables, use an Excel worksheet file, a comma-separated values (CSV) file, or one of the many connectors available.
 
 When you export Dataverse table data, it's exported as an Excel worksheet.
 
 ## Import using a connector
 
-Use a connector to import data from a myriad of sources, such as Microsoft Excel, Azure, SQL Server database, SharePoint, Access, OData, and many more.
+Use a connector to import data from a selection of many different sources, such as Microsoft Excel, Azure, SQL Server database, SharePoint, Access, OData, and more.
 
 1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 1. On the left navigation pane expand the **Data** section, and then select **Tables**.  
-1. Select **Data** > **Get Data** > **Get data**.
-1. From the **Data sources** list, select the connector that you want to import data from. 
+1. Select **Data** > **Get data** > **Get data**.
+1. From the **Data sources** list, select the connector that you want to import data from.
 
-For information about the connector you want to use as your data source, see [List of all Power apps connectors]((https://docs.microsoft.com/en-us)/connectors/connector-reference/connector-reference-powerapps-connectors) and [List of all connectors published by Microsoft](/connectors/connector-reference/connector-reference-microsoft-connectors).
+For information about the connector you want to use as your data source, see [List of all Power Apps connectors]((https://docs.microsoft.com/en-us)/connectors/connector-reference/connector-reference-powerapps-connectors) and [List of all connectors published by Microsoft](/connectors/connector-reference/connector-reference-microsoft-connectors).
 
 ## Import from an Excel or CSV file
 
@@ -39,19 +39,18 @@ There are two ways to import data from Excel.
 
 ### Option 1: Import by creating and modifying a file template
 
-Every table has required columns that must exist in your input file. We recommend that you create a template. First, export data from the table. Then, use the same file and modify it with your data. Import the modified file back into the table. Using a template saves time and effort. You won't have to account for the required columns for each table.
+Every table has required columns that must exist in your input file. We recommend that you create a template. To do this, export data from the table. Then, use the same file and modify it with your data. Finally, import the modified file back into the table. Using a template can save you time because you won't have to specify the required columns for each table.
 
-#### Prepare the file template.
+#### Prepare the file template
 
-1. [Export the table data to a CSV file](#export-data-to-csv).
-1. Define a plan to make sure data is unique. Use either primary keys or alternate keys. [Ensure uniqueness when you import data into a table from Excel or CSV](#ensure-uniqueness-when-you-import-data-into-a-table-from-excel-or-csv)
-1. See the next section for instructions to make sure data is unique before you import it into a table.
+1. [Export the table data](#export-data).
+1. Define a plan to make sure data is unique before you import it. Use either primary keys or alternate keys. More information: [Ensure uniqueness when you import data into a table from Excel or CSV](#ensure-uniqueness-when-you-import-data-into-a-table-from-excel-or-csv)
 
-#### Modify the file with your data.
+#### Modify the file with your data
 
 Copy data from your Excel or CSV file into the template that you created in the previous step.
 
-#### Import the file.  
+#### Import the file
 
 1. On [powerapps.com](https://make.powerapps.com/), expand the **Data** section. Select **Tables** in the left navigation pane.  
 1. Select **Get Data** > **Get data from Excel**.
@@ -60,9 +59,6 @@ Copy data from your Excel or CSV file into the template that you created in the 
 1. After the file is uploaded and **Mapping status** indicates **Mapping was successful**, select **Import** from the top-right corner. Go to [Troubleshoot mapping errors with Excel](#troubleshoot-mapping-errors-with-excel) to navigate and fix any mapping errors.
    :::image type="content" source="media/data-platform-import-export/import-mapping-successful.png" alt-text="Import mapping successful":::
   After the import finishes successfully, you'll see the total number of inserts and updates.  
-
-   > [!NOTE]
-   > Use the Upsert (Update or Insert) logic to either update the row, if it already exists, or to insert a new row.
 
 ### Option 2: Import by bringing your own source file
 
@@ -75,7 +71,8 @@ If you get mapping errors after you upload your file, select **Map status**. Tak
 1. Use the drop-down menu on the right, under **Show**, to walk through the **Unmapped columns**, **Fields with error**, or **Required Fields**.
 
     > [!TIP]
-    > Depending on whether you get a **Warning** or an **Error**, inspect **Unmapped columns** or **Fields with error** through the drop-down menu in **Column Mappings**.
+    > - Depending on whether you get a **Warning** or an **Error**, inspect **Unmapped columns** or **Fields with error** through the drop-down menu in **Column Mappings**.
+    > - Use the Upsert (Update or Insert) logic to either update the row, if it already exists, or to insert a new row.
 
 1. After you resolve all the errors and warnings, select **Save Changes** in the top-right corner. You'll go back to the **Import Data** screen.
 1. When the **Mapping status** column shows **Mapping was successful**, select **Import** from the top-right corner.
@@ -95,7 +92,7 @@ The primary key for an **Account** table is **accountid**.
 Sometimes, a primary key might not work when you integrate data from an external source. Use Dataverse to define alternate keys that uniquely identify a row in place of the primary key.
 
 Example:  
-For an **Account** table, you might set **transactioncurrencyid** as an alternate key by using a natural key-based identification. For example, use **US Dollar** instead of the GUID value **88c6c893-5b45-e811-a953-000d3a33bcb9** shown previously. You can also choose **currency symbol** or **currency name** as keys.
+For an **Account** table, you might set **transactioncurrencyid** as an alternate key by using a natural key-based identification. For example, use **US Dollar** instead of the GUID value **88c6c893-5b45-e811-a953-000d3a33bcb9** shown previously. You can also choose **currency symbol** or **currency name** as keys.  More information: [Define alternate keys using Power Apps portal](define-alternate-keys-portal.md)
 
    > [!div class="mx-imgBorder"] 
    > ![Example of creating an alternate key on a **Currency** table.](./media/data-platform-import-export/create-ak.png)
@@ -103,11 +100,11 @@ For an **Account** table, you might set **transactioncurrencyid** as an alternat
    > [!div class="mx-imgBorder"] 
    > ![Sample export file from an **Account** table showing **currency name** as a natural key.](./media/data-platform-import-export/export-nk.png)
 
-Users can still use primary keys as identifiers after they specify alternate keys. In the preceding sample, the first file is still valid if GUIDs are valid data. More information: [Define alternate keys using Power Apps portal](define-alternate-keys-portal.md)
+Users can still use primary keys as identifiers after they specify alternate keys. In the preceding sample, the first file is still valid if GUIDs are valid data.
 
-## Export data to CSV
+## Export data
 
-Export data from one or more tables. When you export data from more than one table, each table is exported into its own Microsoft CSV file.
+Export data from one or more tables. Exported data is in comma-separated value (CSV) format. When you export data from more than one table, each table is exported into its own CSV file.
 
 1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand the **Data** section, and then select **Tables** on the left navigation pane.
 1. Select **Data** > **Export data**. 
