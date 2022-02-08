@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: overview
 ms.custom: canvas, ce06122020
 ms.reviewer: tapanm
-ms.date: 02/04/2022
+ms.date: 02/07/2022
 ms.subservice: canvas-maker
 ms.author: anuitz
 search.audienceType: 
@@ -60,6 +60,8 @@ The geospatial features require additional terms of use that must be reviewed an
 
 1. Under **Geospatial services**, set the toggle switch to **On**. A terms of service notice will appear. Read through the terms of service, and if you agree, select the checkbox **I agree to the terms of service**, and then select **Enable**.
 
+    :::image type="content" source="./media/geospatial/ppac-terms.png" alt-text="Screenshot of the terms of service.":::
+
     >[!IMPORTANT]
     >You must read and agree to the terms of service before you can use geospatial features. 
 
@@ -75,7 +77,7 @@ For the controls to function properly, these connectors must not have conflictin
 
 ## Privacy and security considerations
 
-- Power Apps doesn't associate any user data with the search query.
+- Power Apps doesn’t link search queries to any user when shared with TomTom, and the shared search queries can’t be used to identify individuals.
 - Power Apps doesn't send any user identifiers or tracking data to TomTom.
 - Azure Maps doesn't store the request information sent by you. For more information about Azure Maps compliance, see [Azure global compliance](https://azure.microsoft.com/blog/new-azure-maps-make-identifying-local-compliance-options-easy/)
 - Requests sent between TomTom and Azure Maps are not exposed over the public Internet.
