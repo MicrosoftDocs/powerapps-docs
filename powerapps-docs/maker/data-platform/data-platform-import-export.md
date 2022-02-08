@@ -29,7 +29,7 @@ Use a connector to import data from a selection of many different sources, such 
 1. Select **Data** > **Get data** > **Get data**.
 1. From the **Data sources** list, select the connector that you want to import data from.
 
-For information about the connector you want to use as your data source, see [List of all Power Apps connectors]((https://docs.microsoft.com/en-us)/connectors/connector-reference/connector-reference-powerapps-connectors) and [List of all connectors published by Microsoft](/connectors/connector-reference/connector-reference-microsoft-connectors).
+For information about the connector you want to use as your data source, see [List of all Power Apps connectors](/connectors/connector-reference/connector-reference-powerapps-connectors) and [List of all connectors published by Microsoft](/connectors/connector-reference/connector-reference-microsoft-connectors).
 
 ## Import from an Excel or CSV file
 
