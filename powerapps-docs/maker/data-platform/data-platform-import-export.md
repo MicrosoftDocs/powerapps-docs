@@ -62,7 +62,7 @@ Copy data from your Excel or CSV file into the template that you created in the 
 
 ### Option 2: Import by bringing your own source file
 
-If you're an advanced user and know the required columns for a given table for Dataverse tables, define your own Excel or CSV source file. Follow the steps in [Import the file.](#import-the-file).
+If you're an advanced user and know the required columns for a given table for Dataverse tables, define your own Excel or CSV source file. Follow the steps in [Import the file](#import-the-file).
 
 ### Troubleshoot mapping errors with Excel
 
@@ -72,7 +72,7 @@ If you get mapping errors after you upload your file, select **Map status**. Tak
 
     > [!TIP]
     > - Depending on whether you get a **Warning** or an **Error**, inspect **Unmapped columns** or **Fields with error** through the drop-down menu in **Column Mappings**.
-    > - Use the Upsert (Update or Insert) logic to either update the row, if it already exists, or to insert a new row.
+    > - Use the *upsert* (**Update** or **Insert**) logic to either update the row, if it already exists, or to insert a new row.
 
 1. After you resolve all the errors and warnings, select **Save Changes** in the top-right corner. You'll go back to the **Import Data** screen.
 1. When the **Mapping status** column shows **Mapping was successful**, select **Import** from the top-right corner.
