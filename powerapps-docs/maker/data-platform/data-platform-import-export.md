@@ -16,16 +16,16 @@ search.app:
 ---
 # Import or export data from Dataverse
 
-To get (import)) data into Microsoft Dataverse tables, use an Excel worksheet file, a comma-separated values (CSV) file, or one of the many connectors available.
+To get (import) data into Microsoft Dataverse tables, use an Excel worksheet file, a comma-separated values (CSV) file, or one of the many connectors available.
 
-When you export Dataverse table data, it's exported as an Excel worksheet.
+When you export Dataverse table data, it's exported as a CSV file.
 
 ## Import using a connector
 
 Use a connector to import data from a selection of many different sources, such as Microsoft Excel, Azure, SQL Server database, SharePoint, Access, OData, and more.
 
 1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-1. On the left navigation pane expand the **Data** section, and then select **Tables**.  
+1. On the left navigation pane expand **Data**, and then select **Tables**.  
 1. Select **Data** > **Get data** > **Get data**.
 1. From the **Data sources** list, select the connector that you want to import data from.
 
