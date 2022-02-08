@@ -18,9 +18,6 @@ contributors:
 
 After your portal is created and provisioned, you can change the details of your Dynamics 365 instance and portal.
 
-> [!IMPORTANT]
-> When changing Dynamics 365 Instance for your portal, ensure the new instance is from the same [region](/power-platform/admin/regions-overview) as the current instance. Changing the Dynamics 365 Instance for Power Apps portals across regions isn't supported.
-
 To learn about the roles required to perform this task, read [Admin roles required for portal administrative tasks](portal-admin-roles.md).
 
 1. Go to the **Dynamics 365 Administration Center** page, and then select the **Applications** tab.
@@ -37,7 +34,7 @@ To learn about the roles required to perform this task, read [Admin roles requir
    > ![Change Dynamics 365 instance.](../media/change-dynamics-365-instance.png "Change Dynamics 365 instance")  
 
 > [!NOTE]
-> You may be required to [reload custom SSL certificates](manage-custom-certificates.md#add-new-certificate) after you have updated the Dynamics 365 instance. Go to **Manage custom certificates** in the [Power Apps portals admin center](admin-overview.md) to verify if custom SSL certificates need to be reloaded.
+> You may be required to reload SSL certificates after you have updated the Dynamics 365 instance. Go to **Manage SSL certificates** in the [Power Apps portals admin center](admin-overview.md) to verify if custom SSL certificates need to be reloaded.
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
