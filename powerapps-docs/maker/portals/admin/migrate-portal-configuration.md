@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 1/4/2022
+ms.date: 02/03/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
@@ -155,10 +155,12 @@ Schema files are available for the following portal types:
 - **Portals created in an environment with Dataverse**
     - [Custom portal (Blank portal)](https://go.microsoft.com/fwlink/p/?linkid=2110477)
     - [Custom portal (Blank portal)](https://go.microsoft.com/fwlink/p/?linkid=2162831) (for version [9.2.2103.x](../versions/package-version-9.2.2103.md))
+    - [Custom portal (Blank portal)](https://go.microsoft.com/fwlink/?linkid=2186536) (for version [9.3.2201.x](../versions/package-version-9.3.2201.md) or higher)
 
 - **Portals created in an environment containing customer engagement apps (such as Dynamics 365 Sales and Dynamics 365 Customer Service)**
     - [Custom portal (Blank portal)](https://go.microsoft.com/fwlink/p/?linkid=2019804)
     - [Custom portal (Blank portal)](https://go.microsoft.com/fwlink/p/?linkid=2162733) (for version [9.2.2103.x](../versions/package-version-9.2.2103.md))
+    - [Custom portal (Blank portal)](https://go.microsoft.com/fwlink/?linkid=2186261) (for version [9.3.2201.x](../versions/package-version-9.3.2201.md) or higher)
     - [Community portal](https://go.microsoft.com/fwlink/p/?linkid=2019704)
     - [Customer Self-Service portal](https://go.microsoft.com/fwlink/p/?linkid=2019705)
     - [Partner portal](https://go.microsoft.com/fwlink/p/?linkid=2019803)
