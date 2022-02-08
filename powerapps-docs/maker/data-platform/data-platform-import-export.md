@@ -100,7 +100,7 @@ For an **Account** table, you might set **transactioncurrencyid** as an alternat
    > [!div class="mx-imgBorder"] 
    > ![Sample export file from an **Account** table showing **currency name** as a natural key.](./media/data-platform-import-export/export-nk.png)
 
-Users can still use primary keys as identifiers after they specify alternate keys. In the preceding sample, the first file is still valid if GUIDs are valid data.
+You can still use primary keys as identifiers after you specify alternate keys. In the preceding sample, the first file is still valid if GUIDs are valid data.
 
 ## Export data
 
