@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2021
+ms.date: 02/08/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
@@ -35,6 +35,9 @@ To learn about the roles required to perform this task, read [Admin roles requir
 
    > [!div class="mx-imgBorder"]
    > ![Change Dynamics 365 instance.](../media/change-dynamics-365-instance.png "Change Dynamics 365 instance")  
+
+> [!NOTE]
+> You may be required to [reload custom SSL certificates](manage-custom-certificates.md#add-new-certificate) after you have updated the Dynamics 365 instance. Go to **Manage custom certificates** in the [Power Apps portals admin center](admin-overview.md) to verify if custom SSL certificates need to be reloaded.
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
