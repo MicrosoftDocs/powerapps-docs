@@ -135,8 +135,6 @@
           href: reference/dataset/getcommands.md
         - name: getDataSetCapabilities
           href: reference/dataset/getdatasetcapabilities.md
-        - name: getRelatedDataSet
-          href: reference/dataset/getrelateddataset.md
         - name: getSelectedRecordIds
           href: reference/dataset/getselectedrecordids.md
         - name: getTargetEntityType

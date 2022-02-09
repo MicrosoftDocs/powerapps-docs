@@ -6,6 +6,8 @@
     href: signup-for-powerapps.md
   - name: Sign up for Developer Plan
     href: developer-plan.md
+  - name: Power Apps preview program
+    href: powerapps-preview-program.md
   - name: "What's new?"
     href: ../whats-new.md
   - name: "Learning catalog"
@@ -113,12 +115,14 @@
           href: ../user/email-template-convert.md
         - name: Create a signature for emails
           href: ../user/email-signature.md
-    - name: Work with grid filters
+    - name: Work with grid and views
       items:
-      - name: Use grid filters
+      - name: Explore data in a view on a grid page
         href: ../user/grid-filters.md
-      - name: Create personal views with advanced grid filters
-        href: ../user/grid-filters-advanced.md      
+      - name: Create and manage personal views on a grid page
+        href: ../user/grid-filters-advanced.md     
+      - name: Faq for grids and views
+        href: ../user/faq-for-grids-views.md
     - name: Charts and dashboards
       items:
       - name: Visualize data in a view with Power BI service (preview)
@@ -1299,7 +1303,7 @@
             href: ./model-driven-apps/using-tree-view-on-form.md
           - name: Create or edit forms
             href: ./model-driven-apps/create-and-edit-forms.md
-          - name: Add, move or delete columns
+          - name: Manage columns
             href: ./model-driven-apps/add-move-or-delete-fields-on-form.md
           - name: Add, move or delete components
             href: ./model-driven-apps/add-move-configure-or-delete-components-on-form.md
@@ -1965,7 +1969,7 @@
           items:
           - name: Portals Web API overview
             href: ./portals/web-api-overview.md
-          - name: Perform Read operations (preview)
+          - name: Perform Read operations
             displayName: Portals Web API read operations
             href: ./portals/read-operations.md                    
           - name: Perform Write, Update, Delete operations
@@ -1977,7 +1981,7 @@
           - name: "Tutorial: Use the portals Web API"
             displayName: Tutorial on how to use the portal Web API
             href: ./portals/webapi-tutorial.md            
-        - name: Code components (preview)
+        - name: Code components
           items:
           - name: Overview of code components in portals
             href: ./portals/component-framework.md          
@@ -2127,6 +2131,8 @@
       href: ./data-platform/create-custom-entity.md
     - name: Edit a table
       href: ./data-platform/edit-entities.md
+    - name: Import or export data
+      href: ./data-platform/data-platform-import-export.md
     - name: Create and edit virtual tables
       href: ./data-platform/create-edit-virtual-entities.md
     - name: Virtual table OData v4 data provider
@@ -2141,8 +2147,6 @@
         href: ./data-platform/create-edit-entities-portal.md
       - name: How to create tables using solution explorer
         href: ./data-platform/create-edit-entities-solution-explorer.md
-      - name: How to import or export data
-        href: ./data-platform/data-platform-import-export.md
       - name: How to open table data in Excel
         href: ./data-platform/data-platform-excel-addin.md
       - name: How to define alternate keys
