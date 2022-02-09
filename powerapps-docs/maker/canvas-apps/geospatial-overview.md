@@ -83,6 +83,78 @@ For the controls to function properly, these connectors must not have conflictin
 - Requests sent between TomTom and Azure Maps are not exposed over the public Internet.
 - Requests sent between apps you create with the geospatial controls and Azure Maps are sent over HTTPS.
 
+### Data use
+The following table describes the services and data powering each geospatial feature.
+<!-- 
+  HTML table syntax needed for multi-row and multi-column cells, which regular markdown does not support.
+  See https://github.github.com/gfm/#tables-extension-
+-->
+<table>
+  <thead>
+    <tr>
+      <th rowspan=2>Control</th>
+      <th rowspan=2>Feature</th>
+      <th rowspan=2>Data sent to service(s)</th>
+      <th rowspan=2>Reason to send data</th>
+      <th colspan=3>Service</th>
+      <th rowspan=2>User identifiers or tracking data sent</th>
+    </tr>
+    <tr>
+      <th>Azure Maps</th>
+      <th>Bing Maps</th>
+      <th>TomTom</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan=3>Map</td>
+      <td>Show map tiles</td>
+      <td>Coordinates in and around the map view</td>
+      <td>To show the map tiles in the map view</td>
+      <td align="center">✔️</td>
+      <td align="center">❌</td>
+      <td align="center">✔️</td>
+      <td align="center">❌</td>
+    </tr>
+    <tr>
+      <td>Show pins and route waypoints</td>
+      <td>Pins and route waypoints addresses</td>
+      <td>To translate addresses to latitude/longitude coordinates and show them on the map</td>
+      <td align="center">❌</td>
+      <td align="center">✔️</td>
+      <td align="center">✔️</td>
+      <td align="center">❌</td>
+    </tr>
+    <tr>
+      <td>Show routes</td>
+      <td>Route waypoint coordinates</td>
+      <td>To calculate routes between waypoints</td>
+      <td align="center">✔️</td>
+      <td align="center">❌</td>
+      <td align="center">✔️</td>
+      <td align="center">❌</td>
+    </tr>
+    <tr>
+      <td rowspan=2>Address Input</td>
+      <td rowspan=2>Address search</td>
+      <td>Address search query string</td>
+      <td>To show address search results</td>
+      <td align="center">❌</td>
+      <td align="center">✔️</td>
+      <td align="center">✔️</td>
+      <td align="center">❌</td>
+    </tr>
+    <tr>
+      <td>Current device location</td>
+      <td>To bias address search results around the device location</td>
+      <td align="center">❌</td>
+      <td align="center">✔️</td>
+      <td align="center">✔️</td>
+      <td align="center">❌</td>
+    </tr>
+</tbody>
+</table>
+
 ## Next steps
 
 Start installing the controls in your apps:
