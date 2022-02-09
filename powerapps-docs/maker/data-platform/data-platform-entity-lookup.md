@@ -112,7 +112,7 @@ As you model your business data by creating custom tables or when using existing
     > [!div class="mx-imgBorder"] 
     > ![Referential, Restrict Delete.](./media/data-platform-cds-newrelationship/advanced-3.png "Referential, Restrict Delete")
 
-* **Parental:** In a parental relationship between two tables, any action taken on a row of the parent table is also taken on any child table rows that are related to the parent table row. For example, this would cause all of the child rows to be deleted when the parent is deleted.
+* **Parental:** In a parental relationship between two tables, any action taken on a record of the parent table is also taken on any child table records that are related to the parent table record. For example, *the owner of the parent record has inherited access to the child table records* and when the parent record is deleted, all of the child records will also be deleted.
 
 * **Custom:** In a custom relationship between two tables, you select the behavior associated with each of a set of possible actions. 
 
