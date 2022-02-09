@@ -69,6 +69,9 @@ Below the summary section the user can access additional insights and can choose
 
 The App names and icons are from AppSource.
 
+> [!IMPORTANT]
+> With the January 2022 update, the 'Total Installs' tile is now tracking the total number of unique environments where an app is installed, instead of the previous cumulative total installs. While this update provides more meaningful information about an app's actual isntall base, note the change may lead to a possible sharp drop in the install charts.  
+
 ![All apps.](media/isv-portal-homepage-seeall.png)
 
 ### See also
