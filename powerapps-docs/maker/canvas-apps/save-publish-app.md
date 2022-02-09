@@ -60,6 +60,9 @@ The **Live** version is published for everyone with whom the app is shared. The 
 
 To publish the most recent version, highlight the version and select ellipsis (...). Then select **Publish this version** from the drop down menu.
 
+> [!NOTE]
+> Once you publish a new version of your app, it usually takes on average 20 seconds for the changes to reflect when launching the app, but occassionally it can take up to 20 minutes. Please note, that if a user already has the app open while a new version is published, the user will need to refresh their browser to pick up on the latest app version changes.
+
 ## Next steps
 
 * Find and run the app in a [browser](../../user/run-app-browser.md) or on a [phone](/powerapps/maker/canvas-apps/run-canvas-and-model-apps-on-mobile).
