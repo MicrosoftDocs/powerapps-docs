@@ -117,9 +117,9 @@
           href: ../user/email-signature.md
     - name: Work with grid and views
       items:
-      - name: Explore data in a view on a grid page
+      - name: Explore data in a view on a grid page (preview)
         href: ../user/grid-filters.md
-      - name: Create and manage personal views on a grid page
+      - name: Create and manage personal views on a grid page (preview)
         href: ../user/grid-filters-advanced.md     
       - name: Faq for grids and views
         href: ../user/faq-for-grids-views.md
