@@ -17,7 +17,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Explore data in a view on a grid page
+# Explore data in a view on a grid page (preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
 
