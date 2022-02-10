@@ -35,7 +35,7 @@ In Power Apps Studio, select **Save** on the **File** menu (on the left edge), a
 
     ![Save updated app.](./media/save-publish-app/save-app.png)
 
-Power Apps can also periodically save the app every 2 minutes. If you have saved the app once, Power Apps will continue to save a version of the app periodically without requiring the user to press or tap the Save action. Authors can enable or disable the **Auto save** setting from the **Account** tab on the **File** menu.
+Power Apps can also periodically save the app every 2 minutes. If you've saved the app once, Power Apps will continue to save a version of the app periodically without requiring the user to press or tap the Save action. Authors can enable or disable the **Auto save** setting from the **Account** tab on the **File** menu.
 
 ![Auto save setting.](./media/save-publish-app/autosave.png)
 
@@ -55,14 +55,14 @@ Power Apps can also periodically save the app every 2 minutes. If you have saved
 
 To see all versions of an app, go to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) > **Apps** > select your app > **Details** > **Versions**.
 
-The **Live** version is published for everyone with whom the app is shared. The most recent version of any app is available only to those who have edit permissions for it.
+The **Live** version is published for everyone with whom the app is shared. The most recent version of any app is available only to those users who have edit permissions for it.
 
 ![Publish from portal.](./media/save-publish-app/publish-portal.png)
 
-To publish the most recent version, highlight the version and select ellipsis (...). Then select **Publish this version** from the drop down menu.
+To publish the most recent version, highlight the version and select ellipsis (...). Then select **Publish this version** from the drop-down menu.
 
 > [!NOTE]
-> - Changes from a newly published version of an app may take up to 20 seconds to reflect when launching the app. Occasionally, it may take up to 20 minutes.
+> - Changes from a newly published version of an app may take a few seconds to reflect when launching the app. Occasionally, it may take a few minutes.
 > - If you already have an app open while a new version is published, you must reload the app to get the latest changes.
 
 ## Next steps
