@@ -1,12 +1,12 @@
 ---
-title: Canvas app system requirements and limits
-description: Learn about device platform and web browser requirements, limits, and configuration values for canvas apps built in Power Apps.
+title: Power Apps system requirements and limits
+description: Learn about device platform and web browser requirements, limits, and configuration values for Power Apps.
 author: lancedMicrosoft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 01/31/2022
+ms.date: 02/10/2022
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
@@ -19,10 +19,10 @@ contributors:
   - alaug
   - wimcoor
 ---
-# System requirements, limits, and configuration values for canvas apps
-This article contains information on supported device platforms, web browser requirements, limits, and configuration values for canvas apps. 
+# System requirements, limits, and configuration values for Power Apps
+This article contains information on supported device platforms, web browser requirements, limits, and configuration values for Power Apps. 
 
-## Supported platforms for running canvas apps using the Power Apps mobile app
+## Supported platforms for running apps using the Power Apps mobile app
 
 | **Minimum required** | **Recommended** |
 | --- | --- |
@@ -35,7 +35,7 @@ This article contains information on supported device platforms, web browser req
 > - We currently don't support new features on Windows platform for [Power Apps mobile app](/powerapps/maker/canvas-apps/run-canvas-and-model-apps-on-mobile). Features such as the Improved Microsoft Dataverse option and guest access are not available on this platform. We recommend using a web player on Windows to leverage the full set of capabilities. Updates to the Power Apps mobile app for Windows platform will be announced in future.
 > - Canvas apps running on Windows platform must use the legacy Microsoft Dataverse connector. A [warning is displayed](use-native-cds-connector.md) for apps that still use the legacy connector, but using it for Windows platform is supported.
 
-## Supported browsers for running canvas apps
+## Supported browsers for running Power Apps
 
 | **Browser** | **Supported Versions** |
 | --- | --- |
@@ -44,7 +44,7 @@ This article contains information on supported device platforms, web browser req
 | Mozilla Firefox (latest version)|Latest three major releases|
 | Apple Safari|13 and later|
 
-### Supported platforms for browsers running canvas apps
+### Supported platforms for browsers running Power Apps
 
 | **Operating System** | **Supported Versions** |
 | --- | --- |
