@@ -84,13 +84,13 @@ For the controls to function properly, these connectors must not have conflictin
 - Power Apps doesn't send any user identifiers or tracking data to Azure Maps, Bing Maps, or TomTom.
 - The following table describes the user data that Power Apps sends to Azure Maps, Bing Maps, and TomTom:
 
-    | Control | Feature | Data | Use | Sent to Azure Maps | Sent to Bing Maps | Sent to TomTom |
-    | ------- | ------- | ---- | --- | ---------- | --------- | ------ |
-    | Map | Show map tiles | Coordinates in and around the map view | To show the map tiles in the map view | Yes | No | Yes |
-    | Map | Show pins and route waypoints | Pins and route waypoint addresses | To translate addresses to latitude/longitude coordinates, and show them on the map | No | Yes | Yes |
-    | Map | Show routes | Route waypoint coordinates | To calculate routes between waypoints | Yes | No | Yes |
-    | Address Input | Address Search | Address search query string | To show address search results | No | Yes | Yes |
-    | Address Input | Address Search | Current device location | To bias address search results around the device location | No | Yes | Yes |
+    | Control | Feature | Data | Sent to Azure Maps | Sent to Bing Maps | Sent to TomTom | Purpose |
+    | ------- | ------- | ---- | ------------------ | ----------------- | -------------- | ------- |
+    | Map | Show map tiles | Coordinates in and around the map view | Yes | No | Yes | To show the map tiles in the map view. |
+    | Map | Show pins and route waypoints | Pins and route waypoint addresses | No | Yes | Yes | To translate addresses to latitude/longitude coordinates, and show them on the map. |
+    | Map | Show routes | Route waypoint coordinates | Yes | No | Yes | To calculate routes between waypoints. |
+    | Address Input | Address Search | Address search query string | No | Yes | Yes | To show address search results. |
+    | Address Input | Address Search | Current device location | No | Yes | Yes | To bias address search results around the device location. |
 
 ## Next steps
 
