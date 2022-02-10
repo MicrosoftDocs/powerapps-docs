@@ -26,6 +26,8 @@
       href: ../learning-catalog/functional-consultant.md
     - name: Solution architect
       href: ../learning-catalog/solution-architect.md
+  - name: System requirements, limits, and configuration
+    href: ./canvas-apps/limits-and-config.md
 - name: Find and run apps
   href: ../user/index.md
   items:
@@ -207,8 +209,6 @@
     href: ./canvas-apps/intro-maker-portal.md
   - name: Find it with unified search
     href: search.md
-  - name: System requirements, limits, and configuration
-    href: ./canvas-apps/limits-and-config.md
 - name: Canvas apps
   items:
   - name: Canvas apps
