@@ -56,7 +56,7 @@ Using security roles for users that perform similar tasks is the best way to sha
 
    > [!IMPORTANT]
    > If your app has one or more custom tables, in order for users to work with your custom table's records, you must configure privileges to the custom tables in a security role. More information: [Create a security role for your app](#create-a-security-role-for-your-app)
-   - To assign an individual user, select the user name from the **People** list.
+   - To assign an individual user or Azure Active Directory (Azure AD) group team, select the user name or team from the **People** list.
    :::image type="content" source="media/share-model-driven-app/share-user.png" alt-text="Assign specific users to a model-driven app":::
 1. Select **Share**.
 
