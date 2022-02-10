@@ -32,7 +32,7 @@ The following prebuilt controls can be used for geospatial and mapping scenarios
 - [Address input](geospatial-component-input-address.md)
 
 ## Prerequisites
-1. An admin must [add a Microsoft Dataverse database](https://docs.microsoft.com/power-platform/admin/create-database) to the environment.
+1. An admin must [add a Microsoft Dataverse database](/power-platform/admin/create-database) to the environment.
 3. An admin must [enable the geospatial features in the Power Platform admin center](#enable-the-geospatial-features-for-the-environment) for the environment. This requires reviewing and agreeing to specific terms of service.
 3. An admin must [ensure the geospatial controls will not be blocked by the environment's data loss prevention policies](#review-the-environments-data-loss-prevention-policies).
 
