@@ -43,9 +43,6 @@ Before you share an app, it is helpful to understand the following model-driven 
 - The app must have at least one security role associated with it, such as **Basic User**. However, if your app has one or more custom tables, in order for users to work with your custom table's records, you must configure privileges to the custom tables in a security role. More information: [Create a security role for your app](#create-a-security-role-for-your-app)
 - App users must be assigned a security role from the available roles. Alternatively, a team can be assigned a security role, and users can be made members of the team. A team can be an Owner, Access, Azure AD security group, or Microsoft 365 group. [Learn to manage a Dataverse team](/power-platform/admin/database-security).
 
-
-Users granted **Read**, **Create**, and **Write** to the **Model-driven App** privilege have access to all apps in the environment, even when they're not part of any role that has access to the app.
-
 ## Assign security roles and users to a model-driven app
 
 Using security roles for users that perform similar tasks is the best way to share a model-driven app. However there may be situations when you want to assign an individual user regardless of the user's security role membership.
@@ -60,7 +57,7 @@ Using security roles for users that perform similar tasks is the best way to sha
    :::image type="content" source="media/share-model-driven-app/share-user.png" alt-text="Assign specific users to a model-driven app":::
 1. Select **Share**.
 
-## Create a security role for your app
+## Create or edit a security role for your app
 
 Model-driven apps often contain custom tables and other custom configuration. It is important to first create a security role with the required level of privilege for all the components used in your app.
 
@@ -75,7 +72,7 @@ Custom tables, or tables that are new to the environment, will not have any priv
 
 - Copy an existing security role and edit the privileges accordingly. Copying is preferred to creating a security role from blank as there are a range of privileges that must be set to create a valid role that goes beyond setting privileges on specific tables. More information: [Copy a security role to create a new one](#copy-a-security-role-to-create-a-new-one)
 - Create a new custom security role from scratch for the purpose of managing privileges for users of the app. Configure the new role for all tables in the app relevant for the user. More information: [Create a security role](/power-platform/admin/create-edit-security-role#create-a-security-role)
-- Update an existing predefined security role, such as **Basic User**, so that it includes privileges (to read, write, delete, and so on) on records based on the custom table. More information: [Edit a security role](/power-platform/admin/create-edit-security-role#edit-a-security-role)
+- Edit an existing predefined security role, such as **Basic User**, so that it includes privileges (to read, write, delete, and so on) for records based on the custom table. More information: [Edit a security role](/power-platform/admin/create-edit-security-role#edit-a-security-role)
 
 > [!IMPORTANT]
 > When you create a new security role from scratch, you must grant **Read** privilege with global scope for the **Model-driven App** privilege located on the **Customization** tab of the security role designer. Note that the Basic User security role already has this privilege.
