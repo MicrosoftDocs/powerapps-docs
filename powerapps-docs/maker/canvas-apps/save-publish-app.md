@@ -1,14 +1,14 @@
 ---
 title: Save and publish canvas apps
 description: Step-by-step instructions for saving and publishing canvas apps.
-author: tapanm-msft
+author: amchern
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: 
-ms.date: 05/08/2020
+ms.reviewer: tapanm
+ms.date: 02/09/2022
 ms.subservice: canvas-maker
-ms.author: tapanm
+ms.author: emcoope
 search.audienceType: 
   - maker
 search.app: 
@@ -16,6 +16,7 @@ search.app:
 contributors:
   - tapanm-msft
   - emcoope-msft
+  - amchern
 ---
 # Save and publish canvas apps
 
@@ -48,7 +49,7 @@ Power Apps can also periodically save the app every 2 minutes. If you have saved
    ![Review Publish.](./media/save-publish-app/publish-review.png)
 
    > [!NOTE]
-   > Whenever you publish a canvas app, your app will be upgraded to run on the latest version of Power Apps – which means it will get   the benefit of all the latest features and performance upgrades we’ve added since you last published. If you haven’t published an update in several months, you’ll likely see an immediate performance benefit from republishing now.
+   > Whenever you publish a canvas app, your app will be upgraded to run on the latest version of Power Apps – which means it will get the benefit of all the latest features and performance upgrades we’ve added since you last published. If you haven’t published an update in several months, you’ll likely see an immediate performance benefit from republishing now.
 
 ## Identify the live version
 
@@ -61,7 +62,8 @@ The **Live** version is published for everyone with whom the app is shared. The 
 To publish the most recent version, highlight the version and select ellipsis (...). Then select **Publish this version** from the drop down menu.
 
 > [!NOTE]
-> Once you publish a new version of your app, it usually takes on average 20 seconds for the changes to reflect when launching the app, but occassionally it can take up to 20 minutes. Please note, that if a user already has the app open while a new version is published, the user will need to refresh their browser to pick up on the latest app version changes.
+> - Changes from a newly published version of an app may take up to 20 seconds to reflect when launching the app. Occasionally, it may take up to 20 minutes.
+> - If you already have an app open while a new version is published, you must reload the app to get the latest changes.
 
 ## Next steps
 
