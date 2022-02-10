@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: overview
 ms.custom: canvas, ce06122020
 ms.reviewer: tapanm
-ms.date: 02/07/2022
+ms.date: 02/09/2022
 ms.subservice: canvas-maker
 ms.author: anuitz
 search.audienceType: 
@@ -78,82 +78,19 @@ For the controls to function properly, these connectors must not have conflictin
 ## Privacy and security considerations
 
 - Power Apps doesn’t link search queries to any user when shared with TomTom, and the shared search queries can’t be used to identify individuals.
-- Power Apps doesn't send any user identifiers or tracking data to TomTom.
 - Azure Maps doesn't store the request information sent by you. For more information about Azure Maps compliance, see [Azure global compliance](https://azure.microsoft.com/blog/new-azure-maps-make-identifying-local-compliance-options-easy/)
 - Requests sent between TomTom and Azure Maps are not exposed over the public Internet.
 - Requests sent between apps you create with the geospatial controls and Azure Maps are sent over HTTPS.
+- Power Apps doesn't send any user identifiers or tracking data to Azure Maps, Bing Maps, or TomTom.
+- The following table describes the user data that Power Apps sends to Azure Maps, Bing Maps, and TomTom:
 
-### Data use
-The following table describes the services and data powering each geospatial feature.
-<!-- 
-  HTML table syntax needed for multi-row and multi-column cells, which regular markdown does not support.
-  See https://github.github.com/gfm/#tables-extension-
--->
-<table>
-  <thead>
-    <tr>
-      <th rowspan=2>Control</th>
-      <th rowspan=2>Feature</th>
-      <th rowspan=2>Data sent to service(s)</th>
-      <th rowspan=2>Reason to send data</th>
-      <th colspan=3>Service</th>
-      <th rowspan=2>User identifiers or tracking data sent</th>
-    </tr>
-    <tr>
-      <th>Azure Maps</th>
-      <th>Bing Maps</th>
-      <th>TomTom</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td rowspan=3>Map</td>
-      <td>Show map tiles</td>
-      <td>Coordinates in and around the map view</td>
-      <td>To show the map tiles in the map view</td>
-      <td align="center">✔️</td>
-      <td align="center">❌</td>
-      <td align="center">✔️</td>
-      <td align="center">❌</td>
-    </tr>
-    <tr>
-      <td>Show pins and route waypoints</td>
-      <td>Pins and route waypoints addresses</td>
-      <td>To translate addresses to latitude/longitude coordinates and show them on the map</td>
-      <td align="center">❌</td>
-      <td align="center">✔️</td>
-      <td align="center">✔️</td>
-      <td align="center">❌</td>
-    </tr>
-    <tr>
-      <td>Show routes</td>
-      <td>Route waypoint coordinates</td>
-      <td>To calculate routes between waypoints</td>
-      <td align="center">✔️</td>
-      <td align="center">❌</td>
-      <td align="center">✔️</td>
-      <td align="center">❌</td>
-    </tr>
-    <tr>
-      <td rowspan=2>Address Input</td>
-      <td rowspan=2>Address search</td>
-      <td>Address search query string</td>
-      <td>To show address search results</td>
-      <td align="center">❌</td>
-      <td align="center">✔️</td>
-      <td align="center">✔️</td>
-      <td align="center">❌</td>
-    </tr>
-    <tr>
-      <td>Current device location</td>
-      <td>To bias address search results around the device location</td>
-      <td align="center">❌</td>
-      <td align="center">✔️</td>
-      <td align="center">✔️</td>
-      <td align="center">❌</td>
-    </tr>
-</tbody>
-</table>
+    | Control | Feature | Data | Use | Sent to Azure Maps | Sent to Bing Maps | Sent to TomTom |
+    | ------- | ------- | ---- | --- | ---------- | --------- | ------ |
+    | Map | Show map tiles | Coordinates in and around the map view | To show the map tiles in the map view | Yes | No | Yes |
+    | Map | Show pins and route waypoints | Pins and route waypoint addresses | To translate addresses to latitude/longitude coordinates, and show them on the map | No | Yes | Yes |
+    | Map | Show routes | Route waypoint coordinates | To calculate routes between waypoints | Yes | No | Yes |
+    | Address Input | Address Search | Address search query string | To show address search results | No | Yes | Yes |
+    | Address Input | Address Search | Current device location | To bias address search results around the device location | No | Yes | Yes |
 
 ## Next steps
 
