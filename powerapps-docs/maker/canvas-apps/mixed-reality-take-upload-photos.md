@@ -1,12 +1,12 @@
 ---
-title: Take real-world screenshots of objects in mixed reality
-description: Use your app to take photos of 3D objects that are overlaid in the real world.
+title: Take screenshots of 3D objects in mixed reality
+description: Take photos of 3D objects in the real world with augmented reality features in Power Apps.
 author: anuitz
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 01/27/2022
+ms.date: 02/10/2022
 ms.subservice: canvas-maker
 ms.author: anuitz
 search.audienceType: 
@@ -19,183 +19,178 @@ contributors:
   - CoPrez
 ---
 
-# Take and upload mixed-reality photos in Power Apps
+# Take and upload mixed-reality photos
 
-You can add a control to take photos of the mixed-reality (MR) experience in your apps that use the following controls:
-- [View in MR](mixed-reality-component-view-mr.md)
-- [View shape in MR](mixed-reality-component-view-shape.md)
-- [Measure in MR](mixed-reality-component-measure-distance.md)
+In this article, we'll create an app that can take photos of a mixed-reality session and upload them to a folder on OneDrive. We'll use the **View in MR** control in this example, but the **View shape in MR** and **Measure in MR** controls would work as well.
 
+We'll cover the following tasks:
 
-This topic will guide you through creating a test app that you can use to take and upload photos from within an MR session, including:
-
-- Inserting a **View in 3D** control with the default sample 3D object included so you can see and manipulate a 3D object.
-- Connecting the **View in 3D** control to a **View in MR** control button so you can view the 3D object in MR.
-- Testing the controls using an MR-capable device.
-- Inserting a gallery to view recorded photos taken from the **View in MR** control on the MR-capable device.
-- Uploading photos to OneDrive with a Power Automate flow.
+- Adding a **View in 3D** control to view and manipulate a sample 3D object
+- Connecting the **View in 3D** control to a **View in MR** control to view the 3D object in the real world
+- Adding a gallery control to view photos taken with the **View in MR** control
+- Uploading the photos to OneDrive with a Microsoft Power Automate flow
 
 ## Prerequisites
 
-- Create a [blank canvas app](create-blank-app.md).
-- Create a OneDrive folder called **MRPhotos** to store your photos when testing the upload feature.
+- [Create a blank canvas app](./create-blank-app.md).
+- Create a folder called **MRPhotos** on OneDrive. You'll use this folder to store your uploaded photos.
 
-> [!TIP]
-> - The MR controls work best in well-lit environments with flat-textured surfaces. When establishing tracking, point the device at the surface you would like to track and slowly pan the device from right to left in broad arm motions. If tracking fails, exit and enter the MR view to reset the tracking and try again.
-> - LIDAR-enabled devices will also result in better tracking.
+>[!TIP]
+>The mixed-reality (MR) controls work best in well-lit environments with flat-textured surfaces. Tracking is better on LIDAR-enabled devices.
 
-## Insert and connect a 3D object to the View in MR control and test your app
+## Add a button to take a photo of a 3D object in mixed reality
 
-With an app open for editing in [Power Apps Studio](https://create.powerapps.com), you can insert and connect the **View in 3D** and **View in MR** controls. Using these controls lets you overlay a sample 3D object (which looks like a box's frame) into the real world using your device's camera.
+This example has three parts. First, we'll add a button that lets users take a photo of a 3D object in a mixed reality experience.
 
-1. Open the **Insert** tab.
-1. Expand **Media**.
-1. Select the control **View in 3D** to place it in the center of the app screen, or drag it to position it anywhere on the screen.  
+### Insert a **View in 3D** control
 
-    A default shape is included in the control. You can change this shape to another by altering the **Source** property. For more information, see [how to define where the 3D content is stored](mixed-reality-component-view-3d-store.md). In this example, we'll use the URL *https://raw.githubusercontent.com/microsoft/experimental-pcf-control-assets/master/robot_arm.glb*.
-1. Open the **Insert** tab.
-1. Expand **Mixed reality**.
-1. Select the control **View in MR** to place it in the app screen, or drag it to position it anywhere on the screen.
+With your app open for [editing](edit-app.md) in [Power Apps Studio](https://create.powerapps.com):
 
-    :::image type="content" source="./media/augmented-view-mr/augmented-view-mr.png" alt-text="Insert the View in MR control into the app.":::
+1. Open the **Insert** tab and expand **Media**.
+1. Select **View in 3D** to place a 3D object on the app screen. Drag the control to the screen to position it more precisely.
 
-1. In the **Properties** panel for the **View in MR** control, on the **Advanced** tab, select the **Source** field and enter `ViewIn3D1.Source` to set the source object as the 3D object you inserted with the **View in 3D** control.  
+    The control comes with a transparent cube shape. If you like, change the control's **Source** property to [load a different 3D model](mixed-reality-component-view-3d-store.md). In this example, we'll use the URL *<https://raw.githubusercontent.com/microsoft/experimental-pcf-control-assets/master/robot_arm.glb>*.
 
-    You can also use the expression editor at the top of the window: type `ViewIn3D1.Source`.
+    :::image type="content" source="./media/augmented-upload-photo/augmented-view-3d-shape.png" alt-text="A screenshot of a View in 3D control under construction in Microsoft Power Apps Studio, shown with its Source property.":::
 
-   ![Screenshot showing the Source property with ViewIn3D1.Source in the expression editor.](./media/augmented-upload-photo/add-3d-model-source.png "Screenshot showing the Source property with ViewIn3D1.Source in the expression editor")
+### Insert and connect a **View in MR** control
 
+1. Open the **Insert** tab and expand **Mixed Reality**.
+1. Select **View in MR** to place the control on the app screen, or drag the control to the screen to position it more precisely.
+1. Change the control's **Source** property to **ViewIn3D1.Source**. (*ViewIn3D1* is the name of the **View in 3D** control we added earlier.) This expression directs the **View in MR** control to overlay the 3D model on the device camera feed.
 
-1. [Save (and, if necessary, publish) the app](save-publish-app.md) and [load it on your mobile device](/powerapps/maker/canvas-apps/../mobile/run-powerapps-on-mobile) to test that you can view the 3D object in MR by selecting the **View in MR** button.
+   :::image type="content" source="./media/augmented-upload-photo/augmented-view-mr.png" alt-text="A screenshot of a View in MR control under construction in Microsoft Power Apps Studio, shown with its Source property.":::
 
+1. [Save and publish the app](save-publish-app.md) and [run it on your mobile device](/powerapps/maker/canvas-apps/../mobile/run-powerapps-on-mobile).
+1. Select **View in MR** to view the 3D object in mixed reality. Select the camera icon to take a photo of the MR view.
 
-## Insert a gallery to view photos taken in the app
+## Insert a gallery control to view photos taken in the app
 
-You can now insert a gallery control into your app. The gallery control lets users of the app take and view photos from within the app.
+Next, we'll add a gallery so users can view the photos they've taken.
 
-Photos you take by selecting the camera icon in the MR view on the app will be loaded into the gallery control on the app. If you exit the MR view to see the gallery, reentering the MR view and taking more photos will overwrite the photos.
+1. Edit your app again. Open the **Insert** tab and place a **Vertical gallery** control on the screen.
+1. Change the control's **Items** property to **ViewInMR1.Photos**. (*ViewInMR1* is the name of the **View in MR** control we added earlier.)
+1. Optionally, change the gallery's **Layout** property to **Image and title**.
 
-1. Open the **Insert** tab.
-1. Select the **Vertical gallery** control to place it in the center of the app screen, or drag it to position it anywhere on the screen.
-1. In the **Properties** panel for the gallery control, on the **Advanced** tab, set the **Items** property to equal `ViewInMR1.Photos`.  
-    
-    You can also use the expression editor at the top of the window.
-    
-    ![Screenshot showing the Items property with ViewInMR1.Photos.](./media/augmented-upload-photo/add-gallery-source.png "Screenshot showing the Items property with ViewInMR1.Photos")
-1. Hold the `Alt` key and select **View in MR** to generate sample photos and data. You should now see the gallery populate with a sample picture.
+    :::image type="content" source="./media/augmented-upload-photo/augmented-view-gallery.png" alt-text="A screenshot of a vertical gallery under construction in Microsoft Power Apps Studio, shown with its Items and Layout properties.":::
 
-    :::image type="content" source="./media/augmented-upload-photo/gallery-example.png" alt-text="Example of what the gallery should look like":::
+1. Preview the app and select **View in MR** to generate a sample photo.
+    The gallery populates with a sample picture.
 
+    :::image type="content" source="./media/augmented-upload-photo/gallery-example.png" alt-text="A screenshot of a canvas app that shows a 3D model and a photo of the model in a gallery.":::
 
-    > [!TIP]
-    > You can load all photos taken across multiple MR controls by adding `Collect(AllPhotos,ViewInMR1.Photos)` to the **OnChange** property of each MR control.
+>[!NOTE]
+>If users exit the MR view to see the gallery, then enter the MR view again and take more photos, the new photos will replace the ones they took earlier.
 
-You can insert a "pop-up" overlay of the selected image so users of the app can see the photo full size.
+>[!Tip]
+>You can load all photos taken across multiple MR controls by adding `Collect(AllPhotos,ViewInMR1.Photos)` to the **OnChange** property of each MR control.
 
-1. Open the **Insert** tab.
-1. Expand **Media** and select the **Image** control to place it in the app screen. Drag and position it so it covers the entire screen (or however much of the screen you want the image to cover when selected from the gallery).
+<!-- It's not clear to me how to follow the instructions above or what's supposed to happen. Can you please flesh this out in a section of its own, not a tip? -->
 
-    ![Drag the image control to fill the screen.](./media/augmented-upload-photo/insert-pop-up.png "Drag the image control to fill the screen")
+### Add a larger overlay to the thumbnail images in the gallery
 
-1. Go to the **Advanced** tab of the **Properties** pane:  
-    1. Change the **OnSelect** property to `UpdateContext({vVisibleImageZoom:false})`.
-    1. Change the **Image** property to `Gallery1.Selected.Image1` (or whatever the first image in the gallery control is labeled).
-    1. Change the **Visible** property to `vVisibleImageZoom`.
-1. Select the first image in the gallery control.
-1. Go to the **Advanced** tab of the **Properties** pane and change the **OnSelect** property to `UpdateContext({vVisibleImageZoom:true})`.
+To make the photos in the gallery easier to see, you can add a full-size overlay that appears when the user selects a thumbnail image.
 
-    ![With the image thumbnail in the gallery selected, change the OnSelect property.](./media/augmented-upload-photo/set-gallery-onselect.png "With the image thumbnail in the gallery selected, change the OnSelect property")
+1. Edit your app again. Open the **Insert** tab and expand **Media**.
+1. Select **Image** to place an image control on the screen. Move and size it according to how you want the larger photo to appear when a thumbnail image is selected.
 
-1. [Save and publish the app](save-publish-app.md) and [load it on your mobile device](/powerapps/maker/canvas-apps/../mobile/run-powerapps-on-mobile).
-1. Tap the **View in MR** button to open MR view. 
-1. Tap the screenshot icon at the bottom of the screen, then tap the back arrow at the top of the screen.
-1. You should see the screenshot now showing underneath the **View in MR** button. Tap the screenshot's thumbnail, and a large version of the screenshot will appear. Tap anywhere on the image to hide it.
+    :::image type="content" source="./media/augmented-upload-photo/insert-pop-up.png" alt-text="A screenshot of an image control under construction in Microsoft Power Apps Studio.":::
 
-## Upload photos to Sharepoint with a Power Automate flow
+1. Change the image control's properties as follows:
+    | Property | Value |
+    | - | - |
+    | **OnSelect** | **UpdateContext({vVisibleImageZoom:false})** |
+    | **Image** | **Gallery1.Selected.Image2** (assuming the gallery control is *Gallery1* and the first thumbnail image is *Image2*)
+    | **Visible** | **vVisibleImageZoom**
 
+1. Select the first thumbnail image in the gallery control. Change its **OnSelect** property to **UpdateContext({vVisibleImageZoom:true})**.
 
-1. Go to the **Action** tab and select **Power Automate**, followed by **Create a new flow**. This option opens Power Automate in a new browser tab. You might need to sign in at the top.
+    :::image type="content" source="./media/augmented-upload-photo/set-gallery-onselect.png" alt-text="A screenshot of a thumbnail image in a gallery in Microsoft Power Apps Studio, shown with its OnSelect property.":::
 
-    ![Select Action, then select Power Automate.](./media/augmented-upload-photo/open-automate.png "Select Action, then select Power Automate")
-1. Choose the template for a **PowerApps button**.
+1. [Save and publish the app](save-publish-app.md) and [run it on your mobile device](/powerapps/maker/canvas-apps/../mobile/run-powerapps-on-mobile).
+1. Select **View in MR**, and then select the camera icon to take a photo. Select the back arrow at the top of the screen to exit the MR view.
+1. Select the thumbnail in the gallery to show a larger version of the photo. Select the image to hide it.
 
-    ![Select the PowerApps button template.](./media/augmented-upload-photo/create-power-apps-button.png "Select the PowerApps button template")
-1. To make it easier to find later, rename the flow by selecting **PowerApps button** at the top and entering a new name of "Upload MR Photo".
+## Upload photos to OneDrive with a Power Automate flow
 
-    ![Change the name on the top of the screen.](./media/augmented-upload-photo/rename-flow.png "Change the name on the top of the screen")
+Last, we'll create a workflow in Power Automate. The workflow uploads photos from the app to a folder named **MRPhotos** on OneDrive.
 
-1. Select **...** (ellipsis) next to the Power Apps trigger, select **Delete**, and then select **OK**.
+### Create a flow in Power Automate
 
-    :::image type="content" source="./media/augmented-upload-photo/delete-powerapps-trigger.gif" alt-text="Deleting the PowerApps trigger":::
+1. Edit your app. Select **Action** > **Power Automate** > **Create a new flow**. (You may need to sign in to Power Automate first.)
 
-1. In the search box type in "PowerApps (V2)" and then select the "PowerApps (V2)" trigger.
+    :::image type="content" source="./media/augmented-upload-photo/open-automate.png" alt-text="A screenshot of an app in Microsoft Power Apps Studio, with a new Power Automate flow selected.":::
 
-    :::image type="content" source="./media/augmented-upload-photo/select-powerapps-v2-trigger.png" alt-text="Select the PowerApps (V2) trigger":::
+1. Search for and select the Power Apps button template.
 
-1. Select **Add an input**, select **File** type, and then change the name from "File Content" to "Image".
+    :::image type="content" source="./media/augmented-upload-photo/create-power-apps-button.png" alt-text="A screenshot of the Power Automate template page, with the Power Apps button template selected.":::
 
-    :::image type="content" source="./media/augmented-upload-photo/trigger-inputs.png" alt-text="The expected values for the PowerApps (V2) trigger":::
+1. Select **Power Apps button** at the top of the window and enter a new name for your flow. In this example, we'll name the flow *Upload MR Photo*.
 
-1. Select **+ New step**. Search for **Sharepoint Create file** and select the **Create file** action that appears in the results.
+    :::image type="content" source="./media/augmented-upload-photo/rename-flow.png" alt-text="A screenshot of the Power Automate edit window, with the workflow name highlighted.":::
 
-    :::image type="content" source="./media/augmented-upload-photo/sharepoint-create-file-action.png" alt-text="Screenshot highlighting the Create file action":::
+1. In the PowerApps step in the workflow, select **...**, and then select **Delete**.
 
-1. Fill in the following information:
-    1. For **Site Address**, select the Sharepoint site that you want the photo's uploaded to.
-    1. For **Folder Path**, select the folder button to browse the sharepoint site, and select a folder.
-    1. For **File Name**, copy and paste this value: **@{triggerBody()?['file']?['name']}**
-    1. For **File Content**, copy and paste this value: **@{triggerBody()['file']['contentBytes']}**
-       
-1. The complete flow should now look like this:
+    :::image type="content" source="./media/augmented-upload-photo/rename-flow-delete-trigger.png" alt-text="A screenshot of the Power Automate edit window, with the PowerApps step selected for deletion.":::
 
-    :::image type="content" source="./media/augmented-upload-photo/flow-complete.png" alt-text="Screenshot showing the completed flow":::
+1. Search for **PowerApps (V2)** and select the PowerApps (V2) trigger.
 
-1. Save the flow and return to the browser tab that has your canvas app open. You'll see your flow now shows up in the **Data** pane.
+    :::image type="content" source="./media/augmented-upload-photo/select-powerapps-v2-trigger.png" alt-text="A screenshot of the Power Automate edit window, with the PowerApps (v2) trigger selected.":::
 
-    ![Screenshot of the data pane with the flow shown.](./media/augmented-upload-photo/flow-data-pane.png "Screenshot of the data pane with the flow shown")
+1. Select **Add an input**, and then select **File**.
+1. Change the label *File Content* to **Image**.
 
+    :::image type="content" source="./media/augmented-upload-photo/trigger-inputs.png" alt-text="A screenshot of the Power Automate edit window, with the File input label changed to Image.":::
 
-1. Open the **Insert** tab and select **Button**.
-1. Change the **Text** property of the button to `Upload photos`, and set the font size to 16. Move the button to a free area on the app screen and change its size so the button label fits inside it properly.
-1. In the expression editor at the top of the Power Apps window, select the **OnSelect** property, and then select the **Action** tab. Select **Power Automate**, and then select the flow you created.
+1. Select **New step**. Search for **OneDrive Create file** and select the **Create file** action.
 
-    ![Screenshot highlighting the OnSelect property, Action tab, Power Automate button, and the flow.](./media/augmented-upload-photo/add-flow-to-button.png "Screenshot highlighting the OnSelect property, Action tab, Power Automate button, and the flow")
+    :::image type="content" source="./media/augmented-upload-photo/onedrive-create-file-action.png" alt-text="A screenshot of the Power Automate edit window, with the OneDrive Create file action selected.":::
 
+1. In **Folder Path**, select the folder icon and navigate to the **MRPhotos** folder you created earlier.
+1. In **File Name**, enter **@{triggerBody()?['file']?['name']}** (Your text changes to "file.name.")
+1. In **File Content**, enter **@{triggerBody()['file']['contentBytes']}** (Your text changes to "Image.")
+1. Save your flow.
 
-1. The **OnSelect** method will be populated with `UploadMRPhoto.Run(`. Insert the following code to upload the last photo taken to the **MRPhotos** folder on OneDrive: 
+The complete flow should look like this:
 
-    
-    ```powerapps-dot
-    UploadMRPhoto.Run({file:{name:GUID() & ".png", contentBytes:Last(ViewInMR1.Photos).ImageURI}})
-    ```
-    
+:::image type="content" source="./media/augmented-upload-photo/flow-complete.png" alt-text="A screenshot of the Power Automate edit window, with the completed workflow shown.":::
 
-    ![Screenshot showing the code in the expression editor.](./media/augmented-upload-photo/button-upload-code.png "Screenshot showing the code in the expression editor")
+### Connect the workflow to a button in your app
 
-    If you're inside a gallery of the MR photos, instead use the following formula:
-    
-    ```powerapps-dot
-    UploadMRPhoto.Run({file: {name:GUID() & ".png", contentBytes:ThisItem.ImageURI}})
-    ```
+1. Return to your app in Power Apps Studio. Your flow is now listed under **Available flows**.
 
-    If you want to create a button that uploads all of the photos taken in the MR session, use this formula: 
+    :::image type="content" source="./media/augmented-upload-photo/flow-data-pane.png" alt-text="A screenshot of the Power Apps Studio Data pane, with the new flow shown.":::
 
-    ```powerapps-dot
-    ForAll(ViewInMR1.Photos, UploadMRPhoto.Run({file:{name:GUID() & ".png", contentBytes:ImageURI}}))
-    ```
+1. Open the **Insert** tab and select **Button**. Place the button control on the screen and resize it as needed.
+1. Change the button control's **Text** property to **Upload photos**.
+1. In the formula bar at the top of the Power Apps window, select the **OnSelect** property. Select **Action** > **Power Automate** > **Upload MR Photo**.
 
-1. You can test the new button in the studio by pressing the Play button at the top of the studio and then press the **View in MR** button followed by your button to upload the photo. The sample photo should be uploaded to your sharepoint site.
+    :::image type="content" source="./media/augmented-upload-photo/add-flow-to-button.png" alt-text="A screenshot of a button control under construction in Power Apps Studio, with a flow added to the control's OnSelect property.":::
 
-## Use SaveData and LoadData functions
+    The button control's **OnSelect** property changes to **UploadMRPhoto.Run(**.
 
-You can use the **SaveData** and **LoadData** functions In Power Apps with the MR controls.
+1. To upload the last photo taken, paste the following code after the opening parenthesis: **{file:{name:GUID() & ".png", contentBytes:Last(ViewInMR1.Photos).ImageURI}})**
 
-See the [SaveData, LoadData, and ClearData functions in Power Apps](./functions/function-savedata-loaddata.md) topic for how to use these functions.
+    :::image type="content" source="./media/augmented-upload-photo/button-upload-code.png" alt-text="A screenshot of a button control's OnSelect property in the Power Apps Studio formula bar.":::
+
+    If you placed the button control inside the gallery, paste the following code instead: **{file: {name:GUID() & ".png", contentBytes:ThisItem.ImageURI}})**
+
+    :::image type="content" source="./media/augmented-upload-photo/button-upload-code-gallery.png" alt-text="A screenshot of a button control's OnSelect property in the Power Apps Studio formula bar.":::
+
+    To make the button upload all the photos taken, delete **UploadMRPhoto.Run(** and paste the following code: **ForAll(ViewInMR1.Photos, UploadMRPhoto.Run({file:{name:GUID() & ".png", contentBytes:ImageURI}}))**
+
+    :::image type="content" source="./media/augmented-upload-photo/button-upload-code-all.png" alt-text="A screenshot of a button control's OnSelect property in the Power Apps Studio formula bar.":::
+
+1. Preview the app and select **View in MR**, and then select **Upload photos**. Check the **MRPhotos** folder on OneDrive and confirm that the sample photo has been uploaded.
+
+### Add offline capability to your app
+
+You can use your app even when you have limited or no network connectivity using the [**SaveData** and **LoadData** functions](./functions/function-savedata-loaddata.md).
 
 ### See also
 
 - [View in 3D control](mixed-reality-component-view-3d.md)
 - [Measure in MR control](mixed-reality-component-measure-distance.md)
-- [View shape in MR control](mixed-reality-component-view-shape.md) 
+- [View shape in MR control](mixed-reality-component-view-shape.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
