@@ -53,7 +53,7 @@ Power Apps can also periodically save the app every 2 minutes. If you have saved
 
 ## Identify the live version
 
-In [powerapps.com](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Apps** on the **File** menu (on the left edge), select the details icon for an app, and then select the **Versions** tab.
+To see all versions of an app, go to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) > **Apps** > select your app > **Details** > **Versions**.
 
 The **Live** version is published for everyone with whom the app is shared. The most recent version of any app is available only to those who have edit permissions for it.
 
@@ -68,8 +68,7 @@ To publish the most recent version, highlight the version and select ellipsis (.
 ## Next steps
 
 * Find and run the app in a [browser](../../user/run-app-browser.md) or on a [phone](/powerapps/maker/canvas-apps/run-canvas-and-model-apps-on-mobile).
-* [Rename an app](set-name-tile.md) from powerapps.com.
+* [Rename an app](set-name-tile.md) from [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 * [Restore an app](restore-an-app.md) if you have multiple versions of an app.
-
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
