@@ -40,7 +40,7 @@ There are a few key environment and licensing prerequisites required when sharin
 ## Model-driven app sharing basics
 
 Before you share an app, it is helpful to understand the following model-driven app sharing basics:
-- The app must have at least one security role associated with it, such as **Basic User**. However, if your app has one or more custom tables, in order for users to work with your custom table's records, you must configure privileges to the custom tables in a security role. More information: [Create a security role for your app](#create-a-security-role-for-your-app)
+- The app must have at least one security role associated with it, such as **Basic User**. However, if your app has one or more custom tables, in order for users to work with your custom table's records, you must configure privileges to the custom tables in a security role. More information: [Create or edit a security role for your app](#create-or-edit-a-security-role-for-your-app)
 - App users must be assigned a security role from the available roles. Alternatively, a team can be assigned a security role, and users can be made members of the team. A team can be an Owner, Access, Azure AD security group, or Microsoft 365 group. [Learn to manage a Dataverse team](/power-platform/admin/database-security).
 
 ## Assign security roles and users to a model-driven app
@@ -52,7 +52,7 @@ Using security roles for users that perform similar tasks is the best way to sha
    :::image type="content" source="media/share-model-driven-app/assign-security-role-to-app.png" alt-text="Assign security roles to app":::
 
    > [!IMPORTANT]
-   > If your app has one or more custom tables, in order for users to work with your custom table's records, you must configure privileges to the custom tables in a security role. More information: [Create a security role for your app](#create-a-security-role-for-your-app)
+   > If your app has one or more custom tables, in order for users to work with your custom table's records, you must configure privileges to the custom tables in a security role. More information: [Create or edit a security role for your app](#create-or-edit-a-security-role-for-your-app)
    - To assign an individual user or Azure Active Directory (Azure AD) group team, select the user name or team from the **People** list.
    :::image type="content" source="media/share-model-driven-app/share-user.png" alt-text="Assign specific users to a model-driven app":::
 1. Select **Share**.
