@@ -27,7 +27,7 @@ searchScope:
 ---
 
 
-# Create and manage personal views on a grid page
+# Create and manage personal views on a grid page (preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
 
