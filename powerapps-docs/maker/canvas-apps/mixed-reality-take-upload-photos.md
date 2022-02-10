@@ -171,15 +171,15 @@ The complete flow should look like this:
 
 1. To upload the last photo taken, paste the following code after the opening parenthesis: **{file:{name:GUID() & ".png", contentBytes:Last(ViewInMR1.Photos).ImageURI}})**
 
-    :::image type="content" source="./media/augmented-upload-photo/button-upload-code.png" alt-text="A screenshot of a button control's OnSelect property in the Power Apps Studio formula bar.":::
+    :::image type="content" source="./media/augmented-upload-photo/button-upload-code.png" alt-text="A screenshot of a button control's OnSelect property in the Power Apps Studio formula bar, which uploads the last photo taken.":::
 
     If you placed the button control inside the gallery, paste the following code instead: **{file: {name:GUID() & ".png", contentBytes:ThisItem.ImageURI}})**
 
-    :::image type="content" source="./media/augmented-upload-photo/button-upload-code-gallery.png" alt-text="A screenshot of a button control's OnSelect property in the Power Apps Studio formula bar.":::
+    :::image type="content" source="./media/augmented-upload-photo/button-upload-code-gallery.png" alt-text="A screenshot of a button control's OnSelect property in the Power Apps Studio formula bar, when the button is in a gallery.":::
 
     To make the button upload all the photos taken, delete **UploadMRPhoto.Run(** and paste the following code: **ForAll(ViewInMR1.Photos, UploadMRPhoto.Run({file:{name:GUID() & ".png", contentBytes:ImageURI}}))**
 
-    :::image type="content" source="./media/augmented-upload-photo/button-upload-code-all.png" alt-text="A screenshot of a button control's OnSelect property in the Power Apps Studio formula bar.":::
+    :::image type="content" source="./media/augmented-upload-photo/button-upload-code-all.png" alt-text="A screenshot of a button control's OnSelect property in the Power Apps Studio formula bar, which uploads all photos taken.":::
 
 1. Preview the app and select **View in MR**, and then select **Upload photos**. Check the **MRPhotos** folder on OneDrive and confirm that the sample photo has been uploaded.
 
