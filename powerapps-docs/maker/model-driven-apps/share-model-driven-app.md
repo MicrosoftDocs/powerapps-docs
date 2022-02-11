@@ -186,7 +186,7 @@ To get the direct link to an app:
 
 ## About predefined security roles
 
-These predefined roles are available with a [!INCLUDE [powerapps](../../includes/powerapps.md)] environment.
+These predefined roles are available with Dataverse.
 
 |Security role  |*Privileges  |Description |
 |---------|---------|---------|
