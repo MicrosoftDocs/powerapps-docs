@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/10/2022
+ms.date: 02/11/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
@@ -22,7 +22,7 @@ You'll need an SSL certificate to set up a [custom host name](add-custom-domain.
 
 1. Open the [Power Apps portals admin center](admin-overview.md).
 
-1. Select **Manage SSL certificates**. The authentication key is displayed along with its expiration date and thumbprint.
+1. Select **Manage SSL certificates**. The certificate’s subject name is displayed along with expiration date and thumbprint.
 
 1. Select **Add new** to upload a new certificate.
 
