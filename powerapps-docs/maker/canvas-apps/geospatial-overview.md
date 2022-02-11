@@ -89,9 +89,10 @@ For the controls to function properly, these connectors must not have conflictin
     | Map | Show map tiles | Coordinates in and around the map view | Yes | No | Yes | To show the map tiles in the map view. |
     | Map | Show pins and route waypoints | Pins and route waypoint addresses | No | Yes | Yes | To translate addresses to latitude/longitude coordinates, and show them on the map. |
     | Map | Show routes | Route waypoint coordinates | Yes | No | Yes | To calculate routes between waypoints. |
+    | Map | Show pins and shapes from coordinates | Pin and shape coordinates | No | No | No | Feature does not require sending coordinate data. |
     | Address Input | Address Search | Address search query string | No | Yes | Yes | To show address search results. |
     | Address Input | Address Search | Current device location | No | Yes | Yes | To bias address search results around the device location. |
-
+    
 ## Next steps
 
 Start installing the controls in your apps:
