@@ -37,7 +37,7 @@ The scenario we present in this series of tutorials is simple compared to a full
 
 When you're done, we hope you'll be back to check out this full scenario.
 
-Even within the scenario, you can focus on the tasks that interest you, and complete the tasks as you have time. After you set up SharePoint lists in task 1, you can work through tasks 2-5 in any order; then tasks 6-8 are sequential. Lastly, we have included two finished apps and a Power BI Desktop report as part of the [download package](https://aka.ms/o4ia0f) for this scenario. You can look at these and learn by example even if you don't go through all the steps in each task.
+Even within the scenario, you can focus on the tasks that interest you, and complete the tasks as you have time. After you set up SharePoint lists in task 1, you can work through tasks 2-5 in any order; then tasks 6-8 are sequential.
 
 ## Prerequisites
 To complete the scenario, you need the following subscriptions and desktop tools. The Office 365 Business Premium subscription includes Power Apps and Power Automate.

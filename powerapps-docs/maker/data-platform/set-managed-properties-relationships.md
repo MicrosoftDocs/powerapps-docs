@@ -27,7 +27,7 @@ search.app:
 ---
 # Set managed properties for relationships
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 <a name="BKMK_ManagedProperties"></a>   
 

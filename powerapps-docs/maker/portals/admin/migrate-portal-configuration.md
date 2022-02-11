@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 1/4/2022
+ms.date: 02/03/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
@@ -40,7 +40,7 @@ Migration involves exporting the existing configuration from the source Microsof
 
     :::image type="content" source="media/migrate-portal-config/delete-portal.png" alt-text="Delete portal app.":::
 
-1. Transfer the portal metadata from the source environment using the [Power Platform CLI](#transfer-portal-configuration-using-power-platform-cli) or the [Configuration Migration Tool](#transfer-portal-configuration-using-the-configuration-migration-tool). 
+1. [Transfer](#transfer-portal-metadata) the portal metadata from the source environment using the Power Platform CLI or the Configuration Migration Tool.
 
 1. On the target environment, provision a new portal using the existing portal website option. This process will configure a portal using the portal configuration you transferred from the source environment.
 
@@ -155,10 +155,12 @@ Schema files are available for the following portal types:
 - **Portals created in an environment with Dataverse**
     - [Custom portal (Blank portal)](https://go.microsoft.com/fwlink/p/?linkid=2110477)
     - [Custom portal (Blank portal)](https://go.microsoft.com/fwlink/p/?linkid=2162831) (for version [9.2.2103.x](../versions/package-version-9.2.2103.md))
+    - [Custom portal (Blank portal)](https://go.microsoft.com/fwlink/?linkid=2186536) (for version [9.3.2201.x](../versions/package-version-9.3.2201.md) or higher)
 
 - **Portals created in an environment containing customer engagement apps (such as Dynamics 365 Sales and Dynamics 365 Customer Service)**
     - [Custom portal (Blank portal)](https://go.microsoft.com/fwlink/p/?linkid=2019804)
     - [Custom portal (Blank portal)](https://go.microsoft.com/fwlink/p/?linkid=2162733) (for version [9.2.2103.x](../versions/package-version-9.2.2103.md))
+    - [Custom portal (Blank portal)](https://go.microsoft.com/fwlink/?linkid=2186261) (for version [9.3.2201.x](../versions/package-version-9.3.2201.md) or higher)
     - [Community portal](https://go.microsoft.com/fwlink/p/?linkid=2019704)
     - [Customer Self-Service portal](https://go.microsoft.com/fwlink/p/?linkid=2019705)
     - [Partner portal](https://go.microsoft.com/fwlink/p/?linkid=2019803)

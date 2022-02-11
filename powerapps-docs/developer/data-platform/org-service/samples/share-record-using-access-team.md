@@ -17,7 +17,7 @@ search.app:
 ---
 # Sample: Share a record using an access team
 
-[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 
 <!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/sample-share-record-using-access-team -->
 

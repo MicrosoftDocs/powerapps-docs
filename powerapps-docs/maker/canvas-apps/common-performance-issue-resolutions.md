@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 10/27/2021
+ms.date: 01/31/2022
 ms.subservice: canvas-maker
 ms.author: jiahn
 search.audienceType: 
@@ -47,7 +47,7 @@ To turn on the explicit column selection feature on the canvas app, go to **Sett
 
 ## Unsupported or legacy browsers
 
-Users who use unsupported or legacy browsers, such as Internet Explorer 11, might experience performance issues. Ensure that users only use [supported browsers](limits-and-config.md#supported-browsers-for-running-canvas-apps) for running canvas apps.
+Users who use unsupported or legacy browsers, might experience performance issues. Ensure that users only use [supported browsers](limits-and-config.md#supported-browsers-for-running-canvas-apps) for running canvas apps.
 
 ## Slow performance because of geographical distance
 

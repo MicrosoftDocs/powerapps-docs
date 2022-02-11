@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.reviewer: 
-ms.date: 06/03/2021
+ms.date: 01/25/2022
 ms.author: kvivek
 search.audienceType: 
   - maker
@@ -18,6 +18,7 @@ search.app:
   - PowerApps
 contributors:
   - kumarvivek
+  - tapanm-msft
 ---
 
 # What's new in Power Apps?
@@ -35,7 +36,7 @@ To learn more about how to browse information in the weekly release notes, read 
 
 ## Release plan
 
-For information about new features being released over the next few months that you can use for planning, see the [2021 release wave 1 plan](/power-platform-release-plan/2021wave1/power-apps/planned-features).
+For information about new features being released over the next few months that you can use for planning, see  [2022 release wave 1 plan](/power-platform-release-plan/2022wave1/power-apps/planned-features) and [2021 release wave 2 plan](/power-platform-release-plan/2021wave2/power-apps/planned-features).
 
 ## Known limitations
 

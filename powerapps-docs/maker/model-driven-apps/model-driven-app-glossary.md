@@ -6,7 +6,7 @@ author: Mattp123
 ms.service: powerapps
 ms.topic: overview
 ms.component: model
-ms.date: 07/20/2021
+ms.date: 02/03/2022
 ms.subservice: mda-maker
 ms.author: matp
 ms.reviewer: v-roryneary
@@ -30,7 +30,7 @@ Accessibility is a term that is used to refer to the extent to which people with
 
 ## Admin center
 
-The Power Platform admin center is a unified portal for administrators to manage environments and settings for Power Apps, Power Automate, and Dynamics 365 apps. Power Platform admin center doesn't cover administration settings and features associated with Power BI.
+The Power Platform admin center is a unified portal for administrators to manage environments and settings for Power Apps, [Power Automate](#power-automate), and [Dynamics 365](#dynamics-365) apps. Power Platform admin center doesn't cover administration settings and features associated with [Power BI](#power-bi).
 
 [Learn more about the Power Platform admin center](/power-platform/admin/admin-documentation)
 
@@ -40,7 +40,7 @@ The Power Platform admin center is a unified portal for administrators to manage
 
 The tool that is used to create and edit model-driven apps. As the modern app designer experience matures, it will replace the classic experience.
 
-Use it to configure the navigation site map, tables, forms, and views relevant to your app.
+Use it to configure the navigation [site map](#site-map), [tables](#table), [forms](#form), and [views](#view) relevant to your app.
 
 [A preview of the new app designer experience](../../maker/model-driven-apps/app-designer-overview.md)
 
@@ -48,7 +48,7 @@ Use it to configure the navigation site map, tables, forms, and views relevant t
 
 ## App navigation experience
 
-The way in which areas, groups, and sub-groups are presented in a model-driven app.  It is also known as the [site map](../model-driven-apps/model-driven-app-glossary.md#site-map)
+The way in which [areas](#area), [groups](#group), and [subarea](#subarea) are presented in a model-driven app.  It is also known as the [site map](../model-driven-apps/model-driven-app-glossary.md#site-map)
 
 ## Application lifecycle management
 
@@ -62,11 +62,15 @@ The way in which we manage the lifecycle of an application from conception to en
 
 [App navigation in model-driven apps](app-navigation.md)
 
+## Attribute
+
+An attribute is another name for a [column](#column) and is a term commonly used by Power Apps developers. Each [table](#table) in Power Apps corresponds to a database table and each table column in Power Apps corresponds to a column in the database table. 
+
 ## Business process flow
 
 Logic built into a given table to ensure that users complete records by updating fields in the correct order.  
 
-While these are authored initially using the Power Automate experience, business process flows are experienced within model-driven app as a change in the user interface.
+While these are authored initially using the [Power Automate](#power-automate) experience, business process flows are experienced within model-driven app as a change in the user interface.
 
 A business process flow is arranged into stages. Each stage defines the columns (fields) that must be completed typically before moving on to the next stage. For example, the default business process flow for the opportunity table has four stages: qualify > develop > propose > close. The current stage in a business process flow is indicated with a dot next to the stage in the sequence of stages from left to right in the flow.
 
@@ -100,7 +104,7 @@ A visual representation of a table of data. These can take the form of line, bar
 
 ## Classic
 
-The classic interface represents the method in which app makers make changes to features within their Microsoft Dataverse environment.
+The classic interface represents the method in which app makers make changes to features within their Microsoft [Dataverse](#dataverse) environment.
 
 The classic interface has been replaced over time by the web-based method of app authoring known as the unified interface.
 
@@ -108,17 +112,17 @@ The classic interface has been replaced over time by the web-based method of app
 
 ## Classic app designer
 
-The modern app designer lets you create model-driven apps and create canvas apps using custom pages.
+The modern app designer lets you create model-driven apps and create [canvas apps](#canvas-app) using custom pages.
 
 The modern app designer will soon be the default designer for model-driven apps. Currently, you can still create model-driven apps using the classic app designer.
 
 ## Column
 
-A field within a Dataverse table (formerly called an entity). Columns are similar to fields in databases and have different data types such as text, number, date, as well as data types less familiar to databases such as phone, email, file, and image.
+A column (formerly called a field), is a field within a Dataverse table (formerly called an entity). Columns are similar to fields in databases and have different data types such as text, number, date, as well as data types less familiar to databases such as phone, email, file, and image.
 
-The field type defines the kind of data required by the column and also the controls, such as date picker or text box, that will be available when using the control.
+The column type defines the kind of data required by the column and also the controls, such as date picker or text box, that will be available when using the control.
 
-Columns also appear when creating forms. Form tabs also have columns, and this defines where you can put sections.  Additionally, form sections have columns, and these define where you can place table columns (fields in this case).
+Columns also appear when creating forms. Form tabs also have columns, and this defines where you can put sections. Additionally, form sections have columns, and these define where you can place table columns (form fields in this case).
 
 [How to create and edit columns](../../maker/data-platform/create-edit-fields.md)
 
@@ -144,7 +148,7 @@ Components can be split into data (tables, relationships, columns) UI (site map,
 
 A model-driven app is only connected to the data tables that reside in the same environment.  This connection can be considered native because it never has to be set up within the environment.
 
-Connections exist within the environment to enable other elements of the Power Platform to operate correctly.  Notably, Power Apps canvas apps and Power Automate flows have the ability to make use of multiple connections.
+Connections exist within the environment to enable other elements of the Power Platform to operate correctly.  Notably, Power Apps [canvas apps](#canvas-app) and [Power Automate](#power-automate) [flows](#flow) have the ability to make use of multiple connections.
 
 ## Control
 
@@ -164,27 +168,27 @@ A dashboard allows charts, Power BI reports, and views of tables to be presented
 
 ## Data model
 
-A collection of related [tables](model-driven-app-glossary.md#table). In the context of model-driven apps, these are held within the Dataverse database.
+A collection of related [tables](model-driven-app-glossary.md#table). In the context of model-driven apps, these are held within the [Dataverse](#dataverse) database.
 
 In a custom [solution](model-driven-app-glossary.md#solution), the data model is often the set of related tables built with the purpose of delivering the overall business application.
 
 ## Database
 
-The collective term for all the tables in Dataverse.
+The collective term for all the tables in [Dataverse](#dataverse).
 
 ## Dataverse
 
-Microsoft Dataverse is the collective term for the tables, workflows, business process flows, and related functionality that are provisioned within an environment when a database is created.  
+Microsoft Dataverse is the collective term for the [tables](#table), [workflows](#workflow), [business process flows](#business-process-flow), and related functionality that are provisioned within an environment when a database is created.  
 
 Model-driven apps require a Dataverse database.
 
-A Dataverse database contains data structures most closely associated with databases in addition to being able to hold model-driven apps, canvas apps, and power automate flows.
+A Dataverse database contains data structures most closely associated with databases in addition to being able to hold model-driven apps, [canvas apps](#canvas-app), and [Power Automate](#power-automate) [flows](#flow).
 
 [Find out more about Dataverse here](../../maker/data-platform/data-platform-intro.md)
 
 ## Dependency
 
-Dependencies are created when elements of components are reliant on each other for them to work. For example, if a column is used within a view then the view requires the column to exist for it to be able to function. There are many examples of dependencies throughout Dataverse. Another example is a model-driven app being dependent on a table if that table is used within the app.
+Dependencies are created when elements of components are reliant on each other for them to work. For example, if a column is used within a view then the view requires the column to exist for it to be able to function. There are many examples of dependencies throughout [Dataverse](#dataverse). Another example is a model-driven app being dependent on a table if that table is used within the app.
 
 Dependencies manifest themselves in numerous ways including when a model-driven app is validated. They also become apparent in the most problematic fashion when trying to delete an aspect of a table, form, view or dashboard.  When this occurs, the dependencies can be viewed by selecting the item to be deleted, and then selecting "show dependencies" on the command bar.
 
@@ -208,7 +212,7 @@ An environment is a space to store, manage, and share your organization's busine
 
 You can package up the various elements as solutions, and these solutions can be exported from one environment to another.
 
-An environment can only ever have one Dataverse database and all your model-driven apps in the environment use this database.
+An environment can only ever have one [Dataverse](#dataverse) database and all your model-driven apps in the environment use this database.
 
 Often multiple environments are used to enable application lifecycle management. For example you might have development, test, and production environments.
 
@@ -218,7 +222,7 @@ Environments exist within a geographical region and can be a means of ensuring t
 
 ## Flow
 
-Cloud flows are functionality offered by Power Automate that allow automation of tasks to take place based upon triggering of conditions such as recurrence, adding or updating of records or simply selection of buttons by users. Flows can be run with or without the introduction of new parameters.
+Cloud flows are functionality offered by [Power Automate](#power-automate) that allow automation of tasks to take place based upon triggering of conditions such as recurrence, adding or updating of records or simply selection of buttons by users. Flows can be run with or without the introduction of new parameters.
 
 [Cloud flows](/power-automate/flow-types#cloud-flows)
 
@@ -252,7 +256,7 @@ This refers to features that have either been deprecated, or the way in which th
 
 ## Lookup
 
-A lookup is a field type that exists when two tables are related. Lookups can be seen in table views on the many side of a one-to-many relationship. They are generally populated using a form on the many side of the relationship.
+A lookup is a field type that exists when two tables are related. Lookups can be seen in table views on the many side of a [one-to-many relationship](#relationship). They are generally populated using a form on the many side of the relationship.
 
 - [Learn more about the lookup field user experience](../../user/lookup-field.md)
 - [How to configure a lookup](../../maker/model-driven-apps/form-designer-add-configure-lookup.md)
@@ -265,7 +269,7 @@ Every table has at least one main form. The main form represents the primary met
 
 ## Monitor
 
-Also know as the app monitor. It lets you understand aspects of the performance of a model-driven app. App monitor can an also be used to monitor canvas apps.
+Also know as the app monitor. It lets you understand aspects of the performance of a model-driven app. App monitor can an also be used to monitor [canvas apps](#canvas-app).
 
 - [Learn how to use the app monitor](../../maker/monitor-modelapps.md)
 - [Use Monitor to understand form performance](monitor-form-checker.md)
@@ -274,7 +278,7 @@ Also know as the app monitor. It lets you understand aspects of the performance 
 
 Modern apps have the concept of pages, which can be either model-driven apps or a canvas-based page using a custom pages. Custom pages allow flexible layout, low-code Power Fx functions, and Power Apps connector data.
 
-It is a tool for enabling model-driven apps and canvas apps to exist together.
+It is a tool for enabling model-driven apps and [canvas apps](#canvas-app) to exist together.
 
 - [Working with custom pages](model-app-page-overview.md)
 - [Learn about creating modern apps](app-designer-overview.md)
@@ -285,15 +289,15 @@ A Power Platform service that allows users to streamline repetitive tasks. Typic
 
 Model-driven app [business process flows](model-driven-app-glossary.md#business-process-flow) that direct users to complete table records in a specific fashion, are authored within Power Automate.
 
-Power Automate flows exist within an environment and can also exist within Power Apps [solutions](model-driven-app-glossary.md#solution).
+[Power Automate flows](#flow) exist within an environment and can also exist within Power Apps [solutions](model-driven-app-glossary.md#solution).
 
 [Learn more about Power Automate](/power-automate/getting-started)
 
 ## Power BI
 
-A data visualization tool that has the capacity to be embedded within model-driven apps or to live completely independently of them. Power BI can connect to a very wide range of data sources, of which Dataverse is just one.
+A data visualization tool that has the capacity to be embedded within model-driven apps or to live completely independently of them. Power BI can connect to a very wide range of data sources, of which [Dataverse](#dataverse) is just one.
 
-Power BI Reports don't exist within Dataverse environments or inside solutions.
+Power BI Reports don't exist within [Dataverse](#dataverse) environments or inside solutions.
 
 - [Use Power BI within a model driven app](use-power-bi.md)
 - [Learn more about Power BI](/power-bi/fundamentals/power-bi-overview)
@@ -310,7 +314,7 @@ Every solution has a publisher. You specify the publisher when you create a solu
 
 ## Record
 
-A record contains one or more columns of information about a person, a place, or a thing. For example, a record might contain the name, the email address, and the phone number of a single customer. Other tools refer to a record as a "row" or an "item".  Records exist within Dataverse tables.
+A record contains one or more columns of information about a person, a place, or a thing. For example, a record might contain the name, the email address, and the phone number of a single customer. Other tools refer to a record as a "row" or an "item".  Records exist within [Dataverse](#dataverse) tables.
 
 ## Relationship
 
@@ -395,7 +399,7 @@ Subareas (tables) and pages appear under the group that they're configured withi
 
 ## Subgrid
 
-Subgrids are areas of main forms that display a list of records from a Dataverse table, while remaining on the form. Typically, a subgrid is used to display child records that relate to the parent record currently under review. For example, books written by an author.
+Subgrids are areas of main forms that display a list of records from a [Dataverse](#dataverse) table, while remaining on the form. Typically, a subgrid is used to display child records that relate to the parent record currently under review. For example, books written by an author.
 
 While subgrids are displayed in a model-driven app, they are a property of the form.
 
@@ -412,7 +416,7 @@ From a site map perspective a tab is a "group" when using the site map designer 
 
 ## Table
 
-A table is a method of storing data in columns (or fields) within Dataverse. Tables where formerly called [entities](model-driven-app-glossary.md#entity).
+A table is a method of storing data in columns (or fields) within [Dataverse](#dataverse). Tables where formerly called [entities](model-driven-app-glossary.md#entity).
 
 Tables, in the context of model-driven apps, only exist within a [Dataverse](model-driven-app-glossary.md#dataverse) database.
 
@@ -450,7 +454,7 @@ The process by which an app maker confirms if the model-driven app has all the c
 
 ## View
 
-A tabular representation of records in a Dataverse table. Tables can have multiple views.
+A tabular representation of records in a [Dataverse](#dataverse) table. Tables can have multiple views.
 
 Views can be pre-filtered and it is possible to define the specific views that a model-driven app will make available to users.
 
@@ -462,6 +466,6 @@ Tables can have multiple views associated with them and you can define the table
 
 A classic workflow is a series of functions or methods, called steps, that are performed sequentially and apply to data contained within tables. The workflow can change the processing direction by using conditionals, referred to as conditional branches.
 
-In many cases classic workflows should be replaced by Power Automate flows.
+In many cases classic workflows should be replaced by [Power Automate](#power-automate) [flows](#flow).
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

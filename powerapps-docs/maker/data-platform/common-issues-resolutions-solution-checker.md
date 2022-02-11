@@ -22,7 +22,7 @@ search.app:
 ---
 # Common issues and resolutions for solution checker
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 This article lists some common issues that you might encounter while using solution checker. Where applicable, workarounds are provided.
 

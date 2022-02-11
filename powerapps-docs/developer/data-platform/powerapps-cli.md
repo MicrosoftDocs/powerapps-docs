@@ -6,7 +6,7 @@ ms.subservice: dataverse-developer
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 06/14/2021
+ms.date: 02/01/2022
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -16,10 +16,10 @@ ms.assetid: f393f227-7a88-4f25-9036-780b3bf14070
 
 # What is Microsoft Power Platform CLI? 
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 > [!NOTE] 
-> Effective June 2021, Microsoft Power Apps CLI is rebranded to Microsoft Power Platform CLI. More information: [Blog: Microsoft Power Platform is the best way for teams to build together](https://cloudblogs.microsoft.com/powerplatform/2021/05/25/microsoft-power-platform-is-the-best-way-for-teams-to-build-together/)<p/>Microsoft Power Platform CLI is currently not available for use in the GCC and GCC High regions.
+> Effective June 2021, Microsoft Power Apps CLI is rebranded to Microsoft Power Platform CLI. More information: [Blog: Microsoft Power Platform is the best way for teams to build together](https://cloudblogs.microsoft.com/powerplatform/2021/05/25/microsoft-power-platform-is-the-best-way-for-teams-to-build-together/)<p/>Microsoft Power Platform CLI is now available for use in the GCC and GCC High (US Sovereign cloud) regions. Use the command `pac auth create` for help on the `--cloud` parameter to find out about supported US Sovereign cloud environments.
 
 Microsoft Power Platform CLI is a simple, one-stop developer CLI that empowers developers and ISVs to perform various operations in Microsoft Power Platform related to environment lifecycle, authentication, and work with Microsoft Dataverse environments, solution packages, portals, code components, and so on.  
 

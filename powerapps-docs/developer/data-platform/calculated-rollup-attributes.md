@@ -75,7 +75,7 @@ search.app:
   
  Only columns from an immediate parent table can be used in a calculated column.  
   
- Saved queries, charts, and visualizations can have a maximum of 10 unique calculated columns.  
+ Saved queries, charts, and visualizations can have a maximum of 50 unique calculated columns.  
   
  Calculated columns can reference other calculated columns in their formula, but they can’t reference themselves.  
   

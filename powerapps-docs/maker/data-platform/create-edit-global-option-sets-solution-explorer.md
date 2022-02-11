@@ -24,7 +24,7 @@ search.app:
 ---
 # Create and edit global choices for Microsoft Dataverse using solution explorer
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 Solution explorer provides one way to Create and edit global choices for Dataverse.
 

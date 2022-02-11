@@ -17,7 +17,7 @@ search.app:
 ---
 # Sample: End a recurring appointment series
 
-[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 
 <!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/sample-end-recurring-appointment-series -->
 
