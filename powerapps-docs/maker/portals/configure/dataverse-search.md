@@ -120,7 +120,7 @@ You can follow the walkthrough with a table of your choice by replacing **nwind\
     :::image type="content" source="media/dataverse-search/global-read-permission.png" alt-text="Configuring global read permission.":::
 
     > [!NOTE]
-    > The **Global Access** access type will provide access to all records of the **nwind\_products** table to related contacts of the associated web role (**Authenticated Users** web role will apply to all logged in portal users). Consider your data security requirements and choose other access types to restrict access to data. Please refer to [Configure security using table permissions](entity-permissions-studio.md) for more details.
+    > The **Global** access type will provide access to all records of the **nwind\_products** table to related contacts of the associated web role (**Authenticated Users** web role will apply to all logged in portal users). Consider your data security requirements and choose other access types to restrict access to data. Please refer to [Configure security using table permissions](entity-permissions-studio.md) for more details.
 
 1. Select **Save & Close**.
 
