@@ -5,7 +5,7 @@ author: ankitavish
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/30/2021
+ms.date: 02/11/2022
 ms.subservice: portals
 ms.author: avishwakarma
 ms.reviewer: ndoelman
@@ -15,11 +15,7 @@ contributors:
     - nickdoelman
 ---
 
-# Build a portal as a progressive web app (preview)
-
-> [!Important]
-> - This is a preview feature.
-> - Preview features aren't meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
+# Build a portal as a progressive web app
 
 ## Prerequisites
 
@@ -31,7 +27,7 @@ contributors:
 
 Use Power Apps portals Studio to configure your progressive web app (PWA). You can enable or disable PWA capability, customize PWA settings, and prepare to create an app package to publish to respective device stores if you choose.
 
-1. Sign in to [Power Apps Preview](https://make.preview.powerapps.com/).
+1. Sign in to [Power Apps](https://make.powerapps.com/).
 
 1. On the left pane, select **Apps**.
 

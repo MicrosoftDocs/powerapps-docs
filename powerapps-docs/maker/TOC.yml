@@ -1647,7 +1647,7 @@
               href: ./portals/theme-overview.md
             - name: Edit CSS
               href: ./portals/edit-css.md
-        - name: Portals as Progressive Web Apps (preview)
+        - name: Portals as Progressive Web Apps
           items:
             - name: Overview
               href: ./portals/progressive-web-apps.md
