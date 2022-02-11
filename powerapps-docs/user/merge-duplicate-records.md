@@ -21,6 +21,13 @@ search.app:
 # Merge duplicate rows 
 
 Duplicate rows can creep into your data when you or others enter data manually or import data in bulk. Microsoft Dataverse helps you address potential duplicates by providing duplicate detection for active rows such as, accounts and contacts. When you merge a row any related or child rows will also be merged. Your administrator may also set up duplicate detection rules for other situations.  
+
+There are a few situations when duplicates may be found:  
+
+- When a row is created or updated.  
+- When  you're using Dynamics 365 for Outlook and you go from offline to online.  
+- When you import data using the Import Data wizard.  
+- Duplicates aren't detected when you merge rows, save an activity as completed, or change the status of a row, such as activating or reactivating a row.
   
 For example, let's say you enter a contact row, Jim Glynn,  along with a mobile phone number.  The duplicate detection rule discovers that you already have a similar row, and displays this dialog box.  
   
@@ -49,18 +56,15 @@ Dataverse includes duplicate detection rules for accounts and contacts. These ru
    > ![Duplicate row detected.](media/duplicates-detected-2.png "Duplicate row detected")  
   
 2. In the **Merge Contacts** dialog box, select the primary row (the one you want to keep) and then select any columns in the new row that you want to merge into the primary row. Data in these columns may override the existing data in the primary row. Select **OK**.  
+
+   > [!NOTE]
+   > If you run into issue duing the merge process, uncheck **Enable parent check**. If files are deleted during the job run, you can skip the parenting check. This allows your merge to continue even if someone deletes a row from the set while the job is running in the background. For more information, see [Asynchronous processing of cascading transactions](/power-platform/admin/async-cascading#troubleshooting-file-deletion-issues-during-cascade-merge).
   
      
    > [!div class="mx-imgBorder"] 
    > ![Dialog box for merging rows.](media/merge-dups.gif "Dialog box for merging rows")  
   
 
-There are a few situations when duplicates may be found:  
-
-- When a row is created or updated.  
-- When  you're using Dynamics 365 for Outlook and you go from offline to online.  
-- When you import data using the Import Data wizard.  
-- Duplicates aren't detected when you merge rows, save an activity as completed, or change the status of a row, such as activating or reactivating a row.
 
 > [!IMPORTANT]
 >  If a column or control matches any of the following conditions, it will not show up in the merge dialog:  
