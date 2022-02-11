@@ -575,8 +575,12 @@
           href: ./canvas-apps/show-current-user.md
         - name: Connect lists using lookups
           href: ./canvas-apps/sharepoint-lookup-fields.md
-        - name: Add a flow
-          href: ./canvas-apps/using-logic-flows.md
+        - name: Working with flows
+          items:
+          - name: Add a flow
+            href: ./canvas-apps/using-logic-flows.md
+          - name: Use Power Automate pane (preview)
+            href: ./canvas-apps/working-with-flows.md
         - name: Create a rule in canvas apps
           href: ./canvas-apps/working-with-rules.md
         - name: Create or update bulk records
