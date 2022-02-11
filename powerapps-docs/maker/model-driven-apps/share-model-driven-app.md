@@ -63,7 +63,7 @@ When you share a model-driven app, you can share it with all members of one or m
 Model-driven apps often contain custom tables and other custom configuration. It is important to first create a security role with the required level of privilege for all the components used in your app.
 
 > [!NOTE]
-> If your app contains custom tables that haven't had privileges assigned in a security role, you must do this for users to access those records in your app. However, this step can be skipped if existing roles grant access to the table data in your app.
+> If your app contains custom tables that haven't had privileges assigned in a security role, you must do this for users to access those records in your app. However, you don't have to create a security role if existing roles grant access to the table data in your app.
 
 ### Create or configure a security role
 
