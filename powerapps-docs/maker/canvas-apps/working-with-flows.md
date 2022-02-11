@@ -133,7 +133,7 @@ You can now edit flows added to your app without leaving Power Apps Studio.
 1. Make your changes, and then select **Save**.
 
     > [!IMPORTANT]
-    > Ensure you save the changes to the flow before closing the editor.
+    > To avoid losing unsaved changes, ensure you select **Save** before closing the editor.
 
 ## Refresh a flow
 
