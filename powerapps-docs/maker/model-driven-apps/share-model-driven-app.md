@@ -34,12 +34,12 @@ There are a few key environment and licensing prerequisites required when sharin
 
 - A Microsoft 365 user with Power Platform administrator rights or global admin rights must exist within the organization. [Learn how to assign Power Platform Administrator rights](/power-platform/admin/use-service-admin-role-manage-tenant).  This provides the user with administrator rights over all environments.
 - The app sharer must have admin privileges to the specific environment (or be a Power Platform administrator). The app sharer must have a [security role](/power-platform/admin/security-roles-privileges) with equal or greater privileges than the security role they're assigning to the app and to other users. Usually, this takes the form of the app sharer having the Dataverse **System Administrator** or **System Customizer** security role.  These roles can be assigned by Power Platform administrators (who have rights over all Dataverse environments). The system administrator and system customizer security roles are standard roles that exist within all Dataverse environments.
-- The user must exist as a user within the environment. It is not enough to only be a Microsoft 365 user. This is because all users in an environment are accounted for and described within tables in the environment. [Learn how to add a user to an environment](/power-platform/admin/add-users-to-environment)
+- The user must exist as a user within the environment. It isn't enough to only be a Microsoft 365 user. This is because all users in an environment are accounted for and described within tables in the environment. [Learn how to add a user to an environment](/power-platform/admin/add-users-to-environment)
 - The user must have the correct [license](/power-platform/admin/pricing-billing-skus) to be able to use the app. This may be assigned through a per app plan pass, a per user license, or a pay as you go license.
 
 ## Model-driven app sharing basics
 
-Before you share an app, it is helpful to understand the following model-driven app sharing basics:
+Before you share an app, it's helpful to understand the following model-driven app sharing basics:
 - The app must have at least one security role associated with it, such as **Basic User**. However, if your app has one or more custom tables, in order for users to work with your custom table's records, you must configure privileges to the custom tables in a security role. More information: [Create or edit a security role for your app](#create-or-edit-a-security-role-for-your-app)
 - App users must be assigned a security role from the available roles. Alternatively, a team can be assigned a security role, and users can be made members of the team. A team can be an Owner, Access, Azure AD security group, or Microsoft 365 group. [Learn to manage a Dataverse team](/power-platform/admin/database-security).
 
@@ -49,7 +49,7 @@ When you share a model-driven app, you can share it with all members of one or m
 
 1. Sign in to  the [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), on the left navigation pane select **Apps**, next to the app you want to share select **…**, and  then select **Share**.
 1. From the **Share** *app name* pane, choose from the following options: 
-   - Select the app, and then select the drop down list to display all available security roles. Select the security roles you want from the security role dropdown list.
+   - Select the app, and then select the drop-down list to display all available security roles. Select the security roles you want from the security role dropdown list.
    :::image type="content" source="media/share-model-driven-app/assign-security-role-to-app.png" alt-text="Assign security roles to app":::
 
    > [!IMPORTANT]
@@ -60,7 +60,7 @@ When you share a model-driven app, you can share it with all members of one or m
 
 ## Create or edit a security role for your app
 
-Model-driven apps often contain custom tables and other custom configuration. It is important to first create a security role with the required level of privilege for all the components used in your app.
+Model-driven apps often contain custom tables and other custom configuration. It's important to first create a security role with the required level of privilege for all the components used in your app.
 
 > [!NOTE]
 > If your app contains custom tables that haven't had privileges assigned in a security role, you must do this for users to access those records in your app. However, you don't have to create a security role if existing roles grant access to the table data in your app.
@@ -76,7 +76,7 @@ Custom tables, or tables that are new to the environment, will not have any priv
 - Edit an existing predefined security role, such as **Basic User**, so that it includes privileges (to read, write, delete, and so on) for records based on the custom table. More information: [Edit a security role](/power-platform/admin/create-edit-security-role#edit-a-security-role)
 
 > [!IMPORTANT]
-> When you create a new security role from scratch, on order for users to run the model-driven app you must grant **Read** privilege with global scope for the **Model-driven App** privilege located on the **Customization** tab of the security role designer. Note that the Basic User security role already has this privilege.
+> When you create a new security role from scratch, for users to run the model-driven app you must grant **Read** privilege with global scope for the **Model-driven App** privilege located on the **Customization** tab of the security role designer. Note that the Basic User security role already has this privilege.
 > ![Read Model-driven App privilege.](media/share-model-driven-app/model-driven-read-priv.png)
 > Users granted **Read**, **Create**, and **Write** to the **Model-driven App** privilege have access to all apps in the environment, even when they're not part of any role that has access to the app.
 
