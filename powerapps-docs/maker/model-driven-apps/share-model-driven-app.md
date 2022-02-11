@@ -76,7 +76,7 @@ Custom tables, or tables that are new to the environment, will not have any priv
 - Edit an existing predefined security role, such as **Basic User**, so that it includes privileges (to read, write, delete, and so on) for records based on the custom table. More information: [Edit a security role](/power-platform/admin/create-edit-security-role#edit-a-security-role)
 
 > [!IMPORTANT]
-> When you create a new security role from scratch, you must grant **Read** privilege with global scope for the **Model-driven App** privilege located on the **Customization** tab of the security role designer. Note that the Basic User security role already has this privilege.
+> When you create a new security role from scratch, on order for users to run the model-driven app you must grant **Read** privilege with global scope for the **Model-driven App** privilege located on the **Customization** tab of the security role designer. Note that the Basic User security role already has this privilege.
 > ![Read Model-driven App privilege.](media/share-model-driven-app/model-driven-read-priv.png)
 > Users granted **Read**, **Create**, and **Write** to the **Model-driven App** privilege have access to all apps in the environment, even when they're not part of any role that has access to the app.
 
@@ -93,7 +93,7 @@ The following steps describe how to create a new security role from a copy of an
    :::image type="content" source="media/share-model-driven-app/manage-security-roles.png" alt-text="Manage security roles link":::
 1. A new browser tab opens that lists the security roles available in the environment. Select the security role you want to copy, such as **Basic User**.  Then select **More Actions** > **Copy Role**.
 
-    :::image type="content" source="media/share-model-driven-app/copy-security-role.png" alt-text="Copy a dataverse security role":::
+    :::image type="content" source="media/share-model-driven-app/copy-security-role.png" alt-text="Copy a Dataverse security role":::
 
 1. Enter the role name, and then select **OK**.
 
@@ -113,6 +113,19 @@ The following steps describe how to create a new security role from a copy of an
 
 1. Select **Save and Close**.
 1. Now that you have created a custom security role and configured the appropriate privileges, you assign users to the security role. More information: [Assign a security role to a user](/power-platform/admin/assign-security-roles)
+
+### Add the security role to a solution
+
+To ensure application lifecycle management, we recommend that you make custom security roles a part of a Power Platform solution.
+
+To add a security role to your solution, follow these steps:
+1. Go to [Power Apps](https://make.powerapps.com), and select the environment with the unmanaged solution.
+1. Open the solution that requires the security role.
+1. Select **Add existing** > **Security** > **Security Role**.
+1. Select the newly created security role from the list provided.
+1. Select **Add**.
+
+This will ensure that the solution now contains the security role for import into other environments.
 
 <!-- 
 1. From the **Share Model-driven app** pane, under **Assign users to the security role** select **Security Users**.
@@ -171,32 +184,17 @@ To get the direct link to an app:
 
 1. Paste the app URL in a location so that your users can access it, such as by posting it on a SharePoint site or sending via email.
 
-## Add the security role to a solution
-
-To ensure application lifecycle management, we recommend that you make custom security roles a part of the Power Platform solution.
-
-To add a security role to your solution, follow these steps:
-1. Go to [Power Apps](https://make.powerapps.com).
-2. Select the environment with the unmanaged solution.
-3. Open th solution that requires the security role.
-4. Select **Add existing** from the top menu.
-5. Select **Security** > **Security Role**.
-6. Select the newly created security role from the list provided.
-7. Select **Add**.
-
-This will ensure that the solution now contains the security role for import into other environments.
-
 ## About predefined security roles
 
-These predefined roles are available with a [!INCLUDE [powerapps](../../includes/powerapps.md)] environment.  This helps us to put the security roles into context, and understand the most important ones out of the many available.
+These predefined roles are available with a [!INCLUDE [powerapps](../../includes/powerapps.md)] environment.
 
 |Security role  |*Privileges  |Description |
 |---------|---------|---------|
 |Environment Maker     |  None       | Can create new resources associated with an environment including apps, connections, custom APIs, gateways, and flows using Power Automate. However, does not have any privileges to access data within an environment. More information: [Environments overview](https://powerapps.microsoft.com/blog/powerapps-environments/)        |
 |System Administrator     |  Create, Read, Write, Delete, Customizations, Security Roles       | Has full permission to customize or administer the environment, including creating, modifying, and assigning security roles. Can view all data in the environment. More information: [Privileges required for customization](/dynamics365/customer-engagement/customize/privileges-required-customization)        |
-|System Customizer     | Create (self), Read (self), Write (self), Delete (self), Customizations         | Has full permission to customize the environment. However, can only view rows for environment tables that they create. More information: [Privileges required for customization](/dynamics365/customer-engagement/customize/privileges-required-customization)        |
-|Basic User     |  Read, Create (self), write (self), delete (self)       | Can run an app within the environment and perform common tasks for the rows that they own.        |
-|Delegate     | Act on behalf of another user        | Allows code to run as another user or impersonate.  Typically used with another security role to allow access to rows. More information: [Impersonate another user](/dynamics365/customer-engagement/developer/org-service/impersonate-another-user)        |
+|System Customizer     | Create (self), Read (self), Write (self), Delete (self), Customizations         | Has full permission to customize the environment. However, can only view records for environment tables that they create. More information: [Privileges required for customization](/dynamics365/customer-engagement/customize/privileges-required-customization)        |
+|Basic User     |  Read, Create (self), write (self), delete (self)       | Can run an app within the environment and perform common tasks for the records that they own.        |
+|Delegate     | Act on behalf of another user        | Allows code to run as another user or impersonate.  Typically used with another security role to allow access to records. More information: [Impersonate another user](/dynamics365/customer-engagement/developer/org-service/impersonate-another-user)        |
 
 *Privilege is global scope unless specified otherwise.
 
