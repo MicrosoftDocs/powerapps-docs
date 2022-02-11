@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 01/21/2022
+ms.date: 02/11/2022
 ms.subservice: canvas-maker
 ms.author: tashas
 search.audienceType: 
@@ -132,8 +132,8 @@ You can now edit flows added to your app without leaving Power Apps Studio.
 
 1. Make your changes, and then select **Save**.
 
-    > [!TIP]
-    > You'll be prompted to save the unsaved changes if you try to close the editor.
+    > [!IMPORTANT]
+    > Ensure you save the changes to the flow before closing the editor.
 
 ## Refresh a flow
 
