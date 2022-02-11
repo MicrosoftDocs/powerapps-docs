@@ -58,7 +58,7 @@ Dataverse includes duplicate detection rules for accounts and contacts. These ru
 2. In the **Merge Contacts** dialog box, select the primary row (the one you want to keep) and then select any columns in the new row that you want to merge into the primary row. Data in these columns may override the existing data in the primary row. Select **OK**.  
 
    > [!NOTE]
-   > If you run into issue duing the merge process, uncheck **Enable parent check**. If files are deleted during the job run, you can skip the parenting check. This allows your merge to continue even if someone deletes a row from the set while the job is running in the background. For more information, see [Asynchronous processing of cascading transactions](/power-platform/admin/async-cascading#troubleshooting-file-deletion-issues-during-cascade-merge).
+   > If you run into issue duing the merge process, uncheck **Enable parent check**. If files are deleted during the merge process, you can skip the parenting check. This allows your merge to continue even if someone deletes a row from the set while the job is running in the background. For more information, see [Asynchronous processing of cascading transactions](/power-platform/admin/async-cascading#troubleshooting-file-deletion-issues-during-cascade-merge).
   
      
    > [!div class="mx-imgBorder"] 
