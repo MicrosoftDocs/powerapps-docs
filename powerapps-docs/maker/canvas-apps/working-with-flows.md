@@ -145,7 +145,7 @@ To refresh the flow and pull the latest changes, select **...** (ellipsis) to th
 
 A loading spinner will appear, and the flow will be refreshed.
 
-## Remove a Flow
+## Remove a flow
 
 To remove a flow from your app, select **...** (ellipsis) to the right of your flow, and then, select **Remove from app**.
 
