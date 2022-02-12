@@ -5,7 +5,7 @@ author: hemantgaur
 ms.service: powerapps
 ms.subservice: canvas-developer
 ms.topic: article
-ms.date: 01/27/2022
+ms.date: 02/11/2022
 ms.author: hemantg
 ms.reviewer: tapanm
 search.audienceType:
@@ -270,6 +270,7 @@ Once you save the app, you can reuse the components of this app using the same m
 
 ## Known limitations
 
+- Adding and running Power Automate flows in component libraries is not supported.
 - You can't save data sources, forms, and data tables with components.
 - Collections in components aren't supported.
 - You can't insert a component into a gallery or a form (including SharePoint form).
