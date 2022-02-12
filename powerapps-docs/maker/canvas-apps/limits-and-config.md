@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 02/10/2022
+ms.date: 02/11/2022
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
@@ -82,7 +82,7 @@ These limits apply to each single outgoing request:
 
 Requests from Power Apps use IP addresses that depend on the region of the [environment](/power-platform/admin/environments-overview) that the app is in. We don't publish fully qualified domain names available for Power Apps scenarios.
 
-Calls made from an API connected through an app (for example, the SQL API or the SharePoint API) come from these [IP addresses](/connectors/common/outbound-ip-addresses#power-platform).
+Calls made from an API connected through an app (for example, the SQL API or the SharePoint API) come from these [IP addresses](/power-platform/admin/online-requirements#ip-addresses-required).
 
 ## Required services
 This list identifies all services to which Power Apps Studio talks and their usages. Your network must **not** block these services.
