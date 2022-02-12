@@ -68,6 +68,8 @@
       href: sample-controls/control-state-api.md
     - name: Data Set Grid component
       href: sample-controls/data-set-grid-control.md
+    - name: Device API component
+      href: sample-controls/device-api-control.md
     - name: Formatting API component
       href: sample-controls/formatting-api-control.md
     - name: IFRAME component
