@@ -53,13 +53,13 @@ Whether adding new records is supported or not.
 
 ### hasRecordNavigation
 
-If the dataset supports record navigation for lookup and primary fields
+Whether the dataset supports record navigation for lookup and primary fields.
 
 **Type**: `boolean`
 
 ### hasCellImageInfo
 
-Whether image info for record columns can be retrieved
+Whether image info for record columns can be retrieved.
 
 **Type** `boolean`
 
