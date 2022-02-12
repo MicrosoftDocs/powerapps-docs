@@ -7,7 +7,7 @@ author: Nkrb
 manager: kvivek
 ms.date: 02/11/2022
 ms.service: "powerapps"
-ms.service: "PCF"
+ms.subservice: "PCF"
 ms.topic: "reference"
 ---
 
