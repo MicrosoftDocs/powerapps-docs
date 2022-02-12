@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 02/11/2022
+ms.date: 02/14/2022
 ms.subservice: canvas-maker
 ms.author: tashas
 search.audienceType: 
@@ -115,6 +115,32 @@ You must meet the following requirements to be able to add an existing flow to a
 - Flows must have a Power Apps trigger.
 
 After added, the flow will appear under **In your app** section inside the Power Automate pane.
+
+## Reference a flow
+
+To reference the added flow, update the formula bar for the control or component within Power Apps Studio with the flow details. For example, to reference a flow named "PowerAppsbutton" that triggers an email without accepting any input parameters, use the following formula on the button's **OnSelect** property:
+
+```powerapps-dot
+PowerAppsbutton.Run()
+```
+
+:::image type="content" source="media/working-with-flows/reference-flow.png" alt-text="A screenshot showing flow added to OnSelect property of the button with the above formula.":::
+
+This behavior is different from how the reference to a flow works within Power Apps Studio if the Power Automate pane is disabled.
+
+When you add a flow without Power Automate pane enabled, you must choose the control, or the component that associates with the flow. For example, a button's OnSelect property. And then, adding the flow clears any formula associated with this property to enable flow reference. This action removes your existing formula, and you have to carefully make a copy of the existing formula before adding the flow. Otherwise, you risk of losing an already constructed formula.
+
+The following example shows process with Power Automate pane disabled. In this case, the formula added for the button property is removed to reference the added flow.
+
+:::image type="content" source="media/working-with-flows/old-method.png" alt-text="A screenshot showing flow added to OnSelect property of the button that replaces existing formula for the button property." border="false":::
+
+Whereas with the Power Automate pane enabled, now the action to add a flow is separated from the choice of the behavior such as a button OnSelect. Hence, this process only adds flow. And then, you can reference flow within the app for any specific action.
+
+The following example shows process with Power Automate pane enabled. When the flow is added, the button's OnSelect property doesn't change since the flow addition is separate event from update to the behavior of the app for a control or a component.
+
+:::image type="content" source="media/working-with-flows/new-method.png" alt-text="A screenshot showing flow added to OnSelect property of the button that doesn't get replaced after the flow addition." border="false":::
+
+Now you can reference the flow through regular process of updating the formula for the control or component&mdash;as explained earlier.
 
 ## Edit an existing flow
 
