@@ -130,9 +130,7 @@ This behavior is different from how the reference to a flow works within Power A
 
 When you add a flow with Power Automate pane disabled, you must choose a behavior property of the control or the component that you want to associate with the flow. Adding flow in this case clears any formula already associated with the chosen property (when the flow reference is added). This means that any existing formula would be removed, and you have to carefully make a copy of the existing formula before adding the flow in order to preserve it. You can then paste your copied formula back after the flow reference has been added.
 
-For example, a button's OnSelect property. And then, adding the flow clears any formula associated with this property to enable flow reference. This action removes your existing formula, and you have to carefully make a copy of the existing formula before adding the flow.
-
-The following example shows the process with Power Automate pane disabled. In this case, the formula added for the button property is removed to reference the added flow.
+For example, on a button's OnSelect property, adding the flow removes your existing formula, and you have to carefully make a copy of the existing formula before adding the flow. The following example shows the process with Power Automate pane disabled. In this case, the formula added for the button property is removed to reference the added flow.
 
 :::image type="content" source="media/working-with-flows/old-method.png" alt-text="A screenshot showing flow added to OnSelect property of the button that replaces existing formula for the button property." border="false":::
 
