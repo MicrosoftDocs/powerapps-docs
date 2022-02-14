@@ -34,7 +34,7 @@ This section provides information about how to find and run canvas and model-dri
 
 ## What's required to run apps?
 
-Ensure that you're using a supported web browser and operating system. or more information, see [System requirements, limits, and configuration values for Power Apps](../maker/canvas-apps/limits-and-config.md)
+Ensure that you're using a supported web browser and operating system. For more information, see [System requirements, limits, and configuration values for Power Apps](../maker/canvas-apps/limits-and-config.md)
 
 
 
