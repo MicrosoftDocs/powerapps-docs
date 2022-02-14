@@ -19,13 +19,10 @@ search.app:
 
 # Create a business rule for a table
 
-
-
 You can create business rules and recommendations to apply logic and validations without writing code or creating plug-ins. Business rules provide a simple interface to implement and maintain fast-changing and commonly used rules.
 
 > [!IMPORTANT]
 > Business rules defined for a table apply to both *canvas apps* and *model-driven apps* if the table is used in the app. Not all business rule actions are available on canvas apps at this time. More information: [Differences between canvas and model-driven apps](#differences-between-canvas-and-model-driven-apps)<br/><br/>
-> Business rules don’t work with multi-select choices.
 >
 > To define a business rule that applies to a form in a model-driven app, see [Create business rules to apply logic in a model-driven app form](../model-driven-apps/create-business-rules-recommendations-apply-logic-form.md).
 
@@ -47,21 +44,25 @@ Model driven apps can use all actions available on business rules, however not a
 * Enable or disable columns  
 * Create business recommendations based on business intelligence.  
 
-## Prerequisites
+## Column type support with business rules
 
-To follow this topic, you must switch to an [environment](/power-platform/admin/working-with-environments) in which you can create and edit tables.
+Business rules work with most column types including text, number, choice, date, lookup, owner, and image. However, business rules don't work with the following column types:
+
+- Choices (multi-select)
+- File
+- Language  
 
 ## Create a business rule
   
-1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then click or tap the down arrow for **Data** near the left edge.
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), on the left navigation pane expand **Data**.
 
-2. In the list that appears, click or tap **Tables**.
+2. In the list that appears, select **Tables**.
   
-3. Open the table you want to create the business rule for (for example, open the **Account** table), and then click the **Business Rules** tab.  
+3. Open the table you want to create the business rule for (for example, open the **Account** table), and then select the **Business Rules** tab.  
 
-4. Click **New**.  
+4. Select **Add business rule**.  
   
-    The Business Rule designer window opens with a single condition already created for you. Every rule starts with a condition. The business rule takes one or more actions based on that condition.  
+    The business rule designer window opens with a single condition already created for you. Every rule starts with a condition. The business rule takes one or more actions based on that condition.  
 
     > [!TIP]
     > If you want to modify an existing business rule, you must deactivate it before you can modify it.  
@@ -70,12 +71,11 @@ To follow this topic, you must switch to an [environment](/power-platform/admin/
   
 6. Set the scope, according to the following:  
   
-    |||  
-    |-|-|  
     |**If you select this item...**|**The scope is set to...**|  
-    |**table**|Model Driven forms and server|  
-    |**All Forms**|Model Driven forms|  
-    |Specific form (**Account** form, for example)|Just that Model Driven form|  
+    |-|-|  
+    |**Entity**|Model-driven app forms and server|  
+    |**All Forms**|Model-driven app forms|  
+    |Specific form (**Account** form, for example)|Just that model-driven app form|  
 
     > [!TIP]
     > If you're building a Canvas app, you must use table as the scope.
@@ -86,13 +86,13 @@ To follow this topic, you must switch to an [environment](/power-platform/admin/
   
         ![Add a condition in a business rule.](./media/data-platform-cds-create-business-rule/add-condition-business-rule.png "Add a condition in a business rule")  
   
-    2. To set properties for the condition, click the **Condition** component in the designer window, and then set the properties in the **Properties** tab on the right side of the screen. As you set properties, the Microsoft Dataverse creates an expression at the bottom of the **Properties** tab.  
+    2. To set properties for the condition, select the **Condition** component in the designer window, and then set the properties in the **Properties** tab on the right side of the screen. As you set properties, the Microsoft Dataverse creates an expression at the bottom of the **Properties** tab.  
   
-    3. To add an additional clause (an AND or OR)  to the  condition, click **New** in the **Properties** tab to create a new rule, and then set the properties for that rule. In the **Rule Logic** column, you can specify whether to add the new rule as an AND or an OR.  
+    3. To add an additional clause (an AND or OR)  to the  condition, select **New** in the **Properties** tab to create a new rule, and then set the properties for that rule. In the **Rule Logic** column, you can specify whether to add the new rule as an AND or an OR.  
   
         ![Add a new rule to a condition.](./media/data-platform-cds-create-business-rule/add-new-rule-condition.png "Add a new rule to a condition")  
   
-    4. When you're done setting properties for the condition, click **Apply**.  
+    4. When you're done setting properties for the condition, select **Apply**.  
   
 8. **Add actions.** To add an action:  
   
@@ -100,39 +100,39 @@ To follow this topic, you must switch to an [environment](/power-platform/admin/
   
         ![Drag an action to a business rule.](./media/data-platform-cds-create-business-rule/drag-an-action-business-rule.png "Drag an action to a business rule")  
   
-    2. To set properties for the action, click the **Action** component in the designer window, and then set the properties in the **Properties** tab.  
+    2. To set properties for the action, select the **Action** component in the designer window, and then set the properties in the **Properties** tab.  
   
-    3. When you're done setting properties, click **Apply**.  
+    3. When you're done setting properties, select **Apply**.  
   
-9. **Add a business recommendation. (Model Driven only)** To add a business recommendation:  
+9. **Add a business recommendation (model-driven apps only)**. To add a business recommendation:  
   
     1. Drag the **Recommendation** component from the **Components** tab to a plus sign next to a **Condition** component. Drag the **Recommendation** component to a plus sign next to a check mark if you want the business rule to take that action when the condition is met, or to a plus sign next to an  x if you want the business rule to take that action if the condition is not met.  
   
-    2. To set properties for the recommendation, click the **Recommendation** component in the designer window, and then set the properties in the **Properties** tab.  
+    2. To set properties for the recommendation, select the **Recommendation** component in the designer window, and then set the properties in the **Properties** tab.  
   
     3. To add more actions to the recommendation, drag them from the **Components** tab, and then set properties for each action in the **Properties** tab.  
   
         > [!NOTE]
-        >  When you create a recommendation, the Dataverse adds a single action by default. To see all the actions in a recommendation, click **Details** on the **Recommendation** component.  
+        >  When you create a recommendation, the Dataverse adds a single action by default. To see all the actions in a recommendation, select **Details** on the **Recommendation** component.  
   
-    4. When you're done setting properties, click **Apply**.  
+    4. When you're done setting properties, select **Apply**.  
   
-10. To validate the business rule, click **Validate** on the action bar.  
+10. To validate the business rule, select **Validate** on the action bar.  
   
-11. To save the business rule, click **Save** on the action bar.  
-12. To activate the business rule, select it in the Solution Explorer window, and then click **Activate**. You can't activate the business rule from the designer window.  
+11. To save the business rule, select **Save** on the action bar.  
+12. To activate the business rule, select it in the Solution Explorer window, and then select **Activate**. You can't activate the business rule from the designer window.  
   
     > [!TIP]
     >  Here are a few tips to keep in mind as you work on business rules in the designer window:  
     >   
-    > - To take a snapshot of everything in the Business Rule window, click **Snapshot** on the action bar. This is useful, for example, if you want to share and get comments on the business rule from a team member.  
+    > - To take a snapshot of everything in the **Business Rule** window, select **Snapshot** on the action bar. This is useful, for example, if you want to share and get comments on the business rule from a team member.  
     > - Use the mini-map to navigate quickly to different parts of the process. This is useful when you have a complicated process that scrolls off the screen.  
     > - As you add conditions, Actions, and business recommendations to your business rule, Dataverse builds the code for the business rule at the bottom of the designer window. This code is read only.  
   
 ## Localize error messages used in business rules
 
- If you have more than one language provisioned for your organization, you will want to localize any error messages that you have set. Each time you set a message, a label is generated by the system. If you export the translations in your organization, you can add localized versions of your messages and then import those labels back into the Dataverse, so that people using languages other than your base language can view the translated messages.  
-  
+ If you have more than one language provisioned for your organization, you will want to localize any error messages that you have set. Each time you set a message, a label is generated by the system. If you export the translations in your organization, you can add localized versions of your messages and then import those labels back into the Dataverse, so that people using languages other than your base language can view the translated messages.
+
 ## Common issues
 
 This section describes common issues that may occur when you use business rules.
