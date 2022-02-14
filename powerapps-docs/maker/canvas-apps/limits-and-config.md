@@ -67,6 +67,29 @@ This article contains information on supported device platforms, web browser req
 | Windows |Windows 8.1 or later|
 | macOS|10.13 or later|
 
+## Supported browsers for running Power Apps portals
+
+| **Browser** | **Supported Versions** |
+| --- | --- |
+| Google Chrome|Latest three major releases|
+| Microsoft Edge|Latest three major releases|
+| Mozilla Firefox (latest version)|Latest three major releases|
+| Apple Safari|13 and later|
+
+## Supported browsers for Power Apps portals Studio
+
+| **Browser** | **Supported Versions** |
+| --- | --- |
+| Microsoft Edge|Latest three major releases|
+| Google Chrome|Latest three major releases|
+
+### Supported platforms for browsers running Power Apps portals Studio
+
+| **Browser**                     | **Operating system**           |
+|---------------------------------|--------------------------------|
+| Google Chrome (latest version)<br>(recommended)                    | <ul><li>Windows 7 SP1, 8.1, and 10</li><li>macOS</li></ul>      |
+| Microsoft Edge (latest version)<br> (recommended)                    | Windows 10                     |
+
 ## Request limits
 These limits apply to each single outgoing request:
 
@@ -105,6 +128,9 @@ This list identifies all services to which Power Apps Studio talks and their usa
 | localhost | https | Power Apps Mobile|
 | 127.0.0.1 | http | Power Apps Mobile|
 | \*.api.powerplatform.com | https | Required for Power Platform API connectivity used internally by Microsoft products, and Power Platform [programmability and extensibility](/power-platform/admin/programmability-extensibility-overview).|
+| gov.content.powerapps.us | https | Required for Power Apps portals for Government Community Cloud (GCC). |
+| high.content.powerapps.us | https | Required for Power Apps portals for Government Community Cloud (GCC High). |
+| content.appsplatform.us | https | Required for Power Apps portals for Power Apps Department of Defense (DoD). |
 
 > [!NOTE]
 > If you're using a VPN, it must be configured to exclude localhost from tunneling for Power Apps Mobile.
