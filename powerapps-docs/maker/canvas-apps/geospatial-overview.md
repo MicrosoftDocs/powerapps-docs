@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: overview
 ms.custom: canvas, ce06122020
 ms.reviewer: tapanm
-ms.date: 02/09/2022
+ms.date: 02/14/2022
 ms.subservice: canvas-maker
 ms.author: anuitz
 search.audienceType: 
@@ -16,6 +16,7 @@ search.app:
 contributors:
   - tapanm-msft
   - anuitz
+  - pjramirez-ms
 ---
 
 
