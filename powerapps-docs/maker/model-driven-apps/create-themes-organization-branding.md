@@ -27,7 +27,7 @@ search.app:
 You can create a custom look and feel (a theme), for your app by making changes to the default colors and visual elements provided in the uncustomized system. For example, you can create your personal product branding by adding a company logo and providing table-specific coloring. A theme can be created by using the **Themes** area, without requiring a developer to write code. You can create, clone, change, or delete themes that are used in your environment. 
 
 > [!NOTE]
-> You can define multiple themes, but only one can be active in the system and is identified as the default theme. To make a theme active, you publish it.
+> You can define multiple themes, but only a single theme can be active in an environment and is identified as the default theme. To make a theme active, you publish it.
   
 <a name="UseThemes"></a>   
 ## Use themes to enhance the user interface and create your product branding

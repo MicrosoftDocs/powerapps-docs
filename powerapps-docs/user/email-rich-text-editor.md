@@ -27,7 +27,7 @@ The rich text editor toolbar provides features and functionality that allows you
 The following table describes the different formatting features and functionality options available in the rich text editor that you can use in the email form.
 
    >[!Note]
-   > You can access your browser's context menu by pressing **Ctrl** + right-click. his is useful if you need to use your browser's built-in spell checker. Otherwise, you can use the right-click to provide contextual formatting for any element you might be using.  
+   > You can access your browser's context menu by pressing **Ctrl** + right-click. This is useful if you need to use your browser's built-in spell checker. Otherwise, you can use the right-click to provide contextual formatting for any element you might be using.  
 
 |Icon | Name | Shortcut key | Description |
 |----------------------|-------------------------|-----------------------------|-----------------------------|
