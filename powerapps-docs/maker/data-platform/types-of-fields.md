@@ -70,7 +70,7 @@ There are some columns used by the system that you cannot add using the designer
 
 |Type|Description|
 |--|--|
-|**Big Integer** or **Time Stamp**|Used by the system to capture a version number manage updates to a table.|
+|**Time Stamp**| A Big Integer type used by the system to capture a version number manage updates to a table.|
 |**Customer**|A lookup column that you can use to specify a customer, which can be an account or contact.<br />**Note**: This attribute can be added using solution explorer designer.|
 |**Owner**|A system lookup column that references the user or team that is assigned a user or team owned table row.|
 |**Status Reason**|A system column that has options that provide additional detail about the Status column. Each option is associated with one of the available Status options. You can add and edit the options. <br /><br /> You can also include custom state transitions to control which status options are available for certain tables. More information: [Define status reason transitions for custom tables](define-status-reason-transitions.md)|
@@ -132,6 +132,11 @@ Decimal numbers are stored in the database exactly as specified. Floating point 
 Use decimals when you need to provide reports that require very accurate calculations, or if you typically use queries that look for values that are equal or not equal to another value.  
   
 Use floating point numbers when you store data that represents fractions or values that you will typically query comparing to another value using greater than or less than operators. In most cases, the difference between decimal and float isn’t noticeable. Unless you require the most accurate possible calculations, floating point numbers should work for you.  
+
+Big Integers (or BigInt) are large numbers with a max value of 9,223,372,036,854,775,807. It is used to store very large numbers that exceed the capabilities of Whole Number and Decimal.  Some uses for this include storage of time stamp values and as unique IDs, as well as numbers larger than 100 billion.
+  
+[NOTE!] BigInt is currently only available for use through API. This includes column creation, data creation and data management. Maker portal support for BigInt column creation will be available soon. The ability to view and use BigInt columns within apps is a future feature. 
+
   
 <a name="BKMK_UsingCurrencyFields"></a>
  
