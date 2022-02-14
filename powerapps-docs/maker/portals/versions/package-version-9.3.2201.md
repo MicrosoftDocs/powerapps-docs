@@ -5,7 +5,7 @@ author: GitanjaliSingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/01/2022
+ms.date: 02/11/2022
 ms.subservice: portals
 ms.author: gisingh
 ms.reviewer: ndoelman
@@ -38,8 +38,6 @@ The package update includes the following enhancements to extend the capabilitie
 
 - Ability to disable the legacy runtime CMS editor popup for starter templates.
 
-- Web Notification solution is deprecated.
-
 - Website record configuration in Portal Management app to include additional information such as website version. 
 
 - Website configuration reorganized for easier navigation to related website metadata:
@@ -53,8 +51,6 @@ The package update includes the following enhancements to extend the capabilitie
         - Website Access Permissions
 
 - Filetype attribute added to the web file table.
-
-- Adx_pagenotification workflow will be removed from MicrosoftCrmPortalBaseWorkflows solution.
 
 - Handlebar.js updated to latest version
 
