@@ -87,6 +87,27 @@ For a successful OData query retrieveMultipleRecords operation, returns a promis
 
 For a succesful FetchXML-based retrieveMultipleRecords operations the promise response will contain a **fetchXmlPagingCookie** (optional) attribute when the operation returns more records than the paging value. This attribute will contain the paging cookie string that can be included in a subsequent fetchXml request to fetch the next page of records.
 
+## Supported Attribute Types for OData query options in Mobile Offline
+Only the following attribute types are supported when doing a `Xrm.WebApi.retrieveMultipleRecords` operation with OData query string options (`$select` and `$filter`) in mobile offline mode. You should use FetchXML if the attribute type you need to work with is not in this list of supported attribute types.
+
+- BigInt
+- Boolean
+- Customer
+- DateTime
+- Decimal
+- Double
+- EntityName
+- Guid
+- Integer
+- Lookup
+- Memo
+- Money
+- Owner
+- PickList
+- State
+- Status
+- String
+
 ## Examples
 
 Most of the scenarios/examples mentioned in [Query Data using the Web API](../../../../data-platform/webapi/query-data-web-api.md) can be achieved using the **retrieveMultipleRecords** method. Some of the examples are listed below.

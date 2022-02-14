@@ -5,7 +5,7 @@ author: ankitavish
 ms.service: powerapps
 ms.topic: overview
 ms.custom: 
-ms.date: 11/30/2021
+ms.date: 02/14/2022
 ms.subservice: portals
 ms.author: avishwakarma
 ms.reviewer: ndoelman
@@ -15,15 +15,11 @@ contributors:
     - nickdoelman
 ---
 
-# Overview of portals as progressive web apps (preview)
-
-> [!Important]
-> - This is a preview feature.
-> - Preview features aren't meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
+# Overview of portals as progressive web apps
 
 You can enable your functional portal as a progressive web app (PWA), with native app–like look and feel, by using Power Apps portals Studio.
 
-With this preview feature, Power Apps portals now supports using progressive web app technology to provide multiplatform support to create an app that will work on all platforms (Android, iOS, Windows, and Chromebooks) and form factors (mobile, desktop, and tablet).
+With this feature, Power Apps portals now supports using progressive web app technology to provide multiplatform support to create an app that will work on all platforms (Android, iOS, Windows, and Chromebooks) and form factors (mobile, desktop, and tablet).
 
 PWAs are built for cross-platform interoperability through browser support that provides users a native app–like experience. PWAs bring a seamless experience for users across different web browsers. These apps can be installed from the browser or through app stores. This capability enables external and internal customers to use a portal as an app. They can also pin the app directly to the home screen on their mobile device.
 
