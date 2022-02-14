@@ -108,5 +108,5 @@ You can use the following command options when working with emails in the timeli
    ![Respond to emails in timeline.](media\email-respond-in-timeline-1a.png "Respond to emails in timeline.") 
 
    1. **Reply**. Use this command to reply directly the the sender of the email you received.
-   2. **Reply All**. Use this command to replay to everyone on an email you received.
+   2. **Reply All**. Use this command to reply to everyone on an email you received.
    3. **Forward**. Use this command to forward the email to someone else.
