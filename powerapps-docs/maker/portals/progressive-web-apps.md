@@ -5,7 +5,7 @@ author: ankitavish
 ms.service: powerapps
 ms.topic: overview
 ms.custom: 
-ms.date: 02/11/2022
+ms.date: 02/14/2022
 ms.subservice: portals
 ms.author: avishwakarma
 ms.reviewer: ndoelman
