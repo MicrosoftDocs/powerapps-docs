@@ -5,7 +5,7 @@ author: GitanjaliSingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/02/2022
+ms.date: 02/11/2022
 ms.subservice: portals
 ms.author: gisingh
 ms.reviewer: ndoelman
@@ -30,7 +30,6 @@ After following these steps, your users can now interact with the code component
 
 ## Prerequisites
 
-- You must have a valid Power Apps license. More information: [Power Apps component framework licensing](../../developer/component-framework/overview.md#licensing)
 - You must have System Administrator privileges to enable the Power Apps component feature in the environment.
 - Your portal version must be [9.3.3.x](versions/version-9.3.3.x.md) or higher.
 - Your starter portal package must be [9.2.2103.x](versions/package-version-9.2.2103.md) or higher.

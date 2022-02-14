@@ -73,7 +73,7 @@ Use advanced find to search for rows and then reassign them to someone else. For
    
  4. In the assign dialog box, select the **Assign to** column and choose one of the following options:
  
-    - Select **Me** to assign the row to yourself and them select **Assign**. Remember only a system administrator can assign a row that belongs to someone else to themself.
+    - Select **Me** to assign the row to yourself and then select **Assign**. Remember only a system administrator can assign a row that belongs to someone else to themself.
     
     - Select **User or Team** and then enter the name of the user or team or use the lookup to find them. Or, select **New Row** to create a new user or team row. When you're done select **Assign**.
     
@@ -111,7 +111,7 @@ Use advanced find to search for rows and then reassign them to someone else. For
    > [!NOTE]
    > - The **Reassign Rows** option will reassign all rows regardless of their status. Inactive and active rows will be reassigned to the other user or team. This will also deactivate all activated processes including business rules and workflows when the row is reassigned to another user or team. The new owner must activate the processes that was deactivated when the row is reassigned.  
    > - When there is a large amount rows to reassign, the system may take a while to process. 
-   > - If there is an issue during the reassignment process such as the user that the rows are being reassigned to doesn't have the required privileges then the **Reassign Rows** process will stop. The rows that are processed before the issue will be updated and saved. For the rows that were not saved, you will need reassign the rows again using the **Reassign Rows** option.
+   > - If there is an issue during the reassignment process such as the user that the rows are being reassigned to doesn't have the required privileges then the **Reassign Rows** process will stop. The rows that are processed before the issue will be updated and saved. For the rows that were not saved, you will need to reassign the rows again using the **Reassign Rows** option.
    
  
 ## Share a row with someone else
@@ -122,7 +122,7 @@ Use advanced find to search for rows and then reassign them to someone else. For
  > For users on [early access](/power-platform/admin/opt-in-early-access-updates) the sharing feature has been updated for 2021 release wave 2. For more information, see [Share a row with someone else](share-row.md).
  
  
-1. From a list of rows, select the row that you want to assign to someone else. You can select multiple rows.
+1. From a list of rows, select the row that you want to share with someone else. You can select multiple rows.
 
    > [!div class="mx-imgBorder"]
    > ![Select row that you want to reassign.](media/reassign-1.png "Select row that you want o reassign")

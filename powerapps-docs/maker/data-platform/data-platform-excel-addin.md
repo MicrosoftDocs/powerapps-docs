@@ -118,7 +118,7 @@ For more information about preventing Office Store Add-in downloading from the O
 ## Other ways to export and view table row data
 
 For more information about ways to export and view table row data, see these articles.
-- [Export data to CSV](./data-platform-import-export.md#export-data-to-csv) 
+- [Export data to CSV](./data-platform-import-export.md#export-data) 
 - [Export your data to Excel Online](../../user/export-to-excel-online.md)
 - [Export table data to Azure Data Lake Storage Gen2](./export-to-data-lake.md)
 - [Self-service data prep with dataflows](./self-service-data-prep-with-dataflows.md)
