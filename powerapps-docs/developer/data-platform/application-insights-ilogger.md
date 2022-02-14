@@ -22,7 +22,8 @@ search.app:
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 > [!IMPORTANT]
-> To use this capability you must first enable the Application Insights integration preview feature. More information: [Preview: Analyze model-driven apps and Microsoft Dataverse telemetry with Application Insights](/power-platform/admin/analyze-telemetry)
+> To use this capability you must first enable the Application Insights integration preview feature. More information: [Preview: Analyze model-driven apps and Microsoft Dataverse telemetry with Application Insights](/power-platform/admin/analyze-telemetry)<p/>
+> There is presently no support of `ILogger` within a plug-in profiling/debug session of the Plug-in Registration tool or the Power Platform Tools extension for Visual Studio.
 
 When you enable Application Insights for your organization, any plug-ins written using the [ILogger Interface](/dotnet/api/microsoft.xrm.sdk.plugintelemetry.ilogger) provided in the Organization Service SDK assemblies will write telemetry to your Application Insights resource.
 
