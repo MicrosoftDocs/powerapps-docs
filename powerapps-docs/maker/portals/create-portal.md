@@ -36,7 +36,7 @@ Based on the selected environment in Power Apps, you can create a Dataverse star
 > - There can be only one portal of each type and for a language created in an environment. For more information, go to [creating additional portals](create-additional-portals.md).
 > - When you create a portal, a few solutions are installed and sample data is imported.
 
-More information on working with environments: [Working with environments and Microsoft Power Apps](/power-platform/admin/working-with-environments)
+More information on working with environments: [Environments overview](/power-platform/admin/environments-overview)
 
 More information on available portal templates: [Portal templates](portal-templates.md)
 
