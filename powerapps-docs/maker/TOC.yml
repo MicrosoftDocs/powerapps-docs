@@ -6,6 +6,8 @@
     href: signup-for-powerapps.md
   - name: Sign up for Developer Plan
     href: developer-plan.md
+  - name: Power Apps preview program
+    href: powerapps-preview-program.md
   - name: "What's new?"
     href: ../whats-new.md
   - name: "Learning catalog"
@@ -113,12 +115,14 @@
           href: ../user/email-template-convert.md
         - name: Create a signature for emails
           href: ../user/email-signature.md
-    - name: Work with grid filters
+    - name: Work with grid and views
       items:
-      - name: Use grid filters
+      - name: Explore data in a view on a grid page (preview)
         href: ../user/grid-filters.md
-      - name: Create personal views with advanced grid filters
-        href: ../user/grid-filters-advanced.md      
+      - name: Create and manage personal views on a grid page (preview)
+        href: ../user/grid-filters-advanced.md     
+      - name: Faq for grids and views
+        href: ../user/faq-for-grids-views.md
     - name: Charts and dashboards
       items:
       - name: Visualize data in a view with Power BI service (preview)
@@ -571,8 +575,12 @@
           href: ./canvas-apps/show-current-user.md
         - name: Connect lists using lookups
           href: ./canvas-apps/sharepoint-lookup-fields.md
-        - name: Add a flow
-          href: ./canvas-apps/using-logic-flows.md
+        - name: Working with flows
+          items:
+          - name: Add a flow
+            href: ./canvas-apps/using-logic-flows.md
+          - name: Use Power Automate pane (preview)
+            href: ./canvas-apps/working-with-flows.md
         - name: Create a rule in canvas apps
           href: ./canvas-apps/working-with-rules.md
         - name: Create or update bulk records
@@ -1643,7 +1651,7 @@
               href: ./portals/theme-overview.md
             - name: Edit CSS
               href: ./portals/edit-css.md
-        - name: Portals as Progressive Web Apps (preview)
+        - name: Portals as Progressive Web Apps
           items:
             - name: Overview
               href: ./portals/progressive-web-apps.md
