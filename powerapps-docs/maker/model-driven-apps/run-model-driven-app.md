@@ -27,7 +27,7 @@ search.app:
 
 To run a model-driven app in a web browser, the user must have a [security role](../model-driven-apps/model-driven-app-glossary.md#security-role) assigned in addition to having the URL for the app.
 
-Learn how to create a [custom security role](../model-driven-apps/share-model-driven-app.md#create-a-custom-security-role)
+Learn how to create a [security role from a copy](../model-driven-apps/share-model-driven-app.md#copy-a-security-role-to-create-a-new-one)
 
 To get the direct link to an app:
 

@@ -70,7 +70,7 @@ To use async onSave handlers you will need to enable it through an app setting:
 4. Select the app and then select **...** (ellipses). Select **Open in preview**.
 5. Select **Settings** from the command bar.
 6. When the dialog opens, select **Features**.
-7. Turn on **Async onload handler**.
+7. Turn on **Async onSave handler**.
 8. Select **Save**.
 
     ![Async OnSave app setting](../../../media/async_onSave_app_settings.png "Async OnSave app setting")
