@@ -30,11 +30,11 @@ Watch this short video that shows you how to create a canvas app quickly using D
 
 ## Prerequisites
 
-To follow this quickstart, you must be assigned to the [Environment Maker](/power-platform/admin/database-security#predefined-security-roles) security role, and you must [switch to an environment](/power-platform/admin/working-with-environments) in which a database in Dataverse has been created, contains data, and allows updates. If no such environment exists and you have administrative privileges, you can [create an environment](/power-platform/admin/environments-administration#create-an-environment) that meets this requirement.
+To follow this quickstart, you must be assigned to the [Environment Maker](/power-platform/admin/database-security#predefined-security-roles) security role, and you must [switch to an environment](intro-maker-portal.md#choose-an-environment) in which a database in Dataverse has been created, contains data, and allows updates. If no such environment exists and you have administrative privileges, you can [create an environment](/power-platform/admin/create-environment) that meets this requirement.
 
 ## Create an app
 
-1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and, if necessary, [switch environments](/power-platform/admin/working-with-environments).
+1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and, if necessary, [switch environments](intro-maker-portal.md#choose-an-environment).
 
 1. Under **Start from**, select **Dataverse**.
 
