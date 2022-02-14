@@ -1,12 +1,12 @@
 ---
-title: Understand experimental, preview, and retired features in Power Apps
+title: Understand experimental, preview, and retired features in canvas apps
 description: Learn about experimental, preview, and retired features.
 author: gregli-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 07/22/2021
+ms.date: 02/04/2022
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
@@ -17,9 +17,9 @@ contributors:
   - tapanm-msft
   - gregli-msft
 ---
-# Understand experimental, preview, and retired features in Power Apps
+# Understand experimental, preview, and retired features in canvas apps
 
-With every release, we make changes and add features to make Power Apps the best tool to fit your needs. We move the product forward.  
+With every release, we make changes and add features to make Power Apps Studio the best tool to fit your needs. We move the product forward.  
 
 We take backward compatibility very seriously. However, with any change or improvement, we might introduce an unintended side effect, and your app might not work exactly the way it did before.
 
