@@ -2,7 +2,7 @@
 title: Important upcoming changes and deprecations in Power Apps portals
 description: Learn about the important changes including deprecation coming soon to Power Apps portals.
 author: sandhangitmsft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 09/14/2021

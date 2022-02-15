@@ -4,7 +4,7 @@ description: "Understand how to create and edit tables using Power Apps portal"
 ms.custom: ""
 ms.date: 05/30/2018
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"

@@ -2,7 +2,7 @@
 title: Portals release updates and new features
 description: Learn about the new features that have been recently released for Power Apps portals, and features that will be releasing over the next few months.
 author: dileepsinghmicrosoft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 10/11/2021

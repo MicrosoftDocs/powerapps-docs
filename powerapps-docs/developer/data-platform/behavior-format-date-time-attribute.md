@@ -4,7 +4,7 @@ description: "The DateTimeAttributeMetadata class is used to define and manage c
 ms.custom: ""
 ms.date: 03/12/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID
 ms.subservice: dataverse-developer

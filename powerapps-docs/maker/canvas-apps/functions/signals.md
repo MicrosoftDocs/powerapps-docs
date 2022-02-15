@@ -2,7 +2,7 @@
 title: Acceleration, App, Compass, Connection, and Location signals in Power Apps
 description: Reference information including syntax and examples for the Acceleration, App, Compass, Connection, and Location signals in Power Apps.
 author: gregli-msft
-ms.service: powerapps
+
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm

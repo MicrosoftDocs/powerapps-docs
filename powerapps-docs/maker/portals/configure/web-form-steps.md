@@ -2,7 +2,7 @@
 title: Define advanced form steps for portals
 description: Learn how to create an advanced form step for an advanced form on a portal.
 author: sandhangitmsft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 12/09/2021

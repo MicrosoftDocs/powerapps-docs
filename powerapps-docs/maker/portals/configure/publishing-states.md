@@ -2,7 +2,7 @@
 title: Create and manage publishing states
 description: Learn how to create and manage publishing states in a portal.
 author: sandhangitmsft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom:
 ms.date: 04/21/2020

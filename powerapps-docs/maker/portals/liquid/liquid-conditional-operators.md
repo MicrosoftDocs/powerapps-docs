@@ -2,7 +2,7 @@
 title: Available Liquid conditional operators
 description: Learn about the available liquid conditional operators in a portal.
 author: gitanjalisingh33msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2020

@@ -3,7 +3,7 @@ title: "Create and update table relationships using the Web API (Microsoft Datav
 description: "Learn about creating and updating table relationships using the Web API"
 ms.custom: ""
 ms.date: 07/06/2021
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"

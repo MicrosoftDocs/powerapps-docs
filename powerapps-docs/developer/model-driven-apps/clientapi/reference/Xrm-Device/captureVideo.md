@@ -2,7 +2,7 @@
 title: "captureVideo| MicrosoftDocs"
 description: Includes description and supported parameters for the captureVideo method.
 ms.date: 09/08/2021
-ms.service: powerapps
+
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 9580d05a-a91f-4126-b94b-4d1068da35fa

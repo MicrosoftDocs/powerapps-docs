@@ -4,7 +4,7 @@ description: "This article outlines how the common Microsoft Power FX functions 
 ms.custom: ""
 ms.date: 07/06/2021
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.subservice: mda-maker
 ms.topic: "article"
 author: "aorth"

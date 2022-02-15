@@ -3,7 +3,7 @@ title: "Web Resources (model-driven apps) | Microsoft Docs" # Intent and product
 description: "Web resources are virtual files that are stored in the Microsoft Dataverse database and that you can retrieve by using a unique URL address." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 04/15/2021
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.topic: overview
 author: "KumarVivek" # GitHub ID
 ms.subservice: mda-developer

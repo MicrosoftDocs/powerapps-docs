@@ -2,7 +2,7 @@
 title: "ViewSelector methods (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the ViewSelector method.
 ms.date: 04/21/2021
-ms.service: powerapps
+
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 37fbabaf-e2ce-4e46-a54e-e46bd884197b

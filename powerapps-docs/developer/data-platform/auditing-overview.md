@@ -4,7 +4,7 @@ description: "Read how the auditing capability of Microsoft Dataverse can be use
 ms.custom: ""
 ms.date: 11/01/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: overview
 author: "Bluebear73" # GitHub ID
 ms.subservice: dataverse-developer

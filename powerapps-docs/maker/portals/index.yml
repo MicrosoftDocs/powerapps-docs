@@ -7,13 +7,13 @@ metadata:
   title: Power Apps portals documentation
   description: Provides access to highlighted areas within the Power Apps portals documentation
   services: service
-  ms.service: powerapps 
+  
   ms.subservice: subservice
   ms.topic: landing-page 
   ms.collection: collection
   author: kumarvivek
   ms.author: kvivek
-  ms.date: 11/30/2021 
+  ms.date: 02/11/2022 
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -30,9 +30,9 @@ landingContent:
             url: configure/dataverse-search.md         
           - text: Configure choices column for portals (preview)
             url: configure/choices-column.md         
-          - text: Portals as Progressive Web Apps (preview)
+          - text: Portals as Progressive Web Apps
             url: progressive-web-apps.md         
-          - text: Liquid template tag for code components (preview)
+          - text: Liquid template tag for code components
             url: component-framework-liquid.md         
        - linkListType: reference
          links:

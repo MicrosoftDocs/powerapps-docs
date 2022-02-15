@@ -2,7 +2,7 @@
 title: Understand experimental, preview, and retired features in canvas apps
 description: Learn about experimental, preview, and retired features.
 author: gregli-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm

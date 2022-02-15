@@ -2,7 +2,7 @@
 title: Import metadata translation
 description: Instructions to import metadata translation.
 author: neerajnandwana-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2021

@@ -4,7 +4,7 @@ description: "The second of three tutorials that will show you how to work with 
 ms.custom: ""
 ms.date: 08/03/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
 ms.subservice: dataverse-developer

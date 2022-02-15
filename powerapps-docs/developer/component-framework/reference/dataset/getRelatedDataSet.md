@@ -4,7 +4,7 @@ description: Gets the related dataset for this column (only if this is related t
 keywords:
 manager: kvivek
 ms.date: 06/12/2021
-ms.service: "powerapps"
+
 ms.reviewer: "nabuthuk"
 ms.author: nabuthuk
 author: Nkrb

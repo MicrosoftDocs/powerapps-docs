@@ -2,7 +2,7 @@
 title: Canvas app system requirements and limits
 description: Learn about device platform and web browser requirements, limits, and configuration values for canvas apps built in Power Apps.
 author: lancedMicrosoft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm

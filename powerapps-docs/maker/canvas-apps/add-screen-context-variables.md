@@ -2,7 +2,7 @@
 title: Add a screen to a canvas app and navigate between screens
 description: Add a screen to a canvas app and use next and back arrows to go between screens.
 author: emcoope-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 

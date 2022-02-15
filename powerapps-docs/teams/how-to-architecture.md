@@ -2,7 +2,7 @@
 title: Understand How to app sample app architecture | Microsoft Docs
 description: Learn about the architecture of the How to app sample app.
 author: joel-lindstrom
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 06/29/2021

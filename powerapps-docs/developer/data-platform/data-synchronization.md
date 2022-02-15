@@ -4,7 +4,7 @@ description: "Learn about synchronizing Dataverse data with external systems." #
 ms.custom: ""
 ms.date: 03/24/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
 ms.subservice: dataverse-developer

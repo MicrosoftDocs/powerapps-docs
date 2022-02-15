@@ -2,7 +2,7 @@
 title: Customize Milestones sample app (contains video)
 description: Learn how to customize the Milestones sample app installed from the Microsoft Teams store.
 author: joel-lindstrom
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 06/23/2021

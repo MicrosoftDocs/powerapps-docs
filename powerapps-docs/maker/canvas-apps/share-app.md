@@ -2,7 +2,7 @@
 title: Share a canvas app with your organization
 description: Learn about how to share canvas apps by giving other users in your organization the permissions to run or modify it.
 author: alaug
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm

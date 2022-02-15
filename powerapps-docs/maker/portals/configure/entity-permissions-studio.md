@@ -2,7 +2,7 @@
 title: Configure table permissions using portals Studio
 description: Learn how to create, view, edit, and activate or deactivate table permissions for a portal using Power Apps portals Studio.
 author: ckwan-ms
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 05/27/2021

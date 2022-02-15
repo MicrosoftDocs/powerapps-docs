@@ -3,7 +3,7 @@ title: "Customize views (model-driven apps) | Microsoft Docs" # Intent and produ
 description: "Learn about customizing the views." # 115-145 characters including spaces. This abstract displays in the search result."
 keywords: ""
 ms.date: 04/15/2021
-ms.service: powerapps
+
 ms.topic: article
 ms.assetid: da2a9b57-fcd2-38c5-c670-63acf1767efa
 author: Nkrb # GitHub ID

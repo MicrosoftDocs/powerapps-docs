@@ -4,7 +4,7 @@ description: "Learn how to create virtual tables"
 ms.custom: ""
 ms.date: 03/03/2020
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"

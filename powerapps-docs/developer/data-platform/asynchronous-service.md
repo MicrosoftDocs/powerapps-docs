@@ -4,7 +4,7 @@ description: "Learn about the asynchronous service that manages system jobs." # 
 ms.custom: ""
 ms.date: 03/15/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
 ms.subservice: dataverse-developer
