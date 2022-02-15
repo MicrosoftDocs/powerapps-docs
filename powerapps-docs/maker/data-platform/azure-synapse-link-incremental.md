@@ -4,7 +4,7 @@ description: "Learn how to read the incremental updates of your Dataverse data."
 ms.custom: ""
 ms.date: 08/06/2021
 ms.reviewer: "Mattp123"
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "conceptual"

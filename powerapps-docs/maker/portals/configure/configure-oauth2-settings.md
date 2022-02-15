@@ -2,7 +2,7 @@
 title: Configure additional settings for OAuth 2.0 providers
 description: Learn how to configure additional site settings for OAuth 2.0 providers in Power Apps portals.
 author: sandhangitmsft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2021

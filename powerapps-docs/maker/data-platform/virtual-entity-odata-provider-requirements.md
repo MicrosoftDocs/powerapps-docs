@@ -4,7 +4,7 @@ description: Learn what's required and best practices when you use the OData v4 
 ms.custom: ""
 ms.date: 08/11/2021
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"

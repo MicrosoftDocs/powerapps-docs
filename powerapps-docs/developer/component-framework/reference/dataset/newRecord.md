@@ -4,7 +4,7 @@ description: Initialize a local record object for control to set the value. The 
 keywords:
 manager: kvivek
 ms.date: 06/12/2021
-ms.service: "powerapps"
+
 ms.reviewer: "nabuthuk"
 ms.author: nabuthuk
 author: Nkrb

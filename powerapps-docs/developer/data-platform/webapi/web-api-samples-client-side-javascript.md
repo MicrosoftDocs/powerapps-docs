@@ -3,7 +3,7 @@ title: "Web API  Data operations Samples (Client-side JavaScript) (Microsoft Dat
 description: "This article provides a description of various Web API samples that are implemented using client-side JavaScript"
 ms.custom: ""
 ms.date: 07/15/2021
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"

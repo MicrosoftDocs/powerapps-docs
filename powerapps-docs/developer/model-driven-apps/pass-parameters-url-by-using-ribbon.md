@@ -4,7 +4,7 @@ description: "Learn about passing parameters to a URL by using the ribbon" # 115
 ms.custom: ""
 ms.date: 04/14/2021
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.topic: "article"
 author: "KumarVivek" # GitHub ID
 ms.subservice: mda-developer

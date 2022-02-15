@@ -2,7 +2,7 @@
 title: Understand Boards sample app architecture (preview)
 description: Learn about the architecture of the Boards sample app.
 author: joel-lindstrom
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 06/02/2021

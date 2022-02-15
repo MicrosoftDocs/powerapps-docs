@@ -4,7 +4,7 @@ description: "Learn how to register a plug-in in a step of the Microsoft Dataver
 ms.custom: ""
 ms.date: 11/05/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
 ms.subservice: dataverse-developer

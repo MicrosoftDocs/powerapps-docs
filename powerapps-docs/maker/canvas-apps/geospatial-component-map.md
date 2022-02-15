@@ -2,7 +2,7 @@
 title: Insert interactive maps into apps
 description: Insert maps, and add customized pins, in Power Apps.
 author: anuitz
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: canvas, ce06122020
 ms.reviewer: tapanm

@@ -2,7 +2,7 @@
 title: "8: Protecting and deploying the app  | Microsoft Docs"
 description: "Learn about how to protect and deploy the app."
 author: spboyer
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: ebook
 ms.date: 04/26/2021

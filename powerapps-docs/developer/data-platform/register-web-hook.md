@@ -4,7 +4,7 @@ description: "Learn how to register a WebHook using the Plug-in Registration too
 ms.custom: ""
 ms.date: 03/18/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
 ms.subservice: dataverse-developer

@@ -2,7 +2,7 @@
 title: "addOption (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the addOption method.
 ms.date: 04/19/2021
-ms.service: powerapps
+
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 9798f168-7b94-411d-9aed-6471042ff11a

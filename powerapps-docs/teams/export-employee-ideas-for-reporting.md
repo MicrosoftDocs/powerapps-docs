@@ -2,7 +2,7 @@
 title: How to export Ideas data for reporting (contains video)
 description: Learn about how the Ideas data can be exported for reporting purposes
 author: sbahl10
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 08/25/2021

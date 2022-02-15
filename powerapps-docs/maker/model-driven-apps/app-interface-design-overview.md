@@ -4,7 +4,7 @@ description: "An overview of the elements that influence the app design interfac
 
 ms.date: 11/16/2021
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: overview

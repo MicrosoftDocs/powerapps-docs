@@ -2,7 +2,7 @@
 title: Manage page permissions
 description: Learn about how to manage page permissions for a portal.
 author: sandhangitmsft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2020

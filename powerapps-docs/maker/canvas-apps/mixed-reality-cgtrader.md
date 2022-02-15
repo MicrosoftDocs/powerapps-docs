@@ -2,7 +2,7 @@
 title: Load models from CGTrader into mixed reality controls (preview)
 description: Learn how to load models from CGTrader into mixed reality controls
 author: tapanm-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm

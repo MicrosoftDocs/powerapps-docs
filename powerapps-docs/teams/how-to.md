@@ -2,7 +2,7 @@
 title: Use How to sample app (preview)
 description: Learn how to use the How to app and learn how to be a Power Apps maker.
 author: joel-lindstrom
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 09/28/2021

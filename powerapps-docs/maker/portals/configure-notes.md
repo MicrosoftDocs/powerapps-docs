@@ -2,7 +2,7 @@
 title: Set up notes as attachments for basic and advanced forms
 description: Adding notes to forms on your Power Apps portal is easy. This page explains how to add and configure notes as attachments on both basic and advanced forms.
 author: gitanjalisingh33msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 12/15/2021

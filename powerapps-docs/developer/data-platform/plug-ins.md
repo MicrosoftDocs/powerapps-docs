@@ -4,7 +4,7 @@ description: "Learn how plug-ins provide a way to respond to a data processing e
 ms.custom: intro-internal
 ms.date: 03/15/2021
 ms.reviewer: "phecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
 ms.subservice: dataverse-developer

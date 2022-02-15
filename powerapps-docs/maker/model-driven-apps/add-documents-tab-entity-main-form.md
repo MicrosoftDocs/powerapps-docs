@@ -4,7 +4,7 @@ description: "Learn how to add the Documents tab to the main form for a table"
 s.custom: 
 ms.date: 01/06/2020
 ms.reviewer: 
-ms.service: powerapps
+
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: how-to

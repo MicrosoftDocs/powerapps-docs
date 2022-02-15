@@ -2,7 +2,7 @@
 title: Known issues
 description: Learn about the known issues in Power Apps portals 
 author: sandhangitmsft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 02/10/2022

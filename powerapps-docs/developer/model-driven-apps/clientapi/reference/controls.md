@@ -2,7 +2,7 @@
 title: "Controls in model-driven apps for Dynamics 365| MicrosoftDocs"
 description: A control represents an HTML element present on the form.
 ms.date: 04/15/2021
-ms.service: powerapps
+
 ms.topic: "reference"
 ms.assetid: 4d025f92-db16-440c-9f82-e40d71e09862
 author: "Nkrb"

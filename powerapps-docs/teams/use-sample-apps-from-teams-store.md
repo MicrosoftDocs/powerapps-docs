@@ -2,7 +2,7 @@
 title: Use sample apps from teams store | Microsoft Docs
 description: Learn how to use sample apps from Teams store.
 author: josephshum
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: intro-internal
 ms.date: 10/04/2021

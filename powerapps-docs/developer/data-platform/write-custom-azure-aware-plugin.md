@@ -3,7 +3,7 @@ title: "Write a custom Azure-aware plug-in (Microsoft Dataverse) | Microsoft Doc
 description: "Learn how to write plug-in code that can post a message or the execution context of the current database transaction to the Azure Service Bus."
 keywords: ""
 ms.date: 03/18/2021
-ms.service: powerapps
+
 ms.topic: article
 ms.assetid: 93d0442e-5fc9-c43c-c8c1-a433687f3d0a
 author: JimDaly # GitHub ID

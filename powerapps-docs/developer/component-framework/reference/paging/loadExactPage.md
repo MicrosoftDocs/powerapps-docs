@@ -6,7 +6,7 @@ ms.author: nabuthuk
 author: lesyk
 manager: kvivek
 ms.date: 06/12/2021
-ms.service: "powerapps"
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"

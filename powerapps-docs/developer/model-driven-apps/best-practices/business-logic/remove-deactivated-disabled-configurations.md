@@ -8,7 +8,7 @@ author: jowells
 manager: austinj
 editor: ''
 tags: ''
-ms.service: powerapps
+
 ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na

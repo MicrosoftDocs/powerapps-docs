@@ -4,7 +4,7 @@ description: "Learn how to export table data to Azure Data Lake Storage Gen2 in 
 ms.custom: ""
 ms.date: 08/17/2021
 ms.reviewer: "Mattp123"
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
