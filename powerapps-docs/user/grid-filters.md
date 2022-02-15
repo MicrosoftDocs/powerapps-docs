@@ -3,7 +3,7 @@ title: "Explore data in a view on a grid page | MicrosoftDocs"
 description: Explore data in a view on a grid page.
 author: mduelae
 manager: kvivek
-ms.service: powerapps
+
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 02/4/2022

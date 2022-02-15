@@ -3,7 +3,7 @@ title: Use solution checker to validate your apps in Power Apps | Microsoft Docs
 description: Use the solution checker to validate your solution.
 author: Mattp123
 manager: kvivek
-ms.service: powerapps
+
 ms.component: cds
 ms.topic: article
 ms.date: 10/31/2021

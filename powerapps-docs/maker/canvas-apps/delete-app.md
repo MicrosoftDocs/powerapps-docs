@@ -2,7 +2,7 @@
 title: Delete a canvas app
 description: Learn about how to delete an existing canvas app.
 author: tapanm-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm

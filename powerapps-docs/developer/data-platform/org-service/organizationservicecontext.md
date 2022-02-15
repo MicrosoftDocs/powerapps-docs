@@ -4,7 +4,7 @@ description: "The OrganizationServiceContext class lets you track changes, manag
 ms.custom: intro-internal
 ms.date: 05/27/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only

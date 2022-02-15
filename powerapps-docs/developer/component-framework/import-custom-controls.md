@@ -6,7 +6,7 @@ ms.subservice: pcf
 ms.author: nabuthuk
 manager: kvivek
 ms.date: 04/01/2021
-ms.service: "powerapps"
+
 ms.suite: ""
 ms.topic: "article"
 author: Nkrb

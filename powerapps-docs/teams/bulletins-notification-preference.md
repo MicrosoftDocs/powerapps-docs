@@ -2,7 +2,7 @@
 title: Customize apps for end user to add notification preferences (contains video)
 description: Learn about how to add notification preferences for Bulletins. 
 author: sbahl10
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 07/13/2021

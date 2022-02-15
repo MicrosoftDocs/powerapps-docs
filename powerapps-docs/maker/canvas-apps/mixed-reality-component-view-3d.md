@@ -2,7 +2,7 @@
 title: Use the View in 3D control in Power Apps
 description: View 3D models in Power Apps.
 author: anuitz
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm

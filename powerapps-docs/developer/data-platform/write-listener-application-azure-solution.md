@@ -3,7 +3,7 @@ title: "Write a listener application for a Microsoft Azure solution (Microsoft D
 description: "Learn how to write an Azure solution listener application that can read and process Microsoft Dataverse messages that are posted to the Azure Service Bus." # 115-145 characters including spaces. This abstract displays in the search result."
 keywords: ""
 ms.date: 03/18/2021
-ms.service: powerapps
+
 ms.topic: article
 ms.assetid: cf68e0a9-c240-59e7-c501-68cbfa0df455
 author: JimDaly # GitHub ID

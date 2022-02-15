@@ -2,7 +2,7 @@
 title: Import or export data from Microsoft Dataverse
 description: Bulk import and export data from Excel or CSV files into tables in Microsoft Dataverse by using the Get Data from Excel and Export Data functionality
 author: sabinn-msft
-ms.service: powerapps
+
 ms.topic: how-to
 ms.component: cds
 ms.date: 02/06/2021

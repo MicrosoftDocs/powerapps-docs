@@ -2,7 +2,7 @@
 title: Crowdsource ideas
 description: Learn how to manage Forum Ideas, Idea Comments, and Idea Votes on a portal.
 author: sbmjais
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2020

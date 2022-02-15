@@ -3,7 +3,7 @@ title: "Send in-app notifications within model-driven apps (preview)"
 description: Learn how to configure notifications in model-driven apps by using a client API.
 ms.date: 09/03/2021
 ms.reviewer: "nabuthuk"
-ms.service: powerapps
+
 ms.subservice: mda-developer
 ms.topic: "article"
 author: "aorth"

@@ -4,7 +4,7 @@ description: "This sample showcases how to create a simple dataset component, vi
 ms.custom: ""
 manager: kvivek
 ms.date: 10/01/2019
-ms.service: "powerapps"
+
 ms.topic: "article"
 ms.author: "nabuthuk" 
 author: Nkrb

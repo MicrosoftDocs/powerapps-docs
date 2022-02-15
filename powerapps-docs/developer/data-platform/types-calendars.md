@@ -4,7 +4,7 @@ description: "" # 115-145 characters including spaces. This abstract displays in
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "JimDaly" #TODO: NoOwner
 ms.subservice: dataverse-developer

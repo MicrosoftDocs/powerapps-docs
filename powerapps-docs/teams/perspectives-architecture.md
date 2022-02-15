@@ -2,7 +2,7 @@
 title: Understand Perspectives (preview) sample app architecture
 description: Learn about the architecture of the Perspectives sample app.
 author: joel-lindstrom
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 06/02/2021

@@ -3,7 +3,7 @@ title: "Web API Functions and Actions Sample (Client-side JavaScript) (Microsoft
 description: "This sample demonstrates how to perform bound and unbound functions and actions, including custom actions, using the Microsoft Dataverse Web API and client-side JavaScript."
 ms.custom: ""
 ms.date: 07/16/2021
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"

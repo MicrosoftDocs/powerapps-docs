@@ -3,7 +3,7 @@ title: Microsoft Dataverse business events| Microsoft Docs
 description: Learn about how to use business events to connect and integrate business applications.
 author: JimDaly
 manager: sunilg
-ms.service: powerapps
+
 ms.component: cds
 ms.topic: conceptual
 ms.date: 10/31/2021

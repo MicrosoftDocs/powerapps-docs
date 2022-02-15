@@ -4,7 +4,7 @@ description: "Learn how to run Azure Synapse pipelines with your exported Datave
 ms.custom: ""
 ms.date: 01/24/2021
 ms.reviewer: "Mattp123"
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"

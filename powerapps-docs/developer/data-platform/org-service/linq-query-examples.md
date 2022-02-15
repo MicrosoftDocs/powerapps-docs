@@ -4,7 +4,7 @@ description: "Browse code samples of LINQ queries." # 115-145 characters includi
 ms.custom: ""
 ms.date: 06/09/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only

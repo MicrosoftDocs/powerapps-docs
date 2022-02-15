@@ -4,7 +4,7 @@ description: "Learn how to copy Dataverse data from multiple data lakes to a sin
 ms.custom: ""
 ms.date: 01/24/2022
 ms.reviewer: "Mattp123"
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "conceptual"

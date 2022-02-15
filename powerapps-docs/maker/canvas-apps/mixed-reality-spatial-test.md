@@ -2,7 +2,7 @@
 title: Validate measurements in mixed reality using a spatial test filter
 description: Learn how to validate measurements or fittings of objects with width, depth, and height using mixed-reality  controls in canvas apps.
 author: alex-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm-msft

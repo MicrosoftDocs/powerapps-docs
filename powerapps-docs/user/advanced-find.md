@@ -3,7 +3,7 @@ title: "Advanced find | MicrosoftDocs"
 description: How to use advanced find search in model-driven apps
 author: mduelae
 manager: kvivek
-ms.service: powerapps 
+
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 2/4/2022

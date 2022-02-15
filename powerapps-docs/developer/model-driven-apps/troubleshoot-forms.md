@@ -4,7 +4,7 @@ description: "Learn about how to resolve the common issues on model-driven apps 
 ms.custom: ""
 ms.date: 09/07/2021
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.subservice: troubleshoot
 ms.topic: "article"
 author: "Nkrb" # GitHub ID

@@ -7,7 +7,7 @@ ms.subservice: mda-maker
 ms.author: matp
 manager: kvivek
 ms.date: 06/06/2018
-ms.service: powerapps
+
 ms.topic: how-to
 applies_to: 
   - "Dynamics 365 (online)"

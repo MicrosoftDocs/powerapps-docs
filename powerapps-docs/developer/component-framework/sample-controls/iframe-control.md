@@ -4,7 +4,7 @@ description: "This sample describes how to bind a code component to different co
 ms.custom: ""
 manager: kvivek
 ms.date: 6/08/2021
-ms.service: "powerapps"
+
 ms.topic: "article"
 ms.author: "nabuthuk" 
 author: Nkrb

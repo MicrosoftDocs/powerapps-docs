@@ -2,7 +2,7 @@
 title: Create an app with 3D and mixed reality controls
 description: Learn about how to use 3D and mixed reality controls.
 author: Joel-lindstrom
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm

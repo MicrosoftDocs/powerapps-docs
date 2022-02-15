@@ -2,7 +2,7 @@
 title: Local authentication, registration, and other settings
 description: Learn about different site settings for portals, local authentication, and registration process in Power Apps portals.
 author: sandhangitmsft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 02/02/2022
