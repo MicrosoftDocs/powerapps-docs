@@ -9,6 +9,7 @@ metadata:
   ms.author: sabinn
   ms.reviewer: 
   contributors: sama-zaki
+  ms.topic: faq
 title: Azure Synapse Link for Dataverse FAQ
 summary: This article provides information on frequently asked questions about exporting Microsoft Dataverse table data to Azure Synapse Analytics and Azure Data Lake.
 sections:
