@@ -48,7 +48,7 @@ Keep ownership of a row and use the share feature to share the row with another 
 2.  On the share dialog box, do one of the following:
 
     - **First time sharing a row**
-      1. Select the lookup column under **Add user/team**. Enter the name of the user or team in the [lookup column](lookup-field.md). The lookup will start displaying users or teams based what you typed, or you can select the lookup icon (magnifying glass) and an alphabetical list of names appears that you can select to assign access. You can also search for a user that has previous share rights to manage or change access privileges.
+      1. Select the lookup column under **Add user/team**. Enter the name of the user or team in the [lookup column](lookup-field.md). The lookup will start displaying users or teams based on what you typed, or you can select the lookup icon (magnifying glass) and an alphabetical list of names appears that you can select to assign access. You can also search for a user that previously had share rights to manage or change access privileges.
 
 
           > [!div class="mx-imgBorder"]
@@ -72,7 +72,7 @@ Keep ownership of a row and use the share feature to share the row with another 
     > ![Sharing is successful.](media/share-row-shared.png "Sharing is successful.")
 
 > [!NOTE]
-> If you add additional users or teams after saving share access and the check box is disable but has a value, this means that your administrator has changed the basic privileges for the user, and they no longer have basic access rights, however, the share permissions is retained and isn't reset when the administrator changes the base privileges. Contact your system administrator to update a user’s access if you want to change or update the disabled options for sharing a row.
+> If you add additional users or teams after saving share access and the check box is disabled but has a value, this means that your administrator has changed the basic privileges for the user, and they no longer have basic access rights, however, the share permissions is retained and isn't reset when the administrator changes the base privileges. Contact your system administrator to update a user’s access if you want to change or update the disabled options for sharing a row.
  
  ## Issues and errors
  
