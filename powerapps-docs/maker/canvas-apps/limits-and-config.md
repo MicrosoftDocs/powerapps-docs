@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 02/11/2022
+ms.date: 02/14/2022
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
@@ -20,6 +20,7 @@ contributors:
   - wimcoor
 ---
 # System requirements, limits, and configuration values for Power Apps
+
 This article contains information on supported device platforms, web browser requirements, limits, and configuration values for Power Apps. 
 
 ## Supported platforms for running apps using the Power Apps mobile app
@@ -36,6 +37,8 @@ This article contains information on supported device platforms, web browser req
 > - Canvas apps running on Windows platform must use the legacy Microsoft Dataverse connector. A [warning is displayed](use-native-cds-connector.md) for apps that still use the legacy connector, but using it for Windows platform is supported.
 
 ## Supported browsers for running Power Apps
+
+Applies to model-driven apps, canvas apps, and Power Apps portals.
 
 | **Browser** | **Supported Versions** |
 | --- | --- |
@@ -66,15 +69,6 @@ This article contains information on supported device platforms, web browser req
 | --- | --- |
 | Windows |Windows 8.1 or later|
 | macOS|10.13 or later|
-
-## Supported browsers for running Power Apps portals
-
-| **Browser** | **Supported Versions** |
-| --- | --- |
-| Google Chrome|Latest three major releases|
-| Microsoft Edge|Latest three major releases|
-| Mozilla Firefox (latest version)|Latest three major releases|
-| Apple Safari|13 and later|
 
 ## Supported browsers for Power Apps portals Studio
 
