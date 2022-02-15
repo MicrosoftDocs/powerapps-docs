@@ -2,7 +2,7 @@
 title: Troubleshooting startup issues for Power Apps | Microsoft Docs
 description: This troubleshooting guide helps fix common configuration problems that prevent Power Apps from starting.
 author: wimcoor
-ms.service: powerapps
+
 ms.subservice: troubleshoot
 ms.topic: conceptual
 ms.custom: canvas

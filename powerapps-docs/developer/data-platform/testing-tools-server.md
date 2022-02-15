@@ -4,7 +4,7 @@ description: "Learn about testing frameworks for server-side development." # 115
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
 ms.subservice: dataverse-developer

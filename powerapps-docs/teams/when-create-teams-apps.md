@@ -1,7 +1,7 @@
 ---
 title: When to build apps in Microsoft Teams (contains video)
 description: Learn when you should use build Power Apps in Microsoft Teams for collaborative apps.
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 08/05/2021

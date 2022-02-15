@@ -2,7 +2,7 @@
 title: Create and manage website bindings
 description: Learn how to create and manage website bindings in portals.
 author: sandhangitmsft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2020

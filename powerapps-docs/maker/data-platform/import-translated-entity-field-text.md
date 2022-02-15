@@ -4,7 +4,7 @@ description: "Learn how to import translated table and column text"
 ms.custom: ""
 ms.date: 06/19/2018
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"

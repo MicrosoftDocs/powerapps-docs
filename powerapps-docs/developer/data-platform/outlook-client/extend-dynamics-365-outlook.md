@@ -4,7 +4,7 @@ description: "Dynamics 365 for Outlook lets users interact with data while theyâ
 ms.custom: ""
 ms.date: 04/07/2020
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "sriharibs-msft" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only

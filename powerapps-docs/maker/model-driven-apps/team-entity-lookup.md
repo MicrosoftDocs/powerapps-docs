@@ -4,7 +4,7 @@ description: "Learn how to add the team table as a lookup option in your app"
 ms.custom: ""
 ms.date: 07/24/2019
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"

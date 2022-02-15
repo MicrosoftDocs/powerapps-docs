@@ -2,7 +2,7 @@
 title: Understand Milestones sample app architecture
 description: Learn about the architecture of the Milestones sample app.
 author: joel-lindstrom
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 06/02/2021

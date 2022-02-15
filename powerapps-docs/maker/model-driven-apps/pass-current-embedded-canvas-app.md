@@ -4,7 +4,7 @@ description: Learn how to pass the current record as data context in an embedded
 ms.custom: ""
 ms.date: 07/29/2021
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"

@@ -4,7 +4,7 @@ description: "Learn about FetchXML, a proprietary XML based language that is use
 ms.custom: ""
 ms.date: 03/25/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
 ms.subservice: dataverse-developer

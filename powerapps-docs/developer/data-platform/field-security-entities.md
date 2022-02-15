@@ -4,7 +4,7 @@ description: "Learn about using field security entities to apply field-level sec
 ms.custom: ""
 ms.date: 03/27/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "paulliew" # GitHub ID
 ms.subservice: dataverse-developer

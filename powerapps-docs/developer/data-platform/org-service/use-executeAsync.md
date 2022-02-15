@@ -4,7 +4,7 @@ description: "You can use the ExecuteAsync message to import solutions asynchron
 ms.custom: ""
 ms.date: 06/04/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only

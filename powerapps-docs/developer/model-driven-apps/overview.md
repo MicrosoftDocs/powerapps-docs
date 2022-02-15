@@ -6,7 +6,7 @@ author: Nkrb
 manager: kvivek
 editor: ''
 tags: ''
-ms.service: powerapps
+
 ms.devlang: na
 ms.topic: overview
 ms.tgt_pltfrm: na

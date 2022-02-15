@@ -3,7 +3,7 @@ title: "View, compose and respond to email | MicrosoftDocs"
 description: How to view, compose and respond to email.
 author: mduelae
 manager: kvivek
-ms.service: powerapps
+
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 6/30/2021
@@ -51,7 +51,7 @@ When enabled by your system administrator, you can access email from the top nav
 
 Legend
 
-1. **Form**. The name displayed in the **From** field is automatically populated based on the user who is currently signed in.
+1. **From**. The name displayed in the **From** field is automatically populated based on the user who is currently signed in.
 2. **Expand**. The **Expand** ![Expand icon.](media\email-expand-icon.png "xpand email") icon allows you to compose your email in a full-screen view and minimize when done.
 3. **Rich text editor**. This tool bar helps you  format emails. The editor is displayed as a single line that can be expanded to view the full list of editing features by default.<BR>
   For more information, see [Use the rich text editor toolbar in emai](email-rich-text-editor.md) and [Accessibility shortcuts for email](keyboard-shortcuts.md#email). 
@@ -64,7 +64,7 @@ For more information, see [Insert an email template](insert-email-template.md).
    > The **To** box must contain a recipient to select a template.
 
 7. **New Attachment**. This command is used to add a file to your email.
-8. **Attach File**.  This command uses the 'plus' ![attach file icon.](media\email-new-attachment-icon.png "attach file icon") icon functionality is used to drag-and-drop or copy-and-paste attachments. 
+8. **Attach File**.  This command uses the 'plus' ![attach file icon.](media\email-new-attachment-icon.png "attach file icon") icon functionality to drag-and-drop or copy-and-paste attachments. 
 
    > [!Note] 
    > After you save your email, you can use Attach file and New Attachments interchangeably.
@@ -108,5 +108,5 @@ You can use the following command options when working with emails in the timeli
    ![Respond to emails in timeline.](media\email-respond-in-timeline-1a.png "Respond to emails in timeline.") 
 
    1. **Reply**. Use this command to reply directly the the sender of the email you received.
-   2. **Reply All**. Use this command to replay to everyone on an email you received.
+   2. **Reply All**. Use this command to reply to everyone on an email you received.
    3. **Forward**. Use this command to forward the email to someone else.

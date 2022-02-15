@@ -3,7 +3,7 @@ title: "CSS web resources (model-driven apps) | Microsoft Docs" # Intent and pro
 description: "Use cascading style sheet (CSS) web resources to create style sheets for use in webpage web resources. " # 115-145 characters including spaces. This abstract displays in the search result."
 keywords: ""
 ms.date: 04/15/2021
-ms.service: powerapps
+
 ms.topic: article
 ms.assetid: a4e98fa7-930d-e320-5384-9f773775639b
 author: Nkrb # GitHub ID

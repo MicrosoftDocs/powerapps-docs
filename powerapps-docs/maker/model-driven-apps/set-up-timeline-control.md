@@ -4,7 +4,7 @@ description: "Learn how to add and configure the timeline control to use in a mo
 ms.custom: ""
 ms.date: 09/23/2021
 ms.reviewer: "matp"
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"

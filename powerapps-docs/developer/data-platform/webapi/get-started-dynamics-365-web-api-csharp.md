@@ -3,7 +3,7 @@ title: "Get started with Microsoft Dataverse Web API (C#) (Dataverse)| Microsoft
 description: "Learn how to access the Microsoft Dataverse Web API using the Microsoft Visual C# programming language"
 ms.custom: intro-internal
 ms.date: 03/31/2020
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"

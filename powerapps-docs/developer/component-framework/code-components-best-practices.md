@@ -8,7 +8,7 @@ author: Nkrb
 contributors:
     - v-scottdurow
 ms.date: 06/30/2021
-ms.service: "powerapps"
+
 ms.topic: "article"
 ---
 

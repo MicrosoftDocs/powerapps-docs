@@ -4,7 +4,7 @@ description: "IFRAME and web resource controls embed content from another locati
 ms.custom: ""
 ms.date: 04/15/2021
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.topic: "article"
 author: "KumarVivek" # GitHub ID
 ms.subservice: mda-developer

@@ -2,7 +2,7 @@
 title: "getMin (Client API reference)| MicrosoftDocs"
 description: Includes description and supported parameters for the getMin method.
 ms.date: 04/19/2021
-ms.service: powerapps
+
 ms.topic: "reference"
 ms.assetid: 9a04b52a-2bc7-4572-bd3e-8b9622602092
 author: "Nkrb"

@@ -2,7 +2,7 @@
 title: "getFormType (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the getFormType method.
 ms.date: 04/19/2021
-ms.service: powerapps
+
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 6c57db71-a76d-404c-852e-9c36a1c549ee

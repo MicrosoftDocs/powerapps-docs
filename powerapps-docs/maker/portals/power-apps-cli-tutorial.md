@@ -2,7 +2,7 @@
 title: Tutorial on how to use Power Platform CLI with portals
 description: This page provides a walk-through with examples for how to use Power Platform CLI with Power Apps portals for CI/CD (Continuous Integration/Continuous Deployment).
 author: neerajnandwana-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 11/29/2021

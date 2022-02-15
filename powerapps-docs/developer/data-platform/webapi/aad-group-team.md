@@ -3,7 +3,7 @@ title: "Work with Azure Active Directory group teams (Dataverse)| Microsoft Docs
 description: "Learn about working with an Azure Active Directory group team using the Web API."
 ms.custom: ""
 ms.date: 09/14/2021
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"

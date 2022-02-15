@@ -4,7 +4,7 @@ description: "Learn about the types of business logic you can use in your app"
 ms.custom: intro-internal
 ms.date: 08/02/2018
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "conceptual"

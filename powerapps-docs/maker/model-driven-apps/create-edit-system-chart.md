@@ -3,7 +3,7 @@ title: "Create or edit a model-driven app system chart in Power Apps | Microsoft
 description: "Learn how to create a system chart for a model-driven app"
 ms.custom: ""
 ms.date: 07/08/2021
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"

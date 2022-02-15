@@ -2,7 +2,7 @@
 title: Use Find and Replace in the formula bar
 description: Learn how to use the find and Replace to search for strings and make changes to one or more matches.
 author: TashasEv
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm

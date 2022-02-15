@@ -2,7 +2,7 @@
 title: Configure a contact for use on a portal
 description: Learn how to add and configure a contact to be used in a portal.
 author: sandhangitmsft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2021

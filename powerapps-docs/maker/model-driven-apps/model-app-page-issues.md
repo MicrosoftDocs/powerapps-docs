@@ -4,7 +4,7 @@ description: "Find the known issue that might occur when you create a custom pag
 ms.custom: ""
 ms.date: 09/02/2021
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.subservice: mda-maker
 ms.topic: "article"
 author: "adrianorth"

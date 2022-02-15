@@ -3,7 +3,7 @@ title: How to use a model-driven app on a mobile device | Microsoft Docs
 description: Learn how to use a custom model-driven app on a mobile device.
 author: mduelae
 manager: kvivek
-ms.service: powerapps
+
 ms.component: pa-user
 ms.topic: quickstart
 ms.date: 10/15/2021
