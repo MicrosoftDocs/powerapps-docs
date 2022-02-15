@@ -4,7 +4,7 @@ description: "Server-side synchronization provides an interface between Microsof
 ms.custom: ""
 ms.date: 03/24/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "mayadumesh"
 ms.subservice: dataverse-developer

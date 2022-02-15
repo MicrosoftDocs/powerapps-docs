@@ -2,7 +2,7 @@
 title: "getRequiredLevel (Client API reference)| MicrosoftDocs"
 description: Includes description and supported parameters for the getRequiredLevel method.
 ms.date: 04/19/2021
-ms.service: powerapps
+
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: c0b6ea26-2a11-4a49-8ecf-fe700e782bf3

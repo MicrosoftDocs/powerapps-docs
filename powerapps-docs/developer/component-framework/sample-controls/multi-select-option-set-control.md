@@ -4,7 +4,7 @@ description: "This sample demonstrates how to leverage the multi select option s
 ms.custom: ""
 manager: kvivek
 ms.date: 06/08/2021
-ms.service: "powerapps"
+
 ms.topic: "article"
 ms.author: "nabuthuk" 
 author: Nkrb

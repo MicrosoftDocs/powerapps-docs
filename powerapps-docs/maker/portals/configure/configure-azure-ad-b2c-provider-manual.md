@@ -2,7 +2,7 @@
 title: Configure the Azure Active Directory B2C provider manually
 description: Learn how to configure the Azure Active Directory B2C identity provider manually for Power Apps portals.
 author: sandhangitmsft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 09/28/2021

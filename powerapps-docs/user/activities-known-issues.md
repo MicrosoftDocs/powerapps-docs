@@ -3,7 +3,7 @@ title: "Email FAQs and known issues| MicrosoftDocs"
 description: Email FAQs and known issues.
 author: mduelae
 manager: kvivek
-ms.service: powerapps
+
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 06/30/2021

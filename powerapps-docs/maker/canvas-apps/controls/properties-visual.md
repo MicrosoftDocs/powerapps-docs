@@ -2,7 +2,7 @@
 title: Image properties in Power Apps
 description: Reference information about image properties in Power Apps.
 author: chmoncay
-ms.service: powerapps
+
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm

@@ -2,7 +2,7 @@
 title: Use Microsoft SQL Server securely with Power Apps
 description: Understand how to use SQL Server securely with Power Apps.
 author: lancedMicrosoft
-ms.service: powerapps
+
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm

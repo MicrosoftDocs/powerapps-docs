@@ -2,7 +2,7 @@
 title: Understand Employee ideas sample app architecture | Microsoft Docs
 description: Learn about the architecture of the Employee ideas sample app.
 author: josephshum
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 06/02/2021

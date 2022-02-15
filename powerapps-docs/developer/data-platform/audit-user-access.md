@@ -4,7 +4,7 @@ description: "Read about the ability to audit user access, including user identi
 ms.custom: ""
 ms.date: 03/26/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "paulliew" # GitHub ID
 ms.subservice: dataverse-developer

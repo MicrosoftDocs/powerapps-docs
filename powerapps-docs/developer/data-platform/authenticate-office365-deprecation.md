@@ -4,7 +4,7 @@ description: "Describes deprecation of the WS-Trust security protocol and the co
 ms.custom: ""
 ms.date: 01/06/2022
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "phecke" # GitHub ID
 ms.subservice: dataverse-developer

@@ -3,7 +3,7 @@ title: "Create or edit a model-driven app using the app designer in Power Apps |
 description: "Learn how to create or edit apps using the app designer"
 keywords: ""
 ms.date: 03/05/2020
-ms.service: powerapps
+
 ms.custom: 
 ms.topic: get-started-article
 applies_to: 

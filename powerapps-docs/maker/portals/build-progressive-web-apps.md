@@ -2,7 +2,7 @@
 title: Build progressive web apps
 description: Configure a portal as a progressive web app.
 author: ankitavish
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 02/14/2022

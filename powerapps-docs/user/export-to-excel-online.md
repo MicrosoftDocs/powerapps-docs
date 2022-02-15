@@ -3,7 +3,7 @@ title: "Open your model-driven app data in Excel Online | MicrosoftDocs"
 description: How to open your data to Excel Online in model-driven app and make  edits.
 author: mduelae
 manager: kvivek
-ms.service: powerapps
+
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 3/12/2021

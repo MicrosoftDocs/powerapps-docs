@@ -4,7 +4,7 @@ description: "Learn how to validate format conversions in Microsoft Dataverse." 
 ms.custom: ""
 ms.date: 09/09/2021
 ms.reviewer: "nabuthuk"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "NHelgren" # GitHub ID
 ms.subservice: dataverse-developer

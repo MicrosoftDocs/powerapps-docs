@@ -4,7 +4,7 @@ description: "Learn how to query Microsoft Dataverse table data using SQL." # 11
 ms.custom: ""
 ms.date: 03/12/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID
 ms.subservice: dataverse-developer

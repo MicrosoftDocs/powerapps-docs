@@ -3,7 +3,7 @@ title: "Attach a file to email in model-driven apps | MicrosoftDocs"
 description: Learn how attach a file to email.
 author: mduelae
 manager: kvivek
-ms.service: powerapps
+
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 6/30/2021

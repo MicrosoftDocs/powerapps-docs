@@ -2,7 +2,7 @@
 title: Portals as progressive web apps (PWAs) overview
 description: Overview of a building a portal as a progressive web app.
 author: ankitavish
-ms.service: powerapps
+
 ms.topic: overview
 ms.custom: 
 ms.date: 02/14/2022

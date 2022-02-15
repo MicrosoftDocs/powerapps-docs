@@ -3,7 +3,7 @@ title: "Column data types in Microsoft Dataverse (contains video) | MicrosoftDoc
 description: "Understand the different column data types available for your app"
 keywords: ""
 ms.date: 08/13/2021
-ms.service: powerapps
+
 ms.custom: 
 ms.topic: article
 author: "Mattp123"

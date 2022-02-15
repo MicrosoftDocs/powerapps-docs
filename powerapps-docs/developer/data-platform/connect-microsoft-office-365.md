@@ -4,7 +4,7 @@ description: "The Microsoft 365 portal provides a single sign-on experience for 
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "paulliew" # GitHub ID
 ms.subservice: dataverse-developer

@@ -2,7 +2,7 @@
 title: About lists
 description: Learn how to add and configure lists to render a list of records on a portal.
 author: sandhangitmsft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 02/15/2022

@@ -2,7 +2,7 @@
 title: Use the Measure in MR control in Power Apps
 description: Digitally measure distances and create areas and shapes in the real world with augmented reality features in Power Apps.
 author: anuitz
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm

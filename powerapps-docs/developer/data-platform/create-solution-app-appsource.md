@@ -4,7 +4,7 @@ description: "Learn about how to create a managed solution for your app to inclu
 ms.custom: ""
 ms.date: 12/20/2019
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "KumarVivek" # GitHub ID
 ms.subservice: dataverse-developer

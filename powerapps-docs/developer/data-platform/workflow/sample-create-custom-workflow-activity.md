@@ -4,7 +4,7 @@ description: "The sample demonstrates how to write a custom workflow activity th
 ms.custom: ""
 ms.date: 1/28/2020
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: sample

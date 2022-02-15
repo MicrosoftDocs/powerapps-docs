@@ -3,7 +3,7 @@ title: Create a relationship between tables by using a lookup column | Microsoft
 description: Step-by-step instructions for how to create a relationship between tables in Power Apps by using a lookup column.
 author: lancedMicrosoft
 manager: kvivek
-ms.service: powerapps
+
 ms.component: cds
 ms.topic: how-to
 ms.date: 02/09/2022

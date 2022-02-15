@@ -3,7 +3,7 @@ title: "Walkthrough: Registering and configuring a SimpleSPA application with ad
 description: "Describes the process of registering and configuring the simplest Single-Page Application (SPA) to access data in Microsoft Dataverse using adal.js and Cross-origin Resource Sharing (CORS)."
 keywords: ""
 ms.date: 03/24/2021
-ms.service: powerapps
+
 ms.topic: article
 ms.assetid: a327d2ff-e252-61cf-1190-6a974130ef19
 author: "paulliew" # GitHub ID

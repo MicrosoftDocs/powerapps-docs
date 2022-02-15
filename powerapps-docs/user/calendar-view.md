@@ -5,7 +5,7 @@ ms.date: 01/13/2021
 author: mduelae
 ms.subservice: end-user
 ms.author: mkaur
-ms.service: powerapps
+
 ms.custom: ""
 ms.reviewer: ""
 ms.assetid: 

@@ -4,7 +4,7 @@ description: "Learn how to create many-to-may relationships"
 ms.custom: ""
 ms.date: 06/10/2021
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"

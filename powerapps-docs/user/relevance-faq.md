@@ -3,7 +3,7 @@ title: "FAQ for Dataverse search | MicrosoftDocs"
 description: FAQ about Dataverse search
 author: mduelae
 manager: kvivek
-ms.service: powerapps
+
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 2/8/2020

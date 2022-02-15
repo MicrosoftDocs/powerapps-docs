@@ -4,7 +4,7 @@ description: "Learn about the grouping and aggregation features of FetchXML that
 ms.custom: ""
 ms.date: 09/27/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
 ms.subservice: dataverse-developer

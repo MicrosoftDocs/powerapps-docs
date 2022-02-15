@@ -4,7 +4,7 @@ description: "Learn how to import a solution in Power Apps"
 ms.custom: ""
 ms.date: 08/02/2021
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.topic: "article"
 author: "Mattp123"
 ms.assetid: 56363ea3-ea76-4311-9b7a-b71675e446fb

@@ -4,7 +4,7 @@ description: Learn how to work with columns on a form using Power Apps.
 ms.custom: ""
 ms.date: 02/03/2022
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"

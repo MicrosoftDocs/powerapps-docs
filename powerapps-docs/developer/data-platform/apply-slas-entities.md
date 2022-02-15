@@ -4,7 +4,7 @@ description: "Learn about applying SLAs to custom tables by enabling tables for 
 ms.custom: ""
 ms.date: 07/19/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "JimDaly" #TODO: NoOwner
 ms.subservice: dataverse-developer
