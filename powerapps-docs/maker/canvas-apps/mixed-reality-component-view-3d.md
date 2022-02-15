@@ -2,11 +2,10 @@
 title: Use the View in 3D control in Power Apps
 description: View 3D models in Power Apps.
 author: anuitz
-
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 1/25/2022
+ms.date: 02/15/2022
 ms.subservice: canvas-maker
 ms.author: anuitz
 search.audienceType: 
@@ -37,7 +36,7 @@ With your app open for [editing](edit-app.md) in [Power Apps Studio](https://cre
 1. Open the **Insert** tab and expand **Media**.
 2. Select **View in 3D** to place a 3D control in the app screen, or drag the control to the screen to position it more precisely.
 
-### Properties
+## Key properties
 
 Change a 3D control's behavior and appearance using properties. Some properties are only available on the **Advanced** tab.
 
@@ -51,20 +50,25 @@ Change a 3D control's behavior and appearance using properties. Some properties 
 | Pins(Items) | [Shows pins on the model at specific coordinates](mixed-reality-add-pins-3d-model.md), provided in a data source (**Items**). If *None*, no pins are shown. | Data table | Properties; Advanced: **Items** |
 | Show pins | Shows the pins described in **Items**. | Boolean | Properties; Advanced: **ShowPins** |
 | Show reset button | Shows or hides a button that resets the model to its initial state. | Boolean | Properties; Advanced; **ShowReset** |
-| [Visible](./controls/properties-core.md) | Shows or hides the control. | Boolean | Properties; Advanced: **Visible** |
-| Position | Places the upper-left corner of the control at the screen coordinates specified in *x* and *y*. | Floating point number | Properties; Advanced: **[X](./controls/properties-size-location.md)**, **[Y](./controls/properties-size-location.md)** |
-| Size | Determines the size of the control using the pixel values provided in *Width* and *Height*. | Integer | Properties; Advanced: **[Width](./controls/properties-size-location.md)**, **[Height](./controls/properties-size-location.md)** |
-| OnModelLoad | Contains code that runs when a model is loaded.| Event | Advanced |
-| OnChange | Contains code that runs when any property of the control is changed. | Event | Advanced |
-| OnSelect | Contains code that runs when the user selects a pin or the control. | Event | Advanced |
+| OnModelLoad | Contains behavior formula that runs when a model is loaded.| Event | Advanced |
+| OnChange | Contains behavior formula that runs when any property of the control is changed. | Event | Advanced |
+| OnSelect | Contains behavior formula that runs when the user selects a pin or the control. | Event | Advanced |
 | MaxPins | Specifies the maximum number of pins that can be shown on the model. | Integer | Advanced |
 | PinsX | Specifies the location of pins on the X axis in 3D coordinate space. | Floating point number | Advanced |
 | PinsY | Specifies the location of pins on the Y axis in 3D coordinate space. | Floating point number | Advanced |
 | PinsZ | Specifies the location of pins on the Z axis in 3D coordinate space. | Floating point number | Advanced |
-| [Tooltip](./controls/properties-core.md) | Determines the text to display when the user hovers over a pin. | String | Advanced |
+
+## Additional properties
+
+| Property | Description | Type | Location |
+| - | - | - | - |
 | ContentLanguage | Determines the display language of the control, if it's different from the language used in the app. | String | Advanced |
 | [DisplayMode](./controls/properties-core.md) |  Determines whether the control allows user input (*Edit*), only displays data (*View*), or is disabled (*Disabled*). | Dropdown list | Advanced |
+| Position | Places the upper-left corner of the control at the screen coordinates specified in *x* and *y*. | Floating point number | Properties; Advanced: **[X](./controls/properties-size-location.md)**, **[Y](./controls/properties-size-location.md)** |
+| Size | Determines the size of the control using the pixel values provided in *Width* and *Height*. | Integer | Properties; Advanced: **[Width](./controls/properties-size-location.md)**, **[Height](./controls/properties-size-location.md)** |
 | [TabIndex](./controls/properties-accessibility.md) | Specifies the order the control is selected if the user navigates the app using the Tab key. | Integer |  Advanced |
+| [Tooltip](./controls/properties-core.md) | Determines the text to display when the user hovers over a pin. | String | Advanced |
+| [Visible](./controls/properties-core.md) | Shows or hides the control. | Boolean | Properties; Advanced: **Visible** |
 
 ## Performance considerations
 
