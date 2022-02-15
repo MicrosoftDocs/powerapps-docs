@@ -2,7 +2,7 @@
 title: Configure a choices column for portals
 description: Learn how to add and configure a Dataverse choices column on portal lists, forms, and templates.
 author: nageshbhat-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 12/09/2021

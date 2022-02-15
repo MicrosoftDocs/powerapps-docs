@@ -4,7 +4,7 @@ description: View a contact's or user profile card
 ms.custom: ""
 author: mduelae
 manager: kvivek
-ms.service: powerapps
+
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 09/14/2020

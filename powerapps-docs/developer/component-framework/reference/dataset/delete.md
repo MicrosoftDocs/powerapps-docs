@@ -4,7 +4,7 @@ description: Delete the records from data source.
 keywords:
 manager: kvivek
 ms.date: 06/12/2021
-ms.service: "powerapps"
+
 ms.reviewer: "nabuthuk"
 ms.author: nabuthuk
 author: Nkrb

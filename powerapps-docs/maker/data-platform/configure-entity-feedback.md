@@ -4,7 +4,7 @@ description: "Learn how to enable feedback for a table"
 ms.custom: ""
 ms.date: 07/28/2021
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "conceptual"

@@ -4,7 +4,7 @@ description: "With embedded canvas apps, app makers can bring the power of canva
 ms.custom: "Steps to embedding a canvas app on a form"
 ms.date: 06/25/2019
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "conceptual"

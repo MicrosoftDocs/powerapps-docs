@@ -3,7 +3,7 @@ title: "Add a connection role to link records to each other| MicrosoftDocs"
 description: How to add a connection role linked to records
 author: mduelae
 manager: kvivek
-ms.service: powerapps
+
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 8/01/2019

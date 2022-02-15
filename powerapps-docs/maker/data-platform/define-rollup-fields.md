@@ -4,7 +4,7 @@ description: "Learn how to define rollup columns"
 ms.custom: ""
 ms.date: 01/23/2020
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "conceptual"

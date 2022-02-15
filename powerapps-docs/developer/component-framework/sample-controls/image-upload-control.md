@@ -4,7 +4,7 @@ description: "This sample component renders as an `Upload` button to upload the 
 ms.custom: ""
 manager: kvivek
 ms.date: 6/08/2021
-ms.service: "powerapps"
+
 ms.topic: "article"
 ms.author: "nabuthuk"
 author: nkrb

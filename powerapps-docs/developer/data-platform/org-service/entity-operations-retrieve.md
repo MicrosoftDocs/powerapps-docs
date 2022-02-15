@@ -4,7 +4,7 @@ description: "Describes options available when retrieving a row programmatically
 ms.custom: ""
 ms.date: 06/03/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only

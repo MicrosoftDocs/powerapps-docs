@@ -4,7 +4,7 @@ description: "Monitor can help you debug and diagnose problems, which help you b
 ms.custom: ""
 ms.date: 08/11/2020
 ms.reviewer: "matp"
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "troubleshooting"

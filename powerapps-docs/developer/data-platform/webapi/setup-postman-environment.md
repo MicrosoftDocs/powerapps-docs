@@ -4,7 +4,7 @@ description: "Learn how to set up and configure a Postman environment that conne
 ms.custom: 
 ms.date: 04/09/2019
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article

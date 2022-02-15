@@ -4,7 +4,7 @@ description: "Learn how to update or upgrade a solution in Power Apps"
 ms.custom: ""
 ms.date: 09/14/2021
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"

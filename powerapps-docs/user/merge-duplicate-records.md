@@ -3,7 +3,7 @@ title: "Merge duplicate records| MicrosoftDocs"
 description: How to merge duplicate records
 author: mduelae
 manager: kvivek
-ms.service: powerapps
+
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 02/10/2020

@@ -3,7 +3,7 @@ title: "Create and remove pages in model-driven apps | MicrosoftDocs"
 description: Learn how to Create and remove pages in model-driven apps.
 ms.custom: ""
 ms.date: 10/07/2021
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"

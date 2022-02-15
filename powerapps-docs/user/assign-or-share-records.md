@@ -3,7 +3,7 @@ title: "Assign a row to someone else| MicrosoftDocs"
 description: How to reassign a row to someone else.
 author: mduelae
 manager: kvivek
-ms.service: powerapps
+
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 11/10/2020

@@ -7,7 +7,7 @@ ms.subservice: mda-maker
 ms.author: matp
 manager: kvivek
 ms.date: 10/26/2021
-ms.service: powerapps
+
 ms.topic: article
 applies_to: 
   - PowerApps

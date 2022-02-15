@@ -3,7 +3,7 @@ title: "Share rows with a user or team| MicrosoftDocs"
 description: How to share a row with a user or team.
 author: mduelae
 manager: kvivek
-ms.service: powerapps
+
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 10/27/2021

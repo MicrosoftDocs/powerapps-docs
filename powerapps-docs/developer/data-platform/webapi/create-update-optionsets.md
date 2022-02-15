@@ -3,7 +3,7 @@ title: "Create and update choices (option sets) using the Web API (Microsoft Dat
 description: "Learn about creating and updating choices in Microsoft Dataverse."
 ms.custom: ""
 ms.date: 04/29/2021
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"

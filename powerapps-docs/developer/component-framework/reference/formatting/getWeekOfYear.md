@@ -6,7 +6,7 @@ ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
 ms.date: 10/01/2019
-ms.service: "powerapps"
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.assetid: 9d62e091-2276-44e9-9b9f-b216f51b4d05

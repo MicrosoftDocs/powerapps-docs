@@ -4,7 +4,7 @@ description: "Learn about using Stylesheet (XSL) Web resources to transform XML 
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.topic: "article"
 author: "KumarVivek" # GitHub ID
 ms.subservice: mda-developer

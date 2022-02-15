@@ -4,7 +4,7 @@ description: "Learn about subject categorizing table rows in Power Apps, such as
 ms.custom: ""
 ms.date: 03/28/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "JimDaly" #TODO: NoOwner
 ms.subservice: dataverse-developer

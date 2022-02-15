@@ -4,7 +4,7 @@ description: "Learn how to design a custom page for your model-driven app"
 ms.custom: ""
 ms.date: 07/21/2021
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.subservice: mda-maker
 ms.topic: "conceptual"
 author: "aorth"

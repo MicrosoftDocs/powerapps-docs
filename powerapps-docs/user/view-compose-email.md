@@ -3,7 +3,7 @@ title: "View, compose and respond to email | MicrosoftDocs"
 description: How to view, compose and respond to email.
 author: mduelae
 manager: kvivek
-ms.service: powerapps
+
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 6/30/2021

@@ -3,7 +3,7 @@ metadata:
   title: Frequently asked questions about exporting Microsoft Dataverse table data to Azure Synapse Analytics and Azure Data Lake
   description: Get answers to frequently asked questions about Power Apps Azure Synapse Link for Dataverse.
   author: sabinn-msft
-  ms.service: powerapps
+  
   ms.search.keywords: 
   ms.date: 02/10/2021
   ms.author: sabinn

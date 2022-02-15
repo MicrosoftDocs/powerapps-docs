@@ -4,7 +4,7 @@ description: "Learn about available tools and resources when working with soluti
 ms.custom: ""
 ms.date: 07/28/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "shmcarth" # GitHub ID
 ms.subservice: dataverse-developer
