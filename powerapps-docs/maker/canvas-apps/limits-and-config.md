@@ -49,9 +49,11 @@ Applies to model-driven apps, canvas apps, and Power Apps portals.
 
 ### Supported platforms for browsers running Power Apps
 
+Applies to model-driven apps, canvas apps, and Power Apps portals.
+
 | **Operating System** | **Supported Versions** |
 | --- | --- |
-| Windows |Windows 8.1 or later|
+| Windows |Windows 10 or later|
 | macOS|10.13 or later|
 | iOS |iOS 13 or later|
 | Android |10 or later |
