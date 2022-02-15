@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 02/11/2022
+ms.date: 02/14/2022
 ms.subservice: canvas-maker
 ms.author: tashas
 search.audienceType: 
@@ -116,6 +116,32 @@ You must meet the following requirements to be able to add an existing flow to a
 
 After added, the flow will appear under **In your app** section inside the Power Automate pane.
 
+## Reference a flow
+
+To reference the added flow, update the formula bar for the control or component within Power Apps Studio with the flow details. For example, to reference a flow named "PowerAppsbutton" that triggers an email without accepting any input parameters, use the following formula on the button's **OnSelect** property:
+
+```powerapps-dot
+PowerAppsbutton.Run()
+```
+
+:::image type="content" source="media/working-with-flows/reference-flow.png" alt-text="A screenshot showing flow added to OnSelect property of the button with the above formula.":::
+
+This behavior is different from how the reference to a flow works within Power Apps Studio if the Power Automate pane is disabled.
+
+When you add a flow with Power Automate pane disabled, you must choose a behavior property of the control or the component that you want to associate with the flow. Adding flow in this case clears any formula already associated with the chosen property (when the flow reference is added). This means that any existing formula would be removed, and you have to carefully make a copy of the existing formula before adding the flow in order to preserve it. You can then paste your copied formula back after the flow reference has been added.
+
+For example, on a button's OnSelect property, adding the flow removes your existing formula, and you have to carefully make a copy of the existing formula before adding the flow. The following example shows the process with Power Automate pane disabled. In this case, the formula added for the button property is removed to reference the added flow.
+
+:::image type="content" source="media/working-with-flows/old-method.png" alt-text="A screenshot showing flow added to OnSelect property of the button that replaces existing formula for the button property." border="false":::
+
+Whereas with the Power Automate pane enabled, any existing formula is preserved automatically (isn't removed). You can add the flow reference in the formula for a behavior property as per your requirement.
+
+The following example shows the process with Power Automate pane enabled. When the flow is added, the existing formula for the button's OnSelect property is preserved, and the flow reference isn't added automatically.
+
+:::image type="content" source="media/working-with-flows/new-method.png" alt-text="A screenshot showing flow added to OnSelect property of the button that doesn't get replaced after the flow addition." border="false":::
+
+Now you can reference the flow through regular process of updating the formula for the control or component&mdash;as explained earlier.
+
 ## Edit an existing flow
 
 You can now edit flows added to your app without leaving Power Apps Studio.
@@ -145,7 +171,7 @@ To refresh the flow and pull the latest changes, select **...** (ellipsis) to th
 
 A loading spinner will appear, and the flow will be refreshed.
 
-## Remove a Flow
+## Remove a flow
 
 To remove a flow from your app, select **...** (ellipsis) to the right of your flow, and then, select **Remove from app**.
 

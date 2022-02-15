@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 02/11/2022
+ms.date: 02/14/2022
 ms.subservice: canvas-maker
 ms.author: tashas
 search.audienceType: 
@@ -95,6 +95,9 @@ In this section, you'll learn about creating an app using Power Apps that uses t
     ![Design the app.](./media/using-logic-flows/assettype-repairshopid.png "Design the app")
 
 1. Select **Action** menu at the top, and then select **Power Automate**.
+    
+    > [!NOTE]
+    > Adding flow to the selected control or component clears out any existing formula for the chosen property. For example, when you add a flow to a button's OnSelect property that has a complex formula, the flow addition clears out this formula. Ensure you make a copy of the formula before adding the flow. However, this behavior is different when adding flow with Power Automate pane enabled. More information: [Reference a flow](working-with-flows.md#reference-a-flow)
 
     ![Action > Power Automate.](./media/using-logic-flows/action-power-automate.png "Action > Power Automate")
 

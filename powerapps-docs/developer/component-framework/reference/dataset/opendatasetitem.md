@@ -23,11 +23,13 @@ Model-driven and canvas apps
 
 ## Syntax
 
-`context.parameters.dataset.openDatasetItem(entityreference)`
+`context.parameters.dataset.openDatasetItem(entityReference)`
 
-## Return Value
+## Parameters
 
-**Type**: [Entityreference](../entityreference.md)
+| Parameter Name  | Type                                       | Required | description                    |
+| --------------- | ------------------------------------------ | -------- | ------------------------------ |
+| entityReference | `[Entityreference](../entityreference.md)` | Yes      | Reference that will be opened. |
 
 ### Related topics
 

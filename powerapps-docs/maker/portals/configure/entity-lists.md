@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 01/25/2022
+ms.date: 02/15/2022
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: ndoelman
@@ -55,6 +55,9 @@ When creating or editing a webpage, you can specify a list in the lookup field p
 |    Search Placeholder Text     |                                                                                                                                                      An optional string used as the label displayed in the text box on initial load.                                                                                                                                                       |
 |      Search Tooltip Text       |                                                                                                                                             An optional string used as the tooltip displayed when the user points to the **Search** text box.                                                                                                                                              |
 |                                |                                                                                                                                                                                                                                                                                                                                                                                            |
+## Sort lists
+
+A portal user can select a column header on the list to sort the data if the column is part of the table used to configure the Dataverse view used for the list. To enable sorting by columns displayed on the list from related tables, add a [site setting](configure-site-settings.md) named **Site/EnableSortingOnLinkedEntities** set to **true**.
 
 ## Add custom Javascript
 
