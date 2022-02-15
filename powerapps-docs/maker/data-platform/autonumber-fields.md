@@ -3,7 +3,7 @@ title: "Autonumber columns in Microsoft Dataverse | MicrosoftDocs"
 description: "Understand how to create, manage, and use autonumber columns"
 keywords: ""
 ms.date: 02/26/2019
-ms.service: powerapps
+
 ms.custom: 
 ms.topic: conceptual
 applies_to: 
@@ -26,7 +26,7 @@ search.app:
 ---
 # Autonumber columns
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 Autonumber columns are columns that automatically generate alphanumeric strings whenever they are created. Makers can customize the format of these columns to their liking, and then rely on the system to generate matching values that automatically fill them in at runtime.
 

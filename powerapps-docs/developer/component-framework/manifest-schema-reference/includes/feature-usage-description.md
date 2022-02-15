@@ -3,7 +3,7 @@ title: Feature Usage | Microsoft Docs
 description: 
 keywords:
 ms.date: 06/24/2020
-ms.service: "powerapps"
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"

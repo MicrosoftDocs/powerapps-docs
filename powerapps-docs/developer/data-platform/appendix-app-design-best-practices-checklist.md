@@ -4,7 +4,7 @@ description: "Use the app design checklist to evaluate your app design in Power 
 ms.custom: ""
 ms.date: 03/20/2019
 ms.reviewer: "pehecke"
-ms.service: "powerapps"
+
 ms.topic: "article"
 author: "omarcdoc" 
 ms.subservice: dataverse-developer

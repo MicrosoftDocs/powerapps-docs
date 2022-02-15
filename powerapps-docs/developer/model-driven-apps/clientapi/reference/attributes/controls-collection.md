@@ -2,7 +2,7 @@
 title: "Controls collection (Client API reference)| MicrosoftDocs"
 description: "Learn about how to access controls associated with columns."
 ms.date: 04/19/2021
-ms.service: powerapps
+
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: d5f3c0c5-b267-42a8-82e8-8c4a1cda3752

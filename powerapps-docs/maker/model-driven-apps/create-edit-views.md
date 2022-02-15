@@ -4,7 +4,7 @@ description: "Learn how to create or edit a view"
 ms.custom: intro-internal
 ms.date: 03/19/2020
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "overview"
@@ -26,7 +26,7 @@ search.app:
 ---
 # Understand model-driven app views
 
-[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 Model-driven apps use views to define how a list of rows for a specific table are displayed in the application.
 

@@ -4,7 +4,7 @@ description: "You can create an instance of the CrmServiceClient class, and then
 ms.custom: ""
 ms.date: 03/27/2019
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"

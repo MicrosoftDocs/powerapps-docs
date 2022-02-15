@@ -2,7 +2,7 @@
 title: "getOption (Client API reference)| MicrosoftDocs"
 description: Includes description and supported parameters for the getOption method.
 ms.date: 04/19/2021
-ms.service: powerapps
+
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: e334d2d9-91c0-4953-956d-444a84dc9da2

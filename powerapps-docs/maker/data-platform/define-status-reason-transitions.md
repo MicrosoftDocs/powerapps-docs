@@ -4,7 +4,7 @@ description: "Learn how to define status reason transitions"
 ms.custom: ""
 ms.date: 05/25/2018
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "conceptual"
@@ -27,7 +27,7 @@ search.app:
 
 # Define status reason transitions for the Case or custom tables
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 You can specify status reason transitions for the Incident (**Case**) table or a custom table.
 

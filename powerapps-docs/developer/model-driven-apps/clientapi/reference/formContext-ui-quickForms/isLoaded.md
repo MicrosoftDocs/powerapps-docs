@@ -2,7 +2,7 @@
 title: "isLoaded (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the isLoaded method.
 ms.date: 04/19/2021
-ms.service: powerapps
+
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 1870151d-6029-4733-ac35-6ee4d43f9553

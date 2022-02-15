@@ -7,7 +7,7 @@ ms.subservice: mda-maker
 ms.author: matp
 manager: kvivek
 ms.date: 06/06/2018
-ms.service: powerapps
+
 ms.topic: how-to
 applies_to: 
   - "Dynamics 365 (online)"
@@ -22,7 +22,7 @@ search.app:
 ---
 # Use the model-driven app main form and its components
 
-[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 Forms in model-driven apps provide the primary means by which users can update records.  Forms associated with a table can be accessed via the table designer.
 

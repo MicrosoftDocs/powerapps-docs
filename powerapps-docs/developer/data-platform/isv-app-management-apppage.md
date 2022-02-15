@@ -8,7 +8,7 @@ author: "nkrb" # GitHub ID
 manager: kvivek
 editor: ''
 tags: ''
-ms.service: powerapps
+
 ms.devlang: na
 ms.topic: article
 ms.reviewer: nabuthuk

@@ -2,7 +2,7 @@
 title: "getSelectedResults (Client API Reference)| MicrosoftDocs"
 description: Includes description and supported parameters for the getSelectedResults method.
 ms.date: 04/19/2021
-ms.service: powerapps
+
 ms.topic: "reference"
 ms.assetid: 4d025f92-db16-440c-9f82-e40d71e09862
 author: "Nkrb"

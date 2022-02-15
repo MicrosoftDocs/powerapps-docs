@@ -4,7 +4,7 @@ description: "Learn how to control access to main forms"
 ms.custom: ""
 ms.date: 06/25/2020
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"

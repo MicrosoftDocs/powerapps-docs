@@ -2,10 +2,10 @@
 title: Create a Dataverse starter portal
 description: Learn about how to create a Dataverse starter portal in Power Apps.
 author: neerajnandwana-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: intro-internal
-ms.date: 10/11/2021
+ms.date: 01/27/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
@@ -36,7 +36,7 @@ Based on the selected environment in Power Apps, you can create a Dataverse star
 > - There can be only one portal of each type and for a language created in an environment. For more information, go to [creating additional portals](create-additional-portals.md).
 > - When you create a portal, a few solutions are installed and sample data is imported.
 
-More information on working with environments: [Working with environments and Microsoft Power Apps](/power-platform/admin/working-with-environments)
+More information on working with environments: [Environments overview](/power-platform/admin/environments-overview)
 
 More information on available portal templates: [Portal templates](portal-templates.md)
 
@@ -47,7 +47,11 @@ To create a portal:
 
 1. Sign in to [Power Apps](https://make.powerapps.com).  
 
-1. Under **Make your own app**, select **Portal from blank**.
+1. Under **Create your app**, select **Blank app**.
+
+1. Select **Create** from the **Blank website** option.
+
+    :::image type="content" source="media/create-portal/create-portal.png" alt-text="Create new blank website.":::
 
 1. If the selected environment doesn't contain portal pre-requisites, a message is displayed in the **Portal from blank** window suggesting you select another environment or create a new one.
 

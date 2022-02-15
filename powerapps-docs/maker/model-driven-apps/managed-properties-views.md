@@ -4,7 +4,7 @@ description: "Learn how to set managed properties for a view"
 ms.custom: ""
 ms.date: 06/12/2018
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -26,7 +26,7 @@ search.app:
 ---
 # Model-driven app managed properties for views
 
-[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 <a name="BKMK_ManagedProperties"></a>   
  

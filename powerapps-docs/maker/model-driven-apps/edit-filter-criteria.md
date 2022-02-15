@@ -4,7 +4,7 @@ description: "Learn how to edit filter criteria in views"
 ms.custom: ""
 ms.date: 03/26/2020
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -26,7 +26,7 @@ search.app:
 ---
 # Edit filter criteria for a table view
 
-[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 <a name="BKMK_EditFilterCriteria"></a>   
 

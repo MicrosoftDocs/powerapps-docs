@@ -3,7 +3,7 @@ title: "Solutions  | MicrosoftDocs"
 description: "Use the solutions area to view the objects and components in a solution"
 keywords: 
 ms.date: 08/26/2021
-ms.service: powerapps
+
 ms.custom: 
 ms.topic: article
 ms.assetid: 

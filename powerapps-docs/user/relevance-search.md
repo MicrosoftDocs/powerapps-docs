@@ -3,7 +3,7 @@ title: "Search for tables and rows by using Dataverse search| MicrosoftDocs"
 description: How to use Dataverse search
 author: mduelae
 manager: kvivek
-ms.service: powerapps
+
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 12/16/2021
@@ -21,7 +21,7 @@ search.app:
 
 # Search for tables and rows by using Dataverse search
 
-[!INCLUDE[cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 With Dataverse search, the search box is always available at the top of every page in your app. You can start a new search and quickly find the information that you're looking for. 
 

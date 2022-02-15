@@ -3,7 +3,7 @@ title: "Tutorial to add or edit model-driven app components with Power Apps | Mi
 description: "Use the Power Apps app designer to add or edit components"
 keywords: ""
 ms.date: 03/05/2020
-ms.service: powerapps
+
 ms.custom: 
 ms.topic: tutorial
 applies_to: 
@@ -28,7 +28,7 @@ search.app:
 
 # Add or edit model-driven app components in the Power Apps app designer
 
-[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 This tutorial describes how to add components to and remove components from a model-driven app.
 

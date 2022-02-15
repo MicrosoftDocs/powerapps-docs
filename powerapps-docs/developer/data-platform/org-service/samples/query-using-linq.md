@@ -4,7 +4,7 @@ description: "This sample showcases how to assign records to a team." # 115-145 
 ms.custom: ""
 ms.date: 02/05/2020
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: sample
 author: "phecke" # GitHub ID
 ms.author: "pehecke" # MSFT alias of Microsoft employees only
@@ -17,7 +17,7 @@ search.app:
 ---
 # Sample: Query data using LINQ
 
-[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 
 These samples show how to query business data using [Language-Integrated Query (LINQ)](/dotnet/csharp/programming-guide/concepts/linq/introduction-to-linq-queries). You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/QueriesUsingLINQ). 
 

@@ -4,7 +4,7 @@ description: "Learn how to start a new Visual Studio project for plug-in or cust
 ms.custom: ""
 ms.date: 07/19/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "phecke" # GitHub ID
 ms.subservice: dataverse-developer

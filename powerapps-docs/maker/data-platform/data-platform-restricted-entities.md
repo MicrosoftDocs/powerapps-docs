@@ -2,7 +2,7 @@
 title: Restricted tables requiring Dynamics 365 licenses | Microsoft Docs
 description: A list of restricted tables in Microsoft Dataverse that require Dynamics 365 licenses.
 author: KumarVivek
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.date: 06/08/2021
 ms.subservice: dataverse-maker
@@ -16,7 +16,7 @@ search.app:
 
 # Restricted tables requiring Dynamics 365 licenses
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 App makers, who are building custom apps, can use all of the Microsoft Dataverse tables available within [Common Data Model](/common-data-model/) to create apps and flows for users who have any version of Power Apps and Power Automate license.  
 

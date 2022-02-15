@@ -4,7 +4,7 @@ description: "Use the new application handler for Dynamics 365 mobile clients to
 ms.custom: ""
 ms.date: 04/14/2021
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.topic: "article"
 author: "KumarVivek" # GitHub ID
 ms.subservice: mda-developer

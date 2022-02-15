@@ -2,7 +2,7 @@
 title: "Power Apps pattern: Asset management | Microsoft Docs"
 description: See real-world examples of how customers have used Power Apps to find, reserve, and manage assets such as meeting rooms, vehicles, and gear along with asset checkout, reservations, booking, and assignment.
 author: kathyos
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: guidance
 ms.date: 1/4/2021

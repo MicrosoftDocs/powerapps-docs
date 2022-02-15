@@ -2,7 +2,7 @@
 title: Enable content moderation on ideas
 description: Learn how to enable content moderation for ideas on a portal.
 author: sbmjais
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2020

@@ -2,7 +2,7 @@
 title: "Add the calendar control to tables in model-driven apps | MicrosoftDocs"
 description: "Learn how to add the calendar control to tables in model-driven apps."
 ms.date: 06/15/2021
-ms.service: powerapps
+
 ms.topic: how-to
 author: sbmjais
 ms.subservice: mda-maker
@@ -13,7 +13,7 @@ manager: shujoshi
 
 # Add the calendar control to tables
 
-[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 [!INCLUDE [cc-classic-interface-control-migration](../../includes/cc-classic-interface-control-migration.md)]
 

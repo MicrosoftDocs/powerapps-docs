@@ -4,7 +4,7 @@ description: "Learn how to define alternate keys that can be used to reference r
 ms.custom: ""
 ms.date: 08/01/2020
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -24,7 +24,7 @@ search.app:
 ---
 # Define alternate keys using solution explorer
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 Solution explorer provides one way to view and create alternate keys for Microsoft Dataverse.
 

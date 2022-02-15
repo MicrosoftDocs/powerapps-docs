@@ -2,7 +2,7 @@
 title: Add fixed page layouts
 description: Instructions to add fixed layouts to be available within portals Studio.
 author: ankitavish
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 12/08/2021

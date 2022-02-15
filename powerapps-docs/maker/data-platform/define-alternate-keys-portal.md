@@ -4,7 +4,7 @@ description: "Learn how to define alternate keys using Power Apps portal"
 ms.custom: ""
 ms.date: 08/01/2020
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -24,7 +24,7 @@ search.app:
 ---
 # Define alternate keys using Power Apps portal
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) provides an easy way to view and create table alternate keys with the Microsoft Dataverse. For more information about alternate keys, see [Define alternate keys to reference rows](define-alternate-keys-reference-records.md).
 

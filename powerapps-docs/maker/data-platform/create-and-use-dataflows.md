@@ -4,7 +4,7 @@ description: "Learn how to create and use dataflows in Power Apps"
 ms.custom: ""
 ms.date: 12/05/2019
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -28,7 +28,7 @@ search.app:
 
 # Create and use dataflows in Power Apps
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 With advanced data preparation available in Power Apps, you can create a
 collection of data called a dataflow, which you can then use to connect with

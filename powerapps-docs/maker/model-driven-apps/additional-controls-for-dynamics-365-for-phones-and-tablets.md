@@ -4,7 +4,7 @@ description: "A list of controls available for use with Power Apps model-driven 
 ms.custom: ""
 ms.date: 03/29/2021
 ms.reviewer: "matp"
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "overview"
@@ -25,7 +25,7 @@ search.app:
 ---
 # List of controls available for model-driven apps
 
-[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 Controls allow us to visualize data within our table columns in addition to enabling us to interact with them.
 

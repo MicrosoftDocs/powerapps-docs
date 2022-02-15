@@ -4,7 +4,7 @@ description: "The sample demonstrates how to write a custom workflow activity th
 ms.custom: ""
 ms.date: 1/28/2020
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: sample
@@ -23,7 +23,7 @@ search.app:
 ---
 # Sample: Create a custom workflow activity
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 
 Download the complete sample here: [WorkflowActivities](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/WorkflowActivities).
 

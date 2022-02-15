@@ -4,7 +4,7 @@ description: "Queues in Power Apps are instrumental in organizing, prioritizing,
 ms.custom: ""
 ms.date: 05/04/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "JimDaly" # GitHub ID Temp owner
 ms.subservice: dataverse-developer

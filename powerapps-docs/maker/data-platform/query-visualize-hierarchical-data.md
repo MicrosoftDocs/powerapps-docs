@@ -4,7 +4,7 @@ description: "Learn how to query and visualize hierarchical related data"
 ms.custom: ""
 ms.date: 06/20/2018
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -26,7 +26,7 @@ search.app:
 ---
 # Query and visualize hierarchically related data
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 You can get valuable business insights by visualizing hierarchically related data. The hierarchical modelling and visualization capabilities give you a number of benefits:  
   
