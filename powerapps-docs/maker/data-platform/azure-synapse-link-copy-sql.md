@@ -1,16 +1,16 @@
 ---
-title: "Access Copy Dataverse data to Azure SQL | MicrosoftDocs"
+title: "Copy Dataverse data to Azure SQL | MicrosoftDocs"
 description: "Learn how to copy Dataverse data to Azure SQL with a Pipeline Template."
 ms.custom: ""
 ms.date: 08/06/2021
 ms.reviewer: "Mattp123"
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "conceptual"
 applies_to: 
   - "powerapps"
-author: "sama-zaki"
+author: "sabinn-msft"
 ms.assetid: 
 ms.subservice: dataverse-maker
 ms.author: "matp"
@@ -20,12 +20,12 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
-contributors: ""
+contributors: "sama-zaki"
 ---
 
 # Copy Dataverse data to Azure SQL with a Pipeline Template
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 After exporting data from Dataverse to Azure Data Lake Storage Gen2 with Azure Synapse Link for Dataverse, you can use Azure Data Factory to create a pipeline that copies data from the data lake to Azure SQL.
 
@@ -47,7 +47,7 @@ This section describes the prerequisites necessary to copy exported Dataverse da
 - **Azure roles.** The user account that's used to sign in to Azure must be a member of the
 *contributor* or *owner* role, or an *administrator* of the Azure subscription. To view the permissions that you have in the subscription, go to the [Azure portal](https://portal.azure.com/), select your username in the upper-right corner, select **...**, and then select **My permissions**. If you have access to multiple subscriptions, select the appropriate one. To create and manage child resources for Data Factory in the Azure portal&mdash;including datasets, linked services, pipelines, triggers, and integration runtimes&mdash;you must belong to the *Data Factory Contributor* role at the resource group level or above.
 
-- **Azure Synapse Link for Dataverse.**This guide assumes that you've already exported Dataverse data by using [Azure Synapse Link for Dataverse](export-to-data-lake.md). In this example, the account table data is exported to the data lake.
+- **Azure Synapse Link for Dataverse.** This guide assumes that you've already exported Dataverse data by using [Azure Synapse Link for Dataverse](export-to-data-lake.md). In this example, the account table data is exported to the data lake.
 
 - **Azure Data Factory.** This guide assumes that you've already created a data factory under the same subscription and resource group as the storage account containing the exported Dataverse data.
 
@@ -67,11 +67,15 @@ This section describes the prerequisites necessary to copy exported Dataverse da
 
     ![Configure Template SQL](media/configure-template.png "Configure Template SQL")
 
-5. Open the data flow and select **ADLS** > **Source options**. Replace the container in the **Root location** with your container containing the exported Dataverse data. Replace the **entity** with the Dataverse table name you wish to copy to Azure SQL database.
+5. Select the **Parameters** tab and replace the *ContainerName* and the *TableName* parameters.
 
-    ![Configure Source Options](media/source-options-template.png "Configure Source Options")
+    ![Data flow parameters](media/data-flow-params.png "Data flow parameters")
 
-6. Navigate to the pipeline and run it. Optionally, **Add trigger** to copy the data at specific time intervals.
+6. Open the data flow and replace the *ContainerName* and the *TableName* parameters.
+
+    ![Data flow parameters for data flow](media/data-flow-params-2.png "Data flow parameters for data flow")
+
+7. Navigate to the pipeline and run it. Optionally, **Add trigger** to copy the data at specific time intervals.
 
 ### See also
 

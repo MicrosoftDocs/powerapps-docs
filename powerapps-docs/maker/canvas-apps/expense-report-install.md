@@ -2,11 +2,11 @@
 title: Set up the Expense Report sample app
 description: Set up the Expense Report sample app to create a canvas app, and preview the app features before you customize it for your business needs.
 author: norliu
-ms.service: powerapps
+
 ms.topic: sample
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 03/22/2021
+ms.date: 01/27/2022
 ms.subservice: canvas-maker
 ms.author: norliu
 search.audienceType: 
@@ -61,12 +61,15 @@ The Expense Report sample app includes a lot of the functionality commonly used 
 
 You can also enable the capability to send emails or approval routing using [Power Automate flow](using-logic-flows.md) or [Approvals connector](/connectors/approvals).
 
+Additionally, you can also read [Microsoft Learn: Create an expense report app from start to finish in Power Apps](/learn/paths/expense-canvas-app-start-finish/) to create a custom expense report app.
+
 ## Next steps
 
-[Design the app inteface - add, configure controls](add-configure-controls.md)
+[Design the app interface - add, configure controls](add-configure-controls.md)
 
 ### See also
 
+[Microsoft Learn: Create an expense report app from start to finish in Power Apps](/learn/paths/expense-canvas-app-start-finish/)  <br>
 [Canvas apps connectors for Power Apps](connections-list.md) <br>
 [Formula reference](formula-reference.md) <br>
 [Controls reference](reference-properties.md) <br>

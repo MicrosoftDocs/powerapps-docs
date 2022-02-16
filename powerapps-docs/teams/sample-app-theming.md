@@ -2,7 +2,7 @@
 title: Theming in sample apps (contains video)
 description: Learn how to theming formulas in the template Power Apps for Microsoft Teams.
 author: joel-lindstrom
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 08/05/2021

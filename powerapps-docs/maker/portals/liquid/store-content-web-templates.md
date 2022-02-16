@@ -2,7 +2,7 @@
 title: Store source content by using web templates
 description: Learn how to store content by using web templates on a portal.
 author: gitanjalisingh33msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2020

@@ -4,7 +4,7 @@ description: "Learn how to use custom controls for columns"
 ms.custom: ""
 ms.date: 04/29/2020
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -26,7 +26,7 @@ search.app:
 ---
 # Use custom controls for model-driven app data visualizations
 
-[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 In this article, you learn how to configure a custom control for a column.
 

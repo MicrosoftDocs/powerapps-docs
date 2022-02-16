@@ -8,7 +8,7 @@ author: JimDaly
 manager: sunilg
 editor: ''
 tags: ''
-ms.service: powerapps
+
 ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
@@ -24,7 +24,7 @@ search.app:
 ---
 # Optimize assembly development
 
-[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 
 **Category**: Performance, Maintainability, Design
 

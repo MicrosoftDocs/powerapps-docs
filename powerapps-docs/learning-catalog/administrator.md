@@ -4,7 +4,7 @@ description: Find all the training options for Power Apps administrators
 author: MargoC
 ms.topic: article
 ms.date: 04/28/2020
-ms.service: powerapps
+
 ms.author: margoc
 ---
 

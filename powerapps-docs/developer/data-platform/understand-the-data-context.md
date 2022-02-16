@@ -4,7 +4,7 @@ description: "Learn about the data that is passed to your plug-in when it is exe
 ms.custom: ""
 ms.date: 03/12/2021
 ms.reviewer: pehecke
-ms.service: powerapps
+
 ms.topic: "article"
 author: JimDaly
 ms.subservice: dataverse-developer

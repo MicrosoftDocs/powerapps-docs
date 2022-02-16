@@ -4,7 +4,7 @@ description: "Work with sections on a model-driven app form in Power Apps"
 ms.custom: ""
 ms.date: 08/25/2020
 ms.reviewer: "matp"
-ms.service: powerapps
+
 ms.topic: "how-to"
 author: "Aneesmsft"
 ms.subservice: mda-maker

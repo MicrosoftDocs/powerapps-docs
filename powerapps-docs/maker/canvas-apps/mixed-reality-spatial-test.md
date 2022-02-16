@@ -2,11 +2,11 @@
 title: Validate measurements in mixed reality using a spatial test filter
 description: Learn how to validate measurements or fittings of objects with width, depth, and height using mixed-reality  controls in canvas apps.
 author: alex-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm-msft
-ms.date: 11/17/2021
+ms.date: 01/27/2022
 ms.subservice: canvas-maker
 ms.author: altran
 search.audienceType: 
@@ -29,7 +29,7 @@ Using the [Measure in MR](mixed-reality-component-measure-distance.md) control, 
 
 ## Prerequisites
 
-Create a blank canvas app using [Power Apps Studio](https://create.powerapps.com) by selecting **Phone layout** under **Blank app** inside the **Start with a blank canvas or a template** section.
+Create a [blank canvas app](create-blank-app.md).
 
 > [!TIP]
 > - The mixed-reality  controls work best in well-lit environments with flat-textured surfaces. When establishing tracking, point the device at the surface you want to track and slowly pan the device from right to left in broad arm motions. If tracking fails, exit and enter the mixed-reality view to reset the tracking and try again.

@@ -3,7 +3,7 @@ title: "Actions on visualizations (charts) (model-driven apps) | Microsoft Docs"
 description: "Using the Microsoft Dataverse web services, you can perform the following actions on the visualization tables." # 115-145 characters including spaces. This abstract displays in the search result."
 keywords: ""
 ms.date: 04/15/2021
-ms.service: powerapps
+
 ms.topic: article
 ms.assetid: c7eb3bdf-9d6f-9bcc-8114-4c3dc5be2976
 author: Nkrb # GitHub ID

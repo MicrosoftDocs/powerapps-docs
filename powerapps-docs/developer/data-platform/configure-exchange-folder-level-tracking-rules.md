@@ -4,7 +4,7 @@ description: "Learn how to configure Exchange folder-level tracking rules" # 115
 ms.custom: ""
 ms.date: 03/24/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "revachauhan" # GitHub ID
 ms.subservice: dataverse-developer
@@ -18,7 +18,7 @@ search.app:
 ---
 # Configure Exchange folder-level tracking rules
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 Configure folder-level tracking rules to map a Microsoft Exchange inbox folder to a Microsoft Dataverse record so that all the emails in the Microsoft Exchange folder get automatically tracked against the mapped record in Dataverse. Folder-level tracking of emails will work only if:  
 

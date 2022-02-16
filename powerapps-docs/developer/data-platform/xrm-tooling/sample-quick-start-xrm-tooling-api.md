@@ -4,7 +4,7 @@ description: "This code sample demonstrates how to connect to a Microsoft Datave
 ms.custom: ""
 ms.date: 04/12/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: sample

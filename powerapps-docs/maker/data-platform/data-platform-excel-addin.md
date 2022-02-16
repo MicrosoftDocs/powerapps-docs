@@ -3,7 +3,7 @@ title: Open table data in Excel | Microsoft Docs
 description: Open table data in Excel for interactive viewing and editing.
 author: lancedMicrosoft
 manager: kvivek
-ms.service: powerapps
+
 ms.component: cds
 ms.topic: how-to
 ms.date: 07/07/2021
@@ -16,7 +16,7 @@ search.app:
   - D365CE
 ---
 # Open table data in Excel
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 By opening table data in Microsoft Excel, you can quickly and easily view and edit data by using the Microsoft Power Apps Excel Add-in. 
 
@@ -118,7 +118,7 @@ For more information about preventing Office Store Add-in downloading from the O
 ## Other ways to export and view table row data
 
 For more information about ways to export and view table row data, see these articles.
-- [Export data to CSV](./data-platform-import-export.md#export-data-to-csv) 
+- [Export data to CSV](./data-platform-import-export.md#export-data) 
 - [Export your data to Excel Online](../../user/export-to-excel-online.md)
 - [Export table data to Azure Data Lake Storage Gen2](./export-to-data-lake.md)
 - [Self-service data prep with dataflows](./self-service-data-prep-with-dataflows.md)

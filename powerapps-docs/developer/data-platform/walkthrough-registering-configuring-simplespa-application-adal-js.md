@@ -3,7 +3,7 @@ title: "Walkthrough: Registering and configuring a SimpleSPA application with ad
 description: "Describes the process of registering and configuring the simplest Single-Page Application (SPA) to access data in Microsoft Dataverse using adal.js and Cross-origin Resource Sharing (CORS)."
 keywords: ""
 ms.date: 03/24/2021
-ms.service: powerapps
+
 ms.topic: article
 ms.assetid: a327d2ff-e252-61cf-1190-6a974130ef19
 author: "paulliew" # GitHub ID
@@ -360,10 +360,7 @@ Finally, you can click on **Logout** button to logout.
 
 ## Debugging the application  
   
-1.  Set the browser to use Microsoft Edge or Google Chrome.  
-  
-    > [!NOTE]
-    > Internet Explorer will not work for debugging in this situation.  
+1.  Set the browser to use Microsoft Edge or Google Chrome.   
   
 2.  Press F5 to start debugging. You should expect the behavior described in [Goal of this walkthrough](walkthrough-registering-configuring-simplespa-application-adal-js.md#bkmk_goal).  
   

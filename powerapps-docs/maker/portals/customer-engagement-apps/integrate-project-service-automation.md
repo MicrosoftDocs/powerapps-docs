@@ -2,7 +2,7 @@
 title: Integrate Project Service Automation
 description: Learn how to integrate Project Service Automation with a portal.
 author: sbmjais
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2020

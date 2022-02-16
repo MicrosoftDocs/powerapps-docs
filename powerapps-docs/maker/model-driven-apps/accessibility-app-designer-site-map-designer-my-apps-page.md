@@ -7,7 +7,7 @@ ms.subservice: mda-maker
 ms.author: matp
 manager: kvivek
 ms.date: 05/20/2019
-ms.service: powerapps
+
 ms.topic: article
 applies_to: 
   - Dynamics 365 (online)
@@ -100,7 +100,6 @@ This article itemizes the keyboard shortcuts for Power Apps.
   
 |Browser|Jaws|Narrator|Voice Over|  
 |-------------|----------|--------------|----------------|  
-|Internet Explorer 11|Yes|Yes|No|  
 |Google Chrome|Yes|No|No|  
 |Firefox|Yes|No|No|  
 |Safari|No|No|Yes|  

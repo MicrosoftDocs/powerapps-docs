@@ -8,7 +8,7 @@ author: JimDaly
 manager: ryjones
 editor: ''
 tags: ''
-ms.service: powerapps
+
 ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
@@ -24,7 +24,7 @@ search.app:
 ---
 # Do not use parallel execution within plug-ins and workflow activities
 
-[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 
 **Category**: Design, Performance, Security, Supportability
 

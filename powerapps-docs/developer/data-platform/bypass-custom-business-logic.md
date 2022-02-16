@@ -4,7 +4,7 @@ description: "Make data changes which bypass custom business logic"
 ms.custom: ""
 ms.date: 05/27/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "JimDaly" 
 ms.subservice: dataverse-developer

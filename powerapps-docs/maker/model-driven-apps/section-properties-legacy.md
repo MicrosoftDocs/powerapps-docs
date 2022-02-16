@@ -11,7 +11,7 @@ ms.subservice: mda-maker
 ms.author: matp
 manager: kvivek
 ms.date: 03/23/2020
-ms.service: powerapps
+
 ms.topic: how-to
 ms.assetid: 2d3af6e9-e8a4-4129-b708-383b2740c015
 search.audienceType: 
@@ -22,7 +22,7 @@ search.app:
 ---
 # Model-driven app form section properties (classic)
 
-[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 A section in a form occupies the space available in a tab column. Sections have a label that can be displayed and a line might be shown below the label.  
   

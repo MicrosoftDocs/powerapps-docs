@@ -2,7 +2,7 @@
 title: "moveNext (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Progresses to the next stage.
 ms.date: 04/15/2021
-ms.service: powerapps
+
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 97640c6a-816b-4d18-9b0b-e79411787c1a

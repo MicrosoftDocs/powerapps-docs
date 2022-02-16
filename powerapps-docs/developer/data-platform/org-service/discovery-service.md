@@ -4,7 +4,7 @@ description: "Describes how to use the Discovery Service with the APIs available
 ms.custom: intro-internal
 ms.date: 1/16/2020
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only

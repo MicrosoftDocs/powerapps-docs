@@ -2,11 +2,11 @@
 title: How to create a canvas app connected to Microsoft Dataverse from scratch
 description: Learn about how to create a canvas app from scratch.
 author: sbahl10
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.subservice: canvas-maker
-ms.date: 08/31/2021
+ms.date: 01/27/2022
 ms.author: tapanm
 ms.reviewer: tapanm
 search.app: 
@@ -58,26 +58,7 @@ Your trial environment will now be created, including a Dataverse database and s
 
 ## Create a canvas app
 
-In this lesson, we'll create an app to search, view, and create customer accounts using the **Accounts** table in Dataverse.
-
-1. Sign in to [Power Apps](https://make.powerapps.com).
-
-1. Select the **Dataverse Trial** environment.
-
-    ![Select the appropriate environment](media/build-connected-dataverse/select-appropriate-environment.png "Select the appropriate environment")
-
-1. Under **Start from data**, select **Dataverse**.
-
-    ![Select Dataverse](media/build-connected-dataverse/dataverse.png "Select Dataverse")
-
-1. Under **Choose a table**, select the **Accounts** table.
-
-    > [!NOTE]
-    > If you don't already have a connection created to Dataverse, you'll see an option to create it first. Select **Create** in this case to create the connection before you choose the table.
-
-1. Select **Connect**.
-
-Power Apps will generate an app for you. This app includes the following screens:
+Create a [canvas app](../data-platform-create-app.md) with **Accounts** table in Dataverse. When done, Power Apps will generate an app for you. This app includes the following screens:
 
 - **Browse Screen** - a screen to search, sort, and select an account record, and launch the edit screen to create a new record.
 - **Detail Screen** - a read-only screen that displays the details of the record selected on the browse screen.

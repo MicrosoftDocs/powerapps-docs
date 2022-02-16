@@ -2,7 +2,7 @@
 title: "setValue (Client API reference)| MicrosoftDocs"
 description: Sets the data value for a column.
 ms.date: 04/15/2021
-ms.service: powerapps
+
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 1324b465-6012-47d4-bf35-837df82014cb

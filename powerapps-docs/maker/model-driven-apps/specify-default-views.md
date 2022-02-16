@@ -4,7 +4,7 @@ description: "Learn how to specify a default view"
 ms.custom: ""
 ms.date: 03/30/2020
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -26,7 +26,7 @@ search.app:
 ---
 # Specify a model-driven app default view
 
-[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 <a name="BKMK_SetDefaultView"></a>   
 

@@ -2,11 +2,11 @@
 title: Create a canvas app from scratch using Microsoft Dataverse
 description: Learn about how to create a canvas app to add, update, and delete records in Microsoft Dataverse.
 author: tapanm-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 05/21/2019
+ms.date: 01/27/2022
 ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
@@ -26,20 +26,12 @@ When you build an app from Dataverse, you don't need to create a connection from
 ## Prerequisites
 
 - Before you create an app from scratch, familiarize yourself with Power Apps basics by [generating an app](data-platform-create-app.md) and then customizing that app's [gallery](customize-layout-sharepoint.md), [forms](customize-forms-sharepoint.md), and [cards](customize-card.md).
-- [Switch to an environment](/power-platform/admin/working-with-environments) in which a database has been created with sample data. If you have an appropriate license, you can [create an environment](/power-platform/admin/create-environment) to meet this need.
+- [Switch to an environment](intro-maker-portal.md#choose-an-environment) in which a database has been created with sample data. If you have an appropriate license, you can [create an environment](/power-platform/admin/create-environment) to meet this need.
 - To create an app, you must be assigned to the [Environment Maker](/power-platform/admin/database-security#predefined-security-roles) security role.
 
 ## Open a blank app
 
-1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-
-1. Under **Make your own app**, select **Canvas app from blank**.
-
-    ![Blank-app tile.](./media/data-platform-create-app-scratch/blank-app.png)
-
-1. Specify a name for your app, select **Phone**, and then select **Create**.
-
-    You can build an app from scratch for tablets, but this topic shows building an app for phones.
+To create an app from scratch that uses data from Dataverse, the first step is to [create a blank app](create-blank-app.md). For this exercise, when you create the blank app, ensure you choose **Phone** layout.
 
 ## Specify a table
 

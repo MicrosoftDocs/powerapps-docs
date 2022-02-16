@@ -8,7 +8,7 @@ author: JimDaly
 manager: ryjones
 editor: ''
 tags: ''
-ms.service: powerapps
+
 ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
@@ -24,7 +24,7 @@ search.app:
 ---
 # Remove unsupported code that uses reflection in custom workflow activities
 
-[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 
 **Category**: Reliability
 

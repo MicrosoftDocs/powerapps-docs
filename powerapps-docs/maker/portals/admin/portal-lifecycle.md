@@ -2,7 +2,7 @@
 title: Power Apps portals lifecycle
 description: Information about the Power Apps portals lifecycle and converting it from trial to production.
 author: neerajnandwana-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2021

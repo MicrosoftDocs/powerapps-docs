@@ -2,7 +2,7 @@
 title: Integrate Field Service
 description: Learn how to integrate Field Service with a portal.
 author: sbmjais
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2020

@@ -2,7 +2,7 @@
 title: Embed an app in Teams  | Microsoft Docs
 description: You can embed an app created in Power Apps in Microsoft Teams to share it.
 author: matthewbolanos
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
   - canvas

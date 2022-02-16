@@ -3,7 +3,7 @@ title: "Compose HTTP requests and handle errors (Microsoft Dataverse)| Microsoft
 description: "Read about the HTTP methods and headers that form a part of HTTP requests for the Web API, and then learn how to identify and handle errors returned in the response"
 ms.custom: ""
 ms.date: 10/15/2021
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"

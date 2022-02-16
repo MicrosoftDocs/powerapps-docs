@@ -2,7 +2,7 @@
 title: Working with Test Studio (contains video)
 description: Describes how to use Test Studio with example for testing canvas apps.
 author: aengusheaney
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm

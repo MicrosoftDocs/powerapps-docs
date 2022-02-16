@@ -4,7 +4,7 @@ description: Learn how to create and edit model-driven app forms
 ms.custom: ""
 ms.date: 08/26/2019
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"

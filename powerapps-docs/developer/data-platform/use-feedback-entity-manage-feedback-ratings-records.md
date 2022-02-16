@@ -4,7 +4,7 @@ description: "Learn about the feedback table to obtain feedback and ratings for 
 ms.custom: ""
 ms.date: 03/27/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "JimDaly" #TODO: NoOwner
 ms.subservice: dataverse-developer

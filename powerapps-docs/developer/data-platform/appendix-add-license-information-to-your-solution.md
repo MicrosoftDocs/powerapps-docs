@@ -4,7 +4,7 @@ description: "This article outlines the required steps to take license service I
 ms.custom: ""
 ms.date: 04/30/2021
 ms.reviewer: "pehecke"
-ms.service: "powerapps"
+
 ms.topic: "article"
 author: "nkrb" 
 ms.subservice: dataverse-developer
