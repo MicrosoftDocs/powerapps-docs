@@ -163,6 +163,10 @@ Applying an appropriate filter for each of the tables configured in the offline 
    2. **Relationships** lists the different relationships available between the current table and other tables added in the offline profile. Selecting a relationship will ensure that related rows following that relationship will be downloaded and made available offline.
    3. **Files** and **Images** define which columns for a file or image need to be downloaded offline. For files, you can choose to download every column or none at all. For images, you can select each column you want to download granularly.
    4. **Sync interval** defines the sync frequency to be applied on the device to sync the data with the server. If a table's data doesn't change frequently—like a catalog or a product table—you might want to focus on only syncing data when necessary, for example refreshing only once a day.
+   
+   > [!NOTE]
+   > Offline profiles have limitations regarding the number of related tables it references. In custom filters, you cannot use more than 10 related tables. Independently, in relationships, you cannot exceed 10 either. The computation to get to 10 is more complex. Adding one relationships in table A concerning table B can increment the count by one, but not always. If B already has 2 relationships, the increment will be of two. Please refer to the error message displayed to configure your profile according with these limitations. The offline profile publication will fail if these limits are exceeded, blocking the publication of the app.
+   
       
       > [!div class="mx-imgBorder"]
       >![Screenshot showing the filters available for an offline table.](media/mobile-offline-image11.png)
