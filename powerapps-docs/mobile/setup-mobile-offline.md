@@ -5,7 +5,7 @@ author: mduelae
 
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 02/01/2022
+ms.date: 02/16/2022
 ms.subservice: mobile
 ms.author: mkaur
 ms.custom: ""
@@ -89,7 +89,10 @@ Set up the new mobile offline experience in the [modern app designer](../maker/m
     > ![Turn on the Can be used offline toggle.](media/mobile-offline-image6.png)
 
 7. Select an existing offline profile, or select **New profile with current app data**. To set up a new offline profile, go to the following section, [Set up a mobile offline profile](setup-mobile-offline.md#set-up-a-mobile-offline-profile).
-
+    
+    > [!NOTE]
+    >  If you edit an app that has more than one offline prfile, which was created using the [classic offline experience](/dynamics365/mobile-app/setup-mobile-offline#step-2-create-a-mobile-offline-profile-to-determine-what-data-will-be-available-while-offline), then you will get this message: **There is more than one mobile offline profile associated with this app, so you can't edit it here.** <br> To use the new experience, your app should only have one offline profile.
+    
     > [!div class="mx-imgBorder"]
     > ![Select an offline profile.](media/mobile-offline-image7.png)
 
@@ -169,6 +172,7 @@ Applying an appropriate filter for each of the tables configured in the offline 
 5. When all tables are properly configured for the profile, select **Done** > **Publish your application**.
 
 When the app is published, the app will be enabled for offline use. All your users who have access to the app can also use it in offline mode.
+
 
 
 
