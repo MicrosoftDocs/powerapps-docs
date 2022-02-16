@@ -6374,6 +6374,26 @@
       "source_path": "powerapps-docs/data-platform/best-practices/index.md",
       "redirect_url": "/powerapps/developer/data-platform/best-practices/",
       "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/component-framework/reference/linking/clear.md",
+      "redirect_url": "/powerapps/developer/component-framework/reference/linking",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/component-framework/reference/linking/includes/clear-description.md",
+      "redirect_url": "/powerapps/developer/component-framework/reference/linking",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/component-framework/reference/linking/includes/removeLinkedEntity-description.md",
+      "redirect_url": "/powerapps/developer/component-framework/reference/linking",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/component-framework/reference/linking/removeLinkedEntity.md",
+      "redirect_url": "/powerapps/developer/component-framework/reference/linking",
+      "redirect_document_id": "false"
     }
   ]
 }
