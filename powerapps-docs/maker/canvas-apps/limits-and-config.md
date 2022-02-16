@@ -104,7 +104,7 @@ Requests from Power Apps use IP addresses that depend on the region of the [envi
 Calls made from an API connected through an app (for example, the SQL API or the SharePoint API) come from these [IP addresses](/power-platform/admin/online-requirements#ip-addresses-required).
 
 ## Required services
-This list identifies all services to which Power Apps Studio talks and their usages. Your network must **not** block these services.
+This list identifies all services to which Power Apps communicates and their usages. Your network must **not** block these services.
 
 | Domain(s) | Protocols | Uses |
 | --- | --- | --- |
