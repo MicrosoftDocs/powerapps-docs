@@ -19,7 +19,7 @@ contributors:
 
 # View 3D content in Power Apps
 
-Easily add interactive 3D content to your canvas apps. You can [select from a gallery of 3D content](mixed-reality-component-view-3d-store.md). And then, interact with the added 3D models with actions such as rotate and zoom.
+Easily add interactive 3D content to your canvas apps. You can [select from a gallery of 3D content](mixed-reality-component-view-3d-store.md) then rotate and zoom into the model with simple gestures.
 
 :::image type="content" source="./media/augmented-overview/view-in-3d.png" alt-text="A photo of two phones side by side, both of which show a 3D model of a forklift viewed in two mobile apps.":::
 
@@ -38,7 +38,8 @@ With your app open for [editing](edit-app.md) in [Power Apps Studio](https://cre
 
 ## Key properties
 
-Change a 3D control's behavior and appearance using properties. Some properties are only available on the **Advanced** tab.
+
+Change the 3D content control's behavior and appearance using properties. Some properties are only available on the **Advanced** tab.
 
 :::image type="content" source="./media/augmented-3d/augmented-3d-viewer-controls.png" alt-text="A 3D control displayed next to the properties tab in Power Apps Studio.":::
 
@@ -78,7 +79,7 @@ We recommend that you use one 3D control on a screen for the best user experienc
 
 - View 3D content and images in the real world with the **[View in mixed reality](mixed-reality-component-view-mr.md)** control.
 - Measure distance, area, and volume with the **[Measure in mixed reality](mixed-reality-component-measure-distance.md)** control.
-- Create and view 3D shapes with the **[View shape in mixed reality](mixed-reality-component-view-shape.md)** control.
+- Create and view predefined 3D shapes with the **[View shape in mixed reality](mixed-reality-component-view-shape.md)** control.
 
 ### See also
 
