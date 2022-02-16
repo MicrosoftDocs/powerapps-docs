@@ -174,7 +174,7 @@ Accept: application/json
 }
 ``` -->
 
-## Retrieve user
+## Retrieve a user
 
 You can retrieve a user row using an Azure user object identifier (ID). If the user doesn’t exist in Dataverse, the user is added to Dataverse automatically.
 
