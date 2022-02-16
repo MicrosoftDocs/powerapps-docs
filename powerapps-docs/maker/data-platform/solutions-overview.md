@@ -116,10 +116,7 @@ Some components may require certain Dataverse privileges for users to run the co
 
 ### Flows
 
-To use or run a flow from a canvas app that is included in a solution, you must be assigned a Dataverse security role with the following minimum permissions:
-
-- Read privilege on the **Solution** table.
-- Read privilege on the **Process** table.
+To use or run a flow from a canvas app that is included in a solution, you must have permissions to that flow through someone sharing ownership or run permissions. When an app in a solution is shared with a set of users, the flows must also be explictly shared.
 
 More information: [Security roles and privileges](/power-platform/admin/security-roles-privileges)
 
