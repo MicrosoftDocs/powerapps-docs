@@ -34,7 +34,7 @@ Some of the benefits of Dataverse for Teams include:
 
 - Storage of 2 GB per team, and support for up to 1 million rows.
 
-- Support for up to 500 teams.
+- Support for 5 teams + 1 additional team for every 20 licensed users
 
 - The capability to be upgraded to Dataverse.
 
