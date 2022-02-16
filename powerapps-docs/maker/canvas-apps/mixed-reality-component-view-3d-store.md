@@ -2,10 +2,9 @@
 title: Connect 3D models to Power Apps
 description: Load 3D models into Power Apps by connecting the View in 3D control to existing files as attachments, media content, with direct URLs, or as base64-encoded URIs.
 author: anuitz
-
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mduelae
 ms.date: 5/22/2020
 ms.subservice: canvas-maker
 ms.author: anuitz
@@ -14,7 +13,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - anuitz
 ---
 

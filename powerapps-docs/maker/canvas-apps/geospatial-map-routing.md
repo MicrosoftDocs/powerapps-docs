@@ -2,10 +2,9 @@
 title: Insert waypoints as map pins and draw routes between them (preview)
 description: Learn about how to add waypoints to your map control as pins and draw routes between them.
 author: anuitz
-
 ms.topic: conceptual
 ms.custom: canvas, ce06122020
-ms.reviewer: iawilt
+ms.reviewer: mduelae
 ms.date: 10/21/2021
 ms.subservice: canvas-maker
 ms.author: anuitz
@@ -14,7 +13,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - anuitz
 ---
 

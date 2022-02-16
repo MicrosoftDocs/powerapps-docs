@@ -4,7 +4,7 @@ description: View 3D models in Power Apps.
 author: anuitz
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mduelae
 ms.date: 02/15/2022
 ms.subservice: canvas-maker
 ms.author: anuitz
@@ -13,7 +13,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - anuitz
 ---
 
