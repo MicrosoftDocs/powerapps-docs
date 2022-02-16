@@ -19,7 +19,7 @@ contributors:
 
 # View 3D content in Power Apps
 
-Easily add interactive 3D content to your canvas apps. Users can [select from a gallery of 3D content](mixed-reality-component-view-3d-store.md) and rotate and zoom 3D models using simple gestures.
+Easily add interactive 3D content to your canvas apps. You can [select from a gallery of 3D content](mixed-reality-component-view-3d-store.md). And then, interact with the added 3D models with actions such as rotate and zoom.
 
 :::image type="content" source="./media/augmented-overview/view-in-3d.png" alt-text="A photo of two phones side by side, both of which show a 3D model of a forklift viewed in two mobile apps.":::
 
@@ -29,12 +29,12 @@ Easily add interactive 3D content to your canvas apps. Users can [select from a 
 > [!TIP]
 > The mixed reality (MR) controls in Power Apps use Babylon and Babylon React Native. Mixed reality content that works in the [Babylon sandbox](https://sandbox.babylonjs.com/) should work in Power Apps through this shared MR platform. If your content works in Babylon but not in Power Apps, ask a question in the [Power Apps Community Forum](https://powerusers.microsoft.com/t5/Get-Help-with-Power-Apps/ct-p/PA_General). (Tag it with "mixed reality.")
 
-## Add a 3D control to an app screen
+## Add View in 3D control to an app screen
 
 With your app open for [editing](edit-app.md) in [Power Apps Studio](https://create.powerapps.com):
 
 1. Open the **Insert** tab and expand **Media**.
-2. Select **View in 3D** to place a 3D control in the app screen, or drag the control to the screen to position it more precisely.
+2. Select **View in 3D** to place the control in the app screen, or drag the control to the screen to position it more precisely.
 
 ## Key properties
 
