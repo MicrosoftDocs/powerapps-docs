@@ -4,10 +4,10 @@ description: Use your app to take photos of 3D objects that are overlaid in the 
 author: anuitz
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mduelae
 ms.date: 01/27/2022
 ms.subservice: canvas-maker
-ms.author: mduelae
+ms.author: anuitz
 search.audienceType: 
   - maker
 search.app: 
