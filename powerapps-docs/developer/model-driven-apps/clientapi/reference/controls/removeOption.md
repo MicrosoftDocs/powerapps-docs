@@ -2,7 +2,7 @@
 title: "removeOption (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the removeOption method.
 ms.date: 04/19/2021
-ms.service: powerapps
+
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 09fd288c-d687-4976-b708-29a466fc35b1

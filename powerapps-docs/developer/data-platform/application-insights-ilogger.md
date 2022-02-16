@@ -4,7 +4,7 @@ description: "When you enable Application Insights for your organization, any pl
 ms.custom: ""
 ms.date: 06/28/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: JimDaly
 ms.subservice: dataverse-developer

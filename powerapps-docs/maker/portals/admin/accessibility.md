@@ -2,7 +2,7 @@
 title: Accessibility in Power Apps portals
 description: Learn about making Power Apps portal accessible.
 author: neerajnandwana-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 01/25/2022

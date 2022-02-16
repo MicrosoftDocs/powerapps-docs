@@ -4,7 +4,7 @@ description: Learn how reporting can be applied to your model-driven app.
 ms.custom: ""
 ms.date: 10/26/2021
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.topic: overview
 author: "Mattp123"
 ms.assetid: b4098c96-bce1-4f57-804f-8694e6254e81

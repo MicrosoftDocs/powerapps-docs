@@ -4,7 +4,7 @@ description: "Learn to transport Azure Synapse Link for Dataverse configurations
 ms.custom: ""
 ms.date: 11/01/2021
 ms.reviewer: "Mattp123"
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "conceptual"

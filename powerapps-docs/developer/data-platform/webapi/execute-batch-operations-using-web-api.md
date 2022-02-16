@@ -3,7 +3,7 @@ title: "Execute batch operations using the Web API (Microsoft Dataverse)| Micros
 description: "Batch operation lets you group multiple operations in a single HTTP request. Read how to execute batch operations using the Web API"
 ms.custom: ""
 ms.date: 09/25/2021
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"

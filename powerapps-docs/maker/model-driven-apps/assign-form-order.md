@@ -4,7 +4,7 @@ description: "Learn how to assign the default form in your app"
 ms.custom: ""
 ms.date: 03/07/2019
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"

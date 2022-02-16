@@ -4,7 +4,7 @@ description: "Insert a preformatted email message while composing an email."
 ms.custom: ""
 author: sbmjais
 manager: shujoshi
-ms.service: powerapps
+
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 06/30/2021

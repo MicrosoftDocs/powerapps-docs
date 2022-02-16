@@ -3,7 +3,7 @@ title: "Validate and publish a model-driven app using the app designer | Microso
 description: "Learn how to validate and publish a model-driven app"
 keywords: ""
 ms.date: 06/08/2018
-ms.service: powerapps
+
 ms.custom: 
 ms.topic: how-to
 applies_to: 

@@ -2,7 +2,7 @@
 title: "openForm (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the openForm method.
 ms.date: 04/21/2021
-ms.service: powerapps
+
 ms.topic: "reference"
 ms.assetid: 0206c43b-b1fc-490d-a867-1d75331885a8
 author: "Nkrb"

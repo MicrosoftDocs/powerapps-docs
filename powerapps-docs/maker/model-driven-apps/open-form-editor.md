@@ -4,7 +4,7 @@ description: Understand the ways you can open the model-driven app form editor
 ms.custom: ""
 ms.date: 06/27/2018
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"

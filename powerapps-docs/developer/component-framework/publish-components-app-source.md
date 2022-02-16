@@ -5,7 +5,7 @@ keywords: "Component Framework, code components, Power Apps controls"
 author: nkrb 
 manager: kvivek
 ms.date: 06/09/2019
-ms.service: "powerapps"
+
 ms.custom:
   - "dyn365-a11y"
   - "dyn365-developer"

@@ -4,7 +4,7 @@ description: "Task Parallel Library (TPL) makes developers more productive by si
 ms.custom: ""
 ms.date: 11/04/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: sample

@@ -2,7 +2,7 @@
 title: Use the View shape in MR control in Power Apps
 description: View a predefined digital 3D shape in the real world with augmented reality features in Power Apps.
 author: anuitz
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm

@@ -4,7 +4,7 @@ description: Learn how to create and edit columns
 ms.custom: ""
 ms.date: 02/08/2019
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"

@@ -4,7 +4,7 @@ description: Learn how to design a main form that can be used to edit a related 
 ms.custom: ""
 ms.date: 08/15/2021
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"

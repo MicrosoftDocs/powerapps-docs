@@ -2,7 +2,7 @@
 title: "getCategory (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the getCategory method.
 ms.date: 04/19/2021
-ms.service: powerapps
+
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 2849a9e1-b2fb-464c-8fc7-90b0df027c86

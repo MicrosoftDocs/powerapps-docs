@@ -2,7 +2,7 @@
 title: "Quick Start Sample: Retrieve Microsoft Dataverse environements using Online Management API| MicrosoftDocs"
 description: "The C# sample demonstrates how to authenticate to the Online Management API and then retrieve all Microsoft Dataverse environments from your Microsoft 365 tenant."
 ms.date: 10/01/2019
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.assetid: 63600a55-a1f0-491f-83f6-b3252566d27e
 author: KumarVivek

@@ -2,7 +2,7 @@
 title: Walk end-to-end through the completed SharePoint Online integration scenario
 description: Take an end-to-end walk through the scenario we've built out in this series of tutorials.
 author: NickWaggoner
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 

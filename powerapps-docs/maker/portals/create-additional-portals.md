@@ -2,7 +2,7 @@
 title: Create additional portals in an environment
 description: Instructions to create additional portals in an environment.
 author: neerajnandwana-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 10/11/2021

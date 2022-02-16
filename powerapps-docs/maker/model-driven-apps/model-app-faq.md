@@ -8,7 +8,7 @@ ms.author: alcerri
 ms.reviewer: matp
 manager: kvivek
 ms.date: 12/02/2020
-ms.service: powerapps
+
 ms.topic: troubleshooting
 applies_to: 
   - "powerapps"

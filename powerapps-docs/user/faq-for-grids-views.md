@@ -3,7 +3,7 @@ title: "Frequently asked questions and known issues on grids and views | Microso
 description: FAQ for girds and views
 author: mduelae
 manager: kvivek
-ms.service: powerapps
+
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 2/04/2022

@@ -4,7 +4,7 @@ description: "Learn about transaction table, which is a multicurrency feature en
 ms.custom: ""
 ms.date: 07/19/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID
 ms.subservice: dataverse-developer

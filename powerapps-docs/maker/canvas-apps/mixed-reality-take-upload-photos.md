@@ -2,7 +2,7 @@
 title: Take real-world screenshots of objects in mixed reality
 description: Use your app to take photos of 3D objects that are overlaid in the real world.
 author: anuitz
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
