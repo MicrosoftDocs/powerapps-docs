@@ -49,14 +49,14 @@ Change a 3D control's behavior and appearance using properties. Some properties 
 | Background fill | Sets the control's background color. | Color picker | Properties; Advanced: **BackgroundFill** (accepts RGBA or HTML hexadecimal color codes) |
 | Pins(Items) | [Shows pins on the model at specific coordinates](mixed-reality-add-pins-3d-model.md), provided in a data source (**Items**). If *None*, no pins are shown. | Data table | Properties; Advanced: **Items** |
 | Show pins | Shows the pins described in **Items**. | Boolean | Properties; Advanced: **ShowPins** |
-| Show reset button | Shows or hides a button that resets the model to its initial state. | Boolean | Properties; Advanced; **ShowReset** |
-| OnModelLoad | Contains behavior formula that runs when a model is loaded.| Event | Advanced |
-| OnChange | Contains behavior formula that runs when any property of the control is changed. | Event | Advanced |
-| OnSelect | Contains behavior formula that runs when the user selects a pin or the control. | Event | Advanced |
 | MaxPins | Specifies the maximum number of pins that can be shown on the model. | Integer | Advanced |
 | PinsX | Specifies the location of pins on the X axis in 3D coordinate space. | Floating point number | Advanced |
 | PinsY | Specifies the location of pins on the Y axis in 3D coordinate space. | Floating point number | Advanced |
 | PinsZ | Specifies the location of pins on the Z axis in 3D coordinate space. | Floating point number | Advanced |
+| Show reset button | Shows or hides a button that resets the model to its initial state. | Boolean | Properties; Advanced; **ShowReset** |
+| OnModelLoad | Contains behavior formula that runs when a model is loaded.| Event | Advanced |
+| OnChange | Contains behavior formula that runs when any property of the control is changed. | Event | Advanced |
+| OnSelect | Contains behavior formula that runs when the user selects a pin or the control. | Event | Advanced |
 
 ## Additional properties
 
