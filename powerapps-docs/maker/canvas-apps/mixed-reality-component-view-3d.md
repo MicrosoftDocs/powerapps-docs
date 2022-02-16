@@ -41,7 +41,7 @@ With your app open for [editing](edit-app.md) in [Power Apps Studio](https://cre
 
 Change the 3D content control's behavior and appearance using properties. Some properties are only available on the **Advanced** tab.
 
-:::image type="content" source="./media/augmented-3d/augmented-3d-viewer-controls.png" alt-text="A 3D control displayed next to the properties tab in Power Apps Studio.":::
+:::image type="content" source="./media/augmented-3d/augmented-3d-viewer-controls.png" alt-text="A 3D content control displayed next to the properties tab in Power Apps Studio.":::
 
 | Property | Description | Type | Location |
 | - | - | - | - |
