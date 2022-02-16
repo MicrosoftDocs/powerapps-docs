@@ -62,7 +62,8 @@ The entity record object contains the following values.
 | isOfflineSyncError | Boolean | (Optional) Indicates whether there are any offline sync errors. |
 | processId | String | (Optional) ID of the business process to be displayed on the form. |
 | processInstanceId |  String | (Optional) ID of the business process instance to be displayed on the form. |
-| [relationship](#relationship-object) | Object | (Optional) Define a relationship object to display the related records on the form. | | selectedStageId | String | (Optional) ID of the selected stage in business process instance. |
+| [relationship](#relationship-object) | Object | (Optional) Define a relationship object to display the related records on the form. | 
+| selectedStageId | String | (Optional) ID of the selected stage in business process instance. |
 | tabName | String | (Optional) Sets the focus on the tab of the form. |
 
 ##### Relationship object
