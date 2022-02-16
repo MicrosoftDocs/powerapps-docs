@@ -682,7 +682,7 @@ The default RTE webresource is available with the display name RTEGlobalConfigur
  
     "showPreview": false,
  
-    "showPreviewHeaderWarning": false}
+    "showPreviewHeaderWarning": false
 }
 ``` 
 ## Find the current setting for a rich text editor configuration
