@@ -3,7 +3,7 @@ title: "Work with Microsoft Dataverse event data in your Azure Event Hub solutio
 description: "Learn about working with event data in your Azure Event Hub solution."
 keywords: ""
 ms.date: 03/17/2021
-ms.service: powerapps
+
 ms.topic: article
 ms.assetid: a3732c49-7f47-d87c-5062-585ef28ab511
 author: JimDaly # GitHub ID

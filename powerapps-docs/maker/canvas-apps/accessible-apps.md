@@ -2,7 +2,7 @@
 title: Create accessible canvas apps
 description: How to make canvas apps accessible for people with disabilities
 author: chmoncay
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.reviewer: tapanm
 ms.date: 02/18/2021

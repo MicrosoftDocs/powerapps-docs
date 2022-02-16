@@ -2,7 +2,7 @@
 title: Understand canvas app execution phases and data call flow
 description: Learn about the execution phases of canvas apps while starting-up, and the flow of data calls.
 author: JinManAhn-MSFT
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.reviewer: tapanm
 ms.date: 01/22/2021

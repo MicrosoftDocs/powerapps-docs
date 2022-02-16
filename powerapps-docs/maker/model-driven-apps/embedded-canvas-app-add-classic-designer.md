@@ -4,7 +4,7 @@ description: Learn how to embed a canvas app into a model-driven form in Power A
 ms.custom: ""
 ms.date: 03/16/2021
 ms.reviewer: "matp"
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"

@@ -4,7 +4,7 @@ description: "UpsertRequest(Update or Insert) message helps you simplify various
 ms.custom: ""
 ms.date: 03/24/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
 ms.subservice: dataverse-developer

@@ -4,7 +4,7 @@ description: "Learn how to delete columns"
 ms.custom: ""
 ms.date: 06/20/2018
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"

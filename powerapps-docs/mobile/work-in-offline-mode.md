@@ -2,7 +2,7 @@
 title: Enable and use mobile offline-first (preview) | Microsoft Docs
 description: Enable and use mobile offline-first.
 author: mustlaz
-ms.service: powerapps
+
 ms.component: pa-user
 ms.topic: quickstart
 ms.date: 02/01/2022

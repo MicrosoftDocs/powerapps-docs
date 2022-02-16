@@ -2,7 +2,7 @@
 title: Set up mobile offline (preview) | Microsoft Docs
 description: Set up and configure mobile offline for model-driven apps made with Power Apps.
 author: mduelae
-ms.service: powerapps
+
 ms.component: pa-user
 ms.topic: quickstart
 ms.date: 02/01/2022

@@ -2,7 +2,7 @@
 title: Power Apps system requirements and limits
 description: Learn about device platform and web browser requirements, limits, and configuration values for Power Apps.
 author: lancedMicrosoft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm

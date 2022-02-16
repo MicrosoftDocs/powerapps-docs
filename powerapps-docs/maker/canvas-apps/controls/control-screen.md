@@ -2,7 +2,7 @@
 title: Screen control in Power Apps
 description: Learn about the details, properties and examples of the screen control in Power Apps.
 author: emcoope-msft
-ms.service: powerapps
+
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm

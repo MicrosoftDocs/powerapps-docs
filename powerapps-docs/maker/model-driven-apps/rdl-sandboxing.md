@@ -4,7 +4,7 @@ description: Learn about RDL sandboxing that may affect SSRS reports in Power Ap
 ms.custom: 
 ms.date: 09/30/2017
 ms.reviewer: 
-ms.service: powerapps
+
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: conceptual

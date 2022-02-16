@@ -2,7 +2,7 @@
 title: Component library (preview)
 description: Learn about working with a library of reusable components for canvas apps.
 author: hemantgaur
-ms.service: powerapps
+
 ms.subservice: canvas-developer
 ms.topic: article
 ms.date: 11/03/2021

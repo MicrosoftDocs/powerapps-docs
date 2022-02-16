@@ -4,7 +4,7 @@ description: "This sample showcases how to create a simple queue" # 115-145 char
 ms.custom: ""
 ms.date: 12/20/2019
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: sample
 author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only

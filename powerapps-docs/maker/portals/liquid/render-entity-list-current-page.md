@@ -2,7 +2,7 @@
 title: Render the list associated with the current page
 description: Sample code to render the list associated with the current page in a portal.
 author: gitanjalisingh33msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 06/29/2021

@@ -4,7 +4,7 @@ description: "Learn how to create one-to-many or many-to-one table relationships
 ms.custom: ""
 ms.date: 08/27/2019
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"

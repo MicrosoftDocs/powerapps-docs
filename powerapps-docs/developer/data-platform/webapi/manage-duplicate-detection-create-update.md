@@ -3,7 +3,7 @@ title: "Detect duplicate data using the Web API (Microsoft Dataverse)| Microsoft
 description: "Read how to detect duplicates using MSCRM.SuppressDuplicateDetection header and Microsoft Dataverse Web API"
 ms.custom: ""
 ms.date: 05/04/2021
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"

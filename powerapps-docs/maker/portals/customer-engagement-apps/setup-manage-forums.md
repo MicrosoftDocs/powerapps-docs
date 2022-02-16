@@ -2,7 +2,7 @@
 title: Set up and manage forums
 description: Learn how to create and manage forums on a portal.
 author: sbmjais
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2020

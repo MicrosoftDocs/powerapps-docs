@@ -4,7 +4,7 @@ description: Understand the recommended ways to work with embedded canvas apps i
 ms.custom: ""
 ms.date: 09/02/2021
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "troubleshooting"

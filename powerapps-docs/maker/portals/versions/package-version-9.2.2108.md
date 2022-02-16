@@ -2,7 +2,7 @@
 title: Starter portal package version 9.2.2108.x
 description: Learn about the changes included in starter portal package version 9.2.2108, including problem fixes and enhancements to extend the capabilities of portals.
 author: GitanjaliSingh33msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 08/24/2021

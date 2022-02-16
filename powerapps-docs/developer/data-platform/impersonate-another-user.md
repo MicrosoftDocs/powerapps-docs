@@ -4,7 +4,7 @@ description: "Use impersonation to execute business logic on behalf of another M
 ms.custom: ""
 ms.date: 03/12/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
 ms.subservice: dataverse-developer

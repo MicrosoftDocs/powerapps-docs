@@ -7,7 +7,7 @@ ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
 ms.date: 10/04/2021
-ms.service: "powerapps"
+
 ms.topic: "article"
 ---
 

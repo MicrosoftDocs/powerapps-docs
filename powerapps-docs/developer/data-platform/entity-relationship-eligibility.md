@@ -4,7 +4,7 @@ description: "The article lists the messages that you can use to determine wheth
 ms.custom: ""
 ms.date: 03/11/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID
 ms.subservice: dataverse-developer

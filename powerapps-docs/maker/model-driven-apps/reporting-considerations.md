@@ -4,7 +4,7 @@ description: Learn about what the considerations are when you use reporting in m
 ms.custom: 
 ms.date: 09/27/2019
 ms.reviewer: 
-ms.service: powerapps
+
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: conceptual

@@ -4,7 +4,7 @@ description: "Learn about creating your own custom Microsoft Dataverse messages 
 ms.custom: ""
 ms.date: 06/29/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
 ms.subservice: dataverse-developer

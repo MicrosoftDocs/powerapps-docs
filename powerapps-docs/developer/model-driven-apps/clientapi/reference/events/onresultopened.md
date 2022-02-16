@@ -2,7 +2,7 @@
 title: "OnResultOpened event (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the OnResultOpened event.
 ms.date: 04/19/2021
-ms.service: powerapps
+
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: e291973b-9634-4442-995c-37fd49a10571

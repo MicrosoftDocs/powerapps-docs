@@ -3,7 +3,7 @@ title: "Retrieve and execute predefined queries (Microsoft Dataverse)| Microsoft
 description: "Microsoft Dataverse provides a way for administrators to create system views that are available to all users. Read how you can compose a predefined query and use FetchXML to create a query string to retrieve table data."
 ms.custom: ""
 ms.date: 05/07/2021
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
