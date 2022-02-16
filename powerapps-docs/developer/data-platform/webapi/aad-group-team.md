@@ -2,7 +2,7 @@
 title: "Work with Azure Active Directory group teams (Dataverse)| Microsoft Docs"
 description: "Learn about working with an Azure Active Directory group team using the Web API."
 ms.custom: ""
-ms.date: 09/14/2021
+ms.date: 02/15/2022
 
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -173,6 +173,18 @@ Accept: application/json
   }
 }
 ``` -->
+
+## Retrieve user
+
+You can retrieve a user row using an Azure user object identifier (ID). If the user doesn’t exist in Dataverse, the user is added to Dataverse automatically.
+
+The example below shows the syntax for retrieving a user row.
+
+**Request**
+
+```http
+GET [Organization URI]/api/data/v9.0/SystemUser(azureactivedirectoryobjectid=<user object ID>)
+```
 
 ## Security roles and privileges
 
