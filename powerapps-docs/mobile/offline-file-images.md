@@ -83,14 +83,12 @@ It is required to add both the **Image Descriptor** and **FileAttachment** table
   
 10. Select **Save**.
 11. In **Data available offline** select **Add table** > **FileAttachment** > **Next**. 
-12. Expand **Relationships** and select **Image Descriptor, Column name: FileId**.
-    
-    > ![Note] Don't select **Image Descriptor, Column name: Regarding**.
+12. Expand **Relationships** and select **Image Descriptor, Column name: FileId**. Don't select **Image Descriptor, Column name: Regarding**.
 
     > [!div class="mx-imgBorder"]
     > ![Add FileAttachment table.](media/mobile-offline-edit-image.png "Add FileAttachment table")
 
-10. Select **Save**.
+13. Select **Save**.
 
 
 ## Add file columns to mobile offline 
