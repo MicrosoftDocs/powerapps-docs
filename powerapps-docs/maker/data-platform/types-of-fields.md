@@ -70,7 +70,7 @@ There are some columns used by the system that you cannot add using the designer
 
 |Type|Description|
 |--|--|
-|**Time Stamp**| A Big Integer type used by the system to capture a version number manage updates to a table.|
+|**Time Stamp**| A Big Integer type used by the system to capture a version number for managing updates to a table.|
 |**Customer**|A lookup column that you can use to specify a customer, which can be an account or contact.<br />**Note**: This attribute can be added using solution explorer designer.|
 |**Owner**|A system lookup column that references the user or team that is assigned a user or team owned table row.|
 |**Status Reason**|A system column that has options that provide additional detail about the Status column. Each option is associated with one of the available Status options. You can add and edit the options. <br /><br /> You can also include custom state transitions to control which status options are available for certain tables. More information: [Define status reason transitions for custom tables](define-status-reason-transitions.md)|
