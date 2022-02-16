@@ -116,10 +116,7 @@ Some components may require certain Dataverse privileges for users to run the co
 
 ### Flows
 
-To use or run a flow from a canvas app that is included in a solution, you must be assigned a Dataverse security role with the following minimum permissions:
-
-- Read privilege on the **Solution** table.
-- Read privilege on the **Process** table.
+To use or run a flow from a canvas app that is included in a solution, you must have permissions to that flow through someone sharing ownership or run permissions. When an app in a solution is shared with a set of users, the flows must also be explictly shared.
 
 More information: [Security roles and privileges](/power-platform/admin/security-roles-privileges)
 
@@ -127,22 +124,21 @@ More information: [Security roles and privileges](/power-platform/admin/security
 
 The following limitations apply to the use of canvas apps, flows, and custom connectors in solutions. 
 
-- Canvas app instant flows must be created from an app already in a solution. Adding this type of flow from outside solutions is blocked.
+- Canvas app instant flows must be created from an app already in a solution since adding this type of flow from outside solutions is blocked. 
+   - Workaround for this limitation: Remove the trigger, replace with another trigger like recurrence, save the flow, add it into a solution, and then change the trigger as needed.
 -	Canvas apps won't display in the classic solution explorer. Use the modern experience. There are no plans for them to be added to classic solution explorer. 
 - Flows created from solutions will not be displayed in the "Team Flows" list. They must be accessed through a solution. 
 - The [Power Automate mobile app](/power-automate/mobile-manage-flows) does not currently support flows created in a solution. 
 - The Flow action menu in [Power Apps Mobile](/powerapps/mobile/run-powerapps-on-mobile) and [Dynamics 365 for phones and tablets](/dynamics365/mobile-app/overview) does not currently support flows created in a solution. 
-- You can’t add an instant flow into a solution when the following are true:
-   - The flow was created outside of a solution.
-   - The flow trigger is set to manual.
-- Flows triggered from Microsoft 365 applications such as Excel are not available in solutions.
-- Flows in solutions don't support delegated authentication. For example, access to a flow is not automatically granted based on having access to the SharePoint list the flow was created from.
+- Flows in solutions don't support delegated authentication. For example, access to a flow cannot be automatically granted based on having access to the SharePoint list the flow was created from.
 - Custom connectors created outside solutions cannot be added to solutions at this time.
 - Canvas apps shared with 'Everyone' that go through environment backup and environment restore operations aren't shared with 'Everyone' in the restored environment. Notice that, the canvas app can be shared with a security group and the app in the restored environment will be shared with that security group.  
-- Flows using [connectors](/connectors/connector-reference/) that are 'indexed' cannot be added into solutions. Indexing enables the quick retrieval of those flows to display in a menu or list. Indexed connectors include Power Automate instant (button) flows, Power Apps, Teams, SharePoint, Dynamics 365 Customer Voice, Microsoft Forms, legacy Dataverse connector, Dynamics 365, Excel Online, Microsoft Project, Azure IOT Central V2, and Project Online. To work around this behavior choose one of two options: 
-   - Create a new flow in a solution. 
-   - Change the flow to remove the indexed connector usage, add it into a solution, and then change it back.
-
+- Flows using [connectors](/connectors/connector-reference/) that are 'indexed' cannot be added into solutions. Indexing isn't supported for solution cloud flows yet. Indexing enables the quick retrieval of those flows to display in a menu or list. Indexed connectors include Power Automate instant (button) flows, Power Apps, Teams, SharePoint, Dynamics 365 Customer Voice, Microsoft Forms, legacy Dataverse connector, Dynamics 365, Excel Online, Microsoft Project, Azure IOT Central V2, and Project Online. 
+   - Workarounds for this limitation: 
+      - Edit the flow to remove the indexed connector triggers/actions, add it into a solution, and then change it back.
+      - Create a new flow in a solution. 
+- Flows triggered from Microsoft 365 applications such as Excel cannot see/show cloud flows in solutions since they use indexing.
+      
 For details about customizing the individual components in a solution, see the following topics:  
   
 -   For table, table relationships, column and message customizations, see [Metadata](create-edit-metadata.md).  
