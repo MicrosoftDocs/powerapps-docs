@@ -104,11 +104,11 @@ An **Attachments** control lets you open, add, and delete files from a SharePoin
 
 **[Padding](properties-size-location.md)** – The distance between the text on an import or export button and the edges of that button.
 
-**[PressedBorderColor](properties-color-border.md)** – The color of a control's border when the user taps or clicks that control.
+**[PressedBorderColor](properties-color-border.md)** – The color of a control's border when the user selects that control.
 
-**[PressedColor](properties-color-border.md)** – The color of text in a control when the user taps or clicks that control.
+**[PressedColor](properties-color-border.md)** – The color of text in a control when the user selects that control.
 
-**[PressedFill](properties-color-border.md)** – The background color of a control when the user taps or clicks that control.
+**[PressedFill](properties-color-border.md)** – The background color of a control when the user selects that control.
 
 **Reset** – Reverts all changes to the attachments control returning to the previously saved state.
 
@@ -160,7 +160,7 @@ There must be adequate color contrast between:
 * **MaxAttachmentsColor** and **Fill**
 * **NoAttachmentsColor** and **Fill**
 
-This is in addition to the [standard color contrast requirements](../accessible-apps-color.md).
+This requirement is in addition to the [standard color contrast requirements](../accessible-apps-color.md).
 
 ### Screen reader support
 The following properties must be present:
@@ -171,7 +171,7 @@ The following properties must be present:
 
 ### Keyboard support
 * **[TabIndex](properties-accessibility.md)** must be zero or greater so that keyboard users can navigate to it.
-* Focus indicators must be clearly visible. Use **[FocusedBorderColor](properties-color-border.md)** and **[FocusedBorderThickness](properties-color-border.md)** to achieve this.
+* Focus indicators must be clearly visible. Use **[FocusedBorderColor](properties-color-border.md)** and **[FocusedBorderThickness](properties-color-border.md)** to achieve this clarity.
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
