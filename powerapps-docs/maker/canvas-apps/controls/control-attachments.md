@@ -29,6 +29,8 @@ The attachment control has these limitations:
 
 1. Upload and delete functionality work only inside a form. The Attachment control appears disabled when in Edit mode and not inside a form. To save file additions and deletions, the app user must save the form. Because of this limitation, the Attachment control isn't available from the **Insert** tab but appears in the form when the Attachment form field is enabled in a SharePoint or Dataverse form.
 
+1. While the Attachments control on the web allows for selecting multiple files and drag and drop.  On Mobile, attachments can only be added one at a time.
+
 ## Description
 An **Attachments** control lets you open, add, and delete files from a SharePoint list or a Dataverse table.
 
@@ -56,7 +58,27 @@ An **Attachments** control lets you open, add, and delete files from a SharePoin
 
 **[BorderThickness](properties-color-border.md)** – The thickness of a control's border.
 
+**[Color](properties-color-border.md)** – The color of a control's text.
+
+**[DisabledBorderColor](properties-color-border.md)** – The color of a control's border if the control's **[DisplayMode](properties-core.md)** property is set to **Disabled**.
+
+**[DisabledColor](properties-color-border.md)** – The color of text in a control if its **[DisplayMode](properties-core.md)** property is set to **Disabled**.
+
+**[DisabledFill](properties-color-border.md)** – The background color of a control if its **[DisplayMode](properties-core.md)** property is set to **Disabled**.
+
 **[DisplayMode](properties-core.md)** – Whether the control allows adding and deleting files (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
+
+**[DropTargetBackgroundColor]** – The color of the control's drop target background.
+
+**[DropTargetBorderColor]** – The color of the control's drop target border.
+
+**[DropTargetBorderStyle]** – Whether the control's drop target border is **Solid**, **Dashed**, **Dotted**, or **None**.
+
+**[DropTargetBorderThickness]** – The thickness of the control's drop target border.
+
+**[DropTargetTextColor]** – The color of the control's drop target text.
+
+**[Fill](properties-color-border.md)** – The background color of a control.
 
 **[FocusedBorderColor](properties-color-border.md)** – The color of a control's border when the control is focused.
 
@@ -64,13 +86,41 @@ An **Attachments** control lets you open, add, and delete files from a SharePoin
 
 **[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
 
+**[Font](properties-text.md)** – The name of the family of fonts in which text appears.
+
+**[FontWeight](properties-text.md)** – The weight of the text in a control: **Bold**, **Semibold**, **Normal**, or **Lighter**.
+
+**[HoverBorderColor](properties-color-border.md)** – The color of a control's border when the user keeps the mouse pointer on that control.
+
+**[HoverColor](properties-color-border.md)** – The color of the text in a control when the user keeps the mouse pointer on it.
+
+**[HoverFill](properties-color-border.md)** – The background color of a control when the user keeps the mouse pointer on it.
+
+**[Italic](properties-text.md)** – Whether the text in a control is italic.
+
 **MaxAttachmentsText** – The text that replaces the "Attach file" link when the control contains the maximum number of files allowed.
 
 **NoAttachmentsText** – Informational text shown to the user when there are no files attached.
 
+**[Padding](properties-size-location.md)** – The distance between the text on an import or export button and the edges of that button.
+
+**[PressedBorderColor](properties-color-border.md)** – The color of a control's border when the user taps or clicks that control.
+
+**[PressedColor](properties-color-border.md)** – The color of text in a control when the user taps or clicks that control.
+
+**[PressedFill](properties-color-border.md)** – The background color of a control when the user taps or clicks that control.
+
 **Reset** – Reverts all changes to the attachments control returning to the previously saved state.
 
+**[Size](properties-text.md)** – The font size of the text that appears on a control.
+
+**[Strikethrough](properties-text.md)** – Whether a line appears through the text that appears on a control.
+
 **[TabIndex](properties-accessibility.md)** – Keyboard navigation order in relation to other controls.
+
+**[Tooltip](properties-core.md)** – Explanatory text that appears when the user hovers over a control.
+
+**[Underline](properties-text.md)** – Whether a line appears under the text that appears on a control.
 
 **[Visible](properties-core.md)** – Whether a control is visible or hidden.
 
