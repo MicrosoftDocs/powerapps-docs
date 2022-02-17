@@ -68,7 +68,7 @@ The entity record object contains the following values.
 
 ##### Relationship object
 
-The relationship object, used by the Entity record, contains the following values.
+The relationship object, used in the [Entity record](#entity-record), contains the following values.
 
 | Name | Type | Description |
 | --- | --- | --- |
