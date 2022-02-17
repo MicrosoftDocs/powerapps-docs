@@ -2,7 +2,7 @@
 title: Create a custom table (contains video) | Microsoft Docs
 description: Learn how to create a custom table in Power Apps.
 author: Mattp123
-ms.service: powerapps
+
 ms.component: cds
 ms.topic: quickstart
 ms.date: 07/20/2020

@@ -2,7 +2,7 @@
 title: Accessibility properties for Power Apps
 description: Reference information about properties related to accessibility in Power Apps.
 author: chmoncay
-ms.service: powerapps
+
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm

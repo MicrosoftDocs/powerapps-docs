@@ -4,7 +4,7 @@ description: Learn about ModelDrivenFormIntegration control properties and actio
 ms.custom: ""
 ms.date: 06/17/2021
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "conceptual"

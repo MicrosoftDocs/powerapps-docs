@@ -3,7 +3,7 @@ title: "Work with Dynamics 365 data in your Azure solution (Microsoft Dataverse)
 description: "Provides an overview of passing data from Dataverse to an Azure cloud hosted solution."
 keywords: ""
 ms.date: 03/17/2021
-ms.service: powerapps
+
 ms.topic: article
 ms.assetid: 1ef66369-71c9-3b89-ac1a-09d523ca737b
 author: JimDaly # GitHub ID

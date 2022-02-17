@@ -2,7 +2,7 @@
 title: "getGlobalContext.organizationSettings (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the getGlobalContext.organizationSettings method.
 ms.date: 07/13/2021
-ms.service: powerapps
+
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: badf4f82-cb47-4864-aa43-bb777d04de4d

@@ -2,7 +2,7 @@
 title: Save and publish canvas apps
 description: Step-by-step instructions for saving and publishing canvas apps.
 author: amchern
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm

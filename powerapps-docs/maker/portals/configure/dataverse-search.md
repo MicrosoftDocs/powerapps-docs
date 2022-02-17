@@ -2,7 +2,7 @@
 title: Dataverse search in portals
 description: "Learn how Dataverse search works in a portal."
 author: nageshbhat-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: intro-internal
 ms.date: 02/17/2022

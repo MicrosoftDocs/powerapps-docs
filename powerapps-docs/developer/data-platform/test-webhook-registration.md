@@ -4,7 +4,7 @@ description: "Use a request logging site to examine the contextual data passed w
 ms.custom: ""
 ms.date: 03/18/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
 ms.subservice: dataverse-developer

@@ -3,7 +3,7 @@ title: "Solution layers  | MicrosoftDocs"
 description: "Learn how you can use solution layers"
 keywords: 
 ms.date: 03/05/2021
-ms.service: powerapps
+
 ms.custom: 
 ms.topic: article
 ms.assetid: 

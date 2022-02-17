@@ -2,7 +2,7 @@
 title: Advanced Monitor concepts
 description: Learn about advanced monitoring concepts related to Monitor.
 author: mattgon
-ms.service: powerapps
+
 ms.subservice: troubleshoot
 ms.topic: conceptual
 ms.custom: canvas

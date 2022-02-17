@@ -3,7 +3,7 @@ title: "Create and manage personal views on a grid page  | MicrosoftDocs"
 description: Create and manage personal views on a grid page in model-driven Power Apps.
 author: mduelae
 manager: kvivek
-ms.service: powerapps
+
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 2/4/2022

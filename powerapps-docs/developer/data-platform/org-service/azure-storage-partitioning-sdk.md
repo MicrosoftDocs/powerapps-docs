@@ -4,7 +4,7 @@ description: "Learn how to improve performance when accessing non-relational ent
 ms.custom: ""
 ms.date: 01/25/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
 ms.author: "pehecke" # MSFT alias of Microsoft employees only

@@ -2,10 +2,9 @@
 title: Let users draw and insert shapes into maps
 description: Allow users of your app to draw shapes onto maps, or insert predefined shapes and display their measurements.
 author: anuitz
-ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas, ce06122020
-ms.reviewer: tapanm
+ms.reviewer: mduelae
 ms.date: 3/2/2021
 ms.subservice: canvas-maker
 ms.author: anuitz
@@ -14,7 +13,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - anuitz
 ---
 

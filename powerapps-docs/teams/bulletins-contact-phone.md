@@ -2,7 +2,7 @@
 title: Add contact phone in links and contacts section (contains video)
 description: Learn about how to add contact phone in links and contacts section of Bulletins app.
 author: sbahl10
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 07/13/2021

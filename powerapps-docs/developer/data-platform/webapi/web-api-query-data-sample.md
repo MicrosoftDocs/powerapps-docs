@@ -3,7 +3,7 @@ title: "Web API Query Data Sample (Microsoft Dataverse)| Microsoft Docs"
 description: "These code samples shows how to query data using the Web API. These samples are implemented using client-side JavaScript and C#."
 ms.custom: ""
 ms.date: 06/15/2021
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"

@@ -4,7 +4,7 @@ description: "The rich text editor control provides the app user a WYSIWYG editi
 ms.custom: ""
 ms.date: 01/19/2022
 ms.reviewer: "matp"
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -682,7 +682,7 @@ The default RTE webresource is available with the display name RTEGlobalConfigur
  
     "showPreview": false,
  
-    "showPreviewHeaderWarning": false}
+    "showPreviewHeaderWarning": false
 }
 ``` 
 ## Find the current setting for a rich text editor configuration

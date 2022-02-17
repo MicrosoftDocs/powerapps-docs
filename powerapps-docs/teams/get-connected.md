@@ -2,7 +2,7 @@
 title: Get connected sample app (preview)
 description: Learn how to use the Get connected (preview) app from Teams store.
 author: josephshum
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 10/04/2021

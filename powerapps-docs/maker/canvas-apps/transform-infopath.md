@@ -2,7 +2,7 @@
 title: Transform your InfoPath form to Power Apps
 description: Learn about how to transform your InfoPath form to Power Apps with information about common scenarios and how to create these items in a canvas app.
 author: emcoope-msft
-ms.service: powerapps
+
 ms.topic: article
 ms.custom: canvas
 ms.reviewer: tapanm

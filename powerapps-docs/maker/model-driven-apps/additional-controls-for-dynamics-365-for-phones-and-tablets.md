@@ -4,7 +4,7 @@ description: "A list of controls available for use with Power Apps model-driven 
 ms.custom: ""
 ms.date: 03/29/2021
 ms.reviewer: "matp"
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "overview"

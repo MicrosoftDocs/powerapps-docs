@@ -3,7 +3,7 @@ title: "Conditional Operation sample (C#) (Microsoft Dataverse)| Microsoft Docs"
 description: "This sample shows how to perform conditional message operations when accessing table rows of the Microsoft Dataverse."
 ms.custom: ""
 ms.date: 07/15/2021
-ms.service: powerapps
+
 applies_to: 
   - "Dynamics 365 (online)"
 author: "JimDaly"

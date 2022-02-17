@@ -2,7 +2,7 @@
 title: Use OAuth 2.0 implicit grant flow within your portal
 description: Learn how to make client-side calls to external APIs and secure them by using OAuth implicit grant flow in your portal.
 author: gitanjalisingh33msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 10/25/2021

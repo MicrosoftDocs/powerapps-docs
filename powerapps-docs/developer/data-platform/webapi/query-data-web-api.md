@@ -3,7 +3,7 @@ title: "Query data using the Web API (Microsoft Dataverse)| Microsoft Docs"
 description: "Read about the various ways to query Microsoft Dataverse table data using the Web API and the various system query options that can be applied in these queries."
 ms.custom: ""
 ms.date: 04/29/2021
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"

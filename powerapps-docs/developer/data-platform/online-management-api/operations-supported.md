@@ -2,7 +2,7 @@
 title: "Operations supported by Online Management API for Microsoft Dataverse| MicrosoftDocs"
 description: "Provides information about the operations you can perform using the Online Management API to manage your Microsoft Dataverse environments."
 ms.date: 09/30/2019
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.assetid: 63600a55-a1f0-491f-83f6-b3252566d27e
 author: KumarVivek

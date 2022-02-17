@@ -2,7 +2,7 @@
 title: "Example: Create and customize a model-driven app form | MicrosoftDocs"
 description: "Learn how to create and customize forms in model-driven Power Apps."
 ms.date: 07/05/2021
-ms.service: powerapps
+
 ms.subservice: mda-maker
 ms.topic: tutorial
 author: joel-lindstrom

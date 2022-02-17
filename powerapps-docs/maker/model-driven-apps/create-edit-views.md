@@ -4,7 +4,7 @@ description: "Learn how to create or edit a view"
 ms.custom: intro-internal
 ms.date: 03/19/2020
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "overview"

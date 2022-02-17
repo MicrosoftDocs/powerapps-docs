@@ -8,7 +8,7 @@ ms.author: aneesa
 ms.reviewer: nabuthuk
 manager: kvivek
 ms.date: 11/30/2021
-ms.service: powerapps
+
 ms.topic: how-to
 search.audienceType: 
   - developer

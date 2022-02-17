@@ -4,7 +4,7 @@ description: "Create custom help pages on UCI"
 ms.custom: ""
 ms.date: 06/22/2021
 ms.reviewer: ""
-ms.service: "powerapps"
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"

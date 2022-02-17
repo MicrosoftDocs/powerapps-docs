@@ -3,7 +3,7 @@ title: Model-driven app glossary of terms | Microsoft Docs
 description: Simple descriptions of commonly used terms when building model-driven apps
 ms.custom: intro-internal
 author: Mattp123
-ms.service: powerapps
+
 ms.topic: overview
 ms.component: model
 ms.date: 02/03/2022

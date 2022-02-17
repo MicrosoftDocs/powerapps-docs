@@ -4,7 +4,7 @@ description: "The sample represents a technique to pass the additional values wi
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.topic: "article"
 author: "KumarVivek" # GitHub ID
 ms.subservice: mda-developer

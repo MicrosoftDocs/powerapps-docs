@@ -2,7 +2,7 @@
 title: SetProperty function in Power Apps Test Studio
 description: Reference information including syntax and examples for the SetProperty function in Power Apps Test Studio.
 author: tapanm-msft
-ms.service: powerapps
+
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm

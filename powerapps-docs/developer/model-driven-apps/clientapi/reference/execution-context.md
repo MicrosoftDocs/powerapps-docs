@@ -2,7 +2,7 @@
 title: "Client API execution context in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the executionContext method.
 ms.date: 04/21/2021
-ms.service: powerapps
+
 ms.topic: "conceptual"
 applies_to: 
   - "Dynamics 365 (online)"
