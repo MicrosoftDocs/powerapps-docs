@@ -91,7 +91,7 @@ Set up the new mobile offline experience in the [modern app designer](../maker/m
 7. Select an existing offline profile, or select **New profile with current app data**. To set up a new offline profile, go to the following section, [Set up a mobile offline profile](setup-mobile-offline.md#set-up-a-mobile-offline-profile).
     
     > [!NOTE]
-    >  If you edit an app that has more than one offline prfile, which was created using the [classic offline experience](/dynamics365/mobile-app/setup-mobile-offline#step-2-create-a-mobile-offline-profile-to-determine-what-data-will-be-available-while-offline), then you will get this message: **There is more than one mobile offline profile associated with this app, so you can't edit it here.** <br> To use the new experience, your app should only have one offline profile.
+    >  If you edit an app that has more than one offline profile, which was created using the [classic offline experience](/dynamics365/mobile-app/setup-mobile-offline#step-2-create-a-mobile-offline-profile-to-determine-what-data-will-be-available-while-offline), then you will get this message: **There is more than one mobile offline profile associated with this app, so you can't edit it here.** <br> To use the new experience, your app should only have one offline profile.
     
     > [!div class="mx-imgBorder"]
     > ![Select an offline profile.](media/mobile-offline-image7.png)
@@ -164,8 +164,8 @@ Applying an appropriate filter for each of the tables configured in the offline 
    3. **Files** and **Images** define which columns for a file or image need to be downloaded offline. For files, you can choose to download every column or none at all. For images, you can select each column you want to download granularly.
    4. **Sync interval** defines the sync frequency to be applied on the device to sync the data with the server. If a table's data doesn't change frequently—like a catalog or a product table—you might want to focus on only syncing data when necessary, for example refreshing only once a day.
    
-   > [!NOTE]
-   > Offline profiles have limitations regarding the number of related tables it references. In custom filters, you cannot use more than 10 related tables. Independently, in relationships, you cannot exceed 10 either. The computation to get to 10 is more complex. Adding one relationships in table A concerning table B can increment the count by one, but not always. If B already has 2 relationships, the increment will be of two. Please refer to the error message displayed to configure your profile according with these limitations. The offline profile publication will fail if these limits are exceeded, blocking the publication of the app.
+     > [!NOTE]
+     > You can only have up to ten related tables in an offline profile. In custom filters and in relationships, you also cannot have more than ten related tables. For example, when you add one relationship in table A concerning table B, this can increase the count by one, but not always. If table B already has two relationships, then this means you already have two relationships in the profile. If you exceed this limit, then you run into an error and you won’t be able to publish the offline profile.
    
       
       > [!div class="mx-imgBorder"]
