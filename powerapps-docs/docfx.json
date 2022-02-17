@@ -80,6 +80,9 @@
       },
       "searchScope": {
         "**.*": [ "Power Platform", "Power Apps" ]
+      },
+      "ms.service": {
+        "**.*": "powerapps"
       }
     },
     "template": [],

@@ -2,7 +2,7 @@
 title: Common problems and resolutions while creating a portal
 description: Learn about frequent issues, problems, FAQs and resolutions while creating a Power Apps portal.
 author: neerajnandwana-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2021

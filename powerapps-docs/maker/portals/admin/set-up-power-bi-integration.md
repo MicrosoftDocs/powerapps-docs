@@ -2,7 +2,7 @@
 title: Set up Power BI integration
 description: Learn how to set up Power BI integration with your portal. View and embed dashboards and reports by enabling Power BI visualization and Power BI Embedded.
 author: neerajnandwana-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 08/31/2021

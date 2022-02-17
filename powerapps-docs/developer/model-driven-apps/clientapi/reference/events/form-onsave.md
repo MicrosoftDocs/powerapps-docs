@@ -2,7 +2,7 @@
 title: "Form OnSave event (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the form OnSave event.
 ms.date: 12/16/2021
-ms.service: powerapps
+
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 89123cde-7c66-4c7d-94e4-e287285019f8

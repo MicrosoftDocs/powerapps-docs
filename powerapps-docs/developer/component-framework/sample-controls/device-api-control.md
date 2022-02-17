@@ -4,7 +4,7 @@ description: "This sample component showcases Device API capabilities of the Pow
 ms.custom: ""
 manager: kkaul
 ms.date: 02/02/2022
-ms.service: "powerapps"
+
 ms.topic: "article"
 ms.author: "vilesyk"
 author: lesyk

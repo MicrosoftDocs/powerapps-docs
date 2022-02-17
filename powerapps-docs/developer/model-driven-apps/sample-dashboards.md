@@ -4,7 +4,7 @@ description: "The topic contains sample dashboards along with the respective For
 ms.custom: ""
 ms.date: 04/14/2021
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.topic: "article"
 author: "Nkrb" # GitHub ID
 ms.subservice: mda-developer

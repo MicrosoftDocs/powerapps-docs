@@ -4,7 +4,7 @@ description: Learn how to change the color scheme for your app with Power Apps
 ms.custom: ""
 ms.date: 01/12/2021
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"

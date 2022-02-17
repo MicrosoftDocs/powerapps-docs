@@ -3,7 +3,7 @@ title: "Distribute a model-driven app using a solution | MicrosoftDocs"
 description: "Learn how to distribute a model-driven app using solutions"
 keywords: ""
 ms.date: 08/06/2018
-ms.service: powerapps
+
 ms.custom: 
 ms.topic: how-to
 applies_to: 

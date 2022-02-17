@@ -2,7 +2,7 @@
 title: Automate tests with Azure Pipelines using YAML
 description: Describes how to automate test suites and cases using an Azure Pipelines YAML.
 author: maustinjones
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm

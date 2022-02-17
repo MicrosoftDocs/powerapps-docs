@@ -4,7 +4,7 @@ description: Learn how Microsoft Dataverse provides multiple ways to integrate w
 ms.custom: ""
 ms.date: 06/16/2020
 ms.reviewer: "Mattp123"
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"

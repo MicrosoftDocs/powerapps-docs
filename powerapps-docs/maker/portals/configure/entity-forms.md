@@ -2,7 +2,7 @@
 title: About basic forms
 description: Learn how to create basic forms in a portal."
 author: sandhangitmsft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 02/17/2022

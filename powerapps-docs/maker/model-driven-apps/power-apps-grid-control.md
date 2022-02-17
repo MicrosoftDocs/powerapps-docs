@@ -4,7 +4,7 @@ description: "A control for use with Power Apps that lets users view and open re
 ms.custom: ""
 ms.date: 10/04/2021
 ms.reviewer: "matp"
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "overview"

@@ -3,7 +3,7 @@ title: "Perform operations using the Web API (Microsoft Dataverse)| Microsoft Do
 description: "Microsoft Dataverse Web API provides a RESTful web service interface that you can use to interact with data in Dataverse using a wide variety of programming languages. Read about the operations that can be performed using the Web API"
 ms.custom: ""
 ms.date: 04/22/2019
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"

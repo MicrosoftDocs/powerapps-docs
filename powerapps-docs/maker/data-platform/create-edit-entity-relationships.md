@@ -4,7 +4,7 @@ description: Learn about table relationships in Microsoft Dataverse
 ms.custom: intro-internal
 ms.date: 08/17/2020
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "overview"

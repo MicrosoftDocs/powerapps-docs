@@ -4,7 +4,7 @@ description: "How to run a Power Apps model-driven app"
 ms.custom: ""
 ms.date: 12/07/2021
 ms.reviewer: "matp"
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"

@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: 12/03/2020
 ms.topic: how-to
 ms.reviewer: "matp"
-ms.service: powerapps
+
 author: "Mattp123"
 ms.assetid: 
 ms.subservice: dataverse-maker

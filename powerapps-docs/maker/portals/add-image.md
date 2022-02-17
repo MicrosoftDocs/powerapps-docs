@@ -2,7 +2,7 @@
 title: Add image
 description: Learn about how to add image component to a Power Apps portals page using portals Studio.
 author: neerajnandwana-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2021

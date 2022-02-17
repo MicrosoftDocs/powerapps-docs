@@ -4,7 +4,7 @@ description: Describes how to manage invalid characters.
 
 ms.date: 08/09/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "JimDaly"
 ms.subservice: dataverse-developer

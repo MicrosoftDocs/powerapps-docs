@@ -6,7 +6,7 @@ author: Mattp123
 manager: kvivek
 editor: ''
 tags: ''
-ms.service: powerapps
+
 ms.devlang: na
 ms.topic: how-to
 ms.component: model

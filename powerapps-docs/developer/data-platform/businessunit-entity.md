@@ -4,7 +4,7 @@ description: "An organization in Microsoft Dataverse, such as a holding company 
 ms.custom: ""
 ms.date: 03/27/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "paulliew" # GitHub ID
 ms.subservice: dataverse-developer

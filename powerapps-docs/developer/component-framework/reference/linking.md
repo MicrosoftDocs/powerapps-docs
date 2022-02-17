@@ -6,7 +6,7 @@ ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
 ms.date: 06/12/2021
-ms.service: "powerapps"
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -26,9 +26,7 @@ Model-driven apps
 | Method                                              | Description                                                                                     |
 | --------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
 | [addLinkedEntity](linking/addLinkedEntity.md)       | [!INCLUDE [addlinkedentity-description](linking/includes/addlinkedentity-description.md)]       |
-| [clear](linking/clear.md)                           | [!INCLUDE [addlinkedentity-description](linking/includes/clear-description.md)]                 |
 | [getLinkedEntities](linking/getlinkedentities.md)   | [!INCLUDE [getlinkedentities-description](linking/includes/getlinkedentities-description.md)]   |
-| [removeLinkedEntity](linking/removeLinkedEntity.md) | [!INCLUDE [removeeinkedentity-description](linking/includes/removelinkedentity-description.md)] |
 
 ### Related topics
 

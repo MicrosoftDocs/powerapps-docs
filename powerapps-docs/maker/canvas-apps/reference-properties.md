@@ -2,7 +2,7 @@
 title: Controls and properties in canvas apps
 description: Learn about properties of different controls in canvas apps.
 author: chmoncay
-ms.service: powerapps
+
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm-msft

@@ -3,7 +3,7 @@ title: "CDSWebApiService class library (C#) (Microsoft Dataverse) | Microsoft Do
 description: "This .NET Framework class library provides an easier to use API for HTTP messaging with the the Microsoft Dataverse Web API."
 ms.custom: ""
 ms.date: 10/17/2021
-ms.service: powerapps
+
 applies_to: 
   - "Dynamics 365 (online)"
 author: "JimDaly"

@@ -2,7 +2,7 @@
 title: "setFormEntityName (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the setFormEntityName method.
 ms.date: 04/19/2021
-ms.service: powerapps
+
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: ed0704e3-a6e8-4003-b092-8d1b60ce7306

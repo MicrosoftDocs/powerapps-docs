@@ -3,7 +3,7 @@ title: "Quick Find| MicrosoftDocs"
 description: Learn how to use quick find to search for records
 author: mduelae
 manager: kvivek
-ms.service: powerapps
+
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 3/11/2021
