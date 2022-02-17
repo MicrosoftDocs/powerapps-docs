@@ -633,7 +633,7 @@ In addition to navigating from the **Home** screen to the other screens in the s
 
 9.  Similarly, add an icon named **IconReturn3** to the **RectQuickActionBar1\_1** control in the **BrowseAppointments** screen.
 
-10. On the **Tree view** pane, select the **App** object. Change the **OnStart** action property to the expression **Navigate(Home, ScreenTransition.Fade)**. This action ensures that the **Home** screen is displayed whenever the app starts:
+10. On the **Tree view** pane, select the **App** object. Change the **StartScreen** property to the expression **Home**. This ensures that the **Home** screen is displayed whenever the app starts:
 
     ![Set App OnStart formula.](media/image74.png)
 
