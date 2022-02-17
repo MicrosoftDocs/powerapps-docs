@@ -28,7 +28,7 @@ search.app:
 
 | Name | Type | Required | Description |
 | --- | --- | --- | --- |
-| [pageInput](#pageinput-parameter) | Object | Yes | Input about the page to navigate to. The object definition changes depending on the type of page to navigate to: [entity list](#entity-list), [entity record](#entity-record), [dashboard](#dashboard), [HTML web resource](#html-web-resource), or [custom page](#custom-page-preview). |
+| [pageInput](#pageinput-parameter) | Object | Yes | Input about the page to navigate to. The object definition changes depending on the type of page to navigate to: [entity list](#entity-list), [entity record](#entity-record), [dashboard](#dashboard), [HTML web resource](#html-web-resource), or [custom page](#custom-page). |
 | [navigationOptions](#navigationoptions-parameter) | Object | No | Options for navigating to a page: whether to open inline or in a dialog. If you don't specify this parameter, page is opened inline by default. |
 | successCallback | function | No | A function to execute on successful navigation to the page when navigating inline and on closing the dialog when navigating to a dialog. |
 | errorCallback | Function | No | A function to execute when the operation fails. |
