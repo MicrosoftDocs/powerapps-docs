@@ -4,7 +4,7 @@ description: Geospatial controls let you view and manipulate 3D objects and imag
 author: anuitz
 ms.topic: overview
 ms.custom: canvas, ce06122020
-ms.reviewer: tapanm
+ms.reviewer: mduelae
 ms.date: 02/15/2022
 ms.subservice: canvas-maker
 ms.author: anuitz
@@ -13,7 +13,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - anuitz
   - pjramirez-ms
 ---
