@@ -68,7 +68,7 @@ The entity record object contains the following values.
 
 ##### Relationship object
 
-The relationship object contains the following values.
+The relationship object, used by the Entity record, contains the following values.
 
 | Name | Type | Description |
 | --- | --- | --- |
@@ -97,7 +97,7 @@ The HTML web resource object contains the following values.
 | webresourceName | String | The name of the web resource to load. |
 | data | String | (Optional) The data to pass to the web resource. |
 
-#### Custom page (preview)
+#### Custom page
 
 The Custom page object contains the following values.
 
@@ -115,9 +115,9 @@ The navigationOptions object contains the following values.
 | Name | Type | Description |
 | --- | --- | --- |
 | target | Number | Specify 1 to open the page inline; 2 to open the page in a dialog. Also, rest of the values (width, height, and position) are valid only if you have specified 2 in this value (open page in a dialog).<p/>Note: Entity lists can only be opened inline; entity records and web resources can be opened either inline or in a dialog. |
-| width | Number or Object | (Optional) The width of dialog. To specify the width in pixels, just type a numeric value. To specify the width in percentage, specify an object of type SizeValue with the following properties:<p/>value: The numerical value of type Number.<br/>unit: The unit of measurement of type String. Specify "%" or "px". Default value is "px". |
-| height | Number or Object | (Optional) The height of dialog. To specify the height in pixels, just type a numeric value. To specify the width in percentage, specify an object of type SizeValue with the following properties:<p/>value: The numerical value of type Number.<br/>unit: The unit of measurement of type String. Specify "%" or "px". Default value is "px". |
-| position | Number | (Optional) Specify 1 to open the dialog in center; 2 to open the dialog on the side. Default is 1 (center). |
+| width | Number or Object | (Optional) The width of dialog. To specify the width in pixels, just type a numeric value. To specify the width in percentage, specify an object of type SizeValue with the following properties:<ul><li>value: The numerical value of type Number.<li>unit: The unit of measurement of type String. Specify "%" or "px". Default value is "px".</ul> |
+| height | Number or Object | (Optional) The height of dialog. To specify the height in pixels, just type a numeric value. To specify the width in percentage, specify an object of type SizeValue with the following properties:<ul><li>value: The numerical value of type Number.<li>unit: The unit of measurement of type String. Specify "%" or "px". Default value is "px".</ul> |
+| position | Number | (Optional) Specify 1 to open the dialog in center; 2 to open the dialog on the far side. Default is 1 (center). |
 | title | String | (Optional) The dialog title on top of the center or side dialog. |
 
 ## Return Value
