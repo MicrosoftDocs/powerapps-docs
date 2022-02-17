@@ -2,7 +2,7 @@
 title: "3: Building a low-code prototype | Microsoft Docs"
 description: "Learn about building a low-code prototype."
 author: spboyer
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: ebook
 ms.date: 04/26/2021

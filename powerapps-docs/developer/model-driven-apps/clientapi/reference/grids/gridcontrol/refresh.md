@@ -2,7 +2,7 @@
 title: "refresh (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the refresh method.
 ms.date: 04/21/2021
-ms.service: powerapps
+
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: c6cbe4c5-c5a1-4330-a3ba-c0716e0c92ad

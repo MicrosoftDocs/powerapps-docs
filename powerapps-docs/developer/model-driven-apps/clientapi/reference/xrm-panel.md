@@ -1,7 +1,7 @@
 ---
 title: "Xrm.Panel| MicrosoftDocs"
 ms.date: 10/31/2018
-ms.service: powerapps
+
 ms.topic: "reference"
 ms.assetid: 5bc5295b-0232-4d1b-8583-f20417571c1f
 author: "Nkrb"

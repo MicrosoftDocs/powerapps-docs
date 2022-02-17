@@ -4,7 +4,7 @@ description: "Learn how to install the Power Platform Tools extension for Visual
 ms.custom: ""
 ms.date: 08/31/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "phecke" # GitHub ID
 ms.subservice: dataverse-developer

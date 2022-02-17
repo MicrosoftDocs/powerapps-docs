@@ -3,7 +3,7 @@ title: Find the apps, templates, and information you need using Power Apps unifi
 description: Use unified search to find what you need.
 author: Mattp123
 manager: kvivek
-ms.service: powerapps
+
 ms.component: cds
 ms.topic: conceptual
 ms.date: 02/24/2021

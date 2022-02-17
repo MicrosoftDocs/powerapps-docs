@@ -2,7 +2,7 @@
 title: "getShowTime (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the getShowTime method.
 ms.date: 04/19/2021
-ms.service: powerapps
+
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 43341b96-ca2c-4c7e-b6d5-fe7a5fd3c8b2

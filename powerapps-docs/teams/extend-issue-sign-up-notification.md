@@ -1,7 +1,7 @@
 ---
 title: Add the ability to be notified when an issue is resolved in the Issue reporting sample app (contains video)
 description: Learn how to add a flow to notify you when an issue is resolved in the Issue reporting Power Apps template for Teams.
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 07/20/2021

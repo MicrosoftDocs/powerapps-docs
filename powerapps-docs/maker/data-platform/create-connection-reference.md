@@ -4,7 +4,7 @@ description: "Create a connection reference"
 ms.custom: ""
 ms.date: 01/27/2022
 ms.reviewer: "matp"
-ms.service: powerapps
+
 ms.topic: "how-to"
 author: "caburk"
 caps.latest.revision: 57

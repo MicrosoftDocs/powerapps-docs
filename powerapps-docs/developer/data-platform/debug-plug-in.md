@@ -4,7 +4,7 @@ description: "Learn how to debug plug-ins using the Plug-in Registration tool." 
 ms.custom: ""
 ms.date: 03/16/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
 ms.subservice: dataverse-developer

@@ -2,7 +2,7 @@
 title: Portal templates
 description: Learn about various portal templates available in Power Apps.
 author: neerajnandwana-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 12/08/2021

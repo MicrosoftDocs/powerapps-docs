@@ -4,7 +4,7 @@ description: "The web API component is designed to perform create, retrieve, upd
 ms.custom: ""
 manager: kvivek
 ms.date: 10/01/2019
-ms.service: "powerapps"
+
 ms.topic: "article"
 ms.author: "nabuthuk" 
 author: nkrb

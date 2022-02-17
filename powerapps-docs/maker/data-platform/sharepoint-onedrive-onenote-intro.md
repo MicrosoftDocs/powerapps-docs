@@ -4,7 +4,7 @@ description: Learn about Microsoft 365 services integration with Microsoft Datav
 ms.custom: intro-internal
 author: Mattp123
 manager: kvivek
-ms.service: powerapps
+
 ms.component: cds
 ms.topic: conceptual
 ms.date: 08/02/2019

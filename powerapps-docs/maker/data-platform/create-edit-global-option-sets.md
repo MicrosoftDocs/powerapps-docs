@@ -3,7 +3,7 @@ title: "Create and edit global choices (picklists) overview for Microsoft Datave
 ms.custom: ""
 ms.date: 05/26/2018
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: overview

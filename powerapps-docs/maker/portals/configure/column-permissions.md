@@ -2,7 +2,7 @@
 title: Configure column permissions for portals
 description: Configure column permissions for use with the portals Web API. 
 author: neerajnandwana-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 02/01/2022

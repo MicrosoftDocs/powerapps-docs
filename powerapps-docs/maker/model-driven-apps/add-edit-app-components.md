@@ -3,7 +3,7 @@ title: "Tutorial to add or edit model-driven app components with Power Apps | Mi
 description: "Use the Power Apps app designer to add or edit components"
 keywords: ""
 ms.date: 03/05/2020
-ms.service: powerapps
+
 ms.custom: 
 ms.topic: tutorial
 applies_to: 

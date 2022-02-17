@@ -3,7 +3,7 @@ title: "Web API data operation samples (Microsoft Dataverse) | Microsoft Docs"
 description: "See C# and JavaScript sample code that demonstrates how to use the Microsoft Dataverse Web API for basic table row operations, data query, conditional operations, and functions and actions."
 ms.custom: ""
 ms.date: 06/14/2021
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"

@@ -7,7 +7,7 @@ ms.subservice: mda-maker
 ms.author: matp
 manager: kvivek
 ms.date: 02/25/2020
-ms.service: powerapps
+
 ms.topic: conceptual
 applies_to: 
   - "Dynamics 365 (online)"

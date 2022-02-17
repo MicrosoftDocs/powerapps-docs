@@ -3,7 +3,7 @@ title: "Analyze data with dashboards (model-driven apps) | Microsoft Docs" # Int
 description: "The dashboard tables in Microsoft Dataverse enable you to present data from various charts, grids, IFRAMES, or web resources simultaneously. Dashboards allow you to compare and analyze various pieces of customer information, and give you data snapshots." # 115-145 characters including spaces. This abstract displays in the search result."
 keywords: ""
 ms.date: 04/15/2021
-ms.service: powerapps
+
 ms.topic: article
 ms.assetid: 4b54597b-5603-2e6e-4630-bc120f711707
 author: Nkrb # GitHub ID

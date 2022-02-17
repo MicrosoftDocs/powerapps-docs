@@ -4,7 +4,7 @@ description: "App builders must be members of Microsoft Partner Network (MPN) to
 ms.custom: ""
 ms.date: 12/20/2019
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "KumarVivek" # GitHub ID
 ms.subservice: dataverse-developer

@@ -4,7 +4,7 @@ description: "Learn about the Entity class used for data operations using the Mi
 ms.custom: ""
 ms.date: 08/04/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only

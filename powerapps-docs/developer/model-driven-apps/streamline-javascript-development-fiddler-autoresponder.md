@@ -4,7 +4,7 @@ description: "Learn about how to setup and use AutoResponder in Fiddler for loca
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.topic: "article"
 author: "KumarVivek" # GitHub ID
 ms.subservice: mda-developer

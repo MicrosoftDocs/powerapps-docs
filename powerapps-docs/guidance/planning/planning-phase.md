@@ -2,7 +2,7 @@
 title: Planning a Power Apps project - planning phase overview | Microsoft Docs
 description: Planning is the most important part of the app-making process. This article introduces a set of articles that walk you through the planning process step by step.
 author: TGrounds
-ms.service: powerapps
+
 ms.topic: overview
 ms.custom: guidance
 ms.date: 12/05/2020

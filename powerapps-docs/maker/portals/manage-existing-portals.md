@@ -2,7 +2,7 @@
 title: Manage existing portals
 description: Learn how to manage a portal in Power Apps.
 author: sandhangitmsft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 11/3/2021

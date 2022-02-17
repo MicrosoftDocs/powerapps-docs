@@ -3,7 +3,7 @@ title: "Search for tables and rows by using Dataverse search| MicrosoftDocs"
 description: How to use Dataverse search
 author: mduelae
 manager: kvivek
-ms.service: powerapps
+
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 12/16/2021

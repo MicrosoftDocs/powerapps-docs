@@ -4,7 +4,7 @@ description: "Create a Custom API definition with the maker portal" # 115-145 ch
 ms.custom: ""
 ms.date: 11/14/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
 ms.subservice: dataverse-developer

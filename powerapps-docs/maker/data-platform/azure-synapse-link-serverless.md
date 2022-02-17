@@ -4,7 +4,7 @@ description: "Learn how to query exported Dataverse table data with serverless S
 ms.custom: ""
 ms.date: 08/06/2021
 ms.reviewer: "Mattp123"
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"

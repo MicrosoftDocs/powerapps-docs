@@ -4,7 +4,7 @@ description: "Learn how to add a canvas app component using a custom page"
 ms.custom: ""
 ms.date: 08/26/2021
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.subservice: mda-maker
 ms.topic: "article"
 author: "hemantg"

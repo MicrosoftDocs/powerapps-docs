@@ -2,7 +2,7 @@
 title: Template tags
 description: Learn about template tags available in portal.
 author: gitanjalisingh33msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 10/26/2021

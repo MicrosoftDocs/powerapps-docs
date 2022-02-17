@@ -4,7 +4,7 @@ description: "Learn how to use Powershell cmdlets for XRM tooling like Get-CrmCo
 ms.custom: ""
 ms.date: 03/27/2019
 ms.reviewer: "nkrb"
-ms.service: powerapps
+
 ms.topic: "get-started-article"
 ms.assetid: 81816457-c963-46ca-b350-615fa75f56a7
 caps.latest.revision: 27
