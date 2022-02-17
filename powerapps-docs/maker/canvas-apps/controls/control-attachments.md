@@ -29,7 +29,7 @@ The attachment control has these limitations:
 
 1. Upload and delete functionality work only inside a form. The Attachment control appears disabled when in Edit mode and not inside a form. To save file additions and deletions, the app user must save the form. Because of this limitation, the Attachment control isn't available from the **Insert** tab but appears in the form when the Attachment form field is enabled in a SharePoint or Dataverse form.
 
-1. While the Attachments control on the web allows for selecting multiple files and drag and drop.  On Mobile, attachments can only be added one at a time.
+1. While the Attachments control on the web allows for selecting multiple files and drag and drop, on Mobile, attachments can only be added one at a time.
 
 ## Description
 An **Attachments** control lets you open, add, and delete files from a SharePoint list or a Dataverse table.
