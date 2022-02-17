@@ -165,8 +165,7 @@ Applying an appropriate filter for each of the tables configured in the offline 
    4. **Sync interval** defines the sync frequency to be applied on the device to sync the data with the server. If a table's data doesn't change frequently—like a catalog or a product table—you might want to focus on only syncing data when necessary, for example refreshing only once a day.
    
      > [!NOTE]
-     > You can only have up to ten related tables in an offline profile. In custom filters and in relationships, you also cannot have more than ten related tables. For example, when you add one relationship in table A concerning table B, this can increase the count by one, but not always. If table B already has two relationships, then this means you already have two relationships in the profile. If you exceed this limit, then you run into an error and you won’t be able to publish the offline profile.
-   
+     > You can only have up to ten related tables in an profile. In custom filters and in relationships, you also cannot have more than ten related tables. For example, when you add one relationship in table A concerning table B, this can increase the count by one. If table B has two relationships, then this means you have two relationships in the profile. You will get an error and won't be able to publish the offline profile, if you exceed the limit. 
       
       > [!div class="mx-imgBorder"]
       >![Screenshot showing the filters available for an offline table.](media/mobile-offline-image11.png)
