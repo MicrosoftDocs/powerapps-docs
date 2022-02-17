@@ -148,17 +148,13 @@ The modern app designer can generate a default offline profile that's based on h
 Applying an appropriate filter for each of the tables configured in the offline profile is critical to limit the amount of data that's downloaded on users' devices.
 
 Keep in mind, that you can have ten related tables in a custom filter. You can also have ten relationships. These are distinct checks that might not add up.
-The ten relationships limit is transitive, meaning if table B has two relationships, and you add a reference to table B in table A, then it will increase the relationship count of A by three; one plus the two already in table B. This limit is per profile item for table in the profile. 
+The ten relationships limit is transitive, meaning if table B has two relationships, and you add a reference to table B in table A, then it will increase the relationship count of A by three; one plus the two already in table B. This limit is per profile item for table in the profile. Here's a an exmaples showping complex relationship that don't exceed the limit and the profiles can be published.
 
-**Example A** Table 1 has **3** relationshiops and it contains Table 2 which has **2** relationships. It also contains Table 3 and 4 which has zero relationships. 
+1 has three relationships, 2 has two, 3 and four zero.
+5 has four relationships, 6, 8 and 9 zero, and 7 one.
 
-Table 1 = **2**
-Table 2 = **2**
-Table 3 = **1**
-Table 4 = **1**
-Total = **6**
-
-
+> [!div class="mx-imgBorder"]
+> ![Diagram showing relationships.](media/relationship-diagram.png)
 
 
 1. Select **Add table**.
