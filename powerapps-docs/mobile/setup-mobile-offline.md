@@ -147,6 +147,20 @@ The modern app designer can generate a default offline profile that's based on h
 
 Applying an appropriate filter for each of the tables configured in the offline profile is critical to limit the amount of data that's downloaded on users' devices.
 
+Keep in mind, that you can have ten related tables in a custom filter. You can also have ten relationships. These are distinct checks that might not add up.
+The ten relationships limit is transitive, meaning if table B has two relationships, and you add a reference to table B in table A, then it will increase the relationship count of A by three; one plus the two already in table B. This limit is per profile item for table in the profile. 
+
+**Example A** Table 1 has **3** relationshiops and it contains Table 2 which has **2** relationships. It also contains Table 3 and 4 which has zero relationships. 
+
+Table 1 = **2**
+Table 2 = **2**
+Table 3 = **1**
+Table 4 = **1**
+Total = **6**
+
+
+
+
 1. Select **Add table**.
 
     > [!div class="mx-imgBorder"]
@@ -165,7 +179,7 @@ Applying an appropriate filter for each of the tables configured in the offline 
    4. **Sync interval** defines the sync frequency to be applied on the device to sync the data with the server. If a table's data doesn't change frequently—like a catalog or a product table—you might want to focus on only syncing data when necessary, for example refreshing only once a day.
    
      > [!NOTE]
-     > You can only have up to ten related tables in an profile. In custom filters and in relationships, you also cannot have more than ten related tables. For example, when you add one relationship in table A concerning table B, this can increase the count by one. If table B has two relationships, then this means you have two relationships in the profile. You will get an error and won't be able to publish the offline profile if you exceed the limit. 
+     > You can only have up to ten related tables in an profile. If you exceed the limit, then you will get an error and won't be able to publish the offline profile.
       
       > [!div class="mx-imgBorder"]
       >![Screenshot showing the filters available for an offline table.](media/mobile-offline-image11.png)
@@ -175,7 +189,6 @@ Applying an appropriate filter for each of the tables configured in the offline 
 5. When all tables are properly configured for the profile, select **Done** > **Publish your application**.
 
 When the app is published, the app will be enabled for offline use. All your users who have access to the app can also use it in offline mode.
-
 
 
 
