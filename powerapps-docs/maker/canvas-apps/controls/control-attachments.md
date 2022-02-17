@@ -2,10 +2,9 @@
 title: Attachments control in Power Apps
 description: Learn about the details, properties and examples of the attachments control in Power Apps.
 author: chmoncay
-
 ms.topic: reference
 ms.custom: canvas
-ms.date: 08/06/2021
+ms.date: 02/17/2022
 ms.subservice: canvas-maker
 ms.author: chmoncay
 ms.reviewer: tapanm
@@ -25,11 +24,12 @@ A control that allows users to download files to their device, as well as upload
 ## Limitations
 
 The attachment control has these limitations:
+
 1. Attachments are supported with SharePoint lists and Dataverse tables.
 
 1. Upload and delete functionality work only inside a form. The Attachment control appears disabled when in Edit mode and not inside a form. To save file additions and deletions, the app user must save the form. Because of this limitation, the Attachment control isn't available from the **Insert** tab but appears in the form when the Attachment form field is enabled in a SharePoint or Dataverse form.
 
-1. While the Attachments control on the web allows for selecting multiple files and drag and drop, on mobile, attachments can only be added one at a time.
+1. Attachments control on a web browser lets you select multiple files, and allows use of drag and drop functionality. However, when using attachments control on [Power Apps Mobile](https://powerapps.microsoft.com/downloads/), you can only add files one at a time.
 
 ## Description
 An **Attachments** control lets you open, add, and delete files from a SharePoint list or a Dataverse table.
