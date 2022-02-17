@@ -5,7 +5,7 @@ author: nageshbhat-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: intro-internal
-ms.date: 02/11/2022
+ms.date: 02/17/2022
 ms.subservice: portals
 ms.author: nabha
 ms.reviewer: ndoelman
