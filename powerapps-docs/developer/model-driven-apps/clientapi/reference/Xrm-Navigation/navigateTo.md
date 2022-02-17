@@ -30,14 +30,14 @@ search.app:
 | --- | --- | --- | --- |
 | [pageInput](#pageinput-parameter) | Object | Yes | Input about the page to navigate to. The object definition changes depending on the type of page to navigate to: [entity list](#entity-list), [entity record](#entity-record), [dashboard](#dashboard), [HTML web resource](#html-web-resource), or [custom page](#custom-page-preview). |
 | [navigationOptions](#navigationoptions-parameter) | Object | No | Options for navigating to a page: whether to open inline or in a dialog. If you don't specify this parameter, page is opened inline by default. |
-| [successCallback](#successcallback-parameter) | function | No | A function to execute on successful navigation to the page when navigating inline and on closing the dialog when navigating to a dialog. |
-| [errorCallback](#errorcallback-parameter) | Function | No | A function to execute when the operation fails. |
+| successCallback | function | No | A function to execute on successful navigation to the page when navigating inline and on closing the dialog when navigating to a dialog. |
+| errorCallback | Function | No | A function to execute when the operation fails. |
 
 ### pageInput parameter
 
 #### Entity list
 
-The pageInput object contains the following values.
+The entity list object contains the following values.
 
 | Name | Type | Description |
 | --- | --- | --- |
@@ -62,11 +62,13 @@ The entity record object contains the following values.
 | isOfflineSyncError | Boolean | (Optional) Indicates whether there are any offline sync errors. |
 | processId | String | (Optional) ID of the business process to be displayed on the form. |
 | processInstanceId |  String | (Optional) ID of the business process instance to be displayed on the form. |
-| [relationship](#relationship-object) | Object | (Optional) Define a relationship object to display the related records on the form. | 
+| [relationship](#relationship-object) | Object | (Optional) Define a relationship object to display the related records on the form. |
 | selectedStageId | String | (Optional) ID of the selected stage in business process instance. |
 | tabName | String | (Optional) Sets the focus on the tab of the form. |
 
 ##### Relationship object
+
+The relationship object contains the following values.
 
 | Name | Type | Description |
 | --- | --- | --- |
@@ -78,18 +80,45 @@ The entity record object contains the following values.
 
 #### Dashboard
 
+The dashboard object contains the following values.
+
+| Name | Type | Description |
+| --- | --- | --- |
+| pageType | String | Specify "dashboard". |
+| dashboardId | String | The ID of the dashboard to load. If you don't specify the ID, navigates to the default dashboard. |
+
 #### HTML web resource
+
+The HTML web resource object contains the following values.
+
+| Name | Type | Description |
+| --- | --- | --- |
+| pageType | String | Specify "webresource". |
+| webresourceName | String | The name of the web resource to load. |
+| data | String | (Optional) The data to pass to the web resource. |
 
 #### Custom page (preview)
 
+The Custom page object contains the following values.
+
+| Name | Type | Description |
+| --- | --- | --- |
+| pageType | String | Specify "custom". |
+| name | String | The logical name of the custom page to open. |
+| entityName | String | (Optional) The logical name of the table to be made available in the custom page via Param("entityName"). |
+| recordId | String | (Optional) ID of the table record to be made available in the custom page via Param("recordId"). |
 
 ### navigationOptions parameter
 
-### successCallback parameter
+The navigationOptions object contains the following values.
 
-### errorCallback parameter
-
-
+| Name | Type | Description |
+| --- | --- | --- |
+| target | Number | Specify 1 to open the page inline; 2 to open the page in a dialog. Also, rest of the values (width, height, and position) are valid only if you have specified 2 in this value (open page in a dialog).<p/>Note: Entity lists can only be opened inline; entity records and web resources can be opened either inline or in a dialog. |
+| width | Number or Object | (Optional) The width of dialog. To specify the width in pixels, just type a numeric value. To specify the width in percentage, specify an object of type SizeValue with the following properties:<p/>value: The numerical value of type Number.<br/>unit: The unit of measurement of type String. Specify "%" or "px". Default value is "px". |
+| height | Number or Object | (Optional) The height of dialog. To specify the height in pixels, just type a numeric value. To specify the width in percentage, specify an object of type SizeValue with the following properties:<p/>value: The numerical value of type Number.<br/>unit: The unit of measurement of type String. Specify "%" or "px". Default value is "px". |
+| position | Number | (Optional) Specify 1 to open the dialog in center; 2 to open the dialog on the side. Default is 1 (center). |
+| title | String | (Optional) The dialog title on top of the center or side dialog. |
 
 ## Return Value
 
