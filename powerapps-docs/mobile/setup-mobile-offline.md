@@ -150,9 +150,6 @@ Applying an appropriate filter for each of the tables configured in the offline 
 Keep in mind, that you can have ten related tables in a custom filter. You can also have ten relationships. These are distinct checks that might not add up.
 The ten relationships limit is transitive, meaning if table B has N relationships, and you add a reference to table B in table A, then it will increase the relationship count of A by N+1; one plus the N already in table B. This limit is per profile item for table in the profile.
 
-> [!div class="mx-imgBorder"]
-> ![Diagram showing relationships.](media/relationship-diagram.png)
-
 
 1. Select **Add table**.
 
