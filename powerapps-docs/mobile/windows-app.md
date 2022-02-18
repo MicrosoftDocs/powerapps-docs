@@ -1,4 +1,25 @@
-﻿# Introduction
+---
+title: Power Apps for Windows (preview) | Microsoft Docs
+description: Power Apps for Windows (preview).
+author: mduelae
+ms.component: pa-user
+ms.topic: quickstart
+ms.date: 02/18/2022
+ms.subservice: mobile
+ms.author: mkaur
+ms.custom: ""
+ms.reviewer: ""
+ms.assetid: 
+search.audienceType: 
+  - enduser
+search.app: 
+  - PowerApps
+  - D365CE
+searchScope:
+  - "Power Apps"
+---
+
+# Power Apps for Windows (preview) 
 
 Use Power Apps (preview) for Windows to run model-driven app or canvas app on your Windows device. For more information on Power Apps, see [What is Power Apps](https://docs.microsoft.com/powerapps/powerapps-overview).
 
