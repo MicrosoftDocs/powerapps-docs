@@ -21,15 +21,31 @@ searchScope:
 
 # Power Apps for Windows (preview) 
 
-Use Power Apps (preview) for Windows to run model-driven app or canvas app on your Windows device. For more information on Power Apps, see [What is Power Apps](https://docs.microsoft.com/powerapps/powerapps-overview).
+Use Power Apps for Windows to run model-driven app or canvas app on your Windows device. For more information on Power Apps, see [What is Power Apps](https://docs.microsoft.com/powerapps/powerapps-overview).
 
-This guide covers how to install the app, signing in, and how to run [model-driven apps](https://docs.microsoft.com/powerapps/user/use-model-driven-apps) on Power Apps (preview) for Windows.
+This topic covers how to install Power Apps for Windows, sign in, and how to use the app. 
 
-# Install Power Apps (preview) for Windows
+## Required privileges
 
-For instruction on how to install the app for private preview, please refer to the other document you received called **Power Apps (Preview) for Windows installation guide**.
+Before you install Power Apps for Windows, you need to install Microsoft WebView2 control. You also need to have administrator rights on your Windows device to install WebView2. If you don't have administrator rights then ask your administrator to installl it for you. If you don't install WebView2 then you won't be ablt to run Power Apps for Windows.
 
-# Sign in 
+
+1. Install WebView2, here [Download the WebView2 Runtime](https://developer.microsoft.com/microsoft-edge/webview2/#download-section).
+2. Make sure you install version 99.0 or later.
+
+
+You need to have administrator rights on your Windows device to install Microsoft WebView2. If you don't have administrator rights then ask your administrator to installl it for you. If you don't install WebView2 then you won't be ablt to run Power Apps for Windows.
+  
+2. Install and run Microsoft WebView2 verion 99 or later.
+
+
+
+## Install 
+
+
+Install the app from here, [Power Apps (Preview)](https://www.microsoft.com/store/apps/9MVC8P1Q3B29)
+
+## Sign in 
 
 Sign into the Power Apps (preview) for Windows quickly using your work email address. If you need help with your sign-in information, contact your Power Apps administrator.
 
@@ -45,9 +61,8 @@ Sign into the Power Apps (preview) for Windows quickly using your work email add
 
 ![](media/image3.png)
 
-#  
 
-# Move between apps
+## Move between apps
 
 When you're using an app, you can select the back button to go back to the **Apps** screen. From the **Apps** screen, you can then select another app to use.
 
@@ -79,7 +94,7 @@ Because [canvas apps](https://docs.microsoft.com/powerapps/maker/canvas-apps/get
 
 You'll find below the documentation on how to run [model-driven apps](https://docs.microsoft.com/powerapps/user/use-model-driven-apps) on Power Apps (preview) for Windows.
 
-# Navigation in model-driven apps
+## Navigation in model-driven apps
 
 It's easy to get around and get back to your favorite or most-used rows. The following illustration shows the primary navigation elements for a model-driven app.![](media/image6.png)
 
@@ -101,7 +116,7 @@ Legend:
 
 8. **User Information**: See the current user that's signed in, sign out of the app, or reconfigure the app**.**
 
-## Go back, row set navigation, open a new window
+### Go back, row set navigation, open a new window
 
 Use the buttons on the command bar to navigation forms, views, and dashboard pages.
 
@@ -113,7 +128,7 @@ Legend
 
 2. **Open Record Set**: Navigate through multiple rows by using preset views and queries. The row-focused navigation improves productivity by allowing users to jump from row to row in the list and easily navigate back without losing their working list. The number of rows that you see in the row set navigation pane is based on the number of rows that your system administrator has defined for the table.
 
-## Create and edit rows
+### Create and edit rows
 
 The **New** button or **Quick create** makes it fast and easy to enter almost any type of information into the system. The command is on the navigation bar, so it's available whenever you need to enter new information into the system. You can also save a row and create a new one directly from the **Quick create** form.
 
