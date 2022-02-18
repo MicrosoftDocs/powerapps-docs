@@ -5,7 +5,7 @@ author: mduelae
 
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 02/16/2022
+ms.date: 02/18/2022
 ms.subservice: mobile
 ms.author: mkaur
 ms.custom: ""
