@@ -14,6 +14,22 @@ contributors:
     - nickdoelman
 ---
 
+# For training 
+
+This is a demo for the ***video*** and *formatting* as needed **here**. 
+
+> [!NOTE]
+> Information the user should notice even if skimming.
+>  - Bullet 1
+>  - Bellet 2
+
+## heading 2
+
+### heading 3
+
+#### heading 4
+
+
 # Create a portal in an environment containing customer engagement apps
 
 If you select an environment that contains customer engagement apps (Dynamics 365 Sales, Dynamics 365 Customer Service, Dynamics 365 Field Service, Dynamics 365 Marketing, and Dynamics 365 Project Service Automation), you can create the portals mentioned in [Portal templates](portal-templates.md).
