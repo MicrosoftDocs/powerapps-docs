@@ -42,7 +42,7 @@ Install the app from here, [Power Apps (Preview)](https://www.microsoft.com/stor
 
 ## Sign in 
 
-Sign into the Power Apps (preview) for Windows quickly using your work email address. If you need help with your sign-in information, contact your Power Apps administrator.
+Sign into the Power Apps for Windows quickly using your work email address. If you need help with your sign-in information, contact your Power Apps administrator.
 
 1.  On the Welcome screen, select **Sign in**.
 
@@ -94,7 +94,7 @@ For model-driven apps, you can also select the name of the current app that you'
 
 Because [canvas apps](https://docs.microsoft.com/powerapps/maker/canvas-apps/getting-started) can essentially be anything, there isn't much help documentation on how to use an app once it's created. If you need help using a canvas app, contact your app maker or Power Apps admin.
 
-You'll find below the documentation on how to run [model-driven apps](../user/use-model-driven-apps) on Power Apps (preview) for Windows.
+You'll find below the documentation on how to run [model-driven apps](../user/use-model-driven-apps) on Power Apps for Windows.
 
 ## Navigation in model-driven apps
 
@@ -179,7 +179,7 @@ With Dataverse search, the search box is always available at the top of every pa
 
 # Limitations and know issues
 
--   Power Apps (preview) for Windows doesn't display the connection consent dialog instead consents silently by default. For information: [Overview of connectors for canvas apps](../maker/canvas-apps/connections-list#connection-consent-dialog)
+-   Power Apps for Windows doesn't display the connection consent dialog instead consents silently by default. For information: [Overview of connectors for canvas apps](../maker/canvas-apps/connections-list#connection-consent-dialog)
 
 -   The app doesn't support advanced controls such as [microphone](../maker/canvas-apps/controls/control-microphone), [attachments](../maker/canvas-apps/controls/control-attachments) , [sensors](../maker/canvas-apps/how-to/mobile-sensors), [location](../maker/canvas-apps/functions/signals#location), [barcode scanner](../maker/canvas-apps/controls/control-new-barcode-scanner), [Power BI tile](../maker/canvas-apps/controls/control-power-bi-tile), and [Microsoft Stream video](../maker/canvas-apps/controls/control-stream-video).
 
