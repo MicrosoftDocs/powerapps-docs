@@ -46,15 +46,18 @@ Sign into the Power Apps (preview) for Windows quickly using your work email add
 
 1.  On the Welcome screen, select **Sign in**.
 
-![Graphical user interface  application  Teams Description automatically generated](media/pam-windows-image1.png)
+    > [!div class="mx-imgBorder"] 
+    > ![Sign in.](media/pam-windows-image1.png)
 
 2.  Enter your email address, and then select **Next**. Then enter your password and then select **Sign in**.
 
-![](media/pam-windows-image2.png)
+    > [!div class="mx-imgBorder"] 
+    > ![Enter your email addreass.](media/pam-windows-image2.png)
 
 3.  From the list of apps that you have access to, select the app that you want to use.
 
-![](media/pam-windows-image3.png)
+    > [!div class="mx-imgBorder"] 
+    > ![Select an app to use.](media/pam-windows-image3.png)
 
 
 ## Move between apps
@@ -67,23 +70,27 @@ For model-driven apps, you can also select the name of the current app that you'
 
 1.  Select the back button.
 
-![](media/pam-windows-image4.png)
+    > [!div class="mx-imgBorder"] 
+    > ![Go back.](media/pam-windows-image4.png)
 
 2.  On the **Apps** sceen select an app. You will only see apps for your organization.
 
-![](media/pam-windows-image3.png)
+    > [!div class="mx-imgBorder"] 
+    > ![From the list of apps, select an app.](media/pam-windows-image3.png)
 
-## Switch to another model-driven app
+### Switch to another model-driven app
 
 1.  Select the back button or select the current app name.
 
-![Graphical user interface  application Description automatically generated](media/pam-windows-image5.png)
+    > [!div class="mx-imgBorder"] 
+    >![Graphical user interface  application Description automatically generated](media/pam-windows-image5.png)
 
 2.  On the **Apps** screen select an app. You will only see apps for your organization.
 
-![](media/image3.png)
+    > [!div class="mx-imgBorder"] 
+    > [From the list of app, select an app](media/pam-windows-image3.png)
 
-# Run an app
+## Run an app
 
 Because [canvas apps](https://docs.microsoft.com/powerapps/maker/canvas-apps/getting-started) can essentially be anything, there isn't much help documentation on how to use an app once it's created. If you need help using a canvas app, contact your app maker or Power Apps admin.
 
@@ -91,7 +98,10 @@ You'll find below the documentation on how to run [model-driven apps](../user/us
 
 ## Navigation in model-driven apps
 
-It's easy to get around and get back to your favorite or most-used rows. The following illustration shows the primary navigation elements for a model-driven app.![](media/image6.png)
+It's easy to get around and get back to your favorite or most-used rows. The following illustration shows the primary navigation elements for a model-driven app.
+
+> [!div class="mx-imgBorder"] 
+>![Navigation in model-driven apps.](media/pam-windows-image6.png)
 
 Legend:
 
@@ -115,7 +125,8 @@ Legend:
 
 Use the buttons on the command bar to navigation forms, views, and dashboard pages.
 
-![](media/pam-windows-image7.png)
+> [!div class="mx-imgBorder"] 
+>![Command bar navigation.](media/pam-windows-image7.png)
 
 Legend
 
@@ -131,19 +142,21 @@ Note, the Quick create option is only available for rows that are enabled by you
 
 1.  On the navigation bar, select the **plus sign** ![Create a row button ](media/pam-windows-image8.png), and then select the item you want.
 
-![Graphical user interface  application Description automatically generated](media/pam-windows-image9.png)
+    > [!div class="mx-imgBorder"] 
+    > ![Select to create a new row.](media/pam-windows-image9.png)
 
 2.  Fill in the columns, and then select **Save and Close**. Or, to save and create another row, select the down arrow and then select **Save & Create New**
 
-### ![](media/image10.png)Create a new row using the New button
+    > [!div class="mx-imgBorder"] 
+    > ![Save a row.](media/pam-windows-image10.png)
+
+
+### Create a new row using the New button
 
 1.  From the left navigation pane, select a table such as **Products** and then select **New**.
 
-![](media/pam-windows-image11.png)
-
-2.  
-
-<!-- -->
+    > [!div class="mx-imgBorder"] 
+    > ![Add new row](media/pam-windows-image11.png)
 
 2.  Fill in the columns and then on the command bar, select **Save** or **Save & Close**.
 
@@ -153,21 +166,22 @@ Note, the Quick create option is only available for rows that are enabled by you
 
 2.  Select a row to open it.
 
-![Graphical user interface  application Description automatically generated](media/pam-windows-image12.png)
+    > [!div class="mx-imgBorder"] 
+    > ![Select the row name to pen it.](media/pam-windows-image12.png)
 
 3.  Make your edits and when you're done editing, select **Save** or **Save & Close**.
 
 ## Use search
 
-With Dataverse search, the search box is always available at the top of every page in your app. You can start a new search and quickly find the information that you're looking for. For more information, see [Search for tables and rows by using Dataverse search](https://docs.microsoft.com/powerapps/user/relevance-search).
+With Dataverse search, the search box is always available at the top of every page in your app. You can start a new search and quickly find the information that you're looking for. For more information, see [Search for tables and rows by using Dataverse search](../user/relevance-search).
 
-![Graphical user interface  text  application Description automatically generated](media/pam-windows-image13.png)
+![Search bar at the top](media/pam-windows-image13.png)
 
 # Limitations and know issues
 
--   Power Apps (preview) for Windows doesn't display the connection consent dialog instead consents silently by default. For information: [Overview of connectors for canvas apps](https://docs.microsoft.com/powerapps/maker/canvas-apps/connections-list#connection-consent-dialog)
+-   Power Apps (preview) for Windows doesn't display the connection consent dialog instead consents silently by default. For information: [Overview of connectors for canvas apps](../maker/canvas-apps/connections-list#connection-consent-dialog)
 
--   The app doesn't support advanced controls such as [microphone](https://docs.microsoft.com/powerapps/maker/canvas-apps/controls/control-microphone), [attachments](../maker/canvas-apps/controls/control-attachments) , [sensors](https://docs.microsoft.com/powerapps/maker/canvas-apps/how-to/mobile-sensors), [location](https://docs.microsoft.com/powerapps/maker/canvas-apps/functions/signals#location), [barcode scanner](https://docs.microsoft.com/powerapps/maker/canvas-apps/controls/control-new-barcode-scanner), [Power BI tile](https://docs.microsoft.com/powerapps/maker/canvas-apps/controls/control-power-bi-tile), and [Microsoft Stream video](https://docs.microsoft.com/powerapps/maker/canvas-apps/controls/control-stream-video).
+-   The app doesn't support advanced controls such as [microphone](../maker/canvas-apps/controls/control-microphone), [attachments](../maker/canvas-apps/controls/control-attachments) , [sensors](../maker/canvas-apps/how-to/mobile-sensors), [location](../maker/canvas-apps/functions/signals#location), [barcode scanner](../maker/canvas-apps/controls/control-new-barcode-scanner), [Power BI tile](../maker/canvas-apps/controls/control-power-bi-tile), and [Microsoft Stream video](../maker/canvas-apps/controls/control-stream-video).
 
 -   The app doesn't support push notifications. More information: [Create push notifications for Power Apps mobile](power-apps-mobile-notification.md)
 
