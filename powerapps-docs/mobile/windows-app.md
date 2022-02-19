@@ -25,23 +25,18 @@ Use Power Apps for Windows to run model-driven app or canvas app on your Windows
 
 This topic covers how to install Power Apps for Windows, sign in, and how to use the app. 
 
-## Required privileges
+## Prerequisites 
 
-Before you install Power Apps for Windows, you need to install Microsoft WebView2 control. You also need to have administrator rights on your Windows device to install WebView2. If you don't have administrator rights then ask your administrator to installl it for you. If you don't install WebView2 then you won't be ablt to run Power Apps for Windows.
+Before you install Power Apps for Windows, you need to install Microsoft WebView2 control. You also need to have administrator rights on your Windows device to install WebView2. If you don't have administrator rights then your administrator will need to installl it for you. Without WebView2 control, you won't be able to run any app in Power Apps for Windows.
 
-
-1. Install WebView2, here [Download the WebView2 Runtime](https://developer.microsoft.com/microsoft-edge/webview2/#download-section).
-2. Make sure you install version 99.0 or later.
-
-
-You need to have administrator rights on your Windows device to install Microsoft WebView2. If you don't have administrator rights then ask your administrator to installl it for you. If you don't install WebView2 then you won't be ablt to run Power Apps for Windows.
-  
-2. Install and run Microsoft WebView2 verion 99 or later.
-
+1. To install WebView2 control, first you need to [download the WebView2 Runtime](https://developer.microsoft.com/microsoft-edge/webview2/#download-section).
+2. Make sure to downlaod version 99.0 or later. Installing a earlier version will result in your app crashing.
+3. Under **Evergreen Bootstrpper** select **Downlaod**.
+4. Go over the license terms and privacy statement and then select **Accept and Download**.
+5. When the file is downloaded then run the **MicroEdgeWebview2Setup.exe**.
 
 
 ## Install 
-
 
 Install the app from here, [Power Apps (Preview)](https://www.microsoft.com/store/apps/9MVC8P1Q3B29)
 
@@ -51,15 +46,15 @@ Sign into the Power Apps (preview) for Windows quickly using your work email add
 
 1.  On the Welcome screen, select **Sign in**.
 
-![Graphical user interface  application  Teams Description automatically generated](media/image1.png)
+![Graphical user interface  application  Teams Description automatically generated](media/pam-windows-image1.png)
 
 2.  Enter your email address, and then select **Next**. Then enter your password and then select **Sign in**.
 
-![](media/image2.png)
+![](media/pam-windows-image2.png)
 
 3.  From the list of apps that you have access to, select the app that you want to use.
 
-![](media/image3.png)
+![](media/pam-windows-image3.png)
 
 
 ## Move between apps
@@ -72,17 +67,17 @@ For model-driven apps, you can also select the name of the current app that you'
 
 1.  Select the back button.
 
-![](media/image4.png)
+![](media/pam-windows-image4.png)
 
 2.  On the **Apps** sceen select an app. You will only see apps for your organization.
 
-![](media/image3.png)
+![](media/pam-windows-image3.png)
 
 ## Switch to another model-driven app
 
 1.  Select the back button or select the current app name.
 
-![Graphical user interface  application Description automatically generated](media/image5.png)
+![Graphical user interface  application Description automatically generated](media/pam-windows-image5.png)
 
 2.  On the **Apps** screen select an app. You will only see apps for your organization.
 
@@ -92,7 +87,7 @@ For model-driven apps, you can also select the name of the current app that you'
 
 Because [canvas apps](https://docs.microsoft.com/powerapps/maker/canvas-apps/getting-started) can essentially be anything, there isn't much help documentation on how to use an app once it's created. If you need help using a canvas app, contact your app maker or Power Apps admin.
 
-You'll find below the documentation on how to run [model-driven apps](https://docs.microsoft.com/powerapps/user/use-model-driven-apps) on Power Apps (preview) for Windows.
+You'll find below the documentation on how to run [model-driven apps](../user/use-model-driven-apps) on Power Apps (preview) for Windows.
 
 ## Navigation in model-driven apps
 
@@ -120,7 +115,7 @@ Legend:
 
 Use the buttons on the command bar to navigation forms, views, and dashboard pages.
 
-![](media/image7.png)
+![](media/pam-windows-image7.png)
 
 Legend
 
@@ -134,9 +129,9 @@ The **New** button or **Quick create** makes it fast and easy to enter almos
 
 Note, the Quick create option is only available for rows that are enabled by your admin.
 
-1.  On the navigation bar, select the **plus sign** ![Create a row button ](media/image8.png), and then select the item you want.
+1.  On the navigation bar, select the **plus sign** ![Create a row button ](media/pam-windows-image8.png), and then select the item you want.
 
-![Graphical user interface  application Description automatically generated](media/image9.png)
+![Graphical user interface  application Description automatically generated](media/pam-windows-image9.png)
 
 2.  Fill in the columns, and then select **Save and Close**. Or, to save and create another row, select the down arrow and then select **Save & Create New**
 
@@ -144,7 +139,7 @@ Note, the Quick create option is only available for rows that are enabled by you
 
 1.  From the left navigation pane, select a table such as **Products** and then select **New**.
 
-![](media/image11.png)
+![](media/pam-windows-image11.png)
 
 2.  
 
@@ -158,7 +153,7 @@ Note, the Quick create option is only available for rows that are enabled by you
 
 2.  Select a row to open it.
 
-![Graphical user interface  application Description automatically generated](media/image12.png)
+![Graphical user interface  application Description automatically generated](media/pam-windows-image12.png)
 
 3.  Make your edits and when you're done editing, select **Save** or **Save & Close**.
 
@@ -166,20 +161,20 @@ Note, the Quick create option is only available for rows that are enabled by you
 
 With Dataverse search, the search box is always available at the top of every page in your app. You can start a new search and quickly find the information that you're looking for. For more information, see [Search for tables and rows by using Dataverse search](https://docs.microsoft.com/powerapps/user/relevance-search).
 
-![Graphical user interface  text  application Description automatically generated](media/image13.png)
+![Graphical user interface  text  application Description automatically generated](media/pam-windows-image13.png)
 
 # Limitations and know issues
 
 -   Power Apps (preview) for Windows doesn't display the connection consent dialog instead consents silently by default. For information: [Overview of connectors for canvas apps](https://docs.microsoft.com/powerapps/maker/canvas-apps/connections-list#connection-consent-dialog)
 
--   The app doesn't support advanced controls such as [microphone](https://docs.microsoft.com/powerapps/maker/canvas-apps/controls/control-microphone), [attachments](https://docs.microsoft.com/powerapps/maker/canvas-apps/controls/control-attachments) , [sensors](https://docs.microsoft.com/powerapps/maker/canvas-apps/how-to/mobile-sensors), [location](https://docs.microsoft.com/powerapps/maker/canvas-apps/functions/signals#location), [barcode scanner](https://docs.microsoft.com/powerapps/maker/canvas-apps/controls/control-new-barcode-scanner), [Power BI tile](https://docs.microsoft.com/powerapps/maker/canvas-apps/controls/control-power-bi-tile), and [Microsoft Stream video](https://docs.microsoft.com/powerapps/maker/canvas-apps/controls/control-stream-video).
+-   The app doesn't support advanced controls such as [microphone](https://docs.microsoft.com/powerapps/maker/canvas-apps/controls/control-microphone), [attachments](../maker/canvas-apps/controls/control-attachments) , [sensors](https://docs.microsoft.com/powerapps/maker/canvas-apps/how-to/mobile-sensors), [location](https://docs.microsoft.com/powerapps/maker/canvas-apps/functions/signals#location), [barcode scanner](https://docs.microsoft.com/powerapps/maker/canvas-apps/controls/control-new-barcode-scanner), [Power BI tile](https://docs.microsoft.com/powerapps/maker/canvas-apps/controls/control-power-bi-tile), and [Microsoft Stream video](https://docs.microsoft.com/powerapps/maker/canvas-apps/controls/control-stream-video).
 
--   The app doesn't support push notifications. More information: [Create push notifications for Power Apps mobile](https://docs.microsoft.com/powerapps/mobile/power-apps-mobile-notification)
+-   The app doesn't support push notifications. More information: [Create push notifications for Power Apps mobile](power-apps-mobile-notification.md)
 
 -   You can't pin an app on your Windows desktop.
 
 -   You can't see your favorites, recent, featured apps, or the app details.
 
--   The app doesn't support [guest access](https://docs.microsoft.com/powerapps/maker/canvas-apps/share-app-guests)
+-   The app doesn't support [guest access](../maker/canvas-apps/share-app-guests)
 
 -   Clear the app cache
