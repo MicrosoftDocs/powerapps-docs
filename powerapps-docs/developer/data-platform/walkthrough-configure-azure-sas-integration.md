@@ -3,7 +3,7 @@ title: "Walkthrough: Configure Microsoft Azure (SAS) for integration (Microsoft 
 description: "This walkthrough guides you through configuring the Azure Service Bus issuer, scope, and rules to allow a listener application to read the Microsoft Dataverse messages posted to the Azure Service Bus."
 keywords: ""
 ms.date: 03/18/2021
-ms.service: powerapps
+
 ms.topic: article
 ms.assetid: d7b24b11-57f0-ab05-4bec-0b64efee178d
 author: JimDaly # GitHub ID

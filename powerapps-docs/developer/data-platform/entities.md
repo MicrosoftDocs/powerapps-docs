@@ -3,7 +3,7 @@ title: Work with Dataverse tables using code | Microsoft Docs
 description: Learn about programmatically working with tables in Microsoft Dataverse.
 author: "mayadumesh" # GitHub ID
 manager: kvivek
-ms.service: powerapps
+
 ms.date: 03/28/2021
 ms.subservice: dataverse-developer
 ms.author: jdaly

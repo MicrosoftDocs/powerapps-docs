@@ -2,7 +2,7 @@
 title: "OnStageSelected event (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the OnStageSelected event.
 ms.date: 04/19/2021
-ms.service: powerapps
+
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 1ef0f11c-6188-4492-ae61-260a402223b8

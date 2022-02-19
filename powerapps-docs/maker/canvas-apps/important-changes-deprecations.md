@@ -2,7 +2,7 @@
 title: Important upcoming changes and deprecations in canvas apps
 description: Learn about the important changes including deprecation coming soon to canvas apps.
 author: tapanm-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 01/13/2022

@@ -2,7 +2,7 @@
 title: Embed a portal in another website by using an iframe
 description: Learn about how to embed a Power Apps portal in another website.
 author: dileepsinghmicrosoft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: intro-internal
 ms.date: 08/03/2021

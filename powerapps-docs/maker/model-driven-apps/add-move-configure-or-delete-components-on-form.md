@@ -4,7 +4,7 @@ description: Learn how to use the form designer to work with form components.
 ms.custom: ""
 ms.date: 08/26/2019
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"

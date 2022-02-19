@@ -2,7 +2,7 @@
 title: Customize the Employee Ideas app (contains video)
 description: Learn about how the Employee Ideas sample apps can be customized
 author: sbahl10
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 07/02/2021

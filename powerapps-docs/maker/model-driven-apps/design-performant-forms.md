@@ -4,7 +4,7 @@ description: Learn how to customize forms for performance for your model-driven 
 ms.custom: ""
 ms.date: 11/19/2021
 ms.reviewer: "Mattp123"
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "conceptual"

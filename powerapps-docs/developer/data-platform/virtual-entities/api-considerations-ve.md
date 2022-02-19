@@ -2,7 +2,7 @@
 title: "API considerations of virtual tables (Microsoft Dataverse) | Microsoft Docs"
 description: "Describes API considerations of virtual tables"
 ms.date: 04/09/2021
-ms.service: powerapps
+
 ms.topic: "article"
 applies_to: 
   - "Dynamics 365 (online)"

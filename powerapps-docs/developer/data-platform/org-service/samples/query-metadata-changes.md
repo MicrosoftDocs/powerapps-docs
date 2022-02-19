@@ -4,7 +4,7 @@ description: "This sample shows how to  query and detect table definitions chang
 ms.custom: ""
 ms.date: 05/08/2020
 ms.reviewer: "nabuthuk"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only

@@ -2,7 +2,7 @@
 title: "getSelectedOption| MicrosoftDocs"
 description: Includes description and supported parameters for the getSelectedOption method.
 ms.date: 04/19/2021
-ms.service: powerapps
+
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: ce572df6-aae6-431a-aa95-73eee544c7e9

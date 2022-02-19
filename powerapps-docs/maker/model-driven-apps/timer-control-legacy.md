@@ -4,7 +4,7 @@ description: "Understand how you can use the timer control"
 ms.custom: ""
 ms.date: 04/28/2020
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: overview

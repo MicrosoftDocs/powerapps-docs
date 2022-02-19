@@ -2,7 +2,7 @@
 title: Manage forum access permissions
 description: Learn about managing forum access permissions in portals.
 author: sbmjais
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2020

@@ -3,7 +3,7 @@ title: "Web API Conditional Operations Sample (Client-side JavaScript) (Microsof
 description: "This sample demonstrates how to perform conditional operations using Microsoft Dataverse Web API and client-side JavaScript."
 ms.custom: ""
 ms.date: 07/16/2021
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"

@@ -2,10 +2,9 @@
 title: Add pins to your 3D objects
 description: Use your app to add pins to 3D objects.
 author: anuitz
-ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mduelae
 ms.date: 3/25/2021
 ms.subservice: canvas-maker
 ms.author: anuitz
@@ -14,7 +13,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - anuitz
 ---
 

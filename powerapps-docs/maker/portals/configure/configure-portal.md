@@ -2,7 +2,7 @@
 title: Portal Management app overview
 description: Learn about Portal Management app.
 author: sandhangitmsft
-ms.service: powerapps
+
 ms.topic: overview
 
 ms.date: 04/21/2021

@@ -2,7 +2,7 @@
 title: "setEntityTypes (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Sets the types of tables allowed in the lookup control.
 ms.date: 04/15/2021
-ms.service: powerapps
+
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 93154168-1e9f-4849-b4bb-be8804f86f81

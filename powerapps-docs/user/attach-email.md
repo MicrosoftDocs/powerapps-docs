@@ -3,7 +3,7 @@ title: "Attach a file to email in model-driven apps | MicrosoftDocs"
 description: Learn how attach a file to email.
 author: mduelae
 manager: kvivek
-ms.service: powerapps
+
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 6/30/2021
@@ -53,14 +53,14 @@ File attachments display differently, depending on the email form you are workin
 
    1. **Email**. This display confirms which email form you are working in. 
    2. **Attachment**. This section displays a list of file attachments in a vertical view and only displays the first three attachments.
-   3. **File count**. This displays when you have more files than what can be viewed and allows you to see the total number of attached files on the left side under the last attachment with the option to page over to see more images.
+   3. **File count**. This displays when you have more files than what can be viewed and allows you to see the total number of attached files on the left side under the last attachment with the option to page over to see more files.
 
 ### Enhanced email form file attachment
    ![Work with attachments.](media\email-work-with-attachments-13b.png "Work with attachments")
 
    1. **Enhanced Email**. This display confirms you are working in the **Enhanced email** form.
    2. **Attached files**. This section displays all your email  attachments in a tile view above your message horizontally. The defaulted setting for the maximum number of files that can display is five attachments before displaying the page forward functionality.
-   3. **File count**. This displays when you have files that occupy more than two rows and allows you to see the total number of attached files on the left side under the last attachment they the option to page over to see more images.
+   3. **File count**. This displays when you have files that occupy more than two rows and allows you to see the total number of attached files on the left side under the last attachment with the option to page over to see more files.
    4. **Attachment Commands**. This allow you to use the select, select all, sort, delete, and download functionality when working with your file attachments.  
 
 ## Work with the attachment command bar

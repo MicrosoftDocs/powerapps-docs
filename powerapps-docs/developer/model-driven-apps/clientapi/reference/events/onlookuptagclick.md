@@ -2,7 +2,7 @@
 title: "OnLookupTagClick event (Client API reference) in model-driven apps| MicrosoftDocs"
 description: This event occurs when a user clicks the tag in a lookup control.
 ms.date: 04/15/2021
-ms.service: powerapps
+
 ms.topic: "reference"
 ms.assetid: e291973b-9634-4442-995c-37fd49a10571
 author: "Nkrb"

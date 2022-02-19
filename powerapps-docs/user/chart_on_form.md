@@ -3,7 +3,7 @@ title: "View charts on a form page or in a row in model-driven apps| MicrosoftDo
 description: View charts on form page or in a row
 author: mduelae
 manager: kvivek
-ms.service: powerapps
+
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 9/14/2020

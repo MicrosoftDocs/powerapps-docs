@@ -2,7 +2,7 @@
 title: Add editable tables in canvas apps | Microsoft Docs
 description: Learn how to configure an app interface with editable tables that allow you to edit data from the data source directly through the app.
 author: denisem-msft
-ms.service: powerapps
+
 ms.topic: tutorial
 ms.custom: canvas
 ms.reviewer: tapanm
