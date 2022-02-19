@@ -88,7 +88,7 @@ For model-driven apps, you can also select the name of the current app that you'
 2.  On the **Apps** screen select an app. You will only see apps for your organization.
 
     > [!div class="mx-imgBorder"] 
-    > [From the list of app, select an app](media/pam-windows-image3.png)
+    > ![From the list of apps, select an app.](media/pam-windows-image3.png)
 
 ## Run an app
 
