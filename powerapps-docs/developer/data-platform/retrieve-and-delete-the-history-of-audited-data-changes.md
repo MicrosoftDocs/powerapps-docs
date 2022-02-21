@@ -26,7 +26,7 @@ After auditing is enabled and data changes are made to those tables and columns 
 ## Retrieve the change history
 
  There are several messages requests that can be used to retrieve the audit change history. These requests are differentiated by the nature of what they retrieve.
-Refer to the sample link at the end of this topic for sample code that demonstrates some of these change history message requests.
+Refer to [these samples](org-service/samples/audit-entity-data-changes.md) for demonstrations of some of these change history message requests.
 
 > [!IMPORTANT]
 > Large column values, such as [Email.Description](reference/entities/email.md#BKMK_Description) or [Annotation](reference/entities/annotation.md) are limited (capped) to 5KB or ~5,000 characters in length. A capped column value can be recognized by three dots at the end of the text, for example “lorem ipsum, lorem ip…”.
