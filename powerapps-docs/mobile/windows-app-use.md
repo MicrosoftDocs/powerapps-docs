@@ -77,7 +77,7 @@ For model-driven apps, you can also select the name of the current app that you'
 
 ## Run an app
 
-Because [canvas apps](../maker/canvas-apps/getting-started) can essentially be anything, there isn't much help documentation on how to use an app once it's created. If you need help using a canvas app, contact your app maker or Power Apps admin.
+Because [canvas apps](/maker/canvas-apps/getting-started) can essentially be anything, there isn't much help documentation on how to use an app once it's created. If you need help using a canvas app, contact your app maker or Power Apps admin.
 
 You'll find below the documentation on how to run [model-driven apps](/user/use-model-driven-apps) on Power Apps for Windows.
 
@@ -166,7 +166,7 @@ With Dataverse search, the search box is always available at the top of every pa
 
 -   Power Apps for Windows doesn't display the connection consent dialog instead consents silently by default. For information: [Overview of connectors for canvas apps](../maker/canvas-apps/connections-list#connection-consent-dialog)
 
--   The app doesn't support advanced controls such as [microphone](../maker/canvas-apps/controls/control-microphone), [attachments](../maker/canvas-apps/controls/control-attachments) , [sensors](../maker/canvas-apps/how-to/mobile-sensors), [location](../maker/canvas-apps/functions/signals#location), [barcode scanner](../maker/canvas-apps/controls/control-new-barcode-scanner), [Power BI tile](../maker/canvas-apps/controls/control-power-bi-tile), and [Microsoft Stream video](../maker/canvas-apps/controls/control-stream-video).
+-   The app doesn't support advanced controls such as [microphone](/maker/canvas-apps/controls/control-microphone), [attachments](/maker/canvas-apps/controls/control-attachments) , [sensors](/maker/canvas-apps/how-to/mobile-sensors), [location](/maker/canvas-apps/functions/signals#location), [barcode scanner](/maker/canvas-apps/controls/control-new-barcode-scanner), [Power BI tile](/maker/canvas-apps/controls/control-power-bi-tile), and [Microsoft Stream video](/maker/canvas-apps/controls/control-stream-video).
 
 -   The app doesn't support push notifications. More information: [Create push notifications for Power Apps mobile](power-apps-mobile-notification.md)
 
@@ -174,6 +174,6 @@ With Dataverse search, the search box is always available at the top of every pa
 
 -   You can't see your favorites, recent, featured apps, or the app details.
 
--   The app doesn't support [guest access](../maker/canvas-apps/share-app-guests)
+-   The app doesn't support [guest access](/maker/canvas-apps/share-app-guests)
 
 -   Clear the app cache
