@@ -77,9 +77,9 @@ For model-driven apps, you can also select the name of the current app that you'
 
 ## Run an app
 
-Because [canvas apps](https://docs.microsoft.com/powerapps/maker/canvas-apps/getting-started) can essentially be anything, there isn't much help documentation on how to use an app once it's created. If you need help using a canvas app, contact your app maker or Power Apps admin.
+Because [canvas apps](../maker/canvas-apps/getting-started) can essentially be anything, there isn't much help documentation on how to use an app once it's created. If you need help using a canvas app, contact your app maker or Power Apps admin.
 
-You'll find below the documentation on how to run [model-driven apps](../user/use-model-driven-apps) on Power Apps for Windows.
+You'll find below the documentation on how to run [model-driven apps](/user/use-model-driven-apps) on Power Apps for Windows.
 
 ## Navigation in model-driven apps
 
@@ -158,7 +158,7 @@ Note, the Quick create option is only available for rows that are enabled by you
 
 ## Use search
 
-With Dataverse search, the search box is always available at the top of every page in your app. You can start a new search and quickly find the information that you're looking for. For more information, see [Search for tables and rows by using Dataverse search](../user/relevance-search).
+With Dataverse search, the search box is always available at the top of every page in your app. You can start a new search and quickly find the information that you're looking for. For more information, see [Search for tables and rows by using Dataverse search](/user/relevance-search).
 
 ![Search bar at the top](media/pam-windows-image13.png)
 
