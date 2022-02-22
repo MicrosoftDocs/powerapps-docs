@@ -32,4 +32,4 @@ Before you install Power Apps for Windows, you need to install Microsoft WebView
 3. Under **Evergreen Bootstrpper** select **Downlaod**.
 4. Go over the license terms and privacy statement and then select **Accept and Download**.
 5. When the download is complete, then run the **MicroEdgeWebview2Setup.exe**.
-6. Install Power Apps for Windows from, [here)](https://www.microsoft.com/store/apps/9MVC8P1Q3B29).
+6. Install [Power Apps for Windows](https://www.microsoft.com/store/apps/9MVC8P1Q3B29).
