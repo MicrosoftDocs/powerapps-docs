@@ -1,6 +1,6 @@
 ---
 title: Display information about map pins
-description: Add info cards to your maps to show information about pinned locations in Power Apps.
+description: Add cards that display information about pinned locations in your canvas apps.
 author: anuitz
 ms.topic: conceptual
 ms.custom: canvas, ce06122020
@@ -17,30 +17,30 @@ contributors:
   - anuitz
 ---
 
-# Add informational cards to map pins
+# Add informational cards to pins on a map
 
-Use info cards to show selected details about pinned locations in your canvas apps. When a user selects a pin on a map, a card pops up with information from the [dataset you bound to the control](./geospatial-component-map.md). Any column in the data source (for example, an Excel table) can be included as a field to show on the card.
+Easily add cards to maps in your canvas apps to show details about pinned locations. When a user selects a pin, a card pops up with information from the [data source you bound to the map control](./geospatial-map-excel.md). Any column in the data source (for example, an Excel table) can be shown as a field on the card.
 
 ## Prerequisites
 
 1. [Create a canvas app](./create-blank-app.md) and make sure it meets the [geospatial prerequisites](./geospatial-overview.md#prerequisites).
-1. [Insert a map](geospatial-component-map.md#use-the-control).
+1. [Insert a map](./geospatial-component-map.md).
 
 ## Add info cards to pins
 
-1. [Bind the map to a data source](geospatial-map-excel.md#add-pin-data-from-an-excel-workbook).
-1. In the **Properties** pane, change the **Show info cards** property to **On click** if the user must select a pin to show the info card. Change the property to **On hover** if an info card should appear when the user hovers over the pin.
+1. [Bind the map to a data source](./geospatial-map-excel.md).
+1. In the map control's **Properties** pane, select **Show info cards**. Select **On click** to show the info card when the user selects a pin, or **On hover** if it should appear when the user hovers over the pin.
 
-    :::image type="content" source="./media/geospatial/map-info-card-type.png" alt-text="A screenshot of a map control's Properties pane, with the Show info cards property open to show the On click and On hover options.":::
+    :::image type="content" source="./media/geospatial/map-info-card-type.png" alt-text="A screenshot of a map control's Properties pane with the Show info cards property open to show the On click and On hover options.":::
 
 1. In the **Properties** pane, next to **Fields**, select **Edit**.
-1. Select **Add field**, and then select the fields you want to show in the card. Select **Add**.
+1. Select **Add field**, and then select the fields from the data source that you want to show in the card. Select **Add**.
 
-    :::image type="content" source="./media/geospatial/map-choose-fields.png" alt-text="A screenshot of a map control's field selection options.":::
+    :::image type="content" source="./media/geospatial/map-choose-fields.png" alt-text="A screenshot of a map control's Properties pane, showing the data source fields.":::
 
-An info card shows the selected fields when the user selects or hovers over the pin.
+When the user selects a pin, an info card shows the fields you selected.
 
-:::image type="content" source="media/geospatial/map-info-card-example.png" alt-text="A screenshot of a map with a pin's info card open to show Name, Occupancy, and Phone from the associated data source.":::
+  :::image type="content" source="./media/geospatial/map-info-card-example.png" alt-text="A screenshot of a map pin selected in a canvas app, with an info card that shows the location Name, Occupancy, and Phone data.":::
 
 ## Other interactive map features
 
