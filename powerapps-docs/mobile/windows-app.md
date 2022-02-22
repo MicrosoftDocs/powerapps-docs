@@ -29,20 +29,20 @@ This topic covers how to install Power Apps for Windows, sign in, and how to use
 
 Before you install Power Apps for Windows, you need to install Microsoft WebView2 control. You also need to have administrator rights on your Windows device to install WebView2. If you don't have administrator rights then your administrator will need to installl it for you. Without WebView2 control, you won't be able to run any app in Power Apps for Windows.
 
-1. To install WebView2 control, first you need to [download the WebView2 Runtime](https://developer.microsoft.com/microsoft-edge/webview2/#download-section).
-2. Make sure to downlaod version 99.0 or later. Installing a earlier version will result in your app crashing.
+1. To install WebView2 control, [download the WebView2 Runtime](https://developer.microsoft.com/microsoft-edge/webview2/#download-section).
+2. Downlaod version 99.0 or later. If you install an earlier version Power Apps mobile will crash.
 3. Under **Evergreen Bootstrpper** select **Downlaod**.
 4. Go over the license terms and privacy statement and then select **Accept and Download**.
-5. When the file is downloaded then run the **MicroEdgeWebview2Setup.exe**.
+5. When the download is complete, then run the **MicroEdgeWebview2Setup.exe**.
 
 
 ## Install 
 
-Install the app from here, [Power Apps (Preview)](https://www.microsoft.com/store/apps/9MVC8P1Q3B29)
+Install Power Apps for Windows from, [here)](https://www.microsoft.com/store/apps/9MVC8P1Q3B29).
 
 ## Sign in 
 
-Sign into the Power Apps for Windows quickly using your work email address. If you need help with your sign-in information, contact your Power Apps administrator.
+Sign into Power Apps for Windows quickly using your work email address. If you need help with your sign-in information, contact your Power Apps administrator.
 
 1.  On the Welcome screen, select **Sign in**.
 
