@@ -116,7 +116,7 @@ Your apps can show the perimeter (in feet) and area (in square feet) of a select
 1. Change the **Text** property of the label control to *[Map].SelectedShape.Area* or *[Map].SelectedShape.Perimeter* to display the selected shape's area or perimeter. (Hint: Enter the given value in the formula bar or on the **Properties** tab, whichever you prefer.)
 
 In the following example, we used multiple text labels to display both the area and perimeter of the selected shape:
- 
+
 :::image type="content" source="./media/geospatial/measurement-display.png" alt-text="A screenshot of a shape selected on a map, next to two text labels that show the shape's area and perimeter.":::
 
 ## Other interactive map features
