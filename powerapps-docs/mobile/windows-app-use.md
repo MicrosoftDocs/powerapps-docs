@@ -1,6 +1,6 @@
 ---
-title: Power Apps for Windows (preview) | Microsoft Docs
-description: Power Apps for Windows (preview).
+title: Use Power Apps for Windows (preview) | Microsoft Docs
+description: Use Power Apps for Windows (preview).
 author: mduelae
 ms.component: pa-user
 ms.topic: quickstart
@@ -19,26 +19,11 @@ searchScope:
   - "Power Apps"
 ---
 
-# Power Apps for Windows (preview) 
+# Use Power Apps for Windows (preview) 
 
-Use Power Apps for Windows to run model-driven app or canvas app on your Windows device. For more information on Power Apps, see [What is Power Apps](https://docs.microsoft.com/powerapps/powerapps-overview).
+[!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
 
-This topic covers how to install Power Apps for Windows, sign in, and how to use the app. 
-
-## Prerequisites 
-
-Before you install Power Apps for Windows, you need to install Microsoft WebView2 control. You also need to have administrator rights on your Windows device to install WebView2. If you don't have administrator rights then your administrator will need to installl it for you. Without WebView2 control, you won't be able to run any app in Power Apps for Windows.
-
-1. To install WebView2 control, [download the WebView2 Runtime](https://developer.microsoft.com/microsoft-edge/webview2/#download-section).
-2. Downlaod version 99.0 or later. If you install an earlier version Power Apps mobile will crash.
-3. Under **Evergreen Bootstrpper** select **Downlaod**.
-4. Go over the license terms and privacy statement and then select **Accept and Download**.
-5. When the download is complete, then run the **MicroEdgeWebview2Setup.exe**.
-
-
-## Install 
-
-Install Power Apps for Windows from, [here)](https://www.microsoft.com/store/apps/9MVC8P1Q3B29).
+This topic covers how to sign in and run your apps on Power Apps for Windows.
 
 ## Sign in 
 
