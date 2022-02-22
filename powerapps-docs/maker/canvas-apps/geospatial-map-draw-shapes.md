@@ -22,7 +22,7 @@ contributors:
 
 [!INCLUDE[Preview disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-Add a drawing panel to your interactive maps to let users draw and label shapes on them. You can also insert and label predefined shapes to highlight specific regions or areas of interest, such as a sales district or shipping zone.
+Add a drawing panel to your maps to let users draw and label shapes on them. You can also insert and label predefined shapes to highlight specific regions or areas of interest.
 
 :::image type="content" source="./media/geospatial/custom-geojson-shape-example.png" alt-text="A screenshot of a map control with example shapes drawn and labeled.":::
 
@@ -43,33 +43,35 @@ Add a drawing panel to your interactive maps to let users draw and label shapes 
     - **(Preview) Enable Shape Drawing**
     - **(Preview) Enable Shape Deleting and Label Editing**
 
-    :::image type="content" source="./media/geospatial/enable-feature.png" alt-text="A screenshot of a map control under construction in Microsoft Power Apps Studio, showing the Shape Drawing properties turned on.":::
+        :::image type="content" source="./media/geospatial/enable-feature.png" alt-text="A screenshot of a map control's Properties pane, showing the Shape Drawing properties turned on.":::
 
-A drawing panel appears in the upper-left corner of the map control.
+    A drawing panel appears in the upper-left corner of the map control.
 
-:::image type="content" source="./media/geospatial/drawing-panel.png" alt-text="A screenshot of a map control in a canvas app, with the drawing panel highlighted.":::
+    :::image type="content" source="./media/geospatial/drawing-panel.png" alt-text="A screenshot of a map control in a canvas app, with the drawing panel highlighted.":::
 
-The panel features three tools:
+    The panel features three tools:
 
-- A polygon drawing tool for drawing freeform shapes (Hint: To finish and close the shape, double-click the final point.)
-- A square drawing tool for drawing squares and rectangles
-- A circle drawing tool for drawing circles and ovals
+    - A polygon drawing tool for drawing freeform shapes
+    - A square drawing tool for drawing squares and rectangles
+    - A circle drawing tool for drawing circles and ovals
+
+1. Select a tool and draw a shape on the map. To finish and close a freeform shape, double-click the final point.
 
 Drawn shapes are automatically labeled. To change a label, select the shape, and then enter a new name in the box in the upper-right corner of the map.
 
-To delete a shape, select it, and then select the trashcan in the drawing panel.
+To delete a shape, select it, and then select the trashcan.
 
 :::image type="content" source="./media/geospatial/example-shapes.png" alt-text="A screenshot of a map control with sample shapes and labels, with the trashcan icon and label box highlighted.":::
 
 ## Import GeoJSON shapes into a map
 
-If you already have shapes defined in GeoJSON format, you can import them directly into your map. For example, you might have a shape that defines a specific area or sales district that you want to highlight on the map.
+If you already have shapes defined in GeoJSON format, you can import them into your map. For example, you might have a shape that defines a specific area that you want to highlight.
 
 The GeoJSON string for each shape in your data source needs to be in [the correct format](https://en.wikipedia.org/wiki/GeoJSON), in a single cell.
 
-To import shapes, first connect your data source to the map control, and then refer to the appropriate columns, as shown in the following example:
+To import shapes, first connect your data source to the map control. Then, assign the control's properties to the appropriate columns in the data source, as in the following example:
 
-:::image type="content" source="media/geospatial/custom-geojson-shape.png" alt-text="A screenshot of a map control's advanced properties, with data source fields filled in and the resulting shapes displayed on the map.":::
+:::image type="content" source="media/geospatial/custom-geojson-shape.png" alt-text="A screenshot of a map control's advanced properties, with data source fields provided and the resulting shapes displayed on the map.":::
 
 Your data source must be a named table with at least three columns. Each column corresponds to an advanced property of the map control.
 
@@ -86,7 +88,7 @@ The data source must be named. If you're using an Excel workbook as the data sou
 
 :::image type="content" source="./media/geospatial/custom-geojson-shape-excel.png" alt-text="A screenshot of a table in Excel with GeoJSON shape data.":::
 
-1. Copy the following sample data into a blank workbook, format it as a table, and name the table *Seattle1*. Then, connect the workbook to your map as a data source. For detailed instructions, see [Use a data source to place pins on a map](./geospatial-map-excel.md).
+1. Copy the following sample data into a blank workbook, format it as a table, and name the table *Seattle1*. Then, connect the workbook to your map as a data source. For detailed instructions using a similar example, see [Use a data source to place pins on a map](./geospatial-map-excel.md).
 
       | County | GeoJSON | TotalCases | Color |
       | -| - | - | - |
@@ -103,9 +105,9 @@ The data source must be named. If you're using an Excel workbook as the data sou
       | ShapeLabels | County |
       | ShapeColors | Color |
 
-Your map should look something like this:
+    Your map should look something like this:
 
-:::image type="content" source="./media/geospatial/custom-geojson-counties.png" alt-text="A screenshot of a map in a canvas app with imported shapes used to highlight specific areas.":::
+    :::image type="content" source="./media/geospatial/custom-geojson-counties.png" alt-text="A screenshot of a map with imported shapes that highlight specific areas.":::
 
 ## Display the perimeter and area of drawn or inserted shapes (preview)
 
@@ -115,7 +117,7 @@ Your apps can show the perimeter (in feet) and area (in square feet) of a select
 1. Select **Text label** to insert a label on the app screen. Move and resize it as you like.
 1. Change the **Text** property of the label control to *[Map].SelectedShape.Area* or *[Map].SelectedShape.Perimeter* to display the selected shape's area or perimeter. (Hint: Enter the given value in the formula bar or on the **Properties** tab, whichever you prefer.)
 
-In the following example, we used multiple text labels to display both the area and perimeter of the selected shape:
+In the following example, we used four text labels to display both the area and perimeter of the selected shape:
 
 :::image type="content" source="./media/geospatial/measurement-display.png" alt-text="A screenshot of a shape selected on a map, next to two text labels that show the shape's area and perimeter.":::
 
