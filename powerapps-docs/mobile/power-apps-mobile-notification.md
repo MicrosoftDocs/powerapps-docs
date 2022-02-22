@@ -160,7 +160,7 @@ You can set your app to open, for example, the **Case details** page as soon as 
 * Notifications show the generic Power Apps icon instead of a specific app icon.
 * Notifications are not supported in China.
 * Battery optimization settings on an Android device can interfere with receiving notifications for Power Apps mobile. To receive notifications for Power Apps mobile, turn off battery optimization for the app.
-* Push notifications mentioned in this topic are only supported on Power Apps mobile. Other mobile apps such as [Dynamics 365 Sales mobile app](/dynamics365/sales/sales-mobile/use-sales-mobile-app) or [Dynamics 365 for phones and tablets](/dynamics365/mobile-app/overview) does not support these types of notifications.
+* The example push notifications that are mentioned in this topic are only supported on Power Apps mobile. Other mobile apps such as  [Dynamics 365 Sales mobile app](/dynamics365/sales/sales-mobile/use-sales-mobile-app) or [Dynamics 365 for phones and tablets](/dynamics365/mobile-app/overview) do not support these types of notifications.
 
 
 For reference information, see [Power Apps Notification reference](/connectors/powerappsnotification/).
