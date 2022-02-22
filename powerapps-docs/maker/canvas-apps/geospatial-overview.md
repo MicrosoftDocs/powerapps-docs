@@ -2,11 +2,10 @@
 title: Add Geospatial controls to apps made with Microsoft Power Apps
 description: Geospatial controls let you view and manipulate 3D objects and images in the real world, in augmented reality. 
 author: anuitz
-
 ms.topic: overview
 ms.custom: canvas, ce06122020
-ms.reviewer: tapanm
-ms.date: 02/14/2022
+ms.reviewer: mduelae
+ms.date: 02/15/2022
 ms.subservice: canvas-maker
 ms.author: anuitz
 search.audienceType: 
@@ -14,7 +13,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - anuitz
   - pjramirez-ms
 ---
@@ -82,17 +81,16 @@ For the controls to function properly, these connectors must not have conflictin
 - Azure Maps doesn't store the request information sent by you. For more information about Azure Maps compliance, see [Azure global compliance](https://azure.microsoft.com/blog/new-azure-maps-make-identifying-local-compliance-options-easy/)
 - Requests sent between TomTom and Azure Maps are not exposed over the public Internet.
 - Requests sent between apps you create with the geospatial controls and Azure Maps are sent over HTTPS.
-- Power Apps doesn't send any user identifiers or tracking data to Azure Maps, Bing Maps, or TomTom.
 - The following table describes the user data that Power Apps sends to Azure Maps, Bing Maps, and TomTom:
 
-    | Control | Feature | Data | Sent to Azure Maps | Sent to Bing Maps | Sent to TomTom | Purpose |
-    | ------- | ------- | ---- | ------------------ | ----------------- | -------------- | ------- |
-    | Map | Show map tiles | Coordinates in and around the map view | Yes | No | Yes | To show the map tiles in the map view. |
-    | Map | Show pins and route waypoints | Pins and route waypoint addresses | No | Yes | Yes | To translate addresses to latitude/longitude coordinates, and show them on the map. |
-    | Map | Show routes | Route waypoint coordinates | Yes | No | Yes | To calculate routes between waypoints. |
-    | Map | Show pins and shapes from coordinates | Pin and shape coordinates | No | No | No | Feature does not require sending coordinate data. |
-    | Address Input | Address Search | Address search query string | No | Yes | Yes | To show address search results. |
-    | Address Input | Address Search | Current device location | No | Yes | Yes | To bias address search results around the device location. |
+    | Control | Feature | Data |  Purpose | Sent to Azure Maps | Sent to Bing Maps | Sent to TomTom | User identifiers or tracking data sent |
+    | ------- | ------- | ---- | ------------------ | ----------------- | -------------- | ------- | ------ |
+    | Map | Show map tiles | Coordinates in and around the map view | To show the map tiles in the map view. | Yes | No | Yes | No |
+    | Map | Show pins and shapes from coordinates | Pin and shape coordinates | Feature does not require sending coordinate data. | No | No | No | No |
+    | Map | Show pins and route waypoints | Pins and route waypoint addresses | To translate addresses to latitude/longitude coordinates, and show them on the map. | No | Yes | Yes | No |
+    | Map | Show routes | Route waypoint coordinates | To calculate routes between waypoints. | Yes | No | Yes | No |
+    | Address Input | Address Search | Address search query string | To show address search results. | No | Yes | Yes | No |
+    | Address Input | Address Search | Current device location | To bias address search results around the device location. | No | Yes | Yes | No |
     
 ## Next steps
 
