@@ -21,7 +21,9 @@ search.app:
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
 Typically, you use *global* choices (option sets) to set fields so that different fields can share the same set of options, which are maintained in one location. Unlike *local* choices which are defined only for a specific table column, you can reuse global choices. You will also see them used in request parameters in a manner similar to an enumeration.  
-  
+
+[!NOTE] Only the publisher of a managed solution can import changes that delete an option from a global option set. This includes Microsoft published solutions such as the out of box global option sets.
+
 When you define a global choice by using <xref:Microsoft.Xrm.Sdk.Messages.CreateOptionSetRequest>, 
 we recommend that you let the system assign a value. You do this by passing a **null** value when you create the 
 new `OptionMetadata` instance. When you define a choice, it will contain a choice value prefix specific to the 
