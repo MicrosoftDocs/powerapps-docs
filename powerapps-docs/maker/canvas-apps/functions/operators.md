@@ -62,7 +62,7 @@ Some of these operators are dependent on the language of the author.  See [Globa
 > The **@** operator can also be used to validate the type of the record object against a data source. For example, `Collect(coll,Account@{'Account Number: 1111')`
 
 ## in and exactin operators
-
+ 
 Use the **[in](operators.md#in-and-exactin-operators)** and **[exactin](operators.md#in-and-exactin-operators)** operators to find a string in a [data source](../working-with-data-sources.md), such as a collection or an imported table. The **[in](operators.md#in-and-exactin-operators)** operator identifies matches regardless of case, and the **[exactin](operators.md#in-and-exactin-operators)** operator identifies matches only if they're capitalized the same way. Here's an example:
 
 1. Create or import a collection named **Inventory**, and show it in a gallery, as the first procedure in [Show images and text in a gallery](../show-images-text-gallery-sort-filter.md) describes.
