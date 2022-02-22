@@ -23,7 +23,7 @@ searchScope:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
 
-Install Power Apps for Windows to run model-driven app or canvas app on your Windows device. For more information on Power Apps, see [What is Power Apps](https://docs.microsoft.com/powerapps/powerapps-overview).
+Install Power Apps for Windows to run model-driven app or canvas app on your Windows device. For more information on Power Apps, see [What is Power Apps](/powerapps/powerapps-overview).
 
 Before you install Power Apps for Windows, you need to install Microsoft WebView2 control. You also need to have administrator rights on your Windows device to install WebView2. If you don't have administrator rights then your administrator will need to installl it for you. Without WebView2 control, you won't be able to run any app in Power Apps for Windows.
 
