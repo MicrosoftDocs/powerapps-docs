@@ -70,9 +70,9 @@ The following table outlines the designations and which license an end user must
 
 ## Known issues
 
-The use of the HTTP connector in a flow connected to an app isn't recognized by the app's license designation.
+1. The use of a premium connector in a flow connected to an app isn't recognized by the app's license designation.
 
-For example, an app that only uses standard connectors and is connected to a flow using the HTTP connector will have a license designation as "Standard" although it requires end users to have "Premium" use rights.
+For example, an app that only uses standard connectors and is connected to a flow using a premium connector, like the HTTP connector, will have a license designation as "Standard" although it requires end users to have "Premium" use rights.
 
 ## Pass assignment
 
