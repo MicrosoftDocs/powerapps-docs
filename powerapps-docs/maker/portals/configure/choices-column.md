@@ -1,4 +1,4 @@
-﻿---
+---
 title: Configure a choices column for portals
 description: Learn how to add and configure a Dataverse choices column on portal lists, forms, and templates.
 author: nageshbhat-msft
@@ -15,7 +15,7 @@ contributors:
     - professorkendrick
 ---
 
-# Configure a choices column on portals (preview)
+# Configure a choices column on portals
 
 Makers can design [basic forms](entity-forms.md) and [advanced forms](web-form-properties.md) to include [choices columns](../../data-platform/types-of-fields.md#choices) defined in Microsoft Dataverse. This feature provides the ability for portal users to select multiple options while submitting data, and display views that include choices columns through [lists](entity-lists.md).
 
