@@ -3,7 +3,7 @@ title: "Configure a form to accept custom querystring parameters (model-driven a
 description: "Learn about configuring a form to accept custom querystring parameters. Use these parameters to set default values when you create a new record in the application." # 115-145 characters including spaces. This abstract displays in the search result."
 keywords: ""
 ms.date: 04/15/2021
-ms.service: powerapps
+
 ms.topic: article
 ms.assetid: 89287d32-0d16-8f7d-e0b6-8cc208212cff
 author: Nkrb # GitHub ID

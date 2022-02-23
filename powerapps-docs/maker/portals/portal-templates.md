@@ -2,16 +2,16 @@
 title: Portal templates
 description: Learn about various portal templates available in Power Apps.
 author: neerajnandwana-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/19/2021
+ms.date: 12/08/2021
 ms.subservice: portals
 ms.author: nenandw
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
     - neerajnandwana-msft
-    - tapanm-msft
+    - nickdoelman
     - sandhangitmsft
 ---
 
@@ -26,6 +26,7 @@ If you select an environment that contains Microsoft Dataverse, you can create a
 - Default studio template
 - Page with title
 - Page with child links
+- [Contact us](contact-us-sample.md)
 
 To create a portal in an environment with Dataverse, go to [Create a Dataverse starter portal](create-portal.md).
 
@@ -44,7 +45,7 @@ If you select an environment that contains customer engagement apps (Dynamics 36
 - **Portal from blank**: Create a website to share data with external and internal users. This template comes with sample pages to get you quickly started.
 - **Customer Portal (preview)**: A Supply Chain Management Customer Portal template provisions an externally facing B2B order placing website. This template allows external users to create and view orders to the associated Dynamics 365 for Supply Chain Management environment. Customer Portal template is in *Preview*. For more information about *preview* features, see [Understand preview features in Power Apps](../canvas-apps/working-with-experimental-preview.md).
 
-For creating a portal with any of the above templates, go to [Create a portal with an environment containing customer engagement apps](create-portal.md).
+For creating a portal with any of the above templates, go to [Create a portal with an environment containing customer engagement apps](create-dynamics-portal.md).
 
 ## Portal templates features
 

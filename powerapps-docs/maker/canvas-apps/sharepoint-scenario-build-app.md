@@ -2,12 +2,11 @@
 title: Create a canvas app to manage projects
 description: Learn about how to build a canvas app from scratch allowing users to assign a manager to projects and to update project details.
 author: emcoope-msft
-manager: kvivek
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 06/18/2020
+ms.date: 01/27/2022
 ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
@@ -40,18 +39,9 @@ Power Apps Studio has three panes and a ribbon that make app creation feel like 
 ## Step 1: Create screens
 With that review out of the way, let's start building an app.
 
-### Create and save the app
-1. In Power Apps Studio, click or tap **New**, then under **Blank app**, click or tap **Phone Layout**.
-   
-    ![Blank app - phone layout.](./media/sharepoint-scenario-build-app/04-01-01-blank-phone-app.png)
-2. Click or tap **File**, which opens to an **App settings** tab. Enter the name "Project Management app".
-   
-    ![App name.](./media/sharepoint-scenario-build-app/04-01-02-app-name.png)
-3. Click or tap **Save as**, verify that the app will save to the cloud, then click **Save** in the lower right corner.
-   
-    ![Save to the cloud.](./media/sharepoint-scenario-build-app/04-01-03-save-to-cloud.png)
+### Create the app
 
-4. Click or tap ![Back to app icon.](./media/sharepoint-scenario-build-app/icon-back-to-app.png) to go back to the app.
+Create a [blank canvas app](create-blank-app.md) with **Phone** layout, and "Project Management app" name.
 
 ### Add four screens to the app
 In this step, we'll create four blank screens for the app. We'll use different screen layouts, depending on the screen's purpose. We'll add to these screens in later steps.

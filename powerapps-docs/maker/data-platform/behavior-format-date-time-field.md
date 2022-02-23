@@ -4,7 +4,7 @@ description: Understand the format of date and time columns.
 ms.custom: ""
 ms.date: 05/25/2018
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "conceptual"
@@ -26,7 +26,7 @@ search.app:
 ---
 # Behavior and format of the Date and Time column
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 In Microsoft Dataverse, the Date and Time data type is used in many standard table columns. Depending on what kind of date the column represents, you can choose different column behaviors: **User Local**, **Date Only**, or **Time-Zone Independent**.  
   

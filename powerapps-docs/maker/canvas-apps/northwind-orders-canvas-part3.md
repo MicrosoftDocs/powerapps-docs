@@ -2,8 +2,7 @@
 title: Create a detail gallery in a canvas app
 description: Learn about how to create a detail gallery in a canvas app to manage data for Northwind Traders.
 author: gregli-msft
-manager: kvivek
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm

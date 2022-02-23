@@ -3,7 +3,7 @@ title: Display a full-sized image on a canvas app form
 description: Learn about how to display a full-sized image on a canvas app form.
 keywords: ""
 ms.date: 11/09/2020
-ms.service: powerapps
+
 ms.custom: 
 ms.topic: article
 applies_to: 
@@ -12,7 +12,6 @@ author: "Mattp123"
 ms.assetid: 
 ms.subservice: canvas-maker
 ms.author: matp
-manager: kvivek
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 

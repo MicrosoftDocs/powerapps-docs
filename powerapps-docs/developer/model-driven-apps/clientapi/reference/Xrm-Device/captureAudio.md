@@ -2,7 +2,7 @@
 title: "captureAudio| MicrosoftDocs"
 description: Includes description and supported parameters for the captureAudio method.
 ms.date: 09/08/2021
-ms.service: powerapps
+
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: fa39d18e-4b82-423a-84a0-e54450b7964e

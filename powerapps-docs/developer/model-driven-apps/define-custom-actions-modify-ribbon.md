@@ -3,7 +3,7 @@ title: "Define custom actions to modify the ribbon (model-driven apps) | Microso
 description: "Learn about defining custom actions to modify the ribbon." # 115-145 characters including spaces. This abstract displays in the search result."
 keywords: ""
 ms.date: 04/15/2021
-ms.service: powerapps
+
 ms.topic: article
 ms.assetid: 72544b02-4eed-4d70-666e-a0d880f526af
 author: Nkrb # GitHub ID

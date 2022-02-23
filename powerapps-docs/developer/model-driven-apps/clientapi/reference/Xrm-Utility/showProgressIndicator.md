@@ -2,7 +2,7 @@
 title: "showProgressIndicator (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the showProgressIndicator method.
 ms.date: 04/21/2021
-ms.service: powerapps
+
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 36e17a06-e381-4efd-b3a6-62391377b613
@@ -22,6 +22,9 @@ search.app:
 [!INCLUDE[./includes/showProgressIndicator-description.md](./includes/showProgressIndicator-description.md)]
 
 Any subsequent call to this method will update the displayed message in the existing progress dialog with the message specified in the latest method call.
+
+>[!NOTE]
+>Although the showProgressIndicator function is synchronous, the UI updates asynchronously. This means that any code synchronously executed immediately after calling showProgressIndicator may execute before the progress indicator is shown in the UI.
 
 >[!WARNING]
 >The progress dialog blocks the UI until it is closed using the [closeProgressIndicator](closeProgressIndicator.md) method. So, you must use this method with caution.

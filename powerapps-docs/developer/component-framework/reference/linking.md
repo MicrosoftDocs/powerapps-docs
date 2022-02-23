@@ -5,8 +5,8 @@ keywords:
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 10/01/2019
-ms.service: "powerapps"
+ms.date: 06/12/2021
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -17,16 +17,16 @@ ms.assetid: f9fbfe65-4a9f-42f6-91a4-fe997f030012
 
 [!INCLUDE [linking-description](includes/linking-description.md)]
 
-## Available for 
+## Available for
 
 Model-driven apps
 
 ## Methods
 
-|Method | Description | 
-| ------------- |-------------|
-|[addLinkedEntity](linking/addlinkedentity.md)|[!INCLUDE [addlinkedentity-description](linking/includes/addlinkedentity-description.md)]|
-|[getLinkedEntities](linking/getlinkedentities.md)|[!INCLUDE [getlinkedentities-description](linking/includes/getlinkedentities-description.md)]|
+| Method                                              | Description                                                                                     |
+| --------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| [addLinkedEntity](linking/addLinkedEntity.md)       | [!INCLUDE [addlinkedentity-description](linking/includes/addlinkedentity-description.md)]       |
+| [getLinkedEntities](linking/getlinkedentities.md)   | [!INCLUDE [getlinkedentities-description](linking/includes/getlinkedentities-description.md)]   |
 
 ### Related topics
 

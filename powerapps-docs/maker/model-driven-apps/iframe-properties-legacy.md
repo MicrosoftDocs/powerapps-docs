@@ -11,7 +11,7 @@ ms.subservice: mda-maker
 ms.author: matp
 manager: kvivek
 ms.date: 03/18/2020
-ms.service: powerapps
+
 ms.topic: how-to
 ms.assetid: 1b7e6a0c-18a9-47e2-aa7d-0cffb8c93b19
 search.audienceType: 
@@ -22,7 +22,7 @@ search.app:
 ---
 # iFrame properties for model-driven app main forms
 
-[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 You can add iFrames to a form to integrate content from another website within a form. 
 

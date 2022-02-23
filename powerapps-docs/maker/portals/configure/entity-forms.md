@@ -2,15 +2,15 @@
 title: About basic forms
 description: Learn how to create basic forms in a portal."
 author: sandhangitmsft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/04/2021
+ms.date: 02/17/2022
 ms.subservice: portals
 ms.author: sandhan
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
-    - tapanm-msft
+    - nickdoelman
     - sandhangitmsft
 ---
 
@@ -68,7 +68,7 @@ To enable permissions for a basic form, select the checkbox to **Enable Table Pe
 
 |Name|Description|
 |----|---------|
-|Add Captcha|    Displays captcha. <br> **NOTE:** Captcha control is currently limited to only English language for audio, and Latin characters for image.|
+|Add Captcha|    Displays captcha. |
 |Show Captcha for Authenticated users|    Displays captcha for authenticated users.|
 |Validation Group|    The group name assigned to input controls for evaluating valid input of named groups.|
 |Auto Generate Steps From Tabs|    Indicates that multiple tabs on a basic form will be displayed with each tab as a sequential step starting with the first tab and continue until all tabs have been navigated to and upon final submission a record is inserted. By default, it is not selected. The default value indicates that only one tab or form is to be rendered for the current step. If the Tab Name is not specified, then the first tab is displayed.|
@@ -178,7 +178,7 @@ Clicking on one of these options displays a configuration area for that action. 
 
 ## Geolocation configuration for basic forms
 
-A managed form can be configured to display a map control to either display an existing location as a pin on a map or to provide the ability for the user to specify a location. See [Add Geolocation](add-geolocation.md).
+A form can be configured to display a map control to either display an existing location as a pin on a map or to provide the ability for the user to specify a location. See [Add Geolocation](add-geolocation.md).
 
 The form's map control requires additional configuration to tell it what the IDs of the various location fields are, to assign values to them or retrieve values from them. The basic form record has a configuration section that defines these field mappings that you must specify. The field names will vary depending on the schema you have created.
 
@@ -186,6 +186,7 @@ The form's map control requires additional configuration to tell it what the IDs
 
 > [!Note]
 > - The address field in a read-only basic form is replaced with the map when geolocation is enabled.
+> - The map will only be rendered when displaying the form in a modal window.
 > - The Geolocation section is not visible in the German Sovereign Cloud environment. If a user has enabled geolocation by using a different form, it will not be displayed during rendering on portal.
 
 ## Request validation

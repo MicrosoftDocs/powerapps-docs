@@ -5,8 +5,8 @@ keywords:
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 10/01/2019
-ms.service: "powerapps"
+ms.date: 06/12/2021
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -17,9 +17,9 @@ ms.assetid: 74992f97-89b7-401e-ac95-9c8a47f990d1
 
 [!INCLUDE[./includes/getformattedvalue-description.md](./includes/getformattedvalue-description.md)]
 
-## Available for 
+## Available for
 
-Model-driven apps
+Model-driven and canvas apps
 
 ## Syntax
 
@@ -27,14 +27,13 @@ Model-driven apps
 
 ## Parameters
 
-| Parameter Name|Type|Required|Description|
-| ------------- |----|--------|-----------|
-|`columnName`|`string`|Yes|Column name of the record|
+| Parameter Name | Type     | Required | Description               |
+| -------------- | -------- | -------- | ------------------------- |
+| `columnName`   | `string` | Yes      | Name of the column. |
 
 ## Return Value
 
 **Type**: `string`
-
 
 ### Related topics
 

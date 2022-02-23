@@ -2,7 +2,7 @@
 title: How do I find and run apps in Power Apps? | Microsoft Docs
 description: Overview of how to find and run Power Apps apps.
 author: mduelae
-ms.service: powerapps
+
 ms.component: pa-user
 ms.topic: overview
 ms.date: 2/1/2021
@@ -38,7 +38,7 @@ Ensure that you're using a supported web browser and operating system.
 
 - For canvas apps, see: [System requirements, limits, and configuration values](../maker/canvas-apps/limits-and-config.md)
 - For model-driven apps, see: [Requirements/supported configurations](/power-platform/admin/online-requirements)
-- To run model-driven apps or canvas apps on your mobile device, see [Run model-driven apps and canvas apps on Power Apps mobile](../mobile/run-powerapps-on-mobile.md)
+- To run model-driven apps or canvas apps on your mobile device, see [Get started with Power Apps mobile](../mobile/run-powerapps-on-mobile.md)
 
 
 

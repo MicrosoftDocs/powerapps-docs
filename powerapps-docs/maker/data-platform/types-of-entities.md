@@ -4,7 +4,7 @@ description: "Learn about the different types of Microsoft Dataverse tables."
 ms.custom: ""
 ms.date: 04/27/2021
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -26,7 +26,7 @@ search.app:
 ---
 # Types of tables
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 A table defines information that you want to track in the form of records, which typically include properties such as company name, location, products, email, and phone.
 

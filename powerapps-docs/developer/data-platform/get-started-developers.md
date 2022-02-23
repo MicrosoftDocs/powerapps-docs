@@ -4,7 +4,7 @@ description: Learn about some available methods that developers can use to acces
 suite: powerapps
 author: JimDaly
 manager: ryjones
-ms.service: powerapps
+
 ms.date: 07/21/2021
 ms.subservice: dataverse-developer
 ms.author: jdaly

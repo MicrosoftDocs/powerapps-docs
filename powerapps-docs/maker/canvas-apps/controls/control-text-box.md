@@ -2,12 +2,11 @@
 title: Label control in Power Apps
 description: Learn about the details, properties and examples of the label control in Power Apps.
 author: chmoncay
-manager: kvivek
-ms.service: powerapps
+
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 10/25/2016
+ms.date: 12/08/2021
 ms.subservice: canvas-maker
 ms.author: chmoncay
 search.audienceType: 
@@ -120,7 +119,7 @@ A label shows data that you specify as a literal string of text, which appears e
 
 **[Width](properties-size-location.md)** – The distance between a control's left and right edges.
 
-**Wrap** – Whether text that's too long to fit in a label wraps to the next line.
+**Wrap** – Whether the text should ever wrap to multiple lines.
 
 **[X](properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (screen if no parent container).
 

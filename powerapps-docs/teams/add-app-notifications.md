@@ -1,16 +1,16 @@
 ---
-title: Add notifications to make your apps collaborative
+title: Add notifications to make your apps collaborative (contains video)
 description: Learn how to add notifications to your Power Apps in Teams to make them more collaborative
 author: joel-lindstrom
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 08/17/2021
-ms.author: namarwah
+ms.author: jshum
 ms.reviewer: tapanm
 contributors:
   - joel-lindstrom
-  - navjotm
+  - josephshum
   - tapanm-msft
 ---
 

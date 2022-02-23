@@ -1,17 +1,17 @@
 ---
-title: Use Issue reporting app from teams store | Microsoft Docs
+title: Use Issue reporting app from teams store (contains video) | Microsoft Docs
 description: Learn how to use the Issue reporting app from Teams store.
-author: navjotm
-ms.service: powerapps
+author: josephshum
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 10/05/2020
 ms.subservice: teams
-ms.author: namarwah
+ms.author: jshum
 ms.reviewer: tapanm
 contributors:
   - joel-lindstrom
-  - navjotm
+  - josephshum
   - tapanm-msft
 ---
 
@@ -329,15 +329,15 @@ To view an issue task in Planner:
 
 1. Select **View issues**.
 
-    ![View issues for Planner.](media/issue-reporting/view-issue.png "View issues for Planner")
+    :::image type="content" source="media/issue-reporting/view-issue.png" alt-text="View issues for Planner.":::
 
 1. Select **View in Tasks**.
 
-    ![View issue in Tasks.](media/issue-reporting/view-issue-tasks.png "View issue in Tasks")
+    :::image type="content" source="media/issue-reporting/view-issue-tasks.png" alt-text="View issue in Tasks.":::
 
 This action opens Planner with the selected issue task.
 
-![Planner with issue task.](media/issue-reporting/planner-issue-task-open.png "Planner with issue task")
+:::image type="content" source="media/issue-reporting/planner-issue-task-open.png" alt-text="Planner with issue task.":::
 
 ### Review and edit existing issues in Planner
 

@@ -2,9 +2,9 @@
 title: " Event Framework (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about the event framework and how it relates to the database transaction." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 03/21/2021
+ms.date: 11/05/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
 ms.subservice: dataverse-developer
@@ -65,7 +65,7 @@ $filter=iscustomprocessingstepallowed eq true and isvisible eq true)
 ```
 
 > [!TIP]
-> You can export this data to an Excel worksheet using this query and the instructions provided in this blog post: [Find Messages and tables eligible for plug-ins using the Dataverse](https://powerapps.microsoft.com/blog/find-messages-and-entities-eligible-for-plug-ins-using-the-data-platform/)
+> You can export this data to an Excel worksheet using this query and the instructions provided in this blog post: [Find Messages and tables eligible for plug-ins using the Dataverse](https://powerapps.microsoft.com/blog/find-messages-and-entities-eligible-for-plug-ins-using-the-common-data-service/)
 
 
 You can also use the following FetchXML to retrieve this information. The [FetchXML Builder](https://fxb.xrmtoolbox.com) is a useful tool to execute this kind of query.
@@ -113,15 +113,23 @@ When you register a step using the Plug-in Registration tool you must also choos
 |**PostOperation**|[!INCLUDE [cc-postoperation-description](../../includes/cc-postoperation-description.md)]|
 
 
-
 The stage you should choose depends on the purpose of the extension. You don't need to apply all your business logic within a single step. You can apply multiple steps so that your logic about whether to allow a operation to proceed can be in the **PreValidation** stage and your logic to make modifications to the message properties can occur in the **PostOperation** stage.
 
 > [!IMPORTANT]
-> An exception thrown by your code at any stage within the database transaction will cause the entire transaction to be rolled back. You should be careful to ensure that any possible exception cases are handled by your code. If you want to cancel the operation, you should detect this in the **PreValidation** stage and only throw a <xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException> containing an appropriate message describing why the operation was cancelled.
+> An exception thrown by your code at any synchronous stage within the database transaction will cause the entire transaction to be rolled back. You should be careful to ensure that any possible exception cases are handled by your code. If you want to cancel the operation, you should detect this in the **PreValidation** stage and only throw a <xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException> containing an appropriate message describing why the operation was cancelled.
 
 Multiple extensions can be registered for the same message and stage. Within the step registration the **Execution Order** value determines the order in which multiple extensions should be processed for a given stage.
 
 Information about registered steps is stored in the [SdkMessageProcessingStep table](reference/entities/sdkmessageprocessingstep.md).
+
+### Asynchronous plug-in steps
+
+When registering for the **PostOperation** stage, you have the option to register the step to run in **Asynchronous Execution Mode**. These plug-ins will run after the record operation is completed.
+
+This is often required when working with records that are associated with the current record but created in a different process. For example, `UserSettings` related to a specific a `SystemUser` won't be created until the `SystemUser` row is created.
+
+More information: [Asynchronous service](asynchronous-service.md)
+
 
 ## Event context
 

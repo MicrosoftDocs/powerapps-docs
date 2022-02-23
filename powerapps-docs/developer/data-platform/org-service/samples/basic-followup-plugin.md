@@ -4,8 +4,8 @@ description: "Learn how to write a simple plug-in that creates a follow-up activ
 ms.custom: ""
 ms.date: 03/17/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
-ms.topic: "samples"
+
+ms.topic: sample
 author: "JimDaly"
 ms.author: "pehecke"
 manager: "kvivek"

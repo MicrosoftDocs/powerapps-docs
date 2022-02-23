@@ -2,7 +2,7 @@
 title: Scenarios for integrating SharePoint with Power Apps
 description: This series explains different scenarios when integrating SharePoint with canvas apps.
 author: emcoope-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm

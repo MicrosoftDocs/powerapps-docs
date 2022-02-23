@@ -2,7 +2,7 @@
 title: Run apps in a web browser | Microsoft Docs
 description: In this topic, you learn how to run apps in a web browser
 author: mduelae
-ms.service: powerapps
+
 ms.component: pa-user
 ms.topic: quickstart
 ms.date: 10/28/2020

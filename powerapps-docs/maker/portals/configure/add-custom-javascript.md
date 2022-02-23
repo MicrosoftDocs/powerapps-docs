@@ -2,7 +2,7 @@
 title: Add custom JavaScript
 description: Learn how to add custom JavaScript to a form in a portal.
 author: sandhangitmsft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 10/22/2021
@@ -10,7 +10,7 @@ ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: ndoelman
 contributors:
-    - tapanm-msft
+    - nickdoelman
     - sandhangitmsft
     - nickdoelman
 ---

@@ -1,5 +1,5 @@
 - name: Power Apps component framework
-  items: 
+  items:
   - name: Overview
     href: overview.md
   - name: What are code components
@@ -10,7 +10,7 @@
       href: code-components-model-driven-apps.md
     - name: Code components for canvas apps
       href: component-framework-for-canvas-apps.md
-    - name: Code components for portals (Preview)
+    - name: Code components for portals
       href: ../../maker/portals/component-framework.md
   - name: Get Microsoft Power Platform CLI
     href: get-powerapps-cli.md
@@ -32,7 +32,7 @@
     href: code-components-best-practices.md
   - name: How-to guides
     items:
-    - name: Create and build a code component 
+    - name: Create and build a code component
       href: create-custom-controls-using-pcf.md
     - name: Package a code component
       href: import-custom-controls.md
@@ -55,7 +55,7 @@
   - name: FAQs
     href: faq.yml
   - name: Sample components
-    items: 
+    items:
     - name: How to use the sample components?
       href: use-sample-components.md
     - name: Angular Flip component
@@ -68,6 +68,8 @@
       href: sample-controls/control-state-api.md
     - name: Data Set Grid component
       href: sample-controls/data-set-grid-control.md
+    - name: Device API component
+      href: sample-controls/device-api-control.md
     - name: Formatting API component
       href: sample-controls/formatting-api-control.md
     - name: IFRAME component
@@ -102,9 +104,9 @@
       href: sample-controls/webapi-control.md
   - name: Reference
     items:
-    - name: Power Apps component framework 
+    - name: Power Apps component framework
       href: reference/index.md
-      items: 
+      items:
       - name: Client
         href: reference/client.md
         items:
@@ -113,18 +115,28 @@
         - name: getFormFactor
           href: reference/client/getformfactor.md
         - name: isOffline
-          href: reference/client/isoffline.md      
+          href: reference/client/isoffline.md
       - name: Column
         href: reference/column.md
       - name: ConditionExpression
         href: reference/conditionexpression.md
       - name: Context
         href: reference/context.md
+      - name: DataProviderCapabilities
+        href: reference/dataprovidercapabilities.md
       - name: DataSet
         href: reference/dataset.md
         items:
+        - name: addColumn
+          href: reference/dataset/addcolumn.md
         - name: clearSelectedRecordIds
           href: reference/dataset/clearselectedrecordids.md
+        - name: delete
+          href: reference/dataset/delete.md
+        - name: getCommands
+          href: reference/dataset/getcommands.md
+        - name: getDataSetCapabilities
+          href: reference/dataset/getdatasetcapabilities.md
         - name: getSelectedRecordIds
           href: reference/dataset/getselectedrecordids.md
         - name: getTargetEntityType
@@ -133,12 +145,22 @@
           href: reference/dataset/gettitle.md
         - name: getViewId
           href: reference/dataset/getviewid.md
+        - name: newRecord
+          href: reference/dataset/newrecord.md
         - name: openDatasetItem
           href: reference/dataset/opendatasetitem.md
         - name: refresh
           href: reference/dataset/refresh.md
+        - name: retrieveRecordCommand
+          href: reference/dataset/retrieverecordcommand.md
         - name: setSelectedRecordIds
           href: reference/dataset/setselectedrecordids.md
+      - name: ControlAttributes
+        href: reference/controlattributes.md
+      - name: ControlAttributesType
+        href: reference/controlattributestype.md
+      - name: DateTimeFieldBehavior
+        href: reference/datetimefieldbehavior.md
       - name: Device
         href: reference/device.md
         items:
@@ -163,7 +185,9 @@
       - name: EntityRecord
         href: reference/entityrecord.md
         items:
-        - name: getFormattedValue 
+        - name: getColumnInfo
+          href: reference/entityrecord/getcolumninfo.md
+        - name: getFormattedValue
           href: reference/entityrecord/getformattedvalue.md
         - name: getNamedReference
           href: reference/entityrecord/getnamedreference.md
@@ -171,6 +195,12 @@
           href: reference/entityrecord/getrecordid.md
         - name: getValue
           href: reference/entityrecord/getvalue.md
+        - name: isDirty
+          href: reference/entityrecord/isdirty.md
+        - name: isValid
+          href: reference/entityrecord/isvalid.md
+        - name: save
+          href: reference/entityrecord/save.md
       - name: EntityMetadata
         href: reference/entitymetadata.md
       - name: EntityReference
@@ -218,8 +248,16 @@
           href: reference/formatting/formatlanguage.md
         - name: formatTime
           href: reference/formatting/formattime.md
+        - name: formatUserDateTimeToUTC
+          href: reference/formatting/formatuserdatetimetoutc.md
+        - name: formatUserInput
+          href: reference/formatting/formatUserInput.md
+        - name: formatUTCDateTimeToUserDate
+          href: reference/formatting/formatutcdatetimetouserdate.md
         - name: getWeekOfYear
           href: reference/formatting/getweekofyear.md
+      - name: ICommand
+        href: reference/icommand.md
       - name: Linking
         href: reference/linking.md
         items:
@@ -238,6 +276,8 @@
           href: reference/mode/setfullscreen.md
         - name: trackContainerResize
           href: reference/mode/trackcontainerresize.md
+      - name: MoneyPrecisionSource
+        href: reference/moneyprecisionsource.md
       - name: Navigation
         href: reference/navigation.md
         items:
@@ -257,9 +297,13 @@
           href: reference/navigation/openwebresource.md
       - name: NumberFormattingInfo
         href: reference/numberformattinginfo.md
+      - name: OptionDescriptor
+        href: reference/optiondescriptor.md
       - name: Paging
         href: reference/paging.md
         items:
+        - name: loadExactPage
+          href: reference/paging/loadexactpage.md
         - name: loadNextPage
           href: reference/paging/loadnextpage.md
         - name: loadPreviousPage
@@ -316,7 +360,7 @@
         - name: updateView
           href: reference/control/updateview.md
       - name: updatedProperties
-        hred: reference/context.md
+        href: reference/updatedproperties.md
       - name: UserSettings
         href: reference/usersettings.md
       - name: Utility

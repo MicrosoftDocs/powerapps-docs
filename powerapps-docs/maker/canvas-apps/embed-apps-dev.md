@@ -2,13 +2,12 @@
 title: Integrate canvas apps into websites and other services
 description: Learn about how to embed canvas apps in websites and other services.
 author: gregli-msft
-manager: kvivek
-ms.service: powerapps
+
 ms.subservice: canvas-developer
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 04/13/2020
+ms.date: 01/31/2022
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -25,10 +24,8 @@ In this topic, we'll show you how to set parameters for app embedding; then we'l
 
 ![Power BI dashboard with embedded app.](./media/embed-apps-dev/embed-dashboard.png)
 
-Keep the following restrictions in mind:
-
-- Only Power Apps users in the same tenant can access the embedded app.
-- To access Power Apps using Internet Explorer 11, you must turn off Compatibility View.
+> [!NOTE]
+> Only Power Apps users in the same tenant can access the embedded app.
 
 You can also integrate canvas apps into SharePoint Online without using an iframe. More information: [Use the Power Apps web part](https://support.office.com/article/use-the-powerapps-web-part-6285f05e-e441-408a-99d7-aa688195cd1c).
 

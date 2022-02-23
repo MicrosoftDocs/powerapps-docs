@@ -1,15 +1,14 @@
 ---
-title: Create a canvas app with data from an Excel file
+title: Create a canvas app with data from an Excel file (contains video)
 description: Learn about how to use Power Apps to automatically create a canvas app using data stored in an Excel file in a cloud-storage account.
 author: tapanm-msft
-manager: kvivek
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
   - canvas
   - intro-internal
 ms.reviewer: 
-ms.date: 06/22/2021
+ms.date: 01/27/2022
 ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
@@ -42,17 +41,19 @@ To follow this topic exactly, download the [Flooring Estimates](https://az787822
 
 1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-1. Under **Start from data**, select **Other data sources**.
+1. Under **Start from**, select **Excel**.
 
-    ![Choose other data sources.](./media/get-started-create-from-data/start-from-data.png)
+    :::image type="content" source="media/get-started-create-from-data/start-from-data.png" alt-text="Select Excel.":::
 
-1. Choose your connection, or select **New connection** to create, and then select **Create**.
+1. If you don't have a **OneDrive for Business** connection already, you'll be prompted to create. Select **Create** to create the connection.
 
-    ![Choose your data source.](./media/get-started-create-from-data/odfb-tile.png)
+1. Select **OneDrive for Business** connection.
 
-1. Under **Choose an Excel file**, browse to **FlooringEstimates.xlsx**, and then click or tap it. 
+    :::image type="content" source="media/get-started-create-from-data/odfb-tile.png" alt-text="Select OneDrive for Business connection.":::
 
-1. Under **Choose a table**, click or tap **FlooringEstimates**, and then click or tap **Connect**.
+1. Browse to the location where you have the Excel file&mdash;**FlooringEstimates.xlsx** in this example.
+
+1. Under **Choose a table**, select the table&mdash;**FlooringEstimates** in this example, and then select **Connect**.
 
     ![Choose your table.](./media/get-started-create-from-data/choose-table.png)
 

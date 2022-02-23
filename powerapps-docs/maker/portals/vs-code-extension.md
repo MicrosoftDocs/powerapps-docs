@@ -2,16 +2,16 @@
 title: Use the Visual Studio Code extension (preview)
 description: Learn about how to use the Visual Studio Code extension for portals and integrate with Microsoft Power Platform CLI for CI/CD.
 author: neerajnandwana-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 10/01/2021
 ms.subservice: portals
 ms.author: nenandw
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
     - neerajnandwana-msft
-    - tapanm-msft
+    - nickdoelman
 ---
 
 # Use the Visual Studio Code extension (preview)

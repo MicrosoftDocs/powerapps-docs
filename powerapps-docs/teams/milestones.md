@@ -1,17 +1,17 @@
 ---
 title: Use Milestones apps from teams store | Microsoft Docs
 description: Learn how to use the Milestones apps from Teams store.
-author: navjotm
-ms.service: powerapps
+author: josephshum
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 08/12/2021
 ms.subservice: teams
-ms.author: namarwah
+ms.author: jshum
 ms.reviewer: tapanm
 contributors:
   - joel-lindstrom
-  - navjotm
+  - josephshum
   - tapanm-msft
 ---
 

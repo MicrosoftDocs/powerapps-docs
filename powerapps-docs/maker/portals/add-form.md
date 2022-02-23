@@ -2,16 +2,16 @@
 title: Add form
 description: Learn about how to add form component to a Power Apps portals page using portals Studio.
 author: neerajnandwana-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
-ms.date: 08/24/2021
+ms.date: 02/02/2022
 ms.subservice: portals
 ms.author: nenandw
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
     - neerajnandwana-msft
-    - tapanm-msft
+    - nickdoelman
 ---
 
 # Add form
@@ -66,9 +66,6 @@ To add a form component:
 
     - **Show captcha for anonymous users**: Displays captcha to anonymous users.
     
-    > [!NOTE]
-    > Captcha control is currently limited to only English language for audio, and Latin characters for image.
-
     - **Show captcha for authenticated users**: Displays captcha to authenticated users.
 
     - **Permissions**: Table permissions to be considered for the form. [Configure table permissions](configure/entity-permissions-studio.md) to make the form available to anyone, or any specific roles.

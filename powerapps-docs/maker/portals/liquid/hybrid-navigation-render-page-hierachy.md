@@ -2,15 +2,15 @@
 title: Render up to three levels of page hierarchy by using hybrid navigation
 description: Learn how to use hybrid navigation to render page hierarchy for a portal.
 author: gitanjalisingh33msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2020
 ms.subservice: portals
 ms.author: gisingh
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
-    - tapanm-msft
+    - nickdoelman
     - GitanjaliSingh33msft
 ---
 

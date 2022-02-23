@@ -6,7 +6,7 @@ ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
 ms.date: 10/01/2019
-ms.service: "powerapps"
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -17,9 +17,9 @@ ms.assetid: e119c1e1-e35f-47cf-9437-e7376657bbc0
 
 [!INCLUDE [loadnextpage-description](includes/loadnextpage-description.md)]
 
-## Available for 
+## Available for
 
-Model-driven apps
+Model-driven and canvas apps
 
 ## Syntax
 

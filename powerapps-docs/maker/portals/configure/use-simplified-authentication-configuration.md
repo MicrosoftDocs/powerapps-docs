@@ -2,15 +2,15 @@
 title: Get started with configuring your portal authentication
 description: Learn how to configure your portal authentication using different identity providers.
 author: sandhangitmsft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: intro-internal
 ms.date: 04/21/2020
 ms.subservice: portals
 ms.author: sandhan
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
-    - tapanm-msft
+    - nickdoelman
     - sandhangitmsft
     - dileepsinghmicrosoft
 ---

@@ -2,9 +2,9 @@
 title: "Design forms for performance in model-driven apps | MicrosoftDocs"
 description: Learn how to customize forms for performance for your model-driven apps.
 ms.custom: ""
-ms.date: 08/27/2021
+ms.date: 11/19/2021
 ms.reviewer: "Mattp123"
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "conceptual"
@@ -71,7 +71,7 @@ The `openForm` client API method allows a parameter option to display a form in 
 
 Using the most up-to-date web browser is key to ensuring your model-driven app runs as fast as possible.  The reason for this is that many of the performance improvements can only be used in the newer modern browsers.
 
-For example, if your organization has older versions of Firefox, non-Chromium-based browsers, and so on, many of the performance gains that are built into a model-driven app will not be available in the older browser versions because they don't support features that the app depends on to run quickly and smoothly. And if you're using Internet Explorer, it's no longer supported.
+For example, if your organization has older versions of Firefox, non-Chromium-based browsers, and so on, many of the performance gains that are built into a model-driven app will not be available in the older browser versions because they don't support features that the app depends on to run quickly and smoothly.
 
 In most cases, you can expect to see page load improvements by just switching to Microsoft Edge, updating to the latest current browser version from an older version, or moving to a modern Chromium-based browser.
 
@@ -215,6 +215,10 @@ Load as much code as needed for events for a particular form. If you have code t
 
 Avoid loading libraries in the `OnLoad` event if they are only used for the `OnChange` or `OnSave` events. Instead, load them in those events. This way the platform can defer loading them until after the form loads. More information: [Optimize form performance](/dynamics365/customerengagement/on-premises/customize/optimize-form-performance)
 
+#### Remove usage of console APIs in production code
+
+Don't use the [console API methods]( https://developer.mozilla.org/en-US/docs/Web/API/console) such as `console.log` in production code. Logging data to the console can significantly increase memory demand and might prevent data from being cleaned up in memory. This can lead to the app becoming slower over time and eventually crashing.
+
 ## Tools you can use to help make apps performant
 
 This section describes the tools that can help you understand performance issues and offer recommendations about how to optimize your customizations in model-driven apps.
@@ -237,6 +241,6 @@ Some examples of performance-related issues found with solution checker:
 
 Object checker runs real-time diagnostics on component objects within your solution. If issues are detected, a recommendation is returned that describes how to fix the issue. More information: [Use object checker to diagnose a solution component (preview)](../data-platform/object-checker.md)
 
-### See also
+## Next steps
 
 [Design productive main forms in model-driven apps](design-productive-forms.md)

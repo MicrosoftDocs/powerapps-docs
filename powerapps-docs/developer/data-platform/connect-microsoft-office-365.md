@@ -4,7 +4,7 @@ description: "The Microsoft 365 portal provides a single sign-on experience for 
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "paulliew" # GitHub ID
 ms.subservice: dataverse-developer
@@ -18,7 +18,7 @@ search.app:
 ---
 # Connect with Microsoft 365 and Microsoft Dataverse
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 Dataverse is part of the Microsoft 365 collaboration and productivity tools. The [Microsoft 365 portal](https://www.microsoft.com/office365) provides a single sign-on experience for Microsoft 365 customers where they can sign in once and access any Microsoft 365 application, including Dataverse. In addition, system user accounts in Dataverse can be provisioned in the [Microsoft Online Services](https://portal.microsoftonline.com/) admin portal.  
   

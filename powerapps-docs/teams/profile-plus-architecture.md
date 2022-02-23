@@ -2,16 +2,16 @@
 title: Understand Profile+ sample apps architecture (preview) | Microsoft Docs
 description: Learn about the architecture of the Profile Plus sample apps.
 author: joel-lindstrom
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/16/2021
+ms.date: 12/01/2021
 ms.subservice: teams
-ms.author: namarwah
+ms.author: jshum
 ms.reviewer: tapanm
 contributors:
     - tapanm-msft
-    - navjotm
+    - josephshum
     - joel-lindstrom
 ---
 
@@ -44,15 +44,13 @@ The following diagram shows the intersection of users, data, and systems.
 
 ![Profile + sample app data model.](media/Profile-plus-architecture/architecture-model.png "Profile + sample app data model")
 
-The following connectors are used in the Issue Reporting app:
+The following connectors are used in the Profile+ app:
 
--   **Microsoft Dataverse** - Used to read and write data in Dataverse.
+- **Office 365 Users** - Used to read Microsoft 365 user profile data.
 
--   **Office 365 Users** - Used to read Microsoft 365 user profile data.
+- **Office 365 Groups** - Used to retrieve the people who report to a selected user.
 
--   **Location** - Used to capture the user's location for Planner tasks.
-
--   **Microsoft Planner** - Used to create tasks.
+- **Microsoft Stream** - Used to display user profile video in Stream control.
 
 ## Data Model
 

@@ -2,15 +2,15 @@
 title: Power Apps portals version 9.3.4.x
 description: Learn about the updates included in Power Apps portals version 9.3.4.x, including fixes, enhancements, and the scope of the release.
 author: dileepsinghmicrosoft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 06/15/2021
 ms.subservice: portals
 ms.author: dileeps
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributor:
-    - tapanm-msft
+    - nickdoelman
     - dileepsinghmicrosoft
 ---
 

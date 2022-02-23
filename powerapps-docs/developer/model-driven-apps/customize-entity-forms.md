@@ -3,7 +3,7 @@ title: "Customize forms (model-driven apps) | Microsoft Docs" # Intent and produ
 description: "Forms provide the user interface (UI) that people use to create, view, or edit table records. Use the form designer in the customization tools to create and edit forms. This topic will provide information necessary to create or edit forms programmatically." # 115-145 characters including spaces. This abstract displays in the search result."
 keywords: ""
 ms.date: 04/15/2021
-ms.service: powerapps
+
 ms.topic: article
 ms.assetid: e6a25bbe-e484-cfe9-9ad9-20ac6f19336a
 author: Nkrb # GitHub ID
@@ -182,7 +182,7 @@ Xrm.Navigation.navigateTo(pageInput, navigationOptions).then(
 
  [Create and design forms](../../maker/model-driven-apps/create-design-forms.md)   
  [SystemForm table](../data-platform/reference/entities/systemform.md)  
- [Form XML cchema](form-xml-schema.md)<br/>
+ [Form XML schema](form-xml-schema.md)<br/>
  [Xrm.Navigation.navigateTo](./clientapi/reference/xrm-navigation/navigateto.md)
 
 

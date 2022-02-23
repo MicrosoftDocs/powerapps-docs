@@ -1,16 +1,16 @@
 ---
-title: Add business logic for automated task assignment
+title: Add business logic for automated task assignment (contains video)
 description: Learn how to add logic to automatically assign tasks to a manager in the Issue reporting template app for Microsoft Teams.
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 06/13/2021
 author: joel-lindstrom
-ms.author: namarwah
+ms.author: jshum
 ms.reviewer: tapanm
 contributors:
   - joel-lindstrom
-  - navjotm
+  - josephshum
   - tapanm-msft
 ---
 

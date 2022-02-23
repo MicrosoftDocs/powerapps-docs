@@ -2,7 +2,7 @@
 title: "FAQs for timeline control (section) in Power Apps | MicrosoftDocs"
 description: "FAQs for timeline control (section) in Power Apps"
 ms.date: 09/10/2021
-ms.service: powerapps
+
 ms.topic: troubleshooting
 author: "lalexms"
 ms.assetid: 7F495EE1-1208-49DA-9B02-17855CEB2FDF
@@ -16,9 +16,9 @@ search.app:
   - D365CE
 ---
 
-# FAQs for timeline control
+# FAQs for timeline control (classic)
 
-[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 There aren't currently any FAQs. As new FAQs are raised, we will update this topic.
 

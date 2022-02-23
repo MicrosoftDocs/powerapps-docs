@@ -2,12 +2,11 @@
 title: Common issues and resolutions for Power Apps
 description: A list of common issues and resolutions within Power Apps.
 author: KumarVivek
-manager: kvivek
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 06/07/2021
+ms.date: 01/31/2022
 ms.subservice: troubleshoot
 ms.author: kvivek
 search.audienceType: 
@@ -84,11 +83,7 @@ If you're running into issues using Power Apps, try these common troubleshooting
 
 1. <a name="out-of-memory"></a>**Browser running out of memory** (July 23, 2018)
 
-    If you run out of memory while using Power Apps, please consider downloading a 64-bit version of Chrome, Microsoft Edge, or Internet Explorer.
-
-1. **Launching a website from an embedded app** (May 10, 2018)
-
-    Internet Explorer and Microsoft Edge browsers might block the launch of a URL or website that’s in protected mode or a lower security zone than the website in which the app is loaded. To resolve this issue, [change the security and privacy settings](https://support.microsoft.com/help/17479/windows-internet-explorer-11-change-security-privacy-settings) for your browser.
+    If you run out of memory while using Power Apps, please consider downloading a 64-bit version of Chrome or Microsoft Edge.
 
 1. **Combo box controls in galleries** (May 3, 2018)
 

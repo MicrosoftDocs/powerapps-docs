@@ -4,13 +4,13 @@ description: "Learn how to read the incremental updates of your Dataverse data."
 ms.custom: ""
 ms.date: 08/06/2021
 ms.reviewer: "Mattp123"
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "conceptual"
 applies_to: 
   - "powerapps"
-author: "sama-zaki"
+author: "sabinn-msft"
 ms.assetid: 
 ms.subservice: dataverse-maker
 ms.author: "matp"
@@ -20,25 +20,23 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
-contributors: ""
+contributors: "sama-zaki"
 ---
 
 # Read the incremental updates of Dataverse data
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 After creating a continuous pipeline of data from Microsoft Dataverse to your Synapse workspace with Azure Synapse Link for Dataverse, you can read the incremental updates of a specified time interval. Every Dataverse table exported with Azure Synapse Link for Dataverse contains a *SinkModifiedOn* column which can be used to get the incremental updates.
 
 > [!NOTE]
->
-> - Azure Synapse Link for Microsoft Dataverse was formerly known as Export to data lake. The service was renamed effective May 2021 and will continue to export data to Azure Data Lake as well as Azure Synapse Analytics.
-> - This feature is still in preview and preview features are are not complete, but are made available on a “preview” basis so customers can get early access and provide feedback. Preview features may have limited or restricted functionality, are not meant for production use, and may be available only in selected geographic areas.
+> Azure Synapse Link for Microsoft Dataverse was formerly known as Export to data lake. The service was renamed effective May 2021 and will continue to export data to Azure Data Lake as well as Azure Synapse Analytics.
 
 ## Prerequisites
 
 This section describes the prerequisites necessary to read the incremental updates of your exported Dataverse data.
 
-- **Azure Synapse Link for Dataverse.** This guide assumes that you have already exported data from Dataverse by using the [Azure Synapse Link for Dataverse](export-to-data-lake.md).
+- **Azure Synapse Link for Dataverse.** This guide assumes that you have already exported data from Dataverse by using the [Azure Synapse Link for Dataverse](export-to-data-lake.md) and that all tables are syncing with **Append-only** mode.
 
 - **Storage Account Access.** You must be granted one of the following roles for the storage account: Storage Blob Data Reader, Storage Blob Data Contributor, or Storage Blob Data Owner.
 
@@ -46,7 +44,7 @@ This section describes the prerequisites necessary to read the incremental updat
 
 ## Read the Incremental Updates of your Dataverse data
 
-1. Navigate to you Azure Synapse Analytics workspace.
+1. Navigate to your Azure Synapse Analytics workspace.
 
 2. Select **Develop** from the left side panel, then select **+** > **SQL script**.
 

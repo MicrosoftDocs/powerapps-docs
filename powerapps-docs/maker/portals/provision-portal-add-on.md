@@ -2,16 +2,16 @@
 title: Provision a portal using the older portal add-on
 description: Instructions to provision a portal using the older portal add-on.
 author: neerajnandwana-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: intro-internal
 ms.date: 04/21/2021
 ms.subservice: portals
 ms.author: nenandw
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
     - neerajnandwana-msft
-    - tapanm-msft
+    - nickdoelman
 ---
 
 # Provision a portal using the older portal add-on

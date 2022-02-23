@@ -2,12 +2,12 @@
 title: Build an app in Teams using Power Apps and Dataverse for Teams to retrieve Power Platform videos for readiness | Microsoft Docs
 description: Tutorial on how to build an app in Teams using Power Apps and Dataverse for Teams that retrieves, lists, and displays content to used for readiness.
 author: mmercuri
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 11/16/2020
 ms.subservice: teams
-ms.author: mmercuri
+ms.author: tapanm
 ms.reviewer: tapanm
 contributors:
   - tapanm-msft
@@ -237,7 +237,7 @@ In this section, you'll create a table to store the details for the videos store
 
 1. For **Type**, select **Text** from the list.
 
-1. Select **Advanced options** and then change the value for **Max length** to *2000*.
+1. Select **Advanced options** and then change the value for **Max length** to *2500*.
 
 1. Select **Create**.
 

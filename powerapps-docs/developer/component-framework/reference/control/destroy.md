@@ -8,7 +8,7 @@ author: "nkrb"
 ms.author: "nabuthuk"
 manager: kvivek
 ms.date: 10/01/2019
-ms.service: powerapps
+
 ---
 # destroy
 
