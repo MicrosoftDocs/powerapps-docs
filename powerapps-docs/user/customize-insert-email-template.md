@@ -42,7 +42,7 @@ To configure the new email template for apps across the organization, perform th
 
 ## Disable the new email template for an app
 
-To disable the new email template selection window and display the default window, perform the following options:
+To disable the new email template selection window and display the default window for an app, perform the following steps:
 
 1. Navigate to **Power Apps** > **Solutions**.
 1. Select the solution created for the email template selection option.
