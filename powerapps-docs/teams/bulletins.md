@@ -1,17 +1,17 @@
 ---
 title: Bulletins sample app
 description: Learn how to use the Bulletins apps from Teams store.
-author: josephshum
+author: msftsamperl
 
 ms.topic: conceptual
 ms.custom: 
 ms.date: 08/12/2021
 ms.subservice: teams
-ms.author: jshum
+ms.author: saperlmu
 ms.reviewer: tapanm
 contributors:
   - joel-lindstrom
-  - josephshum
+  - msftsamperl
   - tapanm-msft
 ---
 

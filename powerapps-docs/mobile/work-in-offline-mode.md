@@ -60,7 +60,7 @@ To use offline-first, you need to enable it for each of your model-driven apps. 
     > [!div class="mx-imgBorder"]
     > ![Select Settings on the command bar.](media/mobile-offline-image4.png)
 
-5. On the **Upcoming** tab, set the **Choose the offline mode to apply to your app** toggle to **Yes** and then select **Save**.
+5. On the **Upcoming** tab, set the **Choose the offline mode to apply to your app** toggle to **No** and then select **Save**.
 
 6. Select **Save** and then **Publish** the app.
 
