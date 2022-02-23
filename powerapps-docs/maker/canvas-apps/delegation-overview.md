@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 08/25/2021
+ms.date: 02/23/2022
 ms.subservice: canvas-maker
 ms.author: lanced
 search.audienceType: 
@@ -62,6 +62,9 @@ Within the **Filter** and **LookUp** functions, you can use these with columns o
 * **[IsBlank](functions/function-isblank-isempty.md)**
 * **[StartsWith](functions/function-startswith.md)**, **[EndsWith](functions/function-startswith.md)**
 * Constant values that are the same across all records, such as control properties and [global and context variables](working-with-variables.md).
+
+> [!NOTE]
+> [In](functions/operators.md) is only delegated for columns on the base data source. For instance, if the data source is **Accounts** table then `Filter(Accounts, Name in ["name1", "name2"])` delegates to the data source for evaluation. However, `Filter(Accounts, PrimaryContact.Fullname in ["name1", "name2"])` does not delegate since **Fullname** column is on a different table (**PrimaryContact**) than **Accounts**. The expression is evaluated locally.
 
 You can also use portions of your formula that evaluate to a constant value for all records. For example, **Left( Language(), 2 )**, **Date( 2019, 3, 31 )**, and **Today()** don't depend on any columns of the record and, therefore, return the same value for all records. These values can be sent to the data source as a constant and won't block delegation. 
 

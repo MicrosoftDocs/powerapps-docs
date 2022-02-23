@@ -75,9 +75,6 @@ Use the **[in](operators.md#in-and-exactin-operators)** and **[exactin](operator
 
     The gallery shows only Europa because only its name contains the letter that you specified in the case that you specified.
 
-> [!Note]
-> The **in** operator is only delegated for columns on the base data source.  For instance, if the datasource is *Accounts* then `Filter(Accounts, Name in ["name1", "name2"])` delegates to the data source for evaluation.  However, `Filter(Accounts, PrimaryContact.Fullname in ["name1", "name2"])` does not delegate.  Fullname is on a different table. The expression is evaluated locally.
-
 ## ThisItem, ThisRecord, and As operators
 A few controls and functions apply formulas to individual records of a table.  To refer to the individual record in a formula, use one of the following:
 
