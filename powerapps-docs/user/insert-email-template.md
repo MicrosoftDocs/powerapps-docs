@@ -75,7 +75,7 @@ The application displays the new email template selection window only if your ad
  - switch between list, tile, and grid views
  - search for out-of-the-box and custom templates by title, subject, description, or content of the template
  - zoom in to view templates in a new window. You can also navigate between templates.
- - Modify the content for a selected template
+ - modify the content for a selected template
 
    ![Email template selection window.](media\email-templates.png "New Email template selection window")
 
