@@ -53,7 +53,7 @@ Once you select **Insert Template**, the following window appears displaying a l
    Legend
   
    2. **search**. You can use search to find a template. You can search for templates based on name, subject, description, or content. Search does not support regular expressions.
-   3. **All templates**. All existing templates that have been created are displayed in this window  which you can browse and choose from.
+   3. **All templates**. All existing templates that have been created are displayed in this window  which you can browse and choose from. Grid and tile view.
    4. **Preview**. When you select an email template, a preview of the template is displayed here. The preview shows you the content so you can pick the template that best meets your needs. After inserting an email template, you can modify the content as needed.
    5. **Apply template** to insert the content to your  email.
 
