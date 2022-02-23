@@ -51,8 +51,8 @@ Once you select **Insert Template**, the following window appears displaying a l
    ![Email template selection window.](media\email-how-to-insert-an-email-template-1b.png "Email template selection window")
 
    Legend
-   1. **Language**. Templates are loaded as per the selected language.
-   2. **search**. You can use search to find a template. Search does not support regular expressions and only works when using the name of that specific template.  
+  
+   2. **search**. You can use search to find a template. You can search for templates based on name, subject, description, or content. Search does not support regular expressions.
    3. **All templates**. All existing templates that have been created are displayed in this window  which you can browse and choose from.
    4. **Preview**. When you select an email template, a preview of the template is displayed here. The preview shows you the content so you can pick the template that best meets your needs. After inserting an email template, you can modify the content as needed.
    5. **Apply template** to insert the content to your  email.
