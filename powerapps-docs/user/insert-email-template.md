@@ -67,7 +67,7 @@ The application displays the default email template selection window only if you
       > If you try to insert an email template on a device with a smaller screen size, you'll only see an option to search and select a template.
 
 
-#### Customized email template selection window
+#### New email template selection window
 
 The application displays the new email template selection window only if your administrator has configured the Enable the New Insert Template Dialog option. You can perform the following actions on the new email template selection window:
 
