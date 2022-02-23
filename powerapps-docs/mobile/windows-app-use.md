@@ -58,7 +58,7 @@ For model-driven apps, you can also select the name of the current app that you'
     > [!div class="mx-imgBorder"] 
     > ![Go back.](media/pam-windows-image4.png)
 
-2.  On the **Apps** sceen select an app. You will only see apps for your organization.
+2.  On the **Apps** screen select an app. You'll only see apps for your organization.
 
     > [!div class="mx-imgBorder"] 
     > ![From the list of apps, select an app.](media/pam-windows-image3.png)
@@ -70,7 +70,7 @@ For model-driven apps, you can also select the name of the current app that you'
     > [!div class="mx-imgBorder"] 
     >![Graphical user interface  application Description automatically generated](media/pam-windows-image5.png)
 
-2.  On the **Apps** screen select an app. You will only see apps for your organization.
+2.  On the **Apps** screen select an app. You'll only see apps for your organization.
 
     > [!div class="mx-imgBorder"] 
     > ![From the list of apps, select an app.](media/pam-windows-image3.png)
