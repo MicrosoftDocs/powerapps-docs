@@ -48,15 +48,16 @@ Once you select **Insert Template**, the following window appears displaying a l
 
 #### Email template selection window
 
-   ![Email template selection window.](media\email-how-to-insert-an-email-template-1b.png "Email template selection window")
+   ![Email template selection window.](media\email-templates.png "Email template selection window")
 
    Legend
   
    2. **search**. You can use search to find a template. You can search for templates based on name, subject, description, or content. Search does not support regular expressions.
-   3. **All templates**. All existing templates that have been created are displayed in this window  which you can browse and choose from. Grid and tile view.
+   3. **All templates**. All existing templates that have been created are displayed in this window  which you can browse and choose from. You can customize the view to display the templates in a grid, list, or tile view. Hover over and click a template icon to zoom in.
    4. **Preview**. When you select an email template, a preview of the template is displayed here. The preview shows you the content so you can pick the template that best meets your needs. After inserting an email template, you can modify the content as needed.
-   5. **Apply template** to insert the content to your  email.
-
+   1. **Filter**. You can filter templates based on the attributes set up by your organization.
+   1. **View**. Use the dropdown to switch between grid, tile, or list views.
+ 
       > [!Note] 
       > If you try to insert an email template on a device with a smaller screen size, you'll only see an option to search and select a template.
       
