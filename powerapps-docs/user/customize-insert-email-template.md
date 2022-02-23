@@ -37,7 +37,7 @@ To configure the new email template for apps across the organization, perform th
 1. Select **Add Existing > More > Setting**.
 1. On the Add existing Setting Definition page, select the **Enable the New Insert Template Dialog** option and select **Next**.
 1. Select **Add** on the Selected Setting Definition page. The **Enable the new Insert Template Dialog** option is added to your solution. Click **Edit**.
-1. Set the **Setting environment value** option to Yes on the The Edit Enable the New Insert Template Dialog page.
+1. Set the **Setting environment value** option to **Yes** on the The Edit Enable the New Insert Template Dialog page.
 1. Select **Publish All Customizations**.
 
 ## Disable the new email template for an app
@@ -46,9 +46,7 @@ To disable the new email template selection window and display the default windo
 
 1. Navigate to **Power Apps** > **Solutions**.
 1. Select the solution created for the email template selection option.
-1. Select **App > Model-driven app**.
-1. Select the app to disable the option.
+1. On the **App > Model-driven app** select the app.
 1. Select **Enable the new Insert Template Dialog** option.
-1. On the Edit Enable the New Insert Template Dialog page, select the New app value option for the specified app.
-1. Specify **No** and click **Save**.
-1. Select **Publish All Customizations**.
+1. On the Edit Enable the New Insert Template Dialog page, select the **New app value** option and specify **No** for the specified app.
+1. Select **Save** and **Publish All Customizations**.
