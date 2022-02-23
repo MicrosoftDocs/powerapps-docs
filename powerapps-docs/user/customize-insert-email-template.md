@@ -34,7 +34,7 @@ To configure the new email template for apps across the organization, perform th
 1. Navigate to **Power Apps** > **Solutions**.
 1. Create a new solution. See [Understand the email experience](../maker/data-platform/create-solution.md)
 1. On the **Solutions** page, go to the solution you created.
-1. Select **Add Existing > More dropdown > Setting**.
+1. Select **Add Existing > More > Setting**.
 1. On the Add existing Setting Definition page, select the **Enable the New Insert Template Dialog** option and select **Next**.
 1. Select **Add** on the Selected Setting Definition page. The **Enable the new Insert Template Dialog** option is added to your solution. Click **Edit**.
 1. Set the **Setting environment value** option to Yes on the The Edit Enable the New Insert Template Dialog page.
@@ -50,5 +50,5 @@ To disable the new email template selection window and display the default windo
 1. Select the app to disable the option.
 1. Select **Enable the new Insert Template Dialog** option.
 1. On the Edit Enable the New Insert Template Dialog page, select the New app value option for the specified app.
-1. Specify No and click Save.
+1. Specify **No** and click **Save**.
 1. Select **Publish All Customizations**.
