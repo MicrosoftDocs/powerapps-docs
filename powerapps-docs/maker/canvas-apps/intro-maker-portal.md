@@ -77,6 +77,8 @@ On the **Apps** page, you can filter the list of apps based on criteria such as 
 
 You can also search for an app by typing one or more characters in the search bar, which appears near the upper-right corner. When you find the app you want, select the banner icon to play or edit the app.
 
+>![NOTE] Apps listed in an environment in make.powerapps.com do not include [apps generated from a SharePoint list](https://docs.microsoft.com/powerapps/maker/canvas-apps/sharepoint-scenario-generate-app) and shared with 'Everyone'.  
+
 ## Create an app, portal, chatbot, or AI model
 
 From the **Home** page, you can create apps, portals, chatbots, and AI models:
