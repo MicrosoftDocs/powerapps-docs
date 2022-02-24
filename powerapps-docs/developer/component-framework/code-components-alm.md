@@ -216,8 +216,8 @@ More information: [Package and distribute extensions using solutions](/powerapps
 
 In addition to manually building and deploying your code component solutions, you can also build and package your code components using automated build pipelines.
 
-- If you're using **Azure DevOps**, you can use the [Microsoft Power Platform Build Tool for Azure DevOps](https://aka.ms/buildtoolsdoc).
-- If you're using **GitHub**, you can use the [Power Platform GitHub Actions](https://aka.ms/PowerActionsDocs).
+- If you're using **Azure DevOps**, you can use the [Microsoft Power Platform Build Tool for Azure DevOps](/power-platform/alm/devops-build-tools).
+- If you're using **GitHub**, you can use the [Power Platform GitHub Actions](/power-platform/alm/devops-github-actions).
 
 Some advantages to using automated build pipelines are:
 
