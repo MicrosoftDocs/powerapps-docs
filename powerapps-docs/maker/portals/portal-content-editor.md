@@ -18,12 +18,12 @@ ms.custom: intro-internal
 
 # Get started with the portal content editor
 
-Users with suitable permissions can add, modify, or delete webpages and their content using the **portal content editor**. The portal content editor appears by default when you sign in to the portal with the administrative permissions to edit the content.
+Users with suitable permissions can add, modify, or delete webpages and their content using the **portal content editor**. The portal content editor appears by default when you sign in to the portal with the administrative permissions to edit the content. 
 
 This document assumes that you have permission to perform these tasks. If you do not, ask your portal administrator to arrange this for you. The permissions can be assigned to individual pages, so be sure to specify which pages you will need to edit.
 
 > [!IMPORTANT]
-> We recommend that you use [Power Apps portals Studio](portal-designer-anatomy.md) to edit the portal.
+> We recommend that you use [Power Apps portals Studio](portal-designer-anatomy.md) to edit the portal. By administrative permissions, it means user is part of default "Administrators" web role and that web role is associated with Web page access control rule such as "Grant Change to Administrators" which has "Grant change" right.
 
 ## Use the portal content editor toolbar
 
