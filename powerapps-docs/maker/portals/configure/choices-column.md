@@ -151,7 +151,7 @@ Body –
 
 ## Known issues
 
-Choices control will not be available in basic and advanced form metadata to apply extra behavior modification logic or override the functionality of form fields.
+Choices control will not be available in [basic and advanced form metadata](configure-basic-form-metadata.md) to apply extra behavior modification logic or override the functionality of form fields.
 
  
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
