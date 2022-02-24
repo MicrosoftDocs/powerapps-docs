@@ -88,7 +88,7 @@ Allows you to insert controls to the screen using the menu at the top, as an alt
 
 ### Add data
 
-![Add data.](media/studio-add-data.png "Add data")
+:::image type="content" source="media/studio-add-data.png" alt-text="Add data.":::
 
 - Create a new table by selecting **Create new table**.
 - Select any other existing tables from the current environment.
