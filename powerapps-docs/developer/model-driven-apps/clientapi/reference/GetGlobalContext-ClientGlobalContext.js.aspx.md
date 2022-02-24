@@ -1,6 +1,6 @@
 ---
 title: "GetGlobalContext function and ClientGlobalContext.js.aspx in model-driven apps| MicrosoftDocs"
-ms.date: 03/22/2021
+ms.date: 02/24/2022
 
 ms.topic: "conceptual"
 ms.assetid: b58e6173-e3cd-4a3b-b39a-334c295503ec
