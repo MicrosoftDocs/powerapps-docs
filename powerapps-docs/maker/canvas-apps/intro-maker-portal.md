@@ -76,7 +76,7 @@ On the **Apps** page, you can filter the list of apps based on criteria such as 
 
 You can also search for an app by typing one or more characters in the search bar, which appears near the upper-right corner. When you find the app you want, select the banner icon to play or edit the app.
 
-> ![NOTE]
+> [!NOTE]
 > [Power Apps](https://make.powerapps.com) won’t show canvas apps connecting to SharePoint that are only shared with **Everyone**, unless:
 > - You’re the creator of the app.
 > <br> Or
