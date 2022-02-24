@@ -108,6 +108,298 @@ Only the following attribute types are supported when doing a `Xrm.WebApi.retrie
 - Status
 - String
 
+## Supported Filter Operations Per Attribute Type in Mobile Offline
+<table style="width:100%">
+  <tr>
+    <th>Attribute Type</th>
+    <th>Supported Operations</th>
+  </tr>
+  <tr>
+    <td>BigInt</td>
+    <td>
+      <ul>
+        <li>Equals</li>
+        <li>Not Equals</li>
+        <li>Null</li>
+        <li>Not Null</li>
+        <li>Greater Than</li>
+        <li>Greater Than or Equals</li>
+        <li>Less Than</li>
+        <li>Less Than or Equals</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>Boolean</td>
+    <td>
+      <ul>
+        <li>Equals</li>
+        <li>Not Equals</li>
+        <li>Null</li>
+        <li>Not Null</li>
+        <li>In</li>
+        <li>Not In</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>Customer</td>
+    <td>
+      <ul>
+        <li>Equals</li>
+        <li>Not Equals</li>
+        <li>Null</li>
+        <li>Not Null</li>
+        <li>In</li>
+        <li>Not In</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>DateTime</td>
+    <td>
+      <ul>
+        <li>On Or After</li>
+        <li>On</li>
+        <li>On Or Before</li>
+        <li>Today</li>
+        <li>Tomorrow</li>
+        <li>Yesterday</li>
+        <li>Next 7 Days</li>
+        <li>Last 7 Days</li>
+        <li>Next Week</li>
+        <li>Last Week</li>
+        <li>This Week</li>
+        <li>Next Month</li>
+        <li>Last Month</li>
+        <li>This Month</li>
+        <li>Next Year</li>
+        <li>Last Year</li>
+        <li>This Year</li>
+        <li>Last X Days</li>
+        <li>Next X Days</li>
+        <li>Last X Weeks</li>
+        <li>Next X Weeks</li>
+        <li>Last X Months</li>
+        <li>Next X Months</li>
+        <li>Last X Years</li>
+        <li>Next X Years</li>
+        <li>Anytime</li>
+        <li>Null</li>
+        <li>Not Null</li>
+        <li>Equal</li>
+        <li>Not Equal</li>
+        <li>Greater Than</li>
+        <li>Greater Than Or Equal</li>
+        <li>Less Than</li>
+        <li>Less Than Or Equal</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>Decimal</td>
+    <td>
+      <ul>
+        <li>Equals</li>
+        <li>Not Equals</li>
+        <li>Null</li>
+        <li>Not Null</li>
+        <li>Greater Than</li>
+        <li>Greater Than or Equals</li>
+        <li>Less Than</li>
+        <li>Less Than or Equals</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>Double</td>
+    <td>
+      <ul>
+        <li>Equals</li>
+        <li>Not Equals</li>
+        <li>Null</li>
+        <li>Not Null</li>
+        <li>Greater Than</li>
+        <li>Greater Than or Equals</li>
+        <li>Less Than</li>
+        <li>Less Than or Equals</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>EntityName</td>
+    <td>
+      <ul>
+        <li>Equals</li>
+        <li>Not Equals</li>
+        <li>Null</li>
+        <li>Not Null</li>
+        <li>Like</li>
+        <li>Not Like</li>
+        <li>Begins With</li>
+        <li>Not Begin With</li>
+        <li>Ends With</li>
+        <li>Not End With</li>
+        <li>In</li>
+        <li>Not In</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>Guid</td>
+    <td>
+      <ul>
+        <li>Equals</li>
+        <li>Not Equals</li>
+        <li>Null</li>
+        <li>Not Null</li>
+        <li>In</li>
+        <li>Not In</li>
+        <li>Equals User Id</li>
+        <li>Not Equals User Id</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>Integer</td>
+    <td>
+      <ul>
+        <li>Equals</li>
+        <li>Not Equals</li>
+        <li>Null</li>
+        <li>Not Null</li>
+        <li>Greater Than</li>
+        <li>Greater Than or Equals</li>
+        <li>Less Than</li>
+        <li>Less Than or Equals</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>Lookup</td>
+    <td>
+      <ul>
+        <li>Equals</li>
+        <li>Not Equals</li>
+        <li>Null</li>
+        <li>Not Null</li>
+        <li>In</li>
+        <li>Not In</li>
+        <li>Equals User Id</li>
+        <li>Not Equals User Id</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>Money</td>
+    <td>
+      <ul>
+        <li>Equals</li>
+        <li>Not Equals</li>
+        <li>Null</li>
+        <li>Not Null</li>
+        <li>Greater Than</li>
+        <li>Greater Than or Equals</li>
+        <li>Less Than</li>
+        <li>Less Than or Equals</li>
+        <li>In</li>
+        <li>Not In</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>Owner</td>
+    <td>
+      <ul>
+        <li>Equals</li>
+        <li>Not Equals</li>
+        <li>Null</li>
+        <li>Not Null</li>
+        <li>In</li>
+        <li>Not In</li>
+        <li>Equals User Id</li>
+        <li>Not Equals User Id</li>
+        <li>Equals User Or Team</li>
+        <li>Not Equals User Or Team</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>Picklist</td>
+    <td>
+      <ul>
+        <li>Equals</li>
+        <li>Not Equals</li>
+        <li>Null</li>
+        <li>Not Null</li>
+        <li>Like</li>
+        <li>Not Like</li>
+        <li>Begins With</li>
+        <li>Not Begin With</li>
+        <li>Ends With</li>
+        <li>Not End With</li>
+        <li>In</li>
+        <li>Not In</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>State</td>
+    <td>
+      <ul>
+        <li>Equals</li>
+        <li>Not Equals</li>
+        <li>Null</li>
+        <li>Not Null</li>
+        <li>Like</li>
+        <li>Not Like</li>
+        <li>Begins With</li>
+        <li>Not Begin With</li>
+        <li>Ends With</li>
+        <li>Not End With</li>
+        <li>In</li>
+        <li>Not In</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>Status</td>
+    <td>
+      <ul>
+        <li>Equal</li>
+        <li>Not Equals</li>
+        <li>Null</li>
+        <li>Not Null</li>
+        <li>Like</li>
+        <li>Not Like</li>
+        <li>Begins With</li>
+        <li>Not Begin With</li>
+        <li>Ends With</li>
+        <li>Not End With</li>
+        <li>In</li>
+        <li>Not In</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>String</td>
+    <td>
+      <ul>
+        <li>Equals</li>
+        <li>Not Equals</li>
+        <li>Null</li>
+        <li>Not Null</li>
+        <li>Like</li>
+        <li>Not Like</li>
+        <li>Begins With</li>
+        <li>Not Begin With</li>
+        <li>Ends With</li>
+        <li>Not End With</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
 ## Examples
 
 Most of the scenarios/examples mentioned in [Query Data using the Web API](../../../../data-platform/webapi/query-data-web-api.md) can be achieved using the **retrieveMultipleRecords** method. Some of the examples are listed below.
