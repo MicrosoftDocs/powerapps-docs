@@ -39,8 +39,8 @@ If you're running into issues using Power Apps, try these common troubleshooting
 
     [Power Apps](https://make.powerapps.com) won’t show canvas apps connecting to SharePoint that are only shared with **Everyone**, unless:
     - You’re the creator of the app.
-    <br>Or
-    - You’re explicitly shared the app with (as a user, or co-owner) through a group membership, or directly through user assignment. <br>
+    <br> Or
+    - You’re explicitly shared the app with (as a user, or as a co-owner) through a group membership, or directly through the user assignment. <br>
 
     To play such apps, use the direct link to the app.
 
