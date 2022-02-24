@@ -2,11 +2,10 @@
 title: Sign in to Power Apps for the first time
 description: Learn about signing in to Power Apps for the first time, choosing an environment, creating an app, playing or editing an app, and other common tasks.
 author: alaug
-
 ms.topic: conceptual
 ms.custom: intro-internal
 ms.reviewer: 
-ms.date: 01/27/2022
+ms.date: 02/23/2022
 ms.subservice: canvas-maker
 ms.author: alaug
 search.audienceType: 
@@ -77,7 +76,13 @@ On the **Apps** page, you can filter the list of apps based on criteria such as 
 
 You can also search for an app by typing one or more characters in the search bar, which appears near the upper-right corner. When you find the app you want, select the banner icon to play or edit the app.
 
->![NOTE] Apps listed in an environment in make.powerapps.com do not include [apps generated from a SharePoint list](https://docs.microsoft.com/powerapps/maker/canvas-apps/sharepoint-scenario-generate-app) and shared with 'Everyone'.  
+> ![NOTE]
+> [Power Apps](https://make.powerapps.com) won’t show canvas apps connecting to SharePoint that are only shared with **Everyone**, unless:
+> - You’re the creator of the app.
+> <br> Or
+> - You’re explicitly shared the app with (as a user, or co-owner) through a group membership, or directly through user assignment. <br>
+>
+> To play such apps, use the direct link to the app.
 
 ## Create an app, portal, chatbot, or AI model
 
