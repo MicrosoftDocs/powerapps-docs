@@ -16,21 +16,21 @@ contributors:
 
 # Configure column permissions
 
-[Table permissions](assign-entity-permissions.md) are used to apply security in portals to individual Dataverse table records. You can add **column permissions** to individual table columns. Column permissions are an optional configuration that are associated with [web roles](create-web-roles.md).
+In portals, [table permissions](assign-entity-permissions.md) are used to apply security to individual Dataverse table records. You can add column permissions to individual table columns. Column permissions are an optional configuration that you associate with [web roles](create-web-roles.md).<!--note from editor: Edit okay?-->
 
 > [!NOTE]
 > Column permissions are currently only applicable for [portal Web API](../web-api-overview.md) features.
 
-Web roles can have any number of table permissions and column permissions. If web role has multiple column permissions, then all column permissions are applied to the selected web role.
+Web roles can have any number of table permissions and column permissions. If a web role has multiple column permissions, all column permissions are applied to the selected web role.<!--note from editor: I'm not sure what this means. Can it say "If a web role has multiple column permissions, all of those column permissions are applied to the selected web role."? And if that's what this means, is it really worth saying?-->
 
-When evaluating the permissions, table permissions are evaluated first. If a user has access to table then respective table's column permissions will be applied. If the user doesn't have access to table, then any column permissions configuration will be ignored.
+When permissions are evaluated, table permissions are evaluated first. If a user has access to a table, the table's column permissions will be applied. If the user doesn't have access to the table, any configured column permissions will be ignored.
 
-When no column permissions are defined, then corresponding table permissions will apply to all columns.
+When no column permissions are defined, the corresponding table permissions will apply to all columns.
 
 > [!Important]
 > This feature requires the following versions for starter portal package and portal host:
-> - Portal host version 9.4.1.x or later.
-> - Starter portal package version 9.3.2201.x or later.
+> - Portal host version 9.4.1.*x* or later.
+> - Starter portal package version 9.3.2201.*x* or later.
 
 ## Add column permissions to a web role
 
@@ -40,9 +40,11 @@ When no column permissions are defined, then corresponding table permissions wil
 
 1. Under **Related**, select **Column Permission Profiles**.
 
-1. Select **Add Existing Column Permission Profiles** to add an existing column permission to a web role.
+1. Do one of the following:<!--note from editor: Edits assume that this is actually a fork in the road rather than a sequence of steps that must all be taken.--
 
-1. Browse for a column permission profile or select **New Column Permission Profiles** to create a new column permission profile record.
+   1. To add an existing column permission to the web role, select **Add Existing Column Permission Profiles**, and then browse to the record you want.
+
+   1. To create a new column permission profile record, select **New Column Permission Profiles**.
 
     :::image type="content" source="media/column-permissions/column-permission-profiles.png" alt-text="Adding column permission profiles.":::
 
@@ -54,33 +56,33 @@ The following table explains the table permission attributes.
 
 | **Name** | **Description** |
 |-------------------------|-------------------------|
-| Profile Name | The descriptive name of the record. This field is required. |
-| Table Name | The logical name of the table that column is to be secured. This field is required. |
+| Profile Name | The descriptive name of the table record. This field is required. |
+| Table Name | The logical name of the table in which the column is to be secured. This field is required. |
 | Website | The associated website. This field is required. |
-| All Column Permissions | This setting will allow users to limit table permission access scope. It's a multiple selection field. For example, the table permission allows the user to **Create**, **Read** all columns. Using this setting, you can further limit to only read permissions for all columns.</br></br>Available permissions:<ul><li>Create</li><li>Read</li><li>Update</li></ul></br>This configuration is useful when you want a specific web role to be able to read all contact fields but allow updates to the first name, and last name columns. You have to select **Read** option for the **All Column Permissions** setting and create column permission records for the first name, and last name columns with read and update permissions. |
-| Column Permissions | The associated column permissions. This allows users to define specific permissions for table columns. Columns not defined here will follow the **All Column Permissions** setting. |
+| All Column Permissions | Available permissions:<ul><li>Create</li><li>Read</li><li>Update</li></ul>This setting allows users to limit the scope of table permission access. It's a multiple selection field.<br><br>For example, the table permissions might allow a user Create and Read permissions on all columns. Using this setting, you can further limit users to only Read permissions for all columns.</br></br>In another example, you might want a specific web role to be able to read all contact fields but you also want to allow the web role to update the first name and last name columns. In this case, you select the **Read** option for the **All Column Permissions** setting, and create column permission profiles<!--note from editor: Edit okay? They were called "profiles" in the procedure earlier in this article.--> for the First Name and Last Name columns with Read and Update permissions. |
+| Column Permissions | The associated column permissions. This allows users to define specific permissions for table columns. Columns that aren't defined here will follow the **All Column Permissions** setting. |
 | Web Roles | The associated web roles. |
 
 ## Examples
 
-In this example, we have the contact table with the columns; *JobTitle* and *Salary*.
+In this example, we have a contact table with the columns **JobTitle** and **Salary**.
 
-The following table demonstrates the result of applying different column and table permissions to the contact table and the additional columns.
+The following table shows the result of applying different column and table permissions to the contact table and the additional columns.
 
-| **Table Permission** | **Site Setting**<br><em>**Webapi/contact/enabled**</em> | **Site Setting**<br><em>**Webapi/contact/fields**</em> | **Column Permission** | **Scenario** |
+| **Table permission** | **Site  setting**<br><em>**Webapi/contact/enabled**</em> | **Site setting**<br><em>**Webapi/contact/fields**</em> | **Column permission** | **Scenario** |
 |-------------------------|-------------------------|-------------------------|-------------------------|-------------------------|
-| Contact (Create, Read, Update) | TRUE |  |  | User will not have any permissions to the columns. |
-| Contact (Create, Read, Update) | FALSE |  |  | User will not have any permissions to the columns. |
-| Contact (&lt;none&gt;) | TRUE | * | **All Column Permissions:** Create, Read, Update</br>**Column Permissions:** &lt;none&gt; | User will not have any permissions to the columns. |
-| Contact (Create, Read, Update) | TRUE | * |  | User will have Create, Read, Update permissions on all contact table columns. |
-| Contact (Create, Read, Update) | TRUE |  | **All Column Permissions:** Create, Read, Update</br>**Column Permissions:** &lt;none&gt; | User will not have any permissions to the columns. |
-| Contact (Create, Read, Update) | TRUE | * | **All Column Permissions:** &lt;none&gt;</br>**Column Permissions:**</br><ul></br><li>**JobTitle:** Read</li></br></ul> | User will have Read on JobTitle and Create, Read, Update on all the other columns. |
-| Contact (Create, Read, Update) | TRUE | * | **All Column Permissions:** Read</br>**Column Permissions:**</br><ul></br><li>**JobTitle:** Create, Read, Update</li></br></ul> | User will have Create, Read, Update on JobTitle and only Read on all the other columns. |
-| Contact (Create, Read, Update) | TRUE | JobTitle, Salary |  | User will have Create, Read, Update on JobTitle and Salary. |
-| Contact (Create, Read, Update) | TRUE | JobTitle, Salary | **All Column Permissions:** Create, Read, Update</br>**Column Permissions:** &lt;none&gt; | User will have Create, Read, Update on JobTitle and Salary, no permission on other columns. |
-| Contact (Create, Read, Update) | TRUE | JobTitle, Salary | **All Column Permissions:** &lt;none&gt;</br>**Column Permissions:**</br><ul></br><li>**JobTitle:** Create, Read, Update</li></br><li>**Salary:** Create, Read, Update</li></br></ul> | User will have Create, Read, Update on JobTitle and Salary. |
-| Contact (Create, Read, Update) | TRUE | JobTitle | **All Column Permissions:** &lt;none&gt;</br>**Column Permissions:**</br><ul></br><li>**JobTitle:** Create, Read, Update</li></br><li>**Salary:** Create, Read, Update</li></br></ul> | User will have Create, Read, Update on JobTitle and no permission on Salary. |
-| Contact (Create, Read, Update) | TRUE | JobTitle, Salary | **All Column Permissions:** &lt;none&gt;</br>**Column Permissions:**</br><ul></br><li>**JobTitle:** Create, Read, Update</li></br><li>**Salary:** Read</li></br></ul> | User will have Create, Read, Update on JobTitle, and Read on Salary. |
+| Contact (Create, Read, Update) | TRUE |  |  | The user won't have any permissions to the columns. |
+| Contact (Create, Read, Update) | FALSE |  |  | The user won't have any permissions to the columns. |
+| Contact (&lt;none&gt;) | TRUE | *<!--note from editor: What does this asterisk (and the others in this column) signify? I assume it indicates a footnote, so we need to add the  what should the footnote say:--> | **All Column Permissions:** Create, Read, Update</br>**Column Permissions:** &lt;none&gt; | The user won't have any permissions to the columns. |
+| Contact (Create, Read, Update) | TRUE | * |  | The user will have Create, Read, and Update permissions on all contact table columns. |
+| Contact (Create, Read, Update) | TRUE |  | **All Column Permissions:** Create, Read, Update</br>**Column Permissions:** &lt;none&gt; | The user won't have any permissions to the columns. |
+| Contact (Create, Read, Update) | TRUE | * | **All Column Permissions:** &lt;none&gt;</br>**Column Permissions:**</br><ul></br><li>**JobTitle:** Read</li></br></ul> | The user will have Read on JobTitle and Create, Read, and Update on all the other columns. |
+| Contact (Create, Read, Update) | TRUE | * | **All Column Permissions:** Read</br>**Column Permissions:**</br><ul></br><li>**JobTitle:** Create, Read, Update</li></br></ul> | The user will have Create, Read, and Update on JobTitle and only Read on all the other columns. |
+| Contact (Create, Read, Update) | TRUE | JobTitle, Salary |  | The user will have Create, Read, and Update on JobTitle and Salary. |
+| Contact (Create, Read, Update) | TRUE | JobTitle, Salary | **All Column Permissions:** Create, Read, Update</br>**Column Permissions:** &lt;none&gt; | The user will have Create, Read, and Update on JobTitle and Salary, no permission on other columns. |
+| Contact (Create, Read, Update) | TRUE | JobTitle, Salary | **All Column Permissions:** &lt;none&gt;</br>**Column Permissions:**</br><ul></br><li>**JobTitle:** Create, Read, Update</li></br><li>**Salary:** Create, Read, Update</li></br></ul> | The user will have Create, Read, and Update on JobTitle and Salary. |
+| Contact (Create, Read, Update) | TRUE | JobTitle | **All Column Permissions:** &lt;none&gt;</br>**Column Permissions:**</br><ul></br><li>**JobTitle:** Create, Read, Update</li></br><li>**Salary:** Create, Read, Update</li></br></ul> | The user will have Create, Read, and Update on JobTitle and no permission on Salary. |
+| Contact (Create, Read, Update) | TRUE | JobTitle, Salary | **All Column Permissions:** &lt;none&gt;</br>**Column Permissions:**</br><ul></br><li>**JobTitle:** Create, Read, Update</li></br><li>**Salary:** Read</li></br></ul> | The user will have Create, Read, and Update on JobTitle and Read on Salary. |
 
 ### See also
 
