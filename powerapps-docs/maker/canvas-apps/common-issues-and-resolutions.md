@@ -2,11 +2,10 @@
 title: Common issues and resolutions for Power Apps
 description: A list of common issues and resolutions within Power Apps.
 author: KumarVivek
-
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 01/31/2022
+ms.date: 02/23/2022
 ms.subservice: troubleshoot
 ms.author: kvivek
 search.audienceType: 
@@ -24,6 +23,7 @@ This article lists some common issues that you might encounter while using Power
 > [!NOTE]
 > - For help with performance problems in canvas apps, read the topics under the canvas apps [performance and optimization](execution-phases-data-flow.md) section.
 > - If you're having trouble accessing or starting Power Apps, read [troubleshooting startup issues](../../troubleshooting-startup-issues.md) section for help.
+> - See [Next steps](#next-steps) later in this article if you can't find the issue you're looking details for.
 
 ## General Troubleshooting
 If you're running into issues using Power Apps, try these common troubleshooting steps first.
@@ -35,7 +35,15 @@ If you're running into issues using Power Apps, try these common troubleshooting
 
 ## Known Issues
 
-   
+1. **Canvas apps using SharePoint connector** (February 23, 2022)
+
+    [Power Apps](https://make.powerapps.com) won’t show canvas apps connecting to SharePoint that are only shared with **Everyone**, unless:
+    - You’re the creator of the app.
+    <br>Or
+    - You’re explicitly shared the app with (as a user, or co-owner) through a group membership, or directly through user assignment. <br>
+
+    To play such apps, use the direct link to the app.
+
 1. **Problems with canvas app screen sizes** (April 27, 2021)
 
    Starting with Power Apps 3.21032, screens in some apps may be displaying unexpected dimensions or are not visible entirely. Check the affected screens' Height and Width properties and make sure they are set to an appropriate value, such as the default (`Max(App.Height, App.MinScreenHeight)` for Height, `Max(App.Width, App.MinScreenWidth)` for Width). A fix has already been deployed for screens that have a blank Height or Width. If you're still experiencing issues with the size of screens or the controls on them, the app may have been saved or auto-saved into the error state. Such apps can be restored to an earlier version via the portal, and the deployed fix will be applied the next time the app is opened for editing.
@@ -224,7 +232,6 @@ If you're running into issues using Power Apps, try these common troubleshooting
 ## Next steps
 
 If your issue isn't listed in this article, you can [search for more support resources](https://powerapps.microsoft.com/support), or contact [Microsoft support](https://admin.powerplatform.microsoft.com/support). More information: [Get Help + Support](/power-platform/admin/get-help-support)
-
 
 
 ### See also
