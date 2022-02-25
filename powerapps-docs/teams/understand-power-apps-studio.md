@@ -122,7 +122,7 @@ Configure the app's general settings.
 
 Shows app name, and allows changing the app icon. To update the icon, select a new icon or background color. To add or update description, enter text in the text box. You can also upload a custom icon for the app using the **Browse** option.
 
-### Display
+#### Display
 
 Shows the screen size and orientation. To change, select the radio buttons for **Orientation** and **Size**.
 
@@ -492,6 +492,12 @@ If you want to reference more media, consider using [audio and video controls wi
 using media from [Azure Media Services](../maker/canvas-apps/add-images-pictures-audio-video.md#add-media-from-azure-media-services),
 or from [Microsoft Stream](../maker/canvas-apps/controls/control-stream-video.md#example).
 More information: [Using multimedia files in Power Apps](../maker/canvas-apps/add-images-pictures-audio-video.md)
+
+### Power Automate
+
+### Advanced tools
+
+### Search
 
 ## 9 – Canvas/screen
 
