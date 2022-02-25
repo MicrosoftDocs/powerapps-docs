@@ -46,30 +46,9 @@ Once you select **Insert Template**, the following window appears displaying a l
 > - Recipient (TO): user (global) and contact templates are displayed.
 > - Regarding: user (global) and templates for the regarding entity are shown.
 
-#### Email template selection window
-
-The application displays the default email template selection window only if your administrator has disabled the Enable the New Insert Template Dialog option. You can perform the following actions:
-
-- Select a language.
-- Search for templates by title.
-- Modify the content for a selected template.
-
-   ![Email template selection window.](media\email-how-to-insert-an-email-template-1b.png "Email template selection window")
-
-   Legend
-   1. **Language**. Templates are loaded as per the selected language.
-   2. **search**. You can use search to find a template. Search does not support regular expressions and only works when using the name of that specific template.  
-   3. **All templates**. All existing templates that have been created are displayed in this window  which you can browse and choose from.
-   4. **Preview**. When you select an email template, a preview of the template is displayed here. The preview shows you the content so you can pick the template that best meets your needs. After inserting an email template, you can modify the content as needed.
-   5. **Apply template** to insert the content to your  email.
-
-      > [!Note] 
-      > If you try to insert an email template on a device with a smaller screen size, you'll only see an option to search and select a template.
-
-
 #### New email template selection window
 
-The application displays the new email template selection window only if your administrator has configured the Enable the New Insert Template Dialog option. You can perform the following actions on the new email template selection window:
+The application displays the new email template selection window only if your administrator has configured the [enhanced insert template dialog](customize-insert-email-template.md) option. You can perform the following actions on the new email template selection window:
 
  - filter templates based on standard and customized attributes
  - switch between list, tile, and grid views
@@ -87,6 +66,26 @@ The application displays the new email template selection window only if your ad
    4. **Filter**. You can filter templates based on the attributes set up by your organization.
    5. **View**. Use the dropdown to switch between grid, tile, or list views.
  
+      > [!Note] 
+      > If you try to insert an email template on a device with a smaller screen size, you'll only see an option to search and select a template.
+  
+#### Email template selection window
+
+You can perform the following actions on the email template selection window:
+
+- Select a language.
+- Search for templates by title.
+- Modify the content for a selected template.
+
+   ![Email template selection window.](media\email-how-to-insert-an-email-template-1b.png "Email template selection window")
+
+   Legend
+   1. **Language**. Templates are loaded as per the selected language.
+   2. **search**. You can use search to find a template. Search does not support regular expressions and only works when using the name of that specific template.  
+   3. **All templates**. All existing templates that have been created are displayed in this window  which you can browse and choose from.
+   4. **Preview**. When you select an email template, a preview of the template is displayed here. The preview shows you the content so you can pick the template that best meets your needs. After inserting an email template, you can modify the content as needed.
+   5. **Apply template** to insert the content to your  email.
+
       > [!Note] 
       > If you try to insert an email template on a device with a smaller screen size, you'll only see an option to search and select a template.
       
