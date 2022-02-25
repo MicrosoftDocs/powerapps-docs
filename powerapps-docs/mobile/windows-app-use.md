@@ -164,9 +164,7 @@ With Dataverse search, the search box is always available at the top of every pa
 
 ## Limitations and know issues
 
--   Power Apps for Windows doesn't display the connection consent dialog instead consents silently by default. For information: [Overview of connectors for canvas apps](/maker/canvas-apps/connections-list#connection-consent-dialog)
-
--   The app doesn't support advanced controls such as [microphone](/maker/canvas-apps/controls/control-microphone), [attachments](/maker/canvas-apps/controls/control-attachments) , [sensors](/maker/canvas-apps/how-to/mobile-sensors), [location](/maker/canvas-apps/functions/signals#location), [barcode scanner](/maker/canvas-apps/controls/control-new-barcode-scanner), [Power BI tile](/maker/canvas-apps/controls/control-power-bi-tile), and [Microsoft Stream video](/maker/canvas-apps/controls/control-stream-video).
+-   The app doesn't support advanced controls such as [sensors](/maker/canvas-apps/how-to/mobile-sensors) and [location](/maker/canvas-apps/functions/signals#location).
 
 -   The app doesn't support push notifications. More information: [Create push notifications for Power Apps mobile](power-apps-mobile-notification.md)
 
@@ -176,4 +174,3 @@ With Dataverse search, the search box is always available at the top of every pa
 
 -   The app doesn't support [guest access](/maker/canvas-apps/share-app-guests)
 
--   Clear the app cache
