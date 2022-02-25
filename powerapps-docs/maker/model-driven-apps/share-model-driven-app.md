@@ -188,7 +188,7 @@ To get the direct link to an app:
 
 These predefined roles are available with Dataverse.
 
-|Security role  |*Privileges  |Description |
+|Security role  |Privileges<sup>1</sup>  |Description |
 |---------|---------|---------|
 |Environment Maker     |  None       | Can create new resources associated with an environment including apps, connections, custom APIs, gateways, and flows using Power Automate. However, does not have any privileges to access data within an environment. More information: [Environments overview](https://powerapps.microsoft.com/blog/powerapps-environments/)        |
 |System Administrator     |  Create, Read, Write, Delete, Customizations, Security Roles       | Has full permission to customize or administer the environment, including creating, modifying, and assigning security roles. Can view all data in the environment. More information: [Privileges required for customization](/dynamics365/customer-engagement/customize/privileges-required-customization)        |
@@ -196,7 +196,7 @@ These predefined roles are available with Dataverse.
 |Basic User     |  Read, Create (self), write (self), delete (self)       | Can run an app within the environment and perform common tasks for the records that they own.        |
 |Delegate     | Act on behalf of another user        | Allows code to run as another user or impersonate.  Typically used with another security role to allow access to records. More information: [Impersonate another user](/dynamics365/customer-engagement/developer/org-service/impersonate-another-user)        |
 
-*Privilege is global scope unless specified otherwise.
+<sup>1</sup>Privilege is global scope unless specified otherwise.
 
 ## Use Azure Active Directory groups to manage access
 
