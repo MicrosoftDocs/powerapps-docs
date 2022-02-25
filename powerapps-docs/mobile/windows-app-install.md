@@ -4,7 +4,7 @@ description: Install Power Apps for Windows (preview).
 author: mduelae
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 02/18/2022
+ms.date: 02/25/2022
 ms.subservice: mobile
 ms.author: mkaur
 ms.custom: ""
@@ -32,14 +32,14 @@ Install Power Apps for Windows to run model-driven app or canvas app on your Win
 
 ### Webview2 Runtime
 
-If you don't have have WebView2 Runtime installed, you may encounter the following errow: **Update Microsoft Edge**
+If you don't have WebView2 Runtime installed, you may encounter the following error message: **Update Microsoft Edge**
 
 > [!div class="mx-imgBorder"]
 > ![WebView2 Runtime errow.](media/webview2.png "WebView2")
 
 You need to have administrator rights on your Windows device to install WebView2. If you don't have administrator rights, then your administrator will need to install it for you. Without WebView2 Runtime, you won't be able to run your apps on Power Apps for Windows.
 
-1. To install Webview Runtime, [download the WebView2 Runtime](https://developer.microsoft.com/microsoft-edge/webview2/#download-section).
+1. To install WebView2 Runtime, [download the WebView2 Runtime](https://developer.microsoft.com/microsoft-edge/webview2/#download-section).
 2. Download version 99.0 or later. Installing an earlier version may cause Power Apps to crash.
 3. Under **Evergreen Bootstrapper**, select **Download**.
 4. Go over the license terms and privacy statement and then select **Accept and Download**.
