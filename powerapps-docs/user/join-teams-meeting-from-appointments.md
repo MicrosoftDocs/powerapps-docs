@@ -37,7 +37,7 @@ This is a preview feature. Your system administrator will need to turn on the **
 2. From the list of activities, select an existing appointment or select **Appointment** on the command bar to create a new one.
    > [!div class="mx-imgBorder"] 
    > ![Open or create a new appointment.](media/teams-meeting-appt.png)   
-4. In the **Details** section, set the **Teams meeting** toggle to, **Yes**.
+4. Enter the required information and in the **Details** section, set the **Teams meeting** toggle to, **Yes**.
    > [!div class="mx-imgBorder"] 
    > ![Add a Teams meeting to an appointment.](media/teams-meeting-appt-1.png)  
 6. When you're done, select **Save**.
