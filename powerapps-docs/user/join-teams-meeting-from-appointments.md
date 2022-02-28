@@ -28,13 +28,13 @@ This is a preview feature. Your system administrator will need to turn on the **
 > ![The diagram shows how to add a Teams meeting to an appointment and then join the meeting.](media/teams-meeting-in-appt.gif)
 
 > [!NOTE]
-> When this feature is enabled, the **Description** field in a appointment also supports editing and viewing in rich text.
+> When this feature is enabled, the **Description** field in an appointment also supports editing and viewing in rich text.
 
 
 ### Add a Teams meeting to an appointment 
 
 1. From the left navigation pane, select **Activities**.
-2. From the list of activites, selelect an existing  appointment or select **Appointment** on the command bar to create a new one.
+2. From the list of activities, select an existing appointment or select **Appointment** on the command bar to create a new one.
    > [!div class="mx-imgBorder"] 
    > ![Open or create a new appointment.](media/teams-meeting-appt.png)   
 4. In the **Details** section, set the **Teams meeting** toggle to, **Yes**.
@@ -45,7 +45,7 @@ This is a preview feature. Your system administrator will need to turn on the **
 
 ### Join a Teams meeting from an appointment
 
-1. Open a appointment activity. 
+1. Open an appointment activity. 
 2. Choose one of the following ways to join the meeting:
      - On the command bar select, **Join Teams Meeting**.
      - From the **Details** section, select the **Join Teams Meeting** link. 
