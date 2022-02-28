@@ -20,20 +20,26 @@ search.app:
 ---
 # Create and join a Teams meeting from an appointment (preview)
 
-You can now create and join a Teams meeting from an appointment in your model-driven app.
+Now you can create and join a Teams meeting from an appointment in your model-driven app.
 
-![The diagram shows how to add a Teams meeting to an appointment and then join the meeting.](media/teams-meeting-in-appt.gif)
+> [!div class="mx-imgBorder"] 
+> ![The diagram shows how to add a Teams meeting to an appointment and then join the meeting.](media/teams-meeting-in-appt.gif)
 
 > [!NOTE]
-> - This is a preview feature. Your system administrator needs to turn on the Collaboration feature called **End users can add and join Teams meeting from appointments in model-driven apps**  in your environment. For information, see [Manage feature settings](/power-platform/admin/settings-features).
+> - This is a preview feature. Your system administrator will need to turn on the Collaboration feature called **End users can add and join Teams meeting from appointments in model-driven apps**  in your environment. For information, see [Manage feature settings](/power-platform/admin/settings-features).
 > - When this feature is enabled, the **Description** field in a appointment also supports editing and viewing in rich text.
 
 
-### Add a Teams meeting to an appointment activity
+### Add a Teams meeting to an appointment 
 
-1. Open or create an new appointment. 
-2. In the **Details** section, set the **Teams meeting** toggle to, **Yes**.
-3. When you're done, select **Save**.
+1. From the left navigation pane, select **Activities**.
+2. From the list of activites, selelect an existing  appointment or select **Appointment** on the command bar to create a new one.
+   > [!div class="mx-imgBorder"] 
+   > ![Open or create a new appointment.](media/teams-meeting-appt.png)   
+4. In the **Details** section, set the **Teams meeting** toggle to, **Yes**.
+   > [!div class="mx-imgBorder"] 
+   > ![Add a Teams meeting to an appointment.](media/teams-meeting-appt-1.png)  
+6. When you're done, select **Save**.
 
 
 ### Join a Teams meeting from an appointment
@@ -43,6 +49,11 @@ You can now create and join a Teams meeting from an appointment in your model-dr
      - On the command bar select, **Join Teams Meeting**.
      - From the **Details** section, select the **Join Teams Meeting** link. 
      - Scroll down the **Description** section of the appointment and select, **Click here to join the meeting**.
-3. Select how you want to the Teams meeting.
+     
+       > [!div class="mx-imgBorder"] 
+       > ![Join a Teams meeting from an appointment.](media/teams-meeting-appt-2.png)  
 
+3. Follow the instructions on your screen and choose how you want to join the Teams meeting. 
+   > [!div class="mx-imgBorder"] 
+   > ![Choose how you want to join the Teams meeting.](media/teams-meeting-appt-3.png)  
 
