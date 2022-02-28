@@ -22,7 +22,7 @@ search.app:
 
 You can now create and join a Teams meeting from an appointment in your model-driven app.
 
-![The diagram shows how to add a Teams meeting to an appointment and then join the meeting.](media/teams-meeting.gif)
+![The diagram shows how to add a Teams meeting to an appointment and then join the meeting.](media/teams-meeting-in-appt.gif)
 
 > [!NOTE]
 > - This is a preview feature. Your system administrator needs to turn on the Collaboration feature called **End users can add and join Teams meeting from appointments in model-driven apps**  in your environment. For information, see [Manage feature settings](/power-platform/admin/settings-features).
