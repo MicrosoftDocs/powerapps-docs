@@ -4,7 +4,7 @@ description: "Learn about common elements and characteristics, calculated column
 ms.custom: ""
 ms.date: 03/12/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID
 ms.subservice: dataverse-developer
@@ -75,7 +75,7 @@ search.app:
   
  Only columns from an immediate parent table can be used in a calculated column.  
   
- Saved queries, charts, and visualizations can have a maximum of 10 unique calculated columns.  
+ Saved queries, charts, and visualizations can have a maximum of 50 unique calculated columns.  
   
  Calculated columns can reference other calculated columns in their formula, but they can’t reference themselves.  
   

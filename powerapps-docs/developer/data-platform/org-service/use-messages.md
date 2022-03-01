@@ -4,7 +4,7 @@ description: "Understand how messages are used to invoke operations using the or
 ms.custom: intro-internal
 ms.date: 05/27/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
 ms.author: "pehecke" # MSFT alias of Microsoft employees only

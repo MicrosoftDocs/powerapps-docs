@@ -3,7 +3,7 @@ title: "Basic navigation in a model-driven app | MicrosoftDocs"
 description: This explains how to find and open an app, and how to work with its common user interface elements including lists, forms, and business processes.
 author: mduelae
 manager: kvivek
-ms.service: powerapps
+
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 01/13/2022
@@ -19,7 +19,7 @@ search.app:
 ---
 #  Basic navigation in a model-driven app 
 
-[!INCLUDE[cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 This introduction explains how to find and open an app, and how to work with its common user interface elements including lists, forms, and business processes.
 
@@ -78,7 +78,7 @@ If your screen is zoomed in too much or is very narrow, then you won't see your 
 
 ### Hide or show the Home, Pinned, Recent, and collapsible groups
 
-Your the site map might look different if it's been customized. Your app maker can customize the navigation bar to show or hide the **Home**, **Recent**, **Pinned** buttons in the site map. An app maker can also make groups collapsible. For information on how customize the navigation bar, see [Overview of the model-driven app designer](../maker/model-driven-apps/app-designer-overview.md).
+Your site map might look different if it's been customized. Your app maker can customize the navigation bar to show or hide the **Home**, **Recent**, **Pinned** buttons in the site map. An app maker can also make groups collapsible. For information on how customize the navigation bar, see [Overview of the model-driven app designer](../maker/model-driven-apps/app-designer-overview.md).
 
 
 ![This diagram shows how the site map looks with a app maker customizes it to hide or show the Home, Pinned, Recent, and collapsible groups.](media/hide-show-nav-bar-buttons.gif

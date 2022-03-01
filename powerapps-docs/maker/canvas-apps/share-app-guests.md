@@ -2,11 +2,10 @@
 title: Share a canvas app with guest users (contains video)
 description: Learn about how to share canvas app with guest users.
 author: alaug
-ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 11/10/2021
+ms.date: 02/16/2022
 ms.subservice: canvas-maker
 ms.author: alaug
 search.audienceType: 
@@ -33,10 +32,12 @@ Watch this video to learn how to share an app with guests:
 
 - Access to an account that can add guest users to an Azure AD tenant. Admins and users with the Guest Inviter role can add guests to a tenant.
 
-- The guest user must have a license with Power Apps use rights that matches the capability of the app assigned through one of the following tenants:
+- To access an app that doesn't connect to Dataverse, the guest user must have a license with Power Apps use rights that matches the capability of the app assigned through one of the following tenants:
 
   - The tenant hosting the app being shared
   - The home tenant of the guest user
+
+- To access an app that connects to Dataverse, the guest user must have a license with Power Apps use rights that matches the capability of the app. And it must be assigned in the tenant hosting the app. The exception to this prerequisite is when an app is hosted in a [Microsoft Dataverse for Teams environment](/power-platform/admin/about-teams-environment).
 
 ## Steps to grant guest access
 
@@ -77,7 +78,7 @@ After you share an app for guest access, guests can discover and access apps sha
 - Power Apps guest access uses Azure B2B.
 - Power Apps recognizes guests in states 1 through 4&mdash;as outlined in the [Azure B2B documentation](/azure/active-directory/b2b/user-properties)&mdash;when the guest uses a web browser.
 - Power Apps recognizes guests in states 1, 3, and 4&mdash;as outlined in the Azure B2B documentation&mdash;when the guest uses [Power Apps Mobile](https://powerapps.microsoft.com/downloads). More information: [Sign in using Power Apps Mobile](../../mobile/run-powerapps-on-mobile.md#sign-in)
-- Power Apps can't recognize guests that authenticate by using [Azure AD direct federation](/azure/active-directory/b2b/direct-federation) or [email one-time passcode authentication](/azure/active-directory/external-identities/one-time-passcode).
+- Power Apps can't recognize guests that authenticate by using [Azure AD direct federation](/azure/active-directory/b2b/direct-federation).
 - Power Apps [per app plans](/power-platform/admin/powerapps-flow-licensing-faq#how-is-microsoft-power-apps-and-power-automate-licensed) are scoped to apps in a specific environment, so they can't be recognized across tenants.
 - Power Apps [included with Office](/power-platform/admin/pricing-billing-skus#power-appspower-automate-for-microsoft-365) and Power Apps [per user plans](/power-platform/admin/powerapps-flow-licensing-faq#how-is-microsoft-power-apps-and-power-automate-licensed) have the following characteristics:
   - In the Azure public cloud, they're recognized across tenants in guest scenarios because they aren't bound to a specific environment.
@@ -128,8 +129,8 @@ The following table explains whether the guests can run (use) customized SharePo
 |    Plan                             | Customized SharePoint list form (using non-premium connectors) | Customized SharePoint list form (using premium connectors) | Canvas app (using non-premium connectors) | Canvas app (using premium connectors) | Model-driven app |
 |---------------------------------|----------------------------------------------------|------------------------------------------------|------------------| - | - |
 | No license | &check;                                               | &cross;                 | &cross; | &cross; | &cross; |
-| SharePoint user (without Power Apps license) | &check;                                               | &check;                 | &cross; | &cross; | &cross; |
-| Power Apps included with Office    | &check;                                                  | &check;                                               | &check;                 | &cross; | &cross; | 
+| SharePoint user (without Power Apps license) | &check;                                               | &cross;                 | &cross; | &cross; | &cross; |
+| Power Apps included with Office    | &check;                                                  | &cross;                                               | &check;                 | &cross; | &cross; | 
 | Power Apps per app plan          | &check;                                                  | &check;                                               | &check;                | &check; | &check; |
 | Power Apps per user plan         | &check;                                                  | &check;                                              | &check;                | &check; | &check; |
 

@@ -4,7 +4,7 @@ description: "This sample shows how to create and update table definitions." # 1
 ms.custom: ""
 ms.date: 06/17/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: sample
 author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -18,7 +18,7 @@ search.app:
 
 # Create and update table definitions
 
-[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 
 This topic shows how to programmatically create a custom user-owned table called **Bank Account** and add four different types of columns to it.
 

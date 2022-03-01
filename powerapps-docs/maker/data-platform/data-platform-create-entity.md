@@ -2,7 +2,7 @@
 title: Create a custom table (contains video) | Microsoft Docs
 description: Learn how to create a custom table in Power Apps.
 author: Mattp123
-ms.service: powerapps
+
 ms.component: cds
 ms.topic: quickstart
 ms.date: 07/20/2020
@@ -16,7 +16,6 @@ search.app:
 ---
 
 # Create a custom table
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
 In Power Apps, a *table* defines information that you want to track in the form of records, which typically include properties such as company name, location, products, email, and phone. You can then surface that data by developing an app that refers to the table. Power Apps offers standard "out-of-the-box" tables to cover typical scenarios within an organization (such as tracking appointments), but there may be times when you need to create custom tables to store data that's specific to your organization.
 
@@ -42,10 +41,10 @@ Sign in to Power Apps at [https://make.powerapps.com](https://make.powerapps.com
 
     |Section  |Column  |Description  |
     |---------|---------|---------|
-    |Required columns   | **Display name &#42;**      | This is the singular name for the table that will be shown in the app. This can be changed later.     |
-    |Required columns      |  **Plural display name &#42;**        | This is the plural name for the table that will be shown in the app. This can be changed later.      |
-    |Required columns     |  **Display Name &#42;** (Primary column)     | By default, every table contains a Primary Field, which is used by lookup columns when establishing relationships with other tables. Typically the primary column stores the name or primary description of the data stored in the table. You may update the name and display name of the primary column before saving the table for the first time. Also, observe that the primary column also has its own **Name** box, which functions similarly to the table name described above. The primary column name is autopopulated when a display name is entered, uses the same prefix as the table, and cannot be changed after the table is created.      |
-    |Required columns      | **Name &#42;**    |  This column is pre-populated based on the **Primary Column Display name** you enter. It includes the customization prefix for the Dataverse solution publisher. You cannot change this after the table is saved. <br /> <br /> In order for the table name to work with [Dynamics 365 for Customer Service embedded knowledge search](/dynamics365/customer-engagement/customer-service/set-up-knowledge-management-embedded-knowledge-search), the maximum table name length including the publisher prefix can’t exceed 24 characters.         |
+    |Required columns   | **Display name**      | This is the singular name for the table that will be shown in the app. This can be changed later.     |
+    |Required columns      |  **Plural display name**        | This is the plural name for the table that will be shown in the app. This can be changed later.      |
+    |Required columns     |  **Display name** (Primary Name Column)     | By default, every table contains a **Primary Name Column**, which is used by lookup columns when establishing relationships with other tables. Typically the primary name column stores the name or primary description of the data stored in the table. You may update the name and display name of the primary name column before saving the table for the first time. Also, observe that the primary name column also has its own **Name** box, which functions similarly to the table name described above. The primary name column name is autopopulated when a display name is entered, uses the same prefix as the table, and cannot be changed after the table is created.      |
+    |Required columns      | **Name**    |  This column is pre-populated based on the **Primary Column Display name** you enter. It includes the customization prefix for the Dataverse solution publisher. You cannot change this after the table is saved. <br /> <br /> In order for the table name to work with [Dynamics 365 for Customer Service embedded knowledge search](/dynamics365/customer-engagement/customer-service/set-up-knowledge-management-embedded-knowledge-search), the maximum table name length including the publisher prefix can’t exceed 24 characters.         |
     | Required columns  | **Enable attachments**  | Adds the attachments control to the table. The control is used to add or remove files and notes to records. Enabling this option lets users add files, such as document files from their computer or existing photos from a mobile device. Attached files can be up to 10 MB in size. Once this option is set, it can’t be changed after the table is created.   |
     |**Description**     | **Description**      | Expand **More settings** > **Description**.  You can enter a description for your table if you wish. Descriptions are helpful if other people will use this table.     |
     |**Table type and ownership**   |  **Choose table type**    | Switch the table type to **Activity table** to create tables that can manage tasks.      |
@@ -64,7 +63,7 @@ Sign in to Power Apps at [https://make.powerapps.com](https://make.powerapps.com
     | **Dynamics 365 for Outlook**  | **Enable offline capabilities**  | Enables row data for this table to be available while the Dynamics 365 for Outlook application is not connected to the network.  |
 
 4. Select **Create**.
-     
+
 On the table details page, observe that the table is now being provisioned in the background. Once provisioning is completed, your table will be saved and available for use in apps. Fields, relationships, and keys can be added to your table at any time (even while provisioning is still in progress), but views, forms, charts, dashboards, and business rules can only be added to the table after provisioning is completed.
 
 ## Next steps

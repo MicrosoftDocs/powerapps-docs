@@ -2,7 +2,7 @@
 title: Connect to Power BI from Power Apps
 description: Learn about connecting to Power BI from Power Apps.
 author: lancedMicrosoft
-ms.service: powerapps
+
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm

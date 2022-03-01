@@ -7,7 +7,7 @@ ms.subservice: mda-maker
 ms.author: matp
 manager: kvivek
 ms.date: 06/06/2018
-ms.service: powerapps
+
 ms.topic: how-to
 applies_to: 
   - "Dynamics 365 (online)"
@@ -22,7 +22,7 @@ search.app:
 ---
 # Use the model-driven app main form and its components
 
-[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 Forms in model-driven apps provide the primary means by which users can update records.  Forms associated with a table can be accessed via the table designer.
 
@@ -144,7 +144,7 @@ You can add iFrames to a form to integrate content from another website within a
   
  To enable editing navigation, you must first select **Navigation** from the **Select** group on the **Home** tab.  
   
- In the Relationship Explorer,** you can filter by 1:N (one-to-many) or N:N (many-to-many) relationships, or view all available relationships. The **Only show unused relationships checkbox** is disabled and selected. So you can only add each relationship one time.  
+ In the Relationship Explorer, you can filter by 1:N (one-to-many) or N:N (many-to-many) relationships, or view all available relationships. The **Only show unused relationships checkbox** is disabled and selected. So you can only add each relationship one time.  
   
  To add a relationship from the **Relationship Explorer** just double-click it and it will be added below the currently selected relationship in the navigation area. Double-click a relationship in the navigation area and you can change the label on the **Display** tab. On the **Name** tab, you can see information about the relationship. Use the **Edit** button to open the definition of the table.  
   

@@ -3,10 +3,10 @@ title: Create a relationship between tables by using a lookup column | Microsoft
 description: Step-by-step instructions for how to create a relationship between tables in Power Apps by using a lookup column.
 author: lancedMicrosoft
 manager: kvivek
-ms.service: powerapps
+
 ms.component: cds
 ms.topic: how-to
-ms.date: 02/21/2019
+ms.date: 02/09/2022
 ms.subservice: dataverse-maker
 ms.author: lanced
 search.audienceType: 
@@ -17,7 +17,7 @@ search.app:
 ---
 
 # Create a relationship between tables
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 Data in one table often relates to data in another table. For example, you might have a **Teachers** table and a **Class** table, and the **Class** table might have a lookup relation to the **Teachers** table to show which teacher teaches the class. You can use a lookup column to show data from the **Teachers** table. This is commonly referred to as a lookup column.
 
@@ -112,7 +112,7 @@ As you model your business data by creating custom tables or when using existing
     > [!div class="mx-imgBorder"] 
     > ![Referential, Restrict Delete.](./media/data-platform-cds-newrelationship/advanced-3.png "Referential, Restrict Delete")
 
-* **Parental:** In a parental relationship between two tables, any action taken on a row of the parent table is also taken on any child table rows that are related to the parent table row. For example, this would cause all of the child rows to be deleted when the parent is deleted.
+* **Parental:** In a parental relationship between two tables, any action taken on a record of the parent table is also taken on any child table records that are related to the parent table record. For example, the owner of the parent record has inherited access to the child table records and when the parent record is deleted, all of the child records will also be deleted.
 
 * **Custom:** In a custom relationship between two tables, you select the behavior associated with each of a set of possible actions. 
 

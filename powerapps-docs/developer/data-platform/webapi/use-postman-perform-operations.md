@@ -4,7 +4,7 @@ description: "Learn how to compose and send Web API requests using Postman."
 ms.custom: 
 ms.date: 03/22/2019
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article

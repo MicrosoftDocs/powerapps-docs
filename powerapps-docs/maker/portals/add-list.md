@@ -2,7 +2,7 @@
 title: Add list
 description: Learn about how to add list component to a Power Apps portals page using portals Studio.
 author: neerajnandwana-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 08/24/2021

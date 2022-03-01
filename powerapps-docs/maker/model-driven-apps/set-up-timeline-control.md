@@ -4,7 +4,7 @@ description: "Learn how to add and configure the timeline control to use in a mo
 ms.custom: ""
 ms.date: 09/23/2021
 ms.reviewer: "matp"
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -22,7 +22,7 @@ search.app:
 
 # Set up the timeline control
 
-[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 The timeline helps app users see all activity history. The timeline control is used to capture activities like notes, appointments, emails, phone calls, and tasks to ensure that all interactions with the related table are tracked and visible over time. Use the timeline to quickly catch up on all of the latest activity details.
 

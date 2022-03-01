@@ -2,7 +2,6 @@
 title: Filter, Search, and LookUp functions in Power Apps (contains video)
 description: Reference information including syntax and examples for the Filter, Search, and LookUp functions in Power Apps.
 author: gregli-msft
-ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
@@ -116,7 +115,7 @@ The following examples use the **IceCream** [data source](../working-with-data-s
 
 In many apps, you can type one or more characters into a search box to filter a list of records in a large data set. As you type, the list shows only those records that match the search criteria.
 
-The examples in the rest of this topic show the results of searching a list, named **Customers, that contain this data:
+The examples in the rest of this topic show the results of searching a list, named **Customers**, that contain this data:
 
 ![Search on customers.](media/function-filter-lookup/customers.png "Search on customers")
 

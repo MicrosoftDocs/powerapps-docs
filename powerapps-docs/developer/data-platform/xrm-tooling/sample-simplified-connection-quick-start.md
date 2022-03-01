@@ -4,7 +4,7 @@ description: "This sample shows you how to connect to the Microsoft Dataverse we
 ms.custom: 
 ms.date: 04/12/2021
 author: Nkrb
-ms.service: powerapps
+
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: sample

@@ -3,7 +3,7 @@ title: Create a report using the Report Wizard| Microsoft Docs
 description: Create a report using the Report Wizard in Power Apps
 author: mduelae
 manager: kvivek
-ms.service: powerapps
+
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 06/27/2019

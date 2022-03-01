@@ -3,11 +3,12 @@ metadata:
   title: Power App component framework FAQs
   description: Get answers to frequently asked questions about Power Apps component framework.
   author: ghurlman
-  ms.service: powerapps
+  
   ms.search.keywords: 
   ms.date: 06/08/2021
   ms.author: grhurl
   ms.reviewer: nabuthuk
+  ms.topic: faq
 title: Power Apps component framework FAQs
 summary: This article provides information on frequently asked questions about Power Apps component framework.
 sections:
@@ -62,6 +63,3 @@ additionalContent: |
 
   [Power Apps component framework API reference](reference/index.md)<br/>
   [Power Apps component framework overview](overview.md)
-
-
-

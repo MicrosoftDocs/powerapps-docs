@@ -4,7 +4,7 @@ description: "Dashboards are one of the different types of forms in Mode-driven 
 ms.custom: ""
 ms.date: 04/15/2021
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.topic: "article"
 author: "KumarVivek" # GitHub ID
 ms.subservice: mda-developer

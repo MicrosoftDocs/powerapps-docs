@@ -4,7 +4,7 @@ description: Learn how to create and edit choices using solution explorer
 ms.custom: ""
 ms.date: 05/26/2018
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -24,7 +24,7 @@ search.app:
 ---
 # Create and edit global choices for Microsoft Dataverse using solution explorer
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 Solution explorer provides one way to Create and edit global choices for Dataverse.
 

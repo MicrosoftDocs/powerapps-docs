@@ -2,13 +2,13 @@
 title: Create a canvas app from a sample template
 description: Follow these steps for creating a canvas app from a sample in Power Apps. Explore design possibilities and learn concepts for developing your own apps.
 author: wimcoor
-ms.service: powerapps
+
 ms.topic: overview
 ms.custom: 
   - canvas
   - intro-internal
 ms.reviewer: tapanm
-ms.date: 10/16/2020
+ms.date: 01/27/2022
 ms.subservice: canvas-maker
 ms.author: wimcoor
 search.audienceType: 
@@ -31,11 +31,14 @@ If you don't have a license for Power Apps, you can [sign up for a free 30-day t
 
 1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-1. Select **All templates**.
+1. Select **Create** from the left-pane.
 
-1. Choose a sample app from the list of sample apps, such as **Cost Estimator**.
+1. Under **Start from template**, choose a sample app from the list of sample apps, such as **Cost Estimator**.
 
-	![Cost Estimator template.](./media/open-and-run-a-sample-app/cost-estimator-app.png "Cost Estimator template")
+    :::image type="content" source="media/open-and-run-a-sample-app/cost-estimator-app.png" alt-text="Cost Estimator template.":::
+
+    > [!TIP]
+    > You can also search using the search box to find a specific template.
 
 1. Update the app name and select **Create** to create the app.
 
@@ -44,7 +47,7 @@ If you don't have a license for Power Apps, you can [sign up for a free 30-day t
 
 1. Select **Make my own app** to connect the app to data storage, such as OneDrive.
 
-    ![Make my own app.](./media/open-and-run-a-sample-app/make-my-own-app.png "Make my own app")
+    :::image type="content" source="media/open-and-run-a-sample-app/make-my-own-app.png" alt-text="Make my own app.":::
 
 1. After you select or connect to storage from the available choices, select **Done**.
 

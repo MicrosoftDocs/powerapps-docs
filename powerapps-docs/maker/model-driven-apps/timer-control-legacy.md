@@ -4,7 +4,7 @@ description: "Understand how you can use the timer control"
 ms.custom: ""
 ms.date: 04/28/2020
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: overview
@@ -26,7 +26,7 @@ search.app:
 ---
 # Model-driven app timer control overview (Classic)
 
-[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 Use a timer control with forms where rows need to meet a specific **time-based milestone**. A timer control shows people how much time is available to complete an action in the resolution of an active row or how much time has passed since the time to complete the action has passed. 
 

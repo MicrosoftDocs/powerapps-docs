@@ -2,7 +2,7 @@
 title: "addCustomFilter (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Adds filters to the results displayed in the lookup. Each filter is combined with any previously added filter.
 ms.date: 04/15/2021
-ms.service: powerapps
+
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: e359b-c4d9-48ac-a57b-367c2e6168c5

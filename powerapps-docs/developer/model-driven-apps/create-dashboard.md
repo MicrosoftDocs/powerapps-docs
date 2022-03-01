@@ -3,7 +3,7 @@ title: "Create a dashboard (model-driven apps) | Microsoft Docs" # Intent and pr
 description: "Organization-owned dashboards can be created by using the Microsoft Dataverse web services (SDK) or by customizing the form in Dataverse by editing the customizations.xml file." # 115-145 characters including spaces. This abstract displays in the search result."
 keywords: ""
 ms.date: 04/15/2021
-ms.service: powerapps
+
 ms.topic: article
 ms.assetid: da41f997-1f61-7ea8-db83-5d670d708d67
 author: Nkrb # GitHub ID

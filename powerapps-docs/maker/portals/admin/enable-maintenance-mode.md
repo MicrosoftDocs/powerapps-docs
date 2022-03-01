@@ -2,7 +2,7 @@
 title: Maintenance mode for a portal
 description: Learn how to enable maintenance mode with your portal.
 author: neerajnandwana-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2021

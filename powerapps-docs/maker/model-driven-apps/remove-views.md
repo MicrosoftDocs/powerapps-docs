@@ -4,7 +4,7 @@ description: "Learn how to delete or deactivate a view"
 ms.custom: ""
 ms.date: 03/30/2020
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -26,7 +26,7 @@ search.app:
 ---
 # Delete or deactivate a model-driven app view
 
-[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 Views allow the data in tables to be presented in a way that meets a business need at a given time.
 

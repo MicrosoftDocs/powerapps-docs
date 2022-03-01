@@ -4,7 +4,7 @@ description: "Use the new application handler for Dynamics 365 mobile clients to
 ms.custom: ""
 ms.date: 04/14/2021
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.topic: "article"
 author: "KumarVivek" # GitHub ID
 ms.subservice: mda-developer
@@ -20,7 +20,7 @@ search.app:
 
 Use the new application handler for mobile clients to directly link to forms, views, and dashboards from external applications so that when you click on the link in an external application, the target element opens in Dynamics 365 for phones or Dynamics 365 for tablets. You can also open an empty form for creating a table record.  
   
-If you are already signed in to your instance in Dynamics 365 for phones or Dynamics 365 for tablets, the target record is displayed in the mobile client when you click the link in external application. Otherwise, you’re prompted to sign in to your instance in the mobile client, and upon doing so, the target element is displayed. You must have Dynamics 365 for phones or Dynamics 365 for tablets installed on your mobile device to use this feature.  
+If you are already signed in and have a model-driven app opened in Dynamics 365 for phones or Dynamics 365 for tablets, the target record is displayed in the mobile client when you click the link in external application. Otherwise, a login screen or the application list is displayed and link opening is cancelled. You must have Dynamics 365 for phones or Dynamics 365 for tablets installed on your mobile device to use this feature.  
 
 [!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
   

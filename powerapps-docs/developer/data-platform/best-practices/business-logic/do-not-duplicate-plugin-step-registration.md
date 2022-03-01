@@ -8,7 +8,7 @@ author: jowells
 manager: austinj
 editor: ''
 tags: ''
-ms.service: powerapps
+
 ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
@@ -24,7 +24,7 @@ search.app:
 ---
 # Do not duplicate plug-in step registration
 
-[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 
 **Category**: Performance
 

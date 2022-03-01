@@ -4,7 +4,7 @@ description: "XRM tooling enables you to connect to your Microsoft Dataverse env
 ms.custom: ""
 ms.date: 1/6/2022
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "nkrb"
 ms.author: "nabuthuk"

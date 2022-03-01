@@ -3,7 +3,7 @@ title: "Validate and publish a model-driven app using the app designer | Microso
 description: "Learn how to validate and publish a model-driven app"
 keywords: ""
 ms.date: 06/08/2018
-ms.service: powerapps
+
 ms.custom: 
 ms.topic: how-to
 applies_to: 
@@ -29,7 +29,7 @@ search.app:
 
 # Validate and publish a model-driven app using the app designer
 
-[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 Model-driven apps cannot be published if they do not include all the required components. Some components rely on others and this relationship between components is known as a [dependency](model-driven-app-glossary.md#dependency).
 

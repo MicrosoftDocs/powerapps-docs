@@ -1,11 +1,11 @@
 ---
-title: Add a chatbot to a page (preview)
+title: Add a chatbot to a page
 description: "Learn how to add a Power Virtual Agents chatbot to a Power Apps portals page to automatically answer questions posted by a visitor in a chat conversation."
 author: neerajnandwana-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/11/2021
+ms.date: 01/21/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
@@ -14,15 +14,9 @@ contributors:
     - nickdoelman
 ---
 
-# Add chatbot to a page (preview)
-
-[This article is pre-release documentation and is subject to change.]
+# Add chatbot to a page
 
 Power Apps portals allow you to add a [Power Virtual Agents chatbot](/power-virtual-agents/fundamentals-what-is-power-virtual-agents) to answer questions posted by a visitor on your portals page. A chatbot (bot) configured with different topics and trigger phrases can automatically respond to questions posted by a visitor in a chat conversation.
-
-> [!IMPORTANT]
-> - This is a preview feature.
-> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
 
 ## Prerequisites
 
@@ -37,7 +31,7 @@ Before you can add a Power Virtual Agents bot to a Power Apps portals page, you 
 
 Once you have a chatbot created, you can add this component to a portals page with the following steps:
 
-1. Go to [Power Apps Preview](https://make.preview.powerapps.com).
+1. Go to [Power Apps](https://make.powerapps.com).
 
 1. Select **Apps** from the left pane.
 
@@ -72,12 +66,16 @@ The chatbot component is rendered using a web template called **Power Virtual Ag
 
 You can change the values for the following parameters inside the "window.PvaEmbeddedWebChat.renderWebChat()" function.
 
-| Parameter | Value |
-| - | - |
-| width | Uses variable "chatWidth". To change, update the width in pixels: <br> `let chatWidth = "320px";` |
-| height | Uses variable "chatHeight". To change, update the height in pixels: <br> `let chatHeight =  "480px";` |
-| headerText | Title of the bot. By default, this uses the bot's name. To change, add "headerText" parameter with the bot header value: <br> `"headerText": 'Contoso chatbot';` | 
-| webChatHeaderStyleOptions | Determines header style for the chatbot component, such as color of font and background. To change, update "webChatHeaderStyleOptions" parameter with the values for "fontColor" and "backgroundColor" properties: <br> `"webChatHeaderStyleOptions": {"fontColor":'black',"backgroundColor":'white',}`
+:::image type="content" source="media/add-chatbot/chatbot-style.png" alt-text="Chatbot with each section numbered for reference."::: :::image type="content" source="media/add-chatbot/widget-style.png" alt-text="Chatbot Widget with each part numbered for reference.":::
+
+| Number | Parameter | Value |
+| - | - | - |
+| 1 | width | Uses variable "chatWidth". To change, update the width in pixels: </br> `let chatWidth = "320px";` |
+| 2 | height | Uses variable "chatHeight". To change, update the height in pixels: </br> `let chatHeight =  "480px";` |
+| 3 | headerText | Title of the bot. By default, this uses the bot's name. To change, add "headerText" parameter with the bot header value: </br> `"headerText": 'Contoso chatbot';` | 
+| 4: fontColor</br>5: backgroundColor | webChatHeaderStyleOptions | Determines header style for the chatbot component, such as color of font and background. To change, update "webChatHeaderStyleOptions" parameter with the values for "fontColor" and "backgroundColor" properties: </br> `"webChatHeaderStyleOptions": {"fontColor":'black',"backgroundColor":'white'}` |
+| 6: backgroundColor</br>7: bubbleBackgroundcolor</br>8: bubbleTextColor</br>9: bubbleFromUserBackground</br>10: bubbleFromUserTextColor | webChatCanvasStyleOptions | Determines the chat canvas style for chatbot component, such as the background and bubble backgrounds from the chatbot and the user. To change, update "webChatCanvasStyleOptions" parameters with the values for "backgroundColor", "bubbleBackgroundcolor", "bubbleTextColor", "bubbleFromUserBackground", and "bubbleFromUserTextColor" properties: </br> `"webChatCanvasStyleOptions": {"backgroundColor": "#123FFF","bubbleBackground":"#2340F0","bubbleTextColor": "#323130","bubbleFromUserBackground": "#412644","bubbleFromUserTextColor": "#F345FF"}` |
+| 11: backgroundColor</br>12: iconColor | webChatWidgetStyleOptions | Determines the style for the ChatWidget component, such as color of the icon and background. To change, update "webChatWidgetStyleOptions" parameter with the values for "backgroundColor" and "iconColor" properties:</br>`"webChatWidgetStyleOptions": {"backgroundColor": "#486744","iconColor": "#DF234F"}` |
 
 After changing the web template, ensure you select **Sync configuration** to update the configuration and reflect the changes.
 
@@ -119,3 +117,5 @@ To restart your portal:
 ### See also
 
 - [Add the bot to your live website](/power-virtual-agents/publication-connect-bot-to-web-channels)
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

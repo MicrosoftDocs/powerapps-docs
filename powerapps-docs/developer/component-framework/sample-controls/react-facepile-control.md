@@ -5,7 +5,7 @@ ms.custom: ""
 author: ghurlman
 manager: kvivek
 ms.date: 06/19/2019
-ms.service: "powerapps"
+
 ms.topic: "article"
 ms.author: "grhurl"
 ms.reviewer: nkrb
