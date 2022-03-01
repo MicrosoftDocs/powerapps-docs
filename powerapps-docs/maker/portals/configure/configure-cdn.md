@@ -29,6 +29,6 @@ An administrator can disable the CDN at any given point to stop the service, and
 Power Apps portals CDN is powered by Azure Front Door service to provide fast, reliable, and modern cloud Content Delivery Network.
 
 > [!Note]
-> For more information about additional Azure service offerings, see the  [Microsoft Azure Trust Center](https://azure.microsoft.com/support/trust-center/), [Microsoft Azure Front Door](../../../azure/frontdoor/standard-premium/overview)
+> For more information about additional Azure service offerings, see the  [Microsoft Azure Trust Center](https://azure.microsoft.com/support/trust-center/), [Microsoft Azure Front Door](../../../../azure/frontdoor/standard-premium/overview.md)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
