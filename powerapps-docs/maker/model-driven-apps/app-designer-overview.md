@@ -70,13 +70,14 @@ From the **Navigation** pane, select **Navigation bar** to set the following opt
 1. **Show Pinned**. Enabled by default. When selected, displays the pages that have been pinned. App users select the push-pin icon next to a record listed under **Recent** to add it to their pinned rows.
 1. **Enable collapsible groups**. Disabled by default. When selected, subareas displayed under groups in the site map can be expanded or collapsed.
 1. **Enable Areas**. Disabled by default. When selected, new areas can be added to the app. For apps with existing multiple areas, this setting is enabled by default. You can't disable this setting while the app has multiple areas.
+1. **Enable web resources**. Disabled by default. When selected, web resources can be added to the app as a type of subarea. For information about how to create a web resource, go to [Create or edit model-driven app web resources to extend an app](create-edit-web-resources.md).
+1. **Enable URLs**. Disabled by default. When selected, URLs can be added to the app as a type of subarea.
 
    :::image type="content" source="media/navigation-pane-options.png" alt-text="Options available for app navigation":::
 
 ## Known limitations
 
 - You can’t add the following model-driven app components:
-   - URLs
    - Business process flows
    - Charts
 - You can’t change the app’s icon.
