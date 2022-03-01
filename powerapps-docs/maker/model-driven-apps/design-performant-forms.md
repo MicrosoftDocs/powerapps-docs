@@ -122,7 +122,7 @@ For example, there may be code in an event handler to make a network request and
 
 #### Async support in form OnLoad and form OnSave events
 
-Starting in 2021 release wave 2, the form `OnLoad` and `OnSave` events support handlers that return promises. The events will wait for any promises returned by a handler to resolve, up to a timeout period.
+The form `OnLoad` and `OnSave` events support handlers that return promises. The events will wait for any promises returned by a handler to resolve, up to a timeout period. This support can be enabled via app settings.
 
 More information:
 - [Form OnLoad](/powerapps/developer/model-driven-apps/clientapi/reference/events/form-onload)
