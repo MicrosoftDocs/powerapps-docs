@@ -7,8 +7,7 @@ ms.subservice: dataverse-maker
 ms.author: aneesa
 ms.reviewer: matp
 manager: kvivek
-ms.date: 11/30/2021
-
+ms.date: 03/01/2022
 ms.topic: how-to
 search.audienceType: 
   - maker
@@ -48,9 +47,7 @@ A setting definition specifies the base properties of a setting. The full list o
 |**Name** | The unique name of the setting in an environment.<br> Name is automatically generated based on the display name provided but can be changed before the setting is created. Once a setting is created, the **Name** can't be changed as it may be referenced in applications or code.<br> **Name** has a prefix that corresponds to the solution [publisher](create-solution.md#solution-publisher). This prefix is intended to give the setting a unique name if you want to import them into another solution or environment in the future (which would have a different prefix). |
 |**Description** | The description helps others understand what the setting is used for in all user interfaces where settings are displayed. |
 |**Data type** | The data type of a setting controls how the setting’s value is stored. Data type can be set to **Number**, **String**, or **Yes/No**. Data type can't be changed after the setting is created. |
-|**Default value** | The default value specifies the setting's value that will be used unless it is overridden by a setting environment value or a setting app value. |
-|**Overridable** | Overridable enables a setting’s default value to be overridden by an environment (setting environment value) or an app (setting app value).<br> Overridable can't be changed after the setting is created. |
-|**Value can be overridden for** | A setting that is overridable can be further configured to enable the override behavior.<ul><li>**Environment and app**, allows both the setting environment value and setting app values to override the default value.</li><li>**Environment only**, allows only the setting environment value to override the default value.</li><li>**App only**, allows only setting app values to override the default value.</li></ul>|
+|**Value can be changed for** | A setting that is overridable can be further configured to enable the override behavior.<ul><li>**Environment and app**, allows both the setting environment value and setting app values to override the default value.</li><li>**Environment only**, allows only the setting environment value to override the default value.</li><li>**App only**, allows only setting app values to override the default value. </li><li>**None**, means the setting won't be used until one of the previous values, such as **Apps only** is selected. </li></ul>|
 |**Release level** | Release level is used to inform the framework and other consumers of the setting about the state of the feature that the setting is used with. Release level can be set to **Generally available** or **Preview**. |
 |**Information Url** | A link to documentation to help consumers of the setting understand the purpose of the setting. Will be used as a *Learn more* link in all user interfaces where settings are displayed.|
 
