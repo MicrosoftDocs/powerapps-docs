@@ -4,7 +4,7 @@ description: "Learn how to create many-to-many table relationships"
 ms.custom: ""
 ms.date: 04/07/2020
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: overview

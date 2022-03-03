@@ -2,7 +2,7 @@
 title: "addPreSearch (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the addOnPreSearch method.
 ms.date: 04/19/2021
-ms.service: powerapps
+
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: d69a432a-1d74-4782-bedd-f9f30d3d7d9c

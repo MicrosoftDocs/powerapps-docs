@@ -2,11 +2,10 @@
 title: Sign in to Power Apps for the first time
 description: Learn about signing in to Power Apps for the first time, choosing an environment, creating an app, playing or editing an app, and other common tasks.
 author: alaug
-ms.service: powerapps
 ms.topic: conceptual
 ms.custom: intro-internal
 ms.reviewer: 
-ms.date: 01/27/2022
+ms.date: 02/23/2022
 ms.subservice: canvas-maker
 ms.author: alaug
 search.audienceType: 
@@ -48,7 +47,7 @@ To verify which environment you're in, find the environment switcher near the ri
 If you create an app in one environment, you won't be able to see it from another environment. In addition, people who want to run your app must have access to the environment in which you created it.
 
 > [!IMPORTANT]
-> - To view the environment list in the environment switcher in Power Apps, you must have the Environment Maker, System Customizer, or System Administrator security role in the environment. For information about predefined security roles, see [Predfined security roles](/power-platform/admin/database-security#predefined-security-roles) in the Microsoft Power Platform admin guide.
+> - To view the environment list in the environment switcher in Power Apps, you must have the Environment Maker, System Customizer, or System Administrator security role in the environment. For information about predefined security roles, see [Predefined security roles](/power-platform/admin/database-security#predefined-security-roles) in the Microsoft Power Platform admin guide.
 > - Make sure that you're in the right environment *before* you create an app, a flow, or a similar component. You can't easily move components from one environment to another.
 
 > [!NOTE]

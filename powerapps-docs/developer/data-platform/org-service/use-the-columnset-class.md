@@ -4,7 +4,7 @@ description: "Learn how to use the ColumnSet class to specify columns returned i
 ms.custom: ""
 ms.date: 06/02/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only

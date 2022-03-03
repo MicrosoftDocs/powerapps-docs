@@ -4,7 +4,7 @@ description: "Learn how Microsoft Dataverse can be configured to send data to th
 ms.custom: intro-internal
 ms.date: 03/17/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "JimDaly"
 ms.subservice: dataverse-developer

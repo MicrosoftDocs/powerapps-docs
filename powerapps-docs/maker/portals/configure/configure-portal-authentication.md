@@ -2,7 +2,7 @@
 title: Overview of authentication in Power Apps portals
 description: Learn about the available authentication providers, protocols, and examples to set up authentication for Power Apps portals.
 author: sandhangitmsft
-ms.service: powerapps
+
 ms.topic: overview
 
 ms.date: 04/26/2021

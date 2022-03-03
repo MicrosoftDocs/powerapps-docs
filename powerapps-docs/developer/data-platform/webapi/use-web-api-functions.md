@@ -3,7 +3,7 @@ title: "Use Web API functions (Microsoft Dataverse)| Microsoft Docs"
 description: "Functions are reusable operations that are used with a GET request to retrieve data from Microsoft Dataverse"
 ms.custom: ""
 ms.date: 05/04/2019
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"

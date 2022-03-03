@@ -3,7 +3,7 @@ title: "Create a table row using the Web API (Microsoft Dataverse) | Microsoft D
 description: "Read how to create a POST request to send data to create a table row on Microsoft Dataverse using the Web API"
 ms.custom: ""
 ms.date: 05/03/2021
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"

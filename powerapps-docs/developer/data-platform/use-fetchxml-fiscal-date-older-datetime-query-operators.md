@@ -4,7 +4,7 @@ description: "Find out how to use FetchXML fiscal data conditional operators and
 ms.custom: ""
 ms.date: 03/25/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
 ms.subservice: dataverse-developer

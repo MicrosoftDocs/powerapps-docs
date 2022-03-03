@@ -4,7 +4,7 @@ description: Learn how to configure form header properties for a model-driven ap
 ms.custom: ""
 ms.date: 01/25/2021
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "conceptual"

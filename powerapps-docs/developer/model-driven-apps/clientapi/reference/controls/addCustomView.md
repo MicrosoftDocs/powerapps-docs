@@ -2,7 +2,7 @@
 title: "addCustomView (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Adds a new view for the lookup dialog box.
 ms.date: 04/15/2021
-ms.service: powerapps
+
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 482b8cd4-e643-48ea-8a54-d8601271ec81

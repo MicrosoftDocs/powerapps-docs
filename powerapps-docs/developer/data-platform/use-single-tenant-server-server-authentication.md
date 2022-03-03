@@ -4,7 +4,7 @@ description: "Learn how to access Microsoft Dataverse data in a single tenant fr
 ms.custom: ""
 ms.date: 10/07/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "paulliew" # GitHub ID
 ms.subservice: dataverse-developer

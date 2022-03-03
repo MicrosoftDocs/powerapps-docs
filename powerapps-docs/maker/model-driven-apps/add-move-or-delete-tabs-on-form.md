@@ -4,7 +4,7 @@ description: Learn how to work with tabs on a form using Power Apps.
 ms.custom: ""
 ms.date: 08/26/2019
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
