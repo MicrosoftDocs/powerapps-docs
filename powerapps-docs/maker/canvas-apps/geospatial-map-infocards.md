@@ -2,10 +2,11 @@
 title: Display information about map pins
 description: Insert info cards that display information about each pin in your map.
 author: anuitz
+ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas, ce06122020
-ms.reviewer: mduelae
-ms.date: 1/19/2021
+ms.reviewer: mkaur
+ms.date: 3/3/2022
 ms.subservice: canvas-maker
 ms.author: anuitz
 search.audienceType: 
@@ -13,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - mduelae
+  - tapanm-msft
   - anuitz
 ---
 
@@ -21,7 +22,7 @@ contributors:
 
 You can add informational cards to each pin on the map. 
 
-When a user selects the pin (either by hovering over it or selecting it directly), a small card will pop-up with information taken from the dataset you bound to the control, as described in the topic [Use data from Excel to insert pins](geospatial-map-excel.md#add-pin-data-from-an-excel-workbook).
+When a user selects the pin (either by hovering over it or selecting it directly), a small card will pop-up with information taken from the dataset you bound to the control, as described in the topic [Use a data source to place pins on a map](geospatial-map-excel.md).
 
 Any column you add to the table in the data source (for example, the Excel table) will be available as a field to show on the card.
 
@@ -32,7 +33,7 @@ Any column you add to the table in the data source (for example, the Excel table
 
 **To add informational cards to pins:**
 
-1. First, bind the map to a dataset as described in [Use data from Excel to insert pins](geospatial-map-excel.md#add-pin-data-from-an-excel-workbook).
+1. First, bind the map to a dataset as described in [Use a data source to place pins on a map](geospatial-map-excel.md).
 
 2. In the **Properties** pane, select **Show info cards** and choose whether they should appear when a user hovers over the pin, or if the user has to select the pin.
 

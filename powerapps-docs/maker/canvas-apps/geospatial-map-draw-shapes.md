@@ -2,10 +2,11 @@
 title: Draw and insert shapes on maps
 description: Allow canvas app users to draw shapes on a map, or insert predefined shapes and display their measurements, in Power Apps.
 author: anuitz
+ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas, ce06122020
 ms.reviewer: mduelae
-ms.date: 02/22/2022
+ms.date: 3/3/2022
 ms.subservice: canvas-maker
 ms.author: anuitz
 search.audienceType: 
@@ -13,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - mduelae
+  - tapanm-msft
   - anuitz
 ---
 
@@ -81,8 +82,9 @@ Your data source must be a named table with at least three columns. Each column 
 | Shape label | ShapeLabels | Optional |
 | Shape color | ShapeColors | Optional |
 
->[!Tip]
->Specify the color using a [name, CSS color definition, or RGBA value](/functions/>function-colors). If the color isn't provided, then the shape will use the app's defaults.
+> [!Tip]
+> Specify the color using a [name, CSS color definition, or RGBA value](/functions/>function-colors). If the color isn't provided, then the shape will use the app's defaults.
+
 
 The data source must be named. If you're using an Excel workbook as the data source, use the name of the table that contains the data. In this example, we'll import shapes from an Excel table named *Seattle1*.
 

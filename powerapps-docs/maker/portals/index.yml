@@ -28,7 +28,7 @@ landingContent:
             url: configure/column-permissions.md             
           - text: Configure Dataverse search in portals (preview)
             url: configure/dataverse-search.md         
-          - text: Configure choices column for portals (preview)
+          - text: Configure choices column for portals
             url: configure/choices-column.md         
           - text: Portals as Progressive Web Apps
             url: progressive-web-apps.md         
