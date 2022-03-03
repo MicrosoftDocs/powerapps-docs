@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 1/28/2022
+ms.date: 3/3/2022
 ms.subservice: canvas-maker
 ms.author: anuitz
 search.audienceType: 
@@ -86,8 +86,6 @@ Change the **View shape in MR** button's behavior and appearance using propertie
 | **[DisplayMode](./controls/properties-core.md)** | Determines whether the button allows user input (*Edit*), only displays data (*View*), or is disabled (*Disabled*). | Enum | Advanced |
 | **[TabIndex](./controls/properties-accessibility.md)** | Specifies the order the button is selected if the user navigates the app using the Tab key. | Integer | Properties; Advanced: **TabIndex** |
 
-<!-- Please confirm, is the definition of Enable Shadows correct? I guessed from context. -->
-<!-- Please expand on the definitions of "OnMixedRealitySelect" and "OnChange.">
 
 ### Output properties
 
