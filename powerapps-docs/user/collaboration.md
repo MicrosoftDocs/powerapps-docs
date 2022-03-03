@@ -53,8 +53,6 @@ App users, such as the record owner, are displayed with their picture and online
 
 Easy sharing of direct links with others will be enabled during the preview period.
 
-> [!div class="mx-imgBorder"]
-> ![Share row information with soneone else.](media/collob-3.png "Share row information with soneone else")
 
 
 
