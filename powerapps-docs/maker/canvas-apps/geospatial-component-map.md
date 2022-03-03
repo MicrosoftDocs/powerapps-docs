@@ -5,8 +5,8 @@ author: anuitz
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas, ce06122020
-ms.reviewer: tapanm
-ms.date: 1/19/2021
+ms.reviewer: mduelae
+ms.date: 3/3/2022
 ms.subservice: canvas-maker
 ms.author: anuitz
 search.audienceType: 
@@ -31,7 +31,7 @@ The map control also supports road and satellite views.
 
 ![Map control.](./media/augmented-geospatial/geospatial-map-component.png "Map control")
 
-To use the control, you need to [enable geospatial features for the environment](geospatial-overview.md#enable-the-geospatial-features-for-the-environment).
+To use the control, you need to [enable geospatial features for the environment](geospatial-overview.md#enable-geospatial-features-for-the-environment).
 
 Make sure you also [review the prerequisites for using geospatial controls](geospatial-overview.md#prerequisites).
 
