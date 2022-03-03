@@ -26,7 +26,7 @@ Model-driven and canvas apps
 ```typescript
 public updateView(context: ComponentFramework.Context<IInputs>): void
 {
-  // check if thi updateView call ahs update on sampleProperty
+  // check if the updateView call has updated the sampleProperty
   if(context.updateProperties.indexOf("SampleProperty")> -1)
    {
       this._value = context.parameters.sampleProperty.raw;
