@@ -2,10 +2,11 @@
 title: Let users draw and insert shapes into maps
 description: Allow users of your app to draw shapes onto maps, or insert predefined shapes and display their measurements.
 author: anuitz
+ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas, ce06122020
-ms.reviewer: mduelae
-ms.date: 3/2/2021
+ms.reviewer: tapanm
+ms.date: 3/3/2022
 ms.subservice: canvas-maker
 ms.author: anuitz
 search.audienceType: 
@@ -13,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - mduelae
+  - tapanm-msft
   - anuitz
 ---
 
@@ -37,7 +38,7 @@ Inserting pre-defined shapes is useful to highlight specific regions or areas of
 ## Prerequisites
 1. Create a Canvas app and make sure it meets the [Geospatial prerequisites](geospatial-overview.md#prerequisites). 
 
-2. In your app, [insert a map](geospatial-component-map.md). 
+2. In your app, [insert a map](geospatial-component-map.md#use-the-control). 
 
 ## Draw and label shapes on interactive maps
 To draw and label shapes on maps, you first need to enable the following settings:
@@ -97,7 +98,7 @@ The following screenshot shows how the data might look in an Excel workbook:
 
 You can copy the following sample data into an Excel workbook to test this feature. 
 
-1. Copy the following data into an Excel workbook, name the table, and then connect the workbook as a dataset, similar to how it is described in the [Use data from Excel to insert pins](geospatial-map-excel.md#add-pin-data-from-an-excel-workbook) topic.
+1. Copy the following data into an Excel workbook, name the table, and then connect the workbook as a dataset, similar to how it is described in the [Use a data source to place pins on a map](geospatial-map-excel.md) topic.
 
     County | GeoJSON | TotalCases | Color
     --| -- | -- | --
