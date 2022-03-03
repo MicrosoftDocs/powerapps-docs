@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas, ce06122020
 ms.reviewer: tapanm
-ms.date: 3/2/2021
+ms.date: 3/3/2022
 ms.subservice: canvas-maker
 ms.author: anuitz
 search.audienceType: 
@@ -98,7 +98,7 @@ The following screenshot shows how the data might look in an Excel workbook:
 
 You can copy the following sample data into an Excel workbook to test this feature. 
 
-1. Copy the following data into an Excel workbook, name the table, and then connect the workbook as a dataset, similar to how it is described in the [Use data from Excel to insert pins](geospatial-map-excel.md#add-pin-data-from-an-excel-workbook) topic.
+1. Copy the following data into an Excel workbook, name the table, and then connect the workbook as a dataset, similar to how it is described in the [Use a data source to place pins on a map](geospatial-map-excel.md) topic.
 
     County | GeoJSON | TotalCases | Color
     --| -- | -- | --

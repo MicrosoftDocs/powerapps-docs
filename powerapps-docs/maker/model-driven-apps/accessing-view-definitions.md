@@ -4,7 +4,7 @@ description: Learn how to open the view designer
 ms.custom: ""
 ms.date: 03/23/2020
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: how-to

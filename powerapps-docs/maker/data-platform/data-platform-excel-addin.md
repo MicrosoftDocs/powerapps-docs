@@ -3,7 +3,7 @@ title: Open table data in Excel | Microsoft Docs
 description: Open table data in Excel for interactive viewing and editing.
 author: lancedMicrosoft
 manager: kvivek
-ms.service: powerapps
+
 ms.component: cds
 ms.topic: how-to
 ms.date: 07/07/2021

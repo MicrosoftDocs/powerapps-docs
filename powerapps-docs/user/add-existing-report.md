@@ -3,7 +3,7 @@ title: Add a report from outside Power Apps| Microsoft Docs
 description: Add a report from outside Power Apps
 author: mduelae
 manager: kvivek
-ms.service: powerapps
+
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 06/27/2019

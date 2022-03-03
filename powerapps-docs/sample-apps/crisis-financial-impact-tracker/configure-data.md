@@ -2,7 +2,7 @@
 title: Configure Higher Education Financial Crisis Impact Tracker - Sample solution (contains video) | Microsoft Docs
 description: Provides an overview of how to configure the master data in the admin app.
 author: ramanasridhar
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 06/22/2020

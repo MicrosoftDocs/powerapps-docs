@@ -76,8 +76,6 @@ You can use the icons described in the [List of image templates](/azure/azure-ma
 The following Excel table shows the required columns:
 
 
-:::image type="content" source="media/geospatial/sample-excel.png" alt-text="Sample excel file with a table named TestData and containing Name, Longitude, and Latitude columns":::
-
 You can copy the following sample data to test this functionality:
 
 Name | Longitude | Latitude | Color | Icon
@@ -92,7 +90,6 @@ Contoso Pharmaceuticals (sample) | -80.26711 | 40.19918 | |
 Alpine Ski House (sample) | -102.63908 | 35.20919 | |
 A Datum Corporation (sample) | -89.39433 | 40.71025 | |
 Coho Winery (sample) | -116.97751 | 32.87466 | |
-
 
 
 

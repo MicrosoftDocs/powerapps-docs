@@ -4,7 +4,7 @@ description: "Learn about Format and FormatName columns that store the format va
 ms.custom: ""
 ms.date: 09/09/2021
 ms.reviewer: "nabuthuk"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "NHelgren" # GitHub ID
 ms.subservice: dataverse-developer

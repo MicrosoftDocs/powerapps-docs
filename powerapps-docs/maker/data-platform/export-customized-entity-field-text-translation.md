@@ -4,7 +4,7 @@ description: "Learn how to export table and column text for translation"
 ms.custom: ""
 ms.date: 08/05/2020
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"

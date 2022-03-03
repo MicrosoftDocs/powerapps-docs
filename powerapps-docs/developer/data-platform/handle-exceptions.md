@@ -4,7 +4,7 @@ description: "Understand system behavior when a plug-in passes an exception back
 ms.custom: ""
 ms.date: 04/30/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: JimDaly
 ms.subservice: dataverse-developer

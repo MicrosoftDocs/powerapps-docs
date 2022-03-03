@@ -2,7 +2,7 @@
 title: How to link SharePoint lists using a lookup column in Power Apps
 description: Learn about how to link SharePoint lists using lookup columns in Power Apps.
 author: emcoope-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 

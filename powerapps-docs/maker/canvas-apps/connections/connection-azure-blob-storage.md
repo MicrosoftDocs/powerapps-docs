@@ -2,7 +2,7 @@
 title: Connect to Azure Blob Storage from Power Apps
 description: Learn how to connect and upload files to Azure Blob Storage using canvas apps.
 author: vasavib
-ms.service: powerapps
+
 ms.topic: reference
 ms.custom: canvas
 ms.date: 01/27/2022

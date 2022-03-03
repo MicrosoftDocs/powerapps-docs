@@ -2,7 +2,7 @@
 title: Set up the Meeting Capture sample app
 description: Set up the Meeting Capture sample app to create a canvas app, and preview the app features before you customize it for your business needs. 
 author: matthewbolanos
-ms.service: powerapps
+
 ms.topic: sample
 ms.custom: canvas
 ms.reviewer: tapanm

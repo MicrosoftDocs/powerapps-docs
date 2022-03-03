@@ -5,8 +5,8 @@ author: anuitz
 ms.service: powerapps
 ms.topic: overview
 ms.custom: canvas, ce06122020
-ms.reviewer: tapanm
-ms.date: 02/11/2022
+ms.date: 03/3/2022
+ms.reviewer: mkaur
 ms.subservice: canvas-maker
 ms.author: anuitz
 search.audienceType: 
@@ -63,6 +63,8 @@ If you don't have administrative access to the Power Platform admin center, ask 
     >Mapping capabilities are provided by a third party. Microsoft shares address and location queries, but not customer or user names, with the provider. Requests are sent securely over HTTPS or aren't exposed to the public Internet.
 
 1. Select **Save**.
+
+
 
 ### Review the environment's data loss prevention policies
 

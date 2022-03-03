@@ -4,7 +4,7 @@ description: "Learn how to create or edit a web resource"
 ms.custom: ""
 ms.date: 01/20/2022
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"

@@ -2,7 +2,7 @@
 title: "preventDefaultOnError (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the preventDefaultOnError method.
 ms.date: 05/18/2021
-ms.service: powerapps
+
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 9a8802ad-80aa-4386-a192-573280587546

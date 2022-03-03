@@ -2,7 +2,7 @@
 title: Create a custom page template
 description: Learn how to create a custom page template by using Liquid operators.
 author: gitanjalisingh33msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 11/10/2021

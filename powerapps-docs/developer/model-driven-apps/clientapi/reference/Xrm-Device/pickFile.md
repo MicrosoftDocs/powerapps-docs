@@ -2,7 +2,7 @@
 title: "pickFile| MicrosoftDocs"
 description: Opens a dialog box to select files for the upload
 ms.date: 09/08/2021
-ms.service: powerapps
+
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: c777a0b8-2b07-458b-8a4f-8938f7a2e696

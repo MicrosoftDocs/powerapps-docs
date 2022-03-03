@@ -2,7 +2,6 @@
 title: Enter and resolve address in maps
 description: Use the address input control in your apps to let users search for and find addresses.
 author: anuitz
-ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas, ce06122020
 ms.reviewer: mduelae
@@ -14,7 +13,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - anuitz
 ---
 

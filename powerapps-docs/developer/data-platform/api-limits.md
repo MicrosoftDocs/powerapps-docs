@@ -4,7 +4,7 @@ description: "Understand the service protection limits for API requests."
 ms.custom: ""
 ms.date: 10/31/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "JimDaly" 
 ms.subservice: dataverse-developer

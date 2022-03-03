@@ -3,7 +3,7 @@ title: "Web API Query Data Sample (Client-side JavaScript) | Microsoft Docs"
 description: "Learn how to perform basic query requests using the Microsoft Dataverse Web API and client-side JavaScript."
 ms.custom: ""
 ms.date: 07/16/2021
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"

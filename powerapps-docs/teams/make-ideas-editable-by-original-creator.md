@@ -2,16 +2,16 @@
 title: Make ideas editable by original creator (contains video)
 description: Learn about how to make ideas editable by original creator.
 author: sbahl10
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 11/23/2021
 ms.subservice: teams
-ms.author: jshum
+ms.author: saperlmu
 ms.reviewer: tapanm
 contributors:
   - joel-lindstrom
-  - josephshum
+  - msftsamperl
   - tapanm-msft
   - sbahl10
 ---

@@ -4,7 +4,7 @@ description: Learn how to create and edit dashboards for model-driven apps
 ms.custom: ""
 ms.date: 04/08/2020
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"

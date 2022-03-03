@@ -4,7 +4,7 @@ description: "Learn how to use .NET Language-Integrated Query (LINQ) to write qu
 ms.custom: ""
 ms.date: 06/08/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only

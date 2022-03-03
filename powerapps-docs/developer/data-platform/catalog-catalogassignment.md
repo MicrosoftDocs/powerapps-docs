@@ -4,7 +4,7 @@ description: "Learn how to use the Catalog and CatalogAssignment tables to expos
 ms.custom: ""
 ms.date: 10/31/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "JimDaly" #TODO: NoOwner
 ms.subservice: dataverse-developer

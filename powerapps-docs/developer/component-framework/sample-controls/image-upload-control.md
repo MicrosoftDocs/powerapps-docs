@@ -1,10 +1,10 @@
 ---
-title: " Image Upload component| Microsoft Docs"
+title: "Image Upload component | Microsoft Docs"
 description: "This sample component renders as an `Upload` button to upload the image and a default image when the component loads for the first time."
 ms.custom: ""
 manager: kvivek
 ms.date: 6/08/2021
-ms.service: "powerapps"
+
 ms.topic: "article"
 ms.author: "nabuthuk"
 author: nkrb
@@ -18,7 +18,7 @@ This sample component renders as an `Upload` button to upload the image and a de
 
 The selected image renders within the component. Meanwhile, the `Remove` button is shown if we need to reset. When you click on the `Remove` button, the default image is displayed.
 
-> [!div class="mx-imgBorder"] 
+> [!div class="mx-imgBorder"]
 > ![Image Upload component](../media/image-upload-control.png "Image Upload component")
 
 ## Available for
@@ -50,9 +50,10 @@ The `device.pickFile` method opens a dialog box to select files for the upload. 
 > If the same form or table is used on the legacy web client, then the field will show out-of-box text component on legacy web client, where there might have UX issues.  To make it hidden on the legacy web client, we could uncheck the **Visibility** checkbox and check **Hide Default Control** checkbox together.
 
 ### Related topics
-
 [Download sample components](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework)<br/>
 [How to use the sample components](../use-sample-components.md)<br/>
+[Device API component](./device-api-control.md)<br/>
+[Device API](../reference/device.md)<br/>
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework manifest schema reference](../manifest-schema-reference/index.md)
 

@@ -2,7 +2,7 @@
 title: Migrate portal configuration
 description: Learn how to migrate portal configuration.
 author: neerajnandwana-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 02/03/2022
@@ -40,7 +40,7 @@ Migration involves exporting the existing configuration from the source Microsof
 
     :::image type="content" source="media/migrate-portal-config/delete-portal.png" alt-text="Delete portal app.":::
 
-1. Transfer the portal metadata from the source environment using the [Power Platform CLI](#transfer-portal-configuration-using-power-platform-cli) or the [Configuration Migration Tool](#transfer-portal-configuration-using-the-configuration-migration-tool). 
+1. [Transfer](#transfer-portal-metadata) the portal metadata from the source environment using the Power Platform CLI or the Configuration Migration Tool.
 
 1. On the target environment, provision a new portal using the existing portal website option. This process will configure a portal using the portal configuration you transferred from the source environment.
 

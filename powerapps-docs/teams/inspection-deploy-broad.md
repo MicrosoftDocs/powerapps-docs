@@ -2,15 +2,15 @@
 title: How to deploy Inspection app as a broad distribution app (contains video)
 description: Learn about how to deploy Inspection as a broad distribution app
 author: sbahl10
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 08/17/2021
-ms.author: jshum
+ms.author: saperlmu
 ms.reviewer: tapanm
 contributors:
   - joel-lindstrom
-  - josephshum
+  - msftsamperl
   - tapanm-msft
   - sbahl10
 ---

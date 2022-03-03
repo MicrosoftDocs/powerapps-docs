@@ -4,7 +4,7 @@ description: "Update your application code to make Discovery Service calls using
 ms.custom: ""
 ms.date: 1/16/2020
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "bpevans" # GitHub ID
 ms.author: "bevans" # MSFT alias of Microsoft employees only

@@ -8,7 +8,7 @@ ms.subservice: mda-maker
 ms.author: matp
 manager: kvivek
 ms.date: 05/26/2020
-ms.service: powerapps
+
 ms.topic: conceptual
 search.audienceType: 
   - maker

@@ -2,7 +2,7 @@
 title: Power Apps Ideas (preview)
 description: Learn about how to use Power Apps Ideas, its limitations and supportability, and benefit from the generated formulas.
 author: norliu
-ms.service: powerapps
+
 ms.topic: article
 ms.custom: canvas
 ms.date: 12/08/2021
