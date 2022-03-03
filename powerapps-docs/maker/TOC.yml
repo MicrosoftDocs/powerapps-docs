@@ -1361,6 +1361,8 @@
             href: ./model-driven-apps/additional-controls-for-dynamics-365-for-phones-and-tablets.md        
           - name: Set up the timeline control
             href: ./model-driven-apps/set-up-timeline-control.md
+          - name: Use custom connectors with the timeline control
+            href: ./model-driven-apps/custom-connectors-timeline-control.md
           - name: FAQs for the timeline control
             href: ./model-driven-apps/faqs-timeline-control.md
           - name: Quick view control properties
@@ -1569,6 +1571,8 @@
       href: ../mobile/mobile-offline-overview.md
     - name: Set up mobile offline (preview)
       href: ../mobile/setup-mobile-offline.md 
+    - name: Configure mobile offline profiles for images and files
+      href: ../mobile/offline-file-images.md
     - name: Enable and use offline-first (preview)
       href: ../mobile/work-in-offline-mode.md   
 - name: Portals
@@ -1717,7 +1721,7 @@
           href: ./portals/configure/cors-support.md
         - name: Configure advertisements
           href: ./portals/configure/create-run-advertisement.md
-        - name: Configure choices column (preview)
+        - name: Configure choices column 
           href: ./portals/configure/choices-column.md          
         - name: Configure content snippets
           href: ./portals/configure/customize-content-snippets.md

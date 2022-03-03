@@ -2,10 +2,11 @@
 title: Display information about map pins
 description: Add cards that display information about pinned locations in your canvas apps.
 author: anuitz
+ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas, ce06122020
-ms.reviewer: tapanm
-ms.date: 02/22/2022
+ms.reviewer: mduelae
+ms.date: 3/3/2022
 ms.subservice: canvas-maker
 ms.author: anuitz
 search.audienceType: 
@@ -17,7 +18,9 @@ contributors:
   - anuitz
 ---
 
+
 # Add informational cards to pins on a map
+
 
 Easily add cards to maps in your canvas apps to show details about pinned locations. When a user selects a pin, a card pops up with information from the [data source you bound to the map control](./geospatial-map-excel.md). Any column in the data source (for example, an Excel table) can be shown as a field on the card.
 
@@ -25,6 +28,7 @@ Easily add cards to maps in your canvas apps to show details about pinned locati
 
 1. [Create a canvas app](./create-blank-app.md) and make sure it meets the [geospatial prerequisites](./geospatial-overview.md#prerequisites).
 1. [Insert a map](./geospatial-component-map.md).
+
 
 ## Add info cards to pins
 
@@ -50,5 +54,6 @@ When the user selects a pin, an info card shows the fields you selected.
 ## Other geospatial controls
 
 To see dynamic address suggestions as you type, use the **[Address input](geospatial-component-input-address.md)** control.
+
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

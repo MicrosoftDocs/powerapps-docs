@@ -2,11 +2,10 @@
 title: Insert waypoints as map pins and draw routes between them (preview)
 description: Learn about how to add waypoints to your map control as pins and draw routes between them.
 author: anuitz
-
 ms.topic: conceptual
 ms.custom: canvas, ce06122020
-ms.reviewer: iawilt
-ms.date: 10/21/2021
+ms.reviewer: mduelae
+ms.date: 3/3/2022
 ms.subservice: canvas-maker
 ms.author: anuitz
 search.audienceType: 
@@ -14,7 +13,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - anuitz
 ---
 
@@ -33,7 +32,7 @@ The control has options to reorder the waypoints or rearrange the route to impro
 ## Prerequisites
 
 - Create a canvas app, and make sure it meets the [Geospatial prerequisites](geospatial-overview.md#prerequisites).
-- In your app, [insert a map](geospatial-component-map.md#use-the-control).
+- In your app, [insert a map](geospatial-component-map.md).
 
 ## Add waypoint data from an Excel workbook
 
