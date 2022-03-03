@@ -4,7 +4,7 @@ description: Set up and use a system dashboard that references a Power BI report
 ms.custom: ""
 ms.date: 09/24/2020
 ms.reviewer: "matp"
-ms.service: powerapps
+
 ms.topic: "how-to"
 ms.subservice: mda-maker
 ms.author: "aorth"

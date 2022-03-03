@@ -2,7 +2,7 @@
 title: Create a canvas app from a SharePoint list (contains video)
 description: In Power Apps, automatically create a canvas app to manage data in a SharePoint list.
 author: tapanm-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
   - canvas

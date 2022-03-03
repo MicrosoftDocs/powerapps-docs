@@ -3,7 +3,7 @@ title: Edit the default filter of a report| Microsoft Docs
 description: Edit the default filter of a report
 author: mduelae
 manager: kvivek
-ms.service: powerapps
+
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 06/27/2019

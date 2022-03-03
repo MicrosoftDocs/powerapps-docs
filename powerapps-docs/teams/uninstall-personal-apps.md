@@ -2,12 +2,12 @@
 title: Uninstall the Power Apps personal app | Microsoft Docs
 description: Learn how to uninstall personal apps using Power Apps app from Microsoft Teams.
 author: tapanm-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 09/22/2020
 ms.subservice: teams
-ms.author: jshum
+ms.author: saperlmu
 ms.reviewer: tapanm
 contributors:
   - tapanm-msft

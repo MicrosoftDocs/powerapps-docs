@@ -4,7 +4,7 @@ description: "Understand the limits for Microsoft Dataverse API requests."
 
 ms.date: 03/05/2020
 ms.reviewer: "kvivek"
-ms.service: powerapps
+
 ms.topic: overview
 author: "JimDaly" 
 ms.subservice: dataverse-maker

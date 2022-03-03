@@ -4,7 +4,7 @@ description: Learn how to design productive main forms for your model-driven app
 ms.custom: ""
 ms.date: 04/27/2021
 ms.reviewer: "Mattp123"
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "conceptual"

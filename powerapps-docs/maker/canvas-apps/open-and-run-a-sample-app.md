@@ -2,7 +2,7 @@
 title: Create a canvas app from a sample template
 description: Follow these steps for creating a canvas app from a sample in Power Apps. Explore design possibilities and learn concepts for developing your own apps.
 author: wimcoor
-ms.service: powerapps
+
 ms.topic: overview
 ms.custom: 
   - canvas

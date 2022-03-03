@@ -4,7 +4,7 @@ description: Learn how to migrate your embedded canvas apps created with the pub
 ms.custom: ""
 ms.date: 06/25/2019
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"

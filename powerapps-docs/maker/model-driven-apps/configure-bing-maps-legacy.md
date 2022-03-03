@@ -4,7 +4,7 @@ description: Learn how to configure a Bing map in a model-driven app
 ms.custom: ""
 ms.date: 10/18/2019
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"

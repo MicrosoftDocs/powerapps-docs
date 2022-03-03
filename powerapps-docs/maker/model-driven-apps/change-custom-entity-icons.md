@@ -4,7 +4,7 @@ description: "Learn how to change the icon for a custom table"
 ms.custom: ""
 ms.date: 05/04/2020
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"

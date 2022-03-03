@@ -2,7 +2,7 @@
 title: Portals Web API write, update, and delete operations
 description: Learn how to perform Web API write, update, and delete operations in Power Apps portals.
 author: neerajnandwana-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 10/29/2021

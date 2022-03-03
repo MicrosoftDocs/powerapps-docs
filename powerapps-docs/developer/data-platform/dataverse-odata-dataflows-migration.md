@@ -4,7 +4,7 @@ author: denisem-msft
 ms.reviewer: "nabuthuk"
 description: Migrate data between Microsoft Dataverse environments using dataflows OData connector.
 ms.date: 11/24/2021
-ms.service: powerapps
+
 ms.topic: "article"
 ms.subservice: dataverse-developer
 ms.author: demora

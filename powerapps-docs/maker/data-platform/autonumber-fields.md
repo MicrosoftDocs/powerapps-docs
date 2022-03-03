@@ -3,7 +3,7 @@ title: "Autonumber columns in Microsoft Dataverse | MicrosoftDocs"
 description: "Understand how to create, manage, and use autonumber columns"
 keywords: ""
 ms.date: 02/26/2019
-ms.service: powerapps
+
 ms.custom: 
 ms.topic: conceptual
 applies_to: 

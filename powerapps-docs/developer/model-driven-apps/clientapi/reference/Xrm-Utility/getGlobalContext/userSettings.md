@@ -2,7 +2,7 @@
 title: "getGlobalContext.userSettings (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the getGlobalContext.UserSettings method.
 ms.date: 07/13/2021
-ms.service: powerapps
+
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 44296667-f1cd-49be-a300-7259bc3b41e0

@@ -2,7 +2,7 @@
 title: "Build your first modern model-driven app"
 description: "Learn how to build your first model driven app"
 ms.date: 07/05/2021
-ms.service: powerapps
+
 ms.subservice: mda-maker
 ms.topic: tutorial
 author: joel-lindstrom

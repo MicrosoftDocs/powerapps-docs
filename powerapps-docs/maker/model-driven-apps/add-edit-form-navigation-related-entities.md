@@ -4,7 +4,7 @@ description: Learn how to add form navigation for related tables
 ms.custom: ""
 ms.date: 03/18/2020
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"

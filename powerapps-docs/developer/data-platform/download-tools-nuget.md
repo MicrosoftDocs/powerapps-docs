@@ -4,7 +4,7 @@ description: "Download the Plug-in Registration, Package Deployment, and other d
 ms.custom: ""
 ms.date: 03/18/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"

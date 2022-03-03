@@ -2,7 +2,7 @@
 title: Engage with communities by using the community portal
 description: Learn how to engage with communities by using the community portal.
 author: sbmjais
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2020

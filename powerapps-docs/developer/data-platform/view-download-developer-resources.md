@@ -3,7 +3,7 @@ title: "View developer resources page for your Power Apps and Microsoft Datavers
 description: "Discover developer resources and services for Power Apps and Microsoft Dataverse."
 keywords: ""
 ms.date: 09/07/2021
-ms.service: powerapps
+
 ms.custom: 
 ms.topic: article
 author: phecke

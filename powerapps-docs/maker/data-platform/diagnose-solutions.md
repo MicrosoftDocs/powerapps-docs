@@ -6,7 +6,7 @@ ms.author: caburk
 ms.reviewer: matp
 manager: kvivek
 ms.date: 07/08/2021
-ms.service: powerapps
+
 ms.topic: overview
 search.audienceType: 
   - maker
