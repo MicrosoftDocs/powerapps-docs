@@ -221,15 +221,15 @@ Don't use the [console API methods]( https://developer.mozilla.org/en-US/docs/We
 
 #### Avoid memory leaks
 
-Memory leaks in your code can lead to slower performance over time and eventually cause your app to crash. With all customizations and code components on your form, you should:
-- Thoroughly consider and test scenarios for anything responsible for cleaning up memory, like classes responsible for managing lifecycle of objects
-- Cleanup all event listeners and subscriptions, especially if it’s on the `window` object
-- Cleanup all timers like `setInterval`
-- Avoid, limit, and cleanup references to global or static objects
+Memory leaks in your code can lead to slower performance over time and eventually cause your app to crash. Memory leaks occur when the application fails to release memory when no longer needed. With all customizations and code components on your form, you should:
+- Thoroughly consider and test scenarios for anything responsible for cleaning up memory, like classes responsible for managing lifecycle of objects.
+- Cleanup all event listeners and subscriptions, especially if it’s on the `window` object.
+- Cleanup all timers like `setInterval`.
+- Avoid, limit, and cleanup references to global or static objects.
 
-For custom control components, cleanup can be done in the [destroy](https://docs.microsoft.com/en-us/powerapps/developer/component-framework/reference/control/destroy) method.
+For custom control components, cleanup can be done in the [destroy](/powerapps/developer/component-framework/reference/control/destroy) method.
 
-For more information on fixing memory problems, see [this Edge developer documentation](https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/memory-problems/)
+For more information on fixing memory problems, go to [this Edge developer documentation](/microsoft-edge/devtools-guide-chromium/memory-problems/)
 
 ## Tools you can use to help make apps performant
 
