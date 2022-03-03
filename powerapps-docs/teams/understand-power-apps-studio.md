@@ -265,7 +265,6 @@ Switch between various authoring options while working with the app.
 - **Insert** - Allows you to add different controls to the screen.
 - **Data** - Add or remove data such as tables that the app connects to.
 - **Media** - Insert or remove media from the app.
-- **Power Automate** - Integrate app with Power Automate flow.
 - **Advanced tools** - Use **Monitor** to work with the app. Monitor allows you to view a stream of events from a user's session to diagnose and troubleshoot problems with the app. More information: [Monitor overview](../maker/monitor-overview.md)
 
 ## 8 – App authoring options
