@@ -2,10 +2,11 @@
 title: Add Geospatial controls to apps made with Microsoft Power Apps
 description: Geospatial controls let you view and manipulate 3D objects and images in the real world, in augmented reality. 
 author: anuitz
+ms.service: powerapps
 ms.topic: overview
 ms.custom: canvas, ce06122020
-ms.reviewer: mduelae
-ms.date: 02/15/2022
+ms.reviewer: mkaur
+ms.date: 1/19/2021
 ms.subservice: canvas-maker
 ms.author: anuitz
 search.audienceType: 
@@ -13,9 +14,8 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - mduelae
+  - tapanm-msft
   - anuitz
-  - pjramirez-ms
 ---
 
 
@@ -32,9 +32,9 @@ The following prebuilt controls can be used for geospatial and mapping scenarios
 - [Address input](geospatial-component-input-address.md)
 
 ## Prerequisites
-1. An admin must [add a Microsoft Dataverse database](/power-platform/admin/create-database) to the environment.
-3. An admin must [enable the geospatial features in the Power Platform admin center](#enable-the-geospatial-features-for-the-environment) for the environment. This requires reviewing and agreeing to specific terms of service.
-3. An admin must [ensure the geospatial controls will not be blocked by the environment's data loss prevention policies](#review-the-environments-data-loss-prevention-policies).
+
+1. An admin must [enable the geospatial features in the Power Platform admin center](#enable-the-geospatial-features-for-the-environment) for the environment. This requires reviewing and agreeing to specific terms of service.
+2. An admin must [ensure the geospatial controls will not be blocked by the environment's data loss prevention policies](#review-the-environments-data-loss-prevention-policies).
 
     >[!IMPORTANT]
     >The controls require the default **Organizations** data source to be present. This data source is included whenever you insert the controls into an app, but if you manually delete it you'll need to add it before the controls will work:
@@ -42,7 +42,7 @@ The following prebuilt controls can be used for geospatial and mapping scenarios
     >1. With the control selected, go to the **Data sources** tab on the side navigation menu.
     >2. In the search field, enter **Organizations**, and then select the data source that appears. This will add it to the control.
 
-## Enable the geospatial features for the environment
+### Enable the geospatial features for the environment
 
 Before you can use geospatial features in your apps, an admin must enable access to the features for the environment where you want to create your app.
 
@@ -60,39 +60,38 @@ The geospatial features require additional terms of use that must be reviewed an
 
 1. Under **Geospatial services**, set the toggle switch to **On**. A terms of service notice will appear. Read through the terms of service, and if you agree, select the checkbox **I agree to the terms of service**, and then select **Enable**.
 
-    :::image type="content" source="./media/geospatial/ppac-terms.png" alt-text="Screenshot of the terms of service.":::
+    ![Screenshot of the terms of service.](./media/geospatial/ppac-tos.png "Screenshot of the terms of service")
 
     >[!IMPORTANT]
     >You must read and agree to the terms of service before you can use geospatial features. 
+    >
+    >The following are the terms of service:  
+    >  
+    >These features use mapping capabilities that are powered by a third party, TomTom(tm), and operate outside your tenant's geographic region, compliance boundary, or national cloud instance.  
+    >
+    >Microsoft shares the address and location queries with TomTom(tm). The name of the customer or end user who entered the query is not shared.
+    >
+    >This feature is non-regional and the queries you provide may be stored and processed in the United States or any other country in which Microsoft or its subprocessors operate.
+    >
+    >Additional licensing requirements might be required to enable this feature.  
+
+    >[!NOTE]
+    >Requests sent between TomTom(tm) and the Azure Maps service are not exposed over the public Internet.
+    >
+    >Requests between apps you create with the control and the Azure Maps service are sent over HTTPS.
+    
 
 1. Select **Save** at the bottom of the settings page.
 
-    ![Screenshot of the Save button.](./media/geospatial/ppac-save.png "Screenshot of the Save button")
 
-## Review the environment's data loss prevention policies
+### Review the environment's data loss prevention policies
 
 The geospatial controls require the Microsoft Dataverse and Spatial Services connectors. This connector is used by the Power Apps Maps and Address Input controls to connect to Microsoft’s Azure Maps service. It is used to fetch map tiles and satellite imagery, geocode addresses, and search for addresses. Thus, it is required for the Interactive Map and Address Input controls to function.
 
-For the controls to function properly, these connectors must not have conflicting data loss prevention policies. An admin must review the environment's data loss prevention policies and ensure that these connectors are classified under the same data group, typically the **Business** data group. [Learn more about data loss prevention policies for Power Platform](/power-platform/admin/prevent-data-loss).
+For the controls to function properly, these connectors must not have conflicting data loss prevention policies. An admin must review the environment's data loss prevention policies and ensure that these connectors are classified under the same data group, typically the **Business** data group. [Learn more about data loss prevention policies for Power Platform](/power-platform/admin/prevent-data-loss). 
 
-## Privacy and security considerations
 
-- Power Apps doesn’t link search queries to any user when shared with TomTom, and the shared search queries can’t be used to identify individuals.
-- Azure Maps doesn't store the request information sent by you. For more information about Azure Maps compliance, see [Azure global compliance](https://azure.microsoft.com/blog/new-azure-maps-make-identifying-local-compliance-options-easy/)
-- Requests sent between TomTom and Azure Maps are not exposed over the public Internet.
-- Requests sent between apps you create with the geospatial controls and Azure Maps are sent over HTTPS.
-- The following table describes the user data that Power Apps sends to Azure Maps, Bing Maps, and TomTom:
-
-    | Control | Feature | Data |  Purpose | Sent to Azure Maps | Sent to Bing Maps | Sent to TomTom | User identifiers or tracking data sent |
-    | ------- | ------- | ---- | ------------------ | ----------------- | -------------- | ------- | ------ |
-    | Map | Show map tiles | Coordinates in and around the map view | To show the map tiles in the map view. | Yes | No | Yes | No |
-    | Map | Show pins and shapes from coordinates | Pin and shape coordinates | Feature does not require sending coordinate data. | No | No | No | No |
-    | Map | Show pins and route waypoints | Pins and route waypoint addresses | To translate addresses to latitude/longitude coordinates, and show them on the map. | No | Yes | Yes | No |
-    | Map | Show routes | Route waypoint coordinates | To calculate routes between waypoints. | Yes | No | Yes | No |
-    | Address Input | Address Search | Address search query string | To show address search results. | No | Yes | Yes | No |
-    | Address Input | Address Search | Current device location | To bias address search results around the device location. | No | Yes | Yes | No |
-    
-## Next steps
+### Next steps
 
 Start installing the controls in your apps:
 
