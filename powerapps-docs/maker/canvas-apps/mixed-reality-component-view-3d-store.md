@@ -112,7 +112,7 @@ Power Automate can convert 3D model files stored in a SharePoint document librar
 
 In the following example, a document library named *3DModelBase64Library* and a list named *3DModelBase64* exist in the same SharePoint site. The list must include a column of type **multiple-line text**.
 
-1. In the document library, [create a flow](https://docs.microsoft.com/power-automate/sharepoint-overview) based on the **When a new file is added in SharePoint, complete a custom action** template.
+1. In the document library, [create a flow](/power-automate/sharepoint-overview) based on the **When a new file is added in SharePoint, complete a custom action** template.
 2. Set **Library Name** to *3DModelBase64Library* (the name of the document library in this example).
 3. Add a step, **Get file content from SharePoint**.
 4. Set **File Identifier** to **Identifier**.
