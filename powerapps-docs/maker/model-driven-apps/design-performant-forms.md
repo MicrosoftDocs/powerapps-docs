@@ -229,7 +229,7 @@ Memory leaks in your code can lead to slower performance over time and eventuall
 
 For custom control components, cleanup can be done in the [destroy](/powerapps/developer/component-framework/reference/control/destroy) method.
 
-For more information on fixing memory problems, go to [this Edge developer documentation](/microsoft-edge/devtools-guide-chromium/memory-problems/)
+For more information on fixing memory problems, go to [this Edge developer documentation](/microsoft-edge/devtools-guide-chromium/memory-problems/).
 
 ## Tools you can use to help make apps performant
 
