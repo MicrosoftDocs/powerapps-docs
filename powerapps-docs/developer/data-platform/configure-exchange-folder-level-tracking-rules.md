@@ -4,7 +4,7 @@ description: "Learn how to configure Exchange folder-level tracking rules" # 115
 ms.custom: ""
 ms.date: 03/24/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "revachauhan" # GitHub ID
 ms.subservice: dataverse-developer

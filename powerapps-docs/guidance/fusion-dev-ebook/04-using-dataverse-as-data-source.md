@@ -2,7 +2,7 @@
 title: "4: Using Microsoft Dataverse as the data source | Microsoft Docs"
 description: "Learn about the benefits of using Microsoft Dataverse as the data source."
 author: spboyer
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: ebook
 ms.date: 05/07/2021

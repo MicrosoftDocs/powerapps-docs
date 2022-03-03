@@ -4,7 +4,7 @@ description: "Charts display data visually by mapping textual values on two axes
 ms.custom: ""
 ms.date: 07/15/2021
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.topic: "article"
 author: "Nkrb" # GitHub ID
 ms.subservice: mda-developer

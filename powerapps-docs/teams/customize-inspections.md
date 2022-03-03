@@ -2,16 +2,16 @@
 title: Customize the Inspection app (contains video)
 description: Learn about how the Inspection sample apps can be customized.
 author: sbahl10
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 07/09/2021
 ms.subservice: teams
-ms.author: jshum
+ms.author: saperlmu
 ms.reviewer: tapanm
 contributors:
   - joel-lindstrom
-  - josephshum
+  - msftsamperl
   - tapanm-msft
   - sbahl10
 ---

@@ -3,7 +3,7 @@ title: "Developers: Understand terminology in Microsoft Dataverse | Microsoft Do
 description: "Developers: Understand terminology in Dataverse."
 suite: powerapps
 author: KumarVivek
-ms.service: powerapps
+
 ms.date: 03/04/2021
 ms.subservice: dataverse-developer
 ms.author: kvivek

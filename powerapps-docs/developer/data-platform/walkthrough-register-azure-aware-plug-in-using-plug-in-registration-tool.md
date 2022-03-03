@@ -3,7 +3,7 @@ title: "Walkthrough: Register an Azure-aware plug-in using the Plug-in Registrat
 description: "Demonstrates how to register a service endpoint step using the Plug-in Registration tool for use with Azure-Dataverse integration."
 keywords: ""
 ms.date: 03/18/2021
-ms.service: powerapps
+
 ms.topic: article
 ms.assetid: b5ef50fa-8085-f425-3968-804d012fc840
 author: JimDaly # GitHub ID - Brandon Simmons

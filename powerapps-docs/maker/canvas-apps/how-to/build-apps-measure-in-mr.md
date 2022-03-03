@@ -2,7 +2,7 @@
 title: Create an app using the Measure in MR control
 description: Learn how to use the Measure in MR control in Power Apps.
 author: joel-lindstrom
-ms.service: powerapps
+
 ms.subservice: canvas-maker
 search.audienceType: 
   - maker

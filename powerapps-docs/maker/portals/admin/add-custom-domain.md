@@ -2,7 +2,7 @@
 title: Add a custom domain name
 description: Learn how to to add a custom domain name to your portal.
 author: neerajnandwana-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 08/09/2021

@@ -2,7 +2,7 @@
 title: Configure the Twitter provider for portals
 description: Learn how to configure Twitter as the identity provider for Power Apps portals.
 author: sandhangitmsft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/26/2021

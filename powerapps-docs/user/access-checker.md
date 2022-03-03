@@ -3,7 +3,7 @@ title: "Check your user access and permissions| MicrosoftDocs"
 description: How to check user access and security role.
 author: mduelae
 manager: kvivek
-ms.service: powerapps
+
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 1/15/2021
@@ -26,7 +26,7 @@ To perform an action on a row, a user needs to have the required privilege assig
 
 To perform actions on a row, the system checks your privileges and if the privilege check passes, then the system performs an access check. The access check verifies that you have the required rights to perform actions on a row such as read, write, create, delete, append, append to, share, and assign.
 
-You can have access rights to a perform an action on a row through ownership, role access, shared access, or hierarchy access.
+You can have access rights to perform an action on a row through ownership, role access, shared access, or hierarchy access.
 
 |Access type|Description|  
 |---------------|-----------------|  

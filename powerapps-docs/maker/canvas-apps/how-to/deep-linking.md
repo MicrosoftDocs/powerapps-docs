@@ -2,7 +2,7 @@
 title: Create a canvas app with deep link to a specific screen
 description: Learn how to deep link to a specific screen within canvas apps.
 author: vasavib
-ms.service: powerapps
+
 ms.topic: article
 ms.custom: canvas
 ms.reviewer: tapanm

@@ -4,7 +4,7 @@ description: "Learn how to authenticate applications with Microsoft Dataverse us
 ms.custom: has-adal-ref
 ms.date: 10/29/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "paulliew" # GitHub ID
 ms.subservice: dataverse-developer

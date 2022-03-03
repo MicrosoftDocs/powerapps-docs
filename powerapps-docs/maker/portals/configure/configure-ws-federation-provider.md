@@ -2,7 +2,7 @@
 title: Configure a WS-Federation provider for portals
 description: Learn how to configure WS-Federation provider for Power Apps portals.
 author: sandhangitmsft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2021

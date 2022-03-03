@@ -2,7 +2,7 @@
 title: Common sources of slow performance for a canvas app
 description: Learn about the common sources of slow performance for a canvas app.
 author: JinManAhn-MSFT
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm

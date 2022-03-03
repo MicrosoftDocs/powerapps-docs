@@ -2,7 +2,7 @@
 title: Set up the Help Desk sample app
 description: Set up the Help Desk sample app to create a canvas app, and preview the app features before you customize it for your business needs. 
 author: norliu
-ms.service: powerapps
+
 ms.topic: sample
 ms.custom: canvas
 ms.reviewer: tapanm

@@ -3,7 +3,7 @@ title: Delete a table | Microsoft Docs
 description: Step-by-step instructions for how to delete a custom table and clear all data in Power Apps
 author: lancedMicrosoft
 manager: kvivek
-ms.service: powerapps
+
 ms.component: cds
 ms.topic: how-to
 ms.date: 06/29/2020

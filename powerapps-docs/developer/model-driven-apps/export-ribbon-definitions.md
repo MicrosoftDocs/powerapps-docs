@@ -4,7 +4,7 @@ description: "Learn about exporting the ribbon definitions." # 115-145 character
 ms.custom: ""
 ms.date: 04/14/2021
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.topic: "article"
 author: "nkrb" # GitHub ID
 ms.subservice: mda-developer

@@ -4,7 +4,7 @@ description: "Learn how to use the security related APIs to verify user access t
 ms.custom: ""
 ms.date: 06/08/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "paulliew" # GitHub ID
 ms.subservice: dataverse-developer

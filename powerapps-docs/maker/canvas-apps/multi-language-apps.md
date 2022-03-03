@@ -2,7 +2,7 @@
 title: Build a multi-language app
 description: Use Power Apps to build apps that that can support multiple languages.
 author: tapanm-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm

@@ -2,7 +2,7 @@
 title: Planning - Defining the project schedule | Microsoft Docs
 description: When planning a Power Apps project, learn about factors that affect how much time you'll be spending on the project. 
 author: taiki-yoshida
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: guidance
 ms.date: 06/16/2020

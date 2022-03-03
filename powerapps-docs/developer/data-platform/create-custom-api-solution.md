@@ -4,7 +4,7 @@ description: "You can write create custom APis by editing solution files." # 115
 ms.custom: ""
 ms.date: 03/13/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
 ms.subservice: dataverse-developer

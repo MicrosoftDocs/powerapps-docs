@@ -4,7 +4,7 @@ description: "Learn about using JavaScript web resources to create a library of 
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.topic: "article"
 author: "KumarVivek" # GitHub ID
 ms.subservice: mda-developer

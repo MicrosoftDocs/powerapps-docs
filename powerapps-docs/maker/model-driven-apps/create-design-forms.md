@@ -4,7 +4,7 @@ description: "Overview of model-driven forms in Power Apps"
 ms.custom: intro-internal
 ms.date: 09/03/2020
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "overview"

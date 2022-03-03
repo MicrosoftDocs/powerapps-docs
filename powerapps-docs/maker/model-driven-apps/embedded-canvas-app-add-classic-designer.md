@@ -4,7 +4,7 @@ description: Learn how to embed a canvas app into a model-driven form in Power A
 ms.custom: ""
 ms.date: 03/16/2021
 ms.reviewer: "matp"
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -36,7 +36,7 @@ There is a third and more recent method of embedding canvas apps inside a modern
 
 ## Embed a canvas app using the modern experience
 
-To embed a canvas app on a model-driven app main form, such as the main form for the Accounts table, ffollow these steps:
+To embed a canvas app on a model-driven app main form, such as the main form for the Accounts table, follow these steps:
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 2. Choose the environment that has the solution.
