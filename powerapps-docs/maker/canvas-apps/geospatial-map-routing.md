@@ -5,7 +5,7 @@ author: anuitz
 ms.topic: conceptual
 ms.custom: canvas, ce06122020
 ms.reviewer: mduelae
-ms.date: 02/24/2022
+ms.date: 3/3/2022
 ms.subservice: canvas-maker
 ms.author: anuitz
 search.audienceType: 
@@ -37,8 +37,10 @@ You'll need a data source that contains a named table with the following columns
 | Latitude | RouteWaypointsLatitudes | Optional (required if Address isn't given) |
 | Address | RouteWaypointsAddresses | Optional (required if Longitude and Latitude aren't given) |
 
->[!NOTE]
->All properties are technically optional. However, at least one of an address or a latitude/longitude pair must be provided for the waypoint location to be plotted.
+
+> [!NOTE]
+> All properties are technically optional. However, at least one of an address or a latitude/longitude pair must be provided for the waypoint location to be plotted.
+
 
 ## Import waypoint pins from an Excel table
 
