@@ -4,7 +4,7 @@ description: "Learn how to find and analyze performance data on plug-ins executi
 ms.custom: ""
 ms.date: 03/16/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "JimDaly"
 ms.subservice: dataverse-developer

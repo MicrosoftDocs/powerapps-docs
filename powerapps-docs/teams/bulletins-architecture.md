@@ -2,16 +2,16 @@
 title: Understand Bulletins sample app architecture
 description: Learn about the architecture of the Bulletins sample app.
 author: joel-lindstrom
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 05/27/2021
 ms.subservice: teams
-ms.author: jshum
+ms.author: saperlmu
 ms.reviewer: tapanm
 contributors:
   - joel-lindstrom
-  - josephshum
+  - msftsamperl
   - tapanm-msft
 ---
 

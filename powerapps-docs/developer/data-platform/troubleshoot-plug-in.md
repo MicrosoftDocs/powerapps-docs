@@ -4,7 +4,7 @@ description: "Learn what plug-in errors can occur and how to fix them." # 115-14
 ms.custom: ""
 ms.date: 07/12/2021
 ms.reviewer: "pehecke"
-ms.service: "powerapps"
+
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
 ms.subservice: dataverse-developer

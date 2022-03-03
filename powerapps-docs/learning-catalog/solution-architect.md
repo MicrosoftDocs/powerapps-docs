@@ -5,7 +5,7 @@ author: MargoC
 ms.topic: article
 ms.date: 02/19/2020
 ms.author: margoc
-ms.service: powerapps
+
 ---
 
 # Solution architect learning catalog

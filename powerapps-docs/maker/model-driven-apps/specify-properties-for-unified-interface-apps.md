@@ -3,7 +3,7 @@ title: "Specify read only grid properties | MicrosoftDocs"
 description: "Learn how to configure the grid control for your app"
 keywords: ""
 ms.date: 06/03/2019
-ms.service: powerapps
+
 ms.custom: 
 ms.topic: how-to
 applies_to: 

@@ -3,7 +3,7 @@ title: "Update and delete table rows using the Web API (Microsoft Dataverse)| Mi
 description: "Read how to perform update and delete operations on tables using the Web API"
 ms.custom: ""
 ms.date: 05/03/2021
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"

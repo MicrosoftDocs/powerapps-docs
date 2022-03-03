@@ -4,7 +4,7 @@ description: "Object of CrmServiceClient class can be used to perform create, re
 ms.custom: ""
 ms.date: 03/20/2019
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -67,5 +67,7 @@ using (CrmServiceClient svc = new CrmServiceClient(conn))
            }
 }
 ```
+
+To learn more about using Dataverse Web API requests and responses, and handling errors, see [Use the Microsoft Dataverse Web API](../webapi/overview.md).
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

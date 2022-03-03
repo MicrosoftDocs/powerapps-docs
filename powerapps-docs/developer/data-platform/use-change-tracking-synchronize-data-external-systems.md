@@ -4,7 +4,7 @@ description: "The change tracking feature provides a way to keep the data synchr
 ms.custom: ""
 ms.date: 03/24/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
 ms.subservice: dataverse-developer

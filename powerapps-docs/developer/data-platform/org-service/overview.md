@@ -4,7 +4,7 @@ description: "Read how you can use Microsoft Dataverse Organization Service to w
 ms.custom: 
 ms.date: 04/15/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: overview
 author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only

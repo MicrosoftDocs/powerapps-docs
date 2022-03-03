@@ -3,7 +3,7 @@ title: "Query Data sample (C#) (Microsoft Dataverse)| Microsoft Docs"
 description: "This sample demonstrates how to query data of Microsoft Dataverse entity instances, using the Dataverse Web API along with the CDSWebApiService class."
 ms.custom: ""
 ms.date: 07/15/2020
-ms.service: powerapps
+
 applies_to: 
   - "Dynamics 365 (online)"
 author: "JimDaly"

@@ -3,7 +3,7 @@ title: Overview of Hospital Emergency Response sample solution for Power Platfor
 description: Provides an overview of Hospital Emergency Response Solution.
 author: pankajarora-msft
 manager: annbe
-ms.service: powerapps
+
 ms.topic: overview
 ms.custom: 
 ms.date: 04/23/2020

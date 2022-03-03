@@ -2,7 +2,7 @@
 title: Overview of the canvas app for Northwind Traders
 description: Learn about the Northwind Traders sample app and data.
 author: gregli-msft
-ms.service: powerapps
+
 ms.topic: overview
 ms.custom: canvas
 ms.reviewer: tapanm

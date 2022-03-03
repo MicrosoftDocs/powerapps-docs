@@ -2,7 +2,7 @@
 title: "Transform examples to Power Fx formulas (preview)"
 description: Learn about how to train Power Apps with your own examples and generate formulas using Power Apps Ideas.
 author: norliu
-ms.service: powerapps
+
 ms.topic: article
 ms.custom: canvas
 ms.date: 12/08/2021

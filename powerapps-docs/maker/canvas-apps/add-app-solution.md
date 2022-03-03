@@ -2,7 +2,7 @@
 title: Create a canvas app from within a solution
 description: In Power Apps, create a canvas app in a solution so that you can deploy the app to another environment.
 author: caburk
-ms.service: powerapps
+
 ms.topic: article
 ms.custom: canvas
 ms.reviewer: tapanm

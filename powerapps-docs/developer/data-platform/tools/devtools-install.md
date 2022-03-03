@@ -4,7 +4,7 @@ description: "Learn how to install the Power Platform Tools extension for Visual
 ms.custom: ""
 ms.date: 08/31/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "phecke" # GitHub ID
 ms.subservice: dataverse-developer
@@ -81,6 +81,7 @@ You can find a few Power Platform Tools options in Visual Studio by choosing **T
 
 ### See Also
 
-[Quickstart: Create a Power Platform Tools project](devtools-create-project.md)
+[Quickstart: Create a Power Platform Tools project](devtools-create-project.md)  
+[Power Platform Tools on the Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=microsoft-IsvExpTools.PowerPlatformTools)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

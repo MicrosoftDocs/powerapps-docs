@@ -4,7 +4,7 @@ description: "This tutorial will show you the process to extend the workflow des
 ms.custom: ""
 ms.date: 07/16/2019
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only

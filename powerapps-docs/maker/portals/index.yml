@@ -7,13 +7,13 @@ metadata:
   title: Power Apps portals documentation
   description: Provides access to highlighted areas within the Power Apps portals documentation
   services: service
-  ms.service: powerapps 
+  
   ms.subservice: subservice
   ms.topic: landing-page 
   ms.collection: collection
   author: kumarvivek
   ms.author: kvivek
-  ms.date: 11/30/2021 
+  ms.date: 02/11/2022 
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -24,22 +24,22 @@ landingContent:
     linkLists:
        - linkListType: whats-new
          links:
+          - text: Configure column permissions for portals
+            url: configure/column-permissions.md             
           - text: Configure Dataverse search in portals (preview)
             url: configure/dataverse-search.md         
-          - text: Configure choices column for portals (preview)
+          - text: Configure choices column for portals
             url: configure/choices-column.md         
-          - text: Portals as Progressive Web Apps (preview)
+          - text: Portals as Progressive Web Apps
             url: progressive-web-apps.md         
-          - text: Liquid template tag for code components (preview)
+          - text: Liquid template tag for code components
             url: component-framework-liquid.md         
-          - text: Create multiple portals of same type
-            url: create-additional-portals.md
        - linkListType: reference
          links:
           - text: Latest released version of portals
             url: /power-platform/released-versions/portals
-          - text: Starter Portal package version 9.3.2109.x released
-            url: versions/package-version-9.3.2109.md
+          - text: Starter Portal package version 9.3.2201.x released
+            url: versions/package-version-9.3.2201.md
 
   # Card 
   - title: Get started
