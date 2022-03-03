@@ -92,7 +92,7 @@ Continuing with the *TestData* table from our earlier example, enter the followi
  ForAll(Map1.GeocodedItems, Patch(TestData, LookUp(TestData, ThisRecord.Address = Address), {Latitude: Latitude, Longitude: Longitude }))
 ```
 
-:::image type="content" source="media/geospatial/save-to-datasource.png" alt-text="A screenshot of a button control under construction in Microsoft Power Apps Studio, with its OnSelect property shown in the formula bar.":::
+
 
 ## Other interactive map features
 
