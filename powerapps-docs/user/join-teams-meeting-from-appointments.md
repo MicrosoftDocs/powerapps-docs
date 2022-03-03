@@ -38,7 +38,7 @@ This is a preview feature. Your system administrator will need to enable the fol
 > [!NOTE]
 > When this feature is enabled, the **Description** field in appointments also supports editing and viewing in rich text.
 
-### Add a Teams meeting to an appointment 
+## Add a Teams meeting to an appointment 
 
 1. From the left navigation pane, select **Activities**.
 2. From the list of activities, select an existing appointment or select **Appointment** on the command bar to create a new one.
@@ -50,7 +50,7 @@ This is a preview feature. Your system administrator will need to enable the fol
 6. When you're done, select **Save**.
 
 
-### Join a Teams meeting from an appointment
+## Join a Teams meeting from an appointment
 
 1. Open an appointment activity. 
 2. Choose one of the following ways to join the meeting:
