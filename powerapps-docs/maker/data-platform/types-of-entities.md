@@ -4,7 +4,7 @@ description: "Learn about the different types of Microsoft Dataverse tables."
 ms.custom: ""
 ms.date: 04/27/2021
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"

@@ -4,7 +4,7 @@ description: "This sample demonstrates how to perform a number of workflow opera
 ms.custom: ""
 ms.date: 1/14/2020
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: sample
 author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only

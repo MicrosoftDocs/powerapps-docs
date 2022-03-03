@@ -3,7 +3,7 @@ title: "Configure connection roles | MicrosoftDocs"
 ms.custom: ""
 ms.date: 02/11/2020
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"

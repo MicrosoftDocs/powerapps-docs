@@ -3,7 +3,7 @@ title: "View the history of a solution | MicrosoftDocs"
 description: "Learn how to view the history of a solution"
 keywords: 
 ms.date: 04/20/2020
-ms.service: powerapps
+
 ms.custom: 
 ms.topic: article
 ms.assetid: 

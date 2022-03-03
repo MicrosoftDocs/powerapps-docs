@@ -4,7 +4,7 @@ description: "Learn about choices columns that allow storing multiple choices in
 ms.custom: ""
 ms.date: 03/25/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "MicroSri" # GitHub ID
 ms.subservice: dataverse-developer

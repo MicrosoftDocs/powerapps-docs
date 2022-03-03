@@ -1,17 +1,17 @@
 ---
 title: Profile+ sample app (preview)
 description: Learn how to use the Profile+ app from Teams store.
-author: josephshum
-ms.service: powerapps
+author: msftsamperl
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 05/24/2021
 ms.subservice: teams
-ms.author: jshum
+ms.author: saperlmu
 ms.reviewer: tapanm
 contributors:
   - tapanm-msft
-  - josephshum
+  - msftsamperl
   - joel-lindstrom
 ---
 

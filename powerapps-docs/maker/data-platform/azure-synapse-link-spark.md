@@ -4,13 +4,13 @@ description: "Learn how to transform exported Dataverse table data with Apache S
 ms.custom: ""
 ms.date: 08/06/2021
 ms.reviewer: "Mattp123"
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
 applies_to: 
   - "powerapps"
-author: "sama-zaki"
+author: "sabinn-msft"
 ms.assetid: 
 ms.subservice: dataverse-maker
 ms.author: "matp"
@@ -20,7 +20,7 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
-contributors: ""
+contributors: "sama-zaki"
 ---
 
 # Transform Azure Synapse Link for Dataverse data with Apache Spark

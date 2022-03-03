@@ -6,7 +6,7 @@ keywords:
 ms.author: nabuthuk
 manager: kvivek
 ms.date: 06/12/2021
-ms.service: "powerapps"
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -19,3 +19,4 @@ applies_to:
 ---
 
 Retrieve record's associated commands.
+If there are multiple datasets in the manifest, retrieveRecordCommand returns the commands for the first dataset.

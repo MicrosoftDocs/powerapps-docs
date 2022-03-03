@@ -2,7 +2,7 @@
 title: "setSubmitMode (Client API reference)| MicrosoftDocs"
 ms.description: Sets whether data from the column will be submitted when the record is saved. 
 ms.date: 04/19/2021
-ms.service: powerapps
+
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: d0728377-4365-4571-97af-9b99b2a39b65

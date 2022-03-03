@@ -4,7 +4,7 @@ description: Understand the privileges required to apps built on Dataverse
 ms.custom: ""
 ms.date: 06/18/2018
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "conceptual"

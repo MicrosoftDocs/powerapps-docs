@@ -4,7 +4,7 @@ description: "Learn about columns in Power Apps portal"
 
 ms.date: 08/13/2021
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: overview

@@ -4,7 +4,7 @@ description: "Learn how to create or edit a main form"
 ms.custom: ""
 ms.date: 05/23/2018
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -56,7 +56,7 @@ Each main form is composed of one or more tabs. Each tab can have one or more se
 4.  Edit the properties for parts of the form, as needed:
     
     - [Edit form properties](create-and-edit-forms.md#configure-a-form)
-    - [Edit form column properties](Add-move-or-delete-fields-on-form.md#configure-columns-on-a-form)  
+    - [Edit form column properties](Add-move-or-delete-fields-on-form.md#configure-column-properties-on-a-form)  
     - [Edit tab properties](add-move-or-delete-tabs-on-form.md#configure-tabs-on-a-form)
     - [Edit section properties](add-move-or-delete-sections-on-form.md)
 

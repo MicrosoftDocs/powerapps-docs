@@ -3,7 +3,7 @@ title: "Navigating to and from a custom page in your model-driven app using clie
 description: "This article provides examples of navigating from a model-driven app page using the client API to a custom page."
 ms.date: 08/17/2021
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.subservice: mda-developer
 ms.topic: "how-to"
 author: "aorth"

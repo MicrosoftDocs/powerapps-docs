@@ -3,7 +3,7 @@ title: "Add or edit Power BI visualizations on your dashboard | MicrosoftDocs"
 description: How to edit Power BI visualizations on dashboards
 author: mduelae
 manager: kvivek
-ms.service: powerapps
+
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 10/15/2019

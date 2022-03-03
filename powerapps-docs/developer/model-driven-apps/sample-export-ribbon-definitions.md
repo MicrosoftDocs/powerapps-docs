@@ -4,7 +4,7 @@ description: "The sample shows how to export Ribbon definitions. It uses the Ret
 ms.custom: ""
 ms.date: 04/14/2021
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.topic: "article"
 author: "KumarVivek" # GitHub ID
 ms.subservice: mda-developer

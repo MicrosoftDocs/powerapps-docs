@@ -3,7 +3,7 @@ title: "Export to an Excel static worksheet in model-driven Power Apps | Microso
 description: How to export to an Excel static worksheet in a model-driven Power Apps
 author: mduelae
 manager: kvivek
-ms.service: powerapps
+
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 3/12/2021

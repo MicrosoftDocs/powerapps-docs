@@ -2,7 +2,7 @@
 title: "isValid (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Gets a boolean value indicating whether all of the table data is valid.
 ms.date: 04/15/2021
-ms.service: powerapps
+
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 93eba632-5e40-4515-bb4b-4e8cd8303322

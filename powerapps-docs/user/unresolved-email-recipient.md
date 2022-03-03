@@ -3,7 +3,7 @@ title: "Resolve an unresolved email recipient | MicrosoftDocs"
 description: "Learn how to resolve an unresolved email recipient."
 author: sbmjais
 manager: shujoshi
-ms.service: powerapps
+
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 05/11/2020
