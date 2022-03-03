@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 2/28/2022
+ms.date: 3/03/2022
 ms.subservice: end-user
 ms.author: mkaur
 ms.custom: ""
@@ -33,10 +33,10 @@ Now you can create and join a Teams meeting from an appointment in your model-dr
 This is a preview feature. Your system administrator will need to enable the following items: 
 
 - Turn on the **Collaboration (preview)** feature called **End users can add and join Teams meeting from appointments in model-driven apps** for your environment. More information: [Manage feature settings](/power-platform/admin/settings-features).
-- Set up server side-synce for appointments. More information: [Set up server-side synchronization of email, appointments, contacts, and tasks](/power-platform/admin/set-up-server-side-synchronization-of-email-appointments-contacts-and-tasks). Note, once server side-sync is setup it takes a few minutes for your meetings to sync between your app and Teams.
+- Set up server side-sync for appointments. More information: [Set up server-side synchronization of email, appointments, contacts, and tasks](/power-platform/admin/set-up-server-side-synchronization-of-email-appointments-contacts-and-tasks). Note, once server side-sync is setup it takes a few minutes for your meetings to sync between your app and Teams.
 
 > [!NOTE]
-> When this feature is enabled, the **Description** field in an appointment also supports editing and viewing in rich text.
+> When this feature is enabled, the **Description** field in appointments also supports editing and viewing in rich text.
 
 ### Add a Teams meeting to an appointment 
 
