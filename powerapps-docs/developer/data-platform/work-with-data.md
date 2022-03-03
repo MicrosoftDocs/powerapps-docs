@@ -4,7 +4,7 @@ description: "Microsoft Dataverse provides web services and APIs that you can us
 ms.custom: ""
 ms.date: 03/11/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "JimDaly" # GitHub ID Temp owner
 ms.subservice: dataverse-developer

@@ -4,7 +4,7 @@ description: Understand the recommended ways to work with embedded canvas apps i
 ms.custom: ""
 ms.date: 09/02/2021
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "troubleshooting"
@@ -22,7 +22,7 @@ search.app:
 ---
 # Guidelines and troubleshooting for embedded canvas apps
 
-[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 ## Guidance on embedding canvas apps
 

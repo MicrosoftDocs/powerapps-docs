@@ -3,7 +3,7 @@ title: "Choose and configure columns in model-driven app views in Power Apps | M
 description: "Learn how to select and configure views for your app"
 keywords: ""
 ms.date: 11/27/2018
-ms.service: powerapps
+
 ms.custom: 
 ms.topic: how-to
 applies_to: 
@@ -29,7 +29,7 @@ search.app:
 
 # Choose and configure columns in model-driven app views
 
-[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 <a name="BKMK_ChooseAndConfigureColumns"></a>   
 

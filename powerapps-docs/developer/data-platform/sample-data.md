@@ -4,7 +4,7 @@ description: "Learn how to install or uninstall sample data using the Web API or
 ms.custom: ""
 ms.date: 03/26/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
 ms.subservice: dataverse-developer

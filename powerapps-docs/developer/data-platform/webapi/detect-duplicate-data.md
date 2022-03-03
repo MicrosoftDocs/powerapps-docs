@@ -3,7 +3,7 @@ title: "Detect Duplicate Data using the Web API (Microsoft Dataverse) | Microsof
 description: "<Description>" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.service: powerapps
+
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -18,7 +18,7 @@ search.app:
 
 # Detect Duplicate Data using the Web API
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 
 <!-- 
 Related topics

@@ -3,7 +3,7 @@ title: "Create, add and remove forms or views in a model-driven app using the ap
 description: Learn how to Create, add and remove forms, views or dashboards in a model-driven app.
 ms.custom: ""
 ms.date: 10/07/2021
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"

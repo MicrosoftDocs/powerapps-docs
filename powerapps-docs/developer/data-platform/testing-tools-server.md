@@ -4,7 +4,7 @@ description: "Learn about testing frameworks for server-side development." # 115
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
 ms.subservice: dataverse-developer
@@ -18,7 +18,7 @@ search.app:
 ---
 # Testing tools for server-side development
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 Many developers strongly advocate including unit testing as part of their development process. Others are not convinced. Microsoft Dataverse doesn't provide testing framework tools, but you should be aware that there are community tools available that you can use. A popular framework for server-side development is [Fake Xrm Easy](https://dynamicsvalue.com/home). This framework can be combined with your choice of .NET framework testing frameworks. [FakeItEasy](https://fakeiteasy.github.io/) is a common choice.
 

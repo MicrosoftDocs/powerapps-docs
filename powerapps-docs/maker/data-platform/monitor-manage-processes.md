@@ -4,7 +4,7 @@ description: "Learn how to manage real-time workflow processes with Power Apps"
 ms.custom: ""
 ms.date: 09/03/2020
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -26,7 +26,7 @@ search.audienceType:
 ---
 # Monitor and manage real-time workflow processes
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 To monitor and manage processes, you must locate the process, evaluate the status, and perform any actions necessary to address problems.  
   

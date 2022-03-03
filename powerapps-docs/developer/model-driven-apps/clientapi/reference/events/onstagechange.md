@@ -2,7 +2,7 @@
 title: "OnStageChange Event (Client API reference) in model-driven apps| MicrosoftDocs"
 description: This event occurs when the stage of a business process flow control changes.
 ms.date: 04/15/2021
-ms.service: powerapps
+
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 0c85fe34-1368-4d0d-87eb-4109206ce4f7

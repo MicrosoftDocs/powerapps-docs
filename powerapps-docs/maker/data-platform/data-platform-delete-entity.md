@@ -3,7 +3,7 @@ title: Delete a table | Microsoft Docs
 description: Step-by-step instructions for how to delete a custom table and clear all data in Power Apps
 author: lancedMicrosoft
 manager: kvivek
-ms.service: powerapps
+
 ms.component: cds
 ms.topic: how-to
 ms.date: 06/29/2020
@@ -18,7 +18,7 @@ search.app:
 ---
 
 # Delete a table
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 You can delete custom tables, but you can't delete standard tables. Notice that you can't delete a custom table while it has one or more dependent components. More information: [Delete a table that has dependencies](#delete-a-table-that-has-dependencies)
 

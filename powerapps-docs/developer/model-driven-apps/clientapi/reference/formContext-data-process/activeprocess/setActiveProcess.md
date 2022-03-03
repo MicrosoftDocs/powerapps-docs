@@ -2,7 +2,7 @@
 title: "setActiveProcess (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Sets a process as the active process.
 ms.date: 04/15/2021
-ms.service: powerapps
+
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 0d4c2d8a-a2fb-4cdd-9153-041646068992

@@ -3,7 +3,7 @@ title: "Add a custom page to your model-driven app"
 description: " Learn how to add a custom page to a model-driven app"
 ms.date: 06/29/2021
 ms.reviewer: "matp"
-ms.service: powerapps
+
 ms.subservice: mda-maker
 ms.topic: "How-to"
 author: "aorth"

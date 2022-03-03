@@ -4,7 +4,7 @@ description: "This sample shows how to retrieve filters for Microsoft Dynamics 3
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "sriharibs-msft" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -17,7 +17,7 @@ search.app:
 ---
 # Sample: Create and retrieve Outlook filters
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 
 This sample code is for Microsoft Dataverse. To download the sample, refer [Sample: Create and retrieve Outlook filters](/dynamics365/customer-engagement/developer/outlook-client/sample-create-retrieve-outlook-filters).
 

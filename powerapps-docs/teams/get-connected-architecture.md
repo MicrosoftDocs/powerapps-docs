@@ -2,14 +2,14 @@
 title: Understand Get connected sample app architecture (preview) | Microsoft Docs
 description: Learn about the architecture of the Get connected sample app.
 author: joel-lindstrom
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 08/17/2021
-ms.author: jshum
+ms.author: saperlmu
 ms.reviewer: tapanm
 contributors:
-    - josephshum
+    - msftsamperl
     - tapanm-msft
     - joel-lindstrom
 ---

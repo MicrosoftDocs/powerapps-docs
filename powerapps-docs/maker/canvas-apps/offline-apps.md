@@ -2,12 +2,11 @@
 title: Develop offline-capable canvas apps (contains video)
 description: Learn about how to develop offline-capable canvas apps so that your users are productive whether they are online or offline.
 author: mustlaz
-ms.service: powerapps
 ms.subservice: canvas-developer
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 01/28/2021
+ms.date: 03/02/2022
 ms.author: mustlaz
 search.audienceType: 
   - maker
@@ -27,7 +26,9 @@ Mobile users often need to be productive even when they have limited or no conne
 - Use [collections](create-update-collection.md) and leverage the [**LoadData** and **SaveData**](functions/function-savedata-loaddata.md) functions for basic data storage when offline.
 
 > [!NOTE]
-> Offline capability for canvas apps is only available while running the apps using [Power Apps Mobile](https://powerapps.microsoft.com/downloads/). Canvas apps running in web browsers can't run offline, even when using a web browser on a mobile device.
+> - Offline capability for canvas apps is only available while running the apps using the native [Power Apps Mobile](https://powerapps.microsoft.com/downloads/) players on iOS, Android, and Windows.
+> - Canvas apps running in web browsers can't run offline, even when using a web browser on a mobile device.
+> - Canvas apps in Teams are limited to 1 MB of data through the LoadData and SaveData functions&mdash;useful for a small number of text strings, numbers, and dates. Use of images or other media is inappropriate for this limit. More information: [**LoadData** and **SaveData** function reference](functions/function-savedata-loaddata.md)
 
 This article includes an example using Twitter data.  An even simpler example that doesn't require a connection is included in the [**LoadData** and **SaveData** function reference](functions/function-savedata-loaddata.md).
 
@@ -73,8 +74,7 @@ At a high level, the app performs these tasks:
 
 ### Step 1: Add Twitter to a blank phone app
 
-1. In Power Apps Studio, select **File** > **New**.
-1. On the **Blank app** tile, select **Phone layout**.
+1. Create a [blank canvas app](create-blank-app.md) with **Phone** layout.
 1. On the **View** tab, select **Data sources**.
 1. In the **Data** pane, select **Add data source**.
 1. Select **New Connection** > **Twitter** > **Create**.

@@ -4,7 +4,7 @@ description: Learn how to customize forms for performance for your model-driven 
 ms.custom: ""
 ms.date: 11/19/2021
 ms.reviewer: "Mattp123"
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "conceptual"
@@ -71,7 +71,7 @@ The `openForm` client API method allows a parameter option to display a form in 
 
 Using the most up-to-date web browser is key to ensuring your model-driven app runs as fast as possible.  The reason for this is that many of the performance improvements can only be used in the newer modern browsers.
 
-For example, if your organization has older versions of Firefox, non-Chromium-based browsers, and so on, many of the performance gains that are built into a model-driven app will not be available in the older browser versions because they don't support features that the app depends on to run quickly and smoothly. And if you're using Internet Explorer, it's no longer supported.
+For example, if your organization has older versions of Firefox, non-Chromium-based browsers, and so on, many of the performance gains that are built into a model-driven app will not be available in the older browser versions because they don't support features that the app depends on to run quickly and smoothly.
 
 In most cases, you can expect to see page load improvements by just switching to Microsoft Edge, updating to the latest current browser version from an older version, or moving to a modern Chromium-based browser.
 
@@ -122,7 +122,7 @@ For example, there may be code in an event handler to make a network request and
 
 #### Async support in form OnLoad and form OnSave events
 
-Starting in 2021 release wave 2, the form `OnLoad` and `OnSave` events support handlers that return promises. The events will wait for any promises returned by a handler to resolve, up to a timeout period.
+The form `OnLoad` and `OnSave` events support handlers that return promises. The events will wait for any promises returned by a handler to resolve, up to a timeout period. This support can be enabled via app settings.
 
 More information:
 - [Form OnLoad](/powerapps/developer/model-driven-apps/clientapi/reference/events/form-onload)

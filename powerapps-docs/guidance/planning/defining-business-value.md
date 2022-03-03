@@ -2,7 +2,7 @@
 title: Planning - Defining the project's business value | Microsoft Docs
 description: Business value falls into one of four categories - Revenue, Efficiency, Volume, Other. Define the business value for your Power Apps project.
 author: TGrounds
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: guidance
 ms.date: 06/16/2020

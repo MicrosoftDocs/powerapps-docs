@@ -4,7 +4,7 @@ description: "Learn how to use the editable grid custom control"
 ms.custom: ""
 ms.date: 04/09/2020
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -26,7 +26,7 @@ search.app:
 ---
 # Make model-driven app views editable using the editable grid control
 
-[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 By default, users can't enter data directly using the read-only view control for views and subgrids on forms. Users select the row in the grid to open a form, edit the data, and then save, which requires multiple steps. With editable grids, users can do rich in-line editing directly from views and subgrids whether they're using a web app, tablet, or phone.  
   

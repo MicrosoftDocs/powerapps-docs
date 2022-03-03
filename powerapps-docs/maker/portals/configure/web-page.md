@@ -2,7 +2,7 @@
 title: Manage web pages
 description: Learn how to manage web pages in a portal.
 author: sandhangitmsft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 08/19/2021

@@ -3,7 +3,7 @@ title: "Create or edit filters in model-driven app views | MicrosoftDocs"
 description: "Learn how to create and edit filters or views for your app"
 keywords: "expression builder"
 ms.date: 2/04/2020
-ms.service: powerapps
+
 ms.custom: 
 ms.topic: how-to
 applies_to: 
@@ -29,7 +29,7 @@ search.app:
 
 # Create or edit filters in model-driven app views
 
-[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 <a name="BKMK_CreateOrEditViewFilters"></a>   
 

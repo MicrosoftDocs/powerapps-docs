@@ -2,7 +2,7 @@
 title: Contact us sample
 description: Overview of the Contact us sample page that's part of the portal starter template.
 author: ankitavish
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 12/06/2021

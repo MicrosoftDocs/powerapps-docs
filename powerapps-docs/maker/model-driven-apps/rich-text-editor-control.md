@@ -2,9 +2,9 @@
 title: Use the rich text editor control in Power Apps | MicrosoftDocs
 description: "The rich text editor control provides the app user a WYSIWYG editing area for formatting text"
 ms.custom: ""
-ms.date: 01/19/2022
+ms.date: 02/28/2022
 ms.reviewer: "matp"
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -21,7 +21,7 @@ search.app:
 ---
 # Add the rich text editor control to a model-driven app
 
-[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 The rich text editor control provides the app user a WYSIWYG editing area for formatting text. The control's input and output format is HTML. The control allows copied rich text, such as from a web browser or Word, to be pasted into the control.
 
@@ -161,7 +161,7 @@ You can configure all of the CKEditor-supported properties under this property. 
 
 <td>
 
-  Sets the actual default font size and style. Additionally, you can include any other CSS properties you'd like to set as part of your default styling. <br></br> The stickyStyle plugin creates a wrapper around your content using the element specified by "stickyStyles_defaultTag", which is initially configured as "div".
+  Sets the actual default font size and style.<br></br> The stickyStyle plugin creates a wrapper around your content using the element specified by "stickyStyles_defaultTag", which is initially configured as "div".
 </td>
 <td>
 
@@ -682,7 +682,7 @@ The default RTE webresource is available with the display name RTEGlobalConfigur
  
     "showPreview": false,
  
-    "showPreviewHeaderWarning": false}
+    "showPreviewHeaderWarning": false
 }
 ``` 
 ## Find the current setting for a rich text editor configuration

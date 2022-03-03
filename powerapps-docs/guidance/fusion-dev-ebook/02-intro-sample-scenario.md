@@ -2,7 +2,7 @@
 title: "2: Introduction to the sample scenario | Microsoft Docs"
 description: "Learn more about the sample scenario used in the ebook."
 author: spboyer
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: ebook
 ms.date: 04/26/2021

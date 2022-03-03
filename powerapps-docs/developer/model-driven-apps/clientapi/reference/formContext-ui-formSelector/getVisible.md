@@ -2,7 +2,7 @@
 title: "getVisible (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the getVisible method.
 ms.date: 04/19/2021
-ms.service: powerapps
+
 ms.topic: "reference"
 ms.assetid: c44ca2a7-e1e0-40fc-a7a4-5ae97eacc204
 author: "Nkrb"

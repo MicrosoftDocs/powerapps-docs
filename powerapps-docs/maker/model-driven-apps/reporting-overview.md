@@ -4,7 +4,7 @@ description: Learn how reporting can be applied to your model-driven app.
 ms.custom: ""
 ms.date: 10/26/2021
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.topic: overview
 author: "Mattp123"
 ms.assetid: b4098c96-bce1-4f57-804f-8694e6254e81
@@ -18,7 +18,7 @@ search.app:
 ---
 # Reporting overview for model-driven apps
 
-[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 [Microsoft Dataverse](model-driven-app-glossary.md#dataverse) as a platform supports interaction with many millions of records, filtered down to the relevant security roles. Dataverse presents data in a way that permits the correct record to be found in a reliable fashion.
 

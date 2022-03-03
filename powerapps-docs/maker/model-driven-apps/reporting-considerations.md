@@ -4,7 +4,7 @@ description: Learn about what the considerations are when you use reporting in m
 ms.custom: 
 ms.date: 09/27/2019
 ms.reviewer: 
-ms.service: powerapps
+
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: conceptual
@@ -26,7 +26,7 @@ search.app:
 ---
 # Model-driven app reporting capabilities and considerations
 
-[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 Model-driven apps have many capabilities that allow customers to surface business data that helps them drive decisions and interact with their customers and their data more effectively.  
 

@@ -2,7 +2,7 @@
 title: "7: Adding functionality to the app  | Microsoft Docs"
 description: "Learn about adding functionality to the app."
 author: spboyer
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: ebook
 ms.date: 04/26/2021

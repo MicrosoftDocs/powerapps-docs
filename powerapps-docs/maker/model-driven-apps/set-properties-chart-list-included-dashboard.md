@@ -4,7 +4,7 @@ description: "Learn how to set properties for  chart or list included in a dashb
 ms.custom: ""
 ms.date: 06/06/2018
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "conceptual"
@@ -26,7 +26,7 @@ search.app:
 ---
 # Set properties for a model-driven app chart or list included in a dashboard
 
-[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 2. Select an [environment](model-driven-app-glossary.md#environment) with an unmanaged solution.

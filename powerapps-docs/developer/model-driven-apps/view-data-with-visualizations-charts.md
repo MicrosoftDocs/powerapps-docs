@@ -4,7 +4,7 @@ description: "Visualizations let you see your business data graphically. A visua
 ms.custom: ""
 ms.date: 04/15/2021
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.topic: "article"
 author: "KumarVivek" # GitHub ID
 ms.subservice: mda-developer

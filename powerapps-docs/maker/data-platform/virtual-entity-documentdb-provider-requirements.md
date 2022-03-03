@@ -3,7 +3,7 @@ title: "Preview Feature: Use the Azure Cosmos DB for SQL API Data Provider with 
 description: "Learn how to configure the Azure Cosmos DB for SQL API Data Provider to use with virtual tables."
 keywords: "SQL API"
 ms.date: 02/15/2019
-ms.service: powerapps
+
 ms.custom: 
 ms.topic: article
 applies_to: 
@@ -29,7 +29,7 @@ search.app:
 
 # Preview feature: Azure Cosmos DB SQL API Data Provider requirements
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 This topic describes the requirements for the Azure Cosmos DB for SQL API data provider as well as how to configure and recommended best practices when you use the Azure Cosmos DB for SQL API data provider with virtual tables. 
 

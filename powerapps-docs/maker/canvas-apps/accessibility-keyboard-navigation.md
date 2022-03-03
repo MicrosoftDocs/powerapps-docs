@@ -2,7 +2,7 @@
 title: Improved canvas keyboard navigation in canvas apps (experimental)
 description: Learn about how to use the improved canvas keyboard navigation experience for better accessibility.
 author: hemantgaur
-ms.service: powerapps
+
 ms.topic: article
 ms.custom: canvas
 ms.date: 10/25/2021

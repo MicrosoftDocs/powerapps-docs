@@ -2,7 +2,7 @@
 title: Test Studio
 description: Describes Test Studio with overview, terminology, best practices, and limitations.
 author: maustinjones
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.reviewer: tapanm
 ms.date: 04/24/2020

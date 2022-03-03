@@ -2,7 +2,7 @@
 title: Enable Azure storage
 description: Learn how to enable Azure storage for portals to take advantage of the greater file storage capability of Azure.
 author: gitanjalisingh33msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 08/12/2021

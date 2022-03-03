@@ -2,7 +2,7 @@
 title: Connect to SharePoint from a canvas app
 description: See the available functions, responses, and examples for SharePoint.
 author: NickWaggoner
-ms.service: powerapps
+
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm

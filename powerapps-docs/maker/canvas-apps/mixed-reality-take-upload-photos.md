@@ -2,11 +2,10 @@
 title: Take real-world screenshots of objects in mixed reality
 description: Use your app to take photos of 3D objects that are overlaid in the real world.
 author: anuitz
-ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: tapanm
-ms.date: 11/22/2021
+ms.reviewer: mduelae
+ms.date: 01/27/2022
 ms.subservice: canvas-maker
 ms.author: anuitz
 search.audienceType: 
@@ -14,7 +13,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - anuitz
   - CoPrez
 ---
@@ -37,7 +36,7 @@ This topic will guide you through creating a test app that you can use to take a
 
 ## Prerequisites
 
-- Create a blank canvas app using [Power Apps Studio](https://create.powerapps.com) by selecting **Phone layout** under **Blank app** inside **Start with a blank canvas or a template** section.
+- Create a [blank canvas app](create-blank-app.md).
 - Create a OneDrive folder called **MRPhotos** to store your photos when testing the upload feature.
 
 > [!TIP]

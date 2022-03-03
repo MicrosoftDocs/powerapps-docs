@@ -3,7 +3,7 @@ title: Power Apps webinars | Microsoft Docs
 description: Power Apps webinars
 author: KumarVivek
 manager: annbe
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 12/21/2021

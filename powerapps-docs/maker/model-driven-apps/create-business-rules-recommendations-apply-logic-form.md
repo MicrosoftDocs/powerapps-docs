@@ -4,7 +4,7 @@ description: Learn how to create a business rule for a specific form in Power Ap
 ms.custom: ""
 ms.date: 03/30/2020
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -28,7 +28,7 @@ search.app:
 ---
 # Create business rules and recommendations to apply logic in a model-driven app form
 
-[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 ## Business rules introduction
 

@@ -3,7 +3,7 @@ title: "Authenticate to Microsoft Dataverse with the Web API (Dataverse)| Micros
 description: "Learn about the different ways to manage authentication when using the Web API"
 ms.custom: ""
 ms.date: 10/31/2018
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
