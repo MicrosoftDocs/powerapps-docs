@@ -4,7 +4,7 @@ description: "Read about tables containing data that define duplicate detection 
 ms.custom: ""
 ms.date: 03/26/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID
 ms.subservice: dataverse-developer

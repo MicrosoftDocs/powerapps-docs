@@ -2,7 +2,7 @@
 title: Customize a SharePoint list or library form by using Power Apps (contains video)
 description: Learn about how to use Power Apps to customize the form with which users create and update entries in a SharePoint list.
 author: wimcoor
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.reviewer: tapanm
 ms.date: 02/04/2022

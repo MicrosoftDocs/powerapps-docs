@@ -2,7 +2,7 @@
 title: Create a canvas app from scratch based on Excel data
 description: In this tutorial, you'll create a two-screen canvas app so that users can create, edit, and delete records in an Excel file.
 author: tapanm-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
   - canvas

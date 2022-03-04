@@ -3,7 +3,7 @@ title: "Create or edit a model-driven app using the app designer in Power Apps |
 description: "Learn how to create or edit apps using the app designer"
 keywords: ""
 ms.date: 03/05/2020
-ms.service: powerapps
+
 ms.custom: 
 ms.topic: get-started-article
 applies_to: 
@@ -62,7 +62,7 @@ Verify the following prerequisites before creating an app:
       > [!div class="mx-imgBorder"]
       > ![Create a new app.](media/create-new-app.png "Create a new app")
 
-     - **Icon**: By default, the **Use Default App** thumbnail check box is checked. To select a different web resource as an icon for the app, clear the check box, and then select an icon from the drop-down list. This icon will be displayed on the preview tile of the app.  
+     - **Icon**: By default, the **Use Default Image**check box is checked. To select a different web resource as an icon for the app, clear the check box, and then select an icon from the drop-down list. This icon will be displayed on the preview tile of the app. For more information about how to create a web resource, go to [Create or edit model-driven app web resources to extend an app](create-edit-web-resources.md).
   
     - **Use existing solution to create the App (Optional)**: Select this option to create the app from a list of installed solutions. When this option is selected, **Done** switches to **Next** on the header. If **Next** is selected, the **Create app from existing solution** page opens. From the **Select Solution** drop-down list, select a solution. If any site map is available for the selected solution, the **Select Sitemap** drop-down list will appear. Select the site map, and then select **Done**.
 

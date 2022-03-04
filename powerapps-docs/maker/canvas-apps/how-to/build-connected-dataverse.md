@@ -2,7 +2,7 @@
 title: How to create a canvas app connected to Microsoft Dataverse from scratch
 description: Learn about how to create a canvas app from scratch.
 author: sbahl10
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.subservice: canvas-maker

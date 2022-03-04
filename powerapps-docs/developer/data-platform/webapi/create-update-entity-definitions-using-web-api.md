@@ -3,7 +3,7 @@ title: "Create and update table definitions using the Web API (Microsoft Dataver
 description: "Learn about creating and updating table definitions using the Web API."
 ms.custom: ""
 ms.date: 04/21/2021
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"

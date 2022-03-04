@@ -2,7 +2,7 @@
 title: Analyze and resolve Portal Checker diagnostics results
 description: Learn about Portal Checker diagnostics results, how to analyze them, and how to resolve issues or problems found by Portal Checker.
 author: neerajnandwana-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 01/13/2022

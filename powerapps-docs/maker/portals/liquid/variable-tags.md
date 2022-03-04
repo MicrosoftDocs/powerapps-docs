@@ -2,7 +2,7 @@
 title: Variable tags
 description: Learn about variable tags available in portal.
 author: gitanjalisingh33msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2020

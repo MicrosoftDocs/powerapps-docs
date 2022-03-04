@@ -1,16 +1,16 @@
 ---
 title: Localize sample apps (contains video)
 description: Learn how to add extra localizations to the sample for Microsoft Teams.
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 08/05/2021
 author: joel-lindstrom
-ms.author: jshum
+ms.author: saperlmu
 ms.reviewer: tapanm
 contributors:
   - joel-lindstrom
-  - josephshum
+  - msftsamperl
   - tapanm-msft
 ---
 

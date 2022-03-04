@@ -2,7 +2,7 @@
 title: Set up notes as attachments for basic and advanced forms
 description: Adding notes to forms on your Power Apps portal is easy. This page explains how to add and configure notes as attachments on both basic and advanced forms.
 author: gitanjalisingh33msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 12/15/2021
@@ -199,7 +199,7 @@ Notes, and the **Add**, **Edit**, and **Delete** buttons for the note control wi
 
 ### Notes created with rich-text editor
 
-You can view the notes created using the [Rich text editor control configurations](/model-driven-apps/rich-text-editor-control#rich-text-editor-control-configuration-options) on your portal webpage. However, when you try to edit, you'll see the text in HTML markup format.
+You can view the notes created using the [Rich text editor control configurations](../model-driven-apps/rich-text-editor-control.md) on your portal webpage. However, when you try to edit, you'll see the text in HTML markup format.
 
 For example, this note shows rich-text format in the model-driven app.
 

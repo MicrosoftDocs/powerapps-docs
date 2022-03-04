@@ -4,7 +4,7 @@ description: "Use the plugin trace log to store plug-in execution information to
 ms.custom: ""
 ms.date: 04/24/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: JimDaly
 ms.subservice: dataverse-developer

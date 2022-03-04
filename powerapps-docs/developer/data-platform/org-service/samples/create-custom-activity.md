@@ -4,7 +4,7 @@ description: "This sample shows how to create a custom activity" # 115-145 chara
 ms.custom: ""
 ms.date: 06/17/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only

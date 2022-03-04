@@ -4,7 +4,7 @@ description: "Editable grid is a custom control that provides rich inline editin
 ms.custom: ""
 ms.date: 04/15/2021
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.topic: "article"
 author: "Nkrb" # GitHub ID
 ms.subservice: mda-developer

@@ -5,8 +5,8 @@ author: anuitz
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas, ce06122020
-ms.reviewer: tapanm
-ms.date: 1/19/2021
+ms.reviewer: mduelae
+ms.date: 3/3/2022
 ms.subservice: canvas-maker
 ms.author: anuitz
 search.audienceType: 
@@ -31,7 +31,7 @@ The map control also supports road and satellite views.
 
 ![Map control.](./media/augmented-geospatial/geospatial-map-component.png "Map control")
 
-To use the control, you need to [enable geospatial features for the environment](geospatial-overview.md#enable-the-geospatial-features-for-the-environment).
+To use the control, you need to [enable geospatial features for the environment](geospatial-overview.md#enable-geospatial-features-for-the-environment).
 
 Make sure you also [review the prerequisites for using geospatial controls](geospatial-overview.md#prerequisites).
 
@@ -76,8 +76,6 @@ You can use the icons described in the [List of image templates](/azure/azure-ma
 The following Excel table shows the required columns:
 
 
-:::image type="content" source="media/geospatial/sample-excel.png" alt-text="Sample excel file with a table named TestData and containing Name, Longitude, and Latitude columns":::
-
 You can copy the following sample data to test this functionality:
 
 Name | Longitude | Latitude | Color | Icon
@@ -92,7 +90,6 @@ Contoso Pharmaceuticals (sample) | -80.26711 | 40.19918 | |
 Alpine Ski House (sample) | -102.63908 | 35.20919 | |
 A Datum Corporation (sample) | -89.39433 | 40.71025 | |
 Coho Winery (sample) | -116.97751 | 32.87466 | |
-
 
 
 

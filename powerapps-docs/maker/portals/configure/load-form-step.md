@@ -2,7 +2,7 @@
 title: Define a load form and load tab step type
 description: Learn how to define a load form and load tab step type in a portal.
 author: sandhangitmsft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 02/02/2022

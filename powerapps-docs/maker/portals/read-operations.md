@@ -2,7 +2,7 @@
 title: Portals read operations using the Web API
 description: Learn how to create read operations using the portals Web API.
 author: neerajnandwana-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 02/01/2022
