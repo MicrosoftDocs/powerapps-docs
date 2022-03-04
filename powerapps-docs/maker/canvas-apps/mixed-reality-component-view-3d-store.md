@@ -13,7 +13,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - anuitz
 ---
 
@@ -133,3 +133,4 @@ The [Note table](../../developer/data-platform/annotation-note-entity.md) in Mic
 - The server that hosts the model files must not require authentication and must be CORS-compliant.
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
+

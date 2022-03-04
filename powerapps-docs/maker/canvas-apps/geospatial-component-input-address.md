@@ -2,11 +2,10 @@
 title: Enter and resolve address in maps
 description: Use the address input control in your apps to let users search for and find addresses.
 author: anuitz
-
 ms.topic: conceptual
 ms.custom: canvas, ce06122020
-ms.reviewer: tapanm
-ms.date: 1/19/2021
+ms.reviewer: mduelae
+ms.date: 3/3/2022
 ms.subservice: canvas-maker
 ms.author: anuitz
 search.audienceType: 
@@ -14,7 +13,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - anuitz
 ---
 
@@ -26,7 +25,7 @@ The address input control lets you see dynamic address suggestions as you type. 
 
 The control returns the address as structured data, allowing your application to extract information like city, street, municipality, and even latitude and longitude. The data is in a format friendly to many locales and international address formats.
 
-To use the control, you need to [enable geospatial features for the environment](geospatial-overview.md#enable-the-geospatial-features-for-the-environment).
+To use the control, you need to [enable geospatial features for the environment](geospatial-overview.md#enable-geospatial-features-for-the-environment).
 
 Make sure you also [review the prerequisites for using geospatial controls](geospatial-overview.md#prerequisites).
 
