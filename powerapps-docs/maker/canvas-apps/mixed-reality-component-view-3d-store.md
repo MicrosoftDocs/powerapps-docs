@@ -2,11 +2,10 @@
 title: Connect 3D models to Power Apps
 description: Load 3D models into Power Apps from attachments, media content, direct URLs, or Base64-encoded URIs.
 author: anuitz
-
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: tapanm
-ms.date: 2/3/2022
+ms.reviewer: mkaur
+ms.date: 3/4/2022
 ms.subservice: canvas-maker
 ms.author: anuitz
 search.audienceType: 
@@ -26,16 +25,11 @@ Make sure your 3D models are [optimized for use with Power Apps](/dynamics365/mi
 
 ## Loading 3D models from common connectors
 
-<!-- PLEASE EXPAND ON THE INFO IN THE FOLLOWING PARAGRAPH. IS "BINARY STORAGE" SIGNIFICANT? IS THERE A TOPIC IN OUR DOCS WE CAN REFER TO FOR MORE INFO? -->
-
-Loading 3D models from attachments or media content works through the binary storage associated with Power Apps. To check if a data connector uses binary storage, add a label and set the **Text** property to the data source. If the label starts with `appres://`, then that data source should work with the **View in 3D** control.
-
-<!--WHERE SHOULD THE USER ADD A LABEL AND WHERE SHOULD THE TEXT PROPERTY BE SET TO DO THIS TEST? -->
+Loading 3D models from attachments or media content depends on how a data connector support. To check if a data connector will work the Mixed Reality controls, add a label control to the canvas app and set the Text property to the data source. If the label text starts with `appres://`,then that data connector should work with the **View in 3D control**.
 
 > [!TIP]
 > You can rename a .glb file extension to .jpg and directly upload it to the app.
 
-<!-- I DON'T SEE A WAY IN THESE INSTRUCTIONS, OR IN POWER APPS STUDIO, TO LOAD A MODEL FROM AN ATTACHMENT. PLEASE DOCUMENT THIS, TOO. -->
 
 ### Load 3D models from a SharePoint list
 
