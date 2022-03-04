@@ -54,69 +54,37 @@ We'll start by adding controls on the data card available with the scrollable sc
 
     :::image type="content" source="media/add-scrolling-screen/select-insert.png" alt-text="Alt text that describes the content of the image.":::
 
-1. Choose a control, such as a **Column chart** 
+1. Expand **Charts**, and then select **Column chart**.
 
-1. In the canvas you added, click or tap **Add an item from the Insert tab**.
-   
-    ![Add an item from the Insert tab][4]
-2. On the **Insert** tab, click or tap **Charts**, and then click or tap **Column Chart**.
-   
-    ![The option to add a column chart][5]
-   
-    A column chart appears in the first card on the screen:  
-   
-    ![Default column chart][7]
-3. On the **Insert** tab, click or tap **Text**, and then click or tap **Pen input**:  
-   
-    ![Option to add a pen control][8]
-4. Move the pen control below the chart, and resize the pen control to cover the bottom of the card:  
-   
-    ![Move and resize the pen control][9]
+1. Resize the chart added on the screen to consume about two-thirds of the screen.
 
-## Add a section
-Now, let's add another card with another control.
+1. Reduce the size of the data card to the size of the added chart.
 
-1. Near the bottom of the screen, click or tap **Add section**:  
-   
-    ![Option to add a section][10]
-   
-    A new card is added to the screen:  
-   
-    ![A new card below the default section][11]
-2. With the card still selected, go to the **Insert** tab, click or tap **Charts**, and then click or tap **Line chart**.
-   
-    The new chart is too big to appear on the screen with the other controls:  
-   
-    ![A line chart added to the bottom of the new card][12]
-3. Open Preview mode by pressing F5 (or by clicking or tapping the play icon near the upper-right corner).
-   
-    ![Open Preview mode.](./media/add-scrolling-screen/open-preview.png)
-4. Scroll down to display the new line chart.  
-   
-    ![Preview shows the line chart][13]
+    :::image type="content" source="media/add-scrolling-screen/resize-data-card.png" alt-text="Resize the data card on the screen to consume two-thirds of the screen.":::
 
-[1]: ./media/add-scrolling-screen/add-screen.png
-[2]: ./media/add-scrolling-screen/add-canvas.png
-[3]: ./media/add-scrolling-screen/default-canvas.png
-[4]: ./media/add-scrolling-screen/insert-visual.png
-[5]: ./media/add-scrolling-screen/add-chart.png
-[7]: ./media/add-scrolling-screen/default-chart.png
-[8]: ./media/add-scrolling-screen/add-pen.png
-[9]: ./media/add-scrolling-screen/move-resize-pen.png
-[10]: ./media/add-scrolling-screen/add-section.png
-[11]: ./media/add-scrolling-screen/new-card.png
-[12]: ./media/add-scrolling-screen/add-line-chart.png
-[13]: ./media/add-scrolling-screen/line-chart-preview.png
+1. Select **Add section** on the screen to add another section.
 
-## Limitations
+    :::image type="content" source="media/add-scrolling-screen/second-data-card.png" alt-text="A new data card added to the screen.":::
 
-### Forms can't be used in the scrolling screen
+1. Select **Insert** > **Charts** > **Line chart**.
 
-The canvas control uses DataCards to create sections, and Forms cannot be inserted into DataCards.
+1. Scroll down on the screen using the scroll bar on the right-side of the screen, and then select **Add section** to add a third data card.
 
-We prevent certain combinations of controls from being nested together because they can cause performance issues, stability issues, or both. In the worst cases, unexpected combinations of controls can cause apps to get into an unrecoverable state.
+1. Select **Insert** > **Input** > **Pen input**.
 
-An alternative to using the scrolling screen is to use Layout Containers to create a scrolling section in a screen.
+1. Resize the pen input control by increasing the width inside the data card.
+
+    :::image type="content" source="media/add-scrolling-screen/resize-pen-input.png" alt-text="Pen input control resized to use more width on the screen.":::
+
+1. Press **F5** on the keyboard to preview the app. Scroll down using the scroll bar to lower part of the screen.
+
+    :::image type="content" source="media/add-scrolling-screen/preview-scrollable-screen.png" alt-text="Preview scrollable screen.":::
+
+Now that you've demonstrated how to use scrollable screen, customize the app further as per your business requirements.
+
+## Scrolling screen for forms
+
+Since Power Apps uses data cards to create sections, [Display form and Edit form](controls/control-form-detail.md) controls can't be inserted on them. Nesting of such a combination of controls together may degrade the performance of the app. Hence, when using form controls, use layout containers such as a [vertical container](controls/control-vertical-container.md) control.
 
 #### Examples
 
