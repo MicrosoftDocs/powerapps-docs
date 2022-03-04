@@ -2,11 +2,10 @@
 title: Add a scrolling screen to a canvas app
 description: In Power Apps, create a screen that users can scroll to show more types of content than the screen can show at a time in a canvas app.
 author: emcoope-msft
-
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 10/25/2016
+ms.date: 03/04/2022
 ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
@@ -17,30 +16,45 @@ contributors:
   - tapanm-msft
   - emcoope-msft
 ---
+
 # Add a scrolling screen to a canvas app
 
 In a canvas app, create a screen that users can scroll to show different items. For example, create a phone app that shows data in several charts, which users can display if they scroll.
 
-When you add multiple controls in a section, the controls maintain their relative positions within that section, regardless if it's a phone app or a tablet app. Note that the screen size and orientation may determine how the sections are arranged.  
+When you add multiple controls in a section, the controls maintain their relative positions within that section, regardless if it's a phone app or a tablet app. Note that the [screen size and orientation](set-aspect-ratio-portrait-landscape.md) may determine how the sections are arranged.  
 
 [!INCLUDE [app-customization-requirements](../../includes/app-customization-requirements.md)]
 
 ## Create a scrolling screen
 
-1. On the **Home** tab, click or tap **New screen**:
+1. Select **New screen** below the top menu.
 
-    ![Option to add a screen to an app][1]
+1. Select **Scrollable**.
 
-2. On the **Home** tab, click or tap **Layouts**, and then click or tap the option to add an infinite scrolling canvas:  
-   
-    ![Option to add an infinite scrolling canvas][2]
-   
-    The canvas is added:  
-   
-    ![A screen with an infinite scrolling canvas, as it appears by default][3]
+    :::image type="content" source="media/add-scrolling-screen/new-scrollable-screen.png" alt-text="Select new screen and then choose scrollable screen type.":::
 
-## Add elements
-Now, let's add some controls to the canvas to see how the scrolling screen works.
+    A new scrollable screen is added to the app.
+
+    :::image type="content" source="media/add-scrolling-screen/scrollable-screen.png" alt-text="A screenshot that shows the scrollable screen added to the app.":::
+
+## Add controls
+
+Scrollable screen includes one data card by default. Data cards help separate building blocks on the screen. To make screen scrollable with multiple controls, add more data cards. And then, add controls in data cards as required.
+
+To add data cards, you can select **Add section** at the bottom of the scrollable screen.
+
+:::image type="content" source="media/add-scrolling-screen/add-section-data-card.png" alt-text="Add section button highlighted on the scrollable screen on the canvas.":::
+
+We'll start by adding controls on the data card available with the scrollable screen by default, and then add a new section that adds another data card. Once a new data card is available, we'll then add another control inside the new data card. Together, both data cards and the controls within the data cards would extend the default length of the screen, requiring the use of the scrolling ability of the screen.
+
+> [!TIP]
+> To learn more about data cards, see [Understand data cards](working-with-cards.md).
+
+1. Select **+** (**Insert**) from the left-pane.
+
+    :::image type="content" source="media/add-scrolling-screen/select-insert.png" alt-text="Alt text that describes the content of the image.":::
+
+1. Choose a control, such as a **Column chart** 
 
 1. In the canvas you added, click or tap **Add an item from the Insert tab**.
    
@@ -94,5 +108,36 @@ Now, let's add another card with another control.
 [12]: ./media/add-scrolling-screen/add-line-chart.png
 [13]: ./media/add-scrolling-screen/line-chart-preview.png
 
+## Limitations
+
+### Forms can't be used in the scrolling screen
+
+The canvas control uses DataCards to create sections, and Forms cannot be inserted into DataCards.
+
+We prevent certain combinations of controls from being nested together because they can cause performance issues, stability issues, or both. In the worst cases, unexpected combinations of controls can cause apps to get into an unrecoverable state.
+
+An alternative to using the scrolling screen is to use Layout Containers to create a scrolling section in a screen.
+
+#### Examples
+
+For Makers who want a basic "Scrollable Form", follow these steps:
+
+1. In the insert pane under "Layout", select a "Vertical container".
+1. Set the "Vertical Overflow" property of the container to "Scroll".
+1. Add a View or Edit Form to the container.
+
+For makers who wish to use X/Y positioning instead of the Layout Properties, they can get this effect by nesting a container inside of a layout container.
+
+1. In the insert pane under "Layout", select a "Vertical container".
+1. Set the "Vertical Overflow" property of the container to "Scroll".
+1. In the insert pane under "Layout", select "Container".
+1. In the properties of the inner container, uncheck the "Flexible Height" property.
+
+You can then set the height of the inner container to a custom value, and the outer container will create a scrollbar for the overflow.
+
+For more information on the Layout Containers and their capabilities, refer to the following documentation:
+* [Building responsive canvas apps](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/build-responsive-apps)
+* References for the [Horizontal](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/controls/control-horizontal-container) and [Vertical](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/controls/control-vertical-container) container controls
+* [Broader information on responsive layouts](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/create-responsive-layout)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
