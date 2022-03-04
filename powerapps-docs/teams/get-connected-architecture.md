@@ -6,10 +6,10 @@ author: joel-lindstrom
 ms.topic: conceptual
 ms.custom: 
 ms.date: 08/17/2021
-ms.author: jshum
+ms.author: saperlmu
 ms.reviewer: tapanm
 contributors:
-    - josephshum
+    - msftsamperl
     - tapanm-msft
     - joel-lindstrom
 ---

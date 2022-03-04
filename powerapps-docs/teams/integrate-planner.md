@@ -2,15 +2,14 @@
 title: Integrate your Teams Power App with Planner (contains video)
 description: Learn how to make your Power Apps in Teams work with Planner.
 author: joel-lindstrom
-
 ms.topic: conceptual
 ms.custom: 
 ms.date: 08/25/2021
-ms.author: jshum
+ms.author: saperlmu
 ms.reviewer: tapanm
 contributors:
   - joel-lindstrom
-  - josephshum
+  - msftsamperl
   - tapanm-msft
 ---
 
@@ -37,7 +36,7 @@ In this section, we'll create a new Teams team and then create an app within tha
 
 1. To create a new team, select the **Teams** tab > select **Join or create a team** > select **Create Team** > select **From Scratch** > select **Public**, and give the team a name such as "Planner Integration". And then, select **Create**.
 
-1. Select and add any members in your organization that you'd like to add to the team for testing purposes, and select *Add**.
+1. Select and add any members in your organization that you'd like to add to the team for testing purposes, and select **Add**.
 
 1. Select **Close**.
 
