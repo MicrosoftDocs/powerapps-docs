@@ -25,7 +25,7 @@ Make sure your 3D models are [optimized for use with Power Apps](/dynamics365/mi
 
 ## Loading 3D models from common connectors
 
-Loading 3D models from attachments or media content depends on how a data connector support. To check if a data connector will work the Mixed Reality controls, add a label control to the canvas app and set the Text property to the data source. If the label text starts with `appres://`,then that data connector should work with the **View in 3D control**.
+Loading 3D models from attachments or media content depends on how a data connector support. To check if a data connector will work the mixed reality controls, add a label control to the canvas app and set the text property to the data source. If the label text starts with `appres://`,then that data connector should work with the **View in 3D control**.
 
 > [!TIP]
 > You can rename a .glb file extension to .jpg and directly upload it to the app.
@@ -107,7 +107,7 @@ Power Automate can convert 3D model files stored in a SharePoint document librar
 
 In the following example, a document library named *3DModelBase64Library* and a list named *3DModelBase64* exist in the same SharePoint site. The list must include a column of type **multiple-line text**.
 
-1. In the document library, [create a flow](https://docs.microsoft.com/power-automate/sharepoint-overview) based on the **When a new file is added in SharePoint, complete a custom action** template.
+1. In the document library, [create a flow](/power-automate/sharepoint-overview) based on the **When a new file is added in SharePoint, complete a custom action** template.
 2. Set **Library Name** to *3DModelBase64Library* (the name of the document library in this example).
 3. Add a step, **Get file content from SharePoint**.
 4. Set **File Identifier** to **Identifier**.
