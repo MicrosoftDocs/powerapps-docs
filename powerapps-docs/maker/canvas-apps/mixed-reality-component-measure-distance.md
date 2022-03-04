@@ -4,8 +4,8 @@ description: Digitally measure distances, areas, and freeform shapes in the real
 author: anuitz
 ms.topic: conceptual
 ms.custom: canvas
-ms.date: 3/3/2022
-ms.reviewer: mduelae
+ms.date: 3/4/2022
+ms.reviewer: mkaur
 ms.subservice: canvas-maker
 ms.author: anuitz
 search.audienceType: 
@@ -23,12 +23,12 @@ Use the **Measure in MR** control in a canvas app to measure distance, area, and
 
 The **Measure in MR** control adds a button to your app. When a user selects the button, the app shows a live feed from the device camera. On-screen instructions direct the user to establish tracking by slowly panning the device from right to left across the surface to be measured. The user identifies a starting point and adds segments as needed until the measurement is complete. Dimensions of the measured space are overlaid on the camera feed.
 
-The user can submit the measurements for capture in the control's **Measurements** and **MeasurementsDetailed** output properties. The user can also take screenshots while a space is measured. The screenshots are captured in the control's **Photos** output property.
+The user can submit the measurements for capture in the control's **Measurements** output properties. The user can also take screenshots while a space is measured. The screenshots are captured in the control's **Photos** output property.
 
 :::image type="content" source="./media/augmented-overview/measure-in-mixed-reality.png" alt-text="A photo of a phone screen that shows dimensions overlaid on a corner in a room that's under construction.":::
 
 > [!TIP]
-> > The mixed-reality (MR) controls work best on LIDAR-enabled devices in well-lit environments with flat-textured surfaces.
+> The mixed-reality (MR) controls work best in well-lit environments with flat-textured surfaces. Tracking is better on LIDAR-enabled devices.
 
 ## Add a **Measure in MR** button to an app screen
 
@@ -97,7 +97,6 @@ Your app can make use of more properties when a user interacts with the **View i
 | Measurements | Captures, in a table, the measured distances, volumes, and areas. |
 | Segments | Captures, in a table, information about segments in a measured object. |
 
-<!-- At the top of this page, we refer to output properties called **Measurements** and **MeasurementsDetailed**. There's no other mention of **MeasurementsDetailed**; instead, the output property section refers to **Segments**. The measurements in **Segments** seem very detailed. Is **Segments** = **MeasurementsDetailed**? If so, which is the correct term? -->
 
  The Measurements table has the following columns:
 
