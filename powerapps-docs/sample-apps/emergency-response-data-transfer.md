@@ -3,7 +3,7 @@ title: Transfer data from Hospital to Regional System | Microsoft Docs
 description: Provides information on transferring data from hospital to regional solution using SFTP server.
 author: pankajarora-msft
 manager: annbe
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 06/10/2020

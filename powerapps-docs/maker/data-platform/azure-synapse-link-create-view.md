@@ -4,7 +4,7 @@ description: "Learn how to create a view of your exported Dataverse table data"
 ms.custom: ""
 ms.date: 01/24/2022
 ms.reviewer: "Mattp123"
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"

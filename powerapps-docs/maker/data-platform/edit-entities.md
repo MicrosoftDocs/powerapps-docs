@@ -4,7 +4,7 @@ description: "Learn the different ways that a table can be edited"
 ms.custom: ""
 ms.date: 10/20/2020
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "conceptual"

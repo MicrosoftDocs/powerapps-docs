@@ -3,7 +3,7 @@ title: "Web API  Data operations  Samples (C#) (Microsoft Dataverse)| Microsoft 
 description: "This topic provides a description of various Web API samples that are implemented using C#"
 ms.custom: ""
 ms.date: 10/31/2018
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"

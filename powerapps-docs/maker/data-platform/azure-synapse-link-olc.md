@@ -4,7 +4,7 @@ description: "Learn how to manage your Azure Synapse Link for Dataverse profiles
 ms.custom: ""
 ms.date: 11/01/2021
 ms.reviewer: "Mattp123"
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "conceptual"

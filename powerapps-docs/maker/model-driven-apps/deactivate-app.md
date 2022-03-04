@@ -8,7 +8,7 @@ ms.author: ansja
 ms.reviewer: matp
 manager: kvivek
 ms.date: 12/13/2021
-ms.service: powerapps
+
 ms.topic: how-to
 applies_to: 
   - "powerapps"

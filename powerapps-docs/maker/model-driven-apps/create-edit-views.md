@@ -4,7 +4,7 @@ description: "Learn how to create or edit a view"
 ms.custom: intro-internal
 ms.date: 03/19/2020
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "overview"
@@ -50,7 +50,7 @@ Views can be developed through the table designer or the app designer.
 
 ## Types of views  
   
-There are three types of views: *personal*, *system, and *public*.
+There are three types of views: *personal*, *system*, and *public*.
 
 - **Personal view** - Personal views are owned by individuals and only visible to that person unless they share their personal views with others.
 - **System view** - As a system administrator or system customizer, you can edit system views. System views are special views the application depends on, which exist for system tables or are automatically created when you create custom tables. These views have specific purposes and some additional capabilities.

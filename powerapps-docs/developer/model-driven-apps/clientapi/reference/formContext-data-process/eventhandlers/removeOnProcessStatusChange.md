@@ -2,7 +2,7 @@
 title: "removeOnProcessStatusChange (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the removeOnProcessStatusChange method.
 ms.date: 04/19/2021
-ms.service: powerapps
+
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 5e41f59e-ddb3-4d47-b45b-454aa9e04439

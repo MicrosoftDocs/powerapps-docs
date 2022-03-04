@@ -3,7 +3,7 @@ title: "Visualize your data in a view quickly with Power BI service| MicrosoftDo
 description: Visualize your data in a view quickly with Power BI service.
 author: mduelae
 manager: kvivek
-ms.service: powerapps
+
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 11/15/2021

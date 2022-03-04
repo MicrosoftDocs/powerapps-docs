@@ -5,8 +5,8 @@ author: anuitz
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: tapanm
-ms.date: 3/25/2021
+ms.reviewer: mduelae
+ms.date: 3/3/2022
 ms.subservice: canvas-maker
 ms.author: anuitz
 search.audienceType: 
@@ -96,7 +96,6 @@ X Point | 0.00 | 0.72 | -0.20
 
 1. Select the table, and then go to the **Table Design** tab on the ribbon. Enter a name for the table under **Table Name:**—for example, *TestData*.
 
-    ![Screenshot highlighting the Table Name field in Excel.](./media/geospatial/table-name.png "Screenshot highlighting the Table Name field in Excel")
 
 1. Save the workbook.
 
@@ -111,7 +110,6 @@ X Point | 0.00 | 0.72 | -0.20
 
 1. Locate the Excel workbook and then select **Open**. Select the table that contains the information, **TestData**, and then **Connect**.
 
-    ![Under the Choose a table option, the table called TestData is selected.](./media/geospatial/select-table.png "Under the Choose a table option, the table called TestData is selected")
 
 1. On the **Properties** pane, go to the **Advanced** tab, and select **More options**.
 

@@ -2,7 +2,7 @@
 title: "What is an on-premises data gateway?"
 description: Learn about on-premises data gateways when working with canvas apps in Power Apps.
 author: arthiriyer
-ms.service: powerapps
+
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm

@@ -4,7 +4,7 @@ description: "Learn how to create a table using solution explorer"
 ms.custom: ""
 ms.date: 02/26/2019
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"

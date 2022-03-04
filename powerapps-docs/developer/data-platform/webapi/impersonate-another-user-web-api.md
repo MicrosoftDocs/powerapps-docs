@@ -3,7 +3,7 @@ title: "Impersonate another user using the Web API (Microsoft Dataverse)| Micros
 description: "Impersonation is used to execute business logic(code) on behalf of another Microsoft Dataverse user to provide a desired feature or service using the appropriate role and object-based security of that impersonated user. Read how you can impersonate another user in Dataverse using the Web API"
 ms.custom: ""
 ms.date: 05/04/2021
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"

@@ -4,7 +4,7 @@ description: "This sample component renders a table with two columns. The left c
 ms.custom: ""
 manager: kvivek
 ms.date: 10/01/2019
-ms.service: "powerapps"
+
 ms.topic: "article"
 ms.author: "nabuthuk" 
 author: Nkrb

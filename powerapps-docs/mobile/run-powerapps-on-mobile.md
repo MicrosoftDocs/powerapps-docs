@@ -2,7 +2,7 @@
 title: Run canvas app and model-driven apps on Power Apps mobile | Microsoft Docs
 description: Learn how to run canvas and model-driven apps on a mobile device.
 author: mduelae
-ms.service: powerapps
+
 ms.component: pa-user
 ms.topic: quickstart
 ms.date: 01/13/2022

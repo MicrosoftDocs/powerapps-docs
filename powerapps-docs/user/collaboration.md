@@ -3,7 +3,7 @@ title: "Collaborate with others in model-driven apps| MicrosoftDocs"
 description: Collaborate with others in model-driven apps
 author: mduelae
 manager: kvivek
-ms.service: powerapps
+
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 11/03/2021
@@ -53,8 +53,6 @@ App users, such as the record owner, are displayed with their picture and online
 
 Easy sharing of direct links with others will be enabled during the preview period.
 
-> [!div class="mx-imgBorder"]
-> ![Share row information with soneone else.](media/collob-3.png "Share row information with soneone else")
 
 
 

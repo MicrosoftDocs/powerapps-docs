@@ -4,7 +4,7 @@ description: "This article outlines the use of code components built by professi
 ms.custom: ""
 ms.date: 07/14/2021
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.topic: "article"
 author: "hemantg"
 ms.author: "matp"

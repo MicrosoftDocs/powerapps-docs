@@ -3,7 +3,7 @@ title: "Set personal options| MicrosoftDocs"
 description: How to set personal options in Power Apps
 author: mduelae
 manager: kvivek
-ms.service: powerapps
+
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 10/30/2020

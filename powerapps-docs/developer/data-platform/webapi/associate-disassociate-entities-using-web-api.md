@@ -3,7 +3,7 @@ title: "Associate and disassociate table rows using the Web API (Microsoft Datav
 description: "Read how to add a reference to a collection-valued navigation property, remove a reference, and change an existing reference using the Web API"
 ms.custom: ""
 ms.date: 05/03/2021
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"

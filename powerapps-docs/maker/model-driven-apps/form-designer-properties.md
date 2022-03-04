@@ -4,7 +4,7 @@ description: Manage component properties using the form designer.
 ms.custom: ""
 ms.date: 08/26/2019
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "conceptual"

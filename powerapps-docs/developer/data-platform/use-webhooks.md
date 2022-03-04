@@ -4,7 +4,7 @@ description: "Learn how to send data about events that occur on the server to a 
 ms.custom: intro-internal
 ms.date: 03/21/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
 ms.subservice: dataverse-developer

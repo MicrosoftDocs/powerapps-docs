@@ -4,7 +4,7 @@ description: How to import data
 ms.custom: ""
 author: mduelae
 manager: kvivek
-ms.service: powerapps
+
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 01/03/2022

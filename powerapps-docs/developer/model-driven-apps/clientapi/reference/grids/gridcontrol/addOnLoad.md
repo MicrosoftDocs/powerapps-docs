@@ -2,7 +2,7 @@
 title: "addOnLoad (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the addOnLoad method.
 ms.date: 09/22/2021
-ms.service: powerapps
+
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 24f34ac9-2a15-478e-980c-588a79d84e8d
