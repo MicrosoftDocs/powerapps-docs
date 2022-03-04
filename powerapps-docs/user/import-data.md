@@ -24,7 +24,7 @@ Import data that's stored somewhere else into your model-driven app using the im
 
 Every table has required columns that must exist in your input file. It's recommended that you download an Excel template, add your data, and then import the file to your app. The template saves time and effort. Don't add or modify columns in the template to avoid issues during the import.
 
-Before you import a file make sure the column headings match the column (field) names in your app. During the import process, the system will try to map the column names from your input file to the column (field) names in the app. If they don't match, then you'll have to manually map the fields or you may run into issues during the import process.
+Before you import a file make sure the column headings match the column names in your app. During the import process, the system will try to map the column names from your input file to the column names in the app. If they don't match, then you'll have to manually map the fields or you may run into issues during the import process.
 
 If you're an advanced user and know the required columns for a given Dataverse table, define your own Excel, CSV, or XML source file and then follow the steps in this article on how to [import data](import-data.md#import-your-data) to your app. These file formats are supported:
 
