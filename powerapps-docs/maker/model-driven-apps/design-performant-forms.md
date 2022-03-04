@@ -219,6 +219,18 @@ Avoid loading libraries in the `OnLoad` event if they are only used for the `OnC
 
 Don't use the [console API methods]( https://developer.mozilla.org/en-US/docs/Web/API/console) such as `console.log` in production code. Logging data to the console can significantly increase memory demand and might prevent data from being cleaned up in memory. This can lead to the app becoming slower over time and eventually crashing.
 
+#### Avoid memory leaks
+
+Memory leaks in your code can lead to slower performance over time and eventually cause your app to crash. Memory leaks occur when the application fails to release memory when no longer needed. With all customizations and code components on your form, you should:
+- Thoroughly consider and test scenarios for anything responsible for cleaning up memory, like classes responsible for managing lifecycle of objects.
+- Cleanup all event listeners and subscriptions, especially if it’s on the `window` object.
+- Cleanup all timers like `setInterval`.
+- Avoid, limit, and cleanup references to global or static objects.
+
+For custom control components, cleanup can be done in the [destroy](/powerapps/developer/component-framework/reference/control/destroy) method.
+
+For more information on fixing memory problems, go to [this Edge developer documentation](/microsoft-edge/devtools-guide-chromium/memory-problems/).
+
 ## Tools you can use to help make apps performant
 
 This section describes the tools that can help you understand performance issues and offer recommendations about how to optimize your customizations in model-driven apps.
