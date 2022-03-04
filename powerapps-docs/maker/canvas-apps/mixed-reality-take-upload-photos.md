@@ -4,7 +4,7 @@ description: Take photos of 3D objects in the real world with augmented reality 
 author: anuitz
 ms.topic: conceptual
 ms.custom: canvas
-ms.date: 03/3/2022
+ms.date: 03/4/2022
 ms.reviewer: mduelae
 ms.subservice: canvas-maker
 ms.author: anuitz
@@ -80,11 +80,6 @@ Next, we'll add a gallery so users can view the photos they've taken.
 
 >[!NOTE]
 >If users exit the MR view to see the gallery, then enter the MR view again and take more photos, the new photos will replace the ones they took earlier.
-
->[!Tip]
->You can load all photos taken across multiple MR controls by adding `Collect(AllPhotos,ViewInMR1.Photos)` to the **OnChange** property of each MR control.
-
-<!-- It's not clear to me how to follow the instructions above or what's supposed to happen. Can you please flesh this out in a section of its own, not a tip? -->
 
 ### Add a larger overlay to the thumbnail images in the gallery
 
