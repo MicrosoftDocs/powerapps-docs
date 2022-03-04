@@ -5,13 +5,13 @@ description: Learn how to use the Employee Ideas app from Teams store.
 ms.topic: conceptual
 ms.custom: 
 ms.date: 08/24/2021
-author: josephshum
+author: msftsamperl
 ms.subservice: teams
-ms.author: jshum
+ms.author: saperlmu
 ms.reviewer: tapanm
 contributors:
   - joel-lindstrom
-  - josephshum
+  - msftsamperl
   - tapanm-msft
 ---
 
