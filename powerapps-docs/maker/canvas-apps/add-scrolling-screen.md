@@ -94,5 +94,33 @@ Now, let's add another card with another control.
 [12]: ./media/add-scrolling-screen/add-line-chart.png
 [13]: ./media/add-scrolling-screen/line-chart-preview.png
 
+## Limitations
+### Forms can't be used in the scrolling screen
+The Canvas control uses DataCards to create sections, and Forms cannot be inserted into DataCards.
+
+We prevent certain combinations of controls from being nested together because they can cause performance issues, stability issues, or both. In the worst cases, unexpected combinations of controls can cause apps to get into an unrecoverable state.
+
+An alternative to using the scrolling screen is to use Layout Containers to create a scrolling section in a screen.
+
+#### Examples
+For Makers who want a basic "Scrollable Form", follow these steps:
+
+1. In the insert pane under "Layout", select a "Vertical container".
+1. Set the "Vertical Overflow" property of the container to "Scroll".
+1. Add a View or Edit Form to the container.
+
+For makers who wish to use X/Y positioning instead of the Layout Properties, they can get this effect by nesting a container inside of a layout container.
+
+1. In the insert pane under "Layout", select a "Vertical container".
+1. Set the "Vertical Overflow" property of the container to "Scroll".
+1. In the insert pane under "Layout", select "Container".
+1. In the properties of the inner container, uncheck the "Flexible Height" property.
+
+You can then set the height of the inner container to a custom value, and the outer container will create a scrollbar for the overflow.
+
+For more information on the Layout Containers and their capabilities, refer to the following documentation:
+* [Building responsive canvas apps](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/build-responsive-apps)
+* References for the [Horizontal](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/controls/control-horizontal-container) and [Vertical](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/controls/control-vertical-container) container controls
+* [Broader information on responsive layouts](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/create-responsive-layout)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

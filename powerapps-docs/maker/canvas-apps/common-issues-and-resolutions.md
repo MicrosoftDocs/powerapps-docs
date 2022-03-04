@@ -35,6 +35,10 @@ If you're running into issues using Power Apps, try these common troubleshooting
 
 ## Known Issues
 
+1. **Unable to copy paste Forms into DataCards** (March 2022)
+
+    This was an intentional change meant to prevent certain combinations of controls from being created that pose a stability and/or performance issue for apps. For Makers seeking to create scrollable forms using the scrollable screen template (which uses DataCards), you can alternatively use layout containers to get the same effect. Please refer to [the scrollable screen documentation](.\add-scrolling-screen.md) for more information, including examples of how to use containers as an alternative.
+   
 1. **Canvas apps using SharePoint connector** (February 23, 2022)
 
     [Power Apps](https://make.powerapps.com) won’t show canvas apps connecting to SharePoint that are only shared with **Everyone**, unless:
