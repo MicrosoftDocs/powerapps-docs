@@ -1,14 +1,14 @@
 ---
 title: Test whether an object will fit in a space using mixed reality
 description: Use mixed-reality controls in a canvas app to test whether objects of a given size will fit in a measured space.
-author: alex-msft
+author: mduelae
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: tapanm-msft
-ms.date: 02/07/2022
+ms.reviewer: anuitz
+ms.date: 03/04/2022
 ms.subservice: canvas-maker
-ms.author: altran
+ms.author: anuitz
 search.audienceType: 
   - maker
 search.app: 
@@ -137,7 +137,6 @@ The values for **Bounding Width** and **Bounding Depth** can be swapped when you
 
 ## Filtering a data source
 
-<!-- I couldn't get this to work in my test app no matter what I tried. Can you please either clarify and expand the instructions in this section, or remove it altogether? -->
 
 The app we created tests a single set of dimensions that are specified by the user when the app runs. However, you can extend it to test against any data source by applying the formula as a **Filter** predicate.
 
