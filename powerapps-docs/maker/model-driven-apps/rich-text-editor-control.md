@@ -2,7 +2,7 @@
 title: Use the rich text editor control in Power Apps | MicrosoftDocs
 description: "The rich text editor control provides the app user a WYSIWYG editing area for formatting text"
 ms.custom: ""
-ms.date: 02/28/2022
+ms.date: 03/04/2022
 ms.reviewer: "matp"
 
 ms.suite: ""
@@ -711,7 +711,8 @@ The rich text editor toolbar provides features and functionality that allows you
 The following table describes the different formatting features and functionality options that are available in the rich text editor that you can use in notes and email. 
 
 > [!Note]
-> You can access your browser's context menu by selecting Ctrl + right-click. This is useful if you need to use your browser's built-in spellchecker. Otherwise, you can right-click to provide contextual formatting for any element you are using.
+> You can access your browser's context menu by selecting Ctrl + right-click. This is useful if you need to use your browser's built-in spellchecker. Otherwise, you can right-click to provide contextual formatting for any element you are using.<br>
+> An alternative to your browser's built-in spellchecker is the [Microsoft Editor browser extension](https://www.microsoft.com/microsoft-365/microsoft-editor). Microsoft Editor works seamlessly with our rich text editor control, and when enabled, provides fast and easy inline grammar and spellcheck capabilities.
 
 
 |Icon | Name | Shortcut key | Description |
