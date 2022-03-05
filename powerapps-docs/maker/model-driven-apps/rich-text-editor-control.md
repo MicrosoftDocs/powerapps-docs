@@ -21,8 +21,6 @@ search.app:
 ---
 # Add the rich text editor control to a model-driven app
 
-
-
 The rich text editor control provides the app user a WYSIWYG editing area for formatting text. The control's input and output format is HTML. The control allows copied rich text, such as from a web browser or Word, to be pasted into the control.
 
 Some of the format options available are:
@@ -102,6 +100,7 @@ The following two images visually identify the two configuration sections. For t
 ### defaultSupportedProps
 
 You can configure all of the CKEditor-supported properties under this property. A few of the commonly used and custom configurations are described below. For complete documentation about CKEditor configurations, see [CKEditor.config](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_config.html).
+
 
 <table>
   <tr>
@@ -268,6 +267,7 @@ You can configure all of the CKEditor-supported properties under this property. 
 ### Individual configuration settings
 
 You can configure additional configuration settings that affect how your editor functions.
+
 
 <table>
   <tr>
@@ -745,7 +745,7 @@ The following table describes the different formatting features and functionalit
 
 > [!Tip]
 > You can access your browser's context menu by selecting **Ctrl** + right-click. This is useful if you need to use your browser's built-in spellchecker. Otherwise, you can right-click to provide contextual formatting for any element you are using.<br><br>
-> Also, an alternative to your browser's built-in spellchecker is the [Microsoft Editor browser extension](https://www.microsoft.com/microsoft-365/microsoft-editor). Microsoft Editor works seamlessly with our rich text editor control, and when enabled, provides fast and easy inline grammar and spellcheck capabilities.
+> Also, an alternative to your browser's built-in spellchecker is the [Microsoft Editor browser extension](https://www.microsoft.com/microsoft-365/microsoft-editor). Microsoft Editor works seamlessly with the rich text editor control, and when enabled, provides fast and easy inline grammar and spellcheck capabilities.
 
 ## Accessibility shortcuts
 
