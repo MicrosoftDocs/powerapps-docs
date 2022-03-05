@@ -21,7 +21,7 @@ contributors:
 
 In a canvas app, create a screen that users can scroll to show different items. For example, create a phone app that shows data in several charts, which users can display if they scroll.
 
-When you add multiple controls in a section, the controls maintain their relative positions within that section, regardless if it's a phone app or a tablet app. Note that the [screen size and orientation](set-aspect-ratio-portrait-landscape.md) may determine how the sections are arranged.  
+When you add multiple controls in a section, the controls maintain their relative positions within that section, regardless if it's a phone app or a tablet app. [Screen size and orientation](set-aspect-ratio-portrait-landscape.md) may also affect how the sections are arranged.  
 
 [!INCLUDE [app-customization-requirements](../../includes/app-customization-requirements.md)]
 
@@ -45,7 +45,9 @@ To add data cards, you can select **Add section** at the bottom of the scrollabl
 
 :::image type="content" source="media/add-scrolling-screen/add-section-data-card.png" alt-text="Add section button highlighted on the scrollable screen on the canvas.":::
 
-We'll start by adding controls on the data card available with the scrollable screen by default, and then add a new section that adds another data card. Once a new data card is available, we'll then add another control inside the new data card. Together, both data cards and the controls within the data cards would extend the default length of the screen, requiring the use of the scrolling ability of the screen.
+We'll start by adding controls on the data card available with the scrollable screen by default, and then add a new section that adds another data card. Once a new data card is available, we'll then add another control inside the new data card.
+
+Together, both data cards and the controls within the data cards would extend the default length of the screen, requiring the use of the scrolling ability of the screen.
 
 > [!TIP]
 > To learn more about data cards, see [Understand data cards](working-with-cards.md).
@@ -93,7 +95,7 @@ There are multiple different methods to configure scrolling with forms:
 
 ### Use Vertical Overflow property
 
-This is the basic method of using a scrolling screen that has a form. To use a basic scrolling form:
+Use of the Vertical Overflow property is a basic method of using a scrolling screen that has a form.
 
 1. Ensure you're using a blank screen, and not a scrollable screen.
 
@@ -121,7 +123,7 @@ For complex apps, you may consider adding containers within a vertical container
 
 1. From the right-side of the screen in the properties pane, turn **Flexible height** property to **Off**.
 
-    :::image type="content" source="media/add-scrolling-screen/flexible-height.png" alt-text="Flexible height property turned off for the container..":::
+    :::image type="content" source="media/add-scrolling-screen/flexible-height.png" alt-text="Flexible height property turned off for the container.":::
 
 1. Add the edit or display form with the required fields.
 
@@ -129,7 +131,7 @@ For complex apps, you may consider adding containers within a vertical container
 
     :::image type="content" source="media/add-scrolling-screen/x-y-positions.png" alt-text="Scrollable form that uses container and form height for scroll capability.":::
 
-For more information about working with responsiveness of an app, see [Building responsive canvas apps](build-responsive-apps.md) and ]Responsive layouts](create-responsive-layout.md)
+For more information about working with responsiveness of an app, see [Building responsive canvas apps](build-responsive-apps.md) and [Responsive layouts](create-responsive-layout.md)
 
 ### See also
 
